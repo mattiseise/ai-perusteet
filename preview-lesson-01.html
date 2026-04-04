@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 01 – Mitä tekoäly on — ja mitä se ei ole</title>
+<style>
+  :root {
+    --blue:#1a56db;--blue-bg:#ebf3ff;--green:#057a55;--green-bg:#edfaf0;
+    --amber:#92400e;--amber-bg:#fffbeb;--red:#991b1b;--red-bg:#fef2f2;
+    --border:#e5e7eb;--muted:#6b7280;--body:#111827;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.75;color:var(--body);background:#f3f4f6}
+  .header{background:var(--blue);color:#fff;padding:28px 40px 24px}
+  .header .meta{font-size:13px;opacity:.7;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+  .header h1{font-size:26px;font-weight:700}
+  .header .sub{font-size:13px;opacity:.65;margin-top:6px}
+  .tabs{display:flex;background:#fff;border-bottom:2px solid var(--border);padding:0 40px;gap:2px;flex-wrap:wrap}
+  .tab{padding:13px 18px 11px;font-size:14px;font-weight:600;cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;color:var(--muted);background:none;transition:color .15s,border-color .15s}
+  .tab:hover{color:var(--blue)}
+  .tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+  .panel{display:none;padding:36px 40px;max-width:820px;margin:0 auto}
+  .panel.active{display:block}
+  h2{font-size:19px;font-weight:700;margin:28px 0 10px;color:#111}
+  h2:first-child{margin-top:0}
+  h3{font-size:16px;font-weight:600;margin:20px 0 8px;color:#1f2937}
+  p{margin:0 0 13px}
+  strong{font-weight:600}
+  em{font-style:italic}
+  hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+  .prose{background:#fff;border:1px solid var(--border);border-radius:10px;padding:30px 34px}
+  .prose p+p{margin-top:12px}
+  .pause{background:#fef3c7;border-left:3px solid #f59e0b;padding:11px 16px;border-radius:0 6px 6px 0;margin:18px 0;font-style:italic;color:#78350f;display:block}
+  /* vocab */
+  .vocab-item{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin-bottom:10px}
+  .vocab-term{font-weight:700;font-size:15px;margin-bottom:3px}
+  .vocab-def{font-size:15px;color:#374151}
+  /* tasks */
+  .task{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin-bottom:18px}
+  .task-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);background:var(--blue-bg);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+  .task h3{margin-top:0}
+  .task ol,.task ul{margin:10px 0 10px 22px}
+  .task li{margin-bottom:7px}
+  .task p{margin-bottom:10px}
+  .llm-tag{display:inline-block;background:var(--red-bg);border:1px solid #fca5a5;color:var(--red);font-size:12px;font-weight:600;padding:2px 10px;border-radius:20px;margin:12px 0 6px}
+  .solo{background:var(--green-bg);border-left:3px solid #10b981;padding:11px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#065f46;margin-top:14px}
+  .teacher-tip{background:var(--amber-bg);border-left:3px solid #f59e0b;padding:12px 16px;border-radius:0 6px 6px 0;font-size:14px;color:var(--amber);margin:14px 0}
+  /* form fields */
+  .form-field{background:#f9fafb;border:1px solid var(--border);border-radius:6px;padding:10px 14px;margin:6px 0 12px;font-size:14px;color:var(--muted);font-style:italic}
+  .form-label{font-size:13px;font-weight:600;color:#374151;margin-top:8px;display:block}
+  /* misconception */
+  .misc{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px}
+  .misc-wrong{color:#dc2626;font-weight:600;font-size:14px;margin-bottom:5px}
+  .misc-right{color:var(--green);font-size:14px}
+  /* check q */
+  .cq{padding:10px 14px;background:#f9fafb;border-radius:6px;margin-bottom:8px;font-size:15px}
+  .cq-sub{font-size:13px;color:var(--muted);margin-top:3px;font-style:italic}
+  /* struggle */
+  .str{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:12px}
+  .str-prob{font-weight:600;margin-bottom:5px}
+  .str-sol{font-size:15px;color:#4b5563}
+  blockquote{border-left:3px solid #d1d5db;margin:12px 0;padding:10px 16px;color:#374151;font-style:italic;background:#f9fafb;border-radius:0 6px 6px 0}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="meta">Tekoälyn perusteet · OSP 1 · Lesson 01</div>
+  <h1>Mitä tekoäly on — ja mitä se ei ole</h1>
+  <div class="sub">90 min · teaching block · TVT-linja · 15–17 v.</div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('selfstudy',this)">📖 Itseopiskelumateriaali</button>
+  <button class="tab" onclick="show('vocab',this)">📚 Sanasto</button>
+  <button class="tab" onclick="show('tasks',this)">✏️ Opiskelutehtävät</button>
+  <button class="tab" onclick="show('teachertasks',this)">🎓 Opettajavetoiset</button>
+  <button class="tab" onclick="show('teachermat',this)">📋 Opettajan materiaalit</button>
+</div>
+
+<!-- SELF STUDY -->
+<div id="selfstudy" class="panel active">
+<div class="prose">
+
+<h2>Johdanto: Olet kohdannut tekoälyn jo monesti</h2>
+<p>Olet ehkä huomannut, että kun kirjoitat samaa kysymystä ChatGPT:lle useita kertoja putkeen, se antaa joka kerran hieman erilaisen vastauksen. Tai että YouTube tietää juuri, millaisen videon haluat katsoa seuraavaksi — vaikka et ole koskaan kirjoittanut siihen mitään. Tai ehkä puhelimesi kasvojentunnistus tunnistaa kaverisi, mutta välillä epäonnistuu ja vaatii sinulta sisäänkirjautumisen.</p>
+<p>Nämä ovat kaikki tekoälyn esimerkkejä. Mutta vaikka ne näyttävät "älykkäiltä", ne toimivat hyvin eri tavalla kuin ihmisen älykkyys. Ja jos haluat myöhemmin työskennellä tietotekniikan alalla — koodarina, IT-tukihenkilönä, tietoturvassa tai digitaalisen markkinoinnin parissa — sinun täytyy ymmärtää, mitä nämä järjestelmät <strong>oikeasti</strong> tekevät.</p>
+<p>Tämä oppitunti opettaa sinut näkemään tekoälyn takaa sitä, mitä oikeasti tapahtuu.</p>
+
+<h2>Tekoälyn ja koneoppimisen ero — ja miksi se merkitsee</h2>
+<p>Monet ihmiset käyttävät sanoja "tekoäly" ja "koneoppiminen" ikään kuin ne olisivat sama asia. Ne eivät ole.</p>
+<p>Tekoäly on laajempi käsite. Se tarkoittaa mitä tahansa järjestelmää, joka tekee päätöksiä ilman että ihminen on käsin ohjelmoinut jokaista päätöstä. Pankin lainajärjestelmä, joka noudattaa sääntöjä ("jos asiakkaalla on yli 20 vuotta historiaa, hyväksy laina"), on tekoälyä. Samoin videopelin tekoäly, joka muuttaa taktiikaansa.</p>
+<p>Koneoppiminen on yksi tapa rakentaa tekoälyä. Sen sijaan että ihminen kirjoittaisi säännöt käsin, ohjelma oppii säännöt itse <strong>datasta</strong>. Saat koneelle tuhansia esimerkkejä ("nämä kuvat ovat kissoja, nämä ovat koiria"), ja kone löytää kuviot itse. Sitten kun saat uuden kuvan, kone sanoo: "näyttää kissalta".</p>
+<p>Sääntöpohjainen tekoäly on <strong>deterministinen</strong> — samat syötöt tuottavat aina täsmälleen samat tulokset. Koneoppiminen taas on <strong>probabilistinen</strong> — se tekee arvauksia todennäköisyyden perusteella, ei varmuuden.</p>
+
+<p class="pause">💭 Pysähdy hetkeksi: Ajattele puhelimeesi. Mikä siinä on deterministinen (antaa aina saman tuloksen)? Mikä on probabilistinen (voi antaa eri tulokset)?</p>
+
+<p>Käytännön esimerkki: olet kehittäjä, joka yrittää ennustaa projektin kustannuksia. Malli sanoo: "Arvioin 5 000 euroa ± 500." Mutta pomo haluaa tarkan luvun budjettiin. Malli ei voi antaa sitä — se voi antaa vain todennäköisyyden. Tämä on päivittäinen haaste: malli antaa informaatiota, mutta päätöstä ei voi delegoida sille kokonaan.</p>
+
+<h2>Probabilistinen laskenta — miksi tekoäly tuottaa eri vastauksia</h2>
+<p>Perinteinen ohjelma — kuten laskimesi — on deterministinen. 2 + 2 = 4 aina. Sama syöte, sama tulos.</p>
+<p>Koneoppimismalli on täysin eri. Sen sijaan että säännöt olisivat kirjoitettu, ne on <strong>opittu tilastollisista kuvioista</strong> suuresta datamäärästä. Kun ChatGPT vastaa kysymykseesi, se ei hae vastausta tietokannasta. Se tekee valintoja: "Mitä sanaa yleensä tulee seuraavaksi näiden samojen sanojen jälkeen?" Sitten: "Mitä sanaa sen jälkeen?" Ja niin edelleen.</p>
+<p>Kukin valinta on todennäköisyyteen perustuva arvaus. Siksi sama kysymys kahdesti voi tuottaa hieman eri vastaukset. Siksi ChatGPT joskus kirjoittaa jotain, joka näyttää älykkäältä, mutta on täysin väärää — se arvasi todennäköisimmän sanan, mutta konteksti oli eri.</p>
+
+<p class="pause">💭 Pysähdy hetkeksi: Jos tekoäly vain arvaa seuraavaa sanaa perustuen siihen, mitä näki ennen — missä tilanteissa se voisi mennä pahasti pieleen? Missä se voisi toimia riittävän hyvin?</p>
+
+<h2>Tekoälyn rajat — mitä se ei voi tehdä</h2>
+<p><strong>Raja 1: Tekoäly ei ole yleisäly.</strong> Se on opittu tiettyyn tehtävään, tietyllä datalla. Malli, joka tunnistaa kissoja, ei osaa lukea tekstiä. Malli, joka kirjoittaa hyviä tarinoita, ei voi diagnosoida sairauksia. Mitä kapeammalla alalla mallia on opittu, sitä parempi se on siinä alassa — mutta ei muualla.</p>
+<p><strong>Raja 2: Tekoäly ei ymmärrä syy-seuraus-suhteita.</strong> Se vain näkee kuvioita. Jos datassa lukee, että "ihmiset, joiden nimi alkaa J:llä, ostavat usein kirjoja", malli voi oppia tämän kuvion. Mutta se ei tiedä, että nimen alkukirjain ei aiheuta kirjojen ostamista — se on sattumanvarainen korrelaatio. Tämä voi vahvistaa olemassa olevia ennakkoluuloja.</p>
+<p><strong>Raja 3: Tekoäly ei osaa tehdä arvopäätöksiä.</strong> Päätökset, jotka vaikuttavat ihmisten elämään — kuka saa työn, kuka saa lainaa, kenelle annetaan asuinlupa — eivät kuulu järjestelmälle, joka vain arvaa. Nämä päätökset vaativat ihmisen harkintaa.</p>
+<p>Oikeassa esimerkissä: sairaala käyttää tekoälymalleja diagnoosin tukena. Malli sanoo: "80 % todennäköisyys keuhkosyövästä." Lääkäri ei voi vain toimia automaattisesti sen perusteella — hänen täytyy harkita: Onko tämä potilas riskin arvoinen? Mitkä ovat vaihtoehdot? Nämä kysymykset kuuluvat ihmiselle.</p>
+
+<h2>Käsitteen yhteenveto</h2>
+<p>Tekoäly on järjestelmä, joka tekee päätöksiä ilman käsinkirjoitettuja sääntöjä. Koneoppiminen rakentaa tekoälyä datasta — ja se tekee arvauksia, ei varmuuksia. Ammattilaisena muista kolme rajaa: tekoäly on kapea-alaista, se näkee vain kuvioita (ei syy-seuraus-suhteita), ja se ei voi tehdä arvopäätöksiä. Näiden rajojen ymmärtäminen on pohja sille, miten tekoälyä käytetään turvallisesti.</p>
+
+<hr>
+<p><em>Lähitunnilla käytämme tätä perustietämystä todellisiin tapauksiin: analysoidaan oikeita järjestelmiä ja harjoitellaan kriittistä ajattelua.</em></p>
+
+</div>
+</div>
+
+<!-- VOCAB -->
+<div id="vocab" class="panel">
+<div class="vocab-item"><div class="vocab-term">Tekoäly (AI)</div><div class="vocab-def">Järjestelmä, joka tekee päätöksiä ilman että ihminen on ohjelmoinut jokaista päätöstä käsin. Voi toimia säännöillä tai koulutuksella — mutta ydin on sama: järjestelmä tekee älykkäiltä näyttäviä toimintoja itse.</div></div>
+<div class="vocab-item"><div class="vocab-term">Koneoppiminen (machine learning)</div><div class="vocab-def">Yksi tapa rakentaa tekoälyä: ohjelma oppii säännöt itse datasta, eikä ihminen kirjoita niitä käsin. Koneelle annetaan tuhansia esimerkkejä, ja se löytää kuviot.</div></div>
+<div class="vocab-item"><div class="vocab-term">Deterministinen</div><div class="vocab-def">Järjestelmä, joka antaa aina täsmälleen saman tuloksen samoilla syötteillä. Laskimen 2 + 2 = 4 on aina 4 — ei koskaan 3,99. Perinteiset ohjelmat ovat deterministisiä.</div></div>
+<div class="vocab-item"><div class="vocab-term">Probabilistinen</div><div class="vocab-def">Järjestelmä, joka tekee päätöksiä todennäköisyyksien perusteella, ei varmuuden. Sama syöte voi tuottaa erilaisia tuloksia. Koneoppimismallit ovat probabilistisia.</div></div>
+<div class="vocab-item"><div class="vocab-term">Parametri</div><div class="vocab-def">Numeerinen paino koneoppimismallin sisällä, joka muodostuu koulutuksen aikana. Kielimalleissa on miljardeja parametreja. Ne eivät ole sääntöjä — ne ovat numeroita, jotka yhdessä tuottavat käyttäytymistä.</div></div>
+<div class="vocab-item"><div class="vocab-term">Koulutusdata</div><div class="vocab-def">Aineisto, jolla koneoppimismalli koulutetaan. Mallin oppima on täysin datan laadusta ja määrästä riippuvainen. Jos data on puolueellista, malli oppii olemaan puolueellinen.</div></div>
+</div>
+
+<!-- STUDENT TASKS -->
+<div id="tasks" class="panel">
+
+<div class="task">
+  <div class="task-badge">TT-A2 — Ennusta ja tarkista · Tehtävä 1.1</div>
+  <h3>Deterministinen vai probabilistinen — Tunnista ja testaa</h3>
+  <p>Valitse <strong>kaksi</strong> seuraavista järjestelmäpareista ja testaa molemmat <strong>kolme kertaa</strong> samalla syötteellä:</p>
+  <ul>
+    <li>Laskin vs. ChatGPT</li>
+    <li>YouTube-suositukset vs. Excel-laskutaulukko</li>
+    <li>Puhelimen kasvojentunnistus vs. puhelimen laskin</li>
+    <li>Sähköpostin roskapostisuodatin vs. herätyskellon uudelleenyritykset</li>
+  </ul>
+  <p>Täytä havaintolomake:</p>
+
+  <span class="form-label">Järjestelmä 1: _______________</span>
+  <div class="form-field">Tulos 1 (ensimmäinen yritys): _______________<br>Tulos 2 (toinen yritys): _______________<br>Tulos 3 (kolmas yritys): _______________</div>
+
+  <span class="form-label">Järjestelmä 2: _______________</span>
+  <div class="form-field">Tulos 1: _______________<br>Tulos 2: _______________<br>Tulos 3: _______________</div>
+
+  <span class="form-label">Havaintoni:</span>
+  <div class="form-field">
+    Muuttuiko jokin tuloksista? Kyllä / Ei. Jos kyllä, mitä? _______________<br><br>
+    Kumpi oli deterministinen? Miksi arvelet niin? _______________<br><br>
+    Kumpi oli probabilistinen? Mitä tämä tarkoittaa ammattilaiselle? _______________
+  </div>
+
+  <span class="form-label">Johtopäätös (2–3 lausetta):</span>
+  <div class="form-field">Missä tilanteessa deterministisyys on tärkeää? _______________<br><br>Missä probabilistisyys voi olla ongelma? _______________</div>
+
+  <div class="llm-tag">🔒 LLM-resistentti</div>
+  <p style="font-size:14px;color:#6b7280">Vaatii oikean testin — ei voi täyttää ilman todellista kokeilua.</p>
+  <div class="solo">✅ <strong>Solo:</strong> Voit olettaa, että sinulla on pääsy kahteen eri järjestelmään (esim. laskin ja ChatGPT puhelimessasi).</div>
+</div>
+
+<div class="task">
+  <div class="task-badge">TT-C2 — Kolme kenttää · Tehtävä 1.2</div>
+  <h3>Mitkä ovat tekoälyä, mitkä eivät — Luokittele ja perustele</h3>
+  <p>Luokittele kukin järjestelmä käyttäen näitä termejä oikein: <em>deterministinen / probabilistinen, säännöt / kuviot</em>.</p>
+
+  <ol>
+    <li style="margin-bottom:14px"><strong>Chatbot, joka vastaa avainsanoihin käsin kirjoitetuilla vastauksilla</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu (säännöt/kuviot?): ___   Käyttäytyminen (det./prob.?): ___</div></li>
+    <li style="margin-bottom:14px"><strong>YouTube-videosuositukset (opittu datasta)</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu: ___   Käyttäytyminen: ___</div></li>
+    <li style="margin-bottom:14px"><strong>Automaattivastaaja: "Kiitos viestistäsi. Vastaan pian."</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu: ___   Käyttäytyminen: ___</div></li>
+    <li style="margin-bottom:14px"><strong>Pankin if-then-else-lainasäännöstö</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu: ___   Käyttäytyminen: ___</div></li>
+    <li style="margin-bottom:14px"><strong>Kuvantunnistus koulutettu tuhansilla kissankuvilla</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu: ___   Käyttäytyminen: ___</div></li>
+    <li style="margin-bottom:14px"><strong>Perinteinen laskin: 5 + 3 = 8</strong><br>
+    <div class="form-field">Luokka: ___   Perustelu: ___   Käyttäytyminen: ___</div></li>
+  </ol>
+
+  <div class="llm-tag">🔒 LLM-resistentti</div>
+  <p style="font-size:14px;color:#6b7280">Vaatii termien oikeaa soveltamista — täytettävä taulukko estää geneerisen vastauksen.</p>
+  <div class="solo">✅ <strong>Solo:</strong> Voit olettaa, että ymmärrät termit oppitunnin materiaalista ja sovellat niitä itsenäisesti.</div>
+</div>
+
+</div>
+
+<!-- TEACHER TASKS -->
+<div id="teachertasks" class="panel">
+
+<div class="task">
+  <div class="task-badge">Opettajavetoiset · Tehtävä 3.1 · 20 min</div>
+  <h3>Väärinkäsitysten purku — Luokkakeskustelu</h3>
+  <p>Esitä kolme väitettä, jotka kuulostavat järkeviltä — mutta ovat väärässä. Fasilitoi oikean tulkinnan löytyminen yhdessä.</p>
+
+  <div class="teacher-tip">🎓 <strong>Väite 1:</strong> "Tekoäly ja koneoppiminen ovat sama asia." → Näytä pankin lainajärjestelmä (säännöt, ei ML) vs. YouTube (ML). Kysy: kumpi on tekoälyä? Kumpi koneoppimista?</div>
+  <div class="teacher-tip">🎓 <strong>Väite 2:</strong> "Tekoäly antaa aina oikean vastauksen." → Näytä live: sama kysymys ChatGPT:lle kolme kertaa. Selitä: tämä ei ole virhe — tämä on probabilistinen laskenta.</div>
+  <div class="teacher-tip">🎓 <strong>Väite 3:</strong> "Isompi malli on aina parempi." → Pieni, lääketieteeseen koulutettu malli voi olla parempi kuin iso yleismalli lääketieteen tehtävässä.</div>
+</div>
+
+<div class="task">
+  <div class="task-badge">Opettajavetoiset · Tehtävä 3.2 · 25 min</div>
+  <h3>Ammattilaisesti kriittinen analyysi — Pienryhmätapaus</h3>
+  <p>Jaa ryhmät (2–3 hlö). Kukin ryhmä analysoi yhden skenaarion:</p>
+  <ul>
+    <li><strong>A — Tietoturva:</strong> Pankki käyttää tekoälyä tunnistamaan petollisia siirtoja. Malli on koulutettu historiallisesta datasta.</li>
+    <li><strong>B — Lääketiede:</strong> Sairaala: malli ehdottaa "80 % todennäköisyys keuhkosyövästä." Lääkäri päättää toimenpiteen mallin perusteella.</li>
+    <li><strong>C — Oikeus:</strong> Tuomioistuin käyttää tekoälymalleja hakemaan relevantteja lakitapauksia historiallisesta aineistosta.</li>
+  </ul>
+  <p>Kukin ryhmä vastaa: Mikä tekoälyllä toimii hyvin? Miksi se ei ole varma? Mitkä ovat riskit? Missä ihmisen harkinta on pakollista?</p>
+  <p>Ryhmät raportoivat: tekoälyn etu, suurin riski, yksi prosessikontrolli.</p>
+  <div class="solo">✅ <strong>Solo:</strong> Opiskelija analysoi skenaarion B (lääketiede) strukturoidun kysymysjoukon avulla.</div>
+</div>
+
+</div>
+
+<!-- TEACHER MATERIALS -->
+<div id="teachermat" class="panel">
+
+<h2>Oppitunnin tavoitteet</h2>
+<ol style="margin-left:20px;margin-bottom:24px">
+  <li style="margin-bottom:8px">Selittää ero tekoälyn ja koneoppimisen välillä konkreettisilla esimerkeillä.</li>
+  <li style="margin-bottom:8px">Ymmärtää deterministisen ja probabilistisen järjestelmän ero ja ammattilaiset seuraukset.</li>
+  <li style="margin-bottom:8px">Tunnistaa tekoälyn kolme rajaa: kapea-alaisuus, kuviot (ei syy-seuraus), arvojen puuttuminen.</li>
+  <li style="margin-bottom:8px">Arvioida milloin tekoäly on sopiva työkalu ja milloin se vaatii ihmisen validointia.</li>
+</ol>
+
+<h2>Yleisiä väärinkäsityksiä</h2>
+<div class="misc"><div class="misc-wrong">❌ "Tekoäly ja koneoppiminen ovat sama asia."</div><div class="misc-right">✓ Tekoäly on laajempi. Koneoppiminen on yksi tapa rakentaa tekoälyä. Sääntöpohjainen järjestelmä on myös tekoälyä.</div></div>
+<div class="misc"><div class="misc-wrong">❌ "Tekoäly antaa aina oikean vastauksen — se on älykkäs."</div><div class="misc-right">✓ Koneoppimismalli on probabilistinen — se arvaa. Se voi tuottaa eri vastaukset samaan kysymykseen. Probabilistinen ≠ virheellinen, mutta se vaatii validointia kriittisissä tehtävissä.</div></div>
+<div class="misc"><div class="misc-wrong">❌ "Isompi malli = parempi."</div><div class="misc-right">✓ Koon ohella data-aineisto ja kohdentuneisuus ratkaisevat. Pieni erikoistunut malli voi päihittää ison yleismallin omalla alallaan.</div></div>
+<div class="misc"><div class="misc-wrong">❌ "Tekoäly ymmärtää, mitä se tekee."</div><div class="misc-right">✓ Koneoppimismalli näkee kuvioita datassa. Se ei ymmärrä syy-seuraus-suhteita, etiikkaa tai kontekstia.</div></div>
+<div class="misc"><div class="misc-wrong">❌ "Tekoäly voi korvata ihmisen kriittisissä päätöksissä."</div><div class="misc-right">✓ Tekoäly voi auttaa, mutta päätökset, joissa ihmisen arvo on mukana, kuuluvat ihmisille.</div></div>
+
+<h2>Tarkistuskysymykset</h2>
+<div class="cq">Kerro erot tekoälyn ja koneoppimisen välillä. Anna esimerkki molemmista.<div class="cq-sub">Etsitään: laajempi vs. kapea, säännöt vs. data</div></div>
+<div class="cq">Miksi laskinta ja ChatGPT:tä kutsutaan eri tavalla — deterministinen vs. probabilistinen?<div class="cq-sub">Etsitään: laskin = aina sama tulos, ChatGPT = todennäköisyyspohjainen valinta</div></div>
+<div class="cq">Mitä parametrit ovat, ja mistä ne tulevat?<div class="cq-sub">Etsitään: numeroita joita koulutetaan datasta — ei sääntöjä</div></div>
+<div class="cq">Anna esimerkki jostain, mitä tekoäly ei voi tehdä vaikka näyttäisi siltä, että voisi.<div class="cq-sub">Etsitään: syy-seuraus, arvopäätökset, yleisäly</div></div>
+<div class="cq">Jos valitsisit kielimallia kriittiseen tehtävään, mitä haluaisit tietää siitä ensin?<div class="cq-sub">Etsitään: millä datalla koulutettu, kuinka probabilistinen, missä heikko</div></div>
+<div class="cq">Miksi tekoäly on ammatillisesti vaarallinen, jos sen rajoja ei ymmärrä?<div class="cq-sub">Etsitään: sokeasti luottaminen voi johtaa huonoihin päätöksiin joita ihminen ei ole validoinut</div></div>
+
+<h2>Yleisiä vaikeuksia</h2>
+<div class="str"><div class="str-prob">Opiskelija näkee tekoälyn "älykkyydeksi", ei "työkaluksi".</div><div class="str-sol">Näytä konkreettinen virhe tai yllättävä tulos. "Se näyttää älykkäältä, koska se on opittu älykkäiltä näyttävästä datasta. Se ei sisällä älykkyyttä."</div></div>
+<div class="str"><div class="str-prob">"Probabilistinen" sekoittuu "huonoksi" tai "epätarkaksi".</div><div class="str-sol">"Probabilistinen ei ole huono — se on luontaista koneoppimiselle. Se tarkoittaa, että kriittisiin tehtäviin tarvitaan ihmisen validointi."</div></div>
+<div class="str"><div class="str-prob">Opiskelija ei ymmärrä mitä parametri tarkoittaa.</div><div class="str-sol">Analogia: "Kuten lämpötilasäädin asunnossasi on yksi numero — kielimallissa on miljardeja numeroita, jotka yhdessä määrittävät käyttäytymisen."</div></div>
+<div class="str"><div class="str-prob">Opiskelija ei linkitä teoriaa omaan ammattiin.</div><div class="str-sol">Palaa aina ammattilaisiin tapauksiin. Kysy: "Jos sinulla olisi tämä tehtävä työssä, mitä pitäisi tietää ennen kuin käytät tekoälyä?"</div></div>
+
+</div>
+
+<script>
+function show(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
