@@ -1,71 +1,76 @@
-# Tekoälytyypit: kapea AI, koneoppiminen, generatiivinen tekoäly, AGI ja ASI
+# Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa
 
 ## Johdanto
 
-Kun kuulet sanan "tekoäly", mihin ajattelet? Ehkä ChatGPT:iin tai robottiin elokuvasta. Mutta todellisuus on paljon monipuolisempi. Tekoälytyyppejä on useita, ja ne tekevät hyvin eri asioita hyvin eri tavalla. Jos haluat ymmärtää IT-alan tulevaisuutta — tai vain hahmottaa, mitä näet uutisissa — sinun täytyy tietää, että "tekoäly" ei ole yksi väline. Se on tuhat välinettä eri tehtäviin.
+Kun kuulet sanan “tekoäly”, mitä ajattelet ensimmäiseksi? Mieleen voi tulla esimerkiksi ChatGPT tai elokuvista tuttu robotti. Todellisuudessa tekoäly on kuitenkin paljon monimuotoisempi ilmiö. Tekoälyä on useita eri tyyppejä, ja ne toimivat hyvin eri tavoilla sekä soveltuvat erilaisiin tehtäviin. Jos haluat ymmärtää IT-alan tulevaisuutta tai tulkita paremmin uutisissa näkyviä ilmiöitä, on tärkeää hahmottaa, ettei tekoäly ole yksi yksittäinen väline. Se on laaja joukko erilaisia ratkaisuja eri käyttötarkoituksiin.
 
-Tässä lohkossa opit luokittelemaan tekoälyä: minkä levyisen alan se tekee, kuinka monimutkainen se on, ja mitä se todella osaa tehdä. Tämä auttaa sinua näkemään, miksi ei ole olemassa yhtä "tekoälyä", joka ratkaisee kaiken.
+Tässä osassa opit luokittelemaan tekoälyä sen mukaan, kuinka laajasti se toimii, kuinka monimutkainen se on ja mitä se käytännössä osaa tehdä. Näin ymmärrät paremmin, miksi ei ole olemassa yhtä ainoaa tekoälyä, joka ratkaisisi kaiken.
+
+Tämän tunnin jälkeen sinulla on tuomaripöydällesi toinen todistusaineisto: miten eri tekoälyn tasot osoittavat rajat sille, mitä tekoäly voi ja voi tehdä.
 
 ## Kapea AI — "Specialized AI"
 
-Lähes kaikki tekoäly, jonka näet päivittäin tai ammattilaisena käytät, on kapeaa tekoälyä (narrow AI). Se tarkoittaa: malli on opittu yhteen asiaan, ja se tekee sitä hyvin — mutta ei mitään muuta.
+Lähes kaikki tekoäly, jota kohtaat arjessa tai käytät työssäsi, on kapeaa tekoälyä. Kapea tekoäly tarkoittaa järjestelmää, joka on suunniteltu ja opetettu yhtä tiettyä tehtävää varten. Se voi suoriutua tästä tehtävästä erittäin hyvin, mutta ei osaa juuri muuta.
 
-Netflix-suositusalgoritmi on kapea AI. Se osaa ennustaa, mitä elokuva sinä haluat katsoa. Se tekee sitä hyvin, mutta se ei osaa käännyttää puhelinta, ei vastata sähköpostiin, ei tunnista kasvoja. Se on opittu yhdelle alalle: elokuvien suosittelu.
+Hyvä esimerkki tästä on Netflixin suositusalgoritmi. Sen tehtävä on ennustaa, mitä elokuvia tai sarjoja käyttäjä todennäköisesti haluaa katsoa. Se voi tehdä tämän varsin tehokkaasti, mutta sen osaaminen rajoittuu tähän tehtävään. Se ei osaa vastata sähköposteihin, tunnistaa kasvoja tai ohjata puhelinta. Algoritmi on rakennettu vain yhtä tarkoitusta varten: suosittelujen tekemiseen.
 
-Samoin pankki, joka käyttää tekoälyä lainahakemuksen hyväksymiseen. Malli tietää tuhansia faktoja eri hakemuksista ja niiden tuloksista. Se on hyvin pätevä. Mutta se ei osaa vastata asiakaspalvelupuheluun, ei luo markkinointimateriaaleja, ei suojaa pankkia hakkeroinnilta.
+Samalla tavoin pankki voi käyttää tekoälyä lainahakemusten arviointiin. Malli on oppinut tuhansista aiemmista hakemuksista ja niiden lopputuloksista, joten se voi olla erittäin hyvä juuri tässä tehtävässä. Se ei kuitenkaan osaa vastata asiakaspalvelupuheluihin, tuottaa markkinointimateriaaleja tai suojata pankkia kyberhyökkäyksiltä.
 
-Tämä on itse asiassa yksi tekoälyn merkittävin rajoitus: jokainen malli on erikoistunut. Tämä on hyvä ja huono asia. Hyvä, koska erikoistunut malli voi olla todella hyvä — se ei tuhlaa resursseja kaikkien asioiden tekemiseen. Huono, koska sinun täytyy rakentaa uusi malli jokaiselle tehtävälle.
+Tämä onkin yksi tekoälyn keskeisistä rajoituksista: yksittäinen malli on yleensä erikoistunut tiettyyn tehtävään. Tässä on sekä etuja että haittoja. Etuna on se, että erikoistunut malli voi suoriutua omasta tehtävästään erittäin hyvin, koska sen ei tarvitse hallita kaikkea muuta. Haittana taas on se, että eri tehtäviä varten tarvitaan yleensä eri mallit.
 
-## Koneoppiminen — Tie, jolla koneelle opetetaan
+## Koneoppiminen — Tie, jolla konetta opetetaan
 
-Koneoppiminen (machine learning, ML) on *tapa* rakentaa kapea AI. Sen sijaan että ihminen kirjoittaisi kaikki säännöt käsin, kone oppii ne datasta.
+Koneoppiminen on *tapa* rakentaa kapeaa tekoälyä. Sen sijaan, että ihminen kirjoittaisi kaikki säännöt itse, malli oppii ne datasta.
 
-Esimerkiksi kasvojentunnistusmalli: Antaisit sille kuvia tuhansista kasvoista, joissa jokainen on merkitty "henkilö A", "henkilö B" jne. Malli näkee kuvioita: "Henkilö A:lla on nämä piirteet, henkilö B:llä nämä." Kun näkee uuden kasvon, se sanoo: "Tämä muistuttaa henkilöä A:ta 95 % todennäköisyydellä."
+Esimerkiksi kasvojentunnistusmallille voidaan näyttää tuhansia kuvia kasvoista, ja jokainen kuva on merkitty oikean henkilön nimellä, kuten ”Matti” tai ”Antti”. Tämän aineiston avulla malli oppii tunnistamaan, millaiset piirteet liittyvät kuhunkin henkilöön. Kun se myöhemmin näkee uudet kasvot, se voi arvioida esimerkiksi näin: ”Nämä kasvot vastaavat Mattia 95 prosentin todennäköisyydellä.”
 
-Koneoppiminen käyttää matemaattisia algoritmeja (algoritmit = ohjeistukset) ja parametreja (numeroita, joita malli oppii datasta). Se ei ole mystistä — se on matematiikkaa.
+Koneoppiminen perustuu matemaattisiin algoritmeihin ja parametreihin. Algoritmit ovat toimintaohjeita, ja parametrit ovat arvoja, joita malli oppii datasta. Kyse ei siis ole mistään mystisestä, vaan matematiikkaan perustuvasta tavasta löytää datasta rakenteita ja tehdä niiden pohjalta ennusteita.
 
-> **Pysähdy hetkeksi:** Miten koneoppiminen eroaa "tavallisesta ohjelmoinista", jossa ihminen kirjoittaa säännöt käsin?
+> **Pysähdy hetkeksi:** Miten koneoppiminen eroaa "tavallisesta ohjelmoinnista", jossa ihminen kirjoittaa säännöt käsin?
 
 ## Generatiivinen tekoäly — Joka voi luoda uutta
 
-Viime vuosina on nousut uusi tyyppi tekoälyä: generatiivinen tekoäly (generative AI). Se ei vain tunnista tai luokittele — se *luo* uutta sisältöä.
+Viime vuosina on noussut esiin uusi tekoälyn muoto: generatiivinen tekoäly. Se ei ainoastaan tunnista tai luokittele asioita, vaan *tuottaa* itse uutta sisältöä.
 
-ChatGPT, Dall-E, Midjourney, Suno (musik) — nämä ovat generatiivisia. Ne on koulutettu valtavilla määrillä tekstiä, kuvia tai musiikkia. Ne oppivat kuvioita: "Kun ihminen kirjoittaa tämän kaltaista tekstiä, seuraava sana on yleensä tämä." Tai kuville: "Kun kuva näyttää tältä, seuraava piksel on yleensä tämän värinen."
+ChatGPT, VEO, Nanobanana ja Suno ovat näistä esimerkkejä. Ne on opetettu suurilla teksti-, video-, kuva- tai musiikkiaineistoilla, joiden avulla ne oppivat, millaiset elementit esiintyvät usein yhdessä. Tämän pohjalta ne tuottavat uutta tekstiä, videota, kuvia tai musiikkia yksi osa kerrallaan todennäköisyyksien perusteella.
 
-Seuraava merkittävä asia: Generatiivinen tekoäly ei "ajattele ennakolta." Se ei luo suunnitelmaa ja sitten toteuttaa sen. Se valitsee sanan kerrallaan tai pikselin kerrallaan, perustuen todennäköisyyksiin. Siksi se joskus tuottaa jotain hieno-oloista, joka on täysin väärää.
+Generatiivinen tekoäly ei varsinaisesti ajattele etukäteen samalla tavalla kuin ihminen. Se rakentaa vastauksensa vaiheittain sen mukaan, mikä vaikuttaa datan perusteella todennäköisimmältä. Tästä syystä se voi joskus tuottaa sisältöä, joka näyttää uskottavalta mutta sisältää virheitä.
 
-Generatiivinen tekoäly on erityisen tärkeä *nyt*, koska se muuttaa IT-työtä, kirjoitusta, suunnittelua ja monia muita ammatteja. Mutta se on silti kapea AI — se tekee yhden asian (tekstin tai kuvan luomisen), ei kaikkea.
+Generatiivinen tekoäly on tällä hetkellä erityisen tärkeä, koska se vaikuttaa jo nyt moniin ammatteihin ja työn tekemisen tapoihin. Silti sekin on kapeaa tekoälyä: se on hyvä tietyssä tehtävässä, kuten tekstin tai kuvan tuottamisessa, mutta ei ole yleiskäyttöinen äly, joka pystyisi kaikkeen.
 
-> **Pysähdy hetkeksi:** Miksi generatiivinen tekoäly on parempi ihmisen avuksi kuin korvaaja? Missä tilanteissa sen luominen olemus voisi mennä pieleen?
+> **Pysähdy hetkeksi:** Miksi generatiivinen tekoäly on parempi ihmisen apuna kuin korvaajana? Missä tilanteissa sen luova luonne voisi mennä pieleen?
 
 ## AGI — Artificial General Intelligence (Yleisäly)
 
-Nyt tulemme tutkimusaiheisiin ja tulevaisuuden spekulaatioihin.
+Seuraavaksi siirrymme tutkimuksen ja tulevaisuuden näkökulmaan.
 
-AGI (Artificial General Intelligence) olisi tekoäly, joka osaa oppia ja toimia yhtä hyvin kuin ihminen — missä tahansa alassa. Se voisi lukea tekstiä, tunnistaa kuvia, ohjelmoida, opettaa, ajatella strategisesti, ymmärtää kontekstia ja kontekstia, ja soveltaa tietoa uusiin tilanteisiin.
+AGI:lla tarkoitetaan yleistä tekoälyä, joka pystyisi oppimaan ja toimimaan ihmisen tavoin hyvin monilla eri aloilla. Tällainen tekoäly voisi esimerkiksi lukea tekstiä, tunnistaa kuvia, ohjelmoida, opettaa, tehdä strategisia päätelmiä, ymmärtää asiayhteyksiä ja soveltaa oppimaansa uusiin tilanteisiin.
 
-Kukaan ei ole vielä rakentanut AGI:ta. ChatGPT on hyvin hyvä tekstissä, mutta se ei osaa hallita robottia tai ajaa autoa. Se on kapea AI, vaikka se näyttää älykäältä.
+AGI:a ei kuitenkaan ole vielä onnistuttu rakentamaan. Esimerkiksi ChatGPT on erittäin taitava tekstin käsittelyssä, mutta se ei sellaisenaan osaa ohjata robottia tai ajaa autoa. Vaikka se vaikuttaa älykkäältä, se on silti yhä kapeaa tekoälyä.
 
-Tutkijat ja yritykset (OpenAI, Google, jne.) ovat AGI:n tutkimuksessa. Jotkut sanovat, että se saavutetaan 2030-luvulla. Jotkut sanovat, että se on mahdoton. Todellisuus: emme tiedä.
+AGI:a tutkitaan aktiivisesti sekä tutkimusmaailmassa että suurissa teknologiayrityksissä, kuten OpenAI:ssa ja Googlessa. Osa arvioi, että yleinen tekoäly voitaisiin saavuttaa 2030-luvulla. Toisten mielestä se voi olla mahdoton tavoite. Tällä hetkellä varmaa vastausta ei ole.
 
-Miksi tämä merkitsee IT-opiskelijalle? Koska kun tulee uutisia "tekoäly murthaa ohjauspalvelua" tai "tekoäly voittaa ihmisen", usein ne ovat liioittelua. Ne viittaavat kapeaan AI:iin, joka osaa yhden asian hyvin. AGI:ta ei ole vielä.
+Tämä on tärkeää myös IT-opiskelijalle. Julkisuudessa esitetyt väitteet, kuten ”tekoäly mullistaa ohjelmistokehityksen” tai ”tekoäly voittaa ihmisen”, ovat usein kärjistettyjä. Tavallisesti niillä viitataan kapeaan tekoälyyn, joka suoriutuu erittäin hyvin jostakin yksittäisestä tehtävästä. Yleistä tekoälyä ei sen sijaan toistaiseksi ole olemassa.
 
 ## ASI — Artificial Super Intelligence (Yliäly)
 
-ASI on vielä spekulatiivisempi. Se olisi tekoäly, joka on älykääs kuin ihminen — paljon, paljon älykäämpi. Se ratkaisee ongelmia, joita ihminen ei osaa. Se kehittää omia algoritmeja.
+ASI on vielä selvästi spekulatiivisempi käsite kuin AGI. Sillä tarkoitetaan tekoälyä, joka olisi ihmistä älykkäämpi, mahdollisesti monilla alueilla ylivoimaisesti älykkäämpi. Tällainen järjestelmä voisi ratkaista ongelmia, joihin ihminen ei löydä ratkaisua, ja se voisi ehkä myös kehittää uusia menetelmiä tai algoritmeja itse.
 
-Tämän kaltaista välineistöä ei ole olemassa, eikä kukaan tiedä, kuinka rakentaa sitä. Jotkut tutkijat epäilevät, että se on mahdollista. Jotkut pelkäävät sitä. Jotkut ajattelevat, että se on tulevaisuuden väline, joka muuttaa kaiken.
+Tällaista järjestelmää ei kuitenkaan ole olemassa, eikä kukaan tiedä varmasti, miten se voitaisiin rakentaa. Osa tutkijoista pitää sitä mahdollisena tulevaisuudessa. Osa suhtautuu siihen huolestuneesti. Toisten mielestä se voisi olla teknologia, joka muuttaisi yhteiskuntaa perusteellisesti.
 
-Ammattilaisena: Jos ASI ilmestyy, se muuttaisi kaiken. Ei vain IT-alaa, vaan yhtiskuntaa kokonaan. Mutta nykyään se on tiede-fiktiota, ei todellisuutta.
+Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se ei muuttaisi vain IT-alaa, vaan koko yhteiskunnan toimintaa. Toistaiseksi se kuuluu kuitenkin enemmän tiedefiktioon kuin todellisuuteen.
 
 ## Yhteenveto
 
-Tekoäly ei ole yksi väline. Se on spektri:
+Tekoäly ei ole yksi väline vaan kokonainen spektri erilaisia järjestelmiä.
 
-- **Kapea AI:** Yhteen tehtävään erikoistunut. Netflix-suositukset, kasvojentunnistus, petoksentunnistus. Tämä on se, jota käytät ja rakennat ammattilaisena.
-- **Koneoppiminen:** Tapa rakentaa kapeaa AI:ta datasta.
-- **Generatiivinen AI:** Luo uutta sisältöä. ChatGPT, kuvageneraattori. Tärkeitä nyt, mutta silti kapeita.
-- **AGI:** Yleisäly, joka osaa kaikkea. Tutkimuksessa, mutta ei ole olemassa.
-- **ASI:** Yliäly. Kaukainen teoria, mahdollisesti mahdoton.
+Kapea tekoäly on erikoistunut yhteen tehtävään, kuten suosituksiin, kasvojentunnistukseen tai petoksentunnistukseen. Tätä tekoälyä käytetään käytännössä jo nyt.
 
-Kun luet uutisia tekoälystä, kysy itseltäsi: Onko se kapea vai yleisäly? Mikä se osaa tehdä, ja mitä se *ei* osaa? Näin et härytä mahdollisesti liioitelluista väitteistä.
+- **Koneoppiminen** on tapa rakentaa tällaista tekoälyä datan avulla.
+- **Generatiivinen tekoäly** tuottaa uutta sisältöä, kuten tekstiä, kuvia tai musiikkia. Se on ajankohtainen ja näkyvä tekoälyn muoto, mutta silti kapeaa tekoälyä.
+- **AGI** tarkoittaa yleistä tekoälyä, joka osaisi toimia laajasti eri tehtävissä. Sellaista ei vielä ole.
+- **ASI** tarkoittaa yliälyä, joka ylittäisi ihmisen älykkyyden. Se kuuluu toistaiseksi lähinnä teorian ja spekulaation alueelle.
+
+Kun luet tekoälyä koskevia uutisia, kysy itseltäsi, puhutaanko niissä kapeasta tekoälystä vai yleisestä tekoälystä. Pohdi myös, mitä kyseinen järjestelmä todella osaa tehdä ja mitä se ei osaa tehdä. Näin osaat suhtautua kriittisemmin mahdollisesti liioiteltuihin väitteisiin.
+
+Seuraavalla tunnilla siirryt yksityiskohtiin: miten generatiivinen tekoäly todellisuudessa toimii sisältä päin?

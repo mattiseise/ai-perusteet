@@ -1,136 +1,151 @@
-# Promptit II: kontekstin rakentaminen käytännössä
+# Anna konteksti — miten saat parempia vastauksia
 
-## Johdanto: Monimutkainen IT-ongelma vaatii rakennettua ratkaisua
+## Johdanto: Sama kysymys, aivan eri vastaukset
 
-Kuvittele seuraavaa skenaariota. Sinulla on koodista bugi. Se ei ole pieni — se on monimutkainen. Virhe ilmenee vain tietyissä tilanteissa. Ensimmäisellä yrityksellä kysyt ChatGPT:tä: "Miksi tämä funktio ei toimi?" Vastaus on yleinen ja ei osuva. Kokeilit verkon hakuja. Pitkityt samalla kun aika kuluu.
+Kuvittele tilannetta. Sinulla on esseen aihe "Tekoäly työssä" ja pyydit tekoälyä auttamaan. Ensimmäisellä kerralla kirjoitat: "Kerro tekoälystä." Vastaus on yleinen eikä auta paljoa. Toinen yritys: "Kerro tekoälystä esseeseeni, jonka kohdeyleisö on IT-opiskelijat." Vastaus on parempi. Kolmas yritys: "Kirjoita 500 sanan johdanto esseeseeni, jonka aihe on 'Tekoäly työssä'. Kohdeyleisö: IT-opiskelijat, jotka eivät osaa koodia. Aloita sillä, miten tekoäly muuttaa jokapäiväisiä töitä."
 
-Nyt kokeile erilaista lähestymistapaa. Ensimmäisellä kerralla annat tavoitteen: "Minulla on bugi funktioissa, jotka käsittelevät käyttäjän tietoja." Toisella kerralla annat kontekstia: "Virhe ilmenee vain, kun käyttäjä kirjoittaa erikoismerkkejä, kuten ä tai ö." Kolmannella kerralla annat koodinpätkän. Neljännellä kerralla kysyt tarkentavaa: "Miten validoidaan Suomen nimet oikein?" Jokainen kierros rakentaa edellisen päälle.
+Jokainen kierros antaa tekoälylle lisää kontekstia ja jokainen saa paremman vastauksen. Tämä ei ole magia. Se on pelkkää järkevää viestintää: mitä enemmän kerrot, mitä tarvitset, sitä paremman vastauksen saat.
 
-Tämä on ammattilaisesti tekemisen prosessi. Et etsi "täydellisen vastauksen" yhtä promptia kirjoittamalla. Rakennat ratkaisua iteratiivisesti, antamalla kontekstia kierros kierrokselta, kunnes päädyt käyttökelpoiseen lopputulokseen. Tämä oppitunti opettaa sinulle, kuinka rakentaa konteksti käytännössä. Se on tämän kurssin tärkein taito.
+Konteksti tarkoittaa kaikkea tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Ei kysymystä yleisesti, vaan *sinun* kysymystäsi, *sinulla*, *sinun* tavoitteillasi. Tämä oppitunti opettaa sinulle, miten rakentaa kontekstia käytännössä. Se on tämän kurssin tärkein taita.
 
-## Taustatietojen antaminen: Miksi konteksti ratkaisee
+## Konteksti: Miksi se on tärkeää
 
-Hyvin usein tekoälyn antama vastaus on huono, koska se ei ymmärrä *kontekstia*. Konteksti on kaikki tieto, jonka tekoäly tarvitsee tehtävän ymmärtämiseen ja ratkaisemiseen hyvin.
+Konteksti on kaikkea tietoa, jota tekoäly tarvitsee sinusta ja tilanteestasi. Mitä haluat tehdä ja miksi? Kuka olet ja mikä on taustasi? Mihin käytät vastausta? Ketkä lukevat tai käyttävät sitä? Mitä muuta on tärkeää tietää? Nämä kaikki asiat muodostavat kontekstisi.
 
-Esimerkiksi: "Kirjoita dokumentaatio funktiolle." On prompt. Mutta dokumentaatio voi olla:
-- Kehittäjäille (tekninen, alaviitteillä, koodin esimerkeillä)
-- Käyttäjille (yksinkertainen, ilman teknistä jargonia)
-- Opiskelijoille (opettavainen, vaihe vaiheelta)
-
-Ilman kontekstia tekoäly tekee arvauksia. Kontekstin kanssa — esimerkiksi "dokumentaatio on 15-vuotiaille IT-opiskelijoille, jotka opettelevat ohjelmointia" — tekoäly osaa kirjoittaa sopivan tason ja sävyn.
-
-Ammattilaisesti konteksti rakentuu useista lähteistä:
-- Mitä olet jo tehnyt ja mikä on nykyinen tilanne
-- Mitkä ovat vaatimukset ja rajat
-- Kenen kanssa voit työskennellä (tiimi, asiakas, yleisö)
-- Mitä muuta on relevanttia
-
-Kun annat tämän kontekstin, vastaukset paranevat merkittävästi. Se vaatii enemmän aikaa promptissa, mutta säästää moninkertaisesti iteraatioissa.
-
-> **Pysähdy hetkeksi:** Ajattele viimeistä kertaa, kun käytit tekoälyä. Annoit sille riittävästi kontekstia? Mitä tietoa olisit voinut antaa, jonka olisit luullut olevan "ilmeistä"?
-
-## Lähdeaineistojen liittäminen: Teksti koneelle syötettäväksi
-
-Usein tekoälyn täytyy käsitellä olemassa olevaa materiaalia — artikkeli, raportti, koodi, asiakirja. Ammattilaisesti et pyydä tekoälyä "selittämään jotain, jonka et ole sille antanut" — annat materiaalin ja sitten kehotuksen.
-
-Konkreettinen esimerkki: sinulla on tekninen dokumentaatio, jota haluat yksinkertaistaa. Voit:
-1. Kopioida dokumentaation kokonaisuudessaan ChatGPT:hen: "Tässä on dokumentaatio. Kirjoita se uudelleen 5-vuotiaan ymmärryskykylle."
-2. Liittää pääkohdan: "Dokumentaatio käsittelee verkkoprotokollaa. Pääkohdat ovat: [liita 5 tärkeintä kohtaa]. Kirjoita selitys, jonka 15-vuotias ymmärtää."
-
-Ammattilaisesti valitset, mitä liität. Kokonaisaineisto on usein liian paljon — tekoälyn konteksti-ikkuna on rajoitettu. Eli "näyt pääkohdat" usein toimii paremmin.
-
-Koodi on erityisen tärkeä. Jos sinulla on bugi, et kysy "miksi funktio ei toimi" — annat funktion:
-```python
-def validate_email(email):
-    return "@" in email and "." in email
+```mermaid
+graph TD
+    A[Konteksti] --> B[Tavoite<br/>Mitä haluat?]
+    A --> C[Taustatieto<br/>Mitä tiedät jo?]
+    A --> D[Kohdeyleisö<br/>Kenelle tämä on?]
+    A --> E[Käyttötarkoitus<br/>Mihin tätä käytetään?]
+    A --> F[Rajoitukset<br/>Mitä pitää välttää?]
 ```
 
-Ja sitten kehotus: "Tämä funktio on liian yksinkertainen. Mitä siihen pitäisi lisätä tarkammaksi validaatioksi?"
+Esimerkki: "Kirjoita dokumentaatio funktiolle" on kysymys. Mutta sen vastaus voi olla hyvin erilainen riippuen kontekstista. Funktio voidaan dokumentoida koodarille, jolloin dokumentointi on tekninen, sisältää alaviitta ja yksityiskohtia. Se voidaan dokumentoida opiskelijalle, jolloin dokumentointi on opettavainen ja selittää vaihe vaiheelta. Se voidaan dokumentoida käyttäjälle, jolloin dokumentointi on yksinkertainen eikä sisällä teknistä jargonia.
 
-Tekoäly näkee koodin ja antaa spesifisen, koodiin perustuvan vastauksen. Se ei joudu arvaamaan, mitä koodi tekee.
+Ilman kontekstia tekoäly tekee oletuksia ja arvailee. Kontekstin kanssa — esimerkiksi "dokumentaatio on 15-vuotiaalle opiskelijalle, joka ei osaa koodia, haluan, että hän ymmärtää, miten funktio toimii" — tekoäly osaa kirjoittaa sopivalla tasolla.
 
-## Tehtävän pilkkominen: Iso ongelma, pienempiä askelia
+> **Pysähdy hetkeksi:** Ajattele viimeisintä kertaa, kun käytit tekoälyä. Annoitko sille riittävästi kontekstia? Mitä muuta olisit voinut kertoa, vaikka se olisi tuntuneet selvältä?
 
-Yksi ammattilaisesti kriittinen taito on **pilkkominen** (decomposition). Kun sinulla on iso, monimutkainen tehtävä, et pyydä tekoälyä "ratkaise se" — pilkkot sen osiin.
+Konteksti on tärkeää neljällä tavalla. Ensinnäkin **spesifisyys**: jäsennelty, kohdistettu vastaus on parempi kuin yleinen. "Tekoäly työssä" voi tarkoittaa mitä tahansa, mutta "Tekoäly IT-opiskelijoiden arjessa" on tarkempi ja parempi vastaus. Toiseksi **sopiva taso**: Konteksti kertoo, mihin tasoon kirjoittaa. "Selitä tekoäly" on epäselvä, mutta "Selitä tekoäly 15-vuotiaalle, joka ei osaa ohjelmointia" on selkeä. Kolmanneksi **käyttökelpoinen muoto**: Konteksti kertoo, mitä teet vastauksella. "Auta minua esseen kirjoittamisessa" on eri kuin "auta minua koodiprojektissa" — vastauksen muoto muuttuu. Neljänneksi **oikea sisältö**: Konteksti vähentää tarpeettomia iteraatioita. Jos kerrot alusta alkaen, mitä tarvitset, tekoäly osaa antaa sen heti — eikä tarvitse pyytää tarkennuksia.
 
-Esimerkki: "Rakenna sähköpostin validointi-järjestelmä, joka tarkistaa, onko osoite olemassa, estää spam-osoitteita ja tallentaa validit osoitteet tietokantaan."
+## Kuinka antaa kontekstia: Käytännön esimerkki
 
-Se on iso. Pilkkosi sen:
-1. Ensin: "Kirjoita regex-pattern, joka validoi sähköpostiosoitteen muodon."
-2. Sitten: "Lisää tarkistus, että ei ole yhteiset spam-domainit."
-3. Sitten: "Integroida tietokantaan — mitä SQL-kyselyä tarvitsen?"
-4. Sitten: "Kuinka yhdistää nämä kolme osaa?" (integraatio)
-5. Lopuksi: "Kuinka testata koko järjestelmä?" (testaus)
+Vertaa näitä kolmea pyyntöä:
 
-Jokainen osioiden on pienempi ja hallittavampi. Tekoäly antaa parempia vastauksia pienempiin osiin. Ja lopuksi yhdistät ne.
+**Huono pyyntö:**
+"Auta minua historian esseen kanssa."
 
-Ammattilaisesti pilkkominen on perusstrategia. Monimutkainen ongelma ei ole yksi prompt — se on viisi tai kymmenen pienpromptia, joissa jokainen rakentuu edellisen päälle.
+**Parempi pyyntö:**
+"Kirjoita johdanto historian esseeseeni. Aihe on 'Digitaalinen vallankumous'. Luokka: 10-vuotiaat opiskelijat."
 
-> **Pysähdy hetkeksi:** Mitkä ovat ammattilaiset etuja sille, että pilkkot ongelman osiin tekoälylle? Mitä riskejä syntyy, jos et pilko sitä?
+**Paras pyyntö:**
+"Kirjoita 200 sanan johdanto historian esseeseeni. Aihe: 'Digitaalinen vallankumous'. Luokka: 10-vuotiaat IT-opiskelijat, joilla on perustiedot historiasta, mutta ei erityistä tekniikan tietoa. Haluan, että lukija ymmärtää, miksi tämä aihe on tärkeä. Johdanto päättyy aiheväitteeseen."
 
-## Iteraatio ja tarkentaminen: Jatkopromptit, jotka terävöittävät
+Kolmannessa pyynnössä kerrot mitä haluat: johdanto, pituuden (200 sanaa), aiheen (digitaalinen vallankumous), kohdeyleisön (10-vuotiaat opiskelijat), heidän taustansa (IT-koulutus, historia, ei tekniikan osaamista), tarkoituksen (tehdä aihe tärkeäksi) ja lopputuloksen (johdanto päättyy väitteeseen).
 
-Kun tekoäly antaa ensimmäisen vastauksen, se on usein pohja. Ammattilaisesti seuraavat promptit terävöittävät sitä.
+Nyt tekoäly ymmärtää oikein, mitä sinä tarvitset.
 
-Esimerkiksi:
-- **Kierros 1:** "Kirjoita JavaScript-funktio, joka muotoilee päivämäärän."
-  - Saat: `function formatDate(date) { return new Date(date).toLocaleDateString(); }`
+> **Pysähdy hetkeksi:** Mitä kontekstia olisit antanut edellisen pyynnön yhteydessä? Mitä jäi puuttumaan?
 
-- **Kierros 2:** "Lisää tuki seuraaviin muotoihin: 'DD.MM.YYYY', 'YYYY-MM-DD', 'DD Month YYYY'."
-  - Saat: parannettu versio, joka tukee useita muotoja.
+```mermaid
+graph LR
+    A[Taso 1<br/>Yksisanainen pyyntö] -->|+tavoite| B[Taso 2<br/>Perusmuotoinen pyyntö]
+    B -->|+konteksti| C[Taso 3<br/>Kontekstilla rikastettu]
+    C -->|+rajoitukset| D[Taso 4<br/>Ammattimainen pyyntö]
+    style A fill:#fee,stroke:#c00
+    style B fill:#ffd,stroke:#aa0
+    style C fill:#dfd,stroke:#0a0
+    style D fill:#ddf,stroke:#00a
+```
 
-- **Kierros 3:** "Lisää error-käsittely. Jos päivämäärä ei ole validi, palauta virhesanoma."
-  - Saat: versio, joka käsittelee virheet.
+## Lähdeaineiston antaminen: Tekstit, koodit, dokumentit
 
-- **Kierros 4:** "Lisää testit näille kolmelle muodolle. Sisällytä edge-case: karkausvuosi, marraskuu."
-  - Saat: testit.
+Usein sinulla on olemassa olevia aineistoja, joita haluat tekoälyn käsittelevän. Esimerkiksi artikkeli, jonka haluat yksinkertaistaa opiskelijoille, tai koodi, jossa on bugi. Ammattilaisesti et pyydä tekoälyä "selittämään jotain, mitä et ole sille antanut" — annat ensin materiaalin ja sitten kehotuksen.
 
-Jokainen kierros on hyvin spesifinen ja rakentaa edellisen päälle. Se on ammattilaiset kutsuvat "iteratiiviseksi kehitykseksi" tekoälyn kanssa.
+Esimerkki 1: Sinulla on tiede-artikkeli kvantummekaniikasta, jonka haluat yksinkertaistaa 15-vuotiaalle. Voit kopioida artikkelinpätkän tai otsikon ja sanoa: "Tässä on teksti kvantummekaniikasta. Kirjoita se uudelleen 15-vuotiaalle ymmärrykselle sopivaksi. Käytä esimerkkejä jokapäiväisestä elämästä." Vaihtoehtoisesti voit antaa pääkohdat ja sanoa: "Artikkeli käsittelee kvantummekaniikkaa. Pääkohdat: elektronit voivat olla useissa paikoissa samanaikaisesti, mittaaminen vaikuttaa tulokseen. Selitä nämä kahdessa lauseessa 15-vuotiaalle."
 
-Tärkeä periaate: **jatkoprompti on tarkempi kuin peruspromt­ti**. Et kirjoita "nyt paranna sitä" — kirjoitat "lisää nämä kolme asiaa: X, Y, Z". Spesifikkointi johtaa parempiin tuloksiin.
+Esimerkki 2: Sinulla on ryhmän tekemä ryhmätyön raportti, jota haluat parantaa. Annat sen ja sanot: "Tässä on ryhmän raportti. Parantele sitä seuraavissa asioissa: 1) Johdanto ei selitä aiheita riittävästi, 2) johtopäätökset ovat liian lyhyet, 3) lähdeviitteet puuttuvat."
 
-## Kontekstin rakentamisen ammattilaisesti: Case-tutkimus
+Tärkeä periaate on tämä: **Anna ensin aineisto, sitten kehotus.** Tekoäly näkee konkreettisen tekstin ja voi antaa spesifisen, siihen perustuvan vastauksen. Sen ei tarvitse arvailla.
 
-Katsotaan koko prosessia yhteen tapaukseen alusta loppuun.
+> **Pysähdy hetkeksi:** Missä opiskelun tilanteissa sinulla on olemassa olevia aineistoja, joita haluat tekoälyn käsittelevän? Esimerkiksi artikkelit tenttiin, muiden kirjoittama koodi, vertaisarviointi?
 
-**Tehtävä: Rakenna Python-hakualgoritmi, joka etsii artikkeleita tietokannasta.**
+## Tehtävän pilkkominen: Iso ongelma, pienemmät osat
 
-**Kierros 1 — Tavoite:**
-- Prompt: "Kirjoita Python-funktio, joka hakee artikkeleita hakusanalla."
-- Tulos: Perus-funktio, joka tekee yksinkertaisen tekstihaun.
+Ammattilaisesti tärkeä taita on **pilkkominen**. Kun sinulla on iso, monimutkainen tehtävä, et pyydä tekoälyä "ratkaisemaan sitä", vaan jaat sen pienempiin osiin, joista jokainen on hallittava.
 
-**Kierros 2 — Konteksti: Tietokanta ja rakenne**
-- Prompt: "Tietokanta käyttää SQLite:a. Taulussa 'articles' on sarakkeet: id, title, content, author, published_date. Nyt hakaa artikkelit, joiden title-sarake sisältää hakusanan."
-- Tulos: SQL-pohjainen ratkaisu, joka vastaa tietokannan rakenteeseen.
+Esimerkki: "Kirjoita raportti, jossa vertaillaan kolmea eri menetelmää data-analyysiin ja sisällytetään omat tulkinnat sekä johtopäätökset." Se on iso tehtävä. Pilko se näin:
 
-**Kierros 3 — Rajat: Suorituskyky**
-- Prompt: "Tietokannassa on 1 miljoonaa artikkelia. Yksinkertainen LIKE-haku on liian hidas. Käytä indeksointia tai tarkemmin optimoitua hakua."
-- Tulos: Paremmin optimoitu versio.
+Ensin voit pyytää tekoälyä: "Kirjoita yhteenveto data-analyysin perusteista — mitä se on?" Sitten: "Kuvaile kolme menetelmää ja niiden perusidea — yksi lause kustakin." Seuraavaksi: "Nyt lisää vertailu: mitkä ovat kunkin menetelmän edut ja haitat?" Sitten: "Kuinka nämä sopivat opiskelijan projektiin?" Lopuksi: "Kirjoita johtopäätös — mitä opit?"
 
-**Kierros 4 — Tarkentaminen: Tulokset**
-- Prompt: "Palauta tulokset järjestettynä relevanssin perusteella — tärkeimmät ensin. Sisällytä myös how many hits -laskuri."
-- Tulos: Järjestetyt tulokset, jonka näyttävät relevanssin.
+Jokainen osio on pienempi ja tekoäly antaa parempia vastauksia pienempiin osiin. Kun olet saanut kaikki osat, voit yhdistää ne kokonaiseksi raportiksi.
 
-**Kierros 5 — Integraatio: Virheenkäsittely**
-- Prompt: "Lisää error-käsittely. Jos hakusana on tyhjä, palauta kaikki artikkelit. Jos tietokanta-yhteys epäonnistuu, anna selvä virhesanoma."
-- Tulos: Tuotanto­kelpoin ratkaisu, joka käsittelee virheet.
+```mermaid
+graph TD
+    A[Iso tehtävä:<br/>Kirjoita raportti IT-trendeistä] --> B[Osa 1:<br/>Kerää aineisto]
+    A --> C[Osa 2:<br/>Kirjoita johdanto]
+    A --> D[Osa 3:<br/>Kirjoita sisältö]
+    A --> E[Osa 4:<br/>Tiivistelmä]
+    B --> F[Valmis raportti]
+    C --> F
+    D --> F
+    E --> F
+```
 
-Koko prosessi rakentui konteksti kierros kierrokselta. Ammattilaisesti tämä on tehokas lähestymistapa: olet täydentänyt ratkaisua vaihe vaiheelta ilman, että etsiit kokonaan uutta koodia jokaisen kierroksen jälkeen.
+Ammattilaisesti pilkkominen säästää aikaa, koska vastaukset ovat tarkempia. Jokainen osa on kohdistettu yhteen asiaan eikä tekoäly sekoita asioita.
 
-## Yhteenveto: Kontekstin rakentaminen ammattilaisella
+> **Pysähdy hetkeksi:** Mitkä ovat etuja, kun pilkot ongelman osiin tekoälylle? Mitä riskejä on, jos et pilko?
 
-Ammattilaisesti kontekstin rakentaminen on seuraava prosessi:
+## Iteraatio ja tarkentaminen: Kierros kerrallaan parempi vastaus
 
-1. **Aloita selkeällä tavoitteella**: "Mitä haluan tehdä?" — yksinkertainen, spesifinen prompt.
+Kun tekoäly antaa ensimmäisen vastauksen, se on usein vain pohja. Ammattilaisesti seuraavat kierrokset terävöittävät sitä.
 
-2. **Anna taustatiedot**: "Mikä on nykyinen tilanne? Mitä tarvitsen?" — konteksti rakentuu.
+```mermaid
+graph TD
+    A[1. Ensimmäinen pyyntö] --> B[2. Lue vastaus]
+    B --> C[3. Arvioi: puuttuuko jotain?]
+    C -->|Kyllä| D[4. Tarkenna pyyntöä]
+    D --> B
+    C -->|Ei| E[5. Valmis!]
+```
 
-3. **Pilkkoa isot ongelmat**: Rakentaa pienempiin osiin, jotka voit ratkoa yksitellen.
+Esimerkki: Haluat oppia Python-ohjelmoinnista tenttiin. Kierros 1: "Kerro Python-muuttujista." — Saat perustiedot. Kierros 2: "Lisää esimerkkejä muuttujista. Näytä, miten nimetään oikein ja miksi se on tärkeää." — Saat enemmän esimerkkejä. Kierros 3: "Nyt lisää yleisiä virheitä. Mitä väärää muuttujien kanssa voi tehdä?" — Saat edge-caseita. Kierros 4: "Lopuksi tee minulle harjoitustehtävät — 5 kysymystä, joista opiskelijat saattaisivat vastailla väärin." — Saat testitehtävät.
 
-4. **Liitä olemassa oleva aineisto**: Koodi, tiedot, vaatimukset — anna tekoälylle nähtäväksi.
+Jokainen kierros rakentuu edellisen päälle. Ammattilaisesti tämä on tehokas lähestymistapa: olet täydentänyt ratkaisua vaihe vaiheelta ilman, että etsit kokonaan uutta vastausta joka kierroksella.
 
-5. **Iteroi ja terävöi**: Jatkopromptit tekevät vastauksesta paremmaksi, spesifimmäksi, käyttökelpoisemmaksi.
+Tärkeä periaate on tämä: **Jatkoprompti on tarkempi kuin perusprompti.** Et kirjoita "nyt paranna sitä yleisesti" vaan "lisää nämä kolme asiaa: X, Y, Z". Spesifikaatio johtaa parempiin tuloksiin.
 
-6. **Testaa ja validoi**: Jokaisen kierroksen jälkeen testaa, että vastaus toimii omassa kontekstissasi.
+> **Pysähdy hetkeksi:** Milloin oppimisessasi olisi hyödyllistä käyttää iteraatiota? Esimerkiksi tenttiin valmistautuminen, ryhmätyön tekeminen, esseen kirjoittaminen?
 
-Tämä prosessi vaatii enemmän aikaa ensimmäisessä promptissa ja merkittävästi vähemmän iteraatioissa verrattuna "kaiken kerralla" -lähestymistapaan. Ammattilaisesti se on parempi investointi. Opit tämän harjoittelemalla oikeita IT-projekteja.
+## Kontekstin rakentaminen: Käytännön esimerkki
+
+Katsotaan koko prosessia yhden tapauksen kautta alusta loppuun.
+
+**Tehtävä: Haluat tekoälyn auttavan sinua valmistautumaan IT-perusteita koskevan luennon tenttiin.**
+
+**Kierros 1 — Yksinkertainen kysymys:**
+
+Pyyntö: "Opettele minulle tenttiin valmistautumisesta." Tulos: yleinen ohjeistus, ei spesifinen sinulle.
+
+**Kierros 2 — Lisää kontekstia:**
+
+Pyyntö: "Tentti on IT-perusteista. Aiheita: verkot, palvelimet, tietoturva. Minulla on 1 viikko aikaa. Opetan parhaiten esimerkeistä." Tulos: parempi, mutta vielä liian yleinen.
+
+**Kierros 3 — Vielä tarkempaa:**
+
+Pyyntö: "Tentti on IT-perusteista (verkot, palvelimet, tietoturva). Minulla on 1 viikko. Opetan parhaiten esimerkeistä todellisesta maailmasta. Haluan viikko-ohjelman, jossa joka päivälle on 30 minuutin opiskelusessio. Jokainen sessio: aihe, 2–3 konkreettista esimerkkiä, testikysymys." Tulos: spesifinen viikko-ohjelma, joka sopii sinulle.
+
+**Kierros 4 — Pilko osiin:**
+
+Pyyntö: "Aloitetaan maanantaista. Aihe: perustiedot verkoista. Mitä olennaista opiskelijan pitäisi tietää? Anna 3 konkreettista esimerkkiä — miten verkot toimivat jokapäiväisessä elämässä." Tulos: fokussoitu maanantain sessio.
+
+Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Sinulla oli spesifinen, käyttökelpoinen opiskelusuunnitelma, joka sopi sinulle — eikä yleinen lista.
+
+## Yhteenveto: Konteksti on ammattimainen taito
+
+Ammattilaisesti kontekstin rakentaminen on tämä prosessi:
+
+Aloita selkeällä tavoitteella: Mitä haluat tehdä? Yksinkertainen, spesifinen kysymys. Sitten anna taustatiedot: Mikä on sinun tilannetta? Mitä tarvitset? Kuka olet? Konteksti rakentuu. Jaa isot tehtävät: Jaa ne pienempiin osiin, joista jokainen on hallittava. Liitä olemassa oleva aineisto: Tekstit, koodit, asiakirjat — anna ne tekoälyn nähtäväksi. Iteroi ja terävöi: Jatkokysymykset tekevät vastauksesta paremman, spesifisemmän ja käyttökelpoisemman. Testaa ja validoi: Jokaisen kierroksen jälkeen tarkista, että vastaus auttaa sinua oppimisessasi.
+
+Tämä prosessi vaatii enemmän aikaa ensimmäisen pyynnön laatimiseen ja vähemmän iteraatioita myöhemmin. Ammattilaisesti se on parempi investointi. Seuraavalla tunnilla harjoitellaan tätä käytännössä oikeissa opiskelun tehtävissä.

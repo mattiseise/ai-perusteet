@@ -1,55 +1,55 @@
-# Mitä tekoäly on – ja mitä se ei ole?
+# Älykäs vai sääntö? — mitä tekoäly oikeasti tekee
 
 ## Johdanto
 
-Olet varmasti käyttänyt sovellusta, joka esittelee sinulle musiikkia, elokuvia tai tuotteita. Joskus ajattelet: "Miten tämä tietää, mitä minä pidän?" Tai olet nähnyt uutisen tekoälystä, joka voitti maailman parhaan pelaajan shakkipelissä. Monet ajattelevat, että kaikki "älykäs" ohjelmisto on tekoälyä. Todellisuus on monimutkaisempi — ja paljon kiinnostavampi.
+Olet varmasti käyttänyt sovellusta, joka suosittelee sinulle musiikkia, elokuvia tai tuotteita. Ehkä olet joskus ajatellut: "Miten tämä tietää, mistä minä pidän?" Tai olet nähnyt uutisen tekoälystä, joka voitti maailman parhaan pelaajan shakkipelissä. Monet ajattelevat, että kaikki "älykäs" ohjelmisto on tekoälyä. Todellisuus on monimutkaisempi — ja paljon kiinnostavampi. Tekoäly (artificial intelligence, AI) ei ole yksi asia. Se ei ole yksi ohjelmointitapa, joka tekee tai ymmärtää kaiken kaikesta. Tämän osion jälkeen ymmärrät, miten tekoäly eroaa tavallisesta ohjelmoinnista. Osaat myös paremmin arvioida, millaiset ongelmat vaativat tekoälyä ja millaiset eivät.
 
-Tekoäly (artificial intelligence, AI) ei ole yksi asia. Se ei ole yhtä ohjelmointilogiikkaa, joka tekee kaiken. Ymmärtää ero tekoälyn ja tavallisen ohjelmoinnin välillä auttaa sinua näkemään, miksi jotkut ongelmat vaativat AI:ta ja jotkut ei.
+Tämän tunnin jälkeen sinulla on uusi todistusaineisto tuomaripöydällesi: tietävätkö tekoälyt todella mitä ne tekevät, vai ovat ne vain edistyneitä sääntökonekoneita?
 
 ## Mitä tekoäly oikeasti on?
 
-Tekoäly on ohjelma, joka oppii datan perusteella eikä vain seuraa ennalta kirjoitettuja sääntöjä. Se tekee päätöksiä tai ennustaa asioita muuttuvissa tilanteissa — ilman, että sinun tarvitse ohjelmoida jokainen mahdollinen tapaus käsin.
+Tekoäly on ohjelma, joka oppii datasta eikä vain noudata ennalta kirjoitettuja sääntöjä. Se tekee päätöksiä tai ennustaa asioita muuttuvissa tilanteissa — ilman, että jokaista mahdollista tapausta täytyy ohjelmoida käsin.
 
-Kuvitella pankin petoksentunnistus. Vanha sääntöpohjainen järjestelmä (rule-based system) voisi sanoa: "Jos tapahtuma on yli 10 000 euroa, hälyytä operaattorille." Yksinkertainen, nopea, mutta rajoitettu. Oikea petos saattaa olla paljon pienempi summa, tai se saattaa näyttää normaalilta kunnes katsot suurempaa kuvaa — tavallisen asiakkaan käyttäytymisen historiaa.
+Kuvitellaan pankin petoksentunnistusjärjestelmä. Perinteinen sääntöpohjainen järjestelmä voisi toimia esimerkiksi näin: ”Jos tapahtuma on yli 10 000 euroa, lähetä hälytys operaattorille.” Tällainen ratkaisu on yksinkertainen ja nopea, mutta samalla melko rajallinen. Todellinen petos voi liittyä paljon pienempään summaan, ja yksittäinen rahansiirto voi näyttää täysin normaalilta. Epäilyttäväksi tapaus muuttuu usein vasta silloin, kun sitä tarkastellaan osana laajempaa kokonaisuutta, kuten asiakkaan aiempaa käyttäytymistä.
 
-Tekoäly sen sijaan voi oppia miljoonista todellisista transaktioista ja havaita kuvioita, joita ihminen ei näkisi. Se kysyy itseltään: "Näyttääkö tämä transaktio samankaltaiselta kuin petolliset tapaukset, joita minulla on data?" Sen sijaan että sääntö sanoo "jos X, niin Y", tekoäly vastaa: "Perustuen datan kuvioihin, tämä tapahtuma on 97 % todennäköisesti laillinen."
+Tekoäly toimii eri tavalla. Se voi oppia miljoonista oikeista transaktioista ja löytää niistä sellaisia yhteyksiä ja poikkeamia, joita ihminen tai yksinkertainen sääntöjärjestelmä ei huomaisi. Siksi se ei perustu vain yksittäisiin sääntöihin, kuten ”jos X, niin Y”, vaan muodostaa datan perusteella arvion siitä, kuinka todennäköisesti tapahtuma on laillinen tai petollinen. Esimerkiksi se voi päätellä: ”Tämän tapahtuman todennäköisyys olla laillinen on 97 prosenttia.”
 
-> **Pysähdy hetkeksi:** Kuinka moni sovellus, jota käytät päivittäin, käyttää tekoälyä päätösten tekemiseen? Poikkeaa niistä, joissa on vain kiinteät säännöt?
+> **Pysähdy hetkeksi:** Kuinka moni päivittäin käyttämäsi sovellus käyttää tekoälyä päätösten tekemiseen? Miten ne eroavat niistä, joissa on vain kiinteät säännöt?
 
 ## Ero automaatioon ja tavalliseen ohjelmointiin
 
-Monet ihmiset sekoittavat tekoälyn automaatioon. "Tämä ohjelmisto teki työtä automaattisesti — pitää olla AI!" Ei. Automaatio tarkoittaa vain sitä, että tietokone tekee työtä ilman käyttäjän nappia painamista.
+Monet ihmiset sekoittavat tekoälyn automaatioon. "Tämä ohjelmisto teki työn automaattisesti — sen täytyy olla AI!" Ei välttämättä. Automaatio tarkoittaa vain sitä, että tietokone tekee työn ilman, että käyttäjän tarvitsee painaa nappia.
 
-Esimerkiksi sähköpostisovelluksessasi on todennäköisesti säännöt, jotka lajittelevat viestit automaattisesti kansioihin. Jos sähköposti sisältää sanat "laskut" ja "lomauttaminen", se menee kansioon "Juridinen". Nämä ovat kiinteitä sääntöjä — ne eivät oppi tai muutu. Se on automaatio, ei tekoäly.
+Esimerkiksi sähköpostisovelluksessasi on todennäköisesti sääntöjä, jotka lajittelevat viestit automaattisesti kansioihin. Jos sähköposti sisältää sanat "laskut" ja "lomauttaminen", se siirtyy kansioon "Juridinen". Nämä ovat kiinteitä sääntöjä — ne eivät opi eivätkä muutu. Se on automaatiota, ei tekoälyä.
 
-Monissa IT-alan järjestelmissä on roboottisia prosesseja (RPA, Robotic Process Automation). Robotti avaa asiakaspalvelujärjestelmän, lukee lippun, täyttää lomakkeen, lähettää vastauksen — kaikki automaattisesti ja 24/7. Nopea, tehokasta, mutta silti vain rutiineja. Robotti ei opi asiakkaista tai paranna omaa suoritustaan ajan myötä.
+Monissa IT-alan järjestelmissä käytetään robottista prosessiautomaatiota (RPA, Robotic Process Automation). Robotti avaa asiakaspalvelujärjestelmän, lukee tiketin, täyttää lomakkeen ja lähettää vastauksen — kaikki automaattisesti ja ympäri vuorokauden. Se on nopeaa ja tehokasta, mutta silti vain rutiinien suorittamista. Robotti ei opi asiakkaista eikä paranna omaa toimintaansa ajan myötä.
 
-Tekoäly *oppii* datasta. Se muuttuu, paranee, sopeutuu. Kun petoksentunnistus näkee uuden tyyppisen petosten kuvion, se oppii sen. Se ei vaadi uusia sääntöjä; sääntöjä ei ole.
+Tekoäly *oppii* datasta. Se muuttuu, paranee ja sopeutuu. Kun petoksentunnistus kohtaa uudenlaisen petoskuvion, se voi oppia tunnistamaan sen. Se ei vaadi uusia sääntöjä, koska toiminta ei perustu yksittäisiin käsin kirjoitettuihin sääntöihin.
 
-> **Pysähdy hetkeksi:** Jos järjestelmä tekee samat asiat samalla tavalla ilman, että se oppii, onko se tekoäly?
+> **Pysähdy hetkeksi:** Jos järjestelmä tekee samat asiat samalla tavalla ilman, että se oppii, onko se tekoälyä?
 
 ## Probabilistinen vs. deterministinen ajattelu
 
-Yksi syvä ero tekoälyn ja perinteisen ohjelmoinnin välillä on epävarmuus.
+Yksi syvällinen ero tekoälyn ja perinteisen ohjelmoinnin välillä liittyy epävarmuuteen.
 
-Tavallisessa ohjelmassa logiikka on deterministinen: if-then-else. Jos x = 5, tee A. Jos x = 10, tee B. Tulokset ovat ennustettavia.
+Tavallinen ohjelma toimii deterministisesti: se noudattaa ennalta kirjoitettuja sääntöjä ja tuottaa ennustettavan tuloksen. Tekoäly puolestaan toimii todennäköisyyksien varassa. Se ei anna varmaa vastausta, vaan arvion siitä, mikä lopputulos on datan perusteella todennäköisin. Tämä on koneoppimisen ydin: päätöksiä tehdään epätäydellisen datan pohjalta epävarmassa maailmassa.
 
-Tekoäly on probabilistinen. Se vastaa: "Tämä on 85 % todennäköisyydellä A, ja 15 % todennäköisyydellä B." Se antaa todennäköisyydet, ei varmuutta. Tämä on ominaista koneoppimiselle (machine learning): mallin on opittava epätäydellisestä datasta epävarmassa maailmassa.
+Kun sähköpostiin tulee viesti, perinteinen roskapostisuodatin tarkistaa ennalta määriteltyjä sääntöjä. Se voi esimerkiksi toimia näin: ”Jos otsikossa on paljon isoja kirjaimia ja useita huutomerkkejä, merkitse viesti roskapostiksi.” Tämä on yksinkertainen tapa toimia, mutta samalla rajallinen, koska uudet roskapostit osaavat yhä paremmin näyttää tavallisilta viesteiltä.
 
-Esimerkiksi sähköpostiin tulee viesti. Perinteinen spämmi-suodatin käyttää sääntöjä: "Jos otsikko sisältää CAPITAL LETTERS ja viisi huutomerkkiä, merkitse spämmeiksi." Yksinkertainen. Mutta uusi spämmi aina peittelee itseään paremmin.
-
-Tekoäly sen sijaan on nähnyt miljooneja todellisia spämmi- ja laillisia viestejä. Se sanoo: "Tämä viesti muistuttaa 92 % spämmeistä, jotka olen nähnyt." Se ei tarvitse sääntöjä. Sääntöjen sijaan sillä on *parametrit* — numeroita, jotka se on oppinut datasta ja jotka määrittävät sen käyttäytymisen.
+Tekoäly sen sijaan on nähnyt miljoonia todellisia roskaposti- ja laillisia viestejä. Se sanoo: "Tämä viesti muistuttaa 92 % niistä roskaposteista, jotka olen nähnyt." Se ei tarvitse erikseen kirjoitettuja sääntöjä. Sääntöjen sijaan sillä on *parametreja* — numeroita, jotka se on oppinut datasta ja jotka ohjaavat sen toimintaa.
 
 > **Pysähdy hetkeksi:** Miksi epävarmuus on itse asiassa hyvä asia tekoälylle, mutta huono asia tavalliselle ohjelmalle?
 
 ## Konkreettisia esimerkkejä IT-alalta
 
-Pankkisektori käyttää tekoälyä laajasti — mutta ei kaikkialle. Asiakkaan verkkopankissa näkemät sallitut vaihtoehdot ("Maksa lasku", "Siirry tilille") ovat ohjelmoituja sääntöjä. Mutta petoksentunnistus, kuten sanoimme, käyttää tekoälyä. Samoin lainahakemuksen automaattinen hyväksyntä tai hylkääminen perustuu koneoppimismalliin, joka on oppinut historiallisista hakemuksista ja niiden tuloksista.
+Pankkisektorilla tekoälyä käytetään laajasti, mutta ei kaikessa. Esimerkiksi asiakkaan verkkopankissa näkyvät toiminnot, kuten ”Maksa lasku” ja ”Siirry tilille”, perustuvat tavalliseen ohjelmointiin ja ennalta määriteltyihin sääntöihin. Sen sijaan petoksentunnistuksessa voidaan hyödyntää tekoälyä, kuten edellä todettiin. Myös lainahakemuksen automaattinen hyväksyminen tai hylkääminen voi perustua koneoppimismalliin, joka on oppinut historiallisista hakemuksista ja niiden lopputuloksista.
 
-Tikettijärjestelmä (ticket system), jota IT-tuki käyttää, saattaa ohjata tikettejä automaattisesti. "Varmenneongelmaan liittyvät sanomat menevät ryhmälle A." Automaatio, kiinteät säännöt. Mutta älympi version tekoälymallit voivat ennustaa, kuinka kauan tiketin ratkaiseminen kestää tai kuka on paras henkilö siihen — opittuina yleisistä malleista.
+Sama ero näkyy myös IT-tuen tikettijärjestelmissä. Yksinkertainen järjestelmä voi ohjata tikettejä kiinteiden sääntöjen perusteella, esimerkiksi näin: ”Varmenneongelmaan liittyvät viestit ohjataan ryhmälle A.” Tämä on automaatiota, mutta ei vielä tekoälyä. Kehittyneempi järjestelmä voi sen sijaan hyödyntää tekoälymalleja, jotka ennustavat esimerkiksi tiketin ratkaisuaikaa tai sitä, kenellä olisi parhaat valmiudet hoitaa se. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan oppii aiemmista tapauksista ja yleisistä toimintamalleista.
 
-Sovellusten suositukset (Netflix, Spotify, verkkokauppa) ovat tekoälyä. Ne eivät noudata sääntöä "kuka katso tämän elokuvan, katso myös tuota". Ne oppivat miljoonia käyttäjien käyttäytymiskuvioista ja ennustavat, mitä sinä haluat seuraavaksi.
+Netflixin, Spotifyn ja verkkokauppojen suositukset ovat hyvä esimerkki tekoälyn käytöstä. Ne eivät toimi pelkkien yksinkertaisten sääntöjen varassa, vaan oppivat miljoonista käyttäjien valinnoista, mieltymyksistä ja käyttäytymismalleista. Tämän perusteella ne pyrkivät ennustamaan, mitä haluat nähdä, kuunnella tai ostaa seuraavaksi.
 
 ## Yhteenveto
 
-Tekoäly ei ole "mikä tahansa älykäs ohjelmisto" eikä "automaatio". Se on ohjelma, joka oppii datasta ja tekee päätöksiä todennäköisyyksien perusteella ilman eksplisiittisiä sääntöjä. Automaatio ja säännöt ovat terävämpiä, nopeampia, ennustettavampia — mutta tekoäly on joustavampi ja oppii. Ymmärtää ero auttaa sinua näkemään, miksi jotkut IT-haasteet vaativat tekoälyä ja jotkut pärjäävät hyvin tavallisella koodilla.
+Tekoäly ei tarkoita mitä tahansa älykästä ohjelmistoa, eikä se ole sama asia kuin automaatio. Tekoäly on ohjelma, joka oppii datasta ja tekee arvioita tai päätöksiä todennäköisyyksien perusteella ilman, että kaikkia sääntöjä on kirjoitettu sille valmiiksi. Automaatio ja sääntöpohjaiset järjestelmät ovat usein tarkempia, nopeampia ja ennustettavampia. Tekoälyn vahvuus taas on siinä, että se on joustavampi ja pystyy oppimaan monimutkaisista ilmiöistä. Kun tämän eron ymmärtää, on helpompi hahmottaa, miksi jotkin IT-haasteet vaativat tekoälyä ja toiset voidaan ratkaista hyvin tavallisella ohjelmointilogiikalla.
+
+Seuraavalla tunnilla perehdyt siihen, kuinka montaa eri tyyppiä tekoälystä on olemassa — ja että "älykkyys" on monessa muodossa.

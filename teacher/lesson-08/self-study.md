@@ -1,63 +1,93 @@
-# Tekoäly osana digitaalista työnkulkua — integrointi, automatisointi ja vastuullisuus
+# Kenen teksti se on? — etiikka, oikeudet ja vastuu
 
-## Johdanto: Kun tekoäly tulee töihin
+## Johdanto
 
-Kuvittele tavallinen päivä IT-tukihenkilönä. Saapuu 40 tukipyyntöä. Kolmekymmentä niistä on lähes identtisiä: unohtunut salasana, toimimaton VPN-yhteys, tulostin joka ei vastaa. Jokainen pyyntö vie minuutteja käsitellä — lukeminen, luokittelu, vastaaminen.
+Olet juuri käyttänyt ChatGPT:tä kirjoittamaan asiakkaalle raportin. Raportti on erinomainen. Asiakkaasi on tyytyväinen. Pari viikkoa myöhemmin huomaat, että samantyyppinen raportti ilmestyi kilpailijayrityksen sivuille. Miten se oli mahdollista? Tai huoli on tämä: ChatGPT koulutettiin sivustojesi teksteillä — ilman kysymistä, ilman korvausta. Nyt kilpailijoilla on sama "oppi" saatavilla.
 
-Sitten alustaan ilmestyy uusi toiminto: tekoäly lukee jokaisen pyynnön heti sen saapuessa ja ehdottaa ratkaisua ennen kuin kukaan on ehtinyt edes avata tikettejä. Asiakas kirjoittaa "En pääse verkkoon", tekoäly tunnistaa VPN-ongelman ja lähettää ohjeet — 30 sekunnissa, ilman ihmisen väliintuloa.
+Tai: Käytät ChatGPT:tä asiakaspalvelussa. Malli on opetettu miljoonilla asiakaspalveluteksteillä, joiden kirjoittajat eivät tienneet, että heitä "kuunnellaan" koulutusta varten. Monet heistä ovat globaalissa etelässä: Bangladeshin merkintätyöntekijöitä, jotka saivat 2 dollaria tunnilta merkitäkseen kuvia AI:ta varten. He kouluttivat mallia, jonka tuotot menevät Piilaaksoon.
 
-Mutta sitten tulee neljäs pyyntö: "Nimeäni on vaihdettu järjestelmässä ilman lupaa — tämä vaikuttaa palkkaani." Tekoäly vastaa: "Ota yhteyttä HR-osastoon." Se on muodollisesti oikein, mutta täysin riittämätön. Asiakas odottaa kolme päivää vastausta tilanteessa, joka olisi pitänyt eskaloida välittömästi.
+Tai: Tietokeskus, joka pyörittää ChatGPT:tä, käyttää yhtä paljon vettä kuin 50 amerikkalaista kotia vuodessa. Vesi tulee paikallisesta joesta. Joessa ei enää ole riittävästi vettä kastelun jälkeen.
 
-Tämä on tekoälyintegraation ydin: se voi automatisoida rutiinitöitä ja säästää merkittävästi aikaa, mutta se luo myös vakavia riskejä jos sen käyttöä ei hallita. Ammattilaisena sinun tehtäväsi on suunnitella työnkulku, jossa tekoäly auttaa oikeissa paikoissa ja ihminen hallitsee kriittiset päätökset.
+Nämä ovat eettisiä kysymyksiä — eivätkä ne ole marginaalisia. Ne ovat tekoälyn ytimessä.
 
-## Työnkulku ja tekoälyn rooli siinä
+Tämän tunnin jälkeen sinulla on tuomaripöydällesi kahdeksas todistusaineisto: tekoäly ei ole neutraali väline — sen takana on muiden ihmisten työ, data ja ympäristö.
 
-**Työnkulku** (*workflow*) on sarja vaiheita, jotka suoritetaan tietyssä järjestyksessä jonkin tuloksen saavuttamiseksi. Esimerkiksi lainahakemus: asiakas täyttää lomakkeen → järjestelmä tarkistaa tiedot → päätöksentekijä arvioi hakemuksen → pankki hyväksyy tai hylkää → asiakas saa vastauksen.
+## Tekijänoikeudet ja koulutusdata
 
-Jokainen vaihe on osa ketjua. Jos yksi vaihe epäonnistuu tai tuottaa väärää tietoa, kaikki myöhemmät vaiheet rakentuvat virheelliselle pohjalle.
+Kun ChatGPT vastaa sinulle, se käyttää tietoa, jota sille opetettiin. Mutta mistä tieto tulee? Vastaus on: miljardeista teksteistä internetistä — eikä niiden tekijöille ole maksettu.
 
-Tekoäly muuttaa työnkulkuja kolmella tavalla. Ensinnäkin se voi **automatisoida toistuvia vaiheita**: lomakkeen tietojen validointi, tukipyyntöjen luokittelu, tai sähköpostien reitittäminen oikeaan tiimiin. Nämä ovat tehtäviä, joissa oikea toimintatapa on selkeä ja toistuu samanlaisena tuhansista kertaa. Toiseksi tekoäly voi **tarjota suosituksia**, joihin ihminen reagoi: luottopäätösanalyysi, jota pankinjohtaja arvioi, tai koodivirhe, jonka kehittäjä tarkistaa ennen hyväksymistä. Kolmanneksi tekoäly voi **oppia prosesseista**: jos tietty asiakassegmentti kysyy toistuvasti samoista ehdoista, järjestelmä voi tunnistaa tämän ja parantaa ohjeistusta automaattisesti.
+ChatGPT on opetettu miljardeilla sanoilla. Monet niistä tulevat verkkosivustoilta, blogeista, kirjoista ja tieteellisistä artikkeleista. Kirjoittajat — journalistit, kirjailijat, tutkijat, bloggaajat — eivät koskaan antaneet lupaa. OpenAI yksinkertaisesti latasi tekstit ja opetti mallia niiden avulla.
 
-Kriittinen periaate on se, että ihminen säilyy silmukassa (*human-in-the-loop*) kaikissa vaiheissa, joissa päätöksellä on merkittäviä seurauksia. Tekoäly ehdottaa, ihminen päättää. Tekoäly hoitaa rutiinitapaukset, ihminen valvoo logiikkaa ja käsittelee poikkeukset.
+Tämä on johtanut oikeustapauksiin. Kirjailijoiden yhdistys on nostanut kanteen väittäen, että OpenAI varastaa teoksia. Kuvataiteilijat ovat nostaneet kanteen, että Midjourney ja Stability AI koulutettiin heidän kuviensa avulla. Näissä tapauksissa logiikka on sama: "Teidän työkalunne on opetettu meidän luomuksillamme ilman lupaa ja ilman korvausta."
 
-> **Pysähdy hetkeksi:** Mitkä vaiheet omassa tai harjoittelupaikasi työnkulussa ovat täysin toistuvia ja kaavaan perustuvia? Entä missä vaiheissa tarvitaan harkintaa, empatiaa tai kontekstin ymmärtämistä?
+Juridisesti tämä on sekavaa. Tekijänoikeuslaissa on "reilu käyttö" (fair use) -käsite, joka joskus sallii datan käytön ilman lupaa, jos se on "transformatiivista". Onko kielimallin koulutus "transformatiivista"? Tuomioistuimet näyttävät olevan eri mieltä.
 
-## Automatisoinnin hyödyt ja riskit
+Mutta eettisesti asia on selkeä: tekijät eivät ole suostuneet eivätkä saaneet korvausta. Kun käytät tekoälyä ammattilaisena ja tiedät tämän, sinulla on vastuu. Ei riitä sanoa: "OpenAI teki sen." Sinä käytät mallia, sinä vastaat.
 
-Automatisoinnin suurin hyöty on aika. Sähköpostin lajittelu, tilanteen luokittelu, vakiovastausten lähettäminen — kun nämä tehdään automaattisesti, ihmisten kapasiteetti vapautuu monimutkaisempiin tehtäviin.
+> **Pysähdy hetkeksi:** Kuvittele, että kirjoitit artikkelin blogiisi. Ilman että tiesit siitä, se päätyi ChatGPT:n koulutusdataan. Nyt ChatGPT tuottaa tekstiä, joka muistuttaa sinun tekstiäsi. Miltä sinusta tuntuisi? Pitäisikö sinulla olla oikeus tietää tästä ja halutessasi kieltää pääsy tekstiisi?
 
-Lasketaan konkreettisesti: IT-helpdesk käsittelee 100 tukipyyntöä päivässä. Ilman automatisointia jokainen pyyntö vaatii kaksi minuuttia pelkästään luokitteluun ja reitittämiseen. Se on 200 minuuttia eli yli kolme tuntia pelkkää hallinnollista työtä päivässä. Tekoäly hoitaa saman ajassa, joka ei näy kellossa lainkaan.
+## Algoritminen harha: kuka päättelee oikein?
 
-Mutta automatisointi tuo mukanaan riskejä, jotka eivät ole aina ilmeisiä.
+Algoritminen harha (algorithmic bias) on tilanne, jossa AI:n päätökset syrjivät tiettyä ryhmää.
 
-Ensimmäinen riski on **virheiden kertautuminen**. Jos automatisoinnin logiikka on virheellinen, virhe monistuu tuhansiin tapauksiin ennen kuin kukaan huomaa. Yksi väärin luokiteltu sähköposti ei ole katastrofi — mutta jos sama virhe toistuu 50 kertaa päivässä, viikossa on 250 väärän paikan tikettejä.
+Konkreettinen esimerkki: Amazon kehitti rekrytointialgoritmin, joka käytti historiallista palkkaamistietoa opetukseen. Koska historiassa teknologia-alalla oli enemmän miehiä, algoritmi oppi: "miehen valmistuminen = hyvä, naisen valmistuminen = huono". Algoritmi hylkäsi naishakijoita. Amazon lopetti algoritmin käytön.
 
-Toinen riski on **valvonnan unohtuminen**. Kun automatisointi toimii hyvin ensimmäisen viikon, on luonnollista olettaa sen toimivan aina. Ihmisten huomio siirtyy muualle. Sitten logiikka muuttuu vääräksi jostain syystä — päivitetty ohjelmisto, muuttunut data — eikä kukaan huomaa ennen kuin tilanne on jo levinnyt laajalle.
+Miten näin käy? Koska kielimallit oppivat datan kuvioista. Jos data heijastaa historiallista syrjintää, malli oppii syrjinnän. Se ei ole mallin "rasismia" — se on historiallisen datan ohjausta.
 
-Kolmas riski on **liian laaja automatisointi**. Jos yritys automatisoi kaikki lainapäätökset alle 5 000 euron osalta ilman ihmisen tarkistusta, tulos voi olla, että asiakkaat saavat lainoja, joita he eivät pysty maksamaan takaisin. Tehokkuus on saavutettu, mutta vastuu on unohdettu.
+Toinen esimerkki: kasvojentunnistusalgoritmit ovat huonompia tummaihoisille ihmisille kuin vaaleaihoisille. Miksi? Koska koulutusdata sisälsi enemmän vaaleaihoisia ihmisiä. Algoritmi oli "puolueellinen", koska sen opettajat valitsivat datan väärin.
 
-Siksi automatisoinnin suunnitteluun kuuluu neljä vaihetta: ensin kartoitat, mitä automatisoidaan ja miksi; sitten testaat pienessä mittakaavassa ennen laajaa käyttöönottoa; sen jälkeen seuraat järjestelmää jatkuvasti; ja ihminen tarkistaa kriittiset päätökset kaikissa vaiheissa.
+Ammattilaisena sinun on tiedettävä: **jos käytät AI:ta päätöksiin, jotka vaikuttavat ihmisiin (palkkaus, luottotarina, oikeusjärjestelmä), sinun on tutkittava, millä datalla se on opetettu ja mitä harhoja sillä voi olla.**
 
-> **Pysähdy hetkeksi:** Kuvittele, että automaattinen tukijärjestelmä ratkaisee 90 % pyynnöistä. Mitä tapahtuisi, jos sen logiikka menisi pieleen? Kuka huomaisi ensin? Kuinka nopeasti?
+> **Pysähdy hetkeksi:** Kuvittele, että organisaatiosi käyttää tekoälyä palkkaamisen seulontaan ja se systemaattisesti siivilöi pois tietyn etnisen ryhmän edustajia. Kuka on vastuussa? Tekijät? Organisaatio? Sinä, joka päätit ottaa algoritmin käyttöön?
 
-## Integraatio — tekoäly osaksi olemassa olevia järjestelmiä
+## Datan merkitsijät: globaali työ
 
-Integraatio tarkoittaa sitä, että tekoäly ei toimi erillään muista järjestelmistä. Se liitetään tiketointijärjestelmiin, tietokantoihin, viestintäalustoihin ja ihmisten rooleihin — osaksi sitä infrastruktuuria, joka organisaatiossa on jo olemassa.
+Monet eivät tiedä, että AI:n opetukseen tarvitaan ihmisiä merkitsemään tietoa. "Merkitseminen" tarkoittaa sitä, että mallille kerrotaan, mitä kuva sisältää ("tämä on kissa"), mitä teksti kertoo ("tämä on negatiivinen arvostelu") jne.
 
-Käytännön esimerkki: IT-tuki käyttää tiketointijärjestelmää, johon jokainen tukipyyntö kirjataan. Integraatio tarkoittaa, että tekoäly kytkeytyy tähän järjestelmään. Kun asiakas lähettää pyynnön, tekoäly lukee sen, luokittelee sen (verkko-ongelma, salasana, sovellus), ehdottaa ratkaisua ja reittaa tiketin oikealle tiimille. Tiketointijärjestelmässä näkyy: tekoäly ehdotti ratkaisua X, johtaja hyväksyi, asiakas testasi, ongelma ratkaistu.
+Tätä merkintätyötä tehdään usein globaalissa etelässä — Bangladeshissa, Intiassa, Filippiineillä — missä palkat ovat alhaiset. Työntekijät istuvat tietokoneiden ääressä ja merkitsevät kuvia. He saavat 2–5 dollaria tunnilta. He eivät tiedä, mihin dataa käytetään — usein "sopimukset" kieltävät heitä puhumasta siitä.
 
-Integraatioon liittyy kuitenkin kolme tyypillistä haastetta.
+Joskus työ on traumaattista, koska merkintätyö sisältää usein väkivaltaista, seksuaalisesti hyväksikäyttävää tai muuta järkyttävää materiaalia, jota "puhdistetaan" datasta. Näiden ihmisten mielenterveys kärsii — ja he saavat minimipalkkaa.
 
-**Datan yhteensopimattomuus** syntyy, kun tekoäly ja olemassa oleva järjestelmä tulkitsevat saman asian eri tavoin. Tiketointijärjestelmä käyttää luokkaa "salasanan palautus", mutta tekoäly käyttää termiä "autentikointiongelma" — nyt ne eivät kommunikoi sujuvasti, ja osa pyynnöistä menee väärään paikkaan.
+Kun käytät ChatGPT:tä, käytät mallia, jonka opetukseen nämä ihmiset osallistuivat. Et näe heitä. Organisaatiosi ei maksa heille. Mutta heidän työnsä mahdollistaa sinun tuottavuutesi.
 
-**Siiloituminen** tapahtuu, kun tekoäly auttaa yhtä osastoa, mutta muut osastot eivät tiedä siitä. Asiakas saa automaattisen vastauksen ja ihmettelee, puhuuko hän ihmiselle vai koneelle. Koko organisaation pitää tietää, missä kohtaa prosessia tekoäly on mukana.
+Ammattilaisena eettinen vastuu on tämä: **tiedä, mistä mallit tulevat. Tiedä, kuka opetti ne. Ja pidä se mielessä, kun käytät niitä.**
 
-**Vanhat järjestelmät** ovat yleinen este. Tiketointijärjestelmä saattaa olla rakennettu viisitoista vuotta sitten, eikä se tue nykyaikaisia rajapintoja. Integraatio vaatii silloin lisätyötä tai välikerroksia, joiden ylläpito tuo omat riskinsä.
+## Ympäristövaikutukset
 
-Toimiva integraatio vaatii selkeää dataa, testaamista ennen laajaa käyttöönottoa ja dokumentaation siitä, miten tieto kulkee tekoälyn ja muiden järjestelmien välillä. Jos tekoäly tekee virheellisen päätöksen, täytyy olla selkeä prosessi, jonka avulla tilanne voidaan korjata ja jäljittää.
+Tekoäly vaatii energiaa. Paljon energiaa.
+
+Yksi ChatGPT-kysely käyttää vähintään 0,29 wattituntia sähköä. Tämä kuulostaa pieneltä. Mutta kun OpenAI käsittelee 200 miljoonaa kyselyä kuukaudessa, se vaatii valtavan määrän sähköä.
+
+Tämän sähkön pitää tulla jostain. OpenAI väittää käyttävänsä uusiutuvia energialähteitä, mutta totuus on, että datakeskuksilla on valtavat sähkötarpeet. Yksittäinen datakeskus voi käyttää enemmän sähköä kuin pieni kaupunki.
+
+Entä vesi? Datakeskukset jäähdyttävät palvelimia veden avulla. OpenAI:n datakeskus Texasissa käyttää arviolta 37 miljoonaa gallonaa vettä vuodessa. Texasissa ei ole vesiylijäämää — Texas kuivuu.
+
+Ja valmistus. Tekoälymallin opettamiseen tarvitaan erityisiä siruja (GPU:t), joiden valmistus kuluttaa energiaa ja vettä. Näiden sirujen tuotanto vaatii myös mineraalien louhintaa.
+
+Ammattilaisena tämä merkitsee sitä: **jokaisella kerralla, kun käytät tekoälyä, sinulla on pieni vesijalanjälki ja sähköjalanjälki. Jos organisaatiosi käyttää tekoälyä laajasti, nämä jalanjäljet kasautuvat.**
+
+Tämä ei ole syy boikotoida tekoälyä. Mutta se on syy käyttää sitä harkiten.
+
+> **Pysähdy hetkeksi:** Jos käyttäisit tekoälyä miljooniin kyselyihin päivässä organisaatiossasi, miltä sinusta tuntuisi, kun ymmärrät, että se kuivattaa paikallista vesivarantoa?
+
+## Vastuullinen käyttö ja professionaalinen etiikka
+
+Mitä tämä merkitsee ammattilaisena?
+
+1. **Tiedä, mistä data tulee.** Jos käytät tekoälypalvelua, etsi sen tietosuojakäytännöt ja opetusdatan lähteet. Valitsemalla palvelun, joka on läpinäkyvä, tuet vastuullisia käytäntöjä.
+
+2. **Tiedä, mitä harhoja mallilla voi olla.** Jos käytät tekoälyä päätöksiin (esim. palkkaus, krediitti), testaa sitä harhan varalta. Pyydä tilastotieteilijää tai etiikka-asiantuntijaa analysoimaan sitä.
+
+3. **Dokumentoi käyttö.** Jos organisaatiosi käyttää tekoälyä, dokumentoi se: miksi, mihin tarkoitukseen, millä datalla ja mitä vaaroja on huomioitu.
+
+4. **Käytä harkiten.** Älä käytä tekoälyä jokaiseen tehtävään. Käytä sitä silloin, kun se on perusteltua. Jotkut tehtävät ovat liian tärkeitä hallusinaatioille, jotkut liian arkaluonteisia datan yksityisyyden kannalta.
+
+5. **Puhu ääneen.** Jos organisaatiosi käyttää tekoälyä vastuuttomasti, ota kantaa. Ammattilaiset ovat niitä, jotka ymmärtävät riskit.
 
 ## Yhteenveto
 
-Tekoäly muuttaa digitaalisia työnkulkuja pysyvästi. Rutiinitöitä voidaan automatisoida, prosesseja nopeuttaa ja ihmisten kapasiteettia suunnata monimutkaisempiin tehtäviin. Mutta tämä vaatii suunnittelua, ei vain käyttöönottoa.
+Tekoäly ei ole neutraali työkalu. Se on rakennettu tekijöiden aineistoilla, joiden käyttöön ei ole saatu lupaa eikä maksettu korvausta. Sen opetukseen on osallistunut ihmisiä, jotka saivat minimipalkkaa. Se on harhainen historiallisen datan vuoksi. Se kuluttaa merkittävästi ympäristöresursseja.
 
-Ammattilaisena sinun pitää osata tunnistaa, mitkä prosessivaiheet sopivat automatisoitaviksi ja mitkä vaativat ihmisen arvioinnin. Pitää testata ennen laajentamista, seurata jatkuvasti ja varmistaa, että kaikki prosessiin osallistuvat ymmärtävät tekoälyn roolin. Integraatio onnistuu, kun tekoäly sopii saumattomasti olemassa oleviin järjestelmiin ja ihmisten rooleihin — ei korvaa niitä, vaan täydentää.
+Ammattilaisena ei riitä, että käytät tekoälyä hyvin teknisesti. Sinulla on vastuu ymmärtää, mitä näiden valintojen taustalla on, ja tehdä eettisiä valintoja sen tiedon pohjalta. "Kaikki käyttävät sitä" ei ole eettinen perustelu. Ammattilaisuus tarkoittaa sitä, että ajattelet syvemmin.
+
+Seuraavalla tunnilla opit käytännön turvallisuutta: miten käyttää tekoälyä turvallisesti yrityksen sisällä.

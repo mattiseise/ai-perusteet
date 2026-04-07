@@ -1,168 +1,65 @@
-# Käyttö-OSP:n arvioitava tehtävä: tekoälyn käyttö IT-työssä
+# Projektidokumenttibotti — viimeistele ja esittele
 
-## Johdanto
+## Johdanto: pelaat kovaa nyt
 
-Oppitunnit 10–17 ovat käsitelleet tekoälyn käyttöä IT-ammatissa. Olet oppinut, miten käyttää chat-pohjaisia assistentteja, generatiivisia malleja, koodin tuottamista ja kehittämistä. Nyt on aika soveltaa kaikkea mitä olet oppinut yhteen kokonaisuuteen: **käytännön IT-tapaukseen, jossa käytät tekoälyä näkyvästi ja perustellusti.**
+Edellisellä oppitunnilla aloitit rakentaa omaa bottiasi — Custom GPT:tä, joka kyselee sinulta projektista ja luo siitä struktuoidun projektisuunnitelman. Se oli haastava tehtävä, koska täytyi ajatella, mitä kysymyksiä botti pitäisi esittää, miten niiden avulla kerätä oleelliset tiedot, ja miten koota vastaukset järkeväksi dokumentiksi. Nyt tulee vielä hauskempi ja tärkeämpi osa: varmistaa, että botti oikeasti toimii, ja esitellä se.
 
-Tämä arvioitava tehtävä on OSP2:n kokonaisarviointi. Se mittaa, ovatko ymmärtäneet, kuinka tekoäly toimii IT-ammateissa, kuinka sitä käytetään vastuullisesti, ja kuinka dokumentoit prosessisi.
+Tässä vaiheessa et ole enää rakentaja, joka miettii teorioita. Olet testaja, iteroija ja esittelijä. Teet bottista toimivan, virheettömän ja vakuuttavan. Ja sitten näytät sen muille.
 
-## Arviointitehtävä: Asiakasmyönnytys-järjestelmän kehittäminen
+## Viimeistelyvaihe: rajaukset, reunatapaukset ja parantaminen
 
-Sinulle annetaan seuraava tapaus:
+Projektidokumenttibotti on valmis, mutta se ei ole täydellinen. Mikään ei ole. Viimeistelyvaiheessa tehtävä on käydä läpi kolme asiaa, joita olet jo kohdannut Botin testaaminen -oppitunnilla, mutta nyt omaa bottia varten.
 
-**Konteksti:** Kuvittele, että työskentelet IT-konsulttiyrityksen kehitystiimissä. Asiakasyritys tarvitsee pikaisesti "Asiakasmyönnytys-palvelun" (feature flag system), joka antaa järjestelmän ylläpitäjille mahdollisuuden ottaa osia sovellusta pois päältä ilman uudelleenkäynnistystä. Esimerkiksi: "Ota maksujärjestelmä pois käytöstä maanantaiaamuina ylläpidon vuoksi" tai "Testi uusia ominaisuuksia 10%:lle käyttäjistä."
+Ensimmäinen on rajausten tarkistus. Botti on suunniteltu tekemään tietyt asiat: kysyä projektista, kuulla vastaukset ja luoda suunnitelma. Sen ei pitäisi tehdä muuta. Jos joku pyytää sitä kirjoittamaan runoa tai antamaan sijoitusneuvoja, sen pitäisi sanoa "en osaa" eikä yrittää. Selkeät rajat tekevät botista käytettävän ja turvallisen. Lue system prompt uudelleen ja varmista, että rajaukset ovat selkeät. Kirjoita lisää ohjeita, jos tarvitaan.
 
-**Tehtävä:** Sinun pitää:
-1. Suunnitella yksinkertainen feature flag -logiikka
-2. Pyytää tekoälyltä koodia (Python tai Bash — valitse yksi)
-3. Testata koodi paikallisesti
-4. Dokumentoida prosessisi: mitä kysyit, mitä sait, mitä testasit, mitä löysit
-5. Jos virheitä, korjata ne ja dokumentoida korjaus
+Toinen on reunatapausten käsittely. Mitä tapahtuu, kun käyttäjä kirjoittaa vain "no" tai "en tiedä"? Mitä tapahtuu, jos projektista ei ole olemassa yhtään dokumentaatiota? Entä jos käyttäjä kysyy, kuinka saada apua muista tiimin jäsenistä? Nämä ovat reunatapaukset — outoja, epätavallisia tilanteita, joissa botti voi kaatua tai vastata tyhmästi. Testaa niitä. Monta.
 
-## Arviointikriteerit
+Kolmas on vastausten laadun parantaminen. Kun botti luo suunnitelmadokumentin, pitäiskö sen sisältää kuvia, taulukoita, väriä? Pitäiskö projektille olla nimeä, kuvaa, budjetin arviota? Testaa ja paranna. Tee dokumentista niin hyvä, että se näyttää oikeasti hyödylliseltä.
 
-| Taso | Pisteet | Kuvaus |
-|------|---------|--------|
-| **Erinomainen (5)** | 90–100 % | Prosessi on perusteellinen ja dokumentoitu. Tekoälyä käytetään strategisesti (ei vain "anna minulle koodi"). Koodi on testattu pienin ja reunatapauksilla. Löydetyt ongelmat on korjattu ja dokumentoitu. Opiskelija näyttää ymmärryksen siitä, mitä koodi tekee ja miksi. |
-| **Hyvä (4)** | 75–89 % | Tekoälyä käytetään hyvin. Koodi on pyydetty selkeästi. Testaus on kattava (normaalit ja osa edge casesia). Dokumentaatio on hyvä, mutta ehkä hieman puutteellinen. Ymmärrys on lähes täydellinen. |
-| **Tyydyttävä (3)** | 60–74 % | Tekoälyä käytetään, mutta prosessi on hieman satunnaista. Koodi on testattu, mutta testaus voisi olla kattavampi. Dokumentaatio on olemassa, mutta selkeyden puutetta. Ymmärrys on riittävä, mutta ei syvä. |
-| **Välttävä (2)** | 45–59 % | Tekoälyä käytetään, mutta prosessi on vähäinen. Testaus on minimaalista. Dokumentaatio on puutteellinen. Ymmärrys on pinta-puolinen. |
-| **Hylätty (1)** | alle 45 % | Tekoälyä ei ole käytetty merkittävästi, koodi ei ole testattu, dokumentaatio puuttuu tai on virheellinen. |
+Viimeistelyssä käytetään samoja testaustyökaluja kuin Botin testaaminen -oppitunnilla: positiiviset testit (normaali käyttö), negatiiviset testit (kieltäytyminen), reunatapaukset (odottamattomat tilanteet). Dokumentoi jokainen testi ja merkitse, meniko se läpi vai ei. Jos testi epäonnistuu, korjaa system promptia ja testaa uudelleen.
 
-## Arviointikohteet (pisteytetään asteikolla 0–20)
+## Esittelyn valmistelu: kuinka esitellään botti vakuuttavasti
 
-### 1. Tekoälyn käyttö — strategia ja pyyntöjen laatu (4 piste)
-- Oletko kysyttävä selkeitä, spesifisiä pyyntöjä tekoälyltä?
-- Kertoitko ohjelmointikielen, version, syötteet, odotukset?
-- Oletko iteroinut (pyytänyt uudelleen, muokannut pyyntöä)?
+Esittely ei ole PowerPoint-kalvojen selittämistä. Se on live-demo. Istut tietokoneen ääressä, avaat botin ja osoitat, miten se toimii. Yleisö näkee sen reaaliajassa.
 
-**Esimerkki hyvästä:**
-> "Kirjoita Python 3.10 -funktio, joka ottaa syötteeksi sanakirjan, jonka avaimet ovat feature-nimiä ja arvot boolean-arvoja (True = feature on käytössä). Funktio palauttaa False, jos mitään 'database_migration' -featureita on käytössä. Käytä lambda-funktiota."
+Esittelyn valmistelu alkaa käsikirjoituksella, mutta se ei ole word-dokumentti. Mieti, mitä tarinaa haluat kertoa. Mitkä ovat botin tärkeimmät ominaisuudet? Mitä ongelmaa se ratkaisee? Kenelle se on hyödyllinen? Yksinkertainen tarina on parempi kuin pitkä luettelo ominaisuuksista. Esimerkiksi: "Projektien dokumentointi on usein väsyttävää ja aikaa vievää. Tämä botti tekee siitä mukavampaa kysymällä sinulta projektista, kuuntelun tavalla, ja kootessaan sitten kaikki automaattisesti yhtenäiseksi suunnitelmaksi. Näytetään, miten se toimii."
 
-**Esimerkki huonosta:**
-> "Kirjoita koodi joka tekee jotain"
+Seuraavaksi valmistele tietyt käyttöskenaariot, jotka näytät livedemoissa. Valitse projekti, jonka tunnet hyvin — jopa kuvitteellinen, mutta realistinen. Esimerkiksi: "Rakennamme verkkosivuston pienelle e-kaupalle." Tiedät, mitä kysymyksiä botti esittää, ja pystyt vastaamaan luonnollisesti. Harjoittele, että se näyttää sujuvalta eikä pysähdytä sekuntien ajaksi miettimään, mitä sanoa.
 
-### 2. Koodin testaus ja verifiointi (4 piste)
-- Oletko testannut koodia paikallisesti?
-- Oletko testannut normaaleita tapauksia ja reunatapauksia?
-- Oletko dokumentoinut testitulokset (tulosteet, mitä testasit)?
+Live-demossa oikean tekemisen pitää näkyä. Avaa botti. Näytä, miten se alkaa kysymään. Kuuntele kysymykset ääneen: "Entä projektin aikajanaksi — kuinka pitkä aika on käytettävissä?" Vastaa selkeästi ja luontevasti. Kun botti kokoaa suunnitelmaa, näytä prosessi. Anna muille nähdä, miten se etsii tietoa, jäsentää sitä ja rakentaa dokumenttia. Kun lopulta dokumentti on valmis, näytä koko tulos. Anna ihmisille hetki lukea ja ymmärtää, mitä he näkivät.
 
-**Dokumentaatioesimerkki:**
-```
-TESTAUS:
-Test 1 — Normal case:
-  Input: {'payment': True, 'analytics': False}
-  Expected: Payment ON, Analytics OFF
-  Result: PASS ✓
+Harjoituksen jälkeen testaa teknologia. Varmista, että internet toimii, botti vastaa nopeasti, ja näytöllä näkyy se, mitä haluat näyttää. Ei mitään kuitenkaan kulje näin pieleen kuin yllätykset teknologian kanssa.
 
-Test 2 — Edge case (tyhjä sanakirja):
-  Input: {}
-  Expected: ???  (KORJAUS TARVITAAN)
-  Result: FAIL
-```
+## Vertaisarviointi: miten arvioit toisen botin
 
-### 3. Ongelmat ja korjaukset (4 piste)
-- Oletko löytänyt ongelmia koodissa?
-- Oletko korjannut ne (joko itse tai pyytämällä tekoälyltä)?
-- Oletko dokumentoinut korjaukset?
+Kun muut esittelevät omansa, sinulla on rooli. Olet arvioija, mutta ystävällinen arvioija. Vertaisarvioinnin tavoite ei ole saada mahdollisimman monta pistettä toiselle — se on antaa rakentavaa palautetta, joka auttaa kehittämään bottia.
 
-**Esimerkki:**
-> "Alkuperäinen koodi ei käsitellyt tyhjää sanakirjaa. Pyysin tekoälyltä: 'Lisää tarkistus, jos sanakirja on tyhjä, palauta True (kaikki featuret ovat käytössä oletuksena).' Koodi korjattiin."
+Rakentavassa palautteessa on kolme osaa. Ensimmäinen on positiivinen havainto: mitä botti tekee hyvin? Onko system prompt selkeä? Ovatko kysymykset hyviä? Onko luotu dokumentti helppolukuinen? Kirjoita se alas. Toiseksi merkitse, mikä voisi olla paremmin. Ovatko rajaukset selkeät vai olisiko niitä parannettava? Oliko reunatapausten käsittely robustia vai kaatui botti joihinkin tilanteisiin? Kolmanneksi anna ehdotus: "Tähän voisi lisätä..." tai "Seuraavalla kerralla koittaisit...". Ehdotus on parannusidea, ei kritiikki.
 
-### 4. Ymmärrys ja dokumentaatio (4 piste)
-- Oletko selittänyt, mitä koodi tekee?
-- Oletko näyttänyt, että ymmärrät logiikan?
-- Oletko kirjoittanut kommentit koodiin?
+Kirjoita arviointi muutamaan lauseeseen tai kappaleeseen, ei yhteen sanaan. "Hyvä" ei ole arviointi. "System prompti on selkeä ja ohjaa bottia hyvin tehtäväänsä. Kysymykset ovat asiaankuuluvia ja rakentavat realistisen kuvan projektista. Reunatapauksissa botti voisi kertoa paremmin, kun käyttäjä vastaa epäselvästi — nyt se yritsi ajoittain arvata. Seuraavalla kerralla lisäisit ehkä mahdollisuuden käyttäjälle pyytää selitystä kysymykseen." Nyt toinen opiskelija saa palautetta, josta voi oppia.
 
-**Esimerkki:**
-```python
-# Funktio tarkistaa, onko feature_flag käytössä
-# Ottaa syötteeksi sanakirjan {feature_name: bool}
-# Palauttaa True, jos feature on käytössä, False jos ei
+## Katsaus eteenpäin: tämä botti on seuraavan jakson pohja
 
-def is_feature_enabled(flags, feature_name):
-    # Oletuksena feature on pois päältä (False), jos sitä ei löydy
-    return flags.get(feature_name, False)
-```
+Nyt valmistamasi projektidokumenttibotti ei ole lopullinen tuote. Se on muutakin varten. Seuraavassa osiossa, joka alkaa oppitunnilla 19, tutustut agenteihin. Agentti on kuin botti, mutta paljon älykkäämpi ja itsenäisempi. Se voi tehdä asioita ilman, että sinä käsket. Se voi lukea tiedostoja, ajaa komentoja, hakea tietoa ja tehdä päätöksiä yksin.
 
-### 5. Koko prosessin dokumentaatio (4 piste)
-- Oletko luonut lyhyen raportin, joka kertoo koko prosessista?
-  - Mitä tehtävä oli?
-  - Mitä pyysit tekoälyltä (näytä alkuperäinen pyyntö)?
-  - Mitä sait?
-  - Mitä testasit?
-  - Mitä löysit?
-  - Mitkä olivat viimeiset korjaukset?
+Projektidokumenttibotistasi tulee agentti seuraavassa osiossa. Ajattele sitä näin: nyt botti istuu ja kuuntelee sinua. Agentti nousee seisomaan, kävelee kantoilla ja tekee asioita. Se saattaa ottaa projektin tiedot, lähettää sähköpostiin, luoda kansion, ladata tarvittavat resurssit, ja tehdä kaiken ilman, että sinulla on vielä aikaa sanoa sana. Sekä botti että agentti rakentuvat samalle pohjalle — sille, mitä olet oppinut promptauksesta, kontekstista ja testaamisesta — mutta agentti tekee enemmän ja itsenäisemmin.
 
-Raportissa pitäisi näkyä: **kokonaisuus** siitä, miten käytit tekoälyä ratkaista ongelmaa.
+Tämän vuoksi on tärkeä, että viimeistelet botin perusteellisesti nyt. Kun siitä tulee agentti, sen täytyy olla vahva pohja. Jos system prompt on epäselvä tai botti ei osaa käsitellä odottamattomia tilanteita, agentti periyttää tuon pohjan heikkouden. Testaaminen nyt = terveempi agentti myöhemmin.
 
-## Palautusvaatimukset
+## OSP2:n yhteenveto: mitä olet oppinut koko osiossa
 
-Palauta seuraavat dokumentit (tekstitiedostot tai PDF):
+Nyt, kun olet lähes OSP2:n lopussa, on aika katsoa taaksepäin. Mitä olet oppinut "Tekoälyjen käyttö" -osiosta?
 
-1. **Raportti** (1–2 sivua)
-   - Tehtävän kuvaus
-   - Tekoälyn pyyntö (alkuperäinen versio)
-   - Mitä sait
-   - Testauksen tulokset
-   - Löydetyt ongelmat ja korjaukset
-   - Johtopäätökset
+Alusta lähtien olet kohdannut peruskäsitteet. Mitä on tekoäly? Millä se toimii? Miten syötät sille kysymyksen? Opit, että tekoäly on työkalu — ei taikaa, vaan matematiikka ja tekniikka, joka voidaan oppia ja hallita.
 
-2. **Koodi** (kommentoinut)
-   - Alkuperäinen tekoälyn tuottama koodi
-   - Lopullinen (korjattu) koodi
-   - Jokainen rivi kommentoitu
+Sitten opit promptauksesta. "Anna minulle koodi" ei toimi. "Kirjoita Python-funktio, joka ottaa syötteeksi merkkijonon ja palauttaa sen päinvastoin" toimii. Opit, että mitä tarkempi on pyyntö, sitä parempi on vastaus. Opit myös, että voit iteraatioida — jos vastaus ei ole täydellinen, voit pyytää uudelleen tarkentaen vaatimusta.
 
-3. **Testidokumentti**
-   - Mitä testasit
-   - Mitkä olivat syötteet
-   - Mitkä olivat odotukset
-   - Mitkä olivat tulokset
+Sitten tulivat kontrolli ja rajaukset. Ymmärsit, että bottia pitää hallita — antaa sille selkeät ohjeet, mitä se voi tehdä ja mitä ei. Rajaukset tekevät botista turvallisemman ja käyttäjäystävällisemmän. Ymmärsit myös, että testaus on olennainen osa — botti ei ole valmis, kunnes sen tietää toimivan eri tilanteissa.
 
-## Vinkkejä onnistumiseen
+Dokumentaation merkitys tuli selväksi. Et vain rakenna bottia — dokumentoit, mitä teet, miksi ja miten se toimii. Dokumentaatio auttaa sinua itse muistamaan, ja se auttaa muita ymmärtämään ja käyttämään bottia.
 
-1. **Ei suuri projekti** — Pidä se yksinkertaisena. 50–100 rivaa koodia riittää.
-2. **Dokumentoi jokainen askel** — Näytä, mitä teit. Opettaja haluaa nähdä prosessin, ei vain lopputulosta.
-3. **Ole rehellinen virheistään** — Jos tekoäly antoi väärää koodia, se on OK. Dokumentoi se ja korjaa.
-4. **Tarkista perusteita** — Ymmärrä koodi. Jos et ymmärrä, kysy opettajalta.
-5. **Tarkista tietoturva** — Mitä turvattomuusriskejä näet? Dokumentoi ne.
+Ja viimeisenä — viimeistelynä ja esittelynä — opit, että tekeminen on vain puoli tarinasta. Pitää myös osata kertoa muille, mitä teit ja miksi se on tärkeää. Esittely on taito, ja se kehittyy harjoituksella.
 
-## Esimerkki (pidempi dokumentaatio)
+Koko Tekoälyjen käyttö -osio rakennetaan sille, että opiskelet käyttämään tekoälyä **vastuullisesti**, **itsenäisesti** ja **dokumentoidusti**. Nämä kolme sanaa tiivistävät koko osion. Vastuullisesti — älä käytä sitä vain siksi, että se on kivaa, vaan koska se ratkaisee ongelman. Itsenäisesti — älä odota, että opettaja neuvoo jokaista askelta, vaan ota omaa vastuuta oppimisestasi. Dokumentoidusti — näytä ja selitä, mitä teet, jotta muut voivat oppia sinusta ja sinä voit oppia itsestäsi.
 
-**RAPORTTI:**
-
-**Tehtävä:** Kehitä yksinkertainen feature flag -järjestelmä, jonka avulla järjestelmän ylläpitäjät voivat ottaa sovelluksen ominaisuuksia pois käytöstä.
-
-**Tekoälyn pyyntö (versio 1):**
-> Kirjoita Python-funktio, joka tarkistaa feature flag -asetukset. Saatetaan sanakirja, jossa avaimet ovat feature-nimiä ja arvot boolean-arvoja.
-
-**Saatu koodi:**
-```python
-def check_flag(flags, name):
-    return flags[name]
-```
-
-**Testaus:**
-- Test 1: `check_flag({'payment': True}, 'payment')` → True ✓
-- Test 2: `check_flag({'payment': True}, 'unknown')` → KeyError ✗
-
-**Ongelma löydetty:** Funktio kaatuu, jos feature-nimea ei löydy.
-
-**Tekoälyn pyyntö (versio 2):**
-> Muokkaa funktiota. Jos feature-nimea ei löydy, palauta False (feature on oletuksena pois).
-
-**Lopullinen koodi:**
-```python
-def check_flag(flags, name):
-    return flags.get(name, False)
-```
-
-**Testaus uudelleen:**
-- Test 1: `check_flag({'payment': True}, 'payment')` → True ✓
-- Test 2: `check_flag({'payment': True}, 'unknown')` → False ✓
-
-**Johtopäätös:** Tekoäly auttoi, mutta testaus paljasti ongelman. Iteraation jälkeen koodi on nyt toimivaa ja turvallista.
-
----
-
-**Aloita nyt.** Valitse yksi yksinkertainen feature (esim. feature flagit, käyttäjän validointi, log-parseri), käytä tekoälyä, testaa ja dokumentoi. Prosessi on tärkeämpi kuin lopputulos.
+Seuraavassa osiossa, Agentit-osiossa, nämä taidot syvenevät ja laajenevat. Agenteista oppiminen vaatii samaa vastuullisuutta, itsenäisyyttä ja dokumentointia — mutta isommassa mittakaavassa. Ja pohja, jolla seisot, rakennetaan siitä, mitä olet oppinut täällä.

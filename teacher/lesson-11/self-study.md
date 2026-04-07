@@ -1,101 +1,212 @@
-# Promptit I: selkeä tehtävänanto
+# Muita tekoälymalleja — kuin ChatGPT ja Claude
 
-## Johdanto: Miksi sama kysymys antaa erilaisia vastauksia
+## Johdanto: Tekoälymaailma on isompi kuin näyttää
 
-Yleinen kokemus: kysyt ChatGPT:tä "Mitä on verkko?", ja saat vastauksen. Huomenna kysyt täsmälleen samaa, ja vastaus on hieman erilainen. Tai kysyt "Kirjoita funktio, joka validoi sähköpostiosoitteen", ja malli antaa koodia, joka on sekavaa tai puutteellista.
+Olet ehkä kokeillut ChatGPTä tai Claudea. Ne ovat tunnettuja ja hyviä, mutta ne eivät ole ainoat! Maailmassa on monia muita tekoälymalleja, joilla on omat vahvuudet ja heikkoudet. Jokaisella on eri yritys takana, eri hinta ja eri tietosuojakäytännöt.
 
-Ongelma ei ole tekoälyssä — ongelma on sinun kysymyksessä. Kysymys ei ole *selkeä tehtävänanto*. Se on vain kysymys. Ammattilaisesti hyvä prompt ei ole sama kuin hyvä kysymys. Prompt on **täydellinen tehtävänanto**, joka kertoo tekoälylle:
+Miksi tämä kannattaa tietää? Koska eri tilanteet vaativat erilaisia ratkaisuja. Joskus halvin malli on paras, joskus nopein, joskus se, joka on turvallisesti Suomessa. Ammattilaisesti sinun pitäisi tuntea vaihtoehdot, jotta voit valita oikean tekoälytyökalun oikean tehtävän tekemiseen.
 
-- Mitä täytyy tehdä (tavoite)?
-- Kuka tekee sen (rooli)?
-- Mitä rajoit­tuksia on (mitä EI tehdä)?
-- Miten vastaus tulee muotoilla (output­formaatti)?
-- Millä kielellä?
-- Millaisia esimerkkejä haluat nähdä?
+Tässä materiaalissa opettelemme yhdessä, mitä malleja on olemassa ja miten niitä verrataan toisiinsa.
 
-Kun kirjoitat näin selkeän promptin, tekoäly antaa parempia, johdonmukaisempia ja käyttökelpoisempia vastauksia. Tämä oppitunti opettaa sinulle hyvän promptin rakentamisen ammattilaisesti.
+## Osa 1: Googlen Gemini — Googlen tekoälymalli
 
-## Osa 1: Hyvän promptin rakenne — viisi peruselementtiä
+Google on tehnyt oman tekoälymallinsa, jota kutsutaan Gemini:ksi. Se kilpailee ChatGPT:n ja Clauden kanssa. Monelle ihmiselle Gemini on hyvä vaihtoehto, koska sillä on joitakin ominaisuuksia, joita ChatGPT ei ole niin hyvä tekemään.
 
-Hyvä prompt rakentuu viidestä osasta. Et tarvitse kaikkia joka promptiin — mutta tietäminen, mitkä osat voit käyttää, tekee sinusta paremman käyttäjän.
+### Gemini: erilaiset versiot
 
-**1. Tavoite (goal):** Mitä haluat? "Kirjoita tämä", "Selitä tämä", "Paranna tämä". Tavoite on selkeä lause, joka sanoo, mitä tekoäly tekee.
+Google tekee Geminista eri versioita, kuten autotehtaat tekevät eri automalleista:
 
-**2. Rooli (role):** Kuka tekoäly on? "Olet Python-kehittäjä", "Olet opettaja", "Olet tietoturva­asiantuntija". Rooli auttaa mallia omaksumaan oikean näkökulman.
+Geministä on saatavilla Gemini Flash, joka on nopea versio ja hyvä nopeisiin tehtäviin, sekä Gemini Pro, joka on keskitason versio tasapainolla nopeuden ja kyvykkyyden välillä.
 
-**3. Rajat (constraints):** Mitä EI tehdä? "Älä käytä monimutkaisia SQL-kyselyitä", "Kirjoita maksimissaan 3 lausetta", "Älä mainitse hintoja". Rajat antavat mallille selkeän alueen.
+Kumpi on parempi? Riippuu siitä, mitä haluat tehdä. Nopeus vai tarkkuus.
 
-**4. Output­formaatti (format):** Miten haluat vastauksen? "Vastaa JSON-muodossa", "Kirjoita taulukko", "Anna vaihe­kohtaiset ohjeet". Formaatti varmistaa, että saat käyttökelpoisen tuloksen.
+### Miten Geminiin pääsee
 
-**5. Esimerkit (examples):** Näytä yksittäinen esimerkki siitä, mitä haluat. "Esimerkiksi: INPUT: 'terve', OUTPUT: 'Terve! Kuinka voin auttaa?'". Esimerkit tekevät vaatimuksesta konkreettisemmiksi.
+Google tarjoaa **Google AI Studion**, joka on ilmainen verkkosivusto. Avaat selaimen, kirjaudut Googlen tilillä (kuten Gmailissa), ja voit heti alkaa kirjoittamaan tekoälylle. Sinulla on ilmainen kulurahaa joka kuukausi, jonka jälkeen kutsut ovat maksullisia. Mutta alkuun sen kanssa saat paljon kokeilla ilmaiseksi.
 
-Ammattilaisesti nämä viisi elementtiä ovat sinun perustyökalusarja. Sitä enemmän tietoja annat, sitä parempia vastauksia saat.
+### Miten Gemini eroaa ChatGPT:stä
 
-> **Pysähdy hetkeksi:** Ajattele viimeistä kertaa, kun kysyit ChatGPT:tä jotain. Mitä viidestä elementistä annoit? Mitä puuttui? Olisiko tieto­parempi vastaus ollut, jos olisit antanut puuttuvat elementit?
+**Vahvuudet:**
 
-## Osa 2: Ero promptin ja kontekstin välillä
+Gemini osaa käsitellä kuvia yhtä hyvin kuin tekstiä. Jos otat kuvan tai näyttökuvan, voit näyttää sen Geminille ja kysyä "mitä tässä on?". Claude ja ChatGPT osaavat tätäkin, mutta Gemini on vahva omassaan. Lisäksi Gemini on sulautettu Googlen palveluihin — jos käytät Gmail-sähköpostia tai Google Drive -pilvipalvelua, Gemini on jo siellä saatavilla.
 
-Tässä on tärkeä käsitteellinen ero, joka hämmentää monina: **prompt ei ole sama kuin konteksti**.
+Gemini on myös edullisempi kuin ChatGPT. Jos vertaat hintoja: Googlen hinta on noin kymmenesosa OpenAI:n hinnasta.
 
-Prompt on *tehtävänanto* — se, mitä nyt haluat tekoälyn tekevän. Konteksti on *ympäröivä tieto* — kaikki tieto, jonka tekoäly tarvitsee sen tehtävän ratkaisemiseksi hyvin.
+**Heikkoudet:**
 
-Esimerkiksi: "Kirjoita sähköposti asiakaalle, joka valittui palvelusta." On prompt. Mutta konteksti voi olla: "Asiakas otti yhteyttä 2 kertaa. Ensimmäisellä kerralla hän ei saanut vastausta 48 tunnissa. Toisella kerralla hän sai vastauksen, mutta se ei ratkaisut hänen ongelmaansa." Konteksti on kriittinen — ilman sitä tekoäly ei osaa kirjoittaa oikein sävyä olevaa sähköpostia.
+Googlella on tiukemmat säännöt siitä, mitä saa kysyä. Joskus Gemini sanoo "En voi vastata tähän" useammin kuin Claude tai ChatGPT. Lisäksi Claude ja ChatGPT ovat parempia ohjelmoinnissa, koska ne tuottavat parempaa koodia kuin Gemini.
 
-Ammattilaisesti opit rakentamaan kontekstia iteratiivisesti. Ensimmäisessä promptissa annat tehtävän. Seuraavassa promptissa annat kontekstia ("Asiakas on arvokas pitkäaikainen asiakas"). Seuraavassa vielä lisää ("Hän oli hämmentynyt, ei vihainen"). Jokainen iteraatio terävöittää vastauksen.
+> **Pohdi hetkeksi:** Mitä sinä tekisit tekoälyllä? Jos sinulla olisi kuvia, joista haluat tietoa, olisiko Gemini sinulle hyvä? Vai haluaisitko parempaa koodia, jolloin Claude olisi parempi?
 
-Monella opiskelijalla on ongelma: he ajattelevat, että "hyvä prompt" on yksi iso teksti, jossa on kaikki tarvittava. Oikeasti ammattilaiset **rakentavat kontekstia kierros kierrokselta**. Ensimmäinen prompt kertoo, mitä haluat. Toinen prompt antaa taustatietoja. Kolmas prompt pyytää muutosta. Neljäs prompt "ok, hyväksi, mutta..". Tämä iteratiivinen prosessi on ammattilaiset kutsuvat "prompt engineeringiksi".
+## Osa 2: Kiinalaiset mallit — DeepSeek
 
-> **Pysähdy hetkeksi:** Miksi iteratiivinen kontekstin rakentaminen olisi parempi kuin "kaiken kerralla" -prompti? Mitä ammattilaisesti voisi mennä pieleen, jos yrität kertoa kaiken kerralla?
+Kiina on kehittänyt omia tekoälymalleja, ja niistä tunnetuin on DeepSeek. Siihen kannattaa tutustua, mutta tärkeät seikat pitää tietää.
 
-## Osa 3: Huonosta promptista hyvään — käytännön esimerkki
+### DeepSeek: halpa malli Kiinasta
 
-Katsotaan konkreettinen esimerkki. Alla on huono prompt ja hyvä prompt samasta tehtävästä.
+DeepSeek on kiinalainen yritys, joka tekee tekoälymallia. Se on ilmainen tai erittäin halpa käyttää, ja monissa testeissä se on yhtä hyvä tai jopa parempi kuin ChatGPT ja Claude.
 
-**Huono prompt:**
-"Kirjoita funktio joka validoi sähköpostiosoitteen."
+**Hyvät puolet:**
 
-Miksi se on huono? Koska se ei sisällä:
-- Roolia: Oletko kehittäjä? Opettaja?
-- Rajoituksia: Kuinka tiukka validaatio? Hyväksytkö "+"-merkin? Kuinka pitkä osoite?
-- Formaattia: Halutko koodin? Regex-patternin? Selityksen?
-- Esimerkkejä: Mitä "oikea" osoite on? Mitä "väärä"?
+DeepSeek on hyvin halpa, käytännössä ilmainen pieniksi kuluiksi. Se on myös nopea ja hyvä ohjelmoinnissa. Jos sinulla on tiukka budjetti ja haluat käyttää tekoälyä paljon, DeepSeek on houkutteleva.
 
-Tekoäly tekee arauksia joka kohdassa ja antaa sinulle jonkun version, joka *saattaa* olla sinun tarpeisiisi.
+**Tärkeä ongelma: tietosuoja**
 
-**Hyvä prompt:**
-"Olet Python-kehittäjä. Kirjoita funktio nimellä `validate_email()`, joka ottaa merkkijonon ja palauttaa True, jos se on validi sähköpostiosoite, False muuten. Käytä regex-kuviota. Hyväksy vain näitä muotoja: name@example.com. Hylkää välilyönnit ja erikoismerkit. Formaatti: Python-funktio, 5-10 riviä, kommenteilla. Esimerkki: validate_email('test@example.com') palauttaa True, validate_email('test @example.com') palauttaa False."
+Mutta tässä on suuri "mutta". DeepSeek on kiinalainen palvelu ja kun lähetät tekstejä DeepSeekille, ne menevät Kiinan palvelimille. Kiinan hallituksella on lainsäädännön mukaan pääsy näihin tietoihin.
 
-Miksi se on hyvä?
-- Rooli: "Python-kehittäjä" — malli tietää kontekstit.
-- Tavoite: "kirjoita funktio" — selkeä.
-- Rajat: "vain näitä muotoja", "hylkää välilyönnit" — tarkka.
-- Formaatti: "Python-funktio, 5-10 riviä" — malli tietää pituuden.
-- Esimerkit: Kaksi tapausta — mitä pitäisi onnistua, mitä epäonnistua.
+EU:ssa (ja Suomessa) on säännöksiä nimeltään GDPR, joilla suojataan henkilötietoja. GDPR sanoo, että henkilötiedot on säilytettävä EU:n alueella, ei ulkomailla. Kiinan palvelimilla tiedot eivät ole riittävän suojassa EU:n näkökulmasta.
 
-Ammattilaisesti hyvä prompt säästää aikaa. Joudut ehkä käyttämään enemmän aikaa promptin kirjoittamiseen, mutta saat parempia tuloksia ja vähemmän iteraatioita.
+Käytännössä tämä tarkoittaa:
+- Jos olet opettaja ja käytät DeepSeekia oppilaiden esseiden analysoinnissa, se saattaa rikkoa säädöksiä
+- Jos olet sairaala ja käytät sitä potilastietojen kanssa, se on kiellettyä
+- Jos olet yritys ja käytät sitä asiakastietojen kanssa, se saattaa olla kiellettyä
 
-## Osa 4: Kontekstin rakentaminen ammattilaisesti
+**Johtopäätös:** DeepSeek on teknisesti hyvä ja halpa, mutta tietosuoja estää sen käytön monissa tilanteissa Suomessa ja EU:ssa.
 
-Kun käytät tekoälyä ammattilaisesti, et yleensä pysty antamaan kaikkea yhdessä promptissa. Joskus et edes tiedä, mitä sinun täytyy pyytää, kunnes näet ensimmäisen vastauksen.
+> **Pohdi hetkeksi:** Kuvittele, että olet opettaja. Haluat käyttää tekoälyä oppilaiden esseiden arviointiin nopeasti. DeepSeek on halvin vaihtoehto. Mutta oppilaiden nimet ja esseiden sisältö menisivät Kiinan palvelimille. Olisiko se ok? Miksi tai miksi ei?
 
-Ammattilaiset rakentavat kontekstia *iteratiivisesti*:
+## Osa 3: Avoimet mallit — omalla tietokoneella ajettavat mallit
 
-**Kierros 1:** "Kirjoita Python-funktio, joka validoi sähköpostiosoitteen."
-- Saat: perus regex-funktio
+Toinen vaihtoehto on käyttää "avoimia malleja". Tämä ei tarkoita "ilmaisia", vaan "sinulla on koodi ja painot, voit ladata ja ajaa itse omalla tietokoneella".
 
-**Kierros 2:** "Lisää tuki plus-osoitteisiin (test+tag@example.com). Lisää docstring."
-- Saat: parannettu versio
+### Meta Llama — tunnetuin avoin malli
 
-**Kierros 3:** "Nyt kirjoita testit tälle funktiolle. Sisällytä vähintään 5 tapausta."
-- Saat: test-suite
+Meta (entinen Facebook) julkaisi mallin nimeltään Llama. Se on ilmainen ladata, ja sinä voit ajaa sitä omalla tietokoneellasi. Llama on kilpailukykyinen ChatGPT:n ja Clauden kanssa.
 
-**Kierros 4:** "Muuta testit pytest-muotoon ja lisää seuraavat edge-caset: osoite ilman TLD:tä, osoite yli 254 merkin."
-- Saat: täydellinen test-suite
+**Mitkä ovat hyvät puolet:**
 
-Jokainen kierros rakentaa edellisen päälle. Tekoäly "muistaa" kontekstin jokaisessa kierroksessa (riippuen siitä, mitä mallia käytät ja onko se yhdessä sessioissa vai eri sessioissa).
+Kun ajat Llama-mallia omalla tietokoneella, tiedot pysyvät täysin sinulla. Mitään ei lähde internetiin ja kukaan ei näe, mitä kirjoitat. Tämä on täydellinen yksityisyys. Lisäksi, kun olet ladannut mallin kerran, se on ilmaista käyttää niin paljon kuin haluat, etkä maksa per kysymys kuten ChatGPT:n kanssa.
 
-Ammattilaisesti tämä on tehokas. Et yritä ennustaa kaikkea etukäteen. Teet iteratiivisesti, näet tuloksia ja parannella.
+**Mitkä ovat huonot puolet:**
 
-## Yhteenveto
+Omalla tietokoneella ajettava malli vaatii hyvää tietokonetta. Jos sinulla on vanha kannettava, se voi olla liian hidas tai se ei mahdu muistiin. Lisäksi vastaukset ovat hitaampia kuin pilvipalvelussa, koska pilvipalveluilla on valtavia laskentakoneita, kun sinulla kotona on pienemmät resurssit.
 
-Hyvä prompt on **strukturoitu tehtävänanto**, ei satunnainen kysymys. Se sisältää viisi osaa: tavoite, rooli, rajat, formaatti ja esimerkit. Tärkeämpi kuin yksi suurenmoinen prompt on **iteratiivinen prosessi**: alusta yksinkertainen prompt, anna kontekstia kierros kierrokselta, paranna tuloksia vaihe vaiheelta. Ammattilaisesti opit, että "hyvä prompt-kirjoitus" tarkoittaa tarkkoja tehtävänantoja ja joustavia iteraatioita, ei joitain mystisiä salaisuuksia.
+### Mistral — pienemmän kehittäjän valinta
+
+Ranskalainen yritys Mistral tekee pienempää mallia, joka on helpompi ajaa omalla tietokoneella. Se on käyttäjäystävällisyyden osalta helpommin lähestyttävä kuin Llama.
+
+### Millä ladata ja ajaa malleja omalla tietokoneella
+
+On ohjelmia, jotka tekevät paikallisen ajamisen helppoksi.
+
+**Ollama** on ohjelma, joka tekee ajamisesta helppoa. Asennat sen, valitset, minkä mallin haluat (esim. Llama), ja sitten voit käyttää sitä.
+
+**LM Studio** on ohjelma, joka näyttää ChatGPT:n kaltaiselta — siinä on chat-ikkuna, ja voit kirjoittaa siihen. Se on helpompaa kuin komentorivi, jos et ole tottunut teknisiin asioihin.
+
+### Miksi joku valitsisi paikallisen mallin?
+
+Kolme pääsyytä:
+
+**Yksityisyys:** Kaikki pysyy sinulla. Kukaan hallitus, yritys tai hakkeri ei näe, mitä kysyt.
+
+**Raha:** Ensimmäisen latauksen jälkeen se on ilmaista. Et maksa per kysymys.
+
+**Kontrolli:** Sinulla on mallin koodi. Voit muuttaa sitä, kehittää sitä, käyttää sitä kuten haluat.
+
+Haittapuolia ovat nopeus (hitaampi) ja laitteiston tarve (tarvitset hyvän koneen). Mutta joillekkin näistä seikoista on tärkeä, joten he valitsevat paikallisen mallin.
+
+> **Pohdi hetkeksi:** Mitä sinulle on tärkeää? Nopeus, hinta, yksityisyys, vai helppo käyttö? Eri mallit sopivat eri prioriteeteille.
+
+## Osa 4: Mallien vertailu — miten valita?
+
+Nyt tiedät, että malleja on monta. Miten siis valita?
+
+```mermaid
+graph TD
+    AI["Tekoäly-mallit"]
+
+    AI --> Pilvi["Pilvipalvelut<br/>Internetissä"]
+    AI --> Paikallinen["Paikallinen<br/>Omalla tietokoneella"]
+
+    Pilvi --> USA["Amerikan yritykset"]
+    Pilvi --> Kiina["Kiinalaiset yritykset"]
+    Pilvi --> EU["Eurooppalaiset yritykset"]
+
+    USA --> ChatGPT["ChatGPT<br/>OpenAI"]
+    USA --> Claude["Claude<br/>Anthropic"]
+    USA --> Gemini["Gemini<br/>Google"]
+
+    Kiina --> DeepSeek["DeepSeek"]
+
+    EU --> Mistral["Mistral"]
+
+    Paikallinen --> Llama["Llama<br/>Meta"]
+    Paikallinen --> MistralLocal["Mistral<br/>Paikallinen"]
+```
+
+Valinta ei ole "kumpi on parempi", vaan "kumpi sopii sinun tilanteeseen". Riippuu neljästä asiasta:
+
+**1. Mitä haluat tehdä?** Koodin kirjoitus? Tekstin parantaminen? Kuvan analysointi? Eri mallit ovat hyviä eri asioissa.
+
+**2. Kuinka paljon raha?** Jotkut ovat ilmaisia, jotkut kalliita, jotkut ilmaisia pienille käyttäjille ja kalliita suurille.
+
+**3. Tietosuoja:** Missä haluaisit tietojen olevan? Omalla tietokoneella? Euroopan palvelimilla? Vai et välitä?
+
+**4. Nopeus ja helppous:** Haluatko nopeaa tulosta vai voit odottaa vähän?
+
+## Osa 5: Tietosuoja — missä tiedot menevät?
+
+Tämä on tärkein osa. Kun käytät tekoälypalvelua internetissä, tekstit lähetetään palvelun palvelimille. Nuo palvelimet voivat olla eri puolilla maailmaa, ja niiden säännöt ovat erilaiset.
+
+### Missä palvelimet sijaitsevat?
+
+| Malli | Yritys | Palvelimet | Mitä pitää tietää |
+|-------|---------|-----------|------------------|
+| ChatGPT | OpenAI | USA | USA-laissa hallitus voi vaatia tietoja. Yleensä turvallinen, mutta amerikkalainen laki pätee. |
+| Claude | Anthropic | USA | Kuten ChatGPT. Yritys yrittää noudattaa GDPR:ää. |
+| Gemini | Google | USA ja Eurooppa | Google sallii palvelinten olevan EU:ssa. Turvallisempi EU:ssa. |
+| DeepSeek | DeepSeek | Kiina | Kiinalaiset palvelimet. Kiinan hallitus voi vaatia tietoja. Ongelma EU:ssa. |
+| Llama (omalla koneella) | Sinä | Sinun tietokoneesi | 100% yksityinen. Tiedot eivät lähde kotoa. |
+| Mistral | Mistral | Eurooppa | Euroopan palvelimet. Noudattaa EU:n sääntöjä. |
+
+### GDPR — Euroopan tietosuojalaki
+
+Euroopan Unionissa on laki nimeltään GDPR. Se sanoo: jos otat talteen ihmisen tietoja (nimi, sähköposti, arkaluontoiset asiat), tiedot on oltava EU:n alueella tai maissa, joihin EU luottaa.
+
+Kiina ei ole sellaisessa luotetussa listassa. Siksi, jos käytät DeepSeekia oppilaiden tai potilaiden tietojen kanssa, se rikkoo GDPR:ää.
+
+Käytännössä:
+- **Opettaja:** Et voi käyttää DeepSeekia oppilaiden esseiden analysoinnissa, koska oppilaiden tiedot ovat suojattuja.
+- **Lääkäri:** Et voi käyttää DeepSeekia potilastietojen kanssa, koska potilastiedot ovat hyvin suojattuja.
+- **Yritys:** Et voi käyttää DeepSeekia asiakastietojen kanssa, jos ne sisältävät henkilötietoja.
+
+Mutta jos käytät DeepSeekia omiin harjoituksiin, joissa ei ole kenenkään tietoja, silloin se voi olla ok.
+
+> **Pohdi hetkeksi:** Missä tekoälyä käyttävät ihmiset luonasi? Opettajat? Lääkärit? Johtajat? Mitä tietoja heille on sallittua lähettää tekoälylle? Entä mitä ei?
+
+## Osa 6: Hinta ja käyttö — mitä maksaa?
+
+Tässä on vertailu siitä, miten kallista eri mallien käyttäminen on. Hinnat muuttuvat, mutta nämä ovat suuntaa-antavia (2026):
+
+| Malli | Yritys | Onko ilmainen? | Hinta | Tietosuoja | Nopeus |
+|-------|---------|-----------|-------|-----------|--------|
+| ChatGPT | OpenAI | Ei | Kallis | USA-palvelimet | Nopea |
+| Claude | Anthropic | Ei | Kallis | USA-palvelimet | Nopea |
+| Gemini | Google | Kyllä (rajoitetusti) | Halpa | EU-palvelimet saatavilla | Nopea |
+| DeepSeek | DeepSeek | Kyllä (rajoitetusti) | Erittäin halpa | Kiina-palvelimet | Nopea |
+| Llama (paikallinen) | Meta | Kyllä | Ilmainen | 100% yksityinen | Hidas |
+| Mistral (paikallinen) | Mistral | Kyllä | Ilmainen | 100% yksityinen | Hidas |
+
+**Mitä tämä tarkoittaa:**
+
+Jos sinulla on pieni budjetti ja yksityisyys ei ole kriittistä, Gemini tai DeepSeek ovat halvoja. Jos yksityisyys on tärkeä ja sinulla on hyvä tietokone, paikallinen Llama tai Mistral ovat ilmaisia.
+
+ChatGPT ja Claude ovat kalliimpia, mutta hyviä, jos organisaatiolla on budjetti.
+
+> **Pohdi hetkeksi:** Sinulla on 500 euron vuosibudjetti. Mitä valitsisit? Entä jos yksityisyys on sinulle tärkeää?
+
+## Osa 7: Yhteenveto
+
+**Mitä olemme oppineet:**
+
+1. **Malleja on monta, ne ovat erilaisia.** ChatGPT ja Claude eivät ole ainoat, Gemini, DeepSeek, Llama ja muut ovat vaihtoehtoja.
+
+2. **Jokaisella on eri vahvuudet.** Gemini on halpa ja integroitu Googleen. DeepSeek on erittäin halpa, mutta tietosuoja-ongelma EU:ssa. Llama ja Mistral ovat yksityisiä, jos ajat niitä omalla koneella.
+
+3. **Tietosuoja on tärkeä.** Tiedä, mihin palvelimille tiedot menevät. Oppilaiden tiedot, potilastiedot ja arkaluontoiset tiedot vaativat erityistä huolimista.
+
+4. **Valinta riippuu tilanteesta.** Ei ole yhtä "parasta" mallia, vaan hinta, nopeus, yksityisyys ja käytettävyys ovat kaikki tärkeitä eri tilanteissa.
+
+5. **Ammattilaisesti sinun pitäisi tuntea vaihtoehdot.** Seuraavalla työpaikalla voi olla sääntöjä, mitä malleja saa käyttää. Nyt tiedät, mistä puhutaan.
+
+**Seuraavaksi:** Opimme, kuinka tehdä tekoälylle tarkkoja käskyjä. Kun tiedät, mitä malleja on olemassa, opimme, miten ne saavat vastauksen juuri sellaisena kuin haluat.
