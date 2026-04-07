@@ -123,6 +123,10 @@ Kuvittele, että olet rakentamassa IT-helpdesk-bottia organisaatioosi.
 
 Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oikeaan käyttöön.
 
+## Kohti omaa projektia
+
+Tällä tunnilla opit tietopohjan, rajausten ja testauksen merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta. Mieti omaa bottiasi: mitä tietoa se tarvitsee toimiakseen hyvin? Mistä aiheista sen pitäisi kieltäytyä? Miten testaat, että se todella tekee, mitä lupaat? Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT — se on testattu, rajattu ja tarkoituksenmukainen työkalu.
+
 ## Yhteenveto
 
 Hyödyllinen botti rakentuu kolmelle vahvalle perustalle. **Tietopohja** antaa botille tiedon, jonka perusteella se voi vastata tarkasti ja ajankohtaisesti. **Rajaukset** varmistavat, että botti ei tee vaarallisia tai sopimatonta asioita ja tietää, milloin sen pitäisi kieltäytyä. **Testaus** varmistaa systemaattisesti, että botti todella tekee, mitä pitää — positiivisissa tilanteissa, negatiivisissa tilanteissa ja epätavallisissa reunatapauksissa. Ja testaus ei ole kertaluonteinen työ — se on iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen, kunnes se on riittävän hyvä. Hyvillä botteilla on hyvät tiedot, selkeät rajat ja perusteellinen testaus takana.

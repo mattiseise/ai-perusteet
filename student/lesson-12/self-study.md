@@ -142,6 +142,10 @@ Pyyntö: "Aloitetaan maanantaista. Aihe: perustiedot verkoista. Mitä olennaista
 
 Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Sinulla oli spesifinen, käyttökelpoinen opiskelusuunnitelma, joka sopi sinulle — eikä yleinen lista.
 
+## Kohti omaa projektia
+
+Kontekstin rakentaminen on juuri se taito, joka tekee botistasi hyödyllisen. Tällä tunnilla harjoittelit, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia. Tehtävissä suunnittelit kontekstistrategian omalle botillesi (**Botin rakennuspala 2**) — miten se kerää tarvittavat tiedot käyttäjältä ja rakentaa ymmärrystä kierros kierrokselta. Seuraavaksi suunnittelet, millainen persoonallisuus ja rooli botillasi on — miten se puhuu, käyttäytyy ja ohjaa käyttäjää.
+
 ## Yhteenveto: Konteksti on ammattimainen taito
 
 Ammattilaisesti kontekstin rakentaminen on tämä prosessi:

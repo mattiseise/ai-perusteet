@@ -189,6 +189,10 @@ Koodia tarvitessa harkitse seuraavasti: Jos olet aloittelija ja haluat apua, Cha
 - **Idea-video storyboards:** Runway Gen-4.5 (visualisoi ideasi nopeasti)
 - **Pienessä kooditehtävässä:** ChatGPT Code Interpreter (näet tulokset välittömästi)
 
+## Kohti omaa projektia
+
+Tällä tunnilla tutustuit erikoistuneisiin tekoälytyökaluihin — kuvagenerointiin, musiikkiin, videoon ja koodausavustajiin. Tehtävissä suunnittelit, miten bottisi toimii vastuullisesti ja miten se käyttää tekoälyn mahdollisuuksia eettisesti (**Botin rakennuspala 4**). Nyt sinulla on kaikki neljä rakennuspalaa: alusta, kontekstistrategia, persoonallisuus ja vastuullinen käyttö. Seuraavilla kahdella tunnilla kokoat nämä yhteen ja rakennat valmiin botin arviointiprojektina.
+
 ## Yhteenveto
 
 Tekoälytyökalut ovat hyviä moniin tehtäviin, mutta ne eivät ole vielä valmiita kaikkeen.

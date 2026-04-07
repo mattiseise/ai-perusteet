@@ -1,13 +1,18 @@
-# Tehtävät — Projektidokumenttibotti
+# Opiskelutehtävät: Bottiprojekti, osa 1 — suunnittele ja rakenna
 
-## Oppimisen tavoite
+## Tekoälyjen käyttö -osion arvioitava projekti (osa 1/2)
 
-Tässä oppitunnissa oppit suunnittelemaan ja rakentamaan uuden Custom GPT -botin, joka auttaa käyttäjää kehittämään projektisuunnitelman. Botti kysyy oikeat kysymykset, kokoaa vastaukset ja luo valmiin suunnitelman. Opit seuraavat taidot:
+Oppitunneilla 17 ja 18 rakennat oman Custom-botin, testaat sen ja esittelet tuloksen. Tämä on Tekoälyjen käyttö -osion arvioitava projekti. Käytä kaikkia neljää botin rakennuspalaa, jotka olet kerännyt oppitunneilla 10, 12, 14 ja 16.
 
-- Miten määritellään botin tarkoitus ja rooli
-- Miten kirjoitetaan system prompt, joka johtaa botin käyttäytymistä
-- Miten testataan botti käytännöllisissä tilanteissa
-- Miten iteroidaan ja parannetaan bottia testaustulosten perusteella
+Projekti jakautuu kahteen osaan: oppitunnilla 17 suunnittelet ja rakennat botin, oppitunnilla 18 viimeistelet, testaat ja esittelet sen.
+
+### Mitä rakennat?
+
+Rakennat Custom-botin (Custom GPT tai vastaavan), joka toteuttaa käyttötapauksen, jonka valitsit rakennuspalassa 1. Botti käyttää system promptia ohjaamaan käyttäytymistään ja osaa kerätä kontekstia käyttäjältä vuorovaikutteisesti.
+
+### Miten käytät rakennuspaloja?
+
+**Rakennuspala 1** (oppitunti 10) kertoo, minkä alustan valitsit ja mitä ongelmaa ratkaiset. **Rakennuspala 2** (oppitunti 12) kertoo, miten botti kerää kontekstia käyttäjältä. **Rakennuspala 3** (oppitunti 14) kertoo, millainen botin persoonallisuus on — tarkoitus, rooli, ohjeet ja rajaukset. **Rakennuspala 4** (oppitunti 16) kertoo, miten varmistat vastuullisen käytön. Yhdessä nämä neljä rakennuspalaa muodostavat kattavan suunnitelman, jonka pohjalta kirjoitat system promptin ja rakennat botin.
 
 ---
 
@@ -15,30 +20,30 @@ Tässä oppitunnissa oppit suunnittelemaan ja rakentamaan uuden Custom GPT -boti
 
 ### Tavoite
 
-Määritellä, mitä kysymyksiä botti esittää ja missä järjestyksessä. Tämä on botin "runko".
+Määritellä, mitä kysymyksiä botti esittää käyttäjälle ja missä järjestyksessä. Tämä perustuu rakennuspaljoihin 2 ja 3.
 
 ### Ohjeet
 
 1. Lue uudelleen self-study-materiaali, erityisesti osio "Mitä hyvä projektisuunnitelma sisältää".
 
-2. Kirjoita muistiin **botin tarkoitus ja rooli**:
+2. Kirjoita muistiin **botin tarkoitus ja rooli** (pohjaudu rakennuspalaan 3):
    - Mikä botti on? (Esimerkiksi: "Projektin mentor, jolla on kokemus projektinjohdosta")
    - Mitä se tekee? (Esimerkiksi: "Auttaa käyttäjää luomaan projektisuunnitelman")
 
-3. Suunnittele **vähintään 15 kysymystä**, jotka botti esittää. Ne pitäisi ryhmitellä viiteen pääosaan:
+3. Suunnittele **vähintään 15 kysymystä**, joita botti esittää (perusta rakennuspalaan 2). Ne pitäisi ryhmitellä viiteen pääosaan:
    - **Mitä?** (3–4 kysymystä): Projektin kuvaus, tuote, ominaisuudet
    - **Kenelle?** (3–4 kysymystä): Käyttäjät, asiakkaat, heidän profiili
    - **Miksi?** (2–3 kysymystä): Tarkoitus, miksi projekti on olemassa, hyödyt
    - **Milloin?** (2–3 kysymystä): Aikataulu, vaiheet, deadlinet
    - **Miten?** (3–4 kysymystä): Resurssit, tiimi, tekniikka, budjetti
 
-4. Kirjoita jokaiseen kysymykseen **tarkennussuhde**, jos käyttäjä vastaa epäselvästi. Esimerkiksi: "Jos käyttäjä sanoo 'nuoret', kysymykset: minkä ikäiset? Missä?"
+4. Kirjoita jokaiseen kysymykseen **tarkennuskysymys**, jos käyttäjä vastaa epäselvästi. Esimerkiksi: "Jos käyttäjä sanoo 'nuoret', tarkentavat kysymykset: minkä ikäiset? Missä?"
 
 ### Odotettu tuotos
 
 Dokumentti, joka sisältää:
-- Botin tarkoitus ja rooli (1 kappale)
-- Viisi ryhmää kysymyksiä (vähintään 15 kysymystä yhteensä)
+- Botin tarkoitus ja rooli (1 kappale, pohjaudu rakennuspalaan 3)
+- Viisi ryhmää kysymyksiä (vähintään 15 kysymystä yhteensä, pohjaudu rakennuspalaan 2)
 - Jokaisen ryhmän jälkeen merkittävät "syvennä"-kysymykset
 
 **Esimerkki:**
@@ -64,19 +69,17 @@ KENELLE-osio:
 
 ### Tavoite
 
-Kirjoittaa system prompt (botin ohjeistus) ja luoda botti. Botti testattavaksi.
+Kirjoittaa system prompt (botin ohjeistus) ja luoda botti, joka yhdistää kaikki neljä rakennuspalaa.
 
 ### Ohjeet
 
-1. Käytä tehtävä 17.1:stä saatua kysymyslistaa.
+1. Käytä tehtävä 17.1:stä saatua kysymyslistaa ja kaikki neljä rakennuspalaa.
 
-2. Kirjoita **system prompt**, joka sisältää:
-   - **Identiteetti**: Kuka botti on? (rooli, kokemus)
-   - **Tarkoitus**: Mitä botti tekee?
-   - **Ohjeet**: Miten botti kysyy? (järjestys, miten kuuntele, miten koota vastaukset)
-   - **Rajaukset**: Mitä botti ei saa tehdä?
-
-   Prompt pitäisi olla **300–500 sanaa**.
+2. Kirjoita **system prompt** (300–500 sanaa), joka sisältää:
+   - **Identiteetti**: Kuka botti on? (rooli, kokemus) — perustuu rakennuspalaan 3
+   - **Tarkoitus**: Mitä botti tekee? — perustuu rakennuspalaan 1
+   - **Ohjeet**: Miten botti kysyy ja kerää kontekstia? (järjestys, miten kuuntele, miten koota vastaukset) — perustuu rakennuspalaan 2
+   - **Rajaukset ja vastuullinen käyttö**: Mitä botti ei saa tehdä? — perustuu rakennuspalaan 4
 
    **Esimerkki alkua:**
    > Olet Projektiseutu-niminen botti. Sinulla on 12 vuoden kokemus projektinjohdosta ja liiketoimintasuunnittelusta. Olet mentori, joka auttaa ihmisiä luomaan selkeitä, toteutettavia projektisuunnitelmia.
@@ -98,7 +101,7 @@ Kirjoittaa system prompt (botin ohjeistus) ja luoda botti. Botti testattavaksi.
 
 ### Odotettu tuotos
 
-- System prompt (300–500 sanaa), selkeästi kirjoitettu
+- System prompt (300–500 sanaa), selkeästi kirjoitettu — **sisältää viitteet kaikkiin neljään rakennuspalaan**
 - Kuvakaappaus tai linkki luottuun bottiin
 - Lyhyt kommentti: "Miten botti käyttäytyy?" ja "Mitä haluat testata ensi tehtävässä?"
 
@@ -119,7 +122,7 @@ Testata botti kahden eri projektikuvauksen avulla. Nähdä, kysyykö se oikeita 
    - **Botin kysymykset**: Mitä kysyi? Missä järjestyksessä?
    - **Vastauksesi**: Mitä vastasit?
    - **Lopputulos**: Mitä botti koosti? (kopioi tai kuvakaappaa)
-   - **Analyysi**: Oliko suunnitelma järkevä? Olivatko kaikki asiat oikein? Mitä puuttui?
+   - **Analyysi**: Oliko suunnitelma järkevä? Olivatko kaikki asiat oikein? Mitä puuttui? Liittyivätkö kysymykset rakennuspalaan 2?
 
 3. **Testaus 2**: Toista sama prosessi toisella projektikuvauksella.
 
@@ -127,6 +130,7 @@ Testata botti kahden eri projektikuvauksen avulla. Nähdä, kysyykö se oikeita 
    - Kysyikö botti samoja kysymyksiä vai sopeutuiko se projektiin?
    - Oliko toinen suunnitelma parempi kuin toinen? Miksi?
    - Mitä botti teki hyvin? Mitä voisi parantaa?
+   - Toteutuivatko rakennuspalat 1–4 odotetusti?
 
 ### Projektiskenaarioiden esimerkkejä
 
@@ -145,7 +149,7 @@ Dokumentaatio, joka sisältää:
 - Botin kysymykset (numeroidusta listasta)
 - Käyttäjän vastaukset
 - Lopullinen suunnitelma (botin tuottama)
-- Analyysi: "Botti kysyi hyviä kysymyksiä, koska... Puuttui [asia], koska..."
+- Analyysi: "Botti kysyi hyviä kysymyksiä, koska... Puuttui [asia], koska..." — viittaa rakennuspalaan 2
 
 **Testaus 2:**
 - Sama rakenne kuin testaus 1
@@ -154,7 +158,7 @@ Dokumentaatio, joka sisältää:
 - Mitkä olivat suurimmat erot kahden testin välillä?
 - Oliko botti tasapainoisesti kysyvä vai painottuiko se johonkin osaan?
 - Mikä oli paras vastaus botilta? Mikä pahin?
-- Seuraavassa iteraatiossa, mitä haluaisit muuttaa?
+- Seuraavassa iteraatiossa, mitä haluaisit muuttaa rakennuspalista 1–4?
 
 ---
 
@@ -168,11 +172,12 @@ Testaustulosten perusteella parantaa bottia seuraavalle kerralle (oppitunti 18).
 
 1. Lue tehtävä 17.3:n analyysi uudelleen.
 
-2. Kirjoita **muutosluettelo**:
+2. Kirjoita **muutosluettelo** (3–5 kohtaa):
    - Mikä ei toiminut hyvin?
    - Miksi se ei toiminut?
    - Miten haluat korjata sen?
    - Mitkä osat system promptista muuttuvat?
+   - Mitkä rakennuspalat (1–4) vaativat tarkennusta?
 
 3. **Valinnainen**: Jos sinulla on aikaa, tee uudet testit korjatulla promptilla ja dokumentoi parantuminen.
 
@@ -180,12 +185,12 @@ Testaustulosten perusteella parantaa bottia seuraavalle kerralle (oppitunti 18).
 
 ```
 ONGELMA 1: Botti unohti ensimmäisen vastauksen
-SYY: System promptissa ei ole ohjeita muistiinpanoista
+SYY: System promptissa ei ole ohjeita muistiinpanoista (rakennuspala 2)
 KORJAUS: Lisää: "Muista aina, mitä käyttäjä sanoi ensimmäisessä vastauksessa"
 TULOS: Testataan seuraavalla kerralla
 
 ONGELMA 2: Botti ei kysynnyt budjettiin liittyen
-SYY: Kysymykset olivat liian vähäisiä "Miten"-osiossa
+SYY: Kysymykset olivat liian vähäisiä "Miten"-osiossa (rakennuspala 2)
 KORJAUS: Lisää "Mikä on budjetti?" ja "Onko sinulla rahasummaa?"
 TULOS: Seuraavalla testilla pitäisi kysyä paremmin
 ```
@@ -196,6 +201,7 @@ Dokumentaatio 3–5 muutoksesta:
 - Mikä ei toiminut
 - Miten korjataan
 - Mitä odotetaan seuraavaksi
+- **Viittaukset rakennuspaloihin 1–4**
 
 ---
 
@@ -222,6 +228,7 @@ Voit palauttaa:
 
 - **Kysymykset**: Kirjoita ne käyttäjäystävällisesti. Kysy selkeästi, mitä tarkoitat. Älä käytä jargonia.
 - **System prompt**: Ole yksityiskohtainen. "Kysy oikeat kysymykset" on liian epämääräinen. "Kysy ensin mitä projektista, sitten kenelle, sitten miksi" on selvä.
+- **Rakennuspalat**: Varmista, että kaikki neljä rakennuspalaa (oppitunnit 10, 12, 14, 16) näkyvät system promptissa ja testauksessa.
 - **Testaus**: Käytä kahta täysin erilaista projektia. Ei riitä, että testaat samantapaista ideaa kahdesti.
 - **Dokumentaatio**: Näytä, mitä botti sanoi. Kopioi sen vastaukset. Opettaja haluaa nähdä, mitä tapahtui.
 - **Rehellisyys**: Jos botti epäonnistui, se on OK. Dokumentoi epäonnistuminen. Yritä ymmärtää miksi.

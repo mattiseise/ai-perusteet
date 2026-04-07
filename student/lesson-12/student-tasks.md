@@ -1,77 +1,47 @@
-# Oppitunti 12: Opiskelijatehtävät — Kontekstin antaminen
+# Opiskelutehtävät: Kontekstin antaminen
 
-## Tehtävä 12.1: Harjoitus — kontekstin rakentaminen
+## Botin rakennuspala 2: Suunnittele kontekstistrategia
 
-### Tavoite
-Harjoitella kontekstin antamista tekoälylle asteittain — nähdä, miten parempi konteksti johtaa parempiin vastauksiin.
+Tämä on toinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
 
 ### Tehtävä
 
-Valitse yksi seuraavista aiheista: esseen kirjoittaminen (esim. "Tekoäly yhteiskunnassa"), ryhmätyön raportti (esim. "Verkon perusteista"), tenttiin valmistautuminen (esim. "IT-perusteet") tai harjoitteluhakemuksen kirjoittaminen.
+Palaa rakennuspalaan 1 (oppitunti 10), jossa valitsit alustan ja käyttötapauksen. Suunnittele nyt, miten bottisi saa kontekstia käyttäjältä. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Mitä kontekstia bottisi tarvitsee käyttäjältä toimiakseen hyvin (esim. käyttäjän rooli, tehtävän laajuus, taustatiedot)? Miten botti pyytää kontekstia — kysyykö se aktiivisesti vai odottaako käyttäjän antavan tiedot? Miten pilkot monimutkaisen tehtävän osiin, jotta konteksti-ikkuna ei täyty?
 
-Tee neljä erilaista pyyntöä tekoälylle, jossa jokainen on parempi kuin edellinen.
+### Miksi tämä on tärkeä
 
-**Kierros 1 — Huono pyyntö (liian yleinen):**
+Oppitunneilla 17–18 kirjoitat bottisi system promptin, joka ohjaa botin käyttäytymistä. Kontekstistrategia on system promptin ydin — se määrittää, miten botti kerää tietoa käyttäjältä ja miten se rakentaa ymmärryksensä tehtävästä. Ilman kontekstistrategiaa system promptista tulee epämääräinen ja botti antaa yleisiä vastauksia.
 
-Kirjoita yksinkertainen, epämääräinen pyyntö. Esimerkiksi: "Auta minua esseen kanssa." tai "Kerro aiheesta."
-
-**Kierros 2 — Parempi pyyntö (joitain tietoja):**
-
-Lisää kontekstia: kuka olet, mitä haluat, mihin käytät sitä. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa'. Olen 15-vuotias IT-opiskelija. Esseen pituus 500 sanaa."
-
-**Kierros 3 — Vielä parempi (lisää yksityiskohtia):**
-
-Tarkenna vielä enemmän: mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän, mitä tekoäly on, mutta en kuinka se muuttaa töitä. Haluan johdannon, joka avaa asian ja motivoi lukijaa. Loppuun johtopäätökset."
-
-**Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):**
-
-Pilko tehtävä osiin ja kerro tarkasti mitä haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän perusteita, mutta haluan ymmärtää, miten se vaikuttaa jokapäiväisiin töihin. Rakenne: 1) johdanto (mitä tekoäly on ja miksi se on tärkeä), 2) kolme esimerkkiä työssä (lääketieteen diagnostiikka, asiakaspalvelu, koulutus), 3) riskit ja haitat, 4) johtopäätökset ja omat ajatukseni. Jokainen esimerkki: 1-2 lause."
-
-### Dokumentointi
-
-Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita sitten yhteenveto, jossa käsittelet seuraavat asiat:
-
-**Vertailu:** Mikä erosi ensimmäisen ja neljännen vastauksen välillä? Miksi neljäs oli parempi? **Kontekstin vaikutus:** Mitkä kontekstin yksityiskohdat auttoivat sinua eniten? Mitä tietoa olisit voinut vielä antaa? **Käytännön soveltaminen:** Seuraavalla kerralla, kun käytät tekoälyä, mitä kontekstia annat alusta alkaen?
-
-### Arviointikriteerit
-
-| Taso | Pisteet | Kuvaus |
-|------|---------|--------|
-| **Erinomainen (5)** | 90–100 % | Kaikki neljä pyyntöä ovat hyvin erilaisia ja osoittavat kehittymistä. Vertailu on perusteellinen ja näyttää ymmärryksen kontekstin vaikutuksesta. Dokumentaatio on selkeä ja kattava. |
-| **Hyvä (4)** | 75–89 % | Pyyntöjen ero näkyy selvästi. Vertailu on hyvä ja osoittaa ymmärrystä. Dokumentaatio on hyvin kirjoitettu. |
-| **Tyydyttävä (3)** | 60–74 % | Pyyntöjen ero näkyy, mutta voisi olla selvempi. Vertailu on olemassa, mutta jää pintapuoliseksi. Dokumentaatio on riittävä. |
-| **Välttävä (2)** | 45–59 % | Pyyntöjen ero ei ole kovin selvä. Vertailu on heikko. Dokumentaatio on puutteellinen. |
-| **Hylätty (1)** | alle 45 % | Pyyntöjä ei ole saatu / eroja ei näy / dokumentaatio puuttuu. |
+Alla olevat harjoitustehtävät auttavat sinua ymmärtämään käytännössä, miten kontekstin laatu vaikuttaa tekoälyn vastauksiin ja miten kontekstia rakennetaan asteittain.
 
 ---
 
-## Tehtävä 12.2 (Valinnainen): Iteraation harjoittelu
+## Tehtävä 12.1: Kontekstin rakentaminen asteittain
 
 ### Tavoite
-Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään.
+Kokea käytännössä, miten kontekstin määrä ja laatu vaikuttavat tekoälyn vastauksiin. Tämä auttaa sinua rakennuspalassa suunnittelemaan, mitä kontekstia oma bottisi tarvitsee.
 
-### Tehtävä
+### Ohjeet
 
-Valitse yksi IT-alan aihe, jonka haluat ymmärtää paremmin (esim. verkot, tietoturva, palvelimet, koneoppiminen).
+Valitse aihe (esim. esseen kirjoittaminen, ryhmätyön raportti, tenttiin valmistautuminen tai harjoitteluhakemuksen kirjoittaminen). Tee neljä erilaista pyyntöä tekoälylle, jossa jokainen on parempi kuin edellinen:
 
-**Kierros 1: Yksinkertainen kysymys**
+**Kierros 1 — Huono pyyntö (liian yleinen):** Yksinkertainen, epämääräinen pyyntö kuten "Auta minua esseen kanssa."
 
-Pyyntö: "Kerro [aiheesta]." Tallenna vastaus.
+**Kierros 2 — Parempi pyyntö (joitain tietoja):** Lisää kontekstia — kuka olet, mitä haluat, mihin käytät sitä.
 
-**Kierros 2: Lisää konteksti**
+**Kierros 3 — Vielä parempi (lisää yksityiskohtia):** Tarkenna lisää — mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat.
 
-Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias opiskelija. Minulla on perustiedot, mutta haluan ymmärtää, mitä käytännössä se tarkoittaa." Tallenna vastaus.
+**Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):** Pilko tehtävä osiin ja kerro tarkasti mitä haluat.
 
-**Kierros 3: Esimerkit ja yksityiskohdat**
+Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita yhteenveto, jossa vertaat ensimmäisen ja neljännen vastauksen eroja, analysoit kontekstin vaikutusta ja pohdit, miten sovellat oppimaasi seuraavalla kerralla.
 
-Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias IT-opiskelija. Haluan 3 konkreettista esimerkkiä jokapäiväisestä elämästä. Myös riskit ja haitat olisi hyvä tietää." Tallenna vastaus.
+---
 
-**Kierros 4: Tarkka pilkkominen**
+## Tehtävä 12.2 (valinnainen): Iteraation harjoittelu
 
-Pyyntö: "Haluan oppia [aiheesta] 30 minuutissa. Anna minulle: 1) lyhyt selitys (2–3 lausetta), 2) kolme konkreettista esimerkkiä, 3) kolme yleistä väärinkäsitystä, 4) testikysymykset (kolme kysymystä, joita opiskelijat usein vastaavat väärin)." Tallenna vastaus.
+### Tavoite
+Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään. Tämä syventää ymmärrystäsi siitä, miten konteksti rakentuu vaiheittain — sama periaate pätee bottisi vuorovaikutukseen käyttäjän kanssa.
 
-### Dokumentointi
+### Ohjeet
 
-Kirjoita yhteenveto, jossa käsittelet seuraavat asiat:
-
-**Vastausten laatu:** Miten vastaukset erosivat toisistaan? Miksi? **Kontekstin merkitys:** Mitkä muutokset olivat tärkeimpiä? **Käytettävyys:** Mikä vastaus oli sinulle hyödyllisin opiskelussa? Miksi? **Omiksi sanoiksi:** Mitä opit kontekstin antamisesta?
+Valitse yksi IT-alan aihe (esim. verkot, tietoturva, palvelimet, koneoppiminen). Tee neljä kierrosta, joissa jokaisella kerralla tarkennat pyyntöä: yksinkertaisesta kysymyksestä ("Kerro aiheesta") tarkkaan pilkkomiseen ("Haluan oppia aiheesta 30 minuutissa, anna lyhyt selitys, esimerkit, väärinkäsitykset ja testikysymykset"). Kirjoita yhteenveto vastausten laadun eroista ja siitä, mitkä muutokset olivat tärkeimpiä.

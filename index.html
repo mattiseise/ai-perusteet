@@ -6275,6 +6275,8 @@ tietokoneen murto?&quot;
 <p>Paras tapa oppia on kokeilla itse. Valitse tehtävä, joka on riittävän monimutkainen, jotta erot näkyvät: vaikkapa 500 sanan artikkeli, CSV-datan analysointi tai Python-funktion kirjoittaminen. Anna sama tehtävä kaikille kolmelle työkalulle ja vertaa tuloksia. Mikä oli nopein? Kuka antoi tarkkaimman vastauksen? Kenen tulos oli käytännöllisin omaan tarpeeseesi?</p>
 <p>Dokumentoi havaintosi. Tämän tutkimuksen jälkeen sinulla on todellinen, omakohtainen käsitys siitä, mitkä ovat kunkin työkalun vahvuudet ja heikkoudet juuri sinun käyttötilanteissasi.</p>
 <hr />
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia — ja löysit niiden vahvuudet ja heikkoudet. Tehtävissä valitsit alustan ja käyttötapauksen omalle botillesi (<strong>Botin rakennuspala 1</strong>). Tämä valinta on perusta kaikelle, mitä rakennat seuraavilla tunneilla. Kun tiedät, missä alustassa bottisi elää ja ketä se palvelee, voit seuraavaksi suunnitella, miten annat sille oikean kontekstin — eli miten ohjeistat sen ymmärtämään käyttäjän tilanteen.</p>
 <h2>Yhteenveto</h2>
 <p>Kolmesta suuresta kielimallista jokainen on rakennettu erilaiseen tarpeeseen. ChatGPT on monipuolisin ja sen ekosysteemi on laajin. Claude on turvallisin, tarkin ja parhaimmillaan pitkien dokumenttien ja monimutkaisen koodin kanssa. Copilot on yritysmaailman integraatiotyökalu, joka tuo tekoälyn suoraan Office-sovelluksiin.</p>
 <p>Ammattilaisena sinun ei tarvitse valita yhtä — tarvitset ymmärryksen kaikista kolmesta. Kun tiedät, mihin kukin on hyvä, osaat valita oikean työkalun oikeaan tilanteeseen. Se on ammattitaitoa.</p>`,
@@ -6299,343 +6301,31 @@ tietokoneen murto?&quot;
 <p>Rajapinta, jonka avulla ohjelma voi pyytää palvelua toiselta ohjelmalta. Voit käyttää ChatGPT:n tai Clauden API:a omassa ohjelmassasi sen sijaan, että avaisit selaimen.</p>
 <h2>Prompt (kehotus)</h2>
 <p>Teksti, jonka kirjoitat tekoälylle ja jossa kerrot, mitä haluat sen tekevän. Hyvä prompt on selkeä ja yksityiskohtainen.</p>`,
-    stasks:`<h1>Opiskelijatehtävät: Työkalupaletti — ChatGPT, Claude ja Copilot käytännössä</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.1: Syvä vertailuanalyysi kolmesta työkalusta</h2></div><div class="task-card-body">
+    stasks:`<h1>Opiskelutehtävät: Työkalupaletti — ChatGPT, Claude ja Copilot käytännössä</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Botin rakennuspala 1: Valitse alusta ja käyttötapaus</h2></div><div class="task-card-body">
+<p>Tämä on ensimmäinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.</p>
+<h3>Tehtävä</h3>
+<p>Valitse alusta, jolle rakennat bottisi (ChatGPT, Claude tai muu), ja käyttötapaus, johon se vastaa. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Minkä alustan valitset ja miksi se sopii juuri sinun käyttötapaukseesi? Mitä ongelmaa bottisi ratkaisee ja kenelle se on tarkoitettu? Mitkä tämän alustan vahvuudet tekevät siitä parhaan valinnan (esim. pitkä konteksti, web-haku, Office-integraatio)?</p>
+<p>Botin ei tarvitse olla monimutkainen. Hyvä lähtökohta voi olla esimerkiksi "IT-helpdesk-botti, joka auttaa yleisimmissä ongelmissa" tai "opiskelijan tutori-botti, joka selittää ohjelmointikäsitteitä". Tärkeintä on, että valinta perustuu todelliseen kokemukseesi eri alustoista.</p>
+<h3>Miksi tämä on tärkeä</h3>
+<p>Oppitunneilla 17–18 rakennat oman Custom-botin. Tämä rakennuspala on sen pohja — kun sinulla on perusteltu alustavalinta ja selkeä käyttötapaus, kaikki myöhemmät suunnittelupäätökset (kontekstistrategia, persoonallisuus, vastuullinen käyttö) liittyvät konkreettiseen projektiin.</p>
+<p>Alla olevat harjoitustehtävät auttavat sinua vertailemaan alustoja käytännössä ja keräämään kokemusta, jonka pohjalta valintasi on perusteltu.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.1: Syvä vertailuanalyysi kolmesta työkalusta</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Opit soveltamaan jokaista kolmea kielimallityökalua <strong>samaan monimutkaiseen tehtävään</strong> ja analysoimaan niiden vastausten eroja. Tämän kautta ymmärrät kunkin työkalun todellisia vahvuuksia ja heikkouksia omasta käytöstä.</p>
+<p>Soveltaa jokaista kolmea kielimallityökalua samaan tehtävään ja analysoida niiden vastausten eroja. Tämä auttaa sinua rakennuspalassa perustelemaan, miksi valitsemasi alusta sopii käyttötapaukseesi.</p>
 <h3>Ohjeet</h3>
-<h4>Vaihe 1: Valitse tehtävätyyppi</h4>
-<p>Valitse yksi seuraavista tai vastaava oma tehtävä:</p>
-<p><strong>Vaihtoehto A: Kirjoittaminen ja luovuus</strong><br />
-- Tehtävä: "Kirjoita 500–600 sanan blogiartikkeli aiheesta 'Tekoälyn vaikutus opetukseen' (kirjoita siitä tekoälyn puolesta)."<br />
-- Edellytys: Pitää olla riittävän pitkä ja luova, jotta erot näkyvät.</p>
-<p><strong>Vaihtoehto B: Ohjelmointi ja tekniikka</strong><br />
-- Tehtävä: "Kirjoita Python-funktio, joka ottaa CSV-tiedoston syötteeksi, tekee data-analyyseja ja palauttaa visualisaatiot. Dokumentoi koodi selkeästi."<br />
-- Edellytys: Tekniset tehtävät paljastavat erot koodauksen laadussa.</p>
-<p><strong>Vaihtoehto C: Analyysi ja tutkimus</strong><br />
-- Tehtävä: "Tässä on 5–10 sivuinen dokumentti (voit käyttää mitä tahansa aiheeseen liittyvää tekstiä). Analysoi sitä ja kirjoita 300 sanan yhteenveto pääpisteistä, johtopäätöksistä ja mahdollisista jatkotutkimuskohteista."<br />
-- Edellytys: Analyyttiset tehtävät osoittavat syvyyttä ja tarkkuutta.</p>
-<p><strong>Vaihtoehto D: Ideointia ja suunnittelu</strong><br />
-- Tehtävä: "Ideoi startup-idea ja kirjoita sen business plan (tavoite, markkinat, rahantarve, 18 kuukauden roadmap)."<br />
-- Edellytys: Ideointitehtävät näyttävät luovuuden ja järjestelmällisyyden.</p>
-<h4>Vaihe 2: Anna tehtävä kaikille kolmelle</h4>
-<p>Käytä jokaisen työkalun ilmaista tai maksullista versiota (Plus-/Pro-versio sopii, mutta ilmainen riittää):</p>
-<ol>
-<li>Mene ChatGPT:hen (https://chat.openai.com)</li>
-<li>Kirjoita <strong>tarkalleen sama tehtävä</strong> sellaisena kuin valitsit</li>
-<li>Dokumentoi vastaus (kuvakaappaus tai kopioi teksti tiedostoon)</li>
-<li>Toista Claude:lla (https://claude.ai)</li>
-<li>Toista Microsoft Copilotilla (https://copilot.microsoft.com)</li>
-</ol>
-<blockquote class="pause"><p><strong>Vinkki:</strong> Käytä samaa "siementa" (esimerkiksi nimi, aihe, pituusvaatimus) kaikkiin kolmeen, jotta vastaukset ovat vertailukelpoisia.</p>
-</blockquote>
-<h4>Vaihe 3: Tarkka vertailu</h4>
-<p>Vertaa kaikkia kolmea vastausta seuraavien kriteerien perusteella:</p>
-<table>
-<thead>
-<tr>
-<th>Kriteeri</th>
-<th>ChatGPT</th>
-<th>Claude</th>
-<th>Copilot</th>
-<th>Huomio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Nopeus</strong></td>
-<td>(sekunteja)</td>
-<td>(sekunteja)</td>
-<td>(sekunteja)</td>
-<td>Kuka oli nopein?</td>
-</tr>
-<tr>
-<td><strong>Pituus</strong></td>
-<td>(sanat/rivit)</td>
-<td>(sanat/rivit)</td>
-<td>(sanat/rivit)</td>
-<td>Kuka oli pisin?</td>
-</tr>
-<tr>
-<td><strong>Selkeys</strong></td>
-<td>(1-5)</td>
-<td>(1-5)</td>
-<td>(1-5)</td>
-<td>Kumpi oli helpoin lukea?</td>
-</tr>
-<tr>
-<td><strong>Tekninen tarkkuus</strong></td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>(jos ohjelmointi: virheettömyys)</td>
-</tr>
-<tr>
-<td><strong>Luovuus</strong></td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>Kuka oli originaalein?</td>
-</tr>
-<tr>
-<td><strong>Rakenne</strong></td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>Kuka järjesti parhaiten?</td>
-</tr>
-<tr>
-<td><strong>Käytännöllisyys</strong></td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>(1–5)</td>
-<td>Kumpi vastaus on käyttökelpoisin?</td>
-</tr>
-</tbody>
-</table>
-<h4>Vaihe 4: Laadi analyysi-dokumentti</h4>
-<p>Kirjoita 800–1000 sanan raportti, jossa:</p>
-<ol>
-<li><strong>Johdanto</strong>: Mitä tehtävää vertailit ja miksi valitsit sen?</li>
-<li><strong>Vastausten yhteenveto</strong>: Lyhyt kuvaus kunkin työkalun vastauksesta (200 sanaa)</li>
-<li><strong>Vertailuanalyysi</strong>: Kohta kohdalta mitä eroja havaitsit? (400 sanaa)</li>
-<li><strong>Johtopäätökset</strong>: Mikä työkalu on paras tälle tehtävätyypille? Miksi?</li>
-<li><strong>Omat havainnot</strong>: Oliko jokin tulos yllättävä?</li>
-</ol>
-<h3>Odotettu tuotos</h3>
-<ol>
-<li><strong>Vertailutaulukko</strong> (täytetty taulukko yllä olevalla formaatilla)</li>
-<li><strong>Kolmen vastauksen dokumentit</strong> (tai kuvakaappaukset)</li>
-<li><strong>Analyysi-raportti</strong> (800–1000 sanaa, PDF tai Word)</li>
-</ol>
-<p><strong>Arviointiperusteet:</strong><br />
-- Olet valinnut sopivan vertailutehtävän (riittävän monimutkaisen)<br />
-- Olet tehnyt huolellisen vertailun kunkin kriteerin osalta<br />
-- Analyysisi on perusteltua (et vain sano "ChatGPT oli parempi", vaan <em>miksi</em>)<br />
-- Raporttisi on selkeä ja hyvin järjestetty</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.2: Vahvuuksien kartoitus — milloin käyttää ketä?</h2></div><div class="task-card-body">
+<p>Valitse yksi tehtävätyyppi: kirjoittaminen ja luovuus (500–600 sanan blogiartikkeli), ohjelmointi ja tekniikka (Python-funktio dokumentaatioineen), analyysi ja tutkimus (5–10 sivuisen dokumentin yhteenveto) tai ideointi ja suunnittelu (startup-idean business plan).</p>
+<p>Anna täsmälleen sama tehtävä kaikille kolmelle työkalulle (ChatGPT, Claude, Copilot) ja dokumentoi vastaukset. Vertaa niitä seuraavien kriteerien perusteella: nopeus, pituus, selkeys, tekninen tarkkuus, luovuus, rakenne ja käytännöllisyys (arvioi kukin 1–5).</p>
+<p>Kirjoita 800–1000 sanan raportti, jossa käsittelet johdannon (mitä vertailit), vastausten yhteenvedon, vertailuanalyysin kohta kohdalta ja johtopäätökset (mikä työkalu on paras tälle tehtävätyypille ja miksi).</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.2: Vahvuuksien kartoitus — milloin käyttää ketä?</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Opit tunnistamaan kunkin työkalun <strong>todella hyviä käyttötapauksia</strong>. Et opiskele vain teoriassa, vaan testaat kolmea käyttötapausta, joissa kukin työkalu loistaa.</p>
+<p>Tunnistaa kunkin työkalun todella hyvät käyttötapaukset kokeilemalla niitä käytännössä. Tämä auttaa sinua rakennuspalassa valitsemaan alustan, jonka vahvuudet vastaavat käyttötapaukseesi.</p>
 <h3>Ohjeet</h3>
-<h4>Vaihe 1: Kolme erikoistunutta tehtävää</h4>
-<p>Valitse kolme erilaista tehtävää — yksi kunkin työkalun vahvuudelle:</p>
-<p><strong>Tehtävä A: ChatGPT — Monipuolinen ekosysteemi</strong><br />
-- Valitse jokin, joka hyödyntää web-hakua, räätälöityä bottia tai koodin tulkitsijaa<br />
-- Esimerkki: "Luo markkinointisuunnitelma startup-idealle, sisältäen:<br />
-  - Tekstipohjainen strategia (markkinat, kohderyhmä, kilpailijat)<br />
-  - Hakutulokset nykyisistä trendeistä aiheeseen liittyen (verkkohaku)<br />
-  - Data-analyysi tai visualisointi markkinadatasta (koodin tulkitsija)"</p>
-<p><strong>Tehtävä B: Claude — Pitkä konteksti ja turvallisuus</strong><br />
-- Valitse jokin, joka vaatii <strong>pitkän dokumentin analyysia</strong> ja <strong>yksityisyyttä</strong><br />
-- Esimerkki: "Lataa 10–20 sivuinen tutkimuspaperi (voit etsiä arxiv.org:sta tai käyttää omaa). Pyydä Claude:a:<br />
-  - Tekemään yksityiskohtaisen yhteenvedon<br />
-  - Tunnistamaan metodologian mahdolliset ongelmat<br />
-  - Ehdottamaan jatkotutkimusta<br />
-  - Arvioimaan paperin tieteellistä luotettavuutta"</p>
-<p><strong>Tehtävä C: Microsoft Copilot — Office-integraatio ja yritysturvallisuus</strong><br />
-- Valitse jokin, joka hyödyntää Office 365:tä tai verkkohakua<br />
-- Esimerkki: "Luo Word-dokumentti, jossa:<br />
-  - Copilot kirjoittaa sisällön suoraan Wordissa<br />
-  - Käytä Bing-hakua löytääksesi ajankohtaiset tiedot aiheesta<br />
-  - Luo kaavioita ja taulukoita Excel-datasta (jos mahdollista)"</p>
-<h4>Vaihe 2: Suorita testit</h4>
-<ol>
-<li>Suorita <strong>Tehtävä A</strong> ChatGPT:ssä</li>
-<li>Suorita <strong>Tehtävä B</strong> Claude:lla</li>
-<li>Suorita <strong>Tehtävä C</strong> Microsoft Copilotilla</li>
-</ol>
-<p>Dokumentoi:<br />
-- Kuinka pitkä aika meni?<br />
-- Oliko työkalun erikoisominaisuus hyödyllinen?<br />
-- Olisiko muulla työkalulla ollut parempi tulos?</p>
-<h4>Vaihe 3: Arviointimatriisi</h4>
-<p>Täytä tämä matriisi vertailluista tehtävistä:</p>
-<table>
-<thead>
-<tr>
-<th>Ominaisuus</th>
-<th>ChatGPT</th>
-<th>Claude</th>
-<th>Copilot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Näistä kolmesta tehtävästä paras</strong></td>
-<td>Tehtävä A</td>
-<td>Tehtävä B</td>
-<td>Tehtävä C</td>
-</tr>
-<tr>
-<td><strong>Miksi tämä työkalu loistaa?</strong></td>
-<td>Verkkohaku, räätälöity botti, koodin tulkitsija</td>
-<td>Pitkä konteksti, turvallisuus</td>
-<td>Office, Bing, yritysympäristö</td>
-</tr>
-<tr>
-<td><strong>Käyttötapaus #1</strong></td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-</tr>
-<tr>
-<td><strong>Käyttötapaus #2</strong></td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-</tr>
-<tr>
-<td><strong>Käyttötapaus #3</strong></td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-<td>(esimerkki)</td>
-</tr>
-<tr>
-<td><strong>Yritysympäristössä soveltuva?</strong></td>
-<td>Osittain</td>
-<td>Kyllä</td>
-<td>Erittäin kyllä</td>
-</tr>
-<tr>
-<td><strong>Yksityisyyden kannalta paras?</strong></td>
-<td>Huono</td>
-<td>Hyvä</td>
-<td>Neutraali</td>
-</tr>
-</tbody>
-</table>
-<h3>Odotettu tuotos</h3>
-<ol>
-<li><strong>Kolme testitulosten dokumentaatiota</strong> (mitä teit, kuinka kauan kesti, mikä oli tulos)</li>
-<li><strong>Täytetty arviointimatriisi</strong> (yllä oleva taulukko)</li>
-<li><strong>Vahvuuksien kartta</strong> (1–2 sivua):</li>
-<li>Missä ChatGPT loistaa (3–4 käyttötapausesimerkki)</li>
-<li>Missä Claude loistaa (3–4 käyttötapausesimerkki)</li>
-<li>Missä Copilot loistaa (3–4 käyttötapausesimerkki)</li>
-</ol>
-<p><strong>Arviointiperusteet:</strong><br />
-- Olet valinneet testit, jotka todella näyttävät kunkin työkalun vahvuudet<br />
-- Olet dokumentoinut testin perusteellisesti (aika, tulos, ongelmat)<br />
-- Arviointimatriisisi perustuu todellisiin kokemuksiin, ei teoriaan</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.3: Henkilökohtainen valintakehys — missä sinä käytät mitä?</h2></div><div class="task-card-body">
+<p>Valitse kolme erilaista tehtävää — yksi kunkin työkalun vahvuudelle: ChatGPT:lle tehtävä joka hyödyntää web-hakua tai räätälöityä bottia, Claudelle tehtävä joka vaatii pitkän dokumentin analyysia ja yksityisyyttä, Copilotille tehtävä joka hyödyntää Office-integraatiota.</p>
+<p>Suorita testit, dokumentoi tulokset ja täytä arviointimatriisi, jossa vertaat vahvuuksia, käyttötapauksia ja soveltuvuutta yritysympäristöön.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.3: Henkilökohtainen valintakehys — missä sinä käytät mitä?</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Opit luomaan <strong>oman valintakehyksen</strong>, jonka avulla pystyt tekemään päätöksiä: "Mitä työkalua käytän tähän tehtävään?" Tämä kehys perustuu kokemukseesi, tarpeihisi ja arvoihisi.</p>
+<p>Luoda oma valintakehys, jonka avulla osaat valita oikean työkalun kuhunkin tilanteeseen. Tämä kehys auttaa sinua myös myöhemmissä rakennuspaloissa ja bottiprojektissa.</p>
 <h3>Ohjeet</h3>
-<h4>Vaihe 1: Tunnista oma käyttöprofiilisi</h4>
-<p>Vastaa seuraaviin kysymyksiin:</p>
-<ol>
-<li><strong>Mitä teet eniten?</strong> (valitse 2–3)</li>
-<li>Kirjoittaminen</li>
-<li>Ohjelmointi</li>
-<li>Data-analyysi</li>
-<li>Opetus/oppiminen</li>
-<li>Markkinointi</li>
-<li>
-<p>Muu: <strong><em>_</em></strong>____</p>
-</li>
-<li>
-<p><strong>Mitä välineitä käytät päivittäin?</strong></p>
-</li>
-<li>Microsoft 365 (Word, Excel, PowerPoint)</li>
-<li>Google Workspace (Docs, Sheets, Slides)</li>
-<li>Slack</li>
-<li>IDE (VS Code, PyCharm jne.)</li>
-<li>
-<p>Muu: <strong><em>_</em></strong>____</p>
-</li>
-<li>
-<p><strong>Mikä on sinulle tärkeää?</strong></p>
-</li>
-<li>Nopeus (haluan vastauksen sekunneissa)</li>
-<li>Tarkkuus (haluan oikean vastauksen, vaikka se vieisi pidempään)</li>
-<li>Yksityisyys (datani ei saa lähteä organisaation ulkopuolelle)</li>
-<li>Luovuus (haluan uudenlaisia ideoita)</li>
-<li>Turvallisuus (tietojen tulee olla suojattuja)</li>
-</ol>
-<h4>Vaihe 2: Luo päätöskaavio</h4>
-<p>Piirrä tai kirjoita päätöskaavio, joka ohjaa sinua:</p>
-<pre><code>Minulla on tehtävä.
-
-1. Tarvitsenko kuvia?
-   - Kyllä → ChatGPT
-   - Ei → Seuraava
-
-2. Tarvitsenko web-hakua?
-   - Kyllä → Copilot tai ChatGPT
-   - Ei → Seuraava
-
-3. Onko dataa paljon (&gt;50 000 sanaa)?
-   - Kyllä → Claude
-   - Ei → Seuraava
-
-4. Käytänkö Microsoft 365:tä?
-   - Kyllä → Copilot
-   - Ei → Seuraava
-
-5. Onko yksityisyys kriittistä?
-   - Kyllä → Claude
-   - Ei → Seuraava
-
-6. Haluan nopeimman vastauksen?
-   - Kyllä → ChatGPT
-   - Ei → Claude (tarkkuuden vuoksi)
-</code></pre>
-<blockquote class="pause"><p><strong>Huomio:</strong> Tuo kaavio on <strong>esimerkki</strong>. Sinun kaavioosi pohjautuu <em>omiin</em> prioriteetteihin.</p>
-</blockquote>
-<h4>Vaihe 3: Identifioi omat käyttötapaukset</h4>
-<p>Kirjoita vähintään 5–10 <strong>omaa käyttötapausta</strong>, joissa käytät näitä työkaluja:</p>
-<p>Esimerkki:<br />
-- "Kun kirjoitan asiakasraportteja → Claude (pitkä konteksti, turvallisuus)"<br />
-- "Kun ideoin markkinoinnillista sisältöä → ChatGPT (monipuolisuus, verkkohaku)"<br />
-- "Kun analysoin Excel-dataa työssä → Copilot (Office-integraatio)"<br />
-- "Kun ohjelmoin uutta featurea → Claude (parempi koodaus)"<br />
-- "Kun tarvitsen ajankohtaisia uutisia → ChatGPT tai Copilot (web-selaus)"</p>
-<h4>Vaihe 4: Luo valintakehyksesi</h4>
-<p>Dokumentoi lopullinen valintakehyksesi (Word, PDF tai Markdown):</p>
-<p><strong>Osiot:</strong><br />
-1. <strong>Minun käyttöprofiilini</strong>: (vastaukset vaiheesta 1)<br />
-2. <strong>Päätöskaavio</strong>: (piirustus tai tekstimuoto)<br />
-3. <strong>Minun top 5 käyttötapausta</strong>: (listaa kunkin työkalun pääkäytöt)<br />
-4. <strong>Päätösmatriisi</strong>: (lopullinen taulukko "Tarvitsen X → Käytän Y")<br />
-5. <strong>Muistiinpanot</strong>: (mitä opit näissä tehtävissä)</p>
-<h3>Odotettu tuotos</h3>
-<ol>
-<li><strong>Henkilökohtainen valintakehys</strong> (2–3 sivua, joka sisältää):</li>
-<li>Käyttöprofiili</li>
-<li>Päätöskaavio</li>
-<li>Käyttötapausesimerkit</li>
-<li>
-<p>Valintamatriisi</p>
-</li>
-<li>
-<p><strong>Paperiversio tai Markdown-versio</strong>, jonka voit tulostaa ja pitää käsillä</p>
-</li>
-<li>
-<p><strong>Reflektio</strong> (500 sanaa):</p>
-</li>
-<li>Mitä opit näistä kolmesta tehtävästä?</li>
-<li>Oliko jokin havainto yllättävä?</li>
-<li>Kuinka hyvin kehyksesi palvelee sinua?</li>
-<li>Muuttuiko ajatuksesi näistä työkaluista?</li>
-</ol>
-<p><strong>Arviointiperusteet:</strong><br />
-- Kehyksesi perustuu <strong>omiin</strong> tarpeisiin, ei yleisiin<br />
-- Päätöskaavio on <strong>selkeä ja looginen</strong><br />
-- Käyttötapaukset ovat <strong>konkreettisia</strong> (ei "kaikki", vaan "minä käytän X:ää silloin kun...")<br />
-- Reflektio osoittaa <strong>syvää ymmärrystä</strong></p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Yhteenveto: Mitä opimme?</h2></div><div class="task-card-body">
-<p>Näiden kolmen tehtävän kautta olet:</p>
-<ol>
-<li><strong>Soveltanut</strong> kolmea työkalua käytännössä (tehtävä 10.1)</li>
-<li><strong>Analysoinut</strong> kunkin työkalun vahvuuksia ja heikkouksia (tehtävä 10.2)</li>
-<li><strong>Arvioinut</strong> ja <strong>luonut</strong> oman valintakehyksen omille tarpeillesi (tehtävä 10.3)</li>
-</ol>
-<p>Seuraavissa opintojaksoissa käytät näitä työkaluja käytännöllisissä projekteissa. Nyt sinulla on tieto siitä, <em>kumpi</em> työkalu on <em>sinulle</em> oikea <em>missä</em> tilanteessa.</p></div></div><div class="task-card task-card--resource"><div class="task-card-header"><h2>Lisäresurssit</h2></div><div class="task-card-body">
-<ul>
-<li>ChatGPT: https://chat.openai.com</li>
-<li>Claude: https://claude.ai</li>
-<li>Microsoft Copilot: https://copilot.microsoft.com</li>
-<li>OpenAI-dokumentaatio: https://platform.openai.com/docs</li>
-<li>Anthropic Claude -dokumentaatio: https://docs.anthropic.com</li>
-<li>Microsoft Copilot -dokumentaatio: https://learn.microsoft.com/en-us/copilot</li>
-</ul></div></div>`,
+<p>Tunnista oma käyttöprofiilisi (mitä teet eniten, mitä välineitä käytät, mikä on sinulle tärkeää), luo päätöskaavio joka ohjaa työkalun valintaa, kirjoita vähintään 5–10 omaa käyttötapausta ja dokumentoi lopullinen valintakehys (käyttöprofiili, päätöskaavio, käyttötapaukset, valintamatriisi).</p>
+<p>Kirjoita lopuksi 500 sanan reflektio siitä, mitä opit ja muuttuiko ajatuksesi näistä työkaluista.</p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.1: Koko luokan työkalusafari — livetestaus</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -7096,6 +6786,8 @@ graph TD
 <p>ChatGPT ja Claude ovat kalliimpia, mutta hyviä, jos organisaatiolla on budjetti.</p>
 <blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Sinulla on 500 euron vuosibudjetti. Mitä valitsisit? Entä jos yksityisyys on sinulle tärkeää?</p>
 </blockquote>
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla tutustuit laajempaan tekoälykenttään — Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitsit juuri tietyn alustan omalle botillesi. Kun rakennat bottia myöhemmillä tunneilla, muista: valinta ei ole vain "mikä on paras", vaan "mikä sopii parhaiten tähän käyttötilanteeseen". Se on ammattilaisen ajattelutapa.</p>
 <h2>Osa 7: Yhteenveto</h2>
 <p><strong>Mitä olemme oppineet:</strong></p>
 <ol>
@@ -7498,6 +7190,8 @@ graph TD
 <p><strong>Kierros 4 — Pilko osiin:</strong></p>
 <p>Pyyntö: "Aloitetaan maanantaista. Aihe: perustiedot verkoista. Mitä olennaista opiskelijan pitäisi tietää? Anna 3 konkreettista esimerkkiä — miten verkot toimivat jokapäiväisessä elämässä." Tulos: fokussoitu maanantain sessio.</p>
 <p>Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Sinulla oli spesifinen, käyttökelpoinen opiskelusuunnitelma, joka sopi sinulle — eikä yleinen lista.</p>
+<h2>Kohti omaa projektia</h2>
+<p>Kontekstin rakentaminen on juuri se taito, joka tekee botistasi hyödyllisen. Tällä tunnilla harjoittelit, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia. Tehtävissä suunnittelit kontekstistrategian omalle botillesi (<strong>Botin rakennuspala 2</strong>) — miten se kerää tarvittavat tiedot käyttäjältä ja rakentaa ymmärrystä kierros kierrokselta. Seuraavaksi suunnittelet, millainen persoonallisuus ja rooli botillasi on — miten se puhuu, käyttäytyy ja ohjaa käyttäjää.</p>
 <h2>Yhteenveto: Konteksti on ammattimainen taito</h2>
 <p>Ammattilaisesti kontekstin rakentaminen on tämä prosessi:</p>
 <p>Aloita selkeällä tavoitteella: Mitä haluat tehdä? Yksinkertainen, spesifinen kysymys. Sitten anna taustatiedot: Mikä on sinun tilannetta? Mitä tarvitset? Kuka olet? Konteksti rakentuu. Jaa isot tehtävät: Jaa ne pienempiin osiin, joista jokainen on hallittava. Liitä olemassa oleva aineisto: Tekstit, koodit, asiakirjat — anna ne tekoälyn nähtäväksi. Iteroi ja terävöi: Jatkokysymykset tekevät vastauksesta paremman, spesifisemmän ja käyttökelpoisemman. Testaa ja validoi: Jokaisen kierroksen jälkeen tarkista, että vastaus auttaa sinua oppimisessasi.</p>
@@ -7523,76 +7217,27 @@ graph TD
 <p>Tarkistus siitä, että vastaus todella auttaa sinua. Ei riitä, että vastaus on kiinnostava — sen pitää olla käyttökelpoinen omassa tilanteessasi.</p>
 <h2>Edge-case</h2>
 <p>Epätavallinen tai poikkeuksellinen tilanne. Esimerkiksi: karkausvuosi, perhenimi, jonka kirjoituksessa on väliviiva, tai erittäin pitkä sähköpostiosoite.</p>`,
-    stasks:`<h1>Oppitunti 12: Opiskelijatehtävät — Kontekstin antaminen</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 12.1: Harjoitus — kontekstin rakentaminen</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Harjoitella kontekstin antamista tekoälylle asteittain — nähdä, miten parempi konteksti johtaa parempiin vastauksiin.</p>
+    stasks:`<h1>Opiskelutehtävät: Kontekstin antaminen</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Botin rakennuspala 2: Suunnittele kontekstistrategia</h2></div><div class="task-card-body">
+<p>Tämä on toinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.</p>
 <h3>Tehtävä</h3>
-<p>Valitse yksi seuraavista aiheista: esseen kirjoittaminen (esim. "Tekoäly yhteiskunnassa"), ryhmätyön raportti (esim. "Verkon perusteista"), tenttiin valmistautuminen (esim. "IT-perusteet") tai harjoitteluhakemuksen kirjoittaminen.</p>
-<p>Tee neljä erilaista pyyntöä tekoälylle, jossa jokainen on parempi kuin edellinen.</p>
-<p><strong>Kierros 1 — Huono pyyntö (liian yleinen):</strong></p>
-<p>Kirjoita yksinkertainen, epämääräinen pyyntö. Esimerkiksi: "Auta minua esseen kanssa." tai "Kerro aiheesta."</p>
-<p><strong>Kierros 2 — Parempi pyyntö (joitain tietoja):</strong></p>
-<p>Lisää kontekstia: kuka olet, mitä haluat, mihin käytät sitä. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa'. Olen 15-vuotias IT-opiskelija. Esseen pituus 500 sanaa."</p>
-<p><strong>Kierros 3 — Vielä parempi (lisää yksityiskohtia):</strong></p>
-<p>Tarkenna vielä enemmän: mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän, mitä tekoäly on, mutta en kuinka se muuttaa töitä. Haluan johdannon, joka avaa asian ja motivoi lukijaa. Loppuun johtopäätökset."</p>
-<p><strong>Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):</strong></p>
-<p>Pilko tehtävä osiin ja kerro tarkasti mitä haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän perusteita, mutta haluan ymmärtää, miten se vaikuttaa jokapäiväisiin töihin. Rakenne: 1) johdanto (mitä tekoäly on ja miksi se on tärkeä), 2) kolme esimerkkiä työssä (lääketieteen diagnostiikka, asiakaspalvelu, koulutus), 3) riskit ja haitat, 4) johtopäätökset ja omat ajatukseni. Jokainen esimerkki: 1-2 lause."</p>
-<h3>Dokumentointi</h3>
-<p>Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita sitten yhteenveto, jossa käsittelet seuraavat asiat:</p>
-<p><strong>Vertailu:</strong> Mikä erosi ensimmäisen ja neljännen vastauksen välillä? Miksi neljäs oli parempi? <strong>Kontekstin vaikutus:</strong> Mitkä kontekstin yksityiskohdat auttoivat sinua eniten? Mitä tietoa olisit voinut vielä antaa? <strong>Käytännön soveltaminen:</strong> Seuraavalla kerralla, kun käytät tekoälyä, mitä kontekstia annat alusta alkaen?</p>
-<h3>Arviointikriteerit</h3>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Pisteet</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen (5)</strong></td>
-<td>90–100 %</td>
-<td>Kaikki neljä pyyntöä ovat hyvin erilaisia ja osoittavat kehittymistä. Vertailu on perusteellinen ja näyttää ymmärryksen kontekstin vaikutuksesta. Dokumentaatio on selkeä ja kattava.</td>
-</tr>
-<tr>
-<td><strong>Hyvä (4)</strong></td>
-<td>75–89 %</td>
-<td>Pyyntöjen ero näkyy selvästi. Vertailu on hyvä ja osoittaa ymmärrystä. Dokumentaatio on hyvin kirjoitettu.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä (3)</strong></td>
-<td>60–74 %</td>
-<td>Pyyntöjen ero näkyy, mutta voisi olla selvempi. Vertailu on olemassa, mutta jää pintapuoliseksi. Dokumentaatio on riittävä.</td>
-</tr>
-<tr>
-<td><strong>Välttävä (2)</strong></td>
-<td>45–59 %</td>
-<td>Pyyntöjen ero ei ole kovin selvä. Vertailu on heikko. Dokumentaatio on puutteellinen.</td>
-</tr>
-<tr>
-<td><strong>Hylätty (1)</strong></td>
-<td>alle 45 %</td>
-<td>Pyyntöjä ei ole saatu / eroja ei näy / dokumentaatio puuttuu.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 12.2 (Valinnainen): Iteraation harjoittelu</h2></div><div class="task-card-body">
+<p>Palaa rakennuspalaan 1 (oppitunti 10), jossa valitsit alustan ja käyttötapauksen. Suunnittele nyt, miten bottisi saa kontekstia käyttäjältä. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Mitä kontekstia bottisi tarvitsee käyttäjältä toimiakseen hyvin (esim. käyttäjän rooli, tehtävän laajuus, taustatiedot)? Miten botti pyytää kontekstia — kysyykö se aktiivisesti vai odottaako käyttäjän antavan tiedot? Miten pilkot monimutkaisen tehtävän osiin, jotta konteksti-ikkuna ei täyty?</p>
+<h3>Miksi tämä on tärkeä</h3>
+<p>Oppitunneilla 17–18 kirjoitat bottisi system promptin, joka ohjaa botin käyttäytymistä. Kontekstistrategia on system promptin ydin — se määrittää, miten botti kerää tietoa käyttäjältä ja miten se rakentaa ymmärryksensä tehtävästä. Ilman kontekstistrategiaa system promptista tulee epämääräinen ja botti antaa yleisiä vastauksia.</p>
+<p>Alla olevat harjoitustehtävät auttavat sinua ymmärtämään käytännössä, miten kontekstin laatu vaikuttaa tekoälyn vastauksiin ja miten kontekstia rakennetaan asteittain.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 12.1: Kontekstin rakentaminen asteittain</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään.</p>
-<h3>Tehtävä</h3>
-<p>Valitse yksi IT-alan aihe, jonka haluat ymmärtää paremmin (esim. verkot, tietoturva, palvelimet, koneoppiminen).</p>
-<p><strong>Kierros 1: Yksinkertainen kysymys</strong></p>
-<p>Pyyntö: "Kerro [aiheesta]." Tallenna vastaus.</p>
-<p><strong>Kierros 2: Lisää konteksti</strong></p>
-<p>Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias opiskelija. Minulla on perustiedot, mutta haluan ymmärtää, mitä käytännössä se tarkoittaa." Tallenna vastaus.</p>
-<p><strong>Kierros 3: Esimerkit ja yksityiskohdat</strong></p>
-<p>Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias IT-opiskelija. Haluan 3 konkreettista esimerkkiä jokapäiväisestä elämästä. Myös riskit ja haitat olisi hyvä tietää." Tallenna vastaus.</p>
-<p><strong>Kierros 4: Tarkka pilkkominen</strong></p>
-<p>Pyyntö: "Haluan oppia [aiheesta] 30 minuutissa. Anna minulle: 1) lyhyt selitys (2–3 lausetta), 2) kolme konkreettista esimerkkiä, 3) kolme yleistä väärinkäsitystä, 4) testikysymykset (kolme kysymystä, joita opiskelijat usein vastaavat väärin)." Tallenna vastaus.</p>
-<h3>Dokumentointi</h3>
-<p>Kirjoita yhteenveto, jossa käsittelet seuraavat asiat:</p>
-<p><strong>Vastausten laatu:</strong> Miten vastaukset erosivat toisistaan? Miksi? <strong>Kontekstin merkitys:</strong> Mitkä muutokset olivat tärkeimpiä? <strong>Käytettävyys:</strong> Mikä vastaus oli sinulle hyödyllisin opiskelussa? Miksi? <strong>Omiksi sanoiksi:</strong> Mitä opit kontekstin antamisesta?</p></div></div>`,
+<p>Kokea käytännössä, miten kontekstin määrä ja laatu vaikuttavat tekoälyn vastauksiin. Tämä auttaa sinua rakennuspalassa suunnittelemaan, mitä kontekstia oma bottisi tarvitsee.</p>
+<h3>Ohjeet</h3>
+<p>Valitse aihe (esim. esseen kirjoittaminen, ryhmätyön raportti, tenttiin valmistautuminen tai harjoitteluhakemuksen kirjoittaminen). Tee neljä erilaista pyyntöä tekoälylle, jossa jokainen on parempi kuin edellinen:</p>
+<p><strong>Kierros 1 — Huono pyyntö (liian yleinen):</strong> Yksinkertainen, epämääräinen pyyntö kuten "Auta minua esseen kanssa."</p>
+<p><strong>Kierros 2 — Parempi pyyntö (joitain tietoja):</strong> Lisää kontekstia — kuka olet, mitä haluat, mihin käytät sitä.</p>
+<p><strong>Kierros 3 — Vielä parempi (lisää yksityiskohtia):</strong> Tarkenna lisää — mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat.</p>
+<p><strong>Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):</strong> Pilko tehtävä osiin ja kerro tarkasti mitä haluat.</p>
+<p>Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita yhteenveto, jossa vertaat ensimmäisen ja neljännen vastauksen eroja, analysoit kontekstin vaikutusta ja pohdit, miten sovellat oppimaasi seuraavalla kerralla.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 12.2 (valinnainen): Iteraation harjoittelu</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään. Tämä syventää ymmärrystäsi siitä, miten konteksti rakentuu vaiheittain — sama periaate pätee bottisi vuorovaikutukseen käyttäjän kanssa.</p>
+<h3>Ohjeet</h3>
+<p>Valitse yksi IT-alan aihe (esim. verkot, tietoturva, palvelimet, koneoppiminen). Tee neljä kierrosta, joissa jokaisella kerralla tarkennat pyyntöä: yksinkertaisesta kysymyksestä ("Kerro aiheesta") tarkkaan pilkkomiseen ("Haluan oppia aiheesta 30 minuutissa, anna lyhyt selitys, esimerkit, väärinkäsitykset ja testikysymykset"). Kirjoita yhteenveto vastausten laadun eroista ja siitä, mitkä muutokset olivat tärkeimpiä.</p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät — Kontekstin antaminen</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 12.1: Live-demo — sama aihe, neljä eri pyyntöä</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -7871,6 +7516,8 @@ graph TD
 <p>Tekoäly voi myös olla väärässä vakuuttavasti. Se saattaa ehdottaa ratkaisua, joka kuulostaa loogiselta mutta ei toimi sinun ympäristössäsi, tai se saattaa selittää asian teknisesti oikein mutta käytännössä harhaanjohtavasti. Siksi ammattilaisena sinun täytyy aina <strong>tarkistaa ja testata</strong>.</p>
 <p>Hyvä sääntö on: käytä tekoälyä <strong>ensimmäisenä askeleena</strong>, älä viimeisenä. Kysy neuvoa, saa pohja, muokkaa ja tarkista. Älä luota sokeasti, vaan luota omaan harkintaasi.</p>
 <hr />
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla näit, miten tekoäly auttaa käytännön tehtävissä — kirjoittamisessa, oppimisessa, ongelmanratkaisussa ja dokumentoinnissa. Nämä ovat juuri niitä käyttötilanteita, joita oma bottisi voi palvella. Mieti, mikä näistä neljästä alueesta on lähimpänä oman bottisi tarkoitusta. Kun suunnittelet bottia, muista: käyttäjä ei halua yleistä apua, vaan konkreettista hyötyä tietyssä tilanteessa. Mitä tarkemmin tiedät, mitä käyttäjäsi tekee, sitä paremman botin rakennat.</p>
 <h2>Yhteenveto</h2>
 <p>Tekoäly on käytännön työkalu, joka auttaa sinua kirjoittamaan selkeämmin, oppimaan nopeammin, ratkaisemaan ongelmia tehokkaammin ja dokumentoimaan työsi paremmin. Se ei korvaa omaa ajatteluasi, mutta se tekee monista tehtävistä helpompia ja nopeampia.</p>
 <p>Neljä tärkeintä asiaa tältä tunnilta:</p>
@@ -8446,6 +8093,8 @@ Tässä muuttuja on <code>nimi</code> ja se sisältää tekstin "Liisa".</p>
 <p><strong>Ammattilaisuus</strong> tarkoittaa, että botti tietää, mitä tekee, ja tekee sen hyvin. Se vastaa tarkkuudella, käyttää oikeaa termistöä ja antaa luotettavaa tietoa. Ammattilaisuus on silmälläpito — se ei ole mukava juttu, se on <strong>pätevyys</strong>.</p>
 <p><strong>Persoonallisuus</strong> on tapa, jolla botti välittää ammattilaisuuttaan. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Se riippuu roolista ja käyttäjäryhmästä. Opiskelija-botti voi olla kannustava ja kärsivällinen. IT-helpdesk-botti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuuntelevainen.</p>
 <p>Hyvä botti on aina ammattilaismainen. Persoonallisuus on makuasia.</p>
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet — ja miten järjestelmäprompti on botin sydän. Tehtävissä suunnittelit oman bottisi persoonallisuuden ja kirjoitit sille ensimmäisen järjestelmäpromptin (<strong>Botin rakennuspala 3</strong>). Tämä on iso askel: botillasi on nyt alusta, kontekstistrategia ja persoonallisuus. Seuraavaksi opit, miten varmistat, että botti toimii vastuullisesti — miten lisäät sille tietopohjan, rajaukset ja testauksen.</p>
 <h2>Yhteenveto</h2>
 <p>Hyvin suunniteltu oma botti ei ole vain nimetty ChatGPT — se on AI-järjestelmä, jonka luot selkeällä tarkoituksella, vakuuttavalla roolilla ja yksityiskohtaisilla ohjeilla. Järjestelmäprompti on botin sydän. Se sisältää identiteetin, tarkoituksen, ohjeet ja rajaukset. Esimerkkivuorovaikutukset auttavat sinua testaamaan, onko ohjeistus riittävä. Kun valmistelet omaa bottia, muista: ammattilaisuus ensin, persoonallisuus toiseksi. Seuraavaksi opit, miten lisäät botille tietokannan, jotta se voi vastata tarkasti ja ajankohtaisesti.</p>`,
     vocab:`<h1>Sanasto</h1>
@@ -8469,202 +8118,34 @@ Tässä muuttuja on <code>nimi</code> ja se sisältää tekstin "Liisa".</p>
 <p>Botin kokeilemista erilaisilla kysymyksillä ja tilanteilla. Hyvä testaus paljastaa, missä botti epäonnistuu tai vastaa väärin. Testaus on olennainen osa botin kehittämistä.</p>
 <h2>Iteraatio (iteration)</h2>
 <p>Botin parantamista testauksen perusteella. Jokainen testikierros paljastaa parannuskohteita, ja botti kehittyy kierrokselta kierrokselle. Hyvä botti ei synny kerralla vaan iteroinnin kautta.</p>`,
-    stasks:`<h1>Lesson 14: Opiskelijan tehtävät — Oman botin suunnittelu</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.1: Määrittele oma botti — tarkoitus, rooli ja ohjeet (TT-B)</h2></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Suunnitella oman botin kolme perusrakennuspalikkaa — tarkoitus, rooli ja ohjeet.</p>
-<p>Valitse yksi seuraavista botin tyypeistä tai ehdota oma:<br />
-- Python-tutori-botti, joka opettaa aloittelijoille<br />
-- IT-helpdesk-botti, joka auttaa ongelmissa<br />
-- Asiakaspalvelu-botti verkkokaupalle<br />
-- Liiketoimintamentorin rooli nuorille yrittäjille</p>
-<p><strong>Suunnittelulomake:</strong></p>
-<pre><code>OMAN BOTIN SUUNNITTELU
-
-Botin tyyppi: [mitä botti tekee]
-
-=== RAKENNUSPALIKKA 1: TARKOITUS ===
-
-Mikä on selkeä, konkreettinen tarkoitus?
-[kirjoita niin, että voit mitata onnistumisen]
-
-Esimerkki:
-- Huono: &quot;Olla hyödyllinen&quot;
-- Hyvä: &quot;Auttaa opiskelijoita ymmärtämään Python-loopeita interaktiivisten esimerkkien kautta&quot;
-
-Oma tarkoitukseni:
-[vastaus]
-
-Kuinka voin mitata onnistumisen?
-[miten tiedät, että botti täytti tarkoituksensa?]
-
-=== RAKENNUSPALIKKA 2: ROOLI ===
-
-Kuka botti on? Mikä on sen asiantuntemus?
-[kirjoita 2–3 lausetta: uskottava rooli]
-
-Esimerkki:
-&quot;Olet kokenut Python-tutori, jolla on 10 vuoden opetuskokemus aloittelijoille.&quot;
-
-Oma rooli:
-[vastaus]
-
-Miksi tämä rooli on uskottava tehtävääni varten?
-[perustelu]
-
-=== RAKENNUSPALIKKA 3: OHJEET ===
-
-Mitkä ovat kolme tärkeintä ohjetta, jotka botille tulee antaa?
-[kirjoita 3 konkreettista ohjeistusta]
-
-Esimerkki:
-1. Aloita aina peruskäsitteistä
-2. Anna konkreettisia, ajettavia esimerkkejä
-3. Kysy opiskelijalta, ymmärsikö hän
-
-Omat ohjeet:
-1. [ohje 1]
-2. [ohje 2]
-3. [ohje 3]
-
-=== LISÄOSA: RAJAUKSET ===
-
-Mitä botti EI saa tehdä? (Kirjoita vähintään 2)
-[rajaukset suojaavat käyttäjää ja bottia]
-
-Esimerkki:
-- &quot;En kirjoita valmiita projekteja — opiskelijat oppivat tekemällä&quot;
-- &quot;En vastaa aiheisiin, jotka eivät liity Pythoniin&quot;
-
-Omat rajaukset:
-1. [rajausta 1]
-2. [rajausta 2]
-</code></pre>
-<p><strong>Arvioinnin kriteerit:</strong><br />
-- Tarkoitus on konkreettinen ja mitattavissa<br />
-- Rooli on uskottava ja perusteltu<br />
-- Ohjeet ovat selkeät ja johdattavat johdonmukaista käyttäytymistä<br />
-- Rajaukset suojaavat käyttäjää ja bottia</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.2: Kirjoita järjestelmäprompti (TT-B)</h2></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Kirjoittaa yksityiskohtainen järjestelmäprompti, joka ohjaa botin käyttäytymistä.</p>
-<p>Käytä tehtävässä 14.1 suunnittelemaasi bottia. Nyt kirjoitat sen <strong>järjestelmäpromptin</strong>.</p>
-<p>Järjestelmäprompti sisältää neljä osaa:<br />
-1. <strong>Identiteetti:</strong> Kuka botti on?<br />
-2. <strong>Tarkoitus:</strong> Mitä botti tekee?<br />
-3. <strong>Ohjeet:</strong> Miten botti käyttäytyy?<br />
-4. <strong>Rajaukset:</strong> Mitä botti ei saa tehdä?</p>
-<p><strong>Kirjoitusohje:</strong></p>
-<pre><code class="language-markdown">JÄRJESTELMÄPROMPTI — OMAN BOTIN SYDÄN
-
-[Identiteetti: 1–2 lausetta. Kuka olet? Mikä on taustasi?]
-
-Esimerkki:
-&quot;Olet kokenut Python-ohjelmointitutori, jolla on 10 vuoden kokemus
-opettamisesta aloittelijoille. Ymmärrät, miten nuoret oppivat.&quot;
-
-Sinun identiteettisi:
-[vastaus]
-
----
-
-[Tarkoitus: 1–2 lausetta. Miksi olet olemassa?]
-
-Esimerkki:
-&quot;Tarkoituksesi on auttaa opiskelijoita ymmärtämään Python-ohjelmointia
-interaktiivisten esimerkkien ja kysymysten kautta.&quot;
-
-Sinun tarkoituksesi:
-[vastaus]
-
----
-
-[Ohjeet: Neljä konkreettista sääntöä. Miten toimit?]
-
-Esimerkki:
-1. Aloita aina peruskäsitteistä. Älä hyppää heti monimutkaisiin asioihin.
-2. Anna konkreettisia, ajettavia esimerkkejä jokaisesta käsitteestä.
-3. Kysy opiskelijalta, ymmärsikö hän.
-4. Jos oppilas tekee virheen, auta häntä löytämään virhe itse.
-
-Sinun ohjeet:
-1. [ohje 1]
-2. [ohje 2]
-3. [ohje 3]
-4. [ohje 4]
-
----
-
-[Rajaukset: Vähintään kaksi asiaa, joita et saa tehdä]
-
-Esimerkki:
-- En kirjoita valmiita projekteja. Opiskelijat oppivat tekemällä.
-- En vastaa kysymyksiin, jotka eivät liity Pythoniin.
-
-Sinun rajaukset:
-- [rajausta 1]
-- [rajausta 2]
-
-</code></pre>
-<p><strong>Lopullinen järjestelmäprompti (kopio):</strong></p>
-<p>[Liitä tähän koko, lopullinen järjestelmäprompti, joka on valmis käyttöön]</p>
-<p><strong>Arvioinnin kriteerit:</strong><br />
-- Järjestelmäprompti on yksityiskohtainen ja selkeä<br />
-- Identiteetti, tarkoitus, ohjeet ja rajaukset ovat kaikki läsnä<br />
-- Teksti on ammattilaismainen<br />
-- Botti-ohjaaja ymmärtää, miten botin pitäisi käyttäytyä</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.3: Esimerkki-interaktiot — näytä, miten botti käyttäytyy (TT-A)</h2></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Kirjoittaa 2–3 esimerkki-interaktiota, jotka näyttävät, miten botti vastaa eri tilanteissa.</p>
-<p>Käytä tehtävistä 14.1 ja 16.2 luomaasi bottia. Kirjoita nyt konkreettisia esimerkkejä.</p>
-<p><strong>Esimerkkien rakenne:</strong></p>
-<p>Jokainen esimerkki on dialogi:<br />
-- Käyttäjä: [mitä käyttäjä kysyy tai sanoo]<br />
-- Botti: [miten botti vastaa — omat sanoin, ei yleinen]</p>
-<p><strong>Esimerkki: Python-tutori-botti</strong></p>
-<pre><code>Käyttäjä: Mitä on muuttuja?
-
-Botti: Hyvä kysymys! Ajattele muuttujaa kuin säiliötä. Liiteri voi sisältää
-nauloja, ruuveja tai vasareita. Se on säiliö, joka pitää sisällään jotain.
-
-Ohjelmoinnissa muuttuja toimii samalla tavalla. Se on nimetty paikka,
-jossa voit säilyttää tietoja.
-
-\`\`\`python
-nimi = &quot;Liisa&quot;
-</code></pre>
-<p>Tässä muuttuja on <code>nimi</code> ja se sisältää tekstin "Liisa".</p>
-<p>Ymmärsikö tämän? Halusitko nähdä lisää esimerkkejä vai mennään seuraavaan asiaan?</p>
-<pre><code>
-**Kirjoita nyt kolme esimerki-interaktiota omalle bottillesi:**
-
-**Esimerkki 1: Normaali tilanne**
-</code></pre>
-<p>Käyttäjä: [tavallinen kysymys]</p>
-<p>Botti: [vastaus, joka näyttää botin rollia ja ohjeiden mukaista käyttäytymistä]</p>
-<pre><code>
-**Esimerkki 2: Vaikea tilanne — botti kieltäytyy tai ohjaa**
-</code></pre>
-<p>Käyttäjä: [kysymys, joka on botin rajauksien ulkopuolella]</p>
-<p>Botti: [kuinka botti vastuullisesti kieltäytyy tai ohjaa]</p>
-<pre><code>
-**Esimerkki 3: Sekava tai epäselvä tilanne**
-</code></pre>
-<p>Käyttäjä: [epäselvä tai hajanainen kysymys]</p>
-<p>Botti: [kuinka botti pyytää tarkennusta tai yksinkertaistaa]<br />
-\`\`\`</p>
-<p><strong>Arvioinnin kriteerit:</strong><br />
-- Esimerkit näyttävät botin persoonallisuutta ja ohjeiden mukaista käyttäytymistä<br />
-- Vaikea tilanne näyttää rajaukset käytännössä<br />
-- Botti kuulostaa yhdenmukaiselta ja uskottavalta jokaisessa esimerkissä</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Kotitehtävä</h2></div><div class="task-card-body">
-<p>Valitse tehtävät 14.1 ja 14.2. Tee ne perusteellisesti.</p>
-<p><strong>Palautus:</strong><br />
-- Tehtävä 14.1 (suunnittelulomake)<br />
-- Tehtävä 14.2 (järjestelmäprompti)<br />
-- Tehtävä 14.3 (kolme esimerkki-interaktiota)</p>
-<p>Palauta seuraavalla tunnilla. Valmistaudu esittelemään oma botti.</p>
-<p><strong>Bonus:</strong> Jos olet kiinnostunut, kokeile järjestelmäpromptia todellisella AI:lla (ChatGPT, Claude jne.) ja dokumentoi, kuinka hyvin se toimi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Jos olet jumissa</h2></div><div class="task-card-body">
-<p>Jos botin suunnittelu tuntuu vaikealta etkä tiedä mistä aloittaa, seuraa näitä viittä askelta:</p>
-<p><strong>Askel 1:</strong> Mieti yhtä asiaa, jota teet toistuvasti ja joka on tylsää. Se voi olla työ, koulu tai arki. Kirjoita se yhteen lauseeseen: "Minua ärsyttää, että joudun aina..."</p>
-<p><strong>Askel 2:</strong> Muuta se botin tarkoitukseksi: "Botti, joka auttaa [tekemään sen tylsän asian]."</p>
-<p><strong>Askel 3:</strong> Kirjoita kolme ohjetta, jotka antaisit ihmiselle, joka tekee sen asian puolestasi. Nämä ovat botin ohjeet.</p>
-<p><strong>Askel 4:</strong> Kirjoita yksi asia, jota botti ei saa tehdä. Mieti: mikä voisi mennä pieleen?</p>
-<p><strong>Askel 5:</strong> Kirjoita yksi esimerkkikeskustelu — mitä käyttäjä kysyisi ja mitä botti vastaisi. Jos tämä tuntuu luontevalta, suunnitelmasi on hyvä.</p></div></div>`,
+    stasks:`<h1>Opiskelutehtävät: Oman botin suunnittelu</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Botin rakennuspala 3: Suunnittele botin persoonallisuus</h2></div><div class="task-card-body">
+<p>Tämä on kolmas neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.</p>
+<h3>Tehtävä</h3>
+<p>Palaa rakennuspaloihin 1 ja 2 (oppitunnit 10 ja 12), joissa valitsit alustan ja suunnittelit kontekstistrategian. Suunnittele nyt bottisi persoonallisuus. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat neljään kysymykseen: Mikä on bottisi tarkoitus — mitä konkreettista ongelmaa se ratkaisee? Mikä on bottisi rooli — kuka se on ja millainen asiantuntija? Mitkä ovat bottisi 3–4 tärkeintä ohjetta — miten se käyttäytyy? Mitkä ovat bottisi rajaukset — mitä se ei saa tehdä?</p>
+<h3>Miksi tämä on tärkeä</h3>
+<p>Oppitunneilla 17–18 kirjoitat bottisi system promptin ja rakennat sen. Persoonallisuus on system promptin sielu — se määrittää, miten botti puhuu, mitä se painottaa ja miten se käyttäytyy eri tilanteissa. Ilman selkeää persoonallisuutta botti on geneerinen ja epäjohdonmukainen.</p>
+<p>Alla olevat harjoitustehtävät auttavat sinua suunnittelemaan persoonallisuuden eri osat käytännössä ja kirjoittamaan ne muotoon, joka toimii system promptissa.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.1: Määrittele oma botti — tarkoitus, rooli ja ohjeet</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Suunnitella oman botin perusrakennuspalikat — tarkoitus, rooli ja ohjeet. Tämä on suoraan käytettävissä rakennuspalan kirjoittamisessa.</p>
+<h3>Ohjeet</h3>
+<p>Valitse botin tyyppi (esim. Python-tutori-botti, IT-helpdesk-botti, asiakaspalvelubotti tai liiketoimintamentori) ja täytä suunnittelulomake:</p>
+<p>Tarkoitus: Mikä on selkeä, konkreettinen tarkoitus? Kirjoita niin, että voit mitata onnistumisen. Huono esimerkki: "Olla hyödyllinen." Hyvä esimerkki: "Auttaa opiskelijoita ymmärtämään Python-loopeita interaktiivisten esimerkkien kautta."</p>
+<p>Rooli: Kuka botti on? Mikä on sen asiantuntemus? Kirjoita 2–3 lausetta uskottavasta roolista.</p>
+<p>Ohjeet: Mitkä ovat kolme tärkeintä ohjetta, jotka botille tulee antaa? Kirjoita konkreettisia ohjeita.</p>
+<p>Rajaukset: Mitä botti ei saa tehdä? Kirjoita vähintään kaksi rajausta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.2: Kirjoita järjestelmäprompti</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Kirjoittaa yksityiskohtainen järjestelmäprompti, joka ohjaa botin käyttäytymistä. Tämä on system promptin ensimmäinen versio, jota jatkokehität oppitunneilla 17–18.</p>
+<h3>Ohjeet</h3>
+<p>Käytä tehtävässä 14.1 suunnittelemaasi bottia. Kirjoita järjestelmäprompti, joka sisältää identiteetin (kuka botti on), tarkoituksen (mitä botti tekee), ohjeet (miten botti käyttäytyy — neljä konkreettista sääntöä) ja rajaukset (mitä botti ei saa tehdä). Järjestelmäpromptin tulee olla ammattimaisesti kirjoitettu ja tarpeeksi yksityiskohtainen, että botti käyttäytyy johdonmukaisesti.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.3: Esimerkki-interaktiot — näytä, miten botti käyttäytyy</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Kirjoittaa 2–3 esimerkki-interaktiota, jotka näyttävät, miten botti vastaa eri tilanteissa. Tämä auttaa sinua testaamaan persoonallisuuden johdonmukaisuutta ennen varsinaista rakentamista.</p>
+<h3>Ohjeet</h3>
+<p>Kirjoita kolme esimerkkidialogia omalle bottillesi:</p>
+<p>Esimerkki 1 — normaali tilanne: Tavallinen kysymys, johon botti vastaa roolinsa ja ohjeidensa mukaisesti.</p>
+<p>Esimerkki 2 — vaikea tilanne: Kysymys, joka on botin rajauksien ulkopuolella. Miten botti kieltäytyy tai ohjaa vastuullisesti?</p>
+<p>Esimerkki 3 — sekava tilanne: Epäselvä tai hajanainen kysymys. Miten botti pyytää tarkennusta?</p>
+<p>Esimerkkien tulee näyttää botin persoonallisuus, ohjeiden mukainen käyttäytyminen ja rajaukset käytännössä.</p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 14.1: Live-esittely — Oman botin rakennuspalikan (20 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -9070,6 +8551,8 @@ Tulos: ✓ ONNISTUI</p>
 <p><strong>Rajaukset</strong> ovat selkeät. Botti vastaa vain IT-ongelmiin — ei HR-, rahoitus- tai myynnin aiheisiin. Jos botti ei ole ainakin 85 prosenttia varma vastauksestaan, se sanoo "En osaa vastata tähän" eikä yritä arvata. Botti voi vain lukea tietokantaa ja hakea ohjeita — se ei voi muuttaa käyttäjätietoja tai salasanoja, vaan voi vain neuvoa käyttäjää nollaamaan salasanan itse.</p>
 <p><strong>Testaus</strong> on systemaattinen. Testaat 15 yleisintä kysymystä — botin pitäisi osata vastata kaikkiin. Testaat 5 negatiivista tapausta, joissa botti pitäisi kieltäytyä. Testaat 5 reunatapaustakin — tyhjät kysymykset, sekavat kysymykset, pitkät kysymykset. Dokumentoit jokaisen ja varmistan, että botti käyttäytyy oikein.</p>
 <p>Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oikeaan käyttöön.</p>
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla opit tietopohjan, rajausten ja testauksen merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta. Mieti omaa bottiasi: mitä tietoa se tarvitsee toimiakseen hyvin? Mistä aiheista sen pitäisi kieltäytyä? Miten testaat, että se todella tekee, mitä lupaat? Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT — se on testattu, rajattu ja tarkoituksenmukainen työkalu.</p>
 <h2>Yhteenveto</h2>
 <p>Hyödyllinen botti rakentuu kolmelle vahvalle perustalle. <strong>Tietopohja</strong> antaa botille tiedon, jonka perusteella se voi vastata tarkasti ja ajankohtaisesti. <strong>Rajaukset</strong> varmistavat, että botti ei tee vaarallisia tai sopimatonta asioita ja tietää, milloin sen pitäisi kieltäytyä. <strong>Testaus</strong> varmistaa systemaattisesti, että botti todella tekee, mitä pitää — positiivisissa tilanteissa, negatiivisissa tilanteissa ja epätavallisissa reunatapauksissa. Ja testaus ei ole kertaluonteinen työ — se on iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen, kunnes se on riittävän hyvä. Hyvillä botteilla on hyvät tiedot, selkeät rajat ja perusteellinen testaus takana.</p>`,
     vocab:`<h1>Sanasto</h1>
@@ -9871,6 +9354,8 @@ automatisoituu täysin?</p>
 - <strong>Podcast-intro-musiikki:</strong> Suno (tekee kokonaisen biisin muutamassa minuutissa)<br />
 - <strong>Idea-video storyboards:</strong> Runway Gen-4.5 (visualisoi ideasi nopeasti)<br />
 - <strong>Pienessä kooditehtävässä:</strong> ChatGPT Code Interpreter (näet tulokset välittömästi)</p>
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla tutustuit erikoistuneisiin tekoälytyökaluihin — kuvagenerointiin, musiikkiin, videoon ja koodausavustajiin. Tehtävissä suunnittelit, miten bottisi toimii vastuullisesti ja miten se käyttää tekoälyn mahdollisuuksia eettisesti (<strong>Botin rakennuspala 4</strong>). Nyt sinulla on kaikki neljä rakennuspalaa: alusta, kontekstistrategia, persoonallisuus ja vastuullinen käyttö. Seuraavilla kahdella tunnilla kokoat nämä yhteen ja rakennat valmiin botin arviointiprojektina.</p>
 <h2>Yhteenveto</h2>
 <p>Tekoälytyökalut ovat hyviä moniin tehtäviin, mutta ne eivät ole vielä valmiita kaikkeen.</p>
 <p><strong>Kuvageneraatio</strong> toimii hyvin. ChatGPT:n sisäänrakennettu kuvangenerointi (GPT-4o:n kautta) on nopea ja helppo. Midjourney tekee kauniimpia kuvia, mutta kestää kauemmin. Voit käyttää näitä oikeasti omissa projekteissasi.</p>
@@ -9963,198 +9448,29 @@ automatisoituu täysin?</p>
 </tr>
 </tbody>
 </table>`,
-    stasks:`<h1>Opiskelutehtävät — Oppitunti 16</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.1: Työkalujen vertailu ja kategorointi</h2></div><div class="task-card-body">
+    stasks:`<h1>Opiskelutehtävät: Erikoistuneet tekoälytyökalut</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Botin rakennuspala 4: Suunnittele vastuullinen käyttö</h2></div><div class="task-card-body">
+<p>Tämä on viimeinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.</p>
+<h3>Tehtävä</h3>
+<p>Palaa rakennuspaloihin 1–3 (oppitunnit 10, 12 ja 14), joissa valitsit alustan, suunnittelit kontekstistrategian ja persoonallisuuden. Suunnittele nyt, miten bottisi käyttö on vastuullista. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat neljään kysymykseen: Mitä eettisiä kysymyksiä bottisi käyttöön liittyy (esim. tekijänoikeudet, harhaanjohtaminen, yksityisyys)? Miten merkitset, että sisältö on tekoälyn tuottamaa? Mitkä ovat bottisi suurimmat riskit ja miten pienennät niitä (esim. hallusinaatiot, väärä tieto)? Miten varmistat, että bottisi noudattaa organisaation sääntöjä (esim. GDPR, tietosuoja)?</p>
+<h3>Miksi tämä on tärkeä</h3>
+<p>Oppitunneilla 17–18 rakennat ja esittelet bottisi. Vastuullinen käyttö ei ole lisäominaisuus — se on osa botin suunnittelua. Ilman eettistä suunnitelmaa et osaa selittää esittelyssä, miksi bottisi on turvallinen käyttää. Yhdessä rakennuspalojen 1–3 kanssa sinulla on nyt kattava suunnitelma koko bottiprojektillesi.</p>
+<p>Alla olevat harjoitustehtävät auttavat sinua ymmärtämään erikoistuneiden tekoälytyökalujen mahdollisuuksia ja eettisiä kysymyksiä käytännössä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.1: Työkalujen vertailu ja kategorointi</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkalun tehtävän<br />
-perusteella. Osaat verrata niiden etuja, haittoja, kustannuksia ja rajoituksia.</p>
+<p>Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkalun tehtävän perusteella. Tämä laajentaa näkemystäsi siitä, mitä kaikkea tekoälyllä voi tehdä — ja mitä riskejä siihen liittyy.</p>
 <h3>Ohjeet</h3>
-<p>Valitse <strong>kaksi seuraavista kategorioista</strong> (kuva, musiikki, video tai koodi) ja täytä<br />
-vertailutaulukko:</p>
-<table>
-<thead>
-<tr>
-<th>Kategoria</th>
-<th>Työkalu</th>
-<th>Hinta (€/kk)</th>
-<th>Paras­puoli</th>
-<th>Heikoin puoli</th>
-<th>Paras käyttö­tapaus</th>
-<th>Koulutus­data-ongelma?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kuva</td>
-<td>DALL-E</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Kuva</td>
-<td>Midjourney</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Lähdet:</strong><br />
-- Kunkin palvelun virallinen verkkosivusto (hinta-info)<br />
-- Oppituntimateriaali<br />
-- Omat kokeilut (vapaaehtoinen, mutta suositeltava)</p>
-<p><strong>Pituus:</strong> Täytetty taulukko (kunkin työkalun 1–2 rivissä per sarake).</p>
-<h3>Odotettu tuotos</h3>
-<ul>
-<li>Täydellinen vertailutaulukko valitsemissasi kategorioissa (vähintään 3 työkalutyyppiä)</li>
-<li>Jokainen sarake täytetty 1–3 sanalla tai lauseella</li>
-<li>Oma johtopäätös (1–2 lausetta): "Valitsisin [työkalu] koska..."</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.2: Käytännön kokeilu ja tuotoksen luominen</h2></div><div class="task-card-body">
+<p>Valitse kaksi kategoriaa (kuva, musiikki, video tai koodi) ja täytä vertailutaulukko, jossa jokaiselle työkalulle kirjaat hinnan, parhaan puolen, heikoimman puolen, parhaan käyttötapauksen ja mahdolliset koulutusdataongelmat. Kirjoita oma johtopäätös: "Valitsisin [työkalu] koska..."</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.2: Käytännön kokeilu ja tuotoksen luominen</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Voit käyttää vähintään kahta erikoistunutta tekoälytyökaluista ja tuottaa todellisen<br />
-tuotoksen. Analysoit, mitä tekemistä oli saada hyvä tulos ja mitkä promptit/tekniikkat<br />
-toimivat.</p>
+<p>Käyttää vähintään kahta erikoistunutta tekoälytyökalua ja tuottaa todellinen tuotos. Tämä kokemus auttaa sinua rakennuspalassa arvioimaan tekoälyn tuotosten laatua ja rajoituksia.</p>
 <h3>Ohjeet</h3>
-<p>Valitse <strong>yksi seuraavista projekteista:</strong></p>
-<p><strong>A) Kuvaprojekti:</strong> Luo 3–4 kuvaa käyttämällä vähintään kahta eri kuvageneraattoria<br />
-(DALL-E, Midjourney, Stable Diffusion tms.). Teema: "Tulevaisuuden kaupungin keskusta<br />
-vuonna 2050". Dokumentoi:<br />
-- Käyttämäsi promptit (tarkkaan)<br />
-- Mikä työkalu tuotti parhaimman tuloksen (ja miksi?)<br />
-- Kuinka monta iteraatiota tarvittiin?<br />
-- Mitä muuttaisit seuraavalla kerralla?</p>
-<p><strong>B) Musiikkiprojekti:</strong> Luo 2–3 musiikin fragmenttia (30 sekuntia – 2 minuuttia) käyttämällä<br />
-Sunoa ja/tai Udiota. Teema: "Yrityksesi podcast-intron musiikki". Dokumentoi:<br />
-- Genre ja tunnelma, jonka pyysit<br />
-- Kumpi palvelu tuotti paremman tuloksen?<br />
-- Kaupalliset näkökohdat: voitko käyttää sitä ilman pelkoa?<br />
-- Mitä inhimillisen säveltäjän työ olisi tarjonnut, mitä AI:n biisi ei?</p>
-<p><strong>C) Videoprojekti:</strong> Luo 1–2 lyhyttä videota (&lt;15 sekuntia) Runwayllä tai Pikalla.<br />
-Teema: "Luonnonsuojelun kampanja" (esim. liikkuva kasvifragmentti, eläimiin tai<br />
-vesistöihin liittyvä). Dokumentoi:<br />
-- Käyttämäsi tekstikuvaus<br />
-- Videoiden laadun ja johdonmukaisuuden haasteet<br />
-- Millä tavoin ammattilaistuotanto eroaa?</p>
-<p><strong>D) Koodausavustaja-kokeilu:</strong> Kokeile koodausavustajaa pienellä tehtävällä, vaikka sinulla ei olisi aiempaa ohjelmointikokemus. Käytä ChatGPT Code Interpreteriä tai Claude Codea. Esimerkiksi: "Kirjoita Python-ohjelma, joka kysyy minulta nimen ja ikää, ja sitten tulostaa iän vuotta 2050 mennessä." Dokumentoi:<br />
-- Miten annoit tehtävän tekoälylle (mitä kirjoitit)?<br />
-- Mitä tekoäly teki? Ymmärsitkö, mitä se tekee?<br />
-- Toimi se heti, vai piti sinun muuttaa jotain?<br />
-- Mikä oli helppointa, mikä vaikeinta?</p>
-<p><strong>Käytännössä:</strong></p>
-<ol>
-<li><strong>Valitse projekti</strong> (A–D)</li>
-<li><strong>Suorita harjoitus</strong> (luoda sisältöä, kokeilla, iteraatiot)</li>
-<li><strong>Kerää tuotokset</strong> (kuvat, videot, ääni tai kuvakaappaus koodin tuloksista)</li>
-<li><strong>Kirjoita raportti</strong> (1–2 sivua tai samantasoinen määrä):</li>
-<li>Mitä valitsit ja miksi?</li>
-<li>Mitä havaitsit — mikä toimi hyvin, mikä oli vaikeaa?</li>
-<li>Mitkä sanat/ohjeet toimivat parhaimmin?</li>
-<li>Oliko sinulla tekijänoikeuskysymyksiä mielessäsi?</li>
-</ol>
-<h3>Odotettu tuotos</h3>
-<ul>
-<li>Projektin todellinen tuotos (kuvat, video, musiikki tai koodi)</li>
-<li>Prosessin dokumentaatio (tekstinä tai kuvakaappaukset)</li>
-<li>Reflektioraportti 2–3 sivulla tai vastaavalla määrällä</li>
-<li>Johtopäätös: "Seuraavalla kerralla käyttäisin [työkalu] koska..."</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.3: Etiikka ja portfolio-pala</h2></div><div class="task-card-body">
+<p>Valitse yksi projekti: kuvaprojekti (3–4 kuvaa kahdella eri generaattorilla), musiikkiprojekti (2–3 fragmenttia Sunolla tai Udiolla), videoprojekti (1–2 lyhyttä videota Runwayllä tai Pikalla) tai koodausavustajakokeilu (pieni ohjelma ChatGPT:llä tai Claudella).</p>
+<p>Dokumentoi prosessi: mitä valitsit ja miksi, mitä havaitsit, mitkä ohjeet toimivat parhaiten ja oliko tekijänoikeuskysymyksiä mielessäsi. Kirjoita reflektioraportti (2–3 sivua).</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 16.3: Etiikka ja portfolio-pala</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Arvioit generatiivisen tekoälyn eettisiä kysymyksiä ja luot itsellesi portfolio-kohdan,<br />
-joka osoittaa kriittistä ajattelua <em>ja</em> tekijänoikeuksien kunnioitusta.</p>
+<p>Arvioida generatiivisen tekoälyn eettisiä kysymyksiä ja osoittaa kriittistä ajattelua. Tämä on suoraan hyödyllinen rakennuspalan kirjoittamisessa — vastuullinen käyttö vaatii eettistä ymmärrystä.</p>
 <h3>Ohjeet</h3>
-<p>Valitse <strong>yksi kahdesta lähestymistavasta:</strong></p>
-<p><strong>Lähestymistapa A: Eettinen analyysi</strong></p>
-<p>Kirjoita 3–4 sivuinen analyysi aiheesta, jonka valitset alla olevan luettelosta:</p>
-<ol>
-<li><strong>Tekijänoikeus ja AI:n koulutusdata:</strong> Kuka omistaa generoidun sisällön? Mitä oikeusriitoja<br />
-   käydään parhaillaan ja miksi?</li>
-<li><strong>Ammattilaiset ja tuotannonostoa:</strong> Onko oikein käyttää generatiivista tekoälyä<br />
-   muotoilijan tai säveltäjän korvaajaksi? Mitkä ovat sosiaaliset seuraukset?</li>
-<li><strong>"Made with AI" -merkinnät:</strong> Pitäisikö kaikkea generoitua sisältöä merkitä?<br />
-   Kuka hyötyy tai kärsii?</li>
-<li><strong>Tulevaisuus ja sopeutuminen:</strong> Miten ammattilaiset (muotoilija, säveltäjä, ohjelmoija)<br />
-   voisivat sopeutua näihin muutoksiin?</li>
-</ol>
-<p>Analyysi sisältää:<br />
-- <strong>Johdanto:</strong> Miksi tämä aihe on tärkeä nyt?<br />
-- <strong>Näkökulmat:</strong> Vähintään kaksi eri näkökulmaa (esim. tekijä vs. käyttäjä vs. yhteiskunta)<br />
-- <strong>Konkreetit esimerkit:</strong> Oikeat tapaukset tai työkalut (ei abstrakteja)<br />
-- <strong>Oma kantasi:</strong> Mitä ajattelet itse?<br />
-- <strong>Lähteet:</strong> Mitä artikkeleita tai lähteita käytit?</p>
-<p><strong>Lähestymistapa B: Portfolio-pala ja eettinen lausuma</strong></p>
-<p>Ota <strong>tehtävä 16.2:sta luomasi tuotos</strong> (kuva, musiikki, video tai koodi) ja kirjoita<br />
-siihen liittyvä:</p>
-<ol>
-<li><strong>Tuotoksen kuvaus</strong> (1 sivu):</li>
-<li>Mitä loit?</li>
-<li>Minkä AI-työkalun kanssa?</li>
-<li>
-<p>Mikä oli prosessi?</p>
-</li>
-<li>
-<p><strong>Eettinen lausuma</strong> (1–2 sivua):</p>
-</li>
-<li>Mistä datasta oppi malli? (mitä tiedät?)</li>
-<li>Voitko käyttää tuotosta kaupallisesti? Miltä se näyttää juridiksesti?</li>
-<li>Merkitsetkö sitä "Made with AI"?</li>
-<li>
-<p>Olisiko ollut parempi tehdä se ilman tekoälyä? Miksi / miksi ei?</p>
-</li>
-<li>
-<p><strong>Portfolio-esitys:</strong></p>
-</li>
-<li>Lataa tuotos + lausuma nettisivustolle tai GitHubiin, tai</li>
-<li>Tee PDF-dokumentti kuvilla ja tekstillä</li>
-<li>Merkitse selvästi: "Luotu [AI-työkalulla] [pvm]. Tekijä: [sinä]."</li>
-</ol>
-<h3>Odotettu tuotos</h3>
-<p><strong>Vaihtoehdosta A:</strong><br />
-- 3–4 sivuinen analyysi-dokumentti (PDF, Word tai markdown)<br />
-- Rakenne: Johdanto, näkökulmat (vähintään 2), esimerkit, johtopäätös<br />
-- Lähteet lueteltuna</p>
-<p><strong>Vaihtoehdosta B:</strong><br />
-- Tuotoksen kuva/video/ääni/koodi (todella olemassa oleva)<br />
-- 1 sivuinen tuotoksen kuvaus<br />
-- 1–2 sivuinen eettinen lausuma<br />
-- Portfolio-linkki tai PDF (näkyvästi merkitty "Made with AI")</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä arvioidaan?</h2></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Tehtävä</th>
-<th>Arviointiperuste</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>16.1</strong></td>
-<td>Vertailutaulukon täydellisyys, tarkkuus, oman johtopäätöksen perustelut</td>
-</tr>
-<tr>
-<td><strong>16.2</strong></td>
-<td>Tuotoksen olemassaolo, prosessidokumentaatio, reflektio</td>
-</tr>
-<tr>
-<td><strong>16.3</strong></td>
-<td>Kriittinen ajattelu, eettinen ilmapiiri, lähteiden käyttö / portfolio-esitys</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Vaatimukset läpäisyä varten:</strong><br />
-- Vähintään 2 tehtävää 16.1–16.3:sta suoritettuna</p></div></div>`,
+<p>Valitse jompikumpi lähestymistapa:</p>
+<p><strong>Lähestymistapa A — Eettinen analyysi:</strong> Kirjoita 3–4 sivun analyysi yhdestä aiheesta: tekijänoikeus ja AI:n koulutusdata, ammattilaiset ja tuotannonostoa, "Made with AI" -merkinnät tai tulevaisuus ja sopeutuminen. Sisällytä johdanto, vähintään kaksi eri näkökulmaa, konkreettisia esimerkkejä, oma kantasi ja lähteet.</p>
+<p><strong>Lähestymistapa B — Portfolio-pala ja eettinen lausuma:</strong> Ota tehtävässä 16.2 luomasi tuotos ja kirjoita siihen liittyvä tuotoksen kuvaus (1 sivu) ja eettinen lausuma (1–2 sivua), jossa käsittelet koulutusdatan alkuperää, kaupallisen käytön mahdollisuudet, "Made with AI" -merkinnän ja arvion siitä, olisiko tuotos ollut parempi ilman tekoälyä.</p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät — Oppitunti 16</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä: "Tekoäly omilla silmillä" — Live-demo ja vertailu</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -10674,31 +9990,30 @@ tulee ymmärtää <em>eri työkaluja ja niiden eroja</em>, <em>prosessia iteroim
 <p><strong>Feedback</strong> — Palaute. Käyttäjän mielipide siitä, kuinka hyvin botti toimi. Feedback auttaa parantamaan bottia.</p>
 <hr />
 <p>Muista, että nämä käsitteet eivät ole isoloituja — ne linkittyvät toisiinsa. Hyvä system prompt johtaa hyödylliseen bottiin, jota voidaan testata, dokumentoida ja parantaa iteraation kautta.</p>`,
-    stasks:`<h1>Tehtävät — Projektidokumenttibotti</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoite</h2></div><div class="task-card-body">
-<p>Tässä oppitunnissa oppit suunnittelemaan ja rakentamaan uuden Custom GPT -botin, joka auttaa käyttäjää kehittämään projektisuunnitelman. Botti kysyy oikeat kysymykset, kokoaa vastaukset ja luo valmiin suunnitelman. Opit seuraavat taidot:</p>
-<ul>
-<li>Miten määritellään botin tarkoitus ja rooli</li>
-<li>Miten kirjoitetaan system prompt, joka johtaa botin käyttäytymistä</li>
-<li>Miten testataan botti käytännöllisissä tilanteissa</li>
-<li>Miten iteroidaan ja parannetaan bottia testaustulosten perusteella</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.1: Suunnittele botin kysymyspatteristo (30 min)</h2></div><div class="task-card-body">
+    stasks:`<h1>Opiskelutehtävät: Bottiprojekti, osa 1 — suunnittele ja rakenna</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tekoälyjen käyttö -osion arvioitava projekti (osa 1/2)</h2></div><div class="task-card-body">
+<p>Oppitunneilla 17 ja 18 rakennat oman Custom-botin, testaat sen ja esittelet tuloksen. Tämä on Tekoälyjen käyttö -osion arvioitava projekti. Käytä kaikkia neljää botin rakennuspalaa, jotka olet kerännyt oppitunneilla 10, 12, 14 ja 16.</p>
+<p>Projekti jakautuu kahteen osaan: oppitunnilla 17 suunnittelet ja rakennat botin, oppitunnilla 18 viimeistelet, testaat ja esittelet sen.</p>
+<h3>Mitä rakennat?</h3>
+<p>Rakennat Custom-botin (Custom GPT tai vastaavan), joka toteuttaa käyttötapauksen, jonka valitsit rakennuspalassa 1. Botti käyttää system promptia ohjaamaan käyttäytymistään ja osaa kerätä kontekstia käyttäjältä vuorovaikutteisesti.</p>
+<h3>Miten käytät rakennuspaloja?</h3>
+<p><strong>Rakennuspala 1</strong> (oppitunti 10) kertoo, minkä alustan valitsit ja mitä ongelmaa ratkaiset. <strong>Rakennuspala 2</strong> (oppitunti 12) kertoo, miten botti kerää kontekstia käyttäjältä. <strong>Rakennuspala 3</strong> (oppitunti 14) kertoo, millainen botin persoonallisuus on — tarkoitus, rooli, ohjeet ja rajaukset. <strong>Rakennuspala 4</strong> (oppitunti 16) kertoo, miten varmistat vastuullisen käytön. Yhdessä nämä neljä rakennuspalaa muodostavat kattavan suunnitelman, jonka pohjalta kirjoitat system promptin ja rakennat botin.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.1: Suunnittele botin kysymyspatteristo (30 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Määritellä, mitä kysymyksiä botti esittää ja missä järjestyksessä. Tämä on botin "runko".</p>
+<p>Määritellä, mitä kysymyksiä botti esittää käyttäjälle ja missä järjestyksessä. Tämä perustuu rakennuspaljoihin 2 ja 3.</p>
 <h3>Ohjeet</h3>
 <ol>
 <li>
 <p>Lue uudelleen self-study-materiaali, erityisesti osio "Mitä hyvä projektisuunnitelma sisältää".</p>
 </li>
 <li>
-<p>Kirjoita muistiin <strong>botin tarkoitus ja rooli</strong>:</p>
+<p>Kirjoita muistiin <strong>botin tarkoitus ja rooli</strong> (pohjaudu rakennuspalaan 3):</p>
 </li>
 <li>Mikä botti on? (Esimerkiksi: "Projektin mentor, jolla on kokemus projektinjohdosta")</li>
 <li>
 <p>Mitä se tekee? (Esimerkiksi: "Auttaa käyttäjää luomaan projektisuunnitelman")</p>
 </li>
 <li>
-<p>Suunnittele <strong>vähintään 15 kysymystä</strong>, jotka botti esittää. Ne pitäisi ryhmitellä viiteen pääosaan:</p>
+<p>Suunnittele <strong>vähintään 15 kysymystä</strong>, joita botti esittää (perusta rakennuspalaan 2). Ne pitäisi ryhmitellä viiteen pääosaan:</p>
 </li>
 <li><strong>Mitä?</strong> (3–4 kysymystä): Projektin kuvaus, tuote, ominaisuudet</li>
 <li><strong>Kenelle?</strong> (3–4 kysymystä): Käyttäjät, asiakkaat, heidän profiili</li>
@@ -10708,13 +10023,13 @@ tulee ymmärtää <em>eri työkaluja ja niiden eroja</em>, <em>prosessia iteroim
 <p><strong>Miten?</strong> (3–4 kysymystä): Resurssit, tiimi, tekniikka, budjetti</p>
 </li>
 <li>
-<p>Kirjoita jokaiseen kysymykseen <strong>tarkennussuhde</strong>, jos käyttäjä vastaa epäselvästi. Esimerkiksi: "Jos käyttäjä sanoo 'nuoret', kysymykset: minkä ikäiset? Missä?"</p>
+<p>Kirjoita jokaiseen kysymykseen <strong>tarkennuskysymys</strong>, jos käyttäjä vastaa epäselvästi. Esimerkiksi: "Jos käyttäjä sanoo 'nuoret', tarkentavat kysymykset: minkä ikäiset? Missä?"</p>
 </li>
 </ol>
 <h3>Odotettu tuotos</h3>
 <p>Dokumentti, joka sisältää:<br />
-- Botin tarkoitus ja rooli (1 kappale)<br />
-- Viisi ryhmää kysymyksiä (vähintään 15 kysymystä yhteensä)<br />
+- Botin tarkoitus ja rooli (1 kappale, pohjaudu rakennuspalaan 3)<br />
+- Viisi ryhmää kysymyksiä (vähintään 15 kysymystä yhteensä, pohjaudu rakennuspalaan 2)<br />
 - Jokaisen ryhmän jälkeen merkittävät "syvennä"-kysymykset</p>
 <p><strong>Esimerkki:</strong></p>
 <pre><code>BOTTI: Projektin mentor
@@ -10732,21 +10047,20 @@ KENELLE-osio:
 ...
 </code></pre></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.2: Kirjoita system prompt ja luo botti (30 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Kirjoittaa system prompt (botin ohjeistus) ja luoda botti. Botti testattavaksi.</p>
+<p>Kirjoittaa system prompt (botin ohjeistus) ja luoda botti, joka yhdistää kaikki neljä rakennuspalaa.</p>
 <h3>Ohjeet</h3>
 <ol>
 <li>
-<p>Käytä tehtävä 17.1:stä saatua kysymyslistaa.</p>
+<p>Käytä tehtävä 17.1:stä saatua kysymyslistaa ja kaikki neljä rakennuspalaa.</p>
 </li>
 <li>
-<p>Kirjoita <strong>system prompt</strong>, joka sisältää:</p>
+<p>Kirjoita <strong>system prompt</strong> (300–500 sanaa), joka sisältää:</p>
 </li>
-<li><strong>Identiteetti</strong>: Kuka botti on? (rooli, kokemus)</li>
-<li><strong>Tarkoitus</strong>: Mitä botti tekee?</li>
-<li><strong>Ohjeet</strong>: Miten botti kysyy? (järjestys, miten kuuntele, miten koota vastaukset)</li>
-<li><strong>Rajaukset</strong>: Mitä botti ei saa tehdä?</li>
+<li><strong>Identiteetti</strong>: Kuka botti on? (rooli, kokemus) — perustuu rakennuspalaan 3</li>
+<li><strong>Tarkoitus</strong>: Mitä botti tekee? — perustuu rakennuspalaan 1</li>
+<li><strong>Ohjeet</strong>: Miten botti kysyy ja kerää kontekstia? (järjestys, miten kuuntele, miten koota vastaukset) — perustuu rakennuspalaan 2</li>
+<li><strong>Rajaukset ja vastuullinen käyttö</strong>: Mitä botti ei saa tehdä? — perustuu rakennuspalaan 4</li>
 </ol>
-<p>Prompt pitäisi olla <strong>300–500 sanaa</strong>.</p>
 <p><strong>Esimerkki alkua:</strong></p>
 <blockquote class="pause"><p>Olet Projektiseutu-niminen botti. Sinulla on 12 vuoden kokemus projektinjohdosta ja liiketoimintasuunnittelusta. Olet mentori, joka auttaa ihmisiä luomaan selkeitä, toteutettavia projektisuunnitelmia.</p>
 <p>Tarkoituksesi: Saada käyttäjä ajattelemaan projektin kaikki kriittiset puolet esittämällä järjestelmällisiä kysymyksiä ja kokoamalla vastaukset valmiiksi dokumentiksi.</p>
@@ -10766,7 +10080,7 @@ KENELLE-osio:
 </ol>
 <h3>Odotettu tuotos</h3>
 <ul>
-<li>System prompt (300–500 sanaa), selkeästi kirjoitettu</li>
+<li>System prompt (300–500 sanaa), selkeästi kirjoitettu — <strong>sisältää viitteet kaikkiin neljään rakennuspalaan</strong></li>
 <li>Kuvakaappaus tai linkki luottuun bottiin</li>
 <li>Lyhyt kommentti: "Miten botti käyttäytyy?" ja "Mitä haluat testata ensi tehtävässä?"</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.3: Testaa bottia kahdella projektiskenaarilla (30 min)</h2></div><div class="task-card-body">
@@ -10785,7 +10099,7 @@ KENELLE-osio:
 <li><strong>Vastauksesi</strong>: Mitä vastasit?</li>
 <li><strong>Lopputulos</strong>: Mitä botti koosti? (kopioi tai kuvakaappaa)</li>
 <li>
-<p><strong>Analyysi</strong>: Oliko suunnitelma järkevä? Olivatko kaikki asiat oikein? Mitä puuttui?</p>
+<p><strong>Analyysi</strong>: Oliko suunnitelma järkevä? Olivatko kaikki asiat oikein? Mitä puuttui? Liittyivätkö kysymykset rakennuspalaan 2?</p>
 </li>
 <li>
 <p><strong>Testaus 2</strong>: Toista sama prosessi toisella projektikuvauksella.</p>
@@ -10796,6 +10110,7 @@ KENELLE-osio:
 <li>Kysyikö botti samoja kysymyksiä vai sopeutuiko se projektiin?</li>
 <li>Oliko toinen suunnitelma parempi kuin toinen? Miksi?</li>
 <li>Mitä botti teki hyvin? Mitä voisi parantaa?</li>
+<li>Toteutuivatko rakennuspalat 1–4 odotetusti?</li>
 </ol>
 <h3>Projektiskenaarioiden esimerkkejä</h3>
 <p><strong>Projekti A:</strong> "Rakennan mobiilisovellusta, joka auttaa nuoria harjoittamaan matematiikkaa pelaamisen avulla. Idea on pelaavia oppimistehtäviä."</p>
@@ -10808,14 +10123,14 @@ KENELLE-osio:
 - Botin kysymykset (numeroidusta listasta)<br />
 - Käyttäjän vastaukset<br />
 - Lopullinen suunnitelma (botin tuottama)<br />
-- Analyysi: "Botti kysyi hyviä kysymyksiä, koska... Puuttui [asia], koska..."</p>
+- Analyysi: "Botti kysyi hyviä kysymyksiä, koska... Puuttui [asia], koska..." — viittaa rakennuspalaan 2</p>
 <p><strong>Testaus 2:</strong><br />
 - Sama rakenne kuin testaus 1</p>
 <p><strong>Yhteenveto:</strong><br />
 - Mitkä olivat suurimmat erot kahden testin välillä?<br />
 - Oliko botti tasapainoisesti kysyvä vai painottuiko se johonkin osaan?<br />
 - Mikä oli paras vastaus botilta? Mikä pahin?<br />
-- Seuraavassa iteraatiossa, mitä haluaisit muuttaa?</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.4: Iteraatio ja parantaminen (sisältyy 17.3:een)</h2></div><div class="task-card-body">
+- Seuraavassa iteraatiossa, mitä haluaisit muuttaa rakennuspalista 1–4?</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 17.4: Iteraatio ja parantaminen (sisältyy 17.3:een)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Testaustulosten perusteella parantaa bottia seuraavalle kerralle (oppitunti 18).</p>
 <h3>Ohjeet</h3>
@@ -10824,13 +10139,14 @@ KENELLE-osio:
 <p>Lue tehtävä 17.3:n analyysi uudelleen.</p>
 </li>
 <li>
-<p>Kirjoita <strong>muutosluettelo</strong>:</p>
+<p>Kirjoita <strong>muutosluettelo</strong> (3–5 kohtaa):</p>
 </li>
 <li>Mikä ei toiminut hyvin?</li>
 <li>Miksi se ei toiminut?</li>
 <li>Miten haluat korjata sen?</li>
+<li>Mitkä osat system promptista muuttuvat?</li>
 <li>
-<p>Mitkä osat system promptista muuttuvat?</p>
+<p>Mitkä rakennuspalat (1–4) vaativat tarkennusta?</p>
 </li>
 <li>
 <p><strong>Valinnainen</strong>: Jos sinulla on aikaa, tee uudet testit korjatulla promptilla ja dokumentoi parantuminen.</p>
@@ -10838,12 +10154,12 @@ KENELLE-osio:
 </ol>
 <h3>Esimerkki muutosluettelosta</h3>
 <pre><code>ONGELMA 1: Botti unohti ensimmäisen vastauksen
-SYY: System promptissa ei ole ohjeita muistiinpanoista
+SYY: System promptissa ei ole ohjeita muistiinpanoista (rakennuspala 2)
 KORJAUS: Lisää: &quot;Muista aina, mitä käyttäjä sanoi ensimmäisessä vastauksessa&quot;
 TULOS: Testataan seuraavalla kerralla
 
 ONGELMA 2: Botti ei kysynnyt budjettiin liittyen
-SYY: Kysymykset olivat liian vähäisiä &quot;Miten&quot;-osiossa
+SYY: Kysymykset olivat liian vähäisiä &quot;Miten&quot;-osiossa (rakennuspala 2)
 KORJAUS: Lisää &quot;Mikä on budjetti?&quot; ja &quot;Onko sinulla rahasummaa?&quot;
 TULOS: Seuraavalla testilla pitäisi kysyä paremmin
 </code></pre>
@@ -10851,7 +10167,8 @@ TULOS: Seuraavalla testilla pitäisi kysyä paremmin
 <p>Dokumentaatio 3–5 muutoksesta:<br />
 - Mikä ei toiminut<br />
 - Miten korjataan<br />
-- Mitä odotetaan seuraavaksi</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Palautusvaatimukset</h2></div><div class="task-card-body">
+- Mitä odotetaan seuraavaksi<br />
+- <strong>Viittaukset rakennuspaloihin 1–4</strong></p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Palautusvaatimukset</h2></div><div class="task-card-body">
 <p>Palauta kaikki 4 tehtävää yhtenäisenä dokumenttina tai kansiossa:</p>
 <ol>
 <li><strong>Tehtävä 17.1:</strong> Kysymyspatteristo (½–1 sivu)</li>
@@ -10868,6 +10185,7 @@ TULOS: Seuraavalla testilla pitäisi kysyä paremmin
 <ul>
 <li><strong>Kysymykset</strong>: Kirjoita ne käyttäjäystävällisesti. Kysy selkeästi, mitä tarkoitat. Älä käytä jargonia.</li>
 <li><strong>System prompt</strong>: Ole yksityiskohtainen. "Kysy oikeat kysymykset" on liian epämääräinen. "Kysy ensin mitä projektista, sitten kenelle, sitten miksi" on selvä.</li>
+<li><strong>Rakennuspalat</strong>: Varmista, että kaikki neljä rakennuspalaa (oppitunnit 10, 12, 14, 16) näkyvät system promptissa ja testauksessa.</li>
 <li><strong>Testaus</strong>: Käytä kahta täysin erilaista projektia. Ei riitä, että testaat samantapaista ideaa kahdesti.</li>
 <li><strong>Dokumentaatio</strong>: Näytä, mitä botti sanoi. Kopioi sen vastaukset. Opettaja haluaa nähdä, mitä tapahtui.</li>
 <li><strong>Rehellisyys</strong>: Jos botti epäonnistui, se on OK. Dokumentoi epäonnistuminen. Yritä ymmärtää miksi.</li>
@@ -11340,16 +10658,15 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 - Tekoälyä koskevia artikkeleja: Mitä tarvitsee tietää<br />
 - AI Safety -organisaatioiden oppimismateriaalit</p>
 <p>Muista: näiden käsitteiden opiskelu ei lopu täällä. Seuraavassa osiossa, Agentit-osiossa, tutustut syvemmin agenteihin, ja jokainen näistä käsitteistä tulee uudelleen esille. Koko ura tekoälytyössä on jatkuvaa oppimista.</p>`,
-    stasks:`<h1>Arviointitehtävä — Projektidokumenttibotti</h1>
-<p><strong>blockType:</strong> assessment</p><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoite</h2></div><div class="task-card-body">
-<p>Tässä osiossa viimeistelet ja testat projektidokumenttibottisi, valmistelet sen esittelyä varten, arvioit vertaisillasi olevat botit rakentavasti ja pohdit omaa oppimistasi koko osiosta.</p>
-<p>Arviointitehtävä koostuu neljästä osasta, jotka toteutetaan samalla oppitunnilla. Yhteensä noin 90 minuuttia.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 18.1: Viimeistele botti — testaa rajaukset ja reunatapaukset (20 min)</h2></div><div class="task-card-body">
+    stasks:`<h1>Opiskelutehtävät: Bottiprojekti, osa 2 — testaa ja esittele</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tekoälyjen käyttö -osion arvioitava projekti (osa 2/2)</h2></div><div class="task-card-body">
+<p>Tämä on Tekoälyjen käyttö -osion arvioitavan projektin toinen osa. Oppitunnilla 17 suunnittelit ja rakensit botin — nyt viimeistelet, testaat reunatapaukset ja esittelet tuloksen. Muista käyttää kaikkia neljää rakennuspalaa (oppitunnit 10, 12, 14 ja 16) työssäsi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 18.1: Viimeistele botti — testaa rajaukset ja reunatapaukset (20 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Varmistaa, että botti toimii johdonmukaisesti erilaisissa tilanteissa ja että sen rajaukset ovat selkeät.</p>
 <h3>Ohjeet</h3>
 <ol>
 <li>
-<p>Avaa bottiasi ja lue sen system prompt uudelleen. Kirjoita muistiin, mitä rajoituksia sillä on — mihin aiheisiin se vastaa ja mihin ei?</p>
+<p>Avaa bottiasi ja lue sen system prompt uudelleen. Kirjoita muistiin, mitä rajoituksia sillä on — mihin aiheisiin se vastaa ja mihin ei? (Rakennuspala 4 kertoo vastuullisesta käytöstä.)</p>
 </li>
 <li>
 <p><strong>Testaa positiivisia tapauksia</strong> (3–4 kpl):</p>
@@ -11365,37 +10682,39 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 <li>Kysy botilta asiasta, joka ei liity projekteihin (esim. "Kerro vitsi" tai "Opeta minua ruoanlaittoon")</li>
 <li>Esitä sekava mutta epäselvä kysymys</li>
 <li>
-<p>Dokumentoi, kieltäytyikö botti asianmukaisesti vai yrittikö se vastata</p>
+<p>Dokumentoi, kieltäytyikö botti asianmukaisesti vai yrittikö se vastata. Testaa, noudattiko se rakennuspalan 4 rajauksia.</p>
 </li>
 <li>
 <p><strong>Paranna system promptia</strong> tarvittaessa:</p>
 </li>
 <li>Jos botti epäonnistui joissain testeissä, muokkaa system promptia ja testaa uudelleen</li>
+<li>Dokumentoi muutokset: mikä meni pieleen ja miten korjasit</li>
 <li>
-<p>Dokumentoi muutokset: mikä meni pieleen ja miten korjasit</p>
+<p>Päivitä viittaukset rakennuspalaan 4 (vastuullinen käyttö)</p>
 </li>
 <li>
 <p><strong>Dokumentoi tulokset</strong> pieneen taulukkoon:<br />
 <code>Testi: [kuvaus]
    Odotus: [mitä haluat tapahtua]
    Tulos: [mitä tapahtui]
-   Status: ✓ ONNISTUI / ✗ EPÄONNISTUI</code></p>
+   Status: ✓ ONNISTUI / ✗ EPÄONNISTUI
+   Rakennuspala: [1, 2, 3 vai 4]</code></p>
 </li>
 </ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 18.2: Valmistele esittely — kirjoita kuvaus ja käsikirjoitus (20 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Kirjoittaa lyhyt, vakuuttava kuvaus botista ja valmistella sen esittelyä varten.</p>
+<p>Kirjoittaa lyhyt, vakuuttava kuvaus botista ja valmistella sen esittelyä varten. Varmista, että esittelyssä näkyvät kaikki neljä rakennuspalaa.</p>
 <h3>Ohjeet</h3>
 <ol>
 <li><strong>Kirjoita botin kuvaus</strong> (3–4 virkettä):</li>
-<li>Mitä botti tekee?</li>
+<li>Mitä botti tekee? (Rakennuspala 1)</li>
 <li>Kenelle se on hyödyllinen?</li>
 <li>Miksi se on parempi kuin muut tavat dokumentoida projekteja?</li>
 </ol>
-<p><em>Esimerkki:</em> "Projektidokumenttibotti on Custom GPT, joka kyselee sinulta projektista ja luo siitä automaattisesti strukturoidun suunnitelman. Perinteisesti projektien dokumentointi on käsityötä — botti automatisoii prosessia, säästää aikaa ja varmistaa, että mitään oleellista ei unohdu."</p>
+<p><em>Esimerkki:</em> "Projektidokumenttibotti on Custom GPT, joka kyselee sinulta projektista (rakennuspala 2), omaa roolinsa mentorina (rakennuspala 3) ja luo siitä automaattisesti strukturoidun suunnitelman turvallisesti (rakennuspala 4). Perinteisesti projektien dokumentointi on käsityötä — botti automatisoii prosessia, säästää aikaa ja varmistaa, että mitään oleellista ei unohdu."</p>
 <ol>
 <li><strong>Suunnittele esittelyn käsikirjoitus</strong>:</li>
 <li>Valitse yksi realistinen projektiskenaario (esim. "Verkkosivuston rakentaminen pienelle kaupalle")</li>
-<li>Mitkä ovat botin neljä tai viisi ensimmäistä kysymystä projektista?</li>
+<li>Mitkä ovat botin neljä tai viisi ensimmäistä kysymystä projektista? (Perusta rakennuspalaan 2)</li>
 <li>Kirjoita lyhyet vastaukset, joita käytät livedemoissa</li>
 <li>
 <p>Lisää muistiinpanot: missä kohdassa haluat pysäyttää videon, näyttää dokumenttia jne.</p>
@@ -11413,20 +10732,21 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 </li>
 <li>Tallenna käsikirjoitus tekstidokumenttiin</li>
 <li>Kirjoita: "Esittely kestää noin X minuuttia. Botin vastauksiin kuluu Y sekuntia."</li>
+<li>Viittaa rakennuspalain 1–4 siinä, missä ne näkyvät esittelyssä</li>
 </ol></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Tehtävä 18.3: Esittele botti ryhmälle — livedemo + vertaisarviointi (30 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Esitellä botti muille opiskelijoille ja vastaanottaa sekä antaa rakentavaa palautetta.</p>
 <h3>Ohjeet</h3>
 <p>Tämä tehtävä on luokkahuoneessa tai virtuaalissa. Kaikki opiskelijat esittelevät bottinsa peräkkäin.</p>
 <p><strong>Esittely (3–4 min per opiskelijalle):</strong><br />
-- Kerro ensin lyhyesti, mitä botti tekee (käytä 18.2:n kuvausta)<br />
+- Kerro ensin lyhyesti, mitä botti tekee (käytä 18.2:n kuvausta — sisältää rakennuspalat 1–4)<br />
 - Suorita livedemo: avaa botti, esitä kysymyksiä, näytä, miten se generoi dokumenttia<br />
 - Anna muille hetki lukea lopullista dokumenttia</p>
 <p><strong>Vertaisarviointi (2 min):</strong><br />
-- Kun toinen opiskelijä esittelee, kirjoita muistiinpanot:<br />
+- Kun toinen opiskelijaa esittelee, kirjoita muistiinpanot:<br />
   - Mikä oli hyvää?<br />
   - Mikä voisi olla paremmin?<br />
-  - Mikä oli yllättävää tai mielenkiintoisaa?</p>
+  - Mikä oli yllättävää tai mielenkiintoista?</p>
 <ul>
 <li>Kun on sinun vuorosi vastaanottaa palautetta, kuuntele muiden kommentit</li>
 <li>Kirjoita alas kaikki muiden palautteet ja ehdotukset</li>
@@ -11445,57 +10765,61 @@ Kehitettävää:
 
 Yleinen kommentti:
 [1–2 virkettä]
+
+Rakennuspalat (1–4):
+- Näkyivätkö kaikki neljä rakennuspalaa esittelyssä?
 </code></pre></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 18.4: Kirjoita reflektio — mitä opit, mitä tekisit toisin (20 min)</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Pohtia omaa oppimisprosessiasi ja osoittaa ymmärrystä siitä, miten botti saisi kehittyä agentiksi.</p>
+<p>Pohtia omaa oppimisprosessiasi ja osoittaa ymmärrystä siitä, miten botti saisi kehittyä agentiksi. Arvioida myös, kuinka hyvin integroit neljä rakennuspalaa.</p>
 <h3>Ohjeet</h3>
 <p>Kirjoita lyhyt reflektio (300–400 sanaa) seuraavista aiheista:</p>
 <ol>
 <li>
-<p><strong>Oppiminen:</strong> Mitä opit rakentamalla bottiasi? Mitkä asiat olivat vaikeita? Mitkä tulivat helposti?</p>
+<p><strong>Oppiminen:</strong> Mitä opit rakentamalla bottiasi? Mitkä asiat olivat vaikeita? Mitkä tulivat helposti? Miten rakennuspalat (10, 12, 14, 16) auttoivat prosessissa?</p>
 </li>
 <li>
-<p><strong>Iterointi:</strong> Mistä ongelmista törmäsit testauksessa? Kuinka korjasit ne? Entä jos sinulla olisi ollut enemmän aikaa — mitä tekisit toisin?</p>
+<p><strong>Iterointi:</strong> Mistä ongelmista törmäsit testauksessa? Kuinka korjasit ne? Entä jos sinulla olisi ollut enemmän aikaa — mitä tekisit toisin? Muuttaisitko rakennuspaloja?</p>
 </li>
 <li>
-<p><strong>Esittely:</strong> Kuinka livedemo meni? Mitä sait muilta palautetta? Oletko samaa mieltä palautteen kanssa?</p>
+<p><strong>Esittely:</strong> Kuinka livedemo meni? Mitä sait muilta palautetta? Oletko samaa mieltä palautteen kanssa? Näytyikö esittelyssä kaikki neljä rakennuspalaa?</p>
 </li>
 <li>
 <p><strong>Silta agenteihin:</strong> Nyt botti vain kuuntelee sinua. Mitä agentti tekisi toisin? Mitä uusia ominaisuuksia se voisi saada? (Esim. agentti saattaisi automaattisesti lähettää dokumentin sähköpostiin tai tallentaa sen pilveen.)</p>
 </li>
 </ol>
 <h3>Odotettu tuotos</h3>
-<p>Tekstitiedosto, joka on noin 300–400 sanaa. Kirjoita omilla sanoillasi, älä jäljitele tehtävän kuvailua. Opettaja haluaa kuulla sinua, ei tehtävänasettelua.</p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikriteerit (koko oppitunnit 17 ja 18, yhteensä 20 pistettä)</h2></div><div class="task-card-body">
-<p>Koko "Projektidokumenttibotti" -arviointitehtävä kattaa sekä L17:n rakentamisen että L18:n viimeistelyt ja esittelyn. Arvioidaan seuraavilla kriteereillä:</p>
+<p>Tekstitiedosto, joka on noin 300–400 sanaa. Kirjoita omilla sanoillasi, älä jäljitele tehtävän kuvailua. Opettaja haluaa kuulla sinua, ei tehtävänasettelua. <strong>Viittaa rakennuspalain 1–4 omassa tekstissäsi.</strong></p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikriteerit (koko oppitunnit 17 ja 18, yhteensä 20 pistettä)</h2></div><div class="task-card-body">
+<p>Koko "Bottiprojekti" -arviointitehtävä kattaa sekä L17:n rakentamisen että L18:n viimeistelyt ja esittelyn. Arvioidaan seuraavilla kriteereillä:</p>
 <h3>1. Botin suunnittelu ja tarkoitus (4 pistettä)</h3>
-<p><strong>Erinomainen (4 p):</strong> Botin tarkoitus on kristallin kirkas. System prompt on selkeä ja johdattaa bottia johdonmukaisesti. Kysymykset ovat relevantteja ja rakentavat realistisen kuvan projektista. Botti tekee tarkalleen, mitä se on suunniteltu tekemään.</p>
-<p><strong>Hyvä (3 p):</strong> Tarkoitus on selkeä. System prompt toimii hyvin. Kysymykset ovat pääosin hyviä, vaikka yksi tai kaksi voisi olla tarkempi.</p>
-<p><strong>Tyydyttävä (2 p):</strong> Tarkoitus on enemmän tai vähemmän selkeä. System prompt on olemassa, mutta vaikea seurata. Kysymykset ovat ok, mutta satunnaisia.</p>
-<p><strong>Välttävä (1 p):</strong> Tarkoitus on epäselvä tai puutteellinen. Kysymykset ovat sekavia tai epärelevantit. Bottia ei ymmärrä tai se ei tee mitään järkevää.</p>
+<p><strong>Erinomainen (4 p):</strong> Botin tarkoitus on kristallin kirkas ja perustuu rakennuspalaan 1. System prompt on selkeä ja johdattaa bottia johdonmukaisesti. Kysymykset ovat relevantteja, rakentuu rakennuspalasta 2 ja rakentavat realistisen kuvan projektista. Botti tekee tarkalleen, mitä se on suunniteltu tekemään.</p>
+<p><strong>Hyvä (3 p):</strong> Tarkoitus on selkeä ja perustuu rakennuspalaan 1. System prompt toimii hyvin. Kysymykset ovat pääosin hyviä rakennuspalasta 2, vaikka yksi tai kaksi voisi olla tarkempi.</p>
+<p><strong>Tyydyttävä (2 p):</strong> Tarkoitus on enemmän tai vähemmän selkeä. System prompt on olemassa, mutta vaikea seurata. Kysymykset ovat ok, mutta satunnaisia. Rakennuspalat näkyvät vain osittain.</p>
+<p><strong>Välttävä (1 p):</strong> Tarkoitus on epäselvä tai puutteellinen. Kysymykset ovat sekavia tai epärelevantit. Bottia ei ymmärrä tai se ei tee mitään järkevää. Rakennuspalat eivät näy työssä.</p>
 <h3>2. System prompt ja ohjeet (4 pistettä)</h3>
-<p><strong>Erinomainen (4 p):</strong> System prompt on kirjoitettu hyvin, selkeä ja johdonmukainen. Botti ymmärtää roolinsa ja noudattaa ohjeita. Rajaukset ovat eksplisiitit.</p>
-<p><strong>Hyvä (3 p):</strong> System prompt on hyvä ja pääosin toimii. Pieni epäselvyys tai epäjohdonmukaisuus ei haittaa.</p>
-<p><strong>Tyydyttävä (2 p):</strong> System prompt on olemassa ja toimii yleensä, mutta voisi olla selkeämpi tai täydellisempi.</p>
-<p><strong>Välttävä (1 p):</strong> System prompt on epäselvä, puutteellinen tai johtaa bottia väärin. System promptta ei ole tai se ei toimi.</p>
+<p><strong>Erinomainen (4 p):</strong> System prompt on kirjoitettu hyvin, selkeä ja johdonmukainen. Sisältää kaikki neljä rakennuspalaa (1: tarkoitus, 2: kontekstin kerääminen, 3: rooli ja persoonallisuus, 4: rajaukset). Botti ymmärtää roolinsa ja noudattaa ohjeita.</p>
+<p><strong>Hyvä (3 p):</strong> System prompt on hyvä ja pääosin toimii. Sisältää useimmat rakennuspalat. Pieni epäselvyys tai epäjohdonmukaisuus ei haittaa.</p>
+<p><strong>Tyydyttävä (2 p):</strong> System prompt on olemassa ja toimii yleensä. Sisältää joitain rakennuspaloja, mutta voisi olla täydellisempi. Selkeyttä voisi parantaa.</p>
+<p><strong>Välttävä (1 p):</strong> System prompt on epäselvä, puutteellinen tai johtaa bottia väärin. Rakennuspalat puuttuvat tai niistä on vain heikot viittaukset.</p>
 <h3>3. Testaus ja iterointi (4 pistettä)</h3>
-<p><strong>Erinomainen (4 p):</strong> Botti on testattu perusteellisesti positiivisissa, negatiivisissa ja reunatapauksissa. Kaikki testit on dokumentoitu selvästi. Virheet löydettiin ja korjattiin.</p>
-<p><strong>Hyvä (3 p):</strong> Botti on testattu hyvin. Useimmat testit dokumentoitu. Ongelmia korjattiin.</p>
-<p><strong>Tyydyttävä (2 p):</strong> Botti on testattu jonkin verran. Dokumentaatio on olemassa, mutta puutteellinen. Joitain ongelmia korjattiin.</p>
-<p><strong>Välttävä (1 p):</strong> Testaus on minimaalista. Dokumentaatio on heikko. Bottia ei ole testattu tai testaus ei ole dokumentoitu.</p>
+<p><strong>Erinomainen (4 p):</strong> Botti on testattu perusteellisesti positiivisissa, negatiivisissa ja reunatapauksissa. Testit dokumentoivat myös, miten rakennuspalat (erityisesti 2 ja 4) näkyvät testeissä. Kaikki testit on dokumentoitu selvästi. Virheet löydettiin ja korjattiin.</p>
+<p><strong>Hyvä (3 p):</strong> Botti on testattu hyvin. Useimmat testit dokumentoitu. Ongelmia korjattiin. Rakennuspalat näkyvät testeissä.</p>
+<p><strong>Tyydyttävä (2 p):</strong> Botti on testattu jonkin verran. Dokumentaatio on olemassa, mutta puutteellinen. Joitain ongelmia korjattiin. Rakennuspalat näkyvät osittain.</p>
+<p><strong>Välttävä (1 p):</strong> Testaus on minimaalista. Dokumentaatio on heikko. Bottia ei ole testattu tai testaus ei ole dokumentoitu. Rakennuspalat eivät näy testauksessa.</p>
 <h3>4. Esittely ja viestintä (4 pistettä)</h3>
-<p><strong>Erinomainen (4 p):</strong> Opiskelija selittää bottiaan selkeästi ja vakuuttavasti. Livedemo sujuu hyvin. Muille on selvää, mitä botti tekee ja miksi se on hyödyllinen.</p>
-<p><strong>Hyvä (3 p):</strong> Selitys on hyvä ja livedemo onnistuu pääosin. Ihmiset ymmärtävät botin tarkoituksen.</p>
-<p><strong>Tyydyttävä (2 p):</strong> Selitys on ok ja livedemo onnistuu. Joitain epäselvyyksiä.</p>
-<p><strong>Välttävä (1 p):</strong> Selitys on epäselvä tai livedemo ei onnistu hyvin. Selitys on sekava tai esittelyä ei ole.</p>
+<p><strong>Erinomainen (4 p):</strong> Opiskelija selittää bottiaan selkeästi ja vakuuttavasti. Esittelystä näkyvät kaikki neljä rakennuspalaa. Livedemo sujuu hyvin. Muille on selvää, mitä botti tekee ja miksi se on hyödyllinen.</p>
+<p><strong>Hyvä (3 p):</strong> Selitys on hyvä ja livedemo onnistuu pääosin. Useimmat rakennuspalat näkyvät. Ihmiset ymmärtävät botin tarkoituksen.</p>
+<p><strong>Tyydyttävä (2 p):</strong> Selitys on ok ja livedemo onnistuu. Joitain epäselvyyksiä. Jotkut rakennuspalat näkyvät.</p>
+<p><strong>Välttävä (1 p):</strong> Selitys on epäselvä tai livedemo ei onnistu hyvin. Selitys on sekava tai esittelyä ei ole. Rakennuspalat eivät näy esittelyssä.</p>
 <h3>5. Reflektio ja oppiminen (4 pistettä)</h3>
-<p><strong>Erinomainen (4 p):</strong> Reflektio on syvä ja pohtiva. Opiskelija osoittaa ymmärtävänsä omaa oppimistaan, iteroinnin merkitystä ja sitä, kuinka botti voisi kehittyä. Ehdotukset agentin ominaisuuksista ovat intelligentit.</p>
-<p><strong>Hyvä (3 p):</strong> Reflektio on hyvä. Opiskelija pohtii oppimistaan ja kehitysideoitaan. Ymmärrys näkyy.</p>
-<p><strong>Tyydyttävä (2 p):</strong> Reflektio on olemassa ja käsittelee aihetta, mutta voisi olla syvempi.</p>
-<p><strong>Välttävä (1 p):</strong> Reflektio on pinnallinen tai epäselvä. Reflektio puuttuu tai ei ole yhteydessä tehtävään.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Palautusvaatimukset</h2></div><div class="task-card-body">
+<p><strong>Erinomainen (4 p):</strong> Reflektio on syvä ja pohtiva. Opiskelija osoittaa ymmärtävänsä omaa oppimistaan, iteroinnin merkitystä ja sitä, kuinka botti voisi kehittyä. Viittaa selkeästi rakennuspalain 1–4 omassa pohdinnassaan. Ehdotukset agentin ominaisuuksista ovat intelligentit.</p>
+<p><strong>Hyvä (3 p):</strong> Reflektio on hyvä. Opiskelija pohtii oppimistaan ja kehitysideoitaan. Viittaa rakennuspalain joihin. Ymmärrys näkyy.</p>
+<p><strong>Tyydyttävä (2 p):</strong> Reflektio on olemassa ja käsittelee aihetta. Mainitsee rakennuspaloja, mutta voisi olla syvempi.</p>
+<p><strong>Välttävä (1 p):</strong> Reflektio on pinnallinen tai epäselvä. Viittaukset rakennuspalain puuttuvat. Reflektio puuttuu tai ei ole yhteydessä tehtävään.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Palautusvaatimukset</h2></div><div class="task-card-body">
 <p>Palauta seuraavat dokumentit:</p>
 <ol>
 <li><strong>Testausdokumentti</strong> (tehtävä 18.1)</li>
 <li>Taulukko testeistä (positiiviset, negatiiviset, reunatapaukset)</li>
+<li>Viittaukset rakennuspalain niihin (erityisesti rakennuspala 4)</li>
 <li>Muutokset system promptiin, jos tehtiin</li>
 <li>
 <p>~1 sivu</p>
@@ -11503,7 +10827,7 @@ Yleinen kommentti:
 <li>
 <p><strong>Esittelykäsikirjoitus</strong> (tehtävä 18.2)</p>
 </li>
-<li>Botin kuvaus (3–4 virkettä)</li>
+<li>Botin kuvaus (3–4 virkettä) — sisältää rakennuspalat 1–4</li>
 <li>Käsikirjoitus livedemolle (projektiskenaario ja muistiinpanot)</li>
 <li>Aikarajoitus</li>
 <li>
@@ -11513,6 +10837,7 @@ Yleinen kommentti:
 <p><strong>Vertaisarvioinnit</strong> (tehtävä 18.3)</p>
 </li>
 <li>Arviointikaavakkeet jokaisesta esitellystä botista (muista kuin omasta)</li>
+<li>Huomiot rakennuspalain näkyvyydestä</li>
 <li>
 <p>2–3 arviota</p>
 </li>
@@ -11520,11 +10845,13 @@ Yleinen kommentti:
 <p><strong>Reflektio</strong> (tehtävä 18.4)</p>
 </li>
 <li>300–400 sanainen teksti</li>
+<li>Viittaukset rakennuspalain 1–4</li>
 <li>Pohjautuu L17 ja L18 kokemuksiin</li>
 <li>~1 sivu</li>
 </ol>
 <p><strong>Yhteensä:</strong> ~4 sivua dokumentaatiota + esittely</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vihje</h2></div><div class="task-card-body">
 <ul>
+<li><strong>Rakennuspalat:</strong> Varmista, että kaikki neljä rakennuspalaa (oppitunnit 10, 12, 14, 16) näkyvät jokaisessa tehtävässä.</li>
 <li><strong>Testaus:</strong> Ole perusteellinen. Parempi testata liian paljon kuin liian vähän.</li>
 <li><strong>Esittely:</strong> Harjoittele ennen kuin näytät muille. Mitä paremmin harjoittelet, sitä vaikuttavammalta se näyttää.</li>
 <li><strong>Palaute muille:</strong> Ole ystävällinen, mutta rehellinen. Rakentava palaute auttaa kaikkia kehittymään.</li>
@@ -11538,7 +10865,7 @@ Yleinen kommentti:
 </ul>
 <p><strong>Yhteensä: ~90 minuuttia</strong></p>
 <p>Tehtävät 18.1–18.3 tehdään samalla oppitunnilla. Reflektio (18.4) voidaan tehdä heti perään tai pohdiskella vielä muutaman päivän ajan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä seuraavaksi?</h2></div><div class="task-card-body">
-<p>Kun olet valmis tämän kanssa, sinulla on toimiva, testattu ja esitetty projektidokumenttibotti. Seuraavassa osiossa (oppitunnit 19–27) botti muuttuu agentiksi. Agentti voi tehdä enemmän — käsitellä tiedostoja, ajaa komentoja, tehdä päätöksiä itsenäisesti. Pohja, jonka rakennat täällä, on agenttisi perusta.</p></div></div>`,
+<p>Kun olet valmis tämän kanssa, sinulla on toimiva, testattu ja esitetty bottiprojekti. Projektissa olet hyödyntänyt neljää rakennuspalaa (oppitunnit 10, 12, 14, 16) ja yhdistänyt ne yhdeksi kokonaiseksi ratkaisuksi. Seuraavassa osiossa (oppitunnit 19–27) botti muuttuu agentiksi. Agentti voi tehdä enemmän — käsitellä tiedostoja, ajaa komentoja, tehdä päätöksiä itsenäisesti. Pohja, jonka rakennat täällä, on agenttisi perusta.</p></div></div>`,
     tltasks:`<h1>Opettajan johtaminen — Oppitunti 18: Projektidokumenttibotti viimeistelee</h1>
 <p>Oppitunti 18 on Tekoälyjen käyttö -osion huipentuma. Opiskelijat viimeistelevät ja testaavat bottiaan, valmistelevat esittelyt ja arvioivat vertaisille. Tämä oppitunti on sekä tekemisen että yhteisöllisyyden oppitunti.</p><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin rakenne (90 min)</h2></div><div class="task-card-body">
 <table>

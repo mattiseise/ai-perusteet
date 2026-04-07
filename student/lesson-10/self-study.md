@@ -143,6 +143,10 @@ Dokumentoi havaintosi. Tämän tutkimuksen jälkeen sinulla on todellinen, omako
 
 ---
 
+## Kohti omaa projektia
+
+Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia — ja löysit niiden vahvuudet ja heikkoudet. Tehtävissä valitsit alustan ja käyttötapauksen omalle botillesi (**Botin rakennuspala 1**). Tämä valinta on perusta kaikelle, mitä rakennat seuraavilla tunneilla. Kun tiedät, missä alustassa bottisi elää ja ketä se palvelee, voit seuraavaksi suunnitella, miten annat sille oikean kontekstin — eli miten ohjeistat sen ymmärtämään käyttäjän tilanteen.
+
 ## Yhteenveto
 
 Kolmesta suuresta kielimallista jokainen on rakennettu erilaiseen tarpeeseen. ChatGPT on monipuolisin ja sen ekosysteemi on laajin. Claude on turvallisin, tarkin ja parhaimmillaan pitkien dokumenttien ja monimutkaisen koodin kanssa. Copilot on yritysmaailman integraatiotyökalu, joka tuo tekoälyn suoraan Office-sovelluksiin.

@@ -132,6 +132,10 @@ Monet opiskelijat sekoittavat "roolin antamisen botille" ja "persoonallisuuden l
 
 Hyvä botti on aina ammattilaismainen. Persoonallisuus on makuasia.
 
+## Kohti omaa projektia
+
+Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet — ja miten järjestelmäprompti on botin sydän. Tehtävissä suunnittelit oman bottisi persoonallisuuden ja kirjoitit sille ensimmäisen järjestelmäpromptin (**Botin rakennuspala 3**). Tämä on iso askel: botillasi on nyt alusta, kontekstistrategia ja persoonallisuus. Seuraavaksi opit, miten varmistat, että botti toimii vastuullisesti — miten lisäät sille tietopohjan, rajaukset ja testauksen.
+
 ## Yhteenveto
 
 Hyvin suunniteltu oma botti ei ole vain nimetty ChatGPT — se on AI-järjestelmä, jonka luot selkeällä tarkoituksella, vakuuttavalla roolilla ja yksityiskohtaisilla ohjeilla. Järjestelmäprompti on botin sydän. Se sisältää identiteetin, tarkoituksen, ohjeet ja rajaukset. Esimerkkivuorovaikutukset auttavat sinua testaamaan, onko ohjeistus riittävä. Kun valmistelet omaa bottia, muista: ammattilaisuus ensin, persoonallisuus toiseksi. Seuraavaksi opit, miten lisäät botille tietokannan, jotta se voi vastata tarkasti ja ajankohtaisesti.

@@ -1,35 +1,30 @@
-# Opiskelutehtävät — Oppitunti 16
+# Opiskelutehtävät: Erikoistuneet tekoälytyökalut
+
+## Botin rakennuspala 4: Suunnittele vastuullinen käyttö
+
+Tämä on viimeinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+
+### Tehtävä
+
+Palaa rakennuspaloihin 1–3 (oppitunnit 10, 12 ja 14), joissa valitsit alustan, suunnittelit kontekstistrategian ja persoonallisuuden. Suunnittele nyt, miten bottisi käyttö on vastuullista. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat neljään kysymykseen: Mitä eettisiä kysymyksiä bottisi käyttöön liittyy (esim. tekijänoikeudet, harhaanjohtaminen, yksityisyys)? Miten merkitset, että sisältö on tekoälyn tuottamaa? Mitkä ovat bottisi suurimmat riskit ja miten pienennät niitä (esim. hallusinaatiot, väärä tieto)? Miten varmistat, että bottisi noudattaa organisaation sääntöjä (esim. GDPR, tietosuoja)?
+
+### Miksi tämä on tärkeä
+
+Oppitunneilla 17–18 rakennat ja esittelet bottisi. Vastuullinen käyttö ei ole lisäominaisuus — se on osa botin suunnittelua. Ilman eettistä suunnitelmaa et osaa selittää esittelyssä, miksi bottisi on turvallinen käyttää. Yhdessä rakennuspalojen 1–3 kanssa sinulla on nyt kattava suunnitelma koko bottiprojektillesi.
+
+Alla olevat harjoitustehtävät auttavat sinua ymmärtämään erikoistuneiden tekoälytyökalujen mahdollisuuksia ja eettisiä kysymyksiä käytännössä.
+
+---
 
 ## Tehtävä 16.1: Työkalujen vertailu ja kategorointi
 
 ### Tavoite
 
-Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkalun tehtävän
-perusteella. Osaat verrata niiden etuja, haittoja, kustannuksia ja rajoituksia.
+Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkalun tehtävän perusteella. Tämä laajentaa näkemystäsi siitä, mitä kaikkea tekoälyllä voi tehdä — ja mitä riskejä siihen liittyy.
 
 ### Ohjeet
 
-Valitse **kaksi seuraavista kategorioista** (kuva, musiikki, video tai koodi) ja täytä
-vertailutaulukko:
-
-| Kategoria | Työkalu | Hinta (€/kk) | Paras­puoli | Heikoin puoli | Paras käyttö­tapaus | Koulutus­data-ongelma? |
-|-----------|---------|--------------|-----------|---------------|-------------------|----------------------|
-| Kuva      | DALL-E  |              |           |               |                   |                      |
-| Kuva      | Midjourney |          |           |               |                   |                      |
-| ...       | ...     |              |           |               |                   |                      |
-
-**Lähdet:**
-- Kunkin palvelun virallinen verkkosivusto (hinta-info)
-- Oppituntimateriaali
-- Omat kokeilut (vapaaehtoinen, mutta suositeltava)
-
-**Pituus:** Täytetty taulukko (kunkin työkalun 1–2 rivissä per sarake).
-
-### Odotettu tuotos
-
-- Täydellinen vertailutaulukko valitsemissasi kategorioissa (vähintään 3 työkalutyyppiä)
-- Jokainen sarake täytetty 1–3 sanalla tai lauseella
-- Oma johtopäätös (1–2 lausetta): "Valitsisin [työkalu] koska..."
+Valitse kaksi kategoriaa (kuva, musiikki, video tai koodi) ja täytä vertailutaulukko, jossa jokaiselle työkalulle kirjaat hinnan, parhaan puolen, heikoimman puolen, parhaan käyttötapauksen ja mahdolliset koulutusdataongelmat. Kirjoita oma johtopäätös: "Valitsisin [työkalu] koska..."
 
 ---
 
@@ -37,59 +32,13 @@ vertailutaulukko:
 
 ### Tavoite
 
-Voit käyttää vähintään kahta erikoistunutta tekoälytyökaluista ja tuottaa todellisen
-tuotoksen. Analysoit, mitä tekemistä oli saada hyvä tulos ja mitkä promptit/tekniikkat
-toimivat.
+Käyttää vähintään kahta erikoistunutta tekoälytyökalua ja tuottaa todellinen tuotos. Tämä kokemus auttaa sinua rakennuspalassa arvioimaan tekoälyn tuotosten laatua ja rajoituksia.
 
 ### Ohjeet
 
-Valitse **yksi seuraavista projekteista:**
+Valitse yksi projekti: kuvaprojekti (3–4 kuvaa kahdella eri generaattorilla), musiikkiprojekti (2–3 fragmenttia Sunolla tai Udiolla), videoprojekti (1–2 lyhyttä videota Runwayllä tai Pikalla) tai koodausavustajakokeilu (pieni ohjelma ChatGPT:llä tai Claudella).
 
-**A) Kuvaprojekti:** Luo 3–4 kuvaa käyttämällä vähintään kahta eri kuvageneraattoria
-(DALL-E, Midjourney, Stable Diffusion tms.). Teema: "Tulevaisuuden kaupungin keskusta
-vuonna 2050". Dokumentoi:
-- Käyttämäsi promptit (tarkkaan)
-- Mikä työkalu tuotti parhaimman tuloksen (ja miksi?)
-- Kuinka monta iteraatiota tarvittiin?
-- Mitä muuttaisit seuraavalla kerralla?
-
-**B) Musiikkiprojekti:** Luo 2–3 musiikin fragmenttia (30 sekuntia – 2 minuuttia) käyttämällä
-Sunoa ja/tai Udiota. Teema: "Yrityksesi podcast-intron musiikki". Dokumentoi:
-- Genre ja tunnelma, jonka pyysit
-- Kumpi palvelu tuotti paremman tuloksen?
-- Kaupalliset näkökohdat: voitko käyttää sitä ilman pelkoa?
-- Mitä inhimillisen säveltäjän työ olisi tarjonnut, mitä AI:n biisi ei?
-
-**C) Videoprojekti:** Luo 1–2 lyhyttä videota (<15 sekuntia) Runwayllä tai Pikalla.
-Teema: "Luonnonsuojelun kampanja" (esim. liikkuva kasvifragmentti, eläimiin tai
-vesistöihin liittyvä). Dokumentoi:
-- Käyttämäsi tekstikuvaus
-- Videoiden laadun ja johdonmukaisuuden haasteet
-- Millä tavoin ammattilaistuotanto eroaa?
-
-**D) Koodausavustaja-kokeilu:** Kokeile koodausavustajaa pienellä tehtävällä, vaikka sinulla ei olisi aiempaa ohjelmointikokemus. Käytä ChatGPT Code Interpreteriä tai Claude Codea. Esimerkiksi: "Kirjoita Python-ohjelma, joka kysyy minulta nimen ja ikää, ja sitten tulostaa iän vuotta 2050 mennessä." Dokumentoi:
-- Miten annoit tehtävän tekoälylle (mitä kirjoitit)?
-- Mitä tekoäly teki? Ymmärsitkö, mitä se tekee?
-- Toimi se heti, vai piti sinun muuttaa jotain?
-- Mikä oli helppointa, mikä vaikeinta?
-
-**Käytännössä:**
-
-1. **Valitse projekti** (A–D)
-2. **Suorita harjoitus** (luoda sisältöä, kokeilla, iteraatiot)
-3. **Kerää tuotokset** (kuvat, videot, ääni tai kuvakaappaus koodin tuloksista)
-4. **Kirjoita raportti** (1–2 sivua tai samantasoinen määrä):
-   - Mitä valitsit ja miksi?
-   - Mitä havaitsit — mikä toimi hyvin, mikä oli vaikeaa?
-   - Mitkä sanat/ohjeet toimivat parhaimmin?
-   - Oliko sinulla tekijänoikeuskysymyksiä mielessäsi?
-
-### Odotettu tuotos
-
-- Projektin todellinen tuotos (kuvat, video, musiikki tai koodi)
-- Prosessin dokumentaatio (tekstinä tai kuvakaappaukset)
-- Reflektioraportti 2–3 sivulla tai vastaavalla määrällä
-- Johtopäätös: "Seuraavalla kerralla käyttäisin [työkalu] koska..."
+Dokumentoi prosessi: mitä valitsit ja miksi, mitä havaitsit, mitkä ohjeet toimivat parhaiten ja oliko tekijänoikeuskysymyksiä mielessäsi. Kirjoita reflektioraportti (2–3 sivua).
 
 ---
 
@@ -97,76 +46,12 @@ vesistöihin liittyvä). Dokumentoi:
 
 ### Tavoite
 
-Arvioit generatiivisen tekoälyn eettisiä kysymyksiä ja luot itsellesi portfolio-kohdan,
-joka osoittaa kriittistä ajattelua *ja* tekijänoikeuksien kunnioitusta.
+Arvioida generatiivisen tekoälyn eettisiä kysymyksiä ja osoittaa kriittistä ajattelua. Tämä on suoraan hyödyllinen rakennuspalan kirjoittamisessa — vastuullinen käyttö vaatii eettistä ymmärrystä.
 
 ### Ohjeet
 
-Valitse **yksi kahdesta lähestymistavasta:**
+Valitse jompikumpi lähestymistapa:
 
-**Lähestymistapa A: Eettinen analyysi**
+**Lähestymistapa A — Eettinen analyysi:** Kirjoita 3–4 sivun analyysi yhdestä aiheesta: tekijänoikeus ja AI:n koulutusdata, ammattilaiset ja tuotannonostoa, "Made with AI" -merkinnät tai tulevaisuus ja sopeutuminen. Sisällytä johdanto, vähintään kaksi eri näkökulmaa, konkreettisia esimerkkejä, oma kantasi ja lähteet.
 
-Kirjoita 3–4 sivuinen analyysi aiheesta, jonka valitset alla olevan luettelosta:
-
-1. **Tekijänoikeus ja AI:n koulutusdata:** Kuka omistaa generoidun sisällön? Mitä oikeusriitoja
-   käydään parhaillaan ja miksi?
-2. **Ammattilaiset ja tuotannonostoa:** Onko oikein käyttää generatiivista tekoälyä
-   muotoilijan tai säveltäjän korvaajaksi? Mitkä ovat sosiaaliset seuraukset?
-3. **"Made with AI" -merkinnät:** Pitäisikö kaikkea generoitua sisältöä merkitä?
-   Kuka hyötyy tai kärsii?
-4. **Tulevaisuus ja sopeutuminen:** Miten ammattilaiset (muotoilija, säveltäjä, ohjelmoija)
-   voisivat sopeutua näihin muutoksiin?
-
-Analyysi sisältää:
-- **Johdanto:** Miksi tämä aihe on tärkeä nyt?
-- **Näkökulmat:** Vähintään kaksi eri näkökulmaa (esim. tekijä vs. käyttäjä vs. yhteiskunta)
-- **Konkreetit esimerkit:** Oikeat tapaukset tai työkalut (ei abstrakteja)
-- **Oma kantasi:** Mitä ajattelet itse?
-- **Lähteet:** Mitä artikkeleita tai lähteita käytit?
-
-**Lähestymistapa B: Portfolio-pala ja eettinen lausuma**
-
-Ota **tehtävä 16.2:sta luomasi tuotos** (kuva, musiikki, video tai koodi) ja kirjoita
-siihen liittyvä:
-
-1. **Tuotoksen kuvaus** (1 sivu):
-   - Mitä loit?
-   - Minkä AI-työkalun kanssa?
-   - Mikä oli prosessi?
-
-2. **Eettinen lausuma** (1–2 sivua):
-   - Mistä datasta oppi malli? (mitä tiedät?)
-   - Voitko käyttää tuotosta kaupallisesti? Miltä se näyttää juridiksesti?
-   - Merkitsetkö sitä "Made with AI"?
-   - Olisiko ollut parempi tehdä se ilman tekoälyä? Miksi / miksi ei?
-
-3. **Portfolio-esitys:**
-   - Lataa tuotos + lausuma nettisivustolle tai GitHubiin, tai
-   - Tee PDF-dokumentti kuvilla ja tekstillä
-   - Merkitse selvästi: "Luotu [AI-työkalulla] [pvm]. Tekijä: [sinä]."
-
-### Odotettu tuotos
-
-**Vaihtoehdosta A:**
-- 3–4 sivuinen analyysi-dokumentti (PDF, Word tai markdown)
-- Rakenne: Johdanto, näkökulmat (vähintään 2), esimerkit, johtopäätös
-- Lähteet lueteltuna
-
-**Vaihtoehdosta B:**
-- Tuotoksen kuva/video/ääni/koodi (todella olemassa oleva)
-- 1 sivuinen tuotoksen kuvaus
-- 1–2 sivuinen eettinen lausuma
-- Portfolio-linkki tai PDF (näkyvästi merkitty "Made with AI")
-
----
-
-## Mitä arvioidaan?
-
-| Tehtävä | Arviointiperuste |
-|---------|-----------------|
-| **16.1** | Vertailutaulukon täydellisyys, tarkkuus, oman johtopäätöksen perustelut |
-| **16.2** | Tuotoksen olemassaolo, prosessidokumentaatio, reflektio |
-| **16.3** | Kriittinen ajattelu, eettinen ilmapiiri, lähteiden käyttö / portfolio-esitys |
-
-**Vaatimukset läpäisyä varten:**
-- Vähintään 2 tehtävää 16.1–16.3:sta suoritettuna
+**Lähestymistapa B — Portfolio-pala ja eettinen lausuma:** Ota tehtävässä 16.2 luomasi tuotos ja kirjoita siihen liittyvä tuotoksen kuvaus (1 sivu) ja eettinen lausuma (1–2 sivua), jossa käsittelet koulutusdatan alkuperää, kaupallisen käytön mahdollisuudet, "Made with AI" -merkinnän ja arvion siitä, olisiko tuotos ollut parempi ilman tekoälyä.
