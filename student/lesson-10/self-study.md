@@ -145,7 +145,7 @@ Dokumentoi havaintosi. Tämän tutkimuksen jälkeen sinulla on todellinen, omako
 
 ## Kohti omaa projektia
 
-Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia — ja löysit niiden vahvuudet ja heikkoudet. Tehtävissä valitsit alustan ja käyttötapauksen omalle botillesi (**Botin rakennuspala 1**). Tämä valinta on perusta kaikelle, mitä rakennat seuraavilla tunneilla. Kun tiedät, missä alustassa bottisi elää ja ketä se palvelee, voit seuraavaksi suunnitella, miten annat sille oikean kontekstin — eli miten ohjeistat sen ymmärtämään käyttäjän tilanteen.
+Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia ja löysit niiden vahvuudet ja heikkoudet. Tehtävissä valitsit alustan ja käyttötapauksen omalle botillesi (**Botin rakennuspala 1**). Tämä valinta on perusta kaikelle, mitä rakennat seuraavilla tunneilla. Kun tiedät, missä alustassa bottisi elää ja ketä se palvelee, voit seuraavaksi suunnitella, miten annat sille oikean kontekstin – eli miten ohjeistat sen ymmärtämään käyttäjän tilanteen.
 
 ## Yhteenveto
 

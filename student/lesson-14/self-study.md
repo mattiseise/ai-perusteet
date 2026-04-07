@@ -134,7 +134,7 @@ Hyvä botti on aina ammattilaismainen. Persoonallisuus on makuasia.
 
 ## Kohti omaa projektia
 
-Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet — ja miten järjestelmäprompti on botin sydän. Tehtävissä suunnittelit oman bottisi persoonallisuuden ja kirjoitit sille ensimmäisen järjestelmäpromptin (**Botin rakennuspala 3**). Tämä on iso askel: botillasi on nyt alusta, kontekstistrategia ja persoonallisuus. Seuraavaksi opit, miten varmistat, että botti toimii vastuullisesti — miten lisäät sille tietopohjan, rajaukset ja testauksen.
+Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet – ja miten järjestelmäprompti on botin sydän. Tehtävissä suunnittelit oman bottisi persoonallisuuden ja kirjoitit sille ensimmäisen järjestelmäpromptin (**Botin rakennuspala 3**). Tämä on iso askel: botillasi on nyt alusta, kontekstistrategia ja persoonallisuus. Seuraavaksi opit, miten varmistat, että botti toimii vastuullisesti – miten lisäät sille tietopohjan, rajaukset ja testauksen.
 
 ## Yhteenveto
 

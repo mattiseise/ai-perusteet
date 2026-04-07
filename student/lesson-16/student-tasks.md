@@ -24,7 +24,7 @@ Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkal
 
 ### Ohjeet
 
-Valitse kaksi kategoriaa (kuva, musiikki, video tai koodi) ja täytä vertailutaulukko, jossa jokaiselle työkalulle kirjaat hinnan, parhaan puolen, heikoimman puolen, parhaan käyttötapauksen ja mahdolliset koulutusdataongelmat. Kirjoita oma johtopäätös: "Valitsisin [työkalu] koska..."
+Valitse kaksi kategoriaa (kuva, musiikki, video tai koodi) ja täytä vertailutaulukko, jossa jokaiselle työkalulle kirjaat hinnan, parhaan puolen, heikoimman puolen, parhaan käyttötapauksen ja mahdolliset koulutusdataongelmat. Kirjoita oma johtopäätös: "Valitsisin [työkalu], koska..."
 
 ---
 

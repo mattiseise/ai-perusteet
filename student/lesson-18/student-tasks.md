@@ -2,7 +2,7 @@
 
 ## Tekoälyjen käyttö -osion arvioitava projekti (osa 2/2)
 
-Tämä on Tekoälyjen käyttö -osion arvioitavan projektin toinen osa. Oppitunnilla 17 suunnittelit ja rakensit botin — nyt viimeistelet, testaat reunatapaukset ja esittelet tuloksen. Muista käyttää kaikkia neljää rakennuspalaa (oppitunnit 10, 12, 14 ja 16) työssäsi.
+Tämä on Tekoälyjen käyttö -osion arvioitavan projektin toinen osa. Oppitunnilla 17 suunnittelit ja rakensit botin — nyt viimeistelet sen, testaat reunatapaukset ja esittelet tuloksen. Muista käyttää kaikkia neljää rakennuspalaa (oppitunnit 10, 12, 14 ja 16) työssäsi.
 
 ---
 
@@ -14,13 +14,13 @@ Varmistaa, että botti toimii johdonmukaisesti erilaisissa tilanteissa ja että 
 
 ### Ohjeet
 
-1. Avaa bottiasi ja lue sen system prompt uudelleen. Kirjoita muistiin, mitä rajoituksia sillä on — mihin aiheisiin se vastaa ja mihin ei? (Rakennuspala 4 kertoo vastuullisesta käytöstä.)
+1. Avaa bottiasi ja lue sen system prompt uudelleen. Kirjoita muistiin, mitä rajoituksia sillä on — mihin aiheisiin se vastaa ja mihin ei? (Rakennuspala 4 kertoo vastuullisesta käytöstä ja eettisyydestä.)
 
-2. **Testaa positiivisia tapauksia** (3–4 kpl):
+2. **Testaa positiivisia tapauksia** (3–4 kappaletta):
    - Esitä botille projektista kolme tai neljä järkevää kysymystä, kuten todelliset käyttäjät tekisivät.
-   - Dokumentoi, vastasiko botti oikein ja onko vastaus hyödyllinen.
+   - Dokumentoi, vastasiko botti oikein ja oliko vastaus hyödyllinen.
 
-3. **Testaa negatiivisia ja reunatapauksia** (3–4 kpl):
+3. **Testaa negatiivisia ja reunatapauksia** (3–4 kappaletta):
    - Kirjoita tyhjä viesti tai yksittäinen sana ("no", "kyllä")
    - Kysy botilta asiasta, joka ei liity projekteihin (esim. "Kerro vitsi" tai "Opeta minua ruoanlaittoon")
    - Esitä sekava mutta epäselvä kysymys
@@ -55,9 +55,9 @@ Kirjoittaa lyhyt, vakuuttava kuvaus botista ja valmistella sen esittelyä varten
    - Kenelle se on hyödyllinen?
    - Miksi se on parempi kuin muut tavat dokumentoida projekteja?
 
-   *Esimerkki:* "Projektidokumenttibotti on Custom GPT, joka kyselee sinulta projektista (rakennuspala 2), omaa roolinsa mentorina (rakennuspala 3) ja luo siitä automaattisesti strukturoidun suunnitelman turvallisesti (rakennuspala 4). Perinteisesti projektien dokumentointi on käsityötä — botti automatisoii prosessia, säästää aikaa ja varmistaa, että mitään oleellista ei unohdu."
+   *Esimerkki:* "Projektidokumenttibotti on custom GPT, joka kyselee sinulta projektista (rakennuspala 2), omaa roolinsa mentorina (rakennuspala 3) ja luo siitä automaattisesti strukturoidun suunnitelman turvallisesti (rakennuspala 4). Perinteisesti projektien dokumentointi on käsityötä — botti automatisoi prosessia, säästää aikaa ja varmistaa, että mitään oleellista ei unohdu."
 
-2. **Suunnittele esittelyn käsikirjoitus**:
+2. **Suunnittele esittelykäsikirjoitus**:
    - Valitse yksi realistinen projektiskenaario (esim. "Verkkosivuston rakentaminen pienelle kaupalle")
    - Mitkä ovat botin neljä tai viisi ensimmäistä kysymystä projektista? (Perusta rakennuspalaan 2)
    - Kirjoita lyhyet vastaukset, joita käytät livedemoissa
@@ -68,7 +68,7 @@ Kirjoittaa lyhyt, vakuuttava kuvaus botista ja valmistella sen esittelyä varten
    - Mittaa aika — kuinka kauan menee? (Tavoite: ~5–7 minuuttia koko demosta)
    - Merkitse kohdat, joissa botti vastaa nopeasti ja kohdat, joissa se hidastuu
 
-4. **Dokumentoi** käsikirjoitus ja aikarajoitukset:
+4. **Dokumentoi** esittelykäsikirjoitus ja aikarajoitukset:
    - Tallenna käsikirjoitus tekstidokumenttiin
    - Kirjoita: "Esittely kestää noin X minuuttia. Botin vastauksiin kuluu Y sekuntia."
    - Viittaa rakennuspalain 1–4 siinä, missä ne näkyvät esittelyssä
@@ -83,15 +83,15 @@ Esitellä botti muille opiskelijoille ja vastaanottaa sekä antaa rakentavaa pal
 
 ### Ohjeet
 
-Tämä tehtävä on luokkahuoneessa tai virtuaalissa. Kaikki opiskelijat esittelevät bottinsa peräkkäin.
+Tämä tehtävä on luokkahuoneessa tai virtuaalisesti. Kaikki opiskelijat esittelevät bottinsa peräkkäin.
 
 **Esittely (3–4 min per opiskelijalle):**
-- Kerro ensin lyhyesti, mitä botti tekee (käytä 18.2:n kuvausta — sisältää rakennuspalat 1–4)
-- Suorita livedemo: avaa botti, esitä kysymyksiä, näytä, miten se generoi dokumenttia
+- Kerro ensin lyhyesti, mitä botti tekee (käytä tehtävän 18.2 kuvausta — sisältää rakennuspalat 1–4)
+- Suorita livedemo: avaa botti, esitä kysymyksiä, näytä, kuinka se generoi dokumenttia
 - Anna muille hetki lukea lopullista dokumenttia
 
 **Vertaisarviointi (2 min):**
-- Kun toinen opiskelijaa esittelee, kirjoita muistiinpanot:
+- Kun toinen opiskelija esittelee, kirjoita muistiinpanot:
   - Mikä oli hyvää?
   - Mikä voisi olla paremmin?
   - Mikä oli yllättävää tai mielenkiintoista?
@@ -141,7 +141,7 @@ Kirjoita lyhyt reflektio (300–400 sanaa) seuraavista aiheista:
 
 ### Odotettu tuotos
 
-Tekstitiedosto, joka on noin 300–400 sanaa. Kirjoita omilla sanoillasi, älä jäljitele tehtävän kuvailua. Opettaja haluaa kuulla sinua, ei tehtävänasettelua. **Viittaa rakennuspalain 1–4 omassa tekstissäsi.**
+Tekstitiedosto, joka on noin 300–400 sanaa. Kirjoita omilla sanoillasi, älä jäljitele tehtävän kuvausta. Opettaja haluaa kuulla sinua, ei tehtävänasettelua. **Viittaa rakennuspalain 1–4 omassa tekstissäsi.**
 
 ---
 
@@ -193,7 +193,7 @@ Koko "Bottiprojekti" -arviointitehtävä kattaa sekä L17:n rakentamisen että L
 
 **Erinomainen (4 p):** Reflektio on syvä ja pohtiva. Opiskelija osoittaa ymmärtävänsä omaa oppimistaan, iteroinnin merkitystä ja sitä, kuinka botti voisi kehittyä. Viittaa selkeästi rakennuspalain 1–4 omassa pohdinnassaan. Ehdotukset agentin ominaisuuksista ovat intelligentit.
 
-**Hyvä (3 p):** Reflektio on hyvä. Opiskelija pohtii oppimistaan ja kehitysideoitaan. Viittaa rakennuspalain joihin. Ymmärrys näkyy.
+**Hyvä (3 p):** Reflektio on hyvä. Opiskelija pohtii oppimistaan ja kehitysideoitaan. Viittaa rakennuspalain joihin. Ymmärrys näkyy selvästi.
 
 **Tyydyttävä (2 p):** Reflektio on olemassa ja käsittelee aihetta. Mainitsee rakennuspaloja, mutta voisi olla syvempi.
 
@@ -220,7 +220,7 @@ Palauta seuraavat dokumentit:
 3. **Vertaisarvioinnit** (tehtävä 18.3)
    - Arviointikaavakkeet jokaisesta esitellystä botista (muista kuin omasta)
    - Huomiot rakennuspalain näkyvyydestä
-   - 2–3 arviota
+   - 2–3 arvioita
 
 4. **Reflektio** (tehtävä 18.4)
    - 300–400 sanainen teksti
@@ -238,7 +238,7 @@ Palauta seuraavat dokumentit:
 - **Testaus:** Ole perusteellinen. Parempi testata liian paljon kuin liian vähän.
 - **Esittely:** Harjoittele ennen kuin näytät muille. Mitä paremmin harjoittelet, sitä vaikuttavammalta se näyttää.
 - **Palaute muille:** Ole ystävällinen, mutta rehellinen. Rakentava palaute auttaa kaikkia kehittymään.
-- **Reflektio:** Kirjoita rehellisesti. On OK sanoa, että jokin oli vaikeaa tai että tekisit toisin. Opettaja haluaa nähdä ajattelua, ei perfektioita.
+- **Reflektio:** Kirjoita rehellisesti. On OK sanoa, että jokin oli vaikeaa tai että tekisit toisin. Opettaja haluaa nähdä ajattelua, ei perfektioita tai virheettömiä vastauksia.
 
 ---
 
@@ -251,10 +251,10 @@ Palauta seuraavat dokumentit:
 
 **Yhteensä: ~90 minuuttia**
 
-Tehtävät 18.1–18.3 tehdään samalla oppitunnilla. Reflektio (18.4) voidaan tehdä heti perään tai pohdiskella vielä muutaman päivän ajan.
+Tehtävät 18.1–18.3 tehdään samalla oppitunnilla. Reflektio (18.4) voidaan tehdä heti perään tai pohdiskella vielä muutaman päivän jälkeen.
 
 ---
 
 ## Mitä seuraavaksi?
 
-Kun olet valmis tämän kanssa, sinulla on toimiva, testattu ja esitetty bottiprojekti. Projektissa olet hyödyntänyt neljää rakennuspalaa (oppitunnit 10, 12, 14, 16) ja yhdistänyt ne yhdeksi kokonaiseksi ratkaisuksi. Seuraavassa osiossa (oppitunnit 19–27) botti muuttuu agentiksi. Agentti voi tehdä enemmän — käsitellä tiedostoja, ajaa komentoja, tehdä päätöksiä itsenäisesti. Pohja, jonka rakennat täällä, on agenttisi perusta.
+Kun olet valmis tämän kanssa, sinulla on toimiva, testattu ja esitetty bottiprojekti. Projektissa olet hyödyntänyt neljää rakennuspalaa (oppitunnit 10, 12, 14, 16) ja yhdistänyt ne yhdeksi kokonaiseksi ratkaisuksi. Seuraavassa osiossa (oppitunnit 19–27) botti muuttuu agentiksi. Agentti voi tehdä enemmän — käsitellä tiedostoja, ajaa komentoja ja tehdä päätöksiä itsenäisesti. Pohja, jonka rakennat täällä, on agenttisi perusta.

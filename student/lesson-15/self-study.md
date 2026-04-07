@@ -125,7 +125,7 @@ Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oi
 
 ## Kohti omaa projektia
 
-Tällä tunnilla opit tietopohjan, rajausten ja testauksen merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta. Mieti omaa bottiasi: mitä tietoa se tarvitsee toimiakseen hyvin? Mistä aiheista sen pitäisi kieltäytyä? Miten testaat, että se todella tekee, mitä lupaat? Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT — se on testattu, rajattu ja tarkoituksenmukainen työkalu.
+Tällä tunnilla opit tietopohjan, rajausten ja testauksen merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta. Mieti omaa bottiasi: mitä tietoa se tarvitsee toimiakseen hyvin? Mistä aiheista sen pitäisi kieltäytyä? Miten testaat, että se todella tekee, mitä lupaa? Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT – se on testattu, rajattu ja tarkoituksenmukainen työkalu.
 
 ## Yhteenveto
 

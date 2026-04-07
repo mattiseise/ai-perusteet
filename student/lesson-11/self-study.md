@@ -197,7 +197,7 @@ ChatGPT ja Claude ovat kalliimpia, mutta hyviä, jos organisaatiolla on budjetti
 
 ## Kohti omaa projektia
 
-Tällä tunnilla tutustuit laajempaan tekoälykenttään — Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitsit juuri tietyn alustan omalle botillesi. Kun rakennat bottia myöhemmillä tunneilla, muista: valinta ei ole vain "mikä on paras", vaan "mikä sopii parhaiten tähän käyttötilanteeseen". Se on ammattilaisen ajattelutapa.
+Tällä tunnilla tutustuit laajempaan tekoälykenttään – Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu eri tarpeeseen, ja jokaisella on omat vahvuudet hinnan, yksityisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitsit juuri tietyn alustan omalle botillesi. Kun rakennat bottia myöhemmillä tunneilla, muista: valinta ei ole vain "mikä on paras", vaan "mikä sopii parhaiten tähän käyttötilanteeseen". Se on ammattilaisen ajattelutapa.
 
 ## Osa 7: Yhteenveto
 

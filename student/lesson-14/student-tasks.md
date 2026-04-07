@@ -2,11 +2,11 @@
 
 ## Botin rakennuspala 3: Suunnittele botin persoonallisuus
 
-Tämä on kolmas neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+Tämä on kolmas neljässä botin rakennuspalassa, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
 
 ### Tehtävä
 
-Palaa rakennuspaloihin 1 ja 2 (oppitunnit 10 ja 12), joissa valitsit alustan ja suunnittelit kontekstistrategian. Suunnittele nyt bottisi persoonallisuus. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat neljään kysymykseen: Mikä on bottisi tarkoitus — mitä konkreettista ongelmaa se ratkaisee? Mikä on bottisi rooli — kuka se on ja millainen asiantuntija? Mitkä ovat bottisi 3–4 tärkeintä ohjetta — miten se käyttäytyy? Mitkä ovat bottisi rajaukset — mitä se ei saa tehdä?
+Palaa rakennuspaloihin 1 ja 2 (oppitunnit 10 ja 12), joissa valitsit alustan ja suunnittelit kontekstistrategian. Suunnittele nyt bottisi persoonallisuus. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat neljään kysymykseen: Mikä on bottisi tarkoitus — mitä konkreettista ongelmaa se ratkaisee? Mikä on bottisi rooli — kuka se on ja millainen asiantuntija? Mitkä ovat bottisi kolme neljä tärkeintä ohjetta — miten se käyttäytyy? Mitkä ovat bottisi rajaukset — mitä se ei saa tehdä?
 
 ### Miksi tämä on tärkeä
 
@@ -19,13 +19,13 @@ Alla olevat harjoitustehtävät auttavat sinua suunnittelemaan persoonallisuuden
 ## Tehtävä 14.1: Määrittele oma botti — tarkoitus, rooli ja ohjeet
 
 ### Tavoite
-Suunnitella oman botin perusrakennuspalikat — tarkoitus, rooli ja ohjeet. Tämä on suoraan käytettävissä rakennuspalan kirjoittamisessa.
+Suunnitella oman botin perusrakennuspalikat — tarkoitus, rooli ja ohjeet. Tämä on suoraan käytettävää rakennuspalan kirjoittamisessa.
 
 ### Ohjeet
 
 Valitse botin tyyppi (esim. Python-tutori-botti, IT-helpdesk-botti, asiakaspalvelubotti tai liiketoimintamentori) ja täytä suunnittelulomake:
 
-Tarkoitus: Mikä on selkeä, konkreettinen tarkoitus? Kirjoita niin, että voit mitata onnistumisen. Huono esimerkki: "Olla hyödyllinen." Hyvä esimerkki: "Auttaa opiskelijoita ymmärtämään Python-loopeita interaktiivisten esimerkkien kautta."
+Tarkoitus: Mikä on selkeä, konkreettinen tarkoitus? Kirjoita niin, että voit mitata onnistumisen. Huono esimerkki: "Olla hyödyllinen." Hyvä esimerkki: "Auttaa opiskelijoita ymmärtämään Python-silmukoita interaktiivisten esimerkkien kautta."
 
 Rooli: Kuka botti on? Mikä on sen asiantuntemus? Kirjoita 2–3 lausetta uskottavasta roolista.
 
@@ -38,7 +38,7 @@ Rajaukset: Mitä botti ei saa tehdä? Kirjoita vähintään kaksi rajausta.
 ## Tehtävä 14.2: Kirjoita järjestelmäprompti
 
 ### Tavoite
-Kirjoittaa yksityiskohtainen järjestelmäprompti, joka ohjaa botin käyttäytymistä. Tämä on system promptin ensimmäinen versio, jota jatkokehität oppitunneilla 17–18.
+Kirjoittaa yksityiskohtainen järjestelmäprompti, joka ohjaa botin käyttäytymistä. Tämä on system promptin ensimmäinen versio, jonka jatkokehität oppitunneilla 17–18.
 
 ### Ohjeet
 

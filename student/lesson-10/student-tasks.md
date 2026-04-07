@@ -25,11 +25,11 @@ Soveltaa jokaista kolmea kielimallityökalua samaan tehtävään ja analysoida n
 
 ### Ohjeet
 
-Valitse yksi tehtävätyyppi: kirjoittaminen ja luovuus (500–600 sanan blogiartikkeli), ohjelmointi ja tekniikka (Python-funktio dokumentaatioineen), analyysi ja tutkimus (5–10 sivuisen dokumentin yhteenveto) tai ideointi ja suunnittelu (startup-idean business plan).
+Valitse yksi tehtävätyyppi: kirjoittaminen ja luovuus (500–600 sanan blogiartikkeli), ohjelmointi ja tekniikka (Python-funktio dokumentaatioineen), analyysi ja tutkimus (5–10 sivuisen dokumentin yhteenveto) tai ideointi ja suunnittelu (startup-idean liiketoimintasuunnitelma).
 
 Anna täsmälleen sama tehtävä kaikille kolmelle työkalulle (ChatGPT, Claude, Copilot) ja dokumentoi vastaukset. Vertaa niitä seuraavien kriteerien perusteella: nopeus, pituus, selkeys, tekninen tarkkuus, luovuus, rakenne ja käytännöllisyys (arvioi kukin 1–5).
 
-Kirjoita 800–1000 sanan raportti, jossa käsittelet johdannon (mitä vertailit), vastausten yhteenvedon, vertailuanalyysin kohta kohdalta ja johtopäätökset (mikä työkalu on paras tälle tehtävätyypille ja miksi).
+Kirjoita 800–1000 sanan raportti, jossa käsittelet johdannon (mitä vertailit), vastausten yhteenvedon, vertailuanalyysin kohta kohdalta, ja johtopäätökset (mikä työkalu on paras tälle tehtävätyypille ja miksi).
 
 ---
 
@@ -40,7 +40,7 @@ Tunnistaa kunkin työkalun todella hyvät käyttötapaukset kokeilemalla niitä 
 
 ### Ohjeet
 
-Valitse kolme erilaista tehtävää — yksi kunkin työkalun vahvuudelle: ChatGPT:lle tehtävä joka hyödyntää web-hakua tai räätälöityä bottia, Claudelle tehtävä joka vaatii pitkän dokumentin analyysia ja yksityisyyttä, Copilotille tehtävä joka hyödyntää Office-integraatiota.
+Valitse kolme erilaista tehtävää — yksi kunkin työkalun vahvuudelle: ChatGPT:lle tehtävä, joka hyödyntää web-hakua tai räätälöityä bottia, Claudelle tehtävä, joka vaatii pitkän dokumentin analyysia ja yksityisyyttä, Copilotille tehtävä, joka hyödyntää Office-integraatiota.
 
 Suorita testit, dokumentoi tulokset ja täytä arviointimatriisi, jossa vertaat vahvuuksia, käyttötapauksia ja soveltuvuutta yritysympäristöön.
 
