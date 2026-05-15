@@ -1,93 +1,75 @@
-# Opiskelutehtävät
+# Todistusaineisto 1 — Miten kone oikeasti tuottaa tekstiä
 
-## Todistusaineisto 1: Miten kone oikeasti tuottaa tekstiä
+> 📌 **Tämä on ensimmäinen kolmesta todistusaineistosta**, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
-Tämä on ensimmäinen kolmesta todistusaineistosta, jotka keräät Teoria-osion aikana. Käytät näitä todistusaineistoja Teoria-osion arvioitavassa tehtävässä "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä" (oppitunti 9). Säilytä tämä huolellisesti.
+## Mitä teet?
 
-### Tehtävä
+Ajat kolme nopeaa kokeilua tekoälyllä, käytät tekoälyä apunasi havaintojen analysointiin ja kirjoitat lyhyen analyysin siitä, mitä koneen "kirjoittaminen" oikeasti on. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut selittämään, **miksi tekoäly voi olla varma ja silti väärässä**.
 
-Selitä omin sanoin (150–200 sanaa), miten kielimalli tuottaa tekstiä. Käytä apuna tämän oppitunnin käsitteitä: tokenit, parametrit, next-token prediction, lämpötila.
+## Vaiheet
 
-Kirjoita niin, että henkilö, joka ei ole koskaan käyttänyt tekoälyä, ymmärtäisi selityksesi. **Älä käytä tekoälyä tämän kirjoittamiseen** — tarkoituksena on, että sinä prosessoit oppimaasi.
+### Vaihe 1 — Seuraavan sanan arvaus
 
-Vastaa lisäksi yhteen kysymykseen: Jos kielimalli ei "ymmärrä" tekstiä, vaan ennustaa todennäköisyyksiä, mitä se tarkoittaa vastauksen luotettavuuden kannalta?
+Anna ChatGPT:lle tai Claudelle pätkä:
 
-### Miksi tämä on tärkeä
+> "Koodi on kirjoitettu Pythonissa. Seuraava askel on…"
 
-"Tuomaripöydän päätös" -tehtävässä sinun täytyy analysoida skenaario, jossa tekoälyn toimintaperiaatteet aiheuttavat käytännön ongelman. Tämä todistusaineisto on valmis pohja sille analyysille — kun kirjoitat lausuntoasi, voit viitata siihen suoraan ja osoittaa ymmärryksesi tekoälyn mekanismeista.
+Pyydä jatkamaan **vain yhdellä sanalla**. Toista sama kolme kertaa *uudessa keskustelussa*. Ota kuvakaappaukset tai kopioi vastaukset talteen.
 
-Alla olevat harjoitustehtävät auttavat sinua keräämään kokemuksia ja havaintoja, joita voit hyödyntää todistusaineiston kirjoittamisessa.
+### Vaihe 2 — Sama kysymys, eri vastaus
 
----
+Kysy malli kahdesti samaa asiaa uudessa keskustelussa:
 
-## Tehtävä 3.1: Oman kielimallin testaaminen — Next-Token Simulation
+> "Anna kolme nimeä uudelle kahvilalle Helsingin keskustassa."
 
-### Tavoite
-Ymmärtää käytännössä, miten next-token prediction toimii ja miksi malli tekee virheitä. Tämän tehtävän havainnot ovat hyödyllisiä todistusaineiston kirjoittamisessa — näet omin silmin, miten ennustaminen toimii.
+Vertaa vastauksia. Tallenna molemmat.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+### Vaihe 3 — Vakuuttava vai oikea?
 
-**Vaihe 1: Manuaalinen ennustus**
-Anna tekstinpätkä:
-"Koodi on kirjoitettu Pythonissa. Seuraava askel on..."
+Kysy mallilta yksi tarkka kysymys, jonka vastauksen voit verifioida. Esimerkkejä:
 
-Ryhmä ennustaa yksitellen, mikä sana tulee seuraavaksi. Kirjoita kaikki vastaukset ylös.
+- *"Kuka oli Suomen pääministeri vuonna 1987?"*
+- *"Mikä on Pythonin `random.choice()` -funktion paluuarvo, kun lista on tyhjä?"*
+- *"Kerro elokuvasta 'Sininen Vuori' (1987)."* (Tämä elokuva ei ole olemassa.)
 
-**Vaihe 2: Vertailu ChatGPT:hen**
-Kopioi sama teksti ChatGPT:hen. Anna kehotus: "Jatka vain seuraavalla sanalla."
+Tarkista vastaus virallisesta lähteestä. Tallenna sekä mallin vastaus että oikea vastaus.
 
-Dokumentoi ChatGPT:n vastaus.
+### Vaihe 4 — Käytä tekoälyä apuna analyysissä
 
-**Vaihe 3: Analyysi**
-Pohdi: Oliko ChatGPT:n vastaus jonkun teistä vastaus? Jos ei, miksi se valitsi toisen sanan? Mikä on todennäköisin, ja mikä on "oikea" vastaus?
+Avaa uusi keskustelu ja anna tekoälylle **roolin sekä havaintosi**. Esimerkkiprompti:
 
-### Odotettu tuotos
+```
+Toimit minulle sparrauskumppanina. Olen opiskelija ja teen havaintoja
+siitä, miten kielimalli tuottaa tekstiä. Tässä havaintoni:
 
-Dokumentti, jossa on ryhmän ennustukset, ChatGPT:n vastaus ja analyysi siitä, miksi seuraava sana on vaikea ennustaa.
+[liitä vaiheiden 1–3 tulokset tähän]
 
-**Jos teet tehtävän yksin:**
-Tee vaiheet 1–2. Anna oma ennustuksesi ja ChatGPT:n vastaus, ja pohdi sitten eroja.
+Auta minua jäsentämään, mitä nämä havainnot kertovat seuraavista
+käsitteistä: token, next-token prediction, epädeterminismi, lämpötila,
+hallusinaatio. Älä kirjoita lopullista vastausta puolestani — esitä
+kysymyksiä ja anna jäsennysehdotuksia, joiden pohjalta voin kirjoittaa
+oman analyysini.
+```
 
----
+Tämä ei ole oikotie — se on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjoituspalveluna.
 
-## Tehtävä 3.2: Hallusinaatiot — tunnista väärät tiedot
+### Vaihe 5 — Kirjoita analyysisi (tämä on todistusaineistosi)
 
-### Tavoite
-Nähdä konkreettisesti, miten kielimalli voi luoda vakuuttavan mutta väärän vastauksen. Tämä kokemus auttaa sinua todistusaineistossa selittämään, miksi tekoälyyn ei voi luottaa sokeasti.
+Kirjoita noin **300 sanaa omin sanoin**. Vastaa kolmeen kysymykseen:
 
-### Ohjeet (pareittain tai yksin)
+1. **Miten kone kirjoittaa?** Selitä, mitä havaitsit vaiheissa 1–2: miksi sama pyyntö tuottaa eri vastauksen, ja mitä tämä kertoo siitä, miten malli oikeasti toimii. Käytä käsitteitä *token*, *next-token prediction* ja *lämpötila / epädeterminismi*.
+2. **Mitä tarkoittaa, että malli "ennustaa, ei tiedä"?** Selitä vaiheen 3 perusteella: oliko vastaus oikein vai väärin, ja miltä se *kuulosti*. Mitä tämä kertoo luotettavuudesta?
+3. **Mihin tuomaripöydässä?** Yhdellä lauseella: missä tilanteessa joku voisi joutua ongelmiin juuri näistä syistä?
 
-Kysy ChatGPT:ltä tai vastaavalta mallilta kolme hyvin spesifiä kysymystä, joiden vastauksen voit tarkistaa. Esimerkiksi: "Kuka ohjasi elokuvan 'Suuri Mahtava'?" (ei ole olemassa), "Mikä on Suomen 8. suurin kaupunki vuonna 2026?" tai "Kuka on Teknillisen korkeakoulun rehtori vuonna 2026?"
+## Mitä palautat?
 
-Dokumentoi jokaisen vastauksen kohdalla: mitä ChatGPT vastasi, onko vastaus oikein vai väärin, ja jos väärin — miksi malli saattoi "uskotella" näin.
+**Et vielä mitään. Tarvitset tämän kuitenkin osan 1 arvoitavaa tehtävää varten.**
 
-### Odotettu tuotos
+Tästä pitäisi saada kuitenkin yksi tiedosto (Word, PDF tai Markdown), jossa on:
 
-Dokumentti, jossa on kolme kysymystä ja ChatGPT:n vastaukset, tarkistus oikeasta vastauksesta ja lyhyt analyysi (3–5 lausetta) siitä, miten ja miksi kielimalli tuottaa hallusinaatioita.
+- Kuvakaappaukset tai kopiot kokeiluista (vaiheet 1–3)
+- Analyysisi (vaihe 5, noin 300 sanaa)
 
-**Jos teet tehtävän yksin:**
-Tee tehtävä yhdellä kysymyksellä ja vastauksella. Analysoi se.
+> 💡 **Miksi tämä on tärkeää:** Tuomaripöydässä viittaat tähän todistusaineistoon suoraan, kun selität, *miksi* skenaariosi tekoäly tuotti väärän vastauksen. Et toista käsitteitä — sovellat niitä.
 
----
-
-## Tehtävä 3.3: Lämpötilan vaikutus — kokeile satunnaisuuden tasoa
-
-### Tavoite
-Ymmärtää, miten lämpötila vaikuttaa kielimallin luovuuteen ja johdonmukaisuuteen. Tämä auttaa todistusaineistossa selittämään, miksi tekoäly on epädeterministinen.
-
-### Ohjeet (pareittain tai yksin)
-
-Jos sinulla on pääsy malliin, jossa voit säätää lämpötilaa tai luovuustasoa:
-
-**Testi 1: Matala lämpötila (0.2)** — Anna kehotus: "Kirjoita lyhyt runo keväästä, 4 riviä." Toista sama kehotus kolme kertaa ja dokumentoi kaikki vastaukset.
-
-**Testi 2: Korkea lämpötila (0.9)** — Anna sama kehotus kolme kertaa ja dokumentoi vastaukset.
-
-**Analyysi:** Kumpi lämpötila tuotti samankaltaisia runoja? Kumpi tuotti erilaisia? Kumpi on parempi runon kirjoittamiseen ja miksi?
-
-### Odotettu tuotos
-
-Dokumentti, jossa on kolme runoa matalalla ja kolme korkealla lämpötilalla, vertailu tuloksista ja johtopäätös siitä, milloin käyttäisit mitäkin asetusta.
-
-**Jos sinulla ei ole pääsyä lämpötilasäätöön:**
-Tee tehtävä samoin, mutta dokumentoi miksi lämpötilan säätäminen voisi olla hyödyllistä.
+**1 / 3 todistusaineistoa kerätty**
