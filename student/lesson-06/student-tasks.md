@@ -1,218 +1,154 @@
-# Opiskelutehtävät
+# Opiskelutehtävät — Kuvat, ääni ja teksti
 
-## Tehtävä 6.1: Näyttö vai kuvaus — multimodaalisen kontekstin voima
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 6.1, joka osuu tunnin ydintaidon ytimeen. Jos olet IT-alalla tai kiinnostunut tietoturvasta, tee lisäksi syventävä tehtävä 6.2 — se on käytännön työelämän osaamista, jota ei missään muualla kurssilla käsitellä yhtä konkreettisesti.
 
-### Tavoite
-Ymmärtää käytännössä, kuinka kuvakaappaus ja muut multimodaaliset tietomuodot muuttavat tekoälyn kykyä auttaa IT-ongelmassa. Nähdä, missä multimodaalisuus auttaa eniten ja missä se saattaa olla turha.
+## Tehtävä 6.1 — Näyttö vai kuvaus? 🟢 SUOSITELTU
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Näet käytännössä, miten paljon kuvakaappaus muuttaa tekoälyn kykyä auttaa. Kokeilet samaa ongelmaa kahdessa muodossa — pelkällä sanakuvauksella ja multimodaalisesti — ja huomaat itse, milloin "näyttö" kannattaa.
 
-1. **Valitkaa IT-ongelma**, joka sisältää visuaalisen elementin. Esimerkiksi:
-   - Virheilmoitus näytöllä
-   - Verkon konfiguraationäyttö
-   - Tietokannan hallintaohjelman käyttöliittymävika
-   - Lokien tulostus päätteessä (näkyy väreillä ja muotoilulla)
-   - Sovelluksen kaatumisviesti
+### Valitse ongelmasi
 
-2. **Kerätkää kaksi versiota kontekstista:**
+Valitse IT-aiheinen tilanne, jossa on **jokin visuaalinen elementti**. Esimerkkejä:
 
-   **Versio A (vain teksti):** Kuvailkaa ongelma sanoin ilman kuvia. Kirjoittakaa, mitä näette, minkä värinen virhe on ja mitä tekstiä näkyy. Olkaa niin tarkkoja kuin mahdollista, mutta älkää käyttäkä kuvakaappausta.
+- Virheilmoitus ohjelmassa tai verkkosivulla
+- Lokin tulostus, jossa on värejä ja muotoilua
+- Käyttöliittymäbugi (nappi ei toimi, kuvake puuttuu, layout rikki)
+- Kaavio tai diagrammi, jota et täysin ymmärrä
+- Asetussivun ruutu, johon haluat apua
 
-   **Versio B (multimodaalinen):** Sama tekstikuvaus sekä kuvakaappaus ongelmasta, lokin relevantti osio (jos soveltuu) ja/tai koodin vika-alue (jos soveltuu).
+Jos sinulla ei ole valmista esimerkkiä, voit etsiä jonkun. Mitä konkreettisempi, sen parempi.
 
-3. **Lähettäkää molemmat tekoälylle** (mieluiten samalle mallille, esim. Claude, ChatGPT-4V):
-   - Kysykää sama kysymys kahdesti — ensin versiolla A, sitten versiolla B.
-   - Dokumentoikaa molemmat vastaukset.
+### Vaiheet
 
-4. **Vertailutaulukko:**
+#### Vaihe 1 — Versio A: vain sanakuvaus
 
-| Aspekti | Versio A (vain teksti) | Versio B (multimodaalinen) |
-|---------|------------------------|---------------------------|
-| Vastauksen spesifisyys | | |
-| Tutkittavien ratkaisujen lukumäärä | | |
-| Vastauksessa mainittu visuaalinen tieto | | |
-| Kuinka hyödyllinen vastaus oli (1-5) | | |
-| Token-kustannus (arvio) | | |
-| Vastausaika | | |
+Avaa ChatGPT, Claude tai Copilot. **Älä lähetä kuvaa** — kuvaile ongelma vain sanoilla, niin tarkasti kuin osaat:
 
-5. **Analyysi (2–4 lausetta):**
-   - Kumpi versio oli parempi ja miksi?
-   - Millä tavoin multimodaalinen lähestyminen muutti tekoälyn vastausta?
-   - Missä tilanteissa multimodaalinen input olisi olennainen vs. turha?
+- Mitä näet?
+- Mitä värejä ja muotoiluja näytöllä on?
+- Mitä tekstiä näkyy (kopioi se mukaan, jos voit)?
+- Mitä yritit tehdä, kun ongelma ilmestyi?
 
-### Odotettu tuotos
-- Täytetty vertailutaulukko
-- Kirjallinen analyysi edellä olevista kysymyksistä
+Kysy: *"Mistä tämä voisi johtua ja miten korjaisin sen?"* Tallenna vastaus.
 
-**Jos teet tehtävän yksin:**
-Valitse itsellesi IT-ongelma. Kirjoita tekstikuvaus. Ota kuvakaappaus tai kerää lokit. Tee molemmat testit ja vertaa.
+#### Vaihe 2 — Versio B: kuva mukaan
 
----
+Avaa **uusi keskustelu** (tärkeää, ettei edellinen vastaus vaikuta).
 
-## Tehtävä 6.2: Multimodaalisen kontekstin rakentaminen — käytännön ongelma
+Käytä mallia, joka osaa katsoa kuvia — esim. ChatGPT, Claude, Gemini tai Copilot hyväksyvät kuvaliitteet. Anna sama sanakuvaus kuin vaiheessa 1 **JA** liitä mukaan kuvakaappaus.
 
-### Tavoite
-Oppia rakentamaan tehokas multimodaalinen konteksti oikeasta IT-ongelmasta käyttämällä tekstiä, kuvakaappauksia, lokeja ja koodia strategisesti. Harjoitella päätöksentekoa: mitä sisällytetään, mikä redaktoidaan, mikä jätetään pois.
+Kysy sama kysymys. Tallenna vastaus.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+#### Vaihe 3 — Vertaa
 
-1. **Valitkaa todellinen IT-projekti tai ongelma**, jota käsittelette nyt tai jota muistaatte. Esimerkiksi:
-   - Tietokanta on hidas tai ei vastaa
-   - Verkkopalvelu kaatuilee satunnaisesti
-   - Ohjelman käyttöliittymässä on bugi
-   - Palvelin on kriittisellä hetkellä poikki
-   - Sovellus kuluttaa liikaa muistia tai CPU:ta
+Aseta kaksi vastausta vierekkäin ja täytä taulukko:
 
-2. **Kerätkää multimodaalista materiaalia:**
+| Mitä vertaillaan | Versio A (vain teksti) | Versio B (kuva + teksti) |
+|---|---|---|
+| Osuvuus juuri sinun ongelmaan | | |
+| Ehdotettujen ratkaisujen määrä | | |
+| Mainitsiko visuaalisia yksityiskohtia (värit, sijainnit, ikonit)? | | |
+| Hyödyllisyys arvolla 1–5 | | |
 
-   - **Teksti:** Kirjoittakaa lyhyesti (2–3 lausetta) ongelma, mitä yrityitte tehdä ja mikä meni pieleen
-   - **Kuvakaappaus(set):** Ottakaa 1–2 kuvakaappausta, jotka näyttävät ongelman
-   - **Lokit:** Kopioikaa relevantti loki-osio (10–20 riviä, ei 500), poistaen salaisuudet
-   - **Koodi (jos relevanttia):** Näyttäkää kyseinen koodin osa (10–20 riviä), joissa ongelma esiintyy
+#### Vaihe 4 — Kirjoita pohdinta
 
-3. **Dokumentoikaa kukin osa taulukossa:**
+Vastaa 3–5 lauseella:
 
-| Materiaali | Sisältö | Token-arvio | Miksi tärkeä? | Redaktoitu? |
-|-----------|---------|-------------|---------------|-----------|
-| Teksti | [mitä kirjoitit] | | | Kyllä/Ei |
-| Kuvakaappaus 1 | [kuvaus] | | | Kyllä/Ei |
-| Loki | [mitä rivejä, esim. rivit 45-65] | | | Kyllä/Ei |
-| Koodi | [funktio/luokka/komennot] | | | Kyllä/Ei |
+- Kumpi versio oli parempi, ja missä ero oli suurin?
+- Millaisissa tilanteissa multimodaalinen syöte on välttämätön? Milloin pelkkä teksti riittää?
+- Onko tilanteita, joissa kuvan lähettäminen voisi olla **huono** idea? (Vihjeitä: kuvassa näkyvä tieto, salaisuudet, henkilöt.)
 
-4. **Testatkaa multimodaalinen konteksti:**
-   - Kootkaa kaikki materiaali yhdeksi kysymykseksi tekoälylle (multimodaalinen malli, esim. Claude tai ChatGPT-4V)
-   - Kysykää selkeä kysymys: "Mitä tämä ongelma on ja miten sen korjaisin?"
-   - Dokumentoikaa: "Tekoälyn vastaus käytti seuraavaa materiaalia: [mikä oli hyödyllisintä]"
-   - Ajattelkaa: "Olisiko vastaus parempi tai huonompi ilman kuvakaappauksia, lokeja tai koodia?"
-
-5. **Arvio strategiasta (3–5 lausetta):**
-   - Mikä osa multimodaalisesta kontekstista oli arvokkain?
-   - Mikä olisi ollut turhaa tai voinut jäädä pois?
-   - Kuinka muuttaisitte kontekstia seuraavalla kerralla?
-   - Mitä opitte multimodaalisuudesta ja strategisesta kontekstin rakentamisesta?
-
-### Odotettu tuotos
-- Täytetty materiaalitaulukko
-- Yhden sivun raportti, joka sisältää:
-  - Mikä projekti tai ongelma oli
-  - Miten kasasitte multimodaalisen kontekstin
-  - Mitä materiaalia tekoäly käytti eniten
-  - Mikä toimi ja mikä ei
-  - Oppimasi asiat multimodaalisuudesta ja kontekstin hallinnasta
-
-**Jos teet tehtävän yksin:**
-Dokumentoi oma IT-ongelmasi kerätyllä multimodaalisella kontekstilla. Testaa tekoälylle. Reflektoi ja kirjoita, mitä oppit.
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä havaintosi. Etenkin viimeinen pohdintakysymys vie ajatukset suoraan seuraavaan tehtävään — ja koko kurssin etiikka- ja vastuukysymyksiin.
 
 ---
 
-## Tehtävä 6.3: Turvallisuus ja päätöksenteko — millainen konteksti on valmis?
+## Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? 🟣 SYVENTÄVÄ
 
-### Tavoite
-Oppia tunnistamaan turvallisuusriskit multimodaalisessa kontekstissa ja tekemään päätöksiä siitä, mitä voi jakaa ja mitä tulee redaktoida. Ymmärtää, missä tilanteissa multimodaalinen input on oikea valinta.
+> **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa ammattilaisen aloittelijasta.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Tunnistat herkät tiedot kuvakaappauksessa, lokissa tai konfiguraatiotiedostossa. Opit sensuroimaan ne pois ja päättämään, mitä voi turvallisesti jakaa tekoälylle.
 
-1. **Teille annetaan neljä skenaariota.** Kussakin tilanteessa tekoäly auttaisi, mutta konteksti sisältää potentiaalisia turvallisuusongelmia. Toimitkaa jokaisessa näin:
+### Skenaariot
 
-   **Skenaario 1: Tietokantayhteyden ongelma**
-   ```
-   Loki näyttää:
-   2024-03-14 10:23:45 ERROR: Failed to connect to database
-   2024-03-14 10:23:46 ERROR: Connection string: postgresql://admin:MyPassword123!@db.company.com:5432/users
-   2024-03-14 10:23:47 ERROR: Connection timeout
-   ```
-   - Mitä tulee redaktoida?
-   - Miten muotoilisit tämän turvallisesti tekoälylle?
+Alla on kaksi tilannetta, joissa IT-tukea pyytävä työntekijä on aikomassa lähettää tekoälylle pyynnön. Toimi kummassakin näin:
 
-   **Skenaario 2: API-integraaation debuggaus**
-   ```
-   Kuvakaappaus näyttää:
-   POST /api/v1/payment
-   Authorization: Bearer sk-live-4eC39HqLyjWDarhtT1ZdV7UL
-   Body: {
-     "amount": 19999,
-     "card_token": "tok_visa_4242424242424242"
-   }
-   Response: 401 Unauthorized
-   ```
-   - Mitä tulee redaktoida?
-   - Mikä tieto on kriittistä ongelman ratkaisemiseksi?
+1. Tunnista herkät tiedot
+2. Kirjoita sensuroitu, turvallinen versio
+3. Perustele, miksi nämä tiedot ovat herkkiä
+4. Päätä: voiko tekoäly silti auttaa sensuroinnin jälkeen?
 
-   **Skenaario 3: Verkko-ongelma ja lokitiedostot**
-   ```
-   Logi sisältää:
-   2024-03-14 14:30:00 INFO: User login: john.smith@company.com
-   2024-03-14 14:30:01 INFO: Processing transaction for customer ID: CUST_12345
-   2024-03-14 14:30:02 ERROR: Network timeout
-   2024-03-14 14:30:03 INFO: Customer data: {name: John Smith, SSN: 123-45-6789, ...}
-   ```
-   - Mitä tulee redaktoida tai poistaa kokonaan?
-   - Mitkä tiedot ovat turvallisuuskritiikin alaiset?
+#### Skenaario 1 — Tietokantayhteyden virhe
 
-   **Skenaario 4: Konfiguraatiotiedoston jakaminen**
-   ```json
-   {
-     "app_name": "PaymentProcessor",
-     "environment": "production",
-     "database": {
-       "host": "db.prod.company.com",
-       "port": 5432,
-       "user": "app_user",
-       "password": "C0mp1ex!P@ssw0rd2024"
-     },
-     "api_keys": {
-       "stripe": "sk_live_51234567890abcdef",
-       "twilio": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-     },
-     "external_services": {
-       "slack_webhook": "https://hooks.slack.com/services/T123/B456/xxxxxx"
-     }
-   }
-   ```
-   - Voitko jakaa tämän tiedoston tekoälylle ollenkaan?
-   - Jos kyllä, mitä redaktoit?
-   - Mikä on parempi ratkaisu?
+Työntekijä haluaa kysyä tekoälyltä, miksi tietokanta ei vastaa. Hän kopioi lokin sellaisenaan:
 
-2. **Tehtävä kutakin skenaariota varten:**
-   - **Tunnista:** Mitä turvallisuusriskejä näet?
-   - **Redaktoi:** Kirjoita turvallinen versio materiaalista
-   - **Perustele:** Miksi nämä tiedot ovat herkkiä? Mitä haittaa voisi tulla?
-   - **Päätä:** Voitko silti auttaa tekoälyä redaktion jälkeen? Entä ilman näitä tietoja?
+```
+2024-03-14 10:23:45 ERROR: Failed to connect to database
+2024-03-14 10:23:46 ERROR: Connection string:
+  postgresql://admin:MyPassword123!@db.company.com:5432/users
+2024-03-14 10:23:47 ERROR: Connection timeout after 30s
+```
 
-3. **Päätöskehikko — milloin multimodaalinen input on oikea valinta:**
+**Tehtäväsi:** Mikä tästä on vaarallista lähettää? Kirjoita turvallinen versio.
 
-Täytä tämä taulukko jokaiselle skenaariolle:
+#### Skenaario 2 — Konfiguraatiotiedoston jakaminen
 
-| Skenaario | Multimodaalinen input auttaa? | Kyllä, jos | Ei, koska | Turvallisuusriski | Ratkaisu |
-|-----------|-------------------------------|-----------|-----------|-------------------|----------|
-| Skenaario 1 | | | | | |
-| Skenaario 2 | | | | | |
-| Skenaario 3 | | | | | |
-| Skenaario 4 | | | | | |
+Kehittäjä haluaa kysyä tekoälyltä, miksi sovellus ei käynnisty. Hän on kopioimassa koko konfiguraatiotiedoston:
 
-4. **Yhteenveto ja oppiminen:**
-   - Mikä on pahin turvallisuusriski, jonka näit?
-   - Kuinka varmistaisit, että konteksti on turvallinen ennen kuin jaat sen?
-   - Mitä salaisuuksia näkemällä hyökkääjä voisi tehdä jokaisissa skenaarioissa?
+```json
+{
+  "app_name": "PaymentProcessor",
+  "environment": "production",
+  "database": {
+    "host": "db.prod.company.com",
+    "port": 5432,
+    "user": "app_user",
+    "password": "C0mp1ex!P@ssw0rd2024"
+  },
+  "api_keys": {
+    "stripe": "sk_live_51234567890abcdef",
+    "twilio": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "slack_webhook":
+    "https://hooks.slack.com/services/T123/B456/xxxxxx"
+}
+```
 
-### Odotettu tuotos
-- Neljän skenaarion turvallisuusanalyysi ja redaktoitu versio
-- Täytetty päätöskehikko-taulukko
-- 2–3 lauseen yhteenveto: "Oppin turvallisuudesta ja multimodaalisen kontekstin jakamisesta..."
+**Tehtäväsi:** Voiko tämän jakaa ollenkaan? Jos voi, mitä sensuroit? Mikä on parempi tapa pyytää apua?
 
-**Jos teet tehtävän yksin:**
-Tee kaksi skenaariosta täydellisesti (analyysi + redaktointi + taulukko).
+### Päätöskehikko
 
----
+Täytä molemmista skenaarioista taulukko:
 
-## Tehtävien palautus
+| Skenaario | Mitkä tiedot ovat herkkiä? | Mitä vahinkoa hyökkääjä voisi tehdä? | Voiko tekoäly auttaa sensuroinnin jälkeen? |
+|---|---|---|---|
+| 1 (tietokanta) | | | |
+| 2 (config) | | | |
 
-Palauta tehtävät Moodlen kautta ryhmän nimellä tai henkilökohtaisesti. Sisällytä:
-- Kaikki taulukot ja dokumentaatio
-- Kuvakaappaukset (jos soveltuu)
-- Lyhyt tekstianalyysi kunkin tehtävän lopussa
+### Käytä tekoälyä apuna: testaa sensurointiasi
 
-Arviointiperusteet:
-- **6.1:** Vertailun laatu, analyysin syvyys
-- **6.2:** Materiaalin relevanssi, multimodaalisen kontekstin tehokkuus, strateginen ajattelu
-- **6.3:** Turvallisuusriskeille herkkyyden taso, redaktion tarkkuus, päätöksenteon perustelut
+Avaa ChatGPT, Claude tai Copilot ja anna sille **oma sensuroitu versiosi**. Esimerkkiprompti:
+
+```
+Toimit minulle tietoturvasparrauskumppanina. Olen IT-opiskelija ja
+yritän oppia tunnistamaan herkät tiedot, joita ei saa jakaa
+tekoälylle. Tässä alkuperäinen materiaali ja oma sensuroitu versioni:
+
+[liitä alkuperäinen]
+
+[liitä oma sensuroitu versiosi]
+
+Tarkista sensurointini. Jätinkö jotain herkkää huomaamatta? Onko
+jotain, mitä sensuroin turhaan ja mikä olisi voinut jäädä mukaan?
+Älä paljasta suoraan vastauksia — esitä kysymyksiä, joiden avulla
+huomaan itse, jos joku kohta on ohi mennyt.
+```
+
+Tämä on harjoitus siitä, miten tekoälyä käytetään *tarkistajana*, ei korvikkeena omalle harkinnalle. Tietoturvassa lopullinen vastuu on aina ihmisellä.
+
+### Yhteenveto
+
+Kirjoita 2–3 lausetta: *"Säännöt, joita seuraan jatkossa ennen kuin jaan minkään materiaalin tekoälylle…"*
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä yhden lauseen sääntö on yksi koko kurssin arvokkaimpia työkaluja työelämään. Säilytä se itsellesi.
+
+**Tunnin 6 jälkeen tiedät, milloin kuva auttaa — ja milloin se on riski.**

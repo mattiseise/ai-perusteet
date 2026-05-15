@@ -1,43 +1,69 @@
-# Opiskelutehtävät
+# Opiskelutehtävät — Mikä tekoäly oikeasti on?
 
-## Tehtävä 1.1: AI vai ei AI — luokitteluharjoitus
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen kuitenkin tehtävää 1.1, joka osuu suoraan tunnin ydintaidon ytimeen. Jos sinulla on aikaa ja kiinnostusta, voit lisäksi tehdä syventävän tehtävän 1.2.
 
-### Tavoite
-Harjoitella AI:n ja muun ohjelmoinnin erottamista tosielämän esimerkkien perusteella.
+## Tehtävä 1.1 — AI vai ei AI? 🟢 SUOSITELTU
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Opit erottamaan tekoälyn tavallisesta ohjelmoinnista konkreettisten esimerkkien avulla. Tämä on koko Teoria-osion peruskivi.
 
-Jaa ryhmälle alla oleva taulukko. Täytä kunkin esimerkin kohdalle sarake "AI / Ei AI / Epäselvä" ja perustele päätös. Jos vastaus on "Epäselvä", selitä, miksi se on epäselvä.
+### Vaiheet
+
+#### Vaihe 1 — Luokittele itse ensin
+
+Käy alla oleva taulukko läpi **omin päin**. Merkitse jokaiselle: AI / Ei AI / Epäselvä — ja kirjoita yhden lauseen perustelu. Älä vielä käytä tekoälyä apuna; tarkoitus on, että muodostat ensin oman käsityksen.
 
 | Järjestelmä | Kuvaus | AI / Ei AI / Epäselvä | Perustelu |
 |---|---|---|---|
-| Sähköpostin roskapostisuodatin | Automaattisesti lajittelee viestit roskapostiin sanojen perusteella | | |
+| Sähköpostin roskapostisuodatin | Lajittelee viestit roskapostiin sanojen perusteella | | |
 | Netflix-suositukset | Näyttää elokuvia ja sarjoja, joista todennäköisesti pidät | | |
-| Pankin lainahakemuksen hyväksyntä | Tekee päätöksen hakemuksen hyväksymisestä tai hylkäämisestä automaattisesti | | |
-| Älypuhelimen puhelinluettelo | Järjestää yhteystiedot aakkosjärjestykseen | | |
-| Google Maps -navigaattori | Ohjaa sinut reitille reaaliaikaisen liikennetiedon perusteella | | |
-| pankkiautomaatti | Antaa rahaa, kun syötät PIN-koodin | | |
-| Hiiren auto-correct | Korvaa väärän kirjoitusasun oikealla sanalla | | |
+| Pankin lainahakemus | Tekee hyväksyntä-/hylkäyspäätöksen automaattisesti | | |
+| Puhelinluettelo | Järjestää yhteystiedot aakkosjärjestykseen | | |
+| Google Maps | Ohjaa reitille reaaliaikaisen liikennetiedon perusteella | | |
+| Pankkiautomaatti | Antaa rahaa, kun syötät PIN-koodin | | |
+| Auto-correct | Korvaa väärän kirjoitusasun oikealla sanalla | | |
 
-### Odotettu tuotos
+#### Vaihe 2 — Haasta itsesi tekoälyn kanssa
 
-Täytetty taulukko, jossa jokainen rivi on perusteltu. Ryhmä laatii yhteenvedon: "Mitkä kriteerit auttavat erottamaan tekoälyn muusta ohjelmoinnista?"
+Avaa ChatGPT tai Claude ja anna tekoälylle **oma luokittelusi**. Pyydä sitä haastamaan päätelmäsi. Esimerkkiprompti:
 
-**Jos teet tehtävän yksin:**
-Valitse 3 esimerkkiä ja täytä ne kokonaan. Kirjoita lopuksi lyhyt vastaus: "Mikä on tärkein ero AI:n ja tavallisen ohjelmoinnin välillä tämän harjoituksen perusteella?"
+```
+Toimit minulle sparrauskumppanina. Opiskelen tekoälyn perusteita ja
+yritän oppia erottamaan, milloin järjestelmä on tekoälyä ja milloin
+'pelkkä ohjelma'. Tässä oma luokitteluni perusteluineen:
+
+[liitä taulukkosi tähän]
+
+Haasta päätelmäni. Missä kohdissa voisin olla väärässä? Onko jokin
+'Ei AI' itse asiassa AI:n rajatapaus, tai päinvastoin? Älä paljasta
+suoraan oikeita vastauksia — esitä vastakysymyksiä ja pyydä minua
+perustelemaan vielä tarkemmin.
+```
+
+Tämä on harjoitus siitä, miten tekoälyä käytetään *ajattelun terävöittäjänä*, ei vastauspalveluna. Huomaat samalla, että tekoälyn vastauksiakaan ei kannata niellä sellaisenaan.
+
+#### Vaihe 3 — Kirjoita yhteenveto
+
+Tekoälykeskustelun jälkeen muokkaa taulukkoasi tarvittaessa ja kirjoita lyhyt yhteenveto (3–5 lausetta):
+
+- Mikä on tärkein ero tekoälyn ja tavallisen ohjelman välillä?
+- Mikä esimerkeistä oli vaikein luokitella ja miksi?
+- Muuttuiko jokin päätös tekoälykeskustelun aikana? Jos, niin mikä — ja miksi?
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta kannattaa pitää itselle oma muistiinpanodokumentti tämän ja muiden tunnin tehtävien tuloksista. Käytät niitä myöhemmin tukena, kun pohdit miten tekoäly toimii ja missä sen rajat ovat.
 
 ---
 
-## Tehtävä 1.2: Petoksentunnistus — sääntö vs. tekoäly
+## Tehtävä 1.2 — Petoksentunnistus: sääntö vs. tekoäly 🟣 SYVENTÄVÄ
 
-### Tavoite
-Ymmärtää, miksi tekoäly on tehokkaampi kuin kiinteät säännöt monimutkaisissa päätöksentekotilanteissa.
+> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat ymmärtää *miksi* tekoäly on parempi kuin säännöt monimutkaisissa päätöksissä — etkä vain *että* niin on.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Huomaat omakohtaisesti, miksi kiinteät säännöt eivät riitä tilanteissa, joissa on monta muuttujaa ja poikkeuksia.
 
-Pankin tehtävänä on suojata asiakkaiden tilit petoksilta. Analysoi 10 transaktiota alla olevan datan perusteella.
+### Tilanne
 
-| # | Summa (€) | Kello | Paikka | Asiakkaan tavallinen käyttö | Lopputulos |
+Olet pankin tietoturvatiimissä. Tehtäväsi on suojata asiakkaiden tilit petoksilta. Alla on 10 transaktiota, joissa **oikea vastaus on jo paljastettu** ("Petos" tai "Laillinen"). Sinun haasteesi: kehittää sääntöjoukko, joka tunnistaa nämä oikein.
+
+| # | Summa (€) | Kello | Paikka | Tavallinen käyttö | Lopputulos |
 |---|---|---|---|---|---|
 | 1 | 5 500 | 14:30 | Koulu | Yleensä < 1 000 | Laillinen |
 | 2 | 2 000 | 03:15 | Tuntematon maa | Harvoin yöllä | **Petos** |
@@ -50,42 +76,50 @@ Pankin tehtävänä on suojata asiakkaiden tilit petoksilta. Analysoi 10 transak
 | 9 | 600 | 23:45 | Tuntematon kauppa | Ei koskaan | **Petos** |
 | 10 | 75 | 11:00 | Ruokakauppa | Päivittäinen | Laillinen |
 
-**Vaihe 1:** Ryhmä kehittää sääntöpohjaisen suodattimen. Kirjoita säännöt muodossa: "Jos [ehto], merkitse petokseksi."
+### Vaiheet
 
-**Vaihe 2:** Testaa sääntöjäsi kaikkia 10 transaktiota vastaan. Kuinka monta petosta havaitset oikein? Kuinka monta väärää hälytystä tulee?
+#### Vaihe 1 — Kirjoita oma sääntöjoukkosi
 
-**Vaihe 3:** Pohdi: Mikä tekee tästä ongelmasta vaikean kiinteille säännöille? Mitä tekoäly voisi tehdä paremmin?
+Kirjoita 3–5 sääntöä muodossa: *"Jos [ehto], merkitse petokseksi."*
 
-### Odotettu tuotos
+Esimerkki: `"Jos summa > 1 000 € JA kello on välillä 00:00–06:00 → petos."`
 
-Dokumentti, joka sisältää:
-- ryhmän kehittämät säännöt
-- testien tulokset (oikeat positiiviset, väärät positiiviset)
-- kirjallinen vastaus: "Miksi tekoäly olisi parempi tähän kuin säännöt?" (3–5 lausetta)
+#### Vaihe 2 — Testaa sääntöjäsi
 
-**Jos teet tehtävän yksin:**
-Tee vaiheet 1–2. Kirjoita vaiheeseen 3 lyhyt vastaus.
+Käy 10 transaktiota läpi sääntöjesi mukaan ja merkitse:
 
----
+- **Oikein tunnistetut petokset:** ___ / 4
+- **Vääriä hälytyksiä** (laillinen → "petos"): ___ / 6
+- **Missatut petokset** ("laillinen", oikeasti petos): ___ / 4
 
-## Tehtävä 1.3: Omat sovellukset — missä käyttää tekoälyä?
+#### Vaihe 3 — Käytä tekoälyä apuna analysointiin
 
-### Tavoite
-Soveltaa opittua omiin päivittäisiin sovelluksiin ja palveluihin.
+Avaa tekoäly ja anna sille sääntöjoukkosi sekä testituloksesi:
 
-### Ohjeet (pareittain tai yksin)
+```
+Toimit minulle sparrauskumppanina. Olen opiskelija ja yritän
+ymmärtää, miksi kiinteät säännöt eivät riitä petoksentunnistukseen.
 
-Valitse 5 sovellusta tai verkkopalvelua, joita käytät säännöllisesti (esim. Instagram, Snapchat, Discord, YouTube, Amazon, Spotify, Google Maps, pelit).
+Tässä sääntöni ja niiden tulokset:
 
-Täytä jokaisesta seuraava taulukko:
+Säännöt:
+[liitä sääntösi]
 
-| Sovellus | Toiminto, joka voi käyttää tekoälyä | Käyttääkö todennäköisesti tekoälyä? | Perustelu |
-|---|---|---|---|
-| | | Kyllä / Ei / En tiedä | |
+Tulokset: [missatut, väärät hälytykset, oikeat osumat]
 
-### Odotettu tuotos
+Auta minua ymmärtämään, mitkä piirteet petostransaktioissa ovat
+sellaisia, että niitä on vaikea pukea yhdeksi säännöksi. Miksi
+oikea petos voi näyttää joskus 'normaalilta'? Älä kerro minulle
+suoraan, miten tekoäly ratkaisisi tämän — auta minua löytämään
+se itse.
+```
 
-Täytetty taulukko. Kirjoita lyhyt pohdinta: "Missä tekoäly on huomaamattomasti osa omaa digitaalista elämääsi?"
+Huomaa, että tekoäly itse on tällaisten ongelmien ratkaisija — käytät sitä siis omakohtaisesti samalla, kun opettelet ymmärtämään, miksi se on tarpeen.
 
-**Jos teet tehtävän yksin:**
-Valitse 3 sovellusta ja täytä taulukko. Kirjoita pohdinnoistasi lyhyt kappale.
+#### Vaihe 4 — Vastaa pääkysymykseen
+
+Kirjoita 3–5 lausetta:
+
+*"Miksi tekoäly olisi parempi tähän tehtävään kuin kiinteät säännöt?"*
+
+**Tunnin 1 jälkeen osaat erottaa tekoälyn tavallisesta ohjelmasta.**

@@ -1,108 +1,121 @@
-# Opiskelutehtävät
+# Opiskelutehtävät — Viisi tekoälyn tasoa
 
-## Tehtävä 2.1: AI-tyyppien kartta — sijoita esimerkit oikeaan kategoriaan
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 2.1, joka osuu suoraan tunnin ydintaidon ytimeen. Jos sinulla on aikaa ja kiinnostusta, voit lisäksi tehdä syventävän tehtävän 2.2.
 
-### Tavoite
-Oppia tunnistamaan eri tekoälytyypit ja ymmärtämään niiden eroja konkreettisten esimerkkien avulla.
+## Tehtävä 2.1 — AI-tyyppien kartta 🟢 SUOSITELTU
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Opit tunnistamaan tekoälyn eri tyypit (kapea AI, generatiivinen AI, AGI/ASI) ja ymmärrät niiden erot konkreettisten esimerkkien kautta.
 
-Seuraavassa on lista tekoälysovelluksista. Sijoita kukin oikeaan kategoriaan:
-- **Kapea AI (Narrow AI)**
-- **Generatiivinen AI (Generative AI)**
-- **AGI / ASI (tutkimus tai teoria)**
+### Vaiheet
 
-Perustele valinta yhdellä lauseella.
+#### Vaihe 1 — Luokittele itse ensin
+
+Käy alla oleva taulukko läpi omin päin. Sijoita kukin sovellus yhteen kategoriaan ja kirjoita yhden lauseen perustelu. Älä vielä käytä tekoälyä apuna.
+
+**Kategoriat:**
+
+- **Kapea AI (Narrow AI)** — yhteen tehtävään erikoistunut
+- **Generatiivinen AI** — luo uutta sisältöä (teksti, kuva, ääni, koodi)
+- **AGI / ASI** — yleisäly tai sitä korkeampi, toistaiseksi teoreettinen
 
 | Sovellus | Kategoria | Perustelu |
 |---|---|---|
-| ChatGPT teksti | | |
+| ChatGPT (teksti) | | |
 | Puhelimen kasvojentunnistus | | |
 | Netflix-suositukset | | |
-| Dall-E kuvan luonti | | |
-| Shakkia pelaava tekoäly (kuten AlphaZero) | | |
+| DALL-E (kuvan luonti) | | |
+| AlphaZero (shakki) | | |
 | Google Maps -reititys | | |
-| Suno musiikki | | |
-| Pankin lainahakemuksen automatisointi | | |
-| Robotti, joka kokeilee ratkaisuja tulevaisuuden ratkaistaviin ongelmiin | | |
+| Suno (musiikkigeneraattori) | | |
+| Pankin lainahakemuksen automaatti | | |
+| Robotti, joka ratkaisisi itsenäisesti tulevaisuuden ongelmia | | |
 
-### Odotettu tuotos
+#### Vaihe 2 — Haasta luokittelusi tekoälyllä
 
-Täytetty taulukko, jossa jokainen sovellus on asetettu oikeaan kategoriaan ja perusteltu. Ryhmä kirjoittaa yhteenvedon: "Mitä yhteistä näillä sovelluksilla on kapeassa AI:ssa? Mikä tekee generatiivisesta AI:sta erilaisen?"
+Avaa ChatGPT tai Claude ja anna tekoälylle **oma luokittelusi**. Pyydä sitä haastamaan päätelmäsi. Esimerkkiprompti:
 
-**Jos teet tehtävän yksin:**
-Valitse 5 sovellusta ja täytä ne. Kirjoita lyhyt vastaus: "Kumpi niistä on kapeaa AI:ta ja kumpi generatiivista?"
+```
+Toimit minulle sparrauskumppanina. Opiskelen tekoälyn perusteita ja
+luokittelen sovelluksia kategorioihin: kapea AI, generatiivinen AI,
+AGI/ASI. Tässä oma luokitteluni perusteluineen:
 
----
+[liitä taulukkosi tähän]
 
-## Tehtävä 2.2: Generatiivisen AI:n testaaminen — käytännön harjoitus
+Haasta päätelmäni. Onko jokin sovellus rajatapaus, jonka voisi
+sijoittaa kahteen kategoriaan? Onko jossakin kategoria tai perustelu,
+joka kannattaa miettiä uudelleen? Älä paljasta suoraan oikeita
+vastauksia — esitä vastakysymyksiä, joiden avulla löydän
+heikoimmat kohdat itse.
+```
 
-### Tavoite
-Ymmärtää, miten generatiivinen tekoäly toimii käytännössä ja mitkä ovat sen vahvuudet ja heikkoudet.
+Huomaat samalla, että ChatGPT itse on rajatapaus: se on kapea AI (osaa vain kieleen liittyviä asioita), mutta samalla generatiivinen AI (tuottaa uutta sisältöä). Tällaiset rajatapaukset ovat tämän tehtävän kiinnostavin oppi.
 
-### Ohjeet (pareittain tai yksin)
+#### Vaihe 3 — Kirjoita yhteenveto
 
-Valitse yksi näistä generatiivisista tekoälyistä, joihin sinulla on pääsy:
-- Tekstigeneraattori (ChatGPT, Claude, Gemini)
-- Kuvageneraattori (Dall-E, Midjourney, Stable Diffusion online)
-- Musiikkigeneraattori (Suno tai vastaava)
+Muokkaa taulukkoasi tarvittaessa ja vastaa kolmeen kysymykseen lyhyesti (3–5 lausetta yhteensä):
 
-Testaa sitä seuraavilla tehtävillä:
+- Mitä yhteistä kapean AI:n sovelluksilla on?
+- Mikä tekee generatiivisesta AI:sta erilaisen?
+- Mikä luokittelussa oli vaikeinta — ja miksi?
 
-**Testi 1: Yhdenmukainen tulos?**
-- Anna sama kehotus (prompt) kolme kertaa.
-- Dokumentoi vastaukset.
-- Muuttuuko vastaus joka kerta?
-- Miksi näin on?
-
-**Testi 2: Erikoistunut tehtävä?**
-- Anna tekoälylle tehtävä, joka vaatii erikoistunutta tietoa. Esimerkiksi: "Kuka on Suomen pääministeri vuonna 2026?" tai "Koodaa hello world -ohjelma Pythonissa."
-- Dokumentoi, onnistuiko se vai ei.
-- Jos se epäonnistui, mikä meni väärin?
-
-**Testi 3: Luovuus vs. totuus**
-- Kysy tekoälyltä: "Kerro minulle tarina, jossa tekoäly pelastaa maailman."
-- Dokumentoi tarina.
-- Kysy sitten: "Ovatko nämä tosia tapahtumia?"
-- Ymmärtääkö tekoäly eron fiktion ja todellisuuden välillä?
-
-### Odotettu tuotos
-
-Dokumentti, joka sisältää:
-- Kolme kehotusta ja vastaukset jokaisesta testistä
-- Havainnot: muuttuvatko vastaukset? Missä se epäonnistui?
-- Johtopäätös (3–5 lausetta): "Mikä on generatiivisen AI:n vahvuus, ja mikä on sen rajoitus, jonka näin tässä harjoituksessa?"
-
-**Jos teet tehtävän yksin:**
-Tee vähintään kahden testin (1 ja 2) dokumentointi. Kirjoita johtopäätös.
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta kannattaa pitää itselle oma muistiinpanodokumentti tämän ja muiden tunnin tehtävien tuloksista. Käytät niitä myöhemmin tukena, kun pohdit miten tekoäly toimii ja missä sen rajat ovat.
 
 ---
 
-## Tehtävä 2.3: Tulevaisuus — AGI ja ammattilaisten näkemykset
+## Tehtävä 2.2 — Tulevaisuus: AGI ja IT-ala 🟣 SYVENTÄVÄ
 
-### Tavoite
-Ymmärtää, millainen AGI olisi, ja pohtia, miten se muuttaisi IT-alaa.
+> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat pohtia, mihin tekoäly on menossa — ja mitä se tarkoittaa juuri sinun tulevalle ammatillesi.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Ymmärrät, millainen AGI olisi käytännössä, ja muodostat oman näkemyksesi siitä, miten se muuttaisi IT-alaa.
 
-**Vaihe 1: Määrittele AGI**
-Kirjoita muutama lause: "Mitä AGI (yleisäly) voisi tehdä, mitä nykyinen kapea AI ei voi?"
+### Vaiheet
 
-**Vaihe 2: Ajattele ammattilaista**
-Valitse yksi IT-ammatti (kehittäjä, IT-tuki, tietoturvaspesialisti, tietokantahallinta). Pohdi:
-- Mitä nykyinen kapea AI tekee jo tällä alalla?
-- Jos AGI tulisi, miten se muuttaisi tätä ammattia?
-- Entä ASI?
+#### Vaihe 1 — Määrittele AGI omin sanoin
 
-**Vaihe 3: Kirjoita näkemys**
-Kirjoita 1–2 kappaleen pituinen näkemys: "Tulevaisuus IT-alalla, jos AGI saavutetaan."
+Kirjoita 2–3 lausetta: *"Mitä AGI (yleisäly) voisi tehdä, mitä nykyinen kapea tai generatiivinen AI ei voi?"* Älä etsi vastausta vielä — kirjoita oma käsityksesi.
 
-### Odotettu tuotos
+#### Vaihe 2 — Valitse IT-ammatti ja pohdi
 
-Dokumentti, joka sisältää:
-- AGI:n määritelmän omin sanoin
-- Valitun ammatin analyysin (nykyinen tekoäly + AGI:n vaikutus)
-- Kirjallisen näkemyksen tulevaisuudesta
+Valitse yksi IT-ammatti, joka kiinnostaa sinua tai johon tähtäät:
 
-**Jos teet tehtävän yksin:**
-Tee vaiheet 1 ja 2. Vaiheessa 3 voit kirjoittaa lyhyen kappaleen.
+- Ohjelmistokehittäjä
+- IT-tuki
+- Tietoturva-asiantuntija
+- Tietokanta- tai pilvi-infrastruktuurin osaaja
+- Joku muu IT-ala (kerro mikä)
+
+Vastaa kysymyksiin kirjallisesti:
+
+- Mitä nykyinen kapea tai generatiivinen AI jo tekee tällä alalla?
+- Jos AGI tulisi, mikä tässä ammatissa muuttuisi?
+- Mikä työn osa säilyisi todennäköisesti ihmisellä — ja miksi?
+
+#### Vaihe 3 — Käytä tekoälyä apuna ajattelun haastamisessa
+
+Avaa ChatGPT tai Claude ja anna sille pohdintasi. Esimerkkiprompti:
+
+```
+Toimit minulle sparrauskumppanina. Pohdin, miten AGI (yleisäly)
+muuttaisi IT-ammattia, johon tähtään. Tässä oma näkemykseni:
+
+Valittu ammatti: [esim. ohjelmistokehittäjä]
+Nykyisen AI:n vaikutus: [oma vastauksesi]
+AGI:n mahdollinen vaikutus: [oma vastauksesi]
+Mikä säilyisi ihmisellä: [oma vastauksesi]
+
+Haasta näkemystäni. Mitä mahdollisia sokeita pisteitä ajattelussani
+on? Olenko liian optimistinen tai liian pessimistinen jossakin
+kohtaa? Anna myös yksi vastanäkemys, jota en ole vielä harkinnut.
+Älä silti yritä saada minua muuttamaan mieltäni — autat minua
+ajattelemaan terävämmin.
+```
+
+Tämä on hyvä harjoitus siinä, miten tekoälyä käytetään *peilinä omille ajatuksille*, ei mielipidetehtaana.
+
+#### Vaihe 4 — Kirjoita oma näkemys
+
+Kirjoita 1–2 kappaleen näkemys: *"Tulevaisuus IT-alalla, jos AGI saavutetaan."* Tekoälykeskustelun jälkeen kirjoita tämä omasta päästäsi — käytä keskustelua pohjana, mutta lopullinen näkemys on sinun.
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä pohdinta kannattaa tallentaa itselle. Saatat huomata vuoden päästä, että ajatuksesi muuttuvat — ja se on hieno tapa nähdä omaa kehitystäsi.
+
+**Tunnin 2 jälkeen tunnet tekoälyn tasot ja osaat sijoittaa työkalut kartalle.**

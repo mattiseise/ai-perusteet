@@ -1,189 +1,77 @@
-# Opiskelutehtävät
+# Opiskelutehtävät — Konteksti ratkaisee
 
-## Tehtävä 4.1: Konteksti ja prompti rinnakkain — huono vs. hyvä
+> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän ammattilaisesta. Tee tämä tehtävä huolella.
 
-### Tavoite
-Ymmärtää käytännössä, kuinka dramaattisesti hyvä konteksti ja terävä prompti muuttavat tekoälyn vastauksen. Kokeile samaa ongelmaa huonoon kontekstiin ja hyvin rakennetussa versiossa ja analysoi eroja.
+## Tehtävä 4.1 — Huono vs. hyvä prompti rinnakkain 🟢 SUOSITELTU
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+**Tavoite:** Näet omin silmin, miten dramaattisesti hyvä konteksti ja terävä prompti muuttavat tekoälyn vastausta. Kokeilet samaa ongelmaa kahdessa muodossa — laihana ja kunnolla rakennettuna — ja analysoit eroja.
 
-1. Valitkaa yhteinen IT-ongelma tai kysymys, joka koskee opiskeluanne. Esimerkiksi: "Kuinka optimoin tietokantahakuja?" tai "Miten debuggaan Python-ohjelmaa?"
+### Valitse ongelmasi
 
-2. **Vaihe 1: Huono esimerkki — ilman kontekstia ja heikolla promptilla**
-   - Kirjoita tekoälylle vain yksinkertainen kysymys ilman mitään kontekstia.
-   - Esim.: "Kuinka debuggaan Python-ohjelmaa?"
-   - Kopioi tekoälyn vastaus taulukkoon tai tallenna kuvakaappaus.
+Valitse yksi IT-aiheinen kysymys, joka **oikeasti kiinnostaa sinua tai liittyy opiskeluusi**. Esimerkkejä:
 
-3. **Vaihe 2: Hyvä esimerkki — selkeä konteksti ja terävä prompti**
-   - Kirjoita sama kysymys, mutta rakenna ensin selkeä konteksti viiden komponentin mukaan:
-     - **Rooli:** Kuka olet? (esim. "Olen IT-opiskelija ja aloittelija Python-koodauksessa.")
-     - **Taustatieto:** Mitä on jo tehty? (esim. "Olemme kirjoittaneet yksinkertaisen laskimen.")
-     - **Tavoite:** Miksi tarvitset apua? (esim. "Tarvitsen apua löytääkseni virheen.")
-     - **Rajaukset:** Mitä et halua? (esim. "En halua IDE:n debuggeria, vaan print-pohjaisia menetelmiä.")
-     - **Esimerkki:** Näytä malli. (esim. "Tässä on virheen sisältävä koodi: ...")
+- "Miten optimoin tietokantahakuja?"
+- "Miten debuggaan Python-ohjelmaa?"
+- "Miten suojaan kotiverkkoni?"
+- "Miten kirjoitan hyvän README-tiedoston GitHub-projektiin?"
 
-   - Muotoile sitten terävä prompti näiden elementtien mukaan:
-     - **Tavoite:** Mitä haluat tekoälyn tekevän?
-     - **Rooli:** Millä osaamistasolla vastaa?
-     - **Rajat:** Mitä ei tehdä?
-     - **Formaatti:** Miten vastaus muotoillaan?
-     - **Esimerkit:** Näytä konkreettisia tapauksia.
+Mitä konkreettisempi oma tarpeesi, sitä parempi havainto syntyy.
 
-   - Kopioi tekoälyn vastaus taulukkoon tai tallenna kuvakaappaus.
+### Vaiheet
 
-4. **Vaihe 3: Vertailu**
-   - Täytä vertailutaulukko:
+#### Vaihe 1 — Huono prompti: paljas kysymys
 
-| Aspekti | Huono versio (ilman kontekstia) | Hyvä versio (konteksti + prompti) |
-|---------|------|-----|
-| Pituus (sanaväli) | | |
-| Tekniikoiden taso (liian yksinkertainen/sopiva/liian monimutkainen) | | |
-| Relevanssi sinun ongelmaan | | |
-| Käytännöllisyys | | |
-| Spesifisyys | | |
+Avaa ChatGPT, Claude tai Copilot. Kysy valitsemasi kysymys **ilman mitään kontekstia** — kuten kysyisit hakukoneelta.
 
-5. **Vaihe 4: Analyysi ja johtopäätös**
-   - Kirjoita 4–6 lauseen mittainen pohdintateksti:
-     - Mitkä osat vastauksesta 2 olivat merkittävästi parempia?
-     - Miksi konteksti ja prompti muuttivat vastausta?
-     - Missä kontekstin osassa tai promptin elementissä oli suurin vaikutus?
-     - Kuinka tämä muuttaa tapaa, jolla tulevaisuudessa käytät tekoälyä?
+> Esim. "Miten debuggaan Python-ohjelmaa?"
 
-### Odotettu tuotos
-- Täytetty vertailutaulukko
-- 4–6 lauseen pituinen pohdintateksti
-- (Valinnainen: kuvakaappaukset molemmista vastauksista)
+Tallenna vastaus (kopioi tai ota kuvakaappaus).
 
-**Jos teet tehtävän yksin:**
-Valitse itsellesi sopiva IT-aihe ja suorita kaikki neljä vaihetta. Vertaile vastauksia ja dokumentoi havaintosi taulukkoon.
+#### Vaihe 2 — Hyvä prompti: rakenna konteksti
 
----
+Avaa **uusi keskustelu** (tärkeää, ettei edellinen vastaus vaikuta). Rakenna prompti viiden osan kautta:
 
-## Tehtävä 4.2: Rakenna konteksti ja prompti oikean ongelman pohjalta
+| Osa | Mitä sisältö? |
+|---|---|
+| **Rooli** | Kuka olet? Esim. *"Olen IT-opiskelija, aloittelija Python-koodauksessa."* |
+| **Tausta** | Mitä olet jo tehnyt? Esim. *"Kirjoitin yksinkertaisen laskinohjelman, joka ei toimi oikein."* |
+| **Tavoite** | Mitä haluat? Esim. *"Haluan oppia löytämään virheen itse, en valmista ratkaisua."* |
+| **Rajaukset** | Mitä et halua? Esim. *"En halua IDE:n debuggeria — käytän pelkkää print()-tulostusta."* |
+| **Formaatti** | Miten vastataan? Esim. *"Anna 3–5 askelta listana, ei pitkää esseetä."* |
 
-### Tavoite
-Oppia rakentamaan tehokasta kontekstia ja formuloimaan terävää promptia oikean, henkilökohtaisen IT-ongelman ympärille. Harjoitella kontekstin viiden komponentin ja promptin viiden elementin tunnistamista ja muotoilua.
+Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ovat mukana. Lähetä se mallille ja tallenna vastaus.
 
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä)
+#### Vaihe 3 — Iteroi: paranna vastausta vielä kerran
 
-1. Kukin jäsen valitsee todellisen IT-ongelman tai projektin, jota käsittelet nyt tai olet hiljattain käsitellyt.
-   - Esimerkkejä: "Verkon konfiguroiminen kotiin", "Tietokannan suunnitteleminen", "Ohjelman debuggaaminen", "Dokumentaation kirjoittaminen"
+Hyväkään ensimmäinen vastaus ei ole vielä loppu. Ammattilaiset eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
 
-2. **Vaihe 1: Kontekstin rakentaminen**
-   - Täytä kontekstin komponentit-taulukko:
+- "Tarkenna kohta 3 esimerkillä."
+- "Anna myös konkreettinen Python-koodi, jossa virhe on tarkoituksella."
+- "Selitä tämä niin, että ymmärtäisin sen, jos en ole koskaan kuullut sanaa 'pino' (stack)."
 
-| Kontekstin komponentti | Sinun vastauksesi |
-|------------|---|
-| **Rooli** | Kuka olet? (Opiskelijataso, aiempi kokemus, erityisalue) |
-| **Taustatieto** | Mitä on jo tehty? Mitä tiedät jo ongelmasta? |
-| **Tavoite** | Miksi tarvitset apua? Mitä haluat saavuttaa? |
-| **Rajaukset** | Mitkä tekniikat/lähestymistavat haluat välttää tai korostaa? |
-| **Esimerkki** | Voitko antaa konkreettisen näytteen (koodi, virheilmoitus, kuva)? |
+Tallenna myös tämä vastaus. Tämä on iteratiivisuuden ydin — tekoäly ei ole arpapeli, jossa joko osuu tai ei. Se on keskustelu, jossa parannat ohjausta sitä mukaa kun näet, mihin se menee.
 
-3. **Vaihe 2: Promptin rakentaminen**
-   - Täytä promptin elementit-taulukko:
+#### Vaihe 4 — Vertaa vastauksia
 
-| Promptin elementti | Sinun vastauksesi |
-|------------|---|
-| **Tavoite** | Mitä haluat tekoälyn tekevän juuri nyt? |
-| **Rooli** | Millä näkökulmalla ja osaamistasolla se pitää vastata? |
-| **Rajat** | Mitä et halua vastauksessa? |
-| **Formaatti** | Miten vastaus muotoillaan? (koodi, lista, taulukko, selitys?) |
-| **Esimerkki** | Mitä konkretia näyttäisit hyväksi vastaukseksi? |
+Aseta kolme vastausta (huono, hyvä, iteroitu) vierekkäin ja täytä taulukko:
 
-4. **Vaihe 3: Yhtenäisen konteksti-promptin kirjoittaminen**
-   - Kirjoita lopullinen, terävä konteksti-prompti:
-     - Käytä kaikkea viiden komponentin kontekstia.
-     - Käytä kaikkea viiden elementin promptia.
-     - Kirjoita se yhdeksi tai kahdeksi kappaleeksi tai jäsennellyksi listaksi.
-     - Varmista, että se on selkeä, tarkka ja että tekoäly pystyy vastaamaan siihen.
+| Mitä vertaillaan | Huono | Hyvä | Iteroitu |
+|---|---|---|---|
+| Pituus (sanaa, suurin piirtein) | | | |
+| Sopivuus tasollesi (liian helppo / sopiva / liian vaikea) | | | |
+| Osuvuus juuri sinun ongelmaan | | | |
+| Käytännöllisyys (voinko soveltaa heti?) | | | |
+| Tarkkuus (yleinen vai juuri sinulle) | | | |
 
-   - Pituus: 200–350 sanaa.
+#### Vaihe 5 — Kirjoita lyhyt pohdinta
 
-5. **Vaihe 4: Ryhmäpalaute**
-   - Jaa konteksti-promptisi ryhmäkavereiden kanssa.
-   - Antakaa toisillenne rakentavaa palautetta:
-     - Onko konteksti selkeä?
-     - Puuttuuko jotain tärkeää?
-     - Olisiko jokin elementti voitu muotoilla paremmin?
+Vastaa 4–6 lauseella:
 
-### Odotettu tuotos
-- Täytetty kontekstin komponentit -taulukko
-- Täytetty promptin elementit -taulukko
-- Lopullinen konteksti-prompti (200–350 sanaa), joka on valmis käyttää tekoälylle
-- Palauteteksti toiselta ryhmän jäseneltä (2–3 lausetta)
+- Mikä oli huonon ja hyvän version välillä suurin ero?
+- Mikä viidestä kontekstin osasta (rooli, tausta, tavoite, rajaukset, formaatti) toi mielestäsi suurimman parannuksen?
+- Mitä iterointi (vaihe 3) muutti — ja mitä tämä kertoo siitä, miten tekoälyä kannattaa käyttää jatkossa?
+- Yhden lauseen sääntö, jonka otat tästä mukaan: *"Jatkossa annan tekoälylle aina…"*
 
-**Jos teet tehtävän yksin:**
-Täytä taulukot omasta ongelmastasi, kirjoita lopullinen konteksti-prompti ja lue se ääneen. Kysy itseltäsi: "Voiko tekoäly ymmärtää, mitä haluan? Puuttuuko jokin kriittinen tieto?"
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säästä tämä oma muistiinpanodokumentti tarkasti. Vaiheessa 5 kirjoittamasi *"Jatkossa annan tekoälylle aina…"* -sääntö on yksi tärkeimmistä asioista, jonka viet koko kurssilta mukanasi.
 
----
-
-## Tehtävä 4.3: Iteratiivinen kontekstin ja promptin parantaminen
-
-### Tavoite
-Ymmärtää, kuinka ammattilaiset rakentavat kontekstia iteratiivisesti — ensimmäinen prompti antaa perusvastauksen, seuraavat promptit tarkentavat kontekstia ja terävöivät promptia. Kokeile, kuinka kierros kierrokselta saadaan yhä parempia tuloksia.
-
-### Ohjeet (ryhmätehtävä, 2–3 henkilöä tai yksin)
-
-1. **Tehtävä: Rakenna konkreettinen ratkaisu iteratiivisesti**
-
-   Valitse yksi IT-tehtävä ja rakenna ratkaisua neljässä kierroksessa:
-   - Esimerkiksi: "Python-validointifunktio sähköpostille"
-   - Tai: "SQL-kysely tiettyjä tietoja varten"
-   - Tai: "JavaScript-komponentti käyttöliittymälle"
-
-2. **Kierros 1 — Peruskonteksti ja -prompti**
-   - Kirjoita yksinkertainen, perusluontoinen konteksti-prompti.
-   - Esimerkki: "Kirjoita Python-funktio, joka validoi sähköpostiosoitteen."
-   - Dokumentoi: Mitä sait vastaukseksi?
-
-3. **Kierros 2 — Lisää spesifisyyttä**
-   - Tarkenna kontekstia: Lisää taustaa, kuka olet, mitä tarvitset.
-   - Tarkenna promptia: Lisää rajoituksia, formaatti-vaatimuksia.
-   - Esimerkki: "Lisää docstring ja kommentit. Hylkää välilyönnit. Käytä regex-kuviota."
-   - Dokumentoi: Mitä muuttui? Oliko vastaus parempi?
-
-4. **Kierros 3 — Laajennus**
-   - Kehitä tehtävää eteenpäin: Lisää uusia vaatimuksia.
-   - Esimerkki: "Nyt kirjoita tälle funktiolle testit. Käytä assert-lauseita. Sisällytä vähintään 3 testiä."
-   - Dokumentoi: Kuinka hyvin tekoäly säilytti edellisen kontekstin? Integroituiko uusi tehtävä hyvin?
-
-5. **Kierros 4 — Viimeistely**
-   - Tarkenna entisestään tai muuta formaattia.
-   - Esimerkki: "Muuta testit pytest-muotoon. Lisää erikoistapaus: osoite ilman @-merkkiä."
-   - Dokumentoi: Kuinka hyvä oli lopputulos?
-
-6. **Yhteenvetotaulukko**
-   - Täytä taulukko:
-
-| Kierros | Konteksti-promptin fokus | Saatu vastaus (lyhyt yhteenveto) | Mitä parannettiin | Konteksti säilyi |
-|---------|--------|----------|---------|-----|
-| 1 | Perusvaatimus | [yhteenveto] | Perusratkaisu saatu | - |
-| 2 | [mitä lisäsit] | [yhteenveto] | [mitä paransi] | Kyllä/Ei |
-| 3 | [mitä lisäsit] | [yhteenveto] | [mitä paransi] | Kyllä/Ei |
-| 4 | [mitä lisäsit] | [yhteenveto] | [mitä paransi] | Kyllä/Ei |
-
-7. **Johtopäätös**
-   - Kirjoita 3–4 lauseen mittainen johtopäätös:
-     - Miten iteratiivinen lähestyminen auttoi ratkaisun muodostumisessa?
-     - Miksi ei kannata yritää antaa kaikkea yhdessä suuressa promptissa?
-     - Kuinka tämä prosessi eroaa suurpromptin kirjoittamisesta?
-     - Mitä oppisit ammattilaisella käytöllä?
-
-### Odotettu tuotos
-- Neljä dokumentoitua kierrosta (konteksti-prompti, vastaus, muistiinpanot)
-- Täytetty yhteenvetotaulukko
-- 3–4 lauseen mittainen johtopäätös iteratiivisesta prosessista
-- (Valinnainen: kuvakaappaukset tai tekstinäytteet jokaisesta kierroksesta)
-
-**Jos teet tehtävän yksin:**
-Tee neljä kierrosta samalla tavalla ja dokumentoi ne. Voit valita minkä tahansa IT-tehtävän.
-
----
-
-## Lisäresurssit ja vinkit
-
-- Muista: konteksti on pohja, prompti on kysymys sen päälle.
-- Ammattilaiset rakentavat kontekstia kierros kierrokselta, eivätkä yritä antaa kaikkea kerralla.
-- Hyvä konteksti vaatii ajattelua, mutta säästää aikaa myöhemmin.
-- Testaa — näe, kuinka eri kontekstin ja promptin elementit vaikuttavat vastauksiin.
+**Tunnin 4 jälkeen osaat antaa tekoälylle kontekstin, joka tuottaa käyttökelpoisia vastauksia.**
