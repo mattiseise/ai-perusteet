@@ -140,7 +140,7 @@ Kun opit käyttämään n8n:ää, muista: **jokainen lohko, jonka vedät ruudull
 
 ## Kohti omaa projektia
 
-Tämä on viimeinen suunnitteluaskel ennen rakentamista. Sinulla on nyt kaikki viisi projektin aihiota: ongelma (oppitunti 19), muisti (oppitunti 21), päättelymalli (oppitunti 23), turvakerros (oppitunti 24) ja ihmisen rooli (tämä oppitunti). Yhdessä ne muodostavat kattavan suunnitelman, jonka pohjalta rakennat n8n-työnkulun oppitunneilla 26–27. Käy aihiot vielä kerran läpi ennen rakentamista ja varmista, että ne muodostavat yhtenäisen kokonaisuuden.
+Tämä on viimeinen suunnitteluaskel ennen rakentamista. Sinulla on nyt kaikki viisi ⭐️ Agentti -pohjapiirrosta: Ongelma (tunti 19), Muisti (tunti 21), Päättely (tunti 23), Turva (tunti 24) ja Ihminen (tämä tunti). Yhdessä ne muodostavat kattavan suunnitelman, jonka pohjalta rakennat n8n-työnkulun tunneilla 26–27. Käy pohjapiirrokset vielä kerran läpi ennen rakentamista ja varmista, että ne muodostavat yhtenäisen kokonaisuuden.
 
 ## Yhteenveto
 

@@ -10,7 +10,7 @@ Tärkeä periaate tähän tuntiin: aloita pienestä. Rakenna ensin yksinkertaisi
 
 Avaa n8n ja luo uusi työnkulku. Aloita triggeristä — se on aina ensimmäinen solmu. Jos rakennat chatbottia, triggeri on webhook. Jos rakennat ajastettua automaatiota, se on Schedule Trigger. Jos haluat testata käsin, käytä Manual Trigger -solmua — se käynnistää työnkulun napin painalluksella.
 
-Lisää seuraavaksi yksi toimintasolmu. Vain yksi. Jos rakennat FAQ-bottia, lisää OpenAI-solmu ja kirjoita siihen yksinkertainen system prompt: "Olet FAQ-botti. Vastaa lyhyesti ja selkeästi." Anna sille testikysymys ja paina "Execute". Näetkö vastauksen? Hyvä — ensimmäinen vaihe toimii.
+Lisää seuraavaksi yksi toimintasolmu. Vain yksi. Jos rakennat FAQ-bottia, lisää tekoälysolmu ja kirjoita siihen yksinkertainen system prompt: "Olet FAQ-botti. Vastaa lyhyesti ja selkeästi." Anna sille testikysymys ja paina "Execute". Näetkö vastauksen? Hyvä — ensimmäinen vaihe toimii.
 
 Nyt lisää seuraava solmu. Jos tarvitset kontekstitietoa (esimerkiksi FAQ-tietokantaa), lisää Google Sheets -solmu, joka lukee tiedot ennen tekoälysolmua. Yhdistä solmut viivalla. Testaa taas. Toimiiko datavirtaus? Saako tekoäly oikean kontekstin?
 

@@ -142,7 +142,7 @@ Nämä neljä kerrosta rakentuvat toistensa päälle — sipulin kuorilla. Jokai
 
 ## Kohti omaa projektia
 
-Neljä turvakerrosta — validointi, rajoitus, seuranta ja palautuminen — ovat suunnittelukehys, jota käytät omassa projektissasi. Mieti omaa agenttiasi: mitkä ovat sen suurimmat riskit, miten rajoitat sen oikeudet minimiin ja mitä lokitat? Nämä päätökset muodostavat projektin aihion 4, joka on turvasuunnitelmasi. Kun rakennat n8n-työnkulkua oppitunnilla 26, turvakerros tarkoittaa konkreettisia IF-solmuja ja validointeja.
+Neljä turvakerrosta — validointi, rajoitus, seuranta ja palautuminen — ovat suunnittelukehys, jota käytät omassa projektissasi. Mieti omaa agenttiasi: mitkä ovat sen suurimmat riskit, miten rajoitat sen oikeudet minimiin ja mitä lokitat? Nämä päätökset muodostavat ⭐️ Agentti: Turva -pohjapiirroksen, joka on turvasuunnitelmasi. Kun rakennat n8n-työnkulkua tunnilla 26 ja viimeistelet sitä tunnilla 27, turvakerros tarkoittaa konkreettisia IF-solmuja ja validointeja.
 
 ## Yhteenveto
 

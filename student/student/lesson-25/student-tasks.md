@@ -1,72 +1,87 @@
 # Opiskelutehtävät: Ihminen portinvartijana — human-in-the-loop
 
-## Projektin aihio 5: Suunnittele ihmisen rooli
+> Tämä tunti rakentaa lopputyösi viimeistä osaa. Tuotos: **⭐️ Agentti: Ihminen** (5/5).
 
-Tämä on viimeinen viidestä projektin aihiosta, jotka keräät Agentit-osion aikana. Käytät näitä aihioita oppitunneilla 26–27, kun rakennat oman n8n-agenttityönkulun ja esittelet sen. Säilytä tämä huolellisesti.
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin ⭐️ Agentti: Ihminen -tehtävää.*
+
+> 💡 **Vinkki:** Ihmisen rooli voi olla pieni tai iso. Yksinkertaisessa FAQ-botissa ihmistä ei välttämättä tarvita lainkaan; kriittisiä päätöksiä tekevässä agentissa hyväksyntäportteja on useampi.
+
+---
+
+## ⭐️ Agentti: Ihminen 🟢 SUOSITELTU
+
+**Miksi tämä on tärkeää:** Tunnilla 27 lisäät hyväksyntäsolmuja n8n:ssä. Hyvin suunniteltu human-in-the-loop on tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.
 
 ### Tehtävä
 
-Palaa projektin aihioihin 1–4 (oppitunnit 19, 21, 23 ja 24), joissa valitsit ongelman, suunnittelit muistin, päättelymallin ja turvakerroksen. Suunnittele nyt, missä kohtaa ihminen on mukana agenttisi työnkulussa. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat neljään kysymykseen: Missä kohdissa agenttisi työnkulkua ihmisen täytyy hyväksyä tai hylätä agentin päätös? Millainen hyväksyntäportti on — mitä tietoa ihminen näkee ja miten nopeasti hänen täytyy reagoida? Mitä tapahtuu, jos ihminen ei vastaa ajoissa? Miten agentti voi oppia ihmisen päätöksistä ajan myötä?
+Avaa muistiinpanoistasi aiemmat ⭐️ Agentti -pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:
 
-### Miksi tämä on tärkeä
+**1. Missä kohdissa ihmisen täytyy hyväksyä.**
 
-Oppitunneilla 26–27 rakennat n8n-työnkulun, jossa ihmisen rooli tarkoittaa konkreettisia hyväksyntäsolmuja. Ilman tätä suunnitelmaa et tiedä, mihin kohtiin työnkulkuasi tarvitset pysäytyskohtia. Yhdessä aihioiden 1–4 kanssa sinulla on nyt kattava suunnitelma koko agenttiprojektillesi.
+*Käsite:* hyväksyntäportti = kohta työnkulussa, jossa agentti pysähtyy odottamaan ihmisen päätöstä.
 
-Alla olevat harjoitustehtävät auttavat sinua ymmärtämään, milloin ihmisen osallistuminen on välttämätöntä ja miten hyväksyntäportit suunnitellaan käytännössä.
+*Kolme yleistä sääntöä, milloin ihmistä tarvitaan:*
 
----
+- **Raha tai sitoutuminen:** päätös vaikuttaa rahaan, asiakassuhteeseen tai sopimukseen
+- **Epävarmuus:** agentti ei ole varma vastauksesta
+- **Poikkeama:** tapahtuu jotain epätavallista
 
-## Tehtävä 25.1: Milloin ihminen täytyy päätökseen? — kolme sääntöä
+*Esimerkki:* "Ihmisen täytyy hyväksyä, kun agentti aikoo antaa yli 10 % alennuksen (raha) tai kun luotettavuus on alle 80 % (epävarmuus)."
 
-### Tavoite
-Oppia tunnistamaan, mitkä päätökset vaativat ihmisen hyväksynnän. Tämä auttaa sinua projektin aihiossa määrittelemään, mihin kohtiin oma agenttisi tarvitsee hyväksyntäportteja.
+*Sinun vuorosi:* Tunnista 1–3 kohtaa agenttisi työnkulussa. Voit kirjoittaa myös "ihmistä ei tarvita" — perustele silloin miksi.
 
-### Ohjeet
+**2. Millainen hyväksyntäportti on.**
 
-Sinulla on kuusi agenttipäätöstä. Jokaiselle päätä, tarvitaanko ihmisen hyväksyntä (kyllä, ei tai ehkä), perustele valinta kolmen säännön avulla (rahaa tai rakenne, epävarmuus, poikkeama) ja tunnista, kuka hyväksyy (asiakaspalvelupäällikkö, myyntipäällikkö, tekniikkajohtaja).
+*Käsite:* hyvä hyväksyntäportti antaa ihmiselle kaiken tarvittavan tiedon kerralla. Päätös pitää voida tehdä 30 sekunnissa.
 
-Päätökset:
+*Esimerkki:* "Asiakas X (10 v. asiakkuus) pyytää 25 % alennusta. Agentti ehdottaa hyväksyntää. Hyväksy / Hylkää."
 
-1. Asiakas haluaa tuotteen väriä vaihtaa (väri on varastossa)
-2. Asiakas haluaa 50 % alennusta pitkässä sopimuksessa
-3. Asiakas kysyy "Mikä on hinta?"
-4. Uusi liikekumppani haluaa integroida tietokantamme
-5. Asiakas haluaa palauttaa tuotteen (palautusaika on voimassa)
-6. Agentti löytää asiakkaan lokeista anomalian (100 ostoa yhdessä tunissa)
+*Sinun vuorosi:* Kuvaa, miten oman agenttisi hyväksyntäportti näyttää: kanava (Slack, sähköposti), tieto, vastaustapa.
 
----
+**3. Mitä tapahtuu, jos ihminen ei vastaa.**
 
-## Tehtävä 25.2: Hyväksyntäportti — selkeä ja nopea
+*Käsite:* varasuunnitelma jokaiselle hyväksyntäportille. Strategiat: **oletushylkäys** (24 h kuluttua hylätään), **oletushyväksyntä** (jatketaan — vain matalan riskin päätöksissä) tai **eskalointi** (siirtyy toiselle henkilölle).
 
-### Tavoite
-Oppia suunnittelemaan hyväksyntäportti, jonka ihminen voi käydä läpi nopeasti. Tämä on suoraan käytettävissä projektin aihiossa ja n8n-työnkulussa.
+*Esimerkki:* "Jos päällikkö ei vastaa 4 h:ssa, asia eskaloituu varapäällikölle."
 
-### Ohjeet
+*Sinun vuorosi:* Valitse jokaiselle hyväksyntäportille varasuunnitelma.
 
-Muotoile hyväksyntäportti seuraavalle tilanteelle: "Asiakas pyytää 50 % alennusta pitkälle sopimukselle. Agentti ehdottaa hyväksyntää."
+> **Sivumaininta: oppiminen palautteesta.** Edistyneissä järjestelmissä agentti voi seurata, mitä ihminen hyväksyy ja oppia ajan myötä. Lopputyösi mittakaavassa tämä on yliampuva ratkaisu.
 
-Portin pitäisi sisältää: mitä päätöstä pyydetään, ketä se koskee, miksi agentti ehdottaa hyväksyntää, mitä tapahtuu jos hyväksyy, mitä tapahtuu jos hylkää ja mitä tehdään jos vastaus ei tule 24 tunnissa. Tavoite on, että ihminen voi käydä portin läpi 30 sekunnissa.
+### Tekoälyvaihe — testaa hyväksyntäporttisi
 
----
+```
+Olen suunnitellut agentilleni seuraavan hyväksyntäportin: [liitä].
+Aseta itsesi sen henkilön asemaan, joka saa tämän viestin keskellä
+työpäivää. Pystytkö tekemään päätöksen 30 sekunnissa? Mitä tietoa
+puuttuu? Mikä on epäselvää?
+```
 
-## Tehtävä 25.3: Human-in-the-loop-työnkulku
-
-### Tavoite
-Ymmärtää, miten agentti ja ihminen tekevät yhteistyötä monivaiheisessa prosessissa. Tämä auttaa sinua projektin aihiossa hahmottamaan, miltä oman agenttisi hybridi-työnkulku näyttää kokonaisuutena.
-
-### Ohjeet
-
-Kuvittele palautuspyynnön käsittelyä viidessä vaiheessa: agentti analysoi asiakkaan viestin, hyväksyntäportti 1 (onko palautusaika voimassa?), agentti lähettää palautustiedot, hyväksyntäportti 2 (tarjotaanko alennusta seuraavaan tilaukseen?) ja agentti lähettää jatkoviestin.
-
-Kirjoita kustakin vaiheesta, mitä agentti tekee, mikä on hyväksyntäportin kysymys (jos on), mitä ihminen vastaa ja mitä agentti tekee seuraavaksi.
+> 💡 **Vinkki muistiinpanoihin:** Tämä on 5/5 — kaikki pohjat ovat nyt koossa.
 
 ---
 
-## Tehtävä 25.4: Agentin oppiminen palautteesta
+## Tehtävä 25.1 — Milloin ihmistä tarvitaan? 🟣 SYVENTÄVÄ
 
-### Tavoite
-Ymmärtää, miten ihmisen päätökset voivat ohjata agentin toimintaa ajan myötä — ja mitä riskejä siihen liittyy.
+### Tehtävä
 
-### Ohjeet
+Kuusi agenttipäätöstä. Päätä jokaiselle, tarvitaanko ihmisen hyväksyntä, ja perustele kolmen säännön avulla (raha / epävarmuus / poikkeama).
 
-Kuvittele agenttia, joka tekee alennusehdotuksia. Sillä on kaksi hyväksyjää: hyväksyjä A hyväksyy suuret alennukset (40–50 %) ja hyväksyjä B hyväksyy vain pienet (10–15 %). Kuvaile, miten agentti voisi oppia näistä eroista, miten se mukauttaisi ehdotuksensa eri hyväksyjille, mitä dataa se tallentaa tätä varten ja mitä riskejä oppimiseen liittyy (entä jos agentti oppii väärät asiat?).
+| Agentin päätös | Ihmistä tarvitaan? | Perustelu |
+|---|---|---|
+| Asiakas haluaa 50 % alennuksen pitkälle sopimukselle | **KYLLÄ** | Raha — iso alennus vaatii myyntipäällikön päätöksen |
+| Asiakas kysyy: "Mikä on tuotteen hinta?" | **EI** | Tieto suoraan saatavilla, ei rahaa eikä epävarmuutta |
+| Asiakas haluaa vaihtaa tuotteen väriä (väri varastossa) | ? | |
+| Uusi liikekumppani pyytää integraatiota tietokantaamme | ? | |
+| Asiakas haluaa palauttaa tuotteen (palautusaika voimassa) | ? | |
+| Agentti havaitsee lokeista 100 ostoa yhden tunnin sisällä | ? | |
+
+### Sovellus omaan agenttiin
+
+Listaa 4–5 yleisintä päätöstä omalle agentillesi. Sama analyysi.
+
+> 💡 **Vinkki muistiinpanoihin:** Jos taulukko muuttaa käsitystäsi, päivitä ⭐️ Agentti: Ihminen.
+
+---
+
+**⭐️ Agentti: Ihminen valmis — kaikki 5/5 pohjapiirrosta koossa, seuraavaksi rakentaminen**

@@ -1,85 +1,55 @@
 # Opiskelutehtävät: Suunnittelumallit — ReAct ja ketjuajattelu
 
-## Projektin aihio 3: Valitse päättelymalli
+> Tämä tunti rakentaa lopputyösi kolmatta osaa. Tänään päätät, miten agenttisi ajattelee. Tuotos: **⭐️ Agentti: Päättely** (3/5).
 
-Tämä on kolmas viidestä projektin aihiosta, jotka keräät Agentit-osion aikana. Käytät näitä aihioita oppitunneilla 26–27, kun rakennat oman n8n-agenttityönkulun ja esittelet sen. Säilytä tämä huolellisesti.
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin ⭐️ Agentti: Päättely -tehtävää.*
+
+---
+
+## ⭐️ Agentti: Päättely 🟢 SUOSITELTU
+
+**Miksi tämä on tärkeää:** Päättelymalli määrittää, miten agenttisi ajattelee. Väärä valinta johtaa joko turhiin iteraatioihin tai liian jäykkään prosessiin.
 
 ### Tehtävä
 
-Palaa projektin aihioihin 1 ja 2 (oppitunnit 19 ja 21), joissa valitsit ongelman ja suunnittelit muististrategian. Valitse nyt agenttisi päättelymalli. Kirjoita lyhyt perustelu (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Kumpi malli sopii paremmin omaan ongelmaasi — ReAct (ajattele-toimi-ajattele) vai ketjuajattelu (vaihe vaiheelta)? Miksi tämä malli sopii juuri sinun käyttötapaukseesi? Tarvitseeko ongelmasi useamman agentin yhteistyötä (moniagenttijärjestelmä) vai riittääkö yksi agentti?
+Avaa muistiinpanoistasi aiemmat ⭐️ Agentti -pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:
 
-### Miksi tämä on tärkeä
+**1. Päättelymalli (ReAct vai ketjuajattelu).** Kumpi malli sopii paremmin omaan ongelmaasi? **ReAct** (ajattele → toimi → havainnoi → ajattele uudelleen) sopii, kun agentti tarvitsee reagoida työkalujen palautteeseen. **Ketjuajattelu** (vaihe 1 → vaihe 2 → vaihe 3) sopii, kun prosessi on selkeästi peräkkäinen.
 
-Päättelymalli määrittää, miten agenttisi ajattelee. ReAct sopii tilanteisiin, joissa agentti tarvitsee reaaliaikaista palautetta työkaluiltaan, kun taas ketjuajattelu sopii tilanteisiin, joissa ongelma on pilkottavissa selkeisiin vaiheisiin. Väärä valinta johtaa joko turhiin iteraatioihin tai liian jäykkään prosessiin. Tämä aihio varmistaa, että valitset tietoisesti — et vain oletuksena.
+**2. Perustelu.** Miksi tämä malli sopii juuri sinun käyttötapaukseesi?
 
-Alla olevat harjoitustehtävät auttavat sinua ymmärtämään eri päättelymallien vahvuudet ja rajoitukset käytännössä, jotta valintasi projektin aihiossa on perusteltu.
+**3. Päättelymalli n8n-rakenteena.** Miten päättelymallisi näkyy konkreettisesti n8n-työnkulussa? ReActissa tarvitset usein silmukan tekoälysolmun ja työkalujen välillä. Ketjuajattelussa työnkulku on lineaarisempi.
 
----
+> **Sivumaininta: moniagenttijärjestelmät.** Monimutkaisissa, oikean elämän projekteissa agentit voivat tehdä yhteistyötä — yksi erikoistuu tiedonhakuun, toinen kirjoittaa, kolmas tarkistaa lopputuloksen. Tätä kutsutaan moniagenttijärjestelmäksi. Lopputyösi mittakaavassa (3–5 solmua) tämä on yliampuva ratkaisu. Yksi hyvin suunniteltu agentti riittää.
 
-## Tehtävä 23.1: ReAct-malli — ajattele, toimi, ajattele uudelleen
-
-### Tavoite
-Kokea käytännössä, miten ReAct-prosessi toimii vaihe vaiheelta. Tämä auttaa sinua projektin aihiossa arvioimaan, sopiiko ReAct omaan ongelmaasi.
-
-### Ohjeet
-
-Kuvittele agenttia, joka käsittelee seuraavaa pyyntöä: "Asiakas haluaa tuotteen väriä muuttaa tilauksesta #12345. Väri on sininen, haluttu väri on punainen."
-
-Kirjoita ReAct-prosessi, jossa jokainen vaihe näkyy lokimerkintänä:
+### Tekoälyvaihe — sparraa päättelyvalintaa
 
 ```
-[AJATTELU]: ...
-[TOIMINTA]: ...
-[HAVAINTO]: ...
-[AJATTELU]: ...
-[TOIMINTA]: ...
+Olen valinnut agentilleni [ReAct / ketjuajattelu] -mallin. Agenttini
+tehtävä on [kuvaa]. Perusteluni on [kuvaa]. Toimi sparrauskumppanina
+ja kysy 2–3 kysymystä, jotka paljastavat, onko valintani perusteltu
+vai sopisiko toinen malli paremmin.
 ```
 
-Kirjoita lopuksi yhteenveto: mitä agentti oppi prosessin aikana ja missä kohtaa se olisi voinut tehdä virheen?
+> 💡 **Vinkki muistiinpanoihin:** Tämä on 3/5 lopputyösi osista.
 
 ---
 
-## Tehtävä 23.2: Ketjuajattelu — vaihe vaiheelta
+## Tehtävä 23.1 — ReAct vs. ketjuajattelu — milloin käytät mitä? 🟣 SYVENTÄVÄ
 
-### Tavoite
-Kokea käytännössä, miten ketjuajattelu pilkkoo ongelman selkeisiin vaiheisiin. Tämä auttaa sinua projektin aihiossa arvioimaan, sopiiko ketjuajattelu omaan ongelmaasi.
+### Tehtävä
 
-### Ohjeet
+Neljä tehtävää. Päätä jokaisen kohdalla, sopiiko ReAct vai ketjuajattelu paremmin:
 
-Palautuspyynnön käsittely on hyvä esimerkki ketjuajattelusta. Pyyntö: "Haluan palauttaa tuotteen, joka tuli kolme päivää sitten."
+- **A:** "Asiakkaan tili on jäädytetty. Avaa se."
+- **B:** "Asiakas ei ole varma, mitä tuotetta hän haluaa. Auta valitsemaan."
+- **C:** "Tilaus on epätavallinen (negatiivinen hinta). Tarkista."
+- **D:** "Asiakkaalle tulee joka kuukausi tilaukseen ongelma. Ratkaise juurisyy."
 
-Kirjoita ketjuajatteluprosessi viidessä vaiheessa: selvitä asiakkaan pyyntö, tarkista palautusaika, tarkista yrityksen palautuskäytäntö, tee päätös ja toteuta toimenpide. Jokaiselle vaiheelle kirjoita, mitä agentti tarkistaa ja mitä voi mennä pieleen.
+Jokaisesta tehtävästä: päättelymalli, perustelu 1–2 lauseella, arvio kuinka monta vaihetta/iteraatiota.
 
----
-
-## Tehtävä 23.3: ReAct vs. ketjuajattelu — milloin käytät mitä?
-
-### Tavoite
-Oppia valitsemaan oikea päättelymalli ongelman luonteen perusteella. Tämä on suoraan hyödyllinen projektin aihion kirjoittamisessa.
-
-### Ohjeet
-
-Sinulla on neljä tehtävää:
-
-**A:** "Asiakkaan tili on jäädytetty. Avaa se."
-
-**B:** "Asiakas ei ole varma, mitä tuotetta hän haluaa. Auta valitsemaan."
-
-**C:** "Tilaus on epätavallinen (negatiivinen hinta). Tarkista."
-
-**D:** "Asiakkaalle tulee joka kuukausi tilaukseen ongelma. Ratkaise juurisyy."
-
-Jokaiselle tehtävälle päätä, sopiiko ReAct vai ketjuajattelu paremmin, perustele miksi ja arvioi, kuinka monta vaihetta tai iteraatiota tarvitaan.
+> 💡 **Vinkki muistiinpanoihin:** Jos analyysi muuttaa käsitystäsi oman agenttisi sopivasta mallista, päivitä ⭐️ Agentti: Päättely.
 
 ---
 
-## Tehtävä 23.4: Moniagenttijärjestelmä — erikoistuneet agentit
-
-### Tavoite
-Ymmärtää, miten useampi agentti voi tehdä yhteistyötä ja milloin se on perusteltua. Tämä auttaa sinua projektin aihiossa arvioimaan, riittääkö yksi agentti vai tarvitseeko ongelmasi useampia.
-
-### Ohjeet
-
-Kuvittele moniagenttijärjestelmää, jossa on neljä agenttia: analyysi-agentti (lukee asiakkaan viestin), tiedonhaku-agentti (hakee asiakkaan historian), kirjoitus-agentti (kirjoittaa vastauksen) ja validointi-agentti (tarkistaa, onko vastaus turvallinen).
-
-Kuvaile lyhyesti (150–200 sanaa), miten nämä neljä agenttia toimivat yhdessä: mikä agentti aloittaa, miten tieto kulkee agentilta toiselle, missä vaiheessa johtaja-agentti päättää seuraavasta askeleesta ja mitä tapahtuu, jos validointi-agentti löytää ongelman.
+**⭐️ Agentti: Päättely valmis — 3/5 lopputyöstä koossa**

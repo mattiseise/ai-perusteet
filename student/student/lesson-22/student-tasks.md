@@ -1,138 +1,85 @@
-# Tehtävät – Lesson 22: Agentin työkalut — haku, tiedostot, komennot
+# Opiskelutehtävät: Agentin työkalut — tiedostot, haku ja komennot
 
-## Tehtävä 1: Työkalujen turvallisuus — whitelist-mallit
+> Tämä tunti tarkentaa lopputyösi työkaluvalintoja. Tunneilla 19 ja 21 olet määritellyt ongelman ja muistirakenteen. Tänään harjoittelet työkalujen valintaa.
 
-Rakennat agentin, jolla on pääsy kolmeen työkaluun: tiedostot (lukea/kirjoittaa), verkkohaku ja CLI-komennot. Jokaisen työkalun täytyy olla turvallinen.
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet työkalu-tehtävän — se sparraa suoraan lopputyösi rakentamista.*
+
+---
+
+## Tehtävä 22.1 — Oikea työkalu oikeaan tehtävään 🟢 SUOSITELTU
+
+**Miksi tämä on tärkeää:** Agentin teho riippuu siitä, mitä työkaluja se osaa käyttää. Mutta kaikkia työkaluja ei tarvita aina — usein vähemmän on enemmän.
 
 ### Tehtävä
 
-Kutakin työkalua kohden suunnittele **whitelist** — luettelo, mitä agentti saa tehdä:
+Sinulla on kolme erilaista agenttitehtävää:
 
-**Tiedostot**:
-- Mitä kansiota agentti voi lukea?
-- Mitä kansiota voi kirjoittaa?
-- Mitä kansiota ei saa koskea?
+**Tehtävä A: Asiakkaan laskun käsittely.** Agentti vastaanottaa asiakkaan kysymyksen laskusta, hakee laskutiedot tietokannasta ja vastaa asiakkaalle.
 
-**Verkkohaku**:
-- Mitä sivustoja agentti voi hakea? (esim. vain Wikipedia, hallituksen sivustot)
-- Mitä asiaa ei saa hakea? (henkilötiedot, salaisuudet)
+**Tehtävä B: Päivittäinen kyberturvatilan raportti.** Agentti seuraa kyberturvasivuja netissä, kokoaa uusimmat uhkat yhteen ja kirjoittaa raportin tiedostoon.
 
-**CLI**:
-- Mitä komentoja agentti voi ajaa? (esim. `ls`, `mkdir`, mutta ei `rm`, `sudo`)
+**Tehtävä C: Palvelimen lokin analyysi.** Agentti lukee palvelimen lokitiedostoja, tunnistaa virhetilanteet ja ilmoittaa niistä IT-tiimille.
 
-**Vastausmuoto**: Taulukko tai luetelma
+### Vastausohje
+
+Jokaisesta tehtävästä päätä:
+
+1. **Tarvitseeko verkkohakua?** Miksi tai miksi ei?
+2. **Tarvitseeko tiedostojen luku- tai kirjoitusoikeutta?** Mihin tiedostoihin?
+3. **Tarvitseeko sähköpostin tai chat-viestin lähetystä?** Mille kanavalle?
+4. **Tarvitseeko tietokantakyselyitä?** Mistä tietokannasta?
+
+Kirjoita kuhunkin tehtävään lyhyt työkalulista — eli mitä n8n-solmuja agentti tarvitsisi.
+
+### Sovellus omaan agenttiin
+
+Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma. Käy sama analyysi sille:
+
+- Tarvitseeko agenttisi verkkohakua? Tiedostojen käsittelyä? Viestien lähetystä? Tietokantakyselyitä?
+- Listaa lopuksi, mitä n8n-solmuja tarvitset minimissään.
+- Mieti: voitko karsia jotain? Liian monta työkalua tekee agentista hauraan.
+
+### Tekoälyvaihe — haasta työkaluvalinnat
+
+```
+Olen valinnut agentilleni seuraavat työkalut: [listaa]. Agentin
+tehtävä on [kuvaa]. Toimi sparrauskumppanina ja kysy 2–3 kysymystä,
+joiden avulla voin arvioida, onko jokin työkalu ylimääräinen tai
+puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
+```
+
+> 💡 **Vinkki muistiinpanoihin:** Kirjaa muistiinpanoihisi agenttisi minimiltyökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.
 
 ---
 
-## Tehtävä 2: Kolmen työkalun orkestrointi
+## Tehtävä 22.2 — Tutustu n8n-työnkulkuun 🟣 SYVENTÄVÄ
 
-Kuvittele analytiikka-agenttia, joka tekee myyntiraportin:
-
-1. **Tiedosto**: Lukee `myyntitiedot_2026.csv`
-2. **Verkkohaku**: Etsii markkinatrendejä ja kilpailijatietoja
-3. **CLI**: Ajaa analyysiskriptin `python analyze_sales.py`
+**Miksi tämä on hyödyllinen:** Tunnilla 26 rakennat oman agenttisi n8n:ssä. Tämä tehtävä antaa ennakkonäkymän käyttöliittymään.
 
 ### Tehtävä
 
-Kuvaile, kuinka nämä kolme työkalua toimivat **järjestyksessä**:
-1. Mitä agentti tekee ensin?
-2. Mitä tapahtuu toiseksi?
-3. Mitä tapahtuu viimeksi?
-4. Kuinka tulokset yhdistetään?
+1. Avaa n8n selaimessa (opettaja antaa osoitteen ja tunnukset).
+2. Tuo esimerkkityönkulku ("Import from File", opettajan jakama tiedosto).
+3. Tutki työnkulkua ja vastaa kysymyksiin.
 
-Kirjoita prosessia kuvaava lyhyt "skenaarion" (150–200 sanaa).
+**A. Tunnista agentin osat.** Käy solmut läpi vasemmalta oikealle. Mahdolliset komponentit: **syötekäsittelijä, päättelijä, työkalu, turvakerros, tulosteen muotoilija**.
 
-**Arviointikriteerit**: Näytät, että ymmärrät, kuinka työkalut syöttävät toisiinsa.
+| Solmu (vasemmalta oikealle) | Mikä agentin osa tämä on? | Mitä se tekee? |
+|---|---|---|
+| Ensimmäinen | | |
+| Toinen | | |
+| Kolmas | | |
+| Neljäs | | |
+| Viimeinen | | |
 
----
+**B. Jäljitä tiedon kulku.** Kirjoita omin sanoin 3–4 lausetta: mistä data tulee sisään, mitä sille tapahtuu matkalla ja mitä tulee ulos.
 
-## Tehtävä 3: Riskianalyysi — entä jos menee pieleen?
+**C. Yhdistä teoriaan.** Mikä tunnin 22 työkalu (verkkohaku, tiedostot, viestit, tietokanta) on tässä työnkulussa käytössä? Jos haluaisit lisätä toisen työkalun, minkä lisäisit ja miksi?
 
-Rakennat agentin, jolla on pääsy:
-- Tiedostoihin: `/reports/` kansioon kirjoitus
-- Verkkohakuun: Wikipedia ja hallituksen sivustot
-- CLI-komentoihin: `ls`, `mkdir`, `cp`
+> 💡 **Vinkki muistiinpanoihin:** Pidä silmällä esimerkkiä, jotta tunnilla 26 tunnistat solmutyypit nopeammin.
 
-### Tehtävä
-
-Jokaiselle työkalulle: **Entä jos agentti tekee virheen?** Kuvaa kolme skenaariota:
-
-**Tiedostot**: "Agentti kirjoittaa raportin väärään tiedostoon..."
-**Verkkohaku**: "Agentti etsii salassa pitämiä tietoja..."
-**CLI**: "Agentti kutsuu komentoa `rm -rf /reports/`..."
-
-Kutakin kohden: mitä haittaa voi tulla? Miten sen olisit voinut estää?
-
-**Vastausmuoto**: Kolme skenaariota, kunkin alla riski + ehkäisy
+**Opettajalle:** tämä tehtävä vaatii esimerkki-n8n-työnkulun (esim. `esimerkki-agentti.json`), jonka jaat tunnin yhteydessä.
 
 ---
 
-## Tehtävä 4: Agentin suunnittelu — oikea työkalu oikeaan tehtävään
-
-Sinulla on kolme tehtävää:
-- A: Asiakkaan laskun käsittely (tarvitaan tietoja tietokannasta)
-- B: Päivittäisen kyberturvatilan raportti (internet + tiedostot)
-- C: Palvelimen lokin analyysi (lokit ovat paikallisia tiedostoja)
-
-### Tehtävä
-
-Jokaiselle tehtävälle päätä:
-1. Tarvitseeko **verkkohakua**? Miksi / miksi ei?
-2. Tarvitseeko **CLI-komentoja**? Mitkä?
-3. Tarvitseeko **tiedostojen kirjoitusoikeutta**? Minne?
-
-Kirjoita **jokaisen tehtävän työkalulista** (mitä agentti tarvitsee).
-
----
-
----
-
-## Tehtävä: Tutustu n8n-työnkulkuun — tunnista agentin osat
-
-### Tavoite
-Nähdä ensimmäistä kertaa, miltä tekoälyagentti näyttää oikeassa työkalussa. Et rakenna vielä mitään — tutkit valmiin esimerkin.
-
-### Ohjeet
-
-1. **Avaa n8n** selaimessa (opettaja antaa osoitteen).
-
-2. **Tuo esimerkkityönkulku:**
-   - Klikkaa ylävalikosta "Import from File"
-   - Valitse tiedosto `esimerkki-agentti.json` (opettaja jakaa tämän)
-   - Ruudullesi ilmestyy valmis työnkulku, jossa on 5 solmua (laatikkoa)
-
-3. **Tunnista agentin osat.** Katso jokaista solmua ja vastaa:
-
-   | Solmu (laatikko) | Mikä agentin osa tämä on? | Mitä se tekee? |
-   |---|---|---|
-   | Ensimmäinen (vasemmalla) | | |
-   | Toinen | | |
-   | Kolmas | | |
-   | Neljäs | | |
-   | Viimeinen (oikealla) | | |
-
-   Käytä näitä vaihtoehtoja: **syötekäsittelijä**, **päättelijä**, **työkalu**, **turvakerros**, **tulosteen muotoilija**
-
-4. **Jäljitä tiedon kulku.** Kirjoita omin sanoin (3–4 lausetta):
-   - Mistä data tulee sisään?
-   - Mitä sille tapahtuu matkalla?
-   - Mitä tulee ulos?
-
-5. **Yhdistä teoriaan.** Vastaa:
-   - Mikä oppitunnin 22 työkalu (tiedostot, verkkohaku, komennot) on tässä työnkulussa käytössä?
-   - Jos haluaisit lisätä toisen työkalun, minkä lisäisit ja miksi?
-
-### Odotettu tuotos
-- Täytetty taulukko (5 solmua tunnistettu)
-- Lyhyt kuvaus tiedon kulusta
-- Vastaus teoriakysymykseen
-
----
-
-## Pisteet
-
-- Tehtävä 1: Whitelistit ovat turvalliset ja perustelut selkeät
-- Tehtävä 2: Työkalujen järjestys on looginen ja selitetty
-- Tehtävä 3: Riskianalyysi on realistinen ja ehkäisyt käytännöllisiä
-- Tehtävä 4: Työkalulistan valinnat perusteltuja tehtävän tarpeisiin
-- n8n-tutustumis: Solmut tunnistettu oikein, tiedon kulku selitetty, teoriayhteys nähtävissä
+**Työkaluvalinnat tarkennettu — seuraavaksi päättelymalli**

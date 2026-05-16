@@ -1,70 +1,85 @@
-# Opiskelutehtävät: n8n-projektipaja, osa 1 — rakenna
+# Opiskelutehtävät: Kasaa suunnitelma ja rakenna minimiversio
 
-## Agentit-osion arvioitava projekti (osa 1/2)
+> Tämä on Agentit-osion lopputyön rakennustunti. Tänään kasaat viisi pohjapiirrostasi yhdeksi suunnitelmaksi, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.
 
-Oppitunneilla 26 ja 27 rakennat oman n8n-agenttityönkulun, testaat sen ja esittelet tuloksen. Tämä on Agentit-osion arvioitava projekti. Käytä kaikkia viittä projektin aihiota, jotka olet kerännyt oppitunneilla 19, 21, 23, 24 ja 25.
-
-Projekti jakautuu kahteen osaan: oppitunnilla 26 rakennat työnkulun ja oppitunnilla 27 testaat, dokumentoit ja esittelet sen.
-
-### Mitä rakennat?
-
-Rakennat n8n-työnkulun, jossa on 3–5 solmua. Työnkulku toteuttaa ongelman, jonka valitsit projektin aihiossa 1. Käytössäsi on koulun palvelimen n8n-ympäristö, paikallinen Qwen-kielimalli ja M365-integraatiot (Outlook, Teams).
-
-Työnkulun perusrakenne on: triggeri → tekoälyagentti (Qwen) → 1–2 työkalua → vastaus. Tämä rakenne voi vaihdella ongelmasi mukaan, mutta jokaisen työnkulun täytyy sisältää vähintään triggeri, tekoälysolmu ja yksi toimintasolmu.
-
-### Miten käytät projektin aihioita?
-
-Aihio 1 (oppitunti 19) kertoo, mitä ongelmaa ratkaiset ja kenelle. Aihio 2 (oppitunti 21) kertoo, miten agentti muistaa asioita. Aihio 3 (oppitunti 23) kertoo, miten agentti ajattelee. Aihio 4 (oppitunti 24) kertoo, miten agentti on turvallinen. Aihio 5 (oppitunti 25) kertoo, missä kohdissa ihminen päättää. Sinun ei tarvitse toteuttaa kaikkia aihioiden suunnitelmia — 3–5 solmun työnkulku on tarkoituksella yksinkertainen. Mutta aihiot ohjaavat suunnittelupäätöksiäsi.
+*Tunnilla on kolme vaihetta. Kaikki kuuluvat lopputyöhön — tämä ei ole "valitse 1" -tunti.*
 
 ---
 
-## Tehtävä 26.1: Kokeile n8n:n perussolmut
+## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi 🟢 PAKOLLINEN
 
-### Tavoite
-Tutustua n8n:n käyttöliittymään ja perussolmuihin ennen oman projektin rakentamista.
+**Miksi tämä on tärkeää:** Yksittäisinä pohjapiirrokset ovat irrallisia päätöksiä. Yhdessä ne muodostavat suunnitelman.
 
 ### Ohjeet
 
-Avaa n8n ja rakenna yksinkertainen prototyyppityönkulku: luo uusi työnkulku, lisää Manual Trigger -solmu, lisää HTTP Request -solmu (GET-pyyntö osoitteeseen `https://api.github.com/zen`, joka palauttaa satunnaisen sitaatin) ja lisää kolmas solmu (esim. IF-ehto tai tekstinkäsittely), joka tekee jotain vastauksella. Testaa työnkulku.
+1. Avaa muistiinpanodokumenttisi (johon olet kerännyt pohjapiirroksesi).
+2. Luo uusi tiedosto otsikolla "Agenttisuunnitelma — [agenttisi nimi]".
+3. Kopioi viisi pohjapiirrostasi tiedostoon järjestyksessä 1–5.
+4. Lue ne läpi yhtenä kokonaisuutena. *Onko tämä johdonmukainen agentti?*
+5. Korjaa tarvittaessa.
 
-Täytä havaintotaulukko:
+### Tekoälyvaihe — sparraa kokoamista
 
-| Solmu | Mitä se tekee | Miten se muuttaa dataa | Seuraavalle solmulle siirtyvä data |
-|-------|---------------|------------------------|------------------------------------|
-| Manual Trigger | | | |
-| HTTP Request | | | |
-| Kolmas solmu | | | |
+```
+Olen kirjoittanut viisi pohjapiirrosta agentistani, jonka aion
+rakentaa n8n:ssä. Lue ne ja kysy minulta 3–5 kysymystä, jotka
+paljastavat mahdolliset ristiriidat tai aukot. Älä korjaa
+puolestani — kysy niin että minä huomaan ongelmat itse.
+```
 
-Ota näyttökuva valmiista työnkulusta ja kirjoita 2–3 lausetta: "Mitä opin n8n:n solmujen toiminnasta?"
+> 💡 **Vinkki muistiinpanoihin:** Tämä koottu suunnitelma on osa lopputyön palautusta.
 
 ---
 
-## Tehtävä 26.2: Rakenna oma agenttityönkulku
-
-### Tavoite
-Toteuttaa projektin aihioissa suunnittelemasi agentti n8n-työnkulkuna.
+## Vaihe 2: Tutustu n8n:ään 🟢 PAKOLLINEN
 
 ### Ohjeet
 
-Rakenna oma n8n-työnkulku projektin aihioiden pohjalta. Aloita triggeristä (esim. webhook, ajastin tai manuaalinen käynnistys), lisää tekoälysolmu (AI Agent -solmu Qwen-mallilla) ja liitä siihen 1–2 työkalusolmua (esim. sähköpostin luku, tiedoston kirjoitus tai HTTP-pyyntö). Lisää tarvittaessa IF-solmu turvatarkistukseksi (projektin aihio 4).
-
-Kirjoita system prompt tekoälysolmuun projektin aihioiden 2 ja 3 perusteella: kerro agentille sen rooli, arvot ja päättelytapa.
-
-### Tuotos
-
-Toimiva n8n-työnkulku (3–5 solmua), jossa on vähintään triggeri, tekoälysolmu ja yksi toimintasolmu. Näyttökuva työnkulusta ja lyhyt kuvaus siitä, mitä kukin solmu tekee.
+1. Kirjaudu koulun n8n-instanssiin (tunnukset opettajalta).
+2. Luo uusi työnkulku.
+3. Lisää **Manual Trigger** -solmu.
+4. Lisää **HTTP Request** -solmu. Menetelmä `GET`, osoite `https://api.github.com/zen`.
+5. Yhdistä solmut viivalla.
+6. Klikkaa "Execute workflow" ja katso, mitä HTTP Request palauttaa.
+7. Lisää kolmas solmu (IF, Set tai Edit Fields). Kokeile.
 
 ---
 
-## Tehtävä 26.3: Vertaisarviointi — arvioi toisen suunnitelma
+## Vaihe 3: Rakenna agenttisi minimiversio 🟢 PAKOLLINEN
 
-### Tavoite
-Löytää ongelmia ja parannusideoita toisen opiskelijan projektista ennen kuin rakentaminen on valmis.
+**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio** — ei valmis agentti. Turvakerros, IF-tarkistukset, human-in-the-loop ja viimeistelyt rakennat tunnilla 27.
 
-### Ohjeet
+### Ohjeet — iteratiivinen rakentaminen
 
-Vaihda projektinsuunnitelma (projektin aihiot 1–5) toisen opiskelijan kanssa. Lue suunnitelma kriittisesti ja vastaa: Onko triggeri selkeä? Ovatko toiminta-askeleet realistisia 3–5 solmulle? Ovatko hyväksyntäportit oikeassa paikassa? Puuttuvatko turvakerrokset? Onko arkkitehtuuri toteutettavissa n8n:ssä?
+1. **Triggeri.** Valitse: Manual Trigger, Schedule Trigger tai Webhook.
+2. **Tekoälysolmu.** Lisää AI-solmu. Kirjoita system prompt pohjapiirrosten 2 ja 3 perusteella.
+3. **Toimintasolmu.** Yksi solmu, joka toteuttaa agentin tehtävän.
+4. **Testaa heti.** Anna esimerkkisyöte, klikkaa "Execute".
+5. **Korjaa, jos ei toimi.** Tarkista yksi solmu kerrallaan.
 
-Kirjoita palaute, jossa kuvaat vahvuudet, uhat ja heikkoudet sekä parannusehdotukset. Keskustele tekijän kanssa ja kirjoita muistiinpanot keskustelusta.
+### Tekoälyvaihe — sparraa system promptia
 
-**Jos teet tehtävän yksin:** Arvioi oma suunnitelmasi kriittisesti samoilla kysymyksillä.
+```
+Olen kirjoittanut system promptin n8n-agentilleni. Tehtävä on
+[kuvaa]. Tässä prompti: [liitä]. Kommentoi: onko rooli selkeä?
+Onko rajat selkeät? Mitä epäselvyyksiä jää? Älä kirjoita
+uudelleen — kysy minulta kysymyksiä.
+```
+
+> 💡 **Älä lisää tunnilla 26 vielä näitä:** turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.
+
+---
+
+## Tunnin lopuksi
+
+Kirjoita muistiinpanodokumenttiisi 3–4 lausetta:
+
+- Mihin pääsin tunnilla?
+- Mihin jäin?
+- Mitä viimeistelen ensimmäisenä tunnilla 27?
+
+Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Se on osa lopputyön palautusta.
+
+---
+
+**Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet ja esittelet**

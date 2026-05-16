@@ -1,52 +1,64 @@
-# Tehtävät
+# Opiskelutehtävät: Automaatio vai autonomia
 
-## Tehtävä 1: Täytä päätöstaulukko agentin rakenteesta (TT-B1)
+> Tämä tunti tarkistaa lopputyösi suuntaa. Tunnilla 19 valitsit **⭐️ Agentti: Ongelma**. Tänään harjoittelet päätöksentekoa "tarvitaanko tähän agentti vai riittäisikö yksinkertaisempi ratkaisu" — ja sovellat samaa kysymystä omaan valintaasi.
 
-Alla on taulukko, jossa kuvataan kolme erilaista agenttijärjestelmää. Sinun tehtäväsi on täyttää taulukko kuvaamalla kunkin agentin **suunnittelusilmukkaa**, **työkaluja** ja **muistia**.
-
-### Kolme agenttijärjestelmää
-
-**Agentti A: Sähköpostivastausten automatisoija**
-- Tehtävä: Vastaa sisään tuleviin asiakassähköposteihin automaattisesti
-- Tavoite: "Tunnista asiakkaan ongelma, etsi samankaltaisia tapauksia ja lähetä ratkaisu"
-
-**Agentti B: Palvelimen valvonta-agentti**
-- Tehtävä: Valvoo palvelimen tilaa ja tekee korjaavia toimintoja
-- Tavoite: "Seuraa CPU-kuormaa, muistin käyttöä ja levytilaa. Jos nämä ylittävät kynnysarvot, käynnistä korjaavia toimintoja."
-
-**Agentti C: Tietokannan optimointiagentti**
-- Tehtävä: Analysoi tietokantakyselyjen tehokkuutta ja optimoi indeksit
-- Tavoite: "Etsi hitaat kyselyt, analysoi ne ja lisää tai muokkaa indeksejä parantaakseen nopeutta."
-
-### Täyttötaulukko
-
-Täytä seuraava taulukko kunkin agentin osalta:
-
-| Agentti | Suunnittelusilmukan vaiheet | Tarvittavat työkalut | Konteksti-ikkuna | Ulkoinen muisti | Huomiot |
-|---------|-----------------------------|----------------------|------------------|-----------------|---------|
-| **A: Sähköpostivastaukset** | 1. Havainnoi: Lue sähköposti 2. Suunnittele: ... 3. Toimi: ... 4. Tarkkaile: ... | Sähköpostin luku-API, tietokannanhaku-API, sähköpostin lähetys-API | Asiakkaan aiemmat sähköpostit (viimeiset 5 viestiä) | Ratkaisutietokanta: tunnetut ongelmat ja ratkaisut | [Täytä] |
-| **B: Palvelimen valvonta** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
-| **C: Tietokannan optimointi** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
-
-### Ohjeita
-
-- **Suunnittelusilmukan vaiheet**: Kuvaile, mitä agentti havaitsee, miten se suunnittelee, mitä se tekee ja miten se tarkkailee tuloksia.
-- **Työkalut**: Listaa konkreettiset API:t tai keinot, joita agentti tarvitsee.
-- **Konteksti-ikkuna**: Mitä lyhytaikaista tietoa agentti tarvitsee ymmärtääkseen tilanteen nyt?
-- **Ulkoinen muisti**: Mitä pitkäaikaista tietoa agentti tarvitsee oppimista varten?
-- **Huomiot**: Jos agentti voi vahingoittaa järjestelmää, mikä on riski? Mitä rajoituksia sille tulisi asettaa?
-
-**Jos teet tehtävän yksin:** Voit olettaa, että jokainen näistä agenteista on todellinen järjestelmä, jota olet ohjannut työssä. Käytä tätä oletusta apuna taulukkoa täyttäessäsi.
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin "Päätös: agentti vai ei?" -tehtävää — se sparraa suoraan oman lopputyösi valintoja.*
 
 ---
 
-## Tehtävä 2: Suunnittele kontrolli agentin rajoittamiseksi (TT-D1)
+## Tehtävä 20.1 — Päätös: agentti vai ei? 🟢 SUOSITELTU
 
-Agentit ovat tehokkaita, mutta niihin liittyy merkittäviä riskejä. Tämä tehtävä vaatii sinua **suunnittelemaan turvatoimenpiteet** agentin varalle.
+**Miksi tämä on tärkeää:** Agentti on tehokas mutta kallis ratkaisu. Jos ongelma ratkeaa yksinkertaisemmin — skriptillä, työnkululla tai chatbotilla — agentin rakentaminen on tuhlausta.
+
+### Tehtävä
+
+Alla on viisi ongelmakuvausta. Päätä kustakin, mikä on oikea ratkaisutyyppi:
+
+- **Skripti** — toistaa saman toiminnan samalla tavalla, ei päättele tilanteesta
+- **Työnkulku** — etenee ennalta määriteltyä polkua, voi haarautua mutta ei tee itsenäisiä päätöksiä
+- **Chatbot** — vastaa käyttäjän kysymyksiin, reaktiivinen
+- **Agentti** — toimii itsenäisesti, tekee päätöksiä tilanteen mukaan, käyttää useita työkaluja
+
+**Ongelma A: Päivittäinen myyntiraportti.** Joka aamu kello 8 raportti pitää koota: edellisen päivän myyntiluvut Excelistä, muunnos PDF:ksi, lähetys johtoryhmälle sähköpostilla. Tiedot tulevat aina samasta tiedostosta, samassa muodossa.
+
+**Ongelma B: Asiakaspalvelutiketit.** Asiakkaat lähettävät päivittäin 50–100 viestiä, joissa on hyvin erilaisia ongelmia: laskutuskysymyksiä, teknisiä vikailmoituksia, palautusta koskevia pyyntöjä ja yleisiä palautteita. Jokainen viesti pitää luokitella, vastata yksinkertaisiin automaattisesti ja siirtää monimutkaiset oikealle tukihenkilölle. Jos vastaus on kriittinen (esim. korvaus yli 200 €), ihmisen pitää tarkistaa se ennen lähetystä.
+
+**Ongelma C: Kysymys-vastaus -palvelu opiskelijoille.** Kurssin opiskelijat kysyvät usein samoja kysymyksiä Teamsissa: "Milloin tehtävä pitää palauttaa?", "Mistä löydän materiaalit?", "Onko huomenna tunti?". Tarvitaan järjestelmä, joka osaa vastata näihin kysymyksiin tunnin info-kanavan perusteella.
+
+**Ongelma D: Sosiaalisen median seuranta.** Yritys haluaa seurata, mitä siitä puhutaan netissä. Järjestelmän pitää tarkkailla useita lähteitä (Twitter/X, Reddit, blogit), tunnistaa yritystä koskevat keskustelut, päättää onko viesti positiivinen, neutraali vai kriittinen, ja jos viesti on kriittinen ja saa paljon huomiota, lähettää ilmoitus viestintätiimille — mutta vain virka-aikana. Vapaa-aikana huomiot kerätään aamuraporttiin.
+
+**Ongelma E: Varaston täydennys.** Kun varastosaldo putoaa alle 20 kappaleen, tilaajalle pitää lähettää automaattisesti tilaus. Tilaaja, tuotekoodi ja määrä ovat aina samat.
+
+### Vastausohje
+
+Jokaisesta ongelmasta:
+
+1. Valitse ratkaisutyyppi (skripti / työnkulku / chatbot / agentti)
+2. Perustele 1–2 lauseella. Käytä argumentteina vähintään yhtä näistä: *onko päätöksiä tehtävä, vaihteleeko tilanne, tarvitaanko useita työkaluja, onko ihmisen valvonta tarpeen, kannattaako monimutkaisempi ratkaisu*.
+
+### Sovellus omaan ⭐️ Agentti: Ongelma -valintaasi
+
+Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma (tunnilta 19). Käy sama analyysi sille. Jos vastaukset osoittavat, että agentti on oikea valinta — hyvä, lopputyösi suunta on oikea. Jos huomaat, että yksinkertaisempi ratkaisu riittäisi, tarkenna ongelmaasi sellaiseksi, jossa agentin autonomisuus tuottaa aidosti lisäarvoa.
+
+### Tekoälyvaihe — sparraa päätöstäsi
+
+```
+Olen luokitellut viisi ongelmaa seuraavasti: [liitä vastauksesi].
+Lue ne ja kysy 2–3 haastavaa kysymystä, joiden avulla testaan onko
+luokitteluni perusteltua. Älä korjaa puolestani — kysy niin että
+ajattelen itse.
+```
+
+---
+
+## Tehtävä 20.2 — Suunnittele kontrolli agentin rajoittamiseksi 🟣 SYVENTÄVÄ
+
+**Miksi tämä on hyödyllinen:** Tämä tehtävä harjoittelee trade-off -ajattelua, joka on suoraan hyödyllistä tunnin 24 ⭐️ Agentti: Turva -pohjapiirroksessa.
 
 ### Tilanne
 
 Sinulla on agentti, joka hoitaa asiakastukitikettejä. Agentti voi:
+
 - Lukea asiakastukitietokantaa
 - Etsiä ratkaisuja knowledge base -tietokannasta
 - Lähettää sähköposteja asiakkaille
@@ -54,37 +66,24 @@ Sinulla on agentti, joka hoitaa asiakastukitikettejä. Agentti voi:
 
 Tavoite kuulostaa hyvältä — automatisoida tuki. Mutta mitä pahaa voisi tapahtua?
 
-### Ohjeet
+### Tehtävä
 
-Kirjoita agenttijärjestelmälle **kontrollisuunnitelma**, joka kuvailee:
+Kirjoita agenttijärjestelmälle **kontrollisuunnitelma**, jossa on 3–4 riski–kontrolli–hinta -paria.
 
-1. **Riskit** — Mitä voisi mennä pieleen? Anna 3–4 konkreettista vaaratapausta.
-
-2. **Kunkin riskin mukainen kontrolli** — Miten voisit estää sen? Vaihtoehdot:
-   - Rajaa agentin työkalut (esim. agentti voi lähettää vain malleja, ei vapaata tekstiä)
-   - Lisää ihminen silmukkaan (esim. tiketit merkitään ratkaistuiksi vasta, kun ihminen hyväksyy ne)
-   - Lisää valvontaa (esim. kirjaa kaikki agentin tekemät sähköpostit)
-   - Testaa agenttia (esim. testaa, että agentti ei lähetä sopimattomia tekstejä)
-
-3. **Trade-offs** — Mikä on jokaisen kontrollin hinta? Vaikuttaako se automaation nopeuteen? Lisääkö se työtä ihmisille?
-
-### Esimerkki
-
-| Riski | Kontrolli | Hinta |
-|-------|-----------|-------|
+| Riski | Kontrolli | Hinta / trade-off |
+|---|---|---|
 | Agentti lähettää väärän ratkaisun asiakkaalle | Agentti voi lähettää vain valmiiksi hyväksyttyjä mallivastauksia, ei vapaata tekstiä | Vähemmän joustavuutta, mutta parempi turvallisuus |
 | Agentti sulkee tiketin liian aikaisin | Tiketti merkitään "ehdotettu ratkaisu" -tilaan, ja ihminen hyväksyy sulkemisen | Lisää ihmisen työtä, mutta estää tärkeiden tikettien sulkemisen |
-| ... | ... | ... |
 
-Kirjoita omat 3–4 riski–kontrolli-parisi.
+Mahdollisia kontrollityyppejä:
 
-**Jos teet tehtävän yksin:** Voit valita jonkin muun agentin, jota et pelkää, jos haluat. Tärkeintä on ymmärtää, miten kontrolleja suunnitellaan ja mitä ne maksavat.
+- Rajaa agentin työkalut
+- Lisää ihminen silmukkaan
+- Lisää valvontaa
+- Rajaa määrää tai aikaa
+
+> 💡 **Vinkki muistiinpanoihin:** Jos riskien ja kontrollien miettiminen tuottaa havaintoja, joita voit hyödyntää oman agenttisi suunnittelussa, kirjaa ne ylös. Tunnilla 24 teet ⭐️ Agentti: Turva -pohjapiirroksen.
 
 ---
 
-## Pisteet ja arviointi
-
-- **Tehtävä 1 (päätöstaulukko):** Taulukko on täytetty oikein, kuvailut ovat tarkkoja ja teknisesti oikeita.
-- **Tehtävä 2 (kontrollisuunnitelma):** Riskit ovat realistisia, kontrollit ovat konkreettisia ja trade-offien pohdinta on syvällistä.
-
-Molemmat tehtävät opettavat sinulle keskeistä osaamista: agenttien sisäisten mekanismien ymmärtämistä ja kykyä suunnitella turvallisia agenttijärjestelmiä.
+**Lopputyön suunta tarkistettu — seuraavaksi muisti ja identiteetti**

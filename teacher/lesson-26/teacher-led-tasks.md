@@ -67,9 +67,9 @@ Käy ryhmän kanssa läpi, miten n8n-solmut vastaavat agentin kuuteen komponentt
    - "Jotain tapahtuu ulkomaailmassa (esim. viesti saapuu). Syötekäsittelijä vastaanottaa sen ja tarkistaa, että se on järkevä."
    - Osoita työnkulussa Webhook-solmu ja ensimmäinen IF-ehto.
 
-2. **Päättelijä** → OpenAI-solmu
+2. **Päättelijä** → tekoälysolmu
    - "Tässä agentti 'ajattelee'. Se analysoi viestin, konsultoi system promptia ja tekee päätöksen."
-   - Osoita OpenAI-solmu ja sen system prompt.
+   - Osoita tekoälysolmu ja sen system prompt.
 
 3. **Työkalujen suorittaja** → Discord (tai muu lähettämissolmu)
    - "Tässä agentti toimii. Se ottaa päätöksen ja tekee konkreettista asiaa — lähettää viestin."

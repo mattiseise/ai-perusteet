@@ -147,7 +147,7 @@ Opiskelijat, jotka ajattelevat, että drag-and-drop = helppoa, menettävät moti
 
 **Yleisiä ongelmia:**
 - Opiskelija ei näe linkkiä solmun ja komponentin välillä
-  - Ratkaisu: anna konkreettinen esimerkki: "OpenAI-solmu on päättelijä, koska tässä agentti 'ajattelee' ja tekee päätöksen."
+  - Ratkaisu: anna konkreettinen esimerkki: "tekoälysolmu on päättelijä, koska tässä agentti 'ajattelee' ja tekee päätöksen."
 - Analyysi on liian pinnallinen
   - Ratkaisu: pyydä selittämään JA MIKSI: "Miksi juuri tämä solmu on syötekäsittelijä? Mitä se tekee?"
 

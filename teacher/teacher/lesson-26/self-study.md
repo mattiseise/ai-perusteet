@@ -26,7 +26,7 @@ Palataan hetkeksi lesson 19:n arkkitehtuuriin ja katsotaan, miten se toteutuu n8
 
 **Syötekäsittelijä** on triggersolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri on webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa: onko viesti liian pitkä? Onko se tyhjä? Tämä on sama syötevalidointi, josta puhuimme teoriassa — nyt se on konkreettinen laatikko kankaalla.
 
-**Päättelijä** on tekoälysolmu — esimerkiksi OpenAI-solmu, johon kirjoitat system promptin. Tässä solmussa agentti "ajattelee": se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista ja ohjeet siitä, miten vastata. System prompt on agentin aivot, aivan kuten lesson 21:ssä opittiin.
+**Päättelijä** on tekoälysolmu — esimerkiksi tekoälysolmu, johon kirjoitat system promptin. Tässä solmussa agentti "ajattelee": se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista ja ohjeet siitä, miten vastata. System prompt on agentin aivot, aivan kuten lesson 21:ssä opittiin.
 
 **Työkalujen suorittaja** on kaikki muu. Google Sheets -solmu lukee tai kirjoittaa tietoja. HTTP Request -solmu kutsuu ulkoisia palveluita. Slack-solmu lähettää viestejä. Nämä ovat agentin "kädet" — ne tekevät konkreettisia toimintoja maailmassa.
 

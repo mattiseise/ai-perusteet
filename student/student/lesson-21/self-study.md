@@ -120,7 +120,7 @@ Lisäksi muistin hallinta vaatii **säännöllisiä puhdistuksia**. Vanhentuneet
 
 ## Kohti omaa projektia
 
-Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi: mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana, mitä sen täytyy muistaa keskustelujen välillä ja mitä tiloja prosessillasi on? Nämä päätökset muodostavat projektin aihion 2, jonka kirjoitat opiskelutehtävissä.
+Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi: mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana, mitä sen täytyy muistaa keskustelujen välillä ja mitä tiloja prosessillasi on? Nämä päätökset muodostavat ⭐️ Agentti: Muisti -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
 
 ## Yhteenveto
 

@@ -10,12 +10,12 @@
 | **Validointi** (validation) | Prosessi, jossa n8n tarkistaa, että saapuva data on oikean muotoista ja turvallista käsitellä. Toteutetaan usein IF-solmuilla. |
 | **IF-solmu** | Päätössolmu, joka tarkistaa ehtoa (esim. "onko viesti alle 500 merkkiä?") ja ohjaa datan eri haaraan (true/false). |
 | **HTTP Request** | Solmu, joka lähettää pyynnön ulkoiselle API:lle (esim. tekoäly-palvelulle tai tietokannan rajapinnalle). Se saa vastauksen ja välittää sen eteenpäin. |
-| **OpenAI-solmu** | Erityinen solmu, joka kommunikoi OpenAI:n palvelun kanssa (ChatGPT, tekoäly-päättely). Sisältää system promptin ja pyytää tekoälyä päättelemään. |
+| **tekoälysolmu** | Erityinen solmu, joka kommunikoi OpenAI:n palvelun kanssa (ChatGPT, tekoäly-päättely). Sisältää system promptin ja pyytää tekoälyä päättelemään. |
 | **Google Sheets -solmu** | Solmu, joka lukee tai kirjoittaa tietoja Google Sheets -taulukkoihin. Usein käytetään muistin ja tietokannan toteuttamiseen. |
 | **Discord-solmu** (tai Slack-solmu) | Solmu, joka lähettää viestejä Discord- tai Slack-kanavalle. Yhteydenpito käyttäjien kanssa. |
 | **Arkkitehtuuri** (architecture) | Työnkulun rakenne ja layout: mistä se alkaa (trigger), mitä solmuja se sisältää, miten ne liittyvät yhteen ja missä järjestyksessä data kulkee. |
 | **System prompt** | Teksti, joka määrittää tekoälyn käyttäytymisen. Esimerkiksi FAQ-botissa system prompt on: "Olet FAQ-botti, vastaa lyhyesti ja selkeästi." |
-| **Konteksti** (context) | Taustatieto, jota agentti käyttää päätöksenteossa. Esimerkiksi FAQ-tietokanta on konteksti OpenAI-solmulle. |
+| **Konteksti** (context) | Taustatieto, jota agentti käyttää päätöksenteossa. Esimerkiksi FAQ-tietokanta on konteksti tekoälysolmulle. |
 | **Muisti** (memory) | Mekanismi, jolla agentti tallentaa ja muistaa aikaisempia tapahtumia. n8n:ssä se voi olla Google Sheets -taulukko tai Memory-solmu. |
 | **Turvakerros** (safety layer) | Joukko validointi- ja IF-solmuja, jotka tarkistavat agentin vastaukset ennen lähettämistä. Suojaa käyttäjiä ja tietoja. |
 | **Human-in-the-loop** | Rakenne, jossa kriittisissä tilanteissa ihminen hyväksyy agentin päätöksen ennen kuin se toteutetaan. |

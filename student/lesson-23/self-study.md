@@ -171,7 +171,7 @@ Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinu
 
 ## Kohti omaa projektia
 
-Nyt kun tunnet ReAct-mallin, ketjuajattelun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin päättelymalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida reaaliaikaisesti työkalujen palautteeseen (ReAct) vai voiko sen pilkkoa ongelman selkeisiin vaiheisiin (ketjuajattelu)? Tämä valinta on projektin aihio 3, jonka kirjoitat opiskelutehtävissä. Se vaikuttaa suoraan siihen, miten rakennat n8n-työnkulun oppitunnilla 26.
+Nyt kun tunnet ReAct-mallin ja ketjuajattelun, valitse omalle agentillesi sopivin päättelymalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida reaaliaikaisesti työkalujen palautteeseen (ReAct) vai voiko sen pilkkoa ongelman selkeisiin vaiheisiin (ketjuajattelu)? Tämä valinta on ⭐️ Agentti: Päättely -pohjapiirros, jonka kirjoitat opiskelutehtävissä. Se vaikuttaa suoraan siihen, miten rakennat n8n-työnkulun tunnilla 26. Moniagenttijärjestelmät käsitellään sivumainintana — ne ovat lopputyön mittakaavassa yliampuva ratkaisu.
 
 ## Yhteenveto
 
