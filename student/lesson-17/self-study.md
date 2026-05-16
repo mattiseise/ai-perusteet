@@ -1,106 +1,120 @@
-# Projektidokumenttibotti — suunnittele ja aloita rakentaminen
+# Oppitunti 17 — Yhdistä rakennuspalikat ja aloita botin rakentaminen
 
-## Johdanto: Miksi projektisuunnitelma on tärkeä (ja usein tylsä)
+## Mitä tällä tunnilla tapahtuu?
 
-Olet varmaasti kuullut projektisuunnittelusta. Se kuulostaa tylsältä, koska usein onkin. Istuu kokouksissa, täyttää lomakkeita, kirjoittelee dokumentteja — se vie aikaa ja tuntuu hidastelulta siihen verrattuna, että voisi vain aloittaa tekemisen. Mutta tässä on salaisuus: projektin epäonnistuminen johtuu melkein aina huonosta suunnittelusta, ei huonosta tekemisestä. Kun aloitat ilman selvää suunnitelmaa, päädyt korjaamaan vääriä asioita, tekemään turhaa työtä, tai löydät loppusuoralla, että et ymmärtänyt, mitä asiakkaat halusivat. Se maksaa enemmän aikaa ja rahaa kuin suunnittelu koskaan maksaisi.
+Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseen toimivaan bottiin Microsoft Copilotissa. Tämä on **nivelkohta** — siirryt suunnittelusta rakentamiseen.
 
-Siitä huolimatta suunnittelu on usein hankalaa tehdä käsin. Sinulla on idea projektista, mutta mitä kysymyksiä pitäisi kysyä? Mitä dokumentointiin pitäisi sisältyä? Kuinka saada oikeat tiedot oikeassa muodossa? Kun tekisit sen yksin, voisit unohtaa kriittisen kysymyksen tai jättää jonkin oleellisen asian huomiotta. Tässä tekoäly voi auttaa — ei tekemään päätöksiä puolestasi, vaan ohjaamaan sinua oikeihin kysymyksiin ja kokoamalla vastaukset järjestelmälliseksi suunnitelmaksi.
+Tällä tunnilla et opi enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman koodiksi** — eli järjestelmäpromptiksi, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen; tärkeintä on saada jotain toimivaa, jota voit kehittää tunnilla 18.
 
-## Miten botti voi auttaa: aktiivinen suunnittelu
+## Mikä on järjestelmäprompti?
 
-Kuvittele tätä: kirjoitat botille pelkän projektoidean — esimerkiksi "rakennan web-sovelluksen joka auttaa opiskelijoita löytämään lentoja halvemmalla". Botti ei kuitenkaan vain kuittaa sitä. Sen sijaan se alkaa esittää kysymyksiä, yksi kerrallaan, joita todella tarvitset vastattavaksi.
+Järjestelmäprompti on tekstipätkä, jonka annat Copilotille ja joka määrittää, miten botti käyttäytyy *kaikessa* keskustelussa. Käyttäjä ei näe sitä — botti vain noudattaa sitä. Voit ajatella sitä botin **työsopimuksena**: kuka olet, mitä tehtäväsi on, missä rajat menevät.
 
-"Kuka on sinun käyttäjä? Miten sovellusta käytetään? Kuinka kauan projekti kestää? Kuka muut tekevät sen kanssa? Millä rahalla rakennetaan? Mitkä ovat suurimmat riskit?"
+Hyvä järjestelmäprompti vastaa neljään kysymykseen:
 
-Kun vastaat näihin, botti kokoaa vastaukset yhtenäiseksi projektisuunnitelmaksi, joka on selkeä ja valmis käyttöön. Se on kuin henkilökohtainen projektin mentor, joka tietää, mitä kysyä.
+1. **Kuka olet?** Rooli ja persoona.
+2. **Mitä teet?** Tehtävä ja työnkulku.
+3. **Miten puhut?** Äänensävy ja tyyli.
+4. **Mitä et tee?** Rajat ja kiellot.
 
-Tämä botti on kaksitahoinen: se on vuorovaikutuksellinen ja systemaattinen. Se tekee suunnittelusta luonnollisempaa ja vähemmän byrokraattista.
+## Rakennuspalikat järjestelmäpromptiksi
 
-## Mitä hyvä projektisuunnitelma sisältää
+Kolme rakennuspalikkaasi kääntyvät järjestelmäpromptiksi seuraavasti:
 
-Ennen kuin suunnittelet bottia, sinun pitää tietää, mitä suunnitelma sisältää. Yksinkertaisella tasolla projektisuunnitelma vastaa viiteen avaisskysymykseen.
+| Rakennuspalikka | Mihin osaan järjestelmäpromptia? |
+|---|---|
+| **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii — käytä sitä botin pääohjeessa. |
+| **2: Määrittelydokumentti** | Sisältö. Kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
+| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole järjestelmäpromptissa — se ladataan erikseen Copilotiin. Mutta järjestelmäpromptissa voi viitata siihen: *"Käytä tietopohjassa olevia dokumentteja referenssinä."* |
 
-**Mitä** tehdään — projektin kuvaus, mitä tuotetta tai palvelua rakennetaan. Esimerkiksi: "Web-sovellus lentoja hakeville opiskelijoille."
+## Esimerkki: rakennuspalikoista järjestelmäpromptiksi
 
-**Kenelle** tehdään — keitä ovat käyttäjät tai asiakkaat. Esimerkiksi: "Opiskelijat, jotka matkustavat usein ja etsivät halvempia vaihtoehtoja."
+Alla on yksinkertainen esimerkki siitä, miten määrittelydokumentin sisältö muuttuu järjestelmäpromptiksi. Ota se mallina — ei kopioitavaksi.
 
-**Miksi** tehdään — tarkoitus, miksi projekti on olemassa. Esimerkiksi: "Opiskelijat käyttävät liian paljon rahaa lentolippuihin, haluamme ratkaista ongelman."
+### Määrittelydokumentin sisältö (rakennuspalikka 2)
 
-**Milloin** tehdään — aikataulu ja vaiheet. Esimerkiksi: "Alustava versio 3 kuukaudessa, täysi versio 6 kuukaudessa."
+> **Botin nimi:** Pelin määrittelyvalmentaja
+> **Kohderyhmä:** Pelikoodausopiskelija, joka aloittaa uutta peliprojektia
+> **Tarkoitus:** Ohjata käyttäjää pelin määrittelydokumentin laatimisessa kuuden osan kautta
+> **Persoona:** Käytännönläheinen, kysyvä, ei jargonia
+> **Työnkulku:** 1) Pelin idea → 2) Kohderyhmä ja alusta → 3) Ydinmekaniikat → 4) Tekninen toteutus → 5) Aikataulu → 6) Riskit
+> **Rajat:** Ei kirjoita dokumenttia puolesta, ei arvioi kaupallista potentiaalia, ei käsittele muita aloja
 
-**Miten** ja **millä** tehdään — resurssit, tiimi, tekniikka. Esimerkiksi: "3 kehittäjää, 1 designer, Python ja React, 50 000 euron budjetti."
+### Sama järjestelmäpromptina
 
-Nämä viisi osaa muodostavat rungon. Yksinkertainen botti voi opastaa näiden kautta ja koota vastaukset dokumentiksi, jonka voit antaa tiimille tai asiakkaalle.
-
-## System promptin suunnittelu: miten ohjeistat bottia kysyä
-
-System prompti on botin sydän. Se kertoo, mitä botti on, mitä se tekee ja miten se käyttäytyy. Projektidokumenttibotille se näyttäisi suunnilleen tältä:
-
-Botti on **projektin mentor**, joka tietää, miten rakentaa selkeitä suunnitelmia. Sen **tarkoitus** on kyselemällä kerätä tiedot projektista ja koota ne selkeäksi dokumentiksi. Sen **ohjeet** ovat: kysy yksi kysymys kerrallaan, kuuntele vastaus, pyydä tarkennusta jos tarpeellista, ja kun riittävästi tietoa on kerätty, koota se suunnitelmaksi.
-
-Tässä on konkreettinen esimerkki:
-
-> Olet projektin mentor. Sinulla on 10 vuoden kokemus projektinjohdosta, ja tiedät, miten rakentaa selkeitä projektisuunnitelmia.
+> Olet **Pelin määrittelyvalmentaja**. Autat pelikoodausopiskelijaa, joka aloittaa uutta peliprojektia, laatimaan pelin määrittelydokumentin.
 >
-> Tarkoituksesi: Auttaa käyttäjää luomaan projektisuunnitelman esittämällä järjestelmällisiä kysymyksiä, kuuntelemalla vastauksia ja kokoamalla ne selkeäksi dokumentiksi.
+> **Työnkulkusi:** Ohjaat käyttäjää aina järjestyksessä kuuden osan läpi: (1) pelin idea, (2) kohderyhmä ja alusta, (3) ydinmekaniikat, (4) tekninen toteutus, (5) aikataulu, (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen on käsitelty.
 >
-> Ohjeet:
-> 1. Aloita pyytämällä lyhyt projektikuvaus (2-3 lausetta).
-> 2. Kysy sitten seuraavaksi: mitä ovat käyttäjät/asiakkaat? Kuuntele huolellisesti.
-> 3. Jatka samalla tavalla: miksi projekti on olemassa? Milloin se valmistuu? Mitkä ovat resurssit?
-> 4. Kun olet kerännyt kaikki viisi osaa (mitä, kenelle, miksi, milloin, miten), koota ne selkeäksi dokumentiksi.
-> 5. Kysy käyttäjältä, mitä muutetaan tai parannetaan ennen viimeistelyä.
+> **Tapasi puhua:** Käytännönläheinen, kysyvä. Pyydät käyttäjältä konkreettisia vastauksia, et hyväksy ympäripyöreää. Et käytä akateemista jargonia. Käytät pelikoodauksen omia termejä (mekaniikka, game loop, asset, prototyyppi).
 >
-> Rajaukset:
-> - Vastaa vain projekteihin liittyviin kysymyksiin. Jos käyttäjä kysyy muusta, ohjaa hänet takaisin suunnitteluun.
-> - Älä tee päätöksiä käyttäjän puolesta. Kysy aina, jos olet epävarma.
-> - Jos käyttäjä haluaa lopettaa puolessa välissä, tallenna osittainen suunnitelma ja tarjoa jatkamista myöhemmin.
+> **Et koskaan:** kirjoita dokumenttia käyttäjän puolesta; arvioi pelin kaupallista potentiaalia; käsittele muiden alojen projekteja. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti aiheeseen takaisin tai oikealle asiantuntijalle.
+>
+> **Tietopohja:** Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.
 
-Näetkö eron? Tämä ei ole vain "kysy kysymyksiä". Tämä on **tarkka ohjeistus** siitä, missä järjestyksessä kysyä, miten kuunnella ja miten koota lopputulos.
+Huomaa, että määrittelyssä on *rivimuotoinen pohja*, kun taas järjestelmäpromptissa puhutaan botille itselleen ("Olet…", "Työnkulkusi…", "Et koskaan…"). Tämä on tärkein muunnos: **kuvaileva määrittely → suora ohjaus botille**.
 
-## Vinkkejä: miten botti tunnistaa, milloin tietoa on tarpeeksi
+## Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa
 
-Yksi haaste on se, että botti ei voi tietää etukäteen, kuinka yksityiskohtainen käyttäjä haluaa suunnitelmaa. Jotkut haluavat pikaisen yleiskatsauksen, toiset haluavat syvällisen 20 sivun dokumentin. Kuinka botti tietää, milloin lopettaa kysymään?
+Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Esimerkkiprompti:
 
-Hyvin kirjoitettu botti ei lopeta, heti kun saa vastaukset viiteen perusiosioon. Sen sijaan se kysyy: "Haluatko lisää yksityiskohtia? Onko jokin osa, joka vaatii syventämistä?" Käyttäjä voi sanoa kyllä tai ei. Jos käyttäjä sanoo "ei", botti tietää, että voi koota suunnitelman. Jos käyttäjä sanoo "kyllä", botti pyytää tarkennusta.
+```
+Toimit minulle sparrauskumppanina. Olen kirjoittamassa Copilot-botin
+järjestelmäpromptia. Tässä määrittelydokumenttini ja ensimmäinen versio
+järjestelmäpromptista:
 
-Toinen tärkeä vihje: botti tekee **muistiinpanoja** samalla kun kysyy. Se ei kysy samaa asiaa kahdesti. Se ei unohda, mitä käyttäjä oli aiemmin sanonut. Jos käyttäjä sanoi "meillä on 3 kehittäjää", botti muistaa sen ja ei kysy uudelleen. Se tekee keskustelusta tehokkaan, ei pitkästyttävää.
+MÄÄRITTELY: [liitä rakennuspalikka 2]
 
-## Konkreettinen esimerkki: ajattelun kulku
+JÄRJESTELMÄPROMPTI (versio 1): [liitä oma promptisi]
 
-Otetaan konkreettinen esimerkki. Käyttäjä aloittaa tällä:
+Auta minua arvioimaan: onko järjestelmäpromptissa kaikki, mitä
+määrittelyssä oli? Onko jokin kohta epäselvä botille? Onko jokin
+ohje liian löysä ('vastaa hyvin' on liian yleinen)? Älä kirjoita
+uutta versiota — anna 2–3 konkreettista parannusehdotusta, joiden
+pohjalta voin tehdä omat muutokset.
+```
 
-"Rakennan sovelluksen, joka auttaa nuoria budjetoinnissa."
+## Copilot Agentin luominen
 
-Botti vastaa:
+Microsoft Copilotissa voit luoda oman **Agentin**, jolla on omat ohjeet ja tietopohja. Sen luominen vaihe vaiheelta:
 
-"Kiinnostava idea! Apua nuorille budjetoinnissa on tarpeellista. Laitetaan rakenne päälle. Ensin: ketkä ovat nämä nuoret? Mitä ikää, sijainti, onko heillä omaa rahaa vai vanhempien rahaa? Kuka on oikeasti käyttäjä?"
+1. Avaa Copilot ja siirry "Agents" / "Agentit" -osioon.
+2. Luo uusi agent. Anna sille nimi (sama kuin määrittelydokumentissasi).
+3. Liitä järjestelmäpromptisi "Instructions" / "Ohjeet" -kenttään.
+4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi ("Knowledge" / "Tieto").
+5. Tallenna ja aloita keskustelu.
 
-Käyttäjä vastaa:
+Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotain vaihetta, kysy opettajalta — tai etsi ohje hakemalla "Copilot agent create instructions".
 
-"Nuoret 16–25-vuotiaat, pääosin Suomessa, omat pienemmät tulot, harjoittelijat ja opiskelijat."
+## Ensimmäinen testikeskustelu
 
-Botti muistaa tämän ja kysyy seuraavaksi:
+Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä syntyy. Hyvä testaustapa:
 
-"Hyvä. Nyt: miksi tämä projekti on sinulle tärkeä? Oletko kohdannut tämän ongelman itse? Vai ratkaiseeko tämä jonkin markkinapaikan?"
+1. **Keksi kuvitteellinen projekti omalta alaltasi.** Lyhyt kuvaus, 2–3 lausetta.
+2. **Anna botin ohjata.** Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.
+3. **Käy keskustelu loppuun.** Pääsetkö valmiiseen määrittelydokumenttiin?
+4. **Tallenna keskustelu** kuvakaappauksina tai kopioituna.
 
-Ja niin se jatkuu. Lopuksi, kun botti on kerännyt kaikki viisi osaa, se kokoaa:
+## Mihin kiinnittää huomiota testissä?
 
-**Projektisuunnitelma:**
-- **Tuote:** Budjettisovellus nuorille
-- **Käyttäjät:** 16–25-vuotiaat opiskelijat ja harjoittelijat Suomessa
-- **Tarkoitus:** Auttaa nuoria hallitsemaan rahaa paremmin
-- **Aikataulu:** Alfa-versio 2 kuukaudessa, beeta 4 kuukaudessa
-- **Resurssit:** 2 kehittäjää, 1 designer, 15 000 euron budjetti
+**Pysyykö botti roolissaan?** Vai unohtaako se, että on oman alasi valmentaja, ja muuttuu yleiseksi avustajaksi?
 
-Tämä on hyödyllinen dokumentti, jonka voi antaa investoijille, tiimille tai asiakkaalle.
+**Seuraako se työnkulkua?** Vai hyppiikö se osasta toiseen sattumanvaraisesti?
 
-## Miksi tämä botti on tärkeä
+**Käyttääkö se tietopohjaa?** Tunnistatko sen vastauksista oman alasi termejä, vai kuulostavatko ne yleiseltä projektijargonilta?
 
-Saattat ihmetellä: miksi teemme tätä bottia juuri nyt? Vastaus on tulevaisuus. Seuraavilla oppitunneilla rakennamme paljon monimutkaisempaa agenttia, joka tekee itsenäisiä päätöksiä ja suorittaa tehtäviä. Agentti on yksinkertaisesti botti, joka voi tehdä enemmän. Mutta tämä botti — projektidokumenttibotti — on se pohja, jonka avulla se oppii kommunikoimaan tilanteissa. Se opettaa, miten esittää hyviä kysymyksiä, kuunnella vastauksia ja prosessoida informaatiota systemaattisesti. Kun agentti rakentaa tulevaisuudessa projekteja, se tietää jo, miten tehdä se oikein.
+**Yrittääkö se kirjoittaa puolesta?** Jos pyydät "kirjoita minulle koko dokumentti", pidätteleekö se ohjeitaan vai murtuuko se?
 
-Tämä oppitunti on ensiaskel. Seuraavalla kerralla (oppitunti 18) viimeistelette botin ja esittelette sen. Mutta nyt rakennatte perustan ja testatte, että se toimii.
+## Korjauslista tunnille 18
 
-## Yhteenveto
+Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa niitä tällä tunnilla — tunti 18 on viimeistelyä varten. Esimerkkejä:
 
-Hyödyllinen projektidokumenttibotti kysyy oikeat kysymykset, muistaa vastaukset ja kokoaa ne suunnitelmaksi. Sen system prompti kertoo, mikä botti on, mitä se tekee ja miten se käyttäytyy. Kun suunnittelet bottia, mieti ensin: mitkä ovat ne viisi perusosiota (mitä, kenelle, miksi, milloin, miten)? Sitten kirjoita ohjeistus, joka ohjaa botin kysymään näistä järjestelmällisesti. Testaa, että se toimii. Korjaa, mitä ei toimi. Seuraavaksi: rakenna ja viimeistele.
+- "Botti hyppää vaiheen 2 ohi heti — pitää tarkentaa työnkulun ohje."
+- "Botti käyttää englanninkielisiä termejä, vaikka pitäisi puhua suomeksi — lisää kielimääritelmä."
+- "Botti antaa heti valmiita vastauksia kysymättä mitään — pitää lisätä 'kysy ennen kuin ehdotat' -ohje."
+
+## Lopuksi
+
+Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei toimi täydellisesti — ei sen ole vielä tarkoituskaan. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla saat ensimmäisen version pöydälle, tunnilla 18 viilataan se valmiiksi.
+
+*Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.*

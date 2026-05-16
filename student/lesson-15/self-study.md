@@ -125,7 +125,7 @@ Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oi
 
 ## Kohti omaa projektia
 
-Tällä tunnilla opit tietopohjan, rajausten ja testauksen merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta. Mieti omaa bottiasi: mitä tietoa se tarvitsee toimiakseen hyvin? Mistä aiheista sen pitäisi kieltäytyä? Miten testaat, että se todella tekee, mitä lupaa? Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT – se on testattu, rajattu ja tarkoituksenmukainen työkalu.
+Tällä tunnilla käsittelimme kolmea asiaa, jotka muodostavat hyvän botin: tietopohjan, rajaukset ja testauksen. Tehtävissä kuratoit bottisi **tietopohjan** (Rakennuspalikka 3) — 3–5 huolella valittua dokumenttia, joista botti ammentaa oman alasi asiantuntemuksen. Rajaukset olet jo määritellyt tunnilla 14 osana botin määrittelydokumenttia. Testaukseen palaamme tunnilla 18, kun botti on rakennettu ja valmis koeajoon. Seuraavaksi tunnilla 17 yhdistät kolme rakennuspalikkaasi ensimmäiseksi toimivaksi botiksi Copilotissa.
 
 ## Yhteenveto
 

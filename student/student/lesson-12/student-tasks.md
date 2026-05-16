@@ -1,77 +1,79 @@
-# Oppitunti 12: Opiskelijatehtävät — Kontekstin antaminen
+# Rakennuspalikka 1 — Promptauspankki
 
-## Tehtävä 12.1: Harjoitus — kontekstin rakentaminen
+> 📌 **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä huolellisesti.
 
-### Tavoite
-Harjoitella kontekstin antamista tekoälylle asteittain — nähdä, miten parempi konteksti johtaa parempiin vastauksiin.
+## Mitä teet?
 
-### Tehtävä
+Rakennat itsellesi **promptauspankin** — kokoelman 5–7 omaa, hyvin toimivaa promptia, joita voit käyttää uudelleen. Tämä on bottisi tulevan järjestelmäpromptin **raaka-aine**: kun tunnilla 17 kirjoitat botille pääohjetta, otat siihen toimivat rakenteet suoraan tästä pankista.
 
-Valitse yksi seuraavista aiheista: esseen kirjoittaminen (esim. "Tekoäly yhteiskunnassa"), ryhmätyön raportti (esim. "Verkon perusteista"), tenttiin valmistautuminen (esim. "IT-perusteet") tai harjoitteluhakemuksen kirjoittaminen.
+Promptauspankki ei ole pelkkä lista esimerkkejä. Se on **kokoelma promptirakenteita, jotka olet itse testannut**. Tiedät, että ne toimivat, koska olet nähnyt niiden tuloksen.
 
-Tee neljä erilaista pyyntöä tekoälylle, jossa jokainen on parempi kuin edellinen.
+## Vaiheet
 
-**Kierros 1 — Huono pyyntö (liian yleinen):**
+### Vaihe 1 — Tunnista omat työtilanteesi
 
-Kirjoita yksinkertainen, epämääräinen pyyntö. Esimerkiksi: "Auta minua esseen kanssa." tai "Kerro aiheesta."
+Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opiskelussasi tai työssäsi. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Esimerkkejä omalta alaltasi:
 
-**Kierros 2 — Parempi pyyntö (joitain tietoja):**
+- **IT-tuki:** käyttäjäohjeen kirjoittaminen, virheilmoituksen tulkinta, käytäntöpäätöksen perustelu
+- **Kyberturvallisuus:** riskiarvio, suunnitelman tarkistus, käyttäjäkoulutuksen materiaali
+- **Pelikoodaus:** ominaisuuden ideointi, koodin selitys, pelitestaussuunnitelma
+- **Web-ohjelmointi:** README-tiedosto, API-dokumentaatio, koodikatselmointi
 
-Lisää kontekstia: kuka olet, mitä haluat, mihin käytät sitä. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa'. Olen 15-vuotias IT-opiskelija. Esseen pituus 500 sanaa."
+Yhden tilanteen pitää olla **"projektin määrittelydokumentin laatiminen"** tai jokin sen osa — tämä on suora yhteys tunnin 18 lopputuotokseen.
 
-**Kierros 3 — Vielä parempi (lisää yksityiskohtia):**
+### Vaihe 2 — Kirjoita ensimmäinen versio jokaisesta promptista
 
-Tarkenna vielä enemmän: mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän, mitä tekoäly on, mutta en kuinka se muuttaa töitä. Haluan johdannon, joka avaa asian ja motivoi lukijaa. Loppuun johtopäätökset."
+Tunnilla 4 opit, että hyvä prompti rakentuu viidestä osasta. Idea on yksinkertainen: paljas kysymys ("Miten teen X?") jättää tekoälylle liikaa tulkinnanvaraa ja tuottaa yleisluontoisia vastauksia. Kun lisäät kontekstia — kenelle, mihin tilanteeseen, missä muodossa — vastaus muuttuu täsmälliseksi ja heti käyttökelpoiseksi.
 
-**Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):**
+Käytä tätä samaa viiden osan kehystä jokaisessa pankkisi promptissa:
 
-Pilko tehtävä osiin ja kerro tarkasti mitä haluat. Esimerkiksi: "Kirjoitan esseen 'Tekoäly yhteiskunnassa' (500 sanaa). Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Tiedän perusteita, mutta haluan ymmärtää, miten se vaikuttaa jokapäiväisiin töihin. Rakenne: 1) johdanto (mitä tekoäly on ja miksi se on tärkeä), 2) kolme esimerkkiä työssä (lääketieteen diagnostiikka, asiakaspalvelu, koulutus), 3) riskit ja haitat, 4) johtopäätökset ja omat ajatukseni. Jokainen esimerkki: 1-2 lause."
+| Osa | Mitä siihen tulee? |
+|---|---|
+| **Rooli** | Kenenä tekoälyn pitää toimia? Esim. *"Olet kokenut tietoturva-asiantuntija."* |
+| **Tausta** | Mikä on tilanne ja kuka sinä olet? Esim. *"Olen IT-opiskelija, joka kirjoittaa määrittelyä asiakasprojektiin."* |
+| **Tavoite** | Mitä haluat saada aikaan? Esim. *"Haluan listan riskeistä, jotka projektin alussa pitää tunnistaa."* |
+| **Rajaukset** | Mitä et halua tai mitä tulee välttää? Esim. *"Älä anna yleisiä neuvoja — pysy pienen yrityksen tilanteessa."* |
+| **Formaatti** | Missä muodossa vastaus pitää antaa? Esim. *"Anna 5–7 kohdan lista, jossa jokaisen kohdan alla 1–2 lauseen perustelu."* |
 
-### Dokumentointi
+Älä yritä saada täydellistä versiota kerralla. Kirjoita raakaversiot — niitä parannetaan seuraavissa vaiheissa.
 
-Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita sitten yhteenveto, jossa käsittelet seuraavat asiat:
+### Vaihe 3 — Testaa ja iteroi tekoälyn kanssa
 
-**Vertailu:** Mikä erosi ensimmäisen ja neljännen vastauksen välillä? Miksi neljäs oli parempi? **Kontekstin vaikutus:** Mitkä kontekstin yksityiskohdat auttoivat sinua eniten? Mitä tietoa olisit voinut vielä antaa? **Käytännön soveltaminen:** Seuraavalla kerralla, kun käytät tekoälyä, mitä kontekstia annat alusta alkaen?
+Avaa ChatGPT, Claude tai Copilot ja testaa jokainen promptisi. Kirjaa muistiin:
 
-### Arviointikriteerit
+- Toimiko prompti heti?
+- Mitä jouduit tarkentamaan jälkikäteen?
+- Mikä rakenneosa puuttui tai oli liian löysä?
 
-| Taso | Pisteet | Kuvaus |
-|------|---------|--------|
-| **Erinomainen (5)** | 90–100 % | Kaikki neljä pyyntöä ovat hyvin erilaisia ja osoittavat kehittymistä. Vertailu on perusteellinen ja näyttää ymmärryksen kontekstin vaikutuksesta. Dokumentaatio on selkeä ja kattava. |
-| **Hyvä (4)** | 75–89 % | Pyyntöjen ero näkyy selvästi. Vertailu on hyvä ja osoittaa ymmärrystä. Dokumentaatio on hyvin kirjoitettu. |
-| **Tyydyttävä (3)** | 60–74 % | Pyyntöjen ero näkyy, mutta voisi olla selvempi. Vertailu on olemassa, mutta jää pintapuoliseksi. Dokumentaatio on riittävä. |
-| **Välttävä (2)** | 45–59 % | Pyyntöjen ero ei ole kovin selvä. Vertailu on heikko. Dokumentaatio on puutteellinen. |
-| **Hylätty (1)** | alle 45 % | Pyyntöjä ei ole saatu / eroja ei näy / dokumentaatio puuttuu. |
+Käytä lopuksi tekoälyä apunasi promptien parantamiseen. Esimerkkiprompti:
 
----
+```
+Toimit minulle promptaussparrauskumppanina. Rakennan itselleni
+promptauspankkia, johon kerään uudelleenkäytettäviä prompteja.
+Tässä yksi prompti ja sen tuottama vastaus:
 
-## Tehtävä 12.2 (Valinnainen): Iteraation harjoittelu
+PROMPTI: [liitä promptisi]
 
-### Tavoite
-Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään.
+VASTAUS: [liitä saatu vastaus]
 
-### Tehtävä
+Mitä prompissa toimii hyvin? Mikä siinä jättää vielä toivomisen
+varaa? Anna 1–2 konkreettista parannusehdotusta — älä kirjoita
+uutta versiota puolestani, vaan kerro mitä kannattaa muuttaa ja
+miksi.
+```
 
-Valitse yksi IT-alan aihe, jonka haluat ymmärtää paremmin (esim. verkot, tietoturva, palvelimet, koneoppiminen).
+Tee tämä jokaiselle promptille. Tämä on harjoitus siitä, miten tekoälyä käytetään *oman työn parantamiseen*, ei korvikkeena ajattelulle.
 
-**Kierros 1: Yksinkertainen kysymys**
+### Vaihe 4 — Kirjoita pankin lopulliset versiot (tämä on rakennuspalikkasi)
 
-Pyyntö: "Kerro [aiheesta]." Tallenna vastaus.
+Viimeistele jokainen prompti sparrauksen jälkeen. Kokoa ne yhteen dokumenttiin selkeästi otsikoituna:
 
-**Kierros 2: Lisää konteksti**
+- **Promptin nimi tai käyttötilanne** (esim. "Käyttäjäohjeen kirjoittamiseen IT-tuessa")
+- **Itse prompti** kokonaisuudessaan
+- **Lyhyt huomio** (1–2 lausetta): mihin tämä toimii parhaiten, mihin se ei sovi
 
-Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias opiskelija. Minulla on perustiedot, mutta haluan ymmärtää, mitä käytännössä se tarkoittaa." Tallenna vastaus.
+Lopuksi kirjoita lyhyt yhteenveto (3–5 lausetta): *"Mitä huomasin näiden 5–7 promptin kirjoittamisessa? Mikä rakenne toistuu eniten? Mihin näistä palaisin uudelleen?"*
 
-**Kierros 3: Esimerkit ja yksityiskohdat**
+> 💡 **Miksi tämä on tärkeää:** Oppitunneilla 17–18 kirjoitat bottisi **järjestelmäpromptin** — pääohjeen, joka määrittää botin käyttäytymistä. Sinun ei tarvitse keksiä sitä tyhjästä. Otat tästä pankista parhaiten toimivat rakenteet ja yhdistät ne. Mitä parempi pankki, sitä parempi botti.
 
-Pyyntö: "Kerro [aiheesta]. Olen 15-vuotias IT-opiskelija. Haluan 3 konkreettista esimerkkiä jokapäiväisestä elämästä. Myös riskit ja haitat olisi hyvä tietää." Tallenna vastaus.
-
-**Kierros 4: Tarkka pilkkominen**
-
-Pyyntö: "Haluan oppia [aiheesta] 30 minuutissa. Anna minulle: 1) lyhyt selitys (2–3 lausetta), 2) kolme konkreettista esimerkkiä, 3) kolme yleistä väärinkäsitystä, 4) testikysymykset (kolme kysymystä, joita opiskelijat usein vastaavat väärin)." Tallenna vastaus.
-
-### Dokumentointi
-
-Kirjoita yhteenveto, jossa käsittelet seuraavat asiat:
-
-**Vastausten laatu:** Miten vastaukset erosivat toisistaan? Miksi? **Kontekstin merkitys:** Mitkä muutokset olivat tärkeimpiä? **Käytettävyys:** Mikä vastaus oli sinulle hyödyllisin opiskelussa? Miksi? **Omiksi sanoiksi:** Mitä opit kontekstin antamisesta?
+**1 / 3 rakennuspalikkaa kerätty**

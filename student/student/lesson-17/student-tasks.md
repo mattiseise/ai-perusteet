@@ -1,252 +1,58 @@
-# Tehtävät — Projektidokumenttibotti
+# Yhdistä rakennuspalikat — aloita botin rakentaminen
 
-## Oppimisen tavoite
+## Mitä teet?
 
-Tässä oppitunnissa oppit suunnittelemaan ja rakentamaan uuden Custom GPT -botin, joka auttaa käyttäjää kehittämään projektisuunnitelman. Botti kysyy oikeat kysymykset, kokoaa vastaukset ja luo valmiin suunnitelman. Opit seuraavat taidot:
+> **HUOM:** Tätä varten sinulla tulee olla kerättynä rakennuspalikat 1–3 (tunnit 12, 14 ja 15).
 
-- Miten määritellään botin tarkoitus ja rooli
-- Miten kirjoitetaan system prompt, joka johtaa botin käyttäytymistä
-- Miten testataan botti käytännöllisissä tilanteissa
-- Miten iteroidaan ja parannetaan bottia testaustulosten perusteella
+Aloitat **projektin määrittelydokumentin sparrauskumppani** -bottisi rakentamisen Microsoft Copilotissa. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa, jotka olet kerännyt aiemmilla tunneilla. Tunnin lopussa sinulla on bottisi **ensimmäinen toimiva versio**, jota viimeistelet ja testaat tunnilla 18.
 
----
+Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan järjestelmäpromptin muotoilussa** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että rakennuspalikoiden ydin näkyy lopullisessa botissa.
 
-## Tehtävä 17.1: Suunnittele botin kysymyspatteristo (30 min)
+## Miten teet sen?
 
-### Tavoite
+Tämän tunnin työ rakentuu neljään vaiheeseen:
 
-Määritellä, mitä kysymyksiä botti esittää ja missä järjestyksessä. Tämä on botin "runko".
+1. **Avaa rakennuspalikat.** Tunnilla 12 kirjoitit promptauspankin, tunnilla 14 määrittelydokumentin ja tunnilla 15 kuratoit tietopohjan. Kaikki on nyt käytössä.
+2. **Kirjoita järjestelmäprompti.** Yhdistä rakennuspalikoiden ydin yhdeksi botin pääohjeeksi.
+3. **Rakenna botti Copilotissa.** Luo Copilot Agent, syötä järjestelmäprompti ja lataa tietopohjan dokumentit.
+4. **Aja ensimmäinen testikeskustelu.** Tunnistat, mikä toimii heti ja mihin pitää palata tunnilla 18.
 
-### Ohjeet
+## Rakennuspalikat työvälineinä
 
-1. Lue uudelleen self-study-materiaali, erityisesti osio "Mitä hyvä projektisuunnitelma sisältää".
+Jokainen rakennuspalikka palvelee tiettyä osaa botista. Älä yritä keksiä mitään uudelleen — käytä mitä olet jo tehnyt:
 
-2. Kirjoita muistiin **botin tarkoitus ja rooli**:
-   - Mikä botti on? (Esimerkiksi: "Projektin mentor, jolla on kokemus projektinjohdosta")
-   - Mitä se tekee? (Esimerkiksi: "Auttaa käyttäjää luomaan projektisuunnitelman")
+- **Rakennuspalikka 1** (tunti 12, promptauspankki) → *järjestelmäpromptin rakenne ja kieli.* Olet jo kirjoittanut promptirakenteita, jotka toimivat. Käytä niiden tyyliä ja sanavalintoja botin pääohjeessa.
+- **Rakennuspalikka 2** (tunti 14, määrittelydokumentti) → *järjestelmäpromptin sisältö.* Kaikki kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat ohjekirjoitukseksi botille.
+- **Rakennuspalikka 3** (tunti 15, tietopohja) → *botin asiantuntemuksen lähde.* Lataat dokumentit Copilotiin ja botti käyttää niitä vastauksissaan.
 
-3. Suunnittele **vähintään 15 kysymystä**, jotka botti esittää. Ne pitäisi ryhmitellä viiteen pääosaan:
-   - **Mitä?** (3–4 kysymystä): Projektin kuvaus, tuote, ominaisuudet
-   - **Kenelle?** (3–4 kysymystä): Käyttäjät, asiakkaat, heidän profiili
-   - **Miksi?** (2–3 kysymystä): Tarkoitus, miksi projekti on olemassa, hyödyt
-   - **Milloin?** (2–3 kysymystä): Aikataulu, vaiheet, deadlinet
-   - **Miten?** (3–4 kysymystä): Resurssit, tiimi, tekniikka, budjetti
+## Bottisi vaatimukset tämän tunnin lopussa
 
-4. Kirjoita jokaiseen kysymykseen **tarkennussuhde**, jos käyttäjä vastaa epäselvästi. Esimerkiksi: "Jos käyttäjä sanoo 'nuoret', kysymykset: minkä ikäiset? Missä?"
+1. **Toimiva Copilot Agent** on luotu ja siihen pääsee.
+2. **Järjestelmäprompti** sisältää selkeästi: roolin, työnkulun, persoonan ja vähintään 3 rajaa.
+3. **Tietopohjan dokumentit** on ladattu bottiin (3–5 kpl).
+4. **Yksi testikeskustelu** on käyty läpi alusta loppuun: olet keksinyt kuvitteellisen projektin omalta alaltasi ja antanut botin ohjata sinut määrittelydokumentin osa-alueiden läpi.
+5. **Lista 3–5 havainnosta**, joita pitää korjata tunnilla 18.
 
-### Odotettu tuotos
+## Tämän tunnin lopputulos
 
-Dokumentti, joka sisältää:
-- Botin tarkoitus ja rooli (1 kappale)
-- Viisi ryhmää kysymyksiä (vähintään 15 kysymystä yhteensä)
-- Jokaisen ryhmän jälkeen merkittävät "syvennä"-kysymykset
+Tunnin 17 lopussa sinulla on:
 
-**Esimerkki:**
-```
-BOTTI: Projektin mentor
-TARKOITUS: Auttaa käyttäjää luomaan selkeän projektisuunnitelman
+- Botin ensimmäinen toimiva versio Copilotissa
+- Järjestelmäpromptin ensimmäinen versio kopioituna myös tekstinä muistiin (tarvitset sen tunnilla 18, kun iteroit)
+- Yksi testikeskustelu kuvakaappauksina tai kopioituna
+- Korjauslista tunnille 18: *"Tämä ei toimi vielä, korjaa…"*
 
-MITÄ-osio (projektin kuvaus):
-1. "Miten lyhyesti kuvaisisit projektiasi? (2-3 lausetta)"
-   Syvennä: Jos epäselvää → "Entä mitä tuotetta tai palvelua rakennetaan?"
-2. "Mitkä ovat projektin pääominaisuudet?"
-   Syvennä: "Mikä näistä on tärkein?"
-...
+Tämä on lähtötaso. Lopullinen botti syntyy tunnilla 18, kun iteroit, testaat tarkemmin ja viimeistelet.
 
-KENELLE-osio:
-1. "Kuka käyttää tuotettasi tai palveluasi?"
-...
-```
+## Jos et tiedä mistä aloittaa
 
----
+Aloita näin:
 
-## Tehtävä 17.2: Kirjoita system prompt ja luo botti (30 min)
+1. Avaa **rakennuspalikka 2** ja kopioi sen kuusi osaa rinnakkain avoimena toiseen ikkunaan. Tämä on järjestelmäpromptisi raaka-aine.
+2. Avaa **rakennuspalikka 1** ja katso, mikä promptirakenne on osunut sinulla parhaiten kohdalleen. Käytä sen tyyliä järjestelmäpromptin kirjoittamisessa.
+3. Kirjoita järjestelmäpromptin ensimmäinen versio omin sanoin — älä yritä saada sitä täydelliseksi.
+4. Avaa Copilot ja luo uusi Agent. Syötä järjestelmäprompti ja lataa **rakennuspalikka 3** -tietopohjan dokumentit.
+5. Keksi kuvitteellinen projekti omalta alaltasi ja aja botin kanssa keskustelu läpi.
+6. Kirjoita muistiin 3–5 kohtaa, joita pitää korjata. Älä korjaa niitä vielä — se tehdään tunnilla 18.
 
-### Tavoite
-
-Kirjoittaa system prompt (botin ohjeistus) ja luoda botti. Botti testattavaksi.
-
-### Ohjeet
-
-1. Käytä tehtävä 17.1:stä saatua kysymyslistaa.
-
-2. Kirjoita **system prompt**, joka sisältää:
-   - **Identiteetti**: Kuka botti on? (rooli, kokemus)
-   - **Tarkoitus**: Mitä botti tekee?
-   - **Ohjeet**: Miten botti kysyy? (järjestys, miten kuuntele, miten koota vastaukset)
-   - **Rajaukset**: Mitä botti ei saa tehdä?
-
-   Prompt pitäisi olla **300–500 sanaa**.
-
-   **Esimerkki alkua:**
-   > Olet Projektiseutu-niminen botti. Sinulla on 12 vuoden kokemus projektinjohdosta ja liiketoimintasuunnittelusta. Olet mentori, joka auttaa ihmisiä luomaan selkeitä, toteutettavia projektisuunnitelmia.
-   >
-   > Tarkoituksesi: Saada käyttäjä ajattelemaan projektin kaikki kriittiset puolet esittämällä järjestelmällisiä kysymyksiä ja kokoamalla vastaukset valmiiksi dokumentiksi.
-   >
-   > Ohjeet:
-   > 1. Aloita aina ystävällisellä esittelyllä ja kysymällä lyhyttä projektikuvausta.
-   > 2. Kysy vain yksi kysymys kerrallaan.
-
-3. **Luo botti** yhdellä näistä tavoista:
-   - **Vaihtoehto A**: Custom GPT OpenAI:ssä (jos sinulla on pääsy ChatGPT Plusiin)
-   - **Vaihtoehto B**: Claude Projects -ominaisuus (jos käytät Claude Webissa)
-   - **Vaihtoehto C**: Testaa Claude-chatissa kopioimalla system promptin ja testaamalla sitä suoraan
-
-   Opettaja kertoo, kumpaa alustaa käytetään.
-
-4. Liitä lopullinen system prompt dokumenttiin.
-
-### Odotettu tuotos
-
-- System prompt (300–500 sanaa), selkeästi kirjoitettu
-- Kuvakaappaus tai linkki luottuun bottiin
-- Lyhyt kommentti: "Miten botti käyttäytyy?" ja "Mitä haluat testata ensi tehtävässä?"
-
----
-
-## Tehtävä 17.3: Testaa bottia kahdella projektiskenaarilla (30 min)
-
-### Tavoite
-
-Testata botti kahden eri projektikuvauksen avulla. Nähdä, kysyykö se oikeita kysymyksiä, muistaako vastaukset, ja syntyykö lopussa järkevä suunnitelma.
-
-### Ohjeet
-
-1. Valitse **kaksi erilaista projektiasiakirjaa** (katso esimerkkejä alla).
-
-2. **Testaus 1**: Kirjoita ensimmäinen projektikuvaus botille ja dokumentoi:
-   - **Syöte**: Alkuperäinen projektikuvaus (kopioi)
-   - **Botin kysymykset**: Mitä kysyi? Missä järjestyksessä?
-   - **Vastauksesi**: Mitä vastasit?
-   - **Lopputulos**: Mitä botti koosti? (kopioi tai kuvakaappaa)
-   - **Analyysi**: Oliko suunnitelma järkevä? Olivatko kaikki asiat oikein? Mitä puuttui?
-
-3. **Testaus 2**: Toista sama prosessi toisella projektikuvauksella.
-
-4. **Vertailu**: Vertaa tuloksia:
-   - Kysyikö botti samoja kysymyksiä vai sopeutuiko se projektiin?
-   - Oliko toinen suunnitelma parempi kuin toinen? Miksi?
-   - Mitä botti teki hyvin? Mitä voisi parantaa?
-
-### Projektiskenaarioiden esimerkkejä
-
-**Projekti A:** "Rakennan mobiilisovellusta, joka auttaa nuoria harjoittamaan matematiikkaa pelaamisen avulla. Idea on pelaavia oppimistehtäviä."
-
-**Projekti B:** "Olen IT-konsultti, ja asiakkaani haluaa parantaa asiakaspalvelun tehokkuutta automatisoinnilla. Ei ole vielä tarkasti määritelty, mitä automatisoida."
-
-(Voit käyttää omia ideoitasi, kunhan ne ovat riittävän selkeät aloituksiksi.)
-
-### Odotettu tuotos
-
-Dokumentaatio, joka sisältää:
-
-**Testaus 1:**
-- Projektikuvaus (2–3 lausetta)
-- Botin kysymykset (numeroidusta listasta)
-- Käyttäjän vastaukset
-- Lopullinen suunnitelma (botin tuottama)
-- Analyysi: "Botti kysyi hyviä kysymyksiä, koska... Puuttui [asia], koska..."
-
-**Testaus 2:**
-- Sama rakenne kuin testaus 1
-
-**Yhteenveto:**
-- Mitkä olivat suurimmat erot kahden testin välillä?
-- Oliko botti tasapainoisesti kysyvä vai painottuiko se johonkin osaan?
-- Mikä oli paras vastaus botilta? Mikä pahin?
-- Seuraavassa iteraatiossa, mitä haluaisit muuttaa?
-
----
-
-## Tehtävä 17.4: Iteraatio ja parantaminen (sisältyy 17.3:een)
-
-### Tavoite
-
-Testaustulosten perusteella parantaa bottia seuraavalle kerralle (oppitunti 18).
-
-### Ohjeet
-
-1. Lue tehtävä 17.3:n analyysi uudelleen.
-
-2. Kirjoita **muutosluettelo**:
-   - Mikä ei toiminut hyvin?
-   - Miksi se ei toiminut?
-   - Miten haluat korjata sen?
-   - Mitkä osat system promptista muuttuvat?
-
-3. **Valinnainen**: Jos sinulla on aikaa, tee uudet testit korjatulla promptilla ja dokumentoi parantuminen.
-
-### Esimerkki muutosluettelosta
-
-```
-ONGELMA 1: Botti unohti ensimmäisen vastauksen
-SYY: System promptissa ei ole ohjeita muistiinpanoista
-KORJAUS: Lisää: "Muista aina, mitä käyttäjä sanoi ensimmäisessä vastauksessa"
-TULOS: Testataan seuraavalla kerralla
-
-ONGELMA 2: Botti ei kysynnyt budjettiin liittyen
-SYY: Kysymykset olivat liian vähäisiä "Miten"-osiossa
-KORJAUS: Lisää "Mikä on budjetti?" ja "Onko sinulla rahasummaa?"
-TULOS: Seuraavalla testilla pitäisi kysyä paremmin
-```
-
-### Odotettu tuotos
-
-Dokumentaatio 3–5 muutoksesta:
-- Mikä ei toiminut
-- Miten korjataan
-- Mitä odotetaan seuraavaksi
-
----
-
-## Palautusvaatimukset
-
-Palauta kaikki 4 tehtävää yhtenäisenä dokumenttina tai kansiossa:
-
-1. **Tehtävä 17.1:** Kysymyspatteristo (½–1 sivu)
-2. **Tehtävä 17.2:** System prompt (1 sivu) + kuvakaappaus botista
-3. **Tehtävä 17.3:** Kaksi testiskenaarion dokumentaatiota (1½–2 sivua) + yhteenveto
-4. **Tehtävä 17.4:** Muutosluettelo (½ sivu)
-
-**Yhteensä:** ~3–4 A4-sivua
-
-Voit palauttaa:
-- Word-dokumenttina (.docx)
-- PDF:nä
-- Google Docsina (jaa linkkiin)
-- Tekstina Moodlessa
-
----
-
-## Vihjeet onnistumiseen
-
-- **Kysymykset**: Kirjoita ne käyttäjäystävällisesti. Kysy selkeästi, mitä tarkoitat. Älä käytä jargonia.
-- **System prompt**: Ole yksityiskohtainen. "Kysy oikeat kysymykset" on liian epämääräinen. "Kysy ensin mitä projektista, sitten kenelle, sitten miksi" on selvä.
-- **Testaus**: Käytä kahta täysin erilaista projektia. Ei riitä, että testaat samantapaista ideaa kahdesti.
-- **Dokumentaatio**: Näytä, mitä botti sanoi. Kopioi sen vastaukset. Opettaja haluaa nähdä, mitä tapahtui.
-- **Rehellisyys**: Jos botti epäonnistui, se on OK. Dokumentoi epäonnistuminen. Yritä ymmärtää miksi.
-
----
-
-## Aikataulu
-
-- **Tehtävä 17.1:** 30 minuuttia
-- **Tehtävä 17.2:** 30 minuuttia
-- **Tehtävä 17.3:** 30 minuuttia
-- **Tehtävä 17.4:** 10–15 minuuttia
-
-**Yhteensä:** ~2 tuntia
-
----
-
-## Muistutus
-
-Tämä on Tekoälyjen käyttö -osion arvioinnin **ensimmäinen osa** kahdesta. Seuraavalla kerralla (oppitunti 18):
-- Viimeistelet botin
-- Parannat sitä testaustulosten perusteella
-- Esittelette botin (esittelytehtävä)
-- Arviointi valmistuu
-
-Tämä oppitunti on perustan rakentaminen. Seuraava on viimeistely. Molemmat yhdessä muodostavat kokonaisuuden.
-
-Onnea!
+*Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.*

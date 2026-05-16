@@ -1,47 +1,79 @@
-# Opiskelutehtävät: Kontekstin antaminen
+# Rakennuspalikka 1 — Promptauspankki
 
-## Botin rakennuspala 2: Suunnittele kontekstistrategia
+> 📌 **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä huolellisesti.
 
-Tämä on toinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+## Mitä teet?
 
-### Tehtävä
+Rakennat itsellesi **promptauspankin** — kokoelman 5–7 omaa, hyvin toimivaa promptia, joita voit käyttää uudelleen. Tämä on bottisi tulevan järjestelmäpromptin **raaka-aine**: kun tunnilla 17 kirjoitat botille pääohjetta, otat siihen toimivat rakenteet suoraan tästä pankista.
 
-Palaa rakennuspalaan 1 (oppitunti 10), jossa valitsit alustan ja käyttötapauksen. Suunnittele nyt, miten bottisi saa kontekstia käyttäjältä. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Mitä kontekstia bottisi tarvitsee käyttäjältä toimiakseen hyvin (esim. käyttäjän rooli, tehtävän laajuus, taustatiedot)? Miten botti pyytää kontekstia — kysyykö se aktiivisesti vai odottaako käyttäjän antavan tiedot? Miten pilkot monimutkaisen tehtävän osiin, jotta konteksti-ikkuna ei täyttyisi?
+Promptauspankki ei ole pelkkä lista esimerkkejä. Se on **kokoelma promptirakenteita, jotka olet itse testannut**. Tiedät, että ne toimivat, koska olet nähnyt niiden tuloksen.
 
-### Miksi tämä on tärkeä
+## Vaiheet
 
-Oppitunneilla 17–18 kirjoitat bottisi system promptin, joka ohjaa botin käyttäytymistä. Kontekstistrategia on system promptin ydin — se määrittää, miten botti kerää tietoa käyttäjältä ja miten se rakentaa ymmärryksensä tehtävästä. Ilman kontekstistrategiaa system promptista tulee epämääräinen ja botti antaa yleisiä vastauksia.
+### Vaihe 1 — Tunnista omat työtilanteesi
 
-Alla olevat harjoitustehtävät auttavat sinua ymmärtämään käytännössä, miten kontekstin laatu vaikuttaa tekoälyn vastauksiin ja miten kontekstia rakennetaan asteittain.
+Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opiskelussasi tai työssäsi. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Esimerkkejä omalta alaltasi:
 
----
+- **IT-tuki:** käyttäjäohjeen kirjoittaminen, virheilmoituksen tulkinta, käytäntöpäätöksen perustelu
+- **Kyberturvallisuus:** riskiarvio, suunnitelman tarkistus, käyttäjäkoulutuksen materiaali
+- **Pelikoodaus:** ominaisuuden ideointi, koodin selitys, pelitestaussuunnitelma
+- **Web-ohjelmointi:** README-tiedosto, API-dokumentaatio, koodikatselmointi
 
-## Tehtävä 12.1: Kontekstin rakentaminen asteittain
+Yhden tilanteen pitää olla **"projektin määrittelydokumentin laatiminen"** tai jokin sen osa — tämä on suora yhteys tunnin 18 lopputuotokseen.
 
-### Tavoite
-Kokea käytännössä, miten kontekstin määrä ja laatu vaikuttavat tekoälyn vastauksiin. Tämä auttaa sinua rakennuspalassa suunnittelemaan, mitä kontekstia oma bottisi tarvitsee.
+### Vaihe 2 — Kirjoita ensimmäinen versio jokaisesta promptista
 
-### Ohjeet
+Tunnilla 4 opit, että hyvä prompti rakentuu viidestä osasta. Idea on yksinkertainen: paljas kysymys ("Miten teen X?") jättää tekoälylle liikaa tulkinnanvaraa ja tuottaa yleisluontoisia vastauksia. Kun lisäät kontekstia — kenelle, mihin tilanteeseen, missä muodossa — vastaus muuttuu täsmälliseksi ja heti käyttökelpoiseksi.
 
-Valitse aihe (esim. esseen kirjoittaminen, ryhmätyön raportti, tenttiin valmistautuminen tai harjoitteluhakemuksen kirjoittaminen). Tee neljä erilaista pyyntöä tekoälylle, joissa jokainen on parempi kuin edellinen:
+Käytä tätä samaa viiden osan kehystä jokaisessa pankkisi promptissa:
 
-**Kierros 1 — Huono pyyntö (liian yleinen):** Yksinkertainen, epämääräinen pyyntö kuten "Auta minua esseen kanssa."
+| Osa | Mitä siihen tulee? |
+|---|---|
+| **Rooli** | Kenenä tekoälyn pitää toimia? Esim. *"Olet kokenut tietoturva-asiantuntija."* |
+| **Tausta** | Mikä on tilanne ja kuka sinä olet? Esim. *"Olen IT-opiskelija, joka kirjoittaa määrittelyä asiakasprojektiin."* |
+| **Tavoite** | Mitä haluat saada aikaan? Esim. *"Haluan listan riskeistä, jotka projektin alussa pitää tunnistaa."* |
+| **Rajaukset** | Mitä et halua tai mitä tulee välttää? Esim. *"Älä anna yleisiä neuvoja — pysy pienen yrityksen tilanteessa."* |
+| **Formaatti** | Missä muodossa vastaus pitää antaa? Esim. *"Anna 5–7 kohdan lista, jossa jokaisen kohdan alla 1–2 lauseen perustelu."* |
 
-**Kierros 2 — Parempi pyyntö (joitain tietoja):** Lisää kontekstia — kuka olet, mitä haluat, mihin käytät sitä.
+Älä yritä saada täydellistä versiota kerralla. Kirjoita raakaversiot — niitä parannetaan seuraavissa vaiheissa.
 
-**Kierros 3 — Vielä parempi (lisää yksityiskohtia):** Tarkenna lisää — mitä tiedät jo, mitä et tiedä, mihin tasoon kirjoittaa, mitä muotoa haluat.
+### Vaihe 3 — Testaa ja iteroi tekoälyn kanssa
 
-**Kierros 4 — Paras pyyntö (täysi konteksti + pilkkominen):** Pilko tehtävä osiin ja kerro tarkasti mitä haluat.
+Avaa ChatGPT, Claude tai Copilot ja testaa jokainen promptisi. Kirjaa muistiin:
 
-Tallenna kaikki neljä pyyntöä ja vastaukset. Kirjoita yhteenveto, jossa vertaat ensimmäisen ja neljännen vastauksen eroja, analysoit kontekstin vaikutusta ja pohdit, miten sovellat oppimaasi seuraavalla kerralla.
+- Toimiko prompti heti?
+- Mitä jouduit tarkentamaan jälkikäteen?
+- Mikä rakenneosa puuttui tai oli liian löysä?
 
----
+Käytä lopuksi tekoälyä apunasi promptien parantamiseen. Esimerkkiprompti:
 
-## Tehtävä 12.2 (valinnainen): Iteraation harjoittelu
+```
+Toimit minulle promptaussparrauskumppanina. Rakennan itselleni
+promptauspankkia, johon kerään uudelleenkäytettäviä prompteja.
+Tässä yksi prompti ja sen tuottama vastaus:
 
-### Tavoite
-Harjoitella kontekstin rakentamista iteratiivisesti samaan tehtävään. Tämä syventää ymmärrystäsi siitä, miten konteksti rakentuu vaiheittain — sama periaate pätee bottisi vuorovaikutukseen käyttäjän kanssa.
+PROMPTI: [liitä promptisi]
 
-### Ohjeet
+VASTAUS: [liitä saatu vastaus]
 
-Valitse yksi IT-alan aihe (esim. verkot, tietoturva, palvelimet, koneoppiminen). Tee neljä kierrosta, joissa jokaisella kerralla tarkennat pyyntöä: yksinkertaisesta kysymyksestä ("Kerro aiheesta") tarkkaan pilkkomiseen ("Haluan oppia aiheesta 30 minuutissa. Anna lyhyt selitys, esimerkit, väärinkäsitykset ja testikysymykset."). Kirjoita yhteenveto vastausten laadun eroista ja siitä, mitkä muutokset olivat tärkeimpiä.
+Mitä prompissa toimii hyvin? Mikä siinä jättää vielä toivomisen
+varaa? Anna 1–2 konkreettista parannusehdotusta — älä kirjoita
+uutta versiota puolestani, vaan kerro mitä kannattaa muuttaa ja
+miksi.
+```
+
+Tee tämä jokaiselle promptille. Tämä on harjoitus siitä, miten tekoälyä käytetään *oman työn parantamiseen*, ei korvikkeena ajattelulle.
+
+### Vaihe 4 — Kirjoita pankin lopulliset versiot (tämä on rakennuspalikkasi)
+
+Viimeistele jokainen prompti sparrauksen jälkeen. Kokoa ne yhteen dokumenttiin selkeästi otsikoituna:
+
+- **Promptin nimi tai käyttötilanne** (esim. "Käyttäjäohjeen kirjoittamiseen IT-tuessa")
+- **Itse prompti** kokonaisuudessaan
+- **Lyhyt huomio** (1–2 lausetta): mihin tämä toimii parhaiten, mihin se ei sovi
+
+Lopuksi kirjoita lyhyt yhteenveto (3–5 lausetta): *"Mitä huomasin näiden 5–7 promptin kirjoittamisessa? Mikä rakenne toistuu eniten? Mihin näistä palaisin uudelleen?"*
+
+> 💡 **Miksi tämä on tärkeää:** Oppitunneilla 17–18 kirjoitat bottisi **järjestelmäpromptin** — pääohjeen, joka määrittää botin käyttäytymistä. Sinun ei tarvitse keksiä sitä tyhjästä. Otat tästä pankista parhaiten toimivat rakenteet ja yhdistät ne. Mitä parempi pankki, sitä parempi botti.
+
+**1 / 3 rakennuspalikkaa kerätty**

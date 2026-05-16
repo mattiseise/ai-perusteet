@@ -123,6 +123,10 @@ Kuvittele, että olet rakentamassa IT-helpdesk-bottia organisaatioosi.
 
 Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oikeaan käyttöön.
 
+## Kohti omaa projektia
+
+Tällä tunnilla käsittelimme kolmea asiaa, jotka muodostavat hyvän botin: tietopohjan, rajaukset ja testauksen. Tehtävissä kuratoit bottisi **tietopohjan** (Rakennuspalikka 3) — 3–5 huolella valittua dokumenttia, joista botti ammentaa oman alasi asiantuntemuksen. Rajaukset olet jo määritellyt tunnilla 14 osana botin määrittelydokumenttia. Testaukseen palaamme tunnilla 18, kun botti on rakennettu ja valmis koeajoon. Seuraavaksi tunnilla 17 yhdistät kolme rakennuspalikkaasi ensimmäiseksi toimivaksi botiksi Copilotissa.
+
 ## Yhteenveto
 
 Hyödyllinen botti rakentuu kolmelle vahvalle perustalle. **Tietopohja** antaa botille tiedon, jonka perusteella se voi vastata tarkasti ja ajankohtaisesti. **Rajaukset** varmistavat, että botti ei tee vaarallisia tai sopimatonta asioita ja tietää, milloin sen pitäisi kieltäytyä. **Testaus** varmistaa systemaattisesti, että botti todella tekee, mitä pitää — positiivisissa tilanteissa, negatiivisissa tilanteissa ja epätavallisissa reunatapauksissa. Ja testaus ei ole kertaluonteinen työ — se on iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen, kunnes se on riittävän hyvä. Hyvillä botteilla on hyvät tiedot, selkeät rajat ja perusteellinen testaus takana.

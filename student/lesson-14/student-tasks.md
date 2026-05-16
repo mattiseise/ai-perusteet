@@ -1,64 +1,67 @@
-# Opiskelutehtävät: Oman botin suunnittelu
+# Rakennuspalikka 2 — Botin määrittelydokumentti
 
-## Botin rakennuspala 3: Suunnittele botin persoonallisuus
+> 📌 **Tämä on toinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä huolellisesti.
 
-Tämä on kolmas neljässä botin rakennuspalassa, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+## Mitä teet?
 
-### Tehtävä
+Suunnittelet bottisi **määrittelydokumentin** — botin perustamisasiakirjan, joka kertoo kenelle se on, mitä se tekee, miten se käyttäytyy ja mitä se ei tee. Tämä on ensimmäinen rakennuspalikka, joka käsittelee bottiasi konkreettisesti — tunnilla 12 keräsit yleisiä promptirakenteita, nyt suunnittelet juuri sitä bottia, jonka rakennat tunneilla 17–18.
 
-Palaa rakennuspaloihin 1 ja 2 (oppitunnit 10 ja 12), joissa valitsit alustan ja suunnittelit kontekstistrategian. Suunnittele nyt bottisi persoonallisuus. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat neljään kysymykseen: Mikä on bottisi tarkoitus — mitä konkreettista ongelmaa se ratkaisee? Mikä on bottisi rooli — kuka se on ja millainen asiantuntija? Mitkä ovat bottisi kolme neljä tärkeintä ohjetta — miten se käyttäytyy? Mitkä ovat bottisi rajaukset — mitä se ei saa tehdä?
+Et kirjoita vielä järjestelmäpromptia. Et rakenna bottia. Et testaa sitä. Suunnittelet sen — kuten arkkitehti tekee pohjapiirroksen ennen kuin perustukset valetaan.
 
-### Miksi tämä on tärkeä
+## Vaiheet
 
-Oppitunneilla 17–18 kirjoitat bottisi system promptin ja rakennat sen. Persoonallisuus on system promptin sielu — se määrittää, miten botti puhuu, mitä se painottaa ja miten se käyttäytyy eri tilanteissa. Ilman selkeää persoonallisuutta botti on geneerinen ja epäjohdonmukainen.
+### Vaihe 1 — Valitse oma ammattialasi
 
-Alla olevat harjoitustehtävät auttavat sinua suunnittelemaan persoonallisuuden eri osat käytännössä ja kirjoittamaan ne muotoon, joka toimii system promptissa.
+Botti, jonka tunnilla 18 rakennat, palvelee oman alasi ammattilaista projektin määrittelydokumentin laatimisessa. Valitse, minkä alan ammattilaiselle botti rakennetaan:
 
----
+- **IT-tuki**
+- **Kyberturvallisuus**
+- **Pelikoodaus**
+- **Web-ohjelmointi**
 
-## Tehtävä 14.1: Määrittele oma botti — tarkoitus, rooli ja ohjeet
+### Vaihe 2 — Täytä määrittelydokumentin pohja
 
-### Tavoite
-Suunnitella oman botin perusrakennuspalikat — tarkoitus, rooli ja ohjeet. Tämä on suoraan käytettävää rakennuspalan kirjoittamisessa.
+Käy alla oleva taulukko läpi ja kirjoita lyhyt vastaus jokaiseen kohtaan. Tämä on bottisi DNA — kaikki sen myöhempi käyttäytyminen rakentuu näiden vastausten päälle.
 
-### Ohjeet
+| Osa | Mitä siihen tulee? |
+|---|---|
+| **Botin nimi** | Anna botille nimi. Sen ei tarvitse olla nokkela — sen pitää kuvata, mitä botti tekee. Esim. *"Pelin määrittelyvalmentaja"* tai *"Web-projektin sparraaja"*. |
+| **Kohderyhmä** | Kenelle botti on? Aloittelijalle vai kokeneelle? Opiskelijalle vai työssäkäyvälle? Esim. *"Opiskelija tai aloittelevia pelikoodausprojekteja tekevä ammattilainen, joka tarvitsee tukea määrittelyn rakenteeseen."* |
+| **Tarkoitus** | Mitä konkreettista botti tekee? Yksi kahden lauseen tavoite. Esim. *"Auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin, käymällä läpi kuusi osa-aluetta järjestyksessä."* |
+| **Persoona ja äänensävy** | Millainen botti on luonteeltaan? Esim. *"Käytännönläheinen valmentaja, joka kysyy paljon tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti."* |
+| **Työnkulku** | Missä järjestyksessä botti ohjaa käyttäjää? Tyypillinen määrittelydokumentin rakenne: tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu. Sopeuta alasi mukaan ja kirjoita 5–7 vaiheen runko. |
+| **Rajat — mitä botti EI tee** | Listaa 3–5 asiaa. Esim. *"Ei kirjoita koko dokumenttia käyttäjän puolesta. Ei anna oikeudellisia neuvoja. Ei arvioi pelin kaupallista potentiaalia. Ei käsittele muiden alojen projekteja."* Rajat tekevät botista ammattimaisen. |
 
-Valitse botin tyyppi (esim. Python-tutori-botti, IT-helpdesk-botti, asiakaspalvelubotti tai liiketoimintamentori) ja täytä suunnittelulomake:
+### Vaihe 3 — Haasta määrittelysi tekoälyllä
 
-Tarkoitus: Mikä on selkeä, konkreettinen tarkoitus? Kirjoita niin, että voit mitata onnistumisen. Huono esimerkki: "Olla hyödyllinen." Hyvä esimerkki: "Auttaa opiskelijoita ymmärtämään Python-silmukoita interaktiivisten esimerkkien kautta."
+Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä sitä haastamaan suunnitelmasi:
 
-Rooli: Kuka botti on? Mikä on sen asiantuntemus? Kirjoita 2–3 lausetta uskottavasta roolista.
+```
+Toimit minulle sparrauskumppanina. Suunnittelen bottia, joka auttaa
+oman alani ammattilaista projektin määrittelydokumentin laatimisessa.
+Tässä bottini määrittelydokumentti:
 
-Ohjeet: Mitkä ovat kolme tärkeintä ohjetta, jotka botille tulee antaa? Kirjoita konkreettisia ohjeita.
+[liitä koko taulukkosi tähän]
 
-Rajaukset: Mitä botti ei saa tehdä? Kirjoita vähintään kaksi rajausta.
+Haasta suunnitelmaani. Erityisesti:
+- Onko tarkoitus tarpeeksi konkreettinen vai jääkö se yleisluontoiseksi?
+- Onko kohderyhmä riittävän rajattu?
+- Puuttuuko työnkulusta jokin tyypillinen vaihe oman alani projekteissa?
+- Ovatko rajat realistisia vai liian tiukkoja / löysiä?
+- Mitä yksi sokea piste tässä suunnitelmassa on?
 
----
+Älä kirjoita uutta versiota puolestani — anna minulle 2–3 konkreettista
+parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni.
+```
 
-## Tehtävä 14.2: Kirjoita järjestelmäprompti
+Tämä on harjoitus siitä, miten tekoälyä käytetään *suunnittelukumppanina*. Et anna sen suunnitella puolestasi, mutta annat sen kyseenalaistaa ajatuksesi.
 
-### Tavoite
-Kirjoittaa yksityiskohtainen järjestelmäprompti, joka ohjaa botin käyttäytymistä. Tämä on system promptin ensimmäinen versio, jonka jatkokehität oppitunneilla 17–18.
+### Vaihe 4 — Viimeistele dokumentti (tämä on rakennuspalikkasi)
 
-### Ohjeet
+Tee tekoälyn palautteen pohjalta korjauksia ja viimeistele määrittelydokumentti. Lopullisen version pitää olla niin selkeä, että sen pohjalta voisi rakentaa botin myös toinen henkilö — ei vain sinä itse.
 
-Käytä tehtävässä 14.1 suunnittelemaasi bottia. Kirjoita järjestelmäprompti, joka sisältää identiteetin (kuka botti on), tarkoituksen (mitä botti tekee), ohjeet (miten botti käyttäytyy — neljä konkreettista sääntöä) ja rajaukset (mitä botti ei saa tehdä). Järjestelmäpromptin tulee olla ammattimaisesti kirjoitettu ja tarpeeksi yksityiskohtainen, että botti käyttäytyy johdonmukaisesti.
+Kirjoita lopuksi 2–3 lauseen pohdinta: *"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"*
 
----
+> 💡 **Miksi tämä on tärkeää:** Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä — avaat tämän dokumentin ja katsot, mitä olit suunnitellut. Tämä määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, mitä tietopohja tarvitsee tukea, ja milloin botti on valmis.
 
-## Tehtävä 14.3: Esimerkki-interaktiot — näytä, miten botti käyttäytyy
-
-### Tavoite
-Kirjoittaa 2–3 esimerkki-interaktiota, jotka näyttävät, miten botti vastaa eri tilanteissa. Tämä auttaa sinua testaamaan persoonallisuuden johdonmukaisuutta ennen varsinaista rakentamista.
-
-### Ohjeet
-
-Kirjoita kolme esimerkkidialogia omalle bottillesi:
-
-Esimerkki 1 — normaali tilanne: Tavallinen kysymys, johon botti vastaa roolinsa ja ohjeidensa mukaisesti.
-
-Esimerkki 2 — vaikea tilanne: Kysymys, joka on botin rajauksien ulkopuolella. Miten botti kieltäytyy tai ohjaa vastuullisesti?
-
-Esimerkki 3 — sekava tilanne: Epäselvä tai hajanainen kysymys. Miten botti pyytää tarkennusta?
-
-Esimerkkien tulee näyttää botin persoonallisuus, ohjeiden mukainen käyttäytyminen ja rajaukset käytännössä.
+**2 / 3 rakennuspalikkaa kerätty**

@@ -142,6 +142,10 @@ Pyyntö: "Aloitetaan maanantaista. Aihe: perustiedot verkoista. Mitä olennaista
 
 Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Sinulla oli spesifinen, käyttökelpoinen opiskelusuunnitelma, joka sopi sinulle — eikä yleinen lista.
 
+## Kohti omaa projektia
+
+Kontekstin rakentaminen on juuri se taito, joka tekee tekoälystä työkalun. Tällä tunnilla harjoittelit, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia. Tehtävissä rakennat itsellesi **promptauspankin** (Rakennuspalikka 1) — kokoelman 5–7 omaa, testattua promptia, joita voit käyttää uudelleen. Tämä pankki on bottisi tulevan järjestelmäpromptin raaka-aine: kun tunnilla 17 kirjoitat botille pääohjeen, otat siihen toimivat rakenteet suoraan tästä pankista. Seuraavaksi suunnittelet, kenelle bottisi on ja mitä se tekee.
+
 ## Yhteenveto: Konteksti on ammattimainen taito
 
 Ammattilaisesti kontekstin rakentaminen on tämä prosessi:

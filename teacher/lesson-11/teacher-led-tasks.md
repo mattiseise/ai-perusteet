@@ -8,7 +8,7 @@ Näytät opiskelijoille, että eri mallit tuottavat erilaisia vastauksia samaan 
 
 ### Ennen lähiosaa
 
-Testaa 2-3 mallia samalla tehtävällä, esimerkiksi ChatGPT tai Claude, Gemini ja DeepSeek.
+Testaa 2-3 mallia samalla tehtävällä, esimerkiksi ChatGPT, Claude tai Copilot, Gemini ja DeepSeek.
 
 Kokeile tehtävää, joka on opiskelijoille helppo ymmärtää, kuten "Kirjoita tarina robotista" tai "Selitä, mikä on internet".
 

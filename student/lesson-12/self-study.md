@@ -144,7 +144,7 @@ Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Sinulla oli spesi
 
 ## Kohti omaa projektia
 
-Kontekstin rakentaminen on juuri se taito, joka tekee botistasi hyödyllisen. Tällä tunnilla harjoittelit, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia. Tehtävissä suunnittelit kontekstistrategian omalle botillesi (**Botin rakennuspala 2**) – miten se kerää tarvittavat tiedot käyttäjältä ja rakentaa ymmärrystä kierros kierrokselta. Seuraavaksi suunnittelet, millainen persoonallisuus ja rooli botillasi on – miten se puhuu, käyttäytyy ja ohjaa käyttäjää.
+Kontekstin rakentaminen on juuri se taito, joka tekee tekoälystä työkalun. Tällä tunnilla harjoittelit, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia. Tehtävissä rakennat itsellesi **promptauspankin** (Rakennuspalikka 1) — kokoelman 5–7 omaa, testattua promptia, joita voit käyttää uudelleen. Tämä pankki on bottisi tulevan järjestelmäpromptin raaka-aine: kun tunnilla 17 kirjoitat botille pääohjeen, otat siihen toimivat rakenteet suoraan tästä pankista. Seuraavaksi suunnittelet, kenelle bottisi on ja mitä se tekee.
 
 ## Yhteenveto: Konteksti on ammattimainen taito
 

@@ -14,7 +14,7 @@ Näyttää käytännössä, miltä toimiva botti näyttää ja mitä se tekee.
 
 ### Vaiheet
 
-1. **Valmistelu**: Avaa ChatGPT tai Claude, johon olet jo kirjoittanut system prompitin projektidokumenttibotille. (Kirjoita se etukäteen tai käytä self-study-materiaalista saatua esimerkkiä.)
+1. **Valmistelu**: Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut system prompitin projektidokumenttibotille. (Kirjoita se etukäteen tai käytä self-study-materiaalista saatua esimerkkiä.)
 
 2. **Live-demo**: Kirjoita opiskelijoilta näkyvillä oleva projektikuvaus. Esimerkiksi:
    > "Rakennan web-sovellusta opiskelijoille, joka auttaa löytämään harjoittelupaikat. Haluamme tiimin, joka osaa web-kehitystä."
