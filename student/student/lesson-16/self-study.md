@@ -1,208 +1,471 @@
-# Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi
+# Oppitunti 16 — Tekoälytyökalut erikoisaloilla
+
+*Kuva, musiikki, video ja koodi*
 
 ## Johdanto
 
-Olet jo tutustunut kielimalleihin ja niiden peruskykyihin. Nyt on aika laajentaa työkaluvalikkoasi — tekoäly ei rajoitu tekstiin. Tällä oppitunnilla tutustumme neljään eri alaan erikoistuneisiin tekoälytyökaluihin: kuvageneraatioon, musiikin tuottamiseen, videon luomiseen ja koodausavustajiin. Jokainen näistä työkaluista tekee jotain erilaista, vaatii erilaisia ohjeita ja ajattelutapoja kuin tavallisen tekoälyn kanssa jutteleminen.
+Olet jo tutustunut kielimalleihin eli tekoälyihin, joiden kanssa voi keskustella tekstillä. Olet ehkä käyttänyt niitä tekstin kirjoittamiseen, selittämiseen, tiivistämiseen tai ideointiin.
 
-Tutustumme myös tekijänoikeuksiin ja etiikkaan — nämä ovat oikeastaan tärkeitä kysymyksiä, kun alat käyttämään näitä työkaluja.
+Tekoäly ei kuitenkaan rajoitu tekstiin. Nykyään tekoälyä käytetään myös kuvien, musiikin, videoiden ja koodin tekemiseen. Nämä työkalut toimivat usein samalla perusidealla: käyttäjä antaa ohjeen eli promptin, ja tekoäly tuottaa sen perusteella jotakin uutta.
 
-## Kuvageneraatio: neljä lähestymistapaa
+Tällä oppitunnilla tutustut neljään tekoälytyökalujen alueeseen:
 
-Kuvien luominen AI:lla on nopeasti kehittyvä alue. Eri työkaluilla on erilaiset vahvuudet, hintamallit ja integrointivaihtoehdot. Käytämme neljää päätyökalutyyppiä.
+- kuvageneraatioon eli kuvien luomiseen tekoälyllä
+- musiikin luomiseen
+- videon luomiseen ja muokkaamiseen
+- koodausavustajiin
 
-### DALL-E ja GPT-4o: Kuvageneraatio ChatGPT:n kautta
+Samalla käsittelemme tekijänoikeuksia ja etiikkaa. Ne eivät ole sivuasioita, vaan olennainen osa tekoälyn käyttöä. Kun tekoäly tuottaa kuvan, musiikkia tai videon, pitää miettiä ainakin kolmea asiaa: mistä tekoäly on oppinut, saako tuotosta käyttää ja onko reilua väittää tekoälyn tekemää työtä kokonaan omaksi.
 
-OpenAI on integoinut natiivit kuvangenerointiominaisuudet suoraan ChatGPT:hen ja GPT-4o malliin. **DALL-E 3 on poistumassa käytöstä toukokuussa 2026**, ja sen paikalle tulevat GPT-4o:n sisäänrakennetut kuvangenerointikyky. Näiden ominaisuuksien pääsy käy ChatGPT Plus -tilauksen (20 $/kk) kautta. Suurin vahvuus on **tekstin ymmärtäminen ja tulkinta** — voit kirjoittaa luonnollista kuvausta, ja malli ymmärtää nuansseja hyvin — esimerkiksi "1950-luvun tyyli" tai "impressionistinen maalaus aurinkosesta". Se on myös näistä neljästä turvallisin: integroitu kuvageneraattori hylkää provosoivat tai sopimattoman sisällön pyynnöt automaattisesti.
+> 📌 **Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat olla myöhemmin erilaisia.
 
-Huomaa, että erillinen DALL-E 4 -versio ei ole olemassa — kuvangenerointi on integroitu suoraan ChatGPT:hen.
+## Kuvageneraatio — tekoälyllä kuvia tekstistä
 
-**Käyttötapaus:** Liiketoimintaesitykset, blogi-artikkelien kuvat, konseptin visualisoiminen nopeasti. Kalliimpi yksittäistä kuvaa kohti, mutta sopii hyvin satunnaiseen käyttöön.
+Kuvageneraatio tarkoittaa sitä, että tekoäly luo kuvan käyttäjän tekstikuvauksen perusteella. Voit esimerkiksi kirjoittaa:
 
-**Prompt-tekniikka:** Ole spesifinen väreistä, valaistuksesta ja tyylistä. "Upea sininen aamu, sumu, valokuvallinen tyyli, kaunis valaistus" tuottaa parempia tuloksia kuin "kaunis kuva sinisestä aamusta".
+> "Luo kuva futuristisesta luokkahuoneesta, jossa opiskelijat käyttävät lisättyä todellisuutta. Tyyli on realistinen, valaistus lämmin ja kuva sopii esityksen kansikuvaksi."
 
-### Midjourney: Ammattilaistyökalu verkkosovelluksessa ja Discordissa
+Tekoäly yrittää tämän perusteella tehdä kuvan.
 
-Midjourney on johtava kuvageneraatiotyökalu, joka tunnetaan korkeasta visuaalisesta laadusta ja erityisesti **taidetta muistuttavista kuvista**. Uusin versio on **V8 Alpha** (maaliskuu 2026), joka tuottaa 5x nopeampia tuloksia ja natiiveja 2K HD -kuvia. Midjourneyn vahvuus on epätavallisten, luovan näköisten kuvien tuottaminen. Se on suosittu luoville ammattilaisille, joilla on aikaa kokeilla ja parantaa.
+Kuvagenerointityökalut ovat kehittyneet nopeasti. Nykyään ne osaavat tehdä valokuvamaisia kuvia, kuvituksia, logoideoita, konseptitaidetta ja myös kuvia, joissa on jonkin verran tekstiä. Tekstin tekeminen kuvaan on silti edelleen asia, jossa kannattaa olla tarkkana: kirjaimet, sanat ja erikoismerkit voivat mennä väärin, vaikka työkalu olisi muuten hyvä.
 
-Midjourney toimii sekä Discord-botina että täysin toimivana verkkosovelluksena (ei enää pelkästään Discordia). Jokainen kuvageneraatio maksaa pisteitä (credits), ja paketit myydään kuukausittain. Hinnat ovat: Basic 10 $/kk, Standard 30 $/kk, Pro 48 $/kk ja Mega 96 $/kk.
+### ChatGPT:n kuvagenerointi
 
-**Käyttötapaus:** Tuotemerkin kuvat, konsepti-visualisaatiot, digitaalinen taide, pelien konsepti-art. Nopeiden, pienillä budjeilla tehtävien projektien kannalta ei-optimaalinen.
+ChatGPT:ssä on sisäänrakennettu kuvien luonti. OpenAI toi kuvageneroinnin osaksi GPT-4o-mallia vuonna 2025, ja ideana on, että kuvan luonti ei ole erillinen lisäosa vaan osa samaa keskustelevaa tekoälyä. OpenAI kuvaa tätä natiivisti multimodaaliseksi malliksi: sama järjestelmä ymmärtää sekä tekstiä että kuvia ja voi tuottaa kuvia käyttäjän ohjeiden perusteella.
 
-**Prompt-tekniikka:** Käytä vertailuilla ja tarkilla taiteellisilla termeillä. "--ar 16:9 --niji 6" -flagit hallitsevat muotosuhteita ja tyyliä. Midjourney ymmärtää iteraatiota hyvin: voit pyytää "tekemään sen rajumpana" tai "lisää purppuraisia värejä".
+Tämän vahvuus on helppous. Käyttäjän ei tarvitse opetella erillistä työkalua, vaan kuvan voi pyytää samalla tavalla kuin pyytäisi tekstin tai idean. Tämä sopii hyvin aloittelijalle.
 
-### Stable Diffusion: avoin lähdekoodi (edistyneemmille)
+Hyviä käyttötapoja ovat esimerkiksi:
 
-Stable Diffusion on avoimen lähdekoodin malli, jonka voit ajaa pilvipalvelussa. Uusin versio on **Stable Diffusion 3.5**. Se on ilmainen tai halvempi kuin Midjourney (maksulliset tasot alkavat noin 7 $/kk). Tämä on hyvä vaihtoehto, jos haluat tutkia kuvageneraatiota, mutta et tarvitse Midjourneyn korkeinta laatua.
+- esityksen kuvituskuva
+- blogin tai raportin kansikuva
+- idean nopea visualisointi
+- opetusmateriaalin havainnollistava kuva
+- kuvan muokkaaminen ohjeiden perusteella
 
-Stable Diffusionin vahvuus on se, että se on avoin — voit nähdä koodin ja sen toimintaperiaatteet. Sitä käytetään paljon tutkimuksessa ja kehityksessä. Merkittävä haastaja on **FLUX.2** (julkaistu marraskuussa 2025), joka on tuottanut huomattavaa kilpailua avoimen lähdekoodin kuvageneraatiotilassa.
+ChatGPT:n kuvagenerointi sopii erityisesti tilanteisiin, joissa haluat selittää kuvan tavallisella kielellä. Voit myös jatkaa keskustelua kuvan jälkeen: *"tee tästä rauhallisempi"*, *"lisää mukaan tietokoneita"*, *"muuta tyyli sarjakuvamaiseksi"* tai *"tee tästä 16:9-kuva dioihin"*.
 
-**Käyttötapaus:** Käytännön projektit, joissa haluat ilmaista tai halvempaa työkalua. Ei välttämätöntä valinta aloittelijalle, mutta hyvä tuntea olemassaolo.
+Hyvä prompti kuvalle ei ole vain "tee hieno kuva". Parempi prompti kertoo, mitä kuvassa näkyy, mikä on tyyli, millainen tunnelma on ja mihin kuvaa käytetään.
 
-**Prompt-tekniikka:** Samoin kuin muissa — ole tarkka ja spesifinen kuvauksessasi. Lisää yksityiskohtia väreistä, tyylistä ja tunnelmasta.
+> **Esimerkki hyvästä kuvapromptista:**
+>
+> *"Luo vaakasuuntainen 16:9-kuva esityksen alkuun. Kuvassa on ensimmäisen vuoden tieto- ja viestintätekniikan opiskelija, joka tutkii tekoälytyökaluja tietokoneella. Tyyli on moderni, selkeä ja hieman futuristinen, mutta ei liian scifi. Väreinä sininen ja violetti. Ei tekstiä kuvaan."*
 
-### Adobe Firefly: kaupallisen käytön turvallisuus
+Huomaa lopun "Ei tekstiä kuvaan". Se on usein järkevää, koska tekoälyn luoma teksti kuvassa voi sisältää virheitä.
 
-Adobe on integroinut Firefly-mallansa (omalla mallissaan, harjoitettua omalla kuvadatalla) Creative Cloud -sovelluksiin. Se on tarkoitettu ammattilaisille, joilla on selkeät kaupallisen käytön oikeudet ja jotka haluavat lain mukaisen varmuuden.
+### Midjourney
 
-Firefly:n pääetu on se, että se koulutettiin vain avoimesti lisensoitujen kuvien perusteella, joten siitä ei tule tekijänoikeus-ongelmia (tai ainakin Adoben mukaan ei). Se integroituu saumattomasti Photoshopiin ja Illustratoriin.
+Midjourney on kuvagenerointityökalu, joka tunnetaan erityisesti näyttävistä ja taiteellisista kuvista. Se toimii nykyään sekä verkkosovelluksen että Discordin kautta. Midjourneyn virallisessa dokumentaatiossa eri maksulliset suunnitelmat vertaillaan GPU-ajan, käyttörajojen ja ominaisuuksien perusteella.
 
-**Käyttötapaus:** Mainostoimistot, ammattilaiset muotoilijat, kaupallinen käyttö suurella budjetilla.
+Midjourney sopii hyvin, kun tavoitteena on visuaalisesti vaikuttava kuva. Se on suosittu esimerkiksi konseptitaiteessa, pelimaailmojen ideoinnissa, mainoskuvissa ja tunnelmakuvissa.
 
-## Musiikin luominen: Suno ja Udio
+Aloittelijalle Midjourney voi tuntua hieman erikoisemmalta kuin ChatGPT:n kuvagenerointi, koska siinä on oma käyttölogiikkansa. Toisaalta se palkitsee kokeilun. Sama prompti voi tuottaa useita erilaisia kuvia, joista valitaan paras ja kehitetään sitä eteenpäin.
 
-Musiikin tekeminen AI:lla on vielä uudemmilla vesillä kuin kuvageneraatio, mutta se kehittyy nopeasti. Kaksi päätyökalutyyppiä hallitsee nyt markkinoita.
+> **Esimerkki Midjourney-tyylisestä promptista:**
+>
+> *"futuristic vocational school classroom, students learning programming with AI assistants, realistic lighting, clean modern design, cinematic composition, 16:9"*
 
-### Suno: tekstistä täysiin biiseihin
+Midjourneyssä käytetään usein myös lisäasetuksia, kuten kuvasuhdetta. Esimerkiksi 16:9 sopii esitysdioihin.
 
-Suno (www.suno.ai) on palvelu, jossa annat tekstikuvauksen tai sanoitukset, ja se tuottaa kokonaisen musiikin — *rummut, basso, jousisoittimet, laulu*. Voit määritellä genren ("jazz"), tunnelman ("melankolis") ja vaiheittaa prosessia.
+### Stable Diffusion ja avoimet kuvamallit
 
-Suno on ilmainen (50 krediittiä päivässä, eli noin 10 kappaletta päivässä) tai maksullinen. Pro-taso maksaa noin 10 $/kk ja sisältää 500 kappaletta kuukaudessa. Suno:lla on myös kumppanuus Warner Music Groupin kanssa. Se on todella vaikuttava: voit luoda äkillisesti kokonaisia kappaleita muutamassa minuutissa. Silti laatu on epätasainen, ja tulokset tarvitsevat usein editointia tai uudelleengeneraatiota.
+Stable Diffusion ei ole vain yksi verkkopalvelu, vaan laajempi joukko avoimempia kuvamalleja ja niitä käyttäviä työkaluja. Stability AI:n virallinen mallikatalogi sisältää esimerkiksi Stable Diffusion XL- ja Turbo-malleja, joita voidaan käyttää eri palveluissa ja ohjelmissa.
 
-**Käyttötapaus:** Podcast-introt, taustamusiikki videoon, demot, luovan prosessin kiihdyttäminen. *Ei* ammattilaistuotanto ilman merkittävää jälkitöitä.
+Avoimien mallien idea on, että käyttäjällä tai kehittäjällä on enemmän mahdollisuuksia säätää ja rakentaa omia ratkaisuja. Tämä on kiinnostavaa, jos halutaan ymmärtää, miten tekoälytyökalut toimivat teknisesti, tai jos halutaan käyttää malleja omissa sovelluksissa.
 
-**Prompt-tekniikka:** Ole spesifinen genrestä ja tunnelmasta. Kirjoita alkusanoitukset tai edes kokonainen laulu sovellukselle tulkittavaksi. "Upbeat indie pop, kevyt akustinen kitara, vesi-teema" toimii paremmin kuin "iloinen biisi".
+Aloittelijalle tämä ei yleensä ole helpoin aloituspaikka. Stable Diffusion -tyyppiset työkalut voivat vaatia enemmän asetusten säätämistä, mallien valintaa ja joskus tehokkaan tietokoneen tai pilvipalvelun käyttöä.
 
-### Udio: kilpailija ja vaihtoehto
+> **Hyvä tapa ajatella tätä:**
+>
+> - ChatGPT:n kuvagenerointi on helppo yleiskäyttöinen työkalu.
+> - Midjourney on vahva taiteellisessa kuvassa.
+> - Stable Diffusion -tyyppiset mallit ovat joustavia ja teknisesti kiinnostavia, mutta vaativat enemmän opettelua.
 
-Udio (www.udio.com) on Sunon kilpailija samalla idealla — tekstistä musiikkiin. Se on vielä nuorempi, mutta sen luomat biisit voivat joissakin tapauksissa olla laadultaan parempia. Molemmilla on käytössä neuroverkot, jotka ovat harjoiteltu laajalla musiikkidatalla.
+### Adobe Firefly
 
-Udio on myös ilmainen (rajoituksin) tai maksullinen (hintamalli oli vielä kehitteillä kirjoitushetkellä).
+Adobe Firefly on Adoben tekoälykuva- ja sisältömallien perhe. Se on integroitu Adoben ohjelmiin, kuten Photoshopiin, Illustratoriin ja Adobe Expressiin. Adobe käyttää Fireflyssä generatiivisia krediittejä, joiden määrä riippuu käytössä olevasta tilauksesta.
 
-**Vertailu:** Suno on kehittyneempi, mutta Udio kehittyy nopeasti. Paras käytäntö:
-kokeile molempia ja valitse, mikä sopii projektille.
+Fireflyn tärkein myyntivaltti on kaupallinen käyttö. Adobe markkinoi Fireflyä työkaluna, joka sopii turvallisemmin yritys- ja mainoskäyttöön kuin monet muut kuvageneraattorit. Tämä liittyy siihen, millaisella aineistolla mallit on koulutettu ja millaisia käyttöehtoja Adobe tarjoaa.
 
-### Tekijänoikeus ja luovuus
+Firefly sopii erityisesti silloin, kun käyttäjä tekee materiaalia yritykselle, mainontaan tai brändikäyttöön. Photoshopissa Fireflyn kaltaisia toimintoja voi käyttää esimerkiksi kuvan laajentamiseen, taustan muuttamiseen tai yksityiskohtien lisäämiseen.
 
-Tässä tulee **merkittävä eettinen kysymys**. Monet musiikintuottajat ovat huolissaan siitä, että nämä mallit koulutettiin miljoonilla tekijänoikeuksilla suojatuilla biiseillä. Kun generoit biisin, onko se sinun? Voitko myydä sitä? Onko siinä oikeasti "sinun" luovuutta?
+Aloittelijan näkökulmasta Firefly on hyvä esimerkki siitä, että tekoäly ei ole aina erillinen "tekoälysivusto". Se voi olla myös osa tavallista työohjelmaa.
 
-Palveluntarjoajat (Suno, Udio) väittävät, että voit käyttää generoitua musiikkia kaupallisesti (niiden käyttöoikeuksien riippuen). Mutta jos olet pieni indie-levy-yhtiö tai muusikko, kannattaa olla varovainen: nämä työkalut voivat korvata palkallisen säveltäjän, eikä generoitu musiikki ole sinun omaa luovaa työtäsi.
+### Hyvä kuvaprompti
 
-> **Pysähdy hetkeksi:** Pohdi, pitäisikö generatiivisten musiikkityökalujen koulutusta
-> rajoittaa? Entä jos malli oppi laulusta, jonka kirjoitit itse? Kuka omistaa generoitua
-> musiikkia?
+Kuvatyökaluille kannattaa antaa selkeä ohje. Hyvässä kuvapromptissa on usein nämä osat:
 
-## Video: tulossa, mutta rajoitukset vielä realistiset
+- mitä kuvassa näkyy
+- mihin kuvaa käytetään
+- mikä on tyyli
+- millainen tunnelma tai valaistus kuvassa on
+- mikä on kuvasuhde
+- mitä kuvassa ei saa olla
 
-Video on seuraava raja. Kolme työkalutyyppiä ovat nyt käytössä tai tulossa, joissa on erilaisia kykyjä ja rajoituksia.
+> **❌ Heikko prompti:**
+>
+> *"Tee kuva tekoälystä."*
 
-### Runway Gen-4.5: video tekstistä ja kuvista
+> **✓ Parempi prompti:**
+>
+> *"Luo vaakasuuntainen 16:9-kuva oppitunnin diaan. Kuvassa on nuori opiskelija, joka käyttää kannettavaa tietokonetta ja tutkii tekoälytyökaluja. Tyyli on selkeä, moderni ja opetusmateriaaliin sopiva. Valaistus on lämmin. Kuvassa ei saa olla tekstiä, logoja tai tunnistettavia henkilöitä."*
 
-Runway (www.runwayml.com) on johtavien videotuotantotyökalujen tarjoaja. Uusin malli on **Gen-4.5**, joka voi luoda videoita tekstikuvauksesta tai olemassa olevan kuvan pohjalta.
+**Tärkeä käytännön vinkki:** jos kuva tulee diaan, pyydä usein 16:9-kuvasuhdetta. Jos kuva tulee someen, kuvasuhde voi olla esimerkiksi 1:1 tai 9:16.
 
-Oikeasti vaikuttava: voit sanoa "kamera liikkuu vasemmalta oikealle, auringonlasku, ranta" ja saada sekunnin verran videota. Mutta rajoitukset ovat selkeät. Videot ovat lyhyitä (yleensä alle 10 sekuntia) ja epätarkkoja liikkeissä — ihmisten kasvot saattavat muuttua. Video ei vielä korvaa ammattilaistuotantoa.
+## Musiikin luominen tekoälyllä
 
-Runway on maksullinen: ilmainen taso sisältää 125 krediittiä, Standard-taso maksaa 12 $/kk ja Pro-taso 28 $/kk. Runway on arvostettu 5,3 miljardiksi dollariksi.
+Tekoälyllä voi nykyään luoda myös musiikkia. Käyttäjä voi antaa tekstikuvauksen, sanoitukset tai tyylin, ja palvelu luo kappaleen. Se voi sisältää esimerkiksi laulua, rumpuja, bassoa, kitaraa, syntetisaattoreita ja muuta tuotantoa.
 
-### Pika ja muut palvelut
+Tämä on monelle opiskelijalle yllättävää. Tekoäly ei siis tee vain tekstiä tai kuvia, vaan se voi tuottaa kokonaisen kuuloisen kappaleen muutamassa minuutissa.
 
-Pika (www.pika.art) on samanlainen videotyökalu, joka toimii hyvin mutta on samassa vaiheessa kehitystä. Myös OpenAI lupaa Soraa (jota ei vielä ole laajasti saatavilla), joka lupaa parempaa laatua ja hallintaa.
+### Suno
 
-### Realistiset käyttötapaukset *nyt*
+Suno on yksi tunnetuimmista tekoälymusiikkipalveluista. Sen virallisen hinnoittelusivun mukaan ilmaisella tasolla voi luoda rajoitetun määrän kappaleita päivässä, ja maksullisilla tasoilla saa enemmän kappaleita, kehittyneempiä malleja ja kaupallisia käyttöoikeuksia. Sunon sivuilla mainitaan esimerkiksi mallit v4.5, v5 ja v5.5 maksullisissa suunnitelmissa.
 
-Video-tekoäly sopii hyvin storyboard-visualisointiin, jossa voit nopeasti visualisoida filmikäsikirjoituksen. Se toimii myös teksti-video-esityksissä, joissa haluat yksinkertaisen liikkeellisen sisällön, kuten selittävät videot. Voit myös käyttää sitä olemassa olevien videoiden täydentämiseen ja efekteihin.
+> **Esimerkki Suno-promptista:**
+>
+> *"Energetic pop rock song about learning programming for the first time. Finnish lyrics. Mood is hopeful and confident. Include drums, electric guitar and catchy chorus."*
 
-Mitä video-tekoäly ei vielä pysty tekemään: Se ei osaa tehdä pitkiä, johdonmukaisia videoita yli minuutin pituisia. Se ei tuota realistisia ihmisiä johdonmukaisilla kasvoilla. Se ei hallitse monitasoista kerrontaa. Ammattilaistuotannot vaativat merkittävää jälkityötä, jos käytät näitä työkaluja.
+Palvelu voi tämän perusteella tuottaa kappaleen, jossa on sanoitukset, laulu ja tausta.
 
-> **Pysähdy hetkeksi:** Video kehittyy nopeasti. Mitkä käyttötapaukset voisivat muuttua
-> mahdollisiksi seuraavien 12 kuukauden aikana? Entä ammattilaisasema, jos video
-> automatisoituu täysin?
+Suno sopii hyvin esimerkiksi:
 
-## Koodausavustajat: tekoäly auttaa sinua kirjoittamaan ohjetta tietokoneelle
+- podcastin introon
+- videon taustamusiikin ideointiin
+- peliprojektin tunnelmamusiikin hahmotteluun
+- oman biisi-idean kokeilemiseen
+- opetuksessa luovaan kokeiluun
 
-Kun puhutaan "koodausavustajista", monet ajattelevat ohjelmista, jotka vaativat erityisiä taitoja. Mutta ajattele asiaa näin: koodaus on vain ohjeen kirjoittamista tietokoneelle. Tekoäly voi auttaa sinua kirjoittamaan sitä ohjetta samalla tavalla, kuin se auttaa sinua kirjoittamaan mitä tahansa muuta tekstiä.
+Tärkeää on ymmärtää, että tulos ei aina ole heti valmis. Joskus laulu kuulostaa keinotekoiselta, sanat ovat kömpelöitä tai tyyli ei osu kohdalleen. Tekoälyn kanssa työskennellään usein kokeilemalla: luodaan monta versiota, valitaan paras ja parannetaan sitä.
 
-### Miten koodausavustajat toimivat?
+### Udio
 
-Yksinkertainen esimerkki: Sinun pitää kirjoittaa "ohjelma, joka laskee kaikkien parillisten lukujen summan listassa". Normaalisti sinun pitäisi osata kirjoittaa sitä itse tai opiskella, miten se tehdään. Koodausavustajalla voit sanoa suoraan: "Kirjoita funktio, joka laskee kaikkien parillisten lukujen summan listassa." Tekoäly kirjoittaa sen sinulle.
+Udio on toinen tunnettu tekoälymusiikin palvelu. Se toimii samalla yleisidealla kuin Suno: käyttäjä antaa tekstiohjeen tai musiikillisen suunnan, ja palvelu tuottaa musiikkia. Udiolla on virallinen hinnoittelusivu, jossa palvelu tarjoaa eri tasoja eri käyttötarpeisiin.
 
-Tämä ei ole "huijaamista". Se on samaa kuin käyttää laskinta matemaatiikassa — se auttaa sinua tekemään työtä nopeammin, kunhan ymmärrät, mitä se tekee.
+Käytännössä Sunoa ja Udiota kannattaa ajatella vaihtoehtoisina työkaluina. Jos toinen ei tuota hyvää tulosta, toinen voi onnistua paremmin. Tekoälymusiikissa erot näkyvät usein laulun luonnollisuudessa, genren ymmärtämisessä ja siinä, miten hyvin kappale pysyy kasassa.
 
-### Neljä päätyökalutyyppiä
+### Hyvä musiikkiprompti
 
-Eri koodausavustajilla on erilaisia tapoja toimia. Tässä on päätyyppi:
+Musiikissa promptin kannattaa kertoa ainakin:
 
-**Yksinkertainen avustaja (GitHub Copilot):** Kun kirjoitat koodia, se ehdottaa seuraavia rivejä automaattisesti. Se on kuin kirjoitusvirhe-korjaimen kaltainen, mutta koodille. Se on hyvä, jos tiedät jo, mitä haluat tehdä, ja tarvitset vain apua yksityiskohtien kanssa. GitHub Copilot on saatavilla ilmaisena (rajoitetuilla ominaisuuksilla), Pro-versiona (10 $/kk) ja Pro+ -versiona (39 $/kk).
+- genre
+- tunnelma
+- tempo tai energia
+- soittimet
+- onko mukana laulua
+- millä kielellä sanoitukset ovat
+- mihin kappaletta käytetään
 
-**Kokonaisuuden ymmärtävä avustaja (Cursor ja Copilot Workspace):** Nämä ovat kehittyneempiä. Voit sanoa sille: "Muokkaa tämä koodi siihen muotoon, että..." ja se muokkaa isompia osia kerralla. Ne lukevat koko projektin ja ymmärtävät, miten osat liittyvät toisiinsa. **Copilot Workspace** on agenttijärjestelmä, joka kykenee lukemaan ja ymmärtämään koko koodikannan. Nämä ovat kuin mentorit, jotka näkevät koko kuvan.
+> **❌ Heikko prompti:**
+>
+> *"Tee iloinen biisi."*
 
-**Terminaalissa toimiva avustaja (Claude Code):** Jos käytät komentoriviä (se on teksti-pohjainen tapa puhua tietokoneesi kanssa), tämä auttaa siinä. Voit sanoa "lisää tämä ominaisuus sovellukseen" ja se tekee muutokset automaattisesti.
+> **✓ Parempi prompti:**
+>
+> *"Tee 30 sekunnin mittainen energinen pop rock -intro opiskelijaprojektin videoon. Tunnelma on innostunut ja positiivinen. Mukana rummut, basso, sähkökitara ja kevyt syntetisaattori. Ei laulua, jotta musiikki ei häiritse puhetta."*
 
-**Selain-pohjainen kokeilu (ChatGPT Code Interpreter):** OpenAI:n ChatGPT:ssä voi kirjoittaa pieniä ohjelmia ja ajaa niitä suoraan selaimessa. Se näyttää tuloksen heti. Kuten pienillä laboratorio-kokeilla oppiaksesi, miten ohjelmointi toimii.
+> **✓ Toinen esimerkki:**
+>
+> *"Tee suomenkielinen kappale ensimmäisestä ohjelmointikurssista. Tyyli on kevyt pop, tempo keskinopea. Kertosäkeen pitää olla tarttuva ja rohkaiseva. Sanoitusten pitää olla yksinkertaisia ja ymmärrettäviä."*
 
-### Mitä koodausavustajat tekevät (ja mitä ne eivät tee)?
+### Musiikki, tekijänoikeudet ja reilu käyttö
 
-Koodausavustajat ovat hyviä siihen, että ne kiihdyttävät tavallista, toistuvaa työtä. Jos pitää kirjoittaa kymmenen samantapaista funktiota, avustaja voi tehdä ne kaikki nopeasti. Jos sinulla on vanha koodi, joka pitää päivittää, avustaja voi auttaa.
+Tekoälymusiikki on myös kiistanalainen aihe. Monet muusikot ja levy-yhtiöt ovat olleet huolissaan siitä, että tekoälymalleja on koulutettu tekijänoikeudella suojatulla musiikilla ilman lupaa.
 
-Mutta ne eivät osaa ajatella puolestasi. Jos haluat löytää päätehtävän ratkaisun — "miten teen tämän ohjelman?" — sinun pitää silti miettiä sitä itse. Avustaja ei oivalla uusia ideita. Se auttaa sinua tekemään sen, mitä olet päättänyt tehdä.
+Suno ja Udio ovat olleet mukana musiikkialan oikeuskiistoissa. Vuonna 2025 ja 2026 osa suurista levy-yhtiöistä on myös tehnyt lisensointi- ja sovintosopimuksia tekoälymusiikkipalveluiden kanssa, mutta koko kenttä ei ole vielä täysin selvä. Esimerkiksi Warner teki sopimuksen Sunon kanssa, kun taas osa oikeusprosesseista ja vaatimuksista on jatkunut.
 
-Tämä on tärkeää ymmärtää: **avustaja on työkalu, ei korvike ajattelulle**.
+Opiskelijan käytännön sääntö on tämä: älä käytä tekoälymusiikkia niin, että väität sitä kokonaan itse säveltämäksesi, jos tekoäly teki pääosan työstä. Tarkista myös palvelun käyttöehdot, jos aiot julkaista tai käyttää musiikkia kaupallisesti.
 
-> **Pysähdy hetkeksi:** Kun näet jonkun käyttävän koodausavustajaa, hän ei välttämättä ole "huijari", joka ei osaa ohjelmoida. Hän käyttää työkalua, aivan kuten sinä käytät laskintataulukko-ohjelmaa. Mitä ajatit ennen kuin luit tämän?
+> 💭 **Pysähdy hetkeksi:**
+>
+> Jos olisit muusikko, miltä tuntuisi, että tekoäly voi tehdä kappaleen tyylissäsi? Entä jos olet opiskelija, jolla ei ole musiikkitaustaa, mutta haluat tehdä taustamusiikin omaan videoon?
+>
+> Molemmat näkökulmat ovat ymmärrettäviä. Tekoäly voi demokratisoida luomista eli antaa uusille ihmisille mahdollisuuden tehdä asioita. Samalla se voi uhata ihmisten työtä ja oikeuksia.
 
-## Tekijänoikeudet ja etiikka: mikä on oikein?
+## Videon luominen tekoälyllä
 
-Kun käytät näitä tekoälytyökaluja, on hyvä tietää kolme asiaa: mistä tekoäly oppi, kuka omistaa sen, mitä luot, ja miten se vaikuttaa ihmisiin.
+Video on yksi vaikeimmista generatiivisen tekoälyn alueista. Yksittäinen kuva on jo haastava, mutta video on monta kuvaa peräkkäin. Lisäksi liikkeen, kasvojen, valaistuksen, kameran ja äänen pitäisi pysyä johdonmukaisina.
 
-### Mistä nämä mallit opittiin?
+Nykyiset videotyökalut ovat jo vaikuttavia, mutta niissä on yhä rajoituksia. Ne sopivat usein lyhyisiin videoihin, ideointiin, mainosmaisiin pätkiin, somevideoihin, storyboardeihin ja taustamateriaaleihin. Pitkän elokuvamaisen tarinan tekeminen kokonaan tekoälyllä on edelleen vaikeaa.
 
-Tekoälymallit opitaan miljoonilla esimerkeillä. DALL-E opittiin miljoonilla kuvilla. Musiikki-tekoäly opittiin miljoonilla biiseillä. Nämä esimerkit otettiin Internetista. Nyt on iso ongelma: monet näistä kuvista ja biiseistä omistaa joku toinen. He eivät ole antaneet lupaa käyttää niitä tekoälyn opettamiseen.
+### Runway
 
-Oikeusjuttuja käydään juuri nyt. Muusikoita, taiteilijoita ja valokuvaajia häiritsee se, että heidän työnsä opetti tekoälyä ilman heidän suostumustaansa.
+Runway on yksi tunnetuimmista tekoälyvideon työkaluista. Runwayn Gen-4-mallin esittelyssä korostetaan johdonmukaisuutta: sama hahmo, esine tai ympäristö voidaan yrittää säilyttää useissa otoksissa paremmin kuin aiemmin.
 
-### Mitä sinun pitää tietää käytöstä?
+Tämä on videossa tärkeää. Jos hahmon kasvot muuttuvat jokaisessa otoksessa, videosta tulee helposti outo. Jos taas tyyli, ympäristö ja hahmot pysyvät samankaltaisina, video näyttää ammattimaisemmalta.
 
-Kun luot kuvaa DALL-E:lla, kenen kuva se on? Sinun? OpenAI:n? Vai sen ihmisen, jonka kuvan kaltainen se on?
+Runwayn virallinen hinnoittelusivu kertoo, että palvelu perustuu suunnitelmiin ja krediitteihin. Ilmainen taso on kokeiluun, mutta laajempi käyttö vaatii yleensä maksullisen tilauksen.
 
-Vastaus on: **se on monimutkaista ja riippuu siitä, missä asut ja mitä sääntöjä noudatat**. Jotkut palvelut sanovat, että kuva on sinun. Toiset sanovat, että se on heidän. Paras keino on olla varovainen.
+Runway sopii esimerkiksi:
 
-Tässä on konkreettinen esimerkki: Jos luot kuvaa "Mona Lisa, joka juoksee, moderni taide" ja myyt sen postereina, saattaa tulla ongelma. Miksi? Koska Mona Lisa on tunnettu teos, ja sen käyttäminen voi rikkoa oikeuksia. Et voi vain sanoa "tekoäly teki sen".
+- lyhyiden videoklippien tekemiseen
+- mainosidean visualisointiin
+- storyboardin tai kohtauksen kokeiluun
+- kuvasta videoksi -kokeiluihin
+- taustavideoihin ja efekteihin
 
-### Merkintä ja rehellisyys
+### Pika
 
-Jos käytät tekoälyä jotain luomiseen, ole rehellinen siitä. Monet palvelut (kuten Instagram) vaativat "Made with AI" -merkinnän. Paikallisillakaan kilpailuilla voi olla säännöt. Akateemisissa papereissa sinun pitää mainita, jos käytit tekoälyä.
+Pika on toinen tunnettu tekoälyvideopalvelu. Sen virallisella hinnoittelusivulla palvelu tarjoaa useita suunnitelmia erilaisiin käyttötarpeisiin.
 
-Miksi? Koska ihmiset haluavat tietää, kuinka jotain tehtiin. Se on rehellisyyttä.
+Pika on usein nähty työkaluna, jolla voi tehdä nopeasti lyhyitä, luovia ja someen sopivia videoita. Se voi sopia hyvin kokeiluun, jos tavoitteena ei ole tehdä pitkää tuotantoa vaan testata ideaa.
 
-### Millainen vaikutus tällä on muihin?
+### Google Veo
 
-Jotkut ihmiset, kuten muusikot tai kuvataiteilijat, ovat huolissaan. He sanovat: "Jos tekoäly voi tehdä musiikkia, minulla ei ole enää työtä." Se on oikea huoli, mutta vastaus on monimutkaisempi.
+Google DeepMindin Veo on Googlen videomallien perhe. Googlen omilla sivuilla Veo 3.1 kuvataan videomallina, jossa on parempaa kontrollia, johdonmukaisuutta ja myös ääneen liittyviä ominaisuuksia. Google AI Studiossa Veo 3.1:n yhteydessä mainitaan myös 4K-ulostulo ja sekä vaaka- että pystykuvasuhteet.
 
-Nämä työkalut automatisoivat tavallista, toistuvaa työtä. Ne eivät korvaa sitä, mitä ammattilaiset tekevät parhaaksi — luovaa työtä ja oivallusta. Mutta ne tekevät kilpailusta kovempaa aloittelijoille.
+Tämä kertoo siitä, mihin suuntaan tekoälyvideo on menossa: ei pelkästään "tee video tekstistä", vaan enemmän kohti hallittua tuotantotyökalua. Käyttäjä haluaa päättää kuvasuhteen, kameran liikkeen, tyylin, äänen ja käyttötarkoituksen.
 
-Paras keino on oppia käyttämään näitä työkaluja hyväksi. Ammattilaiset, jotka ymmärtävät tekoälyä, voivat käyttää sitä apunaan.
+### Sora ja muuttuva työkalukenttä
 
-> **Pysähdy hetkeksi:** Jos olisit kuvataiteilija tai muusikko, mitä ajattelisit näistä työkaluista? Entä jos olet opiskelija ja haluat oppia? Mitkä ovat eri näkökulmat?
+OpenAI julkaisi Sora 2 -videomallin vuonna 2025, ja sen yhteydessä korostettiin realistisempaa liikettä, parempaa hallittavuutta sekä synkronoituja ääniä ja dialogia. OpenAI:n omalla sivulla todetaan kuitenkin myös, että Sora-tuote ei ole ollut saatavilla 26.4.2026 jälkeen.
 
-## Työkalun valinta: Mikä työkalu mihin?
+Tämä on hyvä esimerkki siitä, miksi tekoälytyökaluista ei kannata opiskella vain yhtä nimeä. Palvelut voivat muuttua, yhdistyä, kadota tai vaihtaa käyttömallia nopeasti. Tärkeämpää on ymmärtää työkalutyyppi: tekoäly voi luoda lyhyttä videota tekstistä, kuvasta tai olemassa olevasta materiaalista.
 
-Kun haluat tehdä jotain tekoälyillä, sinun pitää valita oikea työkalu. Se on kuten kysymys: mitä haluan tehdä ja mikä avusta minua parhaiten?
+### Hyvä videoprompti
 
-Tässä on yksinkertainen tapa ajatella. Kuvaa tarvitessa käytä ChatGPT:hen integroitua kuvangeneraattoria (GPT-4o:n kautta), jos haluat nopean ja yksinkertaisen ratkaisun. Midjourney on parempi valinta, jos sinulla on aikaa odottaa ja haluat korkealaatuisia tuloksia.
+Videopromptissa kannattaa kertoa:
 
-Musiikkia tarvitessa kokeile Sunoa tai Udiota. Ne tekevät musiikkia teksti-kuvauksesta. Videota tarvitessa Runway tai Pika voivat tehdä lyhyitä videoita tekstikuvauksesta. Muista kuitenkin, että nämä ovat vielä kehitysvaiheessa, eivätkä ammattilaisvalmiita.
+- mitä videossa tapahtuu
+- millainen kamera tai kuvakulma on
+- mikä on tyyli
+- millainen liike tapahtuu
+- kuinka pitkä video on
+- onko mukana ääntä tai puhetta
+- mihin video tulee
 
-Koodia tarvitessa harkitse seuraavasti: Jos olet aloittelija ja haluat apua, ChatGPT Code Interpreter on helppo aloittaa, koska se näyttää tulokset heti. Jos haluat ammattilaismaista apua ja olet tekemässä suurempaa projektia, Claude Code auttaa terminaalissa. Copilot Workspace on loistava valinta, jos haluat agenttijärjestelmää, joka ymmärtää koko koodikannan.
+> **❌ Heikko prompti:**
+>
+> *"Tee video koulusta."*
 
-**Käytännön esimerkit:**
-- **Blogi-artikkelin kuva:** ChatGPT + GPT-4o (nopea ja kohtuullinen hinta)
-- **Podcast-intro-musiikki:** Suno (tekee kokonaisen biisin muutamassa minuutissa)
-- **Idea-video storyboards:** Runway Gen-4.5 (visualisoi ideasi nopeasti)
-- **Pienessä kooditehtävässä:** ChatGPT Code Interpreter (näet tulokset välittömästi)
+> **✓ Parempi prompti:**
+>
+> *"Tee 6 sekunnin vaakasuuntainen video modernista tieto- ja viestintätekniikan luokasta. Kamera liikkuu hitaasti vasemmalta oikealle. Opiskelijat työskentelevät tietokoneilla rauhallisesti. Tyyli on realistinen, valoisa ja opetusmateriaalin sopiva. Ei tekstiä, ei logoja, ei tunnistettavia oikeita henkilöitä."*
+
+**Tärkeä huomio:** jos tarvitset tarkkaa faktaa tai oikeaa tapahtumaa, älä luo sitä tekoälyvideona niin, että katsoja voisi luulla sitä oikeaksi tallenteeksi. Merkitse tekoälyllä luotu sisältö selvästi.
+
+### Mitä video-tekoäly osaa ja mitä se ei vielä osaa
+
+Tekoälyvideo osaa jo tehdä vaikuttavia lyhyitä kohtauksia. Se voi luoda maisemia, tunnelmia, animaatiomaisia klippejä ja lyhyitä mainosmaisia pätkiä.
+
+Se ei kuitenkaan ole täydellinen. Ongelmia voi tulla esimerkiksi näissä asioissa:
+
+- kädet, kasvot ja pienet yksityiskohdat voivat vääristyä
+- hahmo voi muuttua eri otoksissa
+- fysiikka voi näyttää oudolta
+- teksti voi mennä väärin
+- pitkä tarina ei pysy kasassa
+- tarkka ohjaus voi olla vaikeaa
+
+Tekoälyvideo on hyvä ideointiin ja lyhyisiin tuotoksiin. Ammattimaisessa käytössä sitä täytyy yleensä editoida, tarkistaa ja yhdistää muihin työkaluihin.
+
+> 💭 **Pysähdy hetkeksi:**
+>
+> Jos opettaja näyttää videon, jonka tekoäly on luonut, pitäisikö siitä kertoa opiskelijoille? Entä jos video näyttää aidolta uutisvideolta?
+
+## Koodausavustajat — tekoäly ohjelmoinnin tukena
+
+Koodausavustaja on tekoälytyökalu, joka auttaa kirjoittamaan, selittämään, korjaamaan tai muuttamaan koodia. Se voi ehdottaa seuraavaa riviä, selittää virheen, kirjoittaa funktion tai tehdä muutoksia useisiin tiedostoihin.
+
+Aloittelijan kannattaa ajatella koodia näin: **koodi on ohje tietokoneelle**. Kun ohjelmoit, kirjoitat tietokoneelle tarkkoja ohjeita. Tekoäly voi auttaa näiden ohjeiden kirjoittamisessa, mutta sinun pitää silti ymmärtää, mitä olet tekemässä.
+
+Tekoäly ei tee sinusta automaattisesti ohjelmoijaa. Se voi kuitenkin nopeuttaa oppimista, jos käytät sitä oikein.
+
+### GitHub Copilot
+
+GitHub Copilot on yksi tunnetuimmista koodausavustajista. Se toimii esimerkiksi Visual Studio Codessa ja muissa kehitysympäristöissä. Copilot voi ehdottaa koodia samalla kun kirjoitat, vastata kysymyksiin projektista ja auttaa virheiden korjaamisessa.
+
+GitHubin virallinen dokumentaatio kertoo, että Copilotin hinnoittelu on siirtymässä 1.6.2026 käyttöperusteisempaan malliin, jossa käytetään GitHub AI Credits -krediittejä ja mallikohtaisia hintoja.
+
+Tämä on hyvä esimerkki siitä, miksi tarkkoja hintoja ei kannata opetella ulkoa. Tärkeämpää on ymmärtää, mitä työkalu tekee.
+
+Copilot sopii hyvin tilanteisiin, joissa käyttäjä kirjoittaa itse koodia, mutta haluaa apua yksityiskohtiin. Se voi ehdottaa esimerkiksi funktion runkoa, testejä tai virheen korjausta.
+
+### Cursor
+
+Cursor on tekoälyyn vahvasti integroitu koodieditori. Se muistuttaa Visual Studio Codea, mutta tekoäly on siinä keskeisemmässä roolissa. Cursorin virallinen hinnoittelusivu tarjoaa eri suunnitelmia käyttäjille ja tiimeille.
+
+Cursorin idea on, että tekoäly ymmärtää koko projektia paremmin kuin pelkkä yksittäinen chat-ikkuna. Voit pyytää sitä esimerkiksi muuttamaan useita tiedostoja, etsimään bugia tai selittämään projektin rakennetta.
+
+Tämä sopii opiskelijalle silloin, kun projekti kasvaa yksittäistä tiedostoa suuremmaksi. Toisaalta alussa kannattaa olla varovainen: jos tekoäly muuttaa liikaa koodia kerralla, opiskelijan voi olla vaikea ymmärtää, mitä tapahtui.
+
+### Claude Code
+
+Claude Code on Anthropic-yhtiön koodausagentti. Sen virallisessa kuvauksessa sanotaan, että se ymmärtää koodikantaa, muokkaa tiedostoja, ajaa komentoja ja auttaa ohjelmiston rakentamisessa.
+
+Claude Code toimii enemmän agenttina kuin pelkkänä automaattisena täydennyksenä. Tämä tarkoittaa, että sille voi antaa isomman tehtävän, kuten:
+
+- *"Lisää tähän projektiin kirjautumissivu."*
+- *"Korjaa testit ja selitä, mikä oli rikki."*
+- *"Etsi, missä käyttäjän tiedot tallennetaan."*
+
+Tällainen työkalu on tehokas, mutta se vaatii käyttäjältä vastuuta. Agentti voi ajaa komentoja ja muuttaa tiedostoja, joten käyttäjän pitää tarkistaa muutokset.
+
+### ChatGPT ja data-analyysi
+
+ChatGPT:ssä on myös data-analyysiin ja koodin ajamiseen liittyviä toimintoja. OpenAI:n ohjeiden mukaan ChatGPT voi auttaa datan puhdistamisessa, yhdistämisessä, kaavioiden tekemisessä ja Python-koodin kirjoittamisessa. Samalla OpenAI huomauttaa, että analyysiympäristö ei voi tehdä ulkoisia verkkopyyntöjä, joten tarvittava data pitää tuoda mukaan tai yhdistää käytettävissä olevasta lähteestä.
+
+Aloittelijalle tämä on hyvä tapa kokeilla ohjelmointia turvallisesti. Voit pyytää:
+
+- *"Kirjoita Python-ohjelma, joka laskee listan lukujen keskiarvon."*
+- *"Selitä tämä koodi rivi riviltä."*
+- *"Miksi tämä ohjelma antaa virheen?"*
+- *"Keksi minulle harjoitus if-lauseesta ja tarkista vastaukseni."*
+
+### Koodausavustajan käyttäminen oppimisessa
+
+Tekoälyn käyttäminen ohjelmoinnissa ei ole automaattisesti huijaamista. Se riippuu siitä, miten sitä käytetään.
+
+**✓ Hyvä käyttö:**
+
+- pyydät selitystä
+- pyydät vihjettä
+- pyydät virheen etsimistä
+- pyydät esimerkin ja muokkaat sitä itse
+- pyydät tekoälyä kyselemään sinulta, jotta opit
+
+**❌ Huono käyttö:**
+
+- kopioit vastauksen ymmärtämättä sitä
+- palautat tekoälyn tekemän tehtävän omana työnäsi
+- et osaa selittää, mitä koodi tekee
+- annat tekoälyn tehdä koko projektin, mutta et tarkista mitään
+
+**Hyvä sääntö opiskelijalle:** jos palautat koodia, sinun pitää pystyä selittämään se omin sanoin. Jos et osaa selittää koodia, et vielä osaa sitä.
+
+> 💭 **Pysähdy hetkeksi:**
+>
+> Onko laskimen käyttäminen matematiikassa huijaamista? Entä tekoälyn käyttäminen ohjelmoinnissa? Missä menee raja apuvälineen ja oman osaamisen korvaamisen välillä?
+
+## Tekijänoikeudet ja etiikka
+
+Kun käytät tekoälyä kuvan, musiikin, videon tai koodin tekemiseen, sinun pitää miettiä muutakin kuin sitä, onnistuuko lopputulos.
+
+Tärkeimmät kysymykset ovat:
+
+- Mistä tekoäly on oppinut?
+- Saanko käyttää tuotosta?
+- Pitääkö minun merkitä, että käytin tekoälyä?
+- Voiko tuotos loukata jonkun oikeuksia?
+- Voiko tuotos johtaa katsojaa harhaan?
+
+### Mistä tekoäly on oppinut?
+
+Tekoälymallit koulutetaan suurella määrällä esimerkkejä. Kuvamallit ovat oppineet kuvista, musiikkimallit musiikista, kielimallit tekstistä ja koodausmallit koodista.
+
+Ongelma on se, että kaikki koulutusaineisto ei välttämättä ole sellaista, johon tekijät ovat antaneet luvan. Siksi monilla aloilla käydään keskustelua ja oikeusjuttuja tekoälystä.
+
+Tämä ei tarkoita, että tekoälyä ei saisi käyttää. Se tarkoittaa, että käyttäjän pitää olla tietoinen asiasta ja käyttää työkaluja vastuullisesti.
+
+### Kuka omistaa tekoälyn tuotoksen?
+
+Tähän ei ole yhtä helppoa vastausta. Se riippuu palvelun käyttöehdoista, maasta, käyttötarkoituksesta ja siitä, millainen tuotos on.
+
+Jos käytät työkalua vain koulutehtävän ideointiin, riski on yleensä pieni. Jos taas aiot myydä tekoälyllä tehtyä musiikkia, mainoskuvia tai videoita, pitää tarkistaa palvelun käyttöehdot ja mahdolliset tekijänoikeuskysymykset.
+
+> **❌ Älä tee näin:**
+>
+> *"Luo kuva Disneyn Mikki Hiirestä uudessa seikkailussa ja myyn sen t-paitana."*
+>
+> Tämä voi rikkoa tavaramerkkejä ja tekijänoikeuksia.
+
+> **✓ Parempi:**
+>
+> *"Luo alkuperäinen, iloinen sarjakuvamainen hiirihahmo, joka ei muistuta tunnettua hahmoa. Hahmo seikkailee metsässä."*
+
+### Tekoälysisällön merkitseminen
+
+Monet alustat vaativat tai suosittelevat tekoälyllä luodun sisällön merkitsemistä. Meta on kertonut lisäävänsä "AI info" -merkintöjä laajempaan joukkoon kuva-, video- ja äänisisältöä, kun tekoälyn käyttö havaitaan tai käyttäjä ilmoittaa siitä.
+
+Euroopan unionin tekoälysääntelyssä eli AI Actissa on myös läpinäkyvyyteen liittyviä velvoitteita. EU:n komission mukaan AI Act sisältää läpinäkyvyysvelvoitteita tietyille tekoälyjärjestelmille ja niiden käyttäjille.
+
+**Käytännön sääntö opiskelijalle:**
+
+Jos tekoäly teki merkittävän osan kuvasta, musiikista, videosta tai tekstistä, kerro siitä. Esimerkiksi:
+
+- *"Kuva on luotu tekoälyllä."*
+- *"Taustamusiikki on tehty Sunolla."*
+- *"Videon taustakuva on tekoälyn generoima."*
+- *"Koodin virheenkorjauksessa käytettiin ChatGPT:tä."*
+
+Rehellisyys on tärkeää, koska katsojalla, opettajalla, asiakkaalla tai yleisöllä on oikeus tietää, miten sisältö on tehty.
+
+## Työkalun valinta — mikä työkalu mihin?
+
+Tekoälytyökalua ei kannata valita vain siksi, että se on suosittu. Valitse työkalu tehtävän mukaan.
+
+- Jos tarvitset nopeasti kuvan diaan tai raporttiin, **ChatGPT:n kuvagenerointi** on helppo aloituspaikka.
+- Jos haluat erittäin näyttävän ja taiteellisen kuvan, **Midjourney** voi olla hyvä vaihtoehto.
+- Jos haluat ymmärtää teknisemmin kuvamalleja tai käyttää avoimempia ratkaisuja, **Stable Diffusion** -tyyppiset työkalut ovat kiinnostavia.
+- Jos teet kaupallista visuaalista materiaalia Adoben ohjelmilla, **Firefly** on luonteva vaihtoehto.
+- Jos tarvitset musiikki-idean, kokeile **Sunoa tai Udiota**.
+- Jos tarvitset lyhyen videoklipin tai storyboardin, kokeile **Runwayta, Pikaa tai Googlen Veo-työkaluja**, jos ne ovat käytettävissäsi.
+- Jos kirjoitat koodia editorissa, **GitHub Copilot tai Cursor** voi auttaa.
+- Jos haluat agenttimaisempaa apua koko projektiin, **Claude Code** -tyyppiset työkalut ovat tehokkaita, mutta vaativat enemmän tarkistamista.
+- Jos olet aloittelija ja haluat oppia ohjelmoinnin perusteita, **ChatGPT** voi selittää, kysellä ja antaa pieniä harjoituksia.
+
+### Käytännön esimerkkejä
+
+> **Blogiartikkelin kuvitus:**
+>
+> Käytä ChatGPT:n kuvagenerointia. Pyydä 16:9-kuvaa, kerro aihe, tyyli ja käyttötarkoitus. Älä pyydä kuvaan tekstiä, jos et tarvitse sitä.
+
+> **Podcastin intro:**
+>
+> Kokeile Sunoa tai Udiota. Pyydä lyhyt instrumentaalinen kappale, jossa ei ole laulua, jos kappaleen päälle tulee puhetta.
+
+> **Oppitunnin dia:**
+>
+> Käytä kuvageneraattoria taustakuvan tai havainnekuvan luomiseen. Muista, että kuvan pitää tukea oppimista, ei vain näyttää hienolta.
+
+> **Videon storyboard:**
+>
+> Käytä Runwayta, Pikaa tai Veo-tyyppistä työkalua lyhyiden kohtausideoiden kokeiluun. Älä odota vielä täydellistä pitkää videota.
+
+> **Pieni ohjelmointitehtävä:**
+>
+> Kysy ChatGPT:ltä selitys, pyydä vihje tai anna oma koodisi tarkistettavaksi. Älä kopioi valmista vastausta ymmärtämättä sitä.
+
+> **Isompi koodiprojekti:**
+>
+> Käytä Cursorin, Copilotin tai Claude Coden kaltaista työkalua. Tee muutokset pienissä osissa ja tarkista aina, mitä tekoäly muutti.
+
+## Kohti omaa projektia
+
+Tällä tunnilla olet tutustunut siihen, miten tekoälyä voidaan käyttää erikoistuneissa tehtävissä: kuvissa, musiikissa, videossa ja koodissa.
+
+Tärkein asia ei ole opetella ulkoa yksittäisiä työkalujen nimiä. Tärkeämpää on ymmärtää, millaisia tehtäviä tekoäly voi auttaa tekemään ja missä sen rajat ovat.
+
+Kun rakennat omaa bottia tunnilla 18, voit hyödyntää näitä ajatuksia osana **Rakennuspalikka 2:n (botin määrittelydokumentti)** rajoja:
+
+- Milloin botti tarvitsee kuvia?
+- Voisiko botti auttaa käyttäjää kirjoittamaan koodia?
+- Tarvitaanko projektissa ääntä, musiikkia tai videota?
+- Miten käyttäjälle kerrotaan, että sisältö on tekoälyn luomaa?
+- Mitä botti ei saa tehdä?
+
+Vastuullinen tekoälyn käyttö tarkoittaa sitä, että työkaluja käytetään avoimesti, tarkasti ja muita kunnioittaen.
 
 ## Yhteenveto
 
-Tekoälytyökalut ovat hyviä moniin tehtäviin, mutta ne eivät ole vielä valmiita kaikkeen.
+Tekoälytyökalut eivät ole enää vain tekstin kirjoittamista varten. Niillä voi luoda kuvia, musiikkia, videoita ja koodia.
 
-**Kuvageneraatio** toimii hyvin. ChatGPT:n sisäänrakennettu kuvangenerointi (GPT-4o:n kautta) on nopea ja helppo. Midjourney tekee kauniimpia kuvia, mutta kestää kauemmin. Voit käyttää näitä oikeasti omissa projekteissasi.
+**Kuvageneraatio** on jo melko käyttökelpoista. Se sopii hyvin ideointiin, esityksiin, kuvituksiin ja visuaaliseen suunnitteluun. Muista kuitenkin tarkistaa yksityiskohdat, etenkin tekstit, logot ja ihmisiä muistuttavat hahmot.
 
-**Musiikki ja video** kehittyvät, mutta niillä on vielä rajansa. Voit tehdä lyhyitä, yksinkertaisia videoita, mutta pitkiä tai monimutkaisia ei vielä. Musiikki toimii paremmin — voit tehdä kokonaisia biisejä, mutta ammattilaiselle ehkä tarvitaan vielä editointia.
+**Musiikkityökalut** voivat tehdä kokonaisia kappaleita. Ne ovat hyviä kokeiluun, taustamusiikkiin ja ideointiin. Tekijänoikeudet ovat tällä alueella erityisen tärkeitä.
 
-**Koodausavustajat** auttavat oikeasti, jos osaat jo ohjelmoida jonkin verran. Jos et osaa, ne voivat opettaa, mutta et pitäisi laskea täysin niiden varaan.
+**Videotyökalut** kehittyvät nopeasti. Ne osaavat tehdä vaikuttavia lyhyitä klippejä, mutta pitkät ja täysin johdonmukaiset videot ovat edelleen vaikeita.
 
-**Tekijänoikeudet ja etiikka** ovat tärkeitä. Muista, että kaikki nämä mallit opittiin todellisten ihmisten töistä. Ole rehellinen siitä, miten käytät näitä työkaluja. Merkitse "Made with AI", jos olet julkaisemassa jotain.
+**Koodausavustajat** voivat nopeuttaa ohjelmointia ja auttaa oppimisessa. Ne eivät kuitenkaan poista tarvetta ymmärtää koodia itse.
 
-Nyt on aika kokeilla itse näitä työkaluja. Seuraavissa tehtävissä luot todellisia tuotoksia ja näet, miten ne toimivat.
+**Tekijänoikeudet, läpinäkyvyys ja etiikka** kuuluvat kaikkeen tekoälyn käyttöön. Jos tekoäly on tehnyt merkittävän osan tuotoksesta, kerro siitä. Älä käytä toisten tyyliä, ääntä, kasvoja, hahmoja tai teoksia tavalla, joka voi loukata heidän oikeuksiaan.
 
-## Tärkeä huomautus: Tietojen ajantasaisuudesta
+Paras tapa oppia näitä työkaluja on kokeilla niitä itse, mutta samalla ajatella kriittisesti: mitä työkalu teki hyvin, missä se epäonnistui ja mitä vastuullinen käyttö tässä tilanteessa tarkoittaa?
 
-Tämän materiaalin tiedot vastaavat maaliskuun 2026 tilannetta. Erikoisalojen tekoälytyökalut kehittyvät poikkeuksellisen nopeasti — uusia versioita ja kokonaan uusia työkaluja julkaistaan kuukausittain. Kun luet tätä materiaalia myöhemmin, tarkista aina kunkin työkalun viralliselta verkkosivulta ajankohtaiset hinnat, versiot ja ominaisuudet. Tekoälyn alue muuttuu niin nopeasti, että kuuden kuukauden vanha tieto voi olla jo vanhentunut.
+> 📌 **Tärkeä huomautus ajantasaisuudesta**
+>
+> Tämän materiaalin tiedot on tarkistettu 16.5.2026. Tekoälytyökalut muuttuvat poikkeuksellisen nopeasti. Hinnat, mallit, käyttöehdot, saatavuus ja ominaisuudet voivat muuttua jopa muutamassa kuukaudessa.
+>
+> Kun käytät jotakin työkalua oikeassa projektissa, tarkista aina ajantasaiset tiedot työkalun omalta verkkosivulta. Tämä koskee erityisesti hintoja, kaupallisia käyttöoikeuksia, tekijänoikeuksia ja sitä, mitä mallia palvelu juuri sillä hetkellä käyttää.
+
+**Tärkeämpää kuin yksittäiset nimet on ymmärtää työkalutyypit ja niiden rajat.**

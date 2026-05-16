@@ -86,6 +86,12 @@ Hyvä sääntö on: käytä tekoälyä **ensimmäisenä askeleena**, älä viime
 
 ---
 
+## Kohti omaa projektia
+
+Tällä tunnilla harjoittelit työparityöskentelyn ydinsyklin: tekoäly antaa pohjan, sinä muokkaat, ja tarkistus varmistaa että tulos toimii. Tämä sama logiikka toistuu tunnilla 18, kun rakennat oman bottisi: tekoäly auttaa järjestelmäpromptin kirjoittamisessa, sinä päätät sen lopullisesta muodosta, ja testaus varmistaa että botti toimii kuten haluat. Käyttäjä ei halua yleistä apua, vaan konkreettista hyötyä tietyssä tilanteessa — siksi seuraavaksi suunnittelet, kenelle bottisi on ja mitä se tekee. Tämä on Rakennuspalikka 2.
+
+---
+
 ## Yhteenveto
 
 Tekoäly on käytännön työkalu, joka auttaa sinua kirjoittamaan selkeämmin, oppimaan nopeammin, ratkaisemaan ongelmia tehokkaammin ja dokumentoimaan työsi paremmin. Se ei korvaa omaa ajatteluasi, mutta se tekee monista tehtävistä helpompia ja nopeampia.

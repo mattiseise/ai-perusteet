@@ -1,57 +1,83 @@
-# Opiskelutehtävät: Erikoistuneet tekoälytyökalut
+# Opiskelutehtävät — Kokeile ja pohdi eettisesti
 
-## Botin rakennuspala 4: Suunnittele vastuullinen käyttö
+> 📌 **Tähän tuntiin on vain yksi tehtävä.** Tunnin jälkeen siirryt rakennustöihin (tunti 17), joten energiaa kannattaa säästää sinne. Tällä tunnilla saat omakohtaisen tuntuman erikoistuneeseen tekoälytyökaluun ja pohdit, millaisia eettisiä kysymyksiä se nostaa esiin.
 
-Tämä on viimeinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+## Tehtävä 16.1 — Kokeile kuvageneraattoria ja pohdi eettisesti 🟢 SUOSITELTU
 
-### Tehtävä
+**Tavoite:** Saat omakohtaisen kokemuksen kuvageneraattorista, opit kirjoittamaan toimivan kuvapromptin ja pohdit eettisiä rajoituksia. Eettinen ymmärrys ei synny lukemalla — se syntyy kokeilemalla ja huomaamalla.
 
-Palaa rakennuspaloihin 1–3 (oppitunnit 10, 12 ja 14), joissa valitsit alustan, suunnittelit kontekstistrategian ja persoonallisuuden. Suunnittele nyt, miten bottisi käyttö on vastuullista. Kirjoita lyhyt suunnitelma (150–200 sanaa), jossa vastaat neljään kysymykseen: Mitä eettisiä kysymyksiä bottisi käyttöön liittyy (esim. tekijänoikeudet, harhaanjohtaminen, yksityisyys)? Miten merkitset, että sisältö on tekoälyn tuottamaa? Mitkä ovat bottisi suurimmat riskit ja miten pienennät niitä (esim. hallusinaatiot, väärä tieto)? Miten varmistat, että bottisi noudattaa organisaation sääntöjä (esim. GDPR, tietosuoja)?
+**Miksi juuri kuvageneraattori?** Kuvageneraattorit ovat saavutettavin osa erikoistuneita tekoälytyökaluja: ChatGPT:n, Copilotin ja Geminin ilmaisversioilla pääsee alkuun ilman lisätilauksia. Musiikki, video ja koodausavustajat ovat vaikeammin kokeiltavissa ilmaisversioilla, mutta tekijänoikeus- ja etiikkakysymykset ovat samat — oppi siirtyy.
 
-### Miksi tämä on tärkeä
+### Vaiheet
 
-Oppitunneilla 17–18 rakennat ja esittelet bottisi. Vastuullinen käyttö ei ole lisäominaisuus — se on osa botin suunnittelua. Ilman eettistä suunnitelmaa et osaa selittää esittelyssä, miksi bottisi on turvallinen käyttää. Yhdessä rakennuspalojen 1–3 kanssa sinulla on nyt kattava suunnitelma koko bottiprojektillesi.
+#### Vaihe 1 — Valitse kuvageneraattori, johon pääset käsiksi
 
-Alla olevat harjoitustehtävät auttavat sinua ymmärtämään erikoistuneiden tekoälytyökalujen mahdollisuuksia ja eettisiä kysymyksiä käytännössä.
+Käytä jotakin näistä — kaikilla on ilmaisversio tai kokeilumahdollisuus:
 
----
+- **ChatGPT:n kuvagenerointi** (ilmainen versio antaa muutaman kuvan päivässä)
+- **Microsoft Copilot Designer / Image Creator** (saatavilla koulun edu-lisenssillä)
+- **Google Gemini** (ilmainen, sisältää kuvageneraattorin)
+- **Adobe Firefly** (rajoitettu ilmaisversio)
 
-## Tehtävä 16.1: Työkalujen vertailu ja kategorointi
+Älä valitse sellaista, joka vaatii maksullista tiliä, ellei sinulla ole sellaista valmiiksi.
 
-### Tavoite
+#### Vaihe 2 — Kirjoita selkeä kuvaprompti
 
-Ymmärrät eri erikoistuneita tekoälytyökaluja ja osaat valita sopivan työkalun tehtävän perusteella. Tämä laajentaa näkemystäsi siitä, mitä kaikkea tekoälyllä voi tehdä — ja mitä riskejä siihen liittyy.
+Hyvä kuvaprompti kertoo materiaalin mukaan kuusi asiaa: *mitä kuvassa näkyy, mihin kuvaa käytetään, mikä on tyyli, millainen tunnelma tai valaistus on, mikä on kuvasuhde, mitä kuvassa ei saa olla*.
 
-### Ohjeet
+Valitse oman alasi konteksti:
 
-Valitse kaksi kategoriaa (kuva, musiikki, video tai koodi) ja täytä vertailutaulukko, jossa jokaiselle työkalulle kirjaat hinnan, parhaan puolen, heikoimman puolen, parhaan käyttötapauksen ja mahdolliset koulutusdataongelmat. Kirjoita oma johtopäätös: "Valitsisin [työkalu], koska..."
+| Ala | Esimerkkiaihe |
+|---|---|
+| **IT-tuki** | Käyttäjäkoulutuksen kansikuva |
+| **Kyberturvallisuus** | Kuvituskuva kalasteluviestin tunnistamisesta |
+| **Pelikoodaus** | Konseptikuva oman peli-idean päähahmosta |
+| **Web-ohjelmointi** | Hero-kuva oman portfoliosivuston etusivulle |
 
----
+Kirjoita prompti, joka sisältää kaikki kuusi osaa. Jätä lopuksi pois ne, joita et halua kuvaan (esim. *"ei tekstiä, ei logoja, ei tunnistettavia henkilöitä"*).
 
-## Tehtävä 16.2: Käytännön kokeilu ja tuotoksen luominen
+#### Vaihe 3 — Tuota ja iteroi
 
-### Tavoite
+Generoi ensimmäinen kuva. Sen jälkeen pyydä vähintään yksi muutos — vaihda tyyliä, värimaailmaa, tunnelmaa tai kuvasuhdetta. Esimerkkejä jatkokomennoista materiaalin mukaan:
 
-Käyttää vähintään kahta erikoistunutta tekoälytyökalua ja tuottaa todellinen tuotos. Tämä kokemus auttaa sinua rakennuspalassa arvioimaan tekoälyn tuotosten laatua ja rajoituksia.
+- *"Tee tästä rauhallisempi"*
+- *"Muuta tyyli sarjakuvamaiseksi"*
+- *"Tee tästä 16:9-kuva dioihin"*
+- *"Lisää enemmän valoa"*
 
-### Ohjeet
+Tallenna ainakin kaksi versiota kuvasta.
 
-Valitse yksi projekti: kuvaprojekti (3–4 kuvaa kahdella eri generaattorilla), musiikkiprojekti (2–3 fragmenttia Sunolla tai Udiolla), videoprojekti (1–2 lyhyttä videota Runwayllä tai Pikalla) tai koodausavustajakokeilu (pieni ohjelma ChatGPT:llä tai Claudella).
+#### Vaihe 4 — Pohdi eettiset kysymykset tekoälyn kanssa
 
-Dokumentoi prosessi: mitä valitsit ja miksi, mitä havaitsit, mitkä ohjeet toimivat parhaiten ja oliko tekijänoikeuskysymyksiä mielessäsi. Kirjoita reflektioraportti (2–3 sivua).
+Avaa ChatGPT, Claude tai Copilot uudessa keskustelussa ja anna sille tehtäväksi haastaa sinua eettisesti. Esimerkkiprompti:
 
----
+```
+Toimit minulle eettisen sparrauksen kumppanina. Tuotin juuri
+kuvageneraattorilla kaksi versiota kuvasta aiheesta [aihe]. Kysy
+minulta 3–4 kysymystä, jotka pakottavat minua pohtimaan eettisesti
+tätä tekoa. Älä esitä mielipiteitäsi — esitä vain kysymykset, joiden
+kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
 
-## Tehtävä 16.3: Etiikka ja portfolio-pala
+- Mistä kuvageneraattori on oppinut tuottamaan tällaista tyyliä?
+- Kenen työtä se mahdollisesti jäljittelee?
+- Jos käyttäisin tätä kuvaa julkisesti, mitä minun pitäisi merkitä?
+- Olisiko inhimillinen kuvittaja tehnyt jotain, mihin tekoäly ei pysty?
+- Mikä on minun vastuuni, jos kuva loukkaa jonkun oikeuksia?
+```
 
-### Tavoite
+Vastaa kysymyksiin omin sanoin. Älä yritä antaa "oikeita" vastauksia — pohdi rehellisesti, mitä mieltä olet.
 
-Arvioida generatiivisen tekoälyn eettisiä kysymyksiä ja osoittaa kriittistä ajattelua. Tämä on suoraan hyödyllinen rakennuspalan kirjoittamisessa — vastuullinen käyttö vaatii eettistä ymmärrystä.
+#### Vaihe 5 — Kirjoita lyhyt pohdinta ja merkintä
 
-### Ohjeet
+Kirjoita 5–8 lauseen pohdinta, joka vastaa neljään kysymykseen:
 
-Valitse jompikumpi lähestymistapa:
+- **Tekninen havainto:** Mitä kuvageneraattori teki hyvin? Missä se epäonnistui tai oli arvattava?
+- **Prompti-havainto:** Mikä promptin osa vaikutti eniten lopputulokseen? Mikä jäi tekoälyltä huomaamatta?
+- **Eettinen havainto:** Mikä yksi eettinen kysymys jäi mielen päälle? Miten suhtaudut siihen?
+- **Käytännön päätös:** Käyttäisitkö tätä kuvaa *julkisesti*? Jos kyllä, millaisen merkinnän liittäisit mukaan (esim. "Kuva on luotu tekoälyllä")? Jos et, miksi?
 
-**Lähestymistapa A — Eettinen analyysi:** Kirjoita 3–4 sivun analyysi yhdestä aiheesta: tekijänoikeus ja AI:n koulutusdata, ammattilaiset ja tuotannonostoa, "Made with AI" -merkinnät tai tulevaisuus ja sopeutuminen. Sisällytä johdanto, vähintään kaksi eri näkökulmaa, konkreettisia esimerkkejä, oma kantasi ja lähteet.
+Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa ammattilaisen vastuuta.
 
-**Lähestymistapa B — Portfolio-pala ja eettinen lausuma:** Ota tehtävässä 16.2 luomasi tuotos ja kirjoita siihen liittyvä tuotoksen kuvaus (1 sivu) ja eettinen lausuma (1–2 sivua), jossa käsittelet koulutusdatan alkuperää, kaupallisen käytön mahdollisuudet, "Made with AI" -merkinnän ja arvion siitä, olisiko tuotos ollut parempi ilman tekoälyä.
+> 💡 **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi *projektin määrittelydokumentin sparrauskumppani* ei ole kuvageneraattori, mutta sama eettinen ajattelu pätee suoraan: **mistä botin tietopohja on peräisin? Mitä rajat sen tekemiseen? Mitä käyttäjälle kerrotaan?** Tunnin 14 määrittelydokumentissa (Rakennuspalikka 2) *rajat* ovat yksi kuudesta osasta. Kun olet itse joutunut pohtimaan kuvageneraattorin etiikkaa, ymmärrät paremmin, miksi rajat ovat osa botin *suunnittelua*, eivätkä jotain "lisättävää loppuun".
+
+**Eettinen vastuu ei synny lukemalla — se syntyy kun joudut itse päättämään.**

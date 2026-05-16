@@ -197,7 +197,7 @@ ChatGPT ja Claude ovat kalliimpia, mutta hyviä, jos organisaatiolla on budjetti
 
 ## Kohti omaa projektia
 
-Tällä tunnilla tutustuit laajempaan tekoälykenttään – Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu eri tarpeeseen, ja jokaisella on omat vahvuudet hinnan, yksityisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitsit juuri tietyn alustan omalle botillesi. Kun rakennat bottia myöhemmillä tunneilla, muista: valinta ei ole vain "mikä on paras", vaan "mikä sopii parhaiten tähän käyttötilanteeseen". Se on ammattilaisen ajattelutapa.
+Tällä tunnilla tutustuit laajempaan tekoälykenttään ja erityisesti tietosuojanäkökulmaan: missä palvelimet sijaitsevat, mitä GDPR vaatii, miten organisaation valinnat eroavat yksittäisen käyttäjän valinnoista. Tehtävissä teet perustellun suosituksen valitsemallesi organisaatiolle. Tämä pohdinta palaa konkreettisesti tunnilla 15, kun kuratoit oman bottisi tietopohjan: silloin joudut itse päättämään, mitä materiaalia Copilotiin voi tai ei voi ladata. Seuraavaksi opit, miten konteksti rakennetaan käytännössä — ja aloitat ensimmäisen rakennuspalikkasi keräämisen.
 
 ## Osa 7: Yhteenveto
 

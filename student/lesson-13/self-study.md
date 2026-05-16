@@ -88,7 +88,7 @@ Hyvä sääntö on: käytä tekoälyä **ensimmäisenä askeleena**, älä viime
 
 ## Kohti omaa projektia
 
-Tällä tunnilla näit, miten tekoäly auttaa käytännön tehtävissä – kirjoittamisessa, oppimisessa, ongelmanratkaisussa ja dokumentoinnissa. Nämä ovat juuri niitä käyttötilanteita, joita oma bottisi voi palvella. Mieti, mikä näistä neljästä alueesta on lähimpänä oman bottisi tarkoitusta. Kun suunnittelet bottia, muista: käyttäjä ei halua yleistä apua, vaan konkreettista hyötyä tietyssä tilanteessa. Mitä tarkemmin tiedät, mitä käyttäjäsi tekee, sitä paremman botin rakennat.
+Tällä tunnilla harjoittelit työparityöskentelyn ydinsyklin: tekoäly antaa pohjan, sinä muokkaat, ja tarkistus varmistaa että tulos toimii. Tämä sama logiikka toistuu tunnilla 18, kun rakennat oman bottisi: tekoäly auttaa järjestelmäpromptin kirjoittamisessa, sinä päätät sen lopullisesta muodosta, ja testaus varmistaa että botti toimii kuten haluat. Käyttäjä ei halua yleistä apua, vaan konkreettista hyötyä tietyssä tilanteessa — siksi seuraavaksi suunnittelet, kenelle bottisi on ja mitä se tekee. Tämä on Rakennuspalikka 2.
 
 ## Yhteenveto
 

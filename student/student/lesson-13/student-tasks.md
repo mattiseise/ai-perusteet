@@ -1,134 +1,145 @@
-# Tehtävät — AI työparina
+# Opiskelutehtävät — AI työparina
 
-## Oppimisen tavoite
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 13.1, jossa harjoittelet koko työparityöskentelyn sykliä: pohja tekoälyltä → oma muokkaus → kriittinen arviointi. Jos sinulla on aikaa ja haluat lisäharjoitusta erityisesti IT-alan virheilmoitusten parissa, tee lisäksi syventävä tehtävä 13.2.
 
-Tässä oppitunnissa harjoittelet tekoälyn käyttöä käytännön työparina. Opit kirjoittamaan selkeämmin, ratkaisemaan ongelmia ja dokumentoimaan työtäsi tekoälyn avulla.
+## Tehtävä 13.1 — Kirjoita ohje työparityönä 🟢 SUOSITELTU
 
----
+**Tavoite:** Opit hyödyntämään tekoälyä koko sykliä: pohjan tekijänä, muokkauksen kohteena ja kriittisenä arvioijana. Ihminen päättää suunnan, tekoäly auttaa nopeuttamaan.
 
-## Tehtävä 13.1: Ohjeen kirjoittaminen tekoälyn avulla
+### Vaiheet
 
-### Tavoite
+#### Vaihe 1 — Valitse aihe omalta alaltasi
 
-Oppia käyttämään tekoälyä selkeän, käytännöllisen ohjeen kirjoittamisessa.
+Valitse aihe, joka liittyy omaan alaasi. Esimerkkejä:
 
-### Ohjeet
+- **IT-tuki:** Miten käyttäjä jakaa työpöytänsä etänä (TeamViewer / Quick Assist) — vaihe vaiheelta
+- **Kyberturvallisuus:** Miten käyttäjä tunnistaa kalasteluviestin sähköpostista
+- **Pelikoodaus:** Miten asentaa Unity- tai Godot-kehitysympäristö ensimmäistä projektia varten
+- **Web-ohjelmointi:** Miten julkaista yksinkertainen HTML-sivu Netlifyhin tai GitHub Pagesiin
 
-1. Valitse aihe, josta kirjoitat ohjeen. Aihe voi olla esimerkiksi:
-   - Miten yhdistää puhelin langattomaan verkkoon
-   - Miten asentaa jokin sovellus puhelimeen tai tietokoneeseen
-   - Miten luoda vahva salasana ja tallentaa se turvallisesti
-   - Miten jakaa tiedosto pilvipalvelun kautta (OneDrive, Google Drive)
+Ohjeen kohderyhmänä on **aloittelija** — joku, joka ei tiedä aiheesta ennestään mitään. Pituus enintään 8 vaihetta.
 
-2. Pyydä tekoälyltä ohje aiheestasi. Anna sille nämä tiedot:
-   - Kenelle ohje on tarkoitettu (esim. "henkilö, joka ei ole teknisesti taitava")
-   - Mikä käyttöjärjestelmä tai laite on kyseessä
-   - Kuinka pitkä ohjeen tulisi olla (esim. "enintään 8 vaihetta")
+#### Vaihe 2 — Pyydä pohja tekoälyltä
 
-3. Lue tekoälyn teksti ja arvioi sitä:
-   - Onko se selkeä?
-   - Puuttuuko jotain oleellista?
-   - Onko jokin kohta epäselvä tai harhaanjohtava?
+Avaa ChatGPT, Claude tai Copilot. Anna tekoälylle selkeä pyyntö, jossa määrittelet kohderyhmän, käyttöjärjestelmän tai laitteen ja pituuden. Esimerkkiprompti:
 
-4. Muokkaa ohje valmiiksi: korjaa virheet, lisää puuttuvat kohdat ja yksinkertaista tarvittaessa.
+```
+Kirjoita selkeä, vaiheittainen ohje aiheesta [aihe].
 
-5. Kirjoita lyhyt arvio (3–5 lausetta): mikä tekoälyn versiossa oli hyvää ja mitä jouduit muuttamaan.
+Kohderyhmä: [kuvaa kuka käyttäjä on ja mitä hän osaa]
+Käyttöjärjestelmä tai laite: [tarkenna]
+Pituus: enintään 8 vaihetta
 
-### Odotettu tuotos
+Käytä yksinkertaista kieltä, ei teknistä jargonia. Aloita aina
+vaihe verbillä ('Avaa…', 'Klikkaa…', 'Valitse…').
+```
 
-- Valmis, selkeä ohje (enintään 1 sivu)
-- Lyhyt arvio tekoälyn avusta
+Tallenna saamasi vastaus.
 
----
+#### Vaihe 3 — Arvioi ja muokkaa
 
-## Tehtävä 13.2: Virheilmoitusten selvittäminen
+Lue ohje rauhassa kuin olisit itse aloittelija. Vastaa mielessäsi:
 
-### Tavoite
+- Onko jokin vaihe epäselvä?
+- Puuttuuko jokin oleellinen kohta (esim. ohjelman lataaminen ennen asennusta)?
+- Onko jokin teknisesti väärin? (Esim. valikon nimet, painikkeiden nimet — tekoäly arvailee usein)
+- Onko jokin liian tekninen kohderyhmälle?
 
-Oppia käyttämään tekoälyä virheilmoitusten ymmärtämiseen ja ongelmien ratkaisemiseen.
+Muokkaa ohje. Korjaa, lisää puuttuvat kohdat, yksinkertaista vaikeat. Tämä on **tärkein vaihe** — tässä ihminen ottaa ohjat.
 
-### Ohjeet
+#### Vaihe 4 — Käytä tekoälyä toistamiseen, nyt kriittisenä lukijana
 
-1. Valitse kaksi seuraavista virheilmoituksista (tai käytä omia, jos sinulle on tullut jokin oikea virheilmoitus):
+Avaa tekoäly uudelleen (uusi keskustelu suositeltava). Anna sille muokkaamasi versio ja pyydä sitä toimimaan *kohderyhmänä*:
 
-   **Virheilmoitus A:** "Your connection is not private — NET::ERR_CERT_DATE_INVALID"
+```
+Toimit minulle koehenkilönä. Olet [kohderyhmäsi kuvaus —
+esim. 'eläkkeellä oleva henkilö, joka osaa lukea sähköposteja
+mutta ei ole asentanut ohjelmistoja ennen'].
 
-   **Virheilmoitus B:** "0x80070005 — Access Denied"
+Lue seuraava ohje hitaasti, ikään kuin yrittäisit oikeasti
+seurata sitä. Kerro:
 
-   **Virheilmoitus C:** "No Internet — DNS_PROBE_FINISHED_NXDOMAIN"
+- Mihin kohtaan jäisit jumiin?
+- Mikä sanavalinta on epäselvä?
+- Mitä tietoa kaipaisit lisää?
 
-   **Virheilmoitus D:** "Disk is almost full — You have less than 1 GB available"
+OHJE:
+[liitä muokkaamasi versio]
 
-2. Kopioi virheilmoitus tekoälylle ja kysy:
-   - "Mitä tämä virheilmoitus tarkoittaa selkokielellä?"
-   - "Mitä minun pitäisi tehdä ensimmäiseksi?"
-   - "Voiko tämä aiheuttaa pysyviä ongelmia?"
+Älä korjaa ohjetta puolestani — kerro vain, mikä siinä ei toimi
+sinulle kohderyhmänä.
+```
 
-3. Kirjoita jokaisesta virheilmoituksesta lyhyt selvitys:
-   - Mitä virheilmoitus tarkoittaa
-   - Mikä todennäköisesti aiheuttaa sen
-   - Miten sen voit ratkaista
-   - Miten tekoäly auttoi ymmärtämään ongelman
+Tekoäly antaa palautetta — käytä sitä ohjeen viimeistelyyn. Tämä on harjoitus siitä, miten tekoälyä käytetään *testaajana*, ei kirjoittajana.
 
-### Odotettu tuotos
+#### Vaihe 5 — Viimeistele ja kirjoita lyhyt huomio
 
-Kaksi lyhyttä selvitystä (kumpikin 5–10 lausetta), joissa kuvaat virheilmoituksen, syyn ja ratkaisun.
+Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa muistissasi 2–3 lauseella:
 
----
+- Mitä tekoälyn pohjassa oli hyvää, mikä säilyi loppuun saakka?
+- Mitä piti muuttaa, koska tekoäly ei tiennyt todellisuutta?
+- Mitä huomasit, kun tekoäly toimi kohderyhmänä — auttoiko se?
 
-## Tehtävä 13.3: Oman työn dokumentointi
-
-### Tavoite
-
-Oppia dokumentoimaan oma työprosessi selkeästi tekoälyn avulla.
-
-### Ohjeet
-
-1. Muistele jokin ongelma, jonka olet ratkaissut — se voi olla tietokoneeseen, puhelimeen, sovellukseen tai opintoihin liittyvä. Jos et keksi mitään, käytä tätä esimerkkiä: "Tulostin ei tulosta, vaikka se on yhdistetty."
-
-2. Kirjoita muistiin omilla sanoilla:
-   - Mikä oli ongelma?
-   - Mitä kokeilit?
-   - Mikä lopulta toimi?
-   - Mitä oppit?
-
-3. Anna muistiinpanosi tekoälylle ja pyydä sitä muokkaamaan tekstistä selkeä dokumentti. Pyydä esimerkiksi: "Muokkaa tästä selkeä ongelmanratkaisuraportti, jossa on osat: Ongelma, Kokeillut ratkaisut, Toimiva ratkaisu ja Opittu."
-
-4. Vertaa tekoälyn versiota omaasi. Muokkaa lopullinen versio, joka on sekä selkeä että tarkka.
-
-### Odotettu tuotos
-
-- Yksi dokumentoitu ongelmanratkaisu (½–1 sivu)
-- Selkeä rakenne: Ongelma → Kokeillut ratkaisut → Toimiva ratkaisu → Opittu
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä ohje ja muistiinpano omassa kansiossasi. Tunnilla 18 rakentamasi *projektin määrittelydokumentin sparrauskumppani* tekee periaatteessa samaa: ohjaa käyttäjää vaihe vaiheelta jonkin asian läpi. Ymmärrät paremmin, miksi rajat ja tarkennukset ovat tärkeitä, kun olet itse joutunut tekemään ohjetta.
 
 ---
 
-## Palautusvaatimukset
+## Tehtävä 13.2 — Tulkitse virheilmoitus tekoälyn kanssa 🟣 SYVENTÄVÄ
 
-Palauta kaikki kolme tehtävää:
+> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat harjoitella tärkeää IT-arjen taitoa: virheilmoitusten tulkintaa.
 
-1. **Tehtävä 13.1:** Valmis ohje + lyhyt arvio tekoälyn avusta
-2. **Tehtävä 13.2:** Kaksi virheilmoitusselvitystä
-3. **Tehtävä 13.3:** Dokumentoitu ongelmanratkaisu
+**Tavoite:** Opit selvittämään tuntemattomia virheilmoituksia järjestelmällisesti tekoälyn avulla — ja arvioimaan, milloin tekoälyä voi uskoa ja milloin pitää tarkistaa toisaalta.
 
-**Yhteensä:** noin 2 A4-sivua
+### Vaiheet
 
----
+#### Vaihe 1 — Valitse virheilmoitus
 
-## Vihjeet
+Valitse **yksi** seuraavista (tai käytä omaa, jos sellainen on tullut vastaan):
 
-- **Ohjeen kirjoittaminen:** Anna tekoälylle tarkat tiedot kohderyhmästä. Mitä tarkemmin kuvaat, kenelle ohje on tarkoitettu, sitä paremman pohjan saat.
-- **Virheilmoitukset:** Kopioi virheilmoitus tarkalleen — älä kirjoita sitä ulkomuistista. Tarkkuus on tärkeää.
-- **Dokumentointi:** Älä kaunistele. Kirjoita rehellisesti, mitä kokeilit — myös ne asiat, jotka eivät toimineet.
-- **Tekoälyn rajat:** Jos tekoälyn vastaus ei tunnu oikealta, kysy tarkentavia kysymyksiä tai kokeile eri muotoilua.
+- `Your connection is not private — NET::ERR_CERT_DATE_INVALID`
+- `0x80070005 — Access Denied`
+- `No Internet — DNS_PROBE_FINISHED_NXDOMAIN`
+- `ECONNREFUSED 127.0.0.1:5432`
+- `The disk you inserted was not readable by this computer`
 
----
+#### Vaihe 2 — Kysy tekoälyltä, mutta strukturoidusti
 
-## Aikataulu
+Kopioi virheilmoitus tarkalleen — älä kirjoita ulkomuistista. Esimerkkiprompti:
 
-- Tehtävä 13.1 (ohjeen kirjoittaminen): noin 30 min
-- Tehtävä 13.2 (virheilmoitukset): noin 30 min
-- Tehtävä 13.3 (dokumentointi): noin 30 min
-- **Yhteensä: noin 1,5 tuntia**
+```
+Sain seuraavan virheilmoituksen:
 
-**Palautus:** [opettajan antama päivämäärä]
+[VIRHEILMOITUS]
+
+Selitä minulle:
+1. Mitä tämä virheilmoitus tarkoittaa selkokielellä?
+2. Mikä on todennäköisin syy?
+3. Mitä kannattaa kokeilla ensin (vähiten riskialtis ratkaisu)?
+4. Onko tilanteita, joissa tämän virheilmoituksen näkeminen on
+   merkki vakavammasta ongelmasta?
+5. Onko jokin toimenpide, jota EI kannata tehdä tämän
+   virheilmoituksen yhteydessä?
+```
+
+#### Vaihe 3 — Tarkista tekoälyn vastaus toisaalta
+
+Tekoäly voi olla väärässä vakuuttavasti. Tarkista vähintään yhdellä lähteellä:
+
+- Microsoftin / Applen / Googlen tukisivut, jos kyseessä on käyttöjärjestelmävirhe
+- Stack Overflow tai virallinen dokumentaatio teknisille virhekoodeille
+- Toinen tekoälytyökalu — kysy samaa kysymystä ChatGPT:ltä ja Claudelta, vertaa
+
+Merkitse muistiin: **vastasivatko lähteet tekoälyn selitystä?** Jos ei, miten ne erosivat?
+
+#### Vaihe 4 — Kirjoita lyhyt selvitys
+
+Kirjoita 5–8 lauseen selvitys, jossa:
+
+- Selität virheilmoituksen omilla sanoillasi (ei kopioi tekoälyn vastausta)
+- Listaat ensimmäinen ratkaisuyritys
+- Mainitset mahdollisen vakavamman taustasyyn, jos sellainen on
+- Kommentoit: kuinka luotettavalta tekoälyn vastaus tuntui, kun tarkistit sen toisaalta?
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämän taidon arvo kasvaa työuran mittaan. Säilytä selvitys omiin muistiinpanoihin — kun samanlainen virheilmoitus tulee vastaan toistamiseen, sinulla on jo valmis ratkaisupohja.
+
+**Tekoäly ehdottaa, sinä päätät.**

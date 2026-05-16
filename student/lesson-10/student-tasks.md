@@ -1,58 +1,134 @@
-# Opiskelutehtävät: Työkalupaletti — ChatGPT, Claude ja Copilot käytännössä
+# Opiskelutehtävät — Työkalupaletti käytännössä
 
-## Botin rakennuspala 1: Valitse alusta ja käyttötapaus
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 10.1, joka opettaa tunnin ydintaitoa — oikean työkalun valitsemista tehtävän mukaan. Jos sinulla on aikaa ja haluat rakentaa itsellesi henkilökohtaisen valintakehyksen, tee lisäksi syventävä tehtävä 10.2.
 
-Tämä on ensimmäinen neljästä botin rakennuspalasta, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät näitä rakennuspaloja oppitunneilla 17–18, kun rakennat oman Custom-botin ja esittelet sen. Säilytä tämä huolellisesti.
+## Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU
 
-### Tehtävä
+**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tutuuden takia, vaan sen mukaan kumpi sopii tehtävään.
 
-Valitse alusta, jolle rakennat bottisi (ChatGPT, Claude tai muu), ja käyttötapaus, johon se vastaa. Kirjoita lyhyt kuvaus (150–200 sanaa), jossa vastaat kolmeen kysymykseen: Minkä alustan valitset ja miksi se sopii juuri sinun käyttötapaukseesi? Mitä ongelmaa bottisi ratkaisee ja kenelle se on tarkoitettu? Mitkä tämän alustan vahvuudet tekevät siitä parhaan valinnan (esim. pitkä konteksti, web-haku, Office-integraatio)?
+### Vaiheet
 
-Botin ei tarvitse olla monimutkainen. Hyvä lähtökohta voi olla esimerkiksi "IT-helpdesk-botti, joka auttaa yleisimmissä ongelmissa" tai "opiskelijan tutori-botti, joka selittää ohjelmointikäsitteitä". Tärkeintä on, että valinta perustuu todelliseen kokemukseesi eri alustoista.
+#### Vaihe 1 — Valitse yksi tehtävä
 
-### Miksi tämä on tärkeä
+Valitse yksi konkreettinen tehtävä, joka on tarpeeksi rikas paljastaakseen työkalujen erot. Esimerkkejä:
 
-Oppitunneilla 17–18 rakennat oman Custom-botin. Tämä rakennuspala on sen pohja — kun sinulla on perusteltu alustavalinta ja selkeä käyttötapaus, kaikki myöhemmät suunnittelupäätökset (kontekstistrategia, persoonallisuus, vastuullinen käyttö) liittyvät konkreettiseen projektiin.
+- Kirjoita 300 sanan käyttöohje aiheesta, jonka osaat hyvin (esim. *"Miten vaihdat salasanan Windowsissa?"*)
+- Selitä yksi tekninen käsite kahdelle eri yleisölle (esim. *"Selitä TCP/IP-protokolla 1) IT-aloittelijalle ja 2) järjestelmäasiantuntijalle"*)
+- Kirjoita lyhyt Python-funktio, joka tekee jotain hyödyllistä (esim. *"Funktio, joka lukee CSV-tiedoston ja palauttaa keskiarvon yhdestä sarakkeesta"*)
 
-Alla olevat harjoitustehtävät auttavat sinua vertailemaan alustoja käytännössä ja keräämään kokemusta, jonka pohjalta valintasi on perusteltu.
+Mitä konkreettisempi pyyntö, sitä paremmin erot näkyvät.
+
+#### Vaihe 2 — Aja sama prompti kolmessa työkalussa
+
+Avaa **ChatGPT, Claude ja Copilot** rinnakkain. Anna kullekin *täsmälleen sama* pyyntö — älä muotoile sitä uudelleen. Tallenna kunkin vastaus (kuvakaappaus tai kopioi tekstinä).
+
+**Tärkeää:** Jos sinulla ei ole pääsyä jonkin maksulliseen versioon, käytä ilmaisversiota. Sekin riittää tähän vertailuun.
+
+#### Vaihe 3 — Vertaa
+
+Täytä vertailutaulukko. Arvioi jokainen kohta asteikolla 1–5 tai sanallisesti.
+
+| Vertailtava asia | ChatGPT | Claude | Copilot |
+|---|---|---|---|
+| Vastauksen pituus (sanaa) | | | |
+| Selkeys (1–5) | | | |
+| Tekninen tarkkuus (1–5) | | | |
+| Lähdeviittaukset / web-haku | | | |
+| Käytännöllisyys juuri sinulle (1–5) | | | |
+
+#### Vaihe 4 — Käytä tekoälyä apuna tulosten jäsentämisessä
+
+Avaa *jokin* kolmesta työkalusta uudestaan (Claude tai ChatGPT sopii hyvin, koska niillä on pidempi konteksti). Anna sille kaikki kolme vastausta ja oma taulukkosi. Esimerkkiprompti:
+
+```
+Toimit minulle sparrauskumppanina. Annoin saman tehtävän kolmelle
+tekoälylle ja vertasin niiden vastauksia. Tässä saamani vastaukset
+ja oma alustava arvioni:
+
+TEHTÄVÄ: [oma pyyntösi]
+
+CHATGPT:N VASTAUS: [...]
+
+CLAUDEN VASTAUS: [...]
+
+COPILOTIN VASTAUS: [...]
+
+OMA ARVIONI: [liitä taulukkosi]
+
+Auta minua huomaamaan asioita, joita en itse pannut merkille. Mitä
+eroja vastauksissa on, jotka ehkä jäivät huomaamatta? Älä kerro
+suoraan kumpi on paras — anna minulle 2–3 kysymystä, joiden
+kautta voin terävöittää omaa arviotani.
+```
+
+Tämä on harjoitus siitä, miten tekoälyä käytetään *vertailun apurina* — etenkin kun vertailtava asia on tekoäly itse.
+
+#### Vaihe 5 — Kirjoita lyhyt havainto
+
+Vastaa 3–5 lauseella:
+
+- Mikä työkalu suoriutui parhaiten *tästä* tehtävästä, ja mistä syystä?
+- Mikä yksi asia yllätti sinut vertailussa?
+- Millaisessa tilanteessa valitsisit jonkin muun työkalun samaan tehtävään?
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta pidä havaintosi muistissa. Kun tunnilla 18 rakennat oman bottisi Microsoft Copilotiin, ymmärrät paremmin, miksi *juuri Copilot* on valittu kurssin alustaksi — ja missä sen rajat menevät verrattuna ChatGPT:hen ja Claudeen.
 
 ---
 
-## Tehtävä 10.1: Syvä vertailuanalyysi kolmesta työkalusta
+## Tehtävä 10.2 — Oma valintakehys 🟣 SYVENTÄVÄ
 
-### Tavoite
-Soveltaa jokaista kolmea kielimallityökalua samaan tehtävään ja analysoida niiden vastausten eroja. Tämä auttaa sinua rakennuspalassa perustelemaan, miksi valitsemasi alusta sopii käyttötapaukseesi.
+> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat luoda itsellesi pysyvän työkalun: oman henkilökohtaisen valintakehyksen, jonka avulla osaat valita oikean tekoälyn kuhunkin arjen tehtävään.
 
-### Ohjeet
+**Tavoite:** Rakennat itsellesi henkilökohtaisen "kun X, niin Y" -kehyksen, jolla tunnistat nopeasti oikean työkalun.
 
-Valitse yksi tehtävätyyppi: kirjoittaminen ja luovuus (500–600 sanan blogiartikkeli), ohjelmointi ja tekniikka (Python-funktio dokumentaatioineen), analyysi ja tutkimus (5–10 sivuisen dokumentin yhteenveto) tai ideointi ja suunnittelu (startup-idean liiketoimintasuunnitelma).
+### Vaiheet
 
-Anna täsmälleen sama tehtävä kaikille kolmelle työkalulle (ChatGPT, Claude, Copilot) ja dokumentoi vastaukset. Vertaa niitä seuraavien kriteerien perusteella: nopeus, pituus, selkeys, tekninen tarkkuus, luovuus, rakenne ja käytännöllisyys (arvioi kukin 1–5).
+#### Vaihe 1 — Listaa omat tyypilliset tehtävät
 
-Kirjoita 800–1000 sanan raportti, jossa käsittelet johdannon (mitä vertailit), vastausten yhteenvedon, vertailuanalyysin kohta kohdalta, ja johtopäätökset (mikä työkalu on paras tälle tehtävätyypille ja miksi).
+Mieti, millaisia tehtäviä teet säännöllisesti opiskelussa, harrastuksissa tai työssä. Kirjoita lista **5 konkreettisesta tehtävätyypistä**, joissa tekoäly voisi auttaa sinua. Esimerkkejä:
 
----
+- Pitkän tutkimusartikkelin tiivistäminen
+- Sähköpostiviestin muotoilu suomeksi tai englanniksi
+- Koodin debuggaaminen
+- Excel-kaavojen rakentaminen
+- Esseen jäsentäminen
+- Tietoturvariskien tunnistaminen kuvauksesta
 
-## Tehtävä 10.2: Vahvuuksien kartoitus — milloin käyttää ketä?
+#### Vaihe 2 — Yhdistä jokainen tehtävä työkaluun
 
-### Tavoite
-Tunnistaa kunkin työkalun todella hyvät käyttötapaukset kokeilemalla niitä käytännössä. Tämä auttaa sinua rakennuspalassa valitsemaan alustan, jonka vahvuudet vastaavat käyttötapaukseesi.
+Käy lista läpi ja kirjoita kullekin riville:
 
-### Ohjeet
+| Tehtävätyyppi | Ensisijainen työkalu | Miksi? |
+|---|---|---|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
-Valitse kolme erilaista tehtävää — yksi kunkin työkalun vahvuudelle: ChatGPT:lle tehtävä, joka hyödyntää web-hakua tai räätälöityä bottia, Claudelle tehtävä, joka vaatii pitkän dokumentin analyysia ja yksityisyyttä, Copilotille tehtävä, joka hyödyntää Office-integraatiota.
+Perustelussa: viittaa konkreettisesti työkalun vahvuuteen — esim. *"Claude, koska tarvitaan pitkä konteksti-ikkuna"* tai *"Copilot, koska tarvitaan suora Excel-integraatio"*.
 
-Suorita testit, dokumentoi tulokset ja täytä arviointimatriisi, jossa vertaat vahvuuksia, käyttötapauksia ja soveltuvuutta yritysympäristöön.
+#### Vaihe 3 — Haasta valintasi tekoälyllä
 
----
+Avaa ChatGPT, Claude tai Copilot. Anna sille koko taulukkosi:
 
-## Tehtävä 10.3: Henkilökohtainen valintakehys — missä sinä käytät mitä?
+```
+Toimit minulle sparrauskumppanina. Olen rakentanut itselleni
+valintakehyksen siitä, milloin käytän mitäkin tekoälytyökalua.
+Tässä se on:
 
-### Tavoite
-Luoda oma valintakehys, jonka avulla osaat valita oikean työkalun kuhunkin tilanteeseen. Tämä kehys auttaa sinua myös myöhemmissä rakennuspaloissa ja bottiprojektissa.
+[liitä taulukkosi]
 
-### Ohjeet
+Haasta valintojani. Onko jokin riveistä, jossa valitsemani työkalu
+ei ole välttämättä paras? Onko jokin tilanne, jossa kannattaisi
+miettiä toista työkalua? Älä muuta valintojani puolestani — anna
+1–2 konkreettista huomiota, joiden pohjalta voin viilata kehystäni.
+```
 
-Tunnista oma käyttöprofiilisi (mitä teet eniten, mitä välineitä käytät, mikä on sinulle tärkeää), luo päätöskaavio joka ohjaa työkalun valintaa, kirjoita vähintään 5–10 omaa käyttötapausta ja dokumentoi lopullinen valintakehys (käyttöprofiili, päätöskaavio, käyttötapaukset, valintamatriisi).
+#### Vaihe 4 — Viimeistele kehyksesi
 
-Kirjoita lopuksi 500 sanan reflektio siitä, mitä opit ja muuttuiko ajatuksesi näistä työkaluista.
+Päivitä taulukko tekoälyn sparrauksen jälkeen. Lopuksi kirjoita yhden lauseen sääntö, jonka muistat aina: *"Jatkossa valitsen työkalun siten, että…"*
+
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä taulukko on yksi kurssin arvokkaimmista työkaluista. Tulosta tai pidä se helposti saatavilla — sitä päivität läpi koko opiskeluajan ja työuran.
+
+**Tunnin 10 jälkeen tiedät, ettei ole "parasta" tekoälyä — on vain "paras tähän tehtävään".**
