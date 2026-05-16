@@ -1,4 +1,4 @@
-# Oma botti I — suunnittelu, ohjeet ja persoona
+# Rakennuspalikka 2 — suunnittele botin määrittelydokumentti
 
 ## Johdanto: Kun ChatGPT ei enää riitä
 

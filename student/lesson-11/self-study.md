@@ -1,4 +1,4 @@
-# Muita tekoälymalleja — kuin ChatGPT ja Claude
+# Tekoäly ja tietosuoja — valinta organisaation näkökulmasta
 
 ## Johdanto: Tekoälymaailma on isompi kuin näyttää
 

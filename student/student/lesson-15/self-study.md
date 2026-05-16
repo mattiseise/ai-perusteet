@@ -1,4 +1,4 @@
-# Oma botti II — tietopohja, rajaukset ja testaus
+# Rakennuspalikka 3 — kuratoi botin tietopohja
 
 ## Johdanto: miksi testaaminen on kriittistä
 

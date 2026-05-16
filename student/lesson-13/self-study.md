@@ -1,4 +1,4 @@
-# AI työparina — käytännön hyöty arjessa ja opiskelussa
+# AI työparina — pohja, muokkaus ja tarkistus
 
 ## Johdanto: tekoäly ei ole vain tekninen työkalu
 

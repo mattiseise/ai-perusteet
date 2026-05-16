@@ -1,4 +1,4 @@
-# Anna konteksti — miten saat parempia vastauksia
+# Anna konteksti — rakenna oma promptauspankkisi
 
 ## Johdanto: Sama kysymys, aivan eri vastaukset
 
