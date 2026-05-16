@@ -9,6 +9,13 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = _HERE
 OUT  = os.path.join(_HERE, 'index.html')
 
+# Lopputyön tehtävänannot per OSP (osp_id → md filename relative to repo root)
+LOPPUTYO_BRIEFS = {
+    "osp1": "teoria-lopputyo-tehtavananto.md",
+    "osp2": "tekoalyjen-kaytto-lopputyo-tehtavananto.md",
+    "osp3": "agentit-lopputyo-tehtavananto.md",
+}
+
 # BC Logo: Icon (crest/shield 85x45)
 BC_ICON_SVG = '''<svg width="85" height="45" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_339_29567)"><mask id="a" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="85" height="45"><path d="M85 0H0v45h85V0z" fill="#fff"/></mask><g mask="url(#a)" fill="#69013B"><path d="M12.822 11.656c0 2.889-2.158 4.723-5.597 4.723-1.535 0-2.822-.548-3.579-1.53v1.226H.376v-.198l1.266-1.833V2.012L.134.198V0h5.335c3.955 0 5.664 1.135 5.664 3.588 0 1.795-1.468 3.193-3.78 3.655 3.223 0 5.462 1.814 5.462 4.42l.007-.007zM3.686.66v6.47h1.555c2.353 0 4.002-1.2 4.002-3.502 0-2.012-1.22-2.975-3.78-2.975H3.685V.66zm7.024 11.26c0-2.626-1.642-4.136-4.463-4.136H3.693V13.8c.623 1.114 1.843 1.747 3.358 1.747 2.42 0 3.666-1.418 3.666-3.628m4.417.766V9.71c0-1.597-.134-2.381-.845-2.797l2.159-1.049h.51v6.781c0 1.596.69 2.797 2.332 2.797 2.044 0 2.734-1.398 2.734-2.777V9.71c0-1.597-.241-2.362-.931-2.797l2.265-1.049h.49v8.331l.89 1.643v.237h-2.667V14.98c-.49.726-1.18 1.399-2.956 1.399-1.642 0-3.975-.746-3.975-3.693m13.216 3.08l-1.153.462h-.288v-2.955h.51c.509 1.51 1.756 2.493 3.263 2.493 1.602 0 2.312-.765 2.312-1.795 0-2.513-6.133-2.032-6.133-5.602 0-1.728 1.776-2.664 3.733-2.664 1.327 0 2.567.395 3.09 1.048v2.42h-.51c-.422-1.484-1.34-2.903-2.815-2.903-1.34 0-1.843.765-1.843 1.577 0 2.606 6.153 1.966 6.153 5.602 0 1.92-1.562 2.843-3.706 2.843-1.394 0-2.835-.389-3.54-1.2v-2.513h.49c.509 1.596 1.662 3.213 3.397 3.213 1.08 0 2.058-.54 2.058-1.728m6.47-5.594h-1.508v-.257l2.815-1.504h.51v1.728h2.929v.951h-2.93v4.48c0 1.399.383 2.164 1.535 2.164.878 0 1.636-.455 2.232-1.154l.382.257c-.717 1.114-1.843 1.728-3.37 1.728-1.79 0-3.076-.852-3.076-2.71v-4.765h.48zm12.028-3.715l-2.158 1.048c.71.416.844 1.188.844 2.797v4.197c0 1.596.69 2.797 2.332 2.797 2.044 0 2.734-1.398 2.734-2.777V12.74c0-1.597-.241-2.362-.931-2.797l2.265-1.049h.489v8.332l.891 1.642v.237h-2.647v-1.095c-.49.726-1.179 1.399-2.956 1.399-1.642 0-3.974-.746-3.974-3.694v-5.65c0-1.596-.134-2.38-.845-2.796l2.158-1.049h.51v.496h-.712zm10.451 4.223c.711-2.685 2.554-4.223 4.531-4.223.952 0 1.743.284 2.205.818v3.001h-.51c-.382-2.15-1.555-3.253-2.875-3.253-2.286 0-3.352 2.177-3.352 4.526v2.342c0 1.596.69 2.797 2.332 2.797h.201l1.153-.462v.462h-6.06v-.198l1.153-1.663v-5.856c0-1.597-.134-2.381-.845-2.797l2.159-1.049h.489v5.093h-.113zm10.818 5.424l-1.152 1.663v.198h4.088v-.198l-1.113-1.682V6.55c0-1.616-.402-2.361-1.112-2.823L58.362.434h.489V14.59l-.007.001zm1.977-16.184c0 .746-.603 1.345-1.36 1.345-.758 0-1.361-.6-1.361-1.345 0-.746.603-1.345 1.36-1.345.758 0 1.361.6 1.361 1.345M59.3 16.103l1.153-1.663V6.55c0-1.616-.402-2.361-1.113-2.823l-1.247-1.293h.49v6.848c.73-.903 1.997-1.853 3.867-1.853 1.642 0 3.975.745 3.975 3.693v5.857l1.153 1.663v.198h-4.088v-.198l1.112-1.682v-5.59c0-1.597-.69-2.797-2.332-2.797-2.044 0-2.734 1.398-2.734 2.777v5.79l1.112 1.682v.198H59.3v-.198zm14.41-8.56c2.105 0 3.686 1.365 3.686 3.864v.396h-7.037c0 2.289 1.18 4.486 3.6 4.486 1.394 0 2.432-.534 3.15-1.774l.422.178c-.51 1.28-1.843 2.447-3.746 2.447-2.875 0-5.03-2.033-5.03-5.139 0-3.106 2.051-4.925 4.955-4.925zM70.379 11.1h4.957c-.047-2.31-1.313-3.062-2.554-3.062-1.696 0-2.693 1.577-2.403 3.062z"/><path d="M14.06 34.847c0 5.074-3.55 8.24-9.098 8.24-2.486 0-4.576-.879-5.896-2.447v1.86H0v-.33l2.079-3.073V28.48L0 25.166v-.33h8.747c6.43 0 9.2 1.886 9.2 5.963 0 2.98-2.372 5.313-6.163 6.067 5.237 0 8.283 3.006 8.283 7.336l-.007-.355zM2.345 25.98v12.567h2.534c3.816 0 6.494-1.987 6.494-5.81 0-3.338-1.977-4.928-6.14-4.928h-2.89v-1.83zm11.376 18.71c0-4.358-2.661-6.854-7.25-6.854h-4.133v9.976c1.013 1.848 2.993 2.891 5.452 2.891 3.931 0 5.958-2.356 5.958-6.014m4.209-11.678c0-4.345 3.803-6.995 8.266-6.995 4.464 0 8.28 2.98 8.28 8.805 0 5.313-4.006 8.538-8.22 8.538-4.756 0-8.327-3.019-8.327-8.558v-1.79zm14.116.306c0-4.854-2.333-8.222-5.73-8.222-3.21 0-5.237 2.867-5.237 7.36 0 4.993 2.446 8.448 6.06 8.448 2.993 0 4.907-2.943 4.907-7.586m5.49 7.652l1.878-2.753V29.3c0-2.675-.215-3.949-1.368-4.638l3.514-1.742h.798v2.267c1.383-1.58 3.234-2.573 5.77-2.573 2.662 0 6.428 1.235 6.428 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h-.01zm20.168 0l1.878-2.753V29.3c0-2.675-.215-3.949-1.368-4.638l3.513-1.742h.799v2.267c1.382-1.58 3.233-2.573 5.77-2.573 2.661 0 6.428 1.235 6.428 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h-.009zm18.749 0l1.878-2.753V22.14c0-2.675-.646-3.911-1.8-4.675l-2.016-2.14h.799v23.518l1.8 2.79v.33h-6.63v-.33h-.031zm3.207-26.766c0 1.235-.977 2.229-2.205 2.229a2.222 2.222 0 01-2.206-2.23c0-1.234.977-2.228 2.206-2.228 1.228 0 2.205.994 2.205 2.229m4.59 26.766l1.877-2.753V22.14c0-2.675-.645-3.911-1.8-4.675l-2.015-2.14h.798v11.32c1.18-1.504 3.234-3.072 6.264-3.072 2.662 0 6.429 1.235 6.429 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h.458zm23.338-14.152c3.398 0 5.958 2.254 5.958 6.395v.652h-11.383c0 3.772 1.912 7.409 5.82 7.409 2.256 0 3.93-1.031 5.096-2.93l.684.305c-.824 2.114-2.979 4.04-6.06 4.04-4.651 0-8.124-3.364-8.124-8.494 0-5.13 3.323-8.258 8.009-8.258v.88zm-5.425 6.001h7.896c-.076-3.823-2.13-5.07-4.131-5.07-2.74 0-4.373 2.606-3.765 5.07z"/><path d="M16.133 31.537c0-3.476 2.821-5.336 5.53-5.336 2.707 0 5.576 1.814 5.576 5.204 0 3.39-2.755 5.468-5.403 5.468-3.09 0-5.71-1.88-5.71-5.336h.007zm8.927.198c0-2.929-1.44-4.967-3.532-4.967-1.977 0-3.224 1.728-3.224 4.44 0 3.014 1.508 5.092 3.734 5.092 1.843 0 3.022-1.775 3.022-4.572"/><path d="M0 28.536c0-4.345 3.264-7.198 7.198-7.198 4.505 0 7.198 4.505 7.198 8.814 0 4.31-3.264 7.198-7.198 7.198-4.505 0-7.198-4.505-7.198-8.814zm12.353-1.128c0-5.47-2.353-5.815-5.815-5.815-2.353 0-5.815 2.353-5.815 7.198 0 5.47 2.353 12.353 5.815 12.353 2.353 0 5.815-2.353 5.815-12.353v-1.383z" fill-opacity=".01"/></g></g><defs><clipPath id="clip0_339_29567"><path fill="#fff" d="M0 0h85v45H0z"/></clipPath></defs></svg>'''
 
@@ -243,6 +250,18 @@ def _wrap_task_cards(html: str, include_h3: bool = False) -> str:
     return ''.join(parts)
 
 
+def build_brief_data():
+    """Read lopputyö tehtävänanto md files and convert to HTML keyed by osp_id."""
+    briefs = {}
+    for osp_id, fname in LOPPUTYO_BRIEFS.items():
+        path = f"{BASE}/{fname}"
+        if os.path.exists(path):
+            briefs[osp_id] = to_html(read_file(path))
+        else:
+            briefs[osp_id] = ''
+    return briefs
+
+
 def build_lesson_data():
     data = {}
     for osp in OSP_BLOCKS:
@@ -280,7 +299,7 @@ def esc_js(s):
     return s.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
 
 
-def generate_html(data):
+def generate_html(data, briefs):
     all_ids = [lid for osp in OSP_BLOCKS for lid, _, _ in osp['lessons']]
 
     # Build OSP accordion cards for home page
@@ -288,6 +307,14 @@ def generate_html(data):
     for osp in OSP_BLOCKS:
         lessons_in_osp = osp['lessons']
         lessons_html = ''
+        # Lopputyön tehtävänanto button at the top of each OSP (if brief exists)
+        if briefs.get(osp['id']):
+            lessons_html += f'''      <button class="acc-lesson acc-brief" onclick="loadBrief('{osp['id']}')">
+        <span class="acc-l-num">★</span>
+        <span class="acc-l-title">Lopputyön tehtävänanto</span>
+        <span class="acc-l-icon">📄</span>
+        <span class="acc-l-check"></span>
+      </button>'''
         for idx, (lid, short_title, btype) in enumerate(lessons_in_osp, 1):
             global_idx = all_ids.index(lid) + 1
             icon = '★' if btype == 'assessment' else '📖'
@@ -337,6 +364,23 @@ def generate_html(data):
             f'  }}'
         )
     js_data = 'const L={' + ',\n'.join(js_items) + '};'
+
+    # Briefs JS data
+    osp_titles = {o['id']: o['title'] for o in OSP_BLOCKS}
+    osp_icons  = {o['id']: o['icon']  for o in OSP_BLOCKS}
+    osp_colors = {o['id']: o['color'] for o in OSP_BLOCKS}
+    brief_items = []
+    for osp_id, html in briefs.items():
+        if not html:
+            continue
+        brief_items.append(
+            f'  "{osp_id}": {{\n'
+            f'    ospId:"{osp_id}",ospTitle:`{esc_js(osp_titles.get(osp_id, ""))}`,\n'
+            f'    ospIcon:"{osp_icons.get(osp_id, "")}",ospColor:"{osp_colors.get(osp_id, "")}",\n'
+            f'    content:`{esc_js(html)}`,\n'
+            f'  }}'
+        )
+    js_briefs = 'const BRIEFS={' + ',\n'.join(brief_items) + '};'
 
     osp_meta_js = json.dumps([
         {"id": o["id"], "ids": [lid for lid, _, _ in o["lessons"]]}
@@ -1312,9 +1356,38 @@ body{{
 
 <script>
 {js_data}
+{js_briefs}
 const ALLIDS={json.dumps(all_ids)};
 const OSPM={osp_meta_js};
 let cid=null,ctab='selfstudy';
+
+function loadBrief(ospId,pushState){{
+  const b=BRIEFS[ospId];if(!b)return;
+  cid='brief-'+ospId;ctab='brief';
+  document.getElementById('home').style.display='none';
+  document.getElementById('lesson').classList.add('active');
+  if(pushState!==false){{ history.pushState(null,'','#brief-'+ospId); }}
+  document.getElementById('lesson-header').innerHTML=`
+    <div class="breadcrumb">
+      <span class="bc-link" onclick="showHome()">${{b.ospIcon}} ${{b.ospTitle}}</span>
+      <span>›</span>
+      <span>Lopputyön tehtävänanto</span>
+    </div>
+    <div class="lesson-title">★ Lopputyön tehtävänanto</div>
+    <div class="lesson-badges">
+      <span class="badge badge-osp">${{b.ospTitle}}</span>
+      <span class="badge badge-assess">★ Arviointi</span>
+    </div>`;
+  document.getElementById('lesson-tabs').innerHTML='';
+  document.getElementById('lesson-panels').innerHTML=
+    `<div class="panel active" data-tab="brief">${{b.content}}</div>`;
+  document.getElementById('lesson-footer').innerHTML=`
+    <div class="nav-buttons">
+      <button class="btn" onclick="showHome()">← Takaisin etusivulle</button>
+    </div>`;
+  window.scrollTo(0,0);
+  mermaid.run({{querySelector:'.panel.active .mermaid'}});
+}}
 
 function getDone(){{try{{return JSON.parse(localStorage.getItem('bcai-new')||'[]')}}catch{{return[]}}}}
 function setDone(a){{try{{localStorage.setItem('bcai-new',JSON.stringify(a))}}catch{{}}}}
@@ -1450,6 +1523,12 @@ function nav(dir){{
 function routeFromHash(pushState){{
   const h=location.hash.replace('#','');
   if(!h){{ showHome(false); return; }}
+  // Brief route: #brief-osp1, #brief-osp2, #brief-osp3
+  if(h.startsWith('brief-')){{
+    const ospId=h.slice(6);
+    if(BRIEFS[ospId]){{ loadBrief(ospId,false); return; }}
+    showHome(false); return;
+  }}
   const parts=h.split('/');
   const lid=parts[0],tab=parts[1]||'selfstudy';
   if(L[lid]){{ loadLesson(lid,tab,pushState===true?true:false); }}
@@ -1471,8 +1550,11 @@ if __name__ == '__main__':
     print("Reading lesson content...")
     data = build_lesson_data()
     print(f"Loaded {len(data)} lessons")
+    print("Reading lopputyö briefs...")
+    briefs = build_brief_data()
+    print(f"Loaded {sum(1 for v in briefs.values() if v)} briefs")
     print("Generating HTML...")
-    out = generate_html(data)
+    out = generate_html(data, briefs)
     with open(OUT, 'w', encoding='utf-8') as f:
         f.write(out)
     size_kb = os.path.getsize(OUT) // 1024
