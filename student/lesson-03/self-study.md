@@ -66,8 +66,8 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 <figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille (vihreä = todennäköinen, punainen = epätodennäköinen), valitsee todennäköisimmän, syöttää sen takaisin ja laskee jakauman uudelleen seuraavalle sanalle.</figcaption></figure>
 <style>
 .l03-prompt{font-family:var(--font-mono);font-size:15px;color:#EAEEF8}
-.l03-w1{color:oklch(0.72 0.15 200);font-weight:500;opacity:0;animation:l03w1 7s cubic-bezier(.45,0,.15,1) infinite}
-.l03-w2{color:oklch(0.78 0.13 90);font-weight:500;opacity:0;animation:l03w2 7s cubic-bezier(.45,0,.15,1) infinite}
+.l03-w1{color:oklch(0.72 0.15 200);font-weight:500;opacity:0;animation:l03w1 9s cubic-bezier(.45,0,.15,1) infinite}
+.l03-w2{color:oklch(0.78 0.13 90);font-weight:500;opacity:0;animation:l03w2 9s cubic-bezier(.45,0,.15,1) infinite}
 @keyframes l03w1{0%,40%{opacity:0}48%,100%{opacity:1}}
 @keyframes l03w2{0%,82%{opacity:0}90%,100%{opacity:1}}
 .l03-car{color:#B9C2DA;animation:l03blink 1.1s steps(1) infinite}
@@ -80,13 +80,13 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 .l03-tr{flex:1;height:18px;background:#11182A;border:1.5px solid #3A4560;border-radius:5px;overflow:hidden}
 .l03-top .l03-tr{border-color:#FFFFFF}
 .l03-f{display:block;height:100%;width:0;background:var(--c)}
-.l03-r1 .l03-f{animation:l03g1 7s cubic-bezier(.45,0,.15,1) infinite}
-.l03-r2 .l03-f{animation:l03g2 7s cubic-bezier(.45,0,.15,1) infinite}
+.l03-r1 .l03-f{animation:l03g1 9s cubic-bezier(.45,0,.15,1) infinite}
+.l03-r2 .l03-f{animation:l03g2 9s cubic-bezier(.45,0,.15,1) infinite}
 @keyframes l03g1{0%{width:0}28%{width:var(--p)}46%{width:var(--p)}54%,100%{width:0}}
 @keyframes l03g2{0%,54%{width:0}74%{width:var(--p)}88%{width:var(--p)}100%{width:0}}
 .l03-p{width:34px;color:#EAEEF8}
-.l03-r1{animation:l03s1 7s steps(1) infinite}
-.l03-r2{animation:l03s2 7s steps(1) infinite}
+.l03-r1{animation:l03s1 9s steps(1) infinite}
+.l03-r2{animation:l03s2 9s steps(1) infinite}
 @keyframes l03s1{0%,53%{visibility:visible}54%,100%{visibility:hidden}}
 @keyframes l03s2{0%,53%{visibility:hidden}54%,100%{visibility:visible;position:static}}
 @media (prefers-reduced-motion:reduce){.l03-w1,.l03-r1 .l03-f{animation:none}.l03-w1{opacity:1}.l03-r1 .l03-f{width:var(--p)}.l03-r2,.l03-w2{display:none}}

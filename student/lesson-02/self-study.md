@@ -89,10 +89,10 @@ Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se
     <div class="l02-step l02-here"><span class="l02-dot"></span>Generatiivinen<span class="l02-mark">▲<br>OLEMME TÄSSÄ</span></div>
     <div class="l02-step l02-fut"><span class="l02-dot"></span>AGI</div>
     <div class="l02-step l02-fut"><span class="l02-dot"></span>ASI</div>
-    <span class="l02-line"><span class="l02-linelbl">raja: "oikea äly"?</span></span>
+    <span class="l02-line"><span class="l02-lbl1">raja: "oikea äly"?</span><span class="l02-lbl2">raja: "superäly"?</span></span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista — siinä olemme nyt. Raja "oikeaan älyyn" (AGI) ei ole kiinteä: se siirtyy eteenpäin aina kun tekoäly oppii jotain uutta ("maalitolpat liikkuvat").</figcaption></figure>
+<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista — siinä olemme nyt. Raja "oikeaan älyyn" (AGI) ja edelleen "superälyyn" (ASI) ei ole kiinteä: se siirtyy eteenpäin aina kun tekoäly oppii uutta.</figcaption></figure>
 <style>
 .l02-track{position:relative;display:flex;align-items:center}
 .l02-step{position:relative;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;padding:10px 16px;border:1.5px solid #3A4560;border-radius:8px;background:#1E2740;margin:0 18px;display:flex;align-items:center;gap:8px}
@@ -103,10 +103,13 @@ Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se
 @keyframes l02pulse{0%,100%{opacity:.65}50%{opacity:1}}
 .l02-fut{color:#7A839E;border-style:dashed;background:transparent}
 .l02-fut .l02-dot{background:#7A839E}
-.l02-line{position:absolute;top:-14px;bottom:-14px;width:0;border-left:3px dashed oklch(0.66 0.13 208);left:50%;animation:l02move 7s cubic-bezier(.45,0,.15,1) infinite}
-.l02-linelbl{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;color:oklch(0.66 0.13 208);white-space:nowrap;background:#0B0F1A;padding:0 5px}
-@keyframes l02move{0%,20%{left:50%}42%,62%{left:72%}82%,100%{left:90%}}
-@media (prefers-reduced-motion:reduce){.l02-line,.l02-mark{animation:none}.l02-line{left:72%}}
+.l02-line{position:absolute;top:-14px;bottom:-14px;width:0;border-left:3px dashed oklch(0.66 0.13 208);left:50%;animation:l02move 8s cubic-bezier(.45,0,.15,1) infinite}
+.l02-lbl1,.l02-lbl2{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;color:oklch(0.66 0.13 208);white-space:nowrap;background:#0B0F1A;padding:0 5px}
+.l02-lbl1{animation:l02l1 8s steps(1) infinite}.l02-lbl2{animation:l02l2 8s steps(1) infinite}
+@keyframes l02move{0%,18%{left:50%}40%,60%{left:72%}80%,100%{left:90%}}
+@keyframes l02l1{0%,68%{opacity:1}69%,100%{opacity:0}}
+@keyframes l02l2{0%,68%{opacity:0}69%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.l02-line,.l02-mark,.l02-lbl1,.l02-lbl2{animation:none}.l02-line{left:90%}.l02-lbl1{opacity:0}.l02-lbl2{opacity:1}}
 </style>
 
 ## Yhteenveto

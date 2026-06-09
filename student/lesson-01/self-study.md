@@ -72,7 +72,7 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
     <div class="l01-out l01-flag">⚠ hälytä</div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia yhtä aikaa ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia ja antaa todennäköisyyden — kun epäilys ylittää kynnyksen, se hälyttää.</figcaption></figure>
 <style>
 .l01-col{flex:1;max-width:248px;border:1.5px solid #3A4560;border-radius:10px;background:#11182A;padding:15px;display:flex;flex-direction:column;gap:10px}
 .l01-dim{opacity:.78}
@@ -85,17 +85,15 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 @keyframes l01miss{0%,40%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}
 .l01-sigs{display:flex;flex-wrap:wrap;gap:6px}
 .l01-sig{font-family:var(--font-mono);font-size:11px;color:#7A839E;border:1.5px solid #3A4560;border-radius:999px;padding:3px 9px}
-.l01-sig.s1{animation:l01sig 7s ease-out infinite}
-.l01-sig.s2{animation:l01sig 7s ease-out infinite;animation-delay:.3s}
-.l01-sig.s3{animation:l01sig 7s ease-out infinite;animation-delay:.6s}
-.l01-sig.s4{animation:l01sig 7s ease-out infinite;animation-delay:.9s}
+.l01-sig.s1{animation:l01sig 7s ease-out infinite}.l01-sig.s2{animation:l01sig 7s ease-out infinite;animation-delay:.3s}.l01-sig.s3{animation:l01sig 7s ease-out infinite;animation-delay:.6s}.l01-sig.s4{animation:l01sig 7s ease-out infinite;animation-delay:.9s}
 @keyframes l01sig{0%{opacity:.5}22%,90%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.5}}
 .l01-meter{position:relative;height:22px;border:1.5px solid #3A4560;border-radius:6px;overflow:hidden;background:#0E1320}
-.l01-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 7s cubic-bezier(.45,0,.15,1) infinite}
+.l01-mfill{position:absolute;inset:0;width:0;background:oklch(0.66 0.15 264);animation:l01fill 7s cubic-bezier(.45,0,.15,1) infinite}
+@keyframes l01fill{0%,28%{width:4%;background:oklch(0.66 0.15 264)}46%{background:oklch(0.66 0.15 264)}48%{background:#F08A78}55%{width:97%;background:#F08A78}90%{width:97%;background:#F08A78}100%{width:4%;background:oklch(0.66 0.15 264)}}
 .l01-mlbl{position:absolute;right:8px;top:3px;font-family:var(--font-mono);font-size:13px;color:#FFFFFF}
-@keyframes l01fill{0%,28%{width:4%}55%{width:97%}90%{width:97%}100%{width:4%}}
-.l01-flag{color:oklch(0.66 0.15 305)}
-@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill{animation:none}.l01-miss{opacity:1}.l01-sig{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%}}
+.l01-flag{color:#7A839E;animation:l01flag 7s steps(1) infinite}
+@keyframes l01flag{0%,47%{color:#7A839E}48%,90%{color:#F08A78}100%{color:#7A839E}}
+@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill,.l01-flag{animation:none}.l01-miss{opacity:1}.l01-sig{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%;background:#F08A78}.l01-flag{color:#F08A78}}
 </style>
 
 ## Konkreettisia esimerkkejä arjesta

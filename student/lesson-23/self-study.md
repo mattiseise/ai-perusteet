@@ -44,32 +44,40 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: ajattele → toimi → havaitse, kierros kerrallaan</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:18px 24px">
+<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: jos tieto ei riitä, agentti yrittää uudelleen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:14px 22px">
   <div class="l23-tbl">
     <div class="l23-head"><span class="h-aj">AJATTELE</span><span class="h-to">TOIMI</span><span class="h-ha">HAVAITSE</span></div>
-    <div class="l23-row"><span class="c cA r1"><i>tarvitsen hinnan</i></span><span class="c cB r1">hae hinta</span><span class="c cC r1">hinta: 45 €</span></div>
-    <div class="l23-row"><span class="c cA r2"><i>tieto riittää</i></span><span class="c cB r2">vastaa: 45 €</span><span class="c cC r2 done">✓ valmis</span></div>
+    <div class="l23-row r1"><span class="c cA"><i>tarvitsen hinnan</i></span><span class="c cB">hae nimellä</span><span class="c cC miss">ei löytynyt ✗</span></div>
+    <div class="l23-fb">↻ tieto ei riittänyt — tarvitaan lisää</div>
+    <div class="l23-row r2"><span class="c cA"><i>kokeile tuotekoodilla</i></span><span class="c cB">hae koodilla</span><span class="c cC">hinta: 45 €</span></div>
+    <div class="l23-row r3"><span class="c cA"><i>tieto riittää</i></span><span class="c cB">vastaa: 45 €</span><span class="c cC done">✓ valmis</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">ReAct vuorottelee ajattelua ja toimintaa: agentti päättelee mitä tarvitsee, toimii työkalulla ja havaitsee tuloksen — ja päättelee taas. Kierrokset kertyvät, kunnes tehtävä valmistuu.</figcaption></figure>
+<figcaption class="ai-demo__cap">ReAct on palautesilmukka: agentti ajattelee, toimii ja havaitsee tuloksen. Jos tieto ei riitä — esimerkiksi haku ei tuota tulosta — se päättelee uuden tavan ja yrittää uudelleen, kunnes tavoite täyttyy.</figcaption></figure>
 <style>
-.l23-tbl{display:flex;flex-direction:column;gap:8px;width:100%;max-width:480px}
+.l23-tbl{display:flex;flex-direction:column;gap:7px;width:100%;max-width:500px}
 .l23-head,.l23-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
 .l23-head span{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-align:center;padding-bottom:4px;border-bottom:2px solid}
 .h-aj{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}
 .h-to{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
 .h-ha{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}
-.l23-row .c{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:9px 8px;text-align:center;opacity:0}
+.l23-row .c{font-family:var(--font-mono);font-size:12.5px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:9px 7px;text-align:center;opacity:0}
 .l23-row .c i{color:#B9C2DA;font-style:italic}
-.r1{animation:l23in 7s ease-out infinite}
-.r2{animation:l23in2 7s ease-out infinite}
-.cA.r1{animation-delay:.9s}.cB.r1{animation-delay:1.2s}.cC.r1{animation-delay:1.5s}
-.cA.r2{animation-delay:3.4s}.cB.r2{animation-delay:3.7s}.cC.r2{animation-delay:4.0s}
-@keyframes l23in{0%{opacity:0;transform:translateY(8px)}14%,90%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-@keyframes l23in2{0%{opacity:0;transform:translateY(8px)}20%,90%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.miss{color:#F08A78!important;border-color:#F08A78!important}
 .done{color:#7FD0A8!important;border-color:#7FD0A8!important;font-weight:500}
-@media (prefers-reduced-motion:reduce){.r1,.r2{animation:none;opacity:1!important;transform:none}}
+.l23-fb{font-family:var(--font-mono);font-size:11px;color:#F08A78;text-align:center;opacity:0;animation:l23fb 10s ease-out infinite}
+@keyframes l23fb{0%,30%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
+.r1 .c{animation:l23r1 10s ease-out infinite}
+.r2 .c{animation:l23r2 10s ease-out infinite}
+.r3 .c{animation:l23r3 10s ease-out infinite}
+.r1 .cA{animation-delay:.6s}.r1 .cB{animation-delay:.9s}.r1 .cC{animation-delay:1.2s}
+.r2 .cA{animation-delay:4.0s}.r2 .cB{animation-delay:4.3s}.r2 .cC{animation-delay:4.6s}
+.r3 .cA{animation-delay:6.2s}.r3 .cB{animation-delay:6.5s}.r3 .cC{animation-delay:6.8s}
+@keyframes l23r1{0%{opacity:0;transform:translateY(6px)}10%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes l23r2{0%{opacity:0;transform:translateY(6px)}14%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes l23r3{0%{opacity:0;transform:translateY(6px)}18%,92%{opacity:1;transform:none}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.r1 .c,.r2 .c,.r3 .c,.l23-fb{animation:none;opacity:1!important;transform:none}}
 </style>
 
 ## Ketjuajattelu: jaa ongelma osiin

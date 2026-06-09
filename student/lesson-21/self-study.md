@@ -21,35 +21,39 @@ Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agent
 <figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee kulloinkin tarvitsemansa</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:24px;padding:16px 22px">
   <div class="l21-store"><div class="l21-h">PITKÄKESTOINEN MUISTI</div>
-    <div class="l21-grid"><span>tilaus #12</span><span class="l21-r1">asiakkaan toive</span><span class="l21-r2">hinnasto</span><span>aiempi chat</span><span>ohje</span><span>palaute</span></div></div>
+    <div class="l21-grid"><span>tilaus #12</span><span class="g g1">asiakkaan toive</span><span class="g g2">hinnasto</span><span>aiempi chat</span><span class="g g3">ohje</span><span class="g g4">palaute</span></div></div>
   <div class="l21-arr">haku →</div>
   <div class="l21-work"><div class="l21-h">TYÖMUISTI</div>
-    <div class="l21-slots"><span class="l21-old">nykyinen tehtävä</span><span class="l21-in"><span class="l21-i1">asiakkaan toive</span><span class="l21-i2">hinnasto</span></span></div>
+    <div class="l21-slots"><span class="l21-old">nykyinen tehtävä</span>
+      <span class="l21-in"><span class="i i1">asiakkaan toive</span><span class="i i2">hinnasto</span><span class="i i3">ohje</span><span class="i i4">palaute</span></span></div>
     <div class="l21-cap">rajallinen tila</div></div>
 </div>
-<figcaption class="ai-demo__cap">Agentin työmuisti on pieni eikä pidä kaikkea mielessä. Se hakee pitkäkestoisesta muistista kulloinkin sen tiedon, jota tehtävä juuri nyt vaatii — eri vaiheessa eri palasen.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentin työmuisti on pieni eikä pidä kaikkea mielessä. Se hakee pitkäkestoisesta muistista kulloinkin sen palasen, jota tehtävä juuri nyt vaatii — eri vaiheessa eri tiedon: toiveen, hinnaston, ohjeen tai palautteen.</figcaption></figure>
 <style>
 .l21-store,.l21-work{border:1.5px solid #3A4560;border-radius:9px;background:#11182A;padding:12px}
 .l21-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:#B9C2DA;margin-bottom:9px}
-.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;width:212px}
+.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;width:220px}
 .l21-grid span{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;background:#1E2740;border:1.5px solid #3A4560;border-radius:6px;padding:6px;text-align:center}
-.l21-r1{animation:l21r1 10s ease-out infinite}
-.l21-r2{animation:l21r2 10s ease-out infinite}
-@keyframes l21r1{0%,6%{color:#B9C2DA;border-color:#3A4560}16%,46%{color:#FFFFFF;border-color:oklch(0.66 0.15 264);background:#1b2a4d}56%,100%{color:#B9C2DA;border-color:#3A4560}}
-@keyframes l21r2{0%,52%{color:#B9C2DA;border-color:#3A4560}62%,92%{color:#FFFFFF;border-color:oklch(0.66 0.15 305);background:#241b4d}100%{color:#B9C2DA}}
-.l21-arr{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.15 264);animation:l21arr 10s ease-out infinite}
-@keyframes l21arr{0%,8%{opacity:.25}20%,44%{opacity:1}50%{opacity:.25}62%,90%{opacity:1}100%{opacity:.25}}
+.g1{animation:l21g1 16s ease-out infinite}.g2{animation:l21g2 16s ease-out infinite}.g3{animation:l21g3 16s ease-out infinite}.g4{animation:l21g4 16s ease-out infinite}
+@keyframes l21g1{0%,3%{color:#B9C2DA;border-color:#3A4560}9%,22%{color:#FFF;border-color:oklch(0.66 0.15 264);background:#1b2a4d}28%,100%{color:#B9C2DA;border-color:#3A4560}}
+@keyframes l21g2{0%,28%{color:#B9C2DA;border-color:#3A4560}34%,47%{color:#FFF;border-color:oklch(0.66 0.15 305);background:#241b4d}53%,100%{color:#B9C2DA}}
+@keyframes l21g3{0%,53%{color:#B9C2DA;border-color:#3A4560}59%,72%{color:#FFF;border-color:oklch(0.66 0.13 208);background:#10303a}78%,100%{color:#B9C2DA}}
+@keyframes l21g4{0%,78%{color:#B9C2DA;border-color:#3A4560}84%,97%{color:#FFF;border-color:#7FD0A8;background:#143a2c}100%{color:#B9C2DA}}
+.l21-arr{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.15 264)}
 .l21-slots{display:flex;flex-direction:column;gap:6px;width:130px}
-.l21-slots>span{font-family:var(--font-mono);font-size:11px;border-radius:6px;padding:7px;text-align:center}
-.l21-old{color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560}
-.l21-in{position:relative;height:30px;border-radius:6px}
-.l21-i1,.l21-i2{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:6px;color:#0B0F1A;opacity:0}
-.l21-i1{background:oklch(0.66 0.15 264);animation:l21i1 10s ease-out infinite}
-.l21-i2{background:oklch(0.66 0.15 305);animation:l21i2 10s ease-out infinite}
-@keyframes l21i1{0%,16%{opacity:0;transform:translateX(-10px)}24%,46%{opacity:1;transform:translateX(0)}52%,100%{opacity:0}}
-@keyframes l21i2{0%,58%{opacity:0;transform:translateX(-10px)}66%,92%{opacity:1;transform:translateX(0)}100%{opacity:0}}
+.l21-old{font-family:var(--font-mono);font-size:11px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:6px;padding:7px;text-align:center}
+.l21-in{position:relative;height:30px}
+.i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:6px;font-family:var(--font-mono);font-size:11px;color:#0B0F1A;opacity:0}
+.i1{background:oklch(0.66 0.15 264);animation:l21i1 16s ease-out infinite}
+.i2{background:oklch(0.66 0.15 305);animation:l21i2 16s ease-out infinite}
+.i3{background:oklch(0.66 0.13 208);animation:l21i3 16s ease-out infinite}
+.i4{background:#7FD0A8;animation:l21i4 16s ease-out infinite}
+@keyframes l21i1{0%,9%{opacity:0}13%,24%{opacity:1}28%,100%{opacity:0}}
+@keyframes l21i2{0%,34%{opacity:0}38%,49%{opacity:1}53%,100%{opacity:0}}
+@keyframes l21i3{0%,59%{opacity:0}63%,74%{opacity:1}78%,100%{opacity:0}}
+@keyframes l21i4{0%,84%{opacity:0}88%,99%{opacity:1}100%{opacity:0}}
 .l21-cap{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;margin-top:8px;text-align:center}
-@media (prefers-reduced-motion:reduce){.l21-r1,.l21-r2,.l21-arr,.l21-i1,.l21-i2{animation:none}.l21-r1{color:#FFFFFF;border-color:oklch(0.66 0.15 264)}.l21-i1{opacity:1}}
+@media (prefers-reduced-motion:reduce){.g1,.g2,.g3,.g4,.i1,.i2,.i3,.i4{animation:none}.g1{color:#FFF;border-color:oklch(0.66 0.15 264)}.i1{opacity:1}}
 </style>
 
 

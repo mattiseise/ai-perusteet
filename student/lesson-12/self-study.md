@@ -8,32 +8,37 @@ Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vas
 
 **Konteksti** tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan *sinun* kysymyksestäsi, *sinun* tavoitteistasi ja *sinun* käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö, eri määrä kontekstia</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:18px 26px">
-  <div class="l12-ctx"><span class="l12-cl">lisätty konteksti:</span><span class="l12-b b1">aihe</span><span class="l12-b b2">pituus</span><span class="l12-b b3">yleisö</span><span class="l12-b b4">rakenne</span></div>
-  <div class="l12-ans">
-    <div class="l12-vague">"Auta esitelmän kanssa." → "Toki! Mistä aiheesta haluat tehdä esitelmän?" <span class="l12-tag">epätarkka</span></div>
-    <div class="l12-rich">"Tee 5 min esitelmän runko biologian tunnille fotosynteesistä, yleisönä luokkakaverit, selkeä rakenne ja yksi arkiesimerkki." → "1) Mitä fotosynteesi on  2) Miksi se on tärkeä  3) Vaiheet pähkinänkuoressa  4) Arkiesimerkki: ikkunalla kasvava basilika  5) Yhteenveto" <span class="l12-tag l12-tg">osuva</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// vähän vai paljon kontekstia</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:16px 22px">
+  <div class="l12-cards">
+    <div class="l12-card l12-poor">
+      <div class="l12-cl">ilman kontekstia</div>
+      <div class="l12-q"><span class="e1">"Auta esitelmän kanssa."</span><span class="e2">"Korjaa tämä viesti."</span></div>
+      <div class="l12-a"><span class="e1">"Toki! Mistä aiheesta?"</span><span class="e2">"Selvä, lähetä viesti niin katson."</span> <span class="l12-tag">epätarkka</span></div>
+    </div>
+    <div class="l12-card l12-good">
+      <div class="l12-cl">kontekstin kanssa</div>
+      <div class="l12-q"><span class="e1">"Tee 5 min esitelmän runko biologiaan fotosynteesistä, yleisö luokka, selkeä rakenne + arkiesimerkki."</span><span class="e2">"Korjaa tämä sähköposti opettajalle kohteliaaksi ja lyhyeksi: 'en tuu kokeeseen'."</span></div>
+      <div class="l12-a"><span class="e1">"1) Mitä fotosynteesi on  2) Miksi tärkeä  3) Vaiheet  4) Esimerkki: basilika ikkunalla  5) Yhteenveto"</span><span class="e2">"Hei! Valitettavasti en pääse kokeeseen. Voisinko sopia uuden ajan? Ystävällisin terveisin."</span> <span class="l12-tag l12-tg">osuva</span></div>
+    </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Sama pyyntö, eri tulos. Vastaus ei terävöidy mallin "mielialasta" vaan kontekstista: kun kerrot aiheen, pituuden, yleisön ja halutun rakenteen, vasta silloin saat käyttökelpoisen vastauksen.</figcaption></figure>
+<figcaption class="ai-demo__cap">Sama tehtävä, eri tulos — kummassakin esimerkissä. Vastaus ei terävöidy mallin "mielialasta" vaan kontekstista: kun kerrot tilanteen, tavoitteen ja rajat, saat käyttökelpoisen vastauksen.</figcaption></figure>
 <style>
-.l12-ctx{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.l12-cl{font-family:var(--font-mono);font-size:12px;color:#B9C2DA}
-.l12-b{font-family:var(--font-mono);font-size:12px;color:#7A839E;border:1.5px solid #3A4560;border-radius:999px;padding:3px 11px;opacity:.5}
-.l12-b.b1{animation:l12b 10s ease-out infinite}
-.l12-b.b2{animation:l12b 10s ease-out infinite;animation-delay:.6s}
-.l12-b.b3{animation:l12b 10s ease-out infinite;animation-delay:1.2s}
-.l12-b.b4{animation:l12b 10s ease-out infinite;animation-delay:1.8s}
-@keyframes l12b{0%{opacity:.5}22%,92%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.5}}
-.l12-ans{font-family:var(--font-mono);font-size:13px;line-height:1.6;position:relative;min-height:96px}
-.l12-vague{color:#7A839E;animation:l12v 10s ease-out infinite}
-@keyframes l12v{0%,40%{opacity:1}50%,100%{opacity:0}}
-.l12-rich{position:absolute;top:0;color:#EAEEF8;opacity:0;animation:l12r 10s ease-out infinite}
-@keyframes l12r{0%,48%{opacity:0}60%,93%{opacity:1}100%{opacity:0}}
-.l12-tag{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#B9C2DA;border:1.5px solid #3A4560;border-radius:999px;padding:1px 8px;margin-left:6px;white-space:nowrap}
+.l12-cards{display:flex;flex-direction:column;gap:10px}
+.l12-card{border:1.5px solid #3A4560;border-radius:9px;background:#11182A;padding:11px 13px;display:flex;flex-direction:column;gap:6px}
+.l12-good{border-color:#2f3b63}
+.l12-cl{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#B9C2DA}
+.l12-q{font-family:var(--font-mono);font-size:12px;color:#EAEEF8;line-height:1.45;position:relative;min-height:32px}
+.l12-a{font-family:var(--font-mono);font-size:12px;line-height:1.45;position:relative;min-height:46px}
+.l12-poor .l12-a{color:#7A839E}.l12-good .l12-a{color:#EAEEF8}
+.l12-q .e1,.l12-q .e2,.l12-a .e1,.l12-a .e2{position:absolute;left:0;top:0;right:60px}
+.e1{animation:l12e1 16s steps(1) infinite}.e2{animation:l12e2 16s steps(1) infinite}
+@keyframes l12e1{0%,48%{opacity:1}50%,100%{opacity:0}}
+@keyframes l12e2{0%,48%{opacity:0}50%,100%{opacity:1}}
+.l12-tag{position:absolute;right:0;top:0;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#B9C2DA;border:1.5px solid #3A4560;border-radius:999px;padding:1px 8px}
 .l12-tg{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
-@media (prefers-reduced-motion:reduce){.l12-b,.l12-vague,.l12-rich{animation:none}.l12-b{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l12-vague{opacity:0}.l12-rich{opacity:1}}
+@media (prefers-reduced-motion:reduce){.e1{}.e2{display:none}.e1{animation:none;opacity:1}}
 </style>
 
 ## Konteksti: miksi se on tärkeää?
