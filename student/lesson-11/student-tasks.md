@@ -1,78 +1,74 @@
 # Opiskelutehtävät — Tietosuoja ja työkaluvalinta
 
-> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on tärkeä. Tunnilla 10 vertailit työkaluja niiden vahvuuksien kannalta. Nyt katsot kentän laajempana: hinta, tietosuoja, palvelimien sijainti, GDPR. Ammatillinen valinta ei perustu pelkkään tekniseen paremmuuteen.
+**📌 Tähän tuntiin on vain yksi tehtävä.** Se on tärkeä, koska tekoälytyökalun valinta ei perustu pelkkään tekniseen laatuun. Tunnilla 10 vertailit työkaluja niiden vahvuuksien perusteella. Nyt tarkastelet valintaa organisaation näkökulmasta: huomioon pitää ottaa myös **hinta**, **tietosuoja**, **palvelimien sijainti**, **GDPR** ja käyttötarve.
 
-## Tehtävä 11.1 — Tee perusteltu suositus 🟢 SUOSITELTU
+## Tehtävä 11.1 — Tee perusteltu suositus (SUOSITELTU)
 
-**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta — ottaen huomioon hinnan, tietosuojan ja käyttötarpeen. Tämä on ammattilaisen ajattelutapa.
+**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on ammattilaisen ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
 
-### Vaiheet
+### Tee näin
 
 #### Vaihe 1 — Valitse organisaatio
 
-Valitse yksi seuraavista skenaarioista:
+Valitse yksi seuraavista organisaatioista. Kuvittele, että sinua pyydetään suosittelemaan sille sopivaa tekoälytyökalua.
 
-- **Pieni IT-yritys** (10 henkeä, ohjelmistokehitystä, pieni budjetti, paljon koodaustehtäviä)
-- **Ammatillinen oppilaitos** (opettajat haluavat hyödyntää tekoälyä, opiskelijoiden tiedot suojattava, GDPR pakollinen)
-- **Terveysasema** (potilastietoja käsitellään päivittäin, hyvin herkkä tietosuoja, henkilöstö ei ole tekoälyasiantuntijoita)
-- **Kunnan tietohallinto** (julkinen organisaatio, julkisia ja sisäisiä asiakirjoja, useita kymmeniä työntekijöitä, kohtuullinen budjetti)
-- **Pelistudio** (15 hengen tiimi, koodausta ja sisällöntuotantoa, kansainvälisiä asiakkaita, ideointi tärkeää)
+- **Pieni IT-yritys:** 10 työntekijää, ohjelmistokehitystä, pieni budjetti ja paljon koodaustehtäviä.
+- **Ammatillinen oppilaitos:** opettajat haluavat hyödyntää tekoälyä, opiskelijoiden tiedot pitää suojata ja GDPR:n noudattaminen on välttämätöntä.
+- **Terveysasema:** potilastietoja käsitellään päivittäin, tietosuoja on erittäin kriittinen ja henkilöstö ei ole tekoälyasiantuntijoita.
+- **Kunnan tietohallinto:** julkinen organisaatio, jossa käsitellään julkisia ja sisäisiä asiakirjoja. Työntekijöitä on useita kymmeniä ja budjetti on kohtuullinen.
+- **Pelistudio:** 15 hengen tiimi, jossa tehdään koodausta ja sisällöntuotantoa. Kansainväliset asiakkaat ja ideointi ovat tärkeitä.
+
+**Tallenna:** Kirjoita valitsemasi organisaatio muistiin yhdellä lauseella.
 
 #### Vaihe 2 — Kartoita käyttötarve
 
-Kirjoita lyhyesti:
+Kirjoita lyhyt kuvaus siitä, miten valitsemasi organisaatio käyttäisi tekoälyä. Vastaa ainakin seuraaviin kohtiin:
 
-- **Käyttäjät:** Ketkä organisaatiossa käyttävät tekoälyä? (esim. opettajat, lääkärit, koodarit)
-- **Tehtävät:** 3–4 tyypillistä tehtävää, joissa tekoäly auttaisi
-- **Käsiteltävä tieto:** Sisältääkö tehtäviin liittyvä tieto henkilötietoja tai liikesalaisuuksia?
-- **Budjetti:** Suuri / kohtuullinen / pieni
+- **Käyttäjät:** Ketkä organisaatiossa käyttäisivät tekoälyä? Esimerkiksi opettajat, lääkärit, koodarit, asiakaspalvelijat tai hallinnon työntekijät.
+- **Tehtävät:** Kirjoita 3–4 tyypillistä tehtävää, joissa tekoäly voisi auttaa.
+- **Käsiteltävä tieto:** Sisältääkö tehtäviin liittyvä tieto henkilötietoja, potilastietoja, opiskelijatietoja, liikesalaisuuksia tai muuta arkaluonteista tietoa?
+- **Budjetti:** Arvioi, onko budjetti suuri, kohtuullinen vai pieni.
 
-#### Vaihe 3 — Vertaa malleja päätöstaulukolla
+#### Vaihe 3 — Vertaa vaihtoehtoja päätöstaulukolla
 
-Käy alla oleva taulukko läpi **valitun organisaation näkökulmasta**. Anna kullekin mallille arvio (✓ sopii, ⚠️ rajoituksin, ✗ ei sovi) — ja merkitse perustelu yhdellä lauseella.
+Täytä alla oleva taulukko **valitsemasi organisaation näkökulmasta**. Arvioi jokaisen työkalun sopivuutta seuraavilla merkeillä:
 
-| Malli | Tietosuoja | Hinta | Sopiiko? ✓ ⚠️ ✗ | Perustelu |
-|---|---|---|---|---|
-| ChatGPT | USA | Kallis | | |
-| Claude | USA | Kallis | | |
-| Gemini | USA / EU | Halpa | | |
-| Copilot (M365) | EU mahdollinen | Keskihinta | | |
-| DeepSeek | Kiina | Erittäin halpa | | |
-| Llama tai Mistral (paikallisesti) | Oma kone | Ilmainen + laitteistokulu | | |
+- **✓ Sopii:** työkalu sopii organisaation tarpeeseen ja riskit ovat hallittavissa.
+- **⚠️ Sopii rajoituksin:** työkalua voi käyttää vain tietyissä tehtävissä tai selkeillä säännöillä.
+- **✗ Ei sovi:** työkalu aiheuttaa liian suuren riskin tai ei vastaa organisaation tarpeeseen.
 
-#### Vaihe 4 — Haasta valintasi tekoälyllä
+Kirjoita perusteluun yksi selkeä lause: miksi työkalu sopii, sopii rajoituksin tai ei sovi.
 
-Avaa ChatGPT, Claude tai Copilot ja anna sille koko päätöstaulukkosi sekä valitsemasi organisaation kuvaus. Esimerkkiprompti:
+| Työkalu | Tietosuojan näkökulma | Hinta | Sopivuus ✓ ⚠️ ✗ | Perustelu |
+| --- | --- | --- | --- | --- |
+| **ChatGPT** | USA | Kallis |  |  |
+| **Claude** | USA | Kallis |  |  |
+| **Gemini** | USA / EU | Halpa |  |  |
+| **Copilot (M365)** | EU mahdollinen | Keskihinta |  |  |
+| **DeepSeek** | Kiina | Erittäin halpa |  |  |
+| **Llama tai Mistral paikallisesti** | Oma kone tai oma palvelin | Ilmainen + laitteistokulut |  |  |
 
-```
-Toimit minulle tietoturvasparrauskumppanina. Olen suosittelemassa
-tekoälytyökalua organisaatiolle ja perustelen valintani.
+#### Vaihe 4 — Haasta valintasi tekoälyn avulla
 
-ORGANISAATIO: [kuvaa lyhyesti]
+Avaa ChatGPT, Claude tai Copilot ja anna sille valitsemasi organisaation kuvaus, käyttötarve ja päätöstaulukko. Tavoitteena ei ole antaa tekoälyn tehdä päätöstä puolestasi, vaan saada se haastamaan perustelujasi.
 
-KÄYTTÖTARVE: [tehtävät, käsiteltävä tieto, budjetti]
+Voit käyttää esimerkiksi seuraavaa kehotetta:
 
-TAULUKKONI: [liitä päätöstaulukko]
+> "Toimit minulle tietoturvasparrauskumppanina. Olen suosittelemassa tekoälytyökalua organisaatiolle ja perustelen valintani. ORGANISAATIO: [kuvaa valitsemasi organisaatio lyhyesti] KÄYTTÖTARVE: [käyttäjät, tehtävät, käsiteltävä tieto ja budjetti] PÄÄTÖSTAULUKKONI: [liitä päätöstaulukkosi] Haasta päätelmiäni. Pohdi erityisesti: Olenko tunnistanut organisaation keskeiset tietosuojariskit? Onko jokin työkalu, jonka hylkäsin liian nopeasti? Olenko liian optimistinen tai liian varovainen jossakin kohdassa? Mitä GDPR-näkökulmaa en ehkä ole vielä huomannut? Mitä rajoituksia työntekijöille pitäisi antaa? Älä tee valintaa puolestani. Anna 2–3 huomiota, joiden pohjalta voin parantaa perustelujani."
 
-Haasta päätelmiäni. Erityisesti:
-- Olenko tunnistanut oikean tietosuojariskin organisaation toiminnassa?
-- Onko jokin malli, jonka hylkäsin liian nopeasti?
-- Olenko ehkä liian optimistinen tai liian varovainen jossakin
-  kohdassa?
-- Mitä GDPR-näkökulmaa en ehkä ole vielä huomannut?
+Muista arvioida tekoälyn vastaus kriittisesti. Tekoäly voi antaa hyödyllisiä näkökulmia, mutta se ei vastaa organisaation tietosuojapäätöksistä.
 
-Älä tee valintaa puolestani — anna 2–3 huomiota, joiden pohjalta
-voin viilata perustelujani.
-```
+#### Vaihe 5 — Kirjoita perusteltu suositus
 
-#### Vaihe 5 — Kirjoita suositus
+Kirjoita lopuksi **5–8 lauseen suositus**. Vastaa suosituksessa seuraaviin kysymyksiin:
 
-Kirjoita lyhyt suositus (5–8 lausetta), joka vastaa kolmeen kysymykseen:
+- **Suositus:** Mitä 1–2 työkalua organisaation kannattaa ottaa käyttöön?
+- **Perustelu:** Miksi nämä työkalut sopivat juuri tämän organisaation käyttötarpeeseen?
+- **Rajoitukset:** Mitä sääntöjä työntekijöille pitää antaa? Esimerkiksi: *"Henkilötietoja sisältäviä tehtäviä ei saa antaa työkalulle X."*
+- **Yksi varoitus:** Mikä on suurin riski, joka organisaation pitää ymmärtää ennen käyttöönottoa?
 
-- **Suositus:** Mitä 1–2 mallia organisaation kannattaa ottaa käyttöön?
-- **Rajoitukset:** Mitä rajoituksia työntekijöille on annettava? (esim. *"Henkilötietoja sisältäviä tehtäviä ei saa antaa työkalulle X"*)
-- **Yksi varoitus:** Mikä on suurin riski, joka organisaation on ymmärrettävä?
+> **💡 Palautus:** Tehtävää ei palauteta, mutta säilytä päätöstaulukkosi ja suosituksesi. Tämän tehtävän opit palaavat myöhemmin, kun kuratoit oman bottisi tietopohjaa. Silloin joudut arvioimaan, mitä materiaalia voit laittaa Copilotiin, sisältääkö aineisto henkilötietoja ja millaisia rajoituksia sinun pitää noudattaa.
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämän pohdinnan tulokset palaavat tunnilla 15, kun kuratoit oman bottisi tietopohjaa. Silloin joudut miettimään: *mitä materiaalia voin laittaa Copilotiin? Onko mukana henkilötietoja? Mitä rajoituksia minulla on?* Tunnin 11 oppi muuttuu silloin omaksi käytännön valinnaksi.
+> **💡 Tarkista lopuksi:** Olet valinnut yhden organisaation, kartoittanut sen käyttötarpeen, täyttänyt päätöstaulukon, haastanut perustelujasi tekoälyn avulla ja kirjoittanut 5–8 lauseen suosituksen.
 
 **Halvin ei ole aina paras. Paras työkalu on se, jonka käyttö ei aiheuta uusia ongelmia.**
