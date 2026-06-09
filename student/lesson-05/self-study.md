@@ -24,38 +24,36 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 
 > **Pysähdy hetkeksi:** Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa ulos</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:18px 28px">
+<figure class="ai-demo"><span class="ai-demo__tag">// keskustelu täyttää konteksti-ikkunan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:18px;padding:14px 24px">
   <div class="l05-scene">
-    <span class="l05-side">uusi sisään →</span>
-    <div class="l05-win">
+    <span class="l05-top">↑ vanhin liukuu pois muistista</span>
+    <div class="l05-chat">
       <div class="l05-track">
-        <span class="l05-tk l05-old">alku</span><span class="l05-tk">tausta</span><span class="l05-tk">ohje</span><span class="l05-tk">kysymys</span><span class="l05-tk">vastaus</span>
+        <div class="l05-msg">alku: "Hei!"</div>
+        <div class="l05-msg">tausta: projektin tiedot</div>
+        <div class="l05-msg">ohje: "vastaa lyhyesti"</div>
+        <div class="l05-msg">kysymys 1</div>
+        <div class="l05-msg">vastaus 1</div>
+        <div class="l05-msg l05-new">kysymys 2 (uusin)</div>
       </div>
-      <span class="l05-tk l05-new">uusin</span>
-      <span class="l05-drop">↓ unohtui</span>
     </div>
-    <span class="l05-cap">ikkuna: 5 muistipaikkaa · <b>TÄYNNÄ</b></span>
+    <span class="l05-bot">uusin viesti ↓</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uusi tieto työntyy sisään oikealta, vanhin liukuu ulos vasemmalta ja putoaa pois — malli ei enää näe sitä, eikä kerro sinulle siitä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna toimii kuin chat-ikkuna: uusin viesti tulee alas, ja kun ikkuna täyttyy, vanhimmat viestit liukuvat pois ylhäältä. Malli ei enää näe niitä — vaikka kirjoitit ne itse.</figcaption></figure>
 <style>
-.l05-scene{position:relative;width:360px;display:flex;flex-direction:column;align-items:center;gap:30px;animation:l05scene 7s ease-out infinite}
+.l05-scene{display:flex;flex-direction:column;align-items:center;gap:8px;animation:l05scene 7s ease-out infinite}
 @keyframes l05scene{0%{opacity:0}8%{opacity:1}90%{opacity:1}100%{opacity:0}}
-.l05-side{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.13 208);align-self:flex-end;margin-right:8px}
-.l05-win{position:relative;width:336px;height:56px;border:2px solid oklch(0.66 0.13 208);border-radius:10px;background:#11182A;overflow:visible}
-.l05-track{position:absolute;top:9px;left:8px;display:flex;gap:9px;animation:l05push 7s cubic-bezier(.45,0,.15,1) infinite}
-.l05-tk{flex:none;width:56px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px}
-.l05-new{position:absolute;top:9px;left:272px;color:#0B0F1A;background:oklch(0.66 0.13 208);border:none;opacity:0;animation:l05new 7s cubic-bezier(.45,0,.15,1) infinite}
-.l05-old{animation:l05fall 7s cubic-bezier(.45,0,.15,1) infinite;z-index:3}
-@keyframes l05push{0%,16%{transform:translateX(0)}40%,100%{transform:translateX(-65px)}}
-@keyframes l05new{0%,16%{opacity:0;transform:translateX(70px)}40%,100%{opacity:1;transform:translateX(0)}}
-@keyframes l05fall{0%,16%{opacity:1;color:#EAEEF8;background:#1E2740;transform:translate(0,0) rotate(0)}40%{opacity:.9;color:#B9C2DA;transform:translate(0,0) rotate(0)}54%{opacity:.9;transform:translate(0,2px) rotate(-3deg)}72%{opacity:.6;transform:translate(-20px,54px) rotate(-14deg)}74%,100%{opacity:.5;color:#9AA6C4;background:#161E33;transform:translate(-24px,58px) rotate(-15deg)}}
-.l05-drop{position:absolute;left:-6px;top:70px;font-family:var(--font-mono);font-size:11px;color:#7A839E;opacity:0;animation:l05drop 7s ease-out infinite}
-@keyframes l05drop{0%,66%{opacity:0}78%,90%{opacity:1}100%{opacity:0}}
-.l05-cap{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;letter-spacing:.04em}
-.l05-cap b{color:oklch(0.66 0.13 208);font-weight:500}
-@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new,.l05-old,.l05-drop{animation:none}.l05-track{transform:translateX(-65px)}.l05-new{opacity:1;transform:none}.l05-old{opacity:.5;transform:translate(-24px,58px) rotate(-15deg)}.l05-drop{opacity:1}.l05-scene{opacity:1}}
+.l05-top,.l05-bot{font-family:var(--font-mono);font-size:11px;color:#7A839E}
+.l05-bot{color:oklch(0.66 0.13 208)}
+.l05-chat{position:relative;width:268px;height:178px;border:2px solid oklch(0.66 0.13 208);border-radius:12px;background:#11182A;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%,#000 100%);mask-image:linear-gradient(180deg,transparent,#000 22%,#000 100%)}
+.l05-track{position:absolute;left:10px;right:10px;top:10px;display:flex;flex-direction:column;gap:8px;animation:l05scroll 7s cubic-bezier(.45,0,.15,1) infinite}
+.l05-msg{font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:9px;padding:8px 11px}
+.l05-new{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent;opacity:0;animation:l05new 7s cubic-bezier(.45,0,.15,1) infinite}
+@keyframes l05scroll{0%,20%{transform:translateY(0)}44%,100%{transform:translateY(-43px)}}
+@keyframes l05new{0%,20%{opacity:0}44%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new{animation:none}.l05-track{transform:translateY(-43px)}.l05-new{opacity:1}.l05-scene{opacity:1}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

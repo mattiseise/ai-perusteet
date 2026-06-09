@@ -62,29 +62,38 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkalua ja odottaa tulosta</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu eri työkaluja tarpeen mukaan</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:16px 24px">
   <div class="l22-row">
     <div class="l22-box">AGENTTI</div>
-    <div class="l22-pipe"><span class="l22-out">hae: sää Helsinki →</span><span class="l22-wait">työkalu työskentelee…</span><span class="l22-back">← 5 °C, poutaa</span></div>
-    <div class="l22-box l22-tool">TYÖKALU<br><span>(sää-API)</span></div>
+    <div class="l22-pipe">
+      <span class="l22-out o1">hae: sää Helsinki →</span><span class="l22-back b1">← 5 °C, poutaa</span>
+      <span class="l22-out o2">laske: 15 % × 80 € →</span><span class="l22-back b2">← 12 €</span>
+    </div>
+    <div class="l22-box l22-tool"><span class="l22-t1">sää-API</span><span class="l22-t2">laskin</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se lähettää pyynnön ulkoiselle työkalulle, odottaa tuloksen ja käyttää sitä — näin se yltää oman koulutusdatansa ulkopuolelle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se valitsee tarpeen mukaan eri työkalun — esimerkiksi sään hakuun tai laskuun — lähettää pyynnön, odottaa tuloksen ja käyttää sitä.</figcaption></figure>
 <style>
 .l22-row{display:flex;align-items:center}
-.l22-box{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:16px 14px;text-align:center;line-height:1.4}
-.l22-tool{border-color:oklch(0.66 0.13 208)}.l22-tool span{color:#B9C2DA;font-size:11px}
+.l22-box{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:16px 14px;text-align:center}
+.l22-tool{position:relative;border-color:oklch(0.66 0.13 208);min-width:84px;min-height:50px}
+.l22-t1,.l22-t2{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.l22-t1{animation:l22t1 10s steps(1) infinite}.l22-t2{animation:l22t2 10s steps(1) infinite;color:oklch(0.66 0.15 305)}
+@keyframes l22t1{0%,50%{opacity:1}51%,100%{opacity:0}}
+@keyframes l22t2{0%,50%{opacity:0}51%,100%{opacity:1}}
 .l22-pipe{position:relative;width:230px;height:50px}
 .l22-pipe::before{content:"";position:absolute;top:25px;left:0;right:0;height:1.5px;background:#3A4560}
-.l22-out,.l22-wait,.l22-back{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:13px;white-space:nowrap;opacity:0}
-.l22-out{top:1px;color:oklch(0.66 0.15 264);animation:l22out 7s cubic-bezier(.45,0,.15,1) infinite}
-.l22-wait{top:19px;color:#B9C2DA;font-size:12px;animation:l22wait 7s ease-out infinite}
-.l22-back{bottom:1px;color:oklch(0.66 0.13 208);animation:l22back 7s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l22out{0%{opacity:0;transform:translate(-120%,0)}12%,32%{opacity:1;transform:translate(-50%,0)}40%,100%{opacity:0;transform:translate(20%,0)}}
-@keyframes l22wait{0%,40%{opacity:0}50%,60%{opacity:1}68%,100%{opacity:0}}
-@keyframes l22back{0%,64%{opacity:0;transform:translate(20%,0)}76%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-120%,0)}}
-@media (prefers-reduced-motion:reduce){.l22-out,.l22-wait{animation:none;opacity:0}.l22-back{animation:none;opacity:1;transform:translate(-50%,0)}}
+.l22-out,.l22-back{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:13px;white-space:nowrap;opacity:0}
+.l22-out{top:1px;color:oklch(0.66 0.15 264)}
+.l22-back{bottom:1px;color:oklch(0.66 0.13 208)}
+.o1{animation:l22o1 10s ease-out infinite}.b1{animation:l22b1 10s ease-out infinite}
+.o2{animation:l22o2 10s ease-out infinite;color:oklch(0.66 0.15 305)}.b2{animation:l22b2 10s ease-out infinite}
+@keyframes l22o1{0%{opacity:0;transform:translate(-120%,0)}8%,22%{opacity:1;transform:translate(-50%,0)}30%,100%{opacity:0;transform:translate(20%,0)}}
+@keyframes l22b1{0%,30%{opacity:0;transform:translate(20%,0)}38%,46%{opacity:1;transform:translate(-50%,0)}50%,100%{opacity:0;transform:translate(-120%,0)}}
+@keyframes l22o2{0%,52%{opacity:0;transform:translate(-120%,0)}58%,72%{opacity:1;transform:translate(-50%,0)}80%,100%{opacity:0;transform:translate(20%,0)}}
+@keyframes l22b2{0%,80%{opacity:0;transform:translate(20%,0)}88%,96%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l22-out,.l22-back,.l22-t1,.l22-t2{animation:none}.o1,.l22-t1{opacity:1}.o2,.b1,.b2,.l22-t2{opacity:0}.o1{transform:translate(-50%,0)}}
 </style>
 
 

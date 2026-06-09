@@ -82,31 +82,31 @@ Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se
 
 > **Pysähdy hetkeksi:** Jos tekoäly olisi ihmistä parempi lähes kaikessa ajattelutyössä, kuka päättäisi, mihin sitä käytetään? Millaisia sääntöjä, valvontaa ja vastuuta tällainen järjestelmä vaatisi?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// missä tekoäly menee — ja liikkuva raja</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:20px 24px">
+<figure class="ai-demo"><span class="ai-demo__tag">// olemme tässä — ja raja siirtyy</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 24px 40px">
   <div class="l02-track">
     <div class="l02-step"><span class="l02-dot"></span>Kapea</div>
-    <div class="l02-step"><span class="l02-dot"></span>Generatiivinen</div>
+    <div class="l02-step l02-here"><span class="l02-dot"></span>Generatiivinen<span class="l02-mark">▲<br>OLEMME TÄSSÄ</span></div>
     <div class="l02-step l02-fut"><span class="l02-dot"></span>AGI</div>
     <div class="l02-step l02-fut"><span class="l02-dot"></span>ASI</div>
-    <span class="l02-line"></span>
+    <span class="l02-line"><span class="l02-linelbl">raja: "oikea äly"?</span></span>
   </div>
-  <div class="l02-marker">▲ OLEMME TÄSSÄ</div>
 </div>
-<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista. AGI ja ASI ovat yhä hypoteettisia — eikä raja ole kiinteä, sillä "maalitolpat liikkuvat", kun kyvyt kasvavat.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista — siinä olemme nyt. Raja "oikeaan älyyn" (AGI) ei ole kiinteä: se siirtyy eteenpäin aina kun tekoäly oppii jotain uutta ("maalitolpat liikkuvat").</figcaption></figure>
 <style>
 .l02-track{position:relative;display:flex;align-items:center}
-.l02-step{position:relative;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;padding:10px 16px;border:1.5px solid #3A4560;border-radius:8px;background:#1E2740;margin:0 16px;display:flex;align-items:center;gap:8px}
-.l02-track .l02-step:not(:last-child)::after{content:"→";position:absolute;right:-20px;color:#5A688C;font-size:14px}
+.l02-step{position:relative;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;padding:10px 16px;border:1.5px solid #3A4560;border-radius:8px;background:#1E2740;margin:0 18px;display:flex;align-items:center;gap:8px}
+.l02-track .l02-step:not(:last-child)::after{content:"→";position:absolute;right:-22px;color:#5A688C;font-size:14px}
 .l02-dot{width:8px;height:8px;border-radius:50%;background:oklch(0.66 0.15 264)}
+.l02-here{border-color:oklch(0.66 0.15 264);box-shadow:0 0 0 3px rgba(110,130,255,.15)}
+.l02-mark{position:absolute;left:50%;top:46px;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;line-height:1.4;letter-spacing:.08em;color:oklch(0.66 0.15 264);white-space:nowrap;text-align:center;animation:l02pulse 2.4s ease-in-out infinite}
+@keyframes l02pulse{0%,100%{opacity:.65}50%{opacity:1}}
 .l02-fut{color:#7A839E;border-style:dashed;background:transparent}
 .l02-fut .l02-dot{background:#7A839E}
-.l02-line{position:absolute;top:-7px;bottom:-7px;width:3px;background:oklch(0.66 0.13 208);left:52%;animation:l02move 7s cubic-bezier(.45,0,.15,1) infinite}
-.l02-line::after{content:"raja";position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;color:oklch(0.66 0.13 208);white-space:nowrap}
-@keyframes l02move{0%,22%{left:52%}40%,60%{left:70%}80%,100%{left:86%}}
-.l02-marker{font-family:var(--font-mono);font-size:13px;letter-spacing:.1em;color:oklch(0.66 0.15 264);align-self:flex-start;margin-left:130px;animation:l02pulse 2.4s ease-in-out infinite}
-@keyframes l02pulse{0%,100%{opacity:.6}50%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.l02-line,.l02-marker{animation:none}.l02-line{left:70%}}
+.l02-line{position:absolute;top:-14px;bottom:-14px;width:0;border-left:3px dashed oklch(0.66 0.13 208);left:50%;animation:l02move 7s cubic-bezier(.45,0,.15,1) infinite}
+.l02-linelbl{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;color:oklch(0.66 0.13 208);white-space:nowrap;background:#0B0F1A;padding:0 5px}
+@keyframes l02move{0%,20%{left:50%}42%,62%{left:72%}82%,100%{left:90%}}
+@media (prefers-reduced-motion:reduce){.l02-line,.l02-mark{animation:none}.l02-line{left:72%}}
 </style>
 
 ## Yhteenveto

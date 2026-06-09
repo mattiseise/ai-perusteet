@@ -21,29 +21,39 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 
 **📌 Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuntuu samanlaisiksi tokeneiksi</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:0;padding:20px 26px">
-  <div class="l16-srcs"><span class="l16-src">TEKSTI</span><span class="l16-src">KUVA</span><span class="l16-src">ÄÄNI</span></div>
-  <div class="l16-lane"><i class="l16-p p1"></i><i class="l16-p p2"></i><i class="l16-p p3"></i><span class="l16-gate">muunnin</span></div>
-  <div class="l16-model">MALLI</div>
-  <div class="l16-out">→ vastaus</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama kuvaus → eri media</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:18px;padding:16px 22px">
+  <div class="l16-prompt"><span class="l16-pl">KUVAUS</span>"auringonlasku<br>meren yllä"</div>
+  <span class="l16-ar">→</span>
+  <div class="l16-grid">
+    <div class="l16-card k1"><span class="l16-cl">Kuva</span><span class="l16-pic"></span></div>
+    <div class="l16-card k2"><span class="l16-cl">Musiikki</span><span class="l16-eq"><i></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="l16-card k3"><span class="l16-cl">Video</span><span class="l16-play"></span></div>
+    <div class="l16-card k4"><span class="l16-cl">Koodi</span><span class="l16-code">&lt;/&gt;</span></div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri koneistoilla. Erilaiset syötteet muunnetaan matkalla samanlaisiksi tokeneiksi, joita malli käsittelee yhdessä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Generatiivisia työkaluja on eri aloille. Sama sanallinen idea voidaan tuottaa eri muodoissa: kuvana, musiikkina, videona tai koodina — kullakin oma erikoistunut työkalunsa.</figcaption></figure>
 <style>
-.l16-srcs{display:flex;flex-direction:column;gap:18px}
-.l16-src{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;color:#EAEEF8;border:1.5px solid #3A4560;border-radius:7px;padding:6px 9px;text-align:center;width:70px}
-.l16-lane{position:relative;width:160px;height:96px;margin:0 10px}
-.l16-gate{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-mono);font-size:11px;color:#B9C2DA;border-left:1.5px dashed #5A688C;border-right:1.5px dashed #5A688C;padding:20px 7px}
-.l16-p{position:absolute;left:0;width:15px;height:15px}
-.l16-p1{top:8px;background:oklch(0.66 0.15 264);border-radius:50%;animation:l16a 7s cubic-bezier(.45,0,.15,1) infinite}
-.l16-p2{top:42px;background:oklch(0.66 0.15 305);border-radius:3px;transform:rotate(45deg);animation:l16b 7s cubic-bezier(.45,0,.15,1) infinite}
-.l16-p3{top:76px;background:oklch(0.66 0.13 208);animation:l16c 7s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l16a{0%{left:0;top:8px;opacity:0}10%{opacity:1}42%{left:44%;top:8px;border-radius:50%;background:oklch(0.66 0.15 264)}52%{left:50%;top:42px;border-radius:3px;background:oklch(0.66 0.13 208)}60%{left:50%;top:42px}100%{left:138px;top:42px;border-radius:3px;background:oklch(0.66 0.13 208);opacity:1}}
-@keyframes l16b{0%{left:0;opacity:0}10%{opacity:1}42%{left:44%;top:42px}52%{left:50%;top:42px;border-radius:3px;background:oklch(0.66 0.13 208);transform:rotate(0)}60%{left:50%}100%{left:138px;top:42px;background:oklch(0.66 0.13 208);transform:rotate(0);opacity:1}}
-@keyframes l16c{0%{left:0;top:76px;opacity:0}10%{opacity:1}42%{left:44%;top:76px}52%{left:50%;top:42px;background:oklch(0.66 0.13 208)}60%{left:50%}100%{left:138px;top:42px;background:oklch(0.66 0.13 208);opacity:1}}
-.l16-model{font-family:var(--font-mono);font-size:14px;color:#FFFFFF;border:2px solid oklch(0.66 0.13 208);border-radius:10px;padding:18px 16px;background:#11182A}
-.l16-out{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;margin-left:10px}
-@media (prefers-reduced-motion:reduce){.l16-p{animation:none}.l16-p1,.l16-p2,.l16-p3{left:128px;top:42px;background:oklch(0.66 0.13 208);border-radius:3px;transform:none;opacity:1}}
+.l16-prompt{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:9px;padding:12px 14px;line-height:1.45;text-align:center}
+.l16-pl{display:block;font-size:10px;letter-spacing:.16em;color:#B9C2DA;margin-bottom:5px}
+.l16-ar{color:#5A688C;font-size:18px}
+.l16-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.l16-card{width:108px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:9px;opacity:0}
+.l16-card .l16-cl{font-family:var(--font-mono);font-size:11px;color:#EAEEF8}
+.k1{animation:l16card 7s ease-out infinite;animation-delay:1.0s;border-color:oklch(0.66 0.15 264)}
+.k2{animation:l16card 7s ease-out infinite;animation-delay:1.6s;border-color:oklch(0.66 0.15 305)}
+.k3{animation:l16card 7s ease-out infinite;animation-delay:2.2s;border-color:oklch(0.66 0.13 208)}
+.k4{animation:l16card 7s ease-out infinite;animation-delay:2.8s;border-color:#7FD0A8}
+@keyframes l16card{0%{opacity:0;transform:scale(.9)}14%,90%{opacity:1;transform:scale(1)}100%{opacity:0}}
+.l16-pic{width:74px;height:30px;border-radius:5px;background:linear-gradient(180deg,oklch(0.78 0.13 70) 0%,oklch(0.7 0.15 35) 45%,oklch(0.5 0.13 280) 100%)}
+.l16-eq{display:flex;align-items:flex-end;gap:4px;height:30px}
+.l16-eq i{width:7px;background:oklch(0.66 0.15 305);border-radius:2px;animation:l16eq 1.1s ease-in-out infinite}
+.l16-eq i:nth-child(2){animation-delay:.2s}.l16-eq i:nth-child(3){animation-delay:.4s}.l16-eq i:nth-child(4){animation-delay:.15s}.l16-eq i:nth-child(5){animation-delay:.35s}
+@keyframes l16eq{0%,100%{height:8px}50%{height:28px}}
+.l16-play{width:30px;height:30px;border-radius:6px;background:#11182A;border:1.5px solid oklch(0.66 0.13 208);position:relative}
+.l16-play::after{content:"";position:absolute;left:11px;top:8px;border-left:11px solid oklch(0.66 0.13 208);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.l16-code{font-family:var(--font-mono);font-size:18px;color:#7FD0A8;height:30px;display:flex;align-items:center}
+@media (prefers-reduced-motion:reduce){.l16-card{animation:none;opacity:1;transform:none}.l16-eq i{animation:none;height:18px}}
 </style>
 
 ## Kuvageneraatio — tekoälyllä kuvia tekstistä

@@ -34,25 +34,27 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sujuva ei tarkoita oikeaa</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:18px;padding:22px 28px">
-  <div class="l07-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
-  <div class="l07-row"><span class="l07-k">mallin varmuus</span><span class="l07-meter"><span class="l07-fill"></span></span><span class="l07-pct">94 %</span></div>
-  <div class="l07-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 miljoonaa</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// malli ei varoita, kumpi on totta</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:20px 26px">
+  <div class="l07-lead">Malli vastaa molempiin yhtä sujuvasti ja vakuuttavasti:</div>
+  <div class="l07-stmt s1">"Suomen pääkaupunki on Helsinki."<span class="l07-mk ok">✓ totta</span></div>
+  <div class="l07-stmt s2">"Tampere on Suomen pääkaupunki."<span class="l07-mk bad">✗ väärin</span></div>
+  <div class="l07-note">Itse vastauksesta ei näe eroa — vain faktantarkistus paljastaa sen.</div>
 </div>
-<figcaption class="ai-demo__cap">Hallusinaatio voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Ehdit uskoa siihen ennen kuin huomaat virheen — korkea varmuus ei takaa totuutta.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hallusinaatio: malli esittää väärän tiedon täsmälleen yhtä luontevasti kuin oikean eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — siksi faktat on tarkistettava.</figcaption></figure>
 <style>
-.l07-sent{font-family:var(--font-serif);font-size:18px;color:#FFFFFF;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 7s steps(40,end) infinite}
-@keyframes l07type{0%{width:0}30%,100%{width:24em}}
-.l07-row{display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:13px;color:#B9C2DA}
-.l07-k{width:104px}
-.l07-meter{flex:1;height:18px;background:#11182A;border:1.5px solid #3A4560;border-radius:5px;overflow:hidden}
-.l07-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 7s ease-out infinite}
-@keyframes l07fill{0%,24%{width:0}44%,100%{width:94%}}
-.l07-pct{width:40px;color:#FFFFFF;font-size:14px}
-.l07-fact{font-family:var(--font-mono);font-size:14px;color:#F08A78;font-weight:500;opacity:0;animation:l07fact 7s ease-out infinite}
-@keyframes l07fact{0%,58%{opacity:0}70%,94%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.l07-sent{animation:none;width:auto;border-right:none}.l07-fill{animation:none;width:94%}.l07-fact{opacity:1}}
+.l07-lead{font-family:var(--font-mono);font-size:12px;color:#B9C2DA}
+.l07-stmt{position:relative;font-family:var(--font-serif);font-size:17px;color:#FFFFFF;background:#1E2740;border:1.5px solid #3A4560;border-radius:9px;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;opacity:0}
+.s1{animation:l07in 7s ease-out infinite}
+.s2{animation:l07in 7s ease-out infinite;animation-delay:.5s}
+@keyframes l07in{0%{opacity:0;transform:translateY(6px)}12%,100%{opacity:1;transform:translateY(0)}}
+.l07-mk{font-family:var(--font-mono);font-size:13px;font-weight:500;white-space:nowrap;opacity:0;flex:none}
+.ok{color:#7FD0A8;animation:l07ok 7s ease-out infinite}
+.bad{color:#F08A78;animation:l07bad 7s ease-out infinite}
+@keyframes l07ok{0%,42%{opacity:0}52%,100%{opacity:1}}
+@keyframes l07bad{0%,60%{opacity:0}70%,100%{opacity:1}}
+.l07-note{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;margin-top:2px}
+@media (prefers-reduced-motion:reduce){.s1,.s2,.ok,.bad{animation:none;opacity:1;transform:none}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?
