@@ -11755,79 +11755,103 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 <p>Botin parantamista testauksen perusteella. Jokainen testikierros paljastaa parannuskohteita, ja botti kehittyy kierrokselta kierrokselle. Hyvä botti ei synny kerralla vaan iteroinnin kautta.</p>
 <hr />`,
     stasks:`<h1>Rakennuspalikka 2 — Botin määrittelydokumentti</h1>
-<blockquote class="pause"><p>📌 <strong>Tämä on toinen kolmesta rakennuspalikasta</strong>, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>projektin määrittelydokumentin sparrauskumppanin</em> Microsoft Copilotiin. Säilytä tämä huolellisesti.</p>
-</blockquote>
+<p><strong>📌 Tämä on toinen kolmesta rakennuspalikasta.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>projektin määrittelydokumentin sparrauskumppanin</em> Microsoft Copilotiin. Säilytä tämä työ huolellisesti.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
-<p>Suunnittelet bottisi <strong>määrittelydokumentin</strong> — botin perustamisasiakirjan, joka kertoo kenelle se on, mitä se tekee, miten se käyttäytyy ja mitä se ei tee. Tämä on ensimmäinen rakennuspalikka, joka käsittelee bottiasi konkreettisesti — tunnilla 12 keräsit yleisiä promptirakenteita, nyt suunnittelet juuri sitä bottia, jonka rakennat tunneilla 17–18.</p>
-<p>Et kirjoita vielä järjestelmäpromptia. Et rakenna bottia. Et testaa sitä. Suunnittelet sen — kuten arkkitehti tekee pohjapiirroksen ennen kuin perustukset valetaan.</p>
-</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaiheet</h2></div><div class="task-card-body">
+<p>Suunnittelet bottisi <strong>määrittelydokumentin</strong>. Se on botin perustamisasiakirja, jossa kerrot, kenelle botti on tarkoitettu, mitä se tekee, miten se käyttäytyy ja mitä se ei tee.</p>
+<p>Tämä on ensimmäinen rakennuspalikka, jossa suunnittelet suoraan tulevaa bottiasi. Aiemmin keräsit yleisiä promptirakenteita. Nyt suunnittelet juuri sitä bottia, jonka rakennat oppitunneilla 17–18.</p>
+<p>Et vielä kirjoita <strong>järjestelmäkehotetta</strong>, rakenna bottia tai testaa sitä. Tässä tehtävässä suunnittelet botin toiminnan etukäteen. Ajattele tätä pohjapiirroksena: hyvä suunnitelma helpottaa botin rakentamista myöhemmin.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
+<p>Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin Microsoft Copilotiin. Dokumentti auttaa sinua päättämään:</p>
+<ul>
+<li>mille alalle ja kohderyhmälle botti rakennetaan,</li>
+<li>mitä tehtävää botti auttaa käyttäjää tekemään,</li>
+<li>millaisella äänensävyllä botti toimii,</li>
+<li>missä järjestyksessä botti ohjaa käyttäjää,</li>
+<li>mitä botin ei pidä tehdä.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat?</h2></div><div class="task-card-body">
+<p>Tallenna lopuksi yksi dokumentti, jossa on:</p>
+<ul>
+<li>valitsemasi ammattiala,</li>
+<li>täytetty botin määrittelydokumentti,</li>
+<li>tekoälyltä saamasi sparraus tai tiivistelmä siitä,</li>
+<li>viimeistelty versio määrittelystä,</li>
+<li>2–3 lauseen pohdinta siitä, mikä muuttui sparrauksen jälkeen ja mikä on bottisi ydin.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tee näin</h2></div><div class="task-card-body">
 <h3>Vaihe 1 — Valitse oma ammattialasi</h3>
-<p>Botti, jonka tunnilla 18 rakennat, palvelee oman alasi ammattilaista projektin määrittelydokumentin laatimisessa. Valitse, minkä alan ammattilaiselle botti rakennetaan:</p>
+<p>Botti, jonka rakennat myöhemmin, auttaa oman alasi ammattilaista tai opiskelijaa <strong>projektin määrittelydokumentin</strong> laatimisessa. Valitse ensin, mille alalle botti rakennetaan.</p>
+<p>Valitse yksi seuraavista:</p>
 <ul>
 <li><strong>IT-tuki</strong></li>
 <li><strong>Kyberturvallisuus</strong></li>
 <li><strong>Pelikoodaus</strong></li>
 <li><strong>Web-ohjelmointi</strong></li>
 </ul>
-<h3>Vaihe 2 — Täytä määrittelydokumentin pohja</h3>
-<p>Käy alla oleva taulukko läpi ja kirjoita lyhyt vastaus jokaiseen kohtaan. Tämä on bottisi DNA — kaikki sen myöhempi käyttäytyminen rakentuu näiden vastausten päälle.</p>
+<p><strong>Tallenna:</strong> Kirjoita valitsemasi ala muistiin. Lisää myös yksi lause siitä, millaisissa projekteissa alan ammattilainen voisi tarvita määrittelydokumenttia.</p>
+<h3>Vaihe 2 — Täytä botin määrittelydokumentti</h3>
+<p>Täytä alla oleva taulukko. Kirjoita jokaiseen kohtaan lyhyt mutta selkeä vastaus. Tämä taulukko on bottisi suunnittelun perusta: sen myöhempi käyttäytyminen rakentuu näiden valintojen varaan.</p>
+<p><strong>Vinkki:</strong> Kirjoita mieluummin konkreettisesti kuin yleisesti. Esimerkiksi <em>"auttaa opiskelijaa laatimaan web-projektin määrittelydokumentin vaiheittain"</em> on parempi kuin <em>"auttaa projektissa"</em>.</p>
 <table>
 <thead>
 <tr>
 <th>Osa</th>
-<th>Mitä siihen tulee?</th>
+<th>Mitä siihen kirjoitetaan?</th>
+<th>Oma vastauksesi</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Botin nimi</strong></td>
-<td>Anna botille nimi. Sen ei tarvitse olla nokkela — sen pitää kuvata, mitä botti tekee. Esim. <em>"Pelin määrittelyvalmentaja"</em> tai <em>"Web-projektin sparraaja"</em>.</td>
+<td>Anna botille nimi, joka kertoo selvästi, mitä botti tekee. Nimen ei tarvitse olla nokkela, vaan ymmärrettävä. Esimerkiksi <em>"Pelin määrittelyvalmentaja"</em> tai <em>"Web-projektin sparraaja"</em>.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Kohderyhmä</strong></td>
-<td>Kenelle botti on? Aloittelijalle vai kokeneelle? Opiskelijalle vai työssäkäyvälle? Esim. <em>"Opiskelija tai aloittelevia pelikoodausprojekteja tekevä ammattilainen, joka tarvitsee tukea määrittelyn rakenteeseen."</em></td>
+<td>Kenelle botti on tarkoitettu? Onko käyttäjä aloittelija vai kokeneempi? Onko hän opiskelija, työntekijä tai projektin vastuuhenkilö? Esimerkiksi: <em>"Aloitteleva web-ohjelmoinnin opiskelija, joka tarvitsee tukea projektin määrittelyn rakenteeseen."</em></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Tarkoitus</strong></td>
-<td>Mitä konkreettista botti tekee? Yksi kahden lauseen tavoite. Esim. <em>"Auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin, käymällä läpi kuusi osa-aluetta järjestyksessä."</em></td>
+<td>Mitä konkreettista botti auttaa käyttäjää tekemään? Kirjoita 1–2 lausetta. Esimerkiksi: <em>"Botti auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin käymällä läpi projektin taustan, tavoitteen, vaatimukset, riskit ja aikataulun."</em></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Persoona ja äänensävy</strong></td>
-<td>Millainen botti on luonteeltaan? Esim. <em>"Käytännönläheinen valmentaja, joka kysyy paljon tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti."</em></td>
+<td>Millainen botti on luonteeltaan? Miten se puhuu käyttäjälle? Esimerkiksi: <em>"Käytännönläheinen valmentaja, joka kysyy tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti. Ei käytä akateemista jargonia eikä ole liian leikkisä."</em></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Työnkulku</strong></td>
-<td>Missä järjestyksessä botti ohjaa käyttäjää? Tyypillinen määrittelydokumentin rakenne: tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu. Sopeuta alasi mukaan ja kirjoita 5–7 vaiheen runko.</td>
+<td>Missä järjestyksessä botti ohjaa käyttäjää? Kirjoita 5–7 vaiheen runko. Voit käyttää pohjana rakennetta: <strong>tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu → seuraavat toimet</strong>. Muokkaa rakennetta oman alasi mukaan.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Rajat — mitä botti EI tee</strong></td>
-<td>Listaa 3–5 asiaa. Esim. <em>"Ei kirjoita koko dokumenttia käyttäjän puolesta. Ei anna oikeudellisia neuvoja. Ei arvioi pelin kaupallista potentiaalia. Ei käsittele muiden alojen projekteja."</em> Rajat tekevät botista ammattimaisen.</td>
+<td><strong>Rajat — mitä botti ei tee</strong></td>
+<td>Listaa 3–5 asiaa, joita botti ei saa tehdä. Esimerkiksi: <em>"Botti ei kirjoita koko dokumenttia käyttäjän puolesta. Botti ei anna oikeudellisia neuvoja. Botti ei arvioi projektin kaupallista potentiaalia. Botti ei käsittele muiden alojen projekteja."</em> Rajat tekevät botista ammattimaisemman.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3>Vaihe 3 — Haasta määrittelysi tekoälyllä</h3>
-<p>Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä sitä haastamaan suunnitelmasi:</p>
-<pre><code>Toimit minulle sparrauskumppanina. Suunnittelen bottia, joka auttaa
-oman alani ammattilaista projektin määrittelydokumentin laatimisessa.
-Tässä bottini määrittelydokumentti:
-
-[liitä koko taulukkosi tähän]
-
-Haasta suunnitelmaani. Erityisesti:
-- Onko tarkoitus tarpeeksi konkreettinen vai jääkö se yleisluontoiseksi?
-- Onko kohderyhmä riittävän rajattu?
-- Puuttuuko työnkulusta jokin tyypillinen vaihe oman alani projekteissa?
-- Ovatko rajat realistisia vai liian tiukkoja / löysiä?
-- Mitä yksi sokea piste tässä suunnitelmassa on?
-
-Älä kirjoita uutta versiota puolestani — anna minulle 2–3 konkreettista
-parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni.
-</code></pre>
-<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>suunnittelukumppanina</em>. Et anna sen suunnitella puolestasi, mutta annat sen kyseenalaistaa ajatuksesi.</p>
-<h3>Vaihe 4 — Viimeistele dokumentti (tämä on rakennuspalikkasi)</h3>
-<p>Tee tekoälyn palautteen pohjalta korjauksia ja viimeistele määrittelydokumentti. Lopullisen version pitää olla niin selkeä, että sen pohjalta voisi rakentaa botin myös toinen henkilö — ei vain sinä itse.</p>
+<h3>Vaihe 3 — Haasta määrittelysi tekoälyn avulla</h3>
+<p>Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.</p>
+<p>Voit käyttää esimerkiksi seuraavaa kehotetta:</p>
+<blockquote class="pause"><p>"Toimit minulle sparrauskumppanina. Suunnittelen bottia, joka auttaa oman alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa. Tässä bottini määrittelydokumentti: [liitä koko taulukkosi tähän] Haasta suunnitelmaani. Pohdi erityisesti: Onko botin tarkoitus tarpeeksi konkreettinen vai jääkö se liian yleiseksi? Onko kohderyhmä riittävän tarkasti rajattu? Puuttuuko työnkulusta jokin tyypillinen vaihe tämän alan projekteissa? Ovatko botin rajat realistisia vai liian tiukkoja tai liian löysiä? Mikä on yksi sokea piste, jota en ehkä vielä huomaa? Älä kirjoita uutta versiota puolestani. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."</p>
+</blockquote>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>suunnittelukumppanina</em>. Et anna sen päättää puolestasi, mutta annat sen kyseenalaistaa suunnitelmasi.</p>
+<h3>Vaihe 4 — Viimeistele määrittelydokumentti</h3>
+<p>Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Viimeistele määrittelydokumentti niin, että sen perusteella voisi rakentaa botin myös toinen henkilö, ei vain sinä itse.</p>
+<p>Tarkista viimeistelyssä erityisesti nämä asiat:</p>
+<ul>
+<li>Botin tarkoitus on konkreettinen ja helposti ymmärrettävä.</li>
+<li>Kohderyhmä on rajattu selkeästi.</li>
+<li>Työnkulku etenee loogisessa järjestyksessä.</li>
+<li>Botin rajat kertovat selvästi, mitä botti ei tee.</li>
+<li>Äänensävy sopii kohderyhmälle ja tehtävän vakavuuteen.</li>
+</ul>
 <p>Kirjoita lopuksi 2–3 lauseen pohdinta: <em>"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"</em></p>
-<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä — avaat tämän dokumentin ja katsot, mitä olit suunnitellut. Tämä määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, mitä tietopohja tarvitsee tukea, ja milloin botti on valmis.</p>
+<blockquote class="pause"><p><strong>💡 Miksi tämä on tärkeää:</strong> Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä, vaan palaat tähän dokumenttiin. Tämä määrittely kertoo, mitä järjestelmäkehotteeseen pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin botti on valmis ensimmäiseen testiin.</p>
+<p><strong>💡 Tarkista lopuksi:</strong> Olet valinnut ammattialan, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.</p>
 </blockquote>
 <p><strong>2 / 3 rakennuspalikkaa kerätty</strong></p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät — oma botti</h1>
@@ -12796,22 +12820,41 @@ parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni.
 <p><strong>Kontribuointi</strong> tarkoittaa prosessia, jossa muut kehittäjät voivat osallistua avoimen lähdekoodin projektiin. Projektissa olisi hyvä olla dokumentaatio siitä, miten siihen voi kontribuoida.</p>
 <hr />`,
     stasks:`<h1>Rakennuspalikka 3 — Tietopohjan kuratointi</h1>
-<blockquote class="pause"><p>📌 <strong>Tämä on kolmas ja viimeinen rakennuspalikka</strong>, jonka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>projektin määrittelydokumentin sparrauskumppanin</em> Microsoft Copilotiin. Säilytä tämä huolellisesti.</p>
-</blockquote>
+<p><strong>📌 Tämä on kolmas ja viimeinen rakennuspalikka.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>projektin määrittelydokumentin sparrauskumppanin</em> Microsoft Copilotiin. Säilytä tämä työ huolellisesti.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
-<p>Kuratoit bottisi <strong>tietopohjan</strong> — 3–5 dokumenttia, joista botti ammentaa oman alasi asiantuntemuksen. Tietopohja on se, mikä erottaa botin yleiseltä ChatGPT:ltä: kun yleinen tekoäly tietää kaikesta vähän, sinun bottisi tietää <em>juuri sinun alasi projektidokumentaatiosta</em> paljon.</p>
-<p>Kuratointi ei ole vain "tiedostojen kerääminen". Se on <strong>aktiivista valintaa</strong> — mitä otat mukaan, mitä jätät pois, ja miksi. Hyvä tietopohja vastaa kysymykseen: <em>"Mitä botin pitää tietää, jotta se osaa auttaa juuri sinun alasi ammattilaista?"</em></p>
-</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaiheet</h2></div><div class="task-card-body">
-<h3>Vaihe 1 — Palauta mieleen bottisi tarkoitus</h3>
-<p>Avaa <strong>rakennuspalikka 2</strong> (tunti 14, määrittelydokumentti). Katso erityisesti:</p>
+<p>Kuratoit bottisi <strong>tietopohjan</strong> eli valitset 3–5 dokumenttia, joista botti saa oman alasi asiantuntemusta. Tietopohja erottaa oman bottisi yleisestä tekoälystä: yleinen tekoäly tietää monesta asiasta vähän, mutta sinun bottisi keskittyy juuri oman alasi <strong>projektidokumentaation</strong> tukemiseen.</p>
+<p><strong>Kuratointi</strong> ei tarkoita sitä, että keräät mahdollisimman paljon tiedostoja. Se tarkoittaa aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Hyvä tietopohja vastaa kysymykseen: <em>"Mitä botin pitää tietää, jotta se osaa auttaa juuri minun alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa?"</em></p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
+<p>Tehtävän jälkeen sinulla on valmis, perusteltu tietopohja bottiasi varten. Osaat:</p>
 <ul>
-<li>Kenelle botti on (kohderyhmä)</li>
-<li>Mitä se tekee (tarkoitus)</li>
-<li>Missä järjestyksessä se ohjaa käyttäjää (työnkulku)</li>
+<li>tunnistaa, mitä tietoa botti tarvitsee toimiakseen hyödyllisesti,</li>
+<li>valita lähdedokumentteja tarkoituksenmukaisesti,</li>
+<li>arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,</li>
+<li>karsia pois turhat tai päällekkäiset materiaalit,</li>
+<li>perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan.</li>
 </ul>
-<p>Tämä on tärkeää, koska tietopohjan pitää tukea juuri näitä asioita. Älä kerää sattumanvaraisia dokumentteja "joista botti voisi hyötyä" — kerää sellaisia, jotka palvelevat <em>tämän</em> botin tarkoitusta.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat?</h2></div><div class="task-card-body">
+<p>Tallenna lopuksi yksi dokumentti tai kansio, jossa on:</p>
+<ul>
+<li>lista bottisi tärkeimmistä tietotarpeista,</li>
+<li>3–5 valittua lähdedokumenttia,</li>
+<li>taulukko, jossa perustellaan jokaisen dokumentin rooli tietopohjassa,</li>
+<li>lyhyt arvio siitä, mitä tietopohja kattaa hyvin ja mitä se ei vielä kata,</li>
+<li>varsinaiset dokumentit tallennettuna samaan kansioon myöhempää Copilot-käyttöä varten.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tee näin</h2></div><div class="task-card-body">
+<h3>Vaihe 1 — Palauta mieleen bottisi tarkoitus</h3>
+<p>Avaa <strong>rakennuspalikka 2</strong> eli botin määrittelydokumentti. Katso siitä erityisesti seuraavat kohdat:</p>
+<ul>
+<li><strong>Kohderyhmä:</strong> kenelle botti on tarkoitettu?</li>
+<li><strong>Tarkoitus:</strong> mitä botti auttaa käyttäjää tekemään?</li>
+<li><strong>Työnkulku:</strong> missä järjestyksessä botti ohjaa käyttäjää?</li>
+<li><strong>Rajat:</strong> mitä botti ei saa tehdä?</li>
+</ul>
+<p>Tämä vaihe on tärkeä, koska tietopohjan pitää tukea juuri tämän botin tarkoitusta. Älä kerää sattumanvaraisia dokumentteja vain siksi, että ne liittyvät alaan yleisesti. Valitse materiaalia, joka auttaa bottia ohjaamaan käyttäjää <strong>projektin määrittelydokumentin</strong> laatimisessa.</p>
 <h3>Vaihe 2 — Listaa, mitä botin pitää tietää</h3>
-<p>Kirjoita 5–8 konkreettista <strong>tietotarvetta</strong>, joita botti tarvitsee voidakseen auttaa käyttäjää. Esimerkkejä eri aloilta:</p>
+<p>Kirjoita 5–8 konkreettista <strong>tietotarvetta</strong>. Tietotarve tarkoittaa asiaa, joka botin pitää ymmärtää, jotta se osaa auttaa käyttäjää projektin määrittelyssä.</p>
+<p>Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää määrittelemään tavoitteet, vaatimukset, riskit ja aikataulun, sen tietopohjasta pitäisi löytyä materiaalia juuri näihin aiheisiin.</p>
 <table>
 <thead>
 <tr>
@@ -12822,62 +12865,66 @@ parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni.
 <tbody>
 <tr>
 <td><strong>IT-tuki</strong></td>
-<td>Käyttöönottoprojektin rakenne, yleiset riskit järjestelmämuutoksissa, sidosryhmäkartoitus, palvelutason määrittely (SLA)</td>
+<td>Käyttöönottoprojektin rakenne, yleiset riskit järjestelmämuutoksissa, sidosryhmien tunnistaminen, palvelutason määrittely eli SLA.</td>
 </tr>
 <tr>
 <td><strong>Kyberturvallisuus</strong></td>
-<td>Riskiarvion rakenne, OWASP:n riskikategoriat, auditoinnin laajuus, raportointivaatimukset, lainsäädännölliset rajat</td>
+<td>Riskiarvion rakenne, OWASP:n riskikategoriat, auditoinnin laajuus, raportointivaatimukset ja lainsäädännölliset rajat.</td>
 </tr>
 <tr>
 <td><strong>Pelikoodaus</strong></td>
-<td>Game Design Documentin osat, ydinmekaniikan kuvaaminen, pelitestauksen suunnittelu, alustojen tekniset rajat, monetisaatiomallit</td>
+<td>Game Design Documentin osat, ydinmekaniikan kuvaaminen, pelitestauksen suunnittelu, alustojen tekniset rajat ja mahdolliset monetisaatiomallit.</td>
 </tr>
 <tr>
 <td><strong>Web-ohjelmointi</strong></td>
-<td>Vaatimusten määrittely, tekninen arkkitehtuuri, käyttöliittymäluonnokset, API-rajapinnan kuvaus, tietoturvavaatimukset</td>
+<td>Vaatimusten määrittely, tekninen arkkitehtuuri, käyttöliittymäluonnokset, API-rajapinnan kuvaus ja tietoturvavaatimukset.</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Mallipohja omalle listalle:</strong></p>
+<ol>
+<li>Botin pitää tietää, miten projektin tausta kuvataan.</li>
+<li>Botin pitää tietää, miten projektin tavoite rajataan.</li>
+<li>Botin pitää tietää, millaisia vaatimuksia tämän alan projekteissa yleensä määritellään.</li>
+<li>Botin pitää tietää, millaisia riskejä tämän alan projekteissa voi olla.</li>
+<li>Botin pitää tietää, millainen valmis määrittelydokumentti näyttää.</li>
+</ol>
 <h3>Vaihe 3 — Etsi ja valitse 3–5 dokumenttia</h3>
-<p>Etsi materiaalia, joka kattaa tietotarpeesi. Hyviä lähteitä ovat:</p>
+<p>Etsi materiaalia, joka kattaa vaiheessa 2 listaamasi tietotarpeet. Valitse lopuksi <strong>3–5 dokumenttia</strong>. Laatu on tärkeämpää kuin määrä.</p>
+<p>Hyviä lähteitä voivat olla:</p>
 <ul>
-<li>Kurssimateriaalisi (omat oppikirjat, luentodiat)</li>
-<li>Alasi yleiset standardit ja ohjeistukset</li>
-<li>Esimerkkidokumentit todellisista projekteista (saatavilla esim. GitHubissa, alan blogeissa)</li>
-<li>Wikipedia-artikkelit, mutta vain rakennetietona — älä lähteenä yksityiskohdille</li>
+<li>kurssimateriaalit, kuten oppikirjat, luentodiat tai aiemmat tehtäväpohjat,</li>
+<li>alasi yleiset standardit ja ohjeistukset,</li>
+<li>mallipohjat tai esimerkkidokumentit todellisista projekteista,</li>
+<li>luotettavat alan blogit, dokumentaatiot tai viralliset ohjeet,</li>
+<li>Wikipedia-artikkelit vain yleisen rakenteen hahmottamiseen, ei tarkkojen yksityiskohtien päälähteeksi.</li>
 </ul>
-<p><strong>Tärkeintä:</strong> 3–5 hyvää dokumenttia voittaa 20 keskinkertaista. Älä lataa kaikkea mitä löydät — botti hukuttautuu liialliseen materiaaliin ja sen vastaukset muuttuvat sekaviksi.</p>
-<p>Hyviä kriteereitä valinnalle: <em>"Onko tämä luotettava lähde? Onko se ajantasainen? Tukeeko se botin työnkulkua? Onko siinä konkreettinen rakenne, jota botti voi opettaa eteenpäin?"</em></p>
-<h3>Vaihe 4 — Testaa tietopohjasi kattavuus tekoälyn kanssa</h3>
-<p>Avaa ChatGPT, Claude tai Copilot ja anna sille tietotarpeesi ja valitsemasi dokumentit. Esimerkkiprompti:</p>
-<pre><code>Toimit minulle sparrauskumppanina. Rakennan bottia, joka auttaa oman
-alani ammattilaista projektin määrittelydokumentin laatimisessa. Tässä
-bottini tietotarpeet ja valitsemani lähdedokumentit:
-
-TIETOTARPEET: [liitä vaiheen 2 lista]
-
-VALITUT DOKUMENTIT:
-1. [dokumentin nimi + lyhyt kuvaus]
-2. [dokumentin nimi + lyhyt kuvaus]
-...
-
-Auta minua arvioimaan kattavuus:
-- Mitä tietotarpeita dokumentit eivät kata?
-- Onko jokin dokumentti ehkä turha tai päällekkäinen toisen kanssa?
-- Onko alalla jokin tyypillinen tieto, jota en ole vielä ottanut huomioon?
-
-Älä ehdota uusia dokumentteja minulle — auta vain tunnistamaan aukot,
-jotta voin etsiä lisämateriaalia itse.
-</code></pre>
-<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>kattavuuden tarkistajana</em>. Tekoäly ei kerää tietopohjaa puolestasi, mutta auttaa huomaamaan sokeat pisteet.</p>
-<h3>Vaihe 5 — Viimeistele tietopohja (tämä on rakennuspalikkasi)</h3>
-<p>Tee tekoälyn palautteen pohjalta korjauksia: lisää puuttuva dokumentti, poista päällekkäinen, vaihda parempi. Kokoa lopullinen tietopohja yhteen taulukkoon:</p>
+<p><strong>Tärkeää:</strong> Älä lataa kaikkea, mitä löydät. Liian suuri tai sekava tietopohja voi tehdä botin vastauksista epäselviä. Kolme hyvin valittua dokumenttia voi olla parempi kuin kaksikymmentä keskinkertaista.</p>
+<p>Arvioi jokaista dokumenttia seuraavien kysymysten avulla:</p>
+<ul>
+<li>Onko lähde luotettava?</li>
+<li>Onko dokumentti ajantasainen?</li>
+<li>Tukeeko se bottini työnkulkua?</li>
+<li>Auttaako se käyttäjää laatimaan projektin määrittelydokumenttia?</li>
+<li>Onko dokumentissa konkreettinen rakenne, mallipohja tai tarkistuslista, jota botti voi hyödyntää?</li>
+<li>Sisältääkö dokumentti henkilötietoja, salassa pidettävää tietoa tai muuta aineistoa, jota ei saa ladata Copilotiin?</li>
+</ul>
+<h3>Vaihe 4 — Testaa tietopohjan kattavuus tekoälyn avulla</h3>
+<p>Avaa ChatGPT, Claude tai Copilot ja anna sille bottisi tietotarpeet sekä valitsemasi dokumentit. Tässä vaiheessa et vielä lataa dokumentteja Copilotiin, vaan arvioit, kattaako suunniteltu tietopohja oikeat asiat.</p>
+<p>Voit käyttää esimerkiksi seuraavaa kehotetta:</p>
+<blockquote class="pause"><p>"Toimit minulle sparrauskumppanina. Rakennan bottia, joka auttaa oman alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa. BOTTINI TARKOITUS: [kuvaa bottisi tarkoitus lyhyesti] TIETOTARPEET: [liitä vaiheessa 2 tekemäsi lista] VALITUT DOKUMENTIT: 1. [dokumentin nimi + lyhyt kuvaus] 2. [dokumentin nimi + lyhyt kuvaus] 3. [dokumentin nimi + lyhyt kuvaus] Auta minua arvioimaan tietopohjan kattavuus: Mitä tietotarpeita dokumentit eivät kata? Onko jokin dokumentti turha tai päällekkäinen toisen kanssa? Onko alalla jokin tyypillinen tieto, jota en ole vielä ottanut huomioon? Onko jokin dokumentti liian yleinen tai liian vaikea kohderyhmälleni? Näetkö tietosuoja- tai luottamuksellisuusriskin siinä, että jokin dokumentti ladattaisiin bottiin? Älä ehdota uusia dokumentteja suoraan minulle. Auta tunnistamaan aukot, jotta voin etsiä lisämateriaalia itse."</p>
+</blockquote>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>kattavuuden tarkistajana</em>. Tekoäly ei kerää tietopohjaa puolestasi, mutta se voi auttaa huomaamaan sokeita pisteitä.</p>
+<h3>Vaihe 5 — Viimeistele tietopohja</h3>
+<p>Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Voit esimerkiksi lisätä puuttuvan dokumentin, poistaa päällekkäisen dokumentin tai vaihtaa liian yleisen lähteen parempaan.</p>
+<p>Kokoa lopullinen tietopohja alla olevaan taulukkoon.</p>
 <table>
 <thead>
 <tr>
 <th>Dokumentti</th>
-<th>Lähde / linkki</th>
-<th>Miksi tämä on tietopohjassa?</th>
+<th>Lähde tai linkki</th>
+<th>Miksi tämä kuuluu tietopohjaan?</th>
+<th>Mitä tietotarvetta se tukee?</th>
 </tr>
 </thead>
 <tbody>
@@ -12885,21 +12932,38 @@ jotta voin etsiä lisämateriaalia itse.
 <td></td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>Tallenna tai lataa varsinaiset dokumentit yhteen kansioon — käytät niitä suoraan tunnilla 18, kun lataat ne Copilotiin.</p>
-<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Botti, jonka tunnilla 18 rakennat, tunnistetaan ammattimaiseksi nimenomaan tietopohjan kautta. Yleinen ChatGPT osaa puhua periaatteesta, mutta sinun bottisi tuntee oman alasi käytännöt — koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin sydän.</p>
+<p>Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 18, kun lataat tietopohjan Copilotiin.</p>
+<p>Kirjoita lopuksi 2–3 lauseen arvio: <em>"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä minun pitää muistaa, kun lataan dokumentit bottiin?"</em></p>
+<blockquote class="pause"><p><strong>💡 Miksi tämä on tärkeää:</strong> Oppitunnilla 18 rakennettava botti tunnistetaan ammattimaiseksi juuri tietopohjan avulla. Yleinen tekoäly osaa puhua aiheesta yleisellä tasolla, mutta sinun bottisi tuntee oman alasi käytäntöjä, koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin ydin.</p>
+<p><strong>💡 Tarkista lopuksi:</strong> Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.</p>
 </blockquote>
 <p><strong>3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17</strong></p></div></div>`,
     tltasks:`<h1>Opettajavetoiset tehtävät — oma botti II</h1>

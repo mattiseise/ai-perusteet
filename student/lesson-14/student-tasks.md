@@ -1,67 +1,91 @@
 # Rakennuspalikka 2 — Botin määrittelydokumentti
 
-> 📌 **Tämä on toinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä huolellisesti.
+**📌 Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä työ huolellisesti.
 
 ## Mitä teet?
 
-Suunnittelet bottisi **määrittelydokumentin** — botin perustamisasiakirjan, joka kertoo kenelle se on, mitä se tekee, miten se käyttäytyy ja mitä se ei tee. Tämä on ensimmäinen rakennuspalikka, joka käsittelee bottiasi konkreettisesti — tunnilla 12 keräsit yleisiä promptirakenteita, nyt suunnittelet juuri sitä bottia, jonka rakennat tunneilla 17–18.
+Suunnittelet bottisi **määrittelydokumentin**. Se on botin perustamisasiakirja, jossa kerrot, kenelle botti on tarkoitettu, mitä se tekee, miten se käyttäytyy ja mitä se ei tee.
 
-Et kirjoita vielä järjestelmäpromptia. Et rakenna bottia. Et testaa sitä. Suunnittelet sen — kuten arkkitehti tekee pohjapiirroksen ennen kuin perustukset valetaan.
+Tämä on ensimmäinen rakennuspalikka, jossa suunnittelet suoraan tulevaa bottiasi. Aiemmin keräsit yleisiä promptirakenteita. Nyt suunnittelet juuri sitä bottia, jonka rakennat oppitunneilla 17–18.
 
-## Vaiheet
+Et vielä kirjoita **järjestelmäkehotetta**, rakenna bottia tai testaa sitä. Tässä tehtävässä suunnittelet botin toiminnan etukäteen. Ajattele tätä pohjapiirroksena: hyvä suunnitelma helpottaa botin rakentamista myöhemmin.
+
+## Tavoite
+
+Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin Microsoft Copilotiin. Dokumentti auttaa sinua päättämään:
+
+- mille alalle ja kohderyhmälle botti rakennetaan,
+- mitä tehtävää botti auttaa käyttäjää tekemään,
+- millaisella äänensävyllä botti toimii,
+- missä järjestyksessä botti ohjaa käyttäjää,
+- mitä botin ei pidä tehdä.
+
+## Mitä tallennat?
+
+Tallenna lopuksi yksi dokumentti, jossa on:
+
+- valitsemasi ammattiala,
+- täytetty botin määrittelydokumentti,
+- tekoälyltä saamasi sparraus tai tiivistelmä siitä,
+- viimeistelty versio määrittelystä,
+- 2–3 lauseen pohdinta siitä, mikä muuttui sparrauksen jälkeen ja mikä on bottisi ydin.
+
+## Tee näin
 
 ### Vaihe 1 — Valitse oma ammattialasi
 
-Botti, jonka tunnilla 18 rakennat, palvelee oman alasi ammattilaista projektin määrittelydokumentin laatimisessa. Valitse, minkä alan ammattilaiselle botti rakennetaan:
+Botti, jonka rakennat myöhemmin, auttaa oman alasi ammattilaista tai opiskelijaa **projektin määrittelydokumentin** laatimisessa. Valitse ensin, mille alalle botti rakennetaan.
+
+Valitse yksi seuraavista:
 
 - **IT-tuki**
 - **Kyberturvallisuus**
 - **Pelikoodaus**
 - **Web-ohjelmointi**
 
-### Vaihe 2 — Täytä määrittelydokumentin pohja
+**Tallenna:** Kirjoita valitsemasi ala muistiin. Lisää myös yksi lause siitä, millaisissa projekteissa alan ammattilainen voisi tarvita määrittelydokumenttia.
 
-Käy alla oleva taulukko läpi ja kirjoita lyhyt vastaus jokaiseen kohtaan. Tämä on bottisi DNA — kaikki sen myöhempi käyttäytyminen rakentuu näiden vastausten päälle.
+### Vaihe 2 — Täytä botin määrittelydokumentti
 
-| Osa | Mitä siihen tulee? |
-|---|---|
-| **Botin nimi** | Anna botille nimi. Sen ei tarvitse olla nokkela — sen pitää kuvata, mitä botti tekee. Esim. *"Pelin määrittelyvalmentaja"* tai *"Web-projektin sparraaja"*. |
-| **Kohderyhmä** | Kenelle botti on? Aloittelijalle vai kokeneelle? Opiskelijalle vai työssäkäyvälle? Esim. *"Opiskelija tai aloittelevia pelikoodausprojekteja tekevä ammattilainen, joka tarvitsee tukea määrittelyn rakenteeseen."* |
-| **Tarkoitus** | Mitä konkreettista botti tekee? Yksi kahden lauseen tavoite. Esim. *"Auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin, käymällä läpi kuusi osa-aluetta järjestyksessä."* |
-| **Persoona ja äänensävy** | Millainen botti on luonteeltaan? Esim. *"Käytännönläheinen valmentaja, joka kysyy paljon tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti."* |
-| **Työnkulku** | Missä järjestyksessä botti ohjaa käyttäjää? Tyypillinen määrittelydokumentin rakenne: tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu. Sopeuta alasi mukaan ja kirjoita 5–7 vaiheen runko. |
-| **Rajat — mitä botti EI tee** | Listaa 3–5 asiaa. Esim. *"Ei kirjoita koko dokumenttia käyttäjän puolesta. Ei anna oikeudellisia neuvoja. Ei arvioi pelin kaupallista potentiaalia. Ei käsittele muiden alojen projekteja."* Rajat tekevät botista ammattimaisen. |
+Täytä alla oleva taulukko. Kirjoita jokaiseen kohtaan lyhyt mutta selkeä vastaus. Tämä taulukko on bottisi suunnittelun perusta: sen myöhempi käyttäytyminen rakentuu näiden valintojen varaan.
 
-### Vaihe 3 — Haasta määrittelysi tekoälyllä
+**Vinkki:** Kirjoita mieluummin konkreettisesti kuin yleisesti. Esimerkiksi *"auttaa opiskelijaa laatimaan web-projektin määrittelydokumentin vaiheittain"* on parempi kuin *"auttaa projektissa"*.
 
-Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä sitä haastamaan suunnitelmasi:
+| Osa | Mitä siihen kirjoitetaan? | Oma vastauksesi |
+| --- | --- | --- |
+| **Botin nimi** | Anna botille nimi, joka kertoo selvästi, mitä botti tekee. Nimen ei tarvitse olla nokkela, vaan ymmärrettävä. Esimerkiksi *"Pelin määrittelyvalmentaja"* tai *"Web-projektin sparraaja"*. |  |
+| **Kohderyhmä** | Kenelle botti on tarkoitettu? Onko käyttäjä aloittelija vai kokeneempi? Onko hän opiskelija, työntekijä tai projektin vastuuhenkilö? Esimerkiksi: *"Aloitteleva web-ohjelmoinnin opiskelija, joka tarvitsee tukea projektin määrittelyn rakenteeseen."* |  |
+| **Tarkoitus** | Mitä konkreettista botti auttaa käyttäjää tekemään? Kirjoita 1–2 lausetta. Esimerkiksi: *"Botti auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin käymällä läpi projektin taustan, tavoitteen, vaatimukset, riskit ja aikataulun."* |  |
+| **Persoona ja äänensävy** | Millainen botti on luonteeltaan? Miten se puhuu käyttäjälle? Esimerkiksi: *"Käytännönläheinen valmentaja, joka kysyy tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti. Ei käytä akateemista jargonia eikä ole liian leikkisä."* |  |
+| **Työnkulku** | Missä järjestyksessä botti ohjaa käyttäjää? Kirjoita 5–7 vaiheen runko. Voit käyttää pohjana rakennetta: **tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu → seuraavat toimet**. Muokkaa rakennetta oman alasi mukaan. |  |
+| **Rajat — mitä botti ei tee** | Listaa 3–5 asiaa, joita botti ei saa tehdä. Esimerkiksi: *"Botti ei kirjoita koko dokumenttia käyttäjän puolesta. Botti ei anna oikeudellisia neuvoja. Botti ei arvioi projektin kaupallista potentiaalia. Botti ei käsittele muiden alojen projekteja."* Rajat tekevät botista ammattimaisemman. |  |
 
-```
-Toimit minulle sparrauskumppanina. Suunnittelen bottia, joka auttaa
-oman alani ammattilaista projektin määrittelydokumentin laatimisessa.
-Tässä bottini määrittelydokumentti:
+### Vaihe 3 — Haasta määrittelysi tekoälyn avulla
 
-[liitä koko taulukkosi tähän]
+Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.
 
-Haasta suunnitelmaani. Erityisesti:
-- Onko tarkoitus tarpeeksi konkreettinen vai jääkö se yleisluontoiseksi?
-- Onko kohderyhmä riittävän rajattu?
-- Puuttuuko työnkulusta jokin tyypillinen vaihe oman alani projekteissa?
-- Ovatko rajat realistisia vai liian tiukkoja / löysiä?
-- Mitä yksi sokea piste tässä suunnitelmassa on?
+Voit käyttää esimerkiksi seuraavaa kehotetta:
 
-Älä kirjoita uutta versiota puolestani — anna minulle 2–3 konkreettista
-parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni.
-```
+> "Toimit minulle sparrauskumppanina. Suunnittelen bottia, joka auttaa oman alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa. Tässä bottini määrittelydokumentti: [liitä koko taulukkosi tähän] Haasta suunnitelmaani. Pohdi erityisesti: Onko botin tarkoitus tarpeeksi konkreettinen vai jääkö se liian yleiseksi? Onko kohderyhmä riittävän tarkasti rajattu? Puuttuuko työnkulusta jokin tyypillinen vaihe tämän alan projekteissa? Ovatko botin rajat realistisia vai liian tiukkoja tai liian löysiä? Mikä on yksi sokea piste, jota en ehkä vielä huomaa? Älä kirjoita uutta versiota puolestani. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."
 
-Tämä on harjoitus siitä, miten tekoälyä käytetään *suunnittelukumppanina*. Et anna sen suunnitella puolestasi, mutta annat sen kyseenalaistaa ajatuksesi.
+Tämä on harjoitus siitä, miten tekoälyä käytetään *suunnittelukumppanina*. Et anna sen päättää puolestasi, mutta annat sen kyseenalaistaa suunnitelmasi.
 
-### Vaihe 4 — Viimeistele dokumentti (tämä on rakennuspalikkasi)
+### Vaihe 4 — Viimeistele määrittelydokumentti
 
-Tee tekoälyn palautteen pohjalta korjauksia ja viimeistele määrittelydokumentti. Lopullisen version pitää olla niin selkeä, että sen pohjalta voisi rakentaa botin myös toinen henkilö — ei vain sinä itse.
+Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Viimeistele määrittelydokumentti niin, että sen perusteella voisi rakentaa botin myös toinen henkilö, ei vain sinä itse.
+
+Tarkista viimeistelyssä erityisesti nämä asiat:
+
+- Botin tarkoitus on konkreettinen ja helposti ymmärrettävä.
+- Kohderyhmä on rajattu selkeästi.
+- Työnkulku etenee loogisessa järjestyksessä.
+- Botin rajat kertovat selvästi, mitä botti ei tee.
+- Äänensävy sopii kohderyhmälle ja tehtävän vakavuuteen.
 
 Kirjoita lopuksi 2–3 lauseen pohdinta: *"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"*
 
-> 💡 **Miksi tämä on tärkeää:** Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä — avaat tämän dokumentin ja katsot, mitä olit suunnitellut. Tämä määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, mitä tietopohja tarvitsee tukea, ja milloin botti on valmis.
+> **💡 Miksi tämä on tärkeää:** Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä, vaan palaat tähän dokumenttiin. Tämä määrittely kertoo, mitä järjestelmäkehotteeseen pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin botti on valmis ensimmäiseen testiin.
+
+> **💡 Tarkista lopuksi:** Olet valinnut ammattialan, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.
 
 **2 / 3 rakennuspalikkaa kerätty**
