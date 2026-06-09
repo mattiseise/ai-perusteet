@@ -47,8 +47,8 @@ Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **
 Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// kiinteä polku vai tilanne ratkaisee</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:22px;padding:14px 22px">
-  <div class="l20-lane">
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:24px;padding:18px 24px">
+  <div class="l20-lane l20-dim">
     <span class="l20-lbl">AUTOMAATIO</span>
     <span class="l20-box">A</span><span class="l20-seg"><i class="l20-dot l20-fix"></i></span><span class="l20-box">B</span><span class="l20-seg"></span><span class="l20-box">C</span>
     <span class="l20-note">aina sama polku</span>
@@ -62,22 +62,23 @@ Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysym
 </div>
 <figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Autonominen agentti arvioi tilanteen ja valitsee tien itse — sama tehtävä voi eri tilanteessa johtaa eri polulle.</figcaption></figure>
 <style>
-.l20-lane{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
-.l20-lbl{width:100px;font-size:10px;letter-spacing:.1em;color:#8B94B3}
-.l20-box{background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:6px 10px}
-.l20-sit{animation:l20sit 16s steps(1) infinite}
+.l20-lane{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:13px;color:#EAEEF8}
+.l20-dim{opacity:.66}
+.l20-lbl{width:104px;font-size:12px;letter-spacing:.1em;color:#B9C2DA}
+.l20-box{background:#1E2740;border:1.5px solid #3A4560;border-radius:7px;padding:7px 11px}
+.l20-sit{animation:l20sit 7s steps(1) infinite}
 @keyframes l20sit{0%,49%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}}
-.l20-seg{position:relative;width:40px;height:2px;background:#2A3450}
-.l20-dot{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:oklch(0.66 0.15 264)}
-.l20-fix{animation:l20fix 6s ease-in-out infinite}
-@keyframes l20fix{0%{left:-4px;opacity:0}12%{opacity:1}100%{left:128px;opacity:1}}
-.l20-dia{background:#11182A;border:1px solid oklch(0.66 0.13 208);border-radius:6px;padding:6px 10px;color:#E6EAF5}
-.l20-brs{display:flex;flex-direction:column;gap:6px;margin-left:4px}
-.l20-br{font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:6px;padding:3px 9px}
-.brA{animation:l20a 16s steps(1) infinite}.brB{animation:l20b 16s steps(1) infinite}
-@keyframes l20a{0%,49%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:#69728F;border-color:#2A3450}}
-@keyframes l20b{50%,99%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}0%,49%{color:#69728F;border-color:#2A3450}}
-.l20-note{font-size:9px;color:#69728F;margin-left:auto}
+.l20-seg{position:relative;width:42px;height:2px;background:#3A4560}
+.l20-dot{position:absolute;top:-4px;width:9px;height:9px;border-radius:50%;background:oklch(0.66 0.15 264)}
+.l20-fix{animation:l20fix 7s cubic-bezier(.45,0,.15,1) infinite}
+@keyframes l20fix{0%{left:-4px;opacity:0}14%{opacity:1}100%{left:132px;opacity:1}}
+.l20-dia{background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:7px;padding:7px 11px;color:#FFFFFF}
+.l20-brs{display:flex;flex-direction:column;gap:7px;margin-left:4px}
+.l20-br{font-size:12px;color:#7A839E;border:1.5px solid #3A4560;border-radius:7px;padding:4px 10px}
+.brA{animation:l20a 7s steps(1) infinite}.brB{animation:l20b 7s steps(1) infinite}
+@keyframes l20a{0%,49%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:#7A839E;border-color:#3A4560}}
+@keyframes l20b{50%,99%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}0%,49%{color:#7A839E;border-color:#3A4560}}
+.l20-note{font-size:11px;color:#B9C2DA;margin-left:auto}
 @media (prefers-reduced-motion:reduce){.l20-fix,.l20-sit,.brA,.brB{animation:none}.brA{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}}
 </style>
 

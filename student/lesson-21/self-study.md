@@ -19,7 +19,7 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee vain tarvitsemansa</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:22px;padding:0 20px">
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:24px;padding:16px 22px">
   <div class="l21-store"><div class="l21-h">PITKÄKESTOINEN MUISTI</div>
     <div class="l21-grid"><span>tilaus #12</span><span class="l21-rel">asiakkaan toive</span><span>hinnasto</span><span>aiempi chat</span><span>ohje</span><span>palaute</span></div></div>
   <div class="l21-arr">haku →</div>
@@ -29,21 +29,21 @@ Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agent
 </div>
 <figcaption class="ai-demo__cap">Agentin työmuisti on pieni eikä pidä kaikkea mielessä. Se hakee pitkäkestoisesta muistista vain sen palasen, jonka merkitys vastaa nykyistä tehtävää — ei kaikkea.</figcaption></figure>
 <style>
-.l21-store,.l21-work{border:1px solid #232C44;border-radius:9px;background:#11182A;padding:11px}
-.l21-h{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;color:#8B94B3;margin-bottom:8px}
-.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;width:200px}
-.l21-grid span{font-family:var(--font-mono);font-size:9px;color:#69728F;background:#161E33;border:1px solid #232C44;border-radius:5px;padding:5px;text-align:center}
-.l21-rel{animation:l21rel 13s ease-in-out infinite}
-@keyframes l21rel{0%,12%{color:#69728F;border-color:#232C44}24%,92%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{color:#69728F}}
-.l21-arr{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.15 264);opacity:.3;animation:l21arr 13s ease-in-out infinite}
-@keyframes l21arr{0%,18%{opacity:.2}34%,60%{opacity:1}80%,100%{opacity:.2}}
-.l21-slots{display:flex;flex-direction:column;gap:5px;width:124px}
-.l21-slots span{font-family:var(--font-mono);font-size:9px;border-radius:5px;padding:6px;text-align:center}
-.l21-old{color:#C7CEE6;background:#1A2236;border:1px solid #2A3450}
-.l21-in{color:#0B0F1A;background:oklch(0.66 0.15 264);opacity:0;animation:l21in 13s ease-in-out infinite}
-@keyframes l21in{0%,40%{opacity:0;transform:translateX(-10px)}56%,92%{opacity:1;transform:translateX(0)}100%{opacity:0}}
-.l21-cap{font-family:var(--font-mono);font-size:9px;color:#69728F;margin-top:7px;text-align:center}
-@media (prefers-reduced-motion:reduce){.l21-rel,.l21-arr,.l21-in{animation:none}.l21-rel{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l21-in{opacity:1}}
+.l21-store,.l21-work{border:1.5px solid #3A4560;border-radius:9px;background:#11182A;padding:12px}
+.l21-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:#B9C2DA;margin-bottom:9px}
+.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;width:212px}
+.l21-grid span{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;background:#1E2740;border:1.5px solid #3A4560;border-radius:6px;padding:6px;text-align:center}
+.l21-rel{animation:l21rel 7s ease-out infinite}
+@keyframes l21rel{0%,14%{color:#B9C2DA;border-color:#3A4560}28%,90%{color:#FFFFFF;border-color:oklch(0.66 0.15 264);background:#1b2a4d}100%{color:#B9C2DA}}
+.l21-arr{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.15 264);opacity:.3;animation:l21arr 7s ease-out infinite}
+@keyframes l21arr{0%,18%{opacity:.25}38%,64%{opacity:1}84%,100%{opacity:.25}}
+.l21-slots{display:flex;flex-direction:column;gap:6px;width:130px}
+.l21-slots span{font-family:var(--font-mono);font-size:11px;border-radius:6px;padding:7px;text-align:center}
+.l21-old{color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560}
+.l21-in{color:#0B0F1A;background:oklch(0.66 0.15 264);opacity:0;animation:l21in 7s ease-out infinite}
+@keyframes l21in{0%,40%{opacity:0;transform:translateX(-12px)}56%,90%{opacity:1;transform:translateX(0)}100%{opacity:0}}
+.l21-cap{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;margin-top:8px;text-align:center}
+@media (prefers-reduced-motion:reduce){.l21-rel,.l21-arr,.l21-in{animation:none}.l21-rel{color:#FFFFFF;border-color:oklch(0.66 0.15 264)}.l21-in{opacity:1}}
 </style>
 
 

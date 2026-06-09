@@ -9,7 +9,7 @@ Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vas
 **Konteksti** tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan *sinun* kysymyksestäsi, *sinun* tavoitteistasi ja *sinun* käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// enemmän kontekstia → terävämpi vastaus</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:16px 24px">
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:20px 28px">
   <div class="l12-ctx"><span class="l12-cl">konteksti:</span><span class="l12-b b1">tilanne</span><span class="l12-b b2">tavoite</span><span class="l12-b b3">sävy</span><span class="l12-b b4">rajat</span></div>
   <div class="l12-ans">
     <div class="l12-vague">→ "Hei! Mitä kuuluu?" <span class="l12-tag">epätarkka</span></div>
@@ -18,20 +18,20 @@ Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vas
 </div>
 <figcaption class="ai-demo__cap">Sama pyyntö. Vastaus ei terävöidy mallin mielialasta vaan kontekstista: kun annat tilanteen, tavoitteen, sävyn ja rajat, vasta silloin vastaus muuttuu osuvaksi.</figcaption></figure>
 <style>
-.l12-ctx{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.l12-cl{font-family:var(--font-mono);font-size:10px;color:#8B94B3}
-.l12-b{font-family:var(--font-mono);font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:999px;padding:2px 9px;opacity:.3}
-.l12-b.b1{animation:l12b 13s ease-in-out infinite}
-.l12-b.b2{animation:l12b 13s ease-in-out infinite;animation-delay:.8s}
-.l12-b.b3{animation:l12b 13s ease-in-out infinite;animation-delay:1.6s}
-.l12-b.b4{animation:l12b 13s ease-in-out infinite;animation-delay:2.4s}
-@keyframes l12b{0%,4%{opacity:.3}20%,92%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.3}}
-.l12-ans{font-family:var(--font-mono);font-size:11px;line-height:1.5;position:relative;min-height:54px}
-.l12-vague{color:#69728F;animation:l12v 13s ease-in-out infinite}
-@keyframes l12v{0%,40%{opacity:1}50%,100%{opacity:0}}
-.l12-rich{position:absolute;top:0;color:#E6EAF5;opacity:0;animation:l12r 13s ease-in-out infinite}
-@keyframes l12r{0%,48%{opacity:0}58%,94%{opacity:1}100%{opacity:0}}
-.l12-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B94B3;border:1px solid #2A3450;border-radius:999px;padding:1px 7px;margin-left:4px}
+.l12-ctx{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.l12-cl{font-family:var(--font-mono);font-size:12px;color:#B9C2DA}
+.l12-b{font-family:var(--font-mono);font-size:12px;color:#7A839E;border:1.5px solid #3A4560;border-radius:999px;padding:3px 11px;opacity:.5}
+.l12-b.b1{animation:l12b 7s ease-out infinite}
+.l12-b.b2{animation:l12b 7s ease-out infinite;animation-delay:.35s}
+.l12-b.b3{animation:l12b 7s ease-out infinite;animation-delay:.7s}
+.l12-b.b4{animation:l12b 7s ease-out infinite;animation-delay:1.05s}
+@keyframes l12b{0%{opacity:.5}24%,90%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.5}}
+.l12-ans{font-family:var(--font-mono);font-size:14px;line-height:1.55;position:relative;min-height:62px}
+.l12-vague{color:#7A839E;animation:l12v 7s ease-out infinite}
+@keyframes l12v{0%,42%{opacity:1}52%,100%{opacity:0}}
+.l12-rich{position:absolute;top:0;color:#EAEEF8;opacity:0;animation:l12r 7s ease-out infinite}
+@keyframes l12r{0%,50%{opacity:0}60%,92%{opacity:1}100%{opacity:0}}
+.l12-tag{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#B9C2DA;border:1.5px solid #3A4560;border-radius:999px;padding:1px 8px;margin-left:6px}
 .l12-tg{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
 @media (prefers-reduced-motion:reduce){.l12-b,.l12-vague,.l12-rich{animation:none}.l12-b{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l12-vague{opacity:0}.l12-rich{opacity:1}}
 </style>

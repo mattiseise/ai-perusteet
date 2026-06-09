@@ -44,34 +44,32 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: ajattele → toimi → havaitse</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:0 22px">
-  <svg viewBox="0 0 320 200" style="width:100%;max-width:360px;height:190px">
-    <circle cx="160" cy="100" r="68" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
-    <g class="l23-orbit"><circle cx="160" cy="32" r="6" fill="oklch(0.66 0.15 305)"/></g>
-    <g font-family="var(--font-mono)">
-      <text x="160" y="26" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n1">AJATTELE</text>
-      <text x="160" y="40" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n1">"tarvitsen hinnan"</text>
-      <text x="248" y="150" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n2">TOIMI</text>
-      <text x="248" y="163" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n2">"hae hinta"</text>
-      <text x="72" y="150" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n3">HAVAITSE</text>
-      <text x="72" y="163" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n3">"29 €"</text>
-      <text x="160" y="104" text-anchor="middle" font-size="9" fill="#69728F">toistuu kunnes</text>
-      <text x="160" y="116" text-anchor="middle" font-size="9" fill="#69728F">tavoite valmis</text>
-    </g>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: ajattele → toimi → havaitse, kierros kerrallaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:18px 24px">
+  <div class="l23-tbl">
+    <div class="l23-head"><span class="h-aj">AJATTELE</span><span class="h-to">TOIMI</span><span class="h-ha">HAVAITSE</span></div>
+    <div class="l23-row"><span class="c cA r1"><i>tarvitsen hinnan</i></span><span class="c cB r1">hae hinta</span><span class="c cC r1">hinta: 45 €</span></div>
+    <div class="l23-row"><span class="c cA r2"><i>tieto riittää</i></span><span class="c cB r2">vastaa: 45 €</span><span class="c cC r2 done">✓ valmis</span></div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">ReAct vuorottelee ajattelua ja toimintaa: agentti päättelee mitä tarvitsee, toimii työkalulla ja havaitsee tuloksen — ja päättelee taas. Toiminta ei ole sokeaa eikä pelkkää puhetta.</figcaption></figure>
+<figcaption class="ai-demo__cap">ReAct vuorottelee ajattelua ja toimintaa: agentti päättelee mitä tarvitsee, toimii työkalulla ja havaitsee tuloksen — ja päättelee taas. Kierrokset kertyvät, kunnes tehtävä valmistuu.</figcaption></figure>
 <style>
-.l23-orbit{transform-box:view-box;transform-origin:160px 100px;animation:l23spin 15s ease-in-out infinite}
-@keyframes l23spin{0%,18%{transform:rotate(0deg)}28%,46%{transform:rotate(120deg)}56%,74%{transform:rotate(240deg)}84%,100%{transform:rotate(360deg)}}
-.n1{animation:l23n1 15s steps(1) infinite}
-.n2{animation:l23n2 15s steps(1) infinite}
-.n3{animation:l23n3 15s steps(1) infinite}
-@keyframes l23n1{0%,27%{opacity:1}28%,92%{opacity:.35}100%{opacity:1}}
-@keyframes l23n2{0%,27%{opacity:.35}28%,55%{opacity:1}56%,100%{opacity:.35}}
-@keyframes l23n3{0%,55%{opacity:.35}56%,83%{opacity:1}84%,100%{opacity:.35}}
-@media (prefers-reduced-motion:reduce){.l23-orbit,.n1,.n2,.n3{animation:none}.n1,.n2,.n3{opacity:1}}
+.l23-tbl{display:flex;flex-direction:column;gap:8px;width:100%;max-width:480px}
+.l23-head,.l23-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.l23-head span{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-align:center;padding-bottom:4px;border-bottom:2px solid}
+.h-aj{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}
+.h-to{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
+.h-ha{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}
+.l23-row .c{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:9px 8px;text-align:center;opacity:0}
+.l23-row .c i{color:#B9C2DA;font-style:italic}
+.r1{animation:l23in 7s ease-out infinite}
+.r2{animation:l23in2 7s ease-out infinite}
+.cA.r1{animation-delay:.9s}.cB.r1{animation-delay:1.2s}.cC.r1{animation-delay:1.5s}
+.cA.r2{animation-delay:3.4s}.cB.r2{animation-delay:3.7s}.cC.r2{animation-delay:4.0s}
+@keyframes l23in{0%{opacity:0;transform:translateY(8px)}14%,90%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l23in2{0%{opacity:0;transform:translateY(8px)}20%,90%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.done{color:#7FD0A8!important;border-color:#7FD0A8!important;font-weight:500}
+@media (prefers-reduced-motion:reduce){.r1,.r2{animation:none;opacity:1!important;transform:none}}
 </style>
 
 ## Ketjuajattelu: jaa ongelma osiin

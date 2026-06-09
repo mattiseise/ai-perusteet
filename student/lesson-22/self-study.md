@@ -63,31 +63,27 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkalua ja odottaa tulosta</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:0 22px">
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:16px 24px">
   <div class="l22-row">
     <div class="l22-box">AGENTTI</div>
-    <div class="l22-pipe">
-      <span class="l22-out">hae: sää Helsinki →</span>
-      <span class="l22-wait">työkalu työskentelee…</span>
-      <span class="l22-back">← 5 °C, poutaa</span>
-    </div>
+    <div class="l22-pipe"><span class="l22-out">hae: sää Helsinki →</span><span class="l22-wait">työkalu työskentelee…</span><span class="l22-back">← 5 °C, poutaa</span></div>
     <div class="l22-box l22-tool">TYÖKALU<br><span>(sää-API)</span></div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se lähettää pyynnön ulkoiselle työkalulle, odottaa tuloksen ja käyttää sitä — näin se yltää oman koulutusdatansa ulkopuolelle.</figcaption></figure>
 <style>
 .l22-row{display:flex;align-items:center}
-.l22-box{font-family:var(--font-mono);font-size:11px;color:#E6EAF5;background:#11182A;border:1px solid #2A3450;border-radius:9px;padding:16px 14px;text-align:center;line-height:1.4}
-.l22-tool{border-color:oklch(0.66 0.13 208)}.l22-tool span{color:#8B94B3;font-size:9px}
-.l22-pipe{position:relative;width:220px;height:46px}
-.l22-pipe::before{content:"";position:absolute;top:23px;left:0;right:0;height:1px;background:#232C44}
-.l22-out,.l22-wait,.l22-back{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;white-space:nowrap;opacity:0}
-.l22-out{top:2px;color:oklch(0.66 0.15 264);animation:l22out 13s ease-in-out infinite}
-.l22-wait{top:18px;color:#8B94B3;animation:l22wait 13s ease-in-out infinite}
-.l22-back{bottom:2px;color:oklch(0.66 0.13 208);animation:l22back 13s ease-in-out infinite}
-@keyframes l22out{0%{opacity:0;transform:translate(-120%,0)}10%,30%{opacity:1;transform:translate(-50%,0)}38%,100%{opacity:0;transform:translate(20%,0)}}
-@keyframes l22wait{0%,38%{opacity:0}46%,60%{opacity:1}66%,100%{opacity:0}}
-@keyframes l22back{0%,64%{opacity:0;transform:translate(20%,0)}74%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-120%,0)}}
+.l22-box{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:16px 14px;text-align:center;line-height:1.4}
+.l22-tool{border-color:oklch(0.66 0.13 208)}.l22-tool span{color:#B9C2DA;font-size:11px}
+.l22-pipe{position:relative;width:230px;height:50px}
+.l22-pipe::before{content:"";position:absolute;top:25px;left:0;right:0;height:1.5px;background:#3A4560}
+.l22-out,.l22-wait,.l22-back{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:13px;white-space:nowrap;opacity:0}
+.l22-out{top:1px;color:oklch(0.66 0.15 264);animation:l22out 7s cubic-bezier(.45,0,.15,1) infinite}
+.l22-wait{top:19px;color:#B9C2DA;font-size:12px;animation:l22wait 7s ease-out infinite}
+.l22-back{bottom:1px;color:oklch(0.66 0.13 208);animation:l22back 7s cubic-bezier(.45,0,.15,1) infinite}
+@keyframes l22out{0%{opacity:0;transform:translate(-120%,0)}12%,32%{opacity:1;transform:translate(-50%,0)}40%,100%{opacity:0;transform:translate(20%,0)}}
+@keyframes l22wait{0%,40%{opacity:0}50%,60%{opacity:1}68%,100%{opacity:0}}
+@keyframes l22back{0%,64%{opacity:0;transform:translate(20%,0)}76%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-120%,0)}}
 @media (prefers-reduced-motion:reduce){.l22-out,.l22-wait{animation:none;opacity:0}.l22-back{animation:none;opacity:1;transform:translate(-50%,0)}}
 </style>
 

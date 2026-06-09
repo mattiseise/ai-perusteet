@@ -57,8 +57,8 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää</span>
-<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:16px 22px">
-  <div class="l01-col">
+<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:20px 24px">
+  <div class="l01-col l01-dim">
     <div class="l01-h">SÄÄNTÖ</div>
     <div class="l01-rule">jos summa &gt; 10 000 € → hälytä</div>
     <div class="l01-in">tapahtuma: 9 990 €</div>
@@ -74,27 +74,28 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 </div>
 <figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia yhtä aikaa ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
 <style>
-.l01-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:9px}
-.l01-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
-.l01-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
-.l01-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
-.l01-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
-.l01-ok{color:#6FBF9B}
-.l01-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 11s ease-in-out infinite}
-@keyframes l01miss{0%,40%{opacity:0}52%,94%{opacity:1}100%{opacity:0}}
-.l01-sigs{display:flex;flex-wrap:wrap;gap:5px}
-.l01-sig{font-family:var(--font-mono);font-size:9px;color:#69728F;border:1px solid #2A3450;border-radius:999px;padding:2px 8px;opacity:.3}
-.l01-sig.s1{animation:l01sig 11s ease-in-out infinite}
-.l01-sig.s2{animation:l01sig 11s ease-in-out infinite;animation-delay:.6s}
-.l01-sig.s3{animation:l01sig 11s ease-in-out infinite;animation-delay:1.2s}
-.l01-sig.s4{animation:l01sig 11s ease-in-out infinite;animation-delay:1.8s}
-@keyframes l01sig{0%{opacity:.3}18%,94%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.3}}
-.l01-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
-.l01-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 11s ease-in-out infinite}
-.l01-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
-@keyframes l01fill{0%,28%{width:4%}52%{width:97%}94%{width:97%}100%{width:4%}}
+.l01-col{flex:1;max-width:248px;border:1.5px solid #3A4560;border-radius:10px;background:#11182A;padding:15px;display:flex;flex-direction:column;gap:10px}
+.l01-dim{opacity:.78}
+.l01-h{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;color:#B9C2DA}
+.l01-rule{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;line-height:1.4}
+.l01-in{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:7px 10px}
+.l01-out{font-family:var(--font-mono);font-size:14px;font-weight:500;margin-top:auto}
+.l01-ok{color:#B9C2DA}
+.l01-miss{font-family:var(--font-mono);font-size:12px;color:#F08A78;opacity:0;animation:l01miss 7s ease-out infinite}
+@keyframes l01miss{0%,40%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}
+.l01-sigs{display:flex;flex-wrap:wrap;gap:6px}
+.l01-sig{font-family:var(--font-mono);font-size:11px;color:#7A839E;border:1.5px solid #3A4560;border-radius:999px;padding:3px 9px}
+.l01-sig.s1{animation:l01sig 7s ease-out infinite}
+.l01-sig.s2{animation:l01sig 7s ease-out infinite;animation-delay:.3s}
+.l01-sig.s3{animation:l01sig 7s ease-out infinite;animation-delay:.6s}
+.l01-sig.s4{animation:l01sig 7s ease-out infinite;animation-delay:.9s}
+@keyframes l01sig{0%{opacity:.5}22%,90%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.5}}
+.l01-meter{position:relative;height:22px;border:1.5px solid #3A4560;border-radius:6px;overflow:hidden;background:#0E1320}
+.l01-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 7s cubic-bezier(.45,0,.15,1) infinite}
+.l01-mlbl{position:absolute;right:8px;top:3px;font-family:var(--font-mono);font-size:13px;color:#FFFFFF}
+@keyframes l01fill{0%,28%{width:4%}55%{width:97%}90%{width:97%}100%{width:4%}}
 .l01-flag{color:oklch(0.66 0.15 305)}
-@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill{animation:none}.l01-miss{opacity:1}.l01-sig{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%}}
+@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill{animation:none}.l01-miss{opacity:1}.l01-sig{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%}}
 </style>
 
 ## Konkreettisia esimerkkejä arjesta

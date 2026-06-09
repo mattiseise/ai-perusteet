@@ -24,34 +24,38 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 
 > **Pysähdy hetkeksi:** Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa ulos</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:18px 28px">
   <div class="l05-scene">
     <span class="l05-side">uusi sisään →</span>
     <div class="l05-win">
       <div class="l05-track">
-        <span class="l05-tk">alku</span><span class="l05-tk">tausta</span><span class="l05-tk">ohje</span><span class="l05-tk">kysymys</span><span class="l05-tk">vastaus</span><span class="l05-tk l05-new">uusin</span>
+        <span class="l05-tk l05-old">alku</span><span class="l05-tk">tausta</span><span class="l05-tk">ohje</span><span class="l05-tk">kysymys</span><span class="l05-tk">vastaus</span>
       </div>
+      <span class="l05-tk l05-new">uusin</span>
+      <span class="l05-drop">↓ unohtui</span>
     </div>
-    <div class="l05-fallen">alku ↓ ei enää näkyvissä</div>
-    <span class="l05-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
+    <span class="l05-cap">ikkuna: 5 muistipaikkaa · <b>TÄYNNÄ</b></span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uusi tieto työntyy sisään oikealta, vanhin putoaa ulos vasemmalta — eikä malli kerro sinulle siitä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uusi tieto työntyy sisään oikealta, vanhin liukuu ulos vasemmalta ja putoaa pois — malli ei enää näe sitä, eikä kerro sinulle siitä.</figcaption></figure>
 <style>
-.l05-scene{position:relative;width:330px;display:flex;flex-direction:column;align-items:center;gap:10px;animation:l05scene 13s ease-in-out infinite}
-@keyframes l05scene{0%,4%{opacity:0}8%,94%{opacity:1}100%{opacity:0}}
-.l05-side{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.13 208);align-self:flex-end;margin-right:6px}
-.l05-win{position:relative;width:284px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.l05-track{position:absolute;top:8px;left:8px;display:flex;gap:8px;animation:l05push 13s ease-in-out infinite}
-.l05-tk{flex:none;width:46px;text-align:center;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0}
-.l05-new{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent;opacity:0;animation:l05newin 13s ease-in-out infinite}
-@keyframes l05push{0%,30%{transform:translateX(0)}48%,92%{transform:translateX(-54px)}100%{transform:translateX(-54px)}}
-@keyframes l05newin{0%,30%{opacity:0}48%,92%{opacity:1}100%{opacity:1}}
-.l05-fallen{font-family:var(--font-mono);font-size:9.5px;color:#69728F;border:1px dashed #3A445F;border-radius:6px;padding:4px 9px;align-self:flex-start;margin-left:6px;opacity:0;animation:l05fall 13s ease-in-out infinite}
-@keyframes l05fall{0%,30%{opacity:0;transform:translateY(-14px)}44%{opacity:1;transform:translateY(0)}92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-.l05-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
-@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new,.l05-fallen{animation:none}.l05-track{transform:translateX(-54px)}.l05-new,.l05-fallen{opacity:1}.l05-scene{opacity:1}}
+.l05-scene{position:relative;width:360px;display:flex;flex-direction:column;align-items:center;gap:30px;animation:l05scene 7s ease-out infinite}
+@keyframes l05scene{0%{opacity:0}8%{opacity:1}90%{opacity:1}100%{opacity:0}}
+.l05-side{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.13 208);align-self:flex-end;margin-right:8px}
+.l05-win{position:relative;width:336px;height:56px;border:2px solid oklch(0.66 0.13 208);border-radius:10px;background:#11182A;overflow:visible}
+.l05-track{position:absolute;top:9px;left:8px;display:flex;gap:9px;animation:l05push 7s cubic-bezier(.45,0,.15,1) infinite}
+.l05-tk{flex:none;width:56px;height:36px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px}
+.l05-new{position:absolute;top:9px;left:272px;color:#0B0F1A;background:oklch(0.66 0.13 208);border:none;opacity:0;animation:l05new 7s cubic-bezier(.45,0,.15,1) infinite}
+.l05-old{animation:l05fall 7s cubic-bezier(.45,0,.15,1) infinite;z-index:3}
+@keyframes l05push{0%,16%{transform:translateX(0)}40%,100%{transform:translateX(-65px)}}
+@keyframes l05new{0%,16%{opacity:0;transform:translateX(70px)}40%,100%{opacity:1;transform:translateX(0)}}
+@keyframes l05fall{0%,16%{opacity:1;color:#EAEEF8;background:#1E2740;transform:translate(0,0) rotate(0)}40%{opacity:.9;color:#B9C2DA;transform:translate(0,0) rotate(0)}54%{opacity:.9;transform:translate(0,2px) rotate(-3deg)}72%{opacity:.6;transform:translate(-20px,54px) rotate(-14deg)}74%,100%{opacity:.5;color:#9AA6C4;background:#161E33;transform:translate(-24px,58px) rotate(-15deg)}}
+.l05-drop{position:absolute;left:-6px;top:70px;font-family:var(--font-mono);font-size:11px;color:#7A839E;opacity:0;animation:l05drop 7s ease-out infinite}
+@keyframes l05drop{0%,66%{opacity:0}78%,90%{opacity:1}100%{opacity:0}}
+.l05-cap{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;letter-spacing:.04em}
+.l05-cap b{color:oklch(0.66 0.13 208);font-weight:500}
+@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new,.l05-old,.l05-drop{animation:none}.l05-track{transform:translateX(-65px)}.l05-new{opacity:1;transform:none}.l05-old{opacity:.5;transform:translate(-24px,58px) rotate(-15deg)}.l05-drop{opacity:1}.l05-scene{opacity:1}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

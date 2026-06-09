@@ -71,44 +71,42 @@ Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, va
 Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti kiertää kehää</span>
-<div class="ai-demo__stage" style="display:flex;gap:24px;align-items:center;justify-content:center;padding:0 22px">
-  <div class="l19-col">
+<div class="ai-demo__stage" style="display:flex;gap:26px;align-items:center;justify-content:center;padding:14px 24px">
+  <div class="l19-col l19-dim">
     <div class="l19-h">BOTTI</div>
     <div class="l19-chain"><span class="l19-n">kysymys</span><span class="l19-ar">→</span><span class="l19-n">vastaus</span></div>
     <div class="l19-stop">■ valmis · yksi askel</div>
   </div>
   <div class="l19-col">
     <div class="l19-h" style="color:oklch(0.66 0.13 208)">AGENTTI</div>
-    <svg viewBox="0 0 130 130" style="width:128px;height:128px">
-      <circle cx="65" cy="65" r="46" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
-      <g class="l19-orbit"><circle cx="65" cy="19" r="6" fill="oklch(0.66 0.13 208)"/></g>
-      <text x="65" y="16" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">suunnittele</text>
-      <text x="108" y="92" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">työkalu</text>
-      <text x="22" y="92" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">havaitse</text>
+    <svg viewBox="0 0 150 150" style="width:140px;height:140px">
+      <circle cx="75" cy="75" r="52" fill="none" stroke="#3A4560" stroke-width="2" stroke-dasharray="4 7"/>
+      <g class="l19-orbit"><circle cx="75" cy="23" r="7" fill="oklch(0.66 0.13 208)"/></g>
+      <text x="75" y="19" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#EAEEF8">suunnittele</text>
+      <text x="123" y="108" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#EAEEF8">työkalu</text>
+      <text x="27" y="108" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#EAEEF8">havaitse</text>
     </svg>
     <div class="l19-step"><span class="c1">askel 1</span><span class="c2">askel 2</span><span class="c3">askel 3</span><span class="cd">✓ tavoite valmis</span></div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja pysähtyy. Agentti kiertää kehää — suunnittelee, käyttää työkalua, havaitsee tuloksen — ja toistaa askel kerrallaan, kunnes tavoite täyttyy.</figcaption></figure>
 <style>
-.l19-col{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;max-width:220px}
-.l19-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
-.l19-chain{display:flex;align-items:center;gap:8px}
-.l19-n{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 11px}
-.l19-ar{color:#3A445F}
-.l19-stop{font-family:var(--font-mono);font-size:10px;color:#69728F}
-.l19-orbit{transform-box:view-box;transform-origin:65px 65px;animation:l19spin 15s ease-in-out infinite}
-@keyframes l19spin{0%,18%{transform:rotate(0deg)}28%,46%{transform:rotate(120deg)}56%,74%{transform:rotate(240deg)}84%,100%{transform:rotate(360deg)}}
-.l19-step{position:relative;font-family:var(--font-mono);font-size:10px;height:14px;width:120px;text-align:center}
-.l19-step span{position:absolute;left:0;right:0;opacity:0}
-.l19-step .c1{color:oklch(0.66 0.13 208);animation:l19s1 15s steps(1) infinite}
-.l19-step .c2{color:oklch(0.66 0.13 208);animation:l19s2 15s steps(1) infinite}
-.l19-step .c3{color:oklch(0.66 0.13 208);animation:l19s3 15s steps(1) infinite}
-.l19-step .cd{color:#6FBF9B;animation:l19sd 15s steps(1) infinite}
-@keyframes l19s1{0%,27%{opacity:1}28%,100%{opacity:0}}
-@keyframes l19s2{28%,55%{opacity:1}0%,27%{opacity:0}56%,100%{opacity:0}}
-@keyframes l19s3{56%,83%{opacity:1}0%,55%{opacity:0}84%,100%{opacity:0}}
-@keyframes l19sd{84%,100%{opacity:1}0%,83%{opacity:0}}
+.l19-col{display:flex;flex-direction:column;align-items:center;gap:13px;flex:1;max-width:220px}
+.l19-dim{opacity:.7}
+.l19-h{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;color:#B9C2DA}
+.l19-chain{display:flex;align-items:center;gap:9px}
+.l19-n{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:8px 12px}
+.l19-ar{color:#5A688C}
+.l19-stop{font-family:var(--font-mono);font-size:11px;color:#B9C2DA}
+.l19-orbit{transform-box:view-box;transform-origin:75px 75px;animation:l19spin 7s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes l19spin{0%,16%{transform:rotate(0deg)}28%,44%{transform:rotate(120deg)}56%,72%{transform:rotate(240deg)}84%,100%{transform:rotate(360deg)}}
+.l19-step{position:relative;font-family:var(--font-mono);font-size:12px;height:16px;width:140px;text-align:center}
+.l19-step span{position:absolute;left:0;right:0;opacity:0;color:oklch(0.66 0.13 208)}
+.l19-step .c1{animation:l19a 7s steps(1) infinite}.l19-step .c2{animation:l19b 7s steps(1) infinite}.l19-step .c3{animation:l19c 7s steps(1) infinite}.l19-step .cd{color:#7FD0A8;animation:l19d 7s steps(1) infinite}
+@keyframes l19a{0%,27%{opacity:1}28%,100%{opacity:0}}
+@keyframes l19b{0%,27%{opacity:0}28%,55%{opacity:1}56%,100%{opacity:0}}
+@keyframes l19c{0%,55%{opacity:0}56%,83%{opacity:1}84%,100%{opacity:0}}
+@keyframes l19d{0%,83%{opacity:0}84%,100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.l19-orbit{animation:none;transform:rotate(240deg)}.l19-step .cd{opacity:1}.l19-step .c1,.l19-step .c2,.l19-step .c3{opacity:0}}
 </style>
 
