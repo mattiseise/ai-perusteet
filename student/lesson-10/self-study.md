@@ -1,78 +1,84 @@
-# Työkalupaletti — ChatGPT, Claude ja Copilot käytännössä
+# Kilpailuta tekoälyt — mikä työkalu mihinkin?
 
 ## Johdanto
 
-Olet nyt saavuttanut kurssin kohdan, jossa teoria muuttuu käytännöksi. Olet oppinut, mitä tekoäly on, miten se toimii ja mitä rajoituksia sillä on. Nyt on aika tarttua itse työkaluihin.
+Olet nyt saavuttanut kurssin kohdan, jossa teoria muuttuu käytännöksi. Olet oppinut, mitä tekoäly on, miten se toimii ja millaisia rajoituksia sillä on. Nyt on aika tarttua itse työkaluihin.
 
-Huomaa, että tekoälymallit kehittyvät erittäin nopeasti. Tämän materiaalin tiedot vastaavat maaliskuun 2026 tilannetta. On hyvin todennäköistä, että kun luet tätä, mallit ovat jo kehittyneet merkittävästi. Tärkeintä ei ole muistaa yksittäisiä mallinimiä tai versionumeroita, vaan ymmärtää erot työkalujen välillä ja osata valita tilanteeseen sopiva.
+Huomaa, että **tekoälymallit** ja niihin perustuvat palvelut kehittyvät erittäin nopeasti. Tämän materiaalin tiedot on tarkistettu toukokuussa 2026, mutta yksittäiset mallinimet, hinnat, käyttörajat ja ominaisuudet voivat muuttua nopeasti. Tärkeintä ei ole muistaa yksittäisiä malliversioita, vaan ymmärtää työkalujen väliset erot ja osata valita tilanteeseen sopiva työkalu.
 
-Kolme suurta kielimallipohjista palvelua hallitsevat tällä hetkellä markkinaa: ChatGPT, Claude ja Microsoft Copilot. Nämä eivät ole sama työkalu eri nimillä — ne on rakennettu eri lähtökohdista, eri tavoitteilla ja eri vahvuuksilla. Yksi painottaa monipuolisuutta ja laajaa ekosysteemiä, toinen turvallisuutta ja tarkkuutta, kolmas yrityskäyttöä ja Office-integraatiota.
+Kolme suurta kielimallipohjaista palvelua ovat **ChatGPT**, **Claude** ja **Microsoft Copilot**. Ne eivät ole sama työkalu eri nimillä, vaan ne on rakennettu eri lähtökohdista, eri tavoitteilla ja eri vahvuuksilla. Yksi painottaa monipuolisuutta ja laajaa ekosysteemiä, toinen pitkien aineistojen käsittelyä ja turvallisuusajattelua, kolmas yrityskäyttöä ja Microsoft 365 -integraatiota.
 
-Tämän opintojakson tarkoitus on yksinkertainen: opit tunnistamaan, mikä työkalu sopii mihinkin tilanteeseen. Ammattilaisena et valitse työkalua siksi, että se on suosituin tai tutuin. Valitset sen, joka sopii parhaiten siihen tehtävään, jonka juuri nyt teet.
+Tämän opintojakson tarkoitus on yksinkertainen: opit tunnistamaan, mikä työkalu sopii mihinkin tilanteeseen. Ammattilaisena et valitse työkalua siksi, että se on suosituin tai tutuin. Valitset sen, joka sopii parhaiten juuri siihen tehtävään, jota olet tekemässä.
 
 ---
 
-## ChatGPT — suosituin ja monipuolisin
+## ChatGPT — monipuolinen yleiskäyttöinen tekoälytyökalu
 
-ChatGPT on OpenAI:n kehittämä palvelu, ja se on tällä hetkellä maailman tunnetuin tekoälytyökalu. Sen suosio perustuu helppokäyttöisyyteen ja monipuolisuuteen: se osaa kirjoittaa, analysoida, koodata, luoda kuvia ja selata verkkoa — kaikki saman keskusteluikkunassa.
+ChatGPT on OpenAI:n kehittämä palvelu. Sen vahvuus on monipuolisuus: se osaa kirjoittaa, analysoida, koodata, käsitellä tiedostoja, tulkita kuvia, luoda kuvia ja käyttää verkkohakua silloin, kun ominaisuus on käytössä. Kaikki tämä tapahtuu samassa keskusteluikkunassa.
 
-ChatGPT:stä on useita versioita. Ilmainen versio käyttää kevyempää mallia ja siinä on rajoituksia. Plus-versio (noin 20 euroa kuussa) avaa käyttöön tehokkaimman mallin (GPT-5.4), Go-versio (8 euroa kuussa) tarjoaa nopeamman ja kevyemmän vaihtoehdon, ja Pro-versio (200 euroa kuussa) on entusiastikoille ja ammattilaisille. Organisaatioille on oma Team-versio, jossa on jaettu työtila ja hallintaominaisuudet.
+ChatGPT:stä on sekä ilmaisia että maksullisia versioita. Käytettävissä olevat mallit, viestirajat, tiedostojen käsittely, kuvien luonti, verkkohaku ja muut työkalut riippuvat siitä, mitä versiota tai organisaatiotilausta käytetään. Siksi mallin tarkka nimi tai yksittäinen käyttöraja ei ole ammattilaiselle tärkein tieto. Tärkeämpää on ymmärtää, millaiseen työskentelyyn ChatGPT soveltuu.
 
 ### Mikä tekee ChatGPT:stä erityisen?
 
-ChatGPT:n suurin vahvuus on sen laajuus. GPT-5.4 ymmärtää tekstiä, kuvia, ääntä ja videoita, joten sille voi antaa hyvin erilaisia tehtäviä. Se on erityisen hyvä luovissa tehtävissä, kuten mainostekstien kirjoittamisessa tai ideoinnissa, mutta pärjää hyvin myös analyyttisissä tehtävissä, kuten datan käsittelyssä ja raportoinnissa.
+ChatGPT:n suurin vahvuus on sen **laaja käyttöalue**. Sitä voi käyttää esimerkiksi ideointiin, tekstin muokkaamiseen, ohjelmointiin, tiedostojen analysointiin, kuvien tulkintaan, kuvien luomiseen ja verkkotiedon hakemiseen. OpenAI:n nykyiset mallit tukevat teksti- ja kuvasyötteitä, tekstivastauksia, monikielistä käyttöä ja näkökykyyn perustuvia tehtäviä.
 
-Yksi ChatGPT:n merkittävimmistä ominaisuuksista on Custom GPT eli räätälöity botti. Voit luoda ChatGPT:stä erikoisversion, joka on konfiguroitu tiettyyn tarkoitukseen. Esimerkiksi yritys voi rakentaa markkinointiassistenttia, joka tuntee yrityksen brändin ja osaa kirjoittaa oikealla tyylillä. Koulutuksessa voi tehdä koulutuskaveria, joka kysyy testikysymyksiä tietystä aiheesta. Tätä ominaisuutta hyödynnät myöhemmin kurssilla, kun rakennat oman Custom GPT:n.
+Yksi ChatGPT:n merkittävimmistä ominaisuuksista on **Custom GPT** eli räätälöity botti. Voit luoda ChatGPT:stä erikoisversion, joka on määritetty tiettyyn tarkoitukseen. Esimerkiksi yritys voi rakentaa markkinointiassistentin, joka tuntee yrityksen brändin ja osaa kirjoittaa oikealla tyylillä. Koulutuksessa voi tehdä opiskelukaverin, joka kysyy testikysymyksiä tietystä aiheesta. Tätä ominaisuutta hyödynnät myöhemmin kurssilla, kun rakennat oman Custom GPT:n.
 
-ChatGPT osaa myös kirjoittaa ja suorittaa Python-koodia suoraan keskusteluikkunassa. Käytännössä tämä tarkoittaa, että voit ladata esimerkiksi CSV-tiedoston, pyytää analyysiä ja saada kaavioita automaattisesti — ilman, että sinun tarvitsee avata erillistä ohjelmaa. Lisäksi ChatGPT Plus pystyy selaamaan internetiä reaaliajassa, joten se voi hakea tuoretta tietoa eikä vain nojaa koulutusaikaiseen tietoonsa.
+ChatGPT osaa myös kirjoittaa ja suorittaa Python-koodia suoraan keskusteluikkunassa, jos käytössä oleva versio sisältää siihen tarvittavat työkalut. Käytännössä tämä tarkoittaa, että voit ladata esimerkiksi CSV-tiedoston, pyytää analyysiä ja saada kaavioita automaattisesti ilman, että sinun tarvitsee avata erillistä ohjelmaa.
 
 ### Missä ChatGPT ei ole paras?
 
-ChatGPT:n konteksti-ikkuna on 272 000 tokenia, ja sitä voidaan laajentaa jopa 1 miljoonaan tokeniin. Se kuulostaa suurelta, mutta se on silti pienempi kuin Clauden vakioarvoinen konteksti-ikkuna. Pitkien dokumenttien käsittelyssä tämä ero näkyy. ChatGPT:n turvallisuuslähestymistapa on myös vapaampi kuin Clauden — se antaa enemmän vapautta, mutta samalla valvontaa on vähemmän. Ilmainen versio on saatavilla, mutta Plus-, Go- ja Pro-versiot tarjoavat paremmat ominaisuudet ja suuremmat rajat.
+ChatGPT ei ole automaattisesti paras valinta jokaiseen tehtävään. Hyvin pitkien dokumenttien käsittelyssä kannattaa tarkistaa, mikä konteksti-ikkuna valitulla mallilla ja käyttöympäristöllä on käytettävissä. OpenAI:n API-dokumentaatiossa suurten mallien konteksti-ikkuna voi olla jopa **1 miljoona tokenia**, mutta kevyemmillä malleilla ja ChatGPT:n käyttöliittymässä rajat voivat olla erilaisia. Siksi yksittäistä pysyvää tokenimäärää ei kannata opetella ulkoa.
 
-> **Pysähdy hetkeksi:** Oletko käyttänyt ChatGPT:tä aiemmin? Mihin tehtäviin käytit sitä? Mietitkö koskaan, olisiko jokin toinen työkalu voinut olla parempi vaihtoehto?
+Tietosuojassa on tärkeää ymmärtää käytettävän tilauksen asetukset. OpenAI voi käyttää ChatGPT-keskusteluja palvelun ja mallien parantamiseen, ellei käyttäjä poista tätä asetusta käytöstä. Organisaatio- ja yrityskäytössä hallintaominaisuudet voivat olla tiukemmat kuin henkilökohtaisessa käytössä.
+
+> **Pysähdy hetkeksi:** Oletko käyttänyt ChatGPT:tä aiemmin? Mihin tehtäviin käytit sitä? Mietitkö silloin, olisiko jokin toinen työkalu voinut olla parempi vaihtoehto?
 
 ---
 
-## Claude — turvallisuus ja tarkkuus edellä
+## Claude — vahva pitkissä aineistoissa ja huolellisessa analyysissä
 
-Claude on Anthropicin kehittämä kielimalli, ja se edustaa erilaista filosofiaa kuin ChatGPT. Siinä missä ChatGPT painottaa monipuolisuutta, Claude painottaa turvallisuutta, tarkkuutta ja rehellisyyttä. Tämä näkyy käytännössä: Claude sanoo useammin "en tiedä" sen sijaan että keksisi vastauksen. Se on rakennettu perusperiaatteella "turvallisuus ensin".
+Claude on Anthropicin kehittämä kielimalli. Sen vahvuuksia ovat pitkien aineistojen käsittely, johdonmukainen tekstianalyysi, ohjelmointi ja turvallisuusajattelu. Claude on usein hyvä vaihtoehto silloin, kun käyttäjän pitää käsitellä laajoja dokumentteja, raportteja, transkriptioita tai koodikokonaisuuksia.
 
-Claudesta on ilmainen versio (Sonnet 4.6 -malli) ja Pro-versio (noin 20 euroa kuussa), joka avaa käyttöön tehokkaimman mallin (Opus 4.6) ja suuremmat käyttörajat. Kehittäjille on myös API-versio, jossa maksetaan käytön mukaan.
+Claudesta on sekä ilmaisia että maksullisia versioita. Käytettävissä olevat mallit, käyttörajat, tiedostojen käsittely ja lisäominaisuudet riippuvat valitusta versiosta, organisaatiosta ja käyttöympäristöstä.
 
 ### Mikä tekee Claudesta erityisen?
 
-Clauden selkein tekninen etu on sen pitkä konteksti-ikkuna: 1 000 000 tokenia nyt vakiohinnalla. Käytännössä tämä tarkoittaa, että Claude pystyy lukemaan ja analysoimaan erittäin pitkiä dokumentteja kerralla — kokonaisia romaaneja, suuria koodilataajoja tai tuntien mittaisia transkriptioita. Siinä missä muut mallit joutuvat pilkkomaan pitkiä dokumentteja osiin, Claude käsittelee ne kokonaisuutena ja säilyttää kokonaiskuvan.
+Clauden tärkeä vahvuus on **pitkä konteksti-ikkuna**. Anthropicin API-dokumentaation mukaan uusimmat Claude-mallit voivat tukea jopa **1 miljoonan tokenin** konteksti-ikkunaa, kun taas osa malleista käyttää pienempää, esimerkiksi **200 000 tokenin** konteksti-ikkunaa. Tämä tarkoittaa käytännössä sitä, että Claude voi soveltua erittäin pitkien aineistojen käsittelyyn, mutta käytännön raja riippuu aina valitusta mallista ja käyttöympäristöstä.
 
-Claude tarjoaa Artifacts-ominaisuuden, jossa koodi, teksti ja verkkosivut näkyvät erillisessä paneelissa. Kun Claude kirjoittaa vaikkapa HTML-sivun, se renderöityy suoraan näkyviin — työskentelystä tulee sujuvampaa kuin pitkissä chat-virroissa. Projects-ominaisuus puolestaan antaa sinun järjestää keskustelut ja tiedostot projektikohtaisesti, jolloin Claude muistaa kontekstin paremmin.
+Claude tarjoaa myös **Artifacts**-ominaisuuden, jossa koodi, teksti ja verkkosivut voivat näkyä erillisessä paneelissa. Kun Claude kirjoittaa esimerkiksi HTML-sivun, sitä voidaan tarkastella erillisenä tuotoksena keskustelun rinnalla. Tämä tekee työskentelystä sujuvampaa kuin tilanteessa, jossa kaikki sisältö on vain pitkänä chat-keskusteluna.
 
-Koodauksessa Claude on erityisen vahva. Se pystyy käsittelemään monimutkaisia koodiprojekteja ja antaa tarkkoja, johdonmukaisia ratkaisuja. Claude on myös hyvä kuvien ymmärtämisessä: kaavioiden, graafien ja taulukoiden tulkinnassa se suoriutuu erityisen hyvin.
+Koodauksessa Claude on vahva erityisesti silloin, kun tehtävä edellyttää laajan kokonaisuuden hahmottamista. Se pystyy käsittelemään monimutkaisia koodiprojekteja ja tuottamaan usein johdonmukaisia ratkaisuja. Claude on myös hyvä kuvien, kaavioiden ja taulukoiden tulkinnassa, jos käytössä oleva versio tukee kyseisiä ominaisuuksia.
 
 ### Missä Claude ei ole paras?
 
-Claude ei pysty selaamaan internetiä, joten kaikki tieto täytyy tulla käyttäjältä. Sen ekosysteemi ja integrointimahdollisuudet ovat pienemmät kuin ChatGPT:llä, vaikka ne kasvavat nopeasti. Joissakin luovissa tehtävissä, joissa tarvitaan vapaampaa ideointia, ChatGPT voi olla monipuolisempi.
+Claude ei ole aina paras valinta silloin, kun tarvitaan mahdollisimman laajaa ekosysteemiä, valmiita räätälöityjä botteja tai monipuolisia kuluttajakäyttöön suunnattuja lisätyökaluja. Verkkohaku on Claudessa tuettu tietyissä ympäristöissä, mutta sen saatavuus riippuu käyttöliittymästä, tilauksesta, alueesta ja organisaation asetuksista. Siksi ei kannata olettaa, että jokaisessa Claude-käytössä on automaattisesti reaaliaikainen verkkohaku.
 
-> **Pysähdy hetkeksi:** Kuvittele, että sinulla on 80-sivuinen tutkimusraportti, jonka sisällön haluat ymmärtää nopeasti. Kumpi työkalu sopisi paremmin — ChatGPT vai Claude? Miksi?
+Tietosuojan osalta Claude ei ole yksinkertaisesti ”aina turvallisin” eikä ”aina täysin koulutuksen ulkopuolella”. Kuluttajakäytössä käyttäjän asetukset ja valinnat vaikuttavat siihen, voidaanko keskusteluja käyttää mallien kehittämiseen. Yritys- ja API-käytössä ehdot voivat olla erilaiset. Ammattilaisen pitää siis tarkistaa organisaation oma sopimus ja asetukset ennen luottamuksellisen tiedon syöttämistä.
+
+> **Pysähdy hetkeksi:** Kuvittele, että sinulla on 80-sivuinen tutkimusraportti, jonka sisällön haluat ymmärtää nopeasti. Kumpi työkalu sopisi paremmin: ChatGPT vai Claude? Miksi?
 
 ---
 
-## Microsoft Copilot — yritysmaailman valinta
+## Microsoft Copilot — yritysmaailman ja Microsoft 365 -ympäristön työkalu
 
-Microsoft Copilot edustaa kolmatta lähestymistapaa. Se ei yritä olla paras yleiskäyttöinen tekoäly vaan paras *integroitu* tekoäly. Copilotin arvo syntyy siitä, miten syvästi se on kytketty Microsoftin tuotteisiin: Wordiin, Exceliin, PowerPointiin ja Outlookiin.
+Microsoft Copilot edustaa kolmatta lähestymistapaa. Se ei ole vain yksi chat-ikkuna, vaan Microsoftin tuotteisiin kytkeytyvä tekoälyratkaisu. Copilotin arvo syntyy erityisesti siitä, miten se liittyy Microsoft 365 -ympäristöön: Wordiin, Exceliin, PowerPointiin, Outlookiin, Teamsiin, SharePointiin ja Microsoft Graphiin.
 
-Copilotilla on ilmainen web-versio, jossa on perusominaisuudet ja Bing-integraatio. Pro-versio (noin 20 euroa kuussa) tarjoaa paremman suorituskyvyn. Yrityksille on oma Microsoft 365 Copilot, joka tuo tekoälyn suoraan kaikkiin Office-sovelluksiin.
+Copilotista on erilaisia versioita kuluttajille, organisaatioille ja Microsoft 365 -ympäristöihin. Käytettävissä olevat ominaisuudet riippuvat lisenssistä, organisaation asetuksista ja siitä, käytetäänkö Copilotia selaimessa, Microsoft 365 -sovelluksissa vai Copilot Studio -ympäristössä.
 
 ### Mikä tekee Copilotista erityisen?
 
-Copilotin selkein vahvuus on sen Bing-integraatio ja Microsoft 365 -integraatio. Bing-integraatio tarkoittaa, että Copilot pystyy hakemaan tietoa verkosta reaaliajassa ja viittaamaan lähteisiin. Se ei vain kerro asioita — se näyttää, mistä tieto tulee. Tämä on tärkeää silloin, kun tarvitset luotettavaa ja ajantasaista tietoa.
+Copilotin selkein vahvuus on **Microsoft 365 -integraatio**. Kun työskentelet Wordissa, Copilot voi auttaa dokumentin kirjoittamisessa ja muokkaamisessa. Excelissä se voi auttaa datan tarkastelussa ja taulukoiden tulkinnassa. PowerPointissa se voi tukea esitysten suunnittelua. Outlookissa se voi auttaa viestien kirjoittamisessa ja tiivistämisessä. Teamsissa se voi auttaa kokousten ja keskustelujen käsittelyssä.
 
-Microsoft 365 -integraatio on kuitenkin se, mikä tekee Copilotista ainutlaatuisen. Kun työskentelet Wordissa, Copilot voi auttaa suoraan dokumentissa: kirjoittaa, muokata ja luoda sisältöä. Excelissä se analysoi dataa, luo kaavioita ja tekee pivot-taulukoita. PowerPointissa se auttaa esitysten suunnittelussa. Outlookissa se kirjoittaa sähköpostivastauksia ja auttaa viestien priorisoinnissa. Tällaista syvää integraatiota muilla työkaluilla ei ole.
+Microsoft 365 Copilot toimii Microsoft 365 -palvelurajojen sisällä ja käyttää Microsoft Graphia hakeakseen organisaation tietoja käyttäjän oikeuksien perusteella. Se ei siis saa automaattisesti pääsyä kaikkeen organisaation dataan, vaan sen pitäisi noudattaa samoja käyttöoikeuksia kuin käyttäjänkin. Tämä on tärkeä ero verrattuna yleiseen verkkopohjaiseen tekoälytyökaluun.
 
-Yritysmaailmassa Copilotin turvallisuusominaisuudet ovat merkittävät. Microsoft 365 Copilotissa data pysyy organisaation sisällä, kertakirjautuminen (SSO) toimii ja vaatimustenmukaisuussertifikaatit (kuten GDPR ja SOC 2) ovat kunnossa. Jos organisaatiosi käyttää jo Microsoftin tuotteita, Copilot on luonnollinen valinta.
+Yritysmaailmassa Copilotin vahvuuksia ovat hallinta, käyttöoikeudet, tietoturva ja vaatimustenmukaisuus. Microsoftin dokumentaation mukaan Microsoft 365 Copilotin promptteja, vastauksia ja Microsoft Graphin kautta käytettyä dataa ei käytetä Microsoftin perusmallien kouluttamiseen.
 
 ### Missä Copilot ei ole paras?
 
-Teknisesti Copilot ei ole yhtä tehokas kuin ChatGPT:n GPT-5.4 tai Clauden Opus 4.6 -malli. Se ei ole paras valinta monimutkaisiin koodaustehtäviin tai syvälliseen dokumenttianalyysiin. Copilotin arvo syntyy nimenomaan integraatiosta — jos et käytä Microsoftin tuotteita, hyöty jää pienemmäksi. Enterprise-tason Copilot on myös kallis organisaatioille.
+Copilot ei ole aina paras valinta monimutkaiseen koodaukseen, vapaaseen luovaan ideointiin tai hyvin syvälliseen yksittäisen pitkän dokumentin analyysiin. Sen vahvuus on ennen kaikkea Microsoft 365 -ympäristössä toimiminen. Jos et käytä Microsoftin tuotteita tai organisaatiosi data ei ole Microsoft 365 -ympäristössä, Copilotin hyöty voi jäädä pienemmäksi.
+
+Microsoft ei ilmoita Microsoft 365 Copilotille yhtä pysyvää julkista tokenmäärää samalla tavalla kuin monet mallien API-dokumentaatiot ilmoittavat. Copilotin käytännön rajat riippuvat sovelluksesta, lisenssistä, valitusta mallista, organisaation asetuksista ja siitä, miten tietoa haetaan Microsoft Graphin kautta. Siksi aiempi väite yhdestä kiinteästä Copilotin konteksti-ikkunasta oli liian yksinkertainen.
 
 > **Pysähdy hetkeksi:** Monet yritykset käyttävät jo Microsoft 365:tä. Millä tavalla Copilot voisi auttaa tavallisessa toimistopäivässä? Entä milloin se ei riittäisi?
 
@@ -82,31 +88,33 @@ Teknisesti Copilot ei ole yhtä tehokas kuin ChatGPT:n GPT-5.4 tai Clauden Opus 
 
 Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa, mitä tapahtuu.
 
-Kuvittele, että sinulla on 40-sivuinen tutkimusraportti PDF-muodossa ja haluat ymmärtää sen nopeasti. ChatGPT lataa PDF:n, analysoi sen nopeasti ja antaa hyvän yhteenvedon. Jos käytät Code Interpreter -ominaisuutta, se voi luoda visualisointeja datasta. Lisäksi se voi hakea verkosta taustatietoa, jos raportin aihe liittyy ajankohtaisiin tapahtumiin.
+Kuvittele, että sinulla on 40-sivuinen tutkimusraportti PDF-muodossa ja haluat ymmärtää sen nopeasti. ChatGPT voi olla hyvä valinta, jos haluat yhdistää dokumenttianalyysin, verkkotiedon hakemisen, taulukoiden käsittelyn ja mahdollisen datan visualisoinnin. Sen vahvuus on monipuolinen työskentely samassa keskustelussa.
 
-Claude puolestaan pystyy lukemaan koko dokumentin kerralla pitkän konteksti-ikkunansa ansiosta. Se antaa tyypillisesti perusteellisemman analyysin ja tarkempia viittauksia itse dokumenttiin — ei pelkkiä yleistyksiä. Jos raportissa on kaavioita tai taulukoita, Claude osaa analysoida ne visuaalisesti erityisen hyvin.
+Claude voi olla hyvä valinta silloin, kun haluat käsitellä pitkää dokumenttia kokonaisuutena ja saada siitä huolellisen, tekstilähtöisen analyysin. Pitkä konteksti-ikkuna voi auttaa silloin, kun aineistoa on paljon ja kokonaiskuvan säilyminen on tärkeää.
 
-Copilot lähestyy tehtävää eri kulmasta. Jos raportti on SharePointissa, Copilot osaa löytää siihen liittyviä verkkoresursseja ja viitteitä. Se on parhaimmillaan, kun haluat yhdistää raportin tiedot muihin Office-dokumentteihin tai kun tarvitset lähdeviittauksia.
+Copilot voi olla hyvä valinta silloin, kun raportti on osa Microsoft 365 -ympäristöä, esimerkiksi SharePointissa, Teamsissa tai OneDrivessa, ja haluat yhdistää sen tiedot muihin organisaation dokumentteihin, sähköposteihin tai kokouksiin käyttöoikeuksiesi rajoissa.
 
-Yksinkertaistettuna: Claude on paras syvälliseen analyysiin, ChatGPT on monipuolisin ja Copilot on paras yritysintegraatioihin. Mutta oikea vastaus riippuu aina kontekstista.
+Yksinkertaistettuna: **Claude** on usein vahva pitkien aineistojen analyysissä, **ChatGPT** on monipuolinen yleistyökalu ja **Copilot** on vahva Microsoft 365 -integraatioissa. Oikea vastaus riippuu kuitenkin aina tilanteesta.
 
 ---
 
 ## Hinnoittelu ja tietosuoja
 
-Kaikki kolme palvelua tarjoavat ilmaisen version, ja kaikkien maksullinen versio on suurin piirtein samassa hintaluokassa — noin 20 euroa kuukaudessa. Ilmaisversioissa on eri rajoituksia: ChatGPT:n ilmaisversio käyttää kevyempää mallia, Clauden ilmaisversiossa on viestirajoitus ja Copilotin ilmaisversio on sidottu Bing-hakuun.
+Kaikista kolmesta palvelusta on erilaisia versioita eri käyttäjäryhmille. Hinnat, käyttörajat ja ominaisuudet muuttuvat usein, joten niitä ei kannata opetella pysyvinä faktoina. Ammattilaisen kannattaa tarkistaa ajantasainen hinta aina palvelun omalta hinnastosivulta ennen hankintapäätöstä.
 
-API-hinnoittelu on kehittäjille merkittävämpi. Sekä OpenAI että Anthropic laskuttavat miljoonaa input-tokenia kohti, ja hinnat vaihtelevat mallista riippuen. Microsoftin enterprise-hinnoittelu on tapauskohtainen.
+Ilmaisversiot sopivat kokeiluun ja opiskeluun, mutta niissä on yleensä rajoituksia esimerkiksi viestimäärissä, mallien saatavuudessa, tiedostojen käsittelyssä tai lisäominaisuuksissa. Maksulliset kuluttajaversiot tarjoavat tavallisesti paremmat käyttörajat ja enemmän ominaisuuksia. Yritysversioissa korostuvat hallinta, tietoturva, käyttäjähallinta ja sopimusehdot.
 
 ### Tietosuoja — mihin datasi menee?
 
-Tietosuoja on ammatillisesti kriittinen kysymys. Kun kirjoitat jotain ChatGPT:lle, keskustelu tallentuu OpenAI:n palvelimille. Oletusarvoisesti OpenAI käyttää keskusteluja mallin parantamiseen, ellei käyttäjä itse poista tätä asetusta. Business-asiakkailla on tiukempi kontrolli.
+**Tietosuoja** on ammatillisesti kriittinen kysymys. Kun käytät tekoälypalvelua, sinun pitää tietää ainakin kolme asiaa: tallentuuko syöttämäsi tieto, käytetäänkö sitä mallien kehittämiseen ja kuka voi hallita tai poistaa sen.
 
-Clauden lähestymistapa on erilainen. Anthropic ei käytä käyttäjien keskusteluja mallin harjoittamiseen. Tämä on perustavanlaatuinen periaate, joka tekee Claudesta houkuttelevan vaihtoehdon silloin, kun käsitellään luottamuksellista tietoa.
+ChatGPT:ssä käyttäjä voi hallita data-asetuksiaan. OpenAI kertoo, että käyttäjä voi valita, käytetäänkö keskusteluja mallien parantamiseen. Tämä tarkoittaa, että henkilökohtaisessa käytössä asetukset pitää tarkistaa itse ennen luottamuksellisen tiedon syöttämistä.
 
-Copilot M365 -versiossa data pysyy organisaation sisällä eikä lähde Microsoftin ulkopuolelle ilman lupaa. Web-versiossa Bing saa hakutiedot, mutta ne eivät jää henkilöön liitettyinä.
+Clauden tietosuojakäytännöt riippuvat käyttäjätyypistä ja asetuksista. Anthropic on muuttanut kuluttajakäytön ehtoja niin, että käyttäjän valinnoilla on merkitystä siihen, voidaanko dataa käyttää mallien kehittämiseen. Yritys-, koulutus- ja API-käytössä ehdot voivat poiketa kuluttajakäytöstä.
 
-Kaikki kolme noudattavat GDPR-asetusta, mutta toteutus vaihtelee. OpenAI:lla on ollut kitkaa eurooppalaisten tietosuojaviranomaisten kanssa, Anthropic noudattaa tiukkaa linjaa ja Microsoftilla on laajimmat vaatimustenmukaisuussertifikaatit.
+Microsoft 365 Copilotissa keskeinen ero on, että palvelu toimii organisaation Microsoft 365 -ympäristössä ja noudattaa käyttäjän käyttöoikeuksia. Microsoftin dokumentaation mukaan Microsoft 365 Copilotin promptteja, vastauksia ja Microsoft Graphin kautta käytettyä dataa ei käytetä perusmallien kouluttamiseen.
+
+Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei organisaatiosi ole hyväksynyt työkalua kyseiseen käyttöön.
 
 > **Pysähdy hetkeksi:** Jos yrityksesi käsittelee arkaluontoista asiakastietoa, millä perusteella valitsisit työkalun? Mitä tietosuojakysymyksiä ottaisit huomioon?
 
@@ -114,41 +122,52 @@ Kaikki kolme noudattavat GDPR-asetusta, mutta toteutus vaihtelee. OpenAI:lla on 
 
 ## Milloin mikäkin — valintaperusteet käytännössä
 
-Ammattilaisena et kysy "mikä on paras tekoäly?" vaan "mikä on paras tekoäly *tähän tehtävään*?" Valinta riippuu siitä, mitä teet, missä ympäristössä työskentelet, kuka maksaa ja mitä vaatimuksia organisaatiollasi on.
+Ammattilaisena et kysy ”mikä on paras tekoäly?”, vaan ”mikä on paras tekoäly *tähän tehtävään*?”. Valinta riippuu siitä, mitä teet, missä ympäristössä työskentelet, kuka maksaa ja millaisia vaatimuksia organisaatiollasi on.
 
-ChatGPT on vahvin valinta silloin, kun tarvitset monipuolisuutta: luovaa kirjoittamista, kuvien generointia, nopeita prototyyppejä tai verkkotiedon hakemista. Sen ekosysteemi on laajin ja lisäosavalikoimaa on eniten.
+**ChatGPT** on vahva valinta silloin, kun tarvitset monipuolisuutta: luovaa kirjoittamista, ideointia, kuvien käsittelyä, nopeita prototyyppejä, koodiapua, tiedostojen analysointia tai verkkotiedon hakemista. Sen ekosysteemi on laaja, ja sitä voi käyttää hyvin monenlaisiin tehtäviin.
 
-Claude on paras valinta silloin, kun käsittelet pitkiä dokumentteja, tarvitset tarkkuutta ja johdonmukaisuutta tai kun turvallisuus ja yksityisyys ovat prioriteetteja. Koodauksessa se on erityisen vahva monimutkaisissa projekteissa.
+**Claude** on vahva valinta silloin, kun käsittelet pitkiä dokumentteja, tarvitset johdonmukaista analyysiä tai teet monimutkaista koodiin tai tekstiin liittyvää työtä. Sen pitkät konteksti-ikkunat voivat olla merkittävä etu laajoissa aineistoissa.
 
-Copilot on oikea valinta silloin, kun työskentelet Microsoft 365 -ympäristössä ja haluat tekoälyn auttavan suoraan dokumenteissa, taulukoissa ja esityksissä. Yritysturvallisuus ja lähdeviittaukset ovat sen vahvuuksia.
+**Copilot** on vahva valinta silloin, kun työskentelet Microsoft 365 -ympäristössä ja haluat tekoälyn auttavan suoraan dokumenteissa, taulukoissa, esityksissä, sähköposteissa, kokouksissa ja organisaation tiedon hyödyntämisessä käyttöoikeuksiesi mukaisesti.
 
 ### Vertailutaulukko
 
 | Kriteeri | ChatGPT | Claude | Copilot |
-|---------|---------|--------|---------|
-| **Kontekstikoko** | 272K tokenia (jopa 1M) | 1M tokenia | 32K tokenia |
-| **Hinta/kk** | ~20 € (Plus), ~8 € (Go), ~200 € (Pro) | ~20 € (Pro) | ~20 € (Pro) |
-| **Web-selaus** | Kyllä | Ei | Kyllä |
-| **Office-integraatio** | Ei | Ei | Erinomainen |
-| **Turvallisuuden painotus** | Perus | Korkea | Enterprise |
-| **Datan käyttö malliin** | Kyllä (opt-out) | Ei | Ei |
+| --- | --- | --- | --- |
+| **Konteksti-ikkuna** | Riippuu mallista ja käyttöympäristöstä; OpenAI:n API:ssa suuret mallit voivat tukea jopa 1M tokenia. | Riippuu mallista; Anthropic ilmoittaa osalle malleista 200K ja osalle jopa 1M tokenin konteksti-ikkunan. | Microsoft ei ilmoita yhtä pysyvää julkista tokenmäärää Microsoft 365 Copilotille; käytännön rajat riippuvat sovelluksesta, lisenssistä ja toteutuksesta. |
+| **Hinnoittelu** | Ilmainen ja maksullisia versioita; hinnat ja rajat muuttuvat, joten tarkista ajantasainen hinnasto. | Ilmainen ja maksullisia versioita; hinnat ja rajat muuttuvat, joten tarkista ajantasainen hinnasto. | Kuluttaja-, organisaatio- ja Microsoft 365 -lisensseihin liittyviä versioita; hinta riippuu lisenssistä. |
+| **Verkkohaku** | Kyllä, kun ominaisuus on käytössä. | Kyllä tietyissä tuetuissa ympäristöissä; saatavuus riippuu käyttöympäristöstä ja asetuksista. | Kyllä, erityisesti Copilot Chatissa ja verkkopohjaisissa käyttötapauksissa. |
+| **Office- ja työympäristöintegraatio** | Rajoitettu verrattuna Copilotiin; tiedostoja voi käsitellä, mutta ei ole Microsoft 365:n natiivi osa. | Rajoitettu verrattuna Copilotiin; vahva erillisessä analyysissä ja tekstityössä. | Erittäin vahva Microsoft 365 -ympäristössä. |
+| **Tyypillinen vahvuus** | Monipuolinen yleiskäyttö, ideointi, kirjoittaminen, koodaus, tiedostoanalyysi ja multimodaaliset tehtävät. | Pitkät aineistot, huolellinen analyysi, koodikokonaisuudet ja johdonmukainen tekstityö. | Microsoft 365 -dokumentit, organisaation data, kokoukset, sähköpostit ja yrityskäyttö. |
+| **Datan käyttö mallien kehittämiseen** | Riippuu asetuksista ja tilauksesta; käyttäjä voi hallita data-asetuksia. | Riippuu käyttäjätyypistä, asetuksista ja sopimuksesta; kuluttajakäytössä käyttäjän valinnoilla on merkitystä. | Microsoft 365 Copilotin promptteja, vastauksia ja Graph-dataa ei käytetä perusmallien kouluttamiseen. |
 
 ---
 
 ## Käytännön kokeilu
 
-Paras tapa oppia on kokeilla itse. Valitse tehtävä, joka on riittävän monimutkainen, jotta erot näkyvät: vaikkapa 500 sanan artikkeli, CSV-datan analysointi tai Python-funktion kirjoittaminen. Anna sama tehtävä kaikille kolmelle työkalulle ja vertaa tuloksia. Mikä oli nopein? Kuka antoi tarkkaimman vastauksen? Kenen tulos oli käytännöllisin omaan tarpeeseesi?
+Paras tapa oppia on kokeilla itse. Valitse tehtävä, joka on riittävän monimutkainen, jotta työkalujen erot tulevat näkyviin. Tehtävä voi olla esimerkiksi 500 sanan artikkelin kirjoittaminen, CSV-datan analysointi, pitkän tekstin tiivistäminen tai Python-funktion laatiminen. Anna sama tehtävä kaikille kolmelle työkalulle ja vertaa tuloksia.
 
-Dokumentoi havaintosi. Tämän tutkimuksen jälkeen sinulla on todellinen, omakohtainen käsitys siitä, mitkä ovat kunkin työkalun vahvuudet ja heikkoudet juuri sinun käyttötilanteissasi.
+Kiinnitä huomiota ainakin seuraaviin kysymyksiin:
+
+- Mikä työkalu oli nopein?
+- Mikä antoi tarkimman vastauksen?
+- Minkä työkalun tulos oli käytännöllisin omaan tarpeeseesi?
+- Mikä työkalu perusteli vastauksensa selkeimmin?
+- Mikä työkalu kertoi parhaiten, mistä tieto oli peräisin?
+- Mikä työkalu teki virheitä tai väitti asioita liian varmasti?
+
+Dokumentoi havaintosi. Tämän kokeilun jälkeen sinulla on todellinen, omakohtainen käsitys siitä, mitkä ovat kunkin työkalun vahvuudet ja heikkoudet juuri sinun käyttötilanteissasi.
 
 ---
 
 ## Kohti omaa projektia
 
-Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia ja löysit niiden vahvuudet ja heikkoudet. Tehtävissä kokeilet näitä eroja omakohtaisesti antamalla saman pyynnön kolmelle työkalulle ja vertailemalla tuloksia. Tunnilla 18 rakennat oman bottisi Microsoft Copilot Agent -alustalle, joka on kurssin valittu alusta koulun edu-lisenssin kautta. Tällä tunnilla saamasi vertailukokemus auttaa sinua ymmärtämään, miksi Copilot on perusteltu valinta ja missä sen rajat menevät verrattuna kilpailijoihin. Seuraavaksi tutustut tekoälykenttään laajemmin — eri palveluiden tietosuojaan ja siihen, miksi se on ammatillisesti tärkeä valintaperuste.
+Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia sekä tunnistit niiden vahvuuksia ja rajoituksia. Tehtävissä valitsit alustan ja käyttötapauksen omalle botillesi (**Botin rakennuspala 1**). Tämä valinta on perusta kaikelle, mitä rakennat seuraavilla tunneilla. Kun tiedät, missä alustassa bottisi toimii ja ketä se palvelee, voit seuraavaksi suunnitella, miten annat sille oikean kontekstin eli miten ohjeistat sen ymmärtämään käyttäjän tilanteen.
 
 ## Yhteenveto
 
-Kolmesta suuresta kielimallista jokainen on rakennettu erilaiseen tarpeeseen. ChatGPT on monipuolisin ja sen ekosysteemi on laajin. Claude on turvallisin, tarkin ja parhaimmillaan pitkien dokumenttien ja monimutkaisen koodin kanssa. Copilot on yritysmaailman integraatiotyökalu, joka tuo tekoälyn suoraan Office-sovelluksiin.
+Kolmesta suuresta kielimallipohjaisesta palvelusta jokainen on rakennettu hieman erilaiseen tarpeeseen. ChatGPT on monipuolinen yleiskäyttöinen työkalu, jonka vahvuus on laaja työkalupakki. Claude on vahva pitkissä aineistoissa, huolellisessa analyysissä ja koodikokonaisuuksissa. Copilot on Microsoft 365 -ympäristön työkalu, joka tuo tekoälyn suoraan organisaation dokumentteihin, viestintään ja työprosesseihin.
 
-Ammattilaisena sinun ei tarvitse valita yhtä — tarvitset ymmärryksen kaikista kolmesta. Kun tiedät, mihin kukin on hyvä, osaat valita oikean työkalun oikeaan tilanteeseen. Se on ammattitaitoa.
+Ammattilaisena sinun ei tarvitse valita vain yhtä työkalua. Tärkeämpää on ymmärtää kaikkien kolmen vahvuudet ja rajoitukset. Kun tiedät, mihin kukin työkalu sopii, osaat valita oikean työkalun oikeaan tilanteeseen. Se on ammattitaitoa.
+
+---

@@ -1,79 +1,124 @@
-# Opettajan materiaalit – Lesson 19
+# Opettajan materiaalit — oppitunti 19: Agentin perusteet
 
-## Osaamistavoitteet (Bloom)
+## Osaamistavoitteet
 
-**Muistaa / Ymmärtää:**
-- Opiskelija osaa selittää, mikä agentti on ja miten se eroaa chatbotista, skriptistä ja työnkulusta.
-- Opiskelija tunnistaa agentin kuusi rakennusosaa: syötekäsittelijä, päättelijä, työkalut, muisti, turvakerros ja palautesilmukka.
-- Opiskelija ymmärtää autonomisuuden käsitteen ja sen rajat.
-- Opiskelija ymmärtää suoritusputken käsitteen ja osaa kuvata, miten komponentit toimivat yhdessä.
+Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, mikä **agentti** on, miten se eroaa muista automaation muodoista ja miksi agentin kuusi rakennusosaa muodostavat yhdessä toimivan kokonaisuuden.
+
+### Muistaa ja ymmärtää
+
+- Opiskelija osaa selittää, mikä **agentti** on ja miten se eroaa chatbotista, skriptistä ja työnkulusta.
+- Opiskelija tunnistaa agentin kuusi rakennusosaa: **syötekäsittelijä**, **päättelijä**, **työkalut**, **muisti**, **turvakerros** ja **palautesilmukka**.
+- Opiskelija ymmärtää **autonomisuuden** käsitteen ja sen rajat.
+- Opiskelija ymmärtää **suoritusputken** käsitteen ja osaa kuvata, miten agentin komponentit toimivat yhdessä.
+
+**Opettajan painotus:** Korosta opiskelijoille, että agentti ei ole vain “älykkäämpi chatbot”. Agentti on järjestelmä, jolla on rakenne, toimintalogiikka, rajat ja kyky käyttää työkaluja tietyn tavoitteen saavuttamiseksi.
 
 ---
 
 ## Pedagoginen lähestymistapa
 
-### Avaus
+### Avaus: tuttu esimerkki sähköpostin käsittelystä
 
-Aloita **tutulla esimerkillä**: sähköpostin käsittely. Näytä, miten sama tehtävä voidaan automatisoida kolmella eri tavalla:
-1. Skriptillä (yksinkertainen, ei ajattele)
-2. Työnkululla (sääntöihin perustuva)
-3. Agentilla (autonominen päätöksenteko)
+Aloita oppitunti opiskelijoille tutulla esimerkillä: sähköpostin käsittelyllä. Näytä, miten sama tehtävä voidaan automatisoida kolmella eri tavalla.
 
-Tämä antaa opiskelijoille konkreettisen viitekehyksen.
+| Toteutustapa | Miten se toimii? | Rajoitus |
+| --- | --- | --- |
+| **Skripti** | Tekee yksinkertaisen ennalta määrätyn toiminnon, esimerkiksi siirtää viestin tiettyyn kansioon. | Ei tulkitse tilannetta eikä tee itsenäisiä päätöksiä. |
+| **Työnkulku** | Seuraa sääntöjä, esimerkiksi: jos viestissä lukee “lasku”, ohjaa se taloushallintoon. | Toimii hyvin vain silloin, kun säännöt kattavat tilanteen. |
+| **Agentti** | Tulkitsee viestin, arvioi tilanteen, käyttää työkaluja ja päättää seuraavan toiminnon rajojensa sisällä. | Tarvitsee selkeän tavoitteen, rajoitukset, turvakerroksen ja valvonnan. |
+
+Kysy opiskelijoilta:
+
+- Missä tilanteessa yksinkertainen skripti riittää?
+- Milloin työnkulku on parempi kuin agentti?
+- Milloin tarvitaan agenttia, joka pystyy tulkitsemaan tilannetta?
 
 ### Keskeinen käsite: hype vs. todellisuus
 
-**Virheellinen ajatus:** "Agentti on vain fancy chatbot" tai "kaikki AI-automatisointi on agenttia."
+Moni opiskelija saattaa ajatella, että agentti tarkoittaa vain tavallista chatbotia uudella nimellä tai että kaikki tekoälyautomaatio on agenttitoimintaa. Tämä käsitys kannattaa purkaa heti oppitunnin alussa.
 
-**Oikea ajatus:** Agentilla on spesifinen rakenne ja itsenäisyys. Se ei ole sama asia kuin muu automaatio.
+| Virheellinen ajatus | Korjaava ajatus |
+| --- | --- |
+| “Agentti on vain hienompi chatbot.” | Agentilla on tavoite, työkalut, muisti, turvakerros ja kyky toimia rajatusti itsenäisesti. |
+| “Kaikki tekoälyautomaatio on agenttia.” | Kaikki automaatio ei ole agenttitoimintaa. Agentilla on erityinen rakenne ja autonomisuuden aste. |
 
-Vahvista tätä painokkaasti. Monet opiskelijat suhtautuvat agentteihin varauksella, kunnes ymmärtävät, että niissä on konkreettinen ero.
+**Esimerkki opetukseen**
 
-### Suoritusputki (pipeline) – keskeinen opetuskäsite
+Kirjoita taululle: “Chatbot vastaa. Työnkulku seuraa sääntöjä. Agentti tulkitsee, päättää ja toimii rajojensa sisällä.” Palaa tähän erotteluun koko oppitunnin ajan.
 
-Agentin voimakkuus piilee siinä, että sen kuusi komponentti **toimivat yhdessä muodostaen suoritusputken**. Tämä ei ole vain lista osista, vaan **dynaaminen sykli**, jossa jokaisen vaiheen tulos vaikuttaa seuraavaan.
+---
 
-**Opetuskäytäntö:** Piirrä kuuden komponentin sykli taululle:
-1. Sähköposti saapuu → **Syötekäsittelijä** (tekee datasta ymmärrettävää)
-2. Tiedot käsitellään → **Päättelijä** (analysoi ja päättää)
-3. Päätökset → **Työkalut** (suorittavat toiminnot)
-4. Tulokset tallennetaan → **Muisti** (oppii ja muistaa)
-5. Jokainen vaihe → **Turvakerros** (validoi ja suojaa)
-6. Silmukka sulkeutuu → **Palautesilmukka** (parantaa seuraavalla kierroksella)
+## Suoritusputki: agentin kuusi komponenttia yhdessä
 
-Tämän visuaalisen esityksen avulla opiskelijat näkevät, että agentti ei ole staattinen rakenne, vaan **elävä prosessi**.
+Agentin voima ei synny yksittäisestä komponentista, vaan siitä, että kuusi komponenttia muodostavat yhdessä **suoritusputken**. Suoritusputki tarkoittaa prosessia, jossa yhden vaiheen tulos vaikuttaa seuraavaan vaiheeseen.
 
-### Opiskelijoiden kokemusten hyödyntäminen
+**Agentin suoritusputki**
 
-Kysy opiskelijoilta:
-- "Montako kertaa päivässä käytät chatbottia?"
-- "Oletko nähnyt automatisoitua järjestelmää, joka tekee jotakin ilman sinun osallistumistasi?"
+|  |
+| --- |
+| **1. Syötekäsittelijä** Vastaanottaa viestin ja tekee datasta käsiteltävää. |
+| ↓ |
+| **2. Päättelijä** Analysoi tilanteen ja muodostaa päätöksen. |
+| ↓ |
+| **3. Työkalut** Suorittavat konkreettisia toimintoja, kuten haun, viestin lähetyksen tai tietokantapäivityksen. |
+| ↓ |
+| **4. Muisti** Tallentaa ja hyödyntää historiaa, aiempia tapauksia tai käyttäjäkohtaisia tietoja. |
+| ↓ |
+| **5. Turvakerros** Validoi, rajoittaa ja estää vaarallisia tai epävarmoja toimintoja. |
+| ↓ |
+| **6. Palautesilmukka** Kerää tuloksia ja parantaa seuraavia kierroksia. |
 
-Nämä kysymykset kiinnittävät oppimisen heidän omiin kokemuksiinsa.
+### Opetuskäytäntö: piirrä sykli taululle
+
+Piirrä taululle kuuden komponentin sykli ja käytä esimerkkinä sähköpostin käsittelyä:
+
+1. **Sähköposti saapuu:** syötekäsittelijä muuttaa viestin agentille ymmärrettävään muotoon.
+2. **Tilanne analysoidaan:** päättelijä arvioi, onko kyseessä lasku, reklamaatio, tukipyyntö vai muu viesti.
+3. **Toiminto suoritetaan:** työkalut hakevat tietoja, luovat tiketin tai lähettävät vastauksen.
+4. **Tulos tallennetaan:** muisti säilyttää tapahtuman ja mahdollisen asiakashistorian.
+5. **Turvallisuus tarkistetaan:** turvakerros varmistaa, ettei viestissä paljasteta arkaluonteisia tietoja tai tehdä liian riskialtista päätöstä.
+6. **Palaute sulkee silmukan:** asiakkaan vastaus tai työn lopputulos auttaa parantamaan seuraavaa käsittelyä.
+
+Korosta opiskelijoille:
+
+> Agentti ei ole vain lista osia. Se on prosessi, jossa jokainen vaihe vaikuttaa seuraavaan.
+
+---
+
+## Opiskelijoiden kokemusten hyödyntäminen
+
+Kiinnitä oppiminen opiskelijoiden omiin kokemuksiin kysymällä:
+
+- Kuinka moni teistä on käyttänyt chatbottia asiakaspalvelussa?
+- Oletteko nähneet järjestelmää, joka tekee jotakin automaattisesti ilman käyttäjän suoraa toimintaa?
+- Missä arjen tilanteessa järjestelmä tekee päätöksen puolestanne?
+- Mistä tietää, onko kyseessä vain sääntö vai agenttimainen toiminta?
+
+Voit kirjata opiskelijoiden esimerkit taululle kolmeen sarakkeeseen: **chatbot**, **työnkulku** ja **agentti**.
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Agentti on aina parempi kuin chatbot"
+### Väärinkäsitys 1: “Agentti on aina parempi kuin chatbot.”
 
-**Todellisuus:** Agentti on monimutkaisempi ja kalliimpi. Se on järkevä vain silloin, kun tehtävä on toistuva, monivaiheinen ja vaatii itsenäisiä päätöksiä.
+**Korjaava näkökulma:** Agentti on monimutkaisempi, kalliimpi ja riskialttiimpi kuin tavallinen chatbot. Agentti on järkevä silloin, kun tehtävä on toistuva, monivaiheinen ja vaatii itsenäisiä päätöksiä tai työkalujen käyttöä.
 
-### 2. "Agentti voi tehdä mitä tahansa"
+### Väärinkäsitys 2: “Agentti voi tehdä mitä tahansa.”
 
-**Todellisuus:** Agentti on rajallinen suhteessa tavoitteihinsa, työkaluihinsa ja muistiinsa. Se ei voi rikkoa rajoituksiaan, ellei sitä ole siihen suunniteltu.
+**Korjaava näkökulma:** Agentti toimii vain sille annettujen tavoitteiden, työkalujen, oikeuksien, muistin ja rajoitusten puitteissa. Hyvä agentti ei tee kaikkea, vaan tietää tehtävänsä ja rajansa.
 
-### 3. "Autonomisuus tarkoittaa, että agentti toimii ilman valvontaa"
+### Väärinkäsitys 3: “Autonomisuus tarkoittaa, että agentti toimii ilman valvontaa.”
 
-**Todellisuus:** Autonomisuus tarkoittaa, että agentti tekee päätöksiä oman logiikkansa pohjalta, mutta silti ihmisten asettamissa rajoissa. Valvonta on silti tarpeen, erityisesti kriittisissä sovelluksissa.
+**Korjaava näkökulma:** Autonomisuus tarkoittaa, että agentti voi tehdä päätöksiä oman logiikkansa perusteella, mutta ihmisten määrittelemissä rajoissa. Erityisesti kriittisissä sovelluksissa valvonta, hyväksyntäportit ja turvakerrokset ovat välttämättömiä.
 
-### 4. "Agentti on sama kuin työnkulku"
+### Väärinkäsitys 4: “Agentti on sama kuin työnkulku.”
 
-**Todellisuus:** Työnkulku seuraa etukäteen määriteltyjä sääntöjä. Agentti oppii ja muuttaa käyttäytymistään. Agentti on älykkäämpi, mutta myös monimutkaisempi.
+**Korjaava näkökulma:** Työnkulku seuraa yleensä ennalta määriteltyjä sääntöjä. Agentti voi tulkita tilannetta, käyttää muistia, valita työkaluja ja muuttaa toimintaansa palautteen perusteella. Agentti on joustavampi, mutta myös monimutkaisempi.
 
-### 5. "Agentin komponentit toimivat erikseen"
+### Väärinkäsitys 5: “Agentin komponentit toimivat erikseen.”
 
-**Todellisuus:** Ne muodostavat suoritusputken, jossa jokaisen vaiheen tulos vaikuttaa seuraavaan. Yhden komponentin poistaminen tai heikentäminen (esim. muistin tai turvakerroksen) heikentää koko järjestelmää.
+**Korjaava näkökulma:** Komponentit muodostavat suoritusputken. Jos yksi osa puuttuu tai toimii heikosti, koko agentti heikkenee. Esimerkiksi ilman muistia agentti ei hyödynnä aiempia tapauksia, ja ilman turvakerrosta se voi tehdä vaarallisia päätöksiä.
 
 ---
 
@@ -81,58 +126,100 @@ Nämä kysymykset kiinnittävät oppimisen heidän omiin kokemuksiinsa.
 
 ### Tehtävä 1: Luokittelu
 
-Kun opiskelijat tekevät luokittelutehtävää, he saattavat epäonnistua seuraavissa kohdissa:
+**Tavoite:** Opiskelijat harjoittelevat erottamaan **agentin**, **chatbotin**, **skriptin** ja **työnkulun** toisistaan.
 
-**Tavallinen virhe:** "Tämä on agentti, koska se on automaattinen."
+Kun opiskelijat tekevät luokittelutehtävää, he saattavat ajatella liian nopeasti, että automaattinen järjestelmä on aina agentti. Ohjaa heitä kysymään tarkentavia kysymyksiä.
 
-**Oikea päätös:** Kysy: "Tekeekö se päätöksiä itsenäisesti vai seuraako se vain sääntöjä? Oppiiko se virheistään? Käyttääkö se muistia ja turvakerroksia?"
+**Opettajan tarkistuskysymys:** Jos opiskelija sanoo “tämä on agentti, koska se on automaattinen”, kysy: “Tekeekö se päätöksiä itsenäisesti vai seuraako se vain sääntöjä? Käyttääkö se muistia? Onko sillä työkaluja? Onko siinä turvakerros?”
+
+**Hyvä perustelu sisältää:**
+
+- maininnan siitä, tekeekö järjestelmä itsenäisiä päätöksiä,
+- kuvauksen siitä, käyttääkö järjestelmä työkaluja,
+- pohdinnan siitä, onko järjestelmällä muistia tai palautetta,
+- arvion siitä, onko järjestelmällä turvakerros tai rajoitukset.
 
 ### Tehtävä 2: Suoritusputken jäljittäminen
 
-Kun käyt läpi kuuden komponentin mallia, käytä **visuaalista kaaviota**. Piirrä silmukka taululle ja näytä, miten jokainen osa yhdistyy. Valitse konkreettinen esimerkki (esim. asiakaspalveluagentti) ja jäljitä, miten se etenee:
-- **Syötekäsittelijä:** sähköposti tai chat-viesti saapuu
-- **Päättelijä:** analysoi asiakkaan ongelman ja kiireellisyyden
-- **Työkalut:** haku tietokannoista, ticket-järjestelmän päivitys, vastauksen lähettäminen
-- **Muisti:** oppii asiakkaan historian ja hänen tyypilliset ongelmansa
-- **Turvakerros:** varmistaa, että vastaus on asianmukainen eikä sisällä arkaluonteisia tietoja
-- **Palautesilmukka:** asiakkaan vastaus parantaa seuraavan käsittelyn tarkkuutta
+**Tavoite:** Opiskelijat tunnistavat agentin kuusi komponenttia konkreettisessa esimerkissä.
 
-Tämä konkreettinen jäljitys auttaa opiskelijoita ymmärtämään, että kukin komponentti on **välttämätön** ja **riippuvainen muista**.
+Käytä visuaalista kaaviota. Piirrä agentin komponentit silmukkana ja jäljitä, miten asiakaspalveluagentti käsittelee viestin.
+
+| Komponentti | Asiakaspalveluagentin esimerkki |
+| --- | --- |
+| **Syötekäsittelijä** | Sähköposti tai chat-viesti saapuu ja siitä poimitaan tärkeät tiedot. |
+| **Päättelijä** | Agentti analysoi asiakkaan ongelman, kiireellisyyden ja sopivan toimintatavan. |
+| **Työkalut** | Agentti hakee tietoa tietokannasta, päivittää tiketin tai lähettää vastauksen. |
+| **Muisti** | Agentti hyödyntää asiakkaan historiaa ja aiempia ratkaisuja. |
+| **Turvakerros** | Agentti tarkistaa, ettei vastaus sisällä arkaluonteisia tietoja ja että toiminto on sallittu. |
+| **Palautesilmukka** | Asiakkaan palaute ja ratkaisun onnistuminen parantavat seuraavaa käsittelyä. |
+
+Kysy opiskelijoilta:
+
+- Mikä komponentti olisi vaarallisin jättää pois?
+- Mitä tapahtuu, jos agentilla ei ole muistia?
+- Mitä tapahtuu, jos turvakerros puuttuu?
+- Miten palautesilmukka voisi parantaa seuraavaa päätöstä?
 
 ### Tehtävä 3: Riskianalyysi
 
-Kun keskustelette autonomisuuden vaaroista, käytä **oikeaa esimerkkiä**: esimerkiksi äskettäin ilmoitettua tapausta tekoälyn tekemästä virheestä tai varoittavia tarinoita.
+**Tavoite:** Opiskelijat ymmärtävät autonomisuuden riskit ja osaavat selittää, miksi agentille tarvitaan rajoja.
 
-Keskustelkaa erityisesti siitä, mitä tapahtuu, jos turvakerros heikkenee, muisti katoaa tai palautesilmukka ei toimi.
+Keskustelkaa siitä, mitä tapahtuu, jos jokin agentin keskeinen komponentti epäonnistuu.
+
+| Epäonnistuva osa | Mitä voi tapahtua? | Miten riskiä vähennetään? |
+| --- | --- | --- |
+| **Syötekäsittelijä** | Agentti ymmärtää asiakkaan viestin väärin ja valitsee väärän toimintatavan. | Syötteen validointi ja epäselvien viestien ohjaaminen ihmiselle. |
+| **Muisti** | Agentti unohtaa aiemmat tapahtumat tai käyttää vanhentunutta tietoa. | Ajantasainen tietopohja, lokit ja muistin tarkistus. |
+| **Turvakerros** | Agentti lähettää arkaluonteista tietoa tai tekee liian riskialttiin päätöksen. | Rajoitukset, hyväksyntäportit ja minimioikeusperiaate. |
+| **Palautesilmukka** | Agentti ei opi virheistä tai oppii vääristä signaaleista. | Palautteen laadun tarkistus ja ihmisen ohjaama parantaminen. |
+
+**Esimerkki opetukseen**
+
+Käytä riskianalyysissä konkreettista tilannetta: asiakaspalveluagentti tulkitsee vihaisen reklamaation tavalliseksi laskukysymykseksi ja lähettää automaattisen rutiinivastauksen. Kysy, mikä komponentti epäonnistui ja miten tilanne olisi voitu estää.
 
 ---
 
 ## Arviointivihjeet
 
-### Hyvä vastaus:
+### Hyvä vastaus
 
-"Tämä on agentti, koska se käsittelee syötteet (syötekäsittelijä), analysoi tilanteen (päättelijä), tekee päätöksiä ja toimii itsenäisesti (työkalut), muistaa tapahtumat ja asiakkaiden historiaa (muisti), noudattaa turvallisuusperiaatteita (turvakerros) ja parantaa itseään jokaisen tapahtuman perusteella (palautesilmukka). Nämä kuusi komponenttia muodostavat suoritusputken, joka erottaa agentin chatbotista."
+“Tämä on agentti, koska se käsittelee syötteet syötekäsittelijällä, analysoi tilanteen päättelijällä, tekee päätöksiä ja käyttää työkaluja, hyödyntää muistia, noudattaa turvakerroksen rajoja ja parantaa toimintaansa palautesilmukan avulla. Nämä kuusi komponenttia muodostavat suoritusputken, joka erottaa agentin tavallisesta chatbotista.”
 
-### Riittävä vastaus:
+### Riittävä vastaus
 
-"Tämä on agentti, koska se tekee päätöksiä autonomisesti ja oppii kokemuksistaan."
+“Tämä on agentti, koska se tekee päätöksiä rajatusti itsenäisesti, käyttää työkaluja ja hyödyntää aiempaa tietoa.”
 
-### Heikko vastaus:
+### Heikko vastaus
 
-"Tämä on agentti, koska se on tekoäly" tai "koska se on nopea."
-
----
-
-## Tuntiesityksen rakenne (45 minuuttia)
-
-1. **Avaava keskustelu** (5 min) — Esimerkki sähköpostin käsittelystä
-2. **Suoritusputken opetus** (10 min) — Kuuden komponentin sykli taululle, visuaalinen opetus
-3. **Itsenäinen lukeminen** (10 min) — Opiskelijat lukevat aineistoa
-4. **Ryhmätehtävä: suoritusputken jäljitys** (15 min) — Järjestelmien komponenttien tunnistaminen
-5. **Yhteenveto ja riskianalyysi** (5 min) — Autonomisuuden rajat ja turvallisuuden merkitys
+“Tämä on agentti, koska se on tekoäly” tai “koska se on nopea.”
 
 ---
 
-## Jatkoyhteys Lesson 20:een
+## Tuntiesityksen rakenne: 45 minuuttia
 
-Lesson 20 käsittelee sitä, **milloin agentti on oikea ratkaisu**. Tämä oppitunti luo pohjan: opiskelijat ymmärtävät, mikä agentti on ja miten sen komponentit toimivat yhdessä suoritusputkessa. Seuraavaksi he oppivat, mitä kustannuksia ja hyötyjä siihen liittyy.
+1. **Avaava keskustelu noin 5 minuuttia**
+
+   Käytä esimerkkinä sähköpostin käsittelyä ja vertaa skriptiä, työnkulkua ja agenttia.
+2. **Suoritusputken opetus noin 10 minuuttia**
+
+   Piirrä kuuden komponentin sykli taululle ja käy läpi, miten komponentit toimivat yhdessä.
+3. **Itsenäinen lukeminen noin 10 minuuttia**
+
+   Opiskelijat lukevat aineiston ja merkitsevät kohdat, jotka auttavat erottamaan agentin chatbotista.
+4. **Ryhmätehtävä: suoritusputken jäljitys noin 15 minuuttia**
+
+   Opiskelijat tunnistavat järjestelmästä agentin komponentit ja selittävät, miten ne muodostavat prosessin.
+5. **Yhteenveto ja riskianalyysi noin 5 minuuttia**
+
+   Keskustelkaa autonomisuuden rajoista ja siitä, miksi turvakerros, muisti ja palautesilmukka ovat tärkeitä.
+
+---
+
+## Jatkoyhteys oppituntiin 20
+
+Oppitunti 20 käsittelee sitä, **milloin agentti on oikea ratkaisu**. Tämä oppitunti luo pohjan jatkolle: opiskelijat ymmärtävät, mikä agentti on ja miten sen komponentit toimivat yhdessä suoritusputkessa. Seuraavaksi he oppivat arvioimaan, milloin agentin rakentaminen on hyödyllistä, milloin se on liian kallista ja milloin yksinkertaisempi ratkaisu riittää.
+
+> **Pohdi seuraavaa tuntia varten:** Missä tilanteessa agentti olisi liian monimutkainen ratkaisu? Milloin tavallinen työnkulku tai chatbot riittäisi?
+
+---

@@ -1,127 +1,104 @@
-# Agentin muisti ja konteksti — miten kone pysyy kartalla
+# Agentin muisti ja konteksti — miten kone pysyy kartalla?
 
 ## Johdanto
 
-Kun rakennat omaa agenttia n8n:llä, yksi suurimmista eroista edellisiin oppitunteihin verrattuna on tämä: agentti ei unohda. Se muistaa, mitä tapahtui viime viikolla. Se tietää, missä vaiheessa prosessi on. Se näkee asiakkaansa historian ja osaa käyttää sitä uuden ongelman ratkaisemisessa. Tämä muisti ja konteksti ovat agentin sydän — ilman niitä se olisi lähes käyttökelpoton, toistava ja epäintelligentti.
+Kun rakennat omaa agenttia n8n:llä, yksi suurimmista eroista aiempiin oppitunteihin verrattuna on tämä: agentti ei unohda kaikkea heti. Se voi muistaa, mitä tapahtui viime viikolla. Se tietää, missä vaiheessa prosessi on. Se näkee asiakkaan historian ja osaa käyttää sitä uuden ongelman ratkaisemisessa. Tämä **muisti** ja **konteksti** ovat agentin toiminnan kannalta keskeisiä. Ilman niitä agentti olisi helposti toistava, epäjohdonmukainen ja lähes käyttökelvoton.
 
-Omissa boteissa (joista oppitunneilla 21–22 puhutaan) muisti päättyy siihen, kun keskustelu loppuu. Mutta agentissa muisti jatkuu. Tässä oppitunnissa opit, **kuinka agentti näkee nykyisen tilanteen (konteksti-ikkuna), kuinka se muistaa menneisyyttä (pitkäaikainen muisti) ja kuinka se seuraa prosessin vaiheita (tila)**. Nämä kolme tekijää tekevät agentista näennäisesti älykkään. Ja kun rakennat agenttia n8n:llä, nämä kolme ovat ne rakennuspalkit, joista logiikkasi syntyvät.
+Yksinkertaisissa boteissa muisti päättyy usein siihen, kun keskustelu loppuu. Agentissa muisti voi kuitenkin jatkua keskustelujen välillä. Tässä oppitunnissa opit, **miten agentti näkee nykyisen tilanteen konteksti-ikkunan avulla, miten se muistaa menneisyyttä pitkäaikaisen muistin avulla ja miten se seuraa prosessin vaiheita tilan avulla**. Nämä kolme tekijää tekevät agentista näennäisesti älykkään. Kun rakennat agenttia n8n:llä, ne ovat myös niitä rakennuspalikoita, joista agentin logiikka syntyy.
 
-## Konteksti-ikkuna: mitä agentti näkee juuri nyt
+## Konteksti-ikkuna: mitä agentti näkee juuri nyt?
 
-Kuvittele IT-tuen agenttia, joka vastaa asiakkaiden neljänkymmenen edellisen viestin jälkeen kysymykseen "Entä mitä ehdit tehdä?". Agentti lukee 40 viestiä ja yrittää muistaa, millä se aloitti. Se on sama kuin lukea 40 sivua kirjaa yhdessä istunnossa ja sitten kysyä kirjan ensimmäisen sivun asiasta. Aivot väsyvät. Agentti väsyy.
+Kuvittele IT-tuen agenttia, joka vastaa asiakkaalle neljänkymmenen aiemman viestin jälkeen kysymykseen: ”Entä mitä ehdotat nyt?” Agentti lukee 40 viestiä ja yrittää muistaa, mistä ongelma alun perin alkoi. Se muistuttaa tilannetta, jossa lukisit 40 sivua kirjaa yhdellä kertaa ja sinulta kysyttäisiin sen jälkeen jotain ensimmäiseltä sivulta. Ihmisen keskittyminen kuormittuu. Samalla tavalla myös agentin käsittelykyky on rajallinen.
 
-**Konteksti-ikkuna** on se osa keskustelusta, jonka agentti näkee kerralla. Se on kuten muistilaatikko, joka säilyttää vain viimeisimmät viestit. Jos ikkuna on 50 viestiä, ja sitten saapuu 51. viesti, vanhin poistuu näkyvistä. Tämä rajaaminen on **tarkoituksellinen suunnittelu**, ei puute — koska kaikilla järjestelmillä on rajat prosessointikyvyssään ja budjetissaan.
+**Konteksti-ikkuna** tarkoittaa sitä osaa keskustelusta tai datasta, jonka agentti näkee kerralla. Voit ajatella sitä muistilaatikkona, johon mahtuu vain rajattu määrä viimeisimpiä viestejä. Jos ikkuna sisältää 50 viestiä ja keskusteluun tulee 51. viesti, vanhin viesti voi poistua agentin näkyvistä. Tämä rajaaminen on **tarkoituksellista suunnittelua**, ei pelkkä puute. Kaikilla järjestelmillä on rajat prosessointikyvyssä, nopeudessa ja kustannuksissa.
 
-Käytännössä konteksti-ikkuna on kauppa: mitä suurempi ikkuna, sitä parempi muisti ja tarkempi ymmärrys tilanteesta. Mutta suurempi ikkuna tarkoittaa myös **enemmän dataa, joka täytyy käsitellä**, mikä tekee agentista hitaamman ja kalliimman. Jokainen sana, jonka agentti näkee, maksaa rahaa, jos käytät kaupallista LLM-palvelua kuten OpenAI:n API:a.
+Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on, sitä enemmän agentti näkee aiempaa keskustelua ja sitä paremmin se voi ymmärtää tilanteen. Suurempi ikkuna tarkoittaa kuitenkin myös **enemmän käsiteltävää dataa**, mikä tekee agentista hitaamman ja kalliimman. Jokainen sana, jonka agentti käsittelee, voi maksaa rahaa, jos käytössä on kaupallinen kielimallipalvelu, kuten OpenAI:n API.
 
-```mermaid
-graph TD
-    subgraph "Agentin muistikerrokset"
-        A["🔍 Konteksti-ikkuna<br/>Mitä agentti näkee NYT<br/>(viimeiset 20-200 viestiä)"]
-        B["🧠 Pitkäaikainen muisti<br/>Mitä agentti MUISTAA<br/>(vektoritietokanta)"]
-        C["📊 Tila<br/>Missä vaiheessa prosessi ON<br/>(tilamuuttujat)"]
-    end
+> **Pysähdy hetkeksi:** Kuvittele asiakaspalveluagentti, joka käsittelee pitkää tukiprosessia. Asiakas kuvailee ongelmaa pitkään ja kysyy 30 viestin jälkeen: ”Nyt kun olet kuullut kaiken, mitä ehdotat?” Jos konteksti-ikkuna sisältää vain 20 viestiä, agentti näkee enää viimeiset 20 viestiä. Alkuperäinen ongelma on poissa näkyvistä. Mitä tästä voi seurata?
 
-    D["📩 Uusi viesti"] --> A
-    A --> E{"Tarvitaanko vanhaa tietoa?"}
-    E -->|Kyllä| B
-    E -->|Ei| F["Vastaa suoraan"]
-    B --> F
-    C --> F
-```
-
-**Pysähdy hetkeksi: Kuvittele asiakaspalvelu-agenttia, joka käsittelee pitkiä tuen prosesseja. Asiakas alkaa kuvailemaan ongelmaa, ja 30 viestin jälkeen hän kysyy: "Nyt kun olet kuullut kaiken, mitä ehdotat?" Jos konteksti-ikkuna on vain 20 viestiä, agentti näkee enää vain viimeisen 20 — alkuperäinen ongelma on poissa näkyvistä. Mitä tapahtuu?**
-
-Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan koko omissa agenteissasi. It-support-agentissa, joka käsittelee pitkiä dialogi­sarjoja, saatat haluta 100–200 viestin ikkunan, jotta historiaa säilyttää. Transaktio-agentissa, joka ratkaisee nopeita kyselyitä ("Mikä on hinta?"), 20–30 viestiä riittää. Järkevä valinta riippuu **siitä, mitä agentin täytyy muistaa tehtävää varten**.
+Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. IT-tukiagentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
 ## Pitkäaikainen muisti: vektoritietokanta merkityksen etsijänä
 
-Konteksti-ikkuna kertoo agentille, mitä tapahtuu **nyt**. Mutta entä jos asiakkaan kanssa olette työskennelleet kuusi kuukautta? Entä jos hän palaa nyt uudella ongelmalla, ja haluat, että agentti muistaa, mitä opitte viimeksi?
+Konteksti-ikkuna kertoo agentille, mitä tapahtuu **nyt**. Mutta entä jos asiakkaan kanssa on työskennelty kuusi kuukautta? Entä jos hän palaa uuden ongelman kanssa ja haluat, että agentti muistaa, mitä viimeksi opittiin?
 
-Tätä varten on **pitkäaikainen muisti**, joka tallennetaan **vektoritietokantaan**. Tämä on erikoistunut tietokanta, joka ymmärtää *merkityksiä*, ei vain täsmällisiä sanoja. Se on isolla merkityksellinen ero.
+Tätä varten agentilla voi olla **pitkäaikainen muisti**, joka tallennetaan esimerkiksi **vektoritietokantaan**. Vektoritietokanta on erikoistunut tietokanta, joka etsii samankaltaisuuksia merkityksen, ei vain täsmällisten sanojen perusteella. Tämä ero on tärkeä.
 
-Tavallisessa tietokannassa etsit täsmällisillä termeillä. "Muistikortti" löytyy vain, jos kirjoitat "muistikortti". Mutta vektoritietokannassa tieto tallennetaan merkityksen perusteella. Kun asiakas sanoo "Minulla oli ongelma muistilaatteen kanssa viime kuussa", se muunnetaan **matemaattiseksi koodiksi** — vektoriksi — joka edustaa lauseen merkitystä: "muistin liittyvä laite", "ongelma", "mennyt aika". Myöhemmin, kun sama asiakas tulee ja sanoo "Muisti-juttu oli vaikeaa", agentti muuntaa tämänkin vektoriksi. Nämä kaksi vektoria ovat *samankaltaisia* merkityksellisesti, vaikka sanat ovat eri. Vektoritietokanta löytää tämän samankaltaisuuden ja yhtää "Kyllä, sama ongelma oli aiemmin."
+Tavallisessa tietokannassa haetaan usein täsmällisillä termeillä. Sana ”muistikortti” löytyy varmasti, jos hakusanana on ”muistikortti”. Vektoritietokannassa tieto tallennetaan kuitenkin merkityksen perusteella. Kun asiakas sanoo: ”Minulla oli ongelma muistilaitteen kanssa viime kuussa”, lause voidaan muuntaa **matemaattiseksi esitykseksi** eli vektoriksi. Tämä vektori kuvaa lauseen merkitystä: kyse on muistista, laitteesta, ongelmasta ja menneestä ajankohdasta.
 
-Tämä merkitysperusteinen haku on vektoritietokannan voima. Se ei vaadi täsmällistä vastaavuutta. Se **ymmärtää kontekstia**. Se kestää asiakkaan epätäsmälliset tai eri tavalla muotoillut kysymykset ja löytää silti oikeat aiemmat tapaukset.
+Myöhemmin sama asiakas voi sanoa: ”Se muistiin liittyvä juttu oli vaikea.” Vaikka sanat ovat eri, lauseen merkitys voi olla samankaltainen kuin aiemmassa tapauksessa. Vektoritietokanta voi löytää tämän samankaltaisuuden ja auttaa agenttia päättelemään, että kyse voi olla samasta tai samantyyppisestä ongelmasta.
 
-Käytännössä tämä tarkoittaa, että kun agentti näkee asiakkaan nimen, se hakee vektoritietokannasta kyseisen asiakkaan kaiken historian. Ei kuitenkaan yksityiskohtien, vaan tiivistelmän: "Tämä asiakas on ostanut meiltä 5 kertaa. Hänellä on ollut ongelmia toimituksissa. Viime kuussa ostamansa tuote oli saman sarjan kuin nyt hänen kysymänsä tuote." Nämä tiedot auttavat agenttia ymmärtämään asiakkaan kontekstia ja tehdä älykämmän päätöksen.
+Tämä merkitysperusteinen haku on vektoritietokannan vahvuus. Se ei vaadi täsmällistä sanavastaavuutta, vaan se auttaa löytämään olennaista tietoa myös silloin, kun asiakas muotoilee asian eri tavalla kuin aiemmin.
+
+Käytännössä tämä tarkoittaa, että kun agentti näkee asiakkaan nimen tai tunnisteen, se voi hakea vektoritietokannasta asiakkaaseen liittyvää aiempaa tietoa. Agentti ei välttämättä tarvitse kaikkia yksityiskohtia, vaan usein tiivistelmä riittää: ”Tämä asiakas on ostanut meiltä viisi kertaa. Hänellä on ollut aiemmin ongelmia toimituksissa. Viime kuussa ostettu tuote oli samaa sarjaa kuin nyt kysytty tuote.” Nämä tiedot auttavat agenttia ymmärtämään asiakkaan tilanteen ja tekemään parempia päätöksiä.
 
 Vektoritietokanta toimii näin:
 
-```mermaid
-graph LR
-    A["🔍 Asiakkaan kysymys:<br/>'VPN ei toimi'"] --> B["🔢 Muutetaan<br/>numeroiksi"]
-    B --> C["📊 Etsitään<br/>lähimmät naapurit"]
-    C --> D["📋 Löytyi 3<br/>samanlaista tapausta"]
-    D --> E["💬 Agentti käyttää<br/>tapauksia vastauksessa"]
+Voit ajatella vektoritietokantaa kirjaston hakujärjestelmänä. Kun haet kirjastosta aihetta ”koiran koulutus”, hyvä hakujärjestelmä ei etsi vain kirjoja, joissa lukee täsmälleen ”koiran koulutus”. Se voi löytää myös kirjoja, joiden nimi on esimerkiksi ”Pentujen kasvatus” tai ”Lemmikkien kouluttaminen”, koska ne käsittelevät samaa aihetta eri sanoin. Vektoritietokanta toimii samalla periaatteella: se etsii **merkityksiä**, ei pelkkiä sanoja.
 
-    style A fill:#e8f4f8,stroke:#2196F3
-    style B fill:#fff3e0,stroke:#FF9800
-    style C fill:#fff3e0,stroke:#FF9800
-    style D fill:#c8e6c9,stroke:#4CAF50
-    style E fill:#c8e6c9,stroke:#4CAF50
-```
-
-Ajattele sitä kuin kirjaston hakujärjestelmää. Kun haet kirjastosta "koiran koulutus", järjestelmä ei etsi vain kirjoja joissa lukee "koiran koulutus" — se löytää myös kirjat nimeltä "pentukoulu" ja "lemmikkien kasvatus", koska ne käsittelevät samaa aihetta eri sanoin. Vektoritietokanta tekee saman: se ymmärtää **merkityksen**, ei vain sanoja.
-
-**Pysähdy hetkeksi: Ajattele yrityssopimusta, jonka asiakas allekirjoitti kolme kuukautta sitten. Se sisälsi erityisiä ehtoja ja myöhemmän maksun. Kun asiakas nyt ottaa sinuun yhteyttä, agentti hakee kyseisen sopimuksen vektoritietokannasta ja näkee: "Tämän asiakkaan sopimuksella on erityisehdot." Mitä agentti voi siis tehdä toisin kuin tavalliset asiakkaat?**
+> **Pysähdy hetkeksi:** Ajattele yrityssopimusta, jonka asiakas allekirjoitti kolme kuukautta sitten. Sopimuksessa oli erityisiä ehtoja ja myöhempi maksu. Kun asiakas ottaa nyt yhteyttä, agentti hakee sopimuksen vektoritietokannasta ja huomaa: ”Tämän asiakkaan sopimuksessa on erityisehtoja.” Mitä agentti voi tehdä toisin kuin tavallisten asiakkaiden kohdalla?
 
 ## Tila: prosessin vaihe ja muuttujat
 
-Konteksti-ikkuna näyttää *nyt*, pitkäaikainen muisti näyttää *ennen*. Mutta entä *missä vaiheessa* olemme prosessissa? Tämä on **tila** (state).
+Konteksti-ikkuna kertoo, mitä tapahtuu *nyt*. Pitkäaikainen muisti kertoo, mitä on tapahtunut *aiemmin*. Mutta mistä agentti tietää, *missä vaiheessa* prosessia ollaan? Tätä varten tarvitaan **tila** eli state.
 
-Kuvittele tilauksen käsittelystä. Kun asiakas tekee tilauksen, tila on "tilaus luotu". Kun agentti lähettää vahvistuksen, tila siirtyy "vahvistus lähetetty" -vaiheeseen. Kun varasto pakkaa tuotteen, tila muuttuu "pakattavana". Kun kuljetus lähtee, "lähetetty". Kun asiakas vastaanottaa, "toimitettu". Jokainen vaihe on eri tila, ja agentti muistaa sen.
+Kuvittele tilauksen käsittelyä. Kun asiakas tekee tilauksen, tila on ”tilaus luotu”. Kun agentti lähettää vahvistuksen, tila muuttuu muotoon ”vahvistus lähetetty”. Kun varasto pakkaa tuotteen, tila muuttuu muotoon ”pakattavana”. Kun kuljetus lähtee, tila on ”lähetetty”. Kun asiakas vastaanottaa tuotteen, tila on ”toimitettu”. Jokainen vaihe on eri tila, ja agentti seuraa, missä vaiheessa prosessi on.
 
-Tila sisältää myös **muuttujia** — numeroita ja tietoa prosessin aikana. Esimerkiksi:
-- "Yritykset: 2/3" — tämä on kahden yrityksen jälkeen, jäljellä yksi
-- "Viimeinen hinta: 45 €" — mitä asiakkaalle tarjottiin
-- "Ihmisen hyväksyntä: Saatu" — johto hyväksyi alennuksen
-- "Virheet: 0" — ei ollut virheitä prosessin aikana
+Tila sisältää myös **muuttujia** eli prosessin aikana tarvittavia tietoja. Esimerkiksi:
 
-Ilman tilamuuttujia agentti olisi täysin sotkuinen. Se ei tietäisi, missä se oli ja mitä se oli tekemässä. Se voisi lähettää vahvistus­sähköpostin kahteen kertaan, koska se ei muistaisi, että se oli jo lähettänyt sen. Se voisi yrittää veloittaa asiakasta uudelleen, koska se ei tietäisi, että maksu oli jo suoritettu.
+- **Yritykset: 2/3** — kaksi yritystä on käytetty, yksi on jäljellä.
+- **Viimeinen hinta: 45 €** — tämä hinta tarjottiin asiakkaalle viimeksi.
+- **Ihmisen hyväksyntä: saatu** — vastuuhenkilö on hyväksynyt alennuksen.
+- **Virheet: 0** — prosessin aikana ei ole havaittu virheitä.
 
-Ammattilaisena, kun rakennat agenttia n8n:llä, **tilan hallinta on kriittistä**. Sinun täytyy suunnitella kaikki mahdolliset tilat — mitä tapahtuessa tehtävä voi olla — ja mitä muuttujia joka tilassa on. Nämä tilat ja muuttujat ohjaavat agentin seuraavaa vaihetta. "Jos tila on 'maksu maksettu' ja muuttuja 'varasto-saatavuus' on 'ei'", agentin seuraava askel voi olla "ilmoita asiakkaalle kuljetus­aika".
+Ilman tilamuuttujia agentin toiminta menisi helposti sekaisin. Se ei tietäisi, missä vaiheessa tehtävä on tai mitä se oli tekemässä. Se voisi lähettää vahvistussähköpostin kahteen kertaan, koska se ei muistaisi lähettäneensä sitä jo aiemmin. Se voisi yrittää veloittaa asiakasta uudelleen, koska se ei tietäisi, että maksu on jo suoritettu.
 
-## Käytännön esimerkki: IT-tuen agentti kokonaisuudessaan
+Kun rakennat agenttia n8n:llä, **tilan hallinta on kriittistä**. Sinun täytyy suunnitella, mitä mahdollisia tiloja prosessilla voi olla ja mitä muuttujia kussakin tilassa tarvitaan. Nämä tilat ja muuttujat ohjaavat agentin seuraavaa vaihetta. Esimerkiksi jos tila on ”maksu maksettu” ja muuttuja ”varastosaatavuus” on ”ei saatavilla”, agentin seuraava askel voi olla ilmoittaa asiakkaalle arvioitu toimitusaika.
 
-Laitetaan nämä kolme komponenttia yhteen. Kuvittele IT-tuen agenttia, joka käsittelee asiakkaita reaaliajassa.
+## Käytännön esimerkki: IT-tuen agentti kokonaisuutena
 
-**Konteksti-ikkuna** näyttää viimeisimmät kymmenen viestiä, jotka asiakkaan kanssa vaihdettiin. Asiakas saattoi kertoa ongelmasta pitkään, mutta agentti näkee vain viimeisimmät 10 viestiä. Nämä kertovat: "Asiakas kokeili ratkaisuseurausta A. Se ei auttanut. Nyt hän kysyy, mitä tehdä seuraavaksi."
+Laitetaan nyt nämä kolme komponenttia yhteen. Kuvittele IT-tuen agentti, joka käsittelee asiakkaita reaaliajassa.
 
-**Pitkäaikainen muisti** paljastaa, että tämä asiakas on ollut asiakkaana kolme vuotta, hänellä on samanlainen ongelma kolmen kuukauden välein, ja edellisellä kerralla ratkaisuseurausta B auttoi. Vektoritietokanta löytää tämän yhteyden, koska se näkee samankaltaisuuden nykyisen ja aiemman ongelman välillä.
+**Konteksti-ikkuna** näyttää viimeisimmät kymmenen viestiä, jotka asiakkaan kanssa on vaihdettu. Asiakas on voinut kuvailla ongelmaa pitkään, mutta agentti näkee vain viimeisimmät 10 viestiä. Niiden perusteella agentti ymmärtää esimerkiksi tämän: ”Asiakas kokeili ratkaisua A. Se ei auttanut. Nyt hän kysyy, mitä tehdä seuraavaksi.”
 
-**Tila** kertoo, että tämä on "toinen yritys" (1/3), että asiakas on "aktiivinen" (ei odota), ja että "ihmisen eskalointia ei ole vielä pyydetty". Nämä muuttujat ohjaavat agentin seuraavaa päätöstä.
+**Pitkäaikainen muisti** paljastaa, että tämä asiakas on ollut asiakkaana kolme vuotta, hänellä on samankaltainen ongelma noin kolmen kuukauden välein ja edellisellä kerralla ratkaisu B auttoi. Vektoritietokanta löytää tämän yhteyden, koska se tunnistaa samankaltaisuuden nykyisen ja aiemman ongelman välillä.
 
-Agentti yhdistää nämä kolme tekijää: näkee nykyisen tilanteen (konteksti), tietää, mitä on aiemmin auttanut (pitkäaikainen muisti) ja tietää, missä vaiheessa prosessi on (tila). Näiden perusteella se päättelee: "Kokeillaan ratkaisua B, koska se auttoi ennen. Jos se ei auta, eskaloin ihmiselle." Se tekee älykästä päätöstä, joka on mahdollista vain siksi, että sillä on näiden kolmen komponentin tuki.
+**Tila** kertoo, että kyseessä on toinen ratkaisuyritys kolmesta, asiakas on aktiivinen eikä ihmisen tekemää eskalointia ole vielä pyydetty. Nämä muuttujat ohjaavat agentin seuraavaa päätöstä.
 
-**Pysähdy hetkeksi: Ajattele omaa työtäsi tai opintojasi. Mitä tietoa sinä muistat lyhytaikaisesti? Mitä pidät mielessä pidempään? Ja kuinka jäljität, missä vaiheessa olet jossakin prosessissa? Agentin muisti ja tila tekevät saman.**
+Agentti yhdistää nämä kolme tekijää: se näkee nykyisen tilanteen konteksti-ikkunan kautta, tietää pitkäaikaisen muistin avulla, mikä on aiemmin auttanut, ja ymmärtää tilan perusteella, missä vaiheessa prosessi on. Näiden perusteella se voi päätellä: ”Kokeillaan ratkaisua B, koska se auttoi aiemmin. Jos se ei auta, siirrän asian ihmiselle.” Tällainen päätös on mahdollinen vain siksi, että agentilla on käytössään konteksti, pitkäaikainen muisti ja tila.
+
+> **Pysähdy hetkeksi:** Ajattele omaa työtäsi tai opintojasi. Mitä tietoa pidät mielessä lyhytaikaisesti? Mitä tietoa säilytät pidempään? Miten seuraat, missä vaiheessa olet jossakin prosessissa? Agentin muisti ja tila toimivat samankaltaisella tavalla.
 
 ## Soul — agentin pysyvä identiteetti ja arvot
 
-Konteksti-ikkuna, pitkäaikainen muisti ja tila ovat agentin **toiminnallinen muisti** — ne auttavat agenttia tekemään päätöksiä. Mutta jotain vielä syvemmää tarvitaan: **soul** eli agentin pysyvä identiteetti.
+Konteksti-ikkuna, pitkäaikainen muisti ja tila muodostavat agentin **toiminnallisen muistin**. Ne auttavat agenttia tekemään päätöksiä. Lisäksi tarvitaan kuitenkin jotain pysyvämpää: **soul** eli agentin pysyvä identiteetti ja arvot.
 
-Soul on kuin agentin moraalikompassi. Se vastaa kolmeen kysymykseen, joita agentti pitää mielessä päivästä toiseen, jopa miljonaarissa eri tilanteessa:
+Soul on kuin agentin moraalikompassi. Se vastaa kolmeen kysymykseen, jotka agentti pitää mielessään tilanteesta toiseen:
 
-**Ensimmäinen**: Kuka minä pohjimmiltaan olen? Soul määrittää agentin identiteetin — ei vain sen mitä se tekee, vaan kuka se *on*. "Olen kärsivällinen IT-tukihenkilö, joka arvostaa asiakkaan aikaa ja yrittää aina auttaa ensin ennen kuin pyydän heiltä yksityiskohtia." Tämä identiteetti ei muutu tehtävästä toiseen. Se on syvä.
+**Ensimmäinen kysymys: Kuka minä pohjimmiltani olen?** Soul määrittää agentin identiteetin. Se ei kerro vain sitä, mitä agentti tekee, vaan myös sen, millainen toimija se on. Esimerkiksi: ”Olen kärsivällinen IT-tukihenkilö, joka arvostaa asiakkaan aikaa ja yrittää auttaa ensin selkeästi ennen kuin pyytää asiakkaalta lisätietoja.” Tämä identiteetti ei muutu tehtävästä toiseen.
 
-**Toinen**: Mitä arvoja minulla on — mitä en koskaan tee? Soul sisältää ehdottomat rajat. "En koskaan palauta asiakkaan salasanaa — kerron hänelle, miten nollata se itse." "En koskaan jaa toisen asiakkaan tietoja kolmannelle." "Jos minulla ei ole vastausta, kerron sen suoraan enkä arvaa." Nämä ovat agentin syvät arvot. Ne ohjaavat häntä vaikeissa tilanteissa, joissa säännöistä ei ole apua.
+**Toinen kysymys: Mitä arvoja minulla on, ja mitä en koskaan tee?** Soul sisältää ehdottomat rajat. Esimerkiksi: ”En koskaan palauta asiakkaan salasanaa, vaan kerron, miten hän voi nollata sen itse.” ”En koskaan jaa yhden asiakkaan tietoja toiselle asiakkaalle.” ”Jos minulla ei ole vastausta, kerron sen suoraan enkä arvaa.” Nämä ovat agentin pysyviä arvoja. Ne ohjaavat toimintaa erityisesti silloin, kun tilanne on epäselvä eikä yksittäinen sääntö riitä.
 
-**Kolmas**: Miten päätän epäselvissä tilanteissa? Soul antaa agentille päätöksenteon perustan. "Jos olen epävarma, suosin asiakkaan turvallisuutta muun yli." "Jos asiakkaan pyyntö on ristiriidassa turvasäännöistämme, turvasäännöt voittavat aina." "Jos minulla ei ole tarpeeksi tietoa, pyydän apua ennen kuin toimin."
+**Kolmas kysymys: Miten päätän epäselvissä tilanteissa?** Soul antaa agentille perustan päätöksentekoon. Esimerkiksi: ”Jos olen epävarma, suosin asiakkaan turvallisuutta.” ”Jos asiakkaan pyyntö on ristiriidassa turvasääntöjen kanssa, turvasäännöt voittavat.” ”Jos minulla ei ole tarpeeksi tietoa, pyydän apua ennen kuin toimin.”
 
-Käytännössä soul kirjoitetaan **erilliseksi dokumentiksi**, jonka agentti viittaa jokaissa päätöksissä. Se on kuin agentin sisäinen ohjattu, jonka tekemät päätökset heijastuvat kaikissa tilanteissa — asiakkaiden kanssa, kollegoiden kanssa ja kriiseissa.
+Käytännössä soul voidaan kirjoittaa **erilliseksi dokumentiksi**, johon agentti viittaa päätöksissään. Se toimii agentin sisäisenä ohjeena, jonka periaatteet näkyvät kaikissa tilanteissa: asiakkaiden kanssa, kollegoiden kanssa ja myös kriisitilanteissa.
 
 ## Muistin turvallisuus ja hallinta
 
-Kun agentti muistaa niin paljon, on puhuttava turvallisuudesta. Pitkäaikainen muisti saattaa sisältää arkaluontoisia tietoja — asiakkaiden henkilötietoja, salasanoja, maksukorttinumeroita, liike­salaisuuksia.
+Kun agentti muistaa paljon, täytyy puhua myös turvallisuudesta. Pitkäaikainen muisti voi sisältää arkaluontoisia tietoja, kuten asiakkaiden henkilötietoja, maksutietoja tai liikesalaisuuksia.
 
-Ammattilaisena sinun täytyy asettaa selkeät rajat: **mitä agentti saa muistaa ja mitä ei**. Asiakas­nimi ja osto­historia? Kyllä, turvallista. Asiakkaan luottokorttin neljä viimeistä numeroa tunnistusta varten? Mahdollisesti, jos se on salattu. Asiakkaan salasana? Ei koskaan — se on vaarallista varastaa. Asiakkaan lääkkeet tai terveystiedot? Ei, ellei se ole nimenomaisesti terveydenhuollon agentti, jota sääntelee laki.
+Ammattilaisena sinun täytyy asettaa selkeät rajat sille, **mitä agentti saa muistaa ja mitä se ei saa muistaa**. Asiakkaan nimi ja ostohistoria voivat olla perusteltuja tietoja, jos niitä käsitellään turvallisesti ja lain mukaisesti. Luottokortin neljä viimeistä numeroa voidaan joissain tilanteissa tallentaa tunnistamista varten, jos tieto on suojattu asianmukaisesti. Asiakkaan salasanaa ei kuitenkaan pidä koskaan tallentaa agentin muistiin. Myös terveystiedot ja muut erityisen arkaluontoiset tiedot vaativat erityistä varovaisuutta ja lainmukaisen käsittelyperusteen.
 
-Lisäksi muistin hallinta vaatii **säännöllisiä puhdistuksia**. Vanhentuneet tiedot kannattaa poistaa. Jos asiakas poistaa tilinsä, hänen historiansa pitäisi myös poistua pitkäaikaisesta muistista. Tämä on sekä turvallisuus- että yksityisyyskysymys.
+Muistin hallinta vaatii myös **säännöllistä puhdistamista**. Vanhentuneet tiedot kannattaa poistaa. Jos asiakas poistaa tilinsä, myös häneen liittyvä historia pitäisi poistaa pitkäaikaisesta muistista silloin, kun se on sääntöjen ja lainsäädännön mukaan tarpeen. Tämä on sekä turvallisuus- että yksityisyyskysymys.
 
 ## Kohti omaa projektia
 
-Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi: mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana, mitä sen täytyy muistaa keskustelujen välillä ja mitä tiloja prosessillasi on? Nämä päätökset muodostavat ⭐️ Agentti: Muisti -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi. Mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana? Mitä sen täytyy muistaa keskustelujen välillä? Mitä tiloja prosessillasi on? Nämä päätökset muodostavat **Agentti: Muisti** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
 
 ## Yhteenveto
 
-Agentti näkee nyt **konteksti-ikkunan** kautta (tyypillisesti 20–200 viimeistä viestiä). Sillä on **pitkäaikainen muisti**, joka tallentuu vektoritietokantaan ja ymmärtää merkityksiä — ei vain täsmällisiä sanoja. Sillä on **tila**, joka seuraa, missä vaiheessa prosessi on ja mitä muuttujia siinä on. Nämä kolme tekijää antavat agentille näennäisen älykkyyden. Lisäksi agentilla on **soul** — pysyvä identiteetti ja arvot, joita se kantaa kaikissa tilanteissa. Kun rakennat agenttia n8n:llä seuraavissa oppitunneissa, nämä kolme — konteksti, muisti ja tila — ovat ne rakennuspalkit, joista ehtoitte logiikkaa. Soul on se, joka tekee agentista johdonmukaisen ja luotettavan, vaikka tilanteen ollessa uusi ja odottamaton.
+Agentti hahmottaa nykyhetkeä **konteksti-ikkunan** avulla. Konteksti-ikkuna voi sisältää esimerkiksi 20–200 viimeistä viestiä sen mukaan, millaista tehtävää agentti hoitaa. Agentilla voi olla myös **pitkäaikainen muisti**, joka tallentuu esimerkiksi vektoritietokantaan ja auttaa löytämään samankaltaisia merkityksiä, ei vain täsmällisiä sanoja. Lisäksi agentilla on **tila**, joka kertoo, missä vaiheessa prosessi on ja mitä muuttujia siihen liittyy.
+
+Nämä kolme tekijää antavat agentille kyvyn toimia johdonmukaisesti: se näkee nykyisen tilanteen, muistaa aiempia asioita ja ymmärtää prosessin vaiheen. Lisäksi agentilla voi olla **soul** eli pysyvä identiteetti ja arvot, jotka ohjaavat sen toimintaa kaikissa tilanteissa. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, konteksti, pitkäaikainen muisti, tila ja soul auttavat sinua suunnittelemaan agentista johdonmukaisemman, turvallisemman ja luotettavamman.
+
+---

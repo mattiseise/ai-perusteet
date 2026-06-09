@@ -1,228 +1,362 @@
-# Opettajavetoiset tehtävät — Kontekstin antaminen
+# Opettajavetoiset tehtävät — kontekstin antaminen
 
-## Tehtävä 12.1: Live-demo — sama aihe, neljä eri pyyntöä
+## Tehtävä 12.1: Live-demo — sama aihe, neljä erilaista pyyntöä
 
 ### Tavoite
-Näyttää konkreettisesti, kuinka sama aihe tuottaa täysin erilaisia vastauksia riippuen siitä, paljonko kontekstia annat. Tämä osoittaa, että **konteksti määrää** vastausten laadun.
+
+Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten sama aihe voi tuottaa hyvin erilaisia vastauksia sen mukaan, kuinka paljon ja millaista **kontekstia** tekoälylle annetaan. Opiskelijat ymmärtävät, että konteksti vaikuttaa ratkaisevasti vastauksen **laatuun**, **tarkkuuteen** ja **käyttökelpoisuuteen**.
+
+**Opettajan painotus:** Korosta, että hyvä vastaus ei synny vain siitä, että kysytään oikea kysymys. Tekoäly tarvitsee myös tietoa käyttäjästä, tavoitteesta, tilanteesta, rajauksista ja halutusta vastausmuodosta.
 
 ### Opettajan valmistelu
 
-**Ennen lähiosaa (15 min):**
+**Ennen lähiosaa noin 15 minuuttia:**
 
-Valmistele yksi aihe, jonka ajet neljällä eri pyyntötavalla. Suositus: "Verkon perusteita" tai "Tekoäly työssä". Tarvitset neljä erilaista pyyntöä, jotka vaihtelevat kontekstin määrässä. Ensimmäinen huono pyyntö: "Kerro verkoista." Toinen parempi pyyntö: "Kerro verkoista. Olen 15-vuotias IT-opiskelija. Haluan ymmärtää perusteita." Kolmas vielä parempi pyyntö on tämä: "Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan ymmärtää: mitä verkko on, miten se toimii jokapäiväisessä elämässä, mitkä ovat riskit. Anna 3 konkreettista esimerkkiä." Neljäs paras pyyntö on seuraava: "Haluan oppia verkon perusteita 30 minuutissa. Olen 15-vuotias IT-opiskelija. Anna minulle: 1) lyhyt selitys (2–3 lausetta), mitä verkko on, 2) kolme konkreettista esimerkkiä jokapäiväisestä elämästä, 3) miten tiedot kulkevat verkossa (yksinkertainen selitys), 4) kolme tärkeää termiä ja niiden merkitys, 5) testikysymykset (kolme kysymystä, joiden avulla tarkistan ymmärrykseni)."
+1. Valitse yksi aihe, jota käytät kaikissa neljässä pyynnössä. Sopivia aiheita ovat esimerkiksi **verkon perusteet** tai **tekoäly työssä**.
+2. Valmistele neljä erilaista pyyntöä, joissa kontekstin määrä ja tarkkuus kasvavat vaiheittain.
+3. Aja pyynnöt tekoälyllä etukäteen.
+4. Tallenna vastaukset kuvakaappauksina tai tekstinä.
+5. Valmistele kalvot, taulukko tai muu vertailupohja, jonka avulla vastauksia voidaan tarkastella luokassa.
 
-Aja nämä neljä pyyntöä tekoälylle etukäteen. Tallenna vastaukset kuvakaappausmuodossa tai tekstinä. Valmistele kalvot tai taulukko vertailuun.
+### Esimerkkipyynnöt
 
-### Lähiosassa — fasilitointivaiheet (30 min)
+| Vaihe | Pyyntö | Mitä kontekstia mukana on? |
+| --- | --- | --- |
+| **1. Liian yleinen** | `Kerro verkoista.` | Ei käyttäjää, tavoitetta, osaamistasoa, rakennetta tai käyttötarkoitusta. |
+| **2. Hieman parempi** | `Kerro verkoista. Olen 15-vuotias IT-opiskelija. Haluan ymmärtää perusteita.` | Mukana ovat käyttäjän ikä, opiskelutilanne ja yleinen tavoite. |
+| **3. Tarkempi** | `Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan ymmärtää, mitä verkko on, miten se toimii jokapäiväisessä elämässä ja mitkä ovat verkkoihin liittyviä riskejä. Anna kolme konkreettista esimerkkiä.` | Mukana ovat lähtötaso, tarkempi oppimistavoite ja esimerkkien tarve. |
+| **4. Paras** | `Haluan oppia verkon perusteita 30 minuutissa. Olen 15-vuotias IT-opiskelija. Anna minulle: 1) lyhyt selitys 2–3 lauseella siitä, mitä verkko tarkoittaa, 2) kolme konkreettista esimerkkiä jokapäiväisestä elämästä, 3) yksinkertainen selitys siitä, miten tieto kulkee verkossa, 4) kolme tärkeää termiä ja niiden merkitykset sekä 5) kolme testikysymystä, joiden avulla voin tarkistaa ymmärrykseni.` | Mukana ovat käyttäjä, tavoite, aika, rakenne, sisältötoiveet ja oppimisen tarkistus. |
 
-#### Vaihe 1: Johdanto (2 min)
+### Lähiosassa — fasilitointivaiheet noin 30 minuuttia
 
-Aloita sanomalla: "Viime viikolla opimme käyttämään tekoälyä. Tänään opimme jotain yhtä tärkeää: **kontekstin antaminen muuttaa kaiken.** Sama aihe, neljä eri pyyntöä — ja vastaukset ovat täysin erilaisia. Ammatillisesti tämä merkitsee eroa: saat juuri sen mitä tarvitset vai vain yleisesti kiinnostavan tekstin."
+#### Vaihe 1: Johdanto noin 2 minuuttia
 
-#### Vaihe 2: Ensimmäinen esimerkki — liian yleinen pyyntö (6 min)
+Aloita kertomalla opiskelijoille:
 
-**Pyyntö:** "Kerro verkoista."
+> Viimeksi opimme käyttämään tekoälyä. Tänään opimme jotain yhtä tärkeää: **kontekstin antaminen muuttaa vastauksen laatua**. Sama aihe voi tuottaa aivan erilaisia vastauksia sen mukaan, miten hyvin kerromme tekoälylle tilanteen, tavoitteen ja halutun lopputuloksen.
 
-**Näytä vastaus (2 min)**
+Korosta opiskelijoille:
 
-Projektorilla näytä tekoälyn antama teksti. Se on luultavasti liian yleinen, ei osuva kenellekään erityisesti ja saattaa jättää tärkeitä asioita pois.
+> Ammatillisesti ero on suuri. Voit saada joko yleisesti kiinnostavan tekstin tai juuri omaan tarpeeseesi sopivan vastauksen.
 
-**Analyysikysymykset (2 min)**
+#### Vaihe 2: Ensimmäinen esimerkki — liian yleinen pyyntö noin 6 minuuttia
 
-Esitä kysymykset: "Kuka voisi käyttää tätä hyväkseen?", "Onko tämä juuri se, mitä sinä tarvitsisit, jos valmistauduit tenttiin?" ja "Puuttuuko siitä jotain?" Opiskelijat todennäköisesti vastaavat: "Kyllä, se on liian yleinen."
+**Pyyntö:**
 
-**Johtopäätös (1 min)**
+Kerro verkoista.
 
-Sanaa: "Tämä vastaus on **yleinen ja vähäisesti hyödyllinen**."
+**Näytä vastaus noin 2 minuuttia:**
 
-#### Vaihe 3: Toinen esimerkki — jonkin verran kontekstia (7 min)
+Näytä tekoälyn antama vastaus projektorilla. Vastaus on todennäköisesti yleinen, eikä se kohdistu erityisesti opiskelijan tasoon, tavoitteeseen tai käyttötarkoitukseen.
 
-**Pyyntö:** "Kerro verkoista. Olen 15-vuotias IT-opiskelija. Haluan ymmärtää perusteita."
+**Analyysikysymykset noin 2 minuuttia:**
 
-**Näytä vastaus (2 min)**
+- Kuka voisi hyötyä tästä vastauksesta?
+- Auttaisiko tämä sinua valmistautumaan tenttiin?
+- Onko vastaus liian yleinen?
+- Mitä tietoa vastauksesta puuttuu?
 
-Vastaus on parempi ja sopii opiskelijan tasolle. Se sisältää perustiedot selkeämmin.
+**Johtopäätös noin 1 minuutti:**
 
-**Vertailuanalyysi (3 min)**
+> Tämä vastaus on **yleinen ja vain rajallisesti hyödyllinen**. Tekoäly ei tiennyt, kenelle vastaus on tarkoitettu tai mihin sitä käytetään.
 
-Kysy: "Verrattuna edelliseen — mitä parempaa?", "Onko tämä paremmin sinun tasollesi?" ja "Puuttuuko silti jotain?" Odotettu vastaus: "Se on parempi, mutta se ei ole vielä tarpeeksi spesifinen."
+#### Vaihe 3: Toinen esimerkki — vähän kontekstia noin 7 minuuttia
 
-**Johtopäätös (1 min)**
+**Pyyntö:**
 
-Sanaa: "Nyt se on **parempi, mutta vielä yleinen**."
+Kerro verkoista. Olen 15-vuotias IT-opiskelija. Haluan ymmärtää perusteita.
 
-#### Vaihe 4: Kolmas esimerkki — lisää yksityiskohtia (8 min)
+**Näytä vastaus noin 2 minuuttia:**
 
-**Pyyntö:** "Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan ymmärtää: mitä verkko on, miten se toimii jokapäiväisessä elämässä, mitkä ovat riskit. Anna 3 konkreettista esimerkkiä."
+Näytä tekoälyn vastaus. Vastaus on yleensä selkeämpi ja paremmin opiskelijan tasolle sopiva kuin ensimmäinen vastaus.
 
-**Näytä vastaus (2 min)**
+**Vertailuanalyysi noin 3 minuuttia:**
 
-Vastaus sisältää esimerkkejä ja on konkreettisempi. Näkyy selvästi, että tekoäly ymmärsi sinun tilanteesi.
+- Mitä parempaa tässä vastauksessa on verrattuna ensimmäiseen?
+- Sopiiko vastaus paremmin opiskelijan tasolle?
+- Onko vastaus silti liian yleinen?
+- Mitä tekoäly ei vieläkään tiedä opiskelijan tarpeesta?
 
-**Analyysi (4 min)**
+**Johtopäätös noin 1 minuutti:**
 
-Kysy: "Mitä eroa tämän ja edellisen välillä?", "Onko tämä se, mitä tarvitset?" ja "Voisitko käyttää tätä tenttiin valmistautumiseen?" Odotettu vastaus: "Kyllä, nyt se on konkreettisempi."
+> Nyt vastaus on **parempi, mutta edelleen melko yleinen**. Tekoäly tietää hieman enemmän käyttäjästä, mutta tehtävän tavoite ja rakenne ovat vielä epäselviä.
 
-**Johtopäätös (1 min)**
+#### Vaihe 4: Kolmas esimerkki — enemmän yksityiskohtia noin 8 minuuttia
 
-Sanaa: "Nyt se alkaa olla **käytökelpoinen**."
+**Pyyntö:**
 
-#### Vaihe 5: Neljäs esimerkki — täysi konteksti ja pilkkominen (6 min)
+Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan ymmärtää, mitä verkko on, miten se toimii jokapäiväisessä elämässä ja mitkä ovat verkkoihin liittyviä riskejä. Anna kolme konkreettista esimerkkiä.
 
-**Pyyntö:** "Haluan oppia verkon perusteita 30 minuutissa. Olen 15-vuotias IT-opiskelija. Anna minulle: 1) lyhyt selitys (2–3 lausetta), mitä verkko on, 2) kolme konkreettista esimerkkiä jokapäiväisestä elämästä, 3) miten tiedot kulkevat verkossa (yksinkertainen selitys), 4) kolme tärkeää termiä ja niiden merkitys, 5) testikysymykset (kolme kysymystä, joiden avulla tarkistan ymmärrykseni)."
+**Näytä vastaus noin 2 minuuttia:**
 
-**Näytä vastaus (2 min)**
+Näytä tekoälyn vastaus. Vastauksen pitäisi olla konkreettisempi, koska pyyntö sisältää käyttäjän lähtötason, tavoitteen ja esimerkkien tarpeen.
 
-Vastaus on hyvin strukturoitu ja juuri sinun tarpeisiisi. Se sisältää kaikki mitä pyysit: selitykset, esimerkit, termit ja testikysymykset.
+**Analyysi noin 4 minuuttia:**
 
-**Analyysi (2 min)**
+- Mitä eroa tällä vastauksella on edelliseen verrattuna?
+- Auttaako vastaus ymmärtämään aihetta paremmin?
+- Voisiko tätä käyttää tenttiin valmistautumisessa?
+- Mikä tekee vastauksesta konkreettisemman?
 
-Kysy: "Nyt mitä sait?" ja "Voisitko käyttää tätä heti?" Odotettu vastaus: "Kyllä, tämä on täysin spesifinen minulle."
+**Johtopäätös noin 1 minuutti:**
 
-**Johtopäätös (1 min)**
+> Nyt vastaus alkaa olla **käytännössä hyödyllinen**. Tekoäly sai enemmän tietoa opiskelijan tilanteesta ja pystyi kohdistamaan vastauksen paremmin.
 
-Sanaa: "Nyt se on **juuri sinun tarpeissasi**."
+#### Vaihe 5: Neljäs esimerkki — täysi konteksti ja selkeä rakenne noin 6 minuuttia
 
-#### Vaihe 6: Yhteenveto (1 min)
+**Pyyntö:**
 
-Näytä yhteenveto:
+Haluan oppia verkon perusteita 30 minuutissa. Olen 15-vuotias IT-opiskelija. Anna minulle: 1) lyhyt selitys 2–3 lauseella siitä, mitä verkko tarkoittaa, 2) kolme konkreettista esimerkkiä jokapäiväisestä elämästä, 3) yksinkertainen selitys siitä, miten tieto kulkee verkossa, 4) kolme tärkeää termiä ja niiden merkitykset sekä 5) kolme testikysymystä, joiden avulla voin tarkistaa ymmärrykseni.
+
+**Näytä vastaus noin 2 minuuttia:**
+
+Näytä tekoälyn vastaus. Vastauksen pitäisi olla hyvin jäsennelty ja vastata tarkasti annettuun tarpeeseen.
+
+**Analyysi noin 2 minuuttia:**
+
+- Mitä opiskelija sai tästä vastauksesta?
+- Voisiko tätä käyttää heti oppimisen tukena?
+- Miten pyyntö ohjasi vastauksen rakennetta?
+- Miksi tämä vastaus on todennäköisesti hyödyllisin?
+
+**Johtopäätös noin 1 minuutti:**
+
+> Nyt vastaus on **juuri käyttäjän tarpeeseen rakennettu**. Tekoäly tiesi, kuka kysyy, mitä hän haluaa oppia, kuinka paljon aikaa hänellä on ja missä muodossa vastaus halutaan.
+
+#### Vaihe 6: Yhteenveto noin 1 minuutti
+
+Näytä opiskelijoille seuraava yhteenveto:
 
 ```
-SAMA AIHE:
-  → Huono pyyntö (yleinen) → Liian yleinen, epäosuva
-  → Parempi pyyntö (jonkin verran tietoa) → Parempi, mutta silti yleinen
-  → Vielä parempi (konkreettinen) → Hyödyllinen, mutta voisiko olla tarkempi?
-  → Paras pyyntö (täysi konteksti) → Juuri sinun tarpeissasi!
+Sama aihe: verkot1. Huono pyyntö:"Kerro verkoista."→ Yleinen ja epäselvästi kohdistettu vastaus.2. Parempi pyyntö:"Olen 15-vuotias IT-opiskelija."→ Parempi, mutta edelleen melko yleinen vastaus.3. Vielä parempi pyyntö:"Kerro lähtötasoni, tavoitteeni ja pyydä esimerkkejä."→ Konkreettinen ja hyödyllinen vastaus.4. Paras pyyntö:"Kerro tavoite, aika, käyttäjä, rakenne ja haluttu lopputulos."→ Juuri tarpeeseen sopiva vastaus.
 ```
 
-Lopuksi sanaa: "Tämä on ero ammattilaisuuden ja sattumanvaraisen käytön välillä. Ammattilaisena sinä **ajattelet kontekstia** ennen kuin kysyt."
+Lopuksi sano opiskelijoille:
+
+> Tämä on ero satunnaisen käytön ja ammatillisen käytön välillä. Ammattilaisena et vain kysy tekoälyltä jotain, vaan **rakennat kontekstin** ennen kuin kysyt.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, että kontekstin määrä ja laatu vaikuttavat tekoälyn vastaukseen.
+- Opiskelijat osaavat tunnistaa liian yleisen pyynnön.
+- Opiskelijat näkevät, miten pyyntöä voidaan parantaa vaiheittain.
+- Opiskelijat ymmärtävät, että hyvä pyyntö sisältää käyttäjän tilanteen, tavoitteen, rajauksen ja halutun vastausmuodon.
 
 ---
 
 ## Tehtävä 12.2: Pienryhmä — kontekstin rakentaminen käytännössä
 
 ### Tavoite
-Opiskelijat harjoittelevat kontekstin rakentamista ryhmissä näkemällä, miten muiden antama konteksti parantaa vastauksia.
+
+Tehtävän tavoitteena on, että opiskelijat harjoittelevat **kontekstin rakentamista** ryhmissä. He näkevät, miten pyynnön tarkentaminen vaiheittain parantaa tekoälyn antamaa vastausta.
+
+**Opettajan painotus:** Tässä tehtävässä opiskelijoiden ei tarvitse saada täydellistä pyyntöä heti ensimmäisellä yrityksellä. Tarkoitus on oppia parantamaan pyyntöä vaiheittain.
 
 ### Opettajan valmistelu
 
 **Ennen lähiosaa:**
 
-Valmistele 4 erilaista skenaariota (katso alla). Jaa opiskelijat 4 ryhmään, jossa kussakin on 3–4 henkilöä.
+1. Valmistele neljä erilaista skenaariota.
+2. Jaa opiskelijat neljään ryhmään. Sopiva ryhmäkoko on 3–4 opiskelijaa.
+3. Varaa jokaiselle ryhmälle oma skenaario.
+4. Halutessasi valmistele taululle malli, jossa pyyntö paranee neljässä vaiheessa.
 
-### Lähiosassa — pienryhmätehtävät (30 min)
+### Lähiosassa — pienryhmätehtävä noin 30 minuuttia
 
-Jaa opiskelijat 4 ryhmään, jossa jokainen ryhmä saa yhden skenaarion.
+Jaa opiskelijat neljään ryhmään. Jokainen ryhmä saa yhden skenaarion ja kirjoittaa siihen neljä eritasoista pyyntöä tekoälylle:
+
+1. **Pyyntö 1:** liian yleinen pyyntö
+2. **Pyyntö 2:** pyyntö, jossa on hieman kontekstia
+3. **Pyyntö 3:** tarkempi pyyntö, jossa näkyvät tavoite ja rakenne
+4. **Pyyntö 4:** mahdollisimman selkeä ja käyttökelpoinen pyyntö, jossa on käyttäjä, tavoite, rajaus, muoto ja käyttötarkoitus
+
+### Skenaariot
 
 #### Skenaario A: Esseen kirjoittaminen
 
-Sinulla on esseen aihe: 'Tekoäly tulevaisuudessa'. Kirjoita neljä eri pyyntöä tekoälylle — ensimmäinen huono, neljäs paras — missä jokainen on parempi kuin edellinen.
+**Tilanne:** Sinulla on esseen aihe: *Tekoäly tulevaisuudessa*. Kirjoita neljä erilaista pyyntöä tekoälylle niin, että jokainen pyyntö on edellistä parempi.
 
-**Ryhmän tehtävät (10 min):**
+**Ryhmän tehtävä noin 10 minuuttia:**
 
-Kirjoita neljä pyyntöä siten, että ensimmäinen on liian yleinen, toinen lisää kontekstia (opiskelija, esseen pituus), kolmas on vielä tarkempi (rakenne, taso) ja neljäs on täysin spesifinen (mitä haluat, kuka olet, mihin käytät).
+- Kirjoittakaa ensimmäinen pyyntö liian yleiseksi.
+- Lisätkää toiseen pyyntöön hieman kontekstia, esimerkiksi opiskelijan taso ja esseen pituus.
+- Lisätkää kolmanteen pyyntöön rakenne, tavoite ja kirjoitustyyli.
+- Tehkää neljännestä pyynnöstä mahdollisimman tarkka: kuka kirjoittaa, mihin tarkoitukseen, kuinka pitkä teksti tarvitaan ja millainen rakenne esseessä pitää olla.
 
-**Esittäminen (2 min):** Ryhmä esittelee pyynnöt
+**Esittäminen noin 2 minuuttia:** Ryhmä esittelee neljä pyyntöään ja kertoo, miksi neljäs on paras.
 
-**Opettajan kommentti:** Näytä neljällä pyynnöllä. Neljäs on paras, koska se kertoo kaikki: kuka olet, mitä tarvitset, mihin käytät, miten strukturoit. Tekoäly osaa antaa juuri sen mitä haluat.
+**Opettajan kommentti:** Korosta, että neljäs pyyntö toimii parhaiten, koska se kertoo tekoälylle käyttäjän, tavoitteen, tekstin pituuden, rakenteen ja käyttötarkoituksen.
 
 ---
 
 #### Skenaario B: Tenttiin valmistautuminen
 
-Sinulla on tentti IT-perusteista. Kirjoita neljä eri pyyntöä jotka parantuvat jokaisen kierroksen jälkeen.
+**Tilanne:** Sinulla on tulossa tentti IT-perusteista. Kirjoita neljä pyyntöä, jotka paranevat kierros kierrokselta.
 
-**Ryhmän tehtävät (10 min):**
+**Ryhmän tehtävä noin 10 minuuttia:**
 
-Kirjoita neljä eri pyyntöä. Pyyntö 1 on yleinen: "Auta minua tenttiin valmistautumisessa." Pyyntö 2 sisältää aiheen: "Tentti on IT-perusteista (verkot, palvelimet). Auta minua valmistautumaan." Pyyntö 3 lisää tietoa: "Tentti IT-perusteista. Minulla on 1 viikko. Opetan parhaiten esimerkeistä." Pyyntö 4 on täysin spesifinen: "Tentti IT-perusteista. Minulla on 1 viikko, 1 tunti päivässä. Opetan esimerkeistä. Tee minulle viikko-ohjelma — joka päivä yksi aihe, esimerkit, testikysymykset."
+Voitte käyttää seuraavaa etenemismallia:
 
-**Esittäminen (2 min)**
+1. `Auta minua tenttiin valmistautumisessa.`
+2. `Tentti on IT-perusteista, kuten verkoista ja palvelimista. Auta minua valmistautumaan.`
+3. `Tentti on IT-perusteista. Minulla on yksi viikko aikaa. Opin parhaiten esimerkkien avulla.`
+4. `Tentti on IT-perusteista. Minulla on yksi viikko aikaa ja voin opiskella tunnin päivässä. Opin parhaiten esimerkkien avulla. Tee minulle viikko-ohjelma, jossa jokaiselle päivälle on yksi aihe, konkreettiset esimerkit ja testikysymykset.`
 
-**Opettajan kommentti:** Neljäs pyyntö on paras, koska se kertoo: aika, oppimistyyli, haluttu muoto (viikko-ohjelma). Tekoäly voi nyt antaa sinulle juuri sen mitä tarvitset.
+**Esittäminen noin 2 minuuttia:** Ryhmä esittelee pyynnöt ja kertoo, mikä muuttui jokaisessa vaiheessa.
+
+**Opettajan kommentti:** Korosta, että neljäs pyyntö toimii parhaiten, koska se kertoo käytettävissä olevan ajan, oppimistavan, aiheen ja halutun tuotoksen muodon.
 
 ---
 
 #### Skenaario C: Ryhmätyö
 
-Ryhmä tekee projektia. Kirjoita neljä eri pyyntöä tekoälylle, jotka auttavat ryhmää paremmin.
+**Tilanne:** Ryhmä tekee projektia verkon turvallisuudesta. Kirjoita neljä pyyntöä tekoälylle niin, että ne auttavat ryhmää yhä paremmin.
 
-**Ryhmän tehtävät (10 min):**
+**Ryhmän tehtävä noin 10 minuuttia:**
 
-Kirjoita neljä pyyntöä. Pyyntö 1 on yleinen: "Auta meitä projektissa." Pyyntö 2 sisältää aiheen: "Teemme projektia verkon turvallisuudesta. Auta meitä." Pyyntö 3 lisää yksityiskohtia: "Teemme projektia verkon turvallisuudesta. Ryhmässä 4 henkilöä. Raportin pituus 2000 sanaa. Raportin rakenne: johdanto, kolme pääosaa (perusteet, käytännön esimerkit, riskit), johtopäätökset." Pyyntö 4 on täysin spesifinen: "Teemme projektia verkon turvallisuudesta (4 henkilöä). Raportti 2000 sanaa. Rakenne: johdanto (200 s), kolme pääosaa (600 s kukin): 1) verkon turvallisuuden perusteet, 2) käytännön esimerkit (miten suojata kotiverkko), 3) yleiset riskit ja kuinka varautua. Johtopäätökset (200 s). Haluan, että jokainen pääosa alkaa konkreettisella esimerkeillä."
+Voitte käyttää seuraavaa etenemismallia:
 
-**Esittäminen (2 min)**
+1. `Auta meitä projektissa.`
+2. `Teemme projektia verkon turvallisuudesta. Auta meitä.`
+3. `Teemme projektia verkon turvallisuudesta. Ryhmässä on neljä henkilöä. Raportin pituus on noin 2 000 sanaa. Raportin rakenne on johdanto, kolme pääosaa ja johtopäätökset.`
+4. `Teemme neljän henkilön ryhmässä projektia verkon turvallisuudesta. Raportin pituus on noin 2 000 sanaa. Rakenne: johdanto 200 sanaa, kolme pääosaa 600 sanaa kukin ja johtopäätökset 200 sanaa. Pääosat ovat: 1) verkon turvallisuuden perusteet, 2) käytännön esimerkit kotiverkon suojaamisesta ja 3) yleiset riskit ja niihin varautuminen. Haluan, että jokainen pääosa alkaa konkreettisella esimerkillä.`
 
-**Opettajan kommentti:** Neljäs pyyntö on paras, koska se kertoo: ryhmän koko, rakenne, sanomäärä, mitä haluat jokaiseen osaan. Tekoäly voi nyt auttaa ryhmää systemaattisesti.
+**Esittäminen noin 2 minuuttia:** Ryhmä esittelee pyynnöt ja perustelee, miksi viimeinen pyyntö on käyttökelpoisin.
+
+**Opettajan kommentti:** Korosta, että neljäs pyyntö antaa tekoälylle ryhmän koon, aiheen, sanamäärän, rakenteen, sisältörajaukset ja tyylitoiveen.
 
 ---
 
 #### Skenaario D: Harjoitteluhakemuksen kirjoittaminen
 
-Haluat kirjoittaa harjoitteluhakemuksen IT-yritykseen. Kirjoita neljä eri pyyntöä, joista neljäs antaa sinulle juuri sen mitä tarvitset.
+**Tilanne:** Haluat kirjoittaa harjoitteluhakemuksen IT-yritykseen. Kirjoita neljä pyyntöä, joista neljäs antaa mahdollisimman hyödyllisen vastauksen.
 
-**Ryhmän tehtävät (10 min):**
+**Ryhmän tehtävä noin 10 minuuttia:**
 
-Kirjoita neljä pyyntöä. Pyyntö 1 on yleinen: "Auta minua harjoitteluhakemuksen kanssa." Pyyntö 2 sisältää yrityksen: "Haluan hakea harjoittelupaikkaa IT-yritykseen. Auta minua hakemuksen kanssa." Pyyntö 3 lisää yksityiskohtia: "Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen. Olen 15-vuotias opiskelija. Minulla on peruskoulun IT-taidot, lyhyt Python-kokemus ja halu oppia." Pyyntö 4 on täysin spesifinen: "Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen X. Olen 15-vuotias opiskelija. Taidot: perustason IT (Windows, verkko), Python-perusteet (muuttujat, ehtolauseet), Linux-komentorivi. Haluan oppia verkkotutkimuksesta ja asiakaspalvelusta. Kirjoita 300 sanan motivaatiokirje, joka näyttää: miksi haluan työskennellä IT:ssä, mitä voin tuoda, mitä haluan oppia."
+Voitte käyttää seuraavaa etenemismallia:
 
-**Esittäminen (2 min)**
+1. `Auta minua harjoitteluhakemuksen kanssa.`
+2. `Haluan hakea harjoittelupaikkaa IT-yritykseen. Auta minua hakemuksen kanssa.`
+3. `Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen. Olen 15-vuotias opiskelija. Minulla on perustason IT-taidot, lyhyt Python-kokemus ja halu oppia.`
+4. `Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen X. Olen 15-vuotias opiskelija. Taitoni: perustason IT-taidot Windowsista ja verkoista, Pythonin perusteet kuten muuttujat ja ehtolauseet sekä Linux-komentorivin alkeet. Haluan oppia verkkotekniikasta ja asiakaspalvelusta. Kirjoita noin 300 sanan motivaatiokirje, jossa näkyy, miksi haluan työskennellä IT-alalla, mitä osaamista voin tuoda ja mitä haluan oppia harjoittelussa.`
 
-**Opettajan kommentti:** Neljäs on paras, koska se kertoo: yritys, ikä, nykyiset taidot, motivaatio, haluttu muoto ja pituus. Tekoäly kirjoittaa nyt motivaatiokirjeen, joka sopii sinulle.
+**Esittäminen noin 2 minuuttia:** Ryhmä esittelee neljä pyyntöä ja kertoo, miksi viimeinen toimii parhaiten.
 
-### Päätös-keskustelu (3 min)
+**Opettajan kommentti:** Korosta, että neljäs pyyntö toimii parhaiten, koska se kertoo yrityksen, hakijan iän, nykyiset taidot, motivaation, tekstin pituuden ja halutun sisällön.
 
-**Koko luokka:**
+### Päätöskeskustelu noin 3 minuuttia
 
-Näitte neljä tilannetta, joissa konteksti rakentuu askel askeleelta. Ammattilaisesti ensimmäisen pyynnön parantaminen säästää iteraatioita myöhemmin. Konteksti ei ole triviaali — se on strateginen taita.
+Käykää lopuksi koko luokan yhteinen keskustelu.
+
+Kysy opiskelijoilta:
+
+- Mikä teki neljännestä pyynnöstä parhaan?
+- Mitä tietoja tekoäly tarvitsee, jotta se voi auttaa paremmin?
+- Milloin liian tarkka pyyntö voisi olla ongelma?
+- Mitä eroa on huonolla pyynnöllä ja ammatillisella pyynnöllä?
+
+Kokoa keskustelu yhteen:
+
+> Kontekstin rakentaminen säästää myöhempää korjaamista. Mitä paremmin kerrot tavoitteen, tilanteen ja halutun lopputuloksen, sitä paremmat mahdollisuudet tekoälyllä on antaa hyödyllinen vastaus. Konteksti ei ole sivuasia, vaan **strateginen taito**.
+
+### Odotettu oppimistulos
+
+- Opiskelijat osaavat rakentaa tekoälylle annettavaa kontekstia vaiheittain.
+- Opiskelijat ymmärtävät, että hyvä pyyntö sisältää tavoitteen, käyttäjän tilanteen, rajauksen ja halutun muodon.
+- Opiskelijat osaavat vertailla heikkoa ja vahvaa pyyntöä.
+- Opiskelijat näkevät, että pyynnön parantaminen on osa ammatillista tekoälyn käyttöä.
 
 ---
 
 ## Tehtävä 12.3: Harjoitus — iteraation rakentaminen
 
 ### Tavoite
-Opiskelijat näkevät, kuinka kierros kierrokselta rakennettu konteksti parantaa vastauksia.
+
+Tehtävän tavoitteena on näyttää opiskelijoille, miten **iteraatio** eli vaiheittainen tarkentaminen parantaa tekoälyn vastauksia. Opiskelijat näkevät, että kaikkea ei tarvitse pyytää yhdellä kertaa, vaan vastausta voidaan rakentaa kierros kierrokselta.
+
+**Opettajan painotus:** Iterointi ei ole merkki epäonnistumisesta. Se on normaali ja ammattimainen tapa ohjata tekoälyä kohti parempaa lopputulosta.
 
 ### Opettajan valmistelu
 
 **Ennen lähiosaa:**
 
-Valmistele yksi aihe, jonka käsittelet 4 kierroksella. Näytä, kuinka jokainen kierros rakentuu edellisen päälle. Esimerkki aihe: "Python-muuttujat"
+1. Valitse yksi aihe, jota käsittelet neljällä kierroksella. Sopiva esimerkki on **Python-muuttujat**.
+2. Valmistele neljä pyyntöä, joista jokainen rakentuu edellisen vastauksen päälle.
+3. Voit halutessasi ajaa pyynnöt tekoälyllä etukäteen ja tallentaa vastaukset.
 
-### Lähiosassa (20 min)
+### Lähiosassa noin 20 minuuttia
 
-#### Vaihe 1: Ensimmäinen kierros — perustieto (5 min)
+#### Vaihe 1: Ensimmäinen kierros — perustieto noin 5 minuuttia
 
-**Pyyntö:** "Kerro Python-muuttujista."
+**Pyyntö:**
 
-**Vastaus:** Perusselitys, mitä muuttuja on.
+Kerro Python-muuttujista.
 
-**Analyysi:** "Tämä on hyödyllinen, mutta vain pohja."
+**Odotettu vastaus:** Tekoäly antaa perusselityksen siitä, mitä muuttuja tarkoittaa Pythonissa.
 
-#### Vaihe 2: Toinen kierros — esimerkit (5 min)
+**Analyysi:**
 
-**Jatkopyyntö:** "Lisää 3 konkreettista esimerkkiä. Näytä, miten nimetään oikein ja miksi se on tärkeää."
+> Tämä on hyödyllinen alku, mutta vastaus on vasta pohja. Se kertoo perusasian, mutta ei vielä välttämättä auta soveltamaan tietoa.
 
-Vastaus sisältää perustiedot ja esimerkit. Analyysi: "Nyt näen konkreettisia tapauksia. Parempi ymmärtää."
+#### Vaihe 2: Toinen kierros — esimerkit noin 5 minuuttia
 
-#### Vaihe 3: Kolmas kierros — virheistä oppiminen (5 min)
+**Jatkopyyntö:**
 
-**Jatkopyyntö:** "Lisää kolme yleistä virhettä, joita opiskelijat tekevät. Näytä väärät ja oikeat tavat."
+Lisää kolme konkreettista esimerkkiä. Näytä, miten muuttujat kannattaa nimetä ja miksi hyvä nimeäminen on tärkeää.
 
-Vastaus sisältää esimerkit ja yleisiä virheitä. Analyysi: "Nyt tiedän, mitä EI pitäisi tehdä. Tämä on hyödyllistä."
+**Odotettu vastaus:** Vastaus sisältää konkreettisia esimerkkejä muuttujista ja muuttujien nimeämisestä.
 
-#### Vaihe 4: Neljäs kierros — testaaminen (5 min)
+**Analyysi:**
 
-**Jatkopyyntö:** "Tee 3 testikysymystä, joista opiskelijat usein vastaavat väärin. Sisällytä selitykset oikeille vastauksille."
+> Nyt vastaus ei ole vain teoriaa. Esimerkit auttavat ymmärtämään, miten muuttujia käytetään käytännössä.
 
-Vastaus sisältää testikysymykset oikeilla vastauksilla. Analyysi: "Nyt voin testata ymmärrykseni. Tämä on täysin hyödyllinen!"
+#### Vaihe 3: Kolmas kierros — virheistä oppiminen noin 5 minuuttia
 
-#### Vaihe 5: Oppi (0 min)
+**Jatkopyyntö:**
 
-Sanaa oppilaille: "**Tämä on ammattilaisuus:** Et pyydä tekoälyä antamaan kaikkea kerralla. Rakennat vastauksia kierros kierrokselta. Jokainen kierros on spesifinen ja rakentuu edellisen päälle. Lopuksi sinulla on juuri sellainen materiaali, jonka tarvitset oppimiseen."
+Lisää kolme yleistä virhettä, joita opiskelijat tekevät muuttujien kanssa. Näytä jokaisesta virheestä väärä ja oikea tapa.
+
+**Odotettu vastaus:** Vastaus sisältää yleisiä virheitä sekä väärät ja korjatut esimerkit.
+
+**Analyysi:**
+
+> Nyt vastaus auttaa myös välttämään virheitä. Oppiminen ei ole vain sitä, että tiedämme oikean tavan, vaan myös sitä, että tunnistamme yleiset kompastuskohdat.
+
+#### Vaihe 4: Neljäs kierros — ymmärryksen testaaminen noin 5 minuuttia
+
+**Jatkopyyntö:**
+
+Tee kolme testikysymystä, joihin opiskelijat vastaavat usein väärin. Sisällytä oikeat vastaukset ja lyhyet selitykset.
+
+**Odotettu vastaus:** Vastaus sisältää testikysymykset, oikeat vastaukset ja lyhyet perustelut.
+
+**Analyysi:**
+
+> Nyt materiaali ei vain selitä aihetta, vaan auttaa myös tarkistamaan, ymmärsivätkö opiskelijat asian. Tämä tekee vastauksesta oppimisen kannalta paljon hyödyllisemmän.
+
+#### Vaihe 5: Oppi
+
+Kokoa tehtävän tärkein ajatus:
+
+> Tämä on ammatillista tekoälyn käyttöä: et aina pyydä kaikkea kerralla, vaan rakennat vastausta kierros kierrokselta. Jokainen jatkokysymys on tarkempi ja perustuu edelliseen vastaukseen. Lopuksi sinulla on juuri sellainen materiaali, jota tarvitset.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, mitä **iteraatio** tarkoittaa tekoälyn käytössä.
+- Opiskelijat näkevät, miten jatkokysymykset voivat parantaa vastauksen laatua.
+- Opiskelijat osaavat rakentaa vastauksia vaiheittain sen sijaan, että yrittäisivät saada täydellisen vastauksen yhdellä pyynnöllä.
+- Opiskelijat ymmärtävät, että hyvä tekoälyn käyttö on aktiivista ohjaamista, ei pelkkää kysymistä.
 
 ---
 
-## Synteesi: Opiskelijoiden oppiminen
+## Synteesi: opiskelijoiden oppiminen
 
-Kolmen tehtävän jälkeen opiskelijat ymmärtävät kolme asiaa. Ensinnäkin konteksti ratkaisee vastausten laadun (Tehtävä 12.1). Toiseksi konteksti rakentuu asteittain (Tehtävä 12.2). Kolmanneksi iteraatio terävöittää vastauksia (Tehtävä 12.3).
+Kolmen tehtävän jälkeen opiskelijat ymmärtävät kolme keskeistä asiaa:
 
-Seuraavalla tunilla opiskelijat tekevät omat harjoitukset, joissa rakentavat kontekstia käytännössä.
+1. **Konteksti ratkaisee vastauksen laadun.** Tämä näkyy tehtävässä 12.1, jossa sama aihe tuottaa erilaisia vastauksia pyynnön tarkkuuden mukaan.
+2. **Konteksti rakentuu asteittain.** Tämä näkyy tehtävässä 12.2, jossa opiskelijat parantavat pyyntöjä vaiheittain ryhmissä.
+3. **Iteraatio terävöittää vastauksia.** Tämä näkyy tehtävässä 12.3, jossa vastausta rakennetaan kierros kierrokselta.
+
+Seuraavalla tunnilla opiskelijat voivat tehdä omat harjoituksensa, joissa he rakentavat kontekstia käytännössä omiin oppimis- tai työelämätilanteisiinsa.
+
+---

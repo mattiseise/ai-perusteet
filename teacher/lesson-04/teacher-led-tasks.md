@@ -1,165 +1,350 @@
 # Opettajavetoiset tehtävät
 
-## Tehtävä 4.1: "Sama kysymys, kaksi kontekstia" — Käytännön vertailu luokassa
+## Tehtävä 4.1: Sama kysymys, kaksi kontekstia — käytännön vertailu luokassa
 
 ### Tavoite
-Rakentaa konkreettisesti ymmärrys siitä, kuinka dramaattisesti konteksti ja prompti vaikuttavat tekoälyn vastauksen hyödyllisyyteen. Osoittaa opiskelijoille, että parempi vastaus ei tule pelkästään paremmasta promptista, vaan paremmasta kontekstista ja sen pohjalle rakentuvasta terävästä promptista.
+
+Tehtävän tavoitteena on havainnollistaa, kuinka paljon **konteksti** ja **prompti** vaikuttavat tekoälyn vastauksen hyödyllisyyteen. Opiskelijat näkevät konkreettisesti, että parempi vastaus ei synny pelkästään “paremmasta kysymyksestä”, vaan hyvästä kontekstista ja sen pohjalta rakennetusta täsmällisestä promptista.
+
+**Opettajan painotus:** Korosta, että konteksti antaa tekoälylle taustatiedon ja prompti kertoo, mitä tekoälyn pitää tehdä. Hyvä vastaus syntyy yleensä näiden kahden yhteistyöstä.
 
 ### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu (5 min ennen oppituntia):**
-- Valitse IT-aihe, jonka tunnet ja jonka opiskelijasi ymmärtävät. Esim. "Tietokannan optimointi", "Python-debuggaus", "verkkokytkinten konfigurointi"
-- Kirjoita kaksi kyselyä valmiiksi:
-  1. Huono kysymys: vain yksittäinen lause ilman kontekstia. Esim. "Kuinka optimoin tietokantaa?"
-  2. Hyvä kysymys: sisältää sekä vahvan kontekstin (rooli, tausta, tavoite, rajaukset, esimerkki) että terävän promptin (tavoite, rooli, rajat, formaatti, esimerkit).
+**Valmistelu noin 5 minuuttia ennen oppituntia:**
 
-**Oppitunnilla (20 min):**
+1. Valitse IT-aihe, jonka tunnet ja jonka opiskelijat ymmärtävät. Sopivia aiheita ovat esimerkiksi **tietokannan optimointi**, **Python-debuggaus** tai **verkkokytkinten konfigurointi**.
+2. Kirjoita valmiiksi kaksi kyselyä samasta aiheesta:
+   - **Heikko kysymys:** yksittäinen lause ilman kontekstia, esimerkiksi `Kuinka optimoin tietokantaa?`
+   - **Hyvä kysymys:** sisältää vahvan kontekstin, kuten roolin, taustan, tavoitteen, rajaukset ja esimerkin, sekä täsmällisen promptin, jossa määritellään tehtävä, rooli, rajat, formaatti ja mahdolliset esimerkit.
 
-1. **Johdanto (3 min):**
-   - Näytä opiskelijoille molemmat kysymykset rinnakkain ruudulla.
-   - Kerro: "Käytämme samaa tekoälyä kaksi kertaa. Ensimmäinen kerta ilman kontekstia ja heikolla promptilla, toinen kerta hyvällä kontekstilla ja terävällä promptilla. Vertaamme vastauksia."
+### Toteutus noin 20 minuuttia
 
-2. **Kysely 1 — Ilman kontekstia ja heikolla promptilla (5 min):**
-   - Lähetä huono kysymys tekoälylle ruudulla opiskelijoiden katsellessa.
-   - Lue vastaus ääneen tai näytä se.
-   - Kysy luokalta:
-     - "Kuinka hyödyllinen tämä vastaus on sinulle IT-opiskelijana?"
-     - "Mitä tietoa puuttuu? Mitkä kontekstin osat puuttuivat?"
-     - "Kuinka pitkä vastaus on?" (lasketaan sanamäärä tai rivit)
-     - "Millä osaamistasolla vastaus oli?"
+1. **Johdanto noin 3 minuuttia:**
 
-3. **Kysely 2 — Hyvällä kontekstilla ja terävällä promptilla (5 min):**
-   - Lähetä hyvä kysymys samalle tekoälylle.
-   - Lue vastaus ääneen.
-   - Kysy luokalta:
-     - "Kuinka paljon parempi tämä on?"
-     - "Mitkä osat kontekstista auttoivat tekoälyä?"
-     - "Millä tavalla prompti teki pyynnöstä terävän?"
-     - "Voisitko käyttää tätä vastausta suoraan omassa projektissa?"
+   ```
 
-4. **Analyysi ja pohdinta (7 min):**
-   - Kirjoita liitutaululle:
-     | Aspekti | Vastaus 1 | Vastaus 2 |
-     |---------|-----------|-----------|
-     | Pituus | | |
-     | Spesifisyys | | |
-     | Soveltuvuus | | |
-     | Osaamistaso | | |
-   - Keskustele yhdessä:
-     - "Muuttuiko tekoäly vai konteksti ja prompti?"
-     - "Mitä kontekstin osia käytimme?"
-     - "Mitkä promptin elementit tekivät pyynnöstä selkeän?"
+   Näytä opiskelijoille molemmat kysymykset rinnakkain ruudulla.
 
-**Fasilitointikysymykset:**
-- Jos opiskelija sanoo "vastaus 1 oli hyvin yleinen": "Niin, miksi? Koska tekoäly ei tiennyt, mitä tarvitsit — ei kontekstia, ei terävää promptia."
-- Jos opiskelija sanoo "vastaus 2 oli pidempi": "Entä jos se oli tarkempi ja paremmin kohdistettu? Oliko pituus ongelma vai etu?"
-- "Voimme erottaa kaksi asiaa: konteksti antaa pohjan, prompti esittää spesifin pyynnön. Kumpi oli tärkeämpi tässä esimerkissä?"
+   Kerro opiskelijoille:
+
+   > Käytämme samaa tekoälyä kaksi kertaa. Ensimmäisellä kerralla kysymys on heikko ja ilman kontekstia. Toisella kerralla annamme hyvän kontekstin ja täsmällisen promptin. Lopuksi vertaamme vastauksia.
+2. **Kysely 1: ilman kontekstia ja heikolla promptilla noin 5 minuuttia:**
+
+   1. Lähetä heikko kysymys tekoälylle opiskelijoiden nähden.
+   2. Lue vastaus ääneen tai näytä se ruudulla.
+   3. Kysy luokalta:
+      - Kuinka hyödyllinen tämä vastaus on IT-opiskelijalle?
+      - Mitä tietoa vastauksesta puuttuu?
+      - Mitkä kontekstin osat puuttuivat kysymyksestä?
+      - Kuinka pitkä vastaus on? Voitte arvioida sanamäärän tai rivien määrän.
+      - Mille osaamistasolle vastaus näyttää olevan suunnattu?
+3. **Kysely 2: hyvällä kontekstilla ja täsmällisellä promptilla noin 5 minuuttia:**
+
+   1. Lähetä hyvä kysymys samalle tekoälylle.
+   2. Lue vastaus ääneen tai näytä se ruudulla.
+   3. Kysy luokalta:
+      - Kuinka paljon hyödyllisempi tämä vastaus on?
+      - Mitkä kontekstin osat auttoivat tekoälyä?
+      - Millä tavalla prompti teki pyynnöstä täsmällisen?
+      - Voisiko tätä vastausta käyttää suoraan omassa projektissa? Miksi tai miksi ei?
+4. **Analyysi ja pohdinta noin 7 minuuttia:**
+
+   Kirjoita taululle tai näytä seuraava vertailutaulukko:
+
+   | Arvioitava asia | Vastaus 1: heikko kysymys | Vastaus 2: hyvä konteksti ja prompti |
+   | --- | --- | --- |
+   | **Pituus** |  |  |
+   | **Tarkkuus** |  |  |
+   | **Soveltuvuus opiskelijan tilanteeseen** |  |  |
+   | **Osaamistaso** |  |  |
+   | **Käytännön hyödynnettävyys** |  |  |
+
+   Keskustelkaa yhdessä:
+
+   - Muuttuiko tekoäly vai muuttuivatko konteksti ja prompti?
+   - Mitä kontekstin osia käytettiin?
+   - Mitkä promptin elementit tekivät pyynnöstä selkeän?
+   - Kumpi vaikutti vastaukseen enemmän: konteksti vai prompti?
+```
+
+### Fasilitointikysymykset
+
+- Jos opiskelija sanoo, että ensimmäinen vastaus oli hyvin yleinen, kysy: **Miksi se oli yleinen? Mitä tekoäly ei tiennyt tilanteesta?**
+- Jos opiskelija sanoo, että toinen vastaus oli pidempi, kysy: **Oliko pituus ongelma vai oliko vastaus tarkempi ja paremmin kohdistettu?**
+- Kysy lopuksi: **Konteksti antaa pohjan ja prompti esittää pyynnön. Kumpi oli tässä esimerkissä tärkeämpi?**
+
+**Esimerkki opetukseen**
+
+Kirjoita taululle lause: “Huono prompti pakottaa tekoälyn arvaamaan tilanteen. Hyvä konteksti vähentää arvailua.” Palaa tähän ajatukseen, kun opiskelijat vertaavat vastauksia.
 
 ### Odotettu oppimistulos
-- Opiskelijat ymmärtävät, että konteksti ja prompti yhdessä määrittävät vastauksen laatua.
-- He näkevät konkreettisesti, että konteksti ja terävä prompti säästävät aikaa ja antavat hyödyllisempiä vastauksia.
-- He tunnistavat kontekstin viisi osaa ja promptin viisi elementtiä käytännössä.
-- He ymmärtävät eron "hyvän kontekstin" ja "hyvän promptin" välillä.
+
+Tehtävän jälkeen opiskelijat ymmärtävät, että:
+
+- **konteksti** ja **prompti** yhdessä vaikuttavat tekoälyn vastauksen laatuun,
+- hyvä konteksti ja täsmällinen prompti voivat säästää aikaa ja tuottaa käyttökelpoisempia vastauksia,
+- kontekstin osat ja promptin elementit voidaan tunnistaa käytännön esimerkeistä,
+- hyvä konteksti ja hyvä prompti eivät ole sama asia, vaikka ne toimivat yhdessä.
 
 ---
 
-## Tehtävä 4.2: "Kontekstin ja promptin rakentaminen yhdessä" — Ohjattu kirjoittaminen ryhmässä
+## Tehtävä 4.2: Kontekstin ja promptin rakentaminen yhdessä — ohjattu kirjoittaminen ryhmässä
 
 ### Tavoite
-Oppia rakentamaan sekä konteksti että prompti vaihe vaiheelta opettajan ohjauksella niin, että jokainen opiskelija näkee prosessin. Näyttää, kuinka viiden komponentin konteksti ja viiden elementin prompti toimivat yhdessä.
+
+Tehtävän tavoitteena on harjoitella **kontekstin** ja **promptin** rakentamista vaihe vaiheelta opettajan ohjauksessa. Opiskelijat näkevät, miten viiden komponentin konteksti ja viiden elementin prompti toimivat yhdessä.
+
+**Opettajan painotus:** Konteksti on pohja, prompti on sen päälle rakennettu pyyntö. Jos konteksti puuttuu, tekoäly joutuu arvaamaan. Jos prompti on epäselvä, tekoäly ei tiedä tarkasti, mitä sen pitäisi tehdä.
 
 ### Opettajan ohjeet ja fasilitointi
 
 **Valmistelu:**
-- Valitse todellinen IT-ongelma, jonka opiskelijasi tunnistavat. Esim. "Linux-palvelimen SSH-ongelma" tai "SQL-tietokannan hidas haku"
-- Kirjoita taululle tai diaan sekä viiden komponentin kontekstin malli että viiden elementin promptin malli.
 
-**Oppitunnilla (30 min):**
+1. Valitse todellinen IT-ongelma, jonka opiskelijat tunnistavat. Sopivia aiheita ovat esimerkiksi **Linux-palvelimen SSH-ongelma** tai **SQL-tietokannan hidas haku**.
+2. Kirjoita taululle tai diaan:
+   - viiden komponentin kontekstin malli,
+   - viiden elementin promptin malli.
 
-1. **Asetelman muutos (2 min):**
-   - Kerro: "Nyt rakennamme sekä kontekstin että promptin yhdessä vaiheittain. Konteksti on pohja, prompti on kysymys sen päälle."
+### Asetelman muutos noin 2 minuuttia
 
-**Kontekstin rakentaminen (15 min):**
+Kerro opiskelijoille:
 
-2. **Vaihe 1: Rooli (3 min):**
-   - Kirjoita tauluun: "KONTEKSTI — Rooli: ___?"
-   - Kysy opiskelijoilta: "Keitä te olette tässä ongelmassa?"
-   - Täytä yhdessä esim. "Olen IT-opiskelija, neljän viikon Linux-kurssilla"
-   - Selitä: "Rooli auttaa tekoälyä valitsemaan sopivan tason — opiskelijalle vai ammattilaiselle."
+> Nyt rakennamme sekä kontekstin että promptin yhdessä vaiheittain. Konteksti on pohja, prompti on kysymys tai tehtävänanto sen päälle.
 
-3. **Vaihe 2: Taustatieto (3 min):**
-   - Kirjoita taululle: "Taustatieto: ___?"
-   - Kysy: "Mitä olemme jo yrittäneet? Mitä jo tiedämme?"
-   - Täytä esim. "Palvelin on Ubuntu 20.04. SSH-avain on generoitu. Kirjautuminen epäonnistuu, virheviesti on 'Permission denied (publickey)'"
-   - Selitä: "Taustatieto auttaa tekoälyä välttämään arvailua — se tietää, mitä olet jo yrittänyt."
+---
 
-4. **Vaihe 3: Tavoite (3 min):**
-   - Kirjoita taululle: "Tavoite: ___?"
-   - Kysy: "Mitä haluat saavuttaa? Ja miksi?"
-   - Täytä esim. "Haluan ottaa SSH-yhteyden tuotantopalvelimelle ja debugata siellä olevaa web-sovellusta."
-   - Selitä: "Tavoite fokusoi vastauksen — tekoäly tietää, mihin vastaus pitää kohdistaa."
+### Kontekstin rakentaminen noin 15 minuuttia
 
-5. **Vaihe 4: Rajaukset (2 min):**
-   - Kirjoita taululle: "Rajaukset: ___?"
-   - Kysy: "Mitä et halua? Mitä lähestymistapoja haluat välttää?"
-   - Täytä esim. "En halua muuttaa palvelimen SSH-asetuksia. Haluan oppia, miksi avain ei toimi."
-   - Selitä: "Rajaukset eliminoivat turhaa sisältöä — ei turhia vaihtoehtoja."
+#### Vaihe 1: Rooli noin 3 minuuttia
 
-6. **Vaihe 5: Esimerkki (2 min):**
-   - Kirjoita taululle: "Esimerkki: ___?"
-   - Kysy: "Voimmeko antaa virheilmoituksen? Koodinäytteen?"
-   - Näytä esim.: "Komento: `ssh -v user@192.168.1.100`. Virheilmoitus alkaa: `debug1: Offering public key: /home/student/.ssh/id_rsa`..."
-   - Selitä: "Esimerkki auttaa tekoälyä näkemään tarkalleen, mitä tapahtuu."
+Kirjoita taululle:
 
-7. **Lopullinen konteksti (2 min):**
-   - Kirjoita taululle kaikki osat yhteen: "Olen IT-opiskelija (neljän viikon Linux-kurssilla). Yritän muodostaa SSH-yhteyden Ubuntu 20.04 -palvelimelle. SSH-avain on generoitu, mutta autentikointi epäonnistuu: Permission denied (publickey). Tavoite: löytää ongelma ja oppia oikea ratkaisu — en halua muuttaa palvelimen SSH-asetuksia. Tässä virheilmoitus..."
-   - Näytä: "Konteksti on valmis! Nyt rakennamme sen päälle promptin."
+KONTEKSTI — Rooli: \_\_\_\_\_\_
 
-**Promptin rakentaminen (12 min):**
+Kysy opiskelijoilta:
 
-8. **Vaihe 6: Tavoite (promptissa) (2 min):**
-   - Kirjoita tauluun: "PROMPTI — Tavoite (goal): ___?"
-   - Kysy: "Mitä haluat tekoälyn tekevän nyt?"
-   - Täytä esim. "Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu."
-   - Selitä: "Tavoite kertoo tekoälylle, mitä haluat sen tekevän juuri nyt."
+- Keitä olemme tässä ongelmassa?
+- Mikä on osaamistasomme?
+- Vastaako tekoäly opiskelijalle, aloittelijalle vai ammattilaiselle?
 
-9. **Vaihe 7: Rooli (promptissa) (2 min):**
-   - Kirjoita taululle: "Rooli (promptissa): ___?"
-   - Kysy: "Millä tasolla tekoäly pitää vastata?"
-   - Täytä esim. "Vastaa kuin opettaisit aloittelijalle — älä käytä liian syvälle menevää tekniikkaa."
-   - Selitä: "Rooli varmistaa, että vastaus on sopivalla tasolla."
+Täyttäkää yhdessä esimerkiksi:
 
-10. **Vaihe 8: Rajat (promptissa) (2 min):**
-    - Kirjoita taululle: "Rajat: ___?"
-    - Kysy: "Mitä et halua vastauksessa?"
-    - Täytä esim. "En halua SSH-palvelimen konfiguraation muuttamista — fokus pitää olla asiakkaalla."
-    - Selitä: "Rajat pitävät vastauksen fokuksessa."
+`Olen IT-opiskelija neljän viikon Linux-kurssilla.`
 
-11. **Vaihe 9: Formaatti (2 min):**
-    - Kirjoita taululle: "Formaatti: ___?"
-    - Kysy: "Miten haluat vastauksen muotoilun?"
-    - Täytä esim. "Numeroidut vaiheet, jokaisen vaiheen kohdalla selitys siitä, miksi se tarvitaan."
-    - Selitä: "Formaatti varmistaa, että saat käyttökelpoisen tuloksen."
+**Selitys:** Rooli auttaa tekoälyä valitsemaan sopivan vastaustason.
 
-12. **Vaihe 10: Esimerkit (promptissa) (2 min):**
-    - Kirjoita taululle: "Esimerkit: ___?"
-    - Kysy: "Voisiko meillä olla esimerkki siitä, millainen vastaus olisi hyvä?"
-    - Täytä esim. "Esimerkiksi: Vaihe 1: Tarkista avainten oikeudet (`ls -la ~/.ssh/`) — tämä kertoo, onko avain luettavissa."
-    - Selitä: "Esimerkit tekevät vaatimuksista konkreettisempia."
+#### Vaihe 2: Taustatieto noin 3 minuuttia
 
-13. **Lopullinen prompti (2 min):**
-    - Kirjoita taululle lopullinen terävä prompti, joka yhdistää kontekstin ja promptin elementit:
-    "Auta minua debugaamaan SSH-autentikointi-ongelma. Vastaa kuten opettaisit aloittelijalle — älä käytä liian monimutkaista tekniikkaa, ja fokus vain asiakkaan puolen ongelmaan, älä palvelimen konfiguraatioon. Vastaa numeroituina vaiheina. Jokaisen vaiheen kohdalla selitä, mitä teemme ja miksi. Esimerkiksi: Vaihe 1: Tarkista avainten oikeudet (`ls -la ~/.ssh/`) — tämä kertoo, onko avain luettavissa ja sopivilla oikeuksilla."
-    - Näytä: "Tämä on terävä, kontekstiin perustuva prompti!"
+Kirjoita taululle:
 
-**Fasilitointikysymykset:**
-- "Entä jos jättäisimme roolin kontekstista pois? Miksi se vaikuttaa?"
-- "Kuinka paljon erilaisempi vastaus olisi ilman taustatieto-osaa?"
-- "Mitä eroa on kontekstin roolilla ja promptin roolilla?"
-- "Voimmeko käyttää samaa promptia ilman kontekstia? Miksi tai miksi ei?"
+Taustatieto: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Mitä olemme jo yrittäneet?
+- Mitä tiedämme järjestelmästä?
+- Mikä virhe tai ongelma on havaittu?
+
+Täyttäkää esimerkiksi:
+
+`Palvelin on Ubuntu 20.04. SSH-avain on generoitu. Kirjautuminen epäonnistuu virheellä Permission denied (publickey).`
+
+**Selitys:** Taustatieto auttaa tekoälyä välttämään arvailua ja toistamasta asioita, jotka on jo kokeiltu.
+
+#### Vaihe 3: Tavoite noin 3 minuuttia
+
+Kirjoita taululle:
+
+Tavoite: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Mitä haluamme saavuttaa?
+- Miksi tämä ongelma pitää ratkaista?
+- Miltä onnistunut lopputulos näyttää?
+
+Täyttäkää esimerkiksi:
+
+`Haluan muodostaa SSH-yhteyden tuotantopalvelimelle ja debugata siellä olevaa web-sovellusta.`
+
+**Selitys:** Tavoite kohdistaa vastauksen siihen, mitä käyttäjä oikeasti yrittää saada aikaan.
+
+#### Vaihe 4: Rajaukset noin 2 minuuttia
+
+Kirjoita taululle:
+
+Rajaukset: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Mitä emme halua tehdä?
+- Mitä lähestymistapoja haluamme välttää?
+- Mihin vastaus ei saa käyttää aikaa?
+
+Täyttäkää esimerkiksi:
+
+`En halua muuttaa palvelimen SSH-asetuksia. Haluan ensin ymmärtää, miksi avain ei toimi.`
+
+**Selitys:** Rajaukset poistavat turhia tai riskialttiita vaihtoehtoja.
+
+#### Vaihe 5: Esimerkki noin 2 minuuttia
+
+Kirjoita taululle:
+
+Esimerkki: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Voimmeko antaa virheilmoituksen?
+- Voimmeko näyttää komennon tai koodinäytteen?
+- Mikä konkreettinen havainto auttaa tekoälyä ymmärtämään ongelman?
+
+Täyttäkää esimerkiksi:
+
+Komento: ssh -v user@192.168.1.100
+
+Virheilmoitus alkaa: debug1: Offering public key: /home/student/.ssh/id\_rsa
+
+**Selitys:** Esimerkki auttaa tekoälyä näkemään tarkasti, mitä tilanteessa tapahtuu.
+
+#### Lopullinen konteksti noin 2 minuuttia
+
+Kirjoita kaikki osat yhteen:
+
+> Olen IT-opiskelija neljän viikon Linux-kurssilla. Yritän muodostaa SSH-yhteyden Ubuntu 20.04 -palvelimelle. SSH-avain on generoitu, mutta autentikointi epäonnistuu virheellä `Permission denied (publickey)`. Tavoitteeni on löytää ongelma ja oppia oikea ratkaisu. En halua muuttaa palvelimen SSH-asetuksia tässä vaiheessa. Tässä on virheilmoitus ja käyttämäni komento: `ssh -v user@192.168.1.100`.
+
+Kerro opiskelijoille:
+
+> Konteksti on valmis. Seuraavaksi rakennamme sen päälle täsmällisen promptin.
+
+---
+
+### Promptin rakentaminen noin 12 minuuttia
+
+#### Vaihe 6: Promptin tavoite noin 2 minuuttia
+
+Kirjoita taululle:
+
+PROMPTI — Tavoite: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Mitä haluamme tekoälyn tekevän juuri nyt?
+- Haluammeko selityksen, listan, vaiheittaisen ohjeen vai tarkistuslistan?
+
+Täyttäkää esimerkiksi:
+
+`Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu.`
+
+**Selitys:** Promptin tavoite kertoo tekoälylle, mikä tehtävä sen pitää suorittaa.
+
+#### Vaihe 7: Promptin rooli noin 2 minuuttia
+
+Kirjoita taululle:
+
+Rooli promptissa: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Millä tasolla tekoälyn pitää vastata?
+- Haluammeko vastauksen aloittelijalle, opiskelijalle vai asiantuntijalle?
+
+Täyttäkää esimerkiksi:
+
+`Vastaa kuin opettaisit aloittelijaa. Älä käytä liian syvälle menevää tekniikkaa.`
+
+**Selitys:** Rooli varmistaa, että vastaus on sopivalla tasolla.
+
+#### Vaihe 8: Rajat noin 2 minuuttia
+
+Kirjoita taululle:
+
+Rajat: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Mitä emme halua vastauksessa?
+- Mihin ongelman osaan tekoälyn pitää keskittyä?
+- Mitä ratkaisuja pitää välttää turvallisuuden tai oppimisen vuoksi?
+
+Täyttäkää esimerkiksi:
+
+`Älä ehdota SSH-palvelimen asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin.`
+
+**Selitys:** Rajat pitävät vastauksen fokuksessa ja vähentävät turhia tai riskialttiita ehdotuksia.
+
+#### Vaihe 9: Formaatti noin 2 minuuttia
+
+Kirjoita taululle:
+
+Formaatti: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Miten haluamme vastauksen muotoiltavan?
+- Tarvitaanko numeroitu lista, taulukko, tarkistuslista vai lyhyt yhteenveto?
+
+Täyttäkää esimerkiksi:
+
+`Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään.`
+
+**Selitys:** Formaatti tekee vastauksesta helpommin käytettävän.
+
+#### Vaihe 10: Esimerkki noin 2 minuuttia
+
+Kirjoita taululle:
+
+Esimerkki hyvästä vastaustyylistä: \_\_\_\_\_\_
+
+Kysy opiskelijoilta:
+
+- Voimmeko näyttää mallin siitä, millainen vastaus olisi hyödyllinen?
+- Miltä yksi hyvä vaihe voisi näyttää?
+
+Täyttäkää esimerkiksi:
+
+Vaihe 1: Tarkista avainten oikeudet komennolla ls -la ~/.ssh/. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.
+
+**Selitys:** Esimerkki tekee vaatimuksista konkreettisia.
+
+#### Lopullinen prompti noin 2 minuuttia
+
+Kirjoita taululle lopullinen täsmällinen prompti, joka hyödyntää aiemmin rakennettua kontekstia:
+
+> Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu. Vastaa kuin opettaisit aloittelijaa. Älä käytä liian monimutkaista tekniikkaa, äläkä ehdota palvelimen SSH-asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin. Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään. Esimerkiksi: “Vaihe 1: Tarkista avainten oikeudet komennolla `ls -la ~/.ssh/`. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.”
+
+Kerro opiskelijoille:
+
+> Tämä on täsmällinen, kontekstiin perustuva prompti. Se ei vain kysy apua, vaan kertoo, missä tilanteessa olemme, mitä haluamme, mitä emme halua ja millaisessa muodossa vastauksen pitää olla.
+
+### Fasilitointikysymykset
+
+- Mitä tapahtuisi, jos jättäisimme roolin pois kontekstista?
+- Kuinka erilainen vastaus olisi ilman taustatietoja?
+- Mitä eroa on kontekstin roolilla ja promptin roolilla?
+- Voimmeko käyttää samaa promptia ilman kontekstia? Miksi tai miksi ei?
+- Mikä osa paransi vastausta eniten: rooli, taustatieto, tavoite, rajaus vai esimerkki?
 
 ### Odotettu oppimistulos
-- Opiskelijat näkevät jokaisen komponentin ja elementin roolin ja hyödyn.
-- He ymmärtävät, että konteksti on pohja ja prompti on kysymys sen päälle.
-- He pystyvät tunnistamaan, mitkä osat kontekstista ja promptista puuttuvat omasta kysymyksestään.
-- He näkevät, että konteksti ja prompti toimivat yhdessä — konteksti antaa pohjan, prompti esittää spesifin pyynnön.
+
+Tehtävän jälkeen opiskelijat ymmärtävät, että:
+
+- jokaisella kontekstin komponentilla ja promptin elementillä on oma tarkoituksensa,
+- **konteksti** on pohja ja **prompti** on sen päälle rakennettu tarkka pyyntö,
+- omasta kysymyksestä voi tunnistaa puuttuvia kontekstin tai promptin osia,
+- konteksti ja prompti toimivat yhdessä: konteksti antaa taustatiedon ja prompti ohjaa toimintaa.
+
+---
+
+## Arviointi
+
+Opettaja arvioi opiskelijoiden kykyä:
+
+- selittää, miten **konteksti** vaikuttaa tekoälyn vastauksen laatuun,
+- erottaa **konteksti** ja **prompti** toisistaan,
+- tunnistaa hyvän kontekstin keskeiset osat, kuten roolin, taustatiedon, tavoitteen, rajaukset ja esimerkin,
+- tunnistaa hyvän promptin elementit, kuten tavoitteen, roolin, rajat, formaatin ja esimerkit,
+- rakentaa IT-ongelmaan kontekstin ja sen pohjalle täsmällisen promptin,
+- arvioida, miksi yksi tekoälyn vastaus on hyödyllisempi kuin toinen.
+
+---

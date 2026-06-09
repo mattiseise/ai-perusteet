@@ -1,234 +1,360 @@
-# Opettajavetoiset harjoitukset: etiikka, tekijänoikeudet ja ympäristövaikutukset
+# Opettajavetoiset harjoitukset: generatiivisen tekoälyn luonne
 
-## Harjoitus 1: Oikeustapauskeskustelu — tekijänoikeudet
-
-### Tavoite
-Opettaa opiskelijoille, että tekoälyn tekijänoikeus- ja eettiset kysymykset ovat todellisia, kiistanalaisia ja ammatillisesti relevantteja.
-
-### Ohjeet ja vaiheet
-
-**Kesto: 25 minuuttia**
-
-1. **Johdanto (5 min):**
-   Esitä lyhyt yhteenveto:
-   - Kirjailijoiden yhdistys vs. OpenAI (2023)
-   - Kuvataiteilijat vs. Stability AI (2023)
-   - Journalistit vs. Google (Google News käyttää artikkeleja ilman korvausta)
-
-   Kysy: "Kuka on oikeassa?"
-
-2. **Pienryhmäanalyysi (10 min):**
-   Jaa opiskelijat 3 ryhmään (yksi per tapaus).
-   Jokainen ryhmä saa:
-   - kantajan (kirjailijat/taiteilijat) näkökulman
-   - vastaajan (AI-yritys) näkökulman
-   - tehtävän: "Rakentakaa paras argumentti kummallekin puolelle"
-
-   **Kantajan argumentti (esim. kirjailijat):**
-   ```
-   "Miljoonat kirjat on ladattu ilman lupaa. Meidät
-   ei kysytty, meitä ei korvata. ChatGPT tuottaa
-   tekstejä, joilla on liian paljon samankaltaisuutta
-   meidän omaamme kanssa. Tämä on tekijänoikeusrikkomus."
-   ```
-
-   **Vastaajan argumentti (esim. OpenAI):**
-   ```
-   "Koulutus on transformatiivista — emme vain
-   jäljennä tekstejä. Olemme rakentaneet mallin,
-   jonka tuotokset ovat uusia. Tekijänoikeuslaissa
-   on 'reilu käyttö', joka sallii tämän."
-   ```
-
-3. **Esitys (10 min):**
-   - Jokainen ryhmä esittää argumenttinsa 2–3 minuuttia.
-   - Opettaja esittää jokaiselle ryhmälle "vastaväitteen":
-     * Kantajille: "Entä jos emme poista kirjoja datasta — onko se silti ok?"
-     * Vastaajille: "Entä jos tekijöille maksetaan oikeudenmukainen osuus?"
-
-4. **Johtopäätös (5 min):**
-   - Opettaja korostaa: **"Tämä ei ole yksinkertainen asia."**
-   - Tuomioistuimet ovat edelleen jakautuneita.
-   - Ammattilaisena sinun pitää olla tietoinen tekijänoikeuskysymyksistä valitessasi ja käyttäessäsi tekoälypalveluja.
-
----
-
-## Harjoitus 2: Harhatesti — simulaatio
+## Harjoitus 1: Sama kehote, eri mallit — epädeterministisyyden demonstraatio
 
 ### Tavoite
-Näyttää, kuinka algoritminen harha syntyy ja miten sitä voi havaita.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on näyttää käytännössä, miksi **generatiivisen tekoälyn** tuottamat vastaukset voivat vaihdella. Opiskelijat ymmärtävät, että vaihtelu johtuu mallien **todennäköisyyspohjaisesta toiminnasta**, ei välttämättä käyttäjän virheestä.
 
-**Kesto: 20 minuuttia**
+**Opettajan painotus:** Korosta, että epädeterministisyys ei tarkoita sattumanvaraista tai hyödytöntä toimintaa. Se tarkoittaa, että malli voi tuottaa useita mahdollisia vastauksia, joista moni voi olla järkevä mutta eri tavalla muotoiltu.
 
-1. **Skenariointi (5 min):**
-   Esitä skenaarioita:
+### Opettajan ohjeet ja fasilitointi
 
-   **Skenaario A: Rekrytointialgoritmi**
-   ```
-   Organisaatiosi kehitti algoritmin, joka valitsee
-   parhaat IT-hakijat automaattisesti. Algoritmi on
-   opetettu 5 vuoden palkkaamisdatalla.
+**Kesto:** noin 15 minuuttia
 
-   Tulokset: Algoritmi hyväksyi 90% miehiksi
-   hakijoista ja 30% naisiksi hakijoista,
-   vaikka kelpoisuus oli sama.
-   ```
+#### Valmistelu ennen oppituntia noin 5 minuuttia
 
-   **Skenaario B: Lainanhyväksyntäalgoritmi**
-   ```
-   Pankkisi käyttää algoritmia lainanhyväksynnän
-   tekemiseen. Se analysoi luottohistoriaa,
-   tuloja, kodin arvoa.
+- Avaa selaimeen useita tekoälymalleja, esimerkiksi ChatGPT, Claude ja Google Gemini.
+- Valmistele sama tai mahdollisimman samanlainen kehote kaikille malleille.
+- Varmista, että vastaukset voidaan näyttää opiskelijoille rinnakkain tai peräkkäin.
 
-   Tarkastus osoittaa: Algoritmi epäonnistuu
-   useammin lainojen epäämisessä
-   tietyillä postinumeroalueilla (joissa asuu
-   pääasiassa tiettyä etnistä ryhmää).
-   ```
+#### Esimerkkikehote
 
-2. **Ryhmän tehtävä (8 min):**
-   Jaa opiskelijat kahteen ryhmään (puolet skenaarioon A, puolet skenaarioon B).
+Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data.txt`, laskee rivien lukumäärän ja tulostaa tuloksen.
 
-   Jokainen ryhmä analysoi:
-   - Missä harha näkyy?
-   - Mistä harha johtuu? (Koulutusdatasta? Parametreista?)
-   - Kuka on vastuussa?
-   - Miten tämä voitaisiin havaita testaamalla?
+#### Luokkaharjoitus noin 10 minuuttia
 
-   **Testisuunnitelma (täytä):**
-   ```
-   1. Testaa algoritmi demografisilla ryhmillä
-   2. Vertaa hyväksynnän prosentteja ryhmittäin
-   3. Tutki, ovatko alhaisemmat prosentit "liian pienet" (harha)
-   4. Analysoi: mikä koulutusdatassa aiheutti tämän?
-   5. Dokumentoi ja ilmoita johtajille
-   ```
+1. Näytä ensin yhden tekoälymallin vastaus opetusnäytöllä.
+2. Kysy opiskelijoilta: **Voitteko ennustaa, millaisen vastauksen toinen malli antaa?**
+3. Näytä toisen mallin vastaus.
+4. Vertailkaa vastauksia seuraavien kysymysten avulla:
 
-3. **Esitys (7 min):**
-   - Molemmat ryhmät esittävät testisuunnitelmansa.
-   - Opettaja korostaa: **"Harha on usein piilossa — se vaatii aktiivista testaamista."**
+   - Onko käytetty ohjelmointikieli tai syntaksi sama?
+   - Onko mukana kommentteja?
+   - Onko vastauksissa virheitä tai puutteita?
+   - Onko ratkaisun tyyli samanlainen vai erilainen?
+   - Kumpi vastaus olisi helpompi testata käytännössä?
+5. Näytä vielä kolmannen mallin vastaus ja tehkää sama vertailu.
+
+#### Keskustelu
+
+Kysy opiskelijoilta:
+
+- Miksi vastaukset ovat erilaisia, vaikka kehote oli sama tai lähes sama?
+- Miksi kaikki vastaukset voivat silti olla mahdollisesti järkeviä?
+- Milloin vaihtelu on hyödyllistä?
+- Milloin vaihtelu voi olla ongelma?
+- Mitä käyttäjän pitää tehdä ennen kuin tekoälyn tuottamaa koodia käytetään oikeassa projektissa?
+
+Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista oikeaa vastausta tietokannasta. Ne tekevät **todennäköisyyspohjaisia valintoja** seuraavien sanojen, merkkien tai rakenteiden välillä.
+
+> **Lämpötila** vaikuttaa siihen, kuinka paljon malli valitsee vaihtelevia tai yllättäviä vaihtoehtoja. Jokainen malli voi kulkea hieman eri reittiä seuraavien sanojen joukossa.
+
+#### Johtopäätös
+
+- **Epädeterministisyys** on generatiivisen tekoälyn ominaisuus, ei pelkkä virhe.
+- Vaihtelu mahdollistaa luovuuden ja vaihtoehtoiset ratkaisut.
+- Sama kehote ei välttämättä tuota aina täsmälleen samaa vastausta.
+- Teknisissä tehtävissä käyttäjän täytyy tarkistaa, että vastaus toimii oikeasti.
+
+**Opettajan tarkistuskysymys:** Jos opiskelijat keskittyvät valitsemaan parasta mallia, kysy: “Mitä tämä vertailu kertoo generatiivisen tekoälyn toimintatavasta?”
+
+### Opettajan muistiinpanot
+
+- Ole valmis siihen, että jokin vastaus voi sisältää virheen tai hallusinaation, esimerkiksi väärän funktion tai puutteellisen virheenkäsittelyn. Käytä tilannetta opetuksessa.
+- Jos vastaukset ovat hyvin samankaltaisia, selitä opiskelijoille: “Koska mallien koulutusdata ja tehtävän rakenne ovat samankaltaisia, samankaltaiset vastaukset voivat olla todennäköisimpiä.”
+- Korosta, että mallien vertailun tarkoitus ei ole valita “voittajaa”, vaan ymmärtää generatiivisen tekoälyn toimintatapaa.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn yhteydessä.
+- Opiskelijat osaavat selittää, miksi sama kehote voi tuottaa erilaisia vastauksia.
+- Opiskelijat ymmärtävät, milloin vaihtelu voi olla hyödyllistä ja milloin se voi olla riski.
+- Opiskelijat osaavat perustella, miksi tekoälyn tuottama koodi pitää tarkistaa ennen käyttöä.
 
 ---
 
-## Harjoitus 3: Eettinen keskustelu — globaali työ ja vastuu
+## Harjoitus 2: Hallusinaatioiden metsästys — ryhmäanalyysi
 
 ### Tavoite
-Opettaa opiskelijoille, että tekoälyn "näkymätön" työ (datan merkitseminen) on ammatillinen ja eettinen kysymys.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on oppia tunnistamaan **hallusinaatioita** ja ymmärtää, miksi kielimalli voi tuottaa uskottavalta kuulostavia mutta virheellisiä vastauksia. Opiskelijat harjoittelevat myös tiedon tarkistamista luotettavista lähteistä.
 
-**Kesto: 20 minuuttia**
+**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Ammattilaisen pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
 
-1. **Johdanto (5 min):**
-   Näytä video tai kerro tarina:
-   - Datan merkitsijät Bangladeshissa
-   - He merkitsevät kuvia ChatGPT:n opetusta varten
-   - He saavat $2–5 per tunti
-   - Joskus kuvat sisältävät väkivaltaa tai seksuaalisuutta — psyykkinen kuormitus
+### Opettajan ohjeet ja fasilitointi
 
-   **Kysymys opiskelijoille:** "Ajattelitteko, että näiden ihmisten työ mahdollistaa ChatGPT:n?"
+**Kesto:** noin 20 minuuttia
 
-2. **Eettinen ympyrä (10 min):**
-   Jaa opiskelijat neljään ryhmään. Jokainen ryhmä edustaa näkökulmaa:
+#### Ryhmien muodostaminen noin 2 minuuttia
 
-   **Ryhmä 1 — Merkitsijän näkökulma:**
-   - Mitä haluaisit?
-   - Miten olet hyötynyt? Käytetty?
+- Jaa opiskelijat 3–4 henkilön ryhmiin.
+- Anna jokaiselle ryhmälle yksi hallusinaatiotapaus tutkittavaksi.
+- Kerro, että ryhmän tehtävänä ei ole vain sanoa, onko väite väärä, vaan myös perustella, miten asia tarkistettiin.
 
-   **Ryhmä 2 — AI-yrityksen (esim. OpenAI) näkökulma:**
-   - Miksi palkat ovat alhaiset?
-   - Mitä velvoitteita sinulla on tekijöitä kohtaan?
+#### Case-tutkimukset
 
-   **Ryhmä 3 — Organisaation näkökulma (käyttäjä, kuten opiskelijasi):**
-   - Mitä sinun vastuullasi on käyttäjänä?
-   - Tiedätkö merkitsijöiden oloista?
+Valitse seuraavista 2–3 tapausta tai jaa eri ryhmille eri tapaukset.
 
-   **Ryhmä 4 — Hallituksen näkökulma:**
-   - Pitäisikö lainsäädäntöä säätää merkitsijöiden suojaamiseksi?
+##### Case 1: Tekniikka
 
-3. **Ympyrä yhteen (5 min):**
-   - Jokainen ryhmä esittää 1–2 minuutin kannan.
-   - Opettaja kokoaa: "Näette, että vastuut ovat hajallaan — mutta ammattilaisena SINULLA on ääni."
+AI-malli väittää:
 
-**Opettajan muistio:**
-- Älä anna ryhmille ratkaisua ("Ja sitten kaikki maksoivat reilua palkkaa!").
-- Tavoitteena on, että opiskelijat näkevät kompleksisuuden ja ymmärtävät, että ammattilaisina he voivat tehdä valintoja.
+Pythonissa funktiota `urllib3.get_json(url)` käytetään JSON-datan hakemiseen.
+
+- Tarkistakaa, onko funktio olemassa.
+- Selvittäkää, millä tavoin JSON-dataa oikeasti haetaan Pythonissa.
+- Pohtikaa, miksi malli saattoi keksiä tällaisen funktion.
+
+##### Case 2: Historia
+
+AI-malli väittää:
+
+Suomen ensimmäinen pääministeri oli Mikael Agricola.
+
+- Tarkistakaa, kuka oli Suomen ensimmäinen pääministeri.
+- Pohtikaa, miksi malli saattoi sekoittaa tunnetun historiallisen henkilön väärään rooliin.
+
+##### Case 3: API-dokumentaatio
+
+AI-malli dokumentoi API-päätepisteen näin:
+
+`GET /users/{id}/profile` — palauttaa käyttäjän profiilin ja salasanan.
+
+- Arvioikaa, pitäisikö API:n koskaan palauttaa käyttäjän salasanaa.
+- Pohtikaa, miksi malli saattoi ehdottaa tietoturvan kannalta vaarallista toimintoa.
+- Miettikää, miten dokumentaatio pitäisi korjata turvalliseksi.
+
+#### Ryhmän tehtävä noin 10 minuuttia
+
+Tutkikaa oma tapauksenne ja täyttäkää seuraava taulukko:
+
+| AI:n väite | Oikein vai väärin? | Missä tarkistitte? | Hallusinaation merkkejä | Miksi malli saattoi hallusinoida? |
+| --- | --- | --- | --- | --- |
+| [Kirjoittakaa tähän AI:n väite.] | [Oikein / väärin / osittain oikein] | [Lähde, dokumentaatio tai muu tarkistuspaikka] | [Mikä teki väitteestä epäilyttävän?] | [Mitä sanoja, malleja tai yhteyksiä tekoäly saattoi yhdistellä väärin?] |
+
+#### Esittäminen noin 8 minuuttia
+
+- Jokainen ryhmä esittelee havaintonsa noin 2–3 minuutissa.
+- Ryhmän tulee kertoa:
+
+  - mikä väite oli,
+  - oliko se oikein, väärin vai osittain oikein,
+  - miten asia tarkistettiin,
+  - mistä hallusinaation olisi voinut tunnistaa,
+  - miten virheellinen vastaus olisi pitänyt korjata.
+
+> Hallusinaatiot eivät aina näytä ilmiselviltä virheiltä. Malli voi esittää väärän vastauksen hyvin itsevarmasti.
+
+### Opettajan muistiinpanot
+
+- Valmistele tapaukset etukäteen ja tarkista oikeat vastaukset luotettavista lähteistä.
+- Hallusinaatiot voivat vaihdella eri malleissa, joten eri mallien käyttäytymistä voi käyttää keskustelun pohjana.
+- Jos ryhmällä on vaikeuksia löytää virhettä, anna vihje: “Onko väite liian yksityiskohtainen? Kuulostaako se uskottavalta, mutta ilman lähdettä? Sisältääkö se oudon funktion, henkilön tai turvattoman käytännön?”
+
+**Opettajan tarkistuskysymys:** Jos opiskelija sanoo “vastaus kuulostaa oikealta”, kysy: “Mihin lähteeseen se perustuu?”
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, mitä **hallusinaatio** tarkoittaa generatiivisen tekoälyn yhteydessä.
+- Opiskelijat osaavat tarkistaa tekoälyn väitteen luotettavasta lähteestä.
+- Opiskelijat tunnistavat hallusinaation merkkejä, kuten olemattomia funktioita, väärin yhdistettyjä käsitteitä ja turvattomia oletuksia.
+- Opiskelijat ymmärtävät, että itsevarma sävy ei tee vastauksesta oikeaa.
 
 ---
 
-## Harjoitus 4: Ympäristöjalanjälki ja "harkittu käyttö"
+## Harjoitus 3: Verifiointiprosessin suunnittelu
 
 ### Tavoite
-Konkretisoida ympäristövaikutukset ja opettaa ammatillisesti harkittua tekoälyn käyttöä.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää ammatillisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
 
-**Kesto: 15 minuuttia**
+**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa ammatillista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
 
-1. **Laskenta (5 min):**
-   Opettaja näyttää taululla:
+### Opettajan ohjeet ja fasilitointi
 
-   ```
-   1 ChatGPT-query = ~0,29 Wh sähköä
-   200 miljoonaa kyselyä/kuukausi = ~58 miljoonaa kWh/vuosi
-   = kuin 5,600 amerikkalaisen kodin sähkönkulutus
+**Kesto:** noin 25 minuuttia
 
-   Data-keskuksen jäähdytys = 37 miljoonaa gallonaa vettä/vuosi
-   = kuinka paljon vettä saisi 2,800 amerikkalaista perhettä
-   ```
+#### Skenaario noin 5 minuuttia
 
-2. **Ryhmäharjoitus (5 min):**
-   Ryhmät arvioivat: "Pitäisikö tekoälyä käyttää seuraaviin tehtäviin?"
+Esitä opiskelijoille seuraava tilanne:
 
-   | Tehtävä | Arvo vs. Kost | Päätös |
-   |---|---|---|
-   | Asiakkaalle lähetetty henkilökohtainen viesti | Matala? Korkea? | |
-   | API-dokumentaation koodiesimerkki | | |
-   | Jokainen asiakastuki-query | | |
-   | Sähköpostit, joita ei ole vielä lähetetty | | |
-   | Tieteellisen tutkimuksen kirjoittaminen | | |
+> Tehtäväsi on kirjoittaa SQL-kysely tietokantaan. Kyselyn pitää hakea kaikki asiakkaat, joiden maksu on erääntynyt yli 30 päivää. Käytät ChatGPT:tä koodin kirjoittamisen tukena.
 
-   **Jokaisen kohdalla: "Voitaisiinko tämä tehdä muulla tavalla, joka kuluttaa vähemmän energiaa?"**
+Kysy opiskelijoilta:
 
-3. **Johtopäätös (5 min):**
-   - Opettaja: "Harkittu käyttö ei tarkoita 'älä käytä tekoälyä'. Se tarkoittaa: käytä sitä silloin, kun arvo ylittää kustannukset."
-   - Ammattilaisena: tiedä vaikutukset, mieti vaihtoehtoa, dokumentoi valinta.
+- Mitä voi mennä pieleen, jos kopioit tekoälyn vastauksen suoraan tuotantokantaan ilman tarkistusta?
+- Mitä tietoja tekoäly voi olettaa väärin?
+- Miten virhe voisi vaikuttaa asiakkaisiin, dataan tai organisaatioon?
+
+#### Ryhmäkeskustelu: verifiointivaiheet noin 10 minuuttia
+
+Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe pohdittavaksi:
+
+1. **Ennen tekoälyltä kysymistä:** Mitä sinun täytyy tietää jo valmiiksi? Esimerkiksi taulujen nimet, sarakkeet, päivämäärämuodot, tietokannan tyyppi ja liiketoimintasäännöt.
+2. **Kehotteen kirjoittaminen:** Miten kirjoitat tarkan kehotteen? Mitä yksityiskohtia annat tekoälylle?
+3. **Vastauksen analysointi:** Mistä merkeistä voit epäillä, että vastaus sisältää hallusinaation tai väärän oletuksen?
+4. **Koodin testaaminen:** Miten testaat SQL-kyselyn ennen oikeaan dataan tai tuotantoympäristöön viemistä?
+5. **Dokumentointi:** Miten kirjaat, mitä tekoäly ehdotti, mitä muutit ja miksi hyväksyit lopullisen ratkaisun?
+
+#### Ryhmän vastauspohja
+
+| Verifiointivaihe | Mitä tehdään? | Miksi tämä on tärkeää? | Mitä riskiä tämä vähentää? |
+| --- | --- | --- | --- |
+| **Ennen kysymistä** |  |  |  |
+| **Kehotteen kirjoittaminen** |  |  |  |
+| **Vastauksen analysointi** |  |  |  |
+| **Testaaminen** |  |  |  |
+| **Dokumentointi** |  |  |  |
+
+#### Esittäminen noin 10 minuuttia
+
+- Jokainen ryhmä esittelee oman vaiheensa noin 2–3 minuutissa.
+- Opettaja kokoaa ryhmien vastauksista yhteisen **verifiointiprosessin** taululle.
+
+#### Esimerkkiprosessi
+
+1. **Ymmärrä tietokannan rakenne:** tarkista taulut, sarakkeet, tietotyypit ja suhteet dokumentaatiosta tai skeemasta.
+2. **Kirjoita tarkka kehote:** sisällytä taulujen ja sarakkeiden nimet, tietokantatyyppi sekä haluttu lopputulos.
+3. **Analysoi vastaus:** tarkista syntaksi, vertaa sitä dokumentaatioon ja etsi mallin tekemiä oletuksia.
+4. **Testaa turvallisesti:** käytä testidataa tai kehitysympäristöä ennen oikeaa dataa.
+5. **Dokumentoi päätökset:** kirjaa esimerkiksi: “ChatGPT ehdotti ratkaisua X. Hyväksyin osan Y, koska se vastasi skeemaa. Muutin kohdan Z, koska alkuperäinen ehdotus ei huomioinut päivämäärämuotoa.”
+
+**Vinkki arviointiin:** Hyvä verifiointiprosessi ei pääty siihen, että “koodi näyttää oikealta”. Siinä näkyy, miten vastaus testataan, miten oletukset tarkistetaan ja miten lopullinen ratkaisu dokumentoidaan.
+
+### Opettajan muistiinpanot
+
+- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan ammatillinen standardi.
+- Jos opiskelijat kokevat prosessin liian monimutkaiseksi, voit vastata: “Juuri siksi tekoälyn käyttö vaatii ammattitaitoa. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.”
+- Muistuta, että tekoälyn tuottamaa koodia ei pidä ajaa tuotannossa ilman tarkistusta ja testausta.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, miksi tekoälyn tuottamaa teknistä ratkaisua ei pidä käyttää ilman tarkistusta.
+- Opiskelijat osaavat suunnitella vaiheittaisen **verifiointiprosessin**.
+- Opiskelijat osaavat tunnistaa tekoälyn tekemiä oletuksia ja mahdollisia hallusinaatioita.
+- Opiskelijat ymmärtävät, että ammattilainen kantaa vastuun lopullisesta ratkaisusta.
 
 ---
 
-## Opettajan tärkeitä kohtia
+## Harjoitus 4: Ympäristövaikutusten arviointi — milloin tekoälyn käyttö on perusteltua?
 
-**Avainviesti 1: Tekoäly ei ole neutraalia.**
-- Se on rakennettu tekijöiden työn varaan ilman heidän suostumustaan.
-- Se on harhaista historiallisen datan vuoksi.
-- Se on energiaintensiivistä.
-- Ammattilaisena tämä on AINA pidettävä mielessä.
+### Tavoite
 
-**Avainviesti 2: Vastuu on hajallaan, mutta sinulla on sitä.**
-- OpenAI vastaa... no, jotenkin.
-- Merkitsijät — he kärsivät.
-- Sinä, joka käytät tekoälyä — sinulla on valinta.
-- Ammattilaisena et voi vain sysätä vastuuta pois.
+Harjoituksen tavoitteena on auttaa opiskelijoita ymmärtämään, että generatiivisen tekoälyn käyttöön liittyy myös **ympäristövaikutuksia**. Opiskelijat harjoittelevat arvioimaan, milloin tekoälyn käyttö tuottaa riittävästi hyötyä suhteessa sen kuluttamiin resursseihin, kuten **energiaan**, **vesijäähdytykseen** ja **laskentatehoon**.
 
-**Avainviesti 3: Ammattilaisuus tarkoittaa syvempää pohdintaa.**
-- "Kaikki käyttävät sitä" ei ole riittävä perustelu.
-- "Se on laillista" ei ole sama kuin "se on eettistä".
-- Ammattilaiset ovat niitä, jotka kyseenalaistavat ja tekevät tietoisia valintoja.
+**Opettajan painotus:** Korosta, että tarkoitus ei ole kieltää tekoälyn käyttöä. Tavoitteena on oppia käyttämään tekoälyä harkitusti: silloin, kun siitä on todellista hyötyä, ja kevyemmillä ratkaisuilla silloin, kun tekoälyä ei tarvita.
+
+### Opettajan ohjeet ja fasilitointi
+
+**Kesto:** noin 20 minuuttia
+
+#### Skenaario noin 5 minuuttia
+
+Esitä opiskelijoille seuraava tilanne:
+
+> Yritys haluaa ottaa käyttöön generatiivisen tekoälyn asiakaspalvelussa. Tekoälyä käytettäisiin vastaamaan usein kysyttyihin kysymyksiin, laatimaan sähköposteja, tiivistämään tikettejä ja tuottamaan raportteja. Yrityksen johto kysyy: “Missä tilanteissa tekoälyn käyttö on aidosti perusteltua, ja missä tilanteissa kevyempi ratkaisu riittäisi?”
+
+Kysy opiskelijoilta:
+
+- Missä näistä tehtävistä tekoälystä voisi olla selvästi hyötyä?
+- Missä tehtävissä tavallinen haku, valmis ohjeteksti tai sääntöpohjainen automaatio voisi riittää?
+- Miksi jokaisella tekoälykyselyllä on myös resurssikustannus?
+
+#### Ryhmätyö noin 10 minuuttia
+
+Jaa opiskelijat pienryhmiin. Jokainen ryhmä arvioi alla olevia käyttötapauksia ja päättää, onko generatiivisen tekoälyn käyttö perusteltua.
+
+| Käyttötapaus | Tarvitaanko generatiivista tekoälyä? | Perustelu | Kevyempi vaihtoehto |
+| --- | --- | --- | --- |
+| **Usein kysytty kysymys:** “Mihin aikaan asiakaspalvelu on auki?” |  |  |  |
+| **Pitkä tukitiketti:** asiakkaan ongelma pitää tiivistää asiantuntijalle. |  |  |  |
+| **Tekninen ongelma:** asiakas kuvaa epäselvästi monivaiheista virhetilannetta. |  |  |  |
+| **Vakioviesti:** “Kiitos yhteydenotosta, palaamme asiaan mahdollisimman pian.” |  |  |  |
+| **Raportti:** asiakaspalautteista pitää löytää toistuvat teemat ja kehityskohteet. |  |  |  |
+
+Ryhmän tehtävänä on arvioida jokainen käyttötapaus seuraavien kysymysten avulla:
+
+- **Hyöty:** parantaako tekoäly työn laatua, nopeutta tai saavutettavuutta?
+- **Tarve:** vaatiiko tehtävä tulkintaa, tiivistämistä, luovaa muotoilua tai monimutkaista päättelyä?
+- **Resurssikustannus:** onko tehtävä niin yksinkertainen, että tekoälyn käyttö olisi ylimitoitettua?
+- **Vaihtoehto:** voisiko tehtävän ratkaista ohjesivulla, hakutoiminnolla, mallipohjalla tai sääntöpohjaisella automaatiolla?
+
+#### Yhteinen purku noin 5 minuuttia
+
+Pyydä ryhmiä valitsemaan yksi käyttötapaus, jossa generatiivisen tekoälyn käyttö on heidän mielestään perusteltua, ja yksi käyttötapaus, jossa se ei ole perusteltua.
+
+Kokoa taululle kaksi listaa:
+
+- **Tekoäly perusteltu:** monimutkainen, epäselvä, tulkintaa vaativa tai paljon aikaa säästävä tehtävä.
+- **Kevyempi ratkaisu riittää:** yksinkertainen, toistuva, täysin vakiomuotoinen tai helposti haettava tieto.
+
+> **Pääpointti:** Vastuullinen tekoälyn käyttö tarkoittaa myös sitä, että tekoälyä ei käytetä turhaan. Hyvä ammattilainen valitsee tehtävään sopivan työkalun, ei aina raskainta mahdollista ratkaisua.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, että generatiivisen tekoälyn käyttö kuluttaa laskentatehoa ja energiaa.
+- Opiskelijat osaavat arvioida, milloin tekoälyn hyöty on riittävä suhteessa sen resurssikustannuksiin.
+- Opiskelijat ymmärtävät, että vastuullinen tekoälyn käyttö voi tarkoittaa myös kevyemmän ratkaisun valitsemista.
+- Opiskelijat osaavat erottaa tehtävät, joissa tarvitaan generatiivista tekoälyä, tehtävistä, joissa riittää yksinkertaisempi automaatio tai ohjeistus.
 
 ---
 
-## Sisäänrakennetut keskustelunherättäjät
+## Opettajan tärkeät huomiot
 
-**Jos opiskelijat sanovat:** "Ei ole mitään, mitä voin tehdä — tekoäly on liian suuri järjestelmä."
+### Avainviesti 1: Epädeterministisyys on ominaisuus, ei vika
 
-**Vastaa:** "Totta, mutta sinulla on valinta siitä, käytätkö sitä vai et, miten käytät sitä ja mitä palvelua valitset. Nämä kumuloituvat. Ja jos organisaatiosi käyttää tekoälyä, sinulla on ääni."
+- Johdonmukaisuus ja luovuus ovat saman työkalun kaksi eri puolta.
+- Teknisissä tehtävissä kannattaa suosia johdonmukaisuutta ja tarkistaa tulokset huolellisesti.
+- Ideoinnissa ja luonnostelussa vaihtelu voi olla hyödyllistä.
 
-**Jos opiskelijat sanovat:** "Eikö tekijöille makseta jo?"
+### Avainviesti 2: Uskottava ei tarkoita oikeaa
 
-**Vastaa:** "Joissain tapauksissa — esim. kontrolloiduissa datakoulutusprojekteissa, joissa tekijät saavat korvauksen. Mutta perinteisesti ei. Tämä muuttuu hitaasti."
+- **Hallusinaatiot** voivat kuulostaa täysin itsevarmoilta.
+- IT-ammattilaisella voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
+- **Verifiointia ei voi ohittaa.**
 
-**Jos opiskelijat sanovat:** "Entä jos yritys sanoo 'käytä tekoälyä, se säästää kustannuksia'?"
+### Avainviesti 3: Vastuu on käyttäjällä
 
-**Vastaa:** "Sitten sinulla on ammatillinen ja eettinen vastuu. Voit nostaa huolenaiheita esiin. Sinun ei ole pakko tehdä asiaa, joka on vastuutonta."
+- Jos annat asiakkaalle tekoälyavusteisen raportin tai koodin, vastaat sen oikeellisuudesta.
+- Malli ei kanna ammatillista vastuuta käyttäjän puolesta.
+- Tämä ei ole pelottelua, vaan osa asiantuntijatyötä ja ammattimaista tekoälyn käyttöä.
+
+### Avainviesti 4: Vastuullinen käyttö huomioi myös ympäristövaikutukset
+
+- Generatiivisen tekoälyn käyttö kuluttaa laskentatehoa, energiaa ja datakeskusresursseja.
+- Kaikkiin tehtäviin ei tarvita raskasta tekoälyratkaisua.
+- Hyvä ammattilainen valitsee tehtävään sopivan työkalun: joskus se on generatiivinen tekoäly, joskus ohjesivu, hakutoiminto, mallipohja tai sääntöpohjainen automaatio.
+
+---
+
+## Sisäänrakennetut keskustelun herättäjät
+
+### Jos opiskelijat sanovat: “Entä jos käytän tekoälyä sellaisenaan ilman verifiointia?”
+
+> Silloin riskit kohdistuvat sinuun, asiakkaaseen ja organisaatioon. Teknisissä tehtävissä hallusinaatiot ovat erityisen vaarallisia, koska virheellinen koodi voi epäonnistua tuotannossa tai avata tietoturva-aukon.
+
+### Jos opiskelijat sanovat: “Tämä tekee tekoälystä käyttökelvottoman.”
+
+> Ei tee. Se tarkoittaa, että tekoälyä pitää käyttää oikeassa tehtävässä ja oikealla tavalla. Tekoäly on hyödyllinen työkalu, kun käyttäjä ymmärtää sen rajat ja tarkistaa lopputuloksen.
+
+### Jos opiskelijat sanovat: “Ympäristövaikutukset ovat niin pieniä, ettei niillä ole väliä.”
+
+> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen ammattilainen ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
+
+---
+
+## Arviointi
+
+Opettaja arvioi opiskelijoiden kykyä:
+
+- selittää, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn käytössä,
+- vertailla saman kehotteen tuottamia erilaisia vastauksia eri malleissa,
+- tunnistaa **hallusinaatioita** ja tarkistaa väitteitä luotettavista lähteistä,
+- selittää, miksi itsevarma vastaus ei vielä tarkoita oikeaa vastausta,
+- suunnitella ammatillinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
+- perustella, miksi käyttäjä kantaa vastuun tekoälyn avulla tuotetun lopputuloksen oikeellisuudesta,
+- arvioida, milloin generatiivisen tekoälyn käyttö on perusteltua suhteessa sen hyötyihin, kustannuksiin ja ympäristövaikutuksiin,
+- valita tehtävään sopiva ratkaisu: generatiivinen tekoäly, sääntöpohjainen automaatio, hakutoiminto, mallipohja tai ihmisen tekemä työ.
+
+---

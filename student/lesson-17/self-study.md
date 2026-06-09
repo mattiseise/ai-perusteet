@@ -2,119 +2,123 @@
 
 ## Mitä tällä tunnilla tapahtuu?
 
-Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseen toimivaan bottiin Microsoft Copilotissa. Tämä on **nivelkohta** — siirryt suunnittelusta rakentamiseen.
+Tähän mennessä olet kerännyt kuuden tunnin aikana kolme **rakennuspalikkaa**. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa. Tämä on **nivelkohta**: siirryt suunnittelusta rakentamiseen.
 
-Tällä tunnilla et opi enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman koodiksi** — eli järjestelmäpromptiksi, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen; tärkeintä on saada jotain toimivaa, jota voit kehittää tunnilla 18.
+Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman järjestelmäkehotteeksi**, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.
 
-## Mikä on järjestelmäprompti?
+## Mikä on järjestelmäkehote?
 
-Järjestelmäprompti on tekstipätkä, jonka annat Copilotille ja joka määrittää, miten botti käyttäytyy *kaikessa* keskustelussa. Käyttäjä ei näe sitä — botti vain noudattaa sitä. Voit ajatella sitä botin **työsopimuksena**: kuka olet, mitä tehtäväsi on, missä rajat menevät.
+**Järjestelmäkehote** on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy *kaikissa* keskusteluissa. Käyttäjä ei yleensä näe järjestelmäkehotetta, mutta botti noudattaa sitä toiminnassaan.
 
-Hyvä järjestelmäprompti vastaa neljään kysymykseen:
+Voit ajatella järjestelmäkehotetta botin **työsopimuksena**: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.
+
+Hyvä järjestelmäkehote vastaa neljään kysymykseen:
 
 1. **Kuka olet?** Rooli ja persoona.
 2. **Mitä teet?** Tehtävä ja työnkulku.
 3. **Miten puhut?** Äänensävy ja tyyli.
 4. **Mitä et tee?** Rajat ja kiellot.
 
-## Rakennuspalikat järjestelmäpromptiksi
+## Rakennuspalikat järjestelmäkehotteeksi
 
-Kolme rakennuspalikkaasi kääntyvät järjestelmäpromptiksi seuraavasti:
+Kolme rakennuspalikkaasi muuttuvat järjestelmäkehotteeksi seuraavasti:
 
-| Rakennuspalikka | Mihin osaan järjestelmäpromptia? |
-|---|---|
-| **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii — käytä sitä botin pääohjeessa. |
-| **2: Määrittelydokumentti** | Sisältö. Kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
-| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole järjestelmäpromptissa — se ladataan erikseen Copilotiin. Mutta järjestelmäpromptissa voi viitata siihen: *"Käytä tietopohjassa olevia dokumentteja referenssinä."* |
+| Rakennuspalikka | Mihin osaan järjestelmäkehotetta? |
+| --- | --- |
+| **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa. |
+| **2: Määrittelydokumentti** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäkehotteen kappaleiksi. |
+| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäkehotetta, vaan se ladataan erikseen Copilotiin. Järjestelmäkehotteessa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
 
-## Esimerkki: rakennuspalikoista järjestelmäpromptiksi
+## Esimerkki: rakennuspalikoista järjestelmäkehotteeksi
 
-Alla on yksinkertainen esimerkki siitä, miten määrittelydokumentin sisältö muuttuu järjestelmäpromptiksi. Ota se mallina — ei kopioitavaksi.
+Alla on yksinkertainen esimerkki siitä, miten määrittelydokumentin sisältö muuttuu järjestelmäkehotteeksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.
 
-### Määrittelydokumentin sisältö (rakennuspalikka 2)
+### Määrittelydokumentin sisältö eli rakennuspalikka 2
 
 > **Botin nimi:** Pelin määrittelyvalmentaja
 > **Kohderyhmä:** Pelikoodausopiskelija, joka aloittaa uutta peliprojektia
 > **Tarkoitus:** Ohjata käyttäjää pelin määrittelydokumentin laatimisessa kuuden osan kautta
 > **Persoona:** Käytännönläheinen, kysyvä, ei jargonia
 > **Työnkulku:** 1) Pelin idea → 2) Kohderyhmä ja alusta → 3) Ydinmekaniikat → 4) Tekninen toteutus → 5) Aikataulu → 6) Riskit
-> **Rajat:** Ei kirjoita dokumenttia puolesta, ei arvioi kaupallista potentiaalia, ei käsittele muita aloja
+> **Rajat:** Ei kirjoita dokumenttia käyttäjän puolesta, ei arvioi kaupallista potentiaalia, ei käsittele muiden alojen projekteja
 
-### Sama järjestelmäpromptina
+### Sama järjestelmäkehotteena
 
 > Olet **Pelin määrittelyvalmentaja**. Autat pelikoodausopiskelijaa, joka aloittaa uutta peliprojektia, laatimaan pelin määrittelydokumentin.
 >
-> **Työnkulkusi:** Ohjaat käyttäjää aina järjestyksessä kuuden osan läpi: (1) pelin idea, (2) kohderyhmä ja alusta, (3) ydinmekaniikat, (4) tekninen toteutus, (5) aikataulu, (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen on käsitelty.
+> **Työnkulkusi:** Ohjaat käyttäjää aina järjestyksessä kuuden osan läpi: (1) pelin idea, (2) kohderyhmä ja alusta, (3) ydinmekaniikat, (4) tekninen toteutus, (5) aikataulu ja (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen osa on käsitelty.
 >
-> **Tapasi puhua:** Käytännönläheinen, kysyvä. Pyydät käyttäjältä konkreettisia vastauksia, et hyväksy ympäripyöreää. Et käytä akateemista jargonia. Käytät pelikoodauksen omia termejä (mekaniikka, game loop, asset, prototyyppi).
+> **Tapasi puhua:** Olet käytännönläheinen ja kysyvä. Pyydät käyttäjältä konkreettisia vastauksia etkä hyväksy ympäripyöreitä vastauksia sellaisenaan. Et käytä akateemista jargonia. Käytät pelikoodauksen omia termejä, kuten mekaniikka, game loop, asset ja prototyyppi.
 >
-> **Et koskaan:** kirjoita dokumenttia käyttäjän puolesta; arvioi pelin kaupallista potentiaalia; käsittele muiden alojen projekteja. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti aiheeseen takaisin tai oikealle asiantuntijalle.
+> **Et koskaan:** kirjoita dokumenttia käyttäjän puolesta, arvioi pelin kaupallista potentiaalia tai käsittele muiden alojen projekteja. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti takaisin aiheeseen tai oikealle asiantuntijalle.
 >
 > **Tietopohja:** Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.
 
-Huomaa, että määrittelyssä on *rivimuotoinen pohja*, kun taas järjestelmäpromptissa puhutaan botille itselleen ("Olet…", "Työnkulkusi…", "Et koskaan…"). Tämä on tärkein muunnos: **kuvaileva määrittely → suora ohjaus botille**.
+Huomaa, että määrittelydokumentissa sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
 
-## Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa
+## Käytä tekoälyä apuna järjestelmäkehotteen kirjoittamisessa
 
-Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Esimerkkiprompti:
+Kun olet kirjoittanut järjestelmäkehotteen ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:
 
-```
-Toimit minulle sparrauskumppanina. Olen kirjoittamassa Copilot-botin
-järjestelmäpromptia. Tässä määrittelydokumenttini ja ensimmäinen versio
-järjestelmäpromptista:
-
-MÄÄRITTELY: [liitä rakennuspalikka 2]
-
-JÄRJESTELMÄPROMPTI (versio 1): [liitä oma promptisi]
-
-Auta minua arvioimaan: onko järjestelmäpromptissa kaikki, mitä
-määrittelyssä oli? Onko jokin kohta epäselvä botille? Onko jokin
-ohje liian löysä ('vastaa hyvin' on liian yleinen)? Älä kirjoita
-uutta versiota — anna 2–3 konkreettista parannusehdotusta, joiden
-pohjalta voin tehdä omat muutokset.
-```
+> "Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäkehotetta. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäkehotteesta:
+>
+> MÄÄRITTELY: [liitä rakennuspalikka 2]
+>
+> JÄRJESTELMÄKEHOTE, versio 1: [liitä oma kehotteesi]
+>
+> Auta minua arvioimaan: onko järjestelmäkehotteessa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."
 
 ## Copilot Agentin luominen
 
-Microsoft Copilotissa voit luoda oman **Agentin**, jolla on omat ohjeet ja tietopohja. Sen luominen vaihe vaiheelta:
+Microsoft Copilotissa voit luoda oman **agentin**, jolla on omat ohjeet ja tietopohja. Luo agentti näin:
 
-1. Avaa Copilot ja siirry "Agents" / "Agentit" -osioon.
-2. Luo uusi agent. Anna sille nimi (sama kuin määrittelydokumentissasi).
-3. Liitä järjestelmäpromptisi "Instructions" / "Ohjeet" -kenttään.
-4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi ("Knowledge" / "Tieto").
-5. Tallenna ja aloita keskustelu.
+1. Avaa Copilot ja siirry **Agents** / **Agentit** -osioon.
+2. Luo uusi agentti. Anna sille sama nimi kuin määrittelydokumentissasi.
+3. Liitä järjestelmäkehotteesi **Instructions** / **Ohjeet** -kenttään.
+4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan **Knowledge** / **Tieto**.
+5. Tallenna agentti ja aloita keskustelu.
 
-Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotain vaihetta, kysy opettajalta — tai etsi ohje hakemalla "Copilot agent create instructions".
+Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, kysy opettajalta tai etsi ohje hakemalla esimerkiksi *"Copilot agent create instructions"*.
 
 ## Ensimmäinen testikeskustelu
 
-Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä syntyy. Hyvä testaustapa:
+Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä tapahtuu. Hyvä testaustapa etenee näin:
 
-1. **Keksi kuvitteellinen projekti omalta alaltasi.** Lyhyt kuvaus, 2–3 lausetta.
+1. **Keksi kuvitteellinen projekti omalta alaltasi.** Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.
 2. **Anna botin ohjata.** Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.
-3. **Käy keskustelu loppuun.** Pääsetkö valmiiseen määrittelydokumenttiin?
-4. **Tallenna keskustelu** kuvakaappauksina tai kopioituna.
+3. **Käy keskustelu loppuun.** Tarkista, pääsetkö valmiiseen määrittelydokumenttiin.
+4. **Tallenna keskustelu** kuvakaappauksina tai kopioituna tekstinä.
 
-## Mihin kiinnittää huomiota testissä?
+## Mihin kiinnität huomiota testissä?
 
-**Pysyykö botti roolissaan?** Vai unohtaako se, että on oman alasi valmentaja, ja muuttuu yleiseksi avustajaksi?
+**Pysyykö botti roolissaan?**
 
-**Seuraako se työnkulkua?** Vai hyppiikö se osasta toiseen sattumanvaraisesti?
+Vai unohtaako se, että se on oman alasi valmentaja, ja muuttuuko se yleiseksi avustajaksi?
 
-**Käyttääkö se tietopohjaa?** Tunnistatko sen vastauksista oman alasi termejä, vai kuulostavatko ne yleiseltä projektijargonilta?
+**Seuraako botti työnkulkua?**
 
-**Yrittääkö se kirjoittaa puolesta?** Jos pyydät "kirjoita minulle koko dokumentti", pidätteleekö se ohjeitaan vai murtuuko se?
+Vai hyppiikö se osasta toiseen sattumanvaraisesti?
+
+**Käyttääkö botti tietopohjaa?**
+
+Tunnistatko sen vastauksista oman alasi termejä, vai kuulostavatko vastaukset yleiseltä projektijargonilta?
+
+**Yrittääkö botti kirjoittaa käyttäjän puolesta?**
+
+Jos pyydät sitä kirjoittamaan koko dokumentin puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
 
 ## Korjauslista tunnille 18
 
-Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa niitä tällä tunnilla — tunti 18 on viimeistelyä varten. Esimerkkejä:
+Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa kaikkea tällä tunnilla, sillä tunti 18 on viimeistelyä varten. Esimerkkejä:
 
-- "Botti hyppää vaiheen 2 ohi heti — pitää tarkentaa työnkulun ohje."
-- "Botti käyttää englanninkielisiä termejä, vaikka pitäisi puhua suomeksi — lisää kielimääritelmä."
-- "Botti antaa heti valmiita vastauksia kysymättä mitään — pitää lisätä 'kysy ennen kuin ehdotat' -ohje."
+- "Botti hyppää vaiheen 2 ohi heti — työnkulun ohjetta pitää tarkentaa."
+- "Botti käyttää englanninkielisiä termejä, vaikka sen pitäisi puhua suomeksi — lisää kielimääritelmä."
+- "Botti antaa heti valmiita vastauksia kysymättä mitään — lisää ohje 'kysy ennen kuin ehdotat'."
 
 ## Lopuksi
 
-Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei toimi täydellisesti — ei sen ole vielä tarkoituskaan. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla saat ensimmäisen version pöydälle, tunnilla 18 viilataan se valmiiksi.
+Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei vielä toimi täydellisesti. Sen ei ole tarkoituskaan olla valmis heti. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla saat ensimmäisen version toimimaan, ja tunnilla 18 viimeistelet sen.
 
-*Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.*
+Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.
+
+---

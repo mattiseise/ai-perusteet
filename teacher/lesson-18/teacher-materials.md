@@ -1,138 +1,307 @@
-# Opettajan materiaalit — Oppitunti 18: Projektidokumenttibotti viimeistelee
+# Opettajan materiaalit — Oppitunti 18: projektidokumenttibotin viimeistely ja esittely
+
+## Oppitunnin tarkoitus ja konteksti
+
+Oppitunti 18 on **Tekoälyjen käyttö** -osion arvioinnin toinen osa. Oppitunnilla 17 opiskelijat suunnittelivat ja rakensivat projektidokumenttibotin ensimmäisen version. Tällä oppitunnilla he viimeistelevät botin, testaavat sen perusteellisesti, dokumentoivat korjaukset ja esittelevät työnsä muille.
+
+Oppitunnin ydin on, että opiskelija osoittaa osaavansa käyttää tekoälyä **vastuullisesti**, **itsenäisesti** ja **dokumentoidusti**. Arvioinnissa ei katsota vain sitä, onko botti olemassa, vaan sitä, miten opiskelija testaa, parantaa, esittelee ja arvioi omaa työtään.
+
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että valmis botti ei ole arvioinnin ainoa kohde. Arvioinnissa näkyvät myös testaus, iterointi, esittely, vertaispalaute ja reflektio. Hyvä opiskelija osaa näyttää, miten botti toimii, mitä hän oppi ja miten botti voisi kehittyä agentiksi.
 
 ---
 
-## Osaamistavoitteet
+## Oppimisen tavoitteet
 
-Oppitunnin 18 lopussa opiskelija:
+### Muistaa ja ymmärtää
 
-1. **Testaa omaa bottia perusteellisesti** positiivisissa, negatiivisissa ja reunatapauksissa, dokumentoi virheet ja iteroi korjauksia
-2. **Valmistaa botin esittelyä** kirjoittamalla selkeän kuvauksen ja käsikirjoittamalla live-demon
-3. **Esittelee botin** selkeästi ja vakuuttavasti sekä ottaa vastaan ja antaa rakentavaa palautetta
-4. **Pohtii omaa oppimistaan** ja osoittaa ymmärrystä siitä, miten botti voisi kehittyä agentiksi
-5. **Saavuttaa Tekoälyjen käyttö -osion kokonaistavoitteet**: kykenee käyttämään tekoälyä vastuullisesti, itsenäisesti ja dokumentoidusti
+- Opiskelija ymmärtää, että botti pitää testata **positiivisilla testeillä**, **negatiivisilla testeillä** ja **reunatapauksilla**.
+- Opiskelija ymmärtää, että testauksessa löytyvät virheet ovat osa kehitysprosessia.
+- Opiskelija ymmärtää, että esittely vaatii valmistelua: botin tarkoitus, käyttötapa ja hyöty pitää pystyä selittämään muille.
+- Opiskelija ymmärtää, että reflektio osoittaa omaa oppimista ja ajattelun kehittymistä.
+
+### Soveltaa ja analysoida
+
+- Opiskelija testaa omaa bottiaan monipuolisesti ja dokumentoi testien tulokset.
+- Opiskelija tunnistaa testien perusteella botin vahvuuksia, puutteita ja korjaustarpeita.
+- Opiskelija valmistaa botin esittelyn kirjoittamalla selkeän kuvauksen ja käsikirjoittamalla live-demon.
+- Opiskelija antaa ja vastaanottaa rakentavaa vertaispalautetta.
+
+### Luoda ja arvioida
+
+- Opiskelija viimeistelee botin testitulosten ja palautteen perusteella.
+- Opiskelija esittelee botin selkeästi ja vakuuttavasti.
+- Opiskelija pohtii omaa oppimistaan ja tunnistaa, mitä tekisi seuraavalla kerralla paremmin.
+- Opiskelija osaa selittää, miten botti voisi kehittyä kohti **agenttia**.
 
 ---
 
-## Arviointikriteerit (koko oppitunnit 17+18, 20 pistettä)
+## Arviointikriteerit — oppitunnit 17 ja 18 yhteensä
 
-### 1. Botin suunnittelu ja tarkoitus (4 pistettä)
+Oppitunnit 17 ja 18 muodostavat yhdessä **Tekoälyjen käyttö** -osion arviointikokonaisuuden. Oppitunnilla 18 arviointi painottuu viimeistelyyn, testaukseen, esittelyyn ja reflektioon.
 
-Mitä arvioit:
-- Onko botin tarkoitus selkeä? (Mitä se tekee? Kenelle?)
-- Onko system prompt kirjoitettu selvästi ja johdonmukaisesti?
-- Ovatko kysymykset relevantteja ja rakentavat realistisen kuvan projektista?
-- Vastaaako botti siihen, mihin se on suunniteltu?
+Kokonaispistemäärä on **20 pistettä**. Jokainen arviointikriteeri on enintään **4 pistettä**.
 
-**Erinomainen (4 p):** Kaikki yllä olevat ovat erinomaisesti toteutettu. Tarkoitus on kristallin selkeä. System prompt on hyvin kirjoitettu, selkeä ja ohjaa bottia johdonmukaisesti. Kysymykset ovat oleellisia ja hyvin suunniteltuja.
+| Kriteeri | Maksimipisteet | Mitä arvioidaan? |
+| --- | --- | --- |
+| **1. Botin suunnittelu ja tarkoitus** | 4 p | Onko botin tarkoitus selkeä, kysymykset relevantteja ja botti suunniteltu oikeaan käyttötarkoitukseen? |
+| **2. System prompt ja ohjeet** | 4 p | Onko system prompt selkeä, johdonmukainen ja sisältääkö se roolin, ohjeet ja rajaukset? |
+| **3. Testaus ja iterointi** | 4 p | Onko bottia testattu monipuolisesti, onko virheet dokumentoitu ja onko korjauksia tehty? |
+| **4. Esittely ja viestintä** | 4 p | Selittääkö opiskelija bottinsa selkeästi ja onnistuuko live-demo ymmärrettävästi? |
+| **5. Reflektio ja oppiminen** | 4 p | Pohtiiko opiskelija omaa oppimistaan ja ymmärtääkö hän, miten botti voisi kehittyä agentiksi? |
 
-**Hyvä (3 p):** Suurin osa on hyvin toteutettu. Jokin on lievä epäselvä tai puutteellinen.
+---
 
-**Tyydyttävä (2 p):** Perusidea on olemassa, mutta puutteita selkeydessä tai johdonmukaisuudessa. Botti toimii, mutta voisi olla parempi.
+## Arviointikriteerit yksityiskohtaisesti
 
-**Välttävä (1 p):** Näyttää puutteita selkeydessä tai relevanssissa. Botti tekee jotain, mutta ei selkeästi tai realistisesti. Bottia ei ymmärrä tai se ei vastaa tarkoitukseen.
+### 1. Botin suunnittelu ja tarkoitus — 4 pistettä
 
-### 2. System prompt ja ohjeet (4 pistettä)
+**Mitä arvioidaan?**
 
-Mitä arvioit:
-- Onko system prompt kirjoitettu selvästi?
-- Noudattaako botti ohjeita johdonmukaisesti?
-- Ovatko rajaukset eksplisiitit (mitä botti ei tee)?
-- Onko bottille annettu rooli selkeästi (kuka se on)?
+- Onko botin tarkoitus selkeä: mitä botti tekee ja kenelle?
+- Onko system prompt kirjoitettu johdonmukaisesti suhteessa botin tarkoitukseen?
+- Ovatko kysymykset relevantteja ja rakentavatko ne realistisen kuvan projektista?
+- Vastaako botti siihen tehtävään, johon se on suunniteltu?
 
-**Erinomainen (4 p):** System prompt on erinomaisen kirjoitettu. Botti noudattaa ohjeita konsistentisti. Rajaukset ovat selkeät. Rooli on sopivasti määritelty.
+| Taso | Kuvaus |
+| --- | --- |
+| **Erinomainen, 4 p** | Botin tarkoitus on erittäin selkeä. Kysymykset ovat olennaisia ja hyvin suunniteltuja. Botti vastaa johdonmukaisesti siihen, mihin se on rakennettu. |
+| **Hyvä, 3 p** | Tarkoitus ja perusidea ovat selkeät. Joissakin kysymyksissä tai rakenteessa on pieniä puutteita. |
+| **Tyydyttävä, 2 p** | Botti toimii perusidealtaan, mutta tarkoitus, kysymykset tai projektisuunnittelun logiikka jäävät osittain epäselviksi. |
+| **Välttävä, 1 p** | Botin tarkoitus on epäselvä tai botti ei vastaa realistisesti siihen tehtävään, johon se on tarkoitettu. |
 
-**Hyvä (3 p):** Hyvin kirjoitettu prompt. Botti noudattaa sitä hyvin. Rajaukset ja rooli ovat pääosin selkeät.
+---
 
-**Tyydyttävä (2 p):** Prompt on olemassa ja funktionaalinen, mutta voisi olla selkeämpi. Botti noudattaa sitä yleensä.
+### 2. System prompt ja ohjeet — 4 pistettä
 
-**Välttävä (1 p):** Prompt on epäselvä tai puutteellinen. Botti ei aina noudata sitä konsistentisti. Promptta ei ole tai se ei toimi.
+**Mitä arvioidaan?**
 
-### 3. Testaus ja iterointi (4 pistettä)
+- Onko **system prompt** kirjoitettu selkeästi?
+- Noudattaako botti promptin ohjeita johdonmukaisesti?
+- Onko botille annettu selkeä rooli?
+- Ovatko rajaukset eksplisiittiset eli kerrotaanko, mitä botti ei tee?
 
-Mitä arvioit:
-- Onko botti testattu positiivisissa, negatiivisissa ja reunatapauksissa?
-- Onko kaikki dokumentoitu selvästi?
-- Löydettiinkö ongelmia?
-- Korjattiinko ongelmia ja testattiinko uudelleen?
+| Taso | Kuvaus |
+| --- | --- |
+| **Erinomainen, 4 p** | System prompt on erittäin selkeä. Botti noudattaa ohjeita johdonmukaisesti. Rooli ja rajaukset ovat hyvin määriteltyjä. |
+| **Hyvä, 3 p** | Prompt on hyvä ja botti noudattaa sitä pääosin. Rooli ja rajaukset ovat mukana, mutta eivät kaikilta osin täsmällisiä. |
+| **Tyydyttävä, 2 p** | Prompt on olemassa ja toimiva, mutta sitä pitäisi selkeyttää. Botti noudattaa ohjeita vaihtelevasti. |
+| **Välttävä, 1 p** | Prompt on puutteellinen tai epäselvä. Botti ei noudata ohjeita johdonmukaisesti. |
 
-**Erinomainen (4 p):** Perusteellinen testaus kaikissa kategorioissa. Dokumentaatio on erittäin selkeä. Virheet löydettiin, dokumentoitiin ja korjattiin. Uudelleentestaus osoittaa parantumista.
+> **Arviointivinkki:** Jos botti toimii hyvin sattumalta mutta prompt on epäselvä, pisteytä promptin laatu erikseen. Hyvä lopputulos ei yksin korvaa puutteellista ohjeistusta.
 
-**Hyvä (3 p):** Hyvä testaus. Dokumentaatio on hyvä. Ongelmia löydettiin ja korjattiin.
+---
 
-**Tyydyttävä (2 p):** Testaus on olemassa ja dokumentoitu, mutta voisi olla kattavampi. Joitain ongelmia korjattiin.
+### 3. Testaus ja iterointi — 4 pistettä
 
-**Välttävä (1 p):** Minimaalista testausta. Dokumentaatio on heikko. Bottia ei ole testattu merkittävästi tai testaus ei ole dokumentoitu.
+**Mitä arvioidaan?**
 
-### 4. Esittely ja viestintä (4 pistettä)
+- Onko botti testattu **positiivisilla testeillä**, **negatiivisilla testeillä** ja **reunatapauksilla**?
+- Onko testaus dokumentoitu selkeästi?
+- Löysikö opiskelija ongelmia tai kehittämiskohteita?
+- Korjasiko opiskelija ongelmia ja testasiko hän bottia uudelleen?
 
-Mitä arvioit:
-- Selittääkö opiskelija bottiaan selkeästi?
-- Sujuuko livedemo hyvin?
-- Ymmärtävätkö muut, mitä botti tekee ja miksi se on hyödyllinen?
-- Onko esittely vakuuttava?
+| Taso | Kuvaus |
+| --- | --- |
+| **Erinomainen, 4 p** | Testaus on perusteellista kaikissa kategorioissa. Virheitä on löydetty, dokumentoitu, korjattu ja testattu uudelleen. Uudelleentestaus osoittaa parantumista. |
+| **Hyvä, 3 p** | Testaus on monipuolista ja dokumentoitua. Ongelmia on löydetty ja joitakin korjauksia tehty. |
+| **Tyydyttävä, 2 p** | Testaus on olemassa, mutta se voisi olla kattavampaa. Dokumentaatio tai iterointi jää osittain vajaaksi. |
+| **Välttävä, 1 p** | Testaus on minimaalista tai dokumentointi puuttuu. Bottia ei ole testattu merkittävästi. |
 
-**Erinomainen (4 p):** Selitys on kristallin selkeä ja vakuuttava. Livedemo sujuu jouhevasti. Yleisö ymmärtää heti. Vaikuttaa ammattilaiselta.
+#### Testausdokumentin suositeltu rakenne
 
-**Hyvä (3 p):** Hyvä selitys. Livedemo onnistuu pääosin. Yleisö ymmärtää tarkoituksen. Vakuuttava.
+| Testityyppi | Syöte | Odotettu vastaus | Saatu vastaus | Korjaus tai johtopäätös |
+| --- | --- | --- | --- | --- |
+| **Positiivinen testi** | Käyttäjä antaa selkeän projektikuvauksen. | Botti kysyy olennaisia kysymyksiä ja etenee loogisesti. |  |  |
+| **Negatiivinen testi** | Käyttäjä pyytää bottia tekemään koko projektin hänen puolestaan. | Botti kieltäytyy tekemästä kaikkea valmiiksi ja ohjaa käyttäjää suunnittelussa. |  |  |
+| **Reunatapaus** | Käyttäjä antaa epäselvän viestin, kuten ”tee suunnitelma”. | Botti pyytää tarkennuksia eikä oleta puuttuvia tietoja. |  |  |
 
-**Tyydyttävä (2 p):** Ok selitys. Livedemo onnistuu. Joitain epäselvyyksiä, mutta ymmärrettävää.
+---
 
-**Välttävä (1 p):** Selitys on epäselvä tai livedemo ei onnistu hyvin. Yleisö on hämmentynyt. Selitys on sekava tai esittelyä ei ole.
+### 4. Esittely ja viestintä — 4 pistettä
 
-### 5. Reflektio ja oppiminen (4 pistettä)
+**Mitä arvioidaan?**
 
-Mitä arvioit:
-- Pohtii opiskelija omaa oppimisprosessiaan?
-- Osoittaako hän ymmärrystä siitä, mitä oppi ja mitä tekisi toisin?
-- Ajatteleeko hän tulevaisuutta (agentti)?
-- Onko reflektio syvä vai pinnallinen?
+- Selittääkö opiskelija bottinsa tarkoituksen selkeästi?
+- Ymmärtääkö yleisö, mitä botti tekee ja miksi se on hyödyllinen?
+- Sujuuko live-demo tai vaihtoehtoinen esittely ymmärrettävästi?
+- Onko esittely vakuuttava ja valmisteltu?
 
-**Erinomainen (4 p):** Reflektio on syvä ja pohtiva. Opiskelija osoittaa selkeää ymmärrystä omasta oppimisesta. Ehdotukset agentin ominaisuuksista ovat intelligentit ja perusteltuja.
+| Taso | Kuvaus |
+| --- | --- |
+| **Erinomainen, 4 p** | Selitys on erittäin selkeä ja vakuuttava. Live-demo sujuu hyvin, ja yleisö ymmärtää heti, mitä botti tekee ja miksi siitä on hyötyä. |
+| **Hyvä, 3 p** | Esittely on selkeä ja demo onnistuu pääosin. Tarkoitus välittyy yleisölle. |
+| **Tyydyttävä, 2 p** | Esittely onnistuu, mutta siinä on epäselvyyksiä tai demo ei ole täysin valmisteltu. |
+| **Välttävä, 1 p** | Esittely on sekava, demo ei onnistu tai yleisö ei ymmärrä, mitä botti tekee. |
 
-**Hyvä (3 p):** Hyvä reflektio. Opiskelija pohtii oppimistaan ja kehitysideoitaan. Ymmärrys näkyy selvästi.
+#### Esittelykäsikirjoituksen minimirakenne
 
-**Tyydyttävä (2 p):** Reflektio on olemassa ja käsittelee aihetta, mutta voisi olla syvempi. Osaa analysoida, mutta hieman pinnallisesti.
+1. **Botin nimi ja tarkoitus:** mitä botti tekee?
+2. **Kohderyhmä:** kenelle botti on tarkoitettu?
+3. **Lyhyt käyttötapaus:** millaisessa tilanteessa bottia käytetään?
+4. **Live-demo:** yksi selkeä käyttäjätilanne.
+5. **Lopputulos:** mitä botti tuottaa?
+6. **Yksi kehityskohde:** mitä parantaisit seuraavaksi?
 
-**Välttävä (1 p):** Reflektio on pinnallinen. Vähän analyysia omasta oppimisesta. Reflektio puuttuu tai se ei ole yhteydessä tehtävään.
+---
+
+### 5. Reflektio ja oppiminen — 4 pistettä
+
+**Mitä arvioidaan?**
+
+- Pohtiiko opiskelija omaa oppimisprosessiaan?
+- Osaako hän kertoa, mikä onnistui ja mikä oli vaikeaa?
+- Ymmärtääkö hän, mitä tekisi seuraavalla kerralla toisin?
+- Pohtiiko hän, miten botti voisi kehittyä agentiksi?
+
+| Taso | Kuvaus |
+| --- | --- |
+| **Erinomainen, 4 p** | Reflektio on syvä ja pohtiva. Opiskelija ymmärtää omaa oppimistaan ja esittää perusteltuja ajatuksia siitä, miten botti voisi kehittyä agentiksi. |
+| **Hyvä, 3 p** | Reflektio on hyvä ja osoittaa selkeää ymmärrystä oppimisesta ja kehittämisestä. |
+| **Tyydyttävä, 2 p** | Reflektio on olemassa, mutta se jää osittain yleiseksi tai pinnalliseksi. |
+| **Välttävä, 1 p** | Reflektio on hyvin lyhyt, pinnallinen tai ei liity tehtävään. |
+
+#### Reflektion apukysymykset opiskelijalle
+
+- Mikä botin rakentamisessa onnistui parhaiten?
+- Mikä oli vaikeinta?
+- Mitä muutit testauksen perusteella?
+- Mitä tekisit toisin, jos aloittaisit alusta?
+- Miten botti voisi kehittyä agentiksi, joka ei vain keskustele vaan myös tekee asioita?
 
 ---
 
 ## Arviointiprosessi
 
-### Aineistot, joita tarkistat
+### Aineistot, jotka opettaja tarkistaa
 
-1. **Testausdokumentti** (tehtävä 18.1)
-   - Kriteeri 3: testaus ja iterointi näkyvät
-   - Katsot: Ovatko testit monipuoliset? Dokumentointi selkeää? Korjaukset dokumentoituja?
+| Aineisto | Mihin kriteeriin liittyy? | Mitä opettaja tarkistaa? |
+| --- | --- | --- |
+| **Testausdokumentti, tehtävä 18.1** | Kriteeri 3 | Ovatko testit monipuolisia, dokumentointi selkeää ja korjaukset perusteltuja? |
+| **Esittelykäsikirjoitus, tehtävä 18.2** | Kriteerit 1 ja 4 | Onko botin kuvaus selkeä ja onko demo realistisesti suunniteltu? |
+| **Vertaisarviot, tehtävä 18.3** | Kriteerit 4 ja 5 | Antoiko opiskelija rakentavaa palautetta ja miten muut arvioivat hänen bottiaan? |
+| **Reflektio, tehtävä 18.4** | Kriteeri 5 | Onko reflektio syvä vai pinnallinen, ja näkyykö oma oppiminen? |
 
-2. **Esittelykäsikirjoitus** (tehtävä 18.2)
-   - Kriteerit 1 ja 4: botin tarkoitus ja esittelyn valmistelu
-   - Katsot: Onko kuvaus selkeä? Onko käsikirjoitus realistinen? Onko aikataulu realistinen?
+### Pisteyttämisen periaate
 
-3. **Vertaisarviot** (tehtävä 18.3)
-   - Kriteerit 4 ja 5: esittelyn anti ja reflektio
-   - Katsot: Antoiko opiskelija rakentavaa palautetta? Miten muut arvioivat hänen bottiaan?
-   - Näet livedemonkin — mitä näit?
+Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä on 20 pistettä. Useimmat hyväksytyt suoritukset sijoittuvat todennäköisesti välille **15–18 pistettä**. Erinomainen suoritus, 18–20 pistettä, edellyttää erityisen selkeää suunnittelua, testausta, esittelyä ja reflektiota.
 
-4. **Reflektio** (tehtävä 18.4)
-   - Kriteeri 5: reflektio ja oppiminen
-   - Katsot: Onko syvä vai pinnallinen? Osoittaako ymmärrystä?
-
-### Pisteyttäminen
-
-Jokainen kriteeri on maksimi 4 pistettä. Yhteensä maksimi 20 pistettä. Jaa pisteet siten, että useimmat opiskelijat saavat 15–18 pistettä (3–4 / 4). Erinomainen suorituskyky (18–20 p) on harvinaista. Hylätyt (alle 8 p) ovat harvinaisia, koska opiskelijat ovat tehneet jo paljon työtä L17:ssä.
+**Opettajan arviointimuistutus:** Arvioi erikseen botin laatu, esittelytaidot ja reflektio. Hyvä botti ei automaattisesti tarkoita erinomaista esittelyä, eikä epävarma esittely tarkoita, että botti olisi huono.
 
 ---
 
-## Yleisimmät arviointi­dilemmaat
+## Yleisimmät arviointidilemmat
 
 | Tilanne | Ratkaisu |
-|---|---|
-| Opiskelija löysi virheitä testaamisen aikana, mutta korjasi ne huonosti | Arvioi iterointi-prosessia, ei vain lopputulosta. Virheestä oppiminen on arvokasta. Pisteitä kriteeriin 3. |
-| Esittely oli hidas tai epävarma, mutta botti toimi hyvin | Erottele esittelytaidot bottin laadusta. Kriteeri 4 voi olla alhaisempi, kriteerit 1-2 voivat olla korkeammat. |
-| Reflektio on lyhyt, mutta ottaa asiaa | Lyhyys ei vähennä pisteitä, jos sisältö on hyvä. Mitä laadusta, ei pituudesta. |
-| Kaksi opiskelijaa tekivät lähes samanlaisia botteja | Se ei ole huijaus, jos system prompt eroaa. Arvioi jokaista itsenäisesti kriteerin mukaan. Jos koodit ovat identtiset, käy keskustelu. |
+| --- | --- |
+| Opiskelija löysi virheitä testauksessa, mutta korjaukset eivät onnistuneet täydellisesti. | Arvioi iterointiprosessia, ei vain lopputulosta. Virheiden löytäminen ja korjausyritys osoittavat oppimista. |
+| Esittely oli hidas tai epävarma, mutta botti toimi hyvin. | Erottele esittelytaito botin laadusta. Kriteeri 4 voi olla matalampi, mutta kriteerit 1–3 voivat olla korkeammat. |
+| Reflektio on lyhyt, mutta sisältö on olennaista. | Älä arvioi vain pituutta. Lyhyt mutta tarkka reflektio voi olla hyvä. |
+| Kaksi opiskelijaa teki samankaltaiset botit. | Samankaltaisuus ei yksin tarkoita kopiointia. Arvioi system prompt, testaus, dokumentaatio ja reflektio erikseen. Jos tekstit ovat identtiset, keskustele opiskelijoiden kanssa. |
+
+---
+
+## Fasilitointiohjeet
+
+### Oppitunnin rakenne, 90 minuuttia
+
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto ja tavoitteen kirkastus** | 5 min | Muistuta, että tänään viimeistellään, testataan ja esitellään botti. |
+| **Tehtävä 18.1: testaus ja iterointi** | 25 min | Opiskelijat testaavat botin positiivisilla, negatiivisilla ja reunatapauksilla. |
+| **Tehtävä 18.2: esittelyn valmistelu** | 15 min | Opiskelijat kirjoittavat lyhyen esittelykäsikirjoituksen ja valitsevat demo-skenaarion. |
+| **Tehtävä 18.3: esittelyt ja vertaispalaute** | 35 min | Opiskelijat esittelevät bottinsa ja antavat rakentavaa palautetta toisilleen. |
+| **Tehtävä 18.4: reflektio** | 10 min | Opiskelijat kirjoittavat, mitä oppivat ja miten botti voisi kehittyä agentiksi. |
+
+### Johdantolause opettajalle
+
+> Viimeksi rakensitte projektidokumenttibotin ensimmäisen version. Tänään katsomme, kestääkö botti testauksen, osaako se toimia vaikeammissakin tilanteissa ja pystyttekö esittelemään sen niin, että muut ymmärtävät sen hyödyn.
+
+---
+
+## Luokkatehtävien ohjeistus
+
+### TT-A: Testaa ja viimeistele botti
+
+**Tavoite:** Opiskelija varmistaa, että botti toimii luotettavasti eri tilanteissa.
+
+**Tee näin:**
+
+1. Tee yksi positiivinen testi: käyttäjä antaa selkeän projektikuvauksen.
+2. Tee yksi negatiivinen testi: käyttäjä pyytää jotakin, mitä botin ei kuulu tehdä.
+3. Tee yksi reunatapaustesti: käyttäjä antaa epäselvän, puutteellisen tai ristiriitaisen pyynnön.
+4. Kirjaa jokaisesta testistä syöte, odotettu vastaus, saatu vastaus ja johtopäätös.
+5. Korjaa system promptia tai kysymyksiä, jos testit paljastavat ongelmia.
+6. Testaa korjattu versio uudelleen.
+
+**Aika-arvio:** 25 minuuttia
+
+---
+
+### TT-B: Valmistele botin esittely
+
+**Tavoite:** Opiskelija osaa esitellä botin tarkoituksen, hyödyn ja toimintatavan selkeästi.
+
+**Esittelyn pitää vastata seuraaviin kysymyksiin:**
+
+- Mikä botin nimi on?
+- Mihin ongelmaan botti auttaa?
+- Kuka hyötyy botista?
+- Miten botti toimii käytännössä?
+- Mikä on yksi asia, jota paransit testauksen perusteella?
+
+**Esittelyn mallirunko:**
+
+1. Bottini nimi on...
+
+2. Sen tarkoitus on auttaa käyttäjää...
+
+3. Näytän lyhyen demon tilanteesta, jossa...
+
+4. Testauksessa huomasin, että...
+
+5. Paransin bottia muuttamalla...
+
+**Aika-arvio:** 15 minuuttia
+
+---
+
+### TT-C: Esittely ja vertaispalaute
+
+**Tavoite:** Opiskelija harjoittelee oman työn esittelyä ja rakentavan palautteen antamista.
+
+**Ohje esittelijälle:**
+
+1. Esittele botin tarkoitus lyhyesti.
+2. Näytä yksi live-demo tai varademo.
+3. Kerro yksi testauksessa löytynyt ongelma ja miten korjasit sen.
+4. Kerro yksi kehitysidea seuraavaa versiota varten.
+
+**Ohje palautteen antajalle:**
+
+- Kerro yksi asia, joka oli selkeä tai onnistunut.
+- Kerro yksi konkreettinen kehitysehdotus.
+- Vältä yleistä palautetta, kuten ”ihan hyvä” tai ”huono”.
+- Perustele palautteesi.
+
+**Rakentavan palautteen malli:** ”Ymmärsin hyvin, että botti auttaa projektin aikataulutuksessa. Seuraavaksi voisit lisätä testin tilanteesta, jossa käyttäjä antaa ristiriitaisia tietoja.”
+
+**Aika-arvio:** 35 minuuttia
+
+---
+
+### TT-D: Reflektio
+
+**Tavoite:** Opiskelija pohtii omaa oppimistaan ja yhdistää botin rakentamisen tulevaan Agentit-osioon.
+
+**Kirjoita lyhyt reflektio, jossa vastaat vähintään neljään kysymykseen:**
+
+- Mikä botin rakentamisessa onnistui parhaiten?
+- Mikä oli vaikeinta?
+- Mitä muutit testauksen perusteella?
+- Mitä tekisit seuraavalla kerralla toisin?
+- Miten botti voisi kehittyä agentiksi?
+
+**Aika-arvio:** 10 minuuttia
 
 ---
 
@@ -140,84 +309,131 @@ Jokainen kriteeri on maksimi 4 pistettä. Yhteensä maksimi 20 pistettä. Jaa pi
 
 ### Opiskelijat, joilla on vaikeuksia
 
-Vaikeuksissa testaamisen kanssa anna esimerkki testistä ja testaa yhdessä yksi positiivinen ja yksi negatiivinen testi. Vaikeuksissa esittelyn kanssa auta käsikirjoituksen kirjoittamisessa ja harjoittele yhdessä 1–2 minuutin demo. Vaikeuksissa reflektoinnin kanssa luo lista kysymyksistä: "Mikä meni hyvin? Mikä oli vaikeaa? Mitä tekisit toisin?"
+- **Testauksen tuki:** anna valmis esimerkkitesti ja tee yhdessä yksi positiivinen ja yksi negatiivinen testi.
+- **Esittelyn tuki:** anna valmis esittelyrunko ja harjoittele opiskelijan kanssa 1–2 minuutin demo.
+- **Reflektion tuki:** anna kysymykset valmiina: mikä meni hyvin, mikä oli vaikeaa, mitä tekisit toisin?
+- **Teknisen ongelman tuki:** salli esittely kuvakaappausten tai käsikirjoituksen avulla, jos botti ei toimi live-tilanteessa.
 
 ### Opiskelijat, joilla on vahvat taidot
 
-Testauksen osalta kysy: "Testaatko bottia eri kielellä tai eri skenaarion kontekstissa?" Esittelyn osalta ehdota: "Voisitko lisätä dioja tai muita visuaalisia elementtejä?" Reflektio-osiossa pyydä miettimään: "Miten agentti poikkeaisi botista? Mitä turvallisuusseikkoja pitäisi ottaa huomioon?"
+- Pyydä opiskelijaa testaamaan bottia eri kielellä tai eri käyttäjäroolilla.
+- Pyydä lisäämään esittelyyn visuaalinen elementti, kuten dia, prosessikaavio tai ennen–jälkeen-vertailu.
+- Pyydä opiskelijaa pohtimaan, mitä työkaluja agentti tarvitsisi, jos projektidokumenttibotti kehittyisi agentiksi.
+- Pyydä opiskelijaa tunnistamaan agentin turvallisuusriskejä, esimerkiksi liialliset oikeudet, virheelliset toiminnot tai puutteellinen seuranta.
 
 ---
 
-## Virhe­skenaarioiden hallinta
+## Virheskenaarioiden hallinta
 
 ### Botti ei toimi esittelyssä
 
-Jos botti ei toimi, pyydä opiskelijaa kokeilla uudelleen — internet voi olla kuormittunut. Jos se ei vieläkään toimi, tarjoa vaihtoehto: hän voi esitellä käsikirjoituksesta tai muistokuvasta. Kirjoita muistille: "Tekninen ongelma esittelyssä" — älä vähennä pisteitä.
+Jos botti ei toimi esittelyhetkellä, pyydä opiskelijaa kokeilemaan uudelleen. Jos ongelma jatkuu, anna hänen esitellä botti käsikirjoituksen, kuvakaappausten tai tallennetun esimerkin avulla.
 
-### Opiskelijalla on "salattu" botti (yksityisesti luotu)
+**Opettajan huomio:** Älä vähennä pisteitä pelkästä teknisestä ongelmasta, jos opiskelijan valmistelu, dokumentaatio ja ymmärrys ovat kunnossa. Merkitse arviointiin, että kyseessä oli tekninen ongelma esittelyssä.
 
-Tämä on OK, kunhan esittely on kelpoinen. Voit vaatia kuvakaappauksen tai videon, jos haluat todistusta.
+### Botti on yksityinen tai ”salattu”
 
-### Palaute on liian kriittinen tai loukkaavaa
+Yksityinen botti on hyväksyttävä, jos opiskelija pystyy osoittamaan sen toiminnan riittävällä tavalla. Tarvittaessa pyydä kuvakaappauksia, videota tai dokumentoitua testiaineistoa.
 
-Keskeytä ja sano: "Nyt tarvitsemme rakentavaa palautetta." Ohjaa: "Voisitko sanoa, mikä siinä voisi olla paremmin sen sijaan, että sanot 'se on huono'?" Ole malli: "Minulle oli selvää, mitä botti tekee. Seuraavalla kerralla voisi näyttää dokumentin lopusta."
+### Palaute on liian kriittistä tai loukkaavaa
+
+Keskeytä tilanne ja ohjaa opiskelijoita rakentavaan palautteeseen. Mallinna parempi muotoilu:
+
+> ”Sen sijaan, että sanomme ’tämä on huono’, sanomme: ’Tässä kohdassa käyttäjä voi jäädä epävarmaksi. Voisit lisätä tarkentavan kysymyksen.’”
 
 ---
 
 ## Dokumentaation säilyttäminen
 
-Kerää ja säilytä testausdokumentit (näytä arvioinnin perusteena), esittelykäsikirjoitukset (näytä seuraavaan osioon), arviointikaavakkeet (näytä luottamusta vertaisarvioitiin) ja reflektiot (näytä oppimisen kehityksestä).
+Kerää ja säilytä seuraavat aineistot arvioinnin tueksi:
 
-Käytä näitä Tekoälyjen käyttö -osion päätösraportissa, johdantona Agentit-osioon (näytä erinomaisia botteja) ja opiskelijoiden portfoliossa.
+- **Testausdokumentit:** näyttävät, miten bottia testattiin ja parannettiin.
+- **Esittelykäsikirjoitukset:** näyttävät, miten opiskelija ymmärtää botin tarkoituksen ja hyödyn.
+- **Vertaisarvioinnit:** näyttävät palautteen antamisen ja vastaanottamisen taitoa.
+- **Reflektiot:** näyttävät oppimisen kehittymistä.
+- **Linkit, kuvakaappaukset tai tallenteet:** auttavat todentamaan botin toimintaa.
+
+Näitä aineistoja voi hyödyntää myös Tekoälyjen käyttö -osion päätösraportissa, opiskelijoiden portfolioissa ja Agentit-osion johdannossa.
 
 ---
 
 ## Silta Agentit-osioon
 
-Kun arvioit oppituntia 18, katsele myös eteenpäin. Pohdi: Kuka tarvitsee enemmän tukea agentin arkkitehtuuriin? Kuka on valmis edistyneempiin aiheisiin? Mitkä botit olivat erityisen hyvät ja voitaisiin näyttää Agentit-osion johdannossa?
+Oppitunti 18 toimii siltana seuraavaan kokonaisuuteen. Projektidokumenttibotti on vielä botti: se keskustelee, kysyy ja kokoaa tietoa. Agentti vie tämän ajatuksen pidemmälle: se voi käyttää työkaluja, hakea tietoa, tehdä toimenpiteitä ja seurata prosessia useassa vaiheessa.
 
-Kirjoita muistiin kolme asiaa: (1) Vahvat opiskelijat — nimet ja mitä he tekivät hyvin. (2) Opiskelijat, jotka tarvitsevat tukea — nimet ja missä autoimme. (3) Botit, jotka voidaan näyttää Agentit-osion alussa — linkit tai kuvaukset.
+Arvioinnin aikana opettajan kannattaa kirjata muistiin:
+
+1. **Vahvat opiskelijat:** ketkä osoittivat erityisen hyvää suunnittelua, testausta tai esittelyä?
+2. **Tukea tarvitsevat opiskelijat:** ketkä tarvitsevat lisää apua agentin arkkitehtuurin ymmärtämiseen?
+3. **Hyvät esimerkkibotit:** mitkä botit voidaan näyttää Agentit-osion alussa esimerkkeinä hyvästä suunnittelusta?
+
+**Opettajan muistutus:** Kun opiskelija ymmärtää, miten botti suunnitellaan, testataan ja esitellään, hänellä on hyvä pohja ymmärtää seuraavaksi agentteja: järjestelmiä, jotka eivät vain vastaa vaan toimivat.
+
+---
+
+## Arviointiesimerkit
+
+### Esimerkki 1: erinomainen suoritus
+
+**Opiskelija A: ”Projektin analysoija -botti”**
+
+| Kriteeri | Pisteet | Perustelu |
+| --- | --- | --- |
+| Botin suunnittelu ja tarkoitus | 4/4 | Tarkoitus on selkeä ja kysymykset tukevat projektisuunnittelua hyvin. |
+| System prompt ja ohjeet | 4/4 | Rooli, toimintatapa ja rajaukset ovat hyvin kirjoitettuja. |
+| Testaus ja iterointi | 4/4 | Kuusi testiä, selkeä dokumentaatio, promptia korjattu ja uudelleentestaus osoittaa parannusta. |
+| Esittely ja viestintä | 3/4 | Esittely onnistui hyvin, mutta oli hieman nopea. |
+| Reflektio ja oppiminen | 4/4 | Syvä reflektio ja hyviä ajatuksia siitä, miten botti voisi kehittyä agentiksi. |
+
+**Yhteensä:** 19/20
+
+---
+
+### Esimerkki 2: tyydyttävä suoritus
+
+**Opiskelija B: ”Yksinkertainen projektibotti”**
+
+| Kriteeri | Pisteet | Perustelu |
+| --- | --- | --- |
+| Botin suunnittelu ja tarkoitus | 2/4 | Perusidea on olemassa, mutta tarkoitus jää osittain yleiseksi. |
+| System prompt ja ohjeet | 2/4 | Prompt toimii, mutta rajaukset eivät ole riittävän eksplisiittisiä. |
+| Testaus ja iterointi | 2/4 | Kolme testiä tehty, mutta korjauksia on vähän ja dokumentointi jää perustasolle. |
+| Esittely ja viestintä | 3/4 | Esittely onnistui ja botti saatiin näytettyä ymmärrettävästi. |
+| Reflektio ja oppiminen | 2/4 | Reflektio on olemassa, mutta se jää melko pinnalliseksi. |
+
+**Yhteensä:** 11/20
+
+**Mahdollinen palaute:** ”Botti toimii perustasolla ja esittely onnistui. Seuraavaksi kannattaa vahvistaa system promptia, lisätä selkeät rajaukset ja testata bottia monipuolisemmin. Reflektiossa voisit kertoa tarkemmin, mitä opit ja miten kehittäisit bottia agentiksi.”
 
 ---
 
 ## Lisäresurssit opettajalle
 
-Arviointikehikko on perustunut Bloom's taksonomian korkeampiin tasoihin (analyze, evaluate, create). Reflektio kannustaa meta-kognitiota (ajattelun pohtimista). Vertaisarviointi kehittää kriittistä ajattelua ja yhteistyötaitoja.
-
-Muista: Tekoälyjen käyttö -osio on pohja. Arvioi sen mukaan, kuinka hyvin opiskelija hallitsee tekoälyn vastuullisen, itsenäisen ja dokumentoidun käytön.
-
----
-
-## Arviointiesimerkki
-
-**Opiskelija A: "Projektin analysaattori-botti"**
-
-- Testaus (18.1): 5/5 — Hyvin testattu (6 testiä), selvästi dokumentoitu, korjasi system promptia heti, näyttö uudelleentestauksesta
-- System prompt (18.2): 4/5 — Selkeä ja kirjoitettu, rooli on selvä, rajaukset ovat pääosin eksplisiitit
-- Esittely (18.3): 4/5 — Selitys on hyvä mutta hieman nopea, livedemo onnistui hyvin, dokumentti näytti ammattilaiselta
-- Reflektio (18.4): 5/5 — Syvä ajattelu, hyviä ideoita agentin ominaisuuksista, kirjoitettu hyvin
-
-**Yhteensä: 18/20 (90 %)**
+- **Bloom’n taksonomia:** arviointi kohdistuu erityisesti analysointiin, arviointiin ja luomiseen.
+- **Metakognitio:** reflektio auttaa opiskelijaa tunnistamaan omaa oppimistaan ja ajattelunsa kehittymistä.
+- **Vertaisarviointi:** kehittää kriittistä ajattelua, palautteen antamista ja yhteistyötaitoja.
+- **Agentit-osioon siirtyminen:** hyvät botit voidaan nostaa esiin esimerkkeinä siitä, miten suunniteltu botti voi kehittyä toimivaksi agentiksi.
 
 ---
 
-## Arviointiesimerkki 2
+## Viimeinen vinkki opettajalle
 
-**Opiskelija B: "Yksinkertainen projekti-botti"**
+Muista, että kyseessä ovat IT-alan ensimmäisen vuoden opiskelijat. Monille opiskelijoille botin rakentaminen, testaaminen, dokumentointi ja esittely ovat jo merkittävä saavutus. Arvioi tarkasti, mutta kannustavasti.
 
-- Testaus (18.1): 3/5 — 3 testiä (minimaalinen), dokumentaatio ok, ei juurikaan korjauksia
-- System prompt (18.2): 3/5 — Olemassa, mutta epäselvä, rajaukset eivät ole eksplisiitit
-- Esittely (18.3): 3/5 — Selitys on ok, livedemo onnistui mutta botti oli hidas, dokumentti on perus-taso
-- Reflektio (18.4): 2/5 — Lyhyt ja pinnallinen, ei juurikaan analyysia
-
-**Yhteensä: 12/20 (60 %) = Tyydyttävä**
-
-Palaute: "Botti toimii, mutta voisit testata perusteellisemmin ja ajatella, miten se voisi kehittyä. Esittely oli hyvä — harjoittelu näkyi. Seuraavalla kerralla panosta siihen enemmän."
+Kannusta niitä, jotka onnistuivat hyvin. Tue niitä, joilla prosessi jäi kesken. Tämän osion tärkein tavoite on, että opiskelija ymmärtää tekoälyn vastuullisen, itsenäisen ja dokumentoidun käytön perustan. Agentit-osiossa nämä taidot syvenevät.
 
 ---
 
-## Viimeinen vinkki
+## Oppitunnin lopetus
 
-Muista, että tämä on IT-alan ensimmäisen vuoden opiskelijoille. Heidän taustaa ei ole ohjelmointia. Se, että he rakensivat botin, testasivat sen ja esittelivät sen, on jo valtavaa. Arvioi sen mukaan.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että onnistunut botti ei ole vain valmis tekninen tuotos. Se on suunniteltu, testattu, parannettu, dokumentoitu ja esitelty. Tämän työn kautta opiskelija osoittaa, että hän osaa käyttää tekoälyä tavoitteellisesti ja vastuullisesti.
 
-Kannusta niitä, jotka tekivät hyvää työtä. Auta niitä, jotka tarvitsevat tukea. Ja muista: tämä on vasta alkua. Agentit-osiossa kaikki syvenee.
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mitä bottisi osaa nyt, ja mitä sen pitäisi vielä osata, jotta siitä voisi tulla agentti?
+
+> **Lopetuslause opettajalle:** Botti vastaa kysymyksiin. Agentti toimii tavoitteellisesti. Tänään viimeistelitte ensimmäisen askeleen kohti sitä ajattelua.
+
+:contentReference[oaicite:0]{index=0}
+
+---

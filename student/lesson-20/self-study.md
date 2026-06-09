@@ -1,101 +1,93 @@
-# Automaatio vai autonomia? — milloin agentti kannattaa
+# Automaatio vai autonomia? — milloin agentti kannattaa?
 
 ## Johdanto
 
-Nyt kun tiedät, mikä agentti on, seuraava kysymys on ilmeinen: milloin sinun pitäisi käyttää agenttia? Vastaus ei ole "aina". Agentti tuo mukanaan monimutkaisuutta, kustannuksia ja riskejä. Tavallinen työnkulku tai jopa yksinkertainen promptaus voivat riittää.
+Nyt kun tiedät, mikä **agentti** on, seuraava kysymys on ilmeinen: milloin agenttia kannattaa käyttää? Vastaus ei ole ”aina”. Agentti tuo mukanaan monimutkaisuutta, kustannuksia ja riskejä. Usein tavallinen **työnkulku** tai jopa yksinkertainen **promptaus** riittää.
 
-Kun oppitunneilla rakennat omaa agenttia n8n:llä, tämän osaaminen auttaa sinua tekemään parempia arkkitehtuuripäätöksiä. Tietäessäsi, milloin agentti todella kannattaa, voit suunnitella projektin järkevästi.
+Kun rakennat oppitunneilla omaa agenttiasi n8n:llä, tämän asian ymmärtäminen auttaa sinua tekemään parempia arkkitehtuuripäätöksiä. Kun tiedät, milloin agentti todella kannattaa, voit suunnitella projektisi järkevämmin.
 
-Kuvittele, että hallinnoit IT-tukiosastoa. Joka päivä tulee 50 tukipyyntöä. Joku ehdottaa: "Tehdään agentti, joka käsittelee nämä automaattisesti!" Kuulostaa hyvältä, kunnes ymmärrät todellisuuden: agentin rakentaminen, testaaminen ja ylläpito kestävät kuukauden ja maksavat 10 000 euroa. Ehkä yksinkertainen työnkulku, joka ohjaa tiketit oikealle henkilölle automaattisesti, antaisi saman hyödyn murto-osalla kustannuksista?
+Kuvittele, että hallinnoit IT-tukiosastoa. Joka päivä tulee 50 tukipyyntöä. Joku ehdottaa: ”Tehdään agentti, joka käsittelee nämä automaattisesti!” Ajatus kuulostaa hyvältä, kunnes huomaat todellisuuden: agentin rakentaminen, testaaminen ja ylläpito kestävät kuukauden ja maksavat 10 000 euroa. Ehkä yksinkertainen työnkulku, joka ohjaa tiketit automaattisesti oikealle henkilölle, antaisi saman hyödyn murto-osalla kustannuksista.
 
-Tässä oppitunnissa opit **päätöspuuta** — järjestelmää, joka auttaa sinua valitsemaan oikean ratkaisun. Milloin promptaus riittää? Milloin tarvitset työnkulun? Milloin agentti todella kannattaa rakentaa?
+Tässä oppitunnissa opit käyttämään **päätöspuuta** eli ajattelumallia, joka auttaa valitsemaan oikean ratkaisun. Milloin promptaus riittää? Milloin tarvitset työnkulun? Milloin agentti todella kannattaa rakentaa?
 
-**Pysähdy hetkeksi:** Ajattele omaa tulevaa työtäsi. Mitä toistuvia, monivaiheisia tehtäviä näet? Mitkä niistä voivat olla työnkulkuja, ja mitkä vaatisivat agentin?
+> **Pysähdy hetkeksi:** Ajattele omaa tulevaa työtäsi. Mitä toistuvia ja monivaiheisia tehtäviä siinä voi olla? Mitkä niistä voisivat toimia työnkulkuina, ja mitkä vaatisivat agentin?
 
 ## Kolmen tason kustannukset ja hyödyt
 
-Automatisoinnissa on kolme perusvälinettä, ja jokainen tuo mukanaan eri kustannukset ja hyödyt. Kun päätät, mitä rakentaa, sinun täytyy ymmärtää, mitä jokainen väline todellisuudessa maksaa ja mitä se antaa.
+Automatisoinnissa on kolme perusvälinettä, ja jokaisella niistä on omat kustannuksensa ja hyötynsä. Kun päätät, mitä rakennat, sinun täytyy ymmärtää, mitä kukin väline käytännössä maksaa ja mitä hyötyä se tuottaa.
 
-Ensimmäinen väline on **yksinkertainen promptaus**. Käyttäjä kirjoittaa ChatGPT:lle kysymyksen, ja se vastaa. Käyttäjä omistaa prosessin alusta loppuun. Kustannus on pieni — pääasiassa käyttäjän aika ja ChatGPT-tilaus. Hyöty? Nopea, helppo, ei ylläpitoa. Rajoitus: käyttäjän täytyy aloittaa prosessi itse. Jos sähköpostiviestit vaativat yhteenvetoja, jonkun täytyy manuaalisesti kopioida ne ChatGPT:hin ja odottaa vastausta.
+Ensimmäinen väline on **yksinkertainen promptaus**. Käyttäjä kirjoittaa esimerkiksi ChatGPT:lle kysymyksen, ja tekoäly vastaa. Käyttäjä omistaa prosessin alusta loppuun. Kustannus on pieni: lähinnä käyttäjän aika ja mahdollinen ChatGPT-tilaus. Hyötynä on nopeus, helppous ja se, ettei ratkaisua tarvitse ylläpitää. Rajoitus on kuitenkin selvä: käyttäjän täytyy aloittaa prosessi itse. Jos sähköpostiviesteistä tarvitaan yhteenvetoja, jonkun täytyy kopioida viestit manuaalisesti ChatGPT:hen ja odottaa vastausta.
 
-Toinen väline on **työnkulku** (workflow). Kun sähköposti saapuu asiakaspalveluun, automaattinen työnkulku tarkistaa, mitä avainsanoja viesti sisältää. Sisältääkö se sanan "lasku"? Ohjaa henkilölle A. Sisältääkö se sanan "palautus"? Ohjaa henkilölle B. Ei sisällä mitään näistä? Jää saapuneisiin. Työnkulku tekee nämä päätökset **joka kerta** ilman ihmisen osallistumista. Kustannuksiltaan se on enemmän kuin promptaus — sinun täytyy suunnitella, kuinka logiikka toimii, testata se ja ylläpitää sitä, kun avainsanat muuttuvat. Mutta hyöty on merkittävä: ihmiset säästävät aikaa päivittäin, ja prosessi on johdonmukainen. Rajoitus: säännöt ovat jäykkiä. Jos uusi tilanne ei sovi etukäteen kirjoitettuihin sääntöihin, työnkulku jumittuu.
+Toinen väline on **työnkulku** eli workflow. Kun sähköposti saapuu asiakaspalveluun, automaattinen työnkulku tarkistaa, mitä avainsanoja viesti sisältää. Sisältääkö se sanan ”lasku”? Viesti ohjataan henkilölle A. Sisältääkö se sanan ”palautus”? Viesti ohjataan henkilölle B. Eikö se sisällä mitään näistä? Viesti jätetään saapuneisiin. Työnkulku tekee nämä päätökset **joka kerta** ilman ihmisen osallistumista. Kustannus on suurempi kuin promptauksessa: sinun täytyy suunnitella logiikka, testata se ja ylläpitää sitä, kun avainsanat tai säännöt muuttuvat. Hyöty on kuitenkin merkittävä: ihmiset säästävät aikaa päivittäin, ja prosessi toimii johdonmukaisesti. Rajoitus on se, että säännöt ovat jäykkiä. Jos uusi tilanne ei sovi etukäteen kirjoitettuihin sääntöihin, työnkulku voi jumittua.
 
-Kolmas väline on **agentti**. Sama asiakaspalvelun agentti lukee sähköpostia, analysoi sen tunnelmaa, etsii vastaavia aiempia tapauksia tietokannasta ja **päättää** — ei seuraa sääntöjä, vaan tekee omaa arviota — onko se tarpeeksi luottavainen lähettääkseen automaattisen vastauksen vai ohjatakseen viestin ihmiselle. Jos asiakas on vihainen, agentti käyttää erilaisempaa sävyä. Jos sama asiakastapaus tulee kahteen kertaan, agentti muistaa ensimmäisestä kerrasta ja käyttää oppimaansa tietoa. Kustannus? Suuri. Kehitys on monimutkaisempaa, koska logiikka on dynaamista. Testaus vie paljon aikaa, koska agentti voi tuottaa odottamattomia tuloksia. Ylläpito on jatkuvaa, koska sinun täytyy valvoa, mitä agentti oppii. Hyöty? Agentti hallitsee monimutkaisia, epätavallisia tapauksia, joita työnkulku ei osaa käsitellä. Rajoitus: korkea hinta tarkoittaa, että sinun täytyy saada merkittävä paluutuotto investoinnillesi.
+Kolmas väline on **agentti**. Asiakaspalvelun agentti voi lukea sähköposteja, analysoida niiden sävyä, etsiä vastaavia aiempia tapauksia tietokannasta ja **päättää**, onko se riittävän varma lähettämään automaattisen vastauksen vai pitäisikö viesti ohjata ihmiselle. Agentti ei siis vain seuraa sääntöjä, vaan tekee tilanteesta oman arvionsa. Jos asiakas on vihainen, agentti voi käyttää tavallista varovaisempaa sävyä. Jos sama asiakastapaus tulee vastaan toisen kerran, agentti voi muistaa aiemman tapauksen ja hyödyntää oppimaansa.
 
-**Pysähdy hetkeksi:** Miksi olet valmis maksamaan enemmän agentin rakentamisesta? Mitä etua se antaa, jota ei voi saavuttaa pelkällä työnkululla?
+Agentin kustannus on suuri. Kehittäminen on monimutkaisempaa, koska logiikka on dynaamista. Testaus vie paljon aikaa, koska agentti voi tuottaa odottamattomia tuloksia. Ylläpito on jatkuvaa, koska sinun täytyy valvoa, mitä agentti tekee ja millaisia päätöksiä se tekee. Agentin hyöty on siinä, että se pystyy käsittelemään monimutkaisia ja poikkeavia tapauksia, joita työnkulku ei osaa ratkaista. Rajoitus on korkea hinta: agentista täytyy saada merkittävä hyöty suhteessa siihen, mitä sen rakentaminen ja ylläpito maksavat.
 
-## Kuusi kysymystä päätösten tekemiseen
+> **Pysähdy hetkeksi:** Miksi olisit valmis maksamaan enemmän agentin rakentamisesta? Mitä sellaista etua agentti antaa, jota ei voi saavuttaa pelkällä työnkululla?
 
-Kun tarkastelet automatisoitavaa tehtävää, kysy nämä kuusi kysymystä **järjestyksessä**. Ne auttavat sinua navigoimaan päätösvälineiden joukossa.
+## Kuusi kysymystä päätöksenteon tueksi
 
-**Ensimmäinen kysymys: Toistuuko tehtävä?** Jos tehtävä on kertaluontoinen — teet sitä vain kerran tai hyvin harvoin — älä automatisoi lainkaan. Tekemisen aikaa säästät pienemmän määrän kuin automatisoinnin rakentamiseen kuluva aika. Mutta jos tehtävä toistuu joka päivä, joka tunti tai jopa sekunneissa, automatisointi alkaa kannattaa. Jopa yksinkertainen työnkulku voi säästää merkittävästi aikaa, kun sitä sovelletaan tuhansia kertoja vuodessa.
+Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **järjestyksessä**. Ne auttavat sinua valitsemaan oikean välineen.
 
-**Toinen kysymys: Onko tehtävä yksinkertainen vai monimutkainen?** Yksinkertaiset tehtävät — yksi tai kaksi vaihetta, selkeät säännöt, jotka eivät vaadi päättelyä — ratkeavat työnkululla. Esimerkiksi "Kun laskua ei ole vastaanotettu, siirrä se kansioon 'odottaa'" on niin suoraviivainen, että työnkulku on riittävä. Mutta monimutkaisten tehtävien kanssa asiaa on toisin. Jos tehtävä sisältää useita vaiheita, ehdollisia päätöksiä, oppimista ja mukautumista, työnkulun jäykät säännöt alkavat riittämättömiksi. Tämä on merkki siitä, että harkinta eli päättely — agentin sydän — voisi olla arvokas.
+**Ensimmäinen kysymys: Toistuuko tehtävä?** Jos tehtävä on kertaluontoinen tai sitä tehdään hyvin harvoin, sitä ei yleensä kannata automatisoida. Automatisoinnin rakentamiseen kuluu todennäköisesti enemmän aikaa kuin itse tehtävän tekemiseen. Jos tehtävä taas toistuu joka päivä, joka tunti tai jopa useita kertoja minuutissa, automatisointi alkaa kannattaa. Jopa yksinkertainen työnkulku voi säästää merkittävästi aikaa, kun sitä käytetään tuhansia kertoja vuodessa.
 
-**Kolmas kysymys: Ovatko säännöt staattisia vai muuttuvia?** Staattisissa säännöissä — "joka kerta teemme täsmälleen saman" — työnkulku on täysin riittävä. Jokainen tapaus käsitellään identtisesti, ja uusia poikkeamia ei ilmene. Mutta muuttuvissa säännöissä — "jokainen asiakas on eri, opimme uusia malleja, tilanteet muuttuvat" — agentti on parempi valinta. Agentti voi oppia uusista malleista ja soveltaa oppimaansa seuraaviin tilanteisiin. Työnkulku ei voi tehdä sitä. Se tekee aina samaa, riippumatta siitä, mitä se on aiemmin nähnyt.
+**Toinen kysymys: Onko tehtävä yksinkertainen vai monimutkainen?** Yksinkertaiset tehtävät, joissa on yksi tai kaksi vaihetta ja selkeät säännöt, ratkeavat usein työnkululla. Esimerkiksi ohje ”kun laskua ei ole vastaanotettu, siirrä asia kansioon Odottaa” on niin suoraviivainen, että työnkulku riittää. Monimutkaisissa tehtävissä tilanne on toinen. Jos tehtävä sisältää useita vaiheita, ehdollisia päätöksiä, oppimista ja mukautumista, työnkulun jäykät säännöt eivät välttämättä enää riitä. Tämä on merkki siitä, että **päättely** eli agentin keskeinen ominaisuus voisi tuoda lisäarvoa.
 
-**Neljäs kysymys: Kuka maksaa hinnan?** Jos käyttäjä maksaa pienen summan, kuten ChatGPT-tilauksen, on helppo aloittaa ja riski on pieni. Mutta jos organisaatio maksaa tuhansia tai kymmeniä tuhansia euroja agentin rakentamisesta, päätös on paljon suurempi. Se vaatii merkittävää perustelua ja varmuutta siitä, että paluutuotto todella saavutetaan.
+**Kolmas kysymys: Ovatko säännöt staattisia vai muuttuvia?** Jos säännöt ovat staattisia eli sama asia tehdään joka kerta täsmälleen samalla tavalla, työnkulku on yleensä täysin riittävä. Jokainen tapaus käsitellään samalla tavalla, eikä uusia poikkeamia juuri ilmene. Jos säännöt ovat muuttuvia, agentti voi olla parempi valinta. Muuttuvissa tilanteissa jokainen asiakas voi olla erilainen, uusia toimintamalleja syntyy ja tilanteet muuttuvat. Agentti voi hyödyntää aiempia havaintoja ja soveltaa oppimaansa seuraaviin tilanteisiin. Työnkulku ei voi tehdä tätä, vaan se toimii aina ennalta kirjoitettujen sääntöjen mukaan.
 
-**Viides kysymys: Mitkä ovat epäonnistumisen kustannukset?** Jos agentti tekee virheen ja mitään vakavaa ei tapahdu — esimerkiksi sähköposti menee väärään kansioon, mutta ihminen näkee sen ja korjaa — riskin voi ottaa. Mutta jos kustannukset ovat suuret — raha menetetään, asiakkaita menetetään, ihminen loukkaantuu — agentin täytyy valvoa hyvin huolellisesti. Ja valvonta nostaa ylläpitokustannuksia merkittävästi. Joissain tapauksissa korkeat epäonnistumisen kustannukset tekevät agentin rakentamisen kannattamattomaksi.
+**Neljäs kysymys: Kuka maksaa hinnan?** Jos käyttäjä maksaa pienen summan, kuten tekoälypalvelun tilauksen, kokeileminen on helppoa ja riski on pieni. Jos taas organisaatio maksaa tuhansia tai kymmeniä tuhansia euroja agentin rakentamisesta, päätös on paljon suurempi. Silloin tarvitaan vahvat perusteet ja realistinen arvio siitä, että investointi maksaa itsensä takaisin.
 
-**Kuudes kysymys: Onko ihmisen valvonta mahdollista?** Jos ihminen voi valvoa agentin päätöksiä ja puuttua siihen, kun se menee pieleen, riski on hallittavissa. Agentti voi pyytää ihmisen apua vaikeissa tilanteissa, mikä tekee riskien hallinnasta mahdollista. Mutta jos valvonta on mahdotonta — ehkä agentti tekee päätöksiä niin nopeasti, ettei ihmisellä ole aikaa reagoida — agentin täytyy olla lähes täydellinen. Se on harvinaisen kallista rakentaa.
+**Viides kysymys: Mitkä ovat epäonnistumisen kustannukset?** Jos agentti tekee virheen eikä mitään vakavaa tapahdu, riski voi olla hyväksyttävä. Esimerkiksi sähköposti voi mennä väärään kansioon, mutta ihminen huomaa sen ja korjaa virheen. Jos epäonnistumisen seuraukset ovat suuret, tilanne muuttuu. Rahaa voidaan menettää, asiakkaita voidaan menettää tai ihminen voi joutua vaaraan. Tällöin agenttia täytyy valvoa hyvin huolellisesti, ja valvonta nostaa ylläpitokustannuksia merkittävästi. Joissain tapauksissa korkeat epäonnistumisen kustannukset tekevät agentin rakentamisesta kannattamatonta.
+
+**Kuudes kysymys: Onko ihmisen valvonta mahdollista?** Jos ihminen voi valvoa agentin päätöksiä ja puuttua toimintaan, kun jokin menee pieleen, riski on hallittavampi. Agentti voi pyytää ihmisen apua vaikeissa tilanteissa, jolloin riskien hallinta on mahdollista. Jos valvonta on mahdotonta, agentin täytyy toimia lähes täydellisesti. Tämä on harvinaisen kallista rakentaa ja ylläpitää.
 
 ## Käytännön päätöspuu kolmessa tarinassa
 
-Katsotaan kolmea todellista tilannetta ja sitä, mitä kuusi kysymystä neuvovat.
+Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.
 
-**Tilanne yksi: Laskujen käsittely.** Yritys käsittelee 100 laskua päivässä. Lasku saapuu, sen summa täytyy vahvistaa ja kirjata järjestelmään. Säännöt muuttuvat jonkin verran — uusia laskuttajia tulee, hinnat muuttuvat — mutta prosessi pysyy samana. Entä epäonnistumisen hinta? Se on korkea. Väärä summa tarkoittaa, että organisaatio menettää rahaa. Mutta onneksi ihmisen valvonta on mahdollista — jonakin päivänä valvoja tarkistaa, että laskut käsiteltiin oikein. Vastaukseksi näille kuudelle kysymykselle tulee: tehtävä toistuu (kyllä), on monimutkainen (kyllä), säännöt hieman muuttuvia (kyllä), kustannukset organisaatiotasolla (kyllä), epäonnistumisen hinta korkea (kyllä), valvonta mahdollista (kyllä). Paras ratkaisu? **Työnkulku yhdessä ihmisen valvonnan kanssa**. Agentti olisi ylimitoitettu, ellei laskumäärä nouse radikaalisti.
+**Tilanne 1: Laskujen käsittely.** Yritys käsittelee 100 laskua päivässä. Lasku saapuu, sen summa täytyy vahvistaa ja tiedot pitää kirjata järjestelmään. Säännöt muuttuvat jonkin verran: uusia laskuttajia tulee ja hinnat muuttuvat, mutta perusprosessi pysyy samana. Epäonnistumisen hinta on korkea, koska väärä summa voi aiheuttaa organisaatiolle taloudellista vahinkoa. Ihmisen valvonta on kuitenkin mahdollista: valvoja voi tarkistaa, että laskut on käsitelty oikein.
 
-**Tilanne kaksi: Sähköpostien lajittelu.** Sähköposteja tulee satoja päivässä, mutta tehtävä on yksinkertainen — kategoriointi sisältöjen perusteella. Hakusanat pysyvät samana vuodesta toiseen. Epäonnistumisen hinta? Matala. Jos sähköposti menee väärään kansioon, käyttäjä näkee sen ja siirtää sen itse — ei kriisi. Valvontaa ei tarvita. Vastaukseksi: tehtävä toistuu (kyllä), yksinkertainen (kyllä), säännöt staattisia (kyllä), kustannukset pienet (kyllä), epäonnistumisen hinta matala (kyllä), valvonta ei kriittinen (ei). Paras ratkaisu? **Yksinkertainen työnkulku**. Agentti olisi täysin ylimitoitettu ja turhan kallis.
+Kuuden kysymyksen perusteella tehtävä toistuu, on melko monimutkainen, sisältää jonkin verran muuttuvia sääntöjä, aiheuttaa organisaatiotason kustannuksia, sisältää korkean epäonnistumisen hinnan ja mahdollistaa ihmisen valvonnan. Paras ratkaisu on **työnkulku yhdessä ihmisen valvonnan kanssa**. Agentti olisi todennäköisesti ylimitoitettu, ellei laskumäärä kasva huomattavasti tai tapausten monimutkaisuus lisäänny merkittävästi.
 
-**Tilanne kolme: Teknisen tuen tikettien reitittäminen.** Yritys saa yli 50 tukipyyntöä päivässä. Reititykseen vaikuttavat monet tekijät — tiketin prioriteetti, tekijän osaaminen, kiireellisyys ja asiakassuhteen arvo. Säännöt muuttuvat jatkuvasti, koska tekijät, tuetut ohjelmointikielet ja prioriteetit muuttuvat. Epäonnistumisen hinta on keskikorkea — väärä tekijä aiheuttaa asiakastyytyväisyyden heikkenemistä. Valvonta on mahdollista — supervisori tarkistaa päätökset. Vastaukseksi: tehtävä toistuu (kyllä), monimutkainen (kyllä), säännöt muuttuvia (kyllä), kustannukset merkittävät (kyllä), epäonnistumisen hinta keskikorkea (kyllä), valvonta mahdollista (kyllä). Paras ratkaisu? **Aloita työnkululla, valmistaudu agenttiin.** Jos yritys kasvaa ja tiketit monimutkaistuvat, voit siirtyä agenttiin, mutta älä aloita siellä.
+**Tilanne 2: Sähköpostien lajittelu.** Sähköposteja tulee satoja päivässä, mutta tehtävä on yksinkertainen: viestit luokitellaan sisällön perusteella. Hakusanat pysyvät samoina vuodesta toiseen. Epäonnistumisen hinta on matala. Jos sähköposti menee väärään kansioon, käyttäjä huomaa sen ja siirtää sen itse. Tilanne ei aiheuta kriisiä, eikä jatkuvaa valvontaa tarvita.
 
-**Pysähdy hetkeksi:** Käy läpi nämä kolme tilannetta ja ajattele omaa hypoteettista tehtävää. Mitä kuusi kysymystä vastaavat?
+Kuuden kysymyksen perusteella tehtävä toistuu, on yksinkertainen, perustuu staattisiin sääntöihin, aiheuttaa pienet kustannukset, sisältää matalan epäonnistumisen hinnan eikä vaadi kriittistä valvontaa. Paras ratkaisu on **yksinkertainen työnkulku**. Agentti olisi tähän tehtävään täysin ylimitoitettu ja turhan kallis.
+
+**Tilanne 3: Teknisen tuen tikettien reitittäminen.** Yritys saa yli 50 tukipyyntöä päivässä. Reititykseen vaikuttavat monet tekijät, kuten tiketin prioriteetti, työntekijöiden osaaminen, asian kiireellisyys ja asiakassuhteen arvo. Säännöt muuttuvat jatkuvasti, koska työntekijät, tuetut ohjelmointikielet ja prioriteetit muuttuvat. Epäonnistumisen hinta on keskikorkea: väärä reititys voi heikentää asiakastyytyväisyyttä. Valvonta on mahdollista, koska esihenkilö voi tarkistaa päätöksiä.
+
+Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää muuttuvia sääntöjä, aiheuttaa merkittäviä kustannuksia, sisältää keskikorkean epäonnistumisen hinnan ja mahdollistaa valvonnan. Paras ratkaisu on **aloittaa työnkululla ja valmistautua agenttiin**. Jos yritys kasvaa ja tiketit monimutkaistuvat, agenttiin voidaan siirtyä myöhemmin. Aluksi ei kuitenkaan kannata rakentaa liian raskasta ratkaisua.
+
+> **Pysähdy hetkeksi:** Käy läpi nämä kolme tilannetta ja ajattele omaa mahdollista tehtävääsi. Mitä kuusi kysymystä vastaavat sen kohdalla?
 
 ## Monimutkaisuus on aina kustannus
 
-Tässä on kriittinen ajatus, jonka monet unohtavat: agentti on monimutkainen. Se ei ole vain "parempi työnkulku". Se on erilainen **luonteeltaan**, ei pelkästään mittakaavassaan.
+Tässä on tärkeä ajatus, jonka monet unohtavat: agentti on monimutkainen. Se ei ole vain ”parempi työnkulku”. Se on luonteeltaan erilainen ratkaisu, ei pelkästään suurempi tai tehokkaampi versio työnkulusta.
 
-Työnkulun kehitysaika on tunneissa tai päivissä. Agentin kehitysaika on viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa tekijä, joka ymmärtää säännöt. Agenttia testataan laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii jatkuvaa oppimisen valvontaa — jos agentti oppii virheistä, sinun täytyy seurata, mitä se on oppinut ja ovatko opittavat asiat halutunlaisia. Jos agentti alkaa tehdä systemaattisesti virheellisiä johtopäätöksiä, sinun täytyy puuttua siihen ja muuttaa sen ohjeistusta.
+Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysaika mitataan usein viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa yleensä tekijä, joka ymmärtää säännöt. Agenttia täytyy testata laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii myös jatkuvaa valvontaa. Jos agentti oppii virheistä, sinun täytyy seurata, mitä se on oppinut ja ovatko opitut asiat oikeanlaisia. Jos agentti alkaa tehdä systemaattisesti virheellisiä johtopäätöksiä, sinun täytyy puuttua sen toimintaan ja muuttaa sen ohjeistusta.
 
-Eli: miksi rakennat agentin? Vastaus on yksinkertainen matemaattinen vertailu. Jos työnkulku ratkaisee ongelmasi 80 prosentissa tapauksista ja agentti ratkaisee sen 85 prosentissa tapauksista, oletko valmis maksamaan 10 kertaa suuremmat kehitys- ja ylläpitokustannukset tuosta 5 prosentin parannuksesta? Harvat ovat. Mutta jos työnkulku ratkaisee vain 40 prosenttia tapauksista ja agentti 95 prosenttia tapauksista, silloin hyöty on selvästi suurempi kuin kustannukset. Tällöin agentti kannattaa rakentaa.
+Kysy siis aina: miksi rakennan agentin? Vastaus perustuu kustannusten ja hyötyjen vertailuun. Jos työnkulku ratkaisee ongelmasi 80 prosentissa tapauksista ja agentti ratkaisee sen 85 prosentissa tapauksista, oletko valmis maksamaan 10 kertaa suuremmat kehitys- ja ylläpitokustannukset viiden prosenttiyksikön parannuksesta? Usein vastaus on ei. Jos työnkulku ratkaisee vain 40 prosenttia tapauksista ja agentti 95 prosenttia tapauksista, hyöty voi olla selvästi kustannuksia suurempi. Silloin agentti voi olla järkevä ratkaisu.
 
 ## Miltä nämä päätökset näyttävät n8n:ssä?
 
-Kun rakennat agenttia n8n:ssä, päätökset, joita tässä opettelit, muuttuvat konkreettisiksi valinnoiksi n8n:n visuaalisessa editorissa.
+Kun rakennat ratkaisua n8n:ssä, tässä oppitunnissa käsitellyt päätökset muuttuvat konkreettisiksi valinnoiksi n8n:n visuaalisessa editorissa.
 
-**Yksinkertainen promptaus** n8n:ssä: yksi "AI Agent" -solmu, joka saa viestin ja vastaa. Ei muita solmuja. Tämä riittää, kun tehtävä on yksinkertainen.
+**Yksinkertainen promptaus n8n:ssä:** yksi AI Agent -solmu saa viestin ja vastaa siihen. Muita solmuja ei tarvita. Tämä riittää, kun tehtävä on yksinkertainen.
 
-**Työnkulku** n8n:ssä: sarja solmuja, jotka seuraavat toisiaan. Esimerkiksi: "Email Trigger" → "IF-solmu" (tarkistaa avainsanan) → "Slack-solmu" (lähettää viestin oikealle kanavalle). Logiikka on kiinteä: sama syöte tuottaa aina saman tuloksen.
+**Työnkulku n8n:ssä:** sarja solmuja seuraa toisiaan. Esimerkiksi: Email Trigger → IF-solmu, joka tarkistaa avainsanan → Slack-solmu, joka lähettää viestin oikealle kanavalle. Logiikka on kiinteä: sama syöte tuottaa aina saman tuloksen.
 
-**Agentti** n8n:ssä: "AI Agent" -solmu, jolla on pääsy **työkaluihin** (tietokanta, verkkohaku, tiedostot). Agentti päättää itse, mitä työkalua käyttää. Tämä on monimutkaisempaa, mutta joustavampaa.
+**Agentti n8n:ssä:** AI Agent -solmulla on pääsy **työkaluihin**, kuten tietokantaan, verkkohakuun tai tiedostoihin. Agentti päättää itse, mitä työkalua se käyttää. Tämä on monimutkaisempaa mutta joustavampaa.
 
-```mermaid
-graph LR
-    subgraph "Promptaus"
-        A1["💬 Viesti"] --> A2["🤖 AI Agent"]
-    end
-
-    subgraph "Työnkulku"
-        B1["📧 Email Trigger"] --> B2["❓ IF: avainsana?"]
-        B2 -->|"lasku"| B3["👤 Henkilö A"]
-        B2 -->|"palautus"| B4["👤 Henkilö B"]
-    end
-
-    subgraph "Agentti"
-        C1["📧 Email Trigger"] --> C2["🤖 AI Agent"]
-        C2 --> C3["🔍 Haku"]
-        C2 --> C4["📊 Tietokanta"]
-        C2 --> C5["💬 Vastaus"]
-    end
-```
-
-Tämä esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja avaat n8n:n, tiedät jo, **mitä olet rakentamassa ja miksi**. Päätös promptaus vs. työnkulku vs. agentti on arkkitehtuuripäätös, ei työkalupäätös.
+Tämän esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja avaat n8n:n, tiedät jo, **mitä olet rakentamassa ja miksi**. Päätös promptauksen, työnkulun ja agentin välillä on **arkkitehtuuripäätös**, ei pelkkä työkalupäätös.
 
 ## Kohti omaa projektia
 
-Kun valitsit oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko se tarpeeksi monimutkainen ja muuttuvatko säännöt tilanteen mukaan? Jos päätöspuu osoittaa, että yksinkertaisempi ratkaisu riittäisi, harkitse ongelman tarkentamista sellaiseksi, jossa agentin autonomisuus tuottaa aidosti lisäarvoa.
+Kun olet valinnut oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko se riittävän monimutkainen ja muuttuvatko säännöt tilanteen mukaan? Jos päätöspuu osoittaa, että yksinkertaisempi ratkaisu riittäisi, harkitse ongelman tarkentamista sellaiseksi, jossa agentin autonomisuus tuottaa aidosti lisäarvoa.
 
 ## Yhteenveto
 
-Automatisointi on spektri, ei kaksijako. Älä hyppää agentin puoleen automaattisesti. Kysy ensin nämä kuusi kysymystä: Toistuuko? Monimutkainen? Muuttuvatko säännöt? Kuka maksaa? Mitkä ovat epäonnistumisen kustannukset? Onko valvonta mahdollista? Päätöspuu ohjaa sinut oikeaan välineeseen. Yksinkertainen työnkulku ratkaisee usein enemmän kuin agentti kymmenesosalla kustannuksista. Valitse aina yksinkertaisin ratkaisu, joka todella toimii.
+Automatisointi on jatkumo, ei joko–tai-valinta. Älä valitse agenttia automaattisesti. Kysy ensin nämä kuusi kysymystä: **Toistuuko tehtävä?** **Onko tehtävä monimutkainen?** **Muuttuvatko säännöt?** **Kuka maksaa?** **Mitkä ovat epäonnistumisen kustannukset?** **Onko valvonta mahdollista?**
+
+Päätöspuu ohjaa sinut oikean välineen luo. Yksinkertainen työnkulku ratkaisee usein ongelman riittävän hyvin ja paljon pienemmillä kustannuksilla kuin agentti. Valitse aina yksinkertaisin ratkaisu, joka todella toimii.
+
+---

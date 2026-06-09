@@ -1,134 +1,232 @@
-# Opettajavetoiset tehtävät
+# Opettajavetoiset tehtävät: tekoälytyökalujen vertailu
 
 ## Tehtävä 10.1: Koko luokan työkalusafari — livetestaus
 
 ### Tavoite
-Näyttää opiskelijoille konkreettisesti, että eri AI-työkalut antavat eri tuloksia samalle kehotukselle, ja oppia valitsemaan oikea työkalu kontekstin perusteella.
+
+Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, että eri **tekoälytyökalut** voivat antaa eri tuloksia samalle kehotukselle. Opiskelijat oppivat, että työkalun valinta perustuu **kontekstiin**, tehtävän tavoitteeseen ja käytännön rajoituksiin.
+
+**Opettajan painotus:** Korosta, että tarkoitus ei ole valita yhtä “parasta” tekoälytyökalua. Ammattilainen arvioi, mikä työkalu sopii parhaiten juuri kyseiseen tehtävään.
 
 ### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu (ennen lähiosaa):**
-- Valmistele pääsy kolmeen eri kielimalliin: ChatGPT, Claude ja Microsoft Copilot.
-- Valitse yksinkertainen ja konkreettinen tehtävä: "Kirjoita lyhyt Python-funktio, joka validoi sähköpostiosoitteen."
-- Tai: "Selitä, kuinka verkkoselain lataa verkkosivun — 5–8 lausetta."
+**Kesto:** noin 30 minuuttia
 
-**Tehtävän vaiheet (30 min):**
+#### Valmistelu ennen lähiosaa
 
-1. **Johdanto (2 min):**
-   - "Nyt teemme kokeen. Annan kaikille **täsmälleen saman kehotuksen** kolmeen eri työkaluun. Katsomme, mitä tapahtuu."
+- Varmista pääsy kolmeen eri kielimalliin, esimerkiksi **ChatGPT:hen**, **Claudeen** ja **Microsoft Copilotiin**.
+- Valitse yksinkertainen ja konkreettinen testitehtävä.
+- Varmista, että vastaukset voidaan näyttää opiskelijoille projektorilla.
 
-2. **Ensimmäinen testi ChatGPT:n kanssa (8 min):**
-   - Avaa ChatGPT projektorilla.
-   - Kirjoita kehotus: "Kirjoita Python-funktio, joka validoi sähköpostiosoitteen. Funktion pitää palauttaa True tai False."
-   - Anna vastauksen ilmestyä näytölle.
-   - Kysy: "Mitä näet? Onko koodi selkeä? Millaisia valintoja malli teki?"
+**Esimerkkikehote:**
 
-3. **Toinen testi Clauden kanssa (8 min):**
-   - Avaa Claude samalla kehotuksella.
-   - Vertaa ChatGPT:n vastaukseen.
-   - Kysy: "Mikä oli eri? Oliko Clauden vastaus pidempi vai lyhyempi? Oliko koodi sama vai erilainen?"
+Kirjoita Python-funktio, joka validoi sähköpostiosoitteen. Funktion pitää palauttaa `True` tai `False`.
 
-4. **Kolmas testi Copilotin kanssa (8 min):**
-   - Avaa Copilot samalla kehotuksella.
-   - Vertaa kahteen edelliseen.
-   - Kysy: "Nyt kolmas versio. Ovatko ne erilaisia vai samankaltaisia?"
+Vaihtoehtoinen kehote:
 
-5. **Yhteenveto ja johtopäätös (4 min):**
-   - Kirjoita taululle havainnot:
-     - ChatGPT: [yleiset ominaisuudet]
-     - Claude: [yleiset ominaisuudet]
-     - Copilot: [yleiset ominaisuudet]
-   - Kysy: "Näette, että ne ovat erilaisia. Ammattilaisena — kumpi on paras?"
-   - Vastaus: "Riippuu kontekstista. Mitä sinulla on? Mitä haluat? Mitä rajoituksia sinulla on?"
+Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
+
+#### Tehtävän vaiheet
+
+1. **Johdanto noin 2 minuuttia**
+
+   > Nyt teemme kokeen. Annan täsmälleen saman kehotuksen kolmeen eri tekoälytyökaluun. Katsomme, millaisia eroja vastauksissa syntyy ja mistä erot voivat johtua.
+2. **Ensimmäinen testi: ChatGPT noin 8 minuuttia**
+
+   1. Avaa ChatGPT projektorilla.
+   2. Kirjoita valittu kehote.
+   3. Anna vastauksen ilmestyä näytölle.
+   4. Kysy opiskelijoilta:
+      - Onko vastaus selkeä?
+      - Millaisia valintoja malli teki?
+      - Onko koodi tai selitys käyttökelpoinen sellaisenaan?
+      - Mitä pitäisi vielä tarkistaa?
+3. **Toinen testi: Claude noin 8 minuuttia**
+
+   1. Avaa Claude samalla kehotuksella.
+   2. Vertaa vastausta ChatGPT:n vastaukseen.
+   3. Kysy opiskelijoilta:
+      - Mikä oli erilaista?
+      - Oliko vastaus pidempi vai lyhyempi?
+      - Oliko rakenne selkeämpi vai epäselvempi?
+      - Tekikö malli samoja oletuksia kuin ensimmäinen työkalu?
+4. **Kolmas testi: Microsoft Copilot noin 8 minuuttia**
+
+   1. Avaa Copilot samalla kehotuksella.
+   2. Vertaa vastausta kahteen edelliseen.
+   3. Kysy opiskelijoilta:
+      - Oliko kolmas vastaus samankaltainen vai selvästi erilainen?
+      - Mikä vastaus oli käytännöllisin?
+      - Mikä vastaus vaatisi eniten tarkistamista?
+5. **Yhteenveto ja johtopäätös noin 4 minuuttia**
+
+   Kirjoita taululle yhteiset havainnot:
+
+   - **ChatGPT:** [opiskelijoiden havainnot]
+   - **Claude:** [opiskelijoiden havainnot]
+   - **Copilot:** [opiskelijoiden havainnot]
+
+   Kysy lopuksi: **Mikä työkalu oli paras?**
+
+   Ohjaa opiskelijat johtopäätökseen: paras työkalu riippuu tehtävästä, aineistosta, tavoitteesta ja rajoituksista.
+
+**Opettajan tarkistuskysymys:** Jos opiskelijat valitsevat työkalun vain siksi, että se tuntui tutulta, kysy: “Mikä vastaus oli paras juuri tähän tehtävään ja miksi?”
 
 ### Odotettu oppimistulos
-- Opiskelijat näkevät elävässä esityksessä, että työkalut eroavat
-- Opiskelijat ymmärtävät, että valinta on kontekstipohjainen, ei "aina ChatGPT"
-- Opiskelijat ovat valmiita testaamaan itse omia projektejaan
+
+- Opiskelijat näkevät, että eri tekoälytyökalut voivat antaa eri vastauksia samalle kehotukselle.
+- Opiskelijat ymmärtävät, että työkalun valinta on **kontekstipohjainen** päätös.
+- Opiskelijat osaavat vertailla tekoälytyökalujen vastauksia laadun, selkeyden ja käyttötarkoituksen perusteella.
 
 ---
 
 ## Tehtävä 10.2: Kolmen päätyökalun vertailu — pienryhmät
 
 ### Tavoite
-Oppia testaamaan samaa tehtävää kaikilla kolmella päätyökalulla ja dokumentoimaan eroavaisuuksia.
+
+Tehtävän tavoitteena on opettaa opiskelijoille, miten samaa tehtävää voidaan testata eri tekoälytyökaluilla ja miten tuloksia dokumentoidaan vertailukelpoisesti.
+
+**Opettajan painotus:** Korosta dokumentointia. Ammattilainen ei vain kokeile työkaluja, vaan kirjaa havainnot ja perustelee valintansa.
 
 ### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu:**
-- Varmista pääsy ChatGPT:hen, Claude:hen ja Microsoft Copilotiin.
-- Valitse kolme tehtävää, joita opiskelijat käyttävät:
-  1. "Kirjoita 200 sanan blogi-artikkeli tekoälyn tulevaisuudesta"
-  2. "Analysoi seuraava CSV-data ja tee kolme johtopäätöstä: [yksinkertainen datasarja]"
-  3. Opiskelijoiden omat tehtävät
+**Kesto:** noin 25 minuuttia
 
-**Tehtävän vaiheet (25 min):**
+#### Valmistelu
 
-1. **Ryhmien muodostus (2 min):** Jaa opiskelijat ryhmiin (2–3 henkilöä per ryhmä). Kukin ryhmä testaa kaikkia kolmea työkalua samalla tehtävällä.
+- Varmista pääsy ChatGPT:hen, Claudeen ja Microsoft Copilotiin.
+- Valitse kolme tehtävää, joista ryhmät voivat valita yhden.
 
-2. **Testaaminen ja dokumentointi (10 min):**
-   - Ryhmät ajaavat saman tehtävän ChatGPT:ssä, Claude:ssa ja Copilotissa.
-   - He dokumentoivat:
-     - Kuinka kauan se kesti?
-     - Kuinka tarkka vastaus oli?
-     - Mitkä olivat eroavaisuudet?
+**Tehtävävaihtoehdot:**
 
-3. **Vertailu (8 min):**
-   - Näytä vastaukset luokalle rinnakkain (kaikista kolmesta työkalusta).
-   - Kysy: "Mitä eroja näette? Kumpi vastaus oli parempi omaan silmään? Kumpi oli yksityiskohtaisin?"
+1. Kirjoita noin 200 sanan blogiartikkeli tekoälyn tulevaisuudesta.
+2. Analysoi seuraava yksinkertainen CSV-data ja tee kolme johtopäätöstä.
+3. Käytä opiskelijaryhmän omaa tehtävää tai projektiaihetta.
 
-4. **Johtopäätösten teko (3 min):**
-   - Kysy: "Missä tilanteessa valitsisit juuri tämän työkalun? Miksi?"
-   - Selitä: "Ammattilaisena et valitse 'parasta' — valitset sopivin omaan tarkoitukseesi."
+#### Tehtävän vaiheet
 
-5. **Raportointi (2 min):**
-   - Jokainen ryhmä kertoo yhdessä lauseessa, miksi valitsisivat yhden näistä kolmesta päätyökalusta omaan projektiin.
+1. **Ryhmien muodostaminen noin 2 minuuttia**
+
+   Jaa opiskelijat 2–3 henkilön ryhmiin. Jokainen ryhmä testaa samaa tehtävää kaikilla kolmella työkalulla.
+2. **Testaaminen ja dokumentointi noin 10 minuuttia**
+
+   Ryhmät suorittavat saman tehtävän ChatGPT:llä, Claudella ja Copilotilla.
+
+   Ryhmät dokumentoivat:
+
+   - kuinka kauan vastauksen saaminen kesti,
+   - kuinka tarkka vastaus oli,
+   - mitkä olivat tärkeimmät erot,
+   - mikä vastaus oli käyttökelpoisin,
+   - mitä vastausta pitäisi vielä tarkistaa.
+
+#### Dokumentointipohja
+
+| Työkalu | Vastauksen vahvuudet | Vastauksen heikkoudet | Mihin tehtävään tämä sopisi? |
+| --- | --- | --- | --- |
+| **ChatGPT** |  |  |  |
+| **Claude** |  |  |  |
+| **Microsoft Copilot** |  |  |  |
+
+3. **Vertailu noin 8 minuuttia**
+
+   Näyttäkää muutaman ryhmän vastaukset luokalle rinnakkain.
+
+   Kysy opiskelijoilta:
+
+   - Mitä eroja näette?
+   - Mikä vastaus oli selkein?
+   - Mikä oli yksityiskohtaisin?
+   - Mikä vastaus sopi parhaiten tehtävän tavoitteeseen?
+4. **Johtopäätösten tekeminen noin 3 minuuttia**
+
+   Kysy: **Missä tilanteessa valitsisit juuri tämän työkalun? Miksi?**
+
+   Korosta: ammattilainen ei valitse “parasta” työkalua yleisesti, vaan **sopivimman työkalun omaan tarkoitukseensa**.
+5. **Raportointi noin 2 minuuttia**
+
+   Jokainen ryhmä kertoo yhdellä lauseella, minkä työkalun se valitsisi omaan projektiinsa ja miksi.
 
 ### Odotettu oppimistulos
-- Opiskelijat näkevät konkreettisesti, miten kolme päätyökalua eroavat samalla kehotuksella
-- Opiskelijat ymmärtävät, että valinta perustuu kontekstiin, ei suosioon
-- Opiskelijat osaavat dokumentoida ja vertailla tuloksia
+
+- Opiskelijat näkevät, miten kolme päätyökalua eroavat samalla kehotuksella.
+- Opiskelijat ymmärtävät, että valinta perustuu tehtävään ja kontekstiin, ei työkalun suosioon.
+- Opiskelijat osaavat dokumentoida ja vertailla tekoälytyökalujen tuloksia.
 
 ---
 
-## Tehtävä 10.3: "Miksi et valitse vain yhtä työkalua?" — luokkakeskustelu
+## Tehtävä 10.3: Miksi et valitse vain yhtä työkalua? — luokkakeskustelu
 
 ### Tavoite
-Auttaa opiskelijoita ymmärtämään, miksi ammattilaisena et valitse samaa työkalua kaikkeen, vaan arvioit kontekstia.
+
+Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miksi ammattilainen ei käytä samaa tekoälytyökalua kaikkeen. Työkalun valinta riippuu tehtävän tyypistä, aineistosta, vaaditusta tarkkuudesta ja käyttötarkoituksesta.
 
 ### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu:**
-- Kirjoita taululle kolme skenaariota:
-  1. Koodaustehtävä: Kirjoita Python-funktio, joka validoi käyttäjän syötteen
-  2. Kirjoitustehtävä: Kirjoita 300 sanan sähköpostivastaus asiakkaalle
-  3. Analyysitehtävä: Analysoi tutkimuspaperi ja tee yhteenveto
+**Kesto:** noin 15 minuuttia
 
-**Tehtävän vaiheet (15 min):**
+#### Valmistelu
 
-1. **Esittely (2 min):**
-   - "Tässä on kolme erilaista tehtävää. Jokaiselle valitsemme sopivan työkalun. Mutta emme valitse samaa kaikkeen."
+Kirjoita taululle kolme skenaariota:
 
-2. **Skenaario 1 — koodi (4 min):**
-   - "Tarvitset Python-funktion. Mitä näistä kolmesta päätyökalusta käyttäisit? Miksi?"
-   - Keskustelu: ChatGPT vai Claude? Kumpi on parempi koodaukseen?
-   - Johtopäätös: Claude on usein parempi monimutkaisten koodausprojektien kanssa sen kontekstin ja tarkkuuden vuoksi.
+1. **Koodaustehtävä:** Kirjoita Python-funktio, joka validoi käyttäjän syötteen.
+2. **Kirjoitustehtävä:** Kirjoita noin 300 sanan sähköpostivastaus asiakkaalle.
+3. **Analyysitehtävä:** Analysoi tutkimuspaperi ja tee yhteenveto.
 
-3. **Skenaario 2 — kirjoitus (4 min):**
-   - "Tarvitset apua ammattimaiseen sähköpostiin. Mitä työkalua käyttäisit? Miksi?"
-   - Keskustelu: Kumpi antaa parhaiten strukturoidun ja ammattimaisesti kirjoitetun vastauksen?
-   - Johtopäätös: Valinta riippuu siitä, mitä painotat — kreatiivisuutta (ChatGPT) vai tarkkuutta (Claude).
+#### Tehtävän vaiheet
 
-4. **Skenaario 3 — analyysi (4 min):**
-   - "Tarvitset apua 20-sivuisen tutkimuspaperin analysointiin. Mitä työkalua käyttäisit? Miksi?"
-   - Keskustelu: Kumpi pystyy lukemaan pitkiä dokumentteja hyvin? Kumpi on parempi visuaalisissa analyyseissa?
-   - Johtopäätös: Claude on usein parempi pitkien dokumenttien kanssa sen 200K-tokenia kontekstin vuoksi.
+1. **Esittely noin 2 minuuttia**
 
-5. **Yhteenveto (1 min):**
-   - "Näette: ei ole yhtä parasta. Valinnat ovat kontekstipohjaisia."
-   - Kirjoita laudalle: "Ammattilaisena: arvioi, testaa, dokumentoi, päätä."
+   > Tässä on kolme erilaista tehtävää. Jokaiselle pitää valita sopiva työkalu. Emme kuitenkaan oleta, että sama työkalu on paras kaikkeen.
+2. **Skenaario 1: koodi noin 4 minuuttia**
+
+   Kysy opiskelijoilta:
+
+   - Mitä työkalua käyttäisit Python-funktion kirjoittamiseen?
+   - Miksi valitsisit juuri sen?
+   - Miten tarkistaisit, että koodi toimii?
+
+   **Johtopäätös:** Koodaustehtävässä tärkeää on, että vastaus on testattava, selkeä ja syntaksiltaan toimiva. Työkalu ei poista käyttäjän vastuuta tarkistaa koodi.
+3. **Skenaario 2: kirjoitus noin 4 minuuttia**
+
+   Kysy opiskelijoilta:
+
+   - Mitä työkalua käyttäisit ammattimaiseen sähköpostivastaukseen?
+   - Tarvitsetko luovuutta, sävyn hallintaa vai tarkkaa rakennetta?
+   - Miten varmistaisit, että vastaus sopii asiakkaalle?
+
+   **Johtopäätös:** Kirjoitustehtävässä valinta voi riippua siitä, painotetaanko tyyliä, rakennetta, luovuutta vai täsmällisyyttä.
+4. **Skenaario 3: analyysi noin 4 minuuttia**
+
+   Kysy opiskelijoilta:
+
+   - Mitä työkalua käyttäisit pitkän tutkimuspaperin analysointiin?
+   - Tarvitaanko pitkä konteksti, tiedoston lukemista tai visuaalista analyysiä?
+   - Miten tarkistaisit, että yhteenveto vastaa alkuperäistä dokumenttia?
+
+   **Johtopäätös:** Pitkien dokumenttien analyysissä konteksti-ikkunan koko, tiedostojen käsittely ja vastauksen luotettavuus korostuvat.
+5. **Yhteenveto noin 1 minuutti**
+
+   Kirjoita taululle:
+
+   Ammattilaisena: arvioi, testaa, dokumentoi ja päätä.
 
 ### Odotettu oppimistulos
-- Opiskelijat ymmärtävät, että ammattilaisena valitset työkalun tehtävän mukaan
-- Opiskelijat näkevät, että jokainen valinta vaatii perustelua
-- Opiskelijat ovat valmiita soveltamaan tätä ajattelua omissa projekteissaan
+
+- Opiskelijat ymmärtävät, että työkalun valinta tehdään tehtävän perusteella.
+- Opiskelijat osaavat perustella, miksi jokin työkalu sopii tiettyyn tilanteeseen.
+- Opiskelijat osaavat soveltaa työkalujen vertailua omissa projekteissaan.
+
+---
+
+## Arviointi
+
+Opettaja arvioi opiskelijoiden kykyä:
+
+- vertailla eri tekoälytyökalujen vastauksia samalla kehotuksella,
+- tunnistaa työkalujen vahvuuksia ja rajoituksia,
+- perustella työkalun valinta tehtävän, kontekstin ja tavoitteiden perusteella,
+- dokumentoida havainnot selkeästi,
+- ymmärtää, että tekoälytyökalun valinta on ammatillinen päätös eikä tottumuskysymys.
+
+---

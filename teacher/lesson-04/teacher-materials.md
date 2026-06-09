@@ -2,109 +2,250 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-1. Opiskelijat ymmärtävät, että konteksti on kaiken tekoälyviestinnän perusta ja että se koostuu roolista, taustatiedosta, tavoitteesta, rajauksista ja esimerkeistä.
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää **kontekstin** ja **promptin** merkityksen tekoälyn kanssa työskentelyssä. Oppitunnin ydin on, että tekoälyltä saatu vastaus ei riipu vain kysymyksestä, vaan myös siitä, millaisen tilanteen, taustan, tavoitteen ja rajaukset käyttäjä antaa.
 
-2. Opiskelijat ymmärtävät, että prompti on kysymys tai tehtävänanto, joka rakentuu kontekstin päälle, ja että se koostuu tavoitteesta, roolista, rajoituksista, outputformaatista ja esimerkeistä.
+### Muistaa ja ymmärtää
 
-3. Opiskelijat pystyvät tunnistamaan eron "hyvän promptin" ja "hyvän kontekstin" välillä, ja he näkevät, että konteksti ja prompti yhdessä määrittävät vastauksen hyödyllisyyden.
+- Opiskelija ymmärtää, että **konteksti** on tekoälyviestinnän perusta.
+- Opiskelija tunnistaa kontekstin viisi keskeistä osaa: **rooli**, **taustatieto**, **tavoite**, **rajaukset** ja **esimerkit**.
+- Opiskelija ymmärtää, että **prompti** on kysymys tai tehtävänanto, joka rakentuu kontekstin päälle.
+- Opiskelija tunnistaa hyvän promptin viisi elementtiä: **tavoite**, **rooli**, **rajoitukset**, **outputformaatti** ja **esimerkit**.
 
-4. Opiskelijat pystyvät rakentamaan omasta IT-ongelmastaan sekä selkeän, terävän kontekstin että terävän promptin ja käyttämään niitä keskustellessaan tekoälyn kanssa.
+### Soveltaa ja analysoida
 
-5. Opiskelijat ymmärtävät kontekstin ja promptin rakentamisen iteratiivisena prosessina — he eivät yritä antaa kaikkea kerralla, vaan rakentavat kierros kierrokselta.
+- Opiskelija osaa erottaa **hyvän kontekstin** ja **hyvän promptin** toisistaan.
+- Opiskelija osaa arvioida, miksi sama prompti voi tuottaa erilaisia vastauksia eri kontekstissa.
+- Opiskelija osaa tunnistaa tilanteita, joissa tekoäly joutuu arvaamaan, koska konteksti tai prompti on puutteellinen.
 
-6. Opiskelijat ymmärtävät, että kontekstin ja promptin rakentaminen säästää aikaa ja tuottaa ammattimaisia, käyttökelpoisia vastauksia.
+### Luoda ja arvioida
+
+- Opiskelija osaa rakentaa omasta IT-ongelmastaan selkeän kontekstin ja terävän promptin.
+- Opiskelija osaa käyttää kontekstia ja promptia iteratiivisesti: ensin luodaan pohja, sitten tarkennetaan vastausten perusteella.
+- Opiskelija ymmärtää, että hyvä konteksti ja prompti säästävät aikaa ja tuottavat ammattimaisempia, käyttökelpoisempia vastauksia.
+
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että hyvä tekoälyvastaus syntyy kahdesta asiasta: hyvästä kontekstista ja terävästä promptista. Prompti kertoo, mitä tekoälyn pitää tehdä. Konteksti kertoo, missä tilanteessa tehtävä tehdään.
+
+---
+
+## Pedagoginen lähestymistapa
+
+### Ydinviesti: konteksti on pohja, prompti on tehtävänanto
+
+Opiskelijoille kannattaa havainnollistaa kontekstin ja promptin ero IT-tukiesimerkillä. Jos tukihenkilö saa viestin ”Tietokone ei toimi”, hän ei voi ratkaista ongelmaa luotettavasti ilman lisätietoja. Hän tarvitsee kontekstia: mikä tietokone on kyseessä, mitä käyttäjä yritti tehdä, milloin ongelma alkoi, näkyykö virheilmoitus ja mitä on jo kokeiltu.
+
+> **Konteksti kertoo tilanteen. Prompti kertoo tehtävän.**
+
+Korosta opiskelijoille:
+
+- **Konteksti** antaa taustan, jonka perusteella tekoäly ymmärtää tilanteen paremmin.
+- **Prompti** ohjaa tekoälyä tekemään tietyn tehtävän kontekstin perusteella.
+- Hyvä konteksti ilman selkeää promptia voi tuottaa epätarkan vastauksen.
+- Hyvä prompti ilman kontekstia voi tuottaa väärän tai liian yleisen vastauksen.
+
+### Kontekstin viisi osaa
+
+Konteksti ei tarkoita vain pitkää tekstimassaa. Hyvä konteksti on jäsennelty ja sisältää tehtävän kannalta olennaiset tiedot. Opeta opiskelijoille viiden osan malli.
+
+| Kontekstin osa | Mitä se kertoo? | IT-esimerkki |
+| --- | --- | --- |
+| **Rooli** | Kuka käyttäjä on ja millä osaamistasolla hän toimii? | ”Olen ensimmäisen vuoden IT-opiskelija.” |
+| **Taustatieto** | Mitä tilanteesta tiedetään jo? | ”Harjoittelen Linux-palvelimen SSH-yhteyttä.” |
+| **Tavoite** | Mitä käyttäjä haluaa saavuttaa? | ”Haluan selvittää, miksi yhteys ei muodostu.” |
+| **Rajaukset** | Mitä ei saa tehdä tai mitä pitää huomioida? | ”Älä ehdota palvelimen uudelleenasennusta.” |
+| **Esimerkit** | Mitä konkreettista tekoäly näkee? | Virheilmoitus, komento, lokirivi tai kuvakaappaus. |
+
+### Promptin viisi elementtiä
+
+Kun konteksti on rakennettu, sen päälle kirjoitetaan prompti. Promptin tehtävä on ohjata tekoälyä tuottamaan juuri sellainen vastaus, jota käyttäjä tarvitsee.
+
+| Promptin elementti | Mitä se ohjaa? | Esimerkki |
+| --- | --- | --- |
+| **Tavoite** | Mitä tekoälyn pitää tehdä? | ”Auta minua selvittämään virheen todennäköisin syy.” |
+| **Rooli** | Mistä näkökulmasta tekoäly vastaa? | ”Vastaa kuin kärsivällinen IT-opettaja.” |
+| **Rajoitukset** | Mitä vastaus ei saa sisältää tai tehdä? | ”Älä anna valmista ratkaisua ennen kuin selität tarkistusvaiheet.” |
+| **Outputformaatti** | Millaisessa muodossa vastaus annetaan? | ”Anna vastaus numeroituna tarkistuslistana.” |
+| **Esimerkit** | Millainen vastaus tai syöte toimii mallina? | ”Tässä on virheilmoitus: Permission denied (publickey).” |
+
+**Opettajan huomio:** Hyvä prompti ei korvaa kontekstia. Terävä prompti ilman taustatietoa johtaa helposti yleisiin vastauksiin. Hyvä konteksti ilman selkeää tehtävänantoa voi taas tuottaa vastauksen, joka ei tee sitä, mitä opiskelija tarvitsi.
+
+### Iteratiivinen työskentely
+
+Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **iteratiivisena prosessina**. Ammattilaiset eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He aloittavat olennaisesta, lukevat vastauksen, tarkentavat kontekstia ja muokkaavat promptia seuraavalla kierroksella.
+
+1. **Ensimmäinen kierros:** anna peruskonteksti ja päätehtävä.
+2. **Tarkistus:** arvioi, mikä vastauksessa oli hyödyllistä ja mikä jäi puuttumaan.
+3. **Tarkennus:** lisää puuttuva taustatieto, rajaus tai esimerkki.
+4. **Uusi prompti:** pyydä tarkempi vastaus halutussa muodossa.
+
+> **Hyvä tekoälytyöskentely ei ole yksi täydellinen kysymys. Se on ohjattu keskustelu.**
+
+---
 
 ## Yleisiä väärinkäsityksiä
 
-**Väärinkäsitys 1: "Hyvä prompti = hyvä vastaus"**
-- **Todellisuus:** Hyvä konteksti JA terävä prompti = hyvä vastaus. Prompti on kysymys, konteksti on pohja. Voit antaa saman promptin kahdelle tekoälylle eri kontekstilla ja saada täysin erilaiset vastaukset. Ja voit antaa loistavaa kontekstia, mutta heikolla promptilla vastaus voi silti olla väärä.
-- **Korjaus:** Näytä opiskelijoille konkreettinen esimerkki (tehtävä 4.1). Kerro: "Näet, kuinka saman kysymyksen vastaus muuttuu dramaattisesti, kun sekä konteksti että prompti parantuvat."
+### Väärinkäsitys 1: ”Hyvä prompti tarkoittaa automaattisesti hyvää vastausta.”
 
-**Väärinkäsitys 2: "Konteksti ja prompti ovat sama asia"**
-- **Todellisuus:** Konteksti on pohja — kuka olet, mitä taustaa sinulla on, mitä haluat saavuttaa, mitkä ovat rajat, mitkä ovat esimerkit. Prompti on kysymys tai tehtävänanto, jonka esität kontekstin puitteissa. Ne ovat kaksi puolta samasta kolikosta.
-- **Korjaus:** Käytä opettajavetoisesta tehtävässä 4.2 rakentuvaa mallia. Näytä, että konteksti rakennetaan ensin, sitten prompti rakennetaan sen päälle. Vertaa: "Konteksti on opettajan työhuone — sinulla on opettajan, opiskelijan tausta, harjoitustyöt näkyvillä. Prompti on kysymys, jonka esität tuossa huoneessa."
+**Korjaava näkökulma:** Hyvä vastaus syntyy hyvästä kontekstista ja terävästä promptista yhdessä. Prompti on kysymys tai tehtävä, mutta konteksti antaa tilanteen, johon vastaus sovitetaan. Sama prompti voi tuottaa hyvin erilaisen vastauksen, jos konteksti vaihtuu.
 
-**Väärinkäsitys 3: "Konteksti tarkoittaa 'vain pitkää tekstiä'"**
-- **Todellisuus:** Konteksti on rakentava: se sisältää viisi spesifistä osaa — rooli, taustatieto, tavoite, rajaukset ja esimerkki. Pitkä, sekava teksti ei ole hyvä konteksti.
-- **Korjaus:** Opeta viiden komponentin malli selkeästi (tehtävä 4.2). Näytä, kuinka lyhyt, jäsennelty konteksti on parempi kuin pitkä, sekava teksti.
+> Prompti kertoo, mitä tehdään. Konteksti kertoo, miksi, kenelle ja missä tilanteessa.
 
-**Väärinkäsitys 4: "Tekoäly ymmärtää aina, mitä tarkoitan"**
-- **Todellisuus:** Tekoäly tekee oletuksia puuttuvan tiedon kohdalla — ja arvaukset ovat usein vääriä.
-- **Korjaus:** Käytä "Miksi huono konteksti ja prompti tuottaa huonoa jälkeä" -osiota. Kerro: "Jos jätät kontekstin tai promptin vaillinaiseksi, tekoäly arvaa — eikä arvaa oikein."
+### Väärinkäsitys 2: ”Konteksti ja prompti ovat sama asia.”
 
-**Väärinkäsitys 5: "Hyvä prompti riittää ilman kontekstia"**
-- **Todellisuus:** Terävä prompti ilman kontekstia on kuin ratkaisua haetaan sokean ihmisen kanssa — syntyy oletus, että tekoäly tietää, kuka olet, mitä taustaa sinulla on ja mitä haluat. Se ei tiedä.
-- **Korjaus:** Näytä konkreettinen esimerkki, jossa hyvä prompti ja huono konteksti antavat silti huonon vastauksen. Kerro: "Prompti sanoo tekoälylle, mitä tehdä, mutta konteksti sanoo sille, *missä tilanteessa* sitä tehdään."
+**Korjaava näkökulma:** Ne liittyvät toisiinsa, mutta eivät ole sama asia. Konteksti on pohja: rooli, taustatieto, tavoite, rajaukset ja esimerkit. Prompti on tehtävänanto, joka käyttää tätä pohjaa.
 
-**Väärinkäsitys 6: "Konteksti ja prompti ovat ylimääräinen; liian pitkä vastaus on parempi"**
-- **Todellisuus:** Konteksti ja prompti tekevät vastauksesta lyhyemmän ja hyödyllisemmän, koska tekoäly tietää, mihin kohdistaa huomionsa.
-- **Korjaus:** Vertaa tehtävässä 4.1 vastausten pituuksia. Näytä, että konteksti ja terävä prompti auttavat tekoälyä säilyttämään vain oleellisen tiedon.
+### Väärinkäsitys 3: ”Konteksti tarkoittaa vain pitkää tekstiä.”
+
+**Korjaava näkökulma:** Pitkä teksti ei ole automaattisesti hyvä konteksti. Hyvä konteksti on jäsennelty, tarpeellinen ja tehtävän kannalta olennainen. Lyhyt ja selkeä konteksti on usein parempi kuin pitkä ja sekava taustoitus.
+
+### Väärinkäsitys 4: ”Tekoäly ymmärtää aina, mitä tarkoitan.”
+
+**Korjaava näkökulma:** Tekoäly tekee oletuksia, jos tieto puuttuu. Nämä oletukset voivat olla vääriä. Jos opiskelija ei kerro rooliaan, tavoitteitaan, rajoituksiaan tai esimerkkejään, tekoäly täyttää aukot itse.
+
+### Väärinkäsitys 5: ”Hyvä prompti riittää ilman kontekstia.”
+
+**Korjaava näkökulma:** Hyvä prompti ilman kontekstia voi silti tuottaa väärän tai liian yleisen vastauksen. Tekoäly ei tiedä käyttäjän osaamistasoa, tehtävän tarkoitusta tai rajoituksia, ellei niitä kerrota.
+
+### Väärinkäsitys 6: ”Konteksti ja prompti ovat ylimääräistä työtä.”
+
+**Korjaava näkökulma:** Hyvä konteksti ja prompti säästävät aikaa. Muutama lisärivi alussa voi vähentää väärien vastausten, korjauskierrosten ja turhan säätämisen määrää.
+
+---
 
 ## Opettajan fasilitointiohjeet
 
 ### Ennen oppituntia
-- Lue oppilasmateriaalit itse ja tutustu sekä viiden komponentin konteksti-malliin että viiden elementin prompti-malliin.
-- Valitse konkreettiset IT-esimerkit, jotka sopivat opiskelijoillesi. (Ei liian monimutkaisia, ei liian yksinkertaisia.)
-- Testaa tehtävä 4.1 etukäteen: käytä oikeaa tekoälyä ja katso, mitä eroja syntyy heikon kysymyksen ja hyvin rakennetun kysymyksen (konteksti + prompti) välillä.
-- Valmistele opettaja-vetoiseen tehtävään 4.2 molemmat mallit (kontekstin viisi osaa JA promptin viisi elementtiä).
+
+- Lue oppilasmateriaali ja varmista, että osaat erottaa **kontekstin viisi osaa** ja **promptin viisi elementtiä**.
+- Valitse konkreettiset IT-esimerkit, jotka sopivat opiskelijoiden tasolle. Hyviä aiheita ovat esimerkiksi Linux, Python, SQL, verkkoyhteydet, kirjautumisongelmat tai virheilmoitusten tulkinta.
+- Testaa tehtävä 4.1 etukäteen oikealla tekoälyllä. Vertaa, miten vastaus muuttuu, kun heikko kysymys korvataan hyvällä kontekstilla ja terävällä promptilla.
+- Valmistele opettajajohtoiseen tehtävään 4.2 malli, jossa rakennetaan ensin konteksti ja sen jälkeen prompti.
 
 ### Oppitunnin aikana
-- **Avaa johdantoskenaariolla:** "IT-tukihenkilö saa viestin 'Tietokone ei toimi.'" Pyydä opiskelijoita pohtimaan: mitä he tekisivät seuraavaksi? (He ymmärtävät, että tarvitsevat lisätietoa — tämä on konteksti!) Sitten: "Kun tiedät taustaa, mitä kysyt seuraavaksi?" (He ymmärtävät, että kysymys muuttuu spesifimmäksi — tämä on prompti!)
 
-- **Korosta sekä viiden komponentin kontekstin mallia että viiden elementin promptin mallia:** Piirrä molemmat tauluun. Käytä tehtävää 4.2 niin, että opiskelijat rakentavat niitä yhdessä selkeissä vaiheissa. Näytä, kuinka konteksti rakennetaan ensin, sitten prompti rakennetaan sen päälle.
-
-- **Anna konkreettisia esimerkkejä:** Älä puhu vain abstraktisti. Näytä:
-  - Huono: "Kuinka debugaan ohjelmaa?" → sekä konteksti että prompti puuttuu
-  - Hyvä: "Olen kirjoittanut Python-ohjelman, joka... (taustatieto), haluan oppia debuggaamaan systemaattisesti... (tavoite), vastaa kuten opettaisit aloittelijalle... (promptin rooli)" → selkeä ja hyödyllinen vastaus
-
-- **Yhdistä opiskelijoiden IT-maailmaan:** Käytä esimerkkejä, jotka liittyvät heidän opiskeluunsa. Jos he tekevät Linux-projektia, käytä Linux-esimerkkejä. Jos he tekevät tietokantaprojektia, käytä SQL-esimerkkejä.
-
-- **Korostaa iteratiivisen prosessin arvoa:** Kerro, että ammattilaiset eivät yritä antaa kaikkea kerralla — he rakentavat kontekstia ja promptia kierros kierrokselta ja näkevät tulokset välillä.
+- **Aloita johdantoskenaariolla:** ”IT-tukihenkilö saa viestin: Tietokone ei toimi.” Kysy opiskelijoilta, mitä lisätietoa he tarvitsisivat. Tämä johdattaa kontekstin käsitteeseen.
+- **Jatka promptiin:** Kun konteksti on selvitetty, kysy opiskelijoilta, mitä tekoälyltä kannattaisi pyytää. Tämä auttaa näkemään, että prompti rakentuu kontekstin päälle.
+- **Piirrä kaksi mallia näkyviin:** kontekstin viisi osaa ja promptin viisi elementtiä. Palaa niihin harjoitusten aikana.
+- **Käytä opiskelijoiden omia IT-ongelmia:** jos opiskelijat tekevät Linux-projektia, rakenna esimerkit Linuxista. Jos aihe on tietokannat, käytä SQL-esimerkkejä.
+- **Korosta iterointia:** ammattilaiset eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He tarkentavat kontekstia ja promptia vastausten perusteella.
 
 ### Yleisiä haasteita ja ratkaisuja
 
-**Haaste: "Opiskelijat antavat silti liian yleisiä konteksteja tai heikkoja prompteja"**
-- Ratkaisu: Painota vaihetta 5 (esimerkit kontekstissa) ja vaihetta 9 (esimerkit promptissa). Kerro: "Tekoäly ei näe mitään, jos et näytä sitä. Näytä virheilmoitus, näytä koodi, näytä kuvakaappaus. Näytä myös esimerkki siitä, millainen vastaus olisi hyvä."
+**Haaste: Opiskelijat antavat liian yleisiä konteksteja tai heikkoja prompteja.**
+**Ratkaisu:** Pyydä opiskelijoita lisäämään konkreettinen esimerkki: virheilmoitus, koodinpätkä, komento, lokirivi tai kuvakaappauksen sisältö. Kysy: ”Mitä tekoäly ei voi tietää, ellet kerro sitä?”
 
-**Haaste: "Opiskelijat sekoittavat kontekstin ja promptin"**
-- Ratkaisu: Käytä metaforaa. "Konteksti on kuten opettajan työhuone — siinä on taustoissa näkyvät asiat. Prompti on kysymys, jonka esität tuossa huoneessa. Sama huone, eri kysymykset = erilaiset vastaukset."
+**Haaste: Opiskelijat sekoittavat kontekstin ja promptin.**
+**Ratkaisu:** Käytä metaforaa: konteksti on huone, jossa keskustelu tapahtuu. Prompti on kysymys, jonka esität siinä huoneessa. Sama kysymys eri huoneessa voi tarkoittaa eri asiaa.
 
-**Haaste: "Konteksti ja prompti kuulostaa opiskelijoille 'liian formaalilta' tai 'liian pitkältä'"**
-- Ratkaisu: Näytä, että kontekstin ja promptin ei tarvitse olla yhtenäinen kirjoitus. Voit käyttää:
-  - Luetteloa: "Rooli: opiskelija. Taustatieto: neljä viikkoa Linux-kurssilla. Tavoite: debugata SSH. Prompti: Auta minua selvittämään..."
-  - Lyhyitä kappaleita: Konteksti voi olla 2–3 lausetta komponenttia kohti, ja prompti voi olla 1–2 lausetta elementtiä kohti.
+**Haaste: Konteksti ja prompti tuntuvat opiskelijoista liian formaaleilta tai pitkiltä.**
+**Ratkaisu:** Näytä, että ne voi kirjoittaa lyhyenä luettelona. Esimerkiksi: ”Rooli: IT-opiskelija. Tausta: harjoittelen SSH-yhteyttä. Tavoite: selvittää virhe. Rajaus: älä ehdota uudelleenasennusta. Prompti: anna tarkistuslista.”
 
-**Haaste: "Opiskelijat kysyvät: 'Mutta mikä merkitys kontekstin ja promptin kirjoittamisella tekoälylle on?'"**
-- Ratkaisu: Näytä se konkreettisesti. Tehtävä 4.1 osoittaa tämän — jokainen opiskelija näkee, että vastaukset ovat erilaiset. Tämä on riittävä todiste. Kerro myös: "Ammattilaiset säästävät aikaa rakentamalla hyvää kontekstia ja promptia — he saavat parempia vastauksia enemmän kerralla, ja joutuvat vähemmän korjaamaan."
+**Haaste: Opiskelijat eivät näe, miksi kontekstin ja promptin kirjoittaminen on hyödyllistä.**
+**Ratkaisu:** Näytä ero käytännössä. Syötä tekoälylle ensin heikko kysymys ja sitten sama aihe hyvällä kontekstilla ja promptilla. Anna opiskelijoiden vertailla vastausten tarkkuutta, hyödyllisyyttä ja käyttökelpoisuutta.
 
-**Haaste: "Opiskelijat haluavat käyttää tekoälyä, mutta eivät halua 'valittaa' kontekstista ja promptista"**
-- Ratkaisu: Reframing. Kerro: "Kontekstin ja promptin rakentaminen ei ole ylimääräinen työ — se on tehokkuus! Kirjoitat muutaman rivin ylimääräistä tekstiä, mutta saat paremman vastauksen heti. Se säästää aikaa kokonaisuudessa."
+---
+
+## Luokkatehtävien ohjeistus
+
+### TT-A: Heikko kysymys vs. hyvä konteksti ja prompti
+
+**Tavoite:** Opiskelija näkee konkreettisesti, miten vastaus muuttuu, kun konteksti ja prompti paranevat.
+
+**Tehtävä:** Opiskelija antaa tekoälylle ensin heikon kysymyksen ja sen jälkeen saman aiheen jäsennellyllä kontekstilla ja promptilla. Lopuksi hän vertailee vastauksia.
+
+| Versio | Esimerkki | Mitä todennäköisesti tapahtuu? |
+| --- | --- | --- |
+| **Heikko kysymys** | ”Miten debuggaan ohjelmaa?” | Vastaus on yleinen eikä välttämättä auta juuri opiskelijan ongelmaan. |
+| **Hyvä konteksti + prompti** | ”Olen aloittelija Pythonissa. Ohjelmani antaa virheen IndexError rivillä 14. Tässä koodi... Auta minua selvittämään virhe vaiheittain ilman valmista ratkaisua.” | Vastaus on tarkempi, käyttökelpoisempi ja paremmin opiskelijan osaamistasoon sopiva. |
+
+**Ohje opiskelijalle:**
+
+1. Kirjoita ensin heikko kysymys tekoälylle.
+2. Tallenna tai kopioi vastaus.
+3. Rakenna samaan aiheeseen konteksti viiden osan avulla.
+4. Kirjoita sen päälle prompti viiden elementin avulla.
+5. Vertaa vastauksia: kumpi oli hyödyllisempi ja miksi?
+
+**Aika-arvio:** 20–25 minuuttia
+
+---
+
+### TT-B: Rakenna konteksti ja prompti omasta IT-ongelmasta
+
+**Tavoite:** Opiskelija osaa rakentaa oman IT-ongelmansa pohjalta sekä kontekstin että promptin.
+
+**Tehtävä:** Opiskelija valitsee oman IT-aiheisen ongelman, esimerkiksi virheilmoituksen, koodiongelman, palvelinyhteyden ongelman tai tietokantakyselyn. Hän kirjoittaa ensin kontekstin ja sen jälkeen promptin.
+
+| Osa | Kirjoita tähän |
+| --- | --- |
+| **Rooli** | Kuka olet ja mikä on osaamistasosi? |
+| **Taustatieto** | Mitä olet tekemässä ja mitä olet jo kokeillut? |
+| **Tavoite** | Mitä haluat saada aikaan? |
+| **Rajaukset** | Mitä tekoäly ei saa tehdä tai mitä sen pitää huomioida? |
+| **Esimerkit** | Liitä virheilmoitus, komento, lokirivi, koodi tai muu konkreettinen esimerkki. |
+
+**Promptin tarkistuslista:**
+
+- Onko tehtävän tavoite selkeä?
+- Onko tekoälyn rooli määritelty?
+- Onko rajoitukset kerrottu?
+- Onko vastausmuoto pyydetty?
+- Onko mukana esimerkki tai malli?
+
+**Aika-arvio:** 25–30 minuuttia
+
+---
 
 ## Arviointivinkit
 
-**Epävirallinen arviointi tehtävän 4.1 jälkeen:**
-- Katso opiskelijoiden täyttämää vertailutaulukkoa. Osoittaako se, että he näkivät eroa vastausten välillä?
-- Kuuntele pohdintaa: kuuletko sanoja kuten "spesifisempi", "relevantimpi", "käyttökelpoisempi", "konkreettisempi"? Ne ovat hyviä merkkejä.
-- Jos opiskelija sanoo "ei ollut paljon eroa", kysy: "Mitä kontekstin osaa lisäsimme? Mitä promptin elementtejä käytimme?" Auta häntä näkemään ero.
-- Tarkista, ymmärsikö opiskelija eron kontekstin ja promptin välillä vai sekoittaako hän ne.
+### Epävirallinen arviointi tehtävän TT-A jälkeen
 
-**Epävirallinen arviointi tehtävän 4.2 jälkeen:**
-- Lue opiskelijoiden kontekstit. Sisältävätkö ne kaikki viisi osaa?
-- Lue heidän promptit. Sisältävätkö ne kaikki viisi elementtiä?
-- Etsi kohdat, joissa on spesifisiä esimerkkejä (koodi, virheilmoitus, ruutukaappaus). Ne osoittavat ymmärrystä.
-- Keskustele ryhmän kanssa: "Mitä kontekstin osaa pidit tärkeimpänä omassa ongelmassasi? Entä promptin elementtiä? Miksi?"
+- Tarkista, huomasiko opiskelija eron vastausten välillä.
+- Kuuntele, käyttääkö opiskelija sanoja kuten **spesifisempi**, **relevantimpi**, **käyttökelpoisempi** ja **konkreettisempi**.
+- Jos opiskelija sanoo, ettei vastauksissa ollut eroa, pyydä häntä nimeämään, mitä kontekstin osia ja promptin elementtejä hän lisäsi.
+- Tarkista, ymmärtääkö opiskelija eron kontekstin ja promptin välillä vai sekoittaako hän ne.
 
-**Kehittämisalueita:**
-- Jos opiskelija jättää esimerkit pois kontekstista: "Näytä minulle virheilmoituksesi. Kuinka tekoäly voi auttaa, jos se ei näe virhettä?"
-- Jos rooli on epäselvä: "Kuka olet tässä tilanteessa? Kuinka paljon kokemusta sinulla on?" Auta häntä artikuloimaan tilanteensa.
-- Jos promptin formaatti-elementti puuttuu: "Miten haluat vastauksen? Lukuina? Taulukkona? Vaihe vaiheelta?" Näytä, että formaatti vaikuttaa siihen, mitä saamiset.
+### Epävirallinen arviointi tehtävän TT-B jälkeen
+
+- Sisältääkö opiskelijan konteksti kaikki viisi osaa?
+- Sisältääkö opiskelijan prompti kaikki viisi elementtiä?
+- Onko mukana konkreettisia esimerkkejä, kuten koodi, virheilmoitus, lokirivi tai komento?
+- Onko outputformaatti selkeästi pyydetty?
+
+### Kehittämisalueita
+
+- Jos opiskelija jättää esimerkit pois, kysy: ”Miten tekoäly voi auttaa, jos se ei näe virheilmoitusta tai koodia?”
+- Jos rooli on epäselvä, kysy: ”Kuka olet tässä tilanteessa ja kuinka paljon kokemusta sinulla on?”
+- Jos promptin formaatti puuttuu, kysy: ”Haluatko vastauksen vaiheina, taulukkona, tarkistuslistana vai lyhyenä tiivistelmänä?”
+- Jos rajaukset puuttuvat, kysy: ”Mitä tekoälyn ei pitäisi tehdä tässä tehtävässä?”
+
+---
 
 ## Jatkuva integraatio tulevilla oppitunneilla
 
-- **Seuraavalla oppitunnilla (Kontekstin ikkuna):** Rakennat tässä opituilla konteksti- ja promptaus-taidoilla, mutta nyt opiskelijat näkevät, mitä tapahtuu, kun kontekstin ikkuna on rajallinen. Hyvät kontekstit ja promptit tällä oppitunnilla tekevät seuraavan oppitunnin käsittelystä luontevampaa. Opiskelijat tunnistavat, että joutuvat priorisoimaan, mitä kontekstista säilyttävät, kun "muisti" on rajallinen.
+### Seuraava oppitunti: konteksti-ikkuna
 
-- **Tulevilla oppitunneilla (Multimodaalisuus):** Konteksti ja prompti käsittelevät myös kuvia, lokeja, taulukoita ja muita modaliteetteja — kaikki on kontekstia. Viiden komponentin malli ja viiden elementin prompti-malli laajenevat: "Entä jos esimerkki on kuvakaappaus eikä teksti? Entä jos konteksti sisältää taulukkoa tai dataa?"
+Seuraavalla oppitunnilla opiskelijat oppivat, että konteksti-ikkuna on rajallinen. Tämä oppitunti luo pohjan sille, että opiskelijat ymmärtävät, miksi kontekstia pitää priorisoida. Kun kaikkea ei voi antaa tekoälylle kerralla, tärkeää on valita olennaisin rooli, taustatieto, tavoite, rajaukset ja esimerkit.
 
-- **Iteratiivinen lähestyminen:** Muistuta opiskelijoita, että kaikissa tulevilla oppitunneilla heidän tulee rakentaa kontekstia ja promptia iteratiivisesti — ensimmäinen kierros antaa pohjan, seuraavat kierrokset tarkentavat ja parantavat.
+### Multimodaalisuus
 
-Tämä oppitunti on kurssin selkäranka ja pohja kaikelle myöhemmälle tekoälyviestinnälle. Pidetään siitä huolta!
+Myöhemmillä oppitunneilla konteksti ei ole vain tekstiä. Se voi olla myös kuva, lokitiedosto, taulukko, ruutukaappaus tai datajoukko. Sama periaate pätee: tekoäly tarvitsee tilanteen, tavoitteen ja rajaukset myös silloin, kun syöte on muuta kuin tekstiä.
+
+### Iteratiivinen työskentely
+
+Muistuta opiskelijoita tulevilla oppitunneilla, että kontekstia ja promptia rakennetaan kierros kierrokselta. Ensimmäinen prompti antaa pohjan, seuraava tarkentaa ja kolmas voi pyytää muokkausta, tarkistusta tai toista näkökulmaa.
+
+**Opettajan muistutus:** Tämä oppitunti on kurssin tekoälyviestinnän perusta. Jos opiskelija oppii rakentamaan hyvän kontekstin ja promptin, hän saa myöhemmistä tekoälyharjoituksista huomattavasti enemmän irti.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälyn kanssa työskentely ei ole pelkkää kysymysten heittämistä. Se on tilanteen jäsentämistä, tavoitteiden määrittelyä, rajausten tekemistä ja vastausmuodon ohjaamista.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mitä tekoäly tarvitsee tietää, jotta se voi auttaa sinua omassa IT-ongelmassasi ilman turhia arvauksia?
+
+:contentReference[oaicite:0]{index=0}
+
+---

@@ -4,8 +4,6 @@
 
 Kuvittele, että olet IT-tukihenkilö ja saat sähköpostissa viestin: "Tietokone ei toimi." Se on maininta, mutta mitä se tarkoittaa? Onko kyse verkkovirheestä? Eikö käyttöjärjestelmä käynnisty? Kaatuuko ohjelma? Eikö näyttö syttyy? Sama koskee tekoälyä. Jos sanot vain "auta minua", saat yleisen, ehkä hyödyttömän vastauksen. Mutta jos kerrot "olen IT-opiskelija, tarvitsen apua Linux-palvelimen SSH-ongelmaan, virhe on 'connection refused', yritän ottaa yhteyttä osoitteeseen 192.168.1.100:22" — silloin tekoäly ymmärtää, mikä on todellinen ongelma, ja voi antaa konkreettista apua. Tämä ero on *konteksti ja promptaus* — ja se on kaiken tekoälyviestinnän ydin.
 
-Tämän tunnin jälkeen sinulla on neljäs todistusaineisto: konteksti ei ole pieni asia — se on kaiken tekoälyviestinnän perusta, ja promptaus on se taito, jolla kysyt oikein.
-
 ## Osa 1: Mitä konteksti on
 
 Konteksti on kokonaisuus kaikkea sitä tietoa, jota tekoäly tarvitsee ymmärtääkseen, mitä sinä todella kysyt ja mitä haluat. Se ei ole vain yksittäinen kysymys tai käsky. Konteksti koostuu useista osista: kuka olet (roolisi), mitä taustaa sinulla on, mitä haluamme saavuttaa (tavoite), mitkä ovat rajat ja rajoitukset sekä konkreettiset esimerkit siitä, millaista vastausta odotat.
@@ -27,21 +25,6 @@ Hyvä konteksti rakentuu viidestä pääosasta.
 **4. Rajaukset** — Mitä et halua, mikä ei ole olennaista ja mitkä asiat on jätettävä pois. "Selitä pilvipalvelut, mutta älä mainitse AWS:ää, koska tiedämme siitä jo." Tai "En halua filosofista vastausta, vain käytännön neuvoja."
 
 **5. Esimerkit** — Näytä mallia siitä, mitä haluat. Jos haluat, että tekoäly kirjoittaa koodin dokumentaatiota samalla tyylillä kuin sinä, anna näyte aiemmin kirjoittamastasi dokumentaatiosta. Jos haluat koodia, joka noudattaa tiettyä rakennetta tai suunnittelutapaa, näytä esimerkki.
-
-```mermaid
-graph TD
-    A["🎯 Hyvä konteksti"] --> B["👤 Rooli<br/>Kuka olet?"]
-    A --> C["📋 Taustatieto<br/>Mitä on jo tehty?"]
-    A --> D["🎯 Tavoite<br/>Mitä haluat saavuttaa?"]
-    A --> E["🚫 Rajaukset<br/>Mitä EI halua?"]
-    A --> F["📝 Esimerkit<br/>Millaista tulosta odotat?"]
-
-    B --> G["Parempi vastaus"]
-    C --> G
-    D --> G
-    E --> G
-    F --> G
-```
 
 > **Pysähdy hetkeksi:** Ajattele tehtävää, jota teet usein ohjelmoinnissa — esimerkiksi "kirjoita funktio, joka käsittelee käyttäjän syötteen". Mitkä viidestä kontekstin osasta olisivat tärkeimpiä tässä tapauksessa? Miksi?
 
@@ -98,7 +81,7 @@ Tekoäly tekee oletuksia joka kohdassa ja antaa sinulle jonkin version, joka *sa
 - Esimerkit: Hyväksy "student@example.com", hylkää "student @example.com" (välilyönti).
 
 **Prompti:**
-"Kirjoita Python-funktio nimeltä `validate_email()`, joka ottaa merkkijonon ja palauttaa True, jos se on muodossa name@domain.com, False muuten. Käytä yksinkertaista logiikkaa ilman regex-kirjastoa. Lisää kommentit. Esimerkki: validate_email('test@example.com') palauttaa True, validate_email('test @example.com') palauttaa False."
+"Kirjoita Python-funktio nimeltä `validate_email()`, joka ottaa merkkijonon ja palauttaa True, jos se on muodossa name@domain.com, False muuten. Käytä yksinkertaista logiikkaa ilman regex-kirjastoa. Lisää kommentit. Esimerkki: validate\_email('test@example.com') palauttaa True, validate\_email('test @example.com') palauttaa False."
 
 Miksi se on hyvä?
 - Rooli: Python-opiskelija — malli tietää kontekstin ja osaamistason.
@@ -175,3 +158,5 @@ Ammattilaisesti et yritä antaa kaikkea yhdessä. Sen sijaan rakennat kontekstia
 Hyvä konteksti ja terävä prompti ovat investointi: ne vaativat hiukan enemmän aikaa ajatteluun ja kirjoittamiseen, mutta tuloksena on vastaus, joka on todella hyödyllinen eikä turha. Tämän kurssin ydinasia on, että konteksti ja prompti eivät ole pikkujuttu — ne ovat kaiken tekoälyviestinnän perusta. Konteksti- ja promptaus-taidot ovat IT-ammattilaiselle yhtä tärkeitä kuin ohjelmointikielten hallinta tai verkko-osaaminen.
 
 Seuraavalla tunnilla syvennämme kontekstin hallintaan: ymmärrät, että tekoälyn muisti on rajallinen, ja opit hallitsemaan sitä.
+
+---

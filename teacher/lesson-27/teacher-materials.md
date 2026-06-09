@@ -1,265 +1,350 @@
-# Opettajan materiaalit – Lesson 27: n8n-projektipaja, osa 2
+# Opettajan materiaalit — oppitunti 27: n8n-projektipaja, osa 2
 
-## Osaamistavoitteet (Bloom)
+## Osaamistavoitteet
 
-**Muistaa / Ymmärtää:**
-- Opiskelija ymmärtää, kuinka testata agenttia systemaattisesti.
-- Opiskelija tunnistaa normaalit tapaukset, reunatapaukset ja turvallisuustestit.
-- Opiskelija ymmärtää dokumentaation tärkeyden ja sen kolme ydinmuotoa (README, ARCHITECTURE, SAFETY).
+Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta kohti toimivaa, testattua ja dokumentoitua kokonaisuutta. Oppitunnin painopiste on **ammatillisessa työskentelyssä**: rakentamisessa, testaamisessa, dokumentoinnissa, arvioinnissa ja oman työn kriittisessä tarkastelussa.
 
-**Soveltaa / Analysoida:**
-- Opiskelija rakentaa toimivan n8n-agentin.
-- Opiskelija testaa agenttia kattavasti ja dokumentoi tulokset.
-- Opiskelija arvioi kriittisesti omaa työtään ja toisen projektia.
+### Muistaa ja ymmärtää
 
-**Luoda / Arvioida:**
-- Opiskelija kirjoittaa selkeää, ammatillista dokumentaatiota.
-- Opiskelija esittelee projektinsa demona ja perustaa valintojaan.
+- Opiskelija ymmärtää, miten agenttia testataan **systemaattisesti**.
+- Opiskelija tunnistaa kolme testityyppiä: **normaalit tapaukset**, **reunatapaukset** ja **turvallisuustestit**.
+- Opiskelija ymmärtää dokumentaation merkityksen ja tunnistaa kolme ydindokumenttia: **README**, **ARCHITECTURE** ja **SAFETY**.
+
+### Soveltaa ja analysoida
+
+- Opiskelija rakentaa toimivan **n8n-agentin**.
+- Opiskelija testaa agenttia kattavasti ja dokumentoi testitulokset.
+- Opiskelija arvioi kriittisesti omaa työtään ja toisen ryhmän projektia.
+
+### Luoda ja arvioida
+
+- Opiskelija kirjoittaa selkeää ja ammatillista dokumentaatiota.
+- Opiskelija esittelee projektinsa demona ja perustelee tekemänsä ratkaisut.
 - Opiskelija tunnistaa agentin kuusi komponenttia omassa projektissaan.
+
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on ammatillisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.
 
 ---
 
 ## Pedagoginen lähestymistapa
 
-### Ydinviesti: ammattilaisuus
+### Ydinviesti: ammattilainen rakentaa, testaa ja dokumentoi
 
-Lesson 27 on kokonaan ammatillisen ohjelmiston kehittämisen prosessista.
+Oppitunti 27 käsittelee ammatillisen ohjelmistokehityksen prosessia. Opiskelijoiden tulee ymmärtää, että teknisen ratkaisun rakentaminen on vain yksi osa kokonaisuutta.
 
-**"Amatööri rakentaa ja toivoo, että se toimii. Ammattilainen rakentaa, testaa ja dokumentoi."**
+> **Amatööri rakentaa ja toivoo, että se toimii. Ammattilainen rakentaa, testaa ja dokumentoi.**
 
-Painota opiskelijoille:
-- Testaaminen ei ole valinnaista — se on pakollista
-- Dokumentaatio tekee projektista ammatillisen
-- Itsekritiikki osoittaa syvää ajattelua paremmin kuin täydellisyys
+Korosta opiskelijoille:
 
-### Iteratiivinen kehitys, ei "big bang"
+- **Testaaminen** ei ole valinnainen lisä, vaan pakollinen osa agentin rakentamista.
+- **Dokumentaatio** tekee projektista ymmärrettävän, ylläpidettävän ja ammatillisen.
+- **Itsekritiikki** osoittaa syvää ymmärrystä paremmin kuin väite siitä, että kaikki toimii täydellisesti.
 
-Monet opiskelijat yrittävät rakentaa koko projektin kerralla ja sitten korjata. Tämä johtaa:
-- Vaikeisiin debuggaustilanteisiin
-- Turhauttaviin virheisiin
-- Epämotivaatioon
+### Iteratiivinen kehitys, ei “kaikki kerralla” -rakentaminen
 
-**Opetuskäytäntö:** Pakota opiskelijat rakentamaan pienissä askelissa.
+Moni opiskelija yrittää rakentaa koko projektin kerralla ja korjata virheet vasta lopussa. Tämä johtaa usein vaikeaan debuggaamiseen, turhautumiseen ja motivaation laskuun.
 
-"Rakenna ensin Trigger + yksi solmu. Testaa sitä. Kunhan se toimii, lisää seuraava. Näin jos jotain menee pieleen, tiedät mikä."
+**Opettajan huomio:** Ohjaa opiskelijat rakentamaan työnkulku pienissä osissa. Jokainen uusi solmu testataan ennen seuraavan lisäämistä. Näin virheen lähde on helpompi löytää.
+
+Kerro opiskelijoille:
+
+> Rakenna ensin trigger ja yksi solmu. Testaa ne. Kun ne toimivat, lisää seuraava solmu. Jos jokin menee pieleen, tiedät tarkemmin, missä virhe syntyi.
 
 ### Testaamisen filosofia
 
-Testaaminen on kolmiosainen:
+Agenttia ei testata vain kysymällä siltä kerran oikea kysymys. Testaamisen pitää kattaa kolme erilaista tilannetyyppiä:
 
-1. **Normaalit tapaukset** — Agentti on suunniteltu näihin. Pitää toimia.
-2. **Reunatapaukset** — Epätavallisia, mutta mahdollisia. Agentti pitää käsitellä nämä rakentavasti.
-3. **Turvallisuus** — Aktiivisia hyökkäysyrityksiä. Agentti pitää torjua ne.
+1. **Normaalit tapaukset:** tilanteet, joita varten agentti on suunniteltu. Näiden pitää toimia varmasti.
+2. **Reunatapaukset:** epätavalliset mutta mahdolliset tilanteet. Agentin pitää käsitellä ne rakentavasti.
+3. **Turvallisuustestit:** aktiiviset hyökkäysyritykset tai väärinkäyttötilanteet. Agentin pitää torjua ne turvallisesti.
 
-Ilman turvallisuustesteja et tiedä, onko agentissasi haavoittuvuuksia.
+| Testityyppi | Mitä testataan? | Esimerkki |
+| --- | --- | --- |
+| **Normaali tapaus** | Toimiiko agentti siinä tehtävässä, johon se on suunniteltu? | FAQ-botti vastaa kurssin aikataulua koskevaan kysymykseen. |
+| **Reunatapaus** | Miten agentti toimii epäselvässä tai poikkeavassa tilanteessa? | Käyttäjä lähettää tyhjän viestin tai kaksi ristiriitaista pyyntöä. |
+| **Turvallisuustesti** | Torjuuko agentti väärinkäytön ja hyökkäysyritykset? | Käyttäjä yrittää prompt injection -hyökkäystä: “Unohda aiemmat ohjeet.” |
 
 ### Dokumentaation kolme tasoa
 
-**README** — ei-tekniset ihmiset
-- Yksinkertainen, selkeä, esimerkkejä
+Dokumentaatio palvelee eri lukijoita. Siksi yksi dokumentti ei riitä kaikkeen.
 
-**ARCHITECTURE** — tekijät ja ylläpitäjät
-- Tekninen, yksityiskohtainen, kaavioita
-
-**SAFETY** — riskinarvioint
-- Riskit, ratkaisut, testtulokset
-
-Jokainen dokumentti palvelee eri yleisöä.
+| Dokumentti | Kenelle se on? | Mitä se sisältää? |
+| --- | --- | --- |
+| **README** | Käyttäjille ja ei-teknisille lukijoille | Mitä agentti tekee, miten sitä käytetään ja esimerkit käytöstä. |
+| **ARCHITECTURE** | Tekijöille, ylläpitäjille ja arvioijille | Solmut, työnkulku, inputit, outputit ja agentin kuusi komponenttia. |
+| **SAFETY** | Riskien arvioijille ja vastuuhenkilöille | Riskit, ehkäisykeinot, turvakerrokset ja testitulokset. |
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Jos testaus menee pieleen, projekti epäonnistui"
+### Väärinkäsitys 1: “Jos testaus menee pieleen, projekti epäonnistui.”
 
-**Todellisuus:** Jos testaus menee pieleen JA korjaat sen, projekti onnistui. Epäonnistuminen on, jos testaus menee pieleen ja et huomaa.
+**Korjaava näkökulma:** Epäonnistunut testi ei tarkoita epäonnistunutta projektia. Jos testi paljastaa ongelman ja opiskelija korjaa sen, projekti kehittyy paremmaksi. Todellinen ongelma on se, jos virhe jää huomaamatta.
 
-**Opetuskäytäntö:** Kerro: "Epäonnistuneet testit ovat hyviä. Ne osoittavat, että testit toimivat. Kun löydät ongelman ja korjaat sen, olet parempi insinööri."
+> Epäonnistuneet testit ovat hyödyllisiä. Ne osoittavat, että testit löytävät ongelmia. Kun löydät ongelman ja korjaat sen, toimit kuten ammattilainen.
 
-### 2. "Dokumentaatio on turhaa — koodi on tarpeeksi"
+### Väärinkäsitys 2: “Dokumentaatio on turhaa — työnkulku kertoo kaiken.”
 
-**Todellisuus:** Koodi kertoo mitä agentti tekee. Dokumentaatio selittää miksi. Dokumentaation puuttuminen on kriittinen ongelma tuotannossa.
+**Korjaava näkökulma:** Työnkulku näyttää, mitä tapahtuu. Dokumentaatio selittää, miksi näin tapahtuu, miten kokonaisuus toimii ja miten sitä ylläpidetään.
 
-**Esimerkki:** "Kuka muu voi ylläpitää projektia, jos sinulla menee poissa ja et ole jättänyt dokumentaatiota?"
+**Esimerkki opetukseen**
 
-### 3. "Turvallisuustestit ovat äärimmäisiä — oikeat käyttäjät eivät tekisi näin"
+Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poissa etkä ole kirjoittanut dokumentaatiota?”
 
-**Todellisuus:** Oikeat hyökkääjät tekevät näin. Turvallisuustestit ovat realistista harjoittelua.
+### Väärinkäsitys 3: “Turvallisuustestit ovat liioittelua.”
 
-"Prompt injection ei ole teoreettinen. Se tapahtuu oikeassa maailmassa. Sinun agenttisi pitää torjua se."
+**Korjaava näkökulma:** Turvallisuustestit eivät ole kuvitteellisia ääriesimerkkejä. Esimerkiksi **prompt injection** on todellinen riski agenttijärjestelmissä. Jos agentti voi lähettää viestejä, lukea tietoa tai käyttää työkaluja, sitä pitää testata väärinkäyttöä vastaan.
 
-### 4. "Oma projektini on liian pieni dokumentoinnista"
+### Väärinkäsitys 4: “Oma projektini on liian pieni dokumentointiin.”
 
-**Todellisuus:** Jopa pienillä projekteilla on dokumentaatio. Se auttaa sinua muistamaan, mitä teit kuukauden päästä.
+**Korjaava näkökulma:** Myös pieni projekti tarvitsee dokumentaation. Dokumentaatio auttaa opiskelijaa itseään muistamaan myöhemmin, mitä hän teki ja miksi.
 
 ---
 
-## Luokkatehtävän ohjeistus
+## Luokkatehtävien ohjeistus
 
 ### TT-A: Testaaminen
 
 **Tavoite:** Opiskelija testaa agenttia systemaattisesti ja dokumentoi tulokset.
 
-**Yleisiä ongelmia:**
+**Tehtävä:** Opiskelijan tulee tehdä vähintään 15 testiä:
 
-- Opiskelija testaa vain muutaman kerran ja väittää "valmis"
-  - Ratkaisu: vaadi 15 testiä (5 normaalia + 5 reuna + 5 turva)
+- **5 normaalia testiä**
+- **5 reunatapaustestiä**
+- **5 turvallisuustestiä**
 
-- Testaus on satunnaista, ei dokumentoitua
-  - Ratkaisu: vaadi testausraportin muotoa — kirjaa jokainen testi
+| Testi | Syöte | Odotettu tulos | Todellinen tulos | Hyväksytty vai korjattava? |
+| --- | --- | --- | --- | --- |
+| Normaali tapaus |  |  |  |  |
+| Reunatapaus |  |  |  |  |
+| Turvallisuustesti |  |  |  |  |
 
-- Turvallisuustestit puuttuvat tai liian pehmeitä
-  - Ratkaisu: näytä konkreettisia hyökkäysyrityksiä (prompt injection, piilotut ohjeet)
+**Yleisiä ongelmia ja opettajan ratkaisuja:**
 
-- Opiskelija ei korjaa epäonnistuneita testeja
-  - Ratkaisu: sano: "Epäonnistuneet testit ovat merkintöjä siitä, mitä pitää korjata. Korjaa ne."
+| Ongelma | Opettajan ohjaava ratkaisu |
+| --- | --- |
+| Opiskelija testaa vain muutaman kerran ja sanoo projektin olevan valmis. | Vaadi vähintään 15 dokumentoitua testiä. |
+| Testaus on satunnaista eikä sitä kirjata. | Vaadi testausraportti, johon jokainen testi kirjataan. |
+| Turvallisuustestit puuttuvat tai ovat liian pehmeitä. | Näytä konkreettisia hyökkäysyrityksiä, kuten prompt injection ja piilotetut ohjeet. |
+| Opiskelija ei korjaa epäonnistuneita testejä. | Muistuta: epäonnistunut testi kertoo, mitä pitää korjata ennen demoa. |
 
-**Aikaarvio:** 30-45 min
+**Aika-arvio:** 30–45 minuuttia
+
+---
 
 ### TT-B: Dokumentaatio
 
 **Tavoite:** Opiskelija kirjoittaa ammatillista dokumentaatiota.
 
-**Yleisiä ongelmia:**
+Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
-- README on liian tekninen
-  - Ratkaisu: sano: "README on ihmisille, jotka eivät ymmärrä tekniikkaa. Yksinkertaista sitä."
+1. **README:** mitä agentti tekee ja miten sitä käytetään.
+2. **ARCHITECTURE:** miten agentti on rakennettu ja mitä kukin solmu tekee.
+3. **SAFETY:** mitä riskejä agentissa on ja miten ne on huomioitu.
 
-- ARCHITECTURE puuttuu kokonaan tai on liian yksinkertainen
-  - Ratkaisu: vaadi taulukkoa: jokainen solmu, sen tehtävä, input/output
+#### README — käyttäjälle
 
-- SAFETY on pelkkä lista, ei analyysia
-  - Ratkaisu: vaadi "Mitä tapahtuu jos...?" -taulukkoa ja ratkaisuja jokaiselle riskille
+- Mikä agentti on?
+- Mihin ongelmaan se auttaa?
+- Miten sitä käytetään?
+- Mitä se ei tee?
+- Anna 1–2 esimerkkikäyttötilannetta.
 
-- Dokumentaatiossa ei ole kuuden komponentin linkitystä
-  - Ratkaisu: vaadi eksplisiittisesti: "Kirjoita, mikä solmu on syötekäsittelijä, mikä päättelijä, jne."
+#### ARCHITECTURE — ylläpitäjälle
 
-**Aikaarvio:** 45-60 min
+| Solmu | Tehtävä | Input | Output | Agentin komponentti |
+| --- | --- | --- | --- | --- |
+| [Solmun nimi] | [Mitä solmu tekee?] | [Mitä dataa solmu saa?] | [Mitä dataa solmu palauttaa?] | [Syötekäsittelijä / päättelijä / työkalu / muisti / turvakerros / palaute] |
+
+#### SAFETY — riskien arviointiin
+
+| Riski | Mitä voi tapahtua? | Miten riskiä vähennetään? | Miten testattiin? |
+| --- | --- | --- | --- |
+| Prompt injection | Agentti voi yrittää noudattaa käyttäjän haitallista ohjetta. | Syötteen validointi, rajaukset ja turvakerros. | Testattiin hyökkäysviesteillä. |
+
+**Yleisiä ongelmia ja opettajan ratkaisuja:**
+
+- **README on liian tekninen:** muistuta, että README on myös ei-tekniselle lukijalle. Pyydä yksinkertaistamaan kieltä.
+- **ARCHITECTURE puuttuu tai on liian suppea:** vaadi taulukko, jossa jokaiselle solmulle on tehtävä, input, output ja agentin komponentti.
+- **SAFETY on pelkkä lista:** pyydä lisäämään “Mitä tapahtuu, jos…” -analyysi ja jokaiselle riskille ehkäisykeino.
+- **Kuuden komponentin linkitys puuttuu:** vaadi, että opiskelija nimeää, mikä solmu toimii syötekäsittelijänä, päättelijänä, työkaluna, muistina, turvakerroksena ja palautteena.
+
+**Aika-arvio:** 45–60 minuuttia
+
+---
 
 ### TT-C: Punainen tiimi
 
-**Tavoite:** Opiskelija testaa ja arvioi toisen projektia kriittisesti.
+**Tavoite:** Opiskelija testaa ja arvioi toisen projektia kriittisesti mutta rakentavasti.
 
-**Yleisiä ongelmia:**
+**Opettajan painotus:** Punainen tiimi ei arvostele ihmistä, vaan etsii järjestelmän heikkoja kohtia. Palautteen tarkoitus on tehdä projektista parempi ja turvallisempi.
 
-- Palaute on liian pehmeää ("Tämä on hyvää!")
-  - Ratkaisu: sano: "Konkreetit. Mikä tarkalleen on hyvää? Miksi?"
+**Punaisen tiimin tehtävä:**
 
-- Palaute on liian ankara ("Tämä on huono!")
-  - Ratkaisu: muistuta: "Tavoite on auttaa, ei vahingoittaa. Ole rakentava."
+1. Käyttäkää toisen ryhmän agenttia tai lukekaa sen dokumentaatio.
+2. Testatkaa agenttia normaaleilla, poikkeavilla ja turvallisuutta haastavilla syötteillä.
+3. Kirjatkaa vähintään kolme konkreettista havaintoa.
+4. Antakaa jokaiselle havainnolle parannusehdotus.
 
-- Turvallisuustestit puuttuvat kokonaan
-  - Ratkaisu: vaadi konkreettisia testeja: "Entä prompt injection? Entä piilotut ohjeet?"
+**Tarkistuslista punaiselle tiimille:**
 
-- Punainen tiimi ei testaa tarpeeksi
-  - Ratkaisu: anna tarkistuslista: "Testattiin nämä 15 asiaa?"
+- Testattiinko vähintään yksi normaali käyttötapaus?
+- Testattiinko vähintään yksi reunatapaus?
+- Testattiinko vähintään yksi prompt injection -yritys?
+- Tarkistettiinko, paljastaako agentti tietoja, joita sen ei pitäisi paljastaa?
+- Tarkistettiinko, pysähtyykö agentti hyväksyntäporttiin riskitilanteessa?
+- Tarkistettiinko, onko dokumentaatio riittävää?
 
-**Aikaarvio:** 30-40 min
+**Aika-arvio:** 30–40 minuuttia
+
+---
 
 ### TT-D: Demo ja itsekritiikki
 
-**Tavoite:** Opiskelija esittelee projektinsa ja arvioi sitä kriittisesti.
+**Tavoite:** Opiskelija esittelee projektinsa selkeästi ja arvioi sitä kriittisesti.
 
-**Yleisiä ongelmia:**
+**Demon kesto:** 3–5 minuuttia.
 
-- Demo on liian pitkä tai liian lyhyt
-  - Ratkaisu: vaadi 3-5 minuuttia — ei enempää, ei vähempää
+**Demon tulee sisältää:**
 
-- Itsekritiikki puuttuu ("Se toimii täydellisesti!")
-  - Ratkaisu: sano: "Mikään ei ole täydellinen. Mitä epäonnistui? Mitä oppit?"
+1. Mitä agentti tekee?
+2. Mikä on agentin käyttötapaus?
+3. Miten työnkulku etenee n8n:ssä?
+4. Missä näkyvät agentin kuusi komponenttia?
+5. Miten agenttia testattiin?
+6. Mikä ei vielä toimi täydellisesti?
+7. Mitä opiskelija tekisi seuraavaksi, jos projekti jatkuisi?
 
-- Kuuden komponentin linkitys puuttuu demosta
-  - Ratkaisu: vaadi selityksessä: "Näytä, mikä solmu on päättelijä ja miksi."
+**Opettajan tarkistuskysymys:** Jos opiskelija sanoo “kaikki toimii täydellisesti”, kysy: “Mikä oli vaikein kohta? Mitä riskiä et vielä ehtinyt ratkaista? Mitä parantaisit seuraavassa versiossa?”
 
-- Opiskelija ei kuuntele punaisen tiimin palautetta
-  - Ratkaisu: sano: "Punainen tiimi löysi ongelmia. Miten vastaat niihin?"
-
-**Aikaarvio:** 20-30 min
-
----
-
-## Arviointikaavio (projektiviikko)
-
-| Kriteeri | Paino | Mitä se tarkoittaa |
-|----------|-------|---------------------|
-| **Toiminnallisuus** | 30 % | Tekeekö agentti sen, mitä lupasit? Toimiiko se ilman kriittisiä virheitä? |
-| **Dokumentaatio** | 20 % | Voidaanko projektia ymmärtää ilman sinun selitystäsi? README + ARCHITECTURE + SAFETY olemassa? |
-| **Testaaminen** | 20 % | Testattiinko normaalia, reunatapauksia ja turvallisuutta? Dokumentoitiko tulokset? |
-| **Demo** | 15 % | Osaatko esitellä selkeästi? Voitko puolustaa valintojasi? |
-| **Kriittinen ajattelu** | 15 % | Tunnistitko kuuden komponentin? Linkkivätkö ne solmuihisi? Ymmärrät heikkoudet? |
+**Aika-arvio:** 20–30 minuuttia
 
 ---
 
-## Tuntiesityksen rakenne (45 minuuttia)
+## Arviointikaavio projektiviikolle
 
-1. **Kertaus: iteratiivinen kehitys** (3 min)
-   - "Rakentakaa pienissä askelissa. Testatkaa jokaisen askeleen jälkeen."
+| Kriteeri | Paino | Mitä se tarkoittaa? |
+| --- | --- | --- |
+| **Toiminnallisuus** | 30 % | Tekeekö agentti sen, mitä opiskelija lupasi? Toimiiko se ilman kriittisiä virheitä? |
+| **Dokumentaatio** | 20 % | Voidaanko projektia ymmärtää ilman opiskelijan suullista selitystä? Ovatko README, ARCHITECTURE ja SAFETY mukana? |
+| **Testaaminen** | 20 % | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
+| **Demo** | 15 % | Osaako opiskelija esitellä projektin selkeästi ja perustella valintansa? |
+| **Kriittinen ajattelu** | 15 % | Tunnistaako opiskelija agentin kuusi komponenttia, projektin heikkoudet ja mahdolliset parannuskohteet? |
 
-2. **Rakentamisen demo** (5 min)
-   - Näytä, miten rakennetaan prototyyppistä valmistuotteeseen
+---
 
-3. **Testaamisen koulutus** (7 min)
-   - Näytä normaalia, reunatapausta ja turvallisuustestiä live
+## Tuntiesityksen rakenne: 45 minuuttia
 
-4. **Dokumentaation selitys** (5 min)
-   - Näytä README + ARCHITECTURE + SAFETY -esimerkkejä
+1. **Kertaus: iteratiivinen kehitys noin 3 minuuttia**
 
-5. **Opiskelijat rakentavat ja testaavat** (20 min)
-   - Kierrä luokassa, anna palautetta, auta ongelmissa
+   Muistuta opiskelijoita: “Rakentakaa pienissä askelissa. Testatkaa jokaisen askeleen jälkeen.”
+2. **Rakentamisen demo noin 5 minuuttia**
 
-6. **Yhteenveto ja seuraavat askeleet** (5 min)
-   - "Seuraavalla tunnilla esitätte demot. Valmistautukaa."
+   Näytä, miten yksinkertainen prototyyppi kehittyy kohti valmista työnkulkua.
+3. **Testaamisen koulutus noin 7 minuuttia**
+
+   Näytä yksi normaali testi, yksi reunatapaus ja yksi turvallisuustesti livenä.
+4. **Dokumentaation selitys noin 5 minuuttia**
+
+   Näytä lyhyet esimerkit README-, ARCHITECTURE- ja SAFETY-dokumenteista.
+5. **Opiskelijat rakentavat ja testaavat noin 20 minuuttia**
+
+   Kierrä luokassa, anna palautetta ja auta ongelmatilanteissa.
+6. **Yhteenveto ja seuraavat askeleet noin 5 minuuttia**
+
+   Kerro opiskelijoille: “Seuraavalla tunnilla esitätte demot. Valmistautukaa näyttämään, miten agentti toimii, miten testasitte sen ja mitä parantaisitte seuraavaksi.”
 
 ---
 
 ## Materiaalit, jotka opettajalla pitää olla valmiina
 
-- **N8n-instanssi** (testattavaksi)
-- **Malliagentit:**
-  - Yksinkertainen (Trigger + HTTP + IF + Discord)
-  - Keskivertainen (Webhook + Validointi + OpenAI + Tarkistus + Discord)
-  - Haastava (kaikki yllä + Memory + Logging)
-- **Testausraportin malli** (printattava)
-- **Dokumentaation mallit** (README, ARCHITECTURE, SAFETY)
-- **Punaisen tiimin palautelomake** (printattava)
-- **Arviointikaavio** (printattava)
+- **n8n-instanssi** testikäyttöön
+- **Malliagentit** eri tasoille:
+  - yksinkertainen: Trigger + HTTP + IF + Discord
+  - keskitaso: Webhook + Validointi + OpenAI + Tarkistus + Discord
+  - haastava: edelliset sekä Memory ja Logging
+- **Testausraportin malli** printattuna tai jaettuna digitaalisesti
+- **Dokumentaation mallit**: README, ARCHITECTURE ja SAFETY
+- **Punaisen tiimin palautelomake**
+- **Arviointikaavio**
 
 ---
 
 ## Opettajan vihjeet
 
-1. **Opiskelijat haluavat rakentaa liian nopeasti**
-   - Pakota heitä pysähtymään ja suunnittelemaan ennen rakentamista
+### Jos opiskelijat haluavat rakentaa liian nopeasti
 
-2. **Testaaminen jää tekemättä**
-   - Aseta testaaminen pakolliseksi välivaiheeksi — ei demoa ilman testiraporttia
+Pysäytä eteneminen hetkeksi ja pyydä heitä tarkistamaan suunnitelma:
 
-3. **Dokumentaatio unohdetaan**
-   - Sano selkeästi: "Ilman dokumentaatiota projekti ei ole valmis."
+- Mikä on pienin toimiva versio?
+- Mikä solmu lisätään seuraavaksi?
+- Miten testaatte sen ennen seuraavaa solmua?
 
-4. **Kriittinen ajattelu puuttuu**
-   - Kysy: "Miksi valitsit tämän? Mitä olisit voinut tehdä toisin? Mitä puuttuu?"
+### Jos testaaminen jää tekemättä
 
-5. **Aikapaineista huolimatta laatu sijoiksi**
-   - "Pienempi, hyvin testattu ja dokumentoitu projekti on aina parempi kuin suurempi puolivalmis työ."
+Aseta testaus pakolliseksi välivaiheeksi.
 
-## Eriyttäminen ja tuen tarpeet — arviointitehtävä Agentit-osiossa
+> Ei demoa ilman testiraporttia.
+
+### Jos dokumentaatio unohtuu
+
+Muistuta opiskelijoita:
+
+> Ilman dokumentaatiota projekti ei ole valmis.
+
+### Jos kriittinen ajattelu puuttuu
+
+Kysy opiskelijoilta:
+
+- Miksi valitsit tämän ratkaisun?
+- Mitä olisit voinut tehdä toisin?
+- Mitä projektista vielä puuttuu?
+- Mikä on suurin riski?
+
+### Jos aika loppuu kesken
+
+Korosta laatua määrän sijaan:
+
+> Pienempi, hyvin testattu ja dokumentoitu projekti on parempi kuin suurempi puolivalmis työ.
+
+---
+
+## Eriyttäminen ja tuen tarpeet arviointitehtävässä
 
 ### Suorituspolut
-Opiskelijat voivat valita ohjatun (Polku A) tai tutkivan (Polku B) testauksen. Polku A seuraa valmista suunnitelmaa, Polku B vaatii opiskelijan itse keksimiä testejä. Molemmat arvioidaan samoilla kriteereillä.
 
-### Tuen kohdat Agentit-osiossa
+Opiskelijat voivat valita kahdesta testauspolusta:
 
-| Tunti | Kriittinen kohta | Merkki siitä, että opiskelija tarvitsee tukea | Mitä tehdä |
-|-------|-----------------|----------------------------------------------|-----------|
-| 19 | Agentin käsite | Opiskelija sekoittaa agentin ja chatbotin | Palaa konkreettiseen esimerkkiin: "Chatbot vastaa. Agentti tekee." |
-| 21 | Vektoritietokanta | Opiskelija ei ymmärrä, miksi se on tärkeää | "Ajattele Google-hakua, joka ymmärtää mitä tarkoitat, ei vain mitä kirjoitat" |
-| 23 | ReAct ja suunnittelumallit | Opiskelija kadottaa punaisen langan | Piirrä yksinkertainen kaavio: "Ajattele → Tee → Tarkista → Toista" |
-| 26 | n8n:n aloittaminen | Opiskelija jähmettyy tyhjän työtilan edessä | Ohjaa Taso 1 -projektiin (FAQ-botti) ja "Jos olet jumissa" -osion pariin |
-| 27 | Dokumentaatio | Opiskelija ei tiedä mitä kirjoittaa | Näytä ARCHITECTURE.md -pohja ja sano: "Täytä tämä solmu kerrallaan" |
+- **Polku A: ohjattu testaus** — opiskelija seuraa valmista testauspohjaa ja täyttää jokaisen kohdan.
+- **Polku B: tutkiva testaus** — opiskelija suunnittelee itse testit ja perustelee, miksi ne ovat tärkeitä.
+
+Molemmat polut arvioidaan samoilla kriteereillä. Polku A tukee opiskelijaa, joka tarvitsee selkeän rakenteen. Polku B sopii opiskelijalle, joka pystyy itsenäisempään analyysiin.
+
+### Tuen kohdat agentit-osiossa
+
+| Oppitunti | Kriittinen kohta | Merkki tuen tarpeesta | Mitä opettaja tekee? |
+| --- | --- | --- | --- |
+| 19 | Agentin käsite | Opiskelija sekoittaa agentin ja chatbotin. | Palaa konkreettiseen esimerkkiin: “Chatbot vastaa. Agentti tekee.” |
+| 21 | Vektoritietokanta | Opiskelija ei ymmärrä, miksi se on tärkeä. | Käytä vertausta: “Se on kuin haku, joka ymmärtää mitä tarkoitat, ei vain mitä kirjoitat.” |
+| 23 | ReAct ja suunnittelumallit | Opiskelija kadottaa punaisen langan. | Piirrä yksinkertainen kaavio: “Ajattele → Tee → Tarkista → Toista.” |
+| 26 | n8n:n aloittaminen | Opiskelija jähmettyy tyhjän työtilan edessä. | Ohjaa Taso 1 -projektiin, esimerkiksi FAQ-bottiin, ja anna valmis aloitusrakenne. |
+| 27 | Dokumentaatio | Opiskelija ei tiedä, mitä kirjoittaa. | Näytä ARCHITECTURE-pohja ja sano: “Täytä tämä solmu kerrallaan.” |
 
 ### LLM-resistenssin varmistaminen arviointitehtävässä
-- n8n-projekti on luonnostaan LLM-resistentti: opiskelija rakentaa visuaalisen työnkulun, testaa sitä ja dokumentoi arkkitehtuurin.
-- Vertaisarviointi (punainen tiimi) ja suullinen demo paljastavat, onko opiskelija todella ymmärtänyt rakentamansa agentin.
-- Itsekritiikki-dokumentti vaatii henkilökohtaista pohdintaa, jota ei voi generoida.
 
+- n8n-projekti on luonnostaan osittain **LLM-resistentti**, koska opiskelija rakentaa visuaalisen työnkulun, testaa sen ja dokumentoi oman arkkitehtuurinsa.
+- **Vertaisarviointi** eli punainen tiimi ja **suullinen demo** paljastavat, ymmärtääkö opiskelija todella rakentamansa agentin.
+- **Itsekritiikki** vaatii henkilökohtaista pohdintaa: mitä opiskelija yritti, mikä epäonnistui, mitä hän oppi ja mitä hän tekisi seuraavaksi.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että toimiva agentti ei synny yhdellä onnistuneella ajolla. Ammatillinen agenttiprojekti rakennetaan pienissä osissa, testataan monipuolisesti, dokumentoidaan selkeästi ja arvioidaan kriittisesti.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mikä oman agenttisi tärkein riski on? Miten testasit sen, ja mitä dokumentaatiosi kertoo siitä?
+
+---

@@ -2,177 +2,169 @@
 
 ## Johdanto
 
-Nyt tiedät, mistä agentti koostuu — muistista, työkaluista, identiteetistä. Mutta kuinka saat agentin **ajattelemaan oikein**? Kuinka varmistan, että se tekee asiat järkevässä järjestyksessä, eikä hyppää sattumalta vääriin johtopäätöksiin?
+Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin **ajattelemaan ja toimimaan järkevästi**. Miten varmistat, että se etenee oikeassa järjestyksessä eikä hyppää sattumanvaraisesti vääriin johtopäätöksiin?
 
-Vastaus on **suunnittelumallit** (design patterns). Nämä ovat testattuja strategioita siitä, kuinka agentti ajattelee ja toimii. Ne perustuvat siihen, **kuinka ihmiset ratkovat monimutkaisia ongelmia**. Kun opit nämä mallit, voit neuvoa agenttia ajattelemaan kuten osaava asiantuntija — perustelemaan jokaisen askeleen, jakamaan ongelman osiin ja koordinoimaan tiiminsä.
+Vastaus on **suunnittelumallit** eli design patterns. Ne ovat testattuja tapoja ohjata sitä, miten agentti päättelee ja toimii. Suunnittelumallit perustuvat siihen, **miten ihmiset ratkaisevat monimutkaisia ongelmia**: he perustelevat päätöksiään, jakavat ongelman osiin ja koordinoivat eri työvaiheita.
 
-Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agentti ReActia vai ketjuajattelua, rakentaatko sen yksittäiseksi vai moniagenttisysteemiksi. Nämä päätökset tekevät agentista tehokkaan tai hidas.
+Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agenttisi **ReAct-mallia** vai **ketjuajattelua** ja rakennatko sen yksittäiseksi agentiksi vai moniagenttijärjestelmäksi. Nämä päätökset vaikuttavat siihen, onko agentti tehokas, hidas, selkeä vai vaikeasti hallittava.
 
-## ReAct: ajattele, sitten toimi, sitten ajattele uudelleen
+## ReAct: ajattele, toimi ja ajattele uudelleen
 
-ReAct tarkoittaa **Reasoning + Acting** — agentti vuorottelee ajattelun ja toiminnan välillä. Se ei hyppää suoraan toimintaan. Sen sijaan se ajattelee ensin, sitten toimii, sitten ajattelee uudelleen tuloksen perusteella.
+**ReAct** tarkoittaa sanoja **Reasoning + Acting** eli päättely ja toiminta. ReAct-mallissa agentti vuorottelee ajattelun ja toiminnan välillä. Se ei hyppää suoraan toimintaan, vaan ajattelee ensin, toimii sen jälkeen ja arvioi sitten toiminnan tuloksen.
 
-Käytännössä se näyttää tältä. Agentti saa tehtävän: "Asiakas kysyy, onko tuotetta saatavilla." Agentti ei heti kulje varasto-API:a. Ensimmäinen vaihe on **ajattelu**: "Asiakkaan kysymys on selkeä. Minun täytyy tarkistaa varasto. Kutsun varasto-API:a." Tämä ajattelu äännetään ääneen (loggiin), jotta näet, mitä agentti on päätellyt.
+Käytännössä se voi näyttää tältä. Agentti saa tehtävän: ”Asiakas kysyy, onko tuotetta saatavilla.” Agentti ei heti kutsu varasto-API:a, vaan aloittaa **ajattelulla**: ”Asiakkaan kysymys on selkeä. Minun täytyy tarkistaa varastotilanne. Kutsun varasto-API:a.” Tämä ajattelu voidaan kirjata lokiin, jotta nähdään, mitä agentti on päätellyt.
 
-Sitten **toiminta**: agentti kutsuu varasto-API:a ja saa vastauksen: "Tuotetta on 5 kappaa."
+Seuraavaksi tulee **toiminta**: agentti kutsuu varasto-API:a ja saa vastauksen: ”Tuotetta on 5 kappaletta.”
 
-Sitten **ajattelu uudelleen**: "Varasto sanoo, että tuotetta on 5 kappaa. Asiakas voi ostaa. Minulla on nyt riittävä tieto vastata." Agentti perustelee, mitä seuraava askel on.
+Sitten agentti **ajattelee uudelleen**: ”Varasto kertoo, että tuotetta on 5 kappaletta. Asiakas voi siis ostaa tuotteen. Minulla on nyt riittävä tieto vastaukseen.” Agentti perustelee, mikä seuraava askel on.
 
-Lopuksi **toinen toiminta**: agentti kirjoittaa vastauksen: "Kyllä, meillä on 5 kappaletta varastossa. Voitko tilata nyt?" Ajattelu ja toiminta vuorottelevat, kunnes tehtävä on valmis.
+Lopuksi agentti tekee **toisen toiminnon** ja kirjoittaa asiakkaalle vastauksen: ”Kyllä, tuotetta on 5 kappaletta varastossa. Voit tehdä tilauksen nyt.” Ajattelu ja toiminta vuorottelevat, kunnes tehtävä on valmis.
 
-ReAct on tehokas, koska agentti perustelee jokaisen askeleensa ennen kuin tekee mitään. Se ei hyppää suoraan toimintaan. Se sanoo ensin, miksi se tekee sen. Tämä tekee agentin päätöksistä **ymmärrettävämpiä** ja **pienemmän todennäköisyyden virheisiin**.
+ReAct on tehokas malli, koska agentti perustelee jokaisen askeleensa ennen toimintaa. Se ei toimi sokkona, vaan kertoo ensin, miksi se tekee seuraavan toimenpiteen. Tämä tekee agentin päätöksistä **ymmärrettävämpiä** ja vähentää virheiden todennäköisyyttä.
 
-```mermaid
-graph TD
-    A["📩 Tehtävä saapuu"] --> B["🤔 Ajattele<br/>Mitä tiedän? Mitä tarvitsen?"]
-    B --> C["🔧 Toimi<br/>Kutsu työkalu tai hae tietoa"]
-    C --> D["👁️ Havainnoi<br/>Mitä sain? Oliko hyödyllistä?"]
-    D --> E{"Riittääkö?"}
-    E -->|Ei| B
-    E -->|Kyllä| F["✅ Vastaa käyttäjälle"]
+**ReAct-mallin eteneminen**
 
-    style B fill:#e3f2fd,stroke:#1976D2
-    style C fill:#fff3e0,stroke:#F57C00
-    style D fill:#f3e5f5,stroke:#7B1FA2
-```
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| **Tehtävä saapuu** | → | **Ajattele** Mitä tiedän? Mitä tarvitsen? | → | **Toimi** Kutsu työkalua tai hae tietoa. |
+| ↓ | | | | |
+| **Vastaa käyttäjälle** | ← | **Riittääkö tieto?** Kyllä: vastaa. Ei: ajattele uudelleen. | ← | **Havainnoi** Mitä sain? Oliko tulos hyödyllinen? |
 
-Kun loggaat ReActia, näet selvästi agentin ajattelun ja toiminnan:
+Kun ReAct-mallin toimintaa lokitetaan, agentin ajattelu ja toiminta näkyvät selvästi:
 
-```
-[AJATTELU] Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea se tietokannasta.
-[TOIMINTA] GET /api/product?id=12345 -> Hinta: 45€
-[AJATTELU] Tietokanta antoi hinnan. Minulla on nyt vastaus.
-[TOIMINTA] Lähetä vastaus: "Tuotteen hinta on 45€."
-```
+**[AJATTELU]** Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea se tietokannasta.
 
-Näet jokaisen vaiheet ja voit ymmärtää, mitä agentti ajatteli. Jos jokin menee pieleen, näet tasan missä ajattelussa tai toiminnassa vika oli.
+**[TOIMINTA]** GET /api/product?id=12345 → Hinta: 45 €
 
-> **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, sitten toimit, sitten ajattelet tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Mitä ReAct-malli voisi auttaa sinua tekemään paremmin?
+**[AJATTELU]** Tietokanta antoi hinnan. Minulla on nyt vastaus.
+
+**[TOIMINTA]** Lähetä vastaus: ”Tuotteen hinta on 45 €.”
+
+Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin menee pieleen, lokista voi nähdä tarkasti, missä ajattelun tai toiminnan vaiheessa virhe tapahtui.
+
+> **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
 ## Ketjuajattelu: jaa ongelma osiin
 
-Ketjuajattelumallissa (chain-of-thought) agentti purkaa monimutkaisen ongelman pienempiin osiin ja käsittelee ne järjestyksessä. Se käyttää **numeroitua listaa**: ensin tämä, sitten tuo, sitten tämä.
+**Ketjuajattelussa** eli chain-of-thought-mallissa agentti purkaa monimutkaisen ongelman pienempiin osiin ja käsittelee ne järjestyksessä. Se etenee vaiheittain: ensin tämä, sitten tuo ja lopuksi seuraava askel.
 
-Esimerkiksi agentti saa tehtävän: "Käsittele palautuspyyntö." Agentti ei yritä ratkaista kaikkea yhdessä. Sen sijaan se purkaa ongelman:
+Esimerkiksi agentti saa tehtävän: ”Käsittele palautuspyyntö.” Agentti ei yritä ratkaista kaikkea yhdellä kertaa, vaan purkaa ongelman vaiheisiin:
 
-**1. Vaihe**: "Mikä on asiakkaan ongelma? Tilauksesta puuttuu kolme tuotetta."
+1. **Mikä on asiakkaan ongelma?** Tilauksesta puuttuu kolme tuotetta.
+2. **Onko palautusaika voimassa?** Tilaus tehtiin 5 päivää sitten, ja palautusaika on 14 päivää. Palautusaika on siis voimassa.
+3. **Mitä palautus vaatii?** Asiakkaalle täytyy toimittaa palautuslomake ja kuljetusohjeet.
+4. **Onko asiakas oikeutettu hyvitykseen vai korvaavaan tuotteeseen?** Yrityksen palautuskäytännön mukaan ensimmäisestä palautuksesta voidaan antaa hyvitys.
+5. **Mitä asiakkaalle lähetetään?** Asiakkaalle lähetetään viesti, jossa selitetään prosessi ja annetaan linkit palautuslomakkeeseen sekä kuljetusohjeisiin.
 
-**2. Vaihe**: "Onko palautusaika voimassa? Tilaus tehtiin 5 päivää sitten, palautusaika on 14 päivää, eli kyllä."
+Ketjuajattelu auttaa agenttia **välttämään virheitä**, koska se pakottaa käsittelemään yhden asian kerrallaan. Agentti ei yritä ratkaista kaikkea yhdellä hypyllä, vaan etenee systemaattisesti. Tämä tekee päätöksenteosta myös **jäljitettävämpää**: ihminen voi nähdä jokaisen vaiheen ja ymmärtää, miksi agentti toimi niin kuin toimi.
 
-**3. Vaihe**: "Mitä palautus vaatii? Palautuslomakkeen ja kuljetusohjeet."
+Vertaa seuraavia kahta tapaa toimia:
 
-**4. Vaihe**: "Onko asiakas oikeutettu hyvitykseen vai korvaavaan tuotteeseen? Tarkista yrityksen palautuskäytäntö. Käytäntö sanoo: ensimmäinen palautus saa hyvityksen."
+**Ilman ketjuajattelua:** Agentti näkee palautuspyynnön ja hyppää suoraan vastaukseen: ”Lähetän hyvityksen.” Mutta mitä jos palautusaika on jo kulunut? Entä jos käytäntö sanoo, että asiakkaalle pitää lähettää korvaava tuote hyvityksen sijaan? Agentti voi tehdä väärän päätöksen, koska se ei tarkistanut asiaa vaihe vaiheelta.
 
-**5. Vaihe**: "Mitä asiakkaalle lähetetään? Kirje, jossa selitetään prosessi, linkit palautuslomakkeelle ja kuljetusohjeet."
-
-Ketjuajattelu auttaa agenttia **välttämään virheitä**, koska se pakottaa agentin käsittelemään yhden asian kerrallaan. Se ei yritä ratkaista kaikkea yhdellä hypyllä. Se on systemaattinen ja **jäljitettävä** — ihminen voi nähdä jokaisen vaiheen ja ymmärtää, miksi agentti teki mitä teki.
-
-Vertaa näitä kahta strategiaa:
-
-**Ilman ketjuajattelua**: Agentti näkee palautuspyynnön ja hyppää suoraan: "Lähetan hyvityksen." Mutta mitä jos palautusaika oli kulunut? Mitä jos käytäntö sanoo "korvaa tuotteella, älä anna hyvitystä"? Agentti tekee väärän päätöksen, koska se ei käynyt läpi vaihetta vaiheelta.
-
-**Ketjuajattelun kanssa**: Agentti käy läpi jokaisen vaiheen. Se tarkistaa palautusajan. Se tarkistaa käytännön. Se tarkistaa, mistä tuotteista on kyse. Vasta sitten se tekee päätöksen. Virheet vähenevät.
+**Ketjuajattelun kanssa:** Agentti tarkistaa palautusajan, palautuskäytännön ja tuotteet ennen päätöksen tekemistä. Vasta tämän jälkeen se laatii vastauksen. Näin virheiden määrä vähenee.
 
 ## Moniagenttijärjestelmät: kun yksi agentti ei riitä
 
-Tähän asti olemme puhuneet yksittäisestä agentista. Mutta monimutkaisissa tehtävissä yksi agentti ei välttämättä riitä. Silloin rakennetaan **moniagenttijärjestelmä**, jossa useat erikoistuneet agentit tekevät yhteistyötä.
+Tähän asti olemme puhuneet yksittäisestä agentista. Monimutkaisissa tehtävissä yksi agentti ei kuitenkaan aina riitä. Silloin voidaan rakentaa **moniagenttijärjestelmä**, jossa useat erikoistuneet agentit tekevät yhteistyötä.
 
-Ajattele yritystä. Yksi ihminen ei hoida kaikkea — on myyjä, joka ymmärtää asiakkaat, kirjanpitäjä, joka hallinnoi rahaa, varastotyöntekijä, joka hoitaa logistiikkaa, ja johtaja, joka koordinoi kaikkea. Jokainen on erikoistunut omaan alueeseen. Moniagenttijärjestelmässä jokaisella agentilla on oma erikoisalansa.
+Ajattele yritystä. Yksi ihminen ei yleensä hoida kaikkea. On myyjä, joka ymmärtää asiakkaat, kirjanpitäjä, joka hallitsee rahaa, varastotyöntekijä, joka hoitaa logistiikkaa, ja johtaja, joka koordinoi kokonaisuutta. Jokainen on erikoistunut omaan alueeseensa. Moniagenttijärjestelmä toimii samalla periaatteella: jokaisella agentilla on oma erikoisalansa.
 
-Kuvittele asiakaspalvelun moniagenttisysteemia:
+Kuvittele asiakaspalvelun moniagenttijärjestelmä:
 
-- **Analyysi-agentti** lukee asiakkaan viestin: "Asiakas on tyytymätön kuljetuspalveluun."
-- **Tiedonhaku-agentti** hakee asiakkaan historian: "Tämä asiakas on ostanut meiltä 5 kertaa. Hän on lojaali. Hän on aiemmin ollut tyytymätön kuljetuspalveluihin."
-- **Kirjoitus-agentti** laatii vastauksen: "Anteeksi kuljetus-ongelmaasi. Tarjoan sinulle ilmaisen kotiintulon seuraavassa tilauksessa."
-- **Validointi-agentti** tarkistaa vastauksen: "Kyllä, vastaus on turvallinen. Se ei sisällä salattuja tietoja."
+- **Analyysiagentti** lukee asiakkaan viestin ja päättelee: ”Asiakas on tyytymätön kuljetuspalveluun.”
+- **Tiedonhakuagentti** hakee asiakkaan historian: ”Tämä asiakas on ostanut meiltä viisi kertaa. Hän on lojaali asiakas ja ollut aiemmin tyytymätön kuljetuspalveluihin.”
+- **Kirjoitusagentti** laatii vastauksen: ”Pahoittelemme kuljetusongelmaa. Tarjoamme sinulle maksuttoman kotiinkuljetuksen seuraavaan tilaukseen.”
+- **Validointiagentti** tarkistaa vastauksen: ”Vastaus on turvallinen. Se ei sisällä salassa pidettäviä tietoja.”
 
 Moniagenttijärjestelmässä on kaksi perusrakennetta.
 
-**Hierarkkinen malli**: Yksi agentti toimii johtajana ja jakaa tehtäviä muille. Johtaja-agentti näkee kokonaistehtävän ja päättää: "Tämä tehtävä vaatii tietokantahaun — lähetän sen hakuagentille. Kun hakuagentti on valmis, lähetän tuloksen kirjoittaja-agentille." Johtaja on orkesterin kapellimestari. Ohjaaja koordinoi, muut tekevät spesialistityönsä.
+**Hierarkkinen malli:** Yksi agentti toimii johtajana ja jakaa tehtäviä muille. Johtaja-agentti näkee kokonaistehtävän ja päättää: ”Tämä tehtävä vaatii tietokantahaun, joten lähetän sen hakuagentille. Kun hakuagentti on valmis, lähetän tuloksen kirjoittaja-agentille.” Johtaja toimii kuin orkesterin kapellimestari: se koordinoi kokonaisuutta, ja muut agentit tekevät erikoistuneet osatehtävänsä.
 
-```mermaid
-graph TD
-    A["🎯 Orkestroija<br/>Jakaa tehtävät"] --> B["🔍 Tutkija-agentti<br/>Hakee tietoa"]
-    A --> C["✍️ Kirjoittaja-agentti<br/>Tuottaa tekstiä"]
-    A --> D["🔒 Tarkistaja-agentti<br/>Validoi tulokset"]
+**Hierarkkinen moniagenttijärjestelmä**
 
-    B --> E["📊 Tulokset"]
-    C --> E
-    D --> E
-    E --> A
-```
+|  |  |  |
+| --- | --- | --- |
+| **Orkestroija** jakaa tehtävät ja kokoaa tulokset | | |
+| ↓ | | |
+| **Tutkija-agentti** hakee tietoa | **Kirjoittaja-agentti** tuottaa tekstin | **Tarkistaja-agentti** validioi tulokset |
+| ↓ | | |
+| **Tulokset palaavat orkestroijalle** | | |
 
-**Yhteistyömalli**: Agentit keskustelevat keskenään ilman johtajaa. Ensimmäinen agentti aloittaa, toinen vastaanottaa ja tekee seuraavan askeleen, kolmas tarkistaa, neljäs antaa palautetta. Ne vaihtavat tietoa keskenään ja tekevät yhteisiä päätöksiä.
+**Yhteistyömalli:** Agentit keskustelevat keskenään ilman yhtä johtajaa. Ensimmäinen agentti aloittaa, toinen vastaanottaa tiedon ja tekee seuraavan vaiheen, kolmas tarkistaa ja neljäs antaa palautetta. Agentit vaihtavat tietoa keskenään ja tekevät päätöksiä yhdessä.
 
-Moniagenttijärjestelmät ovat voimakkaita, koska ne voivat jakaa monimutkaisen työn osiin. Jokainen agentti tekee sitä, mitä se osaa parhaiten. Mutta ne ovat myös monimutkaisia. Mitä enemmän agentteja on, sitä vaikeampaa on ymmärtää, mitä järjestelmässä tapahtuu. Agentti A sanoo agentille B jotain, agentti B tekee päätöksen ja sanoo agentille C jotain, agentti C tekee jotain, mikä vaikuttaa agentin A:n päätöksiin — ketjureaktio. Siksi **lokitus ja seuranta** ovat erityisen tärkeitä, kun agentteja on useita.
+Moniagenttijärjestelmät ovat voimakkaita, koska niiden avulla monimutkainen työ voidaan jakaa osiin. Jokainen agentti tekee sitä, mitä se osaa parhaiten. Ne ovat kuitenkin myös monimutkaisia. Mitä enemmän agentteja on, sitä vaikeampaa on ymmärtää, mitä järjestelmässä tapahtuu. Agentti A kertoo jotain agentille B, agentti B tekee päätöksen ja lähettää tiedon agentille C, ja agentin C toiminta voi vaikuttaa agentti A:n seuraaviin päätöksiin. Siksi **lokitus ja seuranta** ovat erityisen tärkeitä, kun agentteja on useita.
 
-> **Pysähdy hetkeksi:** Ajattele todellista, monimutkaista tehtävää. Esimerkiksi asiakkaan uuden tilauksen käsittely: validointi, maksu, varasto, kuljetus, asiakaspalvelu. Miten jakaisit sen useamman erikoistuneen agentin kesken? Mikä agentti olisi johtaja? Mitä tietoa ne vaihtaisivat keskenään?
+> **Pysähdy hetkeksi:** Ajattele todellista, monimutkaista tehtävää, kuten asiakkaan uuden tilauksen käsittelyä. Siihen voi kuulua validointi, maksu, varasto, kuljetus ja asiakaspalvelu. Miten jakaisit tehtävän useamman erikoistuneen agentin kesken? Mikä agentti olisi johtaja? Mitä tietoa agentit vaihtaisivat keskenään?
 
 ## Suunnittelumallien valinta: milloin käytät mitä?
 
-Sinulla on nyt kolme välinettä: ReAct, ketjuajattelu ja moniagenttijärjestelmät. Milloin käytät mitä?
+Sinulla on nyt kolme välinettä: **ReAct**, **ketjuajattelu** ja **moniagenttijärjestelmät**. Seuraavaksi pitää ymmärtää, milloin mitäkin kannattaa käyttää.
 
-**ReActia käytetään**, kun agentti tarvitsee joustoa. Se ei ole liian jäykkä eikä liian vankka. Agentti voi ajatella, toimia, nähdä tuloksen ja muuttaa suunnaltaan, jos tulokset näyttävät odottamattomilta. Se on hyvä **tutkivalle ajattelulle** — kun agentti ei täsmälleen tiedä, mitä tapahtuu seuraavaksi, vaan sen on ajateltava vaihetta vaiheelta.
+**ReActia käytetään**, kun agentti tarvitsee joustavuutta. Agentti voi ajatella, toimia, nähdä tuloksen ja muuttaa suuntaansa, jos tulos on odottamaton. ReAct sopii hyvin **tutkivaan ajatteluun**: tilanteisiin, joissa agentti ei tiedä tarkasti, mitä seuraavaksi tapahtuu, vaan sen täytyy edetä vaihe kerrallaan havaintojen perusteella.
 
-**Ketjuajattelua käytetään**, kun ongelma on **jakautuva pieniksi palasiksi** ja vaiheet ovat selvät. Palautuspyynnön käsittely on hyvä esimerkki — vaiheet ovat aina samat: tarkista aika, tarkista käytäntö, laadi vastaus. Ketjuajattelu pakottaa agentin käymään läpi jokaisen vaiheen, mikä estää virheitä.
+**Ketjuajattelua käytetään**, kun ongelma voidaan **jakaa selkeisiin vaiheisiin**. Palautuspyynnön käsittely on hyvä esimerkki. Vaiheet ovat usein samat: tarkista palautusaika, tarkista palautuskäytäntö ja laadi vastaus. Ketjuajattelu pakottaa agentin käymään läpi jokaisen vaiheen, mikä vähentää virheitä.
 
-**Moniagenttijärjestelmiä käytetään**, kun tehtävä on **niin monimutkainen, että se vaatii eri erikoisaloja**. Asiakaspalvelupyynnön käsittely saattaa vaatia analyysia, tiedonhakua, kirjoittamista ja validointia. Jokaisen tehtävän antaa spesialistille, joka on siihen erikoistunut.
+**Moniagenttijärjestelmiä käytetään**, kun tehtävä on **niin monimutkainen, että se vaatii eri erikoisaloja**. Asiakaspalvelupyynnön käsittely voi vaatia analyysiä, tiedonhakua, kirjoittamista ja validointia. Tällöin jokainen osatehtävä voidaan antaa siihen erikoistuneelle agentille.
 
-Käytännössä usein käytät **yhdistelmää**. Esimerkiksi moniagenttijärjestelmä, jossa jokainen agentti käyttää **ReActia** omalla alueellaan ja harjannut­johtaja käyttää **ketjuajattelua** koordinoidakseen prosessin. Mallit eivät ole toisiaan poissulkevia — ne täydentävät toisensa.
+Käytännössä käytät usein **yhdistelmää**. Esimerkiksi moniagenttijärjestelmässä jokainen erikoistunut agentti voi käyttää ReAct-mallia omalla alueellaan, ja johtaja-agentti voi käyttää ketjuajattelua koko prosessin koordinoimiseen. Mallit eivät siis sulje toisiaan pois, vaan ne täydentävät toisiaan.
 
 ## Esimerkki käytännössä: koodaustiimi moniagenttijärjestelmänä
 
-Kuvittele koodaustiimin työtä ja kuinka se muistuttaa moniagenttijärjestelmää käyttävää agenttia.
+Kuvittele koodaustiimin työtä ja sitä, miten se muistuttaa moniagenttijärjestelmää.
 
-Tiimin jäsen 1 (Analyysi) lukee vaatimukset: "Asiakkaan pitää pystyä lataamaan raportteja PDF-muodossa."
+**Tiimin jäsen 1 eli analysoija** lukee vaatimukset: ”Asiakkaan pitää pystyä lataamaan raportteja PDF-muodossa.”
 
-Tiimin jäsen 2 (Kehitys) kirjoittaa koodin: "Voin tehdä PDF-kirjoitustoiminnon käyttämällä avoimen lähdekoodin kirjastoa."
+**Tiimin jäsen 2 eli kehittäjä** kirjoittaa koodin: ”Voin tehdä PDF-luontitoiminnon käyttämällä avoimen lähdekoodin kirjastoa.”
 
-Tiimin jäsen 3 (Testaus) tarkistaa koodin: "Testasin sitä 10 eri raportin muodolla, ja se toimii 9/10 kerralla."
+**Tiimin jäsen 3 eli testaaja** tarkistaa koodin: ”Testasin toimintoa 10 erilaisella raportilla, ja se toimii 9 tapauksessa 10:stä.”
 
-Tiimin jäsen 4 (Johtaja) näkee tilanteen: "Testaus löysi virheen. Lähetän sen takaisin kehittäjälle."
+**Tiimin jäsen 4 eli johtaja** näkee tilanteen: ”Testaus löysi virheen. Lähetän tehtävän takaisin kehittäjälle.”
 
-Tiimin jäsen 2 (Kehitys) korjaa koodin.
+**Kehittäjä** korjaa koodin.
 
-Tiimin jäsen 3 (Testaus) testaa uudelleen: "Nyt se toimii 10/10 kerralla."
+**Testaaja** testaa uudelleen: ”Nyt toiminto toimii 10 tapauksessa 10:stä.”
 
-Tiimin jäsen 4 (Johtaja) päättelee: "Valmis. Julkaistaan."
+**Johtaja** tekee päätöksen: ”Valmis. Julkaistaan.”
 
-Tämä on moniagenttijärjestelmä toiminnassa. Jokainen erikoistunut osansa, johtaja koordinoi, ja lopputulos on parempi kuin yksittäinen kehittäjä olisi voinut tehdä.
+Tämä on moniagenttijärjestelmä käytännössä. Jokainen osa tekee oman erikoistuneen tehtävänsä, johtaja koordinoi kokonaisuutta ja lopputulos on parempi kuin yhden toimijan yksin tekemänä.
 
 ## Suunnittelumallit n8n:ssä — miltä ne näyttävät käytännössä?
 
-Kun rakennat n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstraktit mallit muuttuvat konkreettisiksi työnkuluiksi.
+Kun rakennat agenttia n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstraktit mallit muuttuvat konkreettisiksi työnkuluiksi.
 
-**ReAct n8n:ssä**: AI Agent -solmu, jolla on pääsy useisiin työkaluihin. N8n:n AI Agent -solmu toimii luonnostaan ReAct-periaatteella — se ajattelee, valitsee työkalun, saa tuloksen, ajattelee uudelleen ja valitsee seuraavan työkalun. Sinun ei tarvitse rakentaa silmukkaa käsin — se on sisäänrakennettu.
+**ReAct n8n:ssä:** AI Agent -solmu, jolla on pääsy useisiin työkaluihin. n8n:n AI Agent -solmu toimii usein ReAct-periaatteen mukaisesti: se päättelee, valitsee työkalun, saa tuloksen, päättelee uudelleen ja valitsee tarvittaessa seuraavan työkalun. Sinun ei tarvitse rakentaa koko silmukkaa käsin, koska suuri osa tästä toiminnasta on sisäänrakennettu AI Agent -solmuun.
 
-```mermaid
-graph LR
-    A["📩 Trigger"] --> B["🤖 AI Agent<br/>(ReAct sisäänrakennettu)"]
-    B --> C["🔍 Hakutyökalu"]
-    B --> D["📊 Tietokanta"]
-    B --> E["📧 Sähköposti"]
-    B --> F["📤 Vastaus"]
-```
+**ReAct n8n:ssä**
 
-**Ketjuajattelu n8n:ssä**: Sarja erillisiä solmuja, joista jokainen tekee yhden askeleen. Edellisen solmun tulos menee seuraavalle. Tämä on n8n:n luonnollisin rakenne — solmut ketjussa.
+|  |  |  |
+| --- | --- | --- |
+| **Trigger** | → | **AI Agent** ReAct-silmukka sisäänrakennettuna |
+| ↓ | | |
+| **Hakutyökalu** | **Tietokanta** | **Sähköposti** |
+| ↓ | | |
+| **Vastaus käyttäjälle** | | |
 
-```mermaid
-graph LR
-    A["📩 Pyyntö"] --> B["🤖 Vaihe 1:<br/>Analysoi pyyntö"]
-    B --> C["🤖 Vaihe 2:<br/>Tarkista käytäntö"]
-    C --> D["🤖 Vaihe 3:<br/>Laadi vastaus"]
-    D --> E["📤 Lähetä"]
-```
+**Ketjuajattelu n8n:ssä:** sarja erillisiä solmuja, joista jokainen tekee yhden vaiheen. Edellisen solmun tulos siirtyy seuraavalle solmulle. Tämä on n8n:n luonnollinen rakenne: solmut muodostavat ketjun.
 
-**Moniagentti n8n:ssä**: Useita erillisiä työnkulkuja, jotka kutsuvat toisiaan. "Johtaja"-työnkulku lähettää webhookin "tutkija"-työnkululle, saa tuloksen ja lähettää sen "kirjoittaja"-työnkululle. Tämä on monimutkaisin rakenne, mutta tehokkain monimutkaisiin tehtäviin.
+**Ketjuajattelu n8n:ssä**
 
-Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinua valitsemaan oikean rakenteen projektillesi.
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Pyyntö** | → | **Vaihe 1** Analysoi pyyntö | → | **Vaihe 2** Tarkista käytäntö | → | **Vaihe 3** Laadi vastaus | → | **Lähetä** |
+
+**Moniagentti n8n:ssä:** useita erillisiä työnkulkuja, jotka kutsuvat toisiaan. Johtaja-työnkulku voi lähettää webhookin tutkija-työnkululle, saada tuloksen takaisin ja lähettää sen edelleen kirjoittaja-työnkululle. Tämä on monimutkaisin rakenne, mutta se voi olla tehokas monimutkaisissa tehtävissä.
+
+Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinua valitsemaan projektiisi sopivan rakenteen.
 
 ## Kohti omaa projektia
 
-Nyt kun tunnet ReAct-mallin ja ketjuajattelun, valitse omalle agentillesi sopivin päättelymalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida reaaliaikaisesti työkalujen palautteeseen (ReAct) vai voiko sen pilkkoa ongelman selkeisiin vaiheisiin (ketjuajattelu)? Tämä valinta on ⭐️ Agentti: Päättely -pohjapiirros, jonka kirjoitat opiskelutehtävissä. Se vaikuttaa suoraan siihen, miten rakennat n8n-työnkulun tunnilla 26. Moniagenttijärjestelmät käsitellään sivumainintana — ne ovat lopputyön mittakaavassa yliampuva ratkaisu.
+Nyt kun tunnet ReAct-mallin, ketjuajattelun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin päättelymalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida reaaliaikaisesti työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää ketjuajattelua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
 
 ## Yhteenveto
 
-Agentti on näennäisesti älykkäämpi, kun se ajattelee **järjestelmällisesti**. **ReAct-malli** auttaa agenttia ajattelemaan, toimimaan ja ajattelemaan uudelleen — joustavasti. **Ketjuajattelu** auttaa sitä purkamaan ongelmia ja käsittelemään ne järjestyksessä — vakaasti. **Moniagenttijärjestelmät** antavat agentille kykyä jakaa työn erikoistuneiden osien kesken. Nämä mallit perustuvat siihen, kuinka ihmiset ajattelevat ja työskentelevät. Kun rakennat agenttia n8n:llä, sinä valitset, mitä mallia agentti noudattaa. Valinta tekee agentista tehokkaan tai epätehokkaan, ymmärrettävän tai sekavan. Valitse aina malli, joka vastaa tehtävän luontoon.
+Agentti toimii paremmin, kun se ajattelee **järjestelmällisesti**. **ReAct-malli** auttaa agenttia ajattelemaan, toimimaan ja ajattelemaan uudelleen joustavasti. **Ketjuajattelu** auttaa sitä purkamaan ongelman vaiheisiin ja käsittelemään ne järjestyksessä. **Moniagenttijärjestelmät** antavat mahdollisuuden jakaa työn useille erikoistuneille agenteille.
+
+Nämä mallit perustuvat siihen, miten ihmiset ajattelevat ja työskentelevät monimutkaisissa tilanteissa. Kun rakennat agenttia n8n:llä, sinä valitset, mitä mallia agentti noudattaa. Valinta vaikuttaa siihen, onko agentti tehokas vai tehoton, ymmärrettävä vai sekava. Valitse aina malli, joka sopii tehtävän luonteeseen.
+
+---

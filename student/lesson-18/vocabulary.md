@@ -232,3 +232,5 @@ Jos haluat syventää tietojasi näistä käsitteistä, katso:
 - AI Safety -organisaatioiden oppimismateriaalit
 
 Muista: näiden käsitteiden opiskelu ei lopu täällä. Seuraavassa osiossa, Agentit-osiossa, tutustut syvemmin agenteihin, ja jokainen näistä käsitteistä tulee uudelleen esille. Koko ura tekoälytyössä on jatkuvaa oppimista.
+
+---

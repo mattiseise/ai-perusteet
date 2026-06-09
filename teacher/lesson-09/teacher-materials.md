@@ -1,267 +1,396 @@
-# Opettajan materiaalit: Turvallinen käyttö ja Teoria-osion arviointi
+# Opettajan materiaalit: Tuomaripöydän päätös — asiantuntijalausunto tekoälystä
 
-## Oppimisen tavoitteet (Bloom: arvioi)
+## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon jälkeen opiskelija:
+Tämän lohkon tavoitteena on, että opiskelija kokoaa Teoria-osion keskeiset käsitteet yhdeksi **asiantuntijalausunnoksi**. Oppitunnin ydin on siirtymä uuden teorian opiskelusta osaamisen näyttämiseen: opiskelija analysoi todellista tekoälyyn liittyvää ongelmaa, perustelee sen käsitteiden avulla ja esittää tilanteeseen ammatillisesti uskottavan ratkaisun.
 
-1. Ymmärtää tekoälyn turvallisuusriskit: prompt injection, tietovuoto, data hygiene.
-2. Osaa soveltaa Teoria-osion käsitteitä (epädeterminismi, hallusinaatiot, harha, etiikka) todellisiin skenaarioihin.
-3. Osaa kirjoittaa rakenteisen, ammatillisesti vastuullisen analyysin.
-4. Osaa arvioida omaa tekoälyn käyttöään turvallisuuden ja eettisen näkökulman perusteella.
+### Muistaa ja ymmärtää
 
----
+- Opiskelija ymmärtää, mikä **asiantuntijalausunto** on ja miten se eroaa esseestä, blogitekstistä tai mielipidekirjoituksesta.
+- Opiskelija tunnistaa asiantuntijalausunnon neljä pääosaa: **mitä tapahtui**, **miksi se tapahtui**, **miten tilanne pitäisi hoitaa** ja **ammatillinen vastuu**.
+- Opiskelija ymmärtää, että lausunnossa täytyy käyttää Teoria-osion käsitteitä täsmällisesti eikä vain mainita niitä irrallisina termeinä.
 
-## Arviointistrategia
+### Soveltaa ja analysoida
 
-### Tekoälyn käyttö tehtävässä
+- Opiskelija osaa kuvata skenaarion neutraalisti ja erottaa tapahtumien kuvauksen niiden syistä.
+- Opiskelija osaa soveltaa aiempien oppituntien käsitteitä, kuten **hallusinaatio**, **konteksti-ikkuna**, **prompt injection**, **datahygienia**, **tekijänoikeudet**, **algoritminen harha** ja **ammatillinen vastuu**.
+- Opiskelija osaa hyödyntää omaa todistusaineistoaan tunneilta 3, 5 ja 7 osana argumentaatiota.
 
-Opiskelijoita kehotetaan käyttämään tekoälyä analyysin kirjoittamisessa. Tämä on tarkoituksellista: tehtävä testaa opiskelijan kykyä **ohjata** tekoälyä tuottamaan analyyttistä tekstiä, ei kykyä kirjoittaa 1000 sanaa itse. Opiskelijalle ei kerrota alla olevasta faktataulukosta.
+### Luoda ja arvioida
 
-### Faktataulukko arvioinnin tueksi (opettajan työkalu)
+- Opiskelija osaa tuottaa 1000–1200 sanan rakenteisen asiantuntijalausunnon.
+- Opiskelija osaa käyttää tekoälyä työparina niin, että tekoäly auttaa jäsentämisessä mutta ei korvaa opiskelijan omaa ajattelua.
+- Opiskelija osaa tarkistaa tekoälyn tuottaman tekstin mahdolliset virheet, kuten keksityt lakiviittaukset, virheelliset käsitteet tai liian yleiset suositukset.
+- Opiskelija osaa tehdä konkreettisia, aikataulutettuja ja vastuullisia toimenpide-ehdotuksia.
 
-Jokaisen opiskelijan raportin liitteenä tulee olla faktataulukko, jossa opiskelija osoittaa hallitsevansa Teoria-osion keskeiset käsitteet. Taulukko on opettajan arvioinnin apuväline — se paljastaa nopeasti, onko opiskelija ymmärtänyt käsitteet vai tuottanut tekoälyllä pintapuolista tekstiä.
-
-**Pyydä opiskelijaa liittämään raportin loppuun taulukko seuraavassa muodossa:**
-
-| Käsite | Selitys omin sanoin | Miten näkyy skenaariossani |
-|---|---|---|
-| Epädeterminismi | | |
-| Hallusinaatio | | |
-| Konteksti-ikkuna | | |
-| Prompt injection | | |
-| Algoritminen harha | | |
-| Datahygienia | | |
-| Tekijänoikeudet | | |
-| Ammatillinen vastuu | | |
-
-Opiskelijan ei tarvitse täyttää jokaista riviä — vain ne käsitteet, jotka ovat relevantteja hänen valitsemassaan skenaariossa. Taulukko kertoo nopeasti, ymmärtääkö opiskelija käsitteet vai onko hän vain antanut tekoälyn kirjoittaa ne.
-
-### Miksi summatiivinen arviointi?
-
-Teoria-osio (oppitunnit 1–9) on teoriaosuus. Arviointi testaa, kuinka syvällisesti opiskelijat ymmärtävät tekoälyä ja osaavat soveltaa tietoa.
-
-Arviointitehtävä valitaan skenaarioista, koska se on realistinen (opiskelijat kohtaavat näitä ongelmia ammattilaisina), se vaatii syvää ajattelua (ei vain muistamista), se testaa kykyä soveltaa käsitteitä ja se mittaa ammatillista vastuullisuutta.
-
-### Arviointikauden pituus
-
-- **Oppitunnit 1–8:** Iteratiivinen oppiminen, harjoitukset, formatiivinen palaute.
-- **Oppitunti 9:** Summatiivinen arviointi (skenaarion analyysi).
-- **Arviointitehtävän pituus:** 1000–1200 sanaa (noin 3–4 tuntia työtä, riippuen kirjoituskyvystä).
-- **Deadline:** Aika harkinnan mukaan (esim. 2 viikkoa oppitunnin 9 jälkeen).
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että asiantuntijalausunto ei ole mielipidekirjoitus. Opiskelijan pitää osoittaa, että hän osaa käyttää tekoälyyn liittyviä käsitteitä, tehdä perusteltuja päätelmiä ja ehdottaa konkreettisia ammatillisia toimia.
 
 ---
 
-## 5-tasoasteikon ymmärtäminen
+## Pedagoginen lähestymistapa
 
-| Taso | Prosentti | Merkitys | Opettajan näkökulma |
-|---|---|---|---|
-| **5 – Erinomainen** | 90–100% | Syvä ymmärrys käsitteistä, kyky soveltaa niitä ammatillisesti, rakentava analyysi | "Tämä opiskelija ymmärtää tekoälyä syvällisesti ja ajattelee ammatillisesti." |
-| **4 – Hyvä** | 75–89% | Selvä ymmärrys useimmista käsitteistä, järkevä soveltaminen, jonkin verran puutteellinen analyysi | "Tämä opiskelija ymmärtää pääkäsitteet ja osaa soveltaa niitä." |
-| **3 – Tyydyttävä** | 60–74% | Perusymmärrys pääkäsitteistä, mutta analyysi on pinnallinen tai osittainen | "Tämä opiskelija ymmärtää perusteet, mutta ei syvällisesti." |
-| **2 – Välttävä** | 45–59% | Osittainen ymmärrys käsitteistä, huomattavia aukkoja, analyysi on sekava | "Tämä opiskelija tarvitsee lisäkoulutusta." |
-| **1 – Hylätty** | alle 45% | Vähäinen ymmärrys käsitteistä, ei kykyä soveltaa niitä | "Tämä opiskelija ei ole saavuttanut oppimisen tavoitteita." |
+### Ydinviesti: opiskelija siirtyy oppijasta asiantuntijan rooliin
 
----
+Oppitunnin alussa kannattaa tehdä näkyväksi roolin muutos. Aiemmilla oppitunneilla opiskelija on kerännyt käsitteitä, tehnyt harjoituksia ja tuottanut todistusaineistoa. Nyt hän käyttää niitä kuin ammattilainen: hän arvioi tilanteen, selittää sen lukijalle ja antaa suosituksen.
 
-## Arviointikriteerit yksityiskohtaisesti
+> **Asiantuntijan tehtävä ei ole kuulostaa varmalta. Asiantuntijan tehtävä on perustella, miksi jokin arvio on uskottava.**
 
-### Ongelman ymmärrys (20 pistettä)
+Korosta opiskelijoille:
 
-**Erinomainen (5 pistettä):**
-- Opiskelija ymmärtää skenaarion moniulotteisesti.
-- Tunnistaa kaikki merkitykselliset ongelmat.
-- Liittää ongelmat Teoria-osion käsitteisiin.
-- Esim. Skenaario 1 -opiskelijasta: "Riski on kolmijakoinen: GDPR, prompt injection ja organisaation vastuu."
+- **Neutraali kuvaus** tulee ennen tulkintaa.
+- **Käsitteet** selittävät, miksi tilanne on ongelmallinen.
+- **Suositukset** kertovat, mitä pitää tehdä seuraavaksi.
+- **Ammatillinen vastuu** osoittaa, kuka kantaa vastuun ja mikä opiskelijan oma rooli olisi vastaavassa tilanteessa.
 
-**Hyvä (4 pistettä):**
-- Ymmärtää skenaarion ja suurimman osan ongelmista.
-- Liittää ongelmat Teoria-osion käsitteisiin, mutta jokin puuttuu.
-- Esim.: "Riski on tietovuoto ja GDPR, mutta ei pohdita prompt injectionia."
+### Asiantuntijalausunnon ja esseen ero
 
-**Tyydyttävä (3 pistettä):**
-- Ymmärtää skenaarion pinnallisesti.
-- Tunnistaa pääongelman, mutta muita puuttuu.
-- Esim.: "Ongelma on, että asiakastiedot voivat vuotaa."
+Moni opiskelija lähestyy tehtävää helposti esseenä: hän kertoo yleisesti tekoälyn hyödyistä ja riskeistä. Ohjaa opiskelijaa pois yleisesseestä kohti skenaariopohjaista lausuntoa. Lausunto vastaa tiettyyn tilanteeseen, ei koko tekoälykeskusteluun.
 
-**Välttävä (2 pistettä):**
-- Ymmärtää osan skenaariosta.
-- Analyysi on sekava tai vähäinen.
-
-**Hylätty (1 pistettä tai alle):**
-- Ei ymmärrä skenaariota merkittävästi.
+| Tekstilaji | Tyyli | Tavoite | Opettajan huomio |
+| --- | --- | --- | --- |
+| **Essee** | Pohdiskeleva ja usein laaja. | Käsittelee aihetta yleisesti. | Voi jäädä liian yleiseksi arviointitehtävän kannalta. |
+| **Blogiteksti** | Persoonallinen ja kantaaottava. | Herättää kiinnostusta tai mielipidettä. | Ei sovi, jos kieli on tunnepitoista tai liian epämuodollista. |
+| **Asiantuntijalausunto** | Neutraali, täsmällinen ja perusteleva. | Analysoi tietyn tilanteen ja antaa suosituksen. | Tämä on arviointitehtävän tavoiteltu tekstilaji. |
 
 ---
 
-### Tekninen analyysi (25 pistettä)
+## Lausunnon rakenne
 
-**Erinomainen (5 pistettä):**
-- Soveltaa Teoria-osion teknisiä käsitteitä syvällisesti.
-- Yhdistää epädeterminismiä, hallusinaatioita, harhaa ja turvallisuutta skenaarion kontekstissa.
-- Esittää käytännöllisiä ratkaisuja.
-- Esim. Skenaario 2: "Algoritmin harha johtuu koulutusdatasta. Testaisin: vertaisin hyväksynnän prosentteja nais- ja miespuolisten hakijoiden joukossa. Erojen ollessa merkittäviä (esim. 85 % vs. 65 %), harha on todellinen. Korjatakseni tilanteen: perustaisin uuden koulutusdatajoukon tai poistaisin vinoutuneet piirteet."
+### Neljä pääosaa
 
-**Hyvä (4 pistettä):**
-- Soveltaa useimpia teknisiä käsitteitä.
-- Analyysi on lähes syvällistä, mutta jokin puuttuu.
-- Ratkaisut ovat järkeviä, mutta niissä voi olla epäselvyyksiä.
+Opiskelijoiden kannattaa käyttää tehtävän neljää osaa suoraan otsikoina. Tämä helpottaa sekä kirjoittamista että arviointia.
 
-**Tyydyttävä (3 pistettä):**
-- Soveltaa joitakin teknisiä käsitteitä.
-- Analyysi on pinnallinen, ratkaisut ovat perustasoisia.
-- Esim.: "Algoritmi on väärä. Korjaa se."
+| Osa | Mitä opiskelija tekee? | Mitä opettaja arvioi? |
+| --- | --- | --- |
+| **1. Mitä tapahtui?** | Kuvaa skenaarion neutraalisti: mitä tapahtui, keitä se koski ja mikä meni pieleen. | Erotteleeko opiskelija tapahtumien kuvauksen omista tulkinnoistaan? |
+| **2. Miksi se tapahtui?** | Selittää tapahtuman Teoria-osion käsitteiden avulla. | Sovelletaanko käsitteitä oikeasti vai vain luetellaanko niitä? |
+| **3. Miten tilanne pitäisi hoitaa?** | Ehdottaa konkreettisia toimia heti, lyhyellä aikavälillä ja pysyvästi. | Onko suosituksissa vastuuhenkilö, aikataulu ja käytännön toteutus? |
+| **4. Ammatillinen vastuu** | Kuvaa, kuka kantaa vastuun ja mikä olisi opiskelijan oma rooli ammattilaisena. | Ymmärtääkö opiskelija vastuun yksilön, organisaation ja ammattilaisen tasolla? |
 
-**Välttävä (2 pistettä):**
-- Soveltaa vain yhtä teknistä käsitettä tai ei sovella sitäkään.
+**Opettajan huomio:** Jos opiskelija kirjoittaa hyvää tekstiä mutta ei noudata neliosaista rakennetta, ohjaa häntä lisäämään väliotsikot. Rakenne tekee ajattelun näkyväksi ja helpottaa arviointia.
 
-**Hylätty (1 pistettä tai alle):**
-- Ei teknistä analyysia.
+### Mitä tapahtui? — neutraali tapahtumakuvaus
 
----
+Ensimmäisessä osassa opiskelijan ei pidä vielä selittää kaikkea. Hän kuvaa tilanteen mahdollisimman selkeästi ja puolueettomasti. Tavoitteena on, että lukija ymmärtää tapahtumat ennen analyysia.
 
-### Eettinen analyysi (20 pistettä)
+**Hyvä tapahtumakuvaus vastaa kysymyksiin:**
 
-**Erinomainen (5 pistettä):**
-- Ajattelee syvällisesti tekijänoikeuksia, vastuullisuutta ja globaalia vaikutusta.
-- Tunnistaa ammatillisen vastuun.
-- Tekee eettisiä valintoja, joita osaa perustella.
-- Esim. Skenaario 3: "Tekoälyn tuotanto sisältää eettisiä ongelmia: tekijöille ei makseta, merkitsijät työskentelevät matalapalkkaisesti. Minä sitoudun siihen, että informoin asiakkaita näistä ongelmista ja ehdotan läpinäkyvyyttä. En voi kuitenkaan yksinkertaisesti boikotoida tekoälyä — se on ammatillisesti ongelmallista; sitä pitää käyttää harkiten."
+- Mitä konkreettisesti tapahtui?
+- Ketkä olivat mukana?
+- Mihin järjestelmään, palveluun tai toimintatapaan ongelma liittyi?
+- Mitä vahinkoa, riskiä tai epäselvyyttä tilanteesta syntyi?
 
-**Hyvä (4 pistettä):**
-- Ajattelee eettisesti, mutta jokin osa-alue puuttuu.
-- Tunnistaa vastuullisuuden, vaikka analyysi ei ole syvällinen.
+**Vältä:** ”Tekoäly meni sekaisin” tai ”tilanne oli todella paha”.
 
-**Tyydyttävä (3 pistettä):**
-- Tunnistaa eettisen ongelman, mutta analyysi on yksinkertainen.
-- Esim.: "Tekijänoikeudet ovat ongelma, koska tekijöille ei makseta."
+**Ohjaa kohti:** ”Tekoälypalvelua käytettiin asiakaspalvelun tukena siten, että palveluun syötettiin henkilötietoja ilman selkeää ohjeistusta ja tietosuojan arviointia.”
 
-**Välttävä (2 pistettä):**
-- Mainitsee eettisen näkökulman, mutta analyysi on hyvin vähäinen.
+### Miksi se tapahtui? — käsitteiden soveltaminen
 
-**Hylätty (1 pistettä tai alle):**
-- Ei eettistä analyysia.
+Tämä on lausunnon tärkein analyysiosa. Opiskelijan pitää käyttää aiempien oppituntien käsitteitä täsmällisesti ja liittää ne juuri käsiteltävään tilanteeseen.
 
----
+Hyvä analyysi ei sano vain: ”Tässä oli hallusinaatio.” Se selittää, miksi kyse oli hallusinaatiosta ja mitä seurauksia sillä oli. Hyvä analyysi ei sano vain: ”Konteksti-ikkuna on rajallinen.” Se selittää, miten kontekstin katoaminen tai puutteellinen konteksti vaikutti päätöksentekoon.
 
-### Ratkaisut ja suositukset (25 pistettä)
+**Opettajan ohjaava kysymys:** ”Mikä aiemmin opittu käsite auttaa ymmärtämään juuri tätä ongelmaa, ja miten se näkyy tässä skenaariossa käytännössä?”
 
-**Erinomainen (5 pistettä):**
-- Ehdotukset ovat konkreettisia, käytännöllisiä ja ammatillisesti järkeviä.
-- Ottavat huomioon kompleksisuuden (ei "yksinkertaista ratkaisua" asioihin, jotka eivät ole yksinkertaisia).
-- Ehdotukset on perusteltu Teoria-osion käsitteillä.
-- Esim. Skenaario 1: "Käytäntö 1: Asiakaspalvelijoille koulutus, jossa määritellään, mitä dataa saa antaa (ei henkilötietoja). Käytäntö 2: Dokumentointi — jokainen kysely merkitään. Käytäntö 3: Auditointi — kuukausittain tarkistetaan lokeja harhan varalta."
+### Miten tilanne pitäisi hoitaa? — konkreettinen toimintamalli
 
-**Hyvä (4 pistettä):**
-- Ehdotukset ovat konkreettisia ja järkeviä, mutta jokin osa puuttuu.
-- Perustelut ovat selviä, mutta voisivat olla syvempiä.
+Kolmas osa erottaa hyvän asiantuntijalausunnon yleisestä pohdinnasta. Opiskelijan pitää esittää konkreettisia toimenpiteitä, ei vain toiveita.
 
-**Tyydyttävä (3 pistettä):**
-- Ehdotukset ovat perustasoisia ja pinnallisia.
-- Esim.: "Kirjoita politiikka."
+Ohjaa opiskelijoita käyttämään kolmiportaista mallia:
 
-**Välttävä (2 pistettä):**
-- Ehdotukset ovat epäselviä tai epäkäytännöllisiä.
+| Aikajänne | Mitä tehdään? | Mitä opettaja etsii vastauksesta? |
+| --- | --- | --- |
+| **Heti** | Keskeytä riskialtis käytäntö, tiedota osallisille ja estä lisävahinko. | Onko kiireelliset riskit tunnistettu? |
+| **Lyhyellä aikavälillä** | Laadi ohjeistus, tarkista työkalut, tee tietosuoja- tai riskikartoitus ja kouluta käyttäjät. | Onko mukana toteuttamiskelpoisia toimia? |
+| **Pysyvästi** | Rakenna prosessi, jossa tekoälytyökalut hyväksytään, dokumentoidaan, auditoidaan ja päivitetään. | Ymmärtääkö opiskelija, että ratkaisu ei ole pelkkä kertaluonteinen korjaus? |
 
-**Hylätty (1 pistettä tai alle):**
-- Ei ratkaisuja.
+> **Hyvä suositus vastaa neljään kysymykseen:** kuka tekee, mitä tekee, milloin tekee ja miten onnistuminen tarkistetaan.
+
+### Ammatillinen vastuu
+
+Viimeisessä osassa opiskelijan pitää osoittaa, että hän ymmärtää tekoälyn käytön vastuukysymykset. Vastuu ei ole vain ”tekoälyllä” eikä vain yksittäisellä käyttäjällä. Usein vastuu jakautuu organisaation, esihenkilöiden, IT:n, tietosuojavastaavan, palveluntarjoajan ja yksittäisen ammattilaisen kesken.
+
+Hyvässä vastuuosiossa opiskelija käsittelee esimerkiksi:
+
+- kuka vastaa työkalun käyttöönotosta
+- kuka vastaa ohjeistuksesta ja koulutuksesta
+- kuka vastaa tietosuojasta ja riskien arvioinnista
+- mitä yksittäisen työntekijän tai IT-ammattilaisen pitää tehdä, jos hän havaitsee riskin
 
 ---
 
-### Kirjoituksen laatu (10 pistettä)
+## Asiantuntijan kieli
 
-**Erinomainen (5 pistettä):**
-- Teksti on selkeä, hyvin organisoitu ja ammatillisesti kirjoitettu.
-- Lähdeviitteet ovat oikein.
-- Pituus: 1000–1200 sanaa.
+### Kielen muutos puhekielestä asiantuntijakieleen
 
-**Hyvä (4 pistettä):**
-- Teksti on pääosin selkeä ja organisoitu, mutta siinä on jokin pienempi epäselvyys.
-- Lähdeviitteet ovat suurimmaksi osaksi oikein.
-- Pituus on lähellä vaatimusta.
+Opiskelijoiden on usein helpompi tunnistaa hyvä kieli vertaamalla heikkoa ja vahvaa ilmaisua. Käytä seuraavaa taulukkoa luokkakeskustelussa tai nopeana tarkistuslistana ennen palautusta.
 
-**Tyydyttävä (3 pistettä):**
-- Teksti on ymmärrettävä, mutta sen organisointi tai selkeys on vain kohtuullinen.
-- Lähdeviitteet ovat olemassa, mutta voivat olla epätäydellisiä.
+| Vältä | Käytä | Miksi? |
+| --- | --- | --- |
+| ”Mun mielestä...” | ”Arvioin, että...” | Asiantuntijateksti perustuu arvioon ja perusteluun, ei pelkkään mielipiteeseen. |
+| ”Tekoäly meni rikki.” | ”Mallin tuotos sisälsi hallusinaation.” | Käsite tekee ongelmasta täsmällisen. |
+| ”Tää on tosi paha.” | ”Riski on merkittävä, koska se koskee henkilötietoja.” | Perustelu kertoo, miksi riski on vakava. |
+| ”Joku pitäisi korjata.” | ”IT-vastaavan tulee keskeyttää käytäntö ja laatia uusi ohjeistus.” | Vastuu ja toimenpide täsmentyvät. |
 
-**Välttävä (2 pistettä):**
-- Teksti on vaikeasti ymmärrettävä tai huonosti organisoitu.
-
-**Hylätty (1 pistettä tai alle):**
-- Teksti on epäselvä tai epäorganisoitu.
+**Opettajan muistutus:** Asiantuntijakielen ei tarvitse olla vaikeaa. Sen pitää olla selkeää, täsmällistä ja perusteltua.
 
 ---
 
-## Arviointiprosessi
+## Tekoälyn käyttö kirjoittamisen tukena
 
-### Ennen arviointia (oppitunti 9)
+### Tekoäly työparina, ei kirjoittajan korvikkeena
 
-1. **Fasilitoi harjoittelua** — älä anna vastauksia, mutta auta opiskelijoita harjoittelemaan.
-2. **Selvennä vaatimukset** — varmista, että opiskelijat ymmärtävät, mitä odotetaan.
-3. **Kerää kysymykset** — vastaa niihin ennen arviointia.
+Oppitunnin materiaalin tärkeä pedagoginen viesti on, että opiskelija saa käyttää tekoälyä. Tämä kannattaa sanoittaa luokassa selkeästi: tekoälyä ei käytetä salaa eikä kopiointiin, vaan suunnittelun, jäsentämisen, vaihtoehtojen tuottamisen ja kielen tarkistamisen tukena.
 
-### Arviointiprosessin aikana (deadlinen jälkeen)
+Hyvä tekoälyn käyttö tässä tehtävässä voi tarkoittaa esimerkiksi:
 
-1. **Lue huolellisesti** — ymmärrä, mitä opiskelija analysoi.
-2. **Käytä kriteerejä johdonmukaisesti** — ole tasapuolinen kaikille.
-3. **Kirjoita palaute** — rakentavaa, ei tuomitsevaa.
+- rakenteen suunnittelua
+- käsitteiden soveltamisideoiden etsimistä
+- aloitusvaihtoehtojen vertailua
+- oman tekstin selkeyttämistä
+- tarkistuslistan läpikäyntiä ennen palautusta
 
-### Jälkiarviointi
+Huono tekoälyn käyttö tarkoittaa, että opiskelija antaa skenaarion mallille ja palauttaa tekstin ilman tarkistusta, muokkausta tai omaa ymmärrystä.
 
-1. **Anna palaute** — missä he onnistuivat ja missä voivat parantaa.
-2. **Keskustele tuloksista** — jos haluat, voit tehdä lyhyen palautekeskustelun.
-3. **Dokumentoi pisteytys** — oppilaitoksen sääntöjen mukaan.
+### Promptausohje opiskelijalle
 
----
+Opettajan kannattaa mallintaa ero heikon ja hyvän promptin välillä.
 
-## Opettajan vinkkejä
+| Heikko prompt | Vahva prompt |
+| --- | --- |
+| ”Kirjoita asiantuntijalausunto tietovuodosta.” | ”Olen IT-vastaava verkkokauppayrityksessä. Tehtäväni on kirjoittaa asiantuntijalausunto seuraavasta skenaariosta: [kuvaa skenaario]. Auta minua jäsentämään analyysi neljään osaan: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja ammatillinen vastuu. Käytä käsitteitä hallusinaatio, konteksti-ikkuna ja datahygienia. Älä kirjoita lopullista tekstiä, vaan anna rakenne ja näkökulmia.” |
 
-**Arviointistandardin ylläpitäminen:**
-- Lue kaikki raportit samalla myötätunnolla ja samalla standardilla.
-- Jos epäilet pisteytyksen tasapuolisuutta, ota kaksi raporttia ja arvioi ne uudelleen.
-- Monimutkaisissa tapauksissa (esim. opiskelija on sairas tai hänellä on vaikeuksia), harkitse joustomahdollisuutta.
+> **Opiskelijan pitää pystyä sanomaan:** ”Tekoäly auttoi minua tässä kohdassa, mutta minä päätin, mitä jätän tekstiin ja mitä korjaan.”
 
-**Opiskelijoiden tukeminen:**
-- Jos opiskelija kokee arvioinnin liian raskaaksi, tarjoa mahdollisuus tehdä väliarviointia tai neuvotella deadlinesta.
-- Jotkut opiskelijat saattavat tarvita enemmän harjoittelua — tarjoa sitä ennen arviointia.
+### Hallusinaatioiden tarkistaminen
 
-**Omasta hyvinvoinnista:**
-- Arviointisessio voi olla rasittava. Varaa aikaa, pidä taukoja, älä arvioi liian monta työtä kerralla.
+Erityisesti arviointitehtävässä tekoäly voi tuottaa uskottavia mutta virheellisiä yksityiskohtia. Korosta opiskelijoille, että seuraavat kohdat täytyy tarkistaa aina:
 
----
-
-## Seuraava askel (Tekoälyn käyttö -osio ja käytäntö)
-
-Oppitunnit 10+ käsittelevät **käytäntöä** — miten tekoälyä käytetään hyvin ammatillisesti:
-- Prompting-tekniikka
-- Tekoälyn integrointi työnkulkuihin
-- Ammatillisen kehittymisen jatkaminen
-
-Teoria-osio (oppitunnit 1–9) antaa teorian pohjan. Tekoälyn käyttö -osio antaa käytännöllisiä taitoja.
-
-**Opettajan huomio:** Arviointitehtävä on suunniteltu siten, että opiskelijat voivat osoittaa ymmärtävänsä teoriaa ja osaavansa soveltaa sitä. Se testaa ammatillista vastuullisuutta — mikä on tärkein oppi.
+- lakiviittaukset ja artiklanumerot
+- vuosiluvut ja oikeustapaukset
+- tekniset väitteet, kuten tietoturvakäytännöt tai mallien ominaisuudet
+- lähdeviitteet
+- organisaation vastuuta koskevat väitteet
 
 ---
 
-## Eriyttäminen ja tuen tarpeet — arviointitehtävä
+## Yleisiä väärinkäsityksiä
 
-### Vaihtoehtoinen suoritustapa
-Kokonaisuuden 1 arviointitehtävässä opiskelija voi valita visuaalisen suoritustavan (tilannekartta + päätöspuu + suullinen perustelu) kirjallisen analyysin sijaan. Molemmat vaativat saman syvyyden — vaihtoehtoinen ei ole helpompi.
+### Väärinkäsitys 1: ”Asiantuntijalausunto on vain essee hienommalla nimellä.”
 
-### Miksi vaihtoehtoinen suoritustapa on tärkeä
-- Opiskelijat, joilla on kirjoittamisen vaikeuksia, voivat osoittaa saman osaamisen visuaalisesti ja suullisesti.
-- Visuaalinen analyysi on itse asiassa **vaikeampi kopioida tekoälyllä** kuin kirjallinen essee. Tilannekartan piirtäminen ja suullinen perustelu ovat luonnostaan LLM-resistenttejä.
-- Suullinen perustelu paljastaa heti, onko opiskelija ymmärtänyt vai kopioinut.
+**Korjaava näkökulma:** Asiantuntijalausunto ei ole yleinen pohdinta. Se on tiettyyn tilanteeseen kohdistuva analyysi, jossa kuvataan tapahtumat, selitetään syyt, ehdotetaan toimenpiteet ja käsitellään vastuu.
 
-### Tuen kohdat kokonaisuudessa 1
-Tunnista opiskelijat, jotka tarvitsevat tukea, näissä kohdissa:
+### Väärinkäsitys 2: ”Riittää, että mainitsen kurssin käsitteitä.”
 
-| Tunti | Kriittinen kohta | Merkki siitä, että opiskelija tarvitsee tukea | Mitä tehdä |
-|-------|-----------------|----------------------------------------------|-----------|
-| 3 | Tokenisaatio ja parametrit | Opiskelija ei ymmärrä, miksi sanat pilkotaan osiin | Käytä konkreettista esimerkkiä: "Kokeile itse OpenAI:n tokenizeria" |
-| 5 | Konteksti-ikkuna | Opiskelija ei hahmota FIFO-periaatetta | Piirrä taululle muistilaatikko, jossa uusi asia työntää vanhan ulos |
-| 7 | Epädeterminismi | Opiskelija ajattelee, että tekoäly "valitsee" vastauksen | Muistuta: se ei valitse, se ennustaa todennäköisyyksiä |
-| 9 | Arviointitehtävä | Opiskelija ei osaa aloittaa analyysia | Ohjaa "Jos olet jumissa" -osion pariin. Se antaa konkreettiset askeleet. |
+**Korjaava näkökulma:** Käsitteiden mainitseminen ei vielä osoita ymmärrystä. Opiskelijan pitää selittää, miten käsite näkyy skenaariossa ja miksi se vaikuttaa ratkaisuun.
 
-### LLM-resistenssin varmistaminen
-- Kirjallinen analyysi: pyydä opiskelijaa viittaamaan kurssin OMIIN esimerkkeihin ja oppituntien materiaaleihin, ei yleisiin lähteisiin.
-- Visuaalinen analyysi: tilannekartta ja päätöspuu ovat luonnostaan henkilökohtaisia — niitä ei voi generoida tekstillä.
-- Suullinen perustelu: opiskelijan on selitettävä omin sanoin, mikä paljastaa todellisen ymmärryksen tason.
+### Väärinkäsitys 3: ”Tekoäly saa kirjoittaa koko tekstin, jos prompti on hyvä.”
+
+**Korjaava näkökulma:** Tekoälyä saa käyttää työparina, mutta opiskelija vastaa lopullisesta tekstistä. Hänen pitää tarkistaa, muokata ja omistaa tekstin väitteet.
+
+### Väärinkäsitys 4: ”Hyvä suositus on yleinen ohje, kuten koulutusta lisää.”
+
+**Korjaava näkökulma:** Hyvä suositus on konkreettinen. Siinä kerrotaan, kuka kouluttaa, kenet koulutetaan, mistä aiheesta, milloin ja miten vaikutus tarkistetaan.
+
+### Väärinkäsitys 5: ”Ammatillinen vastuu tarkoittaa vain syyllisen etsimistä.”
+
+**Korjaava näkökulma:** Vastuu ei tarkoita pelkästään syyllisen nimeämistä. Se tarkoittaa, että tunnistetaan roolit, päätöksenteko, ohjeistus, valvonta ja se, miten vastaava ongelma estetään jatkossa.
+
+---
+
+## Luokkatehtävien ohjeistus
+
+### TT-A: Heikko ja vahva analyysi
+
+**Tavoite:** Opiskelija tunnistaa, mikä erottaa pinnallisen tekstin asiantuntijamaisesta analyysista.
+
+**Tehtävä:** Näytä opiskelijoille lyhyt heikko ja vahva versio samasta analyysikohdasta. Pyydä heitä tunnistamaan, mikä tekee vahvasta versiosta uskottavamman.
+
+**Ohje opiskelijalle:**
+
+1. Alleviivaa heikosta versiosta epätarkat tai puhekieliset kohdat.
+2. Merkitse vahvasta versiosta käytetyt käsitteet.
+3. Kirjoita, mitä vahva versio tekee paremmin: käsitteet, perustelut, rakenne vai vastuu.
+4. Muokkaa yksi heikko virke asiantuntijamaiseksi.
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
+
+### TT-B: Neliosainen lausuntorunko
+
+**Tavoite:** Opiskelija rakentaa oman lausuntonsa rungon ennen varsinaista kirjoittamista.
+
+**Tehtävä:** Opiskelija valitsee skenaarion ja täyttää neliosaisen rungon lyhyillä muistiinpanoilla.
+
+| Lausunnon osa | Opiskelijan muistiinpanot | Tarkistuskysymys |
+| --- | --- | --- |
+| **Mitä tapahtui?** |  | Kuvaatko tapahtumat ilman tunnepitoista tulkintaa? |
+| **Miksi se tapahtui?** |  | Mitä käsitteitä käytät ja miten ne näkyvät skenaariossa? |
+| **Miten tilanne pitäisi hoitaa?** |  | Onko ehdotuksissa kuka, mitä, milloin ja miten? |
+| **Ammatillinen vastuu** |  | Kuka vastaa ja mikä olisi oma roolisi ammattilaisena? |
+
+**Aika-arvio:** 20–25 minuuttia
+
+---
+
+### TT-C: Tekoäly työparina
+
+**Tavoite:** Opiskelija harjoittelee tekoälyn ohjaamista niin, että malli auttaa jäsentämään ajattelua mutta ei kirjoita lopullista vastausta opiskelijan puolesta.
+
+**Tehtävä:** Opiskelija kirjoittaa tekoälylle vahvan promptin oman skenaarionsa perusteella. Promptissa pitää olla rooli, skenaario, käsitteet, rajaus ja pyyntö.
+
+**Promptin tarkistuslista:**
+
+- Onko rooli määritelty?
+- Onko skenaario kuvattu riittävän tarkasti?
+- Onko mukana vähintään kaksi Teoria-osion käsitettä?
+- Pyydetäänkö tekoälyltä jäsentelyä, vaihtoehtoja tai tarkistusta eikä valmista palautettavaa tekstiä?
+- Onko mukana rajaus, esimerkiksi ”älä keksi lakiviittauksia” tai ”älä kirjoita lopullista tekstiä”?
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
+
+### TT-D: Toimenpidesuunnitelman konkretisointi
+
+**Tavoite:** Opiskelija muuttaa yleiset suositukset konkreettisiksi ammatillisiksi toimiksi.
+
+**Tehtävä:** Opiskelija ottaa yhden oman suosituksensa ja täsmentää sen seuraavan taulukon avulla.
+
+| Kysymys | Vastaus |
+| --- | --- |
+| Mitä tehdään? |  |
+| Kuka vastaa? |  |
+| Milloin tehdään? |  |
+| Miten onnistuminen tarkistetaan? |  |
+
+**Aika-arvio:** 15 minuuttia
+
+---
+
+## Arviointivinkit
+
+### Mitä etsiä hyvästä palautuksesta?
+
+- **Rakenne on selkeä:** neljä osaa löytyvät helposti.
+- **Kieli on asiantuntevaa:** teksti on neutraalia, täsmällistä ja perustelevaa.
+- **Käsitteet ovat toiminnassa:** opiskelija ei vain mainitse käsitteitä, vaan käyttää niitä tilanteen selittämiseen.
+- **Todistusaineisto näkyy:** opiskelija hyödyntää aiempien tuntien omia tuotoksia tai muistiinpanoja.
+- **Suositukset ovat konkreettisia:** niissä näkyy aikataulu, vastuuhenkilö ja toteutustapa.
+- **Tekoälyn käyttö on hallittua:** teksti ei vaikuta muokkaamattomalta tekoälytuotokselta, vaan opiskelijan omalta analyysilta.
+
+### Tyypillisiä heikkouksia
+
+- Teksti käsittelee tekoälyn riskejä yleisesti eikä valittua skenaariota.
+- Käsitteitä luetellaan ilman soveltamista.
+- Suositukset ovat liian yleisiä: ”lisätään koulutusta” tai ”tehdään ohjeistus”.
+- Vastuukysymys jää yhteen lauseeseen.
+- Tekoälyn tuottamia väitteitä ei ole tarkistettu.
+- Kieli on puhekielistä tai tunnepitoista.
+
+### Nopea arviointikysymys opettajalle
+
+Kun luet opiskelijan lausuntoa, voit käyttää tätä kysymystä:
+
+> **Voisiko tämän tekstin antaa esimiehelle, tietosuojavastaavalle tai asiakkaalle niin, että se auttaisi tekemään päätöksen?**
+
+Jos vastaus on kyllä, opiskelija on todennäköisesti ymmärtänyt asiantuntijalausunnon tavoitteen.
+
+---
+
+## Palautteen antaminen
+
+### Rakentavan palautteen malli
+
+Palautteen kannattaa olla lyhyt mutta täsmällinen. Käytä esimerkiksi kolmen kohdan mallia:
+
+1. **Vahvuus:** mikä osoitti osaamista?
+2. **Kehittämiskohta:** mikä jäi vajaaksi?
+3. **Seuraava askel:** mitä opiskelijan kannattaa tehdä seuraavaksi?
+
+**Esimerkkipalaute**
+
+”Lausunnon rakenne on selkeä ja käytät hallusinaation käsitettä oikeassa kohdassa. Suositukset jäävät kuitenkin vielä yleisiksi: tarkenna, kuka tekee toimenpiteet ja millä aikataululla. Lisää myös vastuuosioon organisaation ja yksittäisen työntekijän roolien ero.”
+
+---
+
+## Eriyttäminen ja tuki
+
+### Jos opiskelija ei pääse alkuun
+
+Ohjaa opiskelija aloittamaan neljällä lyhyellä vastauksella:
+
+1. Mitä skenaariossa tapahtui yhdellä virkkeellä?
+2. Mikä on suurin riski?
+3. Mikä kurssin käsite selittää riskiä parhaiten?
+4. Mikä olisi ensimmäinen järkevä toimenpide?
+
+Kun nämä neljä kohtaa ovat valmiina, opiskelija voi laajentaa ne lausunnon rungoksi.
+
+### Jos opiskelijalla on kirjoittamisen vaikeuksia
+
+Opiskelija voi osoittaa osaamistaan myös vaiheistetulla rungolla ennen varsinaista tekstiä. Tarvittaessa voidaan käyttää vaihtoehtoista suoritustapaa, jossa opiskelija tekee:
+
+- **tilannekartan** skenaarion toimijoista, riskeistä ja vastuista
+- **päätöspuun** suositelluista toimenpiteistä
+- **suullisen perustelun**, jossa hän selittää käsitteet omin sanoin
+
+Vaihtoehtoinen suoritustapa ei ole helpompi versio. Sen tulee osoittaa sama ymmärrys kuin kirjallisen lausunnon.
+
+### Jos tekoäly tuottaa opiskelijalle liian valmista tekstiä
+
+Pyydä opiskelijaa tekemään seuraava tarkistus:
+
+- Merkitse, mitkä kohdat ovat tekoälyn ehdottamia.
+- Kirjoita jokaisen tärkeän väitteen viereen, miksi se on mukana.
+- Poista kohta, jota et osaa selittää omin sanoin.
+- Tarkista kaikki lakiviittaukset, vuosiluvut ja lähteet.
+
+---
+
+## Tarkistuslista opiskelijalle ennen palautusta
+
+Anna opiskelijoille tämä lista viimeisenä tarkistuksena ennen palautusta.
+
+- Lausunto on noin **1000–1200 sanaa**.
+- Kaikki neljä osaa on käsitelty: **mitä tapahtui**, **miksi se tapahtui**, **miten tilanne pitäisi hoitaa** ja **ammatillinen vastuu**.
+- Tekstissä käytetään vähintään kahta omaa todistusaineistoa tunneilta 3, 5 ja 7.
+- Teoria-osion käsitteitä käytetään täsmällisesti eikä vain mainita nimeltä.
+- Toimenpide-ehdotuksissa näkyy, kuka tekee, mitä tekee, milloin tekee ja miten tekee.
+- Vastuukysymys on käsitelty omana osanaan.
+- Mahdolliset hallusinaatiot, kuten lait, vuosiluvut ja lähteet, on tarkistettu.
+- Kieli on neutraalia ja asiantuntevaa.
+- Teksti on opiskelijan omaa ajattelua, ei tekoälyn muokkaamaton raakatuotos.
+- Lopussa on selkeä johtopäätös.
+
+---
+
+## Jatkuva integraatio seuraavaan osioon
+
+### Yhteys tekoälyn käytön osioon
+
+Tämä oppitunti toimii siltana Teoria-osiosta käytännön tekoälytyöskentelyyn. Opiskelija ei ainoastaan osoita ymmärtävänsä tekoälyn riskejä, vaan harjoittelee samalla tekoälyn ohjaamista, tuotoksen arviointia ja tekstin omistajuutta.
+
+Seuraavassa osiossa opiskelija syventää taitojaan esimerkiksi:
+
+- **prompting-tekniikoissa**
+- **tekoälyn käyttämisessä työparina**
+- **tekoälyvastausten tarkistamisessa**
+- **ammatillisen työnkulun rakentamisessa**
+
+**Opettajan muistutus:** Tällä tunnilla opiskelija näyttää, että hän ei ole vain tekoälyn käyttäjä. Hän on ihminen, joka osaa ohjata, arvioida ja kantaa vastuun lopputuloksesta.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että asiantuntijalausunto on näyttö sekä Teoria-osion sisällöstä että tekoälyn ammatillisesta käytöstä. Opiskelija saa käyttää tekoälyä, mutta hänen täytyy ohjata sitä, tarkistaa sen tuotos ja tehdä lopullinen arvio itse.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mikä tekee tekstistäsi asiantuntijalausunnon eikä vain tekoälyn tuottaman yleisen vastauksen?
+
+> **Lopetuslause opettajalle:** Tuomaripöydän takana ei istu kone. Siellä istuu opiskelija, joka osaa perustella ratkaisunsa.
+
+---

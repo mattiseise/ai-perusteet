@@ -1,229 +1,431 @@
-# Opettajan materiaalit — Oppitunti 17
+# Opettajan materiaalit — Oppitunti 17: projektidokumenttibotin suunnittelu ja rakentamisen aloitus
 
 ## Oppitunnin tarkoitus ja konteksti
 
-Tämä oppitunti 17 on Tekoälyjen käyttö -osion arvioinnin **ensimmäinen osa** kahdesta. Se keskittyy **suunnitteluun ja rakentamisen aloittamiseen**. Oppitunti 18 on viimeistely ja esittely.
+Tämä oppitunti on **Tekoälyjen käyttö** -osion arvioinnin ensimmäinen osa. Oppitunti 17 keskittyy **suunnitteluun** ja **rakentamisen aloittamiseen**. Oppitunnilla 18 opiskelijat viimeistelevät, parantavat ja esittelevät työnsä.
 
-Oppitunnin tavoite: Opiskelijat suunnittelevat ja rakentavat uuden Custom GPT -botin, projektidokumenttibotin, joka kysyy käyttäjältä oikeita kysymyksiä projektista, kokoaa vastaukset järjestelmälliseksi projektisuunnitelmaksi ja toimii mentorin tavalla.
+Oppitunnin tavoitteena on, että opiskelijat suunnittelevat ja rakentavat uuden **Custom GPT** -botin: **projektidokumenttibotin**. Botin tehtävänä on kysyä käyttäjältä oikeita kysymyksiä projektista, koota vastaukset järjestelmälliseksi projektisuunnitelmaksi ja toimia mentorin tavoin.
 
-Opiskelijat osoittavat taidot botin tarkoituksen, roolin ja kysymyspatteriston suunnittelussa. He kirjoittavat system promptin, joka johtaa botin käyttäytymistä. He testaavat botin käytännöllisissä tilanteissa ja iteratiivisesti parantavat sitä testaustulosten perusteella. He dokumentoivat prosessin selkeästi.
+Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin, ohjeet, rajaukset ja kysymyspatteriston. He kirjoittavat **system promptin**, testaavat bottia käytännön tilanteissa, parantavat sitä iteratiivisesti ja dokumentoivat prosessin selkeästi.
 
----
-
-## Osaamistavoitteet
-
-Oppitunnin jälkeen opiskelijat osaavat määritellä botin tarkoituksen, roolin ja ohjeet. He osaavat suunnitella järjestelmällisen kysymysketjun projektisuunnittelua varten ja kirjoittaa selkeän system promptin, joka johtaa botin käyttäytymistä. He osaavat testata bottia käytännöllisissä tilanteissa ja dokumentoida prosessia niin, että joku toinen voi ymmärtää rakentamisen. He osaavat iteratiivisesti parantaa bottia testaustulosten perusteella.
-
-## Arviointikriteerit — Tekoälyjen käyttö -osio, osa 1/2
-
-Tämä oppitunti on arvioinnin ensimmäinen osa. Arviointia jatketaan oppitunnilla 18. Yhdessä oppitunnit 17 ja 18 muodostavat kokonaisarvioinnin.
-
-### Arviointikohteet (40 pistettä yhteensä)
-
-Oppitunnilla 17 arvioidaan noin 60 % arvioinnista.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että arvioinnissa ei mitata vain lopullista bottia. Arvioinnissa mitataan erityisesti suunnittelua, testausta, iteraatiota ja dokumentoitua ajattelua. Hyvä työ näyttää, miten botti syntyi ja miksi sitä muutettiin.
 
 ---
 
-**Pisteytys:**
-- **Erinomainen (5):** 36–40 p
-- **Hyvä (4):** 32–35 p
-- **Tyydyttävä (3):** 28–31 p
-- **Välttävä (2):** 20–27 p
-- **Hylätty (1):** 0–19 p
+## Oppimisen tavoitteet
 
-## Arviointikohteet yksityiskohtaisesti (8 p per kohta)
+### Muistaa ja ymmärtää
 
-### 1. Botin suunnittelu ja rooli (8 p)
-**Mitä arvioidaan:**
-- Onko botin tarkoitus selkeä (auttaa projektin suunnitteluun)?
-- Onko rooli vastaava (projektin mentor/asiantuntija)?
-- Ovatko ohjeet selkeät (miten kysyi, miten kuunteli, miten koota)?
+- Opiskelija ymmärtää, mikä **projektidokumenttibotti** on ja mihin sitä käytetään.
+- Opiskelija ymmärtää, että hyvä botti tarvitsee selkeän **tarkoituksen**, **roolin**, **ohjeet** ja **rajaukset**.
+- Opiskelija ymmärtää, että **system prompt** ohjaa botin käyttäytymistä ja kysymysten järjestystä.
+- Opiskelija ymmärtää, että testaus ja korjaaminen kuuluvat botin rakentamiseen.
+
+### Soveltaa ja analysoida
+
+- Opiskelija osaa suunnitella järjestelmällisen **kysymysketjun** projektisuunnittelua varten.
+- Opiskelija osaa kirjoittaa system promptin, jossa näkyvät botin identiteetti, tarkoitus, toimintatapa ja rajaukset.
+- Opiskelija osaa testata bottia vähintään kahdella erilaisella projektiskenaariolla.
+- Opiskelija osaa analysoida testituloksia: mikä toimi, mikä ei toiminut ja miksi.
+
+### Luoda ja arvioida
+
+- Opiskelija osaa rakentaa ensimmäisen toimivan version projektidokumenttibotista.
+- Opiskelija osaa parantaa bottia testitulosten perusteella.
+- Opiskelija osaa dokumentoida tehtävät 17.1–17.4 niin, että toinen henkilö ymmärtää rakentamisen vaiheet.
+- Opiskelija osaa arvioida omaa botin kehitysprosessiaan kriittisesti.
+
+---
+
+## Arvioinnin kokonaisuus
+
+Oppitunnit 17 ja 18 muodostavat yhdessä **Tekoälyjen käyttö** -osion arvioinnin. Oppitunnilla 17 arvioidaan erityisesti suunnittelua, system promptia, testausta, iteraatiota ja dokumentaatiota. Oppitunnilla 18 arviointi jatkuu viimeistelyllä, esittelyllä ja lopullisen tuotoksen laadulla.
+
+Oppitunnilla 17 arvioidaan noin **60 %** kokonaisuudesta.
+
+### Pisteytys
+
+| Arvosana | Pistemäärä | Yleiskuvaus |
+| --- | --- | --- |
+| **5 — Erinomainen** | 36–40 p | Suunnittelu, testaus, iteraatio ja dokumentaatio ovat selkeitä, perusteltuja ja ammatillisia. |
+| **4 — Hyvä** | 32–35 p | Kokonaisuus toimii hyvin, mutta joissakin kohdissa analyysi tai dokumentointi voisi olla tarkempaa. |
+| **3 — Tyydyttävä** | 28–31 p | Perusasiat ovat mukana, mutta suunnittelu, testaus tai parantaminen jää osittain pinnalliseksi. |
+| **2 — Välttävä** | 20–27 p | Työssä on selviä puutteita, mutta joitakin arvioitavia osia on tehty. |
+| **1 — Hylätty** | 0–19 p | Työ ei vielä osoita riittävää osaamista botin suunnittelusta, testaamisesta ja dokumentoinnista. |
+
+---
+
+## Arviointikohteet yksityiskohtaisesti
+
+### 1. Botin suunnittelu ja rooli — 8 pistettä
+
+**Mitä arvioidaan?**
+
+- Onko botin tarkoitus selkeä: auttaa käyttäjää projektin suunnittelussa?
+- Onko botin rooli uskottava, esimerkiksi projektimentori tai projektisuunnittelun asiantuntija?
+- Ovatko ohjeet selkeät: miten botti kysyy, kuuntelee, tarkentaa ja kokoaa vastaukset?
 - Ovatko rajaukset sopivat?
-- Onko kysymyspatteristo (tehtävä 17.1) järjestelmällinen ja kattava?
+- Onko tehtävässä 17.1 laadittu **kysymyspatteristo** järjestelmällinen ja riittävän kattava?
 
-**Erittäin hyvä esimerkki (8 p):**
-- Tarkoitus: "Auttaa opiskelijaa luomaan selkeän projektisuunnitelman järjestelmällisten kysymysten avulla"
-- Rooli: "Olet projektin mentor, jolla on 10 vuoden kokemus projektinjohdosta"
-- Ohjeet: 4–5 konkreettista ohjetta siitä, miten botti kysyy
-- Rajaukset: 2–3 selkeää rajausta
-- Kysymyspatteristo: 15–20 hyvin järjestettyä kysymystä viiteen ryhmään
+| Taso | Kuvaus |
+| --- | --- |
+| **Erittäin hyvä, 8 p** | Tarkoitus on konkreettinen, rooli on uskottava, ohjeet ovat selkeitä, rajaukset ovat vastuullisia ja kysymyspatteristo sisältää noin 15–20 hyvin järjestettyä kysymystä esimerkiksi viidessä ryhmässä. |
+| **Heikko, 1–2 p** | Tarkoitus on epämääräinen, rooli puuttuu tai on yleinen, ohjeet ovat tasolla ”kysy oikeita kysymyksiä”, rajaukset puuttuvat ja kysymyspatteristo on lyhyt tai satunnainen. |
 
-**Heikko esimerkki (1–2 p):**
-- Tarkoitus: Epäselkeä tai "auta minua"
-- Rooli: Puuttuu tai liian epämääräinen
-- Ohjeet: "Kysy oikeita kysymyksiä"
-- Rajaukset: Puuttuvat
-- Kysymyspatteristo: Alle 10 kysymystä tai satunnaisia
+**Esimerkki hyvästä tarkoituksesta:**
 
-### 2. System promptin kirjoitus (8 p)
+”Botti auttaa opiskelijaa luomaan selkeän projektisuunnitelman järjestelmällisten kysymysten avulla.”
 
-**Mitä arvioidaan:**
-- Sisältääkö prompti identiteetin, tarkoituksen, ohjeet ja rajaukset?
-- Ovatko ohjeet selkeät kielimallille?
-- Onko promptissa näkyvissä, miten botti käyttäytyy?
-- Onko se 300–500 sanaa vai lyhyempi?
+**Esimerkki hyvästä roolista:**
 
-**Erittäin hyvä esimerkki (8 p):**
-- System prompt sisältää kaikki neljä osaa selkeästi
-- Jokainen osa on ammatillisesti kirjoitettu
-- Ohjeet ovat konkreettisia (esim. "Kysy ensin lyhyt projektikuvaus, sitten käyttäjät, sitten tarkoitus...")
-- Prompt on noin 300–500 sanaa
-- Promptista näkyy, miten botti käyttäytyy käytännössä
+”Olet projektimentori, jolla on kokemusta projektien suunnittelusta, tavoitteiden määrittelystä, aikataulutuksesta ja riskien tunnistamisesta.”
 
-**Heikko esimerkki (1–2 p):**
-- Prompt on vain muutama lause
-- Se ei sisällä rajauksia tai ohjeet ovat epäselviä
-- Se näyttää olevan generoitu suoraan AI:stä ilman muokkausta
-- Ohjeet ovat epämääräisiä ("ole auttavainen")
+---
 
-### 3. Testaus ja validointi (8 p)
+### 2. System promptin kirjoittaminen — 8 pistettä
 
-**Mitä arvioidaan:**
-- Kuinka monta testiskenaariotapaa on dokumentoitu?
-- Ovatko testit järkevät ja kattavia (sekä onnistumiset että epäonnistumiset)?
-- Ovatko testidokumentit selkeät (syöte, odotus, tulos)?
+**Mitä arvioidaan?**
 
-**Erittäin hyvä esimerkki (8 p):**
-- Kaksi täyttä testiskenaariotapaa dokumentoitua
-- Jokaisen testin perusteella analysoitu: mitä osia toimi, mitä ei
-- Testidokumentti näyttää botin vastaukset selkeästi
-- Analyysi näyttää, mitkä osat toimivat hyvin ja mitkä eivät
-- Testit ovat erilaisia (yksinkertainen vs. monimutkainen projekti)
+- Sisältääkö system prompt **identiteetin**, **tarkoituksen**, **ohjeet** ja **rajaukset**?
+- Ovatko ohjeet selkeitä kielimallille?
+- Näkyykö promptista, miten botin pitää käyttäytyä käytännössä?
+- Onko prompti riittävän laaja, esimerkiksi noin 300–500 sanaa?
 
-**Heikko esimerkki (1–2 p):**
-- Vain 1 testi tai testit ovat samankaltaisia
-- Testidokumentti puuttuu tai on epäselvä
-- Ei analyysia
+| Taso | Kuvaus |
+| --- | --- |
+| **Erittäin hyvä, 8 p** | Prompt sisältää kaikki neljä osaa selkeästi. Ohjeet ovat konkreettisia, ammatillisia ja toiminnallisia. Promptista näkee, missä järjestyksessä botti kysyy ja miten se kokoaa vastaukset projektisuunnitelmaksi. |
+| **Heikko, 1–2 p** | Prompt on vain muutama lause. Rajaukset puuttuvat, ohjeet ovat yleisiä, ja teksti näyttää tekoälyn tuottamalta ilman opiskelijan omaa muokkausta. |
 
-### 4. Iteraatio ja parantaminen (8 p)
+> **System prompt on botin toimintasuunnitelma.** Jos se on epämääräinen, botti joutuu arvaamaan. Jos se on täsmällinen, botti toimii johdonmukaisemmin.
 
-**Mitä arvioidaan:**
-- Löysikö opiskelija ongelmia testeissä?
-- Muuttiko hän system promptia sen perusteella?
-- Ovatko muutokset dokumentoituja?
-- Näkyykö kriittinen ajattelu?
+#### System promptin suositeltu rakenne
 
-**Erittäin hyvä esimerkki (8 p):**
-- Opiskelija löysi ongelman (esim. "Botti kysyi liian vähän käyttäjistä")
-- Hän muutti system promptin (lisäsi 2 kysymystä "Kenelle?"-osioon)
-- Hän testasi uudelleen samalla projektilla
-- Hän dokumentoi muutokset ja näytti, että parantui
+**1. Identiteetti:** Kuka botti on?
 
-**Heikko esimerkki (1–2 p):**
-- Ei havaittu ongelmia tai
-- Ongelmia löydettiin, mutta ei muutettu
-- Dokumentaatio puuttuu
+**2. Tarkoitus:** Mitä botti auttaa käyttäjää tekemään?
 
-### 5. Dokumentaatio ja prosessin selkeyttäminen (8 p)
+**3. Toimintatapa:** Missä järjestyksessä botti kysyy ja miten se reagoi vastauksiin?
 
-**Mitä arvioidaan:**
-- Onko kokonaisuutena dokumentoitu tehtävät 17.1–17.4?
+**4. Rajaukset:** Mitä botti ei saa tehdä?
+
+---
+
+### 3. Testaus ja validointi — 8 pistettä
+
+**Mitä arvioidaan?**
+
+- Kuinka monta testiskenaariota opiskelija on dokumentoinut?
+- Ovatko testit erilaisia ja järkeviä?
+- Onko mukana sekä onnistumisia että kehittämiskohteita?
+- Onko testidokumentaatiossa näkyvissä **syöte**, **odotettu toiminta** ja **todellinen tulos**?
+
+| Taso | Kuvaus |
+| --- | --- |
+| **Erittäin hyvä, 8 p** | Opiskelija dokumentoi kaksi erilaista testiskenaariota, esimerkiksi yksinkertaisen ja monimutkaisen projektin. Testeissä näkyvät botin vastaukset, analyysi onnistumisista ja kehittämiskohteista. |
+| **Heikko, 1–2 p** | Testejä on vain yksi tai ne ovat lähes samanlaisia. Testidokumentaatio on epäselvä tai analyysi puuttuu. |
+
+#### Testauspohja opiskelijoille
+
+| Testi | Käyttäjän syöte | Odotettu toiminta | Botin todellinen vastaus | Johtopäätös |
+| --- | --- | --- | --- | --- |
+| **Testi 1** | Yksinkertainen projekti | Botti kysyy peruskysymykset ja kokoaa alustavan suunnitelman. |  |  |
+| **Testi 2** | Monimutkainen tai epäselvä projekti | Botti pyytää tarkennuksia eikä tee liian nopeita oletuksia. |  |  |
+
+---
+
+### 4. Iteraatio ja parantaminen — 8 pistettä
+
+**Mitä arvioidaan?**
+
+- Löysikö opiskelija testien perusteella ongelmia?
+- Muuttiko opiskelija system promptia tai kysymyspatteristoa ongelmien perusteella?
+- Onko muutokset dokumentoitu?
+- Näkyykö työssä **kriittinen ajattelu**?
+
+| Taso | Kuvaus |
+| --- | --- |
+| **Erittäin hyvä, 8 p** | Opiskelija löytää konkreettisen ongelman, muuttaa promptia tai kysymyksiä, testaa uudelleen ja dokumentoi, paraniko botin toiminta. |
+| **Heikko, 1–2 p** | Opiskelija ei havaitse ongelmia, vaikka testaus paljastaisi niitä, tai havaitsee ongelmia mutta ei tee muutoksia. |
+
+**Opettajan muistutus:** Botin epäonnistuminen testissä ei ole huono asia. Huono asia on, jos epäonnistumista ei huomata, dokumentoida tai korjata.
+
+#### Iteraation dokumentointipohja
+
+| Havaittu ongelma | Mitä muutin? | Miksi muutin? | Miten testasin uudelleen? | Paraniko toiminta? |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+---
+
+### 5. Dokumentaatio ja prosessin selkeys — 8 pistettä
+
+**Mitä arvioidaan?**
+
+- Onko tehtävät 17.1–17.4 dokumentoitu kokonaisuutena?
 - Näkyykö prosessi alusta loppuun?
-- Ovatko kuvakaappaukset tai linkit botiin olemassa?
-- Näkyykö opiskelijan ymmärrys aiheesta?
+- Onko mukana kuvakaappauksia tai linkki bottiin?
+- Näkyykö dokumentaatiossa opiskelijan oma ymmärrys ja ajattelu?
 
-**Erittäin hyvä esimerkki (8 p):**
-- 3–4 A4-sivua dokumentaatiota
-- Tehtävät 17.1–17.4 selkeästi dokumentoituja
-- Kuvakaappaukset botista ja testeistä
-- Yhteenveto siitä, mitä opittiin
-- Teksti on oman käden tekemää, ei kopioitua
+| Taso | Kuvaus |
+| --- | --- |
+| **Erittäin hyvä, 8 p** | Dokumentaatio on noin 3–4 A4-sivua. Tehtävät 17.1–17.4 ovat selkeästi mukana. Kuvakaappaukset, testit, muutokset ja opittu asia näkyvät. Teksti on opiskelijan omaa, ei pelkkä tekoälyltä kopioitu tuotos. |
+| **Heikko, 1–2 p** | Dokumentaatio on alle yhden sivun, tehtävät puuttuvat tai ovat epäselviä, kuvakaappauksia ei ole eikä prosessin ajattelu näy. |
 
-**Heikko esimerkki (1–2 p):**
-- Dokumentaatio on alle 1 sivu
-- Tehtävät dokumentoituja epäselvästi
-- Kuvakaappauksia puuttuu
-- Ei yhteenvetoa
+> **Dokumentaatio näyttää ajattelun.** Ilman dokumentaatiota opettaja näkee vain lopputuloksen, ei osaamista, testejä eikä parannuksia.
 
 ---
 
 ## Yleisiä väärinkäsityksiä ja korjausvinkkejä
 
-### Väärinkäsitys 1: "System prompt ei ole niin tärkeä"
+### Väärinkäsitys 1: ”System prompt ei ole niin tärkeä.”
 
-**Opiskelija ajattelee:** "Voin vain kirjoittaa botille, että kysy projektista, ja se tekee oikein."
+**Opiskelija ajattelee:** ”Voin vain kirjoittaa botille, että kysy projektista, ja se tekee oikein.”
 
-**Opettajan vastaus:** "Kielimalli on kuin neuvonantaja, joka ei tiedä kontekstia. Se tarvitsee yksityiskohtaiset ohjeet: Kuka sinä olet? Mitä sinun pitää tehdä? Miten? Miksi? Jos et kerro nämä, botti tekee arvauksia ja menee väärin."
+**Korjaava näkökulma:** Kielimalli ei tunne kontekstia ilman ohjeita. Se tarvitsee tiedon siitä, kuka se on, mitä sen pitää tehdä, missä järjestyksessä sen pitää edetä ja mitä se ei saa tehdä. Ilman näitä botti arvaa.
 
-**Korjaus:** Näytä konkreettinen esimerkki. Live-demo samalla botilla kahdella eri promptilla. Näytä ero.
+**Opettajan toiminta:** Näytä live-demo kahdella eri promptilla: yksi epämääräinen ja yksi tarkka. Pyydä opiskelijoita vertaamaan, kumpi tuottaa käyttökelpoisemman projektisuunnitelman.
 
-### Väärinkäsitys 2: "Yksi testi riittää"
+---
 
-**Opiskelija ajattelee:** "Testasin botin yhdellä projektikuvauksella, se toimi. Valmista!"
+### Väärinkäsitys 2: ”Yksi testi riittää.”
 
-**Opettajan vastaus:** "Hyvä alku! Mutta entä jos toinen käyttäjä on erilainen? Entä jos kuvaus on epäselvä? Kaksi eri testiä, molemmat erilaiset, näyttää, että botti on robustimpi kuin yksi testi."
+**Opiskelija ajattelee:** ”Testasin botin yhdellä projektikuvauksella ja se toimi. Valmista.”
 
-**Korjaus:** Kehoita tekemään kaksi täysin erilaista testiskenaariotapaa (esim. yksi yksinkertainen projekti, yksi monimutkainen).
+**Korjaava näkökulma:** Yksi testi näyttää vain, että botti toimi yhdessä tilanteessa. Arvioinnissa tarvitaan vähintään kaksi erilaista testiä, jotta nähdään, toimiiko botti myös erilaisella käyttäjällä tai monimutkaisemmassa projektissa.
 
-### Väärinkäsitys 3: "Jos botti epäonnistuu, se on huono työ"
+**Opettajan toiminta:** Ohjaa opiskelija tekemään kaksi selvästi erilaista testiskenaariota: yksi yksinkertainen projekti ja yksi monimutkainen, epäselvä tai puutteellisesti kuvattu projekti.
 
-**Opiskelija ajattelee:** "Botti unohti käyttäjän vastauksen. Olen epäonnistunut. En tarvitse tehdä muuta."
+---
 
-**Opettajan vastaus:** "Et ollut epäonnistunut — olet tekemässä täsmälleen sitä, mitä pitäisi. Löysit ongelman! Nyt dokumentoi se. Muuta system promptia. Testaa uudelleen. Tämä on iteraatio — se osoittaa kriittistä ajattelua."
+### Väärinkäsitys 3: ”Jos botti epäonnistuu, työ on huono.”
 
-**Korjaus:** Kerro, että ongelmat ovat hyviä. Ne opettavat. Dokumentoidaan ja korjataan.
+**Opiskelija ajattelee:** ”Botti unohti käyttäjän vastauksen. Olen epäonnistunut.”
 
-### Väärinkäsitys 4: "Dokumentaatio on turhaa"
+**Korjaava näkökulma:** Testissä löytynyt ongelma on hyödyllinen havainto. Se kertoo, mitä pitää parantaa. Hyvässä työssä ongelma dokumentoidaan, promptia korjataan ja bottia testataan uudelleen.
 
-**Opiskelija ajattelee:** "Botti toimii, miksi pitäisi kirjoittaa raporttia?"
+**Opettajan toiminta:** Sanoita selkeästi, että testauksessa löytynyt virhe voi parantaa arvosanaa, jos opiskelija osoittaa sen avulla kriittistä ajattelua ja iteraatiota.
 
-**Opettajan vastaus:** "Dokumentaatio näyttää ajattelusi. Se näyttää, mitä testit osoittivat, mitä muutit ja miksi. Ilman dokumentaatiota opettaja näkee vain lopputuloksen, ei prosessia. Prosessi on se, josta saa pisteitä."
+---
 
-**Korjaus:** Näytä, mitä dokumentaatiosta etsitään: tehtävät 17.1–17.4, testit, muutokset, analyysit.
+### Väärinkäsitys 4: ”Dokumentaatio on turhaa.”
+
+**Opiskelija ajattelee:** ”Botti toimii, miksi pitäisi kirjoittaa raporttia?”
+
+**Korjaava näkökulma:** Dokumentaatio osoittaa, mitä opiskelija suunnitteli, testasi, huomasi ja muutti. Arvioinnissa prosessi on yhtä tärkeä kuin valmis botti.
+
+**Opettajan toiminta:** Näytä opiskelijoille dokumentaation minimirakenne: tehtävä 17.1, system prompt, testit, iteraatiot, kuvakaappaukset ja yhteenveto opitusta.
 
 ---
 
 ## Fasilitointiohjeet
 
-### Tuntien rakentaminen
+### Oppitunnin rakenne
 
-1. **Johdanto (5 min):** Yhdistä opiskelijoiden omaan kokemukseen. "Entä jos aloitatte projektin ilman suunnitelmaa?"
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto** | 5 min | Kytke aihe opiskelijoiden omaan kokemukseen: mitä tapahtuu, jos projekti aloitetaan ilman suunnitelmaa? |
+| **Live-demo** | 15 min | Näytä toimiva projektidokumenttibotti ja konkretisoi, mihin opiskelijat pyrkivät. |
+| **Ryhmätyö: kysymykset** | 20 min | Ryhmät ideoivat projektisuunnittelun kysymyksiä ja huomaavat, ettei ole vain yhtä oikeaa kysymyspatteristoa. |
+| **Yhteinen analyysi** | 10 min | Käydään arviointikriteerit läpi ja varmistetaan, että opiskelijat ymmärtävät, mitä heiltä odotetaan. |
+| **Itsenäinen työskentely** | 40+ min | Opiskelijat aloittavat tehtävät 17.1–17.4. Opettaja kiertää ja ohjaa. |
 
-2. **Live-demo (15 min):** Näytä toimiva botti ja kuinka se toimii. Tämä konkretisoi, mihin pyritään.
+### Johdantolause opettajalle
 
-3. **Ryhmätyö (20 min):** Ryhmät ideoivat kysymykset. Tämä aktivoi opiskelijoita ja osoittaa, ettei ole vain yksi oikea vastaus.
+> Kun projekti aloitetaan ilman suunnitelmaa, ongelmat näkyvät yleensä myöhemmin: aikataulu venyy, tehtävät jäävät epäselviksi ja vastuut puuttuvat. Tänään rakennamme botin, jonka tehtävä on auttaa käyttäjää tekemään parempi projektisuunnitelma oikeiden kysymysten avulla.
 
-4. **Yhteinen analyysi (10 min):** Nämä ovat kriteerit, joilla arvioidaan. Opiskelijat näkevät, mitä odotetaan.
+---
 
-5. **Opiskelijat aloittavat (30+ min):** Opiskelijat alkavat tehtävät 17.1–17.4. Kierrä luokassa, auta jumiin jääneita.
+## Luokkatehtävien ohjeistus
 
-### Yleisiä apukysymyksiä, kun opiskelija on jumissa
+### TT-A: Kysymyspatteriston suunnittelu
 
-**"En osaa kirjoittaa hyvää system promptia"**
-- "Mitä haluamasi botin pitäisi tehdä? (Kysy oikeita kysymyksiä projektista)"
-- "Mikä botti on? (Ekspertti, mentori, assistentti?)"
-- "Mitä se EI saa tehdä?"
-- Nämä kolme asiaa ovat runko. Kirjoita nämä ensin."
+**Tavoite:** Opiskelija osaa suunnitella järjestelmällisen kysymysketjun, jonka avulla botti kerää tarvittavat tiedot projektisuunnitelmaa varten.
 
-**"Testaus on vaikeaa"**
-- "Kuvittele kaksi erilaista ihmistä. Ensimmäinen sanoo [yksinkertainen projekti]. Toinen sanoo [monimutkainen projekti]. Kun botti vastaa, kirjoita ylös: Mitä se kysyi? Oliko järkevää?"
+**Tee näin:**
 
-**"Botti ei toiminut"**
-- "Hyvä! Dokumentoi mikä meni pieleen. Mitä muuttaisit system promptiin? Testaa uudelleen."
+1. Kirjoita, millaista projektia botti auttaa suunnittelemaan.
+2. Jaa kysymykset 4–6 aihealueeseen, esimerkiksi tavoite, käyttäjät, aikataulu, resurssit, riskit ja lopputulos.
+3. Kirjoita jokaiseen aihealueeseen 2–4 kysymystä.
+4. Valitse lopuksi 15–20 tärkeintä kysymystä.
+5. Tarkista, että kysymykset etenevät loogisessa järjestyksessä.
 
-**"Minulla on 50 kysymystä"**
-- "Voi olla liian monta. Muista: hyvä botti kysyy tarpeeksi, mutta ei liikaa. Valitse 15–20 tärkeintä. Loput voidaan kysyä myöhemmin."
+| Aihealue | Kysymykset | Miksi nämä kysymykset ovat tärkeitä? |
+| --- | --- | --- |
+| **Projektin tavoite** |  |  |
+| **Käyttäjät ja kohderyhmä** |  |  |
+| **Aikataulu ja resurssit** |  |  |
+| **Riskit ja rajaukset** |  |  |
+| **Lopputulos ja arviointi** |  |  |
+
+**Aika-arvio:** 20 minuuttia
+
+---
+
+### TT-B: System promptin kirjoittaminen
+
+**Tavoite:** Opiskelija osaa kirjoittaa projektidokumenttibotille system promptin, joka ohjaa botin toimintaa käytännössä.
+
+**Tee näin:**
+
+1. Kirjoita botin identiteetti: kuka botti on?
+2. Kirjoita botin tarkoitus: mitä botti auttaa käyttäjää tekemään?
+3. Kirjoita botin toimintatapa: mitä se kysyy ensin, miten se etenee ja miten se kokoaa vastaukset?
+4. Kirjoita botin rajaukset: mitä botti ei saa tehdä?
+5. Tarkista, että prompti on riittävän tarkka ja käytännössä testattava.
+
+**Prompttipohja:**
+
+Olet [rooli]. Tarkoituksesi on auttaa käyttäjää laatimaan selkeä projektisuunnitelma kysymällä järjestelmällisiä kysymyksiä.
+
+Aloita kysymällä lyhyt projektikuvaus. Sen jälkeen kysy projektin tavoite, kohderyhmä, aikataulu, resurssit, riskit ja lopputulos. Kysy yksi aihealue kerrallaan ja tarvittaessa tarkentavia kysymyksiä.
+
+Älä tee projektia käyttäjän puolesta. Älä oleta puuttuvia tietoja, vaan kysy tarkennuksia. Kokoa lopuksi käyttäjän vastauksista selkeä projektisuunnitelma.
+
+**Aika-arvio:** 25 minuuttia
+
+---
+
+### TT-C: Botin testaus
+
+**Tavoite:** Opiskelija testaa bottia käytännössä ja huomaa, toimiiko system prompt eri tilanteissa.
+
+**Tee näin:**
+
+1. Kirjoita ensimmäinen testiskenaario: yksinkertainen projekti.
+2. Kirjoita toinen testiskenaario: monimutkainen, epäselvä tai laajempi projekti.
+3. Anna molemmat botille ja tallenna vastaukset.
+4. Kirjaa, mitä botti kysyi ja oliko kysymysten järjestys järkevä.
+5. Kirjaa, mitä botti teki hyvin ja mitä pitää parantaa.
+
+**Aika-arvio:** 20–30 minuuttia
+
+---
+
+### TT-D: Iteraatio ja korjaus
+
+**Tavoite:** Opiskelija parantaa bottia testitulosten perusteella.
+
+**Tee näin:**
+
+1. Valitse testissä havaittu ongelma.
+2. Kirjoita, miksi ongelma haittaa botin toimintaa.
+3. Muuta system promptia tai kysymyspatteristoa.
+4. Testaa botti uudelleen samalla tai samantyyppisellä skenaariolla.
+5. Kirjoita, paraniko toiminta.
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
+
+## Yleisiä apukysymyksiä opiskelijoille
+
+### Jos opiskelija ei osaa kirjoittaa system promptia
+
+- Mitä haluat botin tekevän?
+- Mikä botin rooli on: mentori, asiantuntija, assistentti vai jokin muu?
+- Mitä botin pitää kysyä ensin?
+- Mitä botin ei saa tehdä?
+- Miten botti kokoaa lopputuloksen?
+
+### Jos opiskelija kokee testauksen vaikeaksi
+
+- Kuvittele kaksi erilaista käyttäjää.
+- Ensimmäinen käyttäjä kuvaa hyvin yksinkertaisen projektin.
+- Toinen käyttäjä kuvaa epäselvän tai monimutkaisen projektin.
+- Kirjoita ylös, mitä botti kysyy ja tuntuuko se järkevältä.
+
+### Jos opiskelija sanoo, että botti ei toiminut
+
+- Hienoa, löysit testituloksen.
+- Mikä tarkalleen meni pieleen?
+- Mitä system promptista puuttui?
+- Miten voisit kirjoittaa ohjeen niin, että botti toimii seuraavalla kerralla paremmin?
+
+### Jos opiskelijalla on liikaa kysymyksiä
+
+- Kaikkia kysymyksiä ei tarvitse kysyä heti.
+- Valitse 15–20 tärkeintä kysymystä.
+- Jaa kysymykset aihealueisiin.
+- Anna botille ohje kysyä tarkentavia kysymyksiä vain tarvittaessa.
+
+---
 
 ## Eriyttäminen
 
-### Haastava versio opiskelijoille, jotka haluavat lisää
+### Haastavampi versio opiskelijoille, jotka etenevät nopeasti
 
-Pyydä opiskelijaa lisäämään kysymyksiä: Entä riskit? Entä kilpailijat? Entä roolien jaot tiimissä? He voivat kehittää monimutkaisen suunnittelun, jossa botti tekee ensin lyhyen suunnitelman, sitten syvää, sitten erittäin syvää. He voivat lisätä kielten tuen ja tehdä botista monikielisen, joka osaa vastata projektikysymyksiin usealla kielellä.
+- Lisää kysymyksiä projektin riskeistä, kilpailijoista, käyttäjäryhmistä, tietosuojasta ja tiimin rooleista.
+- Suunnittele bottiin eri syvyystasot: nopea suunnitelma, tarkempi suunnitelma ja erittäin yksityiskohtainen suunnitelma.
+- Lisää botille monikielinen tuki, esimerkiksi suomi ja englanti.
+- Lisää testiskenaario, jossa käyttäjä antaa ristiriitaisia tietoja ja botin pitää pyytää tarkennusta.
 
-### Yksinkertaistettu versio opiskelijoille, jotka tarvitsevat apua
+### Yksinkertaistettu versio opiskelijoille, jotka tarvitsevat tukea
 
-Jätä tehtävä 17.1 helpommaksi antamalla valmiit 15 kysymystä, jolloin opiskelijoiden pitää vain valita parhaat. Jätä tehtävä 17.2 helpommaksi antamalla puolivalmis system prompt, jonka opiskelija täydentää. Jätä testaus (17.3) helpommaksi antamalla ennalta kirjoitetut testiskenaarioita, jotka opiskelija vain ajaa. Voit jättää vaatimatta tehtävää 17.4 — pelkästään 17.1–17.3 riittää arviointiin.
+- Anna valmis 15 kysymyksen lista ja pyydä opiskelijaa valitsemaan niistä tärkeimmät.
+- Anna puolivalmis system prompt, jonka opiskelija täydentää.
+- Anna valmiit testiskenaariot, jotka opiskelija ajaa botilla.
+- Vähennä vaatimusta niin, että opiskelija tekee tehtävät 17.1–17.3 ja dokumentoi ne selkeästi.
+
+**Opettajan huomio:** Yksinkertaistettu versio ei tarkoita, että opiskelija vapautetaan ajattelusta. Se tarkoittaa, että hän saa enemmän rakennetta, jotta hän voi osoittaa ydintaidon: botin tarkoituksen, kysymysten, promptin ja testauksen ymmärtämisen.
+
+---
 
 ## Aika ja aikataulutus
 
-Johdanto ja demo kestää 20 minuuttia oppitunnilla. Ryhmätyö ja analyysi kestää 30 minuuttia oppitunnilla. Opiskelijat työskentelevät tehtävistä 17.1–17.4 noin 40+ minuuttia oppitunnilla ja kotona. Yhteensä noin 90 minuuttia oppitunti ja kotityö.
+Oppitunnilla 17 painopiste on johdannossa, demossa ja työn aloittamisessa. Suurin osa viimeistelystä voi tapahtua oppitunnin jälkeen ja jatkua oppitunnilla 18.
 
-Oppitunnilla 17 fokus on johdantoon ja demoon. Opiskelijat voivat aloittaa tehtävät, mutta suurin työ tapahtuu luokan jälkeen ja valmistaudutaan oppitunnille 18.
+| Osuus | Aika | Huomio |
+| --- | --- | --- |
+| Johdanto ja demo | 20 min | Näytä tavoitetaso konkreettisesti. |
+| Ryhmätyö ja analyysi | 30 min | Opiskelijat suunnittelevat kysymyksiä ja ymmärtävät arviointikriteerit. |
+| Itsenäinen työ | 40+ min | Tehtävät 17.1–17.4 aloitetaan tunnilla ja viimeistellään tarvittaessa kotona. |
 
-## Yhteys muihin oppitunteihin ja viimeistelyoppituntiin
+---
 
-Tämä oppitunti on silta. Oppitunneilla 14–15 opiskelijat oppivat botin suunnittelusta ja testaamisesta. Oppitunnilla 17 he rakentavat botin, joka perustuu näihin taitoihin.
+## Yhteys muihin oppitunteihin
 
-Seuraavalla kerralla (oppitunti 18) he viimeisttelevät, parantavat ja esittelevät botin. Yhdessä suunnitteluoppitunnilla ja viimeistelyoppitunnilla ovat Tekoälyjen käyttö -osion arvioinnin ensimmäinen osa.
+- **Oppitunnit 14–15:** opiskelijat oppivat botin suunnittelusta, tietopohjasta, rajauksista ja testaamisesta.
+- **Oppitunti 17:** opiskelijat soveltavat näitä taitoja arvioitavassa projektidokumenttibotissa.
+- **Oppitunti 18:** opiskelijat viimeistelevät, parantavat ja esittelevät botin.
+- **Oppitunnit 19–27:** Agentit-osio rakentuu tämän ajattelun päälle. Projektidokumenttibotti toimii pohjana ymmärrykselle siitä, miten agenttimaisempi järjestelmä suunnitellaan.
 
-Tulevilla oppitunneilla (oppitunnit 19–27) Agentit-osio rakentaa tällä botilla. Projektidokumenttibotti on agenteille pohja — agentti on botti, joka tekee enemmän.
+**Opettajan muistutus:** Tämä oppitunti on silta botin suunnittelusta agenttiajatteluun. Kun opiskelija osaa suunnitella botin tarkoituksen, ohjeet, testit ja iteraation, hänellä on pohja ymmärtää myöhemmin myös agentteja.
+
+---
+
+## Arviointivinkit opettajalle
+
+### Mitä hyvässä työssä näkyy?
+
+- Botin tarkoitus on selkeä ja rajattu.
+- Rooli tukee projektisuunnittelua eikä ole pelkkä persoonallisuus.
+- Kysymyspatteristo etenee loogisesti.
+- System prompt on konkreettinen ja käytännössä testattava.
+- Testejä on vähintään kaksi ja ne ovat erilaisia.
+- Testien perusteella on tehty muutoksia.
+- Dokumentaatio näyttää prosessin, ei vain lopputulosta.
+
+### Heikon työn merkkejä
+
+- Botti on määritelty liian yleisesti: ”auttaa projektissa”.
+- System prompt on hyvin lyhyt tai epämääräinen.
+- Kysymykset ovat satunnaisia eivätkä muodosta projektisuunnittelun polkua.
+- Testaus on tehty vain yhdellä esimerkillä.
+- Iteraatiota ei ole tehty.
+- Dokumentaatio on liian lyhyt tai siinä ei näy opiskelijan oma ajattelu.
+
+**Opettajan arviointikysymys:** Näkyykö työssä suunnittelijan ajattelu vai vain nopeasti tehty botti? Arvioinnissa painota sitä, miten opiskelija perustelee, testaa ja parantaa ratkaisuaan.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että projektidokumenttibotti ei ole vain kysymyslista. Se on suunniteltu työkalu, joka ohjaa käyttäjää parempaan projektisuunnitelmaan. Hyvä botti kysyy oikeassa järjestyksessä, pyytää tarkennuksia, kokoaa vastaukset selkeästi ja tunnistaa omat rajansa.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mistä tiedät, että bottisi todella auttaa käyttäjää suunnittelemaan projektin paremmin eikä vain kysy satunnaisia kysymyksiä?
+
+> **Lopetuslause opettajalle:** Hyvä projektidokumenttibotti ei vain keskustele. Se ohjaa käyttäjän ajattelemaan projektinsa läpi vaihe vaiheelta.
+
+---

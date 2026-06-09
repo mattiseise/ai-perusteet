@@ -1,110 +1,200 @@
-# Opettajavetoiset tehtävät – Lesson 19
+# Opettajavetoiset tehtävät — oppitunti 19
 
-## Tehtävä 1: Järjestelmien luokittelu ryhmissä (25 min)
+## Tehtävä 19.1: Järjestelmien luokittelu ryhmissä noin 25 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on, että opiskelijat oppivat erottamaan **chatbotin**, **agentin** ja muun automaattisen järjestelmän toisistaan konkreettisten esimerkkien avulla. Samalla opiskelijat harjoittelevat tunnistamaan agentin kuusi keskeistä rakennusosaa: **syötekäsittelijän**, **päättelijän**, **työkalut**, **muistin**, **turvakerroksen** ja **palautesilmukan**.
+
+**Opettajan painotus:** Korosta, että kaikki automaattiset järjestelmät eivät ole agentteja. Agenttimaisuus syntyy siitä, että järjestelmä tulkitsee tilannetta, tekee päätöksiä, käyttää työkaluja ja toimii rajatusti itsenäisesti.
 
 ### Valmistelu
 
-Jaa opiskelijat 3–4 hengen ryhmiin. Anna jokaiselle ryhmälle yksi näistä kuvauksista.
+- Jaa opiskelijat 3–4 hengen ryhmiin.
+- Anna jokaiselle ryhmälle yksi alla olevista skenaarioista.
+- Varmista, että jokaisella ryhmällä on käytössään muistiinpanovälineet tai yhteinen dokumentti vastausten kirjaamista varten.
 
-### Kuvaelmat
+### Skenaariot
 
-**Scenario A: Laskun käsittelyagentti**
-Yritys vastaanottaa joka päivä satoja sähköpostilaskuja. Agentti lukee jokaisen laskun automaattisesti, tunnistaa laskuttajan, tarkistaa laskun summan yrityksen budjetin mukaisesti ja, jos kaikki on kunnossa, tallentaa laskun kirjanpito­järjestelmään. Jos jokin on pielessä (summaa ei tunneta tai laskuttaja ei ole luotettava), agentti käyttää ihmisen hyväksyntää. Agentti myös seuraa, mitkä laskuttajat maksavat ajallaan, ja antaa sen perusteella heille paremmat ehdot.
+#### Skenaario A: Laskun käsittelyagentti
 
-**Scenario B: Muistutus-chatbot**
-Oppilaat voivat kysyä chatissa: "Milloin on seuraava tentti?" Chatbot etsii tiedon sillä hetkellä käytössä olevasta opetuskalenterista ja vastaa: "Englannin tentti on 15. maaliskuuta." Chatbot odottaa, että oppilas kysyy seuraavan kysymyksen.
+Yritys vastaanottaa joka päivä satoja sähköpostilaskuja. Agentti lukee jokaisen laskun automaattisesti, tunnistaa laskuttajan, tarkistaa laskun summan yrityksen budjetin mukaisesti ja tallentaa laskun kirjanpitojärjestelmään, jos kaikki on kunnossa.
 
-**Scenario C: Palvelimen automaattinen kuormantasaus**
-Palvelinfarmi seuraa jokaisen palvelimen kuormaa reaaliajassa. Kun jokin palvelin nousee 85 %:n kuormaan viiden minuutin ajaksi peräkkäin, järjestelmä käynnistää automaattisesti uuden palvelimen ja alkaa reitittää uusia pyyntöjä sille. Se myös ilmoittaa IT-tiimille sähköpostilla ja auttaa selvittämään, onko kyseessä normaali kuormituspäivä vai ongelma.
+Jos jokin on pielessä, esimerkiksi laskun summaa ei tunnisteta tai laskuttaja ei ole luotettava, agentti pyytää ihmiseltä hyväksynnän. Agentti seuraa myös laskuttajien aiempaa toimintaa ja voi hyödyntää tätä tietoa myöhemmissä päätöksissä.
+
+#### Skenaario B: Muistutus-chatbot
+
+Opiskelijat voivat kysyä chatissa: “Milloin on seuraava tentti?” Chatbot etsii tiedon käytössä olevasta opetuskalenterista ja vastaa esimerkiksi: “Englannin tentti on 15. maaliskuuta.” Tämän jälkeen chatbot odottaa, että opiskelija kysyy seuraavan kysymyksen.
+
+#### Skenaario C: Palvelimen automaattinen kuormantasaus
+
+Palvelinfarmi seuraa jokaisen palvelimen kuormaa reaaliajassa. Kun jokin palvelin on 85 prosentin kuormituksessa viiden minuutin ajan, järjestelmä käynnistää automaattisesti uuden palvelimen ja alkaa reitittää uusia pyyntöjä sille.
+
+Järjestelmä lähettää myös IT-tiimille sähköposti-ilmoituksen ja auttaa selvittämään, onko kyseessä normaali kuormituspiikki vai ongelmatilanne.
 
 ### Ohjeet ryhmälle
 
-1. Lukekaa teidän saamanne kuvaelma.
-2. Keskustelkaa: onko tämä chatbot, agentti vai jotain muuta?
-3. Analysoikaa seuraavat kuusi rakennusosaa:
-   - **Syötekäsittelijä**: Kuinka järjestelmä vastaanottaa ja tulkitsee tietoja?
-   - **Päättelijä**: Tekeekö järjestelmä omia päätöksiä vai vain reagoi?
-   - **Työkalut**: Mitä toimintoja järjestelmällä on käytössään?
-   - **Muisti**: Oppiiko järjestelmä aikaisemmista tapauksista?
-   - **Turvakerros**: Onko mekanismia, joka estää vaarallisia toimintoja?
-   - **Palautesilmukka**: Kuinka järjestelmä kerää tietoa ja parantaa itseään?
-4. Kirjoittakaa paperille:
-   - Valintanne (Chatbot / Agentti / Muu)
-   - Perustelut 3–4 lauseessa, joissa nimetään vähintään 4 kuudesta komponentista
+1. Lukekaa ryhmällenne annettu skenaario huolellisesti.
+2. Päättäkää, onko kyseessä **chatbot**, **agentti** vai **muu automaattinen järjestelmä**.
+3. Analysoikaa järjestelmää kuuden rakennusosan avulla:
+   - **Syötekäsittelijä:** Miten järjestelmä vastaanottaa ja tulkitsee tietoa?
+   - **Päättelijä:** Tekeekö järjestelmä päätöksiä vai reagoiko se vain käyttäjän kysymyksiin?
+   - **Työkalut:** Mitä toimintoja järjestelmällä on käytössään?
+   - **Muisti:** Hyödyntääkö järjestelmä aikaisempia tapauksia tai historiaa?
+   - **Turvakerros:** Onko järjestelmässä mekanismi, joka estää vaarallisia tai epävarmoja toimintoja?
+   - **Palautesilmukka:** Kerääkö järjestelmä tietoa ja parantaako se toimintaansa sen perusteella?
+4. Kirjoittakaa vastauksenne paperille tai yhteiseen dokumenttiin:
+   - valintanne: **chatbot**, **agentti** vai **muu automaattinen järjestelmä**,
+   - 3–4 lauseen perustelu, jossa mainitaan vähintään neljä kuudesta rakennusosasta.
 
-### Käsittely (10 min)
+**Opettajan tarkistuskysymys:** Jos ryhmä sanoo “tämä on agentti, koska se toimii automaattisesti”, kysy: “Tekeekö se itsenäisiä päätöksiä? Käyttääkö se työkaluja? Onko sillä muistia tai turvakerrosta?”
 
-Kunkin ryhmän edustaja esittelee ryhmänsä valinnan ja perustelut. Opettaja tarkastelee vastauksia ja korjaa mahdollisia väärinkäsityksiä.
+### Käsittely noin 10 minuuttia
 
-**Oikeat vastaukset:**
-- A: Agentti (syötekäsittelijä analysoi laskuja, päättelijä tekee hyväksyntäpäätöksiä, turvakerros käyttää ihmisen hyväksyntää riskialueilla, palautesilmukka oppii maksajien käyttäytymisestä)
-- B: Chatbot (passiivinen syötekäsittelijä odottaa kysymyksiä, päättelijä vain etsii dataa, ei omaa päätöksentekoa, ei palautesilmukkaa)
-- C: Agentti (syötekäsittelijä seuraa kuormaa, päättelijä tekee päätöksen palvelimen käynnistämisestä, turvakerros rajoittaa toimintaa tiettyihin parametreihin, palautesilmukka ilmoittaa ihmiselle ja kerää dataa)
+Kunkin ryhmän edustaja esittelee ryhmän valinnan ja perustelut. Opettaja tarkentaa vastauksia ja korjaa mahdollisia väärinkäsityksiä.
+
+**Oikeat vastaukset ja perustelut:**
+
+| Skenaario | Luokittelu | Perustelu |
+| --- | --- | --- |
+| **A: Laskun käsittelyagentti** | **Agentti** | Syötekäsittelijä analysoi laskuja, päättelijä tekee hyväksyntään liittyviä päätöksiä, työkalut mahdollistavat laskun tallentamisen kirjanpitojärjestelmään, turvakerros pyytää ihmisen hyväksyntää riskitilanteissa ja palautesilmukka hyödyntää laskuttajien toimintaa. |
+| **B: Muistutus-chatbot** | **Chatbot** | Chatbot odottaa käyttäjän kysymyksiä ja hakee vastauksen kalenterista. Se ei tee itsenäisiä päätöksiä, ei käynnistä toimenpiteitä eikä sillä ole selkeää palautesilmukkaa. |
+| **C: Palvelimen automaattinen kuormantasaus** | **Agentti tai agenttimainen automaatio** | Syötekäsittelijä seuraa palvelinten kuormaa, päättelijä tekee päätöksen uuden palvelimen käynnistämisestä, työkalut mahdollistavat palvelimen käynnistämisen ja liikenteen reitittämisen, turvakerros rajoittaa toimintaa ennalta määriteltyihin raja-arvoihin ja palautesilmukka tuottaa tietoa IT-tiimille. |
+
+### Odotettu oppimistulos
+
+- Opiskelijat osaavat erottaa chatbotin ja agentin toisistaan konkreettisten esimerkkien avulla.
+- Opiskelijat osaavat nimetä agentin keskeisiä rakennusosia.
+- Opiskelijat ymmärtävät, että agentti ei vain vastaa kysymyksiin vaan voi myös tehdä päätöksiä ja käyttää työkaluja.
 
 ---
 
-## Tehtävä 2: Suoritusputki-analyysi — kuusi komponenttia ja niiden yhteistyö (20 min)
+## Tehtävä 19.2: Suoritusputki-analyysi — kuusi komponenttia ja niiden yhteistyö noin 20 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miten agentin kuusi komponenttia toimivat yhdessä **suoritusputkessa**. Opiskelijat näkevät, miten tieto kulkee järjestelmässä syötteestä päätökseen, toimintaan, muistiin ja palautteeseen.
 
 ### Valmistelu
 
-Valitse esimerkiksi agentti (IT-tikettien automaattinen reitittäjä):
+Valitse esimerkkijärjestelmäksi agentti. Voit käyttää esimerkiksi **IT-tikettien automaattista reitittäjää**.
 
-"Yrityksen IT-tukipyyntöjä hallitaan järjestelmällä, joka:
-- Vastaanottaa asiakkaan tukipyynnöt
-- Analysoi pyynnön sisältöä ja kategorisoi ongelman
-- Lähettää pyynnön oikealle asiantuntijalle, luo tiketin ja ilmoittaa asiakkaalle
-- Seuraa ratkaisu­aikoja ja oppii, mitkä asiantuntijat ovat nopeimpia kunkin ongelmakategorian kohdalla"
+**Esimerkkikuvaus:**
 
-### Ohjeet
+Yrityksen IT-tukipyyntöjä hallitaan järjestelmällä, joka:
 
-Piirrä taululle kuuden komponentin sykli tai näytä PowerPoint-dia. Käy ryhmän kanssa läpi suoritusputki-analyysin vaiheet:
+- vastaanottaa asiakkaiden tukipyyntöjä,
+- analysoi pyynnön sisältöä ja luokittelee ongelman,
+- lähettää pyynnön oikealle asiantuntijalle,
+- luo tiketin ja ilmoittaa asiakkaalle,
+- seuraa ratkaisuaikoja,
+- oppii, mitkä asiantuntijat ratkaisevat nopeimmin eri ongelmakategorioita.
 
-1. **Syötekäsittelijä**: Asiakkaan sähköpostiviestin vastaanottaminen ja tekstin analysointi
-2. **Päättelijä**: Viestin kategorisointi (esim. "verkkoyhteysvika", "ohjelmisto-ongelma", "laite") ja asiantuntijan valinta historiallisen datan perusteella
-3. **Työkalut**: Tiketin luominen, sähköposti asiantuntijalle ja asiakkaalle, tietokantayhteys
-4. **Muisti**: Aikaisempien ongelmien tietokanta, asiantuntijoiden nopeushistoria, asiakkaiden profiilit
-5. **Turvakerros**: Jos agentti on epävarma kategorisoinnista, se kysyy asiantuntijalta; ei lähetä pyyntöä väärään tiimiin
-6. **Palautesilmukka**: Ratkaisuajan mittaaminen, asiakkaan palautteen kerääminen, datan päivittäminen seuraavia päätöksiä varten
+### Opettajan ohjeet
+
+Piirrä taululle kuuden komponentin sykli tai näytä se diaesityksessä. Käy opiskelijoiden kanssa läpi, miten IT-tikettien reititys etenee vaihe vaiheelta.
+
+**Agentin suoritusputki IT-tikettien reitityksessä**
+
+|  |
+| --- |
+| **1. Syötekäsittelijä** Vastaanottaa asiakkaan sähköpostiviestin tai tukipyynnön ja analysoi tekstin. |
+| ↓ |
+| **2. Päättelijä** Luokittelee ongelman ja valitsee sopivan asiantuntijan aiemman datan perusteella. |
+| ↓ |
+| **3. Työkalut** Luo tiketin, lähettää sähköpostin ja käyttää tarvittaessa tietokantaa. |
+| ↓ |
+| **4. Muisti** Hyödyntää aiempien ongelmien tietokantaa, asiantuntijoiden ratkaisuhistoriaa ja asiakkaiden profiilitietoja. |
+| ↓ |
+| **5. Turvakerros** Jos luokittelu on epävarma, agentti pyytää ihmiseltä apua eikä lähetä pyyntöä suoraan väärälle tiimille. |
+| ↓ |
+| **6. Palautesilmukka** Mittaa ratkaisuaikoja, kerää asiakaspalautetta ja päivittää tietoja seuraavia päätöksiä varten. |
+
+Korosta opiskelijoille, että komponentit eivät ole irrallisia osia. Ne muodostavat ketjun, jossa jokainen vaihe vaikuttaa seuraavaan.
+
+> Agentti ei ole vain lista osia. Se on prosessi, jossa tieto liikkuu vaiheesta toiseen ja jokainen vaihe vaikuttaa seuraavaan päätökseen.
 
 ### Kysymyksiä ryhmälle
 
-- "Mitä tapahtuisi, jos syötekäsittelijä epäonnistuisi ja väärinymmärtäisi pyynnön?"
-- "Millä tavalla turvakerros suojelee sekä asiakkaita että IT-tiimiä?"
-- "Miten palautesilmukka auttaa agenttia parantamaan nopeutta?"
-- "Missä vaiheessa ihminen ottaa tilanteen haltuun ja miksi?"
+- Mitä tapahtuisi, jos **syötekäsittelijä** epäonnistuisi ja ymmärtäisi pyynnön väärin?
+- Miten **turvakerros** suojaa sekä asiakasta että IT-tiimiä?
+- Miten **palautesilmukka** auttaa agenttia parantamaan toimintaansa?
+- Missä vaiheessa ihmisen pitäisi ottaa tilanne haltuun ja miksi?
+- Mikä komponentti olisi vaarallisin jättää pois tästä järjestelmästä?
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, miten agentin komponentit muodostavat yhdessä toimivan prosessin.
+- Opiskelijat osaavat kuvata, miten syöte muuttuu päätökseksi ja toiminnaksi.
+- Opiskelijat ymmärtävät, miksi muisti, turvakerros ja palautesilmukka ovat tärkeitä agentin luotettavuuden kannalta.
 
 ---
 
-## Tehtävä 3: Vaara-analyysi — kuuden komponentin epäonnistuminen (15 min)
+## Tehtävä 19.3: Vaara-analyysi — kuuden komponentin epäonnistuminen noin 15 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, mitä voi tapahtua, jos agentin jokin komponentti epäonnistuu. Erityisesti tarkastellaan **syötekäsittelijän**, **päättelijän** ja **turvakerroksen** merkitystä.
 
 ### Tilanne
 
-Näytä opiskelijoille tämä skenaario:
+Näytä opiskelijoille seuraava skenaario:
 
-"Sähköpostin automaattinen vastausagentti saa komennon: 'Vastaa kaikille asiakkaille, jotka lähettävät sähköposteja, joissa on sana lasku.' Agentti toimii hyvin muutaman viikon ajan, mutta sitten asiakas lähettää sähköpostin: 'Miksi laskun kanssa on näin vaikea saada vastinetta teidän tuesta?' Agentti tulkitsee tämän automaattisesti laskua sisältäväksi viestiksi ja lähettää asiakkaalle robottimaisen vastauksen, vaikka asiakas oli loukkaantunut ja tarvitsi ihmisen vastauksen."
+> Sähköpostin automaattinen vastausagentti saa komennon: “Vastaa kaikille asiakkaille, jotka lähettävät sähköposteja, joissa on sana lasku.”
+>
+> Agentti toimii hyvin muutaman viikon ajan. Sitten asiakas lähettää sähköpostin: “Miksi laskun kanssa on näin vaikea saada vastinetta teidän tuestanne?”
+>
+> Agentti tulkitsee viestin automaattisesti laskua koskevaksi rutiiniviestiksi ja lähettää asiakkaalle robottimaisen vastauksen, vaikka asiakas oli tyytymätön ja olisi tarvinnut ihmisen vastauksen.
 
 ### Keskustelu
 
-- Mikä meni pieleen? (Mikä komponentti?)
-  - **Syötekäsittelijä**: Viestin konteksti tulkittiin väärin (sana "lasku" löydettiin, mutta sen merkitystä siinä yhteydessä ei ymmärretty)
-  - **Päättelijä**: Päätös vastata automaattisesti oli liian yksinkertainen; siihen ei sisältynyt sävyn tai tunnetilan analyysiä
-  - **Turvakerros**: Puuttui mekanismi, joka olisi tunnistanut negatiivisen sävyn ja estänyt automaattisen vastauksen
+**Kysymys 1: Mikä meni pieleen?**
 
-- Mikä olisi ollut ratkaisu?
-  - Turvakerros olisi voinut estää vastauksen ja lähettää pyynnön ihmisen käsiteltäväksi, kun pyynnön sävy on negatiivinen tai loukkaava.
-  - Muisti olisi voinut sisältää tietoa asiakkaiden tyytymättömyydestä ja merkitä korkean riskin tapaukset.
+- **Syötekäsittelijä:** Järjestelmä tunnisti sanan “lasku”, mutta ei ymmärtänyt viestin kokonaiskontekstia eikä asiakkaan tyytymätöntä sävyä.
+- **Päättelijä:** Päätös vastata automaattisesti oli liian yksinkertainen. Päätöksessä ei huomioitu viestin tunnetilaa, sävyä tai asiakassuhteen riskiä.
+- **Turvakerros:** Järjestelmästä puuttui mekanismi, joka olisi tunnistanut negatiivisen, turhautuneen tai poikkeuksellisen viestin ja siirtänyt tilanteen ihmiselle.
 
-- Mikä on agentin autonomisuuden raja?
-  - Agentti saa toimia autonomisesti rutiininomaisissa tapauksissa, mutta turvakerroksen on erotettava herkät, sensitiiviset tai poikkeukselliset tilanteet ihmiselle
+**Kysymys 2: Mikä olisi ollut parempi ratkaisu?**
 
-**Johtopäätös:** Kaikkien kuuden komponentin täytyy toimia yhdessä. Jos turvakerros tai päättelijä epäonnistuu, seurauksena ovat virheet tai huono asiakaskokemus. Agentti on hyödyllinen, mutta sen täytyy tietää, milloin kutsua ihminen mukaan ja mistä turvatoimista ei saa luopua.
+- **Turvakerros** olisi voinut estää automaattisen vastauksen, jos viestin sävy on negatiivinen, turhautunut tai poikkeuksellinen.
+- Agentti olisi voinut ohjata viestin asiakaspalvelijalle tai tiiminvetäjälle.
+- **Muisti** olisi voinut sisältää tietoa aiemmasta asiakastyytymättömyydestä ja merkitä tapauksen korkean riskin tilanteeksi.
+- **Päättelijän** olisi pitänyt huomioida pelkän avainsanan lisäksi viestin tarkoitus ja sävy.
+
+**Kysymys 3: Missä kulkee agentin autonomisuuden raja?**
+
+- Agentti voi toimia itsenäisesti rutiininomaisissa ja matalan riskin tilanteissa.
+- Agentin pitää siirtää herkät, epäselvät, poikkeukselliset tai tunnepitoiset tilanteet ihmiselle.
+- Agentti ei saa tehdä päätöksiä, joilla voi olla merkittävä haitta asiakkaalle, organisaatiolle tai luottamukselle ilman riittävää turvakerrosta.
+
+**Esimerkki opetukseen**
+
+Kysy opiskelijoilta, olisiko sama virhe tapahtunut, jos agentti olisi tarkistanut viestin sävyn, asiakashistorian ja riskitason ennen vastaamista. Näin opiskelijat näkevät, miksi yksi avainsana ei riitä turvalliseen päätökseen.
+
+### Johtopäätös
+
+Kaikkien kuuden komponentin täytyy toimia yhdessä. Jos **syötekäsittelijä**, **päättelijä** tai **turvakerros** epäonnistuu, seurauksena voi olla virheellinen toiminta, huono asiakaskokemus tai luottamuksen menetys.
+
+Agentti voi olla hyödyllinen, mutta sen täytyy tietää, milloin se saa toimia itsenäisesti ja milloin sen pitää kutsua ihminen mukaan.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, että agentin virheet voivat syntyä yksittäisen komponentin epäonnistumisesta.
+- Opiskelijat osaavat tunnistaa, mikä komponentti on epäonnistunut tietyssä tilanteessa.
+- Opiskelijat ymmärtävät, miksi turvakerros ja ihmisen mukanaolo ovat tärkeitä.
+- Opiskelijat osaavat pohtia agentin autonomisuuden rajoja.
 
 ---
 
 ## Arviointi
 
 Opettaja arvioi opiskelijoiden kykyä:
-- Erottaa agentti chatbotista konkreettisilla perusteluilla, jotka viittaavat kuuteen rakennusosaan
-- Tunnistaa agentin kuusi rakennusosaa ja niiden roolit suoritusputkessa
-- Nähdä, kuinka komponentit työskentelevät yhdessä ja mitä tapahtuu, kun yksi epäonnistuu
-- Ymmärtää autonomisuuden rajat ja turvakerroksen tärkeyden ihmisten suojelun kannalta
+
+- erottaa **agentti** ja **chatbot** toisistaan konkreettisilla perusteluilla,
+- viitata perusteluissaan agentin kuuteen rakennusosaan,
+- tunnistaa agentin kuusi rakennusosaa ja niiden roolit suoritusputkessa,
+- selittää, miten komponentit toimivat yhdessä,
+- tunnistaa, mitä voi tapahtua, kun yksi komponentti epäonnistuu,
+- ymmärtää autonomisuuden rajat ja turvakerroksen merkityksen ihmisten, asiakkaiden ja organisaation suojelemisessa.
+
+---

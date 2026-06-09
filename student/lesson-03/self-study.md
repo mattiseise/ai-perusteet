@@ -1,130 +1,98 @@
-# Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka
+# Miten kone kirjoittaa? — generatiivisen tekoälyn mekaniikka
 
 ## Johdanto
 
-Kun käytät ChatGPT:tä, Copilotia tai muuta kielimalliin perustuvaa tekoälyä, vastaus voi näyttää hyvin älykkäältä. Mutta mitä taustalla oikeasti tapahtuu? Et näe siellä ajattelua tai ymmärtämistä ihmisen tapaan, vaan jotain muuta.
+Kun käytät ChatGPT:tä, Copilotia tai muuta kielimalliin perustuvaa tekoälyä, vastaus voi näyttää hyvin älykkäältä. Mutta mitä taustalla oikeasti tapahtuu? Taustalla ei ole ajattelua tai ymmärtämistä ihmisen tavoin, vaan matemaattista ennustamista.
 
-Taustalla on kielimalli, joka on opetettu valtavalla määrällä tekstiä. Se ei ajattele kuten ihminen, vaan toimii matemaattisesti ennustamalla, mikä sana tai ilmaus sopii seuraavaksi parhaiten. Kun ymmärrät tämän, ymmärrät myös paremmin sekä mallin voiman että sen rajat.
+Kielimalli on opetettu valtavalla määrällä tekstiä. Se ei ajattele kuten ihminen, vaan ennustaa, mikä sana, sanan osa tai ilmaus sopii seuraavaksi parhaiten. Kun ymmärrät tämän, ymmärrät paremmin sekä mallin vahvuudet että sen rajat.
 
-Tämän tunnin jälkeen sinulla on tuomaripöydällesi kolmas todistusaineisto: vaikka tekoäly näyttää älykkäältä, sen perusta on mekaaninen — se ei ajattele, se ennustaa.
+Tämän tunnin jälkeen ymmärrät, että vaikka tekoäly näyttää älykkäältä, sen perusta on mekaaninen. Se ei ajattele ihmisen tavoin, vaan ennustaa.
 
 ## Tokenit — sanat jaetaan pieniksi palasiksi
 
-Kun ChatGPT tai muu kielimalli lukee tekstiä, se ei käsittele sitä varsinaisesti sanoina, vaan *tokeneina* eli pieninä tekstin palasina.
+Kun ChatGPT tai muu kielimalli lukee tekstiä, se ei käsittele sitä varsinaisesti kokonaisina sanoina, vaan **tokeneina** eli pieninä tekstin palasina.
 
-Joskus yksi sana vastaa yhtä tokenia. Näin voi olla esimerkiksi sanoissa ”tekoäly” tai ”koulu”. Pidemmät tai harvinaisemmat sanat voivat kuitenkin jakautua useaan tokeniin. Esimerkiksi sana ”kielentutkimusopiskelijat” voi pilkkoutua useiksi osiksi. Tämä riippuu siitä, miten tokenisaattori on suunniteltu ja opetettu.
+Joskus yksi sana vastaa yhtä tokenia. Näin voi olla esimerkiksi sanoissa ”tekoäly” tai ”koulu”. Pidemmät tai harvinaisemmat sanat voivat kuitenkin jakautua useaan tokeniin. Esimerkiksi sana ”kielentutkimusopiskelijat” voi pilkkoutua useiksi osiksi. Tämä riippuu siitä, miten mallin käyttämä **tokenisaattori** on suunniteltu ja opetettu.
 
-Miksi? Koska mallia opetettaessa se oppii, mitkä yhdistelmät ovat hyödyllisiä. Yleiset sanat tai sananosat muodostavat yhden tokenin. Harvinaiset sanat jaetaan pienempiin palasiin.
+Miksi näin tehdään? Mallia opetettaessa se oppii, mitkä kirjain-, sana- ja sananosayhdistelmät ovat hyödyllisiä. Yleiset sanat tai sananosat voivat muodostaa yhden tokenin. Harvinaisemmat sanat jaetaan pienempiin osiin, jotta malli pystyy käsittelemään myös sanoja, joita se ei ole nähnyt usein.
 
-> **Pysähdy hetkeksi:** Miksi pienempi tokenisarja voisi olla parempi kielimallille kuin pitkät sanat?
+> **Pysähdy hetkeksi:** Miksi pienempi tokenisarja voisi olla kielimallille parempi kuin pitkien sanojen käsittely kokonaisina?
 
-```mermaid
-graph LR
-    A["'Kielentutkimusopiskelijat'"] --> B["Kielen"]
-    A --> C["tutkimus"]
-    A --> D["opiskeli"]
-    A --> E["jat"]
+ChatGPT:n kaltaiselle mallille ”tekoäly” voi olla noin 1–2 tokenia. Sana ”kielentutkimusopiskelijat” voi puolestaan olla useita tokeneita. Malli siis ”näkee” tekstin tokeneina, ei samalla tavalla kuin ihminen näkee sanat ja lauseet.
 
-    F["'koulu'"] --> G["koulu"]
+## Parametrit — miljardeja opittuja numeroita
 
-    style A fill:#e8f4f8,stroke:#2196F3
-    style F fill:#e8f4f8,stroke:#2196F3
-    style B fill:#fff3e0,stroke:#FF9800
-    style C fill:#fff3e0,stroke:#FF9800
-    style D fill:#fff3e0,stroke:#FF9800
-    style E fill:#fff3e0,stroke:#FF9800
-    style G fill:#c8e6c9,stroke:#4CAF50
-```
+Kielimallissa on **parametreja** eli numeroarvoja, jotka se on oppinut koulutuksen aikana. Esimerkiksi GPT-3-mallissa oli noin 175 miljardia parametria. Uudemmissa suurissa kielimalleissa parametrimäärät ja tarkat rakenteet voivat olla erilaisia, eikä niitä aina julkaista avoimesti.
 
-ChatGPT:n kaltaiselle mallille "tekoäly" on noin 1–2 tokenia. "Kielentutkimusopiskelijat" saattaa olla 4–5 tokenia. Malli "näkee" tekstin tokeneina, ei kirjaimina tai sanoina.
+Parametrien lukumäärä on niin valtava, että sitä on vaikea hahmottaa. Onneksi perusidea on yksinkertainen: parametrit ovat matemaattisia painoja, jotka ohjaavat mallin toimintaa. Ne vaikuttavat siihen, millaisia yhteyksiä malli tunnistaa tekstissä ja millaisia vastauksia se todennäköisimmin tuottaa.
 
-## Parametrit — miljardeja numeroita
+Voit ajatella parametreja mallin eräänlaisina ”säätiminä”. Ne eivät ole ihmisaivojen kaltaisia ajatuksia tai muistoja, vaan numeroita, joiden avulla malli käsittelee tekstiä. Koulutuksen aikana malli säätää näitä numeroita vähitellen, jotta sen ennusteet paranevat.
 
-Kielimallissa on *parametreja* — numeroita, jotka se on oppinut koulutuksen aikana. Alkuperäisessä vuonna 2022 julkaistussa ChatGPT-3:ssa oli noin 175 miljardia parametria. Nykyisissä malleissa on moninkertaisesti enemmän. Lukumäärä on niin valtava, että sitä on tavallisen ihmisen mahdotonta ymmärtää. Onneksi nämä ovat vain numeroita — painoja.
+Käytännössä malli käy läpi valtavan määrän tekstiesimerkkejä ja yrittää ennustaa, mikä tokeni tulee seuraavaksi. Kun ennuste menee väärin, mallin parametreja säädetään hieman. Kun tätä toistetaan valtavan monta kertaa, malli oppii yhä paremmin, millaiset tokenit sopivat toistensa yhteyteen.
 
-Ajattele asiaa näin: jos käytössäsi olisi 175 miljardia säädettävää lukuarvoa, voisiko niistä muodostua järjestelmä, joka näyttää ymmärtävän tekstiä? Kyllä voisi. Siitä tässä on pohjimmiltaan kyse. Parametrit ovat mallin eräänlaisia ”aivoja” — eivät ihmisaivojen kaltaisia, vaan matemaattisia painoja, jotka ohjaavat sitä, miten malli käsittelee tekstiä.
+## Seuraavan tokenin ennustaminen — sana kerrallaan
 
-Nämä parametrit opitaan koulutuksen aikana. Malli käy läpi valtavan määrän tekstiesimerkkejä ja säätää parametrejaan vähitellen niin, että sen ennusteet paranevat. Käytännössä malli oppii, millaiset parametriarvot auttavat sitä ennustamaan tekstiä yhä tarkemmin. Lopulta, miljardien säätöjen jälkeen, se pystyy arvioimaan varsin hyvin, mikä sana tai tokeni todennäköisimmin tulee seuraavaksi.
+Kielimallin perusmekanismia kutsutaan usein englanniksi nimellä **next-token prediction**. Suomeksi se tarkoittaa **seuraavan tokenin ennustamista**.
 
-```mermaid
-graph TD
-    A["📚 Valtava määrä tekstiä"] --> B["🔄 Koulutus: miljardeja kierroksia"]
-    B --> C["⚖️ Parametrien säätö"]
-    C --> D{"Ennuste parani?"}
-    D -->|Kyllä| E["✅ Tallenna parannetut parametrit"]
-    D -->|Ei| F["↩️ Kokeile toisin"]
-    E --> B
-    F --> B
-    B --> G["🎯 175 miljardia optimoitua parametria"]
-```
+Kun annat ChatGPT:lle kysymyksen ”Mikä on Suomen pääkaupunki?”, malli näkee tekstin tokeneina. Yksinkertaistettuna se voi käsitellä sen esimerkiksi näin:
 
-## Next-token prediction — arvaa seuraava sana
+- tokeni: ”Mikä”
+- tokeni: ”on”
+- tokeni: ”Suomen”
+- tokeni: ”pääkaupunki”
 
-Tämä on kielimallin perusmekanismi: next-token prediction (seuraavan sanan ennustus).
+Tämän jälkeen malli arvioi parametrien ja koulutusdatan perusteella, mikä tokeni sopii seuraavaksi. Tässä tapauksessa todennäköinen jatko on ”Helsinki”. Malli valitsee sen ja lisää sen vastaukseen.
 
-Kun annat ChatGPT:lle kysymyksen "Mikä on Suomen pääkaupunki", malli näkee:
-- Tokeni: "Mikä"
-- Tokeni: "on"
-- Tokeni: "Suomen"
-- Tokeni: "pääkaupunki"
+Sitten malli jatkaa samalla tavalla. Se katsoo aiempaa tekstiä, johon kuuluu nyt myös sen oma tuottama sana, ja ennustaa taas seuraavan tokenin. Tätä jatkuu, kunnes vastaus on valmis tai kunnes pituusraja tulee vastaan.
 
-Sitten parametrien perusteella se sanoo: "Seuraava sana on todennäköisesti 'Helsinki'." Se valitsee sen ja tuottaa sen.
+Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen suunnittelee esseen tai perustelun. Se valitsee seuraavaa tokenia yksi kerrallaan parametrien ja koulutuksessa näkemänsä datan perusteella. Se näyttää älykkäältä, koska koulutusdata sisälsi valtavasti ihmisten kirjoittamaa älykästä tekstiä. Mutta malli ei ajattele ihmisen tavoin. Se ennustaa.
 
-Sitten seuraavaksi:
-- Tokeni: "Mikä"
-- Tokeni: "on"
-- Tokeni: "Suomen"
-- Tokeni: "pääkaupunki"
-- Tokeni: "Helsinki" (malli valitsi tämän)
+> **Pysähdy hetkeksi:** Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?
 
-Tämä jatkuu, kunnes malli päättää, että vastaus on valmis, tai kunnes pituusraja tulee vastaan.
+## Koulutusdata — se, mistä malli oppii
 
-Tässä on avainasia: malli ei kirjoita "vastausta". Se valitsee *seuraavaa sanaa, sana kerrallaan* parametrien ja koulutuksessa näkemänsä datan perusteella. Siksi se näyttää älykkäältä — koska koulutusdata sisälsi älykästä tekstiä. Mutta se ei "ajattele". Se ennustaa.
-
-> **Pysähdy hetkeksi:** Jos malli vain arvaa seuraavaa sanaa todennäköisyyden perusteella, miten se voi antaa oikeita vastauksia monimutkaisiin kysymyksiin?
-
-## Koulutusdata — se, minkä malli näkee
-
-Parametrit opitaan koulutusdatasta. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, jotka on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Varhaisetkin suuret kielimallit opetettiin jo biljoonilla (biljoona = miljoona miljoonaa) tokeneilla.
+Parametrit opitaan **koulutusdatasta**. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Varhaisetkin suuret kielimallit opetettiin jo biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.
 
 Mitä malli oppii tästä aineistosta? Se oppii tilastollisia yhteyksiä ja toistuvia kuvioita. Se voi esimerkiksi oppia, että sanat ”koodaus” ja ”Python” esiintyvät usein yhdessä, että merkkijonon ”2 + 2” jälkeen tulee usein ”= 4” tai että kysymyksen jälkeen seuraa yleensä vastaus.
 
-Tärkeää kuitenkin on, ettei malli ymmärrä asioita samalla tavalla kuin ihminen. Se ei tiedä, miksi 2 + 2 = 4 on totta. Se on vain oppinut, että tämä yhdistelmä esiintyy aineistossa hyvin usein ja on siksi todennäköinen.
+Tärkeää on kuitenkin ymmärtää, ettei malli ymmärrä asioita samalla tavalla kuin ihminen. Se ei tiedä, miksi 2 + 2 = 4 on totta. Se on oppinut, että tämä yhdistelmä esiintyy aineistossa hyvin usein ja on siksi todennäköinen.
 
-Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai lähes kokonaan, malli ei pysty hallitsemaan sitä hyvin.
+Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai esiintyy siinä vain vähän, malli ei pysty hallitsemaan sitä hyvin.
 
-## Hallusinaatio — kun malli valehtelee (tai *näyttää* valehtelevan)
+## Hallusinaatio — kun malli tuottaa väärän mutta uskottavan vastauksen
 
-*Hallusinaatiolla* tarkoitetaan tilannetta, jossa kielimalli tuottaa vastauksen, joka vaikuttaa uskottavalta mutta on todellisuudessa väärä.
+**Hallusinaatiolla** tarkoitetaan tilannetta, jossa kielimalli tuottaa vastauksen, joka vaikuttaa uskottavalta mutta on todellisuudessa väärä.
 
-Esimerkiksi mallilta voidaan kysyä: ”Kuka kirjoitti romaanin ‘Suuri Mahtava’?” Malli saattaa vastata: ”Jane Austen kirjoitti teoksen ‘Suuri Mahtava’ vuonna 1847.” Vastaus kuulostaa uskottavalta, mutta se on virheellinen. Jane Austen ei ole kirjoittanut tämännimistä teosta. Vastaus näyttää oikealta siksi, että malli on oppinut, että kirjailijan nimi, teoksen nimi ja vuosiluku esiintyvät usein samankaltaisissa yhteyksissä.
+Esimerkiksi mallilta voidaan kysyä: ”Kuka kirjoitti romaanin Suuri Mahtava?” Malli saattaa vastata: ”Jane Austen kirjoitti teoksen Suuri Mahtava vuonna 1847.” Vastaus kuulostaa uskottavalta, mutta se on virheellinen. Jane Austen ei ole kirjoittanut tämännimistä teosta. Vastaus näyttää oikealta siksi, että malli on oppinut, että kirjailijan nimi, teoksen nimi ja vuosiluku esiintyvät usein samankaltaisissa yhteyksissä.
 
-Tätä kutsutaan hallusinaatioksi. Malli ei valehtele tietoisesti, koska se ei ymmärrä totuutta tai valhetta ihmisen tavoin. Se ennustaa vain, mikä ilmaus vaikuttaa todennäköiseltä seuraavaksi. Joskus tämä ennuste osuu väärin, vaikka lopputulos kuulostaisi hyvin vakuuttavalta.
+Tätä kutsutaan hallusinaatioksi. Malli ei valehtele tietoisesti, koska se ei ymmärrä totuutta tai valhetta ihmisen tavoin. Se ennustaa, mikä ilmaus vaikuttaa todennäköiseltä seuraavaksi. Joskus tämä ennuste osuu väärin, vaikka lopputulos kuulostaisi hyvin vakuuttavalta.
+
+> **Pysähdy hetkeksi:** Miksi hallusinaatio voi olla erityisen vaarallinen silloin, kun vastaus on kirjoitettu itsevarmalla ja asiantuntevalla tyylillä?
 
 ## Lämpötila — kontrolli satunnaisuudelle
 
-Kielimalli ei aina valitse kaikkein *todennäköisintä* seuraavaa sanaa. Joskus se voi valita myös hieman epätodennäköisemmän vaihtoehdon, jotta vastaus olisi monipuolisempi tai luovempi.
+Kielimalli ei aina valitse kaikkein *todennäköisintä* seuraavaa tokenia. Joskus se voi valita myös hieman epätodennäköisemmän vaihtoehdon, jotta vastaus olisi monipuolisempi tai luovempi.
 
-Tähän vaikuttaa asetus, jota kutsutaan lämpötilaksi.
+Tähän vaikuttaa asetus, jota kutsutaan **lämpötilaksi**.
 
-- **Matala lämpötila:** malli valitsee yleensä kaikkein todennäköisimmän sanan. Vastaukset ovat tasaisempia ja johdonmukaisempia.
+- **Matala lämpötila:** malli valitsee yleensä kaikkein todennäköisimmän jatkon. Vastaukset ovat usein tasaisempia, ennustettavampia ja johdonmukaisempia.
+- **Korkea lämpötila:** malli sallii enemmän vaihtelua ja voi valita myös epätodennäköisempiä jatkoja. Vastaukset voivat olla luovempia, mutta myös satunnaisempia ja virhealttiimpia.
 
-- **Korkea lämpötila:** malli sallii enemmän vaihtelua ja voi valita myös epätodennäköisempiä sanoja. Tällöin vastaukset voivat olla luovempia, mutta myös satunnaisempia.
+Käyttäjä ei tavallisesti säädä lämpötilaa itse tavallisessa chat-käyttöliittymässä, mutta asetus vaikuttaa silti mallin toimintaan. Siksi samaan kysymykseen voi joskus saada hieman erilaisen vastauksen eri kerroilla.
 
-Käyttäjä ei tavallisesti säädä tätä itse, mutta asetus vaikuttaa silti mallin toimintaan. Siksi samaan kysymykseen voi joskus saada hieman erilaisen vastauksen eri kerroilla.
+## Kuva-, musiikki- ja videomallit
 
-## Kuva-, musiikki- ja videomallitkin
-
-Kielimallien taustalla oleva ajatus, eli seuraavan yksikön ennustaminen, ei rajoitu vain tekstiin. Samaa periaatetta voidaan soveltaa myös kuviin ja musiikkiin.
+Kielimallien taustalla oleva ajatus eli seuraavan yksikön ennustaminen ei rajoitu vain tekstiin. Samaa perusajatusta voidaan soveltaa myös kuviin, musiikkiin ja videoihin.
 
 - **Kuvamallit** ennustavat, millaisia visuaalisia piirteitä kuvaan kannattaa muodostaa seuraavaksi.
 - **Musiikkimallit** ennustavat, millainen ääni, sävel tai rytminen elementti sopii jatkoksi.
+- **Videomallit** ennustavat, millaisia kuvia, liikettä ja joskus myös ääntä seuraavaksi pitäisi syntyä.
 
-Periaate pysyy samana, vaikka sisältö muuttuu. Malli tuottaa lopputulosta vaiheittain aiemmin muodostuneen sisällön perusteella. Erona on vain se, käsitelläänkö tekstin sijaan kuvaa vai ääntä.
+Periaate pysyy samankaltaisena, vaikka sisältö muuttuu. Malli tuottaa lopputulosta vaiheittain aiemmin muodostuneen sisällön perusteella. Erona on vain se, käsitelläänkö tekstin sijaan kuvaa, ääntä vai liikkuvaa kuvaa.
 
 ## Yhteenveto
 
-Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii näin:
+Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii yksinkertaistettuna näin:
 
 - Se pilkkoo tekstin tokeneiksi.
 - Se käyttää koulutuksessa opittuja parametreja.
@@ -133,4 +101,6 @@ Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii näi
 
 Siksi lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Ammattilaiselle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä tekoälyn hyödyt että sen rajoitukset.
 
-Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä, mitä ja miten kysyt — konteksti ratkaisee kaiken.
+Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä, mitä ja miten kysyt: **konteksti ratkaisee kaiken**.
+
+---

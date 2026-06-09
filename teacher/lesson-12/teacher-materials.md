@@ -1,174 +1,344 @@
-# Opettajan materiaalit — Kontekstin antaminen
+# Opettajan materiaalit — kontekstin antaminen
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon jälkeen opiskelija ymmärtää, miksi konteksti on tärkeä, sillä parempi konteksti tuottaa parempia vastauksia. Opiskelija tietää, mitä kontekstiin kuuluu: kuka olet, mitä haluat, mihin käytät vastausta ja mitä tiedät jo. Opiskelija osaa rakentaa kontekstia asteittain, joten kierros kierrokselta lisää tietoa, kunnes tekoäly ymmärtää. Opiskelija ymmärtää pilkkomisen ja osaa jakaa suuren tehtävän pienempiin osiin. Opiskelija osaa käyttää lähdeaineistoa antamalla tekstit ja koodit tekoälyn nähtäväksi ennen kehotusta. Opiskelija osaa käyttää iteraatiota ja tarkentamista, joten jatkokysymykset terävöittävät vastauksia.
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miksi **konteksti** ratkaisee tekoälyn vastausten laadun. Oppitunnin ydin on, että tekoäly ei automaattisesti tiedä käyttäjän tilannetta, osaamistasoa, tavoitetta tai käyttötarkoitusta. Mitä paremmin opiskelija osaa antaa kontekstin, sitä täsmällisempiä, hyödyllisempiä ja ammatillisesti käyttökelpoisempia vastauksia hän saa.
+
+### Muistaa ja ymmärtää
+
+- Opiskelija ymmärtää, että parempi **konteksti** tuottaa yleensä parempia vastauksia.
+- Opiskelija tietää, mitä kontekstiin kuuluu: **kuka olet**, **mitä haluat**, **mihin käytät vastausta**, **mitä tiedät jo** ja **miten haluat vastauksen rakennetuksi**.
+- Opiskelija ymmärtää, että tekoäly tekee oletuksia, jos käyttäjä ei anna riittävää kontekstia.
+- Opiskelija ymmärtää, että kontekstin antaminen on ammatillinen taito, ei turhaa lisätekstiä.
+
+### Soveltaa ja analysoida
+
+- Opiskelija osaa rakentaa kontekstia asteittain: hän lisää tietoa kierros kierrokselta, kunnes tekoäly ymmärtää tehtävän paremmin.
+- Opiskelija osaa vertailla heikkoa ja hyvää promptia ja tunnistaa, mikä kontekstissa parantaa vastausta.
+- Opiskelija osaa käyttää **lähdeaineistoa**, kuten tekstiä, koodia tai dokumenttia, tekoälyn kontekstina.
+- Opiskelija osaa pilkkoa suuren tehtävän pienempiin, hallittaviin osiin.
+
+### Luoda ja arvioida
+
+- Opiskelija osaa kirjoittaa täsmällisen promptin, jossa konteksti on rakennettu tarkoituksenmukaisesti.
+- Opiskelija osaa käyttää **iteraatiota**: hän tarkentaa pyyntöä tekoälyn vastauksen perusteella.
+- Opiskelija osaa arvioida, milloin tekoälyn vastaus on liian yleinen ja mitä kontekstia seuraavaksi pitäisi lisätä.
+- Opiskelija ymmärtää, että ammattilainen ei vain kysy tekoälyltä, vaan ohjaa sitä tietoisesti.
+
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että konteksti ei ole sattumanvaraista lisätietoa. Se on strateginen valinta siitä, mitä tekoälyn pitää tietää, jotta se voi auttaa oikein. Ammattilainen miettii ensin tilanteen, tavoitteen ja rajaukset — vasta sitten hän kirjoittaa promptin.
+
+---
+
+## Pedagoginen lähestymistapa
+
+### Ydinviesti: konteksti ohjaa tekoälyn ajattelusuuntaa
+
+Oppitunti kannattaa aloittaa hyvin yksinkertaisella esimerkillä. Kirjoita tekoälylle ensin: **”Kerro verkoista.”** Sen jälkeen lisää kontekstia vaiheittain: opiskelijan ikä, opiskeluala, osaamistaso, tavoite, vastausmuoto ja käytettävissä oleva aika. Näin opiskelijat näkevät konkreettisesti, miten sama aihe muuttuu eri vastaukseksi, kun konteksti tarkentuu.
+
+> **Sama aihe, eri konteksti — täysin erilainen vastaus.**
+
+Korosta opiskelijoille:
+
+- **Lyhyt prompti** voi toimia, jos tehtävä on yksinkertainen.
+- **Ammatillisessa tehtävässä** tekoäly tarvitsee yleensä enemmän taustaa.
+- **Konteksti ei tarkoita pitkää sekavaa tekstiä**, vaan olennaisten tietojen valintaa.
+- **Hyvä konteksti säästää aikaa**, koska tarkentavia kierroksia tarvitaan vähemmän.
+
+### Kontekstin osat
+
+Opiskelijoiden kannattaa opetella yksinkertainen tarkistuslista. Hyvässä kontekstissa ei tarvitse aina olla kaikkea, mutta opiskelijan pitää osata miettiä, mitkä osat ovat kyseisessä tilanteessa tärkeitä.
+
+| Kontekstin osa | Mitä se kertoo tekoälylle? | Esimerkki |
+| --- | --- | --- |
+| **Kuka olet?** | Käyttäjän rooli ja osaamistaso. | ”Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa.” |
+| **Mitä haluat?** | Tehtävän tavoite. | ”Haluan oppia verkkojen perusteet 30 minuutissa.” |
+| **Mihin käytät vastausta?** | Vastauksen käyttötarkoitus. | ”Käytän vastausta kokeeseen valmistautumiseen.” |
+| **Mitä tiedät jo?** | Lähtötaso ja aiempi osaaminen. | ”Tiedän, että laitteet voivat olla samassa verkossa, mutta en ymmärrä IP-osoitteita.” |
+| **Mitä et tiedä?** | Kohdat, joissa opiskelija tarvitsee apua. | ”En ymmärrä, mikä ero on reitittimellä ja kytkimellä.” |
+| **Miten haluat vastauksen?** | Rakenne, taso ja formaatti. | ”Anna ensin selitys, sitten kolme esimerkkiä ja lopuksi testikysymykset.” |
+
+### Kontekstin rakentaminen asteittain
+
+Kontekstin rakentamista kannattaa opettaa vaiheittaisena taitona. Opiskelijan ei tarvitse osata kirjoittaa täydellistä promptia heti ensimmäisellä kerralla. Tärkeää on, että hän huomaa, mitä vastauksesta puuttuu, ja osaa lisätä seuraavalla kierroksella oikeaa tietoa.
+
+**Pyyntö 1:** Kerro verkoista.
+
+**Pyyntö 2:** Kerro verkoista. Olen 15-vuotias opiskelija.
+
+**Pyyntö 3:** Kerro verkoista. Olen 15-vuotias IT-opiskelija ja haluan konkreettisia esimerkkejä.
+
+**Pyyntö 4:** Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan oppia 30 minuutissa. Anna selitys, kolme esimerkkiä, yleiset virheet ja viisi testikysymystä.
+
+Kun näytät nämä neljä pyyntöä, pyydä opiskelijoita arvioimaan, mikä muuttui vastauksissa. Ohjaa heitä huomaamaan, että tekoäly ei vain vastannut pidemmin, vaan eri tasolla, eri rakenteella ja eri käyttötarkoitusta varten.
+
+---
+
+## Pilkkominen ja lähdeaineiston käyttö
+
+### Pilkkominen tekee suuresta tehtävästä hallittavan
+
+**Pilkkominen** tarkoittaa suuren tehtävän jakamista pienempiin osiin. Opiskelijat saattavat ajatella, että tämä vie enemmän aikaa kuin ”kaikki kerralla” -pyyntö. Käytännössä pilkkominen parantaa vastauksen laatua, koska jokaisella pyynnöllä on selkeämpi tavoite.
+
+> **Iso tehtävä ei ole yksi suuri prompti. Se on sarja pieniä, hyvin ohjattuja pyyntöjä.**
+
+Esimerkiksi tehtävä **”Kirjoita dokumentaatio verkkoturvallisuudesta”** voidaan pilkkoa näin:
+
+1. **Perustiedot:** mitä verkkoturvallisuus tarkoittaa?
+2. **Riskit:** mitkä ovat kolme yleistä verkkoturvallisuuden riskiä?
+3. **Käytännön suojaus:** miten kotiverkko tai koulun verkko suojataan?
+4. **Esimerkit:** millaisia tilanteita opiskelija voi kohdata arjessa?
+5. **Testikysymykset:** miten opiskelija voi tarkistaa osaamisensa?
+
+### Lähdeaineisto tekee vastauksesta täsmällisemmän
+
+**Lähdeaineiston antaminen** tarkoittaa, että opiskelija antaa tekoälylle tekstin, koodin, raportin, lokin tai muun materiaalin, jonka perusteella tekoälyn pitää vastata. Tämä on tärkeää, koska tekoäly ei muuten näe opiskelijan todellista tilannetta.
+
+Esimerkiksi jos opiskelija haluaa parantaa raporttia, heikko pyyntö on:
+
+Miten parannan raporttia?
+
+Vahvempi pyyntö on:
+
+Tässä on raporttimme. Paranna sitä seuraavista näkökulmista:
+
+1. Johdanto on liian lyhyt.
+
+2. Johtopäätelmät ovat pinnalliset.
+
+3. Lähdeviitteet puuttuvat. Anna ensin palautetta, älä kirjoita koko raporttia uudelleen.
+
+**Opettajan huomio:** Muistuta tietosuojasta. Lähdeaineistoa voi antaa tekoälylle vain, jos sen jakaminen on sallittua. Opiskelijoiden, asiakkaiden, potilaiden tai yrityksen sisäisiä tietoja ei saa syöttää julkiseen palveluun ilman lupaa ja asianmukaista arviointia.
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Konteksti on vain erilaisten tietojen sanomista."
+### Väärinkäsitys 1: ”Konteksti on vain erilaisten tietojen sanomista.”
 
-**Todellisuus:** Konteksti on strateginen valinta — mitä kerrot ensimmäisellä kerralla, määrittää, mistä suunnasta tekoäly lähestyy asiaa. Konteksti sisältää: kuka olet, mitä haluat, mihin käytät sitä, mitä tiedät jo, mitä et tiedä, miten haluat vastauksen rakennetuksi.
+**Korjaava näkökulma:** Konteksti ei ole satunnainen taustatietojen kasa. Se on strateginen valinta siitä, mitä tekoälyn pitää ymmärtää. Ammattilainen miettii, mikä tieto vaikuttaa vastauksen tasoon, näkökulmaan, rajaukseen ja käyttötarkoitukseen.
 
-**Korjaus luokassa:** "Konteksti ei ole satunnainen. Se on **järkevä valinta siitä, mitä kerrot**. Ammattilaisesti ajattelet: 'Mitä tekoäly tarvitsee ymmärtääkseni tilanteeni?'"
+### Väärinkäsitys 2: ”Tekoäly osaa arvata kontekstin, vaikka en sanoisi sitä.”
 
----
+**Korjaava näkökulma:** Tekoäly tekee oletuksia, jos konteksti puuttuu. Esimerkiksi ”Kerro verkoista” voi tarkoittaa tietokoneverkkoja, sosiaalisia verkostoja, kalastusverkkoja tai peliverkkoja. Jos käyttäjä ei kerro tilannetta, tekoäly arvaa — ja arvaus voi mennä väärään suuntaan.
 
-### 2. "AI osaa arvata kontekstin, vaikka en sanoisi sitä."
+### Väärinkäsitys 3: ”Kontekstin antaminen tekee pyynnöstä liian pitkän.”
 
-**Todellisuus:** AI tekee oletuksia ilman kontekstia. "Kerro verkoista" voi tarkoittaa: fyysisen verkon kaapeleita, tietokoneverkkoja, sosiaalisia verkostoja tai peliverkkojen toimintaa. Ilman kontekstia arvaus on sokea.
+**Korjaava näkökulma:** Hyvä ensimmäinen pyyntö voi olla pidempi, mutta se säästää usein aikaa myöhemmin. Kun tekoäly ymmärtää tilanteen heti paremmin, käyttäjän ei tarvitse korjata ja tarkentaa vastausta yhtä monta kertaa.
 
-**Korjaus luokassa:** "AI:lla on rajallinen konteksti — se voi lukea vain sitä, mitä kirjoitat. Jos et kerro, kuka olet, se arvaa. Ja arvaus on usein väärä."
+> Pidempi hyvä pyyntö on usein nopeampi kuin monta lyhyttä epäselvää pyyntöä.
 
----
+### Väärinkäsitys 4: ”Pilkkominen vie enemmän aikaa kuin kaiken kysyminen kerralla.”
 
-### 3. "Kontekstin antaminen on 'liian pitkää pyyntöä'."
+**Korjaava näkökulma:** Pilkkominen voi näyttää hitaammalta, mutta se tekee työstä hallittavampaa. Jokainen osa voidaan tarkistaa, parantaa ja yhdistää myöhemmin. Usein lopputulos on parempi ja virheitä syntyy vähemmän.
 
-**Todellisuus:** Pidempi ensimmäinen pyyntö = vähemmän iteraatioita. Ammattilaisesti parempi sijoitus: käytä aikaa ensimmäisen pyynnön laatimiseen ja säästä iteraatioissa.
+### Väärinkäsitys 5: ”Lähdeaineiston antaminen tarkoittaa, että kopioin tekoälyn vastauksen.”
 
-**Korjaus luokassa:** "Näyttää siltä, että 'antaa liian paljon kontekstia' tekee pyynnöstä raskaaksi. Todellisuus: hyvä konteksti säästää sinulta tunteja myöhemmin, koska et tarvitse kymmeniä tarkentavia pyyntöjä."
-
----
-
-### 4. "Pilkkominen vie enemmän aikaa kuin 'kaikki kerralla' -kysyminen."
-
-**Todellisuus:** Pilkkominen tekee vastausten laadusta parempia ja tekee yksittäisten osien ratkaisemisen helpommaksi. Kokonaisaika on usein pienempi, koska vastaukset ovat oikein ensimmäisellä kerralla.
-
-**Korjaus luokassa:** "Pilkkominen vaikuttaa siltä, että tekee prosessista pidemmäksi. Todellisuus: kunkin palasen vastaus on parempi ja lopuksi koko raportti on laadukkaampi."
-
----
-
-### 5. "Lähdeaineiston antaminen merkitsee, että kopioin AI:n vastaukseen?"
-
-**Todellisuus:** Lähdeaineiston antaminen (teksti, koodi, dokumentti) auttaa tekoälyä ymmärtämään juuri SINUN tilanteesi. Vastaus ei ole kopioitu vaan kontekstiin perustuva.
-
-**Korjaus luokassa:** "Kun annat tekoälylle omia tekstejä ('Tässä on ryhmän raportti, korjaa se'), se ei kopioi tekstiä. Se antaa palautetta ja parannuksia, jotka pohjautuvat täsmälleen sinun tekstiisi."
+**Korjaava näkökulma:** Lähdeaineiston antaminen ei tarkoita kopiointia. Se tarkoittaa, että tekoäly saa nähdä todellisen materiaalin, jota sen pitää analysoida, selittää, parantaa tai kommentoida. Opiskelija vastaa silti lopullisesta tekstistä ja ratkaisuista.
 
 ---
 
 ## Opettajan fasilitointiohjeet
 
-### Ennen lähiosaa (20 min valmistelu)
+### Ennen lähiosaa, noin 20 minuuttia
 
-**1. Testaa itse kontekstin rakentaminen:**
+1. **Testaa itse kontekstin rakentaminen.** Valitse yksi aihe, esimerkiksi ”Verkon perusteet”, ja tee neljä asteittain tarkentuvaa pyyntöä.
+2. **Tallenna vastaukset.** Ota kuvakaappaukset tai kopioi vastaukset talteen, jotta voit näyttää erot myös ilman live-demoa.
+3. **Valmistele esimerkit.** Tee valmiiksi hyvä ja huono kontekstiesimerkki, pilkkomisesimerkki, lähdeaineistoesimerkki ja iteraatioesimerkki.
+4. **Varmista pääsy tekoälypalveluun.** Testaa palvelu ennen tuntia ja valmistele varasuunnitelma, jos verkko ei toimi.
 
-Valitse yksi aihe, esim. "Verkon perusteita". Tee neljä pyyntöä asteittain parantuvalla kontekstilla. Pyyntö 1: "Kerro verkoista." Pyyntö 2: "Kerro verkoista. Olen 15-vuotias opiskelija." Pyyntö 3: "Kerro verkoista. Olen 15-vuotias IT-opiskelija. Haluan konkreettisia esimerkkejä." Pyyntö 4: "Kerro verkoista. Olen 15-vuotias IT-opiskelija ilman ohjelmointitaustaa. Haluan oppia 30 minuutissa. Anna: selitys, 3 esimerkkiä, riskit, testikysymykset." Tallenna vastaukset kuvakaappuksina tai tekstinä.
+### Lähiosan rakenne, 90 minuuttia
 
-**2. Valmistele opettajalle:**
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto** | 5 min | Motivoi aihe: konteksti ratkaisee vastauksen laadun. |
+| **Osio 1: live-demo neljällä kontekstilla** | 30 min | Näytä, miten vastaukset muuttuvat, kun konteksti tarkentuu. |
+| **Osio 2: pienryhmät** | 30 min | Opiskelijat rakentavat kontekstia eri skenaarioihin. |
+| **Osio 3: iteraatioharjoitus** | 20 min | Opiskelijat harjoittelevat jatkokysymysten ja tarkennusten rakentamista. |
+| **Yhteenveto** | 5 min | Kokoa ydinoivallus: ammattilainen rakentaa kontekstia tietoisesti. |
 
-Valmistele hyvä ja huono kontekstin esimerkki, esimerkki pilkkomisesta, esimerkki lähdeaineistosta ja esimerkki iteraatiosta.
+### Johdantolause opettajalle
 
-**3. Varmista pääsy:**
+> Viimeksi opimme käyttämään tekoälyä. Tänään opimme jotain yhtä tärkeää: konteksti ratkaisee vastauksen laadun. Sama aihe voi tuottaa täysin erilaisen vastauksen sen mukaan, mitä kerrot tilanteestasi.
 
-Testaa tekoälypalvelu toimii ja varaa varasuunnitelma verkon katkeamiseen.
+---
 
-### Lähiosassa (90 minuuttia)
+## Yleisiä haasteita ja ratkaisuja
 
-**Alku (5 min): Konteksti ja motivaatio**
+| Haaste | Miten ohjaat? |
+| --- | --- |
+| Opiskelija kysyy, miksi pitää kirjoittaa niin pitkä pyyntö. | Näytä, että hyvä ensimmäinen pyyntö vähentää turhia tarkennuskierroksia. Korosta, että konteksti on ajansäästöä, ei ylimääräinen vaiva. |
+| Opiskelija ei tiedä, mitä kontekstia antaa. | Kysy: kuka olet, mitä haluat, mihin käytät vastausta, mitä tiedät jo ja missä tarvitset apua? |
+| Opiskelija tekee liian lyhyen ensimmäisen pyynnön. | Näytä elävä esimerkki siitä, miten vastaus jää yleiseksi ja epäosuvaksi ilman kontekstia. |
+| Opiskelija ei tiedä, onko konteksti riittävä. | Käytä testiä: voisiko toinen opiskelija lukea pyynnön ja ymmärtää, mitä tilanteessa tarvitaan? |
+| Opiskelija ei näe iteraation hyötyä. | Näytä neljä kierrosta samasta aiheesta ja pyydä opiskelijoita arvioimaan, miksi viimeinen vastaus on hyödyllisempi kuin ensimmäinen. |
 
-Aloita oppitunnilla sanomalla: "Viime viikolla opimme käyttämään tekoälyä. Tänään opimme jotain yhtä tärkeää: **konteksti ratkaisee kaiken.** Sama aihe, eri konteksti — ja vastaukset ovat täysin erilaisia. Tämä taito tekee sinusta ammattilaisen."
+---
 
-**Osio 1: Live-demo — neljä eri kontekstia (30 min)**
+## Luokkatehtävien ohjeistus
 
-Käy Tehtävä 12.1 läpi, näytä neljän pyynnön vastaukset ja korostaa kontekstin vaikutusta.
+### TT-A: Neljä kontekstia samaan aiheeseen
 
-**Osio 2: Pienryhmät — kontekstin rakentaminen (30 min)**
+**Tavoite:** Opiskelija näkee, miten kontekstin lisääminen muuttaa tekoälyn vastausta.
 
-Käy Tehtävä 12.2 läpi, ryhmät rakentavat kontekstia neljässä tapauksessa ja esittelevät tuloksiaan.
+**Tehtävä:** Opiskelija antaa tekoälylle saman aiheen neljällä eri tavalla. Jokaisessa kierroksessa konteksti tarkentuu.
 
-**Osio 3: Harjoitus — iteraation rakentaminen (20 min)**
+**Ohje opiskelijalle:**
 
-Käy Tehtävä 12.3 läpi ja näytä, kuinka jokainen kierros rakentuu edellisen päälle.
+1. Kirjoita ensimmäinen pyyntö ilman kontekstia, esimerkiksi: **”Kerro verkoista.”**
+2. Lisää toisella kierroksella oma roolisi ja osaamistasosi.
+3. Lisää kolmannella kierroksella tavoite ja käyttötarkoitus.
+4. Lisää neljännellä kierroksella haluttu vastausrakenne, esimerkit ja tarkistus- tai testikysymykset.
+5. Vertaa vastauksia ja kirjoita, mikä muuttui.
 
-**Lopetus (5 min): Yhteenveto**
+| Kierros | Mitä lisättiin? | Miten vastaus muuttui? |
+| --- | --- | --- |
+| **1** | Ei kontekstia. |  |
+| **2** | Rooli ja osaamistaso. |  |
+| **3** | Tavoite ja käyttötarkoitus. |  |
+| **4** | Vastausrakenne, esimerkit ja testikysymykset. |  |
 
-Lopeta oppitunti sanomalla: "Näytimme kontekstin vaikutuksen. Ammattilaisesti: sinun on osattava rakentaa kontekstia asteittain. Seuraavalla tunilla harjoittelemme itse rakentaa kontekstia omissa projekteissa."
+**Aika-arvio:** 25–30 minuuttia
 
-### Yleisiä haasteita ja ratkaisuja
+---
 
-| Haaste | Ratkaisu |
-|--------|----------|
-| Opiskelija sanoo "Miksi pitää kirjoittaa niin pitkää pyyntöä?" | Konkreettinen: "Pidempi pyyntö = vähemmän iteraatioita. Sijoitus aikaa ensimmäiseen pyyntöön säästää sinulta aikaa myöhemmin." |
-| "En tiedä, mitä kontekstia antaa" | Ohjaa: "Ajattele: kuka olet? Mitä haluat? Mihin käytät sitä? Mitä tiedät jo? Nämä ovat konteksti." |
-| Opiskelija tekee liian lyhyen ensimmäisen pyynnön | Näytä elävän esimerkin seurauksista — kuinka vastaus on yleinen ja epäosuva. |
-| "Kuinka tiedän, onko kontekstin 'riittävä'?" | Yksinkertainen testi: "Voisiko toinen opiskelija, joka lukee pyyntösi, tehdä saman?" |
-| Opiskelija ei näe iteraation hyötyä | Näytä neljä kierrosta samasta aiheesta — näytä, kuinka neljäs vastaus on hyödyllisempi. |
+### TT-B: Kontekstin rakentaminen pienryhmissä
 
-### Ajankäyttö-ehdotus (90 min kokonaisuus)
+**Tavoite:** Opiskelija harjoittelee kontekstin rakentamista erilaisiin tilanteisiin.
 
-Johdanto kestää 0–5 minuuttia. Tehtävä 12.1 (live-demo, neljä pyyntöä) kestää 5–35 minuuttia. Tehtävä 12.2 (pienryhmät, neljä skenaariota) kestää 35–65 minuuttia. Tehtävä 12.3 (harjoitus, iteraatio) kestää 65–85 minuuttia. Yhteenveto ja seuraava oppitunti kestävät 85–90 minuuttia.
+**Tehtävä:** Ryhmä saa yhden skenaarion ja kirjoittaa siihen hyvän kontekstin ja promptin.
+
+| Skenaario | Mitä kontekstia tarvitaan? | Mahdollinen hyvä prompti |
+| --- | --- | --- |
+| Opiskelija ei ymmärrä Python-funktioita. | Osaamistaso, tavoite, halutut esimerkit ja yleiset virheet. |  |
+| Ryhmä haluaa parantaa keskeneräistä raporttia. | Raportin teksti, arviointikriteerit, ongelmakohdat ja haluttu palautetyyli. |  |
+| Opiskelija valmistautuu tietoturvakokeeseen. | Kokeen aihealue, opiskelijan osaamistaso, vaikeat kohdat ja harjoitustapa. |  |
+| Opiskelija haluaa selittää virheilmoituksen Linuxissa. | Komento, virheilmoitus, mitä oli tarkoitus tehdä ja mitä on jo kokeiltu. |  |
+
+**Aika-arvio:** 25–30 minuuttia
+
+---
+
+### TT-C: Iteraation rakentaminen
+
+**Tavoite:** Opiskelija ymmärtää, että tekoälytyöskentely on usein usean kierroksen prosessi.
+
+**Tehtävä:** Opiskelija valitsee oppimisaiheen ja kirjoittaa neljä pyyntöä, joista jokainen rakentuu edellisen päälle.
+
+**Esimerkki:**
+
+1. **Kierros 1:** Kerro Python-funktioista.
+2. **Kierros 2:** Lisää kolme konkreettista esimerkkiä.
+3. **Kierros 3:** Lisää kolme yleistä virhettä, joita opiskelijat tekevät.
+4. **Kierros 4:** Tee kolme testikysymystä, joissa virheellinen vastaus on helppo tehdä.
+
+**Ohje opiskelijalle:**
+
+- Älä kirjoita neljää satunnaista kysymystä.
+- Jokaisen kierroksen pitää tarkentaa edellistä.
+- Kirjoita lopuksi, mikä kierros tuotti hyödyllisimmän vastauksen ja miksi.
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
+
+### TT-D: Pilko suuri tehtävä
+
+**Tavoite:** Opiskelija osaa jakaa suuren tehtävän pienempiin tekoälylle annettaviin osiin.
+
+**Tehtävä:** Opiskelija valitsee suuren tehtävän, kuten raportin kirjoittamisen, tenttiin valmistautumisen tai dokumentaation laatimisen, ja pilkkoo sen vaiheiksi.
+
+| Osa | Mitä tekoälyltä pyydetään? | Mitä kontekstia annetaan? |
+| --- | --- | --- |
+| 1 |  |  |
+| 2 |  |  |
+| 3 |  |  |
+| 4 |  |  |
+
+**Aika-arvio:** 15–20 minuuttia
 
 ---
 
 ## Arviointikriteerit
 
-### Osaamistasojen kuvaukset
+### Taso 1: Muistaminen ja ymmärtäminen
 
-#### Taso 1: Muistaminen & Ymmärtäminen
+Opiskelija:
 
-Opiskelija nimeää kontekstin osat (kuka olet, mitä haluat, mihin käytät), ymmärtää että parempi konteksti = parempi vastaus, ja tietää pilkkomisen, iteraation ja lähdeaineiston perusidean.
+- nimeää kontekstin perusosat
+- ymmärtää, että parempi konteksti tuottaa paremman vastauksen
+- tietää pilkkomisen, iteraation ja lähdeaineiston perusidean
 
-**Mitä etsit:** "Konteksti on kaikkea, mitä tekoäly tarvitsee ymmärtääkseni. Se sisältää kuka olen, mitä haluan, mihin käytän vastausta."
+**Mitä opettaja etsii:** Opiskelija osaa sanoa esimerkiksi: ”Konteksti kertoo tekoälylle, kuka olen, mitä haluan ja mihin käytän vastausta.”
 
----
+### Taso 2: Soveltaminen ja analysoiminen
 
-#### Taso 2: Soveltaminen & Analysoiminen
+Opiskelija:
 
-Opiskelija rakentaa kontekstia kahteen osaan parantuvalla tavalla, näkee miten konteksti parantaa vastauksia, ja osaa antaa lähdeaineiston ja tehdä yksinkertaisen pilkkomisen.
+- rakentaa parempaa kontekstia vähintään kahdessa vaiheessa
+- näkee, miten konteksti parantaa vastausta
+- osaa antaa lähdeaineistoa tekoälylle
+- osaa tehdä yksinkertaisen pilkkomisen
 
-**Mitä etsit:** "Ensimmäinen pyyntö: 'Auta minua esseen kanssa.' Parempi pyyntö: 'Olen 15-vuotias opiskelija. Kirjoitan esseen 'Tekoäly' (500 sanaa). Haluan johdannon, pääosat ja päätelmät.'"
+**Mitä opettaja etsii:** Opiskelija muuttaa heikon pyynnön, kuten ”Auta esseen kanssa”, täsmällisemmäksi pyynnöksi, jossa näkyvät aihe, tavoite, pituus, rakenne ja käyttötarkoitus.
 
----
+### Taso 3: Arvioiminen ja luominen
 
-#### Taso 3: Arvioiminen & Luominen
+Opiskelija:
 
-Opiskelija rakentaa neljän vaiheen kontekstin systemaattisesti, perustelee miksi jokainen vaihe on parempi, osaa pilkoa monimutkaisen tehtävän ja käyttää lähdeaineistoa ja iteraatiota. Opiskelija kirjoittaa tarkan pyynnön, joka sisältää kaikki tarvittavan kontekstin.
+- rakentaa kontekstia systemaattisesti useassa vaiheessa
+- perustelee, miksi jokainen tarkennus parantaa vastausta
+- osaa pilkkoa monimutkaisen tehtävän osiin
+- käyttää lähdeaineistoa ja iteraatiota tarkoituksenmukaisesti
+- kirjoittaa tarkan pyynnön, jossa on riittävä konteksti ja selkeä tavoite
 
-**Mitä etsit:** "Pyyntö 1: 'Kerro Python-muuttujista.' Pyyntö 2: Lisää, että olen 15-vuotias opiskelija. Pyyntö 3: Lisää konkreettisia esimerkkejä ja yleisiä virheitä. Pyyntö 4: Pilko osiin — perustiedot, esimerkit, testikysymykset. Näytä, miten jokainen on parempi."
-
----
-
-## Tarkistustehtävät (oppimisen varmistaminen)
-
-**1. Kontekstin rakentaminen**
-
-Kirjoita kaksi erilaista pyyntöä tekoälylle aiheesta 'Verkot'. Ensimmäinen on huono, toinen on parempi kontekstilla.
-
-Hyvä vastaus: Huono: "Kerro verkoista." Parempi: "Olen 15-vuotias IT-opiskelija. Haluan oppia verkoista 30 minuutissa. Anna perustiedot, 3 esimerkkiä jokapäiväisestä elämästä, ja testikysymykset."
-
-Heikko vastaus: "Kerro verkoista" ja "Kerro enemmän verkoista" (ei oikea konteksti)
+**Mitä opettaja etsii:** Opiskelija ei ainoastaan lisää tietoa, vaan osaa selittää, miksi juuri tämä tieto on tekoälyn kannalta tarpeellinen.
 
 ---
 
-**2. Pilkkomisen soveltaminen**
+## Tarkistustehtävät oppimisen varmistamiseen
 
-Sinulla on iso tehtävä: 'Kirjoita dokumentaatio verkkoturvallisuudesta'. Pilko se pienempiin osiin, jotka voit antaa tekoälylle.
+### 1. Kontekstin rakentaminen
 
-Hyvä vastaus: "1) Perustiedot: mitä verkkoturvallisuus on, 2) Kolme yleistä riskiä ja niiden selitys, 3) Käytännön esimerkit — miten suojata kotiverkko, 4) Testikysymykset joissa opiskelijat usein vastaavat väärin."
+**Tehtävä:** Kirjoita kaksi erilaista pyyntöä tekoälylle aiheesta **verkot**. Ensimmäinen on heikko, toinen on parempi kontekstin avulla.
 
-Heikko vastaus: "Kysy tekoälyltä 'kirjoita dokumentaatio verkkoturvallisuudesta'" (ei pilkottu)
+**Hyvä vastaus:** Heikko: ”Kerro verkoista.” Parempi: ”Olen 15-vuotias IT-opiskelija. Haluan oppia verkoista 30 minuutissa. Anna perustiedot, kolme esimerkkiä jokapäiväisestä elämästä ja viisi testikysymystä.”
 
----
+**Heikko vastaus:** ”Kerro verkoista” ja ”Kerro enemmän verkoista.” Tässä toinen pyyntö ei lisää oikeaa kontekstia.
 
-**3. Lähdeaineiston käyttäminen**
+### 2. Pilkkomisen soveltaminen
 
-Sinulla on opiskelijoiden kirjoittama raportti, joka tarvitsee parannusta. Miten annat sen tekoälylle?
+**Tehtävä:** Sinulla on iso tehtävä: **”Kirjoita dokumentaatio verkkoturvallisuudesta.”** Pilko se pienempiin osiin, jotka voisit antaa tekoälylle.
 
-Hyvä vastaus: "Kopioin raportin kokonaan tai osan tekoälylle. Sitten kirjoitan: 'Tässä on raporttimme. Parantele sitä seuraavissa asioissa: 1) johdanto on liian lyhyt, 2) johtopäätelmät ovat pinnalliset, 3) lähdeviitteet puuttuvat.'"
+**Hyvä vastaus:**
 
-Heikko vastaus: "Kysy 'miten parantaa raporttia' ilman, että annat raporttia"
+1. Mitä verkkoturvallisuus tarkoittaa?
+2. Kolme yleistä riskiä ja niiden selitykset.
+3. Käytännön esimerkit kotiverkon suojaamisesta.
+4. Yleisimmät virheet, joita opiskelijat tekevät.
+5. Testikysymykset opiskelijoille.
 
----
+**Heikko vastaus:** ”Kysy tekoälyltä: kirjoita dokumentaatio verkkoturvallisuudesta.” Tämä ei ole pilkottu.
 
-**4. Iteraation soveltaminen**
+### 3. Lähdeaineiston käyttäminen
 
-Sinulla on oppimisaihe, josta haluat oppia 4 kierroksella. Kirjoita neljä erilaista pyyntöä, joista jokainen rakentuu edellisen päälle.
+**Tehtävä:** Sinulla on opiskelijoiden kirjoittama raportti, joka tarvitsee parannusta. Miten annat sen tekoälylle?
 
-Hyvä vastaus: K1: "Kerro Python-funktioista." K2: "Lisää 3 konkreettista esimerkkiä." K3: "Lisää kolme yleistä virhettä, joita opiskelijat tekevät." K4: "Tee testikysymykset — 3 kysymystä, joissa virheellisiä vastauksia on helppo tehdä."
+**Hyvä vastaus:** Opiskelija antaa raportin tai olennaisen osan siitä tekoälylle ja kirjoittaa selkeän pyynnön: ”Tässä on raporttimme. Anna palautetta erityisesti johdannosta, johtopäätöksistä ja lähdeviitteistä. Älä kirjoita koko raporttia uudelleen, vaan anna parannusehdotukset.”
 
-Heikko vastaus: "Kerro Python-funktioista" (vain yksi kysymys, ei iteraatiota)
+**Heikko vastaus:** ”Miten parannan raporttia?” ilman, että raporttia annetaan tekoälylle nähtäväksi.
+
+### 4. Iteraation soveltaminen
+
+**Tehtävä:** Valitse oppimisaihe ja kirjoita neljä erilaista pyyntöä, joista jokainen rakentuu edellisen päälle.
+
+**Hyvä vastaus:**
+
+1. Kerro Python-funktioista.
+2. Lisää kolme konkreettista esimerkkiä.
+3. Lisää kolme yleistä virhettä, joita opiskelijat tekevät.
+4. Tee kolme testikysymystä, joissa virheelliset vastaukset ovat todennäköisiä.
+
+**Heikko vastaus:** Vain yksi kysymys, esimerkiksi ”Kerro Python-funktioista.” Tällöin iteraatiota ei synny.
 
 ---
 
@@ -176,30 +346,36 @@ Heikko vastaus: "Kerro Python-funktioista" (vain yksi kysymys, ei iteraatiota)
 
 ### Harjoitustehtävät opiskelijoille
 
-**Helppo:**
+#### Helppo
 
-Valitse IT-aihe (esim. palvelimet, tietoturva). Kysy tekoälyltä ensin ilman kontekstia: "Kerro [aiheesta]." Sitten kysy uudelleen kontekstilla: "Olen 15-vuotias opiskelija. Kerro [aiheesta] yksinkertaisesti." Vertaa vastauksia — mitä eroa?
+Valitse IT-aihe, esimerkiksi palvelimet, tietoturva tai tietokoneverkot. Kysy tekoälyltä ensin ilman kontekstia: **”Kerro aiheesta.”** Kysy sitten uudelleen kontekstilla: **”Olen 15-vuotias opiskelija. Kerro aiheesta yksinkertaisesti ja anna kolme arjen esimerkkiä.”** Vertaa vastauksia.
 
-**Keskivaikea:**
+#### Keskivaikea
 
-Valitse opiskelun aihe. Kirjoita neljä pyyntöä — ensimmäinen huono, neljäs paras. Näytä, kuinka konteksti parantaa vastauksia kierros kierrokselta.
+Valitse opiskelun aihe. Kirjoita neljä pyyntöä: ensimmäinen on heikko ja neljäs on paras. Näytä, miten konteksti parantaa vastausta kierros kierrokselta.
 
-**Vaikea:**
+#### Vaikea
 
-Sinulla on iso tehtävä (esim. raportin kirjoittaminen, tenttiin valmistautuminen). Pilko se pienempiin osiin. Kirjoita spesifinen pyyntö jokaiselle osalle. Näytä, miten pilkkominen tekee vastauksista parempia.
-
----
-
-## Seuraava oppitunti — silta
-
-Seuraavalla tunilla opiskelijat harjoittelevat käytännössä. He rakentavat kontekstia omissa projekteissa, käyttävät pilkkomista ja iteraatiota, antavat lähdeaineistoa tekoälylle ja näkevät, kuinka konteksti parantaa heidän omia tuloksiaan.
+Valitse suuri tehtävä, kuten raportin kirjoittaminen, tenttiin valmistautuminen tai dokumentaation laatiminen. Pilko tehtävä pienempiin osiin ja kirjoita jokaiselle osalle oma, täsmällinen prompti.
 
 ---
 
-## Muistiinpanot opettajalle
+## Jatkuva integraatio seuraavalle tunnille
 
-Kontekstin rakentaminen on ammatillinen taito, joka erottaa opiskelijat ammattilaisista. Ammattilaiset ajattelevat "mitä kontekstia tarvitsen" ennen kuin kysyvät. Konkreettiset esimerkit auttavat oppimisessa, sillä abstraktit "parempi konteksti auttaa" eivät auta yhtä hyvin. Konkreettisesti näytä neljä kierrosta samasta aiheesta ja näytä ero näkyvissä.
+Seuraavalla tunnilla opiskelijat harjoittelevat kontekstin rakentamista omissa projekteissaan. He käyttävät pilkkomista, iteraatiota ja lähdeaineistoa käytännössä ja näkevät, kuinka konteksti vaikuttaa heidän omiin lopputuloksiinsa.
 
-Konteksti ei ole triviaali asia, koska opiskelijat voivat ajatella, että pitkä pyyntö on turhaa. Todellisuus on, että hyvä konteksti säästää iteraatioita ja on parempi sijoitus. Iteraatio on ammattilaisuutta, sillä kaikki ei ratkeaa yhdellä promptilla — ammattilaiset rakentavat ratkaisuja kierros kierrokselta.
+**Opettajan muistutus:** Kontekstin rakentaminen erottaa satunnaisen tekoälyn käyttäjän ammattilaisesta. Ammattilainen ei vain kysy, vaan määrittää tilanteen, tavoitteen ja rajat.
 
-Pilkkominen tekee vaikeista tehtävistä hallittavia, koska suuri raportti ei ole yksi pyyntö vaan viisi pienempää pyyntöä, joista jokainen on helpompi. Keskeinen viesti on, että ammattilaisuus on valinta: ammattilaisuus tarkoittaa "tiedän, mitä tarvitsen, ja osaan rakentaa kontekstia selvästi". Se ei ole magia — se on ajattelua.
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälyn vastaus riippuu voimakkaasti siitä, mitä käyttäjä sille kertoo. Hyvä konteksti tekee vastauksesta täsmällisemmän, käyttökelpoisemman ja paremmin opiskelijan tilanteeseen sopivan. Pilkkominen, lähdeaineiston antaminen ja iteraatio ovat ammatillisia tekoälyn käyttötaitoja.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mitä tekoälyn pitäisi tietää sinusta, tavoitteestasi ja tehtävästäsi, jotta se voisi antaa oikeasti hyödyllisen vastauksen?
+
+> **Lopetuslause opettajalle:** Tekoäly ei lue ajatuksia. Ammattilainen osaa antaa sille oikean tilanteen.
+
+---

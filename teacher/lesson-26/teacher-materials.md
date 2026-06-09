@@ -1,213 +1,312 @@
-# Opettajan materiaalit – Lesson 26: n8n-projektipaja, osa 1
+# Opettajan materiaalit — oppitunti 26: n8n-projektipaja, osa 1
 
-## Osaamistavoitteet (Bloom)
+## Osaamistavoitteet
 
-**Muistaa / Ymmärtää:**
-- Opiskelija ymmärtää, mitä n8n on ja miten se eroaa perinteisestä ohjelmoimisesta.
-- Opiskelija tunnistaa n8n:n solmun, triggerin, webhookin ja yhteyden (viiva solmujen välissä).
-- Opiskelija näkee, miten n8n:n solmut vastaa agentin kuuteen komponenttiin (syötekäsittelijä, päättelijä, työkalut, muisti, turvakerros, palaute).
+Tämän oppitunnin tavoitteena on siirtyä agenttien teoriasta käytännön rakentamiseen. Opiskelijat tutustuvat **n8n**-työkaluun, ymmärtävät visuaalisen työnkulun perusidean ja suunnittelevat oman agenttinsa ennen varsinaista rakentamista.
 
-**Soveltaa:**
-- Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun (trigger + 2-3 solmu).
-- Opiskelija pystyy suunnittelemaan omaa n8n-agenttia ja tekemään siitä yksityiskohtaisen suunnitelman.
+### Muistaa ja ymmärtää
+
+- Opiskelija ymmärtää, mitä **n8n** on ja miten se eroaa perinteisestä ohjelmoinnista.
+- Opiskelija tunnistaa n8n:n keskeiset käsitteet: **solmu**, **trigger**, **webhook** ja **yhteys** eli viiva solmujen välillä.
+- Opiskelija näkee, miten n8n:n solmut vastaavat agentin kuutta komponenttia: **syötekäsittelijä**, **päättelijä**, **työkalut**, **muisti**, **turvakerros** ja **palaute**.
+
+### Soveltaa
+
+- Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun, jossa on trigger ja 2–3 muuta solmua.
+- Opiskelija pystyy suunnittelemaan oman n8n-agenttinsa ja tekemään siitä yksityiskohtaisen suunnitelman.
+
+**Opettajan painotus:** Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten agentin teoria muuttuu konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.
 
 ---
 
 ## Pedagoginen lähestymistapa
 
-### Avaus — "Koodaamisen demokratisointi"
+### Avaus: koodaamisen demokratisointi
 
-Aloita sanomalla:
+Aloita oppitunti sanomalla opiskelijoille:
 
-"Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sen käytännössä. Tämä ei vaadi ohjelmointitietoa — n8n on tarkoitettu kelle tahansa. Näette, miten agentin kuusi komponenttia muuttuvat konkreettisiksi solmuiksi kankaalla."
+> Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sitä käytännössä. Tämä ei vaadi ohjelmointiosaamista samalla tavalla kuin perinteinen koodaus. n8n näyttää, miten agentin kuusi komponenttia muuttuvat konkreettisiksi solmuiksi kankaalla.
 
-Tämä motivoi opiskelijoita, joille ohjelmointi saattaa tuntua pelottavalta.
+Tämä auttaa erityisesti niitä opiskelijoita, joille ohjelmointi tuntuu vaikealta tai pelottavalta. Samalla on tärkeää korostaa, että visuaalinen työkalu ei poista suunnittelun ja loogisen ajattelun tarvetta.
 
 ### Keskeinen käsite: visuaalinen ohjelmointi
 
-**Vertaus:**
+**Vertaus:** Perinteinen ohjelmointi on kuin reseptin kirjoittamista tekstillä. n8n on kuin reseptin rakentamista näkyvistä osista: asetat ainekset eli solmut kankaalle, yhdistät ne viivoilla ja data virtaa niiden läpi vaiheesta toiseen.
 
-Perinteinen ohjelmointi on kuin kirjoittaa resepti tekstillä. n8n on kuin rakentaa reseptiä fyysisesti: laitat aineet (solmut) kankaalle, yhdistät ne viivoilla, ja data virtaa niiden läpi.
+**Perinteinen ohjelmointi:**
 
-```
-Perinteinen:  if (user.message) { ai.think(user.message); return response; }
-n8n:          [Webhook] → [IF] → [OpenAI] → [Discord]
-```
+if (user.message) { ai.think(user.message); return response; }
 
-Näytä molemmat ja selitä, että ne tekevät saman asian — eri tavalla.
+**n8n:**
 
-### n8n:n solmujen kolme kategoriaa (opettaa 10 min aikana)
+[Webhook] → [IF] → [OpenAI] → [Discord]
 
-1. **Triggerit** — mistä työnkulku alkaa
-   - Manual (käyttäjän painallus)
-   - Schedule (ajastin)
-   - Webhook (ulkoinen palvelu lähettää viestin)
-   
-2. **Päätössolmut** — logiikka ja ehto
-   - IF-solmu (tarkistaa ehdon)
-   - Switch-solmu (monet haarat)
-   
-3. **Toimintasolmut** — tekevät jotain
-   - HTTP Request (kutsuu API:ta)
-   - OpenAI (pyynnöstä tekoälyä)
-   - Discord / Slack / Email (lähettää viestejä)
-   - Google Sheets (lukee/kirjoittaa dataa)
+Näytä opiskelijoille molemmat esimerkit ja selitä, että ne voivat tehdä saman asian eri muodossa. Tekstikoodi ja visuaalinen työnkulku kuvaavat molemmat logiikkaa.
 
-### Virheellinen ajatus nro 1: "n8n on yksinkertaisesti"
+**Esimerkki opetukseen**
 
-**Todellisuus:** n8n on yksinkertainen käytön kannalta (drag-and-drop), mutta sen takana on syvälle meneviä käsitteitä (datanmuunnostus, turvakerrokset, muistin hallinta).
+Pyydä opiskelijoita katsomaan n8n-työnkulkua kuin karttaa. Jokainen solmu vastaa kysymykseen: “Mitä tapahtuu seuraavaksi?” Jokainen viiva vastaa kysymykseen: “Mihin data kulkee tämän jälkeen?”
 
-Painota: "Vaikka rajapinta on yksinkertainen, logiikka, jonka rakennamme, on älykkyyttä. Jokainen solmu tekee jotain merkityksellistä."
+---
 
-### Virheellinen ajatus nro 2: "Suunnitelma on turha — aloitetaan vaan rakentaa"
+## n8n:n solmujen kolme pääkategoriaa
 
-**Opettajan rooli:** Pakota opiskelijat tekemään suunnitelma ennen rakentamista.
+Opeta n8n:n solmujen pääkategoriat lyhyesti noin 10 minuutissa. Tavoitteena ei ole käydä läpi kaikkia mahdollisia solmuja, vaan antaa opiskelijoille käsitteellinen malli, jonka avulla he osaavat lukea työnkulkuja.
 
-"Hyvä insinööri piirtää suunnitelman ennen rakentamista. Huono insinööri rakentaa ja sitten yrittää korjata."
+### 1. Triggerit — mistä työnkulku alkaa?
 
-Opiskelijat, jotka ohittavat suunnittelun, päätyvät tekemään paljon turhatöitä ja rakentamaan agentin, joka ei toimi toiveittensa mukaisesti.
+- **Manual trigger:** työnkulku käynnistetään käsin.
+- **Schedule trigger:** työnkulku käynnistyy ajastetusti.
+- **Webhook:** ulkoinen palvelu lähettää viestin tai datan, joka käynnistää työnkulun.
+
+### 2. Päätössolmut — miten työnkulku haarautuu?
+
+- **IF-solmu:** tarkistaa ehdon ja ohjaa työnkulun eri suuntaan sen perusteella.
+- **Switch-solmu:** ohjaa työnkulun useampaan eri haaraan tilanteen mukaan.
+
+### 3. Toimintasolmut — mitä työnkulku tekee?
+
+- **HTTP Request:** kutsuu API:a tai ulkoista palvelua.
+- **OpenAI-solmu:** käyttää tekoälyä tekstin, analyysin tai päätöksen tuottamiseen.
+- **Discord, Slack tai Email:** lähettää viestin.
+- **Google Sheets:** lukee tai kirjoittaa dataa taulukkoon.
+
+| Solmutyyppi | Mitä se tekee? | Esimerkki |
+| --- | --- | --- |
+| **Trigger** | Käynnistää työnkulun. | Webhook vastaanottaa lomakevastauksen. |
+| **Päätössolmu** | Valitsee suunnan ehdon perusteella. | IF-solmu tarkistaa, onko viesti kiireellinen. |
+| **Toimintasolmu** | Tekee varsinaisen toiminnon. | OpenAI-solmu laatii vastausehdotuksen. |
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Voiko n8n tehdä mitä tahansa?"
+### Väärinkäsitys 1: “n8n on yksinkertainen, joten logiikkakin on yksinkertaista.”
 
-**Todellisuus:** n8n on integraatioalusta. Se voi tehdä vain sitä, mitä sen integraatiot (solmut) tukevat. Jos haluat mukauttaa logiikkaa syvemmin, tarvitset koodisolmua (Code node), joka vaatii ohjelmointitietoa.
+**Korjaava näkökulma:** n8n on helppokäyttöinen käyttöliittymän tasolla, mutta sen taustalla on silti vaativia käsitteitä, kuten datanmuunnos, turvakerrokset, muistin hallinta, hyväksyntäportit ja virheiden käsittely.
 
-**Opetuskäytäntö:** Listaa luokalle, mitä n8n voi ja ei voi tehdä:
-- Voi: HTTP-kutsut, tekoäly-palvelut, tietokannat, viestit, sähköpostit
-- Ei voi: erikoistuneita tai hyvin uusia palveluita ilman custom-integraatiota
+Kerro opiskelijoille:
 
-### 2. "Turvakerros on vain vaihtoehtinen"
+> Vaikka rajapinta näyttää yksinkertaiselta, logiikka voi olla vaativaa. Jokainen solmu tekee jotain merkityksellistä, ja jokaisen solmun paikka työnkulussa pitää perustella.
 
-**Todellisuus:** Turvakerros on pakollinen jokaisen agentin rakentamisessa. Ilman sitä agentti voi tehdä vahinkoa.
+### Väärinkäsitys 2: “Suunnitelma on turha — aloitetaan vain rakentaminen.”
 
-**Opetuskäytäntö:** Näytä esimerkki: "Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa lähettää arkaluonteisia tietoja väärään osoitteeseen. Turvakerros estää sen."
+**Korjaava näkökulma:** Hyvä työnkulku suunnitellaan ennen rakentamista. Jos opiskelija aloittaa suoraan rakentamisen, hän päätyy helposti korjaamaan samaa ongelmaa monta kertaa.
 
-### 3. "n8n on helppo koska se on visuaalinen"
+**Opettajan huomio:** Pysäytä liian nopeasti rakentamaan lähtevät opiskelijat ystävällisesti mutta selkeästi. Pyydä heitä kirjoittamaan ensin työnkulun vaiheet numeroituna ja merkitsemään, missä kohtaa tarvitaan syöte, päätös, toiminto, turvakerros ja palaute.
 
-**Todellisuus:** Visuaalinen rajapinta tekee oppimisen nopeuemmaksi, mutta monimutkaiset logiikat vaativat silti syvää ajattelua.
+Voit sanoa:
 
-Opiskelijat, jotka ajattelevat, että drag-and-drop = helppoa, menettävät motivaationsa kun kohtaavat vaikeuksia.
+> Hyvä insinööri piirtää suunnitelman ennen rakentamista. Huono insinööri rakentaa ensin ja yrittää sitten selvittää, miksi kokonaisuus ei toimi.
 
-**Opetuskäytäntö:** Kertaa: "Visuaalinen interface vain näyttää logiikan selkeämmin. Ajattelu on silti vaativaa."
+### Väärinkäsitys 3: “n8n voi tehdä mitä tahansa.”
+
+**Korjaava näkökulma:** n8n on integraatioalusta. Se voi tehdä sitä, mitä sen solmut, integraatiot ja API-yhteydet mahdollistavat. Jos tarvitaan hyvin erikoistunutta logiikkaa, voidaan tarvita **Code node** -solmua, joka vaatii ohjelmointitaitoa.
+
+| n8n voi usein tehdä | n8n ei välttämättä voi tehdä ilman lisätyötä |
+| --- | --- |
+| HTTP-kutsut ja API-yhteydet | Hyvin erikoistuneet tai uudet palvelut ilman valmista integraatiota |
+| Tekoälypalveluiden käyttö | Monimutkainen räätälöity logiikka ilman koodisolmua |
+| Tietokantojen, viestien ja sähköpostien käsittely | Palvelut, joihin ei ole rajapintaa tai käyttöoikeutta |
+
+### Väärinkäsitys 4: “Turvakerros on valinnainen.”
+
+**Korjaava näkökulma:** Turvakerros on pakollinen osa agentin rakentamista. Jos agentti voi lähettää viestejä, muuttaa tietoja tai kutsua ulkoisia palveluita, sen toimintaa pitää rajoittaa ja valvoa.
+
+**Esimerkki opetukseen**
+
+Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa lähettää arkaluonteisia tietoja väärälle vastaanottajalle. Turvakerros voi estää tämän esimerkiksi tarkistamalla vastaanottajan, sisällön ja riskitason ennen lähetystä.
 
 ---
 
-## Luokkatehtävän ohjeistus
+## Luokkatehtävien ohjeistus
 
 ### TT-A: Kokeile ja dokumentoi
 
-**Tavoite:** Opiskelija osaa rakentaa yksinkertaisen työnkulun ja ymmärtää, miten data virtaa solmujen läpi.
+**Tavoite:** Opiskelija rakentaa yksinkertaisen työnkulun ja ymmärtää, miten data virtaa solmujen läpi.
 
-**Yleisiä ongelmia:**
-- Opiskelija ei yhdistä solmuja oikein viivalla
-  - Ratkaisu: näytä, miten vedät viivan solmun outputista seuraavan solmun inputiin
-- Opiskelija painaa "Execute" väärässä solmussa
-  - Ratkaisu: selitä, että "Execute" testaa kyseisen solmun kunnes siihen asti
-- Opiskelija ei näe, miten data muuttuuu
-  - Ratkaisu: avaa solmun "Output" -väilehti ja näytä, mitä dataa solmu palauttaa
+**Ohje opiskelijalle:**
 
-**Aikaarvio:** 15-20 min
+1. Rakenna yksinkertainen työnkulku, jossa on trigger ja 2–3 solmua.
+2. Yhdistä solmut viivoilla oikeassa järjestyksessä.
+3. Suorita työnkulku tai yksittäiset solmut testinä.
+4. Avaa solmun **Output**-näkymä ja tarkastele, mitä dataa solmu palauttaa.
+5. Kirjoita lyhyt dokumentaatio: mitä työnkulku tekee, mitä dataa liikkuu ja missä vaiheessa data muuttuu.
+
+**Yleisiä ongelmia ja ratkaisuja:**
+
+| Ongelma | Opettajan ohjaava ratkaisu |
+| --- | --- |
+| Opiskelija ei yhdistä solmuja oikein viivalla. | Näytä, miten viiva vedetään solmun outputista seuraavan solmun inputiin. |
+| Opiskelija painaa Execute väärässä solmussa. | Selitä, että Execute testaa työnkulkua kyseiseen solmuun asti tai kyseisen solmun toimintaa. |
+| Opiskelija ei näe, miten data muuttuu. | Avaa solmun Output-välilehti ja pyydä opiskelijaa vertaamaan syötettä ja tulosta. |
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
 
 ### TT-B: Arkkitehti — suunnittele
 
-**Tavoite:** Opiskelija tekee realistisen projektinsuunnitelman, joka voidaan toteuttaa n8n:ssä.
+**Tavoite:** Opiskelija tekee realistisen projektisuunnitelman, joka voidaan toteuttaa n8n:ssä.
 
-**Yleisiä ongelmia:**
-- Suunnitelma on liian monimutkainen ensimmäiselle projektille
-  - Ratkaisu: suosittele "Taso 1" lähtökohdaksi
-- Riippuvuudet eivät ole selkeät (esim. "ensin pitää tehdä X, sitten Y", mutta X riippuu Y:n tuloksesta)
-  - Ratkaisu: pyydä kirjoittamaan vaiheet numeroituna järjestyksessä ja testaamaan loogisen järjestyksen
-- Hyväksyntäportit puuttuvat kokonaan
-  - Ratkaisu: kysy: "Missä kohtaa ihmisen pitää hyväksyä, ennen kuin agentti toimii?"
+**Ohje opiskelijalle:**
 
-**Aikaarvio:** 20-25 min
+1. Valitse agenttisi käyttötarkoitus.
+2. Kirjoita työnkulun vaiheet numeroituna järjestyksessä.
+3. Merkitse jokaiseen vaiheeseen, mitä solmua tai solmutyyppiä siinä tarvitaan.
+4. Merkitse, missä kohtaa tarvitaan turvakerros tai ihmisen hyväksyntä.
+5. Tarkista, että työnkulku ei ole liian laaja ensimmäiseksi projektiksi.
+
+**Vinkki arviointiin:** Hyvä suunnitelma on toteutettavissa. Se ei ole vain idea, vaan siinä näkyvät vaiheet, solmut, datan kulku, turvakerros ja palaute.
+
+**Yleisiä ongelmia ja ratkaisuja:**
+
+| Ongelma | Opettajan ohjaava ratkaisu |
+| --- | --- |
+| Suunnitelma on liian monimutkainen ensimmäiseksi projektiksi. | Suosittele Taso 1 -lähtökohtaa: yksi syöte, yksi päätös, yksi toiminto ja yksi palautevaihe. |
+| Vaiheiden riippuvuudet ovat epäselvät. | Pyydä opiskelijaa kirjoittamaan vaiheet numeroituna ja tarkistamaan, syntyykö jokaisessa vaiheessa tieto, jota seuraava vaihe tarvitsee. |
+| Hyväksyntäportit puuttuvat. | Kysy: “Missä kohtaa ihmisen pitää hyväksyä päätös ennen kuin agentti toimii?” |
+
+**Aika-arvio:** 20–25 minuuttia
+
+---
 
 ### TT-C: Punainen tiimi
 
-**Tavoite:** Opiskelija oppii arvioimaan kriittisesti ja löytämään ongelmia ennen rakentamista.
+**Tavoite:** Opiskelija oppii arvioimaan suunnitelmaa kriittisesti ja löytämään ongelmia ennen rakentamista.
 
-**Opettajan rooli:** Varmista, että tiimityö on rakentavaa, ei loukkaavaa.
+**Opettajan rooli:** Varmista, että tiimityö on rakentavaa, ei henkilökohtaista tai loukkaavaa.
 
-"Punainen tiimi etsii ongelmia, ei kritisoi ihmisiä. Palautetta tulee antaa ammatillisesti."
+> Punainen tiimi etsii ongelmia suunnitelmasta, ei ihmisestä. Palautteen tarkoitus on parantaa projektia.
 
-**Yleisiä ongelmia:**
-- Palaute on liian ankara
-  - Ratkaisu: muistuta, että tavoite on kehittää projektia, ei kritisoida tekijää
-- Palautelomake on liian lyhyt
-  - Ratkaisu: pyydä konkreettisia esimerkkejä: "Mitä voisi mennä pieleen tässä vaiheessa?"
+**Ohje opiskelijalle:**
 
-**Aikaarvio:** 15-20 min
+1. Vaihtakaa suunnitelma toisen ryhmän kanssa.
+2. Etsikää suunnitelmasta mahdollisia ongelmia.
+3. Kirjoittakaa vähintään kolme konkreettista riskiä tai epäselvyyttä.
+4. Ehdottakaa jokaiseen ongelmaan parannus.
+
+**Punaisen tiimin tarkistuskysymyksiä:**
+
+- Mitä voisi mennä pieleen tässä työnkulussa?
+- Onko jokin solmu liian laajoilla oikeuksilla?
+- Puuttuuko hyväksyntäportti?
+- Onko datan kulku selkeä?
+- Mitä tapahtuu, jos tekoäly antaa väärän vastauksen?
+- Miten virhe huomataan ja korjataan?
+
+**Aika-arvio:** 15–20 minuuttia
+
+---
 
 ### TT-D: Keskustele ja perustele
 
-**Tavoite:** Opiskelija linkittää n8n-solmut agentin kuuteen komponenttiin ja ymmärtää, miten ne työskentelevät yhdessä.
+**Tavoite:** Opiskelija yhdistää n8n-solmut agentin kuuteen komponenttiin ja ymmärtää, miten ne toimivat yhdessä.
 
-**Yleisiä ongelmia:**
-- Opiskelija ei näe linkkiä solmun ja komponentin välillä
-  - Ratkaisu: anna konkreettinen esimerkki: "tekoälysolmu on päättelijä, koska tässä agentti 'ajattelee' ja tekee päätöksen."
-- Analyysi on liian pinnallinen
-  - Ratkaisu: pyydä selittämään JA MIKSI: "Miksi juuri tämä solmu on syötekäsittelijä? Mitä se tekee?"
+**Ohje opiskelijalle:**
 
-**Aikaarvio:** 15-20 min
+1. Valitse suunnitelmastasi tai esimerkkityönkulusta vähintään kuusi solmua tai vaihetta.
+2. Yhdistä jokainen vaihe agentin komponenttiin.
+3. Perustele, miksi valitsit juuri tämän komponentin.
 
----
+| Agentin komponentti | Mahdollinen n8n-vastine | Miksi? |
+| --- | --- | --- |
+| **Syötekäsittelijä** | Webhook tai lomakesolmu | Vastaanottaa käyttäjän viestin tai datan. |
+| **Päättelijä** | OpenAI-solmu tai IF-solmu | Tulkitsee tilanteen tai tekee päätöksen. |
+| **Työkalut** | HTTP Request, Email, Discord, Google Sheets | Tekee toiminnon tai kutsuu ulkoista palvelua. |
+| **Muisti** | Tietokanta, Sheets tai aiempi loki | Säilyttää ja hakee aiempaa tietoa. |
+| **Turvakerros** | IF-solmu, hyväksyntäportti tai validointivaihe | Estää vaaralliset tai epävarmat toiminnot. |
+| **Palaute** | Lokitus, Sheets, palauteviesti tai seurantavaihe | Tallentaa tulokset ja mahdollistaa toiminnan parantamisen. |
 
-## Tuntiesityksen rakenne (45 minuuttia)
-
-1. **Avaus ja motivaatio** (3 min)
-   - "Olemme opinneet agentin teoriaa. Nyt rakennamme sen visuaalisesti n8n:ssä."
-
-2. **n8n-tutoriaali (opettaja näyttää)** (12 min)
-   - Avaa n8n, näytä trigger, HTTP Request, IF-solmu, lähetyssolmu
-   - Korostaa: "Kukin solmu tekee yhden asian. Data virtaa niiden läpi."
-
-3. **Arkkitehtuurin selitys** (10 min)
-   - Näytä, miten solmut vastaavat agentin kuuteen komponenttiin
-   - Piirrä taululle: Trigger → Validointi → Päättely → Turva → Toiminta → Palaute
-
-4. **Opiskelijat tekevät tehtäviä itsenäisesti ja pareissa** (15 min)
-   - TT-A: Rakentaa yksinkertaisen työnkulun
-   - TT-B & TT-D: Suunnittelevat oman projektinsa
-   - TT-C: Arvioi toisen projektia (jos aikaa)
-
-5. **Yhteenveto ja seuraavan tunnin esittely** (5 min)
-   - "Seuraavassa tunnissa rakennamme ne projektit, jotka suunnittelitte tänään."
+**Aika-arvio:** 15–20 minuuttia
 
 ---
 
-## Jatkoyhteys Lesson 27:een
+## Tuntiesityksen rakenne: 45 minuuttia
 
-Lesson 27 on rakentamisen, testaamisen ja dokumentoinnin tunti. Varmista, että opiskelijat lähettävät suunnitelmansa sinulle ennen 27. lektsiota, jotta:
-1. Voit arvioida, onko suunnitelma realistinen
-2. Voit antaa palautetta parannuksista
-3. Opiskelijat voivat aloittaa rakentamisen 27. tunnilla ilman hidasteita
+1. **Avaus ja motivaatio noin 3 minuuttia**
+
+   Kerro opiskelijoille: “Olemme oppineet agentin teoriaa. Nyt rakennamme sen visuaalisesti n8n:ssä.”
+2. **n8n-tutoriaali noin 12 minuuttia**
+
+   - Avaa n8n.
+   - Näytä trigger, HTTP Request, IF-solmu ja viestin lähetyssolmu.
+   - Korosta: “Jokainen solmu tekee yhden asian. Data virtaa solmujen läpi.”
+3. **Arkkitehtuurin selitys noin 10 minuuttia**
+
+   - Näytä, miten solmut vastaavat agentin kuutta komponenttia.
+   - Piirrä taululle työnkulku: `Trigger → Validointi → Päättely → Turva → Toiminta → Palaute`
+4. **Opiskelijoiden työskentely noin 15 minuuttia**
+
+   - TT-A: opiskelijat rakentavat yksinkertaisen työnkulun.
+   - TT-B ja TT-D: opiskelijat suunnittelevat oman projektinsa ja perustelevat solmuvalinnat.
+   - TT-C: opiskelijat arvioivat toisen ryhmän suunnitelmaa, jos aikaa jää.
+5. **Yhteenveto ja seuraavan tunnin esittely noin 5 minuuttia**
+
+   Kerro opiskelijoille: “Seuraavalla tunnilla rakennamme niitä projekteja, jotka suunnittelitte tänään.”
+
+---
+
+## Yhteys oppituntiin 27
+
+Oppitunti 27 on rakentamisen, testaamisen ja dokumentoinnin tunti. Varmista, että opiskelijat palauttavat suunnitelmansa ennen seuraavaa oppituntia, jotta:
+
+1. voit arvioida, onko suunnitelma realistinen,
+2. voit antaa palautetta parannuksista,
+3. opiskelijat voivat aloittaa rakentamisen ilman turhia viivästyksiä.
+
+**Opettajan tarkistuskysymys:** Jos opiskelijan suunnitelma kuulostaa liian laajalta, kysy: “Mikä tästä olisi pienin toimiva versio?” Tämä auttaa rajaamaan projektin toteutettavaksi.
 
 ---
 
 ## Materiaalit, jotka opettajalla pitää olla valmiina
 
-- n8n-instanssi (paikallinen tai cloud)
-- Esittelyprojekti n8n:ssä (esim. yksinkertainen FAQ-botti)
-- Projektin mallit (Taso 1, 2, 3) valmiiksi tekstissä tai näytöllä
-- Taulukko: n8n solmut vs. agentin kuusi komponenttia
-- Punaisen tiimin palautelomake (printattava tai jaettava digitaalisesti)
+- n8n-instanssi, joko paikallinen tai pilvipalvelu
+- valmis esittelyprojekti n8n:ssä, esimerkiksi yksinkertainen FAQ-botti
+- projektimallit tasoille 1, 2 ja 3 tekstinä tai näytöllä
+- taulukko, jossa n8n-solmut yhdistetään agentin kuuteen komponenttiin
+- punaisen tiimin palautelomake printattuna tai digitaalisesti jaettuna
+- varasuunnitelma teknisten ongelmien varalle, esimerkiksi kuvakaappaukset työnkulusta
 
 ---
 
 ## Opettajan vihjeet
 
-1. **Liian nopea etenemia:** Jos opiskelijat ovat valmiina nopeasti, anna heille haastavamman tehtävän:
-   - "Rakenna n8n-työnkulku, joka integroituu KAHTEEN ulkoiseen palveluun"
-   - "Lisää turvakerros, joka estää tietynlaisia syötteitä"
+### Jos opiskelijat etenevät liian nopeasti
 
-2. **Liian hidas etenema:** Jos aika on tiukalla, voit:
-   - Antaa valmiit suunnitelmat (TT-B voidaan antaa mallin muodossa)
-   - Ohittaa TT-C (punainen tiimi) ja tehdä sen Lesson 27:ssä
+Anna heille lisähaaste:
 
-3. **Tekniset ongelmat:** Jos n8n ei toimi (API-virhe, yhteysongelma):
-   - Käytä valmiita kuvakaappauksia n8n:n työnkulusta
-   - Näytä opiskelijalle, miten ongelmat ratkotaan pyynnöllä: "Kokeilimme tätä ja se ei toiminut. Seuraavaksi..."
+- Rakenna työnkulku, joka integroituu kahteen ulkoiseen palveluun.
+- Lisää turvakerros, joka estää tietynlaisia syötteitä.
+- Lisää lokitus, joka tallentaa, mitä agentti teki ja milloin.
+- Lisää hyväksyntäportti ennen riskialtista toimintoa.
 
+### Jos opiskelijat etenevät liian hitaasti
+
+Rajaa tehtävää:
+
+- Anna valmis työnkulkupohja, jota opiskelijat muokkaavat.
+- Anna TT-B suunnittelumallina, jossa osa kohdista on valmiiksi täytetty.
+- Siirrä TT-C eli punaisen tiimin arviointi seuraavalle oppitunnille.
+- Keskity yhteen toimivaan työnkulkuun monimutkaisen projektin sijaan.
+
+### Jos n8n ei toimi
+
+Käytä varasuunnitelmaa:
+
+- Näytä valmiita kuvakaappauksia n8n-työnkulusta.
+- Piirrä työnkulku taululle solmuina ja nuolina.
+- Käy läpi, mitä dataa kukin solmu saisi ja palauttaisi.
+- Käsittele tekninen ongelma oppimistilanteena: mitä kokeiltiin, mikä epäonnistui ja mitä tehtäisiin seuraavaksi?
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että n8n tekee agentin arkkitehtuurista näkyvän. Jokainen solmu on osa järjestelmää, ja jokaisella yhteydellä on merkitys. Hyvä työnkulku ei synny sattumalta, vaan se suunnitellaan, rajataan, testataan ja parannetaan.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mikä oman agenttisi pienin toimiva versio olisi? Mitkä solmut siihen tarvitaan, ja missä kohdassa tarvitset turvakerroksen?
+
+---

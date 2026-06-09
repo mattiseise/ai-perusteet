@@ -1,7 +1,7 @@
 # Sanasto – Lesson 27: n8n-projektipaja, osa 2
 
 | Termi | Selitys |
-|-------|---------|
+| --- | --- |
 | **Testaaminen** (testing) | Prosessi, jossa agenttia käytetään systemaattisesti ja dokumentoidaan, toimiiko se odotetusti. Se ei ole sattumanvaraista — se on suunniteltu ja dokumentoitu. |
 | **Normaalit tapaukset** (happy path) | Ne käyttötilanteet, joihin agentti on suunniteltu. Esim. FAQ-botille normaali kysymys. |
 | **Reunatapaukset** (edge cases) | Epätavallisia tilanteita, jotka voivat tapahtua mutta joita ei odoteta. Esim. tyhjä syöte, liian pitkä teksti, väärä kieli. |
@@ -25,3 +25,4 @@
 | **Rajoitukset** (limitations) | Asiat, joita agentti EI voi tehdä tai mihin se ei ole suunniteltu. Tärkeä kirjoittaa dokumentaatioon. |
 | **Korjaussuunnitelma** (fix plan) | Suunnitelma siitä, miten epäonnistuneet testit korjataan. Pitää listata ongelma, syy ja ratkaisu. |
 
+---

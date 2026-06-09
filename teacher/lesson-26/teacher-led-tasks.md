@@ -1,145 +1,245 @@
-# Opettajavetoiset tehtävät – Lesson 26: n8n-projektipaja, osa 1
+# Opettajavetoiset tehtävät — oppitunti 26: n8n-projektipaja, osa 1
 
-## Tehtävä 1: n8n-rajapinnan perustutorial (15 min)
+## Tehtävä 1: n8n-rajapinnan perustutoriaali noin 15 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on, että opiskelijat näkevät käytännössä, miten **n8n-työnkulku** rakentuu. Opiskelijat oppivat tunnistamaan **triggerin**, **solmut**, **yhteydet** ja **datan kulun** solmusta toiseen.
+
+**Opettajan painotus:** Tässä tehtävässä tärkeintä ei ole tehdä vielä valmista agenttia, vaan ymmärtää n8n:n peruslogiikka: työnkulku alkaa triggeristä, etenee solmusta toiseen ja jokainen solmu käsittelee dataa jollakin tavalla.
 
 ### Valmistelu
 
-Avaa n8n projektori tai näytöllä niin, että kaikki näkevät. Voit käyttää n8n:n ilmaista pilvipalvelua (n8n.cloud) tai paikallista asennusta.
+- Avaa **n8n** projektorille tai näytölle niin, että kaikki opiskelijat näkevät sen.
+- Voit käyttää n8n:n pilvipalvelua tai paikallista asennusta.
+- Varmista etukäteen, että kirjautuminen, uuden työnkulun luominen ja testiajo toimivat.
 
 ### Opettajan ohjeistus
 
-1. **Näytä triggeri:**
-   - Luo uusi työnkulku
-   - Lisää Manual Trigger -solmu
-   - Selitä: "Tämä on agentin sydän — se sanoo, milloin työnkulku käynnistyy."
-   - Klikitse "Execute" ja näytä, mitä tapahtuu.
+#### Vaihe 1: Näytä triggeri
 
-2. **Näytä HTTP Request -solmu:**
-   - Lisää HTTP Request -solmu triggerin jälkeen
-   - Aseta GET-pyynnöksi https://api.github.com/zen
-   - Klikkaa "Execute" ja näytä vastaus
-   - Selitä: "Tämä solmu kutsuu ulkoista palvelua (API:ta). Se lähettää pyynnön ja saa vastauksen takaisin."
-   - Näytä, miten data kulkee solmusta toiseen (viiva yhdistää ne)
+1. Luo uusi työnkulku.
+2. Lisää **Manual Trigger** -solmu.
+3. Selitä opiskelijoille:
 
-3. **Näytä IF-solmu (päätös):**
-   - Lisää IF-solmu HTTP Requestin jälkeen
-   - Aseta ehto: "Jos vastaus sisältää sanan 'code'"
-   - Selitä: "IF-solmu tekee päätöksiä. Se voi ohjata datan eri suuntaan riippuen ehdosta."
-   - Näytä true/false-haarauma
+> Tämä on työnkulun aloituskohta. Trigger kertoo, milloin työnkulku käynnistyy. Ilman triggeriä työnkulku ei tiedä, mistä sen pitäisi alkaa.
 
-4. **Näytä tekstinkäsittely:**
-   - Lisää Text-solmu jonka jälkeen
-   - Näytä, miten voit muuttaa dataa (esim. lisää etuliite vastauksen eteen)
-   - Selitä: "Jokainen solmu muuttaa dataa. Data virtaa putkessa solmusta seuraavaan."
+4. Klikkaa **Execute** ja näytä, mitä tapahtuu.
+5. Näytä opiskelijoille, että trigger tuottaa työnkululle aloitusdatan.
+
+#### Vaihe 2: Näytä HTTP Request -solmu
+
+1. Lisää **HTTP Request** -solmu Manual Trigger -solmun jälkeen.
+2. Aseta pyynnöksi **GET**.
+3. Käytä esimerkkiosoitteena: `https://api.github.com/zen`
+4. Klikkaa **Execute** ja näytä vastaus.
+
+Selitä opiskelijoille:
+
+> HTTP Request -solmu kutsuu ulkoista palvelua eli API:a. Se lähettää pyynnön ja saa vastauksen takaisin. Tämä on esimerkki siitä, miten agentti voi käyttää ulkoista työkalua.
+
+Näytä samalla, miten data kulkee solmusta toiseen viivaa pitkin.
+
+#### Vaihe 3: Näytä IF-solmu päätöksentekoa varten
+
+1. Lisää **IF**-solmu HTTP Request -solmun jälkeen.
+2. Aseta ehdoksi esimerkiksi: vastaus sisältää sanan `code`.
+3. Selitä opiskelijoille:
+
+> IF-solmu tekee päätöksen ehdon perusteella. Se voi ohjata työnkulun eri suuntaan sen mukaan, täyttyykö ehto vai ei.
+
+4. Näytä opiskelijoille **true**- ja **false**-haarat.
+5. Kysy: “Mitä voisi tapahtua true-haarassa? Entä false-haarassa?”
+
+#### Vaihe 4: Näytä tekstinkäsittely
+
+1. Lisää seuraavaksi tekstin muokkaamiseen sopiva solmu, esimerkiksi **Set**- tai muu tekstinkäsittelysolmu käytössä olevan n8n-version mukaan.
+2. Näytä, miten dataa voidaan muokata. Esimerkiksi vastauksen eteen voidaan lisätä selite:
+
+GitHub Zen -vastaus: [API:n palauttama teksti]
+
+Selitä opiskelijoille:
+
+> Jokainen solmu voi muuttaa dataa. Data virtaa putkessa solmusta seuraavaan, ja jokainen vaihe lisää, tarkistaa, muokkaa tai käyttää sitä.
+
+**Esimerkki opetukseen**
+
+Pyydä opiskelijoita seuraamaan jokaisen solmun kohdalla kahta asiaa: mitä dataa solmu saa sisään ja mitä dataa se antaa ulos. Tämä auttaa ymmärtämään työnkulun logiikkaa.
 
 ### Opiskelijoiden osallistuminen
 
-- Pyydä opiskelijoita ottamaan omat tietokoneensa ja rakentaa perässä.
-- Pysähdy säännöllisesti ja anna heille aikaa testata.
-- Vastaa kysymyksiin live ja näytä ratkaisut näytöllä.
+- Pyydä opiskelijoita avaamaan omat tietokoneensa ja rakentamaan työnkulku vaihe vaiheelta mukana.
+- Pysähdy jokaisen uuden solmun jälkeen ja anna opiskelijoille aikaa testata oma työnkulkunsa.
+- Vastaa kysymyksiin livenä ja näytä ratkaisut näytöllä.
+- Pyydä opiskelijoita avaamaan jokaisen solmun **Output**-näkymä ja kertomaan, mitä dataa he näkevät.
 
-### Yhteenveto (1 min)
+### Yhteenveto noin 1 minuutti
 
-"Näitte nyt kolme keskeistä n8n-käsitettä:
-1. **Trigger** — mistä työnkulku alkaa
-2. **Solmut** — mitä kukin solmu tekee
-3. **Data virtaa** — miten data liikkuu solmusta seuraavaan viivaa pitkin"
+Kokoa tehtävän lopuksi kolme keskeistä käsitettä:
+
+1. **Trigger** kertoo, mistä työnkulku alkaa.
+2. **Solmut** tekevät työnkulun yksittäiset vaiheet.
+3. **Data virtaa** solmusta seuraavaan yhteyksiä pitkin.
+
+### Odotettu oppimistulos
+
+- Opiskelijat osaavat luoda yksinkertaisen n8n-työnkulun.
+- Opiskelijat ymmärtävät triggerin, solmun ja yhteyden merkityksen.
+- Opiskelijat näkevät, miten data muuttuu työnkulun aikana.
 
 ---
 
-## Tehtävä 2: Agentin arkkitehtuurin tunnistaminen (15 min)
+## Tehtävä 2: Agentin arkkitehtuurin tunnistaminen noin 15 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on yhdistää aiemmilla oppitunneilla opittu **agentin arkkitehtuuri** n8n:n konkreettisiin solmuihin. Opiskelijat tunnistavat, miten n8n-työnkulku voi vastata agentin kuutta komponenttia.
 
 ### Valmistelu
 
-Näytä n8n:ssä yksinkertainen työnkulku, joka sisältää ainakin 4-5 solmua. Esimerkiksi:
+Näytä n8n:ssä yksinkertainen työnkulku, jossa on vähintään 4–5 solmua. Voit käyttää esimerkiksi seuraavaa rakennetta:
 
-```
-Webhook → Validointi (IF) → OpenAI → Tarkistus (IF) → Discord
-```
+Webhook → Validointi IF-solmulla → OpenAI → Tarkistus IF-solmulla → Discord
 
-Tai käytä projektin mallia Lesson 26:n aineistosta.
+Vaihtoehtoisesti voit käyttää oppitunnin 26 aineistossa olevaa projektimallia.
 
 ### Opettajan ohjeet
 
-Käy ryhmän kanssa läpi, miten n8n-solmut vastaavat agentin kuuteen komponenttiin:
+Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komponenttia.
 
-1. **Syötekäsittelijä** → Webhook + Validointi-IF
-   - "Jotain tapahtuu ulkomaailmassa (esim. viesti saapuu). Syötekäsittelijä vastaanottaa sen ja tarkistaa, että se on järkevä."
-   - Osoita työnkulussa Webhook-solmu ja ensimmäinen IF-ehto.
+| Agentin komponentti | n8n-vastine | Mitä se tekee? |
+| --- | --- | --- |
+| **Syötekäsittelijä** | Webhook ja Validointi-IF | Vastaanottaa viestin ulkomaailmasta ja tarkistaa, että syöte on järkevä. |
+| **Päättelijä** | OpenAI-solmu | Analysoi viestin, hyödyntää ohjeistusta ja tuottaa päätöksen tai vastauksen. |
+| **Työkalujen suorittaja** | Discord, sähköposti tai muu lähetyssolmu | Tekee konkreettisen toiminnon, kuten lähettää viestin. |
+| **Muisti** | Google Sheets, tietokanta tai Memory-solmu | Tallentaa tai hakee historiaa, asiakastietoja tai aiempia tapahtumia. |
+| **Turvakerros** | IF-solmu päättelyn jälkeen | Tarkistaa ennen toimintaa, onko vastaus turvallinen ja sallittu. |
+| **Palautesilmukka** | Lokitus Google Sheetsiin tai muuhun tallennuspaikkaan | Kirjaa tapahtumat, jotta toimintaa voidaan arvioida ja parantaa myöhemmin. |
 
-2. **Päättelijä** → tekoälysolmu
-   - "Tässä agentti 'ajattelee'. Se analysoi viestin, konsultoi system promptia ja tekee päätöksen."
-   - Osoita tekoälysolmu ja sen system prompt.
+### Käsittely vaihe vaiheelta
 
-3. **Työkalujen suorittaja** → Discord (tai muu lähettämissolmu)
-   - "Tässä agentti toimii. Se ottaa päätöksen ja tekee konkreettista asiaa — lähettää viestin."
-   - Osoita Discord-solmu.
+1. **Syötekäsittelijä:** Osoita Webhook-solmua ja ensimmäistä IF-ehtoa.
 
-4. **Muisti** → Google Sheets tai Memory-solmu
-   - "Jos agentti tarvitsee muistaa asiakkaita tai historiaa, se tallennetaan tässä."
-   - Näytä, miten konteksti voidaan hakea hakemalla tiedot ennen päättelyä.
+   Selitä: “Jotain tapahtuu ulkomaailmassa, esimerkiksi viesti saapuu. Syötekäsittelijä vastaanottaa sen ja tarkistaa, että viesti on käsiteltävissä.”
+2. **Päättelijä:** Osoita OpenAI-solmua ja sen ohjeistusta.
 
-5. **Turvakerros** → IF-solmu päättelyjen jälkeen
-   - "Ennen kuin agentti toimii, se tarkistaa: onko vastaus turvallinen? Sisältääkö se arkaluonteisia tietoja?"
-   - Näytä, miten IF-solmu voi blokata vaarallisia vastauksia.
+   Selitä: “Tässä agentti tekee päättelyä. Se analysoi viestin, hyödyntää system promptia ja muodostaa vastauksen tai päätösehdotuksen.”
+3. **Työkalujen suorittaja:** Osoita Discord-, sähköposti- tai muuta lähetyssolmua.
 
-6. **Palautesilmukka** → Logging (Google Sheets tai muu)
-   - "Jokainen toimenpide kirjataan. Näin agentti oppii ja kehittyy."
+   Selitä: “Tässä agentti toimii. Se ei vain ajattele, vaan tekee konkreettisen toimenpiteen.”
+4. **Muisti:** Näytä Google Sheets-, tietokanta- tai muu tallennusratkaisu.
+
+   Selitä: “Jos agentin pitää muistaa aiempia tapauksia tai hakea historiaa, se tarvitsee muistia.”
+5. **Turvakerros:** Osoita päättelyn jälkeistä IF-solmua.
+
+   Selitä: “Ennen kuin agentti toimii, sen pitää tarkistaa, onko vastaus turvallinen. Sisältääkö se arkaluonteisia tietoja? Tarvitaanko ihmisen hyväksyntä?”
+6. **Palautesilmukka:** Näytä lokitusvaihe.
+
+   Selitä: “Jokainen tärkeä toimenpide kannattaa kirjata. Näin voidaan myöhemmin arvioida, mitä agentti teki ja miksi.”
+
+**Opettajan huomio:** Älä anna opiskelijoiden ajatella, että kaikki n8n-työnkulut ovat automaattisesti agentteja. Agenttimaisuus syntyy siitä, että työnkulku vastaanottaa syötteen, tulkitsee sen, tekee päätöksiä, käyttää työkaluja, huomioi muistia ja toimii rajatusti.
 
 ### Keskustelu
 
-- "Miten nämä kuusi osaa työskentelevät yhdessä?"
-- "Mitä tapahtuisi, jos turvakerros puuttuisi?"
-- "Miten agentti eroaa tavallisesta skriptistä n8n:ssä?"
+- Miten nämä kuusi osaa toimivat yhdessä?
+- Mitä tapahtuisi, jos **turvakerros** puuttuisi?
+- Miten agentti eroaa tavallisesta n8n-skriptistä?
+- Missä vaiheessa ihminen pitäisi ottaa mukaan?
+
+### Odotettu oppimistulos
+
+- Opiskelijat osaavat yhdistää n8n-solmuja agentin kuuteen komponenttiin.
+- Opiskelijat ymmärtävät, että agentti ei ole vain solmujen ketju, vaan päätöksiä tekevä ja rajatusti toimiva järjestelmä.
+- Opiskelijat osaavat selittää, miksi turvakerros ja palautesilmukka ovat tärkeitä.
 
 ---
 
-## Tehtävä 3: Suunnittelutyöpaja — projektinideoiden arviointi (20 min)
+## Tehtävä 3: Suunnittelutyöpaja — projekti-ideoiden arviointi noin 20 minuuttia
+
+### Tavoite
+
+Tehtävän tavoitteena on, että opiskelijat suunnittelevat realistisen n8n-agentin ennen rakentamista. Opiskelijat arvioivat projektinsa laajuutta, riskejä, hyväksyntäportteja ja solmukaaviota.
+
+**Vinkki arviointiin:** Hyvä suunnitelma on toteutettavissa. Se ei ole vain idea, vaan siinä näkyvät vaiheet, triggeri, solmut, rajaukset, riskit ja hyväksyntäportit.
 
 ### Valmistelu
 
-Jaettele opiskelijat pareittain (2-3 henkilöä paria kohti). Jaa heille kolme eri projekti-ideaa (Lesson 26:n student-tasks.md:stä):
-- Taso 1: FAQ-botti
-- Taso 2: Sähköpostin yhteenveto
-- Taso 3: Asiakaspalvelun tikettijärjestelmä
+- Jaa opiskelijat pareihin tai 2–3 henkilön pienryhmiin.
+- Anna ryhmille kolme projektivaihtoehtoa tai anna heidän valita oma idea.
 
-Tai anna opiskelijoiden valita oman idean.
+**Projektivaihtoehdot:**
+
+1. **Taso 1: FAQ-botti** — vastaa usein kysyttyihin kysymyksiin rajatun tietopohjan perusteella.
+2. **Taso 2: Sähköpostin yhteenveto** — lukee sähköpostin tai tekstin ja tekee siitä tiiviin yhteenvedon.
+3. **Taso 3: Asiakaspalvelun tikettijärjestelmä** — luokittelee tikettejä, ehdottaa vastauksia ja ohjaa riskitapaukset ihmiselle.
 
 ### Ohjeet pareille
 
-1. **Valitse projektityyppi** (10 min)
-2. **Kirjoita yksinkertainen suunnitelma** käyttäen lesson 26:n lomaketta:
-   - Käyttötapaus
-   - Mitä se tekee (3-4 vaihetta)
-   - Mitä se EI tee (rajat)
-   - Hyväksyntäportit
-   - Riskit
-   - Solmukaaavio
+#### Vaihe 1: Valitkaa projektityyppi noin 10 minuuttia
 
-3. **Näytä suunnitelma toiselle parille tai opettajalle** (5 min)
+Valitkaa yksi projektityyppi tai oma idea. Kirjoittakaa suunnitelma seuraavan rakenteen mukaan:
+
+| Suunnittelukohta | Ryhmän vastaus |
+| --- | --- |
+| **Käyttötapaus** | Mihin ongelmaan agentti auttaa? |
+| **Mitä agentti tekee?** | Kirjoittakaa 3–4 vaihetta. |
+| **Mitä agentti ei tee?** | Kirjoittakaa rajaukset. |
+| **Hyväksyntäportit** | Missä kohdassa tarvitaan ihmisen hyväksyntä? |
+| **Riskit** | Mitä voi mennä pieleen? |
+| **Solmukaavio** | Piirtäkää työnkulku solmuina ja nuolina. |
+
+#### Vaihe 2: Näyttäkää suunnitelma toiselle parille tai opettajalle noin 5 minuuttia
+
+Toinen pari tai opettaja tarkistaa suunnitelman ja antaa palautetta.
+
+**Tarkistuskysymykset palautteen antajalle:**
+
+- Onko työnkulun aloituskohta eli triggeri selkeä?
+- Onko työnkulku realistinen toteuttaa?
+- Näkyykö suunnitelmassa turvakerros?
+- Onko ihmisen hyväksyntä mukana oikeassa kohdassa?
+- Onko jokin vaihe liian epäselvä tai liian laaja?
 
 ### Opettajan rooli
 
-Kiertele luokkaa ja kysy:
-- "Mistä työnkulku alkaa? Mikä on triggeri?"
-- "Kuka tai mikä tekee päätöksiä? Onko se agentti vai chatbot?"
-- "Missä vaiheessa ihminen päättää?"
-- "Mitä riskeistä olette ajatelleet?"
+Kiertele luokassa ja kysy ryhmiltä:
 
-Ohjaa opiskelijoita tarkentamaan suunnitelmiaan. Seuraavassa tunnissa he rakentavat näiden pohjalta.
+- Mistä työnkulku alkaa? Mikä on triggeri?
+- Kuka tai mikä tekee päätöksiä: agentti, sääntö vai ihminen?
+- Onko kyseessä agentti vai chatbot?
+- Missä vaiheessa ihminen päättää?
+- Mitä riskejä olette tunnistaneet?
+- Miten virhe huomataan ja korjataan?
 
-### Yhteenveto (1 min)
+Ohjaa opiskelijoita tarkentamaan suunnitelmiaan. Seuraavalla oppitunnilla he rakentavat työnkulkuja näiden suunnitelmien pohjalta.
 
-"Hyvä suunnitelma säästää aikaa rakentamisessa. Nyt tiedätte, mitä rakentaa. Seuraavassa tunnissa alamme rakentaa ja testata."
+### Yhteenveto noin 1 minuutti
+
+Kerro opiskelijoille:
+
+> Hyvä suunnitelma säästää aikaa rakentamisessa. Nyt tiedätte, mitä olette rakentamassa, mistä työnkulku alkaa, mitä solmuja tarvitaan ja missä kohtaa tarvitaan turvakerros tai ihmisen hyväksyntä.
+
+### Odotettu oppimistulos
+
+- Opiskelijat osaavat suunnitella yksinkertaisen n8n-agentin.
+- Opiskelijat osaavat määritellä käyttötapauksen, rajaukset, riskit ja hyväksyntäportit.
+- Opiskelijat ymmärtävät, että hyvä rakentaminen alkaa suunnittelusta.
 
 ---
 
 ## Arviointi
 
-Opettaja arvioi seuraavaa:
+Opettaja arvioi opiskelijoiden työskentelyä seuraavien kriteerien perusteella:
 
-1. **Solmujen ymmärtäminen** — Osavatko opiskelijat selittää, mitä kukin solmu tekee?
-2. **Arkkitehtuurin pohdinta** — Linkkivätkö he solmut agentin kuuteen komponenttiin?
-3. **Suunnittelun laatu** — Onko suunnitelma selkeä ja realistinen?
-4. **Kriittinen ajattelu** — Tunnistiko he riskejä ja hyväksyntäportteja?
+| Arviointikohde | Mitä arvioidaan? |
+| --- | --- |
+| **Solmujen ymmärtäminen** | Osaavatko opiskelijat selittää, mitä kukin solmu tekee? |
+| **Arkkitehtuurin pohdinta** | Yhdistävätkö opiskelijat solmut agentin kuuteen komponenttiin? |
+| **Suunnittelun laatu** | Onko suunnitelma selkeä, rajattu ja realistinen? |
+| **Kriittinen ajattelu** | Tunnistavatko opiskelijat riskejä, turvakerroksia ja hyväksyntäportteja? |
 
+**Esimerkki arviointipalautteesta**
+
+“Suunnitelmassanne on selkeä triggeri ja hyvä käyttötapaus. Seuraavaksi tarkentakaa, missä kohdassa agentti saa toimia itse ja missä kohdassa tarvitaan ihmisen hyväksyntä.”
+
+---

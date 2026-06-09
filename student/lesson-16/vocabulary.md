@@ -1,7 +1,7 @@
 # Oppitunti 16: Sanasto
 
 | Termi | Määritelmä |
-|-------|-----------|
+| --- | --- |
 | **Kuvageneraattori** | Tekoälyohjelma, joka tekee kuvia tekstin kuvauksen perusteella. Esimerkiksi DALL-E ja Midjourney. |
 | **Prompt** | Ohje, jonka annat tekoälylle. Hyvä prompt on spesifinen ja selkeä. Esimerkiksi: "Robotti istuu kahvilassa juomassa kahvia, valokuvamainen tyyli." |
 | **Iteraatio** | Prosessi, jossa yrität, näet tuloksen, muutat jotain ja yrität uudelleen. Tekoälyn kanssa iteraatio on tärkeää — harvoin ensimmäinen yritys on paras. |
@@ -20,3 +20,5 @@
 | **Tekijänoikeus** | Oikeus omistaa jotain, mitä olet luonut. Generatiivisella tekoälyllä tekijänoikeus on sekavaa — kenen omistama generoitu kuva on? Se riippuu tilanteesta ja laista. |
 | **Made with AI** | Merkintä, jonka pitää lisätä, jos olet käyttänyt tekoälyä jotain luomiseen. Rehellisyys ja vastuullisuus. |
 | **Rehellisyys** | Avoimesti kertominen siitä, miten olet luonut jotain. Jos käytit tekoälyä, sano se. Ihmiset haluavat tietää. |
+
+---

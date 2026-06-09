@@ -1,162 +1,288 @@
-# Opettajavetoiset harjoitukset: Gen AI:n luonne
+# Opettajavetoiset harjoitukset: generatiivisen tekoälyn luonne
 
-## Harjoitus 1: Sama prompti, eri mallit — epädeterminismin demonstraatio
+## Harjoitus 1: Sama kehote, eri mallit — epädeterministisyyden demonstraatio
 
 ### Tavoite
-Näyttää käytännössä, miksi tulokset vaihtelevat ja että tämä johtuu mallin rakenteesta, ei käyttäjän virheestä.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on näyttää käytännössä, miksi **generatiivisen tekoälyn** tuottamat vastaukset voivat vaihdella. Opiskelijat ymmärtävät, että vaihtelu johtuu mallien **todennäköisyyspohjaisesta toiminnasta**, ei välttämättä käyttäjän virheestä.
 
-**Kesto: 15 minuuttia**
+**Opettajan painotus:** Korosta, että epädeterministisyys ei tarkoita sattumanvaraista tai hyödytöntä toimintaa. Se tarkoittaa, että malli voi tuottaa useita mahdollisia vastauksia, joista moni voi olla järkevä mutta eri tavalla muotoiltu.
 
-1. **Valmistelu (5 min ennen oppituntia):**
-   - Avaa useita AI-malleja selaimessasi (esim. ChatGPT, Claude, Google Gemini).
-   - Kirjoita samankaltainen prompti kaikille malleille.
+### Opettajan ohjeet ja fasilitointi
 
-   **Esimerkkiprompti:**
+**Kesto:** noin 15 minuuttia
+
+#### Valmistelu ennen oppituntia noin 5 minuuttia
+
+- Avaa selaimeen useita tekoälymalleja, esimerkiksi ChatGPT, Claude ja Google Gemini.
+- Valmistele sama tai mahdollisimman samanlainen kehote kaikille malleille.
+- Varmista, että vastaukset voidaan näyttää opiskelijoille rinnakkain tai peräkkäin.
+
+#### Esimerkkikehote
+
+Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data.txt`, laskee rivien lukumäärän ja tulostaa tuloksen.
+
+#### Luokkaharjoitus noin 10 minuuttia
+
+1. Näytä ensin yhden tekoälymallin vastaus opetusnäytöllä.
+2. Kysy opiskelijoilta: **Voitteko ennustaa, millaisen vastauksen toinen malli antaa?**
+3. Näytä toisen mallin vastaus.
+4. Vertailkaa vastauksia seuraavien kysymysten avulla:
+
    ```
-   Kirjoita lyhyt koodinpätkä (5-10 riviä), joka
-   tekee seuraavaa: lue tiedosto nimeltä "data.txt",
-   laske rivien lukumäärä ja tulosta tulos.
-   ```
+   - Onko käytetty ohjelmointikieli tai syntaksi sama?
+   - Onko mukana kommentteja?
+   - Onko vastauksissa virheitä tai puutteita?
+   - Onko ratkaisun tyyli samanlainen vai erilainen?
+   - Kumpi vastaus olisi helpompi testata käytännössä?
+5. Näytä vielä kolmannen mallin vastaus ja tehkää sama vertailu.
+```
 
-2. **Luokkaharjoitus (10 min):**
-   - Näytä opetusnäytöllä ChatGPT:n vastaus.
-   - Kysy: "Kuka voi ennustaa, mitä Claude sanoo?"
-   - Näytä Clauden vastaus. Vertaa:
-     - Onko syntaksi sama vai eri?
-     - Onko mukana kommentteja? Entä virheitä?
-     - Millainen on kokonaistyyli?
-   - Näytä Google Geminin vastaus. Vertaa jälleen.
+#### Keskustelu
 
-3. **Keskustelu:**
-   - "Miksi vastaukset ovat erilaisia, vaikka kaikki mallit on koulutettu samankaltaisilla teksteillä?"
-   - Johdattele opiskelijat ymmärtämään: *mallit tekevät todennäköisyyspohjaisia valintoja*, eivät hakuun perustuvia tai deterministisiä algoritmeja.
-   - Mainitse lämpötila: "Jokainen malli valitsee hieman eri 'reittejä' seuraavien sanojen joukosta."
+Kysy opiskelijoilta:
 
-4. **Johtopäätös:**
-   - "Tämä on ominaisuus, ei vika. Epädeterminismi mahdollistaa luovuuden."
-   - "Mutta se merkitsee sitä, ettei samaa vastausta saa aina uudelleen."
+- Miksi vastaukset ovat erilaisia, vaikka kehote oli sama tai lähes sama?
+- Miksi kaikki vastaukset voivat silti olla mahdollisesti järkeviä?
+- Milloin vaihtelu on hyödyllistä?
+- Milloin vaihtelu voi olla ongelma?
+- Mitä käyttäjän pitää tehdä ennen kuin tekoälyn tuottamaa koodia käytetään oikeassa projektissa?
 
-**Opettajan muistiinpanot:**
-- Ole valmis siihen, että jotkin vastaukset saattavat sisältää hallusinaatioita (esim. väärän funktion). Käytä sitä opetuksessa!
-- Jos vastaukset ovat hyvin samankaltaisia, selitä: "Koska kaikkien mallien koulutusdata on samankaltaista, usein samankaltaiset vastaukset ovat todennäköisimpiä."
+Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista oikeaa vastausta tietokannasta. Ne tekevät **todennäköisyyspohjaisia valintoja** seuraavien sanojen, merkkien tai rakenteiden välillä.
+
+> **Lämpötila** vaikuttaa siihen, kuinka paljon malli valitsee vaihtelevia tai yllättäviä vaihtoehtoja. Jokainen malli voi kulkea hieman eri reittiä seuraavien sanojen joukossa.
+
+#### Johtopäätös
+
+- **Epädeterministisyys** on generatiivisen tekoälyn ominaisuus, ei pelkkä virhe.
+- Vaihtelu mahdollistaa luovuuden ja vaihtoehtoiset ratkaisut.
+- Sama kehote ei välttämättä tuota aina täsmälleen samaa vastausta.
+- Teknisissä tehtävissä käyttäjän täytyy tarkistaa, että vastaus toimii oikeasti.
+
+**Opettajan tarkistuskysymys:** Jos opiskelijat keskittyvät valitsemaan parasta mallia, kysy: “Mitä tämä vertailu kertoo generatiivisen tekoälyn toimintatavasta?”
+
+### Opettajan muistiinpanot
+
+- Ole valmis siihen, että jokin vastaus voi sisältää virheen tai hallusinaation, esimerkiksi väärän funktion tai puutteellisen virheenkäsittelyn. Käytä tilannetta opetuksessa.
+- Jos vastaukset ovat hyvin samankaltaisia, selitä opiskelijoille: “Koska mallien koulutusdata ja tehtävän rakenne ovat samankaltaisia, samankaltaiset vastaukset voivat olla todennäköisimpiä.”
+- Korosta, että mallien vertailun tarkoitus ei ole valita “voittajaa”, vaan ymmärtää generatiivisen tekoälyn toimintatapaa.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn yhteydessä.
+- Opiskelijat osaavat selittää, miksi sama kehote voi tuottaa erilaisia vastauksia.
+- Opiskelijat ymmärtävät, milloin vaihtelu voi olla hyödyllistä ja milloin se voi olla riski.
+- Opiskelijat osaavat perustella, miksi tekoälyn tuottama koodi pitää tarkistaa ennen käyttöä.
 
 ---
 
-## Harjoitus 2: Hallusinaatioiden metsästys — ryhmän analyysi
+## Harjoitus 2: Hallusinaatioiden metsästys — ryhmäanalyysi
 
 ### Tavoite
-Oppia tunnistamaan hallusinaatioita ja ymmärtämään niiden mekanismia.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on oppia tunnistamaan **hallusinaatioita** ja ymmärtää, miksi kielimalli voi tuottaa uskottavalta kuulostavia mutta virheellisiä vastauksia. Opiskelijat harjoittelevat myös tiedon tarkistamista luotettavista lähteistä.
 
-**Kesto: 20 minuuttia**
+**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Ammattilaisen pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
 
-1. **Ryhmän jakaminen (2 min):**
-   - Jaa opiskelijat 3–4 henkilön ryhmiin.
-   - Anna jokaiselle ryhmälle eri "hallusinaatio-case".
+### Opettajan ohjeet ja fasilitointi
 
-2. **Case-tutkimukset (valitse 2–3):**
+**Kesto:** noin 20 minuuttia
 
-   **Case 1 (Tekniikka):**
-   AI-malli sanoo: "Pythonissa funktiota `urllib3.get_json(url)` käytetään JSON-datan hakemiseen."
-   - Tarkista: Onko tämä funktio olemassa?
-   - Miksi malli hallusinoi sen?
+#### Ryhmien muodostaminen noin 2 minuuttia
 
-   **Case 2 (Historia):**
-   AI-malli sanoo: "Suomen ensimmäinen pääministeri oli Mikael Agricola."
-   - Tarkista: Kuka oli ensimmäinen pääministeri?
-   - Miksi malli sekoitti asian?
+- Jaa opiskelijat 3–4 henkilön ryhmiin.
+- Anna jokaiselle ryhmälle yksi hallusinaatiotapaus tutkittavaksi.
+- Kerro, että ryhmän tehtävänä ei ole vain sanoa, onko väite väärä, vaan myös perustella, miten asia tarkistettiin.
 
-   **Case 3 (API-dokumentaatio):**
-   AI-malli dokumentoi API-päätepisteen: "GET /users/{id}/profile — palauttaa käyttäjän profiilin ja salasanan."
-   - Tarkista: Palauttaisiko API koskaan salasanan?
-   - Miksi malli ehdotti turvatonta toimintoa?
+#### Case-tutkimukset
 
-3. **Ryhmän tehtävä (10 min):**
-   - Tutkikaa tapauksianne.
-   - Täyttäkää taulukko:
+Valitse seuraavista 2–3 tapausta tai jaa eri ryhmille eri tapaukset.
 
-   | Väite | Oikein vai väärä | Missä tarkistit | Hallusinaation merkkejä | Miksi malli hallusinoi |
-   |---|---|---|---|---|
-   | [AI:n väite] | | | | |
+##### Case 1: Tekniikka
 
-4. **Esittäminen (8 min):**
-   - Jokainen ryhmä esittelee löydöksensä 2–3 minuutissa.
-   - Opettaja korostaa: "Hallusinaatiot eivät ole ilmiselviä. Malli esittää ne täysin vakaasti."
+AI-malli väittää:
 
-**Opettajan muistiinpanot:**
-- Valmistele case-tutkimukset etukäteen — testaa ne kaikissa malleissa (ChatGPT, Claude jne.).
-- Hallusinaatiot vaihtelevat malleittain, joten jokaisen mallin käyttäytyminen on mielenkiintoista.
-- Jos ryhmällä on vaikeuksia hallusinaation löytämisessä, anna vihje: "Onko väite liian yksityiskohtainen? Onko se 'näyttävä' mutta epävarma?"
+Pythonissa funktiota `urllib3.get_json(url)` käytetään JSON-datan hakemiseen.
+
+- Tarkistakaa, onko funktio olemassa.
+- Selvittäkää, millä tavoin JSON-dataa oikeasti haetaan Pythonissa.
+- Pohtikaa, miksi malli saattoi keksiä tällaisen funktion.
+
+##### Case 2: Historia
+
+AI-malli väittää:
+
+Suomen ensimmäinen pääministeri oli Mikael Agricola.
+
+- Tarkistakaa, kuka oli Suomen ensimmäinen pääministeri.
+- Pohtikaa, miksi malli saattoi sekoittaa tunnetun historiallisen henkilön väärään rooliin.
+
+##### Case 3: API-dokumentaatio
+
+AI-malli dokumentoi API-päätepisteen näin:
+
+`GET /users/{id}/profile` — palauttaa käyttäjän profiilin ja salasanan.
+
+- Arvioikaa, pitäisikö API:n koskaan palauttaa käyttäjän salasanaa.
+- Pohtikaa, miksi malli saattoi ehdottaa tietoturvan kannalta vaarallista toimintoa.
+- Miettikää, miten dokumentaatio pitäisi korjata turvalliseksi.
+
+#### Ryhmän tehtävä noin 10 minuuttia
+
+Tutkikaa oma tapauksenne ja täyttäkää seuraava taulukko:
+
+| AI:n väite | Oikein vai väärin? | Missä tarkistitte? | Hallusinaation merkkejä | Miksi malli saattoi hallusinoida? |
+| --- | --- | --- | --- | --- |
+| [Kirjoittakaa tähän AI:n väite.] | [Oikein / väärin / osittain oikein] | [Lähde, dokumentaatio tai muu tarkistuspaikka] | [Mikä teki väitteestä epäilyttävän?] | [Mitä sanoja, malleja tai yhteyksiä tekoäly saattoi yhdistellä väärin?] |
+
+#### Esittäminen noin 8 minuuttia
+
+- Jokainen ryhmä esittelee havaintonsa noin 2–3 minuutissa.
+- Ryhmän tulee kertoa:
+
+  ```
+  - mikä väite oli,
+  - oliko se oikein, väärin vai osittain oikein,
+  - miten asia tarkistettiin,
+  - mistä hallusinaation olisi voinut tunnistaa,
+  - miten virheellinen vastaus olisi pitänyt korjata.
+```
+> Hallusinaatiot eivät aina näytä ilmiselviltä virheiltä. Malli voi esittää väärän vastauksen hyvin itsevarmasti.
+
+### Opettajan muistiinpanot
+
+- Valmistele tapaukset etukäteen ja tarkista oikeat vastaukset luotettavista lähteistä.
+- Hallusinaatiot voivat vaihdella eri malleissa, joten eri mallien käyttäytymistä voi käyttää keskustelun pohjana.
+- Jos ryhmällä on vaikeuksia löytää virhettä, anna vihje: “Onko väite liian yksityiskohtainen? Kuulostaako se uskottavalta, mutta ilman lähdettä? Sisältääkö se oudon funktion, henkilön tai turvattoman käytännön?”
+
+**Opettajan tarkistuskysymys:** Jos opiskelija sanoo “vastaus kuulostaa oikealta”, kysy: “Mihin lähteeseen se perustuu?”
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, mitä **hallusinaatio** tarkoittaa generatiivisen tekoälyn yhteydessä.
+- Opiskelijat osaavat tarkistaa tekoälyn väitteen luotettavasta lähteestä.
+- Opiskelijat tunnistavat hallusinaation merkkejä, kuten olemattomia funktioita, väärin yhdistettyjä käsitteitä ja turvattomia oletuksia.
+- Opiskelijat ymmärtävät, että itsevarma sävy ei tee vastauksesta oikeaa.
 
 ---
 
 ## Harjoitus 3: Verifiointiprosessin suunnittelu
 
 ### Tavoite
-Opettaa opiskelijoille, miten integroida AI-apu ammatilliseen työnkulkuun ilman, että hallusinaatiot pääsevät virheiksi.
 
-### Ohjeet ja vaiheet
+Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää ammatillisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
 
-**Kesto: 25 minuuttia**
+**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa ammatillista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
 
-1. **Skenaario (5 min):**
-   Esitä seuraava skenaario:
+### Opettajan ohjeet ja fasilitointi
 
-   "Sinulla on tehtävä kirjoittaa SQL-kysely tietokantaan, joka hakee kaikki asiakkaat, joiden maksu on erääntynyt yli 30 päivää. Käytät ChatGPT:tä koodin kirjoittamisen tukena."
+**Kesto:** noin 25 minuuttia
 
-2. **Ryhmäkeskustelu — verifiointivaiheet (10 min):**
-   Jaa opiskelijat pienryhmiin ja kysy:
+#### Skenaario noin 5 minuuttia
 
-   - **Vaihe 1:** Ennen kuin kysyt ChatGPT:ltä — mitä sinun täytyy jo tietää? (Tietokannan sarakkeet? Päivämäärämuodot?)
-   - **Vaihe 2:** Miten kirjoitat promptin? Mitä yksityiskohtia pyydät?
-   - **Vaihe 3:** Miten analysoit vastauksen? Mistä merkeistä epäilet hallusinaatiota?
-   - **Vaihe 4:** Miten testaat koodia ennen käyttöä? (Testidata? Lokit?)
-   - **Vaihe 5:** Miten dokumentoit? (Miksi valitsit ChatGPT:n vastauksen sellaisenaan?)
+Esitä opiskelijoille seuraava tilanne:
 
-3. **Esittäminen (10 min):**
-   - Jokainen ryhmä esittelee yhden vaiheen 2–3 minuutissa.
-   - Opettaja kirjoittaa "verifiointiprosessin" taululle.
+> Tehtäväsi on kirjoittaa SQL-kysely tietokantaan. Kyselyn pitää hakea kaikki asiakkaat, joiden maksu on erääntynyt yli 30 päivää. Käytät ChatGPT:tä koodin kirjoittamisen tukena.
 
-   **Esimerkkiprosessi:**
-   ```
-   1. Ymmärrä tietokannan rakenne (tarkista dokumentaatiosta)
-   2. Kirjoita spesifinen prompt (sisällytä sarakkeiden nimet)
-   3. Analysoi vastaus (vertaa dokumentaatioon, tarkista syntaksi)
-   4. Testaa heikolla testidatalla (ennen oikeaa dataa)
-   5. Dokumentoi: "ChatGPT ehdotti X, otin sen koska Y, muutin Z koska..."
-   ```
+Kysy opiskelijoilta:
 
-**Opettajan muistiinpanot:**
-- Korosta: **verifiointiprosessi ei ole opiskelijoiden oma idea — se on ammatillinen standardi.**
-- Jos opiskelijat sanovat "Tämä on liian monimutkaista", vastaa: "Kyllä, siksi monet yritykset tekevät virheitä tekoälyn kanssa. Sinä olet se, joka tekee sen oikein."
+- Mitä voi mennä pieleen, jos kopioit tekoälyn vastauksen suoraan tuotantokantaan ilman tarkistusta?
+- Mitä tietoja tekoäly voi olettaa väärin?
+- Miten virhe voisi vaikuttaa asiakkaisiin, dataan tai organisaatioon?
+
+#### Ryhmäkeskustelu: verifiointivaiheet noin 10 minuuttia
+
+Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe pohdittavaksi:
+
+1. **Ennen tekoälyltä kysymistä:** Mitä sinun täytyy tietää jo valmiiksi? Esimerkiksi taulujen nimet, sarakkeet, päivämäärämuodot, tietokannan tyyppi ja liiketoimintasäännöt.
+2. **Kehotteen kirjoittaminen:** Miten kirjoitat tarkan kehotteen? Mitä yksityiskohtia annat tekoälylle?
+3. **Vastauksen analysointi:** Mistä merkeistä voit epäillä, että vastaus sisältää hallusinaation tai väärän oletuksen?
+4. **Koodin testaaminen:** Miten testaat SQL-kyselyn ennen oikeaan dataan tai tuotantoympäristöön viemistä?
+5. **Dokumentointi:** Miten kirjaat, mitä tekoäly ehdotti, mitä muutit ja miksi hyväksyit lopullisen ratkaisun?
+
+#### Ryhmän vastauspohja
+
+| Verifiointivaihe | Mitä tehdään? | Miksi tämä on tärkeää? | Mitä riskiä tämä vähentää? |
+| --- | --- | --- | --- |
+| **Ennen kysymistä** |  |  |  |
+| **Kehotteen kirjoittaminen** |  |  |  |
+| **Vastauksen analysointi** |  |  |  |
+| **Testaaminen** |  |  |  |
+| **Dokumentointi** |  |  |  |
+
+#### Esittäminen noin 10 minuuttia
+
+- Jokainen ryhmä esittelee oman vaiheensa noin 2–3 minuutissa.
+- Opettaja kokoaa ryhmien vastauksista yhteisen **verifiointiprosessin** taululle.
+
+#### Esimerkkiprosessi
+
+1. **Ymmärrä tietokannan rakenne:** tarkista taulut, sarakkeet, tietotyypit ja suhteet dokumentaatiosta tai skeemasta.
+2. **Kirjoita tarkka kehote:** sisällytä taulujen ja sarakkeiden nimet, tietokantatyyppi sekä haluttu lopputulos.
+3. **Analysoi vastaus:** tarkista syntaksi, vertaa sitä dokumentaatioon ja etsi mallin tekemiä oletuksia.
+4. **Testaa turvallisesti:** käytä testidataa tai kehitysympäristöä ennen oikeaa dataa.
+5. **Dokumentoi päätökset:** kirjaa esimerkiksi: “ChatGPT ehdotti ratkaisua X. Hyväksyin osan Y, koska se vastasi skeemaa. Muutin kohdan Z, koska alkuperäinen ehdotus ei huomioinut päivämäärämuotoa.”
+
+**Vinkki arviointiin:** Hyvä verifiointiprosessi ei pääty siihen, että “koodi näyttää oikealta”. Siinä näkyy, miten vastaus testataan, miten oletukset tarkistetaan ja miten lopullinen ratkaisu dokumentoidaan.
+
+### Opettajan muistiinpanot
+
+- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan ammatillinen standardi.
+- Jos opiskelijat kokevat prosessin liian monimutkaiseksi, voit vastata: “Juuri siksi tekoälyn käyttö vaatii ammattitaitoa. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.”
+- Muistuta, että tekoälyn tuottamaa koodia ei pidä ajaa tuotannossa ilman tarkistusta ja testausta.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, miksi tekoälyn tuottamaa teknistä ratkaisua ei pidä käyttää ilman tarkistusta.
+- Opiskelijat osaavat suunnitella vaiheittaisen **verifiointiprosessin**.
+- Opiskelijat osaavat tunnistaa tekoälyn tekemiä oletuksia ja mahdollisia hallusinaatioita.
+- Opiskelijat ymmärtävät, että ammattilainen kantaa vastuun lopullisesta ratkaisusta.
 
 ---
 
-## Opettajan tärkeitä huomioita
+## Opettajan tärkeät huomiot
 
-**Avainviesti 1: Epädeterminismi on ominaisuus, ei vika.**
-- Johdonmukaisuus ja luovuus ovat saman välineen kaksi päätä.
-- Opettajat neuvovat usein: "Käytä matalan lämpötilan asetuksia teknisten tehtävien kanssa, korkeampia ideointiin."
+### Avainviesti 1: Epädeterministisyys on ominaisuus, ei vika
 
-**Avainviesti 2: "Näyttävä" ei ole "oikea".**
-- Hallusinaatiot voivat kuulostaa täysin itsevarmoilta.
-- IT-ammattilaisella on sisäinen "kuulostaa oikealta" -anturi, mutta sekään ei aina toimi.
+- Johdonmukaisuus ja luovuus ovat saman työkalun kaksi eri puolta.
+- Teknisissä tehtävissä kannattaa suosia johdonmukaisuutta ja tarkistaa tulokset huolellisesti.
+- Ideoinnissa ja luonnostelussa vaihtelu voi olla hyödyllistä.
+
+### Avainviesti 2: Uskottava ei tarkoita oikeaa
+
+- **Hallusinaatiot** voivat kuulostaa täysin itsevarmoilta.
+- IT-ammattilaisella voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
 - **Verifiointia ei voi ohittaa.**
 
-**Avainviesti 3: Vastuu on käyttäjällä.**
-- Jos annat asiakkaalle AI-avusteisen raportin, sinä vastaat sen oikeellisuudesta.
-- Malli ei ole syyllinen — sinä olet.
-- Tämä ei ole pelottelua — tämä on ammattilaisuutta.
+### Avainviesti 3: Vastuu on käyttäjällä
+
+- Jos annat asiakkaalle tekoälyavusteisen raportin tai koodin, vastaat sen oikeellisuudesta.
+- Malli ei kanna ammatillista vastuuta käyttäjän puolesta.
+- Tämä ei ole pelottelua, vaan osa asiantuntijatyötä ja ammattimaista tekoälyn käyttöä.
 
 ---
 
 ## Sisäänrakennetut keskustelun herättäjät
 
-**Jos opiskelijat sanovat:** "Entä jos käytän yksinkertaisesti AI:tä sellaisenaan, ilman verifiointia?"
-**Vastaa:** "Silloin riskit kohdistuvat sinuun ja organisaatioosi. Tekniikan kanssa hallusinaatiot ovat erityisen vaarallisia, koska koodi voi epäonnistua tuotannossa tai avata tietoturva-aukkoja."
+### Jos opiskelijat sanovat: “Entä jos käytän tekoälyä sellaisenaan ilman verifiointia?”
 
-**Jos opiskelijat sanovat:** "Tämä tekee tekoälystä käyttökelvottoman."
-**Vastaa:** "Ei. Se tekee siitä sopivasta käytöstä riippuvaisen. Samoin kuin saha — sillä voi katkaista ranteen, mutta se on silti hyödyllinen työkalu, kun sitä käyttää oikein."
+> Silloin riskit kohdistuvat sinuun, asiakkaaseen ja organisaatioon. Teknisissä tehtävissä hallusinaatiot ovat erityisen vaarallisia, koska virheellinen koodi voi epäonnistua tuotannossa tai avata tietoturva-aukon.
+
+### Jos opiskelijat sanovat: “Tämä tekee tekoälystä käyttökelvottoman.”
+
+> Ei tee. Se tarkoittaa, että tekoälyä pitää käyttää oikeassa tehtävässä ja oikealla tavalla. Tekoäly on hyödyllinen työkalu, kun käyttäjä ymmärtää sen rajat ja tarkistaa lopputuloksen.
+
+---
+
+## Arviointi
+
+Opettaja arvioi opiskelijoiden kykyä:
+
+- selittää, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn käytössä,
+- vertailla saman kehotteen tuottamia erilaisia vastauksia eri malleissa,
+- tunnistaa **hallusinaatioita** ja tarkistaa väitteitä luotettavista lähteistä,
+- selittää, miksi itsevarma vastaus ei vielä tarkoita oikeaa vastausta,
+- suunnitella ammatillinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
+- perustella, miksi käyttäjä kantaa vastuun tekoälyn avulla tuotetun lopputuloksen oikeellisuudesta.
+
+---

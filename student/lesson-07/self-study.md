@@ -2,65 +2,69 @@
 
 ## Johdanto
 
-Olet juuri antanut ChatGPT:lle saman kysymyksen kaksi kertaa. Kumma juttu — vastaukset olivat erilaiset. Ensimmäisellä kerralla sait selkeän, hyvin organisoidun koodinpätkän. Toisella kerralla sama pyyntö tuotti lähes oikean koodin, mutta funktio kutsuu API:a, jota ei ole olemassa. Mikä homma? Eikö tekoäly olisi deterministinen — kuten perinteinen ohjelma, joka tekee aina saman asian samalla syötteellä?
+Olet juuri antanut ChatGPT:lle saman kysymyksen kaksi kertaa. Huomaat kuitenkin jotain outoa: vastaukset ovat erilaiset. Ensimmäisellä kerralla sait selkeän ja hyvin jäsennellyn koodinpätkän. Toisella kerralla sama pyyntö tuotti lähes oikean koodin, mutta funktio kutsuikin API:a, jota ei ole olemassa. Mistä tämä johtuu? Eikö tekoälyn pitäisi olla **deterministinen**, kuten perinteinen ohjelma, joka tuottaa aina samalla syötteellä saman tuloksen?
 
-Vastaus on: ei. Generatiiviset kielimallit eivät ole deterministisiä. Ne ovat todennäköisyyspohjaisia järjestelmiä, jotka toimivat aivan eri tavalla kuin klassinen ohjelmointi. Tämän ymmärtäminen on kriittistä, kun työskentelet AI:n kanssa ammatillisesti.
+Vastaus on: ei. **Generatiiviset kielimallit** eivät ole samalla tavalla deterministisiä kuin perinteiset ohjelmat. Ne ovat **todennäköisyyspohjaisia järjestelmiä**, jotka toimivat eri tavalla kuin klassinen ohjelmointi. Tämän ymmärtäminen on tärkeää, kun työskentelet tekoälyn kanssa ammatillisesti.
 
-Tämän tunnin jälkeen sinulla on tuomaripöydällesi seitsemäs todistusaineisto: tekoäly on samanaikaisesti vahva ja epäluotettava — se voi halukkaasti valehdella, koska se ei ymmärrä totuutta.
+Tämän tunnin jälkeen sinulla on seitsemäs todistusaineisto omaan arviointipöytääsi: tekoäly voi olla yhtä aikaa vahva ja epäluotettava. Se voi tuottaa hyödyllisiä vastauksia, mutta se voi myös väittää itsevarmasti asioita, jotka eivät pidä paikkaansa, koska se ei ymmärrä totuutta samalla tavalla kuin ihminen.
 
 ## Miksi tulokset vaihtelevat: epädeterminismi
 
-Kun ChatGPT tai Claude vastaa kysymykseesi, se ei päätä vastaustaan jotenkin "ajattelemalla". Sen sijaan malli tekee sarjan valintoja: yksi sana kerrallaan. Joka askeleella malli sanoo: "Mikä on todennäköisyys, että seuraava sana on 'koodi'? Mikä on todennäköisyys sanalle 'lohkon'? Mikä on todennäköisyys sanalle 'silmukalle'?"
+Kun ChatGPT tai Claude vastaa kysymykseesi, se ei muodosta vastausta samalla tavalla kuin ihminen, joka pohtii asiaa tietoisesti. Sen sijaan malli tekee sarjan valintoja yksi sana tai tekstin osa kerrallaan. Jokaisessa vaiheessa malli arvioi, mikä seuraava sana tai merkkiyhdistelmä on todennäköisin aiemman tekstin perusteella.
 
-Sitten malliin sisäänrakennettu mekanismi — parametri, jota kutsutaan lämpötilaksi (temperature) — päättää, kuinka seikkailunhaluinen tai rohkea vastaus on. Matala lämpötila (esim. 0,3) tarkoittaa, että malli valitsee lähes aina todennäköisimmän seuraavan sanan. Korkea lämpötila (esim. 1,5) tarkoittaa, että malli on valmis valitsemaan epätodennäköisiäkin sanoja — tulokset vaihtelevat enemmän.
+Malli voi esimerkiksi arvioida: ”Mikä on todennäköisyys, että seuraava sana on *koodi*? Entä *lohko*? Entä *silmukka*?” Näiden todennäköisyyksien perusteella se valitsee seuraavan osan vastauksesta.
 
-Tämä ei ole ohjelmointivirhe. Se on rakenteellinen piirre. Korkea lämpötila mahdollistaa luovuuden ja monimuotoisuuden. Matala lämpötila tekee vastauksista johdonmukaisia ja ennustettavia. Ammattilaiselle tämä tarkoittaa sitä, että kun kirjoitat API-dokumentaatiota, haluat alhaisemman lämpötilan (johdonmukaisuus). Kun taas ideoit markkinointikampanjoita, korkeampi lämpötila tuottaa rikkaampia vaihtoehtoja.
+Tähän liittyy usein parametri nimeltä **lämpötila** eli *temperature*. Se vaikuttaa siihen, kuinka ennustettava tai vaihteleva vastaus on. **Matala lämpötila**, esimerkiksi 0,3, ohjaa mallia valitsemaan todennäköisimpiä vaihtoehtoja. Tällöin vastaukset ovat yleensä johdonmukaisempia ja ennustettavampia. **Korkea lämpötila**, esimerkiksi 1,5, sallii epätodennäköisempien vaihtoehtojen valitsemisen. Tällöin vastaukset voivat olla luovempia, mutta myös vaihtelevampia ja epävarmempia.
 
-> **Pysähdy hetkeksi:** Missä oman työsi tilanteissa tarvitsisit matalaa lämpötilaa (johdonmukaisuus) ja missä korkeampaa (luovuus)?
+Tämä ei ole ohjelmointivirhe, vaan mallin rakenteellinen ominaisuus. Korkea lämpötila mahdollistaa luovuuden ja monimuotoisuuden. Matala lämpötila taas lisää johdonmukaisuutta ja ennustettavuutta. Ammattilaiselle tämä tarkoittaa, että esimerkiksi API-dokumentaatiota kirjoittaessa kannattaa suosia johdonmukaisuutta. Ideointivaiheessa, kuten markkinointikampanjan vaihtoehtoja suunniteltaessa, vaihtelevuus voi puolestaan olla hyödyllistä.
 
-## Miksi malli hallusinoi: teksti ei ole fakta
+> **Pysähdy hetkeksi:** Missä oman työsi tilanteissa tarvitsisit matalaa lämpötilaa eli johdonmukaisuutta? Entä missä tilanteissa korkeampi lämpötila eli luovempi ja vaihtelevampi vastaus voisi olla hyödyllinen?
 
-Hallusinaatio (hallucination) on tilanne, jossa AI väittää jotain, mikä ei pidä paikkaansa. Ehkä kysyit: "Mikä on Pythonin urllib3-kirjaston oikea syntaksi HTTP-kutsulle?" Malli vastasi uskottavalla esimerkillä — joka käyttää funktiota, jota ei ole olemassa.
+## Miksi malli hallusinoi: teksti ei ole sama asia kuin fakta
 
-Tai kysyit: "Kuka oli Suomen toinen pääministeri?" ja vastaus oli väärä. Hallusinaatio on täydellisen itsevarmaa valestelua.
+**Hallusinaatio** tarkoittaa tilannetta, jossa tekoäly väittää jotain, mikä ei pidä paikkaansa. Saatat esimerkiksi kysyä: ”Mikä on Pythonin urllib3-kirjaston oikea syntaksi HTTP-kutsulle?” Malli voi vastata uskottavalla koodiesimerkillä, joka näyttää oikealta mutta käyttää funktiota, jota ei todellisuudessa ole olemassa.
 
-Miksi näin tapahtuu? Koska kielimallit ovat *todennäköisyyspohjaisia ennustajia, eivät faktakoneita*. Ne oppivat sanasta sanaan, mikä tyypillisesti seuraa jotakin muuta. Kun mallilta kysytään "urllib3 HTTP-kutsu — koodi?", se on oppinut, että tällaisissa konteksteissa seuraa usein koodiesimerkkejä. Siksi se *tuottaa* koodia, joka *näyttää oikealta* — syntaksi on kohtuullinen, logiikka melkein kohdallaan.
+Toinen esimerkki: kysyt ”Kuka oli Suomen toinen pääministeri?” ja saat vastauksen, joka kuulostaa varmalta mutta on väärä. Hallusinaatio voi siis olla täysin itsevarmalta vaikuttava virheellinen väite.
 
-Mutta malli ei ole *verifioinut* koodia oikeaa dokumentaatiota vasten. Se vain ennustaa, "miltä oikealta näyttävä koodi näyttää tämänkaltaisissa aiheissa" — se ei tiedä, ovatko vastaukset oikeita. Hallusinaatio syntyy, kun todennäköisyydet johtavat vastaukseen, joka kuulostaa oikealta mutta on väärä.
+Miksi näin tapahtuu? Koska kielimallit ovat **todennäköisyyspohjaisia ennustajia**, eivät faktakoneita. Ne oppivat, millaiset sanat, rakenteet ja sisällöt tyypillisesti seuraavat toisiaan. Kun mallilta kysytään esimerkiksi urllib3-kirjaston HTTP-kutsusta, se on oppinut, että tällaisissa yhteyksissä seuraa usein koodiesimerkkejä. Siksi se tuottaa koodia, joka näyttää uskottavalta.
 
-Tämä on vaarallisinta tekniikan parissa. IT-ammattilaisella on sisäinen "kuulostaa oikealta" -anturi, mutta *se ei aina toimi*. Sinun vastuullasi on aina verifioida kriittiset tiedot itsenäisesti ennen kuin käytät niitä.
+Ongelma on siinä, että malli ei välttämättä ole tarkistanut vastausta oikeaa dokumentaatiota vasten. Se ennustaa, millainen oikealta näyttävä vastaus sopisi tilanteeseen. Se ei automaattisesti tiedä, ovatko kaikki yksityiskohdat oikein. **Hallusinaatio** syntyy, kun todennäköinen ja uskottavalta kuulostava vastaus onkin virheellinen.
 
-> **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? (Ajattele tuotantokoodia, tietoturvaa, asiakastietoja.)
+Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla hyvä ”kuulostaa oikealta” -tuntuma, mutta se ei aina riitä. Kriittiset tiedot täytyy aina **verifioida** eli tarkistaa luotettavasta lähteestä ennen käyttöä.
 
-## Miksi AI ei ole totuuskone
+> **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-Seuraavaa ei voi painottaa liikaa: **generatiiviset kielimallit eivät ole faktakoneita. Ne ovat sanojen ennustajia.**
+## Miksi tekoäly ei ole totuuskone?
 
-Tämä merkitsee kolmea asiaa:
+Seuraavaa asiaa ei voi korostaa liikaa: **generatiiviset kielimallit eivät ole faktakoneita, vaan sanojen ja tekstirakenteiden ennustajia.**
 
-1. **Itsevarmuus ei tarkoita oikeellisuutta.** Hallusinaatio voi kuulostaa täysin luottavaiselta. Malli voi antaa väärän tiedon täsmällisin yksityiskohdin ilman varoitusta epävarmuudesta. Tämä on vaarallista.
+Tämä tarkoittaa kolmea tärkeää asiaa:
 
-2. **Konteksti antaa kuvion, ei faktoja.** Jos kysyt "Mitä Windowsin tasklist-komento tekee?", mallia on opetettu miljoonilla koodiesimerkeillä. Se osaa ennustaa, mitä tämänkaltainen vastaus tyypillisesti sisältää — mutta se ei *tiedä* komponentin tosiasiallista toimintaa.
+1. **Itsevarmuus ei tarkoita oikeellisuutta.** Hallusinaatio voi kuulostaa täysin varmalta. Malli voi antaa väärän tiedon täsmällisin yksityiskohdin eikä välttämättä varoita epävarmuudesta. Tämä tekee virheistä erityisen vaarallisia.
+2. **Konteksti antaa mallille kuvion, ei varmaa tietoa.** Jos kysyt: ”Mitä Windowsin tasklist-komento tekee?”, malli hyödyntää koulutusdatassa oppimiaan malleja ja esimerkkejä. Se osaa ennustaa, mitä tällainen vastaus yleensä sisältää, mutta vastaus on silti tarkistettava, jos sitä käytetään kriittisessä työssä.
+3. **Mallilla voi olla ajallinen raja.** Malli on opetettu aineistolla, joka ulottuu vain tiettyyn ajankohtaan asti. Uudet tapahtumat, API-päivitykset, kirjastoversiot ja dokumentaatiomuutokset voivat siksi olla erityisen alttiita virheille.
 
-3. **Ajallinen raja.** Malli on opetettu datalla tiettyyn pisteeseen asti. Viimeaikaiset tapahtumat, API-päivitykset ja uudet kirjastoversiot — kaikki voivat olla alttiita hallusinaatioille.
+Ammattilaisena sinun ei pidä koskaan luottaa tekoälyn vastaukseen ilman itsenäistä tarkistusta kriittisissä asioissa. Käytä mallia ideointiin, koodin rungon luomiseen, vaihtoehtojen vertailuun ja dokumentaation luonnosteluun. Sen jälkeen **tarkista, testaa ja validoi**.
 
-Ammattilaisena **älä koskaan luota AI:n vastaukseen ilman itsenäistä verifiointia kriittisillä alueilla**. Käytä mallia ideointiin, koodin rungon luomiseen ja dokumentaation vedokseen. Sitten *tarkista, testaa, validoi*.
-
-> **Pysähdy hetkeksi:** Jos annat asiakkaalle raportin, jonka olet luonut AI:n avulla, kenen vastuulla on datan oikeellisuus? Sinun vai mallin?
+> **Pysähdy hetkeksi:** Jos annat asiakkaalle raportin, jonka olet luonut tekoälyn avulla, kenen vastuulla datan oikeellisuus on: sinun vai mallin?
 
 ## Epäluotettavuuden merkkejä käytännössä
 
-Neljä merkkiä siitä, että AI-vastaus saattaa olla hallusinaatio:
+Seuraavat merkit voivat kertoa, että tekoälyn vastaus saattaa sisältää hallusinaatioita:
 
-- **Liian näyttävä:** Vastaus on hyvin muotoiltu ja yksityiskohtainen, mutta väitteet ovat liian spesifejä eikä niiden tarkistaminen ole nopeaa.
-- **Aikaan sopimaton:** Olet kysynyt uusimmasta tekniikasta, mutta mallilla on käytössään vanhentunutta tietoa.
-- **Logiikka ei mene yhteen:** Vastaus on johdonmukainen, mutta looginen jatkotarkastelu johtaa ristiriitaan.
-- **Kokonaisuuden heikkoudet:** Kun analysoit vastausta osissa, yksittäiset lauseet kuulostavat oikeilta, mutta kokonaisuus sisältää ristiriitoja.
+- **Vastaus on liian näyttävä:** se on hyvin muotoiltu ja yksityiskohtainen, mutta väitteet ovat hyvin tarkkoja eikä niiden paikkansapitävyyttä ole helppo tarkistaa.
+- **Vastaus ei sovi ajankohtaan:** kysyt uusimmasta tekniikasta, mutta mallilla voi olla vanhentunutta tietoa.
+- **Logiikka ei kestä tarkastelua:** vastaus vaikuttaa aluksi johdonmukaiselta, mutta tarkempi pohdinta paljastaa ristiriidan.
+- **Kokonaisuus sisältää heikkouksia:** yksittäiset lauseet kuulostavat oikeilta, mutta vastaus kokonaisuutena on ristiriitainen tai epäselvä.
 
-**Paras puolustus: skeptisyys, varsinkin teknisissä asioissa.**
+**Paras puolustus on terve skeptisyys, erityisesti teknisissä ja kriittisissä asioissa.**
 
 ## Yhteenveto
 
-Generatiiviset kielimallit ovat epädeterministisiä ja todennäköisyyspohjaisia. Tämä mahdollistaa luovuuden, mutta merkitsee myös sitä, että ne voivat hallusinoida: tuottaa itsevarmasti väitteitä, jotka eivät pidä paikkaansa. Malli ei ole totuuskone, vaan sanojen ennustaja. Ammattilaisena sinun vastuullasi on ymmärtää nämä rajat, verifioida kriittiset tiedot ja käyttää AI:tä sopivasti — apuvälineenä, ei oraakkelina.
+**Generatiiviset kielimallit** ovat epädeterministisiä ja todennäköisyyspohjaisia. Tämä mahdollistaa luovuuden ja monipuoliset vastaukset, mutta tarkoittaa myös sitä, että mallit voivat **hallusinoida**: ne voivat tuottaa itsevarmasti väitteitä, jotka eivät pidä paikkaansa.
+
+Malli ei ole totuuskone, vaan tekstin ennustaja. Ammattilaisena sinun vastuullasi on ymmärtää nämä rajat, tarkistaa kriittiset tiedot ja käyttää tekoälyä oikealla tavalla: apuvälineenä, ei erehtymättömänä auktoriteettina.
 
 Seuraavalla tunnilla siirryt eettisiin kysymyksiin: kenen datalla tekoäly on opetettu, ja mitä se maksaa?
+
+---

@@ -1,190 +1,295 @@
-# Opettajan materiaalit: Gen AI:n luonne
+# Opettajan materiaalit: generatiivisen tekoälyn luonne
 
-## Oppimisen tavoitteet (Bloom: analysoi)
+## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon jälkeen opiskelija:
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää **generatiivisen tekoälyn** toimintaperiaatteen ja siihen liittyvät rajoitukset. Oppitunnin ydin on, että kielimalli ei ole **totuuskone** tai faktakone, vaan todennäköisyyksiin perustuva **sanojen ja tokenien ennustaja**. Tämä selittää sekä mallien hyödyllisyyden että niiden virheet.
 
-1. Ymmärtää, miksi generatiiviset kielimallit ovat epädeterministisiä ja mitä lämpötila tekee.
-2. Osaa selittää hallusinaatioiden mekanismin: malli ennustaa todennäköisiä sanoja, ei faktoja.
-3. Ymmärtää, miksi AI ei ole totuuskone eikä faktakone.
-4. Osaa tunnistaa hallusinaation merkkejä käytännössä.
-5. Ymmärtää itsenäisen verifiointiprosessin merkityksen tekniikassa ja kriittisissä konteksteissa.
+### Muistaa ja ymmärtää
 
----
+- Opiskelija ymmärtää, miksi generatiiviset kielimallit ovat **epädeterministisiä** eli miksi sama prompti voi tuottaa eri vastauksia eri kerroilla tai eri malleilla.
+- Opiskelija ymmärtää, mitä **lämpötila** tekee ja miksi se vaikuttaa vastausten vaihteluun.
+- Opiskelija osaa selittää **hallusinaatioiden** perusmekanismin: malli ennustaa todennäköisiä sanoja, ei tarkista faktoja samalla tavalla kuin tietokanta.
+- Opiskelija ymmärtää, miksi tekoäly ei ole automaattisesti luotettava tietolähde.
 
-## Yleinen pedagoginen lähestymistapa
+### Soveltaa ja analysoida
 
-**Tämä oppitunti on käsitteellisesti haastava,** koska se vaatii opiskelijoilta ajattelutavan muutosta: "AI on käyttäjäystävällinen ja näyttävä, joten se lienee oikeassa."
+- Opiskelija osaa tunnistaa hallusinaation merkkejä käytännössä.
+- Opiskelija osaa erottaa mallin itsevarman ilmaisun vastauksen oikeellisuudesta.
+- Opiskelija osaa arvioida, milloin tekoälyn vastaus täytyy verifioida erityisen huolellisesti.
+- Opiskelija ymmärtää, miksi kriittisissä teknisissä tehtävissä tarvitaan **itsenäinen verifiointiprosessi**.
 
-**Paras lähestymistapa:** Näytä konkreettisia esimerkkejä ennen abstrakteja selityksiä.
-- Harjoitus 1 (eri mallit, sama prompti) osoittaa epädeterminismin.
-- Harjoitus 2 (hallusinaatioiden metsästys) osoittaa, että mallit voivat olla täysin väärässä.
-- Harjoitus 3 (verifiointiprosessi) osoittaa, mitä ammattilainen tekee.
+### Luoda ja arvioida
 
----
+- Opiskelija osaa rakentaa käytännöllisen tarkistuslistan tekoälyn vastausten arviointiin.
+- Opiskelija osaa suunnitella verifiointiprosessin esimerkiksi koodille, SQL-kyselylle, API-kutsulle tai tekniselle ohjeelle.
+- Opiskelija osaa yhdistää aiemmat opit tokenien ennustamisesta, kontekstin katoamisesta ja hallusinaatioista ammatilliseen tekoälyn käyttöön.
 
-## Sisältöohjeet: Avainasiat
-
-### 1. Epädeterminismi ja lämpötila
-
-**Mitä opettaa:**
-- Kielimallit tekevät todennäköisyyspohjaisia valintoja, eivät hakuja.
-- Jokainen sana valitaan sen perusteella, mikä seuraava sana on todennäköisin (matemaattisesti softmax-funktiolla).
-- Lämpötila ohjaa, miten "rohkea" valinta on.
-
-**Analogia (jos opiskelijat ovat hämmentyneitä):**
-"Ajattele rulettipyörää. Matala lämpötila = lähes kaikki punaisella. Korkea lämpötila = tasaisempi jakautuminen (suurempi mustan todennäköisyys). Jokainen pyöräytys tulee hieman erilaiseksi."
-
-**Mitä EI opettaa:**
-- "Lämpötila vaikuttaa siihen, kuinka 'onnellinen' malli on." (Väärin.)
-- "Korkealla lämpötilalla malli 'loukkaa itseään'." (Väärin.)
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälyn itsevarma vastaus ei ole sama asia kuin oikea vastaus. Generatiivinen tekoäly voi olla erittäin hyödyllinen, mutta ammattilaisen vastuulla on tarkistaa kriittiset vastaukset ja käyttää mallia hallitusti.
 
 ---
 
-### 2. Hallusinaatiot
+## Pedagoginen lähestymistapa
 
-**Mitä opettaa:**
-- Hallusinaatio = malli sanoo jotain väärää täysin itsevarmasti.
-- Syy: malli ennustaa, "miltä vastaukset näyttävät näissä aiheissa" — ei sitä, "mikä on totta".
-- Hallusinaatiot ovat tyypillisempiä tekniikassa (API:t, funktiot, komennot), koska mallia on opetettu koodilla, joka näyttää "oikealta".
+### Ydinviesti: tekoäly ei ole totuuskone
 
-**Konkreettiset esimerkit:**
-- urllib3 HTTP GET -funktio: Malli on oppinut, että "urllib3-kontekstissa" seuraa usein koodia. Se tuottaa näyttävän koodin — mutta funktiota ei ole olemassa.
-- "Suomen ensimmäinen pääministeri": Malli on oppinut, että historian kysymyksissä seuraa usein nimiä ja vuosia. Se tuottaa näyttävän vastauksen — mutta se on väärä.
+Tämä oppitunti on käsitteellisesti haastava, koska se vaatii opiskelijalta ajattelutavan muutosta. Monet opiskelijat kokevat tekoälyn käyttäjäystävälliseksi, sujuvaksi ja vakuuttavaksi. Siksi he voivat olettaa, että hyvältä kuulostava vastaus on myös totta.
 
-**Mitä opiskelijat omaksuvat itsenäisesti:**
-- Itsevarmuus != oikeellisuus.
-- Mallia ei "kiinnosta" totuus — se vain ennustaa.
+> **Kielimalli ei kysy: ”Mikä on totta?” Se kysyy matemaattisesti: ”Mikä token näyttää seuraavaksi todennäköiseltä?”**
 
----
+Paras opetustapa on aloittaa konkreettisista esimerkeistä ennen abstrakteja selityksiä. Näytä ensin, että sama prompti voi tuottaa erilaisia vastauksia. Näytä sitten, että malli voi vastata täysin itsevarmasti väärin. Vasta tämän jälkeen avaa tekninen selitys: malli ennustaa todennäköisiä jatkoja, ei tee faktahakua.
 
-### 3. Totuuskone vs. sanojen ennustaja
+Oppitunnin kolme keskeistä havaintoa ovat:
 
-**Kriittinen käsite:** Tämä on filosofinen ero, joka muuttaa sitä, miten opiskelijat ajattelevat AI:sta.
+- **Epädeterminismi:** sama prompti voi tuottaa erilaisia vastauksia, koska malli tekee todennäköisyyspohjaisia valintoja.
+- **Hallusinaatiot:** malli voi tuottaa uskottavalta kuulostavia mutta virheellisiä väitteitä.
+- **Verifiointi:** kriittinen vastaus täytyy tarkistaa itsenäisesti, erityisesti tekniikassa, ohjelmoinnissa ja päätöksenteossa.
 
-**Totuuskone:**
-- "Mikä on totta?" → Katsoo tietoa → Vastaa totuudenmukaisesti.
-- Esim. relaatiotietokanta: "SELECT * FROM customers WHERE last_name = 'Smith'" → tarkka vastaus.
+### Epädeterminismi ja lämpötila
 
-**Sanojen ennustaja:**
-- "Mikä seuraava sana on todennäköisin?" → Katsoo kuvioita → Arvaa seuraavan sanan.
-- Sillä voidaan tuottaa tekstiä, koodia ja kuvia — mutta se on *ennustusta*, ei *faktaa*.
+**Epädeterminismi** tarkoittaa, että malli ei välttämättä anna aina samaa vastausta samaan promptiin. Kielimalli tekee todennäköisyyspohjaisia valintoja: se arvioi, mitkä tokenit ovat seuraavaksi todennäköisiä, ja valitsee niistä yhden mallin asetusten perusteella.
 
-**Opettajan muistutus:** Tämä ei tarkoita, etteikö AI voisi antaa hyödyllisiä vastauksia. Se tarkoittaa, että **sinun vastuullasi on verifioida kriittiset vastaukset.**
+**Lämpötila** ohjaa sitä, kuinka paljon vaihtelua mallin vastauksessa on. Matala lämpötila tekee vastauksesta ennakoitavamman. Korkeampi lämpötila lisää vaihtelua ja voi tehdä vastauksesta luovemman, mutta myös arvaamattomamman.
 
----
+| Asetus | Mitä tapahtuu? | Milloin hyödyllinen? |
+| --- | --- | --- |
+| **Matala lämpötila** | Malli valitsee todennäköisempiä ja ennakoitavampia jatkoja. | Tekniset ohjeet, tiivistelmät, faktapainotteiset tehtävät ja asiakasviestit. |
+| **Korkea lämpötila** | Malli valitsee vaihtelevampia ja luovempia jatkoja. | Ideointi, luova kirjoittaminen, vaihtoehtoisten näkökulmien tuottaminen. |
 
-## Yleisimmät väärinymmärrykset
+**Analogia opetukseen**
 
-### Väärinymmärrys 1: "Malli hallusinoi, koska se on 'huono'."
+Ajattele rulettipyörää. Matala lämpötila tarkoittaa, että suurin osa painosta on todennäköisimmillä vaihtoehdoilla. Korkea lämpötila jakaa painoa useammille vaihtoehdoille. Jokainen pyöräytys voi tuottaa hieman erilaisen lopputuloksen.
 
-**Ei. Hallusinaatiot ovat rakenteellinen seuraus siitä, että malli ennustaa sanoja.**
+**Opettajan huomio:** Älä selitä lämpötilaa mielentilana. Lämpötila ei tarkoita, että malli on ”rohkea”, ”iloinen” tai ”epävarma” inhimillisessä mielessä. Se on matemaattinen asetus, joka vaikuttaa tokenien valintaan.
 
-- Jopa parhaat mallit hallusinoivat.
-- Hallusinaatiot eivät ole "virhe", joka voidaan "korjata" — ne ovat seurausta siitä, että malli tekee todennäköisyysennusteita, ei faktahakuja.
+### Hallusinaatiot
 
-**Vastaus opiskelijoille:** "Tämä ei ole asia, jota voisi 'paremmalla koulutuksella' poistaa hallusinaatioista. Se on rakenteellinen rajoitus."
+**Hallusinaatio** tarkoittaa tilannetta, jossa malli tuottaa väärän, keksityn tai tarkistamattoman vastauksen vakuuttavasti. Malli ei valehtele tarkoituksella. Se tuottaa vastauksen, joka näyttää tilastollisesti sopivalta siihen kontekstiin, jossa se toimii.
 
-### Väärinymmärrys 2: "Matala lämpötila poistaa hallusinaatiot."
+Hallusinaatioita syntyy erityisesti silloin, kun malli kohtaa aiheita, joissa vastaus näyttää tutulta mutta yksityiskohdat eivät ole varmasti hallussa. Teknisissä tehtävissä tämä voi tarkoittaa esimerkiksi olemattomia API-metodeja, väärin nimettyjä funktioita, virheellisiä komentorivikomentoja tai vanhentuneita kirjastojen käyttötapoja.
 
-**Ei. Matala lämpötila vähentää *satunnaisuutta*, mutta ei poista hallusinaatioiden *mahdollisuutta*.**
+| Esimerkki | Miksi se on riski? | Miten tarkistetaan? |
+| --- | --- | --- |
+| Malli ehdottaa olematonta `urllib3`-funktiota. | Koodi näyttää uskottavalta, mutta ei toimi oikeassa ympäristössä. | Tarkista virallinen dokumentaatio ja testaa koodi erillisessä ympäristössä. |
+| Malli antaa historian tai lainsäädännön yksityiskohdan itsevarmasti. | Vastaus voi kuulostaa oikealta, vaikka nimi, vuosiluku tai pykälä on väärä. | Tarkista riippumattomasta luotettavasta lähteestä. |
+| Malli kirjoittaa SQL-kyselyn, jossa on väärä sarakenimi. | Kysely voi kaatua tai palauttaa väärää dataa. | Vertaa kyselyä tietokannan skeemaan ja testaa turvallisella testidatalla. |
 
-- Matala lämpötila = todennäköisemmin "näyttävä" hallusinaatio.
-- Korkea lämpötila = satunnaisempi, selvemmin väärä vastaus.
-- Hallusinaatio voi esiintyä millä tahansa lämpötilalla.
+> **Itsevarmuus ei ole todiste oikeellisuudesta.** Malli voi kuulostaa varmalta myös silloin, kun se on väärässä.
 
----
+### Totuuskone vs. sanojen ennustaja
 
-### Väärinymmärrys 3: "Jos malli kuulostaa varmalta, se tietää, mistä puhuu."
+Oppitunnin tärkein käsitteellinen ero on **totuuskoneen** ja **sanojen ennustajan** ero. Tämä ero auttaa opiskelijaa muuttamaan tapaa, jolla hän käyttää tekoälyä.
 
-**Ei. Itsevarmuus on tekninen artefakti: malli lopettaa vain, kun se arvioi seuraavan sanan olevan [LOPPU].**
+| Ajattelumalli | Miten se toimii? | Esimerkki |
+| --- | --- | --- |
+| **Totuuskone** | Tarkistaa tiedon luotettavasta lähteestä ja palauttaa täsmällisen vastauksen. | Relaatiotietokanta: `SELECT * FROM customers WHERE last_name = 'Smith'`. |
+| **Sanojen ennustaja** | Tuottaa todennäköiseltä näyttävän jatkon annetulle kontekstille. | Kielimalli kirjoittaa vastauksen aiemman tekstin ja koulutusdatan kuvioiden perusteella. |
 
-- Malli ei "tiedä" olevansa väärässä.
-- Malli ei varoita itseään.
-- Itsevarmuus on täysin irrallaan tarkkuudesta.
+Tämä ei tarkoita, etteikö tekoäly voisi olla hyödyllinen. Se tarkoittaa, että käyttäjän täytyy ymmärtää, mitä tekoäly tekee ja mitä se ei tee. Tekoäly voi auttaa ideoimaan, selittämään, tiivistämään, kirjoittamaan luonnoksia ja ehdottamaan ratkaisuja. Kriittiset väitteet täytyy kuitenkin tarkistaa.
+
+**Opettajan painotus:** Tekoälyä ei pidä opettaa opiskelijoille joko ihmeenä tai huijauksena. Se on hyödyllinen työkalu, jonka rajat pitää ymmärtää. Ammattilainen käyttää tekoälyä, mutta ei ulkoista sille omaa vastuutaan.
 
 ---
 
-## Opettajan vinkkejä harjoituksiin
+## Yleisiä väärinkäsityksiä
 
-### Harjoitus 1: Sama prompti, eri mallit
+### Väärinkäsitys 1: ”Malli hallusinoi, koska se on huono.”
 
-**Jos haluat dramaattisempia eroja:**
-- Käytä asteittain harhaanjohtavampaa promptia.
-- Esim. "Kirjoita koodi, joka käyttää urllib3-kirjaston HTTP-metodia 'FETCH'." (FETCH ei ole olemassa.)
-- Jopa mallit eroavat siinä, miten ne hallusinoivat.
+**Korjaava näkökulma:** Hallusinaatiot eivät ole vain huonojen mallien ongelma. Ne liittyvät rakenteellisesti siihen, että kielimalli ennustaa todennäköisiä jatkoja eikä tarkista faktoja kuten tietokanta. Parempi malli voi hallusinoida vähemmän, mutta hallusinaatioiden mahdollisuutta ei voi poistaa kokonaan.
 
-**Jos opiskelijat kysyvät: "Miksi ChatGPT:n vastaus oli parempi kuin Clauden?"**
-- Selitä: Koulutusdata, parametrit ja arkkitehtuuri ovat erilaisia.
-- Tämä ei ole "oikein vs. väärin" — vaan kyse on erilaisista parametreista.
+> Hallusinaatio ei ole vain virheellinen vastaus. Se on muistutus siitä, millainen työkalu kielimalli on.
 
-### Harjoitus 2: Hallusinaatioiden metsästys
+### Väärinkäsitys 2: ”Matala lämpötila poistaa hallusinaatiot.”
 
-**Case-tutkimusten valinta:**
-- Valitse asioita, jotka ovat "lähellä totta" (IT-opiskelijoille tekniikka on parempi kuin historia).
-- Testaa kaikki case-tutkimukset etukäteen — ne vaihtelevat malleittain.
+**Korjaava näkökulma:** Matala lämpötila vähentää satunnaisuutta, mutta ei poista hallusinaatioita. Malli voi antaa hyvin johdonmukaisen ja itsevarman vastauksen, joka on silti väärä. Siksi verifiointi on tarpeen myös matalalla lämpötilalla.
 
-**Jos ryhmä ei löydä hallusinaatiota:**
-- Kysykää: "Etsi jokin väite, joka on liian yksityiskohtainen. Voitko verifioida sen?"
-- Jos he eivät voi verifioida sitä helposti, se on merkki hallusinaatiosta.
+### Väärinkäsitys 3: ”Jos malli kuulostaa varmalta, se tietää, mistä puhuu.”
 
-### Harjoitus 3: Verifiointiprosessin suunnittelu
+**Korjaava näkökulma:** Mallin itsevarmuus on tekstin tyyliä, ei totuuden mittari. Malli ei välttämättä tiedä, että se on väärässä, eikä se aina varoita käyttäjää epävarmuudestaan. Siksi käyttäjän pitää erottaa vakuuttava muoto ja todellinen oikeellisuus.
 
-**Tämän tulee olla käytännöllinen, ei teoreettinen.**
+### Väärinkäsitys 4: ”Tekoälyn vastaus riittää, jos se näyttää järkevältä.”
 
-**Vahva vastaus:**
-```
-1. Tarkista tietokannan dokumentaation sarakkeet
-2. Kysy ChatGPT:ltä spesifisesti: "Tietokannan sarakkeet ovat X, Y, Z. Kirjoita kysely..."
-3. Lue vastaus ja tutki syntaksia — vertaa SQL-oppikirjaan tai dokumentaatioon
-4. Testaa kysely ensin testiympäristössä (rajallinen data, turvallinen ympäristö)
-5. Dokumentoi: "ChatGPT ehdotti X:ää. Käytin sitä, koska Y. Muutin Z:aa, koska Z:ssa oli huoli (linkki dokumentaatioon)."
-```
+**Korjaava näkökulma:** Teknisessä työssä järkevältä näyttävä vastaus voi silti olla vaarallinen. Koodi voi sisältää väärän metodin, komento voi toimia eri tavalla kuin malli väittää ja ohje voi perustua vanhentuneeseen kirjastoversioon. Kriittiset vastaukset tarkistetaan aina.
 
-**Heikko vastaus:**
-```
-"Tarkistan sen silmäilemällä." (Sitten mitä?)
-"Luotan ChatGPT:hen." (Sitten et verifioi!)
-```
+### Väärinkäsitys 5: ”Verifiointi tarkoittaa vain sitä, että luen vastauksen nopeasti läpi.”
+
+**Korjaava näkökulma:** Silmäily ei ole verifiointiprosessi. Verifiointi tarkoittaa, että vastaus tarkistetaan lähteestä, dokumentaatiosta, testistä tai toisesta riippumattomasta menetelmästä.
 
 ---
 
+## Opettajan fasilitointiohjeet
+
+### Ennen oppituntia
+
+- Testaa etukäteen harjoitus, jossa sama prompti annetaan eri malleille tai samalle mallille useita kertoja. Valitse prompti, joka tuottaa selvästi hieman erilaisia vastauksia.
+- Valitse 2–3 hallusinaatioesimerkkiä, jotka sopivat opiskelijoiden osaamistasoon. IT-opiskelijoille tekniset esimerkit, kuten API:t, kirjastot, komennot ja SQL-kyselyt, ovat usein tehokkaampia kuin yleishistoria.
+- Varmista, että hallusinaatioesimerkit voi tarkistaa nopeasti virallisesta dokumentaatiosta tai muusta luotettavasta lähteestä.
+- Valmistele verifiointiprosessin malli, jota opiskelijat voivat soveltaa omiin tehtäviinsä.
+
+### Oppitunnin aikana
+
+- **Aloita havainnolla:** näytä sama prompti eri malleille tai aja sama prompti useamman kerran. Keskustelkaa, miksi vastaukset eroavat.
+- **Siirry hallusinaatioon:** näytä vastaus, joka kuulostaa oikealta mutta sisältää virheen. Anna opiskelijoiden etsiä virhe.
+- **Selitä vasta lopuksi mekanismi:** kun opiskelijat ovat nähneet ilmiön, selitä next-token prediction, lämpötila ja todennäköisyysvalinnat.
+- **Pidä painopiste ammatillisessa toiminnassa:** tärkeintä ei ole vain tietää, että hallusinaatioita on, vaan osata toimia oikein niiden riskin kanssa.
+
+### Yleisiä haasteita ja ratkaisuja
+
+**Haaste: Opiskelijat ajattelevat, että tekoäly on epäluotettava eikä sitä kannata käyttää.**
+**Ratkaisu:** Korosta, että työkalu on hyödyllinen, kun sen rajat ymmärretään. Tavoite ei ole hylätä tekoälyä, vaan käyttää sitä ammattimaisesti.
+
+**Haaste: Opiskelijat eivät löydä hallusinaatiota.**
+**Ratkaisu:** Pyydä heitä etsimään liian tarkkoja väitteitä: funktioiden nimiä, versioita, vuosilukuja, komentoja tai lähdeviittauksia. Kysy: ”Voitko varmistaa tämän riippumattomasta lähteestä?”
+
+**Haaste: Verifiointi jää yleiseksi.**
+**Ratkaisu:** Vaadi konkreettinen tarkistusaskel. ”Tarkistan” ei riitä. Kysy: mistä tarkistat, miten tarkistat, missä ympäristössä testaat ja mitä dokumentoit?
+
 ---
 
-## Formatiivinen tarkistuspiste — Todistusaineisto 3
+## Luokkatehtävien ohjeistus
+
+### TT-A: Sama prompti, eri vastaukset
+
+**Tavoite:** Opiskelija ymmärtää epädeterminismiä ja mallien välisiä eroja käytännössä.
+
+**Tehtävä:** Anna sama prompti kahdelle eri tekoälymallille tai samalle mallille useita kertoja. Vertaa vastauksia.
+
+| Kysymys | Havainto | Mitä tämä opettaa? |
+| --- | --- | --- |
+| Ovatko vastaukset täysin samat? | Usein eivät. | Malli tekee todennäköisyyspohjaisia valintoja. |
+| Onko toinen vastaus parempi? | Voi olla, mutta se pitää arvioida kriteereillä. | Vastausta ei arvioida vain sujuvuuden perusteella. |
+| Mitä eroja huomaat? | Sävy, rakenne, yksityiskohdat, varmuus tai ehdotettu ratkaisu voi vaihdella. | Mallin vastaus ei ole yksi ainoa totuus, vaan tuotettu ehdotus. |
+
+**Aika-arvio:** 15 minuuttia
+
+---
+
+### TT-B: Hallusinaatioiden metsästys
+
+**Tavoite:** Opiskelija oppii tunnistamaan, että vakuuttava tekninen vastaus voi sisältää virheitä.
+
+**Tehtävä:** Anna opiskelijoille tekoälyn tuottama vastaus, jossa on mahdollinen hallusinaatio. Opiskelijan tehtävä on tunnistaa tarkistettavat väitteet ja varmistaa ne luotettavasta lähteestä.
+
+**Ohje opiskelijalle:**
+
+1. Etsi vastauksesta väitteet, jotka kuulostavat faktoilta.
+2. Merkitse erityisesti funktioiden nimet, komennot, kirjastot, versiot, vuosiluvut ja lähdeviitteet.
+3. Tarkista vähintään kaksi väitettä luotettavasta lähteestä.
+4. Kirjoita, mikä oli oikein, mikä oli väärin ja miten varmistit asian.
+
+**Opettajan ohjaava kysymys:** Mikä väite on niin tarkka, että sen täytyy olla joko oikein tai väärin? Juuri sellaiset väitteet kannattaa tarkistaa ensimmäisenä.
+
+**Aika-arvio:** 20 minuuttia
+
+---
+
+### TT-C: Verifiointiprosessin suunnittelu
+
+**Tavoite:** Opiskelija osaa suunnitella käytännöllisen tarkistusprosessin tekoälyn vastaukselle.
+
+**Tehtävä:** Opiskelija valitsee teknisen tilanteen, jossa tekoäly ehdottaa ratkaisua. Hän kirjoittaa, miten vastaus tarkistetaan ennen käyttöä.
+
+**1.** Tarkista tietokannan dokumentaatiosta, mitä tauluja ja sarakkeita on olemassa.
+
+**2.** Anna tekoälylle täsmällinen rajaus: ”Taulut ja sarakkeet ovat X, Y ja Z. Kirjoita kysely näiden perusteella.”
+
+**3.** Vertaa tekoälyn ehdottamaa syntaksia SQL-dokumentaatioon tai kurssimateriaaliin.
+
+**4.** Testaa kysely ensin testiympäristössä pienellä ja turvallisella datalla.
+
+**5.** Dokumentoi, mitä tekoäly ehdotti, mitä muutit ja miksi.
+
+**Hyvä vastaus sisältää:**
+
+- tarkan lähteen tai dokumentaation, josta vastaus tarkistetaan
+- turvallisen testausympäristön tai testidatan
+- selityksen siitä, mitä tehdään, jos tekoälyn vastaus on väärä
+- lyhyen dokumentoinnin päätöksistä ja muutoksista
+
+**Heikko vastaus näyttää tältä:**
+
+- ”Tarkistan sen silmäilemällä.”
+- ”Luotan ChatGPT:hen.”
+- ”Kokeilen suoraan tuotannossa.”
+
+**Aika-arvio:** 25 minuuttia
+
+---
+
+## Formatiivinen tarkistuspiste — todistusaineisto 3
 
 ### Tavoite
-Opiskelija yhdistää oppituntien 3, 5 ja 7 opit yhdeksi käytännön tarkistuslistaksi. Tämä on viimeinen rakennuspalikka ennen Teoria-osion arviointitehtävää.
 
-### Mitä etsiä palautuksesta
-- **Synteesi, ei listaus:** Opiskelija yhdistää kolmen oppitunnin käsitteet (tokenien ennustaminen, kontekstin katoaminen, hallusinaatiot) yhdeksi kokonaisuudeksi — ei vain listaa kolmea erillistä asiaa
-- **Konkreettiset toimenpiteet:** Tarkistuslistassa on tehtäviä, jotka voi tehdä oikeasti ("tarkista vastaus dokumentaatiosta", "toista rajaukset pitkässä keskustelussa")
-- **Ammatillisuus:** Opiskelija puhuu ammattilaisena, ei opiskelijana — "kun käytän tekoälyä työssä, teen näin"
+Opiskelija yhdistää oppituntien aiemmat ydinkäsitteet yhdeksi käytännön tarkistuslistaksi. Tämä todistusaineisto toimii viimeisenä rakennuspalikkana ennen teoriaosion arviointitehtävää.
+
+### Tehtävänanto opiskelijalle
+
+Laadi tarkistuslista, jota käyttäisit ammattilaisena, kun hyödynnät tekoälyä teknisessä työssä. Tarkistuslistan pitää yhdistää seuraavat aiheet:
+
+- **tokenien ennustaminen:** miksi tekoäly ei ole automaattisesti oikeassa
+- **kontekstin katoaminen:** mitä teet, jos keskustelu on pitkä tai projekti jatkuu useassa osassa
+- **hallusinaatiot:** miten tunnistat ja tarkistat mahdolliset virheet
+- **verifiointi:** miten tarkistat vastauksen ennen käyttöä
+
+**Valmis tuotos:** 6–10 kohdan käytännöllinen tarkistuslista.
+
+### Mitä etsiä palautuksesta?
+
+- **Synteesi, ei pelkkä listaus:** opiskelija yhdistää tokenien ennustamisen, kontekstin katoamisen ja hallusinaatiot yhdeksi työskentelyprosessiksi.
+- **Konkreettiset toimenpiteet:** tarkistuslistassa on asioita, jotka voi oikeasti tehdä, kuten ”tarkista vastaus virallisesta dokumentaatiosta” tai ”toista rajaukset pitkän keskustelun alussa”.
+- **Ammatillinen näkökulma:** opiskelija kirjoittaa ammattilaisen näkökulmasta, esimerkiksi ”kun käytän tekoälyä työssä, teen näin”.
 
 ### Yleinen väärinymmärrys
-"Riittää kun tarkistaa onko vastaus oikein" → ohjaa kohti prosessia: "Miten tarkistat? Mistä tiedät? Mitä jos et huomaa virhettä?"
+
+**”Riittää, että tarkistan, onko vastaus oikein.”**
+Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkistat, miten huomaat virheen ja mitä teet, jos et ole varma?
 
 ### Palautteen antaminen
-Tämä on viimeinen tarkistuspiste ennen arviointia. Jos opiskelijan tarkistuslista on heikko, tämä on viimeinen mahdollisuus ohjata ennen arviointituntia. Anna konkreettinen palaute: "Lisää tähän vielä yksi asia: mitä teet jos keskustelu on pitkä ja epäilet kontekstin kadonneen?"
+
+Tämä on viimeinen tarkistuspiste ennen arviointia. Jos opiskelijan tarkistuslista on heikko, anna konkreettinen ohjaus ennen arviointituntia.
+
+- **Jos tarkistuslista on hyvä:** ”Hyvä — listasi sisältää konkreettisia työvaiheita ja yhdistää tekoälyn tekniset rajoitukset ammatilliseen tarkistamiseen.”
+- **Jos kontekstin katoaminen puuttuu:** ”Lisää vielä kohta: mitä teet, jos keskustelu on pitkä ja epäilet, että aiempi tieto on pudonnut pois?”
+- **Jos verifiointi jää yleiseksi:** ”Tarkenna vielä: mistä lähteestä tarkistat ja miten testaat vastauksen ennen käyttöä?”
 
 ### Yhteys arviointiin
-Opiskelijat, jotka ovat tehneet kaikki kolme todistusaineistoa, ovat merkittävästi paremmassa asemassa Teoria-osion arvioinnissa. He eivät joudu aloittamaan tyhjästä, vaan heillä on kolme valmista rakennuspalikkaa. Tämä on tarkoituksellista — formatiivinen arviointi ei ole ylimääräistä työtä, vaan osa oppimisprosessia.
+
+Opiskelijat, jotka ovat tehneet kaikki kolme todistusaineistoa, ovat paremmassa asemassa teoriaosion arvioinnissa. He eivät aloita tyhjästä, vaan heillä on valmiina kolme rakennuspalikkaa: kielimallin toimintaperiaate, kontekstin hallinta ja tekoälyn vastausten verifiointi.
+
+---
 
 ## Aika- ja resurssiehdotukset
 
 | Aktiviteetti | Aika | Resurssi |
-|---|---|---|
-| Itseopiskeluosa | 30–40 min | Oppikirja, muistiinpanot |
-| Harjoitus 1 (eri mallit) | 15 min | Selaimessa avoinna olevat mallit |
-| Harjoitus 2 (hallusinaatiot) | 20 min | Case-tutkimukset (jaettu) |
-| Harjoitus 3 (verifiointiprosessi) | 25 min | Valkokangas/taulukko ideoille |
-| Yhteenveto | 10 min | — |
-| **Yhteensä** | **~100 min** | — |
+| --- | --- | --- |
+| Itseopiskeluosa | 30–40 min | Oppikirja ja muistiinpanot |
+| Harjoitus 1: sama prompti, eri mallit | 15 min | Selaimessa avoinna olevat tekoälymallit |
+| Harjoitus 2: hallusinaatioiden metsästys | 20 min | Opettajan valitsemat case-esimerkit |
+| Harjoitus 3: verifiointiprosessi | 25 min | Valkokangas, taulukko tai yhteinen dokumentti |
+| Yhteenveto | 10 min | Yhteinen keskustelu |
+| **Yhteensä** | **Noin 100 min** | — |
 
 ---
 
-## Jälkipuolella (seuraavat oppitunnit)
+## Jatkuva integraatio tulevilla oppitunneilla
 
-**Oppitunti 8 jatkaa** eettisestä näkökulmasta: tekijänoikeudet, harha, ympäristövaikutukset.
+### Yhteys seuraavaan oppituntiin
 
-Tämä oppitunti (7) on tekninen perusta. Oppitunti 8 rakentuu sen päälle.
+Seuraava oppitunti jatkaa eettisestä näkökulmasta: tekijänoikeudet, harhat, ympäristövaikutukset ja vastuullinen käyttö. Tämä oppitunti antaa teknisen perustan: opiskelija ymmärtää, miksi tekoälyn vastauksia ei voi ottaa vastaan kritiikittömästi.
+
+### Yhteys ammatilliseen tekoälyn käyttöön
+
+Jatkossa opiskelijoiden tulisi palata tämän oppitunnin periaatteisiin aina, kun he käyttävät tekoälyä teknisessä työssä. Erityisesti koodi, tietokantakyselyt, API-ohjeet, komentorivikomennot ja turvallisuusohjeet pitää tarkistaa ennen käyttöä.
+
+**Opettajan muistutus:** Tämä oppitunti ei pyri vähentämään tekoälyn käyttöä, vaan tekemään siitä ammattimaisempaa. Tavoitteena on opiskelija, joka hyödyntää tekoälyä tehokkaasti mutta tarkistaa kriittiset kohdat itsenäisesti.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että generatiivinen tekoäly on voimakas apuväline mutta ei totuuden takaaja. Se tuottaa vastauksia todennäköisyyksien perusteella, ja siksi se voi olla hyödyllinen, luova, nopea ja samalla virhealtis.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Jos tekoäly antaa sinulle teknisen ratkaisun, jota et itse täysin ymmärrä, mitä tarkistat ennen kuin käytät sitä oikeassa työssä?
+
+---
