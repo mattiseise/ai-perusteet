@@ -56,42 +56,39 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sääntö vai todennäköisyys</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:space-around;gap:18px;padding:0 24px">
-  <svg viewBox="0 0 230 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
-    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">SÄÄNTÖ</text>
-    <g stroke="oklch(0.66 0.13 208)" stroke-width="2" fill="none">
-      <line x1="40" y1="70" x2="100" y2="70"/><line x1="130" y1="70" x2="190" y2="70"/>
-    </g>
-    <rect x="100" y="56" width="30" height="28" rx="4" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2"/>
-    <circle class="l01rule-tick" cx="40" cy="70" r="5" fill="oklch(0.66 0.13 208)"/>
-    <rect x="180" y="58" width="20" height="24" rx="4" fill="oklch(0.66 0.13 208)"/>
-    <text x="115" y="110" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">jos X → niin Y</text>
-  </svg>
-  <svg viewBox="0 0 230 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
-    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">TODENNÄKÖISYYS</text>
-    <g stroke="oklch(0.66 0.15 264)" stroke-width="1" opacity=".25">
-      <line x1="40" y1="55" x2="115" y2="78"/><line x1="40" y1="100" x2="115" y2="78"/>
-      <line x1="115" y1="78" x2="190" y2="50"/><line x1="115" y1="78" x2="190" y2="105"/>
-    </g>
-    <g fill="oklch(0.66 0.15 264)">
-      <circle class="l01rule-node" cx="40" cy="55" r="4"/>
-      <circle class="l01rule-node" cx="40" cy="100" r="4" style="animation-delay:.5s"/>
-      <circle class="l01rule-node" cx="115" cy="78" r="4" style="animation-delay:1s"/>
-      <circle class="l01rule-node" cx="190" cy="50" r="4" style="animation-delay:1.5s"/>
-      <circle class="l01rule-node" cx="190" cy="105" r="4" style="animation-delay:2s"/>
-    </g>
-    <text x="115" y="135" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">97 % laillinen</text>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää</span>
+<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:18px 22px">
+  <div class="l01rule-col">
+    <div class="l01rule-h">SÄÄNTÖ</div>
+    <div class="l01rule-rule">jos summa &gt; 10 000 € → hälytä</div>
+    <div class="l01rule-in">tapahtuma: 9 990 €</div>
+    <div class="l01rule-out l01rule-ok">→ ei hälytystä</div>
+    <div class="l01rule-miss">petos jäi huomaamatta</div>
+  </div>
+  <div class="l01rule-col">
+    <div class="l01rule-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
+    <div class="l01rule-rule">punnitsee monta signaalia yhtä aikaa</div>
+    <div class="l01rule-in">tapahtuma: 9 990 €</div>
+    <div class="l01rule-meter"><span class="l01rule-mfill"></span><span class="l01rule-mlbl">97 % epäilyttävä</span></div>
+    <div class="l01rule-out l01rule-flag">⚠ hälytä</div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Sääntöpohjainen järjestelmä seuraa kiinteää polkua (jos X → niin Y). Tekoäly punnitsee monta painotettua yhteyttä ja antaa todennäköisyyden.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo vain yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly arvioi monta vihjettä ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
 <style>
-.l01rule-tick{animation:l01ruleTick 3.2s ease-in-out infinite}
-@keyframes l01ruleTick{0%,100%{opacity:.35}50%{opacity:1}}
-.l01rule-node{animation:l01ruleBlink 3.4s ease-in-out infinite}
-@keyframes l01ruleBlink{0%,100%{opacity:.35;r:3}50%{opacity:1;r:4.6}}
-@media (prefers-reduced-motion:reduce){.l01rule-tick,.l01rule-node{animation:none}.l01rule-node{opacity:.9}}
+.l01rule-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:8px}
+.l01rule-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
+.l01rule-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
+.l01rule-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
+.l01rule-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
+.l01rule-ok{color:#6FBF9B}
+.l01rule-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 5s ease-in-out infinite}
+@keyframes l01miss{0%,35%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+.l01rule-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
+.l01rule-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 5s ease-in-out infinite}
+.l01rule-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
+@keyframes l01fill{0%{width:6%}45%{width:97%}90%{width:97%}100%{width:6%}}
+.l01rule-flag{color:oklch(0.66 0.15 305)}
+@media (prefers-reduced-motion:reduce){.l01rule-miss{opacity:1}.l01rule-mfill{animation:none;width:97%}}
 </style>
 
 ## Konkreettisia esimerkkejä arjesta

@@ -71,30 +71,37 @@ Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, va
 Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti toimii silmukassa</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:space-around;gap:18px;padding:0 24px">
-  <svg viewBox="0 0 230 150" style="width:46%;height:80%" preserveAspectRatio="xMidYMid meet">
-    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">BOTTI</text>
-    <circle cx="40" cy="78" r="10" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2"/>
-    <line class="l19ba-flow" x1="52" y1="78" x2="178" y2="78" stroke="oklch(0.66 0.13 208)" stroke-width="2" stroke-dasharray="6 8"/>
-    <rect x="178" y="66" width="24" height="24" rx="5" fill="oklch(0.66 0.13 208)"/>
-    <text x="115" y="108" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">kysymys → vastaus</text>
-  </svg>
-  <svg viewBox="0 0 160 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
-    <text x="80" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">AGENTTI</text>
-    <circle class="l19ba-ring" cx="80" cy="80" r="40" fill="none" stroke="oklch(0.66 0.15 264)" stroke-width="2.5" stroke-dasharray="6 9" stroke-linecap="round"/>
-    <g class="l19ba-orbit"><circle cx="80" cy="40" r="5" fill="oklch(0.66 0.15 305)"/></g>
-    <text x="80" y="78" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">PÄÄTTELE</text>
-    <text x="80" y="90" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ TOIMI</text>
-  </svg>
+<div class="ai-demo__stage" style="display:flex;gap:20px;align-items:center;justify-content:center;padding:0 22px">
+  <div class="l19ba-col">
+    <div class="l19ba-h">BOTTI</div>
+    <div class="l19ba-chain"><span class="l19ba-node">kysymys</span><span class="l19ba-arr">→</span><span class="l19ba-node">vastaus</span></div>
+    <div class="l19ba-stop">■ valmis (yksi askel)</div>
+  </div>
+  <div class="l19ba-col l19ba-ag">
+    <div class="l19ba-h" style="color:oklch(0.66 0.13 208)">AGENTTI</div>
+    <svg viewBox="0 0 120 120" style="width:118px;height:118px">
+      <circle cx="60" cy="60" r="42" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2" stroke-dasharray="5 8" opacity=".5"/>
+      <g class="l19ba-orbit"><circle cx="60" cy="18" r="5" fill="oklch(0.66 0.13 208)"/></g>
+      <text x="60" y="50" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">suunnittele</text>
+      <text x="60" y="62" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ käytä työkalua</text>
+      <text x="60" y="74" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ havaitse</text>
+    </svg>
+    <div class="l19ba-step">askel <span class="l19ba-n">3</span> → valmis ✓</div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja jää odottamaan. Agentti kiertää silmukkaa: se päättelee, käyttää työkaluja ja arvioi tulosta itsenäisesti.</figcaption></figure>
+<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja pysähtyy. Agentti kiertää silmukkaa — suunnittelee, käyttää työkaluja ja havaitsee tuloksen — ja toistaa, kunnes tavoite on saavutettu.</figcaption></figure>
 <style>
-.l19ba-flow{animation:l19baFlow 3.5s linear infinite}
-@keyframes l19baFlow{to{stroke-dashoffset:-28}}
-.l19ba-ring{transform-box:view-box;transform-origin:80px 80px;animation:l19baSpin 9s linear infinite}
-.l19ba-orbit{transform-box:view-box;transform-origin:80px 80px;animation:l19baSpin 4.5s linear infinite}
-@keyframes l19baSpin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.l19ba-flow,.l19ba-ring,.l19ba-orbit{animation:none}}
+.l19ba-col{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;max-width:230px}
+.l19ba-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
+.l19ba-chain{display:flex;align-items:center;gap:8px}
+.l19ba-node{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 11px}
+.l19ba-arr{color:#3A445F}
+.l19ba-stop{font-family:var(--font-mono);font-size:10px;color:#69728F}
+.l19ba-orbit{transform-box:view-box;transform-origin:60px 60px;animation:l19spin 4s linear infinite}
+@keyframes l19spin{to{transform:rotate(360deg)}}
+.l19ba-step{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.13 208)}
+.l19ba-n{animation:l19count 4s steps(1) infinite}
+@media (prefers-reduced-motion:reduce){.l19ba-orbit{animation:none}}
 </style>
 
 

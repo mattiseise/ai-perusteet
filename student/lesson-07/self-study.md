@@ -34,24 +34,29 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// itsevarmuus ei ole oikeellisuus</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <div class="l07hal-meter">
-    <span class="l07hal-needle"></span>
-    <span class="l07hal-lo">epävarma</span>
-    <span class="l07hal-hi">varma</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// sujuva ei tarkoita oikeaa</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:18px 26px">
+  <div class="l07hal-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
+  <div class="l07hal-row">
+    <span class="l07hal-k">mallin varmuus</span>
+    <span class="l07hal-meter"><span class="l07hal-fill"></span></span>
+    <span class="l07hal-pct">94 %</span>
   </div>
+  <div class="l07hal-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 milj.</div>
 </div>
-<figcaption class="ai-demo__cap">Malli voi kuulostaa yhtä varmalta sekä oikeasta että väärästä vastauksesta. Itsevarma sävy ei kerro, onko sisältö totta — kriittiset tiedot on aina tarkistettava.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Hallusinaatio: malli voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Korkea varmuus ei takaa totuutta — tarkista faktat.</figcaption></figure>
 <style>
-.l07hal-meter{position:relative;width:62%;height:18px;border-radius:9px;border:1px solid #2A3450;background:#11182A;overflow:hidden}
-.l07hal-needle{position:absolute;top:-3px;bottom:-3px;width:6px;border-radius:3px;background:oklch(0.66 0.15 305);
-  left:50%;animation:l07halWobble 4.5s ease-in-out infinite}
-.l07hal-lo,.l07hal-hi{position:absolute;top:24px;font-family:var(--font-mono);font-size:9.5px;color:#8B94B3}
-.l07hal-lo{left:0}.l07hal-hi{right:0}
-@keyframes l07halWobble{0%{left:18%}25%{left:84%}45%{left:30%}65%{left:90%}85%{left:46%}100%{left:18%}}
-@media (prefers-reduced-motion:reduce){.l07hal-needle{animation:none;left:84%}}
+.l07hal-sent{font-family:var(--font-serif);font-size:16px;color:#E6EAF5;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 5s steps(40,end) infinite}
+@keyframes l07type{0%{width:0}40%,100%{width:24em}}
+.l07hal-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
+.l07hal-k{width:96px}
+.l07hal-meter{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
+.l07hal-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 5s ease-out infinite}
+@keyframes l07fill{0%,30%{width:0}55%,100%{width:94%}}
+.l07hal-pct{width:34px;color:#E6EAF5}
+.l07hal-fact{font-family:var(--font-mono);font-size:11px;color:#E0796B;opacity:0;animation:l07fact 5s ease-in-out infinite}
+@keyframes l07fact{0%,62%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l07hal-sent{animation:none;width:auto;border-right:none}.l07hal-fill{animation:none;width:94%}.l07hal-fact{opacity:1}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?

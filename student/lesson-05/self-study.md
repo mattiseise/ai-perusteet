@@ -24,19 +24,30 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 
 > **Pysähdy hetkeksi:** Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna täyttyy</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <div class="l05cw"><span class="l05cw-fill"></span><span class="l05cw-lbl">128k tokenia</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+  <div class="l05cw-row">
+    <span class="l05cw-side">vanhin<br>↓ unohtuu</span>
+    <div class="l05cw-win">
+      <div class="l05cw-track">
+        <span class="l05cw-tk">alku</span><span class="l05cw-tk">tausta</span><span class="l05cw-tk">ohje</span><span class="l05cw-tk">kysymys</span><span class="l05cw-tk">vastaus</span><span class="l05cw-tk">tarkennus</span><span class="l05cw-tk">jatko</span><span class="l05cw-tk">uusin</span>
+      </div>
+    </div>
+    <span class="l05cw-side" style="color:oklch(0.66 0.13 208)">uusi<br>sisään →</span>
+  </div>
+  <span class="l05cw-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
 </div>
-<figcaption class="ai-demo__cap">Kun ikkuna täyttyy, vanhin tieto putoaa pois (FIFO). Ammattilainen suunnittelee projektinsa tämän rajan ympärille.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uutta tietoa tulee sisään oikealta, vanhin työntyy ulos vasemmalta — malli ei enää näe keskustelun alkua, vaikka kirjoitit sen itse.</figcaption></figure>
 <style>
-.l05cw{position:relative;width:60%;height:26px;border:1px solid #2A3450;border-radius:7px;overflow:hidden;background:#11182A}
-.l05cw-fill{position:absolute;inset:0;width:20%;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));
-  animation:l05cwFill 5s ease-in-out infinite}
-.l05cw-lbl{position:absolute;right:10px;top:5px;font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
-@keyframes l05cwFill{0%{width:14%}55%{width:96%}60%{width:62%}100%{width:14%}}
-@media (prefers-reduced-motion:reduce){.l05cw-fill{animation:none;width:72%}}
+.l05cw-row{display:flex;align-items:center;gap:14px}
+.l05cw-side{font-family:var(--font-mono);font-size:10px;color:#8B94B3;text-align:center;line-height:1.5;width:60px}
+.l05cw-win{position:relative;width:276px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent);mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent)}
+.l05cw-track{position:absolute;top:8px;left:0;display:flex;gap:8px;padding:0 8px;animation:l05shift 10s linear infinite}
+.l05cw-tk{flex:none;width:44px;text-align:center;font-family:var(--font-mono);font-size:10px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0;overflow:hidden;white-space:nowrap}
+.l05cw-track .l05cw-tk:last-child{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent}
+@keyframes l05shift{0%,16%{transform:translateX(0)}20%,36%{transform:translateX(-52px)}40%,56%{transform:translateX(-104px)}60%,76%{transform:translateX(-156px)}80%,100%{transform:translateX(-208px)}}
+.l05cw-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
+@media (prefers-reduced-motion:reduce){.l05cw-track{animation:none;transform:translateX(-104px)}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

@@ -62,29 +62,27 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkaluja vuorollaan</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <svg viewBox="0 0 440 180" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet">
-    <circle cx="220" cy="40" r="13" fill="none" stroke="oklch(0.66 0.15 264)" stroke-width="2.5"/>
-    <text x="220" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">AGENTTI</text>
-    <g stroke="#2A3450" stroke-width="1.5"><line x1="220" y1="53" x2="90" y2="120"/><line x1="220" y1="53" x2="220" y2="120"/><line x1="220" y1="53" x2="350" y2="120"/></g>
-    <g class="l22tool-dot" fill="oklch(0.66 0.13 208)"><circle cx="220" cy="53" r="4"/></g>
-    <g font-family="var(--font-mono)" font-size="10" fill="#C7CEE6">
-      <rect x="40" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="90" y="141" text-anchor="middle">tiedostot</text>
-      <rect x="170" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="220" y="141" text-anchor="middle">haku</text>
-      <rect x="300" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="350" y="141" text-anchor="middle">komento</text>
-    </g>
-    <circle class="l22tool-a" cx="90" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
-    <circle class="l22tool-b" cx="220" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
-    <circle class="l22tool-c" cx="350" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkalua ja saa tuloksen</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:0 22px">
+  <div class="l22-row">
+    <div class="l22-box">AGENTTI</div>
+    <div class="l22-pipe"><span class="l22-out">hae: sää Helsinki →</span><span class="l22-back">← 5 °C, poutaa</span></div>
+    <div class="l22-box l22-tool">TYÖKALU<br><span>(sää-API)</span></div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Agentti ei tee kaikkea itse, vaan ohjaa erikoistuneita työkaluja — tiedostojen lukua, verkkohakua ja komentoja — yksi kerrallaan.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se kutsuu ulkoista työkalua (haku, tiedosto, komento, rajapinta), saa tuloksen takaisin ja käyttää sitä — näin se yltää oman koulutusdatansa ulkopuolelle.</figcaption></figure>
 <style>
-.l22tool-a,.l22tool-b,.l22tool-c{animation:l22toolPulse 6s ease-in-out infinite;opacity:0}
-.l22tool-b{animation-delay:2s}.l22tool-c{animation-delay:4s}
-@keyframes l22toolPulse{0%,12%{opacity:0;r:3}6%{opacity:1;r:7}28%,100%{opacity:.2;r:4}}
-@media (prefers-reduced-motion:reduce){.l22tool-a,.l22tool-b,.l22tool-c{animation:none;opacity:.9}}
+.l22-row{display:flex;align-items:center;gap:0}
+.l22-box{font-family:var(--font-mono);font-size:11px;color:#E6EAF5;background:#11182A;border:1px solid #2A3450;border-radius:9px;padding:16px 14px;text-align:center;line-height:1.4}
+.l22-tool{border-color:oklch(0.66 0.13 208)}.l22-tool span{color:#8B94B3;font-size:9px}
+.l22-pipe{position:relative;width:210px;height:46px}
+.l22-out,.l22-back{position:absolute;font-family:var(--font-mono);font-size:10px;white-space:nowrap;left:50%;transform:translateX(-50%)}
+.l22-out{top:2px;color:oklch(0.66 0.15 264);animation:l22out 4.4s ease-in-out infinite}
+.l22-back{bottom:2px;color:oklch(0.66 0.13 208);animation:l22back 4.4s ease-in-out infinite}
+@keyframes l22out{0%{opacity:0;transform:translate(-90%,0)}15%,45%{opacity:1;transform:translate(-50%,0)}55%,100%{opacity:0;transform:translate(-10%,0)}}
+@keyframes l22back{0%,50%{opacity:0;transform:translate(-10%,0)}65%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-90%,0)}}
+.l22-pipe::before{content:"";position:absolute;top:23px;left:0;right:0;height:1px;background:#232C44}
+@media (prefers-reduced-motion:reduce){.l22-out{animation:none;opacity:1}.l22-back{animation:none;opacity:1;transform:translate(-50%,0)}}
 </style>
 
 

@@ -21,30 +21,29 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 
 **📌 Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// monta virtaa, yksi malli</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <svg viewBox="0 0 320 180" style="width:90%;height:90%" preserveAspectRatio="xMidYMid meet">
-    <g stroke-width="2" fill="none" stroke-dasharray="5 7">
-      <path class="l16mm-flow" d="M30 40 C120 40 140 90 200 90" stroke="oklch(0.66 0.15 264)"/>
-      <path class="l16mm-flow" style="animation-delay:.6s" d="M30 90 C120 90 140 90 200 90" stroke="oklch(0.66 0.15 305)"/>
-      <path class="l16mm-flow" style="animation-delay:1.2s" d="M30 140 C120 140 140 90 200 90" stroke="oklch(0.66 0.13 208)"/>
-    </g>
-    <text x="24" y="36" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">teksti</text>
-    <text x="24" y="94" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">kuva</text>
-    <text x="24" y="146" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">ääni</text>
-    <circle class="l16mm-hub" cx="210" cy="90" r="14" fill="none" stroke="#E6EAF5" stroke-width="2"/>
-    <rect x="252" y="80" width="40" height="20" rx="5" fill="oklch(0.66 0.15 264)"/>
-    <text x="272" y="120" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">tuotos</text>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuttuu tokeneiksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:14px;padding:0 22px">
+  <div class="l16mm-srcs">
+    <div class="l16mm-src">TEKSTI<span class="l16mm-stream"><i></i><i></i><i></i></span></div>
+    <div class="l16mm-src">KUVA<span class="l16mm-stream l16mm-d2"><i></i><i></i><i></i></span></div>
+    <div class="l16mm-src">ÄÄNI<span class="l16mm-stream l16mm-d3"><i></i><i></i><i></i></span></div>
+  </div>
+  <div class="l16mm-model">MALLI</div>
+  <div class="l16mm-out">→ vastaus</div>
 </div>
-<figcaption class="ai-demo__cap">Multimodaaliset työkalut yhdistävät teksti-, kuva- ja äänivirrat samaan malliin — ja tuottavat niistä uutta sisältöä.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri tavoin. Jokainen syöte muunnetaan samanlaisiksi tokeneiksi (vektoreiksi), joita malli käsittelee yhdessä.</figcaption></figure>
 <style>
-.l16mm-flow{animation:l16mmFlow 3.5s linear infinite}
-@keyframes l16mmFlow{to{stroke-dashoffset:-24}}
-.l16mm-hub{animation:l16mmPulse 3.4s ease-in-out infinite}
-@keyframes l16mmPulse{0%,100%{opacity:.5;stroke-width:2}50%{opacity:1;stroke-width:3}}
-@media (prefers-reduced-motion:reduce){.l16mm-flow,.l16mm-hub{animation:none}.l16mm-hub{opacity:.9}}
+.l16mm-srcs{display:flex;flex-direction:column;gap:14px}
+.l16mm-src{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#8B94B3;width:150px}
+.l16mm-stream{position:relative;flex:1;height:12px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%);mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%)}
+.l16mm-stream i{position:absolute;top:2px;width:8px;height:8px;border-radius:2px;background:oklch(0.66 0.15 264);animation:l16flow 2.8s linear infinite}
+.l16mm-stream i:nth-child(2){animation-delay:.9s}.l16mm-stream i:nth-child(3){animation-delay:1.8s}
+.l16mm-d2 i{background:oklch(0.66 0.15 305)}.l16mm-d3 i{background:oklch(0.66 0.13 208)}
+@keyframes l16flow{from{left:-10px}to{left:100%}}
+.l16mm-model{font-family:var(--font-mono);font-size:12px;color:#E6EAF5;border:1.5px solid oklch(0.66 0.15 264);border-radius:10px;padding:18px 16px;background:#11182A;animation:l16pulse 2.8s ease-in-out infinite}
+@keyframes l16pulse{0%,100%{box-shadow:0 0 0 0 rgba(120,140,255,0)}50%{box-shadow:0 0 0 4px rgba(120,140,255,.12)}}
+.l16mm-out{font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
+@media (prefers-reduced-motion:reduce){.l16mm-stream i,.l16mm-model{animation:none}}
 </style>
 
 ## Kuvageneraatio — tekoälyllä kuvia tekstistä

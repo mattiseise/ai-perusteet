@@ -18,26 +18,36 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 
 Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna täyttyy — vanhin putoaa pois</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;overflow:hidden">
-  <div class="l21cw-win">
-    <div class="l21cw-track">
-      <span class="l21cw-msg">viesti 1</span><span class="l21cw-msg">viesti 2</span><span class="l21cw-msg">viesti 3</span>
-      <span class="l21cw-msg">viesti 4</span><span class="l21cw-msg l21cw-hot">viesti 5</span>
-      <span class="l21cw-msg">viesti 1</span><span class="l21cw-msg">viesti 2</span><span class="l21cw-msg">viesti 3</span>
-      <span class="l21cw-msg">viesti 4</span><span class="l21cw-msg l21cw-hot">viesti 5</span>
-    </div>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee tarvitsemansa muistista</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:26px;padding:0 22px">
+  <div class="l21-store">
+    <div class="l21-h">PITKÄKESTOINEN MUISTI</div>
+    <div class="l21-grid"><span>tilaus #12</span><span class="l21-rel">asiakkaan toive</span><span>hinnasto</span><span>aiempi chat</span><span>ohje</span><span>palaute</span></div>
+  </div>
+  <div class="l21-arrow">haku →</div>
+  <div class="l21-work">
+    <div class="l21-h">TYÖMUISTI</div>
+    <div class="l21-slots"><span class="l21-old">nykyinen tehtävä</span><span class="l21-in">asiakkaan toive</span></div>
+    <div class="l21-cap">rajallinen tila</div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Agentti näkee vain ikkunaan mahtuvat viestit. Uusi viesti työntää vanhimman ulos näkyvistä — FIFO eli ensin sisään, ensin ulos.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentin työmuisti (konteksti) on pieni ja rajallinen. Se ei pidä kaikkea mielessä, vaan hakee pitkäkestoisesta muistista juuri sen tiedon, jota tehtävä juuri nyt vaatii.</figcaption></figure>
 <style>
-.l21cw-win{width:70%;height:60px;border:1px solid #2A3450;border-radius:10px;background:#11182A;overflow:hidden;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);position:relative}
-.l21cw-track{display:flex;gap:10px;align-items:center;height:100%;padding-left:14px;width:max-content;animation:l21cwDrift 12s linear infinite}
-.l21cw-msg{flex:none;font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:7px;padding:7px 12px;white-space:nowrap}
-.l21cw-msg.l21cw-hot{color:#0B0F1A;background:oklch(0.66 0.15 264);border-color:transparent}
-@keyframes l21cwDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.l21cw-track{animation:none}}
+.l21-store,.l21-work{border:1px solid #232C44;border-radius:9px;background:#11182A;padding:11px}
+.l21-h{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;color:#8B94B3;margin-bottom:8px}
+.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;width:210px}
+.l21-grid span{font-family:var(--font-mono);font-size:9.5px;color:#69728F;background:#161E33;border:1px solid #232C44;border-radius:5px;padding:5px 6px;text-align:center}
+.l21-rel{color:oklch(0.66 0.15 264)!important;border-color:oklch(0.66 0.15 264)!important;animation:l21rel 4.5s ease-in-out infinite}
+@keyframes l21rel{0%,100%{opacity:.5}40%,70%{opacity:1}}
+.l21-arrow{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.15 264);animation:l21pull 4.5s ease-in-out infinite}
+@keyframes l21pull{0%,30%{opacity:.3;transform:translateX(-4px)}50%{opacity:1;transform:translateX(2px)}100%{opacity:.3;transform:translateX(-4px)}}
+.l21-slots{display:flex;flex-direction:column;gap:5px;width:130px}
+.l21-slots span{font-family:var(--font-mono);font-size:9.5px;border-radius:5px;padding:6px;text-align:center}
+.l21-old{color:#C7CEE6;background:#1A2236;border:1px solid #2A3450}
+.l21-in{color:#0B0F1A;background:oklch(0.66 0.15 264);animation:l21in 4.5s ease-in-out infinite}
+@keyframes l21in{0%,40%{opacity:0;transform:translateY(-6px)}55%,100%{opacity:1;transform:translateY(0)}}
+.l21-cap{font-family:var(--font-mono);font-size:9px;color:#69728F;margin-top:7px;text-align:center}
+@media (prefers-reduced-motion:reduce){.l21-rel,.l21-arrow,.l21-in{animation:none}.l21-in{opacity:1}}
 </style>
 
 

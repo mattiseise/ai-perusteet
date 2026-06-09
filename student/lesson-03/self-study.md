@@ -49,24 +49,31 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 
 > **Pysähdy hetkeksi:** Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava tokeni</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center">
-  <div class="l03tok-track">
-    <span class="l03tok">Mikä</span><span class="l03tok">on</span><span class="l03tok">Suomen</span><span class="l03tok">pääkaupunki</span><span class="l03tok hot">Helsinki</span>
-    <span class="l03tok">Mikä</span><span class="l03tok">on</span><span class="l03tok">Suomen</span><span class="l03tok">pääkaupunki</span><span class="l03tok hot">Helsinki</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava token</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:16px 24px">
+  <div class="l03tok-prompt">Suomen pääkaupunki on <span class="l03tok-blank">Helsinki</span></div>
+  <div class="l03tok-bars">
+    <div class="l03tok-bar l03tok-top"><span class="l03tok-w">Helsinki</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:81%"></span></span><span class="l03tok-p">0.81</span></div>
+    <div class="l03tok-bar"><span class="l03tok-w">Turku</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:7%"></span></span><span class="l03tok-p">0.07</span></div>
+    <div class="l03tok-bar"><span class="l03tok-w">Tampere</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:5%"></span></span><span class="l03tok-p">0.05</span></div>
+    <div class="l03tok-bar"><span class="l03tok-w">Espoo</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:4%"></span></span><span class="l03tok-p">0.04</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Malli lukee tokenit yksi kerrallaan ja arvioi, mikä tokeni tulee todennäköisimmin seuraavaksi — sana kerrallaan.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Malli ei "tiedä" vastausta. Se laskee jokaiselle mahdolliselle seuraavalle tokenille todennäköisyyden ja valitsee todennäköisimmän — tässä "Helsinki" (0.81). Sitten se toistaa saman seuraavalle sanalle.</figcaption></figure>
 <style>
-.l03tok-track{display:flex;gap:12px;width:max-content;padding-left:20px;animation:l03tokDrift 15s linear infinite;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 70%,transparent 92%);
-  mask-image:linear-gradient(90deg,transparent,#000 14%,#000 70%,transparent 92%)}
-.l03tok{flex:none;font-family:var(--font-mono);font-size:13px;color:#C7CEE6;background:#1A2236;
-  border:1px solid #2A3450;border-radius:8px;padding:9px 13px;white-space:nowrap}
-.l03tok.hot{color:#0B0F1A;background:oklch(0.66 0.15 264);border-color:transparent}
-@keyframes l03tokDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.l03tok-track{animation:none}}
+.l03tok-prompt{font-family:var(--font-mono);font-size:13.5px;color:#C7CEE6}
+.l03tok-blank{color:oklch(0.66 0.15 264);border-bottom:2px solid oklch(0.66 0.15 264);padding:0 3px;opacity:0;animation:l03reveal 4.5s ease-in-out infinite}
+@keyframes l03reveal{0%,45%{opacity:0}55%,92%{opacity:1}100%{opacity:0}}
+.l03tok-bars{display:flex;flex-direction:column;gap:6px}
+.l03tok-bar{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
+.l03tok-w{width:74px;text-align:right;color:#C7CEE6}
+.l03tok-tr{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
+.l03tok-fill{display:block;height:100%;width:0;background:#3A445F;animation:l03grow 4.5s ease-in-out infinite}
+.l03tok-top .l03tok-fill{background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305))}
+.l03tok-top .l03tok-w{color:#E6EAF5}
+@keyframes l03grow{0%{width:0}35%{width:var(--p)}92%{width:var(--p)}100%{width:0}}
+.l03tok-p{width:30px}
+@media (prefers-reduced-motion:reduce){.l03tok-blank{opacity:1}.l03tok-fill{animation:none;width:var(--p)}}
 </style>
 
 ## Koulutusdata — se, mistä malli oppii

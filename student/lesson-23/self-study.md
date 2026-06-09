@@ -44,24 +44,34 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentin silmukka — ReAct</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <svg viewBox="0 0 140 140" style="width:170px;height:170px">
-    <circle class="l23react-ring" cx="70" cy="70" r="50" fill="none" stroke="oklch(0.66 0.13 208)"
-            stroke-width="2.5" stroke-dasharray="6 9" stroke-linecap="round"/>
-    <g class="l23react-orbit"><circle cx="70" cy="20" r="5.5" fill="oklch(0.66 0.15 305)"/></g>
-    <text x="70" y="62" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">AJATTELE</text>
-    <text x="70" y="74" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">→ TOIMI</text>
-    <text x="70" y="86" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">→ HAVAITSE</text>
+<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: ajattele → toimi → havaitse</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:0;padding:0 22px;position:relative">
+  <svg viewBox="0 0 320 200" style="width:100%;max-width:360px;height:190px">
+    <circle cx="160" cy="100" r="70" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
+    <g class="l23-orbit"><circle cx="160" cy="30" r="6" fill="oklch(0.66 0.15 305)"/></g>
+    <g font-family="var(--font-mono)" font-size="10">
+      <text x="160" y="26" text-anchor="middle" fill="#E6EAF5" class="l23-n1">AJATTELE</text>
+      <text x="160" y="40" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n1">"tarvitsen hinnan"</text>
+      <text x="250" y="150" text-anchor="middle" fill="#E6EAF5" class="l23-n2">TOIMI</text>
+      <text x="250" y="163" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n2">"hae hinta"</text>
+      <text x="70" y="150" text-anchor="middle" fill="#E6EAF5" class="l23-n3">HAVAITSE</text>
+      <text x="70" y="163" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n3">"29 €"</text>
+      <text x="160" y="104" text-anchor="middle" fill="#69728F" font-size="9">toistuu kunnes</text>
+      <text x="160" y="116" text-anchor="middle" fill="#69728F" font-size="9">tavoite valmis</text>
+    </g>
   </svg>
 </div>
-<figcaption class="ai-demo__cap">ReAct-agentti vuorottelee: se ajattelee, toimii työkalulla ja havaitsee tuloksen — ja toistaa silmukkaa, kunnes tehtävä on valmis.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">ReAct-malli vuorottelee: agentti ajattelee (mitä tarvitsen?), toimii (käyttää työkalua) ja havaitsee tuloksen — ja päättelee taas. Ajattelu ja toiminta lomittuvat, kunnes tehtävä valmistuu.</figcaption></figure>
 <style>
-.l23react-ring{transform-box:view-box;transform-origin:70px 70px;animation:l23reactSpin 9s linear infinite}
-.l23react-orbit{transform-box:view-box;transform-origin:70px 70px;animation:l23reactSpin 4.5s linear infinite}
-@keyframes l23reactSpin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.l23react-ring,.l23react-orbit{animation:none}}
+.l23-orbit{transform-box:view-box;transform-origin:160px 100px;animation:l23spin 6s linear infinite}
+@keyframes l23spin{to{transform:rotate(360deg)}}
+.l23-n1{animation:l23p1 6s ease-in-out infinite}
+.l23-n2{animation:l23p2 6s ease-in-out infinite}
+.l23-n3{animation:l23p3 6s ease-in-out infinite}
+@keyframes l23p1{0%,100%{opacity:1}33%,90%{opacity:.4}}
+@keyframes l23p2{0%,28%{opacity:.4}38%,62%{opacity:1}72%,100%{opacity:.4}}
+@keyframes l23p3{0%,62%{opacity:.4}72%,95%{opacity:1}100%{opacity:.4}}
+@media (prefers-reduced-motion:reduce){.l23-orbit,.l23-n1,.l23-n2,.l23-n3{animation:none}.l23-n1,.l23-n2,.l23-n3{opacity:1}}
 </style>
 
 ## Ketjuajattelu: jaa ongelma osiin

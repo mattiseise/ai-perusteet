@@ -8,24 +8,29 @@ Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vas
 
 **Konteksti** tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan *sinun* kysymyksestäsi, *sinun* tavoitteistasi ja *sinun* käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// promptaus → vastaus</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:0 28px">
-  <div class="l12prm-line"><span class="l12prm-arrow">&gt;</span> Kirjoita 500 sanan johdanto esseeseeni</div>
-  <div class="l12prm-out"><span class="l12prm-type">Tekoäly muuttaa jokapäiväistä työtä</span><span class="l12prm-cursor"></span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö, eri määrä kontekstia</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:14px 22px">
+  <div class="l12prm-card">
+    <div class="l12prm-q">"Kirjoita viesti."</div>
+    <div class="l12prm-a l12prm-vague">→ "Hei! Mitä kuuluu?" <span class="l12prm-tag">epätarkka</span></div>
+  </div>
+  <div class="l12prm-card l12prm-good">
+    <div class="l12prm-q">"Kirjoita 3 lauseen kohtelias viesti opettajalle: myöhästyn huomisen kokeesta sairauden takia ja haluan uuden ajan."</div>
+    <div class="l12prm-a l12prm-rich">→ "Hei! Valitettavasti sairastuin enkä pääse huomiseen kokeeseen. Voisinko sopia korvaavan ajan? Ystävällisin terveisin." <span class="l12prm-tag l12prm-tg">osuva</span></div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Mitä tarkemman kontekstin annat promptissa, sitä osuvamman vastauksen malli tuottaa — sana kerrallaan.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Sama tehtävä, eri tulos. Mitä enemmän kontekstia annat — tilanne, tavoite, sävy, rajat — sitä tarkemman ja käyttökelpoisemman vastauksen malli osaa antaa.</figcaption></figure>
 <style>
-.l12prm-line{font-family:var(--font-mono);font-size:13px;color:#8B94B3}
-.l12prm-arrow{color:oklch(0.66 0.15 264);margin-right:8px}
-.l12prm-out{font-family:var(--font-mono);font-size:14px;color:#E6EAF5;white-space:nowrap;overflow:hidden}
-.l12prm-type{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;width:0;
-  animation:l12prmType 6s steps(34) infinite}
-.l12prm-cursor{display:inline-block;width:8px;height:16px;vertical-align:bottom;margin-left:2px;
-  background:oklch(0.66 0.15 305);animation:l12prmBlink 1s step-end infinite}
-@keyframes l12prmType{0%{width:0}55%,80%{width:100%}100%{width:0}}
-@keyframes l12prmBlink{0%,100%{opacity:1}50%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.l12prm-type{animation:none;width:100%}.l12prm-cursor{animation:none}}
+.l12prm-card{border:1px solid #232C44;border-radius:9px;background:#11182A;padding:11px 13px;display:flex;flex-direction:column;gap:7px}
+.l12prm-good{border-color:#2f3b63}
+.l12prm-q{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;line-height:1.45}
+.l12prm-a{font-family:var(--font-mono);font-size:11px;line-height:1.45}
+.l12prm-vague{color:#69728F}
+.l12prm-rich{color:#E6EAF5;opacity:0;animation:l12rev 6s ease-in-out infinite}
+@keyframes l12rev{0%,30%{opacity:0}45%,92%{opacity:1}100%{opacity:0}}
+.l12prm-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B94B3;border:1px solid #2A3450;border-radius:999px;padding:1px 7px;margin-left:4px}
+.l12prm-tg{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
+@media (prefers-reduced-motion:reduce){.l12prm-rich{opacity:1}}
 </style>
 
 ## Konteksti: miksi se on tärkeää?

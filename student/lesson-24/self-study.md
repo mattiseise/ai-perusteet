@@ -54,31 +54,37 @@ Prompt injectionia ei voi torjua pelkällä toiveella, että agentti ”noudatta
 
 **Muista:** Hyvä järjestelmäprompti on tärkeä, mutta se ei yksin riitä turvakerrokseksi. Turvallinen agentti tarvitsee myös oikeuksien rajaamista, syötteiden tarkistamista, lokitusta ja tarvittaessa ihmisen hyväksynnän.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// validointi torjuu injection-yrityksen</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <svg viewBox="0 0 320 160" style="width:92%;height:90%" preserveAspectRatio="xMidYMid meet">
-    <line x1="20" y1="80" x2="300" y2="80" stroke="#2A3450" stroke-width="1.5" stroke-dasharray="4 6"/>
-    <g class="l24sec-bad">
-      <rect x="-46" y="68" width="64" height="24" rx="6" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2"/>
-      <text x="-14" y="84" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="oklch(0.66 0.15 305)">ohita ohjeet</text>
-    </g>
-    <path class="l24sec-shield" d="M170 36 L196 46 V82 C196 100 184 112 170 120 C156 112 144 100 144 82 V46 Z"
-          fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2.5"/>
-    <text x="170" y="86" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="oklch(0.66 0.13 208)">validointi</text>
-    <g fill="oklch(0.66 0.15 264)">
-      <circle cx="252" cy="80" r="4"/><circle cx="276" cy="80" r="4"/><circle cx="300" cy="80" r="4"/>
-    </g>
-    <text x="276" y="120" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">turvallinen syöte</text>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// validointi erottaa datan ja piilo-ohjeen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:0 18px">
+  <div class="l24-wrap">
+    <span class="l24-box">syöte</span>
+    <div class="l24-lane">
+      <div class="l24-gate"><span class="l24-gatelbl">VALIDOINTI</span></div>
+      <i class="l24-chip l24-c1">teksti</i>
+      <i class="l24-chip l24-c2">data</i>
+      <i class="l24-chip l24-bad">"ohita ohjeet"</i>
+    </div>
+    <span class="l24-box l24-agent">AGENTTI</span>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Haitallinen tokeni (”ohita ohjeet”) etenee kohti agenttia, mutta validointikerros pysäyttää sen — vain tarkistettu syöte pääsee läpi.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Prompt injection: syötteeseen on piilotettu ohje, joka yrittää ohittaa agentin omat säännöt. Validointi erottaa luotettavat ohjeet datasta ja pysäyttää haitallisen käskyn ennen kuin se pääsee agentille.</figcaption></figure>
 <style>
-.l24sec-bad{animation:l24secRun 5s ease-in-out infinite}
-@keyframes l24secRun{0%{transform:translateX(0);opacity:.4}45%{transform:translateX(180px);opacity:1}60%{transform:translateX(190px);opacity:0}100%{transform:translateX(190px);opacity:0}}
-.l24sec-shield{animation:l24secFlash 5s ease-in-out infinite}
-@keyframes l24secFlash{0%,40%{opacity:.5}50%{opacity:1;stroke-width:3.5}60%,100%{opacity:.5;stroke-width:2.5}}
-@media (prefers-reduced-motion:reduce){.l24sec-bad,.l24sec-shield{animation:none}.l24sec-bad{opacity:0}.l24sec-shield{opacity:1}}
+.l24-wrap{display:flex;align-items:center;width:100%;max-width:560px}
+.l24-box{flex:none;font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:7px;padding:9px 11px}
+.l24-agent{color:#E6EAF5}
+.l24-lane{position:relative;flex:1;height:62px;margin:0 8px}
+.l24-lane::before{content:"";position:absolute;top:30px;left:0;right:0;height:2px;background:#232C44}
+.l24-gate{position:absolute;top:8px;left:62%;width:2px;height:46px;background:oklch(0.66 0.13 208)}
+.l24-gatelbl{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:oklch(0.66 0.13 208)}
+.l24-chip{position:absolute;top:19px;font-style:normal;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#161E33;border:1px solid #2A3450;border-radius:5px;padding:3px 7px;white-space:nowrap}
+.l24-c1{animation:l24pass 4.8s linear infinite}
+.l24-c2{animation:l24pass 4.8s linear infinite;animation-delay:.7s}
+.l24-bad{color:#E0796B;border-color:#E0796B;animation:l24block 4.8s ease-in-out infinite;animation-delay:1.6s}
+.l24-bad::after{content:" ✗";opacity:0;animation:l24x 4.8s ease-in-out infinite;animation-delay:1.6s}
+@keyframes l24pass{0%{left:-8%;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes l24block{0%{left:-8%;opacity:0}10%{opacity:1}45%{left:54%;opacity:1}55%{left:57%}62%{left:54%}100%{left:54%;opacity:.85}}
+@keyframes l24x{0%,46%{opacity:0}54%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.l24-c1,.l24-c2,.l24-bad,.l24-bad::after{animation:none}.l24-bad{left:54%;opacity:1}.l24-c1{left:80%;opacity:1}}
 </style>
 
 ---

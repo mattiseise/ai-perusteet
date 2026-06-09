@@ -46,30 +46,38 @@ Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **
 
 Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// päätös haarautuu: promptaus, työnkulku vai agentti</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
-  <svg viewBox="0 0 460 180" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet">
-    <circle cx="50" cy="90" r="9" fill="oklch(0.66 0.15 264)"/>
-    <text x="50" y="118" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">tehtävä</text>
-    <g stroke="#2A3450" stroke-width="1.5" fill="none">
-      <path d="M59 90 Q140 90 200 40"/><path d="M59 90 L200 90"/><path d="M59 90 Q140 90 200 140"/>
-    </g>
-    <path class="l20dec-p" d="M59 90 Q140 90 200 40" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 150"/>
-    <path class="l20dec-w" d="M59 90 L200 90" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 150"/>
-    <path class="l20dec-a" d="M59 90 Q140 90 200 140" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 160"/>
-    <g font-family="var(--font-mono)" font-size="10" fill="#C7CEE6">
-      <rect x="206" y="28" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="45" text-anchor="middle">promptaus</text>
-      <rect x="206" y="77" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="94" text-anchor="middle">työnkulku</text>
-      <rect x="206" y="126" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="143" text-anchor="middle">agentti</text>
-    </g>
-  </svg>
+<figure class="ai-demo"><span class="ai-demo__tag">// kiinteä polku vai tilanteen mukaan</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:20px;padding:14px 22px">
+  <div class="l20-lane">
+    <span class="l20-lbl">AUTOMAATIO</span>
+    <span class="l20-box">A</span><span class="l20-line"><i class="l20-dot l20-fix"></i></span><span class="l20-box">B</span><span class="l20-line"></span><span class="l20-box">C</span>
+    <span class="l20-note">aina sama polku</span>
+  </div>
+  <div class="l20-lane">
+    <span class="l20-lbl" style="color:oklch(0.66 0.13 208)">AUTONOMIA</span>
+    <span class="l20-box">syöte</span><span class="l20-line"></span><span class="l20-dia">päätös</span>
+    <span class="l20-branches"><span class="l20-br l20-brA">→ polku X</span><span class="l20-br l20-brB">→ polku Y</span></span>
+    <span class="l20-note">tilanne ratkaisee</span>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Kuusi kysymystä ohjaavat valinnan oikealle haaralle — yksinkertaisin riittävä ratkaisu voittaa.</figcaption></figure>
+<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Agentti on autonominen: se arvioi tilanteen ja valitsee toimintatavan itse — eri syöte voi johtaa eri polulle.</figcaption></figure>
 <style>
-.l20dec-p,.l20dec-w,.l20dec-a{animation:l20decRun 6s ease-in-out infinite}
-.l20dec-w{animation-delay:2s}.l20dec-a{animation-delay:4s}
-@keyframes l20decRun{0%{stroke-dashoffset:155}30%{stroke-dashoffset:0}45%,100%{stroke-dashoffset:0;opacity:.25}}
-@media (prefers-reduced-motion:reduce){.l20dec-p,.l20dec-w,.l20dec-a{animation:none;stroke-dashoffset:0}}
+.l20-lane{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
+.l20-lbl{width:96px;font-size:10px;letter-spacing:.12em;color:#8B94B3}
+.l20-box{background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
+.l20-line{position:relative;width:34px;height:2px;background:#2A3450}
+.l20-dot{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:oklch(0.66 0.15 264)}
+.l20-fix{animation:l20fix 3.5s linear infinite}
+@keyframes l20fix{0%{left:-4px;opacity:0}10%{opacity:1}100%{left:120px;opacity:1}}
+.l20-dia{background:#11182A;border:1px solid oklch(0.66 0.13 208);transform:rotate(0);border-radius:6px;padding:6px 10px;color:#E6EAF5}
+.l20-branches{display:flex;flex-direction:column;gap:5px;margin-left:4px}
+.l20-br{font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:6px;padding:3px 8px}
+.l20-brA{animation:l20a 6s ease-in-out infinite}
+.l20-brB{animation:l20b 6s ease-in-out infinite}
+@keyframes l20a{0%,45%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:#69728F;border-color:#2A3450}}
+@keyframes l20b{0%,45%{color:#69728F;border-color:#2A3450}50%,95%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}100%{color:#69728F}}
+.l20-note{font-size:9px;color:#69728F;margin-left:auto}
+@media (prefers-reduced-motion:reduce){.l20-fix,.l20-brA,.l20-brB{animation:none}.l20-brA{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}}
 </style>
 
 

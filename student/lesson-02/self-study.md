@@ -82,35 +82,29 @@ Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se
 
 > **Pysähdy hetkeksi:** Jos tekoäly olisi ihmistä parempi lähes kaikessa ajattelutyössä, kuka päättäisi, mihin sitä käytetään? Millaisia sääntöjä, valvontaa ja vastuuta tällainen järjestelmä vaatisi?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// tekoälyn tasot</span>
-<div class="ai-demo__stage" style="display:flex;align-items:flex-end;justify-content:center;gap:18px;padding:24px 24px 0">
-  <div class="l02lvl-col">
-    <span class="l02lvl-bar" style="--h:34%;animation-delay:0s"></span>
-    <span class="l02lvl-lbl">Kapea</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// missä tekoäly menee nyt</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:0 22px">
+  <div class="l02lvl-track">
+    <div class="l02lvl-step"><span class="l02lvl-dot"></span>Kapea</div>
+    <div class="l02lvl-step"><span class="l02lvl-dot"></span>Generatiivinen</div>
+    <div class="l02lvl-step l02lvl-fut"><span class="l02lvl-dot"></span>AGI</div>
+    <div class="l02lvl-step l02lvl-fut"><span class="l02lvl-dot"></span>ASI</div>
   </div>
-  <div class="l02lvl-col">
-    <span class="l02lvl-bar" style="--h:55%;animation-delay:.4s"></span>
-    <span class="l02lvl-lbl">Generatiivinen</span>
-  </div>
-  <div class="l02lvl-col">
-    <span class="l02lvl-bar" style="--h:78%;animation-delay:.8s"></span>
-    <span class="l02lvl-lbl">AGI</span>
-  </div>
-  <div class="l02lvl-col">
-    <span class="l02lvl-bar" style="--h:100%;animation-delay:1.2s"></span>
-    <span class="l02lvl-lbl">ASI</span>
-  </div>
+  <div class="l02lvl-marker">▲ OLEMME TÄSSÄ</div>
 </div>
-<figcaption class="ai-demo__cap">Tasot nousevat kapeasta tekoälystä kohti yleistä ja yliälyä. Tänään käytössä ovat vain alimmat tasot — ylemmät ovat yhä tutkimusta tai spekulaatiota.</figcaption></figure>
-
+<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista. AGI ja ASI ovat yhä hypoteettisia — eikä raja ole selvä, koska "maalitolpat liikkuvat", kun kyvyt kasvavat.</figcaption></figure>
 <style>
-.l02lvl-col{display:flex;flex-direction:column;align-items:center;width:74px;height:170px;justify-content:flex-end}
-.l02lvl-bar{display:block;width:46px;height:var(--h);border-radius:6px 6px 0 0;
-  background:linear-gradient(180deg,oklch(0.66 0.15 305),oklch(0.66 0.15 264));
-  transform-origin:bottom;animation:l02lvlRise 4.5s ease-in-out infinite}
-.l02lvl-lbl{margin-top:8px;font-family:var(--font-mono);font-size:9.5px;color:#8B94B3;text-align:center}
-@keyframes l02lvlRise{0%,100%{transform:scaleY(.18);opacity:.45}45%,70%{transform:scaleY(1);opacity:1}}
-@media (prefers-reduced-motion:reduce){.l02lvl-bar{animation:none;transform:scaleY(1);opacity:1}}
+.l02lvl-track{display:flex;align-items:center}
+.l02lvl-step{position:relative;font-family:var(--font-mono);font-size:11.5px;color:#C7CEE6;padding:9px 16px;border:1px solid #2A3450;border-radius:8px;background:#1A2236;margin:0 14px;display:flex;align-items:center;gap:8px}
+.l02lvl-track .l02lvl-step:not(:last-child)::after{content:"→";position:absolute;right:-18px;color:#3A445F;font-size:13px}
+.l02lvl-dot{width:7px;height:7px;border-radius:50%;background:oklch(0.66 0.15 264)}
+.l02lvl-fut{color:#69728F;border-style:dashed;background:transparent;animation:l02shim 3.5s ease-in-out infinite}
+.l02lvl-fut .l02lvl-dot{background:#69728F}
+.l02lvl-fut:last-child{animation-delay:.7s}
+@keyframes l02shim{0%,100%{opacity:.4}50%{opacity:.8}}
+.l02lvl-marker{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:oklch(0.66 0.15 264);align-self:flex-start;margin-left:120px;animation:l02pulse 2.6s ease-in-out infinite}
+@keyframes l02pulse{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
+@media (prefers-reduced-motion:reduce){.l02lvl-fut,.l02lvl-marker{animation:none;opacity:.7}}
 </style>
 
 ## Yhteenveto
