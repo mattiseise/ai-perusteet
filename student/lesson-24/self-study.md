@@ -60,14 +60,12 @@ Prompt injectionia ei voi torjua pelkällä toiveella, että agentti ”noudatta
     <span class="l24-box">syöte</span>
     <div class="l24-lane">
       <div class="l24-gate"><span class="l24-gatelbl">VALIDOINTI</span></div>
-      <i class="l24-chip l24-c1">teksti</i>
-      <i class="l24-chip l24-c2">data</i>
-      <i class="l24-chip l24-bad">"ohita ohjeet"</i>
+      <i class="l24-chip c1">teksti</i><i class="l24-chip c2">data</i><i class="l24-chip bad">"ohita ohjeet"</i>
     </div>
     <span class="l24-box l24-agent">AGENTTI</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Prompt injection: syötteeseen on piilotettu ohje, joka yrittää ohittaa agentin omat säännöt. Validointi erottaa luotettavat ohjeet datasta ja pysäyttää haitallisen käskyn ennen kuin se pääsee agentille.</figcaption></figure>
+<figcaption class="ai-demo__cap">Prompt injection piiloutuu tavallisen datan sekaan eikä erotu ennen tarkistusta. Validointiportti erottaa luotettavat ohjeet datasta ja pysäyttää haitallisen käskyn ennen agenttia.</figcaption></figure>
 <style>
 .l24-wrap{display:flex;align-items:center;width:100%;max-width:560px}
 .l24-box{flex:none;font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:7px;padding:9px 11px}
@@ -77,14 +75,14 @@ Prompt injectionia ei voi torjua pelkällä toiveella, että agentti ”noudatta
 .l24-gate{position:absolute;top:8px;left:62%;width:2px;height:46px;background:oklch(0.66 0.13 208)}
 .l24-gatelbl{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:oklch(0.66 0.13 208)}
 .l24-chip{position:absolute;top:19px;font-style:normal;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#161E33;border:1px solid #2A3450;border-radius:5px;padding:3px 7px;white-space:nowrap}
-.l24-c1{animation:l24pass 4.8s linear infinite}
-.l24-c2{animation:l24pass 4.8s linear infinite;animation-delay:.7s}
-.l24-bad{color:#E0796B;border-color:#E0796B;animation:l24block 4.8s ease-in-out infinite;animation-delay:1.6s}
-.l24-bad::after{content:" ✗";opacity:0;animation:l24x 4.8s ease-in-out infinite;animation-delay:1.6s}
-@keyframes l24pass{0%{left:-8%;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
-@keyframes l24block{0%{left:-8%;opacity:0}10%{opacity:1}45%{left:54%;opacity:1}55%{left:57%}62%{left:54%}100%{left:54%;opacity:.85}}
-@keyframes l24x{0%,46%{opacity:0}54%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.l24-c1,.l24-c2,.l24-bad,.l24-bad::after{animation:none}.l24-bad{left:54%;opacity:1}.l24-c1{left:80%;opacity:1}}
+.c1{animation:l24pass 13s linear infinite}
+.c2{animation:l24pass 13s linear infinite;animation-delay:1.4s}
+.bad{animation:l24block 13s ease-in-out infinite;animation-delay:2.8s}
+.bad::after{content:" ✗";opacity:0;animation:l24x 13s ease-in-out infinite;animation-delay:2.8s}
+@keyframes l24pass{0%{left:-8%;opacity:0}6%{opacity:1}88%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes l24block{0%{left:-8%;opacity:0;color:#C7CEE6;border-color:#2A3450}8%{opacity:1}40%{left:54%;color:#C7CEE6;border-color:#2A3450}52%{left:54%;color:#E0796B;border-color:#E0796B}60%{left:57%}68%{left:54%}100%{left:54%;opacity:.9;color:#E0796B;border-color:#E0796B}}
+@keyframes l24x{0%,52%{opacity:0}60%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.c1,.c2,.bad,.bad::after{animation:none}.bad{left:54%;opacity:1;color:#E0796B;border-color:#E0796B}.c1{left:82%;opacity:1}}
 </style>
 
 ---

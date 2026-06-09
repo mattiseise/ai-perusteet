@@ -21,29 +21,30 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 
 **📌 Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuttuu tokeneiksi</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:14px;padding:0 22px">
-  <div class="l16mm-srcs">
-    <div class="l16mm-src">TEKSTI<span class="l16mm-stream"><i></i><i></i><i></i></span></div>
-    <div class="l16mm-src">KUVA<span class="l16mm-stream l16mm-d2"><i></i><i></i><i></i></span></div>
-    <div class="l16mm-src">ÄÄNI<span class="l16mm-stream l16mm-d3"><i></i><i></i><i></i></span></div>
-  </div>
-  <div class="l16mm-model">MALLI</div>
-  <div class="l16mm-out">→ vastaus</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuntuu samanlaisiksi tokeneiksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:0;padding:0 20px">
+  <div class="l16-srcs"><span class="l16-src s-txt">TEKSTI</span><span class="l16-src s-img">KUVA</span><span class="l16-src s-aud">ÄÄNI</span></div>
+  <div class="l16-lane"><i class="l16-p p1"></i><i class="l16-p p2"></i><i class="l16-p p3"></i><span class="l16-gate">muunnin</span></div>
+  <div class="l16-model">MALLI</div>
+  <div class="l16-out">→ vastaus</div>
 </div>
-<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri tavoin. Jokainen syöte muunnetaan samanlaisiksi tokeneiksi (vektoreiksi), joita malli käsittelee yhdessä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri koneistoilla. Erilaiset syötteet muunnetaan matkalla samanlaisiksi tokeneiksi, joita malli käsittelee yhdessä.</figcaption></figure>
 <style>
-.l16mm-srcs{display:flex;flex-direction:column;gap:14px}
-.l16mm-src{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#8B94B3;width:150px}
-.l16mm-stream{position:relative;flex:1;height:12px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%);mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%)}
-.l16mm-stream i{position:absolute;top:2px;width:8px;height:8px;border-radius:2px;background:oklch(0.66 0.15 264);animation:l16flow 2.8s linear infinite}
-.l16mm-stream i:nth-child(2){animation-delay:.9s}.l16mm-stream i:nth-child(3){animation-delay:1.8s}
-.l16mm-d2 i{background:oklch(0.66 0.15 305)}.l16mm-d3 i{background:oklch(0.66 0.13 208)}
-@keyframes l16flow{from{left:-10px}to{left:100%}}
-.l16mm-model{font-family:var(--font-mono);font-size:12px;color:#E6EAF5;border:1.5px solid oklch(0.66 0.15 264);border-radius:10px;padding:18px 16px;background:#11182A;animation:l16pulse 2.8s ease-in-out infinite}
-@keyframes l16pulse{0%,100%{box-shadow:0 0 0 0 rgba(120,140,255,0)}50%{box-shadow:0 0 0 4px rgba(120,140,255,.12)}}
-.l16mm-out{font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
-@media (prefers-reduced-motion:reduce){.l16mm-stream i,.l16mm-model{animation:none}}
+.l16-srcs{display:flex;flex-direction:column;gap:16px}
+.l16-src{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;color:#8B94B3;border:1px solid #2A3450;border-radius:6px;padding:5px 8px;text-align:center;width:64px}
+.l16-lane{position:relative;width:150px;height:90px;margin:0 8px}
+.l16-gate{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-mono);font-size:8.5px;color:#69728F;border-left:1px dashed #3A445F;border-right:1px dashed #3A445F;padding:18px 6px}
+.l16-p{position:absolute;left:0;width:11px;height:11px}
+.l16-p1{top:8px;background:oklch(0.66 0.15 264);border-radius:50%;animation:l16a 6s ease-in-out infinite}
+.l16-p2{top:40px;background:oklch(0.66 0.15 305);border-radius:2px;transform:rotate(45deg);animation:l16b 6s ease-in-out infinite}
+.l16-p3{top:72px;background:oklch(0.66 0.13 208);border-radius:0;animation:l16c 6s ease-in-out infinite}
+/* phase 1: travel to gate keeping own shape/color; phase 2: become identical teal squares to model */
+@keyframes l16a{0%{left:0;top:8px;opacity:0}10%{opacity:1}45%{left:46%;top:8px;border-radius:50%;background:oklch(0.66 0.15 264)}55%{left:50%;top:40px;border-radius:2px;background:oklch(0.66 0.13 208)}100%{left:130px;top:40px;border-radius:2px;background:oklch(0.66 0.13 208);opacity:1}}
+@keyframes l16b{0%{left:0;opacity:0}10%{opacity:1}45%{left:46%;top:40px}55%{left:50%;top:40px;border-radius:2px;background:oklch(0.66 0.13 208);transform:rotate(0)}100%{left:130px;top:40px;background:oklch(0.66 0.13 208);transform:rotate(0);opacity:1}}
+@keyframes l16c{0%{left:0;top:72px;opacity:0}10%{opacity:1}45%{left:46%;top:72px}55%{left:50%;top:40px;background:oklch(0.66 0.13 208)}100%{left:130px;top:40px;background:oklch(0.66 0.13 208);opacity:1}}
+.l16-model{font-family:var(--font-mono);font-size:12px;color:#E6EAF5;border:1.5px solid oklch(0.66 0.13 208);border-radius:10px;padding:16px 14px;background:#11182A}
+.l16-out{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;margin-left:8px}
+@media (prefers-reduced-motion:reduce){.l16-p{animation:none}.l16-p1,.l16-p2,.l16-p3{left:120px;top:40px;background:oklch(0.66 0.13 208);border-radius:2px;transform:none;opacity:1}}
 </style>
 
 ## Kuvageneraatio — tekoälyllä kuvia tekstistä

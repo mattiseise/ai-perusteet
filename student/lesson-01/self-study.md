@@ -57,38 +57,44 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää</span>
-<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:18px 22px">
-  <div class="l01rule-col">
-    <div class="l01rule-h">SÄÄNTÖ</div>
-    <div class="l01rule-rule">jos summa &gt; 10 000 € → hälytä</div>
-    <div class="l01rule-in">tapahtuma: 9 990 €</div>
-    <div class="l01rule-out l01rule-ok">→ ei hälytystä</div>
-    <div class="l01rule-miss">petos jäi huomaamatta</div>
+<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:16px 22px">
+  <div class="l01-col">
+    <div class="l01-h">SÄÄNTÖ</div>
+    <div class="l01-rule">jos summa &gt; 10 000 € → hälytä</div>
+    <div class="l01-in">tapahtuma: 9 990 €</div>
+    <div class="l01-out l01-ok">→ ei hälytystä</div>
+    <div class="l01-miss">petos jäi huomaamatta</div>
   </div>
-  <div class="l01rule-col">
-    <div class="l01rule-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
-    <div class="l01rule-rule">punnitsee monta signaalia yhtä aikaa</div>
-    <div class="l01rule-in">tapahtuma: 9 990 €</div>
-    <div class="l01rule-meter"><span class="l01rule-mfill"></span><span class="l01rule-mlbl">97 % epäilyttävä</span></div>
-    <div class="l01rule-out l01rule-flag">⚠ hälytä</div>
+  <div class="l01-col">
+    <div class="l01-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
+    <div class="l01-sigs"><span class="l01-sig s1">summa</span><span class="l01-sig s2">sijainti</span><span class="l01-sig s3">kellonaika</span><span class="l01-sig s4">historia</span></div>
+    <div class="l01-meter"><span class="l01-mfill"></span><span class="l01-mlbl">97 % epäilyttävä</span></div>
+    <div class="l01-out l01-flag">⚠ hälytä</div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo vain yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly arvioi monta vihjettä ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia yhtä aikaa ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
 <style>
-.l01rule-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:8px}
-.l01rule-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
-.l01rule-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
-.l01rule-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
-.l01rule-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
-.l01rule-ok{color:#6FBF9B}
-.l01rule-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 5s ease-in-out infinite}
-@keyframes l01miss{0%,35%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
-.l01rule-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
-.l01rule-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 5s ease-in-out infinite}
-.l01rule-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
-@keyframes l01fill{0%{width:6%}45%{width:97%}90%{width:97%}100%{width:6%}}
-.l01rule-flag{color:oklch(0.66 0.15 305)}
-@media (prefers-reduced-motion:reduce){.l01rule-miss{opacity:1}.l01rule-mfill{animation:none;width:97%}}
+.l01-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:9px}
+.l01-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
+.l01-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
+.l01-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
+.l01-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
+.l01-ok{color:#6FBF9B}
+.l01-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 11s ease-in-out infinite}
+@keyframes l01miss{0%,40%{opacity:0}52%,94%{opacity:1}100%{opacity:0}}
+.l01-sigs{display:flex;flex-wrap:wrap;gap:5px}
+.l01-sig{font-family:var(--font-mono);font-size:9px;color:#69728F;border:1px solid #2A3450;border-radius:999px;padding:2px 8px;opacity:.3}
+.l01-sig.s1{animation:l01sig 11s ease-in-out infinite}
+.l01-sig.s2{animation:l01sig 11s ease-in-out infinite;animation-delay:.6s}
+.l01-sig.s3{animation:l01sig 11s ease-in-out infinite;animation-delay:1.2s}
+.l01-sig.s4{animation:l01sig 11s ease-in-out infinite;animation-delay:1.8s}
+@keyframes l01sig{0%{opacity:.3}18%,94%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.3}}
+.l01-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
+.l01-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 11s ease-in-out infinite}
+.l01-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
+@keyframes l01fill{0%,28%{width:4%}52%{width:97%}94%{width:97%}100%{width:4%}}
+.l01-flag{color:oklch(0.66 0.15 305)}
+@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill{animation:none}.l01-miss{opacity:1}.l01-sig{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%}}
 </style>
 
 ## Konkreettisia esimerkkejä arjesta

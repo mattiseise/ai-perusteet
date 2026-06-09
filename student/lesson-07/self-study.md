@@ -35,28 +35,24 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sujuva ei tarkoita oikeaa</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:18px 26px">
-  <div class="l07hal-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
-  <div class="l07hal-row">
-    <span class="l07hal-k">mallin varmuus</span>
-    <span class="l07hal-meter"><span class="l07hal-fill"></span></span>
-    <span class="l07hal-pct">94 %</span>
-  </div>
-  <div class="l07hal-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 milj.</div>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:18px 26px">
+  <div class="l07-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
+  <div class="l07-row"><span class="l07-k">mallin varmuus</span><span class="l07-meter"><span class="l07-fill"></span></span><span class="l07-pct">94 %</span></div>
+  <div class="l07-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 miljoonaa</div>
 </div>
-<figcaption class="ai-demo__cap">Hallusinaatio: malli voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Korkea varmuus ei takaa totuutta — tarkista faktat.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hallusinaatio voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Ehdit uskoa siihen ennen kuin huomaat virheen — korkea varmuus ei takaa totuutta.</figcaption></figure>
 <style>
-.l07hal-sent{font-family:var(--font-serif);font-size:16px;color:#E6EAF5;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 5s steps(40,end) infinite}
-@keyframes l07type{0%{width:0}40%,100%{width:24em}}
-.l07hal-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
-.l07hal-k{width:96px}
-.l07hal-meter{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
-.l07hal-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 5s ease-out infinite}
-@keyframes l07fill{0%,30%{width:0}55%,100%{width:94%}}
-.l07hal-pct{width:34px;color:#E6EAF5}
-.l07hal-fact{font-family:var(--font-mono);font-size:11px;color:#E0796B;opacity:0;animation:l07fact 5s ease-in-out infinite}
-@keyframes l07fact{0%,62%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.l07hal-sent{animation:none;width:auto;border-right:none}.l07hal-fill{animation:none;width:94%}.l07hal-fact{opacity:1}}
+.l07-sent{font-family:var(--font-serif);font-size:16px;color:#E6EAF5;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 12s steps(40,end) infinite}
+@keyframes l07type{0%{width:0}26%,100%{width:24em}}
+.l07-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
+.l07-k{width:96px}
+.l07-meter{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
+.l07-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 12s ease-out infinite}
+@keyframes l07fill{0%,22%{width:0}40%,100%{width:94%}}
+.l07-pct{width:34px;color:#E6EAF5}
+.l07-fact{font-family:var(--font-mono);font-size:11px;color:#E0796B;opacity:0;animation:l07fact 12s ease-in-out infinite}
+@keyframes l07fact{0%,60%{opacity:0}70%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l07-sent{animation:none;width:auto;border-right:none}.l07-fill{animation:none;width:94%}.l07-fact{opacity:1}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?

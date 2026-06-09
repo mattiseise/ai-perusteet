@@ -25,29 +25,33 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 > **Pysähdy hetkeksi:** Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?
 
 <figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-  <div class="l05cw-row">
-    <span class="l05cw-side">vanhin<br>↓ unohtuu</span>
-    <div class="l05cw-win">
-      <div class="l05cw-track">
-        <span class="l05cw-tk">alku</span><span class="l05cw-tk">tausta</span><span class="l05cw-tk">ohje</span><span class="l05cw-tk">kysymys</span><span class="l05cw-tk">vastaus</span><span class="l05cw-tk">tarkennus</span><span class="l05cw-tk">jatko</span><span class="l05cw-tk">uusin</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <div class="l05-scene">
+    <span class="l05-side">uusi sisään →</span>
+    <div class="l05-win">
+      <div class="l05-track">
+        <span class="l05-tk">alku</span><span class="l05-tk">tausta</span><span class="l05-tk">ohje</span><span class="l05-tk">kysymys</span><span class="l05-tk">vastaus</span><span class="l05-tk l05-new">uusin</span>
       </div>
     </div>
-    <span class="l05cw-side" style="color:oklch(0.66 0.13 208)">uusi<br>sisään →</span>
+    <div class="l05-fallen">alku ↓ ei enää näkyvissä</div>
+    <span class="l05-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
   </div>
-  <span class="l05cw-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
 </div>
-<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uutta tietoa tulee sisään oikealta, vanhin työntyy ulos vasemmalta — malli ei enää näe keskustelun alkua, vaikka kirjoitit sen itse.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uusi tieto työntyy sisään oikealta, vanhin putoaa ulos vasemmalta — eikä malli kerro sinulle siitä.</figcaption></figure>
 <style>
-.l05cw-row{display:flex;align-items:center;gap:14px}
-.l05cw-side{font-family:var(--font-mono);font-size:10px;color:#8B94B3;text-align:center;line-height:1.5;width:60px}
-.l05cw-win{position:relative;width:276px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent);mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent)}
-.l05cw-track{position:absolute;top:8px;left:0;display:flex;gap:8px;padding:0 8px;animation:l05shift 10s linear infinite}
-.l05cw-tk{flex:none;width:44px;text-align:center;font-family:var(--font-mono);font-size:10px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0;overflow:hidden;white-space:nowrap}
-.l05cw-track .l05cw-tk:last-child{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent}
-@keyframes l05shift{0%,16%{transform:translateX(0)}20%,36%{transform:translateX(-52px)}40%,56%{transform:translateX(-104px)}60%,76%{transform:translateX(-156px)}80%,100%{transform:translateX(-208px)}}
-.l05cw-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
-@media (prefers-reduced-motion:reduce){.l05cw-track{animation:none;transform:translateX(-104px)}}
+.l05-scene{position:relative;width:330px;display:flex;flex-direction:column;align-items:center;gap:10px;animation:l05scene 13s ease-in-out infinite}
+@keyframes l05scene{0%,4%{opacity:0}8%,94%{opacity:1}100%{opacity:0}}
+.l05-side{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.13 208);align-self:flex-end;margin-right:6px}
+.l05-win{position:relative;width:284px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.l05-track{position:absolute;top:8px;left:8px;display:flex;gap:8px;animation:l05push 13s ease-in-out infinite}
+.l05-tk{flex:none;width:46px;text-align:center;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0}
+.l05-new{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent;opacity:0;animation:l05newin 13s ease-in-out infinite}
+@keyframes l05push{0%,30%{transform:translateX(0)}48%,92%{transform:translateX(-54px)}100%{transform:translateX(-54px)}}
+@keyframes l05newin{0%,30%{opacity:0}48%,92%{opacity:1}100%{opacity:1}}
+.l05-fallen{font-family:var(--font-mono);font-size:9.5px;color:#69728F;border:1px dashed #3A445F;border-radius:6px;padding:4px 9px;align-self:flex-start;margin-left:6px;opacity:0;animation:l05fall 13s ease-in-out infinite}
+@keyframes l05fall{0%,30%{opacity:0;transform:translateY(-14px)}44%{opacity:1;transform:translateY(0)}92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l05-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
+@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new,.l05-fallen{animation:none}.l05-track{transform:translateX(-54px)}.l05-new,.l05-fallen{opacity:1}.l05-scene{opacity:1}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

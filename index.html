@@ -1521,38 +1521,44 @@ const L={  "lesson-01": {
 </blockquote>
 </blockquote>
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää</span>
-<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:18px 22px">
-  <div class="l01rule-col">
-    <div class="l01rule-h">SÄÄNTÖ</div>
-    <div class="l01rule-rule">jos summa &gt; 10 000 € → hälytä</div>
-    <div class="l01rule-in">tapahtuma: 9 990 €</div>
-    <div class="l01rule-out l01rule-ok">→ ei hälytystä</div>
-    <div class="l01rule-miss">petos jäi huomaamatta</div>
+<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:16px 22px">
+  <div class="l01-col">
+    <div class="l01-h">SÄÄNTÖ</div>
+    <div class="l01-rule">jos summa &gt; 10 000 € → hälytä</div>
+    <div class="l01-in">tapahtuma: 9 990 €</div>
+    <div class="l01-out l01-ok">→ ei hälytystä</div>
+    <div class="l01-miss">petos jäi huomaamatta</div>
   </div>
-  <div class="l01rule-col">
-    <div class="l01rule-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
-    <div class="l01rule-rule">punnitsee monta signaalia yhtä aikaa</div>
-    <div class="l01rule-in">tapahtuma: 9 990 €</div>
-    <div class="l01rule-meter"><span class="l01rule-mfill"></span><span class="l01rule-mlbl">97 % epäilyttävä</span></div>
-    <div class="l01rule-out l01rule-flag">⚠ hälytä</div>
+  <div class="l01-col">
+    <div class="l01-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
+    <div class="l01-sigs"><span class="l01-sig s1">summa</span><span class="l01-sig s2">sijainti</span><span class="l01-sig s3">kellonaika</span><span class="l01-sig s4">historia</span></div>
+    <div class="l01-meter"><span class="l01-mfill"></span><span class="l01-mlbl">97 % epäilyttävä</span></div>
+    <div class="l01-out l01-flag">⚠ hälytä</div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo vain yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly arvioi monta vihjettä ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia yhtä aikaa ja antaa todennäköisyyden — siksi se huomaa epätavallisen kuvion.</figcaption></figure>
 <style>
-.l01rule-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:8px}
-.l01rule-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
-.l01rule-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
-.l01rule-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
-.l01rule-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
-.l01rule-ok{color:#6FBF9B}
-.l01rule-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 5s ease-in-out infinite}
-@keyframes l01miss{0%,35%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
-.l01rule-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
-.l01rule-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 5s ease-in-out infinite}
-.l01rule-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
-@keyframes l01fill{0%{width:6%}45%{width:97%}90%{width:97%}100%{width:6%}}
-.l01rule-flag{color:oklch(0.66 0.15 305)}
-@media (prefers-reduced-motion:reduce){.l01rule-miss{opacity:1}.l01rule-mfill{animation:none;width:97%}}
+.l01-col{flex:1;max-width:240px;border:1px solid #232C44;border-radius:10px;background:#11182A;padding:14px;display:flex;flex-direction:column;gap:9px}
+.l01-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
+.l01-rule{font-family:var(--font-mono);font-size:10.5px;color:#8B94B3;line-height:1.4}
+.l01-in{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
+.l01-out{font-family:var(--font-mono);font-size:12px;font-weight:500;margin-top:auto}
+.l01-ok{color:#6FBF9B}
+.l01-miss{font-family:var(--font-mono);font-size:10px;color:#E0796B;opacity:0;animation:l01miss 11s ease-in-out infinite}
+@keyframes l01miss{0%,40%{opacity:0}52%,94%{opacity:1}100%{opacity:0}}
+.l01-sigs{display:flex;flex-wrap:wrap;gap:5px}
+.l01-sig{font-family:var(--font-mono);font-size:9px;color:#69728F;border:1px solid #2A3450;border-radius:999px;padding:2px 8px;opacity:.3}
+.l01-sig.s1{animation:l01sig 11s ease-in-out infinite}
+.l01-sig.s2{animation:l01sig 11s ease-in-out infinite;animation-delay:.6s}
+.l01-sig.s3{animation:l01sig 11s ease-in-out infinite;animation-delay:1.2s}
+.l01-sig.s4{animation:l01sig 11s ease-in-out infinite;animation-delay:1.8s}
+@keyframes l01sig{0%{opacity:.3}18%,94%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.3}}
+.l01-meter{position:relative;height:18px;border:1px solid #2A3450;border-radius:5px;overflow:hidden;background:#0E1320}
+.l01-mfill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305));animation:l01fill 11s ease-in-out infinite}
+.l01-mlbl{position:absolute;right:7px;top:2px;font-family:var(--font-mono);font-size:10px;color:#E6EAF5}
+@keyframes l01fill{0%,28%{width:4%}52%{width:97%}94%{width:97%}100%{width:4%}}
+.l01-flag{color:oklch(0.66 0.15 305)}
+@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill{animation:none}.l01-miss{opacity:1}.l01-sig{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%}}
 </style>
 
 <h2>Konkreettisia esimerkkejä arjesta</h2>
@@ -2231,29 +2237,31 @@ Vastaus: Tekoäly on väline. Se voi olla hyödyllinen tai haitallinen riippuen 
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Jos tekoäly olisi ihmistä parempi lähes kaikessa ajattelutyössä, kuka päättäisi, mihin sitä käytetään? Millaisia sääntöjä, valvontaa ja vastuuta tällainen järjestelmä vaatisi?</p>
 </blockquote>
 </blockquote>
-<figure class="ai-demo"><span class="ai-demo__tag">// missä tekoäly menee nyt</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// missä tekoäly menee — ja liikkuva raja</span>
 <div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:0 22px">
-  <div class="l02lvl-track">
-    <div class="l02lvl-step"><span class="l02lvl-dot"></span>Kapea</div>
-    <div class="l02lvl-step"><span class="l02lvl-dot"></span>Generatiivinen</div>
-    <div class="l02lvl-step l02lvl-fut"><span class="l02lvl-dot"></span>AGI</div>
-    <div class="l02lvl-step l02lvl-fut"><span class="l02lvl-dot"></span>ASI</div>
+  <div class="l02-track">
+    <div class="l02-step"><span class="l02-dot"></span>Kapea</div>
+    <div class="l02-step"><span class="l02-dot"></span>Generatiivinen</div>
+    <div class="l02-step l02-fut"><span class="l02-dot"></span>AGI</div>
+    <div class="l02-step l02-fut"><span class="l02-dot"></span>ASI</div>
+    <span class="l02-line"></span>
   </div>
-  <div class="l02lvl-marker">▲ OLEMME TÄSSÄ</div>
+  <div class="l02-marker">▲ OLEMME TÄSSÄ</div>
 </div>
-<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista. AGI ja ASI ovat yhä hypoteettisia — eikä raja ole selvä, koska "maalitolpat liikkuvat", kun kyvyt kasvavat.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista. AGI ja ASI ovat yhä hypoteettisia — eikä raja ole kiinteä, sillä "maalitolpat liikkuvat", kun kyvyt kasvavat.</figcaption></figure>
 <style>
-.l02lvl-track{display:flex;align-items:center}
-.l02lvl-step{position:relative;font-family:var(--font-mono);font-size:11.5px;color:#C7CEE6;padding:9px 16px;border:1px solid #2A3450;border-radius:8px;background:#1A2236;margin:0 14px;display:flex;align-items:center;gap:8px}
-.l02lvl-track .l02lvl-step:not(:last-child)::after{content:"→";position:absolute;right:-18px;color:#3A445F;font-size:13px}
-.l02lvl-dot{width:7px;height:7px;border-radius:50%;background:oklch(0.66 0.15 264)}
-.l02lvl-fut{color:#69728F;border-style:dashed;background:transparent;animation:l02shim 3.5s ease-in-out infinite}
-.l02lvl-fut .l02lvl-dot{background:#69728F}
-.l02lvl-fut:last-child{animation-delay:.7s}
-@keyframes l02shim{0%,100%{opacity:.4}50%{opacity:.8}}
-.l02lvl-marker{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:oklch(0.66 0.15 264);align-self:flex-start;margin-left:120px;animation:l02pulse 2.6s ease-in-out infinite}
-@keyframes l02pulse{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
-@media (prefers-reduced-motion:reduce){.l02lvl-fut,.l02lvl-marker{animation:none;opacity:.7}}
+.l02-track{position:relative;display:flex;align-items:center}
+.l02-step{position:relative;font-family:var(--font-mono);font-size:11.5px;color:#C7CEE6;padding:9px 16px;border:1px solid #2A3450;border-radius:8px;background:#1A2236;margin:0 14px;display:flex;align-items:center;gap:8px}
+.l02-track .l02-step:not(:last-child)::after{content:"→";position:absolute;right:-18px;color:#3A445F;font-size:13px}
+.l02-dot{width:7px;height:7px;border-radius:50%;background:oklch(0.66 0.15 264)}
+.l02-fut{color:#69728F;border-style:dashed;background:transparent;opacity:.55}
+.l02-fut .l02-dot{background:#69728F}
+.l02-line{position:absolute;top:-6px;bottom:-6px;width:2px;background:oklch(0.66 0.13 208);left:52%;animation:l02move 12s ease-in-out infinite}
+.l02-line::after{content:"raja";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:8.5px;color:oklch(0.66 0.13 208);white-space:nowrap}
+@keyframes l02move{0%,30%{left:52%}45%,70%{left:70%}85%,100%{left:86%}}
+.l02-marker{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:oklch(0.66 0.15 264);align-self:flex-start;margin-left:120px;animation:l02pulse 3s ease-in-out infinite}
+@keyframes l02pulse{0%,100%{opacity:.6}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.l02-line,.l02-marker{animation:none}.l02-line{left:70%}}
 </style>
 
 <h2>Yhteenveto</h2>
@@ -2935,31 +2943,47 @@ Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes tek
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?</p>
 </blockquote>
 </blockquote>
-<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava token</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava token — sana kerrallaan</span>
 <div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:16px 24px">
-  <div class="l03tok-prompt">Suomen pääkaupunki on <span class="l03tok-blank">Helsinki</span></div>
-  <div class="l03tok-bars">
-    <div class="l03tok-bar l03tok-top"><span class="l03tok-w">Helsinki</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:81%"></span></span><span class="l03tok-p">0.81</span></div>
-    <div class="l03tok-bar"><span class="l03tok-w">Turku</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:7%"></span></span><span class="l03tok-p">0.07</span></div>
-    <div class="l03tok-bar"><span class="l03tok-w">Tampere</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:5%"></span></span><span class="l03tok-p">0.05</span></div>
-    <div class="l03tok-bar"><span class="l03tok-w">Espoo</span><span class="l03tok-tr"><span class="l03tok-fill" style="--p:4%"></span></span><span class="l03tok-p">0.04</span></div>
+  <div class="l03-prompt">Suomen pääkaupunki on<span class="l03-w1"> Helsinki</span><span class="l03-w2"> ja</span><span class="l03-car">▌</span></div>
+  <div class="l03-r l03-r1">
+    <div class="l03-bar l03-top"><span class="l03-l">Helsinki</span><span class="l03-tr"><span class="l03-f" style="--p:81%"></span></span><span class="l03-p">0.81</span></div>
+    <div class="l03-bar"><span class="l03-l">Turku</span><span class="l03-tr"><span class="l03-f" style="--p:8%"></span></span><span class="l03-p">0.08</span></div>
+    <div class="l03-bar"><span class="l03-l">Tampere</span><span class="l03-tr"><span class="l03-f" style="--p:6%"></span></span><span class="l03-p">0.06</span></div>
+  </div>
+  <div class="l03-r l03-r2">
+    <div class="l03-bar l03-top"><span class="l03-l">ja</span><span class="l03-tr"><span class="l03-f" style="--p:52%"></span></span><span class="l03-p">0.52</span></div>
+    <div class="l03-bar"><span class="l03-l">on</span><span class="l03-tr"><span class="l03-f" style="--p:24%"></span></span><span class="l03-p">0.24</span></div>
+    <div class="l03-bar"><span class="l03-l">.</span><span class="l03-tr"><span class="l03-f" style="--p:14%"></span></span><span class="l03-p">0.14</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Malli ei "tiedä" vastausta. Se laskee jokaiselle mahdolliselle seuraavalle tokenille todennäköisyyden ja valitsee todennäköisimmän — tässä "Helsinki" (0.81). Sitten se toistaa saman seuraavalle sanalle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, syöttää sen takaisin ja laskee koko jakauman uudelleen seuraavalle sanalle.</figcaption></figure>
 <style>
-.l03tok-prompt{font-family:var(--font-mono);font-size:13.5px;color:#C7CEE6}
-.l03tok-blank{color:oklch(0.66 0.15 264);border-bottom:2px solid oklch(0.66 0.15 264);padding:0 3px;opacity:0;animation:l03reveal 4.5s ease-in-out infinite}
-@keyframes l03reveal{0%,45%{opacity:0}55%,92%{opacity:1}100%{opacity:0}}
-.l03tok-bars{display:flex;flex-direction:column;gap:6px}
-.l03tok-bar{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
-.l03tok-w{width:74px;text-align:right;color:#C7CEE6}
-.l03tok-tr{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
-.l03tok-fill{display:block;height:100%;width:0;background:#3A445F;animation:l03grow 4.5s ease-in-out infinite}
-.l03tok-top .l03tok-fill{background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305))}
-.l03tok-top .l03tok-w{color:#E6EAF5}
-@keyframes l03grow{0%{width:0}35%{width:var(--p)}92%{width:var(--p)}100%{width:0}}
-.l03tok-p{width:30px}
-@media (prefers-reduced-motion:reduce){.l03tok-blank{opacity:1}.l03tok-fill{animation:none;width:var(--p)}}
+.l03-prompt{font-family:var(--font-mono);font-size:13.5px;color:#C7CEE6}
+.l03-w1{color:oklch(0.66 0.15 264);opacity:0;animation:l03w1 13s ease-in-out infinite}
+.l03-w2{color:oklch(0.66 0.15 305);opacity:0;animation:l03w2 13s ease-in-out infinite}
+@keyframes l03w1{0%,34%{opacity:0}40%,100%{opacity:1}}
+@keyframes l03w2{0%,84%{opacity:0}90%,100%{opacity:1}}
+.l03-car{color:#69728F;animation:l03blink 1.1s steps(1) infinite}
+@keyframes l03blink{50%{opacity:0}}
+.l03-r{display:flex;flex-direction:column;gap:6px}
+.l03-r2{position:absolute;visibility:hidden}
+.l03-bar{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
+.l03-l{width:64px;text-align:right;color:#C7CEE6}
+.l03-tr{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
+.l03-f{display:block;height:100%;width:0;background:#3A445F}
+.l03-top .l03-f{background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305))}
+.l03-top .l03-l{color:#E6EAF5}
+.l03-r1 .l03-f{animation:l03g1 13s ease-in-out infinite}
+.l03-r2 .l03-f{animation:l03g2 13s ease-in-out infinite}
+@keyframes l03g1{0%{width:0}22%{width:var(--p)}40%{width:var(--p)}46%,100%{width:0}}
+@keyframes l03g2{0%,52%{width:0}72%{width:var(--p)}88%{width:var(--p)}100%{width:0}}
+.l03-p{width:30px}
+.l03-r1{animation:l03show1 13s steps(1) infinite}
+.l03-r2{animation:l03show2 13s steps(1) infinite}
+@keyframes l03show1{0%,46%{visibility:visible}47%,100%{visibility:hidden}}
+@keyframes l03show2{0%,46%{visibility:hidden}47%,100%{visibility:visible;position:static}}
+@media (prefers-reduced-motion:reduce){.l03-w1,.l03-r1 .l03-f{animation:none}.l03-w1{opacity:1}.l03-r1 .l03-f{width:var(--p)}.l03-r2{display:none}.l03-w2{display:none}}
 </style>
 
 <h2>Koulutusdata — se, mistä malli oppii</h2>
@@ -4429,29 +4453,33 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 </blockquote>
 </blockquote>
 <figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna on täynnä — vanhin putoaa</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-  <div class="l05cw-row">
-    <span class="l05cw-side">vanhin<br>↓ unohtuu</span>
-    <div class="l05cw-win">
-      <div class="l05cw-track">
-        <span class="l05cw-tk">alku</span><span class="l05cw-tk">tausta</span><span class="l05cw-tk">ohje</span><span class="l05cw-tk">kysymys</span><span class="l05cw-tk">vastaus</span><span class="l05cw-tk">tarkennus</span><span class="l05cw-tk">jatko</span><span class="l05cw-tk">uusin</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <div class="l05-scene">
+    <span class="l05-side">uusi sisään →</span>
+    <div class="l05-win">
+      <div class="l05-track">
+        <span class="l05-tk">alku</span><span class="l05-tk">tausta</span><span class="l05-tk">ohje</span><span class="l05-tk">kysymys</span><span class="l05-tk">vastaus</span><span class="l05-tk l05-new">uusin</span>
       </div>
     </div>
-    <span class="l05cw-side" style="color:oklch(0.66 0.13 208)">uusi<br>sisään →</span>
+    <div class="l05-fallen">alku ↓ ei enää näkyvissä</div>
+    <span class="l05-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
   </div>
-  <span class="l05cw-cap">ikkuna: 5 muistipaikkaa · TÄYNNÄ</span>
 </div>
-<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uutta tietoa tulee sisään oikealta, vanhin työntyy ulos vasemmalta — malli ei enää näe keskustelun alkua, vaikka kirjoitit sen itse.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen. Kun uusi tieto työntyy sisään oikealta, vanhin putoaa ulos vasemmalta — eikä malli kerro sinulle siitä.</figcaption></figure>
 <style>
-.l05cw-row{display:flex;align-items:center;gap:14px}
-.l05cw-side{font-family:var(--font-mono);font-size:10px;color:#8B94B3;text-align:center;line-height:1.5;width:60px}
-.l05cw-win{position:relative;width:276px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent);mask-image:linear-gradient(90deg,transparent,#000 13%,#000 87%,transparent)}
-.l05cw-track{position:absolute;top:8px;left:0;display:flex;gap:8px;padding:0 8px;animation:l05shift 10s linear infinite}
-.l05cw-tk{flex:none;width:44px;text-align:center;font-family:var(--font-mono);font-size:10px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0;overflow:hidden;white-space:nowrap}
-.l05cw-track .l05cw-tk:last-child{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent}
-@keyframes l05shift{0%,16%{transform:translateX(0)}20%,36%{transform:translateX(-52px)}40%,56%{transform:translateX(-104px)}60%,76%{transform:translateX(-156px)}80%,100%{transform:translateX(-208px)}}
-.l05cw-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
-@media (prefers-reduced-motion:reduce){.l05cw-track{animation:none;transform:translateX(-104px)}}
+.l05-scene{position:relative;width:330px;display:flex;flex-direction:column;align-items:center;gap:10px;animation:l05scene 13s ease-in-out infinite}
+@keyframes l05scene{0%,4%{opacity:0}8%,94%{opacity:1}100%{opacity:0}}
+.l05-side{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.13 208);align-self:flex-end;margin-right:6px}
+.l05-win{position:relative;width:284px;height:46px;border:1px solid #2A3450;border-radius:8px;overflow:hidden;background:#11182A;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.l05-track{position:absolute;top:8px;left:8px;display:flex;gap:8px;animation:l05push 13s ease-in-out infinite}
+.l05-tk{flex:none;width:46px;text-align:center;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 0}
+.l05-new{color:#0B0F1A;background:oklch(0.66 0.13 208);border-color:transparent;opacity:0;animation:l05newin 13s ease-in-out infinite}
+@keyframes l05push{0%,30%{transform:translateX(0)}48%,92%{transform:translateX(-54px)}100%{transform:translateX(-54px)}}
+@keyframes l05newin{0%,30%{opacity:0}48%,92%{opacity:1}100%{opacity:1}}
+.l05-fallen{font-family:var(--font-mono);font-size:9.5px;color:#69728F;border:1px dashed #3A445F;border-radius:6px;padding:4px 9px;align-self:flex-start;margin-left:6px;opacity:0;animation:l05fall 13s ease-in-out infinite}
+@keyframes l05fall{0%,30%{opacity:0;transform:translateY(-14px)}44%{opacity:1;transform:translateY(0)}92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l05-cap{font-family:var(--font-mono);font-size:10px;color:#8B94B3;letter-spacing:.06em}
+@media (prefers-reduced-motion:reduce){.l05-scene,.l05-track,.l05-new,.l05-fallen{animation:none}.l05-track{transform:translateX(-54px)}.l05-new,.l05-fallen{opacity:1}.l05-scene{opacity:1}}
 </style>
 
 <h2>Miten tieto putoaa ulos ikkunasta</h2>
@@ -5990,28 +6018,24 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten rakennetaan tehokas **mu
 </blockquote>
 </blockquote>
 <figure class="ai-demo"><span class="ai-demo__tag">// sujuva ei tarkoita oikeaa</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:18px 26px">
-  <div class="l07hal-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
-  <div class="l07hal-row">
-    <span class="l07hal-k">mallin varmuus</span>
-    <span class="l07hal-meter"><span class="l07hal-fill"></span></span>
-    <span class="l07hal-pct">94 %</span>
-  </div>
-  <div class="l07hal-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 milj.</div>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:18px 26px">
+  <div class="l07-sent">"Helsingissä asuu noin 3 miljoonaa ihmistä."</div>
+  <div class="l07-row"><span class="l07-k">mallin varmuus</span><span class="l07-meter"><span class="l07-fill"></span></span><span class="l07-pct">94 %</span></div>
+  <div class="l07-fact">✗ ei pidä paikkaansa — oikea luku ~0,66 miljoonaa</div>
 </div>
-<figcaption class="ai-demo__cap">Hallusinaatio: malli voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Korkea varmuus ei takaa totuutta — tarkista faktat.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hallusinaatio voi esittää väärän tiedon yhtä sujuvasti ja itsevarmasti kuin oikean. Ehdit uskoa siihen ennen kuin huomaat virheen — korkea varmuus ei takaa totuutta.</figcaption></figure>
 <style>
-.l07hal-sent{font-family:var(--font-serif);font-size:16px;color:#E6EAF5;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 5s steps(40,end) infinite}
-@keyframes l07type{0%{width:0}40%,100%{width:24em}}
-.l07hal-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
-.l07hal-k{width:96px}
-.l07hal-meter{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
-.l07hal-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 5s ease-out infinite}
-@keyframes l07fill{0%,30%{width:0}55%,100%{width:94%}}
-.l07hal-pct{width:34px;color:#E6EAF5}
-.l07hal-fact{font-family:var(--font-mono);font-size:11px;color:#E0796B;opacity:0;animation:l07fact 5s ease-in-out infinite}
-@keyframes l07fact{0%,62%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.l07hal-sent{animation:none;width:auto;border-right:none}.l07hal-fill{animation:none;width:94%}.l07hal-fact{opacity:1}}
+.l07-sent{font-family:var(--font-serif);font-size:16px;color:#E6EAF5;overflow:hidden;white-space:nowrap;border-right:2px solid oklch(0.66 0.15 305);width:0;animation:l07type 12s steps(40,end) infinite}
+@keyframes l07type{0%{width:0}26%,100%{width:24em}}
+.l07-row{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#8B94B3}
+.l07-k{width:96px}
+.l07-meter{flex:1;height:13px;background:#11182A;border:1px solid #232C44;border-radius:4px;overflow:hidden}
+.l07-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,oklch(0.66 0.13 208),oklch(0.66 0.15 264));animation:l07fill 12s ease-out infinite}
+@keyframes l07fill{0%,22%{width:0}40%,100%{width:94%}}
+.l07-pct{width:34px;color:#E6EAF5}
+.l07-fact{font-family:var(--font-mono);font-size:11px;color:#E0796B;opacity:0;animation:l07fact 12s ease-in-out infinite}
+@keyframes l07fact{0%,60%{opacity:0}70%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l07-sent{animation:none;width:auto;border-right:none}.l07-fill{animation:none;width:94%}.l07-fact{opacity:1}}
 </style>
 
 <h2>Miksi tekoäly ei ole totuuskone?</h2>
@@ -10309,29 +10333,32 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 <p>Kuvittele tilanne. Sinulla on esseen aihe ”Tekoäly työssä”, ja pyydät tekoälyä auttamaan. Ensimmäisellä kerralla kirjoitat: ”Kerro tekoälystä.” Vastaus on yleinen eikä auta kovin paljon. Toisella kerralla kirjoitat: ”Kerro tekoälystä esseeseeni, jonka kohdeyleisö on toisen asteen opiskelijat.” Vastaus on jo parempi. Kolmannella kerralla kirjoitat: ”Kirjoita 500 sanan johdanto esseeseeni, jonka aihe on ’Tekoäly työssä’. Kohdeyleisö on toisen asteen opiskelijat, joilla ei ole teknistä taustaa. Aloita sillä, miten tekoäly muuttaa jokapäiväistä työtä.”</p>
 <p>Jokainen kierros antaa tekoälylle lisää <strong>kontekstia</strong>, ja siksi jokainen vastaus on parempi kuin edellinen. Tämä ei ole magiaa, vaan järkevää viestintää: mitä tarkemmin kerrot, mitä tarvitset, sitä paremman vastauksen saat.</p>
 <p><strong>Konteksti</strong> tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen <em>sinun</em> tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan <em>sinun</em> kysymyksestäsi, <em>sinun</em> tavoitteistasi ja <em>sinun</em> käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö, eri määrä kontekstia</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:14px 22px">
-  <div class="l12prm-card">
-    <div class="l12prm-q">"Kirjoita viesti."</div>
-    <div class="l12prm-a l12prm-vague">→ "Hei! Mitä kuuluu?" <span class="l12prm-tag">epätarkka</span></div>
-  </div>
-  <div class="l12prm-card l12prm-good">
-    <div class="l12prm-q">"Kirjoita 3 lauseen kohtelias viesti opettajalle: myöhästyn huomisen kokeesta sairauden takia ja haluan uuden ajan."</div>
-    <div class="l12prm-a l12prm-rich">→ "Hei! Valitettavasti sairastuin enkä pääse huomiseen kokeeseen. Voisinko sopia korvaavan ajan? Ystävällisin terveisin." <span class="l12prm-tag l12prm-tg">osuva</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// enemmän kontekstia → terävämpi vastaus</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:16px 24px">
+  <div class="l12-ctx"><span class="l12-cl">konteksti:</span><span class="l12-b b1">tilanne</span><span class="l12-b b2">tavoite</span><span class="l12-b b3">sävy</span><span class="l12-b b4">rajat</span></div>
+  <div class="l12-ans">
+    <div class="l12-vague">→ "Hei! Mitä kuuluu?" <span class="l12-tag">epätarkka</span></div>
+    <div class="l12-rich">→ "Hei! Valitettavasti sairastuin enkä pääse huomiseen kokeeseen. Voisinko sopia korvaavan ajan? Ystävällisin terveisin." <span class="l12-tag l12-tg">osuva</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Sama tehtävä, eri tulos. Mitä enemmän kontekstia annat — tilanne, tavoite, sävy, rajat — sitä tarkemman ja käyttökelpoisemman vastauksen malli osaa antaa.</figcaption></figure>
+<figcaption class="ai-demo__cap">Sama pyyntö. Vastaus ei terävöidy mallin mielialasta vaan kontekstista: kun annat tilanteen, tavoitteen, sävyn ja rajat, vasta silloin vastaus muuttuu osuvaksi.</figcaption></figure>
 <style>
-.l12prm-card{border:1px solid #232C44;border-radius:9px;background:#11182A;padding:11px 13px;display:flex;flex-direction:column;gap:7px}
-.l12prm-good{border-color:#2f3b63}
-.l12prm-q{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;line-height:1.45}
-.l12prm-a{font-family:var(--font-mono);font-size:11px;line-height:1.45}
-.l12prm-vague{color:#69728F}
-.l12prm-rich{color:#E6EAF5;opacity:0;animation:l12rev 6s ease-in-out infinite}
-@keyframes l12rev{0%,30%{opacity:0}45%,92%{opacity:1}100%{opacity:0}}
-.l12prm-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B94B3;border:1px solid #2A3450;border-radius:999px;padding:1px 7px;margin-left:4px}
-.l12prm-tg{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
-@media (prefers-reduced-motion:reduce){.l12prm-rich{opacity:1}}
+.l12-ctx{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.l12-cl{font-family:var(--font-mono);font-size:10px;color:#8B94B3}
+.l12-b{font-family:var(--font-mono);font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:999px;padding:2px 9px;opacity:.3}
+.l12-b.b1{animation:l12b 13s ease-in-out infinite}
+.l12-b.b2{animation:l12b 13s ease-in-out infinite;animation-delay:.8s}
+.l12-b.b3{animation:l12b 13s ease-in-out infinite;animation-delay:1.6s}
+.l12-b.b4{animation:l12b 13s ease-in-out infinite;animation-delay:2.4s}
+@keyframes l12b{0%,4%{opacity:.3}20%,92%{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.3}}
+.l12-ans{font-family:var(--font-mono);font-size:11px;line-height:1.5;position:relative;min-height:54px}
+.l12-vague{color:#69728F;animation:l12v 13s ease-in-out infinite}
+@keyframes l12v{0%,40%{opacity:1}50%,100%{opacity:0}}
+.l12-rich{position:absolute;top:0;color:#E6EAF5;opacity:0;animation:l12r 13s ease-in-out infinite}
+@keyframes l12r{0%,48%{opacity:0}58%,94%{opacity:1}100%{opacity:0}}
+.l12-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B94B3;border:1px solid #2A3450;border-radius:999px;padding:1px 7px;margin-left:4px}
+.l12-tg{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
+@media (prefers-reduced-motion:reduce){.l12-b,.l12-vague,.l12-rich{animation:none}.l12-b{opacity:1;color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l12-vague{opacity:0}.l12-rich{opacity:1}}
 </style>
 
 <h2>Konteksti: miksi se on tärkeää?</h2>
@@ -14281,29 +14308,30 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 </ul>
 <p>Samalla käsittelemme <strong>tekijänoikeuksia</strong> ja <strong>etiikkaa</strong>. Ne eivät ole sivuasioita, vaan olennainen osa tekoälyn käyttöä. Kun tekoäly tuottaa kuvan, musiikkia tai videon, pitää miettiä ainakin kolmea asiaa: mistä tekoäly on oppinut, saako tuotosta käyttää ja onko reilua väittää tekoälyn tekemää työtä kokonaan omaksi.</p>
 <p><strong>📌 Huomio:</strong> Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuttuu tokeneiksi</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:14px;padding:0 22px">
-  <div class="l16mm-srcs">
-    <div class="l16mm-src">TEKSTI<span class="l16mm-stream"><i></i><i></i><i></i></span></div>
-    <div class="l16mm-src">KUVA<span class="l16mm-stream l16mm-d2"><i></i><i></i><i></i></span></div>
-    <div class="l16mm-src">ÄÄNI<span class="l16mm-stream l16mm-d3"><i></i><i></i><i></i></span></div>
-  </div>
-  <div class="l16mm-model">MALLI</div>
-  <div class="l16mm-out">→ vastaus</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// kaikki muuntuu samanlaisiksi tokeneiksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:0;padding:0 20px">
+  <div class="l16-srcs"><span class="l16-src s-txt">TEKSTI</span><span class="l16-src s-img">KUVA</span><span class="l16-src s-aud">ÄÄNI</span></div>
+  <div class="l16-lane"><i class="l16-p p1"></i><i class="l16-p p2"></i><i class="l16-p p3"></i><span class="l16-gate">muunnin</span></div>
+  <div class="l16-model">MALLI</div>
+  <div class="l16-out">→ vastaus</div>
 </div>
-<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri tavoin. Jokainen syöte muunnetaan samanlaisiksi tokeneiksi (vektoreiksi), joita malli käsittelee yhdessä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Multimodaalinen malli ei käsittele tekstiä, kuvaa ja ääntä eri koneistoilla. Erilaiset syötteet muunnetaan matkalla samanlaisiksi tokeneiksi, joita malli käsittelee yhdessä.</figcaption></figure>
 <style>
-.l16mm-srcs{display:flex;flex-direction:column;gap:14px}
-.l16mm-src{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:#8B94B3;width:150px}
-.l16mm-stream{position:relative;flex:1;height:12px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%);mask-image:linear-gradient(90deg,transparent,#000 25%,#000 100%)}
-.l16mm-stream i{position:absolute;top:2px;width:8px;height:8px;border-radius:2px;background:oklch(0.66 0.15 264);animation:l16flow 2.8s linear infinite}
-.l16mm-stream i:nth-child(2){animation-delay:.9s}.l16mm-stream i:nth-child(3){animation-delay:1.8s}
-.l16mm-d2 i{background:oklch(0.66 0.15 305)}.l16mm-d3 i{background:oklch(0.66 0.13 208)}
-@keyframes l16flow{from{left:-10px}to{left:100%}}
-.l16mm-model{font-family:var(--font-mono);font-size:12px;color:#E6EAF5;border:1.5px solid oklch(0.66 0.15 264);border-radius:10px;padding:18px 16px;background:#11182A;animation:l16pulse 2.8s ease-in-out infinite}
-@keyframes l16pulse{0%,100%{box-shadow:0 0 0 0 rgba(120,140,255,0)}50%{box-shadow:0 0 0 4px rgba(120,140,255,.12)}}
-.l16mm-out{font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
-@media (prefers-reduced-motion:reduce){.l16mm-stream i,.l16mm-model{animation:none}}
+.l16-srcs{display:flex;flex-direction:column;gap:16px}
+.l16-src{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;color:#8B94B3;border:1px solid #2A3450;border-radius:6px;padding:5px 8px;text-align:center;width:64px}
+.l16-lane{position:relative;width:150px;height:90px;margin:0 8px}
+.l16-gate{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-mono);font-size:8.5px;color:#69728F;border-left:1px dashed #3A445F;border-right:1px dashed #3A445F;padding:18px 6px}
+.l16-p{position:absolute;left:0;width:11px;height:11px}
+.l16-p1{top:8px;background:oklch(0.66 0.15 264);border-radius:50%;animation:l16a 6s ease-in-out infinite}
+.l16-p2{top:40px;background:oklch(0.66 0.15 305);border-radius:2px;transform:rotate(45deg);animation:l16b 6s ease-in-out infinite}
+.l16-p3{top:72px;background:oklch(0.66 0.13 208);border-radius:0;animation:l16c 6s ease-in-out infinite}
+/* phase 1: travel to gate keeping own shape/color; phase 2: become identical teal squares to model */
+@keyframes l16a{0%{left:0;top:8px;opacity:0}10%{opacity:1}45%{left:46%;top:8px;border-radius:50%;background:oklch(0.66 0.15 264)}55%{left:50%;top:40px;border-radius:2px;background:oklch(0.66 0.13 208)}100%{left:130px;top:40px;border-radius:2px;background:oklch(0.66 0.13 208);opacity:1}}
+@keyframes l16b{0%{left:0;opacity:0}10%{opacity:1}45%{left:46%;top:40px}55%{left:50%;top:40px;border-radius:2px;background:oklch(0.66 0.13 208);transform:rotate(0)}100%{left:130px;top:40px;background:oklch(0.66 0.13 208);transform:rotate(0);opacity:1}}
+@keyframes l16c{0%{left:0;top:72px;opacity:0}10%{opacity:1}45%{left:46%;top:72px}55%{left:50%;top:40px;background:oklch(0.66 0.13 208)}100%{left:130px;top:40px;background:oklch(0.66 0.13 208);opacity:1}}
+.l16-model{font-family:var(--font-mono);font-size:12px;color:#E6EAF5;border:1.5px solid oklch(0.66 0.13 208);border-radius:10px;padding:16px 14px;background:#11182A}
+.l16-out{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;margin-left:8px}
+@media (prefers-reduced-motion:reduce){.l16-p{animation:none}.l16-p1,.l16-p2,.l16-p3{left:120px;top:40px;background:oklch(0.66 0.13 208);border-radius:2px;transform:none;opacity:1}}
 </style>
 
 <h2>Kuvageneraatio — tekoälyllä kuvia tekstistä</h2>
@@ -17457,38 +17485,46 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 <p><strong>Chatbot</strong> on ohjelma, joka vastaa käyttäjän kirjoittamiin viesteihin. Se voi vaikuttaa hyvinkin älykkäältä, ja erityisesti nykyaikaiset chatbotit, kuten ChatGPT, osaavat käydä sujuvaa keskustelua. Chatbotin toiminta on kuitenkin pääosin reaktiivista: se odottaa käyttäjän viestiä, vastaa siihen ja jää sitten odottamaan seuraavaa viestiä.</p>
 <p>Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, vaan voi myös tarkkailla tilannetta taustalla ja käynnistää toimintoja itsenäisesti ilman erillistä käskyä.</p>
 <p>Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti toimii silmukassa</span>
-<div class="ai-demo__stage" style="display:flex;gap:20px;align-items:center;justify-content:center;padding:0 22px">
-  <div class="l19ba-col">
-    <div class="l19ba-h">BOTTI</div>
-    <div class="l19ba-chain"><span class="l19ba-node">kysymys</span><span class="l19ba-arr">→</span><span class="l19ba-node">vastaus</span></div>
-    <div class="l19ba-stop">■ valmis (yksi askel)</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti kiertää kehää</span>
+<div class="ai-demo__stage" style="display:flex;gap:24px;align-items:center;justify-content:center;padding:0 22px">
+  <div class="l19-col">
+    <div class="l19-h">BOTTI</div>
+    <div class="l19-chain"><span class="l19-n">kysymys</span><span class="l19-ar">→</span><span class="l19-n">vastaus</span></div>
+    <div class="l19-stop">■ valmis · yksi askel</div>
   </div>
-  <div class="l19ba-col l19ba-ag">
-    <div class="l19ba-h" style="color:oklch(0.66 0.13 208)">AGENTTI</div>
-    <svg viewBox="0 0 120 120" style="width:118px;height:118px">
-      <circle cx="60" cy="60" r="42" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2" stroke-dasharray="5 8" opacity=".5"/>
-      <g class="l19ba-orbit"><circle cx="60" cy="18" r="5" fill="oklch(0.66 0.13 208)"/></g>
-      <text x="60" y="50" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">suunnittele</text>
-      <text x="60" y="62" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ käytä työkalua</text>
-      <text x="60" y="74" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ havaitse</text>
+  <div class="l19-col">
+    <div class="l19-h" style="color:oklch(0.66 0.13 208)">AGENTTI</div>
+    <svg viewBox="0 0 130 130" style="width:128px;height:128px">
+      <circle cx="65" cy="65" r="46" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
+      <g class="l19-orbit"><circle cx="65" cy="19" r="6" fill="oklch(0.66 0.13 208)"/></g>
+      <text x="65" y="16" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">suunnittele</text>
+      <text x="108" y="92" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">työkalu</text>
+      <text x="22" y="92" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#9aa3bd">havaitse</text>
     </svg>
-    <div class="l19ba-step">askel <span class="l19ba-n">3</span> → valmis ✓</div>
+    <div class="l19-step"><span class="c1">askel 1</span><span class="c2">askel 2</span><span class="c3">askel 3</span><span class="cd">✓ tavoite valmis</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja pysähtyy. Agentti kiertää silmukkaa — suunnittelee, käyttää työkaluja ja havaitsee tuloksen — ja toistaa, kunnes tavoite on saavutettu.</figcaption></figure>
+<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja pysähtyy. Agentti kiertää kehää — suunnittelee, käyttää työkalua, havaitsee tuloksen — ja toistaa askel kerrallaan, kunnes tavoite täyttyy.</figcaption></figure>
 <style>
-.l19ba-col{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;max-width:230px}
-.l19ba-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
-.l19ba-chain{display:flex;align-items:center;gap:8px}
-.l19ba-node{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 11px}
-.l19ba-arr{color:#3A445F}
-.l19ba-stop{font-family:var(--font-mono);font-size:10px;color:#69728F}
-.l19ba-orbit{transform-box:view-box;transform-origin:60px 60px;animation:l19spin 4s linear infinite}
-@keyframes l19spin{to{transform:rotate(360deg)}}
-.l19ba-step{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.13 208)}
-.l19ba-n{animation:l19count 4s steps(1) infinite}
-@media (prefers-reduced-motion:reduce){.l19ba-orbit{animation:none}}
+.l19-col{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;max-width:220px}
+.l19-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:#8B94B3}
+.l19-chain{display:flex;align-items:center;gap:8px}
+.l19-n{font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:7px 11px}
+.l19-ar{color:#3A445F}
+.l19-stop{font-family:var(--font-mono);font-size:10px;color:#69728F}
+.l19-orbit{transform-box:view-box;transform-origin:65px 65px;animation:l19spin 15s ease-in-out infinite}
+@keyframes l19spin{0%,18%{transform:rotate(0deg)}28%,46%{transform:rotate(120deg)}56%,74%{transform:rotate(240deg)}84%,100%{transform:rotate(360deg)}}
+.l19-step{position:relative;font-family:var(--font-mono);font-size:10px;height:14px;width:120px;text-align:center}
+.l19-step span{position:absolute;left:0;right:0;opacity:0}
+.l19-step .c1{color:oklch(0.66 0.13 208);animation:l19s1 15s steps(1) infinite}
+.l19-step .c2{color:oklch(0.66 0.13 208);animation:l19s2 15s steps(1) infinite}
+.l19-step .c3{color:oklch(0.66 0.13 208);animation:l19s3 15s steps(1) infinite}
+.l19-step .cd{color:#6FBF9B;animation:l19sd 15s steps(1) infinite}
+@keyframes l19s1{0%,27%{opacity:1}28%,100%{opacity:0}}
+@keyframes l19s2{28%,55%{opacity:1}0%,27%{opacity:0}56%,100%{opacity:0}}
+@keyframes l19s3{56%,83%{opacity:1}0%,55%{opacity:0}84%,100%{opacity:0}}
+@keyframes l19sd{84%,100%{opacity:1}0%,83%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l19-orbit{animation:none;transform:rotate(240deg)}.l19-step .cd{opacity:1}.l19-step .c1,.l19-step .c2,.l19-step .c3{opacity:0}}
 </style>
 
 <h2>Skripti, työnkulku ja agentti — kolme eri tasoa</h2>
@@ -18078,38 +18114,39 @@ niin että minä ajattelen.
 <p><strong>Kuudes kysymys: Onko ihmisen valvonta mahdollista?</strong> Jos ihminen voi valvoa agentin päätöksiä ja puuttua toimintaan, kun jokin menee pieleen, riski on hallittavampi. Agentti voi pyytää ihmisen apua vaikeissa tilanteissa, jolloin riskien hallinta on mahdollista. Jos valvonta on mahdotonta, agentin täytyy toimia lähes täydellisesti. Tämä on harvinaisen kallista rakentaa ja ylläpitää.</p>
 <h2>Käytännön päätöspuu kolmessa tarinassa</h2>
 <p>Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// kiinteä polku vai tilanteen mukaan</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:20px;padding:14px 22px">
+<figure class="ai-demo"><span class="ai-demo__tag">// kiinteä polku vai tilanne ratkaisee</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:22px;padding:14px 22px">
   <div class="l20-lane">
     <span class="l20-lbl">AUTOMAATIO</span>
-    <span class="l20-box">A</span><span class="l20-line"><i class="l20-dot l20-fix"></i></span><span class="l20-box">B</span><span class="l20-line"></span><span class="l20-box">C</span>
+    <span class="l20-box">A</span><span class="l20-seg"><i class="l20-dot l20-fix"></i></span><span class="l20-box">B</span><span class="l20-seg"></span><span class="l20-box">C</span>
     <span class="l20-note">aina sama polku</span>
   </div>
   <div class="l20-lane">
     <span class="l20-lbl" style="color:oklch(0.66 0.13 208)">AUTONOMIA</span>
-    <span class="l20-box">syöte</span><span class="l20-line"></span><span class="l20-dia">päätös</span>
-    <span class="l20-branches"><span class="l20-br l20-brA">→ polku X</span><span class="l20-br l20-brB">→ polku Y</span></span>
+    <span class="l20-box l20-sit">tilanne</span><span class="l20-seg"></span><span class="l20-dia">päätös</span>
+    <span class="l20-brs"><span class="l20-br brA">→ polku X</span><span class="l20-br brB">→ polku Y</span></span>
     <span class="l20-note">tilanne ratkaisee</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Agentti on autonominen: se arvioi tilanteen ja valitsee toimintatavan itse — eri syöte voi johtaa eri polulle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Autonominen agentti arvioi tilanteen ja valitsee tien itse — sama tehtävä voi eri tilanteessa johtaa eri polulle.</figcaption></figure>
 <style>
 .l20-lane{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:#C7CEE6}
-.l20-lbl{width:96px;font-size:10px;letter-spacing:.12em;color:#8B94B3}
-.l20-box{background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:5px 9px}
-.l20-line{position:relative;width:34px;height:2px;background:#2A3450}
+.l20-lbl{width:100px;font-size:10px;letter-spacing:.1em;color:#8B94B3}
+.l20-box{background:#1A2236;border:1px solid #2A3450;border-radius:6px;padding:6px 10px}
+.l20-sit{animation:l20sit 16s steps(1) infinite}
+@keyframes l20sit{0%,49%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}}
+.l20-seg{position:relative;width:40px;height:2px;background:#2A3450}
 .l20-dot{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:oklch(0.66 0.15 264)}
-.l20-fix{animation:l20fix 3.5s linear infinite}
-@keyframes l20fix{0%{left:-4px;opacity:0}10%{opacity:1}100%{left:120px;opacity:1}}
-.l20-dia{background:#11182A;border:1px solid oklch(0.66 0.13 208);transform:rotate(0);border-radius:6px;padding:6px 10px;color:#E6EAF5}
-.l20-branches{display:flex;flex-direction:column;gap:5px;margin-left:4px}
-.l20-br{font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:6px;padding:3px 8px}
-.l20-brA{animation:l20a 6s ease-in-out infinite}
-.l20-brB{animation:l20b 6s ease-in-out infinite}
-@keyframes l20a{0%,45%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:#69728F;border-color:#2A3450}}
-@keyframes l20b{0%,45%{color:#69728F;border-color:#2A3450}50%,95%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}100%{color:#69728F}}
+.l20-fix{animation:l20fix 6s ease-in-out infinite}
+@keyframes l20fix{0%{left:-4px;opacity:0}12%{opacity:1}100%{left:128px;opacity:1}}
+.l20-dia{background:#11182A;border:1px solid oklch(0.66 0.13 208);border-radius:6px;padding:6px 10px;color:#E6EAF5}
+.l20-brs{display:flex;flex-direction:column;gap:6px;margin-left:4px}
+.l20-br{font-size:10px;color:#69728F;border:1px solid #2A3450;border-radius:6px;padding:3px 9px}
+.brA{animation:l20a 16s steps(1) infinite}.brB{animation:l20b 16s steps(1) infinite}
+@keyframes l20a{0%,49%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}50%,100%{color:#69728F;border-color:#2A3450}}
+@keyframes l20b{50%,99%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}0%,49%{color:#69728F;border-color:#2A3450}}
 .l20-note{font-size:9px;color:#69728F;margin-left:auto}
-@media (prefers-reduced-motion:reduce){.l20-fix,.l20-brA,.l20-brB{animation:none}.l20-brA{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}}
+@media (prefers-reduced-motion:reduce){.l20-fix,.l20-sit,.brA,.brB{animation:none}.brA{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}}
 </style>
 
 <p><strong>Tilanne 1: Laskujen käsittely.</strong> Yritys käsittelee 100 laskua päivässä. Lasku saapuu, sen summa täytyy vahvistaa ja tiedot pitää kirjata järjestelmään. Säännöt muuttuvat jonkin verran: uusia laskuttajia tulee ja hinnat muuttuvat, mutta perusprosessi pysyy samana. Epäonnistumisen hinta on korkea, koska väärä summa voi aiheuttaa organisaatiolle taloudellista vahinkoa. Ihmisen valvonta on kuitenkin mahdollista: valvoja voi tarkistaa, että laskut on käsitelty oikein.</p>
@@ -18859,36 +18896,32 @@ niin että minä ajattelen.
 </blockquote>
 </blockquote>
 <p>Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, <strong>mitä agentin täytyy muistaa tehtävän ratkaisemiseksi</strong>.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee tarvitsemansa muistista</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:26px;padding:0 22px">
-  <div class="l21-store">
-    <div class="l21-h">PITKÄKESTOINEN MUISTI</div>
-    <div class="l21-grid"><span>tilaus #12</span><span class="l21-rel">asiakkaan toive</span><span>hinnasto</span><span>aiempi chat</span><span>ohje</span><span>palaute</span></div>
-  </div>
-  <div class="l21-arrow">haku →</div>
-  <div class="l21-work">
-    <div class="l21-h">TYÖMUISTI</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee vain tarvitsemansa</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:22px;padding:0 20px">
+  <div class="l21-store"><div class="l21-h">PITKÄKESTOINEN MUISTI</div>
+    <div class="l21-grid"><span>tilaus #12</span><span class="l21-rel">asiakkaan toive</span><span>hinnasto</span><span>aiempi chat</span><span>ohje</span><span>palaute</span></div></div>
+  <div class="l21-arr">haku →</div>
+  <div class="l21-work"><div class="l21-h">TYÖMUISTI</div>
     <div class="l21-slots"><span class="l21-old">nykyinen tehtävä</span><span class="l21-in">asiakkaan toive</span></div>
-    <div class="l21-cap">rajallinen tila</div>
-  </div>
+    <div class="l21-cap">rajallinen tila</div></div>
 </div>
-<figcaption class="ai-demo__cap">Agentin työmuisti (konteksti) on pieni ja rajallinen. Se ei pidä kaikkea mielessä, vaan hakee pitkäkestoisesta muistista juuri sen tiedon, jota tehtävä juuri nyt vaatii.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentin työmuisti on pieni eikä pidä kaikkea mielessä. Se hakee pitkäkestoisesta muistista vain sen palasen, jonka merkitys vastaa nykyistä tehtävää — ei kaikkea.</figcaption></figure>
 <style>
 .l21-store,.l21-work{border:1px solid #232C44;border-radius:9px;background:#11182A;padding:11px}
-.l21-h{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;color:#8B94B3;margin-bottom:8px}
-.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;width:210px}
-.l21-grid span{font-family:var(--font-mono);font-size:9.5px;color:#69728F;background:#161E33;border:1px solid #232C44;border-radius:5px;padding:5px 6px;text-align:center}
-.l21-rel{color:oklch(0.66 0.15 264)!important;border-color:oklch(0.66 0.15 264)!important;animation:l21rel 4.5s ease-in-out infinite}
-@keyframes l21rel{0%,100%{opacity:.5}40%,70%{opacity:1}}
-.l21-arrow{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.15 264);animation:l21pull 4.5s ease-in-out infinite}
-@keyframes l21pull{0%,30%{opacity:.3;transform:translateX(-4px)}50%{opacity:1;transform:translateX(2px)}100%{opacity:.3;transform:translateX(-4px)}}
-.l21-slots{display:flex;flex-direction:column;gap:5px;width:130px}
-.l21-slots span{font-family:var(--font-mono);font-size:9.5px;border-radius:5px;padding:6px;text-align:center}
+.l21-h{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;color:#8B94B3;margin-bottom:8px}
+.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;width:200px}
+.l21-grid span{font-family:var(--font-mono);font-size:9px;color:#69728F;background:#161E33;border:1px solid #232C44;border-radius:5px;padding:5px;text-align:center}
+.l21-rel{animation:l21rel 13s ease-in-out infinite}
+@keyframes l21rel{0%,12%{color:#69728F;border-color:#232C44}24%,92%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{color:#69728F}}
+.l21-arr{font-family:var(--font-mono);font-size:10px;color:oklch(0.66 0.15 264);opacity:.3;animation:l21arr 13s ease-in-out infinite}
+@keyframes l21arr{0%,18%{opacity:.2}34%,60%{opacity:1}80%,100%{opacity:.2}}
+.l21-slots{display:flex;flex-direction:column;gap:5px;width:124px}
+.l21-slots span{font-family:var(--font-mono);font-size:9px;border-radius:5px;padding:6px;text-align:center}
 .l21-old{color:#C7CEE6;background:#1A2236;border:1px solid #2A3450}
-.l21-in{color:#0B0F1A;background:oklch(0.66 0.15 264);animation:l21in 4.5s ease-in-out infinite}
-@keyframes l21in{0%,40%{opacity:0;transform:translateY(-6px)}55%,100%{opacity:1;transform:translateY(0)}}
+.l21-in{color:#0B0F1A;background:oklch(0.66 0.15 264);opacity:0;animation:l21in 13s ease-in-out infinite}
+@keyframes l21in{0%,40%{opacity:0;transform:translateX(-10px)}56%,92%{opacity:1;transform:translateX(0)}100%{opacity:0}}
 .l21-cap{font-family:var(--font-mono);font-size:9px;color:#69728F;margin-top:7px;text-align:center}
-@media (prefers-reduced-motion:reduce){.l21-rel,.l21-arrow,.l21-in{animation:none}.l21-in{opacity:1}}
+@media (prefers-reduced-motion:reduce){.l21-rel,.l21-arr,.l21-in{animation:none}.l21-rel{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l21-in{opacity:1}}
 </style>
 
 <h2>Pitkäaikainen muisti: vektoritietokanta merkityksen etsijänä</h2>
@@ -19690,27 +19723,33 @@ niin että ajattelen.
 <p>Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi valtaa työn tekemiseen mutta samalla estää sitä aiheuttamasta vakavaa vahinkoa.</p>
 <h2>Orkestraattori: työkalut oikeassa järjestyksessä</h2>
 <p>Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on <strong>orkestraattori</strong> eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.</p>
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkalua ja saa tuloksen</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:0 22px">
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkalua ja odottaa tulosta</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:0 22px">
   <div class="l22-row">
     <div class="l22-box">AGENTTI</div>
-    <div class="l22-pipe"><span class="l22-out">hae: sää Helsinki →</span><span class="l22-back">← 5 °C, poutaa</span></div>
+    <div class="l22-pipe">
+      <span class="l22-out">hae: sää Helsinki →</span>
+      <span class="l22-wait">työkalu työskentelee…</span>
+      <span class="l22-back">← 5 °C, poutaa</span>
+    </div>
     <div class="l22-box l22-tool">TYÖKALU<br><span>(sää-API)</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se kutsuu ulkoista työkalua (haku, tiedosto, komento, rajapinta), saa tuloksen takaisin ja käyttää sitä — näin se yltää oman koulutusdatansa ulkopuolelle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se lähettää pyynnön ulkoiselle työkalulle, odottaa tuloksen ja käyttää sitä — näin se yltää oman koulutusdatansa ulkopuolelle.</figcaption></figure>
 <style>
-.l22-row{display:flex;align-items:center;gap:0}
+.l22-row{display:flex;align-items:center}
 .l22-box{font-family:var(--font-mono);font-size:11px;color:#E6EAF5;background:#11182A;border:1px solid #2A3450;border-radius:9px;padding:16px 14px;text-align:center;line-height:1.4}
 .l22-tool{border-color:oklch(0.66 0.13 208)}.l22-tool span{color:#8B94B3;font-size:9px}
-.l22-pipe{position:relative;width:210px;height:46px}
-.l22-out,.l22-back{position:absolute;font-family:var(--font-mono);font-size:10px;white-space:nowrap;left:50%;transform:translateX(-50%)}
-.l22-out{top:2px;color:oklch(0.66 0.15 264);animation:l22out 4.4s ease-in-out infinite}
-.l22-back{bottom:2px;color:oklch(0.66 0.13 208);animation:l22back 4.4s ease-in-out infinite}
-@keyframes l22out{0%{opacity:0;transform:translate(-90%,0)}15%,45%{opacity:1;transform:translate(-50%,0)}55%,100%{opacity:0;transform:translate(-10%,0)}}
-@keyframes l22back{0%,50%{opacity:0;transform:translate(-10%,0)}65%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-90%,0)}}
+.l22-pipe{position:relative;width:220px;height:46px}
 .l22-pipe::before{content:"";position:absolute;top:23px;left:0;right:0;height:1px;background:#232C44}
-@media (prefers-reduced-motion:reduce){.l22-out{animation:none;opacity:1}.l22-back{animation:none;opacity:1;transform:translate(-50%,0)}}
+.l22-out,.l22-wait,.l22-back{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;white-space:nowrap;opacity:0}
+.l22-out{top:2px;color:oklch(0.66 0.15 264);animation:l22out 13s ease-in-out infinite}
+.l22-wait{top:18px;color:#8B94B3;animation:l22wait 13s ease-in-out infinite}
+.l22-back{bottom:2px;color:oklch(0.66 0.13 208);animation:l22back 13s ease-in-out infinite}
+@keyframes l22out{0%{opacity:0;transform:translate(-120%,0)}10%,30%{opacity:1;transform:translate(-50%,0)}38%,100%{opacity:0;transform:translate(20%,0)}}
+@keyframes l22wait{0%,38%{opacity:0}46%,60%{opacity:1}66%,100%{opacity:0}}
+@keyframes l22back{0%,64%{opacity:0;transform:translate(20%,0)}74%,92%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-120%,0)}}
+@media (prefers-reduced-motion:reduce){.l22-out,.l22-wait{animation:none;opacity:0}.l22-back{animation:none;opacity:1;transform:translate(-50%,0)}}
 </style>
 
 <p>Orkesterissa kapellimestari ei soita jokaista instrumenttia itse. Hän ohjaa: ”Viulut, teidän vuoronne.” Kun viulujen osuus on valmis, hän ohjaa seuraavan ryhmän: ”Puhaltimet, teidän vuoronne.” Jokainen muusikko on erikoistunut omaan instrumenttiinsa, ja kapellimestari koordinoi toimintaa niin, että syntyy yhtenäinen kokonaisuus. Orkesteri on vahvempi kuin yksittäinen muusikko.</p>
@@ -20658,33 +20697,33 @@ puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 </blockquote>
 </blockquote>
 <figure class="ai-demo"><span class="ai-demo__tag">// ReAct: ajattele → toimi → havaitse</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:0;padding:0 22px;position:relative">
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:0 22px">
   <svg viewBox="0 0 320 200" style="width:100%;max-width:360px;height:190px">
-    <circle cx="160" cy="100" r="70" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
-    <g class="l23-orbit"><circle cx="160" cy="30" r="6" fill="oklch(0.66 0.15 305)"/></g>
-    <g font-family="var(--font-mono)" font-size="10">
-      <text x="160" y="26" text-anchor="middle" fill="#E6EAF5" class="l23-n1">AJATTELE</text>
-      <text x="160" y="40" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n1">"tarvitsen hinnan"</text>
-      <text x="250" y="150" text-anchor="middle" fill="#E6EAF5" class="l23-n2">TOIMI</text>
-      <text x="250" y="163" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n2">"hae hinta"</text>
-      <text x="70" y="150" text-anchor="middle" fill="#E6EAF5" class="l23-n3">HAVAITSE</text>
-      <text x="70" y="163" text-anchor="middle" fill="#8B94B3" font-size="8.5" class="l23-n3">"29 €"</text>
-      <text x="160" y="104" text-anchor="middle" fill="#69728F" font-size="9">toistuu kunnes</text>
-      <text x="160" y="116" text-anchor="middle" fill="#69728F" font-size="9">tavoite valmis</text>
+    <circle cx="160" cy="100" r="68" fill="none" stroke="#232C44" stroke-width="1.5" stroke-dasharray="4 7"/>
+    <g class="l23-orbit"><circle cx="160" cy="32" r="6" fill="oklch(0.66 0.15 305)"/></g>
+    <g font-family="var(--font-mono)">
+      <text x="160" y="26" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n1">AJATTELE</text>
+      <text x="160" y="40" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n1">"tarvitsen hinnan"</text>
+      <text x="248" y="150" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n2">TOIMI</text>
+      <text x="248" y="163" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n2">"hae hinta"</text>
+      <text x="72" y="150" text-anchor="middle" font-size="10" fill="#E6EAF5" class="n3">HAVAITSE</text>
+      <text x="72" y="163" text-anchor="middle" font-size="8.5" fill="#9aa3bd" class="n3">"29 €"</text>
+      <text x="160" y="104" text-anchor="middle" font-size="9" fill="#69728F">toistuu kunnes</text>
+      <text x="160" y="116" text-anchor="middle" font-size="9" fill="#69728F">tavoite valmis</text>
     </g>
   </svg>
 </div>
-<figcaption class="ai-demo__cap">ReAct-malli vuorottelee: agentti ajattelee (mitä tarvitsen?), toimii (käyttää työkalua) ja havaitsee tuloksen — ja päättelee taas. Ajattelu ja toiminta lomittuvat, kunnes tehtävä valmistuu.</figcaption></figure>
+<figcaption class="ai-demo__cap">ReAct vuorottelee ajattelua ja toimintaa: agentti päättelee mitä tarvitsee, toimii työkalulla ja havaitsee tuloksen — ja päättelee taas. Toiminta ei ole sokeaa eikä pelkkää puhetta.</figcaption></figure>
 <style>
-.l23-orbit{transform-box:view-box;transform-origin:160px 100px;animation:l23spin 6s linear infinite}
-@keyframes l23spin{to{transform:rotate(360deg)}}
-.l23-n1{animation:l23p1 6s ease-in-out infinite}
-.l23-n2{animation:l23p2 6s ease-in-out infinite}
-.l23-n3{animation:l23p3 6s ease-in-out infinite}
-@keyframes l23p1{0%,100%{opacity:1}33%,90%{opacity:.4}}
-@keyframes l23p2{0%,28%{opacity:.4}38%,62%{opacity:1}72%,100%{opacity:.4}}
-@keyframes l23p3{0%,62%{opacity:.4}72%,95%{opacity:1}100%{opacity:.4}}
-@media (prefers-reduced-motion:reduce){.l23-orbit,.l23-n1,.l23-n2,.l23-n3{animation:none}.l23-n1,.l23-n2,.l23-n3{opacity:1}}
+.l23-orbit{transform-box:view-box;transform-origin:160px 100px;animation:l23spin 15s ease-in-out infinite}
+@keyframes l23spin{0%,18%{transform:rotate(0deg)}28%,46%{transform:rotate(120deg)}56%,74%{transform:rotate(240deg)}84%,100%{transform:rotate(360deg)}}
+.n1{animation:l23n1 15s steps(1) infinite}
+.n2{animation:l23n2 15s steps(1) infinite}
+.n3{animation:l23n3 15s steps(1) infinite}
+@keyframes l23n1{0%,27%{opacity:1}28%,92%{opacity:.35}100%{opacity:1}}
+@keyframes l23n2{0%,27%{opacity:.35}28%,55%{opacity:1}56%,100%{opacity:.35}}
+@keyframes l23n3{0%,55%{opacity:.35}56%,83%{opacity:1}84%,100%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.l23-orbit,.n1,.n2,.n3{animation:none}.n1,.n2,.n3{opacity:1}}
 </style>
 
 <h2>Ketjuajattelu: jaa ongelma osiin</h2>
@@ -21615,14 +21654,12 @@ vai sopisiko toinen malli paremmin.
     <span class="l24-box">syöte</span>
     <div class="l24-lane">
       <div class="l24-gate"><span class="l24-gatelbl">VALIDOINTI</span></div>
-      <i class="l24-chip l24-c1">teksti</i>
-      <i class="l24-chip l24-c2">data</i>
-      <i class="l24-chip l24-bad">"ohita ohjeet"</i>
+      <i class="l24-chip c1">teksti</i><i class="l24-chip c2">data</i><i class="l24-chip bad">"ohita ohjeet"</i>
     </div>
     <span class="l24-box l24-agent">AGENTTI</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Prompt injection: syötteeseen on piilotettu ohje, joka yrittää ohittaa agentin omat säännöt. Validointi erottaa luotettavat ohjeet datasta ja pysäyttää haitallisen käskyn ennen kuin se pääsee agentille.</figcaption></figure>
+<figcaption class="ai-demo__cap">Prompt injection piiloutuu tavallisen datan sekaan eikä erotu ennen tarkistusta. Validointiportti erottaa luotettavat ohjeet datasta ja pysäyttää haitallisen käskyn ennen agenttia.</figcaption></figure>
 <style>
 .l24-wrap{display:flex;align-items:center;width:100%;max-width:560px}
 .l24-box{flex:none;font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:7px;padding:9px 11px}
@@ -21632,14 +21669,14 @@ vai sopisiko toinen malli paremmin.
 .l24-gate{position:absolute;top:8px;left:62%;width:2px;height:46px;background:oklch(0.66 0.13 208)}
 .l24-gatelbl{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:oklch(0.66 0.13 208)}
 .l24-chip{position:absolute;top:19px;font-style:normal;font-family:var(--font-mono);font-size:9.5px;color:#C7CEE6;background:#161E33;border:1px solid #2A3450;border-radius:5px;padding:3px 7px;white-space:nowrap}
-.l24-c1{animation:l24pass 4.8s linear infinite}
-.l24-c2{animation:l24pass 4.8s linear infinite;animation-delay:.7s}
-.l24-bad{color:#E0796B;border-color:#E0796B;animation:l24block 4.8s ease-in-out infinite;animation-delay:1.6s}
-.l24-bad::after{content:" ✗";opacity:0;animation:l24x 4.8s ease-in-out infinite;animation-delay:1.6s}
-@keyframes l24pass{0%{left:-8%;opacity:0}8%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
-@keyframes l24block{0%{left:-8%;opacity:0}10%{opacity:1}45%{left:54%;opacity:1}55%{left:57%}62%{left:54%}100%{left:54%;opacity:.85}}
-@keyframes l24x{0%,46%{opacity:0}54%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.l24-c1,.l24-c2,.l24-bad,.l24-bad::after{animation:none}.l24-bad{left:54%;opacity:1}.l24-c1{left:80%;opacity:1}}
+.c1{animation:l24pass 13s linear infinite}
+.c2{animation:l24pass 13s linear infinite;animation-delay:1.4s}
+.bad{animation:l24block 13s ease-in-out infinite;animation-delay:2.8s}
+.bad::after{content:" ✗";opacity:0;animation:l24x 13s ease-in-out infinite;animation-delay:2.8s}
+@keyframes l24pass{0%{left:-8%;opacity:0}6%{opacity:1}88%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes l24block{0%{left:-8%;opacity:0;color:#C7CEE6;border-color:#2A3450}8%{opacity:1}40%{left:54%;color:#C7CEE6;border-color:#2A3450}52%{left:54%;color:#E0796B;border-color:#E0796B}60%{left:57%}68%{left:54%}100%{left:54%;opacity:.9;color:#E0796B;border-color:#E0796B}}
+@keyframes l24x{0%,52%{opacity:0}60%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.c1,.c2,.bad,.bad::after{animation:none}.bad{left:54%;opacity:1;color:#E0796B;border-color:#E0796B}.c1{left:82%;opacity:1}}
 </style>
 
 <hr />
