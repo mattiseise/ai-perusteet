@@ -21,6 +21,32 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 
 **📌 Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// monta virtaa, yksi malli</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <svg viewBox="0 0 320 180" style="width:90%;height:90%" preserveAspectRatio="xMidYMid meet">
+    <g stroke-width="2" fill="none" stroke-dasharray="5 7">
+      <path class="l16mm-flow" d="M30 40 C120 40 140 90 200 90" stroke="oklch(0.66 0.15 264)"/>
+      <path class="l16mm-flow" style="animation-delay:.6s" d="M30 90 C120 90 140 90 200 90" stroke="oklch(0.66 0.15 305)"/>
+      <path class="l16mm-flow" style="animation-delay:1.2s" d="M30 140 C120 140 140 90 200 90" stroke="oklch(0.66 0.13 208)"/>
+    </g>
+    <text x="24" y="36" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">teksti</text>
+    <text x="24" y="94" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">kuva</text>
+    <text x="24" y="146" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="#8B94B3">ääni</text>
+    <circle class="l16mm-hub" cx="210" cy="90" r="14" fill="none" stroke="#E6EAF5" stroke-width="2"/>
+    <rect x="252" y="80" width="40" height="20" rx="5" fill="oklch(0.66 0.15 264)"/>
+    <text x="272" y="120" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">tuotos</text>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Multimodaaliset työkalut yhdistävät teksti-, kuva- ja äänivirrat samaan malliin — ja tuottavat niistä uutta sisältöä.</figcaption></figure>
+
+<style>
+.l16mm-flow{animation:l16mmFlow 3.5s linear infinite}
+@keyframes l16mmFlow{to{stroke-dashoffset:-24}}
+.l16mm-hub{animation:l16mmPulse 3.4s ease-in-out infinite}
+@keyframes l16mmPulse{0%,100%{opacity:.5;stroke-width:2}50%{opacity:1;stroke-width:3}}
+@media (prefers-reduced-motion:reduce){.l16mm-flow,.l16mm-hub{animation:none}.l16mm-hub{opacity:.9}}
+</style>
+
 ## Kuvageneraatio — tekoälyllä kuvia tekstistä
 
 **Kuvageneraatio** tarkoittaa sitä, että tekoäly luo kuvan käyttäjän tekstikuvauksen perusteella. Voit esimerkiksi kirjoittaa:
@@ -51,7 +77,7 @@ Hyvä kuvaprompti ei ole vain "tee hieno kuva". Parempi prompti kertoo, mitä ku
 
 **Esimerkki hyvästä kuvapromptista:**
 
-"Luo vaakasuuntainen 16:9-kuva esityksen alkuun. Kuvassa on ensimmäisen vuoden tieto- ja viestintätekniikan opiskelija, joka tutkii tekoälytyökaluja tietokoneella. Tyyli on moderni, selkeä ja hieman futuristinen, mutta ei liian scifi. Väreinä sininen ja violetti. Ei tekstiä kuvaan."
+"Luo vaakasuuntainen 16:9-kuva esityksen alkuun. Kuvassa on ensimmäisen vuoden opiskelija, joka tutkii tekoälytyökaluja tietokoneella. Tyyli on moderni, selkeä ja hieman futuristinen, mutta ei liian scifi. Väreinä sininen ja violetti. Ei tekstiä kuvaan."
 
 Huomaa lopun ohje "Ei tekstiä kuvaan". Se on usein järkevää, koska tekoälyn luoma teksti kuvassa voi sisältää virheitä.
 
@@ -65,7 +91,7 @@ Aloittelijalle Midjourney voi tuntua hieman erikoisemmalta kuin ChatGPT:n kuvage
 
 **Esimerkki Midjourney-tyylisestä promptista:**
 
-"futuristic vocational school classroom, students learning programming with AI assistants, realistic lighting, clean modern design, cinematic composition, 16:9"
+"futuristic classroom, students working with AI assistants on laptops, realistic lighting, clean modern design, cinematic composition, 16:9"
 
 Midjourneyssä käytetään usein myös lisäasetuksia, kuten kuvasuhdetta. Esimerkiksi 16:9 sopii esitysdioihin.
 
@@ -242,7 +268,7 @@ Videopromptissa kannattaa kertoa:
 
 **✓ Parempi prompti:**
 
-"Tee 6 sekunnin vaakasuuntainen video modernista tieto- ja viestintätekniikan luokasta. Kamera liikkuu hitaasti vasemmalta oikealle. Opiskelijat työskentelevät tietokoneilla rauhallisesti. Tyyli on realistinen, valoisa ja opetusmateriaaliin sopiva. Ei tekstiä, ei logoja, ei tunnistettavia oikeita henkilöitä."
+"Tee 6 sekunnin vaakasuuntainen video modernista luokkahuoneesta. Kamera liikkuu hitaasti vasemmalta oikealle. Opiskelijat työskentelevät tietokoneilla rauhallisesti. Tyyli on realistinen, valoisa ja opetusmateriaaliin sopiva. Ei tekstiä, ei logoja, ei tunnistettavia oikeita henkilöitä."
 
 **Tärkeä huomio:** jos tarvitset tarkkaa faktaa tai oikeaa tapahtumaa, älä luo sitä tekoälyvideona niin, että katsoja voisi luulla sitä oikeaksi tallenteeksi. Merkitse tekoälyllä luotu sisältö selvästi.
 

@@ -34,7 +34,7 @@ Tekninen rajoitus, joka estää tekoälyä muistamasta rajattomasti kaikkea. Joh
 
 ## Projektikonteksti (project context)
 
-Tiedot, jotka ovat tärkeitä tietyn IT-projektin kaikissa keskusteluissa — kehysteknologia, käyttäjäroolit, tietokanta. Ankkuroidaan toistuvasti.
+Tiedot, jotka ovat tärkeitä tietyn projektin kaikissa keskusteluissa — esimerkiksi aihe, tavoite, tyyli ja keskeiset rajaukset. Ankkuroidaan toistuvasti.
 
 ## Uuden ikkunan avaaminen (opening a new window)
 

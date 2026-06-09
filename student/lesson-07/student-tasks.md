@@ -14,7 +14,7 @@ Kysy tekoälyltä **kaksi spesifiä kysymystä**, joihin oikea vastaus on tarkis
 
 - Kuvitteellinen elokuva, kirja tai henkilö: *"Kerro elokuvasta 'Sininen Vuori' (1987)."*
 - Hyvin spesifi tekninen yksityiskohta: *"Mitä parametreja Pythonin `os.path.realpath()` ottaa version 3.12 mukaan?"*
-- Sisäpiirikysymys organisaatiosta: *"Kuka on Business College Helsingin rehtori vuonna 2026?"*
+- Sisäpiirikysymys organisaatiosta: *"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"*
 
 Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.
 

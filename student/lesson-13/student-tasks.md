@@ -1,6 +1,6 @@
 # Opiskelutehtävät — AI työparina
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 13.1, jossa harjoittelet koko työparityöskentelyn sykliä: pohja tekoälyltä → oma muokkaus → kriittinen arviointi. Jos sinulla on aikaa ja haluat lisäharjoitusta erityisesti IT-alan virheilmoitusten parissa, tee lisäksi syventävä tehtävä 13.2.
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 13.1, jossa harjoittelet koko työparityöskentelyn sykliä: pohja tekoälyltä → oma muokkaus → kriittinen arviointi. Jos sinulla on aikaa ja haluat lisäharjoitusta virheilmoitusten tulkinnassa, tee lisäksi syventävä tehtävä 13.2.
 
 ## Tehtävä 13.1 — Kirjoita ohje työparityönä 🟢 SUOSITELTU
 
@@ -10,12 +10,14 @@
 
 #### Vaihe 1 — Valitse aihe omalta alaltasi
 
-Valitse aihe, joka liittyy omaan alaasi. Esimerkkejä:
+Valitse itseäsi kiinnostava aihe tai ala. Esimerkkejä eri aloilta:
 
-- **IT-tuki:** Miten käyttäjä jakaa työpöytänsä etänä (TeamViewer / Quick Assist) — vaihe vaiheelta
-- **Kyberturvallisuus:** Miten käyttäjä tunnistaa kalasteluviestin sähköpostista
-- **Pelikoodaus:** Miten asentaa Unity- tai Godot-kehitysympäristö ensimmäistä projektia varten
-- **Web-ohjelmointi:** Miten julkaista yksinkertainen HTML-sivu Netlifyhin tai GitHub Pagesiin
+- **Liiketalous ja kauppa:** Miten asiakas tekee palautuksen verkkokaupassa — vaihe vaiheelta
+- **Sosiaali- ja terveysala:** Miten omainen varaa ajan terveysaseman sähköisestä palvelusta
+- **Media ja viestintä:** Miten julkaiset ensimmäisen videon suoratoistopalveluun
+- **Ravintola- ja catering:** Miten uusi työntekijä käyttää kassajärjestelmää tilauksen kirjaamiseen
+- **Harrastukset:** Miten asennat ja otat käyttöön treenipäiväkirja-sovelluksen
+- **IT:** Miten käyttäjä jakaa työpöytänsä etänä (esim. Quick Assist) — vaihe vaiheelta
 
 Ohjeen kohderyhmänä on **aloittelija** — joku, joka ei tiedä aiheesta ennestään mitään. Pituus enintään 8 vaihetta.
 
@@ -86,7 +88,7 @@ Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa muistissasi 2–
 
 ## Tehtävä 13.2 — Tulkitse virheilmoitus tekoälyn kanssa 🟣 SYVENTÄVÄ
 
-> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat harjoitella tärkeää IT-arjen taitoa: virheilmoitusten tulkintaa.
+> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat harjoitella tärkeää digiarjen taitoa: virheilmoitusten tulkintaa.
 
 **Tavoite:** Opit selvittämään tuntemattomia virheilmoituksia järjestelmällisesti tekoälyn avulla — ja arvioimaan, milloin tekoälyä voi uskoa ja milloin pitää tarkistaa toisaalta.
 

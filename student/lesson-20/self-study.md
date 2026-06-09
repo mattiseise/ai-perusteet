@@ -6,7 +6,7 @@ Nyt kun tiedät, mikä **agentti** on, seuraava kysymys on ilmeinen: milloin age
 
 Kun rakennat oppitunneilla omaa agenttiasi n8n:llä, tämän asian ymmärtäminen auttaa sinua tekemään parempia arkkitehtuuripäätöksiä. Kun tiedät, milloin agentti todella kannattaa, voit suunnitella projektisi järkevämmin.
 
-Kuvittele, että hallinnoit IT-tukiosastoa. Joka päivä tulee 50 tukipyyntöä. Joku ehdottaa: ”Tehdään agentti, joka käsittelee nämä automaattisesti!” Ajatus kuulostaa hyvältä, kunnes huomaat todellisuuden: agentin rakentaminen, testaaminen ja ylläpito kestävät kuukauden ja maksavat 10 000 euroa. Ehkä yksinkertainen työnkulku, joka ohjaa tiketit automaattisesti oikealle henkilölle, antaisi saman hyödyn murto-osalla kustannuksista.
+Kuvittele, että vastaat asiakaspalvelusta. Joka päivä tulee 50 yhteydenottoa. Joku ehdottaa: ”Tehdään agentti, joka käsittelee nämä automaattisesti!” Ajatus kuulostaa hyvältä, kunnes huomaat todellisuuden: agentin rakentaminen, testaaminen ja ylläpito kestävät kuukauden ja maksavat 10 000 euroa. Ehkä yksinkertainen työnkulku, joka ohjaa yhteydenotot automaattisesti oikealle henkilölle, antaisi saman hyödyn murto-osalla kustannuksista.
 
 Tässä oppitunnissa opit käyttämään **päätöspuuta** eli ajattelumallia, joka auttaa valitsemaan oikean ratkaisun. Milloin promptaus riittää? Milloin tarvitset työnkulun? Milloin agentti todella kannattaa rakentaa?
 
@@ -46,6 +46,33 @@ Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **
 
 Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// päätös haarautuu: promptaus, työnkulku vai agentti</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <svg viewBox="0 0 460 180" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet">
+    <circle cx="50" cy="90" r="9" fill="oklch(0.66 0.15 264)"/>
+    <text x="50" y="118" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">tehtävä</text>
+    <g stroke="#2A3450" stroke-width="1.5" fill="none">
+      <path d="M59 90 Q140 90 200 40"/><path d="M59 90 L200 90"/><path d="M59 90 Q140 90 200 140"/>
+    </g>
+    <path class="l20dec-p" d="M59 90 Q140 90 200 40" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 150"/>
+    <path class="l20dec-w" d="M59 90 L200 90" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 150"/>
+    <path class="l20dec-a" d="M59 90 Q140 90 200 140" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2.4" stroke-dasharray="5 160"/>
+    <g font-family="var(--font-mono)" font-size="10" fill="#C7CEE6">
+      <rect x="206" y="28" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="45" text-anchor="middle">promptaus</text>
+      <rect x="206" y="77" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="94" text-anchor="middle">työnkulku</text>
+      <rect x="206" y="126" width="120" height="26" rx="6" fill="#1A2236" stroke="#2A3450"/><text x="266" y="143" text-anchor="middle">agentti</text>
+    </g>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Kuusi kysymystä ohjaavat valinnan oikealle haaralle — yksinkertaisin riittävä ratkaisu voittaa.</figcaption></figure>
+<style>
+.l20dec-p,.l20dec-w,.l20dec-a{animation:l20decRun 6s ease-in-out infinite}
+.l20dec-w{animation-delay:2s}.l20dec-a{animation-delay:4s}
+@keyframes l20decRun{0%{stroke-dashoffset:155}30%{stroke-dashoffset:0}45%,100%{stroke-dashoffset:0;opacity:.25}}
+@media (prefers-reduced-motion:reduce){.l20dec-p,.l20dec-w,.l20dec-a{animation:none;stroke-dashoffset:0}}
+</style>
+
+
 **Tilanne 1: Laskujen käsittely.** Yritys käsittelee 100 laskua päivässä. Lasku saapuu, sen summa täytyy vahvistaa ja tiedot pitää kirjata järjestelmään. Säännöt muuttuvat jonkin verran: uusia laskuttajia tulee ja hinnat muuttuvat, mutta perusprosessi pysyy samana. Epäonnistumisen hinta on korkea, koska väärä summa voi aiheuttaa organisaatiolle taloudellista vahinkoa. Ihmisen valvonta on kuitenkin mahdollista: valvoja voi tarkistaa, että laskut on käsitelty oikein.
 
 Kuuden kysymyksen perusteella tehtävä toistuu, on melko monimutkainen, sisältää jonkin verran muuttuvia sääntöjä, aiheuttaa organisaatiotason kustannuksia, sisältää korkean epäonnistumisen hinnan ja mahdollistaa ihmisen valvonnan. Paras ratkaisu on **työnkulku yhdessä ihmisen valvonnan kanssa**. Agentti olisi todennäköisesti ylimitoitettu, ellei laskumäärä kasva huomattavasti tai tapausten monimutkaisuus lisäänny merkittävästi.
@@ -54,7 +81,7 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on melko monimutkainen, sisält
 
 Kuuden kysymyksen perusteella tehtävä toistuu, on yksinkertainen, perustuu staattisiin sääntöihin, aiheuttaa pienet kustannukset, sisältää matalan epäonnistumisen hinnan eikä vaadi kriittistä valvontaa. Paras ratkaisu on **yksinkertainen työnkulku**. Agentti olisi tähän tehtävään täysin ylimitoitettu ja turhan kallis.
 
-**Tilanne 3: Teknisen tuen tikettien reitittäminen.** Yritys saa yli 50 tukipyyntöä päivässä. Reititykseen vaikuttavat monet tekijät, kuten tiketin prioriteetti, työntekijöiden osaaminen, asian kiireellisyys ja asiakassuhteen arvo. Säännöt muuttuvat jatkuvasti, koska työntekijät, tuetut ohjelmointikielet ja prioriteetit muuttuvat. Epäonnistumisen hinta on keskikorkea: väärä reititys voi heikentää asiakastyytyväisyyttä. Valvonta on mahdollista, koska esihenkilö voi tarkistaa päätöksiä.
+**Tilanne 3: Asiakaspalvelupyyntöjen reitittäminen.** Organisaatio saa yli 50 yhteydenottoa päivässä. Reititykseen vaikuttavat monet tekijät, kuten asian prioriteetti, työntekijöiden osaaminen, asian kiireellisyys ja asiakassuhteen arvo. Säännöt muuttuvat jatkuvasti, koska työntekijät, käsiteltävät aihealueet ja prioriteetit muuttuvat. Epäonnistumisen hinta on keskikorkea: väärä reititys voi heikentää asiakastyytyväisyyttä. Valvonta on mahdollista, koska esihenkilö voi tarkistaa päätöksiä.
 
 Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää muuttuvia sääntöjä, aiheuttaa merkittäviä kustannuksia, sisältää keskikorkean epäonnistumisen hinnan ja mahdollistaa valvonnan. Paras ratkaisu on **aloittaa työnkululla ja valmistautua agenttiin**. Jos yritys kasvaa ja tiketit monimutkaistuvat, agenttiin voidaan siirtyä myöhemmin. Aluksi ei kuitenkaan kannata rakentaa liian raskasta ratkaisua.
 

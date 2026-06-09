@@ -167,7 +167,7 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 | Tilanne | Sopiva malli | Perustelu |
 | --- | --- | --- |
-| Agentti tutkii, miksi palvelin antaa virheen 502. | ReAct | Agentti tarvitsee havaintoihin perustuvaa etenemistä ja voi vaihtaa suuntaa tulosten mukaan. |
+| Agentti tutkii, miksi tilauksia katoaa satunnaisesti matkalla. | ReAct | Agentti tarvitsee havaintoihin perustuvaa etenemistä ja voi vaihtaa suuntaa tulosten mukaan. |
 | Agentti käsittelee palautuspyynnön. | Ketjuajattelu | Prosessi etenee selkeissä vaiheissa: tarkista aika, tarkista ehdot, tee päätös ja vastaa. |
 | Agentti tuottaa laajan markkinaraportin, jossa tarvitaan tiedonhakua, analyysiä, kirjoittamista ja tarkistusta. | Moniagenttijärjestelmä | Tehtävä voidaan jakaa erikoistuneille agenteille, kuten tutkijalle, analysoijalle, kirjoittajalle ja tarkistajalle. |
 

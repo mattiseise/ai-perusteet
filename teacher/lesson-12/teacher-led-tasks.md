@@ -229,20 +229,20 @@ Voitte käyttää seuraavaa etenemismallia:
 
 #### Skenaario D: Harjoitteluhakemuksen kirjoittaminen
 
-**Tilanne:** Haluat kirjoittaa harjoitteluhakemuksen IT-yritykseen. Kirjoita neljä pyyntöä, joista neljäs antaa mahdollisimman hyödyllisen vastauksen.
+**Tilanne:** Haluat kirjoittaa kesätyöhakemuksen lähikahvilaan. Kirjoita neljä pyyntöä, joista neljäs antaa mahdollisimman hyödyllisen vastauksen.
 
 **Ryhmän tehtävä noin 10 minuuttia:**
 
 Voitte käyttää seuraavaa etenemismallia:
 
-1. `Auta minua harjoitteluhakemuksen kanssa.`
-2. `Haluan hakea harjoittelupaikkaa IT-yritykseen. Auta minua hakemuksen kanssa.`
-3. `Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen. Olen 15-vuotias opiskelija. Minulla on perustason IT-taidot, lyhyt Python-kokemus ja halu oppia.`
-4. `Haluan hakea harjoittelupaikkaa IT-tukipalveluyritykseen X. Olen 15-vuotias opiskelija. Taitoni: perustason IT-taidot Windowsista ja verkoista, Pythonin perusteet kuten muuttujat ja ehtolauseet sekä Linux-komentorivin alkeet. Haluan oppia verkkotekniikasta ja asiakaspalvelusta. Kirjoita noin 300 sanan motivaatiokirje, jossa näkyy, miksi haluan työskennellä IT-alalla, mitä osaamista voin tuoda ja mitä haluan oppia harjoittelussa.`
+1. `Auta minua kesätyöhakemuksen kanssa.`
+2. `Haluan hakea kesätyöpaikkaa kahvilaan. Auta minua hakemuksen kanssa.`
+3. `Haluan hakea kesätyöpaikkaa lähikahvilaan. Olen 15-vuotias opiskelija. Minulla on kokemusta asiakaspalvelusta koulun kahviossa ja halu oppia.`
+4. `Haluan hakea kesätyöpaikkaa lähikahvila X:ään. Olen 15-vuotias opiskelija. Taitoni: kokemusta asiakaspalvelusta koulun kahviossa, hyvät vuorovaikutustaidot ja tarkkuus rahankäsittelyssä. Haluan oppia kassatyöskentelystä ja tiimityöstä. Kirjoita noin 300 sanan hakemus, jossa näkyy, miksi haluan työskennellä kahvilassa, mitä osaamista voin tuoda ja mitä haluan oppia työssä.`
 
 **Esittäminen noin 2 minuuttia:** Ryhmä esittelee neljä pyyntöä ja kertoo, miksi viimeinen toimii parhaiten.
 
-**Opettajan kommentti:** Korosta, että neljäs pyyntö toimii parhaiten, koska se kertoo yrityksen, hakijan iän, nykyiset taidot, motivaation, tekstin pituuden ja halutun sisällön.
+**Opettajan kommentti:** Korosta, että neljäs pyyntö toimii parhaiten, koska se kertoo työpaikan, hakijan iän, nykyiset taidot, motivaation, tekstin pituuden ja halutun sisällön.
 
 ### Päätöskeskustelu noin 3 minuuttia
 

@@ -8,12 +8,13 @@
 
 ### Valitse ongelmasi
 
-Valitse yksi IT-aiheinen kysymys, joka **oikeasti kiinnostaa sinua tai liittyy opiskeluusi**. Esimerkkejä:
+Valitse yksi kysymys, joka **oikeasti kiinnostaa sinua tai liittyy opiskeluusi tai harrastukseesi**. Esimerkkejä eri aiheista:
 
-- "Miten optimoin tietokantahakuja?"
-- "Miten debuggaan Python-ohjelmaa?"
-- "Miten suojaan kotiverkkoni?"
-- "Miten kirjoitan hyvän README-tiedoston GitHub-projektiin?"
+- "Miten kirjoitan hyvän esitelmän rungon?"
+- "Miten suunnittelen viikon ruokalistan?"
+- "Miten valmistaudun kuljettajantutkintoon?"
+- "Miten teen treeniohjelman juoksun aloittamiseen?"
+- "Miten parannan englannin esseen rakennetta?"
 
 Mitä konkreettisempi oma tarpeesi, sitä parempi havainto syntyy.
 
@@ -23,7 +24,7 @@ Mitä konkreettisempi oma tarpeesi, sitä parempi havainto syntyy.
 
 Avaa ChatGPT, Claude tai Copilot. Kysy valitsemasi kysymys **ilman mitään kontekstia** — kuten kysyisit hakukoneelta.
 
-> Esim. "Miten debuggaan Python-ohjelmaa?"
+> Esim. "Miten suunnittelen viikon ruokalistan?"
 
 Tallenna vastaus (kopioi tai ota kuvakaappaus).
 
@@ -33,10 +34,10 @@ Avaa **uusi keskustelu** (tärkeää, ettei edellinen vastaus vaikuta). Rakenna 
 
 | Osa | Mitä sisältö? |
 |---|---|
-| **Rooli** | Kuka olet? Esim. *"Olen IT-opiskelija, aloittelija Python-koodauksessa."* |
-| **Tausta** | Mitä olet jo tehnyt? Esim. *"Kirjoitin yksinkertaisen laskinohjelman, joka ei toimi oikein."* |
-| **Tavoite** | Mitä haluat? Esim. *"Haluan oppia löytämään virheen itse, en valmista ratkaisua."* |
-| **Rajaukset** | Mitä et halua? Esim. *"En halua IDE:n debuggeria — käytän pelkkää print()-tulostusta."* |
+| **Rooli** | Kuka olet? Esim. *"Olen lukiolainen, joka kirjoittaa ensimmäistä esitelmää."* |
+| **Tausta** | Mitä olet jo tehnyt? Esim. *"Olen kerännyt muutaman lähteen, mutta minulla ei ole rakennetta."* |
+| **Tavoite** | Mitä haluat? Esim. *"Haluan oppia jäsentämään aiheen itse, en valmista tekstiä."* |
+| **Rajaukset** | Mitä et halua? Esim. *"En halua vaikeita termejä — selitä yksinkertaisesti."* |
 | **Formaatti** | Miten vastataan? Esim. *"Anna 3–5 askelta listana, ei pitkää esseetä."* |
 
 Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ovat mukana. Lähetä se mallille ja tallenna vastaus.
@@ -45,9 +46,9 @@ Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ov
 
 Hyväkään ensimmäinen vastaus ei ole vielä loppu. Ammattilaiset eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
 
-- "Tarkenna kohta 3 esimerkillä."
-- "Anna myös konkreettinen Python-koodi, jossa virhe on tarkoituksella."
-- "Selitä tämä niin, että ymmärtäisin sen, jos en ole koskaan kuullut sanaa 'pino' (stack)."
+- "Tarkenna kohta 3 konkreettisella esimerkillä."
+- "Anna myös yksi esimerkki, jossa kohta menee tarkoituksella pieleen, jotta opin tunnistamaan virheen."
+- "Selitä tämä niin, että ymmärtäisin sen, vaikka en olisi koskaan tehnyt tällaista aiemmin."
 
 Tallenna myös tämä vastaus. Tämä on iteratiivisuuden ydin — tekoäly ei ole arpapeli, jossa joko osuu tai ei. Se on keskustelu, jossa parannat ohjausta sitä mukaa kun näet, mihin se menee.
 

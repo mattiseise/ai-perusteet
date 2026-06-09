@@ -13,21 +13,21 @@ Pakotat tekoälyn unohtamaan antamasi ohjeen — ja dokumentoit, miten ja milloi
 Aloita uusi keskustelu ja anna ehdoton rajaus. Esimerkki:
 
 ```
-Olet IT-tukihenkilö. Käytämme ainoastaan Ubuntu 22.04:ää, Python 3.9:ää
-ja PostgreSQL:ää. Älä KOSKAAN ehdota Windowsia, MySQL:ää tai mitään
-muuta. Vastaa lyhyesti.
+Olet matkaopas. Suosittele ainoastaan kohteita Suomessa, ja vain
+sellaisia, joihin pääsee junalla. Älä KOSKAAN ehdota lentämistä,
+ulkomaita tai automatkoja. Vastaa lyhyesti.
 ```
 
 ### Vaihe 2 — Aja konteksti täyteen
 
 Kysy mallilta **15–20 kysymystä** eri aiheista:
 
-- Verkkokonfiguraatio
-- Käyttäjähallinta
-- Palomuurit ja tietoturva
-- Varmuuskopiot
-- Lokien luku
-- Suorituskykyongelmat
+- nähtävyydet ja museot
+- ruokapaikat
+- majoitusvinkit
+- sää ja vuodenajat
+- aktiviteetit perheille
+- budjettivinkit
 
 Älä toista alkurajausta. Tarkoituksesi on täyttää konteksti-ikkunaa muulla sisällöllä.
 
@@ -35,9 +35,9 @@ Kysy mallilta **15–20 kysymystä** eri aiheista:
 
 Kysy lopuksi:
 
-> "Miten asennan tietokantapalvelimen tähän ympäristöön?"
+> "Minne kannattaisi matkustaa ensi viikonloppuna?"
 
-Älä mainitse PostgreSQL:ää, Ubuntua tai Python-versiota. Dokumentoi vastaus tarkasti — ehdottiko malli oikeaa tietokantaa? Oikeaa käyttöjärjestelmää?
+Älä mainitse Suomea, junaa tai alkuperäisiä rajauksia. Dokumentoi vastaus tarkasti — pysyikö malli Suomessa? Ehdottiko se junayhteyttä?
 
 ### Vaihe 4 — Korjaa tilanne
 
@@ -54,9 +54,10 @@ kielimallin unohtamaan antamani rajauksen täyttämällä konteksti-ikkunan.
 Tässä mitä tapahtui:
 [liitä vaiheiden 1–4 dokumentaatio tähän]
 
-Auta minua jäsentämään tämä työtilanne-esimerkiksi. Mihin ammatilliseen
-kontekstiin tämä sopisi (asiakaspalvelu, IT-tuki, koodiprojekti)? Mitä
-käytännön seurauksia tällaisesta 'unohtamisesta' voisi olla? Älä
+Auta minua jäsentämään tämä työtilanne-esimerkiksi. Mihin tilanteeseen
+tämä sopisi (esim. asiakaspalvelu, pitkä kirjoitusprojekti, käännöstyö,
+matkasuunnitelma)? Mitä käytännön seurauksia tällaisesta 'unohtamisesta'
+voisi olla? Älä
 kirjoita esimerkkiä puolestani — esitä kysymyksiä ja anna
 jäsennysvaihtoehtoja.
 ```
@@ -67,7 +68,7 @@ Tämä on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjo
 
 Kirjoita noin **300 sanaa omin sanoin**. Tapausesimerkissä on neljä osaa:
 
-1. **Tilanne:** Kuvaile kokeilusi tai keksi vastaava työtilanne — esim. asiakaspalvelu, koodiprojekti, IT-tuki.
+1. **Tilanne:** Kuvaile kokeilusi tai keksi vastaava tilanne — esim. asiakaspalvelu, pitkä kirjoitusprojekti, käännöstyö tai matkasuunnitelma.
 2. **Mitä unohtui ja miksi:** Käytä käsitteitä *konteksti-ikkuna* ja *FIFO-periaate* (vanhin tieto putoaa ensin). Mitä konkreettisesti hävisi muistista?
 3. **Seuraukset:** Mitä virheellinen vastaus voisi käytännössä aiheuttaa? Aikaa hukkaan? Turvallisuusriskin? Väärää tietoa asiakkaalle?
 4. **Miten ammattilainen estää tämän:** Ankkurointi, pilkkominen, dokumentointi — nimeä konkreettiset käytännöt.

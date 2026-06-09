@@ -16,9 +16,9 @@ Sinulla on kolme erilaista agenttitehtävää:
 
 **Tehtävä A: Asiakkaan laskun käsittely.** Agentti vastaanottaa asiakkaan kysymyksen laskusta, hakee laskutiedot tietokannasta ja vastaa asiakkaalle.
 
-**Tehtävä B: Päivittäinen kyberturvatilan raportti.** Agentti seuraa kyberturvasivuja netissä, kokoaa uusimmat uhkat yhteen ja kirjoittaa raportin tiedostoon.
+**Tehtävä B: Päivittäinen uutiskooste.** Agentti seuraa valittuja uutissivuja netissä, kokoaa päivän tärkeimmät otsikot yhteen ja kirjoittaa koosteen tiedostoon.
 
-**Tehtävä C: Palvelimen lokin analyysi.** Agentti lukee palvelimen lokitiedostoja, tunnistaa virhetilanteet ja ilmoittaa niistä IT-tiimille.
+**Tehtävä C: Varaston seuranta.** Agentti lukee varaston tiedostoja, tunnistaa loppumassa olevat tuotteet ja ilmoittaa niistä vastuuhenkilölle.
 
 ### Vastausohje
 

@@ -26,11 +26,11 @@ Jos jokin on pielessä, esimerkiksi laskun summaa ei tunnisteta tai laskuttaja e
 
 Opiskelijat voivat kysyä chatissa: “Milloin on seuraava tentti?” Chatbot etsii tiedon käytössä olevasta opetuskalenterista ja vastaa esimerkiksi: “Englannin tentti on 15. maaliskuuta.” Tämän jälkeen chatbot odottaa, että opiskelija kysyy seuraavan kysymyksen.
 
-#### Skenaario C: Palvelimen automaattinen kuormantasaus
+#### Skenaario C: Kasvihuoneen automaattinen ilmastonsäätö
 
-Palvelinfarmi seuraa jokaisen palvelimen kuormaa reaaliajassa. Kun jokin palvelin on 85 prosentin kuormituksessa viiden minuutin ajan, järjestelmä käynnistää automaattisesti uuden palvelimen ja alkaa reitittää uusia pyyntöjä sille.
+Järjestelmä seuraa kasvihuoneen lämpötilaa ja ilmankosteutta reaaliajassa. Kun lämpötila on yli 28 asteessa viiden minuutin ajan, järjestelmä avaa automaattisesti tuuletusluukut ja käynnistää kastelun.
 
-Järjestelmä lähettää myös IT-tiimille sähköposti-ilmoituksen ja auttaa selvittämään, onko kyseessä normaali kuormituspiikki vai ongelmatilanne.
+Järjestelmä lähettää myös vastuuhenkilölle ilmoituksen ja auttaa selvittämään, onko kyseessä normaali lämpöpiikki vai poikkeustilanne.
 
 ### Ohjeet ryhmälle
 
@@ -59,7 +59,7 @@ Kunkin ryhmän edustaja esittelee ryhmän valinnan ja perustelut. Opettaja tarke
 | --- | --- | --- |
 | **A: Laskun käsittelyagentti** | **Agentti** | Syötekäsittelijä analysoi laskuja, päättelijä tekee hyväksyntään liittyviä päätöksiä, työkalut mahdollistavat laskun tallentamisen kirjanpitojärjestelmään, turvakerros pyytää ihmisen hyväksyntää riskitilanteissa ja palautesilmukka hyödyntää laskuttajien toimintaa. |
 | **B: Muistutus-chatbot** | **Chatbot** | Chatbot odottaa käyttäjän kysymyksiä ja hakee vastauksen kalenterista. Se ei tee itsenäisiä päätöksiä, ei käynnistä toimenpiteitä eikä sillä ole selkeää palautesilmukkaa. |
-| **C: Palvelimen automaattinen kuormantasaus** | **Agentti tai agenttimainen automaatio** | Syötekäsittelijä seuraa palvelinten kuormaa, päättelijä tekee päätöksen uuden palvelimen käynnistämisestä, työkalut mahdollistavat palvelimen käynnistämisen ja liikenteen reitittämisen, turvakerros rajoittaa toimintaa ennalta määriteltyihin raja-arvoihin ja palautesilmukka tuottaa tietoa IT-tiimille. |
+| **C: Kasvihuoneen automaattinen ilmastonsäätö** | **Agentti tai agenttimainen automaatio** | Syötekäsittelijä seuraa lämpötilaa ja kosteutta, päättelijä tekee päätöksen tuuletuksen ja kastelun käynnistämisestä, työkalut mahdollistavat luukkujen avaamisen ja kastelun ohjaamisen, turvakerros rajoittaa toimintaa ennalta määriteltyihin raja-arvoihin ja palautesilmukka tuottaa tietoa vastuuhenkilölle. |
 
 ### Odotettu oppimistulos
 
@@ -77,24 +77,24 @@ Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miten agentin ku
 
 ### Valmistelu
 
-Valitse esimerkkijärjestelmäksi agentti. Voit käyttää esimerkiksi **IT-tikettien automaattista reitittäjää**.
+Valitse esimerkkijärjestelmäksi agentti. Voit käyttää esimerkiksi **asiakaspalvelupyyntöjen automaattista reitittäjää**.
 
 **Esimerkkikuvaus:**
 
-Yrityksen IT-tukipyyntöjä hallitaan järjestelmällä, joka:
+Organisaation asiakaspalvelupyyntöjä hallitaan järjestelmällä, joka:
 
-- vastaanottaa asiakkaiden tukipyyntöjä,
-- analysoi pyynnön sisältöä ja luokittelee ongelman,
+- vastaanottaa asiakkaiden yhteydenottoja,
+- analysoi pyynnön sisältöä ja luokittelee asian,
 - lähettää pyynnön oikealle asiantuntijalle,
-- luo tiketin ja ilmoittaa asiakkaalle,
+- luo tapauksen ja ilmoittaa asiakkaalle,
 - seuraa ratkaisuaikoja,
-- oppii, mitkä asiantuntijat ratkaisevat nopeimmin eri ongelmakategorioita.
+- oppii, mitkä asiantuntijat ratkaisevat nopeimmin eri tyyppisiä asioita.
 
 ### Opettajan ohjeet
 
-Piirrä taululle kuuden komponentin sykli tai näytä se diaesityksessä. Käy opiskelijoiden kanssa läpi, miten IT-tikettien reititys etenee vaihe vaiheelta.
+Piirrä taululle kuuden komponentin sykli tai näytä se diaesityksessä. Käy opiskelijoiden kanssa läpi, miten asiakaspalvelupyyntöjen reititys etenee vaihe vaiheelta.
 
-**Agentin suoritusputki IT-tikettien reitityksessä**
+**Agentin suoritusputki asiakaspalvelupyyntöjen reitityksessä**
 
 |  |
 | --- |
@@ -102,7 +102,7 @@ Piirrä taululle kuuden komponentin sykli tai näytä se diaesityksessä. Käy o
 | ↓ |
 | **2. Päättelijä** Luokittelee ongelman ja valitsee sopivan asiantuntijan aiemman datan perusteella. |
 | ↓ |
-| **3. Työkalut** Luo tiketin, lähettää sähköpostin ja käyttää tarvittaessa tietokantaa. |
+| **3. Työkalut** Luo tapauksen, lähettää sähköpostin ja käyttää tarvittaessa tietokantaa. |
 | ↓ |
 | **4. Muisti** Hyödyntää aiempien ongelmien tietokantaa, asiantuntijoiden ratkaisuhistoriaa ja asiakkaiden profiilitietoja. |
 | ↓ |
@@ -117,7 +117,7 @@ Korosta opiskelijoille, että komponentit eivät ole irrallisia osia. Ne muodost
 ### Kysymyksiä ryhmälle
 
 - Mitä tapahtuisi, jos **syötekäsittelijä** epäonnistuisi ja ymmärtäisi pyynnön väärin?
-- Miten **turvakerros** suojaa sekä asiakasta että IT-tiimiä?
+- Miten **turvakerros** suojaa sekä asiakasta että palvelutiimiä?
 - Miten **palautesilmukka** auttaa agenttia parantamaan toimintaansa?
 - Missä vaiheessa ihmisen pitäisi ottaa tilanne haltuun ja miksi?
 - Mikä komponentti olisi vaarallisin jättää pois tästä järjestelmästä?

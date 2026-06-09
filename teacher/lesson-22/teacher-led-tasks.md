@@ -41,7 +41,7 @@ Jaa opiskelijat pienryhmiin. Ryhmät suunnittelevat whitelistin yhdelle tai usea
 
 1. **Asiakastukiagentti:** auttaa asiakkaita yleisissä kysymyksissä ja hakee tietoa ohjedokumenteista.
 2. **Analytiikka-agentti:** lukee dataa, ajaa analyysin ja tuottaa raportin.
-3. **IT-tukiagentti:** auttaa teknisten ongelmien selvittämisessä ja voi lukea lokeja tai ehdottaa komentoja.
+3. **Tapahtuma-agentti:** auttaa tapahtuman järjestelyissä ja voi lukea ilmoittautumislistoja tai ehdottaa aikataulumuutoksia.
 
 Ryhmän tehtävänä on määritellä:
 
@@ -115,8 +115,8 @@ Opiskelijat valitsevat yhden prosessin ja järjestävät työkalut oikeaan järj
 Esimerkkiprosesseja:
 
 - asiakaspalautteiden analysointi,
-- palvelinlokeihin perustuva häiriöraportti,
-- tietoturvauutisten seuranta ja riskiraportti,
+- varaston seurantaan perustuva tilausraportti,
+- uutisten seuranta ja päivittäinen kooste,
 - myyntidatan analyysi ja kuukausiraportti.
 
 **Tehtävä:**
@@ -231,8 +231,8 @@ Selitä opiskelijoille:
 | Tehtävä | Tarvittavat työkalut | Mitä ei yleensä tarvita? |
 | --- | --- | --- |
 | **Laskun käsittely** | Tietokanta- tai API-yhteys laskutietoihin sekä mahdollisesti lokitiedostot. | Verkkohaku, ellei laskuttajan taustaa tarvitse erikseen tarkistaa. |
-| **Kyberturvatilanne** | Verkkohaku ajankohtaisiin uhkatietoihin, lokien lukeminen ja raportin kirjoittaminen. | Laajat kirjoitusoikeudet tuotantojärjestelmiin ilman hyväksyntää. |
-| **Palvelinanalyysi** | Lokitiedostot ja rajatut CLI-komennot. | Verkkohaku, jos analyysi perustuu vain sisäisiin lokeihin. |
+| **Uutiskooste** | Verkkohaku ajankohtaisiin uutisiin ja koosteen kirjoittaminen tiedostoon. | Laajat kirjoitusoikeudet tuotantojärjestelmiin ilman hyväksyntää. |
+| **Varaston seuranta** | Varaston tiedostojen lukeminen ja ilmoituksen lähettäminen. | Verkkohaku, jos seuranta perustuu vain sisäisiin tiedostoihin. |
 
 ### Ryhmätyö
 

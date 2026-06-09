@@ -100,7 +100,7 @@ Prosessi, jossa teet jotain, testat sen, korjaat ja teet uudelleen. Iteraatio on
 ## J
 
 **Järjestelmä prompti (System Prompt)**
-Ohje, jonka annat tekoälylle sen käyttäytymisen ohjaamiseksi. System prompt kertoo, kuka botti on, mitä se tekee ja miten se pitäisi käyttäytyä. Esimerkiksi: "Olet IT-helpdesk-agentti, joka auttaa käyttäjiä IT-ongelmissa."
+Ohje, jonka annat tekoälylle sen käyttäytymisen ohjaamiseksi. System prompt kertoo, kuka botti on, mitä se tekee ja miten se pitäisi käyttäytyä. Esimerkiksi: "Olet asiakaspalveluagentti, joka auttaa käyttäjiä tuotteen käyttöön liittyvissä kysymyksissä."
 
 ---
 

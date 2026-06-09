@@ -8,14 +8,16 @@ Rakennat **Microsoft Copilot Agent** -alustalle oman bottisi, joka auttaa **oman
 
 Käytä tekoälyä apuna botin rakentamisessa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että botti toimii ammattimaisesti, tuottaa oikeasti hyödyllisiä vastauksia ja että ymmärrät sen rakenteen kokonaan.
 
-Valitset oman **ammattialasi** seuraavista:
+Valitse itseäsi kiinnostava **ala tai aihe**. Tässä on esimerkkejä — käytä jotakin näistä tai keksi omasi:
 
-- **IT-tuki** — esim. käyttöönottoprojekti, järjestelmämuutos, koulutusprojekti
-- **Kyberturvallisuus** — esim. tietoturva-auditointi, palvelinkovetus, koulutus
-- **Pelikoodaus** — esim. uusi peli, ominaisuus, prototyyppi
-- **Web-ohjelmointi** — esim. asiakassivusto, API-palvelu, sovellus
+- **Liiketalous ja kauppa** — esim. tapahtuman markkinointi, myyntikampanja, yrityksen perustaminen
+- **Sosiaali- ja terveysala** — esim. hyvinvointiprojekti, asiakastyön kehittäminen, kampanja
+- **Media ja viestintä** — esim. some-kampanja, videotuotanto, lehtijuttu
+- **Ravintola- ja catering-ala** — esim. uusi menu, tapahtuman tarjoilu, asiakaspalvelun kehittäminen
+- **Tekniikka tai IT** — esim. uusi sovellus, laitehankinta, käyttöönottoprojekti
+- **Harrastus tai lukioaine** — esim. urheilutapahtuma, bändin keikka, historiaprojekti, biologian kenttätutkimus
 
-Bottisi auttaa juuri sinun alasi ammattilaista **laatimaan projektin määrittelydokumentin** — sen, jota tarvitaan ennen kuin projekti alkaa. Dokumentin osat ovat lähes samat alasta riippumatta: tausta, tavoite, laajuus, vaatimukset, riskit, aikataulu — mutta termit, painotukset ja sisältö ovat erilaisia eri aloilla. Tämä on sinun bottisi erikoisosaamista.
+Bottisi auttaa juuri sinun alasi tai aiheesi parissa työskentelevää **laatimaan projektin määrittelydokumentin** — sen, jota tarvitaan ennen kuin projekti alkaa. Dokumentin osat ovat lähes samat alasta riippumatta: tausta, tavoite, laajuus, vaatimukset, riskit, aikataulu — mutta termit, painotukset ja sisältö ovat erilaisia eri aloilla. Tämä on sinun bottisi erikoisosaamista.
 
 ## Miten teet sen?
 

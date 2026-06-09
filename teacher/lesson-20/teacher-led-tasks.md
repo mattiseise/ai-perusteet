@@ -42,7 +42,7 @@ Jos opiskelijat valitsevat agentin liian nopeasti, kysy: “Mitä agentti tekee 
 | --- | --- | --- |
 | **A: Asiakaspalautteiden käsittely** | Yritys saa päivittäin paljon asiakaspalautteita, jotka pitää luokitella kiireellisyyden ja aiheen mukaan. | Sääntöpohjainen automaatio, agentti tai ihminen. |
 | **B: Tentin päivämäärän kysyminen** | Opiskelijat kysyvät usein, milloin seuraava koe on. | FAQ, chatbot tai kalenteriin yhdistetty automaatio. |
-| **C: IT-tukipyyntöjen reititys** | Tukipyyntöjä tulee paljon, ja ne pitää ohjata oikealle asiantuntijalle. | Työnkulku, agentti tai hybridiratkaisu. |
+| **C: Asiakaspalvelupyyntöjen reititys** | Yhteydenottoja tulee paljon, ja ne pitää ohjata oikealle asiantuntijalle. | Työnkulku, agentti tai hybridiratkaisu. |
 | **D: Alennuspyyntöjen käsittely** | Asiakkaat pyytävät alennuksia eri perusteilla. Päätös vaikuttaa yrityksen rahaan. | Agentti, hyväksyntäportti ja human-in-the-loop. |
 
 ### Ryhmän tehtävä
@@ -220,7 +220,7 @@ Ryhmät valitsevat yhden agenttityypin ja päättävät, mitä työkaluja se tar
 **Agenttivaihtoehdot:**
 
 - **FAQ-agentti:** vastaa opiskelijoiden kysymyksiin kurssista.
-- **IT-tukiagentti:** auttaa ratkaisemaan teknisiä ongelmia.
+- **Neuvonta-agentti:** auttaa ratkaisemaan käyttäjien ongelmia.
 - **Myyntiagentti:** auttaa asiakkaita löytämään sopivan tuotteen.
 - **Hyvitysagentti:** käsittelee asiakkaiden hyvityspyyntöjä.
 

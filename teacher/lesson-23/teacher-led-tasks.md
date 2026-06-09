@@ -50,10 +50,10 @@ Jaa opiskelijat pienryhmiin. Jokainen ryhmä valitsee yhden tilanteen ja kirjoit
 **Mahdollisia tilanteita:**
 
 - asiakas pyytää tuotteen palautusta,
-- käyttäjä ilmoittaa teknisestä ongelmasta,
+- käyttäjä ilmoittaa ongelmasta,
 - opiskelija kysyy tehtävän palautuspäivää,
 - asiakas kysyy, onko tilaus jo lähetetty,
-- IT-tukipyyntö pitää ohjata oikealle asiantuntijalle.
+- yhteydenotto pitää ohjata oikealle asiantuntijalle.
 
 **Ryhmän tehtävä:**
 
@@ -133,9 +133,9 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 
 - tilauksen käsittely,
 - sairaalan ajanvaraus,
-- IT-tukipyynnön käsittely,
+- asiakaspalvelupyynnön käsittely,
 - asiakaspalautteen käsittely,
-- käyttäjätunnuksen luominen,
+- jäsenhakemuksen käsittely,
 - laskun tarkistaminen.
 
 **Ryhmän tehtävä:**
@@ -197,10 +197,10 @@ Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii 
 
 | Tilanne | Sopiva malli | Perustelu |
 | --- | --- | --- |
-| Agentti selvittää, miksi palvelin kaatuu satunnaisesti. |  |  |
+| Agentti selvittää, miksi tilauksia katoaa satunnaisesti matkalla. |  |  |
 | Agentti käsittelee tuotteen palautuspyynnön yrityksen palautusehtojen mukaan. |  |  |
 | Agentti etsii asiakkaan tilauksen tilan ja vastaa asiakkaalle. |  |  |
-| Agentti tutkii tietoturvahälytystä, jonka syy ei ole vielä tiedossa. |  |  |
+| Agentti tutkii asiakaspalautteen piikkiä, jonka syy ei ole vielä tiedossa. |  |  |
 
 **Odotetut vastaukset:**
 
@@ -269,10 +269,10 @@ Opiskelijat suunnittelevat moniagenttijärjestelmän valitsemalleen tehtävälle
 **Mahdollisia tehtäviä:**
 
 - asiakaspalvelupyyntöjen käsittely,
-- tietoturvahälytysten analysointi,
+- poikkeustilanteiden analysointi,
 - opiskelijan projektisuunnitelman arviointi,
 - verkkokaupan palautusten käsittely,
-- IT-tikettien priorisointi.
+- yhteydenottojen priorisointi.
 
 **Ryhmän tehtävä:**
 

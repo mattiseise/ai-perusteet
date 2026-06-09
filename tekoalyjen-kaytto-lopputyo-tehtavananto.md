@@ -8,14 +8,16 @@ Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Rakennat itse suunni
 
 **Microsoft Copilot Agent -botti**, joka auttaa oman ammattialasi ammattilaista laatimaan projektin määrittelydokumentin. Botti on *ohjaava, ei kirjoittava* — se ei tee dokumenttia käyttäjän puolesta, vaan auttaa käyttäjää tekemään dokumentin paremmin kuin yksin.
 
-Valitset oman ammattialasi seuraavista:
+Valitset itseäsi kiinnostavan alan tai aiheen, esimerkiksi:
 
-- **IT-tuki** — käyttöönottoprojekti, järjestelmämuutos, koulutusprojekti
-- **Kyberturvallisuus** — tietoturva-auditointi, palvelinkovetus, koulutus
-- **Pelikoodaus** — uusi peli, ominaisuus, prototyyppi
-- **Web-ohjelmointi** — asiakassivusto, API-palvelu, sovellus
+- **Liiketalous ja kauppa** — myyntikampanja, tapahtuman järjestäminen, asiakasprojekti
+- **Sosiaali- ja terveysala** — asiakasohjaus, perehdytysprojekti, hyvinvointikampanja
+- **Media ja viestintä** — videotuotanto, some-kampanja, lehtijuttu
+- **Tekniikka ja IT** — sovellus, käyttöönottoprojekti, prototyyppi
+- **Ravintola- ja palveluala** — tapahtumacatering, uusi konsepti, perehdytys
+- **Lukioaine tai harrastus** — tutkielma, projektikurssi, urheilu- tai musiikkiproduktio
 
-Bottisi auttaa juuri sinun alasi ammattilaista — IT-tuelle eri termit kuin pelikoodaajalle. Tämä erottaa sinun bottisi yleisestä projektisuunnitteluapurista.
+Bottisi auttaa juuri valitsemasi alan tekijää — esimerkiksi tapahtumatuottajalle eri termit kuin sovelluskehittäjälle. Tämä erottaa sinun bottisi yleisestä projektisuunnitteluapurista.
 
 ## Polku alusta loppuun
 

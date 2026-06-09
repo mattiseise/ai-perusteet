@@ -49,10 +49,12 @@ Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää mä
 
 | Ala | Esimerkkejä tietotarpeista |
 | --- | --- |
-| **IT-tuki** | Käyttöönottoprojektin rakenne, yleiset riskit järjestelmämuutoksissa, sidosryhmien tunnistaminen, palvelutason määrittely eli SLA. |
-| **Kyberturvallisuus** | Riskiarvion rakenne, OWASP:n riskikategoriat, auditoinnin laajuus, raportointivaatimukset ja lainsäädännölliset rajat. |
-| **Pelikoodaus** | Game Design Documentin osat, ydinmekaniikan kuvaaminen, pelitestauksen suunnittelu, alustojen tekniset rajat ja mahdolliset monetisaatiomallit. |
-| **Web-ohjelmointi** | Vaatimusten määrittely, tekninen arkkitehtuuri, käyttöliittymäluonnokset, API-rajapinnan kuvaus ja tietoturvavaatimukset. |
+| **Liiketalous ja kauppa** | Kampanjasuunnitelman rakenne, kohderyhmän määrittely, budjetin osat, aikataulu ja onnistumisen mittarit. |
+| **Sosiaali- ja terveysala** | Tapahtuman tai projektin rakenne, kohderyhmän tarpeet, turvallisuus- ja tietosuojanäkökulmat, vastuunjako ja seuranta. |
+| **Media ja viestintä** | Tuotannon vaiheet, käsikirjoituksen osat, kohderyhmän tavoittaminen, julkaisusuunnitelma ja tekijänoikeudet. |
+| **Ravintola- ja catering** | Tilaisuuden suunnittelun rakenne, menun ja allergeenien huomiointi, hankinnat, mitoitus ja aikataulu. |
+| **Lukioaineet ja harrastukset** | Tutkielman tai tapahtuman rakenne, tavoitteen rajaus, aikataulu, tarvittavat resurssit ja arviointi. |
+| **IT** | Projektin rakenne, yleiset riskit, vaatimusten määrittely, käyttöliittymäluonnokset ja tietoturvanäkökulmat. |
 
 **Mallipohja omalle listalle:**
 

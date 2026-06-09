@@ -92,7 +92,7 @@ Ohjeet ja rajaukset sekoittuvat helposti. Käytä yksinkertaista eroa:
 | Bottityyppi | Ohje | Rajaus |
 | --- | --- | --- |
 | **Python-tutori** | Aloita peruskäsitteestä ja etene esimerkin kautta harjoitukseen. | Älä kirjoita opiskelijalle valmista palautettavaa tehtävää. |
-| **IT-helpdesk** | Kysy ensin laite, käyttöjärjestelmä ja virheilmoitus. | Älä ehdota riskialttiita komentoja ilman varoitusta ja selitystä. |
+| **Kahvilan tilausbotti** | Kysy ensin, mitä asiakas haluaa tilata ja onko erityistoiveita. | Älä ota vastaan maksua äläkä lupaa toimitusaikoja, joita kahvila ei voi pitää. |
 | **Asiakaspalvelubotti** | Vastaa kohteliaasti ja ohjaa asiakas oikeaan palvelukanavaan. | Älä anna lääketieteellisiä, juridisia tai taloudellisia neuvoja. |
 
 **Opettajan muistutus:** Rajaukset eivät tee botista huonompaa. Ne tekevät siitä turvallisemman, luotettavamman ja ammatillisemman.
@@ -177,7 +177,7 @@ Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 
 ### Ennen lähiosaa
 
-- Valitse yksi konkreettinen bottiesimerkki, kuten **Python-tutori**, **IT-helpdesk-botti** tai **asiakaspalvelubotti**.
+- Valitse yksi konkreettinen bottiesimerkki, kuten **läksyvalmentaja**, **harrastusneuvoja** tai **asiakaspalvelubotti**.
 - Testaa neljän rakennuspalikan malli etukäteen valitulla botilla.
 - Kirjoita malliksi 3–4 kappaleen järjestelmäprompti.
 - Valmistele 2–3 esimerkki-interaktiota: normaali tilanne, vaikea tilanne ja epäselvä tilanne.
@@ -295,7 +295,7 @@ Anna opiskelijalle valmiita ohjepohjia, joita hän voi mukauttaa omalle botillee
 
 ### Jos opiskelija ei näe rajausten merkitystä
 
-Käytä esimerkkiä turvallisuudesta. IT-helpdesk-botti voi antaa ohjeita Wi-Fi-yhteyden tarkistamiseen, mutta sen ei pidä neuvoa käyttäjää poistamaan järjestelmätiedostoja tai ajamaan riskialttiita komentoja ilman varoitusta. Rajaukset suojaavat käyttäjää vääriltä toimilta.
+Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä alkulämmittelyliikkeitä, mutta sen ei pidä antaa lääketieteellisiä ohjeita kivun hoitoon tai kehottaa jatkamaan harjoittelua loukkaantuneena. Rajaukset suojaavat käyttäjää vääriltä toimilta.
 
 ### Jos opiskelija on edellä
 
@@ -329,7 +329,7 @@ Käytä esimerkkiä turvallisuudesta. IT-helpdesk-botti voi antaa ohjeita Wi-Fi-
 
 **Kysymys:** Miksi rajaukset ovat tärkeitä? Anna esimerkki.
 
-**Mitä opettaja etsii:** Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää ja bottia. Esimerkki: IT-helpdesk-botti ei anna sijoitusneuvoja, koska se ei ole talousneuvoja.
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää ja bottia. Esimerkki: harrastusneuvojabotti ei anna sijoitusneuvoja, koska se ei ole talousneuvoja.
 
 ### 5. Esimerkki-interaktiot
 
@@ -343,7 +343,7 @@ Käytä esimerkkiä turvallisuudesta. IT-helpdesk-botti voi antaa ohjeita Wi-Fi-
 
 1. **Opiskelijan itseopiskelumateriaali:** käytä sitä peruskäsitteiden kertaamiseen ennen lähiosaa.
 2. **Esimerkit omista boteista:** analysoikaa hyviä Custom GPT -ratkaisuja ja pohtikaa, mikä niiden tarkoitus, rooli, ohjeet ja rajaukset voisivat olla.
-3. **Järjestelmäpromptin esimerkit:** käytä esimerkkeinä Python-tutoria, IT-helpdesk-bottia ja asiakaspalvelubottia.
+3. **Järjestelmäpromptin esimerkit:** käytä esimerkkeinä läksyvalmentajaa, harrastusneuvojaa ja asiakaspalvelubottia.
 4. **Testaus ja iteraatio:** näytä, miten botin toiminta muuttuu, kun järjestelmäpromptia muokataan.
 5. **Opiskelijoiden omat botit:** pyydä opiskelijoita esittelemään botti-ideansa ja saamaan vertaispalautetta.
 

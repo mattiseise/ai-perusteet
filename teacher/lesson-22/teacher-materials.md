@@ -152,7 +152,7 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 | Agentti | Sallitut työkalut | Kielletyt työkalut | Perustelu |
 | --- | --- | --- | --- |
 | Raporttiagentti | `/data/`, `/reports/`, viralliset tilastosivut | `rm`, henkilötietokansiot, satunnaiset blogit | Agentti tarvitsee dataa ja raportin kirjoitusta, mutta ei poisto-oikeuksia tai henkilötietoja. |
-| Asiakastukiagentti | FAQ-tietokanta, tikettien lukeminen, vastauskanava | Palkkatiedot, sopimusten muokkaus, poistokomennot | Agentti tarvitsee asiakastuen tietoja, mutta ei organisaation sisäisiä tai kriittisiä järjestelmiä. |
+| Asiakaspalveluagentti | FAQ-tietokanta, asiakaspyyntöjen lukeminen, vastauskanava | Palkkatiedot, sopimusten muokkaus, poistokomennot | Agentti tarvitsee asiakaspalvelun tietoja, mutta ei organisaation sisäisiä tai kriittisiä järjestelmiä. |
 
 **Aika-arvio:** 15–20 minuuttia
 

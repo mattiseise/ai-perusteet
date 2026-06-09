@@ -32,7 +32,7 @@ Nyt kun tiedät, mitä agentti tarkoittaa, voidaan tarkastella sen sisäistä ra
 
 Ilman syötekäsittelijää agentti ei tietäisi, että jotain on tapahtunut. Se ei voisi reagoida ympäristöönsä eikä käynnistää toimintaansa oikealla hetkellä.
 
-Voit ajatella asiaa myös näin: vaikka IT-tukihenkilö olisi kuinka taitava, hän ei voi ratkaista ongelmia, jos hän ei saa niistä mitään tietoa. Jos hän ei kuule puheluita eikä lue sähköposteja, hän ei edes tiedä, että apua tarvitaan.
+Voit ajatella asiaa myös näin: vaikka neuvoja olisi kuinka taitava, hän ei voi ratkaista ongelmia, jos hän ei saa niistä mitään tietoa. Jos hän ei kuule puheluita eikä lue sähköposteja, hän ei edes tiedä, että apua tarvitaan.
 
 **Toinen komponentti: päättelijä ja suunnittelija.** Päättelijä on agentin aivot. Kun tietoa on vastaanotettu, päättelijän tehtävänä on analysoida tilanne ja arvioida, mikä toimenpide on tarkoituksenmukaisin. Tässä se voi hyödyntää esimerkiksi kielimallia, joka auttaa tulkitsemaan tekstiä ja valitsemaan seuraavan vaiheen. Se voi esimerkiksi päätellä, onko viesti kiireellinen, löytyykö vastaus tietokannasta vai pitääkö asia ohjata ihmiselle.
 
@@ -70,6 +70,34 @@ Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, va
 
 Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti toimii silmukassa</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:space-around;gap:18px;padding:0 24px">
+  <svg viewBox="0 0 230 150" style="width:46%;height:80%" preserveAspectRatio="xMidYMid meet">
+    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">BOTTI</text>
+    <circle cx="40" cy="78" r="10" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2"/>
+    <line class="l19ba-flow" x1="52" y1="78" x2="178" y2="78" stroke="oklch(0.66 0.13 208)" stroke-width="2" stroke-dasharray="6 8"/>
+    <rect x="178" y="66" width="24" height="24" rx="5" fill="oklch(0.66 0.13 208)"/>
+    <text x="115" y="108" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">kysymys → vastaus</text>
+  </svg>
+  <svg viewBox="0 0 160 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
+    <text x="80" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">AGENTTI</text>
+    <circle class="l19ba-ring" cx="80" cy="80" r="40" fill="none" stroke="oklch(0.66 0.15 264)" stroke-width="2.5" stroke-dasharray="6 9" stroke-linecap="round"/>
+    <g class="l19ba-orbit"><circle cx="80" cy="40" r="5" fill="oklch(0.66 0.15 305)"/></g>
+    <text x="80" y="78" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">PÄÄTTELE</text>
+    <text x="80" y="90" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="#8B94B3">→ TOIMI</text>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja jää odottamaan. Agentti kiertää silmukkaa: se päättelee, käyttää työkaluja ja arvioi tulosta itsenäisesti.</figcaption></figure>
+<style>
+.l19ba-flow{animation:l19baFlow 3.5s linear infinite}
+@keyframes l19baFlow{to{stroke-dashoffset:-28}}
+.l19ba-ring{transform-box:view-box;transform-origin:80px 80px;animation:l19baSpin 9s linear infinite}
+.l19ba-orbit{transform-box:view-box;transform-origin:80px 80px;animation:l19baSpin 4.5s linear infinite}
+@keyframes l19baSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.l19ba-flow,.l19ba-ring,.l19ba-orbit{animation:none}}
+</style>
+
+
 ## Skripti, työnkulku ja agentti — kolme eri tasoa
 
 Yritysmaailmassa käytettävät järjestelmät voidaan jakaa kolmeen pääkategoriaan. Näiden erojen ymmärtäminen on tärkeää, koska **skripti**, **työnkulku** ja **agentti** eivät tarkoita samaa asiaa.
@@ -86,7 +114,7 @@ Ero näkyy hyvin käytännön esimerkissä. Skripti voi lajitella tiedostot pelk
 
 Nyt tiedät, mistä osista agentti koostuu ja miten se eroaa skriptistä ja työnkulusta. Pelkät osat eivät kuitenkaan vielä riitä, vaan on myös ymmärrettävä, miten ne toimivat yhdessä. Kuusi komponenttia voidaan ajatella järjestelmän osina, mutta **suoritusputki** määrittää, missä järjestyksessä ja millä tavalla ne osallistuvat tehtävän suorittamiseen.
 
-Seuraavaksi tarkastellaan, mitä agentin sisällä tapahtuu silloin, kun se saa tehtävän. Esimerkkinä käytetään IT-tukiagenttia.
+Seuraavaksi tarkastellaan, mitä agentin sisällä tapahtuu silloin, kun se saa tehtävän. Esimerkkinä käytetään neuvonta-agenttia, joka auttaa käyttäjiä ratkaisemaan ongelmia.
 
 **Käynnistyminen** eli **initialization**: Prosessi alkaa aina siitä, että jokin tapahtuma käynnistää agentin toiminnan. Käyttäjä voi esimerkiksi lähettää tukipyynnön viestillä: ”Tulostimeni ei toimi.” Syötekäsittelijä vastaanottaa viestin ja muuntaa sen sellaiseen muotoon, jota agentti pystyy käsittelemään. Käytännössä tämä voi tarkoittaa esimerkiksi jäsenneltyä tietuetta, johon tallennetaan viestin sisältö, lähettäjän tiedot ja aikaleima.
 

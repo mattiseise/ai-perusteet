@@ -31,7 +31,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **kontekstin** ja **
 
 ### Ydinviesti: konteksti on pohja, prompti on tehtävänanto
 
-Opiskelijoille kannattaa havainnollistaa kontekstin ja promptin ero IT-tukiesimerkillä. Jos tukihenkilö saa viestin ”Tietokone ei toimi”, hän ei voi ratkaista ongelmaa luotettavasti ilman lisätietoja. Hän tarvitsee kontekstia: mikä tietokone on kyseessä, mitä käyttäjä yritti tehdä, milloin ongelma alkoi, näkyykö virheilmoitus ja mitä on jo kokeiltu.
+Opiskelijoille kannattaa havainnollistaa kontekstin ja promptin ero arkisella esimerkillä. Jos saat kaverilta viestin ”Tää ei toimi”, et voi auttaa luotettavasti ilman lisätietoja. Tarvitset kontekstia: mistä on kyse, mitä toinen yritti tehdä, milloin ongelma alkoi, näkyykö jokin virheilmoitus ja mitä on jo kokeiltu.
 
 > **Konteksti kertoo tilanteen. Prompti kertoo tehtävän.**
 
@@ -122,10 +122,10 @@ Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **itera
 
 ### Oppitunnin aikana
 
-- **Aloita johdantoskenaariolla:** ”IT-tukihenkilö saa viestin: Tietokone ei toimi.” Kysy opiskelijoilta, mitä lisätietoa he tarvitsisivat. Tämä johdattaa kontekstin käsitteeseen.
+- **Aloita johdantoskenaariolla:** ”Saat kaverilta viestin: Tää ei toimi.” Kysy opiskelijoilta, mitä lisätietoa he tarvitsisivat. Tämä johdattaa kontekstin käsitteeseen.
 - **Jatka promptiin:** Kun konteksti on selvitetty, kysy opiskelijoilta, mitä tekoälyltä kannattaisi pyytää. Tämä auttaa näkemään, että prompti rakentuu kontekstin päälle.
 - **Piirrä kaksi mallia näkyviin:** kontekstin viisi osaa ja promptin viisi elementtiä. Palaa niihin harjoitusten aikana.
-- **Käytä opiskelijoiden omia IT-ongelmia:** jos opiskelijat tekevät Linux-projektia, rakenna esimerkit Linuxista. Jos aihe on tietokannat, käytä SQL-esimerkkejä.
+- **Käytä opiskelijoiden omia esimerkkejä:** rakenna esimerkit opiskelijoiden omista aiheista ja aloista. Jos ryhmällä on yhteinen projekti tai harrastus, ammenna siitä.
 - **Korosta iterointia:** ammattilaiset eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He tarkentavat kontekstia ja promptia vastausten perusteella.
 
 ### Yleisiä haasteita ja ratkaisuja

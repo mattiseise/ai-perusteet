@@ -62,11 +62,11 @@ Muokkaa taulukkoasi tarvittaessa ja vastaa kolmeen kysymykseen lyhyesti (3–5 l
 
 ---
 
-## Tehtävä 2.2 — Tulevaisuus: AGI ja IT-ala 🟣 SYVENTÄVÄ
+## Tehtävä 2.2 — Tulevaisuus: AGI ja oma alasi 🟣 SYVENTÄVÄ
 
 > **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat pohtia, mihin tekoäly on menossa — ja mitä se tarkoittaa juuri sinun tulevalle ammatillesi.
 
-**Tavoite:** Ymmärrät, millainen AGI olisi käytännössä, ja muodostat oman näkemyksesi siitä, miten se muuttaisi IT-alaa.
+**Tavoite:** Ymmärrät, millainen AGI olisi käytännössä, ja muodostat oman näkemyksesi siitä, miten se muuttaisi sinua kiinnostavaa alaa.
 
 ### Vaiheet
 
@@ -74,15 +74,17 @@ Muokkaa taulukkoasi tarvittaessa ja vastaa kolmeen kysymykseen lyhyesti (3–5 l
 
 Kirjoita 2–3 lausetta: *"Mitä AGI (yleisäly) voisi tehdä, mitä nykyinen kapea tai generatiivinen AI ei voi?"* Älä etsi vastausta vielä — kirjoita oma käsityksesi.
 
-#### Vaihe 2 — Valitse IT-ammatti ja pohdi
+#### Vaihe 2 — Valitse itseäsi kiinnostava ala tai ammatti ja pohdi
 
-Valitse yksi IT-ammatti, joka kiinnostaa sinua tai johon tähtäät:
+Valitse yksi ala tai ammatti, joka kiinnostaa sinua tai johon tähtäät. Esimerkkejä eri aloilta:
 
-- Ohjelmistokehittäjä
-- IT-tuki
-- Tietoturva-asiantuntija
-- Tietokanta- tai pilvi-infrastruktuurin osaaja
-- Joku muu IT-ala (kerro mikä)
+- liiketalous tai kauppa (esim. myyjä, yrittäjä)
+- sosiaali- ja terveysala (esim. lähihoitaja, sairaanhoitaja)
+- media ja viestintä (esim. toimittaja, graafikko)
+- tekniikka ja IT (esim. sähköasentaja, ohjelmistokehittäjä)
+- ravintola- ja cateringala (esim. kokki, tarjoilija)
+- kasvatus ja opetus (esim. opettaja, ohjaaja)
+- jokin lukioaine tai harrastus, joka kiinnostaa sinua (esim. historia, biologia, musiikki, urheilu)
 
 Vastaa kysymyksiin kirjallisesti:
 
@@ -96,9 +98,9 @@ Avaa ChatGPT tai Claude ja anna sille pohdintasi. Esimerkkiprompti:
 
 ```
 Toimit minulle sparrauskumppanina. Pohdin, miten AGI (yleisäly)
-muuttaisi IT-ammattia, johon tähtään. Tässä oma näkemykseni:
+muuttaisi alaa tai ammattia, johon tähtään. Tässä oma näkemykseni:
 
-Valittu ammatti: [esim. ohjelmistokehittäjä]
+Valittu ala tai ammatti: [esim. lähihoitaja, kokki, toimittaja tai ohjelmistokehittäjä]
 Nykyisen AI:n vaikutus: [oma vastauksesi]
 AGI:n mahdollinen vaikutus: [oma vastauksesi]
 Mikä säilyisi ihmisellä: [oma vastauksesi]
@@ -114,7 +116,7 @@ Tämä on hyvä harjoitus siinä, miten tekoälyä käytetään *peilinä omille
 
 #### Vaihe 4 — Kirjoita oma näkemys
 
-Kirjoita 1–2 kappaleen näkemys: *"Tulevaisuus IT-alalla, jos AGI saavutetaan."* Tekoälykeskustelun jälkeen kirjoita tämä omasta päästäsi — käytä keskustelua pohjana, mutta lopullinen näkemys on sinun.
+Kirjoita 1–2 kappaleen näkemys: *"Tulevaisuus valitsemallani alalla, jos AGI saavutetaan."* Tekoälykeskustelun jälkeen kirjoita tämä omasta päästäsi — käytä keskustelua pohjana, mutta lopullinen näkemys on sinun.
 
 > 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä pohdinta kannattaa tallentaa itselle. Saatat huomata vuoden päästä, että ajatuksesi muuttuvat — ja se on hieno tapa nähdä omaa kehitystäsi.
 

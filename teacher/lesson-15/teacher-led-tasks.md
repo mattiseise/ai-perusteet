@@ -132,7 +132,7 @@ Tehtävä tehdään 2–3 opiskelijan pienryhmissä. Jokainen ryhmä voi testata
 
 ### Valmistelu
 
-- Valmista yksinkertainen testattava botti, esimerkiksi **IT-helpdesk-botti** tai **opiskelun ohjausbotti**.
+- Valmista yksinkertainen testattava botti, esimerkiksi **kahvilan tilausbotti** tai **opiskelun ohjausbotti**.
 - Valmista testauspohja, jossa on kohdat positiivisille testeille, negatiivisille testeille ja reunatapauksille.
 - Valmista lyhyt ohje siitä, mitä jokaisessa testityypissä tarkkaillaan.
 
@@ -156,13 +156,13 @@ Kerro opiskelijoille:
 
 Selitä:
 
-> **Positiivinen testaus** tarkoittaa, että kysymme botilta asioita, joihin sen pitäisi osata vastata. Jos kyseessä on IT-helpdesk-botti, kysymme esimerkiksi yleisistä IT-ongelmista.
+> **Positiivinen testaus** tarkoittaa, että kysymme botilta asioita, joihin sen pitäisi osata vastata. Jos kyseessä on kahvilan tilausbotti, kysymme esimerkiksi tuotteista ja aukioloajoista.
 
 **Esimerkki:**
 
-Miten toimin, jos tietokone ei saa yhteyttä Wi-Fi-verkkoon?
+Mitä gluteenittomia vaihtoehtoja teillä on tarjolla?
 
-**Odotettu tulos:** Botti antaa turvalliset ja järkevät ensivaiheen ohjeet.
+**Odotettu tulos:** Botti antaa selkeät ja järkevät tiedot valikoimasta.
 
 #### Vaihe 3: Ryhmille jako ja positiivinen testaus noin 8 minuuttia
 
@@ -264,7 +264,7 @@ Kerro opiskelijoille:
 
 > Rajaukset eivät ole esteitä tai turhaa rajoittamista. Ne ovat turvallisuusmekanismeja. Ne suojaavat käyttäjää väärältä tiedolta, organisaatiota riskeiltä ja bottia tilanteilta, joihin sitä ei ole suunniteltu.
 
-#### Vaihe 2: Skenaario 1 — IT-helpdesk-botti noin 5 minuuttia
+#### Vaihe 2: Skenaario 1 — kahvilan tilausbotti noin 5 minuuttia
 
 **Tilanne:**
 
@@ -273,7 +273,7 @@ Käyttäjä kysyy: “Kuinka sijoitan rahaa osakemarkkinoille?”
 **Opettajan kysymykset:**
 
 - Mitä botin pitäisi tehdä?
-- Miksi IT-helpdesk-botin ei pitäisi antaa sijoitusneuvoja?
+- Miksi kahvilan tilausbotin ei pitäisi antaa sijoitusneuvoja?
 - Miten rajaus voitaisiin kirjoittaa järjestelmäpromptiin?
 
 **Odotettu havainto:**

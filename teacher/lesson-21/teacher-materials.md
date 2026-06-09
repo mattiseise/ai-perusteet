@@ -56,7 +56,7 @@ Moni opiskelija ajattelee helposti, että agentti näkee koko keskustelun ja kai
 | --- | --- | --- |
 | **Liian pieni** | Agentti unohtaa alkuperäisen ongelman, toistaa itseään tai menettää keskustelun punaisen langan. | Näytä esimerkki pitkästä tukikeskustelusta, jossa alkuperäinen ongelma putoaa pois näkyvistä. |
 | **Liian suuri** | Agentti hidastuu, käsittely kallistuu ja mukaan voi tulla epäolennaista tietoa. | Korosta, että enemmän tietoa ei aina tarkoita parempaa päätöstä. |
-| **Sopiva koko** | Agentti näkee tehtävän kannalta olennaisen historian ilman turhaa kuormaa. | Koko riippuu tehtävästä: monivaiheinen IT-tuki tarvitsee enemmän kontekstia kuin yksinkertainen hintakysymys. |
+| **Sopiva koko** | Agentti näkee tehtävän kannalta olennaisen historian ilman turhaa kuormaa. | Koko riippuu tehtävästä: monivaiheinen asiakaspalvelutilanne tarvitsee enemmän kontekstia kuin yksinkertainen hintakysymys. |
 
 **Opettajan huomio:** Korosta kompromissia. Konteksti-ikkunan kasvattaminen voi parantaa ymmärrystä, mutta se lisää myös kustannuksia, hitautta ja hälyn määrää. Hyvä suunnittelija valitsee ikkunan koon tehtävän mukaan.
 

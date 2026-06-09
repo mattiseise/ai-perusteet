@@ -2,7 +2,7 @@
 
 ## Johdanto: tekoäly ei ole vain tekninen työkalu
 
-Monet ajattelevat, että tekoäly on tarkoitettu ohjelmoijille ja datatieteen aloille. Todellisuudessa tekoäly on hyödyllisimmillään arkisissa tehtävissä: tekstien kirjoittamisessa, asioiden selvittämisessä, ongelmien ratkaisemisessa ja oppimisessa. Tämä koskee jokaista IT-alan opiskelijaa riippumatta siitä, suuntaudutko koodaukseen, käyttäjätukeen, järjestelmähallintaan vai tietoturvaan.
+Monet ajattelevat, että tekoäly on tarkoitettu ohjelmoijille ja datatieteen aloille. Todellisuudessa tekoäly on hyödyllisimmillään arkisissa tehtävissä: tekstien kirjoittamisessa, asioiden selvittämisessä, ongelmien ratkaisemisessa ja oppimisessa. Tämä koskee jokaista opiskelijaa riippumatta siitä, mille alalle suuntaudut.
 
 Tällä oppitunnilla opit käyttämään tekoälyä käytännön **työparina**. Et opiskele monimutkaisia teknisiä komentoja, vaan opit hyödyntämään tekoälyä päivittäisissä tehtävissä, joita kohtaat opiskelussa ja myöhemmin työelämässä. Ajattele tekoälyä kuin kollegaa, joka istuu viereisellä tuolilla: voit kysyä siltä neuvoa, pyytää sitä tarkistamaan tekstisi tai selittämään asian, jota et vielä ymmärrä.
 
@@ -10,13 +10,13 @@ Tällä oppitunnilla opit käyttämään tekoälyä käytännön **työparina**.
 
 ## AI kirjoittamisen apuna
 
-**Kirjoittaminen** on taito, jota tarvitset kaikissa IT-ammateissa. IT-tukihenkilö kirjoittaa ohjeita asiakkaille, järjestelmänvalvoja dokumentoi prosesseja ja koodari selittää muille, miten sovellus toimii. Kirjoittaminen voi kuitenkin olla vaikeaa: mistä aloittaa, miten saada tekstistä selkeä ja miten pitää se sopivan mittaisena?
+**Kirjoittaminen** on taito, jota tarvitset lähes joka alalla. Asiakaspalvelija kirjoittaa ohjeita asiakkaille, hoitaja kirjaa tapahtumia ja yrittäjä viestii sidosryhmilleen. Kirjoittaminen voi kuitenkin olla vaikeaa: mistä aloittaa, miten saada tekstistä selkeä ja miten pitää se sopivan mittaisena?
 
 Tekoäly voi auttaa tässä merkittävästi. Se ei kirjoita puolestasi valmista lopputuotosta, mutta se voi antaa pohjan, jota voit muokata ja parantaa.
 
-Hyvä esimerkki on **ohjeen kirjoittaminen**. Oletetaan, että sinun täytyy kirjoittaa asiakkaalle ohje VPN:n käyttöönotosta yrityksen järjestelmässä. Voit pyytää tekoälyltä: ”Kirjoita selkeä, vaiheittainen ohje VPN:n käyttöönottoon Windows-tietokoneella. Kohderyhmä on henkilö, joka ei ole teknisesti taitava. Enintään 8 vaihetta.”
+Hyvä esimerkki on **ohjeen kirjoittaminen**. Oletetaan, että sinun täytyy kirjoittaa asiakkaalle ohje siitä, miten verkkokaupan tilauksen voi palauttaa. Voit pyytää tekoälyltä: ”Kirjoita selkeä, vaiheittainen ohje tilauksen palauttamiseen verkkokaupassa. Kohderyhmä on henkilö, joka ei ole tottunut verkkokauppoihin. Enintään 8 vaihetta.”
 
-Tekoäly antaa sinulle todennäköisesti selkeän ja hyvin jäsennellyn pohjan. Se ei kuitenkaan tunne yrityksesi VPN-ohjelmistoa eikä tiedä, miltä kirjautumissivu näyttää. Siksi sinun täytyy muokata tekstiä: lisää oikeat nimet, tarkista vaiheet ja varmista, että ohje vastaa todellisuutta.
+Tekoäly antaa sinulle todennäköisesti selkeän ja hyvin jäsennellyn pohjan. Se ei kuitenkaan tunne juuri sinun verkkokauppasi sivustoa eikä tiedä, miltä painikkeet näyttävät. Siksi sinun täytyy muokata tekstiä: lisää oikeat nimet, tarkista vaiheet ja varmista, että ohje vastaa todellisuutta.
 
 Toinen yleinen tilanne on **sähköpostien kirjoittaminen**. Ammattimaiset sähköpostit ovat lyhyitä, selkeitä ja kohteliaita. Tekoäly voi auttaa viestin muotoilussa erityisesti silloin, kun kirjoitat vieraalla kielellä tai kun viesti on tärkeä.
 
@@ -30,7 +30,7 @@ Yksi tekoälyn tehokkaimmista käyttötavoista on **oppimisen tukeminen**. Kun k
 
 Voit esimerkiksi pyytää: ”Selitä minulle, mikä on API, niin kuin selittäisit sen 15-vuotiaalle. Käytä arkikieltä ja anna yksi konkreettinen esimerkki.” Tekoäly mukauttaa vastauksensa tasoosi. Jos selitys on liian yksinkertainen, voit pyytää syvällisempää versiota. Jos se on liian monimutkainen, voit pyytää yksinkertaisempaa selitystä.
 
-Tämä on erityisen hyödyllistä IT-opinnoissa, joissa käsitteet tuntuvat usein abstrakteilta. Pilvipalvelut, verkkotopologiat, tietokannat ja rajapinnat ovat asioita, joita tekoäly voi selittää esimerkkien ja vertausten avulla.
+Tämä on erityisen hyödyllistä silloin, kun käsitteet tuntuvat abstrakteilta. Esimerkiksi taloustieteen korkokäsitteet, biologian solujen toiminta tai kemian reaktiot ovat asioita, joita tekoäly voi selittää esimerkkien ja vertausten avulla.
 
 Tekoäly ei kuitenkaan ole opettaja. Se ei aina ole oikeassa, ja se voi selittää asiat tavalla, joka kuulostaa vakuuttavalta mutta on virheellinen. Siksi on tärkeää, että **vertaat** tekoälyn selityksiä kurssimateriaaliin ja kysyt opettajalta, jos jokin ei täsmää.
 
@@ -38,7 +38,7 @@ Tekoäly ei kuitenkaan ole opettaja. Se ei aina ole oikeassa, ja se voi selittä
 
 ## AI:n käyttö ongelmanratkaisussa
 
-IT-alalla kohtaat jatkuvasti ongelmia: jokin ei toimi, sovellus antaa virheilmoituksen tai asetus ei mene oikein. Monet opiskelijat jäävät tällaisissa tilanteissa jumiin ja turhautuvat. Tekoäly voi auttaa pääsemään eteenpäin.
+Arjessa ja opiskelussa kohtaat jatkuvasti ongelmia: jokin ei toimi, sovellus antaa virheilmoituksen tai asetus ei mene oikein. Monet opiskelijat jäävät tällaisissa tilanteissa jumiin ja turhautuvat. Tekoäly voi auttaa pääsemään eteenpäin.
 
 Avain on osata **kuvata ongelma selkeästi**. Hyvä tapa on kertoa tekoälylle kolme asiaa:
 
@@ -71,19 +71,19 @@ Yksinkertainen dokumentointimalli sisältää neljä osaa:
 3. **Ratkaisu:** Mikä lopulta toimi?
 4. **Lopputilanne:** Miten asia toimii nyt?
 
-Tämä malli sopii lähes kaikkeen: IT-tukipyyntöihin, opiskeluprojektien kuvauksiin ja työraportteihin.
+Tämä malli sopii lähes kaikkeen: tukipyyntöihin, opiskeluprojektien kuvauksiin ja työraportteihin.
 
 ---
 
 ## Virheilmoitukset — tekoäly tulkkina
 
-**Virheilmoitukset** ovat osa IT-arkea. Ohjelma kaatuu, ja näytölle ilmestyy outo teksti englanniksi. Monet sivuuttavat virheilmoituksen tai panikoivat. Ammattilaiselle virheilmoitus on vihje: se kertoo, mikä meni pieleen.
+**Virheilmoitukset** ovat osa digiarkea. Ohjelma kaatuu, ja näytölle ilmestyy outo teksti englanniksi. Monet sivuuttavat virheilmoituksen tai panikoivat. Tottuneelle käyttäjälle virheilmoitus on vihje: se kertoo, mikä meni pieleen.
 
 Tekoäly on erinomainen virheilmoitusten selittäjä. Voit yksinkertaisesti kopioida virheilmoituksen ja kysyä: ”Mitä tämä virheilmoitus tarkoittaa selkokielellä? Mitä minun pitäisi tehdä?”
 
-Esimerkiksi virheilmoitus ”ECONNREFUSED 127.0.0.1:5432” voi tarkoittaa, että ohjelma yritti ottaa yhteyttä paikalliseen tietokantaan, mutta yhteys epäonnistui. Tekoäly voi selittää tämän ja ehdottaa esimerkiksi: ”Tarkista, onko tietokanta käynnissä, ja kokeile käynnistää se uudelleen.”
+Esimerkiksi virheilmoitus ”The application was unable to start correctly (0xc000007b)” voi tarkoittaa, että ohjelma yritti käynnistyä mutta jokin sen tarvitsema tiedosto puuttui tai oli väärää versiota. Tekoäly voi selittää tämän ja ehdottaa esimerkiksi: ”Asenna ohjelma uudelleen tai päivitä tarvittavat ajurit.”
 
-Tämä taito on arvokas koko IT-urasi ajan. Virheilmoituksia tulee aina, ja kyky ymmärtää ne nopeasti erottaa tehokkaan ammattilaisen sellaisesta, joka jää helposti jumiin.
+Tämä taito on arvokas koko työuran ajan. Virheilmoituksia tulee aina, ja kyky ymmärtää ne nopeasti erottaa tehokkaan tekijän sellaisesta, joka jää helposti jumiin.
 
 > **Pysähdy hetkeksi:** Oletko koskaan saanut virheilmoituksen, jota et ymmärtänyt? Mitä teit? Googlasitko, sivuutitko vai kysyitkö joltakulta?
 

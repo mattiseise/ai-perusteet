@@ -30,7 +30,7 @@ Taustatieto siitä, missä tilanteessa toimit. Sama virheilmoitus voi tarkoittaa
 
 ## Tiketti (ticket)
 
-IT-tukijärjestelmän merkintä, joka kuvaa ongelman tai pyynnön. Hyvä tiketti kertoo: mikä on ongelma, ketä se koskee ja miten kiireellinen se on.
+Tukijärjestelmän merkintä, joka kuvaa ongelman tai pyynnön. Hyvä tiketti kertoo: mikä on ongelma, ketä se koskee ja miten kiireellinen se on.
 
 ## Iterointi (iteration)
 

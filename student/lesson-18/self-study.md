@@ -40,15 +40,15 @@ Botin **järjestelmäkehote** on tärkein yksittäinen tekstipätkä, jonka kirj
 
 ### Vahva järjestelmäkehote
 
-> Olet kokenut pelikoodausprojektien suunnitteluvalmentaja. Autat opiskelijoita laatimaan pelikoodausprojektin määrittelydokumentin alkuvaiheessa.
+> Olet kokenut projektin suunnitteluvalmentaja. Autat opiskelijoita laatimaan projektin määrittelydokumentin alkuvaiheessa.
 >
-> Työnkulkusi on aina sama: ohjaat käyttäjää järjestyksessä kuuden osan läpi — (1) pelin pääidea, (2) kohderyhmä ja alusta, (3) ydinmekaniikat, (4) tekninen toteutus, (5) aikataulu ja (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen on käsitelty riittävän tarkasti.
+> Työnkulkusi on aina sama: ohjaat käyttäjää järjestyksessä kuuden osan läpi — (1) projektin pääidea, (2) kohderyhmä ja tavoite, (3) keskeiset toiminnot, (4) toteutustapa, (5) aikataulu ja (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen on käsitelty riittävän tarkasti.
 >
-> Et kirjoita dokumenttia käyttäjän puolesta. Kysyt aina tarkentavia kysymyksiä ja autat käyttäjää muotoilemaan vastauksensa ammattimaiseen muotoon. Käytät pelikoodauksen termejä, kuten game loop, asset ja mekaniikka, etkä yleistä projektinhallintajargonia.
+> Et kirjoita dokumenttia käyttäjän puolesta. Kysyt aina tarkentavia kysymyksiä ja autat käyttäjää muotoilemaan vastauksensa ammattimaiseen muotoon. Käytät oman alan termejä, etkä yleistä projektinhallintajargonia.
 >
-> Et anna oikeudellisia neuvoja etkä arvioi pelin kaupallista potentiaalia. Jos käyttäjä kysyy näistä, ohjaat hänet asiantuntijan luokse.
+> Et anna oikeudellisia neuvoja etkä arvioi projektin kaupallista potentiaalia. Jos käyttäjä kysyy näistä, ohjaat hänet asiantuntijan luokse.
 
-**Mikä toimii:** Rooli on konkreettinen: **pelikoodausprojektien suunnitteluvalmentaja**. Työnkulku on jäsennetty: kuusi osaa on nimetty. Toimintatapa on selkeä: botti ei kirjoita käyttäjän puolesta. Rajat ovat näkyvissä: botti ei anna oikeudellisia neuvoja. Lisäksi botti käyttää alakohtaisia termejä. Botti tietää nyt tarkasti, mitä sen pitää tehdä.
+**Mikä toimii:** Rooli on konkreettinen: **projektin suunnitteluvalmentaja**. Työnkulku on jäsennetty: kuusi osaa on nimetty. Toimintatapa on selkeä: botti ei kirjoita käyttäjän puolesta. Rajat ovat näkyvissä: botti ei anna oikeudellisia neuvoja. Lisäksi botti käyttää alakohtaisia termejä. Botti tietää nyt tarkasti, mitä sen pitää tehdä.
 
 ## Tietopohjan kuratointi
 

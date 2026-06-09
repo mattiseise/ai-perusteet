@@ -56,15 +56,53 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
-## Konkreettisia esimerkkejä IT-alalta
+<figure class="ai-demo"><span class="ai-demo__tag">// sääntö vai todennäköisyys</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:space-around;gap:18px;padding:0 24px">
+  <svg viewBox="0 0 230 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
+    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">SÄÄNTÖ</text>
+    <g stroke="oklch(0.66 0.13 208)" stroke-width="2" fill="none">
+      <line x1="40" y1="70" x2="100" y2="70"/><line x1="130" y1="70" x2="190" y2="70"/>
+    </g>
+    <rect x="100" y="56" width="30" height="28" rx="4" fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2"/>
+    <circle class="l01rule-tick" cx="40" cy="70" r="5" fill="oklch(0.66 0.13 208)"/>
+    <rect x="180" y="58" width="20" height="24" rx="4" fill="oklch(0.66 0.13 208)"/>
+    <text x="115" y="110" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">jos X → niin Y</text>
+  </svg>
+  <svg viewBox="0 0 230 150" style="width:46%;height:90%" preserveAspectRatio="xMidYMid meet">
+    <text x="115" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">TODENNÄKÖISYYS</text>
+    <g stroke="oklch(0.66 0.15 264)" stroke-width="1" opacity=".25">
+      <line x1="40" y1="55" x2="115" y2="78"/><line x1="40" y1="100" x2="115" y2="78"/>
+      <line x1="115" y1="78" x2="190" y2="50"/><line x1="115" y1="78" x2="190" y2="105"/>
+    </g>
+    <g fill="oklch(0.66 0.15 264)">
+      <circle class="l01rule-node" cx="40" cy="55" r="4"/>
+      <circle class="l01rule-node" cx="40" cy="100" r="4" style="animation-delay:.5s"/>
+      <circle class="l01rule-node" cx="115" cy="78" r="4" style="animation-delay:1s"/>
+      <circle class="l01rule-node" cx="190" cy="50" r="4" style="animation-delay:1.5s"/>
+      <circle class="l01rule-node" cx="190" cy="105" r="4" style="animation-delay:2s"/>
+    </g>
+    <text x="115" y="135" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">97 % laillinen</text>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Sääntöpohjainen järjestelmä seuraa kiinteää polkua (jos X → niin Y). Tekoäly punnitsee monta painotettua yhteyttä ja antaa todennäköisyyden.</figcaption></figure>
+
+<style>
+.l01rule-tick{animation:l01ruleTick 3.2s ease-in-out infinite}
+@keyframes l01ruleTick{0%,100%{opacity:.35}50%{opacity:1}}
+.l01rule-node{animation:l01ruleBlink 3.4s ease-in-out infinite}
+@keyframes l01ruleBlink{0%,100%{opacity:.35;r:3}50%{opacity:1;r:4.6}}
+@media (prefers-reduced-motion:reduce){.l01rule-tick,.l01rule-node{animation:none}.l01rule-node{opacity:.9}}
+</style>
+
+## Konkreettisia esimerkkejä arjesta
 
 Pankkisektorilla tekoälyä käytetään laajasti, mutta ei kaikessa. Esimerkiksi verkkopankissa näkyvät toiminnot, kuten ”Maksa lasku” ja ”Siirry tilille”, perustuvat tavalliseen ohjelmointiin ja ennalta määriteltyihin sääntöihin.
 
 Sen sijaan **petoksentunnistuksessa** voidaan hyödyntää tekoälyä. Myös lainahakemuksen automaattinen hyväksyminen tai hylkääminen voi perustua **koneoppimismalliin**, joka on oppinut historiallisista hakemuksista ja niiden lopputuloksista.
 
-Sama ero näkyy IT-tuen tikettijärjestelmissä. Yksinkertainen järjestelmä voi ohjata tikettejä kiinteiden sääntöjen perusteella. Esimerkiksi varmenneongelmaan liittyvät viestit voidaan ohjata suoraan ryhmälle A. Tämä on automaatiota, mutta ei vielä tekoälyä.
+Sama ero näkyy esimerkiksi koulun tai kunnan palautejärjestelmissä. Yksinkertainen järjestelmä voi ohjata viestejä kiinteiden sääntöjen perusteella. Esimerkiksi sana ”ruokala” voi ohjata viestin suoraan keittiön henkilökunnalle. Tämä on automaatiota, mutta ei vielä tekoälyä.
 
-Kehittyneempi järjestelmä voi hyödyntää tekoälymalleja, jotka ennustavat esimerkiksi tiketin ratkaisuaikaa tai sitä, kenellä olisi parhaat valmiudet hoitaa se. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan oppii aiemmista tapauksista ja toimintamalleista.
+Kehittyneempi järjestelmä voi hyödyntää tekoälymalleja, jotka ennustavat esimerkiksi sen, kuinka kiireellinen viesti on tai kenelle se kannattaisi ohjata. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan oppii aiemmista tapauksista ja toimintamalleista.
 
 Netflixin, Spotifyn ja verkkokauppojen **suositukset** ovat hyvä esimerkki tekoälyn käytöstä. Ne eivät toimi pelkkien yksinkertaisten sääntöjen varassa, vaan oppivat miljoonista käyttäjien valinnoista, mieltymyksistä ja käyttäytymismalleista. Tämän perusteella ne pyrkivät ennustamaan, mitä haluat nähdä, kuunnella tai ostaa seuraavaksi.
 
@@ -74,7 +112,7 @@ Netflixin, Spotifyn ja verkkokauppojen **suositukset** ovat hyvä esimerkki teko
 
 **Automaatio** ja **sääntöpohjaiset järjestelmät** ovat usein tarkkoja, nopeita ja ennustettavia. Tekoälyn vahvuus taas on siinä, että se on joustavampi ja pystyy oppimaan monimutkaisista ilmiöistä.
 
-Kun ymmärrät tämän eron, sinun on helpompi hahmottaa, miksi jotkin IT-haasteet vaativat tekoälyä ja toiset voidaan ratkaista hyvin tavallisella ohjelmointilogiikalla.
+Kun ymmärrät tämän eron, sinun on helpompi hahmottaa, miksi jotkin ongelmat vaativat tekoälyä ja toiset voidaan ratkaista hyvin tavallisella ohjelmointilogiikalla.
 
 Seuraavalla tunnilla perehdyt siihen, millaisia tekoälyn eri tyyppejä on olemassa — ja miksi ”älykkyyttä” voi olla monessa muodossa.
 

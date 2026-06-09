@@ -176,10 +176,10 @@ Opiskelijat suunnittelevat human-in-the-loop-työnkulun yhdelle prosessille.
 
 - tilauksen käsittely,
 - ajanvaraus,
-- IT-tukipyyntö,
+- asiakaspalvelupyyntö,
 - asiakaspalautteen käsittely,
 - hyvityksen myöntäminen,
-- käyttäjätunnuksen palauttaminen.
+- jäsenyyden uusiminen.
 
 **Ryhmän tehtävä:**
 

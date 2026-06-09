@@ -8,43 +8,40 @@ Monella on virheellinen käsitys omasta botista. He kuvittelevat, että ”oma C
 
 > **Pysähdy hetkeksi:** Millaisen botin haluaisit tehdä? Kenen kanssa se kommunikoi: ammattilaisten, asiakkaiden vai opiskelijoiden? Mitä sen pitäisi tehdä paremmin kuin tavallinen ChatGPT?
 
-## Esimerkki alusta loppuun: IT-helpdesk-botti
+## Esimerkki alusta loppuun: kahvilan tilausopas-botti
 
 Ennen kuin suunnittelet omaa bottiasi, katsotaan yksi valmis esimerkki kokonaisuudessaan. Tämä näyttää, miltä suunnitteluprosessi näyttää alusta loppuun.
 
-**Tarve:** IT-tukiosasto saa päivittäin paljon samoja kysymyksiä: ”Miten vaihdan salasanan?”, ”Miten yhdistän tulostimeen?” ja ”VPN ei toimi.” Ihmisten aikaa kuluu rutiinikysymyksiin.
+**Tarve:** Pieni kahvila saa päivittäin paljon samoja kysymyksiä: ”Onko teillä gluteenittomia vaihtoehtoja?”, ”Mihin aikaan suljette?” ja ”Voinko varata pöydän?” Henkilökunnan aikaa kuluu rutiinikysymyksiin.
 
-**Tarkoitus:** Botti vastaa kymmeneen yleisimpään IT-tukikysymykseen ja ohjaa monimutkaiset ongelmat ihmiselle.
+**Tarkoitus:** Botti vastaa kymmeneen yleisimpään asiakaskysymykseen ja ohjaa erikoistapaukset henkilökunnalle.
 
-**Rooli:** Botti on ystävällinen IT-tukihenkilö, joka puhuu selkeää suomea ilman turhaa teknistä termistöä. Sillä on viiden vuoden kokemus käyttäjätuesta.
+**Rooli:** Botti on ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea ja tuntee kahvilan tuotteet ja aukioloajat. Sillä on usean vuoden kokemus asiakaspalvelusta.
 
 **Ohjeet:**
 
-1. Kysy ensin, mikä laite on kyseessä: Windows-tietokone, Mac vai puhelin.
-2. Anna ohjeet vaihe vaiheelta, yksi askel kerrallaan.
-3. Kysy jokaisen vaiheen jälkeen: ”Toimiko? Voimmeko jatkaa?”
+1. Tervehdi asiakasta ystävällisesti ja kysy, miten voit auttaa.
+2. Vastaa yhteen kysymykseen kerrallaan selkeästi ja lyhyesti.
+3. Tarjoa lopuksi lisäapua: ”Voinko auttaa vielä jossakin?”
 
 **Rajaukset:**
 
-- Botti ei koskaan pyydä käyttäjän salasanaa.
-- Botti ei tee muutoksia järjestelmiin, vaan ainoastaan ohjeistaa käyttäjää.
-- Jos ongelma ei ratkea kolmen yrityksen jälkeen, botti ohjaa asian ihmiselle: ”Tämä vaatii tarkempaa tutkimista. Lähetän tiketin IT-tiimille.”
+- Botti ei koskaan pyydä asiakkaan maksu- tai korttitietoja.
+- Botti ei vahvista pöytävarausta itse, vaan ohjaa varauksen henkilökunnalle.
+- Jos kysymys ei kuulu kahvilan aiheisiin, botti ohjaa asian ihmiselle: ”Tämä kannattaa kysyä suoraan henkilökunnalta. Välitän viestisi heille.”
 
 **Esimerkkivuorovaikutus:**
 
-> **Käyttäjä:** VPN ei toimi.
-> **Botti:** Hei! Selvitetään asia. Mikä laite sinulla on: Windows, Mac vai puhelin?
-> **Käyttäjä:** Windows.
-> **Botti:** Hyvä. Kokeillaan ensin tätä: avaa VPN-sovellus, klikkaa ”Disconnect”, odota 10 sekuntia ja klikkaa sitten ”Connect” uudelleen. Toimiko?
-> **Käyttäjä:** Ei.
-> **Botti:** Kokeillaan seuraavaksi: avaa Windowsin asetukset → Verkko → VPN. Poista yhteys ja lisää se uudelleen.
-> **Botti:** Tarvitsetko tähän tarkemmat ohjeet?
+> **Asiakas:** Onko teillä gluteenittomia vaihtoehtoja?
+> **Botti:** Hei! Kyllä on. Tarjoamme gluteenittomia leivonnaisia ja kaikki kahvijuomamme voi tehdä myös kauramaidolla. Haluatko kuulla tämän päivän gluteenittomista vaihtoehdoista?
+> **Asiakas:** Joo, kerro.
+> **Botti:** Tänään meillä on gluteeniton porkkanakakku ja gluteeniton suolainen piirakka. Voinko auttaa vielä jossakin?
 
 **Testaus esikatselussa:**
 
-- **Positiivinen testi:** ”Miten vaihdan salasanan?” → Botti kysyy laitteen ja ohjeistaa vaiheittain. ✓
-- **Negatiivinen testi:** ”Mikä on ylläpitäjän salasana?” → Botti kieltäytyy ja selittää miksi. ✓
-- **Rajatapaus:** ”Kone ei käynnisty ollenkaan.” → Botti ohjaa asian ihmiselle. ✓
+- **Positiivinen testi:** ”Mihin aikaan suljette?” → Botti kertoo aukioloajat selkeästi. ✓
+- **Negatiivinen testi:** ”Voinko maksaa kortilla tässä chatissä?” → Botti kieltäytyy ja selittää miksi. ✓
+- **Rajatapaus:** ”Haluan reklamoida eilisestä tilauksesta.” → Botti ohjaa asian henkilökunnalle. ✓
 
 Tämä esimerkki näyttää koko prosessin: **tarve → tarkoitus → rooli → ohjeet → rajaukset → esimerkkivuorovaikutus → testaus**. Seuraavaksi opit jokaisen vaiheen tarkemmin ja suunnittelet oman bottisi.
 
@@ -54,7 +51,7 @@ Kun aloitat botin suunnittelun, sinun täytyy vastata kolmeen perustavaan kysymy
 
 **Ensimmäinen rakennuspalikka on tarkoitus.** Botilla täytyy olla selkeä ja konkreettinen tarkoitus, jonka voit mitata ja tarkistaa. ”Olla älykäs” ei ole hyvä tarkoitus, koska se on liian epämääräinen. Hyvä tarkoitus voi olla esimerkiksi: ”Auttaa opiskelijoita ymmärtämään Pythonin silmukoita interaktiivisten esimerkkien avulla”, ”Vastata asiakkaiden yleisimpiin IT-ongelmiin ja ohjata monimutkaiset asiat oikealle tiimille” tai ”Neuvoa nuoria yrittäjiä liiketoimintasuunnitelman rakentamisessa kysymysten avulla”. Jokainen näistä on konkreettinen ja arvioitavissa.
 
-**Toinen rakennuspalikka on rooli.** Botilla täytyy olla uskottava rooli, joka antaa sille persoonan ja asiantuntemuksen. Se voi olla esimerkiksi kokenut Python-tutori, jolla on 10 vuoden opetuskokemus ja joka ymmärtää, miten aloittelijat oppivat. Se voi olla ystävällinen IT-tukihenkilö, joka puhuu selkeää suomea ja kuuntelee asiakkaan huolia ennen kuin ehdottaa ratkaisua. Se voi olla myös mentori, joka opastaa startup-perustajaa rahoituksen, markkinoinnin ja tiimin johtamisen kysymyksissä. Rooli kirjoitetaan osaksi **järjestelmäpromptia** eli ohjeistusta, jonka annat botille ennen ensimmäistä keskustelua. Hyvin kirjoitettu rooli tekee botista uskottavan ja johdonmukaisen.
+**Toinen rakennuspalikka on rooli.** Botilla täytyy olla uskottava rooli, joka antaa sille persoonan ja asiantuntemuksen. Se voi olla esimerkiksi kokenut kielitutori, jolla on 10 vuoden opetuskokemus ja joka ymmärtää, miten aloittelijat oppivat. Se voi olla ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea ja kuuntelee asiakkaan toiveita ennen kuin ehdottaa ratkaisua. Se voi olla myös mentori, joka opastaa nuorta yrittäjää rahoituksen, markkinoinnin ja tiimin johtamisen kysymyksissä. Rooli kirjoitetaan osaksi **järjestelmäpromptia** eli ohjeistusta, jonka annat botille ennen ensimmäistä keskustelua. Hyvin kirjoitettu rooli tekee botista uskottavan ja johdonmukaisen.
 
 **Kolmas rakennuspalikka on ohjeet.** Ohjeet ovat käytännön säännöt, jotka kertovat botille, **miten** se tekee työtään. Esimerkiksi: ”Aloita aina yksinkertaisilla esimerkeillä ja siirry vasta sitten monimutkaisempiin asioihin”, ”Kun asiakas kuulostaa turhautuneelta, pahoittele ensin ennen kuin annat ohjeita” tai ”Anna jokaisen käsitteen jälkeen vähintään kaksi konkreettista esimerkkiä”. Ohjeet varmistavat, että botti toimii johdonmukaisesti ja käyttäjän tarpeita palvellen.
 
@@ -118,7 +115,7 @@ Katso Python-tutoribotin esimerkkivuorovaikutus:
 >
 > Ymmärsitkö tämän? Haluatko nähdä lisää esimerkkejä vai siirrytäänkö seuraavaan asiaan?
 
-Katso myös IT-helpdesk-botin esimerkkivuorovaikutus:
+Katso myös asiakaspalvelubotin esimerkkivuorovaikutus:
 
 > **Käyttäjä:** Laskuni ei ole saapunut. Mikä on vialla?
 >
@@ -139,7 +136,7 @@ Monet opiskelijat sekoittavat keskenään botin roolin ja persoonallisuuden. Ne 
 
 **Ammattilaisuus** tarkoittaa, että botti tietää, mitä tekee, ja tekee sen hyvin. Se vastaa tarkasti, käyttää oikeaa termistöä ja antaa luotettavaa tietoa. Ammattilaisuus ei ole koriste, vaan **pätevyys**.
 
-**Persoonallisuus** tarkoittaa tapaa, jolla botti välittää ammattilaisuutensa. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Sopiva tyyli riippuu botin roolista ja käyttäjäryhmästä. Opiskelijabotti voi olla kannustava ja kärsivällinen. IT-helpdesk-botti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuunteleva.
+**Persoonallisuus** tarkoittaa tapaa, jolla botti välittää ammattilaisuutensa. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Sopiva tyyli riippuu botin roolista ja käyttäjäryhmästä. Opiskelijabotti voi olla kannustava ja kärsivällinen. Asiakaspalvelubotti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuunteleva.
 
 Hyvä botti on aina ammattilaismainen. Persoonallisuus on tapa tukea ammattilaisuutta, ei korvata sitä.
 

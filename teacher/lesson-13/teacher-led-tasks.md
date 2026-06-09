@@ -229,7 +229,7 @@ Näytä opiskelijoille, miten annat omat raakamuistiinpanosi tekoälylle ja pyyd
 
 **Esimerkkipyyntö:**
 
-Muokkaa seuraavista raakamuistiinpanoista selkeä IT-tukidokumentti. Käytä rakennetta: Ongelma, Kokeillut ratkaisut, Toimiva ratkaisu ja Opittu. Kirjoita selkeästi aloittelijalle.
+Muokkaa seuraavista raakamuistiinpanoista selkeä ohjedokumentti. Käytä rakennetta: Ongelma, Kokeillut ratkaisut, Toimiva ratkaisu ja Opittu. Kirjoita selkeästi aloittelijalle.
 
 Näytä tekoälyn tuottama dokumentti.
 
@@ -248,7 +248,7 @@ Muokkaa dokumenttia yhdessä luokan kanssa.
 
 Kerro opiskelijoille:
 
-> IT-alalla dokumentointi on arkipäivää. IT-tukihenkilö kirjoittaa tikettejä, järjestelmänvalvoja dokumentoi prosesseja ja ohjelmistokehittäjä kirjoittaa ohjeita muille kehittäjille.
+> Dokumentointi on osa arkea lähes jokaisella alalla. Sairaanhoitaja kirjaa potilastietoja, kokki dokumentoi reseptit, projektipäällikkö kirjaa muistioita ja ohjelmistokehittäjä kirjoittaa ohjeita muille kehittäjille.
 
 Korosta:
 

@@ -137,7 +137,7 @@ Opiskelijat valitsevat yhden prosessin:
 
 - tilausprosessi,
 - ajanvarausprosessi,
-- IT-tukipyyntö,
+- asiakaspalvelupyyntö,
 - asiakaspalautteen käsittely.
 
 Ryhmän tehtävänä on määritellä:
@@ -209,7 +209,7 @@ Kysy opiskelijoilta:
 
 Opiskelijat valitsevat agentin roolin. Esimerkkejä:
 
-- IT-tukibotti,
+- asiakaspalvelubotti,
 - myyntiagentti,
 - terveydenhuollon neuvontabotti,
 - opiskelun ohjaaja,

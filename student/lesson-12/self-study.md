@@ -2,11 +2,31 @@
 
 ## Johdanto: sama kysymys, aivan eri vastaukset
 
-Kuvittele tilanne. Sinulla on esseen aihe ”Tekoäly työssä”, ja pyydät tekoälyä auttamaan. Ensimmäisellä kerralla kirjoitat: ”Kerro tekoälystä.” Vastaus on yleinen eikä auta kovin paljon. Toisella kerralla kirjoitat: ”Kerro tekoälystä esseeseeni, jonka kohdeyleisö on IT-opiskelijat.” Vastaus on jo parempi. Kolmannella kerralla kirjoitat: ”Kirjoita 500 sanan johdanto esseeseeni, jonka aihe on ’Tekoäly työssä’. Kohdeyleisö on IT-opiskelijat, jotka eivät osaa koodata. Aloita sillä, miten tekoäly muuttaa jokapäiväistä työtä.”
+Kuvittele tilanne. Sinulla on esseen aihe ”Tekoäly työssä”, ja pyydät tekoälyä auttamaan. Ensimmäisellä kerralla kirjoitat: ”Kerro tekoälystä.” Vastaus on yleinen eikä auta kovin paljon. Toisella kerralla kirjoitat: ”Kerro tekoälystä esseeseeni, jonka kohdeyleisö on toisen asteen opiskelijat.” Vastaus on jo parempi. Kolmannella kerralla kirjoitat: ”Kirjoita 500 sanan johdanto esseeseeni, jonka aihe on ’Tekoäly työssä’. Kohdeyleisö on toisen asteen opiskelijat, joilla ei ole teknistä taustaa. Aloita sillä, miten tekoäly muuttaa jokapäiväistä työtä.”
 
 Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vastaus on parempi kuin edellinen. Tämä ei ole magiaa, vaan järkevää viestintää: mitä tarkemmin kerrot, mitä tarvitset, sitä paremman vastauksen saat.
 
 **Konteksti** tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan *sinun* kysymyksestäsi, *sinun* tavoitteistasi ja *sinun* käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.
+
+<figure class="ai-demo"><span class="ai-demo__tag">// promptaus → vastaus</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:0 28px">
+  <div class="l12prm-line"><span class="l12prm-arrow">&gt;</span> Kirjoita 500 sanan johdanto esseeseeni</div>
+  <div class="l12prm-out"><span class="l12prm-type">Tekoäly muuttaa jokapäiväistä työtä</span><span class="l12prm-cursor"></span></div>
+</div>
+<figcaption class="ai-demo__cap">Mitä tarkemman kontekstin annat promptissa, sitä osuvamman vastauksen malli tuottaa — sana kerrallaan.</figcaption></figure>
+
+<style>
+.l12prm-line{font-family:var(--font-mono);font-size:13px;color:#8B94B3}
+.l12prm-arrow{color:oklch(0.66 0.15 264);margin-right:8px}
+.l12prm-out{font-family:var(--font-mono);font-size:14px;color:#E6EAF5;white-space:nowrap;overflow:hidden}
+.l12prm-type{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;width:0;
+  animation:l12prmType 6s steps(34) infinite}
+.l12prm-cursor{display:inline-block;width:8px;height:16px;vertical-align:bottom;margin-left:2px;
+  background:oklch(0.66 0.15 305);animation:l12prmBlink 1s step-end infinite}
+@keyframes l12prmType{0%{width:0}55%,80%{width:100%}100%{width:0}}
+@keyframes l12prmBlink{0%,100%{opacity:1}50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.l12prm-type{animation:none;width:100%}.l12prm-cursor{animation:none}}
+</style>
 
 ## Konteksti: miksi se on tärkeää?
 
@@ -20,7 +40,7 @@ Ilman kontekstia tekoäly tekee oletuksia ja arvailee. Kontekstin avulla se pyst
 
 Konteksti on tärkeää neljällä tavalla:
 
-1. **Tarkkuus:** Kohdistettu vastaus on parempi kuin yleinen vastaus. ”Tekoäly työssä” voi tarkoittaa melkein mitä tahansa, mutta ”tekoäly IT-opiskelijoiden arjessa” on jo paljon tarkempi aihe.
+1. **Tarkkuus:** Kohdistettu vastaus on parempi kuin yleinen vastaus. ”Tekoäly työssä” voi tarkoittaa melkein mitä tahansa, mutta ”tekoäly opiskelijan arjessa” on jo paljon tarkempi aihe.
 2. **Sopiva taso:** Konteksti kertoo, millä tasolla vastaus pitää kirjoittaa. ”Selitä tekoäly” on epäselvä pyyntö, mutta ”selitä tekoäly 15-vuotiaalle, joka ei osaa ohjelmointia” on selkeä.
 3. **Käyttökelpoinen muoto:** Konteksti kertoo, mitä aiot tehdä vastauksella. ”Auta minua esseen kirjoittamisessa” tuottaa erilaisen vastauksen kuin ”auta minua koodiprojektissa”.
 4. **Oikea sisältö:** Konteksti vähentää turhia korjauskierroksia. Kun kerrot alusta alkaen, mitä tarvitset, tekoäly osaa todennäköisemmin antaa hyödyllisen vastauksen heti.
@@ -36,7 +56,7 @@ Vertaa näitä kolmea pyyntöä:
 ”Kirjoita johdanto historian esseeseeni. Aihe on ’Digitaalinen vallankumous’. Kohderyhmä on 10. luokan opiskelijat.”
 
 **Paras pyyntö:**
-”Kirjoita 200 sanan johdanto historian esseeseeni. Aihe on ’Digitaalinen vallankumous’. Kohderyhmä on 10. luokan IT-opiskelijat, joilla on perustiedot historiasta mutta ei erityistä tekniikan osaamista. Haluan, että lukija ymmärtää, miksi aihe on tärkeä. Johdannon pitää päättyä selkeään aiheväitteeseen.”
+”Kirjoita 200 sanan johdanto historian esseeseeni. Aihe on ’Digitaalinen vallankumous’. Kohderyhmä on toisen asteen opiskelijat, joilla on perustiedot historiasta mutta ei erityistä tekniikan osaamista. Haluan, että lukija ymmärtää, miksi aihe on tärkeä. Johdannon pitää päättyä selkeään aiheväitteeseen.”
 
 Kolmannessa pyynnössä kerrot selkeästi, mitä haluat: johdannon, pituuden, aiheen, kohderyhmän, lukijoiden taustan, tekstin tarkoituksen ja lopputuloksen. Nyt tekoäly ymmärtää paremmin, mitä tarvitset.
 
@@ -101,7 +121,7 @@ Tärkeä periaate on tämä: **jatkoprompti on tarkempi kuin perusprompti**. Äl
 
 Katsotaan koko prosessia yhden tapauksen kautta alusta loppuun.
 
-**Tehtävä:** Haluat tekoälyn auttavan sinua valmistautumaan IT-perusteita käsittelevään tenttiin.
+**Tehtävä:** Haluat tekoälyn auttavan sinua valmistautumaan kokeeseen, jonka aihe on sinulle vaikea.
 
 **Kierros 1 — yksinkertainen kysymys:**
 
@@ -110,17 +130,17 @@ Tulos: yleinen ohjeistus, joka ei ole vielä kovin tarkasti sinun tilanteeseesi 
 
 **Kierros 2 — lisää kontekstia:**
 
-Pyyntö: ”Tentti on IT-perusteista. Aiheita ovat verkot, palvelimet ja tietoturva. Minulla on yksi viikko aikaa. Opin parhaiten esimerkkien avulla.”
+Pyyntö: ”Koe on biologiasta. Aiheita ovat solu, perimä ja evoluutio. Minulla on yksi viikko aikaa. Opin parhaiten esimerkkien avulla.”
 Tulos: parempi vastaus, mutta vielä melko yleinen.
 
 **Kierros 3 — vielä tarkempi pyyntö:**
 
-Pyyntö: ”Tentti on IT-perusteista. Aiheita ovat verkot, palvelimet ja tietoturva. Minulla on yksi viikko aikaa. Opin parhaiten todellisen maailman esimerkeistä. Haluan viikko-ohjelman, jossa jokaiselle päivälle on 30 minuutin opiskelusessio. Jokaisessa sessiossa pitää olla aihe, 2–3 konkreettista esimerkkiä ja yksi testikysymys.”
+Pyyntö: ”Koe on biologiasta. Aiheita ovat solu, perimä ja evoluutio. Minulla on yksi viikko aikaa. Opin parhaiten todellisen maailman esimerkeistä. Haluan viikko-ohjelman, jossa jokaiselle päivälle on 30 minuutin opiskelusessio. Jokaisessa sessiossa pitää olla aihe, 2–3 konkreettista esimerkkiä ja yksi testikysymys.”
 Tulos: selkeä viikko-ohjelma, joka sopii paremmin juuri sinun tarpeeseesi.
 
 **Kierros 4 — pilko osiin:**
 
-Pyyntö: ”Aloitetaan maanantaista. Aihe on verkkojen perusteet. Mitä olennaista opiskelijan pitää tietää? Anna kolme konkreettista esimerkkiä siitä, miten verkot toimivat jokapäiväisessä elämässä.”
+Pyyntö: ”Aloitetaan maanantaista. Aihe on solun rakenne. Mitä olennaista opiskelijan pitää tietää? Anna kolme konkreettista esimerkkiä siitä, miten solut näkyvät jokapäiväisessä elämässä.”
 Tulos: tarkasti rajattu maanantain opiskelusessio.
 
 Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Lopputuloksena saat käyttökelpoisen opiskelusuunnitelman, joka sopii sinulle paremmin kuin yleinen lista.

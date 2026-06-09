@@ -12,7 +12,7 @@ Tässä oppitunnissa opit kolme perustyökalua, joita agentti voi käyttää. Ne
 
 Agentti voi lukea ja kirjoittaa tiedostoja. Tämä on yksinkertainen mutta tehokas työkalu, koska se antaa agentille pääsyn pysyvään dataan.
 
-Kun agentti **lukee tiedostoja**, se näkee maailmaa datan kautta. Se voi lukea esimerkiksi raportteja PDF-muodossa, tietolistoja CSV-muodossa, konfiguraatiotiedostoja JSON-muodossa tai lokeja tekstitiedostoina. Nämä tiedostot antavat agentille tietoa siitä, mitä järjestelmissä tapahtuu. IT-agentti voi lukea palvelimen lokeja ja löytää virheen, joka tapahtui klo 15.30. Se voi huomata lokista, että palvelimen prosessi kaatui. Seuraavalla kerralla, kun asiakas kysyy ”Miksi palvelimeni oli alhaalla?”, agentti osaa vastata tarkemmin.
+Kun agentti **lukee tiedostoja**, se näkee maailmaa datan kautta. Se voi lukea esimerkiksi raportteja PDF-muodossa, tietolistoja CSV-muodossa, konfiguraatiotiedostoja JSON-muodossa tai lokeja tekstitiedostoina. Nämä tiedostot antavat agentille tietoa siitä, mitä järjestelmissä tapahtuu. Tapahtumanjärjestäjän agentti voi lukea ilmoittautumislistan ja huomata, että iltapäivän työpaja on jo täynnä. Seuraavalla kerralla, kun osallistuja kysyy ”Onko työpajassa vielä tilaa?”, agentti osaa vastata tarkemmin.
 
 Kun agentti **kirjoittaa tiedostoja**, se vaikuttaa maailmaan. Se voi kirjoittaa raportteja, omia toimintalokejaan tai tiedostoja, joita muut ohjelmat lukevat. Myyntiagentti voi kirjoittaa CSV-tiedoston, joka sisältää listan uusista asiakkaista ja jonka Excel voi avata. Tekninen agentti voi kirjoittaa uuden konfiguraatiotiedoston, jonka palvelin lukee ja ottaa käyttöön automaattisesti.
 
@@ -61,6 +61,32 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 ## Orkestraattori: työkalut oikeassa järjestyksessä
 
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
+
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti kutsuu työkaluja vuorollaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <svg viewBox="0 0 440 180" style="width:100%;height:100%" preserveAspectRatio="xMidYMid meet">
+    <circle cx="220" cy="40" r="13" fill="none" stroke="oklch(0.66 0.15 264)" stroke-width="2.5"/>
+    <text x="220" y="20" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="#7E88A8">AGENTTI</text>
+    <g stroke="#2A3450" stroke-width="1.5"><line x1="220" y1="53" x2="90" y2="120"/><line x1="220" y1="53" x2="220" y2="120"/><line x1="220" y1="53" x2="350" y2="120"/></g>
+    <g class="l22tool-dot" fill="oklch(0.66 0.13 208)"><circle cx="220" cy="53" r="4"/></g>
+    <g font-family="var(--font-mono)" font-size="10" fill="#C7CEE6">
+      <rect x="40" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="90" y="141" text-anchor="middle">tiedostot</text>
+      <rect x="170" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="220" y="141" text-anchor="middle">haku</text>
+      <rect x="300" y="122" width="100" height="30" rx="7" fill="#1A2236" stroke="#2A3450"/><text x="350" y="141" text-anchor="middle">komento</text>
+    </g>
+    <circle class="l22tool-a" cx="90" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
+    <circle class="l22tool-b" cx="220" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
+    <circle class="l22tool-c" cx="350" cy="122" r="5" fill="oklch(0.66 0.15 305)"/>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Agentti ei tee kaikkea itse, vaan ohjaa erikoistuneita työkaluja — tiedostojen lukua, verkkohakua ja komentoja — yksi kerrallaan.</figcaption></figure>
+<style>
+.l22tool-a,.l22tool-b,.l22tool-c{animation:l22toolPulse 6s ease-in-out infinite;opacity:0}
+.l22tool-b{animation-delay:2s}.l22tool-c{animation-delay:4s}
+@keyframes l22toolPulse{0%,12%{opacity:0;r:3}6%{opacity:1;r:7}28%,100%{opacity:.2;r:4}}
+@media (prefers-reduced-motion:reduce){.l22tool-a,.l22tool-b,.l22tool-c{animation:none;opacity:.9}}
+</style>
+
 
 Orkesterissa kapellimestari ei soita jokaista instrumenttia itse. Hän ohjaa: ”Viulut, teidän vuoronne.” Kun viulujen osuus on valmis, hän ohjaa seuraavan ryhmän: ”Puhaltimet, teidän vuoronne.” Jokainen muusikko on erikoistunut omaan instrumenttiinsa, ja kapellimestari koordinoi toimintaa niin, että syntyy yhtenäinen kokonaisuus. Orkesteri on vahvempi kuin yksittäinen muusikko.
 

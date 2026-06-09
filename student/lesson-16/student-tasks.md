@@ -29,10 +29,12 @@ Valitse oman alasi konteksti:
 
 | Ala | Esimerkkiaihe |
 |---|---|
-| **IT-tuki** | Käyttäjäkoulutuksen kansikuva |
-| **Kyberturvallisuus** | Kuvituskuva kalasteluviestin tunnistamisesta |
-| **Pelikoodaus** | Konseptikuva oman peli-idean päähahmosta |
-| **Web-ohjelmointi** | Hero-kuva oman portfoliosivuston etusivulle |
+| **Liiketalous ja kauppa** | Kampanjan tai tapahtuman mainoskuva |
+| **Sosiaali- ja terveysala** | Kuvituskuva hyvinvointioppaaseen |
+| **Media ja viestintä** | Kansikuva podcastille tai videolle |
+| **Ravintola- ja catering** | Houkutteleva tuotekuva menuun |
+| **Harrastukset** | Konseptikuva tapahtuman julisteeseen |
+| **IT** | Hero-kuva oman portfoliosivuston etusivulle |
 
 Kirjoita prompti, joka sisältää kaikki kuusi osaa. Jätä lopuksi pois ne, joita et halua kuvaan (esim. *"ei tekstiä, ei logoja, ei tunnistettavia henkilöitä"*).
 

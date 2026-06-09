@@ -12,12 +12,14 @@ Promptauspankki ei ole pelkkä lista esimerkkejä. Se on **kokoelma promptiraken
 
 ### Vaihe 1 — Tunnista omat työtilanteesi
 
-Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opiskelussasi tai työssäsi. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Esimerkkejä omalta alaltasi:
+Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opiskelussasi, harrastuksissasi tai työssäsi. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Valitse itseäsi kiinnostava aihe tai ala. Esimerkkejä eri aloilta:
 
-- **IT-tuki:** käyttäjäohjeen kirjoittaminen, virheilmoituksen tulkinta, käytäntöpäätöksen perustelu
-- **Kyberturvallisuus:** riskiarvio, suunnitelman tarkistus, käyttäjäkoulutuksen materiaali
-- **Pelikoodaus:** ominaisuuden ideointi, koodin selitys, pelitestaussuunnitelma
-- **Web-ohjelmointi:** README-tiedosto, API-dokumentaatio, koodikatselmointi
+- **Liiketalous ja kauppa:** asiakasviestin muotoilu, kampanjan ideointi, myyntiluvun perustelu
+- **Sosiaali- ja terveysala:** ohjeen selkokielistäminen, tapahtuman tiedote, perehdytysmateriaali
+- **Media ja viestintä:** otsikoiden ideointi, käsikirjoituksen tiivistäminen, somepostauksen luonnos
+- **Ravintola- ja catering:** menun kuvaustekstit, tilausvahvistuksen pohja, allergialistan tarkistus
+- **Lukioaineet ja harrastukset:** esseen rakenteen suunnittelu, treeniohjelman jäsentäminen, tapahtuman aikataulu
+- **IT:** käyttöohjeen kirjoittaminen, virheilmoituksen tulkinta, koodin selitys
 
 Yhden tilanteen pitää olla **"projektin määrittelydokumentin laatiminen"** tai jokin sen osa — tämä on suora yhteys tunnin 18 lopputuotokseen.
 
@@ -29,8 +31,8 @@ Käytä tätä samaa viiden osan kehystä jokaisessa pankkisi promptissa:
 
 | Osa | Mitä siihen tulee? |
 |---|---|
-| **Rooli** | Kenenä tekoälyn pitää toimia? Esim. *"Olet kokenut tietoturva-asiantuntija."* |
-| **Tausta** | Mikä on tilanne ja kuka sinä olet? Esim. *"Olen IT-opiskelija, joka kirjoittaa määrittelyä asiakasprojektiin."* |
+| **Rooli** | Kenenä tekoälyn pitää toimia? Esim. *"Olet kokenut projektisuunnittelun ohjaaja."* |
+| **Tausta** | Mikä on tilanne ja kuka sinä olet? Esim. *"Olen toisen vuoden opiskelija, joka kirjoittaa suunnitelmaa ryhmäprojektiin."* |
 | **Tavoite** | Mitä haluat saada aikaan? Esim. *"Haluan listan riskeistä, jotka projektin alussa pitää tunnistaa."* |
 | **Rajaukset** | Mitä et halua tai mitä tulee välttää? Esim. *"Älä anna yleisiä neuvoja — pysy pienen yrityksen tilanteessa."* |
 | **Formaatti** | Missä muodossa vastaus pitää antaa? Esim. *"Anna 5–7 kohdan lista, jossa jokaisen kohdan alla 1–2 lauseen perustelu."* |
@@ -68,7 +70,7 @@ Tee tämä jokaiselle promptille. Tämä on harjoitus siitä, miten tekoälyä k
 
 Viimeistele jokainen prompti sparrauksen jälkeen. Kokoa ne yhteen dokumenttiin selkeästi otsikoituna:
 
-- **Promptin nimi tai käyttötilanne** (esim. "Käyttäjäohjeen kirjoittamiseen IT-tuessa")
+- **Promptin nimi tai käyttötilanne** (esim. "Selkeän käyttöohjeen kirjoittamiseen")
 - **Itse prompti** kokonaisuudessaan
 - **Lyhyt huomio** (1–2 lausetta): mihin tämä toimii parhaiten, mihin se ei sovi
 

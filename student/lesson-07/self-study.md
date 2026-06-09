@@ -34,6 +34,26 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// itsevarmuus ei ole oikeellisuus</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <div class="l07hal-meter">
+    <span class="l07hal-needle"></span>
+    <span class="l07hal-lo">epävarma</span>
+    <span class="l07hal-hi">varma</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Malli voi kuulostaa yhtä varmalta sekä oikeasta että väärästä vastauksesta. Itsevarma sävy ei kerro, onko sisältö totta — kriittiset tiedot on aina tarkistettava.</figcaption></figure>
+
+<style>
+.l07hal-meter{position:relative;width:62%;height:18px;border-radius:9px;border:1px solid #2A3450;background:#11182A;overflow:hidden}
+.l07hal-needle{position:absolute;top:-3px;bottom:-3px;width:6px;border-radius:3px;background:oklch(0.66 0.15 305);
+  left:50%;animation:l07halWobble 4.5s ease-in-out infinite}
+.l07hal-lo,.l07hal-hi{position:absolute;top:24px;font-family:var(--font-mono);font-size:9.5px;color:#8B94B3}
+.l07hal-lo{left:0}.l07hal-hi{right:0}
+@keyframes l07halWobble{0%{left:18%}25%{left:84%}45%{left:30%}65%{left:90%}85%{left:46%}100%{left:18%}}
+@media (prefers-reduced-motion:reduce){.l07hal-needle{animation:none;left:84%}}
+</style>
+
 ## Miksi tekoäly ei ole totuuskone?
 
 Seuraavaa asiaa ei voi korostaa liikaa: **generatiiviset kielimallit eivät ole faktakoneita, vaan sanojen ja tekstirakenteiden ennustajia.**

@@ -54,13 +54,40 @@ Prompt injectionia ei voi torjua pelkällä toiveella, että agentti ”noudatta
 
 **Muista:** Hyvä järjestelmäprompti on tärkeä, mutta se ei yksin riitä turvakerrokseksi. Turvallinen agentti tarvitsee myös oikeuksien rajaamista, syötteiden tarkistamista, lokitusta ja tarvittaessa ihmisen hyväksynnän.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// validointi torjuu injection-yrityksen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <svg viewBox="0 0 320 160" style="width:92%;height:90%" preserveAspectRatio="xMidYMid meet">
+    <line x1="20" y1="80" x2="300" y2="80" stroke="#2A3450" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <g class="l24sec-bad">
+      <rect x="-46" y="68" width="64" height="24" rx="6" fill="none" stroke="oklch(0.66 0.15 305)" stroke-width="2"/>
+      <text x="-14" y="84" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="oklch(0.66 0.15 305)">ohita ohjeet</text>
+    </g>
+    <path class="l24sec-shield" d="M170 36 L196 46 V82 C196 100 184 112 170 120 C156 112 144 100 144 82 V46 Z"
+          fill="none" stroke="oklch(0.66 0.13 208)" stroke-width="2.5"/>
+    <text x="170" y="86" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="oklch(0.66 0.13 208)">validointi</text>
+    <g fill="oklch(0.66 0.15 264)">
+      <circle cx="252" cy="80" r="4"/><circle cx="276" cy="80" r="4"/><circle cx="300" cy="80" r="4"/>
+    </g>
+    <text x="276" y="120" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">turvallinen syöte</text>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">Haitallinen tokeni (”ohita ohjeet”) etenee kohti agenttia, mutta validointikerros pysäyttää sen — vain tarkistettu syöte pääsee läpi.</figcaption></figure>
+
+<style>
+.l24sec-bad{animation:l24secRun 5s ease-in-out infinite}
+@keyframes l24secRun{0%{transform:translateX(0);opacity:.4}45%{transform:translateX(180px);opacity:1}60%{transform:translateX(190px);opacity:0}100%{transform:translateX(190px);opacity:0}}
+.l24sec-shield{animation:l24secFlash 5s ease-in-out infinite}
+@keyframes l24secFlash{0%,40%{opacity:.5}50%{opacity:1;stroke-width:3.5}60%,100%{opacity:.5;stroke-width:2.5}}
+@media (prefers-reduced-motion:reduce){.l24sec-bad,.l24sec-shield{animation:none}.l24sec-bad{opacity:0}.l24sec-shield{opacity:1}}
+</style>
+
 ---
 
 ## Hallusinaatiot — kun agentti keksii uskottavan vastauksen
 
 **Hallusinaatio** tarkoittaa, että tekoäly tuottaa tietoa, joka kuulostaa uskottavalta mutta ei pidä paikkaansa. Tavallisessa keskustelussa tämä voi johtaa väärään vastaukseen. Agentin kohdalla riski on suurempi, koska virheellinen vastaus voi johtaa toimintaan.
 
-Esimerkiksi asiakaspalveluagentti voi keksiä palautusehdon, jota yrityksellä ei oikeasti ole. Raporttiagentti voi keksiä lähteen, jota ei ole olemassa. IT-agentti voi ehdottaa komentoa, joka ei sovi käyttäjän järjestelmään. Jos käyttäjä tai järjestelmä luottaa vastaukseen liikaa, virhe voi aiheuttaa vahinkoa.
+Esimerkiksi asiakaspalveluagentti voi keksiä palautusehdon, jota yrityksellä ei oikeasti ole. Raporttiagentti voi keksiä lähteen, jota ei ole olemassa. Neuvonta-agentti voi ehdottaa ohjetta, joka ei sovi käyttäjän tilanteeseen. Jos käyttäjä tai järjestelmä luottaa vastaukseen liikaa, virhe voi aiheuttaa vahinkoa.
 
 ### Miten hallusinaatioita voidaan vähentää?
 

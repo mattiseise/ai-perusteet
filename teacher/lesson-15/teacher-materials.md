@@ -100,7 +100,7 @@ Opeta opiskelijoille ylläpidon peruskysymykset:
 
 | Botti | Hyvä rajaus | Miksi rajaus on tärkeä? |
 | --- | --- | --- |
-| **IT-helpdesk-botti** | Vastaa vain IT-tukeen liittyviin kysymyksiin. Älä anna sijoitus-, terveys- tai lakineuvoja. | Botti pysyy omalla osaamisalueellaan eikä anna vaarallisia neuvoja. |
+| **Kahvilan tilausbotti** | Vastaa vain tuotteisiin ja tilauksiin liittyviin kysymyksiin. Älä anna sijoitus-, terveys- tai lakineuvoja. | Botti pysyy omalla osaamisalueellaan eikä anna vaarallisia neuvoja. |
 | **Asiakaspalvelubotti** | Älä käsittele yksityisiä asiakastietoja ilman tunnistautumista. | Rajaus suojaa asiakkaan yksityisyyttä. |
 | **Opetusbotti** | Älä tee arvioitavia tehtäviä opiskelijan puolesta. Anna vihjeitä ja ohjaa vaiheittain. | Rajaus tukee oppimista eikä poista opiskelijan omaa työtä. |
 
@@ -114,9 +114,9 @@ Opeta opiskelijoille ylläpidon peruskysymykset:
 
 Botin testaaminen ei tarkoita vain sitä, että sille esitetään muutama kysymys ja katsotaan, mitä tapahtuu. Systemaattinen testaus varmistaa, että botti toimii sekä helpoissa että vaikeissa tilanteissa.
 
-| Testityyppi | Mitä testataan? | Esimerkki IT-helpdesk-botille |
+| Testityyppi | Mitä testataan? | Esimerkki kahvilan tilausbotille |
 | --- | --- | --- |
-| **Positiivinen testi** | Asia, jonka pitäisi toimia. | ”Miten yhdistän koulun Wi-Fi-verkkoon?” |
+| **Positiivinen testi** | Asia, jonka pitäisi toimia. | ”Mitä kahvivaihtoehtoja teillä on?” |
 | **Negatiivinen testi** | Asia, johon botin ei pitäisi vastata tai jossa sen pitää kieltäytyä. | ”Mihin osakkeisiin minun kannattaa sijoittaa?” |
 | **Reunatapaus** | Epätavallinen, epäselvä tai vaikeasti tulkittava tilanne. | ”Ei toimi. Korjaa.” |
 
@@ -187,7 +187,7 @@ Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on ep
 
 ### Ennen lähiosaa
 
-- Valitse yksi yksinkertainen ja testattava botti, esimerkiksi **IT-helpdesk-botti**, **opastusbotti** tai **tietojenhakubotti**.
+- Valitse yksi yksinkertainen ja testattava botti, esimerkiksi **kahvilan tilausbotti**, **opastusbotti** tai **tietojenhakubotti**.
 - Varmista, että botilla on selkeä tarkoitus ja rajaukset.
 - Valmista yksi dokumentti tietopohjaksi, esimerkiksi FAQ, käyttöohje tai prosessikuvaus.
 - Testaa botti ilman tietopohjaa. Kirjaa ylös, onko vastaus epämääräinen, väärä tai arvaileva.
@@ -276,7 +276,7 @@ Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on ep
 
 **Käyttäjä:** Mihin osakkeisiin minun kannattaa sijoittaa?
 
-**Botti:** En voi antaa sijoitusneuvoja, koska tehtäväni on auttaa IT-tukiasioissa. Jos tarvitset talousneuvontaa, ota yhteyttä pätevään talousasiantuntijaan.
+**Botti:** En voi antaa sijoitusneuvoja, koska tehtäväni on auttaa tilauksiin liittyvissä asioissa. Jos tarvitset talousneuvontaa, ota yhteyttä pätevään talousasiantuntijaan.
 
 **Aika-arvio:** 20 minuuttia
 
@@ -381,7 +381,7 @@ Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on ep
 
 1. **Opiskelijamateriaalit:** käytä opiskelijan itseopiskelumateriaalia ja opiskelijatehtäviä perusideoiden tukena.
 2. **Tietopohjan esimerkit:** PDF, Word-dokumentti, tekstitiedosto, FAQ, käyttöohje, prosessikuvaus, CSV, tietokanta tai API.
-3. **Rajausexamplet:** IT-helpdesk vastaa vain IT-aiheisiin, asiakaspalvelubotti käyttää vain julkista tietoa, opetusbotti ei tee opiskelijan tehtävää valmiiksi.
+3. **Rajausexamplet:** kahvilan tilausbotti vastaa vain tuote- ja tilausaiheisiin, asiakaspalvelubotti käyttää vain julkista tietoa, opetusbotti ei tee opiskelijan tehtävää valmiiksi.
 4. **Testausdokumentaatio:** taulukko, jossa näkyvät testityyppi, syöte, odotettu vastaus, saatu vastaus, tulos ja korjaus.
 5. **Iteraation esimerkit:** kierros 1: ohjeistus ja testit; kierros 2: korjaukset ja uudet testit; kierros 3: lisäparannukset tarvittaessa.
 

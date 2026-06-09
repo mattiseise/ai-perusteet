@@ -190,13 +190,13 @@ Tehtävän tavoitteena on saada opiskelijat pohtimaan, miten tekoälyn kehitys v
 
 **Valmistelu:**
 
-Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi IT-alan ammatti tai rooli:
+Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri aloilta:
 
+- sairaanhoitaja
+- toimittaja
+- myyjä
+- kokki
 - ohjelmistokehittäjä
-- IT-tukihenkilö
-- tietoturva-asiantuntija
-- tietokannan ylläpitäjä
-- verkkoylläpitäjä
 
 ### Toteutus noin 20 minuuttia
 

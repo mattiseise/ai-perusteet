@@ -78,7 +78,7 @@ Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä y
 
 **Taso 3 — Tikettiagentti**
 
-Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tekninen ongelma, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki **human-in-the-loop**-rakenteesta.
+Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki **human-in-the-loop**-rakenteesta.
 
 ## Tunnin tavoite ja valmis lopputulos
 

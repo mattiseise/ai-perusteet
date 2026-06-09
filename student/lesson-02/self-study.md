@@ -4,7 +4,7 @@
 
 Kun kuulet sanan ”tekoäly”, mitä ajattelet ensimmäiseksi? Mieleen voi tulla esimerkiksi ChatGPT tai elokuvista tuttu robotti. Todellisuudessa tekoäly on kuitenkin paljon monimuotoisempi ilmiö. Tekoälyä on useita eri tyyppejä, ja ne toimivat eri tavoilla sekä soveltuvat erilaisiin tehtäviin.
 
-Jos haluat ymmärtää IT-alan tulevaisuutta tai tulkita paremmin uutisissa näkyviä ilmiöitä, on tärkeää hahmottaa, ettei tekoäly ole yksi yksittäinen väline. Se on laaja joukko erilaisia ratkaisuja eri käyttötarkoituksiin.
+Jos haluat ymmärtää työelämän ja yhteiskunnan tulevaisuutta tai tulkita paremmin uutisissa näkyviä ilmiöitä, on tärkeää hahmottaa, ettei tekoäly ole yksi yksittäinen väline. Se on laaja joukko erilaisia ratkaisuja eri käyttötarkoituksiin.
 
 Tässä osassa opit luokittelemaan tekoälyä sen mukaan, kuinka laajasti se toimii, kuinka monimutkainen se on ja mitä se käytännössä osaa tehdä. Näin ymmärrät paremmin, miksi ei ole olemassa yhtä ainoaa tekoälyä, joka ratkaisisi kaiken.
 
@@ -18,7 +18,7 @@ Hyvä esimerkki on Netflixin suositusalgoritmi. Sen tehtävä on ennustaa, mitä
 
 Samalla tavoin pankki voi käyttää tekoälyä lainahakemusten arviointiin. Malli on oppinut tuhansista aiemmista hakemuksista ja niiden lopputuloksista, joten se voi olla erittäin hyvä juuri tässä tehtävässä. Se ei kuitenkaan osaa vastata asiakaspalvelupuheluihin, tuottaa markkinointimateriaaleja tai suojata pankkia kyberhyökkäyksiltä.
 
-IT-alalla kapea tekoäly voi näkyä esimerkiksi **roskapostisuodattimena** tai **haittaohjelmien tunnistamisena**. Sähköpostijärjestelmä voi oppia tunnistamaan viestejä, jotka muistuttavat aiempia huijausviestejä. Tietoturvaohjelma voi tunnistaa tiedoston tai verkkoliikenteen, joka muistuttaa haitallista toimintaa. Nämä järjestelmät voivat olla erittäin hyödyllisiä, mutta ne eivät silti ymmärrä koko IT-ympäristöä ihmisen tavoin. Roskapostisuodatin ei osaa suunnitella verkkoa, asentaa palvelinta tai kirjoittaa asiakkaalle ohjeita. Se tekee yhden rajatun tehtävän.
+Arjessa kapea tekoäly voi näkyä esimerkiksi sähköpostin **roskapostisuodattimena** tai puhelimen **puheentunnistuksena**. Sähköpostijärjestelmä voi oppia tunnistamaan viestejä, jotka muistuttavat aiempia huijausviestejä. Puheentunnistus voi muuttaa puhutun lauseen tekstiksi. Nämä järjestelmät voivat olla erittäin hyödyllisiä, mutta ne eivät silti ymmärrä koko maailmaa ihmisen tavoin. Roskapostisuodatin ei osaa kääntää tekstiä, säveltää musiikkia tai vastata asiakkaan kysymyksiin. Se tekee yhden rajatun tehtävän.
 
 Tämä on yksi tekoälyn keskeisistä rajoituksista: yksittäinen malli on yleensä erikoistunut tiettyyn tehtävään. Tässä on sekä etuja että haittoja. Etuna on se, että erikoistunut malli voi suoriutua omasta tehtävästään erittäin hyvin, koska sen ei tarvitse hallita kaikkea muuta. Haittana taas on se, että eri tehtäviä varten tarvitaan yleensä eri mallit.
 
@@ -64,7 +64,7 @@ AGI:a ei siis voi määritellä vain yhdellä yksinkertaisella testillä. Nykyis
 
 AGI:a tutkitaan aktiivisesti sekä tutkimusmaailmassa että suurissa teknologiayrityksissä, kuten OpenAI:ssa ja Googlessa. Osa arvioi, että yleinen tekoäly voitaisiin saavuttaa 2030-luvulla. Toisten mielestä tavoite voi olla paljon kauempana tai jopa mahdoton. Tällä hetkellä varmaa vastausta ei ole, koska myös itse määritelmästä kiistellään.
 
-Tämä on tärkeää myös IT-opiskelijalle. Julkisuudessa esitetyt väitteet, kuten ”tekoäly mullistaa ohjelmistokehityksen” tai ”tekoäly voittaa ihmisen”, ovat usein kärjistettyjä. Tavallisesti niillä viitataan kapeaan tekoälyyn, joka suoriutuu erittäin hyvin jostakin yksittäisestä tehtävästä. Yleistä tekoälyä ei sen sijaan toistaiseksi ole olemassa sellaisessa merkityksessä, josta kaikki olisivat yksimielisiä.
+Tämä on tärkeää myös sinulle, oli alasi mikä tahansa. Julkisuudessa esitetyt väitteet, kuten ”tekoäly mullistaa kokonaisen alan” tai ”tekoäly voittaa ihmisen”, ovat usein kärjistettyjä. Tavallisesti niillä viitataan kapeaan tekoälyyn, joka suoriutuu erittäin hyvin jostakin yksittäisestä tehtävästä. Yleistä tekoälyä ei sen sijaan toistaiseksi ole olemassa sellaisessa merkityksessä, josta kaikki olisivat yksimielisiä.
 
 > **Pysähdy hetkeksi:** Jos tekoäly osaa kirjoittaa esseen, tehdä ohjelmakoodia, ratkaista matematiikkatehtäviä ja keskustella monella kielellä, riittääkö se yleiseksi älykkyydeksi? Mitä muuta vaatisit, ennen kuin kutsuisit tekoälyä AGI:ksi?
 
@@ -78,9 +78,40 @@ Tällaista järjestelmää ei kuitenkaan ole olemassa, eikä kukaan tiedä varma
 
 ASI:sta keskustellaan usein kahdesta vastakkaisesta näkökulmasta. Optimistinen näkökulma korostaa, että yliäly voisi auttaa ratkaisemaan suuria ongelmia, kuten sairauksia, ilmastonmuutosta, energiantuotantoa tai monimutkaisia tieteellisiä kysymyksiä. Huolestunut näkökulma korostaa, että ihmistä älykkäämpi järjestelmä voisi olla vaikeasti ennakoitava ja hallittava, jos sen tavoitteet eivät vastaa ihmisten etua.
 
-Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se ei muuttaisi vain IT-alaa, vaan koko yhteiskunnan toimintaa. Toistaiseksi se kuuluu kuitenkin enemmän teorian, tulevaisuudentutkimuksen ja tieteisfiktion alueelle kuin nykyiseen todellisuuteen. Siksi ASI:sta kannattaa puhua varovasti: se on tärkeä käsite riskien ja mahdollisuuksien pohtimiseen, mutta ei vielä käytännön työkalu.
+Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se ei muuttaisi vain yksittäistä alaa, vaan koko yhteiskunnan toimintaa. Toistaiseksi se kuuluu kuitenkin enemmän teorian, tulevaisuudentutkimuksen ja tieteisfiktion alueelle kuin nykyiseen todellisuuteen. Siksi ASI:sta kannattaa puhua varovasti: se on tärkeä käsite riskien ja mahdollisuuksien pohtimiseen, mutta ei vielä käytännön työkalu.
 
 > **Pysähdy hetkeksi:** Jos tekoäly olisi ihmistä parempi lähes kaikessa ajattelutyössä, kuka päättäisi, mihin sitä käytetään? Millaisia sääntöjä, valvontaa ja vastuuta tällainen järjestelmä vaatisi?
+
+<figure class="ai-demo"><span class="ai-demo__tag">// tekoälyn tasot</span>
+<div class="ai-demo__stage" style="display:flex;align-items:flex-end;justify-content:center;gap:18px;padding:24px 24px 0">
+  <div class="l02lvl-col">
+    <span class="l02lvl-bar" style="--h:34%;animation-delay:0s"></span>
+    <span class="l02lvl-lbl">Kapea</span>
+  </div>
+  <div class="l02lvl-col">
+    <span class="l02lvl-bar" style="--h:55%;animation-delay:.4s"></span>
+    <span class="l02lvl-lbl">Generatiivinen</span>
+  </div>
+  <div class="l02lvl-col">
+    <span class="l02lvl-bar" style="--h:78%;animation-delay:.8s"></span>
+    <span class="l02lvl-lbl">AGI</span>
+  </div>
+  <div class="l02lvl-col">
+    <span class="l02lvl-bar" style="--h:100%;animation-delay:1.2s"></span>
+    <span class="l02lvl-lbl">ASI</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Tasot nousevat kapeasta tekoälystä kohti yleistä ja yliälyä. Tänään käytössä ovat vain alimmat tasot — ylemmät ovat yhä tutkimusta tai spekulaatiota.</figcaption></figure>
+
+<style>
+.l02lvl-col{display:flex;flex-direction:column;align-items:center;width:74px;height:170px;justify-content:flex-end}
+.l02lvl-bar{display:block;width:46px;height:var(--h);border-radius:6px 6px 0 0;
+  background:linear-gradient(180deg,oklch(0.66 0.15 305),oklch(0.66 0.15 264));
+  transform-origin:bottom;animation:l02lvlRise 4.5s ease-in-out infinite}
+.l02lvl-lbl{margin-top:8px;font-family:var(--font-mono);font-size:9.5px;color:#8B94B3;text-align:center}
+@keyframes l02lvlRise{0%,100%{transform:scaleY(.18);opacity:.45}45%,70%{transform:scaleY(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.l02lvl-bar{animation:none;transform:scaleY(1);opacity:1}}
+</style>
 
 ## Yhteenveto
 

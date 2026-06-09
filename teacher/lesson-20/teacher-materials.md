@@ -98,7 +98,7 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi AI-solmu, joka vastaa viestiin,
 
 **Tavoite:** Opiskelija arvioi, mikä ratkaisutyyppi sopii annettuun tilanteeseen: promptaus, työnkulku vai agentti.
 
-**Tehtävä:** Anna opiskelijoille 2–3 tapausta, esimerkiksi sähköpostien lajittelu, teknisen tuen tikettien reititys ja laskujen käsittely. Opiskelija käy jokaisen tapauksen läpi kuuden kysymyksen avulla ja perustelee valintansa.
+**Tehtävä:** Anna opiskelijoille 2–3 tapausta, esimerkiksi sähköpostien lajittelu, asiakaspalvelupyyntöjen reititys ja laskujen käsittely. Opiskelija käy jokaisen tapauksen läpi kuuden kysymyksen avulla ja perustelee valintansa.
 
 | Päätöspuun kysymys | Opiskelijan vastaus | Mitä vastaus tarkoittaa? |
 | --- | --- | --- |

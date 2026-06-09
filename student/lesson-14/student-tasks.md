@@ -36,26 +36,29 @@ Tallenna lopuksi yksi dokumentti, jossa on:
 
 Botti, jonka rakennat myöhemmin, auttaa oman alasi ammattilaista tai opiskelijaa **projektin määrittelydokumentin** laatimisessa. Valitse ensin, mille alalle botti rakennetaan.
 
-Valitse yksi seuraavista:
+Valitse itseäsi kiinnostava aihe tai ala. Esimerkkejä:
 
-- **IT-tuki**
-- **Kyberturvallisuus**
-- **Pelikoodaus**
-- **Web-ohjelmointi**
+- **Liiketalous ja kauppa** (esim. kampanja, myymälän avaus, asiakastapahtuma)
+- **Sosiaali- ja terveysala** (esim. tapahtuma, perehdytys, hyvinvointiprojekti)
+- **Media ja viestintä** (esim. video, podcast, somekampanja)
+- **Tekniikka tai rakentaminen** (esim. korjausprojekti, laitehankinta)
+- **Ravintola- ja catering** (esim. uusi menu, tilaisuuden järjestäminen)
+- **Lukioaineet tai harrastukset** (esim. tutkielma, tapahtuma, treenikausi)
+- **IT** (esim. sovellus, verkkosivu, peli)
 
-**Tallenna:** Kirjoita valitsemasi ala muistiin. Lisää myös yksi lause siitä, millaisissa projekteissa alan ammattilainen voisi tarvita määrittelydokumenttia.
+**Tallenna:** Kirjoita valitsemasi aihe tai ala muistiin. Lisää myös yksi lause siitä, millaisissa projekteissa tällä alalla voisi tarvita määrittelydokumenttia.
 
 ### Vaihe 2 — Täytä botin määrittelydokumentti
 
 Täytä alla oleva taulukko. Kirjoita jokaiseen kohtaan lyhyt mutta selkeä vastaus. Tämä taulukko on bottisi suunnittelun perusta: sen myöhempi käyttäytyminen rakentuu näiden valintojen varaan.
 
-**Vinkki:** Kirjoita mieluummin konkreettisesti kuin yleisesti. Esimerkiksi *"auttaa opiskelijaa laatimaan web-projektin määrittelydokumentin vaiheittain"* on parempi kuin *"auttaa projektissa"*.
+**Vinkki:** Kirjoita mieluummin konkreettisesti kuin yleisesti. Esimerkiksi *"auttaa opiskelijaa laatimaan tapahtuman suunnitteludokumentin vaiheittain"* on parempi kuin *"auttaa projektissa"*.
 
 | Osa | Mitä siihen kirjoitetaan? | Oma vastauksesi |
 | --- | --- | --- |
-| **Botin nimi** | Anna botille nimi, joka kertoo selvästi, mitä botti tekee. Nimen ei tarvitse olla nokkela, vaan ymmärrettävä. Esimerkiksi *"Pelin määrittelyvalmentaja"* tai *"Web-projektin sparraaja"*. |  |
-| **Kohderyhmä** | Kenelle botti on tarkoitettu? Onko käyttäjä aloittelija vai kokeneempi? Onko hän opiskelija, työntekijä tai projektin vastuuhenkilö? Esimerkiksi: *"Aloitteleva web-ohjelmoinnin opiskelija, joka tarvitsee tukea projektin määrittelyn rakenteeseen."* |  |
-| **Tarkoitus** | Mitä konkreettista botti auttaa käyttäjää tekemään? Kirjoita 1–2 lausetta. Esimerkiksi: *"Botti auttaa käyttäjää laatimaan pelikoodausprojektin määrittelydokumentin käymällä läpi projektin taustan, tavoitteen, vaatimukset, riskit ja aikataulun."* |  |
+| **Botin nimi** | Anna botille nimi, joka kertoo selvästi, mitä botti tekee. Nimen ei tarvitse olla nokkela, vaan ymmärrettävä. Esimerkiksi *"Tapahtuman suunnitteluvalmentaja"* tai *"Projektin sparraaja"*. |  |
+| **Kohderyhmä** | Kenelle botti on tarkoitettu? Onko käyttäjä aloittelija vai kokeneempi? Onko hän opiskelija, työntekijä tai projektin vastuuhenkilö? Esimerkiksi: *"Aloitteleva opiskelija, joka tarvitsee tukea projektin määrittelyn rakenteeseen."* |  |
+| **Tarkoitus** | Mitä konkreettista botti auttaa käyttäjää tekemään? Kirjoita 1–2 lausetta. Esimerkiksi: *"Botti auttaa käyttäjää laatimaan tapahtumaprojektin määrittelydokumentin käymällä läpi projektin taustan, tavoitteen, vaatimukset, riskit ja aikataulun."* |  |
 | **Persoona ja äänensävy** | Millainen botti on luonteeltaan? Miten se puhuu käyttäjälle? Esimerkiksi: *"Käytännönläheinen valmentaja, joka kysyy tarkentavia kysymyksiä. Puhuu rennosti mutta ammattimaisesti. Ei käytä akateemista jargonia eikä ole liian leikkisä."* |  |
 | **Työnkulku** | Missä järjestyksessä botti ohjaa käyttäjää? Kirjoita 5–7 vaiheen runko. Voit käyttää pohjana rakennetta: **tausta → tavoite → laajuus → vaatimukset → riskit → aikataulu → seuraavat toimet**. Muokkaa rakennetta oman alasi mukaan. |  |
 | **Rajat — mitä botti ei tee** | Listaa 3–5 asiaa, joita botti ei saa tehdä. Esimerkiksi: *"Botti ei kirjoita koko dokumenttia käyttäjän puolesta. Botti ei anna oikeudellisia neuvoja. Botti ei arvioi projektin kaupallista potentiaalia. Botti ei käsittele muiden alojen projekteja."* Rajat tekevät botista ammattimaisemman. |  |

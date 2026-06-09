@@ -30,7 +30,7 @@ Yksittäinen kysymys tai käsky, joka esitetään tekoälylle. Prompti on eri as
 
 ## Johdatteleva kysymys (leading question)
 
-Kysymys tai kehotus, joka ohjaa vastaajaa tiettyyn suuntaan tai tietynlaiseen vastaustyyliin. IT-työssä johdattelevat kysymykset ovat hyödyllisiä, koska ne auttavat tekoälyä ymmärtämään, millaista apua tarvitset.
+Kysymys tai kehotus, joka ohjaa vastaajaa tiettyyn suuntaan tai tietynlaiseen vastaustyyliin. Tekoälyn kanssa johdattelevat kysymykset ovat hyödyllisiä, koska ne auttavat tekoälyä ymmärtämään, millaista apua tarvitset.
 
 ## Hallusinaatio (hallucination)
 

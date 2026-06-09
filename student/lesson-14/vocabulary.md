@@ -14,15 +14,15 @@ Selkeä kuvaus siitä, mitä botti tekee ja miksi se on olemassa. Ilman selkeä�
 
 ## Rooli (role)
 
-Botin "persoona" tai ammatti. Rooli määrittää, millä äänellä ja asiantuntemuksella botti vastaa. Esimerkiksi: "Olet ystävällinen IT-tukihenkilö, joka puhuu selkeää suomea."
+Botin "persoona" tai ammatti. Rooli määrittää, millä äänellä ja asiantuntemuksella botti vastaa. Esimerkiksi: "Olet ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea."
 
 ## Ohjeet (instructions)
 
-Tarkat säännöt siitä, miten botti toimii. Esimerkiksi: "Kysy ensin, mikä laite on kyseessä" tai "Anna ohjeet vaihe vaiheelta." Hyvät ohjeet tekevät botista johdonmukaisen.
+Tarkat säännöt siitä, miten botti toimii. Esimerkiksi: "Kysy ensin, miten voit auttaa" tai "Anna ohjeet vaihe vaiheelta." Hyvät ohjeet tekevät botista johdonmukaisen.
 
 ## Rajaukset (constraints)
 
-Selkeät rajat sille, mitä botti ei saa tehdä. Esimerkiksi: "Älä koskaan pyydä käyttäjän salasanaa" tai "Jos ongelma ei ratkea, ohjaa ihmiselle." Rajaukset suojaavat käyttäjää.
+Selkeät rajat sille, mitä botti ei saa tehdä. Esimerkiksi: "Älä koskaan pyydä käyttäjän maksutietoja" tai "Jos asia ei kuulu sinulle, ohjaa ihmiselle." Rajaukset suojaavat käyttäjää.
 
 ## Tietokanta (knowledge base)
 

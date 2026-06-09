@@ -49,6 +49,26 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 
 > **Pysähdy hetkeksi:** Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?
 
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava tokeni</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center">
+  <div class="l03tok-track">
+    <span class="l03tok">Mikä</span><span class="l03tok">on</span><span class="l03tok">Suomen</span><span class="l03tok">pääkaupunki</span><span class="l03tok hot">Helsinki</span>
+    <span class="l03tok">Mikä</span><span class="l03tok">on</span><span class="l03tok">Suomen</span><span class="l03tok">pääkaupunki</span><span class="l03tok hot">Helsinki</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Malli lukee tokenit yksi kerrallaan ja arvioi, mikä tokeni tulee todennäköisimmin seuraavaksi — sana kerrallaan.</figcaption></figure>
+
+<style>
+.l03tok-track{display:flex;gap:12px;width:max-content;padding-left:20px;animation:l03tokDrift 15s linear infinite;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 70%,transparent 92%);
+  mask-image:linear-gradient(90deg,transparent,#000 14%,#000 70%,transparent 92%)}
+.l03tok{flex:none;font-family:var(--font-mono);font-size:13px;color:#C7CEE6;background:#1A2236;
+  border:1px solid #2A3450;border-radius:8px;padding:9px 13px;white-space:nowrap}
+.l03tok.hot{color:#0B0F1A;background:oklch(0.66 0.15 264);border-color:transparent}
+@keyframes l03tokDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.l03tok-track{animation:none}}
+</style>
+
 ## Koulutusdata — se, mistä malli oppii
 
 Parametrit opitaan **koulutusdatasta**. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Varhaisetkin suuret kielimallit opetettiin jo biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.

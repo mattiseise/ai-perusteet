@@ -44,6 +44,26 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
+<figure class="ai-demo"><span class="ai-demo__tag">// agentin silmukka — ReAct</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center">
+  <svg viewBox="0 0 140 140" style="width:170px;height:170px">
+    <circle class="l23react-ring" cx="70" cy="70" r="50" fill="none" stroke="oklch(0.66 0.13 208)"
+            stroke-width="2.5" stroke-dasharray="6 9" stroke-linecap="round"/>
+    <g class="l23react-orbit"><circle cx="70" cy="20" r="5.5" fill="oklch(0.66 0.15 305)"/></g>
+    <text x="70" y="62" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">AJATTELE</text>
+    <text x="70" y="74" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">→ TOIMI</text>
+    <text x="70" y="86" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="#8B94B3">→ HAVAITSE</text>
+  </svg>
+</div>
+<figcaption class="ai-demo__cap">ReAct-agentti vuorottelee: se ajattelee, toimii työkalulla ja havaitsee tuloksen — ja toistaa silmukkaa, kunnes tehtävä on valmis.</figcaption></figure>
+
+<style>
+.l23react-ring{transform-box:view-box;transform-origin:70px 70px;animation:l23reactSpin 9s linear infinite}
+.l23react-orbit{transform-box:view-box;transform-origin:70px 70px;animation:l23reactSpin 4.5s linear infinite}
+@keyframes l23reactSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.l23react-ring,.l23react-orbit{animation:none}}
+</style>
+
 ## Ketjuajattelu: jaa ongelma osiin
 
 **Ketjuajattelussa** eli chain-of-thought-mallissa agentti purkaa monimutkaisen ongelman pienempiin osiin ja käsittelee ne järjestyksessä. Se etenee vaiheittain: ensin tämä, sitten tuo ja lopuksi seuraava askel.
@@ -109,25 +129,25 @@ Sinulla on nyt kolme välinettä: **ReAct**, **ketjuajattelu** ja **moniagenttij
 
 Käytännössä käytät usein **yhdistelmää**. Esimerkiksi moniagenttijärjestelmässä jokainen erikoistunut agentti voi käyttää ReAct-mallia omalla alueellaan, ja johtaja-agentti voi käyttää ketjuajattelua koko prosessin koordinoimiseen. Mallit eivät siis sulje toisiaan pois, vaan ne täydentävät toisiaan.
 
-## Esimerkki käytännössä: koodaustiimi moniagenttijärjestelmänä
+## Esimerkki käytännössä: tapahtumatiimi moniagenttijärjestelmänä
 
-Kuvittele koodaustiimin työtä ja sitä, miten se muistuttaa moniagenttijärjestelmää.
+Kuvittele tapahtuman suunnittelutiimin työtä ja sitä, miten se muistuttaa moniagenttijärjestelmää.
 
-**Tiimin jäsen 1 eli analysoija** lukee vaatimukset: ”Asiakkaan pitää pystyä lataamaan raportteja PDF-muodossa.”
+**Tiimin jäsen 1 eli suunnittelija** lukee vaatimukset: ”Tilaisuuteen tarvitaan ohjelma, tarjoilu ja tila 80 hengelle.”
 
-**Tiimin jäsen 2 eli kehittäjä** kirjoittaa koodin: ”Voin tehdä PDF-luontitoiminnon käyttämällä avoimen lähdekoodin kirjastoa.”
+**Tiimin jäsen 2 eli toteuttaja** tekee ehdotuksen: ”Varaan salin, tilaan pitopalvelun ja kokoan kahden tunnin ohjelman.”
 
-**Tiimin jäsen 3 eli testaaja** tarkistaa koodin: ”Testasin toimintoa 10 erilaisella raportilla, ja se toimii 9 tapauksessa 10:stä.”
+**Tiimin jäsen 3 eli tarkistaja** käy ehdotuksen läpi: ”Kävin läpi 10 yksityiskohtaa, ja 9 on kunnossa — tarjoilun erityisruokavaliot puuttuvat.”
 
-**Tiimin jäsen 4 eli johtaja** näkee tilanteen: ”Testaus löysi virheen. Lähetän tehtävän takaisin kehittäjälle.”
+**Tiimin jäsen 4 eli vastuuhenkilö** näkee tilanteen: ”Tarkistus löysi puutteen. Lähetän tehtävän takaisin toteuttajalle.”
 
-**Kehittäjä** korjaa koodin.
+**Toteuttaja** täydentää suunnitelman.
 
-**Testaaja** testaa uudelleen: ”Nyt toiminto toimii 10 tapauksessa 10:stä.”
+**Tarkistaja** käy sen läpi uudelleen: ”Nyt kaikki 10 yksityiskohtaa ovat kunnossa.”
 
-**Johtaja** tekee päätöksen: ”Valmis. Julkaistaan.”
+**Vastuuhenkilö** tekee päätöksen: ”Valmis. Julkaistaan kutsu.”
 
-Tämä on moniagenttijärjestelmä käytännössä. Jokainen osa tekee oman erikoistuneen tehtävänsä, johtaja koordinoi kokonaisuutta ja lopputulos on parempi kuin yhden toimijan yksin tekemänä.
+Tämä on moniagenttijärjestelmä käytännössä. Jokainen osa tekee oman erikoistuneen tehtävänsä, vastuuhenkilö koordinoi kokonaisuutta ja lopputulos on parempi kuin yhden toimijan yksin tekemänä.
 
 ## Suunnittelumallit n8n:ssä — miltä ne näyttävät käytännössä?
 

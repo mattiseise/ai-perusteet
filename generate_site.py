@@ -16,18 +16,12 @@ LOPPUTYO_BRIEFS = {
     "osp3": "agentit-lopputyo-tehtavananto.md",
 }
 
-# BC Logo: Icon (crest/shield 85x45)
-BC_ICON_SVG = '''<svg width="85" height="45" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_339_29567)"><mask id="a" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="85" height="45"><path d="M85 0H0v45h85V0z" fill="#fff"/></mask><g mask="url(#a)" fill="#69013B"><path d="M12.822 11.656c0 2.889-2.158 4.723-5.597 4.723-1.535 0-2.822-.548-3.579-1.53v1.226H.376v-.198l1.266-1.833V2.012L.134.198V0h5.335c3.955 0 5.664 1.135 5.664 3.588 0 1.795-1.468 3.193-3.78 3.655 3.223 0 5.462 1.814 5.462 4.42l.007-.007zM3.686.66v6.47h1.555c2.353 0 4.002-1.2 4.002-3.502 0-2.012-1.22-2.975-3.78-2.975H3.685V.66zm7.024 11.26c0-2.626-1.642-4.136-4.463-4.136H3.693V13.8c.623 1.114 1.843 1.747 3.358 1.747 2.42 0 3.666-1.418 3.666-3.628m4.417.766V9.71c0-1.597-.134-2.381-.845-2.797l2.159-1.049h.51v6.781c0 1.596.69 2.797 2.332 2.797 2.044 0 2.734-1.398 2.734-2.777V9.71c0-1.597-.241-2.362-.931-2.797l2.265-1.049h.49v8.331l.89 1.643v.237h-2.667V14.98c-.49.726-1.18 1.399-2.956 1.399-1.642 0-3.975-.746-3.975-3.693m13.216 3.08l-1.153.462h-.288v-2.955h.51c.509 1.51 1.756 2.493 3.263 2.493 1.602 0 2.312-.765 2.312-1.795 0-2.513-6.133-2.032-6.133-5.602 0-1.728 1.776-2.664 3.733-2.664 1.327 0 2.567.395 3.09 1.048v2.42h-.51c-.422-1.484-1.34-2.903-2.815-2.903-1.34 0-1.843.765-1.843 1.577 0 2.606 6.153 1.966 6.153 5.602 0 1.92-1.562 2.843-3.706 2.843-1.394 0-2.835-.389-3.54-1.2v-2.513h.49c.509 1.596 1.662 3.213 3.397 3.213 1.08 0 2.058-.54 2.058-1.728m6.47-5.594h-1.508v-.257l2.815-1.504h.51v1.728h2.929v.951h-2.93v4.48c0 1.399.383 2.164 1.535 2.164.878 0 1.636-.455 2.232-1.154l.382.257c-.717 1.114-1.843 1.728-3.37 1.728-1.79 0-3.076-.852-3.076-2.71v-4.765h.48zm12.028-3.715l-2.158 1.048c.71.416.844 1.188.844 2.797v4.197c0 1.596.69 2.797 2.332 2.797 2.044 0 2.734-1.398 2.734-2.777V12.74c0-1.597-.241-2.362-.931-2.797l2.265-1.049h.489v8.332l.891 1.642v.237h-2.647v-1.095c-.49.726-1.179 1.399-2.956 1.399-1.642 0-3.974-.746-3.974-3.694v-5.65c0-1.596-.134-2.38-.845-2.796l2.158-1.049h.51v.496h-.712zm10.451 4.223c.711-2.685 2.554-4.223 4.531-4.223.952 0 1.743.284 2.205.818v3.001h-.51c-.382-2.15-1.555-3.253-2.875-3.253-2.286 0-3.352 2.177-3.352 4.526v2.342c0 1.596.69 2.797 2.332 2.797h.201l1.153-.462v.462h-6.06v-.198l1.153-1.663v-5.856c0-1.597-.134-2.381-.845-2.797l2.159-1.049h.489v5.093h-.113zm10.818 5.424l-1.152 1.663v.198h4.088v-.198l-1.113-1.682V6.55c0-1.616-.402-2.361-1.112-2.823L58.362.434h.489V14.59l-.007.001zm1.977-16.184c0 .746-.603 1.345-1.36 1.345-.758 0-1.361-.6-1.361-1.345 0-.746.603-1.345 1.36-1.345.758 0 1.361.6 1.361 1.345M59.3 16.103l1.153-1.663V6.55c0-1.616-.402-2.361-1.113-2.823l-1.247-1.293h.49v6.848c.73-.903 1.997-1.853 3.867-1.853 1.642 0 3.975.745 3.975 3.693v5.857l1.153 1.663v.198h-4.088v-.198l1.112-1.682v-5.59c0-1.597-.69-2.797-2.332-2.797-2.044 0-2.734 1.398-2.734 2.777v5.79l1.112 1.682v.198H59.3v-.198zm14.41-8.56c2.105 0 3.686 1.365 3.686 3.864v.396h-7.037c0 2.289 1.18 4.486 3.6 4.486 1.394 0 2.432-.534 3.15-1.774l.422.178c-.51 1.28-1.843 2.447-3.746 2.447-2.875 0-5.03-2.033-5.03-5.139 0-3.106 2.051-4.925 4.955-4.925zM70.379 11.1h4.957c-.047-2.31-1.313-3.062-2.554-3.062-1.696 0-2.693 1.577-2.403 3.062z"/><path d="M14.06 34.847c0 5.074-3.55 8.24-9.098 8.24-2.486 0-4.576-.879-5.896-2.447v1.86H0v-.33l2.079-3.073V28.48L0 25.166v-.33h8.747c6.43 0 9.2 1.886 9.2 5.963 0 2.98-2.372 5.313-6.163 6.067 5.237 0 8.283 3.006 8.283 7.336l-.007-.355zM2.345 25.98v12.567h2.534c3.816 0 6.494-1.987 6.494-5.81 0-3.338-1.977-4.928-6.14-4.928h-2.89v-1.83zm11.376 18.71c0-4.358-2.661-6.854-7.25-6.854h-4.133v9.976c1.013 1.848 2.993 2.891 5.452 2.891 3.931 0 5.958-2.356 5.958-6.014m4.209-11.678c0-4.345 3.803-6.995 8.266-6.995 4.464 0 8.28 2.98 8.28 8.805 0 5.313-4.006 8.538-8.22 8.538-4.756 0-8.327-3.019-8.327-8.558v-1.79zm14.116.306c0-4.854-2.333-8.222-5.73-8.222-3.21 0-5.237 2.867-5.237 7.36 0 4.993 2.446 8.448 6.06 8.448 2.993 0 4.907-2.943 4.907-7.586m5.49 7.652l1.878-2.753V29.3c0-2.675-.215-3.949-1.368-4.638l3.514-1.742h.798v2.267c1.383-1.58 3.234-2.573 5.77-2.573 2.662 0 6.428 1.235 6.428 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h-.01zm20.168 0l1.878-2.753V29.3c0-2.675-.215-3.949-1.368-4.638l3.513-1.742h.799v2.267c1.382-1.58 3.233-2.573 5.77-2.573 2.661 0 6.428 1.235 6.428 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h-.009zm18.749 0l1.878-2.753V22.14c0-2.675-.646-3.911-1.8-4.675l-2.016-2.14h.799v23.518l1.8 2.79v.33h-6.63v-.33h-.031zm3.207-26.766c0 1.235-.977 2.229-2.205 2.229a2.222 2.222 0 01-2.206-2.23c0-1.234.977-2.228 2.206-2.228 1.228 0 2.205.994 2.205 2.229m4.59 26.766l1.877-2.753V22.14c0-2.675-.645-3.911-1.8-4.675l-2.015-2.14h.798v11.32c1.18-1.504 3.234-3.072 6.264-3.072 2.662 0 6.429 1.235 6.429 6.116v9.774l1.877 2.753v.33h-6.63v-.33l1.8-2.79v-9.49c0-2.65-1.115-4.638-3.778-4.638-3.31 0-4.45 2.318-4.45 4.611v9.556l1.8 2.79v.33h-6.63v-.33h.458zm23.338-14.152c3.398 0 5.958 2.254 5.958 6.395v.652h-11.383c0 3.772 1.912 7.409 5.82 7.409 2.256 0 3.93-1.031 5.096-2.93l.684.305c-.824 2.114-2.979 4.04-6.06 4.04-4.651 0-8.124-3.364-8.124-8.494 0-5.13 3.323-8.258 8.009-8.258v.88zm-5.425 6.001h7.896c-.076-3.823-2.13-5.07-4.131-5.07-2.74 0-4.373 2.606-3.765 5.07z"/><path d="M16.133 31.537c0-3.476 2.821-5.336 5.53-5.336 2.707 0 5.576 1.814 5.576 5.204 0 3.39-2.755 5.468-5.403 5.468-3.09 0-5.71-1.88-5.71-5.336h.007zm8.927.198c0-2.929-1.44-4.967-3.532-4.967-1.977 0-3.224 1.728-3.224 4.44 0 3.014 1.508 5.092 3.734 5.092 1.843 0 3.022-1.775 3.022-4.572"/><path d="M0 28.536c0-4.345 3.264-7.198 7.198-7.198 4.505 0 7.198 4.505 7.198 8.814 0 4.31-3.264 7.198-7.198 7.198-4.505 0-7.198-4.505-7.198-8.814zm12.353-1.128c0-5.47-2.353-5.815-5.815-5.815-2.353 0-5.815 2.353-5.815 7.198 0 5.47 2.353 12.353 5.815 12.353 2.353 0 5.815-2.353 5.815-12.353v-1.383z" fill-opacity=".01"/></g></g><defs><clipPath id="clip0_339_29567"><path fill="#fff" d="M0 0h85v45H0z"/></clipPath></defs></svg>'''
-
-# BC Logo: Wordmark "Business College Helsinki"
-BC_WORDMARK_SVG = '''<svg viewBox="0 0 349 54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.032 25.37c0 6.289-4.598 10.28-11.924 10.28-3.27 0-6.012-1.191-7.625-3.33v2.67H.514v-.43l2.699-3.992V4.379L0 .431V0h11.367c8.425 0 12.067 2.47 12.067 7.81 0 3.906-3.128 6.95-8.054 7.955 6.869 0 11.638 3.948 11.638 9.62l.014-.015zM7.57 1.436V15.52h3.313c5.012 0 8.525-2.613 8.525-7.624 0-4.38-2.6-6.476-8.054-6.476H7.569v.015zm14.965 24.509c0-5.715-3.498-9.003-9.51-9.003H7.583v13.095c1.328 2.426 3.927 3.804 7.154 3.804 5.155 0 7.812-3.087 7.812-7.896m9.411 1.665v-6.475c0-3.475-.286-5.184-1.8-6.088l4.598-2.283h1.085v14.76c0 3.474 1.471 6.088 4.97 6.088 4.355 0 5.826-3.044 5.826-6.045v-6.432c0-3.475-.514-5.14-1.985-6.088l4.827-2.283h1.042v18.134l1.9 3.575v.517h-5.684v-2.384c-1.042 1.58-2.513 3.044-6.297 3.044-3.499 0-8.468-1.622-8.468-8.04m28.16 6.705l-2.456 1.005h-.614v-6.432h1.085c1.086 3.288 3.742 5.427 6.955 5.427 3.413 0 4.927-1.666 4.927-3.905 0-5.47-13.067-4.422-13.067-12.19 0-3.762 3.784-5.8 7.954-5.8 2.827 0 5.469.86 6.583 2.282v5.27h-1.085c-.9-3.231-2.856-6.32-5.998-6.32-2.856 0-3.927 1.666-3.927 3.432 0 5.671 13.11 4.279 13.11 12.19 0 4.18-3.327 6.19-7.897 6.19-2.97 0-6.04-.847-7.54-2.614v-5.47h1.042c1.085 3.474 3.541 6.992 7.24 6.992 2.299 0 4.384-1.177 4.384-3.76m13.781-12.176h-3.213v-.56l5.997-3.273h1.086v3.762h6.24v2.07h-6.24v9.75c0 3.045.814 4.71 3.27 4.71 1.87 0 3.484-.99 4.755-2.512l.814.56c-1.528 2.425-3.927 3.76-7.182 3.76-3.812 0-6.554-1.853-6.554-5.9V21.104h.027zm25.633-8.085l-4.598 2.282c1.514.905 1.8 2.585 1.8 6.09v9.133c0 3.474 1.47 6.088 4.968 6.088 4.356 0 5.827-3.044 5.827-6.045v-9.19c0-3.475-.514-5.14-1.985-6.088l4.827-2.283h1.042v18.135l1.899 3.574v.517h-5.64v-2.383c-1.041 1.58-2.513 3.044-6.297 3.044-3.498 0-8.468-1.622-8.468-8.04V19.31c0-3.474-.286-5.183-1.8-6.087l4.598-2.283h1.085v1.079H99.52zm22.263 9.19c1.513-5.845 5.44-9.19 9.653-9.19 2.028 0 3.713.618 4.698 1.78v6.532h-1.086c-.814-4.68-3.313-7.078-6.126-7.078-4.87 0-7.14 4.737-7.14 9.85v5.1c0 3.475 1.47 6.09 4.97 6.09h.428l2.456-1.005v1.004h-12.91v-.43l2.456-3.618v-12.75c0-3.474-.286-5.183-1.8-6.087l4.598-2.283h1.043v11.085h-.24zm23.048 11.802l-2.456 3.619v.43h8.71v-.43l-2.37-3.662V9.62c0-3.518-.857-5.14-2.37-6.145l-2.657-2.814h1.042v30.898l-.014.001zm4.213-35.218c0 1.623-1.285 2.928-2.899 2.928-1.613 0-2.899-1.305-2.899-2.928 0-1.622 1.286-2.928 2.9-2.928 1.613 0 2.898 1.306 2.898 2.928m6.168 35.218l2.456-3.619V9.62c0-3.518-.857-5.14-2.37-6.145l-2.657-2.814h1.043v14.905c1.556-1.966 4.255-4.034 8.24-4.034 3.499 0 8.468 1.622 8.468 8.04v12.852l2.456 3.619v.43h-8.71v-.43l2.37-3.662V19.74c0-3.475-1.47-6.09-4.969-6.09-4.355 0-5.826 3.044-5.826 6.046v12.29l2.37 3.662v.43h-8.711v-.43zm30.702-18.62c4.484 0 7.854 2.97 7.854 8.41v.862h-14.993c0 4.98 2.513 9.763 7.668 9.763 2.97 0 5.184-1.363 6.712-3.86l.9.403c-1.086 2.785-3.927 5.328-7.982 5.328-6.126 0-10.71-4.423-10.71-11.186 0-6.763 4.37-10.72 10.551-10.72zm-7.14 7.899h10.395c-.1-5.026-2.799-6.664-5.441-6.664-3.613 0-5.741 3.432-4.955 6.664zm16.536 10.72l2.456-3.619V9.62c0-3.518-.857-5.14-2.37-6.145l-2.657-2.814h1.043v30.897l2.37 3.663v.43h-8.71v-.43zm-152.264 24.79c0 5.714-3.999 9.287-10.253 9.287-2.799 0-5.155-.99-6.64-2.756v2.095h-5.84v-.373l2.342-3.461V40.73l-2.456-3.733v-.373h9.853c7.24 0 10.367 2.126 10.367 6.72 0 3.36-2.67 5.987-6.94 6.837 5.897 0 9.567 3.39 9.567 8.27zm-16.622-13.353V43.86h2.856c4.298 0 7.312-2.24 7.312-6.548 0-3.762-2.228-5.555-6.912-5.555h-3.256v.015zm12.81 21.078c0-4.912-2.998-7.725-8.167-7.725h-4.656v11.242c1.142 2.083 3.37 3.259 6.14 3.259 4.427 0 6.712-2.656 6.712-6.78m4.741-13.166c0-4.897 4.284-7.884 9.31-7.884 5.027 0 9.325 3.36 9.325 9.922 0 5.988-4.512 9.62-9.253 9.62-5.356 0-9.382-3.404-9.382-9.65zm15.893.345c0-5.47-2.627-9.265-6.454-9.265-3.613 0-5.897 3.23-5.897 8.294 0 5.63 2.756 9.52 6.826 9.52 3.37 0 5.525-3.316 5.525-8.55m6.183 8.624l2.114-3.102V45.28c0-3.015-.243-4.45-1.542-5.226l3.955-1.966h.9v2.555c1.557-1.781 3.642-2.899 6.498-2.899 2.998 0 7.24 1.392 7.24 6.893v11.013l2.113 3.101v.374h-7.468v-.374l2.028-3.143V45.38c0-2.987-1.257-5.226-4.255-5.226-3.727 0-5.013 2.612-5.013 5.197v10.783l2.028 3.143v.374h-7.469v-.374h-.129zm22.72 0 2.113-3.102V45.28c0-3.015-.243-4.45-1.542-5.226l3.956-1.966h.9v2.555c1.556-1.781 3.641-2.899 6.497-2.899 2.998 0 7.24 1.392 7.24 6.893v11.013l2.114 3.101v.374h-7.469v-.374l2.028-3.143V45.38c0-2.987-1.256-5.226-4.255-5.226-3.727 0-5.012 2.612-5.012 5.197v10.783l2.028 3.143v.374h-7.469v-.374h-.129zm21.12 0 2.113-3.102V35.735c0-3.015-.728-4.408-2.028-5.268l-2.27-2.411h.9v26.507l2.028 3.143v.374h-7.468v-.374zm3.613-30.183c0 1.392-1.1 2.512-2.484 2.512a2.508 2.508 0 0 1-2.485-2.512c0-1.392 1.1-2.512 2.485-2.512 1.384 0 2.484 1.12 2.484 2.512m5.17 30.183 2.114-3.102V35.735c0-3.015-.728-4.408-2.029-5.268l-2.27-2.411h.9v12.75c1.328-1.695 3.642-3.46 7.055-3.46 2.999 0 7.24 1.392 7.24 6.893v11.013l2.114 3.101v.374h-7.469v-.374l2.028-3.143V45.38c0-2.987-1.256-5.226-4.255-5.226-3.727 0-5.012 2.612-5.012 5.197v10.783l2.028 3.143v.374h-7.469v-.374zm26.29-15.951c3.827 0 6.712 2.54 6.712 7.208v.734h-12.824c0 4.25 2.157 8.35 6.555 8.35 2.542 0 4.427-1.162 5.74-3.303l.771.344c-.928 2.382-3.357 4.553-6.826 4.553-5.241 0-9.153-3.79-9.153-9.578 0-5.787 3.741-9.308 9.025-9.308zm-6.112 6.763h8.896c-.086-4.308-2.399-5.714-4.655-5.714-3.085 0-4.926 2.94-4.241 5.714z" fill="#69013B"/></svg>'''
-
 OSP_BLOCKS = [
     {
         "id": "osp1",
         "title": "Teoria",
         "subtitle": "Tekoälyn teoria ja toimintaperiaatteet",
-        "color": "#69013B",
+        "color": "var(--blue)",
         "icon": "📐",
         "lessons": [
             ("lesson-01", "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", "teaching"),
@@ -45,7 +39,7 @@ OSP_BLOCKS = [
         "id": "osp2",
         "title": "Tekoälyjen käyttö",
         "subtitle": "Generatiivisten tekoälytyökalujen käyttö",
-        "color": "#1D4ED8",
+        "color": "var(--violet)",
         "icon": "🛠",
         "lessons": [
             ("lesson-10", "Kilpailuta tekoälyt — mikä työkalu mihinkin?", "teaching"),
@@ -63,7 +57,7 @@ OSP_BLOCKS = [
         "id": "osp3",
         "title": "Agentit",
         "subtitle": "Tekoälyagentit ja automaatio",
-        "color": "#065F46",
+        "color": "var(--teal)",
         "icon": "🤖",
         "lessons": [
             ("lesson-19", "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", "teaching"),
@@ -299,6 +293,15 @@ def esc_js(s):
     return s.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
 
 
+# Animated track-icon SVGs + mono "NN · LABEL" eyebrows, keyed by OSP id.
+OSP_ICONS = {
+    "osp1": '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="2"><circle class="aic-ring" cx="24" cy="24" r="18"/><circle class="aic-ring" cx="24" cy="24" r="18"/><circle class="aic-ring" cx="24" cy="24" r="18"/></g><circle cx="24" cy="24" r="4.5" fill="currentColor"/></svg>',
+    "osp2": '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><line class="aic-line" x1="9" y1="16" x2="33" y2="16"/><line class="aic-line l2" x1="9" y1="24" x2="39" y2="24"/><line class="aic-line l3" x1="9" y1="32" x2="27" y2="32"/></g><rect class="aic-caret" x="41" y="11" width="3" height="26" rx="1.5" fill="currentColor"/></svg>',
+    "osp3": '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle class="aic-spin" cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="5 7" stroke-linecap="round"/><g class="aic-orbit"><circle cx="24" cy="8" r="3.8" fill="currentColor"/></g></svg>',
+}
+OSP_KN = {"osp1": "01 · TEORIA", "osp2": "02 · KÄYTTÖ", "osp3": "03 · AGENTIT"}
+
+
 def generate_html(data, briefs):
     all_ids = [lid for osp in OSP_BLOCKS for lid, _, _ in osp['lessons']]
 
@@ -325,10 +328,13 @@ def generate_html(data, briefs):
         <span class="acc-l-check" id="done-{lid}"></span>
       </button>'''
 
+        track_icon = OSP_ICONS.get(osp['id'], '')
+        kn_label = OSP_KN.get(osp['id'], osp['title'])
         osp_cards_html += f'''  <div class="osp-card" style="--osp-color:{osp['color']}">
     <div class="osp-card-head" onclick="toggleAcc(this)">
-      <div class="osp-icon">{osp['icon']}</div>
+      <div class="osp-icon">{track_icon}</div>
       <div class="osp-card-info">
+        <div class="osp-kn">{kn_label}</div>
         <div class="osp-title">{osp['title']}</div>
         <div class="osp-subtitle">{osp['subtitle']}</div>
       </div>
@@ -393,20 +399,28 @@ def generate_html(data, briefs):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tekoälyn perusteet — Business College Helsinki</title>
+<title>Tekoälyn perusteet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
 :root{{
-  --bc-primary:#69013B;--bc-dark:#4D0128;
-  --bg-paper:#FAF9F6;--bg-white:#FFFFFF;
-  --border-soft:#E8E0D8;--border-light:#F0DDD1;
-  --text-dark:#1F2937;--text-muted:#6B7280;--text-light:#9CA3AF;
-  --r:12px;--r-sm:8px;
+  --hero:#0B0F1A;--hero-2:#11182a;--hero-line:#232c44;
+  --blue:oklch(0.66 0.15 264);--violet:oklch(0.66 0.15 305);--teal:oklch(0.66 0.13 208);
+  --bc-primary:oklch(0.55 0.17 266);--bc-dark:oklch(0.46 0.15 266);
+  --bg-paper:#F4F6FB;--bg-white:#FFFFFF;
+  --border-soft:#E2E5EE;--border-light:#EAEDF4;
+  --text-dark:#15171E;--text-muted:#5A6072;--text-light:#9AA1B4;
+  --r:14px;--r-sm:10px;
+  --font-sans:'Hanken Grotesk',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;
 }}
 *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 html{{font-size:16px}}
 body{{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-family:var(--font-sans);
   background:var(--bg-paper);
   color:var(--text-dark);
   line-height:1.6;
@@ -419,7 +433,7 @@ body{{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 32px;
+  padding:17px 40px;
   gap:20px;
   position:sticky;
   top:0;
@@ -428,7 +442,7 @@ body{{
 .logo-group{{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:12px;
 }}
 .logo-text{{
   display:flex;
@@ -436,29 +450,18 @@ body{{
   line-height:1.1;
   cursor:pointer;
 }}
+.brand-mark{{width:28px;height:28px;color:var(--blue);flex-shrink:0;display:block}}
+.logo-text{{flex-direction:row;align-items:center;gap:0}}
 .logo-text .logo-main{{
-  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
-  font-size:22px;
-  font-weight:400;
-  color:var(--bc-primary);
-  letter-spacing:0.01em;
+  font-family:var(--font-serif);
+  font-size:21px;
+  font-weight:500;
+  color:var(--text-dark);
+  letter-spacing:-0.01em;
+  white-space:nowrap;
 }}
-.logo-text .logo-sub{{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  font-size:9px;
-  font-weight:600;
-  color:var(--bc-primary);
-  letter-spacing:0.25em;
-  text-transform:uppercase;
-  margin-top:1px;
-}}
-.topbar-title{{
-  font-size:13px;
-  font-weight:700;
-  color:var(--bc-primary);
-  letter-spacing:0.05em;
-  text-transform:uppercase;
-}}
+.logo-text .logo-main b{{font-weight:600}}
+.topbar-title{{display:none}}
 .topbar-right{{
   display:flex;
   align-items:center;
@@ -474,125 +477,191 @@ body{{
 }}
 .progress-fill{{
   height:100%;
-  background:var(--bc-primary);
+  background:linear-gradient(90deg,var(--blue),var(--violet));
   width:0;
   transition:width 0.4s ease;
   border-radius:3px;
 }}
 .progress-text{{
+  font-family:var(--font-mono);
   font-size:11px;
-  font-weight:600;
+  font-weight:500;
   color:var(--text-muted);
   white-space:nowrap;
+  letter-spacing:0.04em;
 }}
 
 /* ============ MAIN LAYOUT ============ */
 .container{{
-  max-width:820px;
+  max-width:1080px;
   margin:0 auto;
-  padding:60px 32px;
+  padding:64px 40px 80px;
 }}
 
-/* ============ HERO (HOME) ============ */
+/* ============ HERO (HOME) — dark two-tone block ============ */
 .hero{{
-  margin-bottom:80px;
-  text-align:center;
+  background:var(--hero);
+  color:#fff;
+  padding:60px 40px 84px;
+  border-radius:0 0 28px 28px;
+  margin-bottom:0;
+}}
+.hero-inner{{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
 }}
 .hero-eyebrow{{
-  font-size:11px;
-  font-weight:700;
-  color:var(--bc-primary);
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:500;
+  color:var(--blue);
   text-transform:uppercase;
-  letter-spacing:0.08em;
-  margin-bottom:12px;
+  letter-spacing:0.3em;
+  margin-bottom:22px;
 }}
 .hero-title{{
-  font-size:48px;
-  font-weight:900;
-  color:var(--text-dark);
-  line-height:1.1;
-  letter-spacing:-0.02em;
-  margin-bottom:12px;
+  font-family:var(--font-serif);
+  font-size:60px;
+  font-weight:500;
+  color:#fff;
+  line-height:1.03;
+  letter-spacing:-0.025em;
+  margin-bottom:22px;
 }}
+.hero-title em{{font-style:italic;color:var(--violet)}}
 .hero-subtitle{{
   font-size:18px;
-  color:var(--text-muted);
-  margin-bottom:32px;
-  line-height:1.5;
+  color:#9aa3bd;
+  margin-bottom:34px;
+  line-height:1.55;
+  max-width:40ch;
 }}
 .hero-stats{{
   display:flex;
-  justify-content:center;
-  gap:20px;
+  gap:36px;
   flex-wrap:wrap;
 }}
 .stat-chip{{
-  background:var(--bg-white);
-  border:1px solid var(--border-soft);
-  border-radius:var(--r-sm);
-  padding:14px 20px;
-  text-align:center;
-  min-width:100px;
+  background:none;
+  border:none;
+  border-radius:0;
+  padding:0;
+  text-align:left;
+  min-width:0;
 }}
 .stat-value{{
-  font-size:28px;
-  font-weight:900;
-  color:var(--bc-primary);
+  font-family:var(--font-serif);
+  font-size:36px;
+  font-weight:600;
+  color:#fff;
   line-height:1;
 }}
 .stat-label{{
-  font-size:10px;
-  color:var(--text-muted);
-  margin-top:4px;
-  font-weight:600;
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  color:#7e88a8;
+  margin-top:8px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
 }}
+/* hero demo console */
+.hero-demo{{
+  background:var(--hero-2);
+  border:1px solid var(--hero-line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.7);
+}}
+.hd-bar{{display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid #1d2540}}
+.hd-bar i{{width:10px;height:10px;border-radius:50%;background:#2c3552}}
+.hd-bar span{{margin-left:8px;font-family:var(--font-mono);font-size:11px;color:#6f7aa0}}
+.hd-body{{padding:22px 22px 24px;min-height:184px}}
+.hd-prompt{{font-family:var(--font-mono);font-size:13.5px;color:#8b94b3;margin-bottom:16px}}
+.hd-prompt b{{color:#cdd4ec;font-weight:400}}
+.hd-resp{{font-family:var(--font-serif);font-size:22px;line-height:1.5;color:#fff}}
+.hd-resp .w{{opacity:.15;animation:hdWord 5s ease-in-out infinite}}
+@keyframes hdWord{{0%,5%{{opacity:.15}}15%{{opacity:1}}90%{{opacity:1}}100%{{opacity:.15}}}}
+.hd-cur{{display:inline-block;width:9px;height:21px;background:var(--violet);margin-left:4px;vertical-align:-3px;animation:hdCaret .85s step-end infinite}}
+@keyframes hdCaret{{50%{{opacity:0}}}}
+.hd-meta{{margin-top:22px;font-family:var(--font-mono);font-size:10.5px;color:#5a6488;letter-spacing:0.04em;white-space:nowrap}}
+.hd-meta b{{color:var(--teal);font-weight:400}}
 
 /* ============ OSP CARDS (ACCORDION) ============ */
 .osp-cards{{
   margin:60px 0;
 }}
+.osp-label{{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.24em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:18px;
+}}
 .osp-card{{
   background:var(--bg-white);
   border:1px solid var(--border-soft);
-  border-left:5px solid var(--osp-color);
   border-radius:var(--r);
-  margin-bottom:20px;
+  margin-bottom:16px;
   overflow:hidden;
-  box-shadow:0 1px 3px rgba(0,0,0,0.04);
-  transition:all 0.2s ease;
+  box-shadow:0 1px 3px rgba(20,30,60,0.04);
+  transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }}
 .osp-card:hover{{
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  border-color:var(--border-soft);
+  box-shadow:0 16px 40px -24px rgba(20,30,60,0.45);
+  border-color:var(--osp-color);
 }}
 .osp-card-head{{
-  padding:24px;
+  position:relative;
+  padding:26px 30px 26px 36px;
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:22px;
   cursor:pointer;
   user-select:none;
-  transition:background 0.15s;
+  transition:background 0.18s;
+}}
+.osp-card-head::before{{
+  content:'';
+  position:absolute;
+  left:0; top:18px; bottom:18px;
+  width:5px; border-radius:0 5px 5px 0;
+  background:var(--osp-color);
 }}
 .osp-card-head:hover{{
-  background:rgba(105, 1, 59, 0.02);
+  background:color-mix(in srgb, var(--osp-color) 5%, transparent);
 }}
 .osp-icon{{
-  font-size:28px;
+  width:54px; height:54px;
+  color:var(--osp-color);
   flex-shrink:0;
 }}
+.osp-icon svg{{width:100%;height:100%;overflow:visible;display:block}}
 .osp-card-info{{
   flex:1;
   text-align:left;
 }}
+.osp-kn{{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.16em;
+  color:var(--osp-color);
+  margin-bottom:6px;
+}}
 .osp-title{{
-  font-size:16px;
-  font-weight:700;
+  font-family:var(--font-serif);
+  font-size:27px;
+  font-weight:500;
+  letter-spacing:-0.01em;
   color:var(--text-dark);
-  margin-bottom:4px;
+  margin-bottom:3px;
 }}
 .osp-subtitle{{
-  font-size:13px;
+  font-size:14.5px;
   color:var(--text-muted);
   line-height:1.4;
 }}
@@ -604,13 +673,15 @@ body{{
   flex-shrink:0;
 }}
 .osp-count{{
-  font-size:12px;
-  color:var(--text-light);
-  font-weight:600;
+  font-family:var(--font-mono);
+  font-size:11px;
+  color:var(--text-muted);
+  letter-spacing:0.06em;
+  white-space:nowrap;
 }}
 .acc-chevron{{
-  font-size:12px;
-  color:var(--text-muted);
+  font-size:11px;
+  color:var(--text-light);
   transition:transform 0.3s ease;
 }}
 .osp-card-head[onclick].open .acc-chevron{{
@@ -622,7 +693,6 @@ body{{
   flex-direction:column;
   max-height:0;
   overflow:hidden;
-  transition:max-height 0.4s cubic-bezier(0,0,0.2,1);
 }}
 .osp-card-lessons.open{{
   max-height:2000px;
@@ -645,7 +715,7 @@ body{{
   border-bottom:none;
 }}
 .acc-lesson:hover{{
-  background:rgba(105, 1, 59, 0.03);
+  background:color-mix(in srgb, var(--osp-color) 5%, transparent);
 }}
 .acc-lesson.done{{
   color:var(--text-light);
@@ -657,10 +727,11 @@ body{{
   min-width:32px;
   height:32px;
   background:var(--osp-color,var(--bc-primary));
-  color:var(--bg-white);
+  color:#fff;
   border-radius:50%;
-  font-size:12px;
-  font-weight:700;
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  font-weight:500;
   flex-shrink:0;
 }}
 .acc-l-title{{
@@ -671,9 +742,7 @@ body{{
   text-decoration:line-through;
 }}
 .acc-l-icon{{
-  font-size:13px;
-  color:var(--text-muted);
-  flex-shrink:0;
+  display:none;
 }}
 .acc-l-check{{
   width:20px;
@@ -716,33 +785,48 @@ body{{
   transition:width 0.5s ease;
 }}
 .prog-text{{
+  font-family:var(--font-mono);
   font-size:11px;
   color:var(--text-muted);
-  font-weight:600;
+  font-weight:500;
   min-width:60px;
   text-align:right;
 }}
+
+/* ============ ANIMATED TRACK ICONS ============ */
+.aic-ring,.aic-line,.aic-spin,.aic-orbit{{transform-box:fill-box}}
+.aic-ring{{transform-origin:center;animation:aicPulse 2.8s ease-out infinite}}
+.aic-ring:nth-child(2){{animation-delay:.93s}}.aic-ring:nth-child(3){{animation-delay:1.86s}}
+@keyframes aicPulse{{0%{{transform:scale(.28);opacity:1}}100%{{transform:scale(1);opacity:0}}}}
+.aic-line{{transform-origin:left center;animation:aicType 3.4s ease-in-out infinite}}
+.aic-line.l2{{animation-delay:.45s}}.aic-line.l3{{animation-delay:.9s}}
+@keyframes aicType{{0%,6%{{transform:scaleX(0)}}32%,68%{{transform:scaleX(1)}}96%,100%{{transform:scaleX(0)}}}}
+.aic-caret{{animation:aicBlink 1.05s steps(1) infinite}}
+@keyframes aicBlink{{0%,50%{{opacity:1}}51%,100%{{opacity:0}}}}
+.aic-spin,.aic-orbit{{transform-box:view-box;transform-origin:24px 24px}}
+.aic-spin{{animation:aicSpin 9s linear infinite}}
+.aic-orbit{{animation:aicSpin 3.6s linear infinite}}
+@keyframes aicSpin{{to{{transform:rotate(360deg)}}}}
 
 /* ============ INFO BOX ============ */
 .info-box{{
   background:var(--bg-white);
   border:1px solid var(--border-soft);
   border-radius:var(--r);
-  padding:24px 28px;
-  margin:60px 0;
-  font-size:14px;
-  line-height:1.8;
+  padding:30px 32px;
+  margin:44px 0 0;
   color:var(--text-muted);
 }}
-.info-box strong{{
-  color:var(--text-dark);
-  font-weight:600;
-}}
-.info-box br{{
-  content:"";
-  display:block;
-  margin:8px 0;
-}}
+.legend-title{{font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:22px}}
+.legend-grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 36px}}
+.legend-item{{display:flex;align-items:flex-start;gap:13px}}
+.lg-ic{{width:32px;height:32px;flex-shrink:0;color:var(--bc-primary);display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--bc-primary) 9%,transparent);border-radius:9px}}
+.lg-ic svg{{width:17px;height:17px}}
+.legend-item .lg-txt{{display:flex;flex-direction:column;gap:2px}}
+.legend-item b{{font-size:14px;font-weight:600;color:var(--text-dark)}}
+.legend-item span{{font-size:13px;color:var(--text-muted);line-height:1.4}}
+.legend-note{{margin-top:26px;padding-top:20px;border-top:1px solid var(--border-light);font-size:13.5px;color:var(--text-muted);line-height:1.7}}
+@media (max-width:640px){{.legend-grid{{grid-template-columns:1fr}}}}
 
 /* ============ LESSON VIEW ============ */
 .lesson-view{{
@@ -760,12 +844,15 @@ body{{
   margin-bottom:0;
 }}
 .breadcrumb{{
-  font-size:12px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.04em;
   color:var(--text-muted);
-  margin-bottom:12px;
+  margin-bottom:14px;
   display:flex;
   align-items:center;
   gap:8px;
+  white-space:nowrap;
 }}
 .bc-link{{
   color:var(--bc-primary);
@@ -776,10 +863,11 @@ body{{
   text-decoration:underline;
 }}
 .lesson-title{{
-  font-size:36px;
-  font-weight:900;
+  font-family:var(--font-serif);
+  font-size:40px;
+  font-weight:500;
   color:var(--text-dark);
-  line-height:1.2;
+  line-height:1.12;
   letter-spacing:-0.02em;
   margin-bottom:16px;
 }}
@@ -792,15 +880,17 @@ body{{
   display:inline-flex;
   align-items:center;
   gap:4px;
-  font-size:11px;
-  font-weight:700;
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  font-weight:500;
   padding:6px 12px;
   border-radius:20px;
   text-transform:uppercase;
-  letter-spacing:0.05em;
+  letter-spacing:0.1em;
+  white-space:nowrap;
 }}
 .badge-osp{{
-  background:rgba(105,1,59,0.1);
+  background:color-mix(in srgb, var(--bc-primary) 12%, transparent);
   color:var(--bc-primary);
 }}
 .badge-type{{
@@ -822,6 +912,9 @@ body{{
   gap:0;
 }}
 .tab-btn{{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
   padding:14px 18px;
   border:none;
   background:none;
@@ -841,6 +934,7 @@ body{{
   color:var(--bc-primary);
   border-bottom-color:var(--bc-primary);
 }}
+.tab-btn svg{{width:15px;height:15px;flex-shrink:0}}
 
 /* ============ LESSON CONTENT ============ */
 .lesson-panels{{
@@ -868,8 +962,9 @@ body{{
   border-radius:var(--r-sm);
 }}
 .panel h1{{
-  font-size:24px;
-  font-weight:800;
+  font-family:var(--font-serif);
+  font-size:27px;
+  font-weight:600;
   margin:28px 0 12px;
   color:var(--text-dark);
   letter-spacing:-0.01em;
@@ -878,8 +973,9 @@ body{{
   margin-top:0;
 }}
 .panel h2{{
-  font-size:18px;
-  font-weight:700;
+  font-family:var(--font-serif);
+  font-size:20px;
+  font-weight:600;
   margin:24px 0 10px;
   color:var(--text-dark);
 }}
@@ -1047,29 +1143,29 @@ body{{
   border-left:4px solid var(--bc-primary);
 }}
 .task-card--task .task-card-header{{
-  background:linear-gradient(135deg, #F9F5F7 0%, #F5F0F3 100%);
+  background:linear-gradient(135deg, #F1F4FE 0%, #EAEFFD 100%);
 }}
 .task-card--task .task-card-header h2{{
   color:var(--bc-primary);
 }}
 .task-card--task .task-card-header::before{{
-  content:'\\1F4CB';
-  font-size:18px;
+  content:'';width:10px;height:10px;border-radius:3px;flex-shrink:0;
+  background:var(--bc-primary);
 }}
 
 /* Task type: info — blue accent (väärinkäsitykset, osaamistavoitteet, CFU) */
 .task-card--info{{
-  border-left:4px solid #1D4ED8;
+  border-left:4px solid #8E7BE6;
 }}
 .task-card--info .task-card-header{{
-  background:linear-gradient(135deg, #EFF6FF 0%, #E8F0FE 100%);
+  background:linear-gradient(135deg, #F5F2FE 0%, #EFEAFD 100%);
 }}
 .task-card--info .task-card-header h2{{
-  color:#1D4ED8;
+  color:#6A48C9;
 }}
 .task-card--info .task-card-header::before{{
-  content:'\\1F4A1';
-  font-size:18px;
+  content:'';width:10px;height:10px;border-radius:3px;flex-shrink:0;
+  background:#6A48C9;
 }}
 
 /* Task type: assessment — amber accent */
@@ -1083,8 +1179,8 @@ body{{
   color:#92400E;
 }}
 .task-card--assessment .task-card-header::before{{
-  content:'\\2B50';
-  font-size:18px;
+  content:'';width:10px;height:10px;border-radius:3px;flex-shrink:0;
+  background:#D97706;
 }}
 
 /* Task type: resource — green accent */
@@ -1098,8 +1194,8 @@ body{{
   color:#065F46;
 }}
 .task-card--resource .task-card-header::before{{
-  content:'\\1F4DA';
-  font-size:18px;
+  content:'';width:10px;height:10px;border-radius:3px;flex-shrink:0;
+  background:#059669;
 }}
 
 /* Remove hr separators inside card panels — cards do the separating now */
@@ -1127,7 +1223,7 @@ body{{
   padding:14px 18px;
 }}
 .task-card--sm .task-card-header::before{{
-  font-size:15px;
+  width:8px;height:8px;
 }}
 
 /* Nested h3 inside task cards (when not a card themselves) */
@@ -1137,7 +1233,7 @@ body{{
   color:var(--text-dark);
   margin:18px 0 8px;
   padding-bottom:6px;
-  border-bottom:1px solid #F0EDE8;
+  border-bottom:1px solid #ECEFF6;
 }}
 
 /* ============ LESSON FOOTER ============ */
@@ -1169,7 +1265,7 @@ body{{
   gap:6px;
 }}
 .btn:hover:not(:disabled){{
-  background:rgba(105,1,59,0.05);
+  background:color-mix(in srgb, var(--bc-primary) 6%, transparent);
   color:var(--bc-primary);
   border-color:var(--bc-primary);
 }}
@@ -1212,13 +1308,13 @@ body{{
 .mermaid{{
   margin:32px 0;
   padding:24px 20px;
-  background:linear-gradient(135deg, #FDFCFA 0%, #F5F0EB 100%);
-  border:1px solid #E0D8CE;
-  border-left:4px solid #69013B;
+  background:linear-gradient(135deg, #FBFCFF 0%, #EEF1FA 100%);
+  border:1px solid var(--border-soft);
+  border-left:4px solid var(--bc-primary);
   border-radius:12px;
   text-align:center;
   overflow-x:auto;
-  box-shadow:0 2px 8px rgba(105,1,59,0.06);
+  box-shadow:0 2px 8px rgba(20,30,60,0.06);
 }}
 .mermaid svg{{
   max-width:100%;
@@ -1245,44 +1341,237 @@ body{{
 .mermaid .cluster rect{{
   rx:12 !important;
   ry:12 !important;
-  stroke:#C9B8D4 !important;
-  fill:#F8F4FB !important;
+  stroke:#C4CCF2 !important;
+  fill:#F2F5FE !important;
 }}
 .mermaid .label{{
   font-size:14px !important;
   color:#2D2D2D !important;
 }}
 
+/* ============ READER MODERNIZATION (v2) — contrast, rhythm, hierarchy ============ */
+:root{{
+  --text-muted:#4A5161;
+  --reader-body:#363C4C;
+}}
+.lesson-panels{{padding:48px 32px 72px}}
+.panel{{max-width:744px}}
+.panel h1{{font-family:var(--font-serif);font-size:31px;font-weight:600;letter-spacing:-0.018em;color:var(--text-dark);margin:0 0 20px}}
+.panel h2{{font-family:var(--font-serif);font-size:23px;font-weight:600;letter-spacing:-0.01em;color:var(--text-dark);margin:40px 0 12px}}
+.panel h3{{font-family:var(--font-sans);font-size:15px;font-weight:700;letter-spacing:0.005em;color:var(--text-dark);margin:26px 0 8px}}
+.panel p,.panel li{{color:var(--reader-body);font-size:15.5px;line-height:1.8}}
+.panel li{{margin-bottom:8px}}
+.panel ul,.panel ol{{margin:12px 0 16px 22px}}
+.panel strong{{color:var(--text-dark);font-weight:600}}
+.panel a{{color:var(--bc-primary);text-decoration-thickness:1px;text-underline-offset:2px}}
+.panel hr{{border-top:1px solid var(--border-soft);margin:30px 0}}
+.panel table{{font-size:14.5px;border:1px solid var(--border-soft);border-radius:10px;overflow:hidden}}
+.panel th{{background:#EBEEF7;color:var(--text-dark);font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.03em;text-transform:uppercase;border-color:var(--border-soft)}}
+.panel td{{color:var(--reader-body);border-color:var(--border-soft)}}
+.panel code{{font-family:var(--font-mono);background:#EEF1FA;color:#3A3FA6;border:1px solid #E2E6F3;border-radius:5px;text-decoration:none}}
+.panel pre{{font-family:var(--font-mono);background:#0E1320;border:1px solid #1C2438;border-radius:12px;color:#E6EAF5;white-space:pre-wrap;word-break:break-word;text-decoration:none;line-height:1.65;font-size:13px}}
+.panel pre code{{font-family:var(--font-mono);white-space:pre-wrap;text-decoration:none;border:none;background:none;padding:0}}
+.panel blockquote{{border-left:3px solid var(--border-soft);background:#F6F8FC;color:var(--reader-body);border-radius:0 10px 10px 0}}
+.panel blockquote.pause{{background:#FFF8EC;border-left-color:#E0982E}}
+.panel blockquote.pause p{{color:#7A4E12}}
+.panel .solo-note{{background:#E9F7F0;border-left-color:#23A578;color:#175C44}}
+
+/* Task cards — flatter, cleaner, stronger header type */
+.task-card{{border:1px solid var(--border-soft);border-radius:14px;box-shadow:0 1px 2px rgba(20,30,60,.045);margin:22px 0}}
+.task-card:hover{{box-shadow:0 10px 30px -18px rgba(20,30,60,.35)}}
+.task-card-header{{padding:15px 22px;border-bottom:1px solid var(--border-soft);gap:11px}}
+.task-card-header h2{{font-family:var(--font-sans);font-size:16.5px;font-weight:700;line-height:1.35;color:var(--text-dark);flex:1}}
+.task-card-header h3{{flex:1}}
+.task-card-body{{padding:20px 24px}}
+.task-card-body p,.task-card-body li{{color:var(--reader-body)}}
+.task-card--task .task-card-header{{background:#EEF1FD}}
+.task-card--info .task-card-header{{background:#F2EFFD}}
+.task-card--info{{border-left-color:#8E7BE6}}
+.task-card--assessment .task-card-header{{background:#FFF6E6}}
+.task-card--assessment{{border-left-color:#D9930B}}
+.task-card--resource .task-card-header{{background:#E9F7F0}}
+.task-card--resource{{border-left-color:#14A06F}}
+
+/* Small (h3) cards — nested look under their section heading */
+.task-card--sm{{margin:11px 0 11px 24px;background:#FBFCFE;box-shadow:none;border-radius:11px}}
+.task-card--sm .task-card-header{{padding:12px 18px;border-bottom-color:var(--border-light)}}
+.task-card--sm .task-card-header h3{{font-size:14.5px;font-weight:700;color:var(--text-dark)}}
+.task-card--sm .task-card-body{{padding:14px 18px}}
+
+/* Header-only cards (empty body) → render as a SECTION HEADING, not a card */
+.task-card.is-sectionhead{{
+  border:none;background:none;box-shadow:none;overflow:visible;border-radius:0;margin:44px 0 8px;
+}}
+.task-card.is-sectionhead:hover{{box-shadow:none}}
+.task-card.is-sectionhead > .task-card-body{{display:none}}
+.task-card.is-sectionhead .task-card-header{{
+  background:none;border:none;border-bottom:2px solid var(--border-soft);padding:0 0 10px;border-radius:0;gap:12px;
+}}
+.task-card.is-sectionhead .task-card-header h2{{
+  font-family:var(--font-serif);font-size:23px;font-weight:600;color:var(--text-dark);
+}}
+.task-card.is-sectionhead .task-card-header::before{{width:11px;height:11px;border-radius:3px}}
+.task-card--info.is-sectionhead .task-card-header{{border-bottom-color:#C9BEF1}}
+.task-card--info.is-sectionhead .task-card-header::before{{background:#8E7BE6}}
+.task-card--task.is-sectionhead .task-card-header::before{{background:var(--bc-primary)}}
+
+/* Status pills (Suositeltu / Syventävä) */
+.pill{{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px 3px 9px;border-radius:999px;white-space:nowrap;line-height:1.5;margin-left:4px;position:relative;top:-1px}}
+.pill::before{{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}}
+.pill--rec{{background:#E1F4EA;color:#0E7D55}}
+.pill--adv{{background:#EFEAFB;color:#6A48C9}}
+
+@media (prefers-reduced-motion: reduce){{
+  .hd-resp .w{{opacity:1 !important;animation:none}}
+  .hd-cur{{animation:none}}
+}}
+
+/* —— Variant: KORTIT (soft, rounded, colourful) —— */
+#lesson-panels.rv-soft .panel > h2{{position:relative;padding-left:17px}}
+#lesson-panels.rv-soft .panel > h2::before{{content:'';position:absolute;left:0;top:.16em;bottom:.16em;width:4px;border-radius:3px;background:linear-gradient(var(--blue),var(--violet))}}
+#lesson-panels.rv-soft .task-card:not(.is-sectionhead){{border-radius:20px;border-color:transparent;box-shadow:0 16px 42px -24px rgba(20,30,60,.55)}}
+#lesson-panels.rv-soft .task-card:not(.is-sectionhead):hover{{transform:translateY(-2px)}}
+#lesson-panels.rv-soft .task-card:not(.is-sectionhead) .task-card-header{{padding:18px 24px;border-bottom:none}}
+#lesson-panels.rv-soft .task-card--task:not(.is-sectionhead) .task-card-header{{background:linear-gradient(135deg,#EDF1FE,#E5ECFD)}}
+#lesson-panels.rv-soft .task-card--info:not(.is-sectionhead) .task-card-header{{background:linear-gradient(135deg,#F4F0FE,#EBE4FC)}}
+#lesson-panels.rv-soft .task-card--assessment:not(.is-sectionhead) .task-card-header{{background:linear-gradient(135deg,#FFF6E6,#FDEDC9)}}
+#lesson-panels.rv-soft .task-card--resource:not(.is-sectionhead) .task-card-header{{background:linear-gradient(135deg,#E7F7EF,#D8F2E4)}}
+#lesson-panels.rv-soft .task-card--sm{{border-radius:16px;background:#fff;border-color:var(--border-soft)}}
+#lesson-panels.rv-soft .panel blockquote{{border-radius:16px;border-left-width:4px}}
+#lesson-panels.rv-soft .panel pre{{border-radius:16px}}
+#lesson-panels.rv-soft .panel table{{border-radius:14px}}
+
+/* —— Variant: LEHTI (editorial, ruled, minimal chrome) —— */
+#lesson-panels.rv-mag .panel{{max-width:680px}}
+#lesson-panels.rv-mag .panel > h1{{font-size:39px;line-height:1.07;margin-bottom:26px}}
+#lesson-panels.rv-mag .panel > h2{{font-size:26px;border-top:1.5px solid var(--text-dark);padding-top:15px;margin-top:48px}}
+#lesson-panels.rv-mag .panel > h3{{font-family:var(--font-serif);font-size:18px;font-weight:600}}
+#lesson-panels.rv-mag .panel p,#lesson-panels.rv-mag .panel li{{font-size:16.5px;line-height:1.86}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead){{border:none;border-left:2px solid #8E7BE6;border-radius:0;box-shadow:none;background:none;margin:28px 0}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead):hover{{box-shadow:none;transform:none}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header{{background:none!important;border:none;padding:0 0 4px 22px}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header h2{{font-family:var(--font-serif);font-size:21px}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header::before{{display:none}}
+#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-body{{padding:6px 0 0 22px}}
+#lesson-panels.rv-mag .task-card--task:not(.is-sectionhead){{border-left-color:var(--bc-primary)}}
+#lesson-panels.rv-mag .task-card--assessment:not(.is-sectionhead){{border-left-color:#D9930B}}
+#lesson-panels.rv-mag .task-card--resource:not(.is-sectionhead){{border-left-color:#14A06F}}
+#lesson-panels.rv-mag .task-card--sm{{margin:14px 0 14px 22px;background:none;border:none;border-left:2px solid var(--border-soft);border-radius:0}}
+#lesson-panels.rv-mag .task-card--sm .task-card-header h3{{font-family:var(--font-serif);font-size:17px}}
+#lesson-panels.rv-mag .task-card.is-sectionhead .task-card-header{{border-bottom:none;border-top:2px solid var(--text-dark);padding-top:13px}}
+#lesson-panels.rv-mag .task-card.is-sectionhead .task-card-header h2{{font-size:25px}}
+#lesson-panels.rv-mag .panel blockquote:not(.pause){{background:none;border-left:3px solid var(--blue);border-radius:0;padding-left:18px;font-style:italic;color:var(--text-dark)}}
+
+/* —— Variant: KONSOLI (technical, mono, crisp) —— */
+#lesson-panels.rv-tech{{background:#ECEFF7}}
+#lesson-panels.rv-tech .panel > h2{{font-family:var(--font-mono);font-size:17px;font-weight:500;letter-spacing:0;color:var(--text-dark);margin-top:38px}}
+#lesson-panels.rv-tech .panel > h2::before{{content:'## ';color:var(--blue)}}
+#lesson-panels.rv-tech .panel > h3{{font-family:var(--font-mono);font-size:13.5px;font-weight:500}}
+#lesson-panels.rv-tech .panel > h3::before{{content:'# ';color:var(--violet)}}
+#lesson-panels.rv-tech .task-card:not(.is-sectionhead){{border-radius:8px;border:1px solid #D3D9E8;box-shadow:none;background:#fff;position:relative;overflow:hidden}}
+#lesson-panels.rv-tech .task-card:not(.is-sectionhead)::after{{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--bc-primary)}}
+#lesson-panels.rv-tech .task-card--info:not(.is-sectionhead)::after{{background:#8E7BE6}}
+#lesson-panels.rv-tech .task-card--assessment:not(.is-sectionhead)::after{{background:#D9930B}}
+#lesson-panels.rv-tech .task-card--resource:not(.is-sectionhead)::after{{background:#14A06F}}
+#lesson-panels.rv-tech .task-card:not(.is-sectionhead) .task-card-header{{background:#F5F8FD!important;border-bottom:1px solid #E4E8F2}}
+#lesson-panels.rv-tech .task-card:not(.is-sectionhead) .task-card-header h2,#lesson-panels.rv-tech .task-card:not(.is-sectionhead) .task-card-header h3{{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:0}}
+#lesson-panels.rv-tech .task-card:not(.is-sectionhead) .task-card-header::before{{border-radius:2px}}
+#lesson-panels.rv-tech .task-card--sm{{border-radius:6px;margin-left:24px}}
+#lesson-panels.rv-tech .panel pre{{border-radius:8px}}
+#lesson-panels.rv-tech .panel table{{border-radius:6px}}
+#lesson-panels.rv-tech .panel th{{font-family:var(--font-mono)}}
+#lesson-panels.rv-tech .panel blockquote{{border-radius:6px}}
+#lesson-panels.rv-tech .task-card.is-sectionhead .task-card-header h2{{font-family:var(--font-mono);font-size:15px;font-weight:600;letter-spacing:.01em}}
+#lesson-panels.rv-tech .task-card.is-sectionhead .task-card-header::before{{border-radius:2px}}
+
+/* ============ LESSON FRAME — cohesive with the home editorial look ============ */
+.lesson-header{{
+  background:var(--hero);
+  border:none;
+  border-radius:0 0 26px 26px;
+  padding:40px 40px 32px;
+}}
+.lesson-header .breadcrumb{{color:#8b94b3;margin-bottom:16px}}
+.lesson-header .bc-link{{color:var(--blue)}}
+.lesson-header .bc-link:hover{{color:#aeb9ff}}
+.lesson-header .lesson-title{{color:#fff;font-size:38px}}
+.badge-osp{{background:rgba(124,141,240,.16);color:#aeb9ff}}
+.badge-type{{background:rgba(255,255,255,.09);color:#c3cbe6}}
+.badge-assess{{background:rgba(217,147,11,.2);color:#f0c071}}
+
+.lesson-tabs{{
+  background:transparent;
+  border-bottom:1px solid var(--border-soft);
+  padding:10px 40px 0;
+  margin-top:4px;
+}}
+.tab-btn{{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.01em;color:var(--text-muted);border-bottom-width:2px;padding:12px 16px}}
+.tab-btn:hover{{color:var(--text-dark)}}
+.tab-btn.active{{color:var(--bc-primary);border-bottom-color:var(--bc-primary)}}
+
+.lesson-footer{{border-top:1px solid var(--border-soft);padding:22px 40px}}
+.btn{{border-radius:999px;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.02em;padding:11px 20px;white-space:nowrap}}
+.btn-primary{{background:var(--bc-primary);border-color:var(--bc-primary);color:#fff}}
+.btn-primary:hover:not(:disabled){{background:var(--bc-dark);border-color:var(--bc-dark);color:#fff}}
+.done-btn{{border-radius:999px;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.03em;white-space:nowrap}}
+
+/* ============ READER STYLE SWITCHER ============ */
+.rv-switch{{position:fixed;right:20px;bottom:92px;z-index:300;display:none;align-items:center;gap:3px;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border:1px solid var(--border-soft);
+  border-radius:999px;padding:5px;box-shadow:0 12px 34px -14px rgba(20,30,60,.5)}}
+body:has(#lesson.active) .rv-switch{{display:flex}}
+.rv-switch .lab{{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-light);padding:0 6px 0 10px}}
+.rv-switch button{{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.03em;border:none;background:none;color:var(--text-muted);padding:7px 14px;border-radius:999px;cursor:pointer}}
+.rv-switch button:hover{{color:var(--text-dark)}}
+.rv-switch button.on{{background:var(--bc-primary);color:#fff}}
+
 /* ============ RESPONSIVE ============ */
+@media (max-width:900px){{
+  .hero-inner{{grid-template-columns:1fr;gap:36px}}
+  .hero{{padding:48px 24px 60px}}
+  .hero-title{{font-size:46px}}
+}}
 @media (max-width:768px) {{
   .topbar{{padding:12px 16px}}
   .container{{padding:40px 16px}}
-  .hero-title{{font-size:32px}}
+  .hero{{padding:40px 18px 52px}}
+  .hero-title{{font-size:36px}}
   .hero-subtitle{{font-size:15px}}
-  .hero-stats{{gap:12px}}
-  .osp-card-head{{padding:16px}}
-  .osp-card-head,.acc-lesson{{padding-left:16px;padding-right:16px}}
+  .hero-stats{{gap:24px}}
+  .osp-card-head{{padding:18px 18px 18px 24px;gap:16px}}
+  .osp-title{{font-size:22px}}
+  .acc-lesson{{padding-left:18px;padding-right:18px}}
   .lesson-header{{padding:24px 16px}}
-  .lesson-title{{font-size:24px}}
+  .lesson-title{{font-size:28px}}
   .lesson-panels{{padding:24px 16px}}
   .lesson-footer{{padding:16px;flex-direction:column-reverse}}
 }}
+
+/* ============ ANIMATED CONCEPT FIGURES (.ai-demo wrapper) ============ */
+.ai-demo{{margin:28px 0;border-radius:16px;overflow:hidden;border:1px solid #232C44;
+  background:radial-gradient(120% 120% at 70% 10%,#161C2E 0%,#0B0F1A 60%)}}
+.ai-demo__tag{{display:block;padding:16px 20px 0;font-family:var(--font-mono);font-size:10.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:#7E88A8}}
+.ai-demo__stage{{position:relative;height:230px;overflow:hidden}}
+.ai-demo__cap{{padding:14px 20px;margin:0;font-family:var(--font-mono);font-size:11px;
+  color:#8B94B3;border-top:1px solid #1C2438;background:#0B0F1A}}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({{
   startOnLoad:false,
   theme:'base',
-  fontFamily:'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  fontFamily:'Hanken Grotesk, system-ui, sans-serif',
   themeVariables:{{
-    primaryColor:'#F3E8EE',
-    primaryTextColor:'#2D2D2D',
-    primaryBorderColor:'#69013B',
-    lineColor:'#8B7B93',
-    secondaryColor:'#EDE7F0',
-    tertiaryColor:'#F0F4FF',
-    noteBkgColor:'#FFF8E1',
-    noteTextColor:'#2D2D2D',
-    noteBorderColor:'#E0C97F',
+    primaryColor:'#EEF1FD',
+    primaryTextColor:'#15171E',
+    primaryBorderColor:'#5B68C6',
+    lineColor:'#6B5B73',
+    secondaryColor:'#EFEAFB',
+    tertiaryColor:'#E9F7F0',
+    noteBkgColor:'#FFF6E6',
+    noteTextColor:'#15171E',
+    noteBorderColor:'#D9930B',
     fontSize:'14px',
     edgeLabelBackground:'#FDFCFA'
   }}
@@ -1292,12 +1581,11 @@ body{{
 
 <!-- TOP NAVIGATION -->
 <nav class="topbar">
-  <div class="logo-group">
-    <div class="logo-text" onclick="showHome()">
-      <span class="logo-main">Business College</span>
-      <span class="logo-sub">Helsinki</span>
+  <div class="logo-group" onclick="showHome()" style="cursor:pointer">
+    <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span>
+    <div class="logo-text">
+      <span class="logo-main">Tekoälyn <b>perusteet</b></span>
     </div>
-    <div class="topbar-title">Tekoälyn perusteet</div>
   </div>
   <div class="topbar-right">
     <div class="progress-bar"><div class="progress-fill" id="pb"></div></div>
@@ -1307,41 +1595,58 @@ body{{
 
 <!-- HOME VIEW -->
 <div id="home" class="home-view">
-  <div class="container">
-    <div class="hero">
-      <div class="hero-eyebrow">Business College Helsinki</div>
-      <div class="hero-title">Tekoälyn perusteet</div>
-      <div class="hero-subtitle">27 oppituntia — teoriasta käytäntöön ja agentteihin</div>
-      <div class="hero-stats">
-        <div class="stat-chip">
-          <div class="stat-value">27</div>
-          <div class="stat-label">Oppituntia</div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">AI · Perusteet — 1 OV</div>
+        <h1 class="hero-title">Ymmärrä tekoäly <em>teoriasta</em> agentteihin.</h1>
+        <p class="hero-subtitle">27 oppituntia, jotka avaavat tekoälyn — teoriasta käytäntöön ja itsenäisiin agentteihin.</p>
+        <div class="hero-stats">
+          <div class="stat-chip">
+            <div class="stat-value">27</div>
+            <div class="stat-label">Oppituntia</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Kokonaisuutta</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-value" id="done-cnt">0</div>
+            <div class="stat-label">Suoritettu</div>
+          </div>
         </div>
-        <div class="stat-chip">
-          <div class="stat-value">3</div>
-          <div class="stat-label">Kokonaisuutta</div>
-        </div>
-        <div class="stat-chip">
-          <div class="stat-value" id="done-cnt">0</div>
-          <div class="stat-label">Suoritettu</div>
+      </div>
+      <div class="hero-demo">
+        <div class="hd-bar"><i></i><i></i><i></i><span>perusteet · esimerkki</span></div>
+        <div class="hd-body">
+          <div class="hd-prompt">&gt; <b>Selitä tekoäly yhdellä lauseella.</b></div>
+          <div class="hd-resp"><span class="w" style="animation-delay:0s">Ohjelma,</span> <span class="w" style="animation-delay:.13s">joka</span> <span class="w" style="animation-delay:.26s">oppii</span> <span class="w" style="animation-delay:.39s">datasta</span> <span class="w" style="animation-delay:.52s">—</span> <span class="w" style="animation-delay:.65s">ei</span> <span class="w" style="animation-delay:.78s">noudata</span> <span class="w" style="animation-delay:.91s">sääntöjä.</span><span class="hd-cur"></span></div>
+          <div class="hd-meta"><b>▍</b>&nbsp; 0.4&nbsp;s &nbsp;·&nbsp; 38 tokenia &nbsp;·&nbsp; perus-LLM</div>
         </div>
       </div>
     </div>
+  </section>
+
+  <div class="container">
 
     <!-- OSP CARDS WITH ACCORDION -->
     <div class="osp-cards">
+      <div class="osp-label">Kolme kokonaisuutta · 27 oppituntia</div>
 {osp_cards_html}
     </div>
 
     <!-- INFO BOX -->
     <div class="info-box">
-      <strong>🎬 Diat</strong> — Oppitunnin diaesitys<br><br>
-      <strong>📖 Itseopiskelumateriaali</strong> — Oppitunnin sisältö<br><br>
-      <strong>✏️ Opiskelutehtävät</strong> — Itsenäisesti tai pareittain tehtävät harjoitustehtävät<br><br>
-      <strong>📚 Sanasto</strong> — Tunnin keskeisimmät käsitteet ja termit<br><br>
-      <strong>🎓 Opettajavetoiset tehtävät</strong> — Luokassa yhdessä tehtävät harjoitukset<br><br>
-      <strong>📋 Opettajan materiaali</strong> — Ohjeet ja taustatiedot tunnin pitämiseen<br><br>
-      Merkitse tunti suoritetuksi valitsemalla oppitunti ja klikkaamalla "Merkitse suoritetuksi" — edistyminen tallentuu selaimeesi.
+      <div class="legend-title">Materiaalityypit</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"></rect><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"></path></svg></span><div class="lg-txt"><b>Diat</b><span>Oppitunnin diaesitys</span></div></div>
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"></path></svg></span><div class="lg-txt"><b>Itseopiskelumateriaali</b><span>Oppitunnin sisältö</span></div></div>
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"></path></svg></span><div class="lg-txt"><b>Opiskelutehtävät</b><span>Itsenäisesti tai pareittain tehtävät harjoitukset</span></div></div>
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"></path><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"></path></svg></span><div class="lg-txt"><b>Sanasto</b><span>Tunnin keskeisimmät käsitteet ja termit</span></div></div>
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"></circle><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"></path><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"></path></svg></span><div class="lg-txt"><b>Opettajavetoiset tehtävät</b><span>Luokassa yhdessä tehtävät harjoitukset</span></div></div>
+        <div class="legend-item"><span class="lg-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"></rect><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"></path></svg></span><div class="lg-txt"><b>Opettajan materiaali</b><span>Ohjeet ja taustatiedot tunnin pitämiseen</span></div></div>
+      </div>
+      <p class="legend-note">Merkitse tunti suoritetuksi valitsemalla oppitunti ja klikkaamalla "Merkitse suoritetuksi" — edistyminen tallentuu selaimeesi.</p>
     </div>
   </div>
 </div>
@@ -1350,7 +1655,7 @@ body{{
 <div id="lesson" class="lesson-view">
   <div id="lesson-header" class="lesson-header"></div>
   <div id="lesson-tabs" class="lesson-tabs"></div>
-  <div id="lesson-panels" class="lesson-panels"></div>
+  <div id="lesson-panels" class="lesson-panels rv-tech"></div>
   <div id="lesson-footer" class="lesson-footer"></div>
 </div>
 
@@ -1361,6 +1666,36 @@ const ALLIDS={json.dumps(all_ids)};
 const OSPM={osp_meta_js};
 let cid=null,ctab='selfstudy';
 
+// Mark header-only task-cards (empty body) so they render as section headings,
+// and convert inline "🟢 SUOSITELTU" / "🟣 SYVENTÄVÄ" markers into pill tags.
+function enhancePanels(){{
+  const root=document.getElementById('lesson-panels');
+  if(!root) return;
+  root.querySelectorAll('.task-card').forEach(c=>{{
+    const body=c.querySelector(':scope > .task-card-body');
+    if(body && body.children.length===0 && body.textContent.trim()===''){{
+      c.classList.add('is-sectionhead');
+    }}
+  }});
+  root.querySelectorAll('h1,h2,h3,h4').forEach(h=>{{
+    if(!/SUOSITELTU|SYVENT[ÄA]V[ÄA]/.test(h.textContent)) return;
+    h.innerHTML=h.innerHTML
+      .replace(/(?:🟢\uFE0F?\s*)?SUOSITELTU/g,'<span class="pill pill--rec">Suositeltu</span>')
+      .replace(/(?:🟣\uFE0F?\s*)?SYVENT[ÄA]V[ÄA]/g,'<span class="pill pill--adv">Syventävä</span>');
+  }});
+}}
+
+// Line-icon SVG map for tab labels (Konsoli reader — no emoji)
+const TABICONS={{
+  slides:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg>`,
+  selfstudy:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg>`,
+  stasks:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg>`,
+  vocab:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg>`,
+  tltasks:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg>`,
+  tmats:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg>`,
+  brief:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.7l1.7 3.6 3.9.5-2.9 2.7.8 3.9L8 12.6 4.5 14.6l.8-3.9L2.4 6.3l3.9-.5z"/></svg>`
+}};
+
 function loadBrief(ospId,pushState){{
   const b=BRIEFS[ospId];if(!b)return;
   cid='brief-'+ospId;ctab='brief';
@@ -1369,7 +1704,7 @@ function loadBrief(ospId,pushState){{
   if(pushState!==false){{ history.pushState(null,'','#brief-'+ospId); }}
   document.getElementById('lesson-header').innerHTML=`
     <div class="breadcrumb">
-      <span class="bc-link" onclick="showHome()">${{b.ospIcon}} ${{b.ospTitle}}</span>
+      <span class="bc-link" onclick="showHome()">${{b.ospTitle}}</span>
       <span>›</span>
       <span>Lopputyön tehtävänanto</span>
     </div>
@@ -1381,6 +1716,7 @@ function loadBrief(ospId,pushState){{
   document.getElementById('lesson-tabs').innerHTML='';
   document.getElementById('lesson-panels').innerHTML=
     `<div class="panel active" data-tab="brief">${{b.content}}</div>`;
+  enhancePanels();
   document.getElementById('lesson-footer').innerHTML=`
     <div class="nav-buttons">
       <button class="btn" onclick="showHome()">← Takaisin etusivulle</button>
@@ -1450,7 +1786,7 @@ function loadLesson(id,tab,pushState){{
 
   document.getElementById('lesson-header').innerHTML=`
     <div class="breadcrumb">
-      <span class="bc-link" onclick="showHome()">${{d.ospIcon}} ${{d.ospTitle}}</span>
+      <span class="bc-link" onclick="showHome()">${{d.ospTitle}}</span>
       <span>›</span>
       <span>Oppitunti ${{num}}</span>
     </div>
@@ -1462,17 +1798,18 @@ function loadLesson(id,tab,pushState){{
 
   const hasSlides=d.slides&&d.slides.length>0;
   const tabs=isA
-    ?[...(hasSlides?[['slides','🎬 Diat']]:[]),['selfstudy','📖 Arviointitehtävä'],['stasks','✏️ Tehtävä'],['tmats','📋 Opettajan opas']]
-    :[...(hasSlides?[['slides','🎬 Diat']]:[]),['selfstudy','📖 Itseopiskelumateriaali'],['stasks','✏️ Opiskelutehtävät'],['vocab','📚 Sanasto'],['tltasks','🎓 Opettajavetoiset tehtävät'],['tmats','📋 Opettajan materiaali']];
+    ?[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Arviointitehtävä'],['stasks','Tehtävä'],['tmats','Opettajan opas']]
+    :[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Itseopiskelumateriaali'],['stasks','Opiskelutehtävät'],['vocab','Sanasto'],['tltasks','Opettajavetoiset tehtävät'],['tmats','Opettajan materiaali']];
 
   const tabNames=tabs.map(t=>t[0]);
   document.getElementById('lesson-tabs').innerHTML=tabs.map(([tid,lbl])=>
-    `<button class="tab-btn ${{tid===ctab?'active':''}}" onclick="showTab('${{tid}}',this)">${{lbl}}</button>`
+    `<button class="tab-btn ${{tid===ctab?'active':''}}" onclick="showTab('${{tid}}',this)">${{TABICONS[tid]||''}}<span>${{lbl}}</span></button>`
   ).join('');
 
   document.getElementById('lesson-panels').innerHTML=tabs.map(([tid])=>
     `<div class="panel ${{tid===ctab?'active':''}}" data-tab="${{tid}}">${{d[tid]||'<p>(Sisältöä ei ole saatavilla)</p>'}}</div>`
   ).join('');
+  enhancePanels();
 
   document.getElementById('lesson-footer').innerHTML=`
     <div class="nav-buttons">

@@ -8,7 +8,7 @@ Yksinkertaisissa boteissa muisti päättyy usein siihen, kun keskustelu loppuu. 
 
 ## Konteksti-ikkuna: mitä agentti näkee juuri nyt?
 
-Kuvittele IT-tuen agenttia, joka vastaa asiakkaalle neljänkymmenen aiemman viestin jälkeen kysymykseen: ”Entä mitä ehdotat nyt?” Agentti lukee 40 viestiä ja yrittää muistaa, mistä ongelma alun perin alkoi. Se muistuttaa tilannetta, jossa lukisit 40 sivua kirjaa yhdellä kertaa ja sinulta kysyttäisiin sen jälkeen jotain ensimmäiseltä sivulta. Ihmisen keskittyminen kuormittuu. Samalla tavalla myös agentin käsittelykyky on rajallinen.
+Kuvittele asiakaspalveluagenttia, joka vastaa asiakkaalle neljänkymmenen aiemman viestin jälkeen kysymykseen: ”Entä mitä ehdotat nyt?” Agentti lukee 40 viestiä ja yrittää muistaa, mistä ongelma alun perin alkoi. Se muistuttaa tilannetta, jossa lukisit 40 sivua kirjaa yhdellä kertaa ja sinulta kysyttäisiin sen jälkeen jotain ensimmäiseltä sivulta. Ihmisen keskittyminen kuormittuu. Samalla tavalla myös agentin käsittelykyky on rajallinen.
 
 **Konteksti-ikkuna** tarkoittaa sitä osaa keskustelusta tai datasta, jonka agentti näkee kerralla. Voit ajatella sitä muistilaatikkona, johon mahtuu vain rajattu määrä viimeisimpiä viestejä. Jos ikkuna sisältää 50 viestiä ja keskusteluun tulee 51. viesti, vanhin viesti voi poistua agentin näkyvistä. Tämä rajaaminen on **tarkoituksellista suunnittelua**, ei pelkkä puute. Kaikilla järjestelmillä on rajat prosessointikyvyssä, nopeudessa ja kustannuksissa.
 
@@ -16,7 +16,30 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 
 > **Pysähdy hetkeksi:** Kuvittele asiakaspalveluagentti, joka käsittelee pitkää tukiprosessia. Asiakas kuvailee ongelmaa pitkään ja kysyy 30 viestin jälkeen: ”Nyt kun olet kuullut kaiken, mitä ehdotat?” Jos konteksti-ikkuna sisältää vain 20 viestiä, agentti näkee enää viimeiset 20 viestiä. Alkuperäinen ongelma on poissa näkyvistä. Mitä tästä voi seurata?
 
-Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. IT-tukiagentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
+Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
+
+<figure class="ai-demo"><span class="ai-demo__tag">// konteksti-ikkuna täyttyy — vanhin putoaa pois</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;overflow:hidden">
+  <div class="l21cw-win">
+    <div class="l21cw-track">
+      <span class="l21cw-msg">viesti 1</span><span class="l21cw-msg">viesti 2</span><span class="l21cw-msg">viesti 3</span>
+      <span class="l21cw-msg">viesti 4</span><span class="l21cw-msg l21cw-hot">viesti 5</span>
+      <span class="l21cw-msg">viesti 1</span><span class="l21cw-msg">viesti 2</span><span class="l21cw-msg">viesti 3</span>
+      <span class="l21cw-msg">viesti 4</span><span class="l21cw-msg l21cw-hot">viesti 5</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Agentti näkee vain ikkunaan mahtuvat viestit. Uusi viesti työntää vanhimman ulos näkyvistä — FIFO eli ensin sisään, ensin ulos.</figcaption></figure>
+<style>
+.l21cw-win{width:70%;height:60px;border:1px solid #2A3450;border-radius:10px;background:#11182A;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);position:relative}
+.l21cw-track{display:flex;gap:10px;align-items:center;height:100%;padding-left:14px;width:max-content;animation:l21cwDrift 12s linear infinite}
+.l21cw-msg{flex:none;font-family:var(--font-mono);font-size:11px;color:#C7CEE6;background:#1A2236;border:1px solid #2A3450;border-radius:7px;padding:7px 12px;white-space:nowrap}
+.l21cw-msg.l21cw-hot{color:#0B0F1A;background:oklch(0.66 0.15 264);border-color:transparent}
+@keyframes l21cwDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.l21cw-track{animation:none}}
+</style>
+
 
 ## Pitkäaikainen muisti: vektoritietokanta merkityksen etsijänä
 
@@ -55,9 +78,9 @@ Ilman tilamuuttujia agentin toiminta menisi helposti sekaisin. Se ei tietäisi, 
 
 Kun rakennat agenttia n8n:llä, **tilan hallinta on kriittistä**. Sinun täytyy suunnitella, mitä mahdollisia tiloja prosessilla voi olla ja mitä muuttujia kussakin tilassa tarvitaan. Nämä tilat ja muuttujat ohjaavat agentin seuraavaa vaihetta. Esimerkiksi jos tila on ”maksu maksettu” ja muuttuja ”varastosaatavuus” on ”ei saatavilla”, agentin seuraava askel voi olla ilmoittaa asiakkaalle arvioitu toimitusaika.
 
-## Käytännön esimerkki: IT-tuen agentti kokonaisuutena
+## Käytännön esimerkki: asiakaspalveluagentti kokonaisuutena
 
-Laitetaan nyt nämä kolme komponenttia yhteen. Kuvittele IT-tuen agentti, joka käsittelee asiakkaita reaaliajassa.
+Laitetaan nyt nämä kolme komponenttia yhteen. Kuvittele asiakaspalveluagentti, joka käsittelee asiakkaita reaaliajassa.
 
 **Konteksti-ikkuna** näyttää viimeisimmät kymmenen viestiä, jotka asiakkaan kanssa on vaihdettu. Asiakas on voinut kuvailla ongelmaa pitkään, mutta agentti näkee vain viimeisimmät 10 viestiä. Niiden perusteella agentti ymmärtää esimerkiksi tämän: ”Asiakas kokeili ratkaisua A. Se ei auttanut. Nyt hän kysyy, mitä tehdä seuraavaksi.”
 
@@ -75,7 +98,7 @@ Konteksti-ikkuna, pitkäaikainen muisti ja tila muodostavat agentin **toiminnall
 
 Soul on kuin agentin moraalikompassi. Se vastaa kolmeen kysymykseen, jotka agentti pitää mielessään tilanteesta toiseen:
 
-**Ensimmäinen kysymys: Kuka minä pohjimmiltani olen?** Soul määrittää agentin identiteetin. Se ei kerro vain sitä, mitä agentti tekee, vaan myös sen, millainen toimija se on. Esimerkiksi: ”Olen kärsivällinen IT-tukihenkilö, joka arvostaa asiakkaan aikaa ja yrittää auttaa ensin selkeästi ennen kuin pyytää asiakkaalta lisätietoja.” Tämä identiteetti ei muutu tehtävästä toiseen.
+**Ensimmäinen kysymys: Kuka minä pohjimmiltani olen?** Soul määrittää agentin identiteetin. Se ei kerro vain sitä, mitä agentti tekee, vaan myös sen, millainen toimija se on. Esimerkiksi: ”Olen kärsivällinen neuvoja, joka arvostaa asiakkaan aikaa ja yrittää auttaa ensin selkeästi ennen kuin pyytää asiakkaalta lisätietoja.” Tämä identiteetti ei muutu tehtävästä toiseen.
 
 **Toinen kysymys: Mitä arvoja minulla on, ja mitä en koskaan tee?** Soul sisältää ehdottomat rajat. Esimerkiksi: ”En koskaan palauta asiakkaan salasanaa, vaan kerron, miten hän voi nollata sen itse.” ”En koskaan jaa yhden asiakkaan tietoja toiselle asiakkaalle.” ”Jos minulla ei ole vastausta, kerron sen suoraan enkä arvaa.” Nämä ovat agentin pysyviä arvoja. Ne ohjaavat toimintaa erityisesti silloin, kun tilanne on epäselvä eikä yksittäinen sääntö riitä.
 

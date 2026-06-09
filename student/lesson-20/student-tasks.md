@@ -10,13 +10,13 @@ Alla on taulukko, jossa kuvataan kolme erilaista agenttijärjestelmää. Sinun t
 - Tehtävä: Vastaa sisään tuleviin asiakassähköposteihin automaattisesti
 - Tavoite: "Tunnista asiakkaan ongelma, etsi samankaltaisia tapauksia ja lähetä ratkaisu"
 
-**Agentti B: Palvelimen valvonta-agentti**
-- Tehtävä: Valvoo palvelimen tilaa ja tekee korjaavia toimintoja
-- Tavoite: "Seuraa CPU-kuormaa, muistin käyttöä ja levytilaa. Jos nämä ylittävät kynnysarvot, käynnistä korjaavia toimintoja."
+**Agentti B: Varaston valvonta-agentti**
+- Tehtävä: Valvoo varaston tilaa ja tekee tilauksia
+- Tavoite: "Seuraa tuotteiden määriä, menekkiä ja viimeisiä käyttöpäiviä. Jos jokin tuote on loppumassa, tee uusi tilaus toimittajalle."
 
-**Agentti C: Tietokannan optimointiagentti**
-- Tehtävä: Analysoi tietokantakyselyjen tehokkuutta ja optimoi indeksit
-- Tavoite: "Etsi hitaat kyselyt, analysoi ne ja lisää tai muokkaa indeksejä parantaakseen nopeutta."
+**Agentti C: Tapahtuman aikatauluagentti**
+- Tehtävä: Suunnittelee ja optimoi tapahtuman ohjelman aikataulua
+- Tavoite: "Etsi päällekkäisyydet ja ruuhka-ajat, analysoi ne ja siirrä ohjelmanumeroita niin, että aikataulu toimii sujuvasti."
 
 ### Täyttötaulukko
 
@@ -25,8 +25,8 @@ Täytä seuraava taulukko kunkin agentin osalta:
 | Agentti | Suunnittelusilmukan vaiheet | Tarvittavat työkalut | Konteksti-ikkuna | Ulkoinen muisti | Huomiot |
 | --- | --- | --- | --- | --- | --- |
 | **A: Sähköpostivastaukset** | 1. Havainnoi: Lue sähköposti 2. Suunnittele: ... 3. Toimi: ... 4. Tarkkaile: ... | Sähköpostin luku-API, tietokannanhaku-API, sähköpostin lähetys-API | Asiakkaan aiemmat sähköpostit (viimeiset 5 viestiä) | Ratkaisutietokanta: tunnetut ongelmat ja ratkaisut | [Täytä] |
-| **B: Palvelimen valvonta** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
-| **C: Tietokannan optimointi** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
+| **B: Varaston valvonta** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
+| **C: Tapahtuman aikataulu** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
 
 ### Ohjeita
 
