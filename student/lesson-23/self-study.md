@@ -44,40 +44,100 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ReAct: jos tieto ei riitä, agentti yrittää uudelleen</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:14px 22px">
-  <div class="l23-tbl">
-    <div class="l23-head"><span class="h-aj">AJATTELE</span><span class="h-to">TOIMI</span><span class="h-ha">HAVAITSE</span></div>
-    <div class="l23-row r1"><span class="c cA"><i>tarvitsen hinnan</i></span><span class="c cB">hae nimellä</span><span class="c cC miss">ei löytynyt ✗</span></div>
-    <div class="l23-fb">↻ tieto ei riittänyt — tarvitaan lisää</div>
-    <div class="l23-row r2"><span class="c cA"><i>kokeile tuotekoodilla</i></span><span class="c cB">hae koodilla</span><span class="c cC">hinta: 45 €</span></div>
-    <div class="l23-row r3"><span class="c cA"><i>tieto riittää</i></span><span class="c cB">vastaa: 45 €</span><span class="c cC done">✓ valmis</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// tekoälyagentin toiminta — ReAct, ketjuajattelu ja orkestrointi</span>
+<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;padding:14px 18px;height:430px">
+  <!-- Skenaario ylhäällä -->
+  <div class="ag-scn"><span class="ag-scn-k">Käyttäjä:</span> "Voinko pyöräillä töihin huomenna?"</div>
+  <!-- Pyöreä kompositio: SVG (kehä, hehku, pulssit) + HTML-overlayt (agentti, vaiheet, työkalut) -->
+  <div class="ag-stage">
+    <svg class="ag-svg" viewBox="0 0 360 360" aria-hidden="true">
+      <defs>
+        <radialGradient id="agGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="oklch(0.72 0.16 264)"/><stop offset="60%" stop-color="oklch(0.5 0.18 285)"/><stop offset="100%" stop-color="#0B0F1A" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- ReAct-kehä (katkoviiva, hidas pyörintä) -->
+      <circle class="ag-ring" cx="180" cy="180" r="120" fill="none" stroke="oklch(0.66 0.15 264)" stroke-width="1.5" stroke-dasharray="3 9" opacity=".55"/>
+      <!-- aktiivinen valokaari kiertää kehää -->
+      <circle class="ag-arc" cx="180" cy="180" r="120" fill="none" stroke="oklch(0.72 0.16 200)" stroke-width="3" stroke-linecap="round" stroke-dasharray="60 694" pathLength="754"/>
+      <!-- agentin hehku -->
+      <circle cx="180" cy="180" r="60" fill="url(#agGlow)" class="ag-core-glow"/>
+      <!-- orkestrointi: pulssipolut agentista työkaluille (sää ylhäällä, kalenteri oik-yläviisto) -->
+      <path id="agP-saa" class="ag-pulse ag-pulse-saa" d="M180 180 L180 32" stroke="oklch(0.72 0.16 200)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="22 700"/>
+      <path id="agP-kal" class="ag-pulse ag-pulse-kal" d="M180 180 L312 96" stroke="oklch(0.7 0.16 305)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="22 700"/>
+    </svg>
+    <!-- Keskellä: hehkuva agentti -->
+    <div class="ag-core"><span class="ag-core-dot"></span><span class="ag-core-l">AI&nbsp;Agent</span></div>
+    <!-- Ketjuajattelu: ajatuskuplat vaihtuvat -->
+    <div class="ag-think">
+      <span class="th t1">"Tarvitsen sääennusteen"</span>
+      <span class="th t2">"Käytän sää-APIa"</span>
+      <span class="th t3">"Sää: +16 °C, sade 80 %"</span>
+      <span class="th t4">"Tarkistan kalenterin"</span>
+      <span class="th t5">"Tapaaminen klo 9"</span>
+      <span class="th t6">"Muodostan vastauksen"</span>
+    </div>
+    <!-- ReAct-vaiheet kehällä -->
+    <div class="ag-ph ph-aj">AJATTELE</div>
+    <div class="ag-ph ph-to">TOIMI</div>
+    <div class="ag-ph ph-ha">HAVAINNOI</div>
+    <!-- 6 työkalua kehän ulkopuolella -->
+    <div class="ag-tool tl-saa"><span class="ag-ico">🌦️</span>Sää-API</div>
+    <div class="ag-tool tl-kal"><span class="ag-ico">📅</span>Kalenteri</div>
+    <div class="ag-tool tl-sah"><span class="ag-ico">📧</span>Sähköposti</div>
+    <div class="ag-tool tl-net"><span class="ag-ico">🌐</span>Verkkohaku</div>
+    <div class="ag-tool tl-db"><span class="ag-ico">🗄️</span>Tietokanta</div>
+    <div class="ag-tool tl-doc"><span class="ag-ico">📄</span>Dokumentit</div>
   </div>
+  <!-- Tuloste alhaalla -->
+  <div class="ag-out"><span class="ag-out-k">Vastaus:</span> "Kyllä, mutta ota sadevarusteet mukaan."</div>
 </div>
-<figcaption class="ai-demo__cap">ReAct on palautesilmukka: agentti ajattelee, toimii ja havaitsee tuloksen. Jos tieto ei riitä — esimerkiksi haku ei tuota tulosta — se päättelee uuden tavan ja yrittää uudelleen, kunnes tavoite täyttyy.</figcaption></figure>
+<figcaption class="ai-demo__cap">Tekoälyagentti ratkaisee tehtävän silmukassa: se ajattelee ja suunnittelee, käyttää työkalua, havainnoi tuloksen ja päättää seuraavan toimen — ja toistaa, kunnes vastaus on valmis. Tässä se hakee sään ja kalenterin ennen vastausta.</figcaption></figure>
 <style>
-.l23-tbl{display:flex;flex-direction:column;gap:7px;width:100%;max-width:500px}
-.l23-head,.l23-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
-.l23-head span{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-align:center;padding-bottom:4px;border-bottom:2px solid}
-.h-aj{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}
-.h-to{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}
-.h-ha{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}
-.l23-row .c{font-family:var(--font-mono);font-size:12.5px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:9px 7px;text-align:center;opacity:0}
-.l23-row .c i{color:#B9C2DA;font-style:italic}
-.miss{color:#F08A78!important;border-color:#F08A78!important}
-.done{color:#7FD0A8!important;border-color:#7FD0A8!important;font-weight:500}
-.l23-fb{font-family:var(--font-mono);font-size:11px;color:#F08A78;text-align:center;opacity:0;animation:l23fb 10s ease-out infinite}
-@keyframes l23fb{0%,30%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
-.r1 .c{animation:l23r1 10s ease-out infinite}
-.r2 .c{animation:l23r2 10s ease-out infinite}
-.r3 .c{animation:l23r3 10s ease-out infinite}
-.r1 .cA{animation-delay:.6s}.r1 .cB{animation-delay:.9s}.r1 .cC{animation-delay:1.2s}
-.r2 .cA{animation-delay:4.0s}.r2 .cB{animation-delay:4.3s}.r2 .cC{animation-delay:4.6s}
-.r3 .cA{animation-delay:6.2s}.r3 .cB{animation-delay:6.5s}.r3 .cC{animation-delay:6.8s}
-@keyframes l23r1{0%{opacity:0;transform:translateY(6px)}10%,92%{opacity:1;transform:none}100%{opacity:0}}
-@keyframes l23r2{0%{opacity:0;transform:translateY(6px)}14%,92%{opacity:1;transform:none}100%{opacity:0}}
-@keyframes l23r3{0%{opacity:0;transform:translateY(6px)}18%,92%{opacity:1;transform:none}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.r1 .c,.r2 .c,.r3 .c,.l23-fb{animation:none;opacity:1!important;transform:none}}
+/* skenaario & tuloste */
+.ag-scn,.ag-out{font-family:var(--font-mono);font-size:12.5px;color:#EAEEF8;background:#11182A;border:1.5px solid #2A3656;border-radius:9px;padding:8px 13px;max-width:94%;text-align:center}
+.ag-scn-k{color:oklch(0.72 0.16 200)}.ag-out{border-color:oklch(0.55 0.14 200)}.ag-out-k{color:#7FD0A8}
+.ag-out{opacity:0;animation:agOut 12s ease-out infinite}
+@keyframes agOut{0%,82%{opacity:.25}90%,100%{opacity:1}}
+/* pyöreä näyttämö */
+.ag-stage{position:relative;width:330px;height:330px;flex:none}
+.ag-svg{position:absolute;inset:0;width:100%;height:100%}
+.ag-ring{transform-box:view-box;transform-origin:180px 180px;animation:agSpin 26s linear infinite}
+@keyframes agSpin{to{transform:rotate(360deg)}}
+.ag-arc{transform-box:view-box;transform-origin:180px 180px;animation:agSpin 12s linear infinite;filter:drop-shadow(0 0 4px oklch(0.72 0.16 200))}
+.ag-core-glow{animation:agPulse 3s ease-in-out infinite}
+@keyframes agPulse{0%,100%{opacity:.5}50%{opacity:.9}}
+/* pulssit: valoimpulssi ulos (dashoffset) ajoitettuna vaiheisiin */
+.ag-pulse{opacity:0}
+.ag-pulse-saa{animation:agPulseSaa 12s linear infinite}
+.ag-pulse-kal{animation:agPulseKal 12s linear infinite}
+@keyframes agPulseSaa{0%,16%{opacity:0;stroke-dashoffset:22}18%{opacity:1}30%{opacity:1;stroke-dashoffset:-360}33%,100%{opacity:0;stroke-dashoffset:-360}}
+@keyframes agPulseKal{0%,50%{opacity:0;stroke-dashoffset:22}52%{opacity:1}64%{opacity:1;stroke-dashoffset:-360}67%,100%{opacity:0;stroke-dashoffset:-360}}
+/* keskusagentti */
+.ag-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 50% 38%,oklch(0.42 0.13 275),oklch(0.28 0.1 270));border:1.5px solid oklch(0.66 0.16 270);box-shadow:0 0 22px oklch(0.55 0.16 270 / .55),inset 0 0 18px oklch(0.7 0.16 264 / .35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.ag-core-dot{width:14px;height:14px;border-radius:50%;background:oklch(0.82 0.15 200);box-shadow:0 0 12px oklch(0.8 0.16 200);animation:agCore 2.4s ease-in-out infinite}
+@keyframes agCore{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.25);opacity:1}}
+.ag-core-l{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:#EAF2FF;text-shadow:0 0 6px oklch(0.7 0.16 264)}
+/* ajatuskuplat */
+.ag-think{position:absolute;left:50%;top:23.5%;transform:translateX(-50%);width:200px;text-align:center}
+.ag-think .th{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-mono);font-size:12px;color:#CFE3FF;background:rgba(20,28,48,.85);border:1px solid oklch(0.6 0.14 270);border-radius:999px;padding:4px 11px;opacity:0}
+.t1{animation:agTh 12s ease-in-out infinite}.t2{animation:agTh 12s ease-in-out infinite;animation-delay:2s}.t3{animation:agTh 12s ease-in-out infinite;animation-delay:4s}.t4{animation:agTh 12s ease-in-out infinite;animation-delay:6s}.t5{animation:agTh 12s ease-in-out infinite;animation-delay:8s}.t6{animation:agTh 12s ease-in-out infinite;animation-delay:10s}
+@keyframes agTh{0%{opacity:0}3%{opacity:1}14%{opacity:1}17%{opacity:0}100%{opacity:0}}
+/* ReAct-vaiheet kehällä, aktiivinen korostuu vuorollaan */
+.ag-ph{position:absolute;transform:translate(-50%,-50%);font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:#8FA0C8;background:#0E1626;border:1.5px solid #2A3656;border-radius:7px;padding:5px 9px}
+.ph-aj{left:50%;top:9%}.ph-to{left:80%;top:74%}.ph-ha{left:20%;top:74%}
+.ph-aj{animation:agAj 12s ease-in-out infinite}.ph-to{animation:agTo 12s ease-in-out infinite}.ph-ha{animation:agHa 12s ease-in-out infinite}
+@keyframes agAj{0%,16%,50%,66%,90%,100%{color:oklch(0.82 0.14 264);border-color:oklch(0.7 0.15 264);box-shadow:0 0 12px oklch(0.6 0.15 264 / .5)}17%,49%,67%,89%{color:#8FA0C8;border-color:#2A3656;box-shadow:none}}
+@keyframes agTo{16%,33%,50%,64%{color:oklch(0.82 0.14 305);border-color:oklch(0.7 0.15 305);box-shadow:0 0 12px oklch(0.6 0.15 305 / .5)}0%,15%,34%,49%,65%,100%{color:#8FA0C8;border-color:#2A3656;box-shadow:none}}
+@keyframes agHa{30%,49%,64%,82%{color:oklch(0.82 0.13 200);border-color:oklch(0.7 0.14 200);box-shadow:0 0 12px oklch(0.6 0.14 200 / .5)}0%,29%,50%,63%,83%,100%{color:#8FA0C8;border-color:#2A3656;box-shadow:none}}
+/* työkalut kehän ulkopuolella */
+.ag-tool{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:5px;font-family:var(--font-mono);font-size:10.5px;color:#B9C2DA;background:#11182A;border:1.5px solid #2A3656;border-radius:999px;padding:4px 9px;white-space:nowrap}
+.ag-ico{font-size:13px;line-height:1}
+.tl-saa{left:50%;top:1%}.tl-kal{left:92%;top:24%}.tl-sah{left:92%;top:76%}.tl-net{left:50%;top:99%}.tl-db{left:8%;top:76%}.tl-doc{left:8%;top:24%}
+.tl-saa{animation:agTSaa 12s ease-in-out infinite}.tl-kal{animation:agTKal 12s ease-in-out infinite}
+@keyframes agTSaa{0%,17%{color:#B9C2DA;border-color:#2A3656}20%,32%{color:#06212A;background:oklch(0.78 0.14 200);border-color:transparent;box-shadow:0 0 14px oklch(0.7 0.15 200 / .7)}36%,100%{color:#B9C2DA;background:#11182A;border-color:#2A3656;box-shadow:none}}
+@keyframes agTKal{0%,51%{color:#B9C2DA;border-color:#2A3656}54%,66%{color:#06212A;background:oklch(0.76 0.15 305);border-color:transparent;box-shadow:0 0 14px oklch(0.7 0.16 305 / .7)}70%,100%{color:#B9C2DA;background:#11182A;border-color:#2A3656;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.ag-ring,.ag-arc,.ag-core-glow,.ag-core-dot,.ag-pulse,.th,.ag-ph,.ag-tool,.ag-out{animation:none}.t1{opacity:1}.ag-out{opacity:1}}
 </style>
 
 ## Ketjuajattelu: jaa ongelma osiin

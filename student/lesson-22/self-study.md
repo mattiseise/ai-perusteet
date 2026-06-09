@@ -62,43 +62,41 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti valitsee eri työkalun tarpeen mukaan</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti valitsee työkalun, kysyy ja saa vastauksen</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 22px">
   <div class="l22-box">AGENTTI</div>
-  <div class="l22-card">
+  <div class="l22-mid">
     <div class="l22-tool"><span class="t t1">sää-API</span><span class="t t2">kalenteri-API</span><span class="t t3">muistutus-API</span><span class="t t4">sähköposti-API</span><span class="t t5">valuutta-API</span></div>
-    <div class="l22-line"><span class="l22-go">→</span><span class="l22-ba">←</span></div>
-    <div class="l22-req"><span class="q q1">hae: sää Helsinki</span><span class="q q2">hae seuraava tapaaminen</span><span class="q q3">luo muistutus</span><span class="q q4">etsi viimeisin lasku</span><span class="q q5">muunna 100 €</span></div>
-    <div class="l22-res"><span class="r r1">5 °C, poutaa</span><span class="r r2">Tiimipalaveri klo 13.00, Teams</span><span class="r r3">Muistutus: tehtävälinkki huom. klo 9</span><span class="r r4">DNA, 42,90 €, eräpäivä 15.6.</span><span class="r r5">100 € = 108,50 $</span></div>
+    <div class="l22-pipe">
+      <span class="l22-out"><span class="q q1">hae: sää Helsinki</span><span class="q q2">hae seuraava tapaaminen</span><span class="q q3">luo muistutus</span><span class="q q4">etsi viimeisin lasku</span><span class="q q5">muunna 100 €</span></span>
+      <span class="l22-back"><span class="r r1">5 °C, poutaa</span><span class="r r2">Tiimipalaveri klo 13.00, Teams</span><span class="r r3">Muistutus luotu huom. klo 9</span><span class="r r4">DNA 42,90 €, eräpäivä 15.6.</span><span class="r r5">100 € = 108,50 $</span></span>
+    </div>
   </div>
   <div class="l22-box l22-w">TYÖKALUT</div>
 </div>
-<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se valitsee tarpeen mukaan oikean työkalun — sää, kalenteri, muistutus, sähköposti, valuutta — lähettää pyynnön, odottaa tuloksen ja käyttää sitä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se valitsee tarpeen mukaan oikean työkalun — sää, kalenteri, muistutus, sähköposti, valuutta — lähettää pyynnön ja saa vasta sitten tuloksen takaisin.</figcaption></figure>
 <style>
 .l22-box{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:16px 12px;text-align:center}
 .l22-w{border-color:oklch(0.66 0.13 208)}
-.l22-card{flex:1;max-width:320px;background:#11182A;border:1.5px solid #3A4560;border-radius:10px;padding:11px 14px;display:flex;flex-direction:column;gap:7px;text-align:center}
+.l22-mid{flex:1;max-width:300px;display:flex;flex-direction:column;gap:8px;text-align:center}
 .l22-tool{position:relative;height:18px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em}
 .t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;color:oklch(0.66 0.13 208)}
-.l22-line{position:relative;height:14px;color:#5A688C;font-family:var(--font-mono);font-size:13px}
-.l22-go{position:absolute;left:36%;animation:l22go 16s ease-in-out infinite}
-.l22-ba{position:absolute;right:36%;animation:l22ba 16s ease-in-out infinite}
-@keyframes l22go{0%,100%{opacity:.3}10%{opacity:1;color:oklch(0.66 0.15 264)}}
-@keyframes l22ba{0%,100%{opacity:.3}16%{opacity:1;color:oklch(0.66 0.13 208)}}
-.l22-req,.l22-res{position:relative;height:18px;font-family:var(--font-mono);font-size:12px}
-.q,.r{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;white-space:nowrap}
-.q{color:oklch(0.66 0.15 264)}.r{color:#EAEEF8}
-.t1,.q1,.r1{animation:l22p1 16s steps(1) infinite}
-.t2,.q2,.r2{animation:l22p2 16s steps(1) infinite}
-.t3,.q3,.r3{animation:l22p3 16s steps(1) infinite}
-.t4,.q4,.r4{animation:l22p4 16s steps(1) infinite}
-.t5,.q5,.r5{animation:l22p5 16s steps(1) infinite}
-@keyframes l22p1{0%,18%{opacity:1}19%,100%{opacity:0}}
-@keyframes l22p2{0%,19%{opacity:0}20%,38%{opacity:1}39%,100%{opacity:0}}
-@keyframes l22p3{0%,39%{opacity:0}40%,58%{opacity:1}59%,100%{opacity:0}}
-@keyframes l22p4{0%,59%{opacity:0}60%,78%{opacity:1}79%,100%{opacity:0}}
-@keyframes l22p5{0%,79%{opacity:0}80%,99%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.t,.q,.r,.l22-go,.l22-ba{animation:none}.t1,.q1,.r1{opacity:1}.l22-go,.l22-ba{opacity:1}}
+.t1{animation:l22T1 16s steps(1) infinite}.t2{animation:l22T2 16s steps(1) infinite}.t3{animation:l22T3 16s steps(1) infinite}.t4{animation:l22T4 16s steps(1) infinite}.t5{animation:l22T5 16s steps(1) infinite}
+@keyframes l22T1{0%,18%{opacity:1}19%,100%{opacity:0}}
+@keyframes l22T2{0%,19%{opacity:0}20%,38%{opacity:1}39%,100%{opacity:0}}
+@keyframes l22T3{0%,39%{opacity:0}40%,58%{opacity:1}59%,100%{opacity:0}}
+@keyframes l22T4{0%,59%{opacity:0}60%,78%{opacity:1}79%,100%{opacity:0}}
+@keyframes l22T5{0%,79%{opacity:0}80%,99%{opacity:1}100%{opacity:0}}
+.l22-pipe{position:relative;height:40px}
+.l22-pipe::before{content:"";position:absolute;top:20px;left:0;right:0;height:1.5px;background:#3A4560}
+.l22-out,.l22-back{position:absolute;left:0;right:0;font-family:var(--font-mono);font-size:12.5px;white-space:nowrap;opacity:0}
+.l22-out{top:-1px;color:oklch(0.66 0.15 264);animation:l22out 3.2s cubic-bezier(.45,0,.15,1) infinite}
+.l22-back{bottom:-1px;color:oklch(0.66 0.13 208);animation:l22back 3.2s cubic-bezier(.45,0,.15,1) infinite}
+@keyframes l22out{0%{opacity:0;transform:translateX(-40px)}10%,38%{opacity:1;transform:translateX(0)}48%,100%{opacity:0;transform:translateX(40px)}}
+@keyframes l22back{0%,50%{opacity:0;transform:translateX(40px)}62%,90%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(-40px)}}
+.q,.r{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;opacity:0}
+.q1,.r1{animation:l22T1 16s steps(1) infinite}.q2,.r2{animation:l22T2 16s steps(1) infinite}.q3,.r3{animation:l22T3 16s steps(1) infinite}.q4,.r4{animation:l22T4 16s steps(1) infinite}.q5,.r5{animation:l22T5 16s steps(1) infinite}
+@media (prefers-reduced-motion:reduce){.t,.q,.r,.l22-out,.l22-back{animation:none}.t1,.q1{opacity:1}.l22-out{opacity:1;transform:none}}
 </style>
 
 
