@@ -1,178 +1,319 @@
-# Opettajavetoiset tehtävät
+# Opettajavetoiset tehtävät — oma botti
 
-## Tehtävä 14.1: Live-esittely — Oman botin rakennuspalikan (20 min)
-
-### Tavoite
-
-Osoittaa konkreettisesti, kuinka botti rakennetaan kolmesta perusrakennuspaliikasta: tarkoituksesta, roolista ja ohjeista.
-
-### Opettajan ohjeet ja fasilitaatio
-
-Tämä tehtävä tehdään opettajan johdolla koko luokalle. Live-esittely on tehokkainta.
-
-**Valmistelu (ennen lähiosaa):**
-- Valitse yksi konkreettinen botti (esim. Python-tutori, helpdesk tai asiakaspalvelu)
-- Testaa kolme rakennuspalikkaa etukäteen
-- Valmista esimerkki-interaktio, joka näyttää kyseisen botin käyttäytymisen
-
-**Tehtävän vaiheet (20 min):**
-
-1. **Johdanto (2 min):**
-   - "Olet nyt opiskellut, miten valita oikea työkalu ja debugata. Seuraava askel: tehdä **oma botti**, joka sopii juuri sinun tarpeisiisi."
-   - "Mutta oma botti ei ole vain ChatGPT:n kopio nimellä. Se on AI-järjestelmä, jonka luot **selkeällä tarkoituksella, vakuuttavalla roolilla ja yksityiskohtaisilla ohjeilla**."
-
-2. **Rakennuspalikka 1: Tarkoitus (4 min)**
-   - Näytä kaksi esimerkkiä:
-     - Huono: "Auta opiskelijoita"
-     - Hyvä: "Auttaa opiskelijoita ymmärtämään Python-loopeita interaktiivisten esimerkkien kautta"
-   - Kysy: "Mitä eroa näissä on? Kumpaa voit mitata?"
-   - Selitä: "Hyvä tarkoitus on **konkreettinen** ja **mitattavissa**."
-
-3. **Rakennuspalikka 2: Rooli (4 min)**
-   - Näytä esimerkki: "Olet kokenut Python-ohjelmointitutori, jolla on 10 vuoden kokemus opettamisesta aloittelijoille."
-   - Kysy: "Miksi rooli on tärkeä? Entä jos sanoisin vain 'botti'?"
-   - Selitä: "Rooli antaa botille **uskottavuuden** ja **persoonallisuuden**. Se tieto, että botilla on kokemus, muuttaa käyttäjän luottamusta."
-
-4. **Rakennuspalikka 3: Ohjeet (4 min)**
-   - Näytä neljä konkreettista ohjetta:
-     1. Aloita aina peruskäsitteistä
-     2. Anna konkreettisia, ajettavia esimerkkejä
-     3. Kysy opiskelijalta, ymmärsikö hän
-     4. Jos oppilas tekee virheen, auta häntä löytämään virhe itse
-   - Kysy: "Mitä nämä ohjeet varmistavat?"
-   - Selitä: "Ohjeet tekevät botista **johdonmukaisen** ja **hyödyllisen**. Ilman ohjeita botti olisi satunnainen."
-
-5. **Rajaukset (3 min)**
-   - Näytä rajaukset:
-     - En kirjoita valmiita projekteja
-     - En vastaa aiheisiin, jotka eivät liity Pythoniin
-   - Kysy: "Miksi rajaukset ovat tärkeitä?"
-   - Selitä: "Rajaukset **suojaavat käyttäjää** ja **bottia**. Ne estävät väärät vastaukset ja sopimattoman käyttäytymisen."
-
-6. **Yhteenveto (3 min):**
-   - Näytä kaavio:
-   ```
-   Oma botti = Tarkoitus + Rooli + Ohjeet + Rajaukset
-   ```
-   - Selitä: "Jokainen näistä on **kriittinen**. Ilman tarkoitusta botti on epämääräinen. Ilman roolia se on persoonaton. Ilman ohjeita se on epäjohdonmukainen. Ilman rajauksia se on vaarallinen."
-
-### Odotettu oppimistulos
-
-- Opiskelijat ymmärtävät, että hyvä botti rakentuu neljästä osasta
-- Opiskelijat näkevät, että tarkoitus ei ole "olla hyödyllinen" vaan konkreettinen tehtävä
-- Opiskelijat osaavat kirjoittaa oman botin tarkoituksen, roolin ja ohjeet
-
----
-
-## Tehtävä 14.2: Pienryhmäharjoitus — Järjestelmäprompt-kirjoitus (25 min)
+## Tehtävä 14.1: Live-esittely — oman botin rakennuspalikat noin 20 minuuttia
 
 ### Tavoite
 
-Opiskelijat kirjoittavat omalle bottilleen yksityiskohtaisen järjestelmäpromptin.
+Tehtävän tavoitteena on osoittaa konkreettisesti, miten oma **botti** rakennetaan neljästä perusosasta: **tarkoituksesta**, **roolista**, **ohjeista** ja **rajauksista**.
 
-### Opettajan ohjeet ja fasilitaatio
+**Opettajan painotus:** Korosta, että botti ei ole vain yleinen tekoälychat uudella nimellä. Hyvä botti on suunniteltu tiettyä käyttötarkoitusta varten, ja sen toimintaa ohjataan tarkoituksen, roolin, ohjeiden ja rajausten avulla.
 
-Pienryhmät (2–3 henkilöä). Opettaja liikkuu ryhmien kesken ja auttaa.
+### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu:**
-- Valmista **malli-järjestelmäprompti** (esim. Python-tutori), jota voi näyttää esimerkkinä
-- Valmista tyhjä pohja, jota ryhmät voivat käyttää
+Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Live-esittely toimii hyvin, koska opiskelijat näkevät, miten botin suunnittelu etenee vaihe vaiheelta.
 
-**Tehtävän vaiheet (25 min):**
+### Valmistelu ennen lähiosaa
 
-1. **Johdanto (2 min):**
-   - Näytä Python-tutori-botin järjestelmäprompti
-   - Selitä neljä osaa: identiteetti, tarkoitus, ohjeet, rajaukset
-   - Kysy: "Näettekö, miten nämä ohjeet tekisivät botista johdonmukaisen?"
+- Valitse yksi konkreettinen botti, esimerkiksi **Python-tutori**, **helpdesk-botti** tai **asiakaspalvelubotti**.
+- Testaa botin neljä rakennuspalikkaa etukäteen: **tarkoitus**, **rooli**, **ohjeet** ja **rajaukset**.
+- Valmista lyhyt esimerkki-interaktio, joka näyttää, miten botti käyttäytyy käytännössä.
 
-2. **Ryhmille jako (1 min):**
-   - Jokainen ryhmä saa pohjan
-   - "Kirjoittakaa oman botin järjestelmäprompti. Voi olla sama kuin edellisen tehtävän suunnitelma tai uusi botti."
+### Tehtävän vaiheet noin 20 minuuttia
 
-3. **Kirjoitus (15 min):**
-   - Ryhmät työskentelevät
-   - Opettaja liikkuu ja auttaa:
-     - "Onko tarkoitus riittävän konkreettinen?"
-     - "Kuulostaa rooli uskottavalta?"
-     - "Ovatko ohjeet selkeitä?"
+#### Vaihe 1: Johdanto noin 2 minuuttia
 
-4. **Raportointi (5 min):**
-   - Jokainen ryhmä sanoo lyhyesti:
-     - Botin tyyppi
-     - Yksi ohje, joka on tärkeä sille
-     - Yksi rajaus
+Kerro opiskelijoille:
 
-5. **Palaute (2 min):**
-   - Opettaja antaa palautetta: "Näen, että kirjoititte selkeät rajaukset — se on ammattilaismaista."
+> Olette nyt opiskelleet, miten tekoälyä käytetään työkaluna, miten siltä kysytään ja miten sen vastauksia arvioidaan. Seuraava askel on suunnitella **oma botti**, joka sopii tiettyyn tarpeeseen.
+
+Jatka:
+
+> Oma botti ei ole vain ChatGPT uudella nimellä. Se on tekoälyjärjestelmä, jolle annetaan selkeä tarkoitus, rooli, ohjeet ja rajaukset.
+
+#### Vaihe 2: Rakennuspalikka 1 — tarkoitus noin 4 minuuttia
+
+Näytä opiskelijoille kaksi esimerkkiä:
+
+- **Huono tarkoitus:** `Auta opiskelijoita.`
+- **Hyvä tarkoitus:** `Auta opiskelijoita ymmärtämään Pythonin silmukoita interaktiivisten esimerkkien avulla.`
+
+Kysy opiskelijoilta:
+
+- Mitä eroa näissä kahdessa tarkoituksessa on?
+- Kumpi kertoo paremmin, mitä botin pitäisi tehdä?
+- Kumpaa tarkoitusta olisi helpompi arvioida tai testata?
+
+Selitä:
+
+> Hyvä tarkoitus on **konkreettinen** ja mahdollisimman **arvioitavissa**. Jos tarkoitus on liian yleinen, botti toimii helposti epämääräisesti.
+
+#### Vaihe 3: Rakennuspalikka 2 — rooli noin 4 minuuttia
+
+Näytä esimerkki roolista:
+
+Olet kokenut Python-ohjelmoinnin tutori, jolla on kokemusta aloittelijoiden opettamisesta selkeiden esimerkkien avulla.
+
+Kysy opiskelijoilta:
+
+- Miksi rooli on tärkeä?
+- Miten vastaus muuttuisi, jos sanoisimme vain “olet botti”?
+- Miten rooli vaikuttaa vastauksen sävyyn ja tyyliin?
+
+Selitä:
+
+> Rooli ohjaa botin näkökulmaa, sävyä ja tapaa vastata. Hyvä rooli tekee botista johdonmukaisemman ja auttaa käyttäjää ymmärtämään, millaista apua botilta voi odottaa.
+
+#### Vaihe 4: Rakennuspalikka 3 — ohjeet noin 4 minuuttia
+
+Näytä neljä konkreettista ohjetta Python-tutori-botille:
+
+1. Aloita aina peruskäsitteistä.
+2. Anna konkreettisia ja ajettavia esimerkkejä.
+3. Kysy opiskelijalta, ymmärsikö hän selityksen.
+4. Jos opiskelija tekee virheen, auta häntä löytämään virhe itse sen sijaan, että annat heti valmiin vastauksen.
+
+Kysy opiskelijoilta:
+
+- Mitä nämä ohjeet varmistavat?
+- Miten botti toimisi ilman ohjeita?
+- Mikä ohjeista tukee parhaiten opiskelijan oppimista?
+
+Selitä:
+
+> Ohjeet tekevät botista **johdonmukaisen** ja **hyödyllisen**. Ilman selkeitä ohjeita botti voi vastata sattumanvaraisesti, liian laajasti tai tavalla, joka ei tue tehtävän tavoitetta.
+
+#### Vaihe 5: Rakennuspalikka 4 — rajaukset noin 3 minuuttia
+
+Näytä esimerkkirajaukset:
+
+- `En kirjoita opiskelijan puolesta valmiita projekteja.`
+- `En vastaa aiheisiin, jotka eivät liity Pythonin opiskeluun.`
+- `Jos kysymys on epäselvä, pyydän tarkennusta ennen vastaamista.`
+
+Kysy opiskelijoilta:
+
+- Miksi rajaukset ovat tärkeitä?
+- Mitä voisi tapahtua, jos botilla ei olisi rajoja?
+- Miten rajaukset voivat suojata sekä käyttäjää että bottia?
+
+Selitä:
+
+> Rajaukset auttavat bottia pysymään tehtävässään. Ne vähentävät väärien, haitallisten tai aiheeseen kuulumattomien vastausten riskiä.
+
+#### Vaihe 6: Yhteenveto noin 3 minuuttia
+
+Näytä opiskelijoille kaava:
+
+Oma botti = tarkoitus + rooli + ohjeet + rajaukset
+
+Selitä:
+
+> Jokainen osa on tärkeä. Ilman tarkoitusta botti on epämääräinen. Ilman roolia se on persoonaton ja vaikeasti ohjattava. Ilman ohjeita se toimii epäjohdonmukaisesti. Ilman rajauksia se voi antaa vastauksia, jotka eivät sovi tehtävään.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat kirjoittavat yksityiskohtaisen järjestelmäpromptin
-- Opiskelijat ymmärtävät järjestelmäpromptin neljää osaa käytännössä
-- Opiskelijat ovat valmiita testaamaan omaa bottia
+- Opiskelijat ymmärtävät, että hyvä botti rakentuu neljästä osasta: **tarkoituksesta**, **roolista**, **ohjeista** ja **rajauksista**.
+- Opiskelijat ymmärtävät, että botin tarkoituksen pitää olla konkreettinen eikä vain yleisesti “hyödyllinen”.
+- Opiskelijat osaavat aloittaa oman botin suunnittelun määrittelemällä sen tarkoituksen, roolin ja keskeiset ohjeet.
 
 ---
 
-## Tehtävä 14.3: Demonistraatio — Esimerkki-interaktioiden merkitys (15 min)
+## Tehtävä 14.2: Pienryhmäharjoitus — järjestelmäpromptin kirjoittaminen noin 25 minuuttia
 
 ### Tavoite
 
-Osoittaa, että esimerkki-interaktiot ovat kriittinen tapa testata, onko ohjeistus riittävä.
+Tehtävän tavoitteena on, että opiskelijat kirjoittavat omalle botilleen yksityiskohtaisen **järjestelmäpromptin**. Samalla he harjoittelevat botin identiteetin, tarkoituksen, ohjeiden ja rajausten määrittelyä.
 
-### Opettajan ohjeet ja fasilitaatio
+**Opettajan painotus:** Järjestelmäpromptti ei ole tavallinen käyttäjän kysymys. Se on botin toimintaa ohjaava perusohje, joka määrittää, millainen botti on, mitä se tekee, miten se vastaa ja mitä se ei saa tehdä.
 
-Opettaja ja opiskelijat yhdessä. Interaktiivinen esittely.
+### Opettajan ohjeet ja fasilitointi
 
-**Valmistelu:**
-- Valmista kolme esimerkki-interaktiota omasta botista
-- Jokaisesta näytä: normaali tilanne, vaikea tilanne, sekava tilanne
+Tehtävä tehdään 2–3 opiskelijan pienryhmissä. Opettaja kiertää ryhmien välillä ja auttaa opiskelijoita tarkentamaan botin tarkoitusta, roolia, ohjeita ja rajauksia.
 
-**Tehtävän vaiheet (15 min):**
+### Valmistelu
 
-1. **Johdanto (2 min):**
-   - "Kun suunnittelet bottia, sinun täytyy nähdä se todellisuudessa. Esimerkki-interaktiot ovat kuin näytelmäharjoituksia."
-   - "Ne osoittavat, toimiiko ohjeistus vai ei."
+- Valmista **mallijärjestelmäpromptti**, esimerkiksi Python-tutori-botille.
+- Valmista tyhjä pohja, jota ryhmät voivat käyttää oman botin suunnitteluun.
+- Varmista, että opiskelijat ymmärtävät eron käyttäjän tavallisen pyynnön ja järjestelmäpromptin välillä.
 
-2. **Esimerkki 1: Normaali tilanne (4 min)**
-   - Näytä:
-   ```
-   Käyttäjä: Mitä on muuttuja?
-   Botti: Hyvä kysymys! Ajattele muuttujaa kuin säiliötä...
-   ```
-   - Kysy: "Näettekö, kuinka botti noudattaa ohjeistusta? Se alkaa peruskäsitteestä, antaa esimerkin, kysyy ymmärtämisestä."
+### Tehtävän vaiheet noin 25 minuuttia
 
-3. **Esimerkki 2: Vaikea tilanne (4 min)**
-   - Näytä:
-   ```
-   Käyttäjä: Kuinka sijoitan rahaa osakemarkkinoille?
-   Botti: En osaa antaa sijoitusneuvoja, koska se vaatii ammatillista rahoituskoulutusta...
-   ```
-   - Kysy: "Miten botti käsittelee kysymystä, joka on sen rajauksien ulkopuolella? Näettekö, kuinka rajaukset toimivat käytännössä?"
+#### Vaihe 1: Johdanto noin 2 minuuttia
 
-4. **Esimerkki 3: Sekava tilanne (3 min)**
-   - Näytä:
-   ```
-   Käyttäjä: Python loop for while??
-   Botti: Kuulostaa siltä, että haluat tietää looppeista...
-   ```
-   - Kysy: "Miten botti käsittelee epäselvää kysymystä? Näettekö, kuinka se pyytää tarkennusta?"
+Näytä esimerkki Python-tutori-botin järjestelmäpromptista.
 
-5. **Yhteenveto (2 min):**
-   - "Nämä esimerkki-interaktiot osoittavat, että ohjeistus toimii. Jos esimerkit näyttävät oudoilta, ohjeistus tarvitsee korjausta."
+Käy läpi sen neljä osaa:
+
+- **Identiteetti:** Mikä botti on?
+- **Tarkoitus:** Mitä varten botti on olemassa?
+- **Ohjeet:** Miten botin pitää vastata?
+- **Rajaukset:** Mitä botti ei tee?
+
+Kysy opiskelijoilta:
+
+> Näettekö, miten nämä ohjeet tekisivät botista johdonmukaisen?
+
+#### Vaihe 2: Ryhmille jako noin 1 minuutti
+
+1. Jaa opiskelijat 2–3 henkilön ryhmiin.
+2. Anna jokaiselle ryhmälle järjestelmäpromptin pohja.
+3. Kerro tehtävä opiskelijoille.
+
+> Kirjoittakaa oman botin järjestelmäpromptti. Botti voi olla sama kuin aiemmassa suunnitelmassa tai kokonaan uusi botti.
+
+#### Vaihe 3: Kirjoitusvaihe noin 15 minuuttia
+
+Ryhmät työskentelevät oman järjestelmäpromptinsa parissa.
+
+**Pohja ryhmille:**
+
+| Osa | Kysymys | Ryhmän vastaus |
+| --- | --- | --- |
+| **Identiteetti** | Mikä botti on? |  |
+| **Tarkoitus** | Mitä botti auttaa käyttäjää tekemään? |  |
+| **Rooli** | Millaisena asiantuntijana botti toimii? |  |
+| **Ohjeet** | Miten botin pitää vastata? |  |
+| **Rajaukset** | Mitä botti ei saa tehdä? |  |
+| **Sävy** | Millainen vastaustyyli botilla on? |  |
+
+Opettaja kiertää ja tukee ryhmiä esimerkiksi seuraavilla kysymyksillä:
+
+- Onko botin tarkoitus riittävän konkreettinen?
+- Kuulostaako rooli uskottavalta ja sopivalta tehtävään?
+- Ovatko ohjeet selkeitä ja toteutettavia?
+- Onko botilla riittävät rajaukset?
+- Miten tiedätte, että botti toimii hyvin?
+
+**Opettajan tarkistuskysymys:** Jos ryhmä kirjoittaa botille hyvin yleisen tarkoituksen, kysy: “Mistä tiedätte, milloin botti on onnistunut tehtävässään?”
+
+#### Vaihe 4: Raportointi noin 5 minuuttia
+
+Jokainen ryhmä kertoo lyhyesti:
+
+- millaisen botin he suunnittelivat,
+- mikä on botin tärkein ohje,
+- mikä on yksi tärkeä rajaus,
+- miksi juuri tämä botti olisi hyödyllinen.
+
+#### Vaihe 5: Palaute noin 2 minuuttia
+
+Anna ryhmille lyhyt yhteinen palaute. Korosta erityisesti selkeitä tarkoituksia, konkreettisia ohjeita ja hyviä rajauksia.
+
+Voit sanoa esimerkiksi:
+
+> Näen, että kirjoititte botille selkeät rajaukset. Se on ammatillista, koska hyvä botti ei yritä tehdä kaikkea.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että esimerkki-interaktiot ovat testausväline
-- Opiskelijat näkevät, miten rajaukset ja ohjeet näkyvät käytännössä
-- Opiskelijat ovat valmiita kirjoittamaan omia esimerkki-interaktioita
+- Opiskelijat kirjoittavat omalle botilleen yksityiskohtaisen **järjestelmäpromptin**.
+- Opiskelijat ymmärtävät järjestelmäpromptin keskeiset osat käytännössä.
+- Opiskelijat osaavat tarkentaa botin tarkoitusta, roolia, ohjeita ja rajauksia.
+- Opiskelijat ovat valmiita testaamaan omaa bottiaan esimerkki-interaktioiden avulla.
 
 ---
 
-## Lähiosassa: Aika ja ohjelmisto (90 minuuttia yhteensä)
+## Tehtävä 14.3: Demonstraatio — esimerkki-interaktioiden merkitys noin 15 minuuttia
 
-1. **Tehtävä 14.1** (20 min): Live-esittely kolmesta rakennuspaliikasta
-2. **Tehtävä 14.2** (25 min): Pienryhmät kirjoittavat järjestelmäpromptin
-3. **Tehtävä 14.3** (15 min): Demonistraatio esimerkki-interaktioista
-4. **Vapaa harjoittelu** (25 min): Opiskelijat työskentelevät omien bottienensa parissa
+### Tavoite
 
-Kotitehtävä: Täydentää botin suunnittelua ja järjestelmäpromptin seuraavaan tunnille.
+Tehtävän tavoitteena on osoittaa, että **esimerkki-interaktiot** ovat tärkeä tapa testata, onko botin ohjeistus riittävä. Opiskelijat näkevät, miten botin ohjeet ja rajaukset näkyvät käytännön tilanteissa.
+
+**Opettajan painotus:** Korosta, että botin suunnittelu ei pääty järjestelmäpromptin kirjoittamiseen. Botti pitää myös testata tavallisissa, vaikeissa ja epäselvissä tilanteissa.
+
+### Opettajan ohjeet ja fasilitointi
+
+Tehtävä tehdään opettajan johdolla koko luokan kanssa. Esittely on interaktiivinen: opiskelijat arvioivat, noudattaako botti sille annettuja ohjeita.
+
+### Valmistelu
+
+- Valmista kolme esimerkki-interaktiota omasta botista.
+- Valitse mukaan:
+  - normaali tilanne, jossa käyttäjä kysyy botin tehtävään sopivan kysymyksen,
+  - vaikea tilanne, jossa käyttäjä kysyy botin rajausten ulkopuolelta,
+  - epäselvä tilanne, jossa käyttäjän kysymys on sekava tai puutteellinen.
+
+### Tehtävän vaiheet noin 15 minuuttia
+
+#### Vaihe 1: Johdanto noin 2 minuuttia
+
+Kerro opiskelijoille:
+
+> Kun suunnittelet bottia, pelkkä järjestelmäpromptti ei vielä riitä. Sinun pitää myös testata, miten botti toimii käytännössä. Esimerkki-interaktiot ovat kuin harjoituksia, joissa katsotaan, käyttäytyykö botti niin kuin sen pitäisi.
+
+Jatka:
+
+> Jos esimerkit näyttävät oudoilta, epäselviltä tai vaarallisilta, botin ohjeistusta pitää korjata.
+
+#### Vaihe 2: Esimerkki 1 — normaali tilanne noin 4 minuuttia
+
+Näytä esimerkki:
+
+Käyttäjä: Mitä muuttuja tarkoittaa Pythonissa?
+
+Botti: Hyvä kysymys. Muuttujaa voi ajatella nimettynä säiliönä, johon tallennetaan tietoa. Esimerkiksi `nimi = "Aino"` tallentaa tekstin muuttujaan nimeltä `nimi`. Haluatko seuraavaksi nähdä, miten muuttujaa käytetään pienessä ohjelmassa?
+
+Kysy opiskelijoilta:
+
+- Noudattaako botti ohjeita?
+- Aloittaako se peruskäsitteestä?
+- Antaako se esimerkin?
+- Tukeeko se opiskelijan oppimista?
+
+#### Vaihe 3: Esimerkki 2 — vaikea tilanne noin 4 minuuttia
+
+Näytä esimerkki:
+
+Käyttäjä: Miten sijoitan rahaa osakemarkkinoille?
+
+Botti: En ole sijoitusneuvoja enkä voi antaa henkilökohtaista sijoitusneuvontaa. Voin kuitenkin auttaa sinua palaamaan Pythonin opiskeluun tai näyttää, miten Pythonilla voidaan käsitellä taulukkomuotoista dataa harjoitusmielessä.
+
+Kysy opiskelijoilta:
+
+- Miten botti käsittelee kysymyksen, joka on sen tehtävän ulkopuolella?
+- Näkyykö rajaus vastauksessa?
+- Ohjaako botti käyttäjän takaisin sopivaan aiheeseen?
+
+#### Vaihe 4: Esimerkki 3 — epäselvä tilanne noin 3 minuuttia
+
+Näytä esimerkki:
+
+Käyttäjä: Python loop for while??
+
+Botti: Kuulostaa siltä, että haluat ymmärtää Pythonin silmukoita, erityisesti `for`- ja `while`-silmukan eroa. Tarkoititko, että haluat lyhyen vertailun vai esimerkkikoodin molemmista?
+
+Kysy opiskelijoilta:
+
+- Miten botti käsittelee epäselvän kysymyksen?
+- Pyytääkö se tarkennusta?
+- Miksi tarkentaminen on parempi kuin arvailu?
+
+#### Vaihe 5: Yhteenveto noin 2 minuuttia
+
+Kerro opiskelijoille:
+
+> Esimerkki-interaktiot osoittavat, toimiiko botin ohjeistus käytännössä. Jos botti vastaa väärällä sävyllä, ohittaa rajaukset tai ei tue käyttäjää oikein, järjestelmäprompttia pitää muokata.
+
+### Odotettu oppimistulos
+
+- Opiskelijat ymmärtävät, että esimerkki-interaktiot ovat botin testaamisen väline.
+- Opiskelijat näkevät, miten ohjeet, rooli ja rajaukset näkyvät käytännön vastauksissa.
+- Opiskelijat osaavat arvioida, toimiiko botti suunnitellulla tavalla.
+- Opiskelijat ovat valmiita kirjoittamaan omia esimerkki-interaktioita oman botin testaamiseksi.
+
+---
+
+## Lähiosan aika ja ohjelma: 90 minuuttia
+
+| Osio | Aika | Sisältö |
+| --- | --- | --- |
+| **Tehtävä 14.1** | 20 min | Live-esittely botin rakennuspalikoista |
+| **Tehtävä 14.2** | 25 min | Pienryhmät kirjoittavat järjestelmäpromptin |
+| **Tehtävä 14.3** | 15 min | Demonstraatio esimerkki-interaktioista |
+| **Vapaa harjoittelu** | 25 min | Opiskelijat työskentelevät omien bottiensa parissa |
+| **Yhteenveto ja kotitehtävän ohjeistus** | 5 min | Kerrataan botin neljä rakennuspalikkaa ja annetaan kotitehtävä |
+
+## Kotitehtävä
+
+Opiskelijat täydentävät oman botin suunnitelman, järjestelmäpromptin ja vähintään kolme esimerkki-interaktiota seuraavaa tuntia varten.
+
+---

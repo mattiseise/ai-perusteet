@@ -1,37 +1,175 @@
-# Opettajan materiaalit
+# Opettajan materiaalit — oman botin suunnittelu
 
 ## Oppitunnin tavoitteet
 
-Tämän tunnin jälkeen opiskelija:
-1. Ymmärtää, että hyvin suunniteltu botti rakentuu **neljästä rakennuspaliikasta**: tarkoitus, rooli, ohjeet ja rajaukset.
-2. Osaa kirjoittaa **järjestelmäpromptin**, joka ohjaa botin käyttäytymistä johdonmukaisesti.
-3. Ymmärtää, että **ammattilaisuus** ja **persoonallisuus** eivät ole sama asia — ja miksi ammattilaisuus tulee aina ensin.
-4. Osaa kirjoittaa **esimerkki-interaktioita**, jotka testaavat, toimiiko ohjeistus todellisuudessa.
-5. Ymmärtää, että "oma botti" ei ole vain nimetty ChatGPT, vaan **räätälöity AI-järjestelmä** selkeällä tarkoituksella.
+Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten hyvin suunniteltu **oma botti** rakennetaan. Oppitunnin ydin on, että botti ei ole vain ChatGPT, jolle annetaan nimi. Hyvä botti on **räätälöity AI-järjestelmä**, jolla on selkeä tarkoitus, rooli, ohjeet ja rajaukset.
+
+### Muistaa ja ymmärtää
+
+- Opiskelija ymmärtää, että hyvin suunniteltu botti rakentuu neljästä rakennuspalikasta: **tarkoitus**, **rooli**, **ohjeet** ja **rajaukset**.
+- Opiskelija ymmärtää, että **järjestelmäprompti** ohjaa botin toimintaa ja käyttäytymistä.
+- Opiskelija ymmärtää, että **ammattilaisuus** ja **persoonallisuus** eivät ole sama asia.
+- Opiskelija ymmärtää, että ammattilaisuus tulee botin suunnittelussa ennen persoonallisuutta.
+
+### Soveltaa ja analysoida
+
+- Opiskelija osaa määritellä botille konkreettisen ja rajatun tarkoituksen.
+- Opiskelija osaa kirjoittaa botille roolin, joka tukee sen uskottavuutta ja käyttötarkoitusta.
+- Opiskelija osaa erottaa botin toimintaohjeet ja rajaukset toisistaan.
+- Opiskelija osaa kirjoittaa esimerkki-interaktioita, joilla testataan, toimiiko botin ohjeistus käytännössä.
+
+### Luoda ja arvioida
+
+- Opiskelija osaa kirjoittaa ensimmäisen version oman bottinsa **järjestelmäpromptista**.
+- Opiskelija osaa arvioida, onko botin tarkoitus liian yleinen vai riittävän konkreettinen.
+- Opiskelija osaa testata botin toimintaa normaalissa, vaikeassa ja epäselvässä tilanteessa.
+- Opiskelija ymmärtää, että bottia kehitetään **iteraation** avulla: suunnitellaan, testataan, korjataan ja testataan uudelleen.
+
+**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei synny sattumalta. Se suunnitellaan samalla tavalla kuin mikä tahansa ammatillinen työkalu: sillä on tarkoitus, käyttäjäryhmä, toimintatapa, osaamisalue ja selkeät rajat.
+
+---
+
+## Pedagoginen lähestymistapa
+
+### Ydinviesti: oma botti on suunniteltu järjestelmä
+
+Opiskelijat voivat ajatella, että oman botin tekeminen tarkoittaa vain sitä, että ChatGPT:lle annetaan nimi ja muutama ohje. Tämän tunnin tehtävä on muuttaa tämä ajattelu. Oma botti on **räätälöity AI-järjestelmä**, joka on suunniteltu tiettyä tarkoitusta, käyttäjää ja tilannetta varten.
+
+> **Hyvä botti ei ole “tekoäly, joka auttaa kaikessa”. Hyvä botti on tarkasti suunniteltu apuri tiettyyn tehtävään.**
+
+Korosta opiskelijoille:
+
+- **Tarkoitus** kertoo, miksi botti on olemassa.
+- **Rooli** kertoo, millaisena asiantuntijana botti toimii.
+- **Ohjeet** kertovat, miten botti toimii eri tilanteissa.
+- **Rajaukset** kertovat, mitä botti ei saa tehdä.
+- **Esimerkki-interaktiot** näyttävät, toimiiko suunnitelma käytännössä.
+
+### Neljä rakennuspalikkaa
+
+| Rakennuspalikka | Mitä se tarkoittaa? | Esimerkki |
+| --- | --- | --- |
+| **Tarkoitus** | Miksi botti on olemassa ja mitä se auttaa käyttäjää tekemään? | ”Auttaa aloittelijoita ymmärtämään Pythonin silmukoita esimerkkien ja harjoitusten avulla.” |
+| **Rooli** | Millaisena asiantuntijana tai tukihenkilönä botti toimii? | ”Toimit kärsivällisenä Python-tutorina, joka selittää asiat aloittelijalle selkeästi.” |
+| **Ohjeet** | Miten botin pitää vastata ja edetä? | ”Aloita aina lyhyellä selityksellä, anna sitten esimerkki ja lopuksi kysy tarkistuskysymys.” |
+| **Rajaukset** | Mitä botti ei saa tehdä? | ”Älä kirjoita opiskelijalle valmista palautettavaa projektia. Ohjaa vaiheittain.” |
+
+**Opettajan huomio:** Alkuperäisessä materiaalissa mainitaan ajoittain kolme rakennuspalikkaa, mutta tunnin ydinsisällössä niitä on neljä: tarkoitus, rooli, ohjeet ja rajaukset. Käytä opetuksessa johdonmukaisesti neljän rakennuspalikan mallia.
+
+---
+
+## Tarkoitus, rooli, ohjeet ja rajaukset käytännössä
+
+### Tarkoitus: liian yleisestä konkreettiseksi
+
+Opiskelijoiden yleisin virhe on kirjoittaa botin tarkoitukseksi jotakin liian laajaa, kuten ”auttaa ihmisiä” tai ”olla hyödyllinen”. Tällainen tarkoitus ei ohjaa botin toimintaa, koska se ei kerro, keitä autetaan, missä asiassa tai milloin botti onnistuu.
+
+| Heikko tarkoitus | Parempi tarkoitus | Miksi parempi? |
+| --- | --- | --- |
+| ”Botti auttaa opiskelijoita.” | ”Botti auttaa ensimmäisen vuoden IT-opiskelijoita ymmärtämään Pythonin silmukoita vaiheittaisten esimerkkien avulla.” | Käyttäjä, aihe ja toimintatapa ovat selkeitä. |
+| ”Botti on IT-apuri.” | ”Botti auttaa käyttäjiä selvittämään yleisiä Windows- ja Wi-Fi-ongelmia turvallisten tarkistusvaiheiden avulla.” | Tarkoitus rajaa tehtävän ja kertoo, miten apu annetaan. |
+
+> **Hyvä tarkoitus vastaa kolmeen kysymykseen:** kuka käyttää bottia, mihin asiaan botti auttaa ja miten onnistuminen näkyy?
+
+### Rooli ja persoonallisuus eivät ole sama asia
+
+Opiskelijat voivat ajatella, että rooli tarkoittaa lähinnä sitä, onko botti hauska, rento tai ystävällinen. Tämä ei riitä. **Rooli** kertoo botin ammatillisesta identiteetistä. **Persoonallisuus** kertoo, millä tavalla botti viestii.
+
+| Käsite | Mitä se tarkoittaa? | Esimerkki |
+| --- | --- | --- |
+| **Rooli** | Botin osaaminen, näkökulma ja ammatillinen tehtävä. | ”Kokenut Python-tutori aloittelijoille.” |
+| **Persoonallisuus** | Tapa, jolla botti viestii käyttäjälle. | ”Ystävällinen, rauhallinen ja kannustava.” |
+
+Korosta opiskelijoille, että ammattilaisuus tulee ensin. Botti voi olla ystävällinen, suora, kannustava tai rauhallinen, mutta sen pitää ennen kaikkea olla pätevä, johdonmukainen ja turvallinen.
+
+### Ohjeet ja rajaukset
+
+Ohjeet ja rajaukset sekoittuvat helposti. Käytä yksinkertaista eroa:
+
+- **Ohjeet** kertovat, mitä botti tekee.
+- **Rajaukset** kertovat, mitä botti ei tee.
+
+| Bottityyppi | Ohje | Rajaus |
+| --- | --- | --- |
+| **Python-tutori** | Aloita peruskäsitteestä ja etene esimerkin kautta harjoitukseen. | Älä kirjoita opiskelijalle valmista palautettavaa tehtävää. |
+| **IT-helpdesk** | Kysy ensin laite, käyttöjärjestelmä ja virheilmoitus. | Älä ehdota riskialttiita komentoja ilman varoitusta ja selitystä. |
+| **Asiakaspalvelubotti** | Vastaa kohteliaasti ja ohjaa asiakas oikeaan palvelukanavaan. | Älä anna lääketieteellisiä, juridisia tai taloudellisia neuvoja. |
+
+**Opettajan muistutus:** Rajaukset eivät tee botista huonompaa. Ne tekevät siitä turvallisemman, luotettavamman ja ammatillisemman.
+
+---
+
+## Järjestelmäprompti
+
+### Miksi järjestelmäprompti on tärkeä?
+
+**Järjestelmäprompti** on botin toimintaa ohjaava ydinteksti. Se määrittää botin tarkoituksen, roolin, vastaustavan ja rajat. Ilman järjestelmäpromptia botti toimii helposti epätasaisesti: se voi vastata välillä liian laajasti, välillä liian suppeasti, välillä väärällä sävyllä ja välillä tehtävän ulkopuolelle.
+
+> **Järjestelmäprompti on botin sydän. Se kertoo, millainen botti on, mitä se tekee ja missä sen rajat kulkevat.**
+
+### Järjestelmäpromptin perusrakenne
+
+**1. Identiteetti:** Kuka tai mikä botti on?
+
+**2. Tarkoitus:** Mihin tehtävään botti on suunniteltu?
+
+**3. Ohjeet:** Miten botin pitää toimia?
+
+**4. Rajaukset:** Mitä botin ei pidä tehdä?
+
+### Malliesimerkki: Python-tutori
+
+Olet kärsivällinen ja selkeä Python-tutori ensimmäisen vuoden IT-opiskelijoille. Tarkoituksesi on auttaa opiskelijoita ymmärtämään Pythonin peruskäsitteitä, kuten muuttujia, ehtolauseita, silmukoita ja funktioita.
+
+Selitä asiat aina aloittelijalle sopivalla kielellä. Aloita lyhyellä käsitteen selityksellä, anna konkreettinen esimerkki ja kysy lopuksi opiskelijalta tarkistuskysymys. Jos opiskelija tekee virheen, ohjaa häntä vihjeiden avulla äläkä anna heti valmista vastausta.
+
+Älä kirjoita opiskelijalle kokonaisia palautettavia projekteja valmiiksi. Älä väitä olevasi varma asiasta, jos et ole. Jos tehtävä liittyy kurssin arvioitavaan työhön, auta opiskelijaa ymmärtämään periaate, mutta älä tee tehtävää hänen puolestaan.
+
+---
+
+## Esimerkki-interaktiot testausvälineenä
+
+### Miksi esimerkki-interaktiot tarvitaan?
+
+**Esimerkki-interaktio** on lyhyt mallikeskustelu käyttäjän ja botin välillä. Sen tarkoitus on testata, miten botti toimii erilaisissa tilanteissa. Ilman esimerkki-interaktioita opiskelija ei välttämättä huomaa, että botin ohjeistus on liian epämääräinen tai että botti toimii väärin vaikeassa tilanteessa.
+
+Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
+
+- **Normaali tilanne:** käyttäjä kysyy jotakin, johon botin kuuluu vastata.
+- **Vaikea tilanne:** käyttäjä pyytää jotakin, johon botin pitää kieltäytyä tai rajata vastaus.
+- **Epäselvä tilanne:** käyttäjän pyyntö on niin epäselvä, että botin pitää pyytää tarkennusta.
+
+| Tilanne | Käyttäjän viesti | Mitä botilta odotetaan? |
+| --- | --- | --- |
+| **Normaali** | ”En ymmärrä, miten for-silmukka toimii.” | Botti selittää käsitteen, antaa esimerkin ja kysyy tarkistuskysymyksen. |
+| **Vaikea** | ”Tee koko palautettava Python-projektini valmiiksi.” | Botti kieltäytyy tekemästä tehtävää valmiiksi ja tarjoaa ohjaavaa apua. |
+| **Epäselvä** | ”Koodi ei toimi.” | Botti pyytää tarkennusta: koodinpätkän, virheilmoituksen ja tavoitteen. |
+
+> **Esimerkki-interaktiot eivät ole näytelmiä. Ne ovat botin laadunvarmistusta.**
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Oma botti on vain ChatGPT, jolle annetaan nimi ja muutama ohjeistus."
+### Väärinkäsitys 1: ”Oma botti on vain ChatGPT, jolle annetaan nimi ja muutama ohje.”
 
-**Todellisuus:** Hyvin suunniteltu botti on paljon enemmän. Sillä on selkeä tarkoitus, syvä osaaminen, johdonmukainen käyttäytyminen ja tietyt rajaukset. Se on **räätälöity järjestelmä**, ei pelkkä alias.
+**Korjaava näkökulma:** Hyvin suunniteltu botti on paljon enemmän. Sillä on selkeä tarkoitus, rajattu osaamisalue, johdonmukainen käyttäytyminen ja turvalliset rajaukset. Se on räätälöity järjestelmä, ei pelkkä uudelleennimetty ChatGPT.
 
-### 2. "Rooli on persoonallisuus — bottia pitää tehdä hauskaksi."
+### Väärinkäsitys 2: ”Rooli tarkoittaa persoonallisuutta, joten botista pitää tehdä hauska.”
 
-**Todellisuus:** Rooli ja persoonallisuus eivät ole sama. **Ammattilaisuus** (kompetenssi, tarkkuus, tietämys) on pakollista. **Persoonallisuus** (tapa välittää sitä) on valinnainen. Ammattilaismainen voi olla ystävällinen tai suora — molemmat voivat olla ammattilaismaisia. Mutta epäpätevä ei ole koskaan ammattilaismainen.
+**Korjaava näkökulma:** Rooli ja persoonallisuus eivät ole sama asia. Rooli kertoo osaamisen ja tehtävän. Persoonallisuus kertoo viestintätyylin. Hauskuus voi olla hyvä lisä, mutta se ei korvaa ammattitaitoa.
 
-### 3. "Järjestelmäprompti on pitkä tekstisarja — en halua kirjoittaa sitä."
+### Väärinkäsitys 3: ”Järjestelmäprompti on liian pitkä tekstisarja, jota en halua kirjoittaa.”
 
-**Todellisuus:** Järjestelmäprompti on botin **sydän**. Se määrittää kaiken. Ilman sitä botti on sekava. Kirjoittamisen vaiva on kannattava — se on kuin arkitehtuuri ennen rakentamista.
+**Korjaava näkökulma:** Järjestelmäprompti on botin suunnitelma. Sen kirjoittamiseen käytetty aika säästää myöhemmin aikaa, koska botti toimii johdonmukaisemmin ja turvallisemmin. Se on sama kuin suunnitelma ennen rakentamista.
 
-### 4. "Rajaukset ovat negatiivisia — miksi ottaa huomioon, mitä botti EI saa tehdä?"
+### Väärinkäsitys 4: ”Rajaukset ovat negatiivisia.”
 
-**Todellisuus:** Rajaukset ovat **turvallisuusmekanismi**. Ne suojaavat käyttäjää väärältä tiedolta ja bottia sopimattomista tilanteista. Hyvät rajaukset tekevät botista **vastuullisen**, ei rajoittuvan.
+**Korjaava näkökulma:** Rajaukset ovat turvallisuusmekanismi. Ne suojaavat käyttäjää vääriltä neuvoilta ja bottia sopimattomilta tehtäviltä. Hyvä rajaus tekee botista vastuullisen.
 
-### 5. "Esimerkki-interaktiot ovat turhaa — botti toimii tai ei toimi."
+### Väärinkäsitys 5: ”Esimerkki-interaktiot ovat turhia.”
 
-**Todellisuus:** Esimerkki-interaktiot ovat **testausväline**. Ne osoittavat, toimiiko ohjeistus todellisuudessa vai tarvitseeko sitä korjausta. Ilman niitä et tiedä, mitä botti tekee ennen kuin se on oikeassa käytössä.
+**Korjaava näkökulma:** Esimerkki-interaktiot näyttävät, toimiiko ohjeistus oikeasti. Niiden avulla huomataan, tarvitseeko järjestelmäpromptia korjata ennen kuin bottia käytetään oikeassa tilanteessa.
 
 ---
 
@@ -39,145 +177,232 @@ Tämän tunnin jälkeen opiskelija:
 
 ### Ennen lähiosaa
 
-- Valitse yksi konkreettinen botti (esim. Python-tutori, IT-helpdesk, asiakaspalvelu)
-- Testaa neljä rakennuspalikkaa etukäteen
-- Kirjoita malli-järjestelmäprompti (3–4 kappaletta)
-- Valmista 2–3 esimerkki-interaktiota, joissa näytetään:
-  - Normaali tilanne (botti toimii normaalisti)
-  - Vaikea tilanne (botti kieltäytyy tai ohjaa)
-  - Epäselvä tilanne (botti pyytää tarkennusta)
+- Valitse yksi konkreettinen bottiesimerkki, kuten **Python-tutori**, **IT-helpdesk-botti** tai **asiakaspalvelubotti**.
+- Testaa neljän rakennuspalikan malli etukäteen valitulla botilla.
+- Kirjoita malliksi 3–4 kappaleen järjestelmäprompti.
+- Valmistele 2–3 esimerkki-interaktiota: normaali tilanne, vaikea tilanne ja epäselvä tilanne.
+- Valmista esimerkki huonosta järjestelmäpromptista ja paremmasta järjestelmäpromptista, jotta opiskelijat näkevät eron.
 
-### Lähiosassa (90 minuuttia)
+### Lähiosan rakenne, 90 minuuttia
 
-1. **Tehtävä 14.1** (20 min): Näytä kolme rakennuspalikkaa live-esittelyllä
-2. **Tehtävä 14.2** (25 min): Ryhmät kirjoittavat omien bottienensa järjestelmäpromptin
-3. **Tehtävä 14.3** (15 min): Näytä esimerkki-interaktiot ja niiden merkitys
-4. **Vapaa harjoittelu** (25 min): Opiskelijat työskentelevät omien bottienaan
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto** | 5 min | Avaa ajatus: oma botti on suunniteltu järjestelmä, ei vain nimetty ChatGPT. |
+| **Tehtävä 14.1: rakennuspalikat** | 20 min | Näytä tarkoitus, rooli, ohjeet ja rajaukset live-esimerkin avulla. |
+| **Tehtävä 14.2: järjestelmäprompti** | 25 min | Ryhmät kirjoittavat omille boteilleen ensimmäisen järjestelmäpromptin. |
+| **Tehtävä 14.3: esimerkki-interaktiot** | 15 min | Opiskelijat testaavat, miten botti toimisi eri tilanteissa. |
+| **Vapaa harjoittelu** | 25 min | Opiskelijat jatkavat omien bottien suunnittelua ja saavat ohjausta. |
 
-Kotitehtävä: Täydentää botin suunnittelua ja järjestelmäpromptin seuraavaan tunnille.
+**Kotitehtävä:** Täydennä oman botin suunnittelu ja järjestelmäprompti seuraavaa tuntia varten.
 
-### Yleinen neuvo
+### Johdantolause opettajalle
 
-- **Tarkoituksen merkitys:** Opiskelijat sekoittavat usein "olla hyödyllinen" ja "auttaa opiskelijoita ymmärtämään X:ää interaktiivisten esimerkkien kautta". Näytä eroa. "Hyödyllinen" on liian epämääräinen. "Auttaa ymmärtämään X:ää" on mitattavissa.
-- **Rooli antaa luottamusta:** Kun sanot "botti on kokenut tutori", käyttäjä luottaa enemmän. Roolilla on voimaa. Se ei ole persoonallisuus, se on **uskottavuus**.
-- **Ohjeet tekevät botista johdonmukaisen:** Ilman ohjeita botti vastaisi satunnaisesti. Ohjeet varmistavat, että se käyttäytyy samalla tavalla joka kerta.
-- **Rajaukset ovat rakkaus:** Kun botti tietää, mitä se ei saa tehdä, se on turvallinen ja vastuullinen. "En osaa" on parempi kuin "minulla ei ole aavistustakaan".
+> Tänään emme vain nimeä bottia. Suunnittelemme tekoälyjärjestelmän, jolla on tarkoitus, rooli, ohjeet ja rajat. Hyvä botti käyttäytyy johdonmukaisesti, koska joku on suunnitellut sen hyvin.
 
 ---
 
-## Tarkistustehtävät (oppimisen varmistaminen)
+## Luokkatehtävien ohjeistus
+
+### TT-A: Neljä rakennuspalikkaa
+
+**Tavoite:** Opiskelija tunnistaa oman bottinsa tarkoituksen, roolin, ohjeet ja rajaukset.
+
+**Tehtävä:** Opiskelija valitsee botti-idean ja täyttää neljän rakennuspalikan taulukon.
+
+| Rakennuspalikka | Opiskelijan suunnitelma | Tarkistuskysymys |
+| --- | --- | --- |
+| **Tarkoitus** |  | Onko tarkoitus konkreettinen ja rajattu? |
+| **Rooli** |  | Miksi käyttäjä luottaisi tähän bottiin? |
+| **Ohjeet** |  | Miten botin pitää toimia toistuvasti? |
+| **Rajaukset** |  | Mitä botin ei saa tehdä? |
+
+**Aika-arvio:** 20 minuuttia
+
+---
+
+### TT-B: Järjestelmäpromptin kirjoittaminen
+
+**Tavoite:** Opiskelija osaa muuttaa suunnitelman toimivaksi järjestelmäpromptiksi.
+
+**Tehtävä:** Kirjoita oman bottisi järjestelmäprompti. Käytä pohjana neljää osaa: identiteetti, tarkoitus, ohjeet ja rajaukset.
+
+**Tee näin:**
+
+1. Kirjoita ensimmäinen kappale: kuka botti on ja kenelle se on tarkoitettu.
+2. Kirjoita toinen kappale: mitä botti auttaa käyttäjää tekemään.
+3. Kirjoita kolmas kappale: miten botin pitää vastata ja ohjata käyttäjää.
+4. Kirjoita neljäs kappale: mitä botti ei saa tehdä ja missä tilanteissa sen pitää pyytää tarkennusta tai ohjata eteenpäin.
+
+**Prompttipohja:**
+
+Olet [rooli] käyttäjille, jotka [käyttäjäryhmä]. Tarkoituksesi on auttaa käyttäjiä [konkreettinen tehtävä].
+
+Toimi aina näin: [ohjeet]. Käytä kieltä, joka on [sävy ja taso].
+
+Älä [rajaukset]. Jos käyttäjän pyyntö on epäselvä, kysy tarkentavia kysymyksiä ennen vastaamista.
+
+**Aika-arvio:** 25 minuuttia
+
+---
+
+### TT-C: Esimerkki-interaktioiden kirjoittaminen
+
+**Tavoite:** Opiskelija testaa, miten oma botti käyttäytyisi käytännössä.
+
+**Tehtävä:** Kirjoita kolme esimerkki-interaktiota omalle botillesi: normaali tilanne, vaikea tilanne ja epäselvä tilanne.
+
+| Tilanne | Käyttäjän viesti | Miten botin pitäisi vastata? |
+| --- | --- | --- |
+| **Normaali** |  |  |
+| **Vaikea** |  |  |
+| **Epäselvä** |  |  |
+
+**Aika-arvio:** 15 minuuttia
+
+---
+
+## Yleisiä vaikeuksia ja vastaamisen strategiat
+
+| Vaikeus | Miten ohjaat? |
+| --- | --- |
+| Opiskelija kirjoittaa liian epämääräisen tarkoituksen: ”Botti auttaa ihmisiä.” | Kysy: kuka käyttää bottia, missä asiassa ja mistä tiedämme, että botti onnistui? |
+| Opiskelija ei näe roolin arvoa. | Näytä kaksi vastausta: toinen ilman roolia ja toinen roolin kanssa. Kysy, kumpi tuntuu luotettavammalta. |
+| Opiskelija sekoittaa ohjeet ja rajaukset. | Toista ero: ohje kertoo, mitä botti tekee. Rajaus kertoo, mitä botti ei tee. |
+| Opiskelija ei näe esimerkki-interaktioiden arvoa. | Näytä tilanne, jossa botti toimii väärin, koska sitä ei ole testattu vaikealla käyttäjäviestillä. |
+| Opiskelija kokee järjestelmäpromptin liian pitkäksi. | Vertaa sitä arkkitehtuurisuunnitelmaan: hyvin suunniteltu botti toimii paremmin kuin nopeasti kasattu botti. |
+
+---
+
+## Eriyttäminen ja tuki
+
+### Jos opiskelija on jumissa tarkoituksen kirjoittamisessa
+
+Ohjaa opiskelija täyttämään tämä lause:
+
+Botti auttaa [käyttäjäryhmä] tekemään [konkreettinen tehtävä] tavalla [miten botti auttaa].
+
+Esimerkki: ”Botti auttaa ensimmäisen vuoden IT-opiskelijoita ymmärtämään Linux-komentoja lyhyiden selitysten ja harjoitusten avulla.”
+
+### Jos opiskelija ei osaa kirjoittaa ohjeita
+
+Anna opiskelijalle valmiita ohjepohjia, joita hän voi mukauttaa omalle botilleen:
+
+- Aloita aina kysymällä käyttäjän tavoite.
+- Selitä asia ensin lyhyesti ja anna sitten esimerkki.
+- Älä anna heti valmista vastausta, vaan ohjaa käyttäjää vaiheittain.
+- Jos käyttäjän pyyntö on epäselvä, kysy tarkentava kysymys.
+- Jos asia ei kuulu botin osaamisalueeseen, sano se selkeästi ja ohjaa oikeaan suuntaan.
+
+### Jos opiskelija ei näe rajausten merkitystä
+
+Käytä esimerkkiä turvallisuudesta. IT-helpdesk-botti voi antaa ohjeita Wi-Fi-yhteyden tarkistamiseen, mutta sen ei pidä neuvoa käyttäjää poistamaan järjestelmätiedostoja tai ajamaan riskialttiita komentoja ilman varoitusta. Rajaukset suojaavat käyttäjää vääriltä toimilta.
+
+### Jos opiskelija on edellä
+
+- Pyydä häntä kirjoittamaan kaksi versiota järjestelmäpromptista: yksi aloittelijoille ja yksi edistyneille käyttäjille.
+- Pyydä häntä lisäämään botille testitilanne, jossa botti joutuu kieltäytymään käyttäjän pyynnöstä.
+- Pyydä häntä vertaamaan kahta erilaista roolia ja arvioimaan, miten ne muuttavat botin vastauksia.
+
+---
+
+## Tarkistustehtävät oppimisen varmistamiseen
 
 ### 1. Botin tarkoitus
-**"Mikä on hyvä botin tarkoitus? Miksi 'olla hyödyllinen' ei ole hyvä vastaus?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että hyvä tarkoitus on **konkreettinen** ja **mitattavissa**. "Auttaa opiskelijoita ymmärtämään Python-loopeita" on parempi kuin "olla hyödyllinen".
+
+**Kysymys:** Mikä on hyvä botin tarkoitus? Miksi ”olla hyödyllinen” ei ole hyvä vastaus?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että hyvä tarkoitus on konkreettinen ja mitattava. Esimerkiksi ”auttaa opiskelijoita ymmärtämään Python-silmukoita interaktiivisten esimerkkien kautta” on parempi kuin ”olla hyödyllinen”.
 
 ### 2. Rooli ja persoonallisuus
-**"Mitä on rooli ja mitä on persoonallisuus? Ovatko ne sama asia?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että **rooli** on identiteetti (kokenut tutori), **persoonallisuus** on tapa (ystävällinen, suora). Ammattilaisuus ensin, persoonallisuus toiseksi.
+
+**Kysymys:** Mitä eroa on roolilla ja persoonallisuudella?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että rooli kertoo botin tehtävän ja osaamisen, kun taas persoonallisuus kertoo viestintätyylin. Ammattilaisuus tulee ensin, persoonallisuus vasta sen jälkeen.
 
 ### 3. Järjestelmäpromptin neljä osaa
-**"Mitä järjestelmäpromptin tulee sisältää?"**
-- *Mitä etsit:* Opiskelija osaa nimetä: identiteetti, tarkoitus, ohjeet, rajaukset.
+
+**Kysymys:** Mitä järjestelmäpromptin tulee sisältää?
+
+**Mitä opettaja etsii:** Opiskelija nimeää ainakin seuraavat osat: **identiteetti**, **tarkoitus**, **ohjeet** ja **rajaukset**.
 
 ### 4. Rajaukset käytännössä
-**"Miksi rajaukset ovat tärkeitä? Anna esimerkki."**
-- *Mitä etsit:* Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää ja bottia. Esim: "IT-helpdesk-botti ei vastaa sijoituskysymyksiin, koska se vaatii rahoitustaustaa."
+
+**Kysymys:** Miksi rajaukset ovat tärkeitä? Anna esimerkki.
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää ja bottia. Esimerkki: IT-helpdesk-botti ei anna sijoitusneuvoja, koska se ei ole talousneuvoja.
 
 ### 5. Esimerkki-interaktiot
-**"Mitä esimerkki-interaktiot näyttävät?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että ne testaavat, toimiiko ohjeistus todellisuudessa. Ne osoittavat, miten botti käyttäytyy eri tilanteissa.
 
----
+**Kysymys:** Mitä esimerkki-interaktiot näyttävät?
 
-## Yleisiä vaikeuksia ja niihin vastaamisen strategiat
-
-### Vaikeus 1: Opiskelijat kirjoittavat liian epämääräisen tarkoituksen
-
-**Mitä kuuluu:** "Botin tarkoitus on auttaa ihmisiä."
-
-**Vastaus:** "Kuka? Mitä asiassa? Miten mittaat onnistumisen?"
-
-**Strategia:** Pyydä, että he kirjoittavat uudelleen. Tarkoitus = **kuka** + **mitä** + **miten**. "Auttaa opiskelijoita ymmärtämään Python-loopeita interaktiivisten esimerkkien kautta."
-
-### Vaikeus 2: Opiskelijat miettivät, että rooli on liiallista
-
-**Mitä kuuluu:** "Miksi botti tarvitsee roolin? Se on vain AI."
-
-**Vastaus:** "Rooli antaa botille **uskottavuuden**. Kun sanot, että botti on kokenut tutori, käyttäjä luottaa enemmän. Se on testattu psykologinen vaikutus."
-
-**Strategia:** Näytä kaksi vastusta: ilman roolia ja roolin kanssa. Kysy: "Kumpaa luottaisit enemmän?"
-
-### Vaikeus 3: Opiskelijat sekoittavat ohjeet ja rajaukset
-
-**Mitä kuuluu:** "Eikö rajaukset ole samaa kuin ohjeet?"
-
-**Vastaus:** "Ei. Ohjeet kertovat mitä botti tekee. Rajaukset kertovat mitä se ei tee."
-
-**Strategia:** Anna esimerkki:
-- Ohje: "Aloita aina peruskäsitteestä"
-- Rajaus: "En kirjoita valmiita projekteja"
-
-### Vaikeus 4: Opiskelijat eivät näe esimerkki-interaktioiden arvoa
-
-**Mitä kuuluu:** "Miksi kirjoittaa näytelmiä? Botti vain vastaa tai ei vastaa."
-
-**Vastaus:** "Näet silloin, toimiiko ohjeistus. Muuten et tiedä ennen kuin botti on oikeassa käytössä — ja saattaa olla liian myöhäistä."
-
-**Strategia:** Näytä väärä esimerkki-interaktio — näytä, mitä botti tekee jos ohjeistus on huono. "Näetkö nyt, miksi tämä on tärkeää?"
-
-### Vaikeus 5: Opiskelijat pelkäävät, että järjestelmäprompti on liian pitkä
-
-**Mitä kuuluu:** "En halua kirjoittaa neljää kappaletta tekstiä."
-
-**Vastaus:** "Tämä on kuin arkitehtuuri ennen rakentamista. Vaiva kannattaa — hyvin suunniteltu botti on yhtä arvokas kuin huolimattomasti suunniteltu."
-
-**Strategia:** Näytä lyhyt, huono järjestelmäprompti vs. yksityiskohtainen. Pyydä vertaamaan tuloksia. Näytä ero.
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että esimerkki-interaktiot testaavat, toimiiko ohjeistus todellisuudessa ja miten botti käyttäytyy eri tilanteissa.
 
 ---
 
 ## Oppimisresurssit
 
-1. **Opiskelijan itseopiskelumateriaali (self-study.md):** Kaikki perusideat ovat siellä.
+1. **Opiskelijan itseopiskelumateriaali:** käytä sitä peruskäsitteiden kertaamiseen ennen lähiosaa.
+2. **Esimerkit omista boteista:** analysoikaa hyviä Custom GPT -ratkaisuja ja pohtikaa, mikä niiden tarkoitus, rooli, ohjeet ja rajaukset voisivat olla.
+3. **Järjestelmäpromptin esimerkit:** käytä esimerkkeinä Python-tutoria, IT-helpdesk-bottia ja asiakaspalvelubottia.
+4. **Testaus ja iteraatio:** näytä, miten botin toiminta muuttuu, kun järjestelmäpromptia muokataan.
+5. **Opiskelijoiden omat botit:** pyydä opiskelijoita esittelemään botti-ideansa ja saamaan vertaispalautetta.
 
-2. **Esimerkit omista botteista:**
-   - Analysoi hyviä Custom GPT:jä
-   - Huomaa, millä tavalla ne on konfiguroitu
-   - Reverse-engineer: mitä ne tekevät?
+---
 
-3. **Järjestelmäpromptin esimerkit:**
-   - Python-tutori-botti
-   - IT-helpdesk-botti
-   - Asiakaspalvelu-botti
+## Arviointivinkit
 
-4. **Testaus ja iteraatio:**
-   - Näytä, miten botti muuttuu kun ohjeistusta muokataan
-   - Live-testi: muuta rohkeasti, näytä vaikutus
+### Mitä hyvässä suorituksessa näkyy?
 
-5. **Opiskelijoiden omat botit:** Pyydä opiskelijoita esittelemään omansa seuraavalla tunnilla.
+- Botin tarkoitus on konkreettinen eikä liian yleinen.
+- Rooli tukee botin uskottavuutta ja käyttötarkoitusta.
+- Ohjeet kertovat selvästi, miten botin pitää toimia.
+- Rajaukset suojaavat käyttäjää ja pitävät botin tehtävän rajattuna.
+- Järjestelmäprompti on selkeä, johdonmukainen ja käytännössä testattava.
+- Esimerkki-interaktiot sisältävät normaalin, vaikean ja epäselvän tilanteen.
+
+### Heikon suorituksen merkkejä
+
+- Botin tarkoitus on liian yleinen: ”auttaa ihmisiä” tai ”olla hyödyllinen”.
+- Rooli on pelkkä persoonallisuus: ”hauska botti” ilman asiantuntijuutta.
+- Ohjeet ovat epämääräisiä eivätkä ohjaa botin toimintaa.
+- Rajaukset puuttuvat kokonaan.
+- Järjestelmäprompti on niin lyhyt, ettei se ohjaa bottia johdonmukaisesti.
+- Esimerkki-interaktioita ei ole tai ne testaavat vain helppoja tilanteita.
+
+**Opettajan arviointikysymys:** Voisiko toinen opiskelija rakentaa botin tämän suunnitelman perusteella ja saada siitä samanlaisen lopputuloksen?
 
 ---
 
 ## Oppitunnin rakenne ja merkitys
 
-Tämä oppitunti on silta kohti omien räätälöityjen bottien rakentamista. Opiskelijat näkevät, että:
-- Hyvä botti ei ole sattuma — se on harkittu suunnittelu
-- Järjestelmäprompti on botin sydän
-- Ammattilaisuus vaatii yksityiskohtia
+Tämä oppitunti toimii siltana kohti omien räätälöityjen bottien rakentamista. Opiskelijat näkevät, että hyvä botti ei ole sattuma vaan harkitun suunnittelun tulos.
 
-Seuraavassa oppitunnissa opiskelijat rakentavat ja testaavat omia bottejaan näiden periaatteiden pohjalta.
+Oppitunnin lopussa opiskelijoiden pitäisi ymmärtää kolme asiaa:
+
+1. **Hyvä botti alkaa tarkoituksesta.** Jos tarkoitus on epäselvä, koko botti jää epäselväksi.
+2. **Järjestelmäprompti on botin sydän.** Se ohjaa botin käyttäytymistä ja rajoja.
+3. **Ammattilaisuus vaatii yksityiskohtia.** Mitä tarkemmin botti suunnitellaan, sitä luotettavammin se toimii.
 
 ---
 
-## Eriyttäminen ja tuen tarpeet
+## Yhteydet muihin oppitunteihin
 
-### Jos opiskelija on jumissa tarkoituksen kirjoittamisessa
-Ohjaa hänet ajattelemaan: "Kuka käyttää bottia? Mitä varten? Miten mittaat onnistumisen?"
+- **Olemme jo oppineet:** tekoälyn käyttämistä työparina, kontekstin antamista, promptausta ja tekoälyn vastausten tarkistamista.
+- **Nyt opimme:** miten oma botti suunnitellaan tarkoituksen, roolin, ohjeiden ja rajausten avulla.
+- **Seuraavaksi:** opiskelijat rakentavat ja testaavat omia bottejaan tämän suunnitelman pohjalta.
 
-### Jos opiskelija ei näe roolin arvoa
-Näytä konkreettisesti kahden botin vertailu: yksi ilman roolia ("Botti"), yksi roolilla ("Kokenut Python-tutori, 10 vuotta"). Kysy: "Kumpi tuntuu ammattilaisemmalta?"
+**Opettajan muistutus:** Tämän tunnin jälkeen opiskelijan pitäisi osata sanoa: ”Bottini ei vain vastaa kysymyksiin. Se on suunniteltu tiettyyn tarkoitukseen ja toimii selkeiden ohjeiden mukaan.”
 
-### Jos opiskelija ei osaa kirjoittaa ohjeita
-Anna malli-ohjeet ja pyydä häntä mukauttamaan ne omalle bottille. Ohjeet ovat usein yksinkertaisia, konkreettisia lauseita.
+---
 
-### Jos opiskelija ei näe rajausten merkitystä
-Selitä: "Rajaukset suojaavat bottia tekemästä vaarallisia tai vääriä asioita. Hyvin rajattu botti on vastuullinen botti."
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että oman botin rakentaminen alkaa suunnittelusta. Hyvä botti tarvitsee tarkoituksen, roolin, ohjeet ja rajaukset. Vasta niiden jälkeen bottia kannattaa testata ja kehittää eteenpäin.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Jos käyttäjä keskustelee bottisi kanssa ensimmäistä kertaa, mistä hän huomaa, että botti on suunniteltu hyvin eikä vain nimetty uudelleen?
+
+> **Lopetuslause opettajalle:** Hyvä botti ei ole taikuutta. Se on tarkoitus, rooli, ohjeet ja rajat — kirjoitettuna niin selkeästi, että tekoäly osaa toimia niiden mukaan.
+
+---

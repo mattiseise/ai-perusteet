@@ -1,56 +1,185 @@
-# Opettajan materiaalit — Oma botti II
+# Opettajan materiaalit — Oma botti II: tietopohja, rajaukset ja testaus
 
 ## Oppimisen tavoitteet tälle tunnille
 
-Tämän tunnin jälkeen opiskelija:
-1. Ymmärtää, että **tietopohja** on kriittinen osa hyvää bottia — se on tieto, jonka perusteella botti vastaa.
-2. Osaa tunnistaa eri tietopohjan lähteitä ja tietää, milloin kussakin on parasta käyttää.
-3. Ymmärtää **rajaukset** käytännön tasolla — kuinka ne kirjoitetaan ja miksi ne suojaavat sekä käyttäjää että bottia.
-4. Osaa **testata** bottia systemaattisesti kolmella tavalla: positiivisesti, negatiivisesti ja reunatapauksissa.
-5. Ymmärtää **iteraation** — että testaaminen ja parantaminen on jatkuva prosessi, ei kertaluonteinen työ.
-6. Osaa dokumentoida testejään selkeästi, jotta näkee mitä toimii ja mikä tarvitsee parantamista.
+Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten omasta botista kehitetään luotettavampi ja käytännössä käyttökelpoisempi. Oppitunnin ydin on siirtymä suunnittelusta kohti **tuotantokvaliteettista bottia**: botti tarvitsee selkeän tietopohjan, vastuulliset rajaukset, systemaattisen testauksen ja jatkuvaa parantamista.
 
-Punainen lanka: "Kohti tuotantokvaliteettista bottia" — Tämä oppitunti opettaa, miten tehdään botti, joka ei vain toimi vaan **toimii luotettavasti**.
+### Muistaa ja ymmärtää
+
+- Opiskelija ymmärtää, että **tietopohja** on kriittinen osa hyvää bottia. Se on tieto, jonka perusteella botti vastaa.
+- Opiskelija ymmärtää, että yleinen kielimalli ei automaattisesti tunne organisaation sisäisiä prosesseja, ajankohtaisia ohjeita tai yksityisiä dokumentteja.
+- Opiskelija ymmärtää, että **rajaukset** suojaavat sekä käyttäjää että bottia virheellisiltä, vaarallisilta tai tehtävän ulkopuolisilta vastauksilta.
+- Opiskelija ymmärtää, että **testaus** ei ole satunnaista kokeilua, vaan suunniteltu prosessi.
+- Opiskelija ymmärtää, että **iteraatio** eli testaaminen, korjaaminen ja uudelleentestaaminen on normaali osa botin kehittämistä.
+
+### Soveltaa ja analysoida
+
+- Opiskelija osaa tunnistaa erilaisia tietopohjan lähteitä, kuten dokumentteja, verkkosivuja, FAQ-sivuja, käyttöohjeita, prosessikuvauksia, tietokantoja ja API-rajapintoja.
+- Opiskelija osaa arvioida, milloin botti tarvitsee erillisen tietopohjan eikä pelkkä yleinen tekoälymalli riitä.
+- Opiskelija osaa kirjoittaa botille rajauksia, jotka kertovat, mitä botti ei saa tehdä.
+- Opiskelija osaa testata bottia kolmella tavalla: **positiivisilla testeillä**, **negatiivisilla testeillä** ja **reunatapauksilla**.
+
+### Luoda ja arvioida
+
+- Opiskelija osaa dokumentoida botin testit selkeästi.
+- Opiskelija osaa vertailla odotettua vastausta ja botin todellista vastausta.
+- Opiskelija osaa tehdä testien perusteella parannuksia botin tietopohjaan, rajauksiin tai järjestelmäpromptiin.
+- Opiskelija ymmärtää, että luotettava botti ei synny yhdellä yrityksellä, vaan sitä kehitetään toistuvien testikierrosten avulla.
+
+**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei vain vastaa. Hyvä botti vastaa oikean tietopohjan perusteella, tunnistaa rajansa ja on testattu myös vaikeissa tilanteissa. Testaus ja iteraatio eivät ole merkkejä epäonnistumisesta, vaan ammattilaismaisesta kehittämisestä.
+
+---
+
+## Pedagoginen lähestymistapa
+
+### Ydinviesti: kohti tuotantokvaliteettista bottia
+
+Edellisellä tunnilla opiskelijat suunnittelivat botin tarkoitusta, roolia, ohjeita ja rajauksia. Tällä tunnilla he siirtyvät seuraavalle tasolle: miten botti saadaan toimimaan luotettavasti oikeissa tilanteissa?
+
+> **Tuotantokvaliteettinen botti ei ole botti, joka toimii kerran. Se on botti, joka toimii luotettavasti myös silloin, kun käyttäjä kysyy vaikeasti, väärin tai epäselvästi.**
+
+Korosta opiskelijoille:
+
+- **Tietopohja** antaa botille oikean sisällön.
+- **Rajaukset** kertovat, missä botin vastuu päättyy.
+- **Testaus** paljastaa, toimiiko botti myös käytännössä.
+- **Iteraatio** tekee botista vähitellen paremman.
+- **Dokumentointi** tekee kehittämisestä näkyvää ja toistettavaa.
+
+### Tietopohjan merkitys
+
+**Tietopohja** tarkoittaa tietoa, jonka perusteella botti vastaa. Se voi olla esimerkiksi PDF-dokumentti, ohjeteksti, FAQ-sivu, prosessikuvaus, sisäinen ohje, tietokanta tai API-rajapinta.
+
+Ilman tietopohjaa botti käyttää yleistä mallin tietoa ja tekee helposti oletuksia. Tämä voi toimia yleisissä kysymyksissä, mutta ei riitä tilanteissa, joissa vastauksen pitää perustua organisaation omiin ohjeisiin, ajankohtaiseen tietoon tai tarkasti rajattuun prosessiin.
+
+| Tilanne | Riittääkö yleinen tekoäly? | Miksi tietopohja tarvitaan? |
+| --- | --- | --- |
+| Käyttäjä kysyy, mitä salasana tarkoittaa. | Usein kyllä. | Kyse on yleisestä käsitteestä. |
+| Käyttäjä kysyy, miten koulun salasanan palautus tehdään. | Ei luotettavasti. | Botti tarvitsee koulun oman prosessin ja ajantasaiset ohjeet. |
+| Käyttäjä kysyy, miten Pythonin for-silmukka toimii. | Usein kyllä. | Kyse on yleisestä ohjelmoinnin peruskäsitteestä. |
+| Käyttäjä kysyy, mitä tämän kurssin palautusohje sanoo for-silmukkatehtävästä. | Ei. | Botti tarvitsee kurssin oman tehtävänannon ja arviointiohjeen. |
+
+**Opettajan huomio:** Näytä opiskelijoille konkreettinen ero. Kysy botilta ensin organisaation sisäisestä prosessista ilman tietopohjaa. Lisää sen jälkeen oikea dokumentti ja kysy sama kysymys uudelleen. Ero vastauksen tarkkuudessa tekee tietopohjan merkityksen näkyväksi.
+
+---
+
+## Tietopohjan lähteet
+
+### Millaisia tietopohjia botti voi käyttää?
+
+Tietopohja voi olla yksinkertainen dokumentti tai monimutkaisempi tietolähde. Tärkeää on, että opiskelija ymmärtää lähteen laadun vaikuttavan suoraan botin vastausten laatuun.
+
+| Tietopohjan lähde | Esimerkki | Sopii erityisesti | Huomioitavaa |
+| --- | --- | --- | --- |
+| **Dokumentti** | PDF, Word-tiedosto, tekstiohje. | Ohjeisiin, prosesseihin ja kurssimateriaaleihin. | Dokumentin pitää olla ajantasainen ja selkeä. |
+| **FAQ** | Usein kysytyt kysymykset. | Asiakaspalvelu- ja helpdesk-botteihin. | Kysymysten ja vastausten pitää olla riittävän täsmällisiä. |
+| **Tietokanta** | Tuotetiedot, asiakastiedot, tikettijärjestelmä. | Rakenteiseen ja muuttuvaan tietoon. | Käyttöoikeudet, tietosuoja ja rajaukset pitää suunnitella tarkasti. |
+| **API** | Reaaliaikainen varastosaldo, säädata, palvelun tila. | Ajankohtaiseen ja nopeasti muuttuvaan tietoon. | Virhetilanteet, viiveet ja käyttörajat pitää huomioida. |
+| **Verkkosivu** | Julkinen ohjesivu tai dokumentaatio. | Julkiseen ja päivittyvään tietoon. | Lähteen luotettavuus ja ajantasaisuus pitää tarkistaa. |
+
+### Tietopohjan ylläpito
+
+Tietopohja ei ole kertaluonteinen lisäys. Jos organisaation prosessit muuttuvat, myös botin tietopohja pitää päivittää. Vanhentunut tietopohja voi olla vaarallisempi kuin tietopohjan puuttuminen, koska käyttäjä saattaa luottaa vanhaan ohjeeseen.
+
+> **Vanhentunut tietopohja voi tehdä botista itsevarman mutta väärässä olevan neuvonantajan.**
+
+Opeta opiskelijoille ylläpidon peruskysymykset:
+
+- Kuka vastaa tietopohjan päivittämisestä?
+- Kuinka usein tietopohja tarkistetaan?
+- Mistä huomataan, että tieto on vanhentunut?
+- Miten käyttäjälle kerrotaan, jos botti ei ole varma tiedon ajantasaisuudesta?
+
+---
+
+## Rajaukset käytännössä
+
+### Miksi rajaukset ovat tärkeitä?
+
+**Rajaukset** kertovat, mitä botti ei tee. Ne eivät ole epäystävällisiä eivätkä huononna bottia. Ne tekevät botista vastuullisen, koska botti ei yritä vastata asioihin, joihin sitä ei ole suunniteltu.
+
+| Botti | Hyvä rajaus | Miksi rajaus on tärkeä? |
+| --- | --- | --- |
+| **IT-helpdesk-botti** | Vastaa vain IT-tukeen liittyviin kysymyksiin. Älä anna sijoitus-, terveys- tai lakineuvoja. | Botti pysyy omalla osaamisalueellaan eikä anna vaarallisia neuvoja. |
+| **Asiakaspalvelubotti** | Älä käsittele yksityisiä asiakastietoja ilman tunnistautumista. | Rajaus suojaa asiakkaan yksityisyyttä. |
+| **Opetusbotti** | Älä tee arvioitavia tehtäviä opiskelijan puolesta. Anna vihjeitä ja ohjaa vaiheittain. | Rajaus tukee oppimista eikä poista opiskelijan omaa työtä. |
+
+**Opettajan muistutus:** Hyvä botti osaa sanoa: ”Tämä ei kuulu tehtävääni.” Se on ammattilaisuutta, ei epäonnistumista.
+
+---
+
+## Systemaattinen testaus
+
+### Kolme testityyppiä
+
+Botin testaaminen ei tarkoita vain sitä, että sille esitetään muutama kysymys ja katsotaan, mitä tapahtuu. Systemaattinen testaus varmistaa, että botti toimii sekä helpoissa että vaikeissa tilanteissa.
+
+| Testityyppi | Mitä testataan? | Esimerkki IT-helpdesk-botille |
+| --- | --- | --- |
+| **Positiivinen testi** | Asia, jonka pitäisi toimia. | ”Miten yhdistän koulun Wi-Fi-verkkoon?” |
+| **Negatiivinen testi** | Asia, johon botin ei pitäisi vastata tai jossa sen pitää kieltäytyä. | ”Mihin osakkeisiin minun kannattaa sijoittaa?” |
+| **Reunatapaus** | Epätavallinen, epäselvä tai vaikeasti tulkittava tilanne. | ”Ei toimi. Korjaa.” |
+
+### Testien dokumentointi
+
+Testaamisesta tulee hyödyllistä vasta, kun tulokset dokumentoidaan. Muuten opiskelija ei tiedä, mitä testattiin, mikä toimi, mikä epäonnistui ja mitä muutettiin.
+
+| Testityyppi | Syöte | Odotettu vastaus | Saatu vastaus | Tulos | Korjaus |
+| --- | --- | --- | --- | --- | --- |
+| Positiivinen |  |  |  | Hyväksytty / Hylätty |  |
+| Negatiivinen |  |  |  | Hyväksytty / Hylätty |  |
+| Reunatapaus |  |  |  | Hyväksytty / Hylätty |  |
+
+> **Satunnainen testaus kertoo, että botti toimii joskus. Systemaattinen testaus kertoo, milloin botti toimii, milloin se ei toimi ja mitä pitää korjata.**
+
+---
+
+## Iteraatio: testaa, korjaa ja testaa uudelleen
+
+### Iteraatio ei ole epäonnistumista
+
+Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on epäonnistunut. Korjaa tämä ajatus heti. Ensimmäinen versio on harvoin valmis. Ammattilainen olettaa, että testaus paljastaa puutteita.
+
+**1. Suunnittele:** määritä tarkoitus, tietopohja, ohjeet ja rajaukset.
+
+**2. Testaa:** käytä positiivisia, negatiivisia ja reunatapaustestejä.
+
+**3. Analysoi:** vertaa odotettua ja saatua vastausta.
+
+**4. Korjaa:** muuta tietopohjaa, järjestelmäpromptia tai rajauksia.
+
+**5. Testaa uudelleen:** varmista, että korjaus oikeasti paransi toimintaa.
+
+### Mitä iteraatiossa voidaan korjata?
+
+- **Tietopohjaa:** lisää puuttuva ohje, poista vanhentunut tieto tai selkeytä epäselvää dokumenttia.
+- **Rajauksia:** lisää kieltäytymisohje, jos botti vastaa tehtävän ulkopuolelle.
+- **Järjestelmäpromptia:** täsmennä roolia, vastaustapaa tai toimintajärjestystä.
+- **Testejä:** lisää uusia testitapauksia, jos huomaat tilanteita, joita ei vielä testattu.
 
 ---
 
 ## Yleisiä väärinkäsityksiä
 
-### 1. "Tietopohja on valinnainen — botti osaa kaikki mitä ChatGPT tietää."
+### Väärinkäsitys 1: ”Tietopohja on valinnainen, koska botti osaa kaiken, mitä ChatGPT tietää.”
 
-**Todellisuus:** ChatGPT:llä on yleinen tieto joka opetettiin harjoitusdatalla. Se ei tiedä:
-- Organisaation sisäisiä prosesseja
-- Ajankohtaista tai muuttuvaa tietoa
-- Salaista tai yksityistä dataa
-- Hyper-spesifikoituja ohjeita
+**Korjaava näkökulma:** Yleinen tekoälymalli tietää yleisiä asioita, mutta se ei tunne organisaation sisäisiä prosesseja, ajankohtaista tietoa, yksityisiä dokumentteja tai tarkasti määriteltyjä ohjeita. Ilman tietopohjaa botti voi arvailla ja antaa uskottavan mutta väärän vastauksen.
 
-Ilman tietopohjaa botti arvailee ja antaa väärää tietoa.
+### Väärinkäsitys 2: ”Rajaukset ovat rajoittavia ja epäystävällisiä.”
 
-### 2. "Rajaukset ovat rajoittavia ja epäystävällisiä."
+**Korjaava näkökulma:** Rajaukset ovat vastuullisia. Ne kertovat käyttäjälle, mitä botti osaa ja mitä se ei osaa. On parempi, että botti sanoo rehellisesti ”en osaa auttaa tässä” kuin antaa virheellisen tai vaarallisen neuvon.
 
-**Todellisuus:** Rajaukset ovat **vastuullisia**. Ne osoittavat käyttäjälle, mitä botti osaa ja mitä ei. Se on parempi kuin että botti antaa virheellisiä neuvoja, joihin käyttäjä luottaa.
+### Väärinkäsitys 3: ”Testaaminen tarkoittaa, että kysyn muutaman kysymyksen ja katson, mitä tapahtuu.”
 
-Esimerkki: "En osaa antaa sijoitusneuvoja" on parempi kuin että botti antaa väärän tai vaarallisen neuvon.
+**Korjaava näkökulma:** Oikea testaus on systemaattista. Se sisältää asioita, joiden pitää toimia, asioita, joiden ei pidä toimia, ja epätavallisia tilanteita. Satunnainen testaus jättää helposti piilotetut ongelmat löytämättä.
 
-### 3. "Testaaminen on yksinkertaista — ajat kysymyksen ja katso mitä tapahtuu."
+### Väärinkäsitys 4: ”Iteraatio tarkoittaa, että suunnittelu epäonnistui.”
 
-**Todellisuus:** Oikea testaaminen on systemaattista ja suunniteltua. Se sisältää:
-- Positiivisia testejä (mitä pitäisi toimia)
-- Negatiivisia testejä (mitä ei pitäisi toimia)
-- Reunatapauksia (outoja tilanteita)
+**Korjaava näkökulma:** Iteraatio kuuluu botin kehittämiseen. Hyvät botit syntyvät testaamisen, korjaamisen ja uuden testaamisen kautta. Ensimmäinen versio on lähtökohta, ei lopputulos.
 
-Satunnainen testaaminen jättää piilotetut ongelmat löytämättä.
+### Väärinkäsitys 5: ”Tietopohjaa ei tarvitse päivittää, kun se on kerran lisätty.”
 
-### 4. "Iteraatio on merkki siitä, että suunnittelu epäonnistui."
-
-**Todellisuus:** Iteraatio on **normaali** osa bottin kehitystä. Ensimmäinen versio harvoin on täydellinen. Hyvät botit syntyvät testaamalla, parannuksilla ja uudella testaamisella.
-
-### 5. "Tietopohjaa ei tarvitse päivittää — kerran tehty, aina voimassa."
-
-**Todellisuus:** Tietopohja vanhentuu nopeasti. Jos organisaation prosessit muuttuvat ja tietopohja ei päivity, botti antaa vanhentunutta tietoa. Vanhentuneet ohjeet voivat aiheuttaa:
-- Käyttäjien tekemät virheelliset päätökset
-- Turvallisuusongelmia
-- Asiakastyytyväisyyden laskua
+**Korjaava näkökulma:** Tietopohja vanhentuu. Jos prosessit muuttuvat mutta tietopohjaa ei päivitetä, botti antaa vanhaa tietoa. Tämä voi aiheuttaa virheellisiä päätöksiä, turvallisuusongelmia ja luottamuksen heikkenemistä.
 
 ---
 
@@ -58,250 +187,229 @@ Satunnainen testaaminen jättää piilotetut ongelmat löytämättä.
 
 ### Ennen lähiosaa
 
-- Valitse yksi yksinkertainen, testattava botti
-  - Esim. IT-helpdesk, opastus, tietojen haku
-  - Varmista, että sillä on selkeä tarkoitus ja rajaukset
+- Valitse yksi yksinkertainen ja testattava botti, esimerkiksi **IT-helpdesk-botti**, **opastusbotti** tai **tietojenhakubotti**.
+- Varmista, että botilla on selkeä tarkoitus ja rajaukset.
+- Valmista yksi dokumentti tietopohjaksi, esimerkiksi FAQ, käyttöohje tai prosessikuvaus.
+- Testaa botti ilman tietopohjaa. Kirjaa ylös, onko vastaus epämääräinen, väärä tai arvaileva.
+- Lisää dokumentti botin tietopohjaksi ja kysy sama kysymys uudelleen.
+- Valmista testauspohja, jossa näkyvät positiivinen testi, negatiivinen testi ja reunatapaus.
 
-- Valmista yksi dokumentti (PDF tai teksti)
-  - Esim. FAQ, käyttöohje, tai prosessikuvaus
-  - Tämä on tietopohja, jonka käytät live-demossa
+### Lähiosan rakenne, 90 minuuttia
 
-- Testaa botti ilman tietopohjaa
-  - Mitä se vastaa?
-  - Onko vastaus epämääräinen tai väärä?
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto** | 5 min | Kytke tunti edelliseen: suunnitelmasta siirrytään kohti luotettavaa bottia. |
+| **Tehtävä 15.1: tietopohjan vaikutus** | 20 min | Näytä live-demolla, miten dokumentti muuttaa botin vastauksen laatua. |
+| **Tehtävä 15.2: systemaattinen testaus** | 30 min | Ryhmät testaavat bottia positiivisilla, negatiivisilla ja reunatapaustesteillä. |
+| **Tehtävä 15.3: rajaukset ja turvallisuus** | 20 min | Keskustellaan siitä, missä tilanteissa botin pitää kieltäytyä tai ohjata käyttäjä eteenpäin. |
+| **Vapaa harjoittelu** | 15 min | Opiskelijat aloittavat omien bottiensa testauksen ja dokumentoinnin. |
 
-- Lataa dokumentti botille
-  - Näytä prosessi selvästi
-  - Testaa uudelleen samalla kysymyksellä
-  - Näytä ero
+### Johdantolause opettajalle
 
-- Valmista testauspohja
-  - Näytä, kuinka positiivinen, negatiivinen ja reunatapaus-testit dokumentoidaan
-  - Antaa opiskelijoille selkeä pohja
-
-### Lähiosassa (90 minuuttia)
-
-1. **Tehtävä 15.1** (20 min): Live-demo — tietopohjadokumentin vaikutus
-2. **Tehtävä 15.2** (30 min): Ryhmät testaavat bottia systemaattisesti
-3. **Tehtävä 15.3** (20 min): Keskustelu rajauksista ja turvallisuudesta
-4. **Vapaa harjoittelu** (20 min): Opiskelijat aloittavat opiskelijatehtävät
-
-### Yleinen neuvo
-
-- **Tietopohjasta**: Selitä, että se on bottiin syötetty tieto. Se ei ole arvausta — se on faktaa, jonka perusteella botti vastaa. Tietopohjan laatu määrittää vastausten laadun.
-
-- **Rajauksista**: Näytä, että rajaukset eivät ole negatiivisia. Ne ovat vastuullisia. Ne suojaavat käyttäjää ja bottia.
-
-- **Testauksesta**: Selitä, että satunnainen testaaminen ei riitä. Systemaattinen testaaminen löytää ongelmia, joita satunnainen testaaminen ei löydä.
-
-- **Iteraatiosta**: Näytä, että testaaminen → korjaus → testaaminen uudelleen on normaali prosessi. Se ei ole merkki epäonnistumisesta.
+> Viimeksi suunnittelimme botille tarkoituksen, roolin, ohjeet ja rajaukset. Tänään tutkimme, miten botti saadaan toimimaan luotettavasti: annamme sille oikean tietopohjan, testaamme sitä vaikeissa tilanteissa ja parannamme sitä testitulosten perusteella.
 
 ---
 
-## Tarkistustehtävät (oppimisen varmistaminen)
+## Luokkatehtävien ohjeistus
 
-### 1. Tietopohjasta
-**"Miksi botti tarvitsee tietopohjaa? Eikö se osaa kaiken, mitä ChatGPT tietää?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että ChatGPT tietää yleistä asiaa, mutta ei organisaation sisäisiä asioita, ajankohtaista tietoa tai spesifikoituja ohjeita. Tietopohja tekee botista **räätälöidyn**.
+### TT-A: Tietopohjan vaikutus
 
-### 2. Rajauksista
-**"Miksi botti tarvitsee rajauksia? Eikö se voi vain vastata kaikkeen?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää väärältä tiedolta ja bottia sopimattomista tilanteista. Ne tekevät botista **vastuullisen**.
+**Tavoite:** Opiskelija ymmärtää, miten tietopohja vaikuttaa botin vastausten tarkkuuteen.
 
-### 3. Positiivisesta testauksesta
-**"Mitä positiivinen testaus tarkoittaa?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että positiivinen testaus testaa asioita, joiden pitäisi toimia. Se varmistaa, että botti osaa perustyönsä.
+**Tehtävä:** Testaa bottia ensin ilman tietopohjaa ja sen jälkeen tietopohjan kanssa. Vertaa vastauksia.
 
-### 4. Negatiivisesta testauksesta
-**"Mitä negatiivinen testaus tarkoittaa? Miksi se on tärkeä?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että negatiivinen testaus testaa asioita, joiden EI pitäisi toimia. Se varmistaa, että botti osaa sanoa "ei" ja suojata itseään.
+**Tee näin:**
 
-### 5. Reunatapauksista
-**"Anna esimerkki reunatapauksesta. Miksi se on tärkeä testata?"**
-- *Mitä etsit:* Opiskelija antaa esimerkin (tyhjä viesti, pitkä sekava kysymys, sama kysymys monesti) ja ymmärtää, että reunatapaukset osoittavat botin robustisuuden.
+1. Valitse kysymys, johon botti ei voi vastata luotettavasti ilman erillistä tietoa.
+2. Kysy kysymys botilta ilman tietopohjaa.
+3. Lisää botille dokumentti, FAQ, ohje tai muu tietopohja.
+4. Kysy sama kysymys uudelleen.
+5. Vertaa vastauksia: kumpi oli tarkempi, ajantasaisempi ja hyödyllisempi?
 
-### 6. Iteraatiosta
-**"Miksi testaamista täytyy tehdä uudelleen ja uudelleen?"**
-- *Mitä etsit:* Opiskelija ymmärtää, että kun löytää ongelmia, hän korjaa ja testaa uudelleen. Tämä on normaali prosessi, ei merkki epäonnistumisesta.
+| Kysymys | Vastaus ilman tietopohjaa | Vastaus tietopohjan kanssa | Mitä muuttui? |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+**Aika-arvio:** 20 minuuttia
 
 ---
 
-## Yleisiä vaikeuksia ja niihin vastaamisen strategiat
+### TT-B: Systemaattinen testaus
 
-### Vaikeus 1: Opiskelijat sanovat "Mikä ero tietopohjalla ja ilman?"
+**Tavoite:** Opiskelija osaa testata bottia suunnitelmallisesti.
 
-**Mitä kuuluu:** "Eikö botti osaa vastata kysymyksiin ilman tietopohjaa?"
+**Tehtävä:** Laadi botille vähintään yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaustesti. Dokumentoi tulokset.
 
-**Vastaus:** "Osaa, mutta väärin. Ilman tietopohjaa se arvailee. Tietopohjalla se käyttää oikeaa tietoa."
+**Tee näin:**
 
-**Strategia:** Näytä live-demo:
-1. Kysy botilta: "Mikä on [organisaation sisäinen prosessi]?"
-2. Näytä vastaus: epämääräinen tai väärä
-3. Lataa dokumentti
-4. Kysy samalla kysymyksellä uudelleen
-5. Näytä vastaus: tarkka ja dokumentista peräisin
+1. Kirjoita yksi kysymys, johon botin pitäisi osata vastata.
+2. Kirjoita yksi kysymys, johon botin pitäisi kieltäytyä vastaamasta tai ohjata käyttäjä eteenpäin.
+3. Kirjoita yksi epäselvä, liian lyhyt tai outo kysymys.
+4. Kirjoita jokaiselle testille odotettu vastaus.
+5. Testaa botti ja kirjaa saatu vastaus.
+6. Päätä, hyväksyttiinkö testi vai tarvitaanko korjaus.
 
-Voima on näyttää **eroa**.
+| Testityyppi | Syöte | Odotettu vastaus | Saatu vastaus | Tulos |
+| --- | --- | --- | --- | --- |
+| **Positiivinen** |  |  |  |  |
+| **Negatiivinen** |  |  |  |  |
+| **Reunatapaus** |  |  |  |  |
 
-### Vaikeus 2: Opiskelijat sanovat "Miksi rajaus estää hyödyllisiä asioita?"
-
-**Mitä kuuluu:** "Jos botti voi vastata kaikkeen, miksi rajata sen?"
-
-**Vastaus:** "Koska botti ei voi vastata oikein kaikkeen. Parempi sanoa 'En osaa' kuin antaa vaarallinen neuvo."
-
-**Strategia:** Anna konkreettinen esimerkki:
-- "IT-helpdesk-botti saa kysymyksen: 'Kuinka sijoitan rahaa osakemarkkinoille?'"
-- "Se voi arvailla ja antaa väärää neuvoa, jota käyttäjä luottaa."
-- "Tai se voi sanoa: 'En osaa antaa sijoitusneuvoja. Ota yhteyttä rahoituspalveluidemme tiimiin.'"
-- "Kumpaa haluat käyttäjän kuuleman?"
-
-### Vaikeus 3: Opiskelijat sanovat "Testaaminen on liian monimutkaista"
-
-**Mitä kuuluu:** "Miksi kolme testityyppiä? Eikö riitä, että kysin muutaman kysymyksen?"
-
-**Vastaus:** "Satunnainen testaaminen jättää ongelmia löytämättä. Systemaattinen testaaminen löytää ne."
-
-**Strategia:** Näytä, mitä satunnainen testaaminen ei löydä:
-- Satunnainen testaaminen: "Kysin 3 kysymystä, kaikki menivät hyvin. Botti on valmis."
-- Systemaattinen testaaminen: "Testaan 15 positiivista, 5 negatiivista, 5 reunatapaus-testiä. Löydän kolme ongelmakohtaa. Korjaan ne ja testaan uudelleen."
-
-Näytä, kuinka systemaattinen testaaminen löytää piilotettuja ongelmia.
-
-### Vaikeus 4: Opiskelijat sanovat "Iteraatio on merkki epäonnistumisesta"
-
-**Mitä kuuluu:** "Jos botti on hyvä ensimmäisellä kerralla, sitä ei tarvitse parantaa."
-
-**Vastaus:** "Ensimmäinen versio ei ole koskaan täydellinen. Hyviä botteja kehitetään testaamalla, parannuksilla ja uudella testaamisella."
-
-**Strategia:** Näytä iteraation prosessi:
-1. Alustava ohjeistus
-2. Testit
-3. Ongelmat löytyvät
-4. Korjaukset
-5. Uudet testit
-6. Parantuminen
-7. (Toistetaan kunnes riittävän hyvä)
-
-Selitä, että tämä on **normaalia** ja **ammattilaismaista**.
-
-### Vaikeus 5: Opiskelijat sanovat "Tietopohja vanhentuu, joten en päivitä sitä"
-
-**Mitä kuuluu:** "Jos prosessit muuttuvat, botti tulee vanhentuneeksi. Miksi siis ylläpitää sitä?"
-
-**Vastaus:** "Juuri siksi. Ylläpito on **kriittinen**. Vanhentuneet ohjeet aiheuttavat enemmän vahinkoa kuin hyötyä."
-
-**Strategia:** Anna esimerkki:
-- "IT-helpdesk-botti, jonka ohjeet ovat 6 kuukautta vanhoja"
-- "Käyttäjä seuraa ohjeita, jotka eivät enää kelpaa"
-- "Käyttäjä tekee väärän asian tai turvallisuus kärsii"
-- "Parempi ettei ole bottia kuin että se antaa vaarallista tietoa"
+**Aika-arvio:** 30 minuuttia
 
 ---
 
-## Oppimisresurssit, joihin opettaja voi viitata
+### TT-C: Rajaukset ja turvallisuus
 
-1. **Opiskelijamateriaalit (student-study ja student-tasks):** Kaikki perusideat ovat siellä.
+**Tavoite:** Opiskelija ymmärtää, milloin botin pitää rajata vastausta, kieltäytyä tai ohjata käyttäjä eteenpäin.
 
-2. **Tietopohjat käytännössä:**
-   - Dokumentti: PDF, Word, teksti
-   - Data: CSV, tietokanta, API
-   - Reaaliaikainen: verkko, sensori, API
+**Tehtävä:** Kirjoita omalle botillesi kolme rajausta ja yksi esimerkkivastaus tilanteeseen, jossa käyttäjä pyytää botilta jotakin sopimatonta tai tehtävän ulkopuolista.
 
-3. **Rajaukset esimerkkejä:**
-   - IT-helpdesk: vain IT-aiheet
-   - Asiakaspalvelu: julkinen info, ei yksityisiä tietoja
-   - Opetus: pedagogisia neuvoja, ei koodiin vastauksia valmiina
+**Tee näin:**
 
-4. **Testaus-dokumentaatio:**
-   - Taulukko: testityyppi, kysymys, odotettu vastaus, saatu vastaus, tulos
-   - Analyysi: mitä meni hyvin, mitä meni huonosti
-   - Korjaukset: mitä muutit ja mitä paransi
+1. Kirjoita, mitä botin kuuluu tehdä.
+2. Kirjoita, mitä botin ei kuulu tehdä.
+3. Kirjoita käyttäjän viesti, jossa hän pyytää jotakin rajauksen vastaista.
+4. Kirjoita botin hyvä vastaus: kohtelias kieltäytyminen ja tarvittaessa ohjaus oikeaan suuntaan.
 
-5. **Iteraation esimerkit:**
-   - Kierros 1: ohjeistus → testit → ongelmat
-   - Kierros 2: korjaukset → testit → parantuminen
-   - Kierros 3: (tarpeen mukaan)
+**Esimerkki:**
+
+**Käyttäjä:** Mihin osakkeisiin minun kannattaa sijoittaa?
+
+**Botti:** En voi antaa sijoitusneuvoja, koska tehtäväni on auttaa IT-tukiasioissa. Jos tarvitset talousneuvontaa, ota yhteyttä pätevään talousasiantuntijaan.
+
+**Aika-arvio:** 20 minuuttia
 
 ---
 
-## Punainen lanka: "Kohti tuotantokvaliteettista bottia"
+## Yleisiä vaikeuksia ja vastaamisen strategiat
 
-Oppituntisarja (neljä oppituntia):
-- **Edellisellä tunnilla**: Opiskelijat oppivat, kuinka suunnitella botti järjestelmäpromptin avulla
-- **Tällä tunnilla**: Opiskelijat oppivat, kuinka varustetaan botti tiedolla, rajauksilla ja testaamisella
-- **Seuraavalla tunnilla**: Opiskelijat oppivat rakentaa todellisen Custom-GPT:n (käytännöntoteutus)
-- **Myöhemmissä tunneissa**: Opiskelijat rakentavat monimutkaisia, tuotantokvaliteettisia botteja
-
-Tämä oppitunti on kriittinen, koska se opettaa:
-- Että laatu ei tule ilmaiseksi
-- Että testaus on jatkuva prosessi
-- Että rajaukset tekevät botista **vastuullisen**
-- Että tietopohja on **kriittinen** hyvälle botille
+| Vaikeus | Miten ohjaat? |
+| --- | --- |
+| Opiskelija ei ymmärrä, mitä eroa on botilla tietopohjan kanssa ja ilman tietopohjaa. | Näytä sama kysymys kahdesti: ensin ilman tietopohjaa, sitten dokumentin lisäämisen jälkeen. Pyydä opiskelijoita vertaamaan tarkkuutta ja lähdeperusteisuutta. |
+| Opiskelija ajattelee, että rajaukset estävät hyödyllisiä vastauksia. | Kysy: kumpi on vastuullisempaa — myöntää, ettei botti osaa vastata, vai antaa vaarallinen neuvo, johon käyttäjä luottaa? |
+| Opiskelija kokee testauksen liian monimutkaiseksi. | Aloita kolmella testillä: yksi positiivinen, yksi negatiivinen ja yksi reunatapaus. Vasta sen jälkeen laajenna testimäärää. |
+| Opiskelija pitää korjaamista epäonnistumisena. | Korosta, että testissä löytynyt virhe on onnistunut havainto. Testauksen tarkoitus on löytää korjattavaa ennen oikeaa käyttöä. |
+| Opiskelija ei ymmärrä tietopohjan ylläpitoa. | Käytä esimerkkiä vanhasta IT-ohjeesta, joka ohjaa käyttäjän väärään järjestelmään. Kysy, mitä haittaa tästä syntyy. |
 
 ---
 
-## Eriyttäminen ja tuen tarpeet — testaus ja parantaminen
+## Eriyttäminen ja tuki
 
-### Case study oppitunnin alussa
-Live-demo on opiskelijoille konkreettinen esimerkki. Se näyttää:
-- Miten tietopohja muuttaa vastauksia
-- Miten rajaukset kirjoitetaan
-- Miten testaus dokumentoidaan
+### Jos opiskelija tarvitsee tukea
 
-Vähentää epävarmuutta: "Miten aloitan testaamisen?"
+- Anna valmis testauspohja ja pyydä opiskelijaa täyttämään vain yksi positiivinen, yksi negatiivinen ja yksi reunatapaus.
+- Anna esimerkkibotti, jos oman botin testaaminen tuntuu vielä liian vaikealta.
+- Anna valmis tietopohjadokumentti, jotta opiskelijan ei tarvitse itse etsiä sopivaa aineistoa.
+- Ohjaa opiskelija käyttämään lauseita: ”Botin pitää osata...” ja ”Botin ei pidä...”
 
-### Jos olet jumissa -osio
-Opiskelijatehtäviin on lisätty mallipohjat (taulukot, dokumentaatiomuoto). Ohjaa epävarmaksi tuntevat opiskelijat näihin ennen tehtävän alkua.
+### Jos opiskelija on edellä
 
-### Tukipisteet
-
-| Oppitunti | Kriittinen kohta | Tuen muoto |
-|-----------|-----------------|-----------|
-| Edellinen | Botin suunnittelu | Case study + live-demo |
-| **Tämä** | **Testaaminen systemaattisesti** | **Live-demo + ryhmäharjoitus + mallipohjat** |
-| Seuraava | Todellisen Custom-GPT:n rakentaminen | Step-by-step ohje |
-| Myöhemmät | Monimutkaisen botin testaaminen | Itsenäiset testauskaaviot |
-
-### Myöhemmät oppitunnit vaativat tästä tunnista ymmärrystä
-Jos opiskelijat eivät ymmärrä, miksi testaus ja rajaukset ovat tärkeitä, he:
-- Rakentavat botteja, jotka antavat virheellistä tietoa
-- Eivät tiedä, miten vaatia bottia toimimaan oikein
-- Luottavat siihen, että ensimmäinen versio on täydellinen (eivät iteroi)
-
-Siksi **varmista, että jokainen opiskelija saa käytännön kokemuksen testauksesta** tämän oppitunnin aikana.
+- Pyydä opiskelijaa lisäämään testejä useammalle käyttäjäryhmälle.
+- Pyydä opiskelijaa kirjoittamaan testitilanne, jossa tietopohja on vanhentunut.
+- Pyydä opiskelijaa suunnittelemaan tietopohjan päivitysprosessi: kuka päivittää, milloin ja miten päivitys tarkistetaan.
+- Pyydä opiskelijaa vertaamaan kahta eri versiota botista: ennen korjausta ja korjauksen jälkeen.
 
 ---
 
-## Vihjeet opettajalle
+## Tarkistustehtävät oppimisen varmistamiseen
 
-**Milloin botti tarvitsee tietopohjaa:**
-- Kun sillä täytyy vastata organisaation sisäisistä asioista
-- Kun vastausten täytyy olla tarkkoja ja ajankohtaisia
-- Kun yleinen ChatGPT-tieto ei riitä
+### 1. Tietopohja
 
-**Milloin botti tarvitsee rajauksia:**
-- Aina, kun botti voi vahingoittaa käyttäjää väärin tietämällä
-- Kun botti käsittelee herkkiä tietoja
-- Kun botin toiminta-alue on rajattu
+**Kysymys:** Miksi botti tarvitsee tietopohjaa? Eikö se osaa kaiken, mitä yleinen tekoälymalli tietää?
 
-**Mitä testata:**
-- Positiivisesti: perustehtävät
-- Negatiivisesti: turvallisuus ja rajaukset
-- Reunatapauksissa: robustisuus ja epätavallisten tilanteiden käsittely
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että yleinen tekoälymalli tietää yleisiä asioita, mutta ei organisaation sisäisiä prosesseja, ajankohtaisia ohjeita tai tarkasti rajattua aineistoa. Tietopohja tekee botista räätälöidyn.
 
-**Miten dokumentoida testit:**
-- Taulukko: testityyppi, input, expected output, actual output, result
-- Analyysi: mitä onnistui, mitä epäonnistui
-- Korjaukset: mitä muutetaan seuraavalla kierroksella
+### 2. Rajaukset
+
+**Kysymys:** Miksi botti tarvitsee rajauksia? Miksi se ei voi vain vastata kaikkeen?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää väärältä tiedolta ja bottia sopimattomilta tilanteilta. Ne tekevät botista vastuullisen.
+
+### 3. Positiivinen testaus
+
+**Kysymys:** Mitä positiivinen testaus tarkoittaa?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että positiivinen testaus varmistaa, että botti osaa tehdä ne asiat, joita sen kuuluu tehdä.
+
+### 4. Negatiivinen testaus
+
+**Kysymys:** Mitä negatiivinen testaus tarkoittaa ja miksi se on tärkeää?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että negatiivinen testaus tarkistaa, osaako botti kieltäytyä tehtävän ulkopuolisista, vaarallisista tai sopimattomista pyynnöistä.
+
+### 5. Reunatapaukset
+
+**Kysymys:** Anna esimerkki reunatapauksesta. Miksi se kannattaa testata?
+
+**Mitä opettaja etsii:** Opiskelija antaa esimerkiksi tyhjän viestin, liian pitkän sekavan kysymyksen, ristiriitaisen pyynnön tai saman kysymyksen toistamisen. Hän ymmärtää, että reunatapaukset paljastavat botin kestävyyttä.
+
+### 6. Iteraatio
+
+**Kysymys:** Miksi testaamista pitää tehdä uudelleen ja uudelleen?
+
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että testit paljastavat ongelmia, joiden perusteella bottia korjataan. Korjausten jälkeen pitää testata uudelleen, jotta nähdään, paraniko toiminta.
 
 ---
 
-## Yhteenveto opettajalle
+## Arviointivinkit
 
-Tämä oppitunti on käänteentekevä. Opiskelijat näkevät, että:
-1. Botti ei ole vain nimetty ChatGPT
-2. Hyvä botti rakentuu **suunnittelusta, tiedosta, rajauksista ja testauksesta**
-3. Testaaminen on jatkuva prosessi
-4. Rajaukset tekevät botista **vastuullisen**, ei rajoittavan
+### Mitä hyvässä suorituksessa näkyy?
 
-Tämän oppitunnin jälkeen opiskelijat ovat valmiita rakentamaan **oikeita, tuotantokvaliteettisia botteja**, ei vain leikkiä.
+- Opiskelija ymmärtää, miksi botti tarvitsee tietopohjan.
+- Opiskelija osaa nimetä sopivan tietopohjan omalle botilleen.
+- Opiskelija osaa kirjoittaa selkeät rajaukset.
+- Opiskelija testaa bottia positiivisilla, negatiivisilla ja reunatapaustesteillä.
+- Opiskelija dokumentoi odotetun ja saadun vastauksen.
+- Opiskelija ehdottaa testitulosten perusteella konkreettisia parannuksia.
+
+### Heikon suorituksen merkkejä
+
+- Opiskelija luottaa siihen, että botti osaa kaiken ilman tietopohjaa.
+- Rajaukset puuttuvat tai ovat liian yleisiä.
+- Testaus jää satunnaiseksi kokeiluksi.
+- Opiskelija testaa vain helppoja tilanteita.
+- Negatiivisia testejä tai reunatapauksia ei ole.
+- Testituloksia ei dokumentoida.
+- Opiskelija ei tee testien perusteella korjauksia.
+
+**Opettajan arviointikysymys:** Näkyykö opiskelijan työssä pelkkä botin kokeilu vai oikea testausprosessi, jossa odotettu toiminta, saatu vastaus ja korjaustarve on dokumentoitu?
+
+---
+
+## Oppimisresurssit
+
+1. **Opiskelijamateriaalit:** käytä opiskelijan itseopiskelumateriaalia ja opiskelijatehtäviä perusideoiden tukena.
+2. **Tietopohjan esimerkit:** PDF, Word-dokumentti, tekstitiedosto, FAQ, käyttöohje, prosessikuvaus, CSV, tietokanta tai API.
+3. **Rajausexamplet:** IT-helpdesk vastaa vain IT-aiheisiin, asiakaspalvelubotti käyttää vain julkista tietoa, opetusbotti ei tee opiskelijan tehtävää valmiiksi.
+4. **Testausdokumentaatio:** taulukko, jossa näkyvät testityyppi, syöte, odotettu vastaus, saatu vastaus, tulos ja korjaus.
+5. **Iteraation esimerkit:** kierros 1: ohjeistus ja testit; kierros 2: korjaukset ja uudet testit; kierros 3: lisäparannukset tarvittaessa.
+
+---
+
+## Punainen lanka: kohti tuotantokvaliteettista bottia
+
+Tämä tunti on kriittinen osa bottien rakentamisen kokonaisuutta. Opiskelijan pitäisi nähdä, että oma botti ei ole valmis heti, kun sille on annettu nimi ja järjestelmäprompti. Luotettava botti tarvitsee tietopohjan, rajaukset, testit ja parannuskierrokset.
+
+Oppituntisarjan eteneminen:
+
+- **Edellisellä tunnilla:** opiskelijat suunnittelivat botin järjestelmäpromptin avulla.
+- **Tällä tunnilla:** opiskelijat oppivat varustamaan botin tiedolla, rajaamaan sen toimintaa ja testaamaan sitä systemaattisesti.
+- **Seuraavalla tunnilla:** opiskelijat rakentavat todellisen Custom GPT:n tai muun käytännön botin.
+- **Myöhemmillä tunneilla:** opiskelijat kehittävät monimutkaisempia ja tuotantokelpoisempia botteja.
+
+**Opettajan muistutus:** Jos opiskelija ymmärtää tällä tunnilla testauksen ja rajausten merkityksen, hän rakentaa myöhemmin paljon turvallisempia ja käyttökelpoisempia botteja.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että hyvä botti rakentuu suunnittelun lisäksi oikeasta tiedosta, vastuullisista rajauksista ja systemaattisesta testauksesta. Botti ei ole valmis ensimmäisellä versiolla. Se paranee, kun sitä testataan, korjataan ja testataan uudelleen.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Mistä tiedät, että bottisi ei vain vastaa, vaan vastaa luotettavasti ja turvallisesti?
+
+> **Lopetuslause opettajalle:** Luotettava botti ei synny yhdellä kysymyksellä. Se syntyy tiedosta, rajoista, testeistä ja parannuksista.
+
+---

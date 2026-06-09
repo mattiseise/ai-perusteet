@@ -1,132 +1,171 @@
-# Rakennuspalikka 3 — kuratoi botin tietopohja
+# Oma botti II — tietopohja, rajaukset ja testaus
 
-## Johdanto: miksi testaaminen on kriittistä
+## Johdanto: miksi testaaminen on kriittistä?
 
-Edellisessä oppitunnissa rakensit tai suunnittelit omaa bottia. Nyt kohtaat tosiasian: botti, jota ei ole testattu, on vaarallinen. Se voi vastata täysin väärin kysymykseen, antaa virheellistä tietoa tai vastailla järjettömästi haastaviin tilanteisiin. Ilman testaamista et koskaan tiedä, toimiiko se oikeasti. Testaaminen ei ole valinnaista osaa — se on se osa, joka tekee botista hyödyllisen työn eikä vain hauskan lelun.
+Edellisessä oppitunnissa rakensit tai suunnittelit omaa bottia. Nyt kohtaat tärkeän tosiasian: botti, jota ei ole testattu, voi olla riskialtis. Se voi vastata kysymykseen väärin, antaa virheellistä tietoa tai toimia epäjohdonmukaisesti haastavissa tilanteissa. Ilman testaamista et voi tietää, toimiiko botti oikeasti.
 
-Tässä oppitunnissa käsittelemme kolmea asiaa, jotka muodostavat hyvän botin. Ensimmäinen on **tietopohja** — mistä botti saa tiedon, jotta se voi vastata tarkasti. Toinen on **rajaukset** — mitä botti ei saa tehdä, jotta se ei mene pieleen. Kolmas on **testaus** — systemaattinen tapa varmistaa, että botti todella tekee, mitä pitää.
+**Testaaminen** ei ole valinnainen lisäosa, vaan se tekee botista hyödyllisen työkalun pelkän hauskan kokeilun sijaan.
 
-## Tietopohja: bottia ruokkiva tieto
+Tässä oppitunnissa käsittelemme kolmea asiaa, jotka muodostavat hyvän botin perustan:
 
-Botti on vain niin hyvä kuin tieto, jota sillä on käytettävissään. Ilman hyvää tietopohjaa (knowledge base) botti arvailee ja sanoo virheellisiä asioita. Siksi tietopohjasta huolehtiminen on ratkaisevaa.
+- **Tietopohja:** mistä botti saa tiedon, jotta se voi vastata tarkasti.
+- **Rajaukset:** mitä botti ei saa tehdä, jotta se ei toimi väärin tai vaarallisesti.
+- **Testaus:** miten varmistat järjestelmällisesti, että botti tekee sen, mitä sen pitää tehdä.
 
-Tietopohja voi koostua monista eri lähteistä, ja niiden valinta riippuu siitä, mitä botti tekee. Perinteinen tietopohja sisältää dokumentteja ja tekstiä — oppimateriaaleja, oppaita, FAQ-dokumentteja, käyttöohjeita. IT-helpdesk-botti hyötyy suuresti, kun sille syötetään kaikki yleiset ongelmat ja niiden ratkaisut. Voit myös käyttää rakennettua tietoa, kuten tietokantoja, CSV-tiedostoja tai taulukoita. Asiakasdataa säilövä botti voi hakea informaatiota tietokannasta reaaliajassa. Monissa tapauksissa haluat ottaa mukaan ulkoisia lähteitä, joista haet ajankohtaista tietoa verkkohaun tai API-kutsujen avulla. Verkkokaupassa toimiva botti voi tarkistaa varaston tilan tietokannasta ennen kuin kertoo asiakkaalle, onko tuote saatavilla.
+## Tietopohja: bottia ohjaava tieto
 
-Kun käyttäjä kysyy "Kuinka nollaan salasanan?", hyvin varustettu IT-helpdesk-botti osaa vastata, koska tietopohja sisältää tämän ohjeen. Ilman tietopohjaa botti tekisi yleisen arvauksen, joka voisi olla täysin väärä.
+Botti on vain niin hyvä kuin tieto, jota sillä on käytettävissään. Ilman hyvää **tietopohjaa** eli knowledge basea botti arvailee ja voi antaa virheellisiä vastauksia. Siksi tietopohjan suunnittelu ja ylläpito ovat ratkaisevan tärkeitä.
 
-Tietopohjaa täytyy myös päivittää säännöllisesti. Jos ohjeistus muuttuu, prosesseissa tapahtuu muutoksia tai tuotteessa lisätään uusia ominaisuuksia, tietopohja täytyy päivittää. Muussa tapauksessa botti antaa vanhentunutta tietoa, ja käyttäjät tekevät väärillä tiedoilla päätöksiä. Vanhentuneet ohjeet voivat aiheuttaa myös turvallisuusongelmia — jos salasanan nollauksessa otetaan käyttöön uusi turvasertifikaatin tarkistus ja botti opettaa vanhan tavan, käyttäjät jäävät suojauksesta jälkeen.
+Tietopohja voi koostua monista eri lähteistä. Lähteiden valinta riippuu siitä, mitä botti tekee. Perinteinen tietopohja sisältää esimerkiksi dokumentteja ja tekstejä: oppimateriaaleja, oppaita, usein kysyttyjä kysymyksiä, käyttöohjeita ja prosessikuvauksia.
 
-Pysähdy hetkeksi: Kuvittele FAQ-botti, joka antaa kuuden kuukauden vanhentunutta tietoa. Mitä seurauksia sillä voisi olla asiakkaalle tai organisaatiolle?
+Esimerkiksi IT-helpdesk-botti hyötyy siitä, että sen tietopohjassa on yleisimmät ongelmat ja niiden ratkaisut. Tietopohja voi sisältää myös rakenteista tietoa, kuten tietokantoja, CSV-tiedostoja tai taulukoita. Joissakin tapauksissa botti voi hyödyntää myös ulkoisia lähteitä, kuten verkkohakua tai API-kutsuja. Esimerkiksi verkkokaupan botti voi tarkistaa varastotilanteen ennen kuin se kertoo asiakkaalle, onko tuotetta saatavilla.
 
-## Rajaukset: mitä botti ei saa tehdä
+Kun käyttäjä kysyy: ”Kuinka nollaan salasanan?”, hyvin varustettu IT-helpdesk-botti osaa vastata, koska tietopohja sisältää oikean ohjeen. Ilman tietopohjaa botti antaisi yleisen arvauksen, joka voisi olla täysin väärä kyseisessä organisaatiossa.
 
-Hyvä botti ei vain osaa vastata — se myös **tietää, mitä se ei osaa**. Rajaukset ovat nämä kriittiset "en osaa" -kohdat, ja ne suojaavat sekä käyttäjää että bottia.
+Tietopohjaa täytyy myös päivittää säännöllisesti. Jos ohjeistus muuttuu, prosessit vaihtuvat tai tuotteeseen lisätään uusia ominaisuuksia, tietopohja täytyy päivittää. Muuten botti voi antaa vanhentunutta tietoa, jonka perusteella käyttäjät tekevät virheellisiä päätöksiä.
 
-Rajauksia voi asettaa usealla tavalla, riippuen siitä, mitä haluat suojata. Yleisin rajaustapa on **aihealueiden rajaus** — kerrot botille suoraan, mihin aiheisiin se vastaa ja mihin ei. IT-helpdesk-botti vastaa IT-ongelmiin, mutta ei myynti- eikä henkilöstöasioihin. Se on selvä ja ymmärrettävä rajaus. Toinen tärkeä rajaustapa on **varmuuskynnys**: jos botti ei ole ainakin 80 prosenttia varma vastauksestaan, se sanoo "En tiedä" eikä yritä arvata. Tämä estää botin antamasta virheellisiä vastauksista, joihin käyttäjä luottaisi. Kolmas rajaustapa on **herkkien tietojen kieltäminen** — määritä selvästi, ettei botti koskaan vastaa kysymyksiin, jotka liittyvät salasanoihin, luottokorttin numeroon tai muihin arkaluontoisiin tietoihin. Viimeinen rajaustapa on **sallittujen toimintojen rajaus** — botti voi vain lukea tietokantaa, ei muuttaa sitä, tai se voi vastata puhelimitse, mutta ei saa ottaa maksupalvelun hallintaan.
+Vanhentuneet ohjeet voivat aiheuttaa myös turvallisuusongelmia. Jos esimerkiksi salasanan nollausprosessiin lisätään uusi tunnistautumisvaihe, mutta botti neuvoo edelleen vanhan tavan, käyttäjät voivat toimia väärin tai ohittaa tärkeän suojauksen.
 
-Käytännön esimerkki auttaa. FAQ-botti osaa vastata IT-ongelmiin hyvin. Kun asiakas kysyy "Kuinka sijoittaisin rahaa osakemarkkinoille?", botti ei yritä vastata. Se sanoo: "En osaa antaa sijoitusneuvoja, koska se vaatii ammatillista rahoitus­koulutusta. Ota yhteyttä rahoituspalveluidemme tiimiin — he voivat auttaa sinua." Se on vastuullinen rajaus. Se ohjaa käyttäjän oikeaan paikkaan sen sijaan, että antaisi ehkä haitallisen neuvon.
+> **Pysähdy hetkeksi:** Kuvittele FAQ-botti, joka antaa kuusi kuukautta vanhentunutta tietoa. Mitä seurauksia sillä voisi olla asiakkaalle tai organisaatiolle?
 
-Rajaukset asetetaan **ohjeistuksella** — kirjoitat botille selvästi ja yksityiskohtaisesti. "Vastaa vain IT-aiheisiin" on liian epämääräinen. Parempi rajaus on "Vastaa vain seuraaviin aiheisiin: Windows-järjestelmä, verkkoyhteydet, salasanien palautus, ohjelmistojen asennus. Jos joku kysyy muista aiheista, kerro, ettei se ole sinun toiminta-alueesi ja anna oikean tiimin yhteystiedot."
+## Rajaukset: mitä botti ei saa tehdä?
 
-Pysähdy hetkeksi: Ajattele agenttia, jolla on oikeus muuttaa asiakkaiden tilejä tai varaston tietoja. Mitkä rajaukset olisivat kriittisiä sen turvallisuuden kannalta?
+Hyvä botti ei vain osaa vastata. Se myös **tietää, mitä se ei osaa**. Rajaukset ovat botin kriittisiä ”en osaa” tai ”en saa tehdä tätä” -kohtia. Ne suojaavat sekä käyttäjää että bottia.
 
-## Testaus: varmistaminen, että botti tekee, mitä pitää
+Rajauksia voi asettaa usealla tavalla sen mukaan, mitä haluat suojata.
 
-Testaaminen ei ole satunnaista kysymysten tekemistä. Se on systemaattista ja järjestelmällistä työtä. Testaat kolmella tavalla, ja jokainen tapa ohjaa bottia eri suuntaan.
+- **Aihealueiden rajaus:** Kerro botille, mihin aiheisiin se vastaa ja mihin ei. IT-helpdesk-botti vastaa IT-ongelmiin, mutta ei myynti-, henkilöstö- tai talousasioihin.
+- **Varmuuskynnys:** Jos botti ei ole riittävän varma vastauksestaan, sen pitää sanoa, ettei se tiedä, eikä yrittää arvata.
+- **Herkkien tietojen kieltäminen:** Määritä selvästi, ettei botti koskaan kysy, tallenna tai paljasta salasanoja, luottokorttinumeroita tai muita arkaluontoisia tietoja.
+- **Sallittujen toimintojen rajaus:** Botti voi esimerkiksi lukea tietokantaa, mutta ei muuttaa sitä. Se voi neuvoa käyttäjää, mutta ei tehdä käyttäjän puolesta järjestelmämuutoksia.
 
-**Ensimmäinen testaustyyppi on positiiviset testit.** Testaat asioita, joiden pitäisi toimia — asioita, joihin botti on suunniteltu vastaamaan. Kun kysyt FAQ-botilta "Kuinka käynnistän tietokoneeni uudelleen?", sen pitäisi antaa selkeät, oikeat askeleet. Kun kysyt asiakaspalvelubotilta "Kuinka näen laskuhistoriani?", sen pitäisi antaa linkki laskuihin tai ohjeet niiden löytämiseen. Dokumentoit jokaisen testin taulukkoon:
+Käytännön esimerkki auttaa hahmottamaan asiaa. FAQ-botti osaa vastata IT-ongelmiin hyvin. Kun käyttäjä kysyy: ”Kuinka sijoittaisin rahaa osakemarkkinoille?”, botin ei pidä yrittää vastata. Sen kannattaa sanoa esimerkiksi: ”En osaa antaa sijoitusneuvoja, koska se vaatii rahoitusalan asiantuntemusta. Ota yhteyttä rahoituspalveluidemme tiimiin.”
 
-Testi: "Kuinka käynnistän tietokoneeni uudelleen?"
-Odotettu vastaus: Selkeät askeleet uudelleenkäynnistykseen
-Todellinen vastaus: "Klikkaa Käynnistys-painiketta, valitse Sammuta, valitse Käynnistä uudelleen, odota..."
-Tulos: ✓ ONNISTUI
+Tämä on vastuullinen rajaus. Botti ohjaa käyttäjän oikeaan paikkaan sen sijaan, että antaisi mahdollisesti haitallisen neuvon.
 
-Testi: "Kuinka muodostan WiFi-yhteyden?"
-Odotettu vastaus: Askeleet WiFi-verkkoon liittymiseen
-Todellinen vastaus: "Klikkaa verkko-ikonia vasemmassa alakulmassa, valitse verkkosi listasta, anna salasana, paina Yhdistä..."
-Tulos: ✓ ONNISTUI
+Rajaukset asetetaan **ohjeistuksella**. Kirjoita botille selvästi ja yksityiskohtaisesti, missä sen toiminta-alue kulkee. Esimerkiksi ”Vastaa vain IT-aiheisiin” on liian epämääräinen. Parempi rajaus on:
 
-Teet monta positiivista testiä — vähintään 10-20, riippuen botin monimutkaisuudesta. Jokaisen pitäisi mennä läpi.
+> Vastaa vain seuraaviin aiheisiin: Windows-järjestelmä, verkkoyhteydet, salasanojen palautus ja ohjelmistojen asennus. Jos käyttäjä kysyy muista aiheista, kerro, ettei aihe kuulu toiminta-alueeseesi, ja ohjaa hänet oikealle tiimille.
 
-**Toinen testaustyyppi on negatiiviset testit.** Testaat asioita, joiden EI pitäisi toimia — asioita, joihin botti ei pitäisi vastata. Jos botti on IT-tuki, ja kysyt "Kuinka sijoitan rahaa?", sen pitäisi kieltäytyä. Se ei saa antaa sijoitusneuvoja. Jos kysyt "Mikä on salasanani?", sen pitäisi kieltäytyä palauttamasta salasanoja turvallisuuden vuoksi. Dokumentoit:
+> **Pysähdy hetkeksi:** Kuvittele agentti, jolla on oikeus muuttaa asiakkaiden tilejä tai varaston tietoja. Mitkä rajaukset olisivat kriittisiä sen turvallisuuden kannalta?
 
-Testi: "Kuinka sijoitan rahaa osakemarkkinoille?"
-Odotettu vastaus: Botti kieltäytyy ja ohjaa oikealle osastolle
-Todellinen vastaus: "En osaa antaa sijoitusneuvoja. Ota yhteyttä rahoituspalveluidemme tiimiin."
-Tulos: ✓ ONNISTUI (kieltäytyi oikein)
+## Testaus: varmista, että botti tekee, mitä pitää
 
-Testi: "Mikä on salasanani?"
-Odotettu vastaus: Botti kieltäytyy
-Todellinen vastaus: "En voi kertoa salasanoja turvallisuussyistä. Voin auttaa sinua nollaamaan sen."
-Tulos: ✓ ONNISTUI (suojasi herkkää tietoa)
+**Testaaminen** ei tarkoita satunnaisten kysymysten esittämistä. Se on systemaattista ja järjestelmällistä työtä. Testaat bottia kolmella tavalla, ja jokainen testaustapa kertoo botin toiminnasta eri näkökulmasta.
 
-Negatiivisilla testeillä varmistetaan, että botti osaa sanoa "ei" ja osaa suojata itseään sekä käyttäjää.
+### 1. Positiiviset testit
 
-**Kolmas testaustyyppi on reunatapaukset.** Testaat outoja, epätavallisia tilanteita, joita et välttämättä odottanut. Mitä tapahtuu, jos käyttäjä tekee tyhjän kysymyksen? Mitä tapahtuu, jos kysymys on hyvin pitkä ja sekava? Mitä tapahtuu, jos käyttäjä pyytää samaa asiaa toistuvasti? Mitä tapahtuu, jos käyttäjä kirjoittaa tahallisesti väärässä kielessa?
+Positiivisissa testeissä testaat asioita, joiden pitäisi toimia. Nämä ovat kysymyksiä ja tilanteita, joihin botti on suunniteltu vastaamaan.
 
-Testi: Tyhjä kysymys (käyttäjä painaa vain "Lähetä" ilman tekstiä)
-Odotettu vastaus: Botti pyytää tarkennusta eikä kaadu
-Todellinen vastaus: "Minulla ei ole vastausta tyhjään kysymykseen. Voisitko kirjoittaa kysymyksesi?"
-Tulos: ✓ ONNISTUI
+Jos kysyt FAQ-botilta ”Kuinka käynnistän tietokoneeni uudelleen?”, sen pitäisi antaa selkeät ja oikeat vaiheet. Jos kysyt asiakaspalvelubotilta ”Kuinka näen laskuhistoriani?”, sen pitäisi antaa linkki laskuihin tai ohjeet niiden löytämiseen.
 
-Testi: Hyvin pitkä ja sekava kysymys
-Odotettu vastaus: Botti pyytää tarkennusta
-Todellinen vastaus: "Kysymyksesi oli sekava. Voisitko jakaa sen osiin ja kysyä yksitellen?"
-Tulos: ✓ ONNISTUI
+Dokumentoi jokainen testi esimerkiksi näin:
 
-Testi: Sama kysymys kolme kertaa peräkkäin
-Odotettu vastaus: Botti ei juudu silmukkaan, osaa vastata tai pyytää tarkennusta
-Todellinen vastaus: Ensimmäinen kerta vastaa, toinen kerta sanoo "Vastasimme jo tähän", kolmas kerta ehdottaa kontaktin ottamista ihmiselle
-Tulos: ✓ ONNISTUI
+| Testi | Odotettu vastaus | Todellinen vastaus | Tulos |
+| --- | --- | --- | --- |
+| Kuinka käynnistän tietokoneeni uudelleen? | Selkeät vaiheet uudelleenkäynnistykseen. | Botti antaa vaiheittaisen ohjeen. | ✓ Onnistui |
+| Kuinka muodostan WiFi-yhteyden? | Vaiheet WiFi-verkkoon liittymiseen. | Botti ohjaa valitsemaan verkon, syöttämään salasanan ja yhdistämään. | ✓ Onnistui |
 
-Reunatapaukset osoittavat, kuinka robust botti on — kestääkö se outoja tilanteita vai kaatuu se?
+Tee useita positiivisia testejä. Sopiva määrä riippuu botin laajuudesta, mutta tärkeintä on, että testaat kaikki keskeiset käyttötapaukset.
 
-## Iterointi: testaaminen, korjaaminen, testaaminen uudelleen
+### 2. Negatiiviset testit
 
-Testaaminen ei lopu siihen, että ajetaan testit kerran. Kun löydät ongelmia, korjaat ne ja testaat uudelleen. Tämä on **iterointia**, ja se on normaali osa botin kehitystä.
+Negatiivisissa testeissä testaat asioita, joiden **ei pitäisi toimia**. Näissä tilanteissa botin pitää osata kieltäytyä, rajata vastaustaan tai ohjata käyttäjä oikeaan paikkaan.
 
-Prosessi näyttää tältä:
+Jos botti on IT-tukibotti ja käyttäjä kysyy: ”Kuinka sijoitan rahaa?”, botin ei pidä antaa sijoitusneuvoja. Jos käyttäjä kysyy: ”Mikä on salasanani?”, botin pitää kieltäytyä turvallisuussyistä.
 
-1. Kirjoita alustava ohjeistus botille
-2. Testaa kaikki kolme tyyppiä (positiiviset, negatiiviset, reunatapaukset)
-3. Dokumentoi kaikki virheet ja ongelmat
-4. Korjaa ohjeistusta tai tietopohjaa
-5. Testaa uudelleen
-6. Toista, kunnes botti on riittävän hyvä
+| Testi | Odotettu vastaus | Todellinen vastaus | Tulos |
+| --- | --- | --- | --- |
+| Kuinka sijoitan rahaa osakemarkkinoille? | Botti kieltäytyy ja ohjaa oikealle osastolle. | Botti kertoo, ettei se anna sijoitusneuvoja, ja ohjaa rahoituspalveluihin. | ✓ Onnistui |
+| Mikä on salasanani? | Botti kieltäytyy. | Botti ei kerro salasanoja, mutta voi ohjata salasanan nollaukseen. | ✓ Onnistui |
 
-Konkreettinen esimerkki:
+Negatiivisilla testeillä varmistat, että botti osaa sanoa ”ei” ja suojaa käyttäjää, organisaatiota ja itseään.
+
+### 3. Reunatapaukset
+
+Reunatapauksissa testaat outoja tai epätavallisia tilanteita. Ne eivät välttämättä ole yleisiä, mutta ne paljastavat, kuinka kestävä botti on.
+
+Testaa esimerkiksi seuraavia tilanteita:
+
+- Käyttäjä lähettää tyhjän kysymyksen.
+- Kysymys on hyvin pitkä ja sekava.
+- Käyttäjä kysyy saman asian monta kertaa peräkkäin.
+- Käyttäjä kirjoittaa tahallaan väärällä kielellä tai hyvin epäselvästi.
+
+| Testi | Odotettu vastaus | Tulos |
+| --- | --- | --- |
+| Tyhjä kysymys | Botti pyytää käyttäjää kirjoittamaan kysymyksen eikä kaadu. | ✓ Onnistui |
+| Hyvin pitkä ja sekava kysymys | Botti pyytää tarkennusta tai ehdottaa kysymyksen pilkkomista osiin. | ✓ Onnistui |
+| Sama kysymys kolme kertaa peräkkäin | Botti ei jää silmukkaan, vaan vastaa, pyytää tarkennusta tai ehdottaa yhteydenottoa ihmiseen. | ✓ Onnistui |
+
+Reunatapaukset osoittavat, kuinka **kestävä** botti on. Hyvä botti ei kaadu outoihin tilanteisiin, vaan toimii hallitusti.
+
+## Iterointi: testaa, korjaa ja testaa uudelleen
+
+Testaaminen ei lopu siihen, että ajat testit kerran. Kun löydät ongelmia, korjaat ne ja testaat uudelleen. Tätä kutsutaan **iteroinniksi**, ja se on normaali osa botin kehittämistä.
+
+Iterointi etenee näin:
+
+1. Kirjoita botille alustava ohjeistus.
+2. Testaa kaikki kolme testityyppiä: positiiviset testit, negatiiviset testit ja reunatapaukset.
+3. Dokumentoi virheet ja ongelmat.
+4. Korjaa ohjeistusta tai tietopohjaa.
+5. Testaa uudelleen.
+6. Toista, kunnes botti toimii riittävän hyvin.
+
+**Konkreettinen esimerkki:**
 
 **Kierros 1:**
-- Ohjeistus: "Vastaa IT-ongelmiin"
-- Positiivinen testi: "Kuinka asennan ohjelmiston?" → Botti antaa ohjeet ✓
-- Negatiivinen testi: "Kuinka poistan loukkaavan roskapostin?" → Botti yrittää vastata, vaikka se on sähköpostitunnus eikä IT-ongelma ✗
-- Korjaus: Lisää ohjeistukseen "ja sähköpostiongelmiin"
+
+- **Ohjeistus:** ”Vastaa IT-ongelmiin.”
+- **Positiivinen testi:** ”Kuinka asennan ohjelmiston?” → Botti antaa ohjeet. ✓
+- **Negatiivinen testi:** ”Kuinka poistan loukkaavan roskapostin?” → Botti ei tunnista aihetta oikein. ✗
+- **Korjaus:** Lisää ohjeistukseen, että botti vastaa myös sähköpostiongelmiin, kuten roskapostiin ja suodatuksiin.
 
 **Kierros 2:**
-- Ohjeistus: "Vastaa IT-ongelmiin ja sähköpostiongelmiin"
-- Negatiivinen testi: "Kuinka voin estää roskapostin?" → Botti antaa hyviä ohjeita roskaportin suodattamisesta ✓
-- Positiivinen testi: "Kuinka vaihin salasanaa?" → Botti antaa oikeat ohjeet ✓
-- Reunatapaus: Tyhjä kysymys → Botti pyytää tarkennusta ✓
-- Tulos: Botti on valmis
 
-Iterointi on täysin normaalia. Ensimmäinen versio harvoin on täydellinen. Hyvät botit syntyvät testaamalla, parannuksilla ja uudella testaamisella.
+- **Ohjeistus:** ”Vastaa IT-ongelmiin ja sähköpostiongelmiin.”
+- **Positiivinen testi:** ”Kuinka voin estää roskapostin?” → Botti antaa hyvät ohjeet roskapostin suodattamiseen. ✓
+- **Positiivinen testi:** ”Kuinka vaihdan salasanan?” → Botti antaa oikeat ohjeet. ✓
+- **Reunatapaus:** Tyhjä kysymys → Botti pyytää tarkennusta. ✓
+- **Tulos:** Botti toimii paremmin kuin ensimmäisessä versiossa.
+
+Iterointi on täysin normaalia. Ensimmäinen versio on harvoin täydellinen. Hyvät botit syntyvät testaamalla, parantamalla ja testaamalla uudelleen.
 
 ## Todellinen esimerkki: helpdesk-botti käytännössä
 
-Kuvittele, että olet rakentamassa IT-helpdesk-bottia organisaatioosi.
+Kuvittele, että rakennat IT-helpdesk-bottia organisaatioosi.
 
-**Tietopohja** sisältää 50 yleisintä IT-ongelmaa ja niiden ratkaisut — kuinka palautetaan salasana, kuinka yhdistytään VPN:ään, kuinka ladataan ohjelmistot, kuinka ratkaistaan verkkoyhteysongelmia. Lisäksi tietopohja sisältää yhteystiedot eskalointia varten, sillä joskus botti ei osaa vastata ja ihminen tarvitsee ottaa hoidon.
+**Tietopohja** sisältää 50 yleisintä IT-ongelmaa ja niiden ratkaisut. Mukana ovat esimerkiksi salasanan palauttaminen, VPN-yhteyden muodostaminen, ohjelmistojen asentaminen ja verkkoyhteysongelmien ratkaiseminen. Lisäksi tietopohjassa on yhteystiedot eskalointia varten, koska joskus botti ei osaa ratkaista ongelmaa ja asia täytyy ohjata ihmiselle.
 
-**Rajaukset** ovat selkeät. Botti vastaa vain IT-ongelmiin — ei HR-, rahoitus- tai myynnin aiheisiin. Jos botti ei ole ainakin 85 prosenttia varma vastauksestaan, se sanoo "En osaa vastata tähän" eikä yritä arvata. Botti voi vain lukea tietokantaa ja hakea ohjeita — se ei voi muuttaa käyttäjätietoja tai salasanoja, vaan voi vain neuvoa käyttäjää nollaamaan salasanan itse.
+**Rajaukset** ovat selkeät. Botti vastaa vain IT-ongelmiin, ei HR-, talous- tai myyntiaiheisiin. Jos botti ei ole riittävän varma vastauksestaan, se sanoo, ettei osaa vastata, eikä yritä arvata. Botti voi lukea tietopohjaa ja hakea ohjeita, mutta se ei saa muuttaa käyttäjätietoja, salasanoja tai järjestelmäasetuksia.
 
-**Testaus** on systemaattinen. Testaat 15 yleisintä kysymystä — botin pitäisi osata vastata kaikkiin. Testaat 5 negatiivista tapausta, joissa botti pitäisi kieltäytyä. Testaat 5 reunatapaustakin — tyhjät kysymykset, sekavat kysymykset, pitkät kysymykset. Dokumentoit jokaisen ja varmistan, että botti käyttäytyy oikein.
+**Testaus** on systemaattista. Testaat esimerkiksi 15 yleisintä kysymystä, joihin botin pitäisi osata vastata. Testaat myös viisi negatiivista tapausta, joissa botin pitää kieltäytyä tai ohjata käyttäjä muualle. Lisäksi testaat viisi reunatapausta, kuten tyhjät kysymykset, sekavat kysymykset ja pitkät kysymykset. Dokumentoit jokaisen testin ja varmistat, että botti käyttäytyy oikein.
 
-Kun tämä testaus on valmis ja kaikki testit menevät läpi, botti on valmis oikeaan käyttöön.
+Kun testaus on valmis ja keskeiset testit menevät läpi, botti on valmis kokeiltavaksi oikeassa käytössä.
 
 ## Kohti omaa projektia
 
-Tällä tunnilla käsittelimme kolmea asiaa, jotka muodostavat hyvän botin: tietopohjan, rajaukset ja testauksen. Tehtävissä kuratoit bottisi **tietopohjan** (Rakennuspalikka 3) — 3–5 huolella valittua dokumenttia, joista botti ammentaa oman alasi asiantuntemuksen. Rajaukset olet jo määritellyt tunnilla 14 osana botin määrittelydokumenttia. Testaukseen palaamme tunnilla 18, kun botti on rakennettu ja valmis koeajoon. Seuraavaksi tunnilla 17 yhdistät kolme rakennuspalikkaasi ensimmäiseksi toimivaksi botiksi Copilotissa.
+Tällä tunnilla opit **tietopohjan**, **rajausten** ja **testauksen** merkityksen. Nämä kolme perustaa erottavat hyvän botin huonosta.
+
+Mieti omaa bottiasi seuraavien kysymysten avulla:
+
+- Mitä tietoa botti tarvitsee, jotta se toimii hyvin?
+- Mistä aiheista botin pitää kieltäytyä?
+- Mitä botti saa tehdä ja mitä se ei saa tehdä?
+- Miten testaat, että botti tekee sen, mitä lupaa?
+- Miten dokumentoit testitulokset?
+
+Nämä kysymykset ovat keskeisiä, kun rakennat bottisi valmiiksi arviointiprojektissa. Hyvä botti ei ole vain nimetty ChatGPT, vaan **testattu, rajattu ja tarkoituksenmukainen työkalu**.
 
 ## Yhteenveto
 
-Hyödyllinen botti rakentuu kolmelle vahvalle perustalle. **Tietopohja** antaa botille tiedon, jonka perusteella se voi vastata tarkasti ja ajankohtaisesti. **Rajaukset** varmistavat, että botti ei tee vaarallisia tai sopimatonta asioita ja tietää, milloin sen pitäisi kieltäytyä. **Testaus** varmistaa systemaattisesti, että botti todella tekee, mitä pitää — positiivisissa tilanteissa, negatiivisissa tilanteissa ja epätavallisissa reunatapauksissa. Ja testaus ei ole kertaluonteinen työ — se on iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen, kunnes se on riittävän hyvä. Hyvillä botteilla on hyvät tiedot, selkeät rajat ja perusteellinen testaus takana.
+Hyödyllinen botti rakentuu kolmelle vahvalle perustalle:
+
+1. **Tietopohja** antaa botille tiedon, jonka perusteella se voi vastata tarkasti ja ajankohtaisesti.
+2. **Rajaukset** varmistavat, että botti ei tee vaarallisia tai sopimattomia asioita ja tietää, milloin sen pitää kieltäytyä.
+3. **Testaus** varmistaa järjestelmällisesti, että botti toimii oikein positiivisissa tilanteissa, negatiivisissa tilanteissa ja epätavallisissa reunatapauksissa.
+
+Testaus ei ole kertaluonteinen työ, vaan iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen ja jatkat, kunnes botti on riittävän hyvä. Hyvällä botilla on laadukas tietopohja, selkeät rajat ja perusteellinen testaus.
+
+---

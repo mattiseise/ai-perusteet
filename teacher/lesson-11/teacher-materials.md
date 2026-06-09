@@ -2,95 +2,242 @@
 
 ## Oppimisen tavoitteet
 
-Tämän lohkon jälkeen opiskelija tuntee muut mallit kuin ChatGPT ja Claude (Gemini, DeepSeek, Llama, Mistral), ymmärtää jokaisen mallin edut ja haitat (hinta, nopeus, tietosuoja), osaa vertailla malleja käytännössä antamalla niille saman tehtävän ja näkemällä erot, tietää tietosuojasta (missä palvelimet ovat ja mitä GDPR on), osaa valita oikean mallin tilanteen mukaan (mihin sopii DeepSeek, mihin Claude, mihin paikallinen malli), ymmärtää paikallisen mallin ajamisesta (Llama ja Mistral omalla tietokoneella täydellisen yksityisyyteen) ja ajattelee kriittisesti eikä vain "ChatGPT on paras".
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää, ettei tekoälytyökalujen maailma rajoitu ChatGPT:hen ja Claudeen. Opiskelija tutustuu muihin malleihin ja palveluihin, kuten **Geminiin**, **DeepSeekiin**, **Llamaan** ja **Mistraliin**, ja oppii arvioimaan niitä tehtävän, hinnan, nopeuden, tietosuojan ja käyttötarkoituksen perusteella.
+
+### Muistaa ja ymmärtää
+
+- Opiskelija osaa nimetä useita tekoälymalleja ja -palveluita, kuten **Gemini**, **DeepSeek**, **Llama** ja **Mistral**.
+- Opiskelija ymmärtää, että eri mallit eroavat toisistaan esimerkiksi hinnan, nopeuden, laadun, tietosuojan, kontekstikoon ja käyttötavan perusteella.
+- Opiskelija ymmärtää, että **paikallinen malli** voidaan ajaa omalla tietokoneella, jolloin data pysyy käyttäjän omassa ympäristössä.
+- Opiskelija ymmärtää, että **pilvipalveluna** käytettävä malli lähettää syötteen palveluntarjoajan järjestelmään, jolloin tietosuoja ja käyttöehdot pitää arvioida erikseen.
+
+### Soveltaa ja analysoida
+
+- Opiskelija osaa vertailla malleja käytännössä antamalla niille saman tehtävän ja tarkastelemalla eroja vastauksissa.
+- Opiskelija osaa arvioida, milloin halpa tai nopea malli riittää ja milloin tarvitaan tarkempaa, turvallisempaa tai organisaation hyväksymää ratkaisua.
+- Opiskelija osaa tunnistaa, milloin tietosuoja rajoittaa mallin käyttöä, esimerkiksi oppilaiden, potilaiden, asiakkaiden tai yrityksen sisäisten tietojen käsittelyssä.
+
+### Luoda ja arvioida
+
+- Opiskelija osaa valita mallin tilanteen mukaan ja perustella valintansa ammatillisesti.
+- Opiskelija osaa tehdä lyhyen työkalusuosituksen, jossa huomioidaan **hinta**, **laatu**, **nopeus**, **tietosuoja** ja **käyttötarkoitus**.
+- Opiskelija ymmärtää, että ammattilainen ei valitse mallia pelkän suosion tai hinnan perusteella, vaan testaa ja dokumentoi havaintonsa.
+
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälymallin valinta on ammatillinen päätös. Oikea valinta riippuu tehtävästä, datasta, budjetista, tietosuojasta ja siitä, missä ympäristössä työtä tehdään. ”ChatGPT on paras” tai ”halvin on paras” eivät ole ammatillisia perusteluja.
 
 ---
 
-## Mitä opiskelijat epäymmärtävät
+## Pedagoginen lähestymistapa
 
-### 1. "ChatGPT on paras"
+### Ydinviesti: malleja on monia, ja jokaisella on oma käyttötarkoituksensa
 
-**Mitä kuulla:** Opiskelijat luulevat, että ChatGPT on ainoa valinta.
+Oppitunnin alussa kannattaa muistuttaa opiskelijoita edellisestä lohkosta: ChatGPT, Claude ja Copilot ovat tunnettuja työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Nyt tarkastellaan muita malleja ja palveluita sekä sitä, miten ammattilainen tekee valinnan niiden välillä.
 
-**Totta on:** ChatGPT on tunnetuin, mutta ei paras kaikelle, koska Claude on parempi ohjelmoinnissa, Gemini on halvempi ja DeepSeek on nopea. Valinta riippuu siitä, mitä haluat tehdä.
+> **Ammattilainen ei kysy vain, mikä malli on paras. Hän kysyy: mikä malli sopii tähän tehtävään, tällä datalla ja näillä rajoituksilla?**
 
-**Mitä sanoa:** "ChatGPT on kuin suosituin levy. Se on hyvä, mutta ei kaikille, ja Claude on toisille parempi. Gemini on halvempi ja jokaisella on paikkansa."
+Korosta opiskelijoille:
 
-### 2. "DeepSeek on halpa, miksi en käytä sitä?"
+- **Gemini** voi olla hyödyllinen etenkin Googlen ekosysteemissä ja tilanteissa, joissa tarvitaan edullista tai helposti saatavilla olevaa mallia.
+- **DeepSeek** voi olla houkutteleva hinnan ja nopeuden vuoksi, mutta sen käyttö vaatii erityistä huomiota tietosuojan ja datan sijainnin näkökulmasta.
+- **Llama** ja **Mistral** voivat soveltua paikalliseen käyttöön, jolloin data ei välttämättä poistu käyttäjän omalta koneelta tai organisaation hallitusta ympäristöstä.
+- **Paikallinen malli** voi olla hitaampi tai laadultaan rajatumpi kuin suuri pilvimalli, mutta se voi olla paras ratkaisu, kun yksityisyys ja hallinta ovat tärkeimpiä kriteerejä.
 
-**Mitä kuulla:** Opiskelijat näkevät hinnan ja haluavat käyttää sitä.
+### Mallien vertailu opetuksessa
 
-**Totta on:** DeepSeek on hyvä ja halpa, mutta tiedot menevät Kiinan palvelimille. EU:ssa tämä on ongelma, koska GDPR kieltää sen, eikä oppilaiden tiedot, potilastiedot ja yrityksen asiakastiedot voi mennä sinne.
+Älä tee tunnista pelkkää mallien nimien luettelointia. Opiskelijan pitää nähdä, miten mallit eroavat käytännössä. Paras tapa on antaa sama tehtävä usealle mallille ja vertailla vastauksia yhdessä.
 
-**Mitä sanoa:** "DeepSeek on hyvä, mutta kun lähetät siihen oppilaiden nimiä tai koodia, se menee Kiinan palveluun ja Kiinan hallitus voi nähdä sen. EU:ssa tämä ei ole sallittua. Ymmärrät nyt, miksi ammattilaiset ovat varovaisia?"
+| Malli tai palvelu | Mahdollinen vahvuus | Mahdollinen rajoitus | Sopiva opetusesimerkki |
+| --- | --- | --- | --- |
+| **Gemini** | Helppo kokeilla, usein nopea ja käyttökelpoinen yleisiin tehtäviin. | Tulosten laatu ja käyttöehdot pitää arvioida tehtäväkohtaisesti. | Lyhyt tekstin tiivistys, ideointi tai vertailutehtävä. |
+| **DeepSeek** | Voi olla nopea ja edullinen etenkin teknisissä tehtävissä ja koodissa. | Tietosuoja, datan sijainti ja käyttöehdot pitää arvioida erityisen tarkasti ennen ammatillista käyttöä. | Oman ei-arkaluontoisen koodin selittäminen tai luova testitehtävä. |
+| **Llama** | Voidaan ajaa paikallisesti tai organisaation omassa ympäristössä. | Vaatii asennuksen, laitteistoresursseja ja mallin valintaa. | Paikallisen mallin kokeilu Ollamalla tai LM Studiolla. |
+| **Mistral** | Sopii moniin kevyempiin ja paikallisiin kokeiluihin mallista riippuen. | Laatu, nopeus ja soveltuvuus riippuvat käytetystä malliversiosta ja ajotavasta. | Paikallinen yksityisyyttä korostava testitehtävä. |
 
-### 3. "Paikallinen malli on liian vaikea"
+**Opettajan huomio:** Mallien ominaisuudet, hinnat ja käyttöehdot muuttuvat nopeasti. Esitä yksittäiset ominaisuudet aina tarkistettavina asioina, ei pysyvinä totuuksina. Tunnin ydintaito on vertailu ja päätöksenteko, ei mallilistan ulkoa muistaminen.
 
-**Mitä kuulla:** Opiskelijat luulevat, että omalla koneella ajaminen vaatii ohjelmointia.
+---
 
-**Totta on:** Ohjelmat, kuten Ollama ja LM Studio, tekevät siitä helpoksi, ja se on kuin sovelluksen asentaminen.
+## Tietosuoja ja datan sijainti
 
-**Mitä sanoa:** "Ollama tekee siitä helppoa, asennit sen, valitset mallin, ja se toimii. Ei tarvitse koodia. Kokeile!"
+### Miksi tietosuoja on keskeinen osa mallin valintaa?
 
-### 4. "Paikallinen malli on hidas ja huono"
+Opiskelijoille pitää tehdä selväksi ero henkilökohtaisen kokeilun ja ammatillisen käytön välillä. Yksityishenkilö voi kokeilla erilaisia palveluita omalla, ei-arkaluontoisella aineistollaan. Työelämässä tilanne on toinen: työntekijä voi käsitellä oppilaiden, asiakkaiden, potilaiden, työntekijöiden tai yrityksen sisäisiä tietoja.
 
-**Mitä kuulla:** Opiskelijat ajattelevat, että paikallinen malli on pienempi ja heikkompi.
+> **Henkilökohtaisessa käytössä voi kokeilla. Ammatillisessa käytössä täytyy tietää, mihin data menee.**
 
-**Totta on:** Paikallinen malli on pienempi, mutta jos haluat yksityisyyden ja ilmaisen käytön, se on täydellinen, koska tiedot pysyvät sinulla, etkä maksa per kysymys.
+Kun tekoälypalvelua käytetään työssä, opiskelijan pitäisi osata kysyä:
 
-**Mitä sanoa:** "Kyllä, se on hitaampi, mutta kaikki pysyy sinulla, 100 prosenttia yksityinen ja ilmainen. Jos tarvitset nopeutta, käytä pilvipalvelua, jos tarvitset yksityisyyttä, käytä paikallista."
+- Mitä dataa mallille annetaan?
+- Sisältääkö data henkilötietoja, salassa pidettävää tietoa tai yrityksen sisäistä aineistoa?
+- Missä palvelimet sijaitsevat tai missä dataa käsitellään?
+- Käytetäänkö syötettyä dataa palvelun kehittämiseen tai mallien kouluttamiseen?
+- Onko organisaatio hyväksynyt työkalun tähän käyttötarkoitukseen?
+- Voiko tehtävän tehdä paikallisella mallilla tai anonymisoidulla aineistolla?
 
-### 5. "Tietosuoja on vain yrityksille"
+### DeepSeek ja tietosuojakeskustelu
 
-**Mitä kuulla:** Opiskelijat ajattelevat, että tietosuoja ei ole heille tärkeä.
+DeepSeek kannattaa käsitellä opetuksessa hyvänä esimerkkinä siitä, että tekninen hyöty ei yksin riitä työkalun valinnan perusteeksi. Malli voi olla nopea, halpa tai teknisesti kiinnostava, mutta jos data siirtyy palveluun, jonka tietosuojakäytännöt eivät sovi organisaation vaatimuksiin, käyttö voi olla ammatillisesti väärä valinta.
 
-**Totta on:** Henkilökohtaisesti se ei ole kriittistä, mutta ammatillisesti se on tärkeä, koska opettaja, lääkäri ja sosiaalityöntekijä käsittelevät herkkiä tietoja, joista sinun on tiedettävä säännöt.
+**Esimerkki opetukseen**
 
-**Mitä sanoa:** "Henkilökohtaisesti käytä mitä haluat, mutta kun työskentelet opettajana tai lääkärinä, sinun on tiedettävä, mihin tiedot menevät. Tämä on ammattilaisuutta."
+Omaan harjoituskoodiin tai luovaan tekstiin DeepSeek voi olla kokeilukelpoinen. Oppilaiden, potilaiden, asiakkaiden tai yrityksen sisäisten tietojen käsittelyyn sitä ei pidä käyttää ilman organisaation tietosuoja-arviointia ja hyväksyntää.
+
+Tärkeä muotoilu opiskelijoille: älä opeta yksinkertaisesti, että jokin palvelu on ”hyvä” tai ”kielletty”. Opeta, että ammattilainen tarkistaa käyttöehdot, datan sijainnin, organisaation ohjeet ja soveltuvan lainsäädännön ennen käyttöä.
+
+---
+
+## Paikalliset mallit
+
+### Mitä tarkoittaa paikallinen malli?
+
+**Paikallinen malli** tarkoittaa mallia, jota ajetaan käyttäjän omalla tietokoneella tai organisaation hallitsemassa ympäristössä. Tällöin syötteet eivät lähtökohtaisesti siirry ulkopuoliseen pilvipalveluun samalla tavalla kuin verkkopalvelua käytettäessä.
+
+Paikallisia malleja voidaan kokeilla esimerkiksi työkaluilla kuten **Ollama** tai **LM Studio**. Näiden tarkoitus on tehdä mallien kokeilemisesta helpompaa ilman, että opiskelijan täytyy itse rakentaa monimutkaista ohjelmointiympäristöä.
+
+| Paikallisen mallin etu | Mitä se tarkoittaa käytännössä? | Mitä pitää silti huomioida? |
+| --- | --- | --- |
+| **Yksityisyys** | Data pysyy omalla koneella tai hallitussa ympäristössä. | Käyttäjän pitää silti huolehtia koneen tietoturvasta ja käyttöoikeuksista. |
+| **Kustannusten hallinta** | Käyttö ei välttämättä maksa jokaisesta kyselystä erikseen. | Laitteisto, sähkö, asennus ja ylläpito ovat silti kustannuksia. |
+| **Kontrolli** | Käyttäjä tai organisaatio hallitsee, mitä mallia käytetään ja missä se toimii. | Mallin laatu, nopeus ja päivitykset ovat käyttäjän tai organisaation vastuulla. |
+
+### Paikallisen mallin rajat
+
+Paikallista mallia ei pidä esittää täydellisenä ratkaisuna kaikkiin tilanteisiin. Se voi olla yksityisyyden kannalta erinomainen, mutta se voi olla hitaampi, heikompi tai teknisesti vaativampi kuin suuri pilvipalvelu.
+
+> **Jos tärkeintä on nopeus ja paras mahdollinen laatu, pilvimalli voi olla parempi. Jos tärkeintä on yksityisyys ja kontrolli, paikallinen malli voi olla parempi.**
+
+---
+
+## Yleisiä väärinkäsityksiä
+
+### Väärinkäsitys 1: ”ChatGPT on paras.”
+
+**Korjaava näkökulma:** ChatGPT on tunnettu ja monipuolinen, mutta se ei tarkoita, että se olisi paras kaikkeen. Eri mallit sopivat eri tehtäviin. Ammattilainen vertailee vaihtoehtoja eikä valitse työkalua pelkän tunnettuuden perusteella.
+
+### Väärinkäsitys 2: ”DeepSeek on halpa, joten sitä kannattaa käyttää aina.”
+
+**Korjaava näkökulma:** Hinta on vain yksi valintakriteeri. Jos syötteessä on henkilötietoja, arkaluontoista dataa tai yrityksen sisäistä aineistoa, tietosuoja voi olla hintaa tärkeämpi tekijä. Halpa työkalu voi olla väärä valinta, jos se ei täytä organisaation tai lainsäädännön vaatimuksia.
+
+### Väärinkäsitys 3: ”Paikallinen malli on liian vaikea.”
+
+**Korjaava näkökulma:** Paikallisten mallien kokeileminen on helpottunut. Työkalut kuten Ollama ja LM Studio madaltavat kynnystä. Opiskelijan ei tarvitse heti ymmärtää kaikkea teknistä taustaa, vaan hän voi aloittaa ohjatusta kokeilusta.
+
+### Väärinkäsitys 4: ”Paikallinen malli on aina huono ja hidas.”
+
+**Korjaava näkökulma:** Paikallinen malli voi olla pienempi ja hitaampi kuin suuri pilvimalli, mutta se voi silti olla oikea ratkaisu, jos tehtävä on rajattu ja yksityisyys on tärkeää. Mallin sopivuus arvioidaan tehtävän mukaan.
+
+### Väärinkäsitys 5: ”Tietosuoja koskee vain yrityksiä.”
+
+**Korjaava näkökulma:** Tietosuoja koskee kaikkia, jotka käsittelevät toisten ihmisten tietoja. Opettaja, lääkäri, sosiaalityöntekijä, IT-tukihenkilö ja asiakaspalvelija voivat kaikki käsitellä arkaluontoista dataa. Ammattilaisena opiskelijan täytyy tietää, mitä dataa saa syöttää mihinkin palveluun.
 
 ---
 
 ## Valmistelu opettajalle
 
-### Viikko ennen lähiosaa (30 minuuttia)
+### Viikko ennen lähiosaa, noin 30 minuuttia
 
-Testaa kaksi mallia samalla tehtävällä, esimerkiksi "Kirjoita lyhyt tarina tulevaisuudesta". Testaa Gemini (ilmainen Google AI Studio), DeepSeek tai Llama ja kopioi vastaukset muistiin.
+- Valitse kaksi tai kolme mallia, joita voit vertailla tunnilla.
+- Testaa sama tehtävä esimerkiksi Geminillä, DeepSeekillä ja paikallisella mallilla, jos käytettävissä.
+- Kopioi vastaukset talteen tai ota kuvakaappaukset.
+- Valmistele 3–4 tietosuojaskenaariota pienryhmäkeskustelua varten.
+- Tarkista, mitä palveluita opiskelijat voivat käyttää oppilaitoksen verkossa ja tunnuksilla.
 
-Valmistele ryhmille 3-4 skenaariota (opettaja-tehtävät ovat valmiita).
+### Päivää ennen lähiosaa, noin 15 minuuttia
 
-### Päivää ennen lähiosaa (15 minuuttia)
+- Testaa internet-yhteys ja pääsy valitsemiisi palveluihin.
+- Varmista, että varamateriaali toimii myös ilman live-yhteyttä.
+- Valmistele kuvakaappaukset tai kopiot vastauksista siltä varalta, että jokin palvelu ei toimi tunnilla.
+- Valitse yksi paikallisen mallin demo, jos se on realistista käytettävissä olevilla koneilla.
 
-Varmista, että sinulla on internetti ja se toimii, testaa Google AI Studio -pääsy, tee testit muille malleille jos käytät niitä ja varaa varasuunnitelma siltä varalta, että netti ei toimi (voit näyttää kuvakaappauksia).
+### Lähiosan rakenne, 90 minuuttia
 
-### Lähiosassa (90 minuuttia)
+| Vaihe | Aika | Tavoite |
+| --- | --- | --- |
+| **Johdanto** | 5 min | Kytke tunti edelliseen: nyt tarkastellaan muita malleja ja valintaperusteita. |
+| **Tehtävä 1: mallivertailu** | 25 min | Opiskelijat näkevät, että sama tehtävä tuottaa eri malleilla erilaisia vastauksia. |
+| **Tehtävä 2: tietosuojaskenaariot** | 30 min | Opiskelijat valitsevat mallin tilanteen ja datan herkkyyden perusteella. |
+| **Tehtävä 3: mallien testaus** | 25 min | Opiskelijat testaavat mallia itse ja dokumentoivat havaintonsa. |
+| **Lopetus** | 5 min | Kokoa punainen lanka: valinta riippuu hinnasta, nopeudesta, laadusta ja tietosuojasta. |
 
-**Alku (5 minuuttia):**
+### Jos internet ei toimi
 
-Kerro opiskelijoille: "Viime viikolla opimme ChatGPT:stä ja Claudesta, tänään näytämme, että muita malleja on olemassa ja ne tuottavat erilaisia vastauksia. Ammattilaisesti sinun pitää tietää, mikä valinta sopii mihinkin."
+- Käytä etukäteen tallennettuja kuvakaappauksia tai vastauskopioita.
+- Anna opiskelijoiden vertailla valmiita vastauksia paperilla tai jaetussa dokumentissa.
+- Siirrä varsinainen mallien testaus seuraavalle tunnille tai kotitehtäväksi.
 
-**Tehtävä 1: Mallivertailu (25 minuuttia)**
+### Jos opiskelijat eivät näe aiheen merkitystä
 
-Näytä kolme eri vastausta samaan tehtävään, kysy opiskelijoilta, mitä eroja he näkevät, ja selitä, että mallit ovat erilaisia.
+Palauta keskustelu työelämään:
 
-**Tehtävä 2: Tietosuoja-skenaariot pienryhmissä (30 minuuttia)**
+> Seuraavassa työpaikassa voi olla tarkat säännöt siitä, mitä tekoälymalleja saa käyttää ja millä datalla. Jos ymmärrät nämä erot nyt, osaat toimia ammattilaisena etkä vahingossa riko organisaation tietosuojakäytäntöjä.
 
-Jaa opiskelijat 3-4 ryhmään, anna jokaiselle ryhmälle skenaario, jossa he pohtivat mitä mallia käyttää, ja he esittelevät johtopäätöksensä.
+---
 
-**Tehtävä 3: Malleja testataan (25 minuuttia)**
+## Luokkatehtävien ohjeistus
 
-Opiskelijat avaavat mallin omalla tietokoneella, antavat sille saman tehtävän ja vertaavat vastauksia parin kanssa.
+### TT-A: Mallivertailu samalla tehtävällä
 
-**Lopetus (5 minuuttia):**
+**Tavoite:** Opiskelija huomaa, että eri mallit tuottavat erilaisia vastauksia samaan tehtävään.
 
-"Näimme, että malleja on monia ja ne ovat erilaisia. Ammattilaisesti valinta riippuu hinnasta, nopeudesta ja tietosuojasta."
+**Tehtävä:** Anna sama prompti kahdelle tai kolmelle mallille. Opiskelijat vertailevat vastauksia.
 
-### Jos netti ei toimi
+**Esimerkkiprompt:**
 
-Näytä kuvakaappauksia vastauksista, opiskelijat voivat vertailla kuvia ja tehtävä 3 voidaan siirtää seuraavalle päivälle.
+Kirjoita lyhyt, selkeä ja opiskelijalle sopiva selitys siitä, mitä tarkoittaa tekoälymallin tietosuoja. Käytä esimerkkinä tilannetta, jossa opettaja käsittelee oppilaiden tietoja.
 
-### Jos opiskelijat eivät halua oppia
+**Vertailukysymykset opiskelijalle:**
 
-Kerro: "Seuraavassa työpaikassa on säännöt, mitä malleja saa käyttää. Jos tiedät nämä asiat nyt, et häpeä siellä."
+- Mikä vastaus oli selkein?
+- Mikä vastaus oli tarkin?
+- Mikä vastaus huomioi tietosuojan parhaiten?
+- Mikä vastaus oli käytännössä hyödyllisin?
+- Mikä malli sopisi tähän tehtävään parhaiten ja miksi?
+
+**Aika-arvio:** 25 minuuttia
+
+---
+
+### TT-B: Tietosuojaskenaariot pienryhmissä
+
+**Tavoite:** Opiskelija osaa valita mallin sen perusteella, millaista dataa käsitellään.
+
+**Tehtävä:** Jaa opiskelijat ryhmiin. Jokainen ryhmä saa skenaarion ja valitsee sopivan mallin tai toimintatavan. Ryhmä esittelee johtopäätöksensä luokalle.
+
+| Skenaario | Hyvä ratkaisu | Mitä perustelussa pitäisi näkyä? |
+| --- | --- | --- |
+| Opettaja haluaa tiivistää oppilaiden palautteita, joissa on nimiä ja henkilökohtaisia tietoja. | Käytä vain organisaation hyväksymää työkalua tai anonymisoi data. Paikallinen malli voi olla vaihtoehto. | Oppilastiedot ovat henkilötietoja, eikä niitä saa syöttää mihin tahansa palveluun. |
+| Opiskelija haluaa apua omaan harjoituskoodiinsa, joka ei sisällä salaisuuksia. | Useampi malli voi sopia, esimerkiksi ChatGPT, Gemini, DeepSeek tai paikallinen malli. | Data ei ole arkaluontoista, joten valinnassa voi painottua hinta, nopeus ja laatu. |
+| Sairaala haluaa analysoida potilaspalautteita. | Vain hyväksytty, tietosuojan täyttävä ratkaisu. Paikallinen tai organisaation hallittu malli voi olla tarpeen. | Potilastiedot ovat erittäin arkaluontoisia, joten tietosuoja on tärkein valintakriteeri. |
+| Pieni yritys haluaa edullisen työkalun yleiseen ideointiin ja tekstiluonnoksiin. | Edullinen pilvipalvelu tai paikallinen malli voi sopia, jos aineisto ei sisällä salassa pidettävää tietoa. | Budjetti on tärkeä, mutta käyttöehdot ja datan luonne pitää silti tarkistaa. |
+
+**Aika-arvio:** 30 minuuttia
+
+---
+
+### TT-C: Mallin testaus omalla koneella
+
+**Tavoite:** Opiskelija harjoittelee mallin testaamista ja havaintojen dokumentointia.
+
+**Tehtävä:** Opiskelija valitsee yhden saatavilla olevan mallin tai palvelun ja testaa sillä saman tehtävän, jota luokka käytti vertailussa. Hän dokumentoi havaintonsa lyhyesti.
+
+**Ohje opiskelijalle:**
+
+1. Valitse malli tai palvelu, jota voit käyttää turvallisesti.
+2. Anna sille opettajan antama prompti.
+3. Tallenna vastaus.
+4. Arvioi vastausta neljästä näkökulmasta: selkeys, tarkkuus, nopeus ja tietosuoja.
+5. Kirjoita johtopäätös: mihin tehtävään tämä malli sopisi?
+
+| Arviointikohta | Havainto |
+| --- | --- |
+| **Malli tai palvelu** |  |
+| **Vastaus oli selkeä** |  |
+| **Vastaus oli tarkka** |  |
+| **Nopeus ja käytettävyys** |  |
+| **Tietosuoja ja datan sijainti** |  |
+| **Mihin tehtävään suosittelisin?** |  |
+
+**Aika-arvio:** 25 minuuttia
 
 ---
 
@@ -99,79 +246,122 @@ Kerro: "Seuraavassa työpaikassa on säännöt, mitä malleja saa käyttää. Jo
 ### Taso 1: Perustaidot
 
 Opiskelija:
-- Nimeää 5+ mallia
-- Sanoo, mitä eroa niillä on
-- Tietää, että hinta ja tietosuoja eroavat
 
-**Mitä etsit:** "Gemini on halpa. Claude on tarkka. DeepSeek on halpa, mutta Kiinassa. Llama on yksityinen."
+- nimeää vähintään viisi tekoälymallia tai -palvelua
+- osaa sanoa, että mallit eroavat toisistaan
+- tunnistaa, että hinta, nopeus ja tietosuoja vaikuttavat valintaan
+
+**Mitä opettaja etsii:** Opiskelija osaa sanoa esimerkiksi: ”Gemini voi olla edullinen ja helppo kokeilla. DeepSeek voi olla halpa, mutta tietosuoja pitää tarkistaa. Llamaa voi ajaa paikallisesti.”
 
 ### Taso 2: Vertailu
 
 Opiskelija:
-- Testaa kahta mallia samalla tehtävällä
-- Näkee erot (nopeus, selkeys, tarkkuus)
-- Ymmärtää, miksi ne eroavat
 
-**Mitä etsit:** "Claude oli parempi koodissa, mutta Gemini oli nopeampi."
+- testaa vähintään kahta mallia samalla tehtävällä
+- huomaa eroja selkeydessä, tarkkuudessa, nopeudessa tai käytettävyydessä
+- osaa pohtia, miksi erot voivat syntyä
+
+**Mitä opettaja etsii:** Opiskelija ei sano vain ”toinen oli parempi”, vaan kuvaa konkreettisesti, miten vastaus oli parempi.
 
 ### Taso 3: Valinta ja päätöksenteko
 
-Opiskelija valitsee mallin skenaarion mukaan, ottaa huomioon hinnan, tietosuojan ja tarpeet sekä selittää päätöksensä.
+Opiskelija:
 
-**Mitä etsit:** "Sairaalalle valitsisin Claudea, koska potilastiedot ovat herkkiä. DeepSeek ei sovi, koska se on Kiinassa."
+- valitsee mallin skenaarion mukaan
+- huomioi hinnan, tietosuojan, laadun, nopeuden ja datan luonteen
+- perustelee valintansa ammatillisesti
 
-### Testaus
+**Mitä opettaja etsii:** Opiskelija osaa esimerkiksi perustella, miksi potilastietojen käsittely vaatii organisaation hyväksymän tai paikallisen ratkaisun, vaikka jokin muu malli olisi halvempi.
 
-**Kysymys 1:** Mitkä mallit sopivat mihinkin? Halvoille ratkaisuille DeepSeek (mutta vain yksityisille), korkealaatuisille Claude, halvoille ja turvallisille Gemini ja yksityisille Llama paikallisesti.
+---
 
-**Kysymys 2:** Miksi DeepSeek ei sovellu EU:ssa? Data menee Kiinan palvelimille, GDPR kieltää sen ja oppilaiden ja potilaiden tiedot on suojattava.
+## Tarkistuskysymykset
 
-**Kysymys 3:** Mitä valitsisit pienelle yritykselle pienellä budjetilla? Gemini on halpa ja turvallinen vaihtoehto, tai paikallinen Llama joka on ilmainen.
+### Kysymys 1: Mitkä mallit sopivat mihinkin?
+
+**Odotettu vastaus:** Opiskelija osaa antaa tehtäväkohtaisia perusteluja. Esimerkiksi edullisiin ja ei-arkaluontoisiin kokeiluihin voi sopia Gemini tai DeepSeek, tarkkuutta vaativiin tekstianalyyseihin Claude, paikalliseen ja yksityiseen käyttöön Llama tai Mistral paikallisesti.
+
+### Kysymys 2: Miksi DeepSeek voi olla ongelmallinen EU:n ammatillisessa käytössä?
+
+**Odotettu vastaus:** Opiskelija ymmärtää, että kyse ei ole vain mallin teknisestä laadusta. Jos data siirtyy EU:n ulkopuolelle tai palvelun tietosuojakäytännöt eivät täytä organisaation vaatimuksia, sitä ei saa käyttää arkaluontoiseen tai henkilötietoja sisältävään aineistoon ilman asianmukaista arviointia ja hyväksyntää.
+
+### Kysymys 3: Mitä valitsisit pienelle yritykselle pienellä budjetilla?
+
+**Odotettu vastaus:** Opiskelija ei valitse vain halvinta. Hän kysyy ensin, mitä dataa käsitellään. Jos data ei ole arkaluontoista, edullinen pilvipalvelu voi riittää. Jos data on luottamuksellista, paikallinen malli tai organisaation hyväksymä palvelu voi olla parempi ratkaisu.
 
 ---
 
 ## Vinkkejä opettajalle
 
-### Verkkosivustot, joista testata malleja
+### Verkkosivustot ja työkalut testaukseen
 
-Testaa malleja seuraavista sivustoista: Google AI Studio (Gemini) osoitteesta `ai.google.dev` (ilmainen, ei rekisteröintiä tarvita), DeepSeek osoitteesta `chat.deepseek.com` (ilmainen, rajat), Ollama (asennettava ohjelma paikallisesti) ja LM Studio (graafinen käyttöliittymä paikallisesti).
+- **Google AI Studio:** Gemini-mallien kokeiluun.
+- **DeepSeek Chat:** DeepSeekin kokeiluun ei-arkaluontoisilla tehtävillä.
+- **Ollama:** paikallisten mallien ajamiseen komentoriviltä tai yksinkertaisella asennuksella.
+- **LM Studio:** paikallisten mallien kokeiluun graafisessa käyttöliittymässä.
 
-### Konkreettisia esimerkkejä opiskelijoille
+**Opettajan huomio:** Älä syötä testauksessa oikeita henkilötietoja, oppilaiden töitä, asiakastietoja, potilastietoja tai yrityksen sisäistä dataa julkisiin palveluihin. Käytä kuvitteellisia tai anonymisoituja esimerkkejä.
 
-Jos opiskelijat kysyvät "Mihin voisin käyttää DeepSeekia?":
-- **Oma koodaus:** Kyllä.
-- **Kreatiivinen kirjoitus:** Kyllä.
-- **Oppilaiden esseiden arviointi:** Ei (oppilaiden tiedot on suojattava).
-- **Potilastietojen analysointi:** Ei (GDPR).
-- **Asiakastietojen käsittely:** Ei (tietosuoja).
+### Konkreettisia vastauksia opiskelijoiden kysymyksiin
 
-### Jos opiskelijat haluavat kokeilla malleja
+**Kysymys: ”Mihin voisin käyttää DeepSeekia?”**
+**Vastaus:** Omaan ei-arkaluontoiseen koodiin, luovaan kirjoittamiseen, yleiseen ideointiin tai harjoitustehtäviin. Älä käytä sitä oppilaiden, potilaiden, asiakkaiden tai yrityksen luottamuksellisten tietojen käsittelyyn ilman organisaation hyväksyntää.
 
-Auta opiskelijoita avaamaan Google AI Studio (Gemini on ilmainen), suosittele heille Ollama-ohjelmaa, jos he haluavat paikallista ratkaisua, ja tehokkain tapa on antaa heille samat ohjeet ja antaa heidän testata omalla koneella.
+**Kysymys: ”Onko DeepSeek kielletty?”**
+**Vastaus:** Ei välttämättä yksityisessä kokeilussa. Ammatillisessa käytössä ratkaisevaa on, mitä dataa käsitellään, missä dataa käsitellään ja mitä organisaation ohjeet sallivat.
 
-### Hankalia kysymyksiä
+**Kysymys: ”Voinko käyttää DeepSeekia koodiin?”**
+**Vastaus:** Voit käyttää sitä omaan harjoituskoodiin tai ei-arkaluontoiseen koodiin. Älä syötä siihen yrityksen suljettua lähdekoodia, salaisuuksia, API-avaimia, asiakastietoja tai muuta luottamuksellista aineistoa.
 
-**"Onko DeepSeek kielletty?"**
-Vastaus: "Ei kielletty yksityisesti, mutta jos käsittelee oppilaiden tai potilaiden tietoja, se on ongelma."
-
-**"Miksi USA:n mallit ovat parempia?"**
-Vastaus: "Ne eivät ole parempia, vain eri, ja USA:n mallit noudattavat EU:n sääntöjä, kun Kiina ei."
-
-**"Voinko käyttää DeepSeekia koodiin?"**
-Vastaus: "Kyllä, omaan koodiin, mutta jos koodissa on arkaluonteista tietoa, niin ei."
+**Kysymys: ”Miksi paikallinen malli kiinnostaa ammattilaisia?”**
+**Vastaus:** Koska data pysyy paremmin omassa hallinnassa. Paikallinen malli voi olla hyödyllinen silloin, kun yksityisyys ja kontrolli ovat tärkeämpiä kuin paras mahdollinen nopeus tai laatu.
 
 ---
 
-## Seuraavaksi
+## Yleisiä vaikeuksia ja vastaamisen strategiat
 
-Seuraavalla tunilla opimme, kuinka antaa tekoälylle tarkkoja käskyjä. Kun tiedät, mitä malleja on olemassa, opimme tekemään niille hyviä ohjeita.
+### Vaikeus 1: Opiskelijat innostuvat halvimmasta mallista
 
-## Muistiinpanot opettajalle
+**Mitä opiskelija voi sanoa:** ”Miksi emme käyttäisi aina halvinta, jos se toimii?”
 
-Opiskelijat ajattelevat usein, että halvin on paras. DeepSeek on halvin, mutta tietosuoja rajoittaa sen käyttöä, ja tämä on tärkeä oppi: tekniikka ei ole laki, molemmat ovat tärkeitä.
+**Opettajan vastaus:** Halvin voi olla hyvä ei-arkaluontoisissa kokeiluissa, mutta työelämässä hinta ei ole ainoa kriteeri. Jos data on arkaluontoista, väärä työkalu voi aiheuttaa tietosuojariskin, mainehaitan tai juridisen ongelman.
 
-Opiskelijat saattavat innostua DeepSeekista ja kysyä, miksi he eivät käyttäisi sitä. Selitä konkreettisesti, että jos käytetään sitä oppilaiden tietojen kanssa, rikkoutuu lakia.
+**Strategia:** Anna kaksi skenaariota: oma harjoituskoodi ja potilaspalaute. Kysy, voiko samaa työkalua käyttää molempiin.
 
-Paikallinen malli on cool opiskelijoille. Ollama on kuin sovellus ja opiskelijat pitävät siitä, koska he saavat kontrollin. Kannusta heitä kokeilemaan.
+### Vaikeus 2: Opiskelijat pitävät paikallista mallia liian vaikeana
 
-Ammattilaisuus on valinta-taito. Tämän lohkon ydin on, että ammattilaiset tietävät mitä mallia käyttää mihinkin, eikä se ole "ChatGPT on paras", vaan "valitse oikea työkalu oikealle työlle".
+**Mitä opiskelija voi sanoa:** ”En osaa ajaa mallia omalla koneella.”
+
+**Opettajan vastaus:** Paikalliset mallit eivät enää aina vaadi syvää ohjelmointiosaamista. Työkalut kuten Ollama ja LM Studio tekevät kokeilusta helpompaa. Tärkeintä on ymmärtää idea: paikallinen malli antaa enemmän kontrollia dataan.
+
+**Strategia:** Näytä lyhyt demo tai kuvakaappaukset asennuksesta ja mallin käynnistämisestä.
+
+### Vaikeus 3: Opiskelijat eivät ymmärrä GDPR:n merkitystä
+
+**Mitä opiskelija voi sanoa:** ”Eihän yhdellä promptilla ole väliä.”
+
+**Opettajan vastaus:** Yksi prompti voi sisältää henkilötietoja, potilastietoja tai yrityksen salaisuuksia. Ammattilaisena sinun pitää käsitellä dataa oikein jokaisessa yksittäisessä tilanteessa.
+
+**Strategia:** Pyydä opiskelijaa alleviivaamaan esimerkkipromptista kaikki henkilötiedot ja arvioimaan, saisiko ne lähettää ulkoiseen palveluun.
+
+---
+
+## Jatkuva integraatio seuraavalle tunnille
+
+Seuraavalla tunnilla opiskelijat harjoittelevat, miten tekoälylle annetaan tarkkoja ohjeita. Tämä lohko luo pohjan promptaukselle: ensin opiskelijan pitää tietää, mitä mallia hän käyttää ja miksi. Sen jälkeen hän voi opetella ohjaamaan mallia tehokkaammin.
+
+**Opettajan muistutus:** Tämän lohkon ydin ei ole mallien nimien muistaminen. Ydin on valintataito: ammattilainen arvioi mallin sopivuuden tehtävän, datan ja riskien perusteella.
+
+---
+
+## Oppitunnin lopetus
+
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälymalleja on paljon ja niiden välillä on käytännön eroja. Mallia ei valita pelkän suosion, hinnan tai nopeuden perusteella. Malli valitaan sen mukaan, mitä tehtävä vaatii ja millaista dataa käsitellään.
+
+Hyvä päätöskysymys tunnin loppuun:
+
+> **Pohdi:** Jos sinulla olisi sama tehtävä mutta eri data — ensin oma harjoituskoodi ja sitten potilastiedot — muuttuisiko käyttämäsi tekoälymalli? Miksi?
+
+> **Lopetuslause opettajalle:** Teknisesti toimiva ei aina tarkoita ammatillisesti hyväksyttävää. Oikea tekoälymalli valitaan sekä tehtävän että vastuun perusteella.
+
+---

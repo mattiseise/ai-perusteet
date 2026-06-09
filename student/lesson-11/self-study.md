@@ -1,216 +1,190 @@
-# Tekoäly ja tietosuoja — valinta organisaation näkökulmasta
+# Muita tekoälymalleja — muutakin kuin ChatGPT ja Claude. Paikalliset mallit lisäävät tietosuojaa
 
-## Johdanto: Tekoälymaailma on isompi kuin näyttää
+## Johdanto: tekoälymaailma on isompi kuin miltä näyttää
 
-Olet ehkä kokeillut ChatGPTä tai Claudea. Ne ovat tunnettuja ja hyviä, mutta ne eivät ole ainoat! Maailmassa on monia muita tekoälymalleja, joilla on omat vahvuudet ja heikkoudet. Jokaisella on eri yritys takana, eri hinta ja eri tietosuojakäytännöt.
+Olet ehkä kokeillut ChatGPT:tä tai Claudea. Ne ovat tunnettuja ja hyviä työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Maailmassa on monia muitakin **tekoälymalleja**, joilla on omat vahvuutensa ja heikkoutensa. Jokaisen taustalla on eri yritys, erilainen hinnoittelu ja omat tietosuojakäytäntönsä.
 
-Miksi tämä kannattaa tietää? Koska eri tilanteet vaativat erilaisia ratkaisuja. Joskus halvin malli on paras, joskus nopein, joskus se, joka on turvallisesti Suomessa. Ammattilaisesti sinun pitäisi tuntea vaihtoehdot, jotta voit valita oikean tekoälytyökalun oikean tehtävän tekemiseen.
+Miksi tämä kannattaa tietää? Siksi, että eri tilanteet vaativat erilaisia ratkaisuja. Joskus paras valinta on halvin malli, joskus nopein ja joskus se, jossa tieto pysyy mahdollisimman turvallisesti. Ammattilaisena sinun kannattaa tuntea vaihtoehdot, jotta osaat valita oikean tekoälytyökalun oikeaan tehtävään.
 
-Tässä materiaalissa opettelemme yhdessä, mitä malleja on olemassa ja miten niitä verrataan toisiinsa.
+Tässä materiaalissa opit, mitä muita malleja on olemassa ja miten niitä voi vertailla keskenään.
 
 ## Osa 1: Googlen Gemini — Googlen tekoälymalli
 
-Google on tehnyt oman tekoälymallinsa, jota kutsutaan Gemini:ksi. Se kilpailee ChatGPT:n ja Clauden kanssa. Monelle ihmiselle Gemini on hyvä vaihtoehto, koska sillä on joitakin ominaisuuksia, joita ChatGPT ei ole niin hyvä tekemään.
+Google on kehittänyt oman tekoälymallinsa, jota kutsutaan **Geminiksi**. Se kilpailee ChatGPT:n ja Clauden kanssa. Monelle käyttäjälle Gemini on hyvä vaihtoehto, koska sillä on ominaisuuksia, joissa se voi olla erityisen hyödyllinen.
 
-### Gemini: erilaiset versiot
+### Geministä on erilaisia versioita
 
-Google tekee Geminista eri versioita, kuten autotehtaat tekevät eri automalleista:
+Google tekee Geministä eri versioita samaan tapaan kuin autotehtaat tekevät eri automalleja eri tarpeisiin.
 
-Geministä on saatavilla Gemini Flash, joka on nopea versio ja hyvä nopeisiin tehtäviin, sekä Gemini Pro, joka on keskitason versio tasapainolla nopeuden ja kyvykkyyden välillä.
+Geministä on saatavilla esimerkiksi **Gemini Flash**, joka on nopea versio ja sopii hyvin kevyisiin ja nopeisiin tehtäviin. Lisäksi on **Gemini Pro**, joka pyrkii tasapainottamaan nopeuden ja kyvykkyyden.
 
-Kumpi on parempi? Riippuu siitä, mitä haluat tehdä. Nopeus vai tarkkuus.
+Kumpi on parempi? Se riippuu siitä, mitä haluat tehdä. Jos tarvitset nopeutta, valinta voi olla eri kuin silloin, kun tarvitset mahdollisimman tarkkaa ja perusteellista vastausta.
 
-### Miten Geminiin pääsee
+### Miten Geminiä voi käyttää?
 
-Google tarjoaa **Google AI Studion**, joka on ilmainen verkkosivusto. Avaat selaimen, kirjaudut Googlen tilillä (kuten Gmailissa), ja voit heti alkaa kirjoittamaan tekoälylle. Sinulla on ilmainen kulurahaa joka kuukausi, jonka jälkeen kutsut ovat maksullisia. Mutta alkuun sen kanssa saat paljon kokeilla ilmaiseksi.
+Google tarjoaa **Google AI Studion**, joka on verkkoselaimessa toimiva työkalu. Avaat selaimen, kirjaudut Google-tililläsi ja voit alkaa kirjoittaa tekoälylle. Palvelussa voi yleensä kokeilla tekoälyä maksutta tiettyihin käyttörajoihin asti. Laajempi käyttö voi olla maksullista.
 
-### Miten Gemini eroaa ChatGPT:stä
+### Miten Gemini eroaa ChatGPT:stä?
 
 **Vahvuudet:**
 
-Gemini osaa käsitellä kuvia yhtä hyvin kuin tekstiä. Jos otat kuvan tai näyttökuvan, voit näyttää sen Geminille ja kysyä "mitä tässä on?". Claude ja ChatGPT osaavat tätäkin, mutta Gemini on vahva omassaan. Lisäksi Gemini on sulautettu Googlen palveluihin — jos käytät Gmail-sähköpostia tai Google Drive -pilvipalvelua, Gemini on jo siellä saatavilla.
+Gemini osaa käsitellä kuvia ja tekstiä. Jos otat kuvan tai näyttökuvan, voit näyttää sen Geminille ja kysyä esimerkiksi: ”Mitä tässä kuvassa näkyy?” Myös Claude ja ChatGPT osaavat tulkita kuvia, mutta Gemini on vahva erityisesti Googlen ekosysteemissä. Lisäksi Gemini on kytketty Googlen palveluihin. Jos käytät esimerkiksi Gmailia tai Google Drivea, Gemini voi olla saatavilla osana näitä palveluita.
 
-Gemini on myös edullisempi kuin ChatGPT. Jos vertaat hintoja: Googlen hinta on noin kymmenesosa OpenAI:n hinnasta.
+Gemini voi olla myös hinnaltaan kilpailukykyinen vaihtoehto, erityisesti silloin, kun käyttöä on paljon tai kun työskennellään Googlen omassa ympäristössä.
 
 **Heikkoudet:**
 
-Googlella on tiukemmat säännöt siitä, mitä saa kysyä. Joskus Gemini sanoo "En voi vastata tähän" useammin kuin Claude tai ChatGPT. Lisäksi Claude ja ChatGPT ovat parempia ohjelmoinnissa, koska ne tuottavat parempaa koodia kuin Gemini.
+Googlella voi olla tiukat säännöt siitä, millaisiin pyyntöihin Gemini vastaa. Joskus Gemini saattaa vastata ”en voi auttaa tässä” tilanteissa, joissa jokin toinen työkalu antaa vastauksen. Lisäksi eri mallit suoriutuvat ohjelmoinnista eri tavoin, joten koodaustehtävissä kannattaa vertailla tuloksia käytännössä.
 
-> **Pohdi hetkeksi:** Mitä sinä tekisit tekoälyllä? Jos sinulla olisi kuvia, joista haluat tietoa, olisiko Gemini sinulle hyvä? Vai haluaisitko parempaa koodia, jolloin Claude olisi parempi?
+> **Pohdi hetkeksi:** Mihin sinä käyttäisit tekoälyä? Jos sinulla olisi kuvia, joista haluat tietoa, olisiko Gemini hyvä vaihtoehto? Entä jos tarvitset apua ohjelmointiin, kannattaisiko sinun kokeilla myös muita työkaluja?
 
 ## Osa 2: Kiinalaiset mallit — DeepSeek
 
-Kiina on kehittänyt omia tekoälymalleja, ja niistä tunnetuin on DeepSeek. Siihen kannattaa tutustua, mutta tärkeät seikat pitää tietää.
+Myös Kiinassa on kehitetty omia tekoälymalleja. Yksi tunnetuimmista on **DeepSeek**. Siihen kannattaa tutustua, mutta sen käyttöön liittyy tärkeitä asioita, jotka ammattilaisen pitää ymmärtää.
 
-### DeepSeek: halpa malli Kiinasta
+### DeepSeek: edullinen malli Kiinasta
 
-DeepSeek on kiinalainen yritys, joka tekee tekoälymallia. Se on ilmainen tai erittäin halpa käyttää, ja monissa testeissä se on yhtä hyvä tai jopa parempi kuin ChatGPT ja Claude.
+DeepSeek on kiinalainen yritys, joka kehittää tekoälymalleja. Palvelu on usein edullinen tai rajoitetusti maksuton käyttää. Joissakin testeissä DeepSeek on pärjännyt hyvin verrattuna tunnettuihin tekoälypalveluihin.
 
 **Hyvät puolet:**
 
-DeepSeek on hyvin halpa, käytännössä ilmainen pieniksi kuluiksi. Se on myös nopea ja hyvä ohjelmoinnissa. Jos sinulla on tiukka budjetti ja haluat käyttää tekoälyä paljon, DeepSeek on houkutteleva.
+DeepSeek voi olla erittäin edullinen vaihtoehto. Se voi olla myös nopea ja vahva erityisesti ohjelmointiin liittyvissä tehtävissä. Jos budjetti on tiukka ja tekoälyä käytetään paljon, DeepSeek voi vaikuttaa houkuttelevalta vaihtoehdolta.
 
 **Tärkeä ongelma: tietosuoja**
 
-Mutta tässä on suuri "mutta". DeepSeek on kiinalainen palvelu ja kun lähetät tekstejä DeepSeekille, ne menevät Kiinan palvelimille. Kiinan hallituksella on lainsäädännön mukaan pääsy näihin tietoihin.
+DeepSeekin käytössä on kuitenkin merkittävä tietosuojakysymys. DeepSeek on kiinalainen palvelu, ja kun lähetät tekstiä palveluun, tieto voi siirtyä Kiinan palvelimille tai kiinalaisen lainsäädännön piiriin. Tämä voi olla ongelma erityisesti silloin, kun käsitellään henkilötietoja, asiakastietoja, potilastietoja, oppilastietoja tai muuta luottamuksellista aineistoa.
 
-EU:ssa (ja Suomessa) on säännöksiä nimeltään GDPR, joilla suojataan henkilötietoja. GDPR sanoo, että henkilötiedot on säilytettävä EU:n alueella, ei ulkomailla. Kiinan palvelimilla tiedot eivät ole riittävän suojassa EU:n näkökulmasta.
+EU:ssa ja Suomessa henkilötietojen käsittelyä säätelee **GDPR** eli yleinen tietosuoja-asetus. Se edellyttää, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän.
 
-Käytännössä tämä tarkoittaa:
-- Jos olet opettaja ja käytät DeepSeekia oppilaiden esseiden analysoinnissa, se saattaa rikkoa säädöksiä
-- Jos olet sairaala ja käytät sitä potilastietojen kanssa, se on kiellettyä
-- Jos olet yritys ja käytät sitä asiakastietojen kanssa, se saattaa olla kiellettyä
+Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:
 
-**Johtopäätös:** DeepSeek on teknisesti hyvä ja halpa, mutta tietosuoja estää sen käytön monissa tilanteissa Suomessa ja EU:ssa.
+- **Opettaja:** Jos käytät DeepSeekiä oppilaiden esseiden analysointiin, se voi rikkoa tietosuojasääntöjä, jos tekstit sisältävät henkilötietoja.
+- **Sairaala:** Potilastietojen käsittely DeepSeekillä ei ole hyväksyttävää ilman selkeää laillista perustetta ja organisaation hyväksyntää.
+- **Yritys:** Asiakastietojen tai liikesalaisuuksien syöttäminen palveluun voi olla kiellettyä tai riskialtista.
 
-> **Pohdi hetkeksi:** Kuvittele, että olet opettaja. Haluat käyttää tekoälyä oppilaiden esseiden arviointiin nopeasti. DeepSeek on halvin vaihtoehto. Mutta oppilaiden nimet ja esseiden sisältö menisivät Kiinan palvelimille. Olisiko se ok? Miksi tai miksi ei?
+**Johtopäätös:** DeepSeek voi olla teknisesti hyvä ja edullinen, mutta tietosuoja rajoittaa sen käyttöä monissa ammatillisissa tilanteissa Suomessa ja EU:ssa.
+
+> **Pohdi hetkeksi:** Kuvittele, että olet opettaja ja haluat käyttää tekoälyä oppilaiden esseiden arviointiin. DeepSeek olisi edullinen vaihtoehto, mutta oppilaiden nimet ja esseiden sisällöt voisivat päätyä EU:n ulkopuolelle. Olisiko käyttö hyväksyttävää? Miksi tai miksi ei?
 
 ## Osa 3: Avoimet mallit — omalla tietokoneella ajettavat mallit
 
-Toinen vaihtoehto on käyttää "avoimia malleja". Tämä ei tarkoita "ilmaisia", vaan "sinulla on koodi ja painot, voit ladata ja ajaa itse omalla tietokoneella".
+Toinen vaihtoehto on käyttää **avoimia malleja**. Tämä ei tarkoita pelkästään sitä, että malli olisi ilmainen. Se tarkoittaa yleensä sitä, että mallin voi ladata ja ajaa itse omalla tietokoneella tai omassa palvelinympäristössä.
 
-### Meta Llama — tunnetuin avoin malli
+### Meta Llama — tunnettu avoin malli
 
-Meta (entinen Facebook) julkaisi mallin nimeltään Llama. Se on ilmainen ladata, ja sinä voit ajaa sitä omalla tietokoneellasi. Llama on kilpailukykyinen ChatGPT:n ja Clauden kanssa.
+Meta, joka tunnettiin aiemmin Facebookina, on julkaissut **Llama**-malliperheen. Llama-malleja voi ladata ja ajaa omassa ympäristössä lisenssiehtojen mukaisesti. Ne ovat monissa käyttötapauksissa kilpailukykyisiä kaupallisten pilvipalveluiden kanssa.
 
-**Mitkä ovat hyvät puolet:**
+**Hyvät puolet:**
 
-Kun ajat Llama-mallia omalla tietokoneella, tiedot pysyvät täysin sinulla. Mitään ei lähde internetiin ja kukaan ei näe, mitä kirjoitat. Tämä on täydellinen yksityisyys. Lisäksi, kun olet ladannut mallin kerran, se on ilmaista käyttää niin paljon kuin haluat, etkä maksa per kysymys kuten ChatGPT:n kanssa.
+Kun ajat Llama-mallia omalla tietokoneella, tiedot pysyvät omassa laitteessasi tai omassa ympäristössäsi. Mitään ei tarvitse lähettää ulkopuoliseen pilvipalveluun, jos toteutus on tehty paikallisesti. Tämä parantaa yksityisyyttä. Lisäksi mallin käyttö voi olla edullista sen jälkeen, kun laitteisto ja asennus ovat kunnossa.
 
-**Mitkä ovat huonot puolet:**
+**Huonot puolet:**
 
-Omalla tietokoneella ajettava malli vaatii hyvää tietokonetta. Jos sinulla on vanha kannettava, se voi olla liian hidas tai se ei mahdu muistiin. Lisäksi vastaukset ovat hitaampia kuin pilvipalvelussa, koska pilvipalveluilla on valtavia laskentakoneita, kun sinulla kotona on pienemmät resurssit.
+Omalla tietokoneella ajettava malli vaatii riittävän tehokkaan laitteen. Jos käytössä on vanha kannettava tietokone, malli voi toimia hitaasti tai se ei mahdu laitteen muistiin. Vastaukset voivat myös olla hitaampia kuin pilvipalveluissa, koska pilvipalveluilla on käytössään suuria laskentaresursseja.
 
-### Mistral — pienemmän kehittäjän valinta
+### Mistral — eurooppalainen vaihtoehto
 
-Ranskalainen yritys Mistral tekee pienempää mallia, joka on helpompi ajaa omalla tietokoneella. Se on käyttäjäystävällisyyden osalta helpommin lähestyttävä kuin Llama.
+Ranskalainen **Mistral** kehittää tekoälymalleja, joista osa soveltuu paikalliseen käyttöön. Mistral voi olla kiinnostava vaihtoehto erityisesti silloin, kun halutaan tarkastella eurooppalaisia tekoälyratkaisuja tai ajaa malleja omassa ympäristössä.
 
-### Millä ladata ja ajaa malleja omalla tietokoneella
+### Millä ohjelmilla malleja voi ladata ja ajaa omalla tietokoneella?
 
-On ohjelmia, jotka tekevät paikallisen ajamisen helppoksi.
+Paikallisten mallien käyttöön on ohjelmia, jotka tekevät asentamisesta ja käyttämisestä helpompaa.
 
-**Ollama** on ohjelma, joka tekee ajamisesta helppoa. Asennat sen, valitset, minkä mallin haluat (esim. Llama), ja sitten voit käyttää sitä.
+**Ollama** on ohjelma, jonka avulla malleja voi asentaa ja käyttää melko suoraviivaisesti. Asennat ohjelman, valitset haluamasi mallin, esimerkiksi Llaman, ja voit käyttää mallia omalla koneellasi.
 
-**LM Studio** on ohjelma, joka näyttää ChatGPT:n kaltaiselta — siinä on chat-ikkuna, ja voit kirjoittaa siihen. Se on helpompaa kuin komentorivi, jos et ole tottunut teknisiin asioihin.
+**LM Studio** on ohjelma, jossa on ChatGPT:tä muistuttava keskusteluikkuna. Se voi olla helpompi vaihtoehto, jos et ole tottunut komentorivin käyttämiseen.
 
 ### Miksi joku valitsisi paikallisen mallin?
 
-Kolme pääsyytä:
+Paikallisen mallin valintaan on kolme pääsyytä:
 
-**Yksityisyys:** Kaikki pysyy sinulla. Kukaan hallitus, yritys tai hakkeri ei näe, mitä kysyt.
+- **Yksityisyys:** Tiedot pysyvät omalla laitteella tai omassa ympäristössä.
+- **Kustannukset:** Kun malli on asennettu ja laitteisto on käytössä, jokaisesta kysymyksestä ei tarvitse maksaa erikseen.
+- **Kontrolli:** Käyttäjä voi hallita paremmin, missä malli toimii ja miten sitä käytetään.
 
-**Raha:** Ensimmäisen latauksen jälkeen se on ilmaista. Et maksa per kysymys.
+Haittapuolia ovat hitaampi nopeus ja laitteistovaatimukset. Tarvitset riittävän tehokkaan tietokoneen, jotta malli toimii sujuvasti. Joillekin käyttäjille yksityisyys ja hallittavuus ovat kuitenkin niin tärkeitä, että paikallinen malli on paras vaihtoehto.
 
-**Kontrolli:** Sinulla on mallin koodi. Voit muuttaa sitä, kehittää sitä, käyttää sitä kuten haluat.
-
-Haittapuolia ovat nopeus (hitaampi) ja laitteiston tarve (tarvitset hyvän koneen). Mutta joillekkin näistä seikoista on tärkeä, joten he valitsevat paikallisen mallin.
-
-> **Pohdi hetkeksi:** Mitä sinulle on tärkeää? Nopeus, hinta, yksityisyys, vai helppo käyttö? Eri mallit sopivat eri prioriteeteille.
+> **Pohdi hetkeksi:** Mikä on sinulle tärkeintä: nopeus, hinta, yksityisyys vai helppokäyttöisyys? Eri mallit sopivat eri tarpeisiin.
 
 ## Osa 4: Mallien vertailu — miten valita?
 
-Nyt tiedät, että malleja on monta. Miten siis valita?
+Nyt tiedät, että malleja on monia. Miten sopiva malli sitten valitaan?
 
-```mermaid
-graph TD
-    AI["Tekoäly-mallit"]
+Valinnassa ei kannata kysyä vain, mikä malli on paras. Parempi kysymys on: **mikä malli sopii tähän tilanteeseen?** Valintaan vaikuttavat ainakin seuraavat asiat:
 
-    AI --> Pilvi["Pilvipalvelut<br/>Internetissä"]
-    AI --> Paikallinen["Paikallinen<br/>Omalla tietokoneella"]
+1. **Mitä haluat tehdä?** Tarvitsetko apua koodin kirjoittamiseen, tekstin parantamiseen, kuvan analysointiin vai johonkin muuhun tehtävään? Eri mallit ovat vahvoja eri asioissa.
+2. **Kuinka paljon rahaa on käytettävissä?** Osa työkaluista on maksuttomia, osa maksullisia ja osa ilmaisia vain pienessä käytössä.
+3. **Miten tärkeää tietosuoja on?** Pitääkö tietojen pysyä omalla tietokoneella, Euroopan alueella tai organisaation hyväksymässä palvelussa?
+4. **Kuinka tärkeää nopeus ja helppous ovat?** Tarvitsetko vastauksen nopeasti vai voitko käyttää enemmän aikaa asennukseen ja säätämiseen?
 
-    Pilvi --> USA["Amerikan yritykset"]
-    Pilvi --> Kiina["Kiinalaiset yritykset"]
-    Pilvi --> EU["Eurooppalaiset yritykset"]
+## Osa 5: Tietosuoja — minne tiedot menevät?
 
-    USA --> ChatGPT["ChatGPT<br/>OpenAI"]
-    USA --> Claude["Claude<br/>Anthropic"]
-    USA --> Gemini["Gemini<br/>Google"]
-
-    Kiina --> DeepSeek["DeepSeek"]
-
-    EU --> Mistral["Mistral"]
-
-    Paikallinen --> Llama["Llama<br/>Meta"]
-    Paikallinen --> MistralLocal["Mistral<br/>Paikallinen"]
-```
-
-Valinta ei ole "kumpi on parempi", vaan "kumpi sopii sinun tilanteeseen". Riippuu neljästä asiasta:
-
-**1. Mitä haluat tehdä?** Koodin kirjoitus? Tekstin parantaminen? Kuvan analysointi? Eri mallit ovat hyviä eri asioissa.
-
-**2. Kuinka paljon raha?** Jotkut ovat ilmaisia, jotkut kalliita, jotkut ilmaisia pienille käyttäjille ja kalliita suurille.
-
-**3. Tietosuoja:** Missä haluaisit tietojen olevan? Omalla tietokoneella? Euroopan palvelimilla? Vai et välitä?
-
-**4. Nopeus ja helppous:** Haluatko nopeaa tulosta vai voit odottaa vähän?
-
-## Osa 5: Tietosuoja — missä tiedot menevät?
-
-Tämä on tärkein osa. Kun käytät tekoälypalvelua internetissä, tekstit lähetetään palvelun palvelimille. Nuo palvelimet voivat olla eri puolilla maailmaa, ja niiden säännöt ovat erilaiset.
+Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetissä, kirjoittamasi tekstit lähetetään palvelun palvelimille. Palvelimet voivat sijaita eri puolilla maailmaa, ja niihin sovelletaan erilaisia lakeja ja käyttöehtoja.
 
 ### Missä palvelimet sijaitsevat?
 
-| Malli | Yritys | Palvelimet | Mitä pitää tietää |
-|-------|---------|-----------|------------------|
-| ChatGPT | OpenAI | USA | USA-laissa hallitus voi vaatia tietoja. Yleensä turvallinen, mutta amerikkalainen laki pätee. |
-| Claude | Anthropic | USA | Kuten ChatGPT. Yritys yrittää noudattaa GDPR:ää. |
-| Gemini | Google | USA ja Eurooppa | Google sallii palvelinten olevan EU:ssa. Turvallisempi EU:ssa. |
-| DeepSeek | DeepSeek | Kiina | Kiinalaiset palvelimet. Kiinan hallitus voi vaatia tietoja. Ongelma EU:ssa. |
-| Llama (omalla koneella) | Sinä | Sinun tietokoneesi | 100% yksityinen. Tiedot eivät lähde kotoa. |
-| Mistral | Mistral | Eurooppa | Euroopan palvelimet. Noudattaa EU:n sääntöjä. |
+| Malli | Yritys | Palvelimet | Mitä pitää tietää? |
+| --- | --- | --- | --- |
+| ChatGPT | OpenAI | Useita sijainteja, usein myös USA | Tarkista organisaation ohjeet ja palvelun tietosuoja-asetukset ennen luottamuksellisen tiedon syöttämistä. |
+| Claude | Anthropic | Useita sijainteja, usein myös USA | Tarkista käyttöehdot, tietosuoja-asetukset ja organisaation ohjeet ennen luottamuksellisen tiedon käsittelyä. |
+| Gemini | Google | Useita sijainteja, myös Eurooppa mahdollinen | Google tarjoaa yritys- ja pilvipalveluissa alueellisia vaihtoehtoja. Tarkista asetukset ennen käyttöä. |
+| DeepSeek | DeepSeek | Kiina tai kiinalaisen toimijan hallinnoima ympäristö | Henkilötietojen tai luottamuksellisten tietojen käsittely voi olla ongelmallista EU:ssa. |
+| Llama paikallisesti | Meta / käyttäjän oma ympäristö | Oma tietokone tai oma palvelin | Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin. |
+| Mistral paikallisesti | Mistral / käyttäjän oma ympäristö | Oma tietokone tai oma palvelin | Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin. |
 
 ### GDPR — Euroopan tietosuojalaki
 
-Euroopan Unionissa on laki nimeltään GDPR. Se sanoo: jos otat talteen ihmisen tietoja (nimi, sähköposti, arkaluontoiset asiat), tiedot on oltava EU:n alueella tai maissa, joihin EU luottaa.
+Euroopan unionissa henkilötietojen käsittelyä säätelee **GDPR** eli yleinen tietosuoja-asetus. Henkilötietoja ovat esimerkiksi nimi, sähköpostiosoite, henkilötunnus, oppilastiedot, potilastiedot ja muut henkilöön yhdistettävät tiedot.
 
-Kiina ei ole sellaisessa luotetussa listassa. Siksi, jos käytät DeepSeekia oppilaiden tai potilaiden tietojen kanssa, se rikkoo GDPR:ää.
+GDPR ei tarkoita, että kaikki henkilötiedot on aina säilytettävä vain EU:n alueella. Se tarkoittaa, että henkilötietoja saa käsitellä ja siirtää vain lainmukaisesti, turvallisesti ja asianmukaisin suojatoimin. EU:n ulkopuolisiin palveluihin liittyy usein lisävaatimuksia.
 
-Käytännössä:
-- **Opettaja:** Et voi käyttää DeepSeekia oppilaiden esseiden analysoinnissa, koska oppilaiden tiedot ovat suojattuja.
-- **Lääkäri:** Et voi käyttää DeepSeekia potilastietojen kanssa, koska potilastiedot ovat hyvin suojattuja.
-- **Yritys:** Et voi käyttää DeepSeekia asiakastietojen kanssa, jos ne sisältävät henkilötietoja.
+Käytännössä tämä tarkoittaa seuraavaa:
 
-Mutta jos käytät DeepSeekia omiin harjoituksiin, joissa ei ole kenenkään tietoja, silloin se voi olla ok.
+- **Opettaja:** Älä käytä DeepSeekiä oppilaiden esseiden analysointiin, jos tekstit sisältävät oppilaiden henkilötietoja eikä organisaatio ole hyväksynyt palvelua tähän käyttöön.
+- **Lääkäri:** Älä syötä potilastietoja tekoälypalveluun ilman organisaation hyväksyntää ja laillista perustetta.
+- **Yritys:** Älä käytä asiakastietoja tekoälypalvelussa, jos et tiedä, mihin tiedot tallentuvat ja onko käyttö organisaation ohjeiden mukaista.
 
-> **Pohdi hetkeksi:** Missä tekoälyä käyttävät ihmiset luonasi? Opettajat? Lääkärit? Johtajat? Mitä tietoja heille on sallittua lähettää tekoälylle? Entä mitä ei?
+Jos käytät DeepSeekiä tai muuta tekoälypalvelua omiin harjoituksiin ilman henkilötietoja tai luottamuksellista sisältöä, riski on pienempi. Ammatillisessa käytössä on kuitenkin aina tarkistettava organisaation ohjeet.
+
+> **Pohdi hetkeksi:** Ketkä käyttävät tekoälyä sinun ympärilläsi? Opettajat, lääkärit, johtajat vai asiakaspalvelijat? Mitä tietoja tekoälylle saa lähettää? Mitä tietoja sille ei saa koskaan lähettää ilman lupaa?
 
 ## Osa 6: Hinta ja käyttö — mitä maksaa?
 
-Tässä on vertailu siitä, miten kallista eri mallien käyttäminen on. Hinnat muuttuvat, mutta nämä ovat suuntaa-antavia (2026):
+Alla oleva taulukko auttaa vertailemaan eri vaihtoehtoja. Hinnat ja käyttörajat muuttuvat usein, joten taulukko on suuntaa antava. Tarkista ajantasaiset tiedot aina palvelun omilta sivuilta ennen päätöksen tekemistä.
 
 | Malli | Yritys | Onko ilmainen? | Hinta | Tietosuoja | Nopeus |
-|-------|---------|-----------|-------|-----------|--------|
-| ChatGPT | OpenAI | Ei | Kallis | USA-palvelimet | Nopea |
-| Claude | Anthropic | Ei | Kallis | USA-palvelimet | Nopea |
-| Gemini | Google | Kyllä (rajoitetusti) | Halpa | EU-palvelimet saatavilla | Nopea |
-| DeepSeek | DeepSeek | Kyllä (rajoitetusti) | Erittäin halpa | Kiina-palvelimet | Nopea |
-| Llama (paikallinen) | Meta | Kyllä | Ilmainen | 100% yksityinen | Hidas |
-| Mistral (paikallinen) | Mistral | Kyllä | Ilmainen | 100% yksityinen | Hidas |
+| --- | --- | --- | --- | --- | --- |
+| ChatGPT | OpenAI | Kyllä, rajoitetusti | Maksullisia versioita saatavilla | Tarkista asetukset ja organisaation ohjeet | Yleensä nopea |
+| Claude | Anthropic | Kyllä, rajoitetusti | Maksullisia versioita saatavilla | Tarkista asetukset ja organisaation ohjeet | Yleensä nopea |
+| Gemini | Google | Kyllä, rajoitetusti | Maksullisia versioita ja API-käyttöä saatavilla | Alueelliset ja organisaatiokohtaiset asetukset mahdollisia | Yleensä nopea |
+| DeepSeek | DeepSeek | Kyllä, rajoitetusti | Usein edullinen | Voi olla ongelmallinen henkilötietojen ja luottamuksellisen tiedon kanssa | Yleensä nopea |
+| Llama paikallisesti | Meta / käyttäjän oma ympäristö | Kyllä, lisenssiehtojen mukaisesti | Ei välttämättä käyttömaksua, mutta vaatii laitteiston | Hyvä, jos malli ajetaan aidosti paikallisesti | Riippuu laitteistosta |
+| Mistral paikallisesti | Mistral / käyttäjän oma ympäristö | Kyllä, mallista ja lisenssistä riippuen | Ei välttämättä käyttömaksua, mutta vaatii laitteiston | Hyvä, jos malli ajetaan aidosti paikallisesti | Riippuu laitteistosta |
 
-**Mitä tämä tarkoittaa:**
+**Mitä tämä tarkoittaa?**
 
-Jos sinulla on pieni budjetti ja yksityisyys ei ole kriittistä, Gemini tai DeepSeek ovat halvoja. Jos yksityisyys on tärkeä ja sinulla on hyvä tietokone, paikallinen Llama tai Mistral ovat ilmaisia.
+Jos budjetti on pieni eikä käsiteltävä tieto ole arkaluontoista, edulliset pilvipalvelut voivat olla hyvä vaihtoehto. Jos yksityisyys on tärkeää ja käytössä on riittävän tehokas tietokone, paikallisesti ajettava Llama tai Mistral voi olla hyvä ratkaisu.
 
-ChatGPT ja Claude ovat kalliimpia, mutta hyviä, jos organisaatiolla on budjetti.
+ChatGPT ja Claude ovat hyviä yleiskäyttöisiä vaihtoehtoja silloin, kun organisaatiolla on budjetti ja palveluiden käyttö on organisaation ohjeiden mukaista.
 
-> **Pohdi hetkeksi:** Sinulla on 500 euron vuosibudjetti. Mitä valitsisit? Entä jos yksityisyys on sinulle tärkeää?
+> **Pohdi hetkeksi:** Sinulla on 500 euron vuosibudjetti. Minkä työkalun valitsisit? Entä jos yksityisyys olisi tärkein valintaperuste?
 
 ## Kohti omaa projektia
 
-Tällä tunnilla tutustuit laajempaan tekoälykenttään ja erityisesti tietosuojanäkökulmaan: missä palvelimet sijaitsevat, mitä GDPR vaatii, miten organisaation valinnat eroavat yksittäisen käyttäjän valinnoista. Tehtävissä teet perustellun suosituksen valitsemallesi organisaatiolle. Tämä pohdinta palaa konkreettisesti tunnilla 15, kun kuratoit oman bottisi tietopohjan: silloin joudut itse päättämään, mitä materiaalia Copilotiin voi tai ei voi ladata. Seuraavaksi opit, miten konteksti rakennetaan käytännössä — ja aloitat ensimmäisen rakennuspalikkasi keräämisen.
+Tällä tunnilla tutustuit laajempaan tekoälykenttään: Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu hieman eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden, helppokäyttöisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitset tietyn alustan omalle botillesi.
+
+Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain ”mikä on paras?”, vaan **”mikä sopii parhaiten tähän käyttötilanteeseen?”**. Se on ammattilaisen ajattelutapa.
 
 ## Osa 7: Yhteenveto
 
-**Mitä olemme oppineet:**
+**Mitä olemme oppineet?**
 
-1. **Malleja on monta, ne ovat erilaisia.** ChatGPT ja Claude eivät ole ainoat, Gemini, DeepSeek, Llama ja muut ovat vaihtoehtoja.
+1. **Malleja on monia, ja ne ovat erilaisia.** ChatGPT ja Claude eivät ole ainoita vaihtoehtoja. Gemini, DeepSeek, Llama, Mistral ja monet muut mallit tarjoavat erilaisia mahdollisuuksia.
+2. **Jokaisella mallilla on omat vahvuutensa.** Gemini liittyy vahvasti Googlen palveluihin. DeepSeek voi olla edullinen, mutta sen käyttöön liittyy tietosuojakysymyksiä EU:ssa. Llama ja Mistral voivat olla yksityisiä ratkaisuja, jos ajat niitä omassa ympäristössä.
+3. **Tietosuoja on tärkeää.** Sinun pitää tietää, minne tiedot menevät ja saako niitä käsitellä kyseisessä palvelussa. Oppilastiedot, potilastiedot, asiakastiedot ja muu arkaluontoinen tieto vaativat erityistä huolellisuutta.
+4. **Valinta riippuu tilanteesta.** Ei ole yhtä parasta mallia. Hinta, nopeus, yksityisyys ja käytettävyys painavat eri tilanteissa eri tavalla.
+5. **Ammattilaisena sinun kannattaa tuntea vaihtoehdot.** Työpaikalla voi olla sääntöjä siitä, mitä tekoälypalveluja saa käyttää. Kun tunnet vaihtoehdot, ymmärrät paremmin myös niiden riskit ja mahdollisuudet.
 
-2. **Jokaisella on eri vahvuudet.** Gemini on halpa ja integroitu Googleen. DeepSeek on erittäin halpa, mutta tietosuoja-ongelma EU:ssa. Llama ja Mistral ovat yksityisiä, jos ajat niitä omalla koneella.
+**Seuraavaksi:** Opit tekemään tekoälylle tarkkoja ja hyödyllisiä ohjeita. Kun tiedät, millaisia malleja on olemassa, seuraava askel on oppia ohjaamaan niitä niin, että saat vastauksen juuri siihen tarpeeseen, johon sitä käytät.
 
-3. **Tietosuoja on tärkeä.** Tiedä, mihin palvelimille tiedot menevät. Oppilaiden tiedot, potilastiedot ja arkaluontoiset tiedot vaativat erityistä huolimista.
-
-4. **Valinta riippuu tilanteesta.** Ei ole yhtä "parasta" mallia, vaan hinta, nopeus, yksityisyys ja käytettävyys ovat kaikki tärkeitä eri tilanteissa.
-
-5. **Ammattilaisesti sinun pitäisi tuntea vaihtoehdot.** Seuraavalla työpaikalla voi olla sääntöjä, mitä malleja saa käyttää. Nyt tiedät, mistä puhutaan.
-
-**Seuraavaksi:** Opimme, kuinka tehdä tekoälylle tarkkoja käskyjä. Kun tiedät, mitä malleja on olemassa, opimme, miten ne saavat vastauksen juuri sellaisena kuin haluat.
+---
