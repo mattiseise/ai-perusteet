@@ -21,7 +21,21 @@ Selitä opiskelijoille:
 Näytä opiskelijoille kolme erilaista whitelist-esimerkkiä: liian tiukka, kohtuullinen ja liian löysä.
 
 ```
-TIUKKA, liian rajoitettu:- CLI: vain ls- Tiedostot: saa vain lukea kansiota /reports/, ei saa kirjoittaa- Verkkohaku: ei sallittuKOHTUULLINEN:- CLI: ls, mkdir, cp- CLI: ei sallita komentoja rm tai rm -rf- Tiedostot: saa lukea kansiota /data/ ja kirjoittaa kansioon /reports/- Verkkohaku: sallittu vain luotetuilla sivustoilla, esimerkiksi Wikipedia ja hallitus.fiLIIAN LÖYSÄ:- CLI: kaikki komennot sallittu- Tiedostot: kaikki kansiot sallittu- Verkkohaku: kaikki sivustot sallittu
+TIUKKA, liian rajoitettu:
+- CLI: vain ls
+- Tiedostot: saa vain lukea kansiota /reports/, ei saa kirjoittaa
+- Verkkohaku: ei sallittu
+
+KOHTUULLINEN:
+- CLI: ls, mkdir, cp
+- CLI: ei sallita komentoja rm tai rm -rf
+- Tiedostot: saa lukea kansiota /data/ ja kirjoittaa kansioon /reports/
+- Verkkohaku: sallittu vain luotetuilla sivustoilla, esimerkiksi Wikipedia ja hallitus.fi
+
+LIIAN LÖYSÄ:
+- CLI: kaikki komennot sallittu
+- Tiedostot: kaikki kansiot sallittu
+- Verkkohaku: kaikki sivustot sallittu
 ```
 
 Kysy opiskelijoilta:
@@ -175,7 +189,14 @@ Selitä opiskelijoille:
 ### Esittely: kolme riskiskenaariota
 
 ```
-TIEDOSTOT:Agentti kirjoittaa väärään kansioon tai poistaa tärkeitä tiedostoja.VERKKOHAKU:Agentti etsii tietoa epäluotettavista lähteistä, paljastaa salaisia tietoja hakukyselyssä tai käyttää kallista hakupalvelua hallitsemattomasti.CLI:Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjestelmän.
+TIEDOSTOT:
+Agentti kirjoittaa väärään kansioon tai poistaa tärkeitä tiedostoja.
+
+VERKKOHAKU:
+Agentti etsii tietoa epäluotettavista lähteistä, paljastaa salaisia tietoja hakukyselyssä tai käyttää kallista hakupalvelua hallitsemattomasti.
+
+CLI:
+Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjestelmän.
 ```
 
 ### Ryhmätyö

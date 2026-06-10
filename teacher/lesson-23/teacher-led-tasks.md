@@ -29,7 +29,11 @@ Näytä opiskelijoille yksinkertainen esimerkki. Asiakas kysyy:
 Näytä agentin eteneminen lokina:
 
 ```
-[AJATTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.[TOIMINTA]: GET /api/product?id=12345[HAVAINTO]: Tietokanta palautti hinnan: 45 €.[AJATTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.[TOIMINTA]: Tuotteen hinta on 45 €.
+[AJATTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.
+[TOIMINTA]: GET /api/product?id=12345
+[HAVAINTO]: Tietokanta palautti hinnan: 45 €.
+[AJATTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.
+[TOIMINTA]: Tuotteen hinta on 45 €.
 ```
 
 Kysy opiskelijoilta:
@@ -204,10 +208,10 @@ Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii 
 
 **Odotetut vastaukset:**
 
-- **Palvelimen satunnainen kaatuminen:** ReAct, koska agentin täytyy tutkia, hakea lisätietoa ja muuttaa etenemistä löydösten perusteella.
+- **Katoavat tilaukset:** ReAct, koska agentin täytyy tutkia, hakea lisätietoa ja muuttaa etenemistä löydösten perusteella.
 - **Palautuspyyntö:** ketjuajattelu, koska vaiheistus on selkeä ja perustuu palautusehtoihin.
 - **Tilauksen tilan tarkistus:** usein ReAct tai yksinkertainen työkalukutsu. Jos prosessi on täysin vakioitu, ketjuajattelu voi riittää.
-- **Tietoturvahälytys:** ReAct, koska agentin pitää tutkia eri lähteitä ja tehdä päätöksiä havaintojen perusteella.
+- **Asiakaspalautteen piikki:** ReAct, koska agentin pitää tutkia eri lähteitä ja tehdä päätöksiä havaintojen perusteella.
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat valitsevat aina ReActin, kysy: “Onko tässä oikeasti tarvetta iteroida, vai riittääkö vakioitu vaiheistus?”
 

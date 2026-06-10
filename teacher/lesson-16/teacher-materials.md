@@ -14,7 +14,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **erikois
 ### Soveltaa ja analysoida
 
 - Opiskelija osaa valita oikean tekoälytyökalutyypin tosielämän tehtävään, kun valintaan vaikuttavat esimerkiksi **budjetti**, **nopeus**, **laatu** ja **käyttötarkoitus**.
-- Opiskelija osaa vertailla saman kategorian työkaluja, esimerkiksi DALL-E:tä, Midjourneytä ja Stable Diffusionia.
+- Opiskelija osaa vertailla saman kategorian työkaluja, esimerkiksi ChatGPT:n kuvanluontia, Midjourneytä ja Stable Diffusionia.
 - Opiskelija osaa käyttää promptin tarkentamista ja **iteraatiota** tuotoksen parantamiseen.
 - Opiskelija osaa tunnistaa erikoistuneisiin työkaluihin liittyviä tekijänoikeus- ja eettisiä riskejä.
 
@@ -48,7 +48,7 @@ Korosta opiskelijoille:
 
 | Työkalutyyppi | Mihin se on optimoitu? | Esimerkkejä | Opetuksen ydin |
 | --- | --- | --- | --- |
-| **Kuva** | Kuvan tuottamiseen tekstikuvauksen perusteella. | DALL-E, Midjourney, Stable Diffusion. | Sama prompti voi tuottaa hyvin erilaisia visuaalisia tuloksia. |
+| **Kuva** | Kuvan tuottamiseen tekstikuvauksen perusteella. | ChatGPT:n kuvanluonti, Midjourney, Stable Diffusion. | Sama prompti voi tuottaa hyvin erilaisia visuaalisia tuloksia. |
 | **Musiikki** | Äänen, laulun, taustan tai musiikkiluonnoksen tuottamiseen. | Suno, Udio. | Nopea ideointi on vahvuus, mutta tekijänoikeus ja alkuperä pitää huomioida. |
 | **Video** | Lyhyiden videokonseptien ja liikkuvan kuvan luonnosten tuottamiseen. | Runway, muut videomallit. | Video-AI on vaikuttava mutta vielä rajoittunut erityisesti jatkuvuudessa ja liikkeessä. |
 | **Koodi** | Koodin kirjoittamisen, täydentämisen, selittämisen ja virheiden ratkaisemisen tukemiseen. | GitHub Copilot, Cursor. | Työkalu nopeuttaa kehitystä, mutta vastuu koodin toimivuudesta jää ihmiselle. |
@@ -65,7 +65,7 @@ Kuvatyökalut ovat hyvä lähtökohta demolle, koska opiskelijat näkevät tulok
 
 | Työkalu | Vahvuus | Rajoitus tai huomio |
 | --- | --- | --- |
-| **DALL-E** | Ymmärtää luonnollista kieltä hyvin ja toimii luontevasti ChatGPT:n yhteydessä. | Turvarajaukset voivat estää joitakin pyyntöjä. |
+| **ChatGPT:n kuvanluonti** | Ymmärtää luonnollista kieltä hyvin ja toimii samassa keskustelussa muun työskentelyn kanssa. | Turvarajaukset voivat estää joitakin pyyntöjä. |
 | **Midjourney** | Usein vahva taiteellisessa laadussa ja visuaalisessa tyylissä. | Käyttöliittymä ja työnkulku voivat olla aloittelijalle vieraampia. |
 | **Stable Diffusion** | Avoin, muokattava ja mahdollinen ajaa paikallisesti. | Vaatii enemmän teknistä osaamista, jos sitä käytetään paikallisesti tai räätälöidään. |
 
@@ -148,7 +148,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 
 ### Väärinkäsitys 1: ”Kaikki tekoälytyökalut ovat samoja, vain eri nimillä.”
 
-**Korjaava näkökulma:** Eri työkalut on koulutettu eri aineistoilla ja suunniteltu eri tarkoituksiin. DALL-E, Midjourney ja Stable Diffusion voivat kaikki tuottaa kuvia, mutta niiden tyyli, käyttöliittymä, rajaukset, muokattavuus ja tulokset eroavat toisistaan.
+**Korjaava näkökulma:** Eri työkalut on koulutettu eri aineistoilla ja suunniteltu eri tarkoituksiin. ChatGPT:n kuvanluonti, Midjourney ja Stable Diffusion voivat kaikki tuottaa kuvia, mutta niiden tyyli, käyttöliittymä, rajaukset, muokattavuus ja tulokset eroavat toisistaan.
 
 ### Väärinkäsitys 2: ”Jos tekoäly tekee huonon tuloksen kerran, työkalu on huono.”
 
@@ -365,7 +365,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 
 ### Demot ja palvelut
 
-- **DALL-E:** kuvan tuottaminen tekstistä.
+- **ChatGPT:n kuvanluonti:** kuvan tuottaminen tekstistä.
 - **Midjourney:** visuaalisesti vahvat ja tyylitellyt kuvat.
 - **Stable Diffusion:** avoimempi ja muokattavampi kuvamallien ekosysteemi.
 - **Suno ja Udio:** musiikin ja laulun tuottaminen.

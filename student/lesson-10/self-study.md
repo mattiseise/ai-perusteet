@@ -22,7 +22,7 @@ ChatGPT:stä on sekä ilmaisia että maksullisia versioita. Käytettävissä ole
 
 ChatGPT:n suurin vahvuus on sen **laaja käyttöalue**. Sitä voi käyttää esimerkiksi ideointiin, tekstin muokkaamiseen, ohjelmointiin, tiedostojen analysointiin, kuvien tulkintaan, kuvien luomiseen ja verkkotiedon hakemiseen. OpenAI:n nykyiset mallit tukevat teksti- ja kuvasyötteitä, tekstivastauksia, monikielistä käyttöä ja näkökykyyn perustuvia tehtäviä.
 
-Yksi ChatGPT:n merkittävimmistä ominaisuuksista on **Custom GPT** eli räätälöity botti. Voit luoda ChatGPT:stä erikoisversion, joka on määritetty tiettyyn tarkoitukseen. Esimerkiksi yritys voi rakentaa markkinointiassistentin, joka tuntee yrityksen brändin ja osaa kirjoittaa oikealla tyylillä. Koulutuksessa voi tehdä opiskelukaverin, joka kysyy testikysymyksiä tietystä aiheesta. Tätä ominaisuutta hyödynnät myöhemmin kurssilla, kun rakennat oman Custom GPT:n.
+Yksi ChatGPT:n merkittävimmistä ominaisuuksista on **Custom GPT** eli räätälöity botti. Voit luoda ChatGPT:stä erikoisversion, joka on määritetty tiettyyn tarkoitukseen. Esimerkiksi yritys voi rakentaa markkinointiassistentin, joka tuntee yrityksen brändin ja osaa kirjoittaa oikealla tyylillä. Koulutuksessa voi tehdä opiskelukaverin, joka kysyy testikysymyksiä tietystä aiheesta. Räätälöidyn botin idean kohtaat myöhemmin kurssilla, kun rakennat omasi — tällä kurssilla botti toteutetaan Microsoft Copilotilla.
 
 ChatGPT osaa myös kirjoittaa ja suorittaa Python-koodia suoraan keskusteluikkunassa, jos käytössä oleva versio sisältää siihen tarvittavat työkalut. Käytännössä tämä tarkoittaa, että voit ladata esimerkiksi CSV-tiedoston, pyytää analyysiä ja saada kaavioita automaattisesti ilman, että sinun tarvitsee avata erillistä ohjelmaa.
 

@@ -1,4 +1,4 @@
-# Opettajamateriaali — Lesson 24: Turvallisuus ensin
+# Opettajamateriaali — oppitunti 24: Turvallisuus ensin
 
 ## Oppitunnin ydinajatukset
 
@@ -137,7 +137,7 @@ Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta 
 
 ### Yleisiä väärinkäsityksiä
 
-**”Custom GPT on turvallinen, koska sillä on ohjeet.”**
+**”Botti on turvallinen, koska sillä on ohjeet.”**
 Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Prompt injection voi yrittää ohittaa ne, ellei ympärillä ole erillisiä suojaavia rakenteita.
 
 **”Oikeat järjestelmät ovat varmasti paremmin suojattuja.”**

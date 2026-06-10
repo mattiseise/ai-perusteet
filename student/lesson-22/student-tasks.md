@@ -48,7 +48,7 @@ joiden avulla voin arvioida, onko jokin työkalu ylimääräinen tai
 puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 ```
 
-> 💡 **Vinkki muistiinpanoihin:** Kirjaa muistiinpanoihisi agenttisi minimiltyökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.
+> 💡 **Vinkki muistiinpanoihin:** Kirjaa muistiinpanoihisi agenttisi minimityökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.
 
 ---
 

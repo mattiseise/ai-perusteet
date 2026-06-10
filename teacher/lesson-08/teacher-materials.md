@@ -51,7 +51,7 @@ Oppitunnin neljä keskeistä eettistä näkökulmaa ovat:
 
 Generatiiviset tekoälymallit on koulutettu valtavilla aineistoilla, joihin sisältyy tekstiä, kuvia, koodia ja muuta verkosta saatua materiaalia. Eettinen ja juridinen kysymys kuuluu: **kenen työtä koulutusdata sisältää, oliko käyttöön lupa ja saivatko tekijät korvauksen?**
 
-Tekijänoikeuskysymys ei ole yksinkertainen. Osa toimijoista väittää, että mallien koulutus on sallittua esimerkiksi *fair use* -periaatteen tai muun oikeudellisen perusteen nojalla. Tekijät ja sisällöntuottajat taas voivat kokea, että heidän työtään on käytetty ilman lupaa ja korvausta. Useat oikeustapaukset ovat edelleen kesken, joten opettajan kannattaa välttää liian varmoja väitteitä.
+Tekijänoikeuskysymys ei ole yksinkertainen. Osa toimijoista väittää, että mallien koulutus on sallittua esimerkiksi Yhdysvaltain oikeuden *fair use* -periaatteen tai muun oikeudellisen perusteen nojalla. Suomen ja EU:n laissa vastaavaa yleistä poikkeusta ei ole; EU:ssa keskustelu koskee tekstin- ja tiedonlouhintapoikkeuksia. Tekijät ja sisällöntuottajat taas voivat kokea, että heidän työtään on käytetty ilman lupaa ja korvausta. Useat oikeustapaukset ovat edelleen kesken, joten opettajan kannattaa välttää liian varmoja väitteitä.
 
 | Kysymys | Miksi se on tärkeä? | Ammattilaisen näkökulma |
 | --- | --- | --- |

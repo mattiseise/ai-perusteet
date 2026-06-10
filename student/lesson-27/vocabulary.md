@@ -10,7 +10,7 @@
 | **Dokumentaatio** (documentation) | Kirjallinen selvitys siitä, mitä agentti tekee, miten se toimii ja mitkä ovat sen riskit. Dokumentaatio tekee agentin ammatilliseksi ja ylläpidettävään. |
 | **README.md** | Käyttöohje, joka selittää agentin tarkoituksen, käytön ja rajat. Se on ensimmäinen dokumentti, jonka joku lukee. |
 | **ARCHITECTURE.md** | Tekninen dokumentaatio, joka kuvaa agentin rakenteen: solmut, yhteydet ja kuinka ne työskentelevät yhdessä. |
-| **SAFETY.md** | Turvallisuusanalyysi, jossa listataan riskit ja selitetään, miten ne on mitigated (vähennetty). |
+| **SAFETY.md** | Turvallisuusanalyysi, jossa listataan riskit ja selitetään, miten ne on torjuttu tai lievennetty. |
 | **Lokitus** (logging) | Prosessi, jossa agentti tallentaa jokaisen toiminnon lokin. Esim. "Käyttäjä kysyi X, agentti vastasi Y, kesti Z sekuntia." |
 | **Iteratiivinen kehitys** (iterative development) | Rakentamisen tapa, jossa rakennetaan ensin pieni versio, testataan, korjataan, ja sitten lisätään uusia ominaisuuksia. Ei yritä tehdä kaikkea kerralla. |
 | **Human-in-the-loop** | Rakenne, jossa kriittisissä tilanteissa ihminen hyväksyy agentin päätöksen ennen kuin se toteutetaan. Tekee agentista turvallisemman. |

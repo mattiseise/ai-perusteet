@@ -342,7 +342,7 @@ Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä a
 ## Oppimisresurssit
 
 1. **Opiskelijan itseopiskelumateriaali:** käytä sitä peruskäsitteiden kertaamiseen ennen lähiosaa.
-2. **Esimerkit omista boteista:** analysoikaa hyviä Custom GPT -ratkaisuja ja pohtikaa, mikä niiden tarkoitus, rooli, ohjeet ja rajaukset voisivat olla.
+2. **Esimerkit omista boteista:** analysoikaa hyviä valmiita botteja ja pohtikaa, mikä niiden tarkoitus, rooli, ohjeet ja rajaukset voisivat olla.
 3. **Järjestelmäpromptin esimerkit:** käytä esimerkkeinä läksyvalmentajaa, harrastusneuvojaa ja asiakaspalvelubottia.
 4. **Testaus ja iteraatio:** näytä, miten botin toiminta muuttuu, kun järjestelmäpromptia muokataan.
 5. **Opiskelijoiden omat botit:** pyydä opiskelijoita esittelemään botti-ideansa ja saamaan vertaispalautetta.

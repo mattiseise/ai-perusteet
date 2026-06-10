@@ -144,7 +144,7 @@ Selventää, mitä opiskelijoilta odotetaan, ja vastata kysymyksiin ennen arvioi
 **Oppimista tukevia neuvoja:**
 - "Mitkä Teoria-osion käsitteet liittyvät tähän?" (Auta heitä tunnistamaan relevantit käsitteet.)
 - "Mitkä riskit näet?" (Auta heitä ajattelemaan kriittisesti.)
-- "Miten argumentoist tämän ammatillisesti?" (Auta heitä rakentamaan perusteluja.)
+- "Miten argumentoisit tämän ammatillisesti?" (Auta heitä rakentamaan perusteluja.)
 
 **Älä anna suoria vastauksia:**
 - "Sinun pitäisi sanoa X" (Liian ohjaavaa.)

@@ -4,7 +4,7 @@
 
 Tämä oppitunti on **Tekoälyjen käyttö** -osion arvioinnin ensimmäinen osa. Oppitunti 17 keskittyy **suunnitteluun** ja **rakentamisen aloittamiseen**. Oppitunnilla 18 opiskelijat viimeistelevät, parantavat ja esittelevät työnsä.
 
-Oppitunnin tavoitteena on, että opiskelijat suunnittelevat ja rakentavat uuden **Custom GPT** -botin: **projektidokumenttibotin**. Botin tehtävänä on kysyä käyttäjältä oikeita kysymyksiä projektista, koota vastaukset järjestelmälliseksi projektisuunnitelmaksi ja toimia mentorin tavoin.
+Oppitunnin tavoitteena on, että opiskelijat suunnittelevat ja rakentavat **Microsoft Copilotilla** uuden botin: **projektidokumenttibotin**. Botin tehtävänä on kysyä käyttäjältä oikeita kysymyksiä projektista, koota vastaukset järjestelmälliseksi projektisuunnitelmaksi ja toimia mentorin tavoin.
 
 Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin, ohjeet, rajaukset ja kysymyspatteriston. He kirjoittavat **system promptin**, testaavat bottia käytännön tilanteissa, parantavat sitä iteratiivisesti ja dokumentoivat prosessin selkeästi.
 

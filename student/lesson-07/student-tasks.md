@@ -57,7 +57,7 @@ Kirjoita ammattilaisen tarkistuslista, jota IT-ammattilainen voisi pitää näyt
 
 **A) Merkit, joista tunnistan hallusinaation** (3–5 bulletia)
 
-*Esim. "Vastaus on suspiciously sujuva ilman varauksia", "Lähdeviittaukset näyttävät keksityiltä", "Yksityiskohdat ovat liian täsmällisiä ollakseen tosia"*
+*Esim. "Vastaus on epäilyttävän sujuva ilman varauksia", "Lähdeviittaukset näyttävät keksityiltä", "Yksityiskohdat ovat liian täsmällisiä ollakseen tosia"*
 
 **B) Miksi malli tekee näin** (2–3 lausetta omin sanoin)
 

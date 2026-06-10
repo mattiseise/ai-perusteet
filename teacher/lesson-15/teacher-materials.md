@@ -395,7 +395,7 @@ Oppituntisarjan eteneminen:
 
 - **Edellisellä tunnilla:** opiskelijat suunnittelivat botin järjestelmäpromptin avulla.
 - **Tällä tunnilla:** opiskelijat oppivat varustamaan botin tiedolla, rajaamaan sen toimintaa ja testaamaan sitä systemaattisesti.
-- **Seuraavalla tunnilla:** opiskelijat rakentavat todellisen Custom GPT:n tai muun käytännön botin.
+- **Seuraavalla tunnilla:** opiskelijat rakentavat todellisen botin Microsoft Copilotilla.
 - **Myöhemmillä tunneilla:** opiskelijat kehittävät monimutkaisempia ja tuotantokelpoisempia botteja.
 
 **Opettajan muistutus:** Jos opiskelija ymmärtää tällä tunnilla testauksen ja rajausten merkityksen, hän rakentaa myöhemmin paljon turvallisempia ja käyttökelpoisempia botteja.

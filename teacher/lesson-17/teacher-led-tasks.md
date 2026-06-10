@@ -14,7 +14,7 @@ Näyttää käytännössä, miltä toimiva botti näyttää ja mitä se tekee.
 
 ### Vaiheet
 
-1. **Valmistelu**: Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut system prompitin projektidokumenttibotille. (Kirjoita se etukäteen tai käytä self-study-materiaalista saatua esimerkkiä.)
+1. **Valmistelu**: Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut system promptin projektidokumenttibotille. (Kirjoita se etukäteen tai käytä self-study-materiaalista saatua esimerkkiä.)
 
 2. **Live-demo**: Kirjoita opiskelijoilta näkyvillä oleva projektikuvaus. Esimerkiksi:
    > "Rakennan web-sovellusta opiskelijoille, joka auttaa löytämään harjoittelupaikat. Haluamme tiimin, joka osaa web-kehitystä."
@@ -61,7 +61,7 @@ Saada opiskelijat ajattelemaan, mitä kysymyksiä hyvä projektidokumenttibotti 
 
 5. **Esittely**: Jokainen ryhmä esittelee 2–3 parhaita kysymyksiään (3 minuuttia per ryhmä).
 
-6. **Yhteenveto**: Kerää kaikki kysymykset liitutaululle tai dialle. Mitkä olivat yleisimpiä? Mitkä olivat loistavia, joita kaikki muualla unohtoivat?
+6. **Yhteenveto**: Kerää kaikki kysymykset liitutaululle tai dialle. Mitkä olivat yleisimpiä? Mitkä olivat loistavia, ja mitkä kaikki muut unohtivat?
 
 ### Opettajan huomiot
 
@@ -105,7 +105,7 @@ Kertaa, mitä tänään opittiin. Projektidokumenttibotti kysyy oikeita kysymyks
 
 Kerro, että seuraavalla kerralla he:
 1. Suunnittele oman botin kysymykset (tehtävä 17.1)
-2. Kirjoittaa system prompin (tehtävä 17.2)
+2. Kirjoittaa system promptin (tehtävä 17.2)
 3. Testavat bottia (tehtävä 17.3)
 4. Iteroidaan ja parannetaan (tehtävä 17.4)
 

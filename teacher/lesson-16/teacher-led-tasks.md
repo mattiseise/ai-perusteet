@@ -12,7 +12,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten eri *
 
 ### Valmistelu ennen oppituntia
 
-- Avaa etukäteen 2–3 kuvageneraattoria tai valmistele niistä esimerkkituotokset. Voit käyttää esimerkiksi DALL-E:tä, Midjourneyta ja Stable Diffusionia.
+- Avaa etukäteen 2–3 kuvageneraattoria tai valmistele niistä esimerkkituotokset. Voit käyttää esimerkiksi ChatGPT:n kuvanluontia, Midjourneyta ja Stable Diffusionia.
 - Valitse kaikille työkaluille sama yksinkertainen ja selkeä teema, esimerkiksi *robotti istuu kahvilassa*.
 - Kirjoita yhteinen peruskehote, jota käytät eri työkaluissa.
 - Valmistele muutama generoitu kuva etukäteen siltä varalta, että verkkoyhteys tai palvelu ei toimi oppitunnilla.
@@ -37,7 +37,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
    > Tekoäly ei ole yksi yhtenäinen työkalu. Eri palvelut voivat sopia eri käyttötarkoituksiin.
 2. **Ensimmäinen demo noin 5 minuuttia**
 
-   Näytä DALL-E:lla tai muulla kuvageneraattorilla tuotettu kuva valitusta teemasta.
+   Näytä ChatGPT:n kuvanluonnilla tai muulla kuvageneraattorilla tuotettu kuva valitusta teemasta.
 
    Kysy opiskelijoilta:
 

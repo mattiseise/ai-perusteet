@@ -128,7 +128,11 @@ Näytä tekoälyn vastaus. Vastauksen pitäisi olla hyvin jäsennelty ja vastata
 Näytä opiskelijoille seuraava yhteenveto:
 
 ```
-Sama aihe: verkot1. Huono pyyntö:"Kerro verkoista."→ Yleinen ja epäselvästi kohdistettu vastaus.2. Parempi pyyntö:"Olen 15-vuotias IT-opiskelija."→ Parempi, mutta edelleen melko yleinen vastaus.3. Vielä parempi pyyntö:"Kerro lähtötasoni, tavoitteeni ja pyydä esimerkkejä."→ Konkreettinen ja hyödyllinen vastaus.4. Paras pyyntö:"Kerro tavoite, aika, käyttäjä, rakenne ja haluttu lopputulos."→ Juuri tarpeeseen sopiva vastaus.
+Sama aihe: verkot
+1. Huono pyyntö: "Kerro verkoista." → Yleinen ja epäselvästi kohdistettu vastaus.
+2. Parempi pyyntö: "Olen 15-vuotias IT-opiskelija." → Parempi, mutta edelleen melko yleinen vastaus.
+3. Vielä parempi pyyntö: "Kerro lähtötasoni, tavoitteeni ja pyydä esimerkkejä." → Konkreettinen ja hyödyllinen vastaus.
+4. Paras pyyntö: "Kerro tavoite, aika, käyttäjä, rakenne ja haluttu lopputulos." → Juuri tarpeeseen sopiva vastaus.
 ```
 
 Lopuksi sano opiskelijoille:

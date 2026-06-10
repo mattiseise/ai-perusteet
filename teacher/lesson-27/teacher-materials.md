@@ -224,13 +224,13 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 ## Arviointikaavio projektiviikolle
 
-| Kriteeri | Paino | Mitä se tarkoittaa? |
+| Kriteeri | Pisteet (yht. 100 p) | Mitä se tarkoittaa? |
 | --- | --- | --- |
-| **Toiminnallisuus** | 30 % | Tekeekö agentti sen, mitä opiskelija lupasi? Toimiiko se ilman kriittisiä virheitä? |
-| **Dokumentaatio** | 20 % | Voidaanko projektia ymmärtää ilman opiskelijan suullista selitystä? Ovatko README, ARCHITECTURE ja SAFETY mukana? |
-| **Testaaminen** | 20 % | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
-| **Demo** | 15 % | Osaako opiskelija esitellä projektin selkeästi ja perustella valintansa? |
-| **Kriittinen ajattelu** | 15 % | Tunnistaako opiskelija agentin kuusi komponenttia, projektin heikkoudet ja mahdolliset parannuskohteet? |
+| **Toiminnallisuus (toimiva työnkulku)** | 25 p | Tekeekö agentti sen, mitä opiskelija lupasi? Toimiiko se ilman kriittisiä virheitä? |
+| **Dokumentaatio** | 20 p | Voidaanko projektia ymmärtää ilman opiskelijan suullista selitystä? Ovatko README, ARCHITECTURE ja SAFETY mukana? |
+| **Testaaminen** | 20 p | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
+| **Demo ja itsearviointi** | 20 p | Osaako opiskelija esitellä projektin selkeästi ja perustella valintansa? |
+| **Turvallisuus ja kriittinen ajattelu** | 15 p | Tunnistaako opiskelija agentin kuusi komponenttia, projektin heikkoudet ja mahdolliset parannuskohteet? |
 
 ---
 
@@ -253,7 +253,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
    Kierrä luokassa, anna palautetta ja auta ongelmatilanteissa.
 6. **Yhteenveto ja seuraavat askeleet noin 5 minuuttia**
 
-   Kerro opiskelijoille: “Seuraavalla tunnilla esitätte demot. Valmistautukaa näyttämään, miten agentti toimii, miten testasitte sen ja mitä parantaisitte seuraavaksi.”
+   Kerro opiskelijoille: “Tunnin lopussa esitätte demot. Valmistautukaa näyttämään, miten agentti toimii, miten testasitte sen ja mitä parantaisitte seuraavaksi.”
 
 ---
 

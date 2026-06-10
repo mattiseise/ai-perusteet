@@ -44,7 +44,7 @@ Opiskelijat tekevät tehtävää 18.1. Sinulla on kaksi roolia: fasilitoija ja k
 
 **Fasilitoijana:** Kierrä huoneessa ja katso, miten opiskelijat testaavat. Kysy: "Mitä nyt testataan?" — haluat nähdä, että he ymmärtävät. Jos joku on jumissa, kysy: "Mistä aloitat? Mitä botti tekee hyvin?"
 
-**Kannustajana:** Jotkut opiskelijat voivat ajatella "bottini on täydellinen, miksi testata?" Vastaa: "Mikään ei ole täydellinen. Testaus osoittaa, mitä voidaan parantaa." Jotkut saattavat löytää ongelmia ja stressaantua. Vastaa: "Hyvästi! Juuri nämä ongelmat auttavat sinua parantamaan."
+**Kannustajana:** Jotkut opiskelijat voivat ajatella "bottini on täydellinen, miksi testata?" Vastaa: "Mikään ei ole täydellinen. Testaus osoittaa, mitä voidaan parantaa." Jotkut saattavat löytää ongelmia ja stressaantua. Vastaa: "Hyvä! Juuri nämä ongelmat auttavat sinua parantamaan."
 
 **Tekninen apu:** Jos botti on hidastunut tai kaatuu, ehdota: "Kopioi system prompt, liitä se uudelleen, kokeile uudestaan." Jos opiskelija ei osaa luoda negatiivista testiä, ota esimerkki: "Kysy botilta jotain, joka ei liity projekteihin. Esimerkiksi 'Kirjoita runo'."
 
@@ -56,7 +56,7 @@ Opiskelijat tekevät tehtävää 18.1. Sinulla on kaksi roolia: fasilitoija ja k
 
 Opiskelijat tekevät tehtävää 18.2. Käsikirjoitus on kriittinen.
 
-**Mitä teet:** Kierrä ja lue käsikirjoitukset, kun ne kirjoitetaan. Kysy: "Kuka on yleisösi? Mitä haluat heidän ymmärtävän?" Jos käsikirjoitus on liian pitkä, sanoi: "Voi tämä olla lyhyempi? Esittely pitäisi olla 3–4 minuuttia." Jos käsikirjoitus on liian lyhyt, kysy: "Miksi botti on tärkeä? Kenelle?"
+**Mitä teet:** Kierrä ja lue käsikirjoitukset, kun ne kirjoitetaan. Kysy: "Kuka on yleisösi? Mitä haluat heidän ymmärtävän?" Jos käsikirjoitus on liian pitkä, sano: "Voiko tämä olla lyhyempi? Esittely pitäisi olla 3–4 minuuttia." Jos käsikirjoitus on liian lyhyt, kysy: "Miksi botti on tärkeä? Kenelle?"
 
 **Esittelyn harjoittelu:** Pyydä muutamaa opiskelijaa harjoitella livedemo lyhyesti (1–2 min). Kuuntele ja anna palautetta: "Se oli selkeä" tai "voitko selittää, miksi kysyt tätä kysymystä?"
 
@@ -82,7 +82,7 @@ Jokainen opiskelijapari antaa yhden kommentin, joka sisältää positiivisen huo
 
 ### Jälkeen
 
-Kerää kaikki arviointikaavakkeet. Sano lyhyesti: "Nyt ymmärrät, mitä kaikkien botit tekevät. Seuraavalla oppitunnilla puhutaan agentiasta."
+Kerää kaikki arviointikaavakkeet. Sano lyhyesti: "Nyt ymmärrät, mitä kaikkien botit tekevät. Seuraavalla oppitunnilla puhutaan agenteista."
 
 ---
 
@@ -106,7 +106,7 @@ Opiskelijat kirjoittavat tehtävää 18.4. He voivat kirjoittaa luokassa tai kot
 | Opiskelija sanoo "bottini on täydellinen" | Ei ymmärrä testaamisen merkitystä | "Kysy bottilta jotain, mitä et odottanut. Mitä tapahtuu?" |
 | Palaute on loukkaavaa ("se on huono") | Opiskelija ei tiedä, miten antaa rakentavaa palautetta | Ohjaa: "Voisitko sanoa, mikä siinä voisi olla paremmin?" |
 | Opiskelijalla on liian pitkä esittely | Hän menetti kontrollin tai ei harjoitellut | Keskeytä ystävällisesti: "Kiitos, keskeytän. Näytetään dokumentti lopusta." Sano sen jälkeen: "Seuraavalla kerralla voidaan harjoitella aika." |
-| Joku on hermostunut esittelystä | Normaalia. Neuvonta auttaa. | "Kaikki hermostelevat. Sinulla on tämä. Ala vaan." Istudu heidän vieressään. |
+| Joku on hermostunut esittelystä | Normaalia. Neuvonta auttaa. | "Kaikki hermostelevat. Sinulla on tämä. Ala vaan." Istuudu heidän viereensä. |
 
 ---
 

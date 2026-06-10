@@ -318,7 +318,7 @@ Tämä oppitunti on käytännöllinen käännekohta. Opiskelijat näkevät, mite
 
 - **Olemme jo oppineet:** tekoälytyökalujen vertailua, promptauksen perusteita, kontekstin antamista ja rakenteista vastausta.
 - **Nyt opimme:** käyttämään tekoälyä käytännön työparina kirjoittamisessa, ongelmanratkaisussa ja dokumentoinnissa.
-- **Seuraavaksi:** opiskelijat suunnittelevat ja rakentavat oman Custom GPT:n, jossa aiemmat taidot yhdistyvät.
+- **Seuraavaksi:** opiskelijat suunnittelevat ja rakentavat oman bottinsa Microsoft Copilotilla, ja siinä aiemmat taidot yhdistyvät.
 
 **Opettajan muistutus:** Tämän tunnin jälkeen opiskelijan pitäisi osata sanoa: ”Tekoäly auttoi minua, mutta minä tarkistin, muokkasin ja päätin lopputuloksen.”
 

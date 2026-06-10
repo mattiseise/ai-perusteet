@@ -10,7 +10,7 @@ Tehtävän tavoitteena on osoittaa konkreettisesti, miten **tietopohja** lisät�
 
 ### Opettajan ohjeet ja fasilitointi
 
-Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Käytä esimerkiksi Custom GPT:tä tai muuta tekoälytyökalua, johon voidaan lisätä dokumentteja **tietopohjaksi**.
+Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Käytä esimerkiksi Microsoft Copilot -agenttia tai muuta tekoälytyökalua, johon voidaan lisätä dokumentteja **tietopohjaksi**.
 
 ### Valmistelu ennen lähiosaa
 
@@ -54,7 +54,7 @@ Näytä opiskelijoille, miten dokumentti lisätään botin tietopohjaan.
 
 Selitä vaiheet selkeästi:
 
-1. Avaa botin tai Custom GPT:n hallintanäkymä.
+1. Avaa botin (esim. Copilot-agentin) hallintanäkymä.
 2. Valitse kohta, jossa voidaan lisätä tiedostoja tai tietopohjadokumentteja.
 3. Lisää dokumentti, esimerkiksi PDF-, Word- tai tekstitiedosto.
 4. Odota, että järjestelmä käsittelee tai indeksoi dokumentin.
