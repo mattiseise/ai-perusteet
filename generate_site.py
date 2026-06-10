@@ -316,7 +316,6 @@ def generate_html(data, briefs):
         <span class="acc-l-num">★</span>
         <span class="acc-l-title">Lopputyön tehtävänanto</span>
         <span class="acc-l-icon">📄</span>
-        <span class="acc-l-check"></span>
       </button>'''
         for idx, (lid, short_title, btype) in enumerate(lessons_in_osp, 1):
             global_idx = all_ids.index(lid) + 1
@@ -325,7 +324,7 @@ def generate_html(data, briefs):
         <span class="acc-l-num">{global_idx}</span>
         <span class="acc-l-title">{short_title}</span>
         <span class="acc-l-icon">{icon}</span>
-        <span class="acc-l-check" id="done-{lid}"></span>
+        <span class="acc-l-check" id="done-{lid}" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('{lid}')"></span>
       </button>'''
 
         track_icon = OSP_ICONS.get(osp['id'], '')
@@ -400,6 +399,7 @@ def generate_html(data, briefs):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tekoälyn perusteet</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -764,6 +764,15 @@ body{{
 }}
 .acc-lesson.done .acc-l-check::after{{
   content:'✓';
+}}
+.acc-l-check{{cursor:pointer}}
+.acc-l-check:hover{{
+  border-color:#059669;
+  box-shadow:0 0 0 3px color-mix(in srgb,#059669 18%,transparent);
+}}
+.acc-lesson.done .acc-l-check:hover{{
+  background:#04734f;
+  border-color:#04734f;
 }}
 .osp-card-progress{{
   padding:16px 24px;
@@ -1750,8 +1759,6 @@ function updCards(){{
       const btn=document.querySelector(`[onclick="loadLesson('${{id}}')"]`);
       if(!btn)return;
       btn.classList.toggle('done',done.includes(id));
-      const check=btn.querySelector('[id^="done-"]');
-      if(check)check.textContent=done.includes(id)?'✓':'';
     }});
   }});
 }}

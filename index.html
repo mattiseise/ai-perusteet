@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tekoälyn perusteet</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -368,6 +369,15 @@ body{
 }
 .acc-lesson.done .acc-l-check::after{
   content:'✓';
+}
+.acc-l-check{cursor:pointer}
+.acc-l-check:hover{
+  border-color:#059669;
+  box-shadow:0 0 0 3px color-mix(in srgb,#059669 18%,transparent);
+}
+.acc-lesson.done .acc-l-check:hover{
+  background:#04734f;
+  border-color:#04734f;
 }
 .osp-card-progress{
   padding:16px 24px;
@@ -1254,52 +1264,51 @@ body:has(#lesson.active) .rv-switch{display:flex}
         <span class="acc-l-num">★</span>
         <span class="acc-l-title">Lopputyön tehtävänanto</span>
         <span class="acc-l-icon">📄</span>
-        <span class="acc-l-check"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-01')">
         <span class="acc-l-num">1</span>
         <span class="acc-l-title">Älykäs vai sääntö? — mitä tekoäly oikeasti tekee</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-01"></span>
+        <span class="acc-l-check" id="done-lesson-01" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-01')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-02')">
         <span class="acc-l-num">2</span>
         <span class="acc-l-title">Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-02"></span>
+        <span class="acc-l-check" id="done-lesson-02" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-02')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-03')">
         <span class="acc-l-num">3</span>
         <span class="acc-l-title">Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-03"></span>
+        <span class="acc-l-check" id="done-lesson-03" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-03')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-04')">
         <span class="acc-l-num">4</span>
         <span class="acc-l-title">Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-04"></span>
+        <span class="acc-l-check" id="done-lesson-04" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-04')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-05')">
         <span class="acc-l-num">5</span>
         <span class="acc-l-title">Muistin rajat — kuinka paljon tekoäly oikeasti muistaa</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-05"></span>
+        <span class="acc-l-check" id="done-lesson-05" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-05')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-06')">
         <span class="acc-l-num">6</span>
         <span class="acc-l-title">Kuvat, ääni ja teksti — kun sanat eivät riitä</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-06"></span>
+        <span class="acc-l-check" id="done-lesson-06" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-06')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-07')">
         <span class="acc-l-num">7</span>
         <span class="acc-l-title">Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-07"></span>
+        <span class="acc-l-check" id="done-lesson-07" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-07')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-08')">
         <span class="acc-l-num">8</span>
         <span class="acc-l-title">Kenen teksti se on? — etiikka, oikeudet ja vastuu</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-08"></span>
+        <span class="acc-l-check" id="done-lesson-08" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-08')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-09')">
         <span class="acc-l-num">9</span>
         <span class="acc-l-title">Tuomaripöydän päätös — asiantuntijalausunto tekoälystä</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-09"></span>
+        <span class="acc-l-check" id="done-lesson-09" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-09')"></span>
       </button>
     </div>
     <div class="osp-card-progress">
@@ -1325,52 +1334,51 @@ body:has(#lesson.active) .rv-switch{display:flex}
         <span class="acc-l-num">★</span>
         <span class="acc-l-title">Lopputyön tehtävänanto</span>
         <span class="acc-l-icon">📄</span>
-        <span class="acc-l-check"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-10')">
         <span class="acc-l-num">10</span>
         <span class="acc-l-title">Kilpailuta tekoälyt — mikä työkalu mihinkin?</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-10"></span>
+        <span class="acc-l-check" id="done-lesson-10" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-10')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-11')">
         <span class="acc-l-num">11</span>
         <span class="acc-l-title">Muita tekoälymalleja — kuin ChatGPT ja Claude</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-11"></span>
+        <span class="acc-l-check" id="done-lesson-11" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-11')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-12')">
         <span class="acc-l-num">12</span>
         <span class="acc-l-title">Anna konteksti — rakenna oma promptauspankkisi</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-12"></span>
+        <span class="acc-l-check" id="done-lesson-12" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-12')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-13')">
         <span class="acc-l-num">13</span>
         <span class="acc-l-title">AI työparina — pohja, muokkaus ja tarkistus</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-13"></span>
+        <span class="acc-l-check" id="done-lesson-13" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-13')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-14')">
         <span class="acc-l-num">14</span>
         <span class="acc-l-title">Oma botti I — suunnittelu, ohjeet ja persoona</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-14"></span>
+        <span class="acc-l-check" id="done-lesson-14" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-14')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-15')">
         <span class="acc-l-num">15</span>
         <span class="acc-l-title">Oma botti II — tietopohja, rajaukset ja testaus</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-15"></span>
+        <span class="acc-l-check" id="done-lesson-15" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-15')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-16')">
         <span class="acc-l-num">16</span>
         <span class="acc-l-title">Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-16"></span>
+        <span class="acc-l-check" id="done-lesson-16" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-16')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-17')">
         <span class="acc-l-num">17</span>
         <span class="acc-l-title">Projektidokumenttibotti — suunnittele ja aloita rakentaminen</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-17"></span>
+        <span class="acc-l-check" id="done-lesson-17" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-17')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-18')">
         <span class="acc-l-num">18</span>
         <span class="acc-l-title">Projektidokumenttibotti — viimeistele ja esittele</span>
         <span class="acc-l-icon">★</span>
-        <span class="acc-l-check" id="done-lesson-18"></span>
+        <span class="acc-l-check" id="done-lesson-18" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-18')"></span>
       </button>
     </div>
     <div class="osp-card-progress">
@@ -1396,52 +1404,51 @@ body:has(#lesson.active) .rv-switch{display:flex}
         <span class="acc-l-num">★</span>
         <span class="acc-l-title">Lopputyön tehtävänanto</span>
         <span class="acc-l-icon">📄</span>
-        <span class="acc-l-check"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-19')">
         <span class="acc-l-num">19</span>
         <span class="acc-l-title">Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-19"></span>
+        <span class="acc-l-check" id="done-lesson-19" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-19')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-20')">
         <span class="acc-l-num">20</span>
         <span class="acc-l-title">Automaatio vai autonomia? — milloin agentti kannattaa</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-20"></span>
+        <span class="acc-l-check" id="done-lesson-20" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-20')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-21')">
         <span class="acc-l-num">21</span>
         <span class="acc-l-title">Agentin muisti ja konteksti — miten kone pysyy kartalla</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-21"></span>
+        <span class="acc-l-check" id="done-lesson-21" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-21')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-22')">
         <span class="acc-l-num">22</span>
         <span class="acc-l-title">Agentin työkalut — tiedostot, haku ja komennot</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-22"></span>
+        <span class="acc-l-check" id="done-lesson-22" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-22')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-23')">
         <span class="acc-l-num">23</span>
         <span class="acc-l-title">Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-23"></span>
+        <span class="acc-l-check" id="done-lesson-23" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-23')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-24')">
         <span class="acc-l-num">24</span>
         <span class="acc-l-title">Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-24"></span>
+        <span class="acc-l-check" id="done-lesson-24" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-24')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-25')">
         <span class="acc-l-num">25</span>
         <span class="acc-l-title">Ihminen portinvartijana — human-in-the-loop käytännössä</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-25"></span>
+        <span class="acc-l-check" id="done-lesson-25" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-25')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-26')">
         <span class="acc-l-num">26</span>
         <span class="acc-l-title">Kädet saveen — n8n-agenttipaja alkaa</span>
         <span class="acc-l-icon">📖</span>
-        <span class="acc-l-check" id="done-lesson-26"></span>
+        <span class="acc-l-check" id="done-lesson-26" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-26')"></span>
       </button>      <button class="acc-lesson" onclick="loadLesson('lesson-27')">
         <span class="acc-l-num">27</span>
         <span class="acc-l-title">Viimeistele ja esittele — agenttisi on valmis</span>
         <span class="acc-l-icon">★</span>
-        <span class="acc-l-check" id="done-lesson-27"></span>
+        <span class="acc-l-check" id="done-lesson-27" role="checkbox" title="Merkitse suoritetuksi / poista merkintä" onclick="event.stopPropagation();toggleDone('lesson-27')"></span>
       </button>
     </div>
     <div class="osp-card-progress">
@@ -26821,8 +26828,6 @@ function updCards(){
       const btn=document.querySelector(`[onclick="loadLesson('${id}')"]`);
       if(!btn)return;
       btn.classList.toggle('done',done.includes(id));
-      const check=btn.querySelector('[id^="done-"]');
-      if(check)check.textContent=done.includes(id)?'✓':'';
     });
   });
 }
