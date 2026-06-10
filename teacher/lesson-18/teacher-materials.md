@@ -434,6 +434,4 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Lopetuslause opettajalle:** Botti vastaa kysymyksiin. Agentti toimii tavoitteellisesti. Tänään viimeistelitte ensimmäisen askeleen kohti sitä ajattelua.
 
-:contentReference[oaicite:0]{index=0}
-
 ---

@@ -248,6 +248,4 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Millaisessa tilanteessa kielimallin vakuuttava mutta väärä vastaus voisi aiheuttaa todellista vahinkoa?
 
-:contentReference[oaicite:0]{index=0}
-
 ---

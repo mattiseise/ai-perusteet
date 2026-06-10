@@ -2989,7 +2989,7 @@ Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes tek
 </style>
 
 <h2>Koulutusdata — se, mistä malli oppii</h2>
-<p>Parametrit opitaan <strong>koulutusdatasta</strong>. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Varhaisetkin suuret kielimallit opetettiin jo biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.</p>
+<p>Parametrit opitaan <strong>koulutusdatasta</strong>. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Nykyiset suuret kielimallit opetetaan biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.</p>
 <p>Mitä malli oppii tästä aineistosta? Se oppii tilastollisia yhteyksiä ja toistuvia kuvioita. Se voi esimerkiksi oppia, että sanat ”koodaus” ja ”Python” esiintyvät usein yhdessä, että merkkijonon ”2 + 2” jälkeen tulee usein ”= 4” tai että kysymyksen jälkeen seuraa yleensä vastaus.</p>
 <p>Tärkeää on kuitenkin ymmärtää, ettei malli ymmärrä asioita samalla tavalla kuin ihminen. Se ei tiedä, miksi 2 + 2 = 4 on totta. Se on oppinut, että tämä yhdistelmä esiintyy aineistossa hyvin usein ja on siksi todennäköinen.</p>
 <p>Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai esiintyy siinä vain vähän, malli ei pysty hallitsemaan sitä hyvin.</p>
@@ -3034,11 +3034,11 @@ Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes tek
 <h2>Kielimalli (Language Model)</h2>
 <p>Tekoälymalli, joka on oppinut tekstin kuvioita ja osaa ennustaa seuraavaa tokenia. ChatGPT, Claude ja Gemini ovat kielimalleja. Ne on opetettu miljardeilla tekstin tokeneilla.</p>
 <h2>Parametri</h2>
-<p>Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. ChatGPT-3:ssa on 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.</p>
+<p>Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. GPT-3:ssa oli noin 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.</p>
 <h2>Next-Token Prediction</h2>
 <p>Kielimallin perusmekanismi: seuraavan tokenin arvaaminen aikaisempien tokenien ja parametrien perusteella. Malli tekee tämän yksi kerrallaan, kunnes vastaus on valmis.</p>
 <h2>Koulutusdata (Training Data)</h2>
-<p>Tekstiaineisto, jolla kielimalli opetetaan. GPT-4 on opetettu noin 15 triljoonalla tokenilla. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.</p>
+<p>Tekstiaineisto, jolla kielimalli opetetaan. Suurimmat mallit on arvioiden mukaan opetettu yli kymmenellä biljoonalla tokenilla, mutta tarkkoja lukuja ei yleensä julkaista. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.</p>
 <h2>Hallusinaatio (Hallucination)</h2>
 <p>Tilanne, jossa kielimalli tuottaa jotain, joka näyttää oikealta, mutta on täysin väärää tai keksittyä. Esimerkiksi tekijän keksiminen tai väärä fakta. Näin tapahtuu, kun malli arvaa väärän tokeniyhdistelmän.</p>
 <h2>Lämpötila (Temperature)</h2>
@@ -3619,8 +3619,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että kielimalli on tehokas tekstin tuottaja mutta ei erehtymätön tietolähde. Sen toiminta perustuu seuraavan tokenin ennustamiseen, opittuihin parametreihin ja koulutusdatan kuvioihin. Tämä selittää sekä mallin vaikuttavat kyvyt että sen virheet.</p>
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Millaisessa tilanteessa kielimallin vakuuttava mutta väärä vastaus voisi aiheuttaa todellista vahinkoa?</p>
-</blockquote>
-<p>:contentReference[oaicite:0]{index=0}</p></div></div>`,
+</blockquote></div></div>`,
   },
   "lesson-04": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -3637,6 +3636,59 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Muista viimeksi, kun kysyit jotain internetistä tai ChatGPT:ltä ja sait täysin väärän tai hyödyttömän vastauksen. Mikä tieto puuttui? Mitkä tiedot olisivat auttaneet?</p>
 </blockquote>
 </blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö — konteksti karsii väärät tulkinnat</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;height:280px">
+  <div class="l04-left">
+    <div class="l04-prompt">Tee minulle treeniohjelma.</div>
+    <div class="l04-chips">
+      <span class="l04-chip l04-c1">+ rooli: vasta-alkaja</span>
+      <span class="l04-chip l04-c2">+ tavoite: 5 km juoksu</span>
+      <span class="l04-chip l04-c3">+ rajaus: 3 krt/vko, ei salia</span>
+    </div>
+  </div>
+  <div class="l04-arrow">→</div>
+  <div class="l04-right">
+    <span class="l04-note l04-n1">malli arvaa — monta tulkintaa</span>
+    <span class="l04-note l04-n2">konteksti karsii — yksi osuu</span>
+    <div class="l04-g l04-g1">Kuntosaliohjelma, 5 × viikossa, painot…</div>
+    <div class="l04-g l04-g2">Juoksuohjelma aloittelijalle: 3 krt/vko, tavoite 5 km <span class="l04-ok">✓ osuva</span></div>
+    <div class="l04-g l04-g3">Kehonpainotreeni kotiin, 20 min…</div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Ilman kontekstia malli joutuu arvaamaan, mitä tarkoitat. Jokainen kontekstin pala — rooli, tavoite, rajaus — karsii vääriä tulkintoja, kunnes jäljelle jää juuri sinun tarpeeseesi osuva vastaus.</figcaption></figure>
+<style>
+.l04-left{display:flex;flex-direction:column;gap:10px;width:225px}
+.l04-prompt{font-family:var(--font-mono);font-size:13px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:11px;padding:10px 12px}
+.l04-chips{display:flex;flex-direction:column;gap:6px}
+.l04-chip{font-family:var(--font-mono);font-size:11.5px;color:#EAEEF8;background:#1E2740;border:1.5px solid oklch(0.66 0.15 264);border-radius:999px;padding:4px 10px;align-self:flex-start;opacity:0}
+.l04-c1{animation:l04chip 10s infinite}
+.l04-c2{animation:l04chip2 10s infinite}
+.l04-c3{animation:l04chip3 10s infinite}
+@keyframes l04chip{0%,26%{opacity:0;transform:translateY(5px)}31%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l04chip2{0%,34%{opacity:0;transform:translateY(5px)}39%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l04chip3{0%,42%{opacity:0;transform:translateY(5px)}47%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l04-arrow{font-size:22px;color:#7E88A8}
+.l04-right{position:relative;display:flex;flex-direction:column;gap:9px;width:265px}
+.l04-note{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em}
+.l04-n1{color:#F0A38C;animation:l04n1 10s infinite}
+.l04-n2{position:absolute;top:0;left:0;color:#7FD0A8;opacity:0;animation:l04n2 10s infinite}
+@keyframes l04n1{0%,4%{opacity:0}8%,46%{opacity:1}52%,100%{opacity:0}}
+@keyframes l04n2{0%,50%{opacity:0}56%,94%{opacity:1}100%{opacity:0}}
+.l04-g{font-family:var(--font-mono);font-size:12px;line-height:1.4;color:#B9C2DA;background:#141B2D;border:1.5px dashed #44517A;border-radius:11px;padding:9px 11px;opacity:0}
+.l04-g1{animation:l04g1 10s infinite}
+.l04-g3{animation:l04g3 10s infinite}
+@keyframes l04g1{0%,4%{opacity:0}10%{opacity:.85}20%{opacity:.5}30%{opacity:.85}40%{opacity:.6}48%{opacity:.85;transform:scale(1)}58%,100%{opacity:0;transform:scale(.92)}}
+@keyframes l04g3{0%,8%{opacity:0}14%{opacity:.8}24%{opacity:.55}34%{opacity:.8}44%{opacity:.55;transform:scale(1)}54%,100%{opacity:0;transform:scale(.92)}}
+.l04-g2{animation:l04g2 10s infinite}
+@keyframes l04g2{0%,6%{opacity:0}12%,54%{opacity:.85;color:#B9C2DA;background:#141B2D;border-color:#44517A;border-style:dashed}64%,94%{opacity:1;color:#FFFFFF;background:#15301F;border-color:#7FD0A8;border-style:solid}100%{opacity:0}}
+.l04-ok{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:1px 7px;margin-left:5px;white-space:nowrap;opacity:0;animation:l04ok 10s infinite}
+@keyframes l04ok{0%,62%{opacity:0}68%,94%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l04-c1,.l04-c2,.l04-c3,.l04-n2,.l04-g2,.l04-ok{animation:none;opacity:1}
+.l04-g2{color:#FFFFFF;background:#15301F;border:1.5px solid #7FD0A8}
+.l04-g1,.l04-g3,.l04-n1{animation:none;opacity:0;display:none}}
+</style>
+
 <h3>Kontekstin viisi komponenttia</h3>
 <p>Hyvä konteksti rakentuu viidestä pääosasta.</p>
 <p><strong>1. Rooli</strong> — Keitä olemme, mikä on osaamisemme ja näkökulmamme. Jos kerrot "olen kokenut kokki", tekoäly tietää, että se voi käyttää alan termejä ja olettaa tietyn osaamistason. Jos sanot "olen aloittelija keittiössä", vastaus voi olla perusteellisempi ja helpommin hyödynnettävä.</p>
@@ -4430,8 +4482,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälyn kanssa työskentely ei ole pelkkää kysymysten heittämistä. Se on tilanteen jäsentämistä, tavoitteiden määrittelyä, rajausten tekemistä ja vastausmuodon ohjaamista.</p>
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä tekoäly tarvitsee tietää, jotta se voi auttaa sinua omassa IT-ongelmassasi ilman turhia arvauksia?</p>
-</blockquote>
-<p>:contentReference[oaicite:0]{index=0}</p></div></div>`,
+</blockquote></div></div>`,
   },
   "lesson-05": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -4447,7 +4498,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Tämän oppitunnin aiheena on ymmärtää tämä raja ja oppia hallitsemaan kontekstia niin, että tekoäly saa aina tarvitsemansa tiedon.</p>
 <p>Tämän tunnin jälkeen sinulla on tuomaripöydälläsi todistusaineisto: tekoälyllä on samat muistin rajat kuin ihmisillä — ja joskus jopa pienempiä.</p>
 <h2>Mitä konteksti-ikkuna on?</h2>
-<p>Konteksti-ikkuna on tekoälymalleille asetettu raja, joka määrittää, kuinka paljon tekstiä malli voi käsitellä yhdessä keskustelussa. Raja määritellään tokeneina, jotka ovat pieniä tekstin palasia. Esimerkiksi ChatGPT-4:llä on konteksti-ikkuna, jossa on noin 128 000 tokenia, ja Claude 3:lla vielä suurempi. Vaikka ikkuna olisi suuri, se ei ole ääretön.</p>
+<p>Konteksti-ikkuna on tekoälymalleille asetettu raja, joka määrittää, kuinka paljon tekstiä malli voi käsitellä yhdessä keskustelussa. Raja määritellään tokeneina, jotka ovat pieniä tekstin palasia. Esimerkiksi GPT-4-mallin konteksti-ikkuna oli noin 128 000 tokenia; uudemmissa malleissa ikkunat ovat usein vielä suurempia, jopa miljoona tokenia. Vaikka ikkuna olisi suuri, se ei ole ääretön.</p>
 <p>Tokenit eivät ole sama asia kuin sanat. Englannin kielessä yksi tokeni on noin 4 merkkiä, joten 128 000 tokenia vastaa noin 512 000 merkkiä eli noin 85 000 sanaa. Se kuulostaa paljolta — ja onkin, pituudeltaan lähes painetun kirjan verran. Mutta laajassa projektissa, jossa on kymmeniä sivuja muistiinpanoja, pitkiä keskusteluja tai monta liitettä, se täyttyy nopeasti.</p>
 <p>Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja säilyttää vain uudemman osan. Tämä on kuin puhelimen tekstiviestiketju, joka näyttää vain viimeiset 100 viestiä — vanhemmat viestit liukuvat pois näkyvistä. Malli ei enää näe vanhaa kontekstia. Jos sanoit aiemmin "Kirjoitan tekstin selkeällä yleiskielellä", mutta keskustelu on nyt 15 000 tokenia edemmällä, malli saattaa unohtaa sen.</p>
 <blockquote>
@@ -4540,7 +4591,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <hr />`,
     vocab:`<h1>Sanasto</h1>
 <h2>Konteksti-ikkuna (context window)</h2>
-<p>Tokeneina määritelty raja, joka rajoittaa sitä, kuinka paljon tekstiä tekoälymallit voivat käsitellä yhdessä keskustelussa. Kun raja täyttyy, vanhin tieto häviää. Esim. ChatGPT-4:n ikkuna on 128 000 tokenia.</p>
+<p>Tokeneina määritelty raja, joka rajoittaa sitä, kuinka paljon tekstiä tekoälymallit voivat käsitellä yhdessä keskustelussa. Kun raja täyttyy, vanhin tieto häviää. Esim. GPT-4-mallin ikkuna oli 128 000 tokenia; uudemmissa malleissa ikkuna voi olla paljon suurempi.</p>
 <h2>Token</h2>
 <p>Pienin tekstin yksikkö, jonka tekoäly käsittelee. Ei täsmälleen sana — noin 4 merkkiä = 1 tokeni. Tarkka suhde riippuu kielestä ja mallista.</p>
 <h2>Tiivistys (summarization)</h2>
@@ -5159,6 +5210,66 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele projektia, jota työstät nyt. Mitä muita tietomuotoja kuin tekstiä käytät päivittäin? Käytätkö esimerkiksi kuvakaappauksia, lokitietoja, taulukoita tai kaavioita? Kuinka usein jätät ne pois, koska oletat, ettei tekoäly voi käsitellä niitä?</p>
 </blockquote>
 </blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// näytä, älä vain kerro — jokainen syöte tarkentaa diagnoosia</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
+  <div class="l06-wrap">
+    <span class="l06-q">”Sovellus ei toimi.”</span>
+    <div class="l06-src l06-s1">▣ kuvakaappaus</div>
+    <div class="l06-src l06-s2">≡ loki (20 riviä)</div>
+    <div class="l06-src l06-s3">‹/› koodi</div>
+    <i class="l06-fly l06-f1"></i><i class="l06-fly l06-f2"></i><i class="l06-fly l06-f3"></i>
+    <div class="l06-model">MALLI<div class="l06-meterbox"><div class="l06-meter"></div></div><span class="l06-pct l06-p1">tarkkuus 35 %</span><span class="l06-pct l06-p2">tarkkuus 70 %</span><span class="l06-pct l06-p3">tarkkuus 95 %</span></div>
+    <div class="l06-a l06-a1">Syitä voi olla monia — kokeile käynnistää uudelleen? <span class="l06-tag l06-t1">arvaus</span></div>
+    <div class="l06-a l06-a2">Virheilmoitus viittaa tietokantaan — lokissa ”timeout 5432”. <span class="l06-tag l06-t2">tarkentuu</span></div>
+    <div class="l06-a l06-a3">Tietokantaportti 5432 ei vastaa: korjaa yhteysasetus rivillä 12. <span class="l06-tag l06-t3">✓ täsmällinen</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Pelkkä ”ei toimi” pakottaa mallin arvaamaan. Kun lisäät kuvakaappauksen, lokit ja koodin, diagnoosi tarkentuu vaihe vaiheelta — jokainen modaliteetti tuo tietoa, jota muut eivät sisällä.</figcaption></figure>
+<style>
+.l06-wrap{position:relative;width:560px;height:250px}
+.l06-q{position:absolute;left:0;top:6px;font-family:var(--font-mono);font-size:12.5px;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:7px 11px}
+.l06-src{position:absolute;left:0;width:172px;font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 11px}
+.l06-s1{top:64px;animation:l06s1 12s infinite}
+.l06-s2{top:112px;animation:l06s2 12s infinite}
+.l06-s3{top:160px;animation:l06s3 12s infinite}
+@keyframes l06s1{0%,7%,17%,100%{border-color:#44517A}9%,15%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+@keyframes l06s2{0%,33%,43%,100%{border-color:#44517A}35%,41%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+@keyframes l06s3{0%,59%,69%,100%{border-color:#44517A}61%,67%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+.l06-fly{position:absolute;left:176px;width:9px;height:9px;border-radius:50%;background:oklch(0.72 0.15 264);opacity:0}
+.l06-f1{top:78px;animation:l06f1 12s infinite}
+.l06-f2{top:126px;animation:l06f2 12s infinite}
+.l06-f3{top:174px;animation:l06f3 12s infinite}
+@keyframes l06f1{0%,8%{opacity:0;transform:translate(0,0)}10%{opacity:1}15%{opacity:1;transform:translate(64px,42px)}17%,100%{opacity:0;transform:translate(64px,42px)}}
+@keyframes l06f2{0%,34%{opacity:0;transform:translate(0,0)}36%{opacity:1}41%{opacity:1;transform:translate(64px,-6px)}43%,100%{opacity:0;transform:translate(64px,-6px)}}
+@keyframes l06f3{0%,60%{opacity:0;transform:translate(0,0)}62%{opacity:1}67%{opacity:1;transform:translate(64px,-54px)}69%,100%{opacity:0;transform:translate(64px,-54px)}}
+.l06-model{position:absolute;left:248px;top:84px;width:132px;text-align:center;font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 264);border-radius:12px;padding:12px 10px 10px}
+.l06-meterbox{margin:9px 6px 5px;height:8px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
+.l06-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#7FD0A8);animation:l06meter 12s infinite}
+@keyframes l06meter{0%,14%{width:35%}18%,40%{width:35%}44%,66%{width:70%}70%,96%{width:95%}100%{width:35%}}
+.l06-pct{position:absolute;left:0;right:0;bottom:-22px;font-size:10.5px;letter-spacing:.05em;color:#B9C2DA;opacity:0}
+.l06-p1{animation:l06p1 12s infinite}.l06-p2{animation:l06p2 12s infinite}.l06-p3{animation:l06p3 12s infinite;color:#7FD0A8}
+@keyframes l06p1{0%,2%{opacity:0}5%,40%{opacity:1}44%,100%{opacity:0}}
+@keyframes l06p2{0%,42%{opacity:0}46%,66%{opacity:1}70%,100%{opacity:0}}
+@keyframes l06p3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+.l06-a{position:absolute;left:400px;top:72px;width:160px;font-family:var(--font-mono);font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 11px;opacity:0}
+.l06-a1{animation:l06a1 12s infinite}
+.l06-a2{animation:l06a2 12s infinite}
+.l06-a3{animation:l06a3 12s infinite}
+@keyframes l06a1{0%,3%{opacity:0}7%,38%{opacity:1}42%,100%{opacity:0}}
+@keyframes l06a2{0%,42%{opacity:0}46%,64%{opacity:1}68%,100%{opacity:0}}
+@keyframes l06a3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+.l06-a3{border-color:#7FD0A8}
+.l06-tag{display:inline-block;margin-top:5px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
+.l06-t1{color:#3A1408;background:#F0A38C}
+.l06-t2{color:#06212A;background:#46c7cf}
+.l06-t3{color:#06241a;background:#7FD0A8}
+@media (prefers-reduced-motion:reduce){
+.l06-s1,.l06-s2,.l06-s3,.l06-f1,.l06-f2,.l06-f3,.l06-meter,.l06-p1,.l06-p2,.l06-a1,.l06-a2{animation:none}
+.l06-f1,.l06-f2,.l06-f3,.l06-a1,.l06-a2,.l06-p1,.l06-p2{opacity:0;display:none}
+.l06-a3,.l06-p3{animation:none;opacity:1}
+.l06-meter{width:95%}}
+</style>
+
 <h2>Kuvakaappaukset — näytä, älä vain kuvaile</h2>
 <p><strong>Kuvakaappaus</strong> eli screenshot on yksi tärkeimmistä kontekstityökaluista IT-ammattilaisen työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.</p>
 <p>Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”Apache-palvelimen konfiguraatio on väärä”, tekoäly voi joutua arvaamaan useita erilaisia virheen syitä. Kun taas näytät kuvakaappauksen <code>httpd.conf</code>-tiedostosta, jossa <code>SSLEngine off</code> on sijoitettu väärään kohtaan, tekoäly voi nähdä ongelman tarkemmin ja ehdottaa täsmällisempää korjausta.</p>
@@ -5371,7 +5482,7 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 <h2>Visuaalinen konteksti (visual context)</h2>
 <p>Tieto, joka näkyy näytöllä — värit, ikonit, asettelut, kaaviot. Kuvakaappaukset antavat visuaalista kontekstia, mihin teksti ei pysty.</p>
 <h2>Token-kustannus (token cost)</h2>
-<p>Kuvakaappaukset käyttävät enemmän tokeneita kuin teksti. Suuri kuvakaappaus voi olla 10 000 tokenia, siinä missä teksti olisi 1 000. Tämä vaikuttaa konteksti-ikkunan hallintaan.</p>
+<p>Kuvakaappaukset käyttävät enemmän tokeneita kuin teksti. Kuvakaappaus voi viedä satoja tai tuhansia tokeneita — usein moninkertaisesti verrattuna samaan tietoon tekstinä. Tämä vaikuttaa konteksti-ikkunan hallintaan.</p>
 <h2>Multimodaalinen malli (multimodal model)</h2>
 <p>Tekoälymallit, jotka voivat käsitellä useita modaliteetteja. GPT-4V, Claude 3 ja Gemini voivat nähdä kuvia. Vanhemmat mallit käsittelevät vain tekstiä.</p>
 <h2>Tekstimallit (text-only models)</h2>
@@ -6739,8 +6850,40 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <h2>Tekijänoikeudet ja koulutusdata</h2>
 <p>Kun ChatGPT vastaa sinulle, se hyödyntää tietoa, jota sille on opetettu. Mutta mistä tieto tulee? Vastaus on monimutkainen: mallit on koulutettu suurilla tekstiaineistoilla, joihin voi sisältyä verkkosivustoja, blogeja, kirjoja, artikkeleita ja muuta internetissä saatavilla olevaa tekstiä.</p>
 <p>Monien aineistojen tekijät, kuten journalistit, kirjailijat, tutkijat ja bloggaajat, eivät välttämättä ole antaneet erillistä lupaa siihen, että heidän tekstejään käytetään tekoälymallien kouluttamiseen. He eivät myöskään välttämättä ole saaneet siitä korvausta.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// koulutusdata virtaa malliin — tieto tekijästä ei tule mukana ulos</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l08-wrap">
+    <div class="l08-beltbox"><div class="l08-belt">
+      <span class="l08-doc">Blogi · <b>Aino K.</b></span><span class="l08-doc">Uutinen · <b>toimitus</b></span><span class="l08-doc">Romaani · <b>T. Mäki</b></span><span class="l08-doc">Koodi · <b>avoin yhteisö</b></span><span class="l08-doc">Essee · <b>opiskelija</b></span><span class="l08-doc">Artikkeli · <b>tutkijat</b></span><span class="l08-doc">Blogi · <b>Aino K.</b></span><span class="l08-doc">Uutinen · <b>toimitus</b></span><span class="l08-doc">Romaani · <b>T. Mäki</b></span><span class="l08-doc">Koodi · <b>avoin yhteisö</b></span><span class="l08-doc">Essee · <b>opiskelija</b></span><span class="l08-doc">Artikkeli · <b>tutkijat</b></span>
+    </div></div>
+    <div class="l08-model">MALLI<span class="l08-sub">parametreja — ei lähdeluetteloa</span></div>
+    <div class="l08-outline"></div>
+    <div class="l08-out"><span class="l08-type">Sujuvaa uutta tekstiä — pohjana miljoonien tekijöiden työ.</span><span class="l08-ask">kenen työtä? · lupa? · korvaus?</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Mallin koulutuksessa tekstit muuttuvat parametreiksi: nimet, luvat ja korvaukset eivät kulje mukana. Siksi kysymys kuuluu — kenen työn varaan tekoälyn tuotos rakentuu, ja millä ehdoilla?</figcaption></figure>
+<style>
+.l08-wrap{position:relative;width:560px;height:248px}
+.l08-beltbox{position:absolute;left:0;top:22px;width:392px;height:44px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 78%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 78%,transparent 100%)}
+.l08-belt{position:absolute;left:0;top:4px;display:flex;gap:10px;width:max-content;animation:l08belt 18s linear infinite}
+@keyframes l08belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.l08-doc{font-family:var(--font-mono);font-size:11.5px;white-space:nowrap;color:#B9C2DA;background:#1E2740;border:1.5px solid #44517A;border-radius:9px;padding:7px 10px}
+.l08-doc b{color:#FFFFFF;font-weight:600}
+.l08-model{position:absolute;right:0;top:8px;width:150px;height:74px;text-align:center;font-family:var(--font-mono);font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 264);border-radius:12px;padding-top:14px;overflow:hidden}
+.l08-sub{display:block;margin-top:5px;font-size:9.5px;letter-spacing:.05em;text-transform:none;color:#8B94B3}
+.l08-outline{position:absolute;right:72px;top:86px;width:2px;height:34px;background:linear-gradient(180deg,oklch(0.66 0.15 264),#7FD0A8)}
+.l08-out{position:absolute;left:70px;top:126px;width:420px;font-family:var(--font-mono);background:#0E1422;border:1.5px solid #232C44;border-radius:12px;padding:13px 14px 11px}
+.l08-type{display:block;font-size:11.5px;color:#FFFFFF;white-space:nowrap;overflow:hidden;border-right:2px solid #46c7cf;width:0;animation:l08type 9s steps(48) infinite}
+@keyframes l08type{0%,6%{width:0}55%,96%{width:100%}100%{width:100%}}
+.l08-ask{display:inline-block;margin-top:9px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#3A1408;background:#F0A38C;border-radius:999px;padding:2px 9px;animation:l08ask 3s ease-in-out infinite}
+@keyframes l08ask{0%,100%{opacity:.55}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+.l08-belt,.l08-ask{animation:none}
+.l08-type{animation:none;width:100%;border-right:none}}
+</style>
+
 <p>Tämä on johtanut oikeustapauksiin ja laajaan keskusteluun. Kirjailijat, kuvataiteilijat ja muut sisällöntuottajat ovat kyseenalaistaneet sen, onko heidän teostensa käyttäminen tekoälyn kouluttamiseen hyväksyttävää ilman lupaa tai korvausta. Perusväite on sama: ”Teidän työkalunne on opetettu meidän luomuksillamme ilman suostumustamme.”</p>
-<p>Juridisesti kysymys on monimutkainen. Tekijänoikeuslaissa tunnetaan esimerkiksi <strong>fair use</strong> eli reilun käytön käsite, joka voi joissakin tilanteissa sallia aineiston käytön ilman lupaa. Yksi keskeinen kysymys on, onko tekoälymallin kouluttaminen riittävän <strong>transformatiivista</strong> eli muuttaako se alkuperäistä aineistoa tavalla, joka tekee käytöstä hyväksyttävää. Tästä ei ole kaikissa tilanteissa selvää tai yksiselitteistä vastausta.</p>
+<p>Juridisesti kysymys on monimutkainen. Esimerkiksi Yhdysvaltain tekijänoikeuslaissa tunnetaan <strong>fair use</strong> eli reilun käytön käsite, joka voi joissakin tilanteissa sallia aineiston käytön ilman lupaa. Suomen ja EU:n tekijänoikeuslainsäädännössä vastaavaa yleistä poikkeusta ei ole, mutta tekstin- ja tiedonlouhinnalle on omat poikkeussäännöksensä. Yksi keskeinen kysymys on, onko tekoälymallin kouluttaminen riittävän <strong>transformatiivista</strong> eli muuttaako se alkuperäistä aineistoa tavalla, joka tekee käytöstä hyväksyttävää. Tästä ei ole kaikissa tilanteissa selvää tai yksiselitteistä vastausta.</p>
 <p>Eettisesti kysymys on kuitenkin helpompi ymmärtää: jos tekijöiden työtä käytetään ilman lupaa, näkyvyyttä tai korvausta, kyse ei ole vain teknisestä ratkaisusta vaan myös vallasta, oikeuksista ja vastuusta. Ammattilaisena et voi sivuuttaa tätä sanomalla vain: ”Palveluntarjoaja teki sen.” Kun käytät tekoälyä työssäsi, osallistut myös sen käyttöön liittyviin eettisiin valintoihin.</p>
 <blockquote>
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kuvittele, että kirjoitit artikkelin blogiisi. Tietämättäsi se päätyi tekoälymallin koulutusdataan. Nyt tekoäly tuottaa tekstiä, joka muistuttaa omaa tekstiäsi. Miltä sinusta tuntuisi? Pitäisikö sinulla olla oikeus tietää tästä ja halutessasi kieltää tekstisi käyttö?</p>
@@ -6841,7 +6984,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <h2>Algoritminen harha (algorithmic bias)</h2>
 <p>Tilanne, jossa AI:n päätökset tai tulokset systemaattisesti syrjivät tai suosivat tiettyä ryhmää. Harha voi johtua koulutusdatasta, joka heijastaa historiallista syrjintää tai epätasapainoista jakautumista.</p>
 <h2>Reilu käyttö (fair use)</h2>
-<p>Tekijänoikeuslaissa oleva käsite, joka sallii alkuperäisen tekijänoikeuden haltijan suostumuksetta käytön tietyissä olosuhteissa (esim. kritiikki, parodia, opetus). Se, voidaanko AI-mallin koulutus laskea "reiluksi käytöksi", on oikeusjärjestelmissä kiistanalaista.</p>
+<p>Yhdysvaltain tekijänoikeuslaissa oleva käsite, joka sallii alkuperäisen tekijänoikeuden haltijan suostumuksetta käytön tietyissä olosuhteissa (esim. kritiikki, parodia, opetus). Se, voidaanko AI-mallin koulutus laskea "reiluksi käytöksi", on oikeusjärjestelmissä kiistanalaista.</p>
 <h2>Datan merkitsijä (data labeler)</h2>
 <p>Ihminen, joka merkitsee tai "taggaa" tietoja AI:n opetusta varten. Monet merkitsijät työskentelevät matalapalkkaisissa töissä globaalissa etelässä.</p>
 <h2>Vastuullinen AI (responsible AI)</h2>
@@ -6849,7 +6992,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <h2>Ympäristöjalanjälki (environmental footprint)</h2>
 <p>AI:n käytöstä aiheutuva vaikutus ympäristöön, kuten sähkön ja veden kulutus datakeskuksissa.</p>
 <h2>Transformatiivinen käyttö (transformative use)</h2>
-<p>Tekijänoikeuslaissa oleva käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.</p>
+<p>Erityisesti Yhdysvaltain tekijänoikeuskäytännössä käytetty käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.</p>
 <hr />`,
     stasks:`<h1>Opiskelutehtävät: Etiikka, tekijänoikeudet ja ympäristövaikutukset</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 1: Tekijänoikeudet ja koulutusdata — case-analyysi</h2></div><div class="task-card-body">
@@ -7784,8 +7927,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Kun käytät tekoälyä työssä tai opinnoissa, mikä on sinun vastuusi käyttäjänä, kehittäjänä tai tulevana IT-ammattilaisena?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Sinulla on ääni. Käytä sitä.</p>
-</blockquote>
-<p>:contentReference[oaicite:0]{index=0}</p></div></div>`,
+</blockquote></div></div>`,
   },
   "lesson-09": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -8574,6 +8716,47 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <hr />
 <h2>Käytännön vertailu: sama tehtävä, kolme vastausta</h2>
 <p>Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa, mitä tapahtuu.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä kolmelle työkalulle — vahvin vaihtuu tilanteen mukaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l10-wrap">
+    <div class="l10-task"><span class="l10-t l10-t1">Tehtävä: analysoi 80-sivuinen raportti kokonaisuutena</span><span class="l10-t l10-t2">Tehtävä: analysoi CSV-data ja piirrä kaaviot</span><span class="l10-t l10-t3">Tehtävä: kokoa raportti SharePointista ja sähköposteista</span></div>
+    <div class="l10-cols">
+      <div class="l10-col"><span class="l10-win l10-w2">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b1"></div></div><span class="l10-name">ChatGPT</span><span class="l10-trait">monipuolisuus</span></div>
+      <div class="l10-col"><span class="l10-win l10-w1">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b2"></div></div><span class="l10-name">Claude</span><span class="l10-trait">pitkät aineistot</span></div>
+      <div class="l10-col"><span class="l10-win l10-w3">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b3"></div></div><span class="l10-name">Copilot</span><span class="l10-trait">M365-ympäristö</span></div>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">”Mikä on paras tekoäly?” on väärä kysymys. Kun tehtävä vaihtuu, vahvin työkalu vaihtuu: pitkä dokumentti, data-analyysi ja organisaation M365-ympäristö nostavat kukin eri palvelun kärkeen.</figcaption></figure>
+<style>
+.l10-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;width:560px}
+.l10-task{position:relative;width:430px;height:38px}
+.l10-t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--font-mono);font-size:12px;font-weight:500;color:#06212A;background:#c9b7f1;border-radius:10px;padding:4px 12px;opacity:0}
+.l10-t1{animation:l10t1 15s infinite}.l10-t2{animation:l10t2 15s infinite}.l10-t3{animation:l10t3 15s infinite}
+@keyframes l10t1{0%{opacity:1}29%{opacity:1}33%{opacity:0}96%{opacity:0}100%{opacity:1}}
+@keyframes l10t2{0%,29%{opacity:0}33%,62%{opacity:1}66%,100%{opacity:0}}
+@keyframes l10t3{0%,62%{opacity:0}66%,96%{opacity:1}100%{opacity:0}}
+.l10-cols{display:flex;gap:34px}
+.l10-col{display:flex;flex-direction:column;align-items:center;gap:5px;width:140px}
+.l10-win{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0}
+.l10-w1{animation:l10w1 15s infinite}.l10-w2{animation:l10w2 15s infinite}.l10-w3{animation:l10w3 15s infinite}
+@keyframes l10w1{0%,2%{opacity:0}6%,28%{opacity:1}32%,100%{opacity:0}}
+@keyframes l10w2{0%,35%{opacity:0}39%,61%{opacity:1}65%,100%{opacity:0}}
+@keyframes l10w3{0%,68%{opacity:0}72%,95%{opacity:1}99%,100%{opacity:0}}
+.l10-barbox{display:flex;align-items:flex-end;width:64px;height:112px;border-radius:9px;background:#0E1422;border:1.5px solid #232C44;overflow:hidden}
+.l10-bar{width:100%;border-radius:7px 7px 0 0;background:linear-gradient(180deg,oklch(0.72 0.15 305),oklch(0.5 0.13 305))}
+.l10-b1{animation:l10b1 15s infinite}.l10-b2{animation:l10b2 15s infinite}.l10-b3{animation:l10b3 15s infinite}
+@keyframes l10b1{0%,29%{height:64%}35%,62%{height:95%}68%,96%{height:58%}100%{height:64%}}
+@keyframes l10b2{0%,29%{height:95%}35%,62%{height:62%}68%,96%{height:54%}100%{height:95%}}
+@keyframes l10b3{0%,29%{height:48%}35%,62%{height:55%}68%,96%{height:95%}100%{height:48%}}
+.l10-name{font-family:var(--font-mono);font-size:12.5px;font-weight:600;color:#FFFFFF}
+.l10-trait{font-family:var(--font-mono);font-size:10.5px;color:#B9C2DA}
+@media (prefers-reduced-motion:reduce){
+.l10-t1,.l10-t2,.l10-t3,.l10-w1,.l10-w2,.l10-w3,.l10-b1,.l10-b2,.l10-b3{animation:none}
+.l10-t1,.l10-w1{opacity:1}
+.l10-b1{height:64%}.l10-b2{height:95%}.l10-b3{height:48%}}
+</style>
+
 <p>Kuvittele, että sinulla on 40-sivuinen tutkimusraportti PDF-muodossa ja haluat ymmärtää sen nopeasti. ChatGPT voi olla hyvä valinta, jos haluat yhdistää dokumenttianalyysin, verkkotiedon hakemisen, taulukoiden käsittelyn ja mahdollisen datan visualisoinnin. Sen vahvuus on monipuolinen työskentely samassa keskustelussa.</p>
 <p>Claude voi olla hyvä valinta silloin, kun haluat käsitellä pitkää dokumenttia kokonaisuutena ja saada siitä huolellisen, tekstilähtöisen analyysin. Pitkä konteksti-ikkuna voi auttaa silloin, kun aineistoa on paljon ja kokonaiskuvan säilyminen on tärkeää.</p>
 <p>Copilot voi olla hyvä valinta silloin, kun raportti on osa Microsoft 365 -ympäristöä, esimerkiksi SharePointissa, Teamsissa tai OneDrivessa, ja haluat yhdistää sen tiedot muihin organisaation dokumentteihin, sähköposteihin tai kokouksiin käyttöoikeuksiesi rajoissa.</p>
@@ -9490,6 +9673,50 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 </ol>
 <h2>Osa 5: Tietosuoja — minne tiedot menevät?</h2>
 <p>Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetissä, kirjoittamasi tekstit lähetetään palvelun palvelimille. Palvelimet voivat sijaita eri puolilla maailmaa, ja niihin sovelletaan erilaisia lakeja ja käyttöehtoja.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama viesti, kolme määränpäätä — palvelimen sijainti ratkaisee säännöt</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l11-wrap">
+    <div class="l11-me">SINÄ<span class="l11-doc">”oppilaan essee.txt”</span></div>
+    <i class="l11-pkt l11-k1"></i><i class="l11-pkt l11-k2"></i><i class="l11-pkt l11-k3"></i>
+    <div class="l11-dst l11-d1"><b>Pilvipalvelin · USA</b><span class="l11-sub">käyttöehdot ja asetukset ratkaisevat</span><span class="l11-vd l11-v1">tarkista ennen käyttöä</span></div>
+    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">⚠ GDPR-riski</span></div>
+    <div class="l11-dst l11-d3"><b>Oma kone · paikallinen malli</b><span class="l11-sub">data ei poistu laitteeltasi</span><span class="l11-vd l11-v3">✓ pysyy hallussasi</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Kun painat enteriä, tekstisi matkustaa palveluntarjoajan palvelimelle — ja sen sijainti määrää, mitä lakeja ja ehtoja dataasi sovelletaan. Paikallisesti ajettava malli on poikkeus: viesti ei koskaan poistu omalta koneeltasi.</figcaption></figure>
+<style>
+.l11-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
+.l11-me{position:absolute;left:0;top:96px;width:150px;text-align:center;font-size:12.5px;letter-spacing:.12em;color:#EAEEF8;background:#11182A;border:2px solid #44517A;border-radius:12px;padding:11px 10px}
+.l11-doc{display:block;margin-top:7px;font-size:11px;letter-spacing:0;color:#06212A;background:#46c7cf;border-radius:8px;padding:4px 6px;font-weight:500}
+.l11-pkt{position:absolute;left:152px;top:140px;width:10px;height:10px;border-radius:3px;background:#46c7cf;opacity:0}
+.l11-k1{animation:l11k1 13.5s infinite}
+.l11-k2{animation:l11k2 13.5s infinite}
+.l11-k3{animation:l11k3 13.5s infinite}
+@keyframes l11k1{0%,2%{opacity:0;transform:translate(0,0)}4%{opacity:1}16%{opacity:1;transform:translate(212px,-100px)}19%,100%{opacity:0;transform:translate(212px,-100px)}}
+@keyframes l11k2{0%,35%{opacity:0;transform:translate(0,0)}37%{opacity:1}49%{opacity:1;transform:translate(212px,-12px)}52%,100%{opacity:0;transform:translate(212px,-12px)}}
+@keyframes l11k3{0%,68%{opacity:0;transform:translate(0,0)}70%{opacity:1}75%{opacity:1;transform:translate(106px,38px)}81%{opacity:1;transform:translate(212px,76px)}96%{opacity:1;transform:translate(212px,76px)}100%{opacity:0}}
+.l11-dst{position:absolute;left:368px;width:192px;font-size:11.5px;color:#EAEEF8;background:#141B2D;border:1.5px solid #2B3552;border-radius:12px;padding:9px 12px}
+.l11-dst b{font-size:12px;color:#FFFFFF}
+.l11-d1{top:0;animation:l11d1 13.5s infinite}
+.l11-d2{top:88px;animation:l11d2 13.5s infinite}
+.l11-d3{top:176px;animation:l11d3 13.5s infinite}
+@keyframes l11d1{0%,12%,26%,100%{border-color:#2B3552;box-shadow:none}15%,22%{border-color:oklch(0.72 0.15 305);box-shadow:0 0 14px oklch(0.66 0.15 305/.45)}}
+@keyframes l11d2{0%,45%,60%,100%{border-color:#2B3552;box-shadow:none}48%,56%{border-color:#F0A38C;box-shadow:0 0 14px rgba(240,163,140,.4)}}
+@keyframes l11d3{0%,78%,97%,100%{border-color:#2B3552;box-shadow:none}82%,94%{border-color:#7FD0A8;box-shadow:0 0 14px rgba(127,208,168,.4)}}
+.l11-sub{display:block;margin-top:3px;font-size:10.5px;line-height:1.4;color:#B9C2DA}
+.l11-vd{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:1px 8px;opacity:0}
+.l11-v1{color:#1d2433;background:#c9b7f1;animation:l11v1 13.5s infinite}
+.l11-v2{color:#3A1408;background:#F0A38C;animation:l11v2 13.5s infinite}
+.l11-v3{color:#06241a;background:#7FD0A8;animation:l11v3 13.5s infinite}
+@keyframes l11v1{0%,15%{opacity:0}18%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l11v2{0%,48%{opacity:0}51%,63%{opacity:1}67%,100%{opacity:0}}
+@keyframes l11v3{0%,81%{opacity:0}84%,97%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l11-k1,.l11-k2,.l11-k3,.l11-d1,.l11-d2,.l11-d3{animation:none}
+.l11-k1,.l11-k2,.l11-k3{opacity:0}
+.l11-v1,.l11-v2,.l11-v3{animation:none;opacity:1}}
+</style>
+
 <h3>Missä palvelimet sijaitsevat?</h3>
 <table>
 <thead>
@@ -9642,15 +9869,15 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 <h2>Suljettu malli</h2>
 <p>Tekoälymalli, jonka käytät internetin kautta. Et näe koodia, vaan vain kysyt ja saat vastauksen. Esimerkiksi ChatGPT, Claude ja Gemini.</p>
 <h2>Pilvipalvelu</h2>
-<p>Palvelu, joka on internetissä saippuakivella olevan yrityksen palvelimilla. Kun käytät ChatGPTä, käytät pilvipalvelua.</p>
+<p>Palvelu, joka toimii internetissä yrityksen palvelimilla — ei omalla koneellasi. Kun käytät ChatGPT:tä, käytät pilvipalvelua.</p>
 <h2>Paikallinen ajo</h2>
 <p>Tekoälymallin ajaminen omalla tietokoneella, ei internetissä. Tiedot pysyvät sinulla, ne eivät lähde minnekään.</p>
 <h2>Tietosuoja</h2>
 <p>Säännöt siitä, mihin henkilötiedot voivat mennä ja kuka niitä voi nähdä. GDPR on tietosuojalaki.</p>
 <h2>GDPR</h2>
-<p>Euroopan tietosuojalaki. Se sanoo, että henkilötiedot on oltava turvassa ja EU:n alueella.</p>
+<p>Euroopan tietosuojalaki. Se vaatii, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Siirto EU:n ulkopuolelle on mahdollista vain erityisin suojatoimin.</p>
 <h2>API (ohjelmointirajapinta)</h2>
-<p>Tapa pyytää tekoälyä tekemään jotakin. Jos käytät ChatGPTä selaimessa, käytät APIa — selaimen kautta.</p>
+<p>Tapa, jolla oma ohjelma voi pyytää tekoälyä tekemään jotakin ilman selainta. Selaimessa käytät valmista käyttöliittymää; API:n kautta ohjelmasi keskustelee mallin kanssa suoraan.</p>
 <h2>Hinta per kysymys</h2>
 <p>Jotkut mallit maksavat jokaisesta kysymyksestä. ChatGPT voi maksaa. Llama omalla koneella ei maksa.</p>
 <h2>Nopeus</h2>
@@ -11268,6 +11495,57 @@ miksi.
 <h2>Johdanto: tekoäly ei ole vain tekninen työkalu</h2>
 <p>Monet ajattelevat, että tekoäly on tarkoitettu ohjelmoijille ja datatieteen aloille. Todellisuudessa tekoäly on hyödyllisimmillään arkisissa tehtävissä: tekstien kirjoittamisessa, asioiden selvittämisessä, ongelmien ratkaisemisessa ja oppimisessa. Tämä koskee jokaista opiskelijaa riippumatta siitä, mille alalle suuntaudut.</p>
 <p>Tällä oppitunnilla opit käyttämään tekoälyä käytännön <strong>työparina</strong>. Et opiskele monimutkaisia teknisiä komentoja, vaan opit hyödyntämään tekoälyä päivittäisissä tehtävissä, joita kohtaat opiskelussa ja myöhemmin työelämässä. Ajattele tekoälyä kuin kollegaa, joka istuu viereisellä tuolilla: voit kysyä siltä neuvoa, pyytää sitä tarkistamaan tekstisi tai selittämään asian, jota et vielä ymmärrä.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// työnkulku: tekoäly luonnostelee — sinä tarkistat ja viimeistelet</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l13-wrap">
+    <div class="l13-st" style="left:0"><span class="l13-who l13-ai">AI</span><span class="l13-lbl">1 · luonnos</span></div>
+    <div class="l13-st" style="left:200px"><span class="l13-who l13-you">SINÄ</span><span class="l13-lbl">2 · tarkista</span></div>
+    <div class="l13-st" style="left:400px"><span class="l13-who l13-you">SINÄ</span><span class="l13-lbl">3 · viimeistele</span></div>
+    <span class="l13-ar" style="left:166px">→</span><span class="l13-ar" style="left:366px">→</span>
+    <div class="l13-doc">
+      <span class="l13-title">Ohje: tilauksen palautus</span>
+      <i class="l13-ln w1"></i><i class="l13-ln w2"></i><i class="l13-ln w3"></i>
+      <s class="l13-fix f1"></s><b class="l13-fix f2"></b>
+      <span class="l13-note">”vaihe 3 ei vastaa todellisuutta” ✎</span>
+      <span class="l13-stamp">✓ tarkistettu — vastuu sinun</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Tekoäly antaa nopeasti pohjan, mutta se ei tunne sinun tilannettasi. Siksi työnkulku on aina sama: AI luonnostelee, sinä tarkistat virheet ja viimeistelet — valmiin työn vastuu on ihmisellä.</figcaption></figure>
+<style>
+.l13-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
+.l13-st{position:absolute;top:0;width:160px;display:flex;align-items:center;gap:8px;background:#141B2D;border:1.5px solid #2B3552;border-radius:11px;padding:8px 10px}
+.l13-who{font-size:11px;font-weight:700;letter-spacing:.08em;border-radius:7px;padding:3px 7px}
+.l13-ai{color:#1d1230;background:#c9b7f1}
+.l13-you{color:#06212A;background:#46c7cf}
+.l13-lbl{font-size:11.5px;color:#EAEEF8}
+.l13-ar{position:absolute;top:8px;font-size:17px;color:#7E88A8}
+.l13-doc{position:absolute;left:140px;top:62px;width:280px;height:168px;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;animation:l13doc 11s infinite}
+@keyframes l13doc{0%,2%{transform:translateX(-140px)}8%,30%{transform:translateX(-140px)}38%,62%{transform:translateX(0)}70%,96%{transform:translateX(140px)}100%{transform:translateX(140px)}}
+.l13-title{display:block;font-size:12.5px;font-weight:600;color:#FFFFFF;margin-bottom:10px}
+.l13-ln{display:block;height:8px;border-radius:99px;background:#3A4560;margin:9px 0;opacity:0}
+.l13-ln.w1{width:88%;animation:l13l1 11s infinite}
+.l13-ln.w2{width:72%;animation:l13l2 11s infinite}
+.l13-ln.w3{width:80%;animation:l13l3 11s infinite}
+@keyframes l13l1{0%,3%{opacity:0}7%,99%{opacity:1}100%{opacity:0}}
+@keyframes l13l2{0%,6%{opacity:0}10%,99%{opacity:1}100%{opacity:0}}
+@keyframes l13l3{0%,9%{opacity:0}13%,99%{opacity:1}100%{opacity:0}}
+.l13-fix{position:absolute;border-radius:99px;height:8px;opacity:0}
+.l13-fix.f1{left:15px;top:64px;width:120px;background:transparent;border-top:2.5px solid #F0A38C;height:0;margin-top:4px;animation:l13f1 11s infinite}
+.l13-fix.f2{left:142px;top:64px;width:96px;background:#7FD0A8;animation:l13f2 11s infinite}
+@keyframes l13f1{0%,40%{opacity:0}45%,96%{opacity:1}100%{opacity:0}}
+@keyframes l13f2{0%,46%{opacity:0}51%,96%{opacity:1}100%{opacity:0}}
+.l13-note{position:absolute;left:15px;bottom:34px;font-size:11px;color:#F0A38C;opacity:0;animation:l13note 11s infinite}
+@keyframes l13note{0%,42%{opacity:0}47%,64%{opacity:1}70%,100%{opacity:0}}
+.l13-stamp{position:absolute;left:15px;bottom:10px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l13stamp 11s infinite}
+@keyframes l13stamp{0%,72%{opacity:0;transform:scale(1.3)}78%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l13-doc,.l13-ln,.l13-fix,.l13-note,.l13-stamp{animation:none}
+.l13-doc{transform:translateX(140px)}
+.l13-ln,.l13-fix.f1,.l13-fix.f2,.l13-stamp{opacity:1}
+.l13-note{opacity:0}}
+</style>
+
 <hr />
 <h2>AI kirjoittamisen apuna</h2>
 <p><strong>Kirjoittaminen</strong> on taito, jota tarvitset lähes joka alalla. Asiakaspalvelija kirjoittaa ohjeita asiakkaille, hoitaja kirjaa tapahtumia ja yrittäjä viestii sidosryhmilleen. Kirjoittaminen voi kuitenkin olla vaikeaa: mistä aloittaa, miten saada tekstistä selkeä ja miten pitää se sopivan mittaisena?</p>
@@ -12157,6 +12435,57 @@ Selitä minulle:
 <p>Huonot rajaukset ovat epämääräisiä tai puuttuvat kokonaan. Pelkkä ”en tiedä” ei riitä rajaukseksi. Jos botissa ei ole rajauksia, se voi antaa vaarallisia neuvoja, esittää harhaanjohtavia väitteitä tai jatkaa keskustelua tilanteissa, joissa asia pitäisi ohjata ihmiselle. Rajaukset kirjoitetaan osaksi järjestelmäpromptia, ja ne ovat yhtä tärkeitä kuin botin varsinaiset ohjeet.</p>
 <h2>Järjestelmäprompti — botin sydän</h2>
 <p>Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-projektissa, määrittelet botille <strong>järjestelmäpromptin</strong>. Se on yksityiskohtainen ohjeistus, joka kertoo kielimallille, <strong>kuka</strong> botti on, <strong>mitä</strong> se tekee ja <strong>miten</strong> sen pitää käyttäytyä.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama kysymys — järjestelmäprompti muuttaa botin käytöksen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l14-wrap">
+    <div class="l14-sys"><span class="l14-head">JÄRJESTELMÄPROMPTI <span class="l14-sw"><i class="l14-off">POIS</i><i class="l14-on">PÄÄLLÄ</i></span></span>
+      <span class="l14-row r1">1 · Identiteetti: Python-tutori</span>
+      <span class="l14-row r2">2 · Tarkoitus: opeta esimerkein</span>
+      <span class="l14-row r3">3 · Ohjeet: kysy, älä luennoi</span>
+      <span class="l14-row r4">4 · Rajaus: ei valmiita töitä</span>
+    </div>
+    <div class="l14-chat">
+      <div class="l14-msg l14-user">Tee koodiprojektini valmiiksi puolestani.</div>
+      <div class="l14-msg l14-bot l14-b1">Toki! Tässä on koko projekti valmiina: … <span class="l14-tag l14-warn">yleisbotti — raja puuttuu</span></div>
+      <div class="l14-msg l14-bot l14-b2">En tee projektia puolestasi — opit tekemällä. Aloitetaan: mikä osa on vaikein? <span class="l14-tag l14-good">✓ noudattaa rajausta</span></div>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Järjestelmäprompti on botin sydän: käyttäjä ei näe sitä, mutta se ohjaa jokaista vastausta. Sama kysymys tuottaa täysin eri käytöksen, kun identiteetti, tarkoitus, ohjeet ja rajaukset ovat voimassa.</figcaption></figure>
+<style>
+.l14-wrap{display:flex;gap:18px;align-items:center;width:560px;font-family:var(--font-mono)}
+.l14-sys{display:flex;flex-direction:column;gap:7px;width:235px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:12px 13px}
+.l14-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
+.l14-sw{position:relative;width:54px;height:18px}
+.l14-sw i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:9.5px;letter-spacing:.08em;border-radius:999px}
+.l14-off{color:#3A1408;background:#F0A38C;animation:l14off 12s infinite}
+.l14-on{color:#06241a;background:#7FD0A8;opacity:0;animation:l14on 12s infinite}
+@keyframes l14off{0%,42%{opacity:1}48%,100%{opacity:0}}
+@keyframes l14on{0%,42%{opacity:0}48%,97%{opacity:1}100%{opacity:0}}
+.l14-row{font-size:11.5px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;animation-duration:12s;animation-iteration-count:infinite}
+.l14-row.r1{animation-name:l14r1}.l14-row.r2{animation-name:l14r2}.l14-row.r3{animation-name:l14r3}.l14-row.r4{animation-name:l14r4}
+@keyframes l14r1{0%,46%{color:#5D6880;border-color:#232C44}50%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r2{0%,49%{color:#5D6880;border-color:#232C44}53%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r3{0%,52%{color:#5D6880;border-color:#232C44}56%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r4{0%,55%{color:#5D6880;border-color:#232C44}59%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+.l14-chat{position:relative;display:flex;flex-direction:column;gap:10px;width:300px;background:#0E1422;border:1.5px solid #232C44;border-radius:12px;padding:13px 14px;min-height:190px}
+.l14-msg{font-size:12px;line-height:1.45;border-radius:10px;padding:8px 11px;max-width:92%}
+.l14-user{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
+.l14-bot{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
+.l14-b1{animation:l14b1 12s infinite}
+.l14-b2{position:absolute;left:14px;top:74px;opacity:0;animation:l14b2 12s infinite;border-color:#7FD0A8}
+@keyframes l14b1{0%,2%{opacity:0}6%,44%{opacity:1}50%,100%{opacity:0}}
+@keyframes l14b2{0%,58%{opacity:0}64%,97%{opacity:1}100%{opacity:0}}
+.l14-tag{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
+.l14-warn{color:#3A1408;background:#F0A38C}
+.l14-good{color:#06241a;background:#7FD0A8}
+@media (prefers-reduced-motion:reduce){
+.l14-off,.l14-on,.l14-row,.l14-b1,.l14-b2{animation:none}
+.l14-off{opacity:0}.l14-on{opacity:1}
+.l14-row{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}
+.l14-b1{opacity:0;display:none}.l14-b2{opacity:1;position:static}}
+</style>
+
 <p>Hyvä järjestelmäprompti sisältää neljä osaa:</p>
 <ol>
 <li><strong>Identiteetti:</strong> Kuka botti on? Esimerkiksi: ”Olet kokenut Python-ohjelmointitutori. Sinulla on 10 vuoden kokemus aloittelijoiden opettamisesta.”</li>
@@ -13145,6 +13474,54 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 </blockquote>
 <h2>Testaus: varmista, että botti tekee, mitä pitää</h2>
 <p><strong>Testaaminen</strong> ei tarkoita satunnaisten kysymysten esittämistä. Se on systemaattista ja järjestelmällistä työtä. Testaat bottia kolmella tavalla, ja jokainen testaustapa kertoo botin toiminnasta eri näkökulmasta.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// kolme testityyppiä — botti on valmis vasta, kun kaikki menevät läpi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l15-wrap">
+    <div class="l15-bot">BOTTI<span class="l15-score"><i class="l15-sc s0">testit: 0/3</i><i class="l15-sc s1">testit: 1/3</i><i class="l15-sc s2">testit: 2/3</i><i class="l15-sc s3">testit: 3/3 ✓</i></span></div>
+    <div class="l15-in l15-i1"><span class="l15-type tp">positiivinen</span>”Mihin aikaan avaatte?”</div>
+    <div class="l15-in l15-i2"><span class="l15-type tn">negatiivinen</span>”Anna minulle sijoitusneuvo.”</div>
+    <div class="l15-in l15-i3"><span class="l15-type te">reunatapaus</span>”      ” (tyhjä viesti)</div>
+    <div class="l15-out l15-o1">”Avaamme klo 9.” <b class="l15-okk">✓ vastaa oikein</b></div>
+    <div class="l15-out l15-o2">”En anna sijoitusneuvoja — ohjaan henkilökunnalle.” <b class="l15-okk">✓ kieltäytyy oikein</b></div>
+    <div class="l15-out l15-o3">”Kirjoitathan kysymyksen, niin autan.” <b class="l15-okk">✓ ei kaadu</b></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Hyvä botti testataan kolmella tavalla: positiivinen testi varmistaa, että se osaa vastata; negatiivinen, että se osaa kieltäytyä; reunatapaus, että se kestää oudot syötteet. Jos yksikin pettää, korjaa ohjeistusta ja testaa uudelleen.</figcaption></figure>
+<style>
+.l15-wrap{position:relative;width:560px;height:258px;font-family:var(--font-mono)}
+.l15-bot{position:absolute;left:218px;top:96px;width:124px;text-align:center;font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:13px 8px 28px}
+.l15-score{position:absolute;left:8px;right:8px;bottom:7px;height:16px}
+.l15-sc{position:absolute;inset:0;font-style:normal;font-size:10px;letter-spacing:.04em;color:#B9C2DA;opacity:0}
+.l15-sc.s0{animation:l15s0 13.5s infinite}.l15-sc.s1{animation:l15s1 13.5s infinite}.l15-sc.s2{animation:l15s2 13.5s infinite}.l15-sc.s3{animation:l15s3 13.5s infinite;color:#7FD0A8}
+@keyframes l15s0{0%{opacity:1}13%{opacity:1}16%{opacity:0}97%{opacity:0}100%{opacity:1}}
+@keyframes l15s1{0%,13%{opacity:0}16%,44%{opacity:1}47%,100%{opacity:0}}
+@keyframes l15s2{0%,44%{opacity:0}47%,75%{opacity:1}78%,100%{opacity:0}}
+@keyframes l15s3{0%,75%{opacity:0}78%,97%{opacity:1}100%{opacity:0}}
+.l15-in{position:absolute;left:0;width:196px;font-size:11.5px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:8px 10px;opacity:0}
+.l15-i1{top:8px;animation:l15i1 13.5s infinite}
+.l15-i2{top:96px;animation:l15i2 13.5s infinite}
+.l15-i3{top:188px;animation:l15i3 13.5s infinite}
+@keyframes l15i1{0%,1%{opacity:0;transform:translateX(-14px)}5%,26%{opacity:1;transform:translateX(0)}30%,100%{opacity:0}}
+@keyframes l15i2{0%,32%{opacity:0;transform:translateX(-14px)}36%,57%{opacity:1;transform:translateX(0)}61%,100%{opacity:0}}
+@keyframes l15i3{0%,63%{opacity:0;transform:translateX(-14px)}67%,88%{opacity:1;transform:translateX(0)}92%,100%{opacity:0}}
+.l15-type{display:block;margin-bottom:4px;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;padding:1px 7px;width:fit-content}
+.l15-type.tp{color:#06241a;background:#7FD0A8}
+.l15-type.tn{color:#3A1408;background:#F0A38C}
+.l15-type.te{color:#1d1230;background:#c9b7f1}
+.l15-out{position:absolute;left:364px;width:196px;font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 10px;opacity:0}
+.l15-o1{top:8px;animation:l15o1 13.5s infinite}
+.l15-o2{top:88px;animation:l15o2 13.5s infinite}
+.l15-o3{top:188px;animation:l15o3 13.5s infinite}
+@keyframes l15o1{0%,9%{opacity:0;transform:translateX(14px)}13%,26%{opacity:1;transform:translateX(0)}30%,100%{opacity:0}}
+@keyframes l15o2{0%,40%{opacity:0;transform:translateX(14px)}44%,57%{opacity:1;transform:translateX(0)}61%,100%{opacity:0}}
+@keyframes l15o3{0%,71%{opacity:0;transform:translateX(14px)}75%,88%{opacity:1;transform:translateX(0)}92%,100%{opacity:0}}
+.l15-okk{display:block;margin-top:5px;font-weight:600;font-size:10.5px;letter-spacing:.04em;color:#7FD0A8}
+@media (prefers-reduced-motion:reduce){
+.l15-sc,.l15-in,.l15-out{animation:none}
+.l15-sc.s0,.l15-sc.s1,.l15-sc.s2{opacity:0}.l15-sc.s3{opacity:1}
+.l15-in,.l15-out{opacity:1}}
+</style>
+
 <h3>1. Positiiviset testit</h3>
 <p>Positiivisissa testeissä testaat asioita, joiden pitäisi toimia. Nämä ovat kysymyksiä ja tilanteita, joihin botti on suunniteltu vastaamaan.</p>
 <p>Jos kysyt kahvilan FAQ-botilta ”Mihin aikaan avaatte aamulla?”, sen pitäisi antaa selkeä ja oikea vastaus. Jos kysyt asiakaspalvelubotilta ”Kuinka näen laskuhistoriani?”, sen pitäisi antaa linkki laskuihin tai ohjeet niiden löytämiseen.</p>
@@ -14665,7 +15042,7 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 </tr>
 <tr>
 <td><strong>DALL-E</strong></td>
-<td>OpenAI:n kuvageneraattori. Saatavilla ChatGPT Plus -tilauksella. Hyvä aloittelijoille, nopea ja yksinkertainen.</td>
+<td>OpenAI:n aiempi erillinen kuvageneraattori. Nykyään ChatGPT:n kuvanluonti on sisäänrakennettu suoraan multimodaaliseen malliin.</td>
 </tr>
 <tr>
 <td><strong>Midjourney</strong></td>
@@ -14693,7 +15070,7 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 </tr>
 <tr>
 <td><strong>Runway</strong></td>
-<td>Videotuotanto-alusta, jossa voi tehdä lyhyitä videoita (alle 15 sekuntia). Gen-3 on uusin malli.</td>
+<td>Videotuotanto-alusta, jossa voi tehdä lyhyitä videoita. Mallit päivittyvät tiheään — uusin on Gen-4.5.</td>
 </tr>
 <tr>
 <td><strong>Koodausavustaja</strong></td>
@@ -15641,8 +16018,7 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Kun valitset tekoälytyökalun kuvan, musiikin, videon tai koodin tekemiseen, mitkä kolme asiaa tarkistat ennen kuin päätät käyttää sitä?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Tekoälytyökalu ei tee sinusta ammattilaista. Ammattilaiseksi tekee se, että osaat valita työkalun, ohjata sitä, arvioida tulosta ja kantaa vastuun sen käytöstä.</p>
-</blockquote>
-<p>:contentReference[oaicite:0]{index=0}</p></div></div>`,
+</blockquote></div></div>`,
   },
   "lesson-17": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -15705,6 +16081,52 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 <p><strong>Tietopohja:</strong> Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.</p>
 </blockquote>
 <p>Huomaa, että määrittelydokumentissa sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: <strong>kuvaileva määrittely muutetaan suoraksi ohjeeksi botille</strong>.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l17-wrap">
+    <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
+    <div class="l17-blk b2"><b>2 · Määrittely</b><span>”Botin nimi: Valmentaja”</span></div>
+    <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
+    <span class="l17-morph">kuvaileva → suora ohje</span>
+    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄKEHOTE</span>
+      <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
+      <span class="l17-line n2"><b>”Olet Valmentaja.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
+      <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
+      <span class="l17-ready">✓ botti valmis testattavaksi</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Valmentaja” muuttuu muotoon ”Olet Valmentaja”.</figcaption></figure>
+<style>
+.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
+.l17-blk b{font-size:12px;color:#FFFFFF}
+.l17-blk span{font-size:10.5px;color:#B9C2DA}
+.l17-blk.b1{top:12px;animation:l17b1 12s infinite}
+.l17-blk.b2{top:96px;animation:l17b2 12s infinite}
+.l17-blk.b3{top:180px;animation:l17b3 12s infinite}
+@keyframes l17b1{0%,8%{transform:translateX(0);opacity:1}20%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b2{0%,28%{transform:translateX(0);opacity:1}40%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b3{0%,48%{transform:translateX(0);opacity:1}60%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 12s infinite}
+@keyframes l17morph{0%,30%{opacity:0}36%,60%{opacity:1}66%,100%{opacity:0}}
+.l17-bot{position:absolute;right:0;top:12px;width:268px;min-height:230px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:13px;padding:13px 15px}
+.l17-bhead{display:block;font-size:10.5px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:10px}
+.l17-line{display:block;font-size:11.5px;line-height:1.45;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-left:3px solid oklch(0.72 0.15 305);border-radius:8px;padding:7px 10px;margin-bottom:8px;opacity:0}
+.l17-line b{color:#FFFFFF}
+.l17-line.n1{animation:l17n1 12s infinite}
+.l17-line.n2{animation:l17n2 12s infinite}
+.l17-line.n3{animation:l17n3 12s infinite}
+@keyframes l17n1{0%,17%{opacity:0;transform:translateY(4px)}22%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n2{0%,37%{opacity:0;transform:translateY(4px)}42%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n3{0%,57%{opacity:0;transform:translateY(4px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 12s infinite}
+@keyframes l17ready{0%,70%{opacity:0;transform:scale(1.25)}76%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}
+.l17-line,.l17-ready,.l17-morph{opacity:1}}
+</style>
+
 <h2>Käytä tekoälyä apuna järjestelmäkehotteen kirjoittamisessa</h2>
 <p>Kun olet kirjoittanut järjestelmäkehotteen ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:</p>
 <blockquote class="pause"><p>"Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäkehotetta. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäkehotteesta:</p>
@@ -16548,7 +16970,7 @@ Systemaattinen vääristymä tekoälyn vastauksissa. Bias voi olla syntynyt harj
 <p><strong>Custom GPT</strong><br />
 Räätälöity versio GPT-mallista, jonka olet luonut omiin tarpeisiin. Voit antaa sille system promptin, lisätä tietojoukkoja ja mukauttaa sen käyttäytymistä.</p>
 <p><strong>ChatGPT</strong><br />
-Avoin tekoälymalli, jonka on kehittänyt OpenAI. Se on kielimalli, joka voi kirjoittaa tekstiä, vastata kysymyksiin ja käydä keskusteluja.</p>
+OpenAI:n kehittämä tekoälypalvelu ja kielimalli (kaupallinen, ei avoimen lähdekoodin malli), joka voi kirjoittaa tekstiä, vastata kysymyksiin ja käydä keskusteluja.</p>
 <hr />
 <h2>D</h2>
 <p><strong>Dokumentaatio</strong><br />
@@ -16600,7 +17022,7 @@ Kyky arvioida tietoa kriittisesti, kyseenalaistaa ja hakea perusteluja. Tärkeä
 <hr />
 <h2>L</h2>
 <p><strong>LLM (Large Language Model)</strong><br />
-Iso kielimalli. Tekoälymalli, joka on harjoitettu miljaardeilla sanoilla. ChatGPT ja Claude ovat LLM:itä.</p>
+Iso kielimalli. Tekoälymalli, joka on harjoitettu valtavilla tekstimäärillä (biljoonia tokeneita). ChatGPT ja Claude ovat LLM:itä.</p>
 <hr />
 <h2>M</h2>
 <p><strong>Malli (Model)</strong><br />
@@ -16644,7 +17066,7 @@ Katso: Järjestelmä prompti.</p>
 <p><strong>Testaus (Testing)</strong><br />
 Systemaattinen tapa varmistaa, että ohjelma toimii oikein. Testaus sisältää positiiviset, negatiiviset ja reunatapaustestit.</p>
 <p><strong>Token</strong><br />
-Pieni pätkä tekstiä — sana, välimerkkki tai osa sanasta. Tekoälyt käsittelevät tekstiä tokeneina. Jos botti "käyttää X tokenia", se tarkoittaa, että se käsitteli noin X sanaa.</p>
+Pieni pätkä tekstiä — sana, välimerkkki tai osa sanasta. Tekoälyt käsittelevät tekstiä tokeneina. Jos botti "käyttää X tokenia", se käsitteli noin X tekstinpalasta — sanoja tämä on vähemmän, sillä yksi sana voi olla useita tokeneita.</p>
 <p><strong>Tuloste (Output)</strong><br />
 Tekoälyn vastaus, kun olet antanut syötteen. Jos kysyt "Mikä on pääkaupunki?", vastaus on tuloste.</p>
 <hr />
@@ -17447,8 +17869,7 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä bottisi osaa nyt, ja mitä sen pitäisi vielä osata, jotta siitä voisi tulla agentti?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Botti vastaa kysymyksiin. Agentti toimii tavoitteellisesti. Tänään viimeistelitte ensimmäisen askeleen kohti sitä ajattelua.</p>
-</blockquote>
-<p>:contentReference[oaicite:0]{index=0}</p></div></div>`,
+</blockquote></div></div>`,
   },
   "lesson-19": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -17584,7 +18005,6 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 <h2>Yhteenveto</h2>
 <p><strong>Agentti</strong> on automatisoitu järjestelmä, joka toteuttaa useita vaiheita itsenäisesti tavoitteen saavuttamiseksi. Se eroaa chatbotista, skriptistä ja työnkulusta siinä, että se ei vain reagoi, toista samaa toimintoa tai seuraa valmiita sääntöjä, vaan arvioi tilannetta ja ohjaa toimintaansa sen perusteella.</p>
 <p>Agentti koostuu kuudesta peruskomponentista: <strong>syötekäsittelijästä</strong>, <strong>päättelijästä</strong>, <strong>työkaluista</strong>, <strong>muistista</strong>, <strong>turvakerroksesta</strong> ja <strong>palautesilmukasta</strong>. Yhdessä nämä muodostavat suoritusputken, jossa jokainen vaihe vaikuttaa seuraavaan. Kun ymmärrät tämän kokonaisuuden, sinun on helpompi nähdä sekä agenttien mahdollisuudet että se, miksi niiden rakentaminen edellyttää tarkkaa suunnittelua, valvontaa ja turvallisuusrajoja.</p>
-<p>:contentReference[oaicite:0]{index=0}</p>
 <hr />`,
     vocab:`<h1>Sanasto – Lesson 19</h1>
 <h2>Agentti (agent)</h2>
@@ -22730,6 +23150,61 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </blockquote>
 <h2>Hyväksyntäporttien rakentaminen</h2>
 <p>Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel on <strong>hyväksyntäporttien</strong> suunnittelu. Hyväksyntäportti on työnkulun kohta, jossa agentti pysähtyy ja odottaa ihmisen vastausta ennen kuin se jatkaa.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// rutiini kulkee läpi — kriittinen päätös pysähtyy portille</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l25-wrap">
+    <div class="l25-human">IHMINEN<span class="l25-btns"><i class="l25-ok">HYVÄKSY</i><i class="l25-no">HYLKÄÄ</i></span></div>
+    <i class="l25-beam"></i>
+    <div class="l25-pipe"></div>
+    <div class="l25-node" style="left:0">AGENTTI</div>
+    <div class="l25-gatebox"><div class="l25-gate"></div><span class="l25-glbl g-open">portti auki</span><span class="l25-glbl g-stop">vaatii ihmisen</span></div>
+    <div class="l25-node" style="right:0">TOIMINTO</div>
+    <div class="l25-pkt k1">rutiinivastaus</div>
+    <div class="l25-pkt k2">50 % alennus · 5 000 €</div>
+    <span class="l25-done d1">✓ suoritettu</span>
+    <span class="l25-done d2">✓ suoritettu — ihmisen luvalla</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Agentti hoitaa rutiinit itse, mutta rahaan, rakenteeseen tai poikkeamiin liittyvä päätös pysähtyy hyväksyntäportille. Ihminen näkee ehdotuksen ja perustelut — ja vasta hyväksyntä avaa portin. Hylkäys ohjaa agentin vaihtoehtoiselle polulle.</figcaption></figure>
+<style>
+.l25-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l25-pipe{position:absolute;left:0;right:0;top:158px;height:3px;background:#2B3552}
+.l25-node{position:absolute;top:138px;width:110px;text-align:center;font-size:11.5px;letter-spacing:.1em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:11px;padding:13px 6px}
+.l25-gatebox{position:absolute;left:248px;top:120px;width:64px;height:80px}
+.l25-gate{position:absolute;left:26px;top:0;width:12px;height:80px;border-radius:6px;background:#7FD0A8;animation:l25gate 14s infinite}
+@keyframes l25gate{0%,30%{background:#7FD0A8;transform:scaleY(.24);transform-origin:top}34%,76%{background:#F0A38C;transform:scaleY(1);transform-origin:top}80%,100%{background:#7FD0A8;transform:scaleY(.24);transform-origin:top}}
+.l25-glbl{position:absolute;left:50%;transform:translateX(-50%);top:88px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;border-radius:999px;padding:1px 8px}
+.l25-glbl.g-open{color:#06241a;background:#7FD0A8;animation:l25go 14s infinite}
+.l25-glbl.g-stop{color:#3A1408;background:#F0A38C;opacity:0;animation:l25gs 14s infinite}
+@keyframes l25go{0%,30%{opacity:1}34%,76%{opacity:0}80%,100%{opacity:1}}
+@keyframes l25gs{0%,30%{opacity:0}34%,76%{opacity:1}80%,100%{opacity:0}}
+.l25-pkt{position:absolute;top:128px;left:104px;font-size:10.5px;font-weight:500;white-space:nowrap;color:#06212A;background:#46c7cf;border-radius:999px;padding:3px 9px;opacity:0}
+.l25-pkt.k1{animation:l25k1 14s infinite}
+.l25-pkt.k2{animation:l25k2 14s infinite;background:#F7C873}
+@keyframes l25k1{0%,2%{opacity:0;transform:translateX(0)}5%{opacity:1}13%{opacity:1;transform:translateX(170px)}22%{opacity:1;transform:translateX(330px)}26%,100%{opacity:0;transform:translateX(330px)}}
+@keyframes l25k2{0%,34%{opacity:0;transform:translateX(0)}37%{opacity:1}45%,69%{opacity:1;transform:translateX(128px)}78%{opacity:1;transform:translateX(330px)}84%,100%{opacity:0;transform:translateX(330px)}}
+.l25-human{position:absolute;left:204px;top:6px;width:152px;text-align:center;font-size:11px;letter-spacing:.1em;color:#EAEEF8;background:#141B2D;border:1.5px solid #44517A;border-radius:11px;padding:9px 8px;opacity:0;animation:l25hum 14s infinite}
+@keyframes l25hum{0%,40%{opacity:0;transform:translateY(-8px)}46%,76%{opacity:1;transform:translateY(0)}82%,100%{opacity:0}}
+.l25-btns{display:flex;gap:7px;justify-content:center;margin-top:7px}
+.l25-btns i{font-style:normal;font-size:10px;letter-spacing:.05em;border-radius:7px;padding:3px 8px}
+.l25-ok{color:#06241a;background:#7FD0A8;animation:l25okp 14s infinite}
+.l25-no{color:#EAEEF8;background:#0E1422;border:1px solid #44517A}
+@keyframes l25okp{0%,62%{box-shadow:none;transform:scale(1)}66%,70%{box-shadow:0 0 14px rgba(127,208,168,.9);transform:scale(1.12)}74%,100%{box-shadow:none;transform:scale(1)}}
+.l25-beam{position:absolute;left:279px;top:58px;width:2px;height:60px;background:linear-gradient(180deg,#7FD0A8,transparent);opacity:0;animation:l25beam 14s infinite}
+@keyframes l25beam{0%,66%{opacity:0}70%,76%{opacity:1}80%,100%{opacity:0}}
+.l25-done{position:absolute;right:0;top:196px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8;opacity:0}
+.l25-done.d1{animation:l25d1 14s infinite}
+.l25-done.d2{animation:l25d2 14s infinite}
+@keyframes l25d1{0%,21%{opacity:0}24%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l25d2{0%,77%{opacity:0}81%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l25-gate,.l25-glbl,.l25-pkt,.l25-human,.l25-ok,.l25-beam,.l25-done{animation:none}
+.l25-gate{background:#F0A38C;transform:scaleY(1)}
+.l25-glbl.g-open{opacity:0}.l25-glbl.g-stop{opacity:1}
+.l25-pkt.k2{opacity:1;transform:translateX(128px)}
+.l25-human{opacity:1}}
+</style>
+
 <p>Käytännössä hyväksyntäportti näyttää ihmiselle <strong>selkeän kysymyksen ja ehdotuksen</strong>, johon voi vastata esimerkiksi ”hyväksy”, ”hylkää” tai ”kysy lisää”.</p>
 <p><strong>HYVÄKSYNTÄPYYNTÖ</strong></p>
 <p><strong>Asiakas:</strong> John Smith</p>
@@ -22874,7 +23349,6 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p><strong>Hyväksyntäportit</strong> tehdään selkeiksi ja nopeiksi, jotta ihminen voi vastata ilman, että koko prosessi pysähtyy tarpeettoman pitkäksi aikaa. Hyvässä hyväksyntäportissa näkyvät päätös, perustelut, riskit, hyväksyjä ja vaihtoehtoinen polku, jos pyyntö hylätään.</p>
 <p>Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rutiinivaiheita, kun taas ihminen tekee kriittiset päätökset. Agentti voi myös oppia ihmisen palautteesta, kun hyväksynnät ja hylkäykset tallennetaan lokiin ja niitä käytetään toiminnan kehittämiseen.</p>
 <p>Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan <strong>älykäs, turvallinen ja hallittu agentti</strong>.</p>
-<p>:contentReference[oaicite:0]{index=0}</p>
 <hr />`,
     vocab:`<h1>Sanasto – Lesson 25: Human-in-the-loop</h1>
 <h2>Human-in-the-loop (ihminen silmukassa)</h2>
@@ -23537,6 +24011,45 @@ puuttuu? Mikä on epäselvää?
 <p>Kun avaat n8n:n ensimmäistä kertaa, näet tyhjän kankaan. Kaikki alkaa <strong>triggeristä</strong> eli solmusta, joka käynnistää työnkulun. Triggeri voi olla esimerkiksi ajastin, kuten ”joka maanantai klo 8”, webhook, kuten ”kun joku lähettää viestin”, tai manuaalinen käynnistys, kuten ”kun painan käynnistä”. Ilman triggeriä työnkulku ei lähde liikkeelle.</p>
 <p>Triggerin jälkeen lisäät <strong>toimintasolmuja</strong>. Jokainen solmu saa dataa edelliseltä solmulta ja antaa dataa seuraavalle solmulle. Esimerkiksi työnkulku voi edetä näin: triggeri vastaanottaa Discord-viestin → HTTP Request -solmu lähettää viestin tekoäly-API:lle → seuraava solmu muotoilee vastauksen → viimeinen solmu lähettää vastauksen takaisin Discordiin. Tämä on yksinkertainen agentti: se ottaa vastaan syötteen, käsittelee sen tekoälyn avulla ja toimii tuloksen perusteella.</p>
 <p>n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord, sähköposti, tiedostot, tietokannat, HTTP-kutsut sekä tekoälypalvelut, kuten OpenAI ja Claude. Sinun ei tarvitse tietää kaikkien näiden palveluiden teknisiä yksityiskohtia. n8n hoitaa yhteydet puolestasi. Sinun tehtäväsi on päättää, mitä solmuja käytät ja missä järjestyksessä.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// data virtaa solmusta toiseen — jokainen solmu tekee yhden asian</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l26-wrap">
+    <div class="l26-wire"></div>
+    <div class="l26-node n1"><b>▶</b>Trigger<span>uusi viesti</span></div>
+    <div class="l26-node n2"><b>✦</b>AI-solmu<span>päättely</span></div>
+    <div class="l26-node n3"><b>◇</b>IF-solmu<span>turvatarkistus</span></div>
+    <div class="l26-node n4"><b>✉</b>Toiminto<span>lähetä vastaus</span></div>
+    <div class="l26-lbl"><span class="l26-s s1">data: ”Mihin aikaan avaatte?”</span><span class="l26-s s2">data: vastausluonnos</span><span class="l26-s s3">data: tarkistettu ✓</span><span class="l26-s s4">data: lähetetty käyttäjälle ✓</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">n8n-työnkulku on putki: triggeri käynnistää, ja data kulkee solmulta toiselle muuttuen matkalla. Jokainen solmu tekee täsmälleen yhden asian — yhdessä niistä syntyy agentti.</figcaption></figure>
+<style>
+.l26-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l26-wire{position:absolute;left:30px;right:30px;top:104px;height:3px;background:repeating-linear-gradient(90deg,#46c7cf 0 9px,#232C44 9px 22px);animation:l26flow 1.1s linear infinite}
+@keyframes l26flow{to{background-position:22px 0}}
+.l26-node{position:absolute;top:62px;z-index:2;width:112px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;font-size:11.5px;color:#FFFFFF;background:#11182A;border:2px solid #2B3552;border-radius:12px;padding:9px 6px}
+.l26-node b{font-size:15px;color:oklch(0.72 0.13 208)}
+.l26-node span{font-size:10px;color:#B9C2DA}
+.l26-node.n1{left:0;animation:l26n1 8s infinite}
+.l26-node.n2{left:149px;animation:l26n2 8s infinite}
+.l26-node.n3{left:298px;animation:l26n3 8s infinite}
+.l26-node.n4{left:447px;animation:l26n4 8s infinite}
+@keyframes l26n1{0%,2%,16%,100%{border-color:#2B3552;box-shadow:none}5%,12%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n2{0%,26%,42%,100%{border-color:#2B3552;box-shadow:none}29%,38%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n3{0%,52%,68%,100%{border-color:#2B3552;box-shadow:none}55%,64%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n4{0%,78%,94%,100%{border-color:#2B3552;box-shadow:none}81%,90%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+.l26-lbl{position:absolute;left:0;right:0;top:158px;height:34px}
+.l26-s{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-radius:999px;padding:5px 13px;opacity:0}
+.l26-s.s1{animation:l26s1 8s infinite}.l26-s.s2{animation:l26s2 8s infinite}.l26-s.s3{animation:l26s3 8s infinite}.l26-s.s4{animation:l26s4 8s infinite}
+@keyframes l26s1{0%,1%{opacity:0}4%,22%{opacity:1}26%,100%{opacity:0}}
+@keyframes l26s2{0%,27%{opacity:0}31%,48%{opacity:1}52%,100%{opacity:0}}
+@keyframes l26s3{0%,53%{opacity:0}57%,74%{opacity:1}78%,100%{opacity:0}}
+@keyframes l26s4{0%,79%{opacity:0}83%,97%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l26-node,.l26-s,.l26-wire{animation:none}
+.l26-s.s4{opacity:1}}
+</style>
+
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miten n8n:n solmut vastaavat agentin kuutta komponenttia, jotka opit tunnilla 19? Mieti, mikä solmu olisi syötekäsittelijä, mikä päättelijä ja mikä työkalujen suorittaja.</p>
 </blockquote>
 <h2>Agentin kuusi komponenttia n8n:ssä</h2>
@@ -24466,7 +24979,6 @@ uudelleen — kysy minulta kysymyksiä.
 <h2>Yhteenveto</h2>
 <p>Olet nyt rakentanut oman agentin alusta loppuun. Olet kerännyt viisi pohjapiirrosta, koonnut ne suunnitelmaksi, toteuttanut työnkulun n8n:ssä, lisännyt turvakerroksia, testannut agenttia ja dokumentoinut työn.</p>
 <p>Tämä on sama perusprosessi, jota ammattilaiset käyttävät. Mittakaava voi olla eri, mutta ajattelu on sama: suunnittele, rakenna pienestä isoon, testaa systemaattisesti, dokumentoi ja arvioi kriittisesti. Kun osaat tehdä tämän, ymmärrät agentin arkkitehtuurin ja osaat soveltaa sitä käytännössä.</p>
-<p>:contentReference[oaicite:0]{index=0}</p>
 <hr />`,
     vocab:`<h1>Sanasto – Lesson 27: n8n-projektipaja, osa 2</h1>
 <table>

@@ -246,6 +246,4 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Mitä tekoäly tarvitsee tietää, jotta se voi auttaa sinua omassa IT-ongelmassasi ilman turhia arvauksia?
 
-:contentReference[oaicite:0]{index=0}
-
 ---

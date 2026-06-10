@@ -402,6 +402,4 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Lopetuslause opettajalle:** Tekoälytyökalu ei tee sinusta ammattilaista. Ammattilaiseksi tekee se, että osaat valita työkalun, ohjata sitä, arvioida tulosta ja kantaa vastuun sen käytöstä.
 
-:contentReference[oaicite:0]{index=0}
-
 ---

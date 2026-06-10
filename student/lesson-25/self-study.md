@@ -28,6 +28,61 @@ Näiden sääntöjen avulla voit jakaa päätökset eri ryhmiin. Rutiinipäätö
 
 Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel on **hyväksyntäporttien** suunnittelu. Hyväksyntäportti on työnkulun kohta, jossa agentti pysähtyy ja odottaa ihmisen vastausta ennen kuin se jatkaa.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// rutiini kulkee läpi — kriittinen päätös pysähtyy portille</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l25-wrap">
+    <div class="l25-human">IHMINEN<span class="l25-btns"><i class="l25-ok">HYVÄKSY</i><i class="l25-no">HYLKÄÄ</i></span></div>
+    <i class="l25-beam"></i>
+    <div class="l25-pipe"></div>
+    <div class="l25-node" style="left:0">AGENTTI</div>
+    <div class="l25-gatebox"><div class="l25-gate"></div><span class="l25-glbl g-open">portti auki</span><span class="l25-glbl g-stop">vaatii ihmisen</span></div>
+    <div class="l25-node" style="right:0">TOIMINTO</div>
+    <div class="l25-pkt k1">rutiinivastaus</div>
+    <div class="l25-pkt k2">50 % alennus · 5 000 €</div>
+    <span class="l25-done d1">✓ suoritettu</span>
+    <span class="l25-done d2">✓ suoritettu — ihmisen luvalla</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Agentti hoitaa rutiinit itse, mutta rahaan, rakenteeseen tai poikkeamiin liittyvä päätös pysähtyy hyväksyntäportille. Ihminen näkee ehdotuksen ja perustelut — ja vasta hyväksyntä avaa portin. Hylkäys ohjaa agentin vaihtoehtoiselle polulle.</figcaption></figure>
+<style>
+.l25-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l25-pipe{position:absolute;left:0;right:0;top:158px;height:3px;background:#2B3552}
+.l25-node{position:absolute;top:138px;width:110px;text-align:center;font-size:11.5px;letter-spacing:.1em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:11px;padding:13px 6px}
+.l25-gatebox{position:absolute;left:248px;top:120px;width:64px;height:80px}
+.l25-gate{position:absolute;left:26px;top:0;width:12px;height:80px;border-radius:6px;background:#7FD0A8;animation:l25gate 14s infinite}
+@keyframes l25gate{0%,30%{background:#7FD0A8;transform:scaleY(.24);transform-origin:top}34%,76%{background:#F0A38C;transform:scaleY(1);transform-origin:top}80%,100%{background:#7FD0A8;transform:scaleY(.24);transform-origin:top}}
+.l25-glbl{position:absolute;left:50%;transform:translateX(-50%);top:88px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;border-radius:999px;padding:1px 8px}
+.l25-glbl.g-open{color:#06241a;background:#7FD0A8;animation:l25go 14s infinite}
+.l25-glbl.g-stop{color:#3A1408;background:#F0A38C;opacity:0;animation:l25gs 14s infinite}
+@keyframes l25go{0%,30%{opacity:1}34%,76%{opacity:0}80%,100%{opacity:1}}
+@keyframes l25gs{0%,30%{opacity:0}34%,76%{opacity:1}80%,100%{opacity:0}}
+.l25-pkt{position:absolute;top:128px;left:104px;font-size:10.5px;font-weight:500;white-space:nowrap;color:#06212A;background:#46c7cf;border-radius:999px;padding:3px 9px;opacity:0}
+.l25-pkt.k1{animation:l25k1 14s infinite}
+.l25-pkt.k2{animation:l25k2 14s infinite;background:#F7C873}
+@keyframes l25k1{0%,2%{opacity:0;transform:translateX(0)}5%{opacity:1}13%{opacity:1;transform:translateX(170px)}22%{opacity:1;transform:translateX(330px)}26%,100%{opacity:0;transform:translateX(330px)}}
+@keyframes l25k2{0%,34%{opacity:0;transform:translateX(0)}37%{opacity:1}45%,69%{opacity:1;transform:translateX(128px)}78%{opacity:1;transform:translateX(330px)}84%,100%{opacity:0;transform:translateX(330px)}}
+.l25-human{position:absolute;left:204px;top:6px;width:152px;text-align:center;font-size:11px;letter-spacing:.1em;color:#EAEEF8;background:#141B2D;border:1.5px solid #44517A;border-radius:11px;padding:9px 8px;opacity:0;animation:l25hum 14s infinite}
+@keyframes l25hum{0%,40%{opacity:0;transform:translateY(-8px)}46%,76%{opacity:1;transform:translateY(0)}82%,100%{opacity:0}}
+.l25-btns{display:flex;gap:7px;justify-content:center;margin-top:7px}
+.l25-btns i{font-style:normal;font-size:10px;letter-spacing:.05em;border-radius:7px;padding:3px 8px}
+.l25-ok{color:#06241a;background:#7FD0A8;animation:l25okp 14s infinite}
+.l25-no{color:#EAEEF8;background:#0E1422;border:1px solid #44517A}
+@keyframes l25okp{0%,62%{box-shadow:none;transform:scale(1)}66%,70%{box-shadow:0 0 14px rgba(127,208,168,.9);transform:scale(1.12)}74%,100%{box-shadow:none;transform:scale(1)}}
+.l25-beam{position:absolute;left:279px;top:58px;width:2px;height:60px;background:linear-gradient(180deg,#7FD0A8,transparent);opacity:0;animation:l25beam 14s infinite}
+@keyframes l25beam{0%,66%{opacity:0}70%,76%{opacity:1}80%,100%{opacity:0}}
+.l25-done{position:absolute;right:0;top:196px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8;opacity:0}
+.l25-done.d1{animation:l25d1 14s infinite}
+.l25-done.d2{animation:l25d2 14s infinite}
+@keyframes l25d1{0%,21%{opacity:0}24%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l25d2{0%,77%{opacity:0}81%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l25-gate,.l25-glbl,.l25-pkt,.l25-human,.l25-ok,.l25-beam,.l25-done{animation:none}
+.l25-gate{background:#F0A38C;transform:scaleY(1)}
+.l25-glbl.g-open{opacity:0}.l25-glbl.g-stop{opacity:1}
+.l25-pkt.k2{opacity:1;transform:translateX(128px)}
+.l25-human{opacity:1}}
+</style>
+
 Käytännössä hyväksyntäportti näyttää ihmiselle **selkeän kysymyksen ja ehdotuksen**, johon voi vastata esimerkiksi ”hyväksy”, ”hylkää” tai ”kysy lisää”.
 
 **HYVÄKSYNTÄPYYNTÖ**
@@ -168,6 +223,5 @@ Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rutiinivai
 
 Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan **älykäs, turvallinen ja hallittu agentti**.
 
-:contentReference[oaicite:0]{index=0}
 
 ---

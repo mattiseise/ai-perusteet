@@ -2,7 +2,7 @@
 
 ## Konteksti-ikkuna (context window)
 
-Tokeneina määritelty raja, joka rajoittaa sitä, kuinka paljon tekstiä tekoälymallit voivat käsitellä yhdessä keskustelussa. Kun raja täyttyy, vanhin tieto häviää. Esim. ChatGPT-4:n ikkuna on 128 000 tokenia.
+Tokeneina määritelty raja, joka rajoittaa sitä, kuinka paljon tekstiä tekoälymallit voivat käsitellä yhdessä keskustelussa. Kun raja täyttyy, vanhin tieto häviää. Esim. GPT-4-mallin ikkuna oli 128 000 tokenia; uudemmissa malleissa ikkuna voi olla paljon suurempi.
 
 ## Token
 

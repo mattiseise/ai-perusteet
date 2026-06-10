@@ -5,14 +5,14 @@
 | **Kuvageneraattori** | Tekoälyohjelma, joka tekee kuvia tekstin kuvauksen perusteella. Esimerkiksi DALL-E ja Midjourney. |
 | **Prompt** | Ohje, jonka annat tekoälylle. Hyvä prompt on spesifinen ja selkeä. Esimerkiksi: "Robotti istuu kahvilassa juomassa kahvia, valokuvamainen tyyli." |
 | **Iteraatio** | Prosessi, jossa yrität, näet tuloksen, muutat jotain ja yrität uudelleen. Tekoälyn kanssa iteraatio on tärkeää — harvoin ensimmäinen yritys on paras. |
-| **DALL-E** | OpenAI:n kuvageneraattori. Saatavilla ChatGPT Plus -tilauksella. Hyvä aloittelijoille, nopea ja yksinkertainen. |
+| **DALL-E** | OpenAI:n aiempi erillinen kuvageneraattori. Nykyään ChatGPT:n kuvanluonti on sisäänrakennettu suoraan multimodaaliseen malliin. |
 | **Midjourney** | Korkealaatuinen kuvageneraattori, joka tunnetaan kauneista ja taiteellisista kuvista. Discord-pohjainen, maksullinen. |
 | **Stable Diffusion** | Avoin lähdekoodi -kuvageneraattori. Ilmainen tai halpa. Hyvä vaihtoehto, jos haluat kontrollia tai halvempaa ratkaisua. |
 | **Musiikkigeneraattori** | Tekoälyohjelma, joka tekee musiikkia tekstin perusteella. Suno ja Udio ovat päätyökalut. |
 | **Suno** | Palvelu, joka tekee kokonaisia biisejä tekstikuvauksesta. Voit määritellä genren ja tunnelman. Ilmainen rajoitetusti, maksullinen laajemmin. |
 | **Udio** | Sunon kilpailija. Myös tekee musiikkia tekstistä. Kehittyy nopeasti. |
 | **Videogeneraattori** | Tekoälyohjelma, joka tekee lyhyitä videoita tekstin perusteella. Runway ja Pika ovat päätyökalut. Vielä kehitysvaiheessa. |
-| **Runway** | Videotuotanto-alusta, jossa voi tehdä lyhyitä videoita (alle 15 sekuntia). Gen-3 on uusin malli. |
+| **Runway** | Videotuotanto-alusta, jossa voi tehdä lyhyitä videoita. Mallit päivittyvät tiheään — uusin on Gen-4.5. |
 | **Koodausavustaja** | Tekoälyohjelma, joka auttaa sinua kirjoittamaan koodia. Se voi ehdottaa koodia, täydentää sitä tai kirjoittaa kokonaisia funktioita. |
 | **GitHub Copilot** | Koodausavustaja VS Codeen. Ehdottaa seuraavia koodilinjoja automaattisesti. Hyvä rutiinikoodeille. |
 | **Cursor** | Kehittynyt koodieditori, jossa tekoäly on sisäänrakennettu. Voi muokata isompia koodiosia kerralla. |

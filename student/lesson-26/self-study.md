@@ -20,6 +20,45 @@ Triggerin jälkeen lisäät **toimintasolmuja**. Jokainen solmu saa dataa edelli
 
 n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord, sähköposti, tiedostot, tietokannat, HTTP-kutsut sekä tekoälypalvelut, kuten OpenAI ja Claude. Sinun ei tarvitse tietää kaikkien näiden palveluiden teknisiä yksityiskohtia. n8n hoitaa yhteydet puolestasi. Sinun tehtäväsi on päättää, mitä solmuja käytät ja missä järjestyksessä.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// data virtaa solmusta toiseen — jokainen solmu tekee yhden asian</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l26-wrap">
+    <div class="l26-wire"></div>
+    <div class="l26-node n1"><b>▶</b>Trigger<span>uusi viesti</span></div>
+    <div class="l26-node n2"><b>✦</b>AI-solmu<span>päättely</span></div>
+    <div class="l26-node n3"><b>◇</b>IF-solmu<span>turvatarkistus</span></div>
+    <div class="l26-node n4"><b>✉</b>Toiminto<span>lähetä vastaus</span></div>
+    <div class="l26-lbl"><span class="l26-s s1">data: ”Mihin aikaan avaatte?”</span><span class="l26-s s2">data: vastausluonnos</span><span class="l26-s s3">data: tarkistettu ✓</span><span class="l26-s s4">data: lähetetty käyttäjälle ✓</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">n8n-työnkulku on putki: triggeri käynnistää, ja data kulkee solmulta toiselle muuttuen matkalla. Jokainen solmu tekee täsmälleen yhden asian — yhdessä niistä syntyy agentti.</figcaption></figure>
+<style>
+.l26-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l26-wire{position:absolute;left:30px;right:30px;top:104px;height:3px;background:repeating-linear-gradient(90deg,#46c7cf 0 9px,#232C44 9px 22px);animation:l26flow 1.1s linear infinite}
+@keyframes l26flow{to{background-position:22px 0}}
+.l26-node{position:absolute;top:62px;z-index:2;width:112px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;font-size:11.5px;color:#FFFFFF;background:#11182A;border:2px solid #2B3552;border-radius:12px;padding:9px 6px}
+.l26-node b{font-size:15px;color:oklch(0.72 0.13 208)}
+.l26-node span{font-size:10px;color:#B9C2DA}
+.l26-node.n1{left:0;animation:l26n1 8s infinite}
+.l26-node.n2{left:149px;animation:l26n2 8s infinite}
+.l26-node.n3{left:298px;animation:l26n3 8s infinite}
+.l26-node.n4{left:447px;animation:l26n4 8s infinite}
+@keyframes l26n1{0%,2%,16%,100%{border-color:#2B3552;box-shadow:none}5%,12%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n2{0%,26%,42%,100%{border-color:#2B3552;box-shadow:none}29%,38%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n3{0%,52%,68%,100%{border-color:#2B3552;box-shadow:none}55%,64%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+@keyframes l26n4{0%,78%,94%,100%{border-color:#2B3552;box-shadow:none}81%,90%{border-color:oklch(0.72 0.13 208);box-shadow:0 0 14px oklch(0.66 0.13 208/.5)}}
+.l26-lbl{position:absolute;left:0;right:0;top:158px;height:34px}
+.l26-s{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-radius:999px;padding:5px 13px;opacity:0}
+.l26-s.s1{animation:l26s1 8s infinite}.l26-s.s2{animation:l26s2 8s infinite}.l26-s.s3{animation:l26s3 8s infinite}.l26-s.s4{animation:l26s4 8s infinite}
+@keyframes l26s1{0%,1%{opacity:0}4%,22%{opacity:1}26%,100%{opacity:0}}
+@keyframes l26s2{0%,27%{opacity:0}31%,48%{opacity:1}52%,100%{opacity:0}}
+@keyframes l26s3{0%,53%{opacity:0}57%,74%{opacity:1}78%,100%{opacity:0}}
+@keyframes l26s4{0%,79%{opacity:0}83%,97%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l26-node,.l26-s,.l26-wire{animation:none}
+.l26-s.s4{opacity:1}}
+</style>
+
 **Pysähdy hetkeksi:** Miten n8n:n solmut vastaavat agentin kuutta komponenttia, jotka opit tunnilla 19? Mieti, mikä solmu olisi syötekäsittelijä, mikä päättelijä ja mikä työkalujen suorittaja.
 
 ## Agentin kuusi komponenttia n8n:ssä

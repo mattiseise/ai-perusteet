@@ -281,6 +281,4 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Lopetuslause opettajalle:** Sinulla on ääni. Käytä sitä.
 
-:contentReference[oaicite:0]{index=0}
-
 ---

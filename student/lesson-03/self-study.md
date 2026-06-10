@@ -94,7 +94,7 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 
 ## Koulutusdata — se, mistä malli oppii
 
-Parametrit opitaan **koulutusdatasta**. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Varhaisetkin suuret kielimallit opetettiin jo biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.
+Parametrit opitaan **koulutusdatasta**. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Nykyiset suuret kielimallit opetetaan biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.
 
 Mitä malli oppii tästä aineistosta? Se oppii tilastollisia yhteyksiä ja toistuvia kuvioita. Se voi esimerkiksi oppia, että sanat ”koodaus” ja ”Python” esiintyvät usein yhdessä, että merkkijonon ”2 + 2” jälkeen tulee usein ”= 4” tai että kysymyksen jälkeen seuraa yleensä vastaus.
 

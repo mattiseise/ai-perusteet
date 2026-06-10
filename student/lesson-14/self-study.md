@@ -69,6 +69,57 @@ Huonot rajaukset ovat epämääräisiä tai puuttuvat kokonaan. Pelkkä ”en ti
 
 Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-projektissa, määrittelet botille **järjestelmäpromptin**. Se on yksityiskohtainen ohjeistus, joka kertoo kielimallille, **kuka** botti on, **mitä** se tekee ja **miten** sen pitää käyttäytyä.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// sama kysymys — järjestelmäprompti muuttaa botin käytöksen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l14-wrap">
+    <div class="l14-sys"><span class="l14-head">JÄRJESTELMÄPROMPTI <span class="l14-sw"><i class="l14-off">POIS</i><i class="l14-on">PÄÄLLÄ</i></span></span>
+      <span class="l14-row r1">1 · Identiteetti: Python-tutori</span>
+      <span class="l14-row r2">2 · Tarkoitus: opeta esimerkein</span>
+      <span class="l14-row r3">3 · Ohjeet: kysy, älä luennoi</span>
+      <span class="l14-row r4">4 · Rajaus: ei valmiita töitä</span>
+    </div>
+    <div class="l14-chat">
+      <div class="l14-msg l14-user">Tee koodiprojektini valmiiksi puolestani.</div>
+      <div class="l14-msg l14-bot l14-b1">Toki! Tässä on koko projekti valmiina: … <span class="l14-tag l14-warn">yleisbotti — raja puuttuu</span></div>
+      <div class="l14-msg l14-bot l14-b2">En tee projektia puolestasi — opit tekemällä. Aloitetaan: mikä osa on vaikein? <span class="l14-tag l14-good">✓ noudattaa rajausta</span></div>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Järjestelmäprompti on botin sydän: käyttäjä ei näe sitä, mutta se ohjaa jokaista vastausta. Sama kysymys tuottaa täysin eri käytöksen, kun identiteetti, tarkoitus, ohjeet ja rajaukset ovat voimassa.</figcaption></figure>
+<style>
+.l14-wrap{display:flex;gap:18px;align-items:center;width:560px;font-family:var(--font-mono)}
+.l14-sys{display:flex;flex-direction:column;gap:7px;width:235px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:12px 13px}
+.l14-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
+.l14-sw{position:relative;width:54px;height:18px}
+.l14-sw i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:9.5px;letter-spacing:.08em;border-radius:999px}
+.l14-off{color:#3A1408;background:#F0A38C;animation:l14off 12s infinite}
+.l14-on{color:#06241a;background:#7FD0A8;opacity:0;animation:l14on 12s infinite}
+@keyframes l14off{0%,42%{opacity:1}48%,100%{opacity:0}}
+@keyframes l14on{0%,42%{opacity:0}48%,97%{opacity:1}100%{opacity:0}}
+.l14-row{font-size:11.5px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;animation-duration:12s;animation-iteration-count:infinite}
+.l14-row.r1{animation-name:l14r1}.l14-row.r2{animation-name:l14r2}.l14-row.r3{animation-name:l14r3}.l14-row.r4{animation-name:l14r4}
+@keyframes l14r1{0%,46%{color:#5D6880;border-color:#232C44}50%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r2{0%,49%{color:#5D6880;border-color:#232C44}53%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r3{0%,52%{color:#5D6880;border-color:#232C44}56%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+@keyframes l14r4{0%,55%{color:#5D6880;border-color:#232C44}59%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
+.l14-chat{position:relative;display:flex;flex-direction:column;gap:10px;width:300px;background:#0E1422;border:1.5px solid #232C44;border-radius:12px;padding:13px 14px;min-height:190px}
+.l14-msg{font-size:12px;line-height:1.45;border-radius:10px;padding:8px 11px;max-width:92%}
+.l14-user{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
+.l14-bot{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
+.l14-b1{animation:l14b1 12s infinite}
+.l14-b2{position:absolute;left:14px;top:74px;opacity:0;animation:l14b2 12s infinite;border-color:#7FD0A8}
+@keyframes l14b1{0%,2%{opacity:0}6%,44%{opacity:1}50%,100%{opacity:0}}
+@keyframes l14b2{0%,58%{opacity:0}64%,97%{opacity:1}100%{opacity:0}}
+.l14-tag{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
+.l14-warn{color:#3A1408;background:#F0A38C}
+.l14-good{color:#06241a;background:#7FD0A8}
+@media (prefers-reduced-motion:reduce){
+.l14-off,.l14-on,.l14-row,.l14-b1,.l14-b2{animation:none}
+.l14-off{opacity:0}.l14-on{opacity:1}
+.l14-row{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}
+.l14-b1{opacity:0;display:none}.l14-b2{opacity:1;position:static}}
+</style>
+
 Hyvä järjestelmäprompti sisältää neljä osaa:
 
 1. **Identiteetti:** Kuka botti on? Esimerkiksi: ”Olet kokenut Python-ohjelmointitutori. Sinulla on 10 vuoden kokemus aloittelijoiden opettamisesta.”

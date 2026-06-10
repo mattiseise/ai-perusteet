@@ -6,6 +6,57 @@ Monet ajattelevat, että tekoäly on tarkoitettu ohjelmoijille ja datatieteen al
 
 Tällä oppitunnilla opit käyttämään tekoälyä käytännön **työparina**. Et opiskele monimutkaisia teknisiä komentoja, vaan opit hyödyntämään tekoälyä päivittäisissä tehtävissä, joita kohtaat opiskelussa ja myöhemmin työelämässä. Ajattele tekoälyä kuin kollegaa, joka istuu viereisellä tuolilla: voit kysyä siltä neuvoa, pyytää sitä tarkistamaan tekstisi tai selittämään asian, jota et vielä ymmärrä.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// työnkulku: tekoäly luonnostelee — sinä tarkistat ja viimeistelet</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l13-wrap">
+    <div class="l13-st" style="left:0"><span class="l13-who l13-ai">AI</span><span class="l13-lbl">1 · luonnos</span></div>
+    <div class="l13-st" style="left:200px"><span class="l13-who l13-you">SINÄ</span><span class="l13-lbl">2 · tarkista</span></div>
+    <div class="l13-st" style="left:400px"><span class="l13-who l13-you">SINÄ</span><span class="l13-lbl">3 · viimeistele</span></div>
+    <span class="l13-ar" style="left:166px">→</span><span class="l13-ar" style="left:366px">→</span>
+    <div class="l13-doc">
+      <span class="l13-title">Ohje: tilauksen palautus</span>
+      <i class="l13-ln w1"></i><i class="l13-ln w2"></i><i class="l13-ln w3"></i>
+      <s class="l13-fix f1"></s><b class="l13-fix f2"></b>
+      <span class="l13-note">”vaihe 3 ei vastaa todellisuutta” ✎</span>
+      <span class="l13-stamp">✓ tarkistettu — vastuu sinun</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Tekoäly antaa nopeasti pohjan, mutta se ei tunne sinun tilannettasi. Siksi työnkulku on aina sama: AI luonnostelee, sinä tarkistat virheet ja viimeistelet — valmiin työn vastuu on ihmisellä.</figcaption></figure>
+<style>
+.l13-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
+.l13-st{position:absolute;top:0;width:160px;display:flex;align-items:center;gap:8px;background:#141B2D;border:1.5px solid #2B3552;border-radius:11px;padding:8px 10px}
+.l13-who{font-size:11px;font-weight:700;letter-spacing:.08em;border-radius:7px;padding:3px 7px}
+.l13-ai{color:#1d1230;background:#c9b7f1}
+.l13-you{color:#06212A;background:#46c7cf}
+.l13-lbl{font-size:11.5px;color:#EAEEF8}
+.l13-ar{position:absolute;top:8px;font-size:17px;color:#7E88A8}
+.l13-doc{position:absolute;left:140px;top:62px;width:280px;height:168px;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;animation:l13doc 11s infinite}
+@keyframes l13doc{0%,2%{transform:translateX(-140px)}8%,30%{transform:translateX(-140px)}38%,62%{transform:translateX(0)}70%,96%{transform:translateX(140px)}100%{transform:translateX(140px)}}
+.l13-title{display:block;font-size:12.5px;font-weight:600;color:#FFFFFF;margin-bottom:10px}
+.l13-ln{display:block;height:8px;border-radius:99px;background:#3A4560;margin:9px 0;opacity:0}
+.l13-ln.w1{width:88%;animation:l13l1 11s infinite}
+.l13-ln.w2{width:72%;animation:l13l2 11s infinite}
+.l13-ln.w3{width:80%;animation:l13l3 11s infinite}
+@keyframes l13l1{0%,3%{opacity:0}7%,99%{opacity:1}100%{opacity:0}}
+@keyframes l13l2{0%,6%{opacity:0}10%,99%{opacity:1}100%{opacity:0}}
+@keyframes l13l3{0%,9%{opacity:0}13%,99%{opacity:1}100%{opacity:0}}
+.l13-fix{position:absolute;border-radius:99px;height:8px;opacity:0}
+.l13-fix.f1{left:15px;top:64px;width:120px;background:transparent;border-top:2.5px solid #F0A38C;height:0;margin-top:4px;animation:l13f1 11s infinite}
+.l13-fix.f2{left:142px;top:64px;width:96px;background:#7FD0A8;animation:l13f2 11s infinite}
+@keyframes l13f1{0%,40%{opacity:0}45%,96%{opacity:1}100%{opacity:0}}
+@keyframes l13f2{0%,46%{opacity:0}51%,96%{opacity:1}100%{opacity:0}}
+.l13-note{position:absolute;left:15px;bottom:34px;font-size:11px;color:#F0A38C;opacity:0;animation:l13note 11s infinite}
+@keyframes l13note{0%,42%{opacity:0}47%,64%{opacity:1}70%,100%{opacity:0}}
+.l13-stamp{position:absolute;left:15px;bottom:10px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l13stamp 11s infinite}
+@keyframes l13stamp{0%,72%{opacity:0;transform:scale(1.3)}78%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l13-doc,.l13-ln,.l13-fix,.l13-note,.l13-stamp{animation:none}
+.l13-doc{transform:translateX(140px)}
+.l13-ln,.l13-fix.f1,.l13-fix.f2,.l13-stamp{opacity:1}
+.l13-note{opacity:0}}
+</style>
+
 ---
 
 ## AI kirjoittamisen apuna

@@ -56,6 +56,52 @@ Alla on yksinkertainen esimerkki siitä, miten määrittelydokumentin sisältö 
 
 Huomaa, että määrittelydokumentissa sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l17-wrap">
+    <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
+    <div class="l17-blk b2"><b>2 · Määrittely</b><span>”Botin nimi: Valmentaja”</span></div>
+    <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
+    <span class="l17-morph">kuvaileva → suora ohje</span>
+    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄKEHOTE</span>
+      <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
+      <span class="l17-line n2"><b>”Olet Valmentaja.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
+      <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
+      <span class="l17-ready">✓ botti valmis testattavaksi</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Valmentaja” muuttuu muotoon ”Olet Valmentaja”.</figcaption></figure>
+<style>
+.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
+.l17-blk b{font-size:12px;color:#FFFFFF}
+.l17-blk span{font-size:10.5px;color:#B9C2DA}
+.l17-blk.b1{top:12px;animation:l17b1 12s infinite}
+.l17-blk.b2{top:96px;animation:l17b2 12s infinite}
+.l17-blk.b3{top:180px;animation:l17b3 12s infinite}
+@keyframes l17b1{0%,8%{transform:translateX(0);opacity:1}20%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b2{0%,28%{transform:translateX(0);opacity:1}40%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b3{0%,48%{transform:translateX(0);opacity:1}60%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 12s infinite}
+@keyframes l17morph{0%,30%{opacity:0}36%,60%{opacity:1}66%,100%{opacity:0}}
+.l17-bot{position:absolute;right:0;top:12px;width:268px;min-height:230px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:13px;padding:13px 15px}
+.l17-bhead{display:block;font-size:10.5px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:10px}
+.l17-line{display:block;font-size:11.5px;line-height:1.45;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-left:3px solid oklch(0.72 0.15 305);border-radius:8px;padding:7px 10px;margin-bottom:8px;opacity:0}
+.l17-line b{color:#FFFFFF}
+.l17-line.n1{animation:l17n1 12s infinite}
+.l17-line.n2{animation:l17n2 12s infinite}
+.l17-line.n3{animation:l17n3 12s infinite}
+@keyframes l17n1{0%,17%{opacity:0;transform:translateY(4px)}22%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n2{0%,37%{opacity:0;transform:translateY(4px)}42%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n3{0%,57%{opacity:0;transform:translateY(4px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 12s infinite}
+@keyframes l17ready{0%,70%{opacity:0;transform:scale(1.25)}76%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}
+.l17-line,.l17-ready,.l17-morph{opacity:1}}
+</style>
+
 ## Käytä tekoälyä apuna järjestelmäkehotteen kirjoittamisessa
 
 Kun olet kirjoittanut järjestelmäkehotteen ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:

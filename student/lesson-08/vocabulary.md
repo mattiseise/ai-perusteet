@@ -14,7 +14,7 @@ Tilanne, jossa AI:n päätökset tai tulokset systemaattisesti syrjivät tai suo
 
 ## Reilu käyttö (fair use)
 
-Tekijänoikeuslaissa oleva käsite, joka sallii alkuperäisen tekijänoikeuden haltijan suostumuksetta käytön tietyissä olosuhteissa (esim. kritiikki, parodia, opetus). Se, voidaanko AI-mallin koulutus laskea "reiluksi käytöksi", on oikeusjärjestelmissä kiistanalaista.
+Yhdysvaltain tekijänoikeuslaissa oleva käsite, joka sallii alkuperäisen tekijänoikeuden haltijan suostumuksetta käytön tietyissä olosuhteissa (esim. kritiikki, parodia, opetus). Se, voidaanko AI-mallin koulutus laskea "reiluksi käytöksi", on oikeusjärjestelmissä kiistanalaista.
 
 ## Datan merkitsijä (data labeler)
 
@@ -30,6 +30,6 @@ AI:n käytöstä aiheutuva vaikutus ympäristöön, kuten sähkön ja veden kulu
 
 ## Transformatiivinen käyttö (transformative use)
 
-Tekijänoikeuslaissa oleva käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.
+Erityisesti Yhdysvaltain tekijänoikeuskäytännössä käytetty käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.
 
 ---

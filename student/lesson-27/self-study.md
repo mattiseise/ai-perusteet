@@ -146,6 +146,5 @@ Olet nyt rakentanut oman agentin alusta loppuun. Olet kerännyt viisi pohjapiirr
 
 Tämä on sama perusprosessi, jota ammattilaiset käyttävät. Mittakaava voi olla eri, mutta ajattelu on sama: suunnittele, rakenna pienestä isoon, testaa systemaattisesti, dokumentoi ja arvioi kriittisesti. Kun osaat tehdä tämän, ymmärrät agentin arkkitehtuurin ja osaat soveltaa sitä käytännössä.
 
-:contentReference[oaicite:0]{index=0}
 
 ---

@@ -181,6 +181,5 @@ Agentit-osion aikana rakennat oman **n8n-agenttityönkulun**. Ensimmäinen askel
 
 Agentti koostuu kuudesta peruskomponentista: **syötekäsittelijästä**, **päättelijästä**, **työkaluista**, **muistista**, **turvakerroksesta** ja **palautesilmukasta**. Yhdessä nämä muodostavat suoritusputken, jossa jokainen vaihe vaikuttaa seuraavaan. Kun ymmärrät tämän kokonaisuuden, sinun on helpompi nähdä sekä agenttien mahdollisuudet että se, miksi niiden rakentaminen edellyttää tarkkaa suunnittelua, valvontaa ja turvallisuusrajoja.
 
-:contentReference[oaicite:0]{index=0}
 
 ---

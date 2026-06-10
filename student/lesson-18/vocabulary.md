@@ -33,7 +33,7 @@ Systemaattinen vääristymä tekoälyn vastauksissa. Bias voi olla syntynyt harj
 Räätälöity versio GPT-mallista, jonka olet luonut omiin tarpeisiin. Voit antaa sille system promptin, lisätä tietojoukkoja ja mukauttaa sen käyttäytymistä.
 
 **ChatGPT**
-Avoin tekoälymalli, jonka on kehittänyt OpenAI. Se on kielimalli, joka voi kirjoittaa tekstiä, vastata kysymyksiin ja käydä keskusteluja.
+OpenAI:n kehittämä tekoälypalvelu ja kielimalli (kaupallinen, ei avoimen lähdekoodin malli), joka voi kirjoittaa tekstiä, vastata kysymyksiin ja käydä keskusteluja.
 
 ---
 
@@ -120,7 +120,7 @@ Kyky arvioida tietoa kriittisesti, kyseenalaistaa ja hakea perusteluja. Tärkeä
 ## L
 
 **LLM (Large Language Model)**
-Iso kielimalli. Tekoälymalli, joka on harjoitettu miljaardeilla sanoilla. ChatGPT ja Claude ovat LLM:itä.
+Iso kielimalli. Tekoälymalli, joka on harjoitettu valtavilla tekstimäärillä (biljoonia tokeneita). ChatGPT ja Claude ovat LLM:itä.
 
 ---
 
@@ -193,7 +193,7 @@ Katso: Järjestelmä prompti.
 Systemaattinen tapa varmistaa, että ohjelma toimii oikein. Testaus sisältää positiiviset, negatiiviset ja reunatapaustestit.
 
 **Token**
-Pieni pätkä tekstiä — sana, välimerkkki tai osa sanasta. Tekoälyt käsittelevät tekstiä tokeneina. Jos botti "käyttää X tokenia", se tarkoittaa, että se käsitteli noin X sanaa.
+Pieni pätkä tekstiä — sana, välimerkkki tai osa sanasta. Tekoälyt käsittelevät tekstiä tokeneina. Jos botti "käyttää X tokenia", se käsitteli noin X tekstinpalasta — sanoja tämä on vähemmän, sillä yksi sana voi olla useita tokeneita.
 
 **Tuloste (Output)**
 Tekoälyn vastaus, kun olet antanut syötteen. Jos kysyt "Mikä on pääkaupunki?", vastaus on tuloste.

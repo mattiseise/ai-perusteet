@@ -14,7 +14,7 @@ Tekoälymalli, jonka käytät internetin kautta. Et näe koodia, vaan vain kysyt
 
 ## Pilvipalvelu
 
-Palvelu, joka on internetissä saippuakivella olevan yrityksen palvelimilla. Kun käytät ChatGPTä, käytät pilvipalvelua.
+Palvelu, joka toimii internetissä yrityksen palvelimilla — ei omalla koneellasi. Kun käytät ChatGPT:tä, käytät pilvipalvelua.
 
 ## Paikallinen ajo
 
@@ -26,11 +26,11 @@ Säännöt siitä, mihin henkilötiedot voivat mennä ja kuka niitä voi nähdä
 
 ## GDPR
 
-Euroopan tietosuojalaki. Se sanoo, että henkilötiedot on oltava turvassa ja EU:n alueella.
+Euroopan tietosuojalaki. Se vaatii, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Siirto EU:n ulkopuolelle on mahdollista vain erityisin suojatoimin.
 
 ## API (ohjelmointirajapinta)
 
-Tapa pyytää tekoälyä tekemään jotakin. Jos käytät ChatGPTä selaimessa, käytät APIa — selaimen kautta.
+Tapa, jolla oma ohjelma voi pyytää tekoälyä tekemään jotakin ilman selainta. Selaimessa käytät valmista käyttöliittymää; API:n kautta ohjelmasi keskustelee mallin kanssa suoraan.
 
 ## Hinta per kysymys
 

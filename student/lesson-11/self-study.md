@@ -121,6 +121,50 @@ Valinnassa ei kannata kysyä vain, mikä malli on paras. Parempi kysymys on: **m
 
 Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetissä, kirjoittamasi tekstit lähetetään palvelun palvelimille. Palvelimet voivat sijaita eri puolilla maailmaa, ja niihin sovelletaan erilaisia lakeja ja käyttöehtoja.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// sama viesti, kolme määränpäätä — palvelimen sijainti ratkaisee säännöt</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l11-wrap">
+    <div class="l11-me">SINÄ<span class="l11-doc">”oppilaan essee.txt”</span></div>
+    <i class="l11-pkt l11-k1"></i><i class="l11-pkt l11-k2"></i><i class="l11-pkt l11-k3"></i>
+    <div class="l11-dst l11-d1"><b>Pilvipalvelin · USA</b><span class="l11-sub">käyttöehdot ja asetukset ratkaisevat</span><span class="l11-vd l11-v1">tarkista ennen käyttöä</span></div>
+    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">⚠ GDPR-riski</span></div>
+    <div class="l11-dst l11-d3"><b>Oma kone · paikallinen malli</b><span class="l11-sub">data ei poistu laitteeltasi</span><span class="l11-vd l11-v3">✓ pysyy hallussasi</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Kun painat enteriä, tekstisi matkustaa palveluntarjoajan palvelimelle — ja sen sijainti määrää, mitä lakeja ja ehtoja dataasi sovelletaan. Paikallisesti ajettava malli on poikkeus: viesti ei koskaan poistu omalta koneeltasi.</figcaption></figure>
+<style>
+.l11-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
+.l11-me{position:absolute;left:0;top:96px;width:150px;text-align:center;font-size:12.5px;letter-spacing:.12em;color:#EAEEF8;background:#11182A;border:2px solid #44517A;border-radius:12px;padding:11px 10px}
+.l11-doc{display:block;margin-top:7px;font-size:11px;letter-spacing:0;color:#06212A;background:#46c7cf;border-radius:8px;padding:4px 6px;font-weight:500}
+.l11-pkt{position:absolute;left:152px;top:140px;width:10px;height:10px;border-radius:3px;background:#46c7cf;opacity:0}
+.l11-k1{animation:l11k1 13.5s infinite}
+.l11-k2{animation:l11k2 13.5s infinite}
+.l11-k3{animation:l11k3 13.5s infinite}
+@keyframes l11k1{0%,2%{opacity:0;transform:translate(0,0)}4%{opacity:1}16%{opacity:1;transform:translate(212px,-100px)}19%,100%{opacity:0;transform:translate(212px,-100px)}}
+@keyframes l11k2{0%,35%{opacity:0;transform:translate(0,0)}37%{opacity:1}49%{opacity:1;transform:translate(212px,-12px)}52%,100%{opacity:0;transform:translate(212px,-12px)}}
+@keyframes l11k3{0%,68%{opacity:0;transform:translate(0,0)}70%{opacity:1}75%{opacity:1;transform:translate(106px,38px)}81%{opacity:1;transform:translate(212px,76px)}96%{opacity:1;transform:translate(212px,76px)}100%{opacity:0}}
+.l11-dst{position:absolute;left:368px;width:192px;font-size:11.5px;color:#EAEEF8;background:#141B2D;border:1.5px solid #2B3552;border-radius:12px;padding:9px 12px}
+.l11-dst b{font-size:12px;color:#FFFFFF}
+.l11-d1{top:0;animation:l11d1 13.5s infinite}
+.l11-d2{top:88px;animation:l11d2 13.5s infinite}
+.l11-d3{top:176px;animation:l11d3 13.5s infinite}
+@keyframes l11d1{0%,12%,26%,100%{border-color:#2B3552;box-shadow:none}15%,22%{border-color:oklch(0.72 0.15 305);box-shadow:0 0 14px oklch(0.66 0.15 305/.45)}}
+@keyframes l11d2{0%,45%,60%,100%{border-color:#2B3552;box-shadow:none}48%,56%{border-color:#F0A38C;box-shadow:0 0 14px rgba(240,163,140,.4)}}
+@keyframes l11d3{0%,78%,97%,100%{border-color:#2B3552;box-shadow:none}82%,94%{border-color:#7FD0A8;box-shadow:0 0 14px rgba(127,208,168,.4)}}
+.l11-sub{display:block;margin-top:3px;font-size:10.5px;line-height:1.4;color:#B9C2DA}
+.l11-vd{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:1px 8px;opacity:0}
+.l11-v1{color:#1d2433;background:#c9b7f1;animation:l11v1 13.5s infinite}
+.l11-v2{color:#3A1408;background:#F0A38C;animation:l11v2 13.5s infinite}
+.l11-v3{color:#06241a;background:#7FD0A8;animation:l11v3 13.5s infinite}
+@keyframes l11v1{0%,15%{opacity:0}18%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l11v2{0%,48%{opacity:0}51%,63%{opacity:1}67%,100%{opacity:0}}
+@keyframes l11v3{0%,81%{opacity:0}84%,97%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l11-k1,.l11-k2,.l11-k3,.l11-d1,.l11-d2,.l11-d3{animation:none}
+.l11-k1,.l11-k2,.l11-k3{opacity:0}
+.l11-v1,.l11-v2,.l11-v3{animation:none;opacity:1}}
+</style>
+
 ### Missä palvelimet sijaitsevat?
 
 | Malli | Yritys | Palvelimet | Mitä pitää tietää? |

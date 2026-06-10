@@ -88,6 +88,47 @@ Microsoft ei ilmoita Microsoft 365 Copilotille yhtä pysyvää julkista tokenmä
 
 Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa, mitä tapahtuu.
 
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä kolmelle työkalulle — vahvin vaihtuu tilanteen mukaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l10-wrap">
+    <div class="l10-task"><span class="l10-t l10-t1">Tehtävä: analysoi 80-sivuinen raportti kokonaisuutena</span><span class="l10-t l10-t2">Tehtävä: analysoi CSV-data ja piirrä kaaviot</span><span class="l10-t l10-t3">Tehtävä: kokoa raportti SharePointista ja sähköposteista</span></div>
+    <div class="l10-cols">
+      <div class="l10-col"><span class="l10-win l10-w2">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b1"></div></div><span class="l10-name">ChatGPT</span><span class="l10-trait">monipuolisuus</span></div>
+      <div class="l10-col"><span class="l10-win l10-w1">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b2"></div></div><span class="l10-name">Claude</span><span class="l10-trait">pitkät aineistot</span></div>
+      <div class="l10-col"><span class="l10-win l10-w3">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b3"></div></div><span class="l10-name">Copilot</span><span class="l10-trait">M365-ympäristö</span></div>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">”Mikä on paras tekoäly?” on väärä kysymys. Kun tehtävä vaihtuu, vahvin työkalu vaihtuu: pitkä dokumentti, data-analyysi ja organisaation M365-ympäristö nostavat kukin eri palvelun kärkeen.</figcaption></figure>
+<style>
+.l10-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;width:560px}
+.l10-task{position:relative;width:430px;height:38px}
+.l10-t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--font-mono);font-size:12px;font-weight:500;color:#06212A;background:#c9b7f1;border-radius:10px;padding:4px 12px;opacity:0}
+.l10-t1{animation:l10t1 15s infinite}.l10-t2{animation:l10t2 15s infinite}.l10-t3{animation:l10t3 15s infinite}
+@keyframes l10t1{0%{opacity:1}29%{opacity:1}33%{opacity:0}96%{opacity:0}100%{opacity:1}}
+@keyframes l10t2{0%,29%{opacity:0}33%,62%{opacity:1}66%,100%{opacity:0}}
+@keyframes l10t3{0%,62%{opacity:0}66%,96%{opacity:1}100%{opacity:0}}
+.l10-cols{display:flex;gap:34px}
+.l10-col{display:flex;flex-direction:column;align-items:center;gap:5px;width:140px}
+.l10-win{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0}
+.l10-w1{animation:l10w1 15s infinite}.l10-w2{animation:l10w2 15s infinite}.l10-w3{animation:l10w3 15s infinite}
+@keyframes l10w1{0%,2%{opacity:0}6%,28%{opacity:1}32%,100%{opacity:0}}
+@keyframes l10w2{0%,35%{opacity:0}39%,61%{opacity:1}65%,100%{opacity:0}}
+@keyframes l10w3{0%,68%{opacity:0}72%,95%{opacity:1}99%,100%{opacity:0}}
+.l10-barbox{display:flex;align-items:flex-end;width:64px;height:112px;border-radius:9px;background:#0E1422;border:1.5px solid #232C44;overflow:hidden}
+.l10-bar{width:100%;border-radius:7px 7px 0 0;background:linear-gradient(180deg,oklch(0.72 0.15 305),oklch(0.5 0.13 305))}
+.l10-b1{animation:l10b1 15s infinite}.l10-b2{animation:l10b2 15s infinite}.l10-b3{animation:l10b3 15s infinite}
+@keyframes l10b1{0%,29%{height:64%}35%,62%{height:95%}68%,96%{height:58%}100%{height:64%}}
+@keyframes l10b2{0%,29%{height:95%}35%,62%{height:62%}68%,96%{height:54%}100%{height:95%}}
+@keyframes l10b3{0%,29%{height:48%}35%,62%{height:55%}68%,96%{height:95%}100%{height:48%}}
+.l10-name{font-family:var(--font-mono);font-size:12.5px;font-weight:600;color:#FFFFFF}
+.l10-trait{font-family:var(--font-mono);font-size:10.5px;color:#B9C2DA}
+@media (prefers-reduced-motion:reduce){
+.l10-t1,.l10-t2,.l10-t3,.l10-w1,.l10-w2,.l10-w3,.l10-b1,.l10-b2,.l10-b3{animation:none}
+.l10-t1,.l10-w1{opacity:1}
+.l10-b1{height:64%}.l10-b2{height:95%}.l10-b3{height:48%}}
+</style>
+
 Kuvittele, että sinulla on 40-sivuinen tutkimusraportti PDF-muodossa ja haluat ymmärtää sen nopeasti. ChatGPT voi olla hyvä valinta, jos haluat yhdistää dokumenttianalyysin, verkkotiedon hakemisen, taulukoiden käsittelyn ja mahdollisen datan visualisoinnin. Sen vahvuus on monipuolinen työskentely samassa keskustelussa.
 
 Claude voi olla hyvä valinta silloin, kun haluat käsitellä pitkää dokumenttia kokonaisuutena ja saada siitä huolellisen, tekstilähtöisen analyysin. Pitkä konteksti-ikkuna voi auttaa silloin, kun aineistoa on paljon ja kokonaiskuvan säilyminen on tärkeää.

@@ -10,7 +10,7 @@ Tekoälymalli, joka on oppinut tekstin kuvioita ja osaa ennustaa seuraavaa token
 
 ## Parametri
 
-Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. ChatGPT-3:ssa on 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.
+Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. GPT-3:ssa oli noin 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.
 
 ## Next-Token Prediction
 
@@ -18,7 +18,7 @@ Kielimallin perusmekanismi: seuraavan tokenin arvaaminen aikaisempien tokenien j
 
 ## Koulutusdata (Training Data)
 
-Tekstiaineisto, jolla kielimalli opetetaan. GPT-4 on opetettu noin 15 triljoonalla tokenilla. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.
+Tekstiaineisto, jolla kielimalli opetetaan. Suurimmat mallit on arvioiden mukaan opetettu yli kymmenellä biljoonalla tokenilla, mutta tarkkoja lukuja ei yleensä julkaista. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.
 
 ## Hallusinaatio (Hallucination)
 

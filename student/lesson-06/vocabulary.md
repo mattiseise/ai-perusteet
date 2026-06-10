@@ -26,7 +26,7 @@ Tieto, joka näkyy näytöllä — värit, ikonit, asettelut, kaaviot. Kuvakaapp
 
 ## Token-kustannus (token cost)
 
-Kuvakaappaukset käyttävät enemmän tokeneita kuin teksti. Suuri kuvakaappaus voi olla 10 000 tokenia, siinä missä teksti olisi 1 000. Tämä vaikuttaa konteksti-ikkunan hallintaan.
+Kuvakaappaukset käyttävät enemmän tokeneita kuin teksti. Kuvakaappaus voi viedä satoja tai tuhansia tokeneita — usein moninkertaisesti verrattuna samaan tietoon tekstinä. Tämä vaikuttaa konteksti-ikkunan hallintaan.
 
 ## Multimodaalinen malli (multimodal model)
 
