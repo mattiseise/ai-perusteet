@@ -89,7 +89,7 @@ Microsoft ei ilmoita Microsoft 365 Copilotille yhtä pysyvää julkista tokenmä
 Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa, mitä tapahtuu.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä kolmelle työkalulle — vahvin vaihtuu tilanteen mukaan</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:318px">
   <div class="l10-wrap">
     <div class="l10-task"><span class="l10-t l10-t1">Tehtävä: analysoi 80-sivuinen raportti kokonaisuutena</span><span class="l10-t l10-t2">Tehtävä: analysoi CSV-data ja piirrä kaaviot</span><span class="l10-t l10-t3">Tehtävä: kokoa raportti SharePointista ja sähköposteista</span></div>
     <div class="l10-cols">
@@ -97,6 +97,7 @@ Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa
       <div class="l10-col"><span class="l10-win l10-w1">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b2"></div></div><span class="l10-name">Claude</span><span class="l10-trait">pitkät aineistot</span></div>
       <div class="l10-col"><span class="l10-win l10-w3">✓ vahvin tähän</span><div class="l10-barbox"><div class="l10-bar l10-b3"></div></div><span class="l10-name">Copilot</span><span class="l10-trait">M365-ympäristö</span></div>
     </div>
+    <span class="l10-priv">kaikki kolme ovat pilvipalveluita — tarkista, käsitelläänkö datasi EU:ssa vai USA:ssa</span>
   </div>
 </div>
 <figcaption class="ai-demo__cap">”Mikä on paras tekoäly?” on väärä kysymys. Kun tehtävä vaihtuu, vahvin työkalu vaihtuu: pitkä dokumentti, data-analyysi ja organisaation M365-ympäristö nostavat kukin eri palvelun kärkeen.</figcaption></figure>
@@ -123,6 +124,7 @@ Paras tapa ymmärtää työkalujen erot on antaa niille sama tehtävä ja katsoa
 @keyframes l10b3{0%,29%{height:48%}35%,62%{height:55%}68%,96%{height:95%}100%{height:48%}}
 .l10-name{font-family:var(--font-mono);font-size:12.5px;font-weight:600;color:#FFFFFF}
 .l10-trait{font-family:var(--font-mono);font-size:10.5px;color:#B9C2DA}
+.l10-priv{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.03em;color:#F0A38C;text-align:center}
 @media (prefers-reduced-motion:reduce){
 .l10-t1,.l10-t2,.l10-t3,.l10-w1,.l10-w2,.l10-w3,.l10-b1,.l10-b2,.l10-b3{animation:none}
 .l10-t1,.l10-w1{opacity:1}

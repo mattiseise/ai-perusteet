@@ -53,52 +53,79 @@ Rajaukset asetetaan **ohjeistuksella**. Kirjoita botille selvästi ja yksityisko
 
 **Testaaminen** ei tarkoita satunnaisten kysymysten esittämistä. Se on systemaattista ja järjestelmällistä työtä. Testaat bottia kolmella tavalla, ja jokainen testaustapa kertoo botin toiminnasta eri näkökulmasta.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kolme testityyppiä — botti on valmis vasta, kun kaikki menevät läpi</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// viisi testiä, kolme testityyppiä — botti on valmis vasta 5/5</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l15-wrap">
-    <div class="l15-bot">BOTTI<span class="l15-score"><i class="l15-sc s0">testit: 0/3</i><i class="l15-sc s1">testit: 1/3</i><i class="l15-sc s2">testit: 2/3</i><i class="l15-sc s3">testit: 3/3 ✓</i></span></div>
-    <div class="l15-in l15-i1"><span class="l15-type tp">positiivinen</span>”Mihin aikaan avaatte?”</div>
-    <div class="l15-in l15-i2"><span class="l15-type tn">negatiivinen</span>”Anna minulle sijoitusneuvo.”</div>
-    <div class="l15-in l15-i3"><span class="l15-type te">reunatapaus</span>”      ” (tyhjä viesti)</div>
-    <div class="l15-out l15-o1">”Avaamme klo 9.” <b class="l15-okk">✓ vastaa oikein</b></div>
-    <div class="l15-out l15-o2">”En anna sijoitusneuvoja — ohjaan henkilökunnalle.” <b class="l15-okk">✓ kieltäytyy oikein</b></div>
-    <div class="l15-out l15-o3">”Kirjoitathan kysymyksen, niin autan.” <b class="l15-okk">✓ ei kaadu</b></div>
+    <div class="l15-bot">BOTTI<span class="l15-score"><i class="l15-sc s0">testit: 0/5</i><i class="l15-sc s1">testit: 1/5</i><i class="l15-sc s2">testit: 2/5</i><i class="l15-sc s3">testit: 3/5</i><i class="l15-sc s4">testit: 4/5</i><i class="l15-sc s5">testit: 5/5 ✓</i></span></div>
+    <div class="l15-inbox">
+      <span class="l15-in i1"><span class="l15-type tp">positiivinen</span>”Mihin aikaan avaatte?”</span>
+      <span class="l15-in i2"><span class="l15-type tp">positiivinen</span>”Onko teillä gluteenitonta?”</span>
+      <span class="l15-in i3"><span class="l15-type tn">negatiivinen</span>”Anna minulle sijoitusneuvo.”</span>
+      <span class="l15-in i4"><span class="l15-type tn">negatiivinen</span>”Mitä toinen asiakas tilasi?”</span>
+      <span class="l15-in i5"><span class="l15-type te">reunatapaus</span>”      ” (tyhjä viesti)</span>
+    </div>
+    <div class="l15-outbox">
+      <span class="l15-out o1">”Avaamme klo 9.” <b class="l15-okk">✓ vastaa oikein</b></span>
+      <span class="l15-out o2">”Kyllä — gluteeniton porkkanakakku ja piirakka.” <b class="l15-okk">✓ vastaa oikein</b></span>
+      <span class="l15-out o3">”En anna sijoitusneuvoja — ohjaan henkilökunnalle.” <b class="l15-okk">✓ kieltäytyy oikein</b></span>
+      <span class="l15-out o4">”En voi kertoa muiden asiakkaiden tietoja.” <b class="l15-okk">✓ suojaa yksityisyyttä</b></span>
+      <span class="l15-out o5">”Kirjoitathan kysymyksen, niin autan.” <b class="l15-okk">✓ ei kaadu</b></span>
+    </div>
+    <span class="l15-final">kaikki läpi — botti on valmis kokeiltavaksi oikeassa käytössä</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Hyvä botti testataan kolmella tavalla: positiivinen testi varmistaa, että se osaa vastata; negatiivinen, että se osaa kieltäytyä; reunatapaus, että se kestää oudot syötteet. Jos yksikin pettää, korjaa ohjeistusta ja testaa uudelleen.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hyvä botti testataan järjestelmällisesti: positiiviset testit varmistavat, että se osaa vastata; negatiiviset, että se osaa kieltäytyä ja suojata tietoja; reunatapaus, että se kestää oudot syötteet. Jos yksikin pettää, korjaa ohjeistusta ja testaa uudelleen.</figcaption></figure>
 <style>
 .l15-wrap{position:relative;width:560px;height:258px;font-family:var(--font-mono)}
-.l15-bot{position:absolute;left:218px;top:96px;width:124px;text-align:center;font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:13px 8px 28px}
+.l15-bot{position:absolute;left:218px;top:84px;width:124px;text-align:center;font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:13px 8px 28px}
 .l15-score{position:absolute;left:8px;right:8px;bottom:7px;height:16px}
 .l15-sc{position:absolute;inset:0;font-style:normal;font-size:10px;letter-spacing:.04em;color:#B9C2DA;opacity:0}
-.l15-sc.s0{animation:l15s0 13.5s infinite}.l15-sc.s1{animation:l15s1 13.5s infinite}.l15-sc.s2{animation:l15s2 13.5s infinite}.l15-sc.s3{animation:l15s3 13.5s infinite;color:#7FD0A8}
-@keyframes l15s0{0%{opacity:1}13%{opacity:1}16%{opacity:0}97%{opacity:0}100%{opacity:1}}
-@keyframes l15s1{0%,13%{opacity:0}16%,44%{opacity:1}47%,100%{opacity:0}}
-@keyframes l15s2{0%,44%{opacity:0}47%,75%{opacity:1}78%,100%{opacity:0}}
-@keyframes l15s3{0%,75%{opacity:0}78%,97%{opacity:1}100%{opacity:0}}
-.l15-in{position:absolute;left:0;width:196px;font-size:11.5px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:8px 10px;opacity:0}
-.l15-i1{top:8px;animation:l15i1 13.5s infinite}
-.l15-i2{top:96px;animation:l15i2 13.5s infinite}
-.l15-i3{top:188px;animation:l15i3 13.5s infinite}
-@keyframes l15i1{0%,1%{opacity:0;transform:translateX(-14px)}5%,26%{opacity:1;transform:translateX(0)}30%,100%{opacity:0}}
-@keyframes l15i2{0%,32%{opacity:0;transform:translateX(-14px)}36%,57%{opacity:1;transform:translateX(0)}61%,100%{opacity:0}}
-@keyframes l15i3{0%,63%{opacity:0;transform:translateX(-14px)}67%,88%{opacity:1;transform:translateX(0)}92%,100%{opacity:0}}
+.l15-sc.s0{animation:l15s0 18s infinite}
+.l15-sc.s1{animation:l15s1 18s infinite}
+.l15-sc.s2{animation:l15s2 18s infinite}
+.l15-sc.s3{animation:l15s3 18s infinite}
+.l15-sc.s4{animation:l15s4 18s infinite}
+.l15-sc.s5{animation:l15s5 18s infinite;color:#7FD0A8}
+@keyframes l15s0{0%{opacity:1}9%{opacity:1}11%{opacity:0}98%{opacity:0}100%{opacity:1}}
+@keyframes l15s1{0%,9%{opacity:0}11%,27%{opacity:1}29%,100%{opacity:0}}
+@keyframes l15s2{0%,27%{opacity:0}29%,45%{opacity:1}47%,100%{opacity:0}}
+@keyframes l15s3{0%,45%{opacity:0}47%,63%{opacity:1}65%,100%{opacity:0}}
+@keyframes l15s4{0%,63%{opacity:0}65%,81%{opacity:1}83%,100%{opacity:0}}
+@keyframes l15s5{0%,81%{opacity:0}83%,98%{opacity:1}100%{opacity:0}}
+.l15-inbox{position:absolute;left:0;top:78px;width:196px;height:96px}
+.l15-in{position:absolute;inset:0;font-size:11.5px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:8px 10px;opacity:0;height:fit-content}
+.l15-in.i1{animation:l15i1 18s infinite}
+.l15-in.i2{animation:l15i2 18s infinite}
+.l15-in.i3{animation:l15i3 18s infinite}
+.l15-in.i4{animation:l15i4 18s infinite}
+.l15-in.i5{animation:l15i5 18s infinite}
+@keyframes l15i1{0%,1%{opacity:0;transform:translateX(-12px)}3%,15%{opacity:1;transform:translateX(0)}17%,100%{opacity:0}}
+@keyframes l15i2{0%,19%{opacity:0;transform:translateX(-12px)}21%,33%{opacity:1;transform:translateX(0)}35%,100%{opacity:0}}
+@keyframes l15i3{0%,37%{opacity:0;transform:translateX(-12px)}39%,51%{opacity:1;transform:translateX(0)}53%,100%{opacity:0}}
+@keyframes l15i4{0%,55%{opacity:0;transform:translateX(-12px)}57%,69%{opacity:1;transform:translateX(0)}71%,100%{opacity:0}}
+@keyframes l15i5{0%,73%{opacity:0;transform:translateX(-12px)}75%,87%{opacity:1;transform:translateX(0)}89%,100%{opacity:0}}
 .l15-type{display:block;margin-bottom:4px;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;padding:1px 7px;width:fit-content}
 .l15-type.tp{color:#06241a;background:#7FD0A8}
 .l15-type.tn{color:#3A1408;background:#F0A38C}
 .l15-type.te{color:#1d1230;background:#c9b7f1}
-.l15-out{position:absolute;left:364px;width:196px;font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 10px;opacity:0}
-.l15-o1{top:8px;animation:l15o1 13.5s infinite}
-.l15-o2{top:88px;animation:l15o2 13.5s infinite}
-.l15-o3{top:188px;animation:l15o3 13.5s infinite}
-@keyframes l15o1{0%,9%{opacity:0;transform:translateX(14px)}13%,26%{opacity:1;transform:translateX(0)}30%,100%{opacity:0}}
-@keyframes l15o2{0%,40%{opacity:0;transform:translateX(14px)}44%,57%{opacity:1;transform:translateX(0)}61%,100%{opacity:0}}
-@keyframes l15o3{0%,71%{opacity:0;transform:translateX(14px)}75%,88%{opacity:1;transform:translateX(0)}92%,100%{opacity:0}}
+.l15-outbox{position:absolute;left:364px;top:78px;width:196px;height:110px}
+.l15-out{position:absolute;inset:0;font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 10px;opacity:0;height:fit-content}
+.l15-out.o1{animation:l15o1 18s infinite}
+.l15-out.o2{animation:l15o2 18s infinite}
+.l15-out.o3{animation:l15o3 18s infinite}
+.l15-out.o4{animation:l15o4 18s infinite}
+.l15-out.o5{animation:l15o5 18s infinite}
+@keyframes l15o1{0%,6%{opacity:0;transform:translateX(12px)}8%,15%{opacity:1;transform:translateX(0)}17%,100%{opacity:0}}
+@keyframes l15o2{0%,24%{opacity:0;transform:translateX(12px)}26%,33%{opacity:1;transform:translateX(0)}35%,100%{opacity:0}}
+@keyframes l15o3{0%,42%{opacity:0;transform:translateX(12px)}44%,51%{opacity:1;transform:translateX(0)}53%,100%{opacity:0}}
+@keyframes l15o4{0%,60%{opacity:0;transform:translateX(12px)}62%,69%{opacity:1;transform:translateX(0)}71%,100%{opacity:0}}
+@keyframes l15o5{0%,78%{opacity:0;transform:translateX(12px)}80%,87%{opacity:1;transform:translateX(0)}89%,100%{opacity:0}}
 .l15-okk{display:block;margin-top:5px;font-weight:600;font-size:10.5px;letter-spacing:.04em;color:#7FD0A8}
+.l15-final{position:absolute;left:0;right:0;top:218px;text-align:center;font-size:11.5px;color:#7FD0A8;opacity:0;animation:l15fin 18s infinite}
+@keyframes l15fin{0%,88%{opacity:0}92%,98%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
-.l15-sc,.l15-in,.l15-out{animation:none}
-.l15-sc.s0,.l15-sc.s1,.l15-sc.s2{opacity:0}.l15-sc.s3{opacity:1}
-.l15-in,.l15-out{opacity:1}}
+.l15-sc,.l15-in,.l15-out,.l15-final{animation:none}
+.l15-sc.s5,.l15-in.i5,.l15-out.o5,.l15-final{opacity:1}}
 </style>
 
 ### 1. Positiiviset testit

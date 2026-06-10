@@ -34,38 +34,52 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kaksi yhtä varmaa vastausta — pinnalta ei näe, kumpi on totta</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+<figure class="ai-demo"><span class="ai-demo__tag">// kokeile itse: kumpi väite on totta? klikkaa korttia</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:344px">
   <div class="l07-wrap">
-    <div class="l07-card l07-a"><span class="l07-q">Kuka kirjoitti Tuntemattoman sotilaan?</span><span class="l07-ans">”Tuntemattoman sotilaan kirjoitti Väinö Linna. Romaani ilmestyi vuonna 1954.”</span><span class="l07-st l07-true">✓ totta</span></div>
-    <div class="l07-card l07-b"><span class="l07-q">Kuka kirjoitti romaanin Suuri Mahtava?</span><span class="l07-ans">”Romaanin Suuri Mahtava kirjoitti Jane Austen. Teos ilmestyi vuonna 1847.”</span><span class="l07-st l07-fake">✗ keksitty</span></div>
-    <i class="l07-scan"></i>
-    <span class="l07-verd">skannaus: sävy varma ✓ · kieli sujuvaa ✓ · yksityiskohdat täsmällisiä ✓ — eroa ei näy</span>
-    <span class="l07-fix">ainoa keino erottaa: tarkista luotettavasta lähteestä</span>
+    <input type="radio" name="l07q" id="l07-r0" class="l07-in l07-r0" checked>
+    <input type="radio" name="l07q" id="l07-ra" class="l07-in l07-ra">
+    <input type="radio" name="l07q" id="l07-rb" class="l07-in l07-rb">
+    <span class="l07-ask">Malli vastasi kahteen kysymykseen yhtä itsevarmasti. <b>Klikkaa sitä, jota pidät totena.</b></span>
+    <label for="l07-ra" class="l07-card l07-a"><span class="l07-q">Kuka kirjoitti Tuntemattoman sotilaan?</span><span class="l07-ans">”Tuntemattoman sotilaan kirjoitti Väinö Linna. Romaani ilmestyi vuonna 1954.”</span><span class="l07-st l07-true">✓ totta</span></label>
+    <label for="l07-rb" class="l07-card l07-b"><span class="l07-q">Kuka kirjoitti romaanin Suuri Mahtava?</span><span class="l07-ans">”Romaanin Suuri Mahtava kirjoitti Jane Austen. Teos ilmestyi vuonna 1847.”</span><span class="l07-st l07-fake">✗ keksitty</span></label>
+    <span class="l07-res l07-resa">Oikein — mutta huomaa: et voinut <b>nähdä</b> sitä vastauksesta. Molemmat olivat yhtä varmoja ja sujuvia. Siksi faktat tarkistetaan lähteestä.</span>
+    <span class="l07-res l07-resb">Tämä oli keksitty — Jane Austen ei kirjoittanut tällaista teosta. Se näytti silti täsmälleen yhtä uskottavalta kuin tosi vastaus. Siksi faktat tarkistetaan lähteestä.</span>
+    <label for="l07-r0" class="l07-reset">↺ kokeile uudelleen</label>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Hallusinaatio: malli esittää keksityn tiedon täsmälleen yhtä itsevarmasti ja sujuvasti kuin oikean, eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — siksi kriittiset faktat tarkistetaan aina lähteestä.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hallusinaatio: malli esittää keksityn tiedon täsmälleen yhtä itsevarmasti ja sujuvasti kuin oikean, eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — kriittiset faktat tarkistetaan aina luotettavasta lähteestä.</figcaption></figure>
 <style>
-.l07-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
-.l07-card{position:absolute;top:0;width:268px;min-height:166px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:12px 14px}
+.l07-wrap{position:relative;width:560px;height:306px;font-family:var(--font-mono)}
+.l07-in{position:absolute;opacity:0;pointer-events:none}
+.l07-ask{position:absolute;left:0;right:0;top:0;font-size:12px;line-height:1.5;color:#EAEEF8;text-align:center}
+.l07-ask b{color:#46c7cf}
+.l07-card{position:absolute;top:50px;width:268px;min-height:158px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:12px 14px;cursor:pointer;transition:border-color .25s,box-shadow .25s,transform .25s;display:block}
 .l07-a{left:0}
 .l07-b{right:0}
+.l07-r0:checked~.l07-card{animation:l07invite 2.6s ease-in-out infinite}
+.l07-r0:checked~.l07-b{animation-delay:1.3s}
+@keyframes l07invite{0%,100%{border-color:#2B3552}50%{border-color:#46c7cf;box-shadow:0 0 14px rgba(70,199,207,.25)}}
+.l07-card:hover{border-color:#46c7cf;transform:translateY(-2px)}
 .l07-q{display:block;font-size:11px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:8px;padding:6px 9px;margin-bottom:9px}
 .l07-ans{display:block;font-size:12px;line-height:1.5;color:#FFFFFF}
-.l07-st{position:absolute;left:14px;bottom:11px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 9px;opacity:0}
-.l07-true{color:#06241a;background:#7FD0A8;animation:l07st 12s infinite}
-.l07-fake{color:#3A1408;background:#F0A38C;animation:l07st 12s infinite}
-@keyframes l07st{0%,58%{opacity:0;transform:scale(1.25)}64%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
-.l07-scan{position:absolute;left:0;top:0;width:3px;height:166px;background:linear-gradient(180deg,transparent,#46c7cf 30%,#46c7cf 70%,transparent);box-shadow:0 0 14px rgba(70,199,207,.8);opacity:0;animation:l07scan 12s infinite}
-@keyframes l07scan{0%,6%{opacity:0;left:0}9%{opacity:1;left:0}26%{opacity:1;left:265px}28%{opacity:0;left:268px}30%{opacity:1;left:292px}47%{opacity:1;left:557px}50%,100%{opacity:0;left:557px}}
-.l07-verd{position:absolute;left:0;right:0;top:184px;font-size:11px;line-height:1.45;color:#B9C2DA;opacity:0;animation:l07verd 12s infinite}
-@keyframes l07verd{0%,26%{opacity:0}30%,55%{opacity:1}60%,100%{opacity:0}}
-.l07-fix{position:absolute;left:0;right:0;top:184px;font-size:11.5px;line-height:1.45;color:#7FD0A8;opacity:0;animation:l07fix 12s infinite}
-@keyframes l07fix{0%,62%{opacity:0}68%,96%{opacity:1}100%{opacity:0}}
+.l07-st{position:absolute;left:14px;bottom:11px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 9px;opacity:0;transform:scale(1.25);transition:opacity .35s,transform .35s}
+.l07-true{color:#06241a;background:#7FD0A8}
+.l07-fake{color:#3A1408;background:#F0A38C}
+.l07-ra:checked~.l07-card .l07-st,.l07-rb:checked~.l07-card .l07-st{opacity:1;transform:scale(1)}
+.l07-ra:checked~.l07-card,.l07-rb:checked~.l07-card{animation:none;cursor:default}
+.l07-ra:checked~.l07-a{border-color:#7FD0A8}
+.l07-rb:checked~.l07-b{border-color:#F0A38C}
+.l07-res{position:absolute;left:0;right:0;top:226px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .4s .15s}
+.l07-res b{color:#EAEEF8}
+.l07-ra:checked~.l07-resa{opacity:1}
+.l07-rb:checked~.l07-resb{opacity:1}
+.l07-reset{position:absolute;right:0;bottom:0;font-size:10.5px;letter-spacing:.04em;color:#46c7cf;border:1.5px solid #2B3552;border-radius:999px;padding:3px 10px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.l07-ra:checked~.l07-reset,.l07-rb:checked~.l07-reset{opacity:1;pointer-events:auto}
+.l07-ra:checked~.l07-ask,.l07-rb:checked~.l07-ask{opacity:.35}
 @media (prefers-reduced-motion:reduce){
-.l07-true,.l07-fake,.l07-scan,.l07-verd,.l07-fix{animation:none}
-.l07-true,.l07-fake,.l07-fix{opacity:1}
-.l07-scan,.l07-verd{opacity:0}}
+.l07-r0:checked~.l07-card{animation:none}
+.l07-card,.l07-st,.l07-res,.l07-reset{transition:none}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?

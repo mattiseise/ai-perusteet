@@ -70,57 +70,57 @@ Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, va
 
 Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti etenee tavoitetta kohti</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä — botti kertoo ohjeet, agentti tekee työn</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:330px">
   <div class="l19-wrap">
-    <div class="l19-pane l19-bot"><span class="l19-ph">CHATBOT · reaktiivinen</span><span class="l19-msg me">Mitä teen ensin?</span><span class="l19-msg ai">Kannattaa aloittaa kalenterista.</span><span class="l19-idle">odottaa uutta viestiä<i></i><i></i><i></i></span><span class="l19-sum">1 viesti → 1 vastaus → pysähtyy</span></div>
-    <div class="l19-pane l19-ag"><span class="l19-ph">AGENTTI · aloitteellinen</span><span class="l19-goal">Tavoite: järjestä kokous</span>
-      <span class="l19-step s1"><b>1</b> tarkista kalenteri<i>✓</i></span>
-      <span class="l19-step s2"><b>2</b> varaa huone<i>✓</i></span>
-      <span class="l19-step s3"><b>3</b> lähetä kutsut<i>✓</i></span>
-      <span class="l19-step s4"><b>4</b> aseta muistutus<i>✓</i></span>
-      <span class="l19-sum l19-done">1 tavoite → 4 askelta ilman lisäkäskyjä ✓</span>
+    <div class="l19-task">Tehtävä: ”Siirrä laskut Laskut-kansioon ja kuittaa lähettäjille.”</div>
+    <div class="l19-pane l19-bot"><span class="l19-ph">CHATBOT</span>
+      <span class="l19-reply">”Näin teet sen itse: 1) avaa sähköposti, 2) etsi laskut, 3) siirrä ne kansioon, 4) vastaa lähettäjille.”</span>
+      <span class="l19-tag l19-tw">kertoo ohjeet — työ jää sinulle</span>
+    </div>
+    <div class="l19-pane l19-ag"><span class="l19-ph">AGENTTI</span>
+      <span class="l19-step s1">lukee saapuneet — 24 viestiä<i>✓</i></span>
+      <span class="l19-step s2">tunnistaa 3 laskua<i>✓</i></span>
+      <span class="l19-step s3">siirtää kansioon Laskut<i>✓</i></span>
+      <span class="l19-step s4">lähettää 3 kuittausta<i>✓</i></span>
+      <span class="l19-rep">raportti: ”3 laskua käsitelty” ✓</span>
+      <span class="l19-tag l19-tg">tekee vaiheet itse — ja raportoi</span>
     </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja jää odottamaan seuraavaa viestiä. Agentti saa tavoitteen, pilkkoo sen askeliksi ja etenee niitä itse — suunnittelee, toimii ja tarkistaa — kunnes koko lista on tehty.</figcaption></figure>
+<figcaption class="ai-demo__cap">Ratkaiseva ero: chatbot vastaa tekstillä ja työ jää sinulle — agentti suorittaa vaiheet itse työkaluillaan ja raportoi tuloksen. Juuri siksi agentti tarvitsee oikeudet, turvarajat ja valvonnan, joita pelkkä chatbot ei tarvitse.</figcaption></figure>
 <style>
-.l19-wrap{position:relative;display:flex;gap:18px;width:560px;font-family:var(--font-mono)}
-.l19-pane{position:relative;flex:1;min-height:246px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px 38px}
-.l19-ag{border-color:oklch(0.66 0.13 208)}
-.l19-ph{display:block;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA;margin-bottom:10px;text-transform:uppercase}
-.l19-msg{display:block;font-size:11.5px;line-height:1.45;border-radius:10px;padding:7px 10px;margin-bottom:8px;max-width:92%}
-.l19-msg.me{color:#06212A;background:#46c7cf;font-weight:500;margin-left:auto;opacity:0;animation:l19me 13s infinite}
-.l19-msg.ai{color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;opacity:0;animation:l19ai 13s infinite}
-@keyframes l19me{0%,2%{opacity:0}6%,96%{opacity:1}100%{opacity:0}}
-@keyframes l19ai{0%,12%{opacity:0}16%,96%{opacity:1}100%{opacity:0}}
-.l19-idle{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;color:#8B94B3;border:1.5px dashed #44517A;border-radius:999px;padding:5px 11px;opacity:0;animation:l19idle 13s infinite}
-@keyframes l19idle{0%,22%{opacity:0}26%,96%{opacity:1}100%{opacity:0}}
-.l19-idle i{width:4px;height:4px;border-radius:50%;background:#8B94B3;animation:l19dot 1.4s ease-in-out infinite}
-.l19-idle i:nth-child(2){animation-delay:.25s}.l19-idle i:nth-child(3){animation-delay:.5s}
-@keyframes l19dot{0%,100%{opacity:.3}50%{opacity:1}}
-.l19-goal{display:block;font-size:11.5px;font-weight:600;color:#06241f;background:#7FD0A8;border-radius:9px;padding:6px 9px;margin-bottom:9px}
-.l19-step{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;margin-bottom:7px}
-.l19-step b{font-size:10px;color:#B9C2DA;border:1px solid #44517A;border-radius:6px;padding:1px 6px;font-weight:600}
+.l19-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
+.l19-task{position:absolute;left:50%;transform:translateX(-50%);top:0;white-space:nowrap;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:7px 12px}
+.l19-pane{position:absolute;top:48px;width:268px;min-height:240px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px 36px}
+.l19-bot{left:0}
+.l19-ag{right:0;border-color:oklch(0.66 0.13 208)}
+.l19-ph{display:block;font-size:10.5px;letter-spacing:.13em;color:#B9C2DA;margin-bottom:9px}
+.l19-reply{display:block;font-size:11.5px;line-height:1.55;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:9px 11px;opacity:0;animation:l19reply 13s infinite}
+@keyframes l19reply{0%,4%{opacity:0}9%,96%{opacity:1}100%{opacity:0}}
+.l19-step{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;margin-bottom:7px}
 .l19-step i{margin-left:auto;font-style:normal;color:#7FD0A8;opacity:0}
 .l19-step.s1{animation:l19s1 13s infinite}.l19-step.s1 i{animation:l19i1 13s infinite}
 .l19-step.s2{animation:l19s2 13s infinite}.l19-step.s2 i{animation:l19i2 13s infinite}
 .l19-step.s3{animation:l19s3 13s infinite}.l19-step.s3 i{animation:l19i3 13s infinite}
 .l19-step.s4{animation:l19s4 13s infinite}.l19-step.s4 i{animation:l19i4 13s infinite}
-@keyframes l19s1{0%,8%{color:#5D6880;border-color:#232C44}12%,24%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}28%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
-@keyframes l19s2{0%,26%{color:#5D6880;border-color:#232C44}30%,42%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}46%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
-@keyframes l19s3{0%,44%{color:#5D6880;border-color:#232C44}48%,60%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}64%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
-@keyframes l19s4{0%,62%{color:#5D6880;border-color:#232C44}66%,78%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}82%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
-@keyframes l19i1{0%,20%{opacity:0}24%,96%{opacity:1}100%{opacity:0}}
-@keyframes l19i2{0%,38%{opacity:0}42%,96%{opacity:1}100%{opacity:0}}
-@keyframes l19i3{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
-@keyframes l19i4{0%,74%{opacity:0}78%,96%{opacity:1}100%{opacity:0}}
-.l19-sum{position:absolute;left:13px;right:13px;bottom:10px;font-size:10.5px;line-height:1.4;color:#8B94B3}
-.l19-done{color:#7FD0A8;opacity:0;animation:l19done 13s infinite}
-@keyframes l19done{0%,80%{opacity:0}85%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19s1{0%,8%{color:#5D6880;border-color:#232C44}12%,22%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}26%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s2{0%,24%{color:#5D6880;border-color:#232C44}28%,38%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}42%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s3{0%,40%{color:#5D6880;border-color:#232C44}44%,54%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}58%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s4{0%,56%{color:#5D6880;border-color:#232C44}60%,70%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}74%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19i1{0%,18%{opacity:0}22%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i2{0%,34%{opacity:0}38%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i3{0%,50%{opacity:0}54%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i4{0%,66%{opacity:0}70%,96%{opacity:1}100%{opacity:0}}
+.l19-rep{display:block;font-size:11px;font-weight:600;color:#06241f;background:#7FD0A8;border-radius:8px;padding:6px 9px;opacity:0;animation:l19rep 13s infinite}
+@keyframes l19rep{0%,74%{opacity:0;transform:scale(1.12)}80%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+.l19-tag{position:absolute;left:13px;right:13px;bottom:10px;font-size:10.5px;letter-spacing:.04em;line-height:1.4}
+.l19-tw{color:#F0A38C}
+.l19-tg{color:#7FD0A8;opacity:0;animation:l19tg 13s infinite}
+@keyframes l19tg{0%,80%{opacity:0}86%,96%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
-.l19-msg.me,.l19-msg.ai,.l19-idle,.l19-idle i,.l19-step,.l19-step i,.l19-done{animation:none}
-.l19-msg.me,.l19-msg.ai,.l19-idle,.l19-step i,.l19-done{opacity:1}
+.l19-reply,.l19-step,.l19-step i,.l19-rep,.l19-tg{animation:none}
+.l19-reply,.l19-step i,.l19-rep,.l19-tg{opacity:1}
 .l19-step{color:#B9C2DA}}
 </style>
 

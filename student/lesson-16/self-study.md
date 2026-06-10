@@ -25,10 +25,10 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l16-wrap">
     <div class="l16-prompt">”Rauhallinen aamu järvellä, sumua veden päällä.”</div>
-    <div class="l16-card c1"><span class="l16-h">KUVA</span><div class="l16-pic"></div><span class="l16-t">kuvageneraattori</span></div>
+    <div class="l16-card c1"><span class="l16-h">KUVA</span><div class="l16-pic"><svg viewBox="0 0 104 62" width="100%" height="62" preserveAspectRatio="none"><defs><linearGradient id="l16sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7C873"/><stop offset=".55" stop-color="#F0A38C"/><stop offset="1" stop-color="#8E6B9E"/></linearGradient><linearGradient id="l16lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98E84"/><stop offset="1" stop-color="#3E4C7A"/></linearGradient></defs><rect width="104" height="34" fill="url(#l16sky)"/><circle class="l16-sun" cx="52" cy="26" r="7" fill="#FFE9B8"/><path d="M0 34 L20 24 L38 34 Z" fill="#5A4670"/><path d="M30 34 L52 20 L78 34 Z" fill="#473A5E"/><path d="M70 34 L88 26 L104 34 Z" fill="#5A4670"/><rect y="34" width="104" height="28" fill="url(#l16lake)"/><ellipse class="l16-mist" cx="52" cy="36" rx="46" ry="5" fill="#EAEEF8" opacity=".4"/><ellipse cx="52" cy="42" rx="20" ry="2.4" fill="#FFE9B8" opacity=".5"/></svg></div><span class="l16-t">kuvageneraattori</span></div>
     <div class="l16-card c2"><span class="l16-h">MUSIIKKI</span><div class="l16-eq"><i></i><i></i><i></i><i></i><i></i></div><span class="l16-t">musiikkigeneraattori</span></div>
     <div class="l16-card c3"><span class="l16-h">VIDEO</span><div class="l16-film"><i></i><i></i><i></i><b>▸</b></div><span class="l16-t">videogeneraattori</span></div>
-    <div class="l16-card c4"><span class="l16-h">KOODI</span><div class="l16-code"><i class="w1"></i><i class="w2"></i><i class="w3"></i></div><span class="l16-t">koodiavustaja</span></div>
+    <div class="l16-card c4"><span class="l16-h">KOODI</span><div class="l16-code"><span class="cl ln1"><b>def</b> aamu():</span><span class="cl ln2">  piirra(<i>"järvi"</i>,</span><span class="cl ln3">  sumu=<b>True</b>)</span></div><span class="l16-t">koodiavustaja</span></div>
     <span class="l16-note">muista: kerro, kun sisältö on tekoälyn tuottamaa</span>
   </div>
 </div>
@@ -47,8 +47,12 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 @keyframes l16k4{0%,66%{border-color:#2B3552}70%,93%{border-color:oklch(0.66 0.15 305)}97%,100%{border-color:#2B3552}}
 .l16-h{display:block;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA;margin-bottom:8px}
 .l16-t{position:absolute;left:6px;right:6px;bottom:8px;font-size:9.5px;color:#8B94B3}
-.l16-pic{height:62px;border-radius:8px;background:linear-gradient(180deg,#F7C873 0%,#F0A38C 45%,#3E4C7A 46%,#28324F 100%);opacity:0;animation:l16pic 13s infinite}
+.l16-pic{height:62px;border-radius:8px;overflow:hidden;opacity:0;animation:l16pic 13s infinite}
 @keyframes l16pic{0%,4%{opacity:0;filter:blur(6px)}10%,95%{opacity:1;filter:blur(0)}100%{opacity:0}}
+.l16-sun{animation:l16sun 13s ease-in-out infinite}
+@keyframes l16sun{0%,6%{transform:translateY(8px)}16%,95%{transform:translateY(0)}100%{transform:translateY(8px)}}
+.l16-mist{animation:l16mist 5s ease-in-out infinite}
+@keyframes l16mist{0%,100%{opacity:.42}50%{opacity:.2}}
 .l16-eq{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:62px;padding-bottom:4px}
 .l16-eq i{width:9px;border-radius:3px 3px 0 0;background:oklch(0.7 0.14 305);height:18%;animation:l16eq 1s ease-in-out infinite}
 .l16-eq i:nth-child(1){animation-delay:0s}.l16-eq i:nth-child(2){animation-delay:.18s}.l16-eq i:nth-child(3){animation-delay:.36s}.l16-eq i:nth-child(4){animation-delay:.1s}.l16-eq i:nth-child(5){animation-delay:.27s}
@@ -57,22 +61,24 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 .l16-film i{flex:0 0 34px;height:44px;border-radius:5px;background:#28324F;border:1px solid #44517A;animation:l16film 2.4s linear infinite}
 @keyframes l16film{from{transform:translateX(0)}to{transform:translateX(-39px)}}
 .l16-film b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:19px;color:#FFFFFF;text-shadow:0 0 8px #000}
-.l16-code{display:flex;flex-direction:column;gap:8px;justify-content:center;height:62px;padding:0 6px}
-.l16-code i{display:block;height:7px;border-radius:99px;background:#7FD0A8;width:0}
-.l16-code i.w1{animation:l16c1 13s infinite}
-.l16-code i.w2{background:#46c7cf;animation:l16c2 13s infinite}
-.l16-code i.w3{background:#c9b7f1;animation:l16c3 13s infinite}
-@keyframes l16c1{0%,68%{width:0}74%,100%{width:88%}}
-@keyframes l16c2{0%,72%{width:0}78%,100%{width:66%}}
-@keyframes l16c3{0%,76%{width:0}82%,100%{width:76%}}
+.l16-code{display:flex;flex-direction:column;gap:6px;justify-content:center;height:62px;padding:0 4px;text-align:left}
+.l16-code .cl{display:block;font-size:9.5px;line-height:1.3;color:#EAEEF8;white-space:nowrap;overflow:hidden;width:0}
+.l16-code .cl b{color:#c9b7f1;font-weight:600}
+.l16-code .cl i{color:#7FD0A8;font-style:normal}
+.l16-code .ln1{animation:l16c1 13s steps(12) infinite}
+.l16-code .ln2{animation:l16c2 13s steps(16) infinite}
+.l16-code .ln3{animation:l16c3 13s steps(12) infinite}
+@keyframes l16c1{0%,68%{width:0}73%,100%{width:100%}}
+@keyframes l16c2{0%,73%{width:0}78%,100%{width:100%}}
+@keyframes l16c3{0%,78%{width:0}83%,100%{width:100%}}
 .l16-note{position:absolute;left:0;right:0;top:218px;text-align:center;font-size:11px;letter-spacing:.04em;color:#F0A38C;opacity:0;animation:l16note 13s infinite}
 @keyframes l16note{0%,82%{opacity:0}88%,96%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
-.l16-card,.l16-pic,.l16-eq i,.l16-film i,.l16-code i,.l16-note{animation:none}
+.l16-card,.l16-pic,.l16-sun,.l16-mist,.l16-eq i,.l16-film i,.l16-code .cl,.l16-note{animation:none}
 .l16-card{border-color:oklch(0.66 0.15 305)}
 .l16-pic,.l16-note{opacity:1}
 .l16-eq i{height:55%}
-.l16-code i.w1{width:88%}.l16-code i.w2{width:66%}.l16-code i.w3{width:76%}}
+.l16-code .cl{width:100%}}
 </style>
 
 ## Kuvageneraatio — tekoälyllä kuvia tekstistä

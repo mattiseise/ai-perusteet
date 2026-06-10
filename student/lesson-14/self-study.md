@@ -73,15 +73,15 @@ Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-proj
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l14-wrap">
     <div class="l14-sys"><span class="l14-head">JÄRJESTELMÄPROMPTI <span class="l14-sw"><i class="l14-off">POIS</i><i class="l14-on">PÄÄLLÄ</i></span></span>
-      <span class="l14-row r1">1 · Identiteetti: Python-tutori</span>
-      <span class="l14-row r2">2 · Tarkoitus: opeta esimerkein</span>
+      <span class="l14-row r1">1 · Identiteetti: opiskeluvalmentaja</span>
+      <span class="l14-row r2">2 · Tarkoitus: ohjaa oppimaan</span>
       <span class="l14-row r3">3 · Ohjeet: kysy, älä luennoi</span>
       <span class="l14-row r4">4 · Rajaus: ei valmiita töitä</span>
     </div>
     <div class="l14-chat">
-      <div class="l14-msg l14-user">Tee koodiprojektini valmiiksi puolestani.</div>
-      <div class="l14-msg l14-bot l14-b1">Toki! Tässä on koko projekti valmiina: … <span class="l14-tag l14-warn">yleisbotti — raja puuttuu</span></div>
-      <div class="l14-msg l14-bot l14-b2">En tee projektia puolestasi — opit tekemällä. Aloitetaan: mikä osa on vaikein? <span class="l14-tag l14-good">✓ noudattaa rajausta</span></div>
+      <div class="l14-msg l14-user">Kirjoita esseeni valmiiksi puolestani.</div>
+      <div class="l14-msg l14-bot l14-b1">Toki! Tässä on valmis essee: … <span class="l14-tag l14-warn">yleisbotti — raja puuttuu</span></div>
+      <div class="l14-msg l14-bot l14-b2">En kirjoita esseetä puolestasi — opit tekemällä. Aloitetaan rungosta: mikä on aiheesi? <span class="l14-tag l14-good">✓ noudattaa rajausta</span></div>
     </div>
   </div>
 </div>

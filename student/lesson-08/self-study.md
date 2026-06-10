@@ -20,36 +20,42 @@ Kun ChatGPT vastaa sinulle, se hyödyntää tietoa, jota sille on opetettu. Mutt
 
 Monien aineistojen tekijät, kuten journalistit, kirjailijat, tutkijat ja bloggaajat, eivät välttämättä ole antaneet erillistä lupaa siihen, että heidän tekstejään käytetään tekoälymallien kouluttamiseen. He eivät myöskään välttämättä ole saaneet siitä korvausta.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// koulutusdata virtaa malliin — tieto tekijästä ei tule mukana ulos</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+<figure class="ai-demo"><span class="ai-demo__tag">// yksi näppärä vastaus — ja kolme asiaa sen takana</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:330px">
   <div class="l08-wrap">
-    <div class="l08-beltbox"><div class="l08-belt">
-      <span class="l08-doc">Blogi · <b>Aino K.</b></span><span class="l08-doc">Uutinen · <b>toimitus</b></span><span class="l08-doc">Romaani · <b>T. Mäki</b></span><span class="l08-doc">Koodi · <b>avoin yhteisö</b></span><span class="l08-doc">Essee · <b>opiskelija</b></span><span class="l08-doc">Artikkeli · <b>tutkijat</b></span><span class="l08-doc">Blogi · <b>Aino K.</b></span><span class="l08-doc">Uutinen · <b>toimitus</b></span><span class="l08-doc">Romaani · <b>T. Mäki</b></span><span class="l08-doc">Koodi · <b>avoin yhteisö</b></span><span class="l08-doc">Essee · <b>opiskelija</b></span><span class="l08-doc">Artikkeli · <b>tutkijat</b></span>
-    </div></div>
-    <div class="l08-model">MALLI<span class="l08-sub">parametreja — ei lähdeluetteloa</span></div>
-    <div class="l08-outline"></div>
-    <div class="l08-out"><span class="l08-type">Sujuvaa uutta tekstiä — pohjana miljoonien tekijöiden työ.</span><span class="l08-ask">kenen työtä? · lupa? · korvaus?</span></div>
+    <div class="l08-chat"><span class="l08-u">Kirjoita tiivistelmä raportista.</span><span class="l08-a">”Tässä tiivistelmä: raportin mukaan…” <i>valmis 3 sekunnissa</i></span></div>
+    <span class="l08-peek">mitä tämän takana on? ▼</span>
+    <div class="l08-layer y1"><b>1 · KOULUTUSDATA</b><span>miljoonien ihmisten tekstejä — usein ilman lupaa tai korvausta</span></div>
+    <div class="l08-layer y2"><b>2 · NÄKYMÄTÖN TYÖ</b><span>merkitsijät luokittelevat sisältöä matalalla palkalla globaalissa etelässä</span></div>
+    <div class="l08-layer y3"><b>3 · YMPÄRISTÖ</b><span>datakeskukset kuluttavat sähköä ja vettä — Irlannissa 22 % maan sähköstä</span></div>
+    <span class="l08-note">vastaus ei synny tyhjästä — siksi tekoälyn käyttö on myös eettinen valinta</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Mallin koulutuksessa tekstit muuttuvat parametreiksi: nimet, luvat ja korvaukset eivät kulje mukana. Siksi kysymys kuuluu — kenen työn varaan tekoälyn tuotos rakentuu, ja millä ehdoilla?</figcaption></figure>
+<figcaption class="ai-demo__cap">Tekoäly ei ole neutraali väline. Jokaisen sujuvan vastauksen takana on kolme kerrosta: muiden ihmisten työstä koottu koulutusdata, näkymätön merkintätyö ja datakeskusten sähkön- ja vedenkulutus. Ammattilainen tuntee koko ketjun.</figcaption></figure>
 <style>
-.l08-wrap{position:relative;width:560px;height:248px}
-.l08-beltbox{position:absolute;left:0;top:22px;width:392px;height:44px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 78%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 78%,transparent 100%)}
-.l08-belt{position:absolute;left:0;top:4px;display:flex;gap:10px;width:max-content;animation:l08belt 18s linear infinite}
-@keyframes l08belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.l08-doc{font-family:var(--font-mono);font-size:11.5px;white-space:nowrap;color:#B9C2DA;background:#1E2740;border:1.5px solid #44517A;border-radius:9px;padding:7px 10px}
-.l08-doc b{color:#FFFFFF;font-weight:600}
-.l08-model{position:absolute;right:0;top:8px;width:150px;height:74px;text-align:center;font-family:var(--font-mono);font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 264);border-radius:12px;padding-top:14px;overflow:hidden}
-.l08-sub{display:block;margin-top:5px;font-size:9.5px;letter-spacing:.05em;text-transform:none;color:#8B94B3}
-.l08-outline{position:absolute;right:72px;top:86px;width:2px;height:34px;background:linear-gradient(180deg,oklch(0.66 0.15 264),#7FD0A8)}
-.l08-out{position:absolute;left:70px;top:126px;width:420px;font-family:var(--font-mono);background:#0E1422;border:1.5px solid #232C44;border-radius:12px;padding:13px 14px 11px}
-.l08-type{display:block;font-size:11.5px;color:#FFFFFF;white-space:nowrap;overflow:hidden;border-right:2px solid #46c7cf;width:0;animation:l08type 9s steps(48) infinite}
-@keyframes l08type{0%,6%{width:0}55%,96%{width:100%}100%{width:100%}}
-.l08-ask{display:inline-block;margin-top:9px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#3A1408;background:#F0A38C;border-radius:999px;padding:2px 9px;animation:l08ask 3s ease-in-out infinite}
-@keyframes l08ask{0%,100%{opacity:.55}50%{opacity:1}}
+.l08-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
+.l08-chat{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:7px}
+.l08-u{align-self:flex-end;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:7px 11px}
+.l08-a{align-self:flex-start;font-size:11.5px;line-height:1.4;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:7px 11px;opacity:0;animation:l08a 12s infinite}
+.l08-a i{font-style:normal;font-size:10px;color:#7FD0A8;margin-left:6px}
+@keyframes l08a{0%,4%{opacity:0}8%,97%{opacity:1}100%{opacity:0}}
+.l08-peek{position:absolute;left:0;top:84px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l08peek 12s infinite}
+@keyframes l08peek{0%,12%{opacity:0}16%,96%{opacity:1}100%{opacity:0}}
+.l08-layer{position:absolute;left:0;right:0;background:#11182A;border:1.5px solid #2B3552;border-left:4px solid oklch(0.66 0.15 264);border-radius:11px;padding:8px 12px;opacity:0;transition:border-color .25s,background .25s}
+.l08-layer:hover{background:#161F35;border-color:oklch(0.7 0.15 264)}
+.l08-layer b{display:block;font-size:10.5px;letter-spacing:.1em;color:#EAEEF8;margin-bottom:3px}
+.l08-layer span{display:block;font-size:11px;line-height:1.45;color:#B9C2DA}
+.l08-layer.y1{top:108px;animation:l08y1 12s infinite}
+.l08-layer.y2{top:162px;border-left-color:#c9b7f1;animation:l08y2 12s infinite}
+.l08-layer.y3{top:216px;border-left-color:#F7C873;animation:l08y3 12s infinite}
+@keyframes l08y1{0%,16%{opacity:0;transform:translateY(-14px)}22%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l08y2{0%,30%{opacity:0;transform:translateY(-14px)}36%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l08y3{0%,44%{opacity:0;transform:translateY(-14px)}50%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l08-note{position:absolute;left:0;right:0;top:272px;font-size:11px;line-height:1.4;color:#7FD0A8;opacity:0;animation:l08note 12s infinite}
+@keyframes l08note{0%,58%{opacity:0}64%,96%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
-.l08-belt,.l08-ask{animation:none}
-.l08-type{animation:none;width:100%;border-right:none}}
+.l08-a,.l08-peek,.l08-layer,.l08-note{animation:none}
+.l08-a,.l08-peek,.l08-layer,.l08-note{opacity:1}}
 </style>
 
 Tämä on johtanut oikeustapauksiin ja laajaan keskusteluun. Kirjailijat, kuvataiteilijat ja muut sisällöntuottajat ovat kyseenalaistaneet sen, onko heidän teostensa käyttäminen tekoälyn kouluttamiseen hyväksyttävää ilman lupaa tai korvausta. Perusväite on sama: ”Teidän työkalunne on opetettu meidän luomuksillamme ilman suostumustamme.”

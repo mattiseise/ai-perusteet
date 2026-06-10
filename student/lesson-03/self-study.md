@@ -49,38 +49,50 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 
 > **Pysähdy hetkeksi:** Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ennusta → valitse → liitä → toista — sana kerrallaan</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta → valitse → liitä → toista — viisi askelta peräkkäin</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
   <div class="l03-wrap">
-    <div class="l03-sent"><span class="l03-fixed">Suomen pääkaupunki</span><span class="l03-tok t1"> on</span><span class="l03-tok t2"> Helsinki</span><span class="l03-tok t3">.</span><i class="l03-caret"></i></div>
+    <div class="l03-sent"><span class="l03-fixed">Suomen pääkaupunki</span><span class="l03-tok t1"> on</span><span class="l03-tok t2"> Helsinki</span><span class="l03-tok t3">.</span><span class="l03-tok t4"> Se</span><span class="l03-tok t5"> sijaitsee</span><span class="l03-tok t6">…</span><i class="l03-caret"></i></div>
     <span class="l03-ph">malli laskee todennäköisyyden jokaiselle jatkolle:</span>
     <div class="l03-cands l03-r1"><div class="l03-c top"><span>on</span><div class="l03-cb"><i style="width:90%"></i></div><b>91 %</b></div><div class="l03-c"><span>sijaitsee</span><div class="l03-cb"><i style="width:6%"></i></div><b>4 %</b></div><div class="l03-c"><span>oli</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div></div>
     <div class="l03-cands l03-r2"><div class="l03-c top"><span>Helsinki</span><div class="l03-cb"><i style="width:93%"></i></div><b>94 %</b></div><div class="l03-c"><span>Tukholma</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div><div class="l03-c"><span>Turku</span><div class="l03-cb"><i style="width:3%"></i></div><b>1 %</b></div></div>
     <div class="l03-cands l03-r3"><div class="l03-c top"><span>.</span><div class="l03-cb"><i style="width:86%"></i></div><b>87 %</b></div><div class="l03-c"><span>,&nbsp;ja</span><div class="l03-cb"><i style="width:9%"></i></div><b>8 %</b></div><div class="l03-c"><span>!</span><div class="l03-cb"><i style="width:4%"></i></div><b>3 %</b></div></div>
-    <span class="l03-loop">…valittu token liitetään tekstiin, ja laskenta alkaa alusta</span>
+    <div class="l03-cands l03-r4"><div class="l03-c top"><span>Se</span><div class="l03-cb"><i style="width:62%"></i></div><b>64 %</b></div><div class="l03-c"><span>Kaupunki</span><div class="l03-cb"><i style="width:18%"></i></div><b>18 %</b></div><div class="l03-c"><span>Vuonna</span><div class="l03-cb"><i style="width:9%"></i></div><b>9 %</b></div></div>
+    <div class="l03-cands l03-r5"><div class="l03-c top"><span>sijaitsee</span><div class="l03-cb"><i style="width:69%"></i></div><b>71 %</b></div><div class="l03-c"><span>on</span><div class="l03-cb"><i style="width:12%"></i></div><b>12 %</b></div><div class="l03-c"><span>perustettiin</span><div class="l03-cb"><i style="width:8%"></i></div><b>8 %</b></div></div>
+    <span class="l03-loop">…ja sama jatkuu: jokainen uusi token lasketaan koko siihenastisen tekstin pohjalta</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, liittää sen tekstiin — ja laskee sitten kaiken uudelleen. Vastaus syntyy pala kerrallaan.</figcaption></figure>
+<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, liittää sen tekstiin — ja laskee kaiken uudelleen. Huomaa, miten varmuus vaihtelee: faktan jatko on lähes varma (94 %), tyylivalinta epävarmempi (64 %).</figcaption></figure>
 <style>
 .l03-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
-.l03-sent{position:absolute;left:0;right:0;top:0;font-size:15px;font-weight:500;color:#FFFFFF;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;white-space:nowrap}
+.l03-sent{position:absolute;left:0;right:0;top:0;font-size:14.5px;font-weight:500;color:#FFFFFF;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;white-space:nowrap}
 .l03-tok{color:#7FD0A8;opacity:0}
-.l03-tok.t1{animation:l03t1 13s infinite}
-.l03-tok.t2{animation:l03t2 13s infinite}
-.l03-tok.t3{animation:l03t3 13s infinite}
-@keyframes l03t1{0%,24%{opacity:0}27%,98%{opacity:1}100%{opacity:0}}
-@keyframes l03t2{0%,56%{opacity:0}59%,98%{opacity:1}100%{opacity:0}}
-@keyframes l03t3{0%,88%{opacity:0}91%,98%{opacity:1}100%{opacity:0}}
+.l03-tok.t1{animation:l03t1 19s infinite}
+.l03-tok.t2{animation:l03t2 19s infinite}
+.l03-tok.t3{animation:l03t3 19s infinite}
+.l03-tok.t4{animation:l03t4 19s infinite}
+.l03-tok.t5{animation:l03t5 19s infinite}
+.l03-tok.t6{color:#8B94B3;animation:l03t6 19s infinite}
+@keyframes l03t1{0%,16%{opacity:0}18%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t2{0%,34%{opacity:0}36%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t3{0%,53%{opacity:0}55%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t4{0%,71%{opacity:0}73%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t5{0%,89%{opacity:0}91%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t6{0%,93%{opacity:0}95%,98%{opacity:1}100%{opacity:0}}
 .l03-caret{display:inline-block;width:2px;height:16px;background:#46c7cf;margin-left:3px;vertical-align:-2px;animation:l03caret 1.1s steps(2) infinite}
 @keyframes l03caret{to{visibility:hidden}}
 .l03-ph{position:absolute;left:2px;top:62px;font-size:11px;letter-spacing:.04em;color:#8B94B3}
 .l03-cands{position:absolute;left:0;top:84px;width:560px;display:flex;gap:12px;opacity:0}
-.l03-r1{animation:l03r1 13s infinite}
-.l03-r2{animation:l03r2 13s infinite}
-.l03-r3{animation:l03r3 13s infinite}
-@keyframes l03r1{0%,1%{opacity:0}4%,22%{opacity:1}26%,100%{opacity:0}}
-@keyframes l03r2{0%,33%{opacity:0}36%,54%{opacity:1}58%,100%{opacity:0}}
-@keyframes l03r3{0%,65%{opacity:0}68%,86%{opacity:1}90%,100%{opacity:0}}
+.l03-r1{animation:l03r1 19s infinite}
+.l03-r2{animation:l03r2 19s infinite}
+.l03-r3{animation:l03r3 19s infinite}
+.l03-r4{animation:l03r4 19s infinite}
+.l03-r5{animation:l03r5 19s infinite}
+@keyframes l03r1{0%,1%{opacity:0}3%,15%{opacity:1}17%,100%{opacity:0}}
+@keyframes l03r2{0%,20%{opacity:0}22%,33%{opacity:1}35%,100%{opacity:0}}
+@keyframes l03r3{0%,39%{opacity:0}41%,52%{opacity:1}54%,100%{opacity:0}}
+@keyframes l03r4{0%,57%{opacity:0}59%,70%{opacity:1}72%,100%{opacity:0}}
+@keyframes l03r5{0%,75%{opacity:0}77%,88%{opacity:1}90%,100%{opacity:0}}
 .l03-c{flex:1;background:#141B2D;border:1.5px solid #2B3552;border-radius:11px;padding:9px 11px}
 .l03-c span{display:block;font-size:13px;color:#EAEEF8;margin-bottom:6px}
 .l03-c b{font-size:11px;color:#B9C2DA;font-weight:600}
@@ -90,13 +102,12 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 .l03-cb{height:7px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden;margin-bottom:5px}
 .l03-cb i{display:block;height:100%;border-radius:99px;background:oklch(0.66 0.15 264)}
 .l03-c.top .l03-cb i{background:#7FD0A8}
-.l03-loop{position:absolute;left:0;right:0;top:196px;font-size:11px;line-height:1.4;color:#46c7cf;opacity:0;animation:l03loop 13s infinite}
-@keyframes l03loop{0%,8%{opacity:0}12%,96%{opacity:.95}100%{opacity:0}}
+.l03-loop{position:absolute;left:0;right:0;top:196px;font-size:11px;line-height:1.4;color:#46c7cf;opacity:0;animation:l03loop 19s infinite}
+@keyframes l03loop{0%,6%{opacity:0}10%,96%{opacity:.95}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .l03-tok,.l03-cands,.l03-caret,.l03-loop{animation:none}
 .l03-tok{opacity:1}
-.l03-r3{opacity:1}
-.l03-loop{opacity:1}}
+.l03-r5,.l03-loop{opacity:1}}
 </style>
 
 ## Koulutusdata — se, mistä malli oppii
