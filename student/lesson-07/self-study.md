@@ -34,27 +34,38 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// malli ei varoita, kumpi on totta</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:20px 26px">
-  <div class="l07-lead">Malli vastaa molempiin yhtä sujuvasti ja vakuuttavasti:</div>
-  <div class="l07-stmt s1">"Suomen pääkaupunki on Helsinki."<span class="l07-mk ok">✓ totta</span></div>
-  <div class="l07-stmt s2">"Tampere on Suomen pääkaupunki."<span class="l07-mk bad">✗ väärin</span></div>
-  <div class="l07-note">Itse vastauksesta ei näe eroa — vain faktantarkistus paljastaa sen.</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// kaksi yhtä varmaa vastausta — pinnalta ei näe, kumpi on totta</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l07-wrap">
+    <div class="l07-card l07-a"><span class="l07-q">Kuka kirjoitti Tuntemattoman sotilaan?</span><span class="l07-ans">”Tuntemattoman sotilaan kirjoitti Väinö Linna. Romaani ilmestyi vuonna 1954.”</span><span class="l07-st l07-true">✓ totta</span></div>
+    <div class="l07-card l07-b"><span class="l07-q">Kuka kirjoitti romaanin Suuri Mahtava?</span><span class="l07-ans">”Romaanin Suuri Mahtava kirjoitti Jane Austen. Teos ilmestyi vuonna 1847.”</span><span class="l07-st l07-fake">✗ keksitty</span></div>
+    <i class="l07-scan"></i>
+    <span class="l07-verd">skannaus: sävy varma ✓ · kieli sujuvaa ✓ · yksityiskohdat täsmällisiä ✓ — eroa ei näy</span>
+    <span class="l07-fix">ainoa keino erottaa: tarkista luotettavasta lähteestä</span>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Hallusinaatio: malli esittää väärän tiedon täsmälleen yhtä luontevasti kuin oikean eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — siksi faktat on tarkistettava.</figcaption></figure>
+<figcaption class="ai-demo__cap">Hallusinaatio: malli esittää keksityn tiedon täsmälleen yhtä itsevarmasti ja sujuvasti kuin oikean, eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — siksi kriittiset faktat tarkistetaan aina lähteestä.</figcaption></figure>
 <style>
-.l07-lead{font-family:var(--font-mono);font-size:12px;color:#B9C2DA}
-.l07-stmt{position:relative;font-family:var(--font-serif);font-size:17px;color:#FFFFFF;background:#1E2740;border:1.5px solid #3A4560;border-radius:9px;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;opacity:0}
-.s1{animation:l07in 7s ease-out infinite}
-.s2{animation:l07in 7s ease-out infinite;animation-delay:.5s}
-@keyframes l07in{0%{opacity:0;transform:translateY(6px)}12%,100%{opacity:1;transform:translateY(0)}}
-.l07-mk{font-family:var(--font-mono);font-size:13px;font-weight:500;white-space:nowrap;opacity:0;flex:none}
-.ok{color:#7FD0A8;animation:l07ok 7s ease-out infinite}
-.bad{color:#F08A78;animation:l07bad 7s ease-out infinite}
-@keyframes l07ok{0%,42%{opacity:0}52%,100%{opacity:1}}
-@keyframes l07bad{0%,60%{opacity:0}70%,100%{opacity:1}}
-.l07-note{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;margin-top:2px}
-@media (prefers-reduced-motion:reduce){.s1,.s2,.ok,.bad{animation:none;opacity:1;transform:none}}
+.l07-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l07-card{position:absolute;top:0;width:268px;min-height:166px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:12px 14px}
+.l07-a{left:0}
+.l07-b{right:0}
+.l07-q{display:block;font-size:11px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:8px;padding:6px 9px;margin-bottom:9px}
+.l07-ans{display:block;font-size:12px;line-height:1.5;color:#FFFFFF}
+.l07-st{position:absolute;left:14px;bottom:11px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 9px;opacity:0}
+.l07-true{color:#06241a;background:#7FD0A8;animation:l07st 12s infinite}
+.l07-fake{color:#3A1408;background:#F0A38C;animation:l07st 12s infinite}
+@keyframes l07st{0%,58%{opacity:0;transform:scale(1.25)}64%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+.l07-scan{position:absolute;left:0;top:0;width:3px;height:166px;background:linear-gradient(180deg,transparent,#46c7cf 30%,#46c7cf 70%,transparent);box-shadow:0 0 14px rgba(70,199,207,.8);opacity:0;animation:l07scan 12s infinite}
+@keyframes l07scan{0%,6%{opacity:0;left:0}9%{opacity:1;left:0}26%{opacity:1;left:265px}28%{opacity:0;left:268px}30%{opacity:1;left:292px}47%{opacity:1;left:557px}50%,100%{opacity:0;left:557px}}
+.l07-verd{position:absolute;left:0;right:0;top:184px;font-size:11px;line-height:1.45;color:#B9C2DA;opacity:0;animation:l07verd 12s infinite}
+@keyframes l07verd{0%,26%{opacity:0}30%,55%{opacity:1}60%,100%{opacity:0}}
+.l07-fix{position:absolute;left:0;right:0;top:184px;font-size:11.5px;line-height:1.45;color:#7FD0A8;opacity:0;animation:l07fix 12s infinite}
+@keyframes l07fix{0%,62%{opacity:0}68%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l07-true,.l07-fake,.l07-scan,.l07-verd,.l07-fix{animation:none}
+.l07-true,.l07-fake,.l07-fix{opacity:1}
+.l07-scan,.l07-verd{opacity:0}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?

@@ -56,44 +56,57 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää</span>
-<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:stretch;justify-content:center;padding:20px 24px">
-  <div class="l01-col l01-dim">
-    <div class="l01-h">SÄÄNTÖ</div>
-    <div class="l01-rule">jos summa &gt; 10 000 € → hälytä</div>
-    <div class="l01-in">tapahtuma: 9 990 €</div>
-    <div class="l01-out l01-ok">→ ei hälytystä</div>
-    <div class="l01-miss">petos jäi huomaamatta</div>
-  </div>
-  <div class="l01-col">
-    <div class="l01-h" style="color:oklch(0.66 0.15 264)">TEKOÄLY</div>
-    <div class="l01-sigs"><span class="l01-sig s1">summa</span><span class="l01-sig s2">sijainti</span><span class="l01-sig s3">kellonaika</span><span class="l01-sig s4">historia</span></div>
-    <div class="l01-meter"><span class="l01-mfill"></span><span class="l01-mlbl">97 % epäilyttävä</span></div>
-    <div class="l01-out l01-flag">⚠ hälytä</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää — yksi raja vai monta signaalia</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l01-wrap">
+    <div class="l01-case"><span class="l01-cs c1">Siirto 12 500 € · klo 14</span><span class="l01-cs c2">Siirto 90 € · klo 03 · uusi laite · 5. kerta tänään</span></div>
+    <div class="l01-judge l01-rule"><span class="l01-jh">SÄÄNTÖ</span><span class="l01-jr">jos summa &gt; 10 000 € → hälytä</span><span class="l01-verd l01-v1a">✓ hälytys — raja ylittyi</span><span class="l01-verd l01-v1b">läpi — ei osu sääntöön</span></div>
+    <div class="l01-judge l01-ai"><span class="l01-jh">TEKOÄLY</span><span class="l01-sig s1">summa</span><span class="l01-sig s2">kellonaika</span><span class="l01-sig s3">laite</span><span class="l01-sig s4">toisto</span><div class="l01-mb"><div class="l01-meter"></div></div><span class="l01-verd l01-v2a">✓ hälytys — 93 % petosriski</span><span class="l01-verd l01-v2b">✓ hälytys — 91 % petosriski</span></div>
+    <span class="l01-miss">⚠ petos pääsi läpi</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa ja päästää poikkeuksen läpi. Tekoäly punnitsee monta signaalia ja antaa todennäköisyyden — kun epäilys ylittää kynnyksen, se hälyttää.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa: ison summan se nappaa, mutta oudon pienen tapauksen se päästää läpi. Tekoäly punnitsee monta signaalia yhtä aikaa ja antaa todennäköisyyden — siksi se huomaa myös kuvion, jolle kukaan ei kirjoittanut sääntöä.</figcaption></figure>
 <style>
-.l01-col{flex:1;max-width:248px;border:1.5px solid #3A4560;border-radius:10px;background:#11182A;padding:15px;display:flex;flex-direction:column;gap:10px}
-.l01-dim{opacity:.78}
-.l01-h{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;color:#B9C2DA}
-.l01-rule{font-family:var(--font-mono);font-size:12px;color:#B9C2DA;line-height:1.4}
-.l01-in{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:8px;padding:7px 10px}
-.l01-out{font-family:var(--font-mono);font-size:14px;font-weight:500;margin-top:auto}
-.l01-ok{color:#B9C2DA}
-.l01-miss{font-family:var(--font-mono);font-size:12px;color:#F08A78;opacity:0;animation:l01miss 7s ease-out infinite}
-@keyframes l01miss{0%,40%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}
-.l01-sigs{display:flex;flex-wrap:wrap;gap:6px}
-.l01-sig{font-family:var(--font-mono);font-size:11px;color:#7A839E;border:1.5px solid #3A4560;border-radius:999px;padding:3px 9px}
-.l01-sig.s1{animation:l01sig 7s ease-out infinite}.l01-sig.s2{animation:l01sig 7s ease-out infinite;animation-delay:.3s}.l01-sig.s3{animation:l01sig 7s ease-out infinite;animation-delay:.6s}.l01-sig.s4{animation:l01sig 7s ease-out infinite;animation-delay:.9s}
-@keyframes l01sig{0%{opacity:.5}22%,90%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}100%{opacity:.5}}
-.l01-meter{position:relative;height:22px;border:1.5px solid #3A4560;border-radius:6px;overflow:hidden;background:#0E1320}
-.l01-mfill{position:absolute;inset:0;width:0;background:oklch(0.66 0.15 264);animation:l01fill 7s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l01fill{0%,28%{width:4%;background:oklch(0.66 0.15 264)}46%{background:oklch(0.66 0.15 264)}48%{background:#F08A78}55%{width:97%;background:#F08A78}90%{width:97%;background:#F08A78}100%{width:4%;background:oklch(0.66 0.15 264)}}
-.l01-mlbl{position:absolute;right:8px;top:3px;font-family:var(--font-mono);font-size:13px;color:#FFFFFF}
-.l01-flag{color:#7A839E;animation:l01flag 7s steps(1) infinite}
-@keyframes l01flag{0%,47%{color:#7A839E}48%,90%{color:#F08A78}100%{color:#7A839E}}
-@media (prefers-reduced-motion:reduce){.l01-miss,.l01-sig,.l01-mfill,.l01-flag{animation:none}.l01-miss{opacity:1}.l01-sig{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}.l01-mfill{width:97%;background:#F08A78}.l01-flag{color:#F08A78}}
+.l01-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l01-case{position:absolute;left:50%;transform:translateX(-50%);top:0;width:420px;height:34px}
+.l01-cs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:2px 10px;opacity:0}
+.l01-cs.c1{animation:l01c1 14s infinite}
+.l01-cs.c2{animation:l01c2 14s infinite}
+@keyframes l01c1{0%,2%{opacity:0}5%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes l01c2{0%,50%{opacity:0}53%,96%{opacity:1}100%{opacity:0}}
+.l01-judge{position:absolute;top:54px;width:262px;min-height:158px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px}
+.l01-rule{left:0}
+.l01-ai{right:0;border-color:oklch(0.66 0.15 264)}
+.l01-jh{display:block;font-size:11px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:8px}
+.l01-jr{display:block;font-size:11.5px;line-height:1.4;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:7px 9px}
+.l01-sig{display:inline-block;font-size:10.5px;color:#B9C2DA;border:1.5px solid #44517A;border-radius:999px;padding:2px 8px;margin:0 4px 6px 0}
+.l01-sig.s1{animation:l01sA 14s infinite}
+.l01-sig.s2{animation:l01sB 14s infinite}
+.l01-sig.s3{animation:l01sC 14s infinite}
+.l01-sig.s4{animation:l01sD 14s infinite}
+@keyframes l01sA{0%,7%,46%,100%{color:#B9C2DA;border-color:#44517A}10%,42%{color:#FFFFFF;border-color:oklch(0.72 0.15 264)}55%,96%{color:#B9C2DA;border-color:#44517A}}
+@keyframes l01sB{0%,55%{color:#B9C2DA;border-color:#44517A}58%,93%{color:#FFFFFF;border-color:#F0A38C}96%,100%{color:#B9C2DA;border-color:#44517A}}
+@keyframes l01sC{0%,58%{color:#B9C2DA;border-color:#44517A}61%,93%{color:#FFFFFF;border-color:#F0A38C}96%,100%{color:#B9C2DA;border-color:#44517A}}
+@keyframes l01sD{0%,61%{color:#B9C2DA;border-color:#44517A}64%,93%{color:#FFFFFF;border-color:#F0A38C}96%,100%{color:#B9C2DA;border-color:#44517A}}
+.l01-mb{height:8px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden;margin:4px 0 9px}
+.l01-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#F0A38C);animation:l01meter 14s infinite}
+@keyframes l01meter{0%,5%{width:8%}14%,46%{width:93%}52%,64%{width:8%}74%,96%{width:91%}100%{width:8%}}
+.l01-verd{position:absolute;left:13px;right:13px;bottom:11px;font-size:11px;letter-spacing:.04em;border-radius:8px;padding:6px 9px;opacity:0}
+.l01-v1a{color:#06241a;background:#7FD0A8;animation:l01v1a 14s infinite}
+.l01-v1b{color:#3A1408;background:#F0A38C;animation:l01v1b 14s infinite}
+.l01-v2a{color:#06241a;background:#7FD0A8;animation:l01v2a 14s infinite}
+.l01-v2b{color:#06241a;background:#7FD0A8;animation:l01v2b 14s infinite}
+@keyframes l01v1a{0%,12%{opacity:0}16%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes l01v1b{0%,60%{opacity:0}64%,93%{opacity:1}97%,100%{opacity:0}}
+@keyframes l01v2a{0%,14%{opacity:0}18%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes l01v2b{0%,74%{opacity:0}78%,93%{opacity:1}97%,100%{opacity:0}}
+.l01-miss{position:absolute;left:60px;top:222px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l01miss 14s infinite}
+@keyframes l01miss{0%,68%{opacity:0}72%,93%{opacity:1}97%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l01-cs,.l01-sig,.l01-meter,.l01-verd,.l01-miss{animation:none}
+.l01-cs.c2,.l01-v1b,.l01-v2b,.l01-miss{opacity:1}
+.l01-sig.s2,.l01-sig.s3,.l01-sig.s4{color:#FFFFFF;border-color:#F0A38C}
+.l01-meter{width:91%}}
 </style>
 
 ## Konkreettisia esimerkkejä arjesta

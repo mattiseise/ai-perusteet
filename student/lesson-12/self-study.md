@@ -8,32 +8,48 @@ Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vas
 
 **Konteksti** tarkoittaa kaikkea sitä tietoa, jonka tekoäly tarvitsee ymmärtääkseen *sinun* tilanteesi. Kyse ei ole vain kysymyksestä yleisesti, vaan *sinun* kysymyksestäsi, *sinun* tavoitteistasi ja *sinun* käyttötarkoituksestasi. Tämä oppitunti opettaa, miten rakennat kontekstia käytännössä. Se on yksi tämän kurssin tärkeimmistä taidoista.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä — vähän vai paljon kontekstia</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;padding:12px 24px;height:300px">
-  <div class="l12-chat">
-    <div class="l12-msg me">Auta esitelmän kanssa.</div>
-    <div class="l12-msg ai">Toki! Mistä aiheesta haluat tehdä esitelmän? <span class="l12-tag">epätarkka</span></div>
-    <div class="l12-msg me">Tee 5 min esitelmän runko biologiaan fotosynteesistä — yleisönä luokka, selkeä rakenne. <span class="l12-tag l12-ctx">+ konteksti</span></div>
-    <div class="l12-msg ai">1) Mitä fotosynteesi on  2) Miksi se on tärkeä  3) Vaiheet  4) Esimerkki: basilika ikkunalla  5) Yhteenveto <span class="l12-tag l12-good">osuva</span></div>
-    <div class="l12-typing"><span class="l12-pen">✎</span> kirjoitat seuraavaa<span class="l12-dots"><i></i><i></i><i></i></span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// jokainen kierros rakentuu edellisen päälle — vastaus tarkentuu</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l12-wrap">
+    <div class="l12-row r1"><span class="l12-k">K1</span><span class="l12-p">”Tee esitelmän runko.”</span><div class="l12-qb"><i class="l12-qf q1"></i></div><span class="l12-ql">yleinen</span></div>
+    <div class="l12-row r2"><span class="l12-k">K2</span><span class="l12-p">+ yleisö: lukiolaiset · kesto 5 min</span><div class="l12-qb"><i class="l12-qf q2"></i></div><span class="l12-ql">kohdennettu</span></div>
+    <div class="l12-row r3"><span class="l12-k">K3</span><span class="l12-p">+ konkreettinen esimerkki joka kohtaan</span><div class="l12-qb"><i class="l12-qf q3"></i></div><span class="l12-ql">konkreettinen</span></div>
+    <div class="l12-row r4"><span class="l12-k">K4</span><span class="l12-p">+ muotoile muistikorteiksi</span><div class="l12-qb"><i class="l12-qf q4"></i></div><span class="l12-ql l12-ok">✓ käyttövalmis</span></div>
+    <span class="l12-note">älä aloita alusta — tarkenna jatkopromptilla</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Sama pyyntö, eri tulos. Niukasta pyynnöstä malli antaa ympäripyöreän vastauksen; kun kerrot aiheen, pituuden, yleisön ja rakenteen, se vastaa täsmällisesti ja käyttökelpoisesti.</figcaption></figure>
+<figcaption class="ai-demo__cap">Ensimmäinen vastaus on pohja, ei lopputulos. Jokainen jatkokierros lisää kontekstia — yleisön, esimerkit, muodon — ja vastauksen käyttökelpoisuus kasvaa pykälä kerrallaan ilman, että aloitat alusta.</figcaption></figure>
 <style>
-.l12-chat{display:flex;flex-direction:column;gap:9px;width:100%;max-width:560px;background:#0E1422;border:1px solid #232C44;border-radius:12px;padding:14px 16px}
-.l12-msg{font-family:var(--font-mono);font-size:12.5px;line-height:1.4;border-radius:11px;padding:9px 12px;max-width:84%;position:relative}
-.l12-msg.me{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
-.l12-msg.ai{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
-.l12-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#cdd5e8;border:1.5px solid #44517A;border-radius:999px;padding:1px 7px;margin-left:4px;white-space:nowrap}
-.l12-ctx{color:#06212A;background:#bfeff0;border-color:transparent}
-.l12-good{color:#06241a;background:#7FD0A8;border-color:transparent}
-.l12-typing{align-self:flex-end;display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;color:#cdd5e8;border:1.5px dashed #44517A;border-radius:999px;padding:5px 11px}
-.l12-pen{color:#46c7cf}
-.l12-dots{display:inline-flex;gap:4px}
-.l12-dots i{width:4px;height:4px;border-radius:50%;background:#46c7cf;animation:l12dot 1.4s ease-in-out infinite}
-.l12-dots i:nth-child(2){animation-delay:.25s}.l12-dots i:nth-child(3){animation-delay:.5s}
-@keyframes l12dot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
-@media (prefers-reduced-motion:reduce){.l12-dots i{animation:none}}
+.l12-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l12-row{position:absolute;left:0;right:0;display:flex;align-items:center;gap:10px;background:#11182A;border:1.5px solid #2B3552;border-radius:11px;padding:9px 12px;opacity:0}
+.l12-row.r1{top:0;animation:l12r1 13s infinite}
+.l12-row.r2{top:56px;animation:l12r2 13s infinite}
+.l12-row.r3{top:112px;animation:l12r3 13s infinite}
+.l12-row.r4{top:168px;animation:l12r4 13s infinite;border-color:#7FD0A8}
+@keyframes l12r1{0%,2%{opacity:0;transform:translateY(6px)}6%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l12r2{0%,22%{opacity:0;transform:translateY(6px)}26%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l12r3{0%,44%{opacity:0;transform:translateY(6px)}48%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l12r4{0%,66%{opacity:0;transform:translateY(6px)}70%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l12-k{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#1d1230;background:#c9b7f1;border-radius:7px;padding:3px 7px}
+.l12-p{flex:1;font-size:11.5px;line-height:1.35;color:#EAEEF8}
+.l12-qb{width:120px;height:9px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
+.l12-qf{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.6 0.14 305),#7FD0A8)}
+.l12-qf.q1{width:0;animation:l12q1 13s infinite}
+.l12-qf.q2{width:0;animation:l12q2 13s infinite}
+.l12-qf.q3{width:0;animation:l12q3 13s infinite}
+.l12-qf.q4{width:0;animation:l12q4 13s infinite}
+@keyframes l12q1{0%,5%{width:0}10%,100%{width:25%}}
+@keyframes l12q2{0%,25%{width:0}30%,100%{width:50%}}
+@keyframes l12q3{0%,47%{width:0}52%,100%{width:75%}}
+@keyframes l12q4{0%,69%{width:0}74%,100%{width:95%}}
+.l12-ql{width:96px;text-align:right;font-size:10.5px;color:#B9C2DA}
+.l12-ok{color:#7FD0A8;font-weight:600}
+.l12-note{position:absolute;left:0;right:0;top:228px;text-align:center;font-size:11.5px;color:#c9b7f1;opacity:0;animation:l12note 13s infinite}
+@keyframes l12note{0%,76%{opacity:0}82%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l12-row,.l12-qf,.l12-note{animation:none}
+.l12-row,.l12-note{opacity:1}
+.l12-qf.q1{width:25%}.l12-qf.q2{width:50%}.l12-qf.q3{width:75%}.l12-qf.q4{width:95%}}
 </style>
 
 ## Konteksti: miksi se on tärkeää?

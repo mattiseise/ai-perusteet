@@ -46,41 +46,54 @@ Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **
 
 Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kiinteä polku vai tilanne ratkaisee</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:24px;padding:16px 24px">
-  <div class="l20-lane l20-dim">
-    <span class="l20-lbl">AUTOMAATIO</span>
-    <span class="l20-box">A</span><span class="l20-seg"><i class="l20-dot l20-fix"></i></span><span class="l20-box">B</span><span class="l20-seg"></span><span class="l20-box">C</span>
-    <span class="l20-note">aina sama polku</span>
-  </div>
-  <div class="l20-lane">
-    <span class="l20-lbl" style="color:oklch(0.66 0.13 208)">AGENTTI</span>
-    <span class="l20-box l20-sit">tilanne</span><span class="l20-seg"></span><span class="l20-dia">päätös</span>
-    <span class="l20-brs"><span class="l20-br brA">→ polku X</span><span class="l20-br brB">→ polku Y</span><span class="l20-br brC">→ polku Z</span></span>
-    <span class="l20-note">tilanne ratkaisee</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// automaatio toistaa saman polun — agentti valitsee tilanteen mukaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l20-wrap">
+    <div class="l20-lane l20-top"><span class="l20-lh">AUTOMAATIO</span><div class="l20-rail"></div><span class="l20-stn" style="left:96px">A</span><span class="l20-stn" style="left:240px">B</span><span class="l20-stn" style="left:384px">C</span><i class="l20-pk"></i><span class="l20-ll">sama polku joka kerta — tilanteesta riippumatta</span></div>
+    <div class="l20-lane l20-bot"><span class="l20-lh">AGENTTI</span>
+      <div class="l20-case"><span class="l20-c cc1">rutiinikysymys</span><span class="l20-c cc2">epäselvä tapaus</span><span class="l20-c cc3">kriittinen poikkeama!</span></div>
+      <span class="l20-eval">tilannearvio…</span>
+      <div class="l20-br b1"><span>vastaa heti</span></div>
+      <div class="l20-br b2"><span>hae lisätietoa</span></div>
+      <div class="l20-br b3"><span>ohjaa ihmiselle</span></div>
+    </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Agentti on autonominen: se arvioi tilanteen ja valitsee tien itse — sama tehtävä voi eri tilanteessa johtaa eri polulle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Agentti on autonominen: se arvioi tilanteen ensin ja valitsee polun itse — rutiini hoituu heti, epäselvä vaatii lisätietoa ja kriittinen siirtyy ihmiselle.</figcaption></figure>
 <style>
-.l20-lane{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:13px;color:#EAEEF8}
-.l20-dim{opacity:.66}
-.l20-lbl{width:104px;font-size:12px;letter-spacing:.1em;color:#B9C2DA}
-.l20-box{background:#1E2740;border:1.5px solid #3A4560;border-radius:7px;padding:7px 11px}
-.l20-sit{animation:l20sit 9s steps(1) infinite}
-@keyframes l20sit{0%,32%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}33%,65%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}66%,100%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}}
-.l20-seg{position:relative;width:42px;height:2px;background:#3A4560}
-.l20-dot{position:absolute;top:-4px;width:9px;height:9px;border-radius:50%;background:oklch(0.66 0.15 264)}
-.l20-fix{animation:l20fix 9s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l20fix{0%{left:-4px;opacity:0}12%{opacity:1}100%{left:132px;opacity:1}}
-.l20-dia{background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:7px;padding:7px 11px;color:#FFFFFF}
-.l20-brs{display:flex;flex-direction:column;gap:6px;margin-left:4px}
-.l20-br{font-size:12px;color:#7A839E;border:1.5px solid #3A4560;border-radius:7px;padding:3px 10px}
-.brA{animation:l20a 9s steps(1) infinite}.brB{animation:l20b 9s steps(1) infinite}.brC{animation:l20c 9s steps(1) infinite}
-@keyframes l20a{0%,32%{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}33%,100%{color:#7A839E;border-color:#3A4560}}
-@keyframes l20b{33%,65%{color:oklch(0.66 0.15 305);border-color:oklch(0.66 0.15 305)}0%,32%{color:#7A839E;border-color:#3A4560}66%,100%{color:#7A839E;border-color:#3A4560}}
-@keyframes l20c{66%,99%{color:oklch(0.66 0.15 264);border-color:oklch(0.66 0.15 264)}0%,65%{color:#7A839E;border-color:#3A4560}}
-.l20-note{font-size:11px;color:#B9C2DA;margin-left:auto}
-@media (prefers-reduced-motion:reduce){.l20-fix,.l20-sit,.brA,.brB,.brC{animation:none}.brA{color:oklch(0.66 0.13 208);border-color:oklch(0.66 0.13 208)}}
+.l20-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
+.l20-lane{position:absolute;left:0;right:0;background:#11182A;border:1.5px solid #2B3552;border-radius:13px}
+.l20-top{top:0;height:96px}
+.l20-bot{top:108px;height:160px;border-color:oklch(0.66 0.13 208)}
+.l20-lh{position:absolute;left:13px;top:9px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
+.l20-rail{position:absolute;left:84px;right:60px;top:46px;height:3px;background:#3A4560}
+.l20-stn{position:absolute;top:33px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#EAEEF8;background:#1E2740;border:2px solid #44517A;border-radius:50%}
+.l20-pk{position:absolute;left:78px;top:42px;width:11px;height:11px;border-radius:50%;background:#46c7cf;box-shadow:0 0 10px rgba(70,199,207,.8);animation:l20pk 4.66s linear infinite}
+@keyframes l20pk{0%{transform:translateX(0)}12%{transform:translateX(0)}88%{transform:translateX(330px)}100%{transform:translateX(330px)}}
+.l20-ll{position:absolute;left:84px;bottom:8px;font-size:10.5px;color:#8B94B3}
+.l20-case{position:absolute;left:13px;top:34px;width:158px;height:56px}
+.l20-c{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:500;line-height:1.35;color:#06212A;background:#46c7cf;border-radius:10px;padding:4px 8px;opacity:0}
+.l20-c.cc1{animation:l20c1 14s infinite}
+.l20-c.cc2{animation:l20c2 14s infinite}
+.l20-c.cc3{animation:l20c3 14s infinite;background:#F0A38C;color:#3A1408}
+@keyframes l20c1{0%,2%{opacity:0}5%,28%{opacity:1}32%,100%{opacity:0}}
+@keyframes l20c2{0%,35%{opacity:0}38%,61%{opacity:1}65%,100%{opacity:0}}
+@keyframes l20c3{0%,68%{opacity:0}71%,94%{opacity:1}98%,100%{opacity:0}}
+.l20-eval{position:absolute;left:188px;top:56px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:oklch(0.75 0.12 208);animation:l20ev 4.66s ease-in-out infinite}
+@keyframes l20ev{0%,8%{opacity:0}18%,40%{opacity:1}52%,100%{opacity:0}}
+.l20-br{position:absolute;left:300px;width:236px;height:34px;border:1.5px solid #2B3552;border-radius:10px;background:#0E1422}
+.l20-br span{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:11.5px;color:#B9C2DA}
+.l20-br.b1{top:22px;animation:l20b1 14s infinite}
+.l20-br.b2{top:64px;animation:l20b2 14s infinite}
+.l20-br.b3{top:106px;animation:l20b3 14s infinite}
+@keyframes l20b1{0%,9%{border-color:#2B3552;box-shadow:none}13%,28%{border-color:#7FD0A8;box-shadow:0 0 12px rgba(127,208,168,.4)}33%,100%{border-color:#2B3552;box-shadow:none}}
+@keyframes l20b2{0%,42%{border-color:#2B3552;box-shadow:none}46%,61%{border-color:#46c7cf;box-shadow:0 0 12px rgba(70,199,207,.4)}66%,100%{border-color:#2B3552;box-shadow:none}}
+@keyframes l20b3{0%,75%{border-color:#2B3552;box-shadow:none}79%,94%{border-color:#F0A38C;box-shadow:0 0 12px rgba(240,163,140,.45)}99%,100%{border-color:#2B3552;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){
+.l20-pk,.l20-c,.l20-eval,.l20-br{animation:none}
+.l20-pk{transform:translateX(330px)}
+.l20-c.cc3,.l20-eval{opacity:1}
+.l20-br.b3{border-color:#F0A38C}}
 </style>
 
 

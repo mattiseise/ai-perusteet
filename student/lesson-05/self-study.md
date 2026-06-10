@@ -24,36 +24,42 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 
 > **Pysähdy hetkeksi:** Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// vanhat viestit tuhoutuvat, kun ne poistuvat konteksti-ikkunasta</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:8px 24px;height:262px">
-  <span class="l05-top">✕ konteksti unohtuu — vanhin viesti tuhoutuu poistuessaan</span>
-  <div class="l05-chat">
-    <div class="l05-shred"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="l05-track"><div class="l05-m l05-ai">Hei! Autan mielelläni.</div><div class="l05-m l05-me">Suunnitellaan kierrätyskampanja kouluun.</div><div class="l05-m l05-ai">Selvä — mikä on tavoite?</div><div class="l05-m l05-me">Vähentää muoviroskaa ruokalassa.</div><div class="l05-m l05-ai">Hyvä. Kenelle kampanja on?</div><div class="l05-m l05-me">Koko koululle, etenkin ekoille.</div><div class="l05-m l05-ai">Ehdotan kolmea julistetta ja infon.</div><div class="l05-m l05-me">Lisää vielä mittari tuloksille.</div><div class="l05-m l05-ai">Hei! Autan mielelläni.</div><div class="l05-m l05-me">Suunnitellaan kierrätyskampanja kouluun.</div><div class="l05-m l05-ai">Selvä — mikä on tavoite?</div><div class="l05-m l05-me">Vähentää muoviroskaa ruokalassa.</div><div class="l05-m l05-ai">Hyvä. Kenelle kampanja on?</div><div class="l05-m l05-me">Koko koululle, etenkin ekoille.</div><div class="l05-m l05-ai">Ehdotan kolmea julistetta ja infon.</div><div class="l05-m l05-me">Lisää vielä mittari tuloksille.</div></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// ikkuna liukuu keskustelun yli — vain sisällä oleva on muistissa</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l05-wrap">
+    <span class="l05-hdr">vanhin putoaa ←</span><span class="l05-hdr2">→ uusin saapuu</span>
+    <div class="l05-rail"><div class="l05-strip">
+      <span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span><span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span>
+    </div></div>
+    <div class="l05-cur l05-cl"></div><div class="l05-cur l05-cr"></div>
+    <div class="l05-win"><span class="l05-wl">KONTEKSTI-IKKUNA — mallin koko muisti</span></div>
+    <span class="l05-x">✕</span>
+    <span class="l05-warn">myös alun OHJE putoaa lopulta ulos — malli ei kerro unohtaneensa</span>
   </div>
-  <div class="l05-input"><span class="l05-pen">✎</span> kirjoitat uutta viestiä<span class="l05-dots"><i></i><i></i><i></i></span></div>
 </div>
-<figcaption class="ai-demo__cap">Konteksti-ikkuna on kuin chat: uudet viestit tulevat alas, ja koska ikkuna on kiinteän kokoinen, vanhimmat liukuvat yläreunaan ja hajoavat pois — malli ei enää muista niitä, vaikka kirjoitit ne itse.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen: keskustelun kasvaessa se liukuu eteenpäin, ja vanhimmat viestit — myös alussa antamasi pysyväisohjeet — putoavat ulos. Ikkunan ulkopuolella olevaa malli ei muista lainkaan.</figcaption></figure>
 <style>
-.l05-top{font-family:var(--font-mono);font-size:11px;color:#F0A38C}
-.l05-chat{position:relative;width:300px;height:166px;border:2px solid oklch(0.66 0.13 208);border-radius:12px 12px 0 0;background:#11182A;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 100%)}
-.l05-track{position:absolute;left:10px;right:10px;top:8px;display:flex;flex-direction:column;gap:8px;animation:l05scroll 26s linear infinite}
-.l05-m{font-family:var(--font-mono);font-size:12px;line-height:1.35;border-radius:10px;padding:8px 11px;max-width:84%}
-.l05-ai{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
-.l05-me{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
-@keyframes l05scroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
-/* tuhoutumisvyöhyke yläreunassa: sirpaleet sinkoilevat ylös ja haihtuvat */
-.l05-shred{position:absolute;top:0;left:0;right:0;height:30px;z-index:3;pointer-events:none}
-.l05-shred i{position:absolute;top:18px;width:5px;height:5px;background:#F0A38C;border-radius:1px;opacity:0;animation:l05frag 2.6s ease-out infinite}
-.l05-shred i:nth-child(1){left:18%;animation-delay:0s}.l05-shred i:nth-child(2){left:30%;animation-delay:.5s}.l05-shred i:nth-child(3){left:42%;animation-delay:1.1s}.l05-shred i:nth-child(4){left:54%;animation-delay:.3s}.l05-shred i:nth-child(5){left:66%;animation-delay:.8s}.l05-shred i:nth-child(6){left:24%;animation-delay:1.5s}.l05-shred i:nth-child(7){left:48%;animation-delay:1.9s}.l05-shred i:nth-child(8){left:72%;animation-delay:1.3s}.l05-shred i:nth-child(9){left:36%;animation-delay:2.1s}.l05-shred i:nth-child(10){left:60%;animation-delay:.1s}
-@keyframes l05frag{0%{opacity:0;transform:translateY(6px) scale(1)}25%{opacity:.95}100%{opacity:0;transform:translateY(-22px) scale(.4) rotate(40deg)}}
-.l05-input{display:flex;align-items:center;gap:8px;width:300px;font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#0E1320;border:2px solid #3A4560;border-top:none;border-radius:0 0 12px 12px;padding:9px 12px}
-.l05-pen{color:oklch(0.66 0.13 208)}
-.l05-dots{display:inline-flex;gap:4px;margin-left:auto}
-.l05-dots i{width:5px;height:5px;border-radius:50%;background:oklch(0.66 0.13 208);animation:l05dot 1.4s ease-in-out infinite}
-.l05-dots i:nth-child(2){animation-delay:.25s}.l05-dots i:nth-child(3){animation-delay:.5s}
-@keyframes l05dot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
-@media (prefers-reduced-motion:reduce){.l05-track,.l05-dots i,.l05-shred i{animation:none}.l05-shred i{opacity:0}}
+.l05-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l05-hdr{position:absolute;left:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#F0A38C}
+.l05-hdr2{position:absolute;right:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8}
+.l05-rail{position:absolute;left:0;right:0;top:62px;height:64px;overflow:hidden}
+.l05-strip{position:absolute;top:11px;display:flex;gap:10px;width:max-content;animation:l05slide 22s linear infinite}
+@keyframes l05slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.l05-m{font-size:11.5px;white-space:nowrap;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:9px;padding:9px 11px}
+.l05-ohje{color:#06212A;background:#46c7cf;border-color:transparent;font-weight:600}
+.l05-cur{position:absolute;top:56px;height:76px;z-index:3;pointer-events:none}
+.l05-cl{left:0;width:148px;background:linear-gradient(90deg,#0c1120 55%,rgba(12,17,32,0))}
+.l05-cr{right:0;width:148px;background:linear-gradient(270deg,#0c1120 55%,rgba(12,17,32,0))}
+.l05-win{position:absolute;left:150px;width:260px;top:48px;height:92px;border:2.5px solid oklch(0.66 0.15 264);border-radius:13px;z-index:4;box-shadow:0 0 18px oklch(0.66 0.15 264/.25)}
+.l05-wl{position:absolute;left:50%;transform:translateX(-50%);top:-15px;font-size:10px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;color:#0B0F1A;background:oklch(0.78 0.12 264);border-radius:999px;padding:2px 9px}
+.l05-x{position:absolute;left:64px;top:84px;z-index:5;font-size:15px;font-weight:700;color:#F0A38C;animation:l05x 2.6s ease-out infinite}
+@keyframes l05x{0%{opacity:0;transform:translateY(0) scale(.8)}30%{opacity:1}100%{opacity:0;transform:translateY(-20px) scale(1.25) rotate(18deg)}}
+.l05-warn{position:absolute;left:0;right:0;top:170px;text-align:center;font-size:11.5px;line-height:1.4;color:#F0A38C;animation:l05warn 4s ease-in-out infinite}
+@keyframes l05warn{0%,100%{opacity:.6}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+.l05-strip,.l05-x,.l05-warn{animation:none}
+.l05-strip{transform:translateX(-25%)}
+.l05-x{opacity:1}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

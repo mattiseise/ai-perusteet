@@ -70,56 +70,58 @@ Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, va
 
 Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti etenee tehtävälistaa</span>
-<div class="ai-demo__stage" style="display:flex;gap:18px;align-items:center;justify-content:center;padding:12px 18px">
-  <div class="l19-col l19-dim">
-    <div class="l19-h">BOTTI</div>
-    <div class="l19-n">kysymys</div><div class="l19-ar">↓</div><div class="l19-n">vastaus</div>
-    <div class="l19-stop">■ yksi askel</div>
-  </div>
-  <div class="l19-col">
-    <div class="l19-h" style="color:oklch(0.66 0.13 208)">AGENTTI</div>
-    <svg viewBox="0 0 140 140" style="width:118px;height:118px">
-      <circle cx="70" cy="70" r="48" fill="none" stroke="#3A4560" stroke-width="2" stroke-dasharray="4 7"/>
-      <g class="l19-orbit"><circle cx="70" cy="22" r="7" fill="oklch(0.66 0.13 208)"/></g>
-      <text x="70" y="66" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#B9C2DA">suunnittele</text>
-      <text x="70" y="80" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="#B9C2DA">toimi · havaitse</text>
-    </svg>
-  </div>
-  <div class="l19-todos">
-    <div class="l19-th">TEHTÄVÄLISTA</div>
-    <div class="l19-td t1"><span class="l19-bx"></span>hae hinta</div>
-    <div class="l19-td t2"><span class="l19-bx"></span>tarkista saatavuus</div>
-    <div class="l19-td t3"><span class="l19-bx"></span>vahvista tilaus</div>
+<figure class="ai-demo"><span class="ai-demo__tag">// botti vastaa kerran — agentti etenee tavoitetta kohti</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l19-wrap">
+    <div class="l19-pane l19-bot"><span class="l19-ph">CHATBOT · reaktiivinen</span><span class="l19-msg me">Mitä teen ensin?</span><span class="l19-msg ai">Kannattaa aloittaa kalenterista.</span><span class="l19-idle">odottaa uutta viestiä<i></i><i></i><i></i></span><span class="l19-sum">1 viesti → 1 vastaus → pysähtyy</span></div>
+    <div class="l19-pane l19-ag"><span class="l19-ph">AGENTTI · aloitteellinen</span><span class="l19-goal">Tavoite: järjestä kokous</span>
+      <span class="l19-step s1"><b>1</b> tarkista kalenteri<i>✓</i></span>
+      <span class="l19-step s2"><b>2</b> varaa huone<i>✓</i></span>
+      <span class="l19-step s3"><b>3</b> lähetä kutsut<i>✓</i></span>
+      <span class="l19-step s4"><b>4</b> aseta muistutus<i>✓</i></span>
+      <span class="l19-sum l19-done">1 tavoite → 4 askelta ilman lisäkäskyjä ✓</span>
+    </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja pysähtyy. Agentti pilkkoo tavoitteen tehtäviksi ja etenee niitä yksi kerrallaan — suunnittelee, toimii ja havaitsee — kunnes koko lista on tehty.</figcaption></figure>
+<figcaption class="ai-demo__cap">Botti antaa yhden vastauksen ja jää odottamaan seuraavaa viestiä. Agentti saa tavoitteen, pilkkoo sen askeliksi ja etenee niitä itse — suunnittelee, toimii ja tarkistaa — kunnes koko lista on tehty.</figcaption></figure>
 <style>
-.l19-col{display:flex;flex-direction:column;align-items:center;gap:7px}
-.l19-dim{opacity:.66}
-.l19-h{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:2px}
-.l19-n{font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:7px;padding:6px 10px}
-.l19-ar{color:#5A688C;font-size:12px}
-.l19-stop{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;margin-top:2px}
-.l19-orbit{transform-box:view-box;transform-origin:70px 70px;animation:l19spin 8s cubic-bezier(.5,0,.2,1) infinite}
-@keyframes l19spin{0%,14%{transform:rotate(0)}24%,40%{transform:rotate(120deg)}50%,66%{transform:rotate(240deg)}76%,100%{transform:rotate(360deg)}}
-.l19-todos{display:flex;flex-direction:column;gap:9px;background:#11182A;border:1.5px solid #3A4560;border-radius:10px;padding:13px 15px;min-width:172px}
-.l19-th{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:#B9C2DA}
-.l19-td{font-family:var(--font-mono);font-size:12px;color:#EAEEF8;display:flex;align-items:center;gap:9px}
-.l19-bx{width:15px;height:15px;border:1.5px solid #5A688C;border-radius:4px;position:relative;flex:none}
-.l19-bx::after{content:"✓";position:absolute;left:1px;top:-3px;font-size:13px;color:#0B0F1A;opacity:0}
-.t1 .l19-bx{animation:l19box 8s steps(1) infinite}
-.t2 .l19-bx{animation:l19box 8s steps(1) infinite}
-.t3 .l19-bx{animation:l19box 8s steps(1) infinite}
-.t1 .l19-bx{animation-name:l19b1}.t2 .l19-bx{animation-name:l19b2}.t3 .l19-bx{animation-name:l19b3}
-@keyframes l19b1{0%,28%{background:transparent}29%,100%{background:#7FD0A8;border-color:#7FD0A8}}
-@keyframes l19b2{0%,52%{background:transparent}53%,100%{background:#7FD0A8;border-color:#7FD0A8}}
-@keyframes l19b3{0%,78%{background:transparent}79%,100%{background:#7FD0A8;border-color:#7FD0A8}}
-.t1 .l19-bx::after{animation:l19c1 8s steps(1) infinite}.t2 .l19-bx::after{animation:l19c2 8s steps(1) infinite}.t3 .l19-bx::after{animation:l19c3 8s steps(1) infinite}
-@keyframes l19c1{0%,28%{opacity:0}29%,100%{opacity:1}}
-@keyframes l19c2{0%,52%{opacity:0}53%,100%{opacity:1}}
-@keyframes l19c3{0%,78%{opacity:0}79%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.l19-orbit,.l19-bx,.l19-bx::after{animation:none}.l19-bx{background:#7FD0A8;border-color:#7FD0A8}.l19-bx::after{opacity:1}}
+.l19-wrap{position:relative;display:flex;gap:18px;width:560px;font-family:var(--font-mono)}
+.l19-pane{position:relative;flex:1;min-height:246px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px 38px}
+.l19-ag{border-color:oklch(0.66 0.13 208)}
+.l19-ph{display:block;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA;margin-bottom:10px;text-transform:uppercase}
+.l19-msg{display:block;font-size:11.5px;line-height:1.45;border-radius:10px;padding:7px 10px;margin-bottom:8px;max-width:92%}
+.l19-msg.me{color:#06212A;background:#46c7cf;font-weight:500;margin-left:auto;opacity:0;animation:l19me 13s infinite}
+.l19-msg.ai{color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;opacity:0;animation:l19ai 13s infinite}
+@keyframes l19me{0%,2%{opacity:0}6%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19ai{0%,12%{opacity:0}16%,96%{opacity:1}100%{opacity:0}}
+.l19-idle{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;color:#8B94B3;border:1.5px dashed #44517A;border-radius:999px;padding:5px 11px;opacity:0;animation:l19idle 13s infinite}
+@keyframes l19idle{0%,22%{opacity:0}26%,96%{opacity:1}100%{opacity:0}}
+.l19-idle i{width:4px;height:4px;border-radius:50%;background:#8B94B3;animation:l19dot 1.4s ease-in-out infinite}
+.l19-idle i:nth-child(2){animation-delay:.25s}.l19-idle i:nth-child(3){animation-delay:.5s}
+@keyframes l19dot{0%,100%{opacity:.3}50%{opacity:1}}
+.l19-goal{display:block;font-size:11.5px;font-weight:600;color:#06241f;background:#7FD0A8;border-radius:9px;padding:6px 9px;margin-bottom:9px}
+.l19-step{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;margin-bottom:7px}
+.l19-step b{font-size:10px;color:#B9C2DA;border:1px solid #44517A;border-radius:6px;padding:1px 6px;font-weight:600}
+.l19-step i{margin-left:auto;font-style:normal;color:#7FD0A8;opacity:0}
+.l19-step.s1{animation:l19s1 13s infinite}.l19-step.s1 i{animation:l19i1 13s infinite}
+.l19-step.s2{animation:l19s2 13s infinite}.l19-step.s2 i{animation:l19i2 13s infinite}
+.l19-step.s3{animation:l19s3 13s infinite}.l19-step.s3 i{animation:l19i3 13s infinite}
+.l19-step.s4{animation:l19s4 13s infinite}.l19-step.s4 i{animation:l19i4 13s infinite}
+@keyframes l19s1{0%,8%{color:#5D6880;border-color:#232C44}12%,24%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}28%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s2{0%,26%{color:#5D6880;border-color:#232C44}30%,42%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}46%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s3{0%,44%{color:#5D6880;border-color:#232C44}48%,60%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}64%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19s4{0%,62%{color:#5D6880;border-color:#232C44}66%,78%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}82%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
+@keyframes l19i1{0%,20%{opacity:0}24%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i2{0%,38%{opacity:0}42%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i3{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
+@keyframes l19i4{0%,74%{opacity:0}78%,96%{opacity:1}100%{opacity:0}}
+.l19-sum{position:absolute;left:13px;right:13px;bottom:10px;font-size:10.5px;line-height:1.4;color:#8B94B3}
+.l19-done{color:#7FD0A8;opacity:0;animation:l19done 13s infinite}
+@keyframes l19done{0%,80%{opacity:0}85%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l19-msg.me,.l19-msg.ai,.l19-idle,.l19-idle i,.l19-step,.l19-step i,.l19-done{animation:none}
+.l19-msg.me,.l19-msg.ai,.l19-idle,.l19-step i,.l19-done{opacity:1}
+.l19-step{color:#B9C2DA}}
 </style>
 
 

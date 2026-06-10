@@ -18,42 +18,61 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 
 Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti hakee kulloinkin tarvitsemansa</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:24px;padding:16px 22px">
-  <div class="l21-store"><div class="l21-h">PITKÄKESTOINEN MUISTI</div>
-    <div class="l21-grid"><span>tilaus #12</span><span class="g g1">asiakkaan toive</span><span class="g g2">hinnasto</span><span>aiempi chat</span><span class="g g3">ohje</span><span class="g g4">palaute</span></div></div>
-  <div class="l21-arr">haku →</div>
-  <div class="l21-work"><div class="l21-h">TYÖMUISTI</div>
-    <div class="l21-slots"><span class="l21-old">nykyinen tehtävä</span>
-      <span class="l21-in"><span class="i i1">asiakkaan toive</span><span class="i i2">hinnasto</span><span class="i i3">ohje</span><span class="i i4">palaute</span></span></div>
-    <div class="l21-cap">rajallinen tila</div></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// työmuisti on pieni — agentti hakee vain sen, mitä vaihe vaatii</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l21-wrap">
+    <div class="l21-phase"><span class="l21-pp p1">vaihe 1/3 · laadi tarjous → tarvitaan hinnasto</span><span class="l21-pp p2">vaihe 2/3 · sovi asennus → tarvitaan ohje</span><span class="l21-pp p3">vaihe 3/3 · jälkihoito → tarvitaan palaute</span></div>
+    <div class="l21-shelf"><span class="l21-sh">PITKÄKESTOINEN MUISTI</span>
+      <span class="l21-card k0">asiakkaan toive</span>
+      <span class="l21-card k1">hinnasto</span>
+      <span class="l21-card k2">asennusohje</span>
+      <span class="l21-card k3">aiempi palaute</span>
+    </div>
+    <i class="l21-fly f1"></i><i class="l21-fly f2"></i><i class="l21-fly f3"></i>
+    <div class="l21-agent">AGENTTI<div class="l21-slot"><span class="l21-sl">TYÖMUISTI · 1 paikka</span><span class="l21-in i1">hinnasto</span><span class="l21-in i2">asennusohje</span><span class="l21-in i3">aiempi palaute</span></div></div>
+  </div>
 </div>
-<figcaption class="ai-demo__cap">Agentin työmuisti on pieni eikä pidä kaikkea mielessä. Se hakee pitkäkestoisesta muistista kulloinkin sen palasen, jota tehtävä juuri nyt vaatii — eri vaiheessa eri tiedon: toiveen, hinnaston, ohjeen tai palautteen.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentin työmuisti ei pidä kaikkea mielessä — se on pieni ja kallis. Siksi agentti hakee pitkäkestoisesta muistista kulloinkin vain sen palasen, jota tehtävän vaihe vaatii: nyt hinnaston, kohta ohjeen, lopuksi palautteen.</figcaption></figure>
 <style>
-.l21-store,.l21-work{border:1.5px solid #3A4560;border-radius:9px;background:#11182A;padding:12px}
-.l21-h{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:#B9C2DA;margin-bottom:9px}
-.l21-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;width:220px}
-.l21-grid span{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;background:#1E2740;border:1.5px solid #3A4560;border-radius:6px;padding:6px;text-align:center}
-.g1{animation:l21g1 16s ease-out infinite}.g2{animation:l21g2 16s ease-out infinite}.g3{animation:l21g3 16s ease-out infinite}.g4{animation:l21g4 16s ease-out infinite}
-@keyframes l21g1{0%,3%{color:#B9C2DA;border-color:#3A4560}9%,22%{color:#FFF;border-color:oklch(0.66 0.15 264);background:#1b2a4d}28%,100%{color:#B9C2DA;border-color:#3A4560}}
-@keyframes l21g2{0%,28%{color:#B9C2DA;border-color:#3A4560}34%,47%{color:#FFF;border-color:oklch(0.66 0.15 305);background:#241b4d}53%,100%{color:#B9C2DA}}
-@keyframes l21g3{0%,53%{color:#B9C2DA;border-color:#3A4560}59%,72%{color:#FFF;border-color:oklch(0.66 0.13 208);background:#10303a}78%,100%{color:#B9C2DA}}
-@keyframes l21g4{0%,78%{color:#B9C2DA;border-color:#3A4560}84%,97%{color:#FFF;border-color:#7FD0A8;background:#143a2c}100%{color:#B9C2DA}}
-.l21-arr{font-family:var(--font-mono);font-size:12px;color:oklch(0.66 0.15 264)}
-.l21-slots{display:flex;flex-direction:column;gap:6px;width:130px}
-.l21-old{font-family:var(--font-mono);font-size:11px;color:#EAEEF8;background:#1E2740;border:1.5px solid #3A4560;border-radius:6px;padding:7px;text-align:center}
-.l21-in{position:relative;height:30px}
-.i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:6px;font-family:var(--font-mono);font-size:11px;color:#0B0F1A;opacity:0}
-.i1{background:oklch(0.66 0.15 264);animation:l21i1 16s ease-out infinite}
-.i2{background:oklch(0.66 0.15 305);animation:l21i2 16s ease-out infinite}
-.i3{background:oklch(0.66 0.13 208);animation:l21i3 16s ease-out infinite}
-.i4{background:#7FD0A8;animation:l21i4 16s ease-out infinite}
-@keyframes l21i1{0%,9%{opacity:0}13%,24%{opacity:1}28%,100%{opacity:0}}
-@keyframes l21i2{0%,34%{opacity:0}38%,49%{opacity:1}53%,100%{opacity:0}}
-@keyframes l21i3{0%,59%{opacity:0}63%,74%{opacity:1}78%,100%{opacity:0}}
-@keyframes l21i4{0%,84%{opacity:0}88%,99%{opacity:1}100%{opacity:0}}
-.l21-cap{font-family:var(--font-mono);font-size:11px;color:#B9C2DA;margin-top:8px;text-align:center}
-@media (prefers-reduced-motion:reduce){.g1,.g2,.g3,.g4,.i1,.i2,.i3,.i4{animation:none}.g1{color:#FFF;border-color:oklch(0.66 0.15 264)}.i1{opacity:1}}
+.l21-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l21-phase{position:absolute;left:50%;transform:translateX(-50%);top:0;width:440px;height:32px}
+.l21-pp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:2px 10px;opacity:0}
+.l21-pp.p1{animation:l21p1 13.5s infinite}
+.l21-pp.p2{animation:l21p2 13.5s infinite}
+.l21-pp.p3{animation:l21p3 13.5s infinite}
+@keyframes l21p1{0%,2%{opacity:0}5%,29%{opacity:1}33%,100%{opacity:0}}
+@keyframes l21p2{0%,35%{opacity:0}38%,62%{opacity:1}66%,100%{opacity:0}}
+@keyframes l21p3{0%,68%{opacity:0}71%,95%{opacity:1}99%,100%{opacity:0}}
+.l21-shelf{position:absolute;left:0;top:54px;width:218px;background:#11182A;border:1.5px solid #2B3552;border-radius:13px;padding:11px 13px 9px}
+.l21-sh{display:block;font-size:10px;letter-spacing:.11em;color:#B9C2DA;margin-bottom:9px}
+.l21-card{display:block;font-size:11.5px;color:#B9C2DA;background:#0E1422;border:1.5px solid #2B3552;border-radius:8px;padding:7px 10px;margin-bottom:7px}
+.l21-card.k1{animation:l21k1 13.5s infinite}
+.l21-card.k2{animation:l21k2 13.5s infinite}
+.l21-card.k3{animation:l21k3 13.5s infinite}
+@keyframes l21k1{0%,5%,33%,100%{color:#B9C2DA;border-color:#2B3552}9%,29%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
+@keyframes l21k2{0%,38%,66%,100%{color:#B9C2DA;border-color:#2B3552}42%,62%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
+@keyframes l21k3{0%,71%,99%,100%{color:#B9C2DA;border-color:#2B3552}75%,95%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
+.l21-fly{position:absolute;left:222px;width:10px;height:10px;border-radius:3px;background:oklch(0.72 0.13 208);opacity:0}
+.l21-fly.f1{top:112px;animation:l21f1 13.5s infinite}
+.l21-fly.f2{top:150px;animation:l21f2 13.5s infinite}
+.l21-fly.f3{top:188px;animation:l21f3 13.5s infinite}
+@keyframes l21f1{0%,9%{opacity:0;transform:translate(0,0)}11%{opacity:1}16%{opacity:1;transform:translate(118px,40px)}18%,100%{opacity:0;transform:translate(118px,40px)}}
+@keyframes l21f2{0%,42%{opacity:0;transform:translate(0,0)}44%{opacity:1}49%{opacity:1;transform:translate(118px,2px)}51%,100%{opacity:0;transform:translate(118px,2px)}}
+@keyframes l21f3{0%,75%{opacity:0;transform:translate(0,0)}77%{opacity:1}82%{opacity:1;transform:translate(118px,-36px)}84%,100%{opacity:0;transform:translate(118px,-36px)}}
+.l21-agent{position:absolute;right:0;top:74px;width:200px;text-align:center;font-size:12.5px;letter-spacing:.13em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:13px;padding:13px 12px 12px}
+.l21-slot{position:relative;margin-top:11px;height:64px;border:1.5px dashed #44517A;border-radius:10px;background:#0B0F1A}
+.l21-sl{position:absolute;left:0;right:0;top:7px;font-size:9px;letter-spacing:.08em;color:#7E88A8}
+.l21-in{position:absolute;left:14px;right:14px;top:30px;font-size:11.5px;letter-spacing:.02em;color:#06241f;background:#7FD0A8;border-radius:8px;padding:5px 6px;font-weight:600;opacity:0}
+.l21-in.i1{animation:l21i1 13.5s infinite}
+.l21-in.i2{animation:l21i2 13.5s infinite}
+.l21-in.i3{animation:l21i3 13.5s infinite}
+@keyframes l21i1{0%,15%{opacity:0;transform:scale(.85)}19%,31%{opacity:1;transform:scale(1)}35%,100%{opacity:0}}
+@keyframes l21i2{0%,48%{opacity:0;transform:scale(.85)}52%,64%{opacity:1;transform:scale(1)}68%,100%{opacity:0}}
+@keyframes l21i3{0%,81%{opacity:0;transform:scale(.85)}85%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l21-pp,.l21-card,.l21-fly,.l21-in{animation:none}
+.l21-pp.p1,.l21-in.i1{opacity:1}
+.l21-card.k1{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
 </style>
 
 

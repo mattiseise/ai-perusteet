@@ -49,47 +49,54 @@ Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen s
 
 > **Pysähdy hetkeksi:** Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ennusta seuraava token — sana kerrallaan</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:20px 28px">
-  <div class="l03-prompt">Suomen pääkaupunki on<span class="l03-w1"> Helsinki</span><span class="l03-w2"> ja</span><span class="l03-car">▌</span></div>
-  <div class="l03-r l03-r1">
-    <div class="l03-bar l03-top"><span class="l03-l">Helsinki</span><span class="l03-tr"><span class="l03-f" style="--p:81%;--c:oklch(0.72 0.15 200)"></span></span><span class="l03-p">0.81</span></div>
-    <div class="l03-bar"><span class="l03-l">Turku</span><span class="l03-tr"><span class="l03-f" style="--p:9%;--c:oklch(0.64 0.16 30)"></span></span><span class="l03-p">0.09</span></div>
-    <div class="l03-bar"><span class="l03-l">Tampere</span><span class="l03-tr"><span class="l03-f" style="--p:6%;--c:oklch(0.64 0.16 30)"></span></span><span class="l03-p">0.06</span></div>
-  </div>
-  <div class="l03-r l03-r2">
-    <div class="l03-bar l03-top"><span class="l03-l">ja</span><span class="l03-tr"><span class="l03-f" style="--p:52%;--c:oklch(0.72 0.15 200)"></span></span><span class="l03-p">0.52</span></div>
-    <div class="l03-bar"><span class="l03-l">on</span><span class="l03-tr"><span class="l03-f" style="--p:24%;--c:oklch(0.78 0.13 90)"></span></span><span class="l03-p">0.24</span></div>
-    <div class="l03-bar"><span class="l03-l">.</span><span class="l03-tr"><span class="l03-f" style="--p:14%;--c:oklch(0.64 0.16 30)"></span></span><span class="l03-p">0.14</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta → valitse → liitä → toista — sana kerrallaan</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
+  <div class="l03-wrap">
+    <div class="l03-sent"><span class="l03-fixed">Suomen pääkaupunki</span><span class="l03-tok t1"> on</span><span class="l03-tok t2"> Helsinki</span><span class="l03-tok t3">.</span><i class="l03-caret"></i></div>
+    <span class="l03-ph">malli laskee todennäköisyyden jokaiselle jatkolle:</span>
+    <div class="l03-cands l03-r1"><div class="l03-c top"><span>on</span><div class="l03-cb"><i style="width:90%"></i></div><b>91 %</b></div><div class="l03-c"><span>sijaitsee</span><div class="l03-cb"><i style="width:6%"></i></div><b>4 %</b></div><div class="l03-c"><span>oli</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div></div>
+    <div class="l03-cands l03-r2"><div class="l03-c top"><span>Helsinki</span><div class="l03-cb"><i style="width:93%"></i></div><b>94 %</b></div><div class="l03-c"><span>Tukholma</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div><div class="l03-c"><span>Turku</span><div class="l03-cb"><i style="width:3%"></i></div><b>1 %</b></div></div>
+    <div class="l03-cands l03-r3"><div class="l03-c top"><span>.</span><div class="l03-cb"><i style="width:86%"></i></div><b>87 %</b></div><div class="l03-c"><span>,&nbsp;ja</span><div class="l03-cb"><i style="width:9%"></i></div><b>8 %</b></div><div class="l03-c"><span>!</span><div class="l03-cb"><i style="width:4%"></i></div><b>3 %</b></div></div>
+    <span class="l03-loop">…valittu token liitetään tekstiin, ja laskenta alkaa alusta</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille (vihreä = todennäköinen, punainen = epätodennäköinen), valitsee todennäköisimmän, syöttää sen takaisin ja laskee jakauman uudelleen seuraavalle sanalle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, liittää sen tekstiin — ja laskee sitten kaiken uudelleen. Vastaus syntyy pala kerrallaan.</figcaption></figure>
 <style>
-.l03-prompt{font-family:var(--font-mono);font-size:15px;color:#EAEEF8}
-.l03-w1{color:oklch(0.72 0.15 200);font-weight:500;opacity:0;animation:l03w1 9s cubic-bezier(.45,0,.15,1) infinite}
-.l03-w2{color:oklch(0.78 0.13 90);font-weight:500;opacity:0;animation:l03w2 9s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l03w1{0%,40%{opacity:0}48%,100%{opacity:1}}
-@keyframes l03w2{0%,82%{opacity:0}90%,100%{opacity:1}}
-.l03-car{color:#B9C2DA;animation:l03blink 1.1s steps(1) infinite}
-@keyframes l03blink{50%{opacity:0}}
-.l03-r{display:flex;flex-direction:column;gap:8px}
-.l03-r2{position:absolute;visibility:hidden}
-.l03-bar{display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:13px;color:#B9C2DA}
-.l03-l{width:72px;text-align:right}
-.l03-top .l03-l{color:#FFFFFF;font-weight:500}
-.l03-tr{flex:1;height:18px;background:#11182A;border:1.5px solid #3A4560;border-radius:5px;overflow:hidden}
-.l03-top .l03-tr{border-color:#FFFFFF}
-.l03-f{display:block;height:100%;width:0;background:var(--c)}
-.l03-r1 .l03-f{animation:l03g1 9s cubic-bezier(.45,0,.15,1) infinite}
-.l03-r2 .l03-f{animation:l03g2 9s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l03g1{0%{width:0}28%{width:var(--p)}46%{width:var(--p)}54%,100%{width:0}}
-@keyframes l03g2{0%,54%{width:0}74%{width:var(--p)}88%{width:var(--p)}100%{width:0}}
-.l03-p{width:34px;color:#EAEEF8}
-.l03-r1{animation:l03s1 9s steps(1) infinite}
-.l03-r2{animation:l03s2 9s steps(1) infinite}
-@keyframes l03s1{0%,53%{visibility:visible}54%,100%{visibility:hidden}}
-@keyframes l03s2{0%,53%{visibility:hidden}54%,100%{visibility:visible;position:static}}
-@media (prefers-reduced-motion:reduce){.l03-w1,.l03-r1 .l03-f{animation:none}.l03-w1{opacity:1}.l03-r1 .l03-f{width:var(--p)}.l03-r2,.l03-w2{display:none}}
+.l03-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
+.l03-sent{position:absolute;left:0;right:0;top:0;font-size:15px;font-weight:500;color:#FFFFFF;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;white-space:nowrap}
+.l03-tok{color:#7FD0A8;opacity:0}
+.l03-tok.t1{animation:l03t1 13s infinite}
+.l03-tok.t2{animation:l03t2 13s infinite}
+.l03-tok.t3{animation:l03t3 13s infinite}
+@keyframes l03t1{0%,24%{opacity:0}27%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t2{0%,56%{opacity:0}59%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t3{0%,88%{opacity:0}91%,98%{opacity:1}100%{opacity:0}}
+.l03-caret{display:inline-block;width:2px;height:16px;background:#46c7cf;margin-left:3px;vertical-align:-2px;animation:l03caret 1.1s steps(2) infinite}
+@keyframes l03caret{to{visibility:hidden}}
+.l03-ph{position:absolute;left:2px;top:62px;font-size:11px;letter-spacing:.04em;color:#8B94B3}
+.l03-cands{position:absolute;left:0;top:84px;width:560px;display:flex;gap:12px;opacity:0}
+.l03-r1{animation:l03r1 13s infinite}
+.l03-r2{animation:l03r2 13s infinite}
+.l03-r3{animation:l03r3 13s infinite}
+@keyframes l03r1{0%,1%{opacity:0}4%,22%{opacity:1}26%,100%{opacity:0}}
+@keyframes l03r2{0%,33%{opacity:0}36%,54%{opacity:1}58%,100%{opacity:0}}
+@keyframes l03r3{0%,65%{opacity:0}68%,86%{opacity:1}90%,100%{opacity:0}}
+.l03-c{flex:1;background:#141B2D;border:1.5px solid #2B3552;border-radius:11px;padding:9px 11px}
+.l03-c span{display:block;font-size:13px;color:#EAEEF8;margin-bottom:6px}
+.l03-c b{font-size:11px;color:#B9C2DA;font-weight:600}
+.l03-c.top{border-color:#7FD0A8;background:#13251C}
+.l03-c.top span{color:#FFFFFF}
+.l03-c.top b{color:#7FD0A8}
+.l03-cb{height:7px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden;margin-bottom:5px}
+.l03-cb i{display:block;height:100%;border-radius:99px;background:oklch(0.66 0.15 264)}
+.l03-c.top .l03-cb i{background:#7FD0A8}
+.l03-loop{position:absolute;left:0;right:0;top:196px;font-size:11px;line-height:1.4;color:#46c7cf;opacity:0;animation:l03loop 13s infinite}
+@keyframes l03loop{0%,8%{opacity:0}12%,96%{opacity:.95}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l03-tok,.l03-cands,.l03-caret,.l03-loop{animation:none}
+.l03-tok{opacity:1}
+.l03-r3{opacity:1}
+.l03-loop{opacity:1}}
 </style>
 
 ## Koulutusdata — se, mistä malli oppii

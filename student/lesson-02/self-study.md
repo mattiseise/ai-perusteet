@@ -82,34 +82,51 @@ Ammattilaisen näkökulmasta ASI olisi toteutuessaan mullistava kehitysaskel. Se
 
 > **Pysähdy hetkeksi:** Jos tekoäly olisi ihmistä parempi lähes kaikessa ajattelutyössä, kuka päättäisi, mihin sitä käytetään? Millaisia sääntöjä, valvontaa ja vastuuta tällainen järjestelmä vaatisi?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// olemme tässä — ja raja siirtyy</span>
-<div class="ai-demo__stage" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 24px 40px">
-  <div class="l02-track">
-    <div class="l02-step"><span class="l02-dot"></span>Kapea</div>
-    <div class="l02-step l02-here"><span class="l02-dot"></span>Generatiivinen<span class="l02-mark">▲<br>OLEMME TÄSSÄ</span></div>
-    <div class="l02-step l02-fut"><span class="l02-dot"></span>AGI</div>
-    <div class="l02-step l02-fut"><span class="l02-dot"></span>ASI</div>
-    <span class="l02-line"><span class="l02-lbl1">raja: "oikea äly"?</span><span class="l02-lbl2">raja: "superäly"?</span></span>
+<figure class="ai-demo"><span class="ai-demo__tag">// olemme tässä — ja "oikean älyn" raja siirtyy aina kauemmas</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l02-wrap">
+    <div class="l02-bar"><div class="l02-fill"></div></div>
+    <span class="l02-stop" style="left:0">KAPEA AI<i>arjessa nyt</i></span>
+    <span class="l02-stop" style="left:150px">GENERATIIVINEN<i>luo sisältöä</i></span>
+    <span class="l02-stop l02-dash" style="left:320px">AGI<i>ei olemassa</i></span>
+    <span class="l02-stop l02-dash" style="left:470px">ASI<i>spekulaatio</i></span>
+    <span class="l02-here">▲ olemme tässä</span>
+    <div class="l02-post"><span class="l02-flag">⚑ ”oikea äly”</span></div>
+    <div class="l02-feats"><span class="l02-f f1">shakki ✓</span><span class="l02-f f2">käännös ✓</span><span class="l02-f f3">essee ✓</span><span class="l02-f f4">koodi ✓</span></div>
+    <span class="l02-note">aina kun tekoäly oppii taidon, rima siirtyy → ”ei se vielä ollut oikeaa älyä”</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista — siinä olemme nyt. Raja "oikeaan älyyn" (AGI) ja edelleen "superälyyn" (ASI) ei ole kiinteä: se siirtyy eteenpäin aina kun tekoäly oppii uutta.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kaikki nykyinen tekoäly on kapeaa tai generatiivista — siinä olemme nyt. Raja ”oikeaan älyyn” (AGI) ja edelleen yliälyyn (ASI) ei ole kiinteä: aina kun tekoäly oppii uuden taidon, maalitolppa siirtyy kauemmas.</figcaption></figure>
 <style>
-.l02-track{position:relative;display:flex;align-items:center}
-.l02-step{position:relative;font-family:var(--font-mono);font-size:13px;color:#EAEEF8;padding:10px 16px;border:1.5px solid #3A4560;border-radius:8px;background:#1E2740;margin:0 18px;display:flex;align-items:center;gap:8px}
-.l02-track .l02-step:not(:last-child)::after{content:"→";position:absolute;right:-22px;color:#5A688C;font-size:14px}
-.l02-dot{width:8px;height:8px;border-radius:50%;background:oklch(0.66 0.15 264)}
-.l02-here{border-color:oklch(0.66 0.15 264);box-shadow:0 0 0 3px rgba(110,130,255,.15)}
-.l02-mark{position:absolute;left:50%;top:46px;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;line-height:1.4;letter-spacing:.08em;color:oklch(0.66 0.15 264);white-space:nowrap;text-align:center;animation:l02pulse 2.4s ease-in-out infinite}
-@keyframes l02pulse{0%,100%{opacity:.65}50%{opacity:1}}
-.l02-fut{color:#7A839E;border-style:dashed;background:transparent}
-.l02-fut .l02-dot{background:#7A839E}
-.l02-line{position:absolute;top:-14px;bottom:-14px;width:0;border-left:3px dashed oklch(0.66 0.13 208);left:50%;animation:l02move 8s cubic-bezier(.45,0,.15,1) infinite}
-.l02-lbl1,.l02-lbl2{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:11px;color:oklch(0.66 0.13 208);white-space:nowrap;background:#0B0F1A;padding:0 5px}
-.l02-lbl1{animation:l02l1 8s steps(1) infinite}.l02-lbl2{animation:l02l2 8s steps(1) infinite}
-@keyframes l02move{0%,18%{left:50%}40%,60%{left:72%}80%,100%{left:90%}}
-@keyframes l02l1{0%,68%{opacity:1}69%,100%{opacity:0}}
-@keyframes l02l2{0%,68%{opacity:0}69%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.l02-line,.l02-mark,.l02-lbl1,.l02-lbl2{animation:none}.l02-line{left:90%}.l02-lbl1{opacity:0}.l02-lbl2{opacity:1}}
+.l02-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l02-bar{position:absolute;left:0;right:0;top:96px;height:10px;border-radius:99px;background:#0E1422;border:1px solid #232C44;overflow:hidden}
+.l02-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#46c7cf);animation:l02fill 12s infinite}
+@keyframes l02fill{0%{width:18%}22%{width:34%}24%,46%{width:34%}48%{width:46%}50%,70%{width:46%}72%{width:56%}74%,97%{width:56%}100%{width:18%}}
+.l02-stop{position:absolute;top:118px;width:140px;font-size:11.5px;font-weight:600;letter-spacing:.08em;color:#FFFFFF}
+.l02-stop i{display:block;font-style:normal;font-weight:400;font-size:10px;letter-spacing:.03em;color:#8B94B3;margin-top:2px}
+.l02-dash{color:#B9C2DA}
+.l02-dash i{color:#7E88A8}
+.l02-here{position:absolute;left:74px;top:66px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#46c7cf;animation:l02here 2.4s ease-in-out infinite}
+@keyframes l02here{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+.l02-post{position:absolute;top:58px;left:0;animation:l02post 12s infinite}
+@keyframes l02post{0%,20%{transform:translateX(196px)}26%,44%{transform:translateX(285px)}50%,68%{transform:translateX(380px)}74%,97%{transform:translateX(470px)}100%{transform:translateX(196px)}}
+.l02-flag{font-size:11px;letter-spacing:.04em;color:#0B0F1A;background:#F7C873;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.l02-feats{position:absolute;left:0;top:170px;display:flex;gap:9px}
+.l02-f{font-size:11px;color:#06241a;background:#7FD0A8;border-radius:999px;padding:3px 9px;opacity:0}
+.l02-f.f1{animation:l02f1 12s infinite}
+.l02-f.f2{animation:l02f2 12s infinite}
+.l02-f.f3{animation:l02f3 12s infinite}
+.l02-f.f4{animation:l02f4 12s infinite}
+@keyframes l02f1{0%,2%{opacity:0;transform:scale(1.2)}6%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@keyframes l02f2{0%,18%{opacity:0;transform:scale(1.2)}22%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@keyframes l02f3{0%,44%{opacity:0;transform:scale(1.2)}48%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@keyframes l02f4{0%,68%{opacity:0;transform:scale(1.2)}72%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
+.l02-note{position:absolute;left:0;right:0;top:208px;font-size:11px;line-height:1.4;color:#F0A38C}
+@media (prefers-reduced-motion:reduce){
+.l02-fill,.l02-here,.l02-post,.l02-f{animation:none}
+.l02-fill{width:56%}
+.l02-post{transform:translateX(470px)}
+.l02-f{opacity:1}}
 </style>
 
 ## Yhteenveto

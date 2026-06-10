@@ -62,41 +62,62 @@ Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi va
 
 Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on **orkestraattori** eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// agentti valitsee työkalun, kysyy ja saa vastauksen</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 22px">
-  <div class="l22-box">AGENTTI</div>
-  <div class="l22-mid">
-    <div class="l22-tool"><span class="t t1">sää-API</span><span class="t t2">kalenteri-API</span><span class="t t3">muistutus-API</span><span class="t t4">sähköposti-API</span><span class="t t5">valuutta-API</span></div>
-    <div class="l22-pipe">
-      <span class="l22-out"><span class="q q1">hae: sää Helsinki</span><span class="q q2">hae seuraava tapaaminen</span><span class="q q3">luo muistutus</span><span class="q q4">etsi viimeisin lasku</span><span class="q q5">muunna 100 €</span></span>
-      <span class="l22-back"><span class="r r1">5 °C, poutaa</span><span class="r r2">Tiimipalaveri klo 13.00, Teams</span><span class="r r3">Muistutus luotu huom. klo 9</span><span class="r r4">DNA 42,90 €, eräpäivä 15.6.</span><span class="r r5">100 € = 108,50 $</span></span>
+<figure class="ai-demo"><span class="ai-demo__tag">// agentti ei tiedä itse — se valitsee työkalun, kysyy ja saa vastauksen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l22-wrap">
+    <div class="l22-q"><span class="l22-qq q1">Sataako huomenna Turussa?</span><span class="l22-qq q2">Paljonko 100 € on puntina?</span></div>
+    <div class="l22-agent">AGENTTI<span class="l22-think">valitsee työkalun…</span></div>
+    <div class="l22-tools">
+      <span class="l22-t t-saa">sää</span>
+      <span class="l22-t">kalenteri</span>
+      <span class="l22-t">sähköposti</span>
+      <span class="l22-t t-val">valuutta</span>
+      <span class="l22-t">muistutus</span>
     </div>
+    <i class="l22-req r1"></i><i class="l22-req r2"></i>
+    <span class="l22-res e1">+2 °C · sadetta 80 %</span>
+    <span class="l22-res e2">kurssi: 100 € ≈ 84 £</span>
+    <div class="l22-ans"><span class="l22-aa a1">”Huomenna sataa — varaa sateenvarjo.”</span><span class="l22-aa a2">”100 euroa on noin 84 puntaa.”</span></div>
   </div>
-  <div class="l22-box l22-w">TYÖKALUT</div>
 </div>
-<figcaption class="ai-demo__cap">Agentti ei tiedä kaikkea itse. Se valitsee tarpeen mukaan oikean työkalun — sää, kalenteri, muistutus, sähköposti, valuutta — lähettää pyynnön ja saa vasta sitten tuloksen takaisin.</figcaption></figure>
+<figcaption class="ai-demo__cap">Agentti ei tiedä säätä eikä valuuttakurssia itse. Se tunnistaa, mitä kysymys vaatii, valitsee oikean työkalun, lähettää pyynnön ja muotoilee vastauksen vasta työkalun palauttamasta tuloksesta.</figcaption></figure>
 <style>
-.l22-box{font-family:var(--font-mono);font-size:13px;color:#EAEEF8;background:#11182A;border:1.5px solid #3A4560;border-radius:9px;padding:16px 12px;text-align:center}
-.l22-w{border-color:oklch(0.66 0.13 208)}
-.l22-mid{flex:1;max-width:300px;display:flex;flex-direction:column;gap:8px;text-align:center}
-.l22-tool{position:relative;height:18px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em}
-.t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;color:oklch(0.66 0.13 208)}
-.t1{animation:l22T1 16s steps(1) infinite}.t2{animation:l22T2 16s steps(1) infinite}.t3{animation:l22T3 16s steps(1) infinite}.t4{animation:l22T4 16s steps(1) infinite}.t5{animation:l22T5 16s steps(1) infinite}
-@keyframes l22T1{0%,18%{opacity:1}19%,100%{opacity:0}}
-@keyframes l22T2{0%,19%{opacity:0}20%,38%{opacity:1}39%,100%{opacity:0}}
-@keyframes l22T3{0%,39%{opacity:0}40%,58%{opacity:1}59%,100%{opacity:0}}
-@keyframes l22T4{0%,59%{opacity:0}60%,78%{opacity:1}79%,100%{opacity:0}}
-@keyframes l22T5{0%,79%{opacity:0}80%,99%{opacity:1}100%{opacity:0}}
-.l22-pipe{position:relative;height:40px}
-.l22-pipe::before{content:"";position:absolute;top:20px;left:0;right:0;height:1.5px;background:#3A4560}
-.l22-out,.l22-back{position:absolute;left:0;right:0;font-family:var(--font-mono);font-size:12.5px;white-space:nowrap;opacity:0}
-.l22-out{top:-1px;color:oklch(0.66 0.15 264);animation:l22out 3.2s cubic-bezier(.45,0,.15,1) infinite}
-.l22-back{bottom:-1px;color:oklch(0.66 0.13 208);animation:l22back 3.2s cubic-bezier(.45,0,.15,1) infinite}
-@keyframes l22out{0%{opacity:0;transform:translateX(-40px)}10%,38%{opacity:1;transform:translateX(0)}48%,100%{opacity:0;transform:translateX(40px)}}
-@keyframes l22back{0%,50%{opacity:0;transform:translateX(40px)}62%,90%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(-40px)}}
-.q,.r{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;opacity:0}
-.q1,.r1{animation:l22T1 16s steps(1) infinite}.q2,.r2{animation:l22T2 16s steps(1) infinite}.q3,.r3{animation:l22T3 16s steps(1) infinite}.q4,.r4{animation:l22T4 16s steps(1) infinite}.q5,.r5{animation:l22T5 16s steps(1) infinite}
-@media (prefers-reduced-motion:reduce){.t,.q,.r,.l22-out,.l22-back{animation:none}.t1,.q1{opacity:1}.l22-out{opacity:1;transform:none}}
+.l22-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l22-q{position:absolute;left:0;top:0;width:204px;height:52px}
+.l22-qq{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;font-weight:500;line-height:1.4;color:#06212A;background:#46c7cf;border-radius:11px;padding:6px 11px;opacity:0}
+.l22-qq.q1{animation:l22q1 14s infinite}
+.l22-qq.q2{animation:l22q2 14s infinite}
+@keyframes l22q1{0%,2%{opacity:0}5%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes l22q2{0%,52%{opacity:0}55%,94%{opacity:1}98%,100%{opacity:0}}
+.l22-agent{position:absolute;left:0;top:96px;width:204px;text-align:center;font-size:12.5px;letter-spacing:.13em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:13px;padding:14px 10px}
+.l22-think{display:block;margin-top:6px;font-size:10px;letter-spacing:.03em;color:#8B94B3;animation:l22think 7s ease-in-out infinite}
+@keyframes l22think{0%,8%{opacity:0}16%,38%{opacity:1}46%,100%{opacity:0}}
+.l22-tools{position:absolute;right:0;top:14px;display:flex;flex-direction:column;gap:8px;width:150px}
+.l22-t{font-size:11.5px;color:#B9C2DA;background:#0E1422;border:1.5px solid #2B3552;border-radius:9px;padding:7px 11px}
+.l22-t.t-saa{animation:l22saa 14s infinite}
+.l22-t.t-val{animation:l22val 14s infinite}
+@keyframes l22saa{0%,10%,46%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}14%,42%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+@keyframes l22val{0%,60%,96%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}64%,92%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+.l22-req{position:absolute;left:208px;width:10px;height:10px;border-radius:50%;background:oklch(0.72 0.13 208);opacity:0}
+.l22-req.r1{top:124px;animation:l22r1 14s infinite}
+.l22-req.r2{top:124px;animation:l22r2 14s infinite}
+@keyframes l22r1{0%,12%{opacity:0;transform:translate(0,0)}14%{opacity:1}19%{opacity:1;transform:translate(196px,-96px)}21%{opacity:0}24%{opacity:1;transform:translate(196px,-96px)}29%{opacity:1;transform:translate(0,0)}31%,100%{opacity:0}}
+@keyframes l22r2{0%,62%{opacity:0;transform:translate(0,0)}64%{opacity:1}69%{opacity:1;transform:translate(196px,32px)}71%{opacity:0}74%{opacity:1;transform:translate(196px,32px)}79%{opacity:1;transform:translate(0,0)}81%,100%{opacity:0}}
+.l22-res{position:absolute;right:160px;font-size:10.5px;white-space:nowrap;color:#0B0F1A;background:#F7C873;border-radius:999px;padding:3px 9px;opacity:0}
+.l22-res.e1{top:18px;animation:l22e1 14s infinite}
+.l22-res.e2{top:148px;animation:l22e2 14s infinite}
+@keyframes l22e1{0%,19%{opacity:0}23%,42%{opacity:1}46%,100%{opacity:0}}
+@keyframes l22e2{0%,69%{opacity:0}73%,92%{opacity:1}96%,100%{opacity:0}}
+.l22-ans{position:absolute;left:0;top:196px;width:340px;height:52px}
+.l22-aa{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #7FD0A8;border-radius:11px;padding:6px 12px;opacity:0}
+.l22-aa.a1{animation:l22a1 14s infinite}
+.l22-aa.a2{animation:l22a2 14s infinite}
+@keyframes l22a1{0%,30%{opacity:0}34%,44%{opacity:1}48%,100%{opacity:0}}
+@keyframes l22a2{0%,80%{opacity:0}84%,96%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l22-qq,.l22-think,.l22-t,.l22-req,.l22-res,.l22-aa{animation:none}
+.l22-qq.q1,.l22-res.e1,.l22-aa.a1{opacity:1}
+.l22-t.t-saa{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
 </style>
 
 
