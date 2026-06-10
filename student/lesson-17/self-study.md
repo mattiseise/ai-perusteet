@@ -77,25 +77,25 @@ Huomaa, että määrittelydokumentissa sisältö on kuvailevassa muodossa, kun t
 .l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
 .l17-blk b{font-size:12px;color:#FFFFFF}
 .l17-blk span{font-size:10.5px;color:#B9C2DA}
-.l17-blk.b1{top:12px;animation:l17b1 12s infinite}
-.l17-blk.b2{top:96px;animation:l17b2 12s infinite}
-.l17-blk.b3{top:180px;animation:l17b3 12s infinite}
+.l17-blk.b1{top:12px;animation:l17b1 18s infinite}
+.l17-blk.b2{top:96px;animation:l17b2 18s infinite}
+.l17-blk.b3{top:180px;animation:l17b3 18s infinite}
 @keyframes l17b1{0%,8%{transform:translateX(0);opacity:1}20%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
 @keyframes l17b2{0%,28%{transform:translateX(0);opacity:1}40%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
 @keyframes l17b3{0%,48%{transform:translateX(0);opacity:1}60%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
-.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 12s infinite}
+.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 18s infinite}
 @keyframes l17morph{0%,30%{opacity:0}36%,60%{opacity:1}66%,100%{opacity:0}}
 .l17-bot{position:absolute;right:0;top:12px;width:268px;min-height:230px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:13px;padding:13px 15px}
 .l17-bhead{display:block;font-size:10.5px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:10px}
 .l17-line{display:block;font-size:11.5px;line-height:1.45;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-left:3px solid oklch(0.72 0.15 305);border-radius:8px;padding:7px 10px;margin-bottom:8px;opacity:0}
 .l17-line b{color:#FFFFFF}
-.l17-line.n1{animation:l17n1 12s infinite}
-.l17-line.n2{animation:l17n2 12s infinite}
-.l17-line.n3{animation:l17n3 12s infinite}
+.l17-line.n1{animation:l17n1 18s infinite}
+.l17-line.n2{animation:l17n2 18s infinite}
+.l17-line.n3{animation:l17n3 18s infinite}
 @keyframes l17n1{0%,17%{opacity:0;transform:translateY(4px)}22%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes l17n2{0%,37%{opacity:0;transform:translateY(4px)}42%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes l17n3{0%,57%{opacity:0;transform:translateY(4px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 12s infinite}
+.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 18s infinite}
 @keyframes l17ready{0%,70%{opacity:0;transform:scale(1.25)}76%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}

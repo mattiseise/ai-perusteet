@@ -66,18 +66,18 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 <figcaption class="ai-demo__cap">ReAct-agentti ei toimi sokkona: se perustelee ensin, toimii sitten ja arvioi tuloksen — ja toistaa silmukkaa, kunnes tieto riittää. Loki näyttää jokaisen vaiheen, joten virheen syntykohta on aina jäljitettävissä.</figcaption></figure>
 <style>
 .l23-wrap{position:relative;width:560px;height:272px;font-family:var(--font-mono)}
-.l23-ring{position:absolute;left:28px;top:62px;width:128px;height:128px;border:2.5px dashed #44517A;border-radius:50%;animation:l23spin 14s linear infinite}
+.l23-ring{position:absolute;left:28px;top:62px;width:128px;height:128px;border:2.5px dashed #44517A;border-radius:50%;animation:l23spin 21s linear infinite}
 @keyframes l23spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.l23-mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:12.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8;animation:l23unspin 14s linear infinite}
+.l23-mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:12.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8;animation:l23unspin 21s linear infinite}
 @keyframes l23unspin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
 .l23-node{position:absolute;font-size:10.5px;letter-spacing:.09em;color:#B9C2DA;background:#11182A;border:2px solid #2B3552;border-radius:999px;padding:5px 11px;z-index:2}
-.l23-node.n-think{left:54px;top:42px;animation:l23think 14s infinite}
-.l23-node.n-act{left:128px;top:158px;animation:l23act 14s infinite}
-.l23-node.n-obs{left:-6px;top:158px;animation:l23obs 14s infinite}
+.l23-node.n-think{left:54px;top:42px;animation:l23think 21s infinite}
+.l23-node.n-act{left:128px;top:158px;animation:l23act 21s infinite}
+.l23-node.n-obs{left:-6px;top:158px;animation:l23obs 21s infinite}
 @keyframes l23think{0%,2%,14%,38%,50%,100%{color:#B9C2DA;background:#11182A;border-color:#2B3552;box-shadow:none}4%,12%,40%,48%{color:#0B0F1A;background:#46c7cf;border-color:#46c7cf;box-shadow:0 0 14px rgba(70,199,207,.6)}}
 @keyframes l23act{0%,14%,26%,50%,62%,100%{color:#B9C2DA;background:#11182A;border-color:#2B3552;box-shadow:none}16%,24%,52%,60%{color:#1d1230;background:#c9b7f1;border-color:#c9b7f1;box-shadow:0 0 14px rgba(201,183,241,.6)}}
 @keyframes l23obs{0%,26%,38%,62%,74%,100%{color:#B9C2DA;background:#11182A;border-color:#2B3552;box-shadow:none}28%,36%,64%,72%{color:#0B0F1A;background:#F7C873;border-color:#F7C873;box-shadow:0 0 14px rgba(247,200,115,.6)}}
-.l23-exit{position:absolute;left:48px;top:228px;font-size:11px;letter-spacing:.08em;color:#06241f;background:#7FD0A8;border-radius:999px;padding:4px 12px;opacity:0;animation:l23exit 14s infinite}
+.l23-exit{position:absolute;left:48px;top:228px;font-size:11px;letter-spacing:.08em;color:#06241f;background:#7FD0A8;border-radius:999px;padding:4px 12px;opacity:0;animation:l23exit 21s infinite}
 @keyframes l23exit{0%,76%{opacity:0;transform:scale(1.25)}81%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
 .l23-log{position:absolute;right:0;top:6px;width:330px;min-height:258px;background:#0E1422;border:1.5px solid #232C44;border-radius:13px;padding:11px 13px}
 .l23-lh{display:block;font-size:9.5px;letter-spacing:.1em;color:#7E88A8;margin-bottom:8px;text-transform:uppercase}
@@ -88,13 +88,13 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 .l23-l.o1 b,.l23-l.o2 b{color:#F7C873}
 .l23-l.done{border-left-color:#7FD0A8}
 .l23-l.done b{color:#7FD0A8}
-.l23-l.t1{animation:l23l1 14s infinite}
-.l23-l.a1{animation:l23l2 14s infinite}
-.l23-l.o1{animation:l23l3 14s infinite}
-.l23-l.t2{animation:l23l4 14s infinite}
-.l23-l.a2{animation:l23l5 14s infinite}
-.l23-l.o2{animation:l23l6 14s infinite}
-.l23-l.done{animation:l23l7 14s infinite}
+.l23-l.t1{animation:l23l1 21s infinite}
+.l23-l.a1{animation:l23l2 21s infinite}
+.l23-l.o1{animation:l23l3 21s infinite}
+.l23-l.t2{animation:l23l4 21s infinite}
+.l23-l.a2{animation:l23l5 21s infinite}
+.l23-l.o2{animation:l23l6 21s infinite}
+.l23-l.done{animation:l23l7 21s infinite}
 @keyframes l23l1{0%,3%{opacity:0;transform:translateX(6px)}6%,96%{opacity:1;transform:translateX(0)}100%{opacity:0}}
 @keyframes l23l2{0%,15%{opacity:0;transform:translateX(6px)}18%,96%{opacity:1;transform:translateX(0)}100%{opacity:0}}
 @keyframes l23l3{0%,27%{opacity:0;transform:translateX(6px)}30%,96%{opacity:1;transform:translateX(0)}100%{opacity:0}}

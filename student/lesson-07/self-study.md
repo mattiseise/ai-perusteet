@@ -34,52 +34,104 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// kokeile itse: kumpi väite on totta? klikkaa korttia</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:344px">
+<figure class="ai-demo"><span class="ai-demo__tag">// testi: malli vastasi kymmenen kertaa yhtä varmasti — löydätkö keksityt?</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:380px">
   <div class="l07-wrap">
-    <input type="radio" name="l07q" id="l07-r0" class="l07-in l07-r0" checked>
-    <input type="radio" name="l07q" id="l07-ra" class="l07-in l07-ra">
-    <input type="radio" name="l07q" id="l07-rb" class="l07-in l07-rb">
-    <span class="l07-ask">Malli vastasi kahteen kysymykseen yhtä itsevarmasti. <b>Klikkaa sitä, jota pidät totena.</b></span>
-    <label for="l07-ra" class="l07-card l07-a"><span class="l07-q">Kuka kirjoitti Tuntemattoman sotilaan?</span><span class="l07-ans">”Tuntemattoman sotilaan kirjoitti Väinö Linna. Romaani ilmestyi vuonna 1954.”</span><span class="l07-st l07-true">✓ totta</span></label>
-    <label for="l07-rb" class="l07-card l07-b"><span class="l07-q">Kuka kirjoitti romaanin Suuri Mahtava?</span><span class="l07-ans">”Romaanin Suuri Mahtava kirjoitti Jane Austen. Teos ilmestyi vuonna 1847.”</span><span class="l07-st l07-fake">✗ keksitty</span></label>
-    <span class="l07-res l07-resa">Oikein — mutta huomaa: et voinut <b>nähdä</b> sitä vastauksesta. Molemmat olivat yhtä varmoja ja sujuvia. Siksi faktat tarkistetaan lähteestä.</span>
-    <span class="l07-res l07-resb">Tämä oli keksitty — Jane Austen ei kirjoittanut tällaista teosta. Se näytti silti täsmälleen yhtä uskottavalta kuin tosi vastaus. Siksi faktat tarkistetaan lähteestä.</span>
-    <label for="l07-r0" class="l07-reset">↺ kokeile uudelleen</label>
+    <input type="radio" name="l07s" id="l07-s1" class="l07-in l07-s1" checked>
+    <input type="radio" name="l07s" id="l07-s2" class="l07-in l07-s2">
+    <input type="radio" name="l07s" id="l07-s3" class="l07-in l07-s3">
+    <input type="radio" name="l07s" id="l07-s4" class="l07-in l07-s4">
+    <input type="radio" name="l07s" id="l07-s5" class="l07-in l07-s5">
+    <input type="radio" name="l07q1" id="l07-a1" class="l07-in l07-a1"><input type="radio" name="l07q1" id="l07-b1" class="l07-in l07-b1">
+    <input type="radio" name="l07q2" id="l07-a2" class="l07-in l07-a2"><input type="radio" name="l07q2" id="l07-b2" class="l07-in l07-b2">
+    <input type="radio" name="l07q3" id="l07-a3" class="l07-in l07-a3"><input type="radio" name="l07q3" id="l07-b3" class="l07-in l07-b3">
+    <input type="radio" name="l07q4" id="l07-a4" class="l07-in l07-a4"><input type="radio" name="l07q4" id="l07-b4" class="l07-in l07-b4">
+    <input type="radio" name="l07q5" id="l07-a5" class="l07-in l07-a5"><input type="radio" name="l07q5" id="l07-b5" class="l07-in l07-b5">
+    <span class="l07-cta">▶ KOKEILE ITSE — klikkaa väitettä, joka on totta</span>
+    <span class="l07-prog p1">väitepari 1/5</span><span class="l07-prog p2">väitepari 2/5</span><span class="l07-prog p3">väitepari 3/5</span><span class="l07-prog p4">väitepari 4/5</span><span class="l07-prog p5">väitepari 5/5</span>
+    <div class="l07-round r1">
+      <label for="l07-a1" class="l07-card ca tru"><span class="l07-ans">”Tuntemattoman sotilaan kirjoitti Väinö Linna vuonna 1954.”</span><span class="l07-st st-t">✓ totta</span></label>
+      <label for="l07-b1" class="l07-card cb fls"><span class="l07-ans">”Romaanin Suuri Mahtava kirjoitti Jane Austen vuonna 1847.”</span><span class="l07-st st-f">✗ keksitty</span></label>
+      <span class="l07-info">Suuri Mahtava -teosta ei ole olemassa — malli yhdistää nimen ja vuosiluvun uskottavasti.</span>
+      <label for="l07-s2" class="l07-next">seuraava pari →</label>
+    </div>
+    <div class="l07-round r2">
+      <label for="l07-a2" class="l07-card ca fls"><span class="l07-ans">”Mika Häkkinen voitti Monacon GP:n vuonna 2003.”</span><span class="l07-st st-f">✗ keksitty</span></label>
+      <label for="l07-b2" class="l07-card cb tru"><span class="l07-ans">”Kimi Räikkönen voitti F1-maailmanmestaruuden vuonna 2007.”</span><span class="l07-st st-t">✓ totta</span></label>
+      <span class="l07-info">Häkkinen lopetti F1-uransa jo 2001 — keksitty voitto kuulostaa silti aidolta.</span>
+      <label for="l07-s3" class="l07-next">seuraava pari →</label>
+    </div>
+    <div class="l07-round r3">
+      <label for="l07-a3" class="l07-card ca tru"><span class="l07-ans">”Valo kulkee Auringosta Maahan noin kahdeksassa minuutissa.”</span><span class="l07-st st-t">✓ totta</span></label>
+      <label for="l07-b3" class="l07-card cb fls"><span class="l07-ans">”Kuu kiertää Maan noin viikossa.”</span><span class="l07-st st-f">✗ keksitty</span></label>
+      <span class="l07-info">Kuun kierros kestää noin 27 päivää — ”viikko” on sujuva mutta väärä.</span>
+      <label for="l07-s4" class="l07-next">seuraava pari →</label>
+    </div>
+    <div class="l07-round r4">
+      <label for="l07-a4" class="l07-card ca fls"><span class="l07-ans">”Lahden talviolympialaiset järjestettiin vuonna 1978.”</span><span class="l07-st st-f">✗ keksitty</span></label>
+      <label for="l07-b4" class="l07-card cb tru"><span class="l07-ans">”Helsingin kesäolympialaiset järjestettiin vuonna 1952.”</span><span class="l07-st st-t">✓ totta</span></label>
+      <span class="l07-info">Lahdessa on pidetty hiihdon MM-kisat, ei olympialaisia — uskottava yhdistelmä huijaa helposti.</span>
+      <label for="l07-s5" class="l07-next">seuraava pari →</label>
+    </div>
+    <div class="l07-round r5">
+      <label for="l07-a5" class="l07-card ca fls"><span class="l07-ans">”Minna Canthin romaani Punainen viiva ilmestyi 1893.”</span><span class="l07-st st-f">✗ keksitty</span></label>
+      <label for="l07-b5" class="l07-card cb tru"><span class="l07-ans">”Aleksis Kiven Seitsemän veljestä ilmestyi 1870.”</span><span class="l07-st st-t">✓ totta</span></label>
+      <span class="l07-info">Punainen viiva on Ilmari Kiannon romaani (1909). Kaikki viisi käyty — pinnasta et voinut tietää kertaakaan. Siksi faktat tarkistetaan aina lähteestä.</span>
+      <label for="l07-s1" class="l07-next">↺ alusta</label>
+    </div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Hallusinaatio: malli esittää keksityn tiedon täsmälleen yhtä itsevarmasti ja sujuvasti kuin oikean, eikä varoita epävarmuudesta. Sujuvuus ei ole todiste totuudesta — kriittiset faktat tarkistetaan aina luotettavasta lähteestä.</figcaption></figure>
 <style>
-.l07-wrap{position:relative;width:560px;height:306px;font-family:var(--font-mono)}
+.l07-wrap{position:relative;width:560px;height:340px;font-family:var(--font-mono)}
 .l07-in{position:absolute;opacity:0;pointer-events:none}
-.l07-ask{position:absolute;left:0;right:0;top:0;font-size:12px;line-height:1.5;color:#EAEEF8;text-align:center}
-.l07-ask b{color:#46c7cf}
-.l07-card{position:absolute;top:50px;width:268px;min-height:158px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:12px 14px;cursor:pointer;transition:border-color .25s,box-shadow .25s,transform .25s;display:block}
-.l07-a{left:0}
-.l07-b{right:0}
-.l07-r0:checked~.l07-card{animation:l07invite 2.6s ease-in-out infinite}
-.l07-r0:checked~.l07-b{animation-delay:1.3s}
-@keyframes l07invite{0%,100%{border-color:#2B3552}50%{border-color:#46c7cf;box-shadow:0 0 14px rgba(70,199,207,.25)}}
+.l07-cta{position:absolute;left:50%;transform:translateX(-50%);top:0;white-space:nowrap;font-size:11.5px;font-weight:700;letter-spacing:.07em;color:#06212A;background:#46c7cf;border-radius:999px;padding:6px 16px;box-shadow:0 0 0 0 rgba(70,199,207,.5);animation:l07cta 2.2s ease-out infinite}
+@keyframes l07cta{0%{box-shadow:0 0 0 0 rgba(70,199,207,.5)}70%{box-shadow:0 0 0 12px rgba(70,199,207,0)}100%{box-shadow:0 0 0 0 rgba(70,199,207,0)}}
+.l07-prog{position:absolute;left:0;bottom:0;font-size:10.5px;letter-spacing:.06em;color:#8B94B3;opacity:0}
+.l07-round{position:absolute;left:0;right:0;top:46px;bottom:0;opacity:0;pointer-events:none;transition:opacity .35s}
+.l07-card{position:absolute;top:8px;width:268px;min-height:150px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:14px;cursor:pointer;transition:border-color .25s,transform .2s;display:block;animation:l07invite 2.6s ease-in-out infinite}
+.l07-card.cb{animation-delay:1.3s}
+@keyframes l07invite{0%,100%{border-color:#2B3552}50%{border-color:#46c7cf}}
 .l07-card:hover{border-color:#46c7cf;transform:translateY(-2px)}
-.l07-q{display:block;font-size:11px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:8px;padding:6px 9px;margin-bottom:9px}
-.l07-ans{display:block;font-size:12px;line-height:1.5;color:#FFFFFF}
-.l07-st{position:absolute;left:14px;bottom:11px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 9px;opacity:0;transform:scale(1.25);transition:opacity .35s,transform .35s}
-.l07-true{color:#06241a;background:#7FD0A8}
-.l07-fake{color:#3A1408;background:#F0A38C}
-.l07-ra:checked~.l07-card .l07-st,.l07-rb:checked~.l07-card .l07-st{opacity:1;transform:scale(1)}
-.l07-ra:checked~.l07-card,.l07-rb:checked~.l07-card{animation:none;cursor:default}
-.l07-ra:checked~.l07-a{border-color:#7FD0A8}
-.l07-rb:checked~.l07-b{border-color:#F0A38C}
-.l07-res{position:absolute;left:0;right:0;top:226px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .4s .15s}
-.l07-res b{color:#EAEEF8}
-.l07-ra:checked~.l07-resa{opacity:1}
-.l07-rb:checked~.l07-resb{opacity:1}
-.l07-reset{position:absolute;right:0;bottom:0;font-size:10.5px;letter-spacing:.04em;color:#46c7cf;border:1.5px solid #2B3552;border-radius:999px;padding:3px 10px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
-.l07-ra:checked~.l07-reset,.l07-rb:checked~.l07-reset{opacity:1;pointer-events:auto}
-.l07-ra:checked~.l07-ask,.l07-rb:checked~.l07-ask{opacity:.35}
-@media (prefers-reduced-motion:reduce){
-.l07-r0:checked~.l07-card{animation:none}
-.l07-card,.l07-st,.l07-res,.l07-reset{transition:none}}
+.l07-card.ca{left:0}
+.l07-card.cb{right:0}
+.l07-ans{display:block;font-size:12.5px;line-height:1.55;color:#FFFFFF}
+.l07-st{position:absolute;left:14px;bottom:12px;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:2px 9px;opacity:0;transform:scale(1.25);transition:opacity .35s,transform .35s}
+.l07-st.st-t{color:#06241a;background:#7FD0A8}
+.l07-st.st-f{color:#3A1408;background:#F0A38C}
+.l07-info{position:absolute;left:0;right:0;top:188px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .4s .15s}
+.l07-next{position:absolute;right:0;bottom:0;font-size:11px;letter-spacing:.05em;color:#06212A;background:#46c7cf;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.l07-s1:checked~.l07-round.r1{opacity:1;pointer-events:auto}
+.l07-s1:checked~.l07-prog.p1{opacity:1}
+.l07-a1:checked~.r1 .l07-st,.l07-b1:checked~.r1 .l07-st{opacity:1;transform:scale(1)}
+.l07-a1:checked~.r1 .l07-info,.l07-b1:checked~.r1 .l07-info,.l07-a1:checked~.r1 .l07-next,.l07-b1:checked~.r1 .l07-next{opacity:1;pointer-events:auto}
+.l07-a1:checked~.r1 .tru,.l07-b1:checked~.r1 .tru{border-color:#7FD0A8;animation:none}
+.l07-a1:checked~.r1 .fls,.l07-b1:checked~.r1 .fls{border-color:#F0A38C;animation:none}
+.l07-s2:checked~.l07-round.r2{opacity:1;pointer-events:auto}
+.l07-s2:checked~.l07-prog.p2{opacity:1}
+.l07-a2:checked~.r2 .l07-st,.l07-b2:checked~.r2 .l07-st{opacity:1;transform:scale(1)}
+.l07-a2:checked~.r2 .l07-info,.l07-b2:checked~.r2 .l07-info,.l07-a2:checked~.r2 .l07-next,.l07-b2:checked~.r2 .l07-next{opacity:1;pointer-events:auto}
+.l07-a2:checked~.r2 .tru,.l07-b2:checked~.r2 .tru{border-color:#7FD0A8;animation:none}
+.l07-a2:checked~.r2 .fls,.l07-b2:checked~.r2 .fls{border-color:#F0A38C;animation:none}
+.l07-s3:checked~.l07-round.r3{opacity:1;pointer-events:auto}
+.l07-s3:checked~.l07-prog.p3{opacity:1}
+.l07-a3:checked~.r3 .l07-st,.l07-b3:checked~.r3 .l07-st{opacity:1;transform:scale(1)}
+.l07-a3:checked~.r3 .l07-info,.l07-b3:checked~.r3 .l07-info,.l07-a3:checked~.r3 .l07-next,.l07-b3:checked~.r3 .l07-next{opacity:1;pointer-events:auto}
+.l07-a3:checked~.r3 .tru,.l07-b3:checked~.r3 .tru{border-color:#7FD0A8;animation:none}
+.l07-a3:checked~.r3 .fls,.l07-b3:checked~.r3 .fls{border-color:#F0A38C;animation:none}
+.l07-s4:checked~.l07-round.r4{opacity:1;pointer-events:auto}
+.l07-s4:checked~.l07-prog.p4{opacity:1}
+.l07-a4:checked~.r4 .l07-st,.l07-b4:checked~.r4 .l07-st{opacity:1;transform:scale(1)}
+.l07-a4:checked~.r4 .l07-info,.l07-b4:checked~.r4 .l07-info,.l07-a4:checked~.r4 .l07-next,.l07-b4:checked~.r4 .l07-next{opacity:1;pointer-events:auto}
+.l07-a4:checked~.r4 .tru,.l07-b4:checked~.r4 .tru{border-color:#7FD0A8;animation:none}
+.l07-a4:checked~.r4 .fls,.l07-b4:checked~.r4 .fls{border-color:#F0A38C;animation:none}
+.l07-s5:checked~.l07-round.r5{opacity:1;pointer-events:auto}
+.l07-s5:checked~.l07-prog.p5{opacity:1}
+.l07-a5:checked~.r5 .l07-st,.l07-b5:checked~.r5 .l07-st{opacity:1;transform:scale(1)}
+.l07-a5:checked~.r5 .l07-info,.l07-b5:checked~.r5 .l07-info,.l07-a5:checked~.r5 .l07-next,.l07-b5:checked~.r5 .l07-next{opacity:1;pointer-events:auto}
+.l07-a5:checked~.r5 .tru,.l07-b5:checked~.r5 .tru{border-color:#7FD0A8;animation:none}
+.l07-a5:checked~.r5 .fls,.l07-b5:checked~.r5 .fls{border-color:#F0A38C;animation:none}
+@media (prefers-reduced-motion:reduce){.l07-cta,.l07-card{animation:none}.l07-card,.l07-st,.l07-info,.l07-next,.l07-round{transition:none}}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?

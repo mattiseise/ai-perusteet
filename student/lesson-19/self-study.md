@@ -96,14 +96,14 @@ Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle oh
 .l19-bot{left:0}
 .l19-ag{right:0;border-color:oklch(0.66 0.13 208)}
 .l19-ph{display:block;font-size:10.5px;letter-spacing:.13em;color:#B9C2DA;margin-bottom:9px}
-.l19-reply{display:block;font-size:11.5px;line-height:1.55;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:9px 11px;opacity:0;animation:l19reply 13s infinite}
+.l19-reply{display:block;font-size:11.5px;line-height:1.55;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:9px 11px;opacity:0;animation:l19reply 19s infinite}
 @keyframes l19reply{0%,4%{opacity:0}9%,96%{opacity:1}100%{opacity:0}}
 .l19-step{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;margin-bottom:7px}
 .l19-step i{margin-left:auto;font-style:normal;color:#7FD0A8;opacity:0}
-.l19-step.s1{animation:l19s1 13s infinite}.l19-step.s1 i{animation:l19i1 13s infinite}
-.l19-step.s2{animation:l19s2 13s infinite}.l19-step.s2 i{animation:l19i2 13s infinite}
-.l19-step.s3{animation:l19s3 13s infinite}.l19-step.s3 i{animation:l19i3 13s infinite}
-.l19-step.s4{animation:l19s4 13s infinite}.l19-step.s4 i{animation:l19i4 13s infinite}
+.l19-step.s1{animation:l19s1 19s infinite}.l19-step.s1 i{animation:l19i1 19s infinite}
+.l19-step.s2{animation:l19s2 19s infinite}.l19-step.s2 i{animation:l19i2 19s infinite}
+.l19-step.s3{animation:l19s3 19s infinite}.l19-step.s3 i{animation:l19i3 19s infinite}
+.l19-step.s4{animation:l19s4 19s infinite}.l19-step.s4 i{animation:l19i4 19s infinite}
 @keyframes l19s1{0%,8%{color:#5D6880;border-color:#232C44}12%,22%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}26%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
 @keyframes l19s2{0%,24%{color:#5D6880;border-color:#232C44}28%,38%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}42%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
 @keyframes l19s3{0%,40%{color:#5D6880;border-color:#232C44}44%,54%{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}58%,96%{color:#B9C2DA;border-color:#232C44}100%{color:#5D6880}}
@@ -112,11 +112,11 @@ Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle oh
 @keyframes l19i2{0%,34%{opacity:0}38%,96%{opacity:1}100%{opacity:0}}
 @keyframes l19i3{0%,50%{opacity:0}54%,96%{opacity:1}100%{opacity:0}}
 @keyframes l19i4{0%,66%{opacity:0}70%,96%{opacity:1}100%{opacity:0}}
-.l19-rep{display:block;font-size:11px;font-weight:600;color:#06241f;background:#7FD0A8;border-radius:8px;padding:6px 9px;opacity:0;animation:l19rep 13s infinite}
+.l19-rep{display:block;font-size:11px;font-weight:600;color:#06241f;background:#7FD0A8;border-radius:8px;padding:6px 9px;opacity:0;animation:l19rep 19s infinite}
 @keyframes l19rep{0%,74%{opacity:0;transform:scale(1.12)}80%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
 .l19-tag{position:absolute;left:13px;right:13px;bottom:10px;font-size:10.5px;letter-spacing:.04em;line-height:1.4}
 .l19-tw{color:#F0A38C}
-.l19-tg{color:#7FD0A8;opacity:0;animation:l19tg 13s infinite}
+.l19-tg{color:#7FD0A8;opacity:0;animation:l19tg 19s infinite}
 @keyframes l19tg{0%,80%{opacity:0}86%,96%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .l19-reply,.l19-step,.l19-step i,.l19-rep,.l19-tg{animation:none}

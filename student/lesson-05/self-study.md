@@ -43,7 +43,7 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 .l05-hdr{position:absolute;left:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#F0A38C}
 .l05-hdr2{position:absolute;right:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8}
 .l05-rail{position:absolute;left:0;right:0;top:62px;height:64px;overflow:hidden}
-.l05-strip{position:absolute;top:11px;display:flex;gap:10px;width:max-content;animation:l05slide 22s linear infinite}
+.l05-strip{position:absolute;top:11px;display:flex;gap:10px;width:max-content;animation:l05slide 30s linear infinite}
 @keyframes l05slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .l05-m{font-size:11.5px;white-space:nowrap;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:9px;padding:9px 11px}
 .l05-ohje{color:#06212A;background:#46c7cf;border-color:transparent;font-weight:600}
@@ -52,7 +52,7 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 .l05-cr{right:0;width:148px;background:linear-gradient(270deg,#0c1120 55%,rgba(12,17,32,0))}
 .l05-win{position:absolute;left:150px;width:260px;top:48px;height:92px;border:2.5px solid oklch(0.66 0.15 264);border-radius:13px;z-index:4;box-shadow:0 0 18px oklch(0.66 0.15 264/.25)}
 .l05-wl{position:absolute;left:50%;transform:translateX(-50%);top:-15px;font-size:10px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;color:#0B0F1A;background:oklch(0.78 0.12 264);border-radius:999px;padding:2px 9px}
-.l05-x{position:absolute;left:64px;top:84px;z-index:5;font-size:15px;font-weight:700;color:#F0A38C;animation:l05x 2.6s ease-out infinite}
+.l05-x{position:absolute;left:64px;top:84px;z-index:5;font-size:15px;font-weight:700;color:#F0A38C;animation:l05x 3.4s ease-out infinite}
 @keyframes l05x{0%{opacity:0;transform:translateY(0) scale(.8)}30%{opacity:1}100%{opacity:0;transform:translateY(-20px) scale(1.25) rotate(18deg)}}
 .l05-warn{position:absolute;left:0;right:0;top:170px;text-align:center;font-size:11.5px;line-height:1.4;color:#F0A38C;animation:l05warn 4s ease-in-out infinite}
 @keyframes l05warn{0%,100%{opacity:.6}50%{opacity:1}}

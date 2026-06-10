@@ -111,6 +111,78 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää m
 
 > **Pysähdy hetkeksi:** Käy läpi nämä kolme tilannetta ja ajattele omaa mahdollista tehtävääsi. Mitä kuusi kysymystä vastaavat sen kohdalla?
 
+<figure class="ai-demo"><span class="ai-demo__tag">// testi: mikä väline riittää tähän tilanteeseen?</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:330px">
+  <div class="l20q-wrap">
+    <input type="radio" name="l20qs" id="l20q-s1" class="l20q-in l20q-s1" checked>
+    <input type="radio" name="l20qs" id="l20q-s2" class="l20q-in l20q-s2">
+    <input type="radio" name="l20qs" id="l20q-s3" class="l20q-in l20q-s3">
+    <input type="radio" name="l20q1" id="l20q-1a" class="l20q-in l20q-1a">
+    <input type="radio" name="l20q1" id="l20q-1b" class="l20q-in l20q-1b">
+    <input type="radio" name="l20q1" id="l20q-1c" class="l20q-in l20q-1c">
+    <input type="radio" name="l20q2" id="l20q-2a" class="l20q-in l20q-2a">
+    <input type="radio" name="l20q2" id="l20q-2b" class="l20q-in l20q-2b">
+    <input type="radio" name="l20q2" id="l20q-2c" class="l20q-in l20q-2c">
+    <input type="radio" name="l20q3" id="l20q-3a" class="l20q-in l20q-3a">
+    <input type="radio" name="l20q3" id="l20q-3b" class="l20q-in l20q-3b">
+    <input type="radio" name="l20q3" id="l20q-3c" class="l20q-in l20q-3c">
+    <span class="l20q-cta">▶ KOKEILE ITSE — valitse väline klikkaamalla</span>
+    <span class="l20q-prog p1">tilanne 1/3</span><span class="l20q-prog p2">tilanne 2/3</span><span class="l20q-prog p3">tilanne 3/3</span>
+    <div class="l20q-round r1"><span class="l20q-sc">Tarvitset kerran tiivistelmän yhdestä 40-sivuisesta raportista.</span><div class="l20q-opts"><label for="l20q-1a" class="l20q-opt o1a corr">PROMPTAUS</label><label for="l20q-1b" class="l20q-opt o1b">TYÖNKULKU</label><label for="l20q-1c" class="l20q-opt o1c">AGENTTI</label></div><span class="l20q-fb f1a">✓ Kertaluonteinen tehtävä — promptaus riittää, eikä mitään jää ylläpidettäväksi.</span><span class="l20q-fb f1b">✗ Työnkulku kannattaa vasta, kun sama toistuu — tämä tehdään vain kerran.</span><span class="l20q-fb f1c">✗ Agentti on raskain väline: kertatehtävään se on ylimitoitettu.</span><label for="l20q-s2" class="l20q-next">seuraava tilanne →</label></div>
+    <div class="l20q-round r2"><span class="l20q-sc">Joka aamu: siirrä ”lasku”-viestit kansioon ja kuittaa lähettäjälle.</span><div class="l20q-opts"><label for="l20q-2a" class="l20q-opt o2a">PROMPTAUS</label><label for="l20q-2b" class="l20q-opt o2b corr">TYÖNKULKU</label><label for="l20q-2c" class="l20q-opt o2c">AGENTTI</label></div><span class="l20q-fb f2a">✗ Promptaus vaatisi sinut joka aamu mukaan — tämä toistuu päivittäin.</span><span class="l20q-fb f2b">✓ Toistuva tehtävä + selkeä sääntö = työnkulku. Halpa, nopea ja luotettava.</span><span class="l20q-fb f2c">✗ Säännöt eivät muutu — agentin päättelylle ei ole tässä tarvetta.</span><label for="l20q-s3" class="l20q-next">seuraava tilanne →</label></div>
+    <div class="l20q-round r3"><span class="l20q-sc">Palautteita tulee jatkuvasti: kiireellisyys vaihtelee, säännöt elävät ja epäselvät pitää ohjata ihmiselle.</span><div class="l20q-opts"><label for="l20q-3a" class="l20q-opt o3a">PROMPTAUS</label><label for="l20q-3b" class="l20q-opt o3b">TYÖNKULKU</label><label for="l20q-3c" class="l20q-opt o3c corr">AGENTTI</label></div><span class="l20q-fb f3a">✗ Promptaus ei skaalaudu jatkuvaan virtaan — joku istuisi koneella koko ajan.</span><span class="l20q-fb f3b">✗ Kiinteät avainsanasäännöt eivät riitä, kun tapaukset vaihtelevat.</span><span class="l20q-fb f3c">✓ Muuttuvat säännöt + harkinta = agentti, ihmisen valvonnassa. — Muista silti: valitse aina yksinkertaisin riittävä väline.</span><label for="l20q-s1" class="l20q-next">↺ alusta</label></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Päätöspuu käytännössä: toistuuko tehtävä, muuttuvatko säännöt, tarvitaanko harkintaa? Kertaluonteiseen riittää promptaus, toistuvaan selkeäsääntöiseen työnkulku — agentti kannattaa vasta, kun säännöt elävät ja päätökset vaativat tilannearviota.</figcaption></figure>
+<style>
+.l20q-wrap{position:relative;width:560px;height:290px;font-family:var(--font-mono)}
+.l20q-in{position:absolute;opacity:0;pointer-events:none}
+.l20q-cta{position:absolute;left:50%;transform:translateX(-50%);top:0;white-space:nowrap;font-size:11.5px;font-weight:700;letter-spacing:.07em;color:#0B1A14;background:#7FD0A8;border-radius:999px;padding:6px 16px;animation:l20qcta 2.2s ease-out infinite}
+@keyframes l20qcta{0%{box-shadow:0 0 0 0 rgba(127,208,168,.5)}70%{box-shadow:0 0 0 12px rgba(127,208,168,0)}100%{box-shadow:0 0 0 0 rgba(127,208,168,0)}}
+.l20q-prog{position:absolute;right:0;top:6px;font-size:10.5px;color:#8B94B3;opacity:0}
+.l20q-round{position:absolute;left:0;right:0;top:48px;bottom:0;opacity:0;pointer-events:none;transition:opacity .35s}
+.l20q-sc{display:block;font-size:12.5px;line-height:1.5;font-weight:500;color:#06212A;background:#46c7cf;border-radius:11px;padding:10px 13px}
+.l20q-opts{display:flex;gap:12px;margin-top:14px}
+.l20q-opt{flex:1;text-align:center;font-size:12px;font-weight:600;letter-spacing:.08em;color:#EAEEF8;background:#11182A;border:2px solid #2B3552;border-radius:11px;padding:13px 6px;cursor:pointer;transition:border-color .25s,transform .2s;animation:l20qinv 2.6s ease-in-out infinite}
+.l20q-opt:nth-child(2){animation-delay:.85s}
+.l20q-opt:nth-child(3){animation-delay:1.7s}
+@keyframes l20qinv{0%,100%{border-color:#2B3552}50%{border-color:oklch(0.66 0.13 208)}}
+.l20q-opt:hover{border-color:oklch(0.72 0.13 208);transform:translateY(-2px)}
+.l20q-fb{position:absolute;left:0;right:0;top:148px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .35s}
+.l20q-next{position:absolute;right:0;bottom:0;font-size:11px;letter-spacing:.05em;color:#0B1A14;background:#7FD0A8;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.l20q-s1:checked~.l20q-round.r1{opacity:1;pointer-events:auto}
+.l20q-s1:checked~.l20q-prog.p1{opacity:1}
+:is(.l20q-1a:checked,.l20q-1b:checked,.l20q-1c:checked)~.r1 .l20q-opt.corr{border-color:#7FD0A8;color:#FFFFFF;animation:none}
+:is(.l20q-1a:checked,.l20q-1b:checked,.l20q-1c:checked)~.r1 .l20q-opt{animation:none}
+:is(.l20q-1a:checked,.l20q-1b:checked,.l20q-1c:checked)~.r1 .l20q-next{opacity:1;pointer-events:auto}
+.l20q-1a:checked~.r1 .l20q-fb.f1a{opacity:1}
+.l20q-1b:checked~.r1 .l20q-fb.f1b{opacity:1}
+.l20q-1b:checked~.r1 .l20q-opt.o1b{border-color:#F0A38C;color:#FFD9CD}
+.l20q-1c:checked~.r1 .l20q-fb.f1c{opacity:1}
+.l20q-1c:checked~.r1 .l20q-opt.o1c{border-color:#F0A38C;color:#FFD9CD}
+.l20q-s2:checked~.l20q-round.r2{opacity:1;pointer-events:auto}
+.l20q-s2:checked~.l20q-prog.p2{opacity:1}
+:is(.l20q-2a:checked,.l20q-2b:checked,.l20q-2c:checked)~.r2 .l20q-opt.corr{border-color:#7FD0A8;color:#FFFFFF;animation:none}
+:is(.l20q-2a:checked,.l20q-2b:checked,.l20q-2c:checked)~.r2 .l20q-opt{animation:none}
+:is(.l20q-2a:checked,.l20q-2b:checked,.l20q-2c:checked)~.r2 .l20q-next{opacity:1;pointer-events:auto}
+.l20q-2a:checked~.r2 .l20q-fb.f2a{opacity:1}
+.l20q-2a:checked~.r2 .l20q-opt.o2a{border-color:#F0A38C;color:#FFD9CD}
+.l20q-2b:checked~.r2 .l20q-fb.f2b{opacity:1}
+.l20q-2c:checked~.r2 .l20q-fb.f2c{opacity:1}
+.l20q-2c:checked~.r2 .l20q-opt.o2c{border-color:#F0A38C;color:#FFD9CD}
+.l20q-s3:checked~.l20q-round.r3{opacity:1;pointer-events:auto}
+.l20q-s3:checked~.l20q-prog.p3{opacity:1}
+:is(.l20q-3a:checked,.l20q-3b:checked,.l20q-3c:checked)~.r3 .l20q-opt.corr{border-color:#7FD0A8;color:#FFFFFF;animation:none}
+:is(.l20q-3a:checked,.l20q-3b:checked,.l20q-3c:checked)~.r3 .l20q-opt{animation:none}
+:is(.l20q-3a:checked,.l20q-3b:checked,.l20q-3c:checked)~.r3 .l20q-next{opacity:1;pointer-events:auto}
+.l20q-3a:checked~.r3 .l20q-fb.f3a{opacity:1}
+.l20q-3a:checked~.r3 .l20q-opt.o3a{border-color:#F0A38C;color:#FFD9CD}
+.l20q-3b:checked~.r3 .l20q-fb.f3b{opacity:1}
+.l20q-3b:checked~.r3 .l20q-opt.o3b{border-color:#F0A38C;color:#FFD9CD}
+.l20q-3c:checked~.r3 .l20q-fb.f3c{opacity:1}
+@media (prefers-reduced-motion:reduce){.l20q-cta,.l20q-opt{animation:none}.l20q-round,.l20q-opt,.l20q-fb,.l20q-next{transition:none}}
+</style>
+
 ## Monimutkaisuus on aina kustannus
 
 Tässä on tärkeä ajatus, jonka monet unohtavat: agentti on monimutkainen. Se ei ole vain ”parempi työnkulku”. Se on luonteeltaan erilainen ratkaisu, ei pelkästään suurempi tai tehokkaampi versio työnkulusta.

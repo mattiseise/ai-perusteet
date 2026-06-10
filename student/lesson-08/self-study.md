@@ -36,22 +36,22 @@ Monien aineistojen tekijät, kuten journalistit, kirjailijat, tutkijat ja blogga
 .l08-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
 .l08-chat{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:7px}
 .l08-u{align-self:flex-end;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:7px 11px}
-.l08-a{align-self:flex-start;font-size:11.5px;line-height:1.4;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:7px 11px;opacity:0;animation:l08a 12s infinite}
+.l08-a{align-self:flex-start;font-size:11.5px;line-height:1.4;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:7px 11px;opacity:0;animation:l08a 18s infinite}
 .l08-a i{font-style:normal;font-size:10px;color:#7FD0A8;margin-left:6px}
 @keyframes l08a{0%,4%{opacity:0}8%,97%{opacity:1}100%{opacity:0}}
-.l08-peek{position:absolute;left:0;top:84px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l08peek 12s infinite}
+.l08-peek{position:absolute;left:0;top:84px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l08peek 18s infinite}
 @keyframes l08peek{0%,12%{opacity:0}16%,96%{opacity:1}100%{opacity:0}}
 .l08-layer{position:absolute;left:0;right:0;background:#11182A;border:1.5px solid #2B3552;border-left:4px solid oklch(0.66 0.15 264);border-radius:11px;padding:8px 12px;opacity:0;transition:border-color .25s,background .25s}
 .l08-layer:hover{background:#161F35;border-color:oklch(0.7 0.15 264)}
 .l08-layer b{display:block;font-size:10.5px;letter-spacing:.1em;color:#EAEEF8;margin-bottom:3px}
 .l08-layer span{display:block;font-size:11px;line-height:1.45;color:#B9C2DA}
-.l08-layer.y1{top:108px;animation:l08y1 12s infinite}
-.l08-layer.y2{top:162px;border-left-color:#c9b7f1;animation:l08y2 12s infinite}
-.l08-layer.y3{top:216px;border-left-color:#F7C873;animation:l08y3 12s infinite}
+.l08-layer.y1{top:108px;animation:l08y1 18s infinite}
+.l08-layer.y2{top:162px;border-left-color:#c9b7f1;animation:l08y2 18s infinite}
+.l08-layer.y3{top:216px;border-left-color:#F7C873;animation:l08y3 18s infinite}
 @keyframes l08y1{0%,16%{opacity:0;transform:translateY(-14px)}22%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes l08y2{0%,30%{opacity:0;transform:translateY(-14px)}36%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes l08y3{0%,44%{opacity:0;transform:translateY(-14px)}50%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-.l08-note{position:absolute;left:0;right:0;top:272px;font-size:11px;line-height:1.4;color:#7FD0A8;opacity:0;animation:l08note 12s infinite}
+.l08-note{position:absolute;left:0;right:0;top:272px;font-size:11px;line-height:1.4;color:#7FD0A8;opacity:0;animation:l08note 18s infinite}
 @keyframes l08note{0%,58%{opacity:0}64%,96%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .l08-a,.l08-peek,.l08-layer,.l08-note{animation:none}

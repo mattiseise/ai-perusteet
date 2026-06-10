@@ -66,13 +66,13 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
       <div class="l01-row"><span class="l01-rn">kellonaika</span><div class="l01-rb"><i class="b2"></i></div><b class="l01-rv vA">+0,08</b><b class="l01-rv vB">+0,31</b></div>
       <div class="l01-row"><span class="l01-rn">laite</span><div class="l01-rb"><i class="b3"></i></div><b class="l01-rv vA">+0,05</b><b class="l01-rv vB">+0,27</b></div>
       <div class="l01-row"><span class="l01-rn">toisto</span><div class="l01-rb"><i class="b4"></i></div><b class="l01-rv vA">+0,18</b><b class="l01-rv vB">+0,29</b></div>
-      <div class="l01-sum"><span>yhteensä → petosriski</span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">93 %</b><b class="l01-pct pB">91 %</b></div>
+      <div class="l01-sum"><span class="l01-eqbox"><i class="l01-eq eA">0,62 + 0,08 + 0,05 + 0,18 = <b>0,93</b></i><i class="l01-eq eB">0,04 + 0,31 + 0,27 + 0,29 = <b>0,91</b></i></span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">93 %</b><b class="l01-pct pB">91 %</b></div>
       <span class="l01-verd l01-v2a">✓ hälytys — kynnys 80 % ylittyi</span><span class="l01-verd l01-v2b">✓ hälytys — kynnys 80 % ylittyi</span>
     </div>
     <span class="l01-miss">⚠ petos pääsi läpi</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa: ison summan se nappaa, mutta oudon pienen tapauksen se päästää läpi. Opittu malli antaa jokaiselle signaalille painon ja laskee ne yhteen todennäköisyydeksi — kun kynnys ylittyy, se hälyttää, vaikka mikään yksittäinen raja ei ylittyisi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa: ison summan se nappaa, mutta oudon pienen tapauksen se päästää läpi. Opittu malli antaa jokaiselle signaalille painon ja laskee painot yhteen todennäköisyydeksi (palkkien pituudet = painot) — kun kynnys ylittyy, se hälyttää, vaikka mikään yksittäinen raja ei ylittyisi.</figcaption></figure>
 <style>
 .l01-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono)}
 .l01-case{position:absolute;left:50%;transform:translateX(-50%);top:0;width:440px;height:34px}
@@ -95,10 +95,10 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 .l01-rb i.b2{animation:l01b2 14s infinite}
 .l01-rb i.b3{animation:l01b3 14s infinite}
 .l01-rb i.b4{animation:l01b4 14s infinite}
-@keyframes l01b1{0%,8%{width:0}14%,46%{width:78%}56%,96%{width:6%}100%{width:0}}
-@keyframes l01b2{0%,9%{width:0}15%,46%{width:11%}57%,96%{width:42%}100%{width:0}}
-@keyframes l01b3{0%,10%{width:0}16%,46%{width:8%}58%,96%{width:37%}100%{width:0}}
-@keyframes l01b4{0%,11%{width:0}17%,46%{width:24%}59%,96%{width:40%}100%{width:0}}
+@keyframes l01b1{0%,8%{width:0}14%,46%{width:62%}56%,96%{width:4%}100%{width:0}}
+@keyframes l01b2{0%,9%{width:0}15%,46%{width:8%}57%,96%{width:31%}100%{width:0}}
+@keyframes l01b3{0%,10%{width:0}16%,46%{width:5%}58%,96%{width:27%}100%{width:0}}
+@keyframes l01b4{0%,11%{width:0}17%,46%{width:18%}59%,96%{width:29%}100%{width:0}}
 .l01-rv{position:absolute;right:0;width:44px;text-align:right;font-size:10.5px;font-weight:600;color:#B9C2DA;opacity:0}
 .l01-row .l01-rv.vA{animation:l01vA 14s infinite}
 .l01-row .l01-rv.vB{animation:l01vB 14s infinite}
@@ -106,7 +106,11 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 @keyframes l01vB{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
 .l01-row{padding-right:48px}
 .l01-sum{position:relative;margin-top:9px;padding-right:48px}
-.l01-sum span{display:block;font-size:10px;letter-spacing:.05em;color:#8B94B3;margin-bottom:4px}
+.l01-sum .l01-eqbox{display:block;position:relative;height:15px;margin-bottom:4px}
+.l01-eq{position:absolute;left:0;font-style:normal;font-size:10.5px;letter-spacing:.04em;color:#8B94B3;opacity:0}
+.l01-eq b{color:#EAEEF8;font-weight:700}
+.l01-eq.eA{animation:l01vA 14s infinite}
+.l01-eq.eB{animation:l01vB 14s infinite}
 .l01-mb{height:9px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
 .l01-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#F0A38C);animation:l01meter 14s infinite}
 @keyframes l01meter{0%,12%{width:6%}20%,46%{width:93%}56%,62%{width:6%}70%,96%{width:91%}100%{width:6%}}
@@ -125,8 +129,8 @@ Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntö
 .l01-miss{position:absolute;left:36px;top:276px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l01miss 14s infinite}
 @keyframes l01miss{0%,68%{opacity:0}72%,93%{opacity:1}97%,100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
-.l01-cs,.l01-rb i,.l01-rv,.l01-meter,.l01-pct,.l01-verd,.l01-miss{animation:none}
-.l01-cs.c2,.l01-v1b,.l01-v2b,.l01-miss,.l01-rv.vB,.l01-pct.pB{opacity:1}
+.l01-cs,.l01-rb i,.l01-rv,.l01-meter,.l01-pct,.l01-verd,.l01-miss,.l01-eq{animation:none}
+.l01-cs.c2,.l01-v1b,.l01-v2b,.l01-miss,.l01-rv.vB,.l01-pct.pB,.l01-eq.eB{opacity:1}
 .l01-rb i.b1{width:6%}.l01-rb i.b2{width:42%}.l01-rb i.b3{width:37%}.l01-rb i.b4{width:40%}
 .l01-meter{width:91%}}
 </style>

@@ -92,11 +92,11 @@ Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-proj
 .l14-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
 .l14-sw{position:relative;width:54px;height:18px}
 .l14-sw i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:9.5px;letter-spacing:.08em;border-radius:999px}
-.l14-off{color:#3A1408;background:#F0A38C;animation:l14off 12s infinite}
-.l14-on{color:#06241a;background:#7FD0A8;opacity:0;animation:l14on 12s infinite}
+.l14-off{color:#3A1408;background:#F0A38C;animation:l14off 18s infinite}
+.l14-on{color:#06241a;background:#7FD0A8;opacity:0;animation:l14on 18s infinite}
 @keyframes l14off{0%,42%{opacity:1}48%,100%{opacity:0}}
 @keyframes l14on{0%,42%{opacity:0}48%,97%{opacity:1}100%{opacity:0}}
-.l14-row{font-size:11.5px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;animation-duration:12s;animation-iteration-count:infinite}
+.l14-row{font-size:11.5px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;animation-duration:18s;animation-iteration-count:infinite}
 .l14-row.r1{animation-name:l14r1}.l14-row.r2{animation-name:l14r2}.l14-row.r3{animation-name:l14r3}.l14-row.r4{animation-name:l14r4}
 @keyframes l14r1{0%,46%{color:#5D6880;border-color:#232C44}50%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
 @keyframes l14r2{0%,49%{color:#5D6880;border-color:#232C44}53%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
@@ -106,8 +106,8 @@ Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-proj
 .l14-msg{font-size:12px;line-height:1.45;border-radius:10px;padding:8px 11px;max-width:92%}
 .l14-user{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
 .l14-bot{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
-.l14-b1{animation:l14b1 12s infinite}
-.l14-b2{position:absolute;left:14px;top:74px;opacity:0;animation:l14b2 12s infinite;border-color:#7FD0A8}
+.l14-b1{animation:l14b1 18s infinite}
+.l14-b2{position:absolute;left:14px;top:74px;opacity:0;animation:l14b2 18s infinite;border-color:#7FD0A8}
 @keyframes l14b1{0%,2%{opacity:0}6%,44%{opacity:1}50%,100%{opacity:0}}
 @keyframes l14b2{0%,58%{opacity:0}64%,97%{opacity:1}100%{opacity:0}}
 .l14-tag{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}

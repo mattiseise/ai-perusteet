@@ -80,12 +80,12 @@ Rajaukset asetetaan **ohjeistuksella**. Kirjoita botille selvästi ja yksityisko
 .l15-bot{position:absolute;left:218px;top:84px;width:124px;text-align:center;font-size:13px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:13px 8px 28px}
 .l15-score{position:absolute;left:8px;right:8px;bottom:7px;height:16px}
 .l15-sc{position:absolute;inset:0;font-style:normal;font-size:10px;letter-spacing:.04em;color:#B9C2DA;opacity:0}
-.l15-sc.s0{animation:l15s0 18s infinite}
-.l15-sc.s1{animation:l15s1 18s infinite}
-.l15-sc.s2{animation:l15s2 18s infinite}
-.l15-sc.s3{animation:l15s3 18s infinite}
-.l15-sc.s4{animation:l15s4 18s infinite}
-.l15-sc.s5{animation:l15s5 18s infinite;color:#7FD0A8}
+.l15-sc.s0{animation:l15s0 27s infinite}
+.l15-sc.s1{animation:l15s1 27s infinite}
+.l15-sc.s2{animation:l15s2 27s infinite}
+.l15-sc.s3{animation:l15s3 27s infinite}
+.l15-sc.s4{animation:l15s4 27s infinite}
+.l15-sc.s5{animation:l15s5 27s infinite;color:#7FD0A8}
 @keyframes l15s0{0%{opacity:1}9%{opacity:1}11%{opacity:0}98%{opacity:0}100%{opacity:1}}
 @keyframes l15s1{0%,9%{opacity:0}11%,27%{opacity:1}29%,100%{opacity:0}}
 @keyframes l15s2{0%,27%{opacity:0}29%,45%{opacity:1}47%,100%{opacity:0}}
@@ -94,11 +94,11 @@ Rajaukset asetetaan **ohjeistuksella**. Kirjoita botille selvästi ja yksityisko
 @keyframes l15s5{0%,81%{opacity:0}83%,98%{opacity:1}100%{opacity:0}}
 .l15-inbox{position:absolute;left:0;top:78px;width:196px;height:96px}
 .l15-in{position:absolute;inset:0;font-size:11.5px;line-height:1.4;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:8px 10px;opacity:0;height:fit-content}
-.l15-in.i1{animation:l15i1 18s infinite}
-.l15-in.i2{animation:l15i2 18s infinite}
-.l15-in.i3{animation:l15i3 18s infinite}
-.l15-in.i4{animation:l15i4 18s infinite}
-.l15-in.i5{animation:l15i5 18s infinite}
+.l15-in.i1{animation:l15i1 27s infinite}
+.l15-in.i2{animation:l15i2 27s infinite}
+.l15-in.i3{animation:l15i3 27s infinite}
+.l15-in.i4{animation:l15i4 27s infinite}
+.l15-in.i5{animation:l15i5 27s infinite}
 @keyframes l15i1{0%,1%{opacity:0;transform:translateX(-12px)}3%,15%{opacity:1;transform:translateX(0)}17%,100%{opacity:0}}
 @keyframes l15i2{0%,19%{opacity:0;transform:translateX(-12px)}21%,33%{opacity:1;transform:translateX(0)}35%,100%{opacity:0}}
 @keyframes l15i3{0%,37%{opacity:0;transform:translateX(-12px)}39%,51%{opacity:1;transform:translateX(0)}53%,100%{opacity:0}}
@@ -110,18 +110,18 @@ Rajaukset asetetaan **ohjeistuksella**. Kirjoita botille selvästi ja yksityisko
 .l15-type.te{color:#1d1230;background:#c9b7f1}
 .l15-outbox{position:absolute;left:364px;top:78px;width:196px;height:110px}
 .l15-out{position:absolute;inset:0;font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 10px;opacity:0;height:fit-content}
-.l15-out.o1{animation:l15o1 18s infinite}
-.l15-out.o2{animation:l15o2 18s infinite}
-.l15-out.o3{animation:l15o3 18s infinite}
-.l15-out.o4{animation:l15o4 18s infinite}
-.l15-out.o5{animation:l15o5 18s infinite}
+.l15-out.o1{animation:l15o1 27s infinite}
+.l15-out.o2{animation:l15o2 27s infinite}
+.l15-out.o3{animation:l15o3 27s infinite}
+.l15-out.o4{animation:l15o4 27s infinite}
+.l15-out.o5{animation:l15o5 27s infinite}
 @keyframes l15o1{0%,6%{opacity:0;transform:translateX(12px)}8%,15%{opacity:1;transform:translateX(0)}17%,100%{opacity:0}}
 @keyframes l15o2{0%,24%{opacity:0;transform:translateX(12px)}26%,33%{opacity:1;transform:translateX(0)}35%,100%{opacity:0}}
 @keyframes l15o3{0%,42%{opacity:0;transform:translateX(12px)}44%,51%{opacity:1;transform:translateX(0)}53%,100%{opacity:0}}
 @keyframes l15o4{0%,60%{opacity:0;transform:translateX(12px)}62%,69%{opacity:1;transform:translateX(0)}71%,100%{opacity:0}}
 @keyframes l15o5{0%,78%{opacity:0;transform:translateX(12px)}80%,87%{opacity:1;transform:translateX(0)}89%,100%{opacity:0}}
 .l15-okk{display:block;margin-top:5px;font-weight:600;font-size:10.5px;letter-spacing:.04em;color:#7FD0A8}
-.l15-final{position:absolute;left:0;right:0;top:218px;text-align:center;font-size:11.5px;color:#7FD0A8;opacity:0;animation:l15fin 18s infinite}
+.l15-final{position:absolute;left:0;right:0;top:218px;text-align:center;font-size:11.5px;color:#7FD0A8;opacity:0;animation:l15fin 27s infinite}
 @keyframes l15fin{0%,88%{opacity:0}92%,98%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
 .l15-sc,.l15-in,.l15-out,.l15-final{animation:none}
