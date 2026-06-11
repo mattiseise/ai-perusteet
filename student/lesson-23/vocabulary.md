@@ -1,4 +1,4 @@
-# Sanasto – Lesson 23: Suunnittelumallit
+# Sanasto – oppitunti 23: Suunnittelumallit
 
 ## ReAct (Reasoning + Acting)
 

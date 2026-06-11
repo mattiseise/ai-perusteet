@@ -1,4 +1,4 @@
-# Sanasto – Lesson 25: Human-in-the-loop
+# Sanasto – oppitunti 25: Human-in-the-loop
 
 ## Human-in-the-loop (ihminen silmukassa)
 

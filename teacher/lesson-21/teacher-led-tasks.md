@@ -263,7 +263,6 @@ Näytä opiskelijoille seuraava tilanne:
 
 1. **Konteksti-ikkuna:**
 
-   ```
 
    Agentti näkee viimeisimmät viisi viestiä.
 
@@ -309,7 +308,6 @@ Näytä opiskelijoille seuraava tilanne:
    - Antaako agentti asiakkaalle nopeamman käsittelyn?
    - Siirtääkö agentti tapauksen suoraan ihmiselle?
    - Miten vastaus muuttuisi, jos agentin tärkein arvo olisi kustannusten minimointi?
-```
 
 ### Johtopäätös
 

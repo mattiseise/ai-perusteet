@@ -1,4 +1,4 @@
-# Sanasto – Lesson 24: Turvallisuus
+# Sanasto – oppitunti 24: Turvallisuus
 
 ## Prompt injection
 

@@ -21,7 +21,6 @@ Tehtävän tavoitteena on havainnollistaa, kuinka paljon **konteksti** ja **prom
 
 1. **Johdanto noin 3 minuuttia:**
 
-   ```
 
    Näytä opiskelijoille molemmat kysymykset rinnakkain ruudulla.
 
@@ -65,7 +64,6 @@ Tehtävän tavoitteena on havainnollistaa, kuinka paljon **konteksti** ja **prom
    - Mitä kontekstin osia käytettiin?
    - Mitkä promptin elementit tekivät pyynnöstä selkeän?
    - Kumpi vaikutti vastaukseen enemmän: konteksti vai prompti?
-```
 
 ### Fasilitointikysymykset
 

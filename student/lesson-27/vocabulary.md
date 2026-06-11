@@ -1,4 +1,4 @@
-# Sanasto – Lesson 27: n8n-projektipaja, osa 2
+# Sanasto – oppitunti 27: n8n-projektipaja, osa 2
 
 | Termi | Selitys |
 | --- | --- |

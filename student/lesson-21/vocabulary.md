@@ -1,4 +1,4 @@
-# Sanasto – Lesson 21: Agentin muisti ja konteksti
+# Sanasto – oppitunti 21: Agentin muisti ja konteksti
 
 ## Konteksti-ikkuna (context window)
 

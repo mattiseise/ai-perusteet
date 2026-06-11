@@ -41,7 +41,7 @@ Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin
 
 Oppitunnit 17 ja 18 muodostavat yhdessä **Tekoälyjen käyttö** -osion arvioinnin. Oppitunnilla 17 arvioidaan erityisesti suunnittelua, system promptia, testausta, iteraatiota ja dokumentaatiota. Oppitunnilla 18 arviointi jatkuu viimeistelyllä, esittelyllä ja lopullisen tuotoksen laadulla.
 
-Oppitunnilla 17 arvioidaan noin **60 %** kokonaisuudesta.
+Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 60 pisteen kokonaisuudesta).
 
 ### Pisteytys
 

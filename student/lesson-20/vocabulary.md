@@ -1,4 +1,4 @@
-# Sanasto – Lesson 20
+# Sanasto – oppitunti 20
 
 ## Päätöspuu (decision tree)
 

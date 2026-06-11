@@ -1,6 +1,6 @@
 # Tehtävät
 
-## Tehtävä 1: Täytä päätöstaulukko agentin rakenteesta (TT-B1)
+## Tehtävä 1: Täytä päätöstaulukko agentin rakenteesta
 
 Alla on taulukko, jossa kuvataan kolme erilaista agenttijärjestelmää. Sinun tehtäväsi on täyttää taulukko kuvaamalla kunkin agentin **suunnittelusilmukkaa**, **työkaluja** ja **muistia**.
 
@@ -40,7 +40,7 @@ Täytä seuraava taulukko kunkin agentin osalta:
 
 ---
 
-## Tehtävä 2: Suunnittele kontrolli agentin rajoittamiseksi (TT-D1)
+## Tehtävä 2: Suunnittele kontrolli agentin rajoittamiseksi
 
 Agentit ovat tehokkaita, mutta niihin liittyy merkittäviä riskejä. Tämä tehtävä vaatii sinua **suunnittelemaan turvatoimenpiteet** agentin varalle.
 
@@ -80,10 +80,10 @@ Kirjoita omat 3–4 riski–kontrolli-parisi.
 
 ---
 
-## Pisteet ja arviointi
+## Hyvän vastauksen tuntomerkit
 
-- **Tehtävä 1 (päätöstaulukko):** Taulukko on täytetty oikein, kuvailut ovat tarkkoja ja teknisesti oikeita.
-- **Tehtävä 2 (kontrollisuunnitelma):** Riskit ovat realistisia, kontrollit ovat konkreettisia ja trade-offien pohdinta on syvällistä.
+- **Tehtävä 1 (päätöstaulukko):** taulukko on täytetty oikein, kuvailut ovat tarkkoja ja teknisesti oikeita.
+- **Tehtävä 2 (kontrollisuunnitelma):** riskit ovat realistisia, kontrollit konkreettisia ja kompromissien pohdinta syvällistä.
 
 Molemmat tehtävät opettavat sinulle keskeistä osaamista: agenttien sisäisten mekanismien ymmärtämistä ja kykyä suunnitella turvallisia agenttijärjestelmiä.
 

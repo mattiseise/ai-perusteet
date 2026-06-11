@@ -8,28 +8,27 @@ Ymmärtää tekijänoikeuksien ja koulutusdatan eettisiä ja oikeudellisia näk�
 
 ### Ohjeet
 
-1. **Tutustu tositapaukseen:**
-   Valitse yksi näistä oikeustapauksista:
-2. **OpenAI vs. kirjailijoiden yhdistys** (2023) — kirjailijoiden korvausvaatimus ChatGPT:n koulutuksesta
-3. **Stability AI vs. kuvataiteilijat** (2023) — Midjourneyn ja Stable Diffusionin koulutus kuvataiteilijoiden teoksilla ilman lupaa
-4. **Google vs. kirjoittajat** — Googlen koulutusdatan hankinnan laillisuus
-5. **Tutki tapausta:**
-6. Kuka on kantaja ja kuka vastapuoli?
-7. Mitä väitettä kantaja esittää?
-8. Mitä väitettä vastapuoli esittää?
-9. Mikä on "reilu käyttö" (fair use) -argumentti?
-10. **Täytä analyysitaulukko:**
+1. **Tutustu tositapaukseen.** Valitse yksi näistä oikeustapauksista:
+   - **Kirjailijat (Authors Guild) vs. OpenAI** (2023) — kirjailijoiden korvausvaatimus teostensa käytöstä ChatGPT:n koulutuksessa
+   - **Kuvataiteilijat vs. Stability AI ja Midjourney** (2023) — kuvageneraattorien koulutus taiteilijoiden teoksilla ilman lupaa
+   - **Kirjailijat (Authors Guild) vs. Google** (Google Books, ratkaistu 2015) — kirjojen skannaus ja indeksointi katsottiin Yhdysvalloissa lopulta reiluksi käytöksi
+2. **Tutki tapausta:**
+   - Kuka on kantaja ja kuka vastaaja?
+   - Mitä väitettä kantaja esittää?
+   - Mitä väitettä vastaaja esittää?
+   - Mikä on "reilu käyttö" (fair use) -argumentti?
+3. **Täytä analyysitaulukko:**
 
-| Näkökulma | Kantajan näkemys | Vastapuolen näkemys | Sinun näkemyksesi |
+| Näkökulma | Kantajan näkemys | Vastaajan näkemys | Sinun näkemyksesi |
 | --- | --- | --- | --- |
 | Onko tekijöiltä pyydetty lupa? |  |  |  |
 | Pitäisikö tekijöille maksaa korvausta? |  |  |  |
 | Onko koulutus "transformatiivista"? |  |  |  |
 | Mitkä ovat oikeudelliset ja eettiset näkökohdat? |  |  |  |
 
-1. **Kirjoita johtopäätös (4–5 lausetta):**
-2. Kumpi osapuoli on omasta mielestäsi oikeutetumpi?
-3. Mitä ammattilaisena pitäisit tekijänoikeuskysymyksissä mielessä käyttäessäsi tekoälyä?
+4. **Kirjoita johtopäätös (4–5 lausetta):**
+   - Kumpi osapuoli on omasta mielestäsi oikeutetumpi?
+   - Mitä ammattilaisena pitäisit tekijänoikeuskysymyksissä mielessä käyttäessäsi tekoälyä?
 
 ---
 
@@ -48,10 +47,10 @@ Oppia tunnistamaan ja analysoimaan, miten algoritminen harha syntyy ja miten sit
 - **Lainahyväksyntä** — algoritmi diskriminoi tiettyjä etnisiä ryhmiä
 
 1. **Etsi tapaus ja dokumentoi se:**
-2. Mitä algoritmi teki?
-3. Ketä kohtaan se oli puolueellinen?
-4. Miksi harha syntyi? (Minkä koulutusdatan vuoksi?)
-5. **Analysoi pääkohdat:**
+   - Mitä algoritmi teki?
+   - Ketä kohtaan se oli puolueellinen?
+   - Miksi harha syntyi? (Minkä koulutusdatan vuoksi?)
+2. **Analysoi pääkohdat:**
 
 | Kohta | Kuvaus |
 | --- | --- |
@@ -61,9 +60,9 @@ Oppia tunnistamaan ja analysoimaan, miten algoritminen harha syntyy ja miten sit
 | Seuraukset | Mitä vahinkoa se aiheutti? |
 | Ratkaisu | Miten sitä korjattiin tai sen käyttö lopetettiin? |
 
-1. **Pohdi soveltamista:**
-2. Jos sinua pyydettäisiin testaamaan samanlaista algoritmia organisaatiossasi, mitä testejä tekisit harhan varalta?
-3. Kuka olisi vastuussa, jos algoritmi osoittautuisi puolueelliseksi?
+3. **Pohdi soveltamista:**
+   - Jos sinua pyydettäisiin testaamaan samanlaista algoritmia organisaatiossasi, mitä testejä tekisit harhan varalta?
+   - Kuka olisi vastuussa, jos algoritmi osoittautuisi puolueelliseksi?
 
 ---
 
@@ -76,9 +75,9 @@ Ymmärtää, mitä "näkymätöntä työtä" tekoälyn opetukseen liittyy ja mik
 ### Ohjeet
 
 1. **Tutki datan merkitsijöiden olosuhteita:**
-2. Etsi artikkeleita tai dokumentteja aiheesta "AI data labeling" tai "Amazon Mechanical Turk"
-3. Tutki, mitä he tekevät, millaista palkkaa he saavat, millaiset työolosuhteet heillä on ja millaisia mielenterveyshaasteita työhön liittyy
-4. **Dokumentoi löydöksesi:**
+   - Etsi artikkeleita tai dokumentteja aiheesta "AI data labeling" tai "Amazon Mechanical Turk".
+   - Tutki, mitä he tekevät, millaista palkkaa he saavat, millaiset työolosuhteet heillä on ja millaisia mielenterveyshaasteita työhön liittyy.
+2. **Dokumentoi löydöksesi:**
 
 | Olosuhde | Kuvaus | Lähde |
 | --- | --- | --- |
@@ -87,13 +86,11 @@ Ymmärtää, mitä "näkymätöntä työtä" tekoälyn opetukseen liittyy ja mik
 | Psyykkinen kuormitus | Mitkä haasteet heillä on? |  |
 | Oikeudet | Onko heillä sopimuksia, vakuutuksia? |  |
 
-1. **Pohdi vastuuta:**
-2. Kun käytät ChatGPT:tä, käytät mallia, jota nämä työntekijät ovat opettaneet.
-3. Kuka on vastuussa heidän hyvinvoinnistaan? (OpenAI? Sinä? Molemmat?)
-4. Pitäisikö merkitsijöille maksaa enemmän?
-5. Pitäisikö heidän saada pääsy malleihin, joita he auttoivat rakentamaan?
-6. **Kirjoita eettinen kannanotto (3–4 lausetta):**
-7. Millä tavoin ammattilaisena ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
+3. **Pohdi vastuuta.** Kun käytät ChatGPT:tä, käytät mallia, jota nämä työntekijät ovat opettaneet:
+   - Kuka on vastuussa heidän hyvinvoinnistaan? (Palveluntarjoaja? Sinä? Molemmat?)
+   - Pitäisikö merkitsijöille maksaa enemmän?
+   - Pitäisikö heidän saada pääsy malleihin, joita he auttoivat rakentamaan?
+4. **Kirjoita eettinen kannanotto (3–4 lausetta):** millä tavoin ammattilaisena ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
 
 ---
 
@@ -106,21 +103,21 @@ Ymmärtää tekoälyn ympäristöjalanjälkeä ja harkinnan tarvetta sen käytö
 ### Ohjeet
 
 1. **Etsi tietoja ChatGPT:n (tai muiden mallien) energiankulutuksesta:**
-2. Kuinka paljon sähköä yksi query kuluttaa?
-3. Kuinka paljon vettä datakeskukset käyttävät?
-4. Mitä kasvihuonekaasuja ne tuottavat?
-5. **Laske ja vertaa:**
+   - Kuinka paljon sähköä yksi kysely kuluttaa?
+   - Kuinka paljon vettä datakeskukset käyttävät?
+   - Mitä kasvihuonekaasuja ne tuottavat?
+2. **Laske ja vertaa:**
 
 | Metriikka | Luku | Vertailukohta |
 | --- | --- | --- |
-| Sähkö per query | X wattituntia | = vertaa tavallisen LED-lampun käyttöön tunnissa |
-| Vesi vuodessa | X miljoonaa gallonaa | = vertaa kaupungin vesijohtokulutukseen |
+| Sähkö per kysely | X wattituntia | = vertaa tavallisen LED-lampun käyttöön tunnissa |
+| Vesi vuodessa | X miljoonaa litraa | = vertaa kaupungin vesijohtokulutukseen |
 | Hiilijalanjälki | X tonnia CO2/vuosi | = vertaa autojen tai lentoliikenteen päästöihin |
 
-1. **Pohdi rationaalista käyttöä:**
-2. Jos organisaatiosi käyttäisi tekoälyä jokaiseen tehtävään (esim. jokaiseen sähköpostiin), kuinka paljon se kasvattaisi energiankulutusta?
-3. Mitkä tehtävät ovat "arvoisia" tekoälyn käytön energiakustannusten näkökulmasta?
-4. Mitä tarkoittaisi "harkittu" tekoälyn käyttö organisaatiossasi?
+3. **Pohdi rationaalista käyttöä:**
+   - Jos organisaatiosi käyttäisi tekoälyä jokaiseen tehtävään (esim. jokaiseen sähköpostiin), kuinka paljon se kasvattaisi energiankulutusta?
+   - Mitkä tehtävät ovat "arvoisia" tekoälyn käytön energiakustannusten näkökulmasta?
+   - Mitä tarkoittaisi "harkittu" tekoälyn käyttö organisaatiossasi?
 
 ---
 

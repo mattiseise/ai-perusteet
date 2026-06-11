@@ -1,4 +1,4 @@
-# Sanasto – Lesson 19
+# Sanasto – oppitunti 19
 
 ## Agentti (agent)
 

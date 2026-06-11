@@ -21,7 +21,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
 
 1. **Johdanto noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -60,7 +59,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
    Kerro opiskelijoille:
 
    > IT-ammattilaiselle tärkeä taito on valita oikea konteksti. Jos ongelma näkyy käyttöliittymässä, kuvakaappaus voi olla erittäin hyödyllinen. Jos ongelma näkyy lokissa tai koodissa, teksti, lokirivit tai koodikatkelma voivat olla tärkeämpiä. Usein paras tulos syntyy, kun teksti ja kuva täydentävät toisiaan.
-```
 
 **Esimerkki opetukseen**
 
@@ -95,7 +93,6 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten rakennetaan tehokas **mu
 
 1. **Asetelman muuttaminen noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -163,7 +160,6 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten rakennetaan tehokas **mu
    - Lokit ja koodi kannattaa rajata olennaisiin kohtiin.
    - Arkaluonteiset tiedot, kuten nimet, sähköpostiosoitteet, käyttäjätunnukset, avaimet ja salasanat, pitää poistaa ennen materiaalin lähettämistä tekoälylle.
    - Jos konteksti alkaa täyttyä, säilytä ensin lyhyt ongelmakuvaus, olennaiset lokit, relevantti koodi ja tiivistelmä aiemmista havainnoista.
-```
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat ehdottavat kaiken materiaalin lähettämistä tekoälylle, kysy: “Mikä tästä on oikeasti välttämätöntä ratkaisun kannalta, ja mikä voi lisätä kohinaa tai tietosuojariskiä?”
 

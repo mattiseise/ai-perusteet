@@ -25,7 +25,6 @@ Kirjoita taululle tai projisoi näkyviin seuraavat kuusi järjestelmää:
 
 1. **Avaus noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -49,7 +48,6 @@ Kirjoita taululle tai projisoi näkyviin seuraavat kuusi järjestelmää:
    > Voiko tämän toteuttaa tekoälyllä, vai voiko sen tehdä tavallisella ohjelmalla?
 
    **Keskeinen havainto:** Tämän voi toteuttaa molemmilla tavoilla. Esimerkki on tarkoituksella epämääräinen, joten se ei yksin riitä todistamaan, että kyseessä olisi tekoäly.
-```
 
 **Esimerkki opetukseen**
 
@@ -115,7 +113,6 @@ Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia säänt
 6. Ryhmä C esittelee ajatuksensa siitä, miten tekoäly voisi lähestyä ongelmaa. Varaa esittelyyn noin 3 minuuttia.
 7. Kysy luokalta:
 
-   ```
    - Mitä dataa tekoäly tarvitsisi petosten tunnistamiseen?
    - Mitä kuvioita, yhteyksiä tai poikkeamia tekoäly voisi oppia datasta?
    - Milloin sääntöpohjainen ratkaisu voisi silti olla parempi?
@@ -126,7 +123,6 @@ Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia säänt
    Säännöt: nopeita ja ennustettavia, mutta usein jäykkiä.
 
    Tekoäly: oppii kuvioita ja toimii usein paremmin monimutkaisissa tilanteissa, mutta vaatii dataa.
-```
 
 ### Mahdollisia vastauksia ja väärinkäsityksiä
 

@@ -1565,6 +1565,55 @@ body:has(#lesson.active) .rv-switch{{display:flex}}
 .ai-demo__cap{{padding:14px 20px;margin:0;font-family:var(--font-mono);font-size:11px;
   color:#8B94B3;border-top:1px solid #1C2438;background:#0B0F1A}}
 
+/* ============ SITE FOOTER ============ */
+.site-footer{{
+  margin-top:56px;
+  padding:26px 20px 34px;
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  letter-spacing:.05em;
+  color:var(--text-muted);
+  border-top:1px solid var(--border-light);
+}}
+.site-footer a{{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid var(--border-soft);
+  transition:color .2s,border-color .2s;
+}}
+.site-footer a:hover{{
+  color:var(--text-dark);
+  border-color:currentColor;
+}}
+
+/* ============ MOBILE ============ */
+@media (max-width:680px){{
+  .ai-demo__stage{{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    justify-content:flex-start!important;
+    scrollbar-width:thin;
+  }}
+  .ai-demo__stage>*{{margin-left:auto;margin-right:auto;flex-shrink:0}}
+  .ai-demo::after{{
+    content:'⟷ vieritä kuvaa sivusuunnassa';
+    display:block;
+    padding:0 20px 10px;
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#5D6880;
+  }}
+  .panel table{{display:block;max-width:100%;overflow-x:auto}}
+}}
+@media (max-width:480px){{
+  .topbar{{padding:10px 14px;gap:10px}}
+  .topbar .progress-text{{display:none}}
+  .topbar .progress-bar{{width:56px}}
+}}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({{
@@ -1885,6 +1934,8 @@ window.addEventListener('popstate',()=>routeFromHash(false));
 updProg();updCards();
 routeFromHash(false);
 </script>
+
+<footer class="site-footer">© Matti Seise · <a href="https://www.seise.org" target="_blank" rel="noopener">www.seise.org</a></footer>
 
 </body>
 </html>'''

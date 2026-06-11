@@ -34,7 +34,6 @@ Valmista lisäksi lista sovelluksista ja esimerkeistä:
 
 1. **Jaa luokka ryhmiin noin 2 minuutissa.**
 
-   ```
 
    Muodosta 2–3 ryhmää ja anna jokaiselle ryhmälle 2–3 sovellusta tai esimerkkiä.
 2. **Ryhmät keskustelevat ja sijoittavat esimerkit kategorioihin noin 10 minuutissa.**
@@ -67,7 +66,6 @@ Valmista lisäksi lista sovelluksista ja esimerkeistä:
    AGI = teoreettinen yleistekoäly, joka pystyisi toimimaan laajasti eri tehtävissä ihmisen kaltaisella joustavuudella. Sitä ei ole vielä olemassa.
 
    Ei tekoälyä = automaatio, sääntöpohjainen toiminta tai tavallinen ohjelmisto ilman oppivaa mallia.
-```
 
 ### Esimerkkien mahdollinen luokittelu
 
@@ -126,7 +124,6 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
 
 1. **Avaus noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -155,7 +152,6 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
    - Generatiivinen tekoäly voi olla hyödyllinen ideoinnissa, tekstin luonnostelussa, ohjelmoinnin tukena ja vaihtoehtojen vertailussa.
    - Generatiivisen tekoälyn tuottamat vastaukset eivät aina ole tarkkoja tai luotettavia.
    - Käyttäjän pitää osata arvioida, tarkistaa ja tarvittaessa korjata tekoälyn tuottamaa sisältöä.
-```
 
 ### Testien yhteenveto
 
@@ -202,7 +198,6 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 
 1. **Ryhmät keskustelevat noin 10 minuuttia.**
 
-   ```
 
    Pyydä ryhmiä pohtimaan omaa ammattiaan seuraavien kysymysten avulla:
 
@@ -227,7 +222,6 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
    - Tekoäly voi automatisoida rutiinitehtäviä ja tukea asiantuntijatyötä.
    - Strateginen ajattelu, ongelmanratkaisu, vastuun kantaminen ja ihmisten kanssa toimiminen säilyvät tärkeinä taitoina.
    - Ammattilaisen kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.
-```
 
 ### Ryhmän vastauspohja
 

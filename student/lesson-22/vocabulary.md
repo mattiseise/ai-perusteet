@@ -1,4 +1,4 @@
-# Sanasto – Lesson 22: Agentin työkalut
+# Sanasto – oppitunti 22: Agentin työkalut
 
 ## Työkalu (tool)
 

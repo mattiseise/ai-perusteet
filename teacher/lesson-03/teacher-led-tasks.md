@@ -22,7 +22,6 @@ Projisoi teksti tai kirjoita se taululle niin, että opiskelijat näkevät puutt
 
 1. **Avaus noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -54,7 +53,6 @@ Projisoi teksti tai kirjoita se taululle niin, että opiskelijat näkevät puutt
    Kerro opiskelijoille:
 
    > Tämän vuoksi ChatGPT voi vaikuttaa älykkäältä. Se pystyy tuottamaan hyvin toimivia sanayhdistelmiä, mutta se tekee sen ennustamalla tekstiä vaihe vaiheelta.
-```
 
 ### Keskustelun tueksi
 
@@ -110,7 +108,6 @@ Voit käyttää esimerkiksi seuraavia kysymystyyppejä:
 
 1. **Avaus noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -149,7 +146,6 @@ Voit käyttää esimerkiksi seuraavia kysymystyyppejä:
    - tietoturva,
    - asiakasviestintä,
    - liikesalaisuudet ja yrityksen päätöksenteko.
-```
 
 ### Hallusinaation tarkistusmalli
 
@@ -196,7 +192,6 @@ Valitse kaksi erilaista tehtävää:
 
 1. **Peruskäsite noin 3 minuuttia:**
 
-   ```
 
    Selitä opiskelijoille:
 
@@ -229,7 +224,6 @@ Valitse kaksi erilaista tehtävää:
    - Kriittisissä ja tarkkuutta vaativissa tehtävissä kannattaa käyttää matalaa lämpötilaa.
    - Luovissa tehtävissä korkeampi lämpötila voi auttaa tuottamaan vaihtelevampia vastauksia.
    - Yhtä oikeaa lämpötilaa ei ole, vaan sopiva asetus riippuu tehtävän tavoitteesta.
-```
 
 ### Lämpötilan valinnan yhteenveto
 

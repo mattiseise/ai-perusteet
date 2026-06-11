@@ -20,7 +20,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kon
 
 1. **Johdanto noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -61,7 +60,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kon
    Selitä opiskelijoille:
 
    > Mitä pidemmäksi keskustelu kasvaa, sitä tärkeämpää on hallita kontekstia. Siksi tarvitaan strategioita, kuten **tiivistämistä**, **ankkurointia** ja **tehtävän pilkkomista**.
-```
 
 ### Odotettu oppimistulos
 
@@ -94,7 +92,6 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
 1. **Asetelman muuttaminen noin 2 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -177,7 +174,6 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
    Kerro opiskelijoille:
 
    > Tämä on ammattimainen tapa käyttää tekoälyä suurissa IT-tehtävissä. Ensin suunnitellaan kokonaisuus, sitten käsitellään osat ja lopuksi yhdistetään havainnot.
-```
 
 **Vinkki arviointiin:** Hyvä pilkkomissuunnitelma ei ole vain lista osista. Siinä näkyy myös, miten osien tulokset tiivistetään ja miten seuraava osa ankkuroidaan edelliseen.
 
@@ -209,7 +205,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että teko
 
 1. **Asetelma noin 3 minuuttia:**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -254,7 +249,6 @@ Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että teko
    Kokoa lopuksi tärkein havainto:
 
    > Tekoäly voi antaa väärän tai väärään kontekstiin perustuvan vastauksen yhtä vakuuttavasti kuin oikean vastauksen. Ammattilaisen vastuulla on tarkistaa, että vastaus noudattaa tehtävän rajauksia.
-```
 
 ### Odotettu oppimistulos
 

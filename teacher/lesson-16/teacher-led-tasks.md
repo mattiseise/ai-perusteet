@@ -26,7 +26,6 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
 1. **Johdanto noin 5 minuuttia**
 
-   ```
 
    Kerro opiskelijoille:
 
@@ -118,7 +117,6 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
    - Mitkä ammatit muuttuvat?
    - Miten tekoäly voisi vaikuttaa juuri sinun tulevaan työhösi?
    - Mitä taitoja ihmiseltä tarvitaan edelleen?
-```
 
 ### Odotettu oppimistulos
 
@@ -160,7 +158,6 @@ Tehtävän tavoitteena on harjoitella valitsemaan tilanteeseen sopiva **tekoäly
 
 1. **Ryhmien muodostus noin 2 minuuttia**
 
-   ```
 
    Jaa opiskelijat 3–4 hengen ryhmiin. Sopiva määrä on noin 5–6 ryhmää luokan koosta riippuen.
 2. **Säännöt noin 2 minuuttia**
@@ -195,7 +192,6 @@ Tehtävän tavoitteena on harjoitella valitsemaan tilanteeseen sopiva **tekoäly
    - Oliko jokin tilanne, jossa “ei tekoälyä” olisi ollut paras vastaus?
    - Miten tekijänoikeudet vaikuttivat valintaan?
    - Miten tietosuoja tai turvallisuus vaikuttivat päätökseen?
-```
 
 ### Odotettu oppimistulos
 
@@ -258,7 +254,6 @@ Tehtävän tavoitteena on saada opiskelijat pohtimaan **tekijänoikeuksien** ja 
 
 1. **Ryhmien valmistelu noin 5 minuuttia**
 
-   ```
 
    Jokainen ryhmä saa roolinsa ja argumenttiehdotukset. Ryhmän tehtävänä on valmistella lyhyt avauspuheenvuoro ja yksi kysymys muille ryhmille.
 2. **Kierros 1: ensimmäiset avaukset noin 10 minuuttia**
@@ -295,7 +290,6 @@ Tehtävän tavoitteena on saada opiskelijat pohtimaan **tekijänoikeuksien** ja 
    - Oikeustapauksia ja sääntelyä on käynnissä eri maissa.
    - Ei ole yhtä yksinkertaista vastausta, joka ratkaisee kaikki tilanteet.
    - Ammattilaisen pitää tarkistaa työkalun käyttöehdot, lisenssit ja organisaation ohjeet ennen tuotosten käyttöä.
-```
 
 ### Odotettu oppimistulos
 
@@ -326,7 +320,6 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 
 1. **Lyhyt esittely noin 10–20 sekuntia opiskelijaa kohti**
 
-   ```
 
    Jokainen opiskelija vastaa kolmeen kysymykseen:
 
@@ -348,7 +341,6 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
    - Millaiset tuotokset olivat onnistuneimpia?
    - Mitä opitte muiden töistä?
    - Miten tekoälyn käyttö kannattaa merkitä portfolioon?
-```
 
 ### Odotettu oppimistulos
 
@@ -363,10 +355,12 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 
 | Osio | Aika | Sisältö |
 | --- | --- | --- |
-| **Tehtävä 16.1** | 45–55 min | Live-demo ja eri tekoälytyökalujen vertailu |
-| **Tehtävä 16.2** | 25–35 min | Työkalun valinta -peli pienryhmissä |
-| **Tehtävä 16.3** | 35–40 min | Tekijänoikeuskeskustelu rooliryhmissä |
+| **Tehtävä 16.1** | 40–45 min | Live-demo ja eri tekoälytyökalujen vertailu (ydinosiot; valinnaiset kohdat 7–8 vain jos aikaa jää) |
+| **Tehtävä 16.2** | 20–25 min | Työkalun valinta -peli pienryhmissä |
+| **Tehtävä 16.3** | 25–30 min | Tekijänoikeuskeskustelu rooliryhmissä (tiivistettynä) |
 | **Tehtävä 16.4** | Tarvittaessa | Portfolio-esittelykiertue, jos oppitunnilla jää aikaa |
+
+_Yhteensä noin 85–100 min: jos aika on tiukka, jätä 16.1:n valinnaiset osiot (koodausavustajat, pidempi loppukeskustelu) pois ja tiivistä 16.3, niin kokonaisuus mahtuu 90 minuuttiin._
 
 ## Arviointi
 
