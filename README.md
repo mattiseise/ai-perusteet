@@ -1,4 +1,4 @@
-# Tekoälyn perusteet — Business College Helsinki
+# Tekoälyn perusteet
 
 27-oppituntinen kurssi tekoälyn perusteista. Kolme kokonaisuutta: teoria, käyttö ja agentit.
 
