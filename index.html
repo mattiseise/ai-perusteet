@@ -7243,113 +7243,33 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <p>Erityisesti Yhdysvaltain tekijänoikeuskäytännössä käytetty käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.</p>
 <hr />`,
     stasks:`<h1>Opiskelutehtävät: Etiikka, tekijänoikeudet ja ympäristövaikutukset</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 1: Tekijänoikeudet ja koulutusdata — case-analyysi</h2></div><div class="task-card-body">
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 1: Kenen työstä tekoäly oppii?</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Ymmärtää tekijänoikeuksien ja koulutusdatan eettisiä ja oikeudellisia näkökohtia.</p>
+<p>Ymmärtää, miksi tekoälyn koulutusdata herättää kysymyksiä tekijänoikeuksista ja reiluudesta.</p>
 <h3>Ohjeet</h3>
 <ol>
-<li><strong>Tutustu tositapaukseen.</strong> Valitse yksi näistä oikeustapauksista:</li>
-<li><strong>Kirjailijat (Authors Guild) vs. OpenAI</strong> (2023) — kirjailijoiden korvausvaatimus teostensa käytöstä ChatGPT:n koulutuksessa</li>
-<li><strong>Kuvataiteilijat vs. Stability AI ja Midjourney</strong> (2023) — kuvageneraattorien koulutus taiteilijoiden teoksilla ilman lupaa</li>
-<li><strong>Kirjailijat (Authors Guild) vs. Google</strong> (Google Books, ratkaistu 2015) — kirjojen skannaus ja indeksointi katsottiin Yhdysvalloissa lopulta reiluksi käytöksi</li>
-<li><strong>Tutki tapausta:</strong></li>
-<li>Kuka on kantaja ja kuka vastaaja?</li>
-<li>Mitä väitettä kantaja esittää?</li>
-<li>Mitä väitettä vastaaja esittää?</li>
-<li>Mikä on "reilu käyttö" (fair use) -argumentti?</li>
-<li><strong>Täytä analyysitaulukko:</strong></li>
+<li><strong>Taustaksi:</strong> Tekoälymallit on opetettu valtavalla määrällä netistä kerättyä tekstiä ja kuvia. Mukana on paljon ihmisten tekemiä töitä — kirjoja, artikkeleita, piirroksia, valokuvia — usein ilman, että tekijöiltä kysyttiin lupaa.</li>
+<li><strong>Kokeile:</strong> Pyydä tekoälyä tuottamaan teksti tai kuva jonkun tunnetun tekijän tyyliin (esim. "kirjoita runo Tove Janssonin tyyliin"). Katso lopputulos.</li>
+<li><strong>Pohdi ja vastaa lyhyesti (pari lausetta kuhunkin):</strong></li>
+<li>Onko reilua, että tekoäly oppii jonkun työstä ilman lupaa?</li>
+<li>Pitäisikö alkuperäiselle tekijälle kertoa, maksaa tai kysyä lupa?</li>
+<li>Miltä sinusta tuntuisi, jos tekoäly oppisi sinun töistäsi ilman lupaa?</li>
+<li>Mitä ammattilaisena kannattaa pitää mielessä, kun käytät tekoälyä?</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>Näkökulma</th>
-<th>Kantajan näkemys</th>
-<th>Vastaajan näkemys</th>
-<th>Sinun näkemyksesi</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Onko tekijöiltä pyydetty lupa?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Pitäisikö tekijöille maksaa korvausta?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Onko koulutus "transformatiivista"?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Mitkä ovat oikeudelliset ja eettiset näkökohdat?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><strong>Kirjoita johtopäätös (4–5 lausetta):</strong></li>
-<li>Kumpi osapuoli on omasta mielestäsi oikeutetumpi?</li>
-<li>Mitä ammattilaisena pitäisit tekijänoikeuskysymyksissä mielessä käyttäessäsi tekoälyä?</li>
-</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2: Algoritmisen harhan analyysi ja testaus</h2></div><div class="task-card-body">
+<p><em>Halutessasi syvemmälle: tutustu todelliseen oikeustapaukseen (esim. kuvataiteilijat vs. kuvageneraattorit, 2023) ja katso, mitä molemmat puolet perustelevat.</em></p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2: Mistä tekoälyn oletukset tulevat?</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Oppia tunnistamaan ja analysoimaan, miten algoritminen harha syntyy ja miten sitä voi testata.</p>
+<p>Oppia tunnistamaan, miten tekoäly voi oppia vinoutuneita oletuksia datasta.</p>
 <h3>Ohjeet</h3>
-<p><strong>Valitse yksi tunnettu algoritmiharhatapaus:</strong><br />
-- <strong>Amazonin rekrytointialgoritmi</strong> — yritti systemaattisesti karsia naisia<br />
-- <strong>COMPAS-algoritmi</strong> — oikeusjärjestelmän uusintariskiarviointi oli puolueellinen rodun suhteen<br />
-- <strong>Kasvojen tunnistus</strong> — toimii huonommin tummaihoisilla<br />
-- <strong>Lainahyväksyntä</strong> — algoritmi diskriminoi tiettyjä etnisiä ryhmiä</p>
 <ol>
-<li><strong>Etsi tapaus ja dokumentoi se:</strong></li>
-<li>Mitä algoritmi teki?</li>
-<li>Ketä kohtaan se oli puolueellinen?</li>
-<li>Miksi harha syntyi? (Minkä koulutusdatan vuoksi?)</li>
-<li><strong>Analysoi pääkohdat:</strong></li>
+<li><strong>Taustaksi:</strong> Tekoäly oppii siitä datasta, jolla se on koulutettu. Jos data on vinoutunutta, tekoäly oppii samat vinoutumat — esimerkiksi oletuksia siitä, kuka tekee mitäkin työtä.</li>
+<li><strong>Kokeile:</strong> Pyydä tekoälyä kuvailemaan "tyypillinen X" muutamalla ammatilla (esim. johtaja, sairaanhoitaja, jalkapalloilija, koodari). Kirjaa, millaisia oletuksia se teki (sukupuoli, ikä, ulkonäkö).</li>
+<li><strong>Pohdi ja vastaa lyhyesti:</strong></li>
+<li>Mitä oletuksia tekoäly teki? Toistuiko jokin kaava?</li>
+<li>Mistä tällaiset oletukset voivat tulla?</li>
+<li>Mitä haittaa syntyisi, jos tällaista tekoälyä käytettäisiin valitsemaan ihmisiä työhön tai kouluun?</li>
+<li>Miten ongelmaa voisi vähentää?</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>Kohta</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Algoritmin tehtävä</td>
-<td>Mitä sillä yritettiin tehdä?</td>
-</tr>
-<tr>
-<td>Harhasta kärsivä ryhmä</td>
-<td>Ketä se diskriminoi?</td>
-</tr>
-<tr>
-<td>Harhan lähde</td>
-<td>Minkä datan vuoksi harha syntyi?</td>
-</tr>
-<tr>
-<td>Seuraukset</td>
-<td>Mitä vahinkoa se aiheutti?</td>
-</tr>
-<tr>
-<td>Ratkaisu</td>
-<td>Miten sitä korjattiin tai sen käyttö lopetettiin?</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><strong>Pohdi soveltamista:</strong></li>
-<li>Jos sinua pyydettäisiin testaamaan samanlaista algoritmia organisaatiossasi, mitä testejä tekisit harhan varalta?</li>
-<li>Kuka olisi vastuussa, jos algoritmi osoittautuisi puolueelliseksi?</li>
-</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3: Datan merkitsijät ja globaali työ</h2></div><div class="task-card-body">
+<p><em>Halutessasi syvemmälle: tutustu todelliseen tapaukseen, jossa algoritmi oli puolueellinen (esim. rekrytointialgoritmi, joka suosi miehiä).</em></p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3: Datan merkitsijät ja globaali työ</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Ymmärtää, mitä "näkymätöntä työtä" tekoälyn opetukseen liittyy ja mikä sen eettinen merkitys on.</p>
 <h3>Ohjeet</h3>
@@ -7438,32 +7358,28 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <li>Jos organisaatiosi käyttäisi tekoälyä jokaiseen tehtävään (esim. jokaiseen sähköpostiin), kuinka paljon se kasvattaisi energiankulutusta?</li>
 <li>Mitkä tehtävät ovat "arvoisia" tekoälyn käytön energiakustannusten näkökulmasta?</li>
 <li>Mitä tarkoittaisi "harkittu" tekoälyn käyttö organisaatiossasi?</li>
-</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 5: Professionaalinen eettinen kannanotto</h2></div><div class="task-card-body">
+</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 5: Oma kannanotto — vastuullinen tekoälyn käyttö</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Kehittää kykyä reflektoida omaa ammatillista vastuuta tekoälyn käytössä.</p>
+<p>Pohtia omaa vastuutaan tekoälyn käyttäjänä.</p>
 <h3>Ohjeet</h3>
-<p>Kirjoita <strong>lyhyt eettinen kannanotto</strong> (1–2 sivua):</p>
-<p><strong>Valitse yksi aihe seuraavista:</strong><br />
-1. Miten ottaisit tekijänoikeudet huomioon käyttäessäsi generatiivista tekoälyä ammatillisissa projekteissa?<br />
-2. Miten varmistaisit, etteivät käyttämäsi algoritmit ole puolueellisia?<br />
-3. Pitäisikö organisaatiossasi olla "tekoälyn eettinen neuvosto" — ja mitä se tekisi?<br />
-4. Voiko tekoälyn käyttö olla eettisesti kestävää ilman suurempia rakenteellisia muutoksia (esim. tekijöille maksamista)?</p>
-<p><strong>Esitysmuoto:</strong><br />
-- Johdanto: Mikä on ongelmasi?<br />
-- Argumentit: Mitkä ajattelutavat puoltavat valintaasi?<br />
-- Vastalauseet: Mitä muut voivat vastustaa?<br />
-- Johtopäätös: Mikä on ammatillinen kantasi?</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ohjeet tehtäviin</h2></div><div class="task-card-body">
+<p>Kirjoita lyhyt oma kannanotto (noin 5–8 lausetta). Valitse yksi kysymys:</p>
+<ol>
+<li>Miten huolehtisit tekijänoikeuksista, kun käytät tekoälyä omissa töissäsi?</li>
+<li>Miten varmistaisit, ettei käyttämäsi tekoäly tee epäreiluja oletuksia?</li>
+<li>Millaisia sääntöjä tekoälyn käytölle pitäisi olla koulussa tai työpaikalla?</li>
+</ol>
+<p>Vastaa omin sanoin: mikä on mielipiteesi ja miksi? Voit käyttää tekoälyä apuna jäsentämisessä, mutta kannanoton pitää olla sinun.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ohjeet tehtäviin</h2></div><div class="task-card-body">
 <ul>
 <li><strong>Tehtävät 1–4</strong> voidaan tehdä yksin tai pareittain.</li>
 <li><strong>Tehtävä 5</strong> on reflektiivinen ja kannattaa tehdä yksin, mutta voit käsitellä tuloksia pareittain.</li>
-<li>Käytä luotettavia lähteitä (tieteelliset artikkelit, uutispalvelut, tutkimusraportit).</li>
+<li>Tehtävissä 3 ja 4 käytä luotettavia lähteitä (tieteelliset artikkelit, uutispalvelut, tutkimusraportit).</li>
 </ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Odotettu tuotos</h2></div><div class="task-card-body">
 <p><strong>Tehtävä 1:</strong><br />
-- Täytetty analyysitaulukko<br />
-- Johtopäätös, joka osoittaa ammatillisesti harkittua näkemystä tekijänoikeuksista</p>
+- Lyhyet vastaukset pohdintakysymyksiin<br />
+- Oma näkemys siitä, onko tekoälyn oppiminen toisten työstä reilua</p>
 <p><strong>Tehtävä 2:</strong><br />
-- Tunnettu harhatapaus dokumentoituna<br />
-- Testausideat ja vastuuanalyysi</p>
+- Kirjaus tekoälyn tekemistä oletuksista<br />
+- Pohdinta siitä, mistä harha syntyy ja mitä haittaa siitä voi olla</p>
 <p><strong>Tehtävä 3:</strong><br />
 - Datan merkitsijöiden olosuhteiden dokumentointi<br />
 - Eettinen kannanotto, joka osoittaa ymmärrystä globaalista vastuusta</p>
@@ -7471,8 +7387,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 - Energia- ja vedenkulutuksen laskelmia<br />
 - Pohdinta harkitun käytön kriteereistä</p>
 <p><strong>Tehtävä 5:</strong><br />
-- Lähdepohjainen eettinen kannanotto (1–2 sivua)<br />
-- Näkemys omasta ammatillisesta vastuusta</p></div></div>`,
+- Lyhyt oma kannanotto (n. 5–8 lausetta) vastuullisesta tekoälyn käytöstä</p></div></div>`,
     tltasks:`<h1>Opettajavetoiset harjoitukset: etiikka, oikeudet ja vastuu</h1>
 <p>Tunnin syventävät yksilö- ja paritehtävät (tekijänoikeustapaukset, algoritminen harha, datan merkitsijät, ympäristölaskelmat) ovat opiskelutehtävissä. Tässä on opettajavetoinen ydinharjoitus, joka käsittelee vastuullista ja harkittua käyttöä ympäristönäkökulmasta.</p>
 <div class="task-card task-card--assessment"><div class="task-card-header"><h2>Harjoitus 1: Ympäristövaikutusten arviointi — milloin tekoälyn käyttö on perusteltua?</h2></div><div class="task-card-body">
