@@ -1682,7 +1682,7 @@ body:has(#lesson.active) .rv-switch{{display:flex}}
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <div class="hero-eyebrow">AI · Perusteet — 1 OV</div>
+        <div class="hero-eyebrow">AI · Perusteet — 3 OSP</div>
         <h1 class="hero-title">Ymmärrä tekoäly <em>teoriasta</em> agentteihin.</h1>
         <p class="hero-subtitle">27 oppituntia, jotka avaavat tekoälyn — teoriasta käytäntöön ja itsenäisiin agentteihin.</p>
         <div class="hero-stats">
