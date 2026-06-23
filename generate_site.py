@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate full course website for ai-perusteet-1ov — Business College Helsinki branding
+"""Generate full course website for ai-perusteet-1ov
 Completely redesigned with Codecademy-inspired vertical layout, expandable accordions, and paper background."""
 
 import os, json, re
@@ -1330,7 +1330,7 @@ body{{
   height:auto;
   filter:saturate(0.9);
 }}
-/* Override mermaid node styles for BC brand */
+/* Override mermaid node styles for course brand */
 .mermaid .node rect,
 .mermaid .node circle,
 .mermaid .node polygon{{

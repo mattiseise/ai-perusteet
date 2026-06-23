@@ -4,13 +4,13 @@
 
 ## Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU
 
-**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tutuuden takia, vaan sen mukaan kumpi sopii tehtävään.
+**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
 
 ### Vaiheet
 
 #### Vaihe 1 — Valitse yksi tehtävä
 
-Valitse yksi konkreettinen tehtävä, joka on tarpeeksi rikas paljastaakseen työkalujen erot. Esimerkkejä:
+Valitse yksi konkreettinen tehtävä, joka on tarpeeksi monipuolinen paljastaakseen työkalujen erot. Esimerkkejä:
 
 - Kirjoita 300 sanan käyttöohje aiheesta, jonka osaat hyvin (esim. *"Miten vaihdat salasanan Windowsissa?"*)
 - Selitä yksi tekninen käsite kahdelle eri yleisölle (esim. *"Selitä TCP/IP-protokolla 1) IT-aloittelijalle ja 2) järjestelmäasiantuntijalle"*)
@@ -57,7 +57,7 @@ OMA ARVIONI: [liitä taulukkosi]
 
 Auta minua huomaamaan asioita, joita en itse pannut merkille. Mitä
 eroja vastauksissa on, jotka ehkä jäivät huomaamatta? Älä kerro
-suoraan kumpi on paras — anna minulle 2–3 kysymystä, joiden
+suoraan mikä on paras — anna minulle 2–3 kysymystä, joiden
 kautta voin terävöittää omaa arviotani.
 ```
 

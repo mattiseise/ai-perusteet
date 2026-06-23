@@ -4,7 +4,7 @@
 
 Tähän mennessä olet kerännyt kahdeksan oppitunnin aikana sanastoa, käsitteitä ja näkemyksiä. Nyt asetut tuomaripöydän taakse ja teet niistä jotain konkreettista: **asiantuntijalausunnon**, jossa analysoit todellista tekoälyyn liittyvää ongelmaa ja esität siihen perustellun ratkaisun.
 
-Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Tämä materiaali auttaa sinua kirjoittamaan lausunnon, joka kestää sekä teknisen että ammatillisen tarkastelun.
+Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Et kirjoita lausuntoa itse, vaan ohjaat tekoälyä tuottamaan sen — tämä materiaali auttaa sinua tekemään siitä sellaisen, joka kestää sekä teknisen että ammatillisen tarkastelun.
 
 ## Mikä on asiantuntijalausunto?
 
@@ -94,7 +94,7 @@ Tekoäly voi hallusinoida. Erityisesti se voi keksiä lakipykäliä, sääntelyn
 
 Käy nämä kohdat läpi ennen kuin palautat tehtävän:
 
-- ☐ Lausunto on 1000–1200 sanaa.
+- ☐ Lausunto on 750–1000 sanaa.
 - ☐ Kaikki neljä osaa on käsitelty: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja kuka kantaa vastuun.
 - ☐ Käytin vähintään kahta omaa todistusaineistoani tunneilta 3, 5 ja 7 ja viittasin niihin selkeästi.
 - ☐ Käytin teoriaosion käsitteitä täsmällisesti, en suurpiirteisesti.

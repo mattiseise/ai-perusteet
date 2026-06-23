@@ -935,7 +935,7 @@ body{
   height:auto;
   filter:saturate(0.9);
 }
-/* Override mermaid node styles for BC brand */
+/* Override mermaid node styles for course brand */
 .mermaid .node rect,
 .mermaid .node circle,
 .mermaid .node polygon{
@@ -3887,7 +3887,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <h3>Hyvän promptin viisi elementtiä</h3>
 <p>Hyvä prompt rakentuu viidestä osasta. Et tarvitse niitä kaikkia joka promptiin, mutta tieto siitä, mitä osia voit käyttää, tekee sinusta paremman käyttäjän.</p>
 <p><strong>1. Tavoite (goal)</strong> — Mitä haluat? "Kirjoita tämä", "Selitä tämä", "Paranna tämä". Tavoite on selkeä lause, joka kertoo, mitä tekoäly tekee.</p>
-<p><strong>2. Rooli (role)</strong> — Kuka tekoäly on? "Olet kokenut opettaja", "Olet urheiluvalmentaja", "Olet ravitsemusneuvoja". Rooli auttaa mallia omaksumaan oikean näkökulman ja sopivan kielen.</p>
+<p><strong>2. Rooli (role)</strong> — Kuka tekoäly on? "Olet kokenut opettaja", "Olet urheiluvalmentaja", "Olet ravitsemusneuvoja". Rooli auttaa mallia omaksumaan oikean näkökulman ja sopivan kielen. Huomaa kuitenkin: rooli vaikuttaa näkökulmaan, sävyyn ja kieleen — ei siihen, kuinka paljon malli oikeasti osaa. Pelkkä "olet huippuasiantuntija" ei tee vastauksesta asiantuntevampaa, jos tarvittava tieto puuttuu.</p>
 <p><strong>3. Rajat (constraints)</strong> — Mitä EI tehdä? "Älä käytä vaikeita termejä", "Kirjoita enintään 3 lausetta", "Älä mainitse hintoja". Rajat antavat mallille selkeän toiminta-alueen.</p>
 <p><strong>4. Outputformaatti (format)</strong> — Miten haluat vastauksen? "Vastaa JSON-muodossa", "Kirjoita taulukko", "Anna vaihekohtaiset ohjeet". Formaatti varmistaa, että saat käyttökelpoisen tuloksen.</p>
 <p><strong>5. Esimerkit (examples)</strong> — Näytä yksittäinen esimerkki siitä, mitä haluat. "Esimerkiksi: INPUT: 'terve', OUTPUT: 'Terve! Kuinka voin auttaa?'". Esimerkit tekevät vaatimuksista konkreettisempia.</p>
@@ -4120,9 +4120,9 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Valmistelu noin 5 minuuttia ennen oppituntia:</strong></p>
 <ol>
-<li>Valitse IT-aihe, jonka tunnet ja jonka opiskelijat ymmärtävät. Sopivia aiheita ovat esimerkiksi <strong>tietokannan optimointi</strong>, <strong>Python-debuggaus</strong> tai <strong>verkkokytkinten konfigurointi</strong>.</li>
+<li>Valitse aihe opiskelijoiden arjesta. Sopivia ovat esimerkiksi <strong>harrastusprojektin suunnittelu</strong>, <strong>kesätyöhakemus</strong>, <strong>treeniohjelma</strong> tai <strong>koulutehtävän jäsentely</strong>. Jos ryhmällä on IT-taustaa, voit käyttää myös teknistä aihetta.</li>
 <li>Kirjoita valmiiksi kaksi kyselyä samasta aiheesta:</li>
-<li><strong>Heikko kysymys:</strong> yksittäinen lause ilman kontekstia, esimerkiksi <code>Kuinka optimoin tietokantaa?</code></li>
+<li><strong>Heikko kysymys:</strong> yksittäinen lause ilman kontekstia, esimerkiksi <code>Kuinka teen hyvän kesätyöhakemuksen?</code></li>
 <li><strong>Hyvä kysymys:</strong> sisältää vahvan kontekstin, kuten roolin, taustan, tavoitteen, rajaukset ja esimerkin, sekä täsmällisen promptin, jossa määritellään tehtävä, rooli, rajat, formaatti ja mahdolliset esimerkit.</li>
 </ol>
 <h3>Toteutus noin 20 minuuttia</h3>
@@ -4138,7 +4138,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Lähetä heikko kysymys tekoälylle opiskelijoiden nähden.</li>
 <li>Lue vastaus ääneen tai näytä se ruudulla.</li>
 <li>Kysy luokalta:<ul>
-<li>Kuinka hyödyllinen tämä vastaus on IT-opiskelijalle?</li>
+<li>Kuinka hyödyllinen tämä vastaus on?</li>
 <li>Mitä tietoa vastauksesta puuttuu?</li>
 <li>Mitkä kontekstin osat puuttuivat kysymyksestä?</li>
 <li>Kuinka pitkä vastaus on? Voitte arvioida sanamäärän tai rivien määrän.</li>
@@ -4227,7 +4227,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Valmistelu:</strong></p>
 <ol>
-<li>Valitse todellinen IT-ongelma, jonka opiskelijat tunnistavat. Sopivia aiheita ovat esimerkiksi <strong>Linux-palvelimen SSH-ongelma</strong> tai <strong>SQL-tietokannan hidas haku</strong>.</li>
+<li>Valitse arkinen ongelma, jonka opiskelijat tunnistavat. Sopiva aihe on esimerkiksi <strong>puhelin ei yhdistä kodin WiFi-verkkoon</strong> tai muu vastaava arjen pulma.</li>
 <li>Kirjoita taululle tai diaan:</li>
 <li>viiden komponentin kontekstin malli,</li>
 <li>viiden elementin promptin malli.</li>
@@ -4248,7 +4248,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Vastaako tekoäly opiskelijalle, aloittelijalle vai ammattilaiselle?</li>
 </ul>
 <p>Täyttäkää yhdessä esimerkiksi:</p>
-<p><code>Olen IT-opiskelija neljän viikon Linux-kurssilla.</code></p>
+<p><code>Olen tavallinen käyttäjä, en tekninen asiantuntija. Käytän Android-puhelinta.</code></p>
 <p><strong>Selitys:</strong> Rooli auttaa tekoälyä valitsemaan sopivan vastaustason.</p>
 <h4>Vaihe 2: Taustatieto noin 3 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4260,7 +4260,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Mikä virhe tai ongelma on havaittu?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p><code>Palvelin on Ubuntu 20.04. SSH-avain on generoitu. Kirjautuminen epäonnistuu virheellä Permission denied (publickey).</code></p>
+<p><code>Muut laitteet yhdistävät verkkoon normaalisti. Puhelin näkee verkon, mutta yhteys epäonnistuu. Olen jo kokeillut käynnistää puhelimen uudelleen.</code></p>
 <p><strong>Selitys:</strong> Taustatieto auttaa tekoälyä välttämään arvailua ja toistamasta asioita, jotka on jo kokeiltu.</p>
 <h4>Vaihe 3: Tavoite noin 3 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4272,7 +4272,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Miltä onnistunut lopputulos näyttää?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p><code>Haluan muodostaa SSH-yhteyden tuotantopalvelimelle ja debugata siellä olevaa web-sovellusta.</code></p>
+<p><code>Haluan saada puhelimen yhdistettyä kotiverkkoon.</code></p>
 <p><strong>Selitys:</strong> Tavoite kohdistaa vastauksen siihen, mitä käyttäjä oikeasti yrittää saada aikaan.</p>
 <h4>Vaihe 4: Rajaukset noin 2 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4284,7 +4284,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Mihin vastaus ei saa käyttää aikaa?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p><code>En halua muuttaa palvelimen SSH-asetuksia. Haluan ensin ymmärtää, miksi avain ei toimi.</code></p>
+<p><code>En halua nollata reititintä, koska muut laitteet toimivat. Haluan ensin ymmärtää, mistä puhelimen ongelma johtuu.</code></p>
 <p><strong>Selitys:</strong> Rajaukset poistavat turhia tai riskialttiita vaihtoehtoja.</p>
 <h4>Vaihe 5: Esimerkki noin 2 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4296,12 +4296,12 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Mikä konkreettinen havainto auttaa tekoälyä ymmärtämään ongelman?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p>Komento: ssh -v user@192.168.1.100</p>
-<p>Virheilmoitus alkaa: debug1: Offering public key: /home/student/.ssh/id_rsa</p>
+<p>Esimerkki näytöllä näkyvästä viestistä: "Yhdistetään…"</p>
+<p>Sitten ilmestyy: "Todennusvirhe".</p>
 <p><strong>Selitys:</strong> Esimerkki auttaa tekoälyä näkemään tarkasti, mitä tilanteessa tapahtuu.</p>
 <h4>Lopullinen konteksti noin 2 minuuttia</h4>
 <p>Kirjoita kaikki osat yhteen:</p>
-<blockquote class="pause"><p>Olen IT-opiskelija neljän viikon Linux-kurssilla. Yritän muodostaa SSH-yhteyden Ubuntu 20.04 -palvelimelle. SSH-avain on generoitu, mutta autentikointi epäonnistuu virheellä <code>Permission denied (publickey)</code>. Tavoitteeni on löytää ongelma ja oppia oikea ratkaisu. En halua muuttaa palvelimen SSH-asetuksia tässä vaiheessa. Tässä on virheilmoitus ja käyttämäni komento: <code>ssh -v user@192.168.1.100</code>.</p>
+<blockquote class="pause"><p>Olen tavallinen käyttäjä, en tekninen asiantuntija, ja käytän Android-puhelinta. Puhelin ei yhdistä kodin WiFi-verkkoon, vaikka muut laitteet yhdistävät normaalisti. Puhelin näkee verkon, mutta yhteys epäonnistuu, ja olen jo kokeillut käynnistää puhelimen uudelleen. Tavoitteeni on saada puhelin yhdistettyä. En halua nollata reititintä, koska muut laitteet toimivat. Näytöllä lukee ensin "Yhdistetään…" ja sitten "Todennusvirhe".</p>
 </blockquote>
 <p>Kerro opiskelijoille:</p>
 <blockquote class="pause"><p>Konteksti on valmis. Seuraavaksi rakennamme sen päälle täsmällisen promptin.</p>
@@ -4317,7 +4317,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Haluammeko selityksen, listan, vaiheittaisen ohjeen vai tarkistuslistan?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p><code>Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu.</code></p>
+<p><code>Auta minua selvittämään, miksi puhelin ei yhdistä WiFi-verkkoon.</code></p>
 <p><strong>Selitys:</strong> Promptin tavoite kertoo tekoälylle, mikä tehtävä sen pitää suorittaa.</p>
 <h4>Vaihe 7: Promptin rooli noin 2 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4340,7 +4340,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Mitä ratkaisuja pitää välttää turvallisuuden tai oppimisen vuoksi?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p><code>Älä ehdota SSH-palvelimen asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin.</code></p>
+<p><code>Älä ehdota reitittimen nollausta. Keskity puhelimen asetuksiin.</code></p>
 <p><strong>Selitys:</strong> Rajat pitävät vastauksen fokuksessa ja vähentävät turhia tai riskialttiita ehdotuksia.</p>
 <h4>Vaihe 9: Formaatti noin 2 minuuttia</h4>
 <p>Kirjoita taululle:</p>
@@ -4362,11 +4362,11 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>Miltä yksi hyvä vaihe voisi näyttää?</li>
 </ul>
 <p>Täyttäkää esimerkiksi:</p>
-<p>Vaihe 1: Tarkista avainten oikeudet komennolla ls -la ~/.ssh/. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.</p>
+<p>Vaihe 1: Unohda verkko puhelimen asetuksista ja yhdistä uudelleen salasanalla. Tämä poistaa vanhan, ehkä virheellisen tallennetun salasanan.</p>
 <p><strong>Selitys:</strong> Esimerkki tekee vaatimuksista konkreettisia.</p>
 <h4>Lopullinen prompti noin 2 minuuttia</h4>
 <p>Kirjoita taululle lopullinen täsmällinen prompti, joka hyödyntää aiemmin rakennettua kontekstia:</p>
-<blockquote class="pause"><p>Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu. Vastaa kuin opettaisit aloittelijaa. Älä käytä liian monimutkaista tekniikkaa, äläkä ehdota palvelimen SSH-asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin. Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään. Esimerkiksi: “Vaihe 1: Tarkista avainten oikeudet komennolla <code>ls -la ~/.ssh/</code>. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.”</p>
+<blockquote class="pause"><p>Auta minua selvittämään, miksi puhelin ei yhdistä WiFi-verkkoon. Vastaa kuin neuvoisit aloittelijaa. Älä käytä liian teknistä kieltä, äläkä ehdota reitittimen nollausta. Keskity puhelimen asetuksiin. Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään. Esimerkiksi: “Vaihe 1: Unohda verkko puhelimen asetuksista ja yhdistä uudelleen salasanalla. Tämä poistaa vanhan, ehkä virheellisen tallennetun salasanan.”</p>
 </blockquote>
 <p>Kerro opiskelijoille:</p>
 <blockquote class="pause"><p>Tämä on täsmällinen, kontekstiin perustuva prompti. Se ei vain kysy apua, vaan kertoo, missä tilanteessa olemme, mitä haluamme, mitä emme halua ja millaisessa muodossa vastauksen pitää olla.</p>
@@ -4393,7 +4393,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <li>erottaa <strong>konteksti</strong> ja <strong>prompti</strong> toisistaan,</li>
 <li>tunnistaa hyvän kontekstin keskeiset osat, kuten roolin, taustatiedon, tavoitteen, rajaukset ja esimerkin,</li>
 <li>tunnistaa hyvän promptin elementit, kuten tavoitteen, roolin, rajat, formaatin ja esimerkit,</li>
-<li>rakentaa IT-ongelmaan kontekstin ja sen pohjalle täsmällisen promptin,</li>
+<li>rakentaa arkiseen ongelmaan kontekstin ja sen pohjalle täsmällisen promptin,</li>
 <li>arvioida, miksi yksi tekoälyn vastaus on hyödyllisempi kuin toinen.</li>
 </ul></div></div>`,
     tmats:`<h1>Opettajan materiaalit</h1>
@@ -4786,7 +4786,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Tekniikka, jossa tärkeä konteksti (rooli, rajaukset, projektikohtaiset oletukset) toistetaan joka viestissä ja varmistetaan, ettei se unohdu, vaikka ikkuna täyttyisi.</p>
 <h2>FIFO (First In, First Out)</h2>
 <p>Periaate, jolla konteksti-ikkuna toimii: ensimmäinen teksti sisään on ensimmäinen ulos. Vanhempi tieto poistetaan ensin.</p>
-<h2>Konversaation hallinta (conversation management)</h2>
+<h2>Keskustelun hallinta (conversation management)</h2>
 <p>Strategiat, joilla hallitaan pitkiä tekoälykeskusteluja niin, että oleellinen tieto säilyy. Sisältää tiivistystä, pilkkomista ja ankkurointia.</p>
 <h2>Muistin rajoitus (memory limitation)</h2>
 <p>Tekninen rajoitus, joka estää tekoälyä muistamasta rajattomasti kaikkea. Johtaa konteksti-ikkunan tarpeellisuuteen.</p>
@@ -5340,7 +5340,7 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
     slides:`<div class="slides-container"><iframe src="https://docs.google.com/presentation/d/1X8X3CC9JTTkdcfZPtxuHhHCF19F6Ye3QusvphjPhzog/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>`,
     selfstudy:`<h1>Kuvat, ääni ja teksti — multimodaalinen ongelmanratkaisu</h1>
 <h2>Johdanto</h2>
-<p>Olet varmasti nähnyt, miten IT-ammattilainen ottaa kuvakaappauksen virheilmoituksesta ja lähettää sen verkkofoorumille apua pyytäessään. Tai olet nähnyt koodarin sanovan: ”Tässä on kuvakaappaus, jossa ongelma näkyy.” Monille aloittelijoille kuvakaappaus on vain kuva, ja siksi he voivat pitää sitä vähemmän hyödyllisenä kuin tekstiä. Ammattilaiselle <strong>kuvakaappaukset</strong>, <strong>lokit</strong> ja <strong>dokumentit</strong> ovat kuitenkin kaikki tärkeitä kontekstin muotoja.</p>
+<p>Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle <strong>kuvakaappaukset</strong>, <strong>lokit</strong> ja <strong>dokumentit</strong> ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain IT-ammattilaisen työssä.</p>
 <p>Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan <strong>multimodaalista kontekstia</strong> eli yhdistämään tekstiä, kuvia, lokeja ja koodia debuggauksen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.</p>
 <h2>Mitä multimodaalisuus on?</h2>
 <p><strong>Multimodaalisuus</strong> tarkoittaa, että tekoälymallit voivat käsitellä erilaisia tietomuotoja, kuten tekstiä, kuvia, koodia, ääntä ja videota. Ensimmäiset laajasti käyttöön tulleet kielimallit, kuten GPT-3, käsittelivät vain tekstiä. Modernit mallit, kuten nykyiset ChatGPT-, Microsoft Copilot- ja Claude-mallit, voivat puolestaan tulkita myös kuvia. Jotkin mallit voivat lisäksi käsitellä ääntä ja analysoida videoita.</p>
@@ -5413,7 +5413,7 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 
 <h2>Kuvakaappaukset — näytä, älä vain kuvaile</h2>
 <p><strong>Kuvakaappaus</strong> eli screenshot on yksi tärkeimmistä kontekstityökaluista IT-ammattilaisen työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.</p>
-<p>Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”Apache-palvelimen konfiguraatio on väärä”, tekoäly voi joutua arvaamaan useita erilaisia virheen syitä. Kun taas näytät kuvakaappauksen <code>httpd.conf</code>-tiedostosta, jossa <code>SSLEngine off</code> on sijoitettu väärään kohtaan, tekoäly voi nähdä ongelman tarkemmin ja ehdottaa täsmällisempää korjausta.</p>
+<p>Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”sovellus ei aukea”, tekoäly joutuu arvaamaan useita eri syitä. Kun taas näytät kuvakaappauksen, jossa lukee virheilmoitus ”Ei verkkoyhteyttä”, tekoäly näkee ongelman tarkemmin ja osaa ehdottaa täsmällisempää korjausta.</p>
 <h3>Hyvän kuvakaappauksen tekeminen</h3>
 <p>Ammattilainen ottaa kuvakaappauksia harkitusti:</p>
 <ol>
@@ -5431,6 +5431,8 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 </blockquote>
 </blockquote>
 <h2>Lokitiedostot — järjestelmän oma kertomus</h2>
+<blockquote class="pause"><p>Seuraavat osiot (lokit, koodi ja konfiguraatiot) ovat teknisempiä tilanteita. Sama periaate — näytä, älä vain kerro — pätee silti myös arkisiin kuviin ja kuvakaappauksiin.</p>
+</blockquote>
 <p><strong>Lokit</strong> eli logs ovat tietueita siitä, mitä järjestelmässä tapahtuu. Kun ohjelmassa on virhe, lokit kertovat usein, mikä meni pieleen ja milloin.</p>
 <p>Opiskelijat sanovat usein: ”Minulla on virhe, mutta en tiedä, mikä se on.” Ammattilainen kysyy ensimmäiseksi: ”Mitä lokit kertovat?” Tämä johtuu siitä, että lokit ovat usein ihmisen luettavissa ja sisältävät tärkeää tietoa ongelman syystä.</p>
 <p><code>2024-03-14 10:23:45 ERROR: Failed to connect to database at localhost:5432
@@ -5558,6 +5560,18 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 <td>Kyllä, kuvaile tilanne ja ajankohta</td>
 <td>✅ Kyllä, suorituskykylokit ovat hyödyllisiä</td>
 </tr>
+<tr>
+<td>Lomake ei lähde verkkosivulla</td>
+<td>✅ Kyllä, jos virhe näkyy ruudulla</td>
+<td>✅ Kyllä, kerro mitä yritit tehdä</td>
+<td>Ei yleensä</td>
+</tr>
+<tr>
+<td>Laite tai sovellus ei käynnisty</td>
+<td>✅ Kyllä, jos näytöllä näkyy viesti</td>
+<td>✅ Kyllä, kuvaile tilanne</td>
+<td>Ei yleensä</td>
+</tr>
 </tbody>
 </table>
 <h2>Multimodaalisten mallien rajoitukset</h2>
@@ -5591,7 +5605,7 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 </ol>
 <h3>Käytännön työkalut</h3>
 <ul>
-<li><strong>Kuvakaappaustyökalu:</strong> Asenna hyvä kuvakaappaussovellus, kuten Snagit tai ShareX, tai käytä Windowsin sisäänrakennettua Snipping Tool -sovellusta. Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä.</li>
+<li><strong>Kuvakaappaustyökalu:</strong> Käytä puhelimen tai tietokoneen omaa kuvakaappaustoimintoa (esim. Windowsin Snipping Tool). Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä. Tarkempaan työhön on olemassa myös erillisiä sovelluksia (esim. Snagit tai ShareX).</li>
 <li><strong>Lokien suodatus:</strong> Älä lähetä tuhansia rivejä lokia. Valitse olennaiset virheet, esimerkiksi viimeiset 20 riviä tai grep-haun tulokset.</li>
 <li><strong>Rakenteinen tieto:</strong> Kielimallit hyötyvät rakenteisesta tiedosta, kuten CSV-datasta, JSON-tietueista ja taulukoista.</li>
 <li><strong>Koodinäyte:</strong> Näytä vain olennainen osa koodista tekstinä, esimerkiksi muutama kymmenen riviä. Kuvakaappaus koodista on harvoin yhtä hyödyllinen kuin kopioitava tekstimuotoinen koodi.</li>
@@ -6438,7 +6452,7 @@ huomaan itse, jos joku kohta on ohi mennyt.
 <p>Kysy tekoälyltä <strong>kaksi spesifiä kysymystä</strong>, joihin oikea vastaus on tarkistettavissa. Tavoitteenasi on saada malli kompastumaan. Hyviä koukkuja:</p>
 <ul>
 <li>Kuvitteellinen elokuva, kirja tai henkilö: <em>"Kerro elokuvasta 'Sininen Vuori' (1987)."</em></li>
-<li>Hyvin spesifi tekninen yksityiskohta: <em>"Mitä parametreja Pythonin <code>os.path.realpath()</code> ottaa version 3.12 mukaan?"</em></li>
+<li>Keksityt lähdeviitteet: <em>"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."</em> — mallit keksivät usein uskottavia mutta olemattomia viitteitä.</li>
 <li>Sisäpiirikysymys organisaatiosta: <em>"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"</em></li>
 </ul>
 <p>Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.</p>
@@ -7208,7 +7222,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <h2>Yhteenveto</h2>
 <p><strong>Tekoäly ei ole neutraali työkalu.</strong> Sen taustalla on koulutusdataa, tekijänoikeuskysymyksiä, ihmisten tekemää näkymätöntä työtä, algoritmisia harhoja ja ympäristövaikutuksia.</p>
 <p>Ammattilaisena ei riitä, että osaat käyttää tekoälyä teknisesti hyvin. Sinulla on myös vastuu ymmärtää, millaisia valintoja ja vaikutuksia käytön taustalla on. ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu. Ammatillisuus tarkoittaa sitä, että pysähdyt arvioimaan seurauksia ja teet perusteltuja valintoja.</p>
-<p>Seuraavalla tunnilla opit käytännön turvallisuutta: miten tekoälyä käytetään turvallisesti yrityksen sisällä.</p>
+<p>Seuraavalla tunnilla tuotamme asiantuntijalausunnon tekoälyn avulla. Emme kirjoita sitä itse, vaan käytämme tekoälyä tekemään luettavan tuotoksen.</p>
 <hr />`,
     vocab:`<h1>Sanasto: Etiikka, tekijänoikeudet ja ympäristövaikutukset</h1>
 <h2>Tekijänoikeus (copyright)</h2>
@@ -7903,7 +7917,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
     selfstudy:`<h1>Oppitunti 9 — Tuomaripöydän päätös: asiantuntijalausunto tekoälystä</h1>
 <h2>Mitä tällä tunnilla tapahtuu?</h2>
 <p>Tähän mennessä olet kerännyt kahdeksan oppitunnin aikana sanastoa, käsitteitä ja näkemyksiä. Nyt asetut tuomaripöydän taakse ja teet niistä jotain konkreettista: <strong>asiantuntijalausunnon</strong>, jossa analysoit todellista tekoälyyn liittyvää ongelmaa ja esität siihen perustellun ratkaisun.</p>
-<p>Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit <strong>käyttämään</strong> sitä, mitä jo osaat. Tämä materiaali auttaa sinua kirjoittamaan lausunnon, joka kestää sekä teknisen että ammatillisen tarkastelun.</p>
+<p>Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit <strong>käyttämään</strong> sitä, mitä jo osaat. Et kirjoita lausuntoa itse, vaan ohjaat tekoälyä tuottamaan sen — tämä materiaali auttaa sinua tekemään siitä sellaisen, joka kestää sekä teknisen että ammatillisen tarkastelun.</p>
 <h2>Mikä on asiantuntijalausunto?</h2>
 <p>Asiantuntijalausunto on <strong>perusteltu analyysi</strong>, jonka kirjoittaa oman alansa tunteva ammattilainen. Sitä ei kirjoiteta tunteiden tai pelkkien mielipiteiden varaan, vaan käsitteiden, havaintojen ja loogisten päätelmien avulla. Lausunnon lukija, kuten esimies, tietosuojavaltuutettu, asiakas tai kollega, ei välttämättä ole tekoälyn asiantuntija. Sinun tehtäväsi on selittää tilanne niin, että lukija ymmärtää sen ja voi luottaa päätelmiisi.</p>
 <p>Asiantuntijalausunto eroaa esseestä ja blogitekstistä kolmella tavalla:</p>
@@ -7982,7 +7996,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <h2>Tarkistuslista ennen palautusta</h2>
 <p>Käy nämä kohdat läpi ennen kuin palautat tehtävän:</p>
 <ul>
-<li>☐ Lausunto on 1000–1200 sanaa.</li>
+<li>☐ Lausunto on 750–1000 sanaa.</li>
 <li>☐ Kaikki neljä osaa on käsitelty: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja kuka kantaa vastuun.</li>
 <li>☐ Käytin vähintään kahta omaa todistusaineistoani tunneilta 3, 5 ja 7 ja viittasin niihin selkeästi.</li>
 <li>☐ Käytin teoriaosion käsitteitä täsmällisesti, en suurpiirteisesti.</li>
@@ -8021,7 +8035,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
 <blockquote class="pause"><p><strong>HUOM:</strong> Tätä varten sinulla tulee olla kerättynä todistusaineistot 1–3 (tunnit 3, 5 ja 7).</p>
 </blockquote>
-<p>Kirjoitat asiantuntijalausunnon yhdestä tekoälyyn liittyvästä tilanteesta. Lausunto on <strong>1000–1200 sanan analyysi</strong>, jossa käytät kaikkea, mitä olet oppinut Teoria-osiossa (oppitunnit 1–9).</p>
+<p>Tuotat asiantuntijalausunnon yhdestä tekoälyyn liittyvästä tilanteesta — et kirjoita sitä itse, vaan ohjaat tekoälyä tuottamaan sen keräämiesi todistusaineistojen pohjalta. Lausunto on <strong>750–1000 sanan analyysi</strong>, jossa käytät kaikkea, mitä olet oppinut Teoria-osiossa (oppitunnit 1–9).</p>
 <p>Käytä tekoälyä apuna kirjoittamisessa. Tarkoitus ei ole, että kirjoitat kaiken itse tyhjästä — vaan että <strong>osaat ohjata tekoälyä tuottamaan analyyttistä tekstiä</strong> ja muokkaat lopputuloksen omaksesi. Anna tekoälylle konteksti (skenaario, käsitteet, todistusaineistosi) ja pyydä sitä auttamaan rakenteen ja tekstin tuottamisessa. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.</p>
 <p>Valitset yhden kolmesta skenaariosta. Jokainen kuvaa todellisen tilanteen, jossa tekoälyn käyttö on aiheuttanut ongelman. Sinun tehtäväsi on analysoida, mitä tapahtui, miksi se tapahtui ja miten tilanne pitäisi hoitaa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Miten teet sen?</h2></div><div class="task-card-body">
@@ -8122,7 +8136,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <ol>
 <li><strong>Aikataulut ja deadline:</strong></li>
 <li>Arviointitehtävä tehdään yksin (ei pari- tai ryhmätyönä).</li>
-<li>Pituus: 1000–1200 sanaa.</li>
+<li>Pituus: 750–1000 sanaa.</li>
 <li>Deadline: [ilmoita oppilaitoksen aikataulun mukaan].</li>
 </ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Harjoitus 2: Skenaarioiden deep dive ja riskien analyysi</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -8232,7 +8246,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
 <ul>
-<li>Opiskelija osaa tuottaa 1000–1200 sanan rakenteisen asiantuntijalausunnon.</li>
+<li>Opiskelija osaa tuottaa 750–1000 sanan rakenteisen asiantuntijalausunnon.</li>
 <li>Opiskelija osaa käyttää tekoälyä työparina niin, että tekoäly auttaa jäsentämisessä mutta ei korvaa opiskelijan omaa ajattelua.</li>
 <li>Opiskelija osaa tarkistaa tekoälyn tuottaman tekstin mahdolliset virheet, kuten keksityt lakiviittaukset, virheelliset käsitteet tai liian yleiset suositukset.</li>
 <li>Opiskelija osaa tehdä konkreettisia, aikataulutettuja ja vastuullisia toimenpide-ehdotuksia.</li>
@@ -8596,7 +8610,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tarkistuslista opiskelijalle ennen palautusta</h2></div><div class="task-card-body">
 <p>Anna opiskelijoille tämä lista viimeisenä tarkistuksena ennen palautusta.</p>
 <ul>
-<li>Lausunto on noin <strong>1000–1200 sanaa</strong>.</li>
+<li>Lausunto on noin <strong>750–1000 sanaa</strong>.</li>
 <li>Kaikki neljä osaa on käsitelty: <strong>mitä tapahtui</strong>, <strong>miksi se tapahtui</strong>, <strong>miten tilanne pitäisi hoitaa</strong> ja <strong>ammatillinen vastuu</strong>.</li>
 <li>Tekstissä käytetään vähintään kahta omaa todistusaineistoa tunneilta 3, 5 ja 7.</li>
 <li>Teoria-osion käsitteitä käytetään täsmällisesti eikä vain mainita nimeltä.</li>
@@ -8843,10 +8857,10 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <blockquote class="pause"><p>📌 <strong>Kaikkia ei tarvitse tehdä.</strong> Valitse tehtävistä 1. Suosittelen tehtävää 10.1, joka opettaa tunnin ydintaitoa — oikean työkalun valitsemista tehtävän mukaan. Jos sinulla on aikaa ja haluat rakentaa itsellesi henkilökohtaisen valintakehyksen, tee lisäksi syventävä tehtävä 10.2.</p>
 </blockquote>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU</h2></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tutuuden takia, vaan sen mukaan kumpi sopii tehtävään.</p>
+<p><strong>Tavoite:</strong> Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.</p>
 <h3>Vaiheet</h3>
 <h4>Vaihe 1 — Valitse yksi tehtävä</h4>
-<p>Valitse yksi konkreettinen tehtävä, joka on tarpeeksi rikas paljastaakseen työkalujen erot. Esimerkkejä:</p>
+<p>Valitse yksi konkreettinen tehtävä, joka on tarpeeksi monipuolinen paljastaakseen työkalujen erot. Esimerkkejä:</p>
 <ul>
 <li>Kirjoita 300 sanan käyttöohje aiheesta, jonka osaat hyvin (esim. <em>"Miten vaihdat salasanan Windowsissa?"</em>)</li>
 <li>Selitä yksi tekninen käsite kahdelle eri yleisölle (esim. <em>"Selitä TCP/IP-protokolla 1) IT-aloittelijalle ja 2) järjestelmäasiantuntijalle"</em>)</li>
@@ -8918,7 +8932,7 @@ OMA ARVIONI: [liitä taulukkosi]
 
 Auta minua huomaamaan asioita, joita en itse pannut merkille. Mitä
 eroja vastauksissa on, jotka ehkä jäivät huomaamatta? Älä kerro
-suoraan kumpi on paras — anna minulle 2–3 kysymystä, joiden
+suoraan mikä on paras — anna minulle 2–3 kysymystä, joiden
 kautta voin terävöittää omaa arviotani.
 </code></pre>
 <p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>vertailun apurina</em> — etenkin kun vertailtava asia on tekoäly itse.</p>
@@ -9596,7 +9610,7 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 <p>DeepSeek voi olla erittäin edullinen vaihtoehto. Se voi olla myös nopea ja vahva erityisesti ohjelmointiin liittyvissä tehtävissä. Jos budjetti on tiukka ja tekoälyä käytetään paljon, DeepSeek voi vaikuttaa houkuttelevalta vaihtoehdolta.</p>
 <p><strong>Tärkeä ongelma: tietosuoja</strong></p>
 <p>DeepSeekin käytössä on kuitenkin merkittävä tietosuojakysymys. DeepSeek on kiinalainen palvelu, ja kun lähetät tekstiä palveluun, tieto voi siirtyä Kiinan palvelimille tai kiinalaisen lainsäädännön piiriin. Tämä voi olla ongelma erityisesti silloin, kun käsitellään henkilötietoja, asiakastietoja, potilastietoja, oppilastietoja tai muuta luottamuksellista aineistoa.</p>
-<p>EU:ssa ja Suomessa henkilötietojen käsittelyä säätelee <strong>GDPR</strong> eli yleinen tietosuoja-asetus. Se edellyttää, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän.</p>
+<p>Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän. Tietosuojalainsäädäntöä (GDPR) käsitellään tarkemmin osassa 5.</p>
 <p>Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:</p>
 <ul>
 <li><strong>Opettaja:</strong> Jos käytät DeepSeekiä oppilaiden esseiden analysointiin, se voi rikkoa tietosuojasääntöjä, jos tekstit sisältävät henkilötietoja.</li>
@@ -11690,7 +11704,7 @@ sinulle kohderyhmänä.
 </code></pre>
 <p>Tekoäly antaa palautetta — käytä sitä ohjeen viimeistelyyn. Tämä on harjoitus siitä, miten tekoälyä käytetään <em>testaajana</em>, ei kirjoittajana.</p>
 <h4>Vaihe 5 — Viimeistele ja kirjoita lyhyt huomio</h4>
-<p>Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa muistissasi 2–3 lauseella:</p>
+<p>Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa mielessäsi 2–3 lauseella:</p>
 <ul>
 <li>Mitä tekoälyn pohjassa oli hyvää, mikä säilyi loppuun saakka?</li>
 <li>Mitä piti muuttaa, koska tekoäly ei tiennyt todellisuutta?</li>
@@ -13685,30 +13699,24 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 <p>Testaus ei ole kertaluonteinen työ, vaan iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen ja jatkat, kunnes botti on riittävän hyvä. Hyvällä botilla on laadukas tietopohja, selkeät rajat ja perusteellinen testaus.</p>
 <hr />`,
     vocab:`<h1>Sanasto</h1>
+<h2>Tietopohja (knowledge base)</h2>
+<p>Tieto, jonka varassa botti vastaa — esimerkiksi tuotelista, ohjeet ja usein kysytyt kysymykset. Ilman ajantasaista tietopohjaa botti arvailee ja voi antaa virheellisiä vastauksia.</p>
+<h2>Rajaus</h2>
+<p>Botin "en osaa" tai "en saa tehdä tätä" -kohdat: mihin aiheisiin botti vastaa ja mitä se ei saa tehdä. Rajaukset asetetaan ohjeistuksella ja suojaavat sekä käyttäjää että bottia.</p>
+<h2>Varmuuskynnys</h2>
+<p>Jos botti ei ole riittävän varma vastauksestaan, sen pitää sanoa, ettei se tiedä, eikä yrittää arvata.</p>
+<h2>Positiivinen testi</h2>
+<p>Testi, jossa kokeillaan tilanteita, joiden pitäisi toimia — kysymyksiä, joihin botti on suunniteltu vastaamaan.</p>
+<h2>Negatiivinen testi</h2>
+<p>Testi, jossa kokeillaan tilanteita, joiden ei pitäisi toimia: botin pitää osata kieltäytyä, rajata vastaustaan tai ohjata käyttäjä oikeaan paikkaan.</p>
+<h2>Reunatapaus (edge case)</h2>
+<p>Outo tai epätavallinen syöte, kuten tyhjä tai hyvin sekava kysymys. Reunatapaukset paljastavat, kuinka kestävä botti on.</p>
+<h2>Iterointi</h2>
+<p>Testaa–korjaa–testaa uudelleen -kierros, jolla bottia parannetaan vähitellen. Normaali osa botin kehittämistä — ensimmäinen versio on harvoin valmis.</p>
+<h2>Eskalointi</h2>
+<p>Asian ohjaaminen ihmiselle silloin, kun botti ei osaa tai saa hoitaa sitä.</p>
 <h2>Kuratointi</h2>
-<p><strong>Kuratointi</strong> tarkoittaa sisällön valitsemista, järjestämistä ja esittämistä niin, että se palvelee tiettyä tarkoitusta tai kohderyhmää. Opetuksessa ja digitaalisissa projekteissa kuratointi voi tarkoittaa esimerkiksi hyödyllisten lähteiden, työkalujen, esimerkkien tai materiaalien kokoamista selkeäksi kokonaisuudeksi.</p>
-<h2>README-tiedosto</h2>
-<p>Projektissa oleva tiedosto, yleensä <code>README.md</code>, joka selittää, mitä projekti tekee, miten se asennetaan ja miten sitä käytetään. <strong>README</strong> on usein ensimmäinen asia, jonka uudet käyttäjät lukevat.</p>
-<h2>Dokumentaatio</h2>
-<p><strong>Dokumentaatio</strong> tarkoittaa kirjallisia ohjeita ja selityksiä siitä, miten ohjelma toimii, miten se asennetaan ja miten sitä käytetään. Dokumentaatio voi sisältää esimerkiksi README-tiedoston, API-dokumentaation, asennusohjeet ja käyttöoppaita.</p>
-<h2>Tiketti (ticket)</h2>
-<p><strong>Tiketti</strong> on tehtävä tai ongelmaraportti projektinhallintajärjestelmässä. Tiketti kuvaa ongelman, ominaisuuspyynnön tai tehtävän, jota ei ole vielä ratkaistu.</p>
-<h2>Loki-analyysi (log analysis)</h2>
-<p><strong>Loki-analyysi</strong> tarkoittaa prosessia, jossa tutkitaan lokitiedostoja, jotta ymmärretään, mitä järjestelmässä tapahtui. Loki-analyysiä käytetään erityisesti virheiden ja poikkeamien selvittämiseen.</p>
-<h2>CLI (Command-Line Interface)</h2>
-<p><strong>CLI</strong> tarkoittaa tekstipohjaista käyttöliittymää, jossa käytetään komentoja hiiren sijasta. Esimerkiksi <code>ls</code>, <code>cd</code> ja <code>npm install</code> ovat CLI-komentoja.</p>
-<h2>Shell-skripti</h2>
-<p><strong>Shell-skripti</strong> on tiedosto, joka sisältää sarjan komentorivikomentoja ja joka voidaan ajaa automaattisesti. Shell-skriptit säästävät aikaa toistuvissa tehtävissä.</p>
-<h2>Vianseuranta (debugging)</h2>
-<p><strong>Vianseuranta</strong> tarkoittaa prosessia, jossa etsitään ja korjataan ohjelman virheitä. Apuna voi käyttää esimerkiksi lokeja, debuggeria tai tekoälyä.</p>
-<h2>API-dokumentaatio</h2>
-<p><strong>API-dokumentaatio</strong> on kirjallinen ohjeistus siitä, miten ohjelmarajapintaa eli API:a käytetään. Se sisältää yleensä endpoint-osoitteet, parametrit ja vastausesimerkit.</p>
-<h2>Asennusohje (installation guide)</h2>
-<p><strong>Asennusohje</strong> on vaiheittainen ohjeistus, joka kertoo, miten ohjelma tai palvelu asennetaan uuteen järjestelmään.</p>
-<h2>Varmuuskopio (backup)</h2>
-<p><strong>Varmuuskopio</strong> on kopio tiedostoista tai tiedoista. Sitä säilytetään siltä varalta, että alkuperäinen tiedosto tai tieto menetetään tai vioittuu.</p>
-<h2>Kontribuointi (contribution)</h2>
-<p><strong>Kontribuointi</strong> tarkoittaa prosessia, jossa muut kehittäjät voivat osallistua avoimen lähdekoodin projektiin. Projektissa olisi hyvä olla dokumentaatio siitä, miten siihen voi kontribuoida.</p>
+<p>Sisällön valitsemista, järjestämistä ja esittämistä niin, että se palvelee tiettyä tarkoitusta tai kohderyhmää — esimerkiksi botin tietopohjan kokoaminen selkeäksi kokonaisuudeksi.</p>
 <hr />`,
     stasks:`<h1>Rakennuspalikka 3 — Tietopohjan kuratointi</h1>
 <p><strong>📌 Tämä on kolmas ja viimeinen rakennuspalikka.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>projektin määrittelydokumentin sparrauskumppanin</em> Microsoft Copilotiin. Säilytä tämä työ huolellisesti.</p>
@@ -19563,13 +19571,13 @@ niin että minä ajattelen.
 <h2>Semantiikka / merkityksellinen haku (semantic search)</h2>
 <p>Haku, joka etsii samankaltaisuutta merkitykseltään, ei sanasta sanaan. "Kuinka maksan laskun" löytää myös "maksun suorittaminen".</p>
 <h2>Vektori (vector)</h2>
-<p>Matemaattinen esitys sanan tai lauseen merkityksestä. Numerojono, joka edustaa merkityksen paikkaa suuressa tilassa.</p>
+<p>Numerojono, joka kuvaa kohteen ominaisuuksia. Tekoälyssä esimerkiksi sanan tai lauseen merkitys esitetään vektorina — pisteenä suuressa lukutilassa.</p>
 <h2>Tila (state)</h2>
 <p>Prosessin nykyinen vaihe. Tilauksen tilat: "luotu", "maksettu", "pakattu", "lähetetty".</p>
 <h2>Tilamuuttuja (state variable)</h2>
 <p>Numero tai arvo, jonka agentti seuraa tietyssä tilassa. Esim. "yritykset: 2/3" tai "summa: 50€".</p>
 <h2>Soul</h2>
-<p>Agentin pysyvä identiteetti ja syvät arvot, jotka se kantaa kaikissa tilanteissa.</p>
+<p>Agentin pysyvä identiteetti: rooli, arvot ja toimintatapa, jotka säilyvät samoina tehtävästä toiseen — toisin kuin lyhytkestoinen konteksti. Määritellään yleensä erillisessä määrittelytiedostossa (esim. <code>SOUL.md</code>), jota agentti noudattaa kaikissa tilanteissa.</p>
 <h2>Konteksti (context)</h2>
 <p>Ympäröivät tiedot ja tilanteen tausta. Asiakkaan historia, edellinen keskustelu, nykyinen tehtävä.</p>
 <h2>Muisti- ja kontekstijärjestelmä</h2>
@@ -20455,13 +20463,13 @@ niin että ajattelen.
 <hr />`,
     vocab:`<h1>Sanasto – oppitunti 22: Agentin työkalut</h1>
 <h2>Työkalu (tool)</h2>
-<p>Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, CLI.</p>
+<p>Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, komentorivi.</p>
 <h2>Tiedostotyökalu (file tool)</h2>
 <p>Agentti voi lukea ja kirjoittaa tiedostoja. Lukuoikeus antaa pääsyn tietoihin, kirjoitusoikeus antaa vaikutuksen.</p>
 <h2>Verkkohakutyökalu (web search tool)</h2>
 <p>Agentti voi hakea tietoa internetistä. Ajankohtainen tieto, mutta riskit: väärä tieto, kustannukset, yksityisyys.</p>
-<h2>CLI-työkalu (command-line interface tool)</h2>
-<p>Agentti voi ajaa palvelinkomentoja. Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.</p>
+<h2>Komentorivityökalu (CLI, command-line interface tool)</h2>
+<p>Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.</p>
 <h2>Whitelist</h2>
 <p>Luettelo asioista, joita agentti saa tehdä. Hyväksytyt komennot, hakusivustot, kansiot.</p>
 <h2>Minimioikeusperiaate (principle of least privilege)</h2>
@@ -20477,7 +20485,7 @@ niin että ajattelen.
 <h2>Hiekkalaatikko (sandbox)</h2>
 <p>Eristetty ympäristö, jossa agentti ei voi vaikuttaa oikeaan järjestelmään. Turvallinen testaus.</p>
 <h2>API-avain (API key)</h2>
-<p>Tunnus, jolla agentti todistetaan palvelulle. Salassa pidettävä, ei lokeihin.</p>
+<p>Tunnus, jolla agentti todistaa oikeutensa käyttää palvelua. Salassa pidettävä, ei lokeihin.</p>
 <h2>CSV (Comma-Separated Values)</h2>
 <p>Tekstitiedostomuoto, jossa tiedot ovat rivillä pilkuilla erotettuja. Helppo lukea ja käsitellä.</p>
 <h2>JSON (JavaScript Object Notation)</h2>
@@ -26028,11 +26036,11 @@ const BRIEFS={  "osp1": {
     ospId:"osp1",ospTitle:`Teoria`,
     ospIcon:"📐",ospColor:"var(--blue)",
     content:`<h1>Teoria-osion lopputyö: Tuomaripöydän asiantuntijalausunto</h1>
-<p>Tämä on Teoria-osion arvioitava lopputyö. Kirjoitat <strong>asiantuntijalausunnon</strong> (1000–1200 sanaa) yhdestä todellisesta tekoälyongelmasta — ja perustelet analyysisi käsitteillä, joita olet kerännyt osion aikana. Et tee koko työtä yhdellä istumalla — keräät matkan varrella <strong>kolme todistusaineistoa</strong>, joita käytät lausunnossasi tunnilla 9.</p>
-<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää asiantuntijalausuntoa ei kirjoiteta yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — generatiivisen mekaniikan ymmärrys (tunti 3), kontekstin ja muistin rajat (tunti 5) sekä ammattilaisen tarkistuslista (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä kirjoittamiseen ja perusteluihin — et joudu opettelemaan käsitteitä samalla.</p>
+<p>Tämä on Teoria-osion arvioitava lopputyö. Tuotat <strong>asiantuntijalausunnon</strong> (750–1000 sanaa) yhdestä todellisesta tekoälyongelmasta. <strong>Et kirjoita tekstiä itse</strong> — ohjaat tekoälyä tuottamaan asiantuntijatasoisen tekstin keräämiesi todistusaineistojen pohjalta. Keräät matkan varrella <strong>kolme todistusaineistoa</strong>; kun ne ovat kunnossa, lopputyö on käytännössä hyvä prompti + huolellinen oikoluku.</p>
+<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää asiantuntijalausuntoa ei kirjoiteta yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — generatiivisen mekaniikan ymmärrys (tunti 3), kontekstin ja muistin rajat (tunti 5) sekä ammattilaisen tarkistuslista (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä tekoälyn ohjaamiseen ja tuotoksen tarkistamiseen — et joudu opettelemaan käsitteitä samalla.</p>
 </blockquote>
 <h2>Mitä rakennat?</h2>
-<p><strong>Asiantuntijalausunto, 1000–1200 sanaa.</strong> Analysoit yhden kolmesta todellisesta tekoälytilanteesta neljästä näkökulmasta: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja mikä on ammatillinen vastuu.</p>
+<p>Sinä et tuota tekstiä käsin, vaan ohjaat tekoälyä. <strong>Asiantuntijalausunto, 750–1000 sanaa.</strong> Analysoit yhden kolmesta todellisesta tekoälytilanteesta neljästä näkökulmasta: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja mikä on ammatillinen vastuu.</p>
 <p>Lausunto eroaa esseestä kolmella tavalla:</p>
 <ul>
 <li><strong>Se on neutraalia, ei tunteellista.</strong> Et kirjoita "tämä on järkyttävää" vaan "tilanne sisältää merkittävän tietosuojariskin, koska…".</li>
@@ -26087,7 +26095,7 @@ const BRIEFS={  "osp1": {
 </tr>
 <tr>
 <td><strong>9</strong></td>
-<td><strong>Kirjoitat asiantuntijalausunnon kolmen todistusaineiston pohjalta</strong></td>
+<td><strong>Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta</strong></td>
 <td><strong>Lopputyö palautettu</strong></td>
 </tr>
 </tbody>
@@ -26104,7 +26112,7 @@ Mitä tarkoittaa, että tekoäly "unohtaa"? Missä tilanteissa kontekstimuisti p
 Miten ammattilainen tarkistaa tekoälyn tuotoksen? Mitkä ovat hallusinaatioiden merkit ja miten niitä estetään? Tämä auttaa ehdottamaan konkreettisia toimenpiteitä.</p>
 <h2>Lopputuotoksen vaatimukset</h2>
 <p>Tunti 9:n päätteeksi palautat seuraavat:</p>
-<p><strong>1. Asiantuntijalausunto (1000–1200 sanaa)</strong><br />
+<p><strong>1. Asiantuntijalausunto (750–1000 sanaa)</strong><br />
 Analyysi neljästä osasta: mitä tapahtui, miksi se tapahtui (käsittein), miten tilanne pitäisi hoitaa (konkreettisin toimenpitein), mikä on ammatillinen vastuu.</p>
 <p><strong>2. Vähintään kaksi todistusaineistoa selkeästi käytetty</strong><br />
 Sinun pitää viitata vähintään kahteen kolmesta todistusaineistosta lausunnossasi. Hyvä viittaus käyttää käsitettä, ei vain mainitse sitä.</p>
@@ -26118,7 +26126,7 @@ Organisaatiosi rekrytointialgoritmi hylkää 85 % naispuolisista hakijoista ja h
 <p><strong>Skenaario 3: Markkinointisisältö ja tekijänoikeudet</strong><br />
 Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että kilpailijalla on lähes identtinen artikkeli. Asiakas kysyy: kuka omistaa sisällön?</p>
 <h2>Työkalut ja työskentelytapa</h2>
-<p><strong>Tekoälytyökalu:</strong> Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole kirjoittaa kaikkea itse tyhjästä, vaan ohjata tekoälyä tuottamaan analyyttistä tekstiä ja muokata lopputulos omaksesi. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.</p>
+<p><strong>Tekoälytyökalu:</strong> Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole kirjoittaa tekstiä itse, vaan ohjata tekoälyä tuottamaan asiantuntijatasoinen lausunto ja varmistaa, että sisältö on oikein. Vaikka oma kirjoitustaito olisi vasta kehittymässä, voit tuottaa laadukkaan lausunnon, kun todistusaineistot ja prompti ovat kunnossa. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.</p>
 <p><strong>Yksin tai pareittain:</strong> Lopputyö tehdään yksin. Voit kuitenkin sparrata käsitteistöä luokkakavereiden kanssa kerätessäsi todistusaineistoja matkan varrella.</p>
 <h2>Arviointi</h2>
 <p>Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.</p>
@@ -26173,7 +26181,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 <td>~20–25 min / todistusaineisto</td>
 </tr>
 <tr>
-<td>Asiantuntijalausunnon kirjoittaminen (tunti 9)</td>
+<td>Lausunnon tuottaminen ja oikoluku (tunti 9)</td>
 <td>~75 min (koko tunti)</td>
 </tr>
 <tr>
@@ -26187,7 +26195,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 <h2>Palautus</h2>
 <p>Palautat tunnilla 9 seuraavat:</p>
 <ul>
-<li>Asiantuntijalausunto (1000–1200 sanaa, tekstitiedosto tai PDF)</li>
+<li>Asiantuntijalausunto (750–1000 sanaa, tekstitiedosto tai PDF)</li>
 <li>Maininta käyttämistäsi todistusaineistoista (joko erillisinä liitteinä tai mainittuina lausunnossa)</li>
 </ul>
 <p>Vaihtoehtoisessa suoritustavassa palautat tilannekartan, päätöspuun ja suullisen esityksen nauhoitteen tai esität sen luokassa.</p>

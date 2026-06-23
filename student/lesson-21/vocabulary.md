@@ -18,7 +18,7 @@ Haku, joka etsii samankaltaisuutta merkitykseltään, ei sanasta sanaan. "Kuinka
 
 ## Vektori (vector)
 
-Matemaattinen esitys sanan tai lauseen merkityksestä. Numerojono, joka edustaa merkityksen paikkaa suuressa tilassa.
+Numerojono, joka kuvaa kohteen ominaisuuksia. Tekoälyssä esimerkiksi sanan tai lauseen merkitys esitetään vektorina — pisteenä suuressa lukutilassa.
 
 ## Tila (state)
 
@@ -30,7 +30,7 @@ Numero tai arvo, jonka agentti seuraa tietyssä tilassa. Esim. "yritykset: 2/3" 
 
 ## Soul
 
-Agentin pysyvä identiteetti ja syvät arvot, jotka se kantaa kaikissa tilanteissa.
+Agentin pysyvä identiteetti: rooli, arvot ja toimintatapa, jotka säilyvät samoina tehtävästä toiseen — toisin kuin lyhytkestoinen konteksti. Määritellään yleensä erillisessä määrittelytiedostossa (esim. `SOUL.md`), jota agentti noudattaa kaikissa tilanteissa.
 
 ## Konteksti (context)
 

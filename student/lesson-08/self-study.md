@@ -155,6 +155,6 @@ Mitä tämä tarkoittaa ammattilaiselle? Vastuullinen tekoälyn käyttö edellyt
 
 Ammattilaisena ei riitä, että osaat käyttää tekoälyä teknisesti hyvin. Sinulla on myös vastuu ymmärtää, millaisia valintoja ja vaikutuksia käytön taustalla on. ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu. Ammatillisuus tarkoittaa sitä, että pysähdyt arvioimaan seurauksia ja teet perusteltuja valintoja.
 
-Seuraavalla tunnilla opit käytännön turvallisuutta: miten tekoälyä käytetään turvallisesti yrityksen sisällä.
+Seuraavalla tunnilla tuotamme asiantuntijalausunnon tekoälyn avulla. Emme kirjoita sitä itse, vaan käytämme tekoälyä tekemään luettavan tuotoksen.
 
 ---

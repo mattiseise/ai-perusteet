@@ -24,7 +24,7 @@ Tekniikka, jossa tärkeä konteksti (rooli, rajaukset, projektikohtaiset oletuks
 
 Periaate, jolla konteksti-ikkuna toimii: ensimmäinen teksti sisään on ensimmäinen ulos. Vanhempi tieto poistetaan ensin.
 
-## Konversaation hallinta (conversation management)
+## Keskustelun hallinta (conversation management)
 
 Strategiat, joilla hallitaan pitkiä tekoälykeskusteluja niin, että oleellinen tieto säilyy. Sisältää tiivistystä, pilkkomista ja ankkurointia.
 

@@ -60,11 +60,11 @@ Kirjoita agenttijärjestelmälle **kontrollisuunnitelma**, joka kuvailee:
 
 1. **Riskit** — Mitä voisi mennä pieleen? Anna 3–4 konkreettista vaaratapausta.
 2. **Kunkin riskin mukainen kontrolli** — Miten voisit estää sen? Vaihtoehdot:
-3. Rajaa agentin työkalut (esim. agentti voi lähettää vain malleja, ei vapaata tekstiä)
-4. Lisää ihminen silmukkaan (esim. tiketit merkitään ratkaistuiksi vasta, kun ihminen hyväksyy ne)
-5. Lisää valvontaa (esim. kirjaa kaikki agentin tekemät sähköpostit)
-6. Testaa agenttia (esim. testaa, että agentti ei lähetä sopimattomia tekstejä)
-7. **Trade-offs** — Mikä on jokaisen kontrollin hinta? Vaikuttaako se automaation nopeuteen? Lisääkö se työtä ihmisille?
+   - Rajaa agentin työkalut (esim. agentti voi lähettää vain malleja, ei vapaata tekstiä)
+   - Lisää ihminen silmukkaan (esim. tiketit merkitään ratkaistuiksi vasta, kun ihminen hyväksyy ne)
+   - Lisää valvontaa (esim. kirjaa kaikki agentin tekemät sähköpostit)
+   - Testaa agenttia (esim. testaa, että agentti ei lähetä sopimattomia tekstejä)
+3. **Trade-offs** — Mikä on jokaisen kontrollin hinta? Vaikuttaako se automaation nopeuteen? Lisääkö se työtä ihmisille?
 
 ### Esimerkki
 

@@ -12,9 +12,9 @@ Tehtävän tavoitteena on havainnollistaa, kuinka paljon **konteksti** ja **prom
 
 **Valmistelu noin 5 minuuttia ennen oppituntia:**
 
-1. Valitse IT-aihe, jonka tunnet ja jonka opiskelijat ymmärtävät. Sopivia aiheita ovat esimerkiksi **tietokannan optimointi**, **Python-debuggaus** tai **verkkokytkinten konfigurointi**.
+1. Valitse aihe opiskelijoiden arjesta. Sopivia ovat esimerkiksi **harrastusprojektin suunnittelu**, **kesätyöhakemus**, **treeniohjelma** tai **koulutehtävän jäsentely**. Jos ryhmällä on IT-taustaa, voit käyttää myös teknistä aihetta.
 2. Kirjoita valmiiksi kaksi kyselyä samasta aiheesta:
-   - **Heikko kysymys:** yksittäinen lause ilman kontekstia, esimerkiksi `Kuinka optimoin tietokantaa?`
+   - **Heikko kysymys:** yksittäinen lause ilman kontekstia, esimerkiksi `Kuinka teen hyvän kesätyöhakemuksen?`
    - **Hyvä kysymys:** sisältää vahvan kontekstin, kuten roolin, taustan, tavoitteen, rajaukset ja esimerkin, sekä täsmällisen promptin, jossa määritellään tehtävä, rooli, rajat, formaatti ja mahdolliset esimerkit.
 
 ### Toteutus noin 20 minuuttia
@@ -32,7 +32,7 @@ Tehtävän tavoitteena on havainnollistaa, kuinka paljon **konteksti** ja **prom
    1. Lähetä heikko kysymys tekoälylle opiskelijoiden nähden.
    2. Lue vastaus ääneen tai näytä se ruudulla.
    3. Kysy luokalta:
-      - Kuinka hyödyllinen tämä vastaus on IT-opiskelijalle?
+      - Kuinka hyödyllinen tämä vastaus on?
       - Mitä tietoa vastauksesta puuttuu?
       - Mitkä kontekstin osat puuttuivat kysymyksestä?
       - Kuinka pitkä vastaus on? Voitte arvioida sanamäärän tai rivien määrän.
@@ -98,7 +98,7 @@ Tehtävän tavoitteena on harjoitella **kontekstin** ja **promptin** rakentamist
 
 **Valmistelu:**
 
-1. Valitse todellinen IT-ongelma, jonka opiskelijat tunnistavat. Sopivia aiheita ovat esimerkiksi **Linux-palvelimen SSH-ongelma** tai **SQL-tietokannan hidas haku**.
+1. Valitse arkinen ongelma, jonka opiskelijat tunnistavat. Sopiva aihe on esimerkiksi **puhelin ei yhdistä kodin WiFi-verkkoon** tai muu vastaava arjen pulma.
 2. Kirjoita taululle tai diaan:
    - viiden komponentin kontekstin malli,
    - viiden elementin promptin malli.
@@ -127,7 +127,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää yhdessä esimerkiksi:
 
-`Olen IT-opiskelija neljän viikon Linux-kurssilla.`
+`Olen tavallinen käyttäjä, en tekninen asiantuntija. Käytän Android-puhelinta.`
 
 **Selitys:** Rooli auttaa tekoälyä valitsemaan sopivan vastaustason.
 
@@ -145,7 +145,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-`Palvelin on Ubuntu 20.04. SSH-avain on generoitu. Kirjautuminen epäonnistuu virheellä Permission denied (publickey).`
+`Muut laitteet yhdistävät verkkoon normaalisti. Puhelin näkee verkon, mutta yhteys epäonnistuu. Olen jo kokeillut käynnistää puhelimen uudelleen.`
 
 **Selitys:** Taustatieto auttaa tekoälyä välttämään arvailua ja toistamasta asioita, jotka on jo kokeiltu.
 
@@ -163,7 +163,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-`Haluan muodostaa SSH-yhteyden tuotantopalvelimelle ja debugata siellä olevaa web-sovellusta.`
+`Haluan saada puhelimen yhdistettyä kotiverkkoon.`
 
 **Selitys:** Tavoite kohdistaa vastauksen siihen, mitä käyttäjä oikeasti yrittää saada aikaan.
 
@@ -181,7 +181,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-`En halua muuttaa palvelimen SSH-asetuksia. Haluan ensin ymmärtää, miksi avain ei toimi.`
+`En halua nollata reititintä, koska muut laitteet toimivat. Haluan ensin ymmärtää, mistä puhelimen ongelma johtuu.`
 
 **Selitys:** Rajaukset poistavat turhia tai riskialttiita vaihtoehtoja.
 
@@ -199,9 +199,9 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-Komento: ssh -v user@192.168.1.100
+Esimerkki näytöllä näkyvästä viestistä: "Yhdistetään…"
 
-Virheilmoitus alkaa: debug1: Offering public key: /home/student/.ssh/id\_rsa
+Sitten ilmestyy: "Todennusvirhe".
 
 **Selitys:** Esimerkki auttaa tekoälyä näkemään tarkasti, mitä tilanteessa tapahtuu.
 
@@ -209,7 +209,7 @@ Virheilmoitus alkaa: debug1: Offering public key: /home/student/.ssh/id\_rsa
 
 Kirjoita kaikki osat yhteen:
 
-> Olen IT-opiskelija neljän viikon Linux-kurssilla. Yritän muodostaa SSH-yhteyden Ubuntu 20.04 -palvelimelle. SSH-avain on generoitu, mutta autentikointi epäonnistuu virheellä `Permission denied (publickey)`. Tavoitteeni on löytää ongelma ja oppia oikea ratkaisu. En halua muuttaa palvelimen SSH-asetuksia tässä vaiheessa. Tässä on virheilmoitus ja käyttämäni komento: `ssh -v user@192.168.1.100`.
+> Olen tavallinen käyttäjä, en tekninen asiantuntija, ja käytän Android-puhelinta. Puhelin ei yhdistä kodin WiFi-verkkoon, vaikka muut laitteet yhdistävät normaalisti. Puhelin näkee verkon, mutta yhteys epäonnistuu, ja olen jo kokeillut käynnistää puhelimen uudelleen. Tavoitteeni on saada puhelin yhdistettyä. En halua nollata reititintä, koska muut laitteet toimivat. Näytöllä lukee ensin "Yhdistetään…" ja sitten "Todennusvirhe".
 
 Kerro opiskelijoille:
 
@@ -232,7 +232,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-`Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu.`
+`Auta minua selvittämään, miksi puhelin ei yhdistä WiFi-verkkoon.`
 
 **Selitys:** Promptin tavoite kertoo tekoälylle, mikä tehtävä sen pitää suorittaa.
 
@@ -267,7 +267,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-`Älä ehdota SSH-palvelimen asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin.`
+`Älä ehdota reitittimen nollausta. Keskity puhelimen asetuksiin.`
 
 **Selitys:** Rajat pitävät vastauksen fokuksessa ja vähentävät turhia tai riskialttiita ehdotuksia.
 
@@ -301,7 +301,7 @@ Kysy opiskelijoilta:
 
 Täyttäkää esimerkiksi:
 
-Vaihe 1: Tarkista avainten oikeudet komennolla ls -la ~/.ssh/. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.
+Vaihe 1: Unohda verkko puhelimen asetuksista ja yhdistä uudelleen salasanalla. Tämä poistaa vanhan, ehkä virheellisen tallennetun salasanan.
 
 **Selitys:** Esimerkki tekee vaatimuksista konkreettisia.
 
@@ -309,7 +309,7 @@ Vaihe 1: Tarkista avainten oikeudet komennolla ls -la ~/.ssh/. Tämä kertoo, ov
 
 Kirjoita taululle lopullinen täsmällinen prompti, joka hyödyntää aiemmin rakennettua kontekstia:
 
-> Auta minua selvittämään, miksi SSH-autentikointi epäonnistuu. Vastaa kuin opettaisit aloittelijaa. Älä käytä liian monimutkaista tekniikkaa, äläkä ehdota palvelimen SSH-asetusten muuttamista. Keskity asiakkaan puolen tarkistuksiin. Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään. Esimerkiksi: “Vaihe 1: Tarkista avainten oikeudet komennolla `ls -la ~/.ssh/`. Tämä kertoo, ovatko avaimet luettavissa ja sopivilla oikeuksilla.”
+> Auta minua selvittämään, miksi puhelin ei yhdistä WiFi-verkkoon. Vastaa kuin neuvoisit aloittelijaa. Älä käytä liian teknistä kieltä, äläkä ehdota reitittimen nollausta. Keskity puhelimen asetuksiin. Vastaa numeroituina vaiheina. Selitä jokaisen vaiheen kohdalla, mitä tehdään ja miksi se tehdään. Esimerkiksi: “Vaihe 1: Unohda verkko puhelimen asetuksista ja yhdistä uudelleen salasanalla. Tämä poistaa vanhan, ehkä virheellisen tallennetun salasanan.”
 
 Kerro opiskelijoille:
 
@@ -342,7 +342,7 @@ Opettaja arvioi opiskelijoiden kykyä:
 - erottaa **konteksti** ja **prompti** toisistaan,
 - tunnistaa hyvän kontekstin keskeiset osat, kuten roolin, taustatiedon, tavoitteen, rajaukset ja esimerkin,
 - tunnistaa hyvän promptin elementit, kuten tavoitteen, roolin, rajat, formaatin ja esimerkit,
-- rakentaa IT-ongelmaan kontekstin ja sen pohjalle täsmällisen promptin,
+- rakentaa arkiseen ongelmaan kontekstin ja sen pohjalle täsmällisen promptin,
 - arvioida, miksi yksi tekoälyn vastaus on hyödyllisempi kuin toinen.
 
 ---

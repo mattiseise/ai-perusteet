@@ -1,51 +1,39 @@
 # Sanasto
 
+## Tietopohja (knowledge base)
+
+Tieto, jonka varassa botti vastaa — esimerkiksi tuotelista, ohjeet ja usein kysytyt kysymykset. Ilman ajantasaista tietopohjaa botti arvailee ja voi antaa virheellisiä vastauksia.
+
+## Rajaus
+
+Botin "en osaa" tai "en saa tehdä tätä" -kohdat: mihin aiheisiin botti vastaa ja mitä se ei saa tehdä. Rajaukset asetetaan ohjeistuksella ja suojaavat sekä käyttäjää että bottia.
+
+## Varmuuskynnys
+
+Jos botti ei ole riittävän varma vastauksestaan, sen pitää sanoa, ettei se tiedä, eikä yrittää arvata.
+
+## Positiivinen testi
+
+Testi, jossa kokeillaan tilanteita, joiden pitäisi toimia — kysymyksiä, joihin botti on suunniteltu vastaamaan.
+
+## Negatiivinen testi
+
+Testi, jossa kokeillaan tilanteita, joiden ei pitäisi toimia: botin pitää osata kieltäytyä, rajata vastaustaan tai ohjata käyttäjä oikeaan paikkaan.
+
+## Reunatapaus (edge case)
+
+Outo tai epätavallinen syöte, kuten tyhjä tai hyvin sekava kysymys. Reunatapaukset paljastavat, kuinka kestävä botti on.
+
+## Iterointi
+
+Testaa–korjaa–testaa uudelleen -kierros, jolla bottia parannetaan vähitellen. Normaali osa botin kehittämistä — ensimmäinen versio on harvoin valmis.
+
+## Eskalointi
+
+Asian ohjaaminen ihmiselle silloin, kun botti ei osaa tai saa hoitaa sitä.
+
 ## Kuratointi
 
-**Kuratointi** tarkoittaa sisällön valitsemista, järjestämistä ja esittämistä niin, että se palvelee tiettyä tarkoitusta tai kohderyhmää. Opetuksessa ja digitaalisissa projekteissa kuratointi voi tarkoittaa esimerkiksi hyödyllisten lähteiden, työkalujen, esimerkkien tai materiaalien kokoamista selkeäksi kokonaisuudeksi.
-
-## README-tiedosto
-
-Projektissa oleva tiedosto, yleensä `README.md`, joka selittää, mitä projekti tekee, miten se asennetaan ja miten sitä käytetään. **README** on usein ensimmäinen asia, jonka uudet käyttäjät lukevat.
-
-## Dokumentaatio
-
-**Dokumentaatio** tarkoittaa kirjallisia ohjeita ja selityksiä siitä, miten ohjelma toimii, miten se asennetaan ja miten sitä käytetään. Dokumentaatio voi sisältää esimerkiksi README-tiedoston, API-dokumentaation, asennusohjeet ja käyttöoppaita.
-
-## Tiketti (ticket)
-
-**Tiketti** on tehtävä tai ongelmaraportti projektinhallintajärjestelmässä. Tiketti kuvaa ongelman, ominaisuuspyynnön tai tehtävän, jota ei ole vielä ratkaistu.
-
-## Loki-analyysi (log analysis)
-
-**Loki-analyysi** tarkoittaa prosessia, jossa tutkitaan lokitiedostoja, jotta ymmärretään, mitä järjestelmässä tapahtui. Loki-analyysiä käytetään erityisesti virheiden ja poikkeamien selvittämiseen.
-
-## CLI (Command-Line Interface)
-
-**CLI** tarkoittaa tekstipohjaista käyttöliittymää, jossa käytetään komentoja hiiren sijasta. Esimerkiksi `ls`, `cd` ja `npm install` ovat CLI-komentoja.
-
-## Shell-skripti
-
-**Shell-skripti** on tiedosto, joka sisältää sarjan komentorivikomentoja ja joka voidaan ajaa automaattisesti. Shell-skriptit säästävät aikaa toistuvissa tehtävissä.
-
-## Vianseuranta (debugging)
-
-**Vianseuranta** tarkoittaa prosessia, jossa etsitään ja korjataan ohjelman virheitä. Apuna voi käyttää esimerkiksi lokeja, debuggeria tai tekoälyä.
-
-## API-dokumentaatio
-
-**API-dokumentaatio** on kirjallinen ohjeistus siitä, miten ohjelmarajapintaa eli API:a käytetään. Se sisältää yleensä endpoint-osoitteet, parametrit ja vastausesimerkit.
-
-## Asennusohje (installation guide)
-
-**Asennusohje** on vaiheittainen ohjeistus, joka kertoo, miten ohjelma tai palvelu asennetaan uuteen järjestelmään.
-
-## Varmuuskopio (backup)
-
-**Varmuuskopio** on kopio tiedostoista tai tiedoista. Sitä säilytetään siltä varalta, että alkuperäinen tiedosto tai tieto menetetään tai vioittuu.
-
-## Kontribuointi (contribution)
-
-**Kontribuointi** tarkoittaa prosessia, jossa muut kehittäjät voivat osallistua avoimen lähdekoodin projektiin. Projektissa olisi hyvä olla dokumentaatio siitä, miten siihen voi kontribuoida.
+Sisällön valitsemista, järjestämistä ja esittämistä niin, että se palvelee tiettyä tarkoitusta tai kohderyhmää — esimerkiksi botin tietopohjan kokoaminen selkeäksi kokonaisuudeksi.
 
 ---

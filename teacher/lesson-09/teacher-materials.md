@@ -18,7 +18,7 @@ Tämän lohkon tavoitteena on, että opiskelija kokoaa Teoria-osion keskeiset k�
 
 ### Luoda ja arvioida
 
-- Opiskelija osaa tuottaa 1000–1200 sanan rakenteisen asiantuntijalausunnon.
+- Opiskelija osaa tuottaa 750–1000 sanan rakenteisen asiantuntijalausunnon.
 - Opiskelija osaa käyttää tekoälyä työparina niin, että tekoäly auttaa jäsentämisessä mutta ei korvaa opiskelijan omaa ajattelua.
 - Opiskelija osaa tarkistaa tekoälyn tuottaman tekstin mahdolliset virheet, kuten keksityt lakiviittaukset, virheelliset käsitteet tai liian yleiset suositukset.
 - Opiskelija osaa tehdä konkreettisia, aikataulutettuja ja vastuullisia toimenpide-ehdotuksia.
@@ -353,7 +353,7 @@ Pyydä opiskelijaa tekemään seuraava tarkistus:
 
 Anna opiskelijoille tämä lista viimeisenä tarkistuksena ennen palautusta.
 
-- Lausunto on noin **1000–1200 sanaa**.
+- Lausunto on noin **750–1000 sanaa**.
 - Kaikki neljä osaa on käsitelty: **mitä tapahtui**, **miksi se tapahtui**, **miten tilanne pitäisi hoitaa** ja **ammatillinen vastuu**.
 - Tekstissä käytetään vähintään kahta omaa todistusaineistoa tunneilta 3, 5 ja 7.
 - Teoria-osion käsitteitä käytetään täsmällisesti eikä vain mainita nimeltä.

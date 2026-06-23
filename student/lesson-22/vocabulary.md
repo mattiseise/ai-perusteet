@@ -2,7 +2,7 @@
 
 ## Työkalu (tool)
 
-Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, CLI.
+Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, komentorivi.
 
 ## Tiedostotyökalu (file tool)
 
@@ -12,9 +12,9 @@ Agentti voi lukea ja kirjoittaa tiedostoja. Lukuoikeus antaa pääsyn tietoihin,
 
 Agentti voi hakea tietoa internetistä. Ajankohtainen tieto, mutta riskit: väärä tieto, kustannukset, yksityisyys.
 
-## CLI-työkalu (command-line interface tool)
+## Komentorivityökalu (CLI, command-line interface tool)
 
-Agentti voi ajaa palvelinkomentoja. Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.
+Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.
 
 ## Whitelist
 
@@ -46,7 +46,7 @@ Eristetty ympäristö, jossa agentti ei voi vaikuttaa oikeaan järjestelmään. 
 
 ## API-avain (API key)
 
-Tunnus, jolla agentti todistetaan palvelulle. Salassa pidettävä, ei lokeihin.
+Tunnus, jolla agentti todistaa oikeutensa käyttää palvelua. Salassa pidettävä, ei lokeihin.
 
 ## CSV (Comma-Separated Values)
 

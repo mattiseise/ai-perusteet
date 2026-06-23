@@ -13,7 +13,7 @@ Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi j�
 Kysy tekoälyltä **kaksi spesifiä kysymystä**, joihin oikea vastaus on tarkistettavissa. Tavoitteenasi on saada malli kompastumaan. Hyviä koukkuja:
 
 - Kuvitteellinen elokuva, kirja tai henkilö: *"Kerro elokuvasta 'Sininen Vuori' (1987)."*
-- Hyvin spesifi tekninen yksityiskohta: *"Mitä parametreja Pythonin `os.path.realpath()` ottaa version 3.12 mukaan?"*
+- Keksityt lähdeviitteet: *"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."* — mallit keksivät usein uskottavia mutta olemattomia viitteitä.
 - Sisäpiirikysymys organisaatiosta: *"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"*
 
 Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.

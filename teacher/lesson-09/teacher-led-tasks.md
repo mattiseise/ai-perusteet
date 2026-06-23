@@ -49,7 +49,7 @@ Varmistaa, että opiskelijat ymmärtävät Teoria-osion arviointitehtävän vaat
 
 4. **Aikataulut ja deadline:**
    - Arviointitehtävä tehdään yksin (ei pari- tai ryhmätyönä).
-   - Pituus: 1000–1200 sanaa.
+   - Pituus: 750–1000 sanaa.
    - Deadline: [ilmoita oppilaitoksen aikataulun mukaan].
 
 ---

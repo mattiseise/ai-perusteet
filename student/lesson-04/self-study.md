@@ -95,7 +95,7 @@ Hyvä prompt rakentuu viidestä osasta. Et tarvitse niitä kaikkia joka promptii
 
 **1. Tavoite (goal)** — Mitä haluat? "Kirjoita tämä", "Selitä tämä", "Paranna tämä". Tavoite on selkeä lause, joka kertoo, mitä tekoäly tekee.
 
-**2. Rooli (role)** — Kuka tekoäly on? "Olet kokenut opettaja", "Olet urheiluvalmentaja", "Olet ravitsemusneuvoja". Rooli auttaa mallia omaksumaan oikean näkökulman ja sopivan kielen.
+**2. Rooli (role)** — Kuka tekoäly on? "Olet kokenut opettaja", "Olet urheiluvalmentaja", "Olet ravitsemusneuvoja". Rooli auttaa mallia omaksumaan oikean näkökulman ja sopivan kielen. Huomaa kuitenkin: rooli vaikuttaa näkökulmaan, sävyyn ja kieleen — ei siihen, kuinka paljon malli oikeasti osaa. Pelkkä "olet huippuasiantuntija" ei tee vastauksesta asiantuntevampaa, jos tarvittava tieto puuttuu.
 
 **3. Rajat (constraints)** — Mitä EI tehdä? "Älä käytä vaikeita termejä", "Kirjoita enintään 3 lausetta", "Älä mainitse hintoja". Rajat antavat mallille selkeän toiminta-alueen.
 

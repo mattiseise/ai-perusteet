@@ -76,7 +76,7 @@ Tekoäly antaa palautetta — käytä sitä ohjeen viimeistelyyn. Tämä on harj
 
 #### Vaihe 5 — Viimeistele ja kirjoita lyhyt huomio
 
-Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa muistissasi 2–3 lauseella:
+Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa mielessäsi 2–3 lauseella:
 
 - Mitä tekoälyn pohjassa oli hyvää, mikä säilyi loppuun saakka?
 - Mitä piti muuttaa, koska tekoäly ei tiennyt todellisuutta?

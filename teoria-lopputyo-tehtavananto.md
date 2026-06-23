@@ -1,12 +1,12 @@
 # Teoria-osion lopputyö: Tuomaripöydän asiantuntijalausunto
 
-Tämä on Teoria-osion arvioitava lopputyö. Kirjoitat **asiantuntijalausunnon** (1000–1200 sanaa) yhdestä todellisesta tekoälyongelmasta — ja perustelet analyysisi käsitteillä, joita olet kerännyt osion aikana. Et tee koko työtä yhdellä istumalla — keräät matkan varrella **kolme todistusaineistoa**, joita käytät lausunnossasi tunnilla 9.
+Tämä on Teoria-osion arvioitava lopputyö. Tuotat **asiantuntijalausunnon** (750–1000 sanaa) yhdestä todellisesta tekoälyongelmasta. **Et kirjoita tekstiä itse** — ohjaat tekoälyä tuottamaan asiantuntijatasoisen tekstin keräämiesi todistusaineistojen pohjalta. Keräät matkan varrella **kolme todistusaineistoa**; kun ne ovat kunnossa, lopputyö on käytännössä hyvä prompti + huolellinen oikoluku.
 
-> **Miksi näin?** Hyvää asiantuntijalausuntoa ei kirjoiteta yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — generatiivisen mekaniikan ymmärrys (tunti 3), kontekstin ja muistin rajat (tunti 5) sekä ammattilaisen tarkistuslista (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä kirjoittamiseen ja perusteluihin — et joudu opettelemaan käsitteitä samalla.
+> **Miksi näin?** Hyvää asiantuntijalausuntoa ei kirjoiteta yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — generatiivisen mekaniikan ymmärrys (tunti 3), kontekstin ja muistin rajat (tunti 5) sekä ammattilaisen tarkistuslista (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä tekoälyn ohjaamiseen ja tuotoksen tarkistamiseen — et joudu opettelemaan käsitteitä samalla.
 
 ## Mitä rakennat?
 
-**Asiantuntijalausunto, 1000–1200 sanaa.** Analysoit yhden kolmesta todellisesta tekoälytilanteesta neljästä näkökulmasta: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja mikä on ammatillinen vastuu.
+Sinä et tuota tekstiä käsin, vaan ohjaat tekoälyä. **Asiantuntijalausunto, 750–1000 sanaa.** Analysoit yhden kolmesta todellisesta tekoälytilanteesta neljästä näkökulmasta: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja mikä on ammatillinen vastuu.
 
 Lausunto eroaa esseestä kolmella tavalla:
 
@@ -27,7 +27,7 @@ Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät lausunnossa tunn
 | 6 | Tutustut kuva-, ääni- ja monimodaalisuuteen | (tarkennus, ei palautusta) |
 | **7** | Laadit ammattilaisen tarkistuslistan hallusinaatioille | **Todistusaineisto 3: Tarkistuslista** |
 | 8 | Pohdit etiikkaa, vastuuta ja oikeuksia | (perusta vastuukysymykselle) |
-| **9** | **Kirjoitat asiantuntijalausunnon kolmen todistusaineiston pohjalta** | **Lopputyö palautettu** |
+| **9** | **Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta** | **Lopputyö palautettu** |
 
 > 💡 **Vinkki:** Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme todistusaineistoa omiksi alaotsikoikseen. Tunnilla 9 sinulla on yksi tiedosto auki, ei kolme.
 
@@ -48,7 +48,7 @@ Miten ammattilainen tarkistaa tekoälyn tuotoksen? Mitkä ovat hallusinaatioiden
 
 Tunti 9:n päätteeksi palautat seuraavat:
 
-**1. Asiantuntijalausunto (1000–1200 sanaa)**
+**1. Asiantuntijalausunto (750–1000 sanaa)**
 Analyysi neljästä osasta: mitä tapahtui, miksi se tapahtui (käsittein), miten tilanne pitäisi hoitaa (konkreettisin toimenpitein), mikä on ammatillinen vastuu.
 
 **2. Vähintään kaksi todistusaineistoa selkeästi käytetty**
@@ -70,7 +70,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 
 ## Työkalut ja työskentelytapa
 
-**Tekoälytyökalu:** Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole kirjoittaa kaikkea itse tyhjästä, vaan ohjata tekoälyä tuottamaan analyyttistä tekstiä ja muokata lopputulos omaksesi. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.
+**Tekoälytyökalu:** Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole kirjoittaa tekstiä itse, vaan ohjata tekoälyä tuottamaan asiantuntijatasoinen lausunto ja varmistaa, että sisältö on oikein. Vaikka oma kirjoitustaito olisi vasta kehittymässä, voit tuottaa laadukkaan lausunnon, kun todistusaineistot ja prompti ovat kunnossa. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.
 
 **Yksin tai pareittain:** Lopputyö tehdään yksin. Voit kuitenkin sparrata käsitteistöä luokkakavereiden kanssa kerätessäsi todistusaineistoja matkan varrella.
 
@@ -93,7 +93,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 | Vaihe | Aika-arvio |
 |---|---|
 | Yksi todistusaineisto (tunnit 3, 5, 7) | ~20–25 min / todistusaineisto |
-| Asiantuntijalausunnon kirjoittaminen (tunti 9) | ~75 min (koko tunti) |
+| Lausunnon tuottaminen ja oikoluku (tunti 9) | ~75 min (koko tunti) |
 | **Yhteensä lähiaikaa** | **~2–3 tuntia** |
 
 > 💡 **Vinkki ajankäyttöön:** Jos joku todistusaineisto jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 9 sinulla pitää olla kolme todistusaineistoa valmiina — muuten kirjoittaminen jää käsitteistön opettelemiseksi.
@@ -102,7 +102,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 
 Palautat tunnilla 9 seuraavat:
 
-- Asiantuntijalausunto (1000–1200 sanaa, tekstitiedosto tai PDF)
+- Asiantuntijalausunto (750–1000 sanaa, tekstitiedosto tai PDF)
 - Maininta käyttämistäsi todistusaineistoista (joko erillisinä liitteinä tai mainittuina lausunnossa)
 
 Vaihtoehtoisessa suoritustavassa palautat tilannekartan, päätöspuun ja suullisen esityksen nauhoitteen tai esität sen luokassa.

@@ -4,7 +4,7 @@
 
 > **HUOM:** Tätä varten sinulla tulee olla kerättynä todistusaineistot 1–3 (tunnit 3, 5 ja 7).
 
-Kirjoitat asiantuntijalausunnon yhdestä tekoälyyn liittyvästä tilanteesta. Lausunto on **1000–1200 sanan analyysi**, jossa käytät kaikkea, mitä olet oppinut Teoria-osiossa (oppitunnit 1–9).
+Tuotat asiantuntijalausunnon yhdestä tekoälyyn liittyvästä tilanteesta — et kirjoita sitä itse, vaan ohjaat tekoälyä tuottamaan sen keräämiesi todistusaineistojen pohjalta. Lausunto on **750–1000 sanan analyysi**, jossa käytät kaikkea, mitä olet oppinut Teoria-osiossa (oppitunnit 1–9).
 
 Käytä tekoälyä apuna kirjoittamisessa. Tarkoitus ei ole, että kirjoitat kaiken itse tyhjästä — vaan että **osaat ohjata tekoälyä tuottamaan analyyttistä tekstiä** ja muokkaat lopputuloksen omaksesi. Anna tekoälylle konteksti (skenaario, käsitteet, todistusaineistosi) ja pyydä sitä auttamaan rakenteen ja tekstin tuottamisessa. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.
 

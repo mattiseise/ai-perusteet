@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Olet varmasti nähnyt, miten IT-ammattilainen ottaa kuvakaappauksen virheilmoituksesta ja lähettää sen verkkofoorumille apua pyytäessään. Tai olet nähnyt koodarin sanovan: ”Tässä on kuvakaappaus, jossa ongelma näkyy.” Monille aloittelijoille kuvakaappaus on vain kuva, ja siksi he voivat pitää sitä vähemmän hyödyllisenä kuin tekstiä. Ammattilaiselle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja.
+Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain IT-ammattilaisen työssä.
 
 Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan **multimodaalista kontekstia** eli yhdistämään tekstiä, kuvia, lokeja ja koodia debuggauksen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.
 
@@ -82,7 +82,7 @@ Multimodaaliset mallit ovat tehokkaita työkaluja, koska ne voivat nähdä kuvak
 
 **Kuvakaappaus** eli screenshot on yksi tärkeimmistä kontekstityökaluista IT-ammattilaisen työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.
 
-Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”Apache-palvelimen konfiguraatio on väärä”, tekoäly voi joutua arvaamaan useita erilaisia virheen syitä. Kun taas näytät kuvakaappauksen `httpd.conf`-tiedostosta, jossa `SSLEngine off` on sijoitettu väärään kohtaan, tekoäly voi nähdä ongelman tarkemmin ja ehdottaa täsmällisempää korjausta.
+Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”sovellus ei aukea”, tekoäly joutuu arvaamaan useita eri syitä. Kun taas näytät kuvakaappauksen, jossa lukee virheilmoitus ”Ei verkkoyhteyttä”, tekoäly näkee ongelman tarkemmin ja osaa ehdottaa täsmällisempää korjausta.
 
 ### Hyvän kuvakaappauksen tekeminen
 
@@ -101,6 +101,8 @@ Modernit tekoälyt voivat lukea kuvakaappauksia samaan tapaan kuin ihminen. Ne v
 > **Pysähdy hetkeksi:** Mieti viimeisintä IT-ongelmaa, johon pyysit apua. Olisiko kuvakaappaus ollut parempi konteksti kuin pelkkä tekstikuvaus? Miten tekoäly olisi voinut auttaa paremmin, jos se olisi nähnyt tilanteen?
 
 ## Lokitiedostot — järjestelmän oma kertomus
+
+> Seuraavat osiot (lokit, koodi ja konfiguraatiot) ovat teknisempiä tilanteita. Sama periaate — näytä, älä vain kerro — pätee silti myös arkisiin kuviin ja kuvakaappauksiin.
 
 **Lokit** eli logs ovat tietueita siitä, mitä järjestelmässä tapahtuu. Kun ohjelmassa on virhe, lokit kertovat usein, mikä meni pieleen ja milloin.
 
@@ -218,6 +220,8 @@ Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Ammattila
 | Koodin virhe | Ei yleensä | ✅ Kyllä, koodi kannattaa antaa tekstinä | Ehkä, jos kyse on ajonaikaisesta virheestä |
 | Verkko-ongelma | ❓ Ehkä | Kyllä, kuvaile mitä yritit tehdä | ✅ Kyllä, verkkolokit ovat usein hyödyllisiä |
 | Hidas sovellus | Kyllä, jos suorituskykytiedot näkyvät ruudulla | Kyllä, kuvaile tilanne ja ajankohta | ✅ Kyllä, suorituskykylokit ovat hyödyllisiä |
+| Lomake ei lähde verkkosivulla | ✅ Kyllä, jos virhe näkyy ruudulla | ✅ Kyllä, kerro mitä yritit tehdä | Ei yleensä |
+| Laite tai sovellus ei käynnisty | ✅ Kyllä, jos näytöllä näkyy viesti | ✅ Kyllä, kuvaile tilanne | Ei yleensä |
 
 ## Multimodaalisten mallien rajoitukset
 
@@ -259,7 +263,7 @@ Käytännössä ammattilainen voi noudattaa seuraavaa työnkulkua:
 
 ### Käytännön työkalut
 
-- **Kuvakaappaustyökalu:** Asenna hyvä kuvakaappaussovellus, kuten Snagit tai ShareX, tai käytä Windowsin sisäänrakennettua Snipping Tool -sovellusta. Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä.
+- **Kuvakaappaustyökalu:** Käytä puhelimen tai tietokoneen omaa kuvakaappaustoimintoa (esim. Windowsin Snipping Tool). Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä. Tarkempaan työhön on olemassa myös erillisiä sovelluksia (esim. Snagit tai ShareX).
 - **Lokien suodatus:** Älä lähetä tuhansia rivejä lokia. Valitse olennaiset virheet, esimerkiksi viimeiset 20 riviä tai grep-haun tulokset.
 - **Rakenteinen tieto:** Kielimallit hyötyvät rakenteisesta tiedosta, kuten CSV-datasta, JSON-tietueista ja taulukoista.
 - **Koodinäyte:** Näytä vain olennainen osa koodista tekstinä, esimerkiksi muutama kymmenen riviä. Kuvakaappaus koodista on harvoin yhtä hyödyllinen kuin kopioitava tekstimuotoinen koodi.

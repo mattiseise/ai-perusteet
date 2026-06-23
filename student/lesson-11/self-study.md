@@ -54,7 +54,7 @@ DeepSeek voi olla erittäin edullinen vaihtoehto. Se voi olla myös nopea ja vah
 
 DeepSeekin käytössä on kuitenkin merkittävä tietosuojakysymys. DeepSeek on kiinalainen palvelu, ja kun lähetät tekstiä palveluun, tieto voi siirtyä Kiinan palvelimille tai kiinalaisen lainsäädännön piiriin. Tämä voi olla ongelma erityisesti silloin, kun käsitellään henkilötietoja, asiakastietoja, potilastietoja, oppilastietoja tai muuta luottamuksellista aineistoa.
 
-EU:ssa ja Suomessa henkilötietojen käsittelyä säätelee **GDPR** eli yleinen tietosuoja-asetus. Se edellyttää, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän.
+Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän. Tietosuojalainsäädäntöä (GDPR) käsitellään tarkemmin osassa 5.
 
 Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:
 
