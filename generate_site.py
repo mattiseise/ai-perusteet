@@ -263,8 +263,16 @@ def build_lesson_data():
             sdir = f"{BASE}/student/{lid}"
             tdir = f"{BASE}/teacher/{lid}"
             slide_url = SLIDE_URLS.get(lid)
+            deck_src = read_file(f"{sdir}/slides.html")
             slides_html = ''
-            if slide_url:
+            if deck_src.strip():
+                slides_html = (
+                    '<div class="deck-wrap">'
+                    '<div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div>'
+                    '<div class="deck">' + deck_src + '</div>'
+                    '</div>'
+                )
+            elif slide_url:
                 slides_html = (
                     f'<div class="slides-container">'
                     f'<iframe src="{slide_url}" frameborder="0" '
@@ -970,6 +978,13 @@ body{{
   border:1px solid var(--border-soft);
   border-radius:var(--r-sm);
 }}
+.deck-wrap{{margin-top:6px}}
+.deck-hint{{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--text-muted);margin-bottom:8px}}
+.deck{{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px}}
+.deck::-webkit-scrollbar{{height:8px}}
+.deck::-webkit-scrollbar-thumb{{background:var(--border-soft);border-radius:8px}}
+.deck-slide{{flex:0 0 100%;scroll-snap-align:center;border:1px solid var(--border-soft);border-radius:var(--r-sm);overflow:hidden;background:#FAFBFE}}
+.deck-slide svg{{display:block;width:100%;height:auto}}
 .panel h1{{
   font-family:var(--font-serif);
   font-size:27px;
