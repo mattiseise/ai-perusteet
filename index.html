@@ -582,6 +582,16 @@ body{
 .deck::-webkit-scrollbar-thumb{background:var(--border-soft);border-radius:8px}
 .deck-slide{flex:0 0 100%;scroll-snap-align:center;border:1px solid var(--border-soft);border-radius:var(--r-sm);overflow:hidden;background:#FAFBFE}
 .deck-slide svg{display:block;width:100%;height:auto}
+.deck-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.deck-full-btn{font-family:var(--font-mono);font-size:12px;color:var(--bc-primary);background:none;border:1px solid var(--border-soft);border-radius:8px;padding:5px 12px;cursor:pointer;white-space:nowrap}
+.deck-full-btn:hover{background:color-mix(in srgb,var(--bc-primary) 8%,transparent)}
+.deck-wrap:fullscreen{background:#0B0F1A;padding:0;margin:0;display:flex;flex-direction:column;justify-content:center}
+.deck-wrap:fullscreen .deck-bar{position:fixed;top:14px;right:18px;margin:0;z-index:5}
+.deck-wrap:fullscreen .deck-hint{display:none}
+.deck-wrap:fullscreen .deck-full-btn{color:#EAEEF8;border-color:#44517A;background:rgba(255,255,255,.08)}
+.deck-wrap:fullscreen .deck{gap:0;padding:0;height:100vh;align-items:center}
+.deck-wrap:fullscreen .deck-slide{flex:0 0 100%;height:100vh;display:flex;align-items:center;justify-content:center;border:none;border-radius:0;background:#0B0F1A}
+.deck-wrap:fullscreen .deck-slide svg{width:min(100vw,177.78vh);height:auto}
 .panel h1{
   font-family:var(--font-serif);
   font-size:27px;
@@ -1544,7 +1554,7 @@ const L={  "lesson-01": {
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Älykäs vai sääntö? — mitä tekoäly oikeasti tekee`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l1g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l1g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -2613,7 +2623,7 @@ Vastaus: Tekoäly on väline. Se voi olla hyödyllinen tai haitallinen riippuen 
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l2g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -3723,7 +3733,7 @@ Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes tek
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l3g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -4748,7 +4758,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l4g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -5929,7 +5939,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Muistin rajat — kuinka paljon tekoäly oikeasti muistaa`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l5g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -6946,7 +6956,7 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Kuvat, ääni ja teksti — kun sanat eivät riitä`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l6g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -8227,7 +8237,7 @@ huomaan itse, jos joku kohta on ohi mennyt.
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l7g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l7g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -9358,7 +9368,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Kenen teksti se on? — etiikka, oikeudet ja vastuu`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l8g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l8g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -10426,7 +10436,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
     ospId:"osp1",ospTitle:`Teoria`,
     ospColor:"var(--blue)",ospIcon:"📐",
     shortTitle:`Tuomaripöydän päätös — asiantuntijalausunto tekoälystä`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l9g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l9g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -11491,7 +11501,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Kilpailuta tekoälyt — mikä työkalu mihinkin?`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l10g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l10g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -12770,7 +12780,7 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Muita tekoälymalleja — kuin ChatGPT ja Claude`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l11g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -14092,7 +14102,7 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Anna konteksti — rakenna oma promptauspankkisi`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l12g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l12g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -15354,7 +15364,7 @@ miksi.
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`AI työparina — pohja, muokkaus ja tarkistus`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l13g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l13g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -16615,7 +16625,7 @@ Selitä minulle:
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Oma botti I — suunnittelu, ohjeet ja persoona`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l14g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -18002,7 +18012,7 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Oma botti II — tietopohja, rajaukset ja testaus`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l15g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l15g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -19616,7 +19626,7 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l16g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l16g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -21292,7 +21302,7 @@ kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Projektidokumenttibotti — suunnittele ja aloita rakentaminen`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l17g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -22485,7 +22495,7 @@ kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
     ospColor:"var(--violet)",ospIcon:"🛠",
     shortTitle:`Projektidokumenttibotti — viimeistele ja esittele`,blockType:"assessment",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l18g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l18g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -23860,7 +23870,7 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -24760,7 +24770,7 @@ niin että minä ajattelen.
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Automaatio vai autonomia? — milloin agentti kannattaa`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l20g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -25942,7 +25952,7 @@ niin että minä ajattelen.
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Agentin muisti ja konteksti — miten kone pysyy kartalla`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l21g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -27105,7 +27115,7 @@ niin että ajattelen.
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Agentin työkalut — tiedostot, haku ja komennot`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l22g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -28557,7 +28567,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l23g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -29925,7 +29935,7 @@ vai sopisiko toinen malli paremmin.
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l24g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -31393,7 +31403,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Ihminen portinvartijana — human-in-the-loop käytännössä`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l25g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l25g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -32632,7 +32642,7 @@ puuttuu? Mikä on epäselvää?
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Kädet saveen — n8n-agenttipaja alkaa`,blockType:"teaching",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l26g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
@@ -33921,7 +33931,7 @@ uudelleen — kysy minulta kysymyksiä.
     ospId:"osp3",ospTitle:`Agentit`,
     ospColor:"var(--teal)",ospIcon:"🤖",
     shortTitle:`Viimeistele ja esittele — agenttisi on valmis`,blockType:"assessment",
-    slides:`<div class="deck-wrap"><div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+    slides:`<div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l27g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l27g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#2F9E69"/>
@@ -36074,6 +36084,25 @@ function routeFromHash(pushState){
   else{ showHome(false); }
 }
 
+function deckFull(btn){
+  var w=btn.closest('.deck-wrap'); if(!w) return;
+  var fs=document.fullscreenElement||document.webkitFullscreenElement;
+  if(!fs){ (w.requestFullscreen||w.webkitRequestFullscreen).call(w); }
+  else { (document.exitFullscreen||document.webkitExitFullscreen).call(document); }
+}
+function deckFullSync(){
+  var fs=document.fullscreenElement||document.webkitFullscreenElement;
+  document.querySelectorAll('.deck-full-btn').forEach(function(b){ b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö'; });
+}
+document.addEventListener('fullscreenchange',deckFullSync);
+document.addEventListener('webkitfullscreenchange',deckFullSync);
+document.addEventListener('keydown',function(e){
+  var fe=document.fullscreenElement||document.webkitFullscreenElement;
+  if(!fe||!fe.classList||!fe.classList.contains('deck-wrap')) return;
+  var d=fe.querySelector('.deck'); if(!d) return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){ d.scrollBy({left:d.clientWidth,behavior:'smooth'}); e.preventDefault(); }
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){ d.scrollBy({left:-d.clientWidth,behavior:'smooth'}); e.preventDefault(); }
+});
 window.addEventListener('popstate',()=>routeFromHash(false));
 
 // Initial route from hash on page load

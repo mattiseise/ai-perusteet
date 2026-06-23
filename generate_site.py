@@ -268,7 +268,8 @@ def build_lesson_data():
             if deck_src.strip():
                 slides_html = (
                     '<div class="deck-wrap">'
-                    '<div class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</div>'
+                    '<div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span>'
+                    '<button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div>'
                     '<div class="deck">' + deck_src + '</div>'
                     '</div>'
                 )
@@ -985,6 +986,16 @@ body{{
 .deck::-webkit-scrollbar-thumb{{background:var(--border-soft);border-radius:8px}}
 .deck-slide{{flex:0 0 100%;scroll-snap-align:center;border:1px solid var(--border-soft);border-radius:var(--r-sm);overflow:hidden;background:#FAFBFE}}
 .deck-slide svg{{display:block;width:100%;height:auto}}
+.deck-bar{{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}}
+.deck-full-btn{{font-family:var(--font-mono);font-size:12px;color:var(--bc-primary);background:none;border:1px solid var(--border-soft);border-radius:8px;padding:5px 12px;cursor:pointer;white-space:nowrap}}
+.deck-full-btn:hover{{background:color-mix(in srgb,var(--bc-primary) 8%,transparent)}}
+.deck-wrap:fullscreen{{background:#0B0F1A;padding:0;margin:0;display:flex;flex-direction:column;justify-content:center}}
+.deck-wrap:fullscreen .deck-bar{{position:fixed;top:14px;right:18px;margin:0;z-index:5}}
+.deck-wrap:fullscreen .deck-hint{{display:none}}
+.deck-wrap:fullscreen .deck-full-btn{{color:#EAEEF8;border-color:#44517A;background:rgba(255,255,255,.08)}}
+.deck-wrap:fullscreen .deck{{gap:0;padding:0;height:100vh;align-items:center}}
+.deck-wrap:fullscreen .deck-slide{{flex:0 0 100%;height:100vh;display:flex;align-items:center;justify-content:center;border:none;border-radius:0;background:#0B0F1A}}
+.deck-wrap:fullscreen .deck-slide svg{{width:min(100vw,177.78vh);height:auto}}
 .panel h1{{
   font-family:var(--font-serif);
   font-size:27px;
@@ -1943,6 +1954,25 @@ function routeFromHash(pushState){{
   else{{ showHome(false); }}
 }}
 
+function deckFull(btn){{
+  var w=btn.closest('.deck-wrap'); if(!w) return;
+  var fs=document.fullscreenElement||document.webkitFullscreenElement;
+  if(!fs){{ (w.requestFullscreen||w.webkitRequestFullscreen).call(w); }}
+  else {{ (document.exitFullscreen||document.webkitExitFullscreen).call(document); }}
+}}
+function deckFullSync(){{
+  var fs=document.fullscreenElement||document.webkitFullscreenElement;
+  document.querySelectorAll('.deck-full-btn').forEach(function(b){{ b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö'; }});
+}}
+document.addEventListener('fullscreenchange',deckFullSync);
+document.addEventListener('webkitfullscreenchange',deckFullSync);
+document.addEventListener('keydown',function(e){{
+  var fe=document.fullscreenElement||document.webkitFullscreenElement;
+  if(!fe||!fe.classList||!fe.classList.contains('deck-wrap')) return;
+  var d=fe.querySelector('.deck'); if(!d) return;
+  if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){{ d.scrollBy({{left:d.clientWidth,behavior:'smooth'}}); e.preventDefault(); }}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){{ d.scrollBy({{left:-d.clientWidth,behavior:'smooth'}}); e.preventDefault(); }}
+}});
 window.addEventListener('popstate',()=>routeFromHash(false));
 
 // Initial route from hash on page load
