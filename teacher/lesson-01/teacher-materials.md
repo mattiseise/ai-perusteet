@@ -100,6 +100,8 @@ Piirrä taululle kaksi saraketta: **Tekoäly** ja **Säännöt**. Lisää opiske
 - **Käytä taulua tai jaettua dokumenttia.** Tee kolme saraketta: tekoäly, säännöt ja yhdistelmä.
 - **Korosta perusteluja.** Oikea luokittelu on vähemmän tärkeä kuin se, osaako opiskelija perustella vastauksensa.
 
+> **Opettajan vinkki:** Aloita tunti jakamalla oma lyhyt (1–2 minuutin) tarina siitä, miten olet itse käyttänyt tekoälyä — työssä, harrastuksessa tai arjessa. Esimerkiksi: "Suunnittelin tekoälyn avulla kesäloman reissun aikataulun, kun en itse keksinyt, mihin järjestykseen kaupungit kannattaisi laittaa" tai "Pyysin tekoälyltä apua, kun jumituin harrastusprojektin koodiin enkä löytänyt virhettä." Omakohtainen tarina motivoi opiskelijoita enemmän kuin abstrakti teoria, koska se tekee aiheesta konkreettisen ja lähestyttävän: opiskelijat näkevät, että tekoäly on tavallinen työkalu eikä kaukainen käsite, ja uskaltavat helpommin kertoa omista kokemuksistaan.
+
 ### Yleisten opiskelijakysymysten vastaukset
 
 **Kysymys: ”Eikö tekoäly ole vain tilastoja?”**

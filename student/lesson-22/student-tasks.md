@@ -58,7 +58,7 @@ puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 
 ### Tehtävä
 
-1. Avaa n8n selaimessa (opettaja antaa osoitteen ja tunnukset).
+1. Avaa n8n.
 2. Tuo esimerkkityönkulku ("Import from File", opettajan jakama tiedosto).
 3. Tutki työnkulkua ja vastaa kysymyksiin.
 

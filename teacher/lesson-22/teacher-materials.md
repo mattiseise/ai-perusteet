@@ -221,7 +221,7 @@ Opiskelijat näkevät ensimmäistä kertaa, miltä tekoälyagentti näyttää n8
 ### Valmistelu
 
 1. Jaa opiskelijoille tiedosto `esimerkki-agentti.json` kurssin materiaalikansiosta.
-2. Varmista, että opiskelijoilla on pääsy n8n:ään joko paikallisesti tai pilvipalvelussa.
+2. Varmista, että opiskelijoilla on pääsy n8n:ään.
 3. Varaa harjoitukseen 15–20 minuuttia.
 
 ### Odotetut vastaukset

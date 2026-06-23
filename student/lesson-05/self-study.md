@@ -123,6 +123,10 @@ Esimerkiksi:
 
 Näin malli ei koskaan unohda olennaista, vaikka ikkuna olisi täyttynyt.
 
+## Konteksti-ikkuna ja pysyvä muisti — kaksi eri asiaa
+
+Konteksti-ikkunan lisäksi monella tekoälytyökalulla, kuten ChatGPT:llä, on erillinen pysyvä muisti. Sinne voit tallentaa tietoja, jotka haluat mallin muistavan aina — myös uusissa keskusteluissa. Voit esimerkiksi pyytää: "Muista tämä: käytän Unity 6 -pelimoottoria", jolloin malli ei enää ehdota sinulle vanhentuneita versioita seuraavissakaan keskusteluissa. Ero on tärkeä: konteksti-ikkuna unohtaa keskustelun päättyessä, mutta pysyvä muisti säilyy keskustelusta toiseen. Pysyvä muisti on siis kuin muistilappu, jonka kiinnität jääkaapin oveen, kun taas konteksti-ikkuna on vain yhden keskustelun aikainen työpöytä, joka tyhjenee, kun suljet sen.
+
 ## Yhteenveto
 
 Konteksti-ikkuna on tekninen raja, joka määrittää, kuinka paljon tekstiä tekoäly voi käsitellä yhdessä keskustelussa. Vanha tieto putoaa ulos, kun ikkuna täyttyy. Ammattilaisena hallitset ikkunaa kolmella tavalla: tiivistämällä vanhoja tekstejä, pilkkomalla projektit pienempiin osiin ja ankkuroimalla olennaisen tiedon jokaiseen viestiin. Näillä menetelmillä voit johtaa pitkiä, monimutkaisia projekteja tekoälyn kanssa ilman, että mallin muisti pettää. Konteksti-ikkunan ymmärtäminen on avain siihen, että tekoälystä tulee luotettava työkaveri eikä epävakaa avustaja.

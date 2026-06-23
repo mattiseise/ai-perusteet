@@ -81,9 +81,9 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
 **Valmistelu:**
 
-- Valitse laaja IT-tehtävä, jota ei ole järkevää antaa tekoälylle kerralla.
+- Valitse laaja tehtävä, jota ei ole järkevää antaa tekoälylle kerralla.
 - Esimerkkejä sopivista tehtävistä:
-  - 3 000 rivin tietokantaskeman analysointi,
+  - pitkän raportin tai kirjan tiivistäminen luku kerrallaan,
   - 50 000 rivin lokitiedoston virheiden selvittäminen,
   - laajan ohjelmakoodin rakenteen arviointi.
 - Valmistele lyhyt kuvaus tehtävästä, sen koosta ja tavoitteesta.
@@ -98,7 +98,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
    > Kun tekoälyä käytetään isoon tehtävään, kaikkea ei kannata syöttää mallille kerralla. Ammattimainen tapa on suunnitella ensin, miten tehtävä pilkotaan pienempiin osiin.
 2. **Vaihe 1: Ymmärtäkää tehtävän koko noin 4 minuuttia:**
 
-   1. Näytä valitsemasi tehtävä, esimerkiksi tietokantaskema tai lokitiedosto.
+   1. Näytä valitsemasi tehtävä, esimerkiksi pitkä raportti tai lokitiedosto.
    2. Kysy opiskelijoilta: **Kuinka suuri tämä aineisto on?**
    3. Arvioikaa tokenimäärää karkeasti. Voitte käyttää nyrkkisääntöä: noin neljä merkkiä vastaa yhtä tokenia.
    4. Keskustelkaa: **Mahtuisiko koko tehtävä yhteen konteksti-ikkunaan? Vaikka mahtuisi, olisiko se järkevää?**
@@ -106,15 +106,15 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
    Piirrä taululle rakenne, johon opiskelijat voivat ehdottaa osia.
 
-   **Tietokantaesimerkki:**
+   **Tiivistämisesimerkki:**
 
-   Osa 1: Analysoi taulukot 1–50.
+   Osa 1: Tiivistä luvut 1–3.
 
-   Osa 2: Analysoi taulukot 51–100.
+   Osa 2: Tiivistä luvut 4–6 edellisen osan yhteenvedon kanssa.
 
-   Osa 3: Analysoi taulukot 101–150.
+   Osa 3: Tiivistä luvut 7–9 edellisten osien yhteenvedon kanssa.
 
-   Osa 4: Tee yhteenveto kaikista havainnoista.
+   Osa 4: Tee yhteenveto koko tekstistä kaikkien osien tiivistelmien pohjalta.
 
    **Lokiesimerkki:**
 
@@ -138,19 +138,19 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
    Kirjoita taululle esimerkkirakenne:
 
-   Projekti: 3 000 rivin tietokantaskeman analyysi.
+   Projekti: pitkän raportin tiivistäminen luku kerrallaan.
 
-   Kokonaistehtävä: tunnista ongelmalliset taulurakenteet ja mahdolliset riippuvuudet.
+   Kokonaistehtävä: tee koko raportista selkeä yhteenveto, joka kuljettaa tärkeimmät havainnot mukana.
 
-   Nyt analysoitava osa: taulukot 1–50.
+   Nyt tiivistettävä osa: luvut 1–3.
 
-   Tulevat osat: taulukot 51–100 ja 101–150.
+   Tulevat osat: luvut 4–6 ja 7–9.
 
-   Palauta lopuksi tiivis yhteenveto tämän osan havainnoista.
+   Palauta lopuksi tiivis yhteenveto tämän osan sisällöstä.
 
    Jatko-osassa ankkurointi voi näyttää tältä:
 
-   Edellisen osan yhteenveto: [lyhyt yhteenveto]. Nyt analysoidaan taulukot 51–100 samalla arviointitavalla.
+   Edellisen osan yhteenveto: [lyhyt yhteenveto]. Tiivistä nyt luvut 4–6 samalla tavalla ja liitä havainnot edelliseen yhteenvetoon.
 
    Selitä opiskelijoille:
 
@@ -173,7 +173,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
    Kerro opiskelijoille:
 
-   > Tämä on ammattimainen tapa käyttää tekoälyä suurissa IT-tehtävissä. Ensin suunnitellaan kokonaisuus, sitten käsitellään osat ja lopuksi yhdistetään havainnot.
+   > Tämä on ammattimainen tapa käyttää tekoälyä suurissa tehtävissä. Ensin suunnitellaan kokonaisuus, sitten käsitellään osat ja lopuksi yhdistetään havainnot.
 
 **Vinkki arviointiin:** Hyvä pilkkomissuunnitelma ei ole vain lista osista. Siinä näkyy myös, miten osien tulokset tiivistetään ja miten seuraava osa ankkuroidaan edelliseen.
 
@@ -199,7 +199,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että teko
 
 - Valmistele etukäteen noin 15–20 kysymyksen sarja, joka kuormittaa konteksti-ikkunaa.
 - Testaa etukäteen, missä vaiheessa valitsemasi tekoälymalli alkaa unohtaa alkuperäisiä rajauksia tai antaa yleisempiä vastauksia.
-- Valitse selkeä alkuasetelma, jossa on tarkkoja teknisiä rajauksia.
+- Valitse selkeä alkuasetelma, jossa on tarkkoja rajauksia.
 
 ### Toteutus noin 20 minuuttia
 
@@ -212,29 +212,29 @@ Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että teko
 
    Avaa tekoälytyökalu ja anna selkeä alkurajaus, esimerkiksi:
 
-   Käytämme Ubuntu 22.04 -käyttöjärjestelmää, PostgreSQL-tietokantaa ja Python 3.9 -versiota. Älä ehdota Windows-ratkaisuja tai muita tietokantoja.
+   Suunnittelemme illallista. Ruoan pitää olla kasvisruokaa, ruoanlaittoon käytetään vain uunia ja liettä (ei mikroa), ja budjetti on 10 euroa. Älä ehdota liha- tai kalaruokia äläkä mikroaterioita.
 
-   Kysy ensin kolme kysymystä, jotka liittyvät tähän ympäristöön. Tavoitteena on näyttää, että malli hyödyntää alkurajausta keskustelun alussa.
+   Kysy ensin kolme kysymystä, jotka liittyvät tähän tilanteeseen. Tavoitteena on näyttää, että malli hyödyntää alkurajausta keskustelun alussa.
 2. **Kontekstin kuormittaminen noin 7 minuuttia:**
 
    1. Kysy nopeasti 15–20 eri aihetta koskevaa kysymystä.
    2. Älä toista alkurajauksia kysymysten välissä.
-   3. Pyydä opiskelijoita seuraamaan, pysyykö malli alkuperäisissä teknisissä rajauksissa.
+   3. Pyydä opiskelijoita seuraamaan, pysyykö malli alkuperäisissä rajauksissa.
 3. **Paljastus noin 5 minuuttia:**
 
-   1. Kysy lopuksi: `Miten asennan tietokantapalvelimen?`
-   2. Jos malli ehdottaa Windows-ratkaisua, väärää tietokantaa tai unohtaa Ubuntu- ja PostgreSQL-rajaukset, pysäytä demo.
+   1. Kysy lopuksi: `Mitä laittaisin pääruoaksi?`
+   2. Jos malli ehdottaa liha- tai kalaruokaa, mikroateriaa tai unohtaa kasvisruoka- ja budjettirajaukset, pysäytä demo.
    3. Kysy luokalta: **Huomasitteko, mitä tapahtui? Malli unohti osan alkuperäisestä rajauksesta, eikä se kertonut siitä meille.**
-   4. Jos malli muistaa rajaukset, tarkenna kysymystä tai jatka vielä muutamalla kuormittavalla kysymyksellä. Voit kysyä esimerkiksi: `Entä käyttöjärjestelmäkohtaiset asennusvaiheet?`
+   4. Jos malli muistaa rajaukset, tarkenna kysymystä tai jatka vielä muutamalla kuormittavalla kysymyksellä. Voit kysyä esimerkiksi: `Entä jos haluan jälkiruoankin samalla budjetilla?`
 4. **Korjaus livenä noin 2 minuuttia:**
 
    Toista alkurajaukset eli ankkuroi tehtävä uudelleen:
 
-   Muistathan, että käytämme Ubuntu 22.04 -käyttöjärjestelmää, PostgreSQL-tietokantaa ja Python 3.9 -versiota.
+   Muistathan, että suunnittelemme kasvisruokaa, käytämme vain uunia ja liettä (ei mikroa) ja budjetti on 10 euroa.
 
    Kysy sama kysymys uudelleen:
 
-   Miten asennan tietokantapalvelimen?
+   Mitä laittaisin pääruoaksi?
 
    Näytä opiskelijoille, miten **ankkurointi** voi palauttaa vastauksen takaisin oikeaan kontekstiin.
 5. **Keskustelu noin 3 minuuttia:**

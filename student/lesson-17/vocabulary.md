@@ -1,18 +1,18 @@
-# Sanasto — Projektidokumenttibotti
+# Sanasto — Oma apuri-botti
 
-## Projektin suunnittelu
+## Botin suunnittelu
 
-**Projektisuunnitelma** — Kirjallinen dokumentti, joka kuvaa projektin tavoitteen, käyttäjät, aikataulun, resurssit ja menetelmät. Hyvä suunnitelma vastaa kysymyksiin: mitä, kenelle, miksi, milloin ja miten.
+**Botin määrittely** — Lyhyt kuvaus siitä, kenelle botti on, mitä se osaa, mitä se ei tee ja mitkä ovat sen rajat. Tämä on botin "perustamisasiakirja", josta järjestelmäprompti johdetaan. Älä sekoita tätä siihen, mitä botti auttaa käyttäjää tekemään — määrittely kertoo botista itsestään.
 
-**Stakeholder** (sidosryhmä) — Henkilö tai organisaatio, jolla on intressi projektiin. Esimerkiksi asiakkaat, sijoittajat, tiimin jäsenet tai käyttäjät.
+**Kohderyhmä** — Ne käyttäjät, joita varten botti on rakennettu. Esimerkiksi luokkakaverit, kerhon uudet jäsenet tai kirjaston asiakkaat. Kun tiedät kohderyhmän, osaat valita oikean kielen ja sisällön.
 
-**Scope** (projektin laajuus) — Määritelmä siitä, mitä projektiin sisältyy ja mitä ei. Selkeä scope estää projektia laajenemasta kontrolloimattomasti.
+**Työnkulku** — Järjestys, jossa botti ohjaa käyttäjää vaiheesta toiseen. Selkeä työnkulku auttaa botin pysymään raiteilla eikä hyppimään satunnaisesti.
 
-**Aikataulu** — Suunnitelma siitä, mitä tehdään milloin. Sisältää vaiheet (fase), deadlinet ja riippuvuudet.
+**Rajat** — Määritelmä siitä, mitä botti tekee ja mitä ei. Selkeät rajat estävät bottia leviämästä hallitsemattomasti tai vastaamasta asioihin, joihin sen ei kuulu vastata.
 
-**Resurssi** — Mitä tarvitaan projektin tekemiseen. Ihmisiä (tiimi), rahaa (budjetti), teknologiaa, prosesseja.
+**Tietopohja** — Kokoelma dokumentteja, joista botti ammentaa oman aiheesi tietoa. Hyvä botti nojaa kuratoituun tietopohjaan, ei pelkkiin yleisiin oletuksiin.
 
-**Riskianalyysi** — Tunnistaminen ja arviointi asioista, jotka voivat mennä pieleen, ja niiden ratkaisuista.
+**Iterointi** — Botin parantaminen testaamalla, korjaamalla ja testaamalla uudelleen. Hyvä botti syntyy iteroinnista, ei heti ensimmäisellä yrityksellä.
 
 ## Custom GPT:t ja botit
 
@@ -44,7 +44,7 @@
 
 **Muistinvaraus** — Botin kyky muistaa aiempia vastauksia samassa keskustelussa. Hyvin suunniteltu botti ei kysy samaa asiaa kahdesti.
 
-**Validointi** — Tarkistaminen, että tieto on oikein ennen sen käyttämistä. Esimerkiksi: "Ymmärsinkö oikein: sinulla on 3 kehittäjää ja 50 000 euron budjetti?"
+**Validointi** — Tarkistaminen, että tieto on oikein ennen sen käyttämistä. Esimerkiksi: "Ymmärsinkö oikein: treenaat kolmena päivänä viikossa ja tavoitteesi on parantaa kuntoa?"
 
 ## Dokumentointi
 
@@ -56,7 +56,7 @@
 
 ## Johtaminen ja rakentaminen
 
-**Mentori** — Kokenut henkilö, joka ohjaa ja opastaa muita. Projektidokumenttibotti toimii mentorina, joka esittää oikeita kysymyksiä.
+**Mentori** — Kokenut henkilö, joka ohjaa ja opastaa muita. Apuri-botti toimii mentorina, joka esittää oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin.
 
 **Kalibrointi** — Säätäminen oikealle tasolle. Esimerkiksi: ovatko botin kysymykset liian yksinkertaiset vai liian monimutkaiset? Kalibrointi paranee testaamalla.
 

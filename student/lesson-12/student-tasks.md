@@ -1,6 +1,6 @@
 # Rakennuspalikka 1 — Promptauspankki
 
-> 📌 **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä huolellisesti.
+> 📌 **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *oman apuri-bottisi* Microsoft Copilotiin. Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
@@ -21,7 +21,7 @@ Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opisk
 - **Lukioaineet ja harrastukset:** esseen rakenteen suunnittelu, treeniohjelman jäsentäminen, tapahtuman aikataulu
 - **IT:** käyttöohjeen kirjoittaminen, virheilmoituksen tulkinta, koodin selitys
 
-Yhden tilanteen pitää olla **"projektin määrittelydokumentin laatiminen"** tai jokin sen osa — tämä on suora yhteys tunnin 18 lopputuotokseen.
+Yhden tilanteen kannattaa liittyä siihen aiheeseen, jolle aiot rakentaa oman apuri-bottisi (tunnit 17–18) — tämä on suora yhteys tunnin 18 lopputuotokseen.
 
 ### Vaihe 2 — Kirjoita ensimmäinen versio jokaisesta promptista
 

@@ -1,12 +1,12 @@
 # Rakennuspalikka 3 — Tietopohjan kuratointi
 
-**📌 Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *projektin määrittelydokumentin sparrauskumppanin* Microsoft Copilotiin. Säilytä tämä työ huolellisesti.
+**📌 Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *oman apuri-bottisi* Microsoft Copilotiin. Säilytä tämä työ huolellisesti.
 
 ## Mitä teet?
 
-Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joista botti saa oman alasi asiantuntemusta. Tietopohja erottaa oman bottisi yleisestä tekoälystä: yleinen tekoäly tietää monesta asiasta vähän, mutta sinun bottisi keskittyy juuri oman alasi **projektidokumentaation** tukemiseen.
+Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joista botti saa oman aiheesi asiantuntemusta. Tietopohja erottaa oman bottisi yleisestä tekoälystä: yleinen tekoäly tietää monesta asiasta vähän, mutta sinun bottisi keskittyy juuri sinun valitsemaasi aiheeseen.
 
-**Kuratointi** ei tarkoita sitä, että keräät mahdollisimman paljon tiedostoja. Se tarkoittaa aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Hyvä tietopohja vastaa kysymykseen: *"Mitä botin pitää tietää, jotta se osaa auttaa juuri minun alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa?"*
+**Kuratointi** ei tarkoita sitä, että keräät mahdollisimman paljon tiedostoja. Se tarkoittaa aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Hyvä tietopohja vastaa kysymykseen: *"Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?"*
 
 ## Tavoite
 
@@ -39,30 +39,29 @@ Avaa **rakennuspalikka 2** eli botin määrittelydokumentti. Katso siitä erityi
 - **Työnkulku:** missä järjestyksessä botti ohjaa käyttäjää?
 - **Rajat:** mitä botti ei saa tehdä?
 
-Tämä vaihe on tärkeä, koska tietopohjan pitää tukea juuri tämän botin tarkoitusta. Älä kerää sattumanvaraisia dokumentteja vain siksi, että ne liittyvät alaan yleisesti. Valitse materiaalia, joka auttaa bottia ohjaamaan käyttäjää **projektin määrittelydokumentin** laatimisessa.
+Tämä vaihe on tärkeä, koska tietopohjan pitää tukea juuri tämän botin tarkoitusta. Älä kerää sattumanvaraisia dokumentteja vain siksi, että ne liittyvät aiheeseen yleisesti. Valitse materiaalia, joka auttaa bottia auttamaan käyttäjää **valitsemassasi tehtävässä**.
 
 ### Vaihe 2 — Listaa, mitä botin pitää tietää
 
-Kirjoita 5–8 konkreettista **tietotarvetta**. Tietotarve tarkoittaa asiaa, joka botin pitää ymmärtää, jotta se osaa auttaa käyttäjää projektin määrittelyssä.
+Kirjoita 5–8 konkreettista **tietotarvetta**. Tietotarve tarkoittaa asiaa, joka botin pitää ymmärtää, jotta se osaa auttaa käyttäjää valitsemassasi tehtävässä.
 
-Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää määrittelemään tavoitteet, vaatimukset, riskit ja aikataulun, sen tietopohjasta pitäisi löytyä materiaalia juuri näihin aiheisiin.
+Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää käymään läpi keskeiset käsitteet, harjoituskysymykset ja palautteen, sen tietopohjasta pitäisi löytyä materiaalia juuri näihin aiheisiin.
 
-| Ala | Esimerkkejä tietotarpeista |
+| Aihe | Esimerkkejä tietotarpeista |
 | --- | --- |
-| **Liiketalous ja kauppa** | Kampanjasuunnitelman rakenne, kohderyhmän määrittely, budjetin osat, aikataulu ja onnistumisen mittarit. |
-| **Sosiaali- ja terveysala** | Tapahtuman tai projektin rakenne, kohderyhmän tarpeet, turvallisuus- ja tietosuojanäkökulmat, vastuunjako ja seuranta. |
-| **Media ja viestintä** | Tuotannon vaiheet, käsikirjoituksen osat, kohderyhmän tavoittaminen, julkaisusuunnitelma ja tekijänoikeudet. |
-| **Ravintola- ja catering** | Tilaisuuden suunnittelun rakenne, menun ja allergeenien huomiointi, hankinnat, mitoitus ja aikataulu. |
-| **Lukioaineet ja harrastukset** | Tutkielman tai tapahtuman rakenne, tavoitteen rajaus, aikataulu, tarvittavat resurssit ja arviointi. |
-| **IT** | Projektin rakenne, yleiset riskit, vaatimusten määrittely, käyttöliittymäluonnokset ja tietoturvanäkökulmat. |
+| **Opiskelu** | Aiheen keskeiset käsitteet, tyypilliset väärinkäsitykset, hyvät harjoituskysymykset, esimerkkivastaukset ja kertaamisen vinkit. |
+| **Harrastus tai kerho** | Säännöt, aikataulut, yleisimmät kysymykset, jäsenten vinkit ja yhteystiedot. |
+| **Tuttu pieni palvelu** | Aukioloajat, palvelut ja hinnat, usein kysytyt kysymykset, ohjeet ja yhteystiedot. |
+| **Pelit, musiikki tai sisältö** | Lajityypin tunnusmerkit, ideointitekniikat, rakenteen mallit, esimerkit ja palautteen periaatteet. |
+| **Arjen apuri** | Suunnittelun rakenne, hyvät käytännöt, yleiset sudenkuopat, esimerkkipohjat ja seurannan tavat. |
 
 **Mallipohja omalle listalle:**
 
-1. Botin pitää tietää, miten projektin tausta kuvataan.
-2. Botin pitää tietää, miten projektin tavoite rajataan.
-3. Botin pitää tietää, millaisia vaatimuksia tämän alan projekteissa yleensä määritellään.
-4. Botin pitää tietää, millaisia riskejä tämän alan projekteissa voi olla.
-5. Botin pitää tietää, millainen valmis määrittelydokumentti näyttää.
+1. Botin pitää tietää, mitkä ovat aiheen keskeiset käsitteet.
+2. Botin pitää tietää, miten käyttäjän tehtävä jäsennetään selkeiksi vaiheiksi.
+3. Botin pitää tietää, millaisia kysymyksiä tästä aiheesta tyypillisesti esitetään.
+4. Botin pitää tietää, millaisia yleisiä virheitä tai sudenkuoppia aiheeseen liittyy.
+5. Botin pitää tietää, millainen hyvä lopputulos tai vastaus näyttää.
 
 ### Vaihe 3 — Etsi ja valitse 3–5 dokumenttia
 
@@ -71,8 +70,8 @@ Etsi materiaalia, joka kattaa vaiheessa 2 listaamasi tietotarpeet. Valitse lopuk
 Hyviä lähteitä voivat olla:
 
 - kurssimateriaalit, kuten oppikirjat, luentodiat tai aiemmat tehtäväpohjat,
-- alasi yleiset standardit ja ohjeistukset,
-- mallipohjat tai esimerkkidokumentit todellisista projekteista,
+- aiheesi yleiset standardit ja ohjeistukset,
+- mallipohjat tai esimerkkidokumentit aiheesi todellisista tilanteista,
 - luotettavat alan blogit, dokumentaatiot tai viralliset ohjeet,
 - Wikipedia-artikkelit vain yleisen rakenteen hahmottamiseen, ei tarkkojen yksityiskohtien päälähteeksi.
 
@@ -83,7 +82,7 @@ Arvioi jokaista dokumenttia seuraavien kysymysten avulla:
 - Onko lähde luotettava?
 - Onko dokumentti ajantasainen?
 - Tukeeko se bottini työnkulkua?
-- Auttaako se käyttäjää laatimaan projektin määrittelydokumenttia?
+- Auttaako se käyttäjää valitsemassasi tehtävässä?
 - Onko dokumentissa konkreettinen rakenne, mallipohja tai tarkistuslista, jota botti voi hyödyntää?
 - Sisältääkö dokumentti henkilötietoja, salassa pidettävää tietoa tai muuta aineistoa, jota ei saa ladata Copilotiin?
 
@@ -93,7 +92,7 @@ Avaa ChatGPT, Claude tai Copilot ja anna sille bottisi tietotarpeet sekä valits
 
 Voit käyttää esimerkiksi seuraavaa kehotetta:
 
-> "Toimit minulle sparrauskumppanina. Rakennan bottia, joka auttaa oman alani ammattilaista tai opiskelijaa projektin määrittelydokumentin laatimisessa. BOTTINI TARKOITUS: [kuvaa bottisi tarkoitus lyhyesti] TIETOTARPEET: [liitä vaiheessa 2 tekemäsi lista] VALITUT DOKUMENTIT: 1. [dokumentin nimi + lyhyt kuvaus] 2. [dokumentin nimi + lyhyt kuvaus] 3. [dokumentin nimi + lyhyt kuvaus] Auta minua arvioimaan tietopohjan kattavuus: Mitä tietotarpeita dokumentit eivät kata? Onko jokin dokumentti turha tai päällekkäinen toisen kanssa? Onko alalla jokin tyypillinen tieto, jota en ole vielä ottanut huomioon? Onko jokin dokumentti liian yleinen tai liian vaikea kohderyhmälleni? Näetkö tietosuoja- tai luottamuksellisuusriskin siinä, että jokin dokumentti ladattaisiin bottiin? Älä ehdota uusia dokumentteja suoraan minulle. Auta tunnistamaan aukot, jotta voin etsiä lisämateriaalia itse."
+> "Toimit minulle sparrauskumppanina. Rakennan apuri-bottia, joka auttaa käyttäjää valitsemassani aiheessa. BOTTINI TARKOITUS: [kuvaa bottisi tarkoitus lyhyesti] TIETOTARPEET: [liitä vaiheessa 2 tekemäsi lista] VALITUT DOKUMENTIT: 1. [dokumentin nimi + lyhyt kuvaus] 2. [dokumentin nimi + lyhyt kuvaus] 3. [dokumentin nimi + lyhyt kuvaus] Auta minua arvioimaan tietopohjan kattavuus: Mitä tietotarpeita dokumentit eivät kata? Onko jokin dokumentti turha tai päällekkäinen toisen kanssa? Onko aiheessa jokin tyypillinen tieto, jota en ole vielä ottanut huomioon? Onko jokin dokumentti liian yleinen tai liian vaikea kohderyhmälleni? Näetkö tietosuoja- tai luottamuksellisuusriskin siinä, että jokin dokumentti ladattaisiin bottiin? Älä ehdota uusia dokumentteja suoraan minulle. Auta tunnistamaan aukot, jotta voin etsiä lisämateriaalia itse."
 
 Tämä on harjoitus siitä, miten tekoälyä käytetään *kattavuuden tarkistajana*. Tekoäly ei kerää tietopohjaa puolestasi, mutta se voi auttaa huomaamaan sokeita pisteitä.
 
@@ -115,7 +114,7 @@ Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppit
 
 Kirjoita lopuksi 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä minun pitää muistaa, kun lataan dokumentit bottiin?"*
 
-> **💡 Miksi tämä on tärkeää:** Oppitunnilla 18 rakennettava botti tunnistetaan ammattimaiseksi juuri tietopohjan avulla. Yleinen tekoäly osaa puhua aiheesta yleisellä tasolla, mutta sinun bottisi tuntee oman alasi käytäntöjä, koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin ydin.
+> **💡 Miksi tämä on tärkeää:** Oppitunnilla 18 rakennettava botti tunnistetaan ammattimaiseksi juuri tietopohjan avulla. Yleinen tekoäly osaa puhua aiheesta yleisellä tasolla, mutta sinun bottisi tuntee oman aiheesi käytäntöjä, koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin ydin.
 
 > **💡 Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.
 

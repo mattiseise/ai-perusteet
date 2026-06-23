@@ -234,16 +234,16 @@ Agentin turvallisuutta kannattaa ajatella kerroksina. Yksi suojaus ei riitä, ko
 
 ---
 
-## Käytännön esimerkki: projektidokumenttibotti
+## Käytännön esimerkki: opiskelun apuri-botti
 
-Kuvitellaan projektidokumenttibotti, jonka tehtävänä on auttaa opiskelijaa suunnittelemaan projekti ja kokoamaan vastaukset selkeäksi projektisuunnitelmaksi. Botti vaikuttaa melko turvalliselta, koska se ei välttämättä tee teknisiä komentoja. Silti siihen liittyy turvallisuuskysymyksiä.
+Kuvitellaan opiskelun apuri-botti, jonka tehtävänä on auttaa opiskelijaa valmistautumaan kokeeseen: kerrata keskeisiä käsitteitä, esittää harjoituskysymyksiä ja antaa palautetta vastauksista. Botti vaikuttaa melko turvalliselta, koska se ei välttämättä tee teknisiä komentoja. Silti siihen liittyy turvallisuuskysymyksiä.
 
 | Tilanne | Riski | Turvallinen ratkaisu |
 | --- | --- | --- |
-| Käyttäjä antaa projektiin luottamuksellisia asiakastietoja. | Botti voi käsitellä tai tallentaa tietoa, jota ei pitäisi syöttää palveluun. | Botti ohjeistaa käyttäjää poistamaan henkilötiedot ja käyttämään anonymisoitua kuvausta. |
-| Käyttäjä pyytää bottia keksimään puuttuvat projektin tiedot. | Botti voi hallusinoida projektin tavoitteita, aikatauluja tai resursseja. | Botti pyytää tarkennuksia eikä täytä olennaisia kohtia omilla arvauksillaan. |
-| Käyttäjä yrittää saada botin ohittamaan omat rajauksensa. | Botti voi alkaa tehdä asioita, joita sen ei pitäisi tehdä. | Botti pitää kiinni roolistaan ja vastaa vain projektisuunnitteluun liittyen. |
-| Projektisuunnitelmaa käytetään arvioitavana työnä. | Botti voi tehdä työn opiskelijan puolesta. | Botti toimii mentorina: se kysyy, ohjaa ja auttaa jäsentämään, mutta ei tee kaikkea valmiiksi. |
+| Käyttäjä syöttää bottiin luottamuksellisia tai henkilökohtaisia tietoja. | Botti voi käsitellä tai tallentaa tietoa, jota ei pitäisi syöttää palveluun. | Botti ohjeistaa käyttäjää poistamaan henkilötiedot ja käyttämään anonymisoitua kuvausta. |
+| Käyttäjä pyytää bottia keksimään vastauksen asiaan, jota se ei tiedä. | Botti voi hallusinoida faktoja, määritelmiä tai lähteitä. | Botti pyytää tarkennuksia eikä täytä olennaisia kohtia omilla arvauksillaan. |
+| Käyttäjä yrittää saada botin ohittamaan omat rajauksensa. | Botti voi alkaa tehdä asioita, joita sen ei pitäisi tehdä. | Botti pitää kiinni roolistaan ja vastaa vain oman aiheensa kysymyksiin. |
+| Botin apua käytetään arvioitavan työn tekemiseen. | Botti voi tehdä työn opiskelijan puolesta. | Botti toimii mentorina: se kysyy, ohjaa ja auttaa jäsentämään, mutta ei tee kaikkea valmiiksi. |
 
 ---
 

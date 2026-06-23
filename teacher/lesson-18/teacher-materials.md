@@ -1,8 +1,8 @@
-# Opettajan materiaalit — Oppitunti 18: projektidokumenttibotin viimeistely ja esittely
+# Opettajan materiaalit — Oppitunti 18: oman apuri-botin viimeistely ja esittely
 
 ## Oppitunnin tarkoitus ja konteksti
 
-Oppitunti 18 on **Tekoälyjen käyttö** -osion arvioinnin toinen osa. Oppitunnilla 17 opiskelijat suunnittelivat ja rakensivat projektidokumenttibotin ensimmäisen version. Tällä oppitunnilla he viimeistelevät botin, testaavat sen perusteellisesti, dokumentoivat korjaukset ja esittelevät työnsä muille.
+Oppitunti 18 on **Tekoälyjen käyttö** -osion arvioinnin toinen osa. Oppitunnilla 17 opiskelijat suunnittelivat ja rakensivat oman apuri-bottinsa ensimmäisen version. Tällä oppitunnilla he viimeistelevät botin, testaavat sen perusteellisesti, dokumentoivat korjaukset ja esittelevät työnsä muille.
 
 Oppitunnin ydin on, että opiskelija osoittaa osaavansa käyttää tekoälyä **vastuullisesti**, **itsenäisesti** ja **dokumentoidusti**. Arvioinnissa ei katsota vain sitä, onko botti olemassa, vaan sitä, miten opiskelija testaa, parantaa, esittelee ja arvioi omaa työtään.
 
@@ -59,14 +59,14 @@ Kokonaispistemäärä on **20 pistettä**. Jokainen arviointikriteeri on enintä
 
 - Onko botin tarkoitus selkeä: mitä botti tekee ja kenelle?
 - Onko system prompt kirjoitettu johdonmukaisesti suhteessa botin tarkoitukseen?
-- Ovatko kysymykset relevantteja ja rakentavatko ne realistisen kuvan projektista?
+- Ovatko kysymykset relevantteja ja rakentavatko ne realistisen kuvan käyttäjän tilanteesta?
 - Vastaako botti siihen tehtävään, johon se on suunniteltu?
 
 | Taso | Kuvaus |
 | --- | --- |
 | **Erinomainen, 4 p** | Botin tarkoitus on erittäin selkeä. Kysymykset ovat olennaisia ja hyvin suunniteltuja. Botti vastaa johdonmukaisesti siihen, mihin se on rakennettu. |
 | **Hyvä, 3 p** | Tarkoitus ja perusidea ovat selkeät. Joissakin kysymyksissä tai rakenteessa on pieniä puutteita. |
-| **Tyydyttävä, 2 p** | Botti toimii perusidealtaan, mutta tarkoitus, kysymykset tai projektisuunnittelun logiikka jäävät osittain epäselviksi. |
+| **Tyydyttävä, 2 p** | Botti toimii perusidealtaan, mutta tarkoitus, kysymykset tai ohjaavan työnkulun logiikka jäävät osittain epäselviksi. |
 | **Välttävä, 1 p** | Botin tarkoitus on epäselvä tai botti ei vastaa realistisesti siihen tehtävään, johon se on tarkoitettu. |
 
 ---
@@ -111,9 +111,9 @@ Kokonaispistemäärä on **20 pistettä**. Jokainen arviointikriteeri on enintä
 
 | Testityyppi | Syöte | Odotettu vastaus | Saatu vastaus | Korjaus tai johtopäätös |
 | --- | --- | --- | --- | --- |
-| **Positiivinen testi** | Käyttäjä antaa selkeän projektikuvauksen. | Botti kysyy olennaisia kysymyksiä ja etenee loogisesti. |  |  |
-| **Negatiivinen testi** | Käyttäjä pyytää bottia tekemään koko projektin hänen puolestaan. | Botti kieltäytyy tekemästä kaikkea valmiiksi ja ohjaa käyttäjää suunnittelussa. |  |  |
-| **Reunatapaus** | Käyttäjä antaa epäselvän viestin, kuten ”tee suunnitelma”. | Botti pyytää tarkennuksia eikä oleta puuttuvia tietoja. |  |  |
+| **Positiivinen testi** | Käyttäjä antaa selkeän kuvauksen tilanteestaan. | Botti kysyy olennaisia kysymyksiä ja etenee loogisesti. |  |  |
+| **Negatiivinen testi** | Käyttäjä pyytää bottia tekemään koko homman hänen puolestaan. | Botti kieltäytyy tekemästä kaikkea valmiiksi ja ohjaa käyttäjää eteenpäin. |  |  |
+| **Reunatapaus** | Käyttäjä antaa epäselvän viestin, kuten ”auta”. | Botti pyytää tarkennuksia eikä oleta puuttuvia tietoja. |  |  |
 
 ---
 
@@ -214,7 +214,7 @@ Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä o
 
 ### Johdantolause opettajalle
 
-> Viimeksi rakensitte projektidokumenttibotin ensimmäisen version. Tänään katsomme, kestääkö botti testauksen, osaako se toimia vaikeammissakin tilanteissa ja pystyttekö esittelemään sen niin, että muut ymmärtävät sen hyödyn.
+> Viimeksi rakensitte oman apuri-bottinne ensimmäisen version. Tänään katsomme, kestääkö botti testauksen, osaako se toimia vaikeammissakin tilanteissa ja pystyttekö esittelemään sen niin, että muut ymmärtävät sen hyödyn.
 
 ---
 
@@ -226,7 +226,7 @@ Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä o
 
 **Tee näin:**
 
-1. Tee yksi positiivinen testi: käyttäjä antaa selkeän projektikuvauksen.
+1. Tee yksi positiivinen testi: käyttäjä antaa selkeän kuvauksen tilanteestaan.
 2. Tee yksi negatiivinen testi: käyttäjä pyytää jotakin, mitä botin ei kuulu tehdä.
 3. Tee yksi reunatapaustesti: käyttäjä antaa epäselvän, puutteellisen tai ristiriitaisen pyynnön.
 4. Kirjaa jokaisesta testistä syöte, odotettu vastaus, saatu vastaus ja johtopäätös.
@@ -283,7 +283,7 @@ Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä o
 - Vältä yleistä palautetta, kuten ”ihan hyvä” tai ”huono”.
 - Perustele palautteesi.
 
-**Rakentavan palautteen malli:** ”Ymmärsin hyvin, että botti auttaa projektin aikataulutuksessa. Seuraavaksi voisit lisätä testin tilanteesta, jossa käyttäjä antaa ristiriitaisia tietoja.”
+**Rakentavan palautteen malli:** ”Ymmärsin hyvin, että botti auttaa treeniviikon kokoamisessa. Seuraavaksi voisit lisätä testin tilanteesta, jossa käyttäjä antaa ristiriitaisia tietoja.”
 
 **Aika-arvio:** 35 minuuttia
 
@@ -318,7 +318,7 @@ Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä o
 
 - Pyydä opiskelijaa testaamaan bottia eri kielellä tai eri käyttäjäroolilla.
 - Pyydä lisäämään esittelyyn visuaalinen elementti, kuten dia, prosessikaavio tai ennen–jälkeen-vertailu.
-- Pyydä opiskelijaa pohtimaan, mitä työkaluja agentti tarvitsisi, jos projektidokumenttibotti kehittyisi agentiksi.
+- Pyydä opiskelijaa pohtimaan, mitä työkaluja agentti tarvitsisi, jos apuri-botti kehittyisi agentiksi.
 - Pyydä opiskelijaa tunnistamaan agentin turvallisuusriskejä, esimerkiksi liialliset oikeudet, virheelliset toiminnot tai puutteellinen seuranta.
 
 ---
@@ -359,7 +359,7 @@ Näitä aineistoja voi hyödyntää myös Tekoälyjen käyttö -osion päätösr
 
 ## Silta Agentit-osioon
 
-Oppitunti 18 toimii siltana seuraavaan kokonaisuuteen. Projektidokumenttibotti on vielä botti: se keskustelee, kysyy ja kokoaa tietoa. Agentti vie tämän ajatuksen pidemmälle: se voi käyttää työkaluja, hakea tietoa, tehdä toimenpiteitä ja seurata prosessia useassa vaiheessa.
+Oppitunti 18 toimii siltana seuraavaan kokonaisuuteen. Apuri-botti on vielä botti: se keskustelee, kysyy ja kokoaa tietoa. Agentti vie tämän ajatuksen pidemmälle: se voi käyttää työkaluja, hakea tietoa, tehdä toimenpiteitä ja seurata prosessia useassa vaiheessa.
 
 Arvioinnin aikana opettajan kannattaa kirjata muistiin:
 
@@ -375,11 +375,11 @@ Arvioinnin aikana opettajan kannattaa kirjata muistiin:
 
 ### Esimerkki 1: erinomainen suoritus
 
-**Opiskelija A: ”Projektin analysoija -botti”**
+**Opiskelija A: ”Kertauskaveri biologian kokeeseen -botti”**
 
 | Kriteeri | Pisteet | Perustelu |
 | --- | --- | --- |
-| Botin suunnittelu ja tarkoitus | 4/4 | Tarkoitus on selkeä ja kysymykset tukevat projektisuunnittelua hyvin. |
+| Botin suunnittelu ja tarkoitus | 4/4 | Tarkoitus on selkeä ja kysymykset tukevat käyttäjän ohjaamista hyvin. |
 | System prompt ja ohjeet | 4/4 | Rooli, toimintatapa ja rajaukset ovat hyvin kirjoitettuja. |
 | Testaus ja iterointi | 4/4 | Kuusi testiä, selkeä dokumentaatio, promptia korjattu ja uudelleentestaus osoittaa parannusta. |
 | Esittely ja viestintä | 3/4 | Esittely onnistui hyvin, mutta oli hieman nopea. |
@@ -391,7 +391,7 @@ Arvioinnin aikana opettajan kannattaa kirjata muistiin:
 
 ### Esimerkki 2: tyydyttävä suoritus
 
-**Opiskelija B: ”Yksinkertainen projektibotti”**
+**Opiskelija B: ”Yksinkertainen harrastusbotti”**
 
 | Kriteeri | Pisteet | Perustelu |
 | --- | --- | --- |

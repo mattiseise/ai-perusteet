@@ -466,31 +466,7 @@ Tekoälytyökalua ei kannata valita vain siksi, että se on suosittu. Valitse ty
 - Jos haluat agenttimaisempaa apua koko projektiin, **Claude Code** -tyyppiset työkalut ovat tehokkaita, mutta vaativat enemmän tarkistamista.
 - Jos olet aloittelija ja haluat oppia ohjelmoinnin perusteita, **ChatGPT** voi selittää, kysellä ja antaa pieniä harjoituksia.
 
-### Käytännön esimerkkejä
-
-**Blogiartikkelin kuvitus:**
-
-Käytä ChatGPT:n kuvagenerointia. Pyydä 16:9-kuvaa ja kerro aihe, tyyli sekä käyttötarkoitus. Älä pyydä kuvaan tekstiä, jos et tarvitse sitä.
-
-**Podcastin intro:**
-
-Kokeile Sunoa tai Udiota. Pyydä lyhyt instrumentaalinen kappale, jossa ei ole laulua, jos kappaleen päälle tulee puhetta.
-
-**Oppitunnin dia:**
-
-Käytä kuvageneraattoria taustakuvan tai havainnekuvan luomiseen. Muista, että kuvan pitää tukea oppimista, ei vain näyttää hienolta.
-
-**Videon storyboard:**
-
-Käytä Runwayta, Pikaa tai Veo-tyyppistä työkalua lyhyiden kohtausideoiden kokeiluun. Älä odota vielä täydellistä pitkää videota.
-
-**Pieni ohjelmointitehtävä:**
-
-Kysy ChatGPT:ltä selitys, pyydä vihje tai anna oma koodisi tarkistettavaksi. Älä kopioi valmista vastausta ymmärtämättä sitä.
-
-**Isompi koodiprojekti:**
-
-Käytä Cursorin, Copilotin tai Claude Coden kaltaista työkalua. Tee muutokset pienissä osissa ja tarkista aina, mitä tekoäly muutti.
+Yllä oleva lista kokoaa yhteen ne työkalut, jotka esiteltiin medioittain aiemmin tällä tunnilla. Kun valitset työkalua, mieti ensin, mihin mediaan ja käyttötarkoitukseen sitä tarvitset, ja käytä sitten näitä esimerkkejä lähtökohtana.
 
 ## Kohti omaa projektia
 

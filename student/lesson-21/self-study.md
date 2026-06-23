@@ -80,7 +80,7 @@ Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agent
 
 Konteksti-ikkuna kertoo agentille, mitä tapahtuu **nyt**. Mutta entä jos asiakkaan kanssa on työskennelty kuusi kuukautta? Entä jos hän palaa uuden ongelman kanssa ja haluat, että agentti muistaa, mitä viimeksi opittiin?
 
-Tätä varten agentilla voi olla **pitkäaikainen muisti**, joka tallennetaan esimerkiksi **vektoritietokantaan**. Vektoritietokanta on erikoistunut tietokanta, joka etsii samankaltaisuuksia merkityksen, ei vain täsmällisten sanojen perusteella. Tämä ero on tärkeä.
+Tätä varten agentilla voi olla **pitkäaikainen muisti**, joka tallennetaan esimerkiksi **vektoritietokantaan**. Vektoritietokanta on erikoistunut tietokanta, joka etsii samankaltaisuuksia merkityksen, ei vain täsmällisten sanojen perusteella. Tämä ero on tärkeä. Yksinkertaisesti sanottuna: vektoritietokanta toimii kuin hakukone, joka ymmärtää mitä tarkoitat — se löytää saman asian, vaikka sanoisit sen eri sanoin.
 
 Tavallisessa tietokannassa haetaan usein täsmällisillä termeillä. Sana ”muistikortti” löytyy varmasti, jos hakusanana on ”muistikortti”. Vektoritietokannassa tieto tallennetaan kuitenkin merkityksen perusteella. Kun asiakas sanoo: ”Minulla oli ongelma muistilaitteen kanssa viime kuussa”, lause voidaan muuntaa **matemaattiseksi esitykseksi** eli vektoriksi. Tämä vektori kuvaa lauseen merkitystä: kyse on muistista, laitteesta, ongelmasta ja menneestä ajankohdasta.
 

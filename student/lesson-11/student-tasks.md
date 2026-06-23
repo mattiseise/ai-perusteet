@@ -12,11 +12,10 @@
 
 Valitse yksi seuraavista organisaatioista. Kuvittele, että sinua pyydetään suosittelemaan sille sopivaa tekoälytyökalua.
 
-- **Pieni IT-yritys:** 10 työntekijää, ohjelmistokehitystä, pieni budjetti ja paljon koodaustehtäviä.
-- **Ammatillinen oppilaitos:** opettajat haluavat hyödyntää tekoälyä, opiskelijoiden tiedot pitää suojata ja GDPR:n noudattaminen on välttämätöntä.
-- **Terveysasema:** potilastietoja käsitellään päivittäin, tietosuoja on erittäin kriittinen ja henkilöstö ei ole tekoälyasiantuntijoita.
-- **Kunnan tietohallinto:** julkinen organisaatio, jossa käsitellään julkisia ja sisäisiä asiakirjoja. Työntekijöitä on useita kymmeniä ja budjetti on kohtuullinen.
-- **Pelistudio:** 15 hengen tiimi, jossa tehdään koodausta ja sisällöntuotantoa. Kansainväliset asiakkaat ja ideointi ovat tärkeitä.
+- **Oma oppilaitoksesi:** opettajat ja opiskelijat hyödyntäisivät tekoälyä, mutta opiskelijoiden tiedot pitää suojata ja GDPR:ää noudattaa.
+- **Urheiluseura tai harrastuskerho:** jäsenviestintä, aikataulut ja ilmoittautumiset; mukana on jäsenten yhteystietoja, ja budjetti on pieni.
+- **Pieni kahvila tai kioski:** asiakaspalvelua, markkinointia ja somepostauksia, pieni budjetti.
+- **Pieni IT-yritys tai pelistudio:** 10–15 hengen tiimi, koodausta ja sisällöntuotantoa, kansainvälisiä asiakkaita.
 
 **Tallenna:** Kirjoita valitsemasi organisaatio muistiin yhdellä lauseella.
 

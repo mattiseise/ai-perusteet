@@ -1,4 +1,4 @@
-# Opettajan johtaminen — Oppitunti 18: Projektidokumenttibotti viimeistelee
+# Opettajan johtaminen — Oppitunti 18: Oma apuri-botti viimeistellään
 
 Oppitunti 18 on Tekoälyjen käyttö -osion huipentuma. Opiskelijat viimeistelevät ja testaavat bottiaan, valmistelevat esittelyt ja arvioivat vertaisille. Tämä oppitunti on sekä tekemisen että yhteisöllisyyden oppitunti.
 
@@ -46,7 +46,7 @@ Opiskelijat tekevät tehtävää 18.1. Sinulla on kaksi roolia: fasilitoija ja k
 
 **Kannustajana:** Jotkut opiskelijat voivat ajatella "bottini on täydellinen, miksi testata?" Vastaa: "Mikään ei ole täydellinen. Testaus osoittaa, mitä voidaan parantaa." Jotkut saattavat löytää ongelmia ja stressaantua. Vastaa: "Hyvä! Juuri nämä ongelmat auttavat sinua parantamaan."
 
-**Tekninen apu:** Jos botti on hidastunut tai kaatuu, ehdota: "Kopioi system prompt, liitä se uudelleen, kokeile uudestaan." Jos opiskelija ei osaa luoda negatiivista testiä, ota esimerkki: "Kysy botilta jotain, joka ei liity projekteihin. Esimerkiksi 'Kirjoita runo'."
+**Tekninen apu:** Jos botti on hidastunut tai kaatuu, ehdota: "Kopioi system prompt, liitä se uudelleen, kokeile uudestaan." Jos opiskelija ei osaa luoda negatiivista testiä, ota esimerkki: "Kysy botilta jotain, joka ei liity sen aiheeseen. Esimerkiksi 'Kirjoita runo'."
 
 **Lopussa:** Kerää muutamat esimerkit ja kysy: "Kuka löysi mielenkiintoisen ongelman?" Kerro muille, miten sitä korjattiin. Tämä normalisoi ongelmien löytämisen.
 
@@ -140,7 +140,7 @@ Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista,
 
 Oppitunnin lopussa pidä lyhyt yhteenveto:
 
-"Olet nyt viimeistellyt projektidokumenttibotin. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Nämä ovat taidot, joita tarvitset koko urallasi.
+"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Nämä ovat taidot, joita tarvitset koko urallasi.
 
 Seuraavassa osiossa (Agentit-osio) botti muuttuu agentiksi. Agentti on parempi, nopeampi ja itsenäisempi. Se voi tehdä asioita, ilman että sinä käsket. Pohja, jonka rakennat nyt, on agenttisi pohja. Sama testaaminen, sama dokumentointi, sama huolellinen ajattelu — vain suuremmassa mittakaavassa.
 

@@ -31,7 +31,7 @@ Täytä seuraava taulukko kunkin agentin osalta:
 ### Ohjeita
 
 - **Suunnittelusilmukan vaiheet**: Kuvaile, mitä agentti havaitsee, miten se suunnittelee, mitä se tekee ja miten se tarkkailee tuloksia.
-- **Työkalut**: Listaa konkreettiset API:t tai keinot, joita agentti tarvitsee.
+- **Työkalut**: Listaa konkreettiset API:t tai keinot, joita agentti tarvitsee. (**API** = rajapinta, jonka kautta ohjelmat puhuvat keskenään — esimerkiksi sähköpostin luku- tai lähetysrajapinta.)
 - **Konteksti-ikkuna**: Mitä lyhytaikaista tietoa agentti tarvitsee ymmärtääkseen tilanteen nyt?
 - **Ulkoinen muisti**: Mitä pitkäaikaista tietoa agentti tarvitsee oppimista varten?
 - **Huomiot**: Jos agentti voi vahingoittaa järjestelmää, mikä on riski? Mitä rajoituksia sille tulisi asettaa?

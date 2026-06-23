@@ -82,7 +82,7 @@ Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa mielessäsi 2–
 - Mitä piti muuttaa, koska tekoäly ei tiennyt todellisuutta?
 - Mitä huomasit, kun tekoäly toimi kohderyhmänä — auttoiko se?
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä ohje ja muistiinpano omassa kansiossasi. Tunnilla 18 rakentamasi *projektin määrittelydokumentin sparrauskumppani* tekee periaatteessa samaa: ohjaa käyttäjää vaihe vaiheelta jonkin asian läpi. Ymmärrät paremmin, miksi rajat ja tarkennukset ovat tärkeitä, kun olet itse joutunut tekemään ohjetta.
+> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä ohje ja muistiinpano omassa kansiossasi. Tunnilla 18 rakentamasi *oma apuri-botti* tekee periaatteessa samaa: ohjaa käyttäjää vaihe vaiheelta jonkin asian läpi. Ymmärrät paremmin, miksi rajat ja tarkennukset ovat tärkeitä, kun olet itse joutunut tekemään ohjetta.
 
 ---
 

@@ -35,7 +35,7 @@ puolestani — kysy niin että minä huomaan ongelmat itse.
 
 ### Ohjeet
 
-1. Kirjaudu koulun n8n-instanssiin (tunnukset opettajalta).
+1. Avaa n8n.
 2. Luo uusi työnkulku.
 3. Lisää **Manual Trigger** -solmu.
 4. Lisää **HTTP Request** -solmu. Menetelmä `GET`, osoite `https://api.github.com/zen`.

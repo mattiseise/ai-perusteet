@@ -24,6 +24,124 @@ Agentti toimii toisin. Se voi vastaanottaa uuden sähköpostin, analysoida sen s
 
 > **Pysähdy hetkeksi:** Mitä eroa on siinä, että ohjelma tekee aina samaa, ja siinä, että se arvioi tilannetta ja muuttaa toimintaansa sen perusteella?
 
+<figure style="margin:26px 0;text-align:center">
+<svg viewBox="0 0 960 786" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:820px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Tekoälyagentti n8n-järjestelmässä – korkean tason näkymä</title>
+  <desc>Kolme vaihetta selityksineen: käynnistys, agentti (kielimalli ja työkalut) ja lopputulos; alhaalla viisivaiheinen toimintaketju selityksineen ja agentin vahvuus.</desc>
+  <defs>
+    <g id="ovw-bolt" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 2 L5 13.5 H11 L10.5 22 L19 9.5 H12.5 Z" fill="currentColor" stroke="none"/></g>
+    <g id="ovw-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
+    <g id="ovw-check" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.2 l2.8 2.8 l5.6-6.2"/></g>
+    <g id="ovw-ai" fill="none" stroke="currentColor"><path d="M12 3 L13.8 9.6 L20.5 11.4 L13.8 13.2 L12 20 L10.2 13.2 L3.5 11.4 L10.2 9.6 Z" fill="currentColor"/></g>
+    <g id="ovw-wrench" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5.5 a4.2 4.2 0 0 1 -5.4 5.4 L6.5 19 a2 2 0 0 1 -2.8 -2.8 L11.8 8.2 A4.2 4.2 0 0 1 17.2 2.8 L14.4 5.6 l1.5 2.5 l2.5 1.5 Z"/></g>
+    <g id="ovw-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
+    <g id="ovw-clock" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15.5 14"/></g>
+    <g id="ovw-link" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 12 H14.5"/><path d="M10 8 H8 a4 4 0 0 0 0 8 H10"/><path d="M14 8 H16 a4 4 0 0 1 0 8 H14"/></g>
+    <g id="ovw-chat" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5 a2 2 0 0 1 2-2 H18 a2 2 0 0 1 2 2 V14 a2 2 0 0 1 -2 2 H9.5 L5.5 19.5 V16 H6 a2 2 0 0 1 -2-2 Z"/></g>
+    <g id="ovw-doc" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5 H14 L18.5 8 V20 a1 1 0 0 1 -1 1 H6 a1 1 0 0 1 -1 -1 V4.5 a1 1 0 0 1 1 -1 Z"/><path d="M13.5 3.5 V8 H18.5"/><path d="M8 12 H15 M8 15.5 H15"/></g>
+    <g id="ovw-chart" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 H20"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="8.5" width="3" height="9.5"/><rect x="16" y="5" width="3" height="13"/></g>
+    <g id="ovw-gear" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.3"/><path d="M12 3.5 V6 M12 18 V20.5 M3.5 12 H6 M18 12 H20.5 M5.9 5.9 L7.7 7.7 M16.3 16.3 L18.1 18.1 M18.1 5.9 L16.3 7.7 M7.7 16.3 L5.9 18.1"/></g>
+    <g id="ovw-inbox" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13 V18 a1 1 0 0 0 1 1 H19 a1 1 0 0 0 1 -1 V13 H15.5 a3.5 3.5 0 0 1 -7 0 Z"/><path d="M12 3.5 V10 M9 7.5 L12 10.5 L15 7.5"/></g>
+    <g id="ovw-target" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></g>
+    <g id="ovw-loop" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 10 a7 7 0 0 1 11.5 -3.3 L19 8.5"/><path d="M19 4.5 V9 H14.5"/><path d="M18.5 14 a7 7 0 0 1 -11.5 3.3 L5 15.5"/><path d="M5 19.5 V15 H9.5"/></g>
+    <g id="ovw-bulb" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18 H14.5 M10.5 21 H13.5"/><path d="M12 3 a6 6 0 0 1 4 10.3 c-0.8 0.8 -1 1.7 -1 2.7 H9 c0 -1 -0.2 -1.9 -1 -2.7 A6 6 0 0 1 12 3 Z"/></g>
+  </defs>
+  <rect x="0" y="0" width="960" height="786" rx="18" fill="#FAFBFE"/>
+  <text x="480" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1B2336">Tekoälyagentti n8n-järjestelmässä</text>
+  <text x="480" y="70" text-anchor="middle" font-size="14" fill="#5A6478">Agentti vastaanottaa tehtävän, ymmärtää sen, käyttää työkaluja ja tuottaa lopputuloksen.</text>
+  <rect x="28" y="96" width="280" height="402" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#ovw-bolt" x="46" y="114" width="22" height="22" style="color:#2F9E69"/>
+  <text x="76" y="124" font-size="14.5" font-weight="700" fill="#247A52">1. KÄYNNISTYS</text>
+  <text x="76" y="140" font-size="10.5" font-weight="600" fill="#3DA876">(TRIGGER)</text>
+  <line x1="46" y1="152" x2="290" y2="152" stroke="#CDE9D9" stroke-width="1.3"/>
+  <text x="46" y="176" font-size="12.5" fill="#3A4253">Tapahtuma, joka käynnistää</text>
+  <text x="46" y="193" font-size="12.5" fill="#3A4253">agentin toiminnan.</text>
+  <text x="46" y="226" font-size="12" font-weight="700" fill="#1B2336">Esimerkkejä:</text>
+  <use href="#ovw-mail" x="46" y="246" width="17" height="17" style="color:#2F9E69"/><text x="72" y="259" font-size="12.5" fill="#3A4253">Sähköposti saapuu</text>
+  <use href="#ovw-clock" x="46" y="284" width="17" height="17" style="color:#2F9E69"/><text x="72" y="297" font-size="12.5" fill="#3A4253">Ajastettu tehtävä</text>
+  <use href="#ovw-link" x="46" y="322" width="17" height="17" style="color:#2F9E69"/><text x="72" y="335" font-size="12.5" fill="#3A4253">Webhook tai API-kutsu</text>
+  <use href="#ovw-chat" x="46" y="360" width="17" height="17" style="color:#2F9E69"/><text x="72" y="373" font-size="12.5" fill="#3A4253">Viesti chatissa</text>
+  <line x1="312" y1="297" x2="336" y2="297" stroke="#9AA6BD" stroke-width="2.4"/><path d="M340 297 L330 291.5 L330 302.5 Z" fill="#9AA6BD"/>
+  <rect x="340" y="96" width="280" height="402" rx="14" fill="#EEF1FE" stroke="#C9D2F7" stroke-width="1.8"/>
+  <use href="#ovw-robot" x="358" y="112" width="24" height="24" style="color:#3B5BDB"/>
+  <text x="390" y="129" font-size="16" font-weight="700" fill="#2F46B0">2. AGENTTI</text>
+  <line x1="358" y1="146" x2="602" y2="146" stroke="#C9D2F7" stroke-width="1.3"/>
+  <text x="358" y="166" font-size="11.5" fill="#3A4253">Ymmärtää tehtävän, suunnittelee</text>
+  <text x="358" y="182" font-size="11.5" fill="#3A4253">vaiheet ja käyttää työkaluja</text>
+  <text x="358" y="198" font-size="11.5" fill="#3A4253">tavoitteen saavuttamiseksi.</text>
+  <rect x="356" y="210" width="248" height="104" rx="10" fill="#FFFFFF" stroke="#C9D2F7" stroke-width="1.3"/>
+  <use href="#ovw-ai" x="368" y="221" width="18" height="18" style="color:#3B5BDB"/>
+  <text x="392" y="235" font-size="12.5" font-weight="700" fill="#2F46B0">KIELIMALLI (LLM)</text>
+  <text x="370" y="258" font-size="11.5" fill="#3A4253">• Ymmärtää tehtävän</text>
+  <text x="370" y="278" font-size="11.5" fill="#3A4253">• Tekee päätökset</text>
+  <text x="370" y="298" font-size="11.5" fill="#3A4253">• Muodostaa vastaukset</text>
+  <rect x="356" y="322" width="248" height="104" rx="10" fill="#FFFFFF" stroke="#C9D2F7" stroke-width="1.3"/>
+  <use href="#ovw-wrench" x="368" y="333" width="18" height="18" style="color:#3B5BDB"/>
+  <text x="392" y="347" font-size="12.5" font-weight="700" fill="#2F46B0">TYÖKALUT</text>
+  <text x="370" y="370" font-size="11.5" fill="#3A4253">• Lukee ja kirjoittaa dataa</text>
+  <text x="370" y="390" font-size="11.5" fill="#3A4253">• Suorittaa toimintoja</text>
+  <text x="370" y="410" font-size="11.5" fill="#3A4253">• Integroi ulkoisiin (API:t)</text>
+  <text x="358" y="452" font-size="11.5" font-style="italic" fill="#5A6478">Agentti voi suorittaa useita</text>
+  <text x="358" y="468" font-size="11.5" font-style="italic" fill="#5A6478">vaiheita, kunnes tavoite täyttyy.</text>
+  <line x1="624" y1="297" x2="648" y2="297" stroke="#9AA6BD" stroke-width="2.4"/><path d="M652 297 L642 291.5 L642 302.5 Z" fill="#9AA6BD"/>
+  <rect x="652" y="96" width="280" height="402" rx="14" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+  <use href="#ovw-check" x="670" y="114" width="22" height="22" style="color:#0E9AA7"/>
+  <text x="700" y="124" font-size="14.5" font-weight="700" fill="#0B7E89">3. LOPPUTULOS</text>
+  <text x="700" y="140" font-size="10.5" font-weight="600" fill="#1AA1AD">(OUTPUT)</text>
+  <line x1="670" y1="152" x2="914" y2="152" stroke="#BFE6E9" stroke-width="1.3"/>
+  <text x="670" y="176" font-size="12.5" fill="#3A4253">Agentti tuottaa valmiin ja</text>
+  <text x="670" y="193" font-size="12.5" fill="#3A4253">tarkistetun tuloksen.</text>
+  <text x="670" y="226" font-size="12" font-weight="700" fill="#1B2336">Esimerkkejä:</text>
+  <use href="#ovw-doc" x="670" y="246" width="17" height="17" style="color:#0E9AA7"/><text x="696" y="259" font-size="12.5" fill="#3A4253">Vastaus raporttina</text>
+  <use href="#ovw-chart" x="670" y="284" width="17" height="17" style="color:#0E9AA7"/><text x="696" y="297" font-size="12.5" fill="#3A4253">Tallennus taulukkoon</text>
+  <use href="#ovw-mail" x="670" y="322" width="17" height="17" style="color:#0E9AA7"/><text x="696" y="335" font-size="12.5" fill="#3A4253">Vastaus sähköpostina</text>
+  <use href="#ovw-gear" x="670" y="360" width="17" height="17" style="color:#0E9AA7"/><text x="696" y="373" font-size="12.5" fill="#3A4253">Toimenpide järjestelmässä</text>
+  <line x1="28" y1="524" x2="932" y2="524" stroke="#E3E7F0" stroke-width="1.3"/>
+  <text x="28" y="550" font-size="13.5" font-weight="700" fill="#1B2336">Näin agentti toimii vaihe vaiheelta:</text>
+  <use href="#ovw-inbox" x="28" y="566" width="19" height="19" style="color:#3B5BDB"/>
+  <text x="54" y="580" font-size="12" font-weight="700" fill="#2F46B0">1. Vastaanottaa</text>
+  <text x="28" y="602" font-size="10.8" fill="#5A6478">Trigger käynnistää ja</text>
+  <text x="28" y="617" font-size="10.8" fill="#5A6478">välittää tehtävän tiedot.</text>
+  <use href="#ovw-target" x="210" y="566" width="19" height="19" style="color:#3B5BDB"/>
+  <text x="236" y="580" font-size="12" font-weight="700" fill="#2F46B0">2. Ymmärtää</text>
+  <text x="210" y="602" font-size="10.8" fill="#5A6478">Kielimalli ymmärtää</text>
+  <text x="210" y="617" font-size="10.8" fill="#5A6478">tehtävän ja päättää</text>
+  <text x="210" y="632" font-size="10.8" fill="#5A6478">tarvittavat vaiheet.</text>
+  <use href="#ovw-wrench" x="392" y="566" width="19" height="19" style="color:#3B5BDB"/>
+  <text x="418" y="580" font-size="12" font-weight="700" fill="#2F46B0">3. Käyttää</text>
+  <text x="392" y="602" font-size="10.8" fill="#5A6478">Hyödyntää sopivia</text>
+  <text x="392" y="617" font-size="10.8" fill="#5A6478">työkaluja tiedon hakuun</text>
+  <text x="392" y="632" font-size="10.8" fill="#5A6478">ja toimintoihin.</text>
+  <use href="#ovw-loop" x="574" y="566" width="19" height="19" style="color:#3B5BDB"/>
+  <text x="600" y="580" font-size="12" font-weight="700" fill="#2F46B0">4. Toistaa</text>
+  <text x="574" y="602" font-size="10.8" fill="#5A6478">Arvioi tulokset ja palaa</text>
+  <text x="574" y="617" font-size="10.8" fill="#5A6478">tarvittaessa, kunnes</text>
+  <text x="574" y="632" font-size="10.8" fill="#5A6478">tavoite täyttyy.</text>
+  <use href="#ovw-check" x="756" y="566" width="19" height="19" style="color:#3B5BDB"/>
+  <text x="782" y="580" font-size="12" font-weight="700" fill="#2F46B0">5. Tuottaa</text>
+  <text x="756" y="602" font-size="10.8" fill="#5A6478">Palauttaa vastauksen</text>
+  <text x="756" y="617" font-size="10.8" fill="#5A6478">tai suorittaa</text>
+  <text x="756" y="632" font-size="10.8" fill="#5A6478">toiminnon.</text>
+  <g stroke="#C2CAD9" stroke-width="2" fill="#C2CAD9">
+    <line x1="170" y1="575" x2="196" y2="575"/><path d="M200 575 L191 570.5 L191 579.5 Z"/>
+    <line x1="352" y1="575" x2="378" y2="575"/><path d="M382 575 L373 570.5 L373 579.5 Z"/>
+    <line x1="534" y1="575" x2="560" y2="575"/><path d="M564 575 L555 570.5 L555 579.5 Z"/>
+    <line x1="716" y1="575" x2="742" y2="575"/><path d="M746 575 L737 570.5 L737 579.5 Z"/>
+  </g>
+  <rect x="28" y="676" width="904" height="86" rx="12" fill="#FFFBEC" stroke="#F2D98E" stroke-width="1.5"/>
+  <use href="#ovw-bulb" x="50" y="702" width="26" height="26" style="color:#C79100"/>
+  <text x="92" y="710" font-size="13.5" font-weight="700" fill="#8A6A00">Agentin vahvuus</text>
+  <text x="92" y="731" font-size="12.5" fill="#5A4A1E">Agentti yhdistää kielimallin älykkyyden ja työkalujen voiman. Näin se pystyy</text>
+  <text x="92" y="749" font-size="12.5" fill="#5A4A1E">hoitamaan monivaiheisia tehtäviä itsenäisesti ja joustavasti.</text>
+  <use href="#ovw-ai" x="712" y="706" width="26" height="26" style="color:#3B5BDB"/>
+  <text x="748" y="728" font-size="18" font-weight="700" fill="#8A6A00">+</text>
+  <use href="#ovw-wrench" x="772" y="706" width="26" height="26" style="color:#3B5BDB"/>
+  <text x="808" y="728" font-size="18" font-weight="700" fill="#8A6A00">=</text>
+  <use href="#ovw-robot" x="832" y="704" width="30" height="30" style="color:#3B5BDB"/>
+</svg>
+<figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Agentin toiminta kokonaisuutena: käynnistys johtaa agenttiin (kielimalli + työkalut), joka toimii vaiheittain ja tuottaa lopputuloksen.</figcaption>
+</figure>
+
 ## Agentin kuusi rakennusosaa
 
 Nyt kun tiedät, mitä agentti tarkoittaa, voidaan tarkastella sen sisäistä rakennetta. Jokainen agentti, olipa se yksinkertainen tai monimutkainen, rakentuu kuudesta peruskomponentista. Kun nämä komponentit toimivat yhdessä, agentti pystyy käsittelemään tietoa, tekemään päätelmiä ja toteuttamaan tehtäviään mielekkäällä tavalla.

@@ -44,9 +44,9 @@ Ammattilaisena sinun täytyy asettaa **selkeät rajat hakutyökalulle**. Voit m�
 
 > **Pysähdy hetkeksi:** Kuvittele agentti, jota käytetään asiakaspalvelun tukena. Mitä tietoa sen ei pitäisi hakea verkosta turvallisuussyistä? Entä jos asiakas yrittää saada agentin hakemaan hänen salasanansa?
 
-## Työkalu 3: CLI-komennot — toimiminen palvelimella
+## Työkalu 3: Komentorivi (CLI) — komentojen ajaminen
 
-**CLI** eli Command Line Interface tarkoittaa komentoriviä. CLI-komentojen avulla agentti voi ajaa palvelinkomentoja. Tämä on yksi voimakkaimmista työkaluista, mutta samalla myös yksi vaarallisimmista.
+**CLI** eli Command Line Interface tarkoittaa komentoriviä. Sen avulla agentti voi ajaa **järjestelmäkomentoja** eli komentorivikomentoja — usein palvelimella, mutta myös muussa ympäristössä. Tämä on yksi voimakkaimmista työkaluista, mutta samalla myös yksi vaarallisimmista.
 
 CLI antaa agentille kyvyn **luoda ja poistaa kansioita, käynnistää ohjelmia ja muokata asetuksia**. Se voi suorittaa komennon `mkdir /backup` luodakseen varmuuskopiokansion. Se voi ajaa komennon `python analyze_sales.py`, joka analysoi myyntidataa minuutissa, vaikka ihmiseltä sama työ voisi viedä tunteja. Se voi ajaa komennon `systemctl restart apache2` käynnistääkseen verkkopalvelimen uudelleen, jos se on kaatunut. CLI on tehokas työkalu, koska sen avulla agentti voi tehdä palvelimella todellisia ja syvälle järjestelmään vaikuttavia asioita.
 
@@ -185,6 +185,64 @@ Sitten agentti hakee verkosta kontekstia. Se etsii markkinatrendejä, esimerkiks
 Lopuksi agentti tekee työn CLI:n kautta. Se ajaa analyysiskriptin komennolla `python analyze_sales.py`. Skripti käsittelee datan ja tuottaa esimerkiksi myyntikäyriä, trendianalyysin ja ennusteita. Sen jälkeen agentti kirjoittaa tulokset raporttitiedostoon, joka sisältää yhteenvedon, kaaviot ja johtopäätökset. Agentti voi vielä siirtää valmiin raportin oikeaan kansioon komennolla `mv raportti.txt /reports/myyntiraportti_2026_Q1.txt`.
 
 Nämä kolme työkalua muodostavat yhdessä toimivan prosessin: agentti lukee dataa tiedostoista, etsii kontekstia verkosta, tekee analyysin CLI-komennolla ja kirjoittaa tulokset takaisin tiedostoksi. Jokainen työkalu tukee seuraavaa vaihetta.
+
+<figure style="margin:26px 0;text-align:center">
+<svg viewBox="0 0 920 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:840px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Esimerkki: agentti hoitaa sähköpostitehtävän</title>
+  <desc>n8n-solmuketju: sähköposti saapuu, AI Agent ymmärtää ja käyttää työkaluja, vastaus muotoillaan ja tallennetaan taulukkoon. Agentin käytössä on verkkohaku, tietokanta, Google Sheets ja sähköposti.</desc>
+  <defs>
+    <g id="ex-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
+    <g id="ex-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
+    <g id="ex-braces" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 L5 12 L9 18 M15 6 L19 12 L15 18"/></g>
+    <g id="ex-sheet" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M4 9 H20 M4 14.5 H20 M10 9 V20.5 M15 9 V20.5"/></g>
+    <g id="ex-globe" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12 H21 M12 3 a14 14 0 0 1 0 18 a14 14 0 0 1 0 -18"/></g>
+    <g id="ex-db" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6 a7 2.6 0 0 0 14 0 a7 2.6 0 0 0 -14 0 V18 a7 2.6 0 0 0 14 0 V6 M5 12 a7 2.6 0 0 0 14 0"/></g>
+  </defs>
+  <rect x="0" y="0" width="920" height="410" rx="16" fill="#FAFBFE"/>
+  <text x="460" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2336">Esimerkki: agentti hoitaa sähköpostitehtävän</text>
+  <text x="460" y="62" text-anchor="middle" font-size="13" fill="#5A6478">Sama rakenne kuin yleiskuvassa — nyt konkreettisena n8n-solmuketjuna.</text>
+  <rect x="28" y="92" width="176" height="78" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#ex-mail" x="44" y="108" width="19" height="19" style="color:#2F9E69"/>
+  <text x="70" y="121" font-size="12.5" font-weight="700" fill="#247A52">Email-solmu</text>
+  <text x="44" y="150" font-size="11" fill="#3A4253">Vastaanottaa viestin</text>
+  <line x1="204" y1="131" x2="240" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M244 131 L234 126 L234 136 Z" fill="#9AA6BD"/>
+  <rect x="244" y="92" width="200" height="78" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+  <use href="#ex-robot" x="260" y="106" width="22" height="22" style="color:#3B5BDB"/>
+  <text x="290" y="121" font-size="12.5" font-weight="700" fill="#2F46B0">AI Agent</text>
+  <text x="260" y="150" font-size="11" fill="#3A4253">Ymmärtää ja käyttää työkaluja</text>
+  <line x1="444" y1="131" x2="480" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M484 131 L474 126 L474 136 Z" fill="#9AA6BD"/>
+  <rect x="484" y="92" width="176" height="78" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#ex-braces" x="500" y="108" width="19" height="19" style="color:#2F9E69"/>
+  <text x="526" y="121" font-size="12.5" font-weight="700" fill="#247A52">Muotoilu</text>
+  <text x="500" y="150" font-size="11" fill="#3A4253">Muotoilee vastauksen</text>
+  <line x1="660" y1="131" x2="696" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M700 131 L690 126 L690 136 Z" fill="#9AA6BD"/>
+  <rect x="700" y="92" width="192" height="78" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+  <use href="#ex-sheet" x="716" y="108" width="19" height="19" style="color:#0E9AA7"/>
+  <text x="742" y="121" font-size="12.5" font-weight="700" fill="#0B7E89">Tallennus</text>
+  <text x="716" y="150" font-size="11" fill="#3A4253">Google Sheets -taulukkoon</text>
+  <g stroke="#B7C0D6" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+    <path d="M344 170 V196 H126 V232"/><path d="M344 170 V196 H344 V232"/><path d="M344 170 V196 H560 V232"/><path d="M344 170 V196 H770 V232"/>
+  </g>
+  <text x="460" y="190" text-anchor="middle" font-size="10.5" fill="#7E88A8">Agentin työkalut</text>
+  <rect x="46" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-globe" x="60" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="84" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Verkkohaku</text>
+  <text x="60" y="280" font-size="10.3" fill="#5A6478">hakee tietoa netistä</text>
+  <rect x="264" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-db" x="278" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="302" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Tietokanta</text>
+  <text x="278" y="280" font-size="10.3" fill="#5A6478">hakee tallennettua tietoa</text>
+  <rect x="482" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Google Sheets</text>
+  <text x="496" y="280" font-size="10.3" fill="#5A6478">tallentaa tulokset</text>
+  <rect x="700" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-mail" x="714" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="738" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Sähköposti</text>
+  <text x="714" y="280" font-size="10.3" fill="#5A6478">lähettää viestejä</text>
+  <rect x="46" y="320" width="814" height="44" rx="10" fill="#EEF1FE" stroke="#C9D2F7" stroke-width="1.3"/>
+  <use href="#ex-robot" x="62" y="332" width="20" height="20" style="color:#3B5BDB"/>
+  <text x="90" y="340" font-size="11.5" font-weight="700" fill="#2F46B0">Kielimalli (LLM)</text>
+  <text x="90" y="356" font-size="11.5" fill="#3A4253">Agentin "aivot" — esim. GPT-4o, Claude tai Gemini. Päättää, mitä työkalua käytetään.</text>
+</svg>
+<figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Konkreettinen esimerkki: agentti vastaanottaa sähköpostin, käyttää työkaluja ja tallentaa tuloksen — kolme työkalua yhdessä työnkulkuna.</figcaption>
+</figure>
 
 ## Riskinhallinta — jokainen työkalu vaatii rajoituksia
 

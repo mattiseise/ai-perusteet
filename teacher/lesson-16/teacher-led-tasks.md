@@ -202,86 +202,75 @@ Tehtävän tavoitteena on harjoitella valitsemaan tilanteeseen sopiva **tekoäly
 
 ---
 
-## Tehtävä 16.3: Tekijänoikeuskeskustelu — millä puolella olet?
+## Tehtävä 16.3: Tekijänoikeuskeskustelu — mikä argumentti vakuuttaa sinut?
 
 ### Tavoite
 
-Tehtävän tavoitteena on saada opiskelijat pohtimaan **tekijänoikeuksien** ja **generatiivisen tekoälyn** suhdetta useasta näkökulmasta. Opiskelijat harjoittelevat argumentointia, kuuntelemista ja oman kannan perustelemista.
+Tehtävän tavoitteena on saada opiskelijat pohtimaan **tekijänoikeuksien** ja **generatiivisen tekoälyn** suhdetta useasta näkökulmasta. Opiskelijat harjoittelevat argumenttien arviointia, kuuntelemista ja oman, perustellun kannan muodostamista.
 
-**Opettajan painotus:** Roolikeskustelussa opiskelijan ei tarvitse olla henkilökohtaisesti samaa mieltä oman ryhmänsä näkökulman kanssa. Tarkoitus on harjoitella eri osapuolten argumenttien ymmärtämistä.
+**Opettajan painotus:** Tässä tehtävässä kenenkään ei tarvitse puolustaa ennalta määrättyä kantaa. Opiskelijat saavat valmiina sekä puoltavia että vastustavia argumentteja ja pohtivat yhdessä, mitkä niistä ovat vahvimpia. Lopuksi jokainen muodostaa oman näkemyksensä ja perustelee sen.
 
 ### Opettajan ohjeet ja fasilitointi
 
 ### Valmistelu
 
-- Jaa luokka kolmeen ryhmään. Pienessä luokassa voit jakaa opiskelijat myös pareihin tai pienempiin näkökulmaryhmiin.
-- Valmistele jokaiselle ryhmälle oma näkökulmakortti.
-- Korosta, että roolikeskustelussa opiskelija ei välttämättä edusta omaa henkilökohtaista mielipidettään.
+- Jaa opiskelijat 3–4 hengen ryhmiin keskustelua varten.
+- Heijasta tai jaa alla oleva argumenttilista, jossa on argumentteja sekä tekoälyn käytön puolesta että vastaan.
+- Tee selväksi, että ketään ei pyydetä puolustamaan tiettyä puolta. Jokainen arvioi argumentteja vapaasti ja muodostaa oman kantansa.
 
-### Kolme näkökulmaryhmää
+### Argumentteja keskustelun tueksi
 
-#### Ryhmä 1: Tekijät
+Anna opiskelijoille molempien puolten keskeiset argumentit valmiina. Näin kenenkään ei tarvitse keksiä perusteluja kannalle, johon ei usko, vaan kaikki pääsevät heti arvioimaan ja vertailemaan.
 
-**Näkökulma:** Taiteilijat, muusikot, kuvataiteilijat, kirjailijat ja ohjelmoijat.
+**Argumentteja tekoälyn käytön puolesta:**
 
-**Mahdollinen argumentti:**
+- Tekoälytyökalut antavat myös pienille toimijoille ja aloittelijoille mahdollisuuksia, joihin heillä ei aiemmin ollut varaa.
+- Mallit eivät yleensä kopioi yksittäisiä teoksia sellaisenaan, vaan oppivat yleisiä rakenteita ja tyylejä.
+- Liian tiukat rajoitukset voivat hidastaa hyödyllisten työkalujen kehittämistä.
+- Tekoäly voi nopeuttaa ja helpottaa työtä monilla aloilla.
 
-> Tekoälymalleja on koulutettu tekijöiden töillä ilman selvää lupaa tai korvausta. Jos mallin arvo syntyy osittain meidän työstämme, meille pitäisi maksaa korvaus tai ainakin kysyä lupa.
+**Argumentteja tekoälyn käyttöä vastaan tai sen rajoittamisen puolesta:**
 
-**Kysymys keskusteluun:** Pitäisikö tekijöille maksaa korvausta, jos heidän teoksiaan on käytetty mallien koulutuksessa?
-
-#### Ryhmä 2: Teknologiayritykset
-
-**Näkökulma:** Tekoälypalveluita ja -malleja kehittävät yritykset.
-
-**Mahdollinen argumentti:**
-
-> Käytämme suuria määriä dataa, jotta voimme kehittää hyödyllisiä työkaluja kaikille. Mallit eivät vain kopioi yksittäisiä teoksia, vaan oppivat yleisiä rakenteita ja tyylejä. Liian tiukat rajoitukset voivat hidastaa innovaatiota.
-
-**Kysymys keskusteluun:** Miten innovaatiota voidaan edistää niin, että tekijöiden oikeudet huomioidaan?
-
-#### Ryhmä 3: Käyttäjät ja yhteiskunta
-
-**Näkökulma:** Tavalliset käyttäjät, opiskelijat, pienyrittäjät ja yhteiskunta.
-
-**Mahdollinen argumentti:**
-
-> Tekoälytyökalut voivat antaa pienille toimijoille mahdollisuuksia, joihin heillä ei aiemmin ollut varaa. Tekijänoikeudet ovat tärkeitä, mutta myös pääsy teknologiaan ja kohtuulliset hinnat ovat tärkeitä.
-
-**Kysymys keskusteluun:** Kenen pitäisi saada hyötyä tekoälystä: suurten yritysten, tekijöiden vai kaikkien käyttäjien?
+- Malleja on koulutettu tekijöiden töillä usein ilman selvää lupaa tai korvausta.
+- Jos mallin arvo syntyy osittain tekijöiden työstä, heille pitäisi maksaa korvaus tai ainakin kysyä lupa.
+- Tekoäly voi uhata ihmisten työtä ja toimeentuloa esimerkiksi taiteen, musiikin ja kirjoittamisen aloilla.
+- Tuotos voi muistuttaa liikaa jonkun tunnistettavaa tyyliä ja loukata hänen oikeuksiaan.
 
 ### Oppitunnin etenemisjärjestys
 
-1. **Ryhmien valmistelu noin 5 minuuttia**
+1. **Argumentteihin tutustuminen noin 5 minuuttia**
 
 
-   Jokainen ryhmä saa roolinsa ja argumenttiehdotukset. Ryhmän tehtävänä on valmistella lyhyt avauspuheenvuoro ja yksi kysymys muille ryhmille.
-2. **Kierros 1: ensimmäiset avaukset noin 10 minuuttia**
+   Käy argumenttilista lyhyesti läpi ääneen, jotta kaikki ymmärtävät, mitä kukin argumentti tarkoittaa. Korosta, ettei kenenkään tarvitse vielä valita puolta.
+2. **Argumenttien arviointi ryhmissä noin 10 minuuttia**
 
-   1. Ryhmä 1 esittää tekijöiden näkökulman noin 2 minuutissa.
-   2. Ryhmä 2 esittää teknologiayritysten näkökulman noin 2 minuutissa.
-   3. Ryhmä 3 esittää käyttäjien ja yhteiskunnan näkökulman noin 2 minuutissa.
-   4. Ryhmät voivat esittää toisilleen lyhyitä tarkentavia kysymyksiä.
-3. **Kierros 2: vastaväitteet noin 10 minuuttia**
+   Pyydä jokaista ryhmää keskustelemaan ja vastaamaan:
 
-   Ryhmät vastaavat toistensa argumentteihin.
+   - Mitkä kaksi argumenttia ovat mielestänne vahvimpia? Miksi?
+   - Mikä argumentti tuntuu heikoimmalta tai vajaalta? Miksi?
+   - Puuttuuko listasta jokin tärkeä näkökulma, joka kannattaisi lisätä?
+3. **Yhteinen vertailu noin 10 minuuttia**
+
+   Jokainen ryhmä kertoo lyhyesti, mitkä argumentit se valitsi vahvimmiksi.
 
    Ohjaa keskustelua kysymyksillä:
 
-   - Mikä argumentti oli vahvin?
-   - Mikä näkökulma jäi vähälle huomiolle?
-   - Voiko kaikkien osapuolten tarpeita sovittaa yhteen?
+   - Mitkä argumentit nousivat usein esiin vahvimpina?
+   - Olivatko ryhmät samaa vai eri mieltä? Mistä erot johtuvat?
+   - Voiko eri osapuolten tarpeita sovittaa jotenkin yhteen?
    - Mitä reilu ratkaisu voisi tarkoittaa käytännössä?
-4. **Vapaa keskustelu noin 10 minuuttia**
+4. **Oman kannan muodostaminen noin 10 minuuttia**
 
-   Pyydä opiskelijoita poistumaan roolistaan ja kertomaan oma näkemyksensä.
+   Pyydä jokaista opiskelijaa muodostamaan oma, perusteltu näkemys.
 
    Kysy:
 
-   - Mitä ajattelet itse?
-   - Mikä oli paras argumentti, jonka kuulit?
-   - Muuttuiko oma mielipiteesi keskustelun aikana?
+   - Mikä on oma kantasi: pitäisikö tekoälyn käyttöä tekijänoikeuksien suhteen rajoittaa, sallia vai jotain siltä väliltä?
+   - Minkä argumenttien varaan rakennat kantasi?
+   - Muuttuiko näkemyksesi keskustelun aikana? Miksi?
    - Mitä ammattilaisen pitäisi tehdä, jos tekijänoikeustilanne on epäselvä?
+
+   Halutessasi voit pyytää muutamaa vapaaehtoista kertomaan oman kantansa ääneen. Korosta, että erilaiset perustellut kannat ovat kaikki sallittuja.
 5. **Opettajan yhteenveto noin 5 minuuttia**
 
    Kokoa faktat ja muistuta:
@@ -357,7 +346,7 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 | --- | --- | --- |
 | **Tehtävä 16.1** | 40–45 min | Live-demo ja eri tekoälytyökalujen vertailu (ydinosiot; valinnaiset kohdat 7–8 vain jos aikaa jää) |
 | **Tehtävä 16.2** | 20–25 min | Työkalun valinta -peli pienryhmissä |
-| **Tehtävä 16.3** | 25–30 min | Tekijänoikeuskeskustelu rooliryhmissä (tiivistettynä) |
+| **Tehtävä 16.3** | 25–30 min | Tekijänoikeuskeskustelu: argumenttien arviointi ja oma kanta (tiivistettynä) |
 | **Tehtävä 16.4** | Tarvittaessa | Portfolio-esittelykiertue, jos oppitunnilla jää aikaa |
 
 _Yhteensä noin 85–100 min: jos aika on tiukka, jätä 16.1:n valinnaiset osiot (koodausavustajat, pidempi loppukeskustelu) pois ja tiivistä 16.3, niin kokonaisuus mahtuu 90 minuuttiin._

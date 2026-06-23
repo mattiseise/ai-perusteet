@@ -142,7 +142,7 @@ Kuvittele asiakaspalvelun moniagenttijärjestelmä:
 
 Moniagenttijärjestelmässä on kaksi perusrakennetta.
 
-**Hierarkkinen malli:** Yksi agentti toimii johtajana ja jakaa tehtäviä muille. Johtaja-agentti näkee kokonaistehtävän ja päättää: ”Tämä tehtävä vaatii tietokantahaun, joten lähetän sen hakuagentille. Kun hakuagentti on valmis, lähetän tuloksen kirjoittaja-agentille.” Johtaja toimii kuin orkesterin kapellimestari: se koordinoi kokonaisuutta, ja muut agentit tekevät erikoistuneet osatehtävänsä.
+**Hierarkkinen malli:** Yksi agentti toimii johtajana ja jakaa tehtäviä muille. Johtaja-agentti näkee kokonaistehtävän ja päättää: ”Tämä tehtävä vaatii tietokantahaun, joten lähetän sen hakuagentille. Kun hakuagentti on valmis, lähetän tuloksen kirjoittaja-agentille.” Johtaja toimii kuin orkesterin kapellimestari: se koordinoi kokonaisuutta, ja muut agentit tekevät erikoistuneet osatehtävänsä. Tätä johtaja-agentin roolia — tehtävien jakamista muille ja tulosten kokoamista yhteen — kutsutaan **orkestroinniksi** (orchestration). Yksinkertaisesti sanottuna: yksi agentti johtaa ja jakaa tehtävät muille.
 
 **Hierarkkinen moniagenttijärjestelmä**
 

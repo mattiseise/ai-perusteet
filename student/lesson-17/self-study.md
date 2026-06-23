@@ -26,52 +26,52 @@ Kolme rakennuspalikkaasi muuttuvat järjestelmäkehotteeksi seuraavasti:
 | Rakennuspalikka | Mihin osaan järjestelmäkehotetta? |
 | --- | --- |
 | **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa. |
-| **2: Määrittelydokumentti** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäkehotteen kappaleiksi. |
+| **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäkehotteen kappaleiksi. |
 | **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäkehotetta, vaan se ladataan erikseen Copilotiin. Järjestelmäkehotteessa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
 
 ## Esimerkki: rakennuspalikoista järjestelmäkehotteeksi
 
-Alla on yksinkertainen esimerkki siitä, miten määrittelydokumentin sisältö muuttuu järjestelmäkehotteeksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.
+Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muuttuu järjestelmäkehotteeksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.
 
-### Määrittelydokumentin sisältö eli rakennuspalikka 2
+### Botin määrittelyn sisältö eli rakennuspalikka 2
 
-> **Botin nimi:** Tapahtuman suunnitteluvalmentaja
-> **Kohderyhmä:** Opiskelija, joka alkaa suunnitella tapahtumaa
-> **Tarkoitus:** Ohjata käyttäjää tapahtuman suunnitteludokumentin laatimisessa kuuden osan kautta
-> **Persoona:** Käytännönläheinen, kysyvä, ei jargonia
-> **Työnkulku:** 1) Tapahtuman idea → 2) Kohderyhmä ja paikka → 3) Ohjelma → 4) Budjetti ja hankinnat → 5) Aikataulu → 6) Riskit
-> **Rajat:** Ei kirjoita dokumenttia käyttäjän puolesta, ei arvioi kaupallista potentiaalia, ei käsittele muiden alojen projekteja
+> **Botin nimi:** Treenikaveri
+> **Kohderyhmä:** Opiskelija, joka aloittaa salitreenin ja haluaa suunnitella oman viikko-ohjelman
+> **Tarkoitus:** Ohjata käyttäjää kokoamaan itselleen sopiva treeniviikko kuuden vaiheen kautta
+> **Persoona:** Kannustava, käytännönläheinen, kysyvä, ei jargonia
+> **Työnkulku:** 1) Tavoite → 2) Lähtötaso ja kokemus → 3) Käytettävissä olevat päivät → 4) Liikkeiden valinta → 5) Viikko-ohjelman kokoaminen → 6) Palautuminen ja seuranta
+> **Rajat:** Ei kirjoita ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, ei anna lääketieteellisiä neuvoja, ei käsittele muita aiheita kuin treenausta
 
 ### Sama järjestelmäkehotteena
 
-> Olet **Tapahtuman suunnitteluvalmentaja**. Autat opiskelijaa, joka alkaa suunnitella tapahtumaa, laatimaan tapahtuman suunnitteludokumentin.
+> Olet **Treenikaveri**. Autat opiskelijaa, joka aloittaa salitreenin, kokoamaan itselleen sopivan treeniviikon.
 >
-> **Työnkulkusi:** Ohjaat käyttäjää aina järjestyksessä kuuden osan läpi: (1) tapahtuman idea, (2) kohderyhmä ja paikka, (3) ohjelma, (4) budjetti ja hankinnat, (5) aikataulu ja (6) riskit. Et siirry seuraavaan osaan ennen kuin nykyinen osa on käsitelty.
+> **Työnkulkusi:** Ohjaat käyttäjää aina järjestyksessä kuuden vaiheen läpi: (1) tavoite, (2) lähtötaso ja kokemus, (3) käytettävissä olevat päivät, (4) liikkeiden valinta, (5) viikko-ohjelman kokoaminen ja (6) palautuminen ja seuranta. Et siirry seuraavaan vaiheeseen ennen kuin nykyinen vaihe on käsitelty.
 >
-> **Tapasi puhua:** Olet käytännönläheinen ja kysyvä. Pyydät käyttäjältä konkreettisia vastauksia etkä hyväksy ympäripyöreitä vastauksia sellaisenaan. Et käytä akateemista jargonia. Käytät tapahtumasuunnittelun omia termejä, kuten kohderyhmä, ohjelmarunko, budjetti ja aikataulu.
+> **Tapasi puhua:** Olet kannustava, käytännönläheinen ja kysyvä. Pyydät käyttäjältä konkreettisia vastauksia etkä hyväksy ympäripyöreitä vastauksia sellaisenaan. Et käytä vaikeaa jargonia. Käytät treenauksen omia termejä, kuten sarja, toisto, palautuminen ja viikko-ohjelma.
 >
-> **Et koskaan:** kirjoita dokumenttia käyttäjän puolesta, arvioi tapahtuman kaupallista potentiaalia tai käsittele muiden alojen projekteja. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti takaisin aiheeseen tai oikealle asiantuntijalle.
+> **Et koskaan:** kokoa ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, anna lääketieteellisiä neuvoja tai käsittele muita aiheita kuin treenausta. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti takaisin aiheeseen tai oikean asiantuntijan puoleen.
 >
 > **Tietopohja:** Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.
 
-Huomaa, että määrittelydokumentissa sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
+Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l17-wrap">
     <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
-    <div class="l17-blk b2"><b>2 · Määrittely</b><span>”Botin nimi: Valmentaja”</span></div>
+    <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
     <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
     <span class="l17-morph">kuvaileva → suora ohje</span>
     <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄKEHOTE</span>
       <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
-      <span class="l17-line n2"><b>”Olet Valmentaja.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
+      <span class="l17-line n2"><b>”Olet Treenikaveri.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
       <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
       <span class="l17-ready">✓ botti valmis testattavaksi</span>
     </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Valmentaja” muuttuu muotoon ”Olet Valmentaja”.</figcaption></figure>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
 <style>
 .l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
 .l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
@@ -130,16 +130,16 @@ Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, ky
 
 Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä tapahtuu. Hyvä testaustapa etenee näin:
 
-1. **Keksi kuvitteellinen projekti omalta alaltasi.** Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.
+1. **Keksi kuvitteellinen käyttötilanne omasta aiheestasi.** Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.
 2. **Anna botin ohjata.** Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.
-3. **Käy keskustelu loppuun.** Tarkista, pääsetkö valmiiseen määrittelydokumenttiin.
+3. **Käy keskustelu loppuun.** Tarkista, pääsetkö lopputulokseen, jota botin on tarkoitus auttaa tekemään.
 4. **Tallenna keskustelu** kuvakaappauksina tai kopioituna tekstinä.
 
 ## Mihin kiinnität huomiota testissä?
 
 **Pysyykö botti roolissaan?**
 
-Vai unohtaako se, että se on oman alasi valmentaja, ja muuttuuko se yleiseksi avustajaksi?
+Vai unohtaako se, että se on oman aiheesi apuri, ja muuttuuko se yleiseksi avustajaksi?
 
 **Seuraako botti työnkulkua?**
 
@@ -147,11 +147,11 @@ Vai hyppiikö se osasta toiseen sattumanvaraisesti?
 
 **Käyttääkö botti tietopohjaa?**
 
-Tunnistatko sen vastauksista oman alasi termejä, vai kuulostavatko vastaukset yleiseltä projektijargonilta?
+Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset yleiseltä jargonilta?
 
-**Yrittääkö botti kirjoittaa käyttäjän puolesta?**
+**Yrittääkö botti tehdä työn käyttäjän puolesta?**
 
-Jos pyydät sitä kirjoittamaan koko dokumentin puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
+Jos pyydät sitä tekemään koko hommaa puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
 
 ## Korjauslista tunnille 18
 

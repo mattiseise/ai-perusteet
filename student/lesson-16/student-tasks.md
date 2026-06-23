@@ -80,6 +80,6 @@ Kirjoita 5–8 lauseen pohdinta, joka vastaa neljään kysymykseen:
 
 Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa ammattilaisen vastuuta.
 
-> 💡 **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi *projektin määrittelydokumentin sparrauskumppani* ei ole kuvageneraattori, mutta sama eettinen ajattelu pätee suoraan: **mistä botin tietopohja on peräisin? Mitä rajat sen tekemiseen? Mitä käyttäjälle kerrotaan?** Tunnin 14 määrittelydokumentissa (Rakennuspalikka 2) *rajat* ovat yksi kuudesta osasta. Kun olet itse joutunut pohtimaan kuvageneraattorin etiikkaa, ymmärrät paremmin, miksi rajat ovat osa botin *suunnittelua*, eivätkä jotain "lisättävää loppuun".
+> 💡 **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi *oma apuri-botti* ei ole kuvageneraattori, mutta sama eettinen ajattelu pätee suoraan: **mistä botin tietopohja on peräisin? Mitä rajat sen tekemiseen? Mitä käyttäjälle kerrotaan?** Tunnin 14 määrittelydokumentissa (Rakennuspalikka 2) *rajat* ovat yksi kuudesta osasta. Kun olet itse joutunut pohtimaan kuvageneraattorin etiikkaa, ymmärrät paremmin, miksi rajat ovat osa botin *suunnittelua*, eivätkä jotain "lisättävää loppuun".
 
 **Eettinen vastuu ei synny lukemalla — se syntyy kun joudut itse päättämään.**
