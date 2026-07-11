@@ -549,6 +549,10 @@ body{{
   line-height:1.55;
   max-width:40ch;
 }}
+.hero-author{{
+  font-size:14px;color:#8b93a7;margin:14px 0 0;
+}}
+.hero-author a{{color:var(--violet);text-decoration:underline;text-underline-offset:3px}}
 .hero-stats{{
   display:flex;
   gap:36px;
@@ -1685,6 +1689,7 @@ body:has(#lesson.active) .rv-switch{{display:flex}}
         <div class="hero-eyebrow">AI · Perusteet — 3 OSP</div>
         <h1 class="hero-title">Ymmärrä tekoäly <em>teoriasta</em> agentteihin.</h1>
         <p class="hero-subtitle">27 oppituntia, jotka avaavat tekoälyn — teoriasta käytäntöön ja itsenäisiin agentteihin.</p>
+        <p class="hero-author">Kurssin tekijä: Matti Seise · Tekoälykoulutukset ja toteutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi#koulutukset" target="_blank" rel="noopener">seise.org</a></p>
         <div class="hero-stats">
           <div class="stat-chip">
             <div class="stat-value">27</div>
@@ -1980,7 +1985,7 @@ updProg();updCards();
 routeFromHash(false);
 </script>
 
-<footer class="site-footer">© Matti Seise · <a href="https://www.seise.org" target="_blank" rel="noopener">www.seise.org</a></footer>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 
 </body>
 </html>'''
