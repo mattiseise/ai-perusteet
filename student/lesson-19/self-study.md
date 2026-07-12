@@ -291,6 +291,25 @@ Juuri tämä jatkuva toimintakierto erottaa agentin muista ratkaisuista. Skripti
 
 > **Pysähdy hetkeksi:** Valitse omasta työstäsi tai arjestasi jokin toistuva tehtävä. Kuvittele, että suunnittelet agentin hoitamaan sen. Mitkä agentin kuudesta peruskomponentista olisivat tässä tehtävässä keskeisimmät? Missä suoritusputken vaiheessa ihmisen valvonta olisi tärkeintä?
 
+## Valmiit agentit — samat osat, jonkun muun rakentamina
+
+Tässä osiossa agentti on tähän asti ollut jotain, jonka rakennat itse. Arjessa ja työpaikoilla kohtaat agentin kuitenkin useimmiten **valmisagenttina**: valmiina tuotteena, joka asuu tutun tekoälysovelluksen sisällä. Sovelluksessa on silloin **agenttitila** — toimintatila, jolle annat tehtävän ja joka tekee monivaiheisen työn puolestasi: lukee tiedostoja, käyttää työkaluja ja raportoi lopuksi, mitä sai aikaan.
+
+Valmisagentin sisällä ovat täsmälleen samat kuusi rakennusosaa, jotka juuri opit — joku muu vain suunnitteli ja rakensi ne valmiiksi. Kokeile väitettä arkiesimerkillä. Annat agenttitilalle tehtävän: ”Käy läpi tämän kansion kokousmuistiot ja kokoa taulukko päätöksistä ja vastuuhenkilöistä.” Kun sovellus ottaa tehtäväsi vastaan ja tulkitsee sen, työssä on syötekäsittelijä. Kun se näyttää sinulle vaihesuunnitelman ennen aloittamista, näet päättelijän kädenjäljen. Kun se lukee muistiot ja kirjoittaa taulukon, vuorossa on työkalujen suorittaja. Kun se kysyy ”saanko muokata tätä kansiota?”, vastassa on turvakerros. Kun se jatkaa keskeytynyttä työtä siitä, mihin jäitte, käytössä on muisti ja konteksti. Ja kun se lopuksi raportoi, mitä teki, ja korjaa huomaamansa virheen, kehän sulkevat seuranta ja palautesilmukka.
+
+Tälle kokonaisuudelle on nimi. Kaikkea, mitä kielimallin ympärille on rakennettu — työkaluja, muistia, oikeuksia ja turvarajoja — kutsutaan **harnessiksi**. Siitä saadaan tämän osion tiivein kiteytys: **agentti = kielimalli + harness**. Kuuden rakennusosan kokonaisuudessa kielimalli työskentelee päättelijän ytimessä — kaikki sen ympärillä on harnessia.
+
+Englannin sana harness tarkoittaa valjaita, ja vertauskuva kantaa pitkälle. Kielimalli on kuin vetohevonen: voimaa riittää, mutta ilman valjaita hevonen vain juoksee. Vasta valjaat kytkevät voiman kärryyn niin, että voimasta tulee työtä. Sama pätee malliin: ilman harnessia kielimalli vain puhuu — eli on chatbot. Tästä seuraa arkinen havainto, joka selittää tunnin aiemman väitteen ”chatbot ei ole agentti” uudesta kulmasta: täsmälleen sama kielimalli voi olla sekä chatbotin että agentin sisällä. Ero ei ole mallissa vaan sen ympärille rakennetussa harnessissa.
+
+> **Tilanne heinäkuussa 2026 — esimerkkejä valmisagenteista.**
+> Claude Cowork on Anthropicin agenttitila Claude Desktopissa: se toimii käyttäjän tiedostokansioissa, ja yli 90 prosenttia sen käytöstä on muuta kuin ohjelmointia. Cowork julkaistiin kokeiluversiona tammikuussa 2026 ja varsinaisesti huhtikuussa 2026, ja heinäkuussa 2026 se laajeni myös webiin ja mobiiliin. ChatGPT Work on OpenAI:n agenttituote, joka julkaistiin 9. heinäkuuta 2026 GPT-5.6-mallien yhteydessä: se yhdistää Codexin ja ChatGPT:n ja tekee pitkäkestoisia tehtäviä sovelluksissa ja tiedostoissa.
+>
+> *Tuotenimet, päivämäärät ja ominaisuudet vanhenevat nopeasti — tämä laatikko päivitetään kurssin ylläpidossa erikseen. Leipätekstin käsitteet eivät vanhene.*
+
+Miksi siis rakennat tunneilla 26–27 oman agentin, jos valmiitakin on tarjolla? Siksi, että n8n-työnkulussasi rakennat itse pienen harnessin: valitset työkalut, määrität oikeudet ja asetat turvarajat. Sen jälkeen osaat arvioida myös valmista agenttia, koska tiedät, mitä konepellin alla on ja mitä kysymyksiä siitä kannattaa esittää. Valmisagentti ei korvaa omaa rakentamista — se on saman asian toinen muoto.
+
+> **Pysähdy hetkeksi:** Kun seuraavan kerran käytät tekoälysovellusta, mieti: juttelenko pelkän mallin kanssa vai onko mallilla harness — työkalut, oikeudet ja turvarajat? Mistä eron huomaa käyttöliittymässä?
+
 ## Kohti omaa projektia
 
 Agentit-osion aikana rakennat oman **n8n-agenttityönkulun**. Ensimmäinen askel on valita ongelma, jonka haluat ratkaista. Kun mietit aihetta, palaa tämän oppitunnin käsitteisiin: tarvitseeko ongelmasi autonomista päätöksentekoa vai riittäisikö yksinkertaisempi ratkaisu? Mitkä kuudesta komponentista ovat ongelmassasi kriittisimpiä? Hyvä agenttiongelma on sellainen, jossa pelkkä chatbot tai skripti ei riitä, vaan tarvitaan järjestelmä, joka arvioi tilannetta, tekee päätöksiä ja käyttää työkaluja tavoitteen saavuttamiseksi.
@@ -300,6 +319,8 @@ Agentit-osion aikana rakennat oman **n8n-agenttityönkulun**. Ensimmäinen askel
 **Agentti** on automatisoitu järjestelmä, joka toteuttaa useita vaiheita itsenäisesti tavoitteen saavuttamiseksi. Se eroaa chatbotista, skriptistä ja työnkulusta siinä, että se ei vain reagoi, toista samaa toimintoa tai seuraa valmiita sääntöjä, vaan arvioi tilannetta ja ohjaa toimintaansa sen perusteella.
 
 Agentti koostuu kuudesta peruskomponentista: **syötekäsittelijästä**, **päättelijästä**, **työkaluista**, **muistista**, **turvakerroksesta** ja **palautesilmukasta**. Yhdessä nämä muodostavat suoritusputken, jossa jokainen vaihe vaikuttaa seuraavaan. Kun ymmärrät tämän kokonaisuuden, sinun on helpompi nähdä sekä agenttien mahdollisuudet että se, miksi niiden rakentaminen edellyttää tarkkaa suunnittelua, valvontaa ja turvallisuusrajoja.
+
+Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niiden sisällä ovat samat kuusi rakennusosaa — toisin sanottuna kielimalli ja sen ympärille rakennettu **harness**: työkalut, muisti, oikeudet ja turvarajat. Kun tunnet osat, osaat arvioida myös valmista agenttia.
 
 
 ---

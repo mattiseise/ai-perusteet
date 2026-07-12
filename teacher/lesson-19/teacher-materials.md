@@ -120,6 +120,16 @@ Voit kirjata opiskelijoiden esimerkit taululle kolmeen sarakkeeseen: **chatbot**
 
 **Korjaava näkökulma:** Komponentit muodostavat suoritusputken. Jos yksi osa puuttuu tai toimii heikosti, koko agentti heikkenee. Esimerkiksi ilman muistia agentti ei hyödynnä aiempia tapauksia, ja ilman turvakerrosta se voi tehdä vaarallisia päätöksiä.
 
+### Väärinkäsitys 6: “Agentti pitää aina rakentaa itse.”
+
+**Korjaava näkökulma:** Valmisagenteissa — esimerkiksi tekoälysovellusten agenttitiloissa — ovat samat kuusi rakennusosaa valmiiksi rakennettuina; joku muu on vain tehnyt suunnittelutyön. Kurssilla rakennetaan oma agentti, jotta valmiitakin osaa arvioida. Osta vai rakenna -valintaa käsitellään tunnilla 20.
+
+### Väärinkäsitys 7: “ChatGPT tai muu tekoälychat on agentti.”
+
+**Korjaava näkökulma:** Chat vastaa viesteihin, agentti suorittaa vaiheita työkaluilla omien oikeuksiensa rajoissa. Sama kielimalli voi olla kummankin sisällä — ero ei ole mallissa vaan harnessissa eli mallin ympärille rakennetuissa työkaluissa, muistissa, oikeuksissa ja turvarajoissa.
+
+*Ajankohtaishuomio 7/2026, vanhenee:* mallien tasonimet eivät ole agenttituotteita. Esimerkiksi GPT-5.6-mallin lippulaivataso “Sol” ei ole agentti, vaan OpenAI:n agenttituote on ChatGPT Work. Jos opiskelija niputtaa nämä yhteen, erottele malli, mallin taso ja agenttituote.
+
 ---
 
 ## Luokkatehtävä — ohjeistus
@@ -204,13 +214,16 @@ Käytä riskianalyysissä konkreettista tilannetta: asiakaspalveluagentti tulkit
 2. **Suoritusputken opetus noin 10 minuuttia**
 
    Piirrä kuuden komponentin sykli taululle ja käy läpi, miten komponentit toimivat yhdessä.
-3. **Itsenäinen lukeminen noin 10 minuuttia**
+3. **Itsenäinen lukeminen noin 8 minuuttia**
 
    Opiskelijat lukevat aineiston ja merkitsevät kohdat, jotka auttavat erottamaan agentin chatbotista.
-4. **Ryhmätehtävä: suoritusputken jäljitys noin 15 minuuttia**
+4. **Ryhmätehtävä: suoritusputken jäljitys noin 13 minuuttia**
 
    Opiskelijat tunnistavat järjestelmästä agentin komponentit ja selittävät, miten ne muodostavat prosessin.
-5. **Yhteenveto ja riskianalyysi noin 5 minuuttia**
+5. **Valmisagentit ja harness noin 4 minuuttia**
+
+   Kysy, kuka on nähnyt tekoälysovelluksen agenttitilan toiminnassa. Kiteytä kaksi asiaa: valmisagentissa ovat samat kuusi osaa, joku muu vain rakensi ne valmiiksi — ja agentti = kielimalli + harness.
+6. **Yhteenveto ja riskianalyysi noin 5 minuuttia**
 
    Keskustelkaa autonomisuuden rajoista ja siitä, miksi turvakerros, muisti ja palautesilmukka ovat tärkeitä.
 

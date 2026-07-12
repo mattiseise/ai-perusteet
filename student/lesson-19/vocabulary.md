@@ -60,4 +60,16 @@ Agentin päätös siitä, mitä polkua tai strategiaa se käyttää tehtävän r
 
 Agentin prosessi oikean työkalun valitsemiseksi kuhunkin tilanteeseen. Jos agentti joutuu kirjoittamaan sähköpostia, se valitsee sähköpostin lähettämisen työkalun. Jos se tarvitsee tietoa tietokannasta, se valitsee tietokantakyselyn työkalun.
 
+## Valmisagentti (ready-made agent)
+
+Valmiiksi rakennettu agenttituote, jonka kuusi rakennusosaa joku muu on suunnitellut ja rakentanut. Käyttäjä antaa tehtävän, mutta ei rakenna eikä ylläpidä järjestelmää itse.
+
+## Agenttitila (agent mode)
+
+Sovelluksen toimintatila, jossa tekoäly ei vain vastaa viesteihin, vaan suorittaa monivaiheisia tehtäviä työkaluilla käyttäjän puolesta.
+
+## Harness
+
+Kielimallin ympärille rakennettu kokonaisuus: työkalut, muisti, oikeudet ja turvarajat. Agentti = kielimalli + harness. Englannin sana harness tarkoittaa valjaita.
+
 ---

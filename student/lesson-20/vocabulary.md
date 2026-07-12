@@ -40,4 +40,8 @@ Kirjalliset ohjeet, joita työnkulku seuraa. Staattinen työnkulku noudattaa ain
 
 Säännöt, jotka voivat muuttua tilanteen tai oppimisen mukaan. Agentti soveltuu paremmin muuttuviin sääntöihin.
 
+## Osta vai rakenna (buy or build)
+
+Päätös siitä, käytetäänkö valmisagenttia vai rakennetaanko oma. Valintaa ohjaavat prosessin toistuvuus ja tarkkuus sekä kolme vertailuperustetta: kustannus, kontrolli ja läpinäkyvyys.
+
 ---

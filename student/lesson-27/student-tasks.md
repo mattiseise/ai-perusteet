@@ -101,6 +101,34 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 
 ---
 
+## Valinnainen syvennys: sama tehtävä kahdella agentilla 🟣 SYVENTÄVÄ
+
+Tämä ei ole lopputyön pakollinen osa eikä vaikuta palautukseen. Koko osion ajan olet katsonut agentin sisään: n8n:ssä näet jokaisen solmun ja jokaisen suorituksen. Valmisagentissa näet vain sen, minkä sen harness päättää näyttää. Tässä tehtävässä vertaat näitä kahta itse — havaintojen pohjalta, et mielikuvien.
+
+### Ohjeet
+
+1. Valitse yksi tehtävä, jonka oma n8n-agenttisi hoitaa hyvin — esimerkiksi sen ydinkäyttötapaus.
+2. Aja tehtävä omalla agentillasi. Ota talteen suoritusloki tai kuvakaappaus suorituksesta ja kirjaa kellosta, kauanko suoritus kesti.
+3. Aja sama tehtävä valmisagentilla (Claude Cowork, ChatGPT Work tai muu käytettävissäsi oleva agenttitila — tuotetilanne on tunnin 19 esimerkkilaatikossa). Jos maksullista pääsyä ei ole, katso opettajan demo tai tee tämä vaihe parin koneella — ja kirjaa havainnot silti itse.
+4. Ota talteen myös valmisagentin näyttämät vaiheet, sen esittämät lupakysymykset ja suorituksen kesto.
+
+### Vertailu
+
+Kokoa havaintosi taulukoksi:
+
+| Vertailtava asia | Oma n8n-agentti | Valmisagentti |
+| --- | --- | --- |
+| **Läpinäkyvyys** — mitkä kuudesta rakennusosasta näit? Mitkä jäivät piiloon? | | |
+| **Kontrolli** — mitä pystyit muuttamaan ennen ajoa tai sen aikana? | | |
+| **Nopeus** — kauanko valmistuminen kesti? Kirjaa kummankin ajon kesto. | | |
+| **Luottamus** — kumman tulokseen luotat enemmän, ja millä perusteella tarkistit sen? | | |
+
+### Raportointi
+
+Kokoa muistiinpanoihisi täytetty taulukko sekä kolme omaa havaintoa ja yksi johtopäätös ("milloin valitsisin kumman ja miksi") — yhteensä 100–150 sanaa; halutessasi voit liittää kokonaisuuden lopputyön palautuspakettiin. Perustele johtopäätöksesi tunnin 20 osta vai rakenna -perusteilla (kustannus, kontrolli, läpinäkyvyys). Jokaisen havainnon pitää viitata johonkin, minkä itse näit ajon aikana: agentin näyttämään vaiheeseen, lupakysymykseen, virheeseen, kestoon tai lokiriviin.
+
+---
+
 ## Lopputyön palautus
 
 Palauta Itslearningiin yhtenä pakettina:

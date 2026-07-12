@@ -56,4 +56,12 @@ Tekstitiedostomuoto, jossa tiedot ovat rivillä pilkuilla erotettuja. Helppo luk
 
 Tekstitiedostomuoto, jossa tiedot ovat rakenteiset. Agentti käyttää sitä konfiguraatioissa.
 
+## MCP (Model Context Protocol)
+
+Avoin standardi, joka määrittelee yhteisen tavan kytkeä työkalu agenttiin: sama työkalu toimii eri agenteissa. Julkaistu vuonna 2024, ja vuonna 2026 se on alan yleinen käytäntö.
+
+## Konnektori (connector)
+
+Valmisagentin liitin ulkoiseen palveluun tai tietolähteeseen, kuten sähköpostiin, kalenteriin tai tiedostoihin. Perustuu MCP:n kaltaiseen standardikytkentään.
+
 ---

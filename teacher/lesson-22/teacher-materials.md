@@ -104,6 +104,16 @@ Esimerkiksi analytiikka-agentin työkaluketju voi olla:
 
 **Esimerkki opetukseen:** Pyydä opiskelijoita vaihtamaan työkalujen järjestystä ja arvioimaan, mikä menee pieleen. Jos raportti kirjoitetaan ennen analyysiä, raportista puuttuu sisältö. Jos verkkohaku tehdään ennen kuin tiedetään, mitä dataa analysoidaan, haku voi olla väärä tai turha.
 
+### Tausta opettajalle: MCP ja konnektorit
+
+Opiskelijamateriaalin uusi MCP-osio esittää kaksi väitettä: työkalujen kytkemiseen agenttiin on olemassa yhteinen standarditapa, ja siksi kerran rakennettu työkalu toimii eri agenteissa. Vertauskuvana on USB-C — yksi standardiliitin monen erillisen johdon sijaan.
+
+Faktapohja: Anthropic julkaisi MCP:n (Model Context Protocol) avoimena standardina marraskuussa 2024. OpenAI, Google ja muut ovat omaksuneet sen, ja vuonna 2026 se on de facto -standardi työkalujen kytkemiseen agentteihin. n8n tukee MCP-solmuja, joten termi voi tulla vastaan opiskelijan omassa projektissa.
+
+Kun opiskelija kysyy, pitääkö tämä osata, vastaa: käsite kyllä — standardikytkennän idea ja se, miksi standardi ei poista rajausten tarvetta — mutta protokollan tekninen sisältö ei kuulu kurssiin.
+
+Tuote-esimerkit ovat opiskelijamateriaalissa erillisessä, vanhenevaksi merkityssä laatikossa. Vaikka laatikon tiedot vanhenisivat, leipätekstin käsitteet pätevät — päivitä tai ohita laatikko, älä käsitteitä.
+
 ---
 
 ## Neljä turvakerrosta työkalujen käytössä
@@ -257,6 +267,7 @@ Tämä harjoitus yhdistää oppituntien 19–22 teorian konkreettiseen n8n-käyt
 3. **Verkkohaku:** Miksi verkkohaku voi olla turvallisuusriski?
 4. **CLI:** Miksi komentorivityökalu on erityisen vaarallinen?
 5. **Orkestrointi:** Mitä voi tapahtua, jos agentti käyttää oikeita työkaluja väärässä järjestyksessä?
+6. **MCP:** Miksi yhteinen standardiliitin hyödyttää sekä työkalun tekijää että agentin käyttäjää — ja miksi se ei poista whitelistien tarvetta?
 
 ---
 

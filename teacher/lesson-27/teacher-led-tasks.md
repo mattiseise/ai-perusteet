@@ -221,6 +221,29 @@ Hyvä demo: "Tämä toimii normaalisti, mutta kun testasimme prompt injectionia,
 
 ---
 
+## Tehtävä 6: Vertailudemo — oma agentti vs. valmisagentti (valinnainen, 10 min)
+
+### Valmistelu
+
+Varmista pääsy yhteen valmisagenttiin eli tekoälysovelluksen agenttitilaan, tai nauhoita demo etukäteen. Valitse tehtävä, jonka oma malliagenttisi (esimerkiksi FAQ-botti) hoitaa hyvin ja joka onnistuu myös valmisagentilla.
+
+### Opettajan ohjeet
+
+Aja tehtävä ensin omalla n8n-agentillasi ja näytä suoritusloki solmu solmulta. Aja sitten sama tehtävä valmisagentilla ja pysäytä esitys jokaisen vaihelistan ja lupakysymyksen kohdalla: "Minkä rakennusosan juuri näitte?"
+
+**Jos pääsyä valmisagenttiin ei ole:** näytä etukäteen tehty tallenne tai käy vertailu läpi keskustellen tunnin 19 esimerkkilaatikon ja opiskelijoiden omien kokemusten pohjalta.
+
+### Purku
+
+1. Mitkä kuudesta komponentista näkyivät kummassakin — ja mitkä vain toisessa?
+2. Kuka on määrittänyt valmisagentin turvarajat, ja mistä sen huomaa?
+3. Mitä muuttaisit valmisagentissa, jos voisit — ja voitko?
+4. Milloin valitsisit kumman? Kytke vastaukset tunnin 20 osta vai rakenna -osioon.
+
+Tehtävä on valinnainen eikä vaikuta lopputyön arviointikriteereihin (25/20/20/20/15 p säilyy ennallaan). Opiskelijoiden valinnaisen syvennystehtävän havainnot kannattaa purkaa tässä samalla.
+
+---
+
 ## Arviointi
 
 Opettaja arvioi seuraavaa:

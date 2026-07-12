@@ -174,6 +174,25 @@ Kun rakennat agenttia oppitunneilla 26–27, nämä abstraktit työkalut muuttuv
 
 Tässä oppitunnissa käsitellyt turvakerrokset, kuten whitelist, toimintorajoitus, hiekkalaatikko ja hyväksynnät, voidaan toteuttaa n8n:ssä esimerkiksi **IF-solmuilla** ehtojen tarkistamiseen, **erillisillä työnkuluilla** turvalliseen eristämiseen ja **hyväksyntäsolmuilla**, joissa ihminen tarkistaa toiminnon ennen suoritusta. Tämä konkretisoituu oppitunneilla 26–27, mutta jo nyt kannattaa kysyä: mikä n8n-solmu toteuttaisi tämän toiminnon?
 
+## MCP — yksi liitin kaikille työkaluille
+
+Edellä näit, miten työkalut kytketään agenttiin n8n-solmuina. Siitä herää jatkokysymys: millä periaatteella kytkentä oikeastaan tapahtuu — ja toimisiko sama työkalu myös jossain muussa agentissa? Perinteisesti jokainen kytkentä on rakennettu erikseen, juuri tietyn työkalun ja tietyn agentin väliseksi. Ongelma kasvaa nopeasti: kymmenen työkalua ja viisi agenttijärjestelmää tarkoittaisi viittäkymmentä erilaista kytkentää, jotka kaikki pitäisi rakentaa, testata ja pitää ajan tasalla erikseen.
+
+Tähän on olemassa ratkaisu. **MCP (Model Context Protocol)** on avoin standardi, joka määrittelee yhteisen tavan kytkeä työkalu agenttiin. Anthropic julkaisi sen marraskuussa 2024, ja myös kilpailijat, kuten OpenAI ja Google, ovat ottaneet sen käyttöön. Vuonna 2026 se on käytännössä alan yleinen tapa kytkeä työkaluja agentteihin. MCP ei siis ole tuote, jonka voisi ostaa, vaan sopimus siitä, miten kytkentä tehdään.
+
+Arkinen vastine löytyy laturilaatikosta. Ennen jokaisella puhelinvalmistajalla oli oma liittimensä, ja laatikot täyttyivät yhteensopimattomista johdoista. USB-C muutti tilanteen: yksi standardiliitin käy kaikkiin, eikä laturin valmistajan tarvitse tietää, minkä merkkinen laite johdon toisessa päässä on. MCP tekee työkaluille saman. Työkalu rakennetaan kerran, ja sama työkalu toimii eri agenteissa riippumatta siitä, kuka agentin on tehnyt. Standardi on tylsää infrastruktuuria — ja juuri siksi arvokasta.
+
+Sama periaate näkyy kahdessa paikassa, jotka jo tunnet. n8n:ssä on **MCP-solmuja**, joilla voit kytkeä työkaluja omaan agenttiisi tällä standardilla, kun rakennat sitä tunneilla 26–27. Ja kun valmisagentti tarjoaa **konnektorin** eli valmiin liittimen sähköpostiin, kalenteriin tai tiedostoihin, taustalla on sama ajatus: standardoitu tapa tuoda työkalu mallin ulottuville.
+
+Yksi asia ei kuitenkaan muutu. Standardiliitin vastaa kysymykseen ”miten kytketään”, ei kysymykseen ”mitä saa tehdä”. Jokainen MCP:llä kytketty työkalu tarvitsee silti täsmälleen samat rajaukset, jotka tällä tunnilla opit: oikeudet, whitelistit ja lokituksen. Helppo kytkeminen voi jopa houkutella kytkemään enemmän kuin tehtävä vaatii — silloin minimioikeusperiaate on entistäkin tärkeämpi.
+
+> **Tilanne heinäkuussa 2026 — konnektorit valmisagenteissa.**
+> Claude Coworkissa ja ChatGPT Workissa työkalut näkyvät käyttäjälle konnektoreina eli valmiina liittiminä, jotka perustuvat MCP:n kaltaiseen standardikytkentään. Siksi sama työkalu voidaan tuoda eri agentteihin ilman, että jokaista kytkentää rakennetaan erikseen.
+>
+> *Tuotenimet, päivämäärät ja ominaisuudet vanhenevat nopeasti — tämä laatikko päivitetään kurssin ylläpidossa erikseen. Leipätekstin käsitteet eivät vanhene.*
+
+> **Pysähdy hetkeksi:** Muistele puhelinlatureita ennen USB-C:tä: jokaisella merkillä oma johto. Mikä kaikki muuttui, kun liitin standardoitiin — ja kuka hyötyi eniten: laitteen valmistaja, johdon valmistaja vai käyttäjä? Mieti sama työkalun, agentin ja sinun näkökulmastasi.
+
 ## Käytännön esimerkki: analytiikka-agentti työvaiheissa
 
 Kuvittele agentti, joka analysoi myyntidataa yrityksen johtajalle. Tässä esimerkissä näet, miten kolme työkalua toimivat yhdessä.

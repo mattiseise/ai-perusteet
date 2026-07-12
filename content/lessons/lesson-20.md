@@ -68,6 +68,18 @@ Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysa
 
 Kysy siis aina: miksi rakennan agentin? Vastaus perustuu kustannusten ja hyötyjen vertailuun. Jos työnkulku ratkaisee ongelmasi 80 prosentissa tapauksista ja agentti ratkaisee sen 85 prosentissa tapauksista, oletko valmis maksamaan 10 kertaa suuremmat kehitys- ja ylläpitokustannukset viiden prosenttiyksikön parannuksesta? Usein vastaus on ei. Jos työnkulku ratkaisee vain 40 prosenttia tapauksista ja agentti 95 prosenttia tapauksista, hyöty voi olla selvästi kustannuksia suurempi. Silloin agentti voi olla järkevä ratkaisu.
 
+## Osta vai rakenna — riittääkö valmisagentti?
+
+Kun kuusi kysymystä osoittaa, että tehtävä ansaitsee agentin, jäljellä on vielä yksi valinta: rakennatko oman vai käytätkö **valmisagenttia**, jollaisiin tutustuit tunnilla 19? Tämäkin on arkkitehtuuripäätös, ei tuotevalinta — ja se ratkeaa samalla logiikalla kuin muutkin tämän tunnin päätökset.
+
+Nyrkkisääntö kuuluu näin. Toistuva ja tarkkaan määritelty prosessi puoltaa omaa työnkulkua tai omaa n8n-agenttia, koska silloin saat täsmälleen omat sääntösi, omat integraatiosi ja omat lokisi. Vaihteleva, kertaluonteinen tietotyö puoltaa valmisagenttia, koska rakentamisen ja ylläpidon kustannus jää silloin kokonaan pois. Huomaa samalla ero käyttämisen ja rakentamisen välillä: valmisagentin voi ottaa käyttöön myös silloin, kun oman rakentaminen ei kannata — rakentamiskustannus on nolla, joten päätöspuun ensimmäinen kysymys ei estä valmisagentin käyttöä.
+
+Vertailussa auttaa kolme perustetta. **Kustannus:** valmisagentissa maksat tilausmaksun, omassa maksat kehityksen ja jatkuvan ylläpidon. **Kontrolli:** omassa agentissa päätät itse säännöt, työkalut ja rajat — valmiissa joku muu on päättänyt ne puolestasi. **Läpinäkyvyys:** omassa n8n-työnkulussa näet jokaisen solmun ja jokaisen suorituksen, valmisagentissa näet vain sen, minkä se näyttää.
+
+Lopputyössä rakennat oman n8n-agentin joka tapauksessa — juuri siksi, että osaisit jatkossa tehdä tämän valinnan perustellusti. Kun olet kerran nähnyt, mitä oman agentin rakentaminen ja ylläpito vaativat, osaat myös arvioida, mistä valmisagentin tilausmaksussa oikeastaan maksetaan.
+
+> **Pysähdy hetkeksi:** Ratkeaisiko sinun lopputyöongelmasi valmisagentilla? Jos ratkeaisi, mitä menettäisit — ja onko sillä menetyksellä sinun tapauksessasi väliä?
+
 ## Miltä nämä päätökset näyttävät n8n:ssä?
 
 Kun rakennat ratkaisua n8n:ssä, tässä oppitunnissa käsitellyt päätökset muuttuvat konkreettisiksi valinnoiksi n8n:n visuaalisessa editorissa.
