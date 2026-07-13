@@ -160,6 +160,25 @@ def to_html_with_cards(text, include_h3=False):
     return _wrap_task_cards(h, include_h3=include_h3)
 
 
+TASK_BLOCK_RE = re.compile(r'```task\s*\n(.*?)\n```', re.S)
+
+def parse_practice(text, lid='?'):
+    """Parse practice.md: markdown + ```task JSON-lohkot → (html, tasks).
+    Jokainen task-lohko korvautuu <div class="task-widget" data-ti="N"></div>-paikalla,
+    ja JSON kerätään listaan, joka upotetaan sivun L[lid].ptasks-kenttään."""
+    if not text.strip():
+        return '', []
+    tasks = []
+    def _repl(m):
+        try:
+            tasks.append(json.loads(m.group(1)))
+        except json.JSONDecodeError as e:
+            raise SystemExit(f"VIRHE: {lid}/practice.md task-lohkon JSON ei jäsenny: {e}")
+        return f'\n\n<div class="task-widget" data-ti="{len(tasks)-1}"></div>\n\n'
+    md_text = TASK_BLOCK_RE.sub(_repl, text)
+    return to_html(md_text), tasks
+
+
 def _classify_heading(title: str) -> str:
     """Determine card type from heading text."""
     title_lower = title.lower()
@@ -295,6 +314,9 @@ def build_lesson_data():
                 'tltasks':       to_html_with_cards(read_file(f"{tdir}/teacher-led-tasks.md"), include_h3=False),
                 'tmats':         to_html_with_cards(read_file(f"{tdir}/teacher-materials.md"), include_h3=True),
             }
+            practice_html, ptasks = parse_practice(read_file(f"{sdir}/practice.md"), lid)
+            data[lid]['practice'] = practice_html
+            data[lid]['ptasks'] = ptasks
     return data
 
 
@@ -309,6 +331,245 @@ OSP_ICONS = {
     "osp3": '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle class="aic-spin" cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="5 7" stroke-linecap="round"/><g class="aic-orbit"><circle cx="24" cy="8" r="3.8" fill="currentColor"/></g></svg>',
 }
 OSP_KN = {"osp1": "01 · TEORIA", "osp2": "02 · KÄYTTÖ", "osp3": "03 · AGENTIT"}
+
+
+# ===== Harjoittele-tehtävämoottori: CSS + JS (upotetaan templaattiin) =====
+PRACTICE_CSS = """
+.task-widget{background:#fff;border:1px solid #D8DEEC;border-radius:14px;padding:20px 22px;margin:26px 0;box-shadow:0 2px 10px rgba(27,35,54,.05)}
+.tw-type{font-family:var(--font-mono,ui-monospace,monospace);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#008799;margin-bottom:6px}
+.tw-head h3{margin:0 0 6px;font-size:19px;color:#1B2336}
+.tw-intro{margin:0 0 14px;color:#5A6478;font-size:14.5px;line-height:1.55}
+.tw-prev{display:inline-block;font-size:12.5px;color:#247A52;background:#F0F9F4;border:1px solid #CDE9D9;border-radius:8px;padding:4px 10px;margin-bottom:12px}
+.tw-prog{font-family:var(--font-mono,ui-monospace,monospace);font-size:12px;color:#7E88A8;margin-bottom:10px}
+.tw-card{background:#F7F8FC;border:1px solid #E3E7F0;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.6;color:#1B2336;margin-bottom:14px}
+.tw-opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tw-opts.tw-vert{flex-direction:column;align-items:stretch}
+.tw-opt{background:#fff;border:1.5px solid #C2CAD9;border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;color:#1B2336;cursor:pointer;text-align:left;transition:border-color .12s,background .12s}
+.tw-opt:hover:not(:disabled){border-color:#008799;background:#F2FAFB}
+.tw-opt:disabled{cursor:default;opacity:.75}
+.tw-opt.sel{border-color:#008799;background:#E5F6F7}
+.tw-opt.ok{border-color:#2F9E69;background:#F0F9F4;color:#247A52;opacity:1}
+.tw-opt.no{border-color:#C0392B;background:#FDF2F0;color:#8C2B20;opacity:1}
+.tw-opt.shake{animation:twShake .35s}
+@keyframes twShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.tw-fb{display:none;border-radius:10px;padding:12px 14px;font-size:14.5px;line-height:1.55;margin-bottom:12px}
+.tw-fb.show{display:block;background:#F7F8FC;border:1px solid #E3E7F0;color:#3A4253}
+.tw-fb.show.ok{background:#F0F9F4;border-color:#CDE9D9;color:#24503C}
+.tw-fb.show.no{background:#FDF2F0;border-color:#F0C9C2;color:#6E2A21}
+.tw-fb.show.mid{background:#FFFBEC;border-color:#F2D98E;color:#5A4A1E}
+.tw-next,.tw-redo{background:#008799;border:1px solid #008799;color:#fff;border-radius:9px;padding:9px 16px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tw-redo{background:#fff;color:#008799}
+.tw-seq{margin:0 0 14px;padding-left:26px}
+.tw-seq li{background:#F0F9F4;border:1px solid #CDE9D9;border-radius:8px;padding:8px 12px;margin-bottom:6px;font-size:14.5px;color:#24503C}
+.tw-match{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-bottom:12px}
+.tw-col{display:flex;flex-direction:column;gap:8px}
+.tw-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #E3E7F0;padding-top:12px;margin-top:4px}
+.tw-score{font-family:var(--font-mono,ui-monospace,monospace);font-size:13px;color:#3A4253}
+@media(max-width:640px){.tw-match{grid-template-columns:1fr}}
+"""
+
+PRACTICE_JS = """
+// ===== Harjoittele-tehtävämoottori =====
+function prGet(){try{return JSON.parse(localStorage.getItem('bcai-practice')||'{}')}catch(e){return{}}}
+function prSet(o){try{localStorage.setItem('bcai-practice',JSON.stringify(o))}catch(e){}}
+function prKey(lid,ti){return lid+'/'+ti}
+function twShuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function twEl(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function initPractice(lid){
+  const d=L[lid];if(!d||!d.ptasks||!d.ptasks.length)return;
+  document.querySelectorAll('#lesson-panels .task-widget').forEach(w=>{
+    const ti=+w.dataset.ti,task=d.ptasks[ti];
+    if(!task||w.dataset.init)return;w.dataset.init='1';
+    renderTask(w,task,lid,ti);
+  });
+}
+function renderTask(w,task,lid,ti){
+  w.innerHTML='';
+  const typeNames={quiz:'Monivalinta',classify:'Luokittelu',order:'Järjestäminen',match:'Yhdistä parit',scenario:'Skenaario'};
+  const head=twEl('div','tw-head');
+  head.appendChild(twEl('div','tw-type',typeNames[task.type]||'Tehtävä'));
+  head.appendChild(twEl('h3',null,task.title||''));
+  if(task.intro)head.appendChild(twEl('p','tw-intro',task.intro));
+  w.appendChild(head);
+  const st=prGet()[prKey(lid,ti)];
+  if(st)head.appendChild(twEl('div','tw-prev','✓ Tehty aiemmin'+(st.m?(' · '+st.s+' / '+st.m):'')));
+  const body=twEl('div','tw-body');w.appendChild(body);
+  let started=false;
+  const api={
+    mark:function(){if(!started){started=true;trackEvent('task_start',{lesson_id:lid,task_id:prKey(lid,ti),task_type:task.type});}},
+    done:function(s,m){
+      const o=prGet();o[prKey(lid,ti)]={s:s,m:m,t:Date.now()};prSet(o);
+      trackEvent('task_complete',{lesson_id:lid,task_id:prKey(lid,ti),task_type:task.type,score:s,max:m});
+      const f=twEl('div','tw-foot');
+      f.appendChild(twEl('span','tw-score',m!=null?('Tulos: '+s+' / '+m):'Valmis'));
+      const rb=twEl('button','tw-redo','Tee uudelleen');
+      rb.onclick=function(){renderTask(w,task,lid,ti)};
+      f.appendChild(rb);w.appendChild(f);
+    }
+  };
+  const renderers={quiz:twQuiz,classify:twClassify,order:twOrder,match:twMatch,scenario:twScenario};
+  if(renderers[task.type])renderers[task.type](body,task,api);
+}
+function twClassify(body,task,api){
+  let i=0,score=0;
+  const prog=twEl('div','tw-prog'),card=twEl('div','tw-card'),cats=twEl('div','tw-opts'),fb=twEl('div','tw-fb'),nxt=twEl('button','tw-next','Seuraava');
+  body.append(prog,card,cats,fb,nxt);nxt.style.display='none';
+  function show(){
+    fb.className='tw-fb';fb.innerHTML='';nxt.style.display='none';
+    prog.textContent=(i+1)+' / '+task.items.length;
+    card.innerHTML=task.items[i].text;cats.innerHTML='';
+    task.categories.forEach(function(c,ci){
+      const b=twEl('button','tw-opt',c);
+      b.onclick=function(){api.mark();answer(ci,b)};
+      cats.appendChild(b);
+    });
+  }
+  function answer(ci,btn){
+    const it=task.items[i],ok=ci===it.answer;
+    cats.querySelectorAll('button').forEach(function(b){b.disabled=true});
+    btn.classList.add(ok?'ok':'no');
+    if(ok)score++;else cats.children[it.answer].classList.add('ok');
+    fb.className='tw-fb show '+(ok?'ok':'no');
+    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan — oikea vastaus: '+task.categories[it.answer]+'.</strong> ')+(it.explain||'');
+    nxt.style.display='inline-block';
+    nxt.textContent=i<task.items.length-1?'Seuraava':'Näytä tulos';
+    nxt.onclick=function(){i++;if(i<task.items.length)show();else finish()};
+  }
+  function finish(){
+    prog.remove();card.remove();cats.remove();nxt.remove();
+    fb.className='tw-fb show '+(score===task.items.length?'ok':'mid');
+    fb.innerHTML='<strong>'+score+' / '+task.items.length+' oikein.</strong>'+(task.summary?('<br>'+task.summary):'');
+    api.done(score,task.items.length);
+  }
+  show();
+}
+function twQuiz(body,task,api){
+  let i=0,score=0;
+  const prog=twEl('div','tw-prog'),q=twEl('div','tw-card'),opts=twEl('div','tw-opts tw-vert'),fb=twEl('div','tw-fb'),nxt=twEl('button','tw-next','Seuraava');
+  body.append(prog,q,opts,fb,nxt);nxt.style.display='none';
+  function show(){
+    fb.className='tw-fb';fb.innerHTML='';nxt.style.display='none';
+    prog.textContent=(i+1)+' / '+task.items.length;
+    q.innerHTML=task.items[i].q;opts.innerHTML='';
+    task.items[i].options.forEach(function(o,oi){
+      const b=twEl('button','tw-opt',o.text);
+      b.onclick=function(){api.mark();ans(oi,b)};
+      opts.appendChild(b);
+    });
+  }
+  function ans(oi,btn){
+    const it=task.items[i],ok=!!it.options[oi].correct;
+    opts.querySelectorAll('button').forEach(function(b){b.disabled=true});
+    btn.classList.add(ok?'ok':'no');
+    if(ok)score++;else it.options.forEach(function(o,x){if(o.correct)opts.children[x].classList.add('ok')});
+    fb.className='tw-fb show '+(ok?'ok':'no');
+    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan.</strong> ')+(it.options[oi].explain||'');
+    nxt.style.display='inline-block';
+    nxt.textContent=i<task.items.length-1?'Seuraava':'Näytä tulos';
+    nxt.onclick=function(){i++;if(i<task.items.length)show();else fin()};
+  }
+  function fin(){
+    prog.remove();q.remove();opts.remove();nxt.remove();
+    fb.className='tw-fb show '+(score===task.items.length?'ok':'mid');
+    fb.innerHTML='<strong>'+score+' / '+task.items.length+' oikein.</strong>'+(task.summary?('<br>'+task.summary):'');
+    api.done(score,task.items.length);
+  }
+  show();
+}
+function twOrder(body,task,api){
+  let pos=0,miss=0;
+  const seq=twEl('ol','tw-seq'),pool=twEl('div','tw-opts'),fb=twEl('div','tw-fb');
+  body.append(seq,pool,fb);
+  twShuffle(task.steps.map(function(s,si){return{s:s,si:si}})).forEach(function(o){
+    const b=twEl('button','tw-opt',o.s);
+    b.onclick=function(){
+      api.mark();
+      if(o.si===pos){
+        b.remove();seq.appendChild(twEl('li',null,o.s));pos++;
+        fb.className='tw-fb';fb.innerHTML='';
+        if(pos===task.steps.length){
+          const perfect=miss===0;
+          fb.className='tw-fb show '+(perfect?'ok':'mid');
+          fb.innerHTML='<strong>Järjestys valmis'+(perfect?' — ensimmäisellä yrityksellä!':' ('+miss+' hutia).')+'</strong>'+(task.summary?('<br>'+task.summary):'');
+          api.done(Math.max(task.steps.length-miss,0),task.steps.length);
+        }
+      }else{
+        miss++;b.classList.add('shake');setTimeout(function(){b.classList.remove('shake')},400);
+        fb.className='tw-fb show no';fb.innerHTML=task.missHint||'Ei vielä — mieti, mikä vaihe tulee seuraavaksi.';
+      }
+    };
+    pool.appendChild(b);
+  });
+}
+function twMatch(body,task,api){
+  let selA=null,got=0,miss=0;
+  const wrap=twEl('div','tw-match'),colA=twEl('div','tw-col'),colB=twEl('div','tw-col'),fb=twEl('div','tw-fb');
+  wrap.append(colA,colB);body.append(wrap,fb);
+  task.pairs.forEach(function(p,pi){
+    const b=twEl('button','tw-opt',p.a);b.dataset.pi=pi;
+    b.onclick=function(){api.mark();colA.querySelectorAll('button').forEach(function(x){x.classList.remove('sel')});selA=b;b.classList.add('sel')};
+    colA.appendChild(b);
+  });
+  twShuffle(task.pairs.map(function(p,pi){return{t:p.b,pi:pi}})).forEach(function(o){
+    const b=twEl('button','tw-opt',o.t);
+    b.onclick=function(){
+      api.mark();
+      if(!selA){fb.className='tw-fb show';fb.textContent='Valitse ensin käsite vasemmalta.';return}
+      if(+selA.dataset.pi===o.pi){
+        const p=task.pairs[o.pi];
+        selA.classList.remove('sel');selA.classList.add('ok');b.classList.add('ok');
+        selA.disabled=true;b.disabled=true;selA=null;got++;
+        if(got===task.pairs.length){
+          fb.className='tw-fb show '+(miss===0?'ok':'mid');
+          fb.innerHTML='<strong>Kaikki parit löytyivät'+(miss?' ('+miss+' hutia).':' — ensimmäisellä yrityksellä!')+'</strong>'+(task.summary?('<br>'+task.summary):'');
+          api.done(Math.max(task.pairs.length-miss,0),task.pairs.length);
+        }else{
+          fb.className='tw-fb show ok';fb.innerHTML='<strong>'+p.a+'</strong> — '+(p.explain||'oikein.');
+        }
+      }else{
+        miss++;b.classList.add('shake');setTimeout(function(){b.classList.remove('shake')},400);
+        fb.className='tw-fb show no';fb.textContent='Ei pari. Kokeile uudelleen.';
+      }
+    };
+    colB.appendChild(b);
+  });
+}
+function twScenario(body,task,api){
+  const card=twEl('div','tw-card'),opts=twEl('div','tw-opts tw-vert'),fb=twEl('div','tw-fb');
+  body.append(card,opts,fb);
+  function go(idn){
+    const n=task.nodes[idn];if(!n)return;
+    card.innerHTML=n.text;opts.innerHTML='';fb.className='tw-fb';fb.innerHTML='';
+    if(n.end){
+      fb.className='tw-fb show '+(n.verdict||'mid');fb.innerHTML=n.feedback||'';
+      const rb=twEl('button','tw-next','Aloita alusta');
+      rb.onclick=function(){renderTaskRestart()};
+      opts.appendChild(rb);
+      api.done(n.score!=null?n.score:1,task.max!=null?task.max:1);
+      return;
+    }
+    (n.choices||[]).forEach(function(c){
+      const b=twEl('button','tw-opt',c.label);
+      b.onclick=function(){
+        api.mark();
+        opts.querySelectorAll('button').forEach(function(x){x.disabled=true});
+        b.classList.add('sel');
+        if(c.feedback){
+          fb.className='tw-fb show '+(c.tone||'');fb.innerHTML=c.feedback;
+          const cont=twEl('button','tw-next','Jatka');
+          cont.onclick=function(){go(c.next)};
+          opts.appendChild(cont);cont.disabled=false;
+        }else{
+          go(c.next);
+        }
+      };
+      opts.appendChild(b);
+    });
+  }
+  function renderTaskRestart(){go(task.start)}
+  go(task.start);
+}
+"""
 
 
 def generate_html(data, briefs):
@@ -364,6 +625,7 @@ def generate_html(data, briefs):
     # JS lesson data
     js_items = []
     for lid, d in data.items():
+        ptasks_js = json.dumps(d["ptasks"], ensure_ascii=False).replace("</", "<\\/")
         js_items.append(
             f'  "{lid}": {{\n'
             f'    ospId:"{d["osp_id"]}",ospTitle:`{esc_js(d["osp_title"])}`,\n'
@@ -375,6 +637,8 @@ def generate_html(data, briefs):
             f'    stasks:`{esc_js(d["stasks"])}`,\n'
             f'    tltasks:`{esc_js(d["tltasks"])}`,\n'
             f'    tmats:`{esc_js(d["tmats"])}`,\n'
+            f'    practice:`{esc_js(d["practice"])}`,\n'
+            f'    ptasks:{ptasks_js},\n'
             f'  }}'
         )
     js_data = 'const L={' + ',\n'.join(js_items) + '};'
@@ -431,6 +695,7 @@ if(c==='granted'){{loadGA();}}else if(c!=='denied'){{var b=document.getElementBy
 #consent-banner button{{border-radius:9px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}}
 #consent-banner .consent-accept{{background:#008799;border:1px solid #008799;color:#fff}}
 #consent-banner .consent-decline{{background:#fff;border:1px solid #C2CAD9;color:#3A4253}}
+{PRACTICE_CSS}
 </style>
 <style>
 
@@ -1774,6 +2039,7 @@ body:has(#lesson.active) .rv-switch{{display:flex}}
 const ALLIDS={json.dumps(all_ids)};
 const OSPM={osp_meta_js};
 let cid=null,ctab='selfstudy';
+{PRACTICE_JS}
 
 // Mark header-only task-cards (empty body) so they render as section headings,
 // and convert inline "🟢 SUOSITELTU" / "🟣 SYVENTÄVÄ" markers into pill tags.
@@ -1802,6 +2068,7 @@ const TABICONS={{
   vocab:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg>`,
   tltasks:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg>`,
   tmats:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg>`,
+  practice:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>`,
   brief:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.7l1.7 3.6 3.9.5-2.9 2.7.8 3.9L8 12.6 4.5 14.6l.8-3.9L2.4 6.3l3.9-.5z"/></svg>`
 }};
 
@@ -1907,7 +2174,7 @@ function loadLesson(id,tab,pushState){{
   const hasSlides=d.slides&&d.slides.length>0;
   const tabs=isA
     ?[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Arviointitehtävä'],['stasks','Tehtävä'],['tmats','Opettajan opas']]
-    :[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Itseopiskelumateriaali'],['stasks','Opiskelutehtävät'],['vocab','Sanasto'],['tltasks','Opettajavetoiset tehtävät'],['tmats','Opettajan materiaali']];
+    :[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Itseopiskelumateriaali'],['stasks','Opiskelutehtävät'],...(d.ptasks&&d.ptasks.length?[['practice','Harjoittele']]:[]),['vocab','Sanasto'],['tltasks','Opettajavetoiset tehtävät'],['tmats','Opettajan materiaali']];
 
   const tabNames=tabs.map(t=>t[0]);
   document.getElementById('lesson-tabs').innerHTML=tabs.map(([tid,lbl])=>
@@ -1918,6 +2185,7 @@ function loadLesson(id,tab,pushState){{
     `<div class="panel ${{tid===ctab?'active':''}}" data-tab="${{tid}}">${{d[tid]||'<p>(Sisältöä ei ole saatavilla)</p>'}}</div>`
   ).join('');
   enhancePanels();
+  initPractice(id);
 
   document.getElementById('lesson-footer').innerHTML=`
     <div class="nav-buttons">

@@ -27,6 +27,39 @@ if(c==='granted'){loadGA();}else if(c!=='denied'){var b=document.getElementById(
 #consent-banner button{border-radius:9px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
 #consent-banner .consent-accept{background:#008799;border:1px solid #008799;color:#fff}
 #consent-banner .consent-decline{background:#fff;border:1px solid #C2CAD9;color:#3A4253}
+
+.task-widget{background:#fff;border:1px solid #D8DEEC;border-radius:14px;padding:20px 22px;margin:26px 0;box-shadow:0 2px 10px rgba(27,35,54,.05)}
+.tw-type{font-family:var(--font-mono,ui-monospace,monospace);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#008799;margin-bottom:6px}
+.tw-head h3{margin:0 0 6px;font-size:19px;color:#1B2336}
+.tw-intro{margin:0 0 14px;color:#5A6478;font-size:14.5px;line-height:1.55}
+.tw-prev{display:inline-block;font-size:12.5px;color:#247A52;background:#F0F9F4;border:1px solid #CDE9D9;border-radius:8px;padding:4px 10px;margin-bottom:12px}
+.tw-prog{font-family:var(--font-mono,ui-monospace,monospace);font-size:12px;color:#7E88A8;margin-bottom:10px}
+.tw-card{background:#F7F8FC;border:1px solid #E3E7F0;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.6;color:#1B2336;margin-bottom:14px}
+.tw-opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tw-opts.tw-vert{flex-direction:column;align-items:stretch}
+.tw-opt{background:#fff;border:1.5px solid #C2CAD9;border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;color:#1B2336;cursor:pointer;text-align:left;transition:border-color .12s,background .12s}
+.tw-opt:hover:not(:disabled){border-color:#008799;background:#F2FAFB}
+.tw-opt:disabled{cursor:default;opacity:.75}
+.tw-opt.sel{border-color:#008799;background:#E5F6F7}
+.tw-opt.ok{border-color:#2F9E69;background:#F0F9F4;color:#247A52;opacity:1}
+.tw-opt.no{border-color:#C0392B;background:#FDF2F0;color:#8C2B20;opacity:1}
+.tw-opt.shake{animation:twShake .35s}
+@keyframes twShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.tw-fb{display:none;border-radius:10px;padding:12px 14px;font-size:14.5px;line-height:1.55;margin-bottom:12px}
+.tw-fb.show{display:block;background:#F7F8FC;border:1px solid #E3E7F0;color:#3A4253}
+.tw-fb.show.ok{background:#F0F9F4;border-color:#CDE9D9;color:#24503C}
+.tw-fb.show.no{background:#FDF2F0;border-color:#F0C9C2;color:#6E2A21}
+.tw-fb.show.mid{background:#FFFBEC;border-color:#F2D98E;color:#5A4A1E}
+.tw-next,.tw-redo{background:#008799;border:1px solid #008799;color:#fff;border-radius:9px;padding:9px 16px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tw-redo{background:#fff;color:#008799}
+.tw-seq{margin:0 0 14px;padding-left:26px}
+.tw-seq li{background:#F0F9F4;border:1px solid #CDE9D9;border-radius:8px;padding:8px 12px;margin-bottom:6px;font-size:14.5px;color:#24503C}
+.tw-match{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-bottom:12px}
+.tw-col{display:flex;flex-direction:column;gap:8px}
+.tw-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #E3E7F0;padding-top:12px;margin-top:4px}
+.tw-score{font-family:var(--font-mono,ui-monospace,monospace);font-size:13px;color:#3A4253}
+@media(max-width:640px){.tw-match{grid-template-columns:1fr}}
+
 </style>
 <style>
 
@@ -2644,6 +2677,8 @@ Vastaus: Tekoäly on väline. Se voi olla hyödyllinen tai haitallinen riippuen 
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Missä käyttämässäsi sovelluksessa tekoäly tekee päätöksiä puolestasi, ja mistä tiedät, että kyse ei ole vain yksinkertaisesta säännöstä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-02": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -3756,6 +3791,8 @@ Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes tek
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Kun seuraavan kerran näet tekoälyuutisen, mistä voit päätellä, onko kyse todellisesta yleisälystä vai rajatusta tekoälyjärjestelmästä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-03": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -4786,6 +4823,8 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Millaisessa tilanteessa kielimallin vakuuttava mutta väärä vastaus voisi aiheuttaa todellista vahinkoa?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-04": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -5970,6 +6009,8 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä tekoäly tarvitsee tietää, jotta se voi auttaa sinua omassa IT-ongelmassasi ilman turhia arvauksia?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-05": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -6987,6 +7028,8 @@ Ohjaa opiskelijaa kohti FIFO-periaatetta: malli ei unohda tahallaan. Vanhimmat t
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Jos jatkaisit samaa IT-projektia tekoälyn kanssa viikon ajan, mitä tietoa sinun pitäisi dokumentoida, jotta työ ei alkaisi ajautua väärään suuntaan?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-06": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -8268,6 +8311,8 @@ huomaan itse, jos joku kohta on ohi mennyt.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Milloin sinun kannattaa näyttää tekoälylle kuva ongelmasta, ja milloin sama tieto kannattaa antaa tekstinä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-07": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -9399,6 +9444,8 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Jos tekoäly antaa sinulle teknisen ratkaisun, jota et itse täysin ymmärrä, mitä tarkistat ennen kuin käytät sitä oikeassa työssä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-08": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -10468,6 +10515,8 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <blockquote class="pause"><p><strong>Pohdi:</strong> Kun käytät tekoälyä työssä tai opinnoissa, mikä on sinun vastuusi käyttäjänä, kehittäjänä tai tulevana IT-ammattilaisena?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Sinulla on ääni. Käytä sitä.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-09": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -11533,6 +11582,8 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä tekee tekstistäsi asiantuntijalausunnon eikä vain tekoälyn tuottaman yleisen vastauksen?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Tuomaripöydän takana ei istu kone. Siellä istuu opiskelija, joka osaa perustella ratkaisunsa.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-10": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -12812,6 +12863,8 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 <blockquote class="pause"><p><strong>Pohdi:</strong> Jos sinun pitäisi suositella tekoälytyökalua työpaikalle, mitä testaisit ennen kuin tekisit päätöksen?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Ammattilainen ei valitse tekoälyä maineen perusteella. Ammattilainen valitsee työkalun, koska hän on testannut sen ja osaa perustella valintansa.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-11": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -14134,6 +14187,8 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 <blockquote class="pause"><p><strong>Pohdi:</strong> Jos sinulla olisi sama tehtävä mutta eri data — ensin oma harjoituskoodi ja sitten potilastiedot — muuttuisiko käyttämäsi tekoälymalli? Miksi?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Teknisesti toimiva ei aina tarkoita ammatillisesti hyväksyttävää. Oikea tekoälymalli valitaan sekä tehtävän että vastuun perusteella.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-12": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -15397,6 +15452,8 @@ miksi.
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä tekoälyn pitäisi tietää sinusta, tavoitteestasi ja tehtävästäsi, jotta se voisi antaa oikeasti hyödyllisen vastauksen?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Tekoäly ei lue ajatuksia. Ammattilainen osaa antaa sille oikean tilanteen.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-13": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -16658,6 +16715,8 @@ Selitä minulle:
 <blockquote class="pause"><p><strong>Pohdi:</strong> Missä kohtaa tämän päivän tehtävissä tekoäly auttoi sinua eniten, ja missä kohtaa sinun piti itse tehdä tärkein päätös?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Tekoäly voi olla nopea työpari, mutta ammattilainen on se, joka ymmärtää, tarkistaa ja vastaa.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-14": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -18033,6 +18092,8 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 <blockquote class="pause"><p><strong>Pohdi:</strong> Jos käyttäjä keskustelee bottisi kanssa ensimmäistä kertaa, mistä hän huomaa, että botti on suunniteltu hyvin eikä vain nimetty uudelleen?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Hyvä botti ei ole taikuutta. Se on tarkoitus, rooli, ohjeet ja rajat — kirjoitettuna niin selkeästi, että tekoäly osaa toimia niiden mukaan.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-15": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -19647,6 +19708,8 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mistä tiedät, että bottisi ei vain vastaa, vaan vastaa luotettavasti ja turvallisesti?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Luotettava botti ei synny yhdellä kysymyksellä. Se syntyy tiedosta, rajoista, testeistä ja parannuksista.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-16": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -21323,6 +21386,8 @@ kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
 <blockquote class="pause"><p><strong>Pohdi:</strong> Kun valitset tekoälytyökalun kuvan, musiikin, videon tai koodin tekemiseen, mitkä kolme asiaa tarkistat ennen kuin päätät käyttää sitä?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Tekoälytyökalu ei tee sinusta ammattilaista. Ammattilaiseksi tekee se, että osaat valita työkalun, ohjata sitä, arvioida tulosta ja kantaa vastuun sen käytöstä.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-17": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -22516,6 +22581,8 @@ kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mistä tiedät, että bottisi todella auttaa käyttäjää pääsemään tavoitteeseensa paremmin eikä vain kysy satunnaisia kysymyksiä?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Hyvä apuri-botti ei vain keskustele. Se ohjaa käyttäjän ajattelemaan tehtävänsä läpi vaihe vaiheelta.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-18": {
     ospId:"osp2",ospTitle:`Tekoälyjen käyttö`,
@@ -23893,6 +23960,8 @@ Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen t
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä bottisi osaa nyt, ja mitä sen pitäisi vielä osata, jotta siitä voisi tulla agentti?</p>
 <p><strong>Lopetuslause opettajalle:</strong> Botti vastaa kysymyksiin. Agentti toimii tavoitteellisesti. Tänään viimeistelitte ensimmäisen askeleen kohti sitä ajattelua.</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-19": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -24861,6 +24930,24 @@ niin että minä ajattelen.
 <p>Oppitunti 20 käsittelee sitä, <strong>milloin agentti on oikea ratkaisu</strong>. Tämä oppitunti luo pohjan jatkolle: opiskelijat ymmärtävät, mikä agentti on ja miten sen komponentit toimivat yhdessä suoritusputkessa. Seuraavaksi he oppivat arvioimaan, milloin agentin rakentaminen on hyödyllistä, milloin se on liian kallista ja milloin yksinkertaisempi ratkaisu riittää.</p>
 <blockquote class="pause"><p><strong>Pohdi seuraavaa tuntia varten:</strong> Missä tilanteessa agentti olisi liian monimutkainen ratkaisu? Milloin tavallinen työnkulku tai chatbot riittäisi?</p>
 </blockquote></div></div>`,
+    practice:`<h1>Harjoittele — Boteista agentteihin</h1>
+<p>Tällä välilehdellä harjoittelet juuri lukemaasi käytännössä. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei ole ongelma — jokainen selitys kertoo, miksi juuri se vaihtoehto ei toiminut, joten opit myös virheistä. Tehtävät etenevät sanaston kertaamisesta kohti monimutkaisempaa päättelyä ja päättyvät tilanteeseen, jossa arvioit itse, milloin agentin kannattaa antaa toimia itsenäisesti ja milloin sinun pitää astua väliin.</p>
+<h2>Tehtävä 1/4 — sanaston kertaus</h2>
+<p>Aloitetaan tutuilla käsitteillä, ennen kuin siirrytään monimutkaisempaan päättelyyn.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — suoritusputki</h2>
+<p>Kertaa, missä järjestyksessä agentin kuusi rakennusosaa toimii yhdessä.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — tunnista järjestelmätyyppi</h2>
+<p>Kahdeksan tilannetta odottaa luokittelua. Lue jokainen huolellisesti — oikea vastaus ei aina ole ensimmäinen mieleen tuleva.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — kenen pitäisi päättää</h2>
+<p>Viimeinen tehtävä kokoaa kaiken opitun yhteen: astut itse ihmiseksi agentin rinnalle.</p>
+<div class="task-widget" data-ti="3"></div>`,
+    ptasks:[{"type": "match", "title": "Käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Skripti", "b": "Ohjelma, joka toistaa saman ennalta kirjoitetun toiminnon riippumatta tilanteesta.", "explain": "Skripti ei arvioi tilannetta eikä muuta toimintaansa — se tekee aina saman, oli tilanne mikä tahansa."}, {"a": "Työnkulku", "b": "Sarja päätössääntöjä, jotka on kirjoitettu valmiiksi ennen käyttöä eivätkä muutu tapauskohtaisesti.", "explain": "Työnkulku on skriptiä joustavampi, koska mukana on haarautuvaa päätöslogiikkaa — mutta säännöt eivät muutu itsenäisesti."}, {"a": "Agentti", "b": "Järjestelmä, joka arvioi tilannetta itsenäisesti ja valitsee toimintansa sen perusteella.", "explain": "Ratkaiseva ero skriptiin ja työnkulkuun: agentti arvioi tilannetta ja voi muuttaa toimintaansa arvion perusteella."}, {"a": "Turvakerros", "b": "Osa, joka tarkistaa toiminnan sallittavuuden ennen sitä, sen aikana ja jälkikäteen.", "explain": "Kolme tarkistushetkeä — ennen, aikana, jälkeen — erottavat tämän yhdestä ainoasta lupakysymyksestä."}, {"a": "Palautesilmukka", "b": "Mekanismi, jonka avulla toiminnan tulokset vaikuttavat seuraaviin päätöksiin.", "explain": "Ilman tätä agentti toistaisi samat virheet loputtomiin — palaute mahdollistaa oppimisen."}, {"a": "Valmisagentti", "b": "Tuote, jonka kuusi rakennusosaa on suunnitellut ja toteuttanut joku muu kuin käyttäjä itse.", "explain": "Rakenne on sama kuin itse rakennetussa agentissa — ainoa ero on, kuka teki suunnittelutyön."}, {"a": "Agenttitila", "b": "Sovelluksen toimintatila, jossa tekoäly suorittaa monivaiheisen tehtävän työkaluilla käyttäjän puolesta.", "explain": "Agenttitila on ominaisuus sovelluksen sisällä; valmisagentti on koko tuote, jossa ominaisuus asuu."}, {"a": "Harness", "b": "Kaikki se, mitä kielimallin ympärille on rakennettu: työkalut, muisti, oikeudet ja turvarajat.", "explain": "Kielimalli on kuin vetohevonen — harness on valjaat, jotka kytkevät voiman työhön."}], "summary": "<strong>Agentti = kielimalli + harness.<\/strong> Harness on kaikki se, mikä muuttaa pelkän puhuvan kielimallin toimivaksi agentiksi — myös silloin, kun sen on rakentanut joku muu."}, {"type": "order", "title": "Suoritusputki vaihe vaiheelta", "intro": "Palauta mieleen, missä järjestyksessä agentin kuusi rakennusosaa toimii yhdessä. Napauta vaiheet oikeaan järjestykseen.", "steps": ["Syötekäsittelijä vastaanottaa herätteen ja muuntaa sen käsiteltävään muotoon.", "Päättelijä arvioi tilanteen ja suunnittelee toimintapolun.", "Muisti tuo mukaan aiempien tapausten kontekstin.", "Työkalut toteuttavat tarvittavat toimenpiteet.", "Turvakerros valvoo toimintaa koko prosessin ajan.", "Palautesilmukka arvioi tuloksen ja tallentaa havainnot."], "missHint": "Ei vielä — mieti, mikä vaihe tarvitsee edellisen vaiheen tuloksen ennen kuin se voi alkaa.", "summary": "Tämä kuuden vaiheen putki toistuu joka kierroksella — myös valmisagentin sisällä, vaikka sen olisi rakentanut joku muu."}, {"type": "classify", "title": "Skripti, työnkulku, agentti vai valmisagentti?", "intro": "Neljäs vaihtoehto, valmisagentti, ei ole eri asia kuin agentti — se ON agentti, jonka on rakentanut joku muu ja jota käytät valmiina tuotteena. Kysy siis kahta asiaa: (1) Arvioiko järjestelmä tilannetta itsenäisesti ja käyttääkö työkaluja ja muistia? (2) Jos kyllä — rakensitko tai omistatko sen itse, vai onko kyse tunnetun sovelluksen agenttitilasta, jota käytät valmiina?", "categories": ["Skripti", "Työnkulku", "Agentti", "Valmisagentti"], "items": [{"text": "Kuntosaliketjun oma jäsenpalvelujärjestelmä lukee saapuvat peruutuspyynnöt, arvioi syyn ja kiireellisyyden, tarkistaa jäsenen maksuhistorian ja päättää, voiko se hyväksyä hyvityksen itsenäisesti vai pitääkö asian ohjata talousvastaavalle. Järjestelmän on rakentanut ketjun oma tietohallinto, ja se kirjaa jokaisen päätöksensä perustelut myöhempää käyttöä varten.", "answer": 2, "explain": "Järjestelmä arvioi tilannetta, käyttää muistia (maksuhistoria) ja tekee itsenäisiä päätöksiä rajojensa sisällä — tämä on agentti. Koska ketjun oma tietohallinto rakensi sen, kyse ei ole valmisagentista."}, {"text": "Verkkokaupan hinnoitteluohjelma korottaa jokaisen tuotteen hintaa täsmälleen 3 prosentilla kuukauden ensimmäisenä päivänä, riippumatta tuotteesta tai myynnin määrästä.", "answer": 0, "explain": "Yksi kiinteä sääntö, joka toistuu samanlaisena kuukaudesta toiseen ilman poikkeuksia tai haarautumista, on skriptin tunnusmerkki — vaikka kyse on kaupallisesta järjestelmästä."}, {"text": "Toimistotyöntekijä avaa käyttämänsä tekoälysovelluksen agenttitilan ja pyytää: 'Käy läpi tämän kansion 40 kuittitiedostoa ja kokoa niistä matkalaskutaulukko.' Sovellus pyytää ensin luvan lukea kansiota, näyttää suunnitelmansa, käsittelee kuitit ja raportoi lopuksi, mitkä tiedostot jäivät epäselviksi.", "answer": 3, "explain": "Kuusi rakennusosaa näkyy tässä kaikki: lupa, suunnitelma, työkalujen käyttö ja raportti. Rakenteeltaan tämä on agentti — mutta koska työntekijä käyttää valmista tekoälysovellusta, jota kukaan ei ole itse rakentanut, tarkempi vastaus on valmisagentti."}, {"text": "Kirjaston palautusjärjestelmä laskee myöhästymismaksun päivien perusteella ja lähettää muistutusviestin, jos maksu ylittää viisi euroa. Sääntötaulukko on kiinteä, eikä järjestelmä hyödynnä aiempien palautusten historiaa.", "answer": 1, "explain": "Raja-arvo (yli viisi euroa) ohjaa toimintaa, mutta järjestelmä ei arvioi yksittäisiä tapauksia eikä hyödynnä palautushistoriaa. Kiinteä sääntö ilman oppimista on työnkulku, ei agentti."}, {"text": "Palvelimella ajetaan joka yö kello kaksi komento, joka pakkaa edellisen päivän lokitiedostot yhteen zip-tiedostoon ja poistaa yli 30 päivää vanhat pakkaukset.", "answer": 0, "explain": "Kiinteä ajastus ja täsmälleen sama toiminto joka kerta — ei tulkintaa eikä haarautumista. Tämä on skripti; se ei ole edes työnkulku, koska mukana ei ole päätössääntöjä."}, {"text": "Kaupungin liikennekeskuksen ohjausjärjestelmä tarkkailee risteysten kamera- ja anturidataa, säätää valojen ajoitusta ruuhkan mukaan ja oppii ajan myötä, miten viikonpäivät ja tapahtumat vaikuttavat liikenteeseen. Jos tilanne poikkeaa selvästi totutusta, se hälyttää operaattorin. Järjestelmä on osa kaupungin omaa liikenteenhallinnan infrastruktuuria.", "answer": 2, "explain": "Oppiminen ajan myötä ja poikkeamien tunnistaminen ovat agentin merkkejä, eivät kiinteän työnkulun. Koska järjestelmä on kaupungin oma infrastruktuuri, kyse on agentista — ei valmisagentista."}, {"text": "Rekrytointijärjestelmä ohjaa jokaisen hakemuksen HR-tiimille, jos hakija on merkinnyt yli viisi vuotta kokemusta, ja muutoin suoraan esihenkilölle. Sääntö on kirjoitettu järjestelmään etukäteen eikä sitä muuteta tapauskohtaisesti.", "answer": 1, "explain": "Tässä on haarautuva sääntö (yli tai alle viisi vuotta kokemusta), joten kyse on enemmän kuin skriptistä. Sääntö on silti kiinteä eikä opi ajan myötä — se on työnkulku, ei agentti."}, {"text": "Opiskelija pyytää suositun taulukkolaskentaohjelman agenttitilaa siivoamaan 2000 rivin myyntidatan: poistamaan duplikaatit ja tekemään yhteenvetotaulukon. Ohjelma näyttää ensin suunnitelmansa, kysyy luvan poistaa rivejä, tekee työn ja listaa lopuksi kohdat, joissa se joutui arvaamaan.", "answer": 3, "explain": "Sama kuvio kuin toimistotyöntekijän esimerkissä: agentin rakenne — suunnitelma, lupa, toteutus, raportti — mutta valmiina tuotteena tunnetun sovelluksen sisällä. Valmisagentti."}], "summary": "Ratkaiseva kysymys ei ole se, onko tämä automaatiota, vaan kaksi asiaa peräkkäin: arvioiko järjestelmä tilannetta itsenäisesti, ja jos arvioi, rakensitko sen itse vai käytätkö sitä valmiina tuotteena?"}, {"type": "scenario", "title": "Kenen pitäisi päättää?", "intro": "Toimit ihmisenä agentin rinnalla. Jokaisessa kohdassa agenttitila pyytää lupaa tai ehdottaa toimenpidettä — sinä päätät, milloin se saa jatkaa itsenäisesti ja milloin sinun pitää astua väliin.", "start": "start", "max": 3, "nodes": {"start": {"text": "Työskentelet asiakaspalvelutiimissä. Tiimisi on ottanut käyttöön tekoälysovelluksen agenttitilan, joka voi lukea asiakasviestejä ja tehdä toimenpiteitä puolestanne. Maanantaiaamuna avaat sovelluksen: 40 uutta viestiä odottaa. Agenttitila kysyy: 'Voinko lukea kaikki tämän aamun viestit ja luokitella ne kiireellisyyden mukaan?'", "choices": [{"label": "Anna lupa — lukeminen ja luokittelu ei vielä tee mitään peruuttamatonta", "next": "dp2", "feedback": "Hyvä päätös. Pelkkä lukeminen ja luokittelu on matalan riskin toimenpide: mikään ei muutu pysyvästi, ja voit tarkistaa tulokset jälkikäteen.", "tone": "ok"}, {"label": "Kiellä — haluat itse lukea jokaisen viestin ensin", "next": "dp2", "feedback": "Ymmärrettävä varovaisuus, mutta lukeminen ei ole vaarallista eikä peruuttamatonta. Kello on kohta yksitoista, kun olet lukenut kaikki 40 viestiä itse — annat lopulta agentille luvan jatkaa.", "tone": "mid"}]}, "dp2": {"text": "Agenttitila on luokitellut viestit. Se löysi kolme laskuihin liittyvää viestiä ja kysyy: 'Voinko lähettää näille kolmelle automaattisen kuittausviestin laskun vastaanottamisesta?'", "choices": [{"label": "Anna lupa juuri näille kolmelle viestille", "next": "dp3", "feedback": "Rajattu, tilannekohtainen lupa. Kun tarve muuttuu, kysyt uudelleen — juuri niin turvakerroksen pitäisi toimia.", "tone": "ok"}, {"label": "Anna agentille pysyvä lupa lähettää tällaisia kuittauksia jatkossa kysymättä", "next": "dp3", "feedback": "Kuittaus itsessään on matalan riskin toimenpide, mutta pysyvä lupa poistaa mahdollisuuden tarkistaa tulevia tapauksia yksitellen. Jatkat tällä kertaa silti eteenpäin.", "tone": "mid"}]}, "dp3": {"text": "Agenttitila nostaa esiin yhden viestin: 'Olipa taas kerran helppoa saada tähän laskuun mitään järkevää vastausta.' Järjestelmä tulkitsee viestin liittyvän laskuun ja kysyy: 'Voinko lähettää automaattisen pahoittelun ja 20 euron hyvityksen asiakkaan tilille, kuten sovitussa käytännössä laskureklamaatioissa?'", "choices": [{"label": "Pysäytä agentti — käsittelet viestin itse", "next": "dp4", "feedback": "Viestissä on sekä rahaa että tulkinnanvaraista sävyä — kaksi hyvää syytä ohjata asia ihmiselle, vaikka 'sovittu käytäntö' teknisesti kattaisi laskut.", "tone": "ok"}, {"label": "Anna agentin hoitaa — sovittu käytäntö kattaa tämän", "next": "dp3_bad_end", "feedback": "Sävy on tulkinnanvarainen ja liikkeellä on oikeaa rahaa — tämä osoittautuu virheeksi.", "tone": "no"}]}, "dp3_bad_end": {"end": true, "verdict": "no", "score": 0, "text": "Agentti lähettää pahoittelun ja 20 euron hyvityksen. Iltapäivällä selviää, että viesti oli sarkastinen huomautus tuen hitaudesta — ei varsinainen laskureklamaatio. Talousosasto kysyy, miksi asiakkaalle maksettiin selittämätön hyvitys, ja asiakas hämmentyy saamastaan rahasta.", "feedback": "Tunnepitoinen sävy ja rahan liikuttaminen ovat kumpikin itsenäinen syy pyytää ihmisen vahvistus — yhdessä ne ovat vielä selvempi merkki. 'Sovittu käytäntö' kattaa rutiinitapaukset, ei tulkinnanvaraisia. Turvakerroksen pitäisi tunnistaa tällainen poikkeus ja pysäyttää toiminta ennen suoritusta."}, "dp4": {"text": "Iltapäivällä agenttitila esittää yhteenvedon päivän toimista ja kysyy: 'Hyväksytkö nämä toimet ja saanko käyttää samaa toimintatapaa huomenna kysymättä enää erikseen?'", "choices": [{"label": "Hyväksy rutiinitoimet pysyvästi, mutta pidä raha- ja tulkinnanvaraiset tapaukset aina kysymislistalla", "next": "end_good", "feedback": "Tarkkuutta oikeassa kohdassa: matalan riskin rutiinit voivat automatisoitua, mutta korkeamman riskin tapaukset pysyvät ihmisen tarkistuksessa.", "tone": "ok"}, {"label": "Hyväksy kaikki toimet pysyvästi jatkossa, äläkä kysy enää mitään", "next": "end_mid", "feedback": "Tämä säästää aikaa tänään, mutta poistaa mahdollisuuden huomata, jos tilanteet muuttuvat tulevaisuudessa. Turvakerros on suunniteltu tarkistamaan jatkuvasti, ei vain kerran.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Työpäivä päättyy. Olet päästänyt agentin toimimaan itsenäisesti siellä, missä riski on pieni, ja pitänyt itselläsi päätösvallan siellä, missä virheen hinta olisi suuri.", "feedback": "Tunnistit turvakerroksen koko logiikan: matala riski → autonomia, keskisuuri riski → rajattu lupa, korkea riski eli raha ja tulkinnanvarainen tilanne yhdessä → ihminen päättää, ja lopuksi jatkuva, ei kertaluonteinen, tarkistus."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Työpäivä päättyy hyvin, mutta annoit agentille lopuksi rajattoman, pysyvän luvan jatkaa samalla tavalla huomenna.", "feedback": "Suurin osa päätöksistäsi oli hyviä, erityisesti se, että pysäytit agentin tulkinnanvaraisen ja rahaa koskevan viestin kohdalla. Viimeinen päätös kuitenkin heikentää tätä: pysyvä kaikenkattava lupa tarkoittaa, ettei kukaan tarkista tulevia tapauksia erikseen, vaikka tilanne muuttuisi."}}}],
   },
   "lesson-20": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -26055,6 +26142,8 @@ niin että minä ajattelen.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä omassa projektissasi on se kohta, jossa työnkulku ei enää riitä ja agentin päättely tuo lisäarvoa?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-21": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -27221,6 +27310,8 @@ niin että ajattelen.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä agenttisi täytyy muistaa juuri nyt, mitä sen täytyy muistaa myöhemmin ja mitä sen ei saa koskaan tallentaa?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-22": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -28728,6 +28819,8 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mitä työkaluja oma agenttisi todella tarvitsee, ja mikä olisi vaarallisin oikeus, jonka voisit sille vahingossa antaa?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-23": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -30096,6 +30189,8 @@ vai sopisiko toinen malli paremmin.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Tarvitseeko oma agenttisi joustavaa tutkimista, vaiheittaista prosessia vai useamman erikoistuneen agentin yhteistyötä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-24": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -31569,6 +31664,8 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä olisi oman agenttisi pahin realistinen virhe? Miten estät sen, miten huomaat sen ja miten korjaat sen?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-25": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -32811,6 +32908,8 @@ puuttuu? Mikä on epäselvää?
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Missä kohdassa oman agenttisi pitäisi pysähtyä ja pyytää ihmiseltä hyväksyntä? Mitä tietoa ihmisen pitää nähdä, jotta hän voi tehdä hyvän päätöksen?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-26": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -34100,6 +34199,8 @@ uudelleen — kysy minulta kysymyksiä.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä oman agenttisi pienin toimiva versio olisi? Mitkä solmut siihen tarvitaan, ja missä kohdassa tarvitset turvakerroksen?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   },
   "lesson-27": {
     ospId:"osp3",ospTitle:`Agentit`,
@@ -35519,6 +35620,8 @@ Mitä se EI tee.
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä oman agenttisi tärkein riski on? Miten testasit sen, ja mitä dokumentaatiosi kertoo siitä?</p>
 </blockquote></div></div>`,
+    practice:``,
+    ptasks:[],
   }};
 const BRIEFS={  "osp1": {
     ospId:"osp1",ospTitle:`Teoria`,
@@ -36112,6 +36215,208 @@ const ALLIDS=["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "
 const OSPM=[{"id": "osp1", "ids": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09"]}, {"id": "osp2", "ids": ["lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18"]}, {"id": "osp3", "ids": ["lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]}];
 let cid=null,ctab='selfstudy';
 
+// ===== Harjoittele-tehtävämoottori =====
+function prGet(){try{return JSON.parse(localStorage.getItem('bcai-practice')||'{}')}catch(e){return{}}}
+function prSet(o){try{localStorage.setItem('bcai-practice',JSON.stringify(o))}catch(e){}}
+function prKey(lid,ti){return lid+'/'+ti}
+function twShuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function twEl(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function initPractice(lid){
+  const d=L[lid];if(!d||!d.ptasks||!d.ptasks.length)return;
+  document.querySelectorAll('#lesson-panels .task-widget').forEach(w=>{
+    const ti=+w.dataset.ti,task=d.ptasks[ti];
+    if(!task||w.dataset.init)return;w.dataset.init='1';
+    renderTask(w,task,lid,ti);
+  });
+}
+function renderTask(w,task,lid,ti){
+  w.innerHTML='';
+  const typeNames={quiz:'Monivalinta',classify:'Luokittelu',order:'Järjestäminen',match:'Yhdistä parit',scenario:'Skenaario'};
+  const head=twEl('div','tw-head');
+  head.appendChild(twEl('div','tw-type',typeNames[task.type]||'Tehtävä'));
+  head.appendChild(twEl('h3',null,task.title||''));
+  if(task.intro)head.appendChild(twEl('p','tw-intro',task.intro));
+  w.appendChild(head);
+  const st=prGet()[prKey(lid,ti)];
+  if(st)head.appendChild(twEl('div','tw-prev','✓ Tehty aiemmin'+(st.m?(' · '+st.s+' / '+st.m):'')));
+  const body=twEl('div','tw-body');w.appendChild(body);
+  let started=false;
+  const api={
+    mark:function(){if(!started){started=true;trackEvent('task_start',{lesson_id:lid,task_id:prKey(lid,ti),task_type:task.type});}},
+    done:function(s,m){
+      const o=prGet();o[prKey(lid,ti)]={s:s,m:m,t:Date.now()};prSet(o);
+      trackEvent('task_complete',{lesson_id:lid,task_id:prKey(lid,ti),task_type:task.type,score:s,max:m});
+      const f=twEl('div','tw-foot');
+      f.appendChild(twEl('span','tw-score',m!=null?('Tulos: '+s+' / '+m):'Valmis'));
+      const rb=twEl('button','tw-redo','Tee uudelleen');
+      rb.onclick=function(){renderTask(w,task,lid,ti)};
+      f.appendChild(rb);w.appendChild(f);
+    }
+  };
+  const renderers={quiz:twQuiz,classify:twClassify,order:twOrder,match:twMatch,scenario:twScenario};
+  if(renderers[task.type])renderers[task.type](body,task,api);
+}
+function twClassify(body,task,api){
+  let i=0,score=0;
+  const prog=twEl('div','tw-prog'),card=twEl('div','tw-card'),cats=twEl('div','tw-opts'),fb=twEl('div','tw-fb'),nxt=twEl('button','tw-next','Seuraava');
+  body.append(prog,card,cats,fb,nxt);nxt.style.display='none';
+  function show(){
+    fb.className='tw-fb';fb.innerHTML='';nxt.style.display='none';
+    prog.textContent=(i+1)+' / '+task.items.length;
+    card.innerHTML=task.items[i].text;cats.innerHTML='';
+    task.categories.forEach(function(c,ci){
+      const b=twEl('button','tw-opt',c);
+      b.onclick=function(){api.mark();answer(ci,b)};
+      cats.appendChild(b);
+    });
+  }
+  function answer(ci,btn){
+    const it=task.items[i],ok=ci===it.answer;
+    cats.querySelectorAll('button').forEach(function(b){b.disabled=true});
+    btn.classList.add(ok?'ok':'no');
+    if(ok)score++;else cats.children[it.answer].classList.add('ok');
+    fb.className='tw-fb show '+(ok?'ok':'no');
+    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan — oikea vastaus: '+task.categories[it.answer]+'.</strong> ')+(it.explain||'');
+    nxt.style.display='inline-block';
+    nxt.textContent=i<task.items.length-1?'Seuraava':'Näytä tulos';
+    nxt.onclick=function(){i++;if(i<task.items.length)show();else finish()};
+  }
+  function finish(){
+    prog.remove();card.remove();cats.remove();nxt.remove();
+    fb.className='tw-fb show '+(score===task.items.length?'ok':'mid');
+    fb.innerHTML='<strong>'+score+' / '+task.items.length+' oikein.</strong>'+(task.summary?('<br>'+task.summary):'');
+    api.done(score,task.items.length);
+  }
+  show();
+}
+function twQuiz(body,task,api){
+  let i=0,score=0;
+  const prog=twEl('div','tw-prog'),q=twEl('div','tw-card'),opts=twEl('div','tw-opts tw-vert'),fb=twEl('div','tw-fb'),nxt=twEl('button','tw-next','Seuraava');
+  body.append(prog,q,opts,fb,nxt);nxt.style.display='none';
+  function show(){
+    fb.className='tw-fb';fb.innerHTML='';nxt.style.display='none';
+    prog.textContent=(i+1)+' / '+task.items.length;
+    q.innerHTML=task.items[i].q;opts.innerHTML='';
+    task.items[i].options.forEach(function(o,oi){
+      const b=twEl('button','tw-opt',o.text);
+      b.onclick=function(){api.mark();ans(oi,b)};
+      opts.appendChild(b);
+    });
+  }
+  function ans(oi,btn){
+    const it=task.items[i],ok=!!it.options[oi].correct;
+    opts.querySelectorAll('button').forEach(function(b){b.disabled=true});
+    btn.classList.add(ok?'ok':'no');
+    if(ok)score++;else it.options.forEach(function(o,x){if(o.correct)opts.children[x].classList.add('ok')});
+    fb.className='tw-fb show '+(ok?'ok':'no');
+    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan.</strong> ')+(it.options[oi].explain||'');
+    nxt.style.display='inline-block';
+    nxt.textContent=i<task.items.length-1?'Seuraava':'Näytä tulos';
+    nxt.onclick=function(){i++;if(i<task.items.length)show();else fin()};
+  }
+  function fin(){
+    prog.remove();q.remove();opts.remove();nxt.remove();
+    fb.className='tw-fb show '+(score===task.items.length?'ok':'mid');
+    fb.innerHTML='<strong>'+score+' / '+task.items.length+' oikein.</strong>'+(task.summary?('<br>'+task.summary):'');
+    api.done(score,task.items.length);
+  }
+  show();
+}
+function twOrder(body,task,api){
+  let pos=0,miss=0;
+  const seq=twEl('ol','tw-seq'),pool=twEl('div','tw-opts'),fb=twEl('div','tw-fb');
+  body.append(seq,pool,fb);
+  twShuffle(task.steps.map(function(s,si){return{s:s,si:si}})).forEach(function(o){
+    const b=twEl('button','tw-opt',o.s);
+    b.onclick=function(){
+      api.mark();
+      if(o.si===pos){
+        b.remove();seq.appendChild(twEl('li',null,o.s));pos++;
+        fb.className='tw-fb';fb.innerHTML='';
+        if(pos===task.steps.length){
+          const perfect=miss===0;
+          fb.className='tw-fb show '+(perfect?'ok':'mid');
+          fb.innerHTML='<strong>Järjestys valmis'+(perfect?' — ensimmäisellä yrityksellä!':' ('+miss+' hutia).')+'</strong>'+(task.summary?('<br>'+task.summary):'');
+          api.done(Math.max(task.steps.length-miss,0),task.steps.length);
+        }
+      }else{
+        miss++;b.classList.add('shake');setTimeout(function(){b.classList.remove('shake')},400);
+        fb.className='tw-fb show no';fb.innerHTML=task.missHint||'Ei vielä — mieti, mikä vaihe tulee seuraavaksi.';
+      }
+    };
+    pool.appendChild(b);
+  });
+}
+function twMatch(body,task,api){
+  let selA=null,got=0,miss=0;
+  const wrap=twEl('div','tw-match'),colA=twEl('div','tw-col'),colB=twEl('div','tw-col'),fb=twEl('div','tw-fb');
+  wrap.append(colA,colB);body.append(wrap,fb);
+  task.pairs.forEach(function(p,pi){
+    const b=twEl('button','tw-opt',p.a);b.dataset.pi=pi;
+    b.onclick=function(){api.mark();colA.querySelectorAll('button').forEach(function(x){x.classList.remove('sel')});selA=b;b.classList.add('sel')};
+    colA.appendChild(b);
+  });
+  twShuffle(task.pairs.map(function(p,pi){return{t:p.b,pi:pi}})).forEach(function(o){
+    const b=twEl('button','tw-opt',o.t);
+    b.onclick=function(){
+      api.mark();
+      if(!selA){fb.className='tw-fb show';fb.textContent='Valitse ensin käsite vasemmalta.';return}
+      if(+selA.dataset.pi===o.pi){
+        const p=task.pairs[o.pi];
+        selA.classList.remove('sel');selA.classList.add('ok');b.classList.add('ok');
+        selA.disabled=true;b.disabled=true;selA=null;got++;
+        if(got===task.pairs.length){
+          fb.className='tw-fb show '+(miss===0?'ok':'mid');
+          fb.innerHTML='<strong>Kaikki parit löytyivät'+(miss?' ('+miss+' hutia).':' — ensimmäisellä yrityksellä!')+'</strong>'+(task.summary?('<br>'+task.summary):'');
+          api.done(Math.max(task.pairs.length-miss,0),task.pairs.length);
+        }else{
+          fb.className='tw-fb show ok';fb.innerHTML='<strong>'+p.a+'</strong> — '+(p.explain||'oikein.');
+        }
+      }else{
+        miss++;b.classList.add('shake');setTimeout(function(){b.classList.remove('shake')},400);
+        fb.className='tw-fb show no';fb.textContent='Ei pari. Kokeile uudelleen.';
+      }
+    };
+    colB.appendChild(b);
+  });
+}
+function twScenario(body,task,api){
+  const card=twEl('div','tw-card'),opts=twEl('div','tw-opts tw-vert'),fb=twEl('div','tw-fb');
+  body.append(card,opts,fb);
+  function go(idn){
+    const n=task.nodes[idn];if(!n)return;
+    card.innerHTML=n.text;opts.innerHTML='';fb.className='tw-fb';fb.innerHTML='';
+    if(n.end){
+      fb.className='tw-fb show '+(n.verdict||'mid');fb.innerHTML=n.feedback||'';
+      const rb=twEl('button','tw-next','Aloita alusta');
+      rb.onclick=function(){renderTaskRestart()};
+      opts.appendChild(rb);
+      api.done(n.score!=null?n.score:1,task.max!=null?task.max:1);
+      return;
+    }
+    (n.choices||[]).forEach(function(c){
+      const b=twEl('button','tw-opt',c.label);
+      b.onclick=function(){
+        api.mark();
+        opts.querySelectorAll('button').forEach(function(x){x.disabled=true});
+        b.classList.add('sel');
+        if(c.feedback){
+          fb.className='tw-fb show '+(c.tone||'');fb.innerHTML=c.feedback;
+          const cont=twEl('button','tw-next','Jatka');
+          cont.onclick=function(){go(c.next)};
+          opts.appendChild(cont);cont.disabled=false;
+        }else{
+          go(c.next);
+        }
+      };
+      opts.appendChild(b);
+    });
+  }
+  function renderTaskRestart(){go(task.start)}
+  go(task.start);
+}
+
+
 // Mark header-only task-cards (empty body) so they render as section headings,
 // and convert inline "🟢 SUOSITELTU" / "🟣 SYVENTÄVÄ" markers into pill tags.
 function enhancePanels(){
@@ -36139,6 +36444,7 @@ const TABICONS={
   vocab:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg>`,
   tltasks:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg>`,
   tmats:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg>`,
+  practice:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>`,
   brief:`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.7l1.7 3.6 3.9.5-2.9 2.7.8 3.9L8 12.6 4.5 14.6l.8-3.9L2.4 6.3l3.9-.5z"/></svg>`
 };
 
@@ -36244,7 +36550,7 @@ function loadLesson(id,tab,pushState){
   const hasSlides=d.slides&&d.slides.length>0;
   const tabs=isA
     ?[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Arviointitehtävä'],['stasks','Tehtävä'],['tmats','Opettajan opas']]
-    :[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Itseopiskelumateriaali'],['stasks','Opiskelutehtävät'],['vocab','Sanasto'],['tltasks','Opettajavetoiset tehtävät'],['tmats','Opettajan materiaali']];
+    :[...(hasSlides?[['slides','Diat']]:[]),['selfstudy','Itseopiskelumateriaali'],['stasks','Opiskelutehtävät'],...(d.ptasks&&d.ptasks.length?[['practice','Harjoittele']]:[]),['vocab','Sanasto'],['tltasks','Opettajavetoiset tehtävät'],['tmats','Opettajan materiaali']];
 
   const tabNames=tabs.map(t=>t[0]);
   document.getElementById('lesson-tabs').innerHTML=tabs.map(([tid,lbl])=>
@@ -36255,6 +36561,7 @@ function loadLesson(id,tab,pushState){
     `<div class="panel ${tid===ctab?'active':''}" data-tab="${tid}">${d[tid]||'<p>(Sisältöä ei ole saatavilla)</p>'}</div>`
   ).join('');
   enhancePanels();
+  initPractice(id);
 
   document.getElementById('lesson-footer').innerHTML=`
     <div class="nav-buttons">
