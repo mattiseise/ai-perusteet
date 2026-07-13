@@ -447,23 +447,25 @@ function twQuiz(body,task,api){
   let i=0,score=0;
   const prog=twEl('div','tw-prog'),q=twEl('div','tw-card'),opts=twEl('div','tw-opts tw-vert'),fb=twEl('div','tw-fb'),nxt=twEl('button','tw-next','Seuraava');
   body.append(prog,q,opts,fb,nxt);nxt.style.display='none';
+  let shOpts=[];
   function show(){
     fb.className='tw-fb';fb.innerHTML='';nxt.style.display='none';
     prog.textContent=(i+1)+' / '+task.items.length;
     q.innerHTML=task.items[i].q;opts.innerHTML='';
-    task.items[i].options.forEach(function(o,oi){
+    shOpts=twShuffle(task.items[i].options.slice());
+    shOpts.forEach(function(o){
       const b=twEl('button','tw-opt',o.text);
-      b.onclick=function(){api.mark();ans(oi,b)};
+      b.onclick=function(){api.mark();ans(o,b)};
       opts.appendChild(b);
     });
   }
-  function ans(oi,btn){
-    const it=task.items[i],ok=!!it.options[oi].correct;
+  function ans(o,btn){
+    const ok=!!o.correct;
     opts.querySelectorAll('button').forEach(function(b){b.disabled=true});
     btn.classList.add(ok?'ok':'no');
-    if(ok)score++;else it.options.forEach(function(o,x){if(o.correct)opts.children[x].classList.add('ok')});
+    if(ok)score++;else shOpts.forEach(function(so,x){if(so.correct)opts.children[x].classList.add('ok')});
     fb.className='tw-fb show '+(ok?'ok':'no');
-    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan.</strong> ')+(it.options[oi].explain||'');
+    fb.innerHTML=(ok?'<strong>Oikein.</strong> ':'<strong>Ei aivan.</strong> ')+(o.explain||'');
     nxt.style.display='inline-block';
     nxt.textContent=i<task.items.length-1?'Seuraava':'Näytä tulos';
     nxt.onclick=function(){i++;if(i<task.items.length)show();else fin()};
