@@ -1886,7 +1886,7 @@ function loadLesson(id,tab,pushState){{
   document.getElementById('home').style.display='none';
   document.getElementById('lesson').classList.add('active');
   const idx=ALLIDS.indexOf(id),num=idx+1,isA=d.blockType==='assessment';
-  trackEvent('lesson_open',{{lesson_id:id,lesson_num:num,lesson_title:d.title||id}});
+  trackEvent('lesson_open',{{lesson_id:id,lesson_num:num,lesson_title:d.shortTitle||id}});
   if(pushState!==false){{
     const hash=(ctab==='selfstudy'||ctab==='slides')?'#'+id:'#'+id+'/'+ctab;
     history.pushState(null,'',hash);
