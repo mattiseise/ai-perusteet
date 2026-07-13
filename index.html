@@ -8,6 +8,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google Analytics 4 (G-4ZLJF4THGV): latautuu vain suostumuksella (basic consent mode) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var GA_ID='G-4ZLJF4THGV';
+function loadGA(){if(window.__gaLoaded)return;window.__gaLoaded=true;
+gtag('consent','default',{'analytics_storage':'granted','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});
+gtag('js',new Date());gtag('config',GA_ID);
+var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);}
+function trackEvent(n,p){if(window.__gaLoaded&&typeof gtag==='function')gtag('event',n,p||{});}
+function consentChoice(v){try{localStorage.setItem('bcai-consent',v)}catch(e){}var b=document.getElementById('consent-banner');if(b)b.remove();if(v==='granted')loadGA();}
+document.addEventListener('DOMContentLoaded',function(){var c=null;try{c=localStorage.getItem('bcai-consent')}catch(e){}
+if(c==='granted'){loadGA();}else if(c!=='denied'){var b=document.getElementById('consent-banner');if(b)b.style.display='flex';}});
+</script>
+<style>
+#consent-banner{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;margin:0 auto;max-width:680px;background:#FFFFFF;border:1px solid #D8DEEC;border-radius:14px;box-shadow:0 8px 30px rgba(27,35,54,.18);padding:14px 18px;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#3A4253}
+#consent-banner .consent-actions{display:flex;gap:8px;flex-shrink:0}
+#consent-banner button{border-radius:9px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+#consent-banner .consent-accept{background:#008799;border:1px solid #008799;color:#fff}
+#consent-banner .consent-decline{background:#fff;border:1px solid #C2CAD9;color:#3A4253}
+</style>
 <style>
 
 :root{
@@ -36154,7 +36174,7 @@ function loadBrief(ospId,pushState){
 function getDone(){try{return JSON.parse(localStorage.getItem('bcai-new')||'[]')}catch{return[]}}
 function setDone(a){try{localStorage.setItem('bcai-new',JSON.stringify(a))}catch{}}
 function isDone(id){return getDone().includes(id)}
-function toggleDone(id){const a=getDone(),i=a.indexOf(id);if(i>=0)a.splice(i,1);else a.push(id);setDone(a);updProg();updCards();updDoneBtn(id);}
+function toggleDone(id){const a=getDone(),i=a.indexOf(id);if(i>=0)a.splice(i,1);else{a.push(id);trackEvent('lesson_complete',{lesson_id:id,lesson_num:ALLIDS.indexOf(id)+1});}setDone(a);updProg();updCards();updDoneBtn(id);}
 function updDoneBtn(id){const btn=document.querySelector('.done-btn');if(!btn)return;const d=isDone(id);btn.classList.toggle('marked',d);btn.textContent=d?'✓ Suoritettu':'Merkitse suoritetuksi';}
 
 function updProg(){
@@ -36203,6 +36223,7 @@ function loadLesson(id,tab,pushState){
   document.getElementById('home').style.display='none';
   document.getElementById('lesson').classList.add('active');
   const idx=ALLIDS.indexOf(id),num=idx+1,isA=d.blockType==='assessment';
+  trackEvent('lesson_open',{lesson_id:id,lesson_num:num,lesson_title:d.title||id});
   if(pushState!==false){
     const hash=(ctab==='selfstudy'||ctab==='slides')?'#'+id:'#'+id+'/'+ctab;
     history.pushState(null,'',hash);
@@ -36323,6 +36344,14 @@ routeFromHash(false);
 </script>
 
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+
+<div id="consent-banner" role="dialog" aria-live="polite">
+  <span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span>
+  <div class="consent-actions">
+    <button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button>
+    <button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button>
+  </div>
+</div>
 
 </body>
 </html>
