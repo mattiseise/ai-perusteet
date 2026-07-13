@@ -366,6 +366,22 @@ PRACTICE_CSS = """
 .tw-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #E3E7F0;padding-top:12px;margin-top:4px}
 .tw-score{font-family:var(--font-mono,ui-monospace,monospace);font-size:13px;color:#3A4253}
 @media(max-width:640px){.tw-match{grid-template-columns:1fr}}
+.tw-spottext{background:#F7F8FC;border:1px solid #E3E7F0;border-radius:10px;padding:14px 16px;line-height:2;margin-bottom:12px}
+.tw-seg{display:inline;background:transparent;border:none;border-bottom:2px dotted #C2CAD9;border-radius:0;padding:2px 1px;font:inherit;font-size:15px;color:#1B2336;cursor:pointer;text-align:left}
+.tw-seg:hover:not(:disabled){background:#EEF7F8}
+.tw-seg.sel{background:#E5F6F7;border-bottom:2px solid #008799}
+.tw-seg.ok{background:#F0F9F4;border-bottom:2px solid #2F9E69}
+.tw-seg.miss{background:#FDF2F0;border-bottom:2px solid #C0392B}
+.tw-seg.fa{background:#FFFBEC;border-bottom:2px solid #C79100}
+.tw-seg:disabled{cursor:default}
+.tw-notes{margin:8px 0 0;padding-left:20px}
+.tw-notes li{margin-bottom:6px}
+.tw-ta{width:100%;box-sizing:border-box;border:1.5px solid #C2CAD9;border-radius:10px;padding:12px 14px;font:inherit;font-size:15px;line-height:1.6;color:#1B2336;margin-bottom:8px;resize:vertical}
+.tw-ta:focus{outline:none;border-color:#008799}
+.tw-checkwrap{margin-top:10px}
+.tw-check{display:block;margin:8px 0;cursor:pointer}
+.tw-check input{margin-right:8px}
+.tw-fb .tw-next{margin-top:10px}
 """
 
 PRACTICE_JS = """
@@ -385,7 +401,7 @@ function initPractice(lid){
 }
 function renderTask(w,task,lid,ti){
   w.innerHTML='';
-  const typeNames={quiz:'Monivalinta',classify:'Luokittelu',order:'Järjestäminen',match:'Yhdistä parit',scenario:'Skenaario'};
+  const typeNames={quiz:'Monivalinta',classify:'Luokittelu',order:'Järjestäminen',match:'Yhdistä parit',scenario:'Skenaario',spot:'Etsi kohdat',reflect:'Omin sanoin'};
   const head=twEl('div','tw-head');
   head.appendChild(twEl('div','tw-type',typeNames[task.type]||'Tehtävä'));
   head.appendChild(twEl('h3',null,task.title||''));
@@ -407,7 +423,7 @@ function renderTask(w,task,lid,ti){
       f.appendChild(rb);w.appendChild(f);
     }
   };
-  const renderers={quiz:twQuiz,classify:twClassify,order:twOrder,match:twMatch,scenario:twScenario};
+  const renderers={quiz:twQuiz,classify:twClassify,order:twOrder,match:twMatch,scenario:twScenario,spot:twSpot,reflect:twReflect};
   if(renderers[task.type])renderers[task.type](body,task,api);
 }
 function twClassify(body,task,api){
@@ -570,6 +586,64 @@ function twScenario(body,task,api){
   }
   function renderTaskRestart(){go(task.start)}
   go(task.start);
+}
+function twSpot(body,task,api){
+  const info=twEl('div','tw-prog','Napauta epäilyttävät kohdat — valinta korostuu. Tarkista lopuksi.');
+  const txt=twEl('div','tw-spottext'),fb=twEl('div','tw-fb'),chk=twEl('button','tw-next','Tarkista');
+  body.append(info,txt,fb,chk);
+  const segs=task.segments.map(function(sg){
+    const b=twEl('button','tw-seg',sg.text);
+    b.onclick=function(){api.mark();b.classList.toggle('sel')};
+    txt.appendChild(b);txt.appendChild(document.createTextNode(' '));
+    return{sg:sg,b:b};
+  });
+  chk.onclick=function(){
+    let hits=0,misses=0,fas=0;const notes=[];
+    segs.forEach(function(o){
+      const sel=o.b.classList.contains('sel');o.b.disabled=true;o.b.classList.remove('sel');
+      if(o.sg.flag&&sel){hits++;o.b.classList.add('ok');notes.push('<li><strong>Löysit:</strong> '+(o.sg.explain||'')+'</li>');}
+      else if(o.sg.flag&&!sel){misses++;o.b.classList.add('miss');notes.push('<li><strong>Jäi huomaamatta:</strong> '+(o.sg.explain||'')+'</li>');}
+      else if(!o.sg.flag&&sel){fas++;o.b.classList.add('fa');notes.push('<li><strong>Turha epäily:</strong> '+(o.sg.explain||'Tämä kohta oli kunnossa.')+'</li>');}
+    });
+    chk.remove();info.remove();
+    const max=segs.filter(function(o){return o.sg.flag}).length;
+    fb.className='tw-fb show '+(hits===max&&fas===0?'ok':(hits>0?'mid':'no'));
+    fb.innerHTML='<strong>'+hits+' / '+max+' löydetty'+(fas?', '+fas+' turhaa epäilyä':'')+'.</strong><ul class="tw-notes">'+notes.join('')+'</ul>'+(task.summary?('<div>'+task.summary+'</div>'):'');
+    api.done(hits,max);
+  };
+}
+function twReflect(body,task,api){
+  const KEY='bcai-reflect';
+  function rGet(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return{}}}
+  function rSet(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  const rid=(cid||'')+'/'+(task.title||'');
+  const minc=task.min_chars||60;
+  const p=twEl('div','tw-card',task.prompt||'');
+  const ta=twEl('textarea','tw-ta');ta.rows=5;ta.placeholder='Kirjoita tähän omin sanoin...';
+  ta.value=(rGet()[rid]||'');
+  const cnt=twEl('div','tw-prog'),rev=twEl('button','tw-next','Näytä asiantuntijan näkökulma'),fb=twEl('div','tw-fb');
+  body.append(p,ta,cnt,rev,fb);
+  function upd(){const n=ta.value.trim().length;cnt.textContent=n+' / '+minc+' merkkiä';rev.disabled=n<minc;}
+  ta.oninput=function(){api.mark();const o=rGet();o[rid]=ta.value;rSet(o);upd();};
+  upd();
+  rev.onclick=function(){
+    rev.remove();ta.readOnly=true;
+    fb.className='tw-fb show';
+    let h='<strong>Asiantuntijan näkökulma:</strong><br>'+(task.expert||'');
+    if(task.checklist&&task.checklist.length){
+      h+='<div class="tw-checkwrap"><strong>Vertaa omaan vastaukseesi:</strong>';
+      task.checklist.forEach(function(c,ci){h+='<label class="tw-check"><input type="checkbox" data-ci="'+ci+'"> '+c+'</label>'});
+      h+='</div>';
+    }
+    fb.innerHTML=h;
+    const fin=twEl('button','tw-next','Valmis');
+    fb.appendChild(fin);
+    fin.onclick=function(){
+      const n=fb.querySelectorAll('input:checked').length;
+      fin.remove();fb.querySelectorAll('input').forEach(function(x){x.disabled=true});
+      api.done(n,(task.checklist||[]).length||null);
+    };
+  };
 }
 """
 
