@@ -122,6 +122,7 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
 <title>{title_a}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
@@ -384,11 +385,15 @@ def build_index_page():
     made_note = (
         '<div class="made-note">'
         '<div class="made-note-kn">Miten tämä kurssi on tehty</div>'
-        '<p>Koko kurssi on tuotettu tekoälyllä. Sisältö on rakennettu Claude-kielimallilla '
-        'monivaiheisella agenttiketjulla, jossa jokainen oppitunti kulki läpi suunnittelun, '
-        'rakentamisen, pedagogisen tarkistuksen ja suomen kielenhuollon. Ihminen — kurssin '
-        'opettaja — ohjasi prosessia ja hyväksyi jokaisen tunnin tuloksen. Myös tämä sivusto '
-        'on tekoälyn rakentama.</p>'
+        '<p>Koko kurssi on tuotettu tekoälyn avulla. Ensisijaisena kielimallina on käytetty '
+        'Clauden eri malleja, mutta työn aikana on hyödynnetty myös ChatGPT:tä sekä avoimia '
+        'kielimalleja.</p>'
+        '<p>Claude Coworkin ja Hermes-agenttijärjestelmän muodostama agenttiputki käsitteli '
+        'jokaisen oppitunnin monivaiheisesti. Se suunnitteli oppitunnin, tuotti sisällön, '
+        'tarkisti sen pedagogisen viitekehyksen näkökulmasta ja teki suomen kielenhuollon.</p>'
+        '<p>Kurssin tekijä vastasi kokonaisuuden suunnittelusta, ohjasi agenttiprosessia, '
+        'teki tarvittavat muutokset ja hyväksyi jokaisen oppitunnin ennen sen julkaisemista.</p>'
+        '<p>Myös tämä verkkosivusto on rakennettu tekoälyn avulla.</p>'
         '</div>'
     )
     lic_footer = (
