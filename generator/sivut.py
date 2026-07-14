@@ -555,12 +555,42 @@ def build_opettaja_index():
     guide_path = N.os.path.join(N.SISALTO, 'opettaja', 'kurssiopas.md')
     if _os.path.exists(guide_path) and S.read_file(guide_path).strip():
         content = S.to_html(S.filter_variants(S.read_file(guide_path), 'opettaja', source='opettaja/kurssiopas.md'))
+
+        # Kurssioppaan jälkeen: opettajan tuntimateriaalit moduuleittain.
+        mat_groups = []
+        for osp in N.OSP_BLOCKS:
+            rows = []
+            for lid, title, btype, kansio in osp['lessons']:
+                num = N.ALL_IDS.index(lid) + 1
+                star = '★' if btype == 'assessment' else num
+                label = f'Oppitunti {num}: {title}'
+                rows.append(
+                    f'<a class="ll-row" href="/opettaja/tunti-{kansio}/" style="--osp-color:{osp["color"]}">'
+                    f'<span class="ll-num">{star}</span>'
+                    f'<span class="ll-title">{label}</span></a>'
+                )
+            mat_groups.append(
+                f'<div class="ll-group-title">{osp["ikoni_kn"]} · {osp["title"]} — {osp["subtitle"]}</div>'
+                f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
+            )
+        materials = (
+            '<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
+            'Opettajan materiaalit tunneittain</h2>'
+            '<p>Kunkin tunnin opettajan tuntisivu sisältää tuntisuunnitelman, '
+            'väärinkäsityslistat ja opettajavetoiset tehtävät.</p>'
+            f'{"".join(mat_groups)}'
+            '<a class="final-cta" href="/opettaja/arviointi/">'
+            '<span class="fc-star">★</span><span class="fc-txt"><b>Arviointi</b>'
+            '<span>Lopputöiden arviointiohjeet koottuna.</span></span></a>'
+        )
+
         body = (
             '<section class="page-hero"><div class="page-hero-inner">'
             '<div class="eyebrow">Opettajan opas</div>'
             '<h1>Kurssiopas</h1>'
             '</div></section>'
-            f'<div class="page-body"><div class="reading panel active">{content}</div></div>'
+            f'<div class="page-body"><div class="reading panel active">{content}</div>'
+            f'{materials}</div>'
         )
         return page_shell('Opettajan opas — AI · Perusteet',
                           'Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.',

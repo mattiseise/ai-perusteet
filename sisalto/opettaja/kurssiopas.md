@@ -109,13 +109,13 @@ Arviointitunnit **18** ja **27** ovat kummankin moduulin summatiiviset arvioinni
 
 **Harjoittele-tehtävät eivät ole arvioitavia.** Ne ovat opiskelijan itseopiskelua ja itsetarkistusta: palaute tulee sivulta itseltään, eikä tuloksia kerätä arviointia varten. Käytä niitä oppimisen tukena, älä arvosanan perusteena.
 
-## Materiaalin vienti Itslearningiin
+## Materiaalin vienti oppimisympäristöön
 
-Jos ajat kurssia oppilaitoksen Itslearning-ympäristössä, käytännön malli on suoraviivainen: **jaa luokkalinkit resursseina tai suunnitelmina.** Jokaiselle tunnille on oma luokkaversion osoite muotoa `/luokka/tunti-NN/`, ja voit liittää nämä linkit Itslearning-kurssisi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät oikeaan näkymään suoraan kurssialustalta, etkä jaa vahingossa opettajan materiaalia.
+Jos ajat kurssia oppilaitoksen oppimisympäristössä (esimerkiksi Moodle, Itslearning tai Google Classroom), käytännön malli on suoraviivainen: **jaa luokkalinkit resursseina tai suunnitelmina.** Jokaiselle tunnille on oma luokkaversion osoite muotoa `/luokka/tunti-NN/`, ja voit liittää nämä linkit oppimisympäristösi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät oikeaan näkymään suoraan kurssialustalta, etkä jaa vahingossa opettajan materiaalia.
 
-**Lopputyöpalautukset** hoituvat Itslearningin omilla palautuskansioilla: opiskelijat palauttavat lopputyönsä ja niiden liitteet Itslearningiin, ja arvioit ne arviointiohjeiden kriteereillä. Luokkaversion lopputyösivut ohjeistavat palautuksen Itslearningiin ja näyttävät pisteytyksen; verkkoversio (`/kurssi/`) ei sisällä palautusta lainkaan, joten pidä opiskelijat luokkaversiossa, kun kurssi ajetaan oppilaitoksessa.
+**Lopputyöpalautukset** hoituvat oppimisympäristön omilla palautuskansioilla: opiskelijat palauttavat lopputyönsä ja niiden liitteet oppimisympäristöön, ja arvioit ne arviointiohjeiden kriteereillä. Luokkaversion lopputyösivut ohjeistavat palautuksen oppimisympäristöön ja näyttävät pisteytyksen; verkkoversio (`/kurssi/`) ei sisällä palautusta lainkaan, joten pidä opiskelijat luokkaversiossa, kun kurssi ajetaan oppilaitoksessa.
 
-Tämä opas pysyy linkkien jakamisen tasolla — noudata oman Itslearning-ympäristösi vakiintuneita käytäntöjä resurssien ja palautusten luomisessa.
+Tämä opas pysyy linkkien jakamisen tasolla — noudata oman oppimisympäristösi vakiintuneita käytäntöjä resurssien ja palautusten luomisessa.
 
 ## Diat ja lataamo
 
@@ -123,7 +123,7 @@ Jokaisen tunnin **diat toimivat suoraan opettajan tuntisivulla** esitystilassa: 
 
 Jos tarvitset dioista muokattavan version omaan esitysohjelmaasi, kurssista on saatavilla myös **pptx-versiot** jokaisesta tunnista.
 
-[TODO: pptx-lataamon linkki — Matti täydentää]
+Lataa pptx-versiot lataamosta: [Diat (pptx) — Google Drive](https://drive.google.com/drive/folders/1gYGAWhbWXV0ZW4lyJiqnsPAm7n1QGjo_?usp=sharing)
 
 ## Lisenssi ja muokkaaminen
 

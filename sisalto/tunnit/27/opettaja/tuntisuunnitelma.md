@@ -226,11 +226,11 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 | Kriteeri | Pisteet (yht. 100 p) | Mitä se tarkoittaa? |
 | --- | --- | --- |
-| **Toiminnallisuus (toimiva työnkulku)** | 25 p | Tekeekö agentti sen, mitä opiskelija lupasi? Toimiiko se ilman kriittisiä virheitä? |
+| **Toimiva n8n-työnkulku** | 25 p | Tekeekö agentti sen, mitä opiskelija lupasi? Toimiiko se ilman kriittisiä virheitä? |
+| **Turvallisuus (turvakerros, lokitus, riskien tunnistaminen)** | 20 p | Onko turvakerros paikallaan, lokitetaanko toiminta ja tunnistaako opiskelija projektin riskit? |
 | **Dokumentaatio** | 20 p | Voidaanko projektia ymmärtää ilman opiskelijan suullista selitystä? Ovatko README, ARCHITECTURE ja SAFETY mukana? |
-| **Testaaminen** | 20 p | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
-| **Demo ja itsearviointi** | 20 p | Osaako opiskelija esitellä projektin selkeästi ja perustella valintansa? |
-| **Turvallisuus ja kriittinen ajattelu** | 15 p | Tunnistaako opiskelija agentin kuusi komponenttia, projektin heikkoudet ja mahdolliset parannuskohteet? |
+| **Testaus** | 20 p | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
+| **Itsearviointi ja demo** | 15 p | Osaako opiskelija esitellä projektin selkeästi, arvioida omaa työtään ja perustella valintansa? |
 
 ---
 

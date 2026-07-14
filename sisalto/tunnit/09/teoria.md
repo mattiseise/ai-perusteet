@@ -90,9 +90,17 @@ Voit esimerkiksi pyytää: ”Anna kolme erilaista tapaa aloittaa lausunto: yksi
 
 Tekoäly voi hallusinoida. Erityisesti se voi keksiä lakipykäliä, sääntelyn yksityiskohtia ja vuosilukuja. Jos lausuntosi väittää esimerkiksi, että ”GDPR:n artikla 17 kieltää tämän”, tarkista artiklan sisältö itse. Asiantuntija ei lähetä tekstiä, jota hän ei ole tarkistanut.
 
+::: luokka
 ## Tarkistuslista ennen palautusta
 
 Käy nämä kohdat läpi ennen kuin palautat tehtävän:
+:::
+
+::: verkko
+## Tarkistuslista ennen kuin työ on valmis
+
+Käy nämä kohdat läpi ennen kuin toteat työsi valmiiksi:
+:::
 
 - ☐ Lausunto on 750–1000 sanaa.
 - ☐ Kaikki neljä osaa on käsitelty: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja kuka kantaa vastuun.

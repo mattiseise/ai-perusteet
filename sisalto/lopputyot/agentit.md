@@ -102,7 +102,7 @@ Missä kohdissa ihmisen täytyy hyväksyä, millainen hyväksyntäportti on, mit
 ## Lopputuotoksen vaatimukset
 
 ::: luokka
-Palauta Itslearningiin yhtenä pakettina:
+Palauta oppimisympäristöön (esimerkiksi Moodle, Itslearning tai Google Classroom) yhtenä pakettina:
 :::
 
 ::: verkko

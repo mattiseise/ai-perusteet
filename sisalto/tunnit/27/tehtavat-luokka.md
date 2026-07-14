@@ -131,7 +131,7 @@ Kokoa muistiinpanoihisi täytetty taulukko sekä kolme omaa havaintoa ja yksi jo
 
 ## Lopputyön palautus
 
-Palauta Itslearningiin yhtenä pakettina:
+Palauta oppimisympäristöön (esimerkiksi Moodle, Itslearning tai Google Classroom) yhtenä pakettina:
 
 - Linkki n8n-työnkulkuusi tai vientitiedosto (JSON)
 - Koottu suunnitelma (viisi pohjapiirrosta + tarkistettu kokonaisuus)
