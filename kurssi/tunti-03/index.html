@@ -18,7 +18,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 3/27</span></div><div class="lesson-title">Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-03/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-03/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Miten kone kirjoittaa? — generatiivisen tekoälyn mekaniikka</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 3/27</span></div><div class="lesson-title">Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-03/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-03/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Miten kone kirjoittaa? — generatiivisen tekoälyn mekaniikka</h1>
 <h2>Johdanto</h2>
 <p>Kun käytät ChatGPT:tä, Copilotia tai muuta kielimalliin perustuvaa tekoälyä, vastaus voi näyttää hyvin älykkäältä. Mutta mitä taustalla oikeasti tapahtuu? Taustalla ei ole ajattelua tai ymmärtämistä ihmisen tavoin, vaan matemaattista ennustamista.</p>
 <p>Kielimalli on opetettu valtavalla määrällä tekstiä. Se ei ajattele kuten ihminen, vaan ennustaa, mikä sana, sanan osa tai ilmaus sopii seuraavaksi parhaiten. Kun ymmärrät tämän, ymmärrät paremmin sekä mallin vahvuudet että sen rajat.</p>
@@ -190,7 +190,61 @@
 <p>Numeerinen esitys sanasta tai tokenista, jota kielimalli käyttää sisäisesti. Jokainen sana on esitettävä numeroina, jotta malli voi prosessoida sitä matematiikan avulla.</p>
 <h2>Attention</h2>
 <p>Mekanismi kielimallin sisällä, joka päättää, mihin sanaan tai tokeniin keskittyä vastatessa. Se auttaa mallia näkemään yhteyksiä pitkissä teksteissä.</p>
-<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<hr /></div><div class="panel" data-tab="lopputyon-askel"><h1>Todistusaineisto 1 — Miten kone oikeasti tuottaa tekstiä</h1>
+<blockquote class="pause"><p>📌 <strong>Tämä on ensimmäinen kolmesta todistusaineistosta</strong>, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä <em>"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"</em> (oppitunti 9). Säilytä tämä huolellisesti.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
+<p>Ajat kolme nopeaa kokeilua tekoälyllä, käytät tekoälyä apunasi havaintojen analysointiin ja kirjoitat lyhyen analyysin siitä, mitä koneen "kirjoittaminen" oikeasti on. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut selittämään, <strong>miksi tekoäly voi olla varma ja silti väärässä</strong>.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaiheet</h2></div><div class="task-card-body">
+<h3>Vaihe 1 — Seuraavan sanan arvaus</h3>
+<p>Anna ChatGPT:lle tai Claudelle pätkä:</p>
+<blockquote class="pause"><p>"Koodi on kirjoitettu Pythonissa. Seuraava askel on…"</p>
+</blockquote>
+<p>Pyydä jatkamaan <strong>vain yhdellä sanalla</strong>. Toista sama kolme kertaa <em>uudessa keskustelussa</em>. Ota kuvakaappaukset tai kopioi vastaukset talteen.</p>
+<h3>Vaihe 2 — Sama kysymys, eri vastaus</h3>
+<p>Kysy malli kahdesti samaa asiaa uudessa keskustelussa:</p>
+<blockquote class="pause"><p>"Anna kolme nimeä uudelle kahvilalle Helsingin keskustassa."</p>
+</blockquote>
+<p>Vertaa vastauksia. Tallenna molemmat.</p>
+<h3>Vaihe 3 — Vakuuttava vai oikea?</h3>
+<p>Kysy mallilta yksi tarkka kysymys, jonka vastauksen voit verifioida. Esimerkkejä:</p>
+<ul>
+<li><em>"Kuka oli Suomen pääministeri vuonna 1987?"</em></li>
+<li><em>"Mikä on Pythonin <code>random.choice()</code> -funktion paluuarvo, kun lista on tyhjä?"</em></li>
+<li><em>"Kerro elokuvasta 'Sininen Vuori' (1987)."</em> (Tämä elokuva ei ole olemassa.)</li>
+</ul>
+<p>Tarkista vastaus virallisesta lähteestä. Tallenna sekä mallin vastaus että oikea vastaus.</p>
+<h3>Vaihe 4 — Käytä tekoälyä apuna analyysissä</h3>
+<p>Avaa uusi keskustelu ja anna tekoälylle <strong>roolin sekä havaintosi</strong>. Esimerkkiprompti:</p>
+<pre><code>Toimit minulle sparrauskumppanina. Olen opiskelija ja teen havaintoja
+siitä, miten kielimalli tuottaa tekstiä. Tässä havaintoni:
+
+[liitä vaiheiden 1–3 tulokset tähän]
+
+Auta minua jäsentämään, mitä nämä havainnot kertovat seuraavista
+käsitteistä: token, next-token prediction, epädeterminismi, lämpötila,
+hallusinaatio. Älä kirjoita lopullista vastausta puolestani — esitä
+kysymyksiä ja anna jäsennysehdotuksia, joiden pohjalta voin kirjoittaa
+oman analyysini.
+</code></pre>
+<p>Tämä ei ole oikotie — se on harjoitus siitä, miten tekoälyä käytetään <em>työparina</em>, ei kirjoituspalveluna.</p>
+<h3>Vaihe 5 — Kirjoita analyysisi (tämä on todistusaineistosi)</h3>
+<p>Kirjoita noin <strong>300 sanaa omin sanoin</strong>. Vastaa kolmeen kysymykseen:</p>
+<ol>
+<li><strong>Miten kone kirjoittaa?</strong> Selitä, mitä havaitsit vaiheissa 1–2: miksi sama pyyntö tuottaa eri vastauksen, ja mitä tämä kertoo siitä, miten malli oikeasti toimii. Käytä käsitteitä <em>token</em>, <em>next-token prediction</em> ja <em>lämpötila / epädeterminismi</em>.</li>
+<li><strong>Mitä tarkoittaa, että malli "ennustaa, ei tiedä"?</strong> Selitä vaiheen 3 perusteella: oliko vastaus oikein vai väärin, ja miltä se <em>kuulosti</em>. Mitä tämä kertoo luotettavuudesta?</li>
+<li><strong>Mihin tuomaripöydässä?</strong> Yhdellä lauseella: missä tilanteessa joku voisi joutua ongelmiin juuri näistä syistä?</li>
+</ol>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat itsellesi?</h2></div><div class="task-card-body">
+<p><strong>Et palauta tätä minnekään. Tallenna se silti huolellisesti — tarvitset tätä lopputyössä (osa 1 kolmesta todistusaineistosta).</strong></p>
+<p>Tästä pitäisi saada kuitenkin yksi tiedosto (Word, PDF tai Markdown), jossa on:</p>
+<ul>
+<li>Kuvakaappaukset tai kopiot kokeiluista (vaiheet 1–3)</li>
+<li>Analyysisi (vaihe 5, noin 300 sanaa)</li>
+</ul>
+<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Tuomaripöydässä viittaat tähän todistusaineistoon suoraan, kun selität, <em>miksi</em> skenaariosi tekoäly tuotti väärän vastauksen. Et toista käsitteitä — sovellat niitä.</p>
+</blockquote>
+<p><strong>1 / 3 todistusaineistoa kerätty</strong></p></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l3g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>

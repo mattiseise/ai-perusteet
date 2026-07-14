@@ -19,6 +19,9 @@ lohkot:
   sanasto:          sanasto.md
   harjoittele:      harjoittele.md
   tehtavat-luokka:  tehtavat-luokka.md
+  # Lopputyön askel = tehtavat-luokka.md:stä poimittu osatuotos-osio (ks. tuntien
+  # lopputyon_askel-kenttä). Nostetaan verkkokurssinäkymään omaksi välilehdeksi.
+  lopputyon-askel:  tehtavat-luokka.md
   diat:             diat.html
   tuntisuunnitelma: opettaja/tuntisuunnitelma.md
   tehtavat-ohjatut: opettaja/tehtavat-ohjatut.md
@@ -28,7 +31,7 @@ lohkot:
 nakymat:
   kurssi:
     polku: /kurssi/
-    lohkot: [teoria, harjoittele, sanasto, diat]
+    lohkot: [teoria, harjoittele, sanasto, lopputyon-askel, diat]
     kesto: lukuaika          # generaattori laskee sanamäärästä
     lopputyo_variantti: verkko
   luokka:
@@ -55,11 +58,11 @@ moduulit:
     tunnit:
       - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching }
       - { id: lesson-02, kansio: "02", otsikko: "Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa", tyyppi: teaching }
-      - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching }
+      - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching }
-      - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching }
+      - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-06, kansio: "06", otsikko: "Kuvat, ääni ja teksti — kun sanat eivät riitä", tyyppi: teaching }
-      - { id: lesson-07, kansio: "07", otsikko: "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", tyyppi: teaching }
+      - { id: lesson-07, kansio: "07", otsikko: "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-08, kansio: "08", otsikko: "Kenen teksti se on? — etiikka, oikeudet ja vastuu", tyyppi: teaching }
       - { id: lesson-09, kansio: "09", otsikko: "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä", tyyppi: teaching }
   - id: osp2
@@ -72,10 +75,10 @@ moduulit:
     tunnit:
       - { id: lesson-10, kansio: "10", otsikko: "Kilpailuta tekoälyt — mikä työkalu mihinkin?", tyyppi: teaching }
       - { id: lesson-11, kansio: "11", otsikko: "Muita tekoälymalleja — kuin ChatGPT ja Claude", tyyppi: teaching }
-      - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching }
+      - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-13, kansio: "13", otsikko: "AI työparina — pohja, muokkaus ja tarkistus", tyyppi: teaching }
-      - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching }
-      - { id: lesson-15, kansio: "15", otsikko: "Oma botti II — tietopohja, rajaukset ja testaus", tyyppi: teaching }
+      - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching, lopputyon_askel: "*" }
+      - { id: lesson-15, kansio: "15", otsikko: "Oma botti II — tietopohja, rajaukset ja testaus", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-16, kansio: "16", otsikko: "Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi", tyyppi: teaching }
       - { id: lesson-17, kansio: "17", otsikko: "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", tyyppi: teaching }
       - { id: lesson-18, kansio: "18", otsikko: "Projektidokumenttibotti — viimeistele ja esittele", tyyppi: assessment }
@@ -87,12 +90,12 @@ moduulit:
     ikoni: "🤖"
     lopputyo: lopputyot/agentit.md
     tunnit:
-      - { id: lesson-19, kansio: "19", otsikko: "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", tyyppi: teaching }
+      - { id: lesson-19, kansio: "19", otsikko: "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", tyyppi: teaching, lopputyon_askel: "Agentti: Ongelma" }
       - { id: lesson-20, kansio: "20", otsikko: "Automaatio vai autonomia? — milloin agentti kannattaa", tyyppi: teaching }
-      - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching }
+      - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching, lopputyon_askel: "Agentti: Muisti" }
       - { id: lesson-22, kansio: "22", otsikko: "Agentin työkalut — tiedostot, haku ja komennot", tyyppi: teaching }
-      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", tyyppi: teaching }
-      - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching }
-      - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching }
+      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", tyyppi: teaching, lopputyon_askel: "Agentti: Päättely" }
+      - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching, lopputyon_askel: "Agentti: Turva" }
+      - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching, lopputyon_askel: "Agentti: Ihminen" }
       - { id: lesson-26, kansio: "26", otsikko: "Kädet saveen — n8n-agenttipaja alkaa", tyyppi: teaching }
       - { id: lesson-27, kansio: "27", otsikko: "Viimeistele ja esittele — agenttisi on valmis", tyyppi: assessment }

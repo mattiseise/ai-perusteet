@@ -18,7 +18,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 7/27</span></div><div class="lesson-title">Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-07/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-07/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 7/27</span></div><div class="lesson-title">Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-07/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-07/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus</h1>
 <h2>Johdanto</h2>
 <p>Olet juuri antanut ChatGPT:lle saman kysymyksen kaksi kertaa. Huomaat kuitenkin jotain outoa: vastaukset ovat erilaiset. Ensimmäisellä kerralla sait selkeän ja hyvin jäsennellyn koodinpätkän. Toisella kerralla sama pyyntö tuotti lähes oikean koodin, mutta funktio kutsuikin API:a, jota ei ole olemassa. Mistä tämä johtuu? Eikö tekoälyn pitäisi olla <strong>deterministinen</strong>, kuten perinteinen ohjelma, joka tuottaa aina samalla syötteellä saman tuloksen?</p>
 <p>Vastaus on: ei. <strong>Generatiiviset kielimallit</strong> eivät ole samalla tavalla deterministisiä kuin perinteiset ohjelmat. Ne ovat <strong>todennäköisyyspohjaisia järjestelmiä</strong>, jotka toimivat eri tavalla kuin klassinen ohjelmointi. Tämän ymmärtäminen on tärkeää, kun työskentelet tekoälyn kanssa ammatillisesti.</p>
@@ -205,7 +205,65 @@
 <p>Käytäntö, jossa AI:n vastaukset testataan ja tarkistetaan vaiheittain, erityisesti tekniikassa. Esimerkiksi: aja koodi, katso tulokset, korjaa ongelmat.</p>
 <h2>Epäluotettavuuden merkit (hallucination indicators)</h2>
 <p>Vihjeet, jotka voivat viitata hallusinaatioon: liian näyttävä esitys, epätodennäköinen tieto, logiikan ristiriidat tai vastaus, joka tuntuu varomattomalta.</p>
-<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<hr /></div><div class="panel" data-tab="lopputyon-askel"><h1>Todistusaineisto 3 — Ammattilaisen verifiointikäytäntö</h1>
+<blockquote class="pause"><p>📌 <strong>Tämä on kolmas ja viimeinen todistusaineisto</strong>, jonka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä <em>"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"</em> (oppitunti 9). Säilytä tämä huolellisesti.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
+<p>Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä ammattilaisen tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan <strong>konkreettisia toimenpiteitä</strong>, joilla skenaarion ongelma olisi voitu estää.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaiheet</h2></div><div class="task-card-body">
+<h3>Vaihe 1 — Lavasta hallusinaatio</h3>
+<p>Kysy tekoälyltä <strong>kaksi spesifiä kysymystä</strong>, joihin oikea vastaus on tarkistettavissa. Tavoitteenasi on saada malli kompastumaan. Hyviä koukkuja:</p>
+<ul>
+<li>Kuvitteellinen elokuva, kirja tai henkilö: <em>"Kerro elokuvasta 'Sininen Vuori' (1987)."</em></li>
+<li>Keksityt lähdeviitteet: <em>"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."</em> — mallit keksivät usein uskottavia mutta olemattomia viitteitä.</li>
+<li>Sisäpiirikysymys organisaatiosta: <em>"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"</em></li>
+</ul>
+<p>Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.</p>
+<h3>Vaihe 2 — Diagnoosi</h3>
+<p>Kirjoita itsellesi muistiin lyhyesti (ei vielä lopulliseen tuotokseen):</p>
+<ul>
+<li>Mitä tunnistettavia merkkejä hallusinaatiosta oli?</li>
+<li>Oliko vastaus <em>liian</em> sujuva?</li>
+<li>Käyttikö malli varauksia ("on mahdollista että…") vai vastasiko se täydellä varmuudella?</li>
+<li>Esiintyikö "keksittyä yksityiskohtaa" — nimiä, lukuja, päivämääriä, jotka kuulostivat täsmällisiltä?</li>
+</ul>
+<h3>Vaihe 3 — Käytä tekoälyä apuna tarkistuslistan jäsentämisessä</h3>
+<p>Avaa uusi keskustelu ja anna tekoälylle <strong>roolin, havaintosi ja edellisten tuntien opit</strong>. Esimerkkiprompti:</p>
+<pre><code>Toimit minulle sparrauskumppanina. Olen IT-alan opiskelija ja
+rakennan ammattilaisen tarkistuslistaa tekoälyn käyttöön.
+
+Tässä mitä olen oppinut:
+- Tunti 3: Malli ennustaa todennäköisintä jatkoa, ei totuutta
+  (next-token prediction, epädeterminismi)
+- Tunti 5: Konteksti-ikkuna on rajallinen, vanhat ohjeet putoavat pois
+- Tunti 7 (juuri lavastamani hallusinaatio): [liitä havaintosi tähän]
+
+Auta minua jäsentämään tarkistuslista, joka kattaa: (A) mistä merkeistä
+tunnistan hallusinaation, (B) miksi malli tekee näin, (C) mitä teen
+ennen kuin luotan vastaukseen. Älä kirjoita listaa puolestani — esitä
+kysymyksiä ja anna jäsennysehdotuksia, joiden pohjalta voin tehdä oman
+listan. Pidä jäsennys konkreettisena ja toimittavissa olevana, ei
+akateemisena.
+</code></pre>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>työparina</em>, ei kirjoituspalveluna — ja samalla mahdollisuus huomata, jos tekoäly itse yrittää hallusinoida tarkistuslistallesi keksittyjä "parhaita käytäntöjä".</p>
+<h3>Vaihe 4 — Kirjoita tarkistuslista (tämä on todistusaineistosi)</h3>
+<p>Kirjoita ammattilaisen tarkistuslista, jota IT-ammattilainen voisi pitää näytöllä joka kerta käyttäessään tekoälyä. Listan tulee olla <strong>konkreettinen, lyhyt ja toimittavissa oleva</strong> — ei akateeminen essee.</p>
+<p><strong>A) Merkit, joista tunnistan hallusinaation</strong> (3–5 bulletia)</p>
+<p><em>Esim. "Vastaus on epäilyttävän sujuva ilman varauksia", "Lähdeviittaukset näyttävät keksityiltä", "Yksityiskohdat ovat liian täsmällisiä ollakseen tosia"</em></p>
+<p><strong>B) Miksi malli tekee näin</strong> (2–3 lausetta omin sanoin)</p>
+<p><em>Käytä tunnin 3 käsitteitä: next-token prediction, epädeterminismi. Selitä, miksi vakuuttavuus ei ole sama kuin oikeellisuus. Sivua myös tunnin 5 muistirajat — joskus virhe johtuu siitä, että rajaus on unohtunut.</em></p>
+<p><strong>C) Mitä teen ennen kuin luotan vastaukseen</strong> (5–7 konkreettista askelta)</p>
+<p><em>Esim. "1. Tarkistan faktat virallisesta dokumentaatiosta. 2. Ajan koodin testissä ennen tuotantoa. 3. Pyydän mallia perustelemaan vastauksen ja kysyn lähteitä — ja tarkistan että lähteet ovat oikeasti olemassa."</em></p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat itsellesi?</h2></div><div class="task-card-body">
+<p><strong>Et palauta tätä minnekään — tallenna se silti huolellisesti lopputyötä varten (osa 3 kolmesta todistusaineistosta).</strong></p>
+<p>Tee kuitenkin tiedosto, jossa on:</p>
+<ul>
+<li>Lyhyt todiste hallusinaatiosta (vaihe 1: kysymys + mallin vastaus + oikea vastaus + lähdelinkki)</li>
+<li>Tarkistuslistasi (vaihe 4, noin 250–300 sanaa)</li>
+</ul>
+<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Tuomaripöydässä tarkistuslistasi on suorassa käytössä, kun joudut esittämään, mitä organisaation pitäisi tehdä toisin. Yhdessä todistusaineistojen 1 ja 2 kanssa sinulla on vahva perusta koko arvioitavalle tehtävälle — ymmärrät <em>mekaniikan</em>, <em>rajat</em> ja <em>ratkaisut</em>.</p>
+</blockquote>
+<p><strong>3 / 3 todistusaineistoa kerätty — valmis tuomaripöytään</strong></p></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l7g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l7g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>

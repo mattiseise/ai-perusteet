@@ -106,7 +106,8 @@ def build_llms():
         '## Kolme näkymää samaan sisältöön',
         '',
         f'- [Verkkokurssi]({D}/kurssi/) (`/kurssi/`) — itsenäinen opiskelu omaan tahtiin: '
-        'teoria, itsetarkistuvat harjoitukset, sanasto ja diat.',
+        'teoria, itsetarkistuvat harjoitukset, sanasto, diat ja lopputyön askeleet '
+        '(lopputyön osatuotostehtävät verkko-opiskelijalle kehystettyinä).',
         f'- [Luokkaversio]({D}/luokka/) (`/luokka/`) — oppituntien opiskelijamateriaali: '
         'teoria, luokkatehtävät, harjoittele, sanasto ja diat.',
         f'- [Opettajan opas]({D}/opettaja/) (`/opettaja/`) — kurssiopas, tuntisuunnitelmat, '

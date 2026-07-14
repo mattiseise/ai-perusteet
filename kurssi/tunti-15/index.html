@@ -18,7 +18,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 15/27</span></div><div class="lesson-title">Oma botti II — tietopohja, rajaukset ja testaus</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-15/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-15/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Oma botti II — tietopohja, rajaukset ja testaus</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 15/27</span></div><div class="lesson-title">Oma botti II — tietopohja, rajaukset ja testaus</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-15/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-15/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Oma botti II — tietopohja, rajaukset ja testaus</h1>
 <h2>Johdanto: miksi testaaminen on kriittistä?</h2>
 <p>Edellisessä oppitunnissa rakensit tai suunnittelit omaa bottia. Nyt kohtaat tärkeän tosiasian: botti, jota ei ole testattu, voi olla riskialtis. Se voi vastata kysymykseen väärin, antaa virheellistä tietoa tai toimia epäjohdonmukaisesti haastavissa tilanteissa. Ilman testaamista et voi tietää, toimiiko botti oikeasti.</p>
 <p><strong>Testaaminen</strong> ei ole valinnainen lisäosa, vaan se tekee botista hyödyllisen työkalun pelkän hauskan kokeilun sijaan.</p>
@@ -317,7 +317,157 @@
 <p>Asian ohjaaminen ihmiselle silloin, kun botti ei osaa tai saa hoitaa sitä.</p>
 <h2>Kuratointi</h2>
 <p>Sisällön valitsemista, järjestämistä ja esittämistä niin, että se palvelee tiettyä tarkoitusta tai kohderyhmää — esimerkiksi botin tietopohjan kokoaminen selkeäksi kokonaisuudeksi.</p>
-<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<hr /></div><div class="panel" data-tab="lopputyon-askel"><h1>Rakennuspalikka 3 — Tietopohjan kuratointi</h1>
+<p><strong>📌 Tämä on kolmas ja viimeinen rakennuspalikka.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat <em>oman apuri-bottisi</em> Microsoft Copilotiin. Säilytä tämä työ huolellisesti.</p>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
+<p>Kuratoit bottisi <strong>tietopohjan</strong> eli valitset 3–5 dokumenttia, joista botti saa oman aiheesi asiantuntemusta. Tietopohja erottaa oman bottisi yleisestä tekoälystä: yleinen tekoäly tietää monesta asiasta vähän, mutta sinun bottisi keskittyy juuri sinun valitsemaasi aiheeseen.</p>
+<p><strong>Kuratointi</strong> ei tarkoita sitä, että keräät mahdollisimman paljon tiedostoja. Se tarkoittaa aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Hyvä tietopohja vastaa kysymykseen: <em>"Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?"</em></p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
+<p>Tehtävän jälkeen sinulla on valmis, perusteltu tietopohja bottiasi varten. Osaat:</p>
+<ul>
+<li>tunnistaa, mitä tietoa botti tarvitsee toimiakseen hyödyllisesti,</li>
+<li>valita lähdedokumentteja tarkoituksenmukaisesti,</li>
+<li>arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,</li>
+<li>karsia pois turhat tai päällekkäiset materiaalit,</li>
+<li>perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat?</h2></div><div class="task-card-body">
+<p>Tallenna lopuksi yksi dokumentti tai kansio, jossa on:</p>
+<ul>
+<li>lista bottisi tärkeimmistä tietotarpeista,</li>
+<li>3–5 valittua lähdedokumenttia,</li>
+<li>taulukko, jossa perustellaan jokaisen dokumentin rooli tietopohjassa,</li>
+<li>lyhyt arvio siitä, mitä tietopohja kattaa hyvin ja mitä se ei vielä kata,</li>
+<li>varsinaiset dokumentit tallennettuna samaan kansioon myöhempää Copilot-käyttöä varten.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tee näin</h2></div><div class="task-card-body">
+<h3>Vaihe 1 — Palauta mieleen bottisi tarkoitus</h3>
+<p>Avaa <strong>rakennuspalikka 2</strong> eli botin määrittelydokumentti. Katso siitä erityisesti seuraavat kohdat:</p>
+<ul>
+<li><strong>Kohderyhmä:</strong> kenelle botti on tarkoitettu?</li>
+<li><strong>Tarkoitus:</strong> mitä botti auttaa käyttäjää tekemään?</li>
+<li><strong>Työnkulku:</strong> missä järjestyksessä botti ohjaa käyttäjää?</li>
+<li><strong>Rajat:</strong> mitä botti ei saa tehdä?</li>
+</ul>
+<p>Tämä vaihe on tärkeä, koska tietopohjan pitää tukea juuri tämän botin tarkoitusta. Älä kerää sattumanvaraisia dokumentteja vain siksi, että ne liittyvät aiheeseen yleisesti. Valitse materiaalia, joka auttaa bottia auttamaan käyttäjää <strong>valitsemassasi tehtävässä</strong>.</p>
+<h3>Vaihe 2 — Listaa, mitä botin pitää tietää</h3>
+<p>Kirjoita 5–8 konkreettista <strong>tietotarvetta</strong>. Tietotarve tarkoittaa asiaa, joka botin pitää ymmärtää, jotta se osaa auttaa käyttäjää valitsemassasi tehtävässä.</p>
+<p>Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää käymään läpi keskeiset käsitteet, harjoituskysymykset ja palautteen, sen tietopohjasta pitäisi löytyä materiaalia juuri näihin aiheisiin.</p>
+<table>
+<thead>
+<tr>
+<th>Aihe</th>
+<th>Esimerkkejä tietotarpeista</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Opiskelu</strong></td>
+<td>Aiheen keskeiset käsitteet, tyypilliset väärinkäsitykset, hyvät harjoituskysymykset, esimerkkivastaukset ja kertaamisen vinkit.</td>
+</tr>
+<tr>
+<td><strong>Harrastus tai kerho</strong></td>
+<td>Säännöt, aikataulut, yleisimmät kysymykset, jäsenten vinkit ja yhteystiedot.</td>
+</tr>
+<tr>
+<td><strong>Tuttu pieni palvelu</strong></td>
+<td>Aukioloajat, palvelut ja hinnat, usein kysytyt kysymykset, ohjeet ja yhteystiedot.</td>
+</tr>
+<tr>
+<td><strong>Pelit, musiikki tai sisältö</strong></td>
+<td>Lajityypin tunnusmerkit, ideointitekniikat, rakenteen mallit, esimerkit ja palautteen periaatteet.</td>
+</tr>
+<tr>
+<td><strong>Arjen apuri</strong></td>
+<td>Suunnittelun rakenne, hyvät käytännöt, yleiset sudenkuopat, esimerkkipohjat ja seurannan tavat.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mallipohja omalle listalle:</strong></p>
+<ol>
+<li>Botin pitää tietää, mitkä ovat aiheen keskeiset käsitteet.</li>
+<li>Botin pitää tietää, miten käyttäjän tehtävä jäsennetään selkeiksi vaiheiksi.</li>
+<li>Botin pitää tietää, millaisia kysymyksiä tästä aiheesta tyypillisesti esitetään.</li>
+<li>Botin pitää tietää, millaisia yleisiä virheitä tai sudenkuoppia aiheeseen liittyy.</li>
+<li>Botin pitää tietää, millainen hyvä lopputulos tai vastaus näyttää.</li>
+</ol>
+<h3>Vaihe 3 — Etsi ja valitse 3–5 dokumenttia</h3>
+<p>Etsi materiaalia, joka kattaa vaiheessa 2 listaamasi tietotarpeet. Valitse lopuksi <strong>3–5 dokumenttia</strong>. Laatu on tärkeämpää kuin määrä.</p>
+<p>Hyviä lähteitä voivat olla:</p>
+<ul>
+<li>kurssimateriaalit, kuten oppikirjat, luentodiat tai aiemmat tehtäväpohjat,</li>
+<li>aiheesi yleiset standardit ja ohjeistukset,</li>
+<li>mallipohjat tai esimerkkidokumentit aiheesi todellisista tilanteista,</li>
+<li>luotettavat alan blogit, dokumentaatiot tai viralliset ohjeet,</li>
+<li>Wikipedia-artikkelit vain yleisen rakenteen hahmottamiseen, ei tarkkojen yksityiskohtien päälähteeksi.</li>
+</ul>
+<p><strong>Tärkeää:</strong> Älä lataa kaikkea, mitä löydät. Liian suuri tai sekava tietopohja voi tehdä botin vastauksista epäselviä. Kolme hyvin valittua dokumenttia voi olla parempi kuin kaksikymmentä keskinkertaista.</p>
+<p>Arvioi jokaista dokumenttia seuraavien kysymysten avulla:</p>
+<ul>
+<li>Onko lähde luotettava?</li>
+<li>Onko dokumentti ajantasainen?</li>
+<li>Tukeeko se bottini työnkulkua?</li>
+<li>Auttaako se käyttäjää valitsemassasi tehtävässä?</li>
+<li>Onko dokumentissa konkreettinen rakenne, mallipohja tai tarkistuslista, jota botti voi hyödyntää?</li>
+<li>Sisältääkö dokumentti henkilötietoja, salassa pidettävää tietoa tai muuta aineistoa, jota ei saa ladata Copilotiin?</li>
+</ul>
+<h3>Vaihe 4 — Testaa tietopohjan kattavuus tekoälyn avulla</h3>
+<p>Avaa ChatGPT, Claude tai Copilot ja anna sille bottisi tietotarpeet sekä valitsemasi dokumentit. Tässä vaiheessa et vielä lataa dokumentteja Copilotiin, vaan arvioit, kattaako suunniteltu tietopohja oikeat asiat.</p>
+<p>Voit käyttää esimerkiksi seuraavaa promptia:</p>
+<blockquote class="pause"><p>"Toimit minulle sparrauskumppanina. Rakennan apuri-bottia, joka auttaa käyttäjää valitsemassani aiheessa. BOTTINI TARKOITUS: [kuvaa bottisi tarkoitus lyhyesti] TIETOTARPEET: [liitä vaiheessa 2 tekemäsi lista] VALITUT DOKUMENTIT: 1. [dokumentin nimi + lyhyt kuvaus] 2. [dokumentin nimi + lyhyt kuvaus] 3. [dokumentin nimi + lyhyt kuvaus] Auta minua arvioimaan tietopohjan kattavuus: Mitä tietotarpeita dokumentit eivät kata? Onko jokin dokumentti turha tai päällekkäinen toisen kanssa? Onko aiheessa jokin tyypillinen tieto, jota en ole vielä ottanut huomioon? Onko jokin dokumentti liian yleinen tai liian vaikea kohderyhmälleni? Näetkö tietosuoja- tai luottamuksellisuusriskin siinä, että jokin dokumentti ladattaisiin bottiin? Älä ehdota uusia dokumentteja suoraan minulle. Auta tunnistamaan aukot, jotta voin etsiä lisämateriaalia itse."</p>
+</blockquote>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>kattavuuden tarkistajana</em>. Tekoäly ei kerää tietopohjaa puolestasi, mutta se voi auttaa huomaamaan sokeita pisteitä.</p>
+<h3>Vaihe 5 — Viimeistele tietopohja</h3>
+<p>Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Voit esimerkiksi lisätä puuttuvan dokumentin, poistaa päällekkäisen dokumentin tai vaihtaa liian yleisen lähteen parempaan.</p>
+<p>Kokoa lopullinen tietopohja alla olevaan taulukkoon.</p>
+<table>
+<thead>
+<tr>
+<th>Dokumentti</th>
+<th>Lähde tai linkki</th>
+<th>Miksi tämä kuuluu tietopohjaan?</th>
+<th>Mitä tietotarvetta se tukee?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 18, kun lataat tietopohjan Copilotiin.</p>
+<p>Kirjoita lopuksi 2–3 lauseen arvio: <em>"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä minun pitää muistaa, kun lataan dokumentit bottiin?"</em></p>
+<blockquote class="pause"><p><strong>💡 Miksi tämä on tärkeää:</strong> Oppitunnilla 18 rakennettava botti tunnistetaan ammattimaiseksi juuri tietopohjan avulla. Yleinen tekoäly osaa puhua aiheesta yleisellä tasolla, mutta sinun bottisi tuntee oman aiheesi käytäntöjä, koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin ydin.</p>
+<p><strong>💡 Tarkista lopuksi:</strong> Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.</p>
+</blockquote>
+<p><strong>3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17</strong></p></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l15g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l15g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#863FC4"/>

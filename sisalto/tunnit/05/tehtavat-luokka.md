@@ -73,9 +73,16 @@ Kirjoita noin **300 sanaa omin sanoin**. Tapausesimerkissä on neljä osaa:
 3. **Seuraukset:** Mitä virheellinen vastaus voisi käytännössä aiheuttaa? Aikaa hukkaan? Turvallisuusriskin? Väärää tietoa asiakkaalle?
 4. **Miten ammattilainen estää tämän:** Ankkurointi, pilkkominen, dokumentointi — nimeä konkreettiset käytännöt.
 
+::: luokka
 ## Mitä palautat?
 
 **Et vieläkään mitään.**
+:::
+::: verkko
+## Mitä tallennat itsellesi?
+
+**Et palauta tätä minnekään — tallenna se silti huolellisesti lopputyötä varten (osa 2 kolmesta todistusaineistosta).**
+:::
 
 Tee kuitenkin tiedosto, jossa on:
 

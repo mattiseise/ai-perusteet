@@ -38,6 +38,7 @@ OSP_BLOCKS = [
 
 ALL_LESSONS = [
     {'id': t['id'], 'kansio': t['kansio'], 'otsikko': t['otsikko'], 'tyyppi': t['tyyppi'],
+     'lopputyon_askel': t.get('lopputyon_askel'),
      'osp_id': m['id'], 'slug': m['slug'], 'osp_title': m['otsikko'],
      'osp_color': m['vari'], 'osp_icon': m['ikoni']}
     for m in MODUULIT for t in m['tunnit']
@@ -54,6 +55,7 @@ BLOCK_FILE = {
     'sanasto': 'sanasto.md',
     'harjoittele': 'harjoittele.md',
     'tehtavat-luokka': 'tehtavat-luokka.md',
+    'lopputyon-askel': 'tehtavat-luokka.md',   # osatuotos-osio poimitaan tästä
     'diat': 'diat.html',
     'tuntisuunnitelma': 'opettaja/tuntisuunnitelma.md',
     'tehtavat-ohjatut': 'opettaja/tehtavat-ohjatut.md',
@@ -64,6 +66,7 @@ BLOCK_ANCHOR = {
     'harjoittele': 'harjoittele',
     'sanasto': 'sanasto',
     'tehtavat-luokka': 'tehtavat',
+    'lopputyon-askel': 'lopputyon-askel',
     'diat': 'diat',
     'tuntisuunnitelma': 'tuntisuunnitelma',
     'tehtavat-ohjatut': 'ohjatut',
@@ -74,6 +77,7 @@ BLOCK_LABEL = {
     'harjoittele': 'Harjoittele',
     'sanasto': 'Sanasto',
     'tehtavat-luokka': 'Tehtävät',
+    'lopputyon-askel': '★ Lopputyön askel',
     'diat': 'Diat',
     'tuntisuunnitelma': 'Tuntisuunnitelma',
     'tehtavat-ohjatut': 'Opettajavetoiset tehtävät',
@@ -85,6 +89,7 @@ BLOCK_ICON = {
     'tehtavat-luokka': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg>',
     'harjoittele': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>',
     'sanasto': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg>',
+    'lopputyon-askel': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg>',
     'diat': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg>',
     'tuntisuunnitelma': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg>',
     'tehtavat-ohjatut': '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg>',
@@ -105,7 +110,7 @@ def _deck_html(deck_src):
     )
 
 
-def render_block(kansio, block, variant, lid):
+def render_block(kansio, block, variant, lid, lopputyon_askel=None):
     """Renderöi yksi lohko yhtä näkymää varten.
 
     Palauttaa dictin {'html', 'tasks'} tai None jos lähdetiedosto puuttuu/tyhjä.
@@ -119,6 +124,16 @@ def render_block(kansio, block, variant, lid):
 
     if block == 'diat':
         return {'html': _deck_html(raw), 'tasks': None}
+
+    if block == 'lopputyon-askel':
+        # Välilehti syntyy vain tunneille, joilla manifestikenttä on. Osatuotos-osio
+        # poimitaan raa'asta tekstistä (otsikko osuu alkuperäiseen luokkatekstiin) ja
+        # suodatetaan sitten näkymän variantilla (kurssi = verkko).
+        if not lopputyon_askel:
+            return None
+        section = sisalto.extract_lopputyo_section(raw, lopputyon_askel, source=source)
+        filtered = sisalto.filter_variants(section, variant, source=source)
+        return {'html': sisalto.to_html_with_cards(filtered, include_h3=False), 'tasks': None}
 
     filtered = sisalto.filter_variants(raw, variant, source=source)
 
@@ -153,7 +168,8 @@ def build_lesson_blocks(lesson, view):
     is_assessment = lesson['tyyppi'] == 'assessment'
     out = []
     for block in cfg['lohkot']:
-        rendered = render_block(lesson['kansio'], block, variant, lesson['id'])
+        rendered = render_block(lesson['kansio'], block, variant, lesson['id'],
+                                lopputyon_askel=lesson.get('lopputyon_askel'))
         if rendered is None:
             continue
         out.append({
