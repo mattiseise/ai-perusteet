@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lopputyö — Teoria — Verkkokurssi</title>
+<meta name="description" content="Teoria-osion lopputyön tehtävänanto. Verkkokurssi.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/teoria/lopputyo/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<section class="page-hero"><div class="page-hero-inner"><div class="eyebrow"><a class="bc-link" href="/kurssi/" style="color:var(--blue)">Verkkokurssi</a> · Teoria</div><h1>★ Osion lopputyö</h1><p>Teoria — Tekoälyn teoria ja toimintaperiaatteet.</p></div></section><div class="page-body"><div class="reading panel"><h1>Teoria-osion lopputyö: Tuomaripöydän asiantuntijalausunto</h1>
+<p>Tämä on Teoria-osion arvioitava lopputyö. Tuotat <strong>asiantuntijalausunnon</strong> (750–1000 sanaa) yhdestä todellisesta tekoälyongelmasta. <strong>Et kirjoita tekstiä itse</strong> — ohjaat tekoälyä tuottamaan asiantuntijatasoisen tekstin keräämiesi todistusaineistojen pohjalta. Keräät matkan varrella <strong>kolme todistusaineistoa</strong>; kun ne ovat kunnossa, lopputyö on käytännössä hyvä prompti + huolellinen oikoluku.</p>
+<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää asiantuntijalausuntoa ei kirjoiteta yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — generatiivisen mekaniikan ymmärrys (tunti 3), kontekstin ja muistin rajat (tunti 5) sekä ammattilaisen tarkistuslista (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä tekoälyn ohjaamiseen ja tuotoksen tarkistamiseen — et joudu opettelemaan käsitteitä samalla.</p>
+</blockquote>
+<h2>Mitä rakennat?</h2>
+<p>Sinä et tuota tekstiä käsin, vaan ohjaat tekoälyä. <strong>Asiantuntijalausunto, 750–1000 sanaa.</strong> Analysoit yhden kolmesta todellisesta tekoälytilanteesta neljästä näkökulmasta: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja mikä on ammatillinen vastuu.</p>
+<p>Lausunto eroaa esseestä kolmella tavalla:</p>
+<ul>
+<li><strong>Se on neutraalia, ei tunteellista.</strong> Et kirjoita "tämä on järkyttävää" vaan "tilanne sisältää merkittävän tietosuojariskin, koska…".</li>
+<li><strong>Se nojaa käsitteisiin.</strong> Et kirjoita "tekoäly sekoili" vaan "kyseessä on hallusinaatio, joka selittyy mallin generatiivisella mekaniikalla".</li>
+<li><strong>Se päätyy konkreettiseen suositukseen.</strong> Et jätä lukijaa miettimään — kerrot, mitä pitää tehdä.</li>
+</ul>
+<h2>Polku alusta loppuun</h2>
+<p>Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät lausunnossa tunnilla 9. Muut tunnit syventävät käsitteistöä, jota sovellat analyysissä.</p>
+<table>
+<thead>
+<tr>
+<th>Tunti</th>
+<th>Mitä teet</th>
+<th>Tuotos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td>Tutustut tekoälyn perusteisiin ja kehityskaareen</td>
+<td>(perusta, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Selität, miten kone tuottaa tekstiä</td>
+<td><strong>Todistusaineisto 1: Generatiivinen mekaniikka</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Opit, miksi konteksti ratkaisee vastauksen</td>
+<td>(tarkennus, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Selität, miksi kontekstimuisti voi pettää</td>
+<td><strong>Todistusaineisto 2: Kontekstin katoaminen</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Tutustut kuva-, ääni- ja monimodaalisuuteen</td>
+<td>(tarkennus, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Laadit ammattilaisen tarkistuslistan hallusinaatioille</td>
+<td><strong>Todistusaineisto 3: Tarkistuslista</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Pohdit etiikkaa, vastuuta ja oikeuksia</td>
+<td>(perusta vastuukysymykselle)</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta</strong></td>
+<td><strong>Lopputyö palautettu</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="pause"><p>💡 <strong>Vinkki:</strong> Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme todistusaineistoa omiksi alaotsikoikseen. Tunnilla 9 sinulla on yksi tiedosto auki, ei kolme.</p>
+</blockquote>
+<h2>Kolmen todistusaineiston yleiskuvaus</h2>
+<p>Yksityiskohtaiset ohjeet kunkin todistusaineiston keräämiseen saat kyseisellä tunnilla. Tässä lyhyt yleiskuvaus, jotta näet kokonaisuuden.</p>
+<p><strong>Todistusaineisto 1: Generatiivinen mekaniikka (tunti 3)</strong><br />
+Miten kone tuottaa tekstiä? Miksi se voi olla väärässä? Tämä auttaa selittämään, miksi tekoäly ei "tiedä" vaan ennustaa.</p>
+<p><strong>Todistusaineisto 2: Kontekstin katoaminen (tunti 5)</strong><br />
+Mitä tarkoittaa, että tekoäly "unohtaa"? Missä tilanteissa kontekstimuisti pettää? Tämä auttaa tunnistamaan riskit, kun aiemmin annetut ohjeet katoavat.</p>
+<p><strong>Todistusaineisto 3: Ammattilaisen tarkistuslista (tunti 7)</strong><br />
+Miten ammattilainen tarkistaa tekoälyn tuotoksen? Mitkä ovat hallusinaatioiden merkit ja miten niitä estetään? Tämä auttaa ehdottamaan konkreettisia toimenpiteitä.</p>
+<h2>Lopputuotoksen vaatimukset</h2>
+<p>Tunti 9:n päätteeksi palautat seuraavat:</p>
+<p><strong>1. Asiantuntijalausunto (750–1000 sanaa)</strong><br />
+Analyysi neljästä osasta: mitä tapahtui, miksi se tapahtui (käsittein), miten tilanne pitäisi hoitaa (konkreettisin toimenpitein), mikä on ammatillinen vastuu.</p>
+<p><strong>2. Vähintään kaksi todistusaineistoa selkeästi käytetty</strong><br />
+Sinun pitää viitata vähintään kahteen kolmesta todistusaineistosta lausunnossasi. Hyvä viittaus käyttää käsitettä, ei vain mainitse sitä.</p>
+<p><strong>Vaihtoehtoinen suoritustapa</strong><br />
+Voit korvata kirjallisen lausunnon visuaalis-suullisella suorituksella: tilannekartta + päätöspuu + suullinen esitys (5–8 min). Sama syvyys vaaditaan — vain muoto on erilainen.</p>
+<h2>Skenaariot — valitse yksi</h2>
+<p><strong>Skenaario 1: Asiakaspalvelu ja tietovuoto</strong><br />
+Olet IT-vastaava verkkokauppayrityksessä. Asiakaspalvelijat ovat syöttäneet asiakkaiden henkilötietoja ChatGPT:hen, ja tietoja on vuotanut. Tietosuojavaltuutettu ottaa yhteyttä.</p>
+<p><strong>Skenaario 2: Rekrytointialgoritmi ja syrjintä</strong><br />
+Organisaatiosi rekrytointialgoritmi hylkää 85 % naispuolisista hakijoista ja hyväksyy 65 % miespuolisista — samalla pätevyystasolla. Algoritmi on opetettu 10 vuoden historiadatalla.</p>
+<p><strong>Skenaario 3: Markkinointisisältö ja tekijänoikeudet</strong><br />
+Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että kilpailijalla on lähes identtinen artikkeli. Asiakas kysyy: kuka omistaa sisällön?</p>
+<h2>Työkalut ja työskentelytapa</h2>
+<p><strong>Tekoälytyökalu:</strong> Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole kirjoittaa tekstiä itse, vaan ohjata tekoälyä tuottamaan asiantuntijatasoinen lausunto ja varmistaa, että sisältö on oikein. Vaikka oma kirjoitustaito olisi vasta kehittymässä, voit tuottaa laadukkaan lausunnon, kun todistusaineistot ja prompti ovat kunnossa. Sinun vastuullasi on, että sisältö on oikein, analyyttistä ja osoittaa ymmärrystäsi.</p>
+<p><strong>Yksin tai pareittain:</strong> Lopputyö tehdään yksin. Voit kuitenkin sparrata käsitteistöä luokkakavereiden kanssa kerätessäsi todistusaineistoja matkan varrella.</p>
+<h2>Arviointi</h2>
+<p>Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.</p>
+<table>
+<thead>
+<tr>
+<th>Kriteeri</th>
+<th>Pisteet</th>
+<th>Mitä arvioidaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Käsitteiden käyttö</strong></td>
+<td>25 p</td>
+<td>Käytätkö Teoria-osion käsitteitä täsmällisesti ja sovellettuna juuri valitsemaasi tilanteeseen?</td>
+</tr>
+<tr>
+<td><strong>Todistusaineistojen hyödyntäminen</strong></td>
+<td>20 p</td>
+<td>Käytätkö vähintään kahta todistusaineistoa argumentaation pohjana? Ovatko viittaukset selkeitä?</td>
+</tr>
+<tr>
+<td><strong>Konkreettiset toimenpiteet</strong></td>
+<td>20 p</td>
+<td>Ovatko toimenpide-ehdotukset konkreettisia (kuka, milloin, miten) — vai pelkkiä toivomuksia?</td>
+</tr>
+<tr>
+<td><strong>Ammatillinen kieli</strong></td>
+<td>20 p</td>
+<td>Onko kieli neutraalia ja asiantuntevaa? Onko vältetty puhekieli ja tunteenpurkaukset?</td>
+</tr>
+<tr>
+<td><strong>Vastuukysymyksen käsittely</strong></td>
+<td>15 p</td>
+<td>Onko ammatillinen vastuu käsitelty omana osana — vai mainittu vain sivulauseessa?</td>
+</tr>
+</tbody>
+</table>
+<h2>Aikabudjetti</h2>
+<p>Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka auttaa sinua suunnittelemaan omaa työtäsi.</p>
+<table>
+<thead>
+<tr>
+<th>Vaihe</th>
+<th>Aika-arvio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yksi todistusaineisto (tunnit 3, 5, 7)</td>
+<td>~20–25 min / todistusaineisto</td>
+</tr>
+<tr>
+<td>Lausunnon tuottaminen ja oikoluku (tunti 9)</td>
+<td>~75 min (koko tunti)</td>
+</tr>
+<tr>
+<td><strong>Yhteensä lähiaikaa</strong></td>
+<td><strong>~2–3 tuntia</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="pause"><p>💡 <strong>Vinkki ajankäyttöön:</strong> Jos joku todistusaineisto jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 9 sinulla pitää olla kolme todistusaineistoa valmiina — muuten kirjoittaminen jää käsitteistön opettelemiseksi.</p>
+</blockquote>
+<h2>Palautus</h2>
+<p>Palautat tunnilla 9 seuraavat:</p>
+<ul>
+<li>Asiantuntijalausunto (750–1000 sanaa, tekstitiedosto tai PDF)</li>
+<li>Maininta käyttämistäsi todistusaineistoista (joko erillisinä liitteinä tai mainittuina lausunnossa)</li>
+</ul>
+<p>Vaihtoehtoisessa suoritustavassa palautat tilannekartan, päätöspuun ja suullisen esityksen nauhoitteen tai esität sen luokassa.</p>
+<hr />
+<p><strong>Tuomaripöydän takana ei istu kone — siellä istut sinä.</strong></p></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automaatio vai autonomia? — milloin agentti kannattaa — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Automaatio vai autonomia? — milloin agentti kannattaa. Opettajan opas, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-20/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 20</span></div><div class="lesson-title">Automaatio vai autonomia? — milloin agentti kannattaa</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-20/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-20/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-20/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — eivät opettajan materiaaleja.</span></div><a class="sb-go" href="/luokka/tunti-20/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-20/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 20</h1>
+<div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
+<p>Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, milloin <strong>agentti</strong> on järkevä ratkaisu ja milloin yksinkertaisempi automaatio riittää. Oppitunnin ydin ei ole rakentamisessa vaan <strong>arkkitehtuuripäätöksissä</strong>: opiskelija oppii arvioimaan, kannattaako käyttää promptausta, työnkulkua vai agenttia.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija ymmärtää, että agentti ei ole aina parempi ratkaisu kuin yksinkertainen työnkulku.</li>
+<li>Opiskelija tunnistaa automatisoinnin kolme tasoa: <strong>promptaus</strong>, <strong>työnkulku</strong> ja <strong>agentti</strong>.</li>
+<li>Opiskelija ymmärtää, että monimutkaisuus, kustannukset ja riskit kasvavat, kun siirrytään työnkulusta agenttiin.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa soveltaa <strong>päätöspuumenetelmää</strong> todellisiin automaatioon liittyviin valintatilanteisiin.</li>
+<li>Opiskelija osaa arvioida, toistuuko tehtävä, onko se monimutkainen ja muuttuvatko sen säännöt.</li>
+<li>Opiskelija osaa tunnistaa tekijät, jotka tekevät agentista järkevän tai kannattamattoman investoinnin.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa perustella, miksi omaan projektiin tarvitaan agentti tai miksi yksinkertaisempi ratkaisu riittäisi.</li>
+<li>Opiskelija osaa tarkentaa omaa agenttiongelmaansa niin, että agentin autonomisuus tuottaa todellista lisäarvoa.</li>
+<li>Opiskelija osaa arvioida ratkaisun hyötyjä suhteessa sen kustannuksiin ja riskeihin.</li>
+</ul>
+<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on yksinkertaisuus. Opiskelijan ei pidä valita agenttia siksi, että se kuulostaa edistyneeltä, vaan siksi, että ongelma aidosti vaatii autonomista päättelyä, muuttuvien tilanteiden käsittelyä ja työkalujen käyttöä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: valitse yksinkertaisin ratkaisu, joka todella toimii</h3></div><div class="task-card-body">
+<p>Oppitunnin ydin on ajattelutavan muutos. Opiskelija saattaa helposti ajatella, että agentti on aina paras tai modernein ratkaisu. Tällä tunnilla tätä ajatusta puretaan. Agentti on tehokas vain silloin, kun tehtävä vaatii enemmän kuin sääntöpohjaista automaatiota.</p>
+<blockquote class="pause"><p><strong>Hyvä arkkitehtuuripäätös ei ole monimutkaisin ratkaisu. Hyvä arkkitehtuuripäätös on yksinkertaisin ratkaisu, joka ratkaisee ongelman luotettavasti.</strong></p>
+</blockquote>
+<p>Korosta opiskelijoille:</p>
+<ul>
+<li><strong>Promptaus</strong> riittää, jos ihminen voi käynnistää tehtävän itse ja arvioida vastauksen.</li>
+<li><strong>Työnkulku</strong> riittää, jos prosessi on toistuva ja säännöt ovat selkeät.</li>
+<li><strong>Agentti</strong> kannattaa, jos tehtävä on toistuva, monimutkainen, muuttuva ja vaatii päättelyä sekä työkalujen käyttöä.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Monimutkaisuus on aina kustannus</h3></div><div class="task-card-body">
+<p>Opiskelijoiden on tärkeää ymmärtää, että agentti ei ole vain ”parempi työnkulku”. Agentti on luonteeltaan erilainen järjestelmä. Se vaatii enemmän suunnittelua, testausta, turvallisuutta, ylläpitoa ja valvontaa.</p>
+<p><strong>Opettajan huomio:</strong> Palaa kustannus–hyöty-ajatteluun usein. Kysy opiskelijoilta: ”Mitä agentti tekee paremmin kuin työnkulku?” Jos vastaus on epäselvä, agentti ei ehkä ole vielä perusteltu ratkaisu.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Päätöspuu oppimisen välineenä</h3></div><div class="task-card-body">
+<p>Päätöspuu auttaa opiskelijaa tekemään valinnan systemaattisesti. Tärkeää ei ole vain vastata kysymyksiin, vaan perustella vastaukset. Oppitunnin aikana opiskelijan tulisi oppia kysymään:</p>
+<ol>
+<li><strong>Toistuuko tehtävä?</strong></li>
+<li><strong>Onko tehtävä yksinkertainen vai monimutkainen?</strong></li>
+<li><strong>Ovatko säännöt staattisia vai muuttuvia?</strong></li>
+<li><strong>Kuka maksaa ratkaisun rakentamisen ja ylläpidon?</strong></li>
+<li><strong>Mitkä ovat epäonnistumisen kustannukset?</strong></li>
+<li><strong>Onko ihmisen valvonta mahdollista?</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Jos vastaus on...</th>
+<th>Todennäköinen ratkaisu</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tehtävä ei toistu tai tehdään hyvin harvoin.</td>
+<td><strong>Ei automaatiota</strong> tai yksinkertainen promptaus.</td>
+<td>Automatisoinnin rakentamiseen kuluu enemmän aikaa kuin tehtävän tekemiseen käsin.</td>
+</tr>
+<tr>
+<td>Tehtävä toistuu ja säännöt ovat selkeät.</td>
+<td><strong>Työnkulku</strong>.</td>
+<td>Sääntöpohjainen ratkaisu on riittävä, halvempi ja helpompi ylläpitää.</td>
+</tr>
+<tr>
+<td>Tehtävä toistuu, on monimutkainen ja säännöt muuttuvat.</td>
+<td><strong>Agentti</strong> voi olla perusteltu.</td>
+<td>Tarvitaan tilanteen arviointia, päättelyä ja joustavaa työkalujen käyttöä.</td>
+</tr>
+<tr>
+<td>Epäonnistumisen kustannukset ovat korkeat.</td>
+<td><strong>Työnkulku + ihmisen valvonta</strong> tai tarkasti rajattu agentti.</td>
+<td>Autonomian hyöty ei saa ylittää turvallisuuden ja valvonnan tarvetta.</td>
+</tr>
+</tbody>
+</table></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Agentti on aina paras ratkaisu.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Agentti ei ole aina paras ratkaisu, koska se lisää monimutkaisuutta, kustannuksia ja riskejä. Jos yksinkertainen työnkulku ratkaisee ongelman riittävän hyvin, agentti on ylimitoitettu ratkaisu.</p>
+<blockquote class="pause"><p>Älä rakenna agenttia, jos työnkulku riittää.</p>
+</blockquote>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Jos tehtävässä on tekoälyä, se on agentti.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Tekoälysolmu ei tee järjestelmästä automaattisesti agenttia. Agentti tarvitsee tavoitteen, syötteen käsittelyn, päättelyä, työkalujen käyttöä ja usein palautesilmukan. Pelkkä tekoälyn vastaus käyttäjän kysymykseen on usein promptausta tai chatbot-toimintaa.</p>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Kysy opiskelijoilta: ”Jos työnkulussa on yksi AI-solmu, joka vastaa viestiin, onko se agentti vai tekoälyä käyttävä työnkulku?”</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Säännöt ovat huonoja, koska agentti on joustavampi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Säännöt ovat usein hyvä asia. Jos prosessi on selkeä ja ennakoitava, sääntöpohjainen työnkulku on luotettavampi, halvempi ja helpompi testata kuin agentti. Joustavuus on hyödyllistä vain silloin, kun sitä todella tarvitaan.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Agentin rakentamisen kustannus on vain sen tekemiseen käytetty aika.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Agentin kustannuksiin kuuluvat myös testaus, valvonta, virheiden korjaus, ylläpito, käyttökustannukset, tietoturva ja dokumentointi. Nämä voivat olla suurempi osa kokonaiskustannusta kuin alkuperäinen rakentaminen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Päätöspuun soveltaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija arvioi, mikä ratkaisutyyppi sopii annettuun tilanteeseen: promptaus, työnkulku vai agentti.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille 2–3 tapausta, esimerkiksi sähköpostien lajittelu, asiakaspalvelupyyntöjen reititys ja laskujen käsittely. Opiskelija käy jokaisen tapauksen läpi kuuden kysymyksen avulla ja perustelee valintansa.</p>
+<table>
+<thead>
+<tr>
+<th>Päätöspuun kysymys</th>
+<th>Opiskelijan vastaus</th>
+<th>Mitä vastaus tarkoittaa?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toistuuko tehtävä?</td>
+<td></td>
+<td>Jos ei toistu, automaatio ei yleensä kannata.</td>
+</tr>
+<tr>
+<td>Onko tehtävä yksinkertainen vai monimutkainen?</td>
+<td></td>
+<td>Yksinkertainen tehtävä sopii usein työnkuluksi.</td>
+</tr>
+<tr>
+<td>Muuttuvatko säännöt?</td>
+<td></td>
+<td>Muuttuvat säännöt voivat perustella agentin.</td>
+</tr>
+<tr>
+<td>Kuka maksaa?</td>
+<td></td>
+<td>Suuret kustannukset vaativat vahvemmat perusteet.</td>
+</tr>
+<tr>
+<td>Mitkä ovat epäonnistumisen kustannukset?</td>
+<td></td>
+<td>Korkea riski vaatii valvontaa ja rajoituksia.</td>
+</tr>
+<tr>
+<td>Onko ihmisen valvonta mahdollista?</td>
+<td></td>
+<td>Jos valvonta on mahdollista, riskiä voidaan hallita paremmin.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 20–25 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Oma agenttiongelma päätöspuun läpi</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija tarkistaa, onko oma lopputyön agenttiongelma aidosti agentin arvoinen.</p>
+<p><strong>Tehtävä:</strong> Opiskelija ottaa oman pohjapiirros 1:n ongelman ja käy sen läpi päätöspuun avulla. Lopuksi opiskelija kirjoittaa lyhyen johtopäätöksen: <strong>tarvitseeko tämä agentin vai riittäisikö yksinkertaisempi ratkaisu?</strong></p>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelija vastaa ”agentti, koska se on siistimpi”, pyydä häntä perustelemaan, mitä agentti tekee paremmin kuin työnkulku. Ilman tätä perustelua ongelmaa pitää tarkentaa.</p>
+<p><strong>Hyvä vastaus sisältää:</strong></p>
+<ul>
+<li>päätöspuun kuusi kysymystä ja vastaukset niihin</li>
+<li>selkeän valinnan: promptaus, työnkulku vai agentti</li>
+<li>perustelun, miksi valinta on järkevä</li>
+<li>mahdollisen tarkennuksen omaan agenttiongelmaan</li>
+</ul>
+<p><strong>Aika-arvio:</strong> 20–30 minuuttia</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>CFU-kysymykset</h2></div><div class="task-card-body">
+<ol>
+<li><strong>Automaatio vs. autonomia:</strong> Miksi agentti ei ole automaattisesti parempi kuin työnkulku?</li>
+<li><strong>Kustannukset:</strong> Mitä kustannuksia agenttiin liittyy rakentamisen lisäksi?</li>
+<li><strong>Riskit:</strong> Miksi korkean riskin tehtävä ei välttämättä sovi täysin autonomiselle agentille?</li>
+<li><strong>Päätöspuu:</strong> Mikä kuudesta kysymyksestä vaikuttaa eniten siihen, valitsetko työnkulun vai agentin?</li>
+</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija valitsee agentin liian helposti</h3></div><div class="task-card-body">
+<p>Kysy:</p>
+<ul>
+<li>Mitä agentti tekee, mitä työnkulku ei pystyisi tekemään?</li>
+<li>Miten säännöt muuttuvat tilanteesta toiseen?</li>
+<li>Mitä tietoa agentti tarvitsee päättelyyn?</li>
+<li>Mikä on pienin versio, jolla ongelmaa voisi kokeilla?</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija päätyy siihen, että oma idea ei tarvitse agenttia</h3></div><div class="task-card-body">
+<p>Tämä ei ole epäonnistuminen. Se on hyvä arkkitehtuuripäätös. Pyydä opiskelijaa tarkentamaan ongelmaa niin, että agentti tuo lisäarvoa, tai hyväksymään yksinkertaisempi ratkaisu osaksi suunnitelmaa.</p>
+<blockquote class="pause"><p>Hyvä suunnittelija ei rakenna agenttia väkisin. Hyvä suunnittelija valitsee oikean työkalun.</p>
+</blockquote>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija ajattelee vain teknistä toteutusta</h3></div><div class="task-card-body">
+<p>Palauta keskustelu ongelmaan ja käyttäjään:</p>
+<ul>
+<li>Kenen ongelmaa ratkaiset?</li>
+<li>Kuinka usein ongelma tapahtuu?</li>
+<li>Mitä tapahtuu, jos ratkaisu epäonnistuu?</li>
+<li>Miksi tämä on tärkeää?</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
+<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentti on valinta, ei oletus. Agentti kannattaa rakentaa vain silloin, kun tehtävä vaatii autonomista päättelyä, muuttuvien tilanteiden käsittelyä ja työkalujen käyttöä tavalla, johon tavallinen työnkulku ei riitä.</p>
+<p>Hyvä päätöskysymys tunnin loppuun:</p>
+<blockquote class="pause"><p><strong>Pohdi:</strong> Mikä omassa projektissasi on se kohta, jossa työnkulku ei enää riitä ja agentin päättely tuo lisäarvoa?</p>
+</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät — oppitunti 20</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.1: Päätöspuuanalyysi tosielämän skenaarioissa noin 30 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on, että opiskelijat oppivat arvioimaan, milloin kannattaa käyttää <strong>agenttia</strong>, milloin riittää tavallinen <strong>automaatio</strong> ja milloin paras ratkaisu on jokin muu, esimerkiksi ihmisen tekemä työ tai yksinkertainen chatbot. Opiskelijat harjoittelevat päätöksentekoa kuuden kysymyksen päätöspuun avulla.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, että agentti ei ole automaattisesti paras ratkaisu. Agentti on hyödyllinen silloin, kun tehtävä vaatii tulkintaa, päätöksentekoa, työkalujen käyttöä ja rajattua itsenäistä toimintaa. Yksinkertainen ongelma kannattaa usein ratkaista yksinkertaisella automaatiolla.</p>
+<h3>Valmistelu</h3>
+<ul>
+<li>Jaa opiskelijat 3–4 hengen ryhmiin.</li>
+<li>Anna jokaiselle ryhmälle yksi tosielämän skenaario.</li>
+<li>Näytä taululla tai jaa opiskelijoille kuuden kysymyksen päätöspuu.</li>
+<li>Varaa ryhmille paperia, yhteinen dokumentti tai muu paikka vastausten kirjaamiseen.</li>
+</ul>
+<h3>Kuuden kysymyksen päätöspuu</h3>
+<p>Ryhmät arvioivat omaa skenaariotaan seuraavien kysymysten avulla:</p>
+<ol>
+<li><strong>Onko tehtävä toistuva?</strong><br />
+   Jos tehtävä tapahtuu vain harvoin, automaatio tai agentti ei välttämättä ole vaivan arvoinen.</li>
+<li><strong>Onko tehtävässä selkeä tavoite?</strong><br />
+   Agentti tarvitsee tavoitteen. Jos tavoite on epäselvä, järjestelmä ei tiedä, mitä sen pitäisi optimoida.</li>
+<li><strong>Tarvitaanko tilanteen tulkintaa?</strong><br />
+   Jos tehtävä perustuu pelkkään yksinkertaiseen sääntöön, tavallinen automaatio voi riittää.</li>
+<li><strong>Tarvitaanko työkaluja tai ulkoisia järjestelmiä?</strong><br />
+   Jos järjestelmän pitää hakea tietoa, kirjoittaa järjestelmään tai lähettää viestejä, agenttimainen ratkaisu voi olla perusteltu.</li>
+<li><strong>Onko päätöksellä riskejä?</strong><br />
+   Jos päätös koskee rahaa, henkilötietoja, turvallisuutta tai asiakassuhdetta, tarvitaan turvakerroksia ja mahdollisesti ihmisen hyväksyntä.</li>
+<li><strong>Onko hyöty suurempi kuin kustannus ja monimutkaisuus?</strong><br />
+   Agentti voi olla kallis ja vaatia ylläpitoa. Jos hyöty on pieni, yksinkertaisempi ratkaisu on parempi.</li>
+</ol>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Jos opiskelijat valitsevat agentin liian nopeasti, kysy: “Mitä agentti tekee sellaista, mitä tavallinen automaatio ei pysty tekemään?” Tämä ohjaa heitä perustelemaan valinnan teknisesti eikä vain siksi, että agentti kuulostaa edistyneeltä.</p>
+<h3>Skenaarioehdotuksia ryhmille</h3>
+<table>
+<thead>
+<tr>
+<th>Skenaario</th>
+<th>Tilanne</th>
+<th>Mahdollisia ratkaisuja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A: Asiakaspalautteiden käsittely</strong></td>
+<td>Yritys saa päivittäin paljon asiakaspalautteita, jotka pitää luokitella kiireellisyyden ja aiheen mukaan.</td>
+<td>Sääntöpohjainen automaatio, agentti tai ihminen.</td>
+</tr>
+<tr>
+<td><strong>B: Tentin päivämäärän kysyminen</strong></td>
+<td>Opiskelijat kysyvät usein, milloin seuraava koe on.</td>
+<td>FAQ, chatbot tai kalenteriin yhdistetty automaatio.</td>
+</tr>
+<tr>
+<td><strong>C: Asiakaspalvelupyyntöjen reititys</strong></td>
+<td>Yhteydenottoja tulee paljon, ja ne pitää ohjata oikealle asiantuntijalle.</td>
+<td>Työnkulku, agentti tai hybridiratkaisu.</td>
+</tr>
+<tr>
+<td><strong>D: Alennuspyyntöjen käsittely</strong></td>
+<td>Asiakkaat pyytävät alennuksia eri perusteilla. Päätös vaikuttaa yrityksen rahaan.</td>
+<td>Agentti, hyväksyntäportti ja human-in-the-loop.</td>
+</tr>
+</tbody>
+</table>
+<h3>Ryhmän tehtävä</h3>
+<p>Jokainen ryhmä täyttää seuraavan analyysitaulukon:</p>
+<table>
+<thead>
+<tr>
+<th>Päätöspuun kysymys</th>
+<th>Ryhmän vastaus</th>
+<th>Mitä tämä tarkoittaa ratkaisun kannalta?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onko tehtävä toistuva?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Onko tehtävässä selkeä tavoite?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tarvitaanko tulkintaa?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tarvitaanko työkaluja?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Onko päätöksellä riskejä?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Onko hyöty suurempi kuin kustannus?</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Lopuksi ryhmä tekee ratkaisuehdotuksen:</p>
+<ul>
+<li><strong>Paras ratkaisu:</strong> chatbot, sääntöpohjainen automaatio, työnkulku, agentti, agentti + ihmisen hyväksyntä tai ihminen.</li>
+<li><strong>Perustelu:</strong> miksi juuri tämä ratkaisu sopii tilanteeseen?</li>
+<li><strong>Riski:</strong> mikä on suurin riski tässä ratkaisussa?</li>
+<li><strong>Turvakerros:</strong> miten riskiä vähennetään?</li>
+</ul>
+<h3>Käsittely</h3>
+<p>Jokainen ryhmä esittelee ratkaisunsa lyhyesti. Opettaja ohjaa keskustelua seuraavilla kysymyksillä:</p>
+<ul>
+<li>Miksi valitsitte agentin tai miksi ette valinneet agenttia?</li>
+<li>Mikä olisi yksinkertaisin toimiva ratkaisu?</li>
+<li>Mikä kohta vaatii ihmisen hyväksynnän?</li>
+<li>Mitä tapahtuisi, jos ratkaisu rakennettaisiin liian monimutkaiseksi?</li>
+</ul>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat osaavat arvioida, milloin agentti on perusteltu ratkaisu.</li>
+<li>Opiskelijat ymmärtävät, että yksinkertaisempi automaatio voi olla parempi kuin agentti.</li>
+<li>Opiskelijat osaavat perustella valinnan päätöspuun avulla.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.2: Kustannus-hyötysimulaatio noin 20 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, että agentin rakentamista pitää arvioida myös <strong>kustannusten</strong>, <strong>hyötyjen</strong>, <strong>riskien</strong> ja <strong>ylläpidon</strong> näkökulmasta. Hyvä tekninen ratkaisu ei aina ole taloudellisesti tai organisatorisesti järkevä.</p>
+<p><strong>Opettajan huomio:</strong> Tämä tehtävä auttaa opiskelijoita ymmärtämään, että agentin rakentaminen ei ole vain tekninen päätös. Se on myös taloudellinen, eettinen ja organisatorinen päätös.</p>
+<h3>Esimerkkitilanne</h3>
+<p>Yritys saa kuukaudessa 1 000 asiakaspalautetta. Tällä hetkellä työntekijät lukevat palautteet käsin, luokittelevat ne ja ohjaavat ne oikealle tiimille.</p>
+<p>Yritys harkitsee kolmea vaihtoehtoa:</p>
+<table>
+<thead>
+<tr>
+<th>Vaihtoehto</th>
+<th>Kuvaus</th>
+<th>Hyödyt</th>
+<th>Kustannukset ja riskit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A: Ihminen tekee kaiken</strong></td>
+<td>Työntekijät lukevat ja luokittelevat kaikki palautteet käsin.</td>
+<td>Laadukas harkinta, hyvä ymmärrys poikkeustilanteista.</td>
+<td>Hidas, kallis ja kuormittava suurissa määrissä.</td>
+</tr>
+<tr>
+<td><strong>B: Sääntöpohjainen automaatio</strong></td>
+<td>Järjestelmä ohjaa viestit avainsanojen perusteella.</td>
+<td>Halvempi ja yksinkertaisempi toteuttaa.</td>
+<td>Ei ymmärrä sävyä, poikkeuksia tai monimutkaisia viestejä hyvin.</td>
+</tr>
+<tr>
+<td><strong>C: Agentti</strong></td>
+<td>Agentti tulkitsee palautteen, luokittelee sen, ehdottaa vastausta ja ohjaa riskitapaukset ihmiselle.</td>
+<td>Joustavampi, nopeampi ja parempi monimutkaisissa tilanteissa.</td>
+<td>Kalliimpi rakentaa ja ylläpitää. Vaatii turvakerroksia, testausta ja seurantaa.</td>
+</tr>
+</tbody>
+</table>
+<h3>Keskustelun ohjaus</h3>
+<p>Johdata keskustelua seuraavilla kysymyksillä:</p>
+<ul>
+<li>Mikä ratkaisu on halvin rakentaa?</li>
+<li>Mikä ratkaisu on helpoin ylläpitää?</li>
+<li>Mikä ratkaisu toimii parhaiten monimutkaisissa tilanteissa?</li>
+<li>Mikä ratkaisu aiheuttaa suurimman riskin, jos se tekee virheen?</li>
+<li>Miten paljon virheet maksavat?</li>
+<li>Missä kohdassa ihmisen pitää olla mukana?</li>
+</ul>
+<h3>Ryhmätehtävä</h3>
+<p>Ryhmät täyttävät kustannus-hyötytaulukon:</p>
+<table>
+<thead>
+<tr>
+<th>Arviointikohta</th>
+<th>Ihminen</th>
+<th>Sääntöpohjainen automaatio</th>
+<th>Agentti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rakentamisen kustannus</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Ylläpidon tarve</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Virheen riski</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Nopeus</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Soveltuvuus poikkeustilanteisiin</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kokonaisarvio</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Johtopäätös</h3>
+<p>Kokoa keskustelu yhteen:</p>
+<blockquote class="pause"><p>Agentti kannattaa rakentaa silloin, kun sen tuoma hyöty on suurempi kuin sen kustannukset, riskit ja ylläpidon vaiva. Jos yksinkertainen automaatio riittää, se on usein parempi ratkaisu.</p>
+</blockquote>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, että agentin rakentaminen vaatii kustannus-hyötyarvion.</li>
+<li>Opiskelijat osaavat vertailla ihmistyötä, sääntöpohjaista automaatiota ja agenttia.</li>
+<li>Opiskelijat ymmärtävät, että teknisesti mahdollinen ratkaisu ei aina ole järkevin ratkaisu.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.3: Suunnittelusilmukan valinta noin 20 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, että agentin rakentaminen on <strong>suunnittelusilmukka</strong>: ensin määritellään tavoite, sitten rajataan tehtävä, valitaan työkalut, suunnitellaan turvakerrokset, testataan ja parannetaan.</p>
+<h3>Opettajan ohjeet</h3>
+<p>Selitä opiskelijoille:</p>
+<p>“Agenttia ei kannata suunnitella aloittamalla työkalusta. Ensin pitää tietää, mitä ongelmaa ratkaistaan ja millainen päätöksenteko on sallittua. Vasta sen jälkeen valitaan työkalut ja rakennetaan ratkaisu.”</p>
+<p><strong>Agentin suunnittelusilmukka</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Määrittele tavoite</strong> Mitä ongelmaa agentti ratkaisee?</td>
+</tr>
+<tr>
+<td>↓</td>
+</tr>
+<tr>
+<td><strong>2. Rajaa tehtävä</strong> Mitä agentti tekee ja mitä se ei tee?</td>
+</tr>
+<tr>
+<td>↓</td>
+</tr>
+<tr>
+<td><strong>3. Valitse työkalut</strong> Mitä järjestelmiä tai toimintoja agentti tarvitsee?</td>
+</tr>
+<tr>
+<td>↓</td>
+</tr>
+<tr>
+<td><strong>4. Lisää turvakerros</strong> Mitä pitää estää, tarkistaa tai hyväksyttää ihmisellä?</td>
+</tr>
+<tr>
+<td>↓</td>
+</tr>
+<tr>
+<td><strong>5. Testaa</strong> Toimiiko agentti normaaleissa, poikkeavissa ja riskialttiissa tilanteissa?</td>
+</tr>
+<tr>
+<td>↓</td>
+</tr>
+<tr>
+<td><strong>6. Paranna</strong> Mitä muutetaan testien ja palautteen perusteella?</td>
+</tr>
+</tbody>
+</table>
+<h3>Ryhmätyö</h3>
+<p>Ryhmät valitsevat yhden aiemmista skenaarioista ja soveltavat siihen suunnittelusilmukkaa.</p>
+<p><strong>Ryhmän tehtävä:</strong></p>
+<ul>
+<li><strong>Tavoite:</strong> mitä ongelmaa ratkaistaan?</li>
+<li><strong>Rajaus:</strong> mitä agentti saa tehdä ja mitä se ei saa tehdä?</li>
+<li><strong>Työkalut:</strong> mitä tietolähteitä, API-yhteyksiä tai viestintäkanavia tarvitaan?</li>
+<li><strong>Turvakerros:</strong> mitä tarkistetaan ennen toimintaa?</li>
+<li><strong>Testit:</strong> millä kolmella testillä varmistetaan, että ratkaisu toimii?</li>
+<li><strong>Parannus:</strong> mitä tehdään, jos testi epäonnistuu?</li>
+</ul>
+<p><strong>Vinkki arviointiin:</strong> Hyvä suunnittelusilmukka sisältää myös sen, mitä agentti ei tee. Rajaukset ovat yhtä tärkeitä kuin ominaisuudet.</p>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät agentin rakentamisen iteratiivisena suunnitteluna.</li>
+<li>Opiskelijat osaavat määritellä tavoitteen, rajauksen, työkalut, turvakerrokset ja testit.</li>
+<li>Opiskelijat ymmärtävät, että agenttia parannetaan testien ja palautteen perusteella.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.4: Työkalun merkitys noin 15 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, että agentti on vain niin kykenevä kuin sen käytössä olevat <strong>työkalut</strong>. Samalla opiskelijat pohtivat työkalujen vaikutusta <strong>turvallisuuteen</strong>, <strong>vastuuseen</strong> ja <strong>rajoihin</strong>.</p>
+<h3>Opettajan ohjeet</h3>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Agentti ilman työkaluja voi lähinnä keskustella ja ehdottaa. Agentti, jolla on työkaluja, voi tehdä asioita. Siksi työkalut lisäävät sekä hyötyä että riskiä.</p>
+</blockquote>
+<h3>Esittely</h3>
+<p>Näytä sama agentti kolmella eri työkalutasolla:</p>
+<table>
+<thead>
+<tr>
+<th>Työkalutaso</th>
+<th>Mitä agentti voi tehdä?</th>
+<th>Riski</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ei työkaluja</strong></td>
+<td>Vastaa yleisellä tasolla ja antaa ehdotuksia.</td>
+<td>Voi hallusinoida tai antaa yleisiä vastauksia, mutta ei tee suoria järjestelmämuutoksia.</td>
+</tr>
+<tr>
+<td><strong>Lukuoikeudet</strong></td>
+<td>Voi hakea tietoa tietokannasta, kalenterista tai dokumenteista.</td>
+<td>Voi paljastaa tietoa, jota käyttäjän ei pitäisi nähdä.</td>
+</tr>
+<tr>
+<td><strong>Kirjoitus- ja toiminto-oikeudet</strong></td>
+<td>Voi lähettää viestejä, muuttaa tietoja, hyväksyä pyyntöjä tai käynnistää prosesseja.</td>
+<td>Voi tehdä virheellisiä tai haitallisia toimintoja, jos turvakerros puuttuu.</td>
+</tr>
+</tbody>
+</table>
+<h3>Ryhmätyö</h3>
+<p>Ryhmät valitsevat yhden agenttityypin ja päättävät, mitä työkaluja se tarvitsee.</p>
+<p><strong>Agenttivaihtoehdot:</strong></p>
+<ul>
+<li><strong>FAQ-agentti:</strong> vastaa opiskelijoiden kysymyksiin kurssista.</li>
+<li><strong>Neuvonta-agentti:</strong> auttaa ratkaisemaan käyttäjien ongelmia.</li>
+<li><strong>Myyntiagentti:</strong> auttaa asiakkaita löytämään sopivan tuotteen.</li>
+<li><strong>Hyvitysagentti:</strong> käsittelee asiakkaiden hyvityspyyntöjä.</li>
+</ul>
+<p><strong>Ryhmän tehtävä:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Työkalu</th>
+<th>Miksi tarvitaan?</th>
+<th>Mitä riskiä se tuo?</th>
+<th>Miten riski rajataan?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tietokanta</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sähköposti tai viestintäkanava</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kalenteri tai ajanvarausjärjestelmä</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Johtopäätös</h3>
+<p>Kokoa keskustelu yhteen:</p>
+<blockquote class="pause"><p><strong>Pääpointti:</strong> Agentti on vain niin kykenevä kuin sen työkalut. Mitä enemmän työkaluja agentille annetaan, sitä hyödyllisempi mutta myös riskialttiimpi siitä tulee. Siksi työkalujen valinta on turvallisuus- ja vastuukysymys.</p>
+</blockquote>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät työkalujen merkityksen agentin kyvykkyydelle.</li>
+<li>Opiskelijat osaavat arvioida, mitä työkaluja agentti tarvitsee tehtäväänsä varten.</li>
+<li>Opiskelijat ymmärtävät, että työkalut lisäävät myös riskejä ja vaativat rajoituksia.</li>
+</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
+<p>Opettaja arvioi opiskelijoiden kykyä:</p>
+<ul>
+<li>käyttää päätöspuuta automaatioratkaisun valintaan,</li>
+<li>erottaa tilanteet, joissa agentti on perusteltu ratkaisu,</li>
+<li>perustella, milloin yksinkertaisempi automaatio riittää,</li>
+<li>arvioida agentin kustannuksia, hyötyjä, riskejä ja ylläpitoa,</li>
+<li>suunnitella agentin tavoitteen, rajauksen, työkalut ja turvakerrokset,</li>
+<li>selittää, miksi agentin työkalut vaikuttavat suoraan sen kyvykkyyteen ja riskeihin.</li>
+</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 20</text>
+<text x="74" y="246" font-size="41" font-weight="800" fill="#1B2336">Automaatio vai autonomia?</text>
+<text x="74" y="304" font-size="25" fill="#5A6478">Milloin agentti kannattaa — ja milloin ei?</text>
+<g transform="translate(636,210)">
+<rect x="0" y="0" width="118" height="100" rx="20" fill="#F4F5F8" stroke="#5A6478" stroke-width="3"/>
+<rect x="20" y="24" width="78" height="9" rx="4.5" fill="#5A6478"/><rect x="20" y="46" width="60" height="9" rx="4.5" fill="#5A6478"/><rect x="20" y="68" width="70" height="9" rx="4.5" fill="#5A6478"/>
+<text x="59" y="134" text-anchor="middle" font-size="14" font-weight="600" fill="#5A6478">automaatio</text></g>
+<text x="784" y="270" text-anchor="middle" font-size="30" fill="#9AA6BD" font-family="ui-monospace,monospace">vs</text>
+<g transform="translate(814,210)">
+<rect x="0" y="0" width="116" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3"/>
+<line x1="58" y1="0" x2="58" y2="-22" stroke="#008799" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="-28" r="7" fill="#008799"/>
+<circle cx="34" cy="40" r="10" fill="#008799"/><circle cx="82" cy="40" r="10" fill="#008799"/><rect x="32" y="66" width="52" height="8" rx="4" fill="#008799"/>
+<text x="59" y="134" text-anchor="middle" font-size="14" font-weight="600" fill="#006B7A">agentti</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Vastaus ei ole "aina"</text>
+<rect x="74" y="150" width="812" height="80" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<text x="100" y="188" font-size="21" fill="#006B7A">Agentti tuo mukanaan monimutkaisuutta, kustannuksia ja riskejä.</text>
+<text x="100" y="216" font-size="21" fill="#006B7A">Usein tavallinen työnkulku tai pelkkä promptaus riittää.</text>
+<text x="74" y="288" font-size="19" fill="#5A6478">Esimerkki: 50 asiakasyhteydenottoa päivässä</text>
+<g transform="translate(74,318)">
+<rect x="0" y="0" width="380" height="150" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="34" cy="40" r="17" fill="#FBE6D8"/><path d="M27 47 l7 -14 l7 14 M30 42 h8" stroke="#C26B2E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="38" font-size="19" font-weight="700" fill="#1B2336">"Tehdään agentti!"</text>
+<text x="64" y="64" font-size="16" fill="#5A6478">Kuukausi kehitystä</text>
+<text x="64" y="88" font-size="16" fill="#5A6478">10 000 € kustannus</text>
+<text x="20" y="128" font-size="15" fill="#A35A22">Houkutteleva — mutta kallis</text></g>
+<g transform="translate(506,318)">
+<rect x="0" y="0" width="380" height="150" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="34" cy="40" r="17" fill="#DFF3E8"/><path d="M27 40 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="38" font-size="19" font-weight="700" fill="#1B2336">Yksinkertainen työnkulku</text>
+<text x="64" y="64" font-size="16" fill="#5A6478">Ohjaa viestit oikealle henkilölle</text>
+<text x="64" y="88" font-size="16" fill="#5A6478">Sama hyöty</text>
+<text x="20" y="128" font-size="15" fill="#247A52">Murto-osa kustannuksista</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme perusvälinettä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Automatisointi on jatkumo — kustannus ja joustavuus kasvavat oikealle.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,28)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4 a3 3 0 0 1 3 -3 H22 a3 3 0 0 1 3 3 V24 a3 3 0 0 1 -3 3 H12 L6 32 V27 H6 a3 3 0 0 1 -3 -3 Z"/><path d="M9 11 H19 M9 17 H16"/></g>
+<text x="68" y="50" font-size="22" font-weight="800" fill="#1B2336">Promptaus</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Kysyt, tekoäly vastaa.</text>
+<text x="24" y="116" font-size="16" fill="#3A4253">Sinä omistat prosessin.</text>
+<text x="24" y="140" font-size="13" fill="#7E88A8" font-style="italic">Esim. liität viestin ChatGPT:hen</text>
+<text x="24" y="166" font-size="15" font-weight="700" fill="#247A52">+ nopea, ei ylläpitoa</text>
+<text x="24" y="220" font-size="15" fill="#A35A22">− sinun täytyy aloittaa itse</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">kustannus: pieni</text></g>
+<g transform="translate(354,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="11" height="11" rx="2.5"/><rect x="2" y="20" width="11" height="11" rx="2.5"/><rect x="22" y="11" width="11" height="11" rx="2.5"/><path d="M13 8 H18 V16 H22 M13 25 H18 V17"/></g>
+<text x="68" y="50" font-size="22" font-weight="800" fill="#1B2336">Työnkulku</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Seuraa kiinteitä sääntöjä</text>
+<text x="24" y="116" font-size="16" fill="#3A4253">joka kerta ilman ihmistä.</text>
+<text x="24" y="166" font-size="15" font-weight="700" fill="#247A52">+ säästää aikaa päivittäin</text>
+<text x="24" y="220" font-size="15" fill="#A35A22">− jäykkä poikkeamissa</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">kustannus: keski</text></g>
+<g transform="translate(634,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<g transform="translate(24,24)"><rect x="0" y="2" width="34" height="29" rx="7" fill="none" stroke="#008799" stroke-width="2.4"/><line x1="17" y1="2" x2="17" y2="-5" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="-8" r="3" fill="#008799"/><circle cx="11" cy="14" r="3" fill="#008799"/><circle cx="23" cy="14" r="3" fill="#008799"/><path d="M11 23 H23" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="68" y="50" font-size="22" font-weight="800" fill="#006B7A">Agentti</text>
+<text x="24" y="92" font-size="16" fill="#1B2336">Arvioi tilanteen, päättää</text>
+<text x="24" y="116" font-size="16" fill="#1B2336">itse seuraavan askeleen.</text>
+<text x="24" y="166" font-size="15" font-weight="700" fill="#247A52">+ hoitaa poikkeustapaukset</text>
+<text x="24" y="220" font-size="15" fill="#A35A22">− kallis ja vaatii valvontaa</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">kustannus: suuri</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g4)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Agentti tekee oman arvionsa</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Sama asiakaspalvelutilanne kolmella välineellä</text>
+<rect x="74" y="166" width="812" height="78" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="200" font-size="20" font-weight="700" fill="#5A6478">Työnkulku</text>
+<text x="100" y="228" font-size="18" fill="#3A4253">Sana "lasku"? → henkilö A. "Palautus"? → henkilö B. Sama sääntö aina.</text>
+<rect x="74" y="258" width="812" height="172" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<text x="100" y="294" font-size="20" font-weight="800" fill="#006B7A">Agentti</text>
+<circle cx="112" cy="328" r="6" fill="#008799"/><text x="132" y="334" font-size="18" fill="#1B2336">Lukee viestin ja analysoi sen sävyn</text>
+<circle cx="112" cy="360" r="6" fill="#008799"/><text x="132" y="366" font-size="18" fill="#1B2336">Etsii vastaavia aiempia tapauksia tietokannasta</text>
+<circle cx="112" cy="392" r="6" fill="#008799"/><text x="132" y="398" font-size="18" fill="#1B2336">Päättää: vastaako itse vai ohjaako ihmiselle</text>
+<text x="100" y="420" font-size="16" fill="#5A6478" font-style="italic">Vihainen asiakas? Varovaisempi sävy. Sama tapaus uudelleen? Muistaa edellisen.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kuusi kysymystä — osa 1/2</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kysy nämä järjestyksessä ennen kuin valitset välineen.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#E5F6F7"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#008799">1</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Toistuuko tehtävä?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Yksi raportti? Tee käsin. 100 viestiä joka aamu? Automatisoi.</text></g>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#E5F6F7"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#008799">2</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Onko tehtävä yksinkertainen vai monimutkainen?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Yksi tai kaksi vaihetta → työnkulku. Päättelyä vaativa → agentti.</text></g>
+<g transform="translate(74,372)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#E5F6F7"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#008799">3</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Ovatko säännöt staattisia vai muuttuvia?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Sama joka kerta → työnkulku. Tilanteet elävät → agentti soveltaa oppimaansa.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kuusi kysymystä — osa 2/2</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Riskit ja kustannukset ratkaisevat lopullisen valinnan.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#FFF3D6"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#C79100">4</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Kuka maksaa hinnan?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Pieni tilaus = pieni riski. Organisaation kymmenettuhannet = iso päätös.</text></g>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#FFF3D6"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#C79100">5</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Mitkä ovat epäonnistumisen kustannukset?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Väärä kansio? Ihminen korjaa. Mutta väärä lasku tai vaara ei ole siedettävä.</text></g>
+<g transform="translate(74,372)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#FFF3D6"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#C79100">6</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Onko ihmisen valvonta mahdollista?</text>
+<text x="92" y="70" font-size="16" fill="#5A6478">Ihminen puuttuu → riski hallittavissa. Ilman valvontaa agentin oltava virheetön.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g7)"/>
+<text x="74" y="84" font-size="34" font-weight="800" fill="#1B2336">Päätöspuu pähkinänkuoressa</text>
+<text x="74" y="116" font-size="17" fill="#5A6478">Automaatio toistaa saman polun — agentti valitsee tilanteen mukaan.</text>
+<rect x="380" y="150" width="200" height="60" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<text x="480" y="187" text-anchor="middle" font-size="19" font-weight="700" fill="#006B7A">Toistuuko tehtävä?</text>
+<path d="M480 210 V244" stroke="#C2CAD9" stroke-width="2"/><path d="M480 252 L474 240 L486 240 Z" fill="#C2CAD9"/>
+<text x="500" y="234" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">ei → promptaus riittää</text>
+<rect x="340" y="256" width="280" height="56" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="480" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#5A6478">Muuttuvatko säännöt?</text>
+<path d="M340 312 L180 360" stroke="#2F9E69" stroke-width="2"/><path d="M173 363 L186 359 L182 350 Z" fill="#2F9E69"/>
+<path d="M620 312 L780 360" stroke="#008799" stroke-width="2"/><path d="M787 363 L774 350 L778 359 Z" fill="#008799"/>
+<g transform="translate(74,366)">
+<rect x="0" y="0" width="320" height="112" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(22,22)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="11" height="11" rx="2.5"/><rect x="2" y="20" width="11" height="11" rx="2.5"/><rect x="22" y="11" width="11" height="11" rx="2.5"/><path d="M13 8 H18 V16 H22 M13 25 H18 V17"/></g>
+<text x="70" y="44" font-size="22" font-weight="800" fill="#247A52">TYÖNKULKU</text>
+<text x="22" y="80" font-size="16" fill="#3A4253">Staattiset säännöt, selkeät</text><text x="22" y="102" font-size="16" fill="#3A4253">vaiheet — halpa ja luotettava.</text></g>
+<g transform="translate(566,366)">
+<rect x="0" y="0" width="320" height="112" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
+<g transform="translate(20,18)"><rect x="0" y="2" width="30" height="26" rx="6" fill="none" stroke="#008799" stroke-width="2.2"/><line x1="15" y1="2" x2="15" y2="-4" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/><circle cx="15" cy="-7" r="3" fill="#008799"/><circle cx="10" cy="13" r="2.6" fill="#008799"/><circle cx="20" cy="13" r="2.6" fill="#008799"/><path d="M10 21 H20" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/></g>
+<text x="64" y="44" font-size="22" font-weight="800" fill="#006B7A">AGENTTI</text>
+<text x="22" y="80" font-size="16" fill="#1B2336">Muuttuvat säännöt + harkinta</text><text x="22" y="102" font-size="16" fill="#1B2336">— ihmisen valvonnassa.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g8)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TILANNE 1/3</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Laskujen käsittely</text>
+<g transform="translate(74,150)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2 H30 L30 38 L24 33 L18 38 L12 33 L6 38 L5 2 Z"/><path d="M12 12 H24 M12 20 H24 M12 28 H19"/></g>
+<text x="124" y="170" font-size="16" fill="#3A4253">100 laskua / päivä · säännöt muuttuvat hieman · väärä summa = vahinko · valvottavissa</text>
+<text x="124" y="196" font-size="18" fill="#5A6478">Toistuu · melko monimutkainen · korkea epäonnistumisen hinta</text>
+<rect x="74" y="224" width="812" height="92" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
+<g transform="translate(102,250)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="13" height="13" rx="3"/><rect x="2" y="22" width="13" height="13" rx="3"/><rect x="26" y="13" width="13" height="13" rx="3"/><path d="M15 9 H21 V19 H26 M15 29 H21 V20"/></g>
+<text x="160" y="266" font-size="24" font-weight="800" fill="#247A52">Työnkulku + ihmisen valvonta</text>
+<text x="160" y="298" font-size="18" fill="#3A4253">Agentti olisi ylimitoitettu, ellei laskumäärä tai monimutkaisuus kasva.</text>
+<g transform="translate(700,242)"><circle cx="56" cy="36" r="36" fill="#FFFFFF" stroke="#2F9E69" stroke-width="2"/><g transform="translate(40,18)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="7"/><path d="M3 35 a16 14 0 0 1 26 0"/></g></g>
+<text x="74" y="384" font-size="18" font-weight="700" fill="#5A6478">Kuuden kysymyksen vastaus</text>
+<rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="442" font-size="17" fill="#3A4253">Korkea virhehinta + valvonta mahdollista → automatisoi, mutta pidä ihminen mukana.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g9)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TILANNE 2/3</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Sähköpostien lajittelu</text>
+<g transform="translate(74,148)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="36" height="26" rx="4"/><path d="M3 8 L20 22 L37 8"/></g>
+<text x="124" y="170" font-size="16" fill="#3A4253">satoja viestejä / päivä · sama hakusana vuosittain · väärä kansio = helppo korjata</text>
+<text x="124" y="196" font-size="18" fill="#5A6478">Toistuu · yksinkertainen · staattiset säännöt · matala epäonnistumisen hinta</text>
+<rect x="74" y="224" width="812" height="92" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
+<g transform="translate(102,250)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="13" height="13" rx="3"/><rect x="2" y="22" width="13" height="13" rx="3"/><rect x="26" y="13" width="13" height="13" rx="3"/><path d="M15 9 H21 V19 H26 M15 29 H21 V20"/></g>
+<text x="160" y="266" font-size="24" font-weight="800" fill="#247A52">Yksinkertainen työnkulku</text>
+<text x="160" y="298" font-size="18" fill="#3A4253">Agentti olisi täysin ylimitoitettu ja turhan kallis.</text>
+<g transform="translate(700,242)"><circle cx="56" cy="36" r="36" fill="#FFFFFF" stroke="#2F9E69" stroke-width="2"/><path d="M40 36 l11 11 l21 -23" fill="none" stroke="#2F9E69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="74" y="384" font-size="18" font-weight="700" fill="#5A6478">Kuuden kysymyksen vastaus</text>
+<rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="442" font-size="17" fill="#3A4253">Yksinkertainen + staattiset säännöt + matala riski → halvin riittävä väline voittaa.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g10)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TILANNE 3/3</text>
+<text x="74" y="124" font-size="34" font-weight="800" fill="#1B2336">Asiakaspalvelupyyntöjen reititys</text>
+<g transform="translate(74,150)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20" r="6"/><path d="M16 20 H26 M26 12 V28 M26 12 H34 M26 28 H34"/><circle cx="38" cy="12" r="4"/><circle cx="38" cy="28" r="4"/></g>
+<text x="124" y="170" font-size="16" fill="#3A4253">50+ yhteydenottoa / päivä · prioriteetti, osaaminen ja kiire vaikuttavat</text>
+<text x="124" y="196" font-size="18" fill="#5A6478">Monimutkainen · muuttuvat säännöt · keskikorkea riski · valvonta mahdollista</text>
+<rect x="74" y="224" width="812" height="92" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<g transform="translate(100,246)"><rect x="0" y="2" width="30" height="26" rx="6" fill="none" stroke="#008799" stroke-width="2.2"/><line x1="15" y1="2" x2="15" y2="-4" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/><circle cx="15" cy="-7" r="3" fill="#008799"/><circle cx="10" cy="13" r="2.6" fill="#008799"/><circle cx="20" cy="13" r="2.6" fill="#008799"/><path d="M10 21 H20" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/></g>
+<text x="150" y="266" font-size="23" font-weight="800" fill="#006B7A">Aloita työnkululla, valmistaudu agenttiin</text>
+<text x="150" y="298" font-size="18" fill="#1B2336">Jos yritys kasvaa ja tiketit monimutkaistuvat, siirry agenttiin myöhemmin.</text>
+<text x="74" y="384" font-size="18" font-weight="700" fill="#5A6478">Kuuden kysymyksen vastaus</text>
+<rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="442" font-size="17" fill="#3A4253">Älä rakenna heti raskainta ratkaisua — kasva vasta, kun tarve sitä vaatii.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g11)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Monimutkaisuus on aina kustannus</text>
+<rect x="74" y="142" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="172" font-size="19" fill="#3A4253">Agentti ei ole "parempi työnkulku" — se on luonteeltaan erilainen ratkaisu.</text>
+<text x="100" y="198" font-size="19" fill="#5A6478">Kehitys viikoista kuukausiin · laaja testaus · jatkuva valvonta.</text>
+<text x="74" y="252" font-size="20" font-weight="700" fill="#1B2336">Kannattaako parannus hinnan?</text>
+<g transform="translate(74,272)">
+<rect x="0" y="0" width="390" height="196" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<rect x="30" y="40" width="80" height="90" rx="6" fill="#D8DEEC"/><rect x="130" y="34" width="80" height="96" rx="6" fill="#C2CAD9"/>
+<text x="70" y="150" text-anchor="middle" font-size="15" fill="#5A6478">työnkulku 80%</text>
+<text x="170" y="150" text-anchor="middle" font-size="15" fill="#5A6478">agentti 85%</text>
+<text x="240" y="74" font-size="17" font-weight="700" fill="#A35A22">+5 %-yks.</text>
+<text x="240" y="100" font-size="16" fill="#A35A22">mutta 10× hinta</text>
+<text x="20" y="182" font-size="14" fill="#A35A22" font-family="ui-monospace,monospace">→ usein ei kannata</text></g>
+<g transform="translate(496,272)">
+<rect x="0" y="0" width="390" height="196" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<rect x="30" y="96" width="80" height="34" rx="6" fill="#C2CAD9"/><rect x="130" y="32" width="80" height="98" rx="6" fill="#7FB89A"/>
+<text x="70" y="150" text-anchor="middle" font-size="15" fill="#5A6478">työnkulku 40%</text>
+<text x="170" y="150" text-anchor="middle" font-size="15" fill="#247A52">agentti 95%</text>
+<text x="240" y="74" font-size="17" font-weight="700" fill="#247A52">+55 %-yks.</text>
+<text x="240" y="100" font-size="16" fill="#247A52">selvä hyöty</text>
+<text x="20" y="182" font-size="14" fill="#247A52" font-family="ui-monospace,monospace">→ agentti järkevä</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miltä tämä näyttää n8n:ssä?</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Valinta on arkkitehtuuripäätös — ei pelkkä työkalupäätös.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="812" height="84" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<rect x="24" y="26" width="32" height="32" rx="8" fill="#EAF7F0" stroke="#2F9E69" stroke-width="2"/><circle cx="40" cy="42" r="6" fill="none" stroke="#2F9E69" stroke-width="2"/>
+<text x="76" y="40" font-size="21" font-weight="700" fill="#247A52">Promptaus</text>
+<text x="76" y="66" font-size="17" fill="#3A4253">Yksi AI Agent -solmu saa viestin ja vastaa. Muita solmuja ei tarvita.</text></g>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="812" height="84" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)"><rect x="0" y="6" width="18" height="18" rx="4" fill="#E5F6F7" stroke="#008799" stroke-width="2"/><path d="M18 15 H32" stroke="#008799" stroke-width="2"/><rect x="32" y="6" width="18" height="18" rx="4" fill="#E5F6F7" stroke="#008799" stroke-width="2"/></g>
+<text x="92" y="40" font-size="21" font-weight="700" fill="#006B7A">Työnkulku</text>
+<text x="92" y="66" font-size="17" fill="#3A4253">Email Trigger → IF-solmu (avainsana) → Slack. Sama syöte, sama tulos.</text></g>
+<g transform="translate(74,368)">
+<rect x="0" y="0" width="812" height="96" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<g transform="translate(28,30)"><rect x="0" y="2" width="30" height="26" rx="6" fill="none" stroke="#008799" stroke-width="2.2"/><line x1="15" y1="2" x2="15" y2="-4" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/><circle cx="15" cy="-7" r="3" fill="#008799"/><circle cx="10" cy="13" r="2.6" fill="#008799"/><circle cx="20" cy="13" r="2.6" fill="#008799"/><path d="M10 21 H20" stroke="#008799" stroke-width="2.2" stroke-linecap="round"/></g>
+<text x="92" y="42" font-size="21" font-weight="800" fill="#006B7A">Agentti</text>
+<text x="92" y="72" font-size="17" fill="#1B2336">AI Agent -solmulla on pääsy työkaluihin — se päättää itse, mitä käyttää.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l20g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l20g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="18" fill="#5A6478">Automatisointi on jatkumo, ei joko–tai. Älä valitse agenttia automaattisesti.</text>
+<text x="74" y="184" font-size="20" font-weight="700" fill="#1B2336">Kysy ensin kuusi kysymystä</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="222" r="6" fill="#008799"/><text x="118" y="228">Toistuuko tehtävä?</text>
+<rect x="494" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="222" r="6" fill="#008799"/><text x="538" y="228">Onko tehtävä monimutkainen?</text>
+<rect x="74" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="274" r="6" fill="#2F9E69"/><text x="118" y="280">Muuttuvatko säännöt?</text>
+<rect x="494" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="274" r="6" fill="#2F9E69"/><text x="538" y="280">Kuka maksaa?</text>
+<rect x="74" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="326" r="6" fill="#C79100"/><text x="118" y="332">Mitkä ovat epäonnistumisen kustannukset?</text>
+<rect x="494" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="326" r="6" fill="#C79100"/><text x="538" y="332">Onko valvonta mahdollista?</text>
+</g>
+<rect x="74" y="378" width="812" height="92" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,408)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="418" font-size="22" font-weight="800" fill="#247A52">Valitse aina yksinkertaisin ratkaisu, joka todella toimii.</text>
+<text x="150" y="448" font-size="18" fill="#3A4253">Työnkulku riittää usein hyvin — ja paljon pienemmillä kustannuksilla.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-19/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-21/">Seuraava →</a></div></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-20", "num": 20, "title": "Automaatio vai autonomia? — milloin agentti kannattaa", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

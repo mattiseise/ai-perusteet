@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projektidokumenttibotti — suunnittele ja aloita rakentaminen — Verkkokurssi — AI · Perusteet</title>
+<meta name="description" content="Projektidokumenttibotti — suunnittele ja aloita rakentaminen. Verkkokurssi, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-17/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 17/27</span></div><div class="lesson-title">Projektidokumenttibotti — suunnittele ja aloita rakentaminen</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 10 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-17/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-17/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Oppitunti 17 — Yhdistä rakennuspalikat ja aloita botin rakentaminen</h1>
+<h2>Mitä tällä tunnilla tapahtuu?</h2>
+<p>Tähän mennessä olet kerännyt kuuden tunnin aikana kolme <strong>rakennuspalikkaa</strong>. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa. Tämä on <strong>nivelkohta</strong>: siirryt suunnittelusta rakentamiseen.</p>
+<p>Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit <strong>siirtämään suunnitelman järjestelmäpromptiksi</strong>, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.</p>
+<h2>Mikä on järjestelmäprompti?</h2>
+<p><strong>Järjestelmäprompti</strong> on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy <em>kaikissa</em> keskusteluissa. Käyttäjä ei yleensä näe järjestelmäpromptia, mutta botti noudattaa sitä toiminnassaan.</p>
+<p>Voit ajatella järjestelmäpromptia botin <strong>työsopimuksena</strong>: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.</p>
+<p>Hyvä järjestelmäprompti vastaa neljään kysymykseen:</p>
+<ol>
+<li><strong>Kuka olet?</strong> Rooli ja persoona.</li>
+<li><strong>Mitä teet?</strong> Tehtävä ja työnkulku.</li>
+<li><strong>Miten puhut?</strong> Äänensävy ja tyyli.</li>
+<li><strong>Mitä et tee?</strong> Rajat ja kiellot.</li>
+</ol>
+<h2>Rakennuspalikat järjestelmäpromptiksi</h2>
+<p>Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:</p>
+<table>
+<thead>
+<tr>
+<th>Rakennuspalikka</th>
+<th>Mihin osaan järjestelmäpromptia?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1: Promptauspankki</strong></td>
+<td>Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa.</td>
+</tr>
+<tr>
+<td><strong>2: Botin määrittely</strong></td>
+<td>Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi.</td>
+</tr>
+<tr>
+<td><strong>3: Tietopohja</strong></td>
+<td>Asiantuntemus. Tietopohja ei ole osa järjestelmäpromptia, vaan se ladataan erikseen Copilotiin. Järjestelmäpromptissa voit kuitenkin viitata siihen esimerkiksi näin: <em>"Käytä tietopohjaan ladattuja dokumentteja referenssinä."</em></td>
+</tr>
+</tbody>
+</table>
+<h2>Esimerkki: rakennuspalikoista järjestelmäpromptiksi</h2>
+<p>Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muuttuu järjestelmäpromptiksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.</p>
+<h3>Botin määrittelyn sisältö eli rakennuspalikka 2</h3>
+<blockquote class="pause"><p><strong>Botin nimi:</strong> Treenikaveri<br />
+<strong>Kohderyhmä:</strong> Opiskelija, joka aloittaa salitreenin ja haluaa suunnitella oman viikko-ohjelman<br />
+<strong>Tarkoitus:</strong> Ohjata käyttäjää kokoamaan itselleen sopiva treeniviikko kuuden vaiheen kautta<br />
+<strong>Persoona:</strong> Kannustava, käytännönläheinen, kysyvä, ei jargonia<br />
+<strong>Työnkulku:</strong> 1) Tavoite → 2) Lähtötaso ja kokemus → 3) Käytettävissä olevat päivät → 4) Liikkeiden valinta → 5) Viikko-ohjelman kokoaminen → 6) Palautuminen ja seuranta<br />
+<strong>Rajat:</strong> Ei kirjoita ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, ei anna lääketieteellisiä neuvoja, ei käsittele muita aiheita kuin treenausta</p>
+</blockquote>
+<h3>Sama järjestelmäpromptina</h3>
+<blockquote class="pause"><p>Olet <strong>Treenikaveri</strong>. Autat opiskelijaa, joka aloittaa salitreenin, kokoamaan itselleen sopivan treeniviikon.</p>
+<p><strong>Työnkulkusi:</strong> Ohjaat käyttäjää aina järjestyksessä kuuden vaiheen läpi: (1) tavoite, (2) lähtötaso ja kokemus, (3) käytettävissä olevat päivät, (4) liikkeiden valinta, (5) viikko-ohjelman kokoaminen ja (6) palautuminen ja seuranta. Et siirry seuraavaan vaiheeseen ennen kuin nykyinen vaihe on käsitelty.</p>
+<p><strong>Tapasi puhua:</strong> Olet kannustava, käytännönläheinen ja kysyvä. Pyydät käyttäjältä konkreettisia vastauksia etkä hyväksy ympäripyöreitä vastauksia sellaisenaan. Et käytä vaikeaa jargonia. Käytät treenauksen omia termejä, kuten sarja, toisto, palautuminen ja viikko-ohjelma.</p>
+<p><strong>Et koskaan:</strong> kokoa ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, anna lääketieteellisiä neuvoja tai käsittele muita aiheita kuin treenausta. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti takaisin aiheeseen tai oikean asiantuntijan puoleen.</p>
+<p><strong>Tietopohja:</strong> Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.</p>
+</blockquote>
+<p>Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taas järjestelmäpromptissa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: <strong>kuvaileva määrittely muutetaan suoraksi ohjeeksi botille</strong>.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l17-wrap">
+    <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
+    <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
+    <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
+    <span class="l17-morph">kuvaileva → suora ohje</span>
+    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄPROMPTI</span>
+      <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
+      <span class="l17-line n2"><b>”Olet Treenikaveri.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
+      <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
+      <span class="l17-ready">✓ botti valmis testattavaksi</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
+<style>
+.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
+.l17-blk b{font-size:12px;color:#FFFFFF}
+.l17-blk span{font-size:10.5px;color:#B9C2DA}
+.l17-blk.b1{top:12px;animation:l17b1 18s infinite}
+.l17-blk.b2{top:96px;animation:l17b2 18s infinite}
+.l17-blk.b3{top:180px;animation:l17b3 18s infinite}
+@keyframes l17b1{0%,8%{transform:translateX(0);opacity:1}20%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b2{0%,28%{transform:translateX(0);opacity:1}40%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b3{0%,48%{transform:translateX(0);opacity:1}60%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 18s infinite}
+@keyframes l17morph{0%,30%{opacity:0}36%,60%{opacity:1}66%,100%{opacity:0}}
+.l17-bot{position:absolute;right:0;top:12px;width:268px;min-height:230px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:13px;padding:13px 15px}
+.l17-bhead{display:block;font-size:10.5px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:10px}
+.l17-line{display:block;font-size:11.5px;line-height:1.45;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-left:3px solid oklch(0.72 0.15 305);border-radius:8px;padding:7px 10px;margin-bottom:8px;opacity:0}
+.l17-line b{color:#FFFFFF}
+.l17-line.n1{animation:l17n1 18s infinite}
+.l17-line.n2{animation:l17n2 18s infinite}
+.l17-line.n3{animation:l17n3 18s infinite}
+@keyframes l17n1{0%,17%{opacity:0;transform:translateY(4px)}22%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n2{0%,37%{opacity:0;transform:translateY(4px)}42%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n3{0%,57%{opacity:0;transform:translateY(4px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 18s infinite}
+@keyframes l17ready{0%,70%{opacity:0;transform:scale(1.25)}76%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}
+.l17-line,.l17-ready,.l17-morph{opacity:1}}
+</style>
+
+<h2>Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa</h2>
+<p>Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:</p>
+<blockquote class="pause"><p>"Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäpromptia. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäpromptista:</p>
+<p>MÄÄRITTELY: [liitä rakennuspalikka 2]</p>
+<p>JÄRJESTELMÄPROMPTI, versio 1: [liitä oma promptisi]</p>
+<p>Auta minua arvioimaan: onko järjestelmäpromptissa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."</p>
+</blockquote>
+<h2>Copilot Agentin luominen</h2>
+<p>Microsoft Copilotissa voit luoda oman <strong>agentin</strong>, jolla on omat ohjeet ja tietopohja. Luo agentti näin:</p>
+<ol>
+<li>Avaa Copilot ja siirry <strong>Agents</strong> / <strong>Agentit</strong> -osioon.</li>
+<li>Luo uusi agentti. Anna sille sama nimi kuin määrittelydokumentissasi.</li>
+<li>Liitä järjestelmäpromptisi <strong>Instructions</strong> / <strong>Ohjeet</strong> -kenttään.</li>
+<li>Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan <strong>Knowledge</strong> / <strong>Tieto</strong>.</li>
+<li>Tallenna agentti ja aloita keskustelu.</li>
+</ol>
+<p>Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, kysy opettajalta tai etsi ohje hakemalla esimerkiksi <em>"Copilot agent create instructions"</em>.</p>
+<h2>Ensimmäinen testikeskustelu</h2>
+<p>Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä tapahtuu. Hyvä testaustapa etenee näin:</p>
+<ol>
+<li><strong>Keksi kuvitteellinen käyttötilanne omasta aiheestasi.</strong> Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.</li>
+<li><strong>Anna botin ohjata.</strong> Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.</li>
+<li><strong>Käy keskustelu loppuun.</strong> Tarkista, pääsetkö lopputulokseen, jota botin on tarkoitus auttaa tekemään.</li>
+<li><strong>Tallenna keskustelu</strong> kuvakaappauksina tai kopioituna tekstinä.</li>
+</ol>
+<h2>Mihin kiinnität huomiota testissä?</h2>
+<p><strong>Pysyykö botti roolissaan?</strong></p>
+<p>Vai unohtaako se, että se on oman aiheesi apuri, ja muuttuuko se yleiseksi avustajaksi?</p>
+<p><strong>Seuraako botti työnkulkua?</strong></p>
+<p>Vai hyppiikö se osasta toiseen sattumanvaraisesti?</p>
+<p><strong>Käyttääkö botti tietopohjaa?</strong></p>
+<p>Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset yleiseltä jargonilta?</p>
+<p><strong>Yrittääkö botti tehdä työn käyttäjän puolesta?</strong></p>
+<p>Jos pyydät sitä tekemään koko hommaa puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?</p>
+<h2>Korjauslista tunnille 18</h2>
+<p>Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa kaikkea tällä tunnilla, sillä tunti 18 on viimeistelyä varten. Esimerkkejä:</p>
+<ul>
+<li>"Botti hyppää vaiheen 2 ohi heti — työnkulun ohjetta pitää tarkentaa."</li>
+<li>"Botti käyttää englanninkielisiä termejä, vaikka sen pitäisi puhua suomeksi — lisää kielimääritelmä."</li>
+<li>"Botti antaa heti valmiita vastauksia kysymättä mitään — lisää ohje 'kysy ennen kuin ehdotat'."</li>
+</ul>
+<h2>Lopuksi</h2>
+<p>Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei vielä toimi täydellisesti. Sen ei ole tarkoituskaan olla valmis heti. <strong>Hyvä botti syntyy iteroinnista</strong>. Tällä tunnilla saat ensimmäisen version toimimaan, ja tunnilla 18 viimeistelet sen.</p>
+<p>Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.</p>
+<hr /></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Rakennuspalikoista toimivaksi botiksi</h1>
+<p>Tällä välilehdellä kertaat juuri lukemaasi ennen kuin alat rakentaa omaa bottiasi. Tällä tunnilla ei tule uutta teoriaa, vaan lämmittelet ja varmistat, että suunnitteluvalinnat ovat kirkkaina mielessä, kun siirryt Copilotiin. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät rakennuspalikoiden kertaamisesta kohti sitä, mihin kiinnität huomiota, kun testaat bottisi ensimmäistä versiota.</p>
+<h2>Tehtävä 1/3 — rakennuspalat</h2>
+<p>Kerrataan, mistä palasista botti kootaan, ennen kuin siirryt rakentamaan sitä.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/3 — suunnittelupäätökset</h2>
+<p>Kerrataan tunnin ratkaisevat suunnittelupäätökset. Valitse kussakin kysymyksessä vaihtoehto, joka pitää paikkansa.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/3 — ensimmäinen testi</h2>
+<p>Nyt siirryt analyysiin: luet pätkän botin ensimmäisestä testikeskustelusta ja etsit repliikit, jotka rikkovat botin omaa järjestelmäpromptia.</p>
+<div class="task-widget" data-ti="2"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto — Oma apuri-botti</h1>
+<h2>Botin suunnittelu</h2>
+<p><strong>Botin määrittely</strong> — Lyhyt kuvaus siitä, kenelle botti on, mitä se osaa, mitä se ei tee ja mitkä ovat sen rajat. Tämä on botin "perustamisasiakirja", josta järjestelmäprompti johdetaan. Älä sekoita tätä siihen, mitä botti auttaa käyttäjää tekemään — määrittely kertoo botista itsestään.</p>
+<p><strong>Kohderyhmä</strong> — Ne käyttäjät, joita varten botti on rakennettu. Esimerkiksi luokkakaverit, kerhon uudet jäsenet tai kirjaston asiakkaat. Kun tiedät kohderyhmän, osaat valita oikean kielen ja sisällön.</p>
+<p><strong>Työnkulku</strong> — Järjestys, jossa botti ohjaa käyttäjää vaiheesta toiseen. Selkeä työnkulku auttaa botin pysymään raiteilla eikä hyppimään satunnaisesti.</p>
+<p><strong>Rajat</strong> — Määritelmä siitä, mitä botti tekee ja mitä ei. Selkeät rajat estävät bottia leviämästä hallitsemattomasti tai vastaamasta asioihin, joihin sen ei kuulu vastata.</p>
+<p><strong>Tietopohja</strong> — Kokoelma dokumentteja, joista botti ammentaa oman aiheesi tietoa. Hyvä botti nojaa kuratoituun tietopohjaan, ei pelkkiin yleisiin oletuksiin.</p>
+<p><strong>Iterointi</strong> — Botin parantaminen testaamalla, korjaamalla ja testaamalla uudelleen. Hyvä botti syntyy iteroinnista, ei heti ensimmäisellä yrityksellä.</p>
+<h2>Custom GPT:t ja botit</h2>
+<p><strong>System prompt</strong> (järjestelmäprompti) — Pitkä, yksityiskohtainen ohjeistus, joka kerrotaan kielimallille botin alussa. Se määrittelee, kuka botti on, mitä se tekee ja miten se käyttäytyy. System prompt vaikuttaa kaikkiin botin vastauksiin.</p>
+<p><strong>Custom GPT</strong> — Mukautettu ChatGPT-versio, joka on konfiguroitu tiettyyn tarkoitukseen. Se voi sisältää system promptin, ohjeita, tiedostoja ja integraatioita.</p>
+<p><strong>Persona</strong> — Botin rooli tai persoona. Esimerkiksi: "Olet Python-tutori" tai "Olet asiakaspalvelun edustaja." Persona tekee botista uskottavan ja johdonmukaisen.</p>
+<p><strong>Context</strong> (konteksti) — Taustatieto, jonka botti käyttää ymmärtääkseen ja vastatakseen kysymyksiin. Esimerkiksi edellinen keskustelu tai dokumentit, jotka on syötetty bottiin.</p>
+<p><strong>Iteraatio</strong> — Prosessi, jossa testataan, parannetaan, testataan uudelleen ja parannetaan jälleen. Hyödylliset botit syntyvät iteraation kautta, ei heti täydellisesti ensimmäisellä kerralla.</p>
+<h2>Testaus</h2>
+<p><strong>Positiivinen testaus</strong> — Testataan asioita, joiden pitäisi toimia. Nähdään, vastaako botti oikein normaaleissa tilanteissa.</p>
+<p><strong>Negatiivinen testaus</strong> — Testataan asioita, joiden ei pitäisi toimia. Nähdään, kieltäytyykö botti asianmukaisesti ja suojaauko se itseään.</p>
+<p><strong>Reunatapaus</strong> (edge case) — Poikkeava tai odottamaton tilanne. Esimerkiksi: tyhjä syöte, vääränä kielellä kirjoitettu teksti, hyvin pitkä teksti. Reunatapaukset osoittavat, kuinka robust botti on.</p>
+<p><strong>Testidokumentti</strong> — Kirjallinen raportti testistä, joka sisältää: syöte, odotettava tulos, todellinen tulos ja analyysin.</p>
+<h2>Viestintä ja vuorovaikutus</h2>
+<p><strong>Vuorovaikutuksellinen</strong> — Kaksisuuntainen: käyttäjä kysyy, botti vastaa, käyttäjä kysyy lisää. Se ei ole yhdensuuntaista tiedon jakamista.</p>
+<p><strong>Täsmällisyys</strong> — Vastauksen oikeellisuus ja relevanssi. Botti, joka vastaa epätäsmällisesti, on hyödytön.</p>
+<p><strong>Muistinvaraus</strong> — Botin kyky muistaa aiempia vastauksia samassa keskustelussa. Hyvin suunniteltu botti ei kysy samaa asiaa kahdesti.</p>
+<p><strong>Validointi</strong> — Tarkistaminen, että tieto on oikein ennen sen käyttämistä. Esimerkiksi: "Ymmärsinkö oikein: treenaat kolmena päivänä viikossa ja tavoitteesi on parantaa kuntoa?"</p>
+<h2>Dokumentointi</h2>
+<p><strong>Dokumentaatio</strong> — Kirjallinen tai visuaalinen kuvaus siitä, miten jotain tehdään tai miten jokin toimii. Hyvä dokumentaatio auttaa muita ymmärtämään ja jatkamaan työtä.</p>
+<p><strong>Prosessin dokumentointi</strong> — Kuvaus kaikista askeista, joita otettiin ongelman ratkaisussa. Näytetään, mitä tehtiin, mitä saatiin ja mikä meni väärin.</p>
+<p><strong>Kommentti</strong> — Ohjelmakoodi tai dokumentissa oleva teksti, joka selittää, mitä seuraava rivi tai osio tekee. Kommentit auttavat sinua ja muita ymmärtämään logiikan.</p>
+<h2>Johtaminen ja rakentaminen</h2>
+<p><strong>Mentori</strong> — Kokenut henkilö, joka ohjaa ja opastaa muita. Apuri-botti toimii mentorina, joka esittää oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin.</p>
+<p><strong>Kalibrointi</strong> — Säätäminen oikealle tasolle. Esimerkiksi: ovatko botin kysymykset liian yksinkertaiset vai liian monimutkaiset? Kalibrointi paranee testaamalla.</p>
+<p><strong>Feedback</strong> — Palaute. Käyttäjän mielipide siitä, kuinka hyvin botti toimi. Feedback auttaa parantamaan bottia.</p>
+<hr />
+<p>Muista, että nämä käsitteet eivät ole isoloituja — ne linkittyvät toisiinsa. Hyvä system prompt johtaa hyödylliseen bottiin, jota voidaan testata, dokumentoida ja parantaa iteraation kautta.</p>
+<hr /></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-16/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-18/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-17')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "kurssi", "lid": "lesson-17", "num": 17, "title": "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", "ptasks": [{"type": "match", "title": "Rakennuspalat paikoilleen", "intro": "Kerrataan, mistä palasista botti kootaan, ennen kuin siirryt rakentamaan sitä Copilotissa. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Järjestelmäprompti", "b": "Ohje, joka määrää botin käytöksen kaikissa keskusteluissa; käyttäjä ei sitä yleensä näe.", "explain": "Se on botin työsopimus: kuka botti on, mitä se tekee ja missä sen rajat kulkevat — ja se ohjaa kaikkia vastauksia."}, {"a": "Rakennuspalikka 1 (promptauspankki)", "b": "Tuo pääohjeeseen toimivan tyylin ja kielen.", "explain": "Aiemmin hyväksi havaitut muotoilut antavat pääohjeen tyylin ja sanavalinnat."}, {"a": "Rakennuspalikka 2 (botin määrittely)", "b": "Antaa sisällön: kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat.", "explain": "Nämä kuusi osaa muuttuvat suoraan pääohjeen kappaleiksi."}, {"a": "Rakennuspalikka 3 (tietopohja)", "b": "Ladataan ympäristöön erikseen omana aineistonaan; ei kuulu itse pääohjeeseen, mutta siihen voi viitata.", "explain": "Antaa botin asiantuntemuksen 3–5 dokumenttina; pääohjeessa voi sanoa 'käytä ladattuja dokumentteja viitteenä'."}, {"a": "Nivelkohta", "b": "Siirtymä suunnittelusta rakentamiseen.", "explain": "Tällä tunnilla suunnitelmat muuttuvat botin ensimmäiseksi toimivaksi versioksi."}, {"a": "Iterointi", "b": "Toistuva parantaminen testaamalla, korjaamalla ja testaamalla uudelleen.", "explain": "Hyvä botti ei synny kerralla; ensimmäinen versio on aina raaka."}, {"a": "Copilot Agent", "b": "Microsoftin ympäristö, johon syötät pääohjeen (Ohjeet/Instructions) ja lataat dokumentit (Tieto/Knowledge).", "explain": "Anna sille määrittelydokumentin nimi; pääohje menee Ohjeet-kenttään ja tietopohja Tieto-kenttään."}], "summary": "Botti kootaan kolmesta rakennuspalikasta yhdeksi järjestelmäpromptiksi: tyyli, sisältö ja viittaus asiantuntemukseen. Prompti syötetään Copilot Agentin ohjeisiin ja tietopohja ladataan erikseen. Hyvä botti syntyy iteroinnista."}, {"type": "quiz", "title": "Suunnittelupäätökset kuntoon", "intro": "Kerrataan neljä ratkaisevaa suunnittelupäätöstä juuri ennen kuin rakennat botin. Valitse kussakin kysymyksessä vaihtoehto, joka pitää paikkansa.", "items": [{"q": "Miksi botille kirjoitetaan huolellinen järjestelmäprompti eikä vain ohje 'kysy käyttäjältä ja auta'?", "options": [{"text": "Ilman ohjeita kielimalli ei tiedä, kuka se on, mitä sen pitää tehdä, missä järjestyksessä ja mitä se ei saa tehdä — silloin se arvaa.", "correct": true, "explain": "Hyvä järjestelmäprompti vastaa neljään kysymykseen: kuka olet, mitä teet, miten puhut ja mitä et tee."}, {"text": "Järjestelmäprompti ei juuri vaikuta; botti osaa toimia oikein ilmankin.", "correct": false, "explain": "Ilman promptia botti jää yleiseksi avustajaksi ja arvaa; järjestelmäprompti ohjaa kaikkia sen vastauksia."}, {"text": "Riittää, että promptissa lukee 'vastaa hyvin ja ole avulias'.", "correct": false, "explain": "Liian yleinen ohje ei kerro roolia, työnkulkua eikä rajoja, joten botti jää arvaamisen varaan."}]}, {"q": "Määrittelyssäsi lukee 'Botin nimi: Kassa-apuri, tarkoitus: auttaa uutta myyjää'. Miten tämä kirjoitetaan järjestelmäpromptiin?", "options": [{"text": "Puhuttele bottia suoraan: 'Olet Kassa-apuri. Autat uutta myyjää…'.", "correct": true, "explain": "Tärkein muunnos on kuvailevasta määrittelystä suoraksi ohjeeksi: 'Olet…', 'Työnkulkusi…', 'Et koskaan…'."}, {"text": "Kopioi määrittely sellaisenaan; kuvaileva muoto riittää botille.", "correct": false, "explain": "Kuvaileva 'Botin nimi: X' pitää muuttaa suoraksi ohjeeksi 'Olet X', jotta botti ottaa roolin."}, {"text": "Jätä nimi ja tarkoitus pois, koska botti keksii ne itse.", "correct": false, "explain": "Botti ei keksi rooliaan itse; identiteetti ja tarkoitus kirjoitetaan promptiin selkeästi."}]}, {"q": "Mihin botin tietopohjan dokumentit tulevat?", "options": [{"text": "Ne ladataan Copilotiin erikseen (Tieto/Knowledge); järjestelmäpromptiin voi vain viitata niihin.", "correct": true, "explain": "Tietopohja ei ole osa promptia; promptissa voi sanoa esimerkiksi 'käytä ladattuja dokumentteja viitteenä'."}, {"text": "Ne kopioidaan kokonaan järjestelmäpromptin sisään.", "correct": false, "explain": "Tietopohja ladataan erikseen omana aineistonaan; promptiin se ei kuulu, siihen vain viitataan."}, {"text": "Botti hakee ne itse internetistä, joten niitä ei tarvitse ladata.", "correct": false, "explain": "Botti käyttää juuri sinun lataamiasi dokumentteja asiantuntemuksena, ei vapaasti internetiä."}]}, {"q": "Pyydät tekoälyä auttamaan järjestelmäpromptin viimeistelyssä. Miten käytät sitä oikein?", "options": [{"text": "Pyydät 2–3 konkreettista parannusehdotusta ja teet lopulliset muutokset itse.", "correct": true, "explain": "Sinä vastaat siitä, että rakennuspalikoiden ydin näkyy botissa; tekoäly on sparrauskumppani, ei päätöstesi korvaaja."}, {"text": "Annat tekoälyn kirjoittaa koko promptin puolestasi ja käytät sen sellaisenaan.", "correct": false, "explain": "Tekoäly auttaa arvioimaan ja ehdottamaan, mutta lopulliset päätökset ja vastuu ovat sinulla."}, {"text": "Et käytä tekoälyä lainkaan, koska prompti pitää keksiä täysin itse.", "correct": false, "explain": "Tekoälyn käyttö viimeistelyyn on juuri suositeltu tapa; tavoite on osata ohjata sitä ja tehdä omat päätökset, ei tehdä kaikkea yksin."}]}], "summary": "Hyvä botti tarvitsee täsmällisen järjestelmäpromptin (neljä kysymystä), kuvailevan määrittelyn muuttamisen suoraksi ohjeeksi, tietopohjan lataamisen erikseen ja tekoälyn käytön sparrauskumppanina niin, että lopulliset päätökset ovat sinun."}, {"type": "spot", "title": "Testaa ensimmäinen versio", "intro": "Alla on pätkä uuden apuribotin ensimmäisestä testikeskustelusta. Botin järjestelmäprompti on tiivistettynä tämä: 'Olet Kahvila-apuri. Ohjaat uutta työntekijää valmistautumaan ensimmäiseen työvuoroon vaihe vaiheelta järjestyksessä. Käytät kahvilan omia ohjeita eli tietopohjaa. Et tee valintoja käyttäjän puolesta kysymättä etkä neuvo muissa aiheissa.' Napauta ne botin repliikit, jotka rikkovat tätä promptia — niistä tulee korjauslistasi tuntia 18 varten — ja paina Tarkista.", "segments": [{"text": "Hei! Olen Kahvila-apuri ja autan sinua valmistautumaan ensimmäiseen työvuoroosi. Aloitetaan tavoitteesta: mitä toivot vuorolta?", "flag": false, "explain": "Botti pysyy roolissaan ja aloittaa työnkulun ensimmäisestä vaiheesta — juuri näin sen kuuluu toimia; tämä kohta oli kunnossa."}, {"text": "Hyvä. Kysytään seuraavaksi lähtötilanteesi: oletko tehnyt kahvilatyötä aiemmin?", "flag": false, "explain": "Botti etenee työnkulussa loogisesti seuraavaan vaiheeseen — tämä kohta oli kunnossa."}, {"text": "Ohitetaan loput kysymykset ja hypätään suoraan lopputulokseen, se on nopeampaa.", "flag": true, "explain": "Botin pitäisi ohjata vaiheet järjestyksessä; vaiheiden ohittaminen rikkoo työnkulun (testikysymys: seuraako botti työnkulkua?). Kirjaa korjauslistaan, että työnkulun ohjetta pitää tarkentaa."}, {"text": "Tein jo puolestasi valmiin valmistautumislistan, joten sinun ei tarvitse valita mitään itse.", "flag": true, "explain": "Promptin mukaan botti ei saa tehdä valintoja käyttäjän puolesta kysymättä — rajaus murtuu (testikysymys: yrittääkö botti tehdä työn käyttäjän puolesta?). Kirjaa korjattavaksi ohje 'kysy ennen kuin ehdotat'."}, {"text": "Yleisesti ottaen hyvä työntekijä on täsmällinen ja ystävällinen — se pätee kaikkiin töihin.", "flag": true, "explain": "Vastaus on yleistä jargonia eikä nojaa kahvilan omiin ohjeisiin; niistä ei tunnista oman aiheen termejä (testikysymys: käyttääkö botti tietopohjaa?). Kirjaa, että promptin pitää ohjata käyttämään ladattuja dokumentteja."}, {"text": "Voisin muuten auttaa sinua vaikka tekemään veroilmoituksen, jos haluat.", "flag": true, "explain": "Botti karkaa oman aiheensa ulkopuolelle yleiseksi avustajaksi; rajaus 'ei muita aiheita' ei pidä (testikysymys: pysyykö botti roolissaan?). Kirjaa korjattavaksi."}, {"text": "Kahvilan ohjeen mukaan aamuvuoro alkaa kassan ja kahvinkeittimen valmistelulla — käydään ne läpi järjestyksessä.", "flag": false, "explain": "Botti nojaa kahvilan omiin ohjeisiin eli tietopohjaan ja pysyy työnkulussa — juuri näin sen kuuluu toimia; tämä kohta oli kunnossa."}, {"text": "En anna neuvoja työterveysasioissa, vaan ohjaan sinut esihenkilölle — keskitytään vuoroon valmistautumiseen.", "flag": false, "explain": "Botti tunnistaa rajansa ja pysyy aiheessa — promptin rajaus pitää; tämä kohta oli kunnossa."}], "summary": "Ensimmäinen versio on aina raaka. Testin tehtävä on paljastaa, missä botti karkaa roolistaan, hyppii työnkulussa, unohtaa tietopohjan tai tekee työn käyttäjän puolesta. Löydetyt ongelmat eivät ole epäonnistumisia vaan korjauslista tuntia 18 varten — hyvä botti syntyy iteroinnista."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

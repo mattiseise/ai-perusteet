@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lopputyö — Agentit — Verkkokurssi</title>
+<meta name="description" content="Agentit-osion lopputyön tehtävänanto. Verkkokurssi.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/agentit/lopputyo/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<section class="page-hero"><div class="page-hero-inner"><div class="eyebrow"><a class="bc-link" href="/kurssi/" style="color:var(--blue)">Verkkokurssi</a> · Agentit</div><h1>★ Osion lopputyö</h1><p>Agentit — Tekoälyagentit ja automaatio.</p></div></section><div class="page-body"><div class="reading panel"><h1>Agentit-osion lopputyö — n8n-agentin rakentaminen</h1>
+<blockquote class="pause"><p>Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun kerää <strong>⭐️ Agentti -pohjapiirroksiasi</strong> ja rakennat lopulta valmista agenttia.</p>
+</blockquote>
+<p><strong>Tärkein viesti heti alkuun:</strong> rakennat <strong>hyvin yksinkertaisen agentin</strong> (3–5 solmua). Emme tavoittele mitään monimutkaista — pieni, toimiva agentti, jonka ymmärrät, on koko tehtävän tavoite.</p>
+<figure style="margin:24px 0;text-align:center">
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Mitä rakennat: yksinkertainen agentti</title>
+  <desc>Tavoite on pieni, toimiva agentti, jossa on 3–5 solmua: käynnistys, agentti yhdellä kielimallilla ja 1–2 työkalulla, sekä lopputulos. Ei monimutkaista järjestelmää.</desc>
+  <defs>
+    <g id="smp-bolt" fill="none" stroke="currentColor"><path d="M13 2 L5 13.5 H11 L10.5 22 L19 9.5 H12.5 Z" fill="currentColor"/></g>
+    <g id="smp-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
+    <g id="smp-check" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.2 l2.8 2.8 l5.6-6.2"/></g>
+    <g id="smp-x" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8.7 8.7 L15.3 15.3 M15.3 8.7 L8.7 15.3"/></g>
+    <g id="smp-bulb" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18 H14.5 M10.5 21 H13.5"/><path d="M12 3 a6 6 0 0 1 4 10.3 c-0.8 0.8 -1 1.7 -1 2.7 H9 c0 -1 -0.2 -1.9 -1 -2.7 A6 6 0 0 1 12 3 Z"/></g>
+  </defs>
+  <rect x="0" y="0" width="880" height="470" rx="16" fill="#FAFBFE"/>
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2336">Mitä rakennat: yksinkertainen agentti</text>
+  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#5A6478">Tavoite on pieni, toimiva agentti — ei monimutkainen järjestelmä.</text>
+  <rect x="28" y="88" width="224" height="80" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#smp-bolt" x="44" y="104" width="20" height="20" style="color:#2F9E69"/>
+  <text x="72" y="118" font-size="13.5" font-weight="700" fill="#247A52">Käynnistys</text>
+  <text x="44" y="150" font-size="11.5" fill="#3A4253">esim. sähköposti saapuu</text>
+  <line x1="252" y1="128" x2="276" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M280 128 L270 122.5 L270 133.5 Z" fill="#9AA6BD"/>
+  <rect x="300" y="88" width="280" height="80" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+  <use href="#smp-robot" x="316" y="102" width="22" height="22" style="color:#3B5BDB"/>
+  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Agentti</text>
+  <text x="316" y="150" font-size="11.5" fill="#3A4253">1 kielimalli + 1–2 työkalua</text>
+  <line x1="580" y1="128" x2="604" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M608 128 L598 122.5 L598 133.5 Z" fill="#9AA6BD"/>
+  <rect x="628" y="88" width="224" height="80" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+  <use href="#smp-check" x="644" y="104" width="20" height="20" style="color:#0E9AA7"/>
+  <text x="672" y="118" font-size="13.5" font-weight="700" fill="#0B7E89">Lopputulos</text>
+  <text x="644" y="150" font-size="11.5" fill="#3A4253">esim. tallennettu vastaus</text>
+  <text x="440" y="196" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1B2336">Yhteensä 3–5 solmua.</text>
+  <rect x="28" y="216" width="824" height="58" rx="11" fill="#F0F9F4" stroke="#BFE6CF" stroke-width="1.4"/>
+  <use href="#smp-check" x="48" y="232" width="22" height="22" style="color:#2F9E69"/>
+  <text x="82" y="242" font-size="12.5" font-weight="700" fill="#247A52">Tähän pyritään</text>
+  <text x="82" y="262" font-size="12.5" fill="#3A4253">Yksinkertainen, toimiva agentti (3–5 solmua), jonka ymmärrät ja jonka rajat tunnistat.</text>
+  <rect x="28" y="286" width="824" height="58" rx="11" fill="#FBEEEE" stroke="#F0C9C9" stroke-width="1.4"/>
+  <use href="#smp-x" x="48" y="302" width="22" height="22" style="color:#C0453E"/>
+  <text x="82" y="312" font-size="12.5" font-weight="700" fill="#B5403A">Tätä ei tavoitella</text>
+  <text x="82" y="332" font-size="12.5" fill="#3A4253">Monimutkainen järjestelmä, kymmeniä solmuja tai moniagenttiverkko — ei tarvita tässä.</text>
+  <rect x="28" y="362" width="824" height="82" rx="12" fill="#FFFBEC" stroke="#F2D98E" stroke-width="1.5"/>
+  <use href="#smp-bulb" x="48" y="386" width="24" height="24" style="color:#C79100"/>
+  <text x="86" y="394" font-size="13" font-weight="700" fill="#8A6A00">Muista</text>
+  <text x="86" y="415" font-size="12.5" fill="#5A4A1E">Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et</text>
+  <text x="86" y="433" font-size="12.5" fill="#5A4A1E">ymmärrä. Jos aika loppuu, leikkaa scope ja pidä agentti yksinkertaisena.</text>
+</svg>
+<figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Tavoitteena on yksinkertainen, toimiva agentti (3–5 solmua) — ei monimutkainen järjestelmä.</figcaption>
+</figure>
+
+<h2>Mitä rakennat?</h2>
+<p>Rakennat <strong>n8n-pohjaisen agentin</strong>, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu <strong>3–5 solmusta</strong>, jotka yhdessä muodostavat toimivan, ohjatun ja turvallisen työnkulun.</p>
+<p><strong>Esimerkkejä mahdollisista agentteista:</strong></p>
+<ul>
+<li>Päivittäinen sähköpostien luokittelija ja yhteenvetäjä</li>
+<li>Asiakaspalvelun FAQ-botti, joka hakee vastauksia tietokannasta</li>
+<li>Sosiaalisen median seurantarobotti</li>
+<li>Palvelinlokien analysaattori, joka ilmoittaa virheistä</li>
+<li>Asiakkaiden tikettien luokittelija ja jakaja</li>
+</ul>
+<p><strong>Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.</strong> 3–5 solmua riittää. Tärkeintä on, että agentti on <strong>autonominen</strong>: se tekee päätöksiä tilanteen mukaan, käyttää työkalua tai paria ja toimii itsenäisesti. Pieni agentti, jonka ymmärrät ja jonka rajat tunnistat, on tavoite.</p>
+<h2>Polku alusta loppuun</h2>
+<p>Lopputyö rakentuu yhdeksän tunnin aikana. Joka tunti tuottaa konkreettisen palan, joka päätyy lopulliseen agenttiisi.</p>
+<table>
+<thead>
+<tr>
+<th>Tunti</th>
+<th>Mitä teet</th>
+<th>Mitä syntyy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>19</strong></td>
+<td>Valitset ongelman ja perustelet, miksi agentti sopii</td>
+<td>⭐️ Agentti: Ongelma (1/5)</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td>Tarkistat, että ratkaisu vaatii todella agentin</td>
+<td>Päätösharjoittelu</td>
+</tr>
+<tr>
+<td><strong>21</strong></td>
+<td>Suunnittelet muistirakenteen ja identiteetin</td>
+<td>⭐️ Agentti: Muisti (2/5)</td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td>Valitset työkalut (n8n-solmut)</td>
+<td>Työkalulista</td>
+</tr>
+<tr>
+<td><strong>23</strong></td>
+<td>Valitset päättelymallin (ReAct vai ketjuajattelu)</td>
+<td>⭐️ Agentti: Päättely (3/5)</td>
+</tr>
+<tr>
+<td><strong>24</strong></td>
+<td>Suunnittelet turvakerroksen</td>
+<td>⭐️ Agentti: Turva (4/5)</td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td>Suunnittelet ihmisen roolin (hyväksyntäportit)</td>
+<td>⭐️ Agentti: Ihminen (5/5)</td>
+</tr>
+<tr>
+<td><strong>26</strong></td>
+<td>Kasaa pohjapiirrokset, tutustut n8n:ään, rakennat minimiversion</td>
+<td>Toimiva minimiagentti</td>
+</tr>
+<tr>
+<td><strong>27</strong></td>
+<td>Viimeistelet, testaat, dokumentoit, esittelet</td>
+<td>Valmis lopputyö</td>
+</tr>
+</tbody>
+</table>
+<h2>Viisi ⭐️ Agentti -pohjapiirrosta</h2>
+<p>Pohjapiirrokset ovat suunnitelmadokumentteja, joita kerätä omaan muistiinpanodokumenttiisi. Yhdessä ne muodostavat <strong>kattavan suunnitelman</strong>, jonka pohjalta rakennat n8n-työnkulun.</p>
+<p><strong>1. ⭐️ Agentti: Ongelma (tunti 19)</strong><br />
+Mikä ongelma on kyseessä, kenelle se on, miksi juuri agentti sopii ratkaisuksi. 150–200 sanaa.</p>
+<p><strong>2. ⭐️ Agentti: Muisti (tunti 21)</strong><br />
+Lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.</p>
+<p><strong>3. ⭐️ Agentti: Päättely (tunti 23)</strong><br />
+ReAct vai ketjuajattelu — kumpi sopii agenttisi ongelmaan ja miksi. Miten päättelymalli näkyy n8n-rakenteessa. 150–200 sanaa.</p>
+<p><strong>4. ⭐️ Agentti: Turva (tunti 24)</strong><br />
+Minimioikeusperiaate, suurimmat riskit, turvakerroksen neljä tasoa (validointi, rajoitus, seuranta, palautuminen), lokitus. 150–200 sanaa.</p>
+<p><strong>5. ⭐️ Agentti: Ihminen (tunti 25)</strong><br />
+Missä kohdissa ihmisen täytyy hyväksyä, millainen hyväksyntäportti on, mitä tapahtuu jos ihminen ei vastaa. 150–200 sanaa.</p>
+<h2>Lopputuotoksen vaatimukset</h2>
+<p>Palauta Itslearningiin yhtenä pakettina:</p>
+<ol>
+<li><strong>Linkki n8n-työnkulkuusi</strong> tai vientitiedosto (JSON)</li>
+<li><strong>Koottu suunnitelma</strong> — viisi ⭐️ Agentti -pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi</li>
+<li><strong>Kolme lyhyttä dokumenttia</strong> (½–1 sivu kukin):</li>
+<li><strong>README</strong> — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset</li>
+<li><strong>ARCHITECTURE</strong> — jokainen n8n-solmu järjestyksessä, mitä se tekee, miten ne linkittyvät agentin kuuteen komponenttiin</li>
+<li><strong>SAFETY</strong> — pahimmat riskit, miten ne torjuttiin, lokitus, human-in-the-loop -kohdat</li>
+<li><strong>Testiraportti</strong> — 15 testitapausta (5 normaalia, 5 reunatapausta, 5 turvallisuustestiä)</li>
+<li><strong>Demo luokassa</strong> (3–5 min) tai nauhoitettuna videona</li>
+<li><strong>Itsearviointi</strong> (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat</li>
+<li><strong>Vertaisarviomuistio</strong> — toiselta opiskelijalta saatu palaute (tai AI-pohjainen kriittinen arvio jos teet työn yksin)</li>
+</ol>
+<h2>Työkalut ja työskentelytapa</h2>
+<p><strong>Alusta:</strong> n8n.</p>
+<p><strong>Tekoälyapu:</strong> Voit käyttää vapaasti ChatGPT:tä, Claudea tai Copilotia sparrauskumppanina ja suunnittelun tarkistamiseen. Älä anna tekoälyn päättää puolestasi — käytä sitä kyseenalaistamiseen ja näkökulmien laajentamiseen.</p>
+<p><strong>Työskentelytapa:</strong> Voit tehdä lopputyön <strong>yksin tai parin kanssa</strong>. Jos teet parin kanssa, jakakaa työ niin, että molemmat ymmärtävät koko agentin. Vertaisarvio tehdään aina toisen tiimin tai parin kanssa.</p>
+<h2>Arviointi</h2>
+<p>Lopputyö arvioidaan viidellä osa-alueella (yhteensä 100 pistettä):</p>
+<table>
+<thead>
+<tr>
+<th>Osa-alue</th>
+<th>Pisteet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toimiva n8n-työnkulku</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Turvallisuus (turvakerros, lokitus, riskien tunnistaminen)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Dokumentaatio (README, ARCHITECTURE, SAFETY)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Testaus (testiraportin kattavuus ja syvyys)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Itsearviointi ja demo</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hyvä lopputyö</strong> ei ole täydellinen — se on <strong>rehellinen ja perusteltu</strong>. Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et ymmärrä.</p>
+<h2>Aikabudjetti — näin paljon työtä kannattaa varata</h2>
+<p>Tämä aikabudjetti näkyy vain tässä tehtävänannossa, ei yksittäisten tuntien tehtävissä. Tämä on tietoinen pedagoginen valinta — sinun ei tarvitse stressata yksittäisten tehtävien kestosta, vaan kokonaisuudesta.</p>
+<table>
+<thead>
+<tr>
+<th>Vaihe</th>
+<th>Aika (yksin)</th>
+<th>Aika (parin kanssa)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pohjapiirrokset 1–5 (tunnit 19, 21, 23, 24, 25)</td>
+<td>~30 min / tunti</td>
+<td>~30 min / tunti</td>
+</tr>
+<tr>
+<td>Välitunnit (20, 22) — sparrausharjoittelua</td>
+<td>~20 min / tunti</td>
+<td>~20 min / tunti</td>
+</tr>
+<tr>
+<td>Tunti 26 — kasaus, n8n-tutustuminen, minimiversio</td>
+<td>60–90 min</td>
+<td>45–60 min</td>
+</tr>
+<tr>
+<td>Tunti 27 — viimeistely, testaus, dokumentointi, demo</td>
+<td>90–120 min</td>
+<td>60–90 min</td>
+</tr>
+<tr>
+<td><strong>Yhteensä</strong></td>
+<td><strong>~5–7 h</strong></td>
+<td><strong>~4–5 h</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Jos jossain vaiheessa tuntuu, että et ehdi — <strong>leikkaa scope</strong>. Yksinkertaisempi mutta toimiva agentti on parempi kuin monimutkainen mutta keskeneräinen.</p>
+<h2>Hyvä alku</h2>
+<ol>
+<li>Lue tämä tehtävänanto kokonaan.</li>
+<li>Selaa tuntien 19–27 otsikot ja saa kokonaiskuva polusta.</li>
+<li>Aloita rauhassa: tunnilla 19 tärkein päätös on <strong>valita oikea ongelma</strong>. Älä jää jumiin perfektionismiin — voit tarkentaa ongelmaa myöhemmin.</li>
+<li>Pidä <strong>muistiinpanodokumenttia</strong> mukana joka tunti. Sinne kerätä pohjapiirroksesi.</li>
+</ol>
+<hr />
+<p><strong>Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko <em>rakentaa</em> sillä jotain mitä joku muu voi käyttää.</strong></p></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

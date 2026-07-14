@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projektidokumenttibotti — suunnittele ja aloita rakentaminen — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Projektidokumenttibotti — suunnittele ja aloita rakentaminen. Luokkaversio, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-17/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 17</span></div><div class="lesson-title">Projektidokumenttibotti — suunnittele ja aloita rakentaminen</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-17/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-17/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Oppitunti 17 — Yhdistä rakennuspalikat ja aloita botin rakentaminen</h1>
+<h2>Mitä tällä tunnilla tapahtuu?</h2>
+<p>Tähän mennessä olet kerännyt kuuden tunnin aikana kolme <strong>rakennuspalikkaa</strong>. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa. Tämä on <strong>nivelkohta</strong>: siirryt suunnittelusta rakentamiseen.</p>
+<p>Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit <strong>siirtämään suunnitelman järjestelmäpromptiksi</strong>, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.</p>
+<h2>Mikä on järjestelmäprompti?</h2>
+<p><strong>Järjestelmäprompti</strong> on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy <em>kaikissa</em> keskusteluissa. Käyttäjä ei yleensä näe järjestelmäpromptia, mutta botti noudattaa sitä toiminnassaan.</p>
+<p>Voit ajatella järjestelmäpromptia botin <strong>työsopimuksena</strong>: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.</p>
+<p>Hyvä järjestelmäprompti vastaa neljään kysymykseen:</p>
+<ol>
+<li><strong>Kuka olet?</strong> Rooli ja persoona.</li>
+<li><strong>Mitä teet?</strong> Tehtävä ja työnkulku.</li>
+<li><strong>Miten puhut?</strong> Äänensävy ja tyyli.</li>
+<li><strong>Mitä et tee?</strong> Rajat ja kiellot.</li>
+</ol>
+<h2>Rakennuspalikat järjestelmäpromptiksi</h2>
+<p>Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:</p>
+<table>
+<thead>
+<tr>
+<th>Rakennuspalikka</th>
+<th>Mihin osaan järjestelmäpromptia?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1: Promptauspankki</strong></td>
+<td>Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa.</td>
+</tr>
+<tr>
+<td><strong>2: Botin määrittely</strong></td>
+<td>Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi.</td>
+</tr>
+<tr>
+<td><strong>3: Tietopohja</strong></td>
+<td>Asiantuntemus. Tietopohja ei ole osa järjestelmäpromptia, vaan se ladataan erikseen Copilotiin. Järjestelmäpromptissa voit kuitenkin viitata siihen esimerkiksi näin: <em>"Käytä tietopohjaan ladattuja dokumentteja referenssinä."</em></td>
+</tr>
+</tbody>
+</table>
+<h2>Esimerkki: rakennuspalikoista järjestelmäpromptiksi</h2>
+<p>Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muuttuu järjestelmäpromptiksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.</p>
+<h3>Botin määrittelyn sisältö eli rakennuspalikka 2</h3>
+<blockquote class="pause"><p><strong>Botin nimi:</strong> Treenikaveri<br />
+<strong>Kohderyhmä:</strong> Opiskelija, joka aloittaa salitreenin ja haluaa suunnitella oman viikko-ohjelman<br />
+<strong>Tarkoitus:</strong> Ohjata käyttäjää kokoamaan itselleen sopiva treeniviikko kuuden vaiheen kautta<br />
+<strong>Persoona:</strong> Kannustava, käytännönläheinen, kysyvä, ei jargonia<br />
+<strong>Työnkulku:</strong> 1) Tavoite → 2) Lähtötaso ja kokemus → 3) Käytettävissä olevat päivät → 4) Liikkeiden valinta → 5) Viikko-ohjelman kokoaminen → 6) Palautuminen ja seuranta<br />
+<strong>Rajat:</strong> Ei kirjoita ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, ei anna lääketieteellisiä neuvoja, ei käsittele muita aiheita kuin treenausta</p>
+</blockquote>
+<h3>Sama järjestelmäpromptina</h3>
+<blockquote class="pause"><p>Olet <strong>Treenikaveri</strong>. Autat opiskelijaa, joka aloittaa salitreenin, kokoamaan itselleen sopivan treeniviikon.</p>
+<p><strong>Työnkulkusi:</strong> Ohjaat käyttäjää aina järjestyksessä kuuden vaiheen läpi: (1) tavoite, (2) lähtötaso ja kokemus, (3) käytettävissä olevat päivät, (4) liikkeiden valinta, (5) viikko-ohjelman kokoaminen ja (6) palautuminen ja seuranta. Et siirry seuraavaan vaiheeseen ennen kuin nykyinen vaihe on käsitelty.</p>
+<p><strong>Tapasi puhua:</strong> Olet kannustava, käytännönläheinen ja kysyvä. Pyydät käyttäjältä konkreettisia vastauksia etkä hyväksy ympäripyöreitä vastauksia sellaisenaan. Et käytä vaikeaa jargonia. Käytät treenauksen omia termejä, kuten sarja, toisto, palautuminen ja viikko-ohjelma.</p>
+<p><strong>Et koskaan:</strong> kokoa ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, anna lääketieteellisiä neuvoja tai käsittele muita aiheita kuin treenausta. Jos käyttäjä pyytää näitä, ohjaa hänet ystävällisesti takaisin aiheeseen tai oikean asiantuntijan puoleen.</p>
+<p><strong>Tietopohja:</strong> Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.</p>
+</blockquote>
+<p>Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taas järjestelmäpromptissa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: <strong>kuvaileva määrittely muutetaan suoraksi ohjeeksi botille</strong>.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l17-wrap">
+    <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
+    <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
+    <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
+    <span class="l17-morph">kuvaileva → suora ohje</span>
+    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄPROMPTI</span>
+      <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
+      <span class="l17-line n2"><b>”Olet Treenikaveri.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
+      <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
+      <span class="l17-ready">✓ botti valmis testattavaksi</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
+<style>
+.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
+.l17-blk b{font-size:12px;color:#FFFFFF}
+.l17-blk span{font-size:10.5px;color:#B9C2DA}
+.l17-blk.b1{top:12px;animation:l17b1 18s infinite}
+.l17-blk.b2{top:96px;animation:l17b2 18s infinite}
+.l17-blk.b3{top:180px;animation:l17b3 18s infinite}
+@keyframes l17b1{0%,8%{transform:translateX(0);opacity:1}20%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b2{0%,28%{transform:translateX(0);opacity:1}40%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes l17b3{0%,48%{transform:translateX(0);opacity:1}60%,97%{transform:translateX(108px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.l17-morph{position:absolute;left:198px;top:74px;font-size:10.5px;letter-spacing:.05em;color:#c9b7f1;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;opacity:0;animation:l17morph 18s infinite}
+@keyframes l17morph{0%,30%{opacity:0}36%,60%{opacity:1}66%,100%{opacity:0}}
+.l17-bot{position:absolute;right:0;top:12px;width:268px;min-height:230px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:13px;padding:13px 15px}
+.l17-bhead{display:block;font-size:10.5px;letter-spacing:.14em;color:#B9C2DA;margin-bottom:10px}
+.l17-line{display:block;font-size:11.5px;line-height:1.45;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-left:3px solid oklch(0.72 0.15 305);border-radius:8px;padding:7px 10px;margin-bottom:8px;opacity:0}
+.l17-line b{color:#FFFFFF}
+.l17-line.n1{animation:l17n1 18s infinite}
+.l17-line.n2{animation:l17n2 18s infinite}
+.l17-line.n3{animation:l17n3 18s infinite}
+@keyframes l17n1{0%,17%{opacity:0;transform:translateY(4px)}22%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n2{0%,37%{opacity:0;transform:translateY(4px)}42%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l17n3{0%,57%{opacity:0;transform:translateY(4px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l17-ready{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:2px 9px;opacity:0;animation:l17ready 18s infinite}
+@keyframes l17ready{0%,70%{opacity:0;transform:scale(1.25)}76%,96%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}
+.l17-line,.l17-ready,.l17-morph{opacity:1}}
+</style>
+
+<h2>Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa</h2>
+<p>Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:</p>
+<blockquote class="pause"><p>"Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäpromptia. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäpromptista:</p>
+<p>MÄÄRITTELY: [liitä rakennuspalikka 2]</p>
+<p>JÄRJESTELMÄPROMPTI, versio 1: [liitä oma promptisi]</p>
+<p>Auta minua arvioimaan: onko järjestelmäpromptissa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."</p>
+</blockquote>
+<h2>Copilot Agentin luominen</h2>
+<p>Microsoft Copilotissa voit luoda oman <strong>agentin</strong>, jolla on omat ohjeet ja tietopohja. Luo agentti näin:</p>
+<ol>
+<li>Avaa Copilot ja siirry <strong>Agents</strong> / <strong>Agentit</strong> -osioon.</li>
+<li>Luo uusi agentti. Anna sille sama nimi kuin määrittelydokumentissasi.</li>
+<li>Liitä järjestelmäpromptisi <strong>Instructions</strong> / <strong>Ohjeet</strong> -kenttään.</li>
+<li>Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan <strong>Knowledge</strong> / <strong>Tieto</strong>.</li>
+<li>Tallenna agentti ja aloita keskustelu.</li>
+</ol>
+<p>Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, kysy opettajalta tai etsi ohje hakemalla esimerkiksi <em>"Copilot agent create instructions"</em>.</p>
+<h2>Ensimmäinen testikeskustelu</h2>
+<p>Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä tapahtuu. Hyvä testaustapa etenee näin:</p>
+<ol>
+<li><strong>Keksi kuvitteellinen käyttötilanne omasta aiheestasi.</strong> Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.</li>
+<li><strong>Anna botin ohjata.</strong> Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.</li>
+<li><strong>Käy keskustelu loppuun.</strong> Tarkista, pääsetkö lopputulokseen, jota botin on tarkoitus auttaa tekemään.</li>
+<li><strong>Tallenna keskustelu</strong> kuvakaappauksina tai kopioituna tekstinä.</li>
+</ol>
+<h2>Mihin kiinnität huomiota testissä?</h2>
+<p><strong>Pysyykö botti roolissaan?</strong></p>
+<p>Vai unohtaako se, että se on oman aiheesi apuri, ja muuttuuko se yleiseksi avustajaksi?</p>
+<p><strong>Seuraako botti työnkulkua?</strong></p>
+<p>Vai hyppiikö se osasta toiseen sattumanvaraisesti?</p>
+<p><strong>Käyttääkö botti tietopohjaa?</strong></p>
+<p>Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset yleiseltä jargonilta?</p>
+<p><strong>Yrittääkö botti tehdä työn käyttäjän puolesta?</strong></p>
+<p>Jos pyydät sitä tekemään koko hommaa puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?</p>
+<h2>Korjauslista tunnille 18</h2>
+<p>Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa kaikkea tällä tunnilla, sillä tunti 18 on viimeistelyä varten. Esimerkkejä:</p>
+<ul>
+<li>"Botti hyppää vaiheen 2 ohi heti — työnkulun ohjetta pitää tarkentaa."</li>
+<li>"Botti käyttää englanninkielisiä termejä, vaikka sen pitäisi puhua suomeksi — lisää kielimääritelmä."</li>
+<li>"Botti antaa heti valmiita vastauksia kysymättä mitään — lisää ohje 'kysy ennen kuin ehdotat'."</li>
+</ul>
+<h2>Lopuksi</h2>
+<p>Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei vielä toimi täydellisesti. Sen ei ole tarkoituskaan olla valmis heti. <strong>Hyvä botti syntyy iteroinnista</strong>. Tällä tunnilla saat ensimmäisen version toimimaan, ja tunnilla 18 viimeistelet sen.</p>
+<p>Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.</p>
+<hr /></div><div class="panel" data-tab="tehtavat"><h1>Yhdistä rakennuspalikat — aloita botin rakentaminen</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
+<blockquote class="pause"><p><strong>HUOM:</strong> Tätä varten sinulla tulee olla kerättynä rakennuspalikat 1–3 (tunnit 12, 14 ja 15).</p>
+</blockquote>
+<p>Aloitat oman <strong>apuri-bottisi</strong> rakentamisen Microsoft Copilotissa. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa, jotka olet kerännyt aiemmilla tunneilla. Tunnin lopussa sinulla on bottisi <strong>ensimmäinen toimiva versio</strong>, jota viimeistelet ja testaat tunnilla 18.</p>
+<p>Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa. Tarkoitus ei ole, että keksit kaiken itse — vaan että <strong>osaat ohjata tekoälyä auttamaan järjestelmäpromptin muotoilussa</strong> ja teet lopulliset päätökset itse. Sinun vastuullasi on, että rakennuspalikoiden ydin näkyy lopullisessa botissa.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Miten teet sen?</h2></div><div class="task-card-body">
+<p>Tämän tunnin työ rakentuu neljään vaiheeseen:</p>
+<ol>
+<li><strong>Avaa rakennuspalikat.</strong> Tunnilla 12 kirjoitit promptauspankin, tunnilla 14 botin määrittelyn ja tunnilla 15 kuratoit tietopohjan. Kaikki on nyt käytössä.</li>
+<li><strong>Kirjoita järjestelmäprompti.</strong> Yhdistä rakennuspalikoiden ydin yhdeksi botin pääohjeeksi.</li>
+<li><strong>Rakenna botti Copilotissa.</strong> Luo Copilot Agent, syötä järjestelmäprompti ja lataa tietopohjan dokumentit.</li>
+<li><strong>Aja ensimmäinen testikeskustelu.</strong> Tunnistat, mikä toimii heti ja mihin pitää palata tunnilla 18.</li>
+</ol>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Rakennuspalikat työvälineinä</h2></div><div class="task-card-body">
+<p>Jokainen rakennuspalikka palvelee tiettyä osaa botista. Älä yritä keksiä mitään uudelleen — käytä mitä olet jo tehnyt:</p>
+<ul>
+<li><strong>Rakennuspalikka 1</strong> (tunti 12, promptauspankki) → <em>järjestelmäpromptin rakenne ja kieli.</em> Olet jo kirjoittanut promptirakenteita, jotka toimivat. Käytä niiden tyyliä ja sanavalintoja botin pääohjeessa.</li>
+<li><strong>Rakennuspalikka 2</strong> (tunti 14, botin määrittely) → <em>järjestelmäpromptin sisältö.</em> Kaikki kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat ohjekirjoitukseksi botille.</li>
+<li><strong>Rakennuspalikka 3</strong> (tunti 15, tietopohja) → <em>botin asiantuntemuksen lähde.</em> Lataat dokumentit Copilotiin ja botti käyttää niitä vastauksissaan.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Bottisi vaatimukset tämän tunnin lopussa</h2></div><div class="task-card-body">
+<ol>
+<li><strong>Toimiva Copilot Agent</strong> on luotu ja siihen pääsee.</li>
+<li><strong>Järjestelmäprompti</strong> sisältää selkeästi: roolin, työnkulun, persoonan ja vähintään 3 rajaa.</li>
+<li><strong>Tietopohjan dokumentit</strong> on ladattu bottiin (3–5 kpl).</li>
+<li><strong>Yksi testikeskustelu</strong> on käyty läpi alusta loppuun: olet keksinyt kuvitteellisen käyttötilanteen omasta aiheestasi ja antanut botin ohjata sinut tehtävän vaiheiden läpi.</li>
+<li><strong>Lista 3–5 havainnosta</strong>, joita pitää korjata tunnilla 18.</li>
+</ol>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tämän tunnin lopputulos</h2></div><div class="task-card-body">
+<p>Tunnin 17 lopussa sinulla on:</p>
+<ul>
+<li>Botin ensimmäinen toimiva versio Copilotissa</li>
+<li>Järjestelmäpromptin ensimmäinen versio kopioituna myös tekstinä muistiin (tarvitset sen tunnilla 18, kun iteroit)</li>
+<li>Yksi testikeskustelu kuvakaappauksina tai kopioituna</li>
+<li>Korjauslista tunnille 18: <em>"Tämä ei toimi vielä, korjaa…"</em></li>
+</ul>
+<p>Tämä on lähtötaso. Lopullinen botti syntyy tunnilla 18, kun iteroit, testaat tarkemmin ja viimeistelet.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Jos et tiedä mistä aloittaa</h2></div><div class="task-card-body">
+<p>Aloita näin:</p>
+<ol>
+<li>Avaa <strong>rakennuspalikka 2</strong> ja kopioi sen kuusi osaa rinnakkain avoimena toiseen ikkunaan. Tämä on järjestelmäpromptisi raaka-aine.</li>
+<li>Avaa <strong>rakennuspalikka 1</strong> ja katso, mikä promptirakenne on osunut sinulla parhaiten kohdalleen. Käytä sen tyyliä järjestelmäpromptin kirjoittamisessa.</li>
+<li>Kirjoita järjestelmäpromptin ensimmäinen versio omin sanoin — älä yritä saada sitä täydelliseksi.</li>
+<li>Avaa Copilot ja luo uusi Agent. Syötä järjestelmäprompti ja lataa <strong>rakennuspalikka 3</strong> -tietopohjan dokumentit.</li>
+<li>Keksi kuvitteellinen käyttötilanne omasta aiheestasi ja aja botin kanssa keskustelu läpi.</li>
+<li>Kirjoita muistiin 3–5 kohtaa, joita pitää korjata. Älä korjaa niitä vielä — se tehdään tunnilla 18.</li>
+</ol>
+<p><em>Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.</em></p></div></div></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Rakennuspalikoista toimivaksi botiksi</h1>
+<p>Tällä välilehdellä kertaat juuri lukemaasi ennen kuin alat rakentaa omaa bottiasi. Tällä tunnilla ei tule uutta teoriaa, vaan lämmittelet ja varmistat, että suunnitteluvalinnat ovat kirkkaina mielessä, kun siirryt Copilotiin. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät rakennuspalikoiden kertaamisesta kohti sitä, mihin kiinnität huomiota, kun testaat bottisi ensimmäistä versiota.</p>
+<h2>Tehtävä 1/3 — rakennuspalat</h2>
+<p>Kerrataan, mistä palasista botti kootaan, ennen kuin siirryt rakentamaan sitä.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/3 — suunnittelupäätökset</h2>
+<p>Kerrataan tunnin ratkaisevat suunnittelupäätökset. Valitse kussakin kysymyksessä vaihtoehto, joka pitää paikkansa.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/3 — ensimmäinen testi</h2>
+<p>Nyt siirryt analyysiin: luet pätkän botin ensimmäisestä testikeskustelusta ja etsit repliikit, jotka rikkovat botin omaa järjestelmäpromptia.</p>
+<div class="task-widget" data-ti="2"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto — Oma apuri-botti</h1>
+<h2>Botin suunnittelu</h2>
+<p><strong>Botin määrittely</strong> — Lyhyt kuvaus siitä, kenelle botti on, mitä se osaa, mitä se ei tee ja mitkä ovat sen rajat. Tämä on botin "perustamisasiakirja", josta järjestelmäprompti johdetaan. Älä sekoita tätä siihen, mitä botti auttaa käyttäjää tekemään — määrittely kertoo botista itsestään.</p>
+<p><strong>Kohderyhmä</strong> — Ne käyttäjät, joita varten botti on rakennettu. Esimerkiksi luokkakaverit, kerhon uudet jäsenet tai kirjaston asiakkaat. Kun tiedät kohderyhmän, osaat valita oikean kielen ja sisällön.</p>
+<p><strong>Työnkulku</strong> — Järjestys, jossa botti ohjaa käyttäjää vaiheesta toiseen. Selkeä työnkulku auttaa botin pysymään raiteilla eikä hyppimään satunnaisesti.</p>
+<p><strong>Rajat</strong> — Määritelmä siitä, mitä botti tekee ja mitä ei. Selkeät rajat estävät bottia leviämästä hallitsemattomasti tai vastaamasta asioihin, joihin sen ei kuulu vastata.</p>
+<p><strong>Tietopohja</strong> — Kokoelma dokumentteja, joista botti ammentaa oman aiheesi tietoa. Hyvä botti nojaa kuratoituun tietopohjaan, ei pelkkiin yleisiin oletuksiin.</p>
+<p><strong>Iterointi</strong> — Botin parantaminen testaamalla, korjaamalla ja testaamalla uudelleen. Hyvä botti syntyy iteroinnista, ei heti ensimmäisellä yrityksellä.</p>
+<h2>Custom GPT:t ja botit</h2>
+<p><strong>System prompt</strong> (järjestelmäprompti) — Pitkä, yksityiskohtainen ohjeistus, joka kerrotaan kielimallille botin alussa. Se määrittelee, kuka botti on, mitä se tekee ja miten se käyttäytyy. System prompt vaikuttaa kaikkiin botin vastauksiin.</p>
+<p><strong>Custom GPT</strong> — Mukautettu ChatGPT-versio, joka on konfiguroitu tiettyyn tarkoitukseen. Se voi sisältää system promptin, ohjeita, tiedostoja ja integraatioita.</p>
+<p><strong>Persona</strong> — Botin rooli tai persoona. Esimerkiksi: "Olet Python-tutori" tai "Olet asiakaspalvelun edustaja." Persona tekee botista uskottavan ja johdonmukaisen.</p>
+<p><strong>Context</strong> (konteksti) — Taustatieto, jonka botti käyttää ymmärtääkseen ja vastatakseen kysymyksiin. Esimerkiksi edellinen keskustelu tai dokumentit, jotka on syötetty bottiin.</p>
+<p><strong>Iteraatio</strong> — Prosessi, jossa testataan, parannetaan, testataan uudelleen ja parannetaan jälleen. Hyödylliset botit syntyvät iteraation kautta, ei heti täydellisesti ensimmäisellä kerralla.</p>
+<h2>Testaus</h2>
+<p><strong>Positiivinen testaus</strong> — Testataan asioita, joiden pitäisi toimia. Nähdään, vastaako botti oikein normaaleissa tilanteissa.</p>
+<p><strong>Negatiivinen testaus</strong> — Testataan asioita, joiden ei pitäisi toimia. Nähdään, kieltäytyykö botti asianmukaisesti ja suojaauko se itseään.</p>
+<p><strong>Reunatapaus</strong> (edge case) — Poikkeava tai odottamaton tilanne. Esimerkiksi: tyhjä syöte, vääränä kielellä kirjoitettu teksti, hyvin pitkä teksti. Reunatapaukset osoittavat, kuinka robust botti on.</p>
+<p><strong>Testidokumentti</strong> — Kirjallinen raportti testistä, joka sisältää: syöte, odotettava tulos, todellinen tulos ja analyysin.</p>
+<h2>Viestintä ja vuorovaikutus</h2>
+<p><strong>Vuorovaikutuksellinen</strong> — Kaksisuuntainen: käyttäjä kysyy, botti vastaa, käyttäjä kysyy lisää. Se ei ole yhdensuuntaista tiedon jakamista.</p>
+<p><strong>Täsmällisyys</strong> — Vastauksen oikeellisuus ja relevanssi. Botti, joka vastaa epätäsmällisesti, on hyödytön.</p>
+<p><strong>Muistinvaraus</strong> — Botin kyky muistaa aiempia vastauksia samassa keskustelussa. Hyvin suunniteltu botti ei kysy samaa asiaa kahdesti.</p>
+<p><strong>Validointi</strong> — Tarkistaminen, että tieto on oikein ennen sen käyttämistä. Esimerkiksi: "Ymmärsinkö oikein: treenaat kolmena päivänä viikossa ja tavoitteesi on parantaa kuntoa?"</p>
+<h2>Dokumentointi</h2>
+<p><strong>Dokumentaatio</strong> — Kirjallinen tai visuaalinen kuvaus siitä, miten jotain tehdään tai miten jokin toimii. Hyvä dokumentaatio auttaa muita ymmärtämään ja jatkamaan työtä.</p>
+<p><strong>Prosessin dokumentointi</strong> — Kuvaus kaikista askeista, joita otettiin ongelman ratkaisussa. Näytetään, mitä tehtiin, mitä saatiin ja mikä meni väärin.</p>
+<p><strong>Kommentti</strong> — Ohjelmakoodi tai dokumentissa oleva teksti, joka selittää, mitä seuraava rivi tai osio tekee. Kommentit auttavat sinua ja muita ymmärtämään logiikan.</p>
+<h2>Johtaminen ja rakentaminen</h2>
+<p><strong>Mentori</strong> — Kokenut henkilö, joka ohjaa ja opastaa muita. Apuri-botti toimii mentorina, joka esittää oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin.</p>
+<p><strong>Kalibrointi</strong> — Säätäminen oikealle tasolle. Esimerkiksi: ovatko botin kysymykset liian yksinkertaiset vai liian monimutkaiset? Kalibrointi paranee testaamalla.</p>
+<p><strong>Feedback</strong> — Palaute. Käyttäjän mielipide siitä, kuinka hyvin botti toimi. Feedback auttaa parantamaan bottia.</p>
+<hr />
+<p>Muista, että nämä käsitteet eivät ole isoloituja — ne linkittyvät toisiinsa. Hyvä system prompt johtaa hyödylliseen bottiin, jota voidaan testata, dokumentoida ja parantaa iteraation kautta.</p>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">02 · KÄYTTÖ · OPPITUNTI 17</text>
+<text x="74" y="240" font-size="46" font-weight="800" fill="#1B2336">Oma apuri-botti syntyy</text>
+<text x="74" y="300" font-size="25" fill="#5A6478">Yhdistä rakennuspalikat ja aloita rakentaminen</text>
+<g transform="translate(636,196)">
+<rect x="0" y="0" width="118" height="80" rx="14" fill="#F4F5F8" stroke="#5A6478" stroke-width="3"/>
+<rect x="18" y="20" width="60" height="8" rx="4" fill="#5A6478"/><rect x="18" y="38" width="82" height="8" rx="4" fill="#5A6478"/><rect x="18" y="56" width="48" height="8" rx="4" fill="#5A6478"/>
+<text x="59" y="106" text-anchor="middle" font-size="14" font-weight="600" fill="#5A6478">palikat</text></g>
+<text x="784" y="246" text-anchor="middle" font-size="30" fill="#9AA6BD" font-family="ui-monospace,monospace">→</text>
+<g transform="translate(814,196)">
+<rect x="0" y="0" width="116" height="80" rx="18" fill="#F4EFFC" stroke="#863FC4" stroke-width="3"/>
+<line x1="58" y1="0" x2="58" y2="-20" stroke="#863FC4" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="-26" r="7" fill="#863FC4"/>
+<circle cx="38" cy="32" r="9" fill="#863FC4"/><circle cx="78" cy="32" r="9" fill="#863FC4"/><rect x="36" y="54" width="44" height="8" rx="4" fill="#863FC4"/>
+<text x="59" y="106" text-anchor="middle" font-size="14" font-weight="600" fill="#6A309D">botti</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g2)"/>
+<text x="74" y="104" font-size="40" font-weight="800" fill="#1B2336">Suunnittelusta rakentamiseen</text>
+<rect x="74" y="142" width="812" height="78" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
+<text x="100" y="180" font-size="21" fill="#6A309D">Tämä tunti on nivelkohta: et opiskele enää uusia käsitteitä.</text>
+<text x="100" y="208" font-size="21" fill="#6A309D">Kokoat valmiit palikat ensimmäiseksi toimivaksi botiksi.</text>
+<text x="74" y="280" font-size="19" fill="#5A6478">Botin aiheen valitset itse arjestasi</text>
+<g transform="translate(74,308)">
+<rect x="0" y="0" width="262" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#863FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="28" height="22" rx="3"/><path d="M9 6 V2 H23 V6"/><path d="M9 16 H23 M9 22 H18"/></g>
+<text x="24" y="84" font-size="19" font-weight="700" fill="#1B2336">Opiskelu</text>
+<text x="24" y="108" font-size="14" fill="#5A6478">esim. tenttiin valmistautuminen</text></g>
+<g transform="translate(349,308)">
+<rect x="0" y="0" width="262" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1 Z"/></g>
+<text x="24" y="84" font-size="19" font-weight="700" fill="#1B2336">Harrastus</text>
+<text x="24" y="108" font-size="15" fill="#5A6478">esim. treeniohjelman teko</text></g>
+<g transform="translate(624,308)">
+<rect x="0" y="0" width="262" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#0E9AA7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M22 22 l8 8"/></g>
+<text x="24" y="84" font-size="19" font-weight="700" fill="#1B2336">Tuttu palvelu</text>
+<text x="24" y="108" font-size="15" fill="#5A6478">esim. opastus jonkin käyttöön</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme rakennuspalikkaa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kuuden tunnin aikana keräämäsi aineisto kootaan nyt yhteen.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4 a3 3 0 0 1 3 -3 H22 a3 3 0 0 1 3 3 V24 a3 3 0 0 1 -3 3 H12 L6 32 V27 H6 a3 3 0 0 1 -3 -3 Z"/><path d="M9 11 H19 M9 17 H16"/></g>
+<text x="24" y="92" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">PALIKKA 1</text>
+<text x="24" y="120" font-size="22" font-weight="800" fill="#1B2336">Promptauspankki</text>
+<text x="24" y="160" font-size="16" fill="#3A4253">Toimivat muotoilut, jotka</text>
+<text x="24" y="184" font-size="16" fill="#3A4253">olet jo nähnyt aiemmin.</text>
+<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa botille tyylin</text></g>
+<g transform="translate(354,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#863FC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="28" height="32" rx="3"/><path d="M8 2 V-2 H24 V2"/><path d="M8 12 H24 M8 19 H24 M8 26 H18"/></g>
+<text x="24" y="92" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">PALIKKA 2</text>
+<text x="24" y="120" font-size="22" font-weight="800" fill="#1B2336">Botin määrittely</text>
+<text x="24" y="160" font-size="16" fill="#3A4253">Kuusi osaa: nimi, kohde,</text>
+<text x="24" y="184" font-size="16" fill="#3A4253">tarkoitus, persoona,</text>
+<text x="24" y="208" font-size="16" fill="#3A4253">työnkulku ja rajat.</text>
+<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa botille sisällön</text></g>
+<g transform="translate(634,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#0E9AA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 a12 4 0 0 0 24 0 a12 4 0 0 0 -24 0 V26 a12 4 0 0 0 24 0 V6"/><path d="M4 16 a12 4 0 0 0 24 0"/></g>
+<text x="24" y="92" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">PALIKKA 3</text>
+<text x="24" y="120" font-size="22" font-weight="800" fill="#1B2336">Tietopohja</text>
+<text x="24" y="160" font-size="16" fill="#3A4253">3–5 dokumenttia, jotka</text>
+<text x="24" y="184" font-size="16" fill="#3A4253">ladataan erikseen.</text>
+<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa asiantuntemuksen</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g4)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Mikä on järjestelmäprompti?</text>
+<rect x="74" y="142" width="812" height="80" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="180" font-size="19" fill="#3A4253">Tekstipätkä, joka määrittää, miten botti käyttäytyy joka keskustelussa.</text>
+<text x="100" y="208" font-size="20" fill="#5A6478">Käyttäjä ei sitä yleensä näe — mutta botti noudattaa sitä aina.</text>
+<g transform="translate(74,250)">
+<rect x="0" y="0" width="278" height="100" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
+<g transform="translate(28,30)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="11" r="8"/><path d="M2 38 a14 13 0 0 1 24 0"/></g>
+<text x="74" y="44" font-size="20" font-weight="800" fill="#6A309D">Kuka olet?</text>
+<text x="74" y="74" font-size="16" fill="#1B2336">Rooli, esim. valmentaja</text></g>
+<g transform="translate(370,250)">
+<rect x="0" y="0" width="278" height="100" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M14 6 V14 L20 18"/></g>
+<text x="74" y="44" font-size="20" font-weight="800" fill="#6A309D">Mitä teet?</text>
+<text x="74" y="74" font-size="16" fill="#1B2336">Tehtävä ja työnkulku</text></g>
+<g transform="translate(74,362)">
+<rect x="0" y="0" width="278" height="100" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 a3 3 0 0 1 3 -3 H21 a3 3 0 0 1 3 3 V22 a3 3 0 0 1 -3 3 H12 L6 30 V25 a3 3 0 0 1 -2 -3 Z"/></g>
+<text x="74" y="44" font-size="20" font-weight="800" fill="#6A309D">Miten puhut?</text>
+<text x="74" y="74" font-size="16" fill="#1B2336">Äänensävy ja tyyli</text></g>
+<g transform="translate(370,362)">
+<rect x="0" y="0" width="278" height="100" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M6 6 L22 22"/></g>
+<text x="74" y="44" font-size="20" font-weight="800" fill="#A35A22">Mitä et tee?</text>
+<text x="74" y="74" font-size="16" fill="#3A4253">Rajat, esim. ei neuvoja</text></g>
+<g transform="translate(700,250)">
+<rect x="0" y="0" width="186" height="212" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(70,30)" fill="none" stroke="#5A6478" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="6" width="44" height="34" rx="4"/><path d="M14 6 V2 H30 V6"/></g>
+<text x="93" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Botin</text>
+<text x="93" y="142" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">työsopimus</text>
+<text x="93" y="178" text-anchor="middle" font-size="14" fill="#5A6478">kuka, mitä,</text>
+<text x="93" y="198" text-anchor="middle" font-size="14" fill="#5A6478">millä rajoilla</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Palikat järjestelmäpromptiksi</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Jokainen palikka muuttuu omaksi osakseen.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#EAF7F0"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#2F9E69">1</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Promptauspankki → tyyli ja kieli</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Käytä toimivaa muotoilua botin pääohjeessa.</text>
+<text x="780" y="56" text-anchor="end" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">promptiin</text></g>
+<g transform="translate(74,270)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#F4EFFC"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#863FC4">2</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Botin määrittely → sisältö</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Kuusi osaa muuttuvat suoraan promptin kappaleiksi.</text>
+<text x="780" y="56" text-anchor="end" font-size="15" fill="#6A309D" font-family="ui-monospace,monospace">promptiin</text></g>
+<g transform="translate(74,376)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#E5F6F7"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#0E9AA7">3</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Tietopohja → ladataan erikseen</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Ei kuulu promptiin — viittaa siihen: "Käytä ladattuja dokumentteja".</text>
+<text x="780" y="56" text-anchor="end" font-size="15" fill="#0B7A85" font-family="ui-monospace,monospace">erilliseen kenttään</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tärkein muunnos</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kuvaileva määrittely muutetaan suoraksi ohjeeksi botille.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="356" height="300" rx="16" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="44" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">KUVAILEVA MÄÄRITTELY</text>
+<text x="28" y="90" font-size="18" fill="#3A4253">Botin nimi: Treenikaveri</text>
+<text x="28" y="124" font-size="18" fill="#3A4253">Kohderyhmä: aloitteleva</text>
+<text x="28" y="148" font-size="18" fill="#3A4253">salitreenaaja</text>
+<text x="28" y="182" font-size="18" fill="#3A4253">Persoona: kannustava,</text>
+<text x="28" y="206" font-size="18" fill="#3A4253">käytännönläheinen</text>
+<text x="28" y="252" font-size="16" fill="#5A6478" font-style="italic">Kuvaa bottia ulkopuolelta —</text>
+<text x="28" y="276" font-size="16" fill="#5A6478" font-style="italic">kuin tuoteseloste.</text></g>
+<g transform="translate(454,294)"><path d="M0 18 H44" stroke="#863FC4" stroke-width="3"/><path d="M44 18 L34 10 M44 18 L34 26" stroke="#863FC4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="22" y="-2" text-anchor="middle" font-size="14" fill="#6A309D" font-family="ui-monospace,monospace">muunna</text></g>
+<g transform="translate(530,168)">
+<rect x="0" y="0" width="356" height="300" rx="16" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
+<text x="28" y="44" font-size="15" fill="#6A309D" font-family="ui-monospace,monospace">SUORA OHJE BOTILLE</text>
+<text x="28" y="90" font-size="18" font-weight="700" fill="#1B2336">"Olet Treenikaveri."</text>
+<text x="28" y="124" font-size="18" fill="#1B2336">"Autat aloittelevaa</text>
+<text x="28" y="148" font-size="18" fill="#1B2336">salitreenaajaa."</text>
+<text x="28" y="182" font-size="18" fill="#1B2336">"Olet kannustava ja</text>
+<text x="28" y="206" font-size="18" fill="#1B2336">käytännönläheinen."</text>
+<text x="28" y="252" font-size="16" fill="#6A309D" font-style="italic">Puhuttelee bottia suoraan —</text>
+<text x="28" y="276" font-size="16" fill="#6A309D" font-style="italic">"Olet…", "Et koskaan…".</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Esimerkki: työnkulku botille</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Treenikaveri ohjaa käyttäjän kuuden vaiheen läpi järjestyksessä.</text>
+<g font-size="16">
+<g transform="translate(74,166)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">1</text><text x="50" y="28" fill="#3A4253">Tavoite</text></g>
+<g transform="translate(502,166)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">2</text><text x="50" y="28" fill="#3A4253">Lähtötaso ja kokemus</text></g>
+<g transform="translate(74,222)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">3</text><text x="50" y="28" fill="#3A4253">Käytettävissä olevat päivät</text></g>
+<g transform="translate(502,222)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">4</text><text x="50" y="28" fill="#3A4253">Liikkeiden valinta</text></g>
+<g transform="translate(74,278)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">5</text><text x="50" y="28" fill="#3A4253">Viikko-ohjelman kokoaminen</text></g>
+<g transform="translate(502,278)"><rect x="0" y="0" width="384" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="22" r="13" fill="#F4EFFC"/><text x="26" y="28" text-anchor="middle" font-size="15" font-weight="800" fill="#863FC4">6</text><text x="50" y="28" fill="#3A4253">Palautuminen ja seuranta</text></g>
+</g>
+<rect x="74" y="354" width="812" height="114" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
+<text x="100" y="392" font-size="18" font-weight="700" fill="#6A309D">Ohjeena botille:</text>
+<text x="100" y="424" font-size="18" fill="#1B2336">"Ohjaat käyttäjää aina järjestyksessä kuuden vaiheen läpi.</text>
+<text x="100" y="450" font-size="18" fill="#1B2336">Et siirry seuraavaan ennen kuin nykyinen vaihe on käsitelty."</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g8)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Pyydä tekoälyltä sparrausta</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kun ensimmäinen versio on valmis, anna tekoälyn arvioida se.</text>
+<rect x="74" y="162" width="812" height="166" rx="14" fill="#11182A" stroke="#232C44" stroke-width="1.5"/>
+<text x="100" y="198" font-size="15" fill="#9AA6BD" font-family="ui-monospace,monospace">// sparrauspromptin ydin</text>
+<text x="100" y="232" font-size="17" fill="#EAEEF8">"Toimi sparrauskumppaninani. Tässä määrittelyni ja</text>
+<text x="100" y="258" font-size="17" fill="#EAEEF8">järjestelmäpromptini ensimmäinen versio.</text>
+<text x="100" y="290" font-size="17" fill="#7FD0A8">Älä kirjoita uutta versiota — anna 2–3 konkreettista</text>
+<text x="100" y="316" font-size="17" fill="#7FD0A8">parannusehdotusta, joiden pohjalta teen omat muutokseni."</text>
+<text x="74" y="378" font-size="19" font-weight="700" fill="#1B2336">Pyydä tekoälyä tarkistamaan kolme asiaa</text>
+<g font-size="16" fill="#3A4253">
+<g transform="translate(74,396)"><rect x="0" y="0" width="262" height="62" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="28" cy="31" r="6" fill="#863FC4"/><text x="48" y="28">Onko kaikki</text><text x="48" y="50">määrittelyn osat mukana?</text></g>
+<g transform="translate(349,396)"><rect x="0" y="0" width="262" height="62" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="28" cy="31" r="6" fill="#0E9AA7"/><text x="48" y="28">Onko jokin kohta</text><text x="48" y="50">botille epäselvä?</text></g>
+<g transform="translate(624,396)"><rect x="0" y="0" width="262" height="62" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="28" cy="31" r="6" fill="#C79100"/><text x="48" y="28">Onko jokin ohje liian</text><text x="48" y="50" font-size="14">yleinen, kuten "vastaa"?</text></g>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g9)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Agentin luominen Copilotissa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Viisi vaihetta valmiiseen, testattavaan bottiin.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="29" r="17" fill="#F4EFFC"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">1</text>
+<text x="74" y="36" font-size="19" fill="#3A4253">Avaa Copilot ja siirry <tspan font-weight="700" fill="#1B2336">Agents</tspan> / Agentit -osioon.</text></g>
+<g transform="translate(74,228)">
+<rect x="0" y="0" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="29" r="17" fill="#F4EFFC"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">2</text>
+<text x="74" y="36" font-size="19" fill="#3A4253">Luo uusi agentti ja anna sille määrittelyn mukainen nimi.</text></g>
+<g transform="translate(74,296)">
+<rect x="0" y="0" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
+<circle cx="40" cy="29" r="17" fill="#FFFFFF"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">3</text>
+<text x="74" y="36" font-size="19" fill="#1B2336">Liitä järjestelmäpromptisi <tspan font-weight="700">Instructions</tspan> / Ohjeet -kenttään.</text></g>
+<g transform="translate(74,364)">
+<rect x="0" y="0" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
+<circle cx="40" cy="29" r="17" fill="#FFFFFF"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">4</text>
+<text x="74" y="36" font-size="19" fill="#1B2336">Lataa tietopohjan dokumentit <tspan font-weight="700">Knowledge</tspan> / Tieto -kohtaan.</text></g>
+<g transform="translate(74,432)">
+<rect x="0" y="0" width="812" height="58" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="40" cy="29" r="17" fill="#FFFFFF"/><path d="M33 29 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="74" y="36" font-size="19" font-weight="700" fill="#247A52">Tallenna agentti ja aloita keskustelu.</text></g>
+<text x="893" y="524" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g10)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ensimmäinen testikeskustelu</text>
+<rect x="74" y="138" width="812" height="62" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
+<text x="100" y="176" font-size="19" fill="#6A309D">Älä tavoittele täydellisyyttä — aja yksi keskustelu läpi ja katso.</text>
+<g transform="translate(74,224)">
+<rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">1</text>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Keksi käyttötilanne</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">omasta aiheestasi — lyhyt</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">kuvaus, 2–3 lausetta.</text></g>
+<g transform="translate(489,224)">
+<rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">2</text>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Anna botin ohjata</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">Vastaa sen kysymyksiin</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">kuin oikea käyttäjä.</text></g>
+<g transform="translate(74,356)">
+<rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">3</text>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Käy keskustelu loppuun</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">Pääsetkö lopputulokseen,</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">johon botti tähtää?</text></g>
+<g transform="translate(489,356)">
+<rect x="0" y="0" width="397" height="120" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="40" cy="40" r="20" fill="#FFFFFF"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#2F9E69">4</text>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#247A52">Tallenna keskustelu</text>
+<text x="74" y="68" font-size="16" fill="#3A4253">kuvakaappauksina tai</text>
+<text x="74" y="90" font-size="16" fill="#3A4253">kopioituna tekstinä.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mihin kiinnität huomiota?</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Neljä kysymystä, jotka paljastavat, mikä botissa toimii.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="397" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,26)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="11" r="8"/><path d="M1 36 a13 12 0 0 1 24 0"/></g>
+<text x="74" y="44" font-size="20" font-weight="700" fill="#1B2336">Pysyykö roolissaan?</text>
+<text x="28" y="92" font-size="16" fill="#5A6478">Vai muuttuuko aiheesi apuri</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">yleiseksi avustajaksi?</text></g>
+<g transform="translate(489,160)">
+<rect x="0" y="0" width="397" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,24)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="6" width="11" height="11" rx="2.5"/><rect x="0" y="22" width="11" height="11" rx="2.5"/><rect x="20" y="13" width="11" height="11" rx="2.5"/><path d="M11 11 H16 V19 H20 M11 27 H16 V20"/></g>
+<text x="74" y="44" font-size="20" font-weight="700" fill="#1B2336">Seuraako työnkulkua?</text>
+<text x="28" y="92" font-size="16" fill="#5A6478">Vai hyppiikö se osasta</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">toiseen sattumanvaraisesti?</text></g>
+<g transform="translate(74,322)">
+<rect x="0" y="0" width="397" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,24)" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4 a10 3 0 0 0 20 0 a10 3 0 0 0 -20 0 V24 a10 3 0 0 0 20 0 V4"/><path d="M2 14 a10 3 0 0 0 20 0"/></g>
+<text x="74" y="44" font-size="20" font-weight="700" fill="#1B2336">Käyttääkö tietopohjaa?</text>
+<text x="28" y="92" font-size="16" fill="#5A6478">Tunnistatko vastauksista</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">oman aiheesi termit?</text></g>
+<g transform="translate(489,322)">
+<rect x="0" y="0" width="397" height="146" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,24)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2 L30 26 H2 Z"/><path d="M16 12 V18 M16 22 V22.5"/></g>
+<text x="74" y="44" font-size="20" font-weight="700" fill="#A35A22">Murtuuko rajaus?</text>
+<text x="28" y="92" font-size="16" fill="#5A6478">Jos pyydät botin tekemään</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">koko homman puolestasi?</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Korjauslista tunnille 18</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kirjoita muistiin 3–5 asiaa — älä korjaa kaikkea tällä tunnilla.</text>
+<g transform="translate(74,162)">
+<rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(30,30)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14 L11 5 L26 20 M2 14 V26 H14 M11 5 L23 17"/></g>
+<text x="84" y="40" font-size="18.5" font-weight="700" fill="#1B2336">"Botti hyppää vaiheen 2 ohi heti."</text>
+<text x="84" y="66" font-size="16" fill="#5A6478">→ Tarkenna työnkulun ohjetta.</text></g>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(30,28)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M14 4 a10 10 0 0 1 0 20 M5 9 H23 M5 19 H23"/></g>
+<text x="84" y="40" font-size="18.5" font-weight="700" fill="#1B2336">"Botti käyttää englanninkielisiä termejä."</text>
+<text x="84" y="66" font-size="16" fill="#5A6478">→ Lisää kielimääritelmä.</text></g>
+<g transform="translate(74,370)">
+<rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(30,28)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 V8 M14 20 V26 M2 14 H8 M20 14 H26"/><circle cx="14" cy="14" r="6"/></g>
+<text x="84" y="40" font-size="18.5" font-weight="700" fill="#1B2336">"Botti antaa heti valmiita vastauksia."</text>
+<text x="84" y="66" font-size="16" fill="#5A6478">→ Lisää ohje "kysy ennen kuin ehdotat".</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l17g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Tämä tunti vie suunnittelusta rakentamiseen — ensimmäinen versio on aina raaka.</text>
+<text x="74" y="184" font-size="20" font-weight="700" fill="#1B2336">Mitä teit tällä tunnilla</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="222" r="6" fill="#863FC4"/><text x="118" y="228">Kokosit kolme palikkaa yhteen</text>
+<rect x="494" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="222" r="6" fill="#863FC4"/><text x="538" y="228">Muunsit määrittelyn suoraksi ohjeeksi</text>
+<rect x="74" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="274" r="6" fill="#0E9AA7"/><text x="118" y="280">Loit agentin Copilotiin</text>
+<rect x="494" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="274" r="6" fill="#0E9AA7"/><text x="538" y="280">Ajoit ensimmäisen testikeskustelun</text>
+<rect x="74" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="326" r="6" fill="#C79100"/><text x="118" y="332">Tarkkailit neljää huomiokohtaa</text>
+<rect x="494" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="326" r="6" fill="#C79100"/><text x="538" y="332">Kirjasit korjauslistan tunnille 18</text>
+</g>
+<rect x="74" y="378" width="812" height="92" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,408)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="418" font-size="22" font-weight="800" fill="#247A52">Hyvä botti syntyy iteroinnista.</text>
+<text x="150" y="448" font-size="18" fill="#3A4253">Saat ensimmäisen version toimimaan nyt — tunnilla 18 viimeistelet sen.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-16/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-18/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-17')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "luokka", "lid": "lesson-17", "num": 17, "title": "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", "ptasks": [{"type": "match", "title": "Rakennuspalat paikoilleen", "intro": "Kerrataan, mistä palasista botti kootaan, ennen kuin siirryt rakentamaan sitä Copilotissa. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Järjestelmäprompti", "b": "Ohje, joka määrää botin käytöksen kaikissa keskusteluissa; käyttäjä ei sitä yleensä näe.", "explain": "Se on botin työsopimus: kuka botti on, mitä se tekee ja missä sen rajat kulkevat — ja se ohjaa kaikkia vastauksia."}, {"a": "Rakennuspalikka 1 (promptauspankki)", "b": "Tuo pääohjeeseen toimivan tyylin ja kielen.", "explain": "Aiemmin hyväksi havaitut muotoilut antavat pääohjeen tyylin ja sanavalinnat."}, {"a": "Rakennuspalikka 2 (botin määrittely)", "b": "Antaa sisällön: kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat.", "explain": "Nämä kuusi osaa muuttuvat suoraan pääohjeen kappaleiksi."}, {"a": "Rakennuspalikka 3 (tietopohja)", "b": "Ladataan ympäristöön erikseen omana aineistonaan; ei kuulu itse pääohjeeseen, mutta siihen voi viitata.", "explain": "Antaa botin asiantuntemuksen 3–5 dokumenttina; pääohjeessa voi sanoa 'käytä ladattuja dokumentteja viitteenä'."}, {"a": "Nivelkohta", "b": "Siirtymä suunnittelusta rakentamiseen.", "explain": "Tällä tunnilla suunnitelmat muuttuvat botin ensimmäiseksi toimivaksi versioksi."}, {"a": "Iterointi", "b": "Toistuva parantaminen testaamalla, korjaamalla ja testaamalla uudelleen.", "explain": "Hyvä botti ei synny kerralla; ensimmäinen versio on aina raaka."}, {"a": "Copilot Agent", "b": "Microsoftin ympäristö, johon syötät pääohjeen (Ohjeet/Instructions) ja lataat dokumentit (Tieto/Knowledge).", "explain": "Anna sille määrittelydokumentin nimi; pääohje menee Ohjeet-kenttään ja tietopohja Tieto-kenttään."}], "summary": "Botti kootaan kolmesta rakennuspalikasta yhdeksi järjestelmäpromptiksi: tyyli, sisältö ja viittaus asiantuntemukseen. Prompti syötetään Copilot Agentin ohjeisiin ja tietopohja ladataan erikseen. Hyvä botti syntyy iteroinnista."}, {"type": "quiz", "title": "Suunnittelupäätökset kuntoon", "intro": "Kerrataan neljä ratkaisevaa suunnittelupäätöstä juuri ennen kuin rakennat botin. Valitse kussakin kysymyksessä vaihtoehto, joka pitää paikkansa.", "items": [{"q": "Miksi botille kirjoitetaan huolellinen järjestelmäprompti eikä vain ohje 'kysy käyttäjältä ja auta'?", "options": [{"text": "Ilman ohjeita kielimalli ei tiedä, kuka se on, mitä sen pitää tehdä, missä järjestyksessä ja mitä se ei saa tehdä — silloin se arvaa.", "correct": true, "explain": "Hyvä järjestelmäprompti vastaa neljään kysymykseen: kuka olet, mitä teet, miten puhut ja mitä et tee."}, {"text": "Järjestelmäprompti ei juuri vaikuta; botti osaa toimia oikein ilmankin.", "correct": false, "explain": "Ilman promptia botti jää yleiseksi avustajaksi ja arvaa; järjestelmäprompti ohjaa kaikkia sen vastauksia."}, {"text": "Riittää, että promptissa lukee 'vastaa hyvin ja ole avulias'.", "correct": false, "explain": "Liian yleinen ohje ei kerro roolia, työnkulkua eikä rajoja, joten botti jää arvaamisen varaan."}]}, {"q": "Määrittelyssäsi lukee 'Botin nimi: Kassa-apuri, tarkoitus: auttaa uutta myyjää'. Miten tämä kirjoitetaan järjestelmäpromptiin?", "options": [{"text": "Puhuttele bottia suoraan: 'Olet Kassa-apuri. Autat uutta myyjää…'.", "correct": true, "explain": "Tärkein muunnos on kuvailevasta määrittelystä suoraksi ohjeeksi: 'Olet…', 'Työnkulkusi…', 'Et koskaan…'."}, {"text": "Kopioi määrittely sellaisenaan; kuvaileva muoto riittää botille.", "correct": false, "explain": "Kuvaileva 'Botin nimi: X' pitää muuttaa suoraksi ohjeeksi 'Olet X', jotta botti ottaa roolin."}, {"text": "Jätä nimi ja tarkoitus pois, koska botti keksii ne itse.", "correct": false, "explain": "Botti ei keksi rooliaan itse; identiteetti ja tarkoitus kirjoitetaan promptiin selkeästi."}]}, {"q": "Mihin botin tietopohjan dokumentit tulevat?", "options": [{"text": "Ne ladataan Copilotiin erikseen (Tieto/Knowledge); järjestelmäpromptiin voi vain viitata niihin.", "correct": true, "explain": "Tietopohja ei ole osa promptia; promptissa voi sanoa esimerkiksi 'käytä ladattuja dokumentteja viitteenä'."}, {"text": "Ne kopioidaan kokonaan järjestelmäpromptin sisään.", "correct": false, "explain": "Tietopohja ladataan erikseen omana aineistonaan; promptiin se ei kuulu, siihen vain viitataan."}, {"text": "Botti hakee ne itse internetistä, joten niitä ei tarvitse ladata.", "correct": false, "explain": "Botti käyttää juuri sinun lataamiasi dokumentteja asiantuntemuksena, ei vapaasti internetiä."}]}, {"q": "Pyydät tekoälyä auttamaan järjestelmäpromptin viimeistelyssä. Miten käytät sitä oikein?", "options": [{"text": "Pyydät 2–3 konkreettista parannusehdotusta ja teet lopulliset muutokset itse.", "correct": true, "explain": "Sinä vastaat siitä, että rakennuspalikoiden ydin näkyy botissa; tekoäly on sparrauskumppani, ei päätöstesi korvaaja."}, {"text": "Annat tekoälyn kirjoittaa koko promptin puolestasi ja käytät sen sellaisenaan.", "correct": false, "explain": "Tekoäly auttaa arvioimaan ja ehdottamaan, mutta lopulliset päätökset ja vastuu ovat sinulla."}, {"text": "Et käytä tekoälyä lainkaan, koska prompti pitää keksiä täysin itse.", "correct": false, "explain": "Tekoälyn käyttö viimeistelyyn on juuri suositeltu tapa; tavoite on osata ohjata sitä ja tehdä omat päätökset, ei tehdä kaikkea yksin."}]}], "summary": "Hyvä botti tarvitsee täsmällisen järjestelmäpromptin (neljä kysymystä), kuvailevan määrittelyn muuttamisen suoraksi ohjeeksi, tietopohjan lataamisen erikseen ja tekoälyn käytön sparrauskumppanina niin, että lopulliset päätökset ovat sinun."}, {"type": "spot", "title": "Testaa ensimmäinen versio", "intro": "Alla on pätkä uuden apuribotin ensimmäisestä testikeskustelusta. Botin järjestelmäprompti on tiivistettynä tämä: 'Olet Kahvila-apuri. Ohjaat uutta työntekijää valmistautumaan ensimmäiseen työvuoroon vaihe vaiheelta järjestyksessä. Käytät kahvilan omia ohjeita eli tietopohjaa. Et tee valintoja käyttäjän puolesta kysymättä etkä neuvo muissa aiheissa.' Napauta ne botin repliikit, jotka rikkovat tätä promptia — niistä tulee korjauslistasi tuntia 18 varten — ja paina Tarkista.", "segments": [{"text": "Hei! Olen Kahvila-apuri ja autan sinua valmistautumaan ensimmäiseen työvuoroosi. Aloitetaan tavoitteesta: mitä toivot vuorolta?", "flag": false, "explain": "Botti pysyy roolissaan ja aloittaa työnkulun ensimmäisestä vaiheesta — juuri näin sen kuuluu toimia; tämä kohta oli kunnossa."}, {"text": "Hyvä. Kysytään seuraavaksi lähtötilanteesi: oletko tehnyt kahvilatyötä aiemmin?", "flag": false, "explain": "Botti etenee työnkulussa loogisesti seuraavaan vaiheeseen — tämä kohta oli kunnossa."}, {"text": "Ohitetaan loput kysymykset ja hypätään suoraan lopputulokseen, se on nopeampaa.", "flag": true, "explain": "Botin pitäisi ohjata vaiheet järjestyksessä; vaiheiden ohittaminen rikkoo työnkulun (testikysymys: seuraako botti työnkulkua?). Kirjaa korjauslistaan, että työnkulun ohjetta pitää tarkentaa."}, {"text": "Tein jo puolestasi valmiin valmistautumislistan, joten sinun ei tarvitse valita mitään itse.", "flag": true, "explain": "Promptin mukaan botti ei saa tehdä valintoja käyttäjän puolesta kysymättä — rajaus murtuu (testikysymys: yrittääkö botti tehdä työn käyttäjän puolesta?). Kirjaa korjattavaksi ohje 'kysy ennen kuin ehdotat'."}, {"text": "Yleisesti ottaen hyvä työntekijä on täsmällinen ja ystävällinen — se pätee kaikkiin töihin.", "flag": true, "explain": "Vastaus on yleistä jargonia eikä nojaa kahvilan omiin ohjeisiin; niistä ei tunnista oman aiheen termejä (testikysymys: käyttääkö botti tietopohjaa?). Kirjaa, että promptin pitää ohjata käyttämään ladattuja dokumentteja."}, {"text": "Voisin muuten auttaa sinua vaikka tekemään veroilmoituksen, jos haluat.", "flag": true, "explain": "Botti karkaa oman aiheensa ulkopuolelle yleiseksi avustajaksi; rajaus 'ei muita aiheita' ei pidä (testikysymys: pysyykö botti roolissaan?). Kirjaa korjattavaksi."}, {"text": "Kahvilan ohjeen mukaan aamuvuoro alkaa kassan ja kahvinkeittimen valmistelulla — käydään ne läpi järjestyksessä.", "flag": false, "explain": "Botti nojaa kahvilan omiin ohjeisiin eli tietopohjaan ja pysyy työnkulussa — juuri näin sen kuuluu toimia; tämä kohta oli kunnossa."}, {"text": "En anna neuvoja työterveysasioissa, vaan ohjaan sinut esihenkilölle — keskitytään vuoroon valmistautumiseen.", "flag": false, "explain": "Botti tunnistaa rajansa ja pysyy aiheessa — promptin rajaus pitää; tämä kohta oli kunnossa."}], "summary": "Ensimmäinen versio on aina raaka. Testin tehtävä on paljastaa, missä botti karkaa roolistaan, hyppii työnkulussa, unohtaa tietopohjan tai tekee työn käyttäjän puolesta. Löydetyt ongelmat eivät ole epäonnistumisia vaan korjauslista tuntia 18 varten — hyvä botti syntyy iteroinnista."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

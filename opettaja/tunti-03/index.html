@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka. Opettajan opas, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-03/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Teoria</span><span>›</span><span>Oppitunti 3</span></div><div class="lesson-title">Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-03/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-03/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-03/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — eivät opettajan materiaaleja.</span></div><a class="sb-go" href="/luokka/tunti-03/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-03/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoitteet tälle lohkolle</h2></div><div class="task-card-body">
+<p>Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miten <strong>kielimalli</strong> toimii perusperiaatteeltaan ja miksi se voi tuottaa sekä hyödyllisiä että virheellisiä vastauksia. Oppitunnin ydin on <strong>next-token prediction</strong>: kielimalli ennustaa seuraavaa tokenia todennäköisyyksien perusteella.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa selittää, että kielimalli toimii ennustamalla seuraavaa tokenia.</li>
+<li>Opiskelija ymmärtää, että <strong>parametrit</strong> ovat mallin oppimia numeerisia painoja, eivät käsin kirjoitettuja sääntöjä.</li>
+<li>Opiskelija ymmärtää, että kielimalli ei hae vastausta suoraan tietokannasta, vaan muodostaa vastauksen opittujen todennäköisyyksien perusteella.</li>
+<li>Opiskelija tunnistaa <strong>hallusinaation</strong> tilanteena, jossa malli tuottaa vakuuttavan mutta virheellisen vastauksen.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa selittää, miksi hallusinaatiot ovat mahdollisia kielimallin toimintaperiaatteen vuoksi.</li>
+<li>Opiskelija osaa arvioida, millaisissa tilanteissa kielimallin vastaukset pitää tarkistaa erityisen huolellisesti.</li>
+<li>Opiskelija osaa kuvata yhteyden <strong>koulutusdatan</strong>, parametrien ja mallin käyttäytymisen välillä.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa arvioida kielimallin vastausta kriittisesti eikä oleta sen olevan automaattisesti totta.</li>
+<li>Opiskelija osaa ehdottaa keinoja hallusinaatioiden vähentämiseen, kuten vastausten tarkistamista, lähteiden käyttöä ja matalampaa lämpötilaa kriittisissä tehtävissä.</li>
+<li>Opiskelija osaa liittää kielimallien toimintaperiaatteen omaan tulevaan ammattialaansa ja sen riskeihin.</li>
+</ul>
+<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että kielimalli ei “tiedä” samalla tavalla kuin ihminen. Se ennustaa seuraavaa tokenia opittujen todennäköisyyksien perusteella. Juuri tämä tekee siitä hyödyllisen mutta myös epäluotettavan tilanteissa, joissa faktatarkkuus on kriittistä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: kielimalli ennustaa seuraavaa tokenia</h3></div><div class="task-card-body">
+<p>Kielimallin toimintaa kannattaa opettaa ensin käytännön kautta. Pyydä opiskelijoita jatkamaan lauseita, kuten ”Kissa istui...” tai ”Salasana pitää vaihtaa, jos...”. Opiskelijat huomaavat nopeasti, että he ennustavat seuraavia sanoja aiemman kielenkäytön ja tilanteen perusteella. Kielimalli tekee jotakin samankaltaista, mutta matemaattisesti ja valtavan datamäärän pohjalta.</p>
+<blockquote class="pause"><p><strong>Kielimalli ei hae valmista vastausta. Se muodostaa todennäköisen jatkon.</strong></p>
+</blockquote>
+<p>Korosta opiskelijoille:</p>
+<ul>
+<li><strong>Token</strong> voi olla sana, sanan osa, merkki tai merkkijono.</li>
+<li><strong>Next-token prediction</strong> tarkoittaa seuraavan tokenin ennustamista aiemman tekstin perusteella.</li>
+<li><strong>Parametrit</strong> ovat mallin oppimia numeroita, jotka vaikuttavat siihen, mikä jatko näyttää todennäköiseltä.</li>
+<li>Malli voi kuulostaa ymmärtävältä, koska sen koulutusdata on sisältänyt paljon ihmisten kirjoittamaa järkevää tekstiä.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Parametrit eivät ole sääntöjä</h3></div><div class="task-card-body">
+<p>Opiskelijoille voi olla vaikeaa ymmärtää, että parametrit eivät ole yksittäisiä sääntöjä, kuten ”jos käyttäjä kysyy X, vastaa Y”. Parametrit ovat numeerisia painoja, jotka yhdessä ohjaavat mallin käyttäytymistä.</p>
+<table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Mitä se ei ole?</th>
+<th>Mitä se on?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sääntö</strong></td>
+<td>Ei sama asia kuin mallin parametri.</td>
+<td>Ihmisen kirjoittama ehto, esimerkiksi ”jos viestissä lukee lasku, siirrä se kansioon Laskut”.</td>
+</tr>
+<tr>
+<td><strong>Parametri</strong></td>
+<td>Ei yksittäinen luettava ohje tai sääntö.</td>
+<td>Mallin oppima numeroarvo, joka vaikuttaa todennäköisyyksiin yhdessä muiden parametrien kanssa.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opettajan huomio:</strong> Hyvä vertaus on mikseri tai äänipöytä: yksi säädin ei yksin “sisällä” kappaletta, mutta tuhansien säätimien yhdistelmä vaikuttaa lopputulokseen. Parametrit toimivat samantyyppisesti: ne eivät ole lauseita vaan painoja.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Hallusinaatiot syntyvät uskottavasta ennustamisesta</h3></div><div class="task-card-body">
+<p><strong>Hallusinaatio</strong> tarkoittaa, että malli tuottaa vastauksen, joka kuulostaa uskottavalta mutta on väärä, keksitty tai tarkistamaton. Tämä ei ole tahallista valehtelua. Malli ei tiedä, mikä on totta samalla tavalla kuin ihminen. Se jatkaa tekstiä tavalla, joka näyttää tilastollisesti sopivalta.</p>
+<p>Hallusinaatio on erityisen vaarallinen, koska se voi näyttää oikealta. Kielimalli voi antaa väärän lähteen, keksiä henkilön, muistaa lakipykälän väärin tai antaa ohjelmointiohjeen, joka näyttää järkevältä mutta ei toimi.</p>
+<blockquote class="pause"><p><strong>Hallusinaatio ei välttämättä näytä virheeltä. Siksi se pitää tarkistaa.</strong></p>
+</blockquote>
+<p>Hallusinaatioita voi vähentää, mutta niitä ei voi poistaa täysin. Keinoja ovat esimerkiksi:</p>
+<ul>
+<li>vastausten tarkistaminen luotettavista lähteistä</li>
+<li>kielimallin ankkurointi annettuun tietopohjaan</li>
+<li>matalamman lämpötilan käyttäminen kriittisissä tehtävissä</li>
+<li>ihmisen tarkistus ennen riskialttiita päätöksiä</li>
+<li>työkalujen käyttö, kuten haku, tietokanta tai laskin, kun tarvitaan tarkkaa tietoa</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Lämpötila ei ole mielentila</h3></div><div class="task-card-body">
+<p><strong>Lämpötila</strong> on matemaattinen asetus, joka vaikuttaa siihen, kuinka paljon satunnaisuutta mallin vastauksessa on. Matala lämpötila tekee vastauksesta yleensä ennakoitavamman. Korkeampi lämpötila voi tehdä vastauksesta vaihtelevamman ja luovemman, mutta myös riskialttiimman faktatehtävissä.</p>
+<table>
+<thead>
+<tr>
+<th>Lämpötila</th>
+<th>Mitä se tekee?</th>
+<th>Milloin hyödyllinen?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Matala</strong></td>
+<td>Vähentää vaihtelua ja tekee vastauksista ennakoitavampia.</td>
+<td>Faktapainotteiset, tekniset ja kriittiset tehtävät.</td>
+</tr>
+<tr>
+<td><strong>Korkea</strong></td>
+<td>Lisää vaihtelua, luovuutta ja yllätyksellisyyttä.</td>
+<td>Ideointi, luova kirjoittaminen ja vaihtoehtoisten näkökulmien tuottaminen.</td>
+</tr>
+</tbody>
+</table></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Kielimalli ymmärtää tekstiä.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Kielimalli ennustaa seuraavaa tokenia todennäköisyyksien perusteella. Se voi näyttää ymmärtävän, koska se on oppinut valtavasti kielen ja tekstien rakenteita koulutusdatasta. Tämä ei kuitenkaan tarkoita ihmisen kaltaista ymmärrystä.</p>
+<blockquote class="pause"><p>Malli näyttää ymmärtävän, koska se osaa tuottaa ymmärtävältä näyttävää tekstiä.</p>
+</blockquote>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Parametrit ovat sääntöjä, jotka malli oppi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Parametrit ovat numeroita eli painoja. Ne eivät ole erillisiä luettavia sääntöjä. Miljardit parametrit yhdessä vaikuttavat siihen, millainen vastaus mallista syntyy.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Jos malli hallusinoi, se valehtelee tarkoituksella.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Malli ei valehtele tarkoituksella, koska sillä ei ole tietoisuutta tai aikomusta. Se tuottaa väärän vastauksen, koska se ennustaa uskottavan jatkon väärin.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Suurempi malli on aina parempi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Suurempi malli voi olla kyvykkäämpi, mutta koko ei yksin ratkaise laatua. Koulutusdata, hienosäätö, käyttötapa, tehtävän rajaus ja turvallisuusratkaisut vaikuttavat paljon.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: ”Lämpötila kuvaa mallin mielentilaa.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Lämpötila ei ole mielentila vaan matemaattinen asetus. Se ohjaa satunnaisuutta siinä, miten seuraava token valitaan mahdollisten vaihtoehtojen joukosta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan fasilitointiohjeet</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ennen luokkaa</h3></div><div class="task-card-body">
+<ul>
+<li>Testaa etukäteen yksinkertainen live-demo, jossa opiskelijat jatkavat lauseita ja vertaavat omaa arvaamistaan kielimallin vastaukseen.</li>
+<li>Valmistele yksi turvallinen hallusinaatioesimerkki, jonka voi tarkistaa nopeasti luotettavasta lähteestä.</li>
+<li>Varmista, että osaat selittää <strong>next-token prediction</strong> -periaatteen yksinkertaisesti ilman liian teknistä matematiikkaa.</li>
+<li>Tutustu yleisellä tasolla transformerien ja attention-mekanismin ideaan, mutta pidä oppitunnin pääpaino ennustamisessa, parametreissa ja hallusinaatioissa.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luokan aikana</h3></div><div class="task-card-body">
+<ul>
+<li><strong>Aloita käytännöstä.</strong> Anna opiskelijoiden ennustaa seuraava sana ennen teoriaa.</li>
+<li><strong>Näytä hallusinaatio konkreettisesti.</strong> Keskustelkaa siitä, miksi virhe näyttää uskottavalta.</li>
+<li><strong>Yhdistä ammatilliseen käyttöön.</strong> Kysy: ”Mitä tapahtuu, jos tällainen virhe päätyy asiakasviestiin, koodiin tai tietoturvaohjeeseen?”</li>
+<li><strong>Pidä ero selkeänä:</strong> malli ei tiedä, vaan ennustaa. Tämä ero on tärkeä myöhemmissä tekoälyn turvallisuutta ja agentteja käsittelevissä osioissa.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Yleisten opiskelijakysymysten vastaukset</h3></div><div class="task-card-body">
+<p><strong>Kysymys: ”Jos malli vain arvaa sanoja, miten se osaa vastata monimutkaisiin kysymyksiin?”</strong><br />
+Vastaus: Se on hyvä kysymys. Malli on nähnyt koulutusdatassa valtavasti monimutkaisia kysymyksiä, vastauksia, selityksiä ja ongelmanratkaisun esimerkkejä. Se oppii näistä kuvioita. Siksi se voi tuottaa hyvin monimutkaiselta näyttävän vastauksen, vaikka perusmekanismi on seuraavan tokenin ennustaminen.</p>
+<p><strong>Kysymys: ”Voiko hallusinaatiot poistaa?”</strong><br />
+Vastaus: Ei täysin. Niitä voi kuitenkin vähentää tarkistamalla vastauksia, käyttämällä luotettavia lähteitä, ankkuroimalla mallin tietopohjaan, käyttämällä matalampaa lämpötilaa ja lisäämällä ihmisen tarkistus kriittisiin tehtäviin.</p>
+<p><strong>Kysymys: ”Kuinka monta parametria ihmisen aivoissa on?”</strong><br />
+Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kaltainen parametrijoukko, vaan biologinen, dynaaminen ja kehon kanssa yhteydessä oleva järjestelmä. Mallin parametrit ja aivojen toiminta ovat eri asioita.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Seuraavan tokenin ennustaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää next-token prediction -periaatteen käytännön esimerkin kautta.</p>
+<p><strong>Tehtävä:</strong> Kirjoita taululle lauseen alkuja ja pyydä opiskelijoita ehdottamaan seuraavaa sanaa. Keskustelkaa, miksi tietyt sanat tuntuvat todennäköisiltä.</p>
+<table>
+<thead>
+<tr>
+<th>Lauseen alku</th>
+<th>Todennäköisiä jatkoja</th>
+<th>Miksi?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>”Kissa istui...”</td>
+<td>matolla, tuolilla, ikkunalla</td>
+<td>Nämä ovat tuttuja ja kielellisesti todennäköisiä jatkoja.</td>
+</tr>
+<tr>
+<td>”Salasana pitää vaihtaa, jos...”</td>
+<td>se on vuotanut, epäilet väärinkäyttöä, se on liian heikko</td>
+<td>Tietoturvakonteksti ohjaa todennäköisiä jatkoja.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 10–15 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Hallusinaation tunnistaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija oppii tarkistamaan kielimallin väitteitä eikä luota pelkkään vakuuttavaan muotoon.</p>
+<p><strong>Tehtävä:</strong> Näytä opiskelijoille tekoälyn tuottama lyhyt vastaus, jossa on yksi keksitty tai virheellinen fakta. Pyydä opiskelijoita tunnistamaan, mikä väite pitää tarkistaa ja miten se tarkistettaisiin.</p>
+<p><strong>Ohje opiskelijalle:</strong></p>
+<ol>
+<li>Mikä väite kuulostaa faktalta?</li>
+<li>Mistä sen voisi tarkistaa?</li>
+<li>Mitä tapahtuu, jos väite hyväksytään ilman tarkistusta?</li>
+<li>Miten voisit muotoilla vastauksen turvallisemmin?</li>
+</ol>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Lämpötila ja käyttötarkoitus</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää, että lämpötila vaikuttaa vastausten vaihteluun eikä mallin “mielentilaan”.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille kolme käyttötapausta ja pyydä heitä valitsemaan, olisiko matalampi vai korkeampi lämpötila järkevämpi.</p>
+<table>
+<thead>
+<tr>
+<th>Käyttötapaus</th>
+<th>Sopiva lämpötila</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tietoturvaohjeen tarkka tiivistelmä</td>
+<td>Matala</td>
+<td>Tarvitaan ennakoitava ja tarkka vastaus.</td>
+</tr>
+<tr>
+<td>Ideoita pelihahmon nimeksi</td>
+<td>Korkeampi</td>
+<td>Luovuus ja vaihtelu ovat hyödyllisiä.</td>
+</tr>
+<tr>
+<td>Asiakkaalle lähetettävä laskutustieto</td>
+<td>Matala</td>
+<td>Virheellinen tieto voi aiheuttaa taloudellista haittaa.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 10–15 minuuttia</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Formatiivinen tarkistuspiste — todistusaineisto 1</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tavoite</h3></div><div class="task-card-body">
+<p>Opiskelija prosessoi oppitunnin ydinkäsitteet omin sanoin. Todistusaineisto toimii sekä <strong>formatiivisena arviointina</strong> että rakennuspalikkana Teoria-osion arviointitehtävälle.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tehtävänanto opiskelijalle</h3></div><div class="task-card-body">
+<p>Kirjoita lyhyt vastaus, jossa selität omin sanoin:</p>
+<ol>
+<li>Miten kielimalli tuottaa vastauksen?</li>
+<li>Mitä tarkoittaa <strong>next-token prediction</strong>?</li>
+<li>Miksi kielimalli voi hallusinoida?</li>
+<li>Miksi mallin vastausta ei pidä aina hyväksyä ilman tarkistusta?</li>
+</ol>
+<p><strong>Valmis vastaus:</strong> noin 150–250 sanaa.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Mitä etsiä palautuksesta?</h3></div><div class="task-card-body">
+<ul>
+<li><strong>Ydinajatus ymmärretty:</strong> opiskelija selittää, että malli ennustaa seuraavaa tokenia todennäköisyyksien perusteella eikä “ymmärrä” tai “tiedä” samalla tavalla kuin ihminen.</li>
+<li><strong>Yleinen väärinymmärrys:</strong> opiskelija kirjoittaa, että malli hakee vastauksen tietokannasta tai tietää faktat. Ohjaa tällöin takaisin tilastolliseen ennustamiseen.</li>
+<li><strong>Luotettavuuskysymys mukana:</strong> opiskelija yhdistää ennustamisen epäluotettavuuteen: koska malli ei tiedä, onko vastaus totta, sen vastaus täytyy tarkistaa kriittisissä tilanteissa.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Palautteen antaminen</h3></div><div class="task-card-body">
+<p>Anna lyhyt 2–3 lauseen palaute ennen seuraavaa oppituntia. Keskity yhteen tärkeimpään asiaan.</p>
+<ul>
+<li><strong>Jos ydinajatus on oikein:</strong> ”Hyvä — ymmärrät, että kielimalli ennustaa eikä hae valmista vastausta. Muista tämä, kun myöhemmin arvioimme tekoälyn luotettavuutta.”</li>
+<li><strong>Jos väärinymmärrys näkyy:</strong> ”Tarkista vielä: hakeeko malli vastauksen tietokannasta vai ennustaako se todennäköisen jatkon? Tämä ero on tärkeä myöhemmin.”</li>
+<li><strong>Jos hallusinaatio jää epäselväksi:</strong> ”Lisää vielä selitys siitä, miksi vakuuttava vastaus voi silti olla väärä.”</li>
+</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointivinkit</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Perusymmärryksen tarkistaminen</h3></div><div class="task-card-body">
+<ul>
+<li>Kysy: ”Miten kielimalli ennustaa seuraavan sanan tai tokenin?” Hyvä vastaus: se käyttää opittuja parametreja ja todennäköisyyksiä aiemman tekstin perusteella.</li>
+<li>Kysy: ”Mitä hallusinaatio tarkoittaa?” Hyvä vastaus: malli tuottaa vakuuttavan mutta virheellisen tai keksityn vastauksen.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Kriittinen ajattelu</h3></div><div class="task-card-body">
+<ul>
+<li>Näytä hallusinaatio ja kysy: ”Mistä tiesit, että se voi olla väärä?” Hyvä vastaus: väite pitää tarkistaa luotettavasta lähteestä, koska uskottava muoto ei takaa totuutta.</li>
+<li>Kysy: ”Missä ammateissa hallusinaatiot ovat vaarallisimpia?” Hyviä vastauksia ovat esimerkiksi lääketiede, oikeus, IT-tietoturva, taloushallinto ja asiakaspalvelu.</li>
+</ul>
+</div></div><div class="task-card task-card--assessment task-card--sm"><div class="task-card-header"><h3>Itsearviointi</h3></div><div class="task-card-body">
+<p>Voit antaa tunnin lopuksi lyhyen itsearvioinnin:</p>
+<ul>
+<li>Ymmärrän, kuinka next-token prediction toimii: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+<li>Ymmärrän, miksi hallusinaatiot ovat vaarallisia: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+<li>Osaan selittää, miksi kielimallin vastaus pitää tarkistaa kriittisissä tilanteissa: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
+<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että kielimalli on tehokas tekstin tuottaja mutta ei erehtymätön tietolähde. Sen toiminta perustuu seuraavan tokenin ennustamiseen, opittuihin parametreihin ja koulutusdatan kuvioihin. Tämä selittää sekä mallin vaikuttavat kyvyt että sen virheet.</p>
+<p>Hyvä päätöskysymys tunnin loppuun:</p>
+<blockquote class="pause"><p><strong>Pohdi:</strong> Millaisessa tilanteessa kielimallin vakuuttava mutta väärä vastaus voisi aiheuttaa todellista vahinkoa?</p>
+</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3.1: Seuraavan sanan ennustaminen — luokkakeskustelu ja demo</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on näyttää konkreettisesti, miten <strong>kielimalli</strong> tuottaa tekstiä ennustamalla seuraavaa sanaa tai tekstin osaa yksi vaihe kerrallaan. Opiskelijat ymmärtävät, että kielimallin vastaus rakentuu vaiheittaisista ennusteista eikä valmiiksi suunnitellusta kokonaisvastauksesta.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, että kielimalli ei “tiedä” seuraavaa sanaa samalla tavalla kuin ihminen. Se arvioi, mikä tekstin osa on todennäköinen aiemman kontekstin ja opetusdatan perusteella.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<p>Valmista lyhyt teksti, josta puuttuu sanoja. Voit käyttää esimerkiksi seuraavaa lausetta:</p>
+<p>Seuraavaksi hän avasi _____ ja luki kirjeitä. Kaikki olivat _____.</p>
+<p>Projisoi teksti tai kirjoita se taululle niin, että opiskelijat näkevät puuttuvat kohdat selvästi.</p>
+<h3>Toteutus noin 20 minuuttia</h3>
+<ol>
+<li><strong>Avaus noin 2 minuuttia:</strong></li>
+</ol>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Nyt harjoittelemme, miten kielimalli tuottaa tekstiä. Se ei kirjoita koko vastausta valmiiksi yhdellä kertaa, vaan ennustaa seuraavaa sanaa tai tekstin osaa vaihe kerrallaan. Kokeillaan, miten hyvin me osaamme tehdä saman.<br />
+2. <strong>Ensimmäisen puuttuvan sanan arvaaminen noin 5 minuuttia:</strong></p>
+</blockquote>
+<ol>
+<li>Näytä lauseen alku: <code>Seuraavaksi hän avasi _____</code></li>
+<li>Kysy luokalta: <strong>Mikä sana voisi tulla seuraavaksi?</strong></li>
+<li>Kerää taululle 5–6 opiskelijoiden ehdotusta.</li>
+<li>Kysy: <strong>Mitä yhteistä näillä sanoilla on? Miksi juuri nämä sanat tuntuvat mahdollisilta?</strong></li>
+<li>Näytä halutessasi ChatGPT:n tai muun kielimallin vastaus samalla lauseen alulla.</li>
+<li>
+<p><strong>Toisen puuttuvan sanan arvaaminen noin 5 minuuttia:</strong></p>
+</li>
+<li>
+<p>Näytä lauseen toinen kohta: <code>Kaikki olivat _____.</code></p>
+</li>
+<li>Kysy opiskelijoilta uusia ehdotuksia.</li>
+<li>Kirjoita ehdotukset taululle.</li>
+<li>Keskustelkaa siitä, mitkä ehdotukset sopivat lauseeseen ja mitkä eivät.</li>
+<li><strong>Analyysi noin 5 minuuttia:</strong></li>
+</ol>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Kielimalli valitsee seuraavan sanan tai tekstin osan todennäköisyyksien perusteella. Se ei tiedä samalla tavalla kuin ihminen, mikä sana on varmasti oikea. Se arvioi, mitkä sanat ovat esiintyneet usein samankaltaisissa yhteyksissä sen opetusdatassa.</p>
+</blockquote>
+<p>Kirjoita taululle:</p>
+<p>Next-token prediction = seuraavan tekstiosan ennustaminen todennäköisyyksien perusteella.<br />
+5. <strong>Johtopäätös noin 3 minuuttia:</strong></p>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Tämän vuoksi ChatGPT voi vaikuttaa älykkäältä. Se pystyy tuottamaan hyvin toimivia sanayhdistelmiä, mutta se tekee sen ennustamalla tekstiä vaihe vaiheelta.</p>
+</blockquote>
+<h3>Keskustelun tueksi</h3>
+<table>
+<thead>
+<tr>
+<th>Kysymys opiskelijoille</th>
+<th>Mitä kysymyksellä tavoitellaan?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Miksi jotkin sanat tuntuivat todennäköisemmiltä kuin toiset?</td>
+<td>Opiskelija huomaa, että konteksti rajaa mahdollisia jatkoja.</td>
+</tr>
+<tr>
+<td>Voiko sama alku johtaa useaan järkevään jatkoon?</td>
+<td>Opiskelija ymmärtää, että yksi ainoa “oikea” jatko ei aina ole olemassa.</td>
+</tr>
+<tr>
+<td>Mitä tapahtuu, jos ensimmäinen ennuste ohjaa tekstin väärään suuntaan?</td>
+<td>Opiskelija ymmärtää, että virhe voi kasautua seuraavissa vaiheissa.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Jos opiskelijat ehdottavat erilaisia sanoja, älä etsi heti yhtä oikeaa vastausta. Käytä tilannetta osoittamaan, että kielimallikin voi valita monen todennäköisen vaihtoehdon väliltä.</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li><strong>kielimalli</strong> ei suunnittele koko vastausta samalla tavalla kuin ihminen, vaan ennustaa tekstiä vaiheittain,</li>
+<li>mallin tuottama vaikutelma älykkyydestä syntyy siitä, että se osaa yhdistää sanoja ja ilmauksia usein toimivalla tavalla,</li>
+<li>malli voi mennä pieleen missä tahansa vaiheessa, jos sen ennuste ohjautuu väärään suuntaan.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3.2: Hallusinaatiot livenä — näytä virhe ja analysoi</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on osoittaa, että <strong>kielimalli</strong> voi tuottaa vakuuttavalta kuulostavia mutta virheellisiä vastauksia. Tätä ilmiötä kutsutaan <strong>hallusinaatioksi</strong>. Opiskelijat oppivat, miksi tekoälyn tuottamaa tietoa pitää tarkistaa kriittisesti.</p>
+<p><strong>Opettajan painotus:</strong> Hallusinaation vaarallisuus ei ole vain siinä, että vastaus on väärä. Erityisen vaarallista on se, että väärä vastaus voi kuulostaa varmalta, sujuvalta ja asiantuntevalta.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<p>Valitse etukäteen kolme kysymystä, joiden avulla voit testata kielimallin luotettavuutta. Valitse kysymyksiä, joissa on riski, että malli keksii uskottavalta kuulostavan mutta väärän vastauksen.</p>
+<p>Voit käyttää esimerkiksi seuraavia kysymystyyppejä:</p>
+<ol>
+<li>Kysymys olemattomasta kirjasta, elokuvasta tai käsitteestä.</li>
+<li>Kysymys ajankohtaisesta faktasta, joka pitää tarkistaa luotettavasta lähteestä.</li>
+<li>Kysymys henkilöstä, organisaatiosta tai roolista, jossa malli voi arvata väärin.</li>
+</ol>
+<p><strong>Esimerkkejä testikysymyksistä:</strong></p>
+<ul>
+<li><code>Kuka kirjoitti romaanin "Suuri Älyntestaus"?</code></li>
+<li><code>Mikä on Suomen pääkaupunki vuonna 2026?</code></li>
+<li><code>Kuka on Teknillisen korkeakoulun rehtori vuonna 2026?</code></li>
+</ul>
+<p><strong>Huomio:</strong> Tarkista esimerkkien oikeat tiedot etukäteen luotettavasta lähteestä, jotta voit näyttää opiskelijoille, miten vastaus varmistetaan. Ajankohtaiset henkilö- ja organisaatiotiedot voivat muuttua, joten niitä ei kannata käsitellä muistin varassa.</p>
+<h3>Toteutus noin 20 minuuttia</h3>
+<ol>
+<li><strong>Avaus noin 2 minuuttia:</strong></li>
+</ol>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Näytän teille, miten kielimalli voi vaikuttaa vakuuttavalta myös silloin, kun se on väärässä. Tätä kutsutaan hallusinaatioksi.<br />
+2. <strong>Testi 1 noin 5 minuuttia:</strong></p>
+</blockquote>
+<ol>
+<li>Kysy kielimallilta esimerkiksi: <code>Kuka kirjoitti romaanin "Suuri Älyntestaus"?</code></li>
+<li>Näytä vastaus luokalle.</li>
+<li>Kysy opiskelijoilta: <strong>Näyttääkö vastaus uskottavalta? Mistä voimme tietää, onko se totta?</strong></li>
+<li>Tarkistakaa vastaus yhdessä luotettavasta lähteestä tai osoittakaa, ettei teoksesta löydy luotettavaa tietoa.</li>
+<li>Selitä: “Malli ei välttämättä tiedä, onko teos olemassa. Se voi tuottaa uskottavalta kuulostavan vastauksen, koska sanat sopivat sen oppimiin tekstikuvioihin.”</li>
+<li>
+<p><strong>Testit 2 ja 3 noin 8 minuuttia:</strong></p>
+</li>
+<li>
+<p>Tee kaksi muuta testiä samalla tavalla.</p>
+</li>
+<li>Näytä mallin vastaus.</li>
+<li>Kysy jokaisen vastauksen jälkeen: <strong>Miten tämän voisi tarkistaa?</strong></li>
+<li>Kysy myös: <strong>Valehteleeko malli tarkoituksella vai ennustaako se väärän vastauksen?</strong></li>
+<li><strong>Analyysi noin 5 minuuttia:</strong></li>
+</ol>
+<p>Kirjoita taululle:</p>
+<p>Hallusinaatio = kielimalli tuottaa virheellistä tai keksittyä sisältöä, joka voi kuulostaa uskottavalta.</p>
+<p>Korosta opiskelijoille:</p>
+<ul>
+<li>Malli ei valehtele tarkoituksella.</li>
+<li>Se tuottaa sanoja ja lauseita todennäköisyyksien perusteella.</li>
+<li>Vaarallista on se, että virheellinen vastaus voi näyttää luotettavalta.</li>
+</ul>
+<p>Kysy lopuksi: <strong>Missä ammatillisissa tilanteissa hallusinaatiot olisivat erityisen vaarallisia?</strong></p>
+<p>Esimerkkejä keskusteluun:</p>
+<ul>
+<li>lääketiede,</li>
+<li>oikeudelliset kysymykset,</li>
+<li>tietoturva,</li>
+<li>asiakasviestintä,</li>
+<li>liikesalaisuudet ja yrityksen päätöksenteko.</li>
+</ul>
+<h3>Hallusinaation tarkistusmalli</h3>
+<table>
+<thead>
+<tr>
+<th>Tarkistuskysymys</th>
+<th>Miksi se on tärkeä?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mihin lähteeseen vastaus perustuu?</td>
+<td>Ilman lähdettä vastaus voi olla pelkkä uskottava arvaus.</td>
+</tr>
+<tr>
+<td>Voiko tieto olla vanhentunutta?</td>
+<td>Ajankohtaiset tiedot, roolit ja organisaatiot muuttuvat.</td>
+</tr>
+<tr>
+<td>Onko kysymyksessä virheellinen oletus?</td>
+<td>Malli voi vastata kysymykseen, vaikka kysymyksen lähtökohta olisi väärä.</td>
+</tr>
+<tr>
+<td>Kuulostaako vastaus varmalta ilman perusteluja?</td>
+<td>Itsevarma sävy ei todista, että tieto on oikein.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Kun kielimalli antaa uskottavan vastauksen, pysähdy ennen oikean tiedon paljastamista ja kysy opiskelijoilta: “Mikä tässä saa vastauksen tuntumaan luotettavalta?” Näin opiskelijat oppivat tunnistamaan uskottavan kielen ja todellisen luotettavuuden eron.</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li><strong>kielimalli</strong> ei automaattisesti tiedä, onko sen vastaus oikein,</li>
+<li><strong>hallusinaatiot</strong> voivat olla turvallisuusriski, koska virheelliset vastaukset voivat kuulostaa uskottavilta,</li>
+<li>ammattilaisen pitää tarkistaa tekoälyn tuottama tieto eikä luottaa siihen sokeasti,</li>
+<li>tekoälyn käyttö vaatii kriittistä ajattelua ja lähteiden arviointia.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3.3: Lämpötilan ymmärtäminen — pareittain käytävä keskustelu</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on ymmärtää, mitä <strong>lämpötila</strong> tarkoittaa kielimallin asetuksena ja miten se vaikuttaa vastausten luovuuteen, vaihteluun ja johdonmukaisuuteen.</p>
+<p><strong>Opettajan painotus:</strong> Lämpötila ei tee vastauksesta automaattisesti parempaa tai huonompaa. Sopiva lämpötila riippuu tehtävästä: faktatehtävissä halutaan usein vakautta, luovissa tehtävissä voidaan hyötyä vaihtelusta.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<p>Valitse kaksi erilaista tehtävää:</p>
+<ol>
+<li><strong>Tarkkuutta vaativa tehtävä:</strong> <code>Kuka voitti jalkapallon maailmanmestaruuden vuonna 1998?</code></li>
+<li><strong>Luova tehtävä:</strong> <code>Kirjoita runo syksystä.</code></li>
+</ol>
+<h3>Toteutus noin 15 minuuttia</h3>
+<ol>
+<li><strong>Peruskäsite noin 3 minuuttia:</strong></li>
+</ol>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Lämpötila säätelee sitä, kuinka paljon vaihtelua ja satunnaisuutta kielimallin vastauksissa on. Matala lämpötila tekee vastauksista yleensä johdonmukaisempia ja ennustettavampia. Korkea lämpötila lisää vaihtelua ja luovuutta, mutta voi myös lisätä virheiden tai outojen ilmausten riskiä.</p>
+</blockquote>
+<p>Kirjoita taululle:</p>
+<p>Lämpötila 0.1 = hyvin vähän vaihtelua, usein sama tai lähes sama vastaus.</p>
+<p>Lämpötila 0.5 = jonkin verran vaihtelua.</p>
+<p>Lämpötila 1.0 tai enemmän = paljon vaihtelua ja enemmän luovuutta, mutta myös enemmän riskejä.<br />
+2. <strong>Tehtävä 1: Tarkkuus noin 5 minuuttia:</strong></p>
+<ol>
+<li>Kysy opiskelijoilta: <strong>Kuka voitti jalkapallon maailmanmestaruuden vuonna 1998?</strong></li>
+<li>Kerro, että tällainen tehtävä vaatii mahdollisimman tarkan ja luotettavan vastauksen.</li>
+<li>Selitä: “Tässä tilanteessa matala lämpötila on yleensä parempi, koska emme halua luovia vaihtoehtoja vaan oikean vastauksen.”</li>
+<li>Kysy opiskelijoilta: <strong>Mitä voisi tapahtua, jos lämpötila olisi korkea?</strong></li>
+</ol>
+<p><strong>Keskeinen havainto:</strong> Korkea lämpötila voi lisätä vaihtelua, mutta faktakysymyksissä vaihtelu ei yleensä ole hyödyllistä.<br />
+3. <strong>Tehtävä 2: Luovuus noin 5 minuuttia:</strong></p>
+<ol>
+<li>Kysy opiskelijoilta: <strong>Millainen vastaus sopisi tehtävään “Kirjoita runo syksystä”?</strong></li>
+<li>Selitä: “Tässä tehtävässä korkeampi lämpötila voi olla hyödyllinen, koska tavoitteena on saada erilaisia, luovia ja yllättäviä vaihtoehtoja.”</li>
+<li>Keskustelkaa pareittain: <strong>Milloin luovuus on hyödyllistä? Milloin se voi olla haitallista?</strong></li>
+</ol>
+<p><strong>Keskeinen havainto:</strong> Luovissa tehtävissä vaihtelu voi olla hyödyllistä, mutta liian korkea lämpötila voi tehdä vastauksista sekavia tai epäluotettavia.<br />
+4. <strong>Johtopäätös noin 2 minuuttia:</strong></p>
+<ul>
+<li>Kriittisissä ja tarkkuutta vaativissa tehtävissä kannattaa käyttää matalaa lämpötilaa.</li>
+<li>Luovissa tehtävissä korkeampi lämpötila voi auttaa tuottamaan vaihtelevampia vastauksia.</li>
+<li>Yhtä oikeaa lämpötilaa ei ole, vaan sopiva asetus riippuu tehtävän tavoitteesta.</li>
+</ul>
+<h3>Lämpötilan valinnan yhteenveto</h3>
+<table>
+<thead>
+<tr>
+<th>Tehtävän tyyppi</th>
+<th>Sopiva lämpötila</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Faktakysymys</strong></td>
+<td>Matala</td>
+<td>Tavoitteena on johdonmukainen ja tarkka vastaus, ei luova vaihtelu.</td>
+</tr>
+<tr>
+<td><strong>Ohje tai prosessi</strong></td>
+<td>Matala tai keskitaso</td>
+<td>Vaiheiden pitää pysyä selkeinä, mutta sanamuodoissa voi olla hieman joustoa.</td>
+</tr>
+<tr>
+<td><strong>Ideointi</strong></td>
+<td>Keskitaso tai korkea</td>
+<td>Vaihtelu voi auttaa löytämään uusia vaihtoehtoja.</td>
+</tr>
+<tr>
+<td><strong>Luova kirjoittaminen</strong></td>
+<td>Korkeampi</td>
+<td>Tavoitteena voi olla omaperäisyys, tyyli ja yllättävät ilmaisut.</td>
+</tr>
+</tbody>
+</table>
+<h3>Parikeskustelu</h3>
+<p>Pyydä opiskelijoita keskustelemaan pareittain seuraavista kysymyksistä:</p>
+<ul>
+<li>Missä tehtävissä haluaisit tekoälyltä mahdollisimman saman vastauksen joka kerta?</li>
+<li>Missä tehtävissä erilaiset vastaukset voisivat olla hyödyllisiä?</li>
+<li>Miksi korkea luovuus voi olla ongelma esimerkiksi asiakasviestinnässä, tietoturvassa tai lääketieteessä?</li>
+<li>Miten valitsisit lämpötilan omaan tekoälytehtävääsi?</li>
+</ul>
+<p><strong>Vinkki arviointiin:</strong> Hyvä opiskelijavastaus ei vain sano “matala” tai “korkea” lämpötila, vaan perustelee valinnan tehtävän tavoitteen kautta: tarvitaanko tarkkuutta, luovuutta, vaihtelua vai turvallisuutta?</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li><strong>lämpötila</strong> vaikuttaa kielimallin vastausten luovuuteen, vaihteluun ja johdonmukaisuuteen,</li>
+<li>matala lämpötila sopii paremmin tarkkuutta vaativiin tehtäviin,</li>
+<li>korkeampi lämpötila voi sopia luoviin tehtäviin,</li>
+<li>sopiva lämpötila valitaan tehtävän tavoitteen mukaan.</li>
+</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
+<p>Opettaja arvioi opiskelijoiden kykyä:</p>
+<ul>
+<li>selittää, mitä <strong>seuraavan tekstiosan ennustaminen</strong> tarkoittaa,</li>
+<li>kuvata, miten kielimalli rakentaa vastauksen vaiheittain,</li>
+<li>tunnistaa <strong>hallusinaatioiden</strong> riskin ja selittää, miksi ne voivat olla vaarallisia,</li>
+<li>kuvata, miten tekoälyn tuottama tieto tarkistetaan luotettavista lähteistä,</li>
+<li>selittää, mitä <strong>lämpötila</strong> tarkoittaa kielimallin asetuksena,</li>
+<li>perustella, millainen lämpötila sopii tarkkuutta vaativaan tai luovaan tehtävään.</li>
+</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 3</text>
+<text x="74" y="244" font-size="47" font-weight="800" fill="#1B2336">Miten kone kirjoittaa?</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Generatiivisen tekoälyn mekaniikka — sana kerrallaan</text>
+<g transform="translate(642,196)">
+<rect x="0" y="0" width="116" height="100" rx="22" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="3"/>
+<line x1="58" y1="0" x2="58" y2="-22" stroke="#3B5BDB" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="-28" r="7" fill="#3B5BDB"/>
+<circle cx="34" cy="40" r="10" fill="#3B5BDB"/><circle cx="82" cy="40" r="10" fill="#3B5BDB"/><rect x="32" y="66" width="52" height="8" rx="4" fill="#3B5BDB"/>
+<text x="58" y="134" text-anchor="middle" font-size="14" font-weight="600" fill="#2F46B0">kielimalli</text></g>
+<g transform="translate(800,210)" font-family="ui-monospace,monospace">
+<rect x="0" y="0" width="44" height="30" rx="7" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/><text x="22" y="20" text-anchor="middle" font-size="13" fill="#5A6478">on</text>
+<rect x="0" y="40" width="84" height="30" rx="7" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/><text x="42" y="60" text-anchor="middle" font-size="13" fill="#5A6478">Helsinki</text>
+<rect x="0" y="80" width="30" height="30" rx="7" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/><text x="15" y="100" text-anchor="middle" font-size="13" fill="#2F46B0">.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Älykäs lopputulos, mekaaninen perusta</text>
+<rect x="74" y="150" width="812" height="84" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="190" font-size="21" fill="#2F46B0">Tekoäly ei ajattele eikä ymmärrä ihmisen tavoin.</text>
+<text x="100" y="218" font-size="21" fill="#2F46B0">Se ennustaa matematiikan avulla, mikä sana sopii seuraavaksi.</text>
+<g transform="translate(74,272)">
+<rect x="0" y="0" width="380" height="172" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="40" cy="44" r="20" fill="#FBE6D8"/>
+<g transform="translate(30,34)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 a6 6 0 1 1 10 0 M10 16 V21"/><circle cx="10" cy="6" r="3"/></g>
+<text x="76" y="40" font-size="20" font-weight="700" fill="#1B2336">Miltä näyttää</text>
+<text x="24" y="92" font-size="17" fill="#3A4253">"Malli ajattelee ja</text>
+<text x="24" y="118" font-size="17" fill="#3A4253">ymmärtää, mitä se sanoo."</text>
+<text x="20" y="156" font-size="15" fill="#A35A22">Vaikutelma — ei totuus</text></g>
+<g transform="translate(506,272)">
+<rect x="0" y="0" width="380" height="172" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="40" cy="44" r="20" fill="#DFF3E8"/><path d="M31 44 l6 6 l11 -12" stroke="#2F9E69" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="76" y="40" font-size="20" font-weight="700" fill="#1B2336">Mitä oikeasti tapahtuu</text>
+<text x="24" y="92" font-size="17" fill="#3A4253">Malli ennustaa seuraavan</text>
+<text x="24" y="118" font-size="17" fill="#3A4253">palasen todennäköisyyksistä.</text>
+<text x="20" y="156" font-size="15" fill="#247A52">Tilastollista ennustamista</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tokenit — teksti pieninä palasina</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Malli ei näe kokonaisia sanoja, vaan tokeneita: kirjaimia, sananosia ja sanoja.</text>
+<g transform="translate(74,178)">
+<rect x="0" y="0" width="812" height="96" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="26" y="36" font-size="16" font-weight="700" fill="#5A6478">Yleinen sana = yksi token</text>
+<g font-family="ui-monospace,monospace" font-size="17">
+<rect x="26" y="50" width="100" height="34" rx="8" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.8"/><text x="76" y="73" text-anchor="middle" fill="#2F46B0">tekoäly</text>
+<rect x="142" y="50" width="86" height="34" rx="8" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.8"/><text x="185" y="73" text-anchor="middle" fill="#2F46B0">koulu</text></g></g>
+<g transform="translate(74,296)">
+<rect x="0" y="0" width="812" height="124" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="26" y="36" font-size="16" font-weight="700" fill="#5A6478">Harvinainen sana pilkkoutuu useaan tokeniin</text>
+<g font-family="ui-monospace,monospace" font-size="16">
+<rect x="26" y="52" width="96" height="34" rx="8" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="74" y="74" text-anchor="middle" fill="#3A4253">kielen</text>
+<rect x="130" y="52" width="116" height="34" rx="8" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="188" y="74" text-anchor="middle" fill="#3A4253">tutkimus</text>
+<rect x="254" y="52" width="116" height="34" rx="8" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="312" y="74" text-anchor="middle" fill="#3A4253">opiskelijat</text></g>
+<text x="26" y="110" font-size="15" fill="#7E88A8">Näin malli käsittelee myös sanoja, joita se ei ole nähnyt usein.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Parametrit — opitut säätimet</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Miljardeja numeroita, jotka malli on oppinut koulutuksessa.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="392" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="50" font-size="22" font-weight="800" fill="#1B2336">Mitä ne ovat?</text>
+<circle cx="36" cy="92" r="6" fill="#3B5BDB"/><text x="56" y="98" font-size="17" fill="#3A4253">Matemaattisia painoja, eivät</text>
+<text x="56" y="122" font-size="17" fill="#3A4253">ajatuksia tai muistoja.</text>
+<circle cx="36" cy="158" r="6" fill="#3B5BDB"/><text x="56" y="164" font-size="17" fill="#3A4253">Ohjaavat, mitä yhteyksiä</text>
+<text x="56" y="188" font-size="17" fill="#3A4253">malli tekstistä tunnistaa.</text>
+<circle cx="36" cy="224" r="6" fill="#3B5BDB"/><text x="56" y="230" font-size="17" fill="#3A4253">Vaikuttavat siihen, mitä</text>
+<text x="56" y="254" font-size="17" fill="#3A4253">malli todennäköisesti tuottaa.</text>
+<text x="28" y="292" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">kuin radion säätimet — kierrä, ääni muuttuu</text></g>
+<g transform="translate(494,170)">
+<rect x="0" y="0" width="392" height="300" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="28" y="50" font-size="22" font-weight="800" fill="#2F46B0">Mittakaava</text>
+<text x="28" y="118" font-size="46" font-weight="800" fill="#1B2336">175 mrd</text>
+<text x="28" y="148" font-size="16" fill="#5A6478">parametria GPT-3-mallissa</text>
+<g transform="translate(28,176)">
+<rect x="0" y="0" width="20" height="40" rx="3" fill="#C2CAD9"/><rect x="28" y="-10" width="20" height="50" rx="3" fill="#9AA6BD"/><rect x="56" y="6" width="20" height="34" rx="3" fill="#C2CAD9"/><rect x="84" y="-18" width="20" height="58" rx="3" fill="#3B5BDB"/><rect x="112" y="-4" width="20" height="44" rx="3" fill="#9AA6BD"/><rect x="140" y="-12" width="20" height="52" rx="3" fill="#C2CAD9"/></g>
+<text x="28" y="252" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">koulutus säätää niitä vähitellen</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Seuraavan tokenin ennustaminen</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">"Mikä on Suomen pääkaupunki?" — malli rakentaa vastauksen pala kerrallaan.</text>
+<g font-family="ui-monospace,monospace" font-size="16">
+<rect x="74" y="166" width="92" height="38" rx="9" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="120" y="191" text-anchor="middle" fill="#5A6478">Mikä</text>
+<rect x="178" y="166" width="60" height="38" rx="9" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="208" y="191" text-anchor="middle" fill="#5A6478">on</text>
+<rect x="250" y="166" width="108" height="38" rx="9" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="304" y="191" text-anchor="middle" fill="#5A6478">Suomen</text>
+<rect x="370" y="166" width="148" height="38" rx="9" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.8"/><text x="444" y="191" text-anchor="middle" fill="#5A6478">pääkaupunki</text>
+<path d="M530 185 H572" stroke="#9AA6BD" stroke-width="2"/><path d="M580 185 L568 179 L568 191 Z" fill="#9AA6BD"/>
+<rect x="588" y="166" width="128" height="38" rx="9" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.2"/><text x="652" y="191" text-anchor="middle" fill="#2F46B0">Helsinki</text></g>
+<text x="74" y="252" font-size="18" font-weight="700" fill="#1B2336">Malli laskee todennäköisyyden jokaiselle jatkolle</text>
+<g transform="translate(74,272)" font-family="ui-monospace,monospace">
+<rect x="0" y="0" width="812" height="44" rx="9" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/><text x="20" y="28" font-size="16" font-weight="700" fill="#247A52">Helsinki</text><rect x="160" y="16" width="540" height="12" rx="6" fill="#E1EFE7"/><rect x="160" y="16" width="508" height="12" rx="6" fill="#2F9E69"/><text x="780" y="28" text-anchor="end" font-size="15" fill="#247A52">94 %</text>
+<rect x="0" y="56" width="812" height="40" rx="9" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="20" y="81" font-size="15" fill="#5A6478">Tukholma</text><rect x="160" y="71" width="540" height="10" rx="5" fill="#EDF0F7"/><rect x="160" y="71" width="22" height="10" rx="5" fill="#9AA6BD"/><text x="780" y="81" text-anchor="end" font-size="14" fill="#7E88A8">2 %</text>
+<rect x="0" y="104" width="812" height="40" rx="9" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="20" y="129" font-size="15" fill="#5A6478">Turku</text><rect x="160" y="119" width="540" height="10" rx="5" fill="#EDF0F7"/><rect x="160" y="119" width="11" height="10" rx="5" fill="#9AA6BD"/><text x="780" y="129" text-anchor="end" font-size="14" fill="#7E88A8">1 %</text></g>
+<text x="74" y="452" font-size="16" fill="#5A6478">Valitsee todennäköisimmän, liittää sen tekstiin — ja laskee kaiken uudelleen.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Sama kehä toistuu</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Jokainen uusi token lasketaan koko siihenastisen tekstin perusteella.</text>
+<g transform="translate(480,302)">
+<defs><marker id="l3cyc" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#3B5BDB"/></marker></defs>
+<circle cx="0" cy="0" r="135" fill="none" stroke="#E6E9F2" stroke-width="2" stroke-dasharray="5 7"/>
+<path d="M62 -135 Q135 -135 135 -38" fill="none" stroke="#3B5BDB" stroke-width="2.4" marker-end="url(#l3cyc)"/>
+<path d="M135 38 Q135 135 62 135" fill="none" stroke="#3B5BDB" stroke-width="2.4" marker-end="url(#l3cyc)"/>
+<path d="M-62 135 Q-135 135 -135 38" fill="none" stroke="#3B5BDB" stroke-width="2.4" marker-end="url(#l3cyc)"/>
+<path d="M-135 -38 Q-135 -135 -62 -135" fill="none" stroke="#3B5BDB" stroke-width="2.4" marker-end="url(#l3cyc)"/>
+<g transform="translate(-58,-166)"><rect x="0" y="0" width="116" height="62" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/><text x="58" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#2F46B0">Ennusta</text><text x="58" y="50" text-anchor="middle" font-size="13" fill="#5A6478">todennäköisyydet</text></g>
+<g transform="translate(77,-31)"><rect x="0" y="0" width="116" height="62" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/><text x="58" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2336">Valitse</text><text x="58" y="50" text-anchor="middle" font-size="13" fill="#5A6478">token</text></g>
+<g transform="translate(-58,104)"><rect x="0" y="0" width="116" height="62" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/><text x="58" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#247A52">Liitä</text><text x="58" y="50" text-anchor="middle" font-size="13" fill="#5A6478">tekstiin</text></g>
+<g transform="translate(-193,-31)"><rect x="0" y="0" width="116" height="62" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/><text x="58" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2336">Toista</text><text x="58" y="50" text-anchor="middle" font-size="13" fill="#5A6478">alusta</text></g></g>
+<text x="74" y="480" font-size="16" fill="#5A6478">Malli ei suunnittele kokonaisuutta etukäteen — se etenee yksi token kerrallaan.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Koulutusdata — mistä malli oppii</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Biljoonia tokeneita: kirjoja, artikkeleita, verkkosivuja, koodia ja keskusteluja.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="394" height="142" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="44" font-size="20" font-weight="800" fill="#1B2336">Mitä malli oppii</text>
+<text x="28" y="80" font-size="16" fill="#3A4253">Tilastollisia yhteyksiä ja</text>
+<text x="28" y="104" font-size="16" fill="#3A4253">toistuvia kuvioita, esim.</text>
+<text x="28" y="130" font-size="15" font-weight="600" fill="#2F46B0" font-family="ui-monospace,monospace">"2 + 2"  →  "= 4"</text></g>
+<g transform="translate(492,168)">
+<rect x="0" y="0" width="394" height="142" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="28" y="44" font-size="20" font-weight="800" fill="#1B2336">Mitä malli ei tee</text>
+<text x="28" y="80" font-size="16" fill="#3A4253">Ei ymmärrä, miksi 2 + 2 = 4.</text>
+<text x="28" y="104" font-size="16" fill="#3A4253">Se on oppinut, että yhdistelmä</text>
+<text x="28" y="128" font-size="16" fill="#3A4253">on hyvin todennäköinen.</text></g>
+<rect x="74" y="336" width="812" height="112" rx="16" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(102,366)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2 L30 28 H2 Z"/><path d="M16 12 V20 M16 24 V24.5"/></g>
+<text x="150" y="380" font-size="20" font-weight="700" fill="#1B2336">Rajoitus: malli oppii myös datan virheet</text>
+<text x="150" y="410" font-size="17" fill="#3A4253">Jos data on vinoutunutta tai aihe puuttuu, malli ei hallitse sitä hyvin.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g8)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hallusinaatio</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Vastaus kuulostaa uskottavalta, mutta on todellisuudessa väärä.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="812" height="78" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="26" y="36" font-size="16" font-weight="700" fill="#5A6478">Kysymys</text>
+<text x="26" y="62" font-size="19" fill="#1B2336">"Kuka kirjoitti romaanin Suuri Mahtava?"</text></g>
+<g transform="translate(74,262)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2.5"/>
+<g transform="translate(28,30)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15"/><path d="M10 10 l12 12 M22 10 l-12 12"/></g>
+<text x="92" y="40" font-size="20" font-weight="700" fill="#A35A22">"Jane Austen kirjoitti sen vuonna 1847."</text>
+<text x="92" y="70" font-size="17" fill="#3A4253">Kuulostaa vakuuttavalta — mutta teosta ei ole olemassa.</text></g>
+<rect x="74" y="376" width="812" height="72" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="100" y="410" font-size="17" fill="#2F46B0">Malli ei valehtele tietoisesti. Se ennustaa todennäköisen ilmauksen —</text>
+<text x="100" y="436" font-size="17" fill="#2F46B0">nimi, teos ja vuosiluku esiintyvät usein samanlaisissa yhteyksissä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g9)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Lämpötila — satunnaisuuden säädin</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Valitseeko malli aina varmimman jatkon vai salliiko se vaihtelua?</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="392" height="290" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round"><path d="M10 2 V30 a8 8 0 1 0 8 0 V2 a4 4 0 0 0 -8 0"/><path d="M14 18 V32"/></g>
+<text x="78" y="50" font-size="24" font-weight="800" fill="#247A52">Matala</text>
+<text x="28" y="98" font-size="17" fill="#3A4253">Valitsee yleensä</text>
+<text x="28" y="122" font-size="17" fill="#3A4253">todennäköisimmän jatkon.</text>
+<text x="28" y="168" font-size="16" font-weight="700" fill="#247A52">+ tasaista, johdonmukaista</text>
+<text x="28" y="216" font-size="16" fill="#5A6478">+ ennustettavaa</text>
+<text x="28" y="262" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">esim. faktat ja ohjeet</text></g>
+<g transform="translate(494,170)">
+<rect x="0" y="0" width="392" height="290" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round"><path d="M10 2 V30 a8 8 0 1 0 8 0 V2 a4 4 0 0 0 -8 0"/><path d="M14 8 V32"/></g>
+<text x="78" y="50" font-size="24" font-weight="800" fill="#A35A22">Korkea</text>
+<text x="28" y="98" font-size="17" fill="#3A4253">Sallii myös epätodennäköi-</text>
+<text x="28" y="122" font-size="17" fill="#3A4253">sempiä jatkoja.</text>
+<text x="28" y="168" font-size="16" font-weight="700" fill="#247A52">+ luovempaa, monipuolisempaa</text>
+<text x="28" y="216" font-size="16" fill="#A35A22">− satunnaisempaa, virhealttiimpaa</text>
+<text x="28" y="262" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">esim. ideointi ja tarinat</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g10)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi sama kysymys, eri vastaus?</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Lämpötila vaikuttaa, vaikka et säätäisi sitä itse chat-käyttöliittymässä.</text>
+<g transform="translate(74,178)">
+<rect x="0" y="0" width="180" height="58" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="90" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#5A6478">Sama kysymys</text>
+<path d="M188 29 H236" stroke="#9AA6BD" stroke-width="2"/><path d="M244 29 L232 23 L232 35 Z" fill="#9AA6BD"/></g>
+<g transform="translate(330,168)">
+<rect x="0" y="0" width="556" height="40" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="20" r="6" fill="#3B5BDB"/><text x="48" y="26" font-size="16" fill="#3A4253">Helsinki on Suomen pääkaupunki.</text>
+<rect x="0" y="52" width="556" height="40" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="72" r="6" fill="#0E9AA7"/><text x="48" y="78" font-size="16" fill="#3A4253">Suomen pääkaupunki on Helsinki.</text>
+<rect x="0" y="104" width="556" height="40" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="26" cy="124" r="6" fill="#2F9E69"/><text x="48" y="130" font-size="16" fill="#3A4253">Se on Helsinki, maan suurin kaupunki.</text></g>
+<rect x="74" y="356" width="812" height="92" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="100" y="392" font-size="19" fill="#2F46B0">Vastaukset eivät ole sattumaa: malli arpoo jatkon todennäköisyyksistä,</text>
+<text x="100" y="422" font-size="19" fill="#2F46B0">joten varmaan faktaan päädytään eri reittejä mutta lähes aina oikein.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Sama idea, eri media</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Seuraavan yksikön ennustaminen ei rajoitu tekstiin.</text>
+<g transform="translate(74,178)">
+<rect x="0" y="0" width="252" height="280" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,30)" fill="none" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="40" height="32" rx="5"/><circle cx="12" cy="11" r="4"/><path d="M2 30 L15 18 L24 26 L32 19 L40 27"/></g>
+<text x="28" y="106" font-size="22" font-weight="800" fill="#1B2336">Kuva</text>
+<text x="28" y="148" font-size="16" fill="#3A4253">Ennustaa, mitä visuaalisia</text>
+<text x="28" y="172" font-size="16" fill="#3A4253">piirteitä kuvaan tulee</text>
+<text x="28" y="196" font-size="16" fill="#3A4253">seuraavaksi.</text>
+<text x="28" y="244" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">esim. "kissa avaruudessa"</text></g>
+<g transform="translate(354,178)">
+<rect x="0" y="0" width="252" height="280" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="30" r="6"/><circle cx="31" cy="26" r="6"/><path d="M15 30 V6 L37 2 V26"/></g>
+<text x="28" y="106" font-size="22" font-weight="800" fill="#1B2336">Musiikki</text>
+<text x="28" y="148" font-size="16" fill="#3A4253">Ennustaa, millainen ääni,</text>
+<text x="28" y="172" font-size="16" fill="#3A4253">sävel tai rytmi sopii</text>
+<text x="28" y="196" font-size="16" fill="#3A4253">jatkoksi.</text>
+<text x="28" y="244" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">esim. rauhallinen lo-fi</text></g>
+<g transform="translate(634,178)">
+<rect x="0" y="0" width="252" height="280" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#0E9AA7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="2" width="40" height="30" rx="5"/><path d="M16 10 L27 17 L16 24 Z"/></g>
+<text x="28" y="106" font-size="22" font-weight="800" fill="#1B2336">Video</text>
+<text x="28" y="148" font-size="16" fill="#3A4253">Ennustaa, millaisia kuvia</text>
+<text x="28" y="172" font-size="16" fill="#3A4253">ja liikettä syntyy</text>
+<text x="28" y="196" font-size="16" fill="#3A4253">seuraavaksi.</text>
+<text x="28" y="244" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">esim. aallot rannalla</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi tämä on ammattilaiselle tärkeää</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Mekanismin ymmärtäminen paljastaa sekä vahvuudet että rajat.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="394" height="280" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="28" y="50" font-size="22" font-weight="800" fill="#247A52">Vahvuudet</text>
+<circle cx="36" cy="92" r="6" fill="#2F9E69"/><text x="56" y="98" font-size="17" fill="#3A4253">Oppinut valtavasta määrästä</text>
+<text x="56" y="120" font-size="17" fill="#3A4253">ihmisten tekstiä.</text>
+<circle cx="36" cy="160" r="6" fill="#2F9E69"/><text x="56" y="166" font-size="17" fill="#3A4253">Tuottaa sujuvaa ja</text>
+<text x="56" y="188" font-size="17" fill="#3A4253">käyttökelpoista kieltä nopeasti.</text>
+<circle cx="36" cy="228" r="6" fill="#2F9E69"/><text x="56" y="234" font-size="17" fill="#3A4253">Tunnistaa yhteyksiä, joita</text>
+<text x="56" y="256" font-size="17" fill="#3A4253">ihminen ei ehtisi.</text></g>
+<g transform="translate(492,168)">
+<rect x="0" y="0" width="394" height="280" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="28" y="50" font-size="22" font-weight="800" fill="#A35A22">Rajat</text>
+<circle cx="36" cy="92" r="6" fill="#C26B2E"/><text x="56" y="98" font-size="17" fill="#3A4253">Ei ymmärrä totuutta —</text>
+<text x="56" y="120" font-size="17" fill="#3A4253">voi hallusinoida.</text>
+<circle cx="36" cy="160" r="6" fill="#C26B2E"/><text x="56" y="166" font-size="17" fill="#3A4253">Perii datan virheet</text>
+<text x="56" y="188" font-size="17" fill="#3A4253">ja vinoumat.</text>
+<circle cx="36" cy="228" r="6" fill="#C26B2E"/><text x="56" y="234" font-size="17" fill="#3A4253">Tarkista tärkeät faktat</text>
+<text x="56" y="256" font-size="17" fill="#3A4253">aina itse.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l3g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l3g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Generatiivinen tekoäly ei ajattele — se ennustaa. Yksinkertaistettuna näin:</text>
+<g font-size="17" fill="#3A4253">
+<rect x="74" y="166" width="392" height="48" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="102" cy="190" r="7" fill="#3B5BDB"/><text x="122" y="196">Pilkkoo tekstin tokeneiksi</text>
+<rect x="494" y="166" width="392" height="48" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="522" cy="190" r="7" fill="#0E9AA7"/><text x="542" y="196">Käyttää opittuja parametreja</text>
+<rect x="74" y="224" width="392" height="48" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="102" cy="248" r="7" fill="#2F9E69"/><text x="122" y="254">Ennustaa seuraavan tokenin</text>
+<rect x="494" y="224" width="392" height="48" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="522" cy="248" r="7" fill="#C79100"/><text x="542" y="254">Toistaa, kunnes vastaus valmis</text>
+</g>
+<rect x="74" y="300" width="812" height="74" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="100" y="334" font-size="18" fill="#2F46B0">Lopputulos näyttää älykkäältä, koska data oli täynnä ihmisten älykästä tekstiä.</text>
+<text x="100" y="362" font-size="18" fill="#2F46B0">Taustalla on silti ennen kaikkea matemaattinen ennustaminen.</text>
+<rect x="74" y="388" width="812" height="80" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,414)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="426" font-size="21" font-weight="800" fill="#247A52">Seuraavaksi: konteksti ratkaisee kaiken.</text>
+<text x="150" y="454" font-size="17" fill="#3A4253">Vastaus riippuu suuresti siitä, mitä ja miten kysyt.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-02/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-04/">Seuraava →</a></div></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-03", "num": 3, "title": "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

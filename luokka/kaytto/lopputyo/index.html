@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lopputyö — Tekoälyjen käyttö — Luokkaversio</title>
+<meta name="description" content="Tekoälyjen käyttö-osion lopputyön tehtävänanto. Luokkaversio.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/kaytto/lopputyo/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<section class="page-hero"><div class="page-hero-inner"><div class="eyebrow"><a class="bc-link" href="/luokka/" style="color:var(--blue)">Luokkaversio</a> · Tekoälyjen käyttö</div><h1>★ Osion lopputyö</h1><p>Tekoälyjen käyttö — Generatiivisten tekoälytyökalujen käyttö.</p></div></section><div class="page-body"><div class="reading panel"><h1>Tekoälyjen käyttö -osion lopputyö: Rakenna oma apuri-botti</h1>
+<p>Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Rakennat itse suunnittelemasi <strong>apuri-botin</strong> Microsoft Copilot Agent -alustalle. Botti auttaa jossakin sinulle tutussa arjen aiheessa — opiskelussa, harrastuksessa, tutussa pienessä palvelussa tai vaikka pelin tai sisällön ideoinnissa. Et tee koko työtä yhdellä istumalla — keräät matkan varrella <strong>kolme rakennuspalikkaa</strong>, joista kasaat botin tunnilla 17 ja viimeistelet sen tunnilla 18.</p>
+<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — promptauspankki (tunti 12), botin määrittely (tunti 14) ja kuratoitu tietopohja (tunti 15). Kun palikat ovat valmiina, tunneilla 17–18 voit keskittyä rakentamiseen, testaamiseen ja viimeistelyyn.</p>
+</blockquote>
+<h2>Mitä rakennat?</h2>
+<p><strong>Microsoft Copilot Agent -botti</strong>, joka auttaa sinua tai kavereitasi jossakin sinulle tutussa arjen aiheessa. Botti on <em>ohjaava, ei kirjoittava</em> — se ei tee asioita käyttäjän puolesta, vaan auttaa käyttäjää onnistumaan paremmin kuin yksin.</p>
+<p>Valitset itseäsi kiinnostavan, omasta arjestasi tutun aiheen, esimerkiksi:</p>
+<ul>
+<li><strong>Opiskelu</strong> — selittää käsitteitä, auttaa jäsentämään tehtäviä, toimii harjoittelukaverina kokeisiin</li>
+<li><strong>Harrastus tai kerho</strong> — säännöt, aikataulut, vinkit ja FAQ jäsenille</li>
+<li><strong>Tuttu pieni palvelu</strong> — kahvilan, kirjaston tai urheiluseuran FAQ-botti</li>
+<li><strong>Pelit, musiikki tai sisältö</strong> — auttaa ideoimaan pelin, biisin tai videon</li>
+<li><strong>Arjen apuri</strong> — auttaa suunnittelemaan vaikka treenirutiinin tai viikkoaikataulun</li>
+</ul>
+<p>Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi aiheeseen. Tämä erottaa sinun bottisi yleisestä ChatGPT:stä.</p>
+<h2>Polku alusta loppuun</h2>
+<p>Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella ja kootaan botiksi tunnilla 17.</p>
+<table>
+<thead>
+<tr>
+<th>Tunti</th>
+<th>Mitä teet</th>
+<th>Tuotos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10–11</td>
+<td>Kilpailutat tekoälyt ja opit tietosuojan</td>
+<td>(perusta, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td>Rakennat oman promptauspankkisi</td>
+<td><strong>Rakennuspalikka 1: Promptauspankki</strong></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Harjoittelet AI:tä työparina</td>
+<td>(tarkennus, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td>Suunnittelet botin määrittelyn</td>
+<td><strong>Rakennuspalikka 2: Botin määrittely</strong></td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td>Kuratoit botin tietopohjan</td>
+<td><strong>Rakennuspalikka 3: Tietopohja</strong></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Tutustut erikoisalojen tekoälytyökaluihin</td>
+<td>(tarkennus, ei palautusta)</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td><strong>Kasaat kolme rakennuspalikkaa botiksi Copilotissa</strong></td>
+<td><strong>Ensimmäinen toimiva botti</strong></td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td><strong>Testaat, viimeistelet ja esittelet</strong></td>
+<td><strong>Lopputyö palautettu</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="pause"><p>💡 <strong>Vinkki:</strong> Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme rakennuspalikkaa omiksi alaotsikoikseen. Tunnilla 17 sinulla on yksi tiedosto auki, ei kolme.</p>
+</blockquote>
+<h2>Kolmen rakennuspalikan yleiskuvaus</h2>
+<p>Yksityiskohtaiset ohjeet kunkin rakennuspalikan tekemiseen saat kyseisellä tunnilla. Tässä lyhyt yleiskuvaus, jotta näet kokonaisuuden.</p>
+<p><strong>Rakennuspalikka 1: Promptauspankki (tunti 12)</strong><br />
+Oma kokoelma toimivia prompteja oman alasi tilanteisiin. Tämä antaa pohjan botin järjestelmäpromptille — sen "DNA:lle", joka määrittää miten botti käyttäytyy.</p>
+<p><strong>Rakennuspalikka 2: Botin määrittely (tunti 14)</strong><br />
+Botin "perustamisasiakirja": kenelle botti on, mitä se osaa, mitä se ei tee, mitkä ovat sen rajat. Ilman tätä botti kasvaa hallitsemattomasti.</p>
+<p><strong>Rakennuspalikka 3: Tietopohja (tunti 15)</strong><br />
+3–5 dokumenttia, joista botti ammentaa oman alasi tietoa. Tämä on botin "kirjasto". Kuratointi on tärkeämpää kuin määrä.</p>
+<h2>Lopputuotoksen vaatimukset</h2>
+<p>Tunti 18:n päätteeksi palautat ja esittelet seuraavat:</p>
+<p><strong>1. Toimiva botti Copilotissa</strong><br />
+Linkki bottiin, jotta arvioija pääsee testaamaan sitä itse. Botti tunnistaa oman aiheesi termit ja ohjaa käyttäjää valitsemasi tehtävän vaiheiden läpi.</p>
+<p><strong>2. Botin määrittely</strong><br />
+Tunnin 14 botin määrittely (rakennuspalikka 2), päivitettynä lopputyösi botin mukaisesti.</p>
+<p><strong>3. Järjestelmäprompti kokonaisuudessaan</strong><br />
+Kopioituna tiedostoon. Tämä on botin "DNA" ja arvioinnin tärkein lähde.</p>
+<p><strong>4. Lista tietopohjan dokumenteista</strong><br />
+3–5 dokumenttia ja perustelu, miksi valitsit juuri nämä.</p>
+<p><strong>5. Testikeskustelu</strong><br />
+Vähintään yksi täysi keskustelu, jossa botti ohjaa kuvitellun käyttäjän valitsemasi tehtävän läpi alusta loppuun (kuvakaappaukset tai kopio).</p>
+<p><strong>6. Reflektio (200–300 sanaa)</strong><br />
+Mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? Mitä tekisit toisin?</p>
+<h2>Esittely (valinnainen)</h2>
+<p>Voit halutessasi pitää bottisi esittelyn ryhmälle: kerro kenelle botti on rakennettu, näytä yksi konkreettinen testikeskustelu ja kerro yksi asia, jonka opit matkan varrella. Esitys voi olla live, nauhoitettu video tai kuvakaappauskooste.</p>
+<blockquote class="pause"><p>💡 <strong>Vinkki esimerkkikäyttäjästä:</strong> Kun testaat ja esittelet, kuvittele yksi tyypillinen käyttäjä — esimerkiksi luokkakaveri, joka aloittaa harrastuksessa, tai uusi jäsen, joka etsii vastauksia kerhon FAQ:sta. Botin pitää toimia juuri hänelle.</p>
+</blockquote>
+<h2>Työkalut ja työskentelytapa</h2>
+<p><strong>Alusta:</strong> Microsoft Copilot Agent. Saat tunnukset opettajalta tunnilla 17.</p>
+<p><strong>Tekoälytyökalu botin rakentamiseen:</strong> Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole keksiä kaikkea itse, vaan ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä. Sinun vastuullasi on, että botti toimii ammattimaisesti ja että ymmärrät sen rakenteen kokonaan.</p>
+<p><strong>Yksin tai pareittain:</strong> Lopputyö tehdään yksin, koska bottisi on juuri sinun valitsemasi aiheen näköinen. Voit kuitenkin sparrata luokkakavereiden kanssa rakennuspalikoiden kokoamisessa.</p>
+<h2>Arviointi</h2>
+<p>Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.</p>
+<table>
+<thead>
+<tr>
+<th>Kriteeri</th>
+<th>Pisteet</th>
+<th>Mitä arvioidaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Toimiva botti</strong></td>
+<td>25 p</td>
+<td>Toimiiko botti? Ohjaako se käyttäjää järjestelmällisesti tehtävän vaiheiden läpi?</td>
+</tr>
+<tr>
+<td><strong>Järjestelmäprompti</strong></td>
+<td>20 p</td>
+<td>Onko järjestelmäpromptissa selkeä rooli, työnkulku ja rajat? Käyttääkö se oman aiheesi termejä?</td>
+</tr>
+<tr>
+<td><strong>Tietopohja</strong></td>
+<td>20 p</td>
+<td>Onko tietopohjassa 3–5 hyvää, perusteltua dokumenttia? Tukevatko ne botin tehtävää?</td>
+</tr>
+<tr>
+<td><strong>Testaaminen ja iterointi</strong></td>
+<td>20 p</td>
+<td>Onko bottia testattu oikealla käyttötilanteella? Onko järjestelmäpromptia iteroitu vähintään kahdesti?</td>
+</tr>
+<tr>
+<td><strong>Reflektio</strong></td>
+<td>15 p</td>
+<td>Kuvaako reflektio mitä opit — ei vain mitä teit?</td>
+</tr>
+</tbody>
+</table>
+<h2>Aikabudjetti</h2>
+<p>Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka auttaa sinua suunnittelemaan omaa työtäsi.</p>
+<table>
+<thead>
+<tr>
+<th>Vaihe</th>
+<th>Aika-arvio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yksi rakennuspalikka (tunnit 12, 14, 15)</td>
+<td>~25–30 min / palikka</td>
+</tr>
+<tr>
+<td>Botin rakentaminen Copilotissa (tunti 17)</td>
+<td>~75 min (koko tunti)</td>
+</tr>
+<tr>
+<td>Testaus, viimeistely ja esittely (tunti 18)</td>
+<td>~75 min (koko tunti)</td>
+</tr>
+<tr>
+<td><strong>Yhteensä lähiaikaa</strong></td>
+<td><strong>~3–4 tuntia</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="pause"><p>💡 <strong>Vinkki ajankäyttöön:</strong> Jos joku rakennuspalikka jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 17 sinulla pitää olla kolme rakennuspalikkaa valmiina — muuten kokoaminen ei onnistu.</p>
+</blockquote>
+<h2>Palautus</h2>
+<p>Palautat tunnilla 18 yhden tiedoston (esim. PDF tai Word), joka sisältää:</p>
+<ul>
+<li>Botin määrittely (päivitettynä)</li>
+<li>Järjestelmäprompti kokonaisuudessaan</li>
+<li>Tietopohjan dokumenttien lista perusteluineen</li>
+<li>Testikeskustelu (kuvakaappauksina tai kopioituna)</li>
+<li>Reflektio (200–300 sanaa)</li>
+<li>Linkki bottiisi Copilotissa</li>
+</ul>
+<hr />
+<p><strong>Et opettele käyttämään tekoälyä — opit rakentamaan sillä.</strong></p></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

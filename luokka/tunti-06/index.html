@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kuvat, ääni ja teksti — kun sanat eivät riitä — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Kuvat, ääni ja teksti — kun sanat eivät riitä. Luokkaversio, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-06/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Teoria</span><span>›</span><span>Oppitunti 6</span></div><div class="lesson-title">Kuvat, ääni ja teksti — kun sanat eivät riitä</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-06/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-06/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Kuvat, ääni ja teksti — multimodaalinen ongelmanratkaisu</h1>
+<h2>Johdanto</h2>
+<p>Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle <strong>kuvakaappaukset</strong>, <strong>lokit</strong> ja <strong>dokumentit</strong> ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain IT-ammattilaisen työssä.</p>
+<p>Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan <strong>multimodaalista kontekstia</strong> eli yhdistämään tekstiä, kuvia, lokeja ja koodia debuggauksen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.</p>
+<h2>Mitä multimodaalisuus on?</h2>
+<p><strong>Multimodaalisuus</strong> tarkoittaa, että tekoälymallit voivat käsitellä erilaisia tietomuotoja, kuten tekstiä, kuvia, koodia, ääntä ja videota. Ensimmäiset laajasti käyttöön tulleet kielimallit, kuten GPT-3, käsittelivät vain tekstiä. Modernit mallit, kuten nykyiset ChatGPT-, Microsoft Copilot- ja Claude-mallit, voivat puolestaan tulkita myös kuvia. Jotkin mallit voivat lisäksi käsitellä ääntä ja analysoida videoita.</p>
+<p>Tämä avaa täysin uuden tavan antaa tekoälylle kontekstia. Aiemmin tilanne saattoi olla tämä: ”Tietokannassa on virhe. Lokit ovat pitkät, enkä pysty hahmottamaan, missä virhe on, koska tekstiä on niin paljon.” Nyt voit toimia toisin: ”Otan kuvakaappauksen virheilmoituksesta ja lähetän sen tekoälylle.” Aiemmin saattoi tuntua mahdottomalta kuvata käyttöliittymän bugia pelkällä tekstillä. Nyt voit ottaa kuvakaappauksen ja näyttää tekoälylle tarkasti, mitä näkyy.</p>
+<p><strong>Modaliteetti</strong> tarkoittaa tietomuotoa. Teksti on yksi modaliteetti ja kuva toinen. Koodi on kolmas, vaikka se on teknisesti tekstiä, koska sillä on oma rakenteensa ja merkityksensä. Lokit ovat neljäs. Kun käytät kahta tai useampaa modaliteettia yhdessä, puhutaan <strong>multimodaalisuudesta</strong>. Käytännössä monet nykyiset chatpohjaiset kielimallit ovat multimodaalisia.</p>
+<p>Multimodaaliset mallit ovat tehokkaita työkaluja, koska ne voivat nähdä kuvakaappauksista suoraan, mitä tarkoitat. Jos kirjoitat ”ohjelma on hidas”, tekoäly voi vain arvata, mitä yrität sanoa. Jos taas näytät kuvakaappauksen, jossa näkyy prosessin käyttävän 99 % suorittimesta, tekoäly saa ongelmasta paljon täsmällisemmän kuvan.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele projektia, jota työstät nyt. Mitä muita tietomuotoja kuin tekstiä käytät päivittäin? Käytätkö esimerkiksi kuvakaappauksia, lokitietoja, taulukoita tai kaavioita? Kuinka usein jätät ne pois, koska oletat, ettei tekoäly voi käsitellä niitä?</p>
+</blockquote>
+</blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// näytä, älä vain kerro — jokainen syöte tarkentaa diagnoosia</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
+  <div class="l06-wrap">
+    <span class="l06-q">”Sovellus ei toimi.”</span>
+    <div class="l06-src l06-s1">▣ kuvakaappaus</div>
+    <div class="l06-src l06-s2">≡ loki (20 riviä)</div>
+    <div class="l06-src l06-s3">‹/› koodi</div>
+    <i class="l06-fly l06-f1"></i><i class="l06-fly l06-f2"></i><i class="l06-fly l06-f3"></i>
+    <div class="l06-model">MALLI<div class="l06-meterbox"><div class="l06-meter"></div></div><span class="l06-pct l06-p1">tarkkuus 35 %</span><span class="l06-pct l06-p2">tarkkuus 70 %</span><span class="l06-pct l06-p3">tarkkuus 95 %</span></div>
+    <div class="l06-a l06-a1">Syitä voi olla monia — kokeile käynnistää uudelleen? <span class="l06-tag l06-t1">arvaus</span></div>
+    <div class="l06-a l06-a2">Virheilmoitus viittaa tietokantaan — lokissa ”timeout 5432”. <span class="l06-tag l06-t2">tarkentuu</span></div>
+    <div class="l06-a l06-a3">Tietokantaportti 5432 ei vastaa: korjaa yhteysasetus rivillä 12. <span class="l06-tag l06-t3">✓ täsmällinen</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Pelkkä ”ei toimi” pakottaa mallin arvaamaan. Kun lisäät kuvakaappauksen, lokit ja koodin, diagnoosi tarkentuu vaihe vaiheelta — jokainen modaliteetti tuo tietoa, jota muut eivät sisällä.</figcaption></figure>
+<style>
+.l06-wrap{position:relative;width:560px;height:250px}
+.l06-q{position:absolute;left:0;top:6px;font-family:var(--font-mono);font-size:12.5px;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:7px 11px}
+.l06-src{position:absolute;left:0;width:172px;font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 11px}
+.l06-s1{top:64px;animation:l06s1 12s infinite}
+.l06-s2{top:112px;animation:l06s2 12s infinite}
+.l06-s3{top:160px;animation:l06s3 12s infinite}
+@keyframes l06s1{0%,7%,17%,100%{border-color:#44517A}9%,15%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+@keyframes l06s2{0%,33%,43%,100%{border-color:#44517A}35%,41%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+@keyframes l06s3{0%,59%,69%,100%{border-color:#44517A}61%,67%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
+.l06-fly{position:absolute;left:176px;width:9px;height:9px;border-radius:50%;background:oklch(0.72 0.15 264);opacity:0}
+.l06-f1{top:78px;animation:l06f1 12s infinite}
+.l06-f2{top:126px;animation:l06f2 12s infinite}
+.l06-f3{top:174px;animation:l06f3 12s infinite}
+@keyframes l06f1{0%,8%{opacity:0;transform:translate(0,0)}10%{opacity:1}15%{opacity:1;transform:translate(64px,42px)}17%,100%{opacity:0;transform:translate(64px,42px)}}
+@keyframes l06f2{0%,34%{opacity:0;transform:translate(0,0)}36%{opacity:1}41%{opacity:1;transform:translate(64px,-6px)}43%,100%{opacity:0;transform:translate(64px,-6px)}}
+@keyframes l06f3{0%,60%{opacity:0;transform:translate(0,0)}62%{opacity:1}67%{opacity:1;transform:translate(64px,-54px)}69%,100%{opacity:0;transform:translate(64px,-54px)}}
+.l06-model{position:absolute;left:248px;top:84px;width:132px;text-align:center;font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 264);border-radius:12px;padding:12px 10px 10px}
+.l06-meterbox{margin:9px 6px 5px;height:8px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
+.l06-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#7FD0A8);animation:l06meter 12s infinite}
+@keyframes l06meter{0%,14%{width:35%}18%,40%{width:35%}44%,66%{width:70%}70%,96%{width:95%}100%{width:35%}}
+.l06-pct{position:absolute;left:0;right:0;bottom:-22px;font-size:10.5px;letter-spacing:.05em;color:#B9C2DA;opacity:0}
+.l06-p1{animation:l06p1 12s infinite}.l06-p2{animation:l06p2 12s infinite}.l06-p3{animation:l06p3 12s infinite;color:#7FD0A8}
+@keyframes l06p1{0%,2%{opacity:0}5%,40%{opacity:1}44%,100%{opacity:0}}
+@keyframes l06p2{0%,42%{opacity:0}46%,66%{opacity:1}70%,100%{opacity:0}}
+@keyframes l06p3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+.l06-a{position:absolute;left:400px;top:72px;width:160px;font-family:var(--font-mono);font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 11px;opacity:0}
+.l06-a1{animation:l06a1 12s infinite}
+.l06-a2{animation:l06a2 12s infinite}
+.l06-a3{animation:l06a3 12s infinite}
+@keyframes l06a1{0%,3%{opacity:0}7%,38%{opacity:1}42%,100%{opacity:0}}
+@keyframes l06a2{0%,42%{opacity:0}46%,64%{opacity:1}68%,100%{opacity:0}}
+@keyframes l06a3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
+.l06-a3{border-color:#7FD0A8}
+.l06-tag{display:inline-block;margin-top:5px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
+.l06-t1{color:#3A1408;background:#F0A38C}
+.l06-t2{color:#06212A;background:#46c7cf}
+.l06-t3{color:#06241a;background:#7FD0A8}
+@media (prefers-reduced-motion:reduce){
+.l06-s1,.l06-s2,.l06-s3,.l06-f1,.l06-f2,.l06-f3,.l06-meter,.l06-p1,.l06-p2,.l06-a1,.l06-a2{animation:none}
+.l06-f1,.l06-f2,.l06-f3,.l06-a1,.l06-a2,.l06-p1,.l06-p2{opacity:0;display:none}
+.l06-a3,.l06-p3{animation:none;opacity:1}
+.l06-meter{width:95%}}
+</style>
+
+<h2>Kuvakaappaukset — näytä, älä vain kuvaile</h2>
+<p><strong>Kuvakaappaus</strong> eli screenshot on yksi tärkeimmistä kontekstityökaluista IT-ammattilaisen työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.</p>
+<p>Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”sovellus ei aukea”, tekoäly joutuu arvaamaan useita eri syitä. Kun taas näytät kuvakaappauksen, jossa lukee virheilmoitus ”Ei verkkoyhteyttä”, tekoäly näkee ongelman tarkemmin ja osaa ehdottaa täsmällisempää korjausta.</p>
+<h3>Hyvän kuvakaappauksen tekeminen</h3>
+<p>Ammattilainen ottaa kuvakaappauksia harkitusti:</p>
+<ol>
+<li><strong>Älä lähetä koko ruutua</strong>, ellei se ole ongelman kannalta olennaista. Rajaa kuva tärkeimpään kohtaan.</li>
+<li><strong>Osoita virheellinen kohta</strong>. Monet kuvakaappaustyökalut mahdollistavat nuolten, kehysten tai korostusten lisäämisen.</li>
+<li><strong>Lisää lyhyt selitys:</strong> ”Tässä on virhe. Katso punaisella näkyvää virheilmoitusta.”</li>
+<li><strong>Valitse sopiva rajaus:</strong></li>
+<li>Koko ruudun kuvakaappaus voi olla hyödyllinen, mutta se voi sisältää häiritsevää tai arkaluonteista tietoa.</li>
+<li>Pelkkä virheilmoitus on usein parempi, koska se on kohdennetumpi.</li>
+<li>Virheilmoitus ja muutama rivi kontekstia on usein paras vaihtoehto, koska se näyttää sekä virheen että sen taustan.</li>
+</ol>
+<p>Modernit tekoälyt voivat lukea kuvakaappauksia samaan tapaan kuin ihminen. Ne voivat tunnistaa tekstiä, värejä, kuvakkeita ja asettelua. Jos virheviesti näkyy punaisella, malli voi päätellä, että kyse on virheestä. Jos näytät lokin virheilmoituksia, malli voi lukea niistä olennaisia tietoja.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Mieti viimeisintä IT-ongelmaa, johon pyysit apua. Olisiko kuvakaappaus ollut parempi konteksti kuin pelkkä tekstikuvaus? Miten tekoäly olisi voinut auttaa paremmin, jos se olisi nähnyt tilanteen?</p>
+</blockquote>
+</blockquote>
+<h2>Lokitiedostot — järjestelmän oma kertomus</h2>
+<blockquote class="pause"><p>Seuraavat osiot (lokit, koodi ja konfiguraatiot) ovat teknisempiä tilanteita. Sama periaate — näytä, älä vain kerro — pätee silti myös arkisiin kuviin ja kuvakaappauksiin.</p>
+</blockquote>
+<p><strong>Lokit</strong> eli logs ovat tietueita siitä, mitä järjestelmässä tapahtuu. Kun ohjelmassa on virhe, lokit kertovat usein, mikä meni pieleen ja milloin.</p>
+<p>Opiskelijat sanovat usein: ”Minulla on virhe, mutta en tiedä, mikä se on.” Ammattilainen kysyy ensimmäiseksi: ”Mitä lokit kertovat?” Tämä johtuu siitä, että lokit ovat usein ihmisen luettavissa ja sisältävät tärkeää tietoa ongelman syystä.</p>
+<p><code>2024-03-14 10:23:45 ERROR: Failed to connect to database at localhost:5432
+2024-03-14 10:23:45 ERROR: Connection timeout after 5 seconds
+2024-03-14 10:23:46 WARNING: Retrying connection attempt 2 of 3</code></p>
+<p>Kun annat lokit tekoälylle, se voi lukea rivit ja päätellä esimerkiksi: ”Tietokanta ei ole saatavilla, koska portti 5432 ei vastaa.”</p>
+<h3>Lokien tyypit</h3>
+<p>Lokit voivat tulla useista lähteistä:</p>
+<ul>
+<li><strong>Sovelluksen lokit:</strong> kertovat, mitä koodi tekee, esimerkiksi funktiokutsut, tietojen käsittelyn ja hakujen tulokset.</li>
+<li><strong>Järjestelmän lokit:</strong> kertovat, mitä käyttöjärjestelmässä tapahtuu, esimerkiksi muistin käytöstä, prosesseista ja laitteista.</li>
+<li><strong>Verkkolokit:</strong> kertovat, mitä palvelimella tapahtuu, esimerkiksi HTTP-pyynnöistä, yhteyksistä ja kaistan käytöstä.</li>
+<li><strong>Virhelokit:</strong> kertovat, mitä ohjelma ilmoittaa virhetilanteessa, esimerkiksi poikkeuksista, kaatumisista ja varoituksista.</li>
+</ul>
+<h3>Lokien valitseminen kontekstiksi</h3>
+<p>Kun käytät tekoälyä, älä lähetä 5 000 riviä lokia sellaisenaan. Valitse olennaiset kohdat:</p>
+<ol>
+<li><strong>Etsi virhe tai varoitus</strong> lokista.</li>
+<li><strong>Merkitse olennaiset rivit</strong>, kuten viimeiset 20 riviä, grep-haun tulokset tai kuvakaappaus kriittisestä kohdasta.</li>
+<li><strong>Lisää konteksti:</strong> ”Ohjelma kaatui kello 10.45. Näetkö näistä lokeista mahdollisen syyn?”</li>
+</ol>
+<p>Tekoäly voi tämän jälkeen etsiä virheilmoituksia, tarkastella tapahtumien ajoitusta ja ehdottaa ratkaisuja.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Missä sovelluksessa tai järjestelmässä olet nähnyt lokeja? Mitä sellaista lokeista voidaan oppia, mitä et näkisi muuten?</p>
+</blockquote>
+</blockquote>
+<h2>Koodi ja konfiguraatiotiedostot — näytä rakenne</h2>
+<p>Usein ongelma löytyy itse koodista. Skripti ei ehkä toimi, konfiguraatiotiedosto voi olla virheellinen tai Python-funktio voi käyttäytyä odottamattomasti.</p>
+<h3>Koodin antaminen kontekstiksi</h3>
+<p>Kun annat tekoälylle koodia, se voi analysoida sen rakennetta ja toimintaa:</p>
+<pre><code>def calculate_discount(price, discount_percent):    return price - (price * discount_percent)
+</code></pre>
+<p>Voit kysyä esimerkiksi: ”Näetkö tässä ongelmaa? Kun <code>discount_percent</code> on 0.1 eli 10 %, tulos on oikea. Mutta kun arvo on 1 eli 100 %, hinta muuttuu nollaksi. Pitäisikö funktioon lisätä tarkistus sallituille arvoille?”</p>
+<p>Kun annat koodia, muista kolme asiaa:</p>
+<ol>
+<li><strong>Konteksti:</strong> Mikä ohjelma on kyseessä? Mitä ohjelmointikieltä käytetään?</li>
+<li><strong>Vika-alue:</strong> Mitkä rivit ovat todennäköisesti ongelmallisia? Näytä mieluummin muutama kymmenen riviä kuin satoja rivejä.</li>
+<li><strong>Käyttäytyminen:</strong> Mitä ohjelman pitäisi tehdä? Mitä se tekee todellisuudessa?</li>
+</ol>
+<h3>Konfiguraatiotiedostot</h3>
+<p>Myös <strong>konfiguraatiotiedostot</strong> voivat aiheuttaa ongelmia:</p>
+<pre><code>{  &quot;database&quot;: {    &quot;host&quot;: &quot;localhost&quot;,    &quot;port&quot;: 5432,    &quot;user&quot;: &quot;admin&quot;,    &quot;password&quot;: &quot;admin123&quot;  }}
+</code></pre>
+<p>Voit kysyä esimerkiksi: ”Tässä on konfiguraatiotiedosto. Näetkö siinä turvallisuusongelman?” Tässä tapauksessa salasana on kovakoodattu tiedostoon.</p>
+<p>Tekoäly voi lukea sekä tekstiä että kuvakaappauksia koodista. Usein koodi kannattaa kuitenkin antaa tekstinä, koska silloin tekoäly voi analysoida ja muokata sitä helpommin.</p>
+<h2>Turvallisuus — redaktointi ja yksityisyys</h2>
+<p><strong>Tärkeä huomio: älä koskaan näytä salasanoja, API-avaimia tai muita salaisuuksia tekoälylle.</strong> Jos kuvakaappaus tai lokit sisältävät arkaluonteisia tietoja, poista tai peitä ne ennen jakamista.</p>
+<h3>Salaisuuksien redaktointi</h3>
+<ul>
+<li><strong>Salasanakenttä:</strong> näytä <code>[REDACTED]</code> tai <code>***</code>.</li>
+<li><strong>API-avain:</strong> näytä esimerkiksi <code>sk-***...xyz</code>, eli vain alun ja lopun merkit.</li>
+<li><strong>Tunnus eli token:</strong> näytä esimerkiksi <code>jti_12345...abcdef</code>.</li>
+<li><strong>Luottokorttinumero:</strong> näytä esimerkiksi <code>****-****-****-6789</code>.</li>
+<li><strong>Käyttäjätunnus:</strong> näytä vain osa tunnuksesta, esimerkiksi <code>user_123...</code>.</li>
+</ul>
+<p>Jos lokit sisältävät käyttäjä- tai asiakastietoja, poista ne tai anonymisoi ne kokonaan ennen jakamista.</p>
+<h3>Miksi turvallisuus on pakollista?</h3>
+<p>Turvallisuus ei ole valinnainen asia, vaan osa ammattilaisen perustyötä. Se suojaa sekä sinua että muita:</p>
+<ul>
+<li>Se estää salaisuuksien, kuten salasanojen ja API-avainten, vuotamisen ulkopuolisiin palveluihin.</li>
+<li>Se suojaa muita käyttäjiä, joiden tietoja saattaa näkyä lokeissa.</li>
+<li>Se ylläpitää luottamusta organisaatiossa ja työyhteisössä.</li>
+</ul>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele IT-järjestelmää, jossa käyttäjät voivat nähdä toistensa tietoja. Mitä turvallisuusriskejä syntyisi, jos jakaisit lokit tekoälylle muokkaamatta niitä?</p>
+</blockquote>
+</blockquote>
+<h2>Yhdistäminen — multimodaalinen konteksti käytännössä</h2>
+<p>Ammattilaisen ongelmanratkaisu yhdistää usein useita tietomuotoja:</p>
+<p><strong>Tekstin, kuvakaappausten, lokien ja koodin yhdistäminen:</strong></p>
+<p>”Tässä on kuvakaappaus virheilmoituksesta. Tässä ovat lokin viimeiset 20 riviä. Tässä on myös koodin vika-alue eli rivit 45–55. Yritin päivittää käyttäjän profiilia, mutta validointi epäonnistuu. Kunkin kentän pitäisi hyväksyä vain tietynlaista dataa, mutta validointi epäonnistuu myös silloin, kun data on oikeassa muodossa.”</p>
+<p>Nyt tekoälyllä on käytössään useita konteksteja:</p>
+<ul>
+<li><strong>Visuaalinen konteksti:</strong> kuvakaappaus.</li>
+<li><strong>Ajoituksen ja ympäristön konteksti:</strong> lokit.</li>
+<li><strong>Koodin konteksti:</strong> vika-alue.</li>
+<li><strong>Käyttäytymisen konteksti:</strong> mitä pitäisi tapahtua ja mitä tapahtuu todellisuudessa.</li>
+</ul>
+<p>Tämä on huomattavasti parempi lähtökohta kuin pelkkä ilmoitus: ”Minulla on validointivirhe.”</p>
+<h3>Päätösten tekeminen: milloin käyttää mitäkin?</h3>
+<p>Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Ammattilainen valitsee kontekstin strategisesti:</p>
+<table>
+<thead>
+<tr>
+<th>Tilanne</th>
+<th>Käytä kuvakaappausta?</th>
+<th>Käytä tekstiä?</th>
+<th>Käytä lokeja?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Käyttöliittymän bugi</td>
+<td>✅ Kyllä</td>
+<td>Ei välttämättä, jos kuvakaappaus kertoo olennaisen</td>
+<td>Ei yleensä</td>
+</tr>
+<tr>
+<td>Virheilmoitus näytöllä</td>
+<td>✅ Kyllä</td>
+<td>Kyllä, lyhyt selitys auttaa</td>
+<td>Ehkä, jos ongelman syy ei näy ruudulla</td>
+</tr>
+<tr>
+<td>Sovellus kaatuu</td>
+<td>❓ Kyllä, jos virhe näkyy ruudulla</td>
+<td>✅ Kyllä</td>
+<td>✅ Kyllä, usein kriittistä</td>
+</tr>
+<tr>
+<td>Koodin virhe</td>
+<td>Ei yleensä</td>
+<td>✅ Kyllä, koodi kannattaa antaa tekstinä</td>
+<td>Ehkä, jos kyse on ajonaikaisesta virheestä</td>
+</tr>
+<tr>
+<td>Verkko-ongelma</td>
+<td>❓ Ehkä</td>
+<td>Kyllä, kuvaile mitä yritit tehdä</td>
+<td>✅ Kyllä, verkkolokit ovat usein hyödyllisiä</td>
+</tr>
+<tr>
+<td>Hidas sovellus</td>
+<td>Kyllä, jos suorituskykytiedot näkyvät ruudulla</td>
+<td>Kyllä, kuvaile tilanne ja ajankohta</td>
+<td>✅ Kyllä, suorituskykylokit ovat hyödyllisiä</td>
+</tr>
+<tr>
+<td>Lomake ei lähde verkkosivulla</td>
+<td>✅ Kyllä, jos virhe näkyy ruudulla</td>
+<td>✅ Kyllä, kerro mitä yritit tehdä</td>
+<td>Ei yleensä</td>
+</tr>
+<tr>
+<td>Laite tai sovellus ei käynnisty</td>
+<td>✅ Kyllä, jos näytöllä näkyy viesti</td>
+<td>✅ Kyllä, kuvaile tilanne</td>
+<td>Ei yleensä</td>
+</tr>
+</tbody>
+</table>
+<h2>Multimodaalisten mallien rajoitukset</h2>
+<p>Multimodaaliset mallit ovat tehokkaita, mutta niillä on myös rajoituksia.</p>
+<h3>1. Kuvakaappaukset kuluttavat tokeneita</h3>
+<p>Yksittäinen kuva voi kuluttaa huomattavasti enemmän tokeneita kuin sama tieto tekstinä. Tämä täyttää konteksti-ikkunaa nopeammin. Siksi kuvakaappauksia kannattaa käyttää harkitusti: kriittisiin kohtiin, ei kaikkeen.</p>
+<h3>2. Tarkkuusrajoitukset</h3>
+<p>Tekoäly voi lukea kuvakaappauksia, mutta se voi myös tehdä virheitä:</p>
+<ul>
+<li>Pieniä fontteja voi olla vaikea tulkita.</li>
+<li>Sekavat taustat voivat tehdä tekstistä epäselvää.</li>
+<li>Monimutkainen käyttöliittymä voi hämmentää mallia.</li>
+</ul>
+<p>Siksi kuvakaappaus yhdessä lyhyen tekstiselityksen kanssa on usein parempi kuin kuvakaappaus yksin.</p>
+<h3>3. Mallien kyvyt vaihtelevat</h3>
+<p>Kaikki tekoälymallit eivät ole multimodaalisia. Vanhat mallit, jotkin erikoistuneet mallit ja osa kevyemmistä malleista käsittelevät vain tekstiä. Siksi on tärkeää tietää, mitä mallia käytät.</p>
+<p>Ammattilainen tuntee käyttämänsä mallin kyvyt ja valitsee työskentelytavan sen mukaan:</p>
+<ul>
+<li>Jos malli on multimodaalinen, voit hyödyntää kuvakaappauksia.</li>
+<li>Jos malli käsittelee vain tekstiä, kuvaile ongelma mahdollisimman tarkasti tekstinä.</li>
+<li>Vaihda mallia tarpeen mukaan: joskus pieni tekstimalli on nopeampi, joskus suuri multimodaalinen malli on parempi.</li>
+</ul>
+<h2>Multimodaalisuus käytännössä</h2>
+<p>Käytännössä ammattilainen voi noudattaa seuraavaa työnkulkua:</p>
+<ol>
+<li><strong>Ongelma syntyy</strong> → ota kuvakaappaus, jos ongelma näkyy ruudulla.</li>
+<li><strong>Lokit kertovat virheistä</strong> → suodata olennainen osa ja näytä se tekstinä.</li>
+<li><strong>Koodia täytyy tarkastella</strong> → anna koodi tekstinä.</li>
+<li><strong>Rakenne täytyy nähdä</strong> → käytä kuvakaappausta, taulukkoa tai muuta selkeää esitystapaa.</li>
+<li><strong>Ennen jakamista</strong> → tarkista, että olet redaktoinut salaisuudet ja henkilötiedot.</li>
+</ol>
+<h3>Käytännön työkalut</h3>
+<ul>
+<li><strong>Kuvakaappaustyökalu:</strong> Käytä puhelimen tai tietokoneen omaa kuvakaappaustoimintoa (esim. Windowsin Snipping Tool). Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä. Tarkempaan työhön on olemassa myös erillisiä sovelluksia (esim. Snagit tai ShareX).</li>
+<li><strong>Lokien suodatus:</strong> Älä lähetä tuhansia rivejä lokia. Valitse olennaiset virheet, esimerkiksi viimeiset 20 riviä tai grep-haun tulokset.</li>
+<li><strong>Rakenteinen tieto:</strong> Kielimallit hyötyvät rakenteisesta tiedosta, kuten CSV-datasta, JSON-tietueista ja taulukoista.</li>
+<li><strong>Koodinäyte:</strong> Näytä vain olennainen osa koodista tekstinä, esimerkiksi muutama kymmenen riviä. Kuvakaappaus koodista on harvoin yhtä hyödyllinen kuin kopioitava tekstimuotoinen koodi.</li>
+</ul>
+<h2>Yhteenveto</h2>
+<p><strong>Multimodaalisuus</strong> auttaa IT-ammattilaista hallitsemaan kontekstia ja ratkaisemaan ongelmia tehokkaammin. Kun tekoäly voi käsitellä kuvia, lokeja ja koodia, se ymmärtää ongelman paremmin ja voi antaa täsmällisempiä ratkaisuja.</p>
+<p>Ammattilaisena toimit näin:</p>
+<ul>
+<li><strong>Näytät ennen kuin kuvailet:</strong> kuvakaappaukset vähentävät tulkinnanvaraisuutta.</li>
+<li><strong>Suodatat lokit:</strong> näytät vain olennaiset rivit.</li>
+<li><strong>Annat koodia tekstinä:</strong> silloin tekoäly voi analysoida ja muokata sitä helpommin.</li>
+<li><strong>Yhdistät kontekstin strategisesti:</strong> teksti, kuva, lokit ja koodi muodostavat yhdessä vahvan kokonaisuuden.</li>
+<li><strong>Tarkistat turvallisuuden:</strong> redaktoit salaisuudet ja henkilötiedot ennen jakamista.</li>
+<li><strong>Tunnet mallin kyvyt:</strong> valitset oikean mallin oikeaan tehtävään.</li>
+</ul>
+<p>Näin tekoälystä tulee aidosti hyödyllinen työkaveri IT-työssä ja ongelmanratkaisussa.</p>
+<hr /></div><div class="panel" data-tab="tehtavat"><h1>Opiskelutehtävät — Kuvat, ääni ja teksti</h1>
+<blockquote class="pause"><p>📌 <strong>Kaikkia ei tarvitse tehdä.</strong> Valitse tehtävistä 1. Suosittelen tehtävää 6.1, joka osuu tunnin ydintaidon ytimeen. Jos olet IT-alalla tai kiinnostunut tietoturvasta, tee lisäksi syventävä tehtävä 6.2 — se on käytännön työelämän osaamista, jota ei missään muualla kurssilla käsitellä yhtä konkreettisesti.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 6.1 — Näyttö vai kuvaus? 🟢 SUOSITELTU</h2></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Näet käytännössä, miten paljon kuvakaappaus muuttaa tekoälyn kykyä auttaa. Kokeilet samaa ongelmaa kahdessa muodossa — pelkällä sanakuvauksella ja multimodaalisesti — ja huomaat itse, milloin "näyttö" kannattaa.</p>
+<h3>Valitse ongelmasi</h3>
+<p>Valitse IT-aiheinen tilanne, jossa on <strong>jokin visuaalinen elementti</strong>. Esimerkkejä:</p>
+<ul>
+<li>Virheilmoitus ohjelmassa tai verkkosivulla</li>
+<li>Lokin tulostus, jossa on värejä ja muotoilua</li>
+<li>Käyttöliittymäbugi (nappi ei toimi, kuvake puuttuu, layout rikki)</li>
+<li>Kaavio tai diagrammi, jota et täysin ymmärrä</li>
+<li>Asetussivun ruutu, johon haluat apua</li>
+</ul>
+<p>Jos sinulla ei ole valmista esimerkkiä, voit etsiä jonkun. Mitä konkreettisempi, sen parempi.</p>
+<h3>Vaiheet</h3>
+<h4>Vaihe 1 — Versio A: vain sanakuvaus</h4>
+<p>Avaa ChatGPT, Claude tai Copilot. <strong>Älä lähetä kuvaa</strong> — kuvaile ongelma vain sanoilla, niin tarkasti kuin osaat:</p>
+<ul>
+<li>Mitä näet?</li>
+<li>Mitä värejä ja muotoiluja näytöllä on?</li>
+<li>Mitä tekstiä näkyy (kopioi se mukaan, jos voit)?</li>
+<li>Mitä yritit tehdä, kun ongelma ilmestyi?</li>
+</ul>
+<p>Kysy: <em>"Mistä tämä voisi johtua ja miten korjaisin sen?"</em> Tallenna vastaus.</p>
+<h4>Vaihe 2 — Versio B: kuva mukaan</h4>
+<p>Avaa <strong>uusi keskustelu</strong> (tärkeää, ettei edellinen vastaus vaikuta).</p>
+<p>Käytä mallia, joka osaa katsoa kuvia — esim. ChatGPT, Claude, Gemini tai Copilot hyväksyvät kuvaliitteet. Anna sama sanakuvaus kuin vaiheessa 1 <strong>JA</strong> liitä mukaan kuvakaappaus.</p>
+<p>Kysy sama kysymys. Tallenna vastaus.</p>
+<h4>Vaihe 3 — Vertaa</h4>
+<p>Aseta kaksi vastausta vierekkäin ja täytä taulukko:</p>
+<table>
+<thead>
+<tr>
+<th>Mitä vertaillaan</th>
+<th>Versio A (vain teksti)</th>
+<th>Versio B (kuva + teksti)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Osuvuus juuri sinun ongelmaan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ehdotettujen ratkaisujen määrä</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mainitsiko visuaalisia yksityiskohtia (värit, sijainnit, ikonit)?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hyödyllisyys arvolla 1–5</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>Vaihe 4 — Kirjoita pohdinta</h4>
+<p>Vastaa 3–5 lauseella:</p>
+<ul>
+<li>Kumpi versio oli parempi, ja missä ero oli suurin?</li>
+<li>Millaisissa tilanteissa multimodaalinen syöte on välttämätön? Milloin pelkkä teksti riittää?</li>
+<li>Onko tilanteita, joissa kuvan lähettäminen voisi olla <strong>huono</strong> idea? (Vihjeitä: kuvassa näkyvä tieto, salaisuudet, henkilöt.)</li>
+</ul>
+<blockquote class="pause"><p>💡 <strong>Vinkki:</strong> Tehtävää ei palauteta, mutta säilytä havaintosi. Etenkin viimeinen pohdintakysymys vie ajatukset suoraan seuraavaan tehtävään — ja koko kurssin etiikka- ja vastuukysymyksiin.</p>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? 🟣 SYVENTÄVÄ</h2></div><div class="task-card-body">
+<blockquote class="pause"><p><strong>Tämä on syventävä tietoturvatehtävä.</strong> Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa ammattilaisen aloittelijasta.</p>
+</blockquote>
+<p><strong>Tavoite:</strong> Tunnistat herkät tiedot kuvakaappauksessa, lokissa tai konfiguraatiotiedostossa. Opit sensuroimaan ne pois ja päättämään, mitä voi turvallisesti jakaa tekoälylle.</p>
+<h3>Skenaariot</h3>
+<p>Alla on kaksi tilannetta, joissa IT-tukea pyytävä työntekijä on aikomassa lähettää tekoälylle pyynnön. Toimi kummassakin näin:</p>
+<ol>
+<li>Tunnista herkät tiedot</li>
+<li>Kirjoita sensuroitu, turvallinen versio</li>
+<li>Perustele, miksi nämä tiedot ovat herkkiä</li>
+<li>Päätä: voiko tekoäly silti auttaa sensuroinnin jälkeen?</li>
+</ol>
+<h4>Skenaario 1 — Tietokantayhteyden virhe</h4>
+<p>Työntekijä haluaa kysyä tekoälyltä, miksi tietokanta ei vastaa. Hän kopioi lokin sellaisenaan:</p>
+<pre><code>2024-03-14 10:23:45 ERROR: Failed to connect to database
+2024-03-14 10:23:46 ERROR: Connection string:
+  postgresql://admin:MyPassword123!@db.company.com:5432/users
+2024-03-14 10:23:47 ERROR: Connection timeout after 30s
+</code></pre>
+<p><strong>Tehtäväsi:</strong> Mikä tästä on vaarallista lähettää? Kirjoita turvallinen versio.</p>
+<h4>Skenaario 2 — Konfiguraatiotiedoston jakaminen</h4>
+<p>Kehittäjä haluaa kysyä tekoälyltä, miksi sovellus ei käynnisty. Hän on kopioimassa koko konfiguraatiotiedoston:</p>
+<pre><code class="language-json">{
+  &quot;app_name&quot;: &quot;PaymentProcessor&quot;,
+  &quot;environment&quot;: &quot;production&quot;,
+  &quot;database&quot;: {
+    &quot;host&quot;: &quot;db.prod.company.com&quot;,
+    &quot;port&quot;: 5432,
+    &quot;user&quot;: &quot;app_user&quot;,
+    &quot;password&quot;: &quot;C0mp1ex!P@ssw0rd2024&quot;
+  },
+  &quot;api_keys&quot;: {
+    &quot;stripe&quot;: &quot;sk_live_51234567890abcdef&quot;,
+    &quot;twilio&quot;: &quot;ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
+  },
+  &quot;slack_webhook&quot;:
+    &quot;https://hooks.slack.com/services/T123/B456/xxxxxx&quot;
+}
+</code></pre>
+<p><strong>Tehtäväsi:</strong> Voiko tämän jakaa ollenkaan? Jos voi, mitä sensuroit? Mikä on parempi tapa pyytää apua?</p>
+<h3>Päätöskehikko</h3>
+<p>Täytä molemmista skenaarioista taulukko:</p>
+<table>
+<thead>
+<tr>
+<th>Skenaario</th>
+<th>Mitkä tiedot ovat herkkiä?</th>
+<th>Mitä vahinkoa hyökkääjä voisi tehdä?</th>
+<th>Voiko tekoäly auttaa sensuroinnin jälkeen?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (tietokanta)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2 (config)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Käytä tekoälyä apuna: testaa sensurointiasi</h3>
+<p>Avaa ChatGPT, Claude tai Copilot ja anna sille <strong>oma sensuroitu versiosi</strong>. Esimerkkiprompti:</p>
+<pre><code>Toimit minulle tietoturvasparrauskumppanina. Olen IT-opiskelija ja
+yritän oppia tunnistamaan herkät tiedot, joita ei saa jakaa
+tekoälylle. Tässä alkuperäinen materiaali ja oma sensuroitu versioni:
+
+[liitä alkuperäinen]
+
+[liitä oma sensuroitu versiosi]
+
+Tarkista sensurointini. Jätinkö jotain herkkää huomaamatta? Onko
+jotain, mitä sensuroin turhaan ja mikä olisi voinut jäädä mukaan?
+Älä paljasta suoraan vastauksia — esitä kysymyksiä, joiden avulla
+huomaan itse, jos joku kohta on ohi mennyt.
+</code></pre>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>tarkistajana</em>, ei korvikkeena omalle harkinnalle. Tietoturvassa lopullinen vastuu on aina ihmisellä.</p>
+<h3>Yhteenveto</h3>
+<p>Kirjoita 2–3 lausetta: <em>"Säännöt, joita seuraan jatkossa ennen kuin jaan minkään materiaalin tekoälylle…"</em></p>
+<blockquote class="pause"><p>💡 <strong>Vinkki:</strong> Tehtävää ei palauteta, mutta tämä yhden lauseen sääntö on yksi koko kurssin arvokkaimpia työkaluja työelämään. Säilytä se itsellesi.</p>
+</blockquote>
+<p><strong>Tunnin 6 jälkeen tiedät, milloin kuva auttaa — ja milloin se on riski.</strong></p></div></div></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Kuvat, ääni ja teksti</h1>
+<p>Tällä välilehdellä harjoittelet valitsemaan oikean tietomuodon — kuvan, tekstin vai lokit — ja jakamaan tietoa tekoälylle turvallisesti. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan muu näe tai arvioi vastauksiasi. Väärä vastaus ei haittaa — jokainen selitys kertoo, miksi vaihtoehto toimii tai ei toimi, joten opit myös kokeilemalla. Tehtävät etenevät käsitteiden kertaamisesta kohti tilannetta, jossa arvioit itse, mitä on turvallista lähettää mallille ja missä muodossa.</p>
+<h2>Tehtävä 1/4 — multimodaalisuuden käsitteet</h2>
+<p>Aloitetaan tunnin käsitteistä. Valitse ensin käsite vasemmalta ja sitten sitä kuvaava selitys oikealta.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — kuva, teksti vai lokit</h2>
+<p>Nyt harjoittelet tunnin ydintaitoa: minkä muodon kukin tilanne tarvitsee. Valitse jokaiseen selvästi olennaisin muoto.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — milloin näyttää, milloin varoa</h2>
+<p>Seuraavaksi arvioit, milloin näyttäminen kannattaa ja milloin taas kannattaa varoa. Valitse jokaiseen kysymykseen vaihtoehto, joka pitää paikkansa.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — ennen kuin painat lähetä</h2>
+<p>Viimeinen tehtävä vie sinut oikeaan vianselvitystilanteeseen. Päätä joka kohdassa, mitä on turvallista lähettää mallille ja missä muodossa — myös liian varovainen valinta saa oman palautteensa.</p>
+<div class="task-widget" data-ti="3"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto</h1>
+<h2>Multimodaalisuus (multimodality)</h2>
+<p>Kyky käsitellä erilaisia tietomuotoja — tekstiä, kuvia, ääntä, videota — yhdessä. Multimodaaliset mallit voivat nähdä kuvakaappauksia, lukea lokeja ja analysoida muita tietomuotoja, eivät vain tekstiä.</p>
+<h2>Modaliteetti (modality)</h2>
+<p>Yksi tietomuoto. Teksti on yksi modaliteetti, kuva toinen, koodi kolmas, lokit neljäs jne. Multimodaalinen = useampi modaliteetti yhdessä.</p>
+<h2>Kuvakaappaus (screenshot)</h2>
+<p>Digitaalinen valokuva näytöstä. IT-ammattilaisen tärkeä kontekstiväline — näyttää tarkasti, mitä näkyy, ja poistaa tulkinnanvaraisuutta.</p>
+<h2>Lokit (logs)</h2>
+<p>Tekstitiedostot, joita ohjelmat tai palvelimet kirjoittavat osoittaakseen, mitä tapahtuu. Virhelokit auttavat debuggaamisessa. Niistä voidaan ottaa kuvakaappaus tai ne voidaan kopioida tekstinä.</p>
+<h2>Rakennekuva (structural view)</h2>
+<p>Tapa nähdä, kuinka tiedot on organisoitu — esim. tietokantataulun sarakkeet, JSON-objektin avain-arvot. Kuvakaappaus näyttää rakenteen visuaalisesti, teksti näyttää sen koodina.</p>
+<h2>Visuaalinen konteksti (visual context)</h2>
+<p>Tieto, joka näkyy näytöllä — värit, ikonit, asettelut, kaaviot. Kuvakaappaukset antavat visuaalista kontekstia, mihin teksti ei pysty.</p>
+<h2>Token-kustannus (token cost)</h2>
+<p>Kuvakaappaukset käyttävät enemmän tokeneita kuin teksti. Kuvakaappaus voi viedä satoja tai tuhansia tokeneita — usein moninkertaisesti verrattuna samaan tietoon tekstinä. Tämä vaikuttaa konteksti-ikkunan hallintaan.</p>
+<h2>Multimodaalinen malli (multimodal model)</h2>
+<p>Tekoälymallit, jotka voivat käsitellä useita modaliteetteja. GPT-4V, Claude 3 ja Gemini voivat nähdä kuvia. Vanhemmat mallit käsittelevät vain tekstiä.</p>
+<h2>Tekstimallit (text-only models)</h2>
+<p>Tekoälymallit, jotka käsittelevät vain tekstiä — eivät kuvia, ääntä tai muita muotoja. Ne ovat nopeita ja halpoja, mutta rajoittuneempia.</p>
+<h2>CSV-muoto (CSV format)</h2>
+<p>Comma-Separated Values — yksinkertainen tekstimuoto taulukoiden jakamiseen. Tekoäly voi lukea ja käsitellä CSV-dataa yhtä hyvin kuin kuvakaappauksia.</p>
+<h2>Kuvanluenta (image recognition)</h2>
+<p>Kyky lukea ja ymmärtää kuvia — tekstiä kuvissa, objekteja, värejä ja rakenteita. Multimodaaliset mallit tekevät tämän automaattisesti.</p>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 6</text>
+<text x="74" y="244" font-size="46" font-weight="800" fill="#1B2336">Näytä, älä vain kerro</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Kuvat, ääni ja teksti — multimodaalinen konteksti</text>
+<g transform="translate(606,196)">
+<rect x="0" y="0" width="118" height="92" rx="16" fill="#F4F5F8" stroke="#5A6478" stroke-width="3"/>
+<rect x="20" y="22" width="78" height="9" rx="4.5" fill="#5A6478"/><rect x="20" y="42" width="60" height="9" rx="4.5" fill="#5A6478"/><rect x="20" y="62" width="70" height="9" rx="4.5" fill="#5A6478"/>
+<text x="59" y="122" text-anchor="middle" font-size="14" font-weight="600" fill="#5A6478">vain teksti</text></g>
+<text x="754" y="252" text-anchor="middle" font-size="26" fill="#9AA6BD" font-family="ui-monospace,monospace">+</text>
+<g transform="translate(784,196)">
+<rect x="0" y="0" width="116" height="92" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="3"/>
+<rect x="20" y="20" width="76" height="40" rx="6" fill="none" stroke="#3B5BDB" stroke-width="2.6"/><circle cx="38" cy="36" r="6" fill="#3B5BDB"/><path d="M22 56 L46 38 L62 50 L74 42 L94 58" fill="none" stroke="#3B5BDB" stroke-width="2.6" stroke-linejoin="round"/>
+<text x="58" y="122" text-anchor="middle" font-size="13" font-weight="600" fill="#2F46B0">kuva + loki</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Näyttäminen voittaa kertomisen</text>
+<rect x="74" y="150" width="812" height="78" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="186" font-size="21" fill="#2F46B0">Kuvakaappaus oudosta virheestä kertoo enemmän kuin pitkä selitys.</text>
+<text x="100" y="214" font-size="21" fill="#2F46B0">Sama pätee tekoälyyn: näyttäminen tarkentaa diagnoosia.</text>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="380" height="190" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="34" cy="40" r="17" fill="#FBE6D8"/><text x="34" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#C26B2E">?</text>
+<text x="64" y="38" font-size="19" font-weight="700" fill="#1B2336">"Sovellus ei toimi."</text>
+<text x="64" y="64" font-size="16" fill="#5A6478">Malli joutuu arvaamaan</text>
+<g transform="translate(24,96)"><rect x="0" y="0" width="332" height="14" rx="7" fill="#F1D9C8"/><rect x="0" y="0" width="116" height="14" rx="7" fill="#C26B2E"/></g>
+<text x="24" y="138" font-size="16" font-weight="700" fill="#A35A22">tarkkuus 35 %</text>
+<text x="24" y="168" font-size="15" fill="#A35A22">Vastaus jää ympäripyöreäksi</text></g>
+<g transform="translate(506,266)">
+<rect x="0" y="0" width="380" height="190" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="34" cy="40" r="17" fill="#DFF3E8"/><path d="M27 40 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="38" font-size="19" font-weight="700" fill="#1B2336">Kuva + loki + koodi</text>
+<text x="64" y="64" font-size="16" fill="#5A6478">Malli näkee ongelman</text>
+<g transform="translate(24,96)"><rect x="0" y="0" width="332" height="14" rx="7" fill="#D6EEDF"/><rect x="0" y="0" width="315" height="14" rx="7" fill="#2F9E69"/></g>
+<text x="24" y="138" font-size="16" font-weight="700" fill="#247A52">tarkkuus 95 %</text>
+<text x="24" y="168" font-size="15" fill="#247A52">Täsmällinen korjausehdotus</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mitä multimodaalisuus on?</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Modaliteetti on tietomuoto. Useampi yhdessä on multimodaalisuutta.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="190" height="150" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(76,30)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 H34 M4 14 H30 M4 24 H34 M4 34 H24"/></g>
+<text x="95" y="106" text-anchor="middle" font-size="20" font-weight="800" fill="#1B2336">Teksti</text>
+<text x="95" y="132" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">perusmuoto</text></g>
+<g transform="translate(282,170)">
+<rect x="0" y="0" width="190" height="150" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(72,28)"><rect x="0" y="2" width="44" height="34" rx="5" fill="none" stroke="#0E9AA7" stroke-width="2.4"/><circle cx="14" cy="14" r="5" fill="#0E9AA7"/><path d="M2 34 L18 20 L28 28 L36 22 L44 30" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linejoin="round"/></g>
+<text x="95" y="106" text-anchor="middle" font-size="20" font-weight="800" fill="#1B2336">Kuva</text>
+<text x="95" y="132" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">kuvakaappaus</text></g>
+<g transform="translate(490,170)">
+<rect x="0" y="0" width="190" height="150" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(72,30)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 L4 18 L14 30 M32 6 L42 18 L32 30 M26 4 L20 32"/></g>
+<text x="95" y="106" text-anchor="middle" font-size="20" font-weight="800" fill="#1B2336">Koodi</text>
+<text x="95" y="132" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">oma rakenne</text></g>
+<g transform="translate(698,170)">
+<rect x="0" y="0" width="188" height="150" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(74,28)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 H10 L18 4 V34 L10 26 H2 Z M26 12 a8 8 0 0 1 0 14 M30 7 a14 14 0 0 1 0 24"/></g>
+<text x="94" y="106" text-anchor="middle" font-size="20" font-weight="800" fill="#1B2336">Ääni</text>
+<text x="94" y="132" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">osa malleista</text></g>
+<rect x="74" y="356" width="812" height="100" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="392" font-size="17" fill="#2F46B0">GPT-3 käsitteli vain tekstiä. ChatGPT, Copilot ja Claude tulkitsevat myös kuvia.</text>
+<text x="100" y="424" font-size="17" fill="#2F46B0">Arkiesimerkki: kuvaa rikkinäisen laitteen näyttö — kuva kertoo enemmän kuin sanat.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kuvakaappaus vähentää arvailua</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Se näyttää tekoälylle täsmälleen sen, mitä itse näet.</text>
+<g transform="translate(74,166)">
+<rect x="0" y="0" width="380" height="270" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="28" y="48" font-size="20" font-weight="700" fill="#A35A22">Pelkkä teksti</text>
+<text x="28" y="92" font-size="17" fill="#3A4253" font-style="italic">"Sovellus ei aukea."</text>
+<line x1="28" y1="120" x2="352" y2="120" stroke="#E7C3A8" stroke-width="1.5"/>
+<text x="28" y="156" font-size="16" fill="#5A6478">Malli arvaa montaa eri syytä:</text>
+<text x="28" y="188" font-size="15" fill="#A35A22">— verkko?  — asetukset?</text>
+<text x="28" y="216" font-size="15" fill="#A35A22">— oikeudet?  — päivitys?</text>
+<text x="28" y="252" font-size="15" font-weight="700" fill="#A35A22">→ ympäripyöreä vastaus</text></g>
+<g transform="translate(506,166)">
+<rect x="0" y="0" width="380" height="270" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="28" y="48" font-size="20" font-weight="700" fill="#247A52">Kuvakaappaus mukana</text>
+<g transform="translate(28,68)"><rect x="0" y="0" width="324" height="46" rx="8" fill="#FFFFFF" stroke="#E2A9A0" stroke-width="1.5"/><circle cx="26" cy="23" r="11" fill="none" stroke="#C8503E" stroke-width="2"/><path d="M26 17 V25 M26 30 v0.5" stroke="#C8503E" stroke-width="2.4" stroke-linecap="round"/><text x="48" y="28" font-size="15" font-weight="700" fill="#C8503E">Ei verkkoyhteyttä</text></g>
+<text x="28" y="156" font-size="16" fill="#5A6478">Malli näkee virheilmoituksen:</text>
+<text x="28" y="188" font-size="15" fill="#247A52">tarkka syy on ruudulla</text>
+<text x="28" y="216" font-size="15" fill="#247A52">väri ja teksti kertovat lisää</text>
+<text x="28" y="252" font-size="15" font-weight="700" fill="#247A52">→ täsmällinen korjaus</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hyvän kuvakaappauksen tekeminen</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Ammattilainen ottaa kuvakaappauksia harkitusti.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="34" r="20" fill="#EEF1FE"/><text x="40" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">1</text>
+<text x="80" y="42" font-size="20" font-weight="700" fill="#1B2336">Rajaa olennaiseen</text><text x="380" y="42" font-size="17" fill="#5A6478">— älä lähetä koko ruutua turhaan.</text></g>
+<g transform="translate(74,242)">
+<rect x="0" y="0" width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="34" r="20" fill="#EEF1FE"/><text x="40" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">2</text>
+<text x="80" y="42" font-size="20" font-weight="700" fill="#1B2336">Osoita virhekohta</text><text x="380" y="42" font-size="17" fill="#5A6478">— nuolet, kehykset tai korostukset.</text></g>
+<g transform="translate(74,324)">
+<rect x="0" y="0" width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="34" r="20" fill="#EEF1FE"/><text x="40" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">3</text>
+<text x="80" y="42" font-size="20" font-weight="700" fill="#1B2336">Lisää lyhyt selitys</text><text x="380" y="42" font-size="17" fill="#5A6478">— "Katso punaista virheilmoitusta."</text></g>
+<rect x="74" y="406" width="812" height="62" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="100" y="443" font-size="17" fill="#2F46B0">Paras rajaus on usein virheilmoitus + muutama rivi kontekstia — virhe ja sen tausta.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Lokit — järjestelmän oma kertomus</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">"Mitä lokit kertovat?" on ammattilaisen ensimmäinen kysymys.</text>
+<g transform="translate(74,162)">
+<rect x="0" y="0" width="540" height="170" rx="12" fill="#1E2740" stroke="#44517A" stroke-width="2"/>
+<text x="22" y="40" font-size="15.5" fill="#F0A38C" font-family="ui-monospace,monospace">ERROR Failed to connect db localhost:5432</text>
+<text x="22" y="74" font-size="15.5" fill="#F0A38C" font-family="ui-monospace,monospace">ERROR Connection timeout after 5 seconds</text>
+<text x="22" y="108" font-size="15.5" fill="#F5D58A" font-family="ui-monospace,monospace">WARNING Retrying attempt 2 of 3</text>
+<line x1="22" y1="128" x2="518" y2="128" stroke="#44517A" stroke-width="1"/>
+<text x="22" y="152" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2024-03-14 · viimeiset rivit ennen kaatumista</text></g>
+<g transform="translate(642,162)">
+<rect x="0" y="0" width="244" height="170" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(24,24)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="11"/><path d="M13 7 V14 L18 18"/></g>
+<text x="64" y="44" font-size="18" font-weight="800" fill="#247A52">Tekoälyn pääte</text>
+<text x="24" y="86" font-size="16" fill="#3A4253">"Tietokanta ei vastaa,</text>
+<text x="24" y="110" font-size="16" fill="#3A4253">koska portti 5432</text>
+<text x="24" y="134" font-size="16" fill="#3A4253">ei aukea."</text></g>
+<text x="74" y="376" font-size="20" font-weight="700" fill="#1B2336">Lokien lähteet</text>
+<g font-size="16" fill="#3A4253">
+<rect x="74" y="392" width="196" height="64" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="92" y="422" font-weight="700" fill="#1B2336">Sovellus</text><text x="92" y="444">funktiot, haut</text>
+<rect x="282" y="392" width="196" height="64" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="300" y="422" font-weight="700" fill="#1B2336">Järjestelmä</text><text x="300" y="444">muisti, prosessit</text>
+<rect x="490" y="392" width="196" height="64" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="508" y="422" font-weight="700" fill="#1B2336">Verkko</text><text x="508" y="444">HTTP, yhteydet</text>
+<rect x="698" y="392" width="188" height="64" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="716" y="422" font-weight="700" fill="#1B2336">Virhe</text><text x="716" y="444">poikkeukset</text>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Suodata lokit — älä liimaa kaikkea</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">5 000 riviä täyttää konteksti-ikkunan turhaan. Valitse olennainen.</text>
+<g transform="translate(74,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="44" cy="44" r="22" fill="#EEF1FE"/><text x="44" y="52" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">1</text>
+<text x="24" y="106" font-size="22" font-weight="800" fill="#1B2336">Etsi virhe</text>
+<text x="24" y="148" font-size="16" fill="#3A4253">Paikanna ERROR- tai</text>
+<text x="24" y="172" font-size="16" fill="#3A4253">WARNING-rivit lokista.</text>
+<text x="24" y="266" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">missä meni pieleen?</text></g>
+<g transform="translate(354,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="44" cy="44" r="22" fill="#EEF1FE"/><text x="44" y="52" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">2</text>
+<text x="24" y="106" font-size="22" font-weight="800" fill="#1B2336">Merkitse rivit</text>
+<text x="24" y="148" font-size="16" fill="#3A4253">Viimeiset 20 riviä tai</text>
+<text x="24" y="172" font-size="16" fill="#3A4253">grep-haun tulokset.</text>
+<text x="24" y="266" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">vain olennainen</text></g>
+<g transform="translate(634,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<circle cx="44" cy="44" r="22" fill="#FFFFFF"/><text x="44" y="52" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">3</text>
+<text x="24" y="106" font-size="22" font-weight="800" fill="#2F46B0">Lisää konteksti</text>
+<text x="24" y="148" font-size="16" fill="#1B2336">"Ohjelma kaatui klo</text>
+<text x="24" y="172" font-size="16" fill="#1B2336">10.45. Näetkö syyn?"</text>
+<text x="24" y="266" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">ohjaa malli oikeaan</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g8)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Koodi — anna mieluiten tekstinä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Tekstinä malli voi analysoida ja muokata koodia, kuvasta vain lukea.</text>
+<g transform="translate(74,162)">
+<rect x="0" y="0" width="540" height="120" rx="12" fill="#1E2740" stroke="#44517A" stroke-width="2"/>
+<text x="22" y="44" font-size="15" fill="#7FD0A8" font-family="ui-monospace,monospace">def calculate_discount(price, pct):</text>
+<text x="22" y="76" font-size="15" fill="#EAEEF8" font-family="ui-monospace,monospace">    return price - (price * pct)</text>
+<text x="22" y="104" font-size="13.5" fill="#9AA6BD" font-family="ui-monospace,monospace"># pct = 1.0 → hinta nollaksi?</text></g>
+<g transform="translate(642,162)">
+<rect x="0" y="0" width="244" height="120" rx="12" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(24,22)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L26 24 H2 Z"/><path d="M14 10 V16 M14 20 v0.5"/></g>
+<text x="64" y="42" font-size="17" font-weight="800" fill="#A35A22">Puuttuva tarkistus</text>
+<text x="24" y="80" font-size="15" fill="#3A4253">Sallituille arvoille</text>
+<text x="24" y="102" font-size="15" fill="#3A4253">ei rajausta.</text></g>
+<text x="74" y="328" font-size="20" font-weight="700" fill="#1B2336">Anna koodi kontekstina näin</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="346" width="270" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="98" y="380" font-size="18" font-weight="700" fill="#1B2336">Konteksti</text><text x="98" y="408">Mikä ohjelma?</text><text x="98" y="430">Mikä kieli?</text>
+<rect x="345" y="346" width="270" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="369" y="380" font-size="18" font-weight="700" fill="#1B2336">Vika-alue</text><text x="369" y="408">Mitkä rivit</text><text x="369" y="430">ovat epäiltyjä?</text>
+<rect x="616" y="346" width="270" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="640" y="380" font-size="18" font-weight="700" fill="#1B2336">Käyttäytyminen</text><text x="640" y="408">Mitä pitäisi tapahtua</text><text x="640" y="430">vs. mitä tapahtuu?</text>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g9)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Peitä salaisuudet aina</text>
+<rect x="74" y="142" width="812" height="62" rx="12" fill="#FBEAE6" stroke="#E2A9A0" stroke-width="2"/>
+<g transform="translate(100,158)" fill="none" stroke="#C8503E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="13" width="26" height="18" rx="3"/><path d="M7 13 V8 a8 8 0 0 1 16 0 V13"/></g>
+<text x="148" y="180" font-size="19" font-weight="700" fill="#A33529">Älä koskaan näytä salasanoja, API-avaimia tai muita salaisuuksia.</text>
+<g transform="translate(74,226)">
+<rect x="0" y="0" width="540" height="110" rx="12" fill="#1E2740" stroke="#44517A" stroke-width="2"/>
+<text x="22" y="42" font-size="15" fill="#EAEEF8" font-family="ui-monospace,monospace">"password": <tspan fill="#F0A38C">"admin123"</tspan></text>
+<text x="22" y="74" font-size="15" fill="#EAEEF8" font-family="ui-monospace,monospace">"api_key": <tspan fill="#F0A38C">"sk-9f2a8b4c1e7d"</tspan></text>
+<text x="22" y="98" font-size="13.5" fill="#9AA6BD" font-family="ui-monospace,monospace"># EI näin — poista ennen jakamista</text></g>
+<g transform="translate(642,226)">
+<rect x="0" y="0" width="244" height="110" rx="12" fill="#0E2A20" stroke="#2F9E69" stroke-width="2"/>
+<text x="22" y="42" font-size="15" fill="#EAF7F0" font-family="ui-monospace,monospace">"password": <tspan fill="#7FD0A8">"***"</tspan></text>
+<text x="22" y="74" font-size="15" fill="#EAF7F0" font-family="ui-monospace,monospace">"api_key": <tspan fill="#7FD0A8">"sk-***xyz"</tspan></text>
+<text x="22" y="98" font-size="13.5" fill="#7FB89A" font-family="ui-monospace,monospace"># näin — vain alku ja loppu</text></g>
+<text x="74" y="384" font-size="18" font-weight="700" fill="#5A6478">Miksi turvallisuus on pakollista</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="402" width="270" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="433" r="6" fill="#C8503E"/><text x="118" y="439">Estää vuodot</text>
+<rect x="345" y="402" width="270" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="371" cy="433" r="6" fill="#C8503E"/><text x="389" y="439">Suojaa muita käyttäjiä</text>
+<rect x="616" y="402" width="270" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="642" cy="433" r="6" fill="#C8503E"/><text x="660" y="439">Ylläpitää luottamusta</text>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g10)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Multimodaalinen konteksti yhdessä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Ammattilainen yhdistää tietomuodot vahvaksi kokonaisuudeksi.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="200" height="120" rx="14" fill="#FAFBFE" stroke="#0E9AA7" stroke-width="2"/>
+<g transform="translate(80,24)"><rect x="0" y="2" width="40" height="30" rx="5" fill="none" stroke="#0E9AA7" stroke-width="2.4"/><circle cx="13" cy="13" r="4.5" fill="#0E9AA7"/><path d="M2 30 L16 18 L26 26 L40 16" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linejoin="round"/></g>
+<text x="100" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#1B2336">Kuvakaappaus</text>
+<text x="100" y="106" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">visuaalinen</text></g>
+<g transform="translate(294,164)">
+<rect x="0" y="0" width="200" height="120" rx="14" fill="#FAFBFE" stroke="#C79100" stroke-width="2"/>
+<g transform="translate(82,24)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round"><path d="M2 6 H34 M2 16 H30 M2 26 H34 M2 36 H22"/></g>
+<text x="100" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#1B2336">Lokit (20 riviä)</text>
+<text x="100" y="106" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">ajoitus, ympäristö</text></g>
+<g transform="translate(514,164)">
+<rect x="0" y="0" width="200" height="120" rx="14" fill="#FAFBFE" stroke="#2F9E69" stroke-width="2"/>
+<g transform="translate(82,24)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6 L4 20 L12 34 M28 6 L36 20 L28 34"/></g>
+<text x="100" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#1B2336">Koodin vika-alue</text>
+<text x="100" y="106" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">rivit 45–55</text></g>
+<g transform="translate(734,164)">
+<rect x="0" y="0" width="152" height="120" rx="14" fill="#FAFBFE" stroke="#3B5BDB" stroke-width="2"/>
+<g transform="translate(58,24)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="14" r="8"/><path d="M4 36 a14 12 0 0 1 28 0"/></g>
+<text x="76" y="84" text-anchor="middle" font-size="18" font-weight="800" fill="#2F46B0">Käyttäytyminen</text>
+<text x="76" y="106" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">odotus vs. tulos</text></g>
+<rect x="74" y="316" width="812" height="64" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="354" font-size="19" fill="#2F46B0">Neljä kontekstia yhdessä on paljon parempi kuin "minulla on validointivirhe".</text>
+<text x="74" y="426" font-size="18" font-weight="700" fill="#5A6478">Muista</text>
+<text x="74" y="454" font-size="17" fill="#3A4253">Esim. "ohjelma on hidas" + kuva, jossa prosessi vie 99 % suorittimesta, tarkentaa heti.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mikä tietomuoto, milloin?</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Valitse konteksti strategisesti tilanteen mukaan.</text>
+<g font-size="16">
+<rect x="74" y="158" width="812" height="40" rx="8" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="96" y="184" font-weight="700" fill="#5A6478">Tilanne</text>
+<text x="486" y="184" text-anchor="middle" font-weight="700" fill="#0E9AA7">Kuva</text>
+<text x="636" y="184" text-anchor="middle" font-weight="700" fill="#5A6478">Teksti</text>
+<text x="800" y="184" text-anchor="middle" font-weight="700" fill="#C79100">Lokit</text>
+</g>
+<g font-size="16.5" fill="#3A4253">
+<text x="96" y="232">Käyttöliittymän bugi</text><text x="486" y="232" text-anchor="middle" font-weight="700" fill="#2F9E69">kyllä</text><text x="636" y="232" text-anchor="middle" fill="#9AA6BD">ehkä</text><text x="800" y="232" text-anchor="middle" fill="#C8503E">ei</text>
+<line x1="74" y1="248" x2="886" y2="248" stroke="#ECEFF6" stroke-width="1"/>
+<text x="96" y="278">Virheilmoitus näytöllä</text><text x="486" y="278" text-anchor="middle" font-weight="700" fill="#2F9E69">kyllä</text><text x="636" y="278" text-anchor="middle" fill="#2F9E69">kyllä</text><text x="800" y="278" text-anchor="middle" fill="#9AA6BD">ehkä</text>
+<line x1="74" y1="294" x2="886" y2="294" stroke="#ECEFF6" stroke-width="1"/>
+<text x="96" y="324">Sovellus kaatuu</text><text x="486" y="324" text-anchor="middle" fill="#9AA6BD">ehkä</text><text x="636" y="324" text-anchor="middle" font-weight="700" fill="#2F9E69">kyllä</text><text x="800" y="324" text-anchor="middle" font-weight="700" fill="#2F9E69">kriittistä</text>
+<line x1="74" y1="340" x2="886" y2="340" stroke="#ECEFF6" stroke-width="1"/>
+<text x="96" y="370">Koodin virhe</text><text x="486" y="370" text-anchor="middle" fill="#C8503E">ei</text><text x="636" y="370" text-anchor="middle" font-weight="700" fill="#2F9E69">kyllä, tekstinä</text><text x="800" y="370" text-anchor="middle" fill="#9AA6BD">ehkä</text>
+<line x1="74" y1="386" x2="886" y2="386" stroke="#ECEFF6" stroke-width="1"/>
+<text x="96" y="416">Verkko-ongelma</text><text x="486" y="416" text-anchor="middle" fill="#9AA6BD">ehkä</text><text x="636" y="416" text-anchor="middle" fill="#2F9E69">kyllä</text><text x="800" y="416" text-anchor="middle" font-weight="700" fill="#2F9E69">kyllä</text>
+</g>
+<rect x="74" y="436" width="812" height="40" rx="10" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/>
+<text x="96" y="462" font-size="15.5" fill="#2F46B0">Sama periaate pätee arkisiin kuviin yhtä lailla kuin teknisiin tilanteisiin.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mallien rajoitukset</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Multimodaaliset mallit ovat tehokkaita, mutta eivät erehtymättömiä.</text>
+<g transform="translate(74,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="6"/><path d="M13 24 V20 M13 2 V6 M2 13 H6 M24 13 H20 M30 24 a14 14 0 0 0 -17 -17"/></g>
+<text x="24" y="92" font-size="21" font-weight="800" fill="#1B2336">Tokenit</text>
+<text x="24" y="132" font-size="16" fill="#3A4253">Yksi kuva kuluttaa</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">paljon enemmän kuin</text>
+<text x="24" y="180" font-size="16" fill="#3A4253">sama tieto tekstinä.</text>
+<text x="24" y="266" font-size="14" fill="#A35A22" font-family="ui-monospace,monospace">→ käytä harkiten</text></g>
+<g transform="translate(354,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="10"/><path d="M21 21 L30 30"/></g>
+<text x="24" y="92" font-size="21" font-weight="800" fill="#1B2336">Tarkkuus</text>
+<text x="24" y="132" font-size="16" fill="#3A4253">Pieni fontti, sekava</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">tausta tai monimutkainen</text>
+<text x="24" y="180" font-size="16" fill="#3A4253">käyttöliittymä hämää.</text>
+<text x="24" y="266" font-size="14" fill="#A35A22" font-family="ui-monospace,monospace">→ kuva + selitys</text></g>
+<g transform="translate(634,166)">
+<rect x="0" y="0" width="252" height="290" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="28" height="20" rx="3"/><path d="M10 28 H22 M16 22 V28"/></g>
+<text x="24" y="92" font-size="21" font-weight="800" fill="#1B2336">Kyvyt vaihtelevat</text>
+<text x="24" y="132" font-size="16" fill="#3A4253">Kaikki mallit eivät ole</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">multimodaalisia. Osa</text>
+<text x="24" y="180" font-size="16" fill="#3A4253">käsittelee vain tekstiä.</text>
+<text x="24" y="266" font-size="14" fill="#A35A22" font-family="ui-monospace,monospace">→ tunne mallisi</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l6g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l6g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Multimodaalinen konteksti tekee tekoälystä täsmällisemmän työkaverin.</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="166" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="188" r="6" fill="#0E9AA7"/><text x="118" y="194">Näytä ennen kuin kuvailet</text>
+<rect x="494" y="166" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="188" r="6" fill="#C79100"/><text x="538" y="194">Suodata lokit olennaiseen</text>
+<rect x="74" y="218" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="240" r="6" fill="#2F9E69"/><text x="118" y="246">Anna koodi tekstinä</text>
+<rect x="494" y="218" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="240" r="6" fill="#3B5BDB"/><text x="538" y="246">Yhdistä konteksti strategisesti</text>
+<rect x="74" y="270" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="292" r="6" fill="#C8503E"/><text x="118" y="298">Peitä salaisuudet ja henkilötiedot</text>
+<rect x="494" y="270" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="292" r="6" fill="#5A6478"/><text x="538" y="298">Tunne mallin kyvyt</text>
+</g>
+<rect x="74" y="346" width="812" height="122" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,376)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="386" font-size="22" font-weight="800" fill="#247A52">Näyttäminen on usein parempi kuin kertominen.</text>
+<text x="150" y="416" font-size="18" fill="#3A4253">Teksti, kuva, lokit ja koodi muodostavat yhdessä vahvan kokonaisuuden —</text>
+<text x="150" y="442" font-size="18" fill="#3A4253">jokainen modaliteetti tuo tietoa, jota muut eivät sisällä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-05/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-07/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-06')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "luokka", "lid": "lesson-06", "num": 6, "title": "Kuvat, ääni ja teksti — kun sanat eivät riitä", "ptasks": [{"type": "match", "title": "Multimodaalisuuden käsitteet", "intro": "Yhdistä jokainen käsite sitä kuvaavaan selitykseen. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Multimodaalisuus", "b": "Kyky käsitellä useaa tietomuotoa yhtä aikaa — tekstiä, kuvaa, koodia ja ääntä.", "explain": "Kun yhdistät kaksi tai useampaa tietomuotoa samaan pyyntöön, hyödynnät juuri tätä kykyä."}, {"a": "Modaliteetti", "b": "Yksittäinen tietomuoto, kuten teksti, kuva tai koodi.", "explain": "Se on yksi rakennuspalikka: teksti on yksi, kuva toinen ja koodi kolmas, vaikka koodi onkin teknisesti tekstiä."}, {"a": "Kuvakaappaus", "b": "Näytöltä otettu vedos, joka näyttää tarkasti sen, minkä käyttäjä itse näkee.", "explain": "Se vähentää arvailua, koska malli näkee tilanteen samoin kuin sinä sen näet."}, {"a": "Lokit", "b": "Järjestelmän kirjoittamia tietueita tapahtumista, joista virheen syy ja ajankohta usein selviävät.", "explain": "Ne ovat järjestelmän oma kertomus siitä, mitä tapahtui ja milloin — usein suoraan ihmisen luettavissa."}, {"a": "Token-kustannus", "b": "Se, kuinka paljon tilaa syöte vie mallin muistista; kuva vie sitä yleensä paljon enemmän kuin sama tieto sanoina.", "explain": "Koska kuva täyttää muistitilaa nopeasti, kuvia kannattaa käyttää harkiten ja vain olennaiseen."}, {"a": "Multimodaalinen malli", "b": "Tekoäly, joka osaa nähdä kuvia eikä käsittele pelkkää sanallista syötettä.", "explain": "Tällainen tekoäly voi lukea kuvakaappauksen sisällön, kun taas pelkkää sanallista syötettä käsittelevä ei näe kuvaa lainkaan."}, {"a": "Tekstimalli", "b": "Tekoäly, joka käsittelee vain sanallista syötettä eikä näe kuvia.", "explain": "Se on usein nopea ja kevyt, mutta jos annat sille kuvan, se ei pysty tulkitsemaan sitä."}, {"a": "Visuaalinen konteksti", "b": "Näytöltä välittyvä tieto — värit, ikonit ja asettelu — jota pelkät sanat eivät helposti tavoita.", "explain": "Juuri tämän vuoksi kuva voi kertoa asettelusta tai väreistä enemmän kuin pitkä sanallinen kuvaus."}], "summary": "<strong>Multimodaalisuus yhdistää eri tietomuodot.<\/strong> Kuva näyttää visuaalisen, teksti on tarkin koodille ja lokeille, ja kaikki mallit eivät edes näe kuvia."}, {"type": "classify", "title": "Kuva, teksti vai lokit?", "intro": "Käytännössä muodot yhdistetään usein, mutta tässä harjoituksessa valitse kunkin tilanteen selvästi olennaisin muoto. Päättele, näyttääkö tilanteen parhaiten kuvakaappaus, kertooko sen tarkimmin teksti vai paljastaako syyn lokit.", "categories": ["Kuvakaappaus", "Teksti", "Lokit"], "items": [{"text": "Kassaohjelman funktio pyöristää hinnan väärin, ja haluat mallin ehdottavan korjausta suoraan koodiin.", "answer": 1, "explain": "Koodi kannattaa antaa tekstinä, koska silloin malli voi analysoida ja muokata sitä rivi riviltä. Kuvakaappaus näyttäisi koodin, mutta siitä mallin olisi vaikea ehdottaa muokkauksia — tekstiä voi muokata, kuvaa ei."}, {"text": "Verkkokaupan tuotesivun asettelu on rikki: kuvat menevät päällekkäin selaimessa.", "answer": 0, "explain": "Rikkinäinen asettelu on visuaalinen ongelma, jonka kuvakaappaus näyttää tarkasti. Sanallinen kuvaus jättäisi helposti epäselväksi, mikä menee minkä päälle — kuva kertoo sen yhdellä silmäyksellä."}, {"text": "Varausjärjestelmän palvelin kaatui yöllä, ja haluat tietää syyn tapahtumahetkeltä.", "answer": 2, "explain": "Kaatumisen syy ja tarkka ajankohta löytyvät lokeista, jotka tallentavat, mitä järjestelmässä tapahtui. Kuvakaappausta yöllisestä hetkestä ei ole, mutta loki kertoo tapahtumien kulun jälkikäteen."}, {"text": "Kosketusnäytön kassassa napit ovat väärissä paikoissa ja osa kuvakkeista puuttuu.", "answer": 0, "explain": "Nappien sijainti ja puuttuvat kuvakkeet ovat visuaalisia asioita, jotka näkyvät kuvakaappauksesta heti. Tekstillä niiden kuvailu olisi työlästä ja epätarkkaa — tässä kannattaa näyttää, ei kuvailla."}, {"text": "Haluat mallin muokkaavan konfiguraatiotiedoston rakennetta rivi riviltä.", "answer": 1, "explain": "Kun tavoite on muokata sisältöä, teksti on oikea muoto: mallin on helppo lukea ja kirjoittaa rivejä uudelleen. Kuvakaappauksesta tekstiä ei voi muokata, joten se veisi työtä taaksepäin."}, {"text": "Varausjärjestelmä hidastelee ruuhka-aikaan, ja järjestelmä kirjaa jokaisen tapahtuman aikaleimoineen, joten hidastelun ajankohta selviää näistä tietueista.", "answer": 2, "explain": "Suorituskykyloki kertoo, mitä konepellin alla tapahtuu ruuhkahetkellä — sellaista, mikä ei näy ruudulla. Kuvakaappaus näyttäisi vain hitaan käyttöliittymän, ei syytä; loki paljastaa syyn."}, {"text": "Ohjelma näyttää oudon virheilmoituksen, jonka tarkan sanamuodon haluat mallin lukevan täsmällisesti.", "answer": 1, "explain": "Kun sanamuodon pitää olla täsmälleen oikein, kopioitu teksti on varmin: se luetaan sellaisenaan. Kuvakaappauksesta pieni tai epäselvä fontti voi tulla luetuksi väärin, joten teksti on tässä tarkempi."}, {"text": "Palvelimen tapahtumahistoriassa toistuu sama virhekoodi rivi riviltä, ja haluat antaa nämä tietueet mallille analysoitavaksi.", "answer": 2, "explain": "Kyse on lokista, ja loki kannattaa jakaa tekstimuotoisena eikä kuvakaappauksena: teksti on kevyempi ja malli lukee rivit tarkasti. Kuvasta sama rivi jouduttaisiin tulkitsemaan uudelleen, ja se veisi turhaan tilaa."}], "summary": "Kuvakaappaus sopii visuaaliseen ongelmaan, teksti koodille ja tarkoille sanamuodoille, lokit ajoitukseen ja järjestelmän tapahtumiin. Oikea muoto oikeaan tilanteeseen säästää tokeneita ja tuo tarkemman vastauksen."}, {"type": "quiz", "title": "Milloin näyttää, milloin varoa", "intro": "Jokainen kysymys koettelee yhtä väärinkäsitystä tai rajoitusta. Valitse vaihtoehto, joka pitää paikkansa, ja lue selitykset myös muista vaihtoehdoista.", "items": [{"q": "Sinulla on viisi kuvakaappausta, 3 000 rivin loki ja koko koodikansio. Kannattaako lähettää kaikki kerralla, koska malli on multimodaalinen?", "options": [{"text": "Ei — konteksti-ikkuna on rajallinen ja kuvat kuluttavat paljon tokeneita, joten valitse vain olennainen materiaali.", "correct": true, "explain": "Juuri näin. Multimodaalisuus ei tarkoita, että kaikki kannattaa kaataa kerralla — olennaisen valitseminen antaa mallille selkeämmän kuvan ja säästää tilaa."}, {"text": "Kyllä, multimodaalinen malli kestää kaiken materiaalin kerralla.", "correct": false, "explain": "Tämä on väärinkäsitys. Vaikka malli osaa käsitellä montaa muotoa, konteksti-ikkuna on silti rajallinen, ja kuvat täyttävät sen nopeasti."}, {"text": "Kyllä, mitä enemmän materiaalia, sitä tarkempi vastaus.", "correct": false, "explain": "Näin ei ole. Ylimääräinen aineisto lisää kohinaa, jonka seasta olennainen on vaikeampi löytää — tarkkuus voi jopa heikentyä."}, {"text": "Ei, koska malli ei osaa käsitellä useaa tiedostoa lainkaan.", "correct": false, "explain": "Syy on väärä. Malli kyllä käsittelee useaa lähdettä; ongelma ei ole kyvyttömyys vaan rajallinen ikkuna ja olennaisuuden puute."}]}, {"q": "Haluat mallin kirjoittavan konfiguraatiotiedoston uudelleen. Annatko sen kuvakaappauksena vai tekstinä?", "options": [{"text": "Tekstinä — silloin malli voi analysoida ja muokata sisältöä tarkasti.", "correct": true, "explain": "Aivan. Tekstiä malli voi lukea ja kirjoittaa uudelleen rivi riviltä; se on muokkaustyön oikea muoto."}, {"text": "Kuvakaappauksena, koska kuva on aina parempi kuin teksti.", "correct": false, "explain": "Tämä on väärinkäsitys. Kuva ei ole aina parempi — koodille ja konfiguraatiolle teksti on tarkempi, kevyempi ja muokattavissa."}, {"text": "Kuvakaappauksena, koska se näyttää värit ja muotoilun.", "correct": false, "explain": "Värit eivät auta tässä. Konfiguraation muokkaamiseen tarvitaan itse teksti, jota kuvasta ei voi kopioida eikä muokata."}, {"text": "Ei väliä, tulos on kummallakin sama.", "correct": false, "explain": "On väliä. Kuvasta malli ei voi tuottaa muokattua tiedostoa; tekstinä se voi palauttaa korjatun version suoraan."}]}, {"q": "Miksi kuvakaappauksia kannattaa käyttää säästeliäästi?", "options": [{"text": "Koska yksi kuva voi kuluttaa paljon enemmän tokeneita kuin sama tieto tekstinä ja täyttää ikkunaa nopeammin.", "correct": true, "explain": "Näin on. Kuva on mallille raskas syöte; kun sama asia voidaan sanoa tekstinä, se vie vähemmän tilaa ja jättää ikkunaan varaa muulle."}, {"text": "Koska mallit eivät pidä kuvista.", "correct": false, "explain": "Syy on väärä. Kyse ei ole mieltymyksistä vaan siitä, että kuva vie paljon muistitilaa verrattuna tekstiin."}, {"text": "Koska kuvat ovat aina epätarkkoja.", "correct": false, "explain": "Tämä liioittelee. Kuva voi olla täysin tarkka; säästeliäisyyden syy on token-kustannus, ei epätarkkuus."}, {"text": "Ei tarvitse säästellä, kuvien lähettäminen on ilmaista.", "correct": false, "explain": "Näin ei ole. Jokainen kuva kuluttaa ikkunaa, ja liika materiaali vie tilan olennaiselta — säästeliäisyys kannattaa."}]}, {"q": "Ennen kuin luotat kuvan lähettämiseen mallille, mitä sinun pitää tarkistaa?", "options": [{"text": "Onko käyttämäsi malli multimodaalinen — kaikki mallit eivät näe kuvia.", "correct": true, "explain": "Tarkalleen. Osa malleista käsittelee vain tekstiä; jos annat kuvan tekstimallille, se ei voi tulkita sitä lainkaan."}, {"text": "Ei tarvitse tarkistaa mitään, kaikki mallit näkevät kuvat.", "correct": false, "explain": "Tämä on väärinkäsitys. Kaikki mallit eivät ole multimodaalisia — vanhat ja kevyet mallit käsittelevät usein vain tekstiä."}, {"text": "Vain kuvan tiedostomuodon.", "correct": false, "explain": "Tiedostomuoto ei ole ydin. Ratkaisevaa on, näkeekö malli kuvia lainkaan; jos ei, tiedostomuodolla ei ole väliä."}, {"text": "Vain internetyhteyden.", "correct": false, "explain": "Yhteys ei liity asiaan. Kysymys on mallin kyvystä tulkita kuvia, ei verkosta."}]}, {"q": "Liität mallille pelkän kuvakaappauksen ilman mitään tekstiä. Mikä on riski?", "options": [{"text": "Malli ei tiedä tavoitettasi eikä rajaustasi ja voi keskittyä kuvassa vääriin asioihin.", "correct": true, "explain": "Aivan oikein. Kuva näyttää tilanteen, mutta ilman selitystä malli ei tiedä, mitä siitä pitäisi katsoa tai mitä haluat sen tekevän."}, {"text": "Ei riskiä — kuva kertoo kaiken tarvittavan itse.", "correct": false, "explain": "Tämä on väärinkäsitys. Kuva ei kerro tavoitettasi; ilman lyhyttäkään selitystä malli voi tulkita sen aivan väärin."}, {"text": "Malli ei osaa avata kuvaa lainkaan.", "correct": false, "explain": "Näin ei ole, jos malli on multimodaalinen — se kyllä avaa kuvan, mutta ei tiedä, mihin sinun tarpeeseesi sen pitäisi vastata."}, {"text": "Kuva on aina liian iso lähetettäväksi.", "correct": false, "explain": "Koko ei ole tässä ydin. Ongelma on selityksen puute: ilman tavoitetta ja rajausta malli arvaa, mihin keskittyä."}]}], "summary": "Multimodaalisuus ei tarkoita kaiken lähettämistä kerralla: anna koodi ja lokit tekstinä, käytä kuvia harkiten ja aina selityksen kanssa, ja tarkista, näkeekö mallisi kuvia."}, {"type": "scenario", "title": "Ennen kuin painat lähetä", "intro": "Selvität kollegasi kanssa vikaa verkkokaupan tilausjärjestelmässä ja aiot pyytää tekoälyltä apua. Etene päätös kerrallaan ja valitse joka kohdassa, mitä on turvallista jakaa ja missä muodossa.", "start": "start", "max": 3, "nodes": {"start": {"text": "Sinä ja kollegasi selvitätte, miksi verkkokaupan tilausjärjestelmä ei lähetä asiakkaille vahvistusviestejä. Ruudulla näkyy virheilmoitus, ja aivan sen vieressä on asiakkaan nimi, osoite ja sähköpostiosoite. Aiot pyytää apua kuvakaappauksella. Mitä teet ensin?", "choices": [{"label": "Otat kuvakaappauksen koko ruudusta ja lähetät sen — se on nopein tapa.", "next": "leak_end", "feedback": "Koko ruutu sisältää asiakkaan henkilötiedot, jotka vuotaisivat ulkopuoliseen palveluun. Redaktointi ei ole valinnaista: henkilötiedot on peitettävä ennen jakamista.", "tone": "no"}, {"label": "Rajaat kuvan vain virheilmoitukseen ja peität henkilötiedot ennen lähetystä.", "next": "dp2", "feedback": "Juuri näin. Näytät mallille olennaisen eli virheilmoituksen, mutta suojaat asiakkaan tiedot rajaamalla ja peittämällä ne.", "tone": "ok"}, {"label": "Kuvailet ongelman tekstillä ja kopioit vain virheilmoituksen tarkan sanamuodon.", "next": "dp2", "feedback": "Hyvä ratkaisu. Teksti riittää usein, on kevyempi kuin kuva eikä tuo mukaan mitään arkaluonteista.", "tone": "ok"}]}, "dp2": {"text": "Loki paljastaa syyn, mutta yhdellä rivillä näkyy sähköpostipalvelun API-avain kokonaisuudessaan. Miten jaat lokin mallille?", "choices": [{"label": "Peität eli redaktoit avaimen, esimerkiksi muotoon sk-***...xyz, ja jätät virherivit näkyviin.", "next": "dp3", "feedback": "Täsmälleen. Näytät olennaisen virhetiedon mutta piilotat salaisuuden — malli saa tarpeeksi ratkaistakseen ongelman ilman, että avain vuotaa.", "tone": "ok"}, {"label": "Jätät avaimen näkyviin — sitähän tarvitaan ongelman ymmärtämiseen.", "next": "leak_end", "feedback": "Avainta ei tarvita syyn selvittämiseen, ja näkyvällä avaimella pääsee käsiksi järjestelmään. Salaisuuksia ei jaeta koskaan, vaikka ne liittyisivät ongelmaan.", "tone": "no"}, {"label": "Poistat koko lokin varmuuden vuoksi etkä anna mallille mitään teknistä tietoa.", "next": "dp3", "feedback": "Ymmärrettävää varovaisuutta, mutta koko lokin poistaminen vie mukanaan myös hyödyllisen virhetiedon. Oikea tapa on redaktoida vain salaisuus ja säilyttää virherivit.", "tone": "mid"}]}, "dp3": {"text": "Ratkaisu alkaa löytyä. Kollega ehdottaa, että lähetätte mallille vielä koko konfiguraatiotiedoston 'kaiken varalta'. Tiedostossa on salasanoja. Mitä sanot?", "choices": [{"label": "Lähetetään vain ongelmaan liittyvä osa, salaisuudet redaktoituna.", "next": "end_good", "feedback": "Osuit oikeaan. Olennainen osa riittää ratkaisuun, eikä mikään salainen pääse vuotamaan.", "tone": "ok"}, {"label": "Redaktoidaan salaisuudet, mutta lähetetään silti koko tiedosto kaikkine riveineen.", "next": "end_mid", "feedback": "Hyvä, ettei mitään vuoda. Koko tiedosto kuitenkin täyttää ikkunaa turhaan ja lisää kohinaa; ongelmaan liittyvä osa olisi riittänyt.", "tone": "mid"}, {"label": "Otetaan koko tiedostosta kuvakaappaus, niin salasanoja ei voi kopioida.", "next": "leak_end", "feedback": "Kuvakin näyttää salasanat — malli lukee ne kuvasta siinä missä tekstistäkin. Muodon vaihtaminen ei poista arkaluonteisuutta; vain redaktointi poistaa sen.", "tone": "no"}]}, "leak_end": {"end": true, "verdict": "no", "score": 0, "text": "Arkaluonteista tietoa päätyi ulkopuoliseen palveluun. Valinnastasi riippuen se oli asiakkaan henkilötieto, sähköpostipalvelun API-avain tai konfiguraation salasana.", "feedback": "Turvallisuus on osa ammattilaisen perustyötä: redaktoi salaisuudet ja henkilötiedot aina ennen jakamista, riippumatta siitä, jaatko tiedon kuvana vai tekstinä. Muoto ei suojaa mitään — vain peittäminen suojaa."}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Malli sai juuri sen, mitä ongelman ratkaisu vaati, eikä mitään arkaluonteista lähtenyt talon ulkopuolelle.", "feedback": "Valitsit kevyimmän riittävän muodon, redaktoit salaisuudet ja rajasit materiaalin olennaiseen. Näin malli sai tarpeeksi ratkaistakseen ongelman, ja turvallisuus säilyi joka askeleella."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Ongelma ratkeaa, ja turvallisuus pysyi kunnossa — mutta lähetit matkan varrella enemmän kuin oli tarpeen.", "feedback": "Turvallisuus oli hallussa: redaktoit salaisuudet, eikä mitään vuotanut. Lähetit kuitenkin enemmän kuin tarvittiin, ja 'kaikki mukaan' täyttää ikkunaa ja lisää kohinaa. Rajaa ensi kerralla olennaiseen."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muistin rajat — kuinka paljon tekoäly oikeasti muistaa — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Muistin rajat — kuinka paljon tekoäly oikeasti muistaa. Luokkaversio, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-05/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Teoria</span><span>›</span><span>Oppitunti 5</span></div><div class="lesson-title">Muistin rajat — kuinka paljon tekoäly oikeasti muistaa</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-05/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-05/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Muistin rajat — kuinka paljon tekoäly oikeasti muistaa</h1>
+<h2>Johdanto</h2>
+<p>Kuvittele, että työskentelet opettajan kanssa koko viikon ajan pitkän projektin parissa. Maanantaina opettaja muistaa hyvin, mistä keskustelitte edellisellä viikolla. Tiistaina hän muistaa sen edelleen. Mutta entä kahden kuukauden kuluttua? Hän on jo unohtanut.</p>
+<p>Hänen muistinsa on rajallinen — ei siksi, että hän olisi laiska, vaan siksi, että ihmisen muisti pystyy säilyttämään vain tietyn määrän tietoa kerrallaan.</p>
+<p>Kielimallit toimivat samalla periaatteella. Ne eivät voi säilyttää koko keskustelua rajattomasti muistissa. Sen sijaan ne käyttävät niin sanottua konteksti-ikkunaa (context window), joka on rajallinen "muisti-ikkuna", jossa säilyy vain osa keskustelusta.</p>
+<p>Kun tämä ikkuna täyttyy, vanhimmat tiedot poistuvat ja uudet tulevat tilalle.</p>
+<p>Tämän oppitunnin aiheena on ymmärtää tämä raja ja oppia hallitsemaan kontekstia niin, että tekoäly saa aina tarvitsemansa tiedon.</p>
+<p>Tämän tunnin jälkeen sinulla on tuomaripöydälläsi todistusaineisto: tekoälyllä on samat muistin rajat kuin ihmisillä — ja joskus jopa pienempiä.</p>
+<h2>Mitä konteksti-ikkuna on?</h2>
+<p>Konteksti-ikkuna on tekoälymalleille asetettu raja, joka määrittää, kuinka paljon tekstiä malli voi käsitellä yhdessä keskustelussa. Raja määritellään tokeneina, jotka ovat pieniä tekstin palasia. Esimerkiksi GPT-4-mallin konteksti-ikkuna oli noin 128 000 tokenia; uudemmissa malleissa ikkunat ovat usein vielä suurempia, jopa miljoona tokenia. Vaikka ikkuna olisi suuri, se ei ole ääretön.</p>
+<p>Tokenit eivät ole sama asia kuin sanat. Englannin kielessä yksi tokeni on noin 4 merkkiä, joten 128 000 tokenia vastaa noin 512 000 merkkiä eli noin 85 000 sanaa. Se kuulostaa paljolta — ja onkin, pituudeltaan lähes painetun kirjan verran. Mutta laajassa projektissa, jossa on kymmeniä sivuja muistiinpanoja, pitkiä keskusteluja tai monta liitettä, se täyttyy nopeasti.</p>
+<p>Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja säilyttää vain uudemman osan. Tämä on kuin puhelimen tekstiviestiketju, joka näyttää vain viimeiset 100 viestiä — vanhemmat viestit liukuvat pois näkyvistä. Malli ei enää näe vanhaa kontekstia. Jos sanoit aiemmin "Kirjoitan tekstin selkeällä yleiskielellä", mutta keskustelu on nyt 15 000 tokenia edemmällä, malli saattaa unohtaa sen.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kuvittele, että neuvot ystävääsi ohjelmointiongelmassa tunnin ajan. Ystävä kysyy lopuksi: "Muistatko sen, mitä sanoin alussa?" Jos muistisi olisi silloin huono, mitä toivoisit hänen kertovan uudelleen?</p>
+</blockquote>
+</blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// ikkuna liukuu keskustelun yli — vain sisällä oleva on muistissa</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
+  <div class="l05-wrap">
+    <span class="l05-hdr">vanhin putoaa ←</span><span class="l05-hdr2">→ uusin saapuu</span>
+    <div class="l05-rail"><div class="l05-strip">
+      <span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span><span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span>
+    </div></div>
+    <div class="l05-cur l05-cl"></div><div class="l05-cur l05-cr"></div>
+    <div class="l05-win"><span class="l05-wl">KONTEKSTI-IKKUNA — mallin koko muisti</span></div>
+    <span class="l05-x">✕</span>
+    <span class="l05-warn">myös alun OHJE putoaa lopulta ulos — malli ei kerro unohtaneensa</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen: keskustelun kasvaessa se liukuu eteenpäin, ja vanhimmat viestit — myös alussa antamasi pysyväisohjeet — putoavat ulos. Ikkunan ulkopuolella olevaa malli ei muista lainkaan.</figcaption></figure>
+<style>
+.l05-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l05-hdr{position:absolute;left:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#F0A38C}
+.l05-hdr2{position:absolute;right:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8}
+.l05-rail{position:absolute;left:0;right:0;top:62px;height:64px;overflow:hidden}
+.l05-strip{position:absolute;top:11px;display:flex;gap:10px;width:max-content;animation:l05slide 30s linear infinite}
+@keyframes l05slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.l05-m{font-size:11.5px;white-space:nowrap;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:9px;padding:9px 11px}
+.l05-ohje{color:#06212A;background:#46c7cf;border-color:transparent;font-weight:600}
+.l05-cur{position:absolute;top:56px;height:76px;z-index:3;pointer-events:none}
+.l05-cl{left:0;width:148px;background:linear-gradient(90deg,#0c1120 55%,rgba(12,17,32,0))}
+.l05-cr{right:0;width:148px;background:linear-gradient(270deg,#0c1120 55%,rgba(12,17,32,0))}
+.l05-win{position:absolute;left:150px;width:260px;top:48px;height:92px;border:2.5px solid oklch(0.66 0.15 264);border-radius:13px;z-index:4;box-shadow:0 0 18px oklch(0.66 0.15 264/.25)}
+.l05-wl{position:absolute;left:50%;transform:translateX(-50%);top:-15px;font-size:10px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;color:#0B0F1A;background:oklch(0.78 0.12 264);border-radius:999px;padding:2px 9px}
+.l05-x{position:absolute;left:64px;top:84px;z-index:5;font-size:15px;font-weight:700;color:#F0A38C;animation:l05x 3.4s ease-out infinite}
+@keyframes l05x{0%{opacity:0;transform:translateY(0) scale(.8)}30%{opacity:1}100%{opacity:0;transform:translateY(-20px) scale(1.25) rotate(18deg)}}
+.l05-warn{position:absolute;left:0;right:0;top:170px;text-align:center;font-size:11.5px;line-height:1.4;color:#F0A38C;animation:l05warn 4s ease-in-out infinite}
+@keyframes l05warn{0%,100%{opacity:.6}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+.l05-strip,.l05-x,.l05-warn{animation:none}
+.l05-strip{transform:translateX(-25%)}
+.l05-x{opacity:1}}
+</style>
+
+<h2>Miten tieto putoaa ulos ikkunasta</h2>
+<p>Konteksti-ikkunan täyttyminen noudattaa FIFO-periaatetta (First In, First Out) — ensimmäinen sisään, ensimmäinen ulos. Jos aloitat keskustelun antamalla paljon kontekstia ja sitten kysyt 20 kertaa peräkkäin, kunnes keskustelussa on 120 000 tokenia, alkuperäinen kontekstisi on jo kadonnut. Mallilla on käytössään vain viimeiset muutamat kysymys–vastaus-parit ja hieman muuta kontekstia.</p>
+<p>Tämä voi johtaa häiritseviin tilanteisiin. Olet saattanut sanoa alussa: "Vastaa aina suomeksi, älä englanniksi", mutta 50 viestin jälkeen malli alkaa vastata englanniksi, koska se on unohtanut rajauksesi. Tai olet antanut tarkan tyyliesimerkin keskustelun alussa, mutta myöhemmin malli kirjoittaa eri tyylillä, koska se ei enää näe esimerkkiä.</p>
+<p>Tiedon putoaminen voi myös muuttaa keskustelun sävyä. Jos olet aluksi "opiskelija, joka oppii", mutta 30 viestin jälkeen tämä rooli unohtuu, malli saattaa alkaa pitää sinua asiantuntijana ja antaa hyvin teknisiä vastauksia ilman selityksiä.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele pitkää projektin debuggaamista. Mitä tärkeää tietoa malli voisi unohtaa niin, että se alkaisi antaa vääriä neuvoja?</p>
+</blockquote>
+</blockquote>
+<h2>Kuinka kontekstia tiivistetään, pilkotaan ja rakennetaan uudelleen</h2>
+<p>Ammattilaisena sinun täytyy hallita konteksti-ikkunaa. Kuten olemme jo aiemmin oppineet, on kolme päästrategiaa: tiivistys, pilkkominen ja ankkurointi. Nämä ovat perustyökaluja, joita tarvitset jokaisen projektin parissa työskennellessäsi.</p>
+<p>Käytännön työssä näitä strategioita käytetään yhdessä. Jos sinulla on suuri projekti, joka kestää useita päiviä, ankkuroi olennainen tieto joka päivä, pilko tehtävät pienemmiksi ja tiivistä edellisten päivien tulokset.</p>
+<p>Palaamme näihin strategioihin myöhemmin, kun opimme, kuinka agentit hallitsevat muistiaan.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele omaa projektia, joka kestää viikon tai pidempään. Miten jakaisit sen osiin, jotta konteksti-ikkuna ei koskaan täyttyisi?</p>
+</blockquote>
+</blockquote>
+<h2>Kun konteksti katoaa — mitä todella tapahtuu</h2>
+<p>Tähän asti olemme puhuneet konteksti-ikkunasta teoreettisesti. Nyt katsotaan, mitä tapahtuu käytännössä, kun tärkeä tieto putoaa ikkunasta — ja malli ei kerro sinulle siitä.</p>
+<p>Kuvittele seuraava tilanne. Aloitat keskustelun tekoälyn kanssa ja annat selkeän rajauksen: "Kirjoitamme yhdessä novellia. Päähenkilön nimi on Aino, tarina sijoittuu 1920-luvun Suomeen, ja tyyli on vakava. Älä lisää tarinaan nykyaikaisia laitteita."</p>
+<p>Ensimmäiset 10 vastausta ovat erinomaisia. Malli muistaa rajaukset, pitää tyylin vakavana ja kirjoittaa ajan kuvaukseen sopivasti.</p>
+<p>Mutta 25 viestin jälkeen kysyt: "Miten kohtaus jatkuu?" Malli kirjoittaa Ainon selailemaan puhelinta ja vaihtaa tyylin kepeäksi — koska se on unohtanut alkuperäisen rajauksesi. Se ei kerro, etteikö muista. Se ei sano "huomaa, etten enää muista alkuperäistä kontekstiasi". Se yksinkertaisesti vastaa parhaansa mukaan sillä tiedolla, joka sillä on jäljellä.</p>
+<p>Tämä on konteksti-ikkunan vaarallisin piirre: <strong>malli ei kerro, kun se unohtaa</strong>. Se ei anna virheilmoitusta. Se ei sano "konteksti on kadonnut". Se vain alkaa antaa vastauksia, jotka eivät enää noudata alkuperäisiä rajauksia.</p>
+<p>Käytännön työssä tämä voi johtaa vakaviin virheisiin. Esitelmän sävy lipsahtaa väärään suuntaan. Asiakkaalle lähetetty teksti rikkoo sovittua ohjeistusta. Käännös vaihtaa kieltä kesken kaiken. Ja koska vastaukset ovat yhtä sujuvia kuin aiemmin, saatat huomata virheen vasta liian myöhään.</p>
+<p>Oikea ammattilainen ei luota siihen, että malli muistaa. Hän tarkistaa, huomaa poikkeaman ja korjaa tilanteen — joko toistamalla ankkurin tai aloittamalla uuden keskustelun.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Oletko koskaan ollut tilanteessa, jossa tekoäly antoi sinulle vastauksen, joka tuntui oikealta mutta ei sopinut tilanteeseesi? Mistä tiesit, että jokin oli vialla?</p>
+</blockquote>
+</blockquote>
+<h2>Keskustelun hallinta käytännössä</h2>
+<p>Käytännössä konteksti-ikkunan hallinta alkaa siitä, että ymmärrät koko projektisi koon ja monimutkaisuuden. Pieni kysymys? Älä huolehdi ikkunasta — 1 000 tokenia ei ole ongelma. Suuri analyysi? Suunnittele etukäteen.</p>
+<p>Kun aloitat keskustelun tekoälyn kanssa, pidä mielessäsi seuraavat asiat:</p>
+<ul>
+<li><strong>Jokainen vastaus kuluttaa ikkunaa.</strong> Kun malli vastaa, se käyttää tokeneita. Pitkä vastaus = enemmän ikkunaa käytetty.</li>
+<li><strong>Historia kasvaa.</strong> Jokainen uusi kysymys lisää sisältöä ikkunaan. Jos kysyt 100 kertaa, historia on paljon suurempi kuin jos kysyt kerran.</li>
+<li><strong>Vanha tieto menetetään ensin.</strong> Jos aloitit kontekstilla "Kirjoita aina suomeksi, vakavalla sävyllä ja korkeintaan 200 sanaa kerrallaan", ja nyt olet 100 viestiä edemmällä, tämä tieto voi olla jo poissa ikkunasta.</li>
+</ul>
+<p>Ratkaisuksi:</p>
+<ul>
+<li>Jaa pitkä projekti useiksi lyhyiksi keskusteluiksi. Jokainen keskustelu on uusi, puhdas ikkuna.</li>
+<li>Dokumentoi tulokset. Kun aloitat uuden keskustelun, kopioi oleelliset tulokset kontekstiin.</li>
+<li>Käytä "muista aina" -tekniikkaa: muistuta mallia jokaisen viestin alussa tärkeistä asioista.</li>
+</ul>
+<p>Esimerkiksi:</p>
+<ul>
+<li><strong>Päivä 1:</strong> Teet tutkielmaa. Aloita kontekstilla: "Aiheena on lukion liikuntatottumukset, lähteitä on 8, kohderyhmänä toisen asteen opiskelijat. Käsittelen nyt lähteet 1–3."</li>
+<li><strong>Päivä 2:</strong> Aloitat uudelleen. Konteksti: "Edellispäivää jatkaen. Aiheena lukion liikuntatottumukset, lähteitä 8. Eilen lähteistä 1–3 nousi esiin: [yhteenveto]. Nyt käsittelen lähteet 4–6."</li>
+</ul>
+<p>Näin malli ei koskaan unohda olennaista, vaikka ikkuna olisi täyttynyt.</p>
+<h2>Konteksti-ikkuna ja pysyvä muisti — kaksi eri asiaa</h2>
+<p>Konteksti-ikkunan lisäksi monella tekoälytyökalulla, kuten ChatGPT:llä, on erillinen pysyvä muisti. Sinne voit tallentaa tietoja, jotka haluat mallin muistavan aina — myös uusissa keskusteluissa. Voit esimerkiksi pyytää: "Muista tämä: käytän Unity 6 -pelimoottoria", jolloin malli ei enää ehdota sinulle vanhentuneita versioita seuraavissakaan keskusteluissa. Ero on tärkeä: konteksti-ikkuna unohtaa keskustelun päättyessä, mutta pysyvä muisti säilyy keskustelusta toiseen. Pysyvä muisti on siis kuin muistilappu, jonka kiinnität jääkaapin oveen, kun taas konteksti-ikkuna on vain yhden keskustelun aikainen työpöytä, joka tyhjenee, kun suljet sen.</p>
+<h2>Yhteenveto</h2>
+<p>Konteksti-ikkuna on tekninen raja, joka määrittää, kuinka paljon tekstiä tekoäly voi käsitellä yhdessä keskustelussa. Vanha tieto putoaa ulos, kun ikkuna täyttyy. Ammattilaisena hallitset ikkunaa kolmella tavalla: tiivistämällä vanhoja tekstejä, pilkkomalla projektit pienempiin osiin ja ankkuroimalla olennaisen tiedon jokaiseen viestiin. Näillä menetelmillä voit johtaa pitkiä, monimutkaisia projekteja tekoälyn kanssa ilman, että mallin muisti pettää. Konteksti-ikkunan ymmärtäminen on avain siihen, että tekoälystä tulee luotettava työkaveri eikä epävakaa avustaja.</p>
+<p>Seuraavalla tunnilla laajennat näkökulmaasi: tekoäly voi käsitellä enemmän kuin pelkkää tekstiä — kuvia, ääntä, videota.</p>
+<hr /></div><div class="panel" data-tab="tehtavat"><h1>Todistusaineisto 2 — Kun tekoäly unohtaa</h1>
+<blockquote class="pause"><p>📌 <strong>Tämä on toinen kolmesta todistusaineistosta</strong>, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä <em>"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"</em> (oppitunti 9). Säilytä tämä huolellisesti.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
+<p>Pakotat tekoälyn unohtamaan antamasi ohjeen — ja dokumentoit, miten ja milloin se tapahtuu. Käytät sitten tekoälyä apunasi tapausesimerkin jäsentämiseen ja kirjoitat lyhyen analyysin siitä, <strong>mitä konteksti-ikkunan rajat tarkoittavat käytännön työssä</strong>. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut selittämään, miksi tekoäly toimi alkuun oikein mutta lipsui myöhemmin.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaiheet</h2></div><div class="task-card-body">
+<h3>Vaihe 1 — Anna selkeä rajaus</h3>
+<p>Aloita uusi keskustelu ja anna ehdoton rajaus. Esimerkki:</p>
+<pre><code>Olet matkaopas. Suosittele ainoastaan kohteita Suomessa, ja vain
+sellaisia, joihin pääsee junalla. Älä KOSKAAN ehdota lentämistä,
+ulkomaita tai automatkoja. Vastaa lyhyesti.
+</code></pre>
+<h3>Vaihe 2 — Aja konteksti täyteen</h3>
+<p>Kysy mallilta <strong>15–20 kysymystä</strong> eri aiheista:</p>
+<ul>
+<li>nähtävyydet ja museot</li>
+<li>ruokapaikat</li>
+<li>majoitusvinkit</li>
+<li>sää ja vuodenajat</li>
+<li>aktiviteetit perheille</li>
+<li>budjettivinkit</li>
+</ul>
+<p>Älä toista alkurajausta. Tarkoituksesi on täyttää konteksti-ikkunaa muulla sisällöllä.</p>
+<h3>Vaihe 3 — Testaa muistia</h3>
+<p>Kysy lopuksi:</p>
+<blockquote class="pause"><p>"Minne kannattaisi matkustaa ensi viikonloppuna?"</p>
+</blockquote>
+<p>Älä mainitse Suomea, junaa tai alkuperäisiä rajauksia. Dokumentoi vastaus tarkasti — pysyikö malli Suomessa? Ehdottiko se junayhteyttä?</p>
+<h3>Vaihe 4 — Korjaa tilanne</h3>
+<p>Jos malli unohti rajaukset, toista ne ja kysy sama kysymys uudelleen. Dokumentoi, paraniko vastaus.</p>
+<h3>Vaihe 5 — Käytä tekoälyä apuna tapausesimerkin jäsentämisessä</h3>
+<p>Avaa uusi keskustelu ja anna tekoälylle <strong>roolin sekä havaintosi</strong>. Esimerkkiprompti:</p>
+<pre><code>Toimit minulle sparrauskumppanina. Tein kokeilun, jossa pakotin
+kielimallin unohtamaan antamani rajauksen täyttämällä konteksti-ikkunan.
+
+Tässä mitä tapahtui:
+[liitä vaiheiden 1–4 dokumentaatio tähän]
+
+Auta minua jäsentämään tämä työtilanne-esimerkiksi. Mihin tilanteeseen
+tämä sopisi (esim. asiakaspalvelu, pitkä kirjoitusprojekti, käännöstyö,
+matkasuunnitelma)? Mitä käytännön seurauksia tällaisesta 'unohtamisesta'
+voisi olla? Älä
+kirjoita esimerkkiä puolestani — esitä kysymyksiä ja anna
+jäsennysvaihtoehtoja.
+</code></pre>
+<p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>työparina</em>, ei kirjoituspalveluna.</p>
+<h3>Vaihe 6 — Kirjoita tapausesimerkki (tämä on todistusaineistosi)</h3>
+<p>Kirjoita noin <strong>300 sanaa omin sanoin</strong>. Tapausesimerkissä on neljä osaa:</p>
+<ol>
+<li><strong>Tilanne:</strong> Kuvaile kokeilusi tai keksi vastaava tilanne — esim. asiakaspalvelu, pitkä kirjoitusprojekti, käännöstyö tai matkasuunnitelma.</li>
+<li><strong>Mitä unohtui ja miksi:</strong> Käytä käsitteitä <em>konteksti-ikkuna</em> ja <em>FIFO-periaate</em> (vanhin tieto putoaa ensin). Mitä konkreettisesti hävisi muistista?</li>
+<li><strong>Seuraukset:</strong> Mitä virheellinen vastaus voisi käytännössä aiheuttaa? Aikaa hukkaan? Turvallisuusriskin? Väärää tietoa asiakkaalle?</li>
+<li><strong>Miten ammattilainen estää tämän:</strong> Ankkurointi, pilkkominen, dokumentointi — nimeä konkreettiset käytännöt.</li>
+</ol>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä palautat?</h2></div><div class="task-card-body">
+<p><strong>Et vieläkään mitään.</strong></p>
+<p>Tee kuitenkin tiedosto, jossa on:</p>
+<ul>
+<li>Alkurajauksesi (vaihe 1)</li>
+<li>Mallin vastaus rajauksen "unohtamisen" jälkeen (vaihe 3) ja vastaus rajauksen toiston jälkeen (vaihe 4) — kuvakaappauksina tai kopioina</li>
+<li>Tapausesimerkkisi (vaihe 6, noin 300 sanaa)</li>
+</ul>
+<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Tuomaripöydässä viittaat tähän todistusaineistoon, kun joudut selittämään, <em>miksi</em> tekoäly toimi alussa "oikein" mutta antoi myöhemmin vaarallisen neuvon. Tämä on yksi tekoälyn tyypillisimmistä riskeistä työkäytössä.</p>
+</blockquote>
+<p><strong>2 / 3 todistusaineistoa kerätty</strong></p></div></div></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Muistin rajat</h1>
+<p>Tällä välilehdellä harjoittelet, miten tekoälyn rajallinen muisti — konteksti-ikkuna — käyttäytyy pitkissä keskusteluissa ja miten pidät olennaisen tallessa. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan muu näe tai arvioi vastauksiasi. Väärä vastaus ei haittaa — jokainen selitys kertoo, miksi vaihtoehto toimii tai ei toimi, joten opit myös kokeilemalla. Tehtävät etenevät käsitteiden kertaamisesta kohti tilannetta, jossa arvioit itse, miten estät mallia unohtamasta tärkeät ohjeet kesken työn.</p>
+<h2>Tehtävä 1/4 — muistin käsitteet paikoilleen</h2>
+<p>Aloitetaan tunnin käsitteistä. Valitse ensin käsite vasemmalta ja sitten sitä kuvaava selitys oikealta.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — pitkän projektin hallinta</h2>
+<p>Kokoa pitkän projektin hallinta järkeväksi työnkuluksi. Napauta vaiheet siihen järjestykseen, jossa pidät konteksti-ikkunan hallinnassa alusta loppuun.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — mikä strategia sopii parhaiten</h2>
+<p>Nyt sovellat kolmea muistinhallinnan strategiaa oikeisiin tilanteisiin. Valitse kuhunkin se, joka sopii parhaiten.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — kun malli unohtaa kesken vuoron</h2>
+<p>Viimeinen tehtävä vie sinut keskelle pitkää työvuoroa, jossa malli alkaa unohtaa. Päätä itse, miten pidät työn hallinnassa — myös liian varovainen valinta saa oman palautteensa.</p>
+<div class="task-widget" data-ti="3"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto</h1>
+<h2>Konteksti-ikkuna (context window)</h2>
+<p>Tokeneina määritelty raja, joka rajoittaa sitä, kuinka paljon tekstiä tekoälymallit voivat käsitellä yhdessä keskustelussa. Kun raja täyttyy, vanhin tieto häviää. Esim. GPT-4-mallin ikkuna oli 128 000 tokenia; uudemmissa malleissa ikkuna voi olla paljon suurempi.</p>
+<h2>Token</h2>
+<p>Pienin tekstin yksikkö, jonka tekoäly käsittelee. Ei täsmälleen sana — noin 4 merkkiä = 1 tokeni. Tarkka suhde riippuu kielestä ja mallista.</p>
+<h2>Tiivistys (summarization)</h2>
+<p>Tekniikka, jossa pitkä teksti (esim. lokitiedosto tai keskustelu) pakataan pienemmäksi oleellisen säilyttäen. Auttaa konteksti-ikkunan hallinnassa vapauttamalla tilaa.</p>
+<h2>Pilkkominen (chunking)</h2>
+<p>Strategia, jossa suuri tehtävä jaetaan moneen pienempään osaan. Jokainen osa käsitellään omassa keskustelussaan, omassa puhtaassa ikkunassaan.</p>
+<h2>Ankkurointi (anchoring)</h2>
+<p>Tekniikka, jossa tärkeä konteksti (rooli, rajaukset, projektikohtaiset oletukset) toistetaan joka viestissä ja varmistetaan, ettei se unohdu, vaikka ikkuna täyttyisi.</p>
+<h2>FIFO (First In, First Out)</h2>
+<p>Periaate, jolla konteksti-ikkuna toimii: ensimmäinen teksti sisään on ensimmäinen ulos. Vanhempi tieto poistetaan ensin.</p>
+<h2>Keskustelun hallinta (conversation management)</h2>
+<p>Strategiat, joilla hallitaan pitkiä tekoälykeskusteluja niin, että oleellinen tieto säilyy. Sisältää tiivistystä, pilkkomista ja ankkurointia.</p>
+<h2>Muistin rajoitus (memory limitation)</h2>
+<p>Tekninen rajoitus, joka estää tekoälyä muistamasta rajattomasti kaikkea. Johtaa konteksti-ikkunan tarpeellisuuteen.</p>
+<h2>Projektikonteksti (project context)</h2>
+<p>Tiedot, jotka ovat tärkeitä tietyn projektin kaikissa keskusteluissa — esimerkiksi aihe, tavoite, tyyli ja keskeiset rajaukset. Ankkuroidaan toistuvasti.</p>
+<h2>Uuden ikkunan avaaminen (opening a new window)</h2>
+<p>Käytäntö, jossa aloitetaan uusi keskustelu tekoälyn kanssa "puhtaalla" konteksti-ikkunalla sen sijaan, että jatkettaisiin vanhaa, täyttynyttä ikkunaa.</p>
+<h2>Dokumentin versiohallinta (version tracking)</h2>
+<p>Käytäntö, jossa dokumentoidaan tekoälyn kanssa tehdyt tulokset päiväkohtaisesti tai vaiheittain, jotta tiedot eivät häviä uusiin ikkunoihin.</p>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 5</text>
+<text x="74" y="246" font-size="52" font-weight="800" fill="#1B2336">Muistin rajat</text>
+<text x="74" y="304" font-size="25" fill="#5A6478">Kuinka paljon tekoäly oikeasti muistaa?</text>
+<g transform="translate(648,196)">
+<rect x="0" y="0" width="240" height="128" rx="18" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/>
+<rect x="18" y="22" width="204" height="84" rx="11" fill="none" stroke="#3B5BDB" stroke-width="2.5"/>
+<rect x="0" y="22" width="14" height="84" fill="#FFFFFF"/><rect x="226" y="22" width="14" height="84" fill="#FFFFFF"/>
+<rect x="-4" y="34" width="22" height="9" rx="4.5" fill="#C2CAD9"/><rect x="-2" y="56" width="20" height="9" rx="4.5" fill="#C2CAD9"/>
+<rect x="46" y="38" width="150" height="9" rx="4.5" fill="#3B5BDB"/><rect x="46" y="58" width="120" height="9" rx="4.5" fill="#3B5BDB"/><rect x="46" y="78" width="138" height="9" rx="4.5" fill="#3B5BDB"/>
+<text x="120" y="124" text-anchor="middle" font-size="13" letter-spacing="1" fill="#7E88A8" font-family="ui-monospace,monospace">KONTEKSTI-IKKUNA</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Sama rajoitus kuin ihmisellä</text>
+<rect x="74" y="148" width="812" height="76" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="184" font-size="21" fill="#2F46B0">Tekoäly ei säilytä koko keskustelua loputtomasti muistissaan.</text>
+<text x="100" y="212" font-size="21" fill="#2F46B0">Sillä on rajallinen muisti — aivan kuten meilläkin.</text>
+<g transform="translate(74,266)">
+<rect x="0" y="0" width="390" height="200" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="44" cy="48" r="20" fill="#F4F5F8"/><g transform="translate(32,34)" fill="none" stroke="#5A6478" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M2 28 a12 11 0 0 1 20 0"/></g>
+<text x="80" y="44" font-size="22" font-weight="700" fill="#1B2336">Opettaja</text>
+<text x="80" y="70" font-size="16" fill="#5A6478">muistaa viikon takaiset asiat</text>
+<text x="28" y="120" font-size="17" fill="#3A4253">Maanantai: muistaa hyvin.</text>
+<text x="28" y="148" font-size="17" fill="#3A4253">Tiistai: muistaa yhä.</text>
+<text x="28" y="176" font-size="17" fill="#A35A22">Kahden kuukauden päästä: unohtanut.</text></g>
+<g transform="translate(496,266)">
+<rect x="0" y="0" width="390" height="200" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<circle cx="44" cy="48" r="20" fill="#FFFFFF"/><g transform="translate(31,35)"><rect x="0" y="2" width="26" height="22" rx="5" fill="none" stroke="#3B5BDB" stroke-width="2.2"/><line x1="13" y1="2" x2="13" y2="-4" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round"/><circle cx="13" cy="-7" r="3" fill="#3B5BDB"/><circle cx="9" cy="12" r="2.6" fill="#3B5BDB"/><circle cx="17" cy="12" r="2.6" fill="#3B5BDB"/></g>
+<text x="80" y="44" font-size="22" font-weight="700" fill="#2F46B0">Kielimalli</text>
+<text x="80" y="70" font-size="16" fill="#5A6478">muistaa vain ikkunan verran</text>
+<text x="28" y="120" font-size="17" fill="#1B2336">Alku: muistaa rajaukset.</text>
+<text x="28" y="148" font-size="17" fill="#1B2336">Keskellä: yhä mukana.</text>
+<text x="28" y="176" font-size="17" fill="#A35A22">Ikkuna täyttyy: vanhin putoaa pois.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mikä konteksti-ikkuna on?</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Raja sille, kuinka paljon tekstiä malli käsittelee yhdessä keskustelussa.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="390" height="138" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(26,28)" fill="none" stroke="#0E9AA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="30" height="22" rx="4"/><path d="M8 10 h14 M8 15 h9"/></g>
+<text x="80" y="50" font-size="22" font-weight="800" fill="#1B2336">Tokenit</text>
+<text x="26" y="86" font-size="16" fill="#3A4253">Raja mitataan tokeneina —</text>
+<text x="26" y="110" font-size="16" fill="#3A4253">pieninä tekstin palasina.</text></g>
+<g transform="translate(496,170)">
+<rect x="0" y="0" width="390" height="138" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(26,26)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3 H26 V25 L15 19 L4 25 Z"/></g>
+<text x="80" y="50" font-size="22" font-weight="800" fill="#1B2336">Suuri, ei ääretön</text>
+<text x="26" y="86" font-size="16" fill="#3A4253">Tokeni ei ole sama kuin sana.</text>
+<text x="26" y="110" font-size="16" fill="#3A4253">Suurissakin malleissa on raja.</text></g>
+<rect x="74" y="332" width="812" height="138" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="372" font-size="20" font-weight="700" fill="#2F46B0">Mittakaava</text>
+<text x="100" y="408" font-size="18" fill="#1B2336">128 000 tokenia ≈ 85 000 sanaa ≈ painetun kirjan verran.</text>
+<text x="100" y="440" font-size="18" fill="#1B2336">Uusimmissa malleissa jopa miljoona tokenia — silti raja, ei rajattomuus.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ikkuna liukuu keskustelun yli</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Kuin tekstiviestiketju, joka näyttää vain viimeiset viestit.</text>
+<text x="120" y="196" font-size="15" fill="#A35A22" font-family="ui-monospace,monospace">vanhin putoaa ←</text>
+<text x="840" y="196" text-anchor="end" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">→ uusin saapuu</text>
+<g font-size="14" font-family="ui-monospace,monospace">
+<rect x="74" y="216" width="118" height="58" rx="10" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.5" opacity="0.55"/><text x="133" y="250" text-anchor="middle" fill="#9AA6BD">OHJE: suomeksi</text>
+<rect x="200" y="216" width="118" height="58" rx="10" fill="#F4F5F8" stroke="#C2CAD9" stroke-width="1.5" opacity="0.7"/><text x="259" y="250" text-anchor="middle" fill="#9AA6BD">kampanja</text>
+</g>
+<rect x="320" y="200" width="416" height="92" rx="14" fill="none" stroke="#3B5BDB" stroke-width="3"/>
+<text x="528" y="190" text-anchor="middle" font-size="13" letter-spacing="2" fill="#FFFFFF" font-family="ui-monospace,monospace"></text>
+<rect x="448" y="178" width="160" height="24" rx="12" fill="#3B5BDB"/><text x="528" y="195" text-anchor="middle" font-size="12" letter-spacing="1" fill="#FFFFFF" font-family="ui-monospace,monospace">KONTEKSTI-IKKUNA</text>
+<g font-size="14" font-family="ui-monospace,monospace">
+<rect x="338" y="216" width="118" height="58" rx="10" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/><text x="397" y="250" text-anchor="middle" fill="#2F46B0">aikataulu?</text>
+<rect x="464" y="216" width="118" height="58" rx="10" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/><text x="523" y="250" text-anchor="middle" fill="#2F46B0">budjetti?</text>
+<rect x="590" y="216" width="130" height="58" rx="10" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/><text x="655" y="250" text-anchor="middle" fill="#2F46B0">yhteenveto</text>
+<rect x="744" y="216" width="118" height="58" rx="10" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/><text x="803" y="250" text-anchor="middle" fill="#247A52">uusi kysymys</text>
+</g>
+<rect x="74" y="332" width="812" height="138" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(102,360)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round"><circle cx="15" cy="15" r="15"/><path d="M9 9 l12 12 M21 9 l-12 12"/></g>
+<text x="150" y="376" font-size="20" font-weight="700" fill="#A35A22">Myös alun ohje putoaa lopulta ulos</text>
+<text x="150" y="408" font-size="18" fill="#3A4253">Ikkuna on kiinteän kokoinen: kun keskustelu kasvaa, vanhimmat viestit</text>
+<text x="150" y="436" font-size="18" fill="#3A4253">liukuvat pois — eikä malli kerro unohtaneensa niitä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ensimmäinen sisään, ensimmäinen ulos</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">FIFO-periaate: vanha tieto poistuu ikkunasta ennen uutta.</text>
+<g transform="translate(74,172)">
+<rect x="0" y="0" width="812" height="120" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="30" y="44" font-size="19" fill="#3A4253">Annat alussa paljon kontekstia ja kysyt sitten 20 kertaa peräkkäin.</text>
+<text x="30" y="80" font-size="19" font-weight="700" fill="#1B2336">120 000 tokenin kohdalla alkuperäinen konteksti on jo kadonnut.</text>
+<text x="30" y="106" font-size="17" fill="#5A6478">Mallilla on jäljellä vain viimeiset kysymys–vastaus-parit.</text></g>
+<text x="74" y="338" font-size="20" font-weight="700" fill="#1B2336">Mitä tämä aiheuttaa</text>
+<g transform="translate(74,356)">
+<rect x="0" y="0" width="262" height="100" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="22" y="40" font-size="17" font-weight="700" fill="#A35A22">Kieli vaihtuu</text>
+<text x="22" y="70" font-size="15" fill="#3A4253">"Vastaa suomeksi" unohtuu</text>
+<text x="22" y="90" font-size="15" fill="#3A4253">— malli vastaa englanniksi.</text></g>
+<g transform="translate(349,356)">
+<rect x="0" y="0" width="262" height="100" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="22" y="40" font-size="17" font-weight="700" fill="#A35A22">Tyyli muuttuu</text>
+<text x="22" y="70" font-size="15" fill="#3A4253">Annettu tyyliesimerkki</text>
+<text x="22" y="90" font-size="15" fill="#3A4253">katoaa näkyvistä.</text></g>
+<g transform="translate(624,356)">
+<rect x="0" y="0" width="262" height="100" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="22" y="40" font-size="17" font-weight="700" fill="#A35A22">Rooli unohtuu</text>
+<text x="22" y="70" font-size="15" fill="#3A4253">"Olen opiskelija" katoaa</text>
+<text x="22" y="90" font-size="15" fill="#3A4253">— vastaukset teknistyvät.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Malli ei kerro, kun se unohtaa</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Esimerkki: yhdessä kirjoitettu novelli.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="390" height="142" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="24" y="40" font-size="18" font-weight="700" fill="#247A52">Alussa: rajaus annettu</text>
+<text x="24" y="76" font-size="16" fill="#3A4253">Päähenkilö Aino, 1920-luku,</text>
+<text x="24" y="100" font-size="16" fill="#3A4253">vakava tyyli, ei nykylaitteita.</text>
+<text x="24" y="128" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">10 vastausta: täydellistä</text></g>
+<g transform="translate(496,168)">
+<rect x="0" y="0" width="390" height="142" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="24" y="40" font-size="18" font-weight="700" fill="#A35A22">25 viestin jälkeen</text>
+<text x="24" y="76" font-size="16" fill="#3A4253">Aino selailee puhelinta,</text>
+<text x="24" y="100" font-size="16" fill="#3A4253">tyyli kääntyy kepeäksi.</text>
+<text x="24" y="128" font-size="15" fill="#A35A22" font-family="ui-monospace,monospace">rajaus pudonnut ikkunasta</text></g>
+<rect x="74" y="336" width="812" height="134" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="378" font-size="22" font-weight="800" fill="#2F46B0">Vaarallisin piirre: hiljainen unohtaminen</text>
+<text x="100" y="412" font-size="18" fill="#1B2336">Ei virheilmoitusta eikä varoitusta. Malli vastaa sillä, mitä on jäljellä —</text>
+<text x="100" y="440" font-size="18" fill="#1B2336">ja voit huomata poikkeaman vasta liian myöhään.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme tapaa hallita ikkunaa</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Käytännön työssä näitä käytetään yhdessä.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6 H34 M6 16 H30 M10 26 H26"/></g>
+<text x="24" y="84" font-size="24" font-weight="800" fill="#247A52">Tiivistä</text>
+<text x="24" y="124" font-size="16" fill="#3A4253">Kokoa pitkät tekstit</text>
+<text x="24" y="148" font-size="16" fill="#3A4253">lyhyiksi yhteenvedoiksi.</text>
+<text x="24" y="200" font-size="15" fill="#5A6478">Säilytät olennaisen</text>
+<text x="24" y="224" font-size="15" fill="#5A6478">pienemmässä tilassa.</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">esim. 8 → 1 kooste</text></g>
+<g transform="translate(354,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#0E9AA7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="2" width="14" height="14" rx="3"/><rect x="20" y="2" width="14" height="14" rx="3"/><rect x="0" y="22" width="14" height="14" rx="3"/><rect x="20" y="22" width="14" height="14" rx="3"/></g>
+<text x="24" y="84" font-size="24" font-weight="800" fill="#0B7A85">Pilko</text>
+<text x="24" y="124" font-size="16" fill="#3A4253">Jaa iso projekti</text>
+<text x="24" y="148" font-size="16" fill="#3A4253">pienempiin osiin.</text>
+<text x="24" y="200" font-size="15" fill="#5A6478">Jokainen keskustelu</text>
+<text x="24" y="224" font-size="15" fill="#5A6478">on uusi, puhdas ikkuna.</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">tehtävät pienemmiksi</text></g>
+<g transform="translate(634,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2 V30 M17 30 a8 6 0 0 0 8 5 M17 30 a8 6 0 0 1 -8 5"/><circle cx="17" cy="4" r="4" fill="#3B5BDB"/></g>
+<text x="24" y="84" font-size="24" font-weight="800" fill="#2F46B0">Ankkuroi</text>
+<text x="24" y="124" font-size="16" fill="#1B2336">Toista olennainen tieto</text>
+<text x="24" y="148" font-size="16" fill="#1B2336">jokaiseen viestiin.</text>
+<text x="24" y="200" font-size="15" fill="#5A6478">"Muista aina" pitää</text>
+<text x="24" y="224" font-size="15" fill="#5A6478">rajaukset näkyvissä.</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">esim. "vastaa suomeksi"</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g8)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Keskustelun hallinta käytännössä</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Aloita arvioimalla projektin koko ja monimutkaisuus.</text>
+<g transform="translate(74,166)">
+<rect x="0" y="0" width="390" height="86" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="44" cy="43" r="18" fill="#EAF7F0"/><path d="M37 43 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="78" y="40" font-size="19" font-weight="700" fill="#247A52">Pieni kysymys</text>
+<text x="78" y="66" font-size="16" fill="#3A4253">1 000 tokenia — ikkunasta ei huolta.</text></g>
+<g transform="translate(496,166)">
+<rect x="0" y="0" width="390" height="86" rx="14" fill="#FFF7E2" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="44" cy="43" r="18" fill="#FFF6F0"/><path d="M44 32 V47 M44 53 v0.5" stroke="#C79100" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="78" y="40" font-size="19" font-weight="700" fill="#9A7400">Suuri analyysi</text>
+<text x="78" y="66" font-size="15" fill="#3A4253">Suunnittele etukäteen.</text></g>
+<text x="74" y="296" font-size="20" font-weight="700" fill="#1B2336">Kolme asiaa pidettävä mielessä</text>
+<g transform="translate(74,314)">
+<rect x="0" y="0" width="262" height="152" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="22" y="44" font-size="18" font-weight="700" fill="#1B2336">Vastaus kuluttaa</text>
+<text x="22" y="86" font-size="15.5" fill="#3A4253">Jokainen vastaus käyttää</text>
+<text x="22" y="108" font-size="15.5" fill="#3A4253">tokeneita. Pitkä vastaus</text>
+<text x="22" y="130" font-size="15.5" fill="#3A4253">= enemmän ikkunaa.</text></g>
+<g transform="translate(349,314)">
+<rect x="0" y="0" width="262" height="152" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="22" y="44" font-size="18" font-weight="700" fill="#1B2336">Historia kasvaa</text>
+<text x="22" y="86" font-size="15.5" fill="#3A4253">Jokainen kysymys lisää</text>
+<text x="22" y="108" font-size="15.5" fill="#3A4253">sisältöä. 100 kysymystä</text>
+<text x="22" y="130" font-size="15.5" fill="#3A4253">= iso historia.</text></g>
+<g transform="translate(624,314)">
+<rect x="0" y="0" width="262" height="152" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="22" y="44" font-size="18" font-weight="700" fill="#1B2336">Vanha menee ensin</text>
+<text x="22" y="86" font-size="15.5" fill="#3A4253">Alussa annettu rajaus</text>
+<text x="22" y="108" font-size="15.5" fill="#3A4253">voi olla jo poissa</text>
+<text x="22" y="130" font-size="15.5" fill="#3A4253">100 viestin jälkeen.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g9)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme ratkaisua pitkään projektiin</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Näin pidät olennaisen tiedon aina mallin saatavilla.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#EEF1FE"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#3B5BDB">1</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Jaa pitkä projekti useiksi keskusteluiksi</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Jokainen uusi keskustelu on puhdas ikkuna ilman vanhaa kuormaa.</text></g>
+<g transform="translate(74,270)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#EEF1FE"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#3B5BDB">2</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Dokumentoi tulokset</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Kun aloitat uuden keskustelun, kopioi oleelliset tulokset kontekstiin.</text></g>
+<g transform="translate(74,376)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#EEF1FE"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#3B5BDB">3</text>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Käytä "muista aina" -tekniikkaa</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Aloita viesti rajauksella, esim. "korkeintaan 200 sanaa, vakava sävy".</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g10)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI · USEAN PÄIVÄN TUTKIELMA</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Ankkurointi päivästä toiseen</text>
+<g transform="translate(74,158)">
+<rect x="0" y="0" width="390" height="288" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<rect x="24" y="26" width="92" height="30" rx="15" fill="#EEF1FE"/><text x="70" y="46" text-anchor="middle" font-size="15" font-weight="700" fill="#2F46B0">PÄIVÄ 1</text>
+<text x="24" y="92" font-size="17" fill="#3A4253">Aloita kontekstilla:</text>
+<rect x="24" y="108" width="342" height="156" rx="12" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="40" y="140" font-size="15.5" fill="#1B2336">Aihe: lukion liikuntatottumukset.</text>
+<text x="40" y="166" font-size="15.5" fill="#1B2336">Lähteitä 8, kohderyhmä toisen</text>
+<text x="40" y="192" font-size="15.5" fill="#1B2336">asteen opiskelijat.</text>
+<text x="40" y="232" font-size="15.5" font-weight="700" fill="#247A52">Käsittelen nyt lähteet 1–3.</text></g>
+<g transform="translate(496,158)">
+<rect x="0" y="0" width="390" height="288" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<rect x="24" y="26" width="92" height="30" rx="15" fill="#FFFFFF"/><text x="70" y="46" text-anchor="middle" font-size="15" font-weight="700" fill="#2F46B0">PÄIVÄ 2</text>
+<text x="24" y="92" font-size="17" fill="#1B2336">Aloita uudelleen, ankkuroi:</text>
+<rect x="24" y="108" width="342" height="156" rx="12" fill="#FFFFFF" stroke="#C2CAD9" stroke-width="1.5"/>
+<text x="40" y="138" font-size="15.5" fill="#1B2336">Edellispäivää jatkaen. Sama aihe,</text>
+<text x="40" y="162" font-size="15.5" fill="#1B2336">8 lähdettä.</text>
+<text x="40" y="190" font-size="15.5" fill="#1B2336">Lähteistä 1–3 nousi: [yhteenveto].</text>
+<text x="40" y="232" font-size="15.5" font-weight="700" fill="#247A52">Nyt käsittelen lähteet 4–6.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kaksi eri asiaa</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Konteksti-ikkuna ja pysyvä muisti eivät ole sama asia.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="390" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,28)"><rect x="0" y="2" width="34" height="28" rx="6" fill="none" stroke="#5A6478" stroke-width="2.4"/><path d="M8 12 h18 M8 20 h12" stroke="#5A6478" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="80" y="50" font-size="24" font-weight="800" fill="#1B2336">Konteksti-ikkuna</text>
+<text x="28" y="106" font-size="17" fill="#3A4253">Yhden keskustelun aikainen</text>
+<text x="28" y="130" font-size="17" fill="#3A4253">työpöytä.</text>
+<text x="28" y="180" font-size="17" fill="#A35A22">Tyhjenee, kun suljet keskustelun.</text>
+<text x="28" y="244" font-size="16" fill="#5A6478" font-style="italic">Kuin työpöytä, joka tyhjenee</text>
+<text x="28" y="268" font-size="16" fill="#5A6478" font-style="italic">työpäivän päätteeksi.</text></g>
+<g transform="translate(496,170)">
+<rect x="0" y="0" width="390" height="300" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(28,26)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 H30 V32 H4 Z"/><path d="M4 4 L17 16 L30 4"/></g>
+<text x="80" y="50" font-size="24" font-weight="800" fill="#2F46B0">Pysyvä muisti</text>
+<text x="28" y="106" font-size="17" fill="#1B2336">Tallennat tiedot, jotka malli</text>
+<text x="28" y="130" font-size="17" fill="#1B2336">muistaa myös uusissa keskusteluissa.</text>
+<text x="28" y="180" font-size="17" fill="#247A52">Säilyy keskustelusta toiseen.</text>
+<text x="28" y="244" font-size="16" fill="#5A6478" font-style="italic">Kuin muistilappu, jonka kiinnität</text>
+<text x="28" y="268" font-size="15" fill="#5A6478" font-style="italic">jääkaapin oveen. Esim. "Unity 6 käytössä".</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ammattilaisen tapa toimia</text>
+<text x="74" y="134" font-size="18" fill="#5A6478">Oikea ammattilainen ei luota siihen, että malli muistaa.</text>
+<rect x="74" y="166" width="812" height="80" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(102,192)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round"><circle cx="14" cy="14" r="14"/><path d="M14 8 v9 M14 21 v0.5"/></g>
+<text x="150" y="200" font-size="19" font-weight="700" fill="#A35A22">Sujuva vastaus ei takaa oikeaa vastausta</text>
+<text x="150" y="228" font-size="17" fill="#3A4253">Esitelmän sävy lipsahtaa, käännös vaihtaa kieltä — ja huomaat sen liian myöhään.</text>
+<g transform="translate(74,278)">
+<rect x="0" y="0" width="262" height="170" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="44" cy="48" r="20" fill="#EAF7F0"/><g transform="translate(33,38)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7"/><path d="M13 13 l7 7"/></g>
+<text x="24" y="100" font-size="20" font-weight="700" fill="#247A52">Tarkista</text>
+<text x="24" y="134" font-size="16" fill="#3A4253">Lue vastaus kriittisesti</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">ja etsi poikkeamat.</text></g>
+<g transform="translate(349,278)">
+<rect x="0" y="0" width="262" height="170" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="44" cy="48" r="20" fill="#EAF7F0"/><g transform="translate(34,38)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6 H18 M2 13 H14"/><circle cx="14" cy="13" r="1"/></g>
+<text x="24" y="100" font-size="20" font-weight="700" fill="#247A52">Toista ankkuri</text>
+<text x="24" y="134" font-size="16" fill="#3A4253">Muistuta mallia tärkeistä</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">rajauksista uudelleen.</text></g>
+<g transform="translate(624,278)">
+<rect x="0" y="0" width="262" height="170" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="44" cy="48" r="20" fill="#EAF7F0"/><g transform="translate(34,38)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 a8 8 0 1 0 8 8 H10 Z"/><path d="M10 2 V10 H18"/></g>
+<text x="24" y="100" font-size="20" font-weight="700" fill="#247A52">Aloita alusta</text>
+<text x="24" y="134" font-size="16" fill="#3A4253">Avaa tarvittaessa uusi,</text>
+<text x="24" y="156" font-size="16" fill="#3A4253">puhdas keskustelu.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l5g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l5g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="18" fill="#5A6478">Konteksti-ikkuna on tekninen raja — vanha tieto putoaa, kun ikkuna täyttyy.</text>
+<text x="74" y="184" font-size="20" font-weight="700" fill="#1B2336">Hallitse ikkunaa kolmella tavalla</text>
+<g transform="translate(74,200)">
+<rect x="0" y="0" width="264" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="34" cy="34" r="7" fill="#2F9E69"/><text x="52" y="40" font-size="18" font-weight="700" fill="#1B2336">Tiivistä</text><text x="20" y="72" font-size="15" fill="#5A6478">vanhat tekstit yhteenvedoiksi</text>
+<rect x="284" y="0" width="264" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="318" cy="34" r="7" fill="#0E9AA7"/><text x="336" y="40" font-size="18" font-weight="700" fill="#1B2336">Pilko</text><text x="304" y="72" font-size="15" fill="#5A6478">projektit pienempiin osiin</text>
+<rect x="568" y="0" width="264" height="92" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="602" cy="34" r="7" fill="#3B5BDB"/><text x="620" y="40" font-size="18" font-weight="700" fill="#1B2336">Ankkuroi</text><text x="588" y="72" font-size="15" fill="#5A6478">olennainen jokaiseen viestiin</text></g>
+<rect x="74" y="316" width="812" height="92" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="100" y="352" font-size="19" font-weight="700" fill="#2F46B0">Muista myös: pysyvä muisti säilyy keskustelusta toiseen</text>
+<text x="100" y="384" font-size="17" fill="#1B2336">Konteksti-ikkuna unohtaa keskustelun päättyessä — pysyvä muisti ei.</text>
+<rect x="74" y="420" width="812" height="62" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,436)"><circle cx="15" cy="15" r="15" fill="#EAF7F0"/><path d="M8 15 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="458" font-size="20" font-weight="800" fill="#247A52">Näin tekoälystä tulee luotettava työkaveri, ei epävakaa avustaja.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-04/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-06/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-05')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "luokka", "lid": "lesson-05", "num": 5, "title": "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", "ptasks": [{"type": "match", "title": "Muistin käsitteet paikoilleen", "intro": "Yhdistä jokainen käsite sitä kuvaavaan selitykseen. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Konteksti-ikkuna", "b": "Raja sille, kuinka paljon tekstiä malli pitää mielessään yhden keskustelun aikana.", "explain": "Se ei ole ääretön: kun raja tulee vastaan, vanhinta tietoa alkaa pudota pois."}, {"a": "Token", "b": "Pieni tekstin palanen, noin neljän merkin mittainen, jonka avulla mallin muistitilan täyttymistä mitataan.", "explain": "Se ei ole sama kuin sana — yksi sana voi koostua useasta tällaisesta palasesta."}, {"a": "FIFO", "b": "Periaate, jossa ensimmäisenä sisään tullut tieto poistuu ensimmäisenä, kun tila loppuu.", "explain": "Käytännössä tämä tarkoittaa, että keskustelun alussa antamasi ohjeet katoavat ensimmäisinä."}, {"a": "Tiivistys", "b": "Pitkän sisällön pakkaaminen lyhyeksi niin, että olennainen säilyy.", "explain": "Kun kutistat pitkän historian muutamaan pääkohtaan, vapautat tilaa mallin muistista."}, {"a": "Pilkkominen", "b": "Suuren tehtävän jakaminen pieniin osiin, jotka käsitellään erikseen.", "explain": "Kun kukin osa saa oman puhtaan keskustelunsa, muisti ei ehdi täyttyä kriittisesti."}, {"a": "Ankkurointi", "b": "Tärkeiden ohjeiden toistaminen joka viestissä, jottei niitä menetetä.", "explain": "Toistamalla säännön tuot sen aina takaisin muistiin, vaikka se olisi ehtinyt pudota pois."}, {"a": "Pysyvä muisti", "b": "Tallennettu tieto, joka säilyy keskustelusta toiseen, toisin kuin yhden istunnon katoava työpöytä.", "explain": "Tämä on eri asia kuin yhden keskustelun työtila: se on kuin jääkaapin oveen kiinnitetty lappu, joka pysyy paikallaan."}, {"a": "Dokumentointi", "b": "Tulosten kirjaaminen talteen, jotta työ voi jatkua, vaikka keskustelu vaihtuisi.", "explain": "Kun kirjaat tulokset itsellesi, sinulla on ulkoinen muisti, joka ei ole mallin rajallisen tilan varassa."}], "summary": "<strong>Konteksti-ikkuna on rajallinen työtila, joka täyttyy FIFO-periaatteella.<\/strong> Tiivistys, pilkkominen ja ankkurointi ovat keinoja pitää olennainen tallessa, kun ikkuna ei riitä kaikkeen."}, {"type": "order", "title": "Pitkän projektin hallinta vaihe vaiheelta", "intro": "Kirjoitat tekoälyn avulla tuotekuvaukset kymmenille verkkokaupan tuotteille — työ kestää useita päiviä. Napauta vaiheet siihen järjestykseen, jossa pidät konteksti-ikkunan hallinnassa alusta loppuun.", "steps": ["Arvioit projektin koon ja päätät, mahtuuko se yhteen ikkunaan vai ei.", "Pilkot työn pienempiin osiin, esimerkiksi yksi tuoteryhmä kerrallaan.", "Käsittelet yhden osan omassa, puhtaassa keskustelussaan.", "Tiivistät osan tuloksen muutamaan olennaiseen havaintoon.", "Ankkuroit tiivistelmän ja tärkeät rajaukset seuraavan osan alkuun.", "Dokumentoit valmiin osan talteen, ennen kuin avaat uuden ikkunan."], "missHint": "Ei vielä — mieti, mikä vaihe tuottaa tiedon, jota seuraava vaihe tarvitsee, ennen kuin se voi alkaa.", "summary": "Ammattilainen suunnittelee ensin, pilkkoo työn, käsittelee osan kerrallaan, tiivistää tuloksen ja ankkuroi sen seuraavaan osaan ennen dokumentointia — näin ikkuna ei koskaan täyty kriittisesti."}, {"type": "classify", "title": "Mikä strategia sopii parhaiten?", "intro": "Kolme strategiaa ratkaisevat eri ongelmia. Lue jokainen tilanne ja valitse se strategia, joka sopii siihen parhaiten. Käytännössä niitä yhdistellään, mutta tässä etsi kunkin tilanteen selvästi tärkein keino.", "categories": ["Tiivistys", "Pilkkominen", "Ankkurointi"], "items": [{"text": "Sinulla on 80-sivuinen tuotekäsikirja, josta malli tarvitsee vain tärkeimmät turvaohjeet.", "answer": 0, "explain": "Kun pakkaat pitkän käsikirjan muutamaan olennaiseen ohjeeseen, kyse on tiivistyksestä: vapautat tilaa ja annat mallille vain sen, mitä se tarvitsee. Pilkkominen jakaisi työn osiin, mutta tässä koko käsikirjaa ei tarvita — vain sen ydin."}, {"text": "Verkkokaupan 200 tuotekuvausta kirjoitetaan 20 tuotteen erissä, kukin oma keskustelunsa.", "answer": 1, "explain": "Suuri työ jaetaan pienempiin, erikseen käsiteltäviin osiin — se on pilkkomista. Tiivistys kutistaisi yhtä sisältöä, mutta tässä jaat koko urakan hallittaviin paloihin."}, {"text": "Aloitat joka aamu uuden keskustelun ja liität alkuun projektin tavoitteen, päätökset ja rajaukset.", "answer": 2, "explain": "Kun tuot tärkeät tiedot takaisin ikkunaan joka kerta, kyse on ankkuroinnista. Pilkkominen jakaisi tehtävän osiin, mutta tässä et jaa työtä — varmistat, ettei olennainen katoa uuden keskustelun alussa."}, {"text": "Venyneessä keskustelussa pyydät mallia kokoamaan tähänastiset päätökset kymmeneen ranskalaiseen viivaan ennen jatkamista.", "answer": 0, "explain": "Pitkän historian kutistaminen lyhyeksi listaksi on tiivistystä: säilytät olennaisen ja vapautat tilaa. Ankkurointi taas toistaisi saman säännön uudelleen, mutta tässä kokoat aiemman keskustelun tiiviiksi."}, {"text": "Iso asiakasrekisterin siivous jaetaan alueittain: ensin pohjoinen, sitten etelä, kumpikin erikseen.", "answer": 1, "explain": "Työ jaetaan itsenäisiin osiin, jotka käsitellään yksi kerrallaan — se on pilkkomista. Tiivistys pakkaisi sisältöä, mutta tässä kyse on urakan jakamisesta hallittaviin lohkoihin."}, {"text": "Toistat jokaisen viestin alussa säännön, että hinnat ilmoitetaan aina euroina ja arvonlisäveroineen.", "answer": 2, "explain": "Säännön toistaminen joka viestissä pitää sen ikkunassa — se on ankkurointia. Näin varmistat, ettei ohje putoa pois, vaikka keskustelu venyisi pitkäksi."}, {"text": "Pitkä asiakaspalautekeskustelu kutistetaan viiteen tärkeimpään toiveeseen, ennen kuin annat sen mallille.", "answer": 0, "explain": "Kun pakkaat pitkän palautteen muutamaan tärkeimpään kohtaan, teet tiivistystä: annat mallille olennaisen ilman, että ikkuna täyttyy turhasta."}, {"text": "Varaston inventaario käydään läpi osasto kerrallaan, ei kaikkea yhtä aikaa.", "answer": 1, "explain": "Kokonaisuus jaetaan osastoihin, jotka käsitellään erikseen — se on pilkkomista. Se ei hidasta työtä vaan päinvastoin helpottaa hallintaa, kun jokainen osa pysyy sopivan kokoisena."}], "summary": "Tiivistys pakkaa pitkän lyhyeksi, pilkkominen jakaa ison pieniin osiin ja ankkurointi toistaa olennaisen. Usein niitä käytetään yhdessä, mutta jokainen ratkaisee eri ongelman."}, {"type": "scenario", "title": "Kun malli unohtaa kesken vuoron", "intro": "Olet tuottanut asiakasvastauksia koko iltapäivän, ja keskustelu on venynyt pitkäksi. Etene päätös kerrallaan ja katso, miten pidät alkuperäiset säännöt voimassa, vaikka malli ei muistuttaisi niistä.", "start": "start", "max": 3, "nodes": {"start": {"text": "Tuotat tekoälyn avulla asiakasvastauksia koko iltapäivän verkkokaupan asiakaspalvelussa. Annoit heti alussa kaksi sääntöä: teitittele asiakasta äläkä lupaa rahallisia hyvityksiä. Kymmenien viestien jälkeen uusin luonnos sinuttelee asiakasta ja lupaa hänelle 20 prosentin hyvityksen — vastoin alkuperäisiä ohjeita. Mitä teet?", "choices": [{"label": "Luotat, että malli muistaa säännöt, ja lähetät luonnoksen asiakkaalle.", "next": "bad_end", "feedback": "Malli ei kerro, kun se unohtaa — sujuva vastaus ei ole sama kuin oikea vastaus. Alkuperäiset säännöt olivat pudonneet ikkunasta FIFO-periaatteella, eikä malli palauttanut niitä itse.", "tone": "no"}, {"label": "Huomaat poikkeaman ja pysähdyt tarkistamaan.", "next": "dp2", "feedback": "Juuri näin toimii ammattilainen: hän tarkistaa, noudattaako vastaus yhä alkuperäisiä rajauksia, eikä oleta mallin muistavan niitä.", "tone": "ok"}, {"label": "Päättelet, että malli on viallinen, ja vaihdat toiseen työkaluun.", "next": "dp2", "feedback": "Kyse ei ole viasta vaan konteksti-ikkunan rajasta. Toinen työkalu täyttyisi aivan samoin pitkässä keskustelussa — ongelma seuraisi mukana.", "tone": "mid"}]}, "dp2": {"text": "Ymmärrät, että alkuperäinen sääntö on pudonnut ikkunasta. Miten palautat sen?", "choices": [{"label": "Toistat säännöt eli ankkuroit ne ja pyydät luonnoksen uudelleen.", "next": "dp3", "feedback": "Ankkurointi tuo säännön takaisin ikkunaan, jolloin malli näkee sen taas ja voi noudattaa sitä.", "tone": "ok"}, {"label": "Jatkat samassa keskustelussa ja toivot, että asia korjaantuu itsestään.", "next": "dp3", "feedback": "Ilman toistoa sääntö pysyy poissa ikkunasta; malli ei palauta sitä omasta aloitteestaan. Sinun on tuotava se takaisin.", "tone": "mid"}, {"label": "Kirjoitat pitkän viestin, jossa selität koko iltapäivän tapahtumat uudelleen.", "next": "dp3", "feedback": "Pitkä toisto täyttää ikkunaa entisestään. Tiivis ankkuri — pelkät säännöt — riittää ja on tehokkaampi kuin koko historian kertaaminen.", "tone": "mid"}]}, "dp3": {"text": "Vuoro jatkuu vielä tunteja, ja vastauksia tulee kymmeniä lisää. Miten estät saman toistumisen loppuvuoron ajan?", "choices": [{"label": "Pilkot loput vastaukset lyhyempiin keskusteluihin ja ankkuroit säännöt jokaisen alkuun.", "next": "end_good", "feedback": "Puhtaat ikkunat ja toistettu ankkuri pitävät säännöt aina tallessa: kumpikaan ei jää pitkän historian armoille.", "tone": "ok"}, {"label": "Jatkat samaa yhtä pitkää keskustelua loppuun asti.", "next": "end_mid", "feedback": "Mitä pidemmäksi keskustelu kasvaa, sitä varmemmin vanhin tieto putoaa taas ulos. Sama riski toistuu, ellet katkaise keskustelua tai ankkuroi sääntöjä uudelleen.", "tone": "mid"}, {"label": "Kirjaat säännöt itsellesi muistiin ja tarkistat joka luonnoksen käsin ennen lähetystä.", "next": "end_mid", "feedback": "Dokumentointi ja tarkistus ovat oikeaa ammattitaitoa, mutta yksin ne ovat raskaita koko loppuvuoron ajan. Yhdistä ne pilkkomiseen ja ankkurointiin, niin työ kevenee.", "tone": "mid"}]}, "bad_end": {"end": true, "verdict": "no", "score": 0, "text": "Väärä hyvityslupaus lähti asiakkaalle. Iltapäivällä selviää, että malli oli luvannut 20 prosentin hyvityksen, jota kukaan ei ollut hyväksynyt.", "feedback": "Luotit siihen, että malli muistaa säännöt, mutta konteksti-ikkuna oli täyttynyt ja alkuperäinen ohje pudonnut FIFO-periaatteella. Malli ei ilmoita unohtaneensa — siksi ammattilainen tarkistaa aina, noudattaako vastaus annettuja rajauksia."}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Loppuvuoro sujuu ilman uusia lipsahduksia. Säännöt pysyvät tallessa vastauksesta toiseen.", "feedback": "Tunnistit hiljaisen unohtamisen, ankkuroit säännön takaisin ja pilkoit loput työn puhtaisiin ikkunoihin. Nämä kolme tekoa pitävät pitkän projektin hallinnassa, vaikka malli ei itse muistuttaisi mistään."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Loppuvuoro sujuu, mutta jätit riskin elämään: sama unohtaminen voi toistua, jos keskustelu venyy tai tarkistus pettää.", "feedback": "Huomasit poikkeaman ja korjasit sen hyvin — se on tärkein askel. Jätit kuitenkin riskin auki pitkittämällä samaa keskustelua tai luottamalla pelkkään käsityöhön; pilkkominen ja ankkurointi olisivat keventäneet loppuvuoroa."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

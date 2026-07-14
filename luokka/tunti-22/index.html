@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentin työkalut — tiedostot, haku ja komennot — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Agentin työkalut — tiedostot, haku ja komennot. Luokkaversio, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-22/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 22</span></div><div class="lesson-title">Agentin työkalut — tiedostot, haku ja komennot</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-22/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-22/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Agentin työkalut — tiedostot, haku ja komennot</h1>
+<h2>Johdanto</h2>
+<p>Agentti näkee ja muistaa. Mutta miksi se on tehokkaampi kuin yksinkertainen chatbot? Siksi, että agentti voi tehdä todellisia asioita. Se ei vain vastaa — se toimii.</p>
+<p>Chatbot voi vastata kysymykseen ”Mikä on tuotteemme hinta?” ja sanoa: ”Se on 50 euroa.” Agentti voi tehdä enemmän. Se hakee tuotteen nykyisen hinnan tietokannasta, tarkistaa varastotason API:sta, vertaa hintaa kilpailijoihin ja vastaa: ”Tuotteemme hinta on 50 euroa, ja meillä on 15 kappaletta varastossa. Kilpailijoiden hinta on 55 euroa, joten olemme heitä edullisempia.” Agentti käytti <strong>työkaluja</strong>, kuten tietokantahakua, API-kutsuja ja laskentaa, jotta vastaus olisi tarkempi ja hyödyllisempi.</p>
+<p>Tässä oppitunnissa opit kolme perustyökalua, joita agentti voi käyttää. Ne muodostavat perustan, jonka päälle monet muut työkalut rakentuvat. Kun rakennat agenttia n8n:llä, nämä kolme ovat usein ensimmäisiä integraatioita, joita alat suunnitella.</p>
+<h2>Työkalu 1: Tiedostot — lukeminen ja kirjoittaminen</h2>
+<p>Agentti voi lukea ja kirjoittaa tiedostoja. Tämä on yksinkertainen mutta tehokas työkalu, koska se antaa agentille pääsyn pysyvään dataan.</p>
+<p>Kun agentti <strong>lukee tiedostoja</strong>, se näkee maailmaa datan kautta. Se voi lukea esimerkiksi raportteja PDF-muodossa, tietolistoja CSV-muodossa, konfiguraatiotiedostoja JSON-muodossa tai lokeja tekstitiedostoina. Nämä tiedostot antavat agentille tietoa siitä, mitä järjestelmissä tapahtuu. Tapahtumanjärjestäjän agentti voi lukea ilmoittautumislistan ja huomata, että iltapäivän työpaja on jo täynnä. Seuraavalla kerralla, kun osallistuja kysyy ”Onko työpajassa vielä tilaa?”, agentti osaa vastata tarkemmin.</p>
+<p>Kun agentti <strong>kirjoittaa tiedostoja</strong>, se vaikuttaa maailmaan. Se voi kirjoittaa raportteja, omia toimintalokejaan tai tiedostoja, joita muut ohjelmat lukevat. Myyntiagentti voi kirjoittaa CSV-tiedoston, joka sisältää listan uusista asiakkaista ja jonka Excel voi avata. Tekninen agentti voi kirjoittaa uuden konfiguraatiotiedoston, jonka palvelin lukee ja ottaa käyttöön automaattisesti.</p>
+<p>Tiedostojen käsittely tuo kuitenkin mukanaan <strong>kriittisen turvallisuuskysymyksen</strong>: mitä oikeuksia agentti saa? Voiko se lukea, kirjoittaa ja poistaa tiedostoja missä tahansa, vai rajoitetaanko sen pääsy vain tiettyihin kansioihin?</p>
+<p>Jos agentti saa liikaa oikeuksia, se voi vahingossa poistaa tärkeitä tiedostoja ja aiheuttaa todellista vahinkoa. Kuvittele agentti, joka tekee virheellisen päätöksen ja ajaa Linux-komennon <code>rm -rf /</code>, joka voi poistaa koko järjestelmän. Jos agentti saa liian vähän oikeuksia, se ei taas pysty tekemään sille annettua tehtävää. Tasapainon löytäminen on ammattilaisen työtä.</p>
+<p>Käytännössä tämä tarkoittaa, että agentille annetaan <strong>kirjoitusoikeus vain tiettyyn kansioon</strong>, esimerkiksi <code>/reports/</code>, kun se kirjoittaa raportteja. Se voi saada <strong>lukuoikeuden asiakastiedostoihin</strong>, mutta ei kirjoitusoikeutta, jotta se ei voi vahingossa muuttaa asiakastietoja. Sillä ei pitäisi olla oikeuksia <strong>palkkajärjestelmän tiedostoihin</strong>, jos sen tehtävä ei liity palkkahallintoon.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Jos agentti voi kirjoittaa tiedostoihin, mitkä tiedostot olisivat liian arkaluontoisia sen käsiteltäviksi? Mitkä tiedostot voisivat aiheuttaa vahinkoa, jos agentti muuttaisi niitä virheellisesti?</p>
+</blockquote>
+</blockquote>
+<h2>Työkalu 2: Verkkohaku — pääsy internetin dataan</h2>
+<p>Agentti voi hakea tietoa internetistä. Tämä antaa sille pääsyn ajankohtaiseen tietoon, joka on voinut muuttua sen koulutusdatan jälkeen.</p>
+<p>Ilman verkkohakua agentilla on käytössään vain ne tiedot, jotka olivat mukana sen koulutuksessa. Jos koulutusdata on vuodelta 2023 ja nyt on vuosi 2026, agentin tieto voi olla vanhentunutta. Osakkeiden hinnat muuttuvat jatkuvasti. Jos agentti ei hae niitä verkosta, se voi antaa vanhan hinnan. Sama koskee uutisia. Jos asiakas kysyy ”Mitä tapahtui tänään?”, agentti ei voi vastata luotettavasti ilman ajantasaista tiedonhakua.</p>
+<p><strong>Verkkohaku</strong> tekee agentista ajankohtaisemman ja relevantimman. Kun asiakas kysyy osakkeen hinnasta, agentti hakee sen verkosta ja antaa tämänhetkisen tiedon. Kun asiakas haluaa tietää päivän uutiset, agentti etsii ne. Kun asiakas kysyy Windows-päivityksistä, agentti voi löytää uusimmat ohjeet eikä vain vanhaa tietoa, joka oli mukana koulutusdatassa.</p>
+<p>Verkkohaku tuo kuitenkin mukanaan <strong>kolme merkittävää riskiä</strong>.</p>
+<p>Ensimmäinen riski on <strong>väärä tieto</strong>. Haku voi löytää valheellisia tai harhaanjohtavia sivustoja. Jos agentti etsii tietoa esimerkiksi migreenilääkkeistä ja löytää epäluotettavan sivuston, se voi jakaa vaarallisia neuvoja. Ammattilaisena sinun täytyy <strong>rajata lähteet</strong>. Agentin kannattaa hakea tietoa vain virallisista ja tarkistetuista lähteistä, esimerkiksi terveysviranomaisen sivuilta, ei satunnaisista blogeista.</p>
+<p>Toinen riski on <strong>kustannukset</strong>. Jotkut hakupalvelut laskuttavat jokaisesta hausta. Jos agenttia ei rajoiteta, se voi aiheuttaa vahingossa kalliita kyselykustannuksia. Kuvittele agentti, joka tekee 100 hakua tunnissa ja jokainen haku maksaa 10 senttiä. Kahden päivän kuluttua lasku voi olla jo huomattavan suuri.</p>
+<p>Kolmas riski on <strong>yksityisyys ja turvallisuus</strong>. Agentti voi yrittää hakea liian arkaluontoisia tietoja ilman rajoituksia. Asiakas voi esimerkiksi yrittää saada agentin etsimään henkilötunnuksia, salasanoja tai muuta yksityistä tietoa verkosta. Tämä olisi vakava turvallisuusriski.</p>
+<p>Ammattilaisena sinun täytyy asettaa <strong>selkeät rajat hakutyökalulle</strong>. Voit määritellä, miltä sivustoilta agentti saa hakea tietoa. Tätä kutsutaan <strong>whitelist-malliksi</strong>. Lisäksi voit kieltää agenttia hakemasta henkilökohtaisia tai yksityisiä tietoja ja rajoittaa, kuinka monta hakua se saa tehdä yhtä käyttäjän pyyntöä kohden. Nämä rajaukset suojaavat sekä agentin virheiltä että mahdollisilta väärinkäyttöyrityksiltä.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kuvittele agentti, jota käytetään asiakaspalvelun tukena. Mitä tietoa sen ei pitäisi hakea verkosta turvallisuussyistä? Entä jos asiakas yrittää saada agentin hakemaan hänen salasanansa?</p>
+</blockquote>
+</blockquote>
+<h2>Työkalu 3: Komentorivi (CLI) — komentojen ajaminen</h2>
+<p><strong>CLI</strong> eli Command Line Interface tarkoittaa komentoriviä. Sen avulla agentti voi ajaa <strong>järjestelmäkomentoja</strong> eli komentorivikomentoja — usein palvelimella, mutta myös muussa ympäristössä. Tämä on yksi voimakkaimmista työkaluista, mutta samalla myös yksi vaarallisimmista.</p>
+<p>CLI antaa agentille kyvyn <strong>luoda ja poistaa kansioita, käynnistää ohjelmia ja muokata asetuksia</strong>. Se voi suorittaa komennon <code>mkdir /backup</code> luodakseen varmuuskopiokansion. Se voi ajaa komennon <code>python analyze_sales.py</code>, joka analysoi myyntidataa minuutissa, vaikka ihmiseltä sama työ voisi viedä tunteja. Se voi ajaa komennon <code>systemctl restart apache2</code> käynnistääkseen verkkopalvelimen uudelleen, jos se on kaatunut. CLI on tehokas työkalu, koska sen avulla agentti voi tehdä palvelimella todellisia ja syvälle järjestelmään vaikuttavia asioita.</p>
+<p>CLI on kuitenkin myös vaarallinen. Jos agentti voi ajaa mitä tahansa komentoja ilman rajoituksia, se voi vahingossa poistaa kaikki tiedostot komennolla <code>rm -rf /</code>. Se voi sammuttaa palvelimen tai muuttaa asetuksia niin pahasti, että järjestelmä hajoaa kokonaan. Yksi virheellinen päätös voi tuhota viikkojen työn. Siksi CLI-pääsy on yksi agenttien riskialttiimmista työkalutyypeistä.</p>
+<p>Siksi sinun täytyy asettaa <strong>tiukat rajat</strong>. Yksi strategia on <strong>whitelist</strong> eli luettelo komennoista, joita agentti saa ajaa. Agentti voi esimerkiksi saada luvan ajaa komennot <code>ls</code> eli näytä tiedostot, <code>mkdir</code> eli luo kansio ja <code>cp</code> eli kopioi tiedosto. Sen sijaan se ei saa ajaa komentoja <code>rm</code> eli poista, <code>shutdown</code> eli sammuta järjestelmä tai <code>chmod</code> eli muuta käyttöoikeuksia. Whitelist on tiukka mutta turvallinen ratkaisu.</p>
+<p>Toinen strategia on <strong>toimintorajoitus</strong>: agentti voi lukea ja luoda, mutta ei poistaa mitään. Kolmas strategia on <strong>hiekkalaatikko</strong> eli eristetty ympäristö, josta agentti ei voi vaikuttaa oikeaan järjestelmään. Neljäs strategia on <strong>hyväksyntä</strong>: agentti voi ehdottaa komentoa, mutta ihmisen täytyy vahvistaa se ennen suorittamista.</p>
+<p>Kun näitä strategioita yhdistetään, agentille voidaan antaa riittävästi valtaa työn tekemiseen mutta samalla estää sitä aiheuttamasta vakavaa vahinkoa.</p>
+<h2>Orkestraattori: työkalut oikeassa järjestyksessä</h2>
+<p>Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. Todellisuudessa agentti ei kuitenkaan ole yksi suuri neuroverkko, joka tekee kaiken itse. Agentti on <strong>orkestraattori</strong> eli koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// viisi kysymystä, viisi työkalua — agentti valitsee, kysyy ja saa vastauksen</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l22-wrap">
+    <div class="l22-q">
+      <span class="l22-qq q1">Sataako huomenna Turussa?</span>
+      <span class="l22-qq q2">Olenko vapaa pe klo 10?</span>
+      <span class="l22-qq q3">Lähetä Villelle kokousmuistio.</span>
+      <span class="l22-qq q4">Paljonko 100 € on puntina?</span>
+      <span class="l22-qq q5">Muistuta minua huomenna klo 8.</span>
+    </div>
+    <div class="l22-agent">AGENTTI<span class="l22-think">tunnistaa tarpeen → valitsee työkalun</span></div>
+    <div class="l22-tools">
+      <span class="l22-t t1">sää</span>
+      <span class="l22-t t2">kalenteri</span>
+      <span class="l22-t t3">sähköposti</span>
+      <span class="l22-t t4">valuutta</span>
+      <span class="l22-t t5">muistutus</span>
+    </div>
+    <span class="l22-res e1">+2 °C · sadetta 80 %</span>
+    <span class="l22-res e2">pe 10–11: varattu</span>
+    <span class="l22-res e3">viesti lähetetty ✓</span>
+    <span class="l22-res e4">kurssi: 1 € = 0,84 £</span>
+    <span class="l22-res e5">muistutus asetettu ✓</span>
+    <div class="l22-ans">
+      <span class="l22-aa a1">”Huomenna sataa — varaa sateenvarjo.”</span>
+      <span class="l22-aa a2">”Et ole — pe klo 10 on jo varaus.”</span>
+      <span class="l22-aa a3">”Muistio lähti Villelle.”</span>
+      <span class="l22-aa a4">”100 euroa on noin 84 puntaa.”</span>
+      <span class="l22-aa a5">”Muistutan sinua huomenna klo 8.”</span>
+    </div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Agentti ei tiedä säätä, kalenteria eikä kursseja itse. Jokainen kysymys ohjautuu eri työkalulle: agentti tunnistaa tarpeen, kutsuu oikeaa työkalua ja muotoilee vastauksen vasta työkalun palauttamasta tuloksesta.</figcaption></figure>
+<style>
+.l22-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l22-q{position:absolute;left:0;top:0;width:204px;height:52px}
+.l22-qq{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;font-weight:500;line-height:1.4;color:#06212A;background:#46c7cf;border-radius:11px;padding:6px 11px;opacity:0;height:fit-content;min-height:38px}
+.l22-qq.q1{animation:l22q1 32s infinite}
+.l22-qq.q2{animation:l22q2 32s infinite}
+.l22-qq.q3{animation:l22q3 32s infinite}
+.l22-qq.q4{animation:l22q4 32s infinite}
+.l22-qq.q5{animation:l22q5 32s infinite}
+@keyframes l22q1{0%,1%{opacity:0}3%,17%{opacity:1}19%,100%{opacity:0}}
+@keyframes l22q2{0%,21%{opacity:0}23%,37%{opacity:1}39%,100%{opacity:0}}
+@keyframes l22q3{0%,41%{opacity:0}43%,57%{opacity:1}59%,100%{opacity:0}}
+@keyframes l22q4{0%,61%{opacity:0}63%,77%{opacity:1}79%,100%{opacity:0}}
+@keyframes l22q5{0%,81%{opacity:0}83%,97%{opacity:1}99%,100%{opacity:0}}
+.l22-agent{position:absolute;left:0;top:96px;width:204px;text-align:center;font-size:12.5px;letter-spacing:.13em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:13px;padding:14px 10px}
+.l22-think{display:block;margin-top:6px;font-size:9.5px;letter-spacing:.02em;color:#8B94B3}
+.l22-tools{position:absolute;right:0;top:8px;display:flex;flex-direction:column;gap:8px;width:150px}
+.l22-t{font-size:11.5px;color:#B9C2DA;background:#0E1422;border:1.5px solid #2B3552;border-radius:9px;padding:7px 11px}
+.l22-t.t1{animation:l22t1 32s infinite}
+.l22-t.t2{animation:l22t2 32s infinite}
+.l22-t.t3{animation:l22t3 32s infinite}
+.l22-t.t4{animation:l22t4 32s infinite}
+.l22-t.t5{animation:l22t5 32s infinite}
+@keyframes l22t1{0%,3%,18%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}6%,15%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+@keyframes l22t2{0%,23%,38%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}26%,35%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+@keyframes l22t3{0%,43%,58%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}46%,55%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+@keyframes l22t4{0%,63%,78%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}66%,75%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+@keyframes l22t5{0%,83%,98%,100%{color:#B9C2DA;border-color:#2B3552;box-shadow:none}86%,95%{color:#FFFFFF;border-color:oklch(0.72 0.13 208);box-shadow:0 0 12px oklch(0.66 0.13 208/.45)}}
+.l22-res{position:absolute;right:158px;font-size:10.5px;white-space:nowrap;color:#0B0F1A;background:#F7C873;border-radius:999px;padding:3px 9px;opacity:0}
+.l22-res.e1{top:12px;animation:l22e1 32s infinite}
+.l22-res.e2{top:54px;animation:l22e2 32s infinite}
+.l22-res.e3{top:96px;animation:l22e3 32s infinite}
+.l22-res.e4{top:138px;animation:l22e4 32s infinite}
+.l22-res.e5{top:180px;animation:l22e5 32s infinite}
+@keyframes l22e1{0%,7%{opacity:0;transform:translateX(8px)}10%,16%{opacity:1;transform:translateX(0)}19%,100%{opacity:0}}
+@keyframes l22e2{0%,27%{opacity:0;transform:translateX(8px)}30%,36%{opacity:1;transform:translateX(0)}39%,100%{opacity:0}}
+@keyframes l22e3{0%,47%{opacity:0;transform:translateX(8px)}50%,56%{opacity:1;transform:translateX(0)}59%,100%{opacity:0}}
+@keyframes l22e4{0%,67%{opacity:0;transform:translateX(8px)}70%,76%{opacity:1;transform:translateX(0)}79%,100%{opacity:0}}
+@keyframes l22e5{0%,87%{opacity:0;transform:translateX(8px)}90%,96%{opacity:1;transform:translateX(0)}99%,100%{opacity:0}}
+.l22-ans{position:absolute;left:0;top:196px;width:340px;height:52px}
+.l22-aa{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #7FD0A8;border-radius:11px;padding:6px 12px;opacity:0;height:fit-content;min-height:36px}
+.l22-aa.a1{animation:l22a1 32s infinite}
+.l22-aa.a2{animation:l22a2 32s infinite}
+.l22-aa.a3{animation:l22a3 32s infinite}
+.l22-aa.a4{animation:l22a4 32s infinite}
+.l22-aa.a5{animation:l22a5 32s infinite}
+@keyframes l22a1{0%,11%{opacity:0}14%,17%{opacity:1}20%,100%{opacity:0}}
+@keyframes l22a2{0%,31%{opacity:0}34%,37%{opacity:1}40%,100%{opacity:0}}
+@keyframes l22a3{0%,51%{opacity:0}54%,57%{opacity:1}60%,100%{opacity:0}}
+@keyframes l22a4{0%,71%{opacity:0}74%,77%{opacity:1}80%,100%{opacity:0}}
+@keyframes l22a5{0%,91%{opacity:0}94%,97%{opacity:1}100%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l22-qq,.l22-t,.l22-res,.l22-aa{animation:none}
+.l22-qq.q1,.l22-res.e1,.l22-aa.a1{opacity:1}
+.l22-t.t1{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
+</style>
+
+<p>Orkesterissa kapellimestari ei soita jokaista instrumenttia itse. Hän ohjaa: ”Viulut, teidän vuoronne.” Kun viulujen osuus on valmis, hän ohjaa seuraavan ryhmän: ”Puhaltimet, teidän vuoronne.” Jokainen muusikko on erikoistunut omaan instrumenttiinsa, ja kapellimestari koordinoi toimintaa niin, että syntyy yhtenäinen kokonaisuus. Orkesteri on vahvempi kuin yksittäinen muusikko.</p>
+<p>Agentti toimii samalla tavalla. Se kutsuu työkaluja järjestyksessä: ”Tiedostolukija, lue myyntitiedot.csv.” Kun tiedostolukija on valmis, agentti voi jatkaa: ”Verkkohakija, etsi markkinatrendejä.” Kun hakija on palauttanut tulokset, agentti voi pyytää: ”Analyysityökalu, analysoi nämä luvut.” Jokainen työkalu tekee sen, mitä se osaa parhaiten, ja agentti yhdistää tulokset kokonaisuudeksi.</p>
+<p><strong>Orkestraattori tarvitsee ohjeita</strong> eli strategioita tai suunnittelumalleja siitä, miten työkaluja kutsutaan järjestyksessä. Nämä mallit perustuvat siihen, miten monimutkaisia ongelmia ratkaistaan vaiheittain. Kaksi tärkeää mallia ovat <strong>ReAct</strong> ja <strong>chain-of-thought</strong>, joita käsitellään tarkemmin seuraavalla oppitunnilla. Tärkeintä on nyt ymmärtää, että agentti ei käytä kaikkia työkaluja samanaikaisesti. Se käyttää niitä vaiheittain sen mukaan, mitä seuraavaksi tarvitaan.</p>
+<h2>Työkalut n8n:ssä — yhteys käytäntöön</h2>
+<p>Kun rakennat agenttia oppitunneilla 26–27, nämä abstraktit työkalut muuttuvat konkreettisiksi n8n-solmuiksi. Alla oleva taulukko auttaa yhdistämään teorian käytäntöön.</p>
+<table>
+<thead>
+<tr>
+<th>Työkalu teoriassa</th>
+<th>n8n-solmu käytännössä</th>
+<th>Esimerkki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiedoston luku</td>
+<td><strong>Read Files</strong> -solmu tai <strong>Google Sheets</strong> -solmu</td>
+<td>Agentti lukee myyntiraportin CSV-tiedostosta.</td>
+</tr>
+<tr>
+<td>Tiedoston kirjoitus</td>
+<td><strong>Write File</strong> -solmu tai <strong>Google Sheets</strong> -solmu</td>
+<td>Agentti kirjoittaa analyysitulokset tiedostoon.</td>
+</tr>
+<tr>
+<td>Verkkohaku</td>
+<td><strong>HTTP Request</strong> -solmu tai <strong>Google Search</strong> -solmu</td>
+<td>Agentti hakee tuotteen hinnan kilpailijan sivulta.</td>
+</tr>
+<tr>
+<td>CLI-komento</td>
+<td><strong>Execute Command</strong> -solmu hiekkalaatikossa</td>
+<td>Agentti ajaa skriptin, joka analysoi lokitiedostoja.</td>
+</tr>
+<tr>
+<td>Sähköposti</td>
+<td><strong>Gmail</strong>- tai <strong>SMTP</strong>-solmu</td>
+<td>Agentti lähettää vastauksen asiakkaalle.</td>
+</tr>
+<tr>
+<td>Tietokantahaku</td>
+<td><strong>MySQL</strong>- tai <strong>PostgreSQL</strong>-solmu</td>
+<td>Agentti tarkistaa asiakkaan tilaushistorian.</td>
+</tr>
+</tbody>
+</table>
+<p>Tässä oppitunnissa käsitellyt turvakerrokset, kuten whitelist, toimintorajoitus, hiekkalaatikko ja hyväksynnät, voidaan toteuttaa n8n:ssä esimerkiksi <strong>IF-solmuilla</strong> ehtojen tarkistamiseen, <strong>erillisillä työnkuluilla</strong> turvalliseen eristämiseen ja <strong>hyväksyntäsolmuilla</strong>, joissa ihminen tarkistaa toiminnon ennen suoritusta. Tämä konkretisoituu oppitunneilla 26–27, mutta jo nyt kannattaa kysyä: mikä n8n-solmu toteuttaisi tämän toiminnon?</p>
+<h2>MCP — yksi liitin kaikille työkaluille</h2>
+<p>Edellä näit, miten työkalut kytketään agenttiin n8n-solmuina. Siitä herää jatkokysymys: millä periaatteella kytkentä oikeastaan tapahtuu — ja toimisiko sama työkalu myös jossain muussa agentissa? Perinteisesti jokainen kytkentä on rakennettu erikseen, juuri tietyn työkalun ja tietyn agentin väliseksi. Ongelma kasvaa nopeasti: kymmenen työkalua ja viisi agenttijärjestelmää tarkoittaisi viittäkymmentä erilaista kytkentää, jotka kaikki pitäisi rakentaa, testata ja pitää ajan tasalla erikseen.</p>
+<p>Tähän on olemassa ratkaisu. <strong>MCP (Model Context Protocol)</strong> on avoin standardi, joka määrittelee yhteisen tavan kytkeä työkalu agenttiin. Anthropic julkaisi sen marraskuussa 2024, ja myös kilpailijat, kuten OpenAI ja Google, ovat ottaneet sen käyttöön. Vuonna 2026 se on käytännössä alan yleinen tapa kytkeä työkaluja agentteihin. MCP ei siis ole tuote, jonka voisi ostaa, vaan sopimus siitä, miten kytkentä tehdään.</p>
+<p>Arkinen vastine löytyy laturilaatikosta. Ennen jokaisella puhelinvalmistajalla oli oma liittimensä, ja laatikot täyttyivät yhteensopimattomista johdoista. USB-C muutti tilanteen: yksi standardiliitin käy kaikkiin, eikä laturin valmistajan tarvitse tietää, minkä merkkinen laite johdon toisessa päässä on. MCP tekee työkaluille saman. Työkalu rakennetaan kerran, ja sama työkalu toimii eri agenteissa riippumatta siitä, kuka agentin on tehnyt. Standardi on tylsää infrastruktuuria — ja juuri siksi arvokasta.</p>
+<p>Sama periaate näkyy kahdessa paikassa, jotka jo tunnet. n8n:ssä on <strong>MCP-solmuja</strong>, joilla voit kytkeä työkaluja omaan agenttiisi tällä standardilla, kun rakennat sitä tunneilla 26–27. Ja kun valmisagentti tarjoaa <strong>konnektorin</strong> eli valmiin liittimen sähköpostiin, kalenteriin tai tiedostoihin, taustalla on sama ajatus: standardoitu tapa tuoda työkalu mallin ulottuville.</p>
+<p>Yksi asia ei kuitenkaan muutu. Standardiliitin vastaa kysymykseen ”miten kytketään”, ei kysymykseen ”mitä saa tehdä”. Jokainen MCP:llä kytketty työkalu tarvitsee silti täsmälleen samat rajaukset, jotka tällä tunnilla opit: oikeudet, whitelistit ja lokituksen. Helppo kytkeminen voi jopa houkutella kytkemään enemmän kuin tehtävä vaatii — silloin minimioikeusperiaate on entistäkin tärkeämpi.</p>
+<blockquote class="pause"><p><strong>Tilanne heinäkuussa 2026 — konnektorit valmisagenteissa.</strong><br />
+Claude Coworkissa ja ChatGPT Workissa työkalut näkyvät käyttäjälle konnektoreina eli valmiina liittiminä, jotka perustuvat MCP:n kaltaiseen standardikytkentään. Siksi sama työkalu voidaan tuoda eri agentteihin ilman, että jokaista kytkentää rakennetaan erikseen.</p>
+<p><em>Tuotenimet, päivämäärät ja ominaisuudet vanhenevat nopeasti — tämä laatikko päivitetään kurssin ylläpidossa erikseen. Leipätekstin käsitteet eivät vanhene.</em></p>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Muistele puhelinlatureita ennen USB-C:tä: jokaisella merkillä oma johto. Mikä kaikki muuttui, kun liitin standardoitiin — ja kuka hyötyi eniten: laitteen valmistaja, johdon valmistaja vai käyttäjä? Mieti sama työkalun, agentin ja sinun näkökulmastasi.</p>
+</blockquote>
+</blockquote>
+<h2>Käytännön esimerkki: analytiikka-agentti työvaiheissa</h2>
+<p>Kuvittele agentti, joka analysoi myyntidataa yrityksen johtajalle. Tässä esimerkissä näet, miten kolme työkalua toimivat yhdessä.</p>
+<p>Ensin agentti lukee tiedostoja. Se avaa <code>myyntitiedot_2026.csv</code>-tiedoston, joka sisältää kuukausittaiset myyntiluvut: ”Tammikuu: 50 000 €, Helmikuu: 52 000 €, Maaliskuu: 48 000 €.” Tämä on aineisto, johon analyysi perustuu.</p>
+<p>Sitten agentti hakee verkosta kontekstia. Se etsii markkinatrendejä, esimerkiksi tiedon siitä, että teknologiasektori kasvoi 8 % viime vuoden vastaavaan aikaan verrattuna. Se hakee kilpailijatietoa ja huomaa, että kilpailija laski hintojaan 5 %. Se hakee asiakaspalautetta ja löytää mainintoja tuotteiden paremmasta saatavuudesta. Tämä verkosta löytyvä konteksti auttaa agenttia ymmärtämään, onko esimerkiksi 4 % lasku myynnissä huono merkki vai osa odotettavaa markkinakehitystä.</p>
+<p>Lopuksi agentti tekee työn CLI:n kautta. Se ajaa analyysiskriptin komennolla <code>python analyze_sales.py</code>. Skripti käsittelee datan ja tuottaa esimerkiksi myyntikäyriä, trendianalyysin ja ennusteita. Sen jälkeen agentti kirjoittaa tulokset raporttitiedostoon, joka sisältää yhteenvedon, kaaviot ja johtopäätökset. Agentti voi vielä siirtää valmiin raportin oikeaan kansioon komennolla <code>mv raportti.txt /reports/myyntiraportti_2026_Q1.txt</code>.</p>
+<p>Nämä kolme työkalua muodostavat yhdessä toimivan prosessin: agentti lukee dataa tiedostoista, etsii kontekstia verkosta, tekee analyysin CLI-komennolla ja kirjoittaa tulokset takaisin tiedostoksi. Jokainen työkalu tukee seuraavaa vaihetta.</p>
+<figure style="margin:26px 0;text-align:center">
+<svg viewBox="0 0 920 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:840px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Esimerkki: agentti hoitaa sähköpostitehtävän</title>
+  <desc>n8n-solmuketju: sähköposti saapuu, AI Agent ymmärtää ja käyttää työkaluja, vastaus muotoillaan ja tallennetaan taulukkoon. Agentin käytössä on verkkohaku, tietokanta, Google Sheets ja sähköposti.</desc>
+  <defs>
+    <g id="ex-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
+    <g id="ex-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
+    <g id="ex-braces" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 L5 12 L9 18 M15 6 L19 12 L15 18"/></g>
+    <g id="ex-sheet" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M4 9 H20 M4 14.5 H20 M10 9 V20.5 M15 9 V20.5"/></g>
+    <g id="ex-globe" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12 H21 M12 3 a14 14 0 0 1 0 18 a14 14 0 0 1 0 -18"/></g>
+    <g id="ex-db" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6 a7 2.6 0 0 0 14 0 a7 2.6 0 0 0 -14 0 V18 a7 2.6 0 0 0 14 0 V6 M5 12 a7 2.6 0 0 0 14 0"/></g>
+  </defs>
+  <rect x="0" y="0" width="920" height="410" rx="16" fill="#FAFBFE"/>
+  <text x="460" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2336">Esimerkki: agentti hoitaa sähköpostitehtävän</text>
+  <text x="460" y="62" text-anchor="middle" font-size="13" fill="#5A6478">Sama rakenne kuin yleiskuvassa — nyt konkreettisena n8n-solmuketjuna.</text>
+  <rect x="28" y="92" width="176" height="78" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#ex-mail" x="44" y="108" width="19" height="19" style="color:#2F9E69"/>
+  <text x="70" y="121" font-size="12.5" font-weight="700" fill="#247A52">Email-solmu</text>
+  <text x="44" y="150" font-size="11" fill="#3A4253">Vastaanottaa viestin</text>
+  <line x1="204" y1="131" x2="240" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M244 131 L234 126 L234 136 Z" fill="#9AA6BD"/>
+  <rect x="244" y="92" width="200" height="78" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+  <use href="#ex-robot" x="260" y="106" width="22" height="22" style="color:#3B5BDB"/>
+  <text x="290" y="121" font-size="12.5" font-weight="700" fill="#2F46B0">AI Agent</text>
+  <text x="260" y="150" font-size="11" fill="#3A4253">Ymmärtää ja käyttää työkaluja</text>
+  <line x1="444" y1="131" x2="480" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M484 131 L474 126 L474 136 Z" fill="#9AA6BD"/>
+  <rect x="484" y="92" width="176" height="78" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+  <use href="#ex-braces" x="500" y="108" width="19" height="19" style="color:#2F9E69"/>
+  <text x="526" y="121" font-size="12.5" font-weight="700" fill="#247A52">Muotoilu</text>
+  <text x="500" y="150" font-size="11" fill="#3A4253">Muotoilee vastauksen</text>
+  <line x1="660" y1="131" x2="696" y2="131" stroke="#9AA6BD" stroke-width="2.2"/><path d="M700 131 L690 126 L690 136 Z" fill="#9AA6BD"/>
+  <rect x="700" y="92" width="192" height="78" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+  <use href="#ex-sheet" x="716" y="108" width="19" height="19" style="color:#0E9AA7"/>
+  <text x="742" y="121" font-size="12.5" font-weight="700" fill="#0B7E89">Tallennus</text>
+  <text x="716" y="150" font-size="11" fill="#3A4253">Google Sheets -taulukkoon</text>
+  <g stroke="#B7C0D6" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+    <path d="M344 170 V196 H126 V232"/><path d="M344 170 V196 H344 V232"/><path d="M344 170 V196 H560 V232"/><path d="M344 170 V196 H770 V232"/>
+  </g>
+  <text x="460" y="190" text-anchor="middle" font-size="10.5" fill="#7E88A8">Agentin työkalut</text>
+  <rect x="46" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-globe" x="60" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="84" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Verkkohaku</text>
+  <text x="60" y="280" font-size="10.3" fill="#5A6478">hakee tietoa netistä</text>
+  <rect x="264" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-db" x="278" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="302" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Tietokanta</text>
+  <text x="278" y="280" font-size="10.3" fill="#5A6478">hakee tallennettua tietoa</text>
+  <rect x="482" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Google Sheets</text>
+  <text x="496" y="280" font-size="10.3" fill="#5A6478">tallentaa tulokset</text>
+  <rect x="700" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+  <use href="#ex-mail" x="714" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="738" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Sähköposti</text>
+  <text x="714" y="280" font-size="10.3" fill="#5A6478">lähettää viestejä</text>
+  <rect x="46" y="320" width="814" height="44" rx="10" fill="#EEF1FE" stroke="#C9D2F7" stroke-width="1.3"/>
+  <use href="#ex-robot" x="62" y="332" width="20" height="20" style="color:#3B5BDB"/>
+  <text x="90" y="340" font-size="11.5" font-weight="700" fill="#2F46B0">Kielimalli (LLM)</text>
+  <text x="90" y="356" font-size="11.5" fill="#3A4253">Agentin "aivot" — esim. GPT-4o, Claude tai Gemini. Päättää, mitä työkalua käytetään.</text>
+</svg>
+<figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Konkreettinen esimerkki: agentti vastaanottaa sähköpostin, käyttää työkaluja ja tallentaa tuloksen — kolme työkalua yhdessä työnkulkuna.</figcaption>
+</figure>
+
+<h2>Riskinhallinta — jokainen työkalu vaatii rajoituksia</h2>
+<p>Kolme työkalua — tiedostot, verkkohaku ja CLI — ovat voimakkaita. Voima tuo kuitenkin mukanaan vastuun. Ammattilaisena sinun täytyy <strong>suunnitella rajoitukset jokaiselle työkalulle</strong> ennen kuin annat agentin käyttää niitä.</p>
+<p><strong>Tiedostotyökalulle:</strong> anna lukuoikeus vain välttämättömiin tiedostoihin. Anna kirjoitusoikeus vain erikseen määriteltyihin kansioihin. Älä anna poistooikeutta lainkaan, ellei se ole tehtävän kannalta välttämätöntä. Lokita jokainen tiedoston avaus ja muokkaus, jotta näet myöhemmin, mitä agentti teki.</p>
+<p><strong>Verkkohakutyökalulle:</strong> määritä sallittujen lähteiden whitelist. Rajoita, kuinka monta hakua agentti voi tehdä sekunnissa tai päivässä. Estä haku henkilökohtaisista tai arkaluontoisista termeistä. Kirjaa jokainen haku, jotta näet, mitä agentti etsi.</p>
+<p><strong>CLI-työkalulle:</strong> käytä tiukkaa komentojen whitelistiä tai aja agentin CLI-toiminnot hiekkalaatikossa erillään oikeista palvelimista. Vaadi ihmisen hyväksyntä kriittisille toiminnoille, kuten poistolle tai palvelimen sammuttamiselle. Lokita jokainen suoritettu komento.</p>
+<p>Näillä rajoituksilla agentti pysyy hallinnassa. Se voi tehdä työtään, mutta se ei pääse aiheuttamaan katastrofaalista vahinkoa.</p>
+<h2>Kohti omaa projektia</h2>
+<p>Tämän oppitunnin työkaluajattelu auttaa sinua hahmottamaan, mitä konkreettisia toimintoja oma agenttisi tarvitsee. Mieti omaa projektiasi: tarvitseeko agenttisi lukea tiedostoja, hakea tietoa verkosta vai suorittaa komentoja? Miten rajaat työkalut niin, että agentti pääsee käsiksi vain siihen, mitä se todella tarvitsee? Taulukko, jossa yhdistät abstraktit työkalut konkreettisiin n8n-solmuihin, on hyvä lähtökohta rakentamiselle.</p>
+<h2>Yhteenveto</h2>
+<p>Agentti näkee ja muistaa, mutta sen voima syntyy siitä, että se voi <strong>tehdä todellisia asioita</strong>. Kolme perustyökalua — <strong>tiedostot, verkkohaku ja CLI-komennot</strong> — antavat agentille kyvyn toimia maailmassa. Agentti ei ole yksi suuri älykäs ohjelma, vaan <strong>orkestraattori</strong>, joka kutsuu työkaluja järjestyksessä tehtävän ratkaisemiseksi.</p>
+<p>Jokainen työkalu tuo kuitenkin mukanaan turvallisuusriskejä, jotka täytyy hallita rajoituksilla. Tiedostojen käytössä hallitaan tiedosto-oikeuksia. Verkkohaussa määritetään sallittujen lähteiden whitelist. CLI-komennoissa käytetään komentojen whitelistiä, hiekkalaatikkoa tai ihmisen hyväksyntää. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, nämä työkalut ovat ensimmäisiä integraatioita, joita kytket agentin rinnalle. Jokaisen kohdalla sinun täytyy miettiä, mitä rajoituksia se tarvitsee.</p>
+<hr /></div><div class="panel" data-tab="tehtavat"><h1>Opiskelutehtävät: Agentin työkalut — tiedostot, haku ja komennot</h1>
+<blockquote class="pause"><p>Tämä tunti tarkentaa lopputyösi työkaluvalintoja. Tunneilla 19 ja 21 olet määritellyt ongelman ja muistirakenteen. Tänään harjoittelet työkalujen valintaa.</p>
+</blockquote>
+<p><em>Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet työkalu-tehtävän — se sparraa suoraan lopputyösi rakentamista.</em></p><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 22.1 — Oikea työkalu oikeaan tehtävään 🟢 SUOSITELTU</h2></div><div class="task-card-body">
+<p><strong>Miksi tämä on tärkeää:</strong> Agentin teho riippuu siitä, mitä työkaluja se osaa käyttää. Mutta kaikkia työkaluja ei tarvita aina — usein vähemmän on enemmän.</p>
+<h3>Tehtävä</h3>
+<p>Sinulla on kolme erilaista agenttitehtävää:</p>
+<p><strong>Tehtävä A: Asiakkaan laskun käsittely.</strong> Agentti vastaanottaa asiakkaan kysymyksen laskusta, hakee laskutiedot tietokannasta ja vastaa asiakkaalle.</p>
+<p><strong>Tehtävä B: Päivittäinen uutiskooste.</strong> Agentti seuraa valittuja uutissivuja netissä, kokoaa päivän tärkeimmät otsikot yhteen ja kirjoittaa koosteen tiedostoon.</p>
+<p><strong>Tehtävä C: Varaston seuranta.</strong> Agentti lukee varaston tiedostoja, tunnistaa loppumassa olevat tuotteet ja ilmoittaa niistä vastuuhenkilölle.</p>
+<h3>Vastausohje</h3>
+<p>Jokaisesta tehtävästä päätä:</p>
+<ol>
+<li><strong>Tarvitseeko verkkohakua?</strong> Miksi tai miksi ei?</li>
+<li><strong>Tarvitseeko tiedostojen luku- tai kirjoitusoikeutta?</strong> Mihin tiedostoihin?</li>
+<li><strong>Tarvitseeko sähköpostin tai chat-viestin lähetystä?</strong> Mille kanavalle?</li>
+<li><strong>Tarvitseeko tietokantakyselyitä?</strong> Mistä tietokannasta?</li>
+</ol>
+<p>Kirjoita kuhunkin tehtävään lyhyt työkalulista — eli mitä n8n-solmuja agentti tarvitsisi.</p>
+<h3>Sovellus omaan agenttiin</h3>
+<p>Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma. Käy sama analyysi sille:</p>
+<ul>
+<li>Tarvitseeko agenttisi verkkohakua? Tiedostojen käsittelyä? Viestien lähetystä? Tietokantakyselyitä?</li>
+<li>Listaa lopuksi, mitä n8n-solmuja tarvitset minimissään.</li>
+<li>Mieti: voitko karsia jotain? Liian monta työkalua tekee agentista hauraan.</li>
+</ul>
+<h3>Tekoälyvaihe — haasta työkaluvalinnat</h3>
+<pre><code>Olen valinnut agentilleni seuraavat työkalut: [listaa]. Agentin
+tehtävä on [kuvaa]. Toimi sparrauskumppanina ja kysy 2–3 kysymystä,
+joiden avulla voin arvioida, onko jokin työkalu ylimääräinen tai
+puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
+</code></pre>
+<blockquote class="pause"><p>💡 <strong>Vinkki muistiinpanoihin:</strong> Kirjaa muistiinpanoihisi agenttisi minimityökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.</p>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 22.2 — Tutustu n8n-työnkulkuun 🟣 SYVENTÄVÄ</h2></div><div class="task-card-body">
+<p><strong>Miksi tämä on hyödyllinen:</strong> Tunnilla 26 rakennat oman agenttisi n8n:ssä. Tämä tehtävä antaa ennakkonäkymän käyttöliittymään.</p>
+<h3>Tehtävä</h3>
+<ol>
+<li>Avaa n8n.</li>
+<li>Tuo esimerkkityönkulku ("Import from File", opettajan jakama tiedosto).</li>
+<li>Tutki työnkulkua ja vastaa kysymyksiin.</li>
+</ol>
+<p><strong>A. Tunnista agentin osat.</strong> Käy solmut läpi vasemmalta oikealle. Mahdolliset komponentit: <strong>syötekäsittelijä, päättelijä, työkalu, turvakerros, tulosteen muotoilija</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Solmu (vasemmalta oikealle)</th>
+<th>Mikä agentin osa tämä on?</th>
+<th>Mitä se tekee?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ensimmäinen</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Toinen</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kolmas</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Neljäs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Viimeinen</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>B. Jäljitä tiedon kulku.</strong> Kirjoita omin sanoin 3–4 lausetta: mistä data tulee sisään, mitä sille tapahtuu matkalla ja mitä tulee ulos.</p>
+<p><strong>C. Yhdistä teoriaan.</strong> Mikä tunnin 22 työkalu (verkkohaku, tiedostot, viestit, tietokanta) on tässä työnkulussa käytössä? Jos haluaisit lisätä toisen työkalun, minkä lisäisit ja miksi?</p>
+<blockquote class="pause"><p>💡 <strong>Vinkki muistiinpanoihin:</strong> Pidä silmällä esimerkkiä, jotta tunnilla 26 tunnistat solmutyypit nopeammin.</p>
+</blockquote>
+<p><strong>Opettajalle:</strong> tämä tehtävä vaatii esimerkki-n8n-työnkulun (esim. <code>esimerkki-agentti.json</code>), jonka jaat tunnin yhteydessä.</p>
+<hr />
+<p><strong>Työkaluvalinnat tarkennettu — seuraavaksi päättelymalli</strong></p></div></div></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Agentin työkalut</h1>
+<p>Tällä välilehdellä pääset harjoittelemaan juuri lukemaasi: mitä agentti voi tehdä tiedostojen, verkkohaun ja komentorivin avulla ja miten jokainen työkalu rajataan turvalliseksi. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät sanaston kertaamisesta kohti soveltamista ja päättyvät tilanteeseen, jossa suunnittelet itse, mitä oikeuksia agentille kannattaa antaa.</p>
+<h2>Tehtävä 1/5 — sanaston kertaus</h2>
+<p>Aloitetaan tunnin työkalukäsitteistä, ennen kuin siirrytään soveltamiseen.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/5 — työkalu, riski ja rajaus</h2>
+<p>Jokaisen kysymyksen taustalla on yksi yleinen työkaluja koskeva harhaluulo. Valitse vaihtoehto, joka pitää paikkansa.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/5 — mikä perustyökalu tähän tarvitaan</h2>
+<p>Nyt valitset oikean perustyökalun arkisiin tehtäviin. Varo yleistä ansaa: kaikki haku ei ole verkkohakua.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/5 — turvallinen työkalujärjestys</h2>
+<p>Kertaa, missä järjestyksessä agentin pitää kutsua työkaluja niin, että peruuttamaton toiminto tapahtuu vasta ihmisen hyväksynnän jälkeen. Napauta vaiheet oikeaan järjestykseen.</p>
+<div class="task-widget" data-ti="3"></div>
+
+<h2>Tehtävä 5/5 — mitä oikeuksia annat agentille</h2>
+<p>Viimeinen tehtävä kokoaa opitun yhteen: suunnittelet agentin työkaluoikeudet ja päätät itse, mitä pääsyä se todella tarvitsee.</p>
+<div class="task-widget" data-ti="4"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto – oppitunti 22: Agentin työkalut</h1>
+<h2>Työkalu (tool)</h2>
+<p>Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, komentorivi.</p>
+<h2>Tiedostotyökalu (file tool)</h2>
+<p>Agentti voi lukea ja kirjoittaa tiedostoja. Lukuoikeus antaa pääsyn tietoihin, kirjoitusoikeus antaa vaikutuksen.</p>
+<h2>Verkkohakutyökalu (web search tool)</h2>
+<p>Agentti voi hakea tietoa internetistä. Ajankohtainen tieto, mutta riskit: väärä tieto, kustannukset, yksityisyys.</p>
+<h2>Komentorivityökalu (CLI, command-line interface tool)</h2>
+<p>Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.</p>
+<h2>Whitelist</h2>
+<p>Luettelo asioista, joita agentti saa tehdä. Hyväksytyt komennot, hakusivustot, kansiot.</p>
+<h2>Minimioikeusperiaate (principle of least privilege)</h2>
+<p>Anna agentille vain minimaalinen pääsy, jonka se tarvitsee. Rajoitus tekee järjestelmästä turvallisemman.</p>
+<h2>Orkestraattori (orchestrator)</h2>
+<p>Koordinaattori, joka kutsuu työkaluja järjestyksessä. Agentti ei ole yksi iso neuroverkko, vaan orkesterin kapellimestari.</p>
+<h2>API (Application Programming Interface)</h2>
+<p>Rajapinta, jonka kautta agentti kommunikoi muiden ohjelmien kanssa. Esim. varastojärjestelmä, pankkijärjestelmä.</p>
+<h2>Loggaus (logging)</h2>
+<p>Kirjaus siitä, mitä agentti tekee. Jokainen funktiokutsu, API-kutsu ja päätös tallennetaan.</p>
+<h2>Riskinhallinta (risk management)</h2>
+<p>Suunnittelu siihen, mitä tapahtuu, jos agentti tekee virheen. Neljä kerrosta: validointi, rajoitus, seuranta, palautuminen.</p>
+<h2>Hiekkalaatikko (sandbox)</h2>
+<p>Eristetty ympäristö, jossa agentti ei voi vaikuttaa oikeaan järjestelmään. Turvallinen testaus.</p>
+<h2>API-avain (API key)</h2>
+<p>Tunnus, jolla agentti todistaa oikeutensa käyttää palvelua. Salassa pidettävä, ei lokeihin.</p>
+<h2>CSV (Comma-Separated Values)</h2>
+<p>Tekstitiedostomuoto, jossa tiedot ovat rivillä pilkuilla erotettuja. Helppo lukea ja käsitellä.</p>
+<h2>JSON (JavaScript Object Notation)</h2>
+<p>Tekstitiedostomuoto, jossa tiedot ovat rakenteiset. Agentti käyttää sitä konfiguraatioissa.</p>
+<h2>MCP (Model Context Protocol)</h2>
+<p>Avoin standardi, joka määrittelee yhteisen tavan kytkeä työkalu agenttiin: sama työkalu toimii eri agenteissa. Julkaistu vuonna 2024, ja vuonna 2026 se on alan yleinen käytäntö.</p>
+<h2>Konnektori (connector)</h2>
+<p>Valmisagentin liitin ulkoiseen palveluun tai tietolähteeseen, kuten sähköpostiin, kalenteriin tai tiedostoihin. Perustuu MCP:n kaltaiseen standardikytkentään.</p>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 22</text>
+<text x="74" y="244" font-size="50" font-weight="800" fill="#1B2336">Agentin työkalut</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Tiedostot, haku ja komennot</text>
+<g transform="translate(700,206)">
+<rect x="0" y="0" width="120" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3.5"/>
+<line x1="60" y1="0" x2="60" y2="-22" stroke="#008799" stroke-width="3.5" stroke-linecap="round"/><circle cx="60" cy="-28" r="7" fill="#008799"/>
+<circle cx="36" cy="40" r="10" fill="#008799"/><circle cx="84" cy="40" r="10" fill="#008799"/><rect x="34" y="66" width="52" height="8" rx="4" fill="#008799"/></g>
+<g transform="translate(636,346)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4 H15 L21 10 V24 a1 1 0 0 1 -1 1 H4 a1 1 0 0 1 -1 -1 V5 a1 1 0 0 1 1 -1 Z"/><path d="M14.5 4 V10 H21"/></g>
+<g transform="translate(744,346)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M2 13 H24 M13 2 a16 16 0 0 1 0 22 a16 16 0 0 1 0 -22"/></g>
+<g transform="translate(852,346)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="24" height="20" rx="3"/><path d="M7 11 L12 15 L7 19 M15 19 H20"/></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g2)"/>
+<text x="74" y="108" font-size="38" font-weight="800" fill="#1B2336">Chatbot vastaa — agentti toimii</text>
+<rect x="74" y="152" width="384" height="300" rx="16" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(100,180)" fill="none" stroke="#5A6478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 a2 2 0 0 1 2 -2 H25 a2 2 0 0 1 2 2 V18 a2 2 0 0 1 -2 2 H12 L7 25 V20 H5 a2 2 0 0 1 -2 -2 Z"/></g>
+<text x="140" y="204" font-size="23" font-weight="700" fill="#5A6478">Chatbot</text>
+<text x="100" y="252" font-size="18" fill="#3A4253">Vastaa pelkän muistinsa varassa.</text>
+<rect x="100" y="282" width="332" height="58" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
+<text x="118" y="316" font-size="16" fill="#5A6478">”Hinta on 50 euroa.”</text>
+<text x="100" y="390" font-size="16" fill="#7E88A8">Yksi vastaus, ei tarkistusta,</text>
+<text x="100" y="414" font-size="16" fill="#7E88A8">ei pääsyä todelliseen dataan.</text>
+<rect x="502" y="152" width="384" height="300" rx="16" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<g transform="translate(528,178)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="22" height="17" rx="4"/><path d="M14 6 V1"/><circle cx="14" cy="-1" r="2" fill="#008799" stroke="none"/><circle cx="10" cy="13" r="2" fill="#008799" stroke="none"/><circle cx="18" cy="13" r="2" fill="#008799" stroke="none"/><path d="M10 18 H18"/></g>
+<text x="568" y="204" font-size="23" font-weight="800" fill="#006B7A">Agentti</text>
+<text x="528" y="252" font-size="18" fill="#1B2336">Hakee, vertaa ja tarkistaa.</text>
+<rect x="528" y="282" width="332" height="92" rx="10" fill="#FFFFFF" stroke="#C9D2F7" stroke-width="1.3"/>
+<text x="546" y="312" font-size="16" fill="#1B2336">”Hinta on 50 €, varastossa 15 kpl.</text>
+<text x="546" y="338" font-size="16" fill="#1B2336">Kilpailija 55 € — olemme</text>
+<text x="546" y="360" font-size="16" fill="#1B2336">edullisempia.”</text>
+<text x="528" y="414" font-size="15" fill="#006B7A">Käytti työkaluja: tietokanta, API, laskuri.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g3)"/>
+<text x="74" y="108" font-size="38" font-weight="800" fill="#1B2336">Kolme perustyökalua</text>
+<text x="74" y="146" font-size="19" fill="#5A6478">Näiden päälle rakentuvat lähes kaikki muut työkalut.</text>
+<rect x="74" y="186" width="258" height="252" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="203" cy="266" r="40" fill="#F0F9F4"/>
+<g transform="translate(180,243)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4 H26 L37 15 V42 a1 1 0 0 1 -1 1 H6 a1 1 0 0 1 -1 -1 V5 a1 1 0 0 1 1 -1 Z"/><path d="M25 4 V15 H37 M13 26 H29 M13 33 H29"/></g>
+<text x="203" y="356" text-anchor="middle" font-size="24" font-weight="800" fill="#1B2336">Tiedostot</text>
+<text x="203" y="390" text-anchor="middle" font-size="17" fill="#5A6478">lue ja kirjoita dataa</text>
+<text x="203" y="416" text-anchor="middle" font-size="14" fill="#7E88A8">esim. lue myyntitiedot.csv</text>
+<rect x="351" y="186" width="258" height="252" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="480" cy="266" r="40" fill="#E9F6F7"/>
+<g transform="translate(456,242)" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="24" r="20"/><path d="M4 24 H44 M24 4 a30 30 0 0 1 0 40 a30 30 0 0 1 0 -40"/></g>
+<text x="480" y="356" text-anchor="middle" font-size="24" font-weight="800" fill="#1B2336">Verkkohaku</text>
+<text x="480" y="390" text-anchor="middle" font-size="17" fill="#5A6478">ajantasaista tietoa</text>
+<text x="480" y="416" text-anchor="middle" font-size="14" fill="#7E88A8">esim. osakkeen kurssi nyt</text>
+<rect x="628" y="186" width="258" height="252" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="757" cy="266" r="40" fill="#FBF4E2"/>
+<g transform="translate(732,244)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="46" height="36" rx="4"/><path d="M11 18 L19 24 L11 30 M27 30 H38"/></g>
+<text x="757" y="356" text-anchor="middle" font-size="24" font-weight="800" fill="#1B2336">Komentorivi</text>
+<text x="757" y="390" text-anchor="middle" font-size="17" fill="#5A6478">aja komentoja</text>
+<text x="757" y="416" text-anchor="middle" font-size="14" fill="#7E88A8">esim. python analyze_sales.py</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g4)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Työkalu 1: Tiedostot</text>
+<text x="74" y="138" font-size="19" fill="#5A6478">Pääsy pysyvään dataan — lukeminen ja kirjoittaminen.</text>
+<rect x="74" y="174" width="406" height="284" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,196)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 a14 14 0 0 0 28 0 a14 14 0 0 0 -28 0 Z"/><circle cx="16" cy="12" r="5"/></g>
+<text x="142" y="218" font-size="24" font-weight="700" fill="#006B7A">Lukee</text>
+<text x="98" y="256" font-size="18" fill="#3A4253">Näkee maailman datan kautta:</text>
+<text x="98" y="290" font-size="17" fill="#5A6478">• raportit (PDF)</text>
+<text x="98" y="320" font-size="17" fill="#5A6478">• tietolistat (CSV)</text>
+<text x="98" y="350" font-size="17" fill="#5A6478">• asetukset (JSON), lokit</text>
+<text x="98" y="404" font-size="16" fill="#3A4253">Esim. lukee ilmoittautumislistan</text>
+<text x="98" y="428" font-size="16" fill="#3A4253">ja tietää, että työpaja on täynnä.</text>
+<rect x="500" y="174" width="386" height="284" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(524,196)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 L21 3 a3 3 0 0 1 4 4 L7 25 L2 26 Z"/></g>
+<text x="568" y="218" font-size="24" font-weight="700" fill="#247A52">Kirjoittaa</text>
+<text x="524" y="256" font-size="18" fill="#3A4253">Vaikuttaa maailmaan:</text>
+<text x="524" y="290" font-size="17" fill="#5A6478">• raportit ja toimintalokit</text>
+<text x="524" y="320" font-size="17" fill="#5A6478">• CSV:n, jonka Excel avaa</text>
+<text x="524" y="350" font-size="17" fill="#5A6478">• asetukset, jotka palvelin lukee</text>
+<text x="524" y="404" font-size="16" fill="#3A4253">Esim. myyntiagentti kirjoittaa</text>
+<text x="524" y="428" font-size="16" fill="#3A4253">listan uusista asiakkaista.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tiedosto-oikeudet: tasapaino</text>
+<text x="74" y="138" font-size="19" fill="#5A6478">Liikaa oikeuksia vaarantaa, liian vähän estää työn.</text>
+<rect x="74" y="174" width="812" height="78" rx="12" fill="#FBEFEF" stroke="#E6C3C3" stroke-width="1.5"/>
+<g transform="translate(100,198)" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L27 26 H1 Z"/><path d="M14 11 V18 M14 22 v0.5"/></g>
+<text x="146" y="206" font-size="19" font-weight="700" fill="#A53227">Liikaa oikeuksia</text>
+<text x="146" y="234" font-size="16" fill="#3A4253">Virhe voi poistaa tärkeitä tiedostoja — esim. rm -rf / tuhoaa koko koneen.</text>
+<text x="74" y="300" font-size="20" font-weight="700" fill="#1B2336">Käytännön minimioikeus:</text>
+<rect x="74" y="320" width="262" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,342)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 L21 3 a3 3 0 0 1 4 4 L7 25 L2 26 Z"/></g>
+<text x="98" y="384" font-size="18" font-weight="700" fill="#247A52">Kirjoitus</text>
+<text x="98" y="414" font-size="16" fill="#3A4253">vain kansioon</text>
+<text x="98" y="436" font-size="16" fill="#5A6478" font-family="ui-monospace,monospace">/reports/</text>
+<rect x="349" y="320" width="262" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(373,342)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 a14 14 0 0 0 28 0 a14 14 0 0 0 -28 0 Z"/><circle cx="16" cy="12" r="5"/></g>
+<text x="373" y="384" font-size="18" font-weight="700" fill="#006B7A">Vain luku</text>
+<text x="373" y="414" font-size="16" fill="#3A4253">asiakastietoihin —</text>
+<text x="373" y="436" font-size="16" fill="#3A4253">ei muokkausta</text>
+<rect x="624" y="320" width="262" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(648,342)" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="22" height="15" rx="2"/><path d="M7 11 V7 a7 7 0 0 1 14 0 V11"/></g>
+<text x="648" y="384" font-size="18" font-weight="700" fill="#A53227">Ei pääsyä</text>
+<text x="648" y="414" font-size="16" fill="#3A4253">palkkajärjestelmän</text>
+<text x="648" y="436" font-size="16" fill="#3A4253">tiedostoihin</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g6)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Työkalu 2: Verkkohaku</text>
+<text x="74" y="138" font-size="19" fill="#5A6478">Pääsy ajankohtaiseen tietoon koulutusdatan jälkeen.</text>
+<rect x="74" y="178" width="812" height="96" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
+<g transform="translate(106,206)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round"><circle cx="18" cy="18" r="16"/><path d="M2 18 H34 M18 2 a24 24 0 0 1 0 32 a24 24 0 0 1 0 -32"/></g>
+<text x="166" y="216" font-size="20" font-weight="700" fill="#006B7A">Ilman hakua agentti tietää vain koulutusdatansa.</text>
+<text x="166" y="248" font-size="18" fill="#1B2336">Vuoden 2023 data vanhenee — osakekurssit, uutiset ja ohjeet muuttuvat.</text>
+<text x="74" y="326" font-size="20" font-weight="700" fill="#1B2336">Haku tuo ajantasaisuuden:</text>
+<rect x="74" y="346" width="262" height="112" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,368)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18 L9 11 L14 16 L24 4"/><path d="M18 4 H24 V10"/></g>
+<text x="98" y="412" font-size="18" font-weight="600" fill="#1B2336">Osakkeen hinta</text>
+<text x="98" y="438" font-size="16" fill="#5A6478">tämänhetkinen kurssi</text>
+<rect x="349" y="346" width="262" height="112" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(373,368)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="24" height="20" rx="2"/><path d="M7 11 H21 M7 16 H17 M7 21 H14"/></g>
+<text x="373" y="412" font-size="18" font-weight="600" fill="#1B2336">Päivän uutiset</text>
+<text x="373" y="438" font-size="16" fill="#5A6478">tuoreet tapahtumat</text>
+<rect x="624" y="346" width="262" height="112" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(648,368)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="11"/><path d="M13 7 V13 L17 16"/></g>
+<text x="648" y="412" font-size="18" font-weight="600" fill="#1B2336">Uusimmat ohjeet</text>
+<text x="648" y="438" font-size="16" fill="#5A6478">esim. päivitykset</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Verkkohaun kolme riskiä</text>
+<rect x="74" y="146" width="258" height="200" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="116" cy="190" r="20" fill="#FBEFEF"/>
+<g transform="translate(104,178)" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="11"/><path d="M12 7 V13 M12 17 v0.5"/></g>
+<text x="152" y="186" font-size="21" font-weight="700" fill="#1B2336">Väärä tieto</text>
+<text x="152" y="208" font-size="15" fill="#5A6478">epäluotettavat sivut</text>
+<text x="98" y="252" font-size="16" fill="#3A4253">Haku voi löytää valheita</text>
+<text x="98" y="276" font-size="16" fill="#3A4253">tai harhaisia sivuja —</text>
+<text x="98" y="300" font-size="16" fill="#3A4253">vaarallista esim. terveys-</text>
+<text x="98" y="324" font-size="16" fill="#3A4253">neuvoissa.</text>
+<rect x="351" y="146" width="258" height="200" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="393" cy="190" r="20" fill="#FBF4E2"/>
+<g transform="translate(381,179)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="11"/><path d="M12 6 V18 M9 9 h5 a2 2 0 0 1 0 4 H10 a2 2 0 0 0 0 4 h5"/></g>
+<text x="429" y="186" font-size="21" font-weight="700" fill="#1B2336">Kustannukset</text>
+<text x="429" y="208" font-size="15" fill="#5A6478">maksulliset haut</text>
+<text x="375" y="252" font-size="16" fill="#3A4253">Rajoittamaton agentti voi</text>
+<text x="375" y="276" font-size="16" fill="#3A4253">tehdä 100 hakua tunnissa —</text>
+<text x="375" y="300" font-size="16" fill="#3A4253">lasku kasvaa nopeasti.</text>
+<rect x="628" y="146" width="258" height="200" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="670" cy="190" r="20" fill="#E5F6F7"/>
+<g transform="translate(658,178)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="12" rx="2"/><path d="M6 11 V8 a6 6 0 0 1 12 0 V11"/></g>
+<text x="706" y="186" font-size="21" font-weight="700" fill="#1B2336">Yksityisyys</text>
+<text x="706" y="208" font-size="15" fill="#5A6478">arkaluontoiset haut</text>
+<text x="652" y="252" font-size="16" fill="#3A4253">Agentti voi yrittää hakea</text>
+<text x="652" y="276" font-size="16" fill="#3A4253">henkilötunnuksia tai</text>
+<text x="652" y="300" font-size="16" fill="#3A4253">salasanoja — vakava riski.</text>
+<rect x="74" y="372" width="812" height="86" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(100,396)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linejoin="round"><path d="M14 2 L25 6 V14 c0 7 -5 11 -11 13 c-6 -2 -11 -6 -11 -13 V6 Z"/><path d="M9 14 l4 4 l7 -8" stroke-linecap="round"/></g>
+<text x="146" y="406" font-size="19" font-weight="700" fill="#247A52">Suojaa whitelist-mallilla</text>
+<text x="146" y="434" font-size="17" fill="#3A4253">Salli vain viralliset lähteet, kiellä yksityiset termit ja rajaa hakujen määrä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g8)"/>
+<rect x="0" y="0" width="12" height="540" fill="#C79100"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Työkalu 3: Komentorivi (CLI)</text>
+<text x="74" y="138" font-size="19" fill="#5A6478">Agentti ajaa järjestelmäkomentoja — voimakkain ja vaarallisin.</text>
+<rect x="74" y="178" width="406" height="280" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,200)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="28" height="22" rx="3"/><path d="M8 12 L13 16 L8 20 M16 20 H23"/></g>
+<text x="142" y="222" font-size="22" font-weight="700" fill="#247A52">Mihin se pystyy</text>
+<text x="98" y="262" font-size="16" fill="#3A4253">Luo ja poistaa kansioita,</text>
+<text x="98" y="286" font-size="16" fill="#3A4253">käynnistää ohjelmia, muokkaa</text>
+<text x="98" y="310" font-size="16" fill="#3A4253">asetuksia. Esimerkiksi:</text>
+<rect x="98" y="328" width="358" height="34" rx="7" fill="#11182A"/>
+<text x="114" y="350" font-size="15" fill="#7FD0A8" font-family="ui-monospace,monospace">python analyze_sales.py</text>
+<rect x="98" y="370" width="358" height="34" rx="7" fill="#11182A"/>
+<text x="114" y="392" font-size="15" fill="#7FD0A8" font-family="ui-monospace,monospace">systemctl restart apache2</text>
+<text x="98" y="436" font-size="15" fill="#5A6478">Tekee minuutissa työn, joka veisi tunteja.</text>
+<rect x="500" y="178" width="386" height="280" rx="16" fill="#FBEFEF" stroke="#E6C3C3" stroke-width="2"/>
+<g transform="translate(524,200)" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L27 26 H1 Z"/><path d="M14 11 V18 M14 22 v0.5"/></g>
+<text x="568" y="222" font-size="22" font-weight="700" fill="#A53227">Miksi vaarallinen</text>
+<text x="524" y="262" font-size="16" fill="#3A4253">Rajoittamaton agentti voi</text>
+<text x="524" y="286" font-size="16" fill="#3A4253">poistaa kaiken tai kaataa</text>
+<text x="524" y="310" font-size="16" fill="#3A4253">koko järjestelmän:</text>
+<rect x="524" y="328" width="338" height="34" rx="7" fill="#2A1414"/>
+<text x="540" y="350" font-size="15" fill="#F2A6A0" font-family="ui-monospace,monospace">rm -rf /</text>
+<text x="524" y="392" font-size="16" fill="#3A4253">Yksi virheellinen päätös voi</text>
+<text x="524" y="416" font-size="16" fill="#3A4253">tuhota viikkojen työn.</text>
+<text x="524" y="446" font-size="15" fill="#A53227">Riskialttein työkalutyyppi.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g9)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Neljä tapaa rajata komentorivi</text>
+<rect x="74" y="146" width="406" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="98" y="190" font-size="26" font-weight="800" fill="#008799">1</text>
+<text x="132" y="190" font-size="21" font-weight="700" fill="#1B2336">Whitelist</text>
+<text x="98" y="226" font-size="16" fill="#5A6478">Vain sallitut komennot:</text>
+<text x="98" y="252" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">ls · mkdir · cp</text>
+<text x="98" y="278" font-size="15" fill="#A53227" font-family="ui-monospace,monospace">EI: rm · shutdown · chmod</text>
+<rect x="500" y="146" width="386" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="524" y="190" font-size="26" font-weight="800" fill="#008799">2</text>
+<text x="558" y="190" font-size="21" font-weight="700" fill="#1B2336">Toimintorajoitus</text>
+<text x="524" y="226" font-size="16" fill="#5A6478">Agentti saa lukea ja luoda,</text>
+<text x="524" y="252" font-size="16" fill="#5A6478">mutta ei poistaa mitään.</text>
+<text x="524" y="278" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">esim. mkdir kyllä, rm ei</text>
+<rect x="74" y="310" width="406" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="98" y="354" font-size="26" font-weight="800" fill="#008799">3</text>
+<text x="132" y="354" font-size="21" font-weight="700" fill="#1B2336">Hiekkalaatikko</text>
+<g transform="translate(370,330)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="26" height="20" rx="3" stroke-dasharray="4 3"/><circle cx="15" cy="16" r="5"/></g>
+<text x="98" y="390" font-size="16" fill="#5A6478">Eristetty ympäristö, josta ei</text>
+<text x="98" y="416" font-size="16" fill="#5A6478">pääse vaikuttamaan oikeaan</text>
+<text x="98" y="442" font-size="16" fill="#5A6478">järjestelmään.</text>
+<rect x="500" y="310" width="386" height="148" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="524" y="354" font-size="26" font-weight="800" fill="#2F9E69">4</text>
+<text x="558" y="354" font-size="21" font-weight="700" fill="#247A52">Hyväksyntä</text>
+<g transform="translate(776,332)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="15" r="13"/><path d="M8 15 l5 5 l9 -10"/></g>
+<text x="524" y="390" font-size="16" fill="#3A4253">Agentti ehdottaa komentoa,</text>
+<text x="524" y="416" font-size="16" fill="#3A4253">mutta ihminen vahvistaa sen</text>
+<text x="524" y="442" font-size="16" fill="#3A4253">ennen suorittamista.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g10)"/>
+<text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Orkestraattori</text>
+<text x="74" y="126" font-size="19" fill="#5A6478">Agentti ei tee kaikkea itse — se kutsuu työkaluja oikeassa järjestyksessä.</text>
+<g transform="translate(72,180)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 30 V12 a10 10 0 0 1 20 0 V30"/><path d="M4 30 q10 6 20 0"/><path d="M14 2 V12"/></g>
+<text x="120" y="200" font-size="20" font-weight="700" fill="#1B2336">Kuin kapellimestari</text>
+<text x="120" y="226" font-size="17" fill="#5A6478">ei soita itse, vaan ohjaa: ”Viulut, teidän vuoronne.”</text>
+<rect x="380" y="266" width="200" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3.5"/>
+<line x1="480" y1="266" x2="480" y2="244" stroke="#008799" stroke-width="3.5" stroke-linecap="round"/><circle cx="480" cy="238" r="7" fill="#008799"/>
+<circle cx="456" cy="306" r="10" fill="#008799"/><circle cx="504" cy="306" r="10" fill="#008799"/><rect x="454" y="332" width="52" height="8" rx="4" fill="#008799"/>
+<text x="480" y="392" text-anchor="middle" font-size="14" font-weight="600" fill="#006B7A">AGENTTI</text>
+<g stroke="#C2CAD9" stroke-width="1.4" stroke-dasharray="4 4"><line x1="380" y1="316" x2="220" y2="316"/><line x1="580" y1="316" x2="740" y2="316"/></g>
+<rect x="98" y="288" width="122" height="56" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+<text x="159" y="312" text-anchor="middle" font-size="14" font-weight="700" fill="#247A52">1. Tiedosto-</text>
+<text x="159" y="332" text-anchor="middle" font-size="14" fill="#3A4253">lukija</text>
+<rect x="740" y="288" width="122" height="56" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+<text x="801" y="312" text-anchor="middle" font-size="14" font-weight="700" fill="#006B7A">2. Verkko-</text>
+<text x="801" y="332" text-anchor="middle" font-size="14" fill="#3A4253">hakija</text>
+<rect x="300" y="412" width="360" height="74" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="480" y="442" text-anchor="middle" font-size="15" fill="#3A4253">3. Analyysityökalu yhdistää tulokset</text>
+<text x="480" y="468" text-anchor="middle" font-size="13" fill="#7E88A8" font-family="ui-monospace,monospace">vaihe vaiheelta — ei kaikkia yhtä aikaa</text>
+<text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g11)"/>
+<text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Esimerkki: analytiikka-agentti</text>
+<text x="74" y="126" font-size="19" fill="#5A6478">Kolme työkalua yhdessä toimivana prosessina.</text>
+<rect x="74" y="166" width="190" height="120" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+<g transform="translate(98,186)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3 H18 L25 10 V27 a1 1 0 0 1 -1 1 H5 a1 1 0 0 1 -1 -1 V4 a1 1 0 0 1 1 -1 Z"/><path d="M17.5 3 V10 H25"/></g>
+<text x="98" y="248" font-size="18" font-weight="700" fill="#247A52">1. Lue</text>
+<text x="98" y="272" font-size="14" fill="#3A4253" font-family="ui-monospace,monospace">myyntitiedot.csv</text>
+<rect x="288" y="166" width="190" height="120" rx="14" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
+<g transform="translate(312,186)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M2 13 H24 M13 2 a16 16 0 0 1 0 22 a16 16 0 0 1 0 -22"/></g>
+<text x="312" y="248" font-size="18" font-weight="700" fill="#006B7A">2. Hae</text>
+<text x="312" y="272" font-size="14" fill="#3A4253">markkinatrendit</text>
+<rect x="502" y="166" width="190" height="120" rx="14" fill="#FBF4E2" stroke="#EAD9A8" stroke-width="1.5"/>
+<g transform="translate(526,188)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="26" height="20" rx="3"/><path d="M8 12 L13 16 L8 20 M16 20 H23"/></g>
+<text x="526" y="248" font-size="18" font-weight="700" fill="#9A7400">3. Analysoi</text>
+<text x="526" y="272" font-size="14" fill="#3A4253" font-family="ui-monospace,monospace">python ...py</text>
+<rect x="716" y="166" width="190" height="120" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+<g transform="translate(740,186)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 L21 3 a3 3 0 0 1 4 4 L7 25 L2 26 Z"/></g>
+<text x="740" y="248" font-size="18" font-weight="700" fill="#247A52">4. Kirjoita</text>
+<text x="740" y="272" font-size="14" fill="#3A4253">raportti /reports/</text>
+<line x1="264" y1="226" x2="284" y2="226" stroke="#9AA6BD" stroke-width="2.2"/><path d="M288 226 L278 221 L278 231 Z" fill="#9AA6BD"/>
+<line x1="478" y1="226" x2="498" y2="226" stroke="#9AA6BD" stroke-width="2.2"/><path d="M502 226 L492 221 L492 231 Z" fill="#9AA6BD"/>
+<line x1="692" y1="226" x2="712" y2="226" stroke="#9AA6BD" stroke-width="2.2"/><path d="M716 226 L706 221 L706 231 Z" fill="#9AA6BD"/>
+<rect x="74" y="332" width="812" height="130" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="372" font-size="19" font-weight="700" fill="#1B2336">Jokainen työkalu tukee seuraavaa vaihetta</text>
+<text x="100" y="408" font-size="17" fill="#3A4253">Agentti lukee datan tiedostoista, etsii kontekstin verkosta, tekee analyysin</text>
+<text x="100" y="434" font-size="17" fill="#3A4253">komentorivillä ja kirjoittaa tulokset takaisin tiedostoksi — yhtenäinen prosessi.</text>
+<text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g12)"/>
+<text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Teoriasta n8n-solmuihin</text>
+<text x="74" y="126" font-size="19" fill="#5A6478">Abstraktit työkalut muuttuvat konkreettisiksi solmuiksi oppitunneilla 26–27.</text>
+<rect x="74" y="158" width="812" height="48" rx="10" fill="#E5F6F7" stroke="#C9D2F7" stroke-width="1.3"/>
+<text x="98" y="188" font-size="16" font-weight="700" fill="#006B7A">Työkalu teoriassa</text>
+<text x="430" y="188" font-size="16" font-weight="700" fill="#006B7A">n8n-solmu käytännössä</text>
+<rect x="74" y="214" width="812" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.3"/>
+<text x="98" y="242" font-size="16" fill="#1B2336">Tiedoston luku / kirjoitus</text>
+<text x="430" y="242" font-size="16" fill="#3A4253">Read Files · Write File · Google Sheets</text>
+<rect x="74" y="266" width="812" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.3"/>
+<text x="98" y="294" font-size="16" fill="#1B2336">Verkkohaku</text>
+<text x="430" y="294" font-size="16" fill="#3A4253">HTTP Request · Google Search</text>
+<rect x="74" y="318" width="812" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.3"/>
+<text x="98" y="346" font-size="16" fill="#1B2336">Komentorivi (CLI)</text>
+<text x="430" y="346" font-size="16" fill="#3A4253">Execute Command (hiekkalaatikossa)</text>
+<rect x="74" y="370" width="812" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.3"/>
+<text x="98" y="398" font-size="16" fill="#1B2336">Sähköposti / tietokanta</text>
+<text x="430" y="398" font-size="16" fill="#3A4253">Gmail · SMTP · MySQL · PostgreSQL</text>
+<rect x="74" y="426" width="812" height="48" rx="10" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
+<text x="98" y="456" font-size="16" fill="#247A52">Turvakerrokset n8n:ssä: IF-solmut, erilliset työnkulut ja hyväksyntäsolmut.</text>
+<text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g14" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g14)"/>
+<text x="74" y="108" font-size="38" font-weight="800" fill="#1B2336">MCP — yksi liitin kaikille työkaluille</text>
+<rect x="94" y="210" width="150" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3.5"/>
+<line x1="169" y1="210" x2="169" y2="188" stroke="#008799" stroke-width="3.5" stroke-linecap="round"/><circle cx="169" cy="181" r="7" fill="#008799"/>
+<circle cx="139" cy="250" r="10" fill="#008799"/><circle cx="199" cy="250" r="10" fill="#008799"/><rect x="137" y="276" width="64" height="8" rx="4" fill="#008799"/>
+<text x="169" y="340" text-anchor="middle" font-size="17" font-weight="700" fill="#006B7A">Agentti</text>
+<line x1="244" y1="260" x2="430" y2="260" stroke="#008799" stroke-width="3" stroke-linecap="round"/>
+<rect x="430" y="185" width="64" height="150" rx="18" fill="#E5F6F7" stroke="#008799" stroke-width="3"/>
+<text x="462" y="238" text-anchor="middle" font-size="20" font-weight="800" fill="#006B7A">M</text>
+<text x="462" y="266" text-anchor="middle" font-size="20" font-weight="800" fill="#006B7A">C</text>
+<text x="462" y="294" text-anchor="middle" font-size="20" font-weight="800" fill="#006B7A">P</text>
+<line x1="494" y1="260" x2="640" y2="198" stroke="#9AA6BD" stroke-width="2"/>
+<line x1="494" y1="260" x2="640" y2="258" stroke="#9AA6BD" stroke-width="2"/>
+<line x1="494" y1="260" x2="640" y2="318" stroke="#9AA6BD" stroke-width="2"/>
+<line x1="494" y1="260" x2="640" y2="378" stroke="#9AA6BD" stroke-width="2"/>
+<rect x="640" y="176" width="180" height="44" rx="10" fill="#FFFFFF" stroke="#2F9E69" stroke-width="2"/>
+<text x="730" y="203" text-anchor="middle" font-size="16" font-weight="600" fill="#3A4253">Tiedostot</text>
+<rect x="640" y="236" width="180" height="44" rx="10" fill="#FFFFFF" stroke="#008799" stroke-width="2"/>
+<text x="730" y="263" text-anchor="middle" font-size="16" font-weight="600" fill="#3A4253">Verkkohaku</text>
+<rect x="640" y="296" width="180" height="44" rx="10" fill="#FFFFFF" stroke="#C79100" stroke-width="2"/>
+<text x="730" y="323" text-anchor="middle" font-size="16" font-weight="600" fill="#3A4253">Sähköposti</text>
+<rect x="640" y="356" width="180" height="44" rx="10" fill="#FFFFFF" stroke="#5A6478" stroke-width="2"/>
+<text x="730" y="383" text-anchor="middle" font-size="16" font-weight="600" fill="#3A4253">Kalenteri</text>
+<text x="74" y="412" font-size="17" fill="#5A6478">Avoin standardi: sama liitin joka työkaluun — myös n8n:ssä on MCP-solmut.</text>
+<rect x="74" y="434" width="812" height="56" rx="10" fill="#FFF7E6" stroke="#C79100" stroke-width="2"/>
+<path d="M104 476 L116 454 L128 476 Z" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linejoin="round"/><line x1="116" y1="462" x2="116" y2="469" stroke="#C79100" stroke-width="2.4" stroke-linecap="round"/><circle cx="116" cy="473" r="1.3" fill="#C79100"/>
+<text x="144" y="468" font-size="17" fill="#8A6400">Liitin ei poista rajauksia — oikeudet, whitelistit ja lokitus tarvitaan silti.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 14</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l22g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l22g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="138" font-size="19" fill="#5A6478">Voima tuo vastuun — jokainen työkalu vaatii rajoitukset.</text>
+<rect x="74" y="174" width="262" height="180" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,196)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3 H18 L25 10 V27 a1 1 0 0 1 -1 1 H5 a1 1 0 0 1 -1 -1 V4 a1 1 0 0 1 1 -1 Z"/><path d="M17.5 3 V10 H25"/></g>
+<text x="98" y="258" font-size="21" font-weight="700" fill="#1B2336">Tiedostot</text>
+<text x="98" y="294" font-size="16" fill="#5A6478">Hallitse tiedosto-</text>
+<text x="98" y="318" font-size="16" fill="#5A6478">oikeuksia: minimi-</text>
+<text x="98" y="342" font-size="16" fill="#5A6478">oikeus, lokitus.</text>
+<rect x="349" y="174" width="262" height="180" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(373,196)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M2 13 H24 M13 2 a16 16 0 0 1 0 22 a16 16 0 0 1 0 -22"/></g>
+<text x="373" y="258" font-size="21" font-weight="700" fill="#1B2336">Verkkohaku</text>
+<text x="373" y="294" font-size="16" fill="#5A6478">Whitelist sallituille</text>
+<text x="373" y="318" font-size="16" fill="#5A6478">lähteille, hakurajat,</text>
+<text x="373" y="342" font-size="16" fill="#5A6478">termikiellot.</text>
+<rect x="624" y="174" width="262" height="180" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(648,198)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="26" height="20" rx="3"/><path d="M8 12 L13 16 L8 20 M16 20 H23"/></g>
+<text x="648" y="258" font-size="21" font-weight="700" fill="#1B2336">Komentorivi</text>
+<text x="648" y="294" font-size="16" fill="#5A6478">Whitelist, hiekka-</text>
+<text x="648" y="318" font-size="16" fill="#5A6478">laatikko ja ihmisen</text>
+<text x="648" y="342" font-size="16" fill="#5A6478">hyväksyntä.</text>
+<rect x="74" y="376" width="812" height="84" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(100,400)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="22" height="17" rx="4"/><path d="M14 6 V1"/><circle cx="14" cy="-1" r="2" fill="#2F9E69" stroke="none"/><circle cx="10" cy="13" r="2" fill="#2F9E69" stroke="none"/><circle cx="18" cy="13" r="2" fill="#2F9E69" stroke="none"/><path d="M10 18 H18"/></g>
+<text x="146" y="410" font-size="19" font-weight="700" fill="#247A52">Agentti on orkestraattori</text>
+<text x="146" y="438" font-size="16" fill="#3A4253">Ei yksi älykäs ohjelma, vaan koordinaattori, joka kutsuu työkaluja vuorollaan.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">14 / 14</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-21/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-23/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-22')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "luokka", "lid": "lesson-22", "num": 22, "title": "Agentin työkalut — tiedostot, haku ja komennot", "ptasks": [{"type": "match", "title": "Käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Tiedostotyökalu", "b": "Antaa agentille pääsyn pysyvään dataan: se voi lukea raportteja ja lokeja tai kirjoittaa tuloksia levylle.", "explain": "Luku antaa tiedon, kirjoitus vaikutuksen — juuri siksi luku-, kirjoitus- ja poisto-oikeudet rajataan erikseen."}, {"a": "Verkkohakutyökalu", "b": "Tuo agentille ajankohtaista tietoa internetistä, koulutusdatan ulkopuolelta.", "explain": "Hyödyllinen mutta kolmen riskin väline: väärä tieto, kustannukset ja yksityisyys."}, {"a": "Komentorivityökalu (CLI)", "b": "Antaa agentin ajaa järjestelmätason käskyjä palvelimella — voimakkain mutta myös vaarallisin väline.", "explain": "Voi luoda ja käynnistää, mutta myös tuhota — siksi se vaatii tiukimmat rajat: whitelist, hiekkalaatikko tai hyväksyntä."}, {"a": "Whitelist", "b": "Etukäteen hyväksytty luettelo sallituista käskyistä, kansioista tai lähteistä.", "explain": "Turvallinen vain rajattuna — hyvä luettelo on juuri niin lyhyt kuin tehtävä sallii."}, {"a": "Minimioikeusperiaate", "b": "Anna vain se vähin pääsy, jonka tehtävä todella vaatii.", "explain": "Mitä vähemmän pääsyä agentilla on, sitä vähemmän vahinkoa se voi tehdä virhetilanteessa."}, {"a": "Orkestraattori", "b": "Koordinaattori, joka kutsuu eri työkaluja oikeassa järjestyksessä kuin kapellimestari.", "explain": "Agentti ei tee kaikkea itse, vaan yhdistää erikoistuneiden työkalujen tulokset oikeassa järjestyksessä."}, {"a": "MCP", "b": "Avoin standardi, joka määrittää yhteisen tavan liittää työkalu agenttiin: kerran tehty käy moneen.", "explain": "Vastaa kysymykseen 'miten kytketään', ei kysymykseen 'mitä saa tehdä' — rajaukset tarvitaan silti."}, {"a": "Konnektori", "b": "Valmisagentin valmis liitin ulkoiseen palveluun, kuten sähköpostiin tai kalenteriin.", "explain": "Perustuu samaan standardikytkentään kuin MCP — helppous ei poista rajausten tarvetta."}], "summary": "Kolme perustyökalua — tiedostot, verkkohaku ja komentorivi — antavat agentille kyvyn toimia. Orkestraattori kutsuu niitä oikeassa järjestyksessä, ja whitelist sekä minimioikeusperiaate pitävät ne turvallisina — myös silloin, kun ne on kytketty standardilla (MCP, konnektori)."}, {"type": "quiz", "title": "Työkalu, riski ja rajaus", "intro": "Jokaisessa kysymyksessä piilee yksi yleinen työkaluja koskeva harhaluulo. Valitse vastaus, joka pitää paikkansa — ja lue myös, miksi muut menevät harhaan.", "items": [{"q": "Agentille annetaan varmuuden vuoksi laaja whitelist, jossa on paljon komentoja ja kansioita, 'jottei se jää jumiin'. Miksi tämä on ongelma?", "options": [{"text": "Mitä enemmän sallitaan, sitä enemmän vahinkoa agentti voi tehdä virhetilanteessa — hyvä whitelist on juuri niin lyhyt kuin tehtävä sallii.", "correct": true, "explain": "Laajuus lisää riskiä, ei turvallisuutta. Jokainen ylimääräinen lupa on lisää pinta-alaa, jolla virhe voi aiheuttaa vahinkoa."}, {"text": "Ei ongelmaa — mitä pidempi whitelist, sitä parempi ja joustavampi agentti.", "correct": false, "explain": "Pidempi lista ei tee agentista parempaa vaan vaarallisemman. Turvallinen whitelist on rajattu, ei kattava."}, {"text": "Ongelma on vain se, että pitkä lista on hidas lukea.", "correct": false, "explain": "Kyse ei ole nopeudesta vaan siitä, kuinka paljon vahinkoa sallitut oikeudet mahdollistavat. Lyhyt lista on turvallisuus-, ei suorituskykyasia."}]}, {"q": "Myymälän agentti hakee verkosta tuotteen tiedot ja toimii löytämänsä perusteella. Miksi pelkkä 'se vain lukee' ei tee hausta turvallista?", "options": [{"text": "Haku voi tuoda virheellistä, vanhentunutta tai manipuloitua tietoa, ja jos agentti toimii sen mukaan, väärä tieto muuttuu vääräksi toiminnaksi.", "correct": true, "explain": "Lukeminen johtaa toimintaan. Siksi lähteen laatu ratkaisee, ja haku kannattaa rajata luotettaviin lähteisiin."}, {"text": "Verkkohaku on aina turvallista, koska lukeminen ei voi aiheuttaa vahinkoa.", "correct": false, "explain": "Lukeminen ei ole vaaratonta, kun agentti tekee päätöksiä löytämänsä perusteella. Väärä lähde voi johtaa väärään toimintaan."}, {"text": "Se on turvallista, kunhan agentti tekee mahdollisimman monta hakua.", "correct": false, "explain": "Useat haut eivät paranna luotettavuutta. Hakumäärää pitää päinvastoin rajoittaa, koska jokainen haku voi maksaa."}]}, {"q": "Tekninen agentti saisi ajaa komentorivikäskyjä vapaasti, 'koska CLI on tehokas'. Mikä on parempi lähtökohta?", "options": [{"text": "CLI on vaarallinen juuri siksi, että se on tehokas — sitä käytetään vain tarpeeseen ja silloinkin hiekkalaatikossa, whitelistillä tai ihmisen hyväksynnällä.", "correct": true, "explain": "Teho ja riski kulkevat käsi kädessä. Vapaa komentorivipääsy voi tuhota järjestelmän, joten se rajataan tiukasti."}, {"text": "CLI:tä kannattaa käyttää mahdollisimman paljon, koska se on tehokkain työkalu.", "correct": false, "explain": "Tehokkuus ei ole peruste käyttää työkalua rajattomasti. Juuri tehonsa takia CLI on myös vaarallisin ja vaatii tiukimmat rajat."}, {"text": "CLI on turvallinen, kunhan agentti kirjaa komennot lokiin.", "correct": false, "explain": "Lokitus auttaa jäljittämään jälkikäteen, mutta ei estä vaarallista käskyä. Rajaus tarvitaan ennen suoritusta, ei vasta sen jälkeen."}]}, {"q": "Agentti hakee verkosta taustatietoa vasta sen jälkeen, kun se on jo kirjoittanut raportin valmiiksi. Mitä tästä seuraa?", "options": [{"text": "Väärä järjestys tuottaa puutteellisen tuloksen — taustatieto olisi pitänyt hakea ennen raportin kokoamista; oikea järjestys on osa agentin päättelyä.", "correct": true, "explain": "Työkalujen järjestys vaikuttaa suoraan lopputulokseen. Kokoamisen jälkeen haettu tieto ei ehdi mukaan raporttiin."}, {"text": "Ei mitään — työkalujen järjestyksellä ei ole väliä, kunhan kaikkia käytetään.", "correct": false, "explain": "Järjestys ei ole yhdentekevä. Se ratkaisee, päätyykö oikea tieto lopputulokseen vai ei."}, {"text": "Raportti paranee, koska haku tehdään viimeisenä ja on siksi tuorein.", "correct": false, "explain": "Tuorekaan tieto ei auta, jos se saapuu vasta raportin valmistuttua. Silloin se jää kokonaan käyttämättä."}]}, {"q": "Työkalu kytketään agenttiin MCP-standardilla, jolloin kytkeminen on hyvin helppoa. Poistaako standardi rajausten tarpeen?", "options": [{"text": "Ei — standardi vastaa kysymykseen 'miten kytketään', ei 'mitä saa tehdä'; oikeudet, whitelistit ja lokitus tarvitaan silti, ja helppo kytkeminen korostaa minimioikeusperiaatetta.", "correct": true, "explain": "Kytkennän standardointi ei ota kantaa oikeuksiin. Ne määritellään jokaiselle työkalulle erikseen, aivan kuten ennenkin."}, {"text": "Kyllä — kun kytkentä on standardin mukainen, työkalu on jo valmiiksi turvallinen.", "correct": false, "explain": "Standardi määrittää vain, miten kytketään. Se ei kerro, mitä työkalu saa tehdä, joten rajaukset tehdään edelleen itse."}, {"text": "Kyllä, koska sama työkalu toimii monessa agentissa, joten sen täytyy olla turvallinen.", "correct": false, "explain": "Yhteensopivuus ei ole sama asia kuin turvallisuus. Jokainen kytkentä rajataan erikseen riippumatta siitä, monessako agentissa työkalu toimii."}]}], "summary": "Hyvä whitelist on lyhyt, verkkohaku voi tuoda väärää tietoa, CLI on vaarallinen juuri tehonsa takia ja työkalujen järjestys ratkaisee lopputuloksen — eikä standardikytkentä (MCP) poista yhtäkään näistä rajauksista."}, {"type": "classify", "title": "Mikä perustyökalu tähän tarvitaan?", "intro": "Kysy jokaisesta tehtävästä, mikä kolmesta perustyökalusta se vaatii: onko tieto jo omissa tiedostoissa (tiedostot), pitääkö se hakea ajantasaisena ulkoa (verkkohaku), vai vaatiiko tehtävä järjestelmätoiminnon (CLI-komennot)? Muista, ettei 'hakee tiedon' automaattisesti tarkoita verkkoa.", "categories": ["Tiedostot", "Verkkohaku", "CLI-komennot"], "items": [{"text": "Agentti tiivistää eilen tallennetun kokousmuistion, joka on tallessa palvelimen levyllä.", "answer": 0, "explain": "Tieto on jo olemassa omassa tiedostossa, joten agentti lukee sen — verkosta ei tarvitse hakea mitään. Verkkohaku tulisi kyseeseen vasta, jos tieto olisi ulkoista ja ajankohtaista."}, {"text": "Agentti selvittää huomisen junavuoron tämänhetkisen aikataulun matkaa suunnittelevalle asiakkaalle.", "answer": 1, "explain": "Aikataulu on ajankohtaista ulkoista tietoa, joka voi muuttua, joten se haetaan verkosta rajatusta lähteestä. Omissa tiedostoissa ei ole tuoretta aikataulua, joten pelkkä luku ei riitä."}, {"text": "Agentti pienentää kansiollisen valokuvia ajamalla valmiin muunnosskriptin palvelimella.", "answer": 2, "explain": "Kyse ei ole pelkästä lukemisesta vaan järjestelmätoiminnosta eli skriptin ajamisesta, joka tehdään komentorivillä. Tiedostojen luku tai kirjoitus yksin ei suorittaisi muunnosta."}, {"text": "Agentti kertoo asiakkaalle tuotteen hinnan, joka on tallennettuna yrityksen omaan hinnastoon palvelimella.", "answer": 0, "explain": "'Hakee hinnan' ei tarkoita verkkoa: hinta on omassa tiedostossa, joka luetaan. Tämä on tavallinen ansa — kaikki haku ei ole verkkohakua."}, {"text": "Agentti tarkistaa tänään voimaan tulleen ohjeistuksen viraston virallisilta sivuilta.", "answer": 1, "explain": "Tuore ohje ei ole koulutusdatassa eikä omissa tiedostoissa, joten se haetaan ajantasaisesta, rajatusta lähteestä verkosta. Jos ohje olisi jo tallennettu omaan tiedostoon, riittäisi luku."}, {"text": "Agentti luo uuden kansion ja siirtää valmiit raportit sinne palvelimella.", "answer": 2, "explain": "Kansion luonti ja tiedostojen siirto ovat järjestelmäkomentoja (esimerkiksi mkdir ja cp), eivät pelkkää tiedoston lukua tai kirjoitusta. Siksi tähän tarvitaan komentorivi."}, {"text": "Agentti kokoaa viikon lokit yhteen näkymään ja etsii niistä virheilmoitukset.", "answer": 0, "explain": "Lokit ovat tiedostoja, jotka luetaan ja käydään läpi. Vasta jos tiedostoja yhdisteltäisiin järjestelmäkomennolla, kyse olisi CLI:stä — pelkkä lukeminen ja etsintä on tiedostotyökalua."}, {"text": "Agentti käynnistää jumittuneen taustapalvelun uudelleen palvelimella.", "answer": 2, "explain": "Palvelun uudelleenkäynnistys on järjestelmätoiminto komentorivillä, ei tiedonhakua verkosta. Kyse on siitä, että agentti tekee jotain järjestelmässä, ei siitä, että se etsii tietoa."}], "summary": "Tiedostotyökalu lukee tai kirjoittaa tietoa, joka on omalla levyllä. Verkkohaku tuo ajankohtaista, ulkoista tietoa rajatusta lähteestä. CLI-komennot tekevät järjestelmätoiminnon, kuten kansion luonnin tai palvelun uudelleenkäynnistyksen. Yleisin ansa on luulla kaikkea hakua verkkohauksi."}, {"type": "order", "title": "Turvallinen työkalujärjestys", "intro": "Palvelimen levytila on täyttymässä vanhoista lokitiedostoista, ja agentti hoitaa siivouksen. Poistaminen on peruuttamatonta, joten järjestyksellä on väliä. Napauta vaiheet oikeaan järjestykseen.", "steps": ["Agentti listaa vanhat lokitiedostot turvallisella lukukomennolla ja katsoo, mitä levylle on kertynyt.", "Agentti kirjoittaa ehdotuksen poistettavista tiedostoista raporttitiedostoon rajattuun kansioon.", "Vastuuhenkilö tarkistaa ja hyväksyy poistolistan.", "Vasta hyväksynnän jälkeen agentti poistaa vain listatut tiedostot hiekkalaatikossa.", "Agentti kirjaa tehdyt poistot lokiin myöhempää jäljitettävyyttä varten."], "missHint": "Ei vielä — mieti, mikä vaihe tarvitsee edellisen vaiheen tuloksen, ja mikä peruuttamaton toiminto ei saa koskaan tapahtua ennen ihmisen hyväksyntää.", "summary": "Peruuttamaton toiminto eli poisto tulee vasta listauksen, ehdotuksen ja ihmisen hyväksynnän jälkeen, ja loki jää viimeiseksi. Juuri tämä järjestys estää vahingot — sama periaate pätee mihin tahansa vaaralliseen työkaluun."}, {"type": "scenario", "title": "Mitä oikeuksia annat agentille?", "intro": "Otat käyttöön kiinteistövälitystoimiston agentin ja päätät sen työkaluoikeuksista. Joka kohdassa annat vain sen pääsyn, jonka tehtävä vaatii — äläkä kytke ylimääräistä vain siksi, että standardikytkentä tekee siitä helppoa. Muista minimioikeusperiaate: mitä vähemmän oikeuksia, sitä vähemmän vahinkoa virhetilanteessa.", "start": "start", "max": 3, "nodes": {"start": {"text": "Otat käyttöön agentin, joka koostaa asuntoesitteitä kiinteistövälitystoimistolle. Mitä tiedosto-oikeuksia annat?", "choices": [{"label": "Lukuoikeus asiakirjakansioon, kirjoitusoikeus vain esitteiden kansioon, ei poisto-oikeutta.", "next": "dp2", "feedback": "Juuri näin. Minimioikeusperiaate: luku sinne, mistä tieto tulee, kirjoitus vain rajattuun kansioon, eikä poisto-oikeutta ilman todellista tarvetta.", "tone": "ok"}, {"label": "Täydet luku-, kirjoitus- ja poisto-oikeudet kaikkiin kansioihin, jottei se jää jumiin.", "next": "dp2", "feedback": "Laajat oikeudet 'varmuuden vuoksi' ovat juuri se riski, jonka minimioikeusperiaate estää — poisto-oikeus voi tuhota tärkeitä tiedostoja. Pääset silti eteenpäin.", "tone": "mid"}]}, "dp2": {"text": "Agentti tarvitsee joskus ajantasaista tietoa alueen palveluista. Miten rajaat verkkohaun?", "choices": [{"label": "Sallin haun vain muutamasta luotettavasta lähteestä ja rajaan hakujen määrän.", "next": "dp3", "feedback": "Oikein. Lähteiden whitelist estää väärän tiedon, ja hakuraja pitää kustannukset kurissa.", "tone": "ok"}, {"label": "Sallin haun mistä tahansa — se on vain lukemista, ei voi olla vaarallista.", "next": "dp3", "feedback": "Verkkohaku voi tuoda virheellistä tai manipuloitua tietoa, jonka mukaan agentti sitten toimii. Rajaamaton haku on riski — jatketaan silti.", "tone": "mid"}]}, "dp3": {"text": "Valmis konnektori tarjoutuisi kytkemään agenttiin koko asiakastietokannan yhdellä napautuksella, koska kytkentä on standardin mukainen ja helppo. Mitä teet?", "choices": [{"label": "Kytken vain sen osan, jota esitteiden teko tarvitsee, rajaan oikeudet ja lokitan käytön.", "next": "end_good", "feedback": "Juuri näin. Helppo standardikytkentä ei poista rajausten tarvetta — kytketään vain se, mitä tehtävä vaatii.", "tone": "ok"}, {"label": "Kytken koko tietokannan, koska konnektori tekee siitä helppoa ja nopeaa.", "next": "end_bad", "feedback": "Helppous ei ole peruste kytkeä kaikkea — tästä voi seurata koko asiakasrekisterin vuoto.", "tone": "no"}, {"label": "Kytken vähän ylimääräistäkin varmuuden vuoksi, mutta rajaan oikeudet.", "next": "end_mid", "feedback": "Rajaus on oikea refleksi, mutta ylimääräinen kytkentä 'varmuuden vuoksi' kasvattaa pinta-alaa, jolta jotain voi vuotaa. Kytke vain se, mitä tehtävä vaatii.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Agentti sai juuri tarvitsemansa oikeudet: rajatun tiedostopääsyn, rajatun verkkohaun ja vain tehtävään tarvittavan konnektorin, lokitettuna.", "feedback": "Sovelsit minimioikeusperiaatetta joka kohdassa. Tunnistit myös MCP:n ytimen: helppo standardikytkentä ei poista rajausten tarvetta vaan korostaa sitä — kytketään vain se, mitä tehtävä vaatii."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Rajasit oikeudet järkevästi, mutta kytkit mukaan hieman ylimääräistä 'varmuuden vuoksi'.", "feedback": "Suurin osa valinnoistasi oli hyviä. Muista silti: jokainen ylimääräinen kytkentä on lisää pinta-alaa, jolta jotain voi mennä pieleen. Standardin helppous houkuttelee kytkemään liikaa."}, "end_bad": {"end": true, "verdict": "no", "score": 0, "text": "Agentti sai pääsyn koko asiakastietokantaan, vaikka se tarvitsi vain murto-osan. Yksi virhe olisi voinut vuotaa kaikkien asiakkaiden tiedot.", "feedback": "Konnektorin helppous ei ole peruste kytkeä kaikkea. MCP vastaa kysymykseen 'miten kytketään', ei 'mitä saa tehdä' — oikeudet, whitelist ja minimioikeusperiaate pätevät standardikytkentäänkin."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

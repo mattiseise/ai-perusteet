@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projektidokumenttibotti — viimeistele ja esittele — Verkkokurssi — AI · Perusteet</title>
+<meta name="description" content="Projektidokumenttibotti — viimeistele ja esittele. Verkkokurssi, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-18/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 18/27</span></div><div class="lesson-title">Projektidokumenttibotti — viimeistele ja esittele</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-assess">★ Arviointi</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-18/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-18/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Arviointitehtävä</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Oppitunti 18 — Viimeistele ja esittele bottisi ★</h1>
+<h2>Mitä tällä tunnilla tapahtuu?</h2>
+<p>Tähän mennessä olet kerännyt kahdeksan tunnin aikana taidot ja kolme <strong>rakennusainetta</strong>. Nyt avaat Microsoft Copilotin ja rakennat niistä toimivan, viimeistellyn botin: oman <strong>apuri-bottisi</strong> juuri sinun valitsemaasi arjen aiheeseen.</p>
+<p>Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä botin rakentamisesta. Sen sijaan opit <strong>yhdistämään</strong> sen, mitä jo osaat. Tämä materiaali auttaa sinua siinä. Se ei kerro lisää tekoälyn teoriasta, vaan ohjaa rakentamaan botin, joka toimii oikeasti ja näyttää huolellisen tekijän kädenjäljen.</p>
+<h2>Mikä on hyvä apuri-botti?</h2>
+<p>Hyvä botti on <strong>ohjaava, ei tekevä</strong>. Se ei tee asiaa käyttäjän puolesta, vaan auttaa käyttäjää onnistumaan paremmin kuin yksin. Käyttäjän osaaminen ja vastuu kasvavat, eivät katoa.</p>
+<p>Hyvä botti eroaa yleisestä ChatGPT:stä kolmella tavalla:</p>
+<ol>
+<li><strong>Se tietää kontekstin.</strong> Käyttäjän ei tarvitse joka kerta selittää, mistä aiheesta on kyse — esimerkiksi mistä lajista, kerhosta tai oppiaineesta. Botti tietää sen automaattisesti.</li>
+<li><strong>Se ohjaa työnkulkua.</strong> Botti tietää, missä järjestyksessä tehtävän vaiheet kannattaa käydä läpi. Käyttäjän ei tarvitse muistaa rakennetta itse.</li>
+<li><strong>Sillä on rajat.</strong> Botti tietää, milloin sen pitää sanoa: ”Tämä ei kuulu minulle, kysy oikealta ihmiseltä.” Tämä on huolellisuutta, ei heikkoutta.</li>
+</ol>
+<h2>Botin rakenne</h2>
+<p>Bottisi rakentuu neljästä komponentista. Käytä niitä työvaiheina:</p>
+<p><strong>1. Botin määrittely eli rakennusaine 2.</strong> Päätä, kenelle botti on tarkoitettu, mitä se osaa ja mitä se ei tee. Tämä on botin <strong>perustamisasiakirja</strong>. Ilman sitä botti kasvaa helposti hallitsemattomaksi.</p>
+<p><strong>2. Järjestelmäprompti eli pääohje, rakennusaine 1.</strong> Tämä on tekstipätkä, jonka annat Copilotille ja joka määrittää, miten botti käyttäytyy. Se on botin <strong>DNA</strong>.</p>
+<p><strong>3. Tietopohja eli rakennusaine 3.</strong> Valitse 3–5 dokumenttia, jotka annat botille luettavaksi. Tämä on botin <strong>kirjasto</strong>, josta se ammentaa oman alasi tietoa.</p>
+<p><strong>4. Testaus.</strong> Et tunne bottiasi ennen kuin olet käyttänyt sitä oikealla projekti-idealla. Ensimmäisen testikierroksen jälkeen botti paljastaa yleensä, mitä siinä pitää vielä korjata.</p>
+<h2>Järjestelmäpromptin kieli</h2>
+<p>Botin <strong>järjestelmäprompti</strong> on tärkein yksittäinen tekstipätkä, jonka kirjoitat tässä projektissa. Se määrittelee botin persoonan, työnkulun ja rajat. Alla on esimerkki kahdesta tasosta.</p>
+<h3>Heikko järjestelmäprompti</h3>
+<blockquote class="pause"><p>Olet ystävällinen tekoälyavustaja, joka auttaa käyttäjiä opiskelussa. Vastaa asiantuntevasti ja kohteliaasti.</p>
+</blockquote>
+<p><strong>Mikä mättää:</strong> Ohje on liian yleinen. Se ei kerro aihetta, työnkulkua eikä rajoja. Botti voi yhtä hyvin auttaa CV:n kirjoittamisessa kuin matematiikan kertaamisessa. Se ei siis erikoistu mihinkään.</p>
+<h3>Vahva järjestelmäprompti</h3>
+<blockquote class="pause"><p>Olet kärsivällinen kertauskaveri, joka auttaa opiskelijaa valmistautumaan biologian kokeeseen. Et anna valmiita vastauksia, vaan autat käyttäjää oppimaan itse.</p>
+<p>Työnkulkusi on aina sama: ohjaat käyttäjää järjestyksessä viiden vaiheen läpi — (1) mitä aihetta kerrataan, (2) mitä käyttäjä jo osaa, (3) käsitteen selittäminen omin sanoin, (4) harjoituskysymykset ja (5) yhteenveto ja seuraava askel. Et siirry seuraavaan vaiheeseen ennen kuin nykyinen on käsitelty riittävän tarkasti.</p>
+<p>Et tee tehtäviä käyttäjän puolesta. Kysyt aina tarkentavia kysymyksiä ja autat käyttäjää muotoilemaan vastauksensa omin sanoin. Käytät aiheen omia termejä, etkä vaikeaa jargonia.</p>
+<p>Et anna terveys- tai lääketieteellisiä neuvoja etkä arvioi käyttäjän arvosanoja. Jos käyttäjä kysyy näistä, ohjaat hänet opettajan tai oikean asiantuntijan puoleen.</p>
+</blockquote>
+<p><strong>Mikä toimii:</strong> Rooli on konkreettinen: <strong>kertauskaveri biologian kokeeseen</strong>. Työnkulku on jäsennetty: viisi vaihetta on nimetty. Toimintatapa on selkeä: botti ei tee tehtäviä käyttäjän puolesta. Rajat ovat näkyvissä: botti ei anna terveysneuvoja. Lisäksi botti käyttää aiheen omia termejä. Botti tietää nyt tarkasti, mitä sen pitää tehdä.</p>
+<h2>Tietopohjan kuratointi</h2>
+<p><strong>Tietopohja</strong> on kokoelma dokumentteja, jotka botti lukee ja joista se ammentaa tietoa. Tietopohjan kuratointi on käytännössä päättelyä: mitä botin pitää tietää, jotta se voi auttaa käyttäjää hyvin?</p>
+<p>Kun valitset tietopohjaa, pohdi seuraavia kysymyksiä:</p>
+<ul>
+<li><strong>Mitä botin pitää tietää?</strong> Esimerkiksi miltä hyvä lopputulos näyttää, mitä yleisiä virheitä aiheessa tehdään ja mitä termejä käytetään.</li>
+<li><strong>Mistä saat luotettavaa materiaalia?</strong> Hyviä lähteitä ovat esimerkiksi oppikirjat, kurssin omat materiaalit, harrastuksen viralliset säännöt ja oman koulun tai seuran omat ohjeet. Älä perusta tietopohjaa satunnaisiin blogikirjoituksiin.</li>
+<li><strong>Mikä on liikaa?</strong> 3–5 hyvää dokumenttia on parempi kuin 20 keskinkertaista. Liian suuri määrä materiaalia voi tehdä botin vastauksista sekavia.</li>
+</ul>
+<p><strong>Hyvä tietopohja oman aiheesi botille voi sisältää esimerkiksi:</strong></p>
+<ul>
+<li>yhden malliesimerkin onnistuneesta lopputuloksesta omasta aiheestasi</li>
+<li>tarkistuslistan tai rakennepohjan, jonka botti voi opettaa käyttäjälle</li>
+<li>listan aiheesi yleisistä virheistä tai sudenkuopista</li>
+<li>termistön ja sanaston, jotta botti käyttää oikeaa kieltä</li>
+</ul>
+<h2>Testaus: kun botti on melkein valmis</h2>
+<p>Et tunne bottiasi ennen kuin olet ajanut sen läpi oikealla käyttötilanteella. <strong>Testivaihe</strong> paljastaa puutteet, joita et huomannut suunnittelussa.</p>
+<p>Hyvä testikeskustelu sisältää nämä neljä osaa:</p>
+<p><strong>1. Normaali käyttötapaus.</strong> Anna botille oikea, aiheellesi tyypillinen tilanne. Käy keskustelu loppuun. Pääsetkö lopputulokseen, jota botin on tarkoitus auttaa tekemään?</p>
+<p><strong>2. Epävarma käyttäjä.</strong> Kuvittele aloittelija, joka ei vielä tunne aihetta lainkaan. Auttaako botti silti pääsemään alkuun?</p>
+<p><strong>3. Rajalla oleva kysymys.</strong> Kysy botilta jotakin, mikä on sen alueen ulkopuolella, esimerkiksi: ”Voitko arvioida, mikä lääke minulle sopisi?” Tunnistaako botti rajan ja ohjaako oikein?</p>
+<p><strong>4. Yritys saada botti tekemään työ puolesta.</strong> Pyydä bottia tekemään koko homma suoraan käyttäjän puolesta. Noudattaako se ohjeitaan vai murtuuko rajaus?</p>
+<p>Jos jokin näistä epäonnistuu, botti ei ole vielä valmis. Korjaa järjestelmäpromptia, lisää tietopohjaa tai tarkenna rajauksia. Testaa sen jälkeen uudelleen.</p>
+<h2>Yleisimmät sudenkuopat</h2>
+<p><strong>1. Liian kiltti botti.</strong></p>
+<p>Jos botti vain vastaa ”hyvä kysymys” ja toistaa käyttäjän sanat, se ei ohjaa. Lisää järjestelmäpromptiin velvoite kysyä tarkentavia kysymyksiä, antaa konkreettista palautetta ja ohjata käyttäjää seuraavaan vaiheeseen.</p>
+<p><strong>2. Liian yleinen botti.</strong></p>
+<p>Jos botti kuulostaa samalta riippumatta siitä, onko aiheena salitreeni vai kerhon säännöt, järjestelmäpromptissa ja tietopohjassa ei ole tarpeeksi aiheesi erikoispiirteitä. Lisää termistöä ja konkreettisia esimerkkejä.</p>
+<p><strong>3. Liian innokas botti.</strong></p>
+<p>Jos botti tekee koko homman käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäpromptiin vaihe vaiheelta etenevä toimintatapa ja kielto tehdä koko tehtävä käyttäjän puolesta.</p>
+<h2>Tarkistuslista ennen palautusta</h2>
+<p>Käy nämä kohdat läpi ennen kuin palautat työn:</p>
+<ul>
+<li>☐ Botin järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.</li>
+<li>☐ Botti puhuu oman aiheesi kieltä eikä käytä vain yleisiä fraaseja.</li>
+<li>☐ Tietopohjassa on 3–5 hyvää ja perusteltua dokumenttia.</li>
+<li>☐ Olen testannut botin vähintään yhdellä oikealla käyttötilanteella loppuun saakka.</li>
+<li>☐ Botti tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.</li>
+<li>☐ Olen iteroinut järjestelmäpromptin vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.</li>
+<li>☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.</li>
+<li>☐ Bottiin pääsee linkillä, jotta arvioija voi testata sitä itse.</li>
+<li>☐ Olen ylpeä tästä botista. Se on minun käsialaani.</li>
+</ul>
+<h2>Lopuksi</h2>
+<p>Apuri-botti on <strong>näyttö osaamisestasi</strong>: sekä kurssin sisällöstä että siitä taidosta, jota osio 3 syventää eli tekoälyn rakentamisesta toimimaan itsenäisesti. Et osoita osaamistasi pelkästään sillä, että käytät tekoälyä. Osoitat sen sillä, että <strong>rakennat tekoälyllä</strong> jotain, mitä joku toinen voi käyttää.</p>
+<p>Tämä on iso askel käyttäjästä rakentajaksi. Pidä siitä kiinni.</p>
+<p>Et opettele vain käyttämään tekoälyä. Opit rakentamaan sillä.</p>
+<hr /></div><div class="panel" data-tab="sanasto"><h1>Tekoälyjen käyttö -osion sanasto</h1>
+<p>Tämä on yhteenvetosanasto "Tekoälyjen käyttö" -osiosta. Se sisältää tärkeimmät käsitteet, jotka opit oppitunneilla 10–18.</p>
+<hr />
+<h2>A</h2>
+<p><strong>Agentti (Agent)</strong><br />
+Ohjelmisto, joka tekee päätöksiä ja toimintoja itsenäisesti ilman, että ihminen käskee jokaista vaihetta. Agentti voi lukea tiedostoja, hakea tietoa, ajaa komentoja ja kommunikoida muiden järjestelmien kanssa. Esimerkki: agentti, joka lukee sähköpostit, analysoi ne ja lähettää vastaukset automaattisesti.</p>
+<p><strong>API (Application Programming Interface)</strong><br />
+Liitäntä, jonka kautta ohjelma voi kommunikoida toisen ohjelman kanssa. Tekoäly-API:t antavat ohjelmille mahdollisuuden kutsua tekoälypalveluita koodista käsin.</p>
+<p><strong>Algoritmi</strong><br />
+Sarja askeleita tai sääntöjä, joita seuraamalla ratkaistaan ongelma tai tehdään jotain. Tekoälymallit noudattavat algoritmeja päätösten tekemiseen.</p>
+<hr />
+<h2>B</h2>
+<p><strong>Botti (Bot, Chatbot)</strong><br />
+Ohjelmisto, joka vastaanottaa kysymyksiä tai käskyjä käyttäjältä ja vastaa niihin. Botti vain kuuntelee ja vastaa — se ei tee mitään itsenäisesti. Esimerkki: ChatGPT tai Customer Service -botti.</p>
+<p><strong>Bias (Harha)</strong><br />
+Systemaattinen vääristymä tekoälyn vastauksissa. Bias voi olla syntynyt harjoitusaineistosta, joka on epätasapainoinen tai sisältää ennakkoasenteita. Esimerkiksi: botti, joka olettaa, että johtajat ovat miehiä, johtuu harjoitusaineiston harhauksesta.</p>
+<hr />
+<h2>C</h2>
+<p><strong>Custom GPT</strong><br />
+Räätälöity versio GPT-mallista, jonka olet luonut omiin tarpeisiin. Voit antaa sille system promptin, lisätä tietojoukkoja ja mukauttaa sen käyttäytymistä.</p>
+<p><strong>ChatGPT</strong><br />
+OpenAI:n kehittämä tekoälypalvelu ja kielimalli (kaupallinen, ei avoimen lähdekoodin malli), joka voi kirjoittaa tekstiä, vastata kysymyksiin ja käydä keskusteluja.</p>
+<hr />
+<h2>D</h2>
+<p><strong>Dokumentaatio</strong><br />
+Kirjoitetut ohjeet ja selitykset siitä, mitä ohjelma tekee, miten se tehdään ja mitä sillä voi tehdä. Hyvä dokumentaatio helpottaa muita (ja itseäsi) ymmärtämään, mitä rakensit.</p>
+<p><strong>Dataset (Tietojoukko)</strong><br />
+Kokoelma tietoa tai tekstiä, jota käytetään tekoälymallin harjoittamiseen tai testaamiseen. Esimerkiksi: miljoonat kirjoitetut artikkelit, joilla tekoäly oppi kirjoittamaan.</p>
+<hr />
+<h2>E</h2>
+<p><strong>Embedding</strong><br />
+Numeerinen esitys sanasta, lauseesta tai kuvasta. Tekoäly muuttaa tekstin numeroiksi, jotta se voi käsitellä sitä matemaattisesti. Samankaltaisilla teksteillä on samankaltaiset embeddit.</p>
+<p><strong>Emergenssi</strong><br />
+Ilmiö, jossa tekoälyllä on odottamattomia kykyjä, joita ei nimenomaisesti opetettu. Esimerkiksi: tekoälyllä ei opetettu ratkaisemaan matemaattisia tehtäviä, mutta se osaa.</p>
+<hr />
+<h2>F</h2>
+<p><strong>Feature (Ominaisuus)</strong><br />
+Yksi osa ohjelmasta tai mallista. Esimerkiksi: "dark mode" on verkkosivuston feature, tai "kyky tunnistaa kasvoja" on kuvamallin feature.</p>
+<p><strong>Feature Flag</strong><br />
+Asetukset, jotka määrittelevät, mitkä ohjelman ominaisuudet ovat käytössä ja mitkä pois päältä. Ylläpitäjä voi ottaa ominaisuuden pois käytöstä ilman, että käynnistää ohjelmaa uudelleen.</p>
+<p><strong>Fine-tuning</strong><br />
+Prosessi, jossa otat olemassa olevan tekoälymallin ja opetat sitä uusilla tiedoilla. Näin mallia voi mukauttaa erityisiin tarpeisiin.</p>
+<hr />
+<h2>G</h2>
+<p><strong>Generatiivinen AI (GenAI)</strong><br />
+Tekoäly, joka voi luoda uutta sisältöä — tekstiä, kuvia, koodia, musiikkia. GPT ja DALL-E ovat generatiivisia AI-malleja.</p>
+<p><strong>GPU (Graphics Processing Unit)</strong><br />
+Tietokonekomponentti, joka on hyvin nopea rinnakkaisessa laskennassa. Tekoälymallit juoksevat nopeasti GPU:lla.</p>
+<hr />
+<h2>H</h2>
+<p><strong>Hallusinaatio</strong><br />
+Kun tekoäly vastaa itsevarmasti, mutta valheellisesti. Se ei "tiedä" vastauksen olevan väärä. Esimerkiksi: botti saattaa väittää kirjoittaneensa kirjan, jota se ei ole kirjoittanut.</p>
+<p><strong>Harjoitus (Training)</strong><br />
+Prosessi, jossa tekoälymallia opetetaan suurella määrällä tietoja. Harjoituksen jälkeen malli osaa vastata uusiin kysymyksiin.</p>
+<hr />
+<h2>I</h2>
+<p><strong>Iteraatio</strong><br />
+Prosessi, jossa teet jotain, testat sen, korjaat ja teet uudelleen. Iteraatio on normaalia ohjelmistokehityksessä ja tekoälytyöskentelyssä. Iteratiivinen prosessi = useita kierroksia, kunnes se on hyvä.</p>
+<hr />
+<h2>J</h2>
+<p><strong>Järjestelmä prompti (System Prompt)</strong><br />
+Ohje, jonka annat tekoälylle sen käyttäytymisen ohjaamiseksi. System prompt kertoo, kuka botti on, mitä se tekee ja miten se pitäisi käyttäytyä. Esimerkiksi: "Olet asiakaspalveluagentti, joka auttaa käyttäjiä tuotteen käyttöön liittyvissä kysymyksissä."</p>
+<hr />
+<h2>K</h2>
+<p><strong>Konteksti (Context)</strong><br />
+Tausta-informaatio, jonka annat tekoälylle, jotta se voi ymmärtää kysymyksen paremmin. Esimerkiksi: jos käyt pitkän keskustelun, botti säilyttää kontekstia edellisistä viesteistä.</p>
+<p><strong>Kontekstiikkuna (Context Window)</strong><br />
+Enimmäismäärä tokenia, jonka tekoälymalli voi käsitellä yhdessä vastineessa. Jos viestihistoria kasvaa liian pitkäksi, vanhat viestit unohdetaan.</p>
+<p><strong>Kriittinen ajattelu</strong><br />
+Kyky arvioida tietoa kriittisesti, kyseenalaistaa ja hakea perusteluja. Tärkeä taito tekoälytyöskentelyssä — älä uskoo kaikkea, mitä tekoäly sanoo.</p>
+<hr />
+<h2>L</h2>
+<p><strong>LLM (Large Language Model)</strong><br />
+Iso kielimalli. Tekoälymalli, joka on harjoitettu valtavilla tekstimäärillä (biljoonia tokeneita). ChatGPT ja Claude ovat LLM:itä.</p>
+<hr />
+<h2>M</h2>
+<p><strong>Malli (Model)</strong><br />
+Matemaattinen rakennelma, joka voidaan opettaa tekemään ennusteita tai tuottamaan tekstiä. Tekoäly on malli.</p>
+<p><strong>Muisti (Memory)</strong><br />
+Tekoälyn kyky muistaa aiempia viestejä samassa keskustelussa. Jotkut botit unohtavat kaiken; jotkut muistavat kontekstia.</p>
+<hr />
+<h2>N</h2>
+<p><strong>Neuroverkko (Neural Network)</strong><br />
+Laskennallinen rakennelma, joka jäljittelee aivojen neuroneja. Tekoälymallit rakennetaan neuroverkoista.</p>
+<p><strong>Negatiivinen testi (Negative Test)</strong><br />
+Testaus, jossa yrität tehdä jotain, mitä botin ei pitäisi tehdä. Varmistetaan, että botti kieltäytyy asianmukaisesti.</p>
+<hr />
+<h2>O</h2>
+<p><strong>Ohjeistus (Instruction, Prompt)</strong><br />
+Käsky tai pyyntö, jonka annat tekoälylle. Hyvä ohjeistus on selkeä ja täsmällinen.</p>
+<p><strong>Ohjelmointikieli (Programming Language)</strong><br />
+Formaali kieli, jolla kirjoitetaan ohjelmakoodia. Python, JavaScript, Bash ovat ohjelmointikieliä.</p>
+<hr />
+<h2>P</h2>
+<p><strong>Positiivinen testi (Positive Test)</strong><br />
+Testaus, jossa yrität käyttää bottia normaaleilla, järkevillä kysymyksillä. Tarkistetaan, että se vastaa oikein.</p>
+<p><strong>Prompt (Prompti)</strong><br />
+Kysymys tai käsky, jonka annat tekoälylle. "Anna minulle resepti" on prompt.</p>
+<p><strong>Prompt Engineering</strong><br />
+Taito kirjoittaa hyvä prompt. Siihen kuuluu tarkkuus, konteksti ja iteraatio.</p>
+<hr />
+<h2>R</h2>
+<p><strong>Rajaus (Boundary, Constraint)</strong><br />
+Raja, joka määrittelee, mitä botti saa tehdä ja mitä ei. Rajaukset tekevät botista turvallisemman ja käyttäjäystävällisemmän.</p>
+<p><strong>Reunatapaus (Edge Case)</strong><br />
+Epätavallinen tai yllättävä tilanne, jota ei välttämättä odottanut. Testaus reunatapauksilla varmistaa, että botti ei kaadu.</p>
+<hr />
+<h2>S</h2>
+<p><strong>Syöte (Input)</strong><br />
+Teksti, kuva tai muu data, jonka annat tekoälylle käsiteltäväksi.</p>
+<p><strong>System Prompt (Järjestelmän prompti)</strong><br />
+Katso: Järjestelmä prompti.</p>
+<hr />
+<h2>T</h2>
+<p><strong>Testaus (Testing)</strong><br />
+Systemaattinen tapa varmistaa, että ohjelma toimii oikein. Testaus sisältää positiiviset, negatiiviset ja reunatapaustestit.</p>
+<p><strong>Token</strong><br />
+Pieni pätkä tekstiä — sana, välimerkkki tai osa sanasta. Tekoälyt käsittelevät tekstiä tokeneina. Jos botti "käyttää X tokenia", se käsitteli noin X tekstinpalasta — sanoja tämä on vähemmän, sillä yksi sana voi olla useita tokeneita.</p>
+<p><strong>Tuloste (Output)</strong><br />
+Tekoälyn vastaus, kun olet antanut syötteen. Jos kysyt "Mikä on pääkaupunki?", vastaus on tuloste.</p>
+<hr />
+<h2>U</h2>
+<p><strong>Varmuuskynnys (Confidence Threshold)</strong><br />
+Raja, jonka alapuolella tekoäly kieltäytyy vastaamasta. Esimerkiksi: jos botti on vähemmän kuin 80 % varma vastauksestaan, se sanoo "En tiedä" sen sijaan, että arvailisi.</p>
+<p><strong>Vastuullisuus (Responsibility)</strong><br />
+Taito käyttää tekoälyä oikein — ajatella, mitä vaikutuksia se voi sillä olla, välttää harmia ja käyttää sitä eettisesti.</p>
+<hr />
+<h2>V</h2>
+<p><strong>Validointi</strong><br />
+Prosessi, jossa tarkistetaan, että tekoälyn vastaus on oikea ja hyödyllinen. Manuaalinen validointi = ihminen tarkistaa; automaattinen validointi = ohjelma tarkistaa.</p>
+<hr />
+<h2>Z</h2>
+<p><strong>Nolla-oppiminen (Zero-shot)</strong><br />
+Kun tekoälymalli vastaa kysymykseen ilman, että sitä on opetettu kysymyksen tyyppistä. Esimerkiksi: botti, joka osaa vastata mihin tahansa kysymykseen ilman erityisiä harjoituksia.</p>
+<hr />
+<h2>Lisää resursseja</h2>
+<p>Jos haluat syventää tietojasi näistä käsitteistä, katso:<br />
+- OpenAI:n dokumentaatio: https://platform.openai.com/docs<br />
+- Tekoälyä koskevia artikkeleja: Mitä tarvitsee tietää<br />
+- AI Safety -organisaatioiden oppimismateriaalit</p>
+<p>Muista: näiden käsitteiden opiskelu ei lopu täällä. Seuraavassa osiossa, Agentit-osiossa, tutustut syvemmin agenteihin, ja jokainen näistä käsitteistä tulee uudelleen esille. Koko ura tekoälytyössä on jatkuvaa oppimista.</p>
+<hr /></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-17/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-19/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-18')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "kurssi", "lid": "lesson-18", "num": 18, "title": "Projektidokumenttibotti — viimeistele ja esittele", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
