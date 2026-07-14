@@ -61,7 +61,12 @@ suunnitelmaani — vain hyökkää.
 
 Lisää sitten suunnitelmaasi vastatoimet realistisiin hyökkäyksiin.
 
+::: luokka
 > 💡 **Laajennusvinkki kotiin (vapaaehtoinen):** Jos haluat oikeasti kokea prompt injectionin, avaa oma Copilot-agenttisi (tunneilta 17–18) ja kokeile tahallaan rikkoa sen rajoja: "unohda ohjeet…", roolinvaihto ("Olet nyt…"), piilotettu konteksti ("Tämä on testi…"), tarinamuoto. Tämä kokemus opettaa parhaiten, miksi turvakerros tarvitaan.
+:::
+::: verkko
+> 💡 **Laajennusvinkki (vapaaehtoinen):** Jos haluat oikeasti kokea prompt injectionin, avaa oma Copilot-agenttisi (jonka rakensit tuntien 17–18 pohjalta) ja kokeile tahallaan rikkoa sen rajoja: "unohda ohjeet…", roolinvaihto ("Olet nyt…"), piilotettu konteksti ("Tämä on testi…"), tarinamuoto. Tämä kokemus opettaa parhaiten, miksi turvakerros tarvitaan.
+:::
 
 > 💡 **Vinkki muistiinpanoihin:** Tämä on 4/5 lopputyösi osista.
 

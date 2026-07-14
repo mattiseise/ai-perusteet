@@ -67,9 +67,16 @@ Kirjoita ammattilaisen tarkistuslista, jota IT-ammattilainen voisi pitää näyt
 
 *Esim. "1. Tarkistan faktat virallisesta dokumentaatiosta. 2. Ajan koodin testissä ennen tuotantoa. 3. Pyydän mallia perustelemaan vastauksen ja kysyn lähteitä — ja tarkistan että lähteet ovat oikeasti olemassa."*
 
+::: luokka
 ## Mitä palautat?
 
 **Et vieläkään mitään.**
+:::
+::: verkko
+## Mitä tallennat itsellesi?
+
+**Et palauta tätä minnekään — tallenna se silti huolellisesti lopputyötä varten (osa 3 kolmesta todistusaineistosta).**
+:::
 
 Tee kuitenkin tiedosto, jossa on:
 

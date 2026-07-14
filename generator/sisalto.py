@@ -78,6 +78,47 @@ def filter_variants(text, variant, source='?'):
     return '\n'.join(out)
 
 
+# ===== Lopputyön askel: osatuotos-osion poiminta tehtavat-luokka.md:stä =====
+# Verkkokurssinäkymä nostaa lopputyön osatuotostehtävän omaksi välilehdeksi. Osio
+# tunnistetaan kurssi.yaml:n lopputyon_askel-kentästä: '*' = koko tiedosto, muuten
+# h2-otsikon (osa)teksti. Poiminta tapahtuu ENNEN varianttisuodatusta, jotta manifestin
+# otsikko osuu alkuperäiseen (luokka)tekstiin.
+
+def extract_lopputyo_section(text, heading, source='?'):
+    """Palauta lopputyön askel -osio. heading == '*' (tai None) → koko tiedosto.
+
+    Muuten palautetaan se h2-osio, jonka otsikko sisältää annetun merkkijonon:
+    otsikkorivistä seuraavaan h2-otsikkoon (tai tiedoston loppuun). Otsikkorivi on
+    mukana; perässä roikkuvat tyhjät rivit ja '---'-erottimet siivotaan. Jos otsikkoa
+    ei löydy, build kaatuu (tarkoituksella — sama malli kuin muualla putkessa).
+    """
+    if not heading or heading == '*':
+        return text
+    lines = text.split('\n')
+    start = None
+    for i, line in enumerate(lines):
+        s = line.strip()
+        if s.startswith('## ') and heading in s[3:]:
+            start = i
+            break
+    if start is None:
+        raise SystemExit(
+            f"VIRHE: {source}: lopputyön askel -otsikkoa '{heading}' ei löytynyt "
+            f"(tarkista kurssi.yaml:n lopputyon_askel-kenttä).")
+    end = len(lines)
+    for j in range(start + 1, len(lines)):
+        if lines[j].strip().startswith('## '):
+            end = j
+            break
+    section = lines[start:end]
+    while section and (not section[-1].strip() or section[-1].strip() == '---'):
+        section.pop()
+    # Luokan tehtävätaksonomia (🟢 SUOSITELTU / 🟣 SYVENTÄVÄ) ei kuulu verkko-
+    # opiskelijan otsikkoon — askel on lopputyön pakollinen osa, ei valinnainen.
+    section[0] = re.sub(r'\s*(🟢\s*SUOSITELTU|🟣\s*SYVENTÄVÄ)\s*$', '', section[0])
+    return '\n'.join(section)
+
+
 # ===== Markdown → HTML (siirretty v1:stä sellaisenaan) =====
 
 def to_html(text):

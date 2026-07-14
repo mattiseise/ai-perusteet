@@ -61,9 +61,16 @@ Kirjoita noin **300 sanaa omin sanoin**. Vastaa kolmeen kysymykseen:
 2. **Mitä tarkoittaa, että malli "ennustaa, ei tiedä"?** Selitä vaiheen 3 perusteella: oliko vastaus oikein vai väärin, ja miltä se *kuulosti*. Mitä tämä kertoo luotettavuudesta?
 3. **Mihin tuomaripöydässä?** Yhdellä lauseella: missä tilanteessa joku voisi joutua ongelmiin juuri näistä syistä?
 
+::: luokka
 ## Mitä palautat?
 
 **Et vielä mitään. Tarvitset tämän kuitenkin osan 1 arvoitavaa tehtävää varten.**
+:::
+::: verkko
+## Mitä tallennat itsellesi?
+
+**Et palauta tätä minnekään. Tallenna se silti huolellisesti — tarvitset tätä lopputyössä (osa 1 kolmesta todistusaineistosta).**
+:::
 
 Tästä pitäisi saada kuitenkin yksi tiedosto (Word, PDF tai Markdown), jossa on:
 

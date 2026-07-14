@@ -6,7 +6,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 
 ## Kolme näkymää samaan sisältöön
 
-- [Verkkokurssi](https://aiperusteet.fi/kurssi/) (`/kurssi/`) — itsenäinen opiskelu omaan tahtiin: teoria, itsetarkistuvat harjoitukset, sanasto ja diat.
+- [Verkkokurssi](https://aiperusteet.fi/kurssi/) (`/kurssi/`) — itsenäinen opiskelu omaan tahtiin: teoria, itsetarkistuvat harjoitukset, sanasto, diat ja lopputyön askeleet (lopputyön osatuotostehtävät verkko-opiskelijalle kehystettyinä).
 - [Luokkaversio](https://aiperusteet.fi/luokka/) (`/luokka/`) — oppituntien opiskelijamateriaali: teoria, luokkatehtävät, harjoittele, sanasto ja diat.
 - [Opettajan opas](https://aiperusteet.fi/opettaja/) (`/opettaja/`) — kurssiopas, tuntisuunnitelmat, opettajavetoiset tehtävät ja arviointi.
 - [Sanasto](https://aiperusteet.fi/sanasto/) (`/sanasto/`) — koko kurssin käsitteet aakkosjärjestyksessä.

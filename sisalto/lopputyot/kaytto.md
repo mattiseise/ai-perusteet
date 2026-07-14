@@ -84,7 +84,14 @@ Voit halutessasi pitää bottisi esittelyn ryhmälle: kerro kenelle botti on rak
 
 ## Työkalut ja työskentelytapa
 
-**Alusta:** Microsoft Copilot Agent. Saat tunnukset opettajalta tunnilla 17.
+**Alusta:** Microsoft Copilot Agent.
+
+::: luokka
+Saat tunnukset opettajalta tunnilla 17.
+:::
+::: verkko
+Tarvitset Microsoft-tilin, jolla pääset luomaan Copilot-agentin.
+:::
 
 **Tekoälytyökalu botin rakentamiseen:** Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole keksiä kaikkea itse, vaan ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä. Sinun vastuullasi on, että botti toimii ammattimaisesti ja että ymmärrät sen rakenteen kokonaan.
 

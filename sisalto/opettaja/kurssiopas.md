@@ -32,7 +32,7 @@ Tuntisuunnitelma ja opettajavetoiset tehtävät näkyvät vain sinulle opettajan
 
 Sama sisältö palvelee kolmea käyttötilannetta kolmena näkymänä. Näkymät eivät ole kolme eri kurssia, vaan kolme suodatinta samaan materiaaliin.
 
-- **`/kurssi/` — itsenäinen verkkokurssi.** Itseopiskelijalle, joka etenee omaan tahtiin. Tuntisivulla teoria, Harjoittele ja sanasto. Lopputyöt ovat itsearvioitavia. Tähän näkymään hakukoneet tuovat kävijät.
+- **`/kurssi/` — itsenäinen verkkokurssi.** Itseopiskelijalle, joka etenee omaan tahtiin. Tuntisivulla teoria, Harjoittele, sanasto, diat ja osatuotostunneilla oma **★ Lopputyön askel** -välilehti (lopputyön osatuotos verkko-opiskelijalle kehystettynä). Lopputyöt ovat itsearvioitavia. Tähän näkymään hakukoneet tuovat kävijät.
 - **`/luokka/` — oppituntien opiskelijaversio.** **Tämän jaat opiskelijoille oppitunnilla.** Se sisältää teorian, luokkatehtävät, Harjoittele-tehtävät, sanaston ja diat kertaukseen — mutta **ei mitään opettajan materiaalia**. Tuntisuunnitelmat, purkuohjeet ja väärinkäsityslistat eivät kuulu tähän näkymään.
 - **`/opettaja/` — opettajan opas.** Tämä osio. Suunnattu opettajalle: tuntisuunnitelmat, fasilitointiohjeet ja arviointi yhdessä näkymässä. Opiskelijoille jaetaan luokkaversio, koska se on kehystetty heidän työskentelyynsä.
 
@@ -40,7 +40,7 @@ Nopea muistilista siitä, mikä näkymä on kenelle ja mitä se sisältää:
 
 | Näkymä | Polku | Kohderyhmä | Sisältää | Jaa opiskelijoille? |
 |---|---|---|---|---|
-| Verkkokurssi | `/kurssi/` | Itseopiskelija | Teoria, Harjoittele, sanasto; itsearvioitavat lopputyöt | Vapaasti jaettavissa, ei palautusta |
+| Verkkokurssi | `/kurssi/` | Itseopiskelija | Teoria, Harjoittele, sanasto, diat, lopputyön askeleet; itsearvioitavat lopputyöt | Vapaasti jaettavissa, ei palautusta |
 | Luokkaversio | `/luokka/` | Opiskelija oppitunnilla | Teoria, luokkatehtävät, Harjoittele, sanasto, diat; lopputyöt pisteytyksellä | **Kyllä — tämä jaetaan** |
 | Opettajan opas | `/opettaja/` | Opettaja | Tuntisuunnitelmat, opettajavetoiset tehtävät, väärinkäsitykset, arviointiohjeet, diat | Ei tarpeen — suunnattu opettajalle |
 
