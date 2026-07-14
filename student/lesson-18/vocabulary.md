@@ -159,7 +159,7 @@ Formaali kieli, jolla kirjoitetaan ohjelmakoodia. Python, JavaScript, Bash ovat 
 **Positiivinen testi (Positive Test)**
 Testaus, jossa yrität käyttää bottia normaaleilla, järkevillä kysymyksillä. Tarkistetaan, että se vastaa oikein.
 
-**Prompt (Kehotus)**
+**Prompt (Prompti)**
 Kysymys tai käsky, jonka annat tekoälylle. "Anna minulle resepti" on prompt.
 
 **Prompt Engineering**
@@ -182,7 +182,7 @@ Epätavallinen tai yllättävä tilanne, jota ei välttämättä odottanut. Test
 **Syöte (Input)**
 Teksti, kuva tai muu data, jonka annat tekoälylle käsiteltäväksi.
 
-**System Prompt (Järjestelmän kehote)**
+**System Prompt (Järjestelmän prompti)**
 Katso: Järjestelmä prompti.
 
 ---

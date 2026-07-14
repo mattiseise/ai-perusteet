@@ -27,5 +27,5 @@ EU:n tietosuoja-asetus, joka säätelee henkilötietojen käsittelyä. Kaikki su
 ## API (Application Programming Interface)
 Rajapinta, jonka avulla ohjelma voi pyytää palvelua toiselta ohjelmalta. Voit käyttää ChatGPT:n tai Clauden API:a omassa ohjelmassasi sen sijaan, että avaisit selaimen.
 
-## Prompt (kehotus)
+## Prompt (prompti)
 Teksti, jonka kirjoitat tekoälylle ja jossa kerrot, mitä haluat sen tekevän. Hyvä prompt on selkeä ja yksityiskohtainen.

@@ -16,7 +16,7 @@ Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma. Kirjoita yhteensä 150–200 sa
 
 **1. Lyhytaikainen muisti (konteksti-ikkuna).** Mitä agentin täytyy muistaa yksittäisen keskustelun tai suorituksen aikana?
 
-**2. Pitkäaikainen muisti.** Mitä agentin täytyy muistaa keskustelujen tai suoritusten välillä? Tarvitseeko agenttisi tämän ollenkaan? Jos tarvitsee, missä tämä muisti on (esim. Google Sheets, tietokanta, vektoritietokanta)?
+**2. Pitkäkestoinen muisti.** Mitä agentin täytyy muistaa keskustelujen tai suoritusten välillä? Tarvitseeko agenttisi tämän ollenkaan? Jos tarvitsee, missä tämä muisti on (esim. Google Sheets, tietokanta, vektoritietokanta)?
 
 **3. Tilat ja tilasiirtymät.** Mitä eri tiloja agentillasi voi olla? Mitkä ehdot liikuttavat tilasta toiseen? Jos agenttisi suorittaa tehtävän kerralla ilman tilamuutoksia, riittää maininta tästä.
 
@@ -28,7 +28,7 @@ Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma. Kirjoita yhteensä 150–200 sa
 Olen suunnitellut agentilleni seuraavan muistirakenteen: [liitä
 neljä osaa]. Agenttini tehtävä on [kuvaa]. Toimi sparrauskumppanina
 ja kysy 2–3 kysymystä, jotka paljastavat, ovatko muistipäätökseni
-perusteltuja. Erityisesti: tarvitseeko agentti pitkäaikaista muistia?
+perusteltuja. Erityisesti: tarvitseeko agentti pitkäkestoista muistia?
 Onko tilamuutokset oikeasti tarpeen? Älä korjaa puolestani — kysy
 niin että ajattelen.
 ```

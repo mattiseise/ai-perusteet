@@ -1,6 +1,6 @@
 # Opettajavetoiset harjoitukset: generatiivisen tekoälyn luonne
 
-## Harjoitus 1: Sama kehote, eri mallit — epädeterministisyyden demonstraatio
+## Harjoitus 1: Sama prompti, eri mallit — epädeterministisyyden demonstraatio
 
 ### Tavoite
 
@@ -15,10 +15,10 @@ Harjoituksen tavoitteena on näyttää käytännössä, miksi **generatiivisen t
 #### Valmistelu ennen oppituntia noin 5 minuuttia
 
 - Avaa selaimeen useita tekoälymalleja, esimerkiksi ChatGPT, Claude ja Google Gemini.
-- Valmistele sama tai mahdollisimman samanlainen kehote kaikille malleille.
+- Valmistele sama tai mahdollisimman samanlainen prompti kaikille malleille.
 - Varmista, että vastaukset voidaan näyttää opiskelijoille rinnakkain tai peräkkäin.
 
-#### Esimerkkikehote
+#### Esimerkkiprompti
 
 Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data.txt`, laskee rivien lukumäärän ja tulostaa tuloksen.
 
@@ -42,7 +42,7 @@ Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data
 
 Kysy opiskelijoilta:
 
-- Miksi vastaukset ovat erilaisia, vaikka kehote oli sama tai lähes sama?
+- Miksi vastaukset ovat erilaisia, vaikka prompti oli sama tai lähes sama?
 - Miksi kaikki vastaukset voivat silti olla mahdollisesti järkeviä?
 - Milloin vaihtelu on hyödyllistä?
 - Milloin vaihtelu voi olla ongelma?
@@ -56,7 +56,7 @@ Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista o
 
 - **Epädeterministisyys** on generatiivisen tekoälyn ominaisuus, ei pelkkä virhe.
 - Vaihtelu mahdollistaa luovuuden ja vaihtoehtoiset ratkaisut.
-- Sama kehote ei välttämättä tuota aina täsmälleen samaa vastausta.
+- Sama prompti ei välttämättä tuota aina täsmälleen samaa vastausta.
 - Teknisissä tehtävissä käyttäjän täytyy tarkistaa, että vastaus toimii oikeasti.
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat keskittyvät valitsemaan parasta mallia, kysy: “Mitä tämä vertailu kertoo generatiivisen tekoälyn toimintatavasta?”
@@ -70,7 +70,7 @@ Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista o
 ### Odotettu oppimistulos
 
 - Opiskelijat ymmärtävät, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn yhteydessä.
-- Opiskelijat osaavat selittää, miksi sama kehote voi tuottaa erilaisia vastauksia.
+- Opiskelijat osaavat selittää, miksi sama prompti voi tuottaa erilaisia vastauksia.
 - Opiskelijat ymmärtävät, milloin vaihtelu voi olla hyödyllistä ja milloin se voi olla riski.
 - Opiskelijat osaavat perustella, miksi tekoälyn tuottama koodi pitää tarkistaa ennen käyttöä.
 
@@ -195,7 +195,7 @@ Kysy opiskelijoilta:
 Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe pohdittavaksi:
 
 1. **Ennen tekoälyltä kysymistä:** Mitä sinun täytyy tietää jo valmiiksi? Esimerkiksi taulujen nimet, sarakkeet, päivämäärämuodot, tietokannan tyyppi ja liiketoimintasäännöt.
-2. **Kehotteen kirjoittaminen:** Miten kirjoitat tarkan kehotteen? Mitä yksityiskohtia annat tekoälylle?
+2. **Promptin kirjoittaminen:** Miten kirjoitat tarkan promptin? Mitä yksityiskohtia annat tekoälylle?
 3. **Vastauksen analysointi:** Mistä merkeistä voit epäillä, että vastaus sisältää hallusinaation tai väärän oletuksen?
 4. **Koodin testaaminen:** Miten testaat SQL-kyselyn ennen oikeaan dataan tai tuotantoympäristöön viemistä?
 5. **Dokumentointi:** Miten kirjaat, mitä tekoäly ehdotti, mitä muutit ja miksi hyväksyit lopullisen ratkaisun?
@@ -205,7 +205,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 | Verifiointivaihe | Mitä tehdään? | Miksi tämä on tärkeää? | Mitä riskiä tämä vähentää? |
 | --- | --- | --- | --- |
 | **Ennen kysymistä** |  |  |  |
-| **Kehotteen kirjoittaminen** |  |  |  |
+| **Promptin kirjoittaminen** |  |  |  |
 | **Vastauksen analysointi** |  |  |  |
 | **Testaaminen** |  |  |  |
 | **Dokumentointi** |  |  |  |
@@ -218,7 +218,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 #### Esimerkkiprosessi
 
 1. **Ymmärrä tietokannan rakenne:** tarkista taulut, sarakkeet, tietotyypit ja suhteet dokumentaatiosta tai skeemasta.
-2. **Kirjoita tarkka kehote:** sisällytä taulujen ja sarakkeiden nimet, tietokantatyyppi sekä haluttu lopputulos.
+2. **Kirjoita tarkka prompti:** sisällytä taulujen ja sarakkeiden nimet, tietokantatyyppi sekä haluttu lopputulos.
 3. **Analysoi vastaus:** tarkista syntaksi, vertaa sitä dokumentaatioon ja etsi mallin tekemiä oletuksia.
 4. **Testaa turvallisesti:** käytä testidataa tai kehitysympäristöä ennen oikeaa dataa.
 5. **Dokumentoi päätökset:** kirjaa esimerkiksi: “ChatGPT ehdotti ratkaisua X. Hyväksyin osan Y, koska se vastasi skeemaa. Muutin kohdan Z, koska alkuperäinen ehdotus ei huomioinut päivämäärämuotoa.”
@@ -279,7 +279,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 Opettaja arvioi opiskelijoiden kykyä:
 
 - selittää, mitä **epädeterministisyys** tarkoittaa generatiivisen tekoälyn käytössä,
-- vertailla saman kehotteen tuottamia erilaisia vastauksia eri malleissa,
+- vertailla saman promptin tuottamia erilaisia vastauksia eri malleissa,
 - tunnistaa **hallusinaatioita** ja tarkistaa väitteitä luotettavista lähteistä,
 - selittää, miksi itsevarma vastaus ei vielä tarkoita oikeaa vastausta,
 - suunnitella ammatillinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,

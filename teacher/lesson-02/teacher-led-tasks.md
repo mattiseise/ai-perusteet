@@ -71,10 +71,10 @@ Valmista lisäksi lista sovelluksista ja esimerkeistä:
 
 | Esimerkki | Todennäköinen kategoria | Perustelu |
 | --- | --- | --- |
-| **ChatGPT** | Generatiivinen tekoäly | Tuottaa tekstiä käyttäjän kehotteen perusteella. Se on silti rajattu tekoälyjärjestelmä, ei AGI. |
+| **ChatGPT** | Generatiivinen tekoäly | Tuottaa tekstiä käyttäjän promptin perusteella. Se on silti rajattu tekoälyjärjestelmä, ei AGI. |
 | **Kasvojentunnistus puhelimessa** | Kapea tekoäly | Järjestelmä on erikoistunut yhteen rajattuun tehtävään: kasvojen tunnistamiseen. |
 | **Netflixin suositukset** | Kapea tekoäly | Järjestelmä ennustaa, mistä käyttäjä voisi pitää katseluhistorian ja muiden käyttäjien käyttäytymisen perusteella. |
-| **DALL-E:n tuottama kuva** | Generatiivinen tekoäly | Järjestelmä tuottaa uutta kuvallista sisältöä tekstikehotteen perusteella. |
+| **DALL-E:n tuottama kuva** | Generatiivinen tekoäly | Järjestelmä tuottaa uutta kuvallista sisältöä tekstipromptin perusteella. |
 | **AlphaGo** | Kapea tekoäly | Se on erittäin taitava rajatussa tehtävässä eli go-pelin pelaamisessa, mutta ei yleistekoäly. |
 | **Älypuhelimen puhelinluettelo** | Ei tekoälyä | Tavallinen yhteystietojen tallennus ja haku ei itsessään vaadi oppivaa mallia. |
 | **Google Translate** | Kapea tekoäly | Järjestelmä on erikoistunut kielen käsittelyyn ja kääntämiseen. |
@@ -117,7 +117,7 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
 **Valmistelu:**
 
 - Varmista, että sinulla on pääsy ChatGPT:hen, DALL-E:hen tai vastaavaan generatiivisen tekoälyn työkaluun.
-- Valmistele muutama testikehote eli **prompti**.
+- Valmistele muutama testiprompti eli **prompti**.
 - Muistuta opiskelijoita, että testien tarkoitus ei ole saada täydellisiä vastauksia vaan tutkia, miten generatiivinen tekoäly toimii.
 
 ### Toteutus noin 20 minuuttia
@@ -131,19 +131,19 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
 2. **Testi 1: Johdonmukaisuus noin 5 minuuttia**
 
    1. Anna ChatGPT:lle sama kysymys kaksi kertaa.
-   2. Käytä esimerkiksi kehotetta: `Kerro minulle viisi vinkkiä web-kehitykseen.`
-   3. Näytä ensimmäinen vastaus ja pyydä sen jälkeen uusi vastaus samalla kehotteella.
+   2. Käytä esimerkiksi promptia: `Kerro minulle viisi vinkkiä web-kehitykseen.`
+   3. Näytä ensimmäinen vastaus ja pyydä sen jälkeen uusi vastaus samalla promptilla.
    4. Kysy opiskelijoilta: **Muuttuiko vastaus? Miksi näin saattoi tapahtua?**
-   5. Selitä lyhyesti: “Kielimalli tuottaa tekstiä valitsemalla sanoja ja ilmauksia todennäköisyyksien perusteella. Siksi sama kehote ei aina tuota täysin samaa vastausta.”
+   5. Selitä lyhyesti: “Kielimalli tuottaa tekstiä valitsemalla sanoja ja ilmauksia todennäköisyyksien perusteella. Siksi sama prompti ei aina tuota täysin samaa vastausta.”
 3. **Testi 2: Erikoistuneisuus noin 5 minuuttia**
 
-   1. Anna esimerkiksi kehote: `Kirjoita hyväksytty patenttihakemus.`
+   1. Anna esimerkiksi prompti: `Kirjoita hyväksytty patenttihakemus.`
    2. Tarkastelkaa yhdessä, millaisen vastauksen tekoäly tuottaa.
    3. Kysy opiskelijoilta: **Onnistuiko tehtävä luotettavasti? Miksi tai miksi ei?**
    4. Selitä lyhyesti: “Kielimalli tunnistaa tekstin rakenteita ja kuvioita, mutta se ei välttämättä hallitse patenttilakia tai virallisen hakemuksen vaatimuksia luotettavasti.”
 4. **Testi 3: Faktat ja keksityt vastaukset noin 5 minuuttia**
 
-   1. Anna esimerkiksi kehote: `Kuka voitti Suomen kuninkaallisen jalkapalloligan vuonna 2023?`
+   1. Anna esimerkiksi prompti: `Kuka voitti Suomen kuninkaallisen jalkapalloligan vuonna 2023?`
    2. Tarkistakaa yhdessä, mikä kysymyksessä on ongelmallista ja onko vastaus totta vai keksitty.
    3. Kysy opiskelijoilta: **Miten voimme tietää, onko vastaus totta?**
    4. Selitä lyhyesti: “Generatiivinen tekoäly voi tuottaa uskottavalta kuulostavaa tekstiä myös silloin, kun tieto ei ole totta. Siksi vastaukset pitää tarvittaessa tarkistaa luotettavista lähteistä.”
@@ -157,7 +157,7 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
 
 | Testi | Mitä havaitaan? | Mitä opiskelijan pitäisi oppia? |
 | --- | --- | --- |
-| **Johdonmukaisuus** | Sama kehote voi tuottaa hieman erilaisia vastauksia. | Generatiivinen tekoäly tuottaa tekstiä todennäköisyyksien perusteella eikä aina samalla tavalla. |
+| **Johdonmukaisuus** | Sama prompti voi tuottaa hieman erilaisia vastauksia. | Generatiivinen tekoäly tuottaa tekstiä todennäköisyyksien perusteella eikä aina samalla tavalla. |
 | **Erikoistuneisuus** | Tekoäly voi tuottaa uskottavan näköisen tekstin, vaikka se ei täytä todellisia asiantuntijavaatimuksia. | Asiantuntijatehtävissä tarvitaan tarkistusta ja alan osaamista. |
 | **Faktat** | Tekoäly voi vastata kysymykseen, vaikka kysymyksen oletus olisi virheellinen. | Käyttäjän pitää tarkistaa faktat ja huomata myös virheelliset kysymyksenasettelut. |
 

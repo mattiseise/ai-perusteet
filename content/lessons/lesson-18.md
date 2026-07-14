@@ -22,23 +22,23 @@ Bottisi rakentuu neljästä komponentista. Käytä niitä työvaiheina:
 
 **1. Suunnitelma eli rakennusaine 2.** Päätä, kenelle botti on tarkoitettu, mitä se osaa ja mitä se ei tee. Tämä on botin **perustamisasiakirja**. Ilman sitä botti kasvaa helposti hallitsemattomaksi.
 
-**2. Järjestelmäkehote eli pääohje, rakennusaine 1.** Tämä on tekstipätkä, jonka annat Copilotille ja joka määrittää, miten botti käyttäytyy. Se on botin **DNA**.
+**2. Järjestelmäprompti eli pääohje, rakennusaine 1.** Tämä on tekstipätkä, jonka annat Copilotille ja joka määrittää, miten botti käyttäytyy. Se on botin **DNA**.
 
 **3. Tietopohja eli rakennusaine 3.** Valitse 3–5 dokumenttia, jotka annat botille luettavaksi. Tämä on botin **kirjasto**, josta se ammentaa oman alasi tietoa.
 
 **4. Testaus.** Et tunne bottiasi ennen kuin olet käyttänyt sitä oikealla projekti-idealla. Ensimmäisen testikierroksen jälkeen botti paljastaa yleensä, mitä siinä pitää vielä korjata.
 
-## Järjestelmäkehotteen kieli
+## Järjestelmäpromptin kieli
 
-Botin **järjestelmäkehote** on tärkein yksittäinen tekstipätkä, jonka kirjoitat tässä projektissa. Se määrittelee botin persoonan, työnkulun ja rajat. Alla on esimerkki kahdesta tasosta.
+Botin **järjestelmäprompti** on tärkein yksittäinen tekstipätkä, jonka kirjoitat tässä projektissa. Se määrittelee botin persoonan, työnkulun ja rajat. Alla on esimerkki kahdesta tasosta.
 
-### Heikko järjestelmäkehote
+### Heikko järjestelmäprompti
 
 > Olet ystävällinen tekoälyavustaja, joka auttaa käyttäjiä projektidokumentaation kanssa. Vastaa asiantuntevasti ja kohteliaasti.
 
 **Mikä mättää:** Ohje on liian yleinen. Se ei kerro alaa, työnkulkua eikä rajoja. Botti voi yhtä hyvin auttaa CV:n kirjoittamisessa kuin määrittelydokumentissa. Se ei siis erikoistu mihinkään.
 
-### Vahva järjestelmäkehote
+### Vahva järjestelmäprompti
 
 > Olet kokenut pelikoodausprojektien suunnitteluvalmentaja. Autat opiskelijoita laatimaan pelikoodausprojektin määrittelydokumentin alkuvaiheessa.
 >
@@ -81,32 +81,32 @@ Hyvä testikeskustelu sisältää nämä neljä osaa:
 
 **4. Yritys saada botti tekemään työ puolesta.** Pyydä bottia kirjoittamaan koko dokumentti suoraan. Noudattaako se ohjeitaan vai murtuuko rajaus?
 
-Jos jokin näistä epäonnistuu, botti ei ole vielä valmis. Korjaa järjestelmäkehotetta, lisää tietopohjaa tai tarkenna rajauksia. Testaa sen jälkeen uudelleen.
+Jos jokin näistä epäonnistuu, botti ei ole vielä valmis. Korjaa järjestelmäpromptia, lisää tietopohjaa tai tarkenna rajauksia. Testaa sen jälkeen uudelleen.
 
 ## Yleisimmät sudenkuopat
 
 **1. Liian kiltti botti.**
 
-Jos botti vain vastaa ”hyvä kysymys” ja toistaa käyttäjän sanat, se ei ohjaa. Lisää järjestelmäkehotteeseen velvoite kysyä tarkentavia kysymyksiä, antaa konkreettista palautetta ja ohjata käyttäjää seuraavaan vaiheeseen.
+Jos botti vain vastaa ”hyvä kysymys” ja toistaa käyttäjän sanat, se ei ohjaa. Lisää järjestelmäpromptiin velvoite kysyä tarkentavia kysymyksiä, antaa konkreettista palautetta ja ohjata käyttäjää seuraavaan vaiheeseen.
 
 **2. Liian yleinen botti.**
 
-Jos botti kuulostaa samalta riippumatta siitä, oletko pelikoodaaja vai IT-tuen työntekijä, järjestelmäkehotteessa ja tietopohjassa ei ole tarpeeksi alasi erikoispiirteitä. Lisää termistöä ja konkreettisia esimerkkejä.
+Jos botti kuulostaa samalta riippumatta siitä, oletko pelikoodaaja vai IT-tuen työntekijä, järjestelmäpromptissa ja tietopohjassa ei ole tarpeeksi alasi erikoispiirteitä. Lisää termistöä ja konkreettisia esimerkkejä.
 
 **3. Liian innokas botti.**
 
-Jos botti kirjoittaa koko dokumentin käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäkehotteeseen vaihe vaiheelta etenevä toimintatapa ja kielto kirjoittaa kokonaista dokumenttia käyttäjän puolesta.
+Jos botti kirjoittaa koko dokumentin käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäpromptiin vaihe vaiheelta etenevä toimintatapa ja kielto kirjoittaa kokonaista dokumenttia käyttäjän puolesta.
 
 ## Tarkistuslista ennen palautusta
 
 Käy nämä kohdat läpi ennen kuin palautat työn:
 
-- ☐ Botin järjestelmäkehotteessa on selkeä rooli, työnkulku ja rajat.
+- ☐ Botin järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.
 - ☐ Botti puhuu oman alasi kieltä eikä käytä vain yleisiä projektitermejä.
 - ☐ Tietopohjassa on 3–5 hyvää ja perusteltua dokumenttia.
 - ☐ Olen testannut botin vähintään yhdellä oikealla projekti-idealla loppuun saakka.
 - ☐ Botti tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
-- ☐ Olen iteroinut järjestelmäkehotteen vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.
+- ☐ Olen iteroinut järjestelmäpromptin vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.
 - ☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.
 - ☐ Bottiin pääsee linkillä, jotta arvioija voi testata sitä itse.
 - ☐ Olen ylpeä tästä botista. Se on minun käsialaani.

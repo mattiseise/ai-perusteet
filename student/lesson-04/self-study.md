@@ -83,7 +83,7 @@ Hyvä konteksti rakentuu viidestä pääosasta.
 
 ## Osa 2: Promptaus — kuinka kysyt
 
-Kun konteksti on valmis, sinun on osattava muotoilla *prompti* — tehtävänanto, joka esitetään kontekstin puitteissa. Prompti on kysymys, joka rakentuu kontekstin pohjalle. Konteksti on pohja, jonka päälle prompti rakentuu.
+Kun konteksti on valmis, sinun on osattava muotoilla *prompti* — tehtävänanto, joka esitetään kontekstin puitteissa. Suomeksi promptista käytetään myös sanaa *kehote*; tällä kurssilla käytämme termiä prompti. Prompti on kysymys, joka rakentuu kontekstin pohjalle. Konteksti on pohja, jonka päälle prompti rakentuu.
 
 Monella on tästä väärinkäsitys: he ajattelevat, että "hyvä prompti" on sama asia kuin "hyvä konteksti". Se on kuin sanoisi, että reseptin otsikko ("Pastakeitto") olisi sama kuin koko resepti – ainesosat, valmistusohjeet, käsittelylämpötila ja kypsennysajat. Prompti on *kysymys* tai *tehtävänanto*, jonka esität nyt. Konteksti on *kaikki muu*, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.
 

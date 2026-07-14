@@ -51,7 +51,7 @@ Kirjoita perusteluun yksi selkeä lause: miksi työkalu sopii, sopii rajoituksin
 
 Avaa ChatGPT, Claude tai Copilot ja anna sille valitsemasi organisaation kuvaus, käyttötarve ja päätöstaulukko. Tavoitteena ei ole antaa tekoälyn tehdä päätöstä puolestasi, vaan saada se haastamaan perustelujasi.
 
-Voit käyttää esimerkiksi seuraavaa kehotetta:
+Voit käyttää esimerkiksi seuraavaa promptia:
 
 > "Toimit minulle tietoturvasparrauskumppanina. Olen suosittelemassa tekoälytyökalua organisaatiolle ja perustelen valintani. ORGANISAATIO: [kuvaa valitsemasi organisaatio lyhyesti] KÄYTTÖTARVE: [käyttäjät, tehtävät, käsiteltävä tieto ja budjetti] PÄÄTÖSTAULUKKONI: [liitä päätöstaulukkosi] Haasta päätelmiäni. Pohdi erityisesti: Olenko tunnistanut organisaation keskeiset tietosuojariskit? Onko jokin työkalu, jonka hylkäsin liian nopeasti? Olenko liian optimistinen tai liian varovainen jossakin kohdassa? Mitä GDPR-näkökulmaa en ehkä ole vielä huomannut? Mitä rajoituksia työntekijöille pitäisi antaa? Älä tee valintaa puolestani. Anna 2–3 huomiota, joiden pohjalta voin parantaa perustelujani."
 

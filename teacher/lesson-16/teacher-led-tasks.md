@@ -4,7 +4,7 @@
 
 ### Tavoite
 
-Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten eri **tekoälytyökalut** voivat tuottaa erilaisia tuloksia samasta kehotteesta. Opiskelijat ymmärtävät käytännössä, miksi **promptin** eli kehotteen tarkkuus on tärkeää, miten työkalujen laatu vaihtelee ja miksi **tekijänoikeuksiin** sekä **etiikkaan** liittyvät kysymykset ovat todellisia.
+Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten eri **tekoälytyökalut** voivat tuottaa erilaisia tuloksia samasta promptista. Opiskelijat ymmärtävät käytännössä, miksi **promptin** eli promptin tarkkuus on tärkeää, miten työkalujen laatu vaihtelee ja miksi **tekijänoikeuksiin** sekä **etiikkaan** liittyvät kysymykset ovat todellisia.
 
 **Opettajan painotus:** Korosta, että tekoäly ei ole yksi yhtenäinen työkalu. Eri palvelut voivat tuottaa erilaisia tuloksia, koska ne on rakennettu eri tavoin, koulutettu eri aineistoilla ja suunniteltu eri käyttötarkoituksiin.
 
@@ -14,11 +14,11 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten eri *
 
 - Avaa etukäteen 2–3 kuvageneraattoria tai valmistele niistä esimerkkituotokset. Voit käyttää esimerkiksi ChatGPT:n kuvanluontia, Midjourneyta ja Stable Diffusionia.
 - Valitse kaikille työkaluille sama yksinkertainen ja selkeä teema, esimerkiksi *robotti istuu kahvilassa*.
-- Kirjoita yhteinen peruskehote, jota käytät eri työkaluissa.
+- Kirjoita yhteinen perusprompti, jota käytät eri työkaluissa.
 - Valmistele muutama generoitu kuva etukäteen siltä varalta, että verkkoyhteys tai palvelu ei toimi oppitunnilla.
 - Valmistele vertailukysymykset, joiden avulla opiskelijat arvioivat kuvia.
 
-**Esimerkkikehote:**
+**Esimerkkiprompti:**
 
 Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valokuvamainen tyyli.
 
@@ -29,7 +29,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
    Kerro opiskelijoille:
 
-   > Näemme tänään, miten sama kehote voi tuottaa hyvin erilaisia kuvia eri palveluissa. Syynä on se, että mallit ovat erilaisia, ne on koulutettu eri aineistoilla ja niiden vahvuudet sekä tyylit eroavat toisistaan.
+   > Näemme tänään, miten sama prompti voi tuottaa hyvin erilaisia kuvia eri palveluissa. Syynä on se, että mallit ovat erilaisia, ne on koulutettu eri aineistoilla ja niiden vahvuudet sekä tyylit eroavat toisistaan.
 
    Korosta:
 
@@ -41,12 +41,12 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
    Kysy opiskelijoilta:
 
    - Mitä näette kuvassa?
-   - Vastaako kuva sitä, mitä kehotteessa pyydettiin?
+   - Vastaako kuva sitä, mitä promptissa pyydettiin?
    - Mikä onnistui hyvin?
-   - Mitä muuttaisitte kehotteessa seuraavalla kerralla?
+   - Mitä muuttaisitte promptissa seuraavalla kerralla?
 3. **Toinen demo noin 5 minuuttia**
 
-   Näytä Midjourneylla tai toisella työkalulla tuotettu kuva samasta kehotteesta.
+   Näytä Midjourneylla tai toisella työkalulla tuotettu kuva samasta promptista.
 
    Kysy opiskelijoilta:
 
@@ -67,7 +67,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
    - Mitä riskejä tai vastuukysymyksiä liittyy työkaluihin, joissa käyttäjällä on paljon vapautta?
 5. **Iteraatio noin 10 minuuttia**
 
-   Valitse yksi aiemmin tuotetuista kuvista ja muokkaa kehotetta yhdessä opiskelijoiden kanssa.
+   Valitse yksi aiemmin tuotetuista kuvista ja muokkaa promptia yhdessä opiskelijoiden kanssa.
 
    Pyydä opiskelijoilta parannusehdotuksia. Esimerkiksi:
 
@@ -80,7 +80,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
    Kysy opiskelijoilta:
 
-   - Miten muutos kehotteessa vaikutti kuvaan?
+   - Miten muutos promptissa vaikutti kuvaan?
    - Mikä yksityiskohta muutti lopputulosta eniten?
    - Paraniko kuva? Miksi tai miksi ei?
    > **Keskeinen havainto:** Mitä tarkemmin käyttäjä määrittelee tavoitteen, tyylin, yksityiskohdat ja rajaukset, sitä paremmin tekoäly voi tuottaa käyttökelpoisen lopputuloksen.
@@ -120,8 +120,8 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että eri tekoälytyökalut voivat tuottaa erilaisia tuloksia samasta kehotteesta.
-- Opiskelijat näkevät, että kehotteen tarkkuus ja yksityiskohdat vaikuttavat lopputuloksen laatuun.
+- Opiskelijat ymmärtävät, että eri tekoälytyökalut voivat tuottaa erilaisia tuloksia samasta promptista.
+- Opiskelijat näkevät, että promptin tarkkuus ja yksityiskohdat vaikuttavat lopputuloksen laatuun.
 - Opiskelijat ymmärtävät, että tekijänoikeudet ovat todellinen ja osittain avoin kysymys generatiivisen tekoälyn käytössä.
 - Opiskelijat ymmärtävät, että koodausavustajat voivat tukea ohjelmointia, mutta eivät poista käyttäjän vastuuta ymmärtää ja testata koodia.
 
@@ -355,8 +355,8 @@ _Yhteensä noin 85–100 min: jos aika on tiukka, jätä 16.1:n valinnaiset osio
 
 Opettaja arvioi opiskelijoiden kykyä:
 
-- vertailla eri tekoälytyökalujen tuottamia tuloksia samasta kehotteesta,
-- selittää, miksi kehotteen tarkkuus vaikuttaa lopputuloksen laatuun,
+- vertailla eri tekoälytyökalujen tuottamia tuloksia samasta promptista,
+- selittää, miksi promptin tarkkuus vaikuttaa lopputuloksen laatuun,
 - valita tilanteeseen sopivan tekoälytyökalun ja perustella valintansa,
 - huomioida tekijänoikeudet, tietosuoja ja etiikka tekoälytyökalun valinnassa,
 - osallistua tekijänoikeuksiin liittyvään keskusteluun eri näkökulmista,

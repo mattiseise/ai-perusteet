@@ -88,7 +88,7 @@ Pohjapiirrokset ovat suunnitelmadokumentteja, joita kerätä omaan muistiinpanod
 Mikä ongelma on kyseessä, kenelle se on, miksi juuri agentti sopii ratkaisuksi. 150–200 sanaa.
 
 **2. ⭐️ Agentti: Muisti (tunti 21)**
-Lyhytaikainen muisti (konteksti-ikkuna), pitkäaikainen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.
+Lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.
 
 **3. ⭐️ Agentti: Päättely (tunti 23)**
 ReAct vai ketjuajattelu — kumpi sopii agenttisi ongelmaan ja miksi. Miten päättelymalli näkyy n8n-rakenteessa. 150–200 sanaa.

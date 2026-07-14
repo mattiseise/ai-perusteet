@@ -4,7 +4,7 @@
 
 Agentin lyhytkestoinen muisti. Agentti näkee vain ikkunan sisällä olevan tiedon (viimeisimmät viestit). Kun uusi viesti tulee, vanhin poistuu.
 
-## Pitkäaikainen muisti (long-term memory)
+## Pitkäkestoinen muisti (long-term memory)
 
 Pysyvä tietovarasto (kuukaudet, vuodet). Sisältää asiakkaiden historiat ja aikaisemmat tapaukset.
 
@@ -38,7 +38,7 @@ Ympäröivät tiedot ja tilanteen tausta. Asiakkaan historia, edellinen keskuste
 
 ## Muisti- ja kontekstijärjestelmä
 
-Kolmen osan yhdistelmä: konteksti-ikkuna (nykyisyys), pitkäaikainen muisti (menneisyys), tila (prosessin vaihe).
+Kolmen osan yhdistelmä: konteksti-ikkuna (nykyisyys), pitkäkestoinen muisti (menneisyys), tila (prosessin vaihe).
 
 ## Ankkurointi (grounding)
 

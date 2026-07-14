@@ -88,7 +88,7 @@ Kolmannessa pyynnössä kerrot selkeästi, mitä haluat: johdannon, pituuden, ai
 
 ## Lähdeaineiston antaminen: tekstit, koodit ja dokumentit
 
-Usein sinulla on olemassa olevaa aineistoa, jota haluat tekoälyn käsittelevän. Se voi olla esimerkiksi artikkeli, jonka haluat yksinkertaistaa opiskelijoille, tai koodi, jossa on virhe. Ammattilaisena et pyydä tekoälyä selittämään aineistoa, jota et ole antanut sille nähtäväksi. Annat ensin materiaalin ja sen jälkeen selkeän kehotuksen.
+Usein sinulla on olemassa olevaa aineistoa, jota haluat tekoälyn käsittelevän. Se voi olla esimerkiksi artikkeli, jonka haluat yksinkertaistaa opiskelijoille, tai koodi, jossa on virhe. Ammattilaisena et pyydä tekoälyä selittämään aineistoa, jota et ole antanut sille nähtäväksi. Annat ensin materiaalin ja sen jälkeen selkeän promptin.
 
 **Esimerkki 1:** Sinulla on tiedeartikkeli kvanttimekaniikasta, jonka haluat yksinkertaistaa 15-vuotiaalle. Voit kopioida artikkelista katkelman ja sanoa: ”Tässä on teksti kvanttimekaniikasta. Kirjoita se uudelleen 15-vuotiaalle sopivaksi. Käytä esimerkkejä jokapäiväisestä elämästä.”
 
@@ -96,7 +96,7 @@ Vaihtoehtoisesti voit antaa pääkohdat ja sanoa: ”Artikkeli käsittelee kvant
 
 **Esimerkki 2:** Sinulla on ryhmän tekemä raportti, jota haluat parantaa. Annat raportin tekoälylle ja sanot: ”Tässä on ryhmän raportti. Paranna sitä seuraavien kohtien osalta: 1) johdanto ei selitä aihetta riittävästi, 2) johtopäätökset ovat liian lyhyet, 3) lähdeviitteet puuttuvat.”
 
-Tärkeä periaate on tämä: **anna ensin aineisto, sitten kehotus**. Kun tekoäly näkee konkreettisen tekstin, se voi antaa tarkemman ja aineistoon perustuvan vastauksen. Sen ei tarvitse arvailla.
+Tärkeä periaate on tämä: **anna ensin aineisto, sitten prompti**. Kun tekoäly näkee konkreettisen tekstin, se voi antaa tarkemman ja aineistoon perustuvan vastauksen. Sen ei tarvitse arvailla.
 
 > **Pysähdy hetkeksi:** Missä opiskelun tilanteissa sinulla on aineistoja, joita haluaisit tekoälyn käsittelevän? Voisiko kyse olla esimerkiksi tenttiartikkeleista, muiden kirjoittamasta koodista tai vertaisarvioinnista?
 
@@ -173,7 +173,7 @@ Koko prosessi rakentui kontekstin avulla kierros kierrokselta. Lopputuloksena sa
 
 **Kontekstin rakentaminen** on taito, joka tekee tekoälystä oikeasti hyödyllisen työkalun. Tällä tunnilla harjoittelet, miten taustatiedot, jatkokysymykset ja iteraatio parantavat tekoälyn vastauksia.
 
-Tehtävissä rakennat itsellesi **promptauspankin** eli **rakennuspalikka 1:n**. Se on kokoelma 5–7 omaa, testattua promptia, joita voit käyttää uudelleen. Tämä pankki toimii myöhemmin bottisi järjestelmäkehotteen raaka-aineena. Kun tunnilla 17 kirjoitat botille pääohjeen, voit hyödyntää tässä pankissa toimiviksi todettuja rakenteita.
+Tehtävissä rakennat itsellesi **promptauspankin** eli **rakennuspalikka 1:n**. Se on kokoelma 5–7 omaa, testattua promptia, joita voit käyttää uudelleen. Tämä pankki toimii myöhemmin bottisi järjestelmäpromptin raaka-aineena. Kun tunnilla 17 kirjoitat botille pääohjeen, voit hyödyntää tässä pankissa toimiviksi todettuja rakenteita.
 
 Seuraavaksi suunnittelet, kenelle bottisi on tarkoitettu ja mitä sen pitää tehdä.
 

@@ -6,7 +6,7 @@
 
 Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä **konteksti-ikkuna** tarkoittaa ja miksi sen koko vaikuttaa agentin toimintaan. Opiskelijat näkevät, että agentti ei välttämättä muista kaikkea aiemmasta keskustelusta, vaan toimii sen perusteella, mitä sillä on käytettävissään nykyisessä kontekstissa.
 
-**Opettajan painotus:** Korosta, että konteksti-ikkuna ei ole sama asia kuin pitkäaikainen muisti. Konteksti-ikkuna sisältää vain sen tiedon, joka on mukana juuri tässä käsittelyhetkessä.
+**Opettajan painotus:** Korosta, että konteksti-ikkuna ei ole sama asia kuin pitkäkestoinen muisti. Konteksti-ikkuna sisältää vain sen tiedon, joka on mukana juuri tässä käsittelyhetkessä.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -104,7 +104,7 @@ Vertaa vektoritietokantaa opiskelijoille tuttuun tilanteeseen: ihminen ymmärtä
 
 - Opiskelijat ymmärtävät, että vektoritietokanta auttaa agenttia löytämään merkitykseltään samankaltaista tietoa.
 - Opiskelijat osaavat erottaa sanahaun ja merkityshaun toisistaan.
-- Opiskelijat näkevät, miksi pitkäaikainen muisti voi parantaa agentin vastauksia.
+- Opiskelijat näkevät, miksi pitkäkestoinen muisti voi parantaa agentin vastauksia.
 
 ---
 
@@ -251,7 +251,7 @@ Joitakin ryhmiä pyydetään lukemaan agenttinsa identiteetti ja arvot ääneen.
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on yhdistää oppitunnin neljä keskeistä käsitettä: **konteksti-ikkuna**, **pitkäaikainen muisti**, **tila ja muuttujat** sekä agentin **identiteetti ja arvot**. Opiskelijat ymmärtävät, miten nämä tekijät yhdessä tuottavat vaikutelman älykkäästä toiminnasta.
+Aktiviteetin tavoitteena on yhdistää oppitunnin neljä keskeistä käsitettä: **konteksti-ikkuna**, **pitkäkestoinen muisti**, **tila ja muuttujat** sekä agentin **identiteetti ja arvot**. Opiskelijat ymmärtävät, miten nämä tekijät yhdessä tuottavat vaikutelman älykkäästä toiminnasta.
 
 ### Tapaus
 
@@ -271,7 +271,7 @@ Näytä opiskelijoille seuraava tilanne:
    - Mitä agentti näkee?
    - Mitä se ei ehkä näe?
    - Voiko agentti ymmärtää ongelman pelkän nykyisen keskustelun perusteella?
-2. **Pitkäaikainen muisti:**
+2. **Pitkäkestoinen muisti:**
 
    Agentti hakee vektoritietokannasta aiempia samankaltaisia tapauksia.
 
@@ -313,11 +313,11 @@ Näytä opiskelijoille seuraava tilanne:
 
 Kerro opiskelijoille:
 
-> Agentin näennäinen älykkyys ei synny yhdestä asiasta. Se syntyy siitä, että agentti yhdistää nykyisen keskustelun, pitkäaikaisen muistin, prosessin tilan, tarvittavat muuttujat sekä pysyvän identiteetin ja arvot.
+> Agentin näennäinen älykkyys ei synny yhdestä asiasta. Se syntyy siitä, että agentti yhdistää nykyisen keskustelun, pitkäkestoisen muistin, prosessin tilan, tarvittavat muuttujat sekä pysyvän identiteetin ja arvot.
 
 Näytä yhteenveto:
 
-Konteksti-ikkuna + pitkäaikainen muisti + tila ja muuttujat + identiteetti ja arvot = johdonmukainen agenttikäyttäytyminen
+Konteksti-ikkuna + pitkäkestoinen muisti + tila ja muuttujat + identiteetti ja arvot = johdonmukainen agenttikäyttäytyminen
 
 ### Odotettu oppimistulos
 
@@ -333,7 +333,7 @@ Konteksti-ikkuna + pitkäaikainen muisti + tila ja muuttujat + identiteetti ja a
 - **Entä jos agentin identiteetti sanoo “älä anna asiakkaan odottaa liian kauan”, mutta prosessin tila on “odottaa maksua”? Miten agentin pitäisi päättää?**
 - **Voivatko kaksi agenttia, joilla on sama muisti mutta eri arvot ja identiteetti, tehdä erilaisia päätöksiä?**
 - **Milloin agentin pitäisi pysähtyä ja pyytää ihmisen arviota?**
-- **Mitä riskejä syntyy, jos agentin pitkäaikainen muisti sisältää virheellistä tai vanhentunutta tietoa?**
+- **Mitä riskejä syntyy, jos agentin pitkäkestoinen muisti sisältää virheellistä tai vanhentunutta tietoa?**
 
 ## Arviointi
 

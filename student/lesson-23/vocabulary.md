@@ -36,7 +36,7 @@ Moniagenttijärjestelmän rakenne, jossa agentit keskustelevat keskenään ilman
 
 Koordinointi — kuinka agentit kutsutaan järjestyksessä ja kuinka tieto kulkee niiden välillä.
 
-## Eskalatio (escalation)
+## Eskalointi (escalation)
 
 Tehtävän siirtäminen toiselle agentille, kun tämä agenti ei pysty ratkaisemaan.
 

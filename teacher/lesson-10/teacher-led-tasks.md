@@ -4,7 +4,7 @@
 
 ### Tavoite
 
-Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, että eri **tekoälytyökalut** voivat antaa eri tuloksia samalle kehotukselle. Opiskelijat oppivat, että työkalun valinta perustuu **kontekstiin**, tehtävän tavoitteeseen ja käytännön rajoituksiin.
+Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, että eri **tekoälytyökalut** voivat antaa eri tuloksia samalle promptille. Opiskelijat oppivat, että työkalun valinta perustuu **kontekstiin**, tehtävän tavoitteeseen ja käytännön rajoituksiin.
 
 **Opettajan painotus:** Korosta, että tarkoitus ei ole valita yhtä “parasta” tekoälytyökalua. Ammattilainen arvioi, mikä työkalu sopii parhaiten juuri kyseiseen tehtävään.
 
@@ -18,11 +18,11 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, että eri *
 - Valitse yksinkertainen ja konkreettinen testitehtävä.
 - Varmista, että vastaukset voidaan näyttää opiskelijoille projektorilla.
 
-**Esimerkkikehote:**
+**Esimerkkiprompti:**
 
 Kirjoita Python-funktio, joka validoi sähköpostiosoitteen. Funktion pitää palauttaa `True` tai `False`.
 
-Vaihtoehtoinen kehote:
+Vaihtoehtoinen prompti:
 
 Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
 
@@ -30,11 +30,11 @@ Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
 
 1. **Johdanto noin 2 minuuttia**
 
-   > Nyt teemme kokeen. Annan täsmälleen saman kehotuksen kolmeen eri tekoälytyökaluun. Katsomme, millaisia eroja vastauksissa syntyy ja mistä erot voivat johtua.
+   > Nyt teemme kokeen. Annan täsmälleen saman promptin kolmeen eri tekoälytyökaluun. Katsomme, millaisia eroja vastauksissa syntyy ja mistä erot voivat johtua.
 2. **Ensimmäinen testi: ChatGPT noin 8 minuuttia**
 
    1. Avaa ChatGPT projektorilla.
-   2. Kirjoita valittu kehote.
+   2. Kirjoita valittu prompti.
    3. Anna vastauksen ilmestyä näytölle.
    4. Kysy opiskelijoilta:
       - Onko vastaus selkeä?
@@ -43,7 +43,7 @@ Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
       - Mitä pitäisi vielä tarkistaa?
 3. **Toinen testi: Claude noin 8 minuuttia**
 
-   1. Avaa Claude samalla kehotuksella.
+   1. Avaa Claude samalla promptilla.
    2. Vertaa vastausta ChatGPT:n vastaukseen.
    3. Kysy opiskelijoilta:
       - Mikä oli erilaista?
@@ -52,7 +52,7 @@ Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
       - Tekikö malli samoja oletuksia kuin ensimmäinen työkalu?
 4. **Kolmas testi: Microsoft Copilot noin 8 minuuttia**
 
-   1. Avaa Copilot samalla kehotuksella.
+   1. Avaa Copilot samalla promptilla.
    2. Vertaa vastausta kahteen edelliseen.
    3. Kysy opiskelijoilta:
       - Oliko kolmas vastaus samankaltainen vai selvästi erilainen?
@@ -74,7 +74,7 @@ Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat näkevät, että eri tekoälytyökalut voivat antaa eri vastauksia samalle kehotukselle.
+- Opiskelijat näkevät, että eri tekoälytyökalut voivat antaa eri vastauksia samalle promptille.
 - Opiskelijat ymmärtävät, että työkalun valinta on **kontekstipohjainen** päätös.
 - Opiskelijat osaavat vertailla tekoälytyökalujen vastauksia laadun, selkeyden ja käyttötarkoituksen perusteella.
 
@@ -149,7 +149,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten samaa tehtävää voidaa
 
 ### Odotettu oppimistulos
 
-- Opiskelijat näkevät, miten kolme päätyökalua eroavat samalla kehotuksella.
+- Opiskelijat näkevät, miten kolme päätyökalua eroavat samalla promptilla.
 - Opiskelijat ymmärtävät, että valinta perustuu tehtävään ja kontekstiin, ei työkalun suosioon.
 - Opiskelijat osaavat dokumentoida ja vertailla tekoälytyökalujen tuloksia.
 
@@ -223,7 +223,7 @@ Kirjoita taululle kolme skenaariota:
 
 Opettaja arvioi opiskelijoiden kykyä:
 
-- vertailla eri tekoälytyökalujen vastauksia samalla kehotuksella,
+- vertailla eri tekoälytyökalujen vastauksia samalla promptilla,
 - tunnistaa työkalujen vahvuuksia ja rajoituksia,
 - perustella työkalun valinta tehtävän, kontekstin ja tavoitteiden perusteella,
 - dokumentoida havainnot selkeästi,

@@ -128,7 +128,7 @@ Tämä on viimeinen teoriapainotteinen oppitunti ennen rakentamista. Seuraavaksi
 | --- | --- | --- |
 | **Agentin rakenne** | Agentin kuusi komponenttia. | Jokainen komponentti toteutuu yhtenä tai useampana n8n-solmuna. |
 | **Automaatio vs. autonomia** | Päätöspuu: promptaus, työnkulku vai agentti. | Valitset, riittääkö yksi AI Agent -solmu vai tarvitaanko monivaiheinen työnkulku. |
-| **Muisti ja konteksti** | Konteksti-ikkuna, pitkäaikainen muisti ja tila. | Memory-solmu, tietokanta, Google Sheets tai muu tilan tallennus. |
+| **Muisti ja konteksti** | Konteksti-ikkuna, pitkäkestoinen muisti ja tila. | Memory-solmu, tietokanta, Google Sheets tai muu tilan tallennus. |
 | **Työkalut** | Tiedostot, verkkohaku ja CLI-komennot. | Read File-, HTTP Request- ja Execute Command -solmut. |
 | **Suunnittelumallit** | ReAct, ketjuajattelu ja moniagenttijärjestelmät. | AI Agent ReAct-malliin, solmuketju ketjuajatteluun ja webhook-kutsut moniagenttirakenteeseen. |
 | **Turvallisuus** | Prompt injection, hallusinaatiot, minimioikeus ja lokitus. | IF-solmut validointiin, rajatut API-avaimet, hyväksyntäportit ja lokisolmut. |

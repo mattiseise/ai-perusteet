@@ -4,9 +4,9 @@
 
 ChatGPT:n erikoisversio, joka on konfiguroitu tiettyyn tarkoitukseen. Custom GPT:llä on oma persoona, ohjeet, rajaukset ja mahdollisesti tietokanta.
 
-## System prompt (järjestelmäkehotus)
+## System prompt (järjestelmäprompti)
 
-Piilossa oleva ohje, joka määrittää botin käyttäytymisen. Järjestelmäkehotus kertoo botille, kuka se on, miten se vastaa ja mitä rajoituksia sillä on. Käyttäjä ei näe järjestelmäkehotusta.
+Piilossa oleva ohje, joka määrittää botin käyttäytymisen. Järjestelmäprompti kertoo botille, kuka se on, miten se vastaa ja mitä rajoituksia sillä on. Käyttäjä ei näe järjestelmäpromptia.
 
 ## Botin tarkoitus (bot purpose)
 

@@ -203,7 +203,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 ### 3. Testaus ja havainnot
 
-**Kysymys:** Testasit kolmea työkalua samalla kehotuksella. Mitä eroja huomasit?
+**Kysymys:** Testasit kolmea työkalua samalla promptilla. Mitä eroja huomasit?
 
 **Mitä opettaja etsii:** Opiskelija kuvaa konkreettisia eroja esimerkiksi rakenteessa, tarkkuudessa, sävyssä, lähteissä, vastausmuodossa tai käyttökelpoisuudessa.
 

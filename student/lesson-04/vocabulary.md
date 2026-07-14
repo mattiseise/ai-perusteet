@@ -26,11 +26,11 @@ Konkreettinen näyttö siitä, minkä muotoinen tai -tyyppinen vastaus halutaan.
 
 ## Prompti (prompt)
 
-Yksittäinen kysymys tai käsky, joka esitetään tekoälylle. Prompti on eri asia kuin konteksti — prompti on kysymys, konteksti on pohja, jonka päälle kysymys rakentuu.
+Yksittäinen kysymys tai käsky, joka esitetään tekoälylle. Suomeksi käytetään myös termiä kehote. Prompti on eri asia kuin konteksti — prompti on kysymys, konteksti on pohja, jonka päälle kysymys rakentuu.
 
 ## Johdatteleva kysymys (leading question)
 
-Kysymys tai kehotus, joka ohjaa vastaajaa tiettyyn suuntaan tai tietynlaiseen vastaustyyliin. Tekoälyn kanssa johdattelevat kysymykset ovat hyödyllisiä, koska ne auttavat tekoälyä ymmärtämään, millaista apua tarvitset.
+Kysymys tai prompti, joka ohjaa vastaajaa tiettyyn suuntaan tai tietynlaiseen vastaustyyliin. Tekoälyn kanssa johdattelevat kysymykset ovat hyödyllisiä, koska ne auttavat tekoälyä ymmärtämään, millaista apua tarvitset.
 
 ## Hallusinaatio (hallucination)
 

@@ -4,34 +4,34 @@
 
 Tähän mennessä olet kerännyt kuuden tunnin aikana kolme **rakennuspalikkaa**. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa. Tämä on **nivelkohta**: siirryt suunnittelusta rakentamiseen.
 
-Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman järjestelmäkehotteeksi**, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.
+Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman järjestelmäpromptiksi**, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.
 
-## Mikä on järjestelmäkehote?
+## Mikä on järjestelmäprompti?
 
-**Järjestelmäkehote** on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy *kaikissa* keskusteluissa. Käyttäjä ei yleensä näe järjestelmäkehotetta, mutta botti noudattaa sitä toiminnassaan.
+**Järjestelmäprompti** on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy *kaikissa* keskusteluissa. Käyttäjä ei yleensä näe järjestelmäpromptia, mutta botti noudattaa sitä toiminnassaan.
 
-Voit ajatella järjestelmäkehotetta botin **työsopimuksena**: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.
+Voit ajatella järjestelmäpromptia botin **työsopimuksena**: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.
 
-Hyvä järjestelmäkehote vastaa neljään kysymykseen:
+Hyvä järjestelmäprompti vastaa neljään kysymykseen:
 
 1. **Kuka olet?** Rooli ja persoona.
 2. **Mitä teet?** Tehtävä ja työnkulku.
 3. **Miten puhut?** Äänensävy ja tyyli.
 4. **Mitä et tee?** Rajat ja kiellot.
 
-## Rakennuspalikat järjestelmäkehotteeksi
+## Rakennuspalikat järjestelmäpromptiksi
 
-Kolme rakennuspalikkaasi muuttuvat järjestelmäkehotteeksi seuraavasti:
+Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:
 
-| Rakennuspalikka | Mihin osaan järjestelmäkehotetta? |
+| Rakennuspalikka | Mihin osaan järjestelmäpromptia? |
 | --- | --- |
 | **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa. |
-| **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäkehotteen kappaleiksi. |
-| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäkehotetta, vaan se ladataan erikseen Copilotiin. Järjestelmäkehotteessa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
+| **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
+| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäpromptia, vaan se ladataan erikseen Copilotiin. Järjestelmäpromptissa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
 
-## Esimerkki: rakennuspalikoista järjestelmäkehotteeksi
+## Esimerkki: rakennuspalikoista järjestelmäpromptiksi
 
-Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muuttuu järjestelmäkehotteeksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.
+Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muuttuu järjestelmäpromptiksi. Ota se malliksi, mutta älä kopioi sitä sellaisenaan.
 
 ### Botin määrittelyn sisältö eli rakennuspalikka 2
 
@@ -42,7 +42,7 @@ Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muu
 > **Työnkulku:** 1) Tavoite → 2) Lähtötaso ja kokemus → 3) Käytettävissä olevat päivät → 4) Liikkeiden valinta → 5) Viikko-ohjelman kokoaminen → 6) Palautuminen ja seuranta
 > **Rajat:** Ei kirjoita ohjelmaa valmiiksi käyttäjän puolesta kysymättä mitään, ei anna lääketieteellisiä neuvoja, ei käsittele muita aiheita kuin treenausta
 
-### Sama järjestelmäkehotteena
+### Sama järjestelmäpromptina
 
 > Olet **Treenikaveri**. Autat opiskelijaa, joka aloittaa salitreenin, kokoamaan itselleen sopivan treeniviikon.
 >
@@ -54,7 +54,7 @@ Alla on yksinkertainen esimerkki siitä, miten botin määrittelyn sisältö muu
 >
 > **Tietopohja:** Käytä bottiin ladattuja dokumentteja referenssinä, kun ohjaat käyttäjää.
 
-Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taas järjestelmäkehotteessa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
+Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taas järjestelmäpromptissa puhutaan botille suoraan: "Olet…", "Työnkulkusi…" ja "Et koskaan…". Tämä on tärkein muunnos: **kuvaileva määrittely muutetaan suoraksi ohjeeksi botille**.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
@@ -63,7 +63,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
     <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
     <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
     <span class="l17-morph">kuvaileva → suora ohje</span>
-    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄKEHOTE</span>
+    <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄPROMPTI</span>
       <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
       <span class="l17-line n2"><b>”Olet Treenikaveri.”</b> Ohjaat kuusi vaihetta järjestyksessä.</span>
       <span class="l17-line n3">Käytä ladattuja dokumentteja referenssinä.</span>
@@ -102,17 +102,17 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 .l17-line,.l17-ready,.l17-morph{opacity:1}}
 </style>
 
-## Käytä tekoälyä apuna järjestelmäkehotteen kirjoittamisessa
+## Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa
 
-Kun olet kirjoittanut järjestelmäkehotteen ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:
+Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:
 
-> "Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäkehotetta. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäkehotteesta:
+> "Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäpromptia. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäpromptista:
 >
 > MÄÄRITTELY: [liitä rakennuspalikka 2]
 >
-> JÄRJESTELMÄKEHOTE, versio 1: [liitä oma kehotteesi]
+> JÄRJESTELMÄPROMPTI, versio 1: [liitä oma promptisi]
 >
-> Auta minua arvioimaan: onko järjestelmäkehotteessa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."
+> Auta minua arvioimaan: onko järjestelmäpromptissa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."
 
 ## Copilot Agentin luominen
 
@@ -120,7 +120,7 @@ Microsoft Copilotissa voit luoda oman **agentin**, jolla on omat ohjeet ja tieto
 
 1. Avaa Copilot ja siirry **Agents** / **Agentit** -osioon.
 2. Luo uusi agentti. Anna sille sama nimi kuin määrittelydokumentissasi.
-3. Liitä järjestelmäkehotteesi **Instructions** / **Ohjeet** -kenttään.
+3. Liitä järjestelmäpromptisi **Instructions** / **Ohjeet** -kenttään.
 4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan **Knowledge** / **Tieto**.
 5. Tallenna agentti ja aloita keskustelu.
 

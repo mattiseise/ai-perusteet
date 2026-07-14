@@ -7,7 +7,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **muisti*
 ### Muistaa ja ymmärtää
 
 - Opiskelija ymmärtää, mitä **konteksti-ikkuna** tarkoittaa ja miksi sen koko vaikuttaa agentin toimintaan.
-- Opiskelija ymmärtää, miten **pitkäaikainen muisti** eroaa keskustelun aikaisesta kontekstista.
+- Opiskelija ymmärtää, miten **pitkäkestoinen muisti** eroaa keskustelun aikaisesta kontekstista.
 - Opiskelija tunnistaa **vektoritietokannan** merkitysperusteisen haun välineenä.
 - Opiskelija ymmärtää, mitä **tila** ja **muuttujat** tarkoittavat agentin prosessissa.
 - Opiskelija ymmärtää, mitä **soul** tarkoittaa agentin pysyvänä identiteettinä ja arvoina.
@@ -15,7 +15,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **muisti*
 ### Soveltaa ja analysoida
 
 - Opiskelija osaa arvioida, millaista muistia oma agentti tarvitsee.
-- Opiskelija osaa erottaa lyhytaikaisen kontekstin, pitkäaikaisen muistin ja prosessin tilan toisistaan.
+- Opiskelija osaa erottaa lyhytaikaisen kontekstin, pitkäkestoisen muistin ja prosessin tilan toisistaan.
 - Opiskelija osaa suunnitella yksinkertaisen tilamallin agentin työnkululle.
 
 ### Luoda ja arvioida
@@ -35,7 +35,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **muisti*
 Oppitunnin ydinajatuksen voi tiivistää näin: agentti näyttää älykkäältä neljästä syystä.
 
 1. **Se näkee nykyisen tilanteen** konteksti-ikkunan avulla.
-2. **Se muistaa menneisyyttä** pitkäaikaisen muistin, esimerkiksi vektoritietokannan, avulla.
+2. **Se muistaa menneisyyttä** pitkäkestoisen muistin, esimerkiksi vektoritietokannan, avulla.
 3. **Se seuraa prosessin vaihetta** tilan ja muuttujien avulla.
 4. **Se toimii johdonmukaisesti** soulin eli pysyvän identiteetin ja arvojen avulla.
 
@@ -44,7 +44,7 @@ Oppitunnin ydinajatuksen voi tiivistää näin: agentti näyttää älykkäält�
 Korosta opiskelijoille:
 
 - **Konteksti-ikkuna** on agentin lyhytaikainen näkymä nykyiseen tilanteeseen.
-- **Pitkäaikainen muisti** säilyttää aiempia tapauksia ja tietoja keskustelujen välillä.
+- **Pitkäkestoinen muisti** säilyttää aiempia tapauksia ja tietoja keskustelujen välillä.
 - **Tila** kertoo, missä vaiheessa prosessi on.
 - **Soul** tekee agentin toiminnasta johdonmukaista ja arvoihin sidottua.
 
@@ -190,7 +190,7 @@ Mikä siirtymäehto puuttuu? Milloin tila pitäisi vaihtaa, ja mihin arvoon?
 ## CFU-kysymykset
 
 1. **Konteksti:** Miksi liian suuri konteksti-ikkuna ei ole aina parempi?
-2. **Muisti:** Mitä eroa on konteksti-ikkunalla ja pitkäaikaisella muistilla?
+2. **Muisti:** Mitä eroa on konteksti-ikkunalla ja pitkäkestoisella muistilla?
 3. **Vektoritietokanta:** Miksi vektoritietokanta voi löytää oikean tapauksen, vaikka käyttäjä käyttää eri sanoja?
 4. **Tila:** Mitä voi tapahtua, jos agentti ei päivitä prosessin tilaa oikein?
 5. **Soul:** Miksi agentin arvot pitää kirjoittaa konkreettisesti eikä vain yleisellä tasolla?
@@ -199,14 +199,14 @@ Mikä siirtymäehto puuttuu? Milloin tila pitäisi vaihtaa, ja mihin arvoon?
 
 ## Opettajan vihjeet
 
-### Jos opiskelija sekoittaa kontekstin ja pitkäaikaisen muistin
+### Jos opiskelija sekoittaa kontekstin ja pitkäkestoisen muistin
 
 Käytä seuraavaa erottelua:
 
 - **Konteksti-ikkuna:** mitä agentti näkee juuri nyt.
-- **Pitkäaikainen muisti:** mitä agentti voi hakea aiemmista keskusteluista tai tietokannasta.
+- **Pitkäkestoinen muisti:** mitä agentti voi hakea aiemmista keskusteluista tai tietokannasta.
 
-> Konteksti on työpöytä. Pitkäaikainen muisti on arkisto.
+> Konteksti on työpöytä. Pitkäkestoinen muisti on arkisto.
 
 ### Jos opiskelija ajattelee, että vektoritietokanta on aina oikeassa
 

@@ -8,13 +8,13 @@ Automaatio, jossa ihminen hyväksyy kriittiset päätökset. Ei täysin automati
 
 Piste prosessissa, jossa agentti pysähtyy ja odottaa ihmisen vastausta. Selkeä kysymys ja ehdotus.
 
-## Eskalatio (escalation)
+## Eskalointi (escalation)
 
 Tehtävän siirtäminen toiselle hyväksyjälle, kun ensimmäinen ei voi vastata.
 
 ## Timeout
 
-Aika, jossa hyväksyjällä on vastata. Jos vastaus ei tule, mitä tehdään? (oletusarvo, eskalatio, tai odotetaan)
+Aika, jossa hyväksyjällä on vastata. Jos vastaus ei tule, mitä tehdään? (oletusarvo, eskalointi, tai odotetaan)
 
 ## Rahaa/rakenne -sääntö
 

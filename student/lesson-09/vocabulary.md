@@ -20,9 +20,9 @@ Tiedot, jotka on tarkoitettu vain tietyille ihmisille tai organisaatioille. Sis�
 
 Salainen merkkijono, jota käytetään sovelluksen tunnistamiseen rajapintaa käytettäessä. Sitä ei saa koskaan jakaa julkisesti tai antaa tekoälylle.
 
-## Prompt (kehote)
+## Prompt (prompti)
 
-Teksti, jonka annat tekoälylle kysymyksenä tai ohjeena. Prompt injection on yritys käyttää kehotetta tekoälyn käyttäytymisen hallintaan.
+Teksti, jonka annat tekoälylle kysymyksenä tai ohjeena. Prompt injection on yritys käyttää promptia tekoälyn käyttäytymisen hallintaan.
 
 ## Ammatillinen vastuu (professional responsibility)
 
