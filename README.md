@@ -1,22 +1,29 @@
 # Tekoälyn perusteet
 
-27-oppituntinen kurssi tekoälyn perusteista. Kolme kokonaisuutta: teoria, käyttö ja agentit.
+27-oppituntinen kurssi tekoälyn perusteista (aiperusteet.fi). Kolme moduulia:
+Teoria (tunnit 1–9), Tekoälyjen käyttö (10–18) ja Agentit (19–27).
 
 ## Rakenne
 
 ```
-content/lessons/     # Oppituntien pääsisältö (lesson-01.md – lesson-27.md)
-student/             # Opiskelijamateriaali per oppitunti
-  lesson-XX/
-    self-study.md        # Itseopiskelumateriaali
-    student-tasks.md     # Opiskelutehtävät
-    vocabulary.md        # Sanasto
-teacher/             # Opettajamateriaali per oppitunti
-  lesson-XX/
-    teacher-led-tasks.md # Opettajavetoiset tehtävät
-    teacher-materials.md # Opettajan materiaali
-generate_site.py     # Sivustogeneraattori → tuottaa index.html
+student/                 # Sivuston lähde: opiskelijamateriaali per oppitunti
+  lesson-NN/
+    self-study.md            # Itseopiskelumateriaali (teoria)
+    student-tasks.md         # Opiskelutehtävät (luokkatehtävät)
+    practice.md              # Harjoittele-tehtävät (```task-JSON-lohkot)
+    vocabulary.md            # Sanasto
+    slides.html              # Diat (käsin ladottu SVG)
+teacher/                 # Sivuston lähde: opettajamateriaali per oppitunti
+  lesson-NN/
+    teacher-materials.md     # Tuntisuunnitelma, väärinkäsitykset
+    teacher-led-tasks.md     # Opettajavetoiset tehtävät
+*-lopputyo-tehtavananto.md   # Lopputöiden tehtävänannot (3 kpl, juuressa)
+generate_site.py         # Sivustogeneraattori → tuottaa index.html
+siirtyma/redirectit.md   # Rakenneuudistus 2: lukittu redirect-taulukko
 ```
+
+Huom: `index.html` on generoitu — älä muokkaa käsin. Repo-konventiot ja
+generaattorin ansat: `CLAUDE.md`.
 
 ## Sivuston generointi
 
@@ -26,3 +33,8 @@ python3 generate_site.py
 # → tuottaa index.html
 ```
 
+## Käynnissä: rakenneuudistus 2
+
+Sivusto ollaan muuttamassa monisivuiseksi, kolmen näkymän kokonaisuudeksi
+(/kurssi, /luokka, /opettaja) yhdestä sisältöpohjasta. Suunnitelma:
+`RAKENNEUUDISTUS-2-NAKYMAT.md`, toimeksianto: `HANDOFF-RAKENNEUUDISTUS-2.md`.
