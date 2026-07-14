@@ -111,6 +111,7 @@ Harjoittele demo etukäteen. Testaa, että n8n-työnkulku toimii esityshetkellä
 
 Hyvä demo ei tarkoita täydellistä suoritusta. Hyvä demo on **selkeä ja rehellinen esitys**: ”Rakensin tämän, se toimii näin, tässä onnistuin ja tässä on vielä parannettavaa.” Kriittinen ajattelu on tärkeämpää kuin virheetön esitys.
 
+::: luokka
 ## Arviointi
 
 Lopputyö arvioidaan viidellä kriteerillä. Enimmäispistemäärä on **100 pistettä**.
@@ -122,11 +123,27 @@ Lopputyö arvioidaan viidellä kriteerillä. Enimmäispistemäärä on **100 pis
 | **Dokumentaatio** | 20 p | Ovatko README.md, ARCHITECTURE.md ja SAFETY.md selkeitä ja kattavia? Ymmärtääkö toinen ihminen projektin dokumentaation avulla? |
 | **Testaus** | 20 p | Onko normaaleja tapauksia, reunatapauksia ja turvallisuustapauksia testattu systemaattisesti? Onko tulokset dokumentoitu? |
 | **Itsearviointi ja demo** | 15 p | Onko demo selkeä ja rehellinen? Osoittaako itsearviointi kriittistä ajattelua? |
+:::
+
+::: verkko
+## Itsearviointi
+
+Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit työsi itse. Käy viisi kriteeriä läpi ennen kuin toteat työn valmiiksi. Painoarvo kertoo, mihin kannattaa panostaa eniten — painotus on sama, jolla työtä muutenkin arvioitaisiin.
+
+| Kriteeri | Painoarvo | Kysy itseltäsi |
+| --- | --- | --- |
+| **Toimiva työnkulku** | 25 % | Toimiiko agenttini? Ratkaiseeko se valitsemani ongelman? Sisältääkö työnkulku vähintään triggerin, tekoälysolmun ja toimintasolmun? |
+| **Turvallisuus** | 20 % | Onko turvakerros suunniteltu ja toteutettu? Kestääkö agentti turvallisuustestit? Olenko tunnistanut riskit? |
+| **Dokumentaatio** | 20 % | Ovatko README.md, ARCHITECTURE.md ja SAFETY.md selkeitä ja kattavia? Ymmärtäisikö toinen ihminen projektin niiden avulla? |
+| **Testaus** | 20 % | Olenko testannut normaaleja tapauksia, reunatapauksia ja turvallisuustapauksia systemaattisesti? Onko tulokset dokumentoitu? |
+| **Itsearviointi ja demo** | 15 % | Onko demo selkeä ja rehellinen? Osoittaako itsearviointini kriittistä ajattelua? |
+:::
 
 Arvioinnissa kiinnitetään erityistä huomiota siihen, osaatko tunnistaa agentin **kuusi komponenttia** omassa projektissasi. Se osoittaa, ymmärrätkö, mitä olet rakentanut.
 
 **Vinkki:** Älä yritä tehdä liian suurta projektia. Yksinkertainen, hyvin dokumentoitu ja testattu agentti on parempi kuin monimutkainen mutta puolivalmis työ.
 
+::: luokka
 ## Palautus
 
 Palauta tunnin lopussa tai opettajan ohjeistaman aikataulun mukaan seuraavat tuotokset:
@@ -137,6 +154,22 @@ Palauta tunnin lopussa tai opettajan ohjeistaman aikataulun mukaan seuraavat tuo
 - **SAFETY.md:** riskit, suojaukset, lokitus ja palautumissuunnitelma
 - **Testiraportti:** vähintään normaalit tapaukset, reunatapaukset ja turvallisuustestit
 - **Itsearviointi:** mitä onnistui, mitä opit ja mitä tekisit toisin
+:::
+
+::: verkko
+## Kokoa tuotoksesi
+
+Viimeistele työsi ja kokoa nämä tuotokset itsellesi portfolioksi. Käy ne läpi yllä olevan itsearviointilistan avulla ennen kuin toteat työn valmiiksi:
+
+- **n8n-työnkulku:** linkki työnkulkuun tai vientitiedosto
+- **README.md:** käyttöohje
+- **ARCHITECTURE.md:** rakennekuvaus ja solmujen yhteys agentin kuuteen komponenttiin
+- **SAFETY.md:** riskit, suojaukset, lokitus ja palautumissuunnitelma
+- **Testiraportti:** vähintään normaalit tapaukset, reunatapaukset ja turvallisuustestit
+- **Itsearviointi:** mitä onnistui, mitä opit ja mitä tekisit toisin
+
+Halutessasi jaa työsi — mitään ei palauteta minnekään.
+:::
 
 **Tarkista lopuksi:** Käynnistyykö työnkulku? Näkyykö turvakerros? Onko kriittisissä kohdissa hyväksyntäportti? Onko testit dokumentoitu? Ymmärtääkö toinen ihminen dokumentaatiosta, mitä agentti tekee ja miksi?
 

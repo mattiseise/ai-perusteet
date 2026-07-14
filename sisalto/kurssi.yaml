@@ -40,7 +40,9 @@ nakymat:
     polku: /opettaja/
     lohkot: [tuntisuunnitelma, tehtavat-ohjatut, diat]
     kesto: oppitunti
-    lopputyo_variantti: opettaja
+    # Opettaja näkee luokkavariantin (pisteytys, Itslearning) JA mahdolliset
+    # opettajalle merkityt lisälohkot — muuten arviointiohjeet katoaisivat.
+    lopputyo_variantti: [luokka, opettaja]
 
 moduulit:
   - id: osp1

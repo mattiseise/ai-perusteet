@@ -27,7 +27,7 @@ Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät lausunnossa tunn
 | 6 | Tutustut kuva-, ääni- ja monimodaalisuuteen | (tarkennus, ei palautusta) |
 | **7** | Laadit ammattilaisen tarkistuslistan hallusinaatioille | **Todistusaineisto 3: Tarkistuslista** |
 | 8 | Pohdit etiikkaa, vastuuta ja oikeuksia | (perusta vastuukysymykselle) |
-| **9** | **Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta** | **Lopputyö palautettu** |
+| **9** | **Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta** | **Lopputyö valmis** |
 
 > 💡 **Vinkki:** Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme todistusaineistoa omiksi alaotsikoikseen. Tunnilla 9 sinulla on yksi tiedosto auki, ei kolme.
 
@@ -46,7 +46,13 @@ Miten ammattilainen tarkistaa tekoälyn tuotoksen? Mitkä ovat hallusinaatioiden
 
 ## Lopputuotoksen vaatimukset
 
+::: luokka
 Tunti 9:n päätteeksi palautat seuraavat:
+:::
+
+::: verkko
+Lopputyön tuotokset:
+:::
 
 **1. Asiantuntijalausunto (750–1000 sanaa)**
 Analyysi neljästä osasta: mitä tapahtui, miksi se tapahtui (käsittein), miten tilanne pitäisi hoitaa (konkreettisin toimenpitein), mikä on ammatillinen vastuu.
@@ -74,6 +80,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 
 **Yksin tai pareittain:** Lopputyö tehdään yksin. Voit kuitenkin sparrata käsitteistöä luokkakavereiden kanssa kerätessäsi todistusaineistoja matkan varrella.
 
+::: luokka
 ## Arviointi
 
 Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.
@@ -85,6 +92,21 @@ Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.
 | **Konkreettiset toimenpiteet** | 20 p | Ovatko toimenpide-ehdotukset konkreettisia (kuka, milloin, miten) — vai pelkkiä toivomuksia? |
 | **Ammatillinen kieli** | 20 p | Onko kieli neutraalia ja asiantuntevaa? Onko vältetty puhekieli ja tunteenpurkaukset? |
 | **Vastuukysymyksen käsittely** | 15 p | Onko ammatillinen vastuu käsitelty omana osana — vai mainittu vain sivulauseessa? |
+:::
+
+::: verkko
+## Itsearviointi
+
+Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit lausuntosi itse. Käy viisi kriteeriä läpi ennen kuin toteat sen valmiiksi. Painoarvo kertoo, mihin kannattaa panostaa eniten — painotus on sama, jolla työtä muutenkin arvioitaisiin.
+
+| Kriteeri | Painoarvo | Kysy itseltäsi |
+|---|---|---|
+| **Käsitteiden käyttö** | 25 % | Käytänkö Teoria-osion käsitteitä täsmällisesti ja sovellettuna juuri valitsemaani tilanteeseen? |
+| **Todistusaineistojen hyödyntäminen** | 20 % | Käytänkö vähintään kahta todistusaineistoa argumentaation pohjana? Ovatko viittaukset selkeitä? |
+| **Konkreettiset toimenpiteet** | 20 % | Ovatko toimenpide-ehdotukseni konkreettisia (kuka, milloin, miten) — vai pelkkiä toivomuksia? |
+| **Ammatillinen kieli** | 20 % | Onko kieleni neutraalia ja asiantuntevaa? Olenko välttänyt puhekielen ja tunteenpurkaukset? |
+| **Vastuukysymyksen käsittely** | 15 % | Onko ammatillinen vastuu käsitelty omana osana — vai mainittu vain sivulauseessa? |
+:::
 
 ## Aikabudjetti
 
@@ -98,6 +120,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 
 > 💡 **Vinkki ajankäyttöön:** Jos joku todistusaineisto jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 9 sinulla pitää olla kolme todistusaineistoa valmiina — muuten kirjoittaminen jää käsitteistön opettelemiseksi.
 
+::: luokka
 ## Palautus
 
 Palautat tunnilla 9 seuraavat:
@@ -106,6 +129,20 @@ Palautat tunnilla 9 seuraavat:
 - Maininta käyttämistäsi todistusaineistoista (joko erillisinä liitteinä tai mainittuina lausunnossa)
 
 Vaihtoehtoisessa suoritustavassa palautat tilannekartan, päätöspuun ja suullisen esityksen nauhoitteen tai esität sen luokassa.
+:::
+
+::: verkko
+## Kokoa tuotoksesi
+
+Kokoa tuotoksesi itsellesi portfolioksi. Näin sinulla on yksi paketti, johon voit aina palata:
+
+- Asiantuntijalausunto (750–1000 sanaa, tekstitiedosto tai PDF)
+- Maininta käyttämistäsi todistusaineistoista (joko erillisinä liitteinä tai mainittuina lausunnossa)
+
+Vaihtoehtoisessa suoritustavassa kokoat tilannekartan, päätöspuun ja suullisen esityksen nauhoitteen.
+
+Käy lopuksi läpi yllä oleva itsearviointilista. Halutessasi jaa tuotoksesi — mitään ei palauteta minnekään.
+:::
 
 ---
 

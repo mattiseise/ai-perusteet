@@ -31,7 +31,7 @@ Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella
 | **15** | Kuratoit botin tietopohjan | **Rakennuspalikka 3: Tietopohja** |
 | 16 | Tutustut erikoisalojen tekoälytyökaluihin | (tarkennus, ei palautusta) |
 | **17** | **Kasaat kolme rakennuspalikkaa botiksi Copilotissa** | **Ensimmäinen toimiva botti** |
-| **18** | **Testaat, viimeistelet ja esittelet** | **Lopputyö palautettu** |
+| **18** | **Testaat, viimeistelet ja esittelet** | **Lopputyö valmis** |
 
 > 💡 **Vinkki:** Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme rakennuspalikkaa omiksi alaotsikoikseen. Tunnilla 17 sinulla on yksi tiedosto auki, ei kolme.
 
@@ -50,10 +50,16 @@ Botin "perustamisasiakirja": kenelle botti on, mitä se osaa, mitä se ei tee, m
 
 ## Lopputuotoksen vaatimukset
 
+::: luokka
 Tunti 18:n päätteeksi palautat ja esittelet seuraavat:
+:::
+
+::: verkko
+Lopputyön tuotokset:
+:::
 
 **1. Toimiva botti Copilotissa**
-Linkki bottiin, jotta arvioija pääsee testaamaan sitä itse. Botti tunnistaa oman aiheesi termit ja ohjaa käyttäjää valitsemasi tehtävän vaiheiden läpi.
+Linkki bottiin, jotta kuka tahansa linkin saanut pääsee testaamaan sitä itse. Botti tunnistaa oman aiheesi termit ja ohjaa käyttäjää valitsemasi tehtävän vaiheiden läpi.
 
 **2. Botin määrittely**
 Tunnin 14 botin määrittely (rakennuspalikka 2), päivitettynä lopputyösi botin mukaisesti.
@@ -84,6 +90,7 @@ Voit halutessasi pitää bottisi esittelyn ryhmälle: kerro kenelle botti on rak
 
 **Yksin tai pareittain:** Lopputyö tehdään yksin, koska bottisi on juuri sinun valitsemasi aiheen näköinen. Voit kuitenkin sparrata luokkakavereiden kanssa rakennuspalikoiden kokoamisessa.
 
+::: luokka
 ## Arviointi
 
 Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.
@@ -95,6 +102,21 @@ Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.
 | **Tietopohja** | 20 p | Onko tietopohjassa 3–5 hyvää, perusteltua dokumenttia? Tukevatko ne botin tehtävää? |
 | **Testaaminen ja iterointi** | 20 p | Onko bottia testattu oikealla käyttötilanteella? Onko järjestelmäpromptia iteroitu vähintään kahdesti? |
 | **Reflektio** | 15 p | Kuvaako reflektio mitä opit — ei vain mitä teit? |
+:::
+
+::: verkko
+## Itsearviointi
+
+Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit bottisi itse. Käy viisi kriteeriä läpi ennen kuin toteat sen valmiiksi. Painoarvo kertoo, mihin kannattaa panostaa eniten — painotus on sama, jolla työtä muutenkin arvioitaisiin.
+
+| Kriteeri | Painoarvo | Kysy itseltäsi |
+|---|---|---|
+| **Toimiva botti** | 25 % | Toimiiko bottini? Ohjaako se käyttäjää järjestelmällisesti tehtävän vaiheiden läpi? |
+| **Järjestelmäprompti** | 20 % | Onko järjestelmäpromptissani selkeä rooli, työnkulku ja rajat? Käyttääkö se oman aiheeni termejä? |
+| **Tietopohja** | 20 % | Onko tietopohjassani 3–5 hyvää, perusteltua dokumenttia? Tukevatko ne botin tehtävää? |
+| **Testaaminen ja iterointi** | 20 % | Olenko testannut bottia oikealla käyttötilanteella? Olenko iteroinut järjestelmäpromptia vähintään kahdesti? |
+| **Reflektio** | 15 % | Kuvaako reflektioni mitä opin — ei vain mitä tein? |
+:::
 
 ## Aikabudjetti
 
@@ -109,6 +131,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 
 > 💡 **Vinkki ajankäyttöön:** Jos joku rakennuspalikka jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 17 sinulla pitää olla kolme rakennuspalikkaa valmiina — muuten kokoaminen ei onnistu.
 
+::: luokka
 ## Palautus
 
 Palautat tunnilla 18 yhden tiedoston (esim. PDF tai Word), joka sisältää:
@@ -119,6 +142,22 @@ Palautat tunnilla 18 yhden tiedoston (esim. PDF tai Word), joka sisältää:
 - Testikeskustelu (kuvakaappauksina tai kopioituna)
 - Reflektio (200–300 sanaa)
 - Linkki bottiisi Copilotissa
+:::
+
+::: verkko
+## Kokoa tuotoksesi
+
+Kokoa työsi yhdeksi tiedostoksi (esim. PDF tai Word) omaan portfolioosi. Näin koko botti dokumentteineen on tallessa yhdessä paikassa:
+
+- Botin määrittely (päivitettynä)
+- Järjestelmäprompti kokonaisuudessaan
+- Tietopohjan dokumenttien lista perusteluineen
+- Testikeskustelu (kuvakaappauksina tai kopioituna)
+- Reflektio (200–300 sanaa)
+- Linkki bottiisi Copilotissa
+
+Käy lopuksi läpi yllä oleva itsearviointilista. Halutessasi jaa bottisi tai paketti — mitään ei palauteta minnekään.
+:::
 
 ---
 

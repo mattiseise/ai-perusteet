@@ -124,7 +124,7 @@ Microsoft Copilotissa voit luoda oman **agentin**, jolla on omat ohjeet ja tieto
 4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan **Knowledge** / **Tieto**.
 5. Tallenna agentti ja aloita keskustelu.
 
-Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, kysy opettajalta tai etsi ohje hakemalla esimerkiksi *"Copilot agent create instructions"*.
+Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, etsi ohje hakemalla esimerkiksi *"Copilot agent create instructions"* — oppitunnilla voit myös kysyä opettajalta.
 
 ## Ensimmäinen testikeskustelu
 

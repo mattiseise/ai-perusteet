@@ -69,3 +69,11 @@ if __name__ == '__main__':
         t()
         print(f'OK  {t.__name__}')
     print(f'\n{len(tests)} testiä läpi.')
+
+def test_varianttilista_opettaja_nakee_luokan():
+    teksti = "yhteinen\n::: luokka\npisteet\n:::\n::: verkko\nitsearvio\n:::\n::: opettaja\nopeohje\n:::\n"
+    tulos = filter_variants(teksti, ['luokka', 'opettaja'], source='test')
+    assert 'pisteet' in tulos and 'opeohje' in tulos and 'itsearvio' not in tulos and 'yhteinen' in tulos
+    print("OK  test_varianttilista_opettaja_nakee_luokan")
+
+test_varianttilista_opettaja_nakee_luokan()

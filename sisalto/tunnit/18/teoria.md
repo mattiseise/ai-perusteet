@@ -97,6 +97,7 @@ Jos botti kuulostaa samalta riippumatta siitä, onko aiheena salitreeni vai kerh
 
 Jos botti tekee koko homman käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäpromptiin vaihe vaiheelta etenevä toimintatapa ja kielto tehdä koko tehtävä käyttäjän puolesta.
 
+::: luokka
 ## Tarkistuslista ennen palautusta
 
 Käy nämä kohdat läpi ennen kuin palautat työn:
@@ -110,6 +111,23 @@ Käy nämä kohdat läpi ennen kuin palautat työn:
 - ☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.
 - ☐ Bottiin pääsee linkillä, jotta arvioija voi testata sitä itse.
 - ☐ Olen ylpeä tästä botista. Se on minun käsialaani.
+:::
+
+::: verkko
+## Tarkistuslista ennen kuin työ on valmis
+
+Käy nämä kohdat läpi ennen kuin toteat työsi valmiiksi:
+
+- ☐ Botin järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.
+- ☐ Botti puhuu oman aiheesi kieltä eikä käytä vain yleisiä fraaseja.
+- ☐ Tietopohjassa on 3–5 hyvää ja perusteltua dokumenttia.
+- ☐ Olen testannut botin vähintään yhdellä oikealla käyttötilanteella loppuun saakka.
+- ☐ Botti tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
+- ☐ Olen iteroinut järjestelmäpromptin vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.
+- ☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.
+- ☐ Bottiin pääsee linkillä, jotta kuka tahansa linkin saanut voi testata sitä itse.
+- ☐ Olen ylpeä tästä botista. Se on minun käsialaani.
+:::
 
 ## Lopuksi
 

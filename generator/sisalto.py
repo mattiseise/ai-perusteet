@@ -31,10 +31,12 @@ _FENCE_RE = re.compile(r'^:::[ \t]*([A-Za-z0-9_-]*)[ \t]*$')
 def filter_variants(text, variant, source='?'):
     """Pidä vain annettua varianttia vastaavat ::: -lohkot; poista muut.
 
-    variant: 'verkko' | 'luokka' | 'opettaja' (näkymän lopputyo_variantti).
+    variant: 'verkko' | 'luokka' | 'opettaja' tai lista niitä (näkymän
+    lopputyo_variantti; opettaja näkee sekä luokka- että opettaja-lohkot).
     Merkitsemätön (fenceton) sisältö säilyy aina.
     Avaamaton tai tuntematon fence kaataa buildin (SystemExit).
     """
+    variants = {variant} if isinstance(variant, str) else set(variant)
     if ':::' not in text:
         return text
     out = []
@@ -56,7 +58,7 @@ def filter_variants(text, variant, source='?'):
                         f"(sallitut: {', '.join(sorted(VARIANT_NAMES))}).")
                 in_block = True
                 block_name = name
-                keep = (name == variant)
+                keep = (name in variants)
                 continue
             else:
                 # sulkeva fence

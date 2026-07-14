@@ -101,7 +101,13 @@ Missä kohdissa ihmisen täytyy hyväksyä, millainen hyväksyntäportti on, mit
 
 ## Lopputuotoksen vaatimukset
 
+::: luokka
 Palauta Itslearningiin yhtenä pakettina:
+:::
+
+::: verkko
+Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
+:::
 
 1. **Linkki n8n-työnkulkuusi** tai vientitiedosto (JSON)
 2. **Koottu suunnitelma** — viisi ⭐️ Agentti -pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi
@@ -114,6 +120,10 @@ Palauta Itslearningiin yhtenä pakettina:
 6. **Itsearviointi** (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat
 7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai AI-pohjainen kriittinen arvio jos teet työn yksin)
 
+::: verkko
+Halutessasi jaa työsi — mitään ei palauteta minnekään.
+:::
+
 ## Työkalut ja työskentelytapa
 
 **Alusta:** n8n.
@@ -122,6 +132,7 @@ Palauta Itslearningiin yhtenä pakettina:
 
 **Työskentelytapa:** Voit tehdä lopputyön **yksin tai parin kanssa**. Jos teet parin kanssa, jakakaa työ niin, että molemmat ymmärtävät koko agentin. Vertaisarvio tehdään aina toisen tiimin tai parin kanssa.
 
+::: luokka
 ## Arviointi
 
 Lopputyö arvioidaan viidellä osa-alueella (yhteensä 100 pistettä):
@@ -133,6 +144,21 @@ Lopputyö arvioidaan viidellä osa-alueella (yhteensä 100 pistettä):
 | Dokumentaatio (README, ARCHITECTURE, SAFETY) | 20 |
 | Testaus (testiraportin kattavuus ja syvyys) | 20 |
 | Itsearviointi ja demo | 15 |
+:::
+
+::: verkko
+## Itsearviointi
+
+Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit työsi itse. Käy viisi osa-aluetta läpi ennen kuin toteat työn valmiiksi. Painoarvo kertoo, mihin kannattaa panostaa eniten — painotus on sama, jolla työtä muutenkin arvioitaisiin.
+
+| Osa-alue | Painoarvo | Kysy itseltäsi |
+|---|---|---|
+| **Toimiva n8n-työnkulku** | 25 % | Toimiiko työnkulkuni? Ratkaiseeko se valitsemani ongelman? |
+| **Turvallisuus** | 20 % | Ovatko turvakerros, lokitus ja riskien tunnistaminen kunnossa? |
+| **Dokumentaatio** | 20 % | Ovatko README, ARCHITECTURE ja SAFETY selkeitä ja kattavia? |
+| **Testaus** | 20 % | Onko testiraporttini riittävän kattava ja perusteellinen? |
+| **Itsearviointi ja demo** | 15 % | Onko itsearviointini rehellinen ja demo selkeä? |
+:::
 
 **Hyvä lopputyö** ei ole täydellinen — se on **rehellinen ja perusteltu**. Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et ymmärrä.
 
