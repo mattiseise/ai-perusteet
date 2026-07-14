@@ -460,7 +460,7 @@ def build_lopputyo_page(osp, view):
         '<h1>★ Osion lopputyö</h1>'
         f'<p>{osp["title"]} — {osp["subtitle"]}.</p>'
         '</div></section>'
-        '<div class="page-body"><div class="reading panel">'
+        '<div class="page-body"><div class="reading panel active">'
         f'{html}'
         '</div></div>'
     )
@@ -560,7 +560,7 @@ def build_opettaja_index():
             '<div class="eyebrow">Opettajan opas</div>'
             '<h1>Kurssiopas</h1>'
             '</div></section>'
-            f'<div class="page-body"><div class="reading panel">{content}</div></div>'
+            f'<div class="page-body"><div class="reading panel active">{content}</div></div>'
         )
         return page_shell('Opettajan opas — AI · Perusteet',
                           'Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.',
@@ -615,7 +615,7 @@ def build_opettaja_arviointi():
         sections.append(
             f'<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
             f'{osp["ikoni_kn"]} · {osp["title"]} — lopputyö</h2>'
-            f'<div class="reading panel">{html}</div>'
+            f'<div class="reading panel active">{html}</div>'
         )
     # Tunnin 18 arviointiohje
     ao_path = N.os.path.join(N.lesson_dir('18'), 'opettaja', 'arviointiohje.md')
@@ -624,7 +624,7 @@ def build_opettaja_arviointi():
         sections.append(
             '<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
             'Tunnin 18 arviointiohje</h2>'
-            f'<div class="reading panel">{S.to_html(ao_raw)}</div>'
+            f'<div class="reading panel active">{S.to_html(ao_raw)}</div>'
         )
     body = (
         '<section class="page-hero"><div class="page-hero-inner">'
