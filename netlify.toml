@@ -1,0 +1,8 @@
+# Netlify-buildi (ohittaa UI:hin tallennetun komennon, joka asensi vain
+# markdownin — generaattori v2 tarvitsee myös pyyamlin).
+# Generoidut sivut committoidaan repoon, mutta buildi ajetaan silti
+# deploy-varmistuksena: tuotos syntyy aina lähteistä.
+
+[build]
+  command = "pip install markdown pyyaml --break-system-packages && python3 generate_site.py"
+  publish = "."
