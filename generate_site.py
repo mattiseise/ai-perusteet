@@ -86,8 +86,10 @@ def build_robots():
 
 
 def build_redirects():
-    # Netlify: hash ei koskaan välity palvelimelle → varapolut. /index.html → /.
-    _write('_redirects', '/index.html   /   301\n')
+    # Hash-osoitteet (#lesson-NN ym.) eivät välity palvelimelle — ne ohjataan
+    # etusivun inline-skriptillä (ks. sivut.build_index_page). Netlify ei salli
+    # /index.html → / -sääntöä (silmukka), joten palvelinpuolen sääntöjä ei tarvita.
+    _write('_redirects', '# Hash-redirectit hoidetaan client-side etusivulla.\n')
 
 
 if __name__ == '__main__':
