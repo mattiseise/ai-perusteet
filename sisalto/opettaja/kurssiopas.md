@@ -129,7 +129,7 @@ Lataa pptx-versiot lataamosta: [Diat (pptx) — Google Drive](https://drive.goog
 
 Materiaalia saa **käyttää ja muokata omaan opetukseen.** Voit poimia yksittäisiä tunteja, järjestää niitä uudelleen ja sovittaa sisältöä oman ryhmäsi tarpeisiin. Tarkoitus on, että kurssi taipuu erilaisiin toteutuksiin.
 
-[TODO: tarkka lisenssi Matin päätettäväksi]
+Tämän kurssin sisältö on lisensoitu [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.fi) -lisenssillä, ellei yksittäisen materiaalin yhteydessä toisin mainita. Saat käyttää, jakaa ja muokata materiaalia myös kaupallisesti, kunhan mainitset alkuperäisen tekijän, ilmoitat tehdyistä muutoksista ja julkaiset johdannaisteokset samalla lisenssillä.
 
 ---
 
