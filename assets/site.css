@@ -1085,40 +1085,8 @@ body{
 }
 
 /* —— Variant: KORTIT (soft, rounded, colourful) —— */
-#lesson-panels.rv-soft .panel > h2{position:relative;padding-left:17px}
-#lesson-panels.rv-soft .panel > h2::before{content:'';position:absolute;left:0;top:.16em;bottom:.16em;width:4px;border-radius:3px;background:linear-gradient(var(--blue),var(--violet))}
-#lesson-panels.rv-soft .task-card:not(.is-sectionhead){border-radius:20px;border-color:transparent;box-shadow:0 16px 42px -24px rgba(20,30,60,.55)}
-#lesson-panels.rv-soft .task-card:not(.is-sectionhead):hover{transform:translateY(-2px)}
-#lesson-panels.rv-soft .task-card:not(.is-sectionhead) .task-card-header{padding:18px 24px;border-bottom:none}
-#lesson-panels.rv-soft .task-card--task:not(.is-sectionhead) .task-card-header{background:linear-gradient(135deg,#EDF1FE,#E5ECFD)}
-#lesson-panels.rv-soft .task-card--info:not(.is-sectionhead) .task-card-header{background:linear-gradient(135deg,#F4F0FE,#EBE4FC)}
-#lesson-panels.rv-soft .task-card--assessment:not(.is-sectionhead) .task-card-header{background:linear-gradient(135deg,#FFF6E6,#FDEDC9)}
-#lesson-panels.rv-soft .task-card--resource:not(.is-sectionhead) .task-card-header{background:linear-gradient(135deg,#E7F7EF,#D8F2E4)}
-#lesson-panels.rv-soft .task-card--sm{border-radius:16px;background:#fff;border-color:var(--border-soft)}
-#lesson-panels.rv-soft .panel blockquote{border-radius:16px;border-left-width:4px}
-#lesson-panels.rv-soft .panel pre{border-radius:16px}
-#lesson-panels.rv-soft .panel table{border-radius:14px}
 
 /* —— Variant: LEHTI (editorial, ruled, minimal chrome) —— */
-#lesson-panels.rv-mag .panel{max-width:680px}
-#lesson-panels.rv-mag .panel > h1{font-size:39px;line-height:1.07;margin-bottom:26px}
-#lesson-panels.rv-mag .panel > h2{font-size:26px;border-top:1.5px solid var(--text-dark);padding-top:15px;margin-top:48px}
-#lesson-panels.rv-mag .panel > h3{font-family:var(--font-serif);font-size:18px;font-weight:600}
-#lesson-panels.rv-mag .panel p,#lesson-panels.rv-mag .panel li{font-size:16.5px;line-height:1.86}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead){border:none;border-left:2px solid #8E7BE6;border-radius:0;box-shadow:none;background:none;margin:28px 0}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead):hover{box-shadow:none;transform:none}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header{background:none!important;border:none;padding:0 0 4px 22px}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header h2{font-family:var(--font-serif);font-size:21px}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-header::before{display:none}
-#lesson-panels.rv-mag .task-card:not(.is-sectionhead) .task-card-body{padding:6px 0 0 22px}
-#lesson-panels.rv-mag .task-card--task:not(.is-sectionhead){border-left-color:var(--bc-primary)}
-#lesson-panels.rv-mag .task-card--assessment:not(.is-sectionhead){border-left-color:#D9930B}
-#lesson-panels.rv-mag .task-card--resource:not(.is-sectionhead){border-left-color:#14A06F}
-#lesson-panels.rv-mag .task-card--sm{margin:14px 0 14px 22px;background:none;border:none;border-left:2px solid var(--border-soft);border-radius:0}
-#lesson-panels.rv-mag .task-card--sm .task-card-header h3{font-family:var(--font-serif);font-size:17px}
-#lesson-panels.rv-mag .task-card.is-sectionhead .task-card-header{border-bottom:none;border-top:2px solid var(--text-dark);padding-top:13px}
-#lesson-panels.rv-mag .task-card.is-sectionhead .task-card-header h2{font-size:25px}
-#lesson-panels.rv-mag .panel blockquote:not(.pause){background:none;border-left:3px solid var(--blue);border-radius:0;padding-left:18px;font-style:italic;color:var(--text-dark)}
 
 /* —— Variant: KONSOLI (technical, mono, crisp) —— */
 #lesson-panels.rv-tech{background:#ECEFF7}
