@@ -1,0 +1,54 @@
+# AI · Perusteet
+
+> Avoin, suomenkielinen tekoälyn perusteet -verkkokurssi: 27 oppituntia kolmessa moduulissa teoriasta käyttöön ja itsenäisiin agentteihin. Toisen asteen tasolle, mutta soveltuu kaikille tekoälyn perusteita opetteleville.
+
+Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin 4.0 (CC BY-SA 4.0) -lisenssillä: saat käyttää, jakaa ja muokata materiaalia myös kaupallisesti, kunhan mainitset tekijän ja jaat johdannaiset samalla lisenssillä.
+
+## Kolme näkymää samaan sisältöön
+
+- [Verkkokurssi](https://aiperusteet.fi/kurssi/) (`/kurssi/`) — itsenäinen opiskelu omaan tahtiin: teoria, itsetarkistuvat harjoitukset, sanasto ja diat.
+- [Luokkaversio](https://aiperusteet.fi/luokka/) (`/luokka/`) — oppituntien opiskelijamateriaali: teoria, luokkatehtävät, harjoittele, sanasto ja diat.
+- [Opettajan opas](https://aiperusteet.fi/opettaja/) (`/opettaja/`) — kurssiopas, tuntisuunnitelmat, opettajavetoiset tehtävät ja arviointi.
+- [Sanasto](https://aiperusteet.fi/sanasto/) (`/sanasto/`) — koko kurssin käsitteet aakkosjärjestyksessä.
+
+## Moduulit ja oppitunnit
+
+### Teoria — Tekoälyn teoria ja toimintaperiaatteet
+
+- [Tunti 1: Älykäs vai sääntö? — mitä tekoäly oikeasti tekee](https://aiperusteet.fi/kurssi/tunti-01/)
+- [Tunti 2: Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa](https://aiperusteet.fi/kurssi/tunti-02/)
+- [Tunti 3: Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka](https://aiperusteet.fi/kurssi/tunti-03/)
+- [Tunti 4: Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen](https://aiperusteet.fi/kurssi/tunti-04/)
+- [Tunti 5: Muistin rajat — kuinka paljon tekoäly oikeasti muistaa](https://aiperusteet.fi/kurssi/tunti-05/)
+- [Tunti 6: Kuvat, ääni ja teksti — kun sanat eivät riitä](https://aiperusteet.fi/kurssi/tunti-06/)
+- [Tunti 7: Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus](https://aiperusteet.fi/kurssi/tunti-07/)
+- [Tunti 8: Kenen teksti se on? — etiikka, oikeudet ja vastuu](https://aiperusteet.fi/kurssi/tunti-08/)
+- [Tunti 9: Tuomaripöydän päätös — asiantuntijalausunto tekoälystä](https://aiperusteet.fi/kurssi/tunti-09/)
+
+### Tekoälyjen käyttö — Generatiivisten tekoälytyökalujen käyttö
+
+- [Tunti 10: Kilpailuta tekoälyt — mikä työkalu mihinkin?](https://aiperusteet.fi/kurssi/tunti-10/)
+- [Tunti 11: Muita tekoälymalleja — kuin ChatGPT ja Claude](https://aiperusteet.fi/kurssi/tunti-11/)
+- [Tunti 12: Anna konteksti — rakenna oma promptauspankkisi](https://aiperusteet.fi/kurssi/tunti-12/)
+- [Tunti 13: AI työparina — pohja, muokkaus ja tarkistus](https://aiperusteet.fi/kurssi/tunti-13/)
+- [Tunti 14: Oma botti I — suunnittelu, ohjeet ja persoona](https://aiperusteet.fi/kurssi/tunti-14/)
+- [Tunti 15: Oma botti II — tietopohja, rajaukset ja testaus](https://aiperusteet.fi/kurssi/tunti-15/)
+- [Tunti 16: Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi](https://aiperusteet.fi/kurssi/tunti-16/)
+- [Tunti 17: Projektidokumenttibotti — suunnittele ja aloita rakentaminen](https://aiperusteet.fi/kurssi/tunti-17/)
+- [Tunti 18: Projektidokumenttibotti — viimeistele ja esittele](https://aiperusteet.fi/kurssi/tunti-18/) (arviointitunti)
+
+### Agentit — Tekoälyagentit ja automaatio
+
+- [Tunti 19: Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti](https://aiperusteet.fi/kurssi/tunti-19/)
+- [Tunti 20: Automaatio vai autonomia? — milloin agentti kannattaa](https://aiperusteet.fi/kurssi/tunti-20/)
+- [Tunti 21: Agentin muisti ja konteksti — miten kone pysyy kartalla](https://aiperusteet.fi/kurssi/tunti-21/)
+- [Tunti 22: Agentin työkalut — tiedostot, haku ja komennot](https://aiperusteet.fi/kurssi/tunti-22/)
+- [Tunti 23: Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi](https://aiperusteet.fi/kurssi/tunti-23/)
+- [Tunti 24: Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus](https://aiperusteet.fi/kurssi/tunti-24/)
+- [Tunti 25: Ihminen portinvartijana — human-in-the-loop käytännössä](https://aiperusteet.fi/kurssi/tunti-25/)
+- [Tunti 26: Kädet saveen — n8n-agenttipaja alkaa](https://aiperusteet.fi/kurssi/tunti-26/)
+- [Tunti 27: Viimeistele ja esittele — agenttisi on valmis](https://aiperusteet.fi/kurssi/tunti-27/) (arviointitunti)
+
+## Lisenssi
+
+CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/deed.fi

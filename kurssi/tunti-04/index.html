@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen — Verkkokurssi — AI · Perusteet</title>
-<meta name="description" content="Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen. Verkkokurssi, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<meta name="description" content="Kuvittele, että ystäväsi lähettää sinulle viestin: &quot;Auta, en saa tätä toimimaan.&quot; Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta…">
 <link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-04/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen — Verkkokurssi — AI · Perusteet"><meta property="og:description" content="Kuvittele, että ystäväsi lähettää sinulle viestin: &quot;Auta, en saa tätä toimimaan.&quot; Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta…"><meta property="og:url" content="https://aiperusteet.fi/kurssi/tunti-04/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen — Verkkokurssi — AI · Perusteet"><meta name="twitter:description" content="Kuvittele, että ystäväsi lähettää sinulle viestin: &quot;Auta, en saa tätä toimimaan.&quot; Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", "description": "Kuvittele, että ystäväsi lähettää sinulle viestin: \"Auta, en saa tätä toimimaan.\" Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta…", "url": "https://aiperusteet.fi/kurssi/tunti-04/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "toinen aste", "learningResourceType": "Oppitunti"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Verkkokurssi", "item": "https://aiperusteet.fi/kurssi/"}, {"@type": "ListItem", "position": 2, "name": "Teoria", "item": "https://aiperusteet.fi/kurssi/teoria/"}, {"@type": "ListItem", "position": 3, "name": "Osa 4/27"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
@@ -14,7 +17,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 4/27</span></div><div class="lesson-title">Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-04/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-04/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Konteksti ja promptaus — miten puhut tekoälylle</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 4/27</span></div><div class="lesson-title">Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-04/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-04/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Konteksti ja promptaus — miten puhut tekoälylle</h1>
 <h2>Johdanto</h2>
 <p>Kuvittele, että ystäväsi lähettää sinulle viestin: "Auta, en saa tätä toimimaan." Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta vai koulutehtävästä? Mikä tarkalleen ei toimi? Sama koskee tekoälyä. Jos sanot vain "auta minua", saat yleisen, ehkä hyödyttömän vastauksen. Mutta jos kerrot "olen lukiolainen, valmistelen 5 minuutin esitelmää ilmastonmuutoksesta historian tunnille, ja tarvitsen selkeän rakenteen kolmesta pääkohdasta" — silloin tekoäly ymmärtää, mikä on todellinen tarve, ja voi antaa konkreettista apua. Tämä ero on <em>konteksti ja promptaus</em> — ja se on kaiken tekoälyviestinnän ydin.</p>
 <h2>Osa 1: Mitä konteksti on</h2>
@@ -217,7 +220,330 @@
 <p>Tarkistus siitä, että tekoälyn antama vastaus on oikea, sopiva ja turvallinen käyttää. Hyvä konteksti auttaa, mutta kriittisten vastausten validointi on silti ammattilaisen velvollisuus.</p>
 <h2>Tiivistys (summarization)</h2>
 <p>Pitkän tekstin tai keskustelun tiivistäminen lyhyemmäksi oleellinen säilyttäen. Tämä on tärkeä tekniikka kontekstin hallinnassa, kun konteksti-ikkuna on rajallinen.</p>
-<hr /></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-03/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-05/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-04')">Merkitse suoritetuksi</button></div></div>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 4</text>
+<text x="74" y="244" font-size="50" font-weight="800" fill="#1B2336">Konteksti ratkaisee</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Miten puhut tekoälylle niin, että se ymmärtää</text>
+<g transform="translate(636,196)">
+<rect x="0" y="0" width="246" height="118" rx="18" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<rect x="22" y="24" width="150" height="11" rx="5.5" fill="#D8DEEC"/>
+<rect x="22" y="48" width="110" height="11" rx="5.5" fill="#D8DEEC"/>
+<g transform="translate(22,78)">
+<rect x="0" y="0" width="58" height="22" rx="11" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/><text x="29" y="15" text-anchor="middle" font-size="11" fill="#2F46B0" font-family="ui-monospace,monospace">rooli</text>
+<rect x="66" y="0" width="62" height="22" rx="11" fill="#EAF7F0" stroke="#2F9E69" stroke-width="1.5"/><text x="97" y="15" text-anchor="middle" font-size="11" fill="#247A52" font-family="ui-monospace,monospace">tavoite</text>
+<rect x="134" y="0" width="62" height="22" rx="11" fill="#E5F6F7" stroke="#0E9AA7" stroke-width="1.5"/><text x="165" y="15" text-anchor="middle" font-size="11" fill="#0B7A85" font-family="ui-monospace,monospace">rajaus</text>
+</g></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g2)"/>
+<text x="74" y="104" font-size="40" font-weight="800" fill="#1B2336">"Auta minua" ei riitä</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Sama epämääräinen pyyntö johtaa moneen eri tulkintaan.</text>
+<g transform="translate(74,174)">
+<rect x="0" y="0" width="380" height="248" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="40" cy="46" r="18" fill="#FBE6D8"/><path d="M33 53 l7 -15 l7 15 M36 48 h8" stroke="#C26B2E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="44" font-size="20" font-weight="700" fill="#1B2336">Pelkkä pyyntö</text>
+<text x="72" y="68" font-size="16" fill="#A35A22" font-family="ui-monospace,monospace">"Auta, en saa tätä toimimaan."</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">Onko kyse pelistä?</text>
+<text x="28" y="146" font-size="16" fill="#5A6478">Ruoanlaitosta?</text>
+<text x="28" y="176" font-size="16" fill="#5A6478">Koulutehtävästä?</text>
+<text x="28" y="222" font-size="15" fill="#A35A22">Tekoäly joutuu arvaamaan</text></g>
+<g transform="translate(506,174)">
+<rect x="0" y="0" width="380" height="248" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="40" cy="46" r="18" fill="#DFF3E8"/><path d="M33 46 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="44" font-size="20" font-weight="700" fill="#1B2336">Pyyntö + konteksti</text>
+<text x="28" y="98" font-size="15.5" fill="#3A4253">"Olen lukiolainen, valmistelen</text>
+<text x="28" y="122" font-size="15.5" fill="#3A4253">5 min esitelmää ilmaston-</text>
+<text x="28" y="146" font-size="15.5" fill="#3A4253">muutoksesta ja tarvitsen</text>
+<text x="28" y="170" font-size="15.5" fill="#3A4253">rakenteen kolmesta kohdasta."</text>
+<text x="28" y="222" font-size="15" fill="#247A52">Tekoäly ymmärtää tarpeen</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g3)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Mitä konteksti on</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Kaikki se tieto, jota tekoäly tarvitsee ymmärtääkseen, mitä todella kysyt.</text>
+<g transform="translate(74,174)">
+<rect x="0" y="0" width="380" height="252" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="12" r="8"/><path d="M2 38 a16 14 0 0 1 28 0"/></g>
+<text x="80" y="52" font-size="22" font-weight="800" fill="#2F46B0">Opettaja työhuoneessa</text>
+<text x="28" y="110" font-size="16.5" fill="#1B2336">Tietää, että olet 15-vuotias</text>
+<text x="28" y="142" font-size="16.5" fill="#1B2336">Tietää, mitä olet jo oppinut</text>
+<text x="28" y="174" font-size="16.5" fill="#1B2336">Tuntee tavoitteesi</text>
+<text x="28" y="222" font-size="15" fill="#5A6478" font-style="italic">→ osaa antaa oikean selityksen</text></g>
+<g transform="translate(506,174)">
+<rect x="0" y="0" width="380" height="252" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,24)"><rect x="0" y="2" width="32" height="28" rx="7" fill="none" stroke="#3B5BDB" stroke-width="2.2"/><line x1="16" y1="2" x2="16" y2="-5" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="-8" r="3" fill="#3B5BDB"/><circle cx="11" cy="14" r="3" fill="#3B5BDB"/><circle cx="22" cy="14" r="3" fill="#3B5BDB"/><path d="M11 23 H22" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round"/></g>
+<text x="80" y="48" font-size="22" font-weight="800" fill="#1B2336">Tekoäly</text>
+<text x="28" y="110" font-size="16.5" fill="#3A4253">Tarvitsee saman tiedon</text>
+<text x="28" y="142" font-size="16.5" fill="#3A4253">Ei näe tilannettasi</text>
+<text x="28" y="174" font-size="16.5" fill="#3A4253">Ei tunne taustaasi</text>
+<text x="28" y="222" font-size="15" fill="#5A6478" font-style="italic">→ sinun on kerrottava se</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kontekstin viisi osaa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Hyvä konteksti rakentuu näistä viidestä palasta.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">1</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Rooli</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Kuka olet, mikä on osaamistasosi</text></g>
+<g transform="translate(492,160)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">2</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Taustatieto</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Mitä on jo tehty ja opittu</text></g>
+<g transform="translate(74,248)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">3</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Tavoite</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Miksi kysyt, mihin käytät vastausta</text></g>
+<g transform="translate(492,248)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">4</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Rajaukset</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Mitä jätetään pois tai rajataan ulos</text></g>
+<g transform="translate(283,336)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<circle cx="40" cy="36" r="20" fill="#FFFFFF"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">5</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#2F46B0">Esimerkit</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Näyte siitä, millaista vastausta odotat</text></g>
+<text x="74" y="446" font-size="16" fill="#5A6478" font-style="italic">Esim. treeniohjelma: rooli = vasta-alkaja, tavoite = 5 km, rajaus = 3 krt/vko, ei salia.</text>
+<text x="74" y="474" font-size="15" fill="#5A6478" font-style="italic">Et tarvitse kaikkia joka kerta — mutta tieto niistä tekee sinusta paremman käyttäjän.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g5)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Konteksti vs. prompti</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Yleinen väärinkäsitys: "hyvä prompti" olisi sama kuin "hyvä konteksti".</text>
+<g transform="translate(74,178)">
+<rect x="0" y="0" width="812" height="120" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,30)" fill="none" stroke="#5A6478" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 H44 M4 4 V44 H44 V4 M14 18 H34 M14 28 H30 M14 38 H26"/></g>
+<text x="92" y="44" font-size="22" font-weight="800" fill="#1B2336">Konteksti = koko resepti</text>
+<text x="92" y="78" font-size="17" fill="#3A4253">Ainesosat, valmistusohjeet, ajat ja lämpötilat —</text>
+<text x="92" y="102" font-size="17" fill="#3A4253">kaikki se, mikä tekee lopputuloksesta hyödyllisen.</text></g>
+<g transform="translate(74,318)">
+<rect x="0" y="0" width="812" height="108" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="13"/><path d="M11 11 a5 5 0 0 1 9 2 c0 4 -5 4 -5 8 M15 28 v.5"/></g>
+<text x="92" y="44" font-size="22" font-weight="800" fill="#2F46B0">Prompti = reseptin otsikko</text>
+<text x="92" y="80" font-size="17" fill="#1B2336">Kysymys tai tehtävänanto, jonka esität — konteksti on kaikki muu.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hyvän promptin viisi elementtiä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Perustyökalusarjasi promptin muotoiluun.</text>
+<g transform="translate(74,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#247A52">Tavoite</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Mitä haluat: kirjoita,</text><text x="24" y="100" font-size="15.5" fill="#3A4253">selitä, paranna.</text></g>
+<g transform="translate(354,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#3B5BDB">Rooli</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Kuka tekoäly on —</text><text x="24" y="100" font-size="15.5" fill="#3A4253">vaikuttaa näkökulmaan.</text></g>
+<g transform="translate(634,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#0E9AA7">Rajat</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Mitä EI tehdä: enintään</text><text x="24" y="100" font-size="15.5" fill="#3A4253">3 lausetta, ei termejä.</text></g>
+<g transform="translate(214,316)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#C79100">Formaatti</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Miten vastaus annetaan:</text><text x="24" y="100" font-size="15.5" fill="#3A4253">taulukko, lista, JSON.</text></g>
+<g transform="translate(494,316)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#2F46B0">Esimerkit</text>
+<text x="24" y="78" font-size="15.5" fill="#1B2336">Yksi näyte tekee</text><text x="24" y="100" font-size="15.5" fill="#1B2336">vaatimuksesta selkeän.</text></g>
+<text x="74" y="486" font-size="16" fill="#5A6478" font-style="italic">Esim. "ehdota 3 edullista illallista neljälle, yksi kasvis" — tavoite, rajat ja muoto.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g7)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ROOLI · TARKENNUS</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Rooli ei lisää tietoa</text>
+<text x="74" y="158" font-size="18" fill="#5A6478">Rooli vaikuttaa näkökulmaan ja sävyyn — ei siihen, mitä malli oikeasti osaa.</text>
+<g transform="translate(74,196)">
+<rect x="0" y="0" width="380" height="200" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="12"/><path d="M17 7 l2 4.1 l4.5 .5 l-3.4 3 .9 4.4 -4 -2.2 -4 2.2 .9 -4.4 -3.4 -3 4.5 -.5 Z"/><path d="M9 23 L6 37 L17 31 L28 37 L25 23"/></g>
+<text x="28" y="92" font-size="19" font-weight="700" fill="#1B2336">"Olet huippuasiantuntija"</text>
+<text x="28" y="128" font-size="16" fill="#A35A22">ei tee vastauksesta</text>
+<text x="28" y="152" font-size="16" fill="#A35A22">asiantuntevampaa, jos</text>
+<text x="28" y="176" font-size="16" fill="#A35A22">tarvittava tieto puuttuu.</text></g>
+<g transform="translate(506,196)">
+<rect x="0" y="0" width="380" height="200" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 a3 3 0 0 1 3 -3 H30 a3 3 0 0 1 3 3 V26 a3 3 0 0 1 -3 3 H16 L10 34 V29 H9 a3 3 0 0 1 -3 -3 Z"/></g>
+<text x="28" y="92" font-size="19" font-weight="700" fill="#1B2336">"Olet aloittelija</text>
+<text x="28" y="118" font-size="19" font-weight="700" fill="#1B2336">keittiössä"</text>
+<text x="28" y="154" font-size="16" fill="#247A52">ohjaa vastauksen sävyä:</text>
+<text x="28" y="178" font-size="16" fill="#247A52">perusteellisempi ja selkeämpi.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g8)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI · HUONO</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Ilman kontekstia</text>
+<rect x="74" y="152" width="812" height="58" rx="12" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="100" y="188" font-size="19" fill="#A35A22" font-family="ui-monospace,monospace">"Kirjoita esitelmä ilmastonmuutoksesta."</text>
+<text x="74" y="252" font-size="19" font-weight="700" fill="#1B2336">Mitä puuttuu?</text>
+<g font-size="17" fill="#3A4253">
+<circle cx="92" cy="284" r="6" fill="#C26B2E"/><text x="112" y="290">Rooli — oletko lukiolainen vai opettaja?</text>
+<circle cx="92" cy="316" r="6" fill="#C26B2E"/><text x="112" y="322">Tausta — mitä olet jo kirjoittanut tai oppinut?</text>
+<circle cx="92" cy="348" r="6" fill="#C26B2E"/><text x="112" y="354">Tavoite — mihin esitelmää käytetään, kuinka pitkä?</text>
+<circle cx="92" cy="380" r="6" fill="#C26B2E"/><text x="112" y="386">Rajaus — mihin näkökulmaan keskitytään?</text>
+<circle cx="92" cy="412" r="6" fill="#C26B2E"/><text x="112" y="418">Esimerkit — millainen rakenne tai tyyli olisi hyvä?</text>
+</g>
+<text x="74" y="456" font-size="16" fill="#5A6478" font-style="italic">Tekoäly tekee oletuksia joka kohdassa — ja antaa version, joka vain saattaa sopia.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g9)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI · HYVÄ</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Selkeä konteksti + terävä prompti</text>
+<g transform="translate(74,150)">
+<rect x="0" y="0" width="430" height="298" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="18" font-weight="800" fill="#5A6478">Konteksti</text>
+<text x="24" y="80" font-size="15" fill="#3B5BDB" font-weight="700">Rooli</text><text x="24" y="100" font-size="14.5" fill="#3A4253">lukion 1. vuoden opiskelija</text>
+<text x="24" y="132" font-size="15" fill="#3B5BDB" font-weight="700">Tausta</text><text x="24" y="152" font-size="14.5" fill="#3A4253">lukenut oppikirjan luvun</text>
+<text x="24" y="184" font-size="15" fill="#3B5BDB" font-weight="700">Tavoite</text><text x="24" y="204" font-size="14.5" fill="#3A4253">5 min esitelmän runko</text>
+<text x="24" y="236" font-size="15" fill="#3B5BDB" font-weight="700">Rajaus</text><text x="24" y="256" font-size="14.5" fill="#3A4253">ei liikaa numeroita ulkoa</text>
+<text x="24" y="284" font-size="14.5" fill="#3A4253"><tspan font-weight="700" fill="#3B5BDB">Esimerkit</tspan>  3 otsikkoa, 2–3 viivaa</text></g>
+<g transform="translate(536,150)">
+<rect x="0" y="0" width="350" height="298" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="24" y="40" font-size="18" font-weight="800" fill="#2F46B0">Prompti</text>
+<text x="24" y="76" font-size="15" fill="#1B2336">"Tee 5 min esitelmän runko</text>
+<text x="24" y="98" font-size="15" fill="#1B2336">ilmastonmuutoksen syistä ja</text>
+<text x="24" y="120" font-size="15" fill="#1B2336">seurauksista lukiolaiselle.</text>
+<text x="24" y="142" font-size="15" fill="#1B2336">Käytä kolmea pääotsikkoa ja</text>
+<text x="24" y="164" font-size="15" fill="#1B2336">2–3 ranskalaista viivaa kuhunkin.</text>
+<text x="24" y="186" font-size="15" fill="#1B2336">Vältä liikaa lukuja. Esimerkki-</text>
+<text x="24" y="208" font-size="15" fill="#1B2336">muoto: 'Otsikko: ... — Kohta 1...'"</text>
+<line x1="24" y1="232" x2="326" y2="232" stroke="#C2CAD9" stroke-width="1"/>
+<text x="24" y="262" font-size="14.5" fill="#247A52">Vähemmän kierroksia,</text>
+<text x="24" y="282" font-size="14.5" fill="#247A52">parempi tulos.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g10)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Huono konteksti = huonoa jälkeä</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Kun pyyntö on epäselvä, tekoäly täydentää puuttuvat tiedot omilla oletuksillaan.</text>
+<text x="74" y="186" font-size="19" fill="#3A4253" font-family="ui-monospace,monospace">"Miten teen hyvän treeniohjelman?"</text>
+<g transform="translate(74,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Kuntosaliharrastaja?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">painot, jakso, salivuorot</text></g>
+<g transform="translate(351,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Juoksija?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">intervallit, kilometrit</text></g>
+<g transform="translate(628,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Vasta-alkaja?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">kevyt aloitus, perusteet</text></g>
+<rect x="74" y="360" width="812" height="88" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="396" font-size="18" fill="#3A4253">Jokainen oletus johtaa eri vastaukseen. Ilman kohdistusta tekoäly kirjoittaa</text>
+<text x="100" y="424" font-size="18" fill="#3A4253">mitä tietää — liian yleisellä tai liian yksityiskohtaisella tasolla.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Rakenna kierros kierrokselta</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Älä yritä kertoa kaikkea kerralla — jokainen kierros rakentaa edellisen päälle.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">1</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Perusprompti</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Tee esitelmän runko ilmastonmuutoksesta." → yleinen perusrunko</text></g>
+<g transform="translate(74,244)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">2</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Lisää kontekstia</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Lukiolaisille, 5 min, yksi esimerkki per kohta." → kohdistettu versio</text></g>
+<g transform="translate(74,324)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">3</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Tarkenna tavoitetta</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Lisää alkuun koukku ja loppuun pohdintakysymys." → viimeistelty runko</text></g>
+<g transform="translate(74,404)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<circle cx="42" cy="34" r="20" fill="#FFFFFF"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">4</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#2F46B0">Muuta formaattia</text>
+<text x="78" y="54" font-size="15.5" fill="#3A4253">"Muuta muistiinpanokorteiksi: otsikko + 2–3 avainsanaa." → valmiit esiintymiskortit</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi iteratiivinen tapa voittaa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Et yritä ennustaa kaikkea etukäteen — näet tulokset ja parannat.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="394" height="262" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18 a16 16 0 1 1 4 11"/><path d="M2 30 V18 H14"/></g>
+<text x="80" y="50" font-size="21" font-weight="800" fill="#247A52">Pieni kierros</text>
+<circle cx="36" cy="104" r="6" fill="#2F9E69"/><text x="56" y="110" font-size="16.5" fill="#3A4253">Näet tulokset välillä</text>
+<circle cx="36" cy="148" r="6" fill="#2F9E69"/><text x="56" y="154" font-size="16.5" fill="#3A4253">Voit korjata kurssia</text>
+<circle cx="36" cy="192" r="6" fill="#2F9E69"/><text x="56" y="198" font-size="16.5" fill="#3A4253">Annat kontekstia vähitellen</text>
+<circle cx="36" cy="236" r="6" fill="#2F9E69"/><text x="56" y="242" font-size="16.5" fill="#3A4253">Malli pysyy kartalla</text></g>
+<g transform="translate(492,168)">
+<rect x="0" y="0" width="394" height="262" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 H30 L40 14 V40 H6 Z M30 4 V14 H40"/></g>
+<text x="80" y="50" font-size="21" font-weight="800" fill="#A35A22">Yksi suurprompti</text>
+<circle cx="36" cy="104" r="6" fill="#C26B2E"/><text x="56" y="110" font-size="16.5" fill="#3A4253">Yrität ennustaa kaiken</text>
+<circle cx="36" cy="148" r="6" fill="#C26B2E"/><text x="56" y="154" font-size="16.5" fill="#3A4253">Et näe väliä</text>
+<circle cx="36" cy="192" r="6" fill="#C26B2E"/><text x="56" y="198" font-size="16.5" fill="#3A4253">Vaikea korjata</text>
+<circle cx="36" cy="236" r="6" fill="#C26B2E"/><text x="56" y="242" font-size="16.5" fill="#3A4253">Malli hukkuu pitkään tekstiin</text></g>
+<text x="74" y="468" font-size="16" fill="#5A6478" font-style="italic">Esim. kevätjuhlan suunnittelu: aloita pienesti, lisää budjetti ja tila kierros kierrokselta.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Konteksti ja promptaus ovat saman kolikon kaksi puolta.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="394" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="21" font-weight="800" fill="#3B5BDB">Konteksti = pohja</text>
+<text x="24" y="72" font-size="15.5" fill="#3A4253">Rooli · tausta · tavoite ·</text>
+<text x="24" y="96" font-size="15.5" fill="#3A4253">rajaukset · esimerkit</text></g>
+<g transform="translate(492,170)">
+<rect x="0" y="0" width="394" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="21" font-weight="800" fill="#2F9E69">Prompti = kysymys</text>
+<text x="24" y="72" font-size="15.5" fill="#3A4253">Tavoite · rooli · rajat ·</text>
+<text x="24" y="96" font-size="15.5" fill="#3A4253">formaatti · esimerkit</text></g>
+<rect x="74" y="312" width="812" height="100" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,344)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="354" font-size="22" font-weight="800" fill="#247A52">Hyvä konteksti ja terävä prompti ovat investointi.</text>
+<text x="150" y="386" font-size="18" fill="#3A4253">Rakenna kierros kierrokselta — saat vastauksen, joka on todella hyödyllinen.</text>
+<text x="74" y="452" font-size="16" fill="#5A6478" font-style="italic">Seuraavaksi: tekoälyn muisti on rajallinen — opit hallitsemaan sitä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-03/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-05/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-04')">Merkitse suoritetuksi</button></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>

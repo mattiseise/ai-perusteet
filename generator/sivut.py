@@ -74,14 +74,43 @@ FOOTER = ('<footer class="site-footer">© Matti Seise · Avoin kurssi — saa k�
           'target="_blank" rel="noopener">seise.org</a></footer>')
 
 
+SITE_NAME = 'AI · Perusteet'
+LICENSE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/'
+PROVIDER = {'@type': 'Organization', 'name': SITE_NAME, 'url': DOMAIN}
+
+
+def _jsonld_html(json_ld):
+    if not json_ld:
+        return ''
+    blocks = json_ld if isinstance(json_ld, list) else [json_ld]
+    out = []
+    for obj in blocks:
+        j = json.dumps(obj, ensure_ascii=False).replace('</', '<\\/')
+        out.append(f'<script type="application/ld+json">{j}</script>')
+    return '\n'.join(out)
+
+
 def page_shell(title, description, canonical_path, body, ci=None, include_practice=False,
-               extra_head='', pre_body_script=''):
+               extra_head='', pre_body_script='', og_type='website', json_ld=None):
     """Rakentaa täyden HTML-dokumentin. ci = dict → window.CI inline-config."""
     ci = ci or {}
     ci.setdefault('allIds', N.ALL_IDS)
     ci_json = json.dumps(ci, ensure_ascii=False).replace('</', '<\\/')
     canonical = DOMAIN + canonical_path
     desc = S.esc_attr(description)
+    title_a = S.esc_attr(title)
+    social = (
+        f'<meta property="og:type" content="{og_type}">'
+        f'<meta property="og:site_name" content="{S.esc_attr(SITE_NAME)}">'
+        '<meta property="og:locale" content="fi_FI">'
+        f'<meta property="og:title" content="{title_a}">'
+        f'<meta property="og:description" content="{desc}">'
+        f'<meta property="og:url" content="{canonical}">'
+        '<meta name="twitter:card" content="summary">'
+        f'<meta name="twitter:title" content="{title_a}">'
+        f'<meta name="twitter:description" content="{desc}">'
+    )
+    ld_html = _jsonld_html(json_ld)
     scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>']
     if include_practice:
         scripts.append('<script src="/assets/practice.js"></script>')
@@ -93,9 +122,11 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{S.esc_attr(title)}</title>
+<title>{title_a}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
+{social}
+{ld_html}
 <link rel="icon" type="image/svg+xml" href="{FAVICON}">
 {FONTS}
 <link rel="stylesheet" href="/assets/site.css">
@@ -206,8 +237,7 @@ def build_tunti_page(lesson, view):
         strip = (
             '<div class="lesson-strip"><div class="share-box">'
             '<div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b>'
-            '<span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — '
-            'eivät opettajan materiaaleja.</span></div>'
+            '<span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div>'
             f'<a class="sb-go" href="{luokka_url}" data-view="luokka">Avaa luokkaversio →</a>'
             f'<button type="button" onclick="copyShare(this)" data-url="{luokka_url}">Kopioi linkki</button>'
             '</div></div>'
@@ -246,9 +276,44 @@ def build_tunti_page(lesson, view):
         ci['ptasks'] = ptasks
     vm = VIEW_META[view]
     title = f'{lesson["otsikko"]} — {vm["label"]} — AI · Perusteet'
-    desc = f'{lesson["otsikko"]}. {vm["label"]}, AI · Perusteet -verkkokurssi tekoälyn perusteista.'
+    # Meta description: teorian ensimmäinen leipätekstikappale (SEO); jos puuttuu, geneerinen.
+    variant = N.NAKYMAT[view]['lopputyo_variantti']
+    teoria_raw = S.read_file(N.os.path.join(N.lesson_dir(kansio), 'teoria.md'))
+    teoria_txt = S.filter_variants(teoria_raw, variant, source=f'tunnit/{kansio}/teoria.md')
+    desc = S.excerpt(teoria_txt, 160) or (
+        f'{lesson["otsikko"]}. {vm["label"]}, AI · Perusteet -verkkokurssi tekoälyn perusteista.')
     canonical = f'/{view}/tunti-{kansio}/'
-    return page_shell(title, desc, canonical, body, ci=ci, include_practice=(ptasks is not None))
+    json_ld = _tunti_jsonld(lesson, view, num, canonical, desc)
+    return page_shell(title, desc, canonical, body, ci=ci, include_practice=(ptasks is not None),
+                      og_type='article', json_ld=json_ld)
+
+
+def _tunti_jsonld(lesson, view, num, canonical, desc):
+    """LearningResource + BreadcrumbList tuntisivulle."""
+    vm = VIEW_META[view]
+    learning = {
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        'name': lesson['otsikko'],
+        'description': desc,
+        'url': DOMAIN + canonical,
+        'isPartOf': {'@type': 'Course', 'name': SITE_NAME, 'url': f'{DOMAIN}/kurssi/'},
+        'inLanguage': 'fi',
+        'license': LICENSE_URL,
+        'isAccessibleForFree': True,
+        'educationalLevel': 'toinen aste',
+        'learningResourceType': ('Arviointitehtävä' if lesson['tyyppi'] == 'assessment' else 'Oppitunti'),
+    }
+    crumbs = [{'@type': 'ListItem', 'position': 1, 'name': vm['label'], 'item': DOMAIN + vm['home']}]
+    if view == 'kurssi':
+        crumbs.append({'@type': 'ListItem', 'position': 2, 'name': lesson['osp_title'],
+                       'item': f'{DOMAIN}/kurssi/{lesson["slug"]}/'})
+    else:
+        crumbs.append({'@type': 'ListItem', 'position': 2, 'name': lesson['osp_title']})
+    crumbs.append({'@type': 'ListItem', 'position': 3, 'name': _tunti_label(view, num)})
+    breadcrumb = {'@context': 'https://schema.org', '@type': 'BreadcrumbList',
+                  'itemListElement': crumbs}
+    return [learning, breadcrumb]
 
 
 # ==================== VALINTASIVU (etusivu) ====================
@@ -316,6 +381,24 @@ def build_index_page():
         '<span class="door-cta">Avaa opettajan opas →</span></a>'
         '</div>'
     )
+    made_note = (
+        '<div class="made-note">'
+        '<div class="made-note-kn">Miten tämä kurssi on tehty</div>'
+        '<p>Koko kurssi on tuotettu tekoälyllä. Sisältö on rakennettu Claude-kielimallilla '
+        'monivaiheisella agenttiketjulla, jossa jokainen oppitunti kulki läpi suunnittelun, '
+        'rakentamisen, pedagogisen tarkistuksen ja suomen kielenhuollon. Ihminen — kurssin '
+        'opettaja — ohjasi prosessia ja hyväksyi jokaisen tunnin tuloksen. Myös tämä sivusto '
+        'on tekoälyn rakentama.</p>'
+        '</div>'
+    )
+    lic_footer = (
+        '<footer class="license-footer">'
+        '<p>Sisältö on lisensoitu <a href="' + LICENSE_URL + 'deed.fi" '
+        'rel="license noopener" target="_blank">Creative Commons Nimeä-JaaSamoin 4.0 '
+        '(CC BY-SA 4.0)</a> -lisenssillä — saat käyttää, jakaa ja muokata materiaalia, '
+        'kunhan mainitset tekijän ja jaat johdannaiset samalla lisenssillä.</p>'
+        '</footer>'
+    )
     body = (
         '<section class="page-hero"><div class="page-hero-inner">'
         '<div class="eyebrow">AI · Perusteet</div>'
@@ -327,13 +410,34 @@ def build_index_page():
         '<div class="valinta-lead"><p>Sama kurssi kolmena näkymänä: itsenäinen verkkokurssi, '
         'oppitunnin opiskelijaversio ja opettajan opas. Valitse ovi — voit vaihtaa näkymää myöhemminkin.</p></div>'
         f'{doors}'
+        f'{made_note}'
         '</div>'
+        f'{lic_footer}'
     )
     return page_shell(
         'AI · Perusteet — tekoälyn perusteet -verkkokurssi',
         'Avoin tekoälyn perusteet -verkkokurssi: 27 oppituntia teoriasta käyttöön ja agentteihin. '
         'Opiskele itsenäisesti, oppitunnilla tai opettajana.',
-        '/', body, pre_body_script=pre)
+        '/', body, pre_body_script=pre,
+        json_ld=_course_jsonld(f'{DOMAIN}/'))
+
+
+def _course_jsonld(url):
+    """schema.org Course etusivulle ja /kurssi/-yleiskuvalle."""
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        'name': SITE_NAME,
+        'description': ('Avoin tekoälyn perusteet -verkkokurssi: 27 oppituntia teoriasta '
+                        'käyttöön ja agentteihin.'),
+        'url': url,
+        'provider': PROVIDER,
+        'inLanguage': 'fi',
+        'isAccessibleForFree': True,
+        'license': LICENSE_URL,
+        'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online',
+                              'courseWorkload': 'PT40H', 'inLanguage': 'fi'},
+    }
 
 
 # ==================== KURSSI: YLEISKUVA + MODUULIT ====================
@@ -368,7 +472,8 @@ def build_kurssi_overview():
     return page_shell('AI · Perusteet — verkkokurssi',
                       'Tekoälyn perusteet -verkkokurssin yleiskuva: kolme kokonaisuutta ja 27 osaa '
                       'teoriasta käyttöön ja agentteihin.',
-                      '/kurssi/', body)
+                      '/kurssi/', body,
+                      json_ld=_course_jsonld(f'{DOMAIN}/kurssi/'))
 
 
 def build_kurssi_module(osp):
@@ -542,10 +647,24 @@ def build_sanasto_page():
         '</div></section>'
         f'<div class="page-body"><div class="reading">{"".join(items)}</div></div>'
     )
+    terms_ld = [
+        {'@type': 'DefinedTerm', 'name': term, 'description': S.excerpt(definition, 200),
+         'inLanguage': 'fi'}
+        for term, definition, _kansio, _num in entries
+    ]
+    dts = {
+        '@context': 'https://schema.org',
+        '@type': 'DefinedTermSet',
+        'name': 'Tekoälyn perusteet — sanasto',
+        'url': f'{DOMAIN}/sanasto/',
+        'inLanguage': 'fi',
+        'license': LICENSE_URL,
+        'hasDefinedTerm': terms_ld,
+    }
     return page_shell('Tekoälyn sanasto — AI · Perusteet',
                       'Tekoälyn perusteet -kurssin koottu sanasto: kaikki keskeiset käsitteet '
                       'aakkosjärjestyksessä ja linkit oppitunteihin.',
-                      '/sanasto/', body)
+                      '/sanasto/', body, json_ld=dts)
 
 
 # ==================== OPETTAJA: KURSSIOPAS + ARVIOINTI ====================

@@ -6,6 +6,8 @@
 <title>Opettajan opas — AI · Perusteet</title>
 <meta name="description" content="Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Opettajan opas — AI · Perusteet"><meta property="og:description" content="Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit."><meta property="og:url" content="https://aiperusteet.fi/opettaja/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.">
+
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
@@ -15,7 +17,7 @@
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
 <section class="page-hero"><div class="page-hero-inner"><div class="eyebrow">Opettajan opas</div><h1>Kurssiopas</h1></div></section><div class="page-body"><div class="reading panel active"><h1>Opettajan kurssiopas</h1>
-<p>Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja saat käytännön ohjeet toteutukseen, arviointiin ja materiaalin jakamiseen. Tuntikohtaiset suunnitelmat, väärinkäsityslistat ja opettajavetoiset tehtävät löydät kunkin tunnin omalta sivulta (<code>/opettaja/tunti-NN/</code>). Tämä osio näkyy vain opettajille: se sisältää vastauspankit ja purkuohjeet, joita ei jaeta opiskelijoille. Jaa opiskelijoille aina luokkaversio (ks. alempana).</p>
+<p>Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja saat käytännön ohjeet toteutukseen, arviointiin ja materiaalin jakamiseen. Tuntikohtaiset suunnitelmat, väärinkäsityslistat ja opettajavetoiset tehtävät löydät kunkin tunnin omalta sivulta (<code>/opettaja/tunti-NN/</code>). Tämä osio on suunnattu opettajalle: se kokoaa tuntisuunnitelmat ja fasilitointiohjeet yhteen näkymään. Opiskelijoille jaetaan luokkaversio, joka on kehystetty heille (ks. alempana).</p>
 <h2>Mikä tämä kurssi on</h2>
 <p><strong>AI · Perusteet</strong> on tekoälyn perusteiden kurssi toisen asteen opiskelijoille. Se on <strong>3 osaamispistettä (OSP)</strong> ja koostuu <strong>27 oppitunnista</strong>, jokainen mitoitettu noin <strong>90 minuutin</strong> lähitunniksi. Tunnit jakautuvat kolmeen moduuliin, joista jokainen on yksi OSP:</p>
 <ul>
@@ -41,8 +43,8 @@
 <p>Sama sisältö palvelee kolmea käyttötilannetta kolmena näkymänä. Näkymät eivät ole kolme eri kurssia, vaan kolme suodatinta samaan materiaaliin.</p>
 <ul>
 <li><strong><code>/kurssi/</code> — itsenäinen verkkokurssi.</strong> Itseopiskelijalle, joka etenee omaan tahtiin. Tuntisivulla teoria, Harjoittele ja sanasto. Lopputyöt ovat itsearvioitavia. Tähän näkymään hakukoneet tuovat kävijät.</li>
-<li><strong><code>/luokka/</code> — oppituntien opiskelijaversio.</strong> <strong>Tämän jaat opiskelijoille oppitunnilla.</strong> Se sisältää teorian, luokkatehtävät, Harjoittele-tehtävät, sanaston ja diat kertaukseen — mutta <strong>ei mitään opettajan materiaalia</strong>. Vastauspankit, purkuohjeet ja väärinkäsityslistat eivät kuulu tähän näkymään.</li>
-<li><strong><code>/opettaja/</code> — opettajan opas.</strong> Tämä osio. <strong>Älä jaa tätä opiskelijoille</strong> — se sisältää vastaukset ja purut.</li>
+<li><strong><code>/luokka/</code> — oppituntien opiskelijaversio.</strong> <strong>Tämän jaat opiskelijoille oppitunnilla.</strong> Se sisältää teorian, luokkatehtävät, Harjoittele-tehtävät, sanaston ja diat kertaukseen — mutta <strong>ei mitään opettajan materiaalia</strong>. Tuntisuunnitelmat, purkuohjeet ja väärinkäsityslistat eivät kuulu tähän näkymään.</li>
+<li><strong><code>/opettaja/</code> — opettajan opas.</strong> Tämä osio. Suunnattu opettajalle: tuntisuunnitelmat, fasilitointiohjeet ja arviointi yhdessä näkymässä. Opiskelijoille jaetaan luokkaversio, koska se on kehystetty heidän työskentelyynsä.</li>
 </ul>
 <p>Nopea muistilista siitä, mikä näkymä on kenelle ja mitä se sisältää:</p>
 <table>
@@ -75,11 +77,11 @@
 <td><code>/opettaja/</code></td>
 <td>Opettaja</td>
 <td>Tuntisuunnitelmat, opettajavetoiset tehtävät, väärinkäsitykset, arviointiohjeet, diat</td>
-<td><strong>Ei — sisältää vastaukset</strong></td>
+<td>Ei tarpeen — suunnattu opettajalle</td>
 </tr>
 </tbody>
 </table>
-<p>Jokaisella opettajan tuntisivulla on <strong>"Jaa opiskelijoille" -painike</strong>, joka antaa kyseisen tunnin luokkaversion linkin (<code>/luokka/tunti-NN/</code>). Käytä sitä, niin et vahingossa jaa opettajan materiaalia. Kun valmistelet tuntia, työskentele <code>/opettaja/</code>-puolella; kun opiskelijat avaavat materiaalin, he ovat <code>/luokka/</code>-puolella.</p>
+<p>Jokaisella opettajan tuntisivulla on <strong>"Jaa opiskelijoille" -painike</strong>, joka antaa kyseisen tunnin luokkaversion linkin (<code>/luokka/tunti-NN/</code>) suoraan. Kun valmistelet tuntia, työskentele <code>/opettaja/</code>-puolella; kun opiskelijat avaavat materiaalin, he ovat <code>/luokka/</code>-puolella.</p>
 <h2>Toteutusmallit</h2>
 <p>Kurssin voi jaksottaa monella tavalla. Muutama lähtökohta:</p>
 <ul>
@@ -199,7 +201,7 @@
 <p>Arviointitunnit <strong>18</strong> ja <strong>27</strong> ovat kummankin moduulin summatiiviset arvioinnit, ja niiden opettajan tuntisivut sisältävät tarkemmat arviointiohjeet ja rubriikit. Tekoälyjen käyttö- ja Agentit-osioiden lopputyöt on rakennettu <strong>vaikeasti tekoälyllä oikaistaviksi</strong>: ne vaativat todellisia prompteja, tuloksia ja prosessin dokumentointia, joita ei voi keksiä jälkikäteen. Tunnin 18 arviointiohjeessa on punaisten lippujen lista tämän tunnistamiseen; tunnin 27 tuntisuunnitelmassa on vastaava LLM-resistenssin varmistamisen osio — vertaisarviointi ja suullinen demo paljastavat, ymmärtääkö opiskelija rakentamansa.</p>
 <p><strong>Harjoittele-tehtävät eivät ole arvioitavia.</strong> Ne ovat opiskelijan itseopiskelua ja itsetarkistusta: palaute tulee sivulta itseltään, eikä tuloksia kerätä arviointia varten. Käytä niitä oppimisen tukena, älä arvosanan perusteena.</p>
 <h2>Materiaalin vienti oppimisympäristöön</h2>
-<p>Jos ajat kurssia oppilaitoksen oppimisympäristössä (esimerkiksi Moodle, Itslearning tai Google Classroom), käytännön malli on suoraviivainen: <strong>jaa luokkalinkit resursseina tai suunnitelmina.</strong> Jokaiselle tunnille on oma luokkaversion osoite muotoa <code>/luokka/tunti-NN/</code>, ja voit liittää nämä linkit oppimisympäristösi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät oikeaan näkymään suoraan kurssialustalta, etkä jaa vahingossa opettajan materiaalia.</p>
+<p>Jos ajat kurssia oppilaitoksen oppimisympäristössä (esimerkiksi Moodle, Itslearning tai Google Classroom), käytännön malli on suoraviivainen: <strong>jaa luokkalinkit resursseina tai suunnitelmina.</strong> Jokaiselle tunnille on oma luokkaversion osoite muotoa <code>/luokka/tunti-NN/</code>, ja voit liittää nämä linkit oppimisympäristösi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät suoraan luokkaversioon kurssialustalta.</p>
 <p><strong>Lopputyöpalautukset</strong> hoituvat oppimisympäristön omilla palautuskansioilla: opiskelijat palauttavat lopputyönsä ja niiden liitteet oppimisympäristöön, ja arvioit ne arviointiohjeiden kriteereillä. Luokkaversion lopputyösivut ohjeistavat palautuksen oppimisympäristöön ja näyttävät pisteytyksen; verkkoversio (<code>/kurssi/</code>) ei sisällä palautusta lainkaan, joten pidä opiskelijat luokkaversiossa, kun kurssi ajetaan oppilaitoksessa.</p>
 <p>Tämä opas pysyy linkkien jakamisen tasolla — noudata oman oppimisympäristösi vakiintuneita käytäntöjä resurssien ja palautusten luomisessa.</p>
 <h2>Diat ja lataamo</h2>

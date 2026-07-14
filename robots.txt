@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://aiperusteet.fi/sitemap.xml
+# LLM-ystävällinen tiivistelmä (GEO): https://aiperusteet.fi/llms.txt
