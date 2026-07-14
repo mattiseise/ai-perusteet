@@ -82,7 +82,55 @@ def build_sitemap(pages):
 
 
 def build_robots():
-    _write('robots.txt', 'User-agent: *\nAllow: /\n\nSitemap: ' + sivut.DOMAIN + '/sitemap.xml\n')
+    _write('robots.txt',
+           'User-agent: *\n'
+           'Allow: /\n\n'
+           'Sitemap: ' + sivut.DOMAIN + '/sitemap.xml\n'
+           '# LLM-ystävällinen tiivistelmä (GEO): ' + sivut.DOMAIN + '/llms.txt\n')
+
+
+def build_llms():
+    """/llms.txt — tiivis markdown-kuvaus kielimalleille (GEO)."""
+    D = sivut.DOMAIN
+    lines = [
+        '# AI · Perusteet',
+        '',
+        '> Avoin, suomenkielinen tekoälyn perusteet -verkkokurssi: 27 oppituntia kolmessa '
+        'moduulissa teoriasta käyttöön ja itsenäisiin agentteihin. Toisen asteen tasolle, '
+        'mutta soveltuu kaikille tekoälyn perusteita opetteleville.',
+        '',
+        'Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin 4.0 '
+        '(CC BY-SA 4.0) -lisenssillä: saat käyttää, jakaa ja muokata materiaalia myös '
+        'kaupallisesti, kunhan mainitset tekijän ja jaat johdannaiset samalla lisenssillä.',
+        '',
+        '## Kolme näkymää samaan sisältöön',
+        '',
+        f'- [Verkkokurssi]({D}/kurssi/) (`/kurssi/`) — itsenäinen opiskelu omaan tahtiin: '
+        'teoria, itsetarkistuvat harjoitukset, sanasto ja diat.',
+        f'- [Luokkaversio]({D}/luokka/) (`/luokka/`) — oppituntien opiskelijamateriaali: '
+        'teoria, luokkatehtävät, harjoittele, sanasto ja diat.',
+        f'- [Opettajan opas]({D}/opettaja/) (`/opettaja/`) — kurssiopas, tuntisuunnitelmat, '
+        'opettajavetoiset tehtävät ja arviointi.',
+        f'- [Sanasto]({D}/sanasto/) (`/sanasto/`) — koko kurssin käsitteet aakkosjärjestyksessä.',
+        '',
+        '## Moduulit ja oppitunnit',
+        '',
+    ]
+    for osp in N.OSP_BLOCKS:
+        lines.append(f'### {osp["title"]} — {osp["subtitle"]}')
+        lines.append('')
+        for lid, title, btype, kansio in osp['lessons']:
+            num = N.ALL_IDS.index(lid) + 1
+            suffix = ' (arviointitunti)' if btype == 'assessment' else ''
+            lines.append(f'- [Tunti {num}: {title}]({D}/kurssi/tunti-{kansio}/){suffix}')
+        lines.append('')
+    lines += [
+        '## Lisenssi',
+        '',
+        'CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/deed.fi',
+        '',
+    ]
+    _write('llms.txt', '\n'.join(lines))
 
 
 def build_redirects():
@@ -105,6 +153,7 @@ if __name__ == '__main__':
     n = build_sitemap(pages)
     print(f'Sitemap: {n} osoitetta')
     build_robots()
+    build_llms()
     build_redirects()
 
     total_kb = sum(os.path.getsize(os.path.join(ROOT, p)) for p in pages) // 1024

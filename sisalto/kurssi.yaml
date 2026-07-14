@@ -28,7 +28,7 @@ lohkot:
 nakymat:
   kurssi:
     polku: /kurssi/
-    lohkot: [teoria, harjoittele, sanasto]
+    lohkot: [teoria, harjoittele, sanasto, diat]
     kesto: lukuaika          # generaattori laskee sanamäärästä
     lopputyo_variantti: verkko
   luokka:

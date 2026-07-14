@@ -1256,6 +1256,21 @@ body{
 .door-cta{margin-top:auto;font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--bc-primary);letter-spacing:.02em}
 @media(max-width:820px){.doors{grid-template-columns:1fr}}
 
+/* "Miten tämä kurssi on tehty" -tietolohko valintasivulla */
+.made-note{margin:34px 0 4px;background:var(--bg-white);border:1px solid var(--border-soft);
+  border-left:4px solid var(--blue);border-radius:var(--r);padding:24px 28px;box-shadow:0 1px 3px rgba(20,30,60,.04)}
+.made-note-kn{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:10px}
+.made-note p{font-size:15px;color:var(--text-muted);line-height:1.7;max-width:70ch;margin:0}
+
+/* Lisenssifooteri (valintasivun alalaita) */
+.license-footer{max-width:1080px;margin:0 auto;padding:8px 40px 48px}
+.license-footer p{font-size:13px;color:var(--text-light);line-height:1.65;max-width:70ch;margin:0}
+.license-footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border-soft);
+  transition:color .2s,border-color .2s}
+.license-footer a:hover{color:var(--text-dark);border-color:currentColor}
+@media(max-width:820px){.license-footer{padding:8px 24px 40px}.valinta{padding:40px 24px 24px}}
+
 /* Yleiskuva / moduulikortit (linkit, ei accordionia) */
 .mod-grid{display:flex;flex-direction:column;gap:16px;margin:36px 0}
 .mod-card{display:block;background:var(--bg-white);border:1px solid var(--border-soft);border-radius:var(--r);

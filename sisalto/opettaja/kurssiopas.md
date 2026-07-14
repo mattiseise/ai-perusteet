@@ -1,6 +1,6 @@
 # Opettajan kurssiopas
 
-Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja saat käytännön ohjeet toteutukseen, arviointiin ja materiaalin jakamiseen. Tuntikohtaiset suunnitelmat, väärinkäsityslistat ja opettajavetoiset tehtävät löydät kunkin tunnin omalta sivulta (`/opettaja/tunti-NN/`). Tämä osio näkyy vain opettajille: se sisältää vastauspankit ja purkuohjeet, joita ei jaeta opiskelijoille. Jaa opiskelijoille aina luokkaversio (ks. alempana).
+Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja saat käytännön ohjeet toteutukseen, arviointiin ja materiaalin jakamiseen. Tuntikohtaiset suunnitelmat, väärinkäsityslistat ja opettajavetoiset tehtävät löydät kunkin tunnin omalta sivulta (`/opettaja/tunti-NN/`). Tämä osio on suunnattu opettajalle: se kokoaa tuntisuunnitelmat ja fasilitointiohjeet yhteen näkymään. Opiskelijoille jaetaan luokkaversio, joka on kehystetty heille (ks. alempana).
 
 ## Mikä tämä kurssi on
 
@@ -33,8 +33,8 @@ Tuntisuunnitelma ja opettajavetoiset tehtävät näkyvät vain sinulle opettajan
 Sama sisältö palvelee kolmea käyttötilannetta kolmena näkymänä. Näkymät eivät ole kolme eri kurssia, vaan kolme suodatinta samaan materiaaliin.
 
 - **`/kurssi/` — itsenäinen verkkokurssi.** Itseopiskelijalle, joka etenee omaan tahtiin. Tuntisivulla teoria, Harjoittele ja sanasto. Lopputyöt ovat itsearvioitavia. Tähän näkymään hakukoneet tuovat kävijät.
-- **`/luokka/` — oppituntien opiskelijaversio.** **Tämän jaat opiskelijoille oppitunnilla.** Se sisältää teorian, luokkatehtävät, Harjoittele-tehtävät, sanaston ja diat kertaukseen — mutta **ei mitään opettajan materiaalia**. Vastauspankit, purkuohjeet ja väärinkäsityslistat eivät kuulu tähän näkymään.
-- **`/opettaja/` — opettajan opas.** Tämä osio. **Älä jaa tätä opiskelijoille** — se sisältää vastaukset ja purut.
+- **`/luokka/` — oppituntien opiskelijaversio.** **Tämän jaat opiskelijoille oppitunnilla.** Se sisältää teorian, luokkatehtävät, Harjoittele-tehtävät, sanaston ja diat kertaukseen — mutta **ei mitään opettajan materiaalia**. Tuntisuunnitelmat, purkuohjeet ja väärinkäsityslistat eivät kuulu tähän näkymään.
+- **`/opettaja/` — opettajan opas.** Tämä osio. Suunnattu opettajalle: tuntisuunnitelmat, fasilitointiohjeet ja arviointi yhdessä näkymässä. Opiskelijoille jaetaan luokkaversio, koska se on kehystetty heidän työskentelyynsä.
 
 Nopea muistilista siitä, mikä näkymä on kenelle ja mitä se sisältää:
 
@@ -42,9 +42,9 @@ Nopea muistilista siitä, mikä näkymä on kenelle ja mitä se sisältää:
 |---|---|---|---|---|
 | Verkkokurssi | `/kurssi/` | Itseopiskelija | Teoria, Harjoittele, sanasto; itsearvioitavat lopputyöt | Vapaasti jaettavissa, ei palautusta |
 | Luokkaversio | `/luokka/` | Opiskelija oppitunnilla | Teoria, luokkatehtävät, Harjoittele, sanasto, diat; lopputyöt pisteytyksellä | **Kyllä — tämä jaetaan** |
-| Opettajan opas | `/opettaja/` | Opettaja | Tuntisuunnitelmat, opettajavetoiset tehtävät, väärinkäsitykset, arviointiohjeet, diat | **Ei — sisältää vastaukset** |
+| Opettajan opas | `/opettaja/` | Opettaja | Tuntisuunnitelmat, opettajavetoiset tehtävät, väärinkäsitykset, arviointiohjeet, diat | Ei tarpeen — suunnattu opettajalle |
 
-Jokaisella opettajan tuntisivulla on **"Jaa opiskelijoille" -painike**, joka antaa kyseisen tunnin luokkaversion linkin (`/luokka/tunti-NN/`). Käytä sitä, niin et vahingossa jaa opettajan materiaalia. Kun valmistelet tuntia, työskentele `/opettaja/`-puolella; kun opiskelijat avaavat materiaalin, he ovat `/luokka/`-puolella.
+Jokaisella opettajan tuntisivulla on **"Jaa opiskelijoille" -painike**, joka antaa kyseisen tunnin luokkaversion linkin (`/luokka/tunti-NN/`) suoraan. Kun valmistelet tuntia, työskentele `/opettaja/`-puolella; kun opiskelijat avaavat materiaalin, he ovat `/luokka/`-puolella.
 
 ## Toteutusmallit
 
@@ -111,7 +111,7 @@ Arviointitunnit **18** ja **27** ovat kummankin moduulin summatiiviset arvioinni
 
 ## Materiaalin vienti oppimisympäristöön
 
-Jos ajat kurssia oppilaitoksen oppimisympäristössä (esimerkiksi Moodle, Itslearning tai Google Classroom), käytännön malli on suoraviivainen: **jaa luokkalinkit resursseina tai suunnitelmina.** Jokaiselle tunnille on oma luokkaversion osoite muotoa `/luokka/tunti-NN/`, ja voit liittää nämä linkit oppimisympäristösi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät oikeaan näkymään suoraan kurssialustalta, etkä jaa vahingossa opettajan materiaalia.
+Jos ajat kurssia oppilaitoksen oppimisympäristössä (esimerkiksi Moodle, Itslearning tai Google Classroom), käytännön malli on suoraviivainen: **jaa luokkalinkit resursseina tai suunnitelmina.** Jokaiselle tunnille on oma luokkaversion osoite muotoa `/luokka/tunti-NN/`, ja voit liittää nämä linkit oppimisympäristösi suunnitelmiin tai materiaaleihin siinä järjestyksessä, jossa etenet. Näin opiskelijat pääsevät suoraan luokkaversioon kurssialustalta.
 
 **Lopputyöpalautukset** hoituvat oppimisympäristön omilla palautuskansioilla: opiskelijat palauttavat lopputyönsä ja niiden liitteet oppimisympäristöön, ja arvioit ne arviointiohjeiden kriteereillä. Luokkaversion lopputyösivut ohjeistavat palautuksen oppimisympäristöön ja näyttävät pisteytyksen; verkkoversio (`/kurssi/`) ei sisällä palautusta lainkaan, joten pidä opiskelijat luokkaversiossa, kun kurssi ajetaan oppilaitoksessa.
 

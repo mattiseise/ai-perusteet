@@ -218,6 +218,41 @@ def word_count(text):
     return len(_strip_markdown(text).split())
 
 
+# ===== Meta-description-poiminta (SEO: teorian ensimmäinen leipätekstikappale) =====
+
+def excerpt(text, maxlen=160):
+    """Poimii ensimmäisen leipätekstikappaleen tiiviiksi meta descriptioniksi.
+
+    Ohittaa otsikot (#), listat, lainaukset ja taulukot; poistaa markdown-korostukset
+    ja linkit; katkaisee sanarajalle (~maxlen merkkiä) ja lisää katkoviivan (…).
+    """
+    if not text:
+        return ''
+    para = []
+    for line in text.split('\n'):
+        s = line.strip()
+        if not s:
+            if para:
+                break              # ensimmäinen kappale päättyi
+            continue
+        if s.startswith(('#', ':::', '>', '|', '- ', '* ', '+ ')) or _re_list.match(s):
+            if para:
+                break
+            continue               # ohita otsikot/listat kappaleen alussa
+        para.append(s)
+    p = ' '.join(para)
+    p = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', p)   # [teksti](url) → teksti
+    p = re.sub(r'[*_`]', '', p)                       # korostukset pois
+    p = re.sub(r'\s+', ' ', p).strip()
+    if len(p) <= maxlen:
+        return p
+    cut = p[:maxlen].rsplit(' ', 1)[0].rstrip(' ,.;:—-')
+    return cut + '…'
+
+
+_re_list = re.compile(r'^\d+[.)]\s')
+
+
 def reading_time_min(*texts, wpm=200):
     """Sanamäärä yhteensä / wpm, pyöristys ylös 5 minuutin tarkkuuteen (väh. 5)."""
     words = sum(word_count(t) for t in texts if t)
