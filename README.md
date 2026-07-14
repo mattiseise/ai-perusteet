@@ -6,18 +6,19 @@ Teoria (tunnit 1–9), Tekoälyjen käyttö (10–18) ja Agentit (19–27).
 ## Rakenne
 
 ```
-student/                 # Sivuston lähde: opiskelijamateriaali per oppitunti
-  lesson-NN/
-    self-study.md            # Itseopiskelumateriaali (teoria)
-    student-tasks.md         # Opiskelutehtävät (luokkatehtävät)
-    practice.md              # Harjoittele-tehtävät (```task-JSON-lohkot)
-    vocabulary.md            # Sanasto
-    slides.html              # Diat (käsin ladottu SVG)
-teacher/                 # Sivuston lähde: opettajamateriaali per oppitunti
-  lesson-NN/
-    teacher-materials.md     # Tuntisuunnitelma, väärinkäsitykset
-    teacher-led-tasks.md     # Opettajavetoiset tehtävät
-*-lopputyo-tehtavananto.md   # Lopputöiden tehtävänannot (3 kpl, juuressa)
+sisalto/                 # Sivuston lähde (yksi sisältöpohja)
+  kurssi.yaml                # Moduulit, tunnit, näkymäkonfiguraatiot (manifesti)
+  tunnit/NN/                 # NN = 01–27
+    teoria.md                  # Itseopiskelumateriaali
+    tehtavat-luokka.md         # Luokkatehtävät
+    harjoittele.md             # Harjoittele-tehtävät (```task-JSON; ei tunneilla 18, 27)
+    sanasto.md                 # Sanasto
+    diat.html                  # Diat (käsin ladottu SVG)
+    opettaja/
+      tuntisuunnitelma.md      # Tuntisuunnitelma, väärinkäsitykset
+      tehtavat-ohjatut.md      # Opettajavetoiset tehtävät
+  lopputyot/                 # Lopputöiden tehtävänannot (teoria/kaytto/agentit.md)
+  _arkisto/                  # Vanhat snapshotit (ei buildissa)
 generate_site.py         # Sivustogeneraattori → tuottaa index.html
 siirtyma/redirectit.md   # Rakenneuudistus 2: lukittu redirect-taulukko
 ```
@@ -28,7 +29,7 @@ generaattorin ansat: `CLAUDE.md`.
 ## Sivuston generointi
 
 ```bash
-pip install markdown
+pip install markdown pyyaml
 python3 generate_site.py
 # → tuottaa index.html
 ```

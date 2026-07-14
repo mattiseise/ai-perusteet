@@ -4,9 +4,10 @@ Tekoälyn perusteet -verkkokurssi (aiperusteet.fi). 27 oppituntia kolmessa moduu
 
 ## Generoitu vs. lähde
 
-- **index.html on generoitu — älä koskaan muokkaa käsin.** Aja `python3 generate_site.py` (vaatii `pip install markdown`). Committaa index.html yhdessä lähdemuutosten kanssa.
-- Sivuston lähde on `student/lesson-NN/` ja `teacher/lesson-NN/` — EI `content/lessons/` (ajautunut legacy-kopio, poistetaan rakenneuudistuksessa).
-- Tuntien lohkot: `self-study.md` (teoria), `student-tasks.md` (luokkatehtävät), `vocabulary.md`, `practice.md` (Harjoittele), `slides.html` (SVG-diat); opettajalla `teacher-materials.md`, `teacher-led-tasks.md`.
+- **index.html on generoitu — älä koskaan muokkaa käsin.** Aja `python3 generate_site.py` (vaatii `pip install markdown pyyaml`). Committaa index.html yhdessä lähdemuutosten kanssa.
+- Sivuston lähde on `sisalto/tunnit/NN/` (NN = 01–27) + manifesti `sisalto/kurssi.yaml` (moduulit, tunnit, näkymäkonfiguraatiot — rakennemuutokset manifestiin, ei koodiin).
+- Tuntien lohkot: `teoria.md`, `tehtavat-luokka.md`, `harjoittele.md` (Harjoittele; puuttuu arviointitunneilta 18 ja 27), `sanasto.md`, `diat.html` (SVG-diat); `opettaja/tuntisuunnitelma.md`, `opettaja/tehtavat-ohjatut.md`. Lopputyöbriefit: `sisalto/lopputyot/{teoria,kaytto,agentit}.md`.
+- Tunti-id:t (`lesson-NN`) ovat localStorage-, GA- ja hash-avaimia — kansiot on numeroitu `NN`, mutta id:itä ei saa muuttaa.
 
 ## generate_site.py — ansat
 

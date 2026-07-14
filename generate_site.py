@@ -4,73 +4,33 @@ Completely redesigned with Codecademy-inspired vertical layout, expandable accor
 
 import os, json, re
 import markdown as md_lib
+import yaml
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = _HERE
 OUT  = os.path.join(_HERE, 'index.html')
+SISALTO = os.path.join(_HERE, 'sisalto')
 
-# Lopputyön tehtävänannot per OSP (osp_id → md filename relative to repo root)
+# Kurssin rakenne luetaan manifestista (yksi totuuden lähde)
+with open(os.path.join(SISALTO, 'kurssi.yaml'), encoding='utf-8') as _f:
+    KURSSI = yaml.safe_load(_f)
+
+# Lopputyön tehtävänannot per OSP (osp_id → md-polku sisalto/-kansiossa)
 LOPPUTYO_BRIEFS = {
-    "osp1": "teoria-lopputyo-tehtavananto.md",
-    "osp2": "tekoalyjen-kaytto-lopputyo-tehtavananto.md",
-    "osp3": "agentit-lopputyo-tehtavananto.md",
+    m['id']: m['lopputyo'] for m in KURSSI['moduulit']
 }
 
 OSP_BLOCKS = [
     {
-        "id": "osp1",
-        "title": "Teoria",
-        "subtitle": "Tekoälyn teoria ja toimintaperiaatteet",
-        "color": "var(--blue)",
-        "icon": "📐",
-        "lessons": [
-            ("lesson-01", "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", "teaching"),
-            ("lesson-02", "Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa", "teaching"),
-            ("lesson-03", "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", "teaching"),
-            ("lesson-04", "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", "teaching"),
-            ("lesson-05", "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", "teaching"),
-            ("lesson-06", "Kuvat, ääni ja teksti — kun sanat eivät riitä", "teaching"),
-            ("lesson-07", "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", "teaching"),
-            ("lesson-08", "Kenen teksti se on? — etiikka, oikeudet ja vastuu", "teaching"),
-            ("lesson-09", "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä", "teaching"),
-        ]
-    },
-    {
-        "id": "osp2",
-        "title": "Tekoälyjen käyttö",
-        "subtitle": "Generatiivisten tekoälytyökalujen käyttö",
-        "color": "var(--violet)",
-        "icon": "🛠",
-        "lessons": [
-            ("lesson-10", "Kilpailuta tekoälyt — mikä työkalu mihinkin?", "teaching"),
-            ("lesson-11", "Muita tekoälymalleja — kuin ChatGPT ja Claude", "teaching"),
-            ("lesson-12", "Anna konteksti — rakenna oma promptauspankkisi", "teaching"),
-            ("lesson-13", "AI työparina — pohja, muokkaus ja tarkistus", "teaching"),
-            ("lesson-14", "Oma botti I — suunnittelu, ohjeet ja persoona", "teaching"),
-            ("lesson-15", "Oma botti II — tietopohja, rajaukset ja testaus", "teaching"),
-            ("lesson-16", "Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi", "teaching"),
-            ("lesson-17", "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", "teaching"),
-            ("lesson-18", "Projektidokumenttibotti — viimeistele ja esittele", "assessment"),
-        ]
-    },
-    {
-        "id": "osp3",
-        "title": "Agentit",
-        "subtitle": "Tekoälyagentit ja automaatio",
-        "color": "var(--teal)",
-        "icon": "🤖",
-        "lessons": [
-            ("lesson-19", "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", "teaching"),
-            ("lesson-20", "Automaatio vai autonomia? — milloin agentti kannattaa", "teaching"),
-            ("lesson-21", "Agentin muisti ja konteksti — miten kone pysyy kartalla", "teaching"),
-            ("lesson-22", "Agentin työkalut — tiedostot, haku ja komennot", "teaching"),
-            ("lesson-23", "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", "teaching"),
-            ("lesson-24", "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", "teaching"),
-            ("lesson-25", "Ihminen portinvartijana — human-in-the-loop käytännössä", "teaching"),
-            ("lesson-26", "Kädet saveen — n8n-agenttipaja alkaa", "teaching"),
-            ("lesson-27", "Viimeistele ja esittele — agenttisi on valmis", "assessment"),
-        ]
+        "id": m["id"],
+        "slug": m["slug"],
+        "title": m["otsikko"],
+        "subtitle": m["alaotsikko"],
+        "color": m["vari"],
+        "icon": m["ikoni"],
+        "lessons": [(t["id"], t["otsikko"], t["tyyppi"]) for t in m["tunnit"]],
     }
+    for m in KURSSI["moduulit"]
 ]
 
 # Google Slides embed URLs per lesson (None = no slides for this lesson)
@@ -267,7 +227,7 @@ def build_brief_data():
     """Read lopputyö tehtävänanto md files and convert to HTML keyed by osp_id."""
     briefs = {}
     for osp_id, fname in LOPPUTYO_BRIEFS.items():
-        path = f"{BASE}/{fname}"
+        path = f"{SISALTO}/{fname}"
         if os.path.exists(path):
             briefs[osp_id] = to_html(read_file(path))
         else:
@@ -279,10 +239,9 @@ def build_lesson_data():
     data = {}
     for osp in OSP_BLOCKS:
         for lid, short_title, btype in osp['lessons']:
-            sdir = f"{BASE}/student/{lid}"
-            tdir = f"{BASE}/teacher/{lid}"
+            ldir = f"{SISALTO}/tunnit/{lid.split('-')[1]}"
             slide_url = SLIDE_URLS.get(lid)
-            deck_src = read_file(f"{sdir}/slides.html")
+            deck_src = read_file(f"{ldir}/diat.html")
             slides_html = ''
             if deck_src.strip():
                 slides_html = (
@@ -308,13 +267,13 @@ def build_lesson_data():
                 'short_title':   short_title,
                 'block_type':    btype,
                 'slides':        slides_html,
-                'selfstudy':     to_html(read_file(f"{sdir}/self-study.md")),
-                'vocab':         to_html(read_file(f"{sdir}/vocabulary.md")),
-                'stasks':        to_html_with_cards(read_file(f"{sdir}/student-tasks.md"), include_h3=False),
-                'tltasks':       to_html_with_cards(read_file(f"{tdir}/teacher-led-tasks.md"), include_h3=False),
-                'tmats':         to_html_with_cards(read_file(f"{tdir}/teacher-materials.md"), include_h3=True),
+                'selfstudy':     to_html(read_file(f"{ldir}/teoria.md")),
+                'vocab':         to_html(read_file(f"{ldir}/sanasto.md")),
+                'stasks':        to_html_with_cards(read_file(f"{ldir}/tehtavat-luokka.md"), include_h3=False),
+                'tltasks':       to_html_with_cards(read_file(f"{ldir}/opettaja/tehtavat-ohjatut.md"), include_h3=False),
+                'tmats':         to_html_with_cards(read_file(f"{ldir}/opettaja/tuntisuunnitelma.md"), include_h3=True),
             }
-            practice_html, ptasks = parse_practice(read_file(f"{sdir}/practice.md"), lid)
+            practice_html, ptasks = parse_practice(read_file(f"{ldir}/harjoittele.md"), lid)
             data[lid]['practice'] = practice_html
             data[lid]['ptasks'] = ptasks
     return data
