@@ -7,8 +7,8 @@ ja pedagogisen selkeyden GPT-5.4:llä. Ei muuta asiasisältöä.
 
 Käyttö:
   python3 borje_kielenhuolto.py <tiedosto_tai_kansio> [--course-id ID] [--lesson-id ID] [--dry-run]
-  python3 borje_kielenhuolto.py content/lessons/lesson-19.md
-  python3 borje_kielenhuolto.py content/lessons/          # kaikki .md-tiedostot kansiossa
+  python3 borje_kielenhuolto.py student/lesson-19/self-study.md
+  python3 borje_kielenhuolto.py student/lesson-19/        # kaikki .md-tiedostot kansiossa
   python3 borje_kielenhuolto.py --course-id ai-perusteet-1ov --lesson-id lesson-19  # pipeline-mode
 
 Ympäristömuuttuja:

@@ -1,0 +1,98 @@
+# kurssi.yaml — kurssin rakenne ja näkymäkonfiguraatiot (yksi totuuden lähde)
+#
+# Rakenneuudistus 2: generaattori lukee moduulit, tunnit ja näkymät tästä
+# tiedostosta. Uusi tunti = kansio sisalto/tunnit/NN/ + rivi tähän manifestiin.
+# Uusi näkymä = uusi nakymat-avain — ei koodimuutosta.
+#
+# HUOM: tuntien id:t (lesson-NN) ovat localStorage- ja GA-avaimia sekä
+# vanhojen hash-linkkien osia — niitä EI saa muuttaa (ks. CLAUDE.md).
+
+kurssi:
+  nimi: "AI · Perusteet"
+  domain: aiperusteet.fi
+  laajuus_osp: 3
+
+# Tunnin kanoniset lohkot (block contract) — tiedostot sisalto/tunnit/NN/:ssä.
+# Arviointitunneilta (tyyppi: assessment) puuttuu harjoittele.md tarkoituksella.
+lohkot:
+  teoria:           teoria.md
+  sanasto:          sanasto.md
+  harjoittele:      harjoittele.md
+  tehtavat-luokka:  tehtavat-luokka.md
+  diat:             diat.html
+  tuntisuunnitelma: opettaja/tuntisuunnitelma.md
+  tehtavat-ohjatut: opettaja/tehtavat-ohjatut.md
+
+# Näkymät = suodattimia samaan sisältögraafiin (suunnitelman 2.2-taulukko datana).
+# Järjestys = välilehtien/lohkojen esitysjärjestys tuntisivulla.
+nakymat:
+  kurssi:
+    polku: /kurssi/
+    lohkot: [teoria, harjoittele, sanasto]
+    kesto: lukuaika          # generaattori laskee sanamäärästä
+    lopputyo_variantti: verkko
+  luokka:
+    polku: /luokka/
+    lohkot: [teoria, tehtavat-luokka, harjoittele, sanasto, diat]
+    kesto: oppitunti         # "90 min oppitunti"
+    lopputyo_variantti: luokka
+  opettaja:
+    polku: /opettaja/
+    lohkot: [tuntisuunnitelma, tehtavat-ohjatut, diat]
+    kesto: oppitunti
+    # Opettaja näkee luokkavariantin (pisteytys, oppimisympäristö) JA mahdolliset
+    # opettajalle merkityt lisälohkot — muuten arviointiohjeet katoaisivat.
+    lopputyo_variantti: [luokka, opettaja]
+
+moduulit:
+  - id: osp1
+    slug: teoria
+    otsikko: "Teoria"
+    alaotsikko: "Tekoälyn teoria ja toimintaperiaatteet"
+    vari: "var(--blue)"
+    ikoni: "📐"
+    lopputyo: lopputyot/teoria.md
+    tunnit:
+      - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching }
+      - { id: lesson-02, kansio: "02", otsikko: "Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa", tyyppi: teaching }
+      - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching }
+      - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching }
+      - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching }
+      - { id: lesson-06, kansio: "06", otsikko: "Kuvat, ääni ja teksti — kun sanat eivät riitä", tyyppi: teaching }
+      - { id: lesson-07, kansio: "07", otsikko: "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", tyyppi: teaching }
+      - { id: lesson-08, kansio: "08", otsikko: "Kenen teksti se on? — etiikka, oikeudet ja vastuu", tyyppi: teaching }
+      - { id: lesson-09, kansio: "09", otsikko: "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä", tyyppi: teaching }
+  - id: osp2
+    slug: kaytto
+    otsikko: "Tekoälyjen käyttö"
+    alaotsikko: "Generatiivisten tekoälytyökalujen käyttö"
+    vari: "var(--violet)"
+    ikoni: "🛠"
+    lopputyo: lopputyot/kaytto.md
+    tunnit:
+      - { id: lesson-10, kansio: "10", otsikko: "Kilpailuta tekoälyt — mikä työkalu mihinkin?", tyyppi: teaching }
+      - { id: lesson-11, kansio: "11", otsikko: "Muita tekoälymalleja — kuin ChatGPT ja Claude", tyyppi: teaching }
+      - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching }
+      - { id: lesson-13, kansio: "13", otsikko: "AI työparina — pohja, muokkaus ja tarkistus", tyyppi: teaching }
+      - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching }
+      - { id: lesson-15, kansio: "15", otsikko: "Oma botti II — tietopohja, rajaukset ja testaus", tyyppi: teaching }
+      - { id: lesson-16, kansio: "16", otsikko: "Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi", tyyppi: teaching }
+      - { id: lesson-17, kansio: "17", otsikko: "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", tyyppi: teaching }
+      - { id: lesson-18, kansio: "18", otsikko: "Projektidokumenttibotti — viimeistele ja esittele", tyyppi: assessment }
+  - id: osp3
+    slug: agentit
+    otsikko: "Agentit"
+    alaotsikko: "Tekoälyagentit ja automaatio"
+    vari: "var(--teal)"
+    ikoni: "🤖"
+    lopputyo: lopputyot/agentit.md
+    tunnit:
+      - { id: lesson-19, kansio: "19", otsikko: "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", tyyppi: teaching }
+      - { id: lesson-20, kansio: "20", otsikko: "Automaatio vai autonomia? — milloin agentti kannattaa", tyyppi: teaching }
+      - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching }
+      - { id: lesson-22, kansio: "22", otsikko: "Agentin työkalut — tiedostot, haku ja komennot", tyyppi: teaching }
+      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", tyyppi: teaching }
+      - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching }
+      - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching }
+      - { id: lesson-26, kansio: "26", otsikko: "Kädet saveen — n8n-agenttipaja alkaa", tyyppi: teaching }
+      - { id: lesson-27, kansio: "27", otsikko: "Viimeistele ja esittele — agenttisi on valmis", tyyppi: assessment }

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Agentin muisti ja konteksti — miten kone pysyy kartalla. Opettajan opas, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-21/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 21</span></div><div class="lesson-title">Agentin muisti ja konteksti — miten kone pysyy kartalla</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-21/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-21/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-21/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — eivät opettajan materiaaleja.</span></div><a class="sb-go" href="/luokka/tunti-21/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-21/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 21</h1>
+<div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
+<p>Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten <strong>muisti</strong>, <strong>konteksti</strong>, <strong>tila</strong> ja <strong>soul</strong> vaikuttavat agentin toimintaan. Oppitunnin ydin on, että agentti ei näytä älykkäältä vain siksi, että se käyttää tekoälyä, vaan siksi, että se osaa hyödyntää oikeaa tietoa oikeassa tilanteessa.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija ymmärtää, mitä <strong>konteksti-ikkuna</strong> tarkoittaa ja miksi sen koko vaikuttaa agentin toimintaan.</li>
+<li>Opiskelija ymmärtää, miten <strong>pitkäkestoinen muisti</strong> eroaa keskustelun aikaisesta kontekstista.</li>
+<li>Opiskelija tunnistaa <strong>vektoritietokannan</strong> merkitysperusteisen haun välineenä.</li>
+<li>Opiskelija ymmärtää, mitä <strong>tila</strong> ja <strong>muuttujat</strong> tarkoittavat agentin prosessissa.</li>
+<li>Opiskelija ymmärtää, mitä <strong>soul</strong> tarkoittaa agentin pysyvänä identiteettinä ja arvoina.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa arvioida, millaista muistia oma agentti tarvitsee.</li>
+<li>Opiskelija osaa erottaa lyhytaikaisen kontekstin, pitkäkestoisen muistin ja prosessin tilan toisistaan.</li>
+<li>Opiskelija osaa suunnitella yksinkertaisen tilamallin agentin työnkululle.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa kirjoittaa oman agenttinsa <strong>Muisti-pohjapiirroksen</strong>.</li>
+<li>Opiskelija osaa määritellä, mitä agentti saa muistaa ja mitä sen ei pidä tallentaa.</li>
+<li>Opiskelija osaa arvioida, millainen agentin pysyvä identiteetti ja arvopohja tukee turvallista ja johdonmukaista toimintaa.</li>
+</ul>
+<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että agentin “älykkyys” syntyy usein tiedon hallinnasta. Agentti tarvitsee nykyisen tilanteen, aiemman historian, prosessin vaiheen ja pysyvät toimintaperiaatteet. Ilman näitä se voi vaikuttaa epäjohdonmukaiselta, unohtavalta tai jopa vaaralliselta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: agentti pysyy kartalla neljän mekanismin avulla</h3></div><div class="task-card-body">
+<p>Oppitunnin ydinajatuksen voi tiivistää näin: agentti näyttää älykkäältä neljästä syystä.</p>
+<ol>
+<li><strong>Se näkee nykyisen tilanteen</strong> konteksti-ikkunan avulla.</li>
+<li><strong>Se muistaa menneisyyttä</strong> pitkäkestoisen muistin, esimerkiksi vektoritietokannan, avulla.</li>
+<li><strong>Se seuraa prosessin vaihetta</strong> tilan ja muuttujien avulla.</li>
+<li><strong>Se toimii johdonmukaisesti</strong> soulin eli pysyvän identiteetin ja arvojen avulla.</li>
+</ol>
+<blockquote class="pause"><p><strong>Agentti ei ole älykäs siksi, että se muistaa kaiken. Agentti on hyödyllinen siksi, että se muistaa oikeat asiat oikeassa tilanteessa.</strong></p>
+</blockquote>
+<p>Korosta opiskelijoille:</p>
+<ul>
+<li><strong>Konteksti-ikkuna</strong> on agentin lyhytaikainen näkymä nykyiseen tilanteeseen.</li>
+<li><strong>Pitkäkestoinen muisti</strong> säilyttää aiempia tapauksia ja tietoja keskustelujen välillä.</li>
+<li><strong>Tila</strong> kertoo, missä vaiheessa prosessi on.</li>
+<li><strong>Soul</strong> tekee agentin toiminnasta johdonmukaista ja arvoihin sidottua.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Konteksti-ikkuna ei ole rajaton muisti</h3></div><div class="task-card-body">
+<p>Moni opiskelija ajattelee helposti, että agentti näkee koko keskustelun ja kaiken aiemman tiedon. Tämä ei pidä paikkaansa. <strong>Konteksti-ikkuna</strong> on rajattu näkymä siihen, mitä agentti käsittelee juuri nyt.</p>
+<table>
+<thead>
+<tr>
+<th>Konteksti-ikkunan koko</th>
+<th>Mitä tapahtuu?</th>
+<th>Opettajan selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Liian pieni</strong></td>
+<td>Agentti unohtaa alkuperäisen ongelman, toistaa itseään tai menettää keskustelun punaisen langan.</td>
+<td>Näytä esimerkki pitkästä tukikeskustelusta, jossa alkuperäinen ongelma putoaa pois näkyvistä.</td>
+</tr>
+<tr>
+<td><strong>Liian suuri</strong></td>
+<td>Agentti hidastuu, käsittely kallistuu ja mukaan voi tulla epäolennaista tietoa.</td>
+<td>Korosta, että enemmän tietoa ei aina tarkoita parempaa päätöstä.</td>
+</tr>
+<tr>
+<td><strong>Sopiva koko</strong></td>
+<td>Agentti näkee tehtävän kannalta olennaisen historian ilman turhaa kuormaa.</td>
+<td>Koko riippuu tehtävästä: monivaiheinen asiakaspalvelutilanne tarvitsee enemmän kontekstia kuin yksinkertainen hintakysymys.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opettajan huomio:</strong> Korosta kompromissia. Konteksti-ikkunan kasvattaminen voi parantaa ymmärrystä, mutta se lisää myös kustannuksia, hitautta ja hälyn määrää. Hyvä suunnittelija valitsee ikkunan koon tehtävän mukaan.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Vektoritietokanta etsii merkityksiä, ei vain sanoja</h3></div><div class="task-card-body">
+<p><strong>Vektoritietokanta</strong> kannattaa selittää opiskelijoille merkitysperusteisen haun avulla. Tavallinen tietokanta etsii usein täsmällistä sanaa tai arvoa. Vektoritietokanta etsii asioita, jotka tarkoittavat suunnilleen samaa.</p>
+<table>
+<thead>
+<tr>
+<th>Hakutapa</th>
+<th>Miten se toimii?</th>
+<th>Esimerkki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perinteinen tietokanta</strong></td>
+<td>Etsii täsmällisiä sanoja, kenttiä tai arvoja.</td>
+<td>Hakusanalla ”maksu” löytyy tieto, jossa lukee ”maksu”.</td>
+</tr>
+<tr>
+<td><strong>Vektoritietokanta</strong></td>
+<td>Etsii merkitykseltään samankaltaisia asioita.</td>
+<td>Hakusanalla ”maksu” voi löytyä myös ”kortin hylkääminen”, ”laskutus” ja ”maksutapa epäonnistui”.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Käytä kirjastoanalogiaa: tavallinen haku etsii kirjan nimessä olevia sanoja, mutta merkityshaku löytää samaa aihetta käsitteleviä kirjoja, vaikka niissä käytettäisiin eri sanoja.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tila ja muuttujat tekevät prosessista hallittavan</h3></div><div class="task-card-body">
+<p><strong>Tila</strong> kertoo, missä vaiheessa prosessi on. <strong>Muuttujat</strong> kertovat prosessin aikana tarvittavia arvoja, kuten yritysten määrä, viimeisin hinta, hyväksynnän tila tai virheiden lukumäärä.</p>
+<p>Tilaa kannattaa opettaa prosessimallina. Opiskelijoiden pitää nähdä, että agentti ei saa hypätä mielivaltaisesti vaiheesta toiseen. Se etenee suunniteltujen tilojen ja siirtymäehtojen mukaan.</p>
+<ol>
+<li><strong>Listaa kaikki prosessin vaiheet.</strong> Esimerkiksi tilaus luotu, vahvistus lähetetty, maksu tarkistettu, toimitus käynnissä ja valmis.</li>
+<li><strong>Nimeä jokainen tila selkeästi.</strong> Käytä nimiä, joista näkee, missä vaiheessa prosessi on.</li>
+<li><strong>Määritä muuttujat kussakin tilassa.</strong> Esimerkiksi <code>yritykset</code>, <code>hyväksyntä</code>, <code>viimeinen_hinta</code> tai <code>virheet</code>.</li>
+<li><strong>Määritä siirtymän ehdot.</strong> Kerro, milloin prosessi saa siirtyä seuraavaan tilaan.</li>
+</ol>
+<blockquote class="pause"><p><strong>Tärkeää:</strong> Agentti ei hypi tilasta toiseen vapaasti. Hyvin suunniteltu agentti noudattaa tilamallia ja siirtyy seuraavaan vaiheeseen vain, kun siirtymän ehdot täyttyvät.</p>
+</blockquote>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soul tekee agentista johdonmukaisen</h3></div><div class="task-card-body">
+<p><strong>Soul</strong> tarkoittaa agentin pysyvää identiteettiä, arvoja ja toimintaperiaatteita. Se ei ole koristeellinen lisä, vaan käytännön ohjausväline. Soul auttaa agenttia toimimaan johdonmukaisesti myös silloin, kun tilanne on uusi, epäselvä tai ristiriitainen.</p>
+<p>Ilman selkeää soulia agentti voi toimia epäjohdonmukaisesti tai vaarallisesti:</p>
+<ul>
+<li>Se voi hyväksyä 50 % alennuksen yhdelle asiakkaalle mutta hylätä 20 % alennuksen toiselle ilman perusteltua syytä.</li>
+<li>Se voi jakaa asiakkaan tietoja kolmannelle osapuolelle, jos käyttäjä muotoilee pyynnön vakuuttavasti.</li>
+<li>Se voi toimia pelkkien hetkellisten ohjeiden mukaan ottamatta huomioon turvallisuutta, arvoja tai organisaation periaatteita.</li>
+</ul>
+<p><strong>Opettajan painotus:</strong> Soul pitää tehdä konkreettiseksi. Ei riitä, että agentti on ”ystävällinen ja hyödyllinen”. Parempi määritelmä on esimerkiksi: ”Agentti ei koskaan paljasta asiakastietoja, myöntää epävarmuuden, pyytää ihmisen apua riskitilanteissa ja suosii turvallisuutta nopeuden sijaan.”</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Isompi konteksti-ikkuna on aina parempi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Isompi ikkuna voi auttaa agenttia näkemään enemmän historiaa, mutta se voi myös hidastaa toimintaa, lisätä kustannuksia ja tuoda mukaan epäolennaista tietoa. Oikea koko riippuu tehtävästä.</p>
+<blockquote class="pause"><p>Enemmän muistia ei aina tarkoita parempaa päätöstä. Oikea muisti on tehtävän kannalta olennainen muisti.</p>
+</blockquote>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Vektoritietokanta löytää aina oikean vastauksen.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Vektoritietokanta löytää samankaltaisia merkityksiä, mutta se voi tehdä virheitä. Se voi löytää väärän samankaltaisen tapauksen eli false positiven tai jättää olennaisen tapauksen löytämättä. Siksi tuloksia pitää arvioida, rajata ja tarvittaessa tarkistaa.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Tila muuttuu itsestään oikein.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Tila täytyy suunnitella. Jos siirtymäehdot puuttuvat, agentti voi jäädä jumiin, ohittaa tärkeitä vaiheita tai toistaa saman toiminnon useita kertoja. Tilamalli on osa agentin turvallisuutta ja luotettavuutta.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Soul on liian abstrakti, joten sitä ei tarvitse suunnitella.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Soul on hyödyllinen vain, jos se kirjoitetaan konkreettisiksi periaatteiksi. Sen pitää kertoa, mitä agentti tekee epäselvissä tilanteissa, mitä se ei koskaan tee ja milloin se pyytää ihmisen apua.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Konteksti-ikkunan koko</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää, miten konteksti-ikkunan koko vaikuttaa agentin kykyyn käsitellä tehtävää.</p>
+<p><strong>Tehtävä:</strong> Näytä opiskelijoille sama tukikeskustelu kolmella eri tavalla: vain viimeiset 10 viestiä, viimeiset 50 viestiä ja koko keskustelu. Pyydä opiskelijoita arvioimaan, mitä agentti pystyy päättelemään kussakin tilanteessa.</p>
+<table>
+<thead>
+<tr>
+<th>Konteksti</th>
+<th>Mitä agentti näkee?</th>
+<th>Mitä riskejä syntyy?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 viestiä</td>
+<td>Vain viimeisin osa keskustelusta.</td>
+<td>Alkuperäinen ongelma voi kadota näkyvistä.</td>
+</tr>
+<tr>
+<td>50 viestiä</td>
+<td>Suurin osa keskustelusta.</td>
+<td>Hyvä kompromissi, jos keskustelu ei ole liian pitkä.</td>
+</tr>
+<tr>
+<td>Koko keskustelu</td>
+<td>Kaikki saatavilla oleva tieto.</td>
+<td>Käsittely voi hidastua, kallistua ja mukaan voi tulla epäolennaista tietoa.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Semanttinen haku ja vektoritietokanta</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää, miten merkitysperusteinen haku eroaa täsmällisestä sanahausta.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille pieni tapaustietokanta, jossa samaa ongelmaa kuvataan eri sanoin. Pyydä heitä miettimään, mitkä tapaukset vektoritietokanta voisi löytää, vaikka hakusana ei ole täsmälleen sama.</p>
+<table>
+<thead>
+<tr>
+<th>Käyttäjän ilmaus</th>
+<th>Mahdollinen sama merkitys</th>
+<th>Miksi nämä voivat liittyä toisiinsa?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>”Maksu ei mennyt läpi.”</td>
+<td>Kortti hylättiin.</td>
+<td>Molemmat kuvaavat epäonnistunutta maksutapahtumaa.</td>
+</tr>
+<tr>
+<td>”En pääse kirjautumaan.”</td>
+<td>Tunnus ei toimi.</td>
+<td>Molemmat liittyvät käyttäjän pääsyn estymiseen.</td>
+</tr>
+<tr>
+<td>”Lasku näyttää väärältä.”</td>
+<td>Virheellinen veloitus.</td>
+<td>Molemmat liittyvät laskutuksen oikeellisuuteen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Viallinen tila</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija tunnistaa, mitä tapahtuu, jos tila ei muutu oikein.</p>
+<p><strong>Tehtävä:</strong> Näytä opiskelijoille prosessi, jossa tila jää jumiin tai hyppää väärään vaiheeseen. Pyydä heitä tunnistamaan virhe ja ehdottamaan korjausta.</p>
+<p><strong>Esimerkkitilanne:</strong> Agentti lähettää vahvistussähköpostin aina, kun se näkee tilan <code>tilaus_luotu</code>. Jos tila ei koskaan muutu muotoon <code>vahvistus_lähetetty</code>, agentti lähettää saman vahvistuksen uudelleen ja uudelleen.</p>
+<p><strong>Opettajan ohjaava kysymys</strong></p>
+<p>Mikä siirtymäehto puuttuu? Milloin tila pitäisi vaihtaa, ja mihin arvoon?</p>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-D: Soul-ristiriidat</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää, miten agentin pysyvä identiteetti ja arvot vaikuttavat päätöksiin.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille sama asiakastilanne ja kaksi erilaista soul-määritelmää. Pyydä heitä arvioimaan, miten agentit toimisivat eri tavoin.</p>
+<table>
+<thead>
+<tr>
+<th>Soul</th>
+<th>Mahdollinen reaktio</th>
+<th>Riski</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>”Tärkeintä on tehdä asiakas aina tyytyväiseksi.”</td>
+<td>Agentti voi antaa liian suuren alennuksen tai luvata liikaa.</td>
+<td>Taloudellinen riski ja epäjohdonmukaiset päätökset.</td>
+</tr>
+<tr>
+<td>”Tärkeintä on turvallinen, reilu ja sääntöjen mukainen ratkaisu.”</td>
+<td>Agentti auttaa asiakasta, mutta ei lupaa sellaista, mitä se ei saa luvata.</td>
+<td>Voi tuntua hitaammalta, mutta on turvallisempi ja johdonmukaisempi.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>CFU-kysymykset</h2></div><div class="task-card-body">
+<ol>
+<li><strong>Konteksti:</strong> Miksi liian suuri konteksti-ikkuna ei ole aina parempi?</li>
+<li><strong>Muisti:</strong> Mitä eroa on konteksti-ikkunalla ja pitkäkestoisella muistilla?</li>
+<li><strong>Vektoritietokanta:</strong> Miksi vektoritietokanta voi löytää oikean tapauksen, vaikka käyttäjä käyttää eri sanoja?</li>
+<li><strong>Tila:</strong> Mitä voi tapahtua, jos agentti ei päivitä prosessin tilaa oikein?</li>
+<li><strong>Soul:</strong> Miksi agentin arvot pitää kirjoittaa konkreettisesti eikä vain yleisellä tasolla?</li>
+</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija sekoittaa kontekstin ja pitkäkestoisen muistin</h3></div><div class="task-card-body">
+<p>Käytä seuraavaa erottelua:</p>
+<ul>
+<li><strong>Konteksti-ikkuna:</strong> mitä agentti näkee juuri nyt.</li>
+<li><strong>Pitkäkestoinen muisti:</strong> mitä agentti voi hakea aiemmista keskusteluista tai tietokannasta.</li>
+</ul>
+<blockquote class="pause"><p>Konteksti on työpöytä. Pitkäkestoinen muisti on arkisto.</p>
+</blockquote>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija ajattelee, että vektoritietokanta on aina oikeassa</h3></div><div class="task-card-body">
+<p>Muistuta, että vektoritietokanta ehdottaa samankaltaisia tapauksia, mutta ei takaa oikeaa vastausta. Siksi agentin pitää arvioida löydettyjen tapausten relevanssia.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelijan tilamalli on epäselvä</h3></div><div class="task-card-body">
+<p>Pyydä opiskelijaa kirjoittamaan prosessi näin:</p>
+<ol>
+<li>Mikä on aloitustila?</li>
+<li>Mikä on seuraava mahdollinen tila?</li>
+<li>Mikä ehto siirtää prosessin seuraavaan tilaan?</li>
+<li>Mitä tapahtuu, jos ehto ei täyty?</li>
+</ol>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos soul jää liian abstraktiksi</h3></div><div class="task-card-body">
+<p>Pyydä opiskelijaa täydentämään lauseet:</p>
+<ul>
+<li>Agenttini ei koskaan...</li>
+<li>Jos agenttini on epävarma, se...</li>
+<li>Jos käyttäjä pyytää jotakin riskialtista, agentti...</li>
+<li>Agenttini tärkein arvo on...</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
+<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin muistia ei suunnitella vain teknisenä ominaisuutena. Muisti, konteksti, tila ja soul vaikuttavat siihen, miten agentti tekee päätöksiä, kuinka johdonmukainen se on ja kuinka turvallisesti se toimii.</p>
+<p>Hyvä päätöskysymys tunnin loppuun:</p>
+<blockquote class="pause"><p><strong>Pohdi:</strong> Mitä agenttisi täytyy muistaa juuri nyt, mitä sen täytyy muistaa myöhemmin ja mitä sen ei saa koskaan tallentaa?</p>
+</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät — oppitunti 21</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Konteksti-ikkunan koko noin 15 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä <strong>konteksti-ikkuna</strong> tarkoittaa ja miksi sen koko vaikuttaa agentin toimintaan. Opiskelijat näkevät, että agentti ei välttämättä muista kaikkea aiemmasta keskustelusta, vaan toimii sen perusteella, mitä sillä on käytettävissään nykyisessä kontekstissa.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, että konteksti-ikkuna ei ole sama asia kuin pitkäkestoinen muisti. Konteksti-ikkuna sisältää vain sen tiedon, joka on mukana juuri tässä käsittelyhetkessä.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Selitys:</strong></p>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Konteksti-ikkuna on kuin muistilaatikko. Siihen mahtuu vain tietty määrä keskustelua, ohjeita ja tietoa. Kun keskustelu kasvaa liian pitkäksi, vanhinta tietoa voi jäädä pois.</p>
+</blockquote>
+<p><strong>Demo:</strong></p>
+<ol>
+<li>Näytä opiskelijoille pitkä asiakaskeskustelu.</li>
+<li>Merkitse taululle tai diaan, mitä agentti näkisi eri kokoisilla konteksti-ikkunoilla:</li>
+<li><strong>10 viestin ikkuna:</strong> agentti näkee vain viimeisimmät viestit.</li>
+<li><strong>50 viestin ikkuna:</strong> agentti näkee enemmän taustaa ja aiempia yksityiskohtia.</li>
+<li><strong>200 viestin ikkuna:</strong> agentti näkee laajemman keskusteluhistorian, mutta käsittely voi olla hitaampaa ja kalliimpaa.</li>
+<li>Näytä fyysisesti, mitkä viestit jäävät pois pienellä ikkunalla. Voit esimerkiksi peittää vanhemmat viestit tai siirtää ne sivuun.</li>
+</ol>
+<p><strong>Keskustelu:</strong></p>
+<ul>
+<li><strong>Mitä menetetään pienellä konteksti-ikkunalla?</strong><br />
+  Konteksti voi kadota, agentti voi kysyä samoja asioita uudelleen tai antaa vastauksen, joka ei huomioi aiempaa keskustelua.</li>
+<li><strong>Mitä suuresta konteksti-ikkunasta maksetaan?</strong><br />
+  Suuri ikkuna käsittelee enemmän dataa. Tämä voi lisätä kustannuksia, hidastaa käsittelyä ja kasvattaa tietosuojariskejä.</li>
+<li><strong>Missä on sopiva tasapaino?</strong><br />
+  Sopiva koko riippuu tehtävästä. Lyhyt asiakaspalvelukysymys tarvitsee vähemmän kontekstia kuin pitkä projektisuunnittelu tai tekninen ongelmanratkaisu.</li>
+</ul>
+<h3>Tehtävä opiskelijoille</h3>
+<p>Opiskelijat suunnittelevat sopivan konteksti-ikkunan koon kolmelle erilaiselle tehtävälle ja perustelevat valintansa.</p>
+<table>
+<thead>
+<tr>
+<th>Tehtävä</th>
+<th>Sopiva konteksti-ikkuna</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yksinkertainen asiakaskysymys</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pitkä tekninen ongelmanratkaisu</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Usean viikon projektisuunnittelu</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, että konteksti-ikkuna rajaa sitä, mitä agentti voi hyödyntää vastauksessaan.</li>
+<li>Opiskelijat osaavat selittää, miksi liian pieni ikkuna voi heikentää vastauksen laatua.</li>
+<li>Opiskelijat ymmärtävät, että suuri konteksti-ikkuna ei ole aina paras ratkaisu, koska siihen liittyy kustannuksia, hitautta ja riskejä.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Vektoritietokanta noin 20 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Aktiviteetin tavoitteena on havainnollistaa, että <strong>vektoritietokanta</strong> etsii tietoa merkityksen perusteella eikä pelkästään täsmällisten sanojen avulla.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Selitys:</strong></p>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Tavallinen haku etsii usein samoja sanoja. Vektoritietokanta yrittää löytää samankaltaisen merkityksen, vaikka sanat olisivat erilaisia. Se voi esimerkiksi ymmärtää, että “kortti hylättiin” ja “maksua ei voitu käsitellä” liittyvät samaan ongelmaan.</p>
+</blockquote>
+<p><strong>Käsityöharjoitus:</strong></p>
+<p>Anna opiskelijoille seuraavat viisi asiakastapauksen kuvausta:</p>
+<ul>
+<li>Maksua ei voida käsitellä.</li>
+<li>Kortti hylkäytyi.</li>
+<li>Laskutus epäonnistui.</li>
+<li>En saa tuotetta toimitetuksi.</li>
+<li>Maksujärjestelmä sanoo ei.</li>
+</ul>
+<p><strong>Opiskelijoiden tehtävä:</strong></p>
+<ol>
+<li>Lukekaa kaikki asiakastapaukset.</li>
+<li>Ryhmitelkää tapaukset merkityksen perusteella.</li>
+<li>Nimetkää ryhmät.</li>
+<li>Perustelkaa, miksi sijoititte tapaukset juuri näihin ryhmiin.</li>
+</ol>
+<p><strong>Odotetut ryhmät:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ryhmä</th>
+<th>Tapaukset</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maksuongelmat</strong></td>
+<td>Maksua ei voida käsitellä, kortti hylkäytyi, laskutus epäonnistui, maksujärjestelmä sanoo ei.</td>
+<td>Kaikki kuvaavat eri sanoilla samaa ongelma-aluetta: maksaminen ei onnistu.</td>
+</tr>
+<tr>
+<td><strong>Logistiikkaongelma</strong></td>
+<td>En saa tuotetta toimitetuksi.</td>
+<td>Tapaus liittyy toimitukseen, ei maksamiseen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Johtopäätös:</strong></p>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Tämä on se periaate, jolla vektoritietokanta toimii. Se ei etsi vain samoja sanoja, vaan samankaltaista merkitystä. Siksi se voi löytää aiemman tapauksen, vaikka asiakas käyttäisi eri sanoja.</p>
+</blockquote>
+<p><strong>Esimerkki opetukseen</strong></p>
+<p>Vertaa vektoritietokantaa opiskelijoille tuttuun tilanteeseen: ihminen ymmärtää, että “läppäri ei yhdistä nettiin” ja “kone ei pääse Wi-Fiin” tarkoittavat todennäköisesti samaa ongelmaa, vaikka sanat ovat eri.</p>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, että vektoritietokanta auttaa agenttia löytämään merkitykseltään samankaltaista tietoa.</li>
+<li>Opiskelijat osaavat erottaa sanahaun ja merkityshaun toisistaan.</li>
+<li>Opiskelijat näkevät, miksi pitkäkestoinen muisti voi parantaa agentin vastauksia.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3: Tila ja muuttujat noin 25 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Aktiviteetin tavoitteena on opettaa opiskelijoille, mitä <strong>tila</strong> ja <strong>muuttujat</strong> tarkoittavat agentin toiminnassa. Opiskelijat harjoittelevat kuvaamaan prosessin vaiheita ja niihin liittyviä tietoja.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Selitys:</strong></p>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Tila kertoo, missä vaiheessa prosessi on. Muuttujat kertovat, mitä tietoja agentin pitää muistaa kyseisessä vaiheessa. Esimerkiksi tilaus voi olla luotu, maksettu, pakattu tai lähetetty. Muuttujia voivat olla tilausnumero, asiakkaan nimi, maksun tila ja toimitusosoite.</p>
+</blockquote>
+<h3>Esittely: tilauksen eteneminen</h3>
+<table>
+<thead>
+<tr>
+<th>Tila</th>
+<th>Tärkeät muuttujat</th>
+<th>Seuraava siirtymä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Luotu</strong></td>
+<td>tilausnumero, asiakas, tuotteet</td>
+<td>maksu vastaanotetaan</td>
+</tr>
+<tr>
+<td><strong>Maksettu</strong></td>
+<td>maksutapa, maksun tila, summa</td>
+<td>tilaus siirtyy pakattavaksi</td>
+</tr>
+<tr>
+<td><strong>Pakattu</strong></td>
+<td>varastotiedot, pakkauspäivä, tuotteiden saatavuus</td>
+<td>tilaus luovutetaan kuljetukseen</td>
+</tr>
+<tr>
+<td><strong>Lähetetty</strong></td>
+<td>seurantakoodi, kuljetusyhtiö, toimitusosoite</td>
+<td>toimitus seurataan valmiiksi</td>
+</tr>
+</tbody>
+</table>
+<h3>Ryhmätyö</h3>
+<p>Opiskelijat valitsevat yhden prosessin:</p>
+<ul>
+<li>tilausprosessi,</li>
+<li>ajanvarausprosessi,</li>
+<li>asiakaspalvelupyyntö,</li>
+<li>asiakaspalautteen käsittely.</li>
+</ul>
+<p>Ryhmän tehtävänä on määritellä:</p>
+<ol>
+<li>kaikki prosessin tilat oikeassa järjestyksessä,</li>
+<li>tärkeät muuttujat jokaisessa tilassa,</li>
+<li>siirtymät tilasta toiseen,</li>
+<li>tilanne, jossa agentin pitää pyytää ihmiseltä apua.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Prosessin tila</th>
+<th>Muuttujat</th>
+<th>Siirtymä seuraavaan tilaan</th>
+<th>Milloin pyydetään ihmiseltä apua?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esitykset:</strong></p>
+<p>Ryhmät esittelevät prosessinsa lyhyesti. Pyydä jokaista ryhmää näyttämään ainakin yksi tilasiirtymä ja siihen liittyvät muuttujat.</p>
+<p><strong>Keskustelukysymys:</strong></p>
+<p>“Mitä voi mennä pieleen, jos agentti unohtaa tärkeän muuttujan?”</p>
+<p><strong>Mahdollisia vastauksia:</strong></p>
+<ul>
+<li>Agentti voi lähettää tilauksen väärään osoitteeseen.</li>
+<li>Agentti voi käsitellä maksamattoman tilauksen maksettuna.</li>
+<li>Agentti voi varata saman ajan kahdelle ihmiselle.</li>
+<li>Agentti voi antaa asiakkaalle väärää tietoa prosessin vaiheesta.</li>
+</ul>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat listaavat vain prosessin vaiheita, kysy: “Mitä tietoja agentin pitää muistaa juuri tässä vaiheessa, jotta se voi tehdä oikean päätöksen?”</p>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, että tila kuvaa prosessin vaihetta.</li>
+<li>Opiskelijat osaavat nimetä muuttujia, joita agentin pitää muistaa eri vaiheissa.</li>
+<li>Opiskelijat ymmärtävät, että tilan tai muuttujan unohtaminen voi johtaa vakaviin virheisiin.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4: Agentin “soul” eli pysyvä identiteetti ja arvot noin 20 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten agentin pysyvä <strong>identiteetti</strong>, <strong>arvot</strong> ja toimintaperiaatteet vaikuttavat sen päätöksiin ja viestintätyyliin.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Selitys:</strong></p>
+<p>Selitä opiskelijoille:</p>
+<blockquote class="pause"><p>Tässä yhteydessä soul tarkoittaa agentin pysyvää identiteettiä ja arvoja. Se ei tarkoita, että agentilla olisi oikea tietoisuus tai tunteet. Kyse on siitä, millaiseksi agentin toiminta ja tyyli on suunniteltu.</p>
+</blockquote>
+<h3>Esittely: sama tilanne, eri identiteetti</h3>
+<p><strong>Tilanne:</strong> Asiakas kysyy hyvitystä, koska toimitus on myöhässä.</p>
+<table>
+<thead>
+<tr>
+<th>Agentin identiteetti</th>
+<th>Mahdollinen vastaus</th>
+<th>Mitä vastaus kertoo arvoista?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aggressiivinen myyjä</strong></td>
+<td>“Ymmärrän tilanteen, mutta suosittelen tilaamaan seuraavalla kerralla nopeamman toimituksen. Voit myös ostaa premium-palvelun.”</td>
+<td>Agentti painottaa lisämyyntiä enemmän kuin asiakkaan kokemusta.</td>
+</tr>
+<tr>
+<td><strong>Empaattinen neuvonantaja</strong></td>
+<td>“Ymmärrän, että viivästys on harmillinen. Tarkistan ensin tilauksen tilanteen ja katson, onko hyvitys mahdollinen.”</td>
+<td>Agentti painottaa asiakkaan kuulemista, reiluutta ja tilanteen selvittämistä.</td>
+</tr>
+</tbody>
+</table>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Miten agentin identiteetti muutti vastausta?</li>
+<li>Kumpi vastaus sopii paremmin asiakaspalveluun?</li>
+<li>Voiko sama tieto johtaa eri päätökseen, jos agentin arvot ovat erilaiset?</li>
+</ul>
+<h3>Ryhmätyö</h3>
+<p>Opiskelijat valitsevat agentin roolin. Esimerkkejä:</p>
+<ul>
+<li>asiakaspalvelubotti,</li>
+<li>myyntiagentti,</li>
+<li>terveydenhuollon neuvontabotti,</li>
+<li>opiskelun ohjaaja,</li>
+<li>projektimentori.</li>
+</ul>
+<p>Ryhmän tehtävänä on kirjoittaa:</p>
+<ol>
+<li><strong>Identiteetti:</strong> kaksi lausetta siitä, millainen agentti on ja ketä se auttaa.</li>
+<li><strong>Kolme perustavaa arvoa:</strong> esimerkiksi turvallisuus, selkeys, rehellisyys, empaattisuus, tehokkuus tai käyttäjän oppiminen.</li>
+<li><strong>Yksi rajaus:</strong> mitä agentti ei tee, vaikka käyttäjä pyytäisi.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Kohta</th>
+<th>Ryhmän vastaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identiteetti</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Arvo 1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Arvo 2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Arvo 3</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Rajaus</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esitykset:</strong></p>
+<p>Joitakin ryhmiä pyydetään lukemaan agenttinsa identiteetti ja arvot ääneen.</p>
+<p><strong>Keskustelu:</strong></p>
+<ul>
+<li>Miten arvot vaikuttavat agentin päätöksiin?</li>
+<li>Mitä tapahtuu, jos agentin arvot ovat ristiriidassa käyttäjän pyynnön kanssa?</li>
+<li>Miksi terveydenhuollon agentilla pitää olla erilaiset arvot kuin myyntiagentilla?</li>
+</ul>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, että agentin identiteetti ja arvot vaikuttavat sen toimintaan.</li>
+<li>Opiskelijat osaavat kirjoittaa agentille selkeän identiteetin ja perusarvot.</li>
+<li>Opiskelijat ymmärtävät, että agentin arvot voivat ohjata päätöksiä myös epäselvissä tilanteissa.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 5: Kokonaisuus — neljä tekijää yhdessä noin 15 minuuttia</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Aktiviteetin tavoitteena on yhdistää oppitunnin neljä keskeistä käsitettä: <strong>konteksti-ikkuna</strong>, <strong>pitkäkestoinen muisti</strong>, <strong>tila ja muuttujat</strong> sekä agentin <strong>identiteetti ja arvot</strong>. Opiskelijat ymmärtävät, miten nämä tekijät yhdessä tuottavat vaikutelman älykkäästä toiminnasta.</p>
+<h3>Tapaus</h3>
+<p>Näytä opiskelijoille seuraava tilanne:</p>
+<blockquote class="pause"><p>Asiakas ottaa yhteyttä ja sanoo: “Minulla oli ongelma viimeksi, ja nyt on taas sama tilanne.” Asiakas on ollut yrityksen asiakkaana kaksi vuotta.</p>
+</blockquote>
+<h3>Vaiheittainen analyysi</h3>
+<ol>
+<li><strong>Konteksti-ikkuna:</strong></li>
+</ol>
+<p>Agentti näkee viimeisimmät viisi viestiä.</p>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Mitä agentti näkee?</li>
+<li>Mitä se ei ehkä näe?</li>
+<li>Voiko agentti ymmärtää ongelman pelkän nykyisen keskustelun perusteella?</li>
+<li><strong>Pitkäkestoinen muisti:</strong></li>
+</ul>
+<p>Agentti hakee vektoritietokannasta aiempia samankaltaisia tapauksia.</p>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Mitä aiemmista tapauksista voisi löytyä?</li>
+<li>Voiko asiakas käyttää eri sanoja, vaikka ongelma olisi sama?</li>
+<li>Miten vektoritietokanta auttaa tässä?</li>
+<li><strong>Tila ja muuttujat:</strong></li>
+</ul>
+<p>Tilanne on esimerkiksi <strong>avoin ongelma</strong>.</p>
+<p>Mahdollisia muuttujia ovat:</p>
+<ul>
+<li>asiakasnumero,</li>
+<li>ongelman tyyppi,</li>
+<li>edellisen tapauksen päivämäärä,</li>
+<li>edellinen ratkaisu,</li>
+<li>nykyisen tapauksen kiireellisyys,</li>
+<li>asiakkaan tyytyväisyystaso.</li>
+</ul>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Mikä tieto on kriittinen päätöksen kannalta?</li>
+<li>Mitä tapahtuu, jos agentti unohtaa edellisen ratkaisun?</li>
+<li>Miten agentti tietää, onko asia yhä kesken vai uusi tapaus?</li>
+<li><strong>Identiteetti ja arvot:</strong></li>
+</ul>
+<p>Agentin periaate voi olla esimerkiksi: <code>Lojaali asiakas saa etusijan, jos sama ongelma toistuu.</code></p>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Miten tämä arvo vaikuttaa agentin päätökseen?</li>
+<li>Antaako agentti asiakkaalle nopeamman käsittelyn?</li>
+<li>Siirtääkö agentti tapauksen suoraan ihmiselle?</li>
+<li>Miten vastaus muuttuisi, jos agentin tärkein arvo olisi kustannusten minimointi?</li>
+</ul>
+<h3>Johtopäätös</h3>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Agentin näennäinen älykkyys ei synny yhdestä asiasta. Se syntyy siitä, että agentti yhdistää nykyisen keskustelun, pitkäkestoisen muistin, prosessin tilan, tarvittavat muuttujat sekä pysyvän identiteetin ja arvot.</p>
+</blockquote>
+<p>Näytä yhteenveto:</p>
+<p>Konteksti-ikkuna + pitkäkestoinen muisti + tila ja muuttujat + identiteetti ja arvot = johdonmukainen agenttikäyttäytyminen</p>
+<h3>Odotettu oppimistulos</h3>
+<ul>
+<li>Opiskelijat ymmärtävät, miten eri muistamisen ja ohjauksen mekanismit toimivat yhdessä.</li>
+<li>Opiskelijat osaavat selittää, miksi agentti voi vaikuttaa älykkäältä ilman, että sillä olisi ihmisen kaltaista tietoisuutta.</li>
+<li>Opiskelijat ymmärtävät, että agentin toiminta riippuu sekä teknisestä muistista että suunnitelluista arvoista ja rajauksista.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Herättävät keskustelukysymykset</h2></div><div class="task-card-body">
+<ul>
+<li><strong>Entä jos konteksti-ikkuna näkee viimeiset 20 viestiä, mutta vektoritietokanta löytää aiemman tapauksen, joka viittaa aivan eri ongelmatyyppiin? Kumpaa agentin pitäisi painottaa?</strong></li>
+<li><strong>Entä jos agentin identiteetti sanoo “älä anna asiakkaan odottaa liian kauan”, mutta prosessin tila on “odottaa maksua”? Miten agentin pitäisi päättää?</strong></li>
+<li><strong>Voivatko kaksi agenttia, joilla on sama muisti mutta eri arvot ja identiteetti, tehdä erilaisia päätöksiä?</strong></li>
+<li><strong>Milloin agentin pitäisi pysähtyä ja pyytää ihmisen arviota?</strong></li>
+<li><strong>Mitä riskejä syntyy, jos agentin pitkäkestoinen muisti sisältää virheellistä tai vanhentunutta tietoa?</strong></li>
+</ul>
+</div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
+<p>Opettaja arvioi opiskelijoiden kykyä:</p>
+<ul>
+<li>selittää, mitä <strong>konteksti-ikkuna</strong> tarkoittaa ja miten sen koko vaikuttaa agenttiin,</li>
+<li>kuvata, miten <strong>vektoritietokanta</strong> auttaa löytämään merkitykseltään samankaltaista tietoa,</li>
+<li>tunnistaa prosessin <strong>tilat</strong>, <strong>muuttujat</strong> ja <strong>siirtymät</strong>,</li>
+<li>kirjoittaa agentille selkeä <strong>identiteetti</strong>, <strong>arvot</strong> ja rajaus,</li>
+<li>selittää, miten nämä osat yhdessä vaikuttavat agentin päätöksiin ja käyttäytymiseen.</li>
+</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 21</text>
+<text x="74" y="246" font-size="43" font-weight="800" fill="#1B2336">Agentin muisti ja konteksti</text>
+<text x="74" y="304" font-size="25" fill="#5A6478">Miten kone pysyy kartalla?</text>
+<g transform="translate(700,200)">
+<rect x="0" y="0" width="120" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3.5"/>
+<line x1="60" y1="0" x2="60" y2="-24" stroke="#008799" stroke-width="3.5" stroke-linecap="round"/><circle cx="60" cy="-31" r="8" fill="#008799"/>
+<circle cx="36" cy="40" r="11" fill="#008799"/><circle cx="84" cy="40" r="11" fill="#008799"/><rect x="34" y="66" width="52" height="9" rx="4.5" fill="#008799"/></g>
+<g transform="translate(742,326)" fill="none" stroke="#008799" stroke-width="3" stroke-linecap="round"><path d="M3 5 a9 3 0 0 0 30 0 a9 3 0 0 0 -30 0 V31 a9 3 0 0 0 30 0 V5 M3 18 a9 3 0 0 0 30 0"/></g>
+<text x="760" y="406" text-anchor="middle" font-size="14" font-weight="600" fill="#006B7A">muisti</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Botti unohtaa — agentti muistaa</text>
+<text x="74" y="150" font-size="18" fill="#5A6478">Muisti tekee agentista johdonmukaisen sen sijaan, että se toistaisi itseään.</text>
+<g transform="translate(74,184)">
+<rect x="0" y="0" width="390" height="244" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,30)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3 a3 3 0 0 1 3 -3 H26 a3 3 0 0 1 3 3 V25 a3 3 0 0 1 -3 3 H14 L7 33 V28 H8 a3 3 0 0 1 -3 -3 Z"/></g>
+<text x="74" y="48" font-size="23" font-weight="800" fill="#1B2336">Tavallinen botti</text>
+<circle cx="40" cy="100" r="6" fill="#C26B2E"/><text x="60" y="106" font-size="17" fill="#3A4253">Muisti loppuu, kun keskustelu</text><text x="60" y="128" font-size="17" fill="#3A4253">loppuu.</text>
+<circle cx="40" cy="166" r="6" fill="#C26B2E"/><text x="60" y="172" font-size="17" fill="#3A4253">Toistava ja epäjohdonmukainen.</text>
+<text x="28" y="222" font-size="15" fill="#A35A22" font-family="ui-monospace,monospace">aloittaa joka kerta tyhjästä</text></g>
+<g transform="translate(496,184)">
+<rect x="0" y="0" width="390" height="244" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<g transform="translate(28,28)"><rect x="0" y="4" width="30" height="26" rx="6" fill="none" stroke="#008799" stroke-width="2.4"/><line x1="15" y1="4" x2="15" y2="-3" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/><circle cx="15" cy="-6" r="3" fill="#008799"/><circle cx="10" cy="15" r="2.8" fill="#008799"/><circle cx="20" cy="15" r="2.8" fill="#008799"/><path d="M10 23 H20" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="74" y="48" font-size="23" font-weight="800" fill="#006B7A">Agentti</text>
+<circle cx="40" cy="100" r="6" fill="#008799"/><text x="60" y="106" font-size="17" fill="#1B2336">Muistaa, mitä tapahtui viime</text><text x="60" y="128" font-size="17" fill="#1B2336">viikolla.</text>
+<circle cx="40" cy="166" r="6" fill="#008799"/><text x="60" y="172" font-size="17" fill="#1B2336">Tietää, missä vaiheessa prosessi on.</text>
+<text x="28" y="222" font-size="15" fill="#006B7A" font-family="ui-monospace,monospace">näkee asiakkaan historian</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Muistin kolme tasoa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Yhdessä ne kertovat, mitä on nyt, mitä oli ennen ja missä vaiheessa ollaan.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="2" width="34" height="28" rx="5"/><path d="M0 11 H34 M8 21 H26"/></g>
+<text x="68" y="50" font-size="20" font-weight="800" fill="#1B2336">Konteksti-ikkuna</text>
+<text x="24" y="94" font-size="16" fill="#3A4253">Mitä agentti näkee</text>
+<text x="24" y="118" font-size="16" fill="#3A4253">juuri nyt.</text>
+<text x="24" y="170" font-size="15" font-weight="700" fill="#006B7A">viimeisimmät viestit</text>
+<text x="24" y="208" font-size="14" fill="#5A6478">esim. viimeiset 10 viestiä</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">aika: NYT</text></g>
+<g transform="translate(354,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round"><path d="M3 5 a9 3 0 0 0 28 0 a9 3 0 0 0 -28 0 V27 a9 3 0 0 0 28 0 V5 M3 16 a9 3 0 0 0 28 0"/></g>
+<text x="68" y="50" font-size="17" font-weight="800" fill="#1B2336">Pitkäkestoinen muisti</text>
+<text x="24" y="94" font-size="16" fill="#3A4253">Mitä on tapahtunut</text>
+<text x="24" y="118" font-size="16" fill="#3A4253">aiemmin.</text>
+<text x="24" y="170" font-size="15" font-weight="700" fill="#247A52">vektoritietokanta</text>
+<text x="24" y="208" font-size="14" fill="#5A6478">esim. "ostanut 5 kertaa"</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">aika: ENNEN</text></g>
+<g transform="translate(634,168)">
+<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><circle cx="27" cy="9" r="5"/><circle cx="27" cy="27" r="5"/><path d="M14 9 H22 M27 14 V22"/></g>
+<text x="68" y="50" font-size="22" font-weight="800" fill="#1B2336">Tila</text>
+<text x="24" y="94" font-size="16" fill="#3A4253">Missä vaiheessa</text>
+<text x="24" y="118" font-size="16" fill="#3A4253">prosessi on.</text>
+<text x="24" y="170" font-size="15" font-weight="700" fill="#9A7400">vaihe + muuttujat</text>
+<text x="24" y="208" font-size="14" fill="#5A6478">esim. "tilaus pakattavana"</text>
+<text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">aika: VAIHE</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Konteksti-ikkuna</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Se osa keskustelusta, jonka agentti näkee kerralla — kuin rajattu muistilaatikko.</text>
+<text x="74" y="184" font-size="18" font-weight="700" fill="#5A6478">Keskustelu kasvaa →</text>
+<g font-family="ui-monospace,monospace">
+<rect x="74" y="202" width="120" height="40" rx="8" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="134" y="227" text-anchor="middle" font-size="13" fill="#9AA6BD">viesti 1</text>
+<rect x="200" y="202" width="120" height="40" rx="8" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5" stroke-dasharray="4 4"/><text x="260" y="227" text-anchor="middle" font-size="13" fill="#C2CAD9">viesti 2</text>
+</g>
+<text x="338" y="227" font-size="20" fill="#C2CAD9">· · ·</text>
+<rect x="384" y="190" width="502" height="180" rx="16" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<text x="410" y="222" font-size="15" letter-spacing="2" fill="#006B7A" font-family="ui-monospace,monospace">KONTEKSTI-IKKUNA · näkyvissä</text>
+<g font-family="ui-monospace,monospace">
+<rect x="410" y="240" width="142" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.8"/><text x="481" y="265" text-anchor="middle" font-size="13" fill="#006B7A">viesti 49</text>
+<rect x="566" y="240" width="142" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.8"/><text x="637" y="265" text-anchor="middle" font-size="13" fill="#006B7A">viesti 50</text>
+<rect x="722" y="240" width="142" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.8"/><text x="793" y="265" text-anchor="middle" font-size="13" fill="#006B7A">viesti 51</text>
+</g>
+<text x="410" y="322" font-size="17" fill="#1B2336">Tulee 51. viesti → vanhin viesti poistuu näkyvistä.</text>
+<text x="410" y="348" font-size="16" fill="#5A6478">Rajaaminen on tarkoituksellinen valinta, ei vain puute.</text>
+<rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="442" font-size="17" fill="#3A4253">Kaikilla järjestelmillä on rajat prosessointikyvyssä, nopeudessa ja kustannuksissa.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ikkunan koko on kompromissi</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Mitä enemmän agentti näkee, sitä enemmän se ymmärtää — ja sitä kalliimpaa se on.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="390" height="150" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="28" y="46" font-size="23" font-weight="800" fill="#247A52">Suuri ikkuna</text>
+<circle cx="34" cy="86" r="6" fill="#2F9E69"/><text x="54" y="92" font-size="17" fill="#3A4253">Näkee enemmän historiaa</text>
+<circle cx="34" cy="120" r="6" fill="#C26B2E"/><text x="54" y="126" font-size="17" fill="#3A4253">Hitaampi ja kalliimpi</text></g>
+<g transform="translate(496,170)">
+<rect x="0" y="0" width="390" height="150" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
+<text x="28" y="46" font-size="23" font-weight="800" fill="#006B7A">Pieni ikkuna</text>
+<circle cx="34" cy="86" r="6" fill="#2F9E69"/><text x="54" y="92" font-size="17" fill="#1B2336">Nopea ja edullinen</text>
+<circle cx="34" cy="120" r="6" fill="#C26B2E"/><text x="54" y="126" font-size="17" fill="#1B2336">Vanha tieto putoaa pois</text></g>
+<text x="74" y="368" font-size="20" font-weight="700" fill="#1B2336">Valitse tehtävän mukaan</text>
+<g transform="translate(74,386)">
+<rect x="0" y="0" width="390" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="34" font-size="18" font-weight="700" fill="#1B2336">Neuvonta-agentti</text>
+<text x="24" y="62" font-size="16" fill="#5A6478">pitkät ketjut → 100–200 viestiä</text></g>
+<g transform="translate(496,386)">
+<rect x="0" y="0" width="390" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="34" font-size="18" font-weight="700" fill="#1B2336">Transaktioagentti</text>
+<text x="24" y="62" font-size="16" fill="#5A6478">nopeat kysymykset → 20–30 viestiä</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Pitkäkestoinen muisti</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kuukausien yhteistyön jälkeen agentti tarvitsee pysyvämmän muistin.</text>
+<g transform="translate(420,200)">
+<rect x="0" y="0" width="120" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3"/>
+<line x1="60" y1="0" x2="60" y2="-22" stroke="#008799" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="-28" r="7" fill="#008799"/>
+<circle cx="36" cy="40" r="10" fill="#008799"/><circle cx="84" cy="40" r="10" fill="#008799"/><rect x="34" y="66" width="52" height="8" rx="4" fill="#008799"/></g>
+<text x="480" y="334" text-anchor="middle" font-size="14" font-weight="600" fill="#006B7A">agentti</text>
+<g transform="translate(120,220)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round"><path d="M3 6 a13 4 0 0 0 40 0 a13 4 0 0 0 -40 0 V52 a13 4 0 0 0 40 0 V6 M3 21 a13 4 0 0 0 40 0 M3 37 a13 4 0 0 0 40 0"/></g>
+<text x="143" y="312" text-anchor="middle" font-size="14" font-weight="600" fill="#247A52">vektoritietokanta</text>
+<path d="M180 250 H410" stroke="#2F9E69" stroke-width="2.5"/><path d="M418 250 L406 244 L406 256 Z" fill="#2F9E69"/>
+<text x="295" y="240" text-anchor="middle" font-size="13" fill="#247A52" font-family="ui-monospace,monospace">hae historia</text>
+<rect x="556" y="200" width="330" height="180" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="580" y="234" font-size="14" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TIIVISTELMÄ ASIAKKAASTA</text>
+<circle cx="588" cy="266" r="5" fill="#008799"/><text x="606" y="272" font-size="16" fill="#3A4253">On ostanut meiltä viisi kertaa.</text>
+<circle cx="588" cy="300" r="5" fill="#008799"/><text x="606" y="306" font-size="16" fill="#3A4253">Aiemmin ongelmia toimituksissa.</text>
+<circle cx="588" cy="334" r="5" fill="#008799"/><text x="606" y="340" font-size="16" fill="#3A4253">Viime osto samaa sarjaa.</text>
+<rect x="74" y="408" width="812" height="60" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
+<text x="100" y="444" font-size="17" fill="#006B7A">Usein tiivistelmä riittää — agentti ei tarvitse kaikkia yksityiskohtia.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g7)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Vektoritietokanta etsii merkitystä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Se löytää saman asian, vaikka sanoisit sen eri sanoin — ei vain täsmällisiä osumia.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="390" height="150" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="28" y="46" font-size="22" font-weight="800" fill="#1B2336">Tavallinen tietokanta</text>
+<text x="28" y="86" font-size="17" fill="#3A4253">Hakee täsmällisillä sanoilla.</text>
+<text x="28" y="116" font-size="16" fill="#A35A22" font-family="ui-monospace,monospace">"muistikortti" = "muistikortti"</text></g>
+<g transform="translate(496,168)">
+<rect x="0" y="0" width="390" height="150" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="28" y="46" font-size="22" font-weight="800" fill="#247A52">Vektoritietokanta</text>
+<text x="28" y="86" font-size="17" fill="#3A4253">Hakee merkityksen perusteella.</text>
+<text x="28" y="116" font-size="16" fill="#247A52" font-family="ui-monospace,monospace">"muistilaite" ≈ "muistiin liittyvä"</text></g>
+<rect x="74" y="346" width="812" height="122" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(102,374)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="14" r="8"/><rect x="6" y="30" width="46" height="34" rx="4"/><path d="M16 30 V24 H40 V30 M16 44 H42 M16 54 H34"/></g>
+<text x="172" y="386" font-size="20" font-weight="700" fill="#1B2336">Kuin kirjaston hakujärjestelmä</text>
+<text x="172" y="416" font-size="17" fill="#3A4253">Haet "koiran koulutus" → löytää myös "Pentujen kasvatus" ja</text>
+<text x="172" y="442" font-size="17" fill="#3A4253">"Lemmikkien kouluttaminen". Sama aihe eri sanoin.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g8)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tila: prosessin vaihe</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Tila kertoo, missä vaiheessa prosessi on — esimerkkinä tilauksen käsittely.</text>
+<g font-family="ui-monospace,monospace">
+<rect x="74" y="170" width="150" height="52" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2"/><text x="149" y="202" text-anchor="middle" font-size="14" fill="#006B7A">tilaus luotu</text>
+<rect x="254" y="170" width="150" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="329" y="202" text-anchor="middle" font-size="14" fill="#5A6478">vahvistettu</text>
+<rect x="434" y="170" width="150" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="509" y="202" text-anchor="middle" font-size="14" fill="#5A6478">pakattavana</text>
+<rect x="614" y="170" width="120" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="674" y="202" text-anchor="middle" font-size="14" fill="#5A6478">lähetetty</text>
+<rect x="764" y="170" width="122" height="52" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/><text x="825" y="202" text-anchor="middle" font-size="14" fill="#247A52">toimitettu</text>
+</g>
+<path d="M224 196 H252" stroke="#C2CAD9" stroke-width="2"/><path d="M254 196 L246 192 L246 200 Z" fill="#C2CAD9"/>
+<path d="M404 196 H432" stroke="#C2CAD9" stroke-width="2"/><path d="M434 196 L426 192 L426 200 Z" fill="#C2CAD9"/>
+<path d="M584 196 H612" stroke="#C2CAD9" stroke-width="2"/><path d="M614 196 L606 192 L606 200 Z" fill="#C2CAD9"/>
+<path d="M734 196 H762" stroke="#C2CAD9" stroke-width="2"/><path d="M764 196 L756 192 L756 200 Z" fill="#C2CAD9"/>
+<text x="74" y="284" font-size="20" font-weight="700" fill="#1B2336">Tila sisältää myös muuttujia</text>
+<g font-family="ui-monospace,monospace">
+<rect x="74" y="300" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="322" r="6" fill="#008799"/><text x="118" y="328" font-size="15" fill="#3A4253">Yritykset: 2/3</text>
+<rect x="494" y="300" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="322" r="6" fill="#008799"/><text x="538" y="328" font-size="15" fill="#3A4253">Viimeinen hinta: 45 €</text>
+<rect x="74" y="352" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="374" r="6" fill="#2F9E69"/><text x="118" y="380" font-size="15" fill="#3A4253">Ihmisen hyväksyntä: saatu</text>
+<rect x="494" y="352" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="374" r="6" fill="#C79100"/><text x="538" y="380" font-size="15" fill="#3A4253">Virheet: 0</text>
+</g>
+<rect x="74" y="412" width="812" height="56" rx="12" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="100" y="446" font-size="17" fill="#A35A22">Ilman tilaa agentti voisi lähettää vahvistuksen tai veloittaa kahdesti.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g9)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme tekijää yhdessä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Asiakaspalveluagentti yhdistää nykyhetken, historian ja prosessin vaiheen.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="260" height="180" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="2" width="30" height="24" rx="5"/><path d="M0 10 H30 M6 18 H24"/></g>
+<text x="64" y="42" font-size="19" font-weight="800" fill="#006B7A">Konteksti</text>
+<text x="24" y="86" font-size="16" fill="#3A4253">Viimeiset 10 viestiä:</text>
+<text x="24" y="116" font-size="16" fill="#1B2336">"Kokeili ratkaisua A.</text>
+<text x="24" y="140" font-size="16" fill="#1B2336">Se ei auttanut."</text></g>
+<g transform="translate(350,164)">
+<rect x="0" y="0" width="260" height="180" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,22)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round"><path d="M3 5 a9 3 0 0 0 26 0 a9 3 0 0 0 -26 0 V25 a9 3 0 0 0 26 0 V5 M3 15 a9 3 0 0 0 26 0"/></g>
+<text x="64" y="42" font-size="17" font-weight="800" fill="#247A52">Pitkäkestoinen muisti</text>
+<text x="24" y="86" font-size="16" fill="#3A4253">Asiakas 3 vuotta.</text>
+<text x="24" y="116" font-size="16" fill="#1B2336">Edellisellä kerralla</text>
+<text x="24" y="140" font-size="16" fill="#1B2336">ratkaisu B auttoi.</text></g>
+<g transform="translate(626,164)">
+<rect x="0" y="0" width="260" height="180" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,22)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="26" cy="8" r="5"/><circle cx="26" cy="26" r="5"/><path d="M13 8 H21 M26 13 V21"/></g>
+<text x="64" y="42" font-size="19" font-weight="800" fill="#9A7400">Tila</text>
+<text x="24" y="86" font-size="16" fill="#3A4253">Ratkaisuyritys 2/3.</text>
+<text x="24" y="116" font-size="16" fill="#1B2336">Eskalointia ei vielä</text>
+<text x="24" y="140" font-size="16" fill="#1B2336">pyydetty.</text></g>
+<rect x="74" y="372" width="812" height="96" rx="16" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
+<text x="100" y="408" font-size="20" font-weight="800" fill="#006B7A">Agentin päätös</text>
+<text x="100" y="442" font-size="17" fill="#1B2336">"Kokeillaan ratkaisua B, koska se auttoi aiemmin. Jos ei auta, siirrän ihmiselle."</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g10)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Soul — pysyvä identiteetti</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Muistin päälle tarvitaan jotain pysyvämpää: agentin perusluonne ja arvot.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#E5F6F7"/><g transform="translate(34,34)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 24 a9 8 0 0 1 18 0"/></g>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Kuka minä pohjimmiltani olen?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Identiteetti, joka ei muutu tehtävästä toiseen. "Olen kärsivällinen neuvoja."</text></g>
+<g transform="translate(74,274)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#EAF7F0"/><g transform="translate(35,33)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linejoin="round"><path d="M12 2 L22 6 V13 c0 7 -5 10 -10 12 c-5 -2 -10 -5 -10 -12 V6 Z"/></g>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Mitä arvoja minulla on — ja mitä en koskaan tee?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Ehdottomat rajat. "En koskaan palauta salasanaa enkä jaa tietoja toiselle."</text></g>
+<g transform="translate(74,380)">
+<rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="46" cy="46" r="24" fill="#FFF7E2"/><g transform="translate(34,34)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 a8 8 0 1 1 3 6"/><path d="M5 9 V16 H12"/></g>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Miten päätän epäselvissä tilanteissa?</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Perusta päätöksenteolle. "Jos olen epävarma, suosin asiakkaan turvallisuutta."</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Muistin turvallisuus ja hallinta</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kun agentti muistaa paljon, sinun täytyy rajata, mitä se saa muistaa.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="390" height="218" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,28)"><circle cx="14" cy="14" r="16" fill="#EAF7F0"/><path d="M7 14 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="76" y="50" font-size="22" font-weight="800" fill="#247A52">Voi muistaa</text>
+<circle cx="34" cy="100" r="5" fill="#2F9E69"/><text x="52" y="106" font-size="17" fill="#3A4253">Nimi ja ostohistoria</text>
+<circle cx="34" cy="138" r="5" fill="#2F9E69"/><text x="52" y="144" font-size="17" fill="#3A4253">Kortin 4 viim. numeroa</text>
+<text x="28" y="190" font-size="15" fill="#247A52">jos suojattu ja lainmukaista</text></g>
+<g transform="translate(496,168)">
+<rect x="0" y="0" width="390" height="218" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,28)"><circle cx="14" cy="14" r="16" fill="#FBE6D8"/><path d="M8 8 l12 12 M20 8 l-12 12" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/></g>
+<text x="76" y="50" font-size="22" font-weight="800" fill="#A35A22">Ei saa muistaa</text>
+<circle cx="34" cy="100" r="5" fill="#C26B2E"/><text x="52" y="106" font-size="17" fill="#3A4253">Asiakkaan salasana</text>
+<circle cx="34" cy="138" r="5" fill="#C26B2E"/><text x="52" y="144" font-size="17" fill="#3A4253">Arkaluontoiset terveystiedot</text>
+<text x="28" y="190" font-size="15" fill="#A35A22">ilman erityistä perustetta</text></g>
+<rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(98,420)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 H21 M5 6 V22 a2 2 0 0 0 2 2 H17 a2 2 0 0 0 2 -2 V6 M8 6 V3 H16 V6 M9 11 V19 M13 11 V19"/></g>
+<text x="138" y="442" font-size="17" fill="#3A4253">Säännöllinen puhdistus: vanhentunut tieto pois — tilin poistossa myös historia.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kohti omaa projektia</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Nämä päätökset muodostavat Agentti: Muisti -pohjapiirroksen.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="390" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="46" font-size="20" font-weight="800" fill="#006B7A">Konteksti</text>
+<text x="28" y="82" font-size="17" fill="#3A4253">Mitä tietoa agenttisi tarvitsee</text><text x="28" y="106" font-size="17" fill="#3A4253">yksittäisen keskustelun aikana?</text></g>
+<g transform="translate(496,170)">
+<rect x="0" y="0" width="390" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="46" font-size="20" font-weight="800" fill="#247A52">Pitkäkestoinen muisti</text>
+<text x="28" y="82" font-size="17" fill="#3A4253">Mitä sen täytyy muistaa</text><text x="28" y="106" font-size="17" fill="#3A4253">keskustelujen välillä?</text></g>
+<g transform="translate(74,306)">
+<rect x="0" y="0" width="390" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="46" font-size="20" font-weight="800" fill="#9A7400">Tila</text>
+<text x="28" y="82" font-size="17" fill="#3A4253">Mitä vaiheita ja muuttujia</text><text x="28" y="106" font-size="17" fill="#3A4253">prosessillasi on?</text></g>
+<g transform="translate(496,306)">
+<rect x="0" y="0" width="390" height="120" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
+<text x="28" y="46" font-size="20" font-weight="800" fill="#006B7A">Soul</text>
+<text x="28" y="82" font-size="17" fill="#1B2336">Mikä on agenttisi identiteetti</text><text x="28" y="106" font-size="17" fill="#1B2336">ja ehdottomat rajat?</text></g>
+<text x="74" y="466" font-size="18" fill="#5A6478">Vastaa näihin neljään — niistä syntyy agentin johdonmukainen muistilogiikka.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l21g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#008799"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Muisti tekee agentista johdonmukaisen, turvallisen ja luotettavan.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="36" cy="40" r="14" fill="#E5F6F7"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#006B7A">1</text>
+<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Konteksti-ikkuna</text>
+<text x="64" y="62" font-size="15" fill="#5A6478">20–200 viestiä: mitä on nyt.</text></g>
+<g transform="translate(494,168)">
+<rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="36" cy="40" r="14" fill="#EAF7F0"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#247A52">2</text>
+<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Pitkäkestoinen muisti</text>
+<text x="64" y="62" font-size="15" fill="#5A6478">Vektoritietokanta: mitä oli ennen.</text></g>
+<g transform="translate(74,256)">
+<rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="36" cy="40" r="14" fill="#FFF7E2"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#9A7400">3</text>
+<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Tila</text>
+<text x="64" y="62" font-size="15" fill="#5A6478">Vaihe + muuttujat: missä mennään.</text></g>
+<g transform="translate(494,256)">
+<rect x="0" y="0" width="392" height="80" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="1.8"/>
+<circle cx="36" cy="40" r="14" fill="#E5F6F7"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#006B7A">4</text>
+<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Soul</text>
+<text x="64" y="62" font-size="15" fill="#5A6478">Pysyvä identiteetti ja arvot.</text></g>
+<rect x="74" y="368" width="812" height="100" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,400)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="406" font-size="21" font-weight="800" fill="#247A52">Konteksti, pitkä muisti, tila ja soul yhdessä</text>
+<text x="150" y="438" font-size="18" fill="#3A4253">tekevät n8n-agentistasi johdonmukaisemman, turvallisemman ja luotettavamman.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-20/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-22/">Seuraava →</a></div></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-21", "num": 21, "title": "Agentin muisti ja konteksti — miten kone pysyy kartalla", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

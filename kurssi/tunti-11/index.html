@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muita tekoälymalleja — kuin ChatGPT ja Claude — Verkkokurssi — AI · Perusteet</title>
+<meta name="description" content="Muita tekoälymalleja — kuin ChatGPT ja Claude. Verkkokurssi, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-11/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 11/27</span></div><div class="lesson-title">Muita tekoälymalleja — kuin ChatGPT ja Claude</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-11/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-11/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Muita tekoälymalleja — muutakin kuin ChatGPT ja Claude. Paikalliset mallit lisäävät tietosuojaa</h1>
+<h2>Johdanto: tekoälymaailma on isompi kuin miltä näyttää</h2>
+<p>Olet ehkä kokeillut ChatGPT:tä tai Claudea. Ne ovat tunnettuja ja hyviä työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Maailmassa on monia muitakin <strong>tekoälymalleja</strong>, joilla on omat vahvuutensa ja heikkoutensa. Jokaisen taustalla on eri yritys, erilainen hinnoittelu ja omat tietosuojakäytäntönsä.</p>
+<p>Miksi tämä kannattaa tietää? Siksi, että eri tilanteet vaativat erilaisia ratkaisuja. Joskus paras valinta on halvin malli, joskus nopein ja joskus se, jossa tieto pysyy mahdollisimman turvallisesti. Ammattilaisena sinun kannattaa tuntea vaihtoehdot, jotta osaat valita oikean tekoälytyökalun oikeaan tehtävään.</p>
+<p>Tässä materiaalissa opit, mitä muita malleja on olemassa ja miten niitä voi vertailla keskenään.</p>
+<h2>Osa 1: Googlen Gemini — Googlen tekoälymalli</h2>
+<p>Google on kehittänyt oman tekoälymallinsa, jota kutsutaan <strong>Geminiksi</strong>. Se kilpailee ChatGPT:n ja Clauden kanssa. Monelle käyttäjälle Gemini on hyvä vaihtoehto, koska sillä on ominaisuuksia, joissa se voi olla erityisen hyödyllinen.</p>
+<h3>Geministä on erilaisia versioita</h3>
+<p>Google tekee Geministä eri versioita samaan tapaan kuin autotehtaat tekevät eri automalleja eri tarpeisiin.</p>
+<p>Geministä on saatavilla esimerkiksi <strong>Gemini Flash</strong>, joka on nopea versio ja sopii hyvin kevyisiin ja nopeisiin tehtäviin. Lisäksi on <strong>Gemini Pro</strong>, joka pyrkii tasapainottamaan nopeuden ja kyvykkyyden.</p>
+<p>Kumpi on parempi? Se riippuu siitä, mitä haluat tehdä. Jos tarvitset nopeutta, valinta voi olla eri kuin silloin, kun tarvitset mahdollisimman tarkkaa ja perusteellista vastausta.</p>
+<h3>Miten Geminiä voi käyttää?</h3>
+<p>Google tarjoaa <strong>Google AI Studion</strong>, joka on verkkoselaimessa toimiva työkalu. Avaat selaimen, kirjaudut Google-tililläsi ja voit alkaa kirjoittaa tekoälylle. Palvelussa voi yleensä kokeilla tekoälyä maksutta tiettyihin käyttörajoihin asti. Laajempi käyttö voi olla maksullista.</p>
+<h3>Miten Gemini eroaa ChatGPT:stä?</h3>
+<p><strong>Vahvuudet:</strong></p>
+<p>Gemini osaa käsitellä kuvia ja tekstiä. Jos otat kuvan tai näyttökuvan, voit näyttää sen Geminille ja kysyä esimerkiksi: ”Mitä tässä kuvassa näkyy?” Myös Claude ja ChatGPT osaavat tulkita kuvia, mutta Gemini on vahva erityisesti Googlen ekosysteemissä. Lisäksi Gemini on kytketty Googlen palveluihin. Jos käytät esimerkiksi Gmailia tai Google Drivea, Gemini voi olla saatavilla osana näitä palveluita.</p>
+<p>Gemini voi olla myös hinnaltaan kilpailukykyinen vaihtoehto, erityisesti silloin, kun käyttöä on paljon tai kun työskennellään Googlen omassa ympäristössä.</p>
+<p><strong>Heikkoudet:</strong></p>
+<p>Googlella voi olla tiukat säännöt siitä, millaisiin pyyntöihin Gemini vastaa. Joskus Gemini saattaa vastata ”en voi auttaa tässä” tilanteissa, joissa jokin toinen työkalu antaa vastauksen. Lisäksi eri mallit suoriutuvat ohjelmoinnista eri tavoin, joten koodaustehtävissä kannattaa vertailla tuloksia käytännössä.</p>
+<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Mihin sinä käyttäisit tekoälyä? Jos sinulla olisi kuvia, joista haluat tietoa, olisiko Gemini hyvä vaihtoehto? Entä jos tarvitset apua ohjelmointiin, kannattaisiko sinun kokeilla myös muita työkaluja?</p>
+</blockquote>
+<h2>Osa 2: Kiinalaiset mallit — DeepSeek</h2>
+<p>Myös Kiinassa on kehitetty omia tekoälymalleja. Yksi tunnetuimmista on <strong>DeepSeek</strong>. Siihen kannattaa tutustua, mutta sen käyttöön liittyy tärkeitä asioita, jotka ammattilaisen pitää ymmärtää.</p>
+<h3>DeepSeek: edullinen malli Kiinasta</h3>
+<p>DeepSeek on kiinalainen yritys, joka kehittää tekoälymalleja. Palvelu on usein edullinen tai rajoitetusti maksuton käyttää. Joissakin testeissä DeepSeek on pärjännyt hyvin verrattuna tunnettuihin tekoälypalveluihin.</p>
+<p><strong>Hyvät puolet:</strong></p>
+<p>DeepSeek voi olla erittäin edullinen vaihtoehto. Se voi olla myös nopea ja vahva erityisesti ohjelmointiin liittyvissä tehtävissä. Jos budjetti on tiukka ja tekoälyä käytetään paljon, DeepSeek voi vaikuttaa houkuttelevalta vaihtoehdolta.</p>
+<p><strong>Tärkeä ongelma: tietosuoja</strong></p>
+<p>DeepSeekin käytössä on kuitenkin merkittävä tietosuojakysymys. DeepSeek on kiinalainen palvelu, ja kun lähetät tekstiä palveluun, tieto voi siirtyä Kiinan palvelimille tai kiinalaisen lainsäädännön piiriin. Tämä voi olla ongelma erityisesti silloin, kun käsitellään henkilötietoja, asiakastietoja, potilastietoja, oppilastietoja tai muuta luottamuksellista aineistoa.</p>
+<p>Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän. Tietosuojalainsäädäntöä (GDPR) käsitellään tarkemmin osassa 5.</p>
+<p>Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:</p>
+<ul>
+<li><strong>Opettaja:</strong> Jos käytät DeepSeekiä oppilaiden esseiden analysointiin, se voi rikkoa tietosuojasääntöjä, jos tekstit sisältävät henkilötietoja.</li>
+<li><strong>Sairaala:</strong> Potilastietojen käsittely DeepSeekillä ei ole hyväksyttävää ilman selkeää laillista perustetta ja organisaation hyväksyntää.</li>
+<li><strong>Yritys:</strong> Asiakastietojen tai liikesalaisuuksien syöttäminen palveluun voi olla kiellettyä tai riskialtista.</li>
+</ul>
+<p><strong>Johtopäätös:</strong> DeepSeek voi olla teknisesti hyvä ja edullinen, mutta tietosuoja rajoittaa sen käyttöä monissa ammatillisissa tilanteissa Suomessa ja EU:ssa.</p>
+<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Kuvittele, että olet opettaja ja haluat käyttää tekoälyä oppilaiden esseiden arviointiin. DeepSeek olisi edullinen vaihtoehto, mutta oppilaiden nimet ja esseiden sisällöt voisivat päätyä EU:n ulkopuolelle. Olisiko käyttö hyväksyttävää? Miksi tai miksi ei?</p>
+</blockquote>
+<h2>Osa 3: Avoimet mallit — omalla tietokoneella ajettavat mallit</h2>
+<p>Toinen vaihtoehto on käyttää <strong>avoimia malleja</strong>. Tämä ei tarkoita pelkästään sitä, että malli olisi ilmainen. Se tarkoittaa yleensä sitä, että mallin voi ladata ja ajaa itse omalla tietokoneella tai omassa palvelinympäristössä.</p>
+<h3>Meta Llama — tunnettu avoin malli</h3>
+<p>Meta, joka tunnettiin aiemmin Facebookina, on julkaissut <strong>Llama</strong>-malliperheen. Llama-malleja voi ladata ja ajaa omassa ympäristössä lisenssiehtojen mukaisesti. Ne ovat monissa käyttötapauksissa kilpailukykyisiä kaupallisten pilvipalveluiden kanssa.</p>
+<p><strong>Hyvät puolet:</strong></p>
+<p>Kun ajat Llama-mallia omalla tietokoneella, tiedot pysyvät omassa laitteessasi tai omassa ympäristössäsi. Mitään ei tarvitse lähettää ulkopuoliseen pilvipalveluun, jos toteutus on tehty paikallisesti. Tämä parantaa yksityisyyttä. Lisäksi mallin käyttö voi olla edullista sen jälkeen, kun laitteisto ja asennus ovat kunnossa.</p>
+<p><strong>Huonot puolet:</strong></p>
+<p>Omalla tietokoneella ajettava malli vaatii riittävän tehokkaan laitteen. Jos käytössä on vanha kannettava tietokone, malli voi toimia hitaasti tai se ei mahdu laitteen muistiin. Vastaukset voivat myös olla hitaampia kuin pilvipalveluissa, koska pilvipalveluilla on käytössään suuria laskentaresursseja.</p>
+<h3>Mistral — eurooppalainen vaihtoehto</h3>
+<p>Ranskalainen <strong>Mistral</strong> kehittää tekoälymalleja, joista osa soveltuu paikalliseen käyttöön. Mistral voi olla kiinnostava vaihtoehto erityisesti silloin, kun halutaan tarkastella eurooppalaisia tekoälyratkaisuja tai ajaa malleja omassa ympäristössä.</p>
+<h3>Millä ohjelmilla malleja voi ladata ja ajaa omalla tietokoneella?</h3>
+<p>Paikallisten mallien käyttöön on ohjelmia, jotka tekevät asentamisesta ja käyttämisestä helpompaa.</p>
+<p><strong>Ollama</strong> on ohjelma, jonka avulla malleja voi asentaa ja käyttää melko suoraviivaisesti. Asennat ohjelman, valitset haluamasi mallin, esimerkiksi Llaman, ja voit käyttää mallia omalla koneellasi.</p>
+<p><strong>LM Studio</strong> on ohjelma, jossa on ChatGPT:tä muistuttava keskusteluikkuna. Se voi olla helpompi vaihtoehto, jos et ole tottunut komentorivin käyttämiseen.</p>
+<h3>Miksi joku valitsisi paikallisen mallin?</h3>
+<p>Paikallisen mallin valintaan on kolme pääsyytä:</p>
+<ul>
+<li><strong>Yksityisyys:</strong> Tiedot pysyvät omalla laitteella tai omassa ympäristössä.</li>
+<li><strong>Kustannukset:</strong> Kun malli on asennettu ja laitteisto on käytössä, jokaisesta kysymyksestä ei tarvitse maksaa erikseen.</li>
+<li><strong>Kontrolli:</strong> Käyttäjä voi hallita paremmin, missä malli toimii ja miten sitä käytetään.</li>
+</ul>
+<p>Haittapuolia ovat hitaampi nopeus ja laitteistovaatimukset. Tarvitset riittävän tehokkaan tietokoneen, jotta malli toimii sujuvasti. Joillekin käyttäjille yksityisyys ja hallittavuus ovat kuitenkin niin tärkeitä, että paikallinen malli on paras vaihtoehto.</p>
+<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Mikä on sinulle tärkeintä: nopeus, hinta, yksityisyys vai helppokäyttöisyys? Eri mallit sopivat eri tarpeisiin.</p>
+</blockquote>
+<h2>Osa 4: Mallien vertailu — miten valita?</h2>
+<p>Nyt tiedät, että malleja on monia. Miten sopiva malli sitten valitaan?</p>
+<p>Valinnassa ei kannata kysyä vain, mikä malli on paras. Parempi kysymys on: <strong>mikä malli sopii tähän tilanteeseen?</strong> Valintaan vaikuttavat ainakin seuraavat asiat:</p>
+<ol>
+<li><strong>Mitä haluat tehdä?</strong> Tarvitsetko apua koodin kirjoittamiseen, tekstin parantamiseen, kuvan analysointiin vai johonkin muuhun tehtävään? Eri mallit ovat vahvoja eri asioissa.</li>
+<li><strong>Kuinka paljon rahaa on käytettävissä?</strong> Osa työkaluista on maksuttomia, osa maksullisia ja osa ilmaisia vain pienessä käytössä.</li>
+<li><strong>Miten tärkeää tietosuoja on?</strong> Pitääkö tietojen pysyä omalla tietokoneella, Euroopan alueella tai organisaation hyväksymässä palvelussa?</li>
+<li><strong>Kuinka tärkeää nopeus ja helppous ovat?</strong> Tarvitsetko vastauksen nopeasti vai voitko käyttää enemmän aikaa asennukseen ja säätämiseen?</li>
+</ol>
+<h2>Osa 5: Tietosuoja — minne tiedot menevät?</h2>
+<p>Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetissä, kirjoittamasi tekstit lähetetään palvelun palvelimille. Palvelimet voivat sijaita eri puolilla maailmaa, ja niihin sovelletaan erilaisia lakeja ja käyttöehtoja.</p>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama viesti, kolme määränpäätä — palvelimen sijainti ratkaisee säännöt</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
+  <div class="l11-wrap">
+    <div class="l11-me">SINÄ<span class="l11-doc">”oppilaan essee.txt”</span></div>
+    <i class="l11-pkt l11-k1"></i><i class="l11-pkt l11-k2"></i><i class="l11-pkt l11-k3"></i>
+    <div class="l11-dst l11-d1"><b>Pilvipalvelin · USA</b><span class="l11-sub">käyttöehdot ja asetukset ratkaisevat</span><span class="l11-vd l11-v1">tarkista ennen käyttöä</span></div>
+    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">⚠ GDPR-riski</span></div>
+    <div class="l11-dst l11-d3"><b>Oma kone · paikallinen malli</b><span class="l11-sub">data ei poistu laitteeltasi</span><span class="l11-vd l11-v3">✓ pysyy hallussasi</span></div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Kun painat enteriä, tekstisi matkustaa palveluntarjoajan palvelimelle — ja sen sijainti määrää, mitä lakeja ja ehtoja dataasi sovelletaan. Paikallisesti ajettava malli on poikkeus: viesti ei koskaan poistu omalta koneeltasi.</figcaption></figure>
+<style>
+.l11-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
+.l11-me{position:absolute;left:0;top:96px;width:150px;text-align:center;font-size:12.5px;letter-spacing:.12em;color:#EAEEF8;background:#11182A;border:2px solid #44517A;border-radius:12px;padding:11px 10px}
+.l11-doc{display:block;margin-top:7px;font-size:11px;letter-spacing:0;color:#06212A;background:#46c7cf;border-radius:8px;padding:4px 6px;font-weight:500}
+.l11-pkt{position:absolute;left:152px;top:140px;width:10px;height:10px;border-radius:3px;background:#46c7cf;opacity:0}
+.l11-k1{animation:l11k1 13.5s infinite}
+.l11-k2{animation:l11k2 13.5s infinite}
+.l11-k3{animation:l11k3 13.5s infinite}
+@keyframes l11k1{0%,2%{opacity:0;transform:translate(0,0)}4%{opacity:1}16%{opacity:1;transform:translate(212px,-100px)}19%,100%{opacity:0;transform:translate(212px,-100px)}}
+@keyframes l11k2{0%,35%{opacity:0;transform:translate(0,0)}37%{opacity:1}49%{opacity:1;transform:translate(212px,-12px)}52%,100%{opacity:0;transform:translate(212px,-12px)}}
+@keyframes l11k3{0%,68%{opacity:0;transform:translate(0,0)}70%{opacity:1}75%{opacity:1;transform:translate(106px,38px)}81%{opacity:1;transform:translate(212px,76px)}96%{opacity:1;transform:translate(212px,76px)}100%{opacity:0}}
+.l11-dst{position:absolute;left:368px;width:192px;font-size:11.5px;color:#EAEEF8;background:#141B2D;border:1.5px solid #2B3552;border-radius:12px;padding:9px 12px}
+.l11-dst b{font-size:12px;color:#FFFFFF}
+.l11-d1{top:0;animation:l11d1 13.5s infinite}
+.l11-d2{top:88px;animation:l11d2 13.5s infinite}
+.l11-d3{top:176px;animation:l11d3 13.5s infinite}
+@keyframes l11d1{0%,12%,26%,100%{border-color:#2B3552;box-shadow:none}15%,22%{border-color:oklch(0.72 0.15 305);box-shadow:0 0 14px oklch(0.66 0.15 305/.45)}}
+@keyframes l11d2{0%,45%,60%,100%{border-color:#2B3552;box-shadow:none}48%,56%{border-color:#F0A38C;box-shadow:0 0 14px rgba(240,163,140,.4)}}
+@keyframes l11d3{0%,78%,97%,100%{border-color:#2B3552;box-shadow:none}82%,94%{border-color:#7FD0A8;box-shadow:0 0 14px rgba(127,208,168,.4)}}
+.l11-sub{display:block;margin-top:3px;font-size:10.5px;line-height:1.4;color:#B9C2DA}
+.l11-vd{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:1px 8px;opacity:0}
+.l11-v1{color:#1d2433;background:#c9b7f1;animation:l11v1 13.5s infinite}
+.l11-v2{color:#3A1408;background:#F0A38C;animation:l11v2 13.5s infinite}
+.l11-v3{color:#06241a;background:#7FD0A8;animation:l11v3 13.5s infinite}
+@keyframes l11v1{0%,15%{opacity:0}18%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l11v2{0%,48%{opacity:0}51%,63%{opacity:1}67%,100%{opacity:0}}
+@keyframes l11v3{0%,81%{opacity:0}84%,97%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l11-k1,.l11-k2,.l11-k3,.l11-d1,.l11-d2,.l11-d3{animation:none}
+.l11-k1,.l11-k2,.l11-k3{opacity:0}
+.l11-v1,.l11-v2,.l11-v3{animation:none;opacity:1}}
+</style>
+
+<h3>Missä palvelimet sijaitsevat?</h3>
+<table>
+<thead>
+<tr>
+<th>Malli</th>
+<th>Yritys</th>
+<th>Palvelimet</th>
+<th>Mitä pitää tietää?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>OpenAI</td>
+<td>Useita sijainteja, usein myös USA</td>
+<td>Tarkista organisaation ohjeet ja palvelun tietosuoja-asetukset ennen luottamuksellisen tiedon syöttämistä.</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Anthropic</td>
+<td>Useita sijainteja, usein myös USA</td>
+<td>Tarkista käyttöehdot, tietosuoja-asetukset ja organisaation ohjeet ennen luottamuksellisen tiedon käsittelyä.</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>Google</td>
+<td>Useita sijainteja, myös Eurooppa mahdollinen</td>
+<td>Google tarjoaa yritys- ja pilvipalveluissa alueellisia vaihtoehtoja. Tarkista asetukset ennen käyttöä.</td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>DeepSeek</td>
+<td>Kiina tai kiinalaisen toimijan hallinnoima ympäristö</td>
+<td>Henkilötietojen tai luottamuksellisten tietojen käsittely voi olla ongelmallista EU:ssa.</td>
+</tr>
+<tr>
+<td>Llama paikallisesti</td>
+<td>Meta / käyttäjän oma ympäristö</td>
+<td>Oma tietokone tai oma palvelin</td>
+<td>Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin.</td>
+</tr>
+<tr>
+<td>Mistral paikallisesti</td>
+<td>Mistral / käyttäjän oma ympäristö</td>
+<td>Oma tietokone tai oma palvelin</td>
+<td>Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin.</td>
+</tr>
+</tbody>
+</table>
+<h3>GDPR — Euroopan tietosuojalaki</h3>
+<p>Euroopan unionissa henkilötietojen käsittelyä säätelee <strong>GDPR</strong> eli yleinen tietosuoja-asetus. Henkilötietoja ovat esimerkiksi nimi, sähköpostiosoite, henkilötunnus, oppilastiedot, potilastiedot ja muut henkilöön yhdistettävät tiedot.</p>
+<p>GDPR ei tarkoita, että kaikki henkilötiedot on aina säilytettävä vain EU:n alueella. Se tarkoittaa, että henkilötietoja saa käsitellä ja siirtää vain lainmukaisesti, turvallisesti ja asianmukaisin suojatoimin. EU:n ulkopuolisiin palveluihin liittyy usein lisävaatimuksia.</p>
+<p>Käytännössä tämä tarkoittaa seuraavaa:</p>
+<ul>
+<li><strong>Opettaja:</strong> Älä käytä DeepSeekiä oppilaiden esseiden analysointiin, jos tekstit sisältävät oppilaiden henkilötietoja eikä organisaatio ole hyväksynyt palvelua tähän käyttöön.</li>
+<li><strong>Lääkäri:</strong> Älä syötä potilastietoja tekoälypalveluun ilman organisaation hyväksyntää ja laillista perustetta.</li>
+<li><strong>Yritys:</strong> Älä käytä asiakastietoja tekoälypalvelussa, jos et tiedä, mihin tiedot tallentuvat ja onko käyttö organisaation ohjeiden mukaista.</li>
+</ul>
+<p>Jos käytät DeepSeekiä tai muuta tekoälypalvelua omiin harjoituksiin ilman henkilötietoja tai luottamuksellista sisältöä, riski on pienempi. Ammatillisessa käytössä on kuitenkin aina tarkistettava organisaation ohjeet.</p>
+<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Ketkä käyttävät tekoälyä sinun ympärilläsi? Opettajat, lääkärit, johtajat vai asiakaspalvelijat? Mitä tietoja tekoälylle saa lähettää? Mitä tietoja sille ei saa koskaan lähettää ilman lupaa?</p>
+</blockquote>
+<h2>Osa 6: Hinta ja käyttö — mitä maksaa?</h2>
+<p>Alla oleva taulukko auttaa vertailemaan eri vaihtoehtoja. Hinnat ja käyttörajat muuttuvat usein, joten taulukko on suuntaa antava. Tarkista ajantasaiset tiedot aina palvelun omilta sivuilta ennen päätöksen tekemistä.</p>
+<table>
+<thead>
+<tr>
+<th>Malli</th>
+<th>Yritys</th>
+<th>Onko ilmainen?</th>
+<th>Hinta</th>
+<th>Tietosuoja</th>
+<th>Nopeus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>OpenAI</td>
+<td>Kyllä, rajoitetusti</td>
+<td>Maksullisia versioita saatavilla</td>
+<td>Tarkista asetukset ja organisaation ohjeet</td>
+<td>Yleensä nopea</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Anthropic</td>
+<td>Kyllä, rajoitetusti</td>
+<td>Maksullisia versioita saatavilla</td>
+<td>Tarkista asetukset ja organisaation ohjeet</td>
+<td>Yleensä nopea</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>Google</td>
+<td>Kyllä, rajoitetusti</td>
+<td>Maksullisia versioita ja API-käyttöä saatavilla</td>
+<td>Alueelliset ja organisaatiokohtaiset asetukset mahdollisia</td>
+<td>Yleensä nopea</td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>DeepSeek</td>
+<td>Kyllä, rajoitetusti</td>
+<td>Usein edullinen</td>
+<td>Voi olla ongelmallinen henkilötietojen ja luottamuksellisen tiedon kanssa</td>
+<td>Yleensä nopea</td>
+</tr>
+<tr>
+<td>Llama paikallisesti</td>
+<td>Meta / käyttäjän oma ympäristö</td>
+<td>Kyllä, lisenssiehtojen mukaisesti</td>
+<td>Ei välttämättä käyttömaksua, mutta vaatii laitteiston</td>
+<td>Hyvä, jos malli ajetaan aidosti paikallisesti</td>
+<td>Riippuu laitteistosta</td>
+</tr>
+<tr>
+<td>Mistral paikallisesti</td>
+<td>Mistral / käyttäjän oma ympäristö</td>
+<td>Kyllä, mallista ja lisenssistä riippuen</td>
+<td>Ei välttämättä käyttömaksua, mutta vaatii laitteiston</td>
+<td>Hyvä, jos malli ajetaan aidosti paikallisesti</td>
+<td>Riippuu laitteistosta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mitä tämä tarkoittaa?</strong></p>
+<p>Jos budjetti on pieni eikä käsiteltävä tieto ole arkaluontoista, edulliset pilvipalvelut voivat olla hyvä vaihtoehto. Jos yksityisyys on tärkeää ja käytössä on riittävän tehokas tietokone, paikallisesti ajettava Llama tai Mistral voi olla hyvä ratkaisu.</p>
+<p>ChatGPT ja Claude ovat hyviä yleiskäyttöisiä vaihtoehtoja silloin, kun organisaatiolla on budjetti ja palveluiden käyttö on organisaation ohjeiden mukaista.</p>
+<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Sinulla on 500 euron vuosibudjetti. Minkä työkalun valitsisit? Entä jos yksityisyys olisi tärkein valintaperuste?</p>
+</blockquote>
+<h2>Kohti omaa projektia</h2>
+<p>Tällä tunnilla tutustuit laajempaan tekoälykenttään: Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu hieman eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden, helppokäyttöisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitset tietyn alustan omalle botillesi.</p>
+<p>Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain ”mikä on paras?”, vaan <strong>”mikä sopii parhaiten tähän käyttötilanteeseen?”</strong>. Se on ammattilaisen ajattelutapa.</p>
+<h2>Osa 7: Yhteenveto</h2>
+<p><strong>Mitä olemme oppineet?</strong></p>
+<ol>
+<li><strong>Malleja on monia, ja ne ovat erilaisia.</strong> ChatGPT ja Claude eivät ole ainoita vaihtoehtoja. Gemini, DeepSeek, Llama, Mistral ja monet muut mallit tarjoavat erilaisia mahdollisuuksia.</li>
+<li><strong>Jokaisella mallilla on omat vahvuutensa.</strong> Gemini liittyy vahvasti Googlen palveluihin. DeepSeek voi olla edullinen, mutta sen käyttöön liittyy tietosuojakysymyksiä EU:ssa. Llama ja Mistral voivat olla yksityisiä ratkaisuja, jos ajat niitä omassa ympäristössä.</li>
+<li><strong>Tietosuoja on tärkeää.</strong> Sinun pitää tietää, minne tiedot menevät ja saako niitä käsitellä kyseisessä palvelussa. Oppilastiedot, potilastiedot, asiakastiedot ja muu arkaluontoinen tieto vaativat erityistä huolellisuutta.</li>
+<li><strong>Valinta riippuu tilanteesta.</strong> Ei ole yhtä parasta mallia. Hinta, nopeus, yksityisyys ja käytettävyys painavat eri tilanteissa eri tavalla.</li>
+<li><strong>Ammattilaisena sinun kannattaa tuntea vaihtoehdot.</strong> Työpaikalla voi olla sääntöjä siitä, mitä tekoälypalveluja saa käyttää. Kun tunnet vaihtoehdot, ymmärrät paremmin myös niiden riskit ja mahdollisuudet.</li>
+</ol>
+<p><strong>Seuraavaksi:</strong> Opit tekemään tekoälylle tarkkoja ja hyödyllisiä ohjeita. Kun tiedät, millaisia malleja on olemassa, seuraava askel on oppia ohjaamaan niitä niin, että saat vastauksen juuri siihen tarpeeseen, johon sitä käytät.</p>
+<hr /></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Muut mallit ja tietosuoja</h1>
+<p>Tällä välilehdellä pääset harjoittelemaan juuri lukemaasi: mitä muita tekoälymalleja on olemassa ja miten datan sijainti vaikuttaa siihen, mitä työkalua kannattaa käyttää. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät mallien ja käsitteiden kertaamisesta kohti tilanteita, joissa arvioit itse, milloin edullinen pilvimalli riittää ja milloin henkilötiedot vaativat paikallisen tai hyväksytyn työkalun.</p>
+<h2>Tehtävä 1/4 — mallit ja käsitteet</h2>
+<p>Aloitetaan tunnin malleista ja käsitteistä, ennen kuin siirrytään datan sijaintiin ja päätöksiin.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — myytinmurtaja</h2>
+<p>Jokaisen kysymyksen taustalla on yksi yleinen harhaluulo malleista, hinnasta tai tietosuojasta. Pohdi, mikä väite oikeasti pitää paikkansa.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — minne tiedot menevät?</h2>
+<p>Nyt sovellat oppimaasi: sama teksti voi päätyä kolmeen eri määränpäähän. Ratkaisevaa on, siirtyykö data EU:n ulkopuolelle ja onko mukana henkilötietoja.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — halpa, nopea vai turvallinen?</h2>
+<p>Viimeinen tehtävä kokoaa opitun yhteen: työskentelet autokorjaamon tiskillä ja päätät itse, milloin edullinen pilvimalli riittää ja milloin data vaatii paikallisen tai hyväksytyn työkalun.</p>
+<div class="task-widget" data-ti="3"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto</h1>
+<h2>Tekoälymalli</h2>
+<p>Tietokoneen ohjelma, joka osaa kirjoittaa, selittää ja vastata kysymyksiin. Kuten ihmisiä on erilaisia (nopea, hidas, tarkka), malleja on erilaisia.</p>
+<h2>Avoin malli</h2>
+<p>Tekoälymalli, jonka voit ladata ja ajaa omalla tietokoneella. Voit nähdä koodin ja muuttaa sitä. Esimerkiksi Llama ja Mistral.</p>
+<h2>Suljettu malli</h2>
+<p>Tekoälymalli, jonka käytät internetin kautta. Et näe koodia, vaan vain kysyt ja saat vastauksen. Esimerkiksi ChatGPT, Claude ja Gemini.</p>
+<h2>Pilvipalvelu</h2>
+<p>Palvelu, joka toimii internetissä yrityksen palvelimilla — ei omalla koneellasi. Kun käytät ChatGPT:tä, käytät pilvipalvelua.</p>
+<h2>Paikallinen ajo</h2>
+<p>Tekoälymallin ajaminen omalla tietokoneella, ei internetissä. Tiedot pysyvät sinulla, ne eivät lähde minnekään.</p>
+<h2>Tietosuoja</h2>
+<p>Säännöt siitä, mihin henkilötiedot voivat mennä ja kuka niitä voi nähdä. GDPR on tietosuojalaki.</p>
+<h2>GDPR</h2>
+<p>Euroopan tietosuojalaki. Se vaatii, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Siirto EU:n ulkopuolelle on mahdollista vain erityisin suojatoimin.</p>
+<h2>API (ohjelmointirajapinta)</h2>
+<p>Tapa, jolla oma ohjelma voi pyytää tekoälyä tekemään jotakin ilman selainta. Selaimessa käytät valmista käyttöliittymää; API:n kautta ohjelmasi keskustelee mallin kanssa suoraan.</p>
+<h2>Hinta per kysymys</h2>
+<p>Jotkut mallit maksavat jokaisesta kysymyksestä. ChatGPT voi maksaa. Llama omalla koneella ei maksa.</p>
+<h2>Nopeus</h2>
+<p>Kuinka nopeasti malli vastaa. Pilvipalvelut ovat nopeampia, oma tietokone voi olla hitaampi.</p>
+<h2>Parametri</h2>
+<p>Numero, joka kuvailee mallin kokoa. Suurempi numero = isompi ja yleensä parempi malli. Mutta hitaampi ja kalliimpi.</p>
+<hr /></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-10/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-12/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-11')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "kurssi", "lid": "lesson-11", "num": 11, "title": "Muita tekoälymalleja — kuin ChatGPT ja Claude", "ptasks": [{"type": "match", "title": "Mallit ja käsitteet paikoilleen", "intro": "Yhdistä malli tai käsite ja sitä kuvaava selitys. Valitse ensin vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Gemini", "b": "Googlen kehittämä malli, jonka voi kytkeä yhtiön omiin palveluihin ja jota kokeillaan selaimessa toimivassa Google AI Studiossa.", "explain": "Siitä on nopea ja tasapainoinen versio, ja se on vahvimmillaan Googlen ympäristössä."}, {"a": "DeepSeek", "b": "Kiinalainen, usein edullinen ja ohjelmoinnissa vahva malli, jonka datan sijainti tuo tietosuojahuolen EU:ssa.", "explain": "Teksti voi siirtyä kiinalaisen lainsäädännön piiriin, joten teknisesti hyvä ei yksin riitä ammatilliseen käyttöön henkilötiedoilla."}, {"a": "Llama", "b": "Metan julkaisema avoin malliperhe, jonka voi ladata ja ajaa omalla koneella.", "explain": "Paikallisesti ajettuna data pysyy laitteella, mutta se vaatii riittävän tehokkaan koneen."}, {"a": "Mistral", "b": "Ranskalaisen kehittäjän malli, jonka osa versioista soveltuu paikalliseen, eurooppalaiseen käyttöön.", "explain": "Eurooppalainen vaihtoehto, jonka laatu ja nopeus riippuvat valitusta versiosta."}, {"a": "Ollama", "b": "Ohjelma, jolla mallin saa asennettua ja käyttöön omalle koneelle melko suoraviivaisesti.", "explain": "Valitset mallin ja ajat sen omalla koneellasi."}, {"a": "LM Studio", "b": "Graafinen, keskusteluikkunan sisältävä ohjelma paikallisten mallien käyttöön ilman komentoriviä.", "explain": "Helpompi vaihtoehto silloin, kun komentorivi ei ole tuttu."}, {"a": "Parametri", "b": "Luku, joka kuvaa mallin kokoa; suurempi tarkoittaa yleensä parempaa mutta myös hitaampaa ja kalliimpaa.", "explain": "Koko ei ole ilmaista: isompi malli vie enemmän resursseja."}, {"a": "GDPR", "b": "EU:n asetus, joka vaatii käsittelemään henkilötietoja turvallisesti ja lainmukaisesti.", "explain": "Se ei kiellä kaikkea EU:n ulkopuolista käsittelyä, mutta siihen liittyy usein lisävaatimuksia."}], "summary": "Mallit eroavat toisistaan kehittäjän, hinnan, avoimuuden ja datan sijainnin mukaan. Nimien ja käsitteiden tunteminen on pohja sille, että osaat valita oikean mallin oikeaan tehtävään."}, {"type": "quiz", "title": "Myytinmurtaja: malli, hinta ja tietosuoja", "intro": "Jokaisessa kysymyksessä piilee yleinen harhaluulo malleista, hinnasta tai tietosuojasta. Valitse vaihtoehto, joka pitää paikkansa — ja lue myös, miksi muut menevät harhaan.", "items": [{"q": "Varaston opiskelija haluaa käyttää DeepSeekiä kaikkeen, myös asiakaslistojen käsittelyyn, koska se on halvin. Mikä pitää paikkansa?", "options": [{"text": "Hinta on vain yksi kriteeri; henkilötietoja käsiteltäessä tietosuoja ja EU:n ulkopuolelle siirto ratkaisevat, joten halvin voi olla väärä valinta.", "correct": true, "explain": "Asiakaslistat sisältävät henkilötietoja, joiden siirto kiinalaisen lainsäädännön piiriin vaatii arvioinnin ja organisaation hyväksynnän — silloin edullisuus ei riitä perusteeksi."}, {"text": "Halvin on aina paras, kunhan se toimii.", "correct": false, "explain": "Tämä jättää huomiotta datan luonteen: henkilötiedoilla tietosuojariski voi olla hintaa tärkeämpi, joten pelkkä hinta ei ratkaise."}, {"text": "DeepSeek on kokonaan kielletty kaikkeen käyttöön.", "correct": false, "explain": "Näin jyrkkä väite ei pidä paikkaansa: ei-arkaluontoiseen omaan kokeiluun DeepSeek käy, ja rajoitus koskee nimenomaan henkilö- ja luottamuksellista tietoa."}]}, {"q": "'Paikallista mallia ei kannata edes harkita — se on liian vaikea ja aina huono.' Mikä on osuvin vastaus?", "options": [{"text": "Ollama ja LM Studio helpottavat kokeilua, ja paikallinen malli voi olla oikea valinta silloin, kun yksityisyys ja kontrolli ovat tärkeimmät — vaikka se on hitaampi.", "correct": true, "explain": "Paikallinen malli ei ole liian vaikea eikä aina huono: se on kompromissi, jossa nopeus kärsii mutta data pysyy omalla koneella."}, {"text": "Paikallinen malli on itse asiassa aina paras vaihtoehto.", "correct": false, "explain": "Ei ole: kun tarvitaan nopeutta tai huippulaatua, pilvimalli voi olla parempi. Paikallinen loistaa erityisesti yksityisyyttä vaativissa tehtävissä."}, {"text": "Paikallisen mallin saa pyörimään millä tahansa vanhalla koneella yhtä nopeasti kuin pilvessä.", "correct": false, "explain": "Paikallinen ajo vaatii riittävän tehokkaan laitteen, ja vastaukset voivat olla hitaampia kuin pilvipalvelussa."}]}, {"q": "'Tietosuoja koskee vain isoja yrityksiä, eikä yhdellä promptilla ole väliä.' Mikä pitää paikkansa?", "options": [{"text": "Tietosuoja koskee kaikkia, jotka käsittelevät toisten henkilötietoja, ja yksikin prompt voi sisältää henkilötietoja.", "correct": true, "explain": "Esimerkiksi asiakaspalvelija tai IT-tuki käsittelee henkilötietoja päivittäin, ja yksittäinenkin viesti voi viedä ne väärään paikkaan."}, {"text": "Tietosuojalla on väliä vain, jos käsittelen salaista lähdekoodia.", "correct": false, "explain": "Myös nimet, osoitteet ja asiakastiedot ovat henkilötietoja, joten tietosuoja koskee paljon muutakin kuin salaista koodia."}, {"text": "Yksi kysymys ei voi koskaan rikkoa mitään tietosuojasääntöä.", "correct": false, "explain": "Yksi kysymys voi hyvin sisältää henkilötietoja ja viedä ne palveluun, jota ei ole hyväksytty niiden käsittelyyn."}]}, {"q": "Kun ajat Llamaa Ollamalla omalla koneellasi ilman ulkoista yhteyttä, minne syötteesi menee?", "options": [{"text": "Se pysyy omalla laitteellasi eikä lähde ulkoiseen pilvipalveluun, kun malli ajetaan aidosti paikallisesti.", "correct": true, "explain": "Paikallisessa ajossa mitään ei tarvitse lähettää palveluntarjoajan palvelimelle, joten tiedot pysyvät sinun hallussasi."}, {"text": "Metan palvelimille Yhdysvaltoihin.", "correct": false, "explain": "Vaikka Meta on julkaissut Llaman, paikallisesti ajettuna dataa ei lähetetä kehittäjälle — malli toimii sinun koneellasi."}, {"text": "Automaattisesti EU:n palvelimille.", "correct": false, "explain": "Paikallisessa ajossa dataa ei siirretä minnekään palvelimelle, ei EU:hun eikä muualle; se pysyy laitteellasi."}]}, {"q": "'GDPR tarkoittaa, ettei henkilötietoja saa koskaan käsitellä EU:n ulkopuolella.' Pitääkö tämä paikkansa?", "options": [{"text": "Ei pidä: GDPR ei kiellä kaikkea EU:n ulkopuolista käsittelyä, vaan vaatii lainmukaisuutta, turvallisuutta ja asianmukaisia suojatoimia, ja EU:n ulkopuoliseen liittyy usein lisävaatimuksia.", "correct": true, "explain": "Ratkaisevaa ovat suojatoimet ja organisaation hyväksyntä, eivät ehdoton maantieteellinen kielto."}, {"text": "Kyllä, kaikki henkilötiedot on pakko pitää vain EU:n alueella.", "correct": false, "explain": "Tämä on liioittelua: siirto EU:n ulkopuolelle on mahdollista asianmukaisin suojatoimin, joten ehdotonta kieltoa ei ole."}, {"text": "GDPR koskee vain sähköpostiosoitteita.", "correct": false, "explain": "GDPR koskee kaikkia henkilötietoja, kuten nimeä, henkilötunnusta sekä oppilas- ja potilastietoja, ei vain sähköpostiosoitteita."}]}], "summary": "Hinta, nopeus ja tuttuus eivät yksin ratkaise. Datan luonne ja sijainti ovat ammatillisen mallivalinnan ydin: henkilötiedot vaativat aina tietosuojan arvioinnin."}, {"type": "classify", "title": "Minne tiedot menevät?", "intro": "Sama teksti voi päätyä kolmeen eri määränpäähän riippuen siitä, mitä palvelua käytät. Erota kaksi kysymystä toisistaan: ensin MINNE data menee — pysyykö se omalla koneella, meneekö se pilveen ja onko palvelin EU:n ulkopuolella — ja vasta sitten MITÄ syötät eli sisältääkö teksti henkilötietoja. Näiden yhdistelmä ratkaisee: paikallinen ajo pitää datan koneella, tavallinen pilvikäyttö vaatii asetusten tarkistuksen, ja henkilötietojen lähtö EU:n ulkopuoliseen palveluun nostaa GDPR-riskin. Sijoita tilanne sen mukaan, minne data menee ja mitä se sisältää.", "categories": ["Pilvipalvelu — tarkista asetukset ja ehdot", "EU:n ulkopuolinen palvelu — korostunut GDPR-riski henkilötiedoilla", "Paikallinen malli — data ei poistu koneelta"], "items": [{"text": "Käytät ChatGPT:tä selaimessa luonnostellaksesi kuvitteellisen kampanjatekstin, jossa ei ole henkilötietoja.", "answer": 0, "explain": "Selaimessa käytettävä ChatGPT on pilvipalvelu, joten teksti menee palveluntarjoajan palvelimelle. Sisältö on kuvitteellista eikä sisällä henkilötietoja, joten käyttö on matalan riskin — asetukset kannattaa silti tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Asennat Llaman Ollamalla ja ajat sen omalla koneellasi ilman nettiyhteyttä.", "answer": 2, "explain": "Kun malli ajetaan aidosti omalla koneella ilman ulkoista yhteyttä, data ei poistu laitteelta — tämä on paikallinen ajo. Mitään ei lähetetä pilveen, joten kyse ei ole pilvipalvelusta eikä EU:n ulkopuolisesta siirrosta."}, {"text": "Liität varaston asiakaslistan, jossa on asiakkaiden nimet ja osoitteet, kiinalaiseen DeepSeekiin, koska se on ilmainen.", "answer": 1, "explain": "Asiakaslista sisältää henkilötietoja, ja DeepSeek on kiinalainen palvelu, jonne data voi siirtyä EU:n ulkopuolelle — tässä korostuu GDPR-riski. Edullisuus ei poista sitä, että henkilötietojen siirto vaatii arvioinnin ja organisaation hyväksynnän. Kyse ei ole tavallisesta matalan riskin pilvikäytöstä eikä paikallisesta ajosta."}, {"text": "Kokeilet Geminiä Google AI Studiossa yleisellä harjoituskysymyksellä ilman henkilötietoja.", "answer": 0, "explain": "Google AI Studiossa käytettävä Gemini on pilvipalvelu, ja yleinen harjoituskysymys ei sisällä henkilötietoja, joten riski on matala — alueelliset asetukset kannattaa tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Ajat Mistralia LM Studiolla omalla koneellasi analysoidaksesi omia muistiinpanojasi.", "answer": 2, "explain": "Mistralin ajaminen LM Studiolla omalla koneella on paikallista ajoa: omat muistiinpanosi pysyvät laitteella eivätkä lähde palvelimelle. Kyse ei ole pilvipalvelusta eikä EU:n ulkopuolisesta siirrosta."}, {"text": "Syötät Claudelle selaimessa julkisen tuotteen esittelytekstin parannettavaksi.", "answer": 0, "explain": "Selaimessa käytettävä Claude on pilvipalvelu, joten julkinenkin teksti menee palveluntarjoajan palvelimelle. Koska sisältö ei ole arkaluontoista, riski on matala, mutta asetukset kannattaa tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Syötät kiinalaiseen DeepSeekiin autokorjaamon asiakasrekisterin, jossa on asiakkaiden nimet ja autojen rekisterinumerot, käännettäväksi.", "answer": 1, "explain": "Asiakasrekisteri sisältää henkilötietoja, ja DeepSeek voi siirtää ne kiinalaisen lainsäädännön piiriin EU:n ulkopuolelle — tässä on korostunut GDPR-riski. Käännöstarve ei muuta sitä, että henkilötietojen siirto vaatii suojatoimet ja hyväksynnän. Kyse ei ole tavallisesta pilvikäytöstä eikä paikallisesta ajosta."}], "summary": "Palvelimen sijainti ja datan luonne ratkaisevat, mitkä säännöt pätevät. Ei-arkaluontoinen pilvikäyttö on matalan riskin, henkilötiedot EU:n ulkopuolelle on korostunut riski, ja paikallinen ajo pitää datan omalla koneella."}, {"type": "scenario", "title": "Halpa, nopea vai turvallinen?", "intro": "Työskentelet autokorjaamon tiskillä. Budjetti on pieni, ja mietitte, miten tekoälyä voisi käyttää järkevästi. Jokaisessa kohdassa valitset työkalun datan herkkyyden mukaan — ja huomaat, ettei varovaisin vaihtoehto ole aina paras.", "start": "start", "max": 3, "nodes": {"start": {"text": "Ensimmäinen tehtävä: haluatte luonnostella somepostauksen kesärenkaiden tarjouksesta. Sisältö on julkista markkinointia eikä sisällä henkilötietoja. Miten valitsette työkalun?", "choices": [{"label": "Edullinen pilvimalli, esimerkiksi Gemini tai DeepSeek, käy tähän, koska sisältö ei ole arkaluontoista.", "next": "dp2", "feedback": "Hyvä valinta. Kun sisältö on julkista eikä sisällä henkilötietoja, hinta ja nopeus saavat ratkaista, ja edullinen pilvimalli riittää.", "tone": "ok"}, {"label": "Vaatikaa heti paikallinen malli, vaikka sisältö on julkista mainontaa.", "next": "dp2", "feedback": "Paikallinen malli on hyvä työkalu, mutta tähän se on ylivarovaisuutta: julkiseen, ei-arkaluontoiseen sisältöön se tuo turhaa vaivaa. Säästä paikallinen malli arkaluontoiselle datalle — pääset silti eteenpäin.", "tone": "mid"}]}, "dp2": {"text": "Seuraavaksi haluatte tiivistää asiakaspalautteita, joissa on asiakkaiden nimiä ja yhteystietoja. Kollega ehdottaa DeepSeekiä, koska se on ilmainen. Mitä teet?", "choices": [{"label": "Poista henkilötiedot ensin tai käytä organisaation hyväksymää tai paikallista mallia.", "next": "dp3", "feedback": "Juuri näin. Nimet ja yhteystiedot ovat henkilötietoja, joita ei syötetä hyväksymättömään EU:n ulkopuoliseen palveluun; ne poistetaan ensin tai käytetään hyväksyttyä työkalua.", "tone": "ok"}, {"label": "Syötä palautteet nimineen suoraan DeepSeekiin, koska se on ilmainen.", "next": "end_bad", "feedback": "Ilmaisuus houkuttaa, mutta asiakkaiden henkilötiedot eivät kuulu tällaiseen palveluun.", "tone": "no"}]}, "dp3": {"text": "Harkitsette paikallista mallia, esimerkiksi Llamaa Ollamalla, arkaluontoisten tekstien käsittelyyn. Korjaamon kone on kohtalainen, joten vastaus tulisi hitaammin kuin pilvipalvelusta. Mitä teet?", "choices": [{"label": "Hyväksy hitaampi vastaus — data pysyy omalla koneella, ja se on tässä tärkeintä.", "next": "dp4", "feedback": "Hyvä punninta. Kun yksityisyys on tärkein, hitaampi paikallinen malli on oikea valinta: data ei poistu koneelta.", "tone": "ok"}, {"label": "Hylkää paikallinen malli heti, koska se on hitaampi.", "next": "dp4", "feedback": "Nopeus on yksi tekijä, mutta juuri arkaluontoisessa tekstissä paikallinen malli voi olla oikea valinta, vaikka se on hitaampi. Hitaus yksin ei ole riittävä syy hylätä sitä tässä.", "tone": "mid"}]}, "dp4": {"text": "Mietit, ottaisitteko tavaksi valita työkalun aina datan mukaan.", "choices": [{"label": "Kyllä: ei-arkaluontoiseen edullinen pilvimalli, henkilötietoihin paikallinen tai hyväksytty malli.", "next": "end_good", "feedback": "Juuri tästä on kyse: datan herkkyys ratkaisee. Julkiseen sisältöön halpa pilvi, henkilötietoihin paikallinen tai organisaation hyväksymä työkalu.", "tone": "ok"}, {"label": "Käytetään budjetin takia vain yhtä samaa mallia kaikkeen.", "next": "end_mid", "feedback": "Hinta on yksi kriteeri, mutta yksi malli kaikkeen ohittaa datan herkkyyden: sama työkalu ei sovi sekä julkiseen mainontaan että asiakkaiden henkilötietoihin.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Mietitte tekoälyn käytön läpi järkevästi: julkiseen markkinointiin edullinen pilvimalli, asiakkaiden henkilötietoihin paikallinen tai hyväksytty malli.", "feedback": "Sovitit työkalun datan herkkyyteen joka kohdassa: halpa pilvi ei-arkaluontoiseen sisältöön ja paikallinen tai hyväksytty malli henkilötietoihin. Näin budjetti ja tietosuoja pysyvät molemmat hallinnassa."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Suurin osa ratkaisuistanne oli hyviä, mutta joko hylkäsit paikallisen mallin liian nopeasti tai päädyit käyttämään yhtä samaa mallia kaikkeen.", "feedback": "Tärkein onnistui: asiakkaiden henkilötiedot eivät päätyneet hyväksymättömään palveluun. Silti kannattaa muistaa, että paikallinen malli on oikea valinta juuri yksityisyyttä vaativaan työhön, eikä yksi malli sovi kaikkeen dataan."}, "end_bad": {"end": true, "verdict": "no", "score": 0, "text": "Asiakkaiden nimet ja yhteystiedot päätyivät ilmaiseen, EU:n ulkopuoliseen palveluun. Jälkeenpäin herää kysymys, mihin tiedot siirtyivät ja kenen lainsäädännön piiriin.", "feedback": "Henkilötietojen siirto EU:n ulkopuolelle vaatii asianmukaiset suojatoimet ja organisaation hyväksynnän. Edullisuus ei ole peruste ohittaa tietosuojaa — henkilötiedot poistetaan ensin tai käytetään hyväksyttyä tai paikallista mallia."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

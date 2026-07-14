@@ -1,0 +1,669 @@
+"""Sivupohjat: yhteinen kehys + valintasivu, yleiskuva, moduulit, tunnit, sanasto,
+lopputyöt ja opettajanäkymä. HTML rakennetaan f-stringeillä; per-sivu-data (CI, ptasks)
+serialisoidaan json.dumps:lla, joten f-string-aaltosulkeita ei tarvitse tuplata.
+"""
+
+import json
+from . import nakymat as N
+from . import sisalto as S
+
+DOMAIN = 'https://aiperusteet.fi'
+
+FAVICON = ("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22"
+           "%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22"
+           "%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate"
+           "%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12"
+           "%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22"
+           "%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22"
+           "%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx"
+           "%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E"
+           "%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22"
+           "%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05"
+           "%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+         '<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;'
+         '0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&'
+         'family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">')
+
+LOGO_SVG = ('<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">'
+            '<path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/>'
+            '<circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/>'
+            '<circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg>')
+
+VIEW_META = {
+    'kurssi':  {'home': '/kurssi/',  'label': 'Verkkokurssi'},
+    'luokka':  {'home': '/luokka/',  'label': 'Luokkaversio'},
+    'opettaja': {'home': '/opettaja/', 'label': 'Opettajan opas'},
+}
+
+TOTAL = len(N.ALL_IDS)
+
+# Lookup id -> lesson dict (järjestyksessä)
+_BY_ID = {l['id']: l for l in N.ALL_LESSONS}
+
+
+def _topbar():
+    return (
+        '<nav class="topbar">'
+        '<a class="logo-group" href="/" style="text-decoration:none">'
+        f'<span class="brand-mark">{LOGO_SVG}</span>'
+        '<div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div>'
+        '</a>'
+        '<div class="topbar-right">'
+        '<div class="progress-bar"><div class="progress-fill" id="pb"></div></div>'
+        f'<div class="progress-text" id="pt">0/{TOTAL}</div>'
+        '</div></nav>'
+    )
+
+
+CONSENT = (
+    '<div id="consent-banner" role="dialog" aria-live="polite">'
+    '<span>Sivusto käyttää Google Analyticsia kävijätilastointiin. '
+    'Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span>'
+    '<div class="consent-actions">'
+    '<button class="consent-accept" onclick="consentChoice(\'granted\')">Hyväksy</button>'
+    '<button class="consent-decline" onclick="consentChoice(\'denied\')">Vain välttämättömät</button>'
+    '</div></div>'
+)
+
+FOOTER = ('<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · '
+          'Tekoälykoulutukset organisaatioille: '
+          '<a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" '
+          'target="_blank" rel="noopener">seise.org</a></footer>')
+
+
+def page_shell(title, description, canonical_path, body, ci=None, include_practice=False,
+               extra_head='', pre_body_script=''):
+    """Rakentaa täyden HTML-dokumentin. ci = dict → window.CI inline-config."""
+    ci = ci or {}
+    ci.setdefault('allIds', N.ALL_IDS)
+    ci_json = json.dumps(ci, ensure_ascii=False).replace('</', '<\\/')
+    canonical = DOMAIN + canonical_path
+    desc = S.esc_attr(description)
+    scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>']
+    if include_practice:
+        scripts.append('<script src="/assets/practice.js"></script>')
+    scripts.append(f'<script>window.CI={ci_json};</script>')
+    scripts.append('<script src="/assets/site.js"></script>')
+    scripts_html = '\n'.join(scripts)
+    return f'''<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{S.esc_attr(title)}</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{canonical}">
+<link rel="icon" type="image/svg+xml" href="{FAVICON}">
+{FONTS}
+<link rel="stylesheet" href="/assets/site.css">
+{extra_head}
+</head>
+<body>
+{pre_body_script}
+{_topbar()}
+{body}
+{FOOTER}
+{CONSENT}
+{scripts_html}
+</body>
+</html>'''
+
+
+# ==================== TUNTISIVUT ====================
+
+def _view_switch(view, kansio):
+    if view == 'opettaja':
+        opts = [('kurssi', 'Verkkokurssi'), ('luokka', 'Luokkaversio'), ('opettaja', 'Opettajan opas')]
+    else:
+        opts = [('kurssi', 'Verkkokurssi'), ('luokka', 'Luokkaversio')]
+    parts = ['<div class="view-switch"><span class="vs-lab">Näkymä</span>']
+    for v, lbl in opts:
+        on = ' on' if v == view else ''
+        href = f'/{v}/tunti-{kansio}/'
+        parts.append(f'<a class="vw{on}" href="{href}" data-view="{v}">{lbl}</a>')
+    parts.append('</div>')
+    return ''.join(parts)
+
+
+def _duration_badge(lesson, view):
+    is_a = lesson['tyyppi'] == 'assessment'
+    if is_a:
+        return '<span class="badge badge-assess">★ Arviointi</span>'
+    if view == 'kurssi':
+        ldir_teoria = S.read_file(N.os.path.join(N.lesson_dir(lesson['kansio']), 'teoria.md'))
+        ldir_sanasto = S.read_file(N.os.path.join(N.lesson_dir(lesson['kansio']), 'sanasto.md'))
+        mins = S.reading_time_min(ldir_teoria, ldir_sanasto)
+        return f'<span class="badge badge-type">Lukuaika n. {mins} min</span>'
+    return '<span class="badge badge-type">90 min oppitunti</span>'
+
+
+def _tunti_label(view, num):
+    if view == 'kurssi':
+        return f'Osa {num}/{TOTAL}'
+    return f'Oppitunti {num}'
+
+
+def _breadcrumb(view, lesson, num):
+    vm = VIEW_META[view]
+    module_title = lesson['osp_title']
+    if view == 'kurssi':
+        mod_link = f'<a class="bc-link" href="/kurssi/{lesson["slug"]}/">{module_title}</a>'
+    else:
+        mod_link = f'<span>{module_title}</span>'
+    return (
+        '<div class="breadcrumb">'
+        f'<a class="bc-link" href="{vm["home"]}">{vm["label"]}</a>'
+        '<span>›</span>'
+        f'{mod_link}'
+        '<span>›</span>'
+        f'<span>{_tunti_label(view, num)}</span>'
+        '</div>'
+    )
+
+
+def build_tunti_page(lesson, view):
+    num = N.ALL_IDS.index(lesson['id']) + 1
+    idx = num - 1
+    kansio = lesson['kansio']
+    is_a = lesson['tyyppi'] == 'assessment'
+    blocks = N.build_lesson_blocks(lesson, view)
+
+    # ptasks (harjoittele-lohkon tehtävät)
+    ptasks = None
+    for b in blocks:
+        if b['block'] == 'harjoittele' and b['tasks']:
+            ptasks = b['tasks']
+
+    # Tabit + panelit
+    tab_btns, panels = [], []
+    for i, b in enumerate(blocks):
+        act = ' active' if i == 0 else ''
+        tab_btns.append(
+            f'<button class="tab-btn{act}" data-tab="{b["anchor"]}" '
+            f'onclick="showTab(\'{b["anchor"]}\')">{b["icon"]}<span>{b["label"]}</span></button>')
+        panels.append(
+            f'<div class="panel{act}" data-tab="{b["anchor"]}">{b["html"]}</div>')
+
+    header = (
+        '<div id="lesson-header" class="lesson-header">'
+        f'{_breadcrumb(view, lesson, num)}'
+        f'<div class="lesson-title">{lesson["otsikko"]}</div>'
+        '<div class="lesson-badges">'
+        f'<span class="badge badge-osp">{lesson["osp_title"]}</span>'
+        f'{_duration_badge(lesson, view)}'
+        '</div>'
+        f'{_view_switch(view, kansio)}'
+        '</div>'
+    )
+
+    # Opettajan jakostrippi
+    strip = ''
+    if view == 'opettaja':
+        luokka_url = f'/luokka/tunti-{kansio}/'
+        strip = (
+            '<div class="lesson-strip"><div class="share-box">'
+            '<div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b>'
+            '<span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — '
+            'eivät opettajan materiaaleja.</span></div>'
+            f'<a class="sb-go" href="{luokka_url}" data-view="luokka">Avaa luokkaversio →</a>'
+            f'<button type="button" onclick="copyShare(this)" data-url="{luokka_url}">Kopioi linkki</button>'
+            '</div></div>'
+        )
+
+    # Footer: nav + (kurssi/luokka) merkitse suoritetuksi
+    prev_html = '<button class="btn" disabled>← Edellinen</button>'
+    next_html = '<button class="btn btn-primary" disabled>Seuraava →</button>'
+    if idx > 0:
+        p = N.ALL_LESSONS[idx - 1]
+        prev_html = f'<a class="btn" href="/{view}/tunti-{p["kansio"]}/">← Edellinen</a>'
+    if idx < TOTAL - 1:
+        nx = N.ALL_LESSONS[idx + 1]
+        next_html = f'<a class="btn btn-primary" href="/{view}/tunti-{nx["kansio"]}/">Seuraava →</a>'
+    done_html = ''
+    if view in ('kurssi', 'luokka'):
+        done_html = (f'<button class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
+                     'Merkitse suoritetuksi</button>')
+    footer = (
+        '<div id="lesson-footer" class="lesson-footer">'
+        f'<div class="nav-buttons">{prev_html}{next_html}</div>'
+        f'{done_html}'
+        '</div>'
+    )
+
+    body = (
+        '<div id="lesson" class="lesson-view active">'
+        f'{header}{strip}'
+        f'<div id="lesson-tabs" class="lesson-tabs">{"".join(tab_btns)}</div>'
+        f'<div id="lesson-panels" class="lesson-panels rv-tech">{"".join(panels)}</div>'
+        f'{footer}</div>'
+    )
+
+    ci = {'view': view, 'lid': lesson['id'], 'num': num, 'title': lesson['otsikko']}
+    if ptasks is not None:
+        ci['ptasks'] = ptasks
+    vm = VIEW_META[view]
+    title = f'{lesson["otsikko"]} — {vm["label"]} — AI · Perusteet'
+    desc = f'{lesson["otsikko"]}. {vm["label"]}, AI · Perusteet -verkkokurssi tekoälyn perusteista.'
+    canonical = f'/{view}/tunti-{kansio}/'
+    return page_shell(title, desc, canonical, body, ci=ci, include_practice=(ptasks is not None))
+
+
+# ==================== VALINTASIVU (etusivu) ====================
+
+def build_redirect_map():
+    """Vanha hash → uusi URL, generoituna kurssi.yaml:n NN-silmukasta (redirectit.md)."""
+    m = {
+        'brief-osp1': '/kurssi/teoria/lopputyo/',
+        'brief-osp2': '/kurssi/kaytto/lopputyo/',
+        'brief-osp3': '/kurssi/agentit/lopputyo/',
+    }
+    for l in N.ALL_LESSONS:
+        nn = l['kansio']
+        lid = l['id']
+        is_a = l['tyyppi'] == 'assessment'
+        m[lid] = f'/kurssi/tunti-{nn}/'
+        m[f'{lid}/selfstudy'] = f'/kurssi/tunti-{nn}/'
+        m[f'{lid}/stasks'] = f'/luokka/tunti-{nn}/#tehtavat'
+        m[f'{lid}/slides'] = f'/luokka/tunti-{nn}/#diat'
+        m[f'{lid}/tmats'] = f'/opettaja/tunti-{nn}/'
+        if is_a:
+            # arviointitunneilta ei ole koskaan syntynyt näitä — kuten tuntematon tab
+            m[f'{lid}/practice'] = f'/kurssi/tunti-{nn}/'
+            m[f'{lid}/vocab'] = f'/kurssi/tunti-{nn}/'
+            m[f'{lid}/tltasks'] = f'/kurssi/tunti-{nn}/'
+        else:
+            m[f'{lid}/practice'] = f'/kurssi/tunti-{nn}/#harjoittele'
+            m[f'{lid}/vocab'] = f'/kurssi/tunti-{nn}/#sanasto'
+            m[f'{lid}/tltasks'] = f'/opettaja/tunti-{nn}/'
+    return m
+
+
+def build_index_page():
+    redir = build_redirect_map()
+    redir_json = json.dumps(redir, ensure_ascii=False)
+    # Hash-ohjaus ENNEN sisällön renderöintiä (ja ennen GA-latausta).
+    pre = (
+        '<script>(function(){'
+        f'var R={redir_json};'
+        'var h=location.hash.replace(/^#/,"");'
+        'if(!h)return;'
+        'if(R[h]){location.replace(R[h]);return;}'
+        'var m=h.match(/^(lesson-\\d{2})\\//);'
+        'if(m&&R[m[1]]){location.replace(R[m[1]]);return;}'
+        '})();</script>'
+    )
+    doors = (
+        '<div class="doors">'
+        '<a class="door door--primary" href="/kurssi/" data-view="kurssi">'
+        '<span class="door-ic">📘</span>'
+        '<span class="door-title">Opiskele itsenäisesti</span>'
+        '<span class="door-desc">Verkkokurssi omaan tahtiin: teoria, itsetarkistuvat harjoitukset ja sanasto. '
+        'Etenemisesi tallentuu selaimeesi.</span>'
+        '<span class="door-cta">Aloita kurssi →</span></a>'
+        '<a class="door" href="/luokka/" data-view="luokka">'
+        '<span class="door-ic">👥</span>'
+        '<span class="door-title">Olemme oppitunnilla</span>'
+        '<span class="door-desc">Oppitunnin opiskelijaversio: teoria, luokkatehtävät, harjoittele, sanasto ja diat.</span>'
+        '<span class="door-cta">Avaa luokkaversio →</span></a>'
+        '<a class="door" href="/opettaja/" data-view="opettaja">'
+        '<span class="door-ic">🎓</span>'
+        '<span class="door-title">Olen opettaja</span>'
+        '<span class="door-desc">Kurssiopas ja tuntikohtaiset ohjeet: tuntisuunnitelmat, opettajavetoiset tehtävät, '
+        'diat esitystilassa ja arviointi.</span>'
+        '<span class="door-cta">Avaa opettajan opas →</span></a>'
+        '</div>'
+    )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">AI · Perusteet</div>'
+        '<h1>Ymmärrä tekoäly teoriasta agentteihin.</h1>'
+        '<p>27 oppituntia, jotka avaavat tekoälyn — teoriasta käytäntöön ja itsenäisiin agentteihin. '
+        'Valitse, miten haluat opiskella.</p>'
+        '</div></section>'
+        '<div class="valinta">'
+        '<div class="valinta-lead"><p>Sama kurssi kolmena näkymänä: itsenäinen verkkokurssi, '
+        'oppitunnin opiskelijaversio ja opettajan opas. Valitse ovi — voit vaihtaa näkymää myöhemminkin.</p></div>'
+        f'{doors}'
+        '</div>'
+    )
+    return page_shell(
+        'AI · Perusteet — tekoälyn perusteet -verkkokurssi',
+        'Avoin tekoälyn perusteet -verkkokurssi: 27 oppituntia teoriasta käyttöön ja agentteihin. '
+        'Opiskele itsenäisesti, oppitunnilla tai opettajana.',
+        '/', body, pre_body_script=pre)
+
+
+# ==================== KURSSI: YLEISKUVA + MODUULIT ====================
+
+def build_kurssi_overview():
+    cards = []
+    for osp in N.OSP_BLOCKS:
+        ids = ','.join(lid for lid, _, _, _ in osp['lessons'])
+        n = len(osp['lessons'])
+        cards.append(
+            f'<a class="mod-card" href="/kurssi/{osp["slug"]}/" style="--osp-color:{osp["color"]}">'
+            f'<div class="mod-kn">{osp["ikoni_kn"]}</div>'
+            f'<div class="mod-title">{osp["title"]}</div>'
+            f'<div class="mod-sub">{osp["subtitle"]}</div>'
+            '<div class="mod-foot">'
+            f'<div class="prog-bar"><div class="prog-fill" data-ospfill="{osp["id"]}" '
+            f'data-ids="{ids}" style="background:{osp["color"]}"></div></div>'
+            f'<span class="mod-count"><span data-osptxt="{osp["id"]}">0 / {n}</span></span>'
+            '</div></a>'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">Verkkokurssi</div>'
+        '<h1>AI · Perusteet</h1>'
+        '<p>Kolme kokonaisuutta, 27 osaa. Etene omaan tahtiin — jokainen osa sisältää teorian, '
+        'itsetarkistuvat harjoitukset ja sanaston.</p>'
+        '</div></section>'
+        '<div class="page-body">'
+        f'<div class="mod-grid">{"".join(cards)}</div>'
+        '</div>'
+    )
+    return page_shell('AI · Perusteet — verkkokurssi',
+                      'Tekoälyn perusteet -verkkokurssin yleiskuva: kolme kokonaisuutta ja 27 osaa '
+                      'teoriasta käyttöön ja agentteihin.',
+                      '/kurssi/', body)
+
+
+def build_kurssi_module(osp):
+    rows = []
+    for lid, title, btype, kansio in osp['lessons']:
+        num = N.ALL_IDS.index(lid) + 1
+        star = '★' if btype == 'assessment' else num
+        rows.append(
+            f'<a class="ll-row" href="/kurssi/tunti-{kansio}/" style="--osp-color:{osp["color"]}">'
+            f'<span class="ll-num">{star}</span>'
+            f'<span class="ll-title">{title}</span>'
+            f'<span class="ll-done" data-doneid="{lid}"></span>'
+            '</a>'
+        )
+    final = ''
+    if osp.get('lopputyo'):
+        final = (
+            f'<a class="final-cta" href="/kurssi/{osp["slug"]}/lopputyo/">'
+            '<span class="fc-star">★</span>'
+            '<span class="fc-txt"><b>Osion lopputyö</b>'
+            '<span>Kokoa oppimasi — itsearvioitava lopputyö tähän kokonaisuuteen.</span></span>'
+            '</a>'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        f'<div class="eyebrow"><a class="bc-link" href="/kurssi/" style="color:var(--blue)">Verkkokurssi</a> · {osp["ikoni_kn"]}</div>'
+        f'<h1>{osp["title"]}</h1>'
+        f'<p>{osp["subtitle"]}</p>'
+        '</div></section>'
+        '<div class="page-body">'
+        f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
+        f'{final}'
+        '</div>'
+    )
+    return page_shell(f'{osp["title"]} — AI · Perusteet',
+                      f'{osp["title"]}: {osp["subtitle"]}. Tekoälyn perusteet -verkkokurssin osa.',
+                      f'/kurssi/{osp["slug"]}/', body)
+
+
+# ==================== LUOKKA: INDEKSI ====================
+
+def build_luokka_index():
+    groups = []
+    for osp in N.OSP_BLOCKS:
+        rows = []
+        for lid, title, btype, kansio in osp['lessons']:
+            num = N.ALL_IDS.index(lid) + 1
+            star = '★' if btype == 'assessment' else num
+            rows.append(
+                f'<a class="ll-row" href="/luokka/tunti-{kansio}/" style="--osp-color:{osp["color"]}">'
+                f'<span class="ll-num">{star}</span>'
+                f'<span class="ll-title">{title}</span>'
+                f'<span class="ll-done" data-doneid="{lid}"></span></a>'
+            )
+        final = ''
+        if osp.get('lopputyo'):
+            final = (f'<a class="final-cta" href="/luokka/{osp["slug"]}/lopputyo/">'
+                     '<span class="fc-star">★</span>'
+                     '<span class="fc-txt"><b>Osion lopputyö</b>'
+                     '<span>Lopputyön tehtävänanto ja palautus.</span></span></a>')
+        groups.append(
+            f'<div class="ll-group-title">{osp["ikoni_kn"]} · {osp["title"]}</div>'
+            f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
+            f'{final}'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">Luokkaversio</div>'
+        '<h1>Oppituntien opiskelijaversio</h1>'
+        '<p>Valitse oppitunti. Jokainen tunti sisältää teorian, luokkatehtävät, harjoittelun, '
+        'sanaston ja diat.</p>'
+        '</div></section>'
+        f'<div class="page-body">{"".join(groups)}</div>'
+    )
+    return page_shell('AI · Perusteet — luokkaversio',
+                      'Tekoälyn perusteet -kurssin luokkaversio: 27 oppitunnin opiskelijamateriaalit.',
+                      '/luokka/', body)
+
+
+# ==================== LOPPUTYÖSIVUT ====================
+
+def build_lopputyo_page(osp, view):
+    html = N.lopputyo_html(osp, view)
+    vm = VIEW_META[view]
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        f'<div class="eyebrow"><a class="bc-link" href="{vm["home"]}" style="color:var(--blue)">{vm["label"]}</a> · '
+        f'{osp["title"]}</div>'
+        '<h1>★ Osion lopputyö</h1>'
+        f'<p>{osp["title"]} — {osp["subtitle"]}.</p>'
+        '</div></section>'
+        '<div class="page-body"><div class="reading panel active">'
+        f'{html}'
+        '</div></div>'
+    )
+    return page_shell(f'Lopputyö — {osp["title"]} — {vm["label"]}',
+                      f'{osp["title"]}-osion lopputyön tehtävänanto. {vm["label"]}.',
+                      f'/{view}/{osp["slug"]}/lopputyo/', body)
+
+
+# ==================== SANASTO ====================
+
+import re as _re
+
+# Yksikirjaimiset (tai numero-)väliotsikot ovat aakkosjaottimia, eivät termejä.
+# Ne esiintyvät arviointituntien (18, 27) yhteenvetosanastoissa, joiden termit ovat
+# jo teoriatunneilla — koottu sanasto rakennetaan vain kanonisesta '## Termi' -muodosta.
+_SANASTO_DIVIDER = _re.compile(r'^[A-ZÅÄÖ0-9]$')
+
+
+def _parse_sanasto(kansio):
+    raw = S.read_file(N.os.path.join(N.lesson_dir(kansio), 'sanasto.md'))
+    terms = []
+    cur_term = None
+    cur_body = []
+
+    def flush():
+        if cur_term is not None:
+            terms.append((cur_term, '\n'.join(cur_body).strip()))
+
+    for line in raw.split('\n'):
+        st = line.strip()
+        if st.startswith('## '):
+            flush()
+            name = st[3:].strip()
+            if _SANASTO_DIVIDER.match(name):
+                cur_term = None   # aakkosjaotin — ohitetaan
+            else:
+                cur_term = name
+            cur_body = []
+        elif st == '---' or st.startswith('# '):
+            continue
+        else:
+            if cur_term is not None:
+                cur_body.append(line)
+    flush()
+    return terms
+
+
+def build_sanasto_page():
+    entries = []
+    seen = set()
+    # Teoriatunnit ensin, arviointitunnit viimeisenä → linkki osoittaa opetustuntiin.
+    ordered = ([l for l in N.ALL_LESSONS if l['tyyppi'] != 'assessment'] +
+               [l for l in N.ALL_LESSONS if l['tyyppi'] == 'assessment'])
+    for l in ordered:
+        num = N.ALL_IDS.index(l['id']) + 1
+        for term, definition in _parse_sanasto(l['kansio']):
+            key = term.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            entries.append((term, definition, l['kansio'], num))
+    entries.sort(key=lambda e: e[0].lower())
+    items = []
+    for term, definition, kansio, num in entries:
+        dhtml = S.to_html(definition)
+        items.append(
+            '<div class="sanasto-term">'
+            f'<h2>{term}</h2>'
+            f'{dhtml}'
+            f'<a class="st-src" href="/kurssi/tunti-{kansio}/#sanasto">Osa {num}/{TOTAL}</a>'
+            '</div>'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">Sanasto</div>'
+        '<h1>Tekoälyn perusteet — sanasto</h1>'
+        f'<p>Koko kurssin käsitteet aakkosjärjestyksessä ({len(entries)} termiä). '
+        'Jokainen termi linkittää siihen tuntiin, jossa se opitaan.</p>'
+        '</div></section>'
+        f'<div class="page-body"><div class="reading">{"".join(items)}</div></div>'
+    )
+    return page_shell('Tekoälyn sanasto — AI · Perusteet',
+                      'Tekoälyn perusteet -kurssin koottu sanasto: kaikki keskeiset käsitteet '
+                      'aakkosjärjestyksessä ja linkit oppitunteihin.',
+                      '/sanasto/', body)
+
+
+# ==================== OPETTAJA: KURSSIOPAS + ARVIOINTI ====================
+
+def build_opettaja_index():
+    import os as _os
+    guide_path = N.os.path.join(N.SISALTO, 'opettaja', 'kurssiopas.md')
+    if _os.path.exists(guide_path) and S.read_file(guide_path).strip():
+        content = S.to_html(S.filter_variants(S.read_file(guide_path), 'opettaja', source='opettaja/kurssiopas.md'))
+
+        # Kurssioppaan jälkeen: opettajan tuntimateriaalit moduuleittain.
+        mat_groups = []
+        for osp in N.OSP_BLOCKS:
+            rows = []
+            for lid, title, btype, kansio in osp['lessons']:
+                num = N.ALL_IDS.index(lid) + 1
+                star = '★' if btype == 'assessment' else num
+                label = f'Oppitunti {num}: {title}'
+                rows.append(
+                    f'<a class="ll-row" href="/opettaja/tunti-{kansio}/" style="--osp-color:{osp["color"]}">'
+                    f'<span class="ll-num">{star}</span>'
+                    f'<span class="ll-title">{label}</span></a>'
+                )
+            mat_groups.append(
+                f'<div class="ll-group-title">{osp["ikoni_kn"]} · {osp["title"]} — {osp["subtitle"]}</div>'
+                f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
+            )
+        materials = (
+            '<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
+            'Opettajan materiaalit tunneittain</h2>'
+            '<p>Kunkin tunnin opettajan tuntisivu sisältää tuntisuunnitelman, '
+            'väärinkäsityslistat ja opettajavetoiset tehtävät.</p>'
+            f'{"".join(mat_groups)}'
+            '<a class="final-cta" href="/opettaja/arviointi/">'
+            '<span class="fc-star">★</span><span class="fc-txt"><b>Arviointi</b>'
+            '<span>Lopputöiden arviointiohjeet koottuna.</span></span></a>'
+        )
+
+        body = (
+            '<section class="page-hero"><div class="page-hero-inner">'
+            '<div class="eyebrow">Opettajan opas</div>'
+            '<h1>Kurssiopas</h1>'
+            '</div></section>'
+            f'<div class="page-body"><div class="reading panel active">{content}</div>'
+            f'{materials}</div>'
+        )
+        return page_shell('Opettajan opas — AI · Perusteet',
+                          'Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.',
+                          '/opettaja/', body)
+
+    # Siisti runko (vaihe 4 tuo varsinaisen sisällön)
+    mod_lists = []
+    for osp in N.OSP_BLOCKS:
+        rows = []
+        for lid, title, btype, kansio in osp['lessons']:
+            num = N.ALL_IDS.index(lid) + 1
+            star = '★' if btype == 'assessment' else num
+            rows.append(
+                f'<a class="ll-row" href="/opettaja/tunti-{kansio}/" style="--osp-color:{osp["color"]}">'
+                f'<span class="ll-num">{star}</span>'
+                f'<span class="ll-title">{title}</span></a>'
+            )
+        mod_lists.append(
+            f'<div class="ll-group-title">{osp["ikoni_kn"]} · {osp["title"]} — {osp["subtitle"]}</div>'
+            f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">Opettajan opas</div>'
+        '<h1>Kurssiopas</h1>'
+        '<p>AI · Perusteet on avoin 3 osaamispisteen (OSP) kurssi: 27 × 90 min kolmessa '
+        'kokonaisuudessa (Teoria, Tekoälyjen käyttö, Agentit).</p>'
+        '</div></section>'
+        '<div class="page-body">'
+        '<div class="info-note"><b>Kurssiopas täydentyy.</b> Toteutusmallit, jaksotus, '
+        'Itslearning-vienti ja lataamo (pptx-kannet, tulosteet) lisätään tähän myöhemmin. '
+        'Alta pääset jo tuntikohtaisiin opettajan materiaaleihin ja arviointiohjeisiin.</div>'
+        '<a class="final-cta" href="/opettaja/arviointi/">'
+        '<span class="fc-star">★</span><span class="fc-txt"><b>Arviointi</b>'
+        '<span>Lopputöiden arviointiohjeet koottuna.</span></span></a>'
+        '<h2 style="font-family:var(--font-serif);font-size:26px;margin:16px 0 4px">Kurssirakenne</h2>'
+        f'{"".join(mod_lists)}'
+        '</div>'
+    )
+    return page_shell('Opettajan opas — AI · Perusteet',
+                      'Tekoälyn perusteet -kurssin opettajan opas: kurssirakenne, tuntikohtaiset '
+                      'materiaalit ja lopputöiden arviointiohjeet.',
+                      '/opettaja/', body)
+
+
+def build_opettaja_arviointi():
+    sections = []
+    for osp in N.OSP_BLOCKS:
+        html = N.lopputyo_html(osp, 'opettaja')
+        if not html:
+            continue
+        sections.append(
+            f'<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
+            f'{osp["ikoni_kn"]} · {osp["title"]} — lopputyö</h2>'
+            f'<div class="reading panel active">{html}</div>'
+        )
+    # Tunnin 18 arviointiohje
+    ao_path = N.os.path.join(N.lesson_dir('18'), 'opettaja', 'arviointiohje.md')
+    ao_raw = S.read_file(ao_path)
+    if ao_raw.strip():
+        sections.append(
+            '<h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">'
+            'Tunnin 18 arviointiohje</h2>'
+            f'<div class="reading panel active">{S.to_html(ao_raw)}</div>'
+        )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow"><a class="bc-link" href="/opettaja/" style="color:var(--blue)">Opettajan opas</a> · Arviointi</div>'
+        '<h1>Lopputöiden arviointi</h1>'
+        '<p>Kolmen osion lopputyöt ja niiden arviointiohjeet koottuna.</p>'
+        '</div></section>'
+        f'<div class="page-body">{"".join(sections)}</div>'
+    )
+    return page_shell('Lopputöiden arviointi — Opettajan opas — AI · Perusteet',
+                      'Tekoälyn perusteet -kurssin lopputöiden arviointiohjeet opettajalle.',
+                      '/opettaja/arviointi/', body)

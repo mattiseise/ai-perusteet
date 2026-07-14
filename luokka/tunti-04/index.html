@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen. Luokkaversio, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-04/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Teoria</span><span>›</span><span>Oppitunti 4</span></div><div class="lesson-title">Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-04/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-04/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Konteksti ja promptaus — miten puhut tekoälylle</h1>
+<h2>Johdanto</h2>
+<p>Kuvittele, että ystäväsi lähettää sinulle viestin: "Auta, en saa tätä toimimaan." Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta vai koulutehtävästä? Mikä tarkalleen ei toimi? Sama koskee tekoälyä. Jos sanot vain "auta minua", saat yleisen, ehkä hyödyttömän vastauksen. Mutta jos kerrot "olen lukiolainen, valmistelen 5 minuutin esitelmää ilmastonmuutoksesta historian tunnille, ja tarvitsen selkeän rakenteen kolmesta pääkohdasta" — silloin tekoäly ymmärtää, mikä on todellinen tarve, ja voi antaa konkreettista apua. Tämä ero on <em>konteksti ja promptaus</em> — ja se on kaiken tekoälyviestinnän ydin.</p>
+<h2>Osa 1: Mitä konteksti on</h2>
+<p>Konteksti on kokonaisuus kaikkea sitä tietoa, jota tekoäly tarvitsee ymmärtääkseen, mitä sinä todella kysyt ja mitä haluat. Se ei ole vain yksittäinen kysymys tai käsky. Konteksti koostuu useista osista: kuka olet (roolisi), mitä taustaa sinulla on, mitä haluamme saavuttaa (tavoite), mitkä ovat rajat ja rajoitukset sekä konkreettiset esimerkit siitä, millaista vastausta odotat.</p>
+<p>Kun opettaja neuvoo sinua matematiikan ongelmassa, hän ei vain kuule kysymystä — hän tietää, että olet 15-vuotias opiskelija, että olet oppinut derivaatat, että analysoit nyt funktion nollakohtia ja että hän haluaa sinun oppivan prosessin, ei vain saavasi vastausta. Kaikki tämä konteksti auttaa opettajaa antamaan juuri oikeanlaisen selityksen. Tekoäly tarvitsee saman.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Muista viimeksi, kun kysyit jotain internetistä tai ChatGPT:ltä ja sait täysin väärän tai hyödyttömän vastauksen. Mikä tieto puuttui? Mitkä tiedot olisivat auttaneet?</p>
+</blockquote>
+</blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö — konteksti karsii väärät tulkinnat</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;height:280px">
+  <div class="l04-left">
+    <div class="l04-prompt">Tee minulle treeniohjelma.</div>
+    <div class="l04-chips">
+      <span class="l04-chip l04-c1">+ rooli: vasta-alkaja</span>
+      <span class="l04-chip l04-c2">+ tavoite: 5 km juoksu</span>
+      <span class="l04-chip l04-c3">+ rajaus: 3 krt/vko, ei salia</span>
+    </div>
+  </div>
+  <div class="l04-arrow">→</div>
+  <div class="l04-right">
+    <span class="l04-note l04-n1">malli arvaa — monta tulkintaa</span>
+    <span class="l04-note l04-n2">konteksti karsii — yksi osuu</span>
+    <div class="l04-g l04-g1">Kuntosaliohjelma, 5 × viikossa, painot…</div>
+    <div class="l04-g l04-g2">Juoksuohjelma aloittelijalle: 3 krt/vko, tavoite 5 km <span class="l04-ok">✓ osuva</span></div>
+    <div class="l04-g l04-g3">Kehonpainotreeni kotiin, 20 min…</div>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Ilman kontekstia malli joutuu arvaamaan, mitä tarkoitat. Jokainen kontekstin pala — rooli, tavoite, rajaus — karsii vääriä tulkintoja, kunnes jäljelle jää juuri sinun tarpeeseesi osuva vastaus.</figcaption></figure>
+<style>
+.l04-left{display:flex;flex-direction:column;gap:10px;width:225px}
+.l04-prompt{font-family:var(--font-mono);font-size:13px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:11px;padding:10px 12px}
+.l04-chips{display:flex;flex-direction:column;gap:6px}
+.l04-chip{font-family:var(--font-mono);font-size:11.5px;color:#EAEEF8;background:#1E2740;border:1.5px solid oklch(0.66 0.15 264);border-radius:999px;padding:4px 10px;align-self:flex-start;opacity:0}
+.l04-c1{animation:l04chip 10s infinite}
+.l04-c2{animation:l04chip2 10s infinite}
+.l04-c3{animation:l04chip3 10s infinite}
+@keyframes l04chip{0%,26%{opacity:0;transform:translateY(5px)}31%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l04chip2{0%,34%{opacity:0;transform:translateY(5px)}39%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes l04chip3{0%,42%{opacity:0;transform:translateY(5px)}47%,94%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.l04-arrow{font-size:22px;color:#7E88A8}
+.l04-right{position:relative;display:flex;flex-direction:column;gap:9px;width:265px}
+.l04-note{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em}
+.l04-n1{color:#F0A38C;animation:l04n1 10s infinite}
+.l04-n2{position:absolute;top:0;left:0;color:#7FD0A8;opacity:0;animation:l04n2 10s infinite}
+@keyframes l04n1{0%,4%{opacity:0}8%,46%{opacity:1}52%,100%{opacity:0}}
+@keyframes l04n2{0%,50%{opacity:0}56%,94%{opacity:1}100%{opacity:0}}
+.l04-g{font-family:var(--font-mono);font-size:12px;line-height:1.4;color:#B9C2DA;background:#141B2D;border:1.5px dashed #44517A;border-radius:11px;padding:9px 11px;opacity:0}
+.l04-g1{animation:l04g1 10s infinite}
+.l04-g3{animation:l04g3 10s infinite}
+@keyframes l04g1{0%,4%{opacity:0}10%{opacity:.85}20%{opacity:.5}30%{opacity:.85}40%{opacity:.6}48%{opacity:.85;transform:scale(1)}58%,100%{opacity:0;transform:scale(.92)}}
+@keyframes l04g3{0%,8%{opacity:0}14%{opacity:.8}24%{opacity:.55}34%{opacity:.8}44%{opacity:.55;transform:scale(1)}54%,100%{opacity:0;transform:scale(.92)}}
+.l04-g2{animation:l04g2 10s infinite}
+@keyframes l04g2{0%,6%{opacity:0}12%,54%{opacity:.85;color:#B9C2DA;background:#141B2D;border-color:#44517A;border-style:dashed}64%,94%{opacity:1;color:#FFFFFF;background:#15301F;border-color:#7FD0A8;border-style:solid}100%{opacity:0}}
+.l04-ok{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#06241a;background:#7FD0A8;border-radius:999px;padding:1px 7px;margin-left:5px;white-space:nowrap;opacity:0;animation:l04ok 10s infinite}
+@keyframes l04ok{0%,62%{opacity:0}68%,94%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l04-c1,.l04-c2,.l04-c3,.l04-n2,.l04-g2,.l04-ok{animation:none;opacity:1}
+.l04-g2{color:#FFFFFF;background:#15301F;border:1.5px solid #7FD0A8}
+.l04-g1,.l04-g3,.l04-n1{animation:none;opacity:0;display:none}}
+</style>
+
+<h3>Kontekstin viisi komponenttia</h3>
+<p>Hyvä konteksti rakentuu viidestä pääosasta.</p>
+<p><strong>1. Rooli</strong> — Keitä olemme, mikä on osaamisemme ja näkökulmamme. Jos kerrot "olen kokenut kokki", tekoäly tietää, että se voi käyttää alan termejä ja olettaa tietyn osaamistason. Jos sanot "olen aloittelija keittiössä", vastaus voi olla perusteellisempi ja helpommin hyödynnettävä.</p>
+<p><strong>2. Taustatieto</strong> — Mitä on jo tehty, mitä olemme oppineet ja mitkä ovat lähtökohdat. Kun suunnittelet luokkaretkeä, jota olet jo alustavasti pohtinut, kerro mitä on jo päätetty. Kun pyydät apua treeniohjelmaan, mainitse, mitä olet jo kokeillut ja mikä toimi.</p>
+<p><strong>3. Tavoite</strong> — Miksi kysyt, mitä haluat tehdä ja mihin käytät vastausta. "Anna minulle reseptejä" on eri asia kuin "ehdota kolme edullista ja nopeaa illallista neljälle hengelle, joista yksi on kasvissyöjä". Tavoitteen selventäminen muuttaa vastausta merkittävästi.</p>
+<p><strong>4. Rajaukset</strong> — Mitä et halua, mikä ei ole olennaista ja mitkä asiat on jätettävä pois. "Ehdota illallisia, mutta älä mainitse kanaa, koska söimme sitä eilen." Tai "En halua filosofista vastausta, vain käytännön neuvoja."</p>
+<p><strong>5. Esimerkit</strong> — Näytä mallia siitä, mitä haluat. Jos haluat, että tekoäly kirjoittaa tekstin samalla tyylillä kuin sinä, anna näyte aiemmin kirjoittamastasi tekstistä. Jos haluat vastauksen, joka noudattaa tiettyä rakennetta, näytä esimerkki.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele tehtävää, jota teet usein — esimerkiksi tekstin kirjoittamista, harjoittelun suunnittelua tai tapahtuman järjestämistä. Mitkä viidestä kontekstin osasta olisivat tärkeimpiä tässä tapauksessa? Miksi?</p>
+</blockquote>
+</blockquote>
+<h2>Osa 2: Promptaus — kuinka kysyt</h2>
+<p>Kun konteksti on valmis, sinun on osattava muotoilla <em>prompti</em> — tehtävänanto, joka esitetään kontekstin puitteissa. Suomeksi promptista käytetään myös sanaa <em>kehote</em>; tällä kurssilla käytämme termiä prompti. Prompti on kysymys, joka rakentuu kontekstin pohjalle. Konteksti on pohja, jonka päälle prompti rakentuu.</p>
+<p>Monella on tästä väärinkäsitys: he ajattelevat, että "hyvä prompti" on sama asia kuin "hyvä konteksti". Se on kuin sanoisi, että reseptin otsikko ("Pastakeitto") olisi sama kuin koko resepti – ainesosat, valmistusohjeet, käsittelylämpötila ja kypsennysajat. Prompti on <em>kysymys</em> tai <em>tehtävänanto</em>, jonka esität nyt. Konteksti on <em>kaikki muu</em>, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.</p>
+<p>Kuvittele, että istut opettajan kanssa hänen työhuoneessaan ja kysyt matematiikan kysymystä. Opettaja on jo nähnyt aiemmat työsi, tietää, mistä olet epävarma, tuntee tavoitteesi (läpäisy vai erinomainen arvosana) ja tietää, mitä olet jo oppinut. Kaikki tämä on <em>konteksti</em>. Sitten esität <em>promptin</em>: "Kuinka ratkaiset nollakohdan?" Prompti on kysymys, mutta konteksti on kaikki se muu, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.</p>
+<h3>Hyvän promptin viisi elementtiä</h3>
+<p>Hyvä prompt rakentuu viidestä osasta. Et tarvitse niitä kaikkia joka promptiin, mutta tieto siitä, mitä osia voit käyttää, tekee sinusta paremman käyttäjän.</p>
+<p><strong>1. Tavoite (goal)</strong> — Mitä haluat? "Kirjoita tämä", "Selitä tämä", "Paranna tämä". Tavoite on selkeä lause, joka kertoo, mitä tekoäly tekee.</p>
+<p><strong>2. Rooli (role)</strong> — Kuka tekoäly on? "Olet kokenut opettaja", "Olet urheiluvalmentaja", "Olet ravitsemusneuvoja". Rooli auttaa mallia omaksumaan oikean näkökulman ja sopivan kielen. Huomaa kuitenkin: rooli vaikuttaa näkökulmaan, sävyyn ja kieleen — ei siihen, kuinka paljon malli oikeasti osaa. Pelkkä "olet huippuasiantuntija" ei tee vastauksesta asiantuntevampaa, jos tarvittava tieto puuttuu.</p>
+<p><strong>3. Rajat (constraints)</strong> — Mitä EI tehdä? "Älä käytä vaikeita termejä", "Kirjoita enintään 3 lausetta", "Älä mainitse hintoja". Rajat antavat mallille selkeän toiminta-alueen.</p>
+<p><strong>4. Outputformaatti (format)</strong> — Miten haluat vastauksen? "Vastaa JSON-muodossa", "Kirjoita taulukko", "Anna vaihekohtaiset ohjeet". Formaatti varmistaa, että saat käyttökelpoisen tuloksen.</p>
+<p><strong>5. Esimerkit (examples)</strong> — Näytä yksittäinen esimerkki siitä, mitä haluat. "Esimerkiksi: INPUT: 'terve', OUTPUT: 'Terve! Kuinka voin auttaa?'". Esimerkit tekevät vaatimuksista konkreettisempia.</p>
+<p>Ammattilaisesti nämä viisi elementtiä ovat perustyökalusarjasi. Mitä enemmän tietoja annat, sitä parempia vastauksia saat.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele viimeistä kertaa, kun kysyit ChatGPT:ltä jotain. Mitkä viidestä elementistä annoit? Mitä puuttui? Olisiko parempi vastaus ollut mahdollinen, jos olisit antanut puuttuvat elementit?</p>
+</blockquote>
+</blockquote>
+<h2>Osa 3: Konteksti ja promptaus yhteensä</h2>
+<p>Seuraavassa konkreettinen esimerkki, joka näyttää, kuinka konteksti ja promptaus toimivat yhdessä.</p>
+<h3>Huono esimerkki: ilman kontekstia ja heikolla promptilla</h3>
+<p><strong>Prompt:</strong> "Kirjoita esitelmä ilmastonmuutoksesta."</p>
+<p>Miksi se on huono? Koska se ei sisällä:<br />
+- Roolia: Oletko lukiolainen? Opettaja?<br />
+- Taustaa: Mitä olet jo kirjoittanut tai oppinut?<br />
+- Tavoitetta: Mihin esitelmää käytetään ja kuinka pitkä sen pitää olla?<br />
+- Rajausta: Mihin näkökulmaan keskitytään? Mitä jätetään pois?<br />
+- Esimerkkejä: Millainen rakenne tai tyyli olisi hyvä?</p>
+<p>Tekoäly tekee oletuksia joka kohdassa ja antaa sinulle jonkin version, joka <em>saattaa</em> sopia tarpeisiisi.</p>
+<h3>Hyvä esimerkki: selkeä konteksti ja terävä prompti</h3>
+<p><strong>Konteksti:</strong><br />
+- Rooli: Olen lukion ensimmäisen vuoden opiskelija, ja pidän esitelmän pienelle ryhmälle.<br />
+- Taustatieto: Olen jo lukenut aiheesta oppikirjan luvun, mutta minulla ei ole vielä rakennetta.<br />
+- Tavoite: Haluan selkeän 5 minuutin esitelmän rungon ilmastonmuutoksen syistä ja seurauksista.<br />
+- Rajaukset: En halua liikaa numeroita ulkoa muistettavaksi, vaan helposti selitettäviä pääkohtia.<br />
+- Esimerkit: Haluan kolme pääotsikkoa, joista jokaisen alla on 2–3 ranskalaista viivaa.</p>
+<p><strong>Prompti:</strong><br />
+"Tee 5 minuutin esitelmän runko ilmastonmuutoksen syistä ja seurauksista lukiolaiselle. Käytä kolmea pääotsikkoa, ja kirjoita jokaisen alle 2–3 ranskalaista viivaa selkeällä yleiskielellä. Vältä liikaa lukuja. Esimerkkimuoto: 'Otsikko: ... — Pääkohta 1: ... — Pääkohta 2: ...'."</p>
+<p>Miksi se on hyvä?<br />
+- Rooli: lukiolainen — malli tietää kontekstin ja osaamistason.<br />
+- Tavoite: "tee esitelmän runko" — selkeä.<br />
+- Rajat: "vältä liikaa lukuja", "selkeä yleiskieli" — tarkka.<br />
+- Formaatti: "kolme pääotsikkoa, ranskalaiset viivat" — malli tietää muotoilun.<br />
+- Esimerkit: mallimuoto näyttää, millaista jäsentelyä halutaan.</p>
+<p>Ammattilaisesti hyvä konteksti ja prompti säästävät aikaa. Joudut ehkä käyttämään enemmän aikaa kontekstin ja promptin muotoiluun, mutta saat parempia tuloksia ja tarvitset vähemmän kierroksia.</p>
+<h2>Osa 4: Miksi huono konteksti ja prompti tuottaa huonoa jälkeä</h2>
+<p>Kun konteksti ja prompti ovat epäselviä, tekoäly joutuu arvailemaan. Se yrittää täydentää puuttuvat tiedot omilla oletuksillaan. Oletukset ovat usein vääriä.</p>
+<p><strong>Esimerkki:</strong> Jos kysyt "miten teen hyvän treeniohjelman", tekoäly voi ajatella, että olet kuntosaliharrastaja, juoksija tai vasta-alkaja — jokainen oletus johtaa eri vastaukseen. Jos kerrot tavoitteesi ilman kontekstia, tekoäly voi ehdottaa ratkaisuja, jotka eivät sovi sinun tilanteeseesi.</p>
+<p>Huonon kontekstin ja promptin seurauksena saat usein myös liian pitkiä tai hajanaisia vastauksia. Tekoäly ei tiedä, mihin vastaus pitäisi kohdistaa, joten se kirjoittaa kaiken, mitä tietää. Jos kerrot selvästi "tarvitsen 5 minuutin opetusvideon käsikirjoituksen", saat ytimekkään vastauksen. Jos sanot vain "kirjoita video tekoälystä", saatat saada kahden tunnin esseen aiheesta.</p>
+<p>Kontekstin ja promptin puuttuminen aiheuttaa myös turhauttavia väärinymmärryksiä. Opettaja tulkitsee "apua matikassa" eri tavoin riippuen siitä, oletko yläkoululainen vai yo-opiskelija. Tekoäly toimii samoin — ja ilman kontekstia ja selkeää promptia se valitsee usein aivan liian yleisen tai liian yksityiskohtaisen tason.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Mieti, millä tavoin antaisit itse kontekstia ja selkeän pyynnön ystävällesi, joka auttaa sinua jossakin ongelmassa kasvotusten. Mitä kerrot ensin, mitä viimeiseksi?</p>
+</blockquote>
+</blockquote>
+<h2>Osa 5: Iteratiivinen kontekstin ja promptin rakentaminen</h2>
+<p>Ammattilaisesti et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta — ammattilaiset kutsuvat tätä "prompt engineeringiksi".</p>
+<p><strong>Kierros 1 — PerusPrompt:</strong><br />
+"Tee esitelmän runko ilmastonmuutoksesta."<br />
+- Saat: yleisen perusrungon</p>
+<p><strong>Kierros 2 — Lisää kontekstia:</strong><br />
+"Esitelmä on lukiolaisille ja kestää 5 minuuttia. Lisää jokaiseen kohtaan yksi konkreettinen esimerkki."<br />
+- Saat: paremmin kohdistetun version</p>
+<p><strong>Kierros 3 — Tarkenna tavoitetta:</strong><br />
+"Nyt lisää alkuun koukku, joka herättää kuulijan kiinnostuksen, ja loppuun yksi pohdintakysymys."<br />
+- Saat: viimeistellymmän rungon</p>
+<p><strong>Kierros 4 — Muuta formaattia:</strong><br />
+"Muuta runko muistiinpanokorteiksi: jokaisen kortin yläosaan otsikko ja alle 2–3 avainsanaa, joiden varassa puhun vapaasti."<br />
+- Saat: valmiit esiintymiskortit</p>
+<p>Jokainen kierros rakentaa edellisen päälle. Tekoäly "muistaa" kontekstin jokaisessa kierroksessa (riippuen siitä, mitä mallia käytät ja siitä, onko kyse samasta sessiosta vai eri sessioista).</p>
+<p>Ammattilaisesti tämä on tehokasta. Et yritä ennustaa kaikkea etukäteen. Teet iteratiivisesti, näet tulokset ja parannat. Tämä on parempi strategia kuin kirjoittaa kerralla yksi täydellinen suurprompti, koska:<br />
+- Näet tulokset välillä ja voit korjata kurssia.<br />
+- Voit antaa kontekstia vähitellen kun ymmärrät, mitä tarvitset.<br />
+- Tekoäly pysyy paremmin "kartalla" lyhyemmillä kierroksilla.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miksi iteratiivinen kontekstin ja promptin rakentaminen olisi parempi kuin "kaiken kerralla" -lähestyminen? Mitä voisi ammattilaisesti mennä pieleen, jos yrität kertoa kaiken kerralla?</p>
+</blockquote>
+</blockquote>
+<h2>Osa 6: Kontekstin rakentaminen käytännössä</h2>
+<p>Käytännössä kontekstin ja promptin rakentaminen alkaa siitä, että ymmärrät, mitä itse tarvitset. Ennen kuin avaat tekoälyn, kirjoita itsellesi lyhyesti: kuka olen, mitä teen, mikä on ongelmani, mitä tiedän jo, mitä haluan saavuttaa.</p>
+<p>Kerro sitten nämä asiat tekoälylle — ei välttämättä muodollisesti, mutta selvästi.</p>
+<p><strong>Esimerkki 1 — Tapahtuman suunnittelu:</strong><br />
+- Huono: "Auta järjestämään juhlat."<br />
+- Hyvä: "Olen lukiolainen ja järjestän luokkamme kevätjuhlan noin 30 hengelle. Budjetti on 150 euroa, ja juhla pidetään koulun jälkeen kahdessa tunnissa. Olemme jo varanneet tilan, mutta tarjoilu ja ohjelma puuttuvat. Tarvitsen konkreettisia ehdotuksia, jotka mahtuvat budjettiin."</p>
+<p><strong>Esimerkki 2 — Harjoittelun ongelma:</strong><br />
+- Huono: "Treenini ei toimi."<br />
+- Hyvä: "Olen aloittanut juoksun kuukausi sitten ja haluan parantaa kestävyyttäni. Juoksen kolmesti viikossa noin 3 km, mutta hengästyn nopeasti enkä jaksa juosta pidempään. Tavoitteeni on juosta 5 km yhtäjaksoisesti kahdessa kuukaudessa. Tarvitsen apua ohjelman rakentamiseen ilman, että loukkaan itseäni."</p>
+<p>Nämä ovat silti lyhyitä, mutta ne sisältävät roolin, taustan, tavoitteen ja rajaukset. Ne tekevät tekoälyn vastauksesta hyödyllisemmän ja kohdennetumman.</p>
+<h2>Yhteenveto</h2>
+<p>Konteksti ja promptaus ovat kaksi puolta samasta kolikosta. Konteksti on pohja — se rakentuu viidestä osasta: roolista, taustasta, tavoitteesta, rajauksista ja esimerkeistä. Promptaus on kysymys, joka esitetään kontekstin puitteissa, ja se rakentuu viidestä elementistä: tavoitteesta, roolista, rajauksista, outputformaatista ja esimerkeistä. Yhdessä ne muodostavat tehokkaan välineen, jolla saat tekoälystä juuri sellaista apua, jota tarvitset.</p>
+<p>Ammattilaisesti et yritä antaa kaikkea yhdessä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Joka kierros tarkentaa seuraavaa, ja lopputulos on moninkertaisesti parempi kuin yksi kerralla kirjoitettu täydellinen suurprompti.</p>
+<p>Hyvä konteksti ja terävä prompti ovat investointi: ne vaativat hiukan enemmän aikaa ajatteluun ja kirjoittamiseen, mutta tuloksena on vastaus, joka on todella hyödyllinen eikä turha. Tämän kurssin ydinasia on, että konteksti ja prompti eivät ole pikkujuttu — ne ovat kaiken tekoälyviestinnän perusta. Konteksti- ja promptaustaidot ovat tärkeä työelämä- ja opiskelutaito alalla kuin alalla.</p>
+<p>Seuraavalla tunnilla syvennämme kontekstin hallintaan: ymmärrät, että tekoälyn muisti on rajallinen, ja opit hallitsemaan sitä.</p>
+<hr /></div><div class="panel" data-tab="tehtavat"><h1>Opiskelutehtävät — Konteksti ratkaisee</h1>
+<blockquote class="pause"><p>📌 <strong>Tähän tuntiin on vain yksi tehtävä</strong> — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän ammattilaisesta. Tee tämä tehtävä huolella.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 4.1 — Huono vs. hyvä prompti rinnakkain 🟢 SUOSITELTU</h2></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Näet omin silmin, miten dramaattisesti hyvä konteksti ja terävä prompti muuttavat tekoälyn vastausta. Kokeilet samaa ongelmaa kahdessa muodossa — laihana ja kunnolla rakennettuna — ja analysoit eroja.</p>
+<h3>Valitse ongelmasi</h3>
+<p>Valitse yksi kysymys, joka <strong>oikeasti kiinnostaa sinua tai liittyy opiskeluusi tai harrastukseesi</strong>. Esimerkkejä eri aiheista:</p>
+<ul>
+<li>"Miten kirjoitan hyvän esitelmän rungon?"</li>
+<li>"Miten suunnittelen viikon ruokalistan?"</li>
+<li>"Miten valmistaudun kuljettajantutkintoon?"</li>
+<li>"Miten teen treeniohjelman juoksun aloittamiseen?"</li>
+<li>"Miten parannan englannin esseen rakennetta?"</li>
+</ul>
+<p>Mitä konkreettisempi oma tarpeesi, sitä parempi havainto syntyy.</p>
+<h3>Vaiheet</h3>
+<h4>Vaihe 1 — Huono prompti: paljas kysymys</h4>
+<p>Avaa ChatGPT, Claude tai Copilot. Kysy valitsemasi kysymys <strong>ilman mitään kontekstia</strong> — kuten kysyisit hakukoneelta.</p>
+<blockquote class="pause"><p>Esim. "Miten suunnittelen viikon ruokalistan?"</p>
+</blockquote>
+<p>Tallenna vastaus (kopioi tai ota kuvakaappaus).</p>
+<h4>Vaihe 2 — Hyvä prompti: rakenna konteksti</h4>
+<p>Avaa <strong>uusi keskustelu</strong> (tärkeää, ettei edellinen vastaus vaikuta). Rakenna prompti viiden osan kautta:</p>
+<table>
+<thead>
+<tr>
+<th>Osa</th>
+<th>Mitä sisältö?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rooli</strong></td>
+<td>Kuka olet? Esim. <em>"Olen lukiolainen, joka kirjoittaa ensimmäistä esitelmää."</em></td>
+</tr>
+<tr>
+<td><strong>Tausta</strong></td>
+<td>Mitä olet jo tehnyt? Esim. <em>"Olen kerännyt muutaman lähteen, mutta minulla ei ole rakennetta."</em></td>
+</tr>
+<tr>
+<td><strong>Tavoite</strong></td>
+<td>Mitä haluat? Esim. <em>"Haluan oppia jäsentämään aiheen itse, en valmista tekstiä."</em></td>
+</tr>
+<tr>
+<td><strong>Rajaukset</strong></td>
+<td>Mitä et halua? Esim. <em>"En halua vaikeita termejä — selitä yksinkertaisesti."</em></td>
+</tr>
+<tr>
+<td><strong>Formaatti</strong></td>
+<td>Miten vastataan? Esim. <em>"Anna 3–5 askelta listana, ei pitkää esseetä."</em></td>
+</tr>
+</tbody>
+</table>
+<p>Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ovat mukana. Lähetä se mallille ja tallenna vastaus.</p>
+<h4>Vaihe 3 — Iteroi: paranna vastausta vielä kerran</h4>
+<p>Hyväkään ensimmäinen vastaus ei ole vielä loppu. Ammattilaiset eivät anna kerralla "kaikkea oikein" -promptia — he <strong>tarkentavat kierros kierrokselta</strong>. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:</p>
+<ul>
+<li>"Tarkenna kohta 3 konkreettisella esimerkillä."</li>
+<li>"Anna myös yksi esimerkki, jossa kohta menee tarkoituksella pieleen, jotta opin tunnistamaan virheen."</li>
+<li>"Selitä tämä niin, että ymmärtäisin sen, vaikka en olisi koskaan tehnyt tällaista aiemmin."</li>
+</ul>
+<p>Tallenna myös tämä vastaus. Tämä on iteratiivisuuden ydin — tekoäly ei ole arpapeli, jossa joko osuu tai ei. Se on keskustelu, jossa parannat ohjausta sitä mukaa kun näet, mihin se menee.</p>
+<h4>Vaihe 4 — Vertaa vastauksia</h4>
+<p>Aseta kolme vastausta (huono, hyvä, iteroitu) vierekkäin ja täytä taulukko:</p>
+<table>
+<thead>
+<tr>
+<th>Mitä vertaillaan</th>
+<th>Huono</th>
+<th>Hyvä</th>
+<th>Iteroitu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pituus (sanaa, suurin piirtein)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sopivuus tasollesi (liian helppo / sopiva / liian vaikea)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Osuvuus juuri sinun ongelmaan</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Käytännöllisyys (voinko soveltaa heti?)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tarkkuus (yleinen vai juuri sinulle)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>Vaihe 5 — Kirjoita lyhyt pohdinta</h4>
+<p>Vastaa 4–6 lauseella:</p>
+<ul>
+<li>Mikä oli huonon ja hyvän version välillä suurin ero?</li>
+<li>Mikä viidestä kontekstin osasta (rooli, tausta, tavoite, rajaukset, formaatti) toi mielestäsi suurimman parannuksen?</li>
+<li>Mitä iterointi (vaihe 3) muutti — ja mitä tämä kertoo siitä, miten tekoälyä kannattaa käyttää jatkossa?</li>
+<li>Yhden lauseen sääntö, jonka otat tästä mukaan: <em>"Jatkossa annan tekoälylle aina…"</em></li>
+</ul>
+<blockquote class="pause"><p>💡 <strong>Vinkki:</strong> Tehtävää ei palauteta, mutta säästä tämä oma muistiinpanodokumentti tarkasti. Vaiheessa 5 kirjoittamasi <em>"Jatkossa annan tekoälylle aina…"</em> -sääntö on yksi tärkeimmistä asioista, jonka viet koko kurssilta mukanasi.</p>
+</blockquote>
+<p><strong>Tunnin 4 jälkeen osaat antaa tekoälylle kontekstin, joka tuottaa käyttökelpoisia vastauksia.</strong></p></div></div></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Konteksti ja promptaus</h1>
+<p>Tällä välilehdellä pääset kokeilemaan käytännössä, miten konteksti ja prompti muuttavat tekoälyltä saamaasi vastausta. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan muu näe tai arvioi valintojasi. Väärä vastaus ei haittaa — jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen tai osui oikeaan, joten opit myös kokeilemalla. Tehtävät alkavat käsitteiden kertaamisesta ja etenevät kohti tilannetta, jossa rakennat itse toimivan pyynnön vaihe vaiheelta.</p>
+<h2>Tehtävä 1/4 — käsitteet ja niiden tehtävä</h2>
+<p>Aloitetaan tutuista käsitteistä, ennen kuin siirrytään soveltamiseen. Valitse ensin käsite vasemmalta ja sitten sitä kuvaava selitys oikealta.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — mikä kontekstin osa tämä on</h2>
+<p>Kontekstin viidestä osasta tavoite on yleensä itse pyyntö, joten tässä harjoitellaan niitä neljää osaa, jotka jäävät helpoiten pois. Huomaa, että rooli tarkoittaa tässä sinun omaa rooliasi ja osaamistasi, ei tekoälylle annettua roolia.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — konteksti vai pelkkä hyvä kysymys</h2>
+<p>Nyt siirrytään käsitteiden tunnistamisesta niiden arviointiin. Valitse jokaiseen kysymykseen vaihtoehto, joka pitää paikkansa.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — rakenna pyyntö, joka osuu</h2>
+<p>Viimeinen tehtävä kokoaa opitun yhteen: rakennat toimivan pyynnön vaihe vaiheelta ja päätät itse, mikä vie lähemmäs osuvaa vastausta. Myös liian varovainen valinta saa oman palautteensa.</p>
+<div class="task-widget" data-ti="3"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto</h1>
+<h2>Konteksti (context)</h2>
+<p>Kaikkien olosuhteiden ja taustatietojen kokonaisuus, jota tekoäly tarvitsee ymmärtääkseen kysymyksen ja antaakseen sopivan vastauksen. Konteksti koostuu roolista, taustatiedoista, tavoitteesta, rajauksista ja esimerkeistä. Se on vastakohta yksittäiselle promptille.</p>
+<h2>Rooli (role)</h2>
+<p>Se, kuka olet kontekstissa — ammattilaisena, opiskelijana, aloittelijana tai asiantuntijana — sekä tausta-asiantuntemuksesi. Rooli auttaa tekoälyä valitsemaan vastaukseen sopivan tason ja sävyn.</p>
+<h2>Taustatieto (background information)</h2>
+<p>Kaikki aiemmin tehty työ, aiemmat yritykset, jo tiedossa olevat tiedot tai tekijät, jotka vaikuttavat nykyiseen ongelmaan. Taustatieto auttaa tekoälyä ymmärtämään, mistä haluat lähteä ja mitä voit jo ottaa annettuna.</p>
+<h2>Tavoite (goal / objective)</h2>
+<p>Se, mitä haluat saavuttaa, miksi kysyt ja mihin käytät vastausta. Selkeä tavoite auttaa tekoälyä suodattamaan epäolennaisen tiedon ja kohdistamaan vastauksen juuri sinun tarpeisiisi.</p>
+<h2>Rajaukset (constraints)</h2>
+<p>Ne asiat, joita ei haluta vastaukseen — tekniikat, palvelut, näkökulmat tai tyylit, joita halutaan välttää. Rajaukset tekevät vastauksesta tehokkaamman poistamalla epäolennaisen.</p>
+<h2>Esimerkki (example)</h2>
+<p>Konkreettinen näyttö siitä, minkä muotoinen tai -tyyppinen vastaus halutaan. Esimerkkejä voivat olla edellisen työn näytteet, mallikoodi tai näytetekstit, joiden perusteella tekoäly voi ymmärtää tyyliä ja rakennetta.</p>
+<h2>Prompti (prompt)</h2>
+<p>Yksittäinen kysymys tai käsky, joka esitetään tekoälylle. Suomeksi käytetään myös termiä kehote. Prompti on eri asia kuin konteksti — prompti on kysymys, konteksti on pohja, jonka päälle kysymys rakentuu.</p>
+<h2>Johdatteleva kysymys (leading question)</h2>
+<p>Kysymys tai prompti, joka ohjaa vastaajaa tiettyyn suuntaan tai tietynlaiseen vastaustyyliin. Tekoälyn kanssa johdattelevat kysymykset ovat hyödyllisiä, koska ne auttavat tekoälyä ymmärtämään, millaista apua tarvitset.</p>
+<h2>Hallusinaatio (hallucination)</h2>
+<p>Kun tekoäly tuottaa tekstiä, joka näyttää oikealta mutta on keksittyä tai virheellistä. Hyvä konteksti auttaa vähentämään tämän ilmiön todennäköisyyttä.</p>
+<h2>Validointi (validation)</h2>
+<p>Tarkistus siitä, että tekoälyn antama vastaus on oikea, sopiva ja turvallinen käyttää. Hyvä konteksti auttaa, mutta kriittisten vastausten validointi on silti ammattilaisen velvollisuus.</p>
+<h2>Tiivistys (summarization)</h2>
+<p>Pitkän tekstin tai keskustelun tiivistäminen lyhyemmäksi oleellinen säilyttäen. Tämä on tärkeä tekniikka kontekstin hallinnassa, kun konteksti-ikkuna on rajallinen.</p>
+<hr /></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 4</text>
+<text x="74" y="244" font-size="50" font-weight="800" fill="#1B2336">Konteksti ratkaisee</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Miten puhut tekoälylle niin, että se ymmärtää</text>
+<g transform="translate(636,196)">
+<rect x="0" y="0" width="246" height="118" rx="18" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<rect x="22" y="24" width="150" height="11" rx="5.5" fill="#D8DEEC"/>
+<rect x="22" y="48" width="110" height="11" rx="5.5" fill="#D8DEEC"/>
+<g transform="translate(22,78)">
+<rect x="0" y="0" width="58" height="22" rx="11" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="1.5"/><text x="29" y="15" text-anchor="middle" font-size="11" fill="#2F46B0" font-family="ui-monospace,monospace">rooli</text>
+<rect x="66" y="0" width="62" height="22" rx="11" fill="#EAF7F0" stroke="#2F9E69" stroke-width="1.5"/><text x="97" y="15" text-anchor="middle" font-size="11" fill="#247A52" font-family="ui-monospace,monospace">tavoite</text>
+<rect x="134" y="0" width="62" height="22" rx="11" fill="#E5F6F7" stroke="#0E9AA7" stroke-width="1.5"/><text x="165" y="15" text-anchor="middle" font-size="11" fill="#0B7A85" font-family="ui-monospace,monospace">rajaus</text>
+</g></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g2)"/>
+<text x="74" y="104" font-size="40" font-weight="800" fill="#1B2336">"Auta minua" ei riitä</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Sama epämääräinen pyyntö johtaa moneen eri tulkintaan.</text>
+<g transform="translate(74,174)">
+<rect x="0" y="0" width="380" height="248" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="40" cy="46" r="18" fill="#FBE6D8"/><path d="M33 53 l7 -15 l7 15 M36 48 h8" stroke="#C26B2E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="44" font-size="20" font-weight="700" fill="#1B2336">Pelkkä pyyntö</text>
+<text x="72" y="68" font-size="16" fill="#A35A22" font-family="ui-monospace,monospace">"Auta, en saa tätä toimimaan."</text>
+<text x="28" y="116" font-size="16" fill="#5A6478">Onko kyse pelistä?</text>
+<text x="28" y="146" font-size="16" fill="#5A6478">Ruoanlaitosta?</text>
+<text x="28" y="176" font-size="16" fill="#5A6478">Koulutehtävästä?</text>
+<text x="28" y="222" font-size="15" fill="#A35A22">Tekoäly joutuu arvaamaan</text></g>
+<g transform="translate(506,174)">
+<rect x="0" y="0" width="380" height="248" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="40" cy="46" r="18" fill="#DFF3E8"/><path d="M33 46 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="44" font-size="20" font-weight="700" fill="#1B2336">Pyyntö + konteksti</text>
+<text x="28" y="98" font-size="15.5" fill="#3A4253">"Olen lukiolainen, valmistelen</text>
+<text x="28" y="122" font-size="15.5" fill="#3A4253">5 min esitelmää ilmaston-</text>
+<text x="28" y="146" font-size="15.5" fill="#3A4253">muutoksesta ja tarvitsen</text>
+<text x="28" y="170" font-size="15.5" fill="#3A4253">rakenteen kolmesta kohdasta."</text>
+<text x="28" y="222" font-size="15" fill="#247A52">Tekoäly ymmärtää tarpeen</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g3)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Mitä konteksti on</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Kaikki se tieto, jota tekoäly tarvitsee ymmärtääkseen, mitä todella kysyt.</text>
+<g transform="translate(74,174)">
+<rect x="0" y="0" width="380" height="252" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="12" r="8"/><path d="M2 38 a16 14 0 0 1 28 0"/></g>
+<text x="80" y="52" font-size="22" font-weight="800" fill="#2F46B0">Opettaja työhuoneessa</text>
+<text x="28" y="110" font-size="16.5" fill="#1B2336">Tietää, että olet 15-vuotias</text>
+<text x="28" y="142" font-size="16.5" fill="#1B2336">Tietää, mitä olet jo oppinut</text>
+<text x="28" y="174" font-size="16.5" fill="#1B2336">Tuntee tavoitteesi</text>
+<text x="28" y="222" font-size="15" fill="#5A6478" font-style="italic">→ osaa antaa oikean selityksen</text></g>
+<g transform="translate(506,174)">
+<rect x="0" y="0" width="380" height="252" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,24)"><rect x="0" y="2" width="32" height="28" rx="7" fill="none" stroke="#3B5BDB" stroke-width="2.2"/><line x1="16" y1="2" x2="16" y2="-5" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="-8" r="3" fill="#3B5BDB"/><circle cx="11" cy="14" r="3" fill="#3B5BDB"/><circle cx="22" cy="14" r="3" fill="#3B5BDB"/><path d="M11 23 H22" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round"/></g>
+<text x="80" y="48" font-size="22" font-weight="800" fill="#1B2336">Tekoäly</text>
+<text x="28" y="110" font-size="16.5" fill="#3A4253">Tarvitsee saman tiedon</text>
+<text x="28" y="142" font-size="16.5" fill="#3A4253">Ei näe tilannettasi</text>
+<text x="28" y="174" font-size="16.5" fill="#3A4253">Ei tunne taustaasi</text>
+<text x="28" y="222" font-size="15" fill="#5A6478" font-style="italic">→ sinun on kerrottava se</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g4)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kontekstin viisi osaa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Hyvä konteksti rakentuu näistä viidestä palasta.</text>
+<g transform="translate(74,160)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">1</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Rooli</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Kuka olet, mikä on osaamistasosi</text></g>
+<g transform="translate(492,160)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">2</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Taustatieto</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Mitä on jo tehty ja opittu</text></g>
+<g transform="translate(74,248)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">3</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Tavoite</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Miksi kysyt, mihin käytät vastausta</text></g>
+<g transform="translate(492,248)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="40" cy="36" r="20" fill="#EEF1FE"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">4</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#1B2336">Rajaukset</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Mitä jätetään pois tai rajataan ulos</text></g>
+<g transform="translate(283,336)">
+<rect x="0" y="0" width="394" height="72" rx="13" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<circle cx="40" cy="36" r="20" fill="#FFFFFF"/><text x="40" y="44" text-anchor="middle" font-size="22" font-weight="800" fill="#3B5BDB">5</text>
+<text x="74" y="32" font-size="20" font-weight="700" fill="#2F46B0">Esimerkit</text>
+<text x="74" y="56" font-size="15" fill="#5A6478">Näyte siitä, millaista vastausta odotat</text></g>
+<text x="74" y="446" font-size="16" fill="#5A6478" font-style="italic">Esim. treeniohjelma: rooli = vasta-alkaja, tavoite = 5 km, rajaus = 3 krt/vko, ei salia.</text>
+<text x="74" y="474" font-size="15" fill="#5A6478" font-style="italic">Et tarvitse kaikkia joka kerta — mutta tieto niistä tekee sinusta paremman käyttäjän.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g5)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Konteksti vs. prompti</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Yleinen väärinkäsitys: "hyvä prompti" olisi sama kuin "hyvä konteksti".</text>
+<g transform="translate(74,178)">
+<rect x="0" y="0" width="812" height="120" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(28,30)" fill="none" stroke="#5A6478" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 H44 M4 4 V44 H44 V4 M14 18 H34 M14 28 H30 M14 38 H26"/></g>
+<text x="92" y="44" font-size="22" font-weight="800" fill="#1B2336">Konteksti = koko resepti</text>
+<text x="92" y="78" font-size="17" fill="#3A4253">Ainesosat, valmistusohjeet, ajat ja lämpötilat —</text>
+<text x="92" y="102" font-size="17" fill="#3A4253">kaikki se, mikä tekee lopputuloksesta hyödyllisen.</text></g>
+<g transform="translate(74,318)">
+<rect x="0" y="0" width="812" height="108" rx="16" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<g transform="translate(28,28)" fill="none" stroke="#3B5BDB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="13"/><path d="M11 11 a5 5 0 0 1 9 2 c0 4 -5 4 -5 8 M15 28 v.5"/></g>
+<text x="92" y="44" font-size="22" font-weight="800" fill="#2F46B0">Prompti = reseptin otsikko</text>
+<text x="92" y="80" font-size="17" fill="#1B2336">Kysymys tai tehtävänanto, jonka esität — konteksti on kaikki muu.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g6)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hyvän promptin viisi elementtiä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Perustyökalusarjasi promptin muotoiluun.</text>
+<g transform="translate(74,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#247A52">Tavoite</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Mitä haluat: kirjoita,</text><text x="24" y="100" font-size="15.5" fill="#3A4253">selitä, paranna.</text></g>
+<g transform="translate(354,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#3B5BDB">Rooli</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Kuka tekoäly on —</text><text x="24" y="100" font-size="15.5" fill="#3A4253">vaikuttaa näkökulmaan.</text></g>
+<g transform="translate(634,162)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#0E9AA7">Rajat</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Mitä EI tehdä: enintään</text><text x="24" y="100" font-size="15.5" fill="#3A4253">3 lausetta, ei termejä.</text></g>
+<g transform="translate(214,316)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#C79100">Formaatti</text>
+<text x="24" y="78" font-size="15.5" fill="#3A4253">Miten vastaus annetaan:</text><text x="24" y="100" font-size="15.5" fill="#3A4253">taulukko, lista, JSON.</text></g>
+<g transform="translate(494,316)">
+<rect x="0" y="0" width="252" height="138" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<text x="24" y="44" font-size="20" font-weight="800" fill="#2F46B0">Esimerkit</text>
+<text x="24" y="78" font-size="15.5" fill="#1B2336">Yksi näyte tekee</text><text x="24" y="100" font-size="15.5" fill="#1B2336">vaatimuksesta selkeän.</text></g>
+<text x="74" y="486" font-size="16" fill="#5A6478" font-style="italic">Esim. "ehdota 3 edullista illallista neljälle, yksi kasvis" — tavoite, rajat ja muoto.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g7)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ROOLI · TARKENNUS</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Rooli ei lisää tietoa</text>
+<text x="74" y="158" font-size="18" fill="#5A6478">Rooli vaikuttaa näkökulmaan ja sävyyn — ei siihen, mitä malli oikeasti osaa.</text>
+<g transform="translate(74,196)">
+<rect x="0" y="0" width="380" height="200" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="13" r="12"/><path d="M17 7 l2 4.1 l4.5 .5 l-3.4 3 .9 4.4 -4 -2.2 -4 2.2 .9 -4.4 -3.4 -3 4.5 -.5 Z"/><path d="M9 23 L6 37 L17 31 L28 37 L25 23"/></g>
+<text x="28" y="92" font-size="19" font-weight="700" fill="#1B2336">"Olet huippuasiantuntija"</text>
+<text x="28" y="128" font-size="16" fill="#A35A22">ei tee vastauksesta</text>
+<text x="28" y="152" font-size="16" fill="#A35A22">asiantuntevampaa, jos</text>
+<text x="28" y="176" font-size="16" fill="#A35A22">tarvittava tieto puuttuu.</text></g>
+<g transform="translate(506,196)">
+<rect x="0" y="0" width="380" height="200" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 a3 3 0 0 1 3 -3 H30 a3 3 0 0 1 3 3 V26 a3 3 0 0 1 -3 3 H16 L10 34 V29 H9 a3 3 0 0 1 -3 -3 Z"/></g>
+<text x="28" y="92" font-size="19" font-weight="700" fill="#1B2336">"Olet aloittelija</text>
+<text x="28" y="118" font-size="19" font-weight="700" fill="#1B2336">keittiössä"</text>
+<text x="28" y="154" font-size="16" fill="#247A52">ohjaa vastauksen sävyä:</text>
+<text x="28" y="178" font-size="16" fill="#247A52">perusteellisempi ja selkeämpi.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g8)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI · HUONO</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Ilman kontekstia</text>
+<rect x="74" y="152" width="812" height="58" rx="12" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="100" y="188" font-size="19" fill="#A35A22" font-family="ui-monospace,monospace">"Kirjoita esitelmä ilmastonmuutoksesta."</text>
+<text x="74" y="252" font-size="19" font-weight="700" fill="#1B2336">Mitä puuttuu?</text>
+<g font-size="17" fill="#3A4253">
+<circle cx="92" cy="284" r="6" fill="#C26B2E"/><text x="112" y="290">Rooli — oletko lukiolainen vai opettaja?</text>
+<circle cx="92" cy="316" r="6" fill="#C26B2E"/><text x="112" y="322">Tausta — mitä olet jo kirjoittanut tai oppinut?</text>
+<circle cx="92" cy="348" r="6" fill="#C26B2E"/><text x="112" y="354">Tavoite — mihin esitelmää käytetään, kuinka pitkä?</text>
+<circle cx="92" cy="380" r="6" fill="#C26B2E"/><text x="112" y="386">Rajaus — mihin näkökulmaan keskitytään?</text>
+<circle cx="92" cy="412" r="6" fill="#C26B2E"/><text x="112" y="418">Esimerkit — millainen rakenne tai tyyli olisi hyvä?</text>
+</g>
+<text x="74" y="456" font-size="16" fill="#5A6478" font-style="italic">Tekoäly tekee oletuksia joka kohdassa — ja antaa version, joka vain saattaa sopia.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g9)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI · HYVÄ</text>
+<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Selkeä konteksti + terävä prompti</text>
+<g transform="translate(74,150)">
+<rect x="0" y="0" width="430" height="298" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="18" font-weight="800" fill="#5A6478">Konteksti</text>
+<text x="24" y="80" font-size="15" fill="#3B5BDB" font-weight="700">Rooli</text><text x="24" y="100" font-size="14.5" fill="#3A4253">lukion 1. vuoden opiskelija</text>
+<text x="24" y="132" font-size="15" fill="#3B5BDB" font-weight="700">Tausta</text><text x="24" y="152" font-size="14.5" fill="#3A4253">lukenut oppikirjan luvun</text>
+<text x="24" y="184" font-size="15" fill="#3B5BDB" font-weight="700">Tavoite</text><text x="24" y="204" font-size="14.5" fill="#3A4253">5 min esitelmän runko</text>
+<text x="24" y="236" font-size="15" fill="#3B5BDB" font-weight="700">Rajaus</text><text x="24" y="256" font-size="14.5" fill="#3A4253">ei liikaa numeroita ulkoa</text>
+<text x="24" y="284" font-size="14.5" fill="#3A4253"><tspan font-weight="700" fill="#3B5BDB">Esimerkit</tspan>  3 otsikkoa, 2–3 viivaa</text></g>
+<g transform="translate(536,150)">
+<rect x="0" y="0" width="350" height="298" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="24" y="40" font-size="18" font-weight="800" fill="#2F46B0">Prompti</text>
+<text x="24" y="76" font-size="15" fill="#1B2336">"Tee 5 min esitelmän runko</text>
+<text x="24" y="98" font-size="15" fill="#1B2336">ilmastonmuutoksen syistä ja</text>
+<text x="24" y="120" font-size="15" fill="#1B2336">seurauksista lukiolaiselle.</text>
+<text x="24" y="142" font-size="15" fill="#1B2336">Käytä kolmea pääotsikkoa ja</text>
+<text x="24" y="164" font-size="15" fill="#1B2336">2–3 ranskalaista viivaa kuhunkin.</text>
+<text x="24" y="186" font-size="15" fill="#1B2336">Vältä liikaa lukuja. Esimerkki-</text>
+<text x="24" y="208" font-size="15" fill="#1B2336">muoto: 'Otsikko: ... — Kohta 1...'"</text>
+<line x1="24" y1="232" x2="326" y2="232" stroke="#C2CAD9" stroke-width="1"/>
+<text x="24" y="262" font-size="14.5" fill="#247A52">Vähemmän kierroksia,</text>
+<text x="24" y="282" font-size="14.5" fill="#247A52">parempi tulos.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g10)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Huono konteksti = huonoa jälkeä</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Kun pyyntö on epäselvä, tekoäly täydentää puuttuvat tiedot omilla oletuksillaan.</text>
+<text x="74" y="186" font-size="19" fill="#3A4253" font-family="ui-monospace,monospace">"Miten teen hyvän treeniohjelman?"</text>
+<g transform="translate(74,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Kuntosaliharrastaja?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">painot, jakso, salivuorot</text></g>
+<g transform="translate(351,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Juoksija?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">intervallit, kilometrit</text></g>
+<g transform="translate(628,212)">
+<rect x="0" y="0" width="258" height="120" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="129" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#A35A22">Vasta-alkaja?</text>
+<text x="129" y="82" text-anchor="middle" font-size="15" fill="#5A6478">kevyt aloitus, perusteet</text></g>
+<rect x="74" y="360" width="812" height="88" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="100" y="396" font-size="18" fill="#3A4253">Jokainen oletus johtaa eri vastaukseen. Ilman kohdistusta tekoäly kirjoittaa</text>
+<text x="100" y="424" font-size="18" fill="#3A4253">mitä tietää — liian yleisellä tai liian yksityiskohtaisella tasolla.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g11)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Rakenna kierros kierrokselta</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Älä yritä kertoa kaikkea kerralla — jokainen kierros rakentaa edellisen päälle.</text>
+<g transform="translate(74,164)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">1</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Perusprompti</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Tee esitelmän runko ilmastonmuutoksesta." → yleinen perusrunko</text></g>
+<g transform="translate(74,244)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">2</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Lisää kontekstia</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Lukiolaisille, 5 min, yksi esimerkki per kohta." → kohdistettu versio</text></g>
+<g transform="translate(74,324)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="20" fill="#EEF1FE"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">3</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#1B2336">Tarkenna tavoitetta</text>
+<text x="78" y="54" font-size="15.5" fill="#5A6478">"Lisää alkuun koukku ja loppuun pohdintakysymys." → viimeistelty runko</text></g>
+<g transform="translate(74,404)">
+<rect x="0" y="0" width="812" height="68" rx="13" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
+<circle cx="42" cy="34" r="20" fill="#FFFFFF"/><text x="42" y="42" text-anchor="middle" font-size="20" font-weight="800" fill="#3B5BDB">4</text>
+<text x="78" y="30" font-size="19" font-weight="700" fill="#2F46B0">Muuta formaattia</text>
+<text x="78" y="54" font-size="15.5" fill="#3A4253">"Muuta muistiinpanokorteiksi: otsikko + 2–3 avainsanaa." → valmiit esiintymiskortit</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi iteratiivinen tapa voittaa</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Et yritä ennustaa kaikkea etukäteen — näet tulokset ja parannat.</text>
+<g transform="translate(74,168)">
+<rect x="0" y="0" width="394" height="262" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18 a16 16 0 1 1 4 11"/><path d="M2 30 V18 H14"/></g>
+<text x="80" y="50" font-size="21" font-weight="800" fill="#247A52">Pieni kierros</text>
+<circle cx="36" cy="104" r="6" fill="#2F9E69"/><text x="56" y="110" font-size="16.5" fill="#3A4253">Näet tulokset välillä</text>
+<circle cx="36" cy="148" r="6" fill="#2F9E69"/><text x="56" y="154" font-size="16.5" fill="#3A4253">Voit korjata kurssia</text>
+<circle cx="36" cy="192" r="6" fill="#2F9E69"/><text x="56" y="198" font-size="16.5" fill="#3A4253">Annat kontekstia vähitellen</text>
+<circle cx="36" cy="236" r="6" fill="#2F9E69"/><text x="56" y="242" font-size="16.5" fill="#3A4253">Malli pysyy kartalla</text></g>
+<g transform="translate(492,168)">
+<rect x="0" y="0" width="394" height="262" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,26)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 H30 L40 14 V40 H6 Z M30 4 V14 H40"/></g>
+<text x="80" y="50" font-size="21" font-weight="800" fill="#A35A22">Yksi suurprompti</text>
+<circle cx="36" cy="104" r="6" fill="#C26B2E"/><text x="56" y="110" font-size="16.5" fill="#3A4253">Yrität ennustaa kaiken</text>
+<circle cx="36" cy="148" r="6" fill="#C26B2E"/><text x="56" y="154" font-size="16.5" fill="#3A4253">Et näe väliä</text>
+<circle cx="36" cy="192" r="6" fill="#C26B2E"/><text x="56" y="198" font-size="16.5" fill="#3A4253">Vaikea korjata</text>
+<circle cx="36" cy="236" r="6" fill="#C26B2E"/><text x="56" y="242" font-size="16.5" fill="#3A4253">Malli hukkuu pitkään tekstiin</text></g>
+<text x="74" y="468" font-size="16" fill="#5A6478" font-style="italic">Esim. kevätjuhlan suunnittelu: aloita pienesti, lisää budjetti ja tila kierros kierrokselta.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l4g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l4g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Konteksti ja promptaus ovat saman kolikon kaksi puolta.</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="394" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="21" font-weight="800" fill="#3B5BDB">Konteksti = pohja</text>
+<text x="24" y="72" font-size="15.5" fill="#3A4253">Rooli · tausta · tavoite ·</text>
+<text x="24" y="96" font-size="15.5" fill="#3A4253">rajaukset · esimerkit</text></g>
+<g transform="translate(492,170)">
+<rect x="0" y="0" width="394" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="24" y="40" font-size="21" font-weight="800" fill="#2F9E69">Prompti = kysymys</text>
+<text x="24" y="72" font-size="15.5" fill="#3A4253">Tavoite · rooli · rajat ·</text>
+<text x="24" y="96" font-size="15.5" fill="#3A4253">formaatti · esimerkit</text></g>
+<rect x="74" y="312" width="812" height="100" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,344)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="354" font-size="22" font-weight="800" fill="#247A52">Hyvä konteksti ja terävä prompti ovat investointi.</text>
+<text x="150" y="386" font-size="18" fill="#3A4253">Rakenna kierros kierrokselta — saat vastauksen, joka on todella hyödyllinen.</text>
+<text x="74" y="452" font-size="16" fill="#5A6478" font-style="italic">Seuraavaksi: tekoälyn muisti on rajallinen — opit hallitsemaan sitä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-03/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-05/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-04')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "luokka", "lid": "lesson-04", "num": 4, "title": "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", "ptasks": [{"type": "match", "title": "Käsitteet ja niiden tehtävä", "intro": "Yhdistä jokainen käsite sitä kuvaavaan selitykseen. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Konteksti", "b": "Taustan kokonaisuus, jonka varaan yksittäinen kysymys nojaa, jotta vastaus osuu tilanteeseen.", "explain": "Se on pohja, jota ilman tekoäly joutuu arvaamaan tilanteen ja täydentämään puuttuvat tiedot omilla oletuksillaan."}, {"a": "Prompti", "b": "Yksittäinen kysymys tai tehtävänanto, jonka esität juuri nyt.", "explain": "Se on itse pyyntö, joka rakentuu pohjan päälle — terävä pyyntö ilman pohjaa jää silti vajaaksi."}, {"a": "Taustatieto", "b": "Se, mitä on jo kokeiltu tai tiedetään ja mistä malli voi lähteä liikkeelle.", "explain": "Kun kerrot, mitä on jo kokeiltu, malli ei ehdota uudelleen sitä, mikä ei toiminut."}, {"a": "Rajaus", "b": "Asia, joka halutaan sulkea vastauksen ulkopuolelle.", "explain": "Kun suljet pois ei-toivotun, vastaus terävöityy ja osuu paremmin juuri sinun tarpeeseesi."}, {"a": "Outputformaatti", "b": "Muoto, jossa vastaus halutaan: vaikkapa lista, taulukko tai vaiheittainen ohje.", "explain": "Kun kerrot halutun muodon, saat vastauksen, jonka voi ottaa suoraan käyttöön ilman uutta pyyntöä."}, {"a": "Esimerkki", "b": "Konkreettinen näyte, joka osoittaa mallille halutun tyylin tai rakenteen.", "explain": "Yksi näyte kertoo mallille vaatimukset tarkemmin kuin pitkä sanallinen kuvaus."}, {"a": "Iteratiivinen rakentaminen", "b": "Vastauksen parantaminen kierros kierrokselta sen sijaan, että kaikki annettaisiin kerralla.", "explain": "Kun näet välitulokset ja tarkennat niiden pohjalta, korjaat suuntaa ajoissa etkä jää yhden ison arvauksen varaan."}, {"a": "Rooli", "b": "Näkökulma ja kieli, jonka pyydät mallin ottamaan — ei kuitenkaan lisää sen tietämystä.", "explain": "Se ohjaa sävyä, näkökulmaa ja kieltä, mutta ei tuo mallille tietoa, jota sillä ei jo ole."}], "summary": "<strong>Konteksti on pohja ja prompti sen päälle esitetty pyyntö.<\/strong> Kumpikin rakentuu viidestä osasta, ja moni osa toistuu molemmissa — niiden tunteminen on ensiaskel hyvän vastauksen saamiseen."}, {"type": "classify", "title": "Mikä kontekstin osa tämä on?", "intro": "Lue jokainen tilanne ja päättele, mitä kontekstin osaa se edustaa. Rooli tarkoittaa tässä sinun omaa rooliasi ja osaamistasi — ei tekoälylle annettua roolia.", "categories": ["Rooli", "Taustatieto", "Rajaus", "Esimerkki"], "items": [{"text": "Olen uusi työntekijä ravintolan salissa, enkä ole käyttänyt tilausjärjestelmää aiemmin.", "answer": 0, "explain": "Tämä kertoo, kuka olet ja kuinka paljon osaat — se on rooli, joka ohjaa mallia selittämään sopivalla tasolla. Taustatieto taas olisi sitä, mitä tilanteessa on jo tehty tai kokeiltu."}, {"text": "Kokeilin jo kirjata tilauksen uudelleen ja käynnistää päätteen, mutta virhe toistuu.", "answer": 1, "explain": "Tämä kuvaa, mitä on jo kokeiltu ja tapahtunut — se on taustatietoa, joka estää mallia ehdottamasta uudelleen sitä, mikä ei toiminut. Rooli kertoisi, kuka olet."}, {"text": "Älä ehdota maksullisia sovelluksia — käytän vain työpaikan valmiita ohjelmia.", "answer": 2, "explain": "Tämä sulkee jotain pois vastauksesta, mikä tekee siitä rajauksen. Se ei kerro, kuka olet (rooli) tai mitä on jo tehty (taustatieto), vaan mitä et halua mukaan."}, {"text": "Annan mallille aiemman perehdytysohjeen, jonka selkeää rakennetta haluan uuden ohjeen noudattavan.", "answer": 3, "explain": "Malliksi annettu näyte halutusta rakenteesta ja tyylistä on esimerkki: se osoittaa mallille, millaista jälkeä haluat. Taustatieto kertoisi, mitä on jo tehty, mutta tässä annat konkreettisen mallin, jota vastauksen tulee jäljitellä."}, {"text": "Olen harrastelijakokki kotona, en ammattilainen.", "answer": 0, "explain": "Tämä kertoo osaamistasosi, joten se on rooli — sen avulla malli osaa vastata sopivalla tarkkuudella. Rajaus taas sulkisi jotain pois, mutta tässä vain kuvaat, kuka olet."}, {"text": "Ensi viikon työvuorolista on jo tehty ja lomat merkitty kalenteriin.", "answer": 1, "explain": "Nämä ovat lähtökohtia, jotka malli voi ottaa annettuina — siis taustatietoa. Tavoite kertoisi, mitä haluat saada aikaan, mutta tässä kuvaat vain nykytilannetta."}, {"text": "Vastaus ei saa sisältää gluteenia sisältäviä raaka-aineita, koska asiakas on keliaakikko.", "answer": 2, "explain": "Tämä sulkee tietyt raaka-aineet pois, joten se on rajaus. Se ei ole näyte halutusta vastauksesta (esimerkki), vaan ehto, jota vastauksen on noudatettava."}, {"text": "Liitän mukaan valokuvan reseptikortista, jonka tyyliä haluan vastauksen noudattavan.", "answer": 3, "explain": "Malliksi annettu näyte halutusta tyylistä on esimerkki. Rajaus kieltäisi jotain, mutta tässä näytät, millaista jälkeä haluat — et sulje mitään pois."}], "summary": "Rooli, taustatieto, rajaus ja esimerkki tarttuvat kukin eri asiaan: kuka olet, mitä on jo tehty, mitä jätetään pois ja millaista jälkeä haluat. Niiden erottaminen on ensiaskel hyvän kontekstin rakentamiseen."}, {"type": "quiz", "title": "Konteksti vai pelkkä hyvä kysymys?", "intro": "Jokainen kysymys koettelee yhtä yleistä väärinkäsitystä. Valitse vaihtoehto, joka pitää paikkansa, ja lue selitykset myös muista vaihtoehdoista.", "items": [{"q": "Työkaveri liittää kysymyksensä eteen kolme kappaletta rönsyilevää kertomusta koko työpäivästään. Tekeekö tämä automaattisesti kontekstista hyvää?", "options": [{"text": "Ei — hyvä konteksti on jäsenneltyä ja olennaista; lyhyt ja täsmällinen voittaa pitkän ja sekavan.", "correct": true, "explain": "Aivan. Kontekstin arvo ei synny määrästä vaan siitä, että olennainen tieto on helppo poimia. Sekava taustatarina voi jopa peittää sen, mikä on tärkeää."}, {"text": "Kyllä, mitä enemmän tekstiä sitä parempi konteksti.", "correct": false, "explain": "Tämä on yleinen väärinkäsitys. Pelkkä pituus ei paranna kontekstia — sekava massa jättää olennaisen piiloon, ja malli voi tarttua vääriin yksityiskohtiin."}, {"text": "Kyllä, kunhan kielioppi ja välimerkit ovat kunnossa.", "correct": false, "explain": "Kielioppi ei ratkaise. Kieliopillisesti moitteeton mutta asiaankuulumaton teksti on silti huonoa kontekstia; ratkaisevaa on olennaisuus, ei ulkoasu."}, {"text": "Ei, koska malli ei pysty lukemaan pitkää tekstiä lainkaan.", "correct": false, "explain": "Syy on väärä. Malli kyllä lukee pitkänkin tekstin; ongelma ei ole pituus sinänsä vaan se, että olennainen hukkuu epäolennaisen sekaan."}]}, {"q": "Kirjoitat mallille 'olet maailman paras autonasentaja', mutta et kerro auton oireita lainkaan. Tekeekö rooli vastauksesta asiantuntevamman?", "options": [{"text": "Ei — rooli ohjaa näkökulmaa, sävyä ja kieltä, mutta ei tuo puuttuvaa tietoa; tarvitset silti oireet ja taustatiedot.", "correct": true, "explain": "Näin on. Rooli auttaa mallia valitsemaan näkökulman ja kielen, mutta ilman oireita se ei voi päätellä vikaa. Titteli ei korvaa tietoa."}, {"text": "Kyllä, rooli nostaa mallin osaamisen huipputasolle.", "correct": false, "explain": "Tämä on väärinkäsitys. Rooli ei lisää mallin todellista tietämystä — se vaikuttaa vain siihen, mistä näkökulmasta ja millä kielellä se vastaa."}, {"text": "Kyllä, malli hakee roolin perusteella parhaan asentajan tiedot käyttöönsä.", "correct": false, "explain": "Näin ei tapahdu. Rooli ei avaa mitään erillistä tietolähdettä; malli vastaa sillä tiedolla, joka sillä jo on, ja tarvitsee oireet päätelläkseen vian."}, {"text": "Ei, koska rooleja ei kannata koskaan käyttää.", "correct": false, "explain": "Tämä menee yli. Rooli on hyödyllinen näkökulman ja sävyn valintaan — sitä kannattaa käyttää, kunhan muistaa, ettei se korvaa puuttuvaa tietoa."}]}, {"q": "Sama, huolellisesti muotoiltu prompti annetaan kahdelle eri ihmiselle. Miksi se voi silti hyödyttää heitä eri tavoin?", "options": [{"text": "Koska konteksti — kuka kysyy ja mihin tarpeeseen — muuttaa sitä, mikä vastaus on kullekin hyödyllinen.", "correct": true, "explain": "Tarkalleen. Prompti on sama, mutta konteksti eroaa: eri rooli, tausta ja tavoite tekevät samasta vastauksesta toiselle osuvan ja toiselle hyödyttömän."}, {"text": "Ei voi — hyvä prompti takaa aina saman hyvän vastauksen kaikille.", "correct": false, "explain": "Tämä on väärinkäsitys. Hyväkään prompti ei yksin takaa hyvää vastausta; konteksti ratkaisee, sopiiko vastaus juuri tälle kysyjälle."}, {"text": "Koska malli arpoo vastauksensa satunnaisesti eikä tulos ole koskaan sama.", "correct": false, "explain": "Syy on väärä. Kyse ei ole sattumasta vaan kontekstista: eri taustatiedoilla sama pyyntö palvelee eri tarpeita."}, {"text": "Koska prompti ja konteksti tarkoittavat samaa asiaa.", "correct": false, "explain": "Nämä eivät ole sama asia. Prompti on nyt esitetty pyyntö; konteksti on kaikki se tausta, joka tekee pyynnöstä ymmärrettävän — ja juuri se vaihtelee kysyjien välillä."}]}, {"q": "Kannattaako aikaa käyttää kontekstin miettimiseen ja vastauksen tarkentamiseen kierros kierrokselta, vai onko se hukkaan heitettyä aikaa?", "options": [{"text": "Kannattaa — pieni panostus alussa ja tarkennus kierroksittain vähentää korjauskierroksia ja säästää lopulta aikaa.", "correct": true, "explain": "Kyllä. Kun näet välituloksen ja tarkennat, pääset nopeammin osuvaan vastaukseen kuin arvaamalla kerralla ja korjaamalla jälkikäteen."}, {"text": "Se on hukkaan heitettyä — kontekstin miettiminen on hidasta ja turhaa.", "correct": false, "explain": "Tämä on väärinkäsitys. Alkupanostus maksaa itsensä takaisin: ilman kontekstia joudut usein pyytämään saman uudelleen ja uudelleen."}, {"text": "Ei ole turhaa, mutta vain jos kirjoitat yhden täydellisen jättipromptin kerralla.", "correct": false, "explain": "Tämä ei osu. Yksi valtava kerralla kirjoitettu pyyntö on vaikeampi hallita kuin muutama tarkentava kierros, joissa näet tulokset välissä ja korjaat suuntaa."}, {"text": "On turhaa, koska ammattilaiset eivät koskaan tarkenna pyyntöjään.", "correct": false, "explain": "Päinvastoin. Juuri ammattilaiset rakentavat kontekstia ja tarkentavat pyyntöä kierroksittain — sitä kutsutaan prompt engineeringiksi."}]}, {"q": "Jätät kertomatta tavoitteesi ja rajauksesi. Mitä malli tekee näiden tietojen puuttuessa?", "options": [{"text": "Se täyttää aukot omilla oletuksillaan, jotka voivat olla vääriä.", "correct": true, "explain": "Aivan oikein. Malli ei jää odottamaan puuttuvia tietoja vaan arvaa ne — ja arvaus menee helposti ohi tarpeestasi."}, {"text": "Se kysyy aina ensin tarkentavat kysymykset, ennen kuin vastaa.", "correct": false, "explain": "Näin ei aina käy. Malli saattaa kysyä, mutta usein se vain vastaa parhaan arvauksensa mukaan — et voi luottaa siihen, että se pysähtyy kysymään."}, {"text": "Se kieltäytyy vastaamasta, ennen kuin annat täyden kontekstin.", "correct": false, "explain": "Näin ei tapahdu. Malli vastaa mielellään puutteellisillakin tiedoilla; se ei vaadi täyttä kontekstia, vaan täydentää puuttuvan itse."}, {"text": "Se ymmärtää tarkoituksesi joka tapauksessa oikein.", "correct": false, "explain": "Tämä on väärinkäsitys. Ilman tavoitetta ja rajauksia malli ei voi tietää tarkoitustasi varmasti — se olettaa, ja oletus voi olla väärä."}]}], "summary": "Hyvä vastaus syntyy kontekstista ja promptista yhdessä: rooli ei korvaa tietoa, pituus ei korvaa olennaisuutta, eikä malli täytä aukkoja oikein ilman ohjausta."}, {"type": "scenario", "title": "Rakenna pyyntö, joka osuu", "intro": "Suunnittelet kahvilan ensi viikon työvuorolistaa tekoälyn avulla. Etene päätös kerrallaan ja katso, millainen pyyntö tuottaa suoraan käyttökelpoisen tuloksen.", "start": "start", "max": 3, "nodes": {"start": {"text": "Olet töissä kahvilassa, ja sinun täytyy suunnitella ensi viikon työvuorolista. Avaat tekoälyn ja haluat sen apua. Mikä on ensimmäinen viestisi?", "choices": [{"label": "Kirjoitat heti: 'Tee työvuorolista.'", "next": "dp2", "feedback": "Pelkkä pyyntö ilman roolia, taustaa ja tavoitetta pakottaa mallin arvaamaan tilanteesi. Saat todennäköisesti yleisen listan, joka ei tunne tiimiäsi eikä aukioloaikojanne — malli täydentää puuttuvat tiedot omilla oletuksillaan.", "tone": "mid"}, {"label": "Kerrot ensin roolisi, tiimin tilanteen ja tavoitteesi, ja pyydät vasta sitten listan.", "next": "dp2", "feedback": "Hyvä alku. Annat pohjan, jolle pyyntö rakentuu: kun malli tietää, kuka olet ja mitä tavoittelet, sen ei tarvitse arvata.", "tone": "ok"}]}, "dp2": {"text": "Malli antaa ensimmäisen luonnoksen, mutta se on yleinen: se ei tunne rajojasi. Tiimissä on kolme työntekijää, yksi on lomalla, ja kahvila on auki kello 8–16. Mitä teet?", "choices": [{"label": "Aloitat alusta ja toteat, että malli on huono.", "next": "dp3", "feedback": "Malli ei ole rikki — siltä vain puuttui konteksti. Alusta aloittaminen hukkaa jo saamasi pohjan; tarkentaminen olisi nopeampaa, koska se rakentaa edellisen päälle.", "tone": "mid"}, {"label": "Lisäät puuttuvat rajaukset (aukiolo ja loma) ja pyydät tarkennetun version.", "next": "dp3", "feedback": "Juuri näin. Iteratiivinen tarkennus rakentaa edellisen luonnoksen päälle: annat vain puuttuvan palan etkä aloita tyhjästä.", "tone": "ok"}, {"label": "Kirjoitat yhteen pitkään viestiin kaiken mahdollisen tiedon tiimistä varmuuden vuoksi.", "next": "dp3", "feedback": "Kaiken kaataminen kerralla ei ole sama asia kuin hyvä konteksti. Pitkä ja sekava viesti peittää olennaisen, ja malli voi tarttua vääriin yksityiskohtiin — lyhyt, jäsennelty lisäys toimii paremmin.", "tone": "mid"}]}, "dp3": {"text": "Lista on nyt hyvä, mutta haluat sen tulostettavaan muotoon kahvilan seinälle. Malli ei kysy muodosta mitään. Mitä lisäät?", "choices": [{"label": "Pyydät tietyn muodon: taulukon, jossa on päivä, työntekijä ja kellonaika.", "next": "end_good", "feedback": "Juuri näin. Kun kerrot halutun outputformaatin, saat vastauksen, jonka voi tulostaa suoraan seinälle ilman uutta kierrosta.", "tone": "ok"}, {"label": "Lähetät pyynnön sellaisenaan — kai se muotoilee listan oikein itsestään.", "next": "end_mid", "feedback": "Malli ei voi tietää haluamaasi muotoa, ellet kerro sitä. Ilman formaattipyyntöä joudut ehkä pyytämään listan uudelleen oikeassa muodossa.", "tone": "mid"}, {"label": "Kirjoitat 'olet maailman paras työvuorosuunnittelija', niin lista paranee.", "next": "end_mid", "feedback": "Rooli ohjaa sävyä ja näkökulmaa, mutta ei tuo puuttuvaa muotoa. Tässä tarvitset formaattipyynnön, et titteliä — malli ei muotoile listaa taulukoksi pelkän roolin perusteella.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Tuloste on valmis seinälle. Rakensit kontekstin pohjaksi, tarkensit pyyntöä kierroksittain ja pyysit lopuksi selkeän muodon.", "feedback": "Kokosit kolme asiaa, jotka tekevät tekoälystä käyttökelpoisen työkalun: annoit pohjaksi roolin ja tavoitteen, tarkensit iteratiivisesti puuttuvilla rajauksilla ja pyysit vielä outputformaatin. Näin vältit arvailun joka vaiheessa."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Saat listan, mutta viimeisellä askeleella jäit arvauksen varaan: muoto ei ollutkaan se, jota seinälle tarvitsit.", "feedback": "Konteksti ja iteratiivinen tarkennus onnistuivat hyvin — se on suurin osa työstä. Viimeinen askel jäi kuitenkin vajaaksi: ilman selkeää formaattipyyntöä (tai titteliin turvautuen) malli joutui arvaamaan muodon, ja saatat joutua pyytämään sen uudelleen."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

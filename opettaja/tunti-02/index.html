@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa. Opettajan opas, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-02/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Teoria</span><span>›</span><span>Oppitunti 2</span></div><div class="lesson-title">Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-02/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-02/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-02/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion (teoria, tehtävät, harjoittele, sanasto, diat) — eivät opettajan materiaaleja.</span></div><a class="sb-go" href="/luokka/tunti-02/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-02/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoitteet tälle lohkolle</h2></div><div class="task-card-body">
+<p>Tämän lohkon tavoitteena on, että opiskelija ymmärtää tekoälyn eri tyypit ja osaa arvioida kriittisesti väitteitä tekoälyn kyvykkyydestä. Oppitunnin ydin on erottaa toisistaan nykyiset <strong>kapeat tekoälyjärjestelmät</strong>, <strong>generatiivinen tekoäly</strong> ja vielä tutkimuksellinen tai hypoteettinen <strong>yleinen tekoäly</strong>.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa nimetä ja erottaa tekoälyn päätyypit: <strong>kapea tekoäly</strong>, <strong>generatiivinen tekoäly</strong>, <strong>AGI</strong> ja <strong>ASI</strong>.</li>
+<li>Opiskelija ymmärtää, että nykyinen tekoäly on pääosin <strong>kapeaa ja erikoistunutta</strong>.</li>
+<li>Opiskelija ymmärtää, että generatiivinen tekoäly on merkittävä kehitysaskel, mutta se ei ole sama asia kuin yleisäly.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa arvioida tekoälyuutisia kriittisesti ja kysyä, onko kyse kapeasta tekoälystä vai yleisälystä.</li>
+<li>Opiskelija osaa perustella, miksi esimerkiksi ChatGPT, kuvageneraattori tai pelitekoäly ei ole AGI.</li>
+<li>Opiskelija osaa erottaa tekoälyn todelliset kyvyt markkinointipuheesta ja liioittelevista väitteistä.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
+<ul>
+<li>Opiskelija osaa laatia esimerkkejä eri tekoälytyypeistä.</li>
+<li>Opiskelija osaa arvioida, mitä tekoälyjärjestelmä todella osaa ja mitä se ei osaa.</li>
+<li>Opiskelija osaa keskustella AGI:sta ja ASI:sta varovaisesti, avoimina tutkimus- ja tulevaisuuskysymyksinä.</li>
+</ul>
+<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että vaikuttava tekoäly ei ole sama asia kuin yleisäly. Nykyiset tekoälyjärjestelmät voivat olla erittäin taitavia omalla alueellaan, mutta ne ovat silti rajattuja, erikoistuneita ja riippuvaisia datasta sekä tehtävän määrittelystä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: nykyinen tekoäly on kapeaa, vaikka se voi näyttää yleiseltä</h3></div><div class="task-card-body">
+<p>Opiskelijoille kannattaa aloittaa tutuista esimerkeistä: ChatGPT kirjoittaa tekstiä, DALL-E tuottaa kuvia, Suno tuottaa musiikkia, Google Maps arvioi reittejä ja pelitekoäly pelaa peliä. Nämä voivat näyttää älykkäiltä, mutta jokainen niistä toimii omalla rajatulla alueellaan.</p>
+<blockquote class="pause"><p><strong>Kapea tekoäly voi olla erittäin taitava yhdessä tehtävässä, mutta se ei tarkoita, että se ymmärtää maailmaa yleisesti.</strong></p>
+</blockquote>
+<p>Korosta opiskelijoille:</p>
+<ul>
+<li><strong>Kapea tekoäly</strong> on suunniteltu tai koulutettu tietyn tyyppiseen tehtävään.</li>
+<li><strong>Generatiivinen tekoäly</strong> tuottaa uutta sisältöä, kuten tekstiä, kuvia, ääntä tai koodia, mutta sekin on rajattua.</li>
+<li><strong>AGI</strong> tarkoittaisi yleistä tekoälyä, joka pystyisi oppimaan ja toimimaan monenlaisissa tehtävissä ihmisen kaltaisella joustavuudella.</li>
+<li><strong>ASI</strong> tarkoittaisi superälykkyyttä, joka ylittäisi ihmisen kyvykkyyden laajasti. Tämä on vielä spekulatiivinen käsite.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tekoälytyyppien vertailu</h3></div><div class="task-card-body">
+<table>
+<thead>
+<tr>
+<th>Tekoälytyyppi</th>
+<th>Mitä se tarkoittaa?</th>
+<th>Esimerkki</th>
+<th>Keskeinen rajaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kapea tekoäly</strong></td>
+<td>Tekoäly, joka on hyvä rajatussa tehtävässä.</td>
+<td>Roskapostisuodatin, kasvojentunnistus, pelibotti tai reittisuositus.</td>
+<td>Ei osaa siirtyä vapaasti täysin uusiin tehtäviin.</td>
+</tr>
+<tr>
+<td><strong>Generatiivinen tekoäly</strong></td>
+<td>Tekoäly, joka tuottaa sisältöä koulutusdatasta oppimiensa mallien perusteella.</td>
+<td>ChatGPT, kuvageneraattorit, musiikkigeneraattorit ja koodiavustajat.</td>
+<td>Tuottaa sisältöä, mutta ei ole yleisäly.</td>
+</tr>
+<tr>
+<td><strong>AGI</strong></td>
+<td>Yleinen tekoäly, joka pystyisi joustavaan oppimiseen ja toimintaan monilla alueilla.</td>
+<td>Ei varmistettua nykyistä esimerkkiä.</td>
+<td>Tutkimusaihe ja avoin kysymys, ei nykyisen tekoälyn vakiintunut ominaisuus.</td>
+</tr>
+<tr>
+<td><strong>ASI</strong></td>
+<td>Hypoteettinen superäly, joka ylittäisi ihmisen kyvyt laajasti.</td>
+<td>Ei nykyistä esimerkkiä.</td>
+<td>Spekulatiivinen käsite, jonka toteutumisesta ei ole varmuutta.</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Kriittinen uutisten lukutaito</h3></div><div class="task-card-body">
+<p>Tällä oppitunnilla kannattaa harjoitella tekoälyuutisten lukemista. Uutisissa voidaan sanoa esimerkiksi, että ”tekoäly voitti ihmisen pelissä” tai ”tekoäly kirjoitti romaanin”. Opiskelijan tulisi oppia kysymään: mitä järjestelmä todella teki, missä ympäristössä, millä rajauksilla ja onko kyse yleisestä älykkyydestä vai kapeasta kyvykkyydestä?</p>
+<p><strong>Opettajan huomio:</strong> Älä käsittele AGI:a faktana tai väistämättömänä kehityksenä. Puhu siitä tutkimusaiheena ja avoimena kysymyksenä. Tämä auttaa opiskelijoita erottamaan nykyteknologian tulevaisuusspekulaatiosta.</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”ChatGPT on AGI, koska se osaa paljon asioita.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> ChatGPT osaa käsitellä kieltä ja tuottaa tekstiä erittäin monipuolisesti, mutta se ei ole yleisäly. Se ei itsenäisesti hallitse autoa, robottia, fyysistä ympäristöä tai kaikkia mahdollisia tehtäviä. Se on erittäin kehittynyt generatiivinen tekoäly, mutta silti rajattu järjestelmä.</p>
+<blockquote class="pause"><p>Monipuolinen tekstiosaaminen ei ole sama asia kuin yleinen älykkyys.</p>
+</blockquote>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Tekoäly on tulevaisuutta, joten AGI on lähellä.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Kapea tekoäly kehittyy nopeasti, mutta AGI on eri asia. Nykyisten tekoälyjärjestelmien kehitys ei automaattisesti tarkoita, että yleisäly olisi varmasti lähellä. Tutkijatkin ovat eri mieltä aikataulusta ja jopa siitä, miten AGI pitäisi määritellä tai rakentaa.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Generatiivinen tekoäly luo jotain täysin uutta.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Generatiivinen tekoäly oppii koulutusdatasta kuvioita ja yhdistelee niitä uusilla tavoilla. Lopputulos voi näyttää uudelta, mutta sen pohja on opitussa datassa, tyyleissä, rakenteissa ja todennäköisyyksissä.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”ASI olisi kuin ihminen, mutta älykkäämpi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> ASI on hypoteettinen käsite. Jos sellainen joskus syntyisi, se voisi muistuttaa ihmisen ajattelua tai olla täysin erilaista. Emme tiedä, millainen sen toimintatapa olisi.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: ”Jos AGI syntyy, se ratkaisee kaiken.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Tämä on oletus, ei varma tieto. Vaikka yleisäly olisi mahdollinen, se voisi silti kohdata rajoituksia, tavoitteiden ristiriitoja, resurssiongelmia, turvallisuushaasteita tai virheellisiä lähtötietoja. Älykkyys ei automaattisesti ratkaise kaikkia ongelmia.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan fasilitointiohjeet</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ennen luokkaa</h3></div><div class="task-card-body">
+<ul>
+<li>Tutustu generatiivisen tekoälyn nykyisiin käyttötapoihin. Selvitä, mitä esimerkiksi ChatGPT, kuvageneraattorit ja musiikkigeneraattorit osaavat tällä hetkellä ja mitä ne eivät osaa.</li>
+<li>Valmistele IT-alan esimerkkejä, jotka liittyvät opiskelijoiden tulevaan työhön: asiakastuki, tietoturva, koodiavustajat, palvelunvalvonta, dokumentointi ja automaatio.</li>
+<li>Valitse 1–2 ajankohtaista tekoälyuutista tai otsikkoa, joita voidaan analysoida kriittisesti. Tavoitteena ei ole selvittää kaikkea uutisen taustaa, vaan harjoitella kysymään oikeita kysymyksiä.</li>
+<li>Valmistaudu sanomaan ”emme tiedä”. AGI- ja ASI-keskustelussa rehellinen epävarmuus on tärkeä osa opetusta.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luokan aikana</h3></div><div class="task-card-body">
+<ul>
+<li><strong>Aloita nykytodellisuudesta.</strong> Käytä esimerkkejä siitä, missä tekoälyä hyödynnetään jo nyt IT-alalla.</li>
+<li><strong>Siirry tulevaisuuteen vasta sen jälkeen.</strong> Käsittele AGI:a ja ASI:a spekulaationa, ei varmana kehityspolkuna.</li>
+<li><strong>Kysy kriittisiä kysymyksiä.</strong> Kun esität tekoälyuutisen, kysy: mitä järjestelmä todella osaa, missä rajoissa ja onko kyse kapeasta tekoälystä vai yleisälystä?</li>
+<li><strong>Vältä hypeä ja pelottelua.</strong> Tavoite on ymmärtää, ei ihastua tai pelästyä kritiikittömästi.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Yleisten opiskelijakysymysten vastaukset</h3></div><div class="task-card-body">
+<p><strong>Kysymys: ”Milloin AGI tulee?”</strong><br />
+Vastaus: Kukaan ei tiedä varmasti. Arviot vaihtelevat paljon. Jotkut uskovat, että AGI voi tulla lähivuosikymmeninä, jotkut uskovat sen olevan paljon kauempana ja jotkut epäilevät, ettei sitä saavuteta lainkaan. Tätä pitää käsitellä avoimena tutkimuskysymyksenä.</p>
+<p><strong>Kysymys: ”Onko AGI vaarallinen?”</strong><br />
+Vastaus: Se voisi olla vaarallinen, jos se joskus syntyisi eikä sitä pystyttäisi hallitsemaan tai ohjaamaan turvallisesti. Nykyinen kapea tekoäly on kuitenkin eri asia: se on väline, jonka riskit liittyvät esimerkiksi virheelliseen käyttöön, datan vinoumiin, yksityisyyteen, turvallisuuteen ja päätöksenteon vastuuseen.</p>
+<p><strong>Kysymys: ”Miksi ei vain tehdä superälykästä tekoälyä?”</strong><br />
+Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes teknisesti varmasti. Nykyiset järjestelmät optimoidaan tiettyihin tehtäviin. Yleisen, joustavan ja luotettavan älykkyyden rakentaminen on paljon vaikeampi ongelma.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Tekoälytyypin tunnistaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija tunnistaa, onko esimerkki kapea tekoäly, generatiivinen tekoäly, AGI-väite vai ASI-spekulaatio.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille lista esimerkeistä. Opiskelijat luokittelevat jokaisen esimerkin ja kirjoittavat perustelun.</p>
+<table>
+<thead>
+<tr>
+<th>Esimerkki</th>
+<th>Tyyppi</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roskapostisuodatin tunnistaa epäilyttävän sähköpostin.</td>
+<td>Kapea tekoäly</td>
+<td>Järjestelmä tekee rajattua luokittelutehtävää.</td>
+</tr>
+<tr>
+<td>Kuvageneraattori luo kuvan tekstikuvauksen perusteella.</td>
+<td>Generatiivinen tekoäly</td>
+<td>Järjestelmä tuottaa uutta sisältöä opittujen kuvioiden perusteella.</td>
+</tr>
+<tr>
+<td>Uutinen väittää, että tekoäly ratkaisee pian kaikki ihmiskunnan ongelmat.</td>
+<td>AGI- tai ASI-spekulaatio</td>
+<td>Väite menee nykyisten rajattujen järjestelmien kykyjen ulkopuolelle.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Uutisotsikon purkaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija harjoittelee tekoälyuutisten kriittistä arviointia.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille tekoälyä koskeva otsikko, esimerkiksi ”Tekoäly päihitti ihmisen monimutkaisessa pelissä” tai ”Tekoäly kirjoittaa kokonaisia kirjoja”. Opiskelijat vastaavat seuraaviin kysymyksiin:</p>
+<ul>
+<li>Mitä järjestelmä todella teki?</li>
+<li>Oliko tehtävä rajattu vai yleinen?</li>
+<li>Onko kyse kapeasta tekoälystä, generatiivisesta tekoälystä, AGI:sta vai ASI-spekulaatiosta?</li>
+<li>Mitä otsikko mahdollisesti liioittelee?</li>
+<li>Mitä lisätietoa tarvitsisit ennen kuin uskot väitteen?</li>
+</ul>
+<p><strong>Opettajan huomio:</strong> Tässä tehtävässä ei tarvitse löytää yhtä oikeaa vastausta. Tärkeintä on, että opiskelija osaa kysyä tarkentavia kysymyksiä eikä hyväksy tekoälyväitteitä sellaisenaan.</p>
+<p><strong>Aika-arvio:</strong> 20–25 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: ChatGPT ei ole AGI — perusteluharjoitus</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija osaa perustella, miksi generatiivinen tekoäly ei ole sama asia kuin yleisäly.</p>
+<p><strong>Tehtävä:</strong> Opiskelija kirjoittaa lyhyen vastauksen väitteeseen: ”ChatGPT on AGI, koska se osaa vastata monenlaisiin kysymyksiin.”</p>
+<p><strong>Hyvä vastaus sisältää:</strong></p>
+<ul>
+<li>määritelmän siitä, mitä AGI tarkoittaisi</li>
+<li>selityksen siitä, mitä ChatGPT osaa hyvin</li>
+<li>selityksen siitä, mitä se ei osaa itsenäisesti tehdä</li>
+<li>johtopäätöksen siitä, miksi monipuolinen tekstiosaaminen ei riitä AGI:n määritelmäksi</li>
+</ul>
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointivinkit</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Perusymmärryksen tarkistaminen</h3></div><div class="task-card-body">
+<ul>
+<li>Kysy: ”Mitä eroa on kapealla tekoälyllä ja generatiivisella tekoälyllä?” Hyvä vastaus: kapea tekoäly tekee rajattua tehtävää, ja generatiivinen tekoäly on yksi kapean tekoälyn muoto, joka tuottaa sisältöä.</li>
+<li>Kysy: ”Miksi ChatGPT ei ole AGI?” Hyvä vastaus: se käsittelee kieltä erittäin hyvin, mutta se ei ole yleisesti toimiva ja itsenäisesti kaikkia tehtäviä oppiva järjestelmä.</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Kriittinen ajattelu</h3></div><div class="task-card-body">
+<ul>
+<li>Tuo väite: ”Tekoäly voitti ihmisen pelissä.” Kysy: ”Onko tämä kapeaa tekoälyä vai yleisälyä?” Hyvä vastaus: kapeaa tekoälyä, koska se on rajattu tiettyyn peliin tai tehtävään.</li>
+<li>Tuo väite: ”Generatiivinen tekoäly luo jotain täysin uutta.” Kysy: ”Millä tavalla uutta?” Hyvä vastaus: se tuottaa uuden näköisen lopputuloksen, mutta käyttää koulutusdatasta opittuja kuvioita ja rakenteita.</li>
+</ul>
+</div></div><div class="task-card task-card--assessment task-card--sm"><div class="task-card-header"><h3>Itsearviointi</h3></div><div class="task-card-body">
+<p>Voit antaa tunnin lopuksi lyhyen itsearvioinnin:</p>
+<ul>
+<li>Ymmärrän eron kapean tekoälyn ja AGI:n välillä: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+<li>Ymmärrän, miksi generatiivinen tekoäly on merkittävä mutta silti rajattu: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+<li>Osaan arvioida tekoälyuutisia kriittisesti: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija pitää ChatGPT:tä yleisälynä</h3></div><div class="task-card-body">
+<p>Kysy:</p>
+<ul>
+<li>Voiko se toimia fyysisessä maailmassa ilman erillisiä työkaluja?</li>
+<li>Voiko se oppia uuden taidon samalla tavalla kuin ihminen ilman uudelleenkoulutusta tai työkalutukea?</li>
+<li>Ymmärtääkö se tavoitteet ja seuraukset samalla tavalla kuin ihminen?</li>
+<li>Onko monipuolinen tekstivastaaminen sama asia kuin yleinen toimijuus?</li>
+</ul>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija ajattelee AGI:n olevan väistämätön</h3></div><div class="task-card-body">
+<p>Korosta epävarmuutta. Kehitys voi jatkua nopeasti, mutta se ei todista, että yleisäly syntyy automaattisesti. Tee näkyväksi ero teknologisen kehityksen ja varman lopputuloksen välillä.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos keskustelu muuttuu liian spekulatiiviseksi</h3></div><div class="task-card-body">
+<p>Palauta keskustelu nykyisiin järjestelmiin:</p>
+<ul>
+<li>Mitä järjestelmä osaa nyt?</li>
+<li>Mitä se ei osaa?</li>
+<li>Mitä dataa se käyttää?</li>
+<li>Missä tehtävässä se toimii hyvin?</li>
+</ul>
+<blockquote class="pause"><p>Ensin ymmärrämme nykyiset järjestelmät. Vasta sen jälkeen voimme keskustella järkevästi tulevaisuuden mahdollisuuksista.</p>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
+<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoäly ei ole yksi yhtenäinen asia. On eri tasoja ja tyyppejä: kapea tekoäly, generatiivinen tekoäly, AGI ja ASI. Nykyiset järjestelmät ovat vaikuttavia, mutta ne eivät ole sama asia kuin yleinen älykkyys.</p>
+<p>Hyvä päätöskysymys tunnin loppuun:</p>
+<blockquote class="pause"><p><strong>Pohdi:</strong> Kun seuraavan kerran näet tekoälyuutisen, mistä voit päätellä, onko kyse todellisesta yleisälystä vai rajatusta tekoälyjärjestelmästä?</p>
+</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2.1: Ryhmäkartta — sijoita esimerkit tekoälytyyppeihin — ryhmäharjoitus</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on vahvistaa opiskelijoiden ymmärrystä siitä, että <strong>kapea tekoäly</strong> on nykytodellisuutta, kun taas <strong>AGI</strong> ja <strong>ASI</strong> ovat tulevaisuuteen, teoriaan ja tutkimukseen liittyviä käsitteitä.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, että tämän hetken tekoälysovellukset ovat yleensä rajattuja ja erikoistuneita. Vaikka generatiivinen tekoäly voi vaikuttaa hyvin monipuoliselta, se ei ole sama asia kuin yleistekoäly eli AGI.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<p>Valmista neljä lappua tai kirjoita taululle seuraavat kategoriat:</p>
+<ul>
+<li><strong>Kapea tekoäly</strong></li>
+<li><strong>Generatiivinen tekoäly</strong></li>
+<li><strong>AGI tai teoria</strong></li>
+<li><strong>Ei tekoälyä</strong></li>
+</ul>
+<p>Valmista lisäksi lista sovelluksista ja esimerkeistä:</p>
+<ol>
+<li>ChatGPT</li>
+<li>Kasvojentunnistus puhelimessa</li>
+<li>Netflixin suositukset</li>
+<li>DALL-E:n tuottama kuva</li>
+<li>AlphaGo, go-peliä pelaava tekoäly</li>
+<li>Älypuhelimen puhelinluettelo</li>
+<li>Google Translate</li>
+<li>Robotti, joka kehittää omia strategioita</li>
+</ol>
+<h3>Toteutus noin 25 minuuttia</h3>
+<ol>
+<li><strong>Jaa luokka ryhmiin noin 2 minuutissa.</strong></li>
+</ol>
+<p>Muodosta 2–3 ryhmää ja anna jokaiselle ryhmälle 2–3 sovellusta tai esimerkkiä.<br />
+2. <strong>Ryhmät keskustelevat ja sijoittavat esimerkit kategorioihin noin 10 minuutissa.</strong></p>
+<p>Ryhmän tehtävänä on:</p>
+<ul>
+<li>päättää, mihin kategoriaan kukin esimerkki kuuluu,</li>
+<li>kirjoittaa lyhyt perustelu jokaiselle valinnalle,</li>
+<li>valmistautua kertomaan, miksi jokin esimerkki voisi sopia useampaan kuin yhteen kategoriaan.</li>
+<li><strong>Ryhmät sijoittavat esimerkkinsä taululle.</strong></li>
+</ul>
+<p>Jokainen ryhmä käy taululla ja sijoittaa oman esimerkkinsä valitsemaansa kategoriaan.<br />
+4. <strong>Käykää luokan kanssa yhteinen katsaus noin 8 minuutissa.</strong></p>
+<p>Käykää jokainen kategoria ja siihen sijoitetut esimerkit läpi.</p>
+<p>Kysy opiskelijoilta:</p>
+<ul>
+<li>Onko tämä oikea kategoria? Miksi?</li>
+<li>Voisiko esimerkki kuulua toiseenkin kategoriaan?</li>
+<li>Mitä esimerkki kertoo tekoälyn rajauksesta?</li>
+<li><strong>Kokoa pääsäännöt noin 5 minuutissa.</strong></li>
+</ul>
+<p>Kirjoita taululle seuraava yhteenveto:</p>
+<p>Kapea tekoäly = nykytodellisuutta. Se osaa yhden rajatun tehtävän hyvin.</p>
+<p>Generatiivinen tekoäly = tuottaa uutta sisältöä, kuten tekstiä, kuvia, ääntä tai koodia. Se on silti yleensä kapeaa tekoälyä.</p>
+<p>AGI = teoreettinen yleistekoäly, joka pystyisi toimimaan laajasti eri tehtävissä ihmisen kaltaisella joustavuudella. Sitä ei ole vielä olemassa.</p>
+<p>Ei tekoälyä = automaatio, sääntöpohjainen toiminta tai tavallinen ohjelmisto ilman oppivaa mallia.</p>
+<h3>Esimerkkien mahdollinen luokittelu</h3>
+<table>
+<thead>
+<tr>
+<th>Esimerkki</th>
+<th>Todennäköinen kategoria</th>
+<th>Perustelu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ChatGPT</strong></td>
+<td>Generatiivinen tekoäly</td>
+<td>Tuottaa tekstiä käyttäjän promptin perusteella. Se on silti rajattu tekoälyjärjestelmä, ei AGI.</td>
+</tr>
+<tr>
+<td><strong>Kasvojentunnistus puhelimessa</strong></td>
+<td>Kapea tekoäly</td>
+<td>Järjestelmä on erikoistunut yhteen rajattuun tehtävään: kasvojen tunnistamiseen.</td>
+</tr>
+<tr>
+<td><strong>Netflixin suositukset</strong></td>
+<td>Kapea tekoäly</td>
+<td>Järjestelmä ennustaa, mistä käyttäjä voisi pitää katseluhistorian ja muiden käyttäjien käyttäytymisen perusteella.</td>
+</tr>
+<tr>
+<td><strong>DALL-E:n tuottama kuva</strong></td>
+<td>Generatiivinen tekoäly</td>
+<td>Järjestelmä tuottaa uutta kuvallista sisältöä tekstipromptin perusteella.</td>
+</tr>
+<tr>
+<td><strong>AlphaGo</strong></td>
+<td>Kapea tekoäly</td>
+<td>Se on erittäin taitava rajatussa tehtävässä eli go-pelin pelaamisessa, mutta ei yleistekoäly.</td>
+</tr>
+<tr>
+<td><strong>Älypuhelimen puhelinluettelo</strong></td>
+<td>Ei tekoälyä</td>
+<td>Tavallinen yhteystietojen tallennus ja haku ei itsessään vaadi oppivaa mallia.</td>
+</tr>
+<tr>
+<td><strong>Google Translate</strong></td>
+<td>Kapea tekoäly</td>
+<td>Järjestelmä on erikoistunut kielen käsittelyyn ja kääntämiseen.</td>
+</tr>
+<tr>
+<td><strong>Robotti, joka kehittää omia strategioita</strong></td>
+<td>Riippuu kuvauksesta</td>
+<td>Jos robotti toimii rajatussa tehtävässä, kyse voi olla kapeasta tekoälystä. Jos sen väitetään toimivan ihmisen kaltaisella joustavuudella lähes kaikissa tehtävissä, kyse on AGI:hin liittyvästä teoriasta tai spekulaatiosta.</td>
+</tr>
+</tbody>
+</table>
+<h3>Mahdollisia väärinkäsityksiä ja täsmennyksiä</h3>
+<ul>
+<li><strong>“ChatGPT on AGI.”</strong><br />
+<strong>Täsmennys:</strong> Ei ole. ChatGPT on vaikuttava generatiivisen tekoälyn sovellus, mutta se on silti kapeaa tekoälyä. Se ei ymmärrä ja toimi kaikilla elämänalueilla ihmisen tavoin.</li>
+<li><strong>“Google Translate ei ole tekoälyä.”</strong><br />
+<strong>Täsmennys:</strong> Google Translate käyttää tekoälyä ja koneoppimista. Se on esimerkki kapeasta tekoälystä, joka on erikoistunut kielen käsittelyyn ja kääntämiseen.</li>
+<li><strong>“Jos AGI saavutetaan, se ratkaisee kaiken.”</strong><br />
+<strong>Täsmennys:</strong> Tämä on spekulaatiota. AGI on tutkimusaihe, eikä sen vaikutuksia voida tietää varmasti.</li>
+<li><strong>“Generatiivinen tekoäly on eri asia kuin kapea tekoäly.”</strong><br />
+<strong>Täsmennys:</strong> Generatiivinen tekoäly on yleensä kapeaa tekoälyä. Se on erikoistunut tietynlaisen sisällön tuottamiseen.</li>
+</ul>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat sijoittavat esimerkin AGI-kategoriaan, kysy: “Pystyykö tämä järjestelmä toimimaan joustavasti lähes kaikissa tehtävissä vai onko se erikoistunut yhteen rajattuun tehtävään?”</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li>nykyinen tekoäly on useimmiten <strong>kapeaa</strong> ja erikoistunutta,</li>
+<li><strong>generatiivinen tekoäly</strong> voi olla vaikuttavaa, mutta se on silti rajattua tekoälyä,</li>
+<li><strong>AGI</strong> on tutkimukseen ja tulevaisuuteen liittyvä käsite, ei tämän hetken arkinen teknologia,</li>
+<li>kaikki älykkäältä vaikuttava teknologia ei ole tekoälyä.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2.2: Live-testaus — generatiivisen tekoälyn näyttäminen — luokkakeskustelu</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on näyttää konkreettisesti, miten <strong>generatiivinen tekoäly</strong> toimii ja millaisia rajoituksia sillä on. Opiskelijat oppivat tarkastelemaan tekoälyn tuottamia vastauksia kriittisesti.</p>
+<p><strong>Opettajan painotus:</strong> Live-testin tarkoitus ei ole todistaa, että tekoäly on “hyvä” tai “huono”. Tarkoitus on tutkia, miten se käyttäytyy: milloin se auttaa, milloin se horjuu ja milloin käyttäjän pitää tarkistaa tulokset.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<ul>
+<li>Varmista, että sinulla on pääsy ChatGPT:hen, DALL-E:hen tai vastaavaan generatiivisen tekoälyn työkaluun.</li>
+<li>Valmistele muutama testiprompti eli <strong>prompti</strong>.</li>
+<li>Muistuta opiskelijoita, että testien tarkoitus ei ole saada täydellisiä vastauksia vaan tutkia, miten generatiivinen tekoäly toimii.</li>
+</ul>
+<h3>Toteutus noin 20 minuuttia</h3>
+<ol>
+<li><strong>Avaus noin 2 minuuttia:</strong></li>
+</ol>
+<p>Kerro opiskelijoille:</p>
+<blockquote class="pause"><p>Näytän teille live-testin siitä, miten generatiivinen tekoäly toimii. Huomatkaa, että vastaukset voivat olla hyödyllisiä, epätarkkoja tai jopa hämmentäviä.<br />
+2. <strong>Testi 1: Johdonmukaisuus noin 5 minuuttia</strong></p>
+</blockquote>
+<ol>
+<li>Anna ChatGPT:lle sama kysymys kaksi kertaa.</li>
+<li>Käytä esimerkiksi promptia: <code>Kerro minulle viisi vinkkiä web-kehitykseen.</code></li>
+<li>Näytä ensimmäinen vastaus ja pyydä sen jälkeen uusi vastaus samalla promptilla.</li>
+<li>Kysy opiskelijoilta: <strong>Muuttuiko vastaus? Miksi näin saattoi tapahtua?</strong></li>
+<li>Selitä lyhyesti: “Kielimalli tuottaa tekstiä valitsemalla sanoja ja ilmauksia todennäköisyyksien perusteella. Siksi sama prompti ei aina tuota täysin samaa vastausta.”</li>
+<li>
+<p><strong>Testi 2: Erikoistuneisuus noin 5 minuuttia</strong></p>
+</li>
+<li>
+<p>Anna esimerkiksi prompti: <code>Kirjoita hyväksytty patenttihakemus.</code></p>
+</li>
+<li>Tarkastelkaa yhdessä, millaisen vastauksen tekoäly tuottaa.</li>
+<li>Kysy opiskelijoilta: <strong>Onnistuiko tehtävä luotettavasti? Miksi tai miksi ei?</strong></li>
+<li>Selitä lyhyesti: “Kielimalli tunnistaa tekstin rakenteita ja kuvioita, mutta se ei välttämättä hallitse patenttilakia tai virallisen hakemuksen vaatimuksia luotettavasti.”</li>
+<li>
+<p><strong>Testi 3: Faktat ja keksityt vastaukset noin 5 minuuttia</strong></p>
+</li>
+<li>
+<p>Anna esimerkiksi prompti: <code>Kuka voitti Suomen kuninkaallisen jalkapalloligan vuonna 2023?</code></p>
+</li>
+<li>Tarkistakaa yhdessä, mikä kysymyksessä on ongelmallista ja onko vastaus totta vai keksitty.</li>
+<li>Kysy opiskelijoilta: <strong>Miten voimme tietää, onko vastaus totta?</strong></li>
+<li>Selitä lyhyesti: “Generatiivinen tekoäly voi tuottaa uskottavalta kuulostavaa tekstiä myös silloin, kun tieto ei ole totta. Siksi vastaukset pitää tarvittaessa tarkistaa luotettavista lähteistä.”</li>
+<li>
+<p><strong>Johtopäätös noin 3 minuuttia:</strong></p>
+</li>
+<li>
+<p>Generatiivinen tekoäly voi olla hyödyllinen ideoinnissa, tekstin luonnostelussa, ohjelmoinnin tukena ja vaihtoehtojen vertailussa.</p>
+</li>
+<li>Generatiivisen tekoälyn tuottamat vastaukset eivät aina ole tarkkoja tai luotettavia.</li>
+<li>Käyttäjän pitää osata arvioida, tarkistaa ja tarvittaessa korjata tekoälyn tuottamaa sisältöä.</li>
+</ol>
+<h3>Testien yhteenveto</h3>
+<table>
+<thead>
+<tr>
+<th>Testi</th>
+<th>Mitä havaitaan?</th>
+<th>Mitä opiskelijan pitäisi oppia?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Johdonmukaisuus</strong></td>
+<td>Sama prompti voi tuottaa hieman erilaisia vastauksia.</td>
+<td>Generatiivinen tekoäly tuottaa tekstiä todennäköisyyksien perusteella eikä aina samalla tavalla.</td>
+</tr>
+<tr>
+<td><strong>Erikoistuneisuus</strong></td>
+<td>Tekoäly voi tuottaa uskottavan näköisen tekstin, vaikka se ei täytä todellisia asiantuntijavaatimuksia.</td>
+<td>Asiantuntijatehtävissä tarvitaan tarkistusta ja alan osaamista.</td>
+</tr>
+<tr>
+<td><strong>Faktat</strong></td>
+<td>Tekoäly voi vastata kysymykseen, vaikka kysymyksen oletus olisi virheellinen.</td>
+<td>Käyttäjän pitää tarkistaa faktat ja huomata myös virheelliset kysymyksenasettelut.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat sanovat, että vastaus “kuulostaa oikealta”, kysy: “Mistä tiedämme, että se on oikeasti totta?” Tämä ohjaa erottamaan uskottavan tekstin ja luotettavan tiedon.</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li><strong>generatiivinen tekoäly</strong> ei ole oikea–väärin-kone,</li>
+<li>tekoäly voi olla hyödyllinen työkalu, mutta sen vastauksia pitää arvioida kriittisesti,</li>
+<li>generatiivinen tekoäly voi keksiä uskottavalta kuulostavia mutta virheellisiä vastauksia,</li>
+<li>generatiivinen tekoäly on silti <strong>kapeaa tekoälyä</strong>, ei AGI.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2.3: Tulevaisuuspohdinta — AGI ja ammatit — pienryhmäkeskustelu</h2></div><div class="task-card-body">
+<h3>Tavoite</h3>
+<p>Tehtävän tavoitteena on saada opiskelijat pohtimaan, miten tekoälyn kehitys voi vaikuttaa heidän tulevaan ammattiinsa ja millaisia taitoja työelämässä tarvitaan myös tekoälyn kehittyessä.</p>
+<p><strong>Opettajan painotus:</strong> Ohjaa keskustelua pois pelkästä “tekoäly vie työt” -ajattelusta. Tärkeämpää on pohtia, miten työn sisältö muuttuu ja mitä taitoja ihmiseltä tarvitaan tekoälyn rinnalla.</p>
+<h3>Opettajan ohjeet ja fasilitointi</h3>
+<p><strong>Valmistelu:</strong></p>
+<p>Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri aloilta:</p>
+<ul>
+<li>sairaanhoitaja</li>
+<li>toimittaja</li>
+<li>myyjä</li>
+<li>kokki</li>
+<li>ohjelmistokehittäjä</li>
+</ul>
+<h3>Toteutus noin 20 minuuttia</h3>
+<ol>
+<li><strong>Ryhmät keskustelevat noin 10 minuuttia.</strong></li>
+</ol>
+<p>Pyydä ryhmiä pohtimaan omaa ammattiaan seuraavien kysymysten avulla:</p>
+<ul>
+<li><strong>Nykyhetki:</strong> Mitä tekoäly tekee tai voisi tehdä tässä ammatissa jo nyt?</li>
+<li><strong>Tulevaisuus:</strong> Jos AGI joskus saavutetaan, miten se voisi muuttaa tätä työtä?</li>
+<li><strong>Ammatilliset taidot:</strong> Mitkä taidot jäävät ihmisille tärkeiksi, vaikka tekoäly kehittyisi?</li>
+<li><strong>Riskit ja mahdollisuudet:</strong> Mitä hyötyä tekoälystä voisi olla tässä työssä? Mitä riskejä siihen voisi liittyä?</li>
+<li><strong>Ryhmät valmistelevat lyhyen esityksen.</strong></li>
+</ul>
+<p>Jokaisen ryhmän esityksessä tulee olla:</p>
+<ul>
+<li>yksi esimerkki tekoälyn nykyisestä käytöstä valitussa ammatissa,</li>
+<li>yksi näkemys siitä, miten AGI voisi muuttaa työtä tulevaisuudessa,</li>
+<li>yksi taito, joka on ihmiselle edelleen tärkeä.</li>
+<li><strong>Ryhmät esittelevät noin 8 minuuttia.</strong></li>
+</ul>
+<p>Varaa jokaiselle ryhmälle lyhyt puheenvuoro.<br />
+4. <strong>Käykää lopuksi luokan yhteinen keskustelu noin 2 minuuttia.</strong></p>
+<p>Kokoa keskustelusta seuraavat havainnot:</p>
+<ul>
+<li>Tekoäly voi automatisoida rutiinitehtäviä ja tukea asiantuntijatyötä.</li>
+<li>Strateginen ajattelu, ongelmanratkaisu, vastuun kantaminen ja ihmisten kanssa toimiminen säilyvät tärkeinä taitoina.</li>
+<li>Ammattilaisen kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.</li>
+</ul>
+<h3>Ryhmän vastauspohja</h3>
+<table>
+<thead>
+<tr>
+<th>Kysymys</th>
+<th>Ryhmän vastaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mikä ammatti tai rooli?</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mitä tekoäly voi tehdä jo nyt?</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Miten AGI voisi muuttaa työtä?</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mikä taito jää ihmiselle tärkeäksi?</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mahdollisuus ja riski</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vinkki arviointiin:</strong> Hyvä vastaus erottaa nykyisen tekoälyn ja tulevaisuuden AGI-spekulaation. Opiskelijan ei tarvitse ennustaa tulevaisuutta varmasti, mutta hänen tulee perustella näkemyksensä ammatin tehtävien ja osaamistarpeiden kautta.</p>
+<h3>Odotettu oppimistulos</h3>
+<p>Tehtävän jälkeen opiskelijat ymmärtävät, että:</p>
+<ul>
+<li><strong>tekoäly</strong> muuttaa työelämää, mutta se ei välttämättä poista ammatteja kokonaan,</li>
+<li>monet ammatit muuttuvat niin, että tekoäly hoitaa osan tehtävistä ja ihminen keskittyy vaativampaan harkintaan, vuorovaikutukseen ja vastuuseen,</li>
+<li>kriittinen ajattelu, tekoälyn toimintaperiaatteiden ymmärtäminen ja kyky arvioida tekoälyn tuottamaa tietoa ovat tärkeitä tulevaisuuden työelämätaitoja.</li>
+</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
+<p>Opettaja arvioi opiskelijoiden kykyä:</p>
+<ul>
+<li>erottaa <strong>kapea tekoäly</strong>, <strong>generatiivinen tekoäly</strong>, <strong>AGI</strong> ja tavallinen ohjelmisto toisistaan,</li>
+<li>perustella esimerkkien sijoittaminen oikeisiin kategorioihin,</li>
+<li>tunnistaa generatiivisen tekoälyn hyötyjä ja rajoituksia,</li>
+<li>arvioida tekoälyn tuottamien vastausten luotettavuutta kriittisesti,</li>
+<li>pohtia tekoälyn vaikutuksia tulevaan ammattiin realistisesti ja perustellusti.</li>
+</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g1)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">01 · TEORIA · OPPITUNTI 2</text>
+<text x="74" y="240" font-size="50" font-weight="800" fill="#1B2336">Viisi tekoälyn tasoa</text>
+<text x="74" y="298" font-size="25" fill="#5A6478">Missä mennään — ja mihin ollaan menossa?</text>
+<g transform="translate(636,196)">
+<rect x="0" y="120" width="58" height="30" rx="6" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<rect x="58" y="92" width="58" height="58" rx="6" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<rect x="116" y="60" width="58" height="90" rx="6" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<rect x="174" y="28" width="58" height="122" rx="6" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<rect x="232" y="-4" width="58" height="154" rx="6" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<path d="M14 150 L290 150" stroke="#3B5BDB" stroke-width="3" stroke-linecap="round"/>
+<path d="M290 -22 l8 14 h-16 z" fill="#3B5BDB"/><line x1="290" y1="150" x2="290" y2="-8" stroke="#3B5BDB" stroke-width="2" stroke-dasharray="3 4"/></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g2)"/>
+<text x="74" y="112" font-size="40" font-weight="800" fill="#1B2336">Tekoäly ei ole yksi väline</text>
+<rect x="74" y="150" width="812" height="86" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="190" font-size="21" fill="#2F46B0">Se on laaja joukko erilaisia ratkaisuja eri käyttötarkoituksiin.</text>
+<text x="100" y="220" font-size="21" fill="#2F46B0">Ei siis yhtä ainoaa tekoälyä, joka ratkaisisi kaiken.</text>
+<text x="74" y="288" font-size="19" fill="#5A6478">Tekoälyä voi luokitella sen mukaan, mitä se käytännössä osaa tehdä.</text>
+<g transform="translate(74,322)">
+<rect x="0" y="0" width="262" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="13"/><path d="M14 7 V14 L19 19"/></g>
+<text x="68" y="46" font-size="20" font-weight="800" fill="#247A52">Käytössä nyt</text>
+<text x="24" y="92" font-size="15" fill="#3A4253">Kapea ja generatiivinen AI —</text>
+<text x="24" y="118" font-size="15" fill="#3A4253">esim. Netflixin suositukset.</text></g>
+<g transform="translate(349,322)">
+<rect x="0" y="0" width="262" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#3B5BDB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 V25 M3 14 H25"/></g>
+<text x="68" y="46" font-size="20" font-weight="800" fill="#2F46B0">Tutkimuksessa</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">AGI eli yleinen tekoäly —</text>
+<text x="24" y="118" font-size="16" fill="#3A4253">tavoite, ei vielä totta.</text></g>
+<g transform="translate(624,322)">
+<rect x="0" y="0" width="262" height="146" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,26)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 l3.5 8 8.5 .6 -6.5 5.5 2 8.4 -7.5 -4.5 -7.5 4.5 2 -8.4 -6.5 -5.5 8.5 -.6 z"/></g>
+<text x="68" y="46" font-size="20" font-weight="800" fill="#C79100">Spekulaatiota</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">ASI eli yliäly — teoriaa ja</text>
+<text x="24" y="118" font-size="16" fill="#3A4253">tulevaisuudentutkimusta.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g3)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Viisi tasoa yhdellä silmäyksellä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Vasemmalta oikealle: todellisuudesta tulevaisuuteen.</text>
+<g transform="translate(74,176)">
+<rect x="0" y="120" width="148" height="58" rx="10" fill="#EAF7F0" stroke="#2F9E69" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="middle" font-size="16" font-weight="800" fill="#247A52">Kapea AI</text>
+<text x="74" y="168" text-anchor="middle" font-size="12" fill="#247A52" font-family="ui-monospace,monospace">arjessa nyt</text>
+<rect x="166" y="94" width="148" height="84" rx="10" fill="#E6F6F4" stroke="#0E9AA7" stroke-width="2.5"/>
+<text x="240" y="122" text-anchor="middle" font-size="16" font-weight="800" fill="#0B7A85">Koneoppiminen</text>
+<text x="240" y="142" text-anchor="middle" font-size="12" fill="#0B7A85" font-family="ui-monospace,monospace">tapa rakentaa</text>
+<text x="240" y="160" text-anchor="middle" font-size="12" fill="#0B7A85" font-family="ui-monospace,monospace">kapeaa AI:ta</text>
+<rect x="332" y="60" width="148" height="118" rx="10" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="406" y="88" text-anchor="middle" font-size="16" font-weight="800" fill="#2F46B0">Generatiivinen</text>
+<text x="406" y="108" text-anchor="middle" font-size="12" fill="#2F46B0" font-family="ui-monospace,monospace">luo sisältöä</text>
+<rect x="498" y="28" width="148" height="150" rx="10" fill="#F4F5F8" stroke="#9AA6BD" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text x="572" y="56" text-anchor="middle" font-size="16" font-weight="800" fill="#5A6478">AGI</text>
+<text x="572" y="76" text-anchor="middle" font-size="12" fill="#7E88A8" font-family="ui-monospace,monospace">ei olemassa</text>
+<rect x="664" y="-6" width="148" height="184" rx="10" fill="#FFF6F0" stroke="#C79100" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text x="738" y="22" text-anchor="middle" font-size="16" font-weight="800" fill="#A35A22">ASI</text>
+<text x="738" y="42" text-anchor="middle" font-size="12" fill="#A35A22" font-family="ui-monospace,monospace">spekulaatio</text>
+<line x1="0" y1="178" x2="812" y2="178" stroke="#C2CAD9" stroke-width="2"/></g>
+<rect x="74" y="392" width="494" height="44" rx="10" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="96" y="420" font-size="16" fill="#247A52">Todellista ja käytössä</text>
+<rect x="588" y="392" width="298" height="44" rx="10" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="610" y="420" font-size="16" fill="#5A6478">Vielä tavoitteita</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g4)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TASO 1 · KAPEA TEKOÄLY</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Yksi tehtävä, hyvin tehtynä</text>
+<rect x="74" y="150" width="812" height="74" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
+<text x="100" y="184" font-size="20" fill="#247A52">Suunniteltu ja opetettu yhtä tiettyä tehtävää varten.</text>
+<text x="100" y="212" font-size="20" fill="#247A52">Suoriutuu siitä hyvin — mutta ei osaa juuri muuta.</text>
+<text x="74" y="270" font-size="19" font-weight="700" fill="#5A6478">Esimerkkejä arjesta</text>
+<g transform="translate(74,290)">
+<rect x="0" y="0" width="256" height="150" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,24)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6 H30 V26 H2 Z"/><path d="M2 8 L16 18 L30 8"/></g>
+<text x="24" y="92" font-size="18" font-weight="700" fill="#1B2336">Roskapostisuodatin</text>
+<text x="24" y="120" font-size="15" fill="#5A6478">Tunnistaa huijausviestit —</text>
+<text x="24" y="140" font-size="15" fill="#5A6478">ei käännä eikä sävellä.</text></g>
+<g transform="translate(352,290)">
+<rect x="0" y="0" width="256" height="150" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,22)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="2" width="12" height="20" rx="6"/><path d="M4 16 a12 12 0 0 0 24 0 M16 28 V34 M10 34 H22"/></g>
+<text x="24" y="92" font-size="18" font-weight="700" fill="#1B2336">Puheentunnistus</text>
+<text x="24" y="120" font-size="15" fill="#5A6478">Muuttaa puheen tekstiksi —</text>
+<text x="24" y="140" font-size="15" fill="#5A6478">ei vastaa kysymyksiin.</text></g>
+<g transform="translate(630,290)">
+<rect x="0" y="0" width="256" height="150" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<g transform="translate(24,22)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18 L11 26 L29 4"/><path d="M2 4 H16"/></g>
+<text x="24" y="92" font-size="18" font-weight="700" fill="#1B2336">Suositusalgoritmi</text>
+<text x="24" y="120" font-size="15" fill="#5A6478">Ennustaa katsottavaa —</text>
+<text x="24" y="140" font-size="15" fill="#5A6478">ei tunnista kasvoja.</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g5)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Erikoistuminen: etu ja haitta</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Yksittäinen malli osaa yhden asian — kaikkeen tarvitaan eri malli.</text>
+<g transform="translate(74,176)">
+<rect x="0" y="0" width="390" height="264" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="46" cy="50" r="20" fill="#DFF3E8"/><path d="M37 50 l6 6 l11 -12" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84" y="58" font-size="24" font-weight="800" fill="#247A52">Etu</text>
+<text x="34" y="116" font-size="18" fill="#3A4253">Suoriutuu omasta tehtävästään</text>
+<text x="34" y="142" font-size="18" fill="#3A4253">erittäin hyvin —</text>
+<text x="34" y="168" font-size="18" fill="#3A4253">ei tarvitse hallita kaikkea muuta.</text>
+<text x="34" y="200" font-size="15" fill="#5A6478">Esim. pankin lainamalli arvioi hakemukset.</text>
+<text x="34" y="234" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">→ tarkka ja luotettava</text></g>
+<g transform="translate(496,176)">
+<rect x="0" y="0" width="390" height="264" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<circle cx="46" cy="50" r="20" fill="#FBE6D8"/><path d="M46 39 V52 M46 60 V61" stroke="#C26B2E" stroke-width="2.8" stroke-linecap="round"/>
+<text x="84" y="58" font-size="24" font-weight="800" fill="#A35A22">Haitta</text>
+<text x="34" y="116" font-size="18" fill="#3A4253">Eri tehtäviin tarvitaan</text>
+<text x="34" y="142" font-size="18" fill="#3A4253">yleensä eri mallit.</text>
+<text x="34" y="168" font-size="18" fill="#3A4253">Yksi malli ei ymmärrä maailmaa.</text>
+<text x="34" y="200" font-size="15" fill="#5A6478">Sama lainamalli ei vastaa asiakaspuheluihin.</text>
+<text x="34" y="234" font-size="15" fill="#A35A22" font-family="ui-monospace,monospace">→ kapea käyttöala</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g6)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TASO 2 · KONEOPPIMINEN</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Kone oppii datasta</text>
+<text x="74" y="158" font-size="19" fill="#5A6478">Ihminen ei kirjoita sääntöjä — malli oppii ne esimerkeistä.</text>
+<g transform="translate(74,196)">
+<rect x="0" y="32" width="190" height="100" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="95" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2336">Tuhansia</text>
+<text x="95" y="100" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2336">merkittyjä kuvia</text>
+<path d="M196 82 H276" stroke="#0E9AA7" stroke-width="2.5"/><path d="M284 82 l-12 -6 v12 z" fill="#0E9AA7"/>
+<rect x="292" y="32" width="190" height="100" rx="14" fill="#E6F6F4" stroke="#0E9AA7" stroke-width="2.5"/>
+<text x="387" y="74" text-anchor="middle" font-size="18" font-weight="800" fill="#0B7A85">Malli oppii</text>
+<text x="387" y="100" text-anchor="middle" font-size="15" fill="#0B7A85">piirteet datasta</text>
+<path d="M488 82 H568" stroke="#0E9AA7" stroke-width="2.5"/><path d="M576 82 l-12 -6 v12 z" fill="#0E9AA7"/>
+<rect x="584" y="32" width="228" height="100" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="698" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2336">Ennuste uudesta</text>
+<text x="698" y="100" text-anchor="middle" font-size="15" fill="#5A6478">"Matti 95 %:n varmuudella"</text></g>
+<g transform="translate(74,376)">
+<rect x="0" y="0" width="390" height="68" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="22" y="32" font-size="17" font-weight="700" fill="#1B2336">Algoritmit</text>
+<text x="22" y="56" font-size="15" fill="#5A6478">toimintaohjeet, joita malli noudattaa</text></g>
+<g transform="translate(496,376)">
+<rect x="0" y="0" width="390" height="68" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="22" y="32" font-size="17" font-weight="700" fill="#1B2336">Parametrit</text>
+<text x="22" y="56" font-size="15" fill="#5A6478">arvot, jotka malli oppii datasta</text></g>
+<text x="74" y="480" font-size="15" fill="#5A6478" font-style="italic">Ei mystiikkaa — matematiikkaa, joka löytää datasta rakenteita.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g7)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TASO 3 · GENERATIIVINEN TEKOÄLY</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Tekoäly, joka luo uutta</text>
+<rect x="74" y="150" width="812" height="74" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="184" font-size="20" fill="#2F46B0">Ei vain tunnista tai luokittele — tuottaa uutta sisältöä.</text>
+<text x="100" y="212" font-size="20" fill="#2F46B0">Rakentaa vastauksen vaiheittain, osa kerrallaan.</text>
+<g transform="translate(74,254)">
+<rect x="0" y="0" width="194" height="88" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="97" y="40" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2336">Teksti</text>
+<text x="97" y="66" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">ChatGPT</text></g>
+<g transform="translate(280,254)">
+<rect x="0" y="0" width="194" height="88" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="97" y="40" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2336">Kuva</text>
+<text x="97" y="66" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">Nano Banana</text></g>
+<g transform="translate(486,254)">
+<rect x="0" y="0" width="194" height="88" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="97" y="40" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2336">Video</text>
+<text x="97" y="66" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">Veo</text></g>
+<g transform="translate(692,254)">
+<rect x="0" y="0" width="194" height="88" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="97" y="40" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2336">Musiikki</text>
+<text x="97" y="66" text-anchor="middle" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">Suno</text></g>
+<rect x="74" y="372" width="812" height="76" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(98,392)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15"/><path d="M16 9 V18 M16 23 V24"/></g>
+<text x="146" y="402" font-size="18" font-weight="700" fill="#A35A22">Voi tuottaa uskottavaa mutta virheellistä sisältöä.</text>
+<text x="146" y="430" font-size="17" fill="#3A4253">Se valitsee todennäköisimmän jatkon — ei ajattele etukäteen kuin ihminen.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g8)"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Sekin on yhä kapeaa tekoälyä</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Näkyvä ja ajankohtainen — mutta ei yleiskäyttöinen äly.</text>
+<g transform="translate(74,176)">
+<rect x="0" y="0" width="390" height="264" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="30" y="52" font-size="22" font-weight="800" fill="#247A52">Osaa hyvin</text>
+<circle cx="40" cy="98" r="6" fill="#2F9E69"/><text x="60" y="104" font-size="18" fill="#3A4253">Kirjoittaa tekstiä</text>
+<circle cx="40" cy="138" r="6" fill="#2F9E69"/><text x="60" y="144" font-size="18" fill="#3A4253">Tuottaa kuvia ja videoita</text>
+<circle cx="40" cy="178" r="6" fill="#2F9E69"/><text x="60" y="184" font-size="18" fill="#3A4253">Selittää käsitteitä</text>
+<circle cx="40" cy="218" r="6" fill="#2F9E69"/><text x="60" y="224" font-size="18" fill="#3A4253">Toimii monella kielellä</text></g>
+<g transform="translate(496,176)">
+<rect x="0" y="0" width="390" height="264" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="30" y="52" font-size="22" font-weight="800" fill="#A35A22">Ei kykene</text>
+<path d="M34 92 l12 12 M46 92 l-12 12" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/><text x="60" y="104" font-size="18" fill="#3A4253">Ohjaamaan robottia</text>
+<path d="M34 132 l12 12 M46 132 l-12 12" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/><text x="60" y="144" font-size="18" fill="#3A4253">Ajamaan autoa</text>
+<path d="M34 172 l12 12 M46 172 l-12 12" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/><text x="60" y="184" font-size="18" fill="#3A4253">Pitämään yllä pitkää tavoitetta</text>
+<path d="M34 212 l12 12 M46 212 l-12 12" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/><text x="60" y="224" font-size="18" fill="#3A4253">Toimimaan itsenäisesti kaikessa</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g9)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TASO 4 · AGI · YLEINEN TEKOÄLY</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Oppisi laajasti kuin ihminen</text>
+<text x="74" y="158" font-size="19" fill="#5A6478">Toimisi monilla eri aloilla ja soveltaisi oppimaansa uusiin tilanteisiin.</text>
+<g transform="translate(74,194)">
+<rect x="0" y="0" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="128" y="38" text-anchor="middle" font-size="17" fill="#3A4253">Lukisi ja ymmärtäisi tekstiä</text>
+<rect x="278" y="0" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="406" y="38" text-anchor="middle" font-size="17" fill="#3A4253">Tunnistaisi kuvia</text>
+<rect x="556" y="0" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="684" y="38" text-anchor="middle" font-size="17" fill="#3A4253">Ohjelmoisi ja opettaisi</text>
+<rect x="0" y="76" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="128" y="114" text-anchor="middle" font-size="17" fill="#3A4253">Tekisi strategisia päätelmiä</text>
+<rect x="278" y="76" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="406" y="114" text-anchor="middle" font-size="17" fill="#3A4253">Ymmärtäisi asiayhteyksiä</text>
+<rect x="556" y="76" width="256" height="60" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="684" y="114" text-anchor="middle" font-size="17" fill="#3A4253">Soveltaisi uuteen tilanteeseen</text></g>
+<rect x="74" y="360" width="812" height="88" rx="16" fill="#F4F5F8" stroke="#9AA6BD" stroke-width="2.5" stroke-dasharray="7 5"/>
+<g transform="translate(100,386)" fill="none" stroke="#5A6478" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="16"/><path d="M18 10 V18 L24 24"/></g>
+<text x="152" y="396" font-size="20" font-weight="800" fill="#5A6478">Tällaista tekoälyä ei ole vielä olemassa.</text>
+<text x="152" y="426" font-size="17" fill="#3A4253">Tutkitaan aktiivisesti — osa arvioi 2030-lukua, toiset paljon kauempana.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g10)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Maalitolpat liikkuvat</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kun tekoäly oppii taidon, sitä ei enää pidetä "oikeana älynä".</text>
+<g transform="translate(74,170)">
+<rect x="0" y="0" width="812" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="28" y="44" font-size="19" font-weight="700" fill="#1B2336">Ennen: shakissa voittaminen oli vahva älykkyyden merkki.</text>
+<text x="28" y="80" font-size="18" fill="#5A6478">Kun tietokone voitti ihmisen, ymmärrettiin: shakkitaito ei yksin riitä.</text>
+<text x="28" y="106" font-size="16" fill="#7E88A8" font-family="ui-monospace,monospace">shakki, käännös, essee, koodi — opittu   →   "ei se vielä ollut oikeaa älyä"</text></g>
+<g transform="translate(74,316)">
+<rect x="0" y="0" width="500" height="124" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="28" y="44" font-size="20" font-weight="800" fill="#2F46B0">Mitä yhä puuttuu</text>
+<text x="28" y="78" font-size="17" fill="#1B2336">Muisti · toiminnan jatkuvuus</text>
+<text x="28" y="104" font-size="17" fill="#1B2336">Luotettavuus · fyysinen maailma</text></g>
+<g transform="translate(602,316)">
+<rect x="0" y="0" width="284" height="124" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="24" y="44" font-size="18" font-weight="700" fill="#A35A22">Rima siirtyy</text>
+<path d="M24 72 H210" stroke="#C2CAD9" stroke-width="2.5"/><path d="M218 72 l-12 -6 v12 z" fill="#C26B2E"/>
+<text x="24" y="104" font-size="15" fill="#5A6478">aina kauemmas, kun taito opitaan</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g11)"/>
+<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TASO 5 · ASI · YLIÄLY</text>
+<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Ihmistä älykkäämpi tekoäly</text>
+<text x="74" y="158" font-size="19" fill="#5A6478">Spekulatiivinen käsite: ratkaisisi ongelmia, joihin ihminen ei pysty.</text>
+<g transform="translate(74,194)">
+<rect x="0" y="0" width="390" height="120" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="28" y="44" font-size="20" font-weight="800" fill="#247A52">Optimistinen näkökulma</text>
+<text x="28" y="78" font-size="17" fill="#3A4253">Voisi auttaa ratkaisemaan sairauksia,</text>
+<text x="28" y="102" font-size="17" fill="#3A4253">ilmastonmuutosta ja energiakysymyksiä.</text></g>
+<g transform="translate(496,194)">
+<rect x="0" y="0" width="390" height="120" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<text x="28" y="44" font-size="20" font-weight="800" fill="#A35A22">Huolestunut näkökulma</text>
+<text x="28" y="78" font-size="17" fill="#3A4253">Vaikeasti ennakoitava ja hallittava,</text>
+<text x="28" y="102" font-size="17" fill="#3A4253">jos tavoitteet eivät vastaa ihmistä.</text></g>
+<text x="74" y="356" font-size="19" font-weight="700" fill="#5A6478">Kaksi avointa kysymystä</text>
+<g transform="translate(74,374)">
+<rect x="0" y="0" width="390" height="74" rx="12" fill="#FFF3D6" stroke="#E8D08A" stroke-width="1.5"/>
+<text x="22" y="32" font-size="17" font-weight="700" fill="#C79100">Hallittavuus</text>
+<text x="22" y="58" font-size="15" fill="#5A6478">Miten varmistaa arvojen mukainen toiminta?</text></g>
+<g transform="translate(496,374)">
+<rect x="0" y="0" width="390" height="74" rx="12" fill="#FFF3D6" stroke="#E8D08A" stroke-width="1.5"/>
+<text x="22" y="32" font-size="17" font-weight="700" fill="#C79100">Tavoitteiden asettaminen</text>
+<text x="22" y="58" font-size="15" fill="#5A6478">Ymmärtääkö se tavoitteen kuin ihminen?</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g12)"/>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Lue uutisia kriittisesti</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Otsikon "tekoäly mullistaa alan" takana on usein kapea tekoäly.</text>
+<rect x="74" y="166" width="812" height="86" rx="14" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2.5"/>
+<text x="100" y="206" font-size="21" fill="#2F46B0">Kysy aina: puhutaanko kapeasta, generatiivisesta,</text>
+<text x="100" y="236" font-size="21" fill="#2F46B0">AGI:sta vai ASI:sta — ja mitä järjestelmä oikeasti osaa?</text>
+<g transform="translate(74,282)">
+<rect x="0" y="0" width="390" height="158" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4 H30 L26 16 L30 28 H2 Z"/><path d="M2 4 V32"/></g>
+<text x="78" y="50" font-size="20" font-weight="800" fill="#A35A22">Liioiteltu väite</text>
+<text x="28" y="96" font-size="17" fill="#3A4253">"Tekoäly voittaa ihmisen"</text>
+<text x="28" y="124" font-size="16" fill="#5A6478">= usein yksi rajattu tehtävä.</text></g>
+<g transform="translate(496,282)">
+<rect x="0" y="0" width="390" height="158" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="13"/><path d="M10 14 l3 3 l7 -8"/></g>
+<text x="78" y="50" font-size="20" font-weight="800" fill="#247A52">Tarkka tulkinta</text>
+<text x="28" y="96" font-size="17" fill="#3A4253">Mihin tasoon väite viittaa?</text>
+<text x="28" y="124" font-size="16" fill="#5A6478">Mitä se ei kerro osaavansa?</text></g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><pattern id="l2g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l2g13)"/>
+<rect x="0" y="0" width="12" height="540" fill="#3B5BDB"/>
+<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Tekoäly ei ole yksi väline, vaan kokonainen kirjo järjestelmiä.</text>
+<g font-size="16.5" fill="#3A4253">
+<rect x="74" y="166" width="392" height="50" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="191" r="6" fill="#2F9E69"/><text x="118" y="197">Kapea AI — yksi tehtävä, käytössä nyt</text>
+<rect x="494" y="166" width="392" height="50" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="191" r="6" fill="#0E9AA7"/><text x="538" y="197">Koneoppiminen — oppii datasta</text>
+<rect x="74" y="224" width="392" height="50" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="249" r="6" fill="#3B5BDB"/><text x="118" y="255">Generatiivinen — luo uutta sisältöä</text>
+<rect x="494" y="224" width="392" height="50" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="249" r="6" fill="#5A6478"/><text x="538" y="255">AGI — yleinen äly, ei vielä olemassa</text>
+<rect x="74" y="282" width="812" height="50" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="307" r="6" fill="#C79100"/><text x="118" y="313">ASI — yliäly, toistaiseksi teoriaa ja spekulaatiota</text>
+</g>
+<rect x="74" y="356" width="812" height="92" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<g transform="translate(102,386)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="150" y="396" font-size="22" font-weight="800" fill="#247A52">Kaikki nykyinen tekoäly on kapeaa tai generatiivista.</text>
+<text x="150" y="426" font-size="18" fill="#3A4253">Tunnista taso, niin osaat suhtautua kriittisesti liioiteltuihin väitteisiin.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+</svg></div>
+</div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-01/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-03/">Seuraava →</a></div></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-02", "num": 2, "title": "Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>

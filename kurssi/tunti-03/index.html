@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka — Verkkokurssi — AI · Perusteet</title>
+<meta name="description" content="Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka. Verkkokurssi, AI · Perusteet -verkkokurssi tekoälyn perusteista.">
+<link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-03/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+
+<nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/teoria/">Teoria</a><span>›</span><span>Osa 3/27</span></div><div class="lesson-title">Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka</div><div class="lesson-badges"><span class="badge badge-osp">Teoria</span><span class="badge badge-type">Lukuaika n. 15 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-03/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-03/" data-view="luokka">Luokkaversio</a></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button class="tab-btn" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button class="tab-btn" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="teoria"><h1>Miten kone kirjoittaa? — generatiivisen tekoälyn mekaniikka</h1>
+<h2>Johdanto</h2>
+<p>Kun käytät ChatGPT:tä, Copilotia tai muuta kielimalliin perustuvaa tekoälyä, vastaus voi näyttää hyvin älykkäältä. Mutta mitä taustalla oikeasti tapahtuu? Taustalla ei ole ajattelua tai ymmärtämistä ihmisen tavoin, vaan matemaattista ennustamista.</p>
+<p>Kielimalli on opetettu valtavalla määrällä tekstiä. Se ei ajattele kuten ihminen, vaan ennustaa, mikä sana, sanan osa tai ilmaus sopii seuraavaksi parhaiten. Kun ymmärrät tämän, ymmärrät paremmin sekä mallin vahvuudet että sen rajat.</p>
+<p>Tämän tunnin jälkeen ymmärrät, että vaikka tekoäly näyttää älykkäältä, sen perusta on mekaaninen. Se ei ajattele ihmisen tavoin, vaan ennustaa.</p>
+<h2>Tokenit — sanat jaetaan pieniksi palasiksi</h2>
+<p>Kun ChatGPT tai muu kielimalli lukee tekstiä, se ei käsittele sitä varsinaisesti kokonaisina sanoina, vaan <strong>tokeneina</strong> eli pieninä tekstin palasina.</p>
+<p>Joskus yksi sana vastaa yhtä tokenia. Näin voi olla esimerkiksi sanoissa ”tekoäly” tai ”koulu”. Pidemmät tai harvinaisemmat sanat voivat kuitenkin jakautua useaan tokeniin. Esimerkiksi sana ”kielentutkimusopiskelijat” voi pilkkoutua useiksi osiksi. Tämä riippuu siitä, miten mallin käyttämä <strong>tokenisaattori</strong> on suunniteltu ja opetettu.</p>
+<p>Miksi näin tehdään? Mallia opetettaessa se oppii, mitkä kirjain-, sana- ja sananosayhdistelmät ovat hyödyllisiä. Yleiset sanat tai sananosat voivat muodostaa yhden tokenin. Harvinaisemmat sanat jaetaan pienempiin osiin, jotta malli pystyy käsittelemään myös sanoja, joita se ei ole nähnyt usein.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miksi pienempi tokenisarja voisi olla kielimallille parempi kuin pitkien sanojen käsittely kokonaisina?</p>
+</blockquote>
+</blockquote>
+<p>ChatGPT:n kaltaiselle mallille ”tekoäly” voi olla noin 1–2 tokenia. Sana ”kielentutkimusopiskelijat” voi puolestaan olla useita tokeneita. Malli siis ”näkee” tekstin tokeneina, ei samalla tavalla kuin ihminen näkee sanat ja lauseet.</p>
+<h2>Parametrit — miljardeja opittuja numeroita</h2>
+<p>Kielimallissa on <strong>parametreja</strong> eli numeroarvoja, jotka se on oppinut koulutuksen aikana. Esimerkiksi GPT-3-mallissa oli noin 175 miljardia parametria. Uudemmissa suurissa kielimalleissa parametrimäärät ja tarkat rakenteet voivat olla erilaisia, eikä niitä aina julkaista avoimesti.</p>
+<p>Parametrien lukumäärä on niin valtava, että sitä on vaikea hahmottaa. Onneksi perusidea on yksinkertainen: parametrit ovat matemaattisia painoja, jotka ohjaavat mallin toimintaa. Ne vaikuttavat siihen, millaisia yhteyksiä malli tunnistaa tekstissä ja millaisia vastauksia se todennäköisimmin tuottaa.</p>
+<p>Voit ajatella parametreja mallin eräänlaisina ”säätiminä”. Ne eivät ole ihmisaivojen kaltaisia ajatuksia tai muistoja, vaan numeroita, joiden avulla malli käsittelee tekstiä. Koulutuksen aikana malli säätää näitä numeroita vähitellen, jotta sen ennusteet paranevat.</p>
+<p>Käytännössä malli käy läpi valtavan määrän tekstiesimerkkejä ja yrittää ennustaa, mikä tokeni tulee seuraavaksi. Kun ennuste menee väärin, mallin parametreja säädetään hieman. Kun tätä toistetaan valtavan monta kertaa, malli oppii yhä paremmin, millaiset tokenit sopivat toistensa yhteyteen.</p>
+<h2>Seuraavan tokenin ennustaminen — sana kerrallaan</h2>
+<p>Kielimallin perusmekanismia kutsutaan usein englanniksi nimellä <strong>next-token prediction</strong>. Suomeksi se tarkoittaa <strong>seuraavan tokenin ennustamista</strong>.</p>
+<p>Kun annat ChatGPT:lle kysymyksen ”Mikä on Suomen pääkaupunki?”, malli näkee tekstin tokeneina. Yksinkertaistettuna se voi käsitellä sen esimerkiksi näin:</p>
+<ul>
+<li>tokeni: ”Mikä”</li>
+<li>tokeni: ”on”</li>
+<li>tokeni: ”Suomen”</li>
+<li>tokeni: ”pääkaupunki”</li>
+</ul>
+<p>Tämän jälkeen malli arvioi parametrien ja koulutusdatan perusteella, mikä tokeni sopii seuraavaksi. Tässä tapauksessa todennäköinen jatko on ”Helsinki”. Malli valitsee sen ja lisää sen vastaukseen.</p>
+<p>Sitten malli jatkaa samalla tavalla. Se katsoo aiempaa tekstiä, johon kuuluu nyt myös sen oma tuottama sana, ja ennustaa taas seuraavan tokenin. Tätä jatkuu, kunnes vastaus on valmis tai kunnes pituusraja tulee vastaan.</p>
+<p>Tässä on avainasia: malli ei kirjoita vastausta samalla tavalla kuin ihminen suunnittelee esseen tai perustelun. Se valitsee seuraavaa tokenia yksi kerrallaan parametrien ja koulutuksessa näkemänsä datan perusteella. Se näyttää älykkäältä, koska koulutusdata sisälsi valtavasti ihmisten kirjoittamaa älykästä tekstiä. Mutta malli ei ajattele ihmisen tavoin. Se ennustaa.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Jos malli vain ennustaa seuraavaa tokenia todennäköisyyksien perusteella, miten se voi silti antaa oikeita vastauksia monimutkaisiin kysymyksiin?</p>
+</blockquote>
+</blockquote>
+<figure class="ai-demo"><span class="ai-demo__tag">// ennusta → valitse → liitä → toista — viisi askelta peräkkäin</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
+  <div class="l03-wrap">
+    <div class="l03-sent"><span class="l03-fixed">Suomen pääkaupunki</span><span class="l03-tok t1"> on</span><span class="l03-tok t2"> Helsinki</span><span class="l03-tok t3">.</span><span class="l03-tok t4"> Se</span><span class="l03-tok t5"> sijaitsee</span><span class="l03-tok t6">…</span><i class="l03-caret"></i></div>
+    <span class="l03-ph">malli laskee todennäköisyyden jokaiselle jatkolle:</span>
+    <div class="l03-cands l03-r1"><div class="l03-c top"><span>on</span><div class="l03-cb"><i style="width:90%"></i></div><b>91 %</b></div><div class="l03-c"><span>sijaitsee</span><div class="l03-cb"><i style="width:6%"></i></div><b>4 %</b></div><div class="l03-c"><span>oli</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div></div>
+    <div class="l03-cands l03-r2"><div class="l03-c top"><span>Helsinki</span><div class="l03-cb"><i style="width:93%"></i></div><b>94 %</b></div><div class="l03-c"><span>Tukholma</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div><div class="l03-c"><span>Turku</span><div class="l03-cb"><i style="width:3%"></i></div><b>1 %</b></div></div>
+    <div class="l03-cands l03-r3"><div class="l03-c top"><span>.</span><div class="l03-cb"><i style="width:86%"></i></div><b>87 %</b></div><div class="l03-c"><span>,&nbsp;ja</span><div class="l03-cb"><i style="width:9%"></i></div><b>8 %</b></div><div class="l03-c"><span>!</span><div class="l03-cb"><i style="width:4%"></i></div><b>3 %</b></div></div>
+    <div class="l03-cands l03-r4"><div class="l03-c top"><span>Se</span><div class="l03-cb"><i style="width:62%"></i></div><b>64 %</b></div><div class="l03-c"><span>Kaupunki</span><div class="l03-cb"><i style="width:18%"></i></div><b>18 %</b></div><div class="l03-c"><span>Vuonna</span><div class="l03-cb"><i style="width:9%"></i></div><b>9 %</b></div></div>
+    <div class="l03-cands l03-r5"><div class="l03-c top"><span>sijaitsee</span><div class="l03-cb"><i style="width:69%"></i></div><b>71 %</b></div><div class="l03-c"><span>on</span><div class="l03-cb"><i style="width:12%"></i></div><b>12 %</b></div><div class="l03-c"><span>perustettiin</span><div class="l03-cb"><i style="width:8%"></i></div><b>8 %</b></div></div>
+    <span class="l03-loop">…ja sama jatkuu: jokainen uusi token lasketaan koko siihenastisen tekstin pohjalta</span>
+  </div>
+</div>
+<figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, liittää sen tekstiin — ja laskee kaiken uudelleen. Huomaa, miten varmuus vaihtelee: faktan jatko on lähes varma (94 %), tyylivalinta epävarmempi (64 %).</figcaption></figure>
+<style>
+.l03-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
+.l03-sent{position:absolute;left:0;right:0;top:0;font-size:14.5px;font-weight:500;color:#FFFFFF;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;white-space:nowrap}
+.l03-tok{color:#7FD0A8;opacity:0}
+.l03-tok.t1{animation:l03t1 19s infinite}
+.l03-tok.t2{animation:l03t2 19s infinite}
+.l03-tok.t3{animation:l03t3 19s infinite}
+.l03-tok.t4{animation:l03t4 19s infinite}
+.l03-tok.t5{animation:l03t5 19s infinite}
+.l03-tok.t6{color:#8B94B3;animation:l03t6 19s infinite}
+@keyframes l03t1{0%,16%{opacity:0}18%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t2{0%,34%{opacity:0}36%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t3{0%,53%{opacity:0}55%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t4{0%,71%{opacity:0}73%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t5{0%,89%{opacity:0}91%,98%{opacity:1}100%{opacity:0}}
+@keyframes l03t6{0%,93%{opacity:0}95%,98%{opacity:1}100%{opacity:0}}
+.l03-caret{display:inline-block;width:2px;height:16px;background:#46c7cf;margin-left:3px;vertical-align:-2px;animation:l03caret 1.1s steps(2) infinite}
+@keyframes l03caret{to{visibility:hidden}}
+.l03-ph{position:absolute;left:2px;top:62px;font-size:11px;letter-spacing:.04em;color:#8B94B3}
+.l03-cands{position:absolute;left:0;top:84px;width:560px;display:flex;gap:12px;opacity:0}
+.l03-r1{animation:l03r1 19s infinite}
+.l03-r2{animation:l03r2 19s infinite}
+.l03-r3{animation:l03r3 19s infinite}
+.l03-r4{animation:l03r4 19s infinite}
+.l03-r5{animation:l03r5 19s infinite}
+@keyframes l03r1{0%,1%{opacity:0}3%,15%{opacity:1}17%,100%{opacity:0}}
+@keyframes l03r2{0%,20%{opacity:0}22%,33%{opacity:1}35%,100%{opacity:0}}
+@keyframes l03r3{0%,39%{opacity:0}41%,52%{opacity:1}54%,100%{opacity:0}}
+@keyframes l03r4{0%,57%{opacity:0}59%,70%{opacity:1}72%,100%{opacity:0}}
+@keyframes l03r5{0%,75%{opacity:0}77%,88%{opacity:1}90%,100%{opacity:0}}
+.l03-c{flex:1;background:#141B2D;border:1.5px solid #2B3552;border-radius:11px;padding:9px 11px}
+.l03-c span{display:block;font-size:13px;color:#EAEEF8;margin-bottom:6px}
+.l03-c b{font-size:11px;color:#B9C2DA;font-weight:600}
+.l03-c.top{border-color:#7FD0A8;background:#13251C}
+.l03-c.top span{color:#FFFFFF}
+.l03-c.top b{color:#7FD0A8}
+.l03-cb{height:7px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden;margin-bottom:5px}
+.l03-cb i{display:block;height:100%;border-radius:99px;background:oklch(0.66 0.15 264)}
+.l03-c.top .l03-cb i{background:#7FD0A8}
+.l03-loop{position:absolute;left:0;right:0;top:196px;font-size:11px;line-height:1.4;color:#46c7cf;opacity:0;animation:l03loop 19s infinite}
+@keyframes l03loop{0%,6%{opacity:0}10%,96%{opacity:.95}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+.l03-tok,.l03-cands,.l03-caret,.l03-loop{animation:none}
+.l03-tok{opacity:1}
+.l03-r5,.l03-loop{opacity:1}}
+</style>
+
+<h2>Koulutusdata — se, mistä malli oppii</h2>
+<p>Parametrit opitaan <strong>koulutusdatasta</strong>. Nykyiset kielimallit on koulutettu valtavilla tekstimäärillä, joita on kerätty esimerkiksi kirjoista, artikkeleista, verkkosivuilta, koodista ja internetin keskusteluista. Nykyiset suuret kielimallit opetetaan biljoonilla tokeneilla. Tässä yhteydessä biljoona tarkoittaa miljoonaa miljoonaa.</p>
+<p>Mitä malli oppii tästä aineistosta? Se oppii tilastollisia yhteyksiä ja toistuvia kuvioita. Se voi esimerkiksi oppia, että sanat ”koodaus” ja ”Python” esiintyvät usein yhdessä, että merkkijonon ”2 + 2” jälkeen tulee usein ”= 4” tai että kysymyksen jälkeen seuraa yleensä vastaus.</p>
+<p>Tärkeää on kuitenkin ymmärtää, ettei malli ymmärrä asioita samalla tavalla kuin ihminen. Se ei tiedä, miksi 2 + 2 = 4 on totta. Se on oppinut, että tämä yhdistelmä esiintyy aineistossa hyvin usein ja on siksi todennäköinen.</p>
+<p>Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai esiintyy siinä vain vähän, malli ei pysty hallitsemaan sitä hyvin.</p>
+<h2>Hallusinaatio — kun malli tuottaa väärän mutta uskottavan vastauksen</h2>
+<p><strong>Hallusinaatiolla</strong> tarkoitetaan tilannetta, jossa kielimalli tuottaa vastauksen, joka vaikuttaa uskottavalta mutta on todellisuudessa väärä.</p>
+<p>Esimerkiksi mallilta voidaan kysyä: ”Kuka kirjoitti romaanin Suuri Mahtava?” Malli saattaa vastata: ”Jane Austen kirjoitti teoksen Suuri Mahtava vuonna 1847.” Vastaus kuulostaa uskottavalta, mutta se on virheellinen. Jane Austen ei ole kirjoittanut tämännimistä teosta. Vastaus näyttää oikealta siksi, että malli on oppinut, että kirjailijan nimi, teoksen nimi ja vuosiluku esiintyvät usein samankaltaisissa yhteyksissä.</p>
+<p>Tätä kutsutaan hallusinaatioksi. Malli ei valehtele tietoisesti, koska se ei ymmärrä totuutta tai valhetta ihmisen tavoin. Se ennustaa, mikä ilmaus vaikuttaa todennäköiseltä seuraavaksi. Joskus tämä ennuste osuu väärin, vaikka lopputulos kuulostaisi hyvin vakuuttavalta.</p>
+<blockquote>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miksi hallusinaatio voi olla erityisen vaarallinen silloin, kun vastaus on kirjoitettu itsevarmalla ja asiantuntevalla tyylillä?</p>
+</blockquote>
+</blockquote>
+<h2>Lämpötila — kontrolli satunnaisuudelle</h2>
+<p>Kielimalli ei aina valitse kaikkein <em>todennäköisintä</em> seuraavaa tokenia. Joskus se voi valita myös hieman epätodennäköisemmän vaihtoehdon, jotta vastaus olisi monipuolisempi tai luovempi.</p>
+<p>Tähän vaikuttaa asetus, jota kutsutaan <strong>lämpötilaksi</strong>.</p>
+<ul>
+<li><strong>Matala lämpötila:</strong> malli valitsee yleensä kaikkein todennäköisimmän jatkon. Vastaukset ovat usein tasaisempia, ennustettavampia ja johdonmukaisempia.</li>
+<li><strong>Korkea lämpötila:</strong> malli sallii enemmän vaihtelua ja voi valita myös epätodennäköisempiä jatkoja. Vastaukset voivat olla luovempia, mutta myös satunnaisempia ja virhealttiimpia.</li>
+</ul>
+<p>Käyttäjä ei tavallisesti säädä lämpötilaa itse tavallisessa chat-käyttöliittymässä, mutta asetus vaikuttaa silti mallin toimintaan. Siksi samaan kysymykseen voi joskus saada hieman erilaisen vastauksen eri kerroilla.</p>
+<h2>Kuva-, musiikki- ja videomallit</h2>
+<p>Kielimallien taustalla oleva ajatus eli seuraavan yksikön ennustaminen ei rajoitu vain tekstiin. Samaa perusajatusta voidaan soveltaa myös kuviin, musiikkiin ja videoihin.</p>
+<ul>
+<li><strong>Kuvamallit</strong> ennustavat, millaisia visuaalisia piirteitä kuvaan kannattaa muodostaa seuraavaksi.</li>
+<li><strong>Musiikkimallit</strong> ennustavat, millainen ääni, sävel tai rytminen elementti sopii jatkoksi.</li>
+<li><strong>Videomallit</strong> ennustavat, millaisia kuvia, liikettä ja joskus myös ääntä seuraavaksi pitäisi syntyä.</li>
+</ul>
+<p>Periaate pysyy samankaltaisena, vaikka sisältö muuttuu. Malli tuottaa lopputulosta vaiheittain aiemmin muodostuneen sisällön perusteella. Erona on vain se, käsitelläänkö tekstin sijaan kuvaa, ääntä vai liikkuvaa kuvaa.</p>
+<h2>Yhteenveto</h2>
+<p>Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii yksinkertaistettuna näin:</p>
+<ul>
+<li>Se pilkkoo tekstin tokeneiksi.</li>
+<li>Se käyttää koulutuksessa opittuja parametreja.</li>
+<li>Se ennustaa seuraavan tokenin todennäköisyyksien perusteella.</li>
+<li>Se jatkaa tätä, kunnes vastaus on valmis.</li>
+</ul>
+<p>Siksi lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Ammattilaiselle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä tekoälyn hyödyt että sen rajoitukset.</p>
+<p>Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä, mitä ja miten kysyt: <strong>konteksti ratkaisee kaiken</strong>.</p>
+<hr /></div><div class="panel" data-tab="harjoittele"><h1>Harjoittele — Miten kone kirjoittaa?</h1>
+<p>Tällä välilehdellä pääset harjoittelemaan, miten generatiivinen tekoäly todella tuottaa vastauksensa — tokeneista ja parametreista aina hallusinaatioihin ja lämpötilaan. Tehtävät tarkistuvat itsestään: palaute tulee heti jokaisen vastauksen jälkeen, eikä kukaan muu arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, koska jokainen selitys avaa, mikä mekanismi ilmiön takana on. Tehtävät etenevät käsitteiden kertaamisesta kohti mallin toiminnan analysointia ja päättyvät tilanteeseen, jossa arvioit itse, milloin vastaukseen voi luottaa ja milloin se pitää tarkistaa.</p>
+<h2>Tehtävä 1/4 — mekaniikan käsitteet</h2>
+<p>Aloitetaan tunnin peruskäsitteistä, jotka kuvaavat, miten kielimalli toimii sisältä päin.</p>
+<div class="task-widget" data-ti="0"></div>
+
+<h2>Tehtävä 2/4 — vastauksen suoritusjärjestys</h2>
+<p>Kertaa, missä järjestyksessä kielimalli tuottaa vastauksensa. Napauta vaiheet oikeaan järjestykseen.</p>
+<div class="task-widget" data-ti="1"></div>
+
+<h2>Tehtävä 3/4 — mikä mekanismi selittää tämän</h2>
+<p>Nyt liität aidot havainnot tekoälyn käytöstä oikeaan mekanismiin: tokeneihin, hallusinaatioon vai lämpötilaan.</p>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>Tehtävä 4/4 — milloin luotat, milloin tarkistat</h2>
+<p>Viimeisessä tehtävässä arvioit itse, milloin tekoälyavustajan vastaukseen voi luottaa ja milloin se pitää tarkistaa. Etene tilanteesta toiseen ja lue jokaisesta valinnasta annettu palaute.</p>
+<div class="task-widget" data-ti="3"></div></div><div class="panel" data-tab="sanasto"><h1>Sanasto</h1>
+<h2>Token</h2>
+<p>Pieni pala tekstiä, joihin sana tai sanaryhmä jaetaan. Esimerkiksi sana "tekoäly" voi olla 1–2 tokenia. Kielimalli näkee tekstin tokeneina, ei kirjaimina tai kokonaisina sanoina.</p>
+<h2>Kielimalli (Language Model)</h2>
+<p>Tekoälymalli, joka on oppinut tekstin kuvioita ja osaa ennustaa seuraavaa tokenia. ChatGPT, Claude ja Gemini ovat kielimalleja. Ne on opetettu miljardeilla tekstin tokeneilla.</p>
+<h2>Parametri</h2>
+<p>Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. GPT-3:ssa oli noin 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.</p>
+<h2>Next-Token Prediction</h2>
+<p>Kielimallin perusmekanismi: seuraavan tokenin arvaaminen aikaisempien tokenien ja parametrien perusteella. Malli tekee tämän yksi kerrallaan, kunnes vastaus on valmis.</p>
+<h2>Koulutusdata (Training Data)</h2>
+<p>Tekstiaineisto, jolla kielimalli opetetaan. Suurimmat mallit on arvioiden mukaan opetettu yli kymmenellä biljoonalla tokenilla, mutta tarkkoja lukuja ei yleensä julkaista. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.</p>
+<h2>Hallusinaatio (Hallucination)</h2>
+<p>Tilanne, jossa kielimalli tuottaa jotain, joka näyttää oikealta, mutta on täysin väärää tai keksittyä. Esimerkiksi tekijän keksiminen tai väärä fakta. Näin tapahtuu, kun malli arvaa väärän tokeniyhdistelmän.</p>
+<h2>Lämpötila (Temperature)</h2>
+<p>Parametri, joka kontrolloi, kuinka satunnaisia mallin valinnat ovat. Matala lämpötila = ennustettavampia vastauksia. Korkea lämpötila = satunnaisempia ja luovempia vastauksia.</p>
+<h2>Neuroverkko (Neural Network)</h2>
+<p>Matemaattinen rakenne, joka jäljittelee ihmisen aivojen verkostoa. Kielimallissa on neuroverkkoja, joissa miljardit parametrit yhdistyvät eri tavoin.</p>
+<h2>Embedding</h2>
+<p>Numeerinen esitys sanasta tai tokenista, jota kielimalli käyttää sisäisesti. Jokainen sana on esitettävä numeroina, jotta malli voi prosessoida sitä matematiikan avulla.</p>
+<h2>Attention</h2>
+<p>Mekanismi kielimallin sisällä, joka päättää, mihin sanaan tai tokeniin keskittyä vastatessa. Se auttaa mallia näkemään yhteyksiä pitkissä teksteissä.</p>
+<hr /></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-02/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-04/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-03')">Merkitse suoritetuksi</button></div></div>
+<footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
+<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="/assets/practice.js"></script>
+<script>window.CI={"view": "kurssi", "lid": "lesson-03", "num": 3, "title": "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", "ptasks": [{"type": "match", "title": "Mekaniikan käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Token", "b": "Pieni pala tekstiä, jona malli käsittelee syötettä sanojen sijaan.", "explain": "Malli näkee tekstin pieninä paloina, ei kokonaisina sanoina."}, {"a": "Tokenisaattori", "b": "Osa, joka pilkkoo tekstin pieniksi palasiksi mallia varten.", "explain": "Yleiset sanat muodostavat usein yhden palan, harvinaiset jaetaan moneen."}, {"a": "Parametri", "b": "Koulutuksessa opittu numeroarvo eli paino, joka ohjaa mallin ennusteita.", "explain": "Se ei ole luettava sääntö vaan luku; niitä on mallissa miljardeja yhtä aikaa."}, {"a": "Next-token prediction", "b": "Perusmekanismi, jossa malli arvaa aiemman tekstin perusteella, mikä pala tulee seuraavaksi.", "explain": "Malli tuottaa vastauksen pala kerrallaan, kunnes se on valmis."}, {"a": "Koulutusdata", "b": "Valtava tekstiaineisto, josta malli poimii tilastollisia yhteyksiä ja kuvioita.", "explain": "Aineiston virheet ja vinoumat voivat tarttua malliin, koska se oppii juuri tästä aineistosta."}, {"a": "Hallusinaatio", "b": "Tilanne, jossa malli tuottaa uskottavalta vaikuttavan mutta virheellisen vastauksen.", "explain": "Kyse ei ole tahallisesta valheesta vaan väärästä ennusteesta, joka kuulostaa vakuuttavalta."}, {"a": "Lämpötila", "b": "Asetus, joka säätelee, kuinka paljon satunnaisuutta vastausten valintaan tulee.", "explain": "Matala asetus tekee vastauksista ennustettavia, korkea vaihtelevampia ja luovempia."}, {"a": "Neuroverkko", "b": "Matemaattinen rakenne, joka jäljittelee aivojen toimintaa ja jossa miljardit painot kytkeytyvät toisiinsa.", "explain": "Rakenne, jossa mallin miljardit painot eli parametrit kytkeytyvät toisiinsa."}], "summary": "Kielimalli pilkkoo tekstin paloihin, käyttää koulutuksessa opittuja painoja ja ennustaa seuraavan palan todennäköisyyksien perusteella. <strong>Se ennustaa — se ei tiedä.<\/strong>"}, {"type": "order", "title": "Miten kielimalli tuottaa vastauksen", "intro": "Palauta mieleen, missä järjestyksessä kielimalli tuottaa vastauksensa. Napauta vaiheet oikeaan järjestykseen.", "steps": ["Tokenisaattori pilkkoo syötetyn tekstin tokeneiksi eli pieniksi palasiksi.", "Malli tarkastelee tähänastista tekstiä oppimiensa parametrien avulla.", "Malli laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille.", "Malli valitsee jatkoksi yhden tokenin, ja lämpötila vaikuttaa siihen, kuinka usein valinta osuu kaikkein todennäköisimpään.", "Valittu token liitetään tekstiin ja otetaan mukaan seuraavaan arvioon.", "Vaiheet toistuvat token kerrallaan, kunnes vastaus on valmis tai pituusraja tulee vastaan."], "missHint": "Ei vielä — mieti, mikä vaihe tuottaa tiedon, jota seuraava tarvitsee: teksti pitää pilkkoa ennen kuin mitään voidaan ennustaa, ja token pitää valita ennen kuin sen voi liittää tekstiin.", "summary": "Vastaus syntyy silmukkana pala kerrallaan, ei kerralla valmiiksi suunniteltuna kokonaisuutena. Sama periaate toistuu myös kuva-, musiikki- ja videomalleissa."}, {"type": "classify", "title": "Mikä mekanismi selittää tämän?", "intro": "Jokainen kuvaus on aito havainto tekoälyn käytöstä. Tunnista, mikä tunnin mekanismeista — tokenit, hallusinaatio vai lämpötila — sen selittää.", "categories": ["Tokenit", "Hallusinaatio", "Lämpötila"], "items": [{"text": "Pyydät saman vitsin kahdesti kahdessa eri keskustelussa ja saat kaksi eri vitsiä.", "answer": 2, "explain": "Lämpötila tuo satunnaisuutta seuraavan tokenin valintaan, joten sama pyyntö voi tuottaa eri tuloksen. Kyse ei ole mallin mielentilasta vaan matemaattisesta asetuksesta."}, {"text": "Kysyt väitteelle lähdettä, ja malli antaa itsevarmasti kirjan nimen ja sivunumeron, joita ei ole olemassa.", "answer": 1, "explain": "Uskottava mutta keksitty viite on hallusinaatio. Malli ei valehtele tahallaan, vaan ennustaa lähteeltä näyttävän jatkon, joka sattuu olemaan väärä."}, {"text": "Syötät harvinaisen pitkän erikoistermin, ja malli käsittelee sen useana pienenä palasena.", "answer": 0, "explain": "Harvinaiset ja pitkät sanat pilkkoutuvat moneen tokeniin. Malli näkee tekstin paloina, ei kokonaisina sanoina."}, {"text": "Malli kertoo vakuuttavasti pienen kunnan asukasluvun, mutta luku on väärä.", "answer": 1, "explain": "Tämä on hallusinaatio: malli ei hae lukua tietokannasta vaan ennustaa todennäköiseltä vaikuttavan luvun, joka voi olla virheellinen."}, {"text": "Tekninen ohje halutaan mahdollisimman toistettavana ja samanlaisena joka kerta, joten mallin asetukset viritetään tuottamaan vakaa ja ennustettava vastaus.", "answer": 2, "explain": "Matala lämpötila ohjaa mallin valitsemaan todennäköisimmän jatkon, jolloin vastaus on ennustettava ja johdonmukainen — hyödyllistä tarkkuutta vaativassa tehtävässä."}, {"text": "Yleinen sana kuten 'kauppa' vastaa mallille usein yhtä palaa, kun taas pitkä yhdyssana jakautuu moneen.", "answer": 0, "explain": "Näin tokenointi toimii: yleiset sanat muodostavat usein yhden palan, harvinaiset ja pitkät jaetaan osiin."}, {"text": "Malli ilmoittaa lakipykälän numeron väärin, vaikka vastaus kuulostaa asiantuntevalta.", "answer": 1, "explain": "Asiantunteva sävy ei takaa oikeellisuutta. Väärä mutta vakuuttava vastaus on hallusinaatio, ei tahallinen virhe."}, {"text": "Luovaan ideointiin halutaan mahdollisimman vaihtelevia ja yllättäviä tuloksia, joten mallin asetukset viritetään tuottamaan joka kerta erilaisia ehdotuksia.", "answer": 2, "explain": "Korkea lämpötila sallii epätodennäköisempiä valintoja, jolloin tulos on vaihtelevampi ja luovempi. Se on hyödyllistä ideoinnissa mutta riskialttiimpaa faktoissa."}], "summary": "Tokenit selittävät, miksi malli näkee tekstin paloina; hallusinaatio, miksi vakuuttava vastaus voi olla väärä; lämpötila, miksi sama pyyntö tuottaa joskus eri tuloksen. Kaikki palautuvat samaan: <strong>malli ennustaa, se ei tiedä.<\/strong>"}, {"type": "scenario", "title": "Milloin luotat, milloin tarkistat", "intro": "Olet harjoittelijana IT-lähituessa ja käytät tekoälyavustajaa eri tehtäviin. Päätä joka kohdassa, milloin vastaukseen voi luottaa ja milloin se pitää tarkistaa. Mallin luonne (se ennustaa, ei tiedä) ja tehtävän kriittisyys ohjaavat valintaa.", "start": "start", "max": 3, "nodes": {"start": {"text": "Käyttäjä kysyy, miten salasana vaihdetaan järjestelmässä X. Avustaja antaa selkeät ja vakuuttavat ohjeet. Mitä teet?", "choices": [{"label": "Tarkistat ohjeen nopeasti oman organisaation järjestelmästä ennen kuin lähetät sen, koska vakuuttava sävy ei takaa oikeellisuutta.", "next": "dp2", "feedback": "Hyvä valinta. Malli ennustaa uskottavan ohjeen, mutta organisaatiokohtaiset vaiheet voivat poiketa. Nopea tarkistus estää väärän ohjeen leviämisen.", "tone": "ok"}, {"label": "Lähetät ohjeen suoraan, koska se kuulostaa asiantuntevalta ja varmalta.", "next": "dp2", "feedback": "Itsevarma sävy ei todista, että vaiheet pitävät juuri teidän järjestelmässänne paikkansa. Malli voi tuottaa uskottavan mutta väärän ohjeen, joten organisaatiokohtainen tieto kannattaa varmistaa.", "tone": "mid"}]}, "dp2": {"text": "Seuraavaksi käyttäjä pyytää hauskaa nimiehdotusta tiimin uudelle sisäiselle keskustelukanavalle. Avustaja ehdottaa muutamaa. Mitä teet?", "choices": [{"label": "Käytät ehdotuksia vapaasti — matalan riskin luova tehtävä, jossa vaihtelu on vain hyväksi eikä faktantarkistusta tarvita.", "next": "dp3", "feedback": "Juuri näin. Nimiehdotus on luova, matalan riskin tehtävä. Tässä mallin vaihteleva ja ennustava luonne on etu, eikä erillistä tarkistusta tarvita.", "tone": "ok"}, {"label": "Vaadit lähdeviitteen jokaiselle nimiehdotukselle.", "next": "dp3", "feedback": "Luova nimiehdotus ei ole faktaväite, joten lähdeviite ei tuo siihen mitään. Tarkistuksen määrä kannattaa suhteuttaa tehtävän riskiin — täällä se on pieni.", "tone": "mid"}]}, "dp3": {"text": "Lopuksi käyttäjä kysyy tarkkaa lukua: montako lisenssiä organisaatiolla on jäljellä eräästä ohjelmistosta. Avustaja antaa täsmällisen luvun heti. Mitä teet?", "choices": [{"label": "Et luota lukuun sellaisenaan vaan tarkistat sen lisenssijärjestelmästä, koska malli voi tuottaa vakuuttavan mutta keksityn tarkan luvun.", "next": "end_good", "feedback": "Juuri oikein. Täsmällinen luku ei ole todiste oikeellisuudesta: malli ennustaa uskottavan luvun, se ei hae sitä rekisteristä. Kriittinen tieto tarkistetaan lähteestä.", "tone": "ok"}, {"label": "Ilmoitat luvun käyttäjälle suoraan, koska avustaja antoi täsmällisen vastauksen.", "next": "end_bad", "feedback": "Täsmällisyys ei tarkoita tarkistettua. Malli voi tuottaa vakuuttavan mutta keksityn luvun, joten kriittistä tietoa ei kannata välittää ilman varmistusta.", "tone": "no"}, {"label": "Lopetat tekoälyavustajan käytön kokonaan, koska siihen ei voi luottaa missään.", "next": "end_mid", "feedback": "Avustaja on hyödyllinen moneen tehtävään, kuten juuri näit luovassa nimiehdotuksessa. Koko työkalun hylkääminen on liikaa — taito on tietää, milloin vastaus pitää tarkistaa.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Hoidit päivän tehtävät fiksusti: tarkistit salasanaohjeen ja lisenssiluvun, mutta annoit luovan nimiehdotuksen edetä sellaisenaan.", "feedback": "Tarkistit kriittiset faktat, joissa virheen hinta on suuri, mutta annoit matalan riskin luovan tehtävän kulkea vapaasti. Juuri näin mallin ennustavaan luonteeseen suhtaudutaan: tarkistuksen määrä valitaan tehtävän riskin mukaan."}, "end_bad": {"end": true, "verdict": "no", "score": 0, "text": "Luku oli mallin ennuste, ei todellinen lisenssitieto, ja väärä tieto johti virheelliseen päätökseen.", "feedback": "Täsmällinen ei tarkoita tarkistettua. Malli ennustaa uskottavan luvun sen sijaan, että hakisi sen rekisteristä. Mitä kriittisempi tieto, sitä tärkeämpää se on varmistaa luotettavasta lähteestä."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Vältit väärän tiedon välittämisen, mutta luovuit samalla koko työkalusta.", "feedback": "Suurin osa valinnoistasi oli osuvia. Kielimalli on kuitenkin hyvä apu moneen, kun sen kriittiset vastaukset tarkistaa. Oikea taito ei ole hylätä työkalua vaan valita tarkistuksen määrä tehtävän riskin mukaan."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
