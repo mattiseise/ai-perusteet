@@ -1257,11 +1257,12 @@ body{
 @media(max-width:820px){.doors{grid-template-columns:1fr}}
 
 /* "Miten tämä kurssi on tehty" -tietolohko valintasivulla */
-.made-note{margin:34px 0 4px;background:var(--bg-white);border:1px solid var(--border-soft);
-  border-left:4px solid var(--blue);border-radius:var(--r);padding:24px 28px;box-shadow:0 1px 3px rgba(20,30,60,.04)}
-.made-note-kn{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--blue);margin-bottom:10px}
-.made-note p{font-size:15px;color:var(--text-muted);line-height:1.7;max-width:70ch;margin:0}
+.made-note{margin:34px 0 4px;background:rgba(20,30,60,.03);border:none;
+  border-radius:var(--r);padding:20px 26px}
+.made-note-kn{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-light);margin-bottom:8px}
+.made-note p{font-size:14px;color:var(--text-muted);line-height:1.65;max-width:70ch;margin:0 0 8px}
+.made-note p:last-child{margin-bottom:0}
 
 /* Lisenssifooteri (valintasivun alalaita) */
 .license-footer{max-width:1080px;margin:0 auto;padding:8px 40px 48px}
