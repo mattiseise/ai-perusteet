@@ -41,7 +41,7 @@ Korosta opiskelijoille:
 
 - **Kuvatyökalut** sopivat visuaalisten ideoiden, konseptien, kuvitusten ja tyylikokeilujen tekemiseen.
 - **Musiikkityökalut** sopivat esimerkiksi demojen, taustamusiikin, ideoinnin ja lyhyiden äänikonseptien tuottamiseen.
-- **Videotyökalut** sopivat tällä hetkellä erityisesti ideointiin, storyboardeihin ja lyhyisiin konsepteihin, eivät suoraan valmiiseen ammattilaistuotantoon.
+- **Videotyökalut** sopivat tällä hetkellä erityisesti ideointiin, storyboardeihin ja lyhyisiin konsepteihin, eivät suoraan valmiiseen vaativaan tuotantoon.
 - **Koodityökalut** sopivat ohjelmoinnin tukemiseen, virheiden selittämiseen ja rutiinikoodin nopeuttamiseen, mutta niiden tuotos pitää tarkistaa.
 
 ### Erikoistuneet työkalut verrattuna yleiseen tekstimalliin
@@ -99,7 +99,7 @@ Hyvä opetusnäkökulma on: koodityökalu voi olla erinomainen työpari, mutta o
 
 - **Hyvä käyttötapa:** pyydä selitystä, vaihtoehtoja, testejä ja virheen paikannusta.
 - **Huono käyttötapa:** hyväksy koodi suoraan ymmärtämättä sitä.
-- **Ammatillinen taito:** tarkista, testaa ja dokumentoi tekoälyn ehdottama koodi.
+- **Asiallinen taito:** tarkista, testaa ja dokumentoi tekoälyn ehdottama koodi.
 
 ---
 
@@ -137,7 +137,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 | --- | --- | --- |
 | **Kenen datalla malli on koulutettu?** | Mallin laatu perustuu ihmisten tuottamaan aineistoon. | Oliko tekijöillä lupa, korvaus tai mahdollisuus vaikuttaa käyttöön? |
 | **Kuka omistaa tuotoksen?** | Tekijänoikeustilanne voi riippua palvelun ehdoista ja lainsäädännöstä. | Saako tuotosta käyttää koulussa, somessa, portfoliossa tai kaupallisesti? |
-| **Korvaako työkalu ammattilaisen?** | Työkalut muuttavat luovia ammatteja ja työn arvoa. | Mitä tehtäviä työkalu helpottaa ja missä ihmisen asiantuntemus on edelleen ratkaisevaa? |
+| **Korvaako työkalu vastuullisen käyttäjän?** | Työkalut muuttavat luovia ammatteja ja työn arvoa. | Mitä tehtäviä työkalu helpottaa ja missä ihmisen asiantuntemus on edelleen ratkaisevaa? |
 | **Pitääkö tekoälyn käyttö merkitä?** | Läpinäkyvyys lisää luottamusta. | Milloin tuotokseen pitäisi lisätä merkintä, kuten ”tehty tekoälyn avulla”? |
 
 **Opettajan huomio:** Tekijänoikeus on osittain avoin ja muuttuva alue. Älä esitä keskeneräisiä oikeustapauksia lopullisesti ratkaistuina. Opeta opiskelijoille varovainen ja vastuullinen toimintatapa: tarkista palvelun ehdot, merkitse tekoälyn käyttö ja vältä tunnetun taiteilijan tyylin jäljittelyä kaupallisessa käytössä.
@@ -160,7 +160,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 
 ### Väärinkäsitys 4: ”Tekoäly tuhoaa kaikki luovat ammatit.”
 
-**Korjaava näkökulma:** Tekoäly muuttaa ammatteja, mutta ei yksinkertaisesti poista kaikkea ihmistyötä. Ammattilaisen työ voi siirtyä enemmän ideointiin, ohjaamiseen, kuratointiin, editointiin ja laadun arviointiin.
+**Korjaava näkökulma:** Tekoäly muuttaa ammatteja, mutta ei yksinkertaisesti poista kaikkea ihmistyötä. Vastuullisen käyttäjän työ voi siirtyä enemmän ideointiin, ohjaamiseen, kuratointiin, editointiin ja laadun arviointiin.
 
 ### Väärinkäsitys 5: ”Video-AI on nyt valmis korvaamaan ammattivideotuotannon.”
 
@@ -257,7 +257,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 **Hyvä etiikka-analyysi sisältää:**
 
 - miksi aihe on ajankohtainen
-- vähintään kaksi näkökulmaa, esimerkiksi käyttäjä, tekijä, yritys tai ammattilainen
+- vähintään kaksi näkökulmaa, esimerkiksi käyttäjä, tekijä, yritys tai vastuullinen käyttäjä
 - konkreettisen esimerkin
 - oman perustellun kannan
 - maininnan siitä, miten tekoälyn käyttö pitäisi merkitä
@@ -338,7 +338,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 | Opiskelija ajattelee, että kaikki työkalut ovat samoja. | Näytä sama prompti eri työkaluilla. Pyydä opiskelijaa vertaamaan tyyliä, laatua, rajauksia ja käyttökokemusta. |
 | Opiskelija luovuttaa ensimmäisen huonon tuloksen jälkeen. | Korosta iteraatiota. Pyydä lisäämään promptiin tarkempi kohde, tyyli, ympäristö, valaistus, käyttötarkoitus tai rajoitus. |
 | Opiskelija olettaa omistavansa tuotoksen täysin. | Ohjaa tarkistamaan palvelun ehdot ja pohtimaan, saako tuotosta käyttää koulussa, somessa, portfoliossa tai kaupallisesti. |
-| Opiskelija pelkää tekoälyn vievän luovat työt. | Tunnista huoli ja ohjaa keskustelu siihen, miten ammattilaisen työ muuttuu: ideointi, ohjaaminen, editointi ja laadun arviointi korostuvat. |
+| Opiskelija pelkää tekoälyn vievän luovat työt. | Tunnista huoli ja ohjaa keskustelu siihen, miten vastuullisen käyttäjän työ muuttuu: ideointi, ohjaaminen, editointi ja laadun arviointi korostuvat. |
 | Opiskelija yliarvioi video-AI:n valmiuden. | Näytä rajoitukset konkreettisesti: lyhyt kesto, liikkeen epäjohdonmukaisuus ja hahmojen muuttuminen. |
 
 ---
@@ -357,7 +357,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 - Pyydä vertaamaan samaa promptia kolmessa eri kuvamallissa.
 - Pyydä tekemään sama konsepti kahdessa eri muodossa, esimerkiksi kuvana ja lyhyenä videokonseptina.
 - Pyydä kirjoittamaan vahvempi etiikka-analyysi, jossa on useampi näkökulma.
-- Pyydä arvioimaan, miten työkalun käyttö muuttaisi jonkin ammattilaisen työnkulkua.
+- Pyydä arvioimaan, miten työkalun käyttö muuttaisi jonkin vastuullisen käyttäjän työnkulkua.
 
 ---
 
@@ -378,7 +378,7 @@ Erikoistuneet tekoälytyökalut liittyvät vahvasti luovaan työhön. Siksi oppi
 - Palveluiden käyttöehdot ja kaupallinen käyttö.
 - Tekoälyn käytön merkitseminen portfolioon tai julkaisuun.
 - Luovien alojen työn muutos.
-- Ammattilaisen rooli: ideointi, kuratointi, editointi, laadunvarmistus ja vastuu.
+- Vastuullisen käyttäjän rooli: ideointi, kuratointi, editointi, laadunvarmistus ja vastuu.
 
 ---
 
@@ -400,6 +400,27 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Kun valitset tekoälytyökalun kuvan, musiikin, videon tai koodin tekemiseen, mitkä kolme asiaa tarkistat ennen kuin päätät käyttää sitä?
 
-> **Lopetuslause opettajalle:** Tekoälytyökalu ei tee sinusta ammattilaista. Ammattilaiseksi tekee se, että osaat valita työkalun, ohjata sitä, arvioida tulosta ja kantaa vastuun sen käytöstä.
+> **Lopetuslause opettajalle:** Tekoälytyökalu ei tee sinusta vastuullista käyttäjää. Vastuulliseksi käyttäjäksi tekee se, että osaat valita työkalun, ohjata sitä, arvioida tulosta ja kantaa vastuun sen käytöstä.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **valinnaisen laboratorion loki: valinta, syöte, tuotos, iterointi ja vastuullisuustarkistus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija valitsee yhden kategorian ja dokumentoi valinnan, syötteen, tuotoksen, iteroinnin ja vastuullisuustarkistuksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija analysoi opettajan antamaa tulosta ilman tiliä. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija vertailee kahta tulosta vasta yhden kategorian perusnäytön jälkeen. Syventävä työ ei kasvata pakollista ydintuotosta.

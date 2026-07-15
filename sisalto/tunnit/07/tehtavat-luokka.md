@@ -1,10 +1,10 @@
-# Todistusaineisto 3 — Ammattilaisen verifiointikäytäntö
+# Todistusaineisto 3 — Vastuullisen käyttäjän verifiointikäytäntö
 
 > 📌 **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
-Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä ammattilaisen tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan **konkreettisia toimenpiteitä**, joilla skenaarion ongelma olisi voitu estää.
+Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä vastuullisen käyttäjän tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan **konkreettisia toimenpiteitä**, joilla skenaarion ongelma olisi voitu estää.
 
 ## Vaiheet
 
@@ -33,7 +33,7 @@ Avaa uusi keskustelu ja anna tekoälylle **roolin, havaintosi ja edellisten tunt
 
 ```
 Toimit minulle sparrauskumppanina. Olen IT-alan opiskelija ja
-rakennan ammattilaisen tarkistuslistaa tekoälyn käyttöön.
+rakennan vastuullisen käyttäjän tarkistuslistaa tekoälyn käyttöön.
 
 Tässä mitä olen oppinut:
 - Tunti 3: Malli ennustaa todennäköisintä jatkoa, ei totuutta
@@ -53,7 +53,7 @@ Tämä on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjo
 
 ### Vaihe 4 — Kirjoita tarkistuslista (tämä on todistusaineistosi)
 
-Kirjoita ammattilaisen tarkistuslista, jota IT-ammattilainen voisi pitää näytöllä joka kerta käyttäessään tekoälyä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
+Kirjoita vastuullisen käyttäjän tarkistuslista, jota teknisen alan osaaja voisi pitää näytöllä joka kerta käyttäessään tekoälyä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
 
 **A) Merkit, joista tunnistan hallusinaation** (3–5 bulletia)
 

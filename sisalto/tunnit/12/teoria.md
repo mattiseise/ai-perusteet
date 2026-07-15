@@ -2,6 +2,8 @@
 
 ## Johdanto: sama kysymys, aivan eri vastaukset
 
+**Tämän tunnin rajaus:** Tunnilla 4 opit, mitä konteksti ja prompti tarkoittavat. Nyt viet taidon käytäntöön: rakennat uudelleen käytettävän promptin, annat lähdeaineiston, pilkot tehtävän ja dokumentoit vähintään yhden testatun parannuskierroksen omaa projektia varten.
+
 Kuvittele tilanne. Sinulla on esseen aihe ”Tekoäly työssä”, ja pyydät tekoälyä auttamaan. Ensimmäisellä kerralla kirjoitat: ”Kerro tekoälystä.” Vastaus on yleinen eikä auta kovin paljon. Toisella kerralla kirjoitat: ”Kerro tekoälystä esseeseeni, jonka kohdeyleisö on toisen asteen opiskelijat.” Vastaus on jo parempi. Kolmannella kerralla kirjoitat: ”Kirjoita 500 sanan johdanto esseeseeni, jonka aihe on ’Tekoäly työssä’. Kohdeyleisö on toisen asteen opiskelijat, joilla ei ole teknistä taustaa. Aloita sillä, miten tekoäly muuttaa jokapäiväistä työtä.”
 
 Jokainen kierros antaa tekoälylle lisää **kontekstia**, ja siksi jokainen vastaus on parempi kuin edellinen. Tämä ei ole magiaa, vaan järkevää viestintää: mitä tarkemmin kerrot, mitä tarvitset, sitä paremman vastauksen saat.
@@ -88,7 +90,7 @@ Kolmannessa pyynnössä kerrot selkeästi, mitä haluat: johdannon, pituuden, ai
 
 ## Lähdeaineiston antaminen: tekstit, koodit ja dokumentit
 
-Usein sinulla on olemassa olevaa aineistoa, jota haluat tekoälyn käsittelevän. Se voi olla esimerkiksi artikkeli, jonka haluat yksinkertaistaa opiskelijoille, tai koodi, jossa on virhe. Ammattilaisena et pyydä tekoälyä selittämään aineistoa, jota et ole antanut sille nähtäväksi. Annat ensin materiaalin ja sen jälkeen selkeän promptin.
+Usein sinulla on olemassa olevaa aineistoa, jota haluat tekoälyn käsittelevän. Se voi olla esimerkiksi artikkeli, jonka haluat yksinkertaistaa opiskelijoille, tai koodi, jossa on virhe. Vastuullisena käyttäjänä et pyydä tekoälyä selittämään aineistoa, jota et ole antanut sille nähtäväksi. Annat ensin materiaalin ja sen jälkeen selkeän promptin.
 
 **Esimerkki 1:** Sinulla on tiedeartikkeli kvanttimekaniikasta, jonka haluat yksinkertaistaa 15-vuotiaalle. Voit kopioida artikkelista katkelman ja sanoa: ”Tässä on teksti kvanttimekaniikasta. Kirjoita se uudelleen 15-vuotiaalle sopivaksi. Käytä esimerkkejä jokapäiväisestä elämästä.”
 
@@ -102,7 +104,7 @@ Tärkeä periaate on tämä: **anna ensin aineisto, sitten prompti**. Kun tekoä
 
 ## Tehtävän pilkkominen: iso ongelma pienempiin osiin
 
-Ammattilaiselle tärkeä taito on **pilkkominen**. Kun tehtävä on iso ja monimutkainen, älä pyydä tekoälyä ratkaisemaan kaikkea yhdellä kertaa. Jaa tehtävä pienempiin osiin, joista jokainen on helpompi hallita.
+Vastuulliselle käyttäjälle tärkeä taito on **pilkkominen**. Kun tehtävä on iso ja monimutkainen, älä pyydä tekoälyä ratkaisemaan kaikkea yhdellä kertaa. Jaa tehtävä pienempiin osiin, joista jokainen on helpompi hallita.
 
 Esimerkiksi pyyntö ”Kirjoita raportti, jossa vertaillaan kolmea eri menetelmää data-analyysiin ja sisällytetään omat tulkinnat sekä johtopäätökset” on laaja tehtävä. Sen voi pilkkoa näin:
 
@@ -120,7 +122,7 @@ Pilkkominen säästää aikaa, koska vastaukset ovat tarkempia. Jokainen osa kes
 
 ## Iteraatio ja tarkentaminen: kierros kerrallaan parempi vastaus
 
-Kun tekoäly antaa ensimmäisen vastauksen, se on usein vasta pohja. Ammattilainen parantaa vastausta seuraavilla kierroksilla.
+Kun tekoäly antaa ensimmäisen vastauksen, se on usein vasta pohja. Vastuullinen käyttäjä parantaa vastausta seuraavilla kierroksilla.
 
 1. **Ensimmäinen pyyntö:** kirjoita alkuperäinen kysymys tai tehtävänanto.
 2. **Lue vastaus:** tarkista, vastaako tekoäly siihen, mitä tarvitsit.
@@ -177,9 +179,9 @@ Tehtävissä rakennat itsellesi **promptauspankin** eli **rakennuspalikka 1:n**.
 
 Seuraavaksi suunnittelet, kenelle bottisi on tarkoitettu ja mitä sen pitää tehdä.
 
-## Yhteenveto: konteksti on ammattilaisen taito
+## Yhteenveto: konteksti on vastuullisen käyttäjän taito
 
-Ammattilaiselle kontekstin rakentaminen on selkeä prosessi:
+Vastuulliselle käyttäjälle kontekstin rakentaminen on selkeä prosessi:
 
 1. **Aloita selkeällä tavoitteella.** Mitä haluat tehdä? Kirjoita yksinkertainen ja tarkka kysymys.
 2. **Anna taustatiedot.** Mikä on tilanteesi? Mitä tarvitset? Kuka olet? Kenelle vastaus tulee?
@@ -191,3 +193,11 @@ Ammattilaiselle kontekstin rakentaminen on selkeä prosessi:
 Tämä prosessi vaatii hieman enemmän aikaa ensimmäisen pyynnön laatimiseen, mutta säästää aikaa myöhemmin. Kun konteksti on kunnossa, tarvitset vähemmän korjauskierroksia ja saat käyttökelpoisempia vastauksia. Seuraavalla tunnilla harjoittelet tätä käytännössä oikeissa opiskelun tehtävissä.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

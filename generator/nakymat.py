@@ -104,7 +104,8 @@ def _deck_html(deck_src):
     return (
         '<div class="deck-wrap">'
         '<div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span>'
-        '<button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div>'
+        '<button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" '
+        'onclick="deckFull(this)">⛶ Koko näyttö</button></div>'
         '<div class="deck">' + deck_src + '</div>'
         '</div>'
     )
@@ -147,7 +148,10 @@ def render_block(kansio, block, variant, lid, lopputyon_askel=None):
     if block == 'tuntisuunnitelma':
         return {'html': sisalto.to_html_with_cards(filtered, include_h3=True), 'tasks': None}
     # teoria, sanasto
-    return {'html': sisalto.to_html(filtered), 'tasks': None}
+    html = sisalto.to_html(filtered)
+    if block == 'teoria':
+        html = sisalto.annotate_demos(html, lid)
+    return {'html': html, 'tasks': None}
 
 
 def tab_label(block, is_assessment):

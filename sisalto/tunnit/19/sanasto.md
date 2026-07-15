@@ -2,7 +2,7 @@
 
 ## Agentti (agent)
 
-Automatisoitu järjestelmä, joka tekee useita vaiheita itsenäisesti saavuttaakseen tietyn tavoitteen. Se analysoi tilanteen, tekee päätöksiä ja toimii ilman ihmisen jatkuvaa ohjausta. Agentti koostuu kuudesta keskeisestä komponentista, jotka työskentelevät yhdessä, jotta se toimisi tehokkaasti ja johdonmukaisesti.
+Tällä kurssilla agentti tarkoittaa kielimallin ja harnessin muodostamaa järjestelmää. Kielimalli tulkitsee tilannetta, ja harness välittää syötteet, työkalut, tehtävän tilan, oikeudet ja turvarajat. Kurssin kuusi kohtaa ovat suunnittelutarkistuslista, eivät jokaisen agentin pakolliset tekniset osat.
 
 ## Chatbot
 
@@ -34,7 +34,7 @@ Agentin kädet. Se kutsuu rajapintoja (API:ita) ja suorittaa konkreettisia toimi
 
 ## Muisti ja konteksti (memory and context)
 
-Agentin muistijärjestelmä, joka koostuu kahdesta osasta: lyhytkestoisesta muistista (nykyisen keskustelun konteksti-ikkunasta) ja pitkäkestoisesta muistista (tietokannasta tai lokista aiemmista tapahtumista). Muisti auttaa agenttia oppimaan ja tekemään parempia päätöksiä.
+Tehtävän nykyinen tila voi olla keskustelun konteksti-ikkunassa tai harnessin muussa tilanhallinnassa. Pitkäkestoinen muisti tarkoittaa esimerkiksi tietokantaan tai lokiin tallennettua aiempaa tietoa, ja se lisätään vain silloin, kun myöhempi suoritus todella tarvitsee sitä. Muisti ei tarkoita, että malli oppisi automaattisesti.
 
 ## Konteksti-ikkuna (context window)
 
@@ -46,11 +46,11 @@ Komponentti, joka tarkistaa agentin tekemiä päätöksiä ja toimintoja. Se var
 
 ## Palautesilmukka (feedback loop)
 
-Prosessi, jossa agentti näkee, mitä sen toiminnon jälkeen tapahtui, ja oppii siitä. Se auttaa agenttia parantamaan tuloksiaan seuraavalla kerralla. Palaute voi tulla käyttäjältä, järjestelmältä tai ympäristöstä.
+Valinnainen prosessi, jossa toiminnan tuloksia seurataan ja toteutusta kehitetään. Palaute voi tulla käyttäjältä, järjestelmältä, testistä tai ympäristöstä. Palautesilmukka voi olla ihmisen tekemä katselmointi eikä tarkoita automaattista oppimista.
 
 ## Suoritusputki (pipeline)
 
-Järjestys, jossa agentin komponentit toimivat yhdessä. Syötekäsittelijä saa viestin, päättelijä analysoi sen, työkalujen suorittaja tekee toiminnon, turvakerros tarkistaa, muisti tallentaa ja palautesilmukka oppii tuloksesta. Pipeline varmistaa, että kaikki komponentit toimivat oikeassa järjestyksessä.
+Yhden toteutuksen tapa järjestää syötteet, kielimallin päättely, työkalukutsut, turvarajat ja tulosten käsittely. Suoritusputkia voi olla erilaisia. Pitkäkestoinen muisti ja palautteesta oppiminen eivät ole jokaisessa putkessa pakollisia.
 
 ## Reititys (routing)
 
@@ -62,7 +62,7 @@ Agentin prosessi oikean työkalun valitsemiseksi kuhunkin tilanteeseen. Jos agen
 
 ## Valmisagentti (ready-made agent)
 
-Valmiiksi rakennettu agenttituote, jonka kuusi rakennusosaa joku muu on suunnitellut ja rakentanut. Käyttäjä antaa tehtävän, mutta ei rakenna eikä ylläpidä järjestelmää itse.
+Valmiiksi rakennettu agenttituote, jossa joku muu on toteuttanut kielimallia ympäröivän harnessin. Tuotetta voi arvioida kurssin kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan.
 
 ## Agenttitila (agent mode)
 

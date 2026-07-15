@@ -82,7 +82,7 @@ Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista o
 
 Harjoituksen tavoitteena on oppia tunnistamaan **hallusinaatioita** ja ymmärtää, miksi kielimalli voi tuottaa uskottavalta kuulostavia mutta virheellisiä vastauksia. Opiskelijat harjoittelevat myös tiedon tarkistamista luotettavista lähteistä.
 
-**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Ammattilaisen pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
+**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Vastuullisen käyttäjän pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -170,9 +170,9 @@ Tutkikaa oma tapauksenne ja täyttäkää seuraava taulukko:
 
 ### Tavoite
 
-Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää ammatillisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
+Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää asiallisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
 
-**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa ammatillista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
+**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa asiallista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -227,7 +227,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 
 ### Opettajan muistiinpanot
 
-- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan ammatillinen standardi.
+- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan asiallinen standardi.
 - Jos opiskelijat kokevat prosessin liian monimutkaiseksi, voit vastata: “Juuri siksi tekoälyn käyttö vaatii ammattitaitoa. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.”
 - Muistuta, että tekoälyn tuottamaa koodia ei pidä ajaa tuotannossa ilman tarkistusta ja testausta.
 
@@ -236,7 +236,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 - Opiskelijat ymmärtävät, miksi tekoälyn tuottamaa teknistä ratkaisua ei pidä käyttää ilman tarkistusta.
 - Opiskelijat osaavat suunnitella vaiheittaisen **verifiointiprosessin**.
 - Opiskelijat osaavat tunnistaa tekoälyn tekemiä oletuksia ja mahdollisia hallusinaatioita.
-- Opiskelijat ymmärtävät, että ammattilainen kantaa vastuun lopullisesta ratkaisusta.
+- Opiskelijat ymmärtävät, että vastuullinen käyttäjä kantaa vastuun lopullisesta ratkaisusta.
 
 ---
 
@@ -251,13 +251,13 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 ### Avainviesti 2: Uskottava ei tarkoita oikeaa
 
 - **Hallusinaatiot** voivat kuulostaa täysin itsevarmoilta.
-- IT-ammattilaisella voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
+- teknisen alan osaajalla voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
 - **Verifiointia ei voi ohittaa.**
 
 ### Avainviesti 3: Vastuu on käyttäjällä
 
 - Jos annat asiakkaalle tekoälyavusteisen raportin tai koodin, vastaat sen oikeellisuudesta.
-- Malli ei kanna ammatillista vastuuta käyttäjän puolesta.
+- Malli ei kanna asiallista vastuuta käyttäjän puolesta.
 - Tämä ei ole pelottelua, vaan osa asiantuntijatyötä ja ammattimaista tekoälyn käyttöä.
 
 ---
@@ -282,7 +282,7 @@ Opettaja arvioi opiskelijoiden kykyä:
 - vertailla saman promptin tuottamia erilaisia vastauksia eri malleissa,
 - tunnistaa **hallusinaatioita** ja tarkistaa väitteitä luotettavista lähteistä,
 - selittää, miksi itsevarma vastaus ei vielä tarkoita oikeaa vastausta,
-- suunnitella ammatillinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
+- suunnitella asiallinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
 - perustella, miksi käyttäjä kantaa vastuun tekoälyn avulla tuotetun lopputuloksen oikeellisuudesta.
 
 ---

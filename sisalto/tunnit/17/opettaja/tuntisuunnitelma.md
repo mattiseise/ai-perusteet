@@ -47,7 +47,7 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 
 | Arvosana | Pistemäärä | Yleiskuvaus |
 | --- | --- | --- |
-| **5 — Erinomainen** | 36–40 p | Suunnittelu, testaus, iteraatio ja dokumentaatio ovat selkeitä, perusteltuja ja ammatillisia. |
+| **5 — Erinomainen** | 36–40 p | Suunnittelu, testaus, iteraatio ja dokumentaatio ovat selkeitä, perusteltuja ja asiallisia. |
 | **4 — Hyvä** | 32–35 p | Kokonaisuus toimii hyvin, mutta joissakin kohdissa analyysi tai dokumentointi voisi olla tarkempaa. |
 | **3 — Tyydyttävä** | 28–31 p | Perusasiat ovat mukana, mutta suunnittelu, testaus tai parantaminen jää osittain pinnalliseksi. |
 | **2 — Välttävä** | 20–27 p | Työssä on selviä puutteita, mutta joitakin arvioitavia osia on tehty. |
@@ -429,3 +429,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Lopetuslause opettajalle:** Hyvä apuri-botti ei vain keskustele. Se ohjaa käyttäjän ajattelemaan tehtävänsä läpi vaihe vaiheelta.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **botin minimiversio tai kuivaharjoittelujälki sekä korjauslista**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija kokoaa botin minimiversion tai kuivaharjoittelujäljen ja ajaa yhden testin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää alustariippumatonta järjestelmäprompti–syöte–tulos-runkoa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija antaa version toiselle testikäyttäjälle tai vaihtaa testikontekstia. Syventävä työ ei kasvata pakollista ydintuotosta.

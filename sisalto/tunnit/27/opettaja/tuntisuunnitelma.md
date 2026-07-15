@@ -2,7 +2,7 @@
 
 ## Osaamistavoitteet
 
-Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta kohti toimivaa, testattua ja dokumentoitua kokonaisuutta. Oppitunnin painopiste on **ammatillisessa työskentelyssä**: rakentamisessa, testaamisessa, dokumentoinnissa, arvioinnissa ja oman työn kriittisessä tarkastelussa.
+Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta kohti toimivaa, testattua ja dokumentoitua kokonaisuutta. Oppitunnin painopiste on **asiallisessa työskentelyssä**: rakentamisessa, testaamisessa, dokumentoinnissa, arvioinnissa ja oman työn kriittisessä tarkastelussa.
 
 ### Muistaa ja ymmärtää
 
@@ -18,26 +18,26 @@ Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta koht
 
 ### Luoda ja arvioida
 
-- Opiskelija kirjoittaa selkeää ja ammatillista dokumentaatiota.
+- Opiskelija kirjoittaa selkeää ja asiallista dokumentaatiota.
 - Opiskelija esittelee projektinsa demona ja perustelee tekemänsä ratkaisut.
 - Opiskelija tunnistaa agentin kuusi komponenttia omassa projektissaan.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on ammatillisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on vastuullisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.
 
 ---
 
 ## Pedagoginen lähestymistapa
 
-### Ydinviesti: ammattilainen rakentaa, testaa ja dokumentoi
+### Ydinviesti: vastuullinen käyttäjä rakentaa, testaa ja dokumentoi
 
-Oppitunti 27 käsittelee ammatillisen ohjelmistokehityksen prosessia. Opiskelijoiden tulee ymmärtää, että teknisen ratkaisun rakentaminen on vain yksi osa kokonaisuutta.
+Oppitunti 27 käsittelee asiallisen ohjelmistokehityksen prosessia. Opiskelijoiden tulee ymmärtää, että teknisen ratkaisun rakentaminen on vain yksi osa kokonaisuutta.
 
-> **Amatööri rakentaa ja toivoo, että se toimii. Ammattilainen rakentaa, testaa ja dokumentoi.**
+> **Amatööri rakentaa ja toivoo, että se toimii. Vastuullinen käyttäjä rakentaa, testaa ja dokumentoi.**
 
 Korosta opiskelijoille:
 
 - **Testaaminen** ei ole valinnainen lisä, vaan pakollinen osa agentin rakentamista.
-- **Dokumentaatio** tekee projektista ymmärrettävän, ylläpidettävän ja ammatillisen.
+- **Dokumentaatio** tekee projektista ymmärrettävän, ylläpidettävän ja asiallisen.
 - **Itsekritiikki** osoittaa syvää ymmärrystä paremmin kuin väite siitä, että kaikki toimii täydellisesti.
 
 ### Iteratiivinen kehitys, ei “kaikki kerralla” -rakentaminen
@@ -82,7 +82,7 @@ Dokumentaatio palvelee eri lukijoita. Siksi yksi dokumentti ei riitä kaikkeen.
 
 **Korjaava näkökulma:** Epäonnistunut testi ei tarkoita epäonnistunutta projektia. Jos testi paljastaa ongelman ja opiskelija korjaa sen, projekti kehittyy paremmaksi. Todellinen ongelma on se, jos virhe jää huomaamatta.
 
-> Epäonnistuneet testit ovat hyödyllisiä. Ne osoittavat, että testit löytävät ongelmia. Kun löydät ongelman ja korjaat sen, toimit kuten ammattilainen.
+> Epäonnistuneet testit ovat hyödyllisiä. Ne osoittavat, että testit löytävät ongelmia. Kun löydät ongelman ja korjaat sen, toimit kuten vastuullinen käyttäjä.
 
 ### Väärinkäsitys 2: “Dokumentaatio on turhaa — työnkulku kertoo kaiken.”
 
@@ -135,7 +135,7 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 
 ### TT-B: Dokumentaatio
 
-**Tavoite:** Opiskelija kirjoittaa ammatillista dokumentaatiota.
+**Tavoite:** Opiskelija kirjoittaa asiallista dokumentaatiota.
 
 Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
@@ -341,10 +341,33 @@ Molemmat polut arvioidaan samoilla kriteereillä. Polku A tukee opiskelijaa, jok
 
 ## Oppitunnin lopetus
 
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että toimiva agentti ei synny yhdellä onnistuneella ajolla. Ammatillinen agenttiprojekti rakennetaan pienissä osissa, testataan monipuolisesti, dokumentoidaan selkeästi ja arvioidaan kriittisesti.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että toimiva agentti ei synny yhdellä onnistuneella ajolla. Asiallinen agenttiprojekti rakennetaan pienissä osissa, testataan monipuolisesti, dokumentoidaan selkeästi ja arvioidaan kriittisesti.
 
 Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Mikä oman agenttisi tärkein riski on? Miten testasit sen, ja mitä dokumentaatiosi kertoo siitä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **agenttipaketti, 9 testiä, 2 uudelleentestiä, dokumentaatio ja demo tai puolustus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–5 min | Aloitus | Tarkista, että agentin ydintehtävä, testitaulukko ja dokumenttipohja ovat auki. |
+| 5–25 min | Viimeistely | Oppija viimeistelee rajatun työnkulun ja varmistaa, että testattava versio on tallennettu. |
+| 25–45 min | Testit | Oppija ajaa 9 testiä: normaalit, kielteiset ja reunatapaukset, kolme kutakin. |
+| 45–60 min | Korjaus ja uudelleentesti | Oppija korjaa vähintään kaksi testissä löytynyttä puutetta ja ajaa niitä koskevat 2 uudelleentestiä. |
+| 60–75 min | Dokumentointi | Oppija viimeistelee arkkitehtuurin, oikeudet, lokin, testitulokset ja ennen–jälkeen-korjaukset. |
+| 75–85 min | Demo tai puolustus | Oppija näyttää ydintehtävän ja perustelee yhden suunnitteluvalinnan sekä yhden turvallisuusrajan. |
+| 85–90 min | Paketointi | Oppija nimeää ja tallentaa palautuspaketin sekä tarkistaa, että kaikki vaadittu näyttö avautuu. |
+
+### Tukireitti
+
+Oppija käyttää testitaulukkoa ja dokumenttipohjia samoilla arviointikriteereillä. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija ajaa lisätestejä vasta ydinnäytön valmistuttua. Syventävä työ ei kasvata pakollista ydintuotosta.

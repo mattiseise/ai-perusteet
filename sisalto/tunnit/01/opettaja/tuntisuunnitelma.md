@@ -2,12 +2,13 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon tavoitteena on, että opiskelija ymmärtää, mitä **tekoäly** tarkoittaa suhteessa automaatioon ja sääntöpohjaisiin järjestelmiin. Oppitunnin ydin on erottaa toisistaan järjestelmät, jotka vain seuraavat ennalta kirjoitettuja sääntöjä, ja järjestelmät, jotka oppivat datasta ja tekevät ennusteita tai luokitteluja sen perusteella.
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää **tekoälyn** kattoterminä suhteessa automaatioon ja sääntöpohjaisiin järjestelmiin. Oppitunnin esimerkeissä verrataan kiinteitä sääntöjä koneoppimismalleihin, jotka koulutetaan datalla tekemään ennusteita tai luokitteluja. Vertailu ei määrittele kaikkea tekoälyä koneoppimiseksi.
 
 ### Muistaa ja ymmärtää
 
 - Opiskelija osaa erottaa **tekoälyn** muista älykkäiltä vaikuttavista järjestelmistä, kuten automaatiosta ja sääntöpohjaisista järjestelmistä.
-- Opiskelija ymmärtää, että tekoäly **oppii datasta** eikä vain seuraa käsin kirjoitettuja sääntöjä.
+- Oppija ymmärtää tekoälyn kattoterminä ja koneoppimisen yhtenä toteutustapana.
+- Oppija erottaa mallin kouluttamisen sen käyttämisestä: käytössä oleva malli ei automaattisesti opi jokaisesta syötteestä.
 - Opiskelija tunnistaa, että tekoäly ei ajattele kuten ihminen, vaan tunnistaa kuvioita ja tekee todennäköisyyksiin perustuvia päätelmiä.
 
 ### Soveltaa ja analysoida
@@ -22,28 +23,28 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, mitä **tekoäly** 
 - Opiskelija osaa arvioida, milloin tekoälyn käyttö on hyödyllistä ja milloin se voi olla tarpeettoman monimutkainen ratkaisu.
 - Opiskelija ymmärtää tekoälyn roolin IT-alalla ja osaa liittää sen käytännön järjestelmiin.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että kaikki automaatio ei ole tekoälyä. Tekoälyn tunnistaa siitä, että järjestelmä hyödyntää dataa, tunnistaa kuvioita ja tekee ennusteita tai luokitteluja. Sääntöpohjainen järjestelmä taas toimii ennalta määriteltyjen ehtojen mukaan.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että kaikki automaatio ei ole tekoälyä eikä kaikki tekoäly ole koneoppimista. Tunnin esimerkeissä koneoppimismalli koulutetaan datalla tunnistamaan kuvioita ja tekemään ennusteita tai luokitteluja. Sääntöpohjainen automaatio taas suorittaa ennalta määritetyn työvaiheen.
 
 ---
 
 ## Pedagoginen lähestymistapa
 
-### Ydinviesti: tekoäly oppii datasta, säännöt seuraavat ohjeita
+### Ydinviesti: tekoäly on kattotermi, koneoppiminen yksi toteutustapa
 
 Oppitunnilla kannattaa aloittaa opiskelijoille tutuista esimerkeistä. Instagramin suositukset, Netflixin katseluehdotukset, Google Mapsin reittisuositukset ja sähköpostin roskapostisuodatus ovat usein opiskelijoille tuttuja. Näiden kautta voidaan siirtyä käsitteelliseen eroon: onko kyse sääntöjen seuraamisesta vai datasta oppimisesta?
 
-> **Sääntöpohjainen järjestelmä tekee sen, mitä sille on kirjoitettu. Tekoäly yrittää päätellä datasta, mikä on todennäköisesti oikein.**
+> **Sääntöpohjainen automaatio tekee sen, mitä sille on kirjoitettu. Koneoppimismalli soveltaa koulutusdatasta opittuja parametreja uuteen syötteeseen.**
 
 Korosta opiskelijoille:
 
 - **Automaatio** tarkoittaa, että tietokone tekee jonkin tehtävän automaattisesti.
 - **Sääntöpohjainen järjestelmä** tekee päätöksiä ennalta kirjoitettujen sääntöjen perusteella.
-- **Tekoäly** tekee päätöksiä tai ennusteita datasta opittujen kuvioiden perusteella.
+- **Koneoppimismalli** tekee päätöksiä tai ennusteita koulutusdatasta opittujen kuvioiden perusteella; koneoppiminen on yksi tekoälyn toteutustapa.
 - Monissa oikeissa järjestelmissä on sekä sääntöjä että tekoälyä.
 
 ### Salli harmaat alueet
 
-Kaikki esimerkit eivät ole täysin mustavalkoisia. Esimerkiksi sähköpostin käsittelyssä voi olla sääntö: ”Jos lähettäjä on X, siirrä kansioon Y.” Samassa järjestelmässä voi olla myös tekoälypohjainen roskapostisuodatin, joka oppii epäilyttävien viestien piirteitä datasta.
+Kaikki esimerkit eivät ole täysin mustavalkoisia. Esimerkiksi sähköpostin käsittelyssä voi olla sääntö: ”Jos lähettäjä on X, siirrä kansioon Y.” Samassa järjestelmässä voi olla myös koneoppimiseen perustuva roskapostisuodatin, joka on koulutettu tunnistamaan epäilyttävien viestien piirteitä datasta.
 
 **Opettajan huomio:** Älä pakota kaikkia esimerkkejä joko–tai-lokeroihin. Hyvä oppimistilanne syntyy usein siitä, että opiskelijat huomaavat järjestelmissä olevan sekä sääntöjä että tekoälyä.
 
@@ -53,7 +54,7 @@ Piirrä taululle kaksi saraketta: **Tekoäly** ja **Säännöt**. Lisää opiske
 
 | Järjestelmä | Tekoäly, säännöt vai yhdistelmä? | Perustelu |
 | --- | --- | --- |
-| Netflix-suositukset | **Tekoäly** | Järjestelmä oppii katseludatasta ja suosittelee sisältöä samankaltaisuuksien perusteella. |
+| Suoratoistopalvelun suositukset | **Tekoäly** | Koneoppimismalli koulutetaan katseludatalla ja sitä käytetään sisältösuositusten muodostamiseen. |
 | Sääntö: ”Jos otsikossa lukee lasku, siirrä kansioon Laskut” | **Säännöt** | Toiminta perustuu ennalta kirjoitettuun ehtoon. |
 | Sähköpostin roskapostisuodatus | **Yhdistelmä** | Järjestelmässä voi olla sääntöjä, mutta nykyaikaiset suodattimet hyödyntävät usein myös datasta opittuja malleja. |
 
@@ -161,7 +162,7 @@ Vastaus: Tekoäly on väline. Se voi olla hyödyllinen tai haitallinen riippuen 
 
 - Tarkista opiskelijatehtävien perustelut. Perustelu on tärkeämpi kuin yksittäinen luokittelusana.
 - Kuuntele, käyttävätkö opiskelijat käsitteitä kuten **data**, **oppiminen**, **kuviot**, **säännöt** ja **ennuste**.
-- Jos opiskelija kirjoittaa ”tekoäly, koska se on älykäs”, pyydä häntä tarkentamaan, mistä järjestelmä oppii ja mitä se ennustaa tai luokittelee.
+- Jos opiskelija kirjoittaa ”tekoäly, koska se on älykäs”, pyydä häntä tarkentamaan, mitä menetelmää järjestelmä käyttää ja mitä se tunnistaa, ennustaa, suunnittelee tai tuottaa.
 
 ### Itsearviointi
 
@@ -182,3 +183,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Missä käyttämässäsi sovelluksessa tekoäly tekee päätöksiä puolestasi, ja mistä tiedät, että kyse ei ole vain yksinkertaisesta säännöstä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **perusteltu luokittelutaulukko ja huomio siitä, oppiiko käytössä oleva malli syötteestä**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija luokittelee kuusi tapausta tekoälyksi, koneoppimiseksi, säännöksi tai automaatioksi ja perustelee, oppiiko käyttöön otettu malli syötteestä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää kolmea esiluokiteltua tapausta ja täydentää vain perustelusarakkeen. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija ratkaisee kaksi rajatapausta, joissa sääntö ja opittu malli toimivat yhdessä. Syventävä työ ei kasvata pakollista ydintuotosta.

@@ -58,7 +58,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
 
    Kerro opiskelijoille:
 
-   > IT-ammattilaiselle tärkeä taito on valita oikea konteksti. Jos ongelma näkyy käyttöliittymässä, kuvakaappaus voi olla erittäin hyödyllinen. Jos ongelma näkyy lokissa tai koodissa, teksti, lokirivit tai koodikatkelma voivat olla tärkeämpiä. Usein paras tulos syntyy, kun teksti ja kuva täydentävät toisiaan.
+   > teknisen alan osaajalle tärkeä taito on valita oikea konteksti. Jos ongelma näkyy käyttöliittymässä, kuvakaappaus voi olla erittäin hyödyllinen. Jos ongelma näkyy lokissa tai koodissa, teksti, lokirivit tai koodikatkelma voivat olla tärkeämpiä. Usein paras tulos syntyy, kun teksti ja kuva täydentävät toisiaan.
 
 **Esimerkki opetukseen**
 

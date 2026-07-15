@@ -4,7 +4,7 @@
 
 ## Tehtävä 11.1 — Tee perusteltu suositus (SUOSITELTU)
 
-**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on ammattilaisen ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
+**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on vastuullisen käyttäjän ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
 
 ### Tee näin
 

@@ -8,7 +8,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää tekoälyn eri tyypit
 
 - Opiskelija osaa nimetä ja erottaa tekoälyn päätyypit: **kapea tekoäly**, **generatiivinen tekoäly**, **AGI** ja **ASI**.
 - Opiskelija ymmärtää, että nykyinen tekoäly on pääosin **kapeaa ja erikoistunutta**.
-- Opiskelija ymmärtää, että generatiivinen tekoäly on merkittävä kehitysaskel, mutta se ei ole sama asia kuin yleisäly.
+- Opiskelija ymmärtää, että generatiivisuus kuvaa toiminnallisuutta eikä seuraavaa askelta kohti yleisälyä.
 
 ### Soveltaa ja analysoida
 
@@ -218,10 +218,31 @@ Palauta keskustelu nykyisiin järjestelmiin:
 
 ## Oppitunnin lopetus
 
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoäly ei ole yksi yhtenäinen asia. On eri tasoja ja tyyppejä: kapea tekoäly, generatiivinen tekoäly, AGI ja ASI. Nykyiset järjestelmät ovat vaikuttavia, mutta ne eivät ole sama asia kuin yleinen älykkyys.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälyä kuvataan kahdella eri kysymyksellä: kuinka laaja tehtäväjoukko järjestelmällä on ja millä toteutustavalla tai toiminnallisuudella se toimii. Kapea tekoäly, generatiivinen tekoäly, AGI ja ASI eivät muodosta yhtä kehitysasteikkoa. Nykyiset järjestelmät ovat vaikuttavia, mutta ne eivät ole sama asia kuin yleinen älykkyys.
 
 Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Kun seuraavan kerran näet tekoälyuutisen, mistä voit päätellä, onko kyse todellisesta yleisälystä vai rajatusta tekoälyjärjestelmästä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **kykyjen laajuus × toteutus ja toiminnallisuus -matriisi**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija sijoittaa kahdeksan järjestelmäkorttia kykyjen laajuus × toiminnallisuus -matriisiin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmiita kortteja ja kolmea mallisijoitusta. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija arvioi mediaväitteen ja osoittaa, sekoittuuko siinä laajuus toteutustapaan. Syventävä työ ei kasvata pakollista ydintuotosta.

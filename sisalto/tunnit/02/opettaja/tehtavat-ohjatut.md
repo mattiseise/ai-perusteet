@@ -203,7 +203,7 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 
    - **Nykyhetki:** Mitä tekoäly tekee tai voisi tehdä tässä ammatissa jo nyt?
    - **Tulevaisuus:** Jos AGI joskus saavutetaan, miten se voisi muuttaa tätä työtä?
-   - **Ammatilliset taidot:** Mitkä taidot jäävät ihmisille tärkeiksi, vaikka tekoäly kehittyisi?
+   - **Käytännön taidot:** Mitkä taidot jäävät ihmisille tärkeiksi, vaikka tekoäly kehittyisi?
    - **Riskit ja mahdollisuudet:** Mitä hyötyä tekoälystä voisi olla tässä työssä? Mitä riskejä siihen voisi liittyä?
 2. **Ryhmät valmistelevat lyhyen esityksen.**
 
@@ -221,7 +221,7 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 
    - Tekoäly voi automatisoida rutiinitehtäviä ja tukea asiantuntijatyötä.
    - Strateginen ajattelu, ongelmanratkaisu, vastuun kantaminen ja ihmisten kanssa toimiminen säilyvät tärkeinä taitoina.
-   - Ammattilaisen kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.
+   - Vastuullisen käyttäjän kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.
 
 ### Ryhmän vastauspohja
 

@@ -3,7 +3,9 @@ function prGet(){try{return JSON.parse(localStorage.getItem('bcai-practice')||'{
 function prSet(o){try{localStorage.setItem('bcai-practice',JSON.stringify(o))}catch(e){}}
 function prKey(lid,ti){return lid+'/'+ti}
 function twShuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function twEl(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function twEl(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;
+  if(cls&&cls.split(' ').indexOf('tw-fb')>=0){e.setAttribute('role','status');e.setAttribute('aria-live','polite');e.setAttribute('aria-atomic','true');}
+  return e}
 function initPractice(lid,tasks){
   if(!tasks||!tasks.length)return;
   document.querySelectorAll('#lesson-panels .task-widget').forEach(w=>{
@@ -231,8 +233,9 @@ function twReflect(body,task,api){
   function rSet(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
   const rid=(cid||'')+'/'+(task.title||'');
   const minc=task.min_chars||60;
-  const p=twEl('div','tw-card',task.prompt||'');
+  const p=twEl('label','tw-card',task.prompt||'');
   const ta=twEl('textarea','tw-ta');ta.rows=5;ta.placeholder='Kirjoita tähän omin sanoin...';
+  ta.id='tw-reflect-'+Math.random().toString(36).slice(2);p.htmlFor=ta.id;
   ta.value=(rGet()[rid]||'');
   const cnt=twEl('div','tw-prog'),rev=twEl('button','tw-next','Näytä asiantuntijan näkökulma'),fb=twEl('div','tw-fb');
   body.append(p,ta,cnt,rev,fb);

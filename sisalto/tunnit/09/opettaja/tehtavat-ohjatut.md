@@ -24,9 +24,9 @@ Varmistaa, että opiskelijat ymmärtävät Teoria-osion arviointitehtävän vaat
    - Skenaario 3: Tekijänoikeudet ja vastuullisuus
 
    Jokaisen kohdalla sano:
-   - "Tämä on realistinen ongelma, jonka kohtaat ammattilaisena."
+   - "Tämä on realistinen ongelma, jonka kohtaat vastuullisena käyttäjänä."
    - "Tehtävä on: analysoi se Teoria-osion käsitteillä ja kirjoita raportti."
-   - "Et etsi oikeaa vastausta — vaan esität ammatillisesti vastuullisen näkemyksen."
+   - "Et etsi oikeaa vastausta — vaan esität asiallisesti vastuullisen näkemyksen."
 
    **Arviointikohteet (näytä taululla):**
    - Ongelman ymmärrys (20 pistettä)
@@ -115,13 +115,13 @@ Selventää, mitä opiskelijoilta odotetaan, ja vastata kysymyksiin ennen arvioi
    4. Eettinen analyysi (2–3 kappaletta): Mitkä ovat eettiset
       vastuukysymykset?
    5. Ratkaisut ja suositukset (2–3 kappaletta): Mitä ehdottaisit?
-   6. Johtopäätös (1 kappale): Yhteenveto ja ammatillinen vastuu.
+   6. Johtopäätös (1 kappale): Yhteenveto ja asiallinen vastuu.
    ```
 
 2. **Yleisimmät virheet, joita tulee välttää:**
    - "Ei analysoi — vain kuvaa skenaariota."
    - "Ei käytä Teoria-osion käsitteitä."
-   - "Antaa selkeitä vastauksia sen sijaan että osoittaa ammatillista ajattelua."
+   - "Antaa selkeitä vastauksia sen sijaan että osoittaa asiallista ajattelua."
    - "Perustelut ovat liian lyhyitä tai pinnallisia."
 
 3. **Kysymykset ja vastaukset (10 min):**
@@ -137,14 +137,14 @@ Selventää, mitä opiskelijoilta odotetaan, ja vastata kysymyksiin ennen arvioi
 
 **Arviointitehtävä on summatiivinen** — se testaa, kuinka hyvin opiskelijat ymmärtävät Teoria-osion käsitteitä ja osaavat soveltaa niitä.
 
-**Arvioitavana ei ole "oikea vastaus"** — vaan ammatillisesti järkevä, lähdepohjainen ja syvällinen analyysi.
+**Arvioitavana ei ole "oikea vastaus"** — vaan asiallisesti järkevä, lähdepohjainen ja syvällinen analyysi.
 
 **Opiskelijat voivat kysyä neuvoa ennen arviointia** — mutta et voi antaa heille "vastauksia". Voit auttaa heitä ymmärtämään kysymyksiä ja rakennetta.
 
 **Oppimista tukevia neuvoja:**
 - "Mitkä Teoria-osion käsitteet liittyvät tähän?" (Auta heitä tunnistamaan relevantit käsitteet.)
 - "Mitkä riskit näet?" (Auta heitä ajattelemaan kriittisesti.)
-- "Miten argumentoisit tämän ammatillisesti?" (Auta heitä rakentamaan perusteluja.)
+- "Miten argumentoisit tämän asiallisesti?" (Auta heitä rakentamaan perusteluja.)
 
 **Älä anna suoria vastauksia:**
 - "Sinun pitäisi sanoa X" (Liian ohjaavaa.)
@@ -165,4 +165,4 @@ Kun oppilaat ovat toimittaneet raportit:
    - Mitä käsitteitä heidän olisi voinut käsitellä syvemmin?
 4. **Anna palautetta vertaisarvioinnista, jos haluat** — opiskelijat voivat oppia toisiltaan.
 
-**Opettajan muistio:** Tämä arviointi testaa käsitysten syvyyttä, ei "oikean vastauksen" muistamista. Ole palkitseva hyvästä analyysista ja ammatillisesta ajattelusta, vaikka jonkin käsitteen käsittely olisi pinnallista.
+**Opettajan muistio:** Tämä arviointi testaa käsitysten syvyyttä, ei "oikean vastauksen" muistamista. Ole palkitseva hyvästä analyysista ja asiallisesta ajattelusta, vaikka jonkin käsitteen käsittely olisi pinnallista.

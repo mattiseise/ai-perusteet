@@ -4,5 +4,5 @@
 # deploy-varmistuksena: tuotos syntyy aina lähteistä.
 
 [build]
-  command = "pip install markdown pyyaml --break-system-packages && python3 generate_site.py"
+  command = "pip install -r requirements.txt --break-system-packages && npm ci && python3 generate_site.py && npm run verify"
   publish = "."

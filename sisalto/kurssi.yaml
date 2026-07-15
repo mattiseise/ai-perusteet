@@ -11,6 +11,10 @@ kurssi:
   nimi: "AI · Perusteet"
   domain: aiperusteet.fi
   laajuus_osp: 3
+  yleisolupaus: "AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen."
+  esitiedot: "Ei esitietovaatimuksia. Tavallinen verkkoselain riittää, ja tililliset kokeet voi korvata dokumentoidulla kuivaharjoittelulla."
+  laajuuskuvaus: "Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta."
+  educational_level: "Aloittelija / perustaso"
 
 # Tunnin kanoniset lohkot (block contract) — tiedostot sisalto/tunnit/NN/:ssä.
 # Arviointitunneilta (tyyppi: assessment) puuttuu harjoittele.md tarkoituksella.
@@ -57,7 +61,7 @@ moduulit:
     lopputyo: lopputyot/teoria.md
     tunnit:
       - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching }
-      - { id: lesson-02, kansio: "02", otsikko: "Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa", tyyppi: teaching }
+      - { id: lesson-02, kansio: "02", otsikko: "Kaksi akselia — kykyjen laajuus ja toteutustapa", tyyppi: teaching }
       - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching }
       - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*" }
@@ -94,7 +98,7 @@ moduulit:
       - { id: lesson-20, kansio: "20", otsikko: "Automaatio vai autonomia? — milloin agentti kannattaa", tyyppi: teaching }
       - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching, lopputyon_askel: "Agentti: Muisti" }
       - { id: lesson-22, kansio: "22", otsikko: "Agentin työkalut — tiedostot, haku ja komennot", tyyppi: teaching }
-      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", tyyppi: teaching, lopputyon_askel: "Agentti: Päättely" }
+      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, työnkulku ja orkestrointi", tyyppi: teaching, lopputyon_askel: "Agentti: Päättely" }
       - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching, lopputyon_askel: "Agentti: Turva" }
       - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching, lopputyon_askel: "Agentti: Ihminen" }
       - { id: lesson-26, kansio: "26", otsikko: "Kädet saveen — n8n-agenttipaja alkaa", tyyppi: teaching }

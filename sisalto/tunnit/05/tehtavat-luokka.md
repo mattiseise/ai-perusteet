@@ -71,7 +71,7 @@ Kirjoita noin **300 sanaa omin sanoin**. Tapausesimerkissä on neljä osaa:
 1. **Tilanne:** Kuvaile kokeilusi tai keksi vastaava tilanne — esim. asiakaspalvelu, pitkä kirjoitusprojekti, käännöstyö tai matkasuunnitelma.
 2. **Mitä unohtui ja miksi:** Käytä käsitteitä *konteksti-ikkuna* ja *FIFO-periaate* (vanhin tieto putoaa ensin). Mitä konkreettisesti hävisi muistista?
 3. **Seuraukset:** Mitä virheellinen vastaus voisi käytännössä aiheuttaa? Aikaa hukkaan? Turvallisuusriskin? Väärää tietoa asiakkaalle?
-4. **Miten ammattilainen estää tämän:** Ankkurointi, pilkkominen, dokumentointi — nimeä konkreettiset käytännöt.
+4. **Miten vastuullinen käyttäjä estää tämän:** Ankkurointi, pilkkominen, dokumentointi — nimeä konkreettiset käytännöt.
 
 ::: luokka
 ## Mitä palautat?

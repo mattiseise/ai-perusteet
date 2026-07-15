@@ -2,6 +2,8 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
+**Pedagoginen rajaus suhteessa tuntiin 24:** Tunnilla 7 arvioidaan vastauksen väitteitä: mikä on lähde, voiko väitteen vahvistaa ja miten epävarmuus ilmaistaan. Älä vielä rakenna agentin uhkamallia tai oikeuskerroksia. Tunnilla 24 sama lähdekriittisyys on pohjataito, mutta arviointikohteena ovat epäluotettava syöte, työkalutoiminnot, minimioikeudet, lokit ja kerroksittaiset suojaukset.
+
 Tämän lohkon tavoitteena on, että opiskelija ymmärtää **generatiivisen tekoälyn** toimintaperiaatteen ja siihen liittyvät rajoitukset. Oppitunnin ydin on, että kielimalli ei ole **totuuskone** tai faktakone, vaan todennäköisyyksiin perustuva **sanojen ja tokenien ennustaja**. Tämä selittää sekä mallien hyödyllisyyden että niiden virheet.
 
 ### Muistaa ja ymmärtää
@@ -22,9 +24,9 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **generatiivisen tek
 
 - Opiskelija osaa rakentaa käytännöllisen tarkistuslistan tekoälyn vastausten arviointiin.
 - Opiskelija osaa suunnitella verifiointiprosessin esimerkiksi koodille, SQL-kyselylle, API-kutsulle tai tekniselle ohjeelle.
-- Opiskelija osaa yhdistää aiemmat opit tokenien ennustamisesta, kontekstin katoamisesta ja hallusinaatioista ammatilliseen tekoälyn käyttöön.
+- Opiskelija osaa yhdistää aiemmat opit tokenien ennustamisesta, kontekstin katoamisesta ja hallusinaatioista asialliseen tekoälyn käyttöön.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälyn itsevarma vastaus ei ole sama asia kuin oikea vastaus. Generatiivinen tekoäly voi olla erittäin hyödyllinen, mutta ammattilaisen vastuulla on tarkistaa kriittiset vastaukset ja käyttää mallia hallitusti.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälyn itsevarma vastaus ei ole sama asia kuin oikea vastaus. Generatiivinen tekoäly voi olla erittäin hyödyllinen, mutta vastuullisen käyttäjän vastuulla on tarkistaa kriittiset vastaukset ja käyttää mallia hallitusti.
 
 ---
 
@@ -86,7 +88,7 @@ Oppitunnin tärkein käsitteellinen ero on **totuuskoneen** ja **sanojen ennusta
 
 Tämä ei tarkoita, etteikö tekoäly voisi olla hyödyllinen. Se tarkoittaa, että käyttäjän täytyy ymmärtää, mitä tekoäly tekee ja mitä se ei tee. Tekoäly voi auttaa ideoimaan, selittämään, tiivistämään, kirjoittamaan luonnoksia ja ehdottamaan ratkaisuja. Kriittiset väitteet täytyy kuitenkin tarkistaa.
 
-**Opettajan painotus:** Tekoälyä ei pidä opettaa opiskelijoille joko ihmeenä tai huijauksena. Se on hyödyllinen työkalu, jonka rajat pitää ymmärtää. Ammattilainen käyttää tekoälyä, mutta ei ulkoista sille omaa vastuutaan.
+**Opettajan painotus:** Tekoälyä ei pidä opettaa opiskelijoille joko ihmeenä tai huijauksena. Se on hyödyllinen työkalu, jonka rajat pitää ymmärtää. Vastuullinen käyttäjä käyttää tekoälyä, mutta ei ulkoista sille omaa vastuutaan.
 
 ---
 
@@ -130,7 +132,7 @@ Tämä ei tarkoita, etteikö tekoäly voisi olla hyödyllinen. Se tarkoittaa, et
 - **Aloita havainnolla:** näytä sama prompti eri malleille tai aja sama prompti useamman kerran. Keskustelkaa, miksi vastaukset eroavat.
 - **Siirry hallusinaatioon:** näytä vastaus, joka kuulostaa oikealta mutta sisältää virheen. Anna opiskelijoiden etsiä virhe.
 - **Selitä vasta lopuksi mekanismi:** kun opiskelijat ovat nähneet ilmiön, selitä next-token prediction, lämpötila ja todennäköisyysvalinnat.
-- **Pidä painopiste ammatillisessa toiminnassa:** tärkeintä ei ole vain tietää, että hallusinaatioita on, vaan osata toimia oikein niiden riskin kanssa.
+- **Pidä painopiste asiallisessa toiminnassa:** tärkeintä ei ole vain tietää, että hallusinaatioita on, vaan osata toimia oikein niiden riskin kanssa.
 
 ### Yleisiä haasteita ja ratkaisuja
 
@@ -223,7 +225,7 @@ Opiskelija yhdistää oppituntien aiemmat ydinkäsitteet yhdeksi käytännön ta
 
 ### Tehtävänanto opiskelijalle
 
-Laadi tarkistuslista, jota käyttäisit ammattilaisena, kun hyödynnät tekoälyä teknisessä työssä. Tarkistuslistan pitää yhdistää seuraavat aiheet:
+Laadi tarkistuslista, jota käyttäisit vastuullisena käyttäjänä, kun hyödynnät tekoälyä teknisessä työssä. Tarkistuslistan pitää yhdistää seuraavat aiheet:
 
 - **tokenien ennustaminen:** miksi tekoäly ei ole automaattisesti oikeassa
 - **kontekstin katoaminen:** mitä teet, jos keskustelu on pitkä tai projekti jatkuu useassa osassa
@@ -236,7 +238,7 @@ Laadi tarkistuslista, jota käyttäisit ammattilaisena, kun hyödynnät tekoäly
 
 - **Synteesi, ei pelkkä listaus:** opiskelija yhdistää tokenien ennustamisen, kontekstin katoamisen ja hallusinaatiot yhdeksi työskentelyprosessiksi.
 - **Konkreettiset toimenpiteet:** tarkistuslistassa on asioita, jotka voi oikeasti tehdä, kuten ”tarkista vastaus virallisesta dokumentaatiosta” tai ”toista rajaukset pitkän keskustelun alussa”.
-- **Ammatillinen näkökulma:** opiskelija kirjoittaa ammattilaisen näkökulmasta, esimerkiksi ”kun käytän tekoälyä työssä, teen näin”.
+- **Asiallinen näkökulma:** opiskelija kirjoittaa vastuullisen käyttäjän näkökulmasta, esimerkiksi ”kun käytän tekoälyä työssä, teen näin”.
 
 ### Yleinen väärinymmärrys
 
@@ -247,7 +249,7 @@ Korjaus: Ohjaa opiskelijaa kohti prosessia. Kysy: miten tarkistat, mistä tarkis
 
 Tämä on viimeinen tarkistuspiste ennen arviointia. Jos opiskelijan tarkistuslista on heikko, anna konkreettinen ohjaus ennen arviointituntia.
 
-- **Jos tarkistuslista on hyvä:** ”Hyvä — listasi sisältää konkreettisia työvaiheita ja yhdistää tekoälyn tekniset rajoitukset ammatilliseen tarkistamiseen.”
+- **Jos tarkistuslista on hyvä:** ”Hyvä — listasi sisältää konkreettisia työvaiheita ja yhdistää tekoälyn tekniset rajoitukset asialliseen tarkistamiseen.”
 - **Jos kontekstin katoaminen puuttuu:** ”Lisää vielä kohta: mitä teet, jos keskustelu on pitkä ja epäilet, että aiempi tieto on pudonnut pois?”
 - **Jos verifiointi jää yleiseksi:** ”Tarkenna vielä: mistä lähteestä tarkistat ja miten testaat vastauksen ennen käyttöä?”
 
@@ -276,7 +278,7 @@ Opiskelijat, jotka ovat tehneet kaikki kolme todistusaineistoa, ovat paremmassa 
 
 Seuraava oppitunti jatkaa eettisestä näkökulmasta: tekijänoikeudet, harhat, ympäristövaikutukset ja vastuullinen käyttö. Tämä oppitunti antaa teknisen perustan: opiskelija ymmärtää, miksi tekoälyn vastauksia ei voi ottaa vastaan kritiikittömästi.
 
-### Yhteys ammatilliseen tekoälyn käyttöön
+### Yhteys asialliseen tekoälyn käyttöön
 
 Jatkossa opiskelijoiden tulisi palata tämän oppitunnin periaatteisiin aina, kun he käyttävät tekoälyä teknisessä työssä. Erityisesti koodi, tietokantakyselyt, API-ohjeet, komentorivikomennot ja turvallisuusohjeet pitää tarkistaa ennen käyttöä.
 
@@ -293,3 +295,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Jos tekoäly antaa sinulle teknisen ratkaisun, jota et itse täysin ymmärrä, mitä tarkistat ennen kuin käytät sitä oikeassa työssä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **väite–lähde–tulos–korjaus-loki**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija tarkistaa kolme täsmällistä väitettä luotettavista lähteistä ja korjaa virheet. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää annettua lähdepakettia ja valmista lokipohjaa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija ratkaisee kahden luotettavan lähteen ristiriidan. Syventävä työ ei kasvata pakollista ydintuotosta.

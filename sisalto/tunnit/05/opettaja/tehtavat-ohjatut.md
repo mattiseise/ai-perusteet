@@ -189,9 +189,9 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 
 ### Tavoite
 
-Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että tekoäly voi menettää osan aiemmasta kontekstista ilman selkeää varoitusta. Samalla harjoitellaan ammatillista ajattelua: tekoälyn vastaukset on aina tarkistettava suhteessa tehtävän tavoitteeseen ja rajauksiin.
+Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että tekoäly voi menettää osan aiemmasta kontekstista ilman selkeää varoitusta. Samalla harjoitellaan asiallista ajattelua: tekoälyn vastaukset on aina tarkistettava suhteessa tehtävän tavoitteeseen ja rajauksiin.
 
-**Opettajan painotus:** Korosta, että virheellinen vastaus voi kuulostaa yhtä varmalta kuin oikea vastaus. Siksi ammattilaisen tehtävä on tarkistaa, noudattaako vastaus annettua kontekstia ja rajauksia.
+**Opettajan painotus:** Korosta, että virheellinen vastaus voi kuulostaa yhtä varmalta kuin oikea vastaus. Siksi vastuullisen käyttäjän tehtävä on tarkistaa, noudattaako vastaus annettua kontekstia ja rajauksia.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -244,11 +244,11 @@ Tehtävän tavoitteena on näyttää opiskelijoille reaaliaikaisesti, että teko
    - Mitä opimme tekoälyn muistista?
    - Varoittiko malli selvästi, että se oli menettänyt osan kontekstista?
    - Miksi väärä vastaus voi olla vaarallinen, jos se kuulostaa varmalta?
-   - Miten ammattilainen voi ehkäistä tällaisia virheitä?
+   - Miten vastuullinen käyttäjä voi ehkäistä tällaisia virheitä?
 
    Kokoa lopuksi tärkein havainto:
 
-   > Tekoäly voi antaa väärän tai väärään kontekstiin perustuvan vastauksen yhtä vakuuttavasti kuin oikean vastauksen. Ammattilaisen vastuulla on tarkistaa, että vastaus noudattaa tehtävän rajauksia.
+   > Tekoäly voi antaa väärän tai väärään kontekstiin perustuvan vastauksen yhtä vakuuttavasti kuin oikean vastauksen. Vastuullisen käyttäjän vastuulla on tarkistaa, että vastaus noudattaa tehtävän rajauksia.
 
 ### Odotettu oppimistulos
 

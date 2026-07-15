@@ -14,7 +14,7 @@ Ymmärtää, miksi tekoälyn koulutusdata herättää kysymyksiä tekijänoikeuk
    - Onko reilua, että tekoäly oppii jonkun työstä ilman lupaa?
    - Pitäisikö alkuperäiselle tekijälle kertoa, maksaa tai kysyä lupa?
    - Miltä sinusta tuntuisi, jos tekoäly oppisi sinun töistäsi ilman lupaa?
-   - Mitä ammattilaisena kannattaa pitää mielessä, kun käytät tekoälyä?
+   - Mitä vastuullisena käyttäjänä kannattaa pitää mielessä, kun käytät tekoälyä?
 
 *Halutessasi syvemmälle: tutustu todelliseen oikeustapaukseen (esim. kuvataiteilijat vs. kuvageneraattorit, 2023) ja katso, mitä molemmat puolet perustelevat.*
 
@@ -64,7 +64,7 @@ Ymmärtää, mitä "näkymätöntä työtä" tekoälyn opetukseen liittyy ja mik
    - Kuka on vastuussa heidän hyvinvoinnistaan? (Palveluntarjoaja? Sinä? Molemmat?)
    - Pitäisikö merkitsijöille maksaa enemmän?
    - Pitäisikö heidän saada pääsy malleihin, joita he auttoivat rakentamaan?
-4. **Kirjoita eettinen kannanotto (3–4 lausetta):** millä tavoin ammattilaisena ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
+4. **Kirjoita eettinen kannanotto (3–4 lausetta):** millä tavoin vastuullisena käyttäjänä ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
 
 ---
 

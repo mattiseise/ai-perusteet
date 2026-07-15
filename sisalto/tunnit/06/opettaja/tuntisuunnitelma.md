@@ -24,7 +24,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, mitä **multimodaal
 - Opiskelija osaa perustella, miksi tietty materiaali annetaan tekoälylle ja miksi jokin muu materiaali jätetään pois.
 - Opiskelija ymmärtää multimodaalisten mallien rajoitukset ja tekee niiden perusteella tarkoituksenmukaisia valintoja.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että multimodaalisuus ei tarkoita kaiken materiaalin lisäämistä kerralla. Ammattilainen valitsee tehtävän kannalta olennaisen tiedon: joskus paras syöte on kuvakaappaus, joskus lokirivi tekstinä ja joskus näiden yhdistelmä.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että multimodaalisuus ei tarkoita kaiken materiaalin lisäämistä kerralla. Vastuullinen käyttäjä valitsee tehtävän kannalta olennaisen tiedon: joskus paras syöte on kuvakaappaus, joskus lokirivi tekstinä ja joskus näiden yhdistelmä.
 
 ---
 
@@ -92,7 +92,7 @@ Korosta opiskelijoille:
 
 ### Väärinkäsitys 1: ”Multimodaalisuus tarkoittaa, että voin antaa kaiken materiaalin kerralla.”
 
-**Korjaava näkökulma:** Multimodaalisuus on tehokas työkalu, mutta konteksti-ikkuna on edelleen rajallinen. Kuvakaappaukset, pitkät lokit, koodi ja dokumentaatio voivat täyttää ikkunan nopeasti. Ammattilainen valitsee vain olennaisen materiaalin.
+**Korjaava näkökulma:** Multimodaalisuus on tehokas työkalu, mutta konteksti-ikkuna on edelleen rajallinen. Kuvakaappaukset, pitkät lokit, koodi ja dokumentaatio voivat täyttää ikkunan nopeasti. Vastuullinen käyttäjä valitsee vain olennaisen materiaalin.
 
 > Multimodaalisuus ei tarkoita ”kaikki mukaan”. Se tarkoittaa oikea materiaali oikeassa muodossa.
 
@@ -102,7 +102,7 @@ Korosta opiskelijoille:
 
 ### Väärinkäsitys 3: ”Kaikki tekoälymallit osaavat käsitellä kuvia.”
 
-**Korjaava näkökulma:** Kaikki mallit eivät ole multimodaalisia. Osa malleista käsittelee vain tekstiä. Ammattilaisen pitää tarkistaa, tukeeko käytettävä malli kuvia, tiedostoja tai muita tietomuotoja.
+**Korjaava näkökulma:** Kaikki mallit eivät ole multimodaalisia. Osa malleista käsittelee vain tekstiä. Vastuullisen käyttäjän pitää tarkistaa, tukeeko käytettävä malli kuvia, tiedostoja tai muita tietomuotoja.
 
 ### Väärinkäsitys 4: ”Lokit kannattaa näyttää kuvakaappauksena.”
 
@@ -140,7 +140,7 @@ Korosta opiskelijoille:
 **Ratkaisu:** Ohjaa heitä valitsemaan 1–2 olennaista kuvakaappausta ja antamaan muu materiaali tekstinä. Kysy: ”Mikä kuvassa on ratkaisemisen kannalta välttämätöntä?”
 
 **Haaste: Opiskelijat eivät tiedä, tukeeko malli kuvia.**
-**Ratkaisu:** Opeta tarkistamaan mallin ominaisuudet ennen tehtävän aloittamista. Ammattilainen ei oleta, vaan varmistaa, mitä työkalu osaa.
+**Ratkaisu:** Opeta tarkistamaan mallin ominaisuudet ennen tehtävän aloittamista. Vastuullinen käyttäjä ei oleta, vaan varmistaa, mitä työkalu osaa.
 
 ---
 
@@ -218,7 +218,7 @@ Kun opiskelijat käyttävät tekoälyä jatkossa, ohjaa heitä miettimään, mik
 
 ### Ammattitaito IT-työssä
 
-Multimodaalisen kontekstin rakentaminen on tärkeä IT-ammattilaisen taito. Se, joka osaa antaa tekoälylle oikean kuvakaappauksen, olennaiset lokirivit ja selkeän rajauksen, saa parempia vastauksia nopeammin.
+Multimodaalisen kontekstin rakentaminen on tärkeä teknisen alan osaajan taito. Se, joka osaa antaa tekoälylle oikean kuvakaappauksen, olennaiset lokirivit ja selkeän rajauksen, saa parempia vastauksia nopeammin.
 
 ### Konteksti-kolmikon viimeinen osa
 
@@ -237,3 +237,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Milloin sinun kannattaa näyttää tekoälylle kuva ongelmasta, ja milloin sama tieto kannattaa antaa tekstinä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **aineistovalinta- ja redaktointilomake**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija valitsee kaksi aineistomuotoa ja perustelee, mitä lisätietoa kumpikin tuo sekä mitä poistetaan. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmista tapausta ja redaktointilistaa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija perustelee myös, miksi yksi tarjolla oleva aineisto jätetään pois. Syventävä työ ei kasvata pakollista ydintuotosta.

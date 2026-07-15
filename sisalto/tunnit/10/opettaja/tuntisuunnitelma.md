@@ -2,7 +2,9 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miksi eri **kielimallit** ja tekoälytyökalut soveltuvat erilaisiin tehtäviin. Oppitunnin ydin on ammatillinen työkalunvalinta: opiskelija ei valitse tekoälyä suosion tai tottumuksen perusteella, vaan arvioi tehtävän, kontekstin, tietosuojan, kustannukset ja työympäristön.
+**Pedagoginen rajaus suhteessa tuntiin 11:** Tunnin 10 arviointikohde on tehtävän ja työkalun sopivuus samalla vertailutehtävällä. Käsittele tietosuoja vain porttikysymyksenä: saako aineiston antaa palveluun? Syvällinen datavirran, palvelinsijainnin, paikallisen ajon ja käyttöehtojen analyysi kuuluu tunnille 11.
+
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miksi eri **kielimallit** ja tekoälytyökalut soveltuvat erilaisiin tehtäviin. Oppitunnin ydin on asiallinen työkalunvalinta: opiskelija ei valitse tekoälyä suosion tai tottumuksen perusteella, vaan arvioi tehtävän, kontekstin, tietosuojan, kustannukset ja työympäristön.
 
 ### Muistaa ja ymmärtää
 
@@ -14,15 +16,15 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miksi eri **kielima
 
 - Opiskelija osaa testata samaa tehtävää usealla tekoälytyökalulla ja vertailla tuloksia.
 - Opiskelija osaa havaita eroja vastausten tyylissä, tarkkuudessa, rakenteessa, lähteiden käsittelyssä ja käyttötarkoitukseen sopivuudessa.
-- Opiskelija osaa arvioida työkalun valintaa ammatillisista näkökulmista: **hinta**, **yksityisyys**, **kontekstikoko**, **tarkkuus**, **integraatiot** ja **organisaation ympäristö**.
+- Opiskelija osaa arvioida työkalun valintaa asiallisista näkökulmista: **hinta**, **yksityisyys**, **kontekstikoko**, **tarkkuus**, **integraatiot** ja **organisaation ympäristö**.
 
 ### Luoda ja arvioida
 
 - Opiskelija osaa perustella, miksi tietty työkalu sopii tiettyyn tehtävään paremmin kuin toinen.
 - Opiskelija osaa dokumentoida oman testauksensa ja tehdä sen pohjalta työkalusuosituksen.
-- Opiskelija ymmärtää, että ammattilainen **testaa ja dokumentoi** ennen kuin suosittelee työkalua organisaatiolle.
+- Opiskelija ymmärtää, että vastuullinen käyttäjä **testaa ja dokumentoi** ennen kuin suosittelee työkalua organisaatiolle.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on: oikea työkalu valitaan tehtävän mukaan. ChatGPT, Claude ja Copilot ovat kaikki käyttökelpoisia, mutta eri tilanteissa eri syistä. Ammattilainen ei arvaa eikä seuraa pelkkää suosiota, vaan testaa, vertailee ja perustelee valintansa.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on: oikea työkalu valitaan tehtävän mukaan. ChatGPT, Claude ja Copilot ovat kaikki käyttökelpoisia, mutta eri tilanteissa eri syistä. Vastuullinen käyttäjä ei arvaa eikä seuraa pelkkää suosiota, vaan testaa, vertailee ja perustelee valintansa.
 
 ---
 
@@ -32,7 +34,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miksi eri **kielima
 
 Opiskelijoilla voi olla vahva ennakkokäsitys siitä, että **ChatGPT** on “se oikea tekoälytyökalu”. Tämän tunnin tarkoitus on purkaa tätä ajattelua. ChatGPT voi olla monipuolinen ja tuttu, mutta se ei tarkoita, että se olisi paras työkalu kaikkiin työtilanteisiin.
 
-> **Ammattilainen ei kysy: mikä tekoäly on paras? Ammattilainen kysyy: mikä työkalu sopii tähän tehtävään, tässä organisaatiossa ja näillä rajoituksilla?**
+> **Vastuullinen käyttäjä ei kysy: mikä tekoäly on paras? Vastuullinen käyttäjä kysyy: mikä työkalu sopii tähän tehtävään, tässä organisaatiossa ja näillä rajoituksilla?**
 
 Korosta opiskelijoille:
 
@@ -53,7 +55,7 @@ Seuraava taulukko auttaa opettajaa kokoamaan tunnin keskeiset erot näkyväksi. 
 
 **Opettajan huomio:** Työkalujen ominaisuudet muuttuvat nopeasti. Älä tee tunnista pelkkää ominaisuuslistaa. Tärkein oppimistulos on työkalunvalinnan logiikka: tehtävä, data, ympäristö, riski ja kustannus ratkaisevat.
 
-### Ammattilaisen valintakriteerit
+### Vastuullisen käyttäjän valintakriteerit
 
 Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pystyä perustelemaan valinta useamman kuin yhden näkökulman perusteella.
 
@@ -78,7 +80,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 ### Väärinkäsitys 2: ”Työkalu kannattaa valita sen mukaan, mikä on halvin tai suosituin.”
 
-**Korjaava näkökulma:** Halvin ratkaisu voi tulla kalliiksi, jos se ei sovi tehtävään, rikkoo organisaation tietosuojakäytäntöjä tai tuottaa huonoja vastauksia. Suosittu työkalu voi olla hyvä yleisvalinta, mutta ammattilainen arvioi myös datan, käyttötarkoituksen ja organisaation ympäristön.
+**Korjaava näkökulma:** Halvin ratkaisu voi tulla kalliiksi, jos se ei sovi tehtävään, rikkoo organisaation tietosuojakäytäntöjä tai tuottaa huonoja vastauksia. Suosittu työkalu voi olla hyvä yleisvalinta, mutta vastuullinen käyttäjä arvioi myös datan, käyttötarkoituksen ja organisaation ympäristön.
 
 ### Väärinkäsitys 3: ”Kaikki kielimallit antavat saman tuloksen.”
 
@@ -90,7 +92,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 ### Väärinkäsitys 5: ”Tietosuoja on vain ylimääräistä varovaisuutta.”
 
-**Korjaava näkökulma:** Tietosuoja on ammatillinen peruskysymys. Jos työkalulle annetaan henkilötietoja, asiakasdataa, yrityksen sisäisiä dokumentteja tai lähdekoodia, pitää tietää, mihin data päätyy, käytetäänkö sitä palvelun kehittämiseen ja onko organisaatio hyväksynyt työkalun käyttöön.
+**Korjaava näkökulma:** Tietosuoja on asiallinen peruskysymys. Jos työkalulle annetaan henkilötietoja, asiakasdataa, yrityksen sisäisiä dokumentteja tai lähdekoodia, pitää tietää, mihin data päätyy, käytetäänkö sitä palvelun kehittämiseen ja onko organisaatio hyväksynyt työkalun käyttöön.
 
 ---
 
@@ -112,11 +114,11 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 | **Live-testaus** | 25 min | Näytä konkreettisesti, miten sama tehtävä tuottaa eri työkaluilla erilaisia tuloksia. |
 | **Vertailutaulukko** | 20 min | Opiskelijat kirjaavat erot ja perustelevat havaintonsa. |
 | **Kontekstipohjaiset valinnat** | 25 min | Opiskelijat valitsevat työkalun erilaisiin työelämäskenaarioihin. |
-| **Yhteenveto** | 10 min | Kokoa päätelmä: ammattilainen testaa, dokumentoi ja perustelee. |
+| **Yhteenveto** | 10 min | Kokoa päätelmä: vastuullinen käyttäjä testaa, dokumentoi ja perustelee. |
 
 ### Yleinen ohjaus
 
-- Pidä keskustelu ammatillisessa käytössä. Älä jää siihen, mikä työkalu on “kivoin” tai “tutuin”.
+- Pidä keskustelu asiallisessa käytössä. Älä jää siihen, mikä työkalu on “kivoin” tai “tutuin”.
 - Korosta, että opiskelijan havainto on arvokas vasta, kun hän osaa perustella sen.
 - Kysy jatkuvasti: **mihin tehtävään tämä työkalu sopii ja miksi?**
 - Muistuta, että työkalujen ominaisuudet muuttuvat. Siksi **testaamisen taito** on tärkeämpi kuin yksittäisen ominaisuuslistan ulkoa muistaminen.
@@ -167,7 +169,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 ---
 
-### TT-C: Ammattilaisen suositus
+### TT-C: Vastuullisen käyttäjän suositus
 
 **Tavoite:** Opiskelija harjoittelee kirjoittamaan lyhyen työkalusuosituksen organisaatiolle.
 
@@ -207,7 +209,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 **Mitä opettaja etsii:** Opiskelija kuvaa konkreettisia eroja esimerkiksi rakenteessa, tarkkuudessa, sävyssä, lähteissä, vastausmuodossa tai käyttökelpoisuudessa.
 
-### 4. Ammatilliset näkökohdat
+### 4. Käytännön näkökohdat
 
 **Kysymys:** Mitä sinun täytyy tietää ennen kuin suosittelet tekoälytyökalua yritykselle?
 
@@ -251,7 +253,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 **Mitä opiskelija voi sanoa:** ”Mitä väliä sillä on, mihin data menee?”
 
-**Opettajan vastaus:** Ammattilaisena et voi syöttää asiakkaan henkilötietoja, potilastietoja, yrityssalaisuuksia tai lähdekoodia mihin tahansa palveluun. Sinun pitää tietää, miten palvelu käsittelee dataa ja onko organisaatio hyväksynyt sen käyttöön.
+**Opettajan vastaus:** Vastuullisena käyttäjänä et voi syöttää asiakkaan henkilötietoja, potilastietoja, yrityssalaisuuksia tai lähdekoodia mihin tahansa palveluun. Sinun pitää tietää, miten palvelu käsittelee dataa ja onko organisaatio hyväksynyt sen käyttöön.
 
 **Strategia:** Käytä konkreettista tilannetta: asiakaspalvelija kopioi asiakkaan henkilötunnuksen, osoitteen ja tilausongelman tekoälyyn. Kysy, mitä riskejä tästä syntyy.
 
@@ -262,7 +264,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 1. **Opiskelijan itseopiskelumateriaali:** käytä sitä taustana ja varmista, että opiskelijat ovat lukeneet päävertailut ennen lähiosaa.
 2. **Live-testaus:** tee sama tehtävä usealla työkalulla ja näytä tulokset opiskelijoille.
 3. **Opiskelijoiden omat testit:** anna opiskelijoiden dokumentoida omat havaintonsa ja verrata niitä ryhmän havaintoihin.
-4. **Ammatilliset skenaariot:** käytä esimerkkejä yrityksistä, oppilaitoksesta, asiakaspalvelusta, dokumenttityöstä, ohjelmoinnista ja Office-työnkuluista.
+4. **Käytännön skenaariot:** käytä esimerkkejä yrityksistä, oppilaitoksesta, asiakaspalvelusta, dokumenttityöstä, ohjelmoinnista ja Office-työnkuluista.
 
 ---
 
@@ -292,7 +294,7 @@ Työkalun valinta kannattaa opettaa päätöksentekona. Opiskelijan pitäisi pys
 
 ### Yhteys promptaukseen
 
-Seuraavilla oppitunneilla opiskelijat syventävät promptausta ja rakenteista tulostetta. Tämän tunnin opit ovat pohjana sille: sama prompti ei toimi aina samalla tavalla eri työkaluilla, joten ammattilainen testaa sekä promptia että työkalua.
+Seuraavilla oppitunneilla opiskelijat syventävät promptausta ja rakenteista tulostetta. Tämän tunnin opit ovat pohjana sille: sama prompti ei toimi aina samalla tavalla eri työkaluilla, joten vastuullinen käyttäjä testaa sekä promptia että työkalua.
 
 ### Yhteys räätälöityihin botteihin
 
@@ -314,6 +316,27 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Jos sinun pitäisi suositella tekoälytyökalua työpaikalle, mitä testaisit ennen kuin tekisit päätöksen?
 
-> **Lopetuslause opettajalle:** Ammattilainen ei valitse tekoälyä maineen perusteella. Ammattilainen valitsee työkalun, koska hän on testannut sen ja osaa perustella valintansa.
+> **Lopetuslause opettajalle:** Vastuullinen käyttäjä ei valitse tekoälyä maineen perusteella. Vastuullinen käyttäjä valitsee työkalun, koska hän on testannut sen ja osaa perustella valintansa.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **neutraali vertailukoe ja valintaperuste**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija vertailee kahta työkalua tai kahta annettua tulosta samoilla tehtäväkriteereillä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija täyttää valmiin vertailumatriisin. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija ottaa kolmannen vaihtoehdon mukaan vasta kahden työkalun vertailun jälkeen. Syventävä työ ei kasvata pakollista ydintuotosta.

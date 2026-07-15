@@ -64,7 +64,7 @@ Vastaa 3–5 lauseella:
 
 ## Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? 🟣 SYVENTÄVÄ
 
-> **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa ammattilaisen aloittelijasta.
+> **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa vastuullisen käyttäjän aloittelijasta.
 
 **Tavoite:** Tunnistat herkät tiedot kuvakaappauksessa, lokissa tai konfiguraatiotiedostossa. Opit sensuroimaan ne pois ja päättämään, mitä voi turvallisesti jakaa tekoälylle.
 

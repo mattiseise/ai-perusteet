@@ -6,7 +6,7 @@
 
 Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, milloin agentin päätös voidaan automatisoida ja milloin tarvitaan **ihmisen hyväksyntä**. Opiskelijat oppivat käyttämään kolmea sääntöä päätöksenteon riskin arvioimiseen.
 
-**Opettajan painotus:** Korosta opiskelijoille, että kaikkia päätöksiä ei tarvitse hyväksyttää ihmisellä. Jos hyväksyntää vaaditaan joka vaiheessa, agentti hidastaa työtä. Jos hyväksyntää ei vaadita riskitilanteissa, agentti voi aiheuttaa vahinkoa. Ammattilaisen tehtävä on löytää oikea tasapaino.
+**Opettajan painotus:** Korosta opiskelijoille, että kaikkia päätöksiä ei tarvitse hyväksyttää ihmisellä. Jos hyväksyntää vaaditaan joka vaiheessa, agentti hidastaa työtä. Jos hyväksyntää ei vaadita riskitilanteissa, agentti voi aiheuttaa vahinkoa. Vastuullisen käyttäjän tehtävä on löytää oikea tasapaino.
 
 ### Opettajan ohjeet ja fasilitointi
 

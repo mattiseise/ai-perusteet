@@ -246,10 +246,65 @@ Missä kohdissa ihmisen täytyy hyväksyä, millainen hyväksyntäportti on, mit
 <li>Pidä <strong>muistiinpanodokumenttia</strong> mukana joka tunti. Sinne kerätä pohjapiirroksesi.</li>
 </ol>
 <hr />
-<p><strong>Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko <em>rakentaa</em> sillä jotain mitä joku muu voi käyttää.</strong></p></div></div>
+<p><strong>Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko <em>rakentaa</em> sillä jotain mitä joku muu voi käyttää.</strong></p>
+<h2>Arviointitasot</h2>
+<table>
+<thead>
+<tr>
+<th>Kriteeri</th>
+<th>Erinomainen</th>
+<th>Hyvä</th>
+<th>Tyydyttävä</th>
+<th>Välttävä</th>
+<th>Ei vielä hyväksyttävä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toimiva tai todennettu työnkulku (25 p)</td>
+<td>3–5 solmun ydintyönkulku toimii hallitusti, virhepolku näkyy ja suoritusjälki todentaa jokaisen vaiheen.</td>
+<td>Ydintyönkulku toimii tai alustariippumaton suoritusjälki todentaa sen.</td>
+<td>Pääpolku on ymmärrettävä, mutta yksi vaihe tai virhepolku jää epävarmaksi.</td>
+<td>Osia on toteutettu, mutta pääpolkua ei voi todentaa alusta loppuun.</td>
+<td>Toteutus, solmukaavio tai suoritusjälki puuttuu.</td>
+</tr>
+<tr>
+<td>Turvallisuus (20 p)</td>
+<td>Uhkamalli ohjaa minimioikeuksia, hyväksyntöjä, salaisuuksien eristystä, lokia ja palautumista; kontrollien rajat tunnistetaan.</td>
+<td>Olennaiset riskit, oikeusrajat, hyväksyntä ja lokitus on toteutettu tai kuvattu.</td>
+<td>Turvatoimet kattavat perusriskit, mutta yksi olennainen kerros puuttuu.</td>
+<td>Turvallisuus jää yleisiksi ohjeiksi ilman yhteyttä työnkulkuun.</td>
+<td>Olennaisia riskejä tai kontrolleja ei ole käsitelty.</td>
+</tr>
+<tr>
+<td>Dokumentaatio (20 p)</td>
+<td>Toinen henkilö voi dokumentaatiosta toistaa pääpolun, testit, oikeudet ja virhetilanteen.</td>
+<td>Rakenne, työkalut, oikeudet ja käyttö kuvataan selkeästi.</td>
+<td>Dokumentaatio kuvaa pääidean, mutta yksityiskohtia puuttuu.</td>
+<td>Dokumentaatio on hajanaista tai ristiriidassa toteutuksen kanssa.</td>
+<td>Dokumentaatio puuttuu.</td>
+</tr>
+<tr>
+<td>Testaus (20 p)</td>
+<td>9 testiä ja vähintään 2 uudelleentestiä ovat jäljitettäviä; korjausten vaikutus analysoidaan.</td>
+<td>3 normaalia, 3 reunatapausta, 3 turvallisuustestiä ja 2 uudelleentestiä on dokumentoitu.</td>
+<td>Testimäärä täyttyy osittain tai odotusten vertailu on epätasaista.</td>
+<td>Testejä on vähän eikä korjauksen vaikutusta todenneta.</td>
+<td>Järjestelmällinen testaus puuttuu.</td>
+</tr>
+<tr>
+<td>Itsearviointi ja demo (15 p)</td>
+<td>Demo tai puolustus osoittaa itsenäisen ymmärryksen, perustellut rajaukset ja rehellisen jatkokehitysarvion.</td>
+<td>Demo selittää pääpolun, turvallisuuden ja tehdyt korjaukset.</td>
+<td>Demo näyttää työn, mutta perustelut jäävät osittaisiksi.</td>
+<td>Esittely on vaikeasti seurattava tai oma osuus jää epäselväksi.</td>
+<td>Demo tai puolustus puuttuu.</td>
+</tr>
+</tbody>
+</table></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
-<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script>window.CI={"allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>

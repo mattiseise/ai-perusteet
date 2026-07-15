@@ -4,7 +4,7 @@
 
 ## Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU
 
-**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
+**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: vastuullinen käyttäjä ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
 
 ### Vaiheet
 

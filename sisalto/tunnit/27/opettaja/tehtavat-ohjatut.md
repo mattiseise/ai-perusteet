@@ -38,7 +38,7 @@ Käy läpi iteratiivisen kehityksen periaate:
    ```
    "Nyt agentti toimii. Testaa koko putki."
 
-**Korostus:** "Ammattilaiset eivät rakenna kaikkea kerralla. He rakentavat iteratiivisesti, testaten jokaisen vaiheen jälkeen."
+**Korostus:** "Kokeneet käyttäjät eivät rakenna kaikkea kerralla. He rakentavat iteratiivisesti, testaten jokaisen vaiheen jälkeen."
 
 ### Opiskelijoiden osallistuminen
 
@@ -253,4 +253,3 @@ Opettaja arvioi seuraavaa:
 3. **Dokumentaation selkeys** — Voiko joku muu ymmärtää projektin ilman selitystä?
 4. **Turvallisuustietoisuus** — Tunnistanut riskit ja ratkaissut ne?
 5. **Kriittinen ajattelu** — Ymmärtääkö opiskelija, mitä rakensi ja miksi?
-

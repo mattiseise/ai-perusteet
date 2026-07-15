@@ -24,9 +24,9 @@ Salainen merkkijono, jota käytetään sovelluksen tunnistamiseen rajapintaa kä
 
 Teksti, jonka annat tekoälylle kysymyksenä tai ohjeena. Prompt injection on yritys käyttää promptia tekoälyn käyttäytymisen hallintaan.
 
-## Ammatillinen vastuu (professional responsibility)
+## Asiallinen vastuu (professional responsibility)
 
-Käsitys siitä, että ammattilaisena sinulla on vastuu tuntea lainsäädäntö, etiikka ja turvallisuusnäkökohdat — eikä ajatella vain, että "se on laillista" tai "kaikki tekevät sitä".
+Käsitys siitä, että vastuullisena käyttäjänä sinulla on vastuu tuntea lainsäädäntö, etiikka ja turvallisuusnäkökohdat — eikä ajatella vain, että "se on laillista" tai "kaikki tekevät sitä".
 
 ## Organisaation politiikka (organizational policy)
 

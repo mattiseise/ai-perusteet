@@ -201,7 +201,7 @@ Anna ryhmille lyhyt yhteinen palaute. Korosta erityisesti selkeitä tarkoituksia
 
 Voit sanoa esimerkiksi:
 
-> Näen, että kirjoititte botille selkeät rajaukset. Se on ammatillista, koska hyvä botti ei yritä tehdä kaikkea.
+> Näen, että kirjoititte botille selkeät rajaukset. Se on asiallista, koska hyvä botti ei yritä tehdä kaikkea.
 
 ### Odotettu oppimistulos
 

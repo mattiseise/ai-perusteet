@@ -3,3 +3,9 @@
 slides-pptx/
 
 .claude/
+
+# Node / testaus (Codex lisäsi Playwright-testipinon)
+node_modules/
+test-results/
+downloads/
+playwright-report/

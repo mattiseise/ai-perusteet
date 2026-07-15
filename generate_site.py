@@ -95,9 +95,9 @@ def build_llms():
     lines = [
         '# AI · Perusteet',
         '',
-        '> Avoin, suomenkielinen tekoälyn perusteet -verkkokurssi: 27 oppituntia kolmessa '
-        'moduulissa teoriasta käyttöön ja itsenäisiin agentteihin. Toisen asteen tasolle, '
-        'mutta soveltuu kaikille tekoälyn perusteita opetteleville.',
+        '> ' + N.KURSSI['kurssi']['yleisolupaus'],
+        '',
+        N.KURSSI['kurssi']['laajuuskuvaus'],
         '',
         'Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin 4.0 '
         '(CC BY-SA 4.0) -lisenssillä: saat käyttää, jakaa ja muokata materiaalia myös '

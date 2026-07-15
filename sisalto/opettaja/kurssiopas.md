@@ -4,7 +4,11 @@ Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja s
 
 ## Mikä tämä kurssi on
 
-**AI · Perusteet** on tekoälyn perusteiden kurssi toisen asteen opiskelijoille. Se on **3 osaamispistettä (OSP)** ja koostuu **27 oppitunnista**, jokainen mitoitettu noin **90 minuutin** lähitunniksi. Tunnit jakautuvat kolmeen moduuliin, joista jokainen on yksi OSP:
+**AI · Perusteet** on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
+
+Jos kurssi toteutetaan **ammatillisessa koulutuksessa**, opettaja voi liittää avoimet tehtävät paikallisiin tutkinnon osiin ja nimetä arvioitavat näytöt oppilaitoksen omien käytäntöjen mukaan. Tämä ei muuta verkkokurssin kaikille avointa kohderyhmää.
+
+Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta. Luokkatoteutus koostuu 27 noin 90 minuutin oppitunnista, jotka jakautuvat kolmeen moduuliin:
 
 - **Teoria (tunnit 1–9)** — tekoälyn teoria ja toimintaperiaatteet
 - **Tekoälyjen käyttö (tunnit 10–18)** — generatiivisten tekoälytyökalujen käyttö
@@ -12,7 +16,7 @@ Tämä on koko kurssin opettajan opas — paikka, josta näet kokonaisuuden ja s
 
 Kukin moduuli päättyy omaan arvioitavaan lopputyöhön. Tunnit **18** ja **27** ovat varsinaisia arviointitunteja (Tekoälyjen käyttö- ja Agentit-osioiden lopputyöt), ja Teoria-osion lopputyö tuotetaan **tunnilla 9**. Näistä lisää kohdassa Arviointi.
 
-Kurssin voi ajaa kokonaisuutena tai moduuli kerrallaan — jokainen moduuli toimii myös itsenäisenä yhden OSP:n kokonaisuutena.
+Kurssin voi toteuttaa kokonaisuutena tai moduuli kerrallaan. Jos oppilaitos myöntää moduuleista osaamispisteitä, laajuus ja hyväksymisehdot vahvistetaan sen omissa käytännöissä.
 
 ### Mitä jokainen tunti sisältää
 
@@ -52,7 +56,7 @@ Kurssin voi jaksottaa monella tavalla. Muutama lähtökohta:
 
 - **Yksi tunti viikossa koko lukuvuoden.** 27 tuntia täyttää lukuvuoden luontevasti, ja opiskelijoilla on aikaa lopputöiden osatuotoksille tuntien välissä.
 - **2–3 tuntia viikossa yhden periodin ajan.** Tiiviimpi tahti, jossa moduuli etenee muutamassa viikossa.
-- **Moduuli kerrallaan, itsenäisinä 1 OSP:n kokonaisuuksina.** Voit ajaa vain Teoria-osion, vain Tekoälyjen käyttö -osion tai vain Agentit-osion. Kukin moduuli on suunniteltu toimimaan omana kokonaisuutenaan omine lopputöineen.
+- **Moduuli kerrallaan.** Voit toteuttaa vain Teoria-, Tekoälyjen käyttö- tai Agentit-osion. Kukin moduuli toimii omana kokonaisuutenaan omine lopputöineen. Mahdollisesta osaamispistemäärästä päättää oppilaitos.
 
 Ota jaksotusta suunnitellessasi huomioon lopputöiden rytmi. Kaikissa kolmessa moduulissa lopputyö rakentuu **osatuotoksina koko moduulin ajan** eikä synny yhdellä tunnilla:
 
@@ -64,12 +68,12 @@ Käytännössä: pidä huoli, että opiskelijat viimeistelevät osatuotokset ajo
 
 ### Alustat ja tunnukset — mitä varaat etukäteen
 
-Kaksi lopputyötä nojaa ulkoiseen alustaan, joten järjestä pääsy hyvissä ajoin:
+Kaksi lopputyötä sisältää alustaesimerkin. Järjestä pääsy hyvissä ajoin tai käytä vastaavaa toimittajariippumatonta näyttötapaa:
 
-- **Tekoälyjen käyttö -osio (OSP2)** rakentaa botin **Microsoft Copilot Agent** -alustalle. Opiskelijat tarvitsevat tunnukset, jotka jaetaan tunnilla 17 — varmista niiden saatavuus ennen sitä.
-- **Agentit-osio (OSP3)** rakentaa agentin **n8n**-alustalle tunneilla 26–27. Varmista, että opiskelijat pääsevät työskentelemään n8n:ssä pajatunneilla.
+- **Tekoälyjen käyttö -osio** voi rakentaa botin **Microsoft Copilot Agent** -alustalle. Ilman tunnusta sama näyttö tehdään millä tahansa saatavilla olevalla chatilla tai ohjattuna kuivaharjoitteluna: järjestelmäprompti, testiloki, tulokset ja korjaukset dokumentoidaan.
+- **Agentit-osio** voi rakentaa agentin **n8n**-alustalle. Ilman n8n-tunnusta oppija tekee alustariippumattoman solmukaavion, työkalusopimukset ja dokumentoidut suoritusjäljet. Arvioinnissa vaaditaan sama ymmärrys, testaus ja turvallisuuden perustelu.
 
-Varsinaisen tekoälytyökalun (esimerkiksi ChatGPT, Claude tai Copilot) opiskelija saa lopputöissä valita vapaasti; alustasidonnaisia ovat vain Copilot-botti ja n8n-agentti.
+Varsinaisen tekoälytyökalun voi valita vapaasti. Palvelun puuttuminen ei estä suoritusta, koska alustariippumaton reitti mittaa samat tavoitteet.
 
 ## Arviointi
 
@@ -82,10 +86,10 @@ Kurssilla arvioidaan **kolme lopputyötä**, yksi per moduuli. Jokaisesta voi sa
 | Käsitteiden käyttö | 25 |
 | Todistusaineistojen hyödyntäminen | 20 |
 | Konkreettiset toimenpiteet | 20 |
-| Ammatillinen kieli | 20 |
+| Selkeä, asiallinen ja perusteltu kieli | 20 |
 | Vastuukysymyksen käsittely | 15 |
 
-**Tekoälyjen käyttö -osion lopputyö — oma apuri-botti (tunnit 17–18).** Opiskelija rakentaa Microsoft Copilot Agent -alustalle ohjaavan botin tutusta arjen aiheesta.
+**Tekoälyjen käyttö -osion lopputyö — oma apuri-botti (tunnit 17–18).** Oppija rakentaa tai kuivaharjoittelee ohjaavan botin valitsemastaan arjen, opiskelun tai työelämän rooliskenaariosta.
 
 | Kriteeri | Pisteet |
 |---|---|
@@ -95,11 +99,11 @@ Kurssilla arvioidaan **kolme lopputyötä**, yksi per moduuli. Jokaisesta voi sa
 | Testaaminen ja iterointi | 20 |
 | Reflektio | 15 |
 
-**Agentit-osion lopputyö — n8n-agentti (tunnit 19–27).** Opiskelija rakentaa yksinkertaisen, 3–5 solmun n8n-agentin, joka ratkaisee yhden konkreettisen ongelman, sekä dokumentoi ja testaa sen.
+**Agentit-osion lopputyö — minimiagentti (tunnit 19–27).** Oppija rakentaa n8n:llä tai dokumentoituna alustariippumattomana työnkulkuna yksinkertaisen, 3–5 solmun agentin, joka ratkaisee yhden konkreettisen ongelman.
 
 | Kriteeri | Pisteet |
 |---|---|
-| Toimiva n8n-työnkulku | 25 |
+| Toimiva tai todennettu työnkulku | 25 |
 | Turvallisuus | 20 |
 | Dokumentaatio | 20 |
 | Testaus | 20 |

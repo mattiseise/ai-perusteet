@@ -23,7 +23,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **konteksti-ikkunan*
 - Opiskelija osaa laatia **ankkurikontekstin**, jota voidaan käyttää keskustelun jatkamiseen uudessa ikkunassa.
 - Opiskelija ymmärtää, että dokumentointi ei ole ylimääräistä työtä, vaan tapa tehdä tekoälystä luotettavampi yhteistyökumppani.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että konteksti-ikkunan hallinta on ammattilaisen taito. Tekoäly ei aina kerro, milloin se on unohtanut jotakin. Siksi käyttäjän pitää suunnitella, tiivistää, dokumentoida ja ankkuroida tieto itse.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että konteksti-ikkunan hallinta on vastuullisen käyttäjän taito. Tekoäly ei aina kerro, milloin se on unohtanut jotakin. Siksi käyttäjän pitää suunnitella, tiivistää, dokumentoida ja ankkuroida tieto itse.
 
 ---
 
@@ -97,7 +97,7 @@ Tätä mallia voi käyttää myös tulevilla oppitunneilla, kun opiskelijat rake
 
 ### Väärinkäsitys 2: ”Jos malli unohtaa, se on mallin huonoutta.”
 
-**Korjaava näkökulma:** Konteksti-ikkuna on tekninen ominaisuus, ei pelkkä mallin huonous. Ammattilainen ymmärtää rajoituksen ja suunnittelee työn sen mukaan. Hyvä käyttäjä ei oleta, että malli muistaa kaiken ikuisesti.
+**Korjaava näkökulma:** Konteksti-ikkuna on tekninen ominaisuus, ei pelkkä mallin huonous. Vastuullinen käyttäjä ymmärtää rajoituksen ja suunnittelee työn sen mukaan. Hyvä käyttäjä ei oleta, että malli muistaa kaiken ikuisesti.
 
 ### Väärinkäsitys 3: ”Dokumentointi on ylimääräistä, koska malli muistaa kaiken.”
 
@@ -128,12 +128,12 @@ Tätä mallia voi käyttää myös tulevilla oppitunneilla, kun opiskelijat rake
 - **Käytä analogiaa:** tekoälyn muistikirjassa on rajallinen määrä sivuja. Kun muistikirja täyttyy, vanhimmat sivut eivät enää ole käytössä.
 - **Näytä elävä esimerkki:** jos mahdollista, tee lyhyt demo, jossa mallin vastaus heikkenee, kun keskustelu pitkittyy tai olennaista tietoa ei enää anneta mukaan.
 - **Korosta kolmea strategiaa:** tiivistys, pilkkominen ja ankkurointi. Kirjoita ne näkyville ja palaa niihin harjoitusten aikana.
-- **Tee dokumentoinnista ammattilaisen taito:** älä esitä dokumentointia ylimääräisenä koulutehtävänä, vaan työelämätaitona.
+- **Tee dokumentoinnista vastuullisen käyttäjän taito:** älä esitä dokumentointia ylimääräisenä koulutehtävänä, vaan työelämätaitona.
 
 ### Yleisiä haasteita ja ratkaisuja
 
 **Haaste: Opiskelijat kysyvät, voiko malli vain muistaa kaiken.**
-**Ratkaisu:** Selitä, että kyseessä ei ole käyttäjän valinta vaan tekninen raja. Ammattilainen ei kiellä rajaa, vaan suunnittelee sen ympärille.
+**Ratkaisu:** Selitä, että kyseessä ei ole käyttäjän valinta vaan tekninen raja. Vastuullinen käyttäjä ei kiellä rajaa, vaan suunnittelee sen ympärille.
 
 **Haaste: Dokumentointi tuntuu opiskelijoista raskaalta.**
 **Ratkaisu:** Näytä, miten tekoälyä voi käyttää myös dokumentoinnin tukena. Esimerkiksi: ”Tiivistä tämä keskustelu 200 sanaan ja säilytä päätökset, rajoitukset ja seuraavat tehtävät.”
@@ -208,16 +208,16 @@ Tavoitteena on, että opiskelija kokee itse tilanteen, jossa malli antaa vastauk
 
 - Älä varoita opiskelijoita etukäteen tarkasti siitä, mitä tulee tapahtumaan. Anna heidän havaita ongelma itse.
 - Kun ryhmät raportoivat tuloksiaan, kysy: ”Mistä huomasitte, että vastaus oli väärä tai puutteellinen?”
-- Korosta, että ammattilaiselle tärkeintä ei ole se, ettei virheitä koskaan tapahdu. Tärkeää on osata tunnistaa virhe, arvioida sen syy ja korjata toimintatapa.
+- Korosta, että vastuulliselle käyttäjälle tärkeintä ei ole se, ettei virheitä koskaan tapahdu. Tärkeää on osata tunnistaa virhe, arvioida sen syy ja korjata toimintatapa.
 - Jos malli muistaa liian pitkään, pidennä keskustelua, lisää lokia tai käytä tehtävässä pienemmän konteksti-ikkunan mallia.
 
 ### Yleisiä väärinkäsityksiä tehtävässä 5.3
 
 **”Malli oli huono, koska se unohti.”**
-**Korjaus:** Malli toimi teknisten rajojensa sisällä. Konteksti-ikkuna on rakenteellinen rajoitus, ei pelkkä laatuvirhe. Ammattilainen suunnittelee työn tämän rajan mukaan.
+**Korjaus:** Malli toimi teknisten rajojensa sisällä. Konteksti-ikkuna on rakenteellinen rajoitus, ei pelkkä laatuvirhe. Vastuullinen käyttäjä suunnittelee työn tämän rajan mukaan.
 
 **”Huomasin heti, että vastaus oli väärä.”**
-**Jatkokysymys:** Entä jos et olisi tiennyt oikeaa vastausta itse? Miten ammattilaisena varmistaisit vastauksen oikeellisuuden?
+**Jatkokysymys:** Entä jos et olisi tiennyt oikeaa vastausta itse? Miten vastuullisena käyttäjänä varmistaisit vastauksen oikeellisuuden?
 
 ### Arviointivinkit tehtävään 5.3
 
@@ -315,3 +315,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Jos jatkaisit samaa IT-projektia tekoälyn kanssa viikon ajan, mitä tietoa sinun pitäisi dokumentoida, jotta työ ei alkaisi ajautua väärään suuntaan?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **katoamis- ja palautusloki**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija dokumentoi keskustelun tiedon katoamisen ja palauttaa olennaisen tiedon tiivistämällä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija järjestää annetun keskustelukatkelman tiedot ikkunan sisä- ja ulkopuolelle. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija vertailee kahta tiivistysstrategiaa. Syventävä työ ei kasvata pakollista ydintuotosta.

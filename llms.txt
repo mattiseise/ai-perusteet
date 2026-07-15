@@ -1,6 +1,8 @@
 # AI · Perusteet
 
-> Avoin, suomenkielinen tekoälyn perusteet -verkkokurssi: 27 oppituntia kolmessa moduulissa teoriasta käyttöön ja itsenäisiin agentteihin. Toisen asteen tasolle, mutta soveltuu kaikille tekoälyn perusteita opetteleville.
+> AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
+
+Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta.
 
 Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin 4.0 (CC BY-SA 4.0) -lisenssillä: saat käyttää, jakaa ja muokata materiaalia myös kaupallisesti, kunhan mainitset tekijän ja jaat johdannaiset samalla lisenssillä.
 
@@ -16,7 +18,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 ### Teoria — Tekoälyn teoria ja toimintaperiaatteet
 
 - [Tunti 1: Älykäs vai sääntö? — mitä tekoäly oikeasti tekee](https://aiperusteet.fi/kurssi/tunti-01/)
-- [Tunti 2: Viisi tekoälyn tasoa — missä mennään ja mihin ollaan menossa](https://aiperusteet.fi/kurssi/tunti-02/)
+- [Tunti 2: Kaksi akselia — kykyjen laajuus ja toteutustapa](https://aiperusteet.fi/kurssi/tunti-02/)
 - [Tunti 3: Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka](https://aiperusteet.fi/kurssi/tunti-03/)
 - [Tunti 4: Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen](https://aiperusteet.fi/kurssi/tunti-04/)
 - [Tunti 5: Muistin rajat — kuinka paljon tekoäly oikeasti muistaa](https://aiperusteet.fi/kurssi/tunti-05/)
@@ -43,7 +45,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 - [Tunti 20: Automaatio vai autonomia? — milloin agentti kannattaa](https://aiperusteet.fi/kurssi/tunti-20/)
 - [Tunti 21: Agentin muisti ja konteksti — miten kone pysyy kartalla](https://aiperusteet.fi/kurssi/tunti-21/)
 - [Tunti 22: Agentin työkalut — tiedostot, haku ja komennot](https://aiperusteet.fi/kurssi/tunti-22/)
-- [Tunti 23: Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi](https://aiperusteet.fi/kurssi/tunti-23/)
+- [Tunti 23: Suunnittelumallit — ReAct, työnkulku ja orkestrointi](https://aiperusteet.fi/kurssi/tunti-23/)
 - [Tunti 24: Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus](https://aiperusteet.fi/kurssi/tunti-24/)
 - [Tunti 25: Ihminen portinvartijana — human-in-the-loop käytännössä](https://aiperusteet.fi/kurssi/tunti-25/)
 - [Tunti 26: Kädet saveen — n8n-agenttipaja alkaa](https://aiperusteet.fi/kurssi/tunti-26/)

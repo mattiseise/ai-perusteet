@@ -6,7 +6,7 @@
 
 Tehtävän tavoitteena on näyttää opiskelijoille, että eri **tekoälymallit** voivat tuottaa erilaisia vastauksia samaan tehtävään. Opiskelijat huomaavat, ettei ole yhtä kaikissa tilanteissa parasta mallia, vaan mallin valinta riippuu **käyttötarkoituksesta**, **tietosuojasta**, **hinnasta**, **laadusta** ja käsiteltävästä aineistosta.
 
-**Opettajan painotus:** Korosta, että mallivertailussa ei etsitä yhtä pysyvää voittajaa. Ammattilainen arvioi, mikä malli sopii parhaiten juuri kyseiseen tilanteeseen ja mitä riskejä käyttöön liittyy.
+**Opettajan painotus:** Korosta, että mallivertailussa ei etsitä yhtä pysyvää voittajaa. Vastuullinen käyttäjä arvioi, mikä malli sopii parhaiten juuri kyseiseen tilanteeseen ja mitä riskejä käyttöön liittyy.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -47,7 +47,7 @@ Selitä opiskelijoille, että eri malleilla voi olla erilaisia vahvuuksia, rajoi
 
 #### Johtopäätös
 
-> Ei ole yhtä parasta tekoälymallia kaikkiin tilanteisiin. Ammattilaisen pitää valita malli sen mukaan, mitä ollaan tekemässä, millaista tietoa käsitellään ja millaisia riskejä käyttöön liittyy.
+> Ei ole yhtä parasta tekoälymallia kaikkiin tilanteisiin. Vastuullisen käyttäjän pitää valita malli sen mukaan, mitä ollaan tekemässä, millaista tietoa käsitellään ja millaisia riskejä käyttöön liittyy.
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat valitsevat mallin vain siksi, että vastaus “näyttää hyvältä”, kysy: “Mistä tiedämme, että vastaus on oikea, turvallinen ja käyttökelpoinen juuri tähän tehtävään?”
 
@@ -55,7 +55,7 @@ Selitä opiskelijoille, että eri malleilla voi olla erilaisia vahvuuksia, rajoi
 
 - Opiskelijat ymmärtävät, että eri tekoälymallit voivat tuottaa erilaisia vastauksia samaan tehtävään.
 - Opiskelijat osaavat vertailla mallien vastauksia **selkeyden**, **hyödyllisyyden**, **tarkkuuden** ja **käyttötarkoituksen** näkökulmasta.
-- Opiskelijat ymmärtävät, että mallin valinta on ammatillinen päätös, ei pelkkä makuasia.
+- Opiskelijat ymmärtävät, että mallin valinta on asiallinen päätös, ei pelkkä makuasia.
 
 ---
 
@@ -81,7 +81,7 @@ Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, että tekoälyn 
 
 **Johdanto noin 5 minuuttia:**
 
-> Tekoälymallin valinta ei riipu vain hinnasta tai nopeudesta. Ammattilaisen pitää tietää, millaista tietoa hän käsittelee ja minne tieto lähetetään. Erityisesti henkilötietojen, potilastietojen, oppilastietojen ja asiakastietojen kanssa pitää olla varovainen.
+> Tekoälymallin valinta ei riipu vain hinnasta tai nopeudesta. Vastuullisen käyttäjän pitää tietää, millaista tietoa hän käsittelee ja minne tieto lähetetään. Erityisesti henkilötietojen, potilastietojen, oppilastietojen ja asiakastietojen kanssa pitää olla varovainen.
 
 #### Ryhmätyö noin 20 minuuttia
 
@@ -152,17 +152,17 @@ Jaa opiskelijat neljään ryhmään. Anna jokaiselle ryhmälle yksi skenaario.
 
 #### Opettajan johtopäätös
 
-> Tekoälypalvelu voi olla teknisesti hyvä, nopea ja edullinen, mutta se ei vielä tarkoita, että sitä voi käyttää kaikissa tilanteissa. Ammattilaisen pitää tietää, mitä tietoja käsitellään, minne tiedot menevät, millaiset käyttöehdot palvelulla on ja mitä organisaation ohjeet sallivat.
+> Tekoälypalvelu voi olla teknisesti hyvä, nopea ja edullinen, mutta se ei vielä tarkoita, että sitä voi käyttää kaikissa tilanteissa. Vastuullisen käyttäjän pitää tietää, mitä tietoja käsitellään, minne tiedot menevät, millaiset käyttöehdot palvelulla on ja mitä organisaation ohjeet sallivat.
 
 **Yhteenveto opiskelijoille:**
 
-Ammattilaisena sinun pitää ensin tunnistaa käsiteltävä tieto ja vasta sen jälkeen valita sopiva tekoälytyökalu.
+Vastuullisena käyttäjänä sinun pitää ensin tunnistaa käsiteltävä tieto ja vasta sen jälkeen valita sopiva tekoälytyökalu.
 
 ### Odotettu oppimistulos
 
 - Opiskelijat ymmärtävät, että tekoälymallin valintaan vaikuttavat **hinta**, **laatu**, **tietosuoja** ja **käyttötarkoitus**.
 - Opiskelijat osaavat tunnistaa tilanteita, joissa tekoälylle ei saa lähettää henkilötietoja tai arkaluonteista tietoa ilman asianmukaista käsittelyä.
-- Opiskelijat ymmärtävät, että tietosuoja on osa ammatillista tekoälyn käyttöä.
+- Opiskelijat ymmärtävät, että tietosuoja on osa asiallista tekoälyn käyttöä.
 
 ---
 
@@ -222,7 +222,7 @@ Anna heille seuraavat kysymykset:
 3. Vahvista keskustelun lopuksi kolme pääajatusta:
    - Eri tekoälymallit voivat tuottaa erilaisia vastauksia samaan tehtävään.
    - Mallin valinta riippuu käyttötarkoituksesta, laadusta, hinnasta ja tietosuojasta.
-   - Ammattilainen arvioi tekoälyn vastauksen eikä käytä sitä suoraan ilman tarkistusta.
+   - Vastuullinen käyttäjä arvioi tekoälyn vastauksen eikä käytä sitä suoraan ilman tarkistusta.
 
 ### Odotettu oppimistulos
 
@@ -241,7 +241,7 @@ Opettaja arvioi opiskelijoiden kykyä:
 - tunnistaa vastausten eroja selkeyden, hyödyllisyyden, tarkkuuden ja riskien näkökulmasta,
 - perustella, miksi jokin malli sopii tiettyyn käyttötarkoitukseen,
 - tunnistaa, milloin tekoälylle ei saa antaa henkilötietoja tai arkaluonteista tietoa,
-- selittää, miksi **tietosuoja** on osa ammatillista tekoälyn käyttöä,
+- selittää, miksi **tietosuoja** on osa asiallista tekoälyn käyttöä,
 - arvioida tekoälyn tuottamaa vastausta kriittisesti ennen sen hyödyntämistä.
 
 ---

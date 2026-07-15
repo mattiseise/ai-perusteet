@@ -1,6 +1,6 @@
-# Opiskelutehtävät: Suunnittelumallit — ReAct ja ketjuajattelu
+# Opiskelutehtävät: Suunnittelumallit — ReAct ja eksplisiittinen työnkulku
 
-> Tämä tunti rakentaa lopputyösi kolmatta osaa. Tänään päätät, miten agenttisi ajattelee. Tuotos: **⭐️ Agentti: Päättely** (3/5).
+> Tämä tunti rakentaa lopputyösi kolmatta osaa. Tänään päätät, miten agenttisi havaittava työnkulku etenee. Tuotos: **⭐️ Agentti: Päättely** (3/5).
 
 *Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin ⭐️ Agentti: Päättely -tehtävää.*
 
@@ -8,24 +8,24 @@
 
 ## ⭐️ Agentti: Päättely 🟢 SUOSITELTU
 
-**Miksi tämä on tärkeää:** Päättelymalli määrittää, miten agenttisi ajattelee. Väärä valinta johtaa joko turhiin iteraatioihin tai liian jäykkään prosessiin.
+**Miksi tämä on tärkeää:** Suunnittelumalli määrittää, miten agenttisi valitsee työkalut, käsittelee tulokset ja etenee toiminnosta toiseen. Väärä valinta johtaa joko turhiin iteraatioihin tai liian jäykkään prosessiin.
 
 ### Tehtävä
 
 Avaa muistiinpanoistasi aiemmat ⭐️ Agentti -pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:
 
-**1. Päättelymalli (ReAct vai ketjuajattelu).** Kumpi malli sopii paremmin omaan ongelmaasi? **ReAct** (ajattele → toimi → havainnoi → ajattele uudelleen) sopii, kun agentti tarvitsee reagoida työkalujen palautteeseen. **Ketjuajattelu** (vaihe 1 → vaihe 2 → vaihe 3) sopii, kun prosessi on selkeästi peräkkäinen.
+**1. Suunnittelumalli (ReAct vai eksplisiittinen työnkulku).** Kumpi malli sopii paremmin omaan ongelmaasi? **ReAct** (työkalukutsu → tulos tai virhe → seuraava toiminto) sopii, kun agentin pitää reagoida työkalujen palautteeseen. **Eksplisiittinen työnkulku** (vaihe 1 → vaihe 2 → vaihe 3) sopii, kun prosessi on selkeästi peräkkäinen.
 
 **2. Perustelu.** Miksi tämä malli sopii juuri sinun käyttötapaukseesi?
 
-**3. Päättelymalli n8n-rakenteena.** Miten päättelymallisi näkyy konkreettisesti n8n-työnkulussa? ReActissa tarvitset usein silmukan tekoälysolmun ja työkalujen välillä. Ketjuajattelussa työnkulku on lineaarisempi.
+**3. Malli n8n-rakenteena ja lokina.** Miten malli näkyy konkreettisesti työnkulussa? Kirjaa esimerkki, jossa näkyvät lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja seuraava toiminto. Älä pyydä tai tallenna mallin raakaa chain-of-thoughtia. ReActissa tarvitset usein rajatun silmukan tekoälysolmun ja työkalujen välillä. Eksplisiittisessä työnkulussa rakenne on lineaarisempi.
 
 > **Sivumaininta: moniagenttijärjestelmät.** Monimutkaisissa, oikean elämän projekteissa agentit voivat tehdä yhteistyötä — yksi erikoistuu tiedonhakuun, toinen kirjoittaa, kolmas tarkistaa lopputuloksen. Tätä kutsutaan moniagenttijärjestelmäksi. Lopputyösi mittakaavassa (3–5 solmua) tämä on yliampuva ratkaisu. Yksi hyvin suunniteltu agentti riittää.
 
 ### Tekoälyvaihe — sparraa päättelyvalintaa
 
 ```
-Olen valinnut agentilleni [ReAct / ketjuajattelu] -mallin. Agenttini
+Olen valinnut agentilleni [ReAct / eksplisiittinen työnkulku] -mallin. Agenttini
 tehtävä on [kuvaa]. Perusteluni on [kuvaa]. Toimi sparrauskumppanina
 ja kysy 2–3 kysymystä, jotka paljastavat, onko valintani perusteltu
 vai sopisiko toinen malli paremmin.
@@ -35,11 +35,11 @@ vai sopisiko toinen malli paremmin.
 
 ---
 
-## Tehtävä 23.1 — ReAct vs. ketjuajattelu — milloin käytät mitä? 🟣 SYVENTÄVÄ
+## Tehtävä 23.1 — ReAct vs. eksplisiittinen työnkulku — milloin käytät mitä? 🟣 SYVENTÄVÄ
 
 ### Tehtävä
 
-Neljä tehtävää. Päätä jokaisen kohdalla, sopiiko ReAct vai ketjuajattelu paremmin:
+Neljä tehtävää. Päätä jokaisen kohdalla, sopiiko ReAct vai eksplisiittinen työnkulku paremmin:
 
 - **A:** "Asiakkaan tili on jäädytetty. Avaa se."
 - **B:** "Asiakas ei ole varma, mitä tuotetta hän haluaa. Auta valitsemaan."

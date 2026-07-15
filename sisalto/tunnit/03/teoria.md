@@ -160,8 +160,15 @@ Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii yksi
 - Se ennustaa seuraavan tokenin todennäköisyyksien perusteella.
 - Se jatkaa tätä, kunnes vastaus on valmis.
 
-Siksi lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Ammattilaiselle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä tekoälyn hyödyt että sen rajoitukset.
+Siksi lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Vastuulliselle käyttäjälle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä tekoälyn hyödyt että sen rajoitukset.
 
 Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä, mitä ja miten kysyt: **konteksti ratkaisee kaiken**.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+
+Tarkistettu 15.7.2026.

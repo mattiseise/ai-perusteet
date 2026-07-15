@@ -2,7 +2,7 @@
 
 ## Tekoäly (Artificial Intelligence, AI)
 
-Ohjelma, joka oppii datasta ja tekee päätöksiä ilman, että jokaista sääntöä on ohjelmoitu etukäteen. Tekoäly muuttuu ja paranee, kun se näkee uutta dataa. Se vastaa todennäköisyyksien perusteella, ei absoluuttisella varmuudella.
+Kattotermi menetelmille, joilla järjestelmä tekee älykkäinä pidettyjä tehtäviä, kuten tunnistamista, ennustamista, suunnittelua tai sisällön tuottamista. Koneoppiminen on yksi toteutustapa, ei koko tekoälyn määritelmä. Käyttöön otettu malli ei automaattisesti muutu jokaisesta uudesta syötteestä.
 
 ## Sääntöpohjainen järjestelmä (Rule-Based System)
 
@@ -14,7 +14,7 @@ Prosessi, jossa tietokone tekee saman tehtävän ilman käyttäjän osallistumis
 
 ## Koneoppiminen (Machine Learning)
 
-Tekoälyn osatyyppi, jossa ohjelma oppii datasta ja parantaa suoritustaan ilman eksplisiittisiä ohjeita. Malli muodostaa numeroita eli parametreja, jotka määrittävät sen käyttäytymisen.
+Tekoälyn toteutustapa, jossa koulutusprosessi sovittaa mallin parametrit datan perusteella. Käyttöön otettu malli ei automaattisesti opi jokaisesta uudesta syötteestä, vaan päivittäminen on erillinen prosessi.
 
 ## Parametri
 
@@ -26,11 +26,11 @@ Logiikka, joka tuottaa aina saman tuloksen samoilla syötteillä. Tavallinen ohj
 
 ## Probabilistinen
 
-Logiikka, joka antaa todennäköisyyksiä eri tuloksille – esimerkiksi "85 % todennäköisyydellä A, 15 % todennäköisyydellä B". Tekoäly vastaa tyypillisesti probabilistisesti.
+Logiikka, joka antaa todennäköisyyksiä eri tuloksille — esimerkiksi "85 % todennäköisyydellä A, 15 % todennäköisyydellä B". Monet koneoppimismallit toimivat probabilistisesti.
 
 ## Petoksentunnistus (Fraud Detection)
 
-Tekoälysovellus, joka oppii historiallisista transaktioista ja ennustaa, onko uusi tapahtuma todennäköisesti laillinen vai petollinen. Sitä käytetään pankeissa ja verkkokaupassa.
+Tekoälysovellus, jonka koneoppimismalli koulutetaan historiallisilla transaktioilla ennustamaan, onko uusi tapahtuma todennäköisesti laillinen vai petollinen. Sitä käytetään pankeissa ja verkkokaupassa.
 
 ## Robottiprosessien automatisointi (RPA)
 
@@ -38,6 +38,6 @@ Tietokoneohjelma, joka toistaa rutiinitoimintoja, kuten lomakkeiden täyttämist
 
 ## Kielimalli (Language Model)
 
-Tekoälymalli, joka on oppinut suuresta määrästä tekstiä ja osaa ennustaa seuraavan sanan tai vastata kysymyksiin. Esimerkiksi ChatGPT on kielimalli.
+Tekoälymalli, joka on koulutettu suurella tekstiaineistolla ja osaa ennustaa seuraavia tekstiyksiköitä tai vastata kysymyksiin.
 
 ---

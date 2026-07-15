@@ -16,7 +16,7 @@ Valitse ongelma, jonka haluaisit ratkaista agentilla. Kirjoita lyhyt kuvaus (150
 
 1. Mikä ongelma on kyseessä ja kenelle se on tarkoitettu?
 2. Miksi juuri agentti sopii tähän ongelmaan — eikö tavallinen automaatio tai chatbot riittäisi?
-3. Mitkä kuusikomponenttisen mallin osat (syötekäsittelijä, päättelijä, työkalut, muisti, turvakerros, palautesilmukka) ovat tässä ongelmassa kriittisimpiä?
+3. Mitkä kurssin kuudesta suunnittelukohdasta (syötekäsittely, päättely, työkalut, muisti, turvakerros, palautesilmukka) tarvitset? Nimeä myös ainakin yksi kohta, jonka voit perustellusti jättää pois.
 
 Ongelman ei tarvitse olla monimutkainen. Hyvä lähtökohta voi olla esimerkiksi "sähköpostiviestien luokittelu ja yhteenveto joka aamu" tai "asiakaspalvelun FAQ-botti, joka osaa hakea vastauksia tietokannasta". Tärkeintä on, että ongelman voi toteuttaa 3–5 solmun n8n-työnkulkuna.
 
@@ -59,7 +59,7 @@ Täytä jokaisen järjestelmän kohdalle valintasi (chatbot, agentti tai ei kump
 Vastaa järjestelmän D kohdalla lisäksi kahteen kysymykseen:
 
 1. Osoita kuvauksen tekstistä kohdat, joista tunnistat vähintään neljä kuudesta rakennusosasta — mikä lause paljastaa minkä osan? Mitkä osat eivät näy kuvauksessa suoraan, ja miksi ne silti todennäköisesti ovat olemassa?
-2. Vertaa omaan ⭐️ Agentti: Ongelma -pohjapiirrokseesi: valmisagentissa saisit nämä kuusi osaa valmiina. Mitkä niistä joudut omassa n8n-projektissasi rakentamaan itse — ja mitä hyödyt siitä, että rakennat ne itse?
+2. Vertaa omaan ⭐️ Agentti: Ongelma -pohjapiirrokseesi: valmisagentissa joku muu on rakentanut kielimallia ympäröivän harnessin. Mitkä kuudesta suunnittelukohdasta näkyvät tuotteessa, mitkä eivät ole tarpeellisia ja mitkä toteutat omassa projektissasi itse?
 
 > 💡 **Vinkki muistiinpanoihin:** Kirjaa vastauksesi omiin muistiinpanoihisi. Tätä tehtävää ei palauteta, mutta sen havainnot tukevat pohjapiirroksen perustelua.
 

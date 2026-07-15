@@ -12,7 +12,7 @@ Oppitunti rakentaa siltaa kohti **n8n-projektia**, jossa opiskelijat suunnittele
 4. **Oppitunti 24: Turvallisuus** — agentti toimii rajatusti, valvotusti ja turvallisesti.
 5. **Oppitunti 25: Human-in-the-loop** — agentti tekee yhteistyötä ihmisen kanssa.
 
-**Opettajan painotus:** Korosta opiskelijoille, että hyvä agentti ei yritä tehdä kaikkea yksin. Ammatillisesti suunniteltu agentti osaa tunnistaa tilanteet, joissa päätös pitää siirtää ihmiselle. Tämä ei tee agentista heikkoa, vaan turvallisemman ja luotettavamman.
+**Opettajan painotus:** Korosta opiskelijoille, että hyvä agentti ei yritä tehdä kaikkea yksin. Asiallisesti suunniteltu agentti osaa tunnistaa tilanteet, joissa päätös pitää siirtää ihmiselle. Tämä ei tee agentista heikkoa, vaan turvallisemman ja luotettavamman.
 
 ---
 
@@ -167,3 +167,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Missä kohdassa oman agenttisi pitäisi pysähtyä ja pyytää ihmiseltä hyväksyntä? Mitä tietoa ihmisen pitää nähdä, jotta hän voi tehdä hyvän päätöksen?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **hyväksyntä- ja eskalointimatriisi fallbackeineen**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija sijoittaa kolme toimintoa hyväksyntä- ja eskalointimatriisiin fallbackeineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmiita riskitasokortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää aikakatkaisun ja poikkeuksen turvalliset oletukset. Syventävä työ ei kasvata pakollista ydintuotosta.

@@ -178,3 +178,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mikä omassa projektissasi on se kohta, jossa työnkulku ei enää riitä ja agentin päättely tuo lisäarvoa?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **perusteltu päätösmuistio**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija rakentaa yhdelle tehtävälle päätöspuun promptin, työnkulun ja agentin välille. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija valitsee perustelut valmiista vaihtoehdoista. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija vertailee kustannusta, riskiä ja ylläpitoa. Syventävä työ ei kasvata pakollista ydintuotosta.

@@ -209,7 +209,7 @@ Iterointi on täysin normaalia. Ensimmäinen versio on harvoin täydellinen. Hyv
 
 ## Todellinen esimerkki: asiakaspalvelubotti käytännössä
 
-Kuvittele, että rakennat asiakaspalvelubottia oman alasi organisaatioon, esimerkiksi kahvilaan, kirjastoon tai liikuntakeskukseen.
+Kuvittele työelämän rooliskenaario: rakennat asiakaspalvelubottia esimerkiksi kahvilaan, kirjastoon tai liikuntakeskukseen. Voit yhtä hyvin valita arjen tai harrastuksen tai opiskelun kontekstin.
 
 **Tietopohja** sisältää 50 yleisintä asiakaskysymystä ja niiden vastaukset. Mukana ovat esimerkiksi tuotevalikoima, hinnat, aukioloajat, allergeenitiedot ja varausohjeet. Lisäksi tietopohjassa on yhteystiedot eskalointia varten, koska joskus botti ei osaa vastata kysymykseen ja asia täytyy ohjata ihmiselle.
 
@@ -244,3 +244,11 @@ Hyödyllinen botti rakentuu kolmelle vahvalle perustalle:
 Testaus ei ole kertaluonteinen työ, vaan iteratiivinen prosessi. Korjaat ja parannat bottia, testaat uudelleen ja jatkat, kunnes botti on riittävän hyvä. Hyvällä botilla on laadukas tietopohja, selkeät rajat ja perusteellinen testaus.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

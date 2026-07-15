@@ -1,0 +1,5 @@
+# Täsmälliset, perustellut poikkeukset kohderyhmäskannista.
+allow:
+  - file: "sisalto/opettaja/kurssiopas.md"
+    text: "ammatillisessa"
+    reason: "Opettajan oppaassa kuvataan erikseen, miten kaikille avoin kurssi voidaan toteuttaa ammatillisessa koulutuksessa; ilmaus nimeää toteutusympäristön eikä oleta opiskelijan koulutusalaa."

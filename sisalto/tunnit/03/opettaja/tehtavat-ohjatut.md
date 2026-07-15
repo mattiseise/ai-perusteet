@@ -137,7 +137,7 @@ Voit käyttää esimerkiksi seuraavia kysymystyyppejä:
    - Se tuottaa sanoja ja lauseita todennäköisyyksien perusteella.
    - Vaarallista on se, että virheellinen vastaus voi näyttää luotettavalta.
 
-   Kysy lopuksi: **Missä ammatillisissa tilanteissa hallusinaatiot olisivat erityisen vaarallisia?**
+   Kysy lopuksi: **Missä asiallisissa tilanteissa hallusinaatiot olisivat erityisen vaarallisia?**
 
    Esimerkkejä keskusteluun:
 
@@ -166,7 +166,7 @@ Tehtävän jälkeen opiskelijat ymmärtävät, että:
 
 - **kielimalli** ei automaattisesti tiedä, onko sen vastaus oikein,
 - **hallusinaatiot** voivat olla turvallisuusriski, koska virheelliset vastaukset voivat kuulostaa uskottavilta,
-- ammattilaisen pitää tarkistaa tekoälyn tuottama tieto eikä luottaa siihen sokeasti,
+- vastuullisen käyttäjän pitää tarkistaa tekoälyn tuottama tieto eikä luottaa siihen sokeasti,
 - tekoälyn käyttö vaatii kriittistä ajattelua ja lähteiden arviointia.
 
 ---

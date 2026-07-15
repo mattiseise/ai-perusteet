@@ -1,6 +1,6 @@
 # Opiskelutehtävät — Konteksti ratkaisee
 
-> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän ammattilaisesta. Tee tämä tehtävä huolella.
+> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän vastuullisesta käyttäjästä. Tee tämä tehtävä huolella.
 
 ## Tehtävä 4.1 — Huono vs. hyvä prompti rinnakkain 🟢 SUOSITELTU
 
@@ -44,7 +44,7 @@ Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ov
 
 #### Vaihe 3 — Iteroi: paranna vastausta vielä kerran
 
-Hyväkään ensimmäinen vastaus ei ole vielä loppu. Ammattilaiset eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
+Hyväkään ensimmäinen vastaus ei ole vielä loppu. Kokeneet käyttäjät eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
 
 - "Tarkenna kohta 3 konkreettisella esimerkillä."
 - "Anna myös yksi esimerkki, jossa kohta menee tarkoituksella pieleen, jotta opin tunnistamaan virheen."

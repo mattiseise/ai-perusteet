@@ -6,7 +6,7 @@
 
 Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **ReAct-malli** toimii agentin päätöksenteossa. ReAct tarkoittaa mallia, jossa agentti vuorottelee **päättelyn** ja **toiminnan** välillä: se arvioi tilanteen, tekee toiminnon, tarkastelee tulosta ja päättää seuraavan askeleen.
 
-**Opettajan painotus:** Korosta, että ReAct ei tarkoita vain “ajattelua ääneen”. Sen ydin on, että agentti käyttää työkalua, havainnoi tuloksen ja muuttaa seuraavaa päätöstään havainnon perusteella.
+**Opettajan painotus:** Korosta, ettei ReAct-tehtävässä kirjoiteta mallin piilotettua ajatusketjua. Sen ydin on, että toteutus käyttää työkalua, havainnoi tuloksen tai virheen ja muuttaa seuraavaa toimintoa havainnon perusteella.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -14,11 +14,11 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **ReAct-
 
 Selitä opiskelijoille:
 
-> ReAct tulee sanoista **Reasoning** ja **Acting**. Suomeksi se tarkoittaa päättelyä ja toimintaa. Agentti ei vastaa heti arvaamalla, vaan se voi ensin päätellä, mitä tietoa tarvitaan, käyttää työkalua, tarkistaa tuloksen ja vasta sen jälkeen vastata käyttäjälle.
+> ReAct tulee sanoista **Reasoning** ja **Acting**. Toteutus ei vastaa heti arvaamalla, vaan kirjaa lyhyen päätösperustelun, tekee rakenteisen työkalukutsun, tarkistaa tuloksen tai virheen ja valitsee seuraavan toiminnon. Raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.
 
 Kirjoita taululle:
 
-Ajattele → toimi → havainnoi tulos → ajattele uudelleen → toimi uudelleen
+Lyhyt päätösperustelu → rakenteinen työkalukutsu → tulos tai virhe → seuraava toiminto
 
 ### Esittely: tuotteen hinnan tarkistaminen
 
@@ -29,10 +29,10 @@ Näytä opiskelijoille yksinkertainen esimerkki. Asiakas kysyy:
 Näytä agentin eteneminen lokina:
 
 ```
-[AJATTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.
+[PÄÄTÖSPERUSTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.
 [TOIMINTA]: GET /api/product?id=12345
 [HAVAINTO]: Tietokanta palautti hinnan: 45 €.
-[AJATTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.
+[PÄÄTÖSPERUSTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.
 [TOIMINTA]: Tuotteen hinta on 45 €.
 ```
 
@@ -62,25 +62,24 @@ Jaa opiskelijat pienryhmiin. Jokainen ryhmä valitsee yhden tilanteen ja kirjoit
 **Ryhmän tehtävä:**
 
 1. Kirjoittakaa käyttäjän kysymys tai ongelma.
-2. Kirjoittakaa ensimmäinen **ajatteluvaihe**: mitä agentin pitää selvittää?
-3. Kirjoittakaa ensimmäinen **toimintavaihe**: mitä työkalua agentti käyttää?
-4. Kirjoittakaa **havainto**: mitä työkalu palauttaa tai mitä agentti saa selville?
-5. Kirjoittakaa uusi **ajatteluvaihe**: mitä havainto tarkoittaa seuraavan päätöksen kannalta?
-6. Kirjoittakaa lopullinen **toimintavaihe**: mitä agentti vastaa tai tekee?
+2. Kirjoittakaa lyhyt **päätösperustelu**: miksi jokin tieto tai toiminto tarvitaan?
+3. Kirjoittakaa rakenteinen **työkalukutsu**: työkalun nimi ja tarvittavat parametrit.
+4. Kirjoittakaa **tulos tai virhe**: mitä työkalu palauttaa?
+5. Kirjoittakaa seuraava **toiminto**: jatketaanko, vastataanko, keskeytetäänkö vai eskaloidaanko?
 
 | Vaihe | Ryhmän lokimerkintä |
 | --- | --- |
-| **[AJATTELU]** |  |
-| **[TOIMINTA]** |  |
-| **[HAVAINTO]** |  |
-| **[AJATTELU]** |  |
+| **[PÄÄTÖSPERUSTELU]** |  |
+| **[TYÖKALUKUTSU]** |  |
+| **[TULOS TAI VIRHE]** |  |
+| **[PÄÄTÖSPERUSTELU]** |  |
 | **[TOIMINTA]** |  |
 
 **Esitys:**
 
 Ryhmät esittelevät ReAct-prosessinsa lyhyesti. Keskustelkaa yhdessä:
 
-- Miten jokainen ajatteluvaihe auttoi seuraavaa toimintaa?
+- Miten työkalun tulos tai virhe vaikutti seuraavaan toimintoon?
 - Missä kohdassa agentti tarvitsi ulkoista tietoa?
 - Missä kohdassa agentin olisi pitänyt pyytää ihmiseltä apua?
 
@@ -88,19 +87,19 @@ Ryhmät esittelevät ReAct-prosessinsa lyhyesti. Keskustelkaa yhdessä:
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että ReAct-mallissa agentti vuorottelee päättelyn, toiminnan ja havainnoinnin välillä.
-- Opiskelijat osaavat kuvata yksinkertaisen ReAct-prosessin lokimuodossa.
+- Opiskelijat ymmärtävät, että ReAct-toteutus vuorottelee työkalukutsujen, tulosten ja toimintojen välillä.
+- Opiskelijat osaavat kuvata havaittavan ReAct-prosessin lokimuodossa ilman raakaa chain-of-thoughtia.
 - Opiskelijat ymmärtävät, miksi työkalujen käyttö tekee agentin vastauksesta luotettavamman kuin pelkkä arvaus.
 
 ---
 
-## Aktiviteetti 2: Ketjuajattelu noin 20 minuuttia
+## Aktiviteetti 2: Eksplisiittinen työnkulku noin 20 minuuttia
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **ketjuajattelu** tukee järjestelmällistä ongelmanratkaisua. Ketjuajattelussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.
+Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **eksplisiittinen työnkulku** tukee järjestelmällistä ongelmanratkaisua. Eksplisiittinen työnkulkussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.
 
-**Opettajan painotus:** Ketjuajattelu sopii erityisesti prosesseihin, joissa vaiheet ovat tiedossa etukäteen. Se vähentää satunnaisuutta ja auttaa varmistamaan, ettei kriittisiä tarkistuksia ohiteta.
+**Opettajan painotus:** Eksplisiittinen työnkulku sopii erityisesti prosesseihin, joissa vaiheet ovat tiedossa etukäteen. Se vähentää satunnaisuutta ja auttaa varmistamaan, ettei kriittisiä tarkistuksia ohiteta.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -108,7 +107,7 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **ketjua
 
 Selitä opiskelijoille:
 
-> Ketjuajattelu tarkoittaa sitä, että ongelma ratkaistaan vaihe vaiheelta. Sen sijaan, että agentti yrittäisi tehdä kaiken kerralla, se käy läpi ennalta määritellyn prosessin yksi kohta kerrallaan.
+> Eksplisiittinen työnkulku tarkoittaa sitä, että ongelma ratkaistaan vaihe vaiheelta. Sen sijaan, että agentti yrittäisi tehdä kaiken kerralla, se käy läpi ennalta määritellyn prosessin yksi kohta kerrallaan.
 
 Kirjoita taululle:
 
@@ -170,7 +169,7 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että ketjuajattelu sopii prosesseihin, joissa vaiheet ovat selkeät ja toistuvat.
+- Opiskelijat ymmärtävät, että eksplisiittinen työnkulku sopii prosesseihin, joissa vaiheet ovat selkeät ja toistuvat.
 - Opiskelijat osaavat pilkkoa prosessin vaiheisiin.
 - Opiskelijat ymmärtävät, että puuttuva tai väärässä järjestyksessä tehty vaihe voi johtaa virheisiin.
 
@@ -180,7 +179,7 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää **ReAct-mallia** ja milloin **ketjuajattelua**. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.
+Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää **ReAct-mallia** ja milloin **eksplisiittinen työnkulkua**. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -188,16 +187,16 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa 
 
 Selitä opiskelijoille:
 
-> ReAct on joustava malli tilanteisiin, joissa agentti ei vielä tiedä, mitä tietoa tarvitaan seuraavaksi. Ketjuajattelu taas sopii tilanteisiin, joissa prosessin vaiheet ovat selkeät ja toistuvat samalla tavalla.
+> ReAct on joustava malli tilanteisiin, joissa agentti ei vielä tiedä, mitä tietoa tarvitaan seuraavaksi. Eksplisiittinen työnkulku taas sopii tilanteisiin, joissa prosessin vaiheet ovat selkeät ja toistuvat samalla tavalla.
 
 | Malli | Sopii parhaiten | Esimerkki |
 | --- | --- | --- |
 | **ReAct** | Tutkiviin ja vaihteleviin tilanteisiin, joissa agentti käyttää työkaluja päätöksen aikana. | Teknisen ongelman selvittäminen lokien ja tietokannan avulla. |
-| **Ketjuajattelu** | Selkeisiin prosesseihin, joissa vaiheet ovat tiedossa etukäteen. | Palautuspyynnön käsittely palautusehtojen mukaan. |
+| **Eksplisiittinen työnkulku** | Selkeisiin prosesseihin, joissa vaiheet ovat tiedossa etukäteen. | Palautuspyynnön käsittely palautusehtojen mukaan. |
 
 ### Ryhmätyö
 
-Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii paremmin: **ReAct** vai **ketjuajattelu**. Heidän pitää myös perustella valintansa.
+Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii paremmin: **ReAct** vai **eksplisiittinen työnkulku**. Heidän pitää myös perustella valintansa.
 
 | Tilanne | Sopiva malli | Perustelu |
 | --- | --- | --- |
@@ -209,8 +208,8 @@ Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii 
 **Odotetut vastaukset:**
 
 - **Katoavat tilaukset:** ReAct, koska agentin täytyy tutkia, hakea lisätietoa ja muuttaa etenemistä löydösten perusteella.
-- **Palautuspyyntö:** ketjuajattelu, koska vaiheistus on selkeä ja perustuu palautusehtoihin.
-- **Tilauksen tilan tarkistus:** usein ReAct tai yksinkertainen työkalukutsu. Jos prosessi on täysin vakioitu, ketjuajattelu voi riittää.
+- **Palautuspyyntö:** eksplisiittinen työnkulku, koska vaiheistus on selkeä ja perustuu palautusehtoihin.
+- **Tilauksen tilan tarkistus:** usein ReAct tai yksinkertainen työkalukutsu. Jos prosessi on täysin vakioitu, eksplisiittinen työnkulku voi riittää.
 - **Asiakaspalautteen piikki:** ReAct, koska agentin pitää tutkia eri lähteitä ja tehdä päätöksiä havaintojen perusteella.
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat valitsevat aina ReActin, kysy: “Onko tässä oikeasti tarvetta iteroida, vai riittääkö vakioitu vaiheistus?”
@@ -219,11 +218,11 @@ Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii 
 
 - Voiko sama tehtävä joskus hyötyä molemmista malleista?
 - Milloin ReAct on liian monimutkainen?
-- Milloin ketjuajattelu on liian jäykkä?
+- Milloin eksplisiittinen työnkulku on liian jäykkä?
 
 ### Odotettu oppimistulos
 
-- Opiskelijat osaavat erottaa ReAct-mallin ja ketjuajattelun käyttötarkoitukset.
+- Opiskelijat osaavat erottaa ReAct-mallin ja eksplisiittinen työnkulkun käyttötarkoitukset.
 - Opiskelijat osaavat valita tehtävään sopivan päättelymallin.
 - Opiskelijat ymmärtävät, että mallin valinta vaikuttaa agentin turvallisuuteen, joustavuuteen ja luotettavuuteen.
 
@@ -257,7 +256,7 @@ Selitä opiskelijoille:
 | ↓ |
 | **3. Kirjoitusagentti** Laatii vastausehdotuksen asiakkaalle. |
 | ↓ |
-| **4. Validointiagentti** Tarkistaa, että vastaus on oikea, turvallinen, kohtelias ja organisaation ohjeiden mukainen. |
+| **4. Validointiagentti** Tarkistaa sovitut kentät, lähdeviitteet ja arvorajat sekä merkitsee epävarmat kohdat ihmisen tarkistettaviksi. Se ei yksin todista vastausta turvalliseksi. |
 
 Kysy opiskelijoilta:
 
@@ -314,7 +313,7 @@ Kaaviossa tulee näkyä:
 ## Herättävät keskustelukysymykset
 
 - **Mitä tapahtuu, jos ReAct-prosessi iteroi liian kauan?**
-- **Voiko ketjuajattelu epäonnistua, vaikka kaikki vaiheet olisi kirjoitettu valmiiksi?**
+- **Voiko eksplisiittinen työnkulku epäonnistua, vaikka kaikki vaiheet olisi kirjoitettu valmiiksi?**
 - **Milloin moniagenttijärjestelmä on liian monimutkainen eli overkill?**
 - **Mitä riskejä syntyy, jos useat agentit tekevät päätöksiä ilman yhteistä valvontaa?**
 - **Milloin ihmisen pitää ottaa päätös haltuun?**
@@ -324,8 +323,8 @@ Kaaviossa tulee näkyä:
 Opettaja arvioi opiskelijoiden kykyä:
 
 - selittää, mitä **ReAct-malli** tarkoittaa ja miten se etenee,
-- kuvata yksinkertainen ReAct-prosessi ajattelun, toiminnan ja havainnoinnin vaiheina,
-- selittää, mitä **ketjuajattelu** tarkoittaa ja millaisiin prosesseihin se sopii,
+- kuvata ReAct-prosessi lyhyen päätösperustelun, työkalukutsun, tuloksen tai virheen ja toiminnon vaiheina ilman raakaa chain-of-thoughtia,
+- selittää, mitä **eksplisiittinen työnkulku** tarkoittaa ja millaisiin prosesseihin se sopii,
 - valita sopiva päättelymalli erilaisiin tilanteisiin,
 - suunnitella yksinkertainen **moniagenttijärjestelmä**,
 - perustella, miten agenttien työnjako, tiedonkulku ja ihmisen valvonta toteutuvat.

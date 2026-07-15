@@ -1,8 +1,6 @@
 # Tekoälytyökalut erikoisaloilla
 
-# Oppitunti 16 — Tekoälytyökalut erikoisaloilla
-
-Kuva, musiikki, video ja koodi
+## Valinnainen laboratorio: kuva, musiikki, video tai koodi
 
 ## Johdanto
 
@@ -10,7 +8,7 @@ Olet jo tutustunut **kielimalleihin** eli tekoälyihin, joiden kanssa voi keskus
 
 Tekoäly ei kuitenkaan rajoitu tekstiin. Nykyään tekoälyä käytetään myös kuvien, musiikin, videoiden ja koodin tekemiseen. Nämä työkalut toimivat usein samalla perusidealla: käyttäjä antaa ohjeen eli **promptin**, ja tekoäly tuottaa sen perusteella jotakin uutta.
 
-Tällä oppitunnilla tutustut neljään tekoälytyökalujen alueeseen:
+Tämä on valinnainen laboratorio. Valitse yksi tekoälytyökalujen alue, jota kokeilet tai analysoit annetun esimerkkituloksen avulla. Kaikkia neljää ei tarvitse kokeilla:
 
 - **kuvageneraatioon** eli kuvien luomiseen tekoälyllä
 - **musiikin luomiseen** tekoälyllä
@@ -509,3 +507,11 @@ Kun käytät jotakin työkalua oikeassa projektissa, tarkista aina ajantasaiset 
 Tärkeämpää kuin yksittäiset nimet on ymmärtää työkalutyypit ja niiden rajat.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

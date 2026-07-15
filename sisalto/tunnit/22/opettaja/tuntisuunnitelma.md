@@ -311,3 +311,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mitä työkaluja oma agenttisi todella tarvitsee, ja mikä olisi vaarallisin oikeus, jonka voisit sille vahingossa antaa?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **työkalusopimus: syöte, tulos, virhe ja oikeusraja**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija kirjoittaa yhdelle työkalulle syötteen, tuloksen, virheen ja oikeusrajan sisältävän sopimuksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija täyttää annetun sopimuspohjan. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää hallitun vika- ja fallback-polun. Syventävä työ ei kasvata pakollista ydintuotosta.

@@ -4,11 +4,11 @@
 
 Tähän mennessä olet kerännyt kahdeksan oppitunnin aikana sanastoa, käsitteitä ja näkemyksiä. Nyt asetut tuomaripöydän taakse ja teet niistä jotain konkreettista: **asiantuntijalausunnon**, jossa analysoit todellista tekoälyyn liittyvää ongelmaa ja esität siihen perustellun ratkaisun.
 
-Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Et kirjoita lausuntoa itse, vaan ohjaat tekoälyä tuottamaan sen — tämä materiaali auttaa sinua tekemään siitä sellaisen, joka kestää sekä teknisen että ammatillisen tarkastelun.
+Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Et kirjoita lausuntoa itse, vaan ohjaat tekoälyä tuottamaan sen — tämä materiaali auttaa sinua tekemään siitä sellaisen, joka kestää sekä teknisen että asiallisen tarkastelun.
 
 ## Mikä on asiantuntijalausunto?
 
-Asiantuntijalausunto on **perusteltu analyysi**, jonka kirjoittaa oman alansa tunteva ammattilainen. Sitä ei kirjoiteta tunteiden tai pelkkien mielipiteiden varaan, vaan käsitteiden, havaintojen ja loogisten päätelmien avulla. Lausunnon lukija, kuten esimies, tietosuojavaltuutettu, asiakas tai kollega, ei välttämättä ole tekoälyn asiantuntija. Sinun tehtäväsi on selittää tilanne niin, että lukija ymmärtää sen ja voi luottaa päätelmiisi.
+Asiantuntijalausunto on **perusteltu analyysi**, jonka kirjoittaa oman alansa tunteva vastuullinen käyttäjä. Sitä ei kirjoiteta tunteiden tai pelkkien mielipiteiden varaan, vaan käsitteiden, havaintojen ja loogisten päätelmien avulla. Lausunnon lukija, kuten esimies, tietosuojavaltuutettu, asiakas tai kollega, ei välttämättä ole tekoälyn asiantuntija. Sinun tehtäväsi on selittää tilanne niin, että lukija ymmärtää sen ja voi luottaa päätelmiisi.
 
 Asiantuntijalausunto eroaa esseestä ja blogitekstistä kolmella tavalla:
 
@@ -26,7 +26,7 @@ Tehtävänannossa on neljä osaa. Käytä niitä otsikoina tai vähintään laus
 
 **3. Miten tilanne pitäisi hoitaa?** Esitä konkreettisia toimenpiteitä: mitä organisaation pitäisi tehdä heti, mitä viikon sisällä ja mitä pysyvästi. Anna toimenpiteitä, älä pelkkiä toiveita.
 
-**4. Ammatillinen vastuu.** Kuka kantaa vastuun? Mikä on sinun roolisi ammattilaisena? Tässä kohdassa lausunto nousee teknisestä raportista aidoksi asiantuntijatekstiksi.
+**4. Asiallinen vastuu.** Kuka kantaa vastuun? Mikä on sinun roolisi vastuullisena käyttäjänä? Tässä kohdassa lausunto nousee teknisestä raportista aidoksi asiantuntijatekstiksi.
 
 ## Lausunnon kieli
 
@@ -76,7 +76,7 @@ Tämän tehtävän tarkoitus ei ole, että kirjoitat tekstin yksin tyhjästä. T
 
 *Heikko prompt:* ”Kirjoita asiantuntijalausunto tietovuodosta.”
 
-*Vahva prompt:* ”Olen IT-vastaava verkkokauppayrityksessä. Tehtäväni on kirjoittaa asiantuntijalausunto, jossa analysoin seuraavan tilanteen: [kuvaa skenaario]. Lausunnon tulee perustua näihin käsitteisiin: hallusinaatio, kontekstimuisti, tekijänoikeudet ja ammattilaisen tarkistuslista. Auta minua jäsentämään analyysi. Älä kirjoita lopullista tekstiä, vaan anna ehdotuksia rakenteesta ja näkökulmista.”
+*Vahva prompt:* ”Olen IT-vastaava verkkokauppayrityksessä. Tehtäväni on kirjoittaa asiantuntijalausunto, jossa analysoin seuraavan tilanteen: [kuvaa skenaario]. Lausunnon tulee perustua näihin käsitteisiin: hallusinaatio, kontekstimuisti, tekijänoikeudet ja vastuullisen käyttäjän tarkistuslista. Auta minua jäsentämään analyysi. Älä kirjoita lopullista tekstiä, vaan anna ehdotuksia rakenteesta ja näkökulmista.”
 
 **2. Liitä mukaan oma todistusaineistosi.**
 
@@ -120,3 +120,11 @@ Asiantuntijalausunto on **näyttö osaamisestasi**: sekä kurssin sisällöstä 
 Tuomaripöydän takana ei istu kone. Siellä istut sinä.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

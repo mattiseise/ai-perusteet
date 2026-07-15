@@ -2,15 +2,15 @@
 
 ## ReAct (Reasoning + Acting)
 
-Suunnittelumalli, jossa agentti vuorottelee ajattelun ja toiminnan välillä. Ajattelee ensin, tekee toiminnon, ajattelee tuloksen perusteella, jne.
+Suunnittelumalli, jossa agentti valitsee työkalun, saa tuloksen tai virheen ja valitsee seuraavan toiminnon havainnon perusteella. Lokiin tallennetaan rakenteiset kutsut, tulokset, toiminnot ja lyhyet päätösperustelut — ei raakaa chain-of-thoughtia.
 
-## Ketjuajattelu (chain-of-thought)
+## Eksplisiittinen työnkulku (explicit workflow)
 
 Suunnittelumalli, jossa agentti purkaa ongelman pienempiin osiin ja käsittelee ne järjestyksessä. Numeroidut vaiheet, yksi kerrallaan.
 
 ## Päättely (reasoning)
 
-Ajatteluprosessi, jossa agentti analysoi tilanteen ja pohtii, mitä pitäisi tehdä seuraavaksi.
+Mallin sisäinen prosessi, jolla se tuottaa seuraavan vastauksen tai toiminnon. Piilotettua raakaa päättelyketjua ei pyydetä eikä tallenneta; käyttäjälle voidaan antaa lyhyt perustelu ja toteutuksesta lokitetaan havaittavat tapahtumat.
 
 ## Toiminta (action)
 
@@ -18,7 +18,7 @@ Vaihe, jossa agentti tekee konkreettisen toiminnon — kutsuu funktiota, hakee t
 
 ## Iteraatio (iteration)
 
-Samaa prosessia toistetaan useita kertoja. ReAct-malli iteroi: ajatella → toimia → ajatella → toimia.
+Samaa havaittavaa toimintakierrosta toistetaan useita kertoja. ReAct-toteutus iteroi: työkalukutsu → tulos tai virhe → seuraava toiminto.
 
 ## Moniagenttijärjestelmä (multi-agent system)
 
@@ -38,7 +38,7 @@ Koordinointi — kuinka agentit kutsutaan järjestyksessä ja kuinka tieto kulke
 
 ## Eskalointi (escalation)
 
-Tehtävän siirtäminen toiselle agentille, kun tämä agenti ei pysty ratkaisemaan.
+Tehtävän siirtäminen ihmiselle tai toiselle sovitulle toimijalle, kun agentti ei pysty ratkaisemaan sitä turvallisesti.
 
 ## Palautuminen (recovery)
 
@@ -46,6 +46,6 @@ Prosessi, jolla agentti palautuu virheestä tai yrittää uudelleen.
 
 ## Palaute (feedback)
 
-Tieto siitä, kuinka agentin toiminta meni. Agentti voi oppia palautteesta.
+Tieto siitä, kuinka agentin toiminta onnistui. Palaute voidaan käyttää arviointiin tai erilliseen kehitys- ja koulutusprosessiin; käytössä oleva agentti ei automaattisesti opi siitä.
 
 ---

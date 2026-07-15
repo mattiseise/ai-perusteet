@@ -6,7 +6,7 @@ Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppi
 
 Monella on virheellinen käsitys omasta botista. He kuvittelevat, että ”oma ChatGPT” on vain ChatGPT, jolle on annettu nimi ja pari ohjetta. Näin ei ole. Hyvin suunniteltu botti on paljon enemmän. Sillä on selkeä tarkoitus, rajattu osaaminen ja johdonmukainen tapa vastata. Nyt opit, **miten suunnitellaan botti, joka on oikeasti hyödyllinen**.
 
-> **Pysähdy hetkeksi:** Millaisen botin haluaisit tehdä? Kenen kanssa se kommunikoi: ammattilaisten, asiakkaiden vai opiskelijoiden? Mitä sen pitäisi tehdä paremmin kuin tavallinen ChatGPT?
+> **Pysähdy hetkeksi:** Millaisen botin haluaisit tehdä? Kenen kanssa se kommunikoi: kokeneiden käyttäjien, asiakkaiden vai opiskelijoiden? Mitä sen pitäisi tehdä paremmin kuin tavallinen ChatGPT?
 
 ## Esimerkki alusta loppuun: kahvilan tilausopas-botti
 
@@ -61,7 +61,7 @@ Kun aloitat botin suunnittelun, sinun täytyy vastata kolmeen perustavaan kysymy
 
 Yhtä tärkeää kuin se, mitä botti tekee, on se, mitä se **ei koskaan tee**. Rajaukset ovat turvallisuus- ja tarkkuusmekanismi. Ne suojaavat käyttäjää virheelliseltä tiedolta ja estävät bottia tekemästä vaarallisia, sopimattomia tai vastuuttomia asioita.
 
-Hyvät rajaukset ovat selkeitä ja perusteltuja. Botti voi esimerkiksi sanoa: ”En vastaa lääketieteellisiin kysymyksiin, koska en ole lääkäri. Suosittelen ottamaan yhteyttä terveydenhuollon ammattilaiseen.” Se voi myös sanoa: ”En kirjoita sinulle valmiita koulutehtäviä, koska sinun pitää oppia tekemällä. Sen sijaan voin tehdä yhteenvedon ja kysyä johdattavia kysymyksiä, jotka auttavat sinua pääsemään ratkaisuun.” Tai: ”En käsittele maksutietoja tai luottokorttinumeroita turvallisuussyistä.”
+Hyvät rajaukset ovat selkeitä ja perusteltuja. Botti voi esimerkiksi sanoa: ”En vastaa lääketieteellisiin kysymyksiin, koska en ole lääkäri. Suosittelen ottamaan yhteyttä terveydenhuollon vastuulliseen käyttäjään.” Se voi myös sanoa: ”En kirjoita sinulle valmiita koulutehtäviä, koska sinun pitää oppia tekemällä. Sen sijaan voin tehdä yhteenvedon ja kysyä johdattavia kysymyksiä, jotka auttavat sinua pääsemään ratkaisuun.” Tai: ”En käsittele maksutietoja tai luottokorttinumeroita turvallisuussyistä.”
 
 Huonot rajaukset ovat epämääräisiä tai puuttuvat kokonaan. Pelkkä ”en tiedä” ei riitä rajaukseksi. Jos botissa ei ole rajauksia, se voi antaa vaarallisia neuvoja, esittää harhaanjohtavia väitteitä tai jatkaa keskustelua tilanteissa, joissa asia pitäisi ohjata ihmiselle. Rajaukset kirjoitetaan osaksi järjestelmäpromptia, ja ne ovat yhtä tärkeitä kuin botin varsinaiset ohjeet.
 
@@ -181,21 +181,21 @@ Katso myös asiakaspalvelubotin esimerkkivuorovaikutus:
 
 Nämä esimerkit antavat realistisen kuvan siitä, mitä botilta voi odottaa. Ne myös auttavat kielimallia noudattamaan juuri sitä käyttäytymistä, jonka haluat.
 
-## Persoonallisuus vs. ammattilaisuus
+## Persoonallisuus vs. vastuullisuus
 
 Monet opiskelijat sekoittavat keskenään botin roolin ja persoonallisuuden. Ne eivät ole sama asia.
 
-**Ammattilaisuus** tarkoittaa, että botti tietää, mitä tekee, ja tekee sen hyvin. Se vastaa tarkasti, käyttää oikeaa termistöä ja antaa luotettavaa tietoa. Ammattilaisuus ei ole koriste, vaan **pätevyys**.
+**Vastuullisuus** tarkoittaa, että botti tietää, mitä tekee, ja tekee sen hyvin. Se vastaa tarkasti, käyttää oikeaa termistöä ja antaa luotettavaa tietoa. Vastuullisuus ei ole koriste, vaan **pätevyys**.
 
-**Persoonallisuus** tarkoittaa tapaa, jolla botti välittää ammattilaisuutensa. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Sopiva tyyli riippuu botin roolista ja käyttäjäryhmästä. Opiskelijabotti voi olla kannustava ja kärsivällinen. Asiakaspalvelubotti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuunteleva.
+**Persoonallisuus** tarkoittaa tapaa, jolla botti välittää vastuullisuutensa. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Sopiva tyyli riippuu botin roolista ja käyttäjäryhmästä. Opiskelijabotti voi olla kannustava ja kärsivällinen. Asiakaspalvelubotti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuunteleva.
 
-Hyvä botti on aina ammattilaismainen. Persoonallisuus on tapa tukea ammattilaisuutta, ei korvata sitä.
+Hyvä botti on aina huolellinen. Persoonallisuus on tapa tukea vastuullisuutta, ei korvata sitä.
 
 ## Kohti omaa projektia
 
 Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet sekä miksi järjestelmäprompti on botin sydän. Tehtävissä laadit oman **botin määrittelydokumentin** eli **rakennuspalikka 2:n**. Se on botin perustamisasiakirja, joka kertoo, kenelle botti on tarkoitettu, mitä se tekee ja mitä se ei tee.
 
-Tämä on iso askel: bottisi alkaa hahmottua paperilla. Seuraavaksi kuratoit botille tietopohjan eli materiaalin, josta botti ammentaa oman alasi asiantuntemuksen.
+Tämä on iso askel: bottisi alkaa hahmottua paperilla. Seuraavaksi kuratoit tietopohjan valitsemastasi arjen tai harrastuksen, opiskelun tai työelämän rooliskenaariosta.
 
 ## Yhteenveto
 
@@ -210,6 +210,14 @@ Hyvin suunniteltu oma botti ei ole vain nimetty ChatGPT. Se on **tekoälyjärjes
 5. **Järjestelmäprompti** kokoaa nämä asiat yhteen ja ohjaa botin toimintaa.
 6. **Esimerkkivuorovaikutukset** auttavat testaamaan, onko ohjeistus riittävän selkeä.
 
-Kun valmistelet omaa bottia, muista: **ammattilaisuus ensin, persoonallisuus toiseksi**. Seuraavaksi opit, miten lisäät botille tietopohjan, jotta se voi vastata tarkasti ja ajankohtaisesti.
+Kun valmistelet omaa bottia, muista: **vastuullisuus ensin, persoonallisuus toiseksi**. Seuraavaksi opit, miten lisäät botille tietopohjan, jotta se voi vastata tarkasti ja ajankohtaisesti.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

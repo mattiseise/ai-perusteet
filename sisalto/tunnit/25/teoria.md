@@ -235,3 +235,11 @@ Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. V
 
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: Strengthening AI Agent Hijacking Evaluations](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations)
+- [OWASP: Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+- [OWASP: Excessive Agency](https://owasp.org/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM06_ExcessiveAgency.html)
+
+Tarkistettu 15.7.2026.

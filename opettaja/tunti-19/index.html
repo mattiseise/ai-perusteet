@@ -8,7 +8,7 @@
 <meta name="description" content="Kun puhutaan tekoälystä ja automatisoinnista, sanaa agentti käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-19/">
 <meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kun puhutaan tekoälystä ja automatisoinnista, sanaa agentti käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-19/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kun puhutaan tekoälystä ja automatisoinnista, sanaa agentti käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", "description": "Kun puhutaan tekoälystä ja automatisoinnista, sanaa agentti käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja…", "url": "https://aiperusteet.fi/opettaja/tunti-19/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "toinen aste", "learningResourceType": "Oppitunti"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", "description": "Kun puhutaan tekoälystä ja automatisoinnista, sanaa agentti käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja…", "url": "https://aiperusteet.fi/opettaja/tunti-19/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 19"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,15 +18,16 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 19</span></div><div class="lesson-title">Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-19/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-19/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-19/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-19/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-19/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 19: Agentin perusteet</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 19</span></div><div class="lesson-title">Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-19/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-19/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-19/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-19/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-19/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-19-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-19-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-19-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-19-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-19-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-19-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-19-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-19-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 19: Agentin perusteet</h1>
 <div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
-<p>Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, mikä <strong>agentti</strong> on, miten se eroaa muista automaation muodoista ja miksi agentin kuusi rakennusosaa muodostavat yhdessä toimivan kokonaisuuden.</p>
+<p>Tavoitteena on ymmärtää määritelmä <strong>agentti = kielimalli + harness</strong> ja käyttää kuutta rakennusosaa kurssin suunnittelutarkistuslistana. Kaikki kuusi kohtaa eivät ole jokaisessa toteutuksessa pakollisia.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
 <ul>
 <li>Opiskelija osaa selittää, mikä <strong>agentti</strong> on ja miten se eroaa chatbotista, skriptistä ja työnkulusta.</li>
-<li>Opiskelija tunnistaa agentin kuusi rakennusosaa: <strong>syötekäsittelijä</strong>, <strong>päättelijä</strong>, <strong>työkalut</strong>, <strong>muisti</strong>, <strong>turvakerros</strong> ja <strong>palautesilmukka</strong>.</li>
+<li>Oppija tunnistaa kurssin kuusi suunnittelukohtaa: <strong>syötekäsittelijä</strong>, <strong>päättelijä</strong>, <strong>työkalut</strong>, <strong>muisti</strong>, <strong>turvakerros</strong> ja <strong>palautesilmukka</strong>.</li>
+<li>Oppija osaa perustella, milloin pitkäkestoinen muisti tai palautteesta oppiminen jätetään pois.</li>
 <li>Opiskelija ymmärtää <strong>autonomisuuden</strong> käsitteen ja sen rajat.</li>
-<li>Opiskelija ymmärtää <strong>suoritusputken</strong> käsitteen ja osaa kuvata, miten agentin komponentit toimivat yhdessä.</li>
+<li>Opiskelija osaa kuvata yhden toteutuksen <strong>suoritusputken</strong> ja erottaa sen kaikille agenteille pakollisten vaiheiden väitteestä.</li>
 </ul>
 <p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että agentti ei ole vain “älykkäämpi chatbot”. Agentti on järjestelmä, jolla on rakenne, toimintalogiikka, rajat ja kyky käyttää työkaluja tietyn tavoitteen saavuttamiseksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Avaus: tuttu esimerkki sähköpostin käsittelystä</h3></div><div class="task-card-body">
@@ -52,8 +53,8 @@
 </tr>
 <tr>
 <td><strong>Agentti</strong></td>
-<td>Tulkitsee viestin, arvioi tilanteen, käyttää työkaluja ja päättää seuraavan toiminnon rajojensa sisällä.</td>
-<td>Tarvitsee selkeän tavoitteen, rajoitukset, turvakerroksen ja valvonnan.</td>
+<td>Kielimalli tulkitsee viestin, ja harness antaa sille tehtävän tilan, työkalut, oikeudet ja rajat.</td>
+<td>Tarvitsee selkeän tavoitteen, rajatut oikeudet ja valvonnan.</td>
 </tr>
 </tbody>
 </table>
@@ -75,7 +76,7 @@
 <tbody>
 <tr>
 <td>“Agentti on vain hienompi chatbot.”</td>
-<td>Agentilla on tavoite, työkalut, muisti, turvakerros ja kyky toimia rajatusti itsenäisesti.</td>
+<td>Agentissa kielimallin ympärillä on harness: esimerkiksi tehtävän tila, työkalut, oikeudet ja turvarajat. Pitkäkestoinen muisti ei ole pakollinen.</td>
 </tr>
 <tr>
 <td>“Kaikki tekoälyautomaatio on agenttia.”</td>
@@ -84,9 +85,9 @@
 </tbody>
 </table>
 <p><strong>Esimerkki opetukseen</strong></p>
-<p>Kirjoita taululle: “Chatbot vastaa. Työnkulku seuraa sääntöjä. Agentti tulkitsee, päättää ja toimii rajojensa sisällä.” Palaa tähän erotteluun koko oppitunnin ajan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Suoritusputki: agentin kuusi komponenttia yhdessä</h2></div><div class="task-card-body">
-<p>Agentin voima ei synny yksittäisestä komponentista, vaan siitä, että kuusi komponenttia muodostavat yhdessä <strong>suoritusputken</strong>. Suoritusputki tarkoittaa prosessia, jossa yhden vaiheen tulos vaikuttaa seuraavaan vaiheeseen.</p>
-<p><strong>Agentin suoritusputki</strong></p>
+<p>Kirjoita taululle: “Chatbot vastaa. Työnkulku seuraa sääntöjä. Agentti tulkitsee, päättää ja toimii rajojensa sisällä.” Palaa tähän erotteluun koko oppitunnin ajan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Kuuden kohdan tarkistuslista yhdessä esimerkkitoteutuksessa</h2></div><div class="task-card-body">
+<p>Kurssin kuusi kohtaa ovat suunnittelutarkistuslista. Alla oleva <strong>suoritusputki</strong> on yksi sähköpostiesimerkki, johon kaikki kuusi kohtaa on valittu. Se ei tarkoita, että jokaisessa agentissa olisi nämä kuusi erillistä osaa tai sama järjestys.</p>
+<p><strong>Sähköpostiagentin yksi mahdollinen suoritusputki</strong></p>
 <table>
 <thead>
 <tr>
@@ -113,7 +114,7 @@
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>4. Muisti</strong> Tallentaa ja hyödyntää historiaa, aiempia tapauksia tai käyttäjäkohtaisia tietoja.</td>
+<td><strong>4. Muisti — valinnainen</strong> Tallentaa historiaa vain, jos myöhempi suoritus tarvitsee sitä ja käyttöoikeudet on määritelty.</td>
 </tr>
 <tr>
 <td>↓</td>
@@ -125,22 +126,22 @@
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>6. Palautesilmukka</strong> Kerää tuloksia ja parantaa seuraavia kierroksia.</td>
+<td><strong>6. Palautesilmukka — valinnainen</strong> Tuottaa seurantatietoa, jonka perusteella ihminen tai erikseen suunniteltu prosessi kehittää toteutusta.</td>
 </tr>
 </tbody>
 </table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Opetuskäytäntö: piirrä sykli taululle</h3></div><div class="task-card-body">
-<p>Piirrä taululle kuuden komponentin sykli ja käytä esimerkkinä sähköpostin käsittelyä:</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Opetuskäytäntö: piirrä valinnat taululle</h3></div><div class="task-card-body">
+<p>Piirrä taululle ensin ydin <strong>kielimalli + harness</strong>. Lisää kuusi tarkistuskohtaa ja käytä esimerkkinä sähköpostin käsittelyä:</p>
 <ol>
 <li><strong>Sähköposti saapuu:</strong> syötekäsittelijä muuttaa viestin agentille ymmärrettävään muotoon.</li>
 <li><strong>Tilanne analysoidaan:</strong> päättelijä arvioi, onko kyseessä lasku, reklamaatio, tukipyyntö vai muu viesti.</li>
 <li><strong>Toiminto suoritetaan:</strong> työkalut hakevat tietoja, luovat tiketin tai lähettävät vastauksen.</li>
-<li><strong>Tulos tallennetaan:</strong> muisti säilyttää tapahtuman ja mahdollisen asiakashistorian.</li>
+<li><strong>Muistin tarve päätetään:</strong> historia tallennetaan vain, jos myöhempi suoritus tarvitsee sitä.</li>
 <li><strong>Turvallisuus tarkistetaan:</strong> turvakerros varmistaa, ettei viestissä paljasteta arkaluonteisia tietoja tai tehdä liian riskialtista päätöstä.</li>
-<li><strong>Palaute sulkee silmukan:</strong> asiakkaan vastaus tai työn lopputulos auttaa parantamaan seuraavaa käsittelyä.</li>
+<li><strong>Seuranta suunnitellaan:</strong> loki auttaa ihmistä testaamaan ja parantamaan toteutusta; kielimalli ei opi automaattisesti.</li>
 </ol>
 <p>Korosta opiskelijoille:</p>
-<blockquote class="pause"><p>Agentti ei ole vain lista osia. Se on prosessi, jossa jokainen vaihe vaikuttaa seuraavaan.</p>
+<blockquote class="pause"><p>Agentti = kielimalli + harness. Kuusi kohtaa auttavat perustelemaan toteutusvalinnat, eivät määrää yhtä pakollista putkea.</p>
 </blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opiskelijoiden kokemusten hyödyntäminen</h2></div><div class="task-card-body">
 <p>Kiinnitä oppiminen opiskelijoiden omiin kokemuksiin kysymällä:</p>
 <ul>
@@ -153,31 +154,31 @@
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: “Agentti on aina parempi kuin chatbot.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Agentti on monimutkaisempi, kalliimpi ja riskialttiimpi kuin tavallinen chatbot. Agentti on järkevä silloin, kun tehtävä on toistuva, monivaiheinen ja vaatii itsenäisiä päätöksiä tai työkalujen käyttöä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: “Agentti voi tehdä mitä tahansa.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Agentti toimii vain sille annettujen tavoitteiden, työkalujen, oikeuksien, muistin ja rajoitusten puitteissa. Hyvä agentti ei tee kaikkea, vaan tietää tehtävänsä ja rajansa.</p>
+<p><strong>Korjaava näkökulma:</strong> Agentti toimii vain harnessin antamien tavoitteiden, työkalujen, oikeuksien ja rajoitusten puitteissa. Pitkäkestoinen muisti lisätään vain perustellusta tarpeesta.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: “Autonomisuus tarkoittaa, että agentti toimii ilman valvontaa.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Autonomisuus tarkoittaa, että agentti voi tehdä päätöksiä oman logiikkansa perusteella, mutta ihmisten määrittelemissä rajoissa. Erityisesti kriittisissä sovelluksissa valvonta, hyväksyntäportit ja turvakerrokset ovat välttämättömiä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: “Agentti on sama kuin työnkulku.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Työnkulku seuraa yleensä ennalta määriteltyjä sääntöjä. Agentti voi tulkita tilannetta, käyttää muistia, valita työkaluja ja muuttaa toimintaansa palautteen perusteella. Agentti on joustavampi, mutta myös monimutkaisempi.</p>
-</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: “Agentin komponentit toimivat erikseen.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Komponentit muodostavat suoritusputken. Jos yksi osa puuttuu tai toimii heikosti, koko agentti heikkenee. Esimerkiksi ilman muistia agentti ei hyödynnä aiempia tapauksia, ja ilman turvakerrosta se voi tehdä vaarallisia päätöksiä.</p>
+<p><strong>Korjaava näkökulma:</strong> Työnkulku seuraa yleensä ennalta määriteltyjä sääntöjä. Agentissa kielimalli voi tulkita tilannetta ja valita harnessin sallimia työkaluja. Muisti tai automaattinen palautteesta oppiminen eivät ratkaise luokitusta.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: “Jokaisessa agentissa on samat kuusi osaa.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Kuusi kohtaa ovat kurssin suunnittelutarkistuslista. Agentin ydin on kielimalli + harness. Pitkäkestoinen muisti tai palautekierros voidaan jättää pois, jos tehtävä ei niitä tarvitse; mukaan valittujen osien pitää toimia ja oikeuksien olla rajatut.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 6: “Agentti pitää aina rakentaa itse.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Valmisagenteissa — esimerkiksi tekoälysovellusten agenttitiloissa — ovat samat kuusi rakennusosaa valmiiksi rakennettuina; joku muu on vain tehnyt suunnittelutyön. Kurssilla rakennetaan oma agentti, jotta valmiitakin osaa arvioida. Osta vai rakenna -valintaa käsitellään tunnilla 20.</p>
+<p><strong>Korjaava näkökulma:</strong> Valmisagenteissa — esimerkiksi tekoälysovellusten agenttitiloissa — voidaan arvioida samalla kuuden kohdan suunnittelutarkistuslistalla; joku muu on vain tehnyt suunnittelutyön. Kurssilla rakennetaan oma agentti, jotta valmiitakin osaa arvioida. Osta vai rakenna -valintaa käsitellään tunnilla 20.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 7: “ChatGPT tai muu tekoälychat on agentti.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Chat vastaa viesteihin, agentti suorittaa vaiheita työkaluilla omien oikeuksiensa rajoissa. Sama kielimalli voi olla kummankin sisällä — ero ei ole mallissa vaan harnessissa eli mallin ympärille rakennetuissa työkaluissa, muistissa, oikeuksissa ja turvarajoissa.</p>
 <p><em>Ajankohtaishuomio 7/2026, vanhenee:</em> mallien tasonimet eivät ole agenttituotteita. Esimerkiksi GPT-5.6-mallin lippulaivataso “Sol” ei ole agentti, vaan OpenAI:n agenttituote on ChatGPT Work. Jos opiskelija niputtaa nämä yhteen, erottele malli, mallin taso ja agenttituote.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävä — ohjeistus</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tehtävä 1: Luokittelu</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelijat harjoittelevat erottamaan <strong>agentin</strong>, <strong>chatbotin</strong>, <strong>skriptin</strong> ja <strong>työnkulun</strong> toisistaan.</p>
 <p>Kun opiskelijat tekevät luokittelutehtävää, he saattavat ajatella liian nopeasti, että automaattinen järjestelmä on aina agentti. Ohjaa heitä kysymään tarkentavia kysymyksiä.</p>
-<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelija sanoo “tämä on agentti, koska se on automaattinen”, kysy: “Tekeekö se päätöksiä itsenäisesti vai seuraako se vain sääntöjä? Käyttääkö se muistia? Onko sillä työkaluja? Onko siinä turvakerros?”</p>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelija sanoo “tämä on agentti, koska se on automaattinen”, kysy: “Missä kielimalli tulkitsee tilanteen ja mitä työkaluja, oikeuksia tai turvarajoja harness antaa sille?”</p>
 <p><strong>Hyvä perustelu sisältää:</strong></p>
 <ul>
 <li>maininnan siitä, tekeekö järjestelmä itsenäisiä päätöksiä,</li>
 <li>kuvauksen siitä, käyttääkö järjestelmä työkaluja,</li>
-<li>pohdinnan siitä, onko järjestelmällä muistia tai palautetta,</li>
+<li>perustelun siitä, tarvitaanko pitkäkestoista muistia tai palautekierrosta,</li>
 <li>arvion siitä, onko järjestelmällä turvakerros tai rajoitukset.</li>
 </ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tehtävä 2: Suoritusputken jäljittäminen</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelijat tunnistavat agentin kuusi komponenttia konkreettisessa esimerkissä.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tehtävä 2: Toteutusvalintojen jäljittäminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelijat soveltavat kuuden kohdan tarkistuslistaa konkreettiseen esimerkkiin ja nimeävät myös tarpeettoman kohdan.</p>
 <p>Käytä visuaalista kaaviota. Piirrä agentin komponentit silmukkana ja jäljitä, miten asiakaspalveluagentti käsittelee viestin.</p>
 <table>
 <thead>
@@ -200,25 +201,25 @@
 <td>Agentti hakee tietoa tietokannasta, päivittää tiketin tai lähettää vastauksen.</td>
 </tr>
 <tr>
-<td><strong>Muisti</strong></td>
-<td>Agentti hyödyntää asiakkaan historiaa ja aiempia ratkaisuja.</td>
+<td><strong>Muisti — valinnainen</strong></td>
+<td>Agentti hyödyntää asiakkaan historiaa vain, jos myöhempi suoritus tarvitsee sitä ja käsittely on sallittu.</td>
 </tr>
 <tr>
 <td><strong>Turvakerros</strong></td>
 <td>Agentti tarkistaa, ettei vastaus sisällä arkaluonteisia tietoja ja että toiminto on sallittu.</td>
 </tr>
 <tr>
-<td><strong>Palautesilmukka</strong></td>
-<td>Asiakkaan palaute ja ratkaisun onnistuminen parantavat seuraavaa käsittelyä.</td>
+<td><strong>Palautesilmukka — valinnainen</strong></td>
+<td>Loki ja asiakaspalaute auttavat ihmistä arvioimaan ja korjaamaan toteutusta.</td>
 </tr>
 </tbody>
 </table>
 <p>Kysy opiskelijoilta:</p>
 <ul>
-<li>Mikä komponentti olisi vaarallisin jättää pois?</li>
-<li>Mitä tapahtuu, jos agentilla ei ole muistia?</li>
+<li>Mikä tarkistuskohta on tässä tehtävässä välttämätön ja miksi?</li>
+<li>Voiko agentti toimia ilman pitkäkestoista muistia tässä tapauksessa?</li>
 <li>Mitä tapahtuu, jos turvakerros puuttuu?</li>
-<li>Miten palautesilmukka voisi parantaa seuraavaa päätöstä?</li>
+<li>Miten seurantatieto voisi auttaa ihmistä parantamaan toteutusta?</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tehtävä 3: Riskianalyysi</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelijat ymmärtävät autonomisuuden riskit ja osaavat selittää, miksi agentille tarvitaan rajoja.</p>
@@ -249,7 +250,7 @@
 </tr>
 <tr>
 <td><strong>Palautesilmukka</strong></td>
-<td>Agentti ei opi virheistä tai oppii vääristä signaaleista.</td>
+<td>Toteutuksen laatua ei seurata tai palautetta tulkitaan väärin.</td>
 <td>Palautteen laadun tarkistus ja ihmisen ohjaama parantaminen.</td>
 </tr>
 </tbody>
@@ -257,31 +258,58 @@
 <p><strong>Esimerkki opetukseen</strong></p>
 <p>Käytä riskianalyysissä konkreettista tilannetta: asiakaspalveluagentti tulkitsee vihaisen reklamaation tavalliseksi laskukysymykseksi ja lähettää automaattisen rutiinivastauksen. Kysy, mikä komponentti epäonnistui ja miten tilanne olisi voitu estää.</p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointivihjeet</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Hyvä vastaus</h3></div><div class="task-card-body">
-<p>“Tämä on agentti, koska se käsittelee syötteet syötekäsittelijällä, analysoi tilanteen päättelijällä, tekee päätöksiä ja käyttää työkaluja, hyödyntää muistia, noudattaa turvakerroksen rajoja ja parantaa toimintaansa palautesilmukan avulla. Nämä kuusi komponenttia muodostavat suoritusputken, joka erottaa agentin tavallisesta chatbotista.”</p>
+<p>“Tämä on agentti, koska kielimalli tulkitsee tilanteen ja harness antaa sille rajatut työkalut tavoitteen saavuttamiseen. Tässä tehtävässä nykyisen suorituksen tila riittää, joten pitkäkestoinen muisti voidaan jättää pois. Tulokset kirjataan ihmisen tekemää arviointia varten.”</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Riittävä vastaus</h3></div><div class="task-card-body">
-<p>“Tämä on agentti, koska se tekee päätöksiä rajatusti itsenäisesti, käyttää työkaluja ja hyödyntää aiempaa tietoa.”</p>
+<p>“Tämä on agentti, koska siinä on kielimalli ja sille työkalut sekä rajat antava harness.”</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Heikko vastaus</h3></div><div class="task-card-body">
-<p>“Tämä on agentti, koska se on tekoäly” tai “koska se on nopea.”</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tuntiesityksen rakenne: 45 minuuttia</h2></div><div class="task-card-body">
-<ol>
-<li><strong>Avaava keskustelu noin 5 minuuttia</strong></li>
-</ol>
-<p>Käytä esimerkkinä sähköpostin käsittelyä ja vertaa skriptiä, työnkulkua ja agenttia.<br />
-2. <strong>Suoritusputken opetus noin 10 minuuttia</strong></p>
-<p>Piirrä kuuden komponentin sykli taululle ja käy läpi, miten komponentit toimivat yhdessä.<br />
-3. <strong>Itsenäinen lukeminen noin 8 minuuttia</strong></p>
-<p>Opiskelijat lukevat aineiston ja merkitsevät kohdat, jotka auttavat erottamaan agentin chatbotista.<br />
-4. <strong>Ryhmätehtävä: suoritusputken jäljitys noin 13 minuuttia</strong></p>
-<p>Opiskelijat tunnistavat järjestelmästä agentin komponentit ja selittävät, miten ne muodostavat prosessin.<br />
-5. <strong>Valmisagentit ja harness noin 4 minuuttia</strong></p>
-<p>Kysy, kuka on nähnyt tekoälysovelluksen agenttitilan toiminnassa. Kiteytä kaksi asiaa: valmisagentissa ovat samat kuusi osaa, joku muu vain rakensi ne valmiiksi — ja agentti = kielimalli + harness.<br />
-6. <strong>Yhteenveto ja riskianalyysi noin 5 minuuttia</strong></p>
-<p>Keskustelkaa autonomisuuden rajoista ja siitä, miksi turvakerros, muisti ja palautesilmukka ovat tärkeitä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Jatkoyhteys oppituntiin 20</h2></div><div class="task-card-body">
-<p>Oppitunti 20 käsittelee sitä, <strong>milloin agentti on oikea ratkaisu</strong>. Tämä oppitunti luo pohjan jatkolle: opiskelijat ymmärtävät, mikä agentti on ja miten sen komponentit toimivat yhdessä suoritusputkessa. Seuraavaksi he oppivat arvioimaan, milloin agentin rakentaminen on hyödyllistä, milloin se on liian kallista ja milloin yksinkertaisempi ratkaisu riittää.</p>
+<p>“Tämä on agentti, koska se on tekoäly” tai “koska se on nopea.”</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Jatkoyhteys oppituntiin 20</h2></div><div class="task-card-body">
+<p>Oppitunti 20 käsittelee sitä, <strong>milloin agentti on oikea ratkaisu</strong>. Tämä oppitunti luo pohjan jatkolle: opiskelijat ymmärtävät määritelmän kielimalli + harness ja osaavat käyttää kuutta kohtaa valinnaisena suunnittelutarkistuslistana. Seuraavaksi he arvioivat, milloin agentti on hyödyllinen ja milloin yksinkertaisempi ratkaisu riittää.</p>
 <blockquote class="pause"><p><strong>Pohdi seuraavaa tuntia varten:</strong> Missä tilanteessa agentti olisi liian monimutkainen ratkaisu? Milloin tavallinen työnkulku tai chatbot riittäisi?</p>
-</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät — oppitunti 19</h1>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
+<p>Tallennettava tuotos on <strong>agenttiongelman canvas ja kuuden kohdan soveltuvuus</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+<table>
+<thead>
+<tr>
+<th>Aika</th>
+<th>Vaihe</th>
+<th>Opettajan tehtävä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 min</td>
+<td>Virittäytyminen</td>
+<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+</tr>
+<tr>
+<td>10–25 min</td>
+<td>Ydinkäsite</td>
+<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+</tr>
+<tr>
+<td>25–65 min</td>
+<td>Perustuotos</td>
+<td>Oppija täyttää yhdestä ongelmasta agentticavaksen ja arvioi kuuden suunnittelukohdan tarpeen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+</tr>
+<tr>
+<td>65–80 min</td>
+<td>Testaus ja purku</td>
+<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+</tr>
+<tr>
+<td>80–90 min</td>
+<td>Tallennus ja exit ticket</td>
+<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
+<p>Oppija käyttää annettua esimerkkitapausta ja tarkistuslistaa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
+<p>Kun perustuotos on valmis, oppija perustelee, miksi pitkäkestoinen muisti tai palautteesta oppiminen jätetään pois. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-19-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-19-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 19</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.1: Järjestelmien luokittelu ryhmissä noin 25 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Tehtävän tavoitteena on, että opiskelijat oppivat erottamaan <strong>chatbotin</strong>, <strong>agentin</strong> ja muun automaattisen järjestelmän toisistaan konkreettisten esimerkkien avulla. Samalla opiskelijat harjoittelevat tunnistamaan agentin kuusi keskeistä rakennusosaa: <strong>syötekäsittelijän</strong>, <strong>päättelijän</strong>, <strong>työkalut</strong>, <strong>muistin</strong>, <strong>turvakerroksen</strong> ja <strong>palautesilmukan</strong>.</p>
+<p>Tehtävän tavoitteena on, että opiskelijat oppivat erottamaan <strong>chatbotin</strong>, <strong>agentin</strong> ja muun automaattisen järjestelmän toisistaan konkreettisten esimerkkien avulla. Kurssin määritelmä on <strong>agentti = kielimalli + harness</strong>. Kuusi kohtaa — syötekäsittely, päättely, työkalut, muisti, turvakerros ja palautesilmukka — ovat suunnittelun tarkistuslista, eivät jokaisen agentin pakolliset osat.</p>
 <p><strong>Opettajan painotus:</strong> Korosta, että kaikki automaattiset järjestelmät eivät ole agentteja. Agenttimaisuus syntyy siitä, että järjestelmä tulkitsee tilannetta, tekee päätöksiä, käyttää työkaluja ja toimii rajatusti itsenäisesti.</p>
 <h3>Valmistelu</h3>
 <ul>
@@ -302,18 +330,18 @@
 <ol>
 <li>Lukekaa ryhmällenne annettu skenaario huolellisesti.</li>
 <li>Päättäkää, onko kyseessä <strong>chatbot</strong>, <strong>agentti</strong> vai <strong>muu automaattinen järjestelmä</strong>.</li>
-<li>Analysoikaa järjestelmää kuuden rakennusosan avulla:</li>
+<li>Analysoikaa järjestelmää kuuden kohdan tarkistuslistalla. Merkitkää jokainen kohta muodossa <strong>tarvitaan</strong>, <strong>ei tarvita</strong> tai <strong>ei selviä kuvauksesta</strong>:</li>
 <li><strong>Syötekäsittelijä:</strong> Miten järjestelmä vastaanottaa ja tulkitsee tietoa?</li>
 <li><strong>Päättelijä:</strong> Tekeekö järjestelmä päätöksiä vai reagoiko se vain käyttäjän kysymyksiin?</li>
 <li><strong>Työkalut:</strong> Mitä toimintoja järjestelmällä on käytössään?</li>
-<li><strong>Muisti:</strong> Hyödyntääkö järjestelmä aikaisempia tapauksia tai historiaa?</li>
+<li><strong>Muisti:</strong> Tarvitseeko myöhempi suoritus aikaisempia tapauksia tai historiaa?</li>
 <li><strong>Turvakerros:</strong> Onko järjestelmässä mekanismi, joka estää vaarallisia tai epävarmoja toimintoja?</li>
-<li><strong>Palautesilmukka:</strong> Kerääkö järjestelmä tietoa ja parantaako se toimintaansa sen perusteella?</li>
+<li><strong>Palautesilmukka:</strong> Miten tuloksia seurataan ja kehitetäänkö toteutusta ihmisen vai automaation avulla?</li>
 <li>Kirjoittakaa vastauksenne paperille tai yhteiseen dokumenttiin:</li>
 <li>valintanne: <strong>chatbot</strong>, <strong>agentti</strong> vai <strong>muu automaattinen järjestelmä</strong>,</li>
-<li>3–4 lauseen perustelu, jossa mainitaan vähintään neljä kuudesta rakennusosasta.</li>
+<li>3–4 lauseen perustelu, jossa käytetään määritelmää kielimalli + harness ja perustellaan ainakin yhden tarkistuskohdan tarpeellisuus tai pois jättäminen.</li>
 </ol>
-<p><strong>Opettajan tarkistuskysymys:</strong> Jos ryhmä sanoo “tämä on agentti, koska se toimii automaattisesti”, kysy: “Tekeekö se itsenäisiä päätöksiä? Käyttääkö se työkaluja? Onko sillä muistia tai turvakerrosta?”</p>
+<p><strong>Opettajan tarkistuskysymys:</strong> Jos ryhmä sanoo “tämä on agentti, koska se toimii automaattisesti”, kysy: “Missä kielimalli tulkitsee tilannetta ja mitä työkaluja, oikeuksia tai turvarajoja harness antaa sille?”</p>
 <h3>Käsittely noin 10 minuuttia</h3>
 <p>Kunkin ryhmän edustaja esittelee ryhmän valinnan ja perustelut. Opettaja tarkentaa vastauksia ja korjaa mahdollisia väärinkäsityksiä.</p>
 <p><strong>Oikeat vastaukset ja perustelut:</strong></p>
@@ -328,29 +356,29 @@
 <tbody>
 <tr>
 <td><strong>A: Laskun käsittelyagentti</strong></td>
-<td><strong>Agentti</strong></td>
-<td>Syötekäsittelijä analysoi laskuja, päättelijä tekee hyväksyntään liittyviä päätöksiä, työkalut mahdollistavat laskun tallentamisen kirjanpitojärjestelmään, turvakerros pyytää ihmisen hyväksyntää riskitilanteissa ja palautesilmukka hyödyntää laskuttajien toimintaa.</td>
+<td><strong>Agentti, jos kuvauksen analyysi tehdään kielimallilla</strong></td>
+<td>Harness välittää laskun mallille, tarjoaa työkalun kirjanpitojärjestelmään ja rajaa korkean riskin päätökset ihmisen hyväksyttäviksi. Aiempien laskuttajatietojen muisti on tämän toteutuksen valinta, ei agenttiuden ehto.</td>
 </tr>
 <tr>
 <td><strong>B: Muistutus-chatbot</strong></td>
 <td><strong>Chatbot</strong></td>
-<td>Chatbot odottaa käyttäjän kysymyksiä ja hakee vastauksen kalenterista. Se ei tee itsenäisiä päätöksiä, ei käynnistä toimenpiteitä eikä sillä ole selkeää palautesilmukkaa.</td>
+<td>Järjestelmä vastaa kysymykseen kalenteritiedolla mutta ei kuvauksen perusteella käytä kielimallia työkalutoimintojen valintaan. Muistin tai palautesilmukan puuttuminen ei yksin ratkaise luokitusta.</td>
 </tr>
 <tr>
 <td><strong>C: Kasvihuoneen automaattinen ilmastonsäätö</strong></td>
-<td><strong>Agentti tai agenttimainen automaatio</strong></td>
-<td>Syötekäsittelijä seuraa lämpötilaa ja kosteutta, päättelijä tekee päätöksen tuuletuksen ja kastelun käynnistämisestä, työkalut mahdollistavat luukkujen avaamisen ja kastelun ohjaamisen, turvakerros rajoittaa toimintaa ennalta määriteltyihin raja-arvoihin ja palautesilmukka tuottaa tietoa vastuuhenkilölle.</td>
+<td><strong>Työnkulku tai agentti — kuvaus ei vielä ratkaise</strong></td>
+<td>Kiinteät raja-arvot ovat työnkulku. Jos kielimalli tulkitsee poikkeustilannetta ja harness antaa sille rajatut anturi- ja ohjaustyökalut, kokonaisuus voi olla agentti. Opiskelijan pitää nimetä tämä puuttuva tieto.</td>
 </tr>
 </tbody>
 </table>
 <h3>Odotettu oppimistulos</h3>
 <ul>
 <li>Opiskelijat osaavat erottaa chatbotin ja agentin toisistaan konkreettisten esimerkkien avulla.</li>
-<li>Opiskelijat osaavat nimetä agentin keskeisiä rakennusosia.</li>
+<li>Opiskelijat osaavat käyttää kuutta kohtaa suunnittelutarkistuslistana ja tunnistaa, ettei kaikkia tarvita aina.</li>
 <li>Opiskelijat ymmärtävät, että agentti ei vain vastaa kysymyksiin vaan voi myös tehdä päätöksiä ja käyttää työkaluja.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.2: Suoritusputki-analyysi — kuusi komponenttia ja niiden yhteistyö noin 20 minuuttia</h2></div><div class="task-card-body">
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.2: Toteutusanalyysi — kuuden kohdan tarkistuslista noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miten agentin kuusi komponenttia toimivat yhdessä <strong>suoritusputkessa</strong>. Opiskelijat näkevät, miten tieto kulkee järjestelmässä syötteestä päätökseen, toimintaan, muistiin ja palautteeseen.</p>
+<p>Tehtävän tavoitteena on auttaa opiskelijoita soveltamaan kuuden kohdan tarkistuslistaa yhteen toteutukseen. Opiskelijat seuraavat tiedon kulkua syötteestä kielimallille ja työkaluille sekä perustelevat, tarvitseeko esimerkki pitkäkestoista muistia tai palautekierrosta.</p>
 <h3>Valmistelu</h3>
 <p>Valitse esimerkkijärjestelmäksi agentti. Voit käyttää esimerkiksi <strong>asiakaspalvelupyyntöjen automaattista reitittäjää</strong>.</p>
 <p><strong>Esimerkkikuvaus:</strong></p>
@@ -361,11 +389,11 @@
 <li>lähettää pyynnön oikealle asiantuntijalle,</li>
 <li>luo tapauksen ja ilmoittaa asiakkaalle,</li>
 <li>seuraa ratkaisuaikoja,</li>
-<li>oppii, mitkä asiantuntijat ratkaisevat nopeimmin eri tyyppisiä asioita.</li>
+<li>tuottaa lokin, jonka perusteella ihminen voi arvioida reitityksen onnistumista.</li>
 </ul>
 <h3>Opettajan ohjeet</h3>
-<p>Piirrä taululle kuuden komponentin sykli tai näytä se diaesityksessä. Käy opiskelijoiden kanssa läpi, miten asiakaspalvelupyyntöjen reititys etenee vaihe vaiheelta.</p>
-<p><strong>Agentin suoritusputki asiakaspalvelupyyntöjen reitityksessä</strong></p>
+<p>Piirrä taululle esimerkin tiedonkulku tai näytä se diaesityksessä. Merkitse erikseen pakollinen ydin, <strong>kielimalli + harness</strong>, ja valinnaiset toteutuspäätökset.</p>
+<p><strong>Yksi mahdollinen toteutus asiakaspalvelupyyntöjen reitityksessä</strong></p>
 <table>
 <thead>
 <tr>
@@ -392,7 +420,7 @@
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>4. Muisti</strong> Hyödyntää aiempien ongelmien tietokantaa, asiantuntijoiden ratkaisuhistoriaa ja asiakkaiden profiilitietoja.</td>
+<td><strong>4. Muisti — valinnainen</strong> Hyödyntää aiempia ratkaisuja vain, jos käyttötarkoitus, säilytysaika ja oikeudet on määritelty. Muuten nykyinen pyyntö ja tietohaku riittävät.</td>
 </tr>
 <tr>
 <td>↓</td>
@@ -404,27 +432,27 @@
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>6. Palautesilmukka</strong> Mittaa ratkaisuaikoja, kerää asiakaspalautetta ja päivittää tietoja seuraavia päätöksiä varten.</td>
+<td><strong>6. Seuranta — tässä toteutuksessa ihmisen palautekierros</strong> Mittaa ratkaisuaikoja ja tuottaa lokin, jonka perusteella ihminen korjaa reitityssääntöjä tai promptia. Malli ei opi automaattisesti.</td>
 </tr>
 </tbody>
 </table>
-<p>Korosta opiskelijoille, että komponentit eivät ole irrallisia osia. Ne muodostavat ketjun, jossa jokainen vaihe vaikuttaa seuraavaan.</p>
-<blockquote class="pause"><p>Agentti ei ole vain lista osia. Se on prosessi, jossa tieto liikkuu vaiheesta toiseen ja jokainen vaihe vaikuttaa seuraavaan päätökseen.</p>
+<p>Korosta opiskelijoille, että taulukko kuvaa yhtä mahdollista toteutusta. Sama tarkistuslista voi johtaa toiseen järjestykseen tai siihen, että pitkäkestoinen muisti ja automaattinen palautekierros jätetään pois.</p>
+<blockquote class="pause"><p>Agentti = kielimalli + harness. Kuusi kohtaa auttavat perustelemaan harnessin suunnittelun, mutta eivät ole pakollinen kuuden vaiheen suoritusputki.</p>
 </blockquote>
 <h3>Kysymyksiä ryhmälle</h3>
 <ul>
 <li>Mitä tapahtuisi, jos <strong>syötekäsittelijä</strong> epäonnistuisi ja ymmärtäisi pyynnön väärin?</li>
 <li>Miten <strong>turvakerros</strong> suojaa sekä asiakasta että palvelutiimiä?</li>
-<li>Miten <strong>palautesilmukka</strong> auttaa agenttia parantamaan toimintaansa?</li>
+<li>Miten seuranta auttaa ihmistä parantamaan toteutusta ilman oletusta mallin automaattisesta oppimisesta?</li>
 <li>Missä vaiheessa ihmisen pitäisi ottaa tilanne haltuun ja miksi?</li>
-<li>Mikä komponentti olisi vaarallisin jättää pois tästä järjestelmästä?</li>
+<li>Minkä tarkistuskohdan voisi jättää tästä toteutuksesta pois ja millä perusteella?</li>
 </ul>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat ymmärtävät, miten agentin komponentit muodostavat yhdessä toimivan prosessin.</li>
+<li>Opiskelijat ymmärtävät, miten kielimalli ja harness muodostavat toimivan agentin.</li>
 <li>Opiskelijat osaavat kuvata, miten syöte muuttuu päätökseksi ja toiminnaksi.</li>
-<li>Opiskelijat ymmärtävät, miksi muisti, turvakerros ja palautesilmukka ovat tärkeitä agentin luotettavuuden kannalta.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.3: Vaara-analyysi — kuuden komponentin epäonnistuminen noin 15 minuuttia</h2></div><div class="task-card-body">
+<li>Opiskelijat osaavat perustella muistin ja palautekierroksen tarpeen tai pois jättämisen sekä tunnistavat turvarajojen merkityksen.</li>
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.3: Vaara-analyysi — suunnittelukohdan epäonnistuminen noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, mitä voi tapahtua, jos agentin jokin komponentti epäonnistuu. Erityisesti tarkastellaan <strong>syötekäsittelijän</strong>, <strong>päättelijän</strong> ja <strong>turvakerroksen</strong> merkitystä.</p>
 <h3>Tilanne</h3>
@@ -456,7 +484,7 @@
 <p><strong>Esimerkki opetukseen</strong></p>
 <p>Kysy opiskelijoilta, olisiko sama virhe tapahtunut, jos agentti olisi tarkistanut viestin sävyn, asiakashistorian ja riskitason ennen vastaamista. Näin opiskelijat näkevät, miksi yksi avainsana ei riitä turvalliseen päätökseen.</p>
 <h3>Johtopäätös</h3>
-<p>Kaikkien kuuden komponentin täytyy toimia yhdessä. Jos <strong>syötekäsittelijä</strong>, <strong>päättelijä</strong> tai <strong>turvakerros</strong> epäonnistuu, seurauksena voi olla virheellinen toiminta, huono asiakaskokemus tai luottamuksen menetys.</p>
+<p>Tässä esimerkkitoteutuksessa syötekäsittelyn, päättelyn ja turvarajojen täytyy toimia yhdessä. Kaikkien kuuden tarkistuskohdan ei tarvitse näkyä jokaisessa agentissa, mutta jokainen mukaan valittu osa pitää testata.</p>
 <p>Agentti voi olla hyödyllinen, mutta sen täytyy tietää, milloin se saa toimia itsenäisesti ja milloin sen pitää kutsua ihminen mukaan.</p>
 <h3>Odotettu oppimistulos</h3>
 <ul>
@@ -468,12 +496,12 @@
 <p>Opettaja arvioi opiskelijoiden kykyä:</p>
 <ul>
 <li>erottaa <strong>agentti</strong> ja <strong>chatbot</strong> toisistaan konkreettisilla perusteluilla,</li>
-<li>viitata perusteluissaan agentin kuuteen rakennusosaan,</li>
-<li>tunnistaa agentin kuusi rakennusosaa ja niiden roolit suoritusputkessa,</li>
-<li>selittää, miten komponentit toimivat yhdessä,</li>
-<li>tunnistaa, mitä voi tapahtua, kun yksi komponentti epäonnistuu,</li>
+<li>käyttää määritelmää <strong>agentti = kielimalli + harness</strong>,</li>
+<li>käyttää kuutta kohtaa suunnittelutarkistuslistana,</li>
+<li>perustella, mitä toteutus tarvitsee ja mitä siitä voi jättää pois,</li>
+<li>tunnistaa, mitä voi tapahtua, kun mukaan valittu osa epäonnistuu,</li>
 <li>ymmärtää autonomisuuden rajat ja turvakerroksen merkityksen ihmisten, asiakkaiden ja organisaation suojelemisessa.</li>
-</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+</ul></div></div></div><div id="panel-lesson-19-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-19-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
@@ -493,8 +521,8 @@
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#g2)"/>
 <text x="74" y="116" font-size="40" font-weight="800" fill="#1B2336">Mikä on agentti?</text>
 <rect x="74" y="150" width="600" height="74" rx="12" fill="#E5F6F7"/>
-<text x="98" y="184" font-size="20" fill="#006B7A">Järjestelmä, joka tekee päätöksiä ja toimii</text>
-<text x="98" y="210" font-size="20" fill="#006B7A">itsenäisesti tavoitteen saavuttamiseksi.</text>
+<text x="98" y="184" font-size="20" fill="#006B7A">Agentti = kielimalli + harness.</text>
+<text x="98" y="210" font-size="20" fill="#006B7A">Harness antaa työkalut, oikeudet ja turvarajat.</text>
 <text x="74" y="268" font-size="16" fill="#5A6478">Esim. lukee saapuneet viestit, tunnistaa laskut ja siirtää ne Laskut-kansioon.</text>
 <g transform="translate(770,150)"><rect x="0" y="0" width="116" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3"/><line x1="58" y1="0" x2="58" y2="-22" stroke="#008799" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="-28" r="7" fill="#008799"/><circle cx="34" cy="40" r="10" fill="#008799"/><circle cx="82" cy="40" r="10" fill="#008799"/><rect x="32" y="66" width="52" height="8" rx="4" fill="#008799"/></g>
 <circle cx="92" cy="300" r="17" fill="#E5F6F7"/><path d="M84 300 l5 5 l9 -10" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -551,14 +579,15 @@
 <path d="M84 312 H150" stroke="#2F9E69" stroke-width="2.5"/><path d="M158 312 L146 306 L146 318 Z" fill="#2F9E69"/><text x="40" y="346" font-size="12.5" fill="#247A52">Syöte</text>
 <path d="M548 330 H812" stroke="#008799" stroke-width="2.5"/><path d="M820 330 L808 324 L808 336 Z" fill="#008799"/>
 <g transform="translate(828,312)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="15"/><path d="M10 17 l5 5 l9 -10"/></g><text x="812" y="372" text-anchor="middle" font-size="12.5" fill="#006B7A">Tulos</text>
-<text x="480" y="408" text-anchor="middle" font-size="12" fill="#7E88A8" font-family="ui-monospace,monospace">ajattele · toimi · havainnoi</text>
+<text x="480" y="408" text-anchor="middle" font-size="12" fill="#7E88A8" font-family="ui-monospace,monospace">arvioi · toimi · tarkista</text>
 <text x="893" y="516" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 7</text>
 </svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#g5)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Agentin kuusi rakennusosaa</text>
+<text x="74" y="86" font-size="34" font-weight="800" fill="#1B2336">Kurssin kuusi suunnittelukohtaa</text>
+<text x="74" y="114" font-size="15" fill="#5A6478">Tarkistuslista — kaikki kohdat eivät ole jokaisessa agentissa pakollisia.</text>
 <rect x="74" y="138" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="186" font-size="28" font-weight="800" fill="#008799">1</text><text x="130" y="186" font-size="20" font-weight="700" fill="#1B2336">Syötekäsittelijä</text>
 <g transform="translate(286,156)" fill="none" stroke="#008799" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="12" rx="11" ry="7"/><circle cx="12" cy="12" r="3.5"/></g>
@@ -574,7 +603,7 @@
 <rect x="74" y="304" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="352" font-size="28" font-weight="800" fill="#008799">4</text><text x="130" y="352" font-size="20" font-weight="700" fill="#1B2336">Muisti</text>
 <g transform="translate(286,322)" fill="none" stroke="#008799" stroke-width="1.8" stroke-linecap="round"><path d="M3 5 a9 3 0 0 0 18 0 a9 3 0 0 0 -18 0 V19 a9 3 0 0 0 18 0 V5 M3 12 a9 3 0 0 0 18 0"/></g>
-<text x="96" y="390" font-size="15" fill="#5A6478">lyhyt- ja pitkäkestoinen</text><text x="96" y="412" font-size="15" fill="#5A6478">tieto</text>
+<text x="96" y="390" font-size="15" fill="#5A6478">tehtävän tila; pitkäkestoinen</text><text x="96" y="412" font-size="15" fill="#5A6478">muisti vain tarpeeseen</text>
 <rect x="351" y="304" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="373" y="352" font-size="28" font-weight="800" fill="#008799">5</text><text x="407" y="352" font-size="20" font-weight="700" fill="#1B2336">Turvakerros</text>
 <g transform="translate(563,322)" fill="none" stroke="#008799" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2 L21 6 V12 c0 6 -4 9 -9 11 c-5 -2 -9 -5 -9 -11 V6 Z"/></g>
@@ -582,19 +611,19 @@
 <rect x="628" y="304" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="650" y="352" font-size="28" font-weight="800" fill="#008799">6</text><text x="684" y="352" font-size="20" font-weight="700" fill="#1B2336">Palautesilmukka</text>
 <g transform="translate(840,322)" fill="none" stroke="#008799" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 a8 8 0 0 1 13 -3 L20 8"/><path d="M20 3 V9 H14"/><path d="M20 15 a8 8 0 0 1 -13 3 L4 16"/><path d="M4 21 V15 H10"/></g>
-<text x="650" y="390" font-size="15" fill="#5A6478">arvioi tuloksen ja</text><text x="650" y="412" font-size="15" fill="#5A6478">korjaa tarvittaessa</text>
+<text x="650" y="390" font-size="15" fill="#5A6478">seuranta ja kehittäminen</text><text x="650" y="412" font-size="15" fill="#5A6478">eivät tarkoita automaattioppimista</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 7</text>
 </svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#g7)"/>
-<text x="74" y="108" font-size="38" font-weight="800" fill="#1B2336">Valmiit agentit — samat osat valmiina</text>
+<text x="74" y="108" font-size="38" font-weight="800" fill="#1B2336">Valmisagentti — valmis harness</text>
 <rect x="74" y="146" width="380" height="64" rx="12" fill="#E5F6F7"/>
 <text x="94" y="186" font-size="23" font-weight="700" fill="#006B7A">Agentti = kielimalli + harness</text>
 <text x="74" y="252" font-size="18" fill="#3A4253">Harness on kaikki mallin ympärille rakennettu:</text>
 <circle cx="82" cy="285" r="5" fill="#008799"/><text x="100" y="291" font-size="17" fill="#3A4253"><tspan font-weight="700">Työkalut</tspan> — mitä se saa käyttää</text>
-<circle cx="82" cy="317" r="5" fill="#2F9E69"/><text x="100" y="323" font-size="17" fill="#3A4253"><tspan font-weight="700">Muisti</tspan> — mitä se muistaa</text>
+<circle cx="82" cy="317" r="5" fill="#2F9E69"/><text x="100" y="323" font-size="17" fill="#3A4253"><tspan font-weight="700">Tehtävän tila</tspan> — missä vaiheessa se on</text>
 <circle cx="82" cy="349" r="5" fill="#C79100"/><text x="100" y="355" font-size="17" fill="#3A4253"><tspan font-weight="700">Oikeudet</tspan> — mihin se pääsee</text>
 <circle cx="82" cy="381" r="5" fill="#5A6478"/><text x="100" y="387" font-size="17" fill="#3A4253"><tspan font-weight="700">Turvarajat</tspan> — mitä se ei saa tehdä</text>
 <text x="74" y="440" font-size="16" fill="#7E88A8">Sama kielimalli voi olla chatbotin tai agentin sisällä —</text>
@@ -610,7 +639,7 @@
 <rect x="546" y="200" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#008799" stroke-width="2"/>
 <text x="605" y="225" text-anchor="middle" font-size="15" font-weight="600" fill="#3A4253">Työkalut</text>
 <rect x="748" y="200" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#2F9E69" stroke-width="2"/>
-<text x="807" y="225" text-anchor="middle" font-size="15" font-weight="600" fill="#3A4253">Muisti</text>
+<text x="807" y="225" text-anchor="middle" font-size="15" font-weight="600" fill="#3A4253">Tehtävän tila</text>
 <rect x="546" y="372" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#C79100" stroke-width="2"/>
 <text x="605" y="397" text-anchor="middle" font-size="15" font-weight="600" fill="#3A4253">Oikeudet</text>
 <rect x="748" y="372" width="118" height="40" rx="10" fill="#FFFFFF" stroke="#5A6478" stroke-width="2"/>
@@ -636,8 +665,8 @@
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-18/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-20/">Seuraava →</a></div></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
-<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script>window.CI={"view": "opettaja", "lid": "lesson-19", "num": 19, "title": "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>

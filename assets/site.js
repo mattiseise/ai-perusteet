@@ -57,14 +57,26 @@ function showTab(name,pushHash){
   var panels=document.querySelectorAll('#lesson-panels .panel');
   var tabs=document.querySelectorAll('.lesson-tabs .tab-btn');
   var found=false;
-  panels.forEach(function(p){var on=p.getAttribute('data-tab')===name;p.classList.toggle('active',on);if(on)found=true;});
-  tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-tab')===name);});
+  panels.forEach(function(p){var on=p.getAttribute('data-tab')===name;p.classList.toggle('active',on);p.hidden=!on;if(on)found=true;});
+  tabs.forEach(function(t){var on=t.getAttribute('data-tab')===name;t.classList.toggle('active',on);t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;});
   if(!found){return false;}
   if(pushHash!==false){try{history.replaceState(null,'','#'+name);}catch(e){location.hash=name;}}
   var lp=document.getElementById('lesson-panels');if(lp)lp.scrollTop=0;
   runMermaid();
   return true;
 }
+function initTabs(){var list=document.querySelector('.lesson-tabs[role="tablist"]');if(!list)return;
+  list.addEventListener('keydown',function(e){var tabs=Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));var i=tabs.indexOf(document.activeElement);if(i<0)return;var n=i;
+    if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;
+    e.preventDefault();tabs[n].focus();showTab(tabs[n].getAttribute('data-tab'));
+  });
+}
+function initDemoKeyboard(){document.querySelectorAll('.ai-demo[data-demo-kind="interactive"] label[for]').forEach(function(label){
+  label.tabIndex=0;label.setAttribute('role','button');label.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();label.click();}});
+  var input=document.getElementById(label.htmlFor);if(input){input.addEventListener('focus',function(){label.classList.add('demo-focus');});input.addEventListener('blur',function(){label.classList.remove('demo-focus');});}
+  });
+}
+function initScrollableRegions(){document.querySelectorAll('.panel table').forEach(function(table){table.tabIndex=0;});}
 function tabFromHash(){
   var h=location.hash.replace(/^#/,'');
   if(h&&showTab(h,false))return;
@@ -89,7 +101,7 @@ function deckFull(btn){var w=btn.closest('.deck-wrap');if(!w)return;
   if(!fs){(w.requestFullscreen||w.webkitRequestFullscreen).call(w);}
   else{(document.exitFullscreen||document.webkitExitFullscreen).call(document);}}
 function deckFullSync(){var fs=document.fullscreenElement||document.webkitFullscreenElement;
-  document.querySelectorAll('.deck-full-btn').forEach(function(b){b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö';});}
+  document.querySelectorAll('.deck-full-btn').forEach(function(b){b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö';b.setAttribute('aria-label',fs?'Poistu diaesityksen koko näytön tilasta':'Avaa diaesitys koko näytön tilaan');});}
 document.addEventListener('fullscreenchange',deckFullSync);
 document.addEventListener('webkitfullscreenchange',deckFullSync);
 document.addEventListener('keydown',function(e){
@@ -135,6 +147,9 @@ function ciInit(){
   initMermaid();
   updProg();updCards();
   initViewSwitch();
+  initTabs();
+  initDemoKeyboard();
+  initScrollableRegions();
   if(window.CI&&window.CI.lid){
     window.cid=window.CI.lid; // twReflect (practice.js) lukee bcai-reflect-avaimen tästä
     enhancePanels();

@@ -1,18 +1,18 @@
-# Opiskelutehtävät — Kokeile ja pohdi eettisesti
+# Valinnainen laboratorio — kokeile yhtä työkalukategoriaa
 
-> 📌 **Tähän tuntiin on vain yksi tehtävä.** Tunnin jälkeen siirryt rakennustöihin (tunti 17), joten energiaa kannattaa säästää sinne. Tällä tunnilla saat omakohtaisen tuntuman erikoistuneeseen tekoälytyökaluun ja pohdit, millaisia eettisiä kysymyksiä se nostaa esiin.
+> Valitse yksi kategoria: kuva, musiikki, video tai koodi. Voit käyttää saatavilla olevaa työkalua tai analysoida opettajan antamaa tulosta ilman tiliä. Kaikkea ei tarvitse kokeilla.
 
-## Tehtävä 16.1 — Kokeile kuvageneraattoria ja pohdi eettisesti 🟢 SUOSITELTU
+## Tehtävä 16.1 — Valitse, kokeile ja arvioi 🟢 SUOSITELTU
 
-**Tavoite:** Saat omakohtaisen kokemuksen kuvageneraattorista, opit kirjoittamaan toimivan kuvapromptin ja pohdit eettisiä rajoituksia. Eettinen ymmärrys ei synny lukemalla — se syntyy kokeilemalla ja huomaamalla.
+**Tavoite:** Perustele yhden työkalukategorian valinta, dokumentoi syöte ja tuotos, tee yksi iterointi ja tarkista vastuullisuus.
 
 **Miksi juuri kuvageneraattori?** Kuvageneraattorit ovat saavutettavin osa erikoistuneita tekoälytyökaluja: ChatGPT:n, Copilotin ja Geminin ilmaisversioilla pääsee alkuun ilman lisätilauksia. Musiikki, video ja koodausavustajat ovat vaikeammin kokeiltavissa ilmaisversioilla, mutta tekijänoikeus- ja etiikkakysymykset ovat samat — oppi siirtyy.
 
 ### Vaiheet
 
-#### Vaihe 1 — Valitse kuvageneraattori, johon pääset käsiksi
+#### Vaihe 1 — Valitse yksi kategoria ja toteutustapa
 
-Käytä jotakin näistä — kaikilla on ilmaisversio tai kokeilumahdollisuus:
+Valitse kuva, musiikki, video tai koodi. Käytä saatavilla olevaa palvelua tai opettajan antamaa esimerkkitulosta. Valitse konteksti kolmesta reitistä: arki tai harrastus, opiskelu tai työelämän rooliskenaario.
 
 - **ChatGPT:n kuvagenerointi** (ilmainen versio antaa muutaman kuvan päivässä)
 - **Microsoft Copilot Designer / Image Creator** (saatavilla koulun edu-lisenssillä)
@@ -21,11 +21,11 @@ Käytä jotakin näistä — kaikilla on ilmaisversio tai kokeilumahdollisuus:
 
 Älä valitse sellaista, joka vaatii maksullista tiliä, ellei sinulla ole sellaista valmiiksi.
 
-#### Vaihe 2 — Kirjoita selkeä kuvaprompti
+#### Vaihe 2 — Kirjoita selkeä prompti tai syöte
 
 Hyvä kuvaprompti kertoo materiaalin mukaan kuusi asiaa: *mitä kuvassa näkyy, mihin kuvaa käytetään, mikä on tyyli, millainen tunnelma tai valaistus on, mikä on kuvasuhde, mitä kuvassa ei saa olla*.
 
-Valitse oman alasi konteksti:
+Valitse yksi konteksti: arki tai harrastus, opiskelu tai työelämän rooliskenaario:
 
 | Ala | Esimerkkiaihe |
 |---|---|
@@ -38,7 +38,7 @@ Valitse oman alasi konteksti:
 
 Kirjoita prompti, joka sisältää kaikki kuusi osaa. Jätä lopuksi pois ne, joita et halua kuvaan (esim. *"ei tekstiä, ei logoja, ei tunnistettavia henkilöitä"*).
 
-#### Vaihe 3 — Tuota ja iteroi
+#### Vaihe 3 — Tuota tai analysoi ja iteroi
 
 Generoi ensimmäinen kuva. Sen jälkeen pyydä vähintään yksi muutos — vaihda tyyliä, värimaailmaa, tunnelmaa tai kuvasuhdetta. Esimerkkejä jatkokomennoista materiaalin mukaan:
 
@@ -47,7 +47,7 @@ Generoi ensimmäinen kuva. Sen jälkeen pyydä vähintään yksi muutos — vaih
 - *"Tee tästä 16:9-kuva dioihin"*
 - *"Lisää enemmän valoa"*
 
-Tallenna ainakin kaksi versiota kuvasta.
+Tallenna alkuperäinen tuotos ja yksi muutettu versio. Tilittömässä reitissä kuvaile, mitä yhtä syötteen osaa muuttaisit ja millaista muutosta odotat.
 
 #### Vaihe 4 — Pohdi eettiset kysymykset tekoälyn kanssa
 
@@ -69,16 +69,16 @@ kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
 
 Vastaa kysymyksiin omin sanoin. Älä yritä antaa "oikeita" vastauksia — pohdi rehellisesti, mitä mieltä olet.
 
-#### Vaihe 5 — Kirjoita lyhyt pohdinta ja merkintä
+#### Vaihe 5 — Tallenna laboratorion näyttö
 
-Kirjoita 5–8 lauseen pohdinta, joka vastaa neljään kysymykseen:
+Palauta tai tallenna yksi sivu, jossa näkyvät valintaperuste, tarkka prompti tai syöte, tuotos tai annettu esimerkkitulos, yksi iterointi sekä vastuullisuustarkistus.
 
 - **Tekninen havainto:** Mitä kuvageneraattori teki hyvin? Missä se epäonnistui tai oli arvattava?
 - **Prompti-havainto:** Mikä promptin osa vaikutti eniten lopputulokseen? Mikä jäi tekoälyltä huomaamatta?
 - **Eettinen havainto:** Mikä yksi eettinen kysymys jäi mielen päälle? Miten suhtaudut siihen?
 - **Käytännön päätös:** Käyttäisitkö tätä kuvaa *julkisesti*? Jos kyllä, millaisen merkinnän liittäisit mukaan (esim. "Kuva on luotu tekoälyllä")? Jos et, miksi?
 
-Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa ammattilaisen vastuuta.
+Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa vastuullisen käyttäjän vastuuta.
 
 > 💡 **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi *oma apuri-botti* ei ole kuvageneraattori, mutta sama eettinen ajattelu pätee suoraan: **mistä botin tietopohja on peräisin? Mitä rajat sen tekemiseen? Mitä käyttäjälle kerrotaan?** Tunnin 14 määrittelydokumentissa (Rakennuspalikka 2) *rajat* ovat yksi kuudesta osasta. Kun olet itse joutunut pohtimaan kuvageneraattorin etiikkaa, ymmärrät paremmin, miksi rajat ovat osa botin *suunnittelua*, eivätkä jotain "lisättävää loppuun".
 

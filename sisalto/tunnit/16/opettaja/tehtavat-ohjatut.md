@@ -94,7 +94,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
    - Mitä tapahtuu, jos kuva muistuttaa vahvasti tunnetun taiteilijan tyyliä?
    - Kenen vastuulla kuvan käyttö on: käyttäjän, palvelun vai mallin kehittäjän?
 
-   Voit mainita, että tekoälyn koulutusdataan, tekijänoikeuksiin ja kuvageneraattoreihin liittyy oikeustapauksia ja avoimia kysymyksiä. Korosta, että aihe ei ole täysin ratkaistu, joten ammattilaisen pitää olla varovainen ja tarkistaa käytettävän palvelun ehdot.
+   Voit mainita, että tekoälyn koulutusdataan, tekijänoikeuksiin ja kuvageneraattoreihin liittyy oikeustapauksia ja avoimia kysymyksiä. Korosta, että aihe ei ole täysin ratkaistu, joten vastuullisen käyttäjän pitää olla varovainen ja tarkistaa käytettävän palvelun ehdot.
 7. **Koodausavustajat noin 5–10 minuuttia, jos aikaa jää**
 
    Näytä lyhyt esimerkki siitä, miten tekoälyä voidaan käyttää ohjelmoinnin tukena.
@@ -133,7 +133,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
 Tehtävän tavoitteena on harjoitella valitsemaan tilanteeseen sopiva **tekoälytyökalu** tehtävän, budjetin, laadun, nopeuden, tietosuojan ja eettisten kysymysten perusteella. Opiskelijat tekevät päätöksiä pienryhmissä ja perustelevat valintansa.
 
-**Opettajan painotus:** Paras ratkaisu ei ole aina tehokkain tai uusin tekoälytyökalu. Ammattilainen valitsee työkalun tehtävän, riskien ja käyttötarkoituksen perusteella. Joskus vastuullisin ratkaisu on olla käyttämättä tekoälyä.
+**Opettajan painotus:** Paras ratkaisu ei ole aina tehokkain tai uusin tekoälytyökalu. Vastuullinen käyttäjä valitsee työkalun tehtävän, riskien ja käyttötarkoituksen perusteella. Joskus vastuullisin ratkaisu on olla käyttämättä tekoälyä.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -268,7 +268,7 @@ Anna opiskelijoille molempien puolten keskeiset argumentit valmiina. Näin kenen
    - Mikä on oma kantasi: pitäisikö tekoälyn käyttöä tekijänoikeuksien suhteen rajoittaa, sallia vai jotain siltä väliltä?
    - Minkä argumenttien varaan rakennat kantasi?
    - Muuttuiko näkemyksesi keskustelun aikana? Miksi?
-   - Mitä ammattilaisen pitäisi tehdä, jos tekijänoikeustilanne on epäselvä?
+   - Mitä vastuullisen käyttäjän pitäisi tehdä, jos tekijänoikeustilanne on epäselvä?
 
    Halutessasi voit pyytää muutamaa vapaaehtoista kertomaan oman kantansa ääneen. Korosta, että erilaiset perustellut kannat ovat kaikki sallittuja.
 5. **Opettajan yhteenveto noin 5 minuuttia**
@@ -278,7 +278,7 @@ Anna opiskelijoille molempien puolten keskeiset argumentit valmiina. Näin kenen
    - Generatiivisen tekoälyn tekijänoikeuskysymykset ovat monimutkaisia.
    - Oikeustapauksia ja sääntelyä on käynnissä eri maissa.
    - Ei ole yhtä yksinkertaista vastausta, joka ratkaisee kaikki tilanteet.
-   - Ammattilaisen pitää tarkistaa työkalun käyttöehdot, lisenssit ja organisaation ohjeet ennen tuotosten käyttöä.
+   - Vastuullisen käyttäjän pitää tarkistaa työkalun käyttöehdot, lisenssit ja organisaation ohjeet ennen tuotosten käyttöä.
 
 ### Odotettu oppimistulos
 
@@ -336,7 +336,7 @@ Tehtävän tavoitteena on, että opiskelijat esittelevät omia tuotoksiaan toisi
 - Opiskelijat näkevät, mitä muut ovat tehneet tekoälytyökaluilla.
 - Opiskelijat harjoittelevat lyhyttä ja selkeää oman työn esittelyä.
 - Opiskelijat harjoittelevat rakentavan palautteen antamista.
-- Opiskelijat ymmärtävät, että tekoälyn käyttö pitää merkitä avoimesti erityisesti portfoliossa ja ammatillisissa tuotoksissa.
+- Opiskelijat ymmärtävät, että tekoälyn käyttö pitää merkitä avoimesti erityisesti portfoliossa ja asiallisissa tuotoksissa.
 
 ---
 
