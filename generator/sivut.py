@@ -390,10 +390,15 @@ def build_index_page():
         'kielimalleja.</p>'
         '<p>Claude Coworkin ja Hermes-agenttijärjestelmän muodostama agenttiputki käsitteli '
         'jokaisen oppitunnin monivaiheisesti. Se suunnitteli oppitunnin, tuotti sisällön, '
-        'tarkisti sen pedagogisen viitekehyksen näkökulmasta ja teki suomen kielenhuollon.</p>'
+        'arvioi sitä pedagogisesta näkökulmasta ja teki suomen kielenhuollon.</p>'
         '<p>Kurssin tekijä vastasi kokonaisuuden suunnittelusta, ohjasi agenttiprosessia, '
-        'teki tarvittavat muutokset ja hyväksyi jokaisen oppitunnin ennen sen julkaisemista.</p>'
-        '<p>Myös tämä verkkosivusto on rakennettu tekoälyn avulla.</p>'
+        'teki tarvittavat muutokset ja hyväksyi jokaisen oppitunnin ennen sen julkaisemista. '
+        'Myös tämä verkkosivusto on rakennettu tekoälyn avulla.</p>'
+        '<p>Materiaaliin on kuitenkin jätetty tarkoituksella pieniä virheitä, kielellisiä '
+        'outouksia ja kuvien artefakteja. Niitä ei ole siivottu pois, koska ne havainnollistavat '
+        'yhtä kurssin tärkeimmistä opeista: parhaatkin kielimallit tekevät virheitä, vaikka '
+        'niitä käyttäisi kokenut ammattilainen. Tekoälyn tuottamaa sisältöä pitää aina arvioida '
+        'kriittisesti. Kriittinen lukutaito on yksi tämän kurssin keskeisistä tavoitteista.</p>'
         '</div>'
     )
     lic_footer = (
