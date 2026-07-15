@@ -4,9 +4,7 @@
 
 Olet varmasti käyttänyt sovellusta, joka suosittelee sinulle musiikkia, elokuvia tai tuotteita. Ehkä olet joskus ajatellut: ”Miten tämä tietää, mistä minä pidän?” Tai olet nähnyt uutisen tekoälystä, joka voitti maailman parhaan pelaajan shakissa.
 
-Monet ajattelevat, että kaikki ”älykkäältä” vaikuttavat ohjelmistot ovat tekoälyä. Todellisuus on kuitenkin monimutkaisempi — ja paljon kiinnostavampi. **Tekoäly** (artificial intelligence, AI) ei ole yksi yksittäinen asia. Se ei myöskään ole yksi ohjelmointitapa, joka osaa tehdä tai ymmärtää kaiken.
-
-Tämän osion jälkeen ymmärrät, miten **tekoäly** eroaa tavallisesta ohjelmoinnista. Osaat myös arvioida paremmin, millaiset ongelmat vaativat tekoälyä ja millaiset voidaan ratkaista ilman sitä.
+Monet ajattelevat, että kaikki ”älykkäältä” vaikuttavat ohjelmistot ovat tekoälyä. Todellisuus on kuitenkin monimutkaisempi — ja paljon kiinnostavampi. **Tekoäly** (artificial intelligence, AI) ei ole yksi yksittäinen asia vaan kattotermi usealle erilaiselle teknologialle. Siksi on tärkeää ymmärtää, mitä tekoälyllä tarkoitetaan. Mikä erottaa tekoälyn tavallisesta automaatiosta? Miten tekoäly tekee päätöksiä, ja miksi se soveltuu joihinkin ongelmiin paremmin kuin toisiin?
 
 Tämän tunnin jälkeen ymmärrät: *tietävätkö tekoälyt todella, mitä ne tekevät, vai ovatko ne vain edistyneitä sääntökoneita?*
 
