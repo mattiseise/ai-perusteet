@@ -8,12 +8,12 @@ jatkuvuus. Lähtötilanne: Codexin WIP-commit haaralla `korjaus-handoff`.*
 Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 
 ## P0 — kohderyhmä
-- [~] Yleisölupaus yhtenäistetty (kurssiopas, generate_site.py, sivut.py, meta/JSON-LD/llms.txt)  ← Codex aloittanut
-- [ ] educationalLevel → perustaso/aloittelija; oppilaitosnäkymä erikseen
-- [ ] 3 OSP -väite täsmennetty
-- [ ] Korvauslinjan mukaiset muutokset aktiivilähteissä (ei sokkokorvausta)
-- [ ] Tehtäviin ≥3 reittiä (arki/opiskelu/työ)
-- [ ] Allowlist dokumentoitu; `test_yleiso.py` vihreä
+- [x] Yleisölupaus yhtenäistetty (kurssiopas, generate_site.py, sivut.py, meta/JSON-LD/llms.txt) — keskitetty kurssi.yaml:iin, generoitu sivusto käyttää
+- [x] educationalLevel → perustaso/aloittelija; oppilaitosnäkymä erikseen (kurssi.yaml: "Aloittelija / perustaso", JSON-LD:ssä)
+- [x] 3 OSP -väite täsmennetty (laajuuskuvaus: kurssi.yaml, kurssiopas, aloitus.md, llms.txt)
+- [x] Korvauslinjan mukaiset muutokset aktiivilähteissä (ei sokkokorvausta) — 2026-07-16: myös skanneria kiertäneet taivutusmuodot (omalta alaltasi, organisaatiosi, yrityksesi, työkaverisi, oppilaitoksesi ym.) korjattu 38 lähdetiedostosta, ml. tunti 13 dia (cairosvg-tarkistettu)
+- [x] Tehtäviin ≥3 reittiä (arki/opiskelu/työ) — auditoitu kaikki 27 tuntia + lopputyöt (3 Opus-subagenttia), 34 korjausta; annetut rooliskenaariot säilytetty
+- [x] Allowlist dokumentoitu; `test_yleiso.py` vihreä — skanneriin 12 uutta taivutusmuotopatternia, 6 perusteltua allowlist-riviä
 
 ## P0 — mobiiligrafiikat
 - [~] Ei-interaktiiviset .ai-demot responsiivisiksi (viewBox/width%/height auto)  ← osin
@@ -49,4 +49,5 @@ Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 - [ ] (Tagi laukaisee Hermes-watchdogin → Telegram-ilmoitus Matille)
 
 ## Ajopäiväkirja (uusin ylimmäs, 1 rivi/ajokerta)
+- 2026-07-16 — P0 kohderyhmä VALMIS: auditointi 3 subagentilla (33 löydöstä), korjaukset 38 lähdetiedostoon, skanneri+allowlist laajennettu, portit läpi (pedagoginen HYVÄKSYTTY, Börje puhdas), generate+verify vihreä; verify:browser ajettu taustalla (tulos kirjattu alle jos poikkeaa). Push-oikeus kuntoon (PAT). Interaktiivinen Cowork-ajo.
 - 2026-07-15 — WIP committoitu, handoff + edistymätiedosto luotu, putki ajastettu.
