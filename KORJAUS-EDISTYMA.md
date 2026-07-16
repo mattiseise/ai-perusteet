@@ -49,5 +49,5 @@ Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 - [ ] (Tagi laukaisee Hermes-watchdogin → Telegram-ilmoitus Matille)
 
 ## Ajopäiväkirja (uusin ylimmäs, 1 rivi/ajokerta)
-- 2026-07-16 — P0 kohderyhmä VALMIS: auditointi 3 subagentilla (33 löydöstä), korjaukset 38 lähdetiedostoon, skanneri+allowlist laajennettu, portit läpi (pedagoginen HYVÄKSYTTY, Börje puhdas), generate+verify vihreä; verify:browser ajettu taustalla (tulos kirjattu alle jos poikkeaa). Push-oikeus kuntoon (PAT). Interaktiivinen Cowork-ajo.
+- 2026-07-16 — P0 kohderyhmä VALMIS: auditointi 3 subagentilla (33 löydöstä), korjaukset 38 lähdetiedostoon, skanneri+allowlist laajennettu, portit läpi (pedagoginen HYVÄKSYTTY, Börje puhdas), generate+verify vihreä. ESTE: verify:browser ei aja tässä sandboxissa (chromiumin järjestelmäkirjastot puuttuvat, ei root-oikeuksia) — dian 13 muutos verifioitu cairosvg-renderöinnillä; Playwright-portti ajettava julkaisuportilla ympäristössä, jossa selain toimii. Push-oikeus kuntoon (PAT). Interaktiivinen Cowork-ajo.
 - 2026-07-15 — WIP committoitu, handoff + edistymätiedosto luotu, putki ajastettu.
