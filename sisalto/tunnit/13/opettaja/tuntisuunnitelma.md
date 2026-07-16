@@ -81,7 +81,7 @@ Esimerkki:
 
 ### Väärinkäsitys 1: ”Tekoäly kirjoittaa puolestani, joten minun ei tarvitse osata kirjoittaa.”
 
-**Korjaava näkökulma:** Tekoäly voi antaa pohjan, mutta se ei tunne kaikkia yksityiskohtia. Se ei tiedä automaattisesti, kenelle kirjoitat, mikä organisaatiosi käytäntö on, mitä tietoja saa jakaa tai millainen sävy tilanteeseen sopii. Kirjoittamisen taito on edelleen tärkeä, mutta tekoäly voi nopeuttaa työn aloittamista ja muokkaamista.
+**Korjaava näkökulma:** Tekoäly voi antaa pohjan, mutta se ei tunne kaikkia yksityiskohtia. Se ei tiedä automaattisesti, kenelle kirjoitat, millaisia käytäntöjä tilanteessa noudatetaan, mitä tietoja saa jakaa tai millainen sävy tilanteeseen sopii. Kirjoittamisen taito on edelleen tärkeä, mutta tekoäly voi nopeuttaa työn aloittamista ja muokkaamista.
 
 > Tekoäly voi kirjoittaa luonnoksen. Vastuullinen käyttäjä tekee siitä oikean viestin.
 

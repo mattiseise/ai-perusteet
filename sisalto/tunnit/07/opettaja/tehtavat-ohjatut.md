@@ -22,6 +22,8 @@ Harjoituksen tavoitteena on näyttää käytännössä, miksi **generatiivisen t
 
 Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data.txt`, laskee rivien lukumäärän ja tulostaa tuloksen.
 
+Jos ryhmä ei ole tekniikkapainotteinen, voit valita ei-koodivaihtoehdon, esimerkiksi: `Anna viisi vinkkiä hyvään yöuneen.` Valitse prompti ryhmän mukaan. Tällöin vertailkaa vastausten sisältöä, järjestystä ja sävyä syntaksin sijaan — epädeterministisyys näkyy yhtä lailla.
+
 #### Luokkaharjoitus noin 10 minuuttia
 
 1. Näytä ensin yhden tekoälymallin vastaus opetusnäytöllä.
@@ -183,6 +185,8 @@ Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan kä
 Esitä opiskelijoille seuraava tilanne:
 
 > Tehtäväsi on kirjoittaa SQL-kysely tietokantaan. Kyselyn pitää hakea kaikki asiakkaat, joiden maksu on erääntynyt yli 30 päivää. Käytät ChatGPT:tä koodin kirjoittamisen tukena.
+
+Ei-teknisen ryhmän kanssa voit käyttää rinnakkaista tilannetta: tehtäväsi on tarkistaa tekoälyn luonnosteleman tiedotteen faktat ennen sen julkaisemista. Samat verifiointivaiheet pätevät — mitä voi mennä pieleen, jos luotat luonnokseen sellaisenaan, ja miten tarkistat sen ennen käyttöä?
 
 Kysy opiskelijoilta:
 

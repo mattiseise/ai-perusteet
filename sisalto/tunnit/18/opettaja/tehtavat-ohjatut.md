@@ -140,7 +140,7 @@ Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista,
 
 Oppitunnin lopussa pidä lyhyt yhteenveto:
 
-"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Nämä ovat taidot, joita tarvitset koko urallasi.
+"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Näitä taitoja tarvitset monenlaisissa tilanteissa jatkossa.
 
 Seuraavassa osiossa (Agentit-osio) botti muuttuu agentiksi. Agentti on parempi, nopeampi ja itsenäisempi. Se voi tehdä asioita, ilman että sinä käsket. Pohja, jonka rakennat nyt, on agenttisi pohja. Sama testaaminen, sama dokumentointi, sama huolellinen ajattelu — vain suuremmassa mittakaavassa.
 

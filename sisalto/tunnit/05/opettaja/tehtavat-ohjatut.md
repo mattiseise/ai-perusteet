@@ -31,6 +31,8 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kon
 
    Rooli: Olet Linux-järjestelmänhallitsija. Tausta: palvelin kaatuu satunnaisesti. Tavoite: etsi lokivirhe ja ehdota korjausta.
 
+   Jos ryhmä ei ole tekniikkapainotteinen, voit käyttää arkisempaa alkurajausta, esimerkiksi: Rooli: Olet matkaopas. Tausta: suunnittelemme viikon junamatkaa Suomessa. Tavoite: ehdota vain junalla saavutettavia kohteita. Aja demo muuten samoin — täytä keskustelu muilla kysymyksillä ja katso, unohtaako malli alkurajauksen matkan varrella.
+
    3. Lähetä tämän jälkeen noin 10 kysymystä peräkkäin. Kysymysten tulee liittyä samaan ongelmaan, mutta tarkastella sitä eri näkökulmista.
    4. Pyydä opiskelijoita havainnoimaan, missä vaiheessa vastaukset alkavat irrota alkuperäisestä kontekstista.
 
@@ -85,7 +87,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten suuri projekti tai laaja
 - Esimerkkejä sopivista tehtävistä:
   - pitkän raportin tai kirjan tiivistäminen luku kerrallaan,
   - 50 000 rivin lokitiedoston virheiden selvittäminen,
-  - laajan ohjelmakoodin rakenteen arviointi.
+  - laajan kurssimateriaalin jäsentäminen tenttiä varten.
 - Valmistele lyhyt kuvaus tehtävästä, sen koosta ja tavoitteesta.
 
 ### Toteutus noin 25 minuuttia

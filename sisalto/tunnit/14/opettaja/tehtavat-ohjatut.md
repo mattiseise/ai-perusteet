@@ -14,7 +14,7 @@ Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Live-esittely 
 
 ### Valmistelu ennen lähiosaa
 
-- Valitse yksi konkreettinen botti, esimerkiksi **Python-tutori**, **helpdesk-botti** tai **asiakaspalvelubotti**.
+- Valitse yksi konkreettinen botti, esimerkiksi **Python-tutori**, **helpdesk-botti** tai **asiakaspalvelubotti**. Demoksi sopii yhtä hyvin ei-IT-aiheinen botti — esimerkiksi helpdesk-botin sijaan harrastusneuvoja.
 - Testaa botin neljä rakennuspalikkaa etukäteen: **tarkoitus**, **rooli**, **ohjeet** ja **rajaukset**.
 - Valmista lyhyt esimerkki-interaktio, joka näyttää, miten botti käyttäytyy käytännössä.
 

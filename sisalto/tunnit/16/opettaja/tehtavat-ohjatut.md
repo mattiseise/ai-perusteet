@@ -115,7 +115,7 @@ Robotti istuu modernissa kahvilassa, juo kahvia, ympärillä on ihmisiä, valoku
 
    - Millä alalla tekoäly muuttaa työtä eniten seuraavien vuosien aikana?
    - Mitkä ammatit muuttuvat?
-   - Miten tekoäly voisi vaikuttaa juuri sinun tulevaan työhösi?
+   - Miten tekoäly voisi vaikuttaa sinua kiinnostavalla alalla tai mahdollisessa tulevassa työssä?
    - Mitä taitoja ihmiseltä tarvitaan edelleen?
 
 ### Odotettu oppimistulos

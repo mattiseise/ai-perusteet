@@ -158,11 +158,12 @@ Erillistä valmistelua ei tarvita. Pyydä tunnilla 3–4 opiskelijaa nimeämää
 
 **Esimerkkejä:**
 
+- YouTube
 - Instagram
-- Snapchat
-- Fortnite
 - Spotify
-- Discord
+- WhatsApp
+- Fortnite
+- Verkkokaupan tuotesuositukset
 
 ### Keskustelu noin 15 minuuttia
 

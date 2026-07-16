@@ -186,7 +186,7 @@ Kerro opiskelijoille:
 
 ### Tavoite
 
-Tehtävän tavoitteena on osoittaa, miten oma työ ja ongelmanratkaisu voidaan dokumentoida selkeästi tekoälyn avulla. Opiskelijat oppivat yksinkertaisen **dokumentointimallin**, jota voi käyttää IT-alalla monissa tilanteissa.
+Tehtävän tavoitteena on osoittaa, miten oma työ ja ongelmanratkaisu voidaan dokumentoida selkeästi tekoälyn avulla. Opiskelijat oppivat yksinkertaisen **dokumentointimallin**, jota voi käyttää monilla eri aloilla.
 
 **Opettajan painotus:** Dokumentointi ei ole vain lopuksi tehtävä muodollisuus. Se on osa asiallista ongelmanratkaisua, koska sen avulla tieto säilyy, siirtyy muille ja auttaa ratkaisemaan saman ongelman myöhemmin nopeammin.
 
@@ -258,7 +258,7 @@ Korosta:
 
 Kokoa pääajatus:
 
-> Neljä osaa riittää usein hyvään dokumentointiin: **ongelma**, **kokeillut ratkaisut**, **toimiva ratkaisu** ja **opittu**. Tämä malli toimii monissa IT-alan tilanteissa.
+> Neljä osaa riittää usein hyvään dokumentointiin: **ongelma**, **kokeillut ratkaisut**, **toimiva ratkaisu** ja **opittu**. Tämä malli toimii monenlaisissa tilanteissa eri aloilla.
 
 ### Odotettu oppimistulos
 

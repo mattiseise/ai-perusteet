@@ -12,7 +12,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
 
 **Valmistelu:**
 
-- Valitse IT-ongelma, jossa on selvä visuaalinen osa. Sopivia esimerkkejä ovat **virheilmoitus**, käyttöliittymävika, verkkosivun asetteluongelma, konfiguraationäkymä tai väreillä erotellut lokit.
+- Valitse ongelma tai tilanne, jossa on selvä visuaalinen osa — arjesta, opiskelusta tai työstä. Sopivia esimerkkejä ovat **virheilmoitus**, käyttöliittymävika, verkkosivun asetteluongelma, konfiguraationäkymä, pesukoneen ohjauspaneeli, laskun taulukko tai väreillä erotellut lokit.
 - Ota ongelmasta **kuvakaappaus**.
 - Kirjoita samasta ongelmasta noin 150 sanan **tekstikuvaus**.
 - Valmistele sama kysymys molempiin testeihin, esimerkiksi: `Mikä on tämän ongelman todennäköinen syy ja miten korjaan sen?`
@@ -58,7 +58,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
 
    Kerro opiskelijoille:
 
-   > teknisen alan osaajalle tärkeä taito on valita oikea konteksti. Jos ongelma näkyy käyttöliittymässä, kuvakaappaus voi olla erittäin hyödyllinen. Jos ongelma näkyy lokissa tai koodissa, teksti, lokirivit tai koodikatkelma voivat olla tärkeämpiä. Usein paras tulos syntyy, kun teksti ja kuva täydentävät toisiaan.
+   > Tärkeä taito on valita oikea konteksti. Jos ongelma näkyy käyttöliittymässä, kuvakaappaus voi olla erittäin hyödyllinen. Jos ongelma näkyy lokissa tai koodissa, teksti, lokirivit tai koodikatkelma voivat olla tärkeämpiä. Usein paras tulos syntyy, kun teksti ja kuva täydentävät toisiaan.
 
 **Esimerkki opetukseen**
 
@@ -85,8 +85,8 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten rakennetaan tehokas **mu
 
 **Valmistelu:**
 
-- Valitse opiskelijoille tuttu IT-projekti tai ongelmatilanne.
-- Sopivia esimerkkejä ovat verkkopalvelun virheen selvittäminen, tietokantaongelma, käyttöliittymävika tai ohjelmakoodin virhe.
+- Valitse opiskelijoille tuttu projekti tai ongelmatilanne.
+- Sopivia esimerkkejä ovat verkkopalvelun virheen selvittäminen, tietokantaongelma, käyttöliittymävika, ohjelmakoodin virhe tai arkinen tilanne, kuten sovelluksen sekava asetusnäkymä tai epäselvä lasku.
 - Valmista lyhyt ongelmakuvaus, jota käytetään harjoituksen pohjana.
 
 ### Toteutus noin 25 minuuttia
@@ -165,7 +165,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten rakennetaan tehokas **mu
 
 ### Opiskelijoiden oma harjoitus
 
-Pyydä opiskelijoita valitsemaan yksi IT-ongelma ja suunnittelemaan siihen multimodaalinen konteksti.
+Pyydä opiskelijoita valitsemaan yksi ongelma tai tilanne — arjesta, opiskelusta tai työstä — ja suunnittelemaan siihen multimodaalinen konteksti.
 
 | Kontekstin osa | Mitä annetaan tekoälylle? | Miksi tämä osa tarvitaan? | Mitä pitää poistaa tai rajata? |
 | --- | --- | --- | --- |

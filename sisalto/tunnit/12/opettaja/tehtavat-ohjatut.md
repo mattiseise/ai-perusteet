@@ -18,6 +18,8 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten sama 
 4. Tallenna vastaukset kuvakaappauksina tai tekstinä.
 5. Valmistele kalvot, taulukko tai muu vertailupohja, jonka avulla vastauksia voidaan tarkastella luokassa.
 
+> **Opettajan huomautus:** Voit vaihtaa demon persoonan ja aiheen ryhmäsi mukaan — esimerkiksi persoonaksi *"Olen aikuisopiskelija ilman tietotekniikkataustaa"* tai aiheeksi jonkin harrastus- tai työelämäaiheen teknisen esimerkin sijaan.
+
 ### Esimerkkipyynnöt
 
 | Vaihe | Pyyntö | Mitä kontekstia mukana on? |
