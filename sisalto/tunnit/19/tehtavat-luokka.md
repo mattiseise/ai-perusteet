@@ -18,7 +18,7 @@ Valitse ongelma, jonka haluaisit ratkaista agentilla. Kirjoita lyhyt kuvaus (150
 2. Miksi juuri agentti sopii tähän ongelmaan — eikö tavallinen automaatio tai chatbot riittäisi?
 3. Mitkä kurssin kuudesta suunnittelukohdasta (syötekäsittely, päättely, työkalut, muisti, turvakerros, palautesilmukka) tarvitset? Nimeä myös ainakin yksi kohta, jonka voit perustellusti jättää pois.
 
-Ongelman ei tarvitse olla monimutkainen. Hyvä lähtökohta voi olla esimerkiksi "sähköpostiviestien luokittelu ja yhteenveto joka aamu" tai "asiakaspalvelun FAQ-botti, joka osaa hakea vastauksia tietokannasta". Tärkeintä on, että ongelman voi toteuttaa 3–5 solmun n8n-työnkulkuna.
+Ongelman ei tarvitse olla monimutkainen, ja sen voi valita arjesta, harrastuksesta, opiskelusta tai työelämästä. Hyvä lähtökohta voi olla esimerkiksi "harrastuksen tapahtumien ja ilmoittautumisten seuranta", "opintojen palautuspäivien kokoaminen ja muistutus" tai "sähköpostiviestien luokittelu ja yhteenveto joka aamu". Tärkeintä on, että ongelman voi toteuttaa 3–5 solmun n8n-työnkulkuna.
 
 ### Tekoälyvaihe — sparraa ongelmavalintaa
 

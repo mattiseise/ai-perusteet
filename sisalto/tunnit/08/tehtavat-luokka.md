@@ -89,9 +89,9 @@ Ymmärtää tekoälyn ympäristöjalanjälkeä ja harkinnan tarvetta sen käytö
 | Hiilijalanjälki | X tonnia CO2/vuosi | = vertaa autojen tai lentoliikenteen päästöihin |
 
 3. **Pohdi rationaalista käyttöä:**
-   - Jos organisaatiosi käyttäisi tekoälyä jokaiseen tehtävään (esim. jokaiseen sähköpostiin), kuinka paljon se kasvattaisi energiankulutusta?
+   - Jos tekoälyä käytettäisiin jokaiseen tehtävään (esim. jokaiseen sähköpostiin) — vaikka omassa arjessasi tai jossakin organisaatiossa — kuinka paljon se kasvattaisi energiankulutusta?
    - Mitkä tehtävät ovat "arvoisia" tekoälyn käytön energiakustannusten näkökulmasta?
-   - Mitä tarkoittaisi "harkittu" tekoälyn käyttö organisaatiossasi?
+   - Mitä tarkoittaisi "harkittu" tekoälyn käyttö sinun arjessasi tai organisaatiossa?
 
 ---
 
@@ -107,7 +107,7 @@ Kirjoita lyhyt oma kannanotto (noin 5–8 lausetta). Valitse yksi kysymys:
 
 1. Miten huolehtisit tekijänoikeuksista, kun käytät tekoälyä omissa töissäsi?
 2. Miten varmistaisit, ettei käyttämäsi tekoäly tee epäreiluja oletuksia?
-3. Millaisia sääntöjä tekoälyn käytölle pitäisi olla koulussa tai työpaikalla?
+3. Millaisia sääntöjä tekoälyn käytölle pitäisi olla esimerkiksi koulussa, työpaikalla tai harrastusyhteisössä?
 
 Vastaa omin sanoin: mikä on mielipiteesi ja miksi? Voit käyttää tekoälyä apuna jäsentämisessä, mutta kannanoton pitää olla sinun.
 

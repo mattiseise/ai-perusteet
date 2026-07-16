@@ -32,6 +32,7 @@ Valitse yksi konteksti: arki tai harrastus, opiskelu tai työelämän rooliskena
 | **Liiketalous ja kauppa** | Kampanjan tai tapahtuman mainoskuva |
 | **Sosiaali- ja terveysala** | Kuvituskuva hyvinvointioppaaseen |
 | **Media ja viestintä** | Kansikuva podcastille tai videolle |
+| **Opiskelu** | Kuvituskuva esitelmän tai raportin kanteen |
 | **Ravintola- ja catering** | Houkutteleva tuotekuva menuun |
 | **Harrastukset** | Konseptikuva tapahtuman julisteeseen |
 | **IT** | Hero-kuva oman portfoliosivuston etusivulle |

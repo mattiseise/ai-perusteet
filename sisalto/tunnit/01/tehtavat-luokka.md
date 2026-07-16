@@ -97,8 +97,8 @@ Käy 10 transaktiota läpi sääntöjesi mukaan ja merkitse:
 Avaa tekoäly ja anna sille sääntöjoukkosi sekä testituloksesi:
 
 ```
-Toimit minulle sparrauskumppanina. Olen opiskelija ja yritän
-ymmärtää, miksi kiinteät säännöt eivät riitä petoksentunnistukseen.
+Toimit minulle sparrauskumppanina. Yritän ymmärtää, miksi kiinteät
+säännöt eivät riitä petoksentunnistukseen.
 
 Tässä sääntöni ja niiden tulokset:
 

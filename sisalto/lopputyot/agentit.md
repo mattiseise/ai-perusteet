@@ -58,9 +58,10 @@ Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman.
 
 - Päivittäinen sähköpostien luokittelija ja yhteenvetäjä
 - Asiakaspalvelun FAQ-botti, joka hakee vastauksia tietokannasta
-- Sosiaalisen median seurantarobotti
 - Palvelinlokien analysaattori, joka ilmoittaa virheistä
-- Asiakkaiden tikettien luokittelija ja jakaja
+- Harrastuksen tai yhdistyksen tapahtumien ja ilmoittautumisten kokoaja
+- Some- tai uutisseurannan kooste itseäsi kiinnostavasta aiheesta
+- Opintojen palautuspäivien kerääjä ja muistuttaja
 
 **Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.** 3–5 solmua riittää. Tärkeintä on, että agentti on **autonominen**: se tekee päätöksiä tilanteen mukaan, käyttää työkalua tai paria ja toimii itsenäisesti. Pieni agentti, jonka ymmärrät ja jonka rajat tunnistat, on tavoite.
 

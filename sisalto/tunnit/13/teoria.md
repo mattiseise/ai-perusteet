@@ -142,7 +142,7 @@ Tämä taito on arvokas koko työuran ajan. Virheilmoituksia tulee aina, ja kyky
 
 ## Tekoälyn rajat työparina
 
-Tekoäly on erinomainen apulainen, mutta sillä on selkeät rajat. Se ei tunne yrityksesi järjestelmiä eikä tiedä, mitä sinun tietokoneellasi tapahtuu juuri nyt. Se voi antaa yleisiä neuvoja, mutta tarkat organisaatiokohtaiset vastaukset vaativat aina ihmisen tarkistuksen.
+Tekoäly on erinomainen apulainen, mutta sillä on selkeät rajat. Se ei tunne yksittäisen organisaation järjestelmiä eikä tiedä, mitä sinun tietokoneellasi tapahtuu juuri nyt. Se voi antaa yleisiä neuvoja, mutta tarkat organisaatiokohtaiset vastaukset vaativat aina ihmisen tarkistuksen.
 
 Tekoäly voi myös olla väärässä vakuuttavasti. Se saattaa ehdottaa ratkaisua, joka kuulostaa loogiselta mutta ei toimi sinun ympäristössäsi. Se voi myös selittää asian teknisesti oikein mutta käytännössä harhaanjohtavasti. Siksi vastuullisena käyttäjänä sinun täytyy aina **tarkistaa ja testata**.
 

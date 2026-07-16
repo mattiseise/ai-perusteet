@@ -14,7 +14,7 @@ Kysy tekoälyltä **kaksi spesifiä kysymystä**, joihin oikea vastaus on tarkis
 
 - Kuvitteellinen elokuva, kirja tai henkilö: *"Kerro elokuvasta 'Sininen Vuori' (1987)."*
 - Keksityt lähdeviitteet: *"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."* — mallit keksivät usein uskottavia mutta olemattomia viitteitä.
-- Sisäpiirikysymys organisaatiosta: *"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"*
+- Sisäpiirikysymys jostakin sinulle tutusta organisaatiosta, jonka oikean vastauksen voit tarkistaa: esimerkiksi jonkin yhdistyksen, seuran, oppilaitoksen tai yrityksen vastuuhenkilö vuonna 2026.
 
 Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.
 
@@ -32,8 +32,8 @@ Kirjoita itsellesi muistiin lyhyesti (ei vielä lopulliseen tuotokseen):
 Avaa uusi keskustelu ja anna tekoälylle **roolin, havaintosi ja edellisten tuntien opit**. Esimerkkiprompti:
 
 ```
-Toimit minulle sparrauskumppanina. Olen IT-alan opiskelija ja
-rakennan vastuullisen käyttäjän tarkistuslistaa tekoälyn käyttöön.
+Toimit minulle sparrauskumppanina. Rakennan vastuullisen käyttäjän
+tarkistuslistaa tekoälyn käyttöön.
 
 Tässä mitä olen oppinut:
 - Tunti 3: Malli ennustaa todennäköisintä jatkoa, ei totuutta
@@ -53,7 +53,7 @@ Tämä on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjo
 
 ### Vaihe 4 — Kirjoita tarkistuslista (tämä on todistusaineistosi)
 
-Kirjoita vastuullisen käyttäjän tarkistuslista, jota teknisen alan osaaja voisi pitää näytöllä joka kerta käyttäessään tekoälyä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
+Kirjoita vastuullisen käyttäjän tarkistuslista, jonka voisi pitää näytöllä joka kerta tekoälyä käyttäessä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
 
 **A) Merkit, joista tunnistan hallusinaation** (3–5 bulletia)
 

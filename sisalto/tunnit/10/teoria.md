@@ -78,7 +78,7 @@ Yritysmaailmassa Copilotin vahvuuksia ovat hallinta, käyttöoikeudet, tietoturv
 
 ### Missä Copilot ei ole paras?
 
-Copilot ei ole aina paras valinta monimutkaiseen koodaukseen, vapaaseen luovaan ideointiin tai hyvin syvälliseen yksittäisen pitkän dokumentin analyysiin. Sen vahvuus on ennen kaikkea Microsoft 365 -ympäristössä toimiminen. Jos et käytä Microsoftin tuotteita tai organisaatiosi data ei ole Microsoft 365 -ympäristössä, Copilotin hyöty voi jäädä pienemmäksi.
+Copilot ei ole aina paras valinta monimutkaiseen koodaukseen, vapaaseen luovaan ideointiin tai hyvin syvälliseen yksittäisen pitkän dokumentin analyysiin. Sen vahvuus on ennen kaikkea Microsoft 365 -ympäristössä toimiminen. Jos et käytä Microsoftin tuotteita tai käsittelemäsi data ei ole Microsoft 365 -ympäristössä, Copilotin hyöty voi jäädä pienemmäksi.
 
 Microsoft ei ilmoita Microsoft 365 Copilotille yhtä pysyvää julkista tokenmäärää samalla tavalla kuin monet mallien API-dokumentaatiot ilmoittavat. Copilotin käytännön rajat riippuvat sovelluksesta, lisenssistä, valitusta mallista, organisaation asetuksista ja siitä, miten tietoa haetaan Microsoft Graphin kautta. Siksi aiempi väite yhdestä kiinteästä Copilotin konteksti-ikkunasta oli liian yksinkertainen.
 
@@ -159,9 +159,9 @@ Clauden tietosuojakäytännöt riippuvat käyttäjätyypistä ja asetuksista. An
 
 Microsoft 365 Copilotissa keskeinen ero on, että palvelu toimii organisaation Microsoft 365 -ympäristössä ja noudattaa käyttäjän käyttöoikeuksia. Microsoftin dokumentaation mukaan Microsoft 365 Copilotin promptteja, vastauksia ja Microsoft Graphin kautta käytettyä dataa ei käytetä perusmallien kouluttamiseen.
 
-Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei organisaatiosi ole hyväksynyt työkalua kyseiseen käyttöön.
+Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei työkalua ole erikseen hyväksytty kyseiseen käyttöön — esimerkiksi työpaikan tai oppilaitoksen ohjeissa.
 
-> **Pysähdy hetkeksi:** Jos yrityksesi käsittelee arkaluontoista asiakastietoa, millä perusteella valitsisit työkalun? Mitä tietosuojakysymyksiä ottaisit huomioon?
+> **Pysähdy hetkeksi:** Kuvittele, että käsittelet arkaluontoista asiakastietoa. Millä perusteella valitsisit työkalun? Mitä tietosuojakysymyksiä ottaisit huomioon?
 
 ---
 
