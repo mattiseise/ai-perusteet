@@ -24,8 +24,8 @@ Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 - [ ] Playwright-mobiilitestit 320/375/390/430/768 vihreät
 
 ## P1 — sisältövirheet
-- [ ] Tunti 01 (ML ≠ kaikki AI)  · [ ] Tunti 02 (akselit)  · [ ] Tunti 19 (kuusiosainen lista, ei "sielu")
-- [ ] Tunti 23 (päättely vs. loki)  · [ ] Tunti 24 (ei "tuhoa kaikki käskyt")
+- [x] Tunti 01 (ML ≠ kaikki AI)  · [x] Tunti 02 (akselit)  · [x] Tunti 19 (kuusiosainen lista, ei "sielu")
+- [x] Tunti 23 (päättely vs. loki)  · [x] Tunti 24 (ei "tuhoa kaikki käskyt")
 
 ## P1 — rytmi ja arviointi
 - [ ] Päällekkäisyys 04/12, 10/11, 07/24 · ydinkysymys+tuotos per tunti
@@ -49,5 +49,6 @@ Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 - [ ] (Tagi laukaisee Hermes-watchdogin → Telegram-ilmoitus Matille)
 
 ## Ajopäiväkirja (uusin ylimmäs, 1 rivi/ajokerta)
+- 2026-07-19 — P1 sisältövirheet VALMIS (tunnit 01/02/19/23/24): Codexin WIP oli jo kirjoittanut korjaukset lähteisiin, mutta rasteja ei ollut päivitetty. Verifioitu jokaista P1-vaatimusta vasten + itsenäinen pedagoginen tarkistus (Opus-subagentti) → KOKONAISVERDIKTI HYVÄKSYTTY, kaikki 5 PASS, ei termilukkorikkeitä. generate+verify vihreä. ESTE (P0 mobiiligrafiikat): Matti pushasi mainiin 2026-07-19 21:50 (807188a) JS-skaalaukseen perustuvan fitAiDemos-korjauksen, joka on ristiriidassa toimeksiannon "aito uudelleentaitto, ei prosenttiskaalausta" -vaatimuksen JA haaran valmiin reflow-lähestymistavan (.ai-demo__mobile-model) kanssa. Kumpi jää voimaan on Matin päätös — en arvaa villisti. Haara jätetty main-mergen taakse (turvallista); mobiiligrafiikkayksikkö odottaa Matin linjausta ennen kuin sen voi viedä valmiiksi ja mergetä. Playwright TOIMII tässä sandboxissa (macOS, chromium asennettu) toisin kuin edellisellä Linux-ajolla.
 - 2026-07-16 — P0 kohderyhmä VALMIS: auditointi 3 subagentilla (33 löydöstä), korjaukset 38 lähdetiedostoon, skanneri+allowlist laajennettu, portit läpi (pedagoginen HYVÄKSYTTY, Börje puhdas), generate+verify vihreä. ESTE: verify:browser ei aja tässä sandboxissa (chromiumin järjestelmäkirjastot puuttuvat, ei root-oikeuksia) — dian 13 muutos verifioitu cairosvg-renderöinnillä; Playwright-portti ajettava julkaisuportilla ympäristössä, jossa selain toimii. Push-oikeus kuntoon (PAT). Interaktiivinen Cowork-ajo.
 - 2026-07-15 — WIP committoitu, handoff + edistymätiedosto luotu, putki ajastettu.
