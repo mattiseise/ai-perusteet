@@ -1,14 +1,20 @@
 # AI · Perusteet — työkirja
 
+Tämä työkirja on henkilökohtainen työjälkesi: tallenna tänne promptisi, kokeiden tulokset, lähteet ja tekemäsi korjaukset, koska kurssisivusto ei tallenna niitä puolestasi. Voit täyttää tiedostoa tekstieditorissa tai tekstinkäsittelyohjelmassa ja tulostaa sen PDF:ksi.
+
+Älä tallenna työkirjaan muiden ihmisten henkilötietoja tai luottamuksellista aineistoa — sama periaate, jonka opit kurssilla tekoälypalveluiden käytöstä, koskee myös omia muistiinpanojasi.
+
 Nimi tai oma tunniste: ____________________
 
-Tämä työkirja on henkilökohtainen työjälkesi. Älä tallenna siihen muiden henkilötietoja tai luottamuksellista aineistoa. Voit täyttää tiedostoa tekstieditorissa tai tulostaa sen PDF:ksi.
+*Jos palautat työkirjan opettajalle tai oppilaitokselle, nimestä näkyy, kenen työ on kyseessä. Itsenäisenä opiskelijana voit jättää kohdan tyhjäksi.*
 
 ## Oma reittini
 
-- Valitsemani konteksti: arki/harrastus / opiskelu / työelämän rooliskenaario
-- Käytän kokeissa: saatavilla olevaa chatia / annettua esimerkkitulosta / dokumentoitua kuivaharjoittelua
-- Minne tallennan tuotokseni:
+Kurssin tehtävissä valitset itse, millaisiin tilanteisiin sovellat oppimaasi. Kirjaa valintasi tähän kerran, niin sinun ei tarvitse miettiä niitä jokaisen tehtävän kohdalla uudelleen — ja lukija näkee yhdellä silmäyksellä, miten teit kurssin.
+
+- Konteksti, johon sovellan oppimaani (arki tai harrastus / opiskelu / työelämän rooliskenaario):
+- Työkalu, jolla teen kokeet (saatavilla oleva chat / annettu esimerkkitulos / dokumentoitu kuivaharjoittelu ilman tiliä):
+- Minne tallennan tämän työkirjan ja tuotokseni:
 
 ## Todistusaineistot 1–3 — teoria
 
