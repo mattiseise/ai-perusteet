@@ -16,7 +16,7 @@ Kurssin 27 osaa vastaavat luokkakäytössä noin 27:ää 90 minuutin oppituntia.
 
 Sivusto tallentaa etenemisen ja Harjoittele-tulokset vain käyttämäsi selaimen paikalliseen tallennustilaan. Selaimen tietojen tyhjentäminen poistaa ne. Tallenna siksi omat promptit, kokeiden tulokset, lähteet ja korjaukset erilliseen tiedostoon.
 
-[Lataa Markdown-työkirja](/downloads/ai-perusteet-tyokirja.md). Voit täyttää sen tekstieditorissa tai tulostaa selaimesta PDF-tiedostoksi.
+Lataa työkirja itsellesi sopivassa muodossa: [Markdown](/downloads/ai-perusteet-tyokirja.md) tekstieditoriin tai [Word](/downloads/ai-perusteet-tyokirja.docx) tekstinkäsittelyohjelmaan. Kummankin voi tulostaa selaimesta tai tekstinkäsittelyohjelmasta PDF-tiedostoksi.
 
 ## Valitse tehtävään sopiva reitti
 

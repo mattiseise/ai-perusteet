@@ -108,11 +108,11 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 
 **Tavoite:** Opiskelija testaa agenttia systemaattisesti ja dokumentoi tulokset.
 
-**Tehtävä:** Opiskelijan tulee tehdä vähintään 15 testiä:
+**Tehtävä:** Opiskelijan tulee tehdä vähintään 9 testiä:
 
-- **5 normaalia testiä**
-- **5 reunatapaustestiä**
-- **5 turvallisuustestiä**
+- **3 normaalia testiä**
+- **3 reunatapaustestiä**
+- **3 turvallisuustestiä**
 
 | Testi | Syöte | Odotettu tulos | Todellinen tulos | Hyväksytty vai korjattava? |
 | --- | --- | --- | --- | --- |
@@ -124,7 +124,7 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 
 | Ongelma | Opettajan ohjaava ratkaisu |
 | --- | --- |
-| Opiskelija testaa vain muutaman kerran ja sanoo projektin olevan valmis. | Vaadi vähintään 15 dokumentoitua testiä. |
+| Opiskelija testaa vain muutaman kerran ja sanoo projektin olevan valmis. | Vaadi vähintään 9 dokumentoitua testiä ja 2 uudelleentestiä. |
 | Testaus on satunnaista eikä sitä kirjata. | Vaadi testausraportti, johon jokainen testi kirjataan. |
 | Turvallisuustestit puuttuvat tai ovat liian pehmeitä. | Näytä konkreettisia hyökkäysyrityksiä, kuten prompt injection ja piilotetut ohjeet. |
 | Opiskelija ei korjaa epäonnistuneita testejä. | Muistuta: epäonnistunut testi kertoo, mitä pitää korjata ennen demoa. |
@@ -358,8 +358,8 @@ Tallennettava tuotos on **agenttipaketti, 9 testiä, 2 uudelleentestiä, dokumen
 |---|---|---|
 | 0–5 min | Aloitus | Tarkista, että agentin ydintehtävä, testitaulukko ja dokumenttipohja ovat auki. |
 | 5–25 min | Viimeistely | Oppija viimeistelee rajatun työnkulun ja varmistaa, että testattava versio on tallennettu. |
-| 25–45 min | Testit | Oppija ajaa 9 testiä: normaalit, kielteiset ja reunatapaukset, kolme kutakin. |
-| 45–60 min | Korjaus ja uudelleentesti | Oppija korjaa vähintään kaksi testissä löytynyttä puutetta ja ajaa niitä koskevat 2 uudelleentestiä. |
+| 25–45 min | Testit | Oppija ajaa 9 testiä: normaalit, reunatapaukset ja turvallisuustestit, kolme kutakin. |
+| 45–60 min | Korjaus ja uudelleentesti | Oppija korjaa vähintään yhden testissä löytyneen puutteen ja ajaa vähintään kaksi siihen liittyvää uudelleentestiä. |
 | 60–75 min | Dokumentointi | Oppija viimeistelee arkkitehtuurin, oikeudet, lokin, testitulokset ja ennen–jälkeen-korjaukset. |
 | 75–85 min | Demo tai puolustus | Oppija näyttää ydintehtävän ja perustelee yhden suunnitteluvalinnan sekä yhden turvallisuusrajan. |
 | 85–90 min | Paketointi | Oppija nimeää ja tallentaa palautuspaketin sekä tarkistaa, että kaikki vaadittu näyttö avautuu. |

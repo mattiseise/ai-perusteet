@@ -116,7 +116,7 @@ Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
    - **README** — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset
    - **ARCHITECTURE** — jokainen n8n-solmu järjestyksessä, mitä se tekee, miten ne linkittyvät agentin kuuteen komponenttiin
    - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, human-in-the-loop -kohdat
-4. **Testiraportti** — 15 testitapausta (5 normaalia, 5 reunatapausta, 5 turvallisuustestiä)
+4. **Testiraportti** — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä
 5. **Demo luokassa** (3–5 min) tai nauhoitettuna videona
 6. **Itsearviointi** (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat
 7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai AI-pohjainen kriittinen arvio jos teet työn yksin)

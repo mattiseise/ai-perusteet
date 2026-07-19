@@ -16,11 +16,11 @@
 
 ### B. Testaa systemaattisesti (~15 min)
 
-Tee yhteensä 15 testiä:
+Tee yhteensä 9 testiä:
 
-- **5 normaalia tapausta**
-- **5 reunatapausta** (tyhjä syöte, liian pitkä, väärä kieli, emojit, sekava teksti)
-- **5 turvallisuustestiä** (prompt injection, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt, rekursiivinen pyyntö)
+- **3 normaalia tapausta**
+- **3 reunatapausta** (esim. tyhjä syöte, liian pitkä syöte, väärä kieli, pelkät emojit, sekava teksti)
+- **3 turvallisuustestiä** (esim. prompt injection, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt)
 
 Dokumentoi jokainen:
 
@@ -136,7 +136,7 @@ Palauta oppimisympäristöön (esimerkiksi Moodle, Itslearning tai Google Classr
 - Linkki n8n-työnkulkuusi tai vientitiedosto (JSON)
 - Koottu suunnitelma (viisi pohjapiirrosta + tarkistettu kokonaisuus)
 - README, ARCHITECTURE, SAFETY -dokumentit
-- Testiraportti (15 testiä)
+- Testiraportti (9 testiä ja vähintään 2 uudelleentestiä)
 - Itsearviointi (300–400 sanaa)
 - Vertaisarviomuistio
 

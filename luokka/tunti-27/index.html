@@ -197,11 +197,11 @@
 <li><strong>Lisää lokitus.</strong> Yksinkertainenkin riittää: solmu, joka tallentaa jokaisen suorituksen tiedot.</li>
 </ol>
 <h3>B. Testaa systemaattisesti (~15 min)</h3>
-<p>Tee yhteensä 15 testiä:</p>
+<p>Tee yhteensä 9 testiä:</p>
 <ul>
-<li><strong>5 normaalia tapausta</strong></li>
-<li><strong>5 reunatapausta</strong> (tyhjä syöte, liian pitkä, väärä kieli, emojit, sekava teksti)</li>
-<li><strong>5 turvallisuustestiä</strong> (prompt injection, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt, rekursiivinen pyyntö)</li>
+<li><strong>3 normaalia tapausta</strong></li>
+<li><strong>3 reunatapausta</strong> (esim. tyhjä syöte, liian pitkä syöte, väärä kieli, pelkät emojit, sekava teksti)</li>
+<li><strong>3 turvallisuustestiä</strong> (esim. prompt injection, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt)</li>
 </ul>
 <p>Dokumentoi jokainen:</p>
 <pre><code>TESTI: [numero ja nimi]
@@ -307,7 +307,7 @@ tulosta — sen päätän itse.
 <li>Linkki n8n-työnkulkuusi tai vientitiedosto (JSON)</li>
 <li>Koottu suunnitelma (viisi pohjapiirrosta + tarkistettu kokonaisuus)</li>
 <li>README, ARCHITECTURE, SAFETY -dokumentit</li>
-<li>Testiraportti (15 testiä)</li>
+<li>Testiraportti (9 testiä ja vähintään 2 uudelleentestiä)</li>
 <li>Itsearviointi (300–400 sanaa)</li>
 <li>Vertaisarviomuistio</li>
 </ul>
@@ -562,7 +562,7 @@ tulosta — sen päätän itse.
 <text x="24" y="92" font-size="20" font-weight="800" fill="#247A52">Normaalit</text>
 <text x="24" y="124" font-size="16" fill="#3A4253">Syötteet, joihin agentti</text>
 <text x="24" y="146" font-size="16" fill="#3A4253">on suunniteltu. Vähintään</text>
-<text x="24" y="168" font-size="16" fill="#3A4253">5 testiä eri syötteillä.</text>
+<text x="24" y="168" font-size="16" fill="#3A4253">3 testiä eri syötteillä.</text>
 </g>
 <g transform="translate(354,258)">
 <rect x="0" y="0" width="252" height="174" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
