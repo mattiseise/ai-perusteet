@@ -16,39 +16,40 @@ Merkinnät: `[ ]` kesken · `[~]` työn alla · `[x]` valmis ja verifioitu.
 - [x] Allowlist dokumentoitu; `test_yleiso.py` vihreä — skanneriin 12 uutta taivutusmuotopatternia, 6 perusteltua allowlist-riviä
 
 ## P0 — mobiiligrafiikat
-- [~] Ei-interaktiiviset .ai-demot responsiivisiksi (viewBox/width%/height auto)  ← osin
-- [ ] Interaktiiviset 07/20/24 aito mobiilitaitto (pinottu, ≥44px, ≥12–14px)
-- [ ] Yhteinen komponentti + site.css; sivuvieritys-fallback poistettu
-- [ ] prefers-reduced-motion + SVG-semantiikka (title/desc/role/aria-hidden)
-- [ ] Diat: koko näytön painike mobiilissa ≥44px
-- [ ] Playwright-mobiilitestit 320/375/390/430/768 vihreät
+- [x] Ei-interaktiiviset .ai-demot responsiivisiksi — 23 staattista demoa reflow-kortilla (≤430 px), fitAiDemos-skaalaus 431–680 px -välillä (main-merge, reflow ensisijainen Matin linjauksella)
+- [x] Interaktiiviset 07/20/24 aito mobiilitaitto (pinottu, ≥44px, ≥12–14px; fitAiDemos ohittaa ne)
+- [x] Yhteinen komponentti + site.css (annotate_demos + _DEMO_MOBILE_MODELS); sivuvieritys-fallback poistettu
+- [x] prefers-reduced-motion (globaali site.css + demokohtaiset) + SVG-semantiikka: diat 344 kpl role=img+title (generaattori annotoi), tunnin 16 koriste-SVG aria-hidden
+- [x] Diat: koko näytön painike ≥44px (site.css min-width/height 44px, ei kavennettu mobiilissa)
+- [x] Playwright-mobiilitestit 320/375/390/430/768 vihreät (5/5 + axe 96 sivua)
 
 ## P1 — sisältövirheet
 - [x] Tunti 01 (ML ≠ kaikki AI)  · [x] Tunti 02 (akselit)  · [x] Tunti 19 (kuusiosainen lista, ei "sielu")
 - [x] Tunti 23 (päättely vs. loki)  · [x] Tunti 24 (ei "tuhoa kaikki käskyt")
 
 ## P1 — rytmi ja arviointi
-- [ ] Päällekkäisyys 04/12, 10/11, 07/24 · ydinkysymys+tuotos per tunti
-- [ ] Tunti 16 valinnainen labra · [ ] aikamitoitus 19 & 27
-- [ ] Luokkatunnit: perus/tuki/syventävä reitti + tuotos
-- [ ] Teoria-lopputyö: prosessinäyttö · [ ] rubriikin tasokuvaukset
-- [~] Aloitussivu (sisalto/aloitus.md)  ← Codex aloittanut · [ ] toimittajariippumaton vaihtoehto
+- [x] Päällekkäisyys 04/12, 10/11, 07/24 · ydinkysymys+tuotos per tunti (rajaus + oma tuotos joka tunnilla, Codex)
+- [x] Tunti 16 valinnainen labra · [x] aikamitoitus 19 & 27 (27: testivaatimus yhtenäistetty 9+2:een kaikissa lähteissä 2026-07-19)
+- [x] Luokkatunnit: 90 min -taulukko + tuki/syventävä reitti + tallennettava tuotos kaikissa 27 tuntisuunnitelmassa
+- [x] Teoria-lopputyö: prosessinäyttö (prompti/loki, ≥3 korjausta, lähteet, puolustus) · [x] rubriikin tasokuvaukset (5 tasoa, kaikki 3 lopputyötä)
+- [x] Aloitussivu (sisalto/aloitus.md, livenä /kurssi/-etusivulla; työkirja md+Word+PDF-tulostus) · [x] toimittajariippumaton vaihtoehto (aloitus.md + tunti 18 + lopputyörubriikit)
 
 ## P2 — lähteet, a11y, ylläpito
-- [ ] Lähteet + tarkistuspäivä jokaiseen teoria.md:hen
-- [ ] Tab-semantiikka + aria-live + reflektiolabelit
-- [ ] Tuntien 16 & 27 H1/blockquote-korjaukset · [ ] lukuaika näkyvästä tekstistä
+- [x] Lähteet + tarkistuspäivä jokaiseen teoria.md:hen (27/27, test_content.py vartioi; tuotetiedot "Tilanne heinäkuussa 2026" -laatikoissa)
+- [x] Tab-semantiikka + aria-live + reflektiolabelit (tablist/tab/tabpanel + nuolinäppäimet; test_a11y.py vartioi)
+- [x] Tuntien 16 & 27 H1/blockquote-korjaukset (1 H1/tiedosto, ei sisäkkäisiä lainauksia) · [x] lukuaika näkyvästä tekstistä (_VisibleTextParser ohittaa style/script/svg/demo-UI:n)
 - [x] Riippuvuusversiot kiinnitetty · [x] LICENSE juuressa · [x] verify-pino (Codex)
-- [ ] Tarkoitukselliset virheet merkitty/tehtäväistetty
+- [x] Tarkoitukselliset virheet merkitty/tehtäväistetty — loppukatselmus 2026-07-19 PUHDAS (112 tehtävää, 73 spot-segmenttiä flag+explain, tunnin 07 väitedemot merkitty ✗ keksitty)
 
 ## Julkaisuportti (vasta kun kaikki yllä `[x]`)
-- [ ] `python3 generate_site.py` puhtaasti
-- [ ] `npm run verify:all` vihreä (sisältö + js + Playwright/a11y)
-- [ ] Ei vaakasivuylivuotoa 320–768 px
-- [ ] Merge `korjaus-handoff` → `main`, push (Netlify deploy), tag `korjaus-valmis`
-- [ ] (Tagi laukaisee Hermes-watchdogin → Telegram-ilmoitus Matille)
+- [x] `python3 generate_site.py` puhtaasti (2026-07-19)
+- [x] `npm run verify:all` vihreä (sisältö + js + Playwright/a11y, 5/5 + axe 96 sivua)
+- [x] Ei vaakasivuylivuotoa 320–768 px (Playwright-testit 1–2)
+- [x] Merge `korjaus-handoff` → `main`, push (Netlify deploy), tag `korjaus-valmis`
+- [x] (Tagi laukaisee Hermes-watchdogin → Telegram-ilmoitus Matille)
 
 ## Ajopäiväkirja (uusin ylimmäs, 1 rivi/ajokerta)
+- 2026-07-19 (ilta, interaktiivinen istunto Matin kanssa) — KAIKKI VALMIS JA JULKAISTU: Matti linjasi mobiiliristiriidan (reflow ensisijainen, fitAiDemos fallbackiksi) → main mergetty haaralle konfliktiratkaisulla (fitAiDemos ohittaa interaktiivit + jättää reflow-kortin stagen lapseksi). 3 auditointiagenttia kartoitti Codexin WIP:n todellisen tilan: P0 mobiili, P1 rytmi ja P2 olivat valtaosin jo tehtyjä, rastit vanhentuneita. Täydennetty aukot: diojen SVG-semantiikka (344 diaa, generaattoriannotointi), tunnin 16 koriste-SVG, tunnin 27 testivaatimus 15→9+2 (pedagoginen tarkistus HYVÄKSYTTY + Börje), työkirjan Word-vienti, tarkoituksellisten virheiden loppukatselmus (PUHDAS). Kaikki portit vihreät → merge mainiin + tag korjaus-valmis.
 - 2026-07-19 — P1 sisältövirheet VALMIS (tunnit 01/02/19/23/24): Codexin WIP oli jo kirjoittanut korjaukset lähteisiin, mutta rasteja ei ollut päivitetty. Verifioitu jokaista P1-vaatimusta vasten + itsenäinen pedagoginen tarkistus (Opus-subagentti) → KOKONAISVERDIKTI HYVÄKSYTTY, kaikki 5 PASS, ei termilukkorikkeitä. generate+verify vihreä. ESTE (P0 mobiiligrafiikat): Matti pushasi mainiin 2026-07-19 21:50 (807188a) JS-skaalaukseen perustuvan fitAiDemos-korjauksen, joka on ristiriidassa toimeksiannon "aito uudelleentaitto, ei prosenttiskaalausta" -vaatimuksen JA haaran valmiin reflow-lähestymistavan (.ai-demo__mobile-model) kanssa. Kumpi jää voimaan on Matin päätös — en arvaa villisti. Haara jätetty main-mergen taakse (turvallista); mobiiligrafiikkayksikkö odottaa Matin linjausta ennen kuin sen voi viedä valmiiksi ja mergetä. Playwright TOIMII tässä sandboxissa (macOS, chromium asennettu) toisin kuin edellisellä Linux-ajolla.
 - 2026-07-16 — P0 kohderyhmä VALMIS: auditointi 3 subagentilla (33 löydöstä), korjaukset 38 lähdetiedostoon, skanneri+allowlist laajennettu, portit läpi (pedagoginen HYVÄKSYTTY, Börje puhdas), generate+verify vihreä. ESTE: verify:browser ei aja tässä sandboxissa (chromiumin järjestelmäkirjastot puuttuvat, ei root-oikeuksia) — dian 13 muutos verifioitu cairosvg-renderöinnillä; Playwright-portti ajettava julkaisuportilla ympäristössä, jossa selain toimii. Push-oikeus kuntoon (PAT). Interaktiivinen Cowork-ajo.
 - 2026-07-15 — WIP committoitu, handoff + edistymätiedosto luotu, putki ajastettu.
