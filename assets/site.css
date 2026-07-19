@@ -1213,6 +1213,10 @@ body{
     text-transform:uppercase;
     color:#5D6880;
   }
+  /* JS skaalaa figuurin mahtumaan → ei leikkausta eikä sivuvieritystä (fallback yllä jos JS pois) */
+  .ai-demo.is-fitted .ai-demo__stage{overflow:hidden;justify-content:center!important}
+  .ai-demo.is-fitted .ai-demo__fit{flex-shrink:0}
+  .ai-demo.is-fitted::after{display:none}
   .panel table{display:block;max-width:100%;overflow-x:auto}
 }
 @media (max-width:480px){

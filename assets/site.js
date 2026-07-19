@@ -129,6 +129,39 @@ function copyShare(btn){var url=btn.getAttribute('data-url');var abs=location.or
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(abs).then(ok,function(){prompt('Kopioi linkki:',abs);});}
   else{prompt('Kopioi linkki:',abs);}}
 
+// ---- Skaalaa animoidut figuurit mahtumaan kapealle näytölle (ei leikkausta/vieritystä) ----
+function fitAiDemos(){
+  var stages=document.querySelectorAll('.ai-demo__stage');
+  for(var i=0;i<stages.length;i++){(function(st){
+    var fig=st.closest?st.closest('.ai-demo'):null;
+    var fit=st.querySelector(':scope > .ai-demo__fit');
+    if(!fit){
+      var cs=st.style;
+      fit=document.createElement('div'); fit.className='ai-demo__fit';
+      fit.style.cssText='display:'+(cs.display||'flex')+';align-items:'+(cs.alignItems||'center')
+        +';justify-content:'+(cs.justifyContent||'center')+';gap:'+(cs.gap||'0')
+        +';padding:'+(cs.padding||'0')+';flex-shrink:0;box-sizing:border-box';
+      while(st.firstChild){fit.appendChild(st.firstChild);}
+      st.appendChild(fit);
+      st.style.padding='0';
+      var fr=fit.getBoundingClientRect();
+      st.dataset.natw=Math.round(fr.width); st.dataset.nath=Math.round(fr.height);
+      st.dataset.h0=parseFloat(cs.height)||Math.round(fr.height);
+    }
+    var natW=+st.dataset.natw, natH=+st.dataset.nath, h0=+st.dataset.h0, avail=st.clientWidth;
+    var s=avail>0?Math.min(1, avail/natW):1;
+    if(s<0.999){
+      fit.style.transformOrigin='center center';
+      fit.style.transform='scale('+s+')';
+      st.style.height=Math.ceil(Math.max(natH,h0)*s)+'px';
+    }else{
+      fit.style.transform='none'; st.style.height=h0+'px';
+    }
+    if(fig)fig.classList.add('is-fitted');
+  })(stages[i]);}
+}
+var __fitT; function fitAiDemosDebounced(){clearTimeout(__fitT);__fitT=setTimeout(fitAiDemos,120);}
+
 // ---- Init ----
 function ciInit(){
   initConsent();
@@ -143,5 +176,8 @@ function ciInit(){
     if(window.CI.ptasks)initPractice(window.CI.lid,window.CI.ptasks);
     runMermaid();
   }
+  fitAiDemos();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ciInit);}else{ciInit();}
+window.addEventListener('load',fitAiDemos);
+window.addEventListener('resize',fitAiDemosDebounced);
