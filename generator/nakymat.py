@@ -4,6 +4,7 @@ manifestista — ei kovakoodata sivupohjiin.
 """
 
 import os
+import re
 import yaml
 
 from . import sisalto
@@ -100,13 +101,60 @@ def lesson_dir(kansio):
     return os.path.join(SISALTO, 'tunnit', kansio)
 
 
+# --- Diojen SVG-semantiikka: informatiiviselle role="img" + <title>, tekstittömälle aria-hidden ---
+_SVG_OPEN_RE = re.compile(r'<svg\b[^>]*>')
+_SVG_TEXT_RE = re.compile(r'<text\b([^>]*)>(.*?)</text>', re.S)
+_SVG_FS_RE = re.compile(r'font-size="([0-9.]+)"')
+_SVG_TAG_RE = re.compile(r'<[^>]+>')
+
+
+def _slide_title(svg_body):
+    """Poimi dian otsikko: suurimman font-sizen <text>-sisältö (tspanit litistetty)."""
+    best, best_fs = None, -1.0
+    for m in _SVG_TEXT_RE.finditer(svg_body):
+        fs_m = _SVG_FS_RE.search(m.group(1))
+        fs = float(fs_m.group(1)) if fs_m else 0.0
+        txt = ' '.join(_SVG_TAG_RE.sub(' ', m.group(2)).split())
+        if txt and fs > best_fs:
+            best, best_fs = txt, fs
+    return best
+
+
+def _annotate_deck_svgs(deck_src):
+    """Lisää jokaiseen dia-SVG:hen saavutettavuussemantiikka (role + <title>).
+
+    Diat ovat käsin ladottua SVG:tä ilman semantiikkaa; ruudunlukijalle
+    absoluuttisesti sijoitetut tekstinpätkät ovat sekava lukujärjestys, joten
+    dia nimetään otsikollaan ja sisältö vastaa oppitunnin leipätekstiä.
+    """
+    parts = deck_src.split('</svg>')
+    total = len(parts) - 1 if len(parts) > 1 else 0
+    out = []
+    num = 0
+    for part in parts:
+        m = _SVG_OPEN_RE.search(part)
+        if m is None or 'role=' in m.group(0) or 'aria-hidden' in m.group(0):
+            out.append(part)
+            continue
+        num += 1
+        open_tag, body = m.group(0), part[m.end():]
+        title = _slide_title(body)
+        if title:
+            new_open = (open_tag[:-1] + ' role="img">'
+                        + f'<title>Dia {num}/{total}: {title}</title>')
+        else:
+            new_open = open_tag[:-1] + ' aria-hidden="true">'
+        out.append(part[:m.start()] + new_open + body)
+    return '</svg>'.join(out)
+
+
 def _deck_html(deck_src):
     return (
         '<div class="deck-wrap">'
         '<div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span>'
         '<button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" '
         'onclick="deckFull(this)">⛶ Koko näyttö</button></div>'
-        '<div class="deck">' + deck_src + '</div>'
+        '<div class="deck">' + _annotate_deck_svgs(deck_src) + '</div>'
         '</div>'
     )
 
