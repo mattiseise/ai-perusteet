@@ -1,20 +1,22 @@
 # AI · Perusteet — työkirja
 
-Tämä työkirja on henkilökohtainen työjälkesi: tallenna tänne promptisi, kokeiden tulokset, lähteet ja tekemäsi korjaukset, koska kurssisivusto ei tallenna niitä puolestasi. Voit täyttää tiedostoa tekstieditorissa tai tekstinkäsittelyohjelmassa ja tulostaa sen PDF:ksi.
+Tämä työkirja on kurssin henkilökohtainen työdokumenttisi. Tallenna siihen promptisi, kokeilujesi tulokset, käyttämäsi lähteet ja tekemäsi korjaukset, sillä kurssisivusto ei säilytä niitä puolestasi.
 
-Älä tallenna työkirjaan muiden ihmisten henkilötietoja tai luottamuksellista aineistoa — sama periaate, jonka opit kurssilla tekoälypalveluiden käytöstä, koskee myös omia muistiinpanojasi.
+Voit täyttää työkirjaa millä tahansa tekstieditorilla tai tekstinkäsittelyohjelmalla ja tallentaa sen lopuksi PDF-muotoon.
 
-Nimi tai oma tunniste: ____________________
+## Nimi tai oma tunniste
 
-*Jos palautat työkirjan opettajalle tai oppilaitokselle, nimestä näkyy, kenen työ on kyseessä. Itsenäisenä opiskelijana voit jättää kohdan tyhjäksi.*
+Jos palautat työkirjan opettajalle tai oppilaitokselle, kirjoita tähän nimesi tai muu sovittu tunniste. Jos suoritat kurssin itsenäisesti, voit jättää kohdan tyhjäksi.
+
+Nimi tai tunniste: ____________________
 
 ## Oma reittini
 
-Kurssin tehtävissä valitset itse, millaisiin tilanteisiin sovellat oppimaasi. Kirjaa valintasi tähän kerran, niin sinun ei tarvitse miettiä niitä jokaisen tehtävän kohdalla uudelleen — ja lukija näkee yhdellä silmäyksellä, miten teit kurssin.
+Kurssin tehtävissä sovellat opittuja asioita itse valitsemaasi tilanteeseen. Tee valinnat tähän kerran kurssin alussa. Näin voit käyttää samaa lähtökohtaa kaikissa tehtävissä, ja samalla lukija näkee, millaisessa ympäristössä olet tehnyt harjoitukset.
 
-- Konteksti, johon sovellan oppimaani (arki tai harrastus / opiskelu / työelämän rooliskenaario):
-- Työkalu, jolla teen kokeet (saatavilla oleva chat / annettu esimerkkitulos / dokumentoitu kuivaharjoittelu ilman tiliä):
-- Minne tallennan tämän työkirjan ja tuotokseni:
+- Sovellan tehtäviä seuraavaan ympäristöön (arki tai harrastus / opiskelu / työelämän rooliskenaario):
+- Työkalu, jolla teen harjoitukset (esim. tekoälychat, annettu esimerkkitulos tai dokumentoitu kuivaharjoittelu):
+- Minne tallennan tämän työkirjan ja muut kurssin tuotokset:
 
 ## Todistusaineistot 1–3 — teoria
 

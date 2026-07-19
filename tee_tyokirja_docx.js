@@ -28,13 +28,17 @@ const MONO = 'Helvetica Neue';
 const CONTENT_W = 9026; // A4 - 2x1440 marginaalit
 
 // --- apurit ---------------------------------------------------------------
+// Sivutus: keepNext estää otsikoita ja kenttäotsikoita jäämästä yksin sivun
+// loppuun; vastauslaatikoiden rivit ovat cantSplit (eivät katkea sivunvaihdossa).
 const kicker = (text, color = BLUE) => new Paragraph({
+  keepNext: true,
   spacing: { before: 60, after: 40 },
   children: [new TextRun({ text, font: MONO, size: 15, color, characterSpacing: 30 })],
 });
 
 const h2 = (text, color) => new Paragraph({
   heading: HeadingLevel.HEADING_1,
+  keepNext: true,
   spacing: { before: 320, after: 60 },
   border: { left: { style: BorderStyle.SINGLE, size: 24, color, space: 12 } },
   children: [new TextRun({ text, font: SANS, size: 30, bold: true, color: DARK })],
@@ -42,6 +46,7 @@ const h2 = (text, color) => new Paragraph({
 
 const h3 = (text, color) => new Paragraph({
   heading: HeadingLevel.HEADING_2,
+  keepNext: true,
   spacing: { before: 240, after: 40 },
   children: [new TextRun({ text, font: SANS, size: 24, bold: true, color })],
 });
@@ -77,8 +82,10 @@ const infoBox = (text) => new Table({
   })] })],
 });
 
-// Täytettävä kenttä: lihavoitu label
+// Täytettävä kenttä: lihavoitu label (keepNext: pysyy samalla sivulla laatikkonsa kanssa)
 const field = (label) => new Paragraph({
+  keepNext: true,
+  keepLines: true,
   spacing: { before: 160, after: 80 },
   children: [new TextRun({ text: label, font: SANS, size: 21, bold: true, color: DARK })],
 });
@@ -101,7 +108,7 @@ const answerBox = (lines = 1) => {
       right: { style: BorderStyle.SINGLE, size: 6, color: LINE },
       insideHorizontal: { style: BorderStyle.NONE }, insideVertical: { style: BorderStyle.NONE },
     },
-    rows: [new TableRow({ children: [new TableCell({
+    rows: [new TableRow({ cantSplit: true, children: [new TableCell({
       width: { size: CONTENT_W, type: WidthType.DXA },
       margins: { top: 100, bottom: 140, left: 140, right: 140 },
       children: paras,
@@ -128,7 +135,7 @@ const fillTable = (headers, emptyRows, colWidths) => {
   })});
   const rows = [headRow];
   for (let r = 0; r < emptyRows; r++) {
-    rows.push(new TableRow({ children: headers.map((_, i) => {
+    rows.push(new TableRow({ cantSplit: true, children: headers.map((_, i) => {
       const c = mkCell(' ', false); c.options.width = { size: colWidths[i], type: WidthType.DXA }; return c;
     })}));
   }
@@ -163,20 +170,20 @@ const children = [
     border: { left: { style: BorderStyle.SINGLE, size: 36, color: BLUE, space: 14 } },
     children: [new TextRun({ text: 'Työkirja', font: SANS, size: 64, bold: true, color: DARK })],
   }),
-  body('Tämä työkirja on henkilökohtainen työjälkesi: tallenna tänne promptisi, kokeiden tulokset, lähteet ja tekemäsi korjaukset, koska kurssisivusto ei tallenna niitä puolestasi. Voit täyttää tiedostoa tekstieditorissa tai tekstinkäsittelyohjelmassa ja tulostaa sen PDF:ksi.'),
-  infoBox('Älä tallenna työkirjaan muiden ihmisten henkilötietoja tai luottamuksellista aineistoa — sama periaate, jonka opit kurssilla tekoälypalveluiden käytöstä, koskee myös omia muistiinpanojasi.'),
-  spacer(160),
-  field('Nimi tai oma tunniste:'),
-  answerBox(1),
-  spacerP(),
-  note('Jos palautat työkirjan opettajalle tai oppilaitokselle, nimestä näkyy, kenen työ on kyseessä. Itsenäisenä opiskelijana voit jättää kohdan tyhjäksi.'),
+  body('Tämä työkirja on kurssin henkilökohtainen työdokumenttisi. Tallenna siihen promptisi, kokeilujesi tulokset, käyttämäsi lähteet ja tekemäsi korjaukset, sillä kurssisivusto ei säilytä niitä puolestasi.'),
+  body('Voit täyttää työkirjaa millä tahansa tekstieditorilla tai tekstinkäsittelyohjelmalla ja tallentaa sen lopuksi PDF-muotoon.'),
+
+  // Nimi tai oma tunniste
+  h2('Nimi tai oma tunniste', BLUE),
+  body('Jos palautat työkirjan opettajalle tai oppilaitokselle, kirjoita tähän nimesi tai muu sovittu tunniste. Jos suoritat kurssin itsenäisesti, voit jättää kohdan tyhjäksi.'),
+  ...fieldLines('Nimi tai tunniste:', 1),
 
   // Oma reittini
   h2('Oma reittini', BLUE),
-  body('Kurssin tehtävissä valitset itse, millaisiin tilanteisiin sovellat oppimaasi. Kirjaa valintasi tähän kerran, niin sinun ei tarvitse miettiä niitä jokaisen tehtävän kohdalla uudelleen — ja lukija näkee yhdellä silmäyksellä, miten teit kurssin.'),
-  ...fieldLines('Konteksti, johon sovellan oppimaani (arki tai harrastus / opiskelu / työelämän rooliskenaario):', 1),
-  ...fieldLines('Työkalu, jolla teen kokeet (saatavilla oleva chat / annettu esimerkkitulos / dokumentoitu kuivaharjoittelu ilman tiliä):', 1),
-  ...fieldLines('Minne tallennan tämän työkirjan ja tuotokseni:', 1),
+  body('Kurssin tehtävissä sovellat opittuja asioita itse valitsemaasi tilanteeseen. Tee valinnat tähän kerran kurssin alussa. Näin voit käyttää samaa lähtökohtaa kaikissa tehtävissä, ja samalla lukija näkee, millaisessa ympäristössä olet tehnyt harjoitukset.'),
+  ...fieldLines('Sovellan tehtäviä seuraavaan ympäristöön (arki tai harrastus / opiskelu / työelämän rooliskenaario):', 1),
+  ...fieldLines('Työkalu, jolla teen harjoitukset (esim. tekoälychat, annettu esimerkkitulos tai dokumentoitu kuivaharjoittelu):', 1),
+  ...fieldLines('Minne tallennan tämän työkirjan ja muut kurssin tuotokset:', 1),
 
   // OSA 1 — Teoria
   kicker('OSA 1 · TEORIA', BLUE),
