@@ -29,7 +29,7 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten **kuv
 
    1. Näytä opiskelijoille ongelman tekstikuvaus.
    2. Lähetä tekstikuvaus tekoälylle ilman kuvaa.
-   3. Käytä samaa kysymystä, jonka käytät myös toisessa testissä: `Mikä on tämän ongelman todennäköinen syy ja miten korjaan sen?`
+   3. Käytä samaa kysymystä kuin toisessa testissä: `Mikä on tämän ongelman todennäköinen syy ja miten korjaan sen?`
    4. Tallenna tai kopioi tekoälyn vastaus näkyviin vertailua varten.
    5. Kysy opiskelijoilta: **Kuinka hyödyllinen vastaus on? Antaako se tarkan ratkaisun vai jääkö se yleiselle tasolle?**
 3. **Toinen testi: teksti ja kuvakaappaus noin 5 minuuttia:**

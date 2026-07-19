@@ -1,10 +1,10 @@
 # Opettajavetoiset tehtävät — oppitunti 24
 
-## Aktiviteetti 0: Prompt injection livenä — murretaan botti yhdessä noin 15 minuuttia
+## Aktiviteetti 0: Promptihyökkäys livenä — murretaan botti yhdessä noin 15 minuuttia
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on näyttää opiskelijoille reaaliaikaisesti, kuinka tekoälyn ohjeistusta voidaan yrittää kiertää **prompt injection** -hyökkäyksellä. Opiskelijat ymmärtävät, miksi pelkkä ohjeistus ei riitä suojaamaan agenttia, vaan tarvitaan myös teknisiä ja prosessiin liittyviä **turvakerroksia**.
+Tehtävän tavoitteena on näyttää opiskelijoille käytännössä, kuinka tekoälyn ohjeistusta voidaan yrittää kiertää **promptihyökkäyksellä**. Opiskelijat ymmärtävät, miksi pelkkä ohjeistus ei riitä suojaamaan agenttia, vaan tarvitaan myös teknisiä ja prosessiin liittyviä **turvakerroksia**.
 
 **Opettajan painotus:** Korosta, että tässä aktiviteetissa ei opetella hyökkäämään järjestelmiä vastaan, vaan ymmärretään, miksi agenttien turvallinen suunnittelu on välttämätöntä. Tarkoitus on oppia tunnistamaan riskejä ja rakentamaan puolustuksia.
 
@@ -14,7 +14,7 @@ Aktiviteetin tavoitteena on näyttää opiskelijoille reaaliaikaisesti, kuinka t
 
 Kerro opiskelijoille:
 
-> **Prompt injection** tarkoittaa hyökkäystä, jossa käyttäjä yrittää saada tekoälyn unohtamaan alkuperäiset ohjeensa tai toimimaan niiden vastaisesti. Hyökkäys voi olla suora, piilotettu tai naamioitu esimerkiksi roolileikiksi, testiksi tai tarinaksi.
+> **Promptihyökkäys** tarkoittaa hyökkäystä, jossa käyttäjä yrittää saada tekoälyn unohtamaan alkuperäiset ohjeensa tai toimimaan niiden vastaisesti. Hyökkäys voi olla suora, piilotettu tai naamioitu esimerkiksi roolileikiksi, testiksi tai tarinaksi.
 
 ### Valmistelu
 
@@ -62,17 +62,17 @@ Kerro opiskelijoille:
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, mitä **prompt injection** tarkoittaa.
+- Opiskelijat ymmärtävät, mitä **promptihyökkäys** tarkoittaa.
 - Opiskelijat näkevät, että hyökkäys voi olla suora, roolinvaihtoon perustuva tai tarinaksi naamioitu.
 - Opiskelijat ymmärtävät, miksi agentti tarvitsee ohjeiden lisäksi turvakerroksia.
 
 ---
 
-## Aktiviteetti 1: Prompt injection -hyökkäykset noin 20 minuuttia
+## Aktiviteetti 1: Promptihyökkäykset noin 20 minuuttia
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on, että opiskelijat oppivat tunnistamaan erilaisia **prompt injection** -hyökkäyksiä ja suunnittelemaan niihin sopivia puolustuksia.
+Tehtävän tavoitteena on, että opiskelijat oppivat tunnistamaan erilaisia **promptihyökkäyksiä** ja suunnittelemaan niihin sopivia puolustuksia.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -80,7 +80,7 @@ Aktiviteetin tavoitteena on, että opiskelijat oppivat tunnistamaan erilaisia **
 
 Selitä opiskelijoille:
 
-> Prompt injection -hyökkäyksessä hyökkääjä piilottaa tai kirjoittaa komentoja käyttäjän viestiin. Agentti voi sekoittaa alkuperäisen ohjeistuksensa ja hyökkääjän komennon, jos sitä ei ole suojattu kunnolla.
+> Promptihyökkäyksessä hyökkääjä piilottaa tai kirjoittaa komentoja käyttäjän viestiin. Agentti voi sekoittaa alkuperäisen ohjeistuksensa ja hyökkääjän komennon, jos sitä ei ole suojattu kunnolla.
 
 ### Esittely: kolme hyökkäystyyppiä
 
@@ -120,7 +120,7 @@ Ryhmät esittelevät hyökkäyksen ja ehdottamansa puolustukset. Opettaja kokoaa
 
 ### Odotettu oppimistulos
 
-- Opiskelijat tunnistavat erilaisia **prompt injection** -hyökkäyksiä.
+- Opiskelijat tunnistavat erilaisia **promptihyökkäyksiä**.
 - Opiskelijat ymmärtävät, että hyökkäys voi olla myös piilotettu tai naamioitu.
 - Opiskelijat osaavat ehdottaa puolustuksia, kuten erittelyä, validointia, rajoituksia, lokitusta ja ihmisen hyväksyntää.
 
@@ -325,7 +325,7 @@ Ryhmät esittelevät valitsemansa tehtävän ja selittävät, miten neljä puolu
 
 ## Herättävät keskustelukysymykset
 
-- **Voiko prompt injection olla vaarallinen, vaikka agentti ei tekisi todellisia toimintoja?**
+- **Voiko promptihyökkäys olla vaarallinen, vaikka agentti ei tekisi todellisia toimintoja?**
 - **Miten tunnistat hallusinaation, jos se kuulostaa hyvin uskottavalta?**
 - **Onko minimioikeusperiaate aina mahdollinen? Mitä tehdään, jos agentti tarvitsee laajaa pääsyä?**
 - **Mikä puolustuskerros on tärkein riskialttiissa järjestelmässä?**
@@ -335,7 +335,7 @@ Ryhmät esittelevät valitsemansa tehtävän ja selittävät, miten neljä puolu
 
 Opettaja arvioi opiskelijoiden kykyä:
 
-- selittää, mitä **prompt injection** tarkoittaa,
+- selittää, mitä **promptihyökkäys** tarkoittaa,
 - tunnistaa suoria, piilotettuja ja manipuloivia hyökkäyksiä,
 - selittää, mitä **hallusinaatio** tarkoittaa ja miksi se on riski,
 - ehdottaa hallusinaatioiden ehkäisyyn sopivia keinoja,

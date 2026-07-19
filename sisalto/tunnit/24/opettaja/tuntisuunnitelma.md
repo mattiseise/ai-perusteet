@@ -10,7 +10,7 @@ Siksi agentin virhe tai siihen kohdistuva hyökkäys voi aiheuttaa todellista va
 
 Oppitunnissa käsitellään neljä keskeistä uhkaa:
 
-- **Prompt injection:** hyökkääjä piilottaa käskyn käyttäjän syötteeseen tai ulkoiseen dataan.
+- **Promptihyökkäys:** hyökkääjä piilottaa käskyn käyttäjän syötteeseen tai ulkoiseen dataan.
 - **Hallusinaatiot:** agentti keksii vakuuttavan kuuloisia mutta virheellisiä tosiasioita.
 - **Liian laajat oikeudet:** minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.
 - **Puutteellinen seuranta:** virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.
@@ -19,13 +19,13 @@ Oppitunnissa käsitellään neljä keskeistä uhkaa:
 
 ---
 
-## Prompt injection — kerroksittainen puolustus
+## Promptihyökkäys — kerroksittainen puolustus
 
-**Prompt injection** tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.
+**Promptihyökkäys** tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.
 
-Opiskelijamateriaalissa korostetaan, että prompt injection on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.
+Opiskelijamateriaalissa korostetaan, että promptihyökkäys on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.
 
-Prompt injectionin vaikutusta rajataan usealla toisiaan täydentävällä keinolla:
+Promptihyökkäyksen vaikutusta rajataan usealla toisiaan täydentävällä keinolla:
 
 1. **Epäluotettava data:** Merkitse käyttäjän syötteet ja ulkoinen sisältö dataksi, ei järjestelmän ohjeiksi. Tämä auttaa rakennetta, mutta ei takaa, että haitallinen ohje tunnistetaan.
 2. **Muodon validointi:** Tarkista kentät, tietotyypit, pituudet ja arvorajat. Validointi voi hylätä väärän rakenteen, mutta ei luotettavasti päätellä tekstin turvallisuutta.
@@ -122,11 +122,11 @@ Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Val
 
 ---
 
-## Epäonnistumisen pedagogiikka — Tehtävä 0: Prompt injection käytännössä
+## Epäonnistumisen pedagogiikka — Tehtävä 0: Promptihyökkäys käytännössä
 
 ### Miksi tämä tehtävä on tärkeä?
 
-Tehtävät 1–4 käsittelevät turvallisuutta analyyttisesti: opiskelija kuvittelee hyökkäyksen, suunnittelee puolustuksen ja arvioi riskejä. **Tehtävä 0** on erilainen, koska se on **kokemusperäinen**. Opiskelija kokeilee itse prompt injection -hyökkäystä ja näkee, miten helposti ohjeita voidaan yrittää kiertää.
+Tehtävät 1–4 käsittelevät turvallisuutta analyyttisesti: opiskelija kuvittelee hyökkäyksen, suunnittelee puolustuksen ja arvioi riskejä. **Tehtävä 0** on erilainen, koska se on **kokemusperäinen**. Opiskelija kokeilee itse promptihyökkäystä ja näkee, miten helposti ohjeita voidaan yrittää kiertää.
 
 Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta konkreettinen. Kun opiskelija näkee itse, että pelkkä ohjeistus ei riitä suojaamaan bottia, hän ymmärtää paremmin, miksi tarvitaan erittelyä, validointia, rajoituksia ja lokitusta.
 
@@ -141,7 +141,7 @@ Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta 
 ### Yleisiä väärinkäsityksiä
 
 **”Botti on turvallinen, koska sillä on ohjeet.”**
-Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Prompt injection voi yrittää ohittaa ne, ellei ympärillä ole erillisiä suojaavia rakenteita.
+Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Promptihyökkäys voi yrittää ohittaa ne, ellei ympärillä ole erillisiä suojaavia rakenteita.
 
 **”Oikeat järjestelmät ovat varmasti paremmin suojattuja.”**
 Korjaus: Tuotantojärjestelmissä voi olla lisäsuojauksia, mutta perusongelma on sama: kielimalli ei automaattisesti erota luotettavaa ohjeistusta epäluotettavasta syötteestä ilman selkeitä rakenteita ja tarkistuksia.
@@ -163,7 +163,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 
 Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteistä konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.
 
-1. **Prompt injection: hyökkäykset ja puolustus**
+1. **Promptihyökkäys: hyökkäykset ja puolustus**
    Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee suojaukset siltä varalta, ettei käskyä tunnisteta.
 2. **Hallusinaatiot: skenaariot ja ehkäisy**
    Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, varmuuskynnyksen tai tarkistusvaiheen.
@@ -181,7 +181,7 @@ Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteis
 | Yleinen virhe | Korjaava näkökulma |
 | --- | --- |
 | ”Turvallisuus voidaan lisätä lopuksi.” | Ei. Turvallisuus kuuluu suunnitteluun alusta alkaen. Oikeudet, validointi, lokitus ja palautuminen vaikuttavat koko työnkulun rakenteeseen. |
-| ”Isompi whitelist on parempi.” | Ei. Whitelist on turvallinen vain, jos se on rajattu. Mitä enemmän sallitaan, sitä suurempi on mahdollinen vahinko. |
+| ”Isompi sallittujen kohteiden luettelo on parempi.” | Ei. Sallittujen kohteiden luettelo on turvallinen vain, jos se on rajattu. Mitä enemmän sallitaan, sitä suurempi on mahdollinen vahinko. |
 | ”Hallusinaatio on harvinaista.” | Hallusinaatio on todellinen riski erityisesti silloin, kun agentti ei löydä tietoa mutta yrittää silti vastata. Siksi tarvitaan tietopohjaan ankkurointi ja tarkistusvaiheet. |
 | ”Lokit ovat vain vianselvitystä varten.” | Lokit ovat myös turvallisuuden ja vastuullisuuden väline. Ne auttavat havaitsemaan poikkeamat, todentamaan tapahtumat ja analysoimaan hyökkäyksiä. |
 | ”Jos agentti on hyödyllinen, sille kannattaa antaa laajat oikeudet.” | Ei. Hyödyllisyys ei tarkoita rajatonta pääsyä. Agentille annetaan vain se, mitä se tarvitsee tehtäväänsä, ja kriittiset toiminnot vaativat ihmisen hyväksynnän. |
@@ -193,7 +193,7 @@ Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteis
 Tämän oppitunnin jälkeen opiskelijan pitäisi pystyä kirjoittamaan oman lopputyönsä **Agentti: Turva** -pohjapiirros. Pohjapiirroksessa opiskelijan tulee kuvata ainakin seuraavat asiat:
 
 - **Suurimmat riskit:** mitä voi mennä pieleen, jos agentti toimii väärin tai joutuu hyökkäyksen kohteeksi?
-- **Prompt injection -suojaus:** miten käyttäjän syötteet ja ulkoinen data erotetaan agentin omista ohjeista?
+- **Promptihyökkäyksiltä suojautuminen:** miten käyttäjän syötteet ja ulkoinen data erotetaan agentin omista ohjeista?
 - **Hallusinaatioiden ehkäisy:** mihin tietopohjaan agentin vastaukset ankkuroidaan, ja milloin se ohjaa asian ihmiselle?
 - **Oikeudet:** mitä agentti saa lukea, kirjoittaa ja suorittaa?
 - **Lokitus:** mitä agentin toiminnasta tallennetaan?
@@ -214,20 +214,20 @@ Hyvä päätöskysymys tunnin loppuun:
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **uhkamalli ja kerroksittainen kontrollikartta**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+Tallennettava tuotos on **uhkamalli ja kerroksittainen suojauskeinokartta**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
 
 | Aika | Vaihe | Opettajan tehtävä |
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija yhdistää uhkan, toimivallan, kontrollin ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 25–65 min | Perustuotos | Oppija yhdistää uhkan, toimivallan, suojauskeinon ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 
-Oppija käyttää valmista uhkaskenaariota ja kontrollikortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+Oppija käyttää valmista uhkaskenaariota ja suojauskeinokortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
 
 ### Syventävä reitti
 
-Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden kontrollin pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.
+Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden suojauskeinon pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.

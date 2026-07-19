@@ -1,6 +1,6 @@
 # Rakennuspalikka 3 — Tietopohjan kuratointi
 
-**📌 Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *oman apuri-bottisi* Microsoft Copilotiin. Säilytä tämä työ huolellisesti.
+**Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -114,8 +114,8 @@ Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppit
 
 Kirjoita lopuksi 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä minun pitää muistaa, kun lataan dokumentit bottiin?"*
 
-> **💡 Miksi tämä on tärkeää:** Oppitunnilla 18 rakennettava botti tunnistetaan ammattimaiseksi juuri tietopohjan avulla. Yleinen tekoäly osaa puhua aiheesta yleisellä tasolla, mutta sinun bottisi tuntee oman aiheesi käytäntöjä, koska olet kuratoinut sille oikeat dokumentit. Tämä ero on koko rakennusprojektin ydin.
+> **Miksi tämä on tärkeää:** Tietopohja erottaa aiheeseen rajatun botin yleisestä tekoälypalvelusta. Kuratoitujen dokumenttien avulla botti voi vastata juuri oman aiheesi käytäntöjen perusteella.
 
-> **💡 Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.
+> **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.
 
 **3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17**

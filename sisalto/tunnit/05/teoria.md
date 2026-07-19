@@ -70,7 +70,7 @@ Tämä voi johtaa häiritseviin tilanteisiin. Olet saattanut sanoa alussa: "Vast
 
 Tiedon putoaminen voi myös muuttaa keskustelun sävyä. Jos olet aluksi "opiskelija, joka oppii", mutta 30 viestin jälkeen tämä rooli unohtuu, malli saattaa alkaa pitää sinua asiantuntijana ja antaa hyvin teknisiä vastauksia ilman selityksiä.
 
-> **Pysähdy hetkeksi:** Ajattele pitkää projektin debuggaamista. Mitä tärkeää tietoa malli voisi unohtaa niin, että se alkaisi antaa vääriä neuvoja?
+> **Pysähdy hetkeksi:** Ajattele pitkää projektin virheiden selvittämistä. Mitä tärkeää tietoa malli voisi unohtaa niin, että se alkaisi antaa vääriä neuvoja?
 
 ## Kuinka kontekstia tiivistetään, pilkotaan ja rakennetaan uudelleen
 
@@ -90,7 +90,7 @@ Kuvittele seuraava tilanne. Aloitat keskustelun tekoälyn kanssa ja annat selke�
 
 Ensimmäiset 10 vastausta ovat erinomaisia. Malli muistaa rajaukset, pitää tyylin vakavana ja kirjoittaa ajan kuvaukseen sopivasti.
 
-Mutta 25 viestin jälkeen kysyt: "Miten kohtaus jatkuu?" Malli kirjoittaa Ainon selailemaan puhelinta ja vaihtaa tyylin kepeäksi — koska se on unohtanut alkuperäisen rajauksesi. Se ei kerro, etteikö muista. Se ei sano "huomaa, etten enää muista alkuperäistä kontekstiasi". Se yksinkertaisesti vastaa parhaansa mukaan sillä tiedolla, joka sillä on jäljellä.
+Mutta 25 viestin jälkeen kysyt: ”Miten kohtaus jatkuu?” Malli kirjoittaa kohtauksen, jossa Aino selailee puhelinta, ja vaihtaa tyylin kepeäksi — koska se on unohtanut alkuperäisen rajauksesi. Se ei kerro, ettei enää muista. Se ei sano: ”Huomaa, etten enää muista alkuperäistä kontekstiasi.” Se vain vastaa parhaansa mukaan sillä tiedolla, joka sillä on jäljellä.
 
 Tämä on konteksti-ikkunan vaarallisin piirre: **malli ei kerro, kun se unohtaa**. Se ei anna virheilmoitusta. Se ei sano "konteksti on kadonnut". Se vain alkaa antaa vastauksia, jotka eivät enää noudata alkuperäisiä rajauksia.
 

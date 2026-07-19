@@ -25,15 +25,15 @@
 <p>Siksi agentin virhe tai siihen kohdistuva hyökkäys voi aiheuttaa todellista vahinkoa. Chatbotin väärä vastaus on usein vain harmillinen, mutta agentin väärä päätös voi käynnistää ketjureaktion: väärä hinta lähetetään asiakkaalle, asiakas ostaa tuotteen väärään hintaan, tietokantaan tallentuu virheellinen tieto ja seuraavat prosessit käyttävät sitä.</p>
 <p>Oppitunnissa käsitellään neljä keskeistä uhkaa:</p>
 <ul>
-<li><strong>Prompt injection:</strong> hyökkääjä piilottaa käskyn käyttäjän syötteeseen tai ulkoiseen dataan.</li>
+<li><strong>Promptihyökkäys:</strong> hyökkääjä piilottaa käskyn käyttäjän syötteeseen tai ulkoiseen dataan.</li>
 <li><strong>Hallusinaatiot:</strong> agentti keksii vakuuttavan kuuloisia mutta virheellisiä tosiasioita.</li>
 <li><strong>Liian laajat oikeudet:</strong> minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.</li>
 <li><strong>Puutteellinen seuranta:</strong> virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.</li>
 </ul>
-<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Prompt injection — kerroksittainen puolustus</h2></div><div class="task-card-body">
-<p><strong>Prompt injection</strong> tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.</p>
-<p>Opiskelijamateriaalissa korostetaan, että prompt injection on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.</p>
-<p>Prompt injectionin vaikutusta rajataan usealla toisiaan täydentävällä keinolla:</p>
+<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Promptihyökkäys — kerroksittainen puolustus</h2></div><div class="task-card-body">
+<p><strong>Promptihyökkäys</strong> tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.</p>
+<p>Opiskelijamateriaalissa korostetaan, että promptihyökkäys on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.</p>
+<p>Promptihyökkäyksen vaikutusta rajataan usealla toisiaan täydentävällä keinolla:</p>
 <ol>
 <li><strong>Epäluotettava data:</strong> Merkitse käyttäjän syötteet ja ulkoinen sisältö dataksi, ei järjestelmän ohjeiksi. Tämä auttaa rakennetta, mutta ei takaa, että haitallinen ohje tunnistetaan.</li>
 <li><strong>Muodon validointi:</strong> Tarkista kentät, tietotyypit, pituudet ja arvorajat. Validointi voi hylätä väärän rakenteen, mutta ei luotettavasti päätellä tekstin turvallisuutta.</li>
@@ -136,9 +136,9 @@
 </tr>
 </tbody>
 </table>
-<p>Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei tunnista luotettavasti kaikkia haitallisia ohjeita eikä poista rajoituksen tarvetta. Lokitus ei korvaa palautumissuunnitelmaa. Kaikki neljä kerrosta pienentävät yhdessä vahingon todennäköisyyttä ja vaikutusta, mutta mikään niistä ei anna täydellistä turvallisuustakuuta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Epäonnistumisen pedagogiikka — Tehtävä 0: Prompt injection käytännössä</h2></div><div class="task-card-body">
+<p>Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei tunnista luotettavasti kaikkia haitallisia ohjeita eikä poista rajoituksen tarvetta. Lokitus ei korvaa palautumissuunnitelmaa. Kaikki neljä kerrosta pienentävät yhdessä vahingon todennäköisyyttä ja vaikutusta, mutta mikään niistä ei anna täydellistä turvallisuustakuuta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Epäonnistumisen pedagogiikka — Tehtävä 0: Promptihyökkäys käytännössä</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Miksi tämä tehtävä on tärkeä?</h3></div><div class="task-card-body">
-<p>Tehtävät 1–4 käsittelevät turvallisuutta analyyttisesti: opiskelija kuvittelee hyökkäyksen, suunnittelee puolustuksen ja arvioi riskejä. <strong>Tehtävä 0</strong> on erilainen, koska se on <strong>kokemusperäinen</strong>. Opiskelija kokeilee itse prompt injection -hyökkäystä ja näkee, miten helposti ohjeita voidaan yrittää kiertää.</p>
+<p>Tehtävät 1–4 käsittelevät turvallisuutta analyyttisesti: opiskelija kuvittelee hyökkäyksen, suunnittelee puolustuksen ja arvioi riskejä. <strong>Tehtävä 0</strong> on erilainen, koska se on <strong>kokemusperäinen</strong>. Opiskelija kokeilee itse promptihyökkäystä ja näkee, miten helposti ohjeita voidaan yrittää kiertää.</p>
 <p>Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta konkreettinen. Kun opiskelija näkee itse, että pelkkä ohjeistus ei riitä suojaamaan bottia, hän ymmärtää paremmin, miksi tarvitaan erittelyä, validointia, rajoituksia ja lokitusta.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Fasilitointiohje</h3></div><div class="task-card-body">
 <ul>
@@ -150,7 +150,7 @@
 </ul>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Yleisiä väärinkäsityksiä</h3></div><div class="task-card-body">
 <p><strong>”Botti on turvallinen, koska sillä on ohjeet.”</strong><br />
-Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Prompt injection voi yrittää ohittaa ne, ellei ympärillä ole erillisiä suojaavia rakenteita.</p>
+Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Promptihyökkäys voi yrittää ohittaa ne, ellei ympärillä ole erillisiä suojaavia rakenteita.</p>
 <p><strong>”Oikeat järjestelmät ovat varmasti paremmin suojattuja.”</strong><br />
 Korjaus: Tuotantojärjestelmissä voi olla lisäsuojauksia, mutta perusongelma on sama: kielimalli ei automaattisesti erota luotettavaa ohjeistusta epäluotettavasta syötteestä ilman selkeitä rakenteita ja tarkistuksia.</p>
 <p><strong>”Tämä on hakkeriasia, eikä liity minuun.”</strong><br />
@@ -180,7 +180,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Harjoitukset</h2></div><div class="task-card-body">
 <p>Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteistä konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.</p>
 <ol>
-<li><strong>Prompt injection: hyökkäykset ja puolustus</strong><br />
+<li><strong>Promptihyökkäys: hyökkäykset ja puolustus</strong><br />
    Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee suojaukset siltä varalta, ettei käskyä tunnisteta.</li>
 <li><strong>Hallusinaatiot: skenaariot ja ehkäisy</strong><br />
    Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, varmuuskynnyksen tai tarkistusvaiheen.</li>
@@ -203,8 +203,8 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <td>Ei. Turvallisuus kuuluu suunnitteluun alusta alkaen. Oikeudet, validointi, lokitus ja palautuminen vaikuttavat koko työnkulun rakenteeseen.</td>
 </tr>
 <tr>
-<td>”Isompi whitelist on parempi.”</td>
-<td>Ei. Whitelist on turvallinen vain, jos se on rajattu. Mitä enemmän sallitaan, sitä suurempi on mahdollinen vahinko.</td>
+<td>”Isompi sallittujen kohteiden luettelo on parempi.”</td>
+<td>Ei. Sallittujen kohteiden luettelo on turvallinen vain, jos se on rajattu. Mitä enemmän sallitaan, sitä suurempi on mahdollinen vahinko.</td>
 </tr>
 <tr>
 <td>”Hallusinaatio on harvinaista.”</td>
@@ -223,7 +223,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p>Tämän oppitunnin jälkeen opiskelijan pitäisi pystyä kirjoittamaan oman lopputyönsä <strong>Agentti: Turva</strong> -pohjapiirros. Pohjapiirroksessa opiskelijan tulee kuvata ainakin seuraavat asiat:</p>
 <ul>
 <li><strong>Suurimmat riskit:</strong> mitä voi mennä pieleen, jos agentti toimii väärin tai joutuu hyökkäyksen kohteeksi?</li>
-<li><strong>Prompt injection -suojaus:</strong> miten käyttäjän syötteet ja ulkoinen data erotetaan agentin omista ohjeista?</li>
+<li><strong>Promptihyökkäyksiltä suojautuminen:</strong> miten käyttäjän syötteet ja ulkoinen data erotetaan agentin omista ohjeista?</li>
 <li><strong>Hallusinaatioiden ehkäisy:</strong> mihin tietopohjaan agentin vastaukset ankkuroidaan, ja milloin se ohjaa asian ihmiselle?</li>
 <li><strong>Oikeudet:</strong> mitä agentti saa lukea, kirjoittaa ja suorittaa?</li>
 <li><strong>Lokitus:</strong> mitä agentin toiminnasta tallennetaan?</li>
@@ -235,7 +235,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä olisi oman agenttisi pahin realistinen virhe? Miten estät sen, miten huomaat sen ja miten korjaat sen?</p>
 </blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
-<p>Tallennettava tuotos on <strong>uhkamalli ja kerroksittainen kontrollikartta</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+<p>Tallennettava tuotos on <strong>uhkamalli ja kerroksittainen suojauskeinokartta</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
 <table>
 <thead>
 <tr>
@@ -258,7 +258,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <tr>
 <td>25–65 min</td>
 <td>Perustuotos</td>
-<td>Oppija yhdistää uhkan, toimivallan, kontrollin ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+<td>Oppija yhdistää uhkan, toimivallan, suojauskeinon ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
 </tr>
 <tr>
 <td>65–80 min</td>
@@ -267,23 +267,23 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </tr>
 <tr>
 <td>80–90 min</td>
-<td>Tallennus ja exit ticket</td>
+<td>Tallennus ja lopputehtävä</td>
 <td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
 </tr>
 </tbody>
 </table>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
-<p>Oppija käyttää valmista uhkaskenaariota ja kontrollikortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
+<p>Oppija käyttää valmista uhkaskenaariota ja suojauskeinokortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
-<p>Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden kontrollin pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-24-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-24-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 24</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 0: Prompt injection livenä — murretaan botti yhdessä noin 15 minuuttia</h2></div><div class="task-card-body">
+<p>Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden suojauskeinon pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-24-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-24-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 24</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 0: Promptihyökkäys livenä — murretaan botti yhdessä noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on näyttää opiskelijoille reaaliaikaisesti, kuinka tekoälyn ohjeistusta voidaan yrittää kiertää <strong>prompt injection</strong> -hyökkäyksellä. Opiskelijat ymmärtävät, miksi pelkkä ohjeistus ei riitä suojaamaan agenttia, vaan tarvitaan myös teknisiä ja prosessiin liittyviä <strong>turvakerroksia</strong>.</p>
+<p>Tehtävän tavoitteena on näyttää opiskelijoille käytännössä, kuinka tekoälyn ohjeistusta voidaan yrittää kiertää <strong>promptihyökkäyksellä</strong>. Opiskelijat ymmärtävät, miksi pelkkä ohjeistus ei riitä suojaamaan agenttia, vaan tarvitaan myös teknisiä ja prosessiin liittyviä <strong>turvakerroksia</strong>.</p>
 <p><strong>Opettajan painotus:</strong> Korosta, että tässä aktiviteetissa ei opetella hyökkäämään järjestelmiä vastaan, vaan ymmärretään, miksi agenttien turvallinen suunnittelu on välttämätöntä. Tarkoitus on oppia tunnistamaan riskejä ja rakentamaan puolustuksia.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Kerro opiskelijoille:</p>
-<blockquote class="pause"><p><strong>Prompt injection</strong> tarkoittaa hyökkäystä, jossa käyttäjä yrittää saada tekoälyn unohtamaan alkuperäiset ohjeensa tai toimimaan niiden vastaisesti. Hyökkäys voi olla suora, piilotettu tai naamioitu esimerkiksi roolileikiksi, testiksi tai tarinaksi.</p>
+<blockquote class="pause"><p><strong>Promptihyökkäys</strong> tarkoittaa hyökkäystä, jossa käyttäjä yrittää saada tekoälyn unohtamaan alkuperäiset ohjeensa tai toimimaan niiden vastaisesti. Hyökkäys voi olla suora, piilotettu tai naamioitu esimerkiksi roolileikiksi, testiksi tai tarinaksi.</p>
 </blockquote>
 <h3>Valmistelu</h3>
 <ol>
@@ -319,16 +319,16 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </blockquote>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat ymmärtävät, mitä <strong>prompt injection</strong> tarkoittaa.</li>
+<li>Opiskelijat ymmärtävät, mitä <strong>promptihyökkäys</strong> tarkoittaa.</li>
 <li>Opiskelijat näkevät, että hyökkäys voi olla suora, roolinvaihtoon perustuva tai tarinaksi naamioitu.</li>
 <li>Opiskelijat ymmärtävät, miksi agentti tarvitsee ohjeiden lisäksi turvakerroksia.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Prompt injection -hyökkäykset noin 20 minuuttia</h2></div><div class="task-card-body">
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Promptihyökkäykset noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on, että opiskelijat oppivat tunnistamaan erilaisia <strong>prompt injection</strong> -hyökkäyksiä ja suunnittelemaan niihin sopivia puolustuksia.</p>
+<p>Tehtävän tavoitteena on, että opiskelijat oppivat tunnistamaan erilaisia <strong>promptihyökkäyksiä</strong> ja suunnittelemaan niihin sopivia puolustuksia.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Selitä opiskelijoille:</p>
-<blockquote class="pause"><p>Prompt injection -hyökkäyksessä hyökkääjä piilottaa tai kirjoittaa komentoja käyttäjän viestiin. Agentti voi sekoittaa alkuperäisen ohjeistuksensa ja hyökkääjän komennon, jos sitä ei ole suojattu kunnolla.</p>
+<blockquote class="pause"><p>Promptihyökkäyksessä hyökkääjä piilottaa tai kirjoittaa komentoja käyttäjän viestiin. Agentti voi sekoittaa alkuperäisen ohjeistuksensa ja hyökkääjän komennon, jos sitä ei ole suojattu kunnolla.</p>
 </blockquote>
 <h3>Esittely: kolme hyökkäystyyppiä</h3>
 <table>
@@ -396,7 +396,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat ehdottavat vain parempaa promptia, kysy: “Mitä tapahtuu, jos käyttäjän syöte ohittaa promptin? Mikä tekninen tai prosessiin liittyvä turvakerros estää vahingon?”</p>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat tunnistavat erilaisia <strong>prompt injection</strong> -hyökkäyksiä.</li>
+<li>Opiskelijat tunnistavat erilaisia <strong>promptihyökkäyksiä</strong>.</li>
 <li>Opiskelijat ymmärtävät, että hyökkäys voi olla myös piilotettu tai naamioitu.</li>
 <li>Opiskelijat osaavat ehdottaa puolustuksia, kuten erittelyä, validointia, rajoituksia, lokitusta ja ihmisen hyväksyntää.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Hallusinaatiot noin 20 minuuttia</h2></div><div class="task-card-body">
@@ -664,7 +664,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <li>Opiskelijat osaavat suunnitella puolustuskerrokset konkreettiseen agenttitehtävään.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Herättävät keskustelukysymykset</h2></div><div class="task-card-body">
 <ul>
-<li><strong>Voiko prompt injection olla vaarallinen, vaikka agentti ei tekisi todellisia toimintoja?</strong></li>
+<li><strong>Voiko promptihyökkäys olla vaarallinen, vaikka agentti ei tekisi todellisia toimintoja?</strong></li>
 <li><strong>Miten tunnistat hallusinaation, jos se kuulostaa hyvin uskottavalta?</strong></li>
 <li><strong>Onko minimioikeusperiaate aina mahdollinen? Mitä tehdään, jos agentti tarvitsee laajaa pääsyä?</strong></li>
 <li><strong>Mikä puolustuskerros on tärkein riskialttiissa järjestelmässä?</strong></li>
@@ -673,7 +673,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
 <p>Opettaja arvioi opiskelijoiden kykyä:</p>
 <ul>
-<li>selittää, mitä <strong>prompt injection</strong> tarkoittaa,</li>
+<li>selittää, mitä <strong>promptihyökkäys</strong> tarkoittaa,</li>
 <li>tunnistaa suoria, piilotettuja ja manipuloivia hyökkäyksiä,</li>
 <li>selittää, mitä <strong>hallusinaatio</strong> tarkoittaa ja miksi se on riski,</li>
 <li>ehdottaa hallusinaatioiden ehkäisyyn sopivia keinoja,</li>

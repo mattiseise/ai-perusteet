@@ -18,7 +18,7 @@ Google on kehittänyt oman tekoälymallinsa, jota kutsutaan **Geminiksi**. Se ki
 
 Google tekee Geministä eri versioita samaan tapaan kuin autotehtaat tekevät eri automalleja eri tarpeisiin.
 
-Geministä on saatavilla esimerkiksi **Gemini Flash**, joka on nopea versio ja sopii hyvin kevyisiin ja nopeisiin tehtäviin. Lisäksi on **Gemini Pro**, joka pyrkii tasapainottamaan nopeuden ja kyvykkyyden.
+Geministä on saatavilla esimerkiksi **Gemini Flash**, joka on nopea versio ja sopii hyvin kevyisiin ja nopeisiin tehtäviin. Lisäksi on **Gemini Pro**, joka pyrkii tasapainottamaan nopeuden ja suorituskyvyn.
 
 Kumpi on parempi? Se riippuu siitä, mitä haluat tehdä. Jos tarvitset nopeutta, valinta voi olla eri kuin silloin, kun tarvitset mahdollisimman tarkkaa ja perusteellista vastausta.
 
@@ -129,7 +129,7 @@ Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetis
     <div class="l11-me">SINÄ<span class="l11-doc">”oppilaan essee.txt”</span></div>
     <i class="l11-pkt l11-k1"></i><i class="l11-pkt l11-k2"></i><i class="l11-pkt l11-k3"></i>
     <div class="l11-dst l11-d1"><b>Pilvipalvelin · USA</b><span class="l11-sub">käyttöehdot ja asetukset ratkaisevat</span><span class="l11-vd l11-v1">tarkista ennen käyttöä</span></div>
-    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">⚠ GDPR-riski</span></div>
+    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">GDPR-riski</span></div>
     <div class="l11-dst l11-d3"><b>Oma kone · paikallinen malli</b><span class="l11-sub">data ei poistu laitteeltasi</span><span class="l11-vd l11-v3">✓ pysyy hallussasi</span></div>
   </div>
 </div>

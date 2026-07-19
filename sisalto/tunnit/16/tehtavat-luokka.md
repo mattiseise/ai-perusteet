@@ -2,7 +2,7 @@
 
 > Valitse yksi kategoria: kuva, musiikki, video tai koodi. Voit käyttää saatavilla olevaa työkalua tai analysoida opettajan antamaa tulosta ilman tiliä. Kaikkea ei tarvitse kokeilla.
 
-## Tehtävä 16.1 — Valitse, kokeile ja arvioi 🟢 SUOSITELTU
+## Tehtävä 16.1 — Valitse, kokeile ja arvioi (suositeltu)
 
 **Tavoite:** Perustele yhden työkalukategorian valinta, dokumentoi syöte ja tuotos, tee yksi iterointi ja tarkista vastuullisuus.
 
@@ -57,9 +57,9 @@ Avaa ChatGPT, Claude tai Copilot uudessa keskustelussa ja anna sille tehtäväks
 ```
 Toimit minulle eettisen sparrauksen kumppanina. Tuotin juuri
 kuvageneraattorilla kaksi versiota kuvasta aiheesta [aihe]. Kysy
-minulta 3–4 kysymystä, jotka pakottavat minua pohtimaan eettisesti
-tätä tekoa. Älä esitä mielipiteitäsi — esitä vain kysymykset, joiden
-kautta minun on otettava itse kantaa. Käsittele esimerkiksi:
+minulta 3–4 kysymystä, jotka auttavat minua arvioimaan tekoa
+eettisesti. Älä esitä mielipiteitäsi, vaan kysy asioista, joihin
+minun pitää ottaa itse kantaa. Käsittele esimerkiksi:
 
 - Mistä kuvageneraattori on oppinut tuottamaan tällaista tyyliä?
 - Kenen työtä se mahdollisesti jäljittelee?
@@ -81,6 +81,6 @@ Palauta tai tallenna yksi sivu, jossa näkyvät valintaperuste, tarkka prompti t
 
 Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa vastuullisen käyttäjän vastuuta.
 
-> 💡 **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi *oma apuri-botti* ei ole kuvageneraattori, mutta sama eettinen ajattelu pätee suoraan: **mistä botin tietopohja on peräisin? Mitä rajat sen tekemiseen? Mitä käyttäjälle kerrotaan?** Tunnin 14 määrittelydokumentissa (Rakennuspalikka 2) *rajat* ovat yksi kuudesta osasta. Kun olet itse joutunut pohtimaan kuvageneraattorin etiikkaa, ymmärrät paremmin, miksi rajat ovat osa botin *suunnittelua*, eivätkä jotain "lisättävää loppuun".
+> **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi oma apuri-botti ei ole kuvageneraattori, mutta sama eettinen ajattelu koskee myös sitä: mistä tietopohja on peräisin, mikä rajaa botin toimintaa ja mitä käyttäjälle kerrotaan? Rajat kuuluvat botin suunnitteluun alusta lähtien.
 
-**Eettinen vastuu ei synny lukemalla — se syntyy kun joudut itse päättämään.**
+**Vastuullinen toiminta edellyttää, että arvioit vaihtoehdot ja perustelet oman päätöksesi.**

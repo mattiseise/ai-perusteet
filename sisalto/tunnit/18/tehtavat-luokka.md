@@ -35,7 +35,7 @@ Olet kerännyt kolme rakennuspalikkaa aiemmilla oppitunneilla. Käytä niitä bo
 - **Rakennuspalikka 2** (oppitunti 14, botin määrittely) antaa pohjan suunnittelulle. Persoona, kohderyhmä, rajat, tavoitteet — kaikki valmiina.
 - **Rakennuspalikka 3** (oppitunti 15, tietopohjan kuratointi) antaa pohjan tietopohjalle. Tiedät jo, millainen materiaali toimii ja mikä ei.
 
-> 💡 **Vinkki:** *"Tässä on keräämäni rakennuspalikat, käytä niitä bottini ohjeen ja rakenteen pohjana… <liitä rakennuspalikkasi>"*
+> **Vinkki:** *"Tässä ovat keräämäni rakennuspalikat. Käytä niitä bottini ohjeen ja rakenteen pohjana: <liitä rakennuspalikkasi>"*
 
 ## Bottisi vaatimukset
 
@@ -44,7 +44,7 @@ Lopullisen botin tulee täyttää seuraavat kriteerit:
 1. **Selkeä rooli ja kohderyhmä.** Botti tietää keneltä se saa kysymyksiä (oman aiheesi käyttäjältä) ja mitä se tekee (auttaa tehtävän tekemisessä).
 2. **Strukturoitu työnkulku.** Botti ohjaa käyttäjää tehtävän vaiheiden läpi järjestelmällisesti (lähtötilanne → tavoite → vaihtoehdot → valinnat → lopputulos).
 3. **Aiheesi termit ja näkökulmat.** Botti puhuu oman aiheesi kieltä — salitreenin botille eri termit kuin kerhon FAQ-botille. Tämä erottaa sinun bottisi yleisestä avustajasta.
-4. **Selkeät rajat.** Botti tietää mitä se EI tee — esimerkiksi se ei tee koko hommaa käyttäjän puolesta, ei anna terveys- tai oikeudellisia neuvoja, ei toimi muissa aiheissa. Rajat ovat osa huolellisuutta.
+4. **Selkeät rajat.** Botti tietää mitä se EI tee — esimerkiksi se ei tee koko tehtävää käyttäjän puolesta, ei anna terveys- tai oikeudellisia neuvoja, ei toimi muissa aiheissa. Rajat ovat osa huolellisuutta.
 5. **Testattu kolmella testityypillä.** Normaali, kielteinen ja reunatapaus sekä korjaus ja uudelleentesti on dokumentoitu.
 
 ## Mitä palautat?
@@ -67,7 +67,7 @@ Pidä 2–3 minuutin esittely. Esittelyssä:
 - Näytä yksi ennen–jälkeen-korjaus
 - Perustele yksi rajaus ja vastaa yhteen jatkokysymykseen
 
-Esitys voi olla live ryhmän edessä, nauhoitettu video tai jaettu kuvakaappauskooste — valitse muoto, joka sopii sinulle.
+Esitys voi olla suora esitys ryhmälle, tallennettu video tai kuvakaappauskooste. Valitse itsellesi sopiva muoto.
 
 ## Jos et tiedä mistä aloittaa
 

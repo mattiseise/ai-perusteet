@@ -1,10 +1,10 @@
 # Sanasto
 
-## Custom GPT (räätälöity botti)
+## Räätälöity botti (Custom GPT)
 
-ChatGPT:n erikoisversio, joka on konfiguroitu tiettyyn tarkoitukseen. Custom GPT:llä on oma persoona, ohjeet, rajaukset ja mahdollisesti tietokanta.
+Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Räätälöidyllä botilla on oma rooli, ohjeet, rajaukset ja mahdollisesti tietopohja.
 
-## System prompt (järjestelmäprompti)
+## Järjestelmäprompti
 
 Piilossa oleva ohje, joka määrittää botin käyttäytymisen. Järjestelmäprompti kertoo botille, kuka se on, miten se vastaa ja mitä rajoituksia sillä on. Käyttäjä ei näe järjestelmäpromptia.
 
@@ -28,7 +28,7 @@ Selkeät rajat sille, mitä botti ei saa tehdä. Esimerkiksi: "Älä koskaan pyy
 
 Tiedostot tai dokumentit, jotka botti saa käyttöönsä. Tietokannan avulla botti tuntee esimerkiksi yrityksen ohjeet, tuotekuvaukset tai usein kysytyt kysymykset.
 
-## Persoona (persona)
+## Persoona
 
 Botin "luonne" — miten se puhuu, mitä sävyjä kielessä käyttää ja miten se suhtautuu käyttäjään. Persoona tekee botista inhimillisemmän ja helpommin lähestyttävän.
 

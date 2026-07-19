@@ -36,7 +36,7 @@ Tarkka, yksityiskohtainen kuvaus siitä, mitä haluat. Esimerkiksi: "Haluan esse
 
 Tarkistus siitä, että vastaus todella auttaa sinua. Ei riitä, että vastaus on kiinnostava — sen pitää olla käyttökelpoinen omassa tilanteessasi.
 
-## Edge-case
+## Reunatapaus
 
 Epätavallinen tai poikkeuksellinen tilanne. Esimerkiksi: karkausvuosi, perhenimi, jonka kirjoituksessa on väliviiva, tai erittäin pitkä sähköpostiosoite.
 

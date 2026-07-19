@@ -16,7 +16,7 @@ Ymmärtää, miksi tekoälyn koulutusdata herättää kysymyksiä tekijänoikeuk
    - Miltä sinusta tuntuisi, jos tekoäly oppisi sinun töistäsi ilman lupaa?
    - Mitä vastuullisena käyttäjänä kannattaa pitää mielessä, kun käytät tekoälyä?
 
-*Halutessasi syvemmälle: tutustu todelliseen oikeustapaukseen (esim. kuvataiteilijat vs. kuvageneraattorit, 2023) ja katso, mitä molemmat puolet perustelevat.*
+*Jos haluat perehtyä aiheeseen syvemmin, tutustu todelliseen oikeustapaukseen (esimerkiksi kuvataiteilijat ja kuvageneraattorit, 2023) ja tarkastele osapuolten perusteluja.*
 
 ---
 

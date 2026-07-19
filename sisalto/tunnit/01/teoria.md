@@ -69,7 +69,7 @@ Tällainen koneoppimismalli ei tarvitse jokaista sääntöä erikseen kirjoitett
       <div class="l01-sum"><span class="l01-eqbox"><i class="l01-eq eA">0,62 + 0,08 + 0,05 + 0,18 = <b>0,93</b></i><i class="l01-eq eB">0,04 + 0,31 + 0,27 + 0,29 = <b>0,91</b></i></span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">93 %</b><b class="l01-pct pB">91 %</b></div>
       <span class="l01-verd l01-v2a">✓ hälytys — kynnys 80 % ylittyi</span><span class="l01-verd l01-v2b">✓ hälytys — kynnys 80 % ylittyi</span>
     </div>
-    <span class="l01-miss">⚠ petos pääsi läpi</span>
+    <span class="l01-miss">petos pääsi läpi</span>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa: ison summan se nappaa, mutta oudon pienen tapauksen se päästää läpi. Opittu malli antaa jokaiselle signaalille painon ja laskee painot yhteen todennäköisyydeksi (palkkien pituudet = painot) — kun kynnys ylittyy, se hälyttää, vaikka mikään yksittäinen raja ei ylittyisi.</figcaption></figure>

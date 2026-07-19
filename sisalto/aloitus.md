@@ -4,7 +4,7 @@ AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn peruste
 
 ## Mitä tarvitset?
 
-Tavallinen selain ja mahdollisuus tehdä muistiinpanoja riittävät. Voit opiskella ilman maksullisia palveluja. Osa kokeista onnistuu maksuttomalla chat-palvelulla, mutta palvelun käyttö voi edellyttää tiliä ja sen ehdot voivat muuttua. Jos et halua luoda tiliä, tee sama koe annetulla esimerkkituloksella tai dokumentoituna kuivaharjoitteluna. Arvioinnissa ratkaisee ymmärrys ja näkyvä työprosessi, ei tietty tuote.
+Tavallinen selain ja mahdollisuus tehdä muistiinpanoja riittävät. Voit opiskella ilman maksullisia palveluja. Osa kokeista onnistuu maksuttomalla chatpalvelulla, mutta palvelun käyttö voi edellyttää tiliä ja sen ehdot voivat muuttua. Jos et halua luoda tiliä, tee sama koe annetulla esimerkkituloksella tai dokumentoimalla kokeen vaiheet ilman palvelua. Arvioinnissa ratkaisee ymmärrys ja näkyvä työprosessi, ei tietty tuote.
 
 Kurssin 27 osaa vastaavat luokkakäytössä noin 27:ää 90 minuutin oppituntia. Itsenäisessä opiskelussa ajankäyttö riippuu siitä, kuinka monta kokeilua ja syventävää tehtävää teet. Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta.
 

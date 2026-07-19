@@ -10,7 +10,7 @@ Tekoälymalli, jonka voit ladata ja ajaa omalla tietokoneella. Voit nähdä kood
 
 ## Suljettu malli
 
-Tekoälymalli, jonka käytät internetin kautta. Et näe koodia, vaan vain kysyt ja saat vastauksen. Esimerkiksi ChatGPT, Claude ja Gemini.
+Tekoälymalli, jota käytät internetissä toimivan palvelun välityksellä. Et käsittele mallin koodia, vaan annat sille pyyntöjä käyttöliittymässä. Esimerkkejä ovat ChatGPT, Claude ja Gemini.
 
 ## Pilvipalvelu
 

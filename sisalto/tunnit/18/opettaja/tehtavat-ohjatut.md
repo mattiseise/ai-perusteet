@@ -22,17 +22,11 @@ Käynnistä oppitunti selkeästi ja energisesti. Opiskelijat saattavat olla herm
 
 **Mitä sanoa:**
 
-"Tänään on iso päivä. Viimeistelet botin, joka olet rakentanut usean viikon ajan. Esittelet sen. Arvioit muita. Ja pohdit, mitä opit. Neljä osaa, noin 90 minuuttia. Ei paineita, mutta oikeasti tekemistä.
-
-Ensin testaat botin huolella. Oikea käyttäjä tekee outoja asioita — hän kysyy tyhjää, hän pyytää jotain täysin toisenlaista, hän vastaa 'en tiedä' kaikkiin. Testaus tarkoittaa sitä. Dokumentoi kaikki.
-
-Sitten valmistelet esittelyä. Sinulla ei ole PowerPointia. Sinulla on botti ja se, mitä sanot. Harjoittele niin, että se sujuu.
-
-Sitten esittelet muille. Muut kuuntelevat ja antavat rakentavaa palautetta. Et kuule 'että on paska' — kuulet 'tämä on hyvin ja tämä voisi olla paremmin'.
-
-Lopuksi kirjoitat, mitä opit. Rehellisesti.
-
-Aloitetaan?"
+> Tänään viimeistelet usean viikon aikana rakentamasi botin. Tunti jakautuu neljään osaan: testaukseen, esittelyn valmisteluun, vertaispalautteeseen ja oman oppimisen pohdintaan.
+>
+> Testaa bottia myös odottamattomilla syötteillä ja dokumentoi tulokset. Valmistele sitten lyhyt esittely, jossa näytät botin toiminnan ja kerrot sen tärkeimmistä ratkaisuista. Muut kuuntelevat ja antavat täsmällistä, rakentavaa palautetta: mikä toimii ja mitä voisi vielä parantaa.
+>
+> Lopuksi kirjoitat rehellisesti, mitä opit. Aloitetaan.
 
 **Tekniikka:** Varmista, että kaikilla on pääsy omaan bottiinsa. Tarkista internet-yhteys. Varmista, että jokainen ymmärtää, mitä tehdään.
 
@@ -44,9 +38,9 @@ Opiskelijat tekevät tehtävää 18.1. Sinulla on kaksi roolia: fasilitoija ja k
 
 **Fasilitoijana:** Kierrä huoneessa ja katso, miten opiskelijat testaavat. Kysy: "Mitä nyt testataan?" — haluat nähdä, että he ymmärtävät. Jos joku on jumissa, kysy: "Mistä aloitat? Mitä botti tekee hyvin?"
 
-**Kannustajana:** Jotkut opiskelijat voivat ajatella "bottini on täydellinen, miksi testata?" Vastaa: "Mikään ei ole täydellinen. Testaus osoittaa, mitä voidaan parantaa." Jotkut saattavat löytää ongelmia ja stressaantua. Vastaa: "Hyvä! Juuri nämä ongelmat auttavat sinua parantamaan."
+**Kannustajana:** Opiskelija voi ajatella: ”Bottini on valmis, miksi sitä pitäisi testata?” Kerro, että testaus tekee kehittämiskohteet näkyviksi. Jos opiskelija huolestuu löytämästään virheestä, muistuta, että havaittu virhe on hyödyllinen: sen voi dokumentoida, korjata ja testata uudelleen.
 
-**Tekninen apu:** Jos botti on hidastunut tai kaatuu, ehdota: "Kopioi system prompt, liitä se uudelleen, kokeile uudestaan." Jos opiskelija ei osaa luoda negatiivista testiä, ota esimerkki: "Kysy botilta jotain, joka ei liity sen aiheeseen. Esimerkiksi 'Kirjoita runo'."
+**Tekninen apu:** Jos botti on hidastunut tai kaatuu, ehdota: "Kopioi järjestelmäprompti, liitä se uudelleen, kokeile uudestaan." Jos opiskelija ei osaa luoda negatiivista testiä, ota esimerkki: "Kysy botilta jotain, joka ei liity sen aiheeseen. Esimerkiksi 'Kirjoita runo'."
 
 **Lopussa:** Kerää muutamat esimerkit ja kysy: "Kuka löysi mielenkiintoisen ongelman?" Kerro muille, miten sitä korjattiin. Tämä normalisoi ongelmien löytämisen.
 
@@ -58,9 +52,9 @@ Opiskelijat tekevät tehtävää 18.2. Käsikirjoitus on kriittinen.
 
 **Mitä teet:** Kierrä ja lue käsikirjoitukset, kun ne kirjoitetaan. Kysy: "Kuka on yleisösi? Mitä haluat heidän ymmärtävän?" Jos käsikirjoitus on liian pitkä, sano: "Voiko tämä olla lyhyempi? Esittely pitäisi olla 3–4 minuuttia." Jos käsikirjoitus on liian lyhyt, kysy: "Miksi botti on tärkeä? Kenelle?"
 
-**Esittelyn harjoittelu:** Pyydä muutamaa opiskelijaa harjoitella livedemo lyhyesti (1–2 min). Kuuntele ja anna palautetta: "Se oli selkeä" tai "voitko selittää, miksi kysyt tätä kysymystä?"
+**Esittelyn harjoittelu:** Pyydä muutamaa opiskelijaa harjoittelemaan esittelyä lyhyesti 1–2 minuutin ajan. Anna täsmällistä palautetta: ”Rakenne oli selkeä” tai ”Perustele vielä, miksi botti esittää tämän kysymyksen.”
 
-**Tekninen seikka:** Varmista, että kaikki tietävät, miten jakaa ruudun tai näyttöä (jos oppitunti on online). Varmista, että botti on helppo avata ja käyttää, eikä ota 5 minuuttia latautua.
+**Tekninen valmistelu:** Varmista, että kaikki osaavat jakaa näyttönsä etäopetuksessa. Tarkista myös, että botti avautuu ja toimii riittävän nopeasti.
 
 ---
 
@@ -102,7 +96,7 @@ Opiskelijat kirjoittavat tehtävää 18.4. He voivat kirjoittaa luokassa tai kot
 
 | Ongelma | Syy | Ratkaisu |
 |---|---|---|
-| Botti vastaa hitaasti | Verkkoyhteys tai API on kuormittunut | Vaihtele: testaa offline-testi (vain system prompt) tai yritä myöhemmin |
+| Botti vastaa hitaasti | Verkkoyhteys tai API on kuormittunut | Tee järjestelmäpromptin pohjalta dokumentoitu kuivaharjoittelu tai yritä myöhemmin. |
 | Opiskelija sanoo "bottini on täydellinen" | Ei ymmärrä testaamisen merkitystä | "Kysy bottilta jotain, mitä et odottanut. Mitä tapahtuu?" |
 | Palaute on loukkaavaa ("se on huono") | Opiskelija ei tiedä, miten antaa rakentavaa palautetta | Ohjaa: "Voisitko sanoa, mikä siinä voisi olla paremmin?" |
 | Opiskelijalla on liian pitkä esittely | Hän menetti kontrollin tai ei harjoitellut | Keskeytä ystävällisesti: "Kiitos, keskeytän. Näytetään dokumentti lopusta." Sano sen jälkeen: "Seuraavalla kerralla voidaan harjoitella aika." |
@@ -140,13 +134,11 @@ Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista,
 
 Oppitunnin lopussa pidä lyhyt yhteenveto:
 
-"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Näitä taitoja tarvitset monenlaisissa tilanteissa jatkossa.
-
-Seuraavassa osiossa (Agentit-osio) botti muuttuu agentiksi. Agentti on parempi, nopeampi ja itsenäisempi. Se voi tehdä asioita, ilman että sinä käsket. Pohja, jonka rakennat nyt, on agenttisi pohja. Sama testaaminen, sama dokumentointi, sama huolellinen ajattelu — vain suuremmassa mittakaavassa.
-
-Hyvä työ. Nauttikaa tästä.
-
-Sitten mennään agentteihin."
+> Olet nyt viimeistellyt oman apuri-bottisi. Olet testannut ja esitellyt sen sekä harjoitellut vertaisarviointia. Tarvitset näitä taitoja myös jatkossa.
+>
+> Seuraavassa osiossa laajennat näkökulmaa agenteihin. Agentti voi käyttää työkaluja ja toteuttaa tehtävän vaiheita itsenäisemmin ennalta määritellyissä rajoissa. Samat periaatteet säilyvät: huolellinen suunnittelu, testaus ja dokumentointi.
+>
+> Hyvä työ. Seuraavaksi siirrymme agentteihin.
 
 ---
 

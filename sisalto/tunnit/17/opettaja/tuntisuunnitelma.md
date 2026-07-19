@@ -1,4 +1,4 @@
-# Opettajan materiaalit — Oppitunti 17: oman apuri-botin suunnittelu ja rakentamisen aloitus
+# Opettajan materiaalit — oppitunti 17: oman apuri-botin suunnittelu ja rakentamisen aloitus
 
 ## Oppitunnin tarkoitus ja konteksti
 
@@ -6,7 +6,7 @@ Tämä oppitunti on **Tekoälyjen käyttö** -osion arvioinnin ensimmäinen osa.
 
 Oppitunnin tavoitteena on, että opiskelijat suunnittelevat ja rakentavat **Microsoft Copilotilla** uuden botin: oman **apuri-botin** itse valitsemaansa arjen aiheeseen — opiskeluun, harrastukseen, tuttuun pieneen palveluun tai vaikka pelin tai sisällön ideointiin. Botin tehtävänä on kysyä käyttäjältä oikeita kysymyksiä, ohjata häntä järjestelmällisesti eteenpäin ja toimia ohjaavan apurin tavoin.
 
-Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin, ohjeet, rajaukset ja kysymyspatteriston. He kirjoittavat **system promptin**, testaavat bottia käytännön tilanteissa, parantavat sitä iteratiivisesti ja dokumentoivat prosessin selkeästi.
+Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin, ohjeet, rajaukset ja kysymyspatteriston. He kirjoittavat **järjestelmäpromptin**, testaavat bottia käytännön tilanteissa, parantavat sitä iteratiivisesti ja dokumentoivat prosessin selkeästi.
 
 **Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että arvioinnissa ei mitata vain lopullista bottia. Arvioinnissa mitataan erityisesti suunnittelua, testausta, iteraatiota ja dokumentoitua ajattelua. Hyvä työ näyttää, miten botti syntyi ja miksi sitä muutettiin.
 
@@ -18,13 +18,13 @@ Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin
 
 - Opiskelija ymmärtää, mikä **apuri-botti** on ja mihin sitä käytetään.
 - Opiskelija ymmärtää, että hyvä botti tarvitsee selkeän **tarkoituksen**, **roolin**, **ohjeet** ja **rajaukset**.
-- Opiskelija ymmärtää, että **system prompt** ohjaa botin käyttäytymistä ja kysymysten järjestystä.
+- Opiskelija ymmärtää, että **järjestelmäprompti** ohjaa botin käyttäytymistä ja kysymysten järjestystä.
 - Opiskelija ymmärtää, että testaus ja korjaaminen kuuluvat botin rakentamiseen.
 
 ### Soveltaa ja analysoida
 
 - Opiskelija osaa suunnitella järjestelmällisen **kysymysketjun** käyttäjän ohjaamista varten.
-- Opiskelija osaa kirjoittaa system promptin, jossa näkyvät botin identiteetti, tarkoitus, toimintatapa ja rajaukset.
+- Opiskelija osaa kirjoittaa järjestelmäpromptin, jossa näkyvät botin identiteetti, tarkoitus, toimintatapa ja rajaukset.
 - Opiskelija osaa testata bottia vähintään kahdella erilaisella käyttöskenaariolla.
 - Opiskelija osaa analysoida testituloksia: mikä toimi, mikä ei toiminut ja miksi.
 
@@ -39,7 +39,7 @@ Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin
 
 ## Arvioinnin kokonaisuus
 
-Oppitunnit 17 ja 18 muodostavat yhdessä **Tekoälyjen käyttö** -osion arvioinnin. Oppitunnilla 17 arvioidaan erityisesti suunnittelua, system promptia, testausta, iteraatiota ja dokumentaatiota. Oppitunnilla 18 arviointi jatkuu viimeistelyllä, esittelyllä ja lopullisen tuotoksen laadulla.
+Oppitunnit 17 ja 18 muodostavat yhdessä **Tekoälyjen käyttö** -osion arvioinnin. Oppitunnilla 17 arvioidaan erityisesti suunnittelua, järjestelmäpromptia, testausta, iteraatiota ja dokumentaatiota. Oppitunnilla 18 arviointi jatkuu viimeistelyllä, esittelyllä ja lopullisen tuotoksen laadulla.
 
 Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 60 pisteen kokonaisuudesta).
 
@@ -82,11 +82,11 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 
 ---
 
-### 2. System promptin kirjoittaminen — 8 pistettä
+### 2. Järjestelmäpromptin kirjoittaminen — 8 pistettä
 
 **Mitä arvioidaan?**
 
-- Sisältääkö system prompt **identiteetin**, **tarkoituksen**, **ohjeet** ja **rajaukset**?
+- Sisältääkö järjestelmäprompti **identiteetin**, **tarkoituksen**, **ohjeet** ja **rajaukset**?
 - Ovatko ohjeet selkeitä kielimallille?
 - Näkyykö promptista, miten botin pitää käyttäytyä käytännössä?
 - Onko prompti riittävän laaja, esimerkiksi noin 300–500 sanaa?
@@ -96,9 +96,9 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 | **Erittäin hyvä, 8 p** | Prompt sisältää kaikki neljä osaa selkeästi. Ohjeet ovat konkreettisia, johdonmukaisia ja toiminnallisia. Promptista näkee, missä järjestyksessä botti kysyy ja miten se ohjaa käyttäjää kohti lopputulosta. |
 | **Heikko, 1–2 p** | Prompt on vain muutama lause. Rajaukset puuttuvat, ohjeet ovat yleisiä, ja teksti näyttää tekoälyn tuottamalta ilman opiskelijan omaa muokkausta. |
 
-> **System prompt on botin toimintasuunnitelma.** Jos se on epämääräinen, botti joutuu arvaamaan. Jos se on täsmällinen, botti toimii johdonmukaisemmin.
+> **Järjestelmäprompti on botin toimintasuunnitelma.** Jos se on epämääräinen, botti joutuu arvaamaan. Jos se on täsmällinen, botti toimii johdonmukaisemmin.
 
-#### System promptin suositeltu rakenne
+#### Järjestelmäpromptin suositeltu rakenne
 
 **1. Identiteetti:** Kuka botti on?
 
@@ -138,7 +138,7 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 **Mitä arvioidaan?**
 
 - Löysikö opiskelija testien perusteella ongelmia?
-- Muuttiko opiskelija system promptia tai kysymyspatteristoa ongelmien perusteella?
+- Muuttiko opiskelija järjestelmäpromptia tai kysymyspatteristoa ongelmien perusteella?
 - Onko muutokset dokumentoitu?
 - Näkyykö työssä **kriittinen ajattelu**?
 
@@ -147,7 +147,7 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 | **Erittäin hyvä, 8 p** | Opiskelija löytää konkreettisen ongelman, muuttaa promptia tai kysymyksiä, testaa uudelleen ja dokumentoi, paraniko botin toiminta. |
 | **Heikko, 1–2 p** | Opiskelija ei havaitse ongelmia, vaikka testaus paljastaisi niitä, tai havaitsee ongelmia mutta ei tee muutoksia. |
 
-**Opettajan muistutus:** Botin epäonnistuminen testissä ei ole huono asia. Huono asia on, jos epäonnistumista ei huomata, dokumentoida tai korjata.
+**Opettajan muistutus:** Testissä ilmennyt virhe on hyödyllinen havainto. Olennaista on, että opiskelija huomaa, dokumentoi ja korjaa sen.
 
 #### Iteraation dokumentointipohja
 
@@ -177,13 +177,13 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 
 ## Yleisiä väärinkäsityksiä ja korjausvinkkejä
 
-### Väärinkäsitys 1: ”System prompt ei ole niin tärkeä.”
+### Väärinkäsitys 1: ”Järjestelmäprompti ei ole niin tärkeä.”
 
 **Opiskelija ajattelee:** ”Voin vain kirjoittaa botille, että kysy käyttäjältä, ja se tekee oikein.”
 
 **Korjaava näkökulma:** Kielimalli ei tunne kontekstia ilman ohjeita. Se tarvitsee tiedon siitä, kuka se on, mitä sen pitää tehdä, missä järjestyksessä sen pitää edetä ja mitä se ei saa tehdä. Ilman näitä botti arvaa.
 
-**Opettajan toiminta:** Näytä live-demo kahdella eri promptilla: yksi epämääräinen ja yksi tarkka. Pyydä opiskelijoita vertaamaan, kumpi tuottaa käyttökelpoisemman lopputuloksen.
+**Opettajan toiminta:** Havainnollista asia kahdella eri promptilla: toinen on epämääräinen ja toinen täsmällinen. Pyydä opiskelijoita vertaamaan tuloksia.
 
 ---
 
@@ -213,7 +213,7 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 
 **Korjaava näkökulma:** Dokumentaatio osoittaa, mitä opiskelija suunnitteli, testasi, huomasi ja muutti. Arvioinnissa prosessi on yhtä tärkeä kuin valmis botti.
 
-**Opettajan toiminta:** Näytä opiskelijoille dokumentaation minimirakenne: tehtävä 17.1, system prompt, testit, iteraatiot, kuvakaappaukset ja yhteenveto opitusta.
+**Opettajan toiminta:** Näytä opiskelijoille dokumentaation minimirakenne: tehtävä 17.1, järjestelmäprompti, testit, iteraatiot, kuvakaappaukset ja yhteenveto opitusta.
 
 ---
 
@@ -224,7 +224,7 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 | Vaihe | Aika | Tavoite |
 | --- | --- | --- |
 | **Johdanto** | 5 min | Kytke aihe opiskelijoiden omaan kokemukseen: mitä tapahtuu, jos uutta asiaa yrittää opetella ilman ohjausta? |
-| **Live-demo** | 15 min | Näytä toimiva apuri-botti ja konkretisoi, mihin opiskelijat pyrkivät. |
+| **Havainnollistava esimerkki** | 15 min | Näytä toimiva apuri-botti ja konkretisoi, mihin opiskelijat pyrkivät. |
 | **Ryhmätyö: kysymykset** | 20 min | Ryhmät ideoivat botin ohjaavia kysymyksiä ja huomaavat, ettei ole vain yhtä oikeaa kysymyspatteristoa. |
 | **Yhteinen analyysi** | 10 min | Käydään arviointikriteerit läpi ja varmistetaan, että opiskelijat ymmärtävät, mitä heiltä odotetaan. |
 | **Itsenäinen työskentely** | 40+ min | Opiskelijat aloittavat tehtävät 17.1–17.4. Opettaja kiertää ja ohjaa. |
@@ -261,9 +261,9 @@ Oppitunnin 17 osuus on noin **kaksi kolmasosaa** kokonaisuudesta (40 pistettä 6
 
 ---
 
-### TT-B: System promptin kirjoittaminen
+### TT-B: Järjestelmäpromptin kirjoittaminen
 
-**Tavoite:** Opiskelija osaa kirjoittaa apuri-botille system promptin, joka ohjaa botin toimintaa käytännössä.
+**Tavoite:** Opiskelija osaa kirjoittaa apuri-botille järjestelmäpromptin, joka ohjaa botin toimintaa käytännössä.
 
 **Tee näin:**
 
@@ -287,7 +287,7 @@ Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen ky
 
 ### TT-C: Botin testaus
 
-**Tavoite:** Opiskelija testaa bottia käytännössä ja huomaa, toimiiko system prompt eri tilanteissa.
+**Tavoite:** Opiskelija testaa bottia käytännössä ja huomaa, toimiiko järjestelmäprompti eri tilanteissa.
 
 **Tee näin:**
 
@@ -309,7 +309,7 @@ Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen ky
 
 1. Valitse testissä havaittu ongelma.
 2. Kirjoita, miksi ongelma haittaa botin toimintaa.
-3. Muuta system promptia tai kysymyspatteristoa.
+3. Muuta järjestelmäpromptia tai kysymyspatteristoa.
 4. Testaa botti uudelleen samalla tai samantyyppisellä skenaariolla.
 5. Kirjoita, paraniko toiminta.
 
@@ -319,7 +319,7 @@ Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen ky
 
 ## Yleisiä apukysymyksiä opiskelijoille
 
-### Jos opiskelija ei osaa kirjoittaa system promptia
+### Jos opiskelija ei osaa kirjoittaa järjestelmäpromptia
 
 - Mitä haluat botin tekevän?
 - Mikä botin rooli on: mentori, asiantuntija, assistentti vai jokin muu?
@@ -336,9 +336,9 @@ Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen ky
 
 ### Jos opiskelija sanoo, että botti ei toiminut
 
-- Hienoa, löysit testituloksen.
+- Löysit testissä kehittämiskohteen.
 - Mikä tarkalleen meni pieleen?
-- Mitä system promptista puuttui?
+- Mitä järjestelmäpromptista puuttui?
 - Miten voisit kirjoittaa ohjeen niin, että botti toimii seuraavalla kerralla paremmin?
 
 ### Jos opiskelijalla on liikaa kysymyksiä
@@ -362,7 +362,7 @@ Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen ky
 ### Yksinkertaistettu versio opiskelijoille, jotka tarvitsevat tukea
 
 - Anna valmis 15 kysymyksen lista ja pyydä opiskelijaa valitsemaan niistä tärkeimmät.
-- Anna puolivalmis system prompt, jonka opiskelija täydentää.
+- Anna puolivalmis järjestelmäprompti, jonka opiskelija täydentää.
 - Anna valmiit testiskenaariot, jotka opiskelija ajaa botilla.
 - Vähennä vaatimusta niin, että opiskelija tekee tehtävät 17.1–17.3 ja dokumentoi ne selkeästi.
 
@@ -400,7 +400,7 @@ Oppitunnilla 17 painopiste on johdannossa, demossa ja työn aloittamisessa. Suur
 - Botin tarkoitus on selkeä ja rajattu.
 - Rooli tukee käyttäjän ohjaamista eikä ole pelkkä persoonallisuus.
 - Kysymyspatteristo etenee loogisesti.
-- System prompt on konkreettinen ja käytännössä testattava.
+- Järjestelmäprompti on konkreettinen ja käytännössä testattava.
 - Testejä on vähintään kaksi ja ne ovat erilaisia.
 - Testien perusteella on tehty muutoksia.
 - Dokumentaatio näyttää prosessin, ei vain lopputulosta.
@@ -408,7 +408,7 @@ Oppitunnilla 17 painopiste on johdannossa, demossa ja työn aloittamisessa. Suur
 ### Heikon työn merkkejä
 
 - Botti on määritelty liian yleisesti: ”auttaa kaikessa”.
-- System prompt on hyvin lyhyt tai epämääräinen.
+- Järjestelmäprompti on hyvin lyhyt tai epämääräinen.
 - Kysymykset ovat satunnaisia eivätkä muodosta selkeää ohjaavaa polkua.
 - Testaus on tehty vain yhdellä esimerkillä.
 - Iteraatiota ei ole tehty.
@@ -441,7 +441,7 @@ Tallennettava tuotos on **botin minimiversio tai kuivaharjoittelujälki sekä ko
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija kokoaa botin minimiversion tai kuivaharjoittelujäljen ja ajaa yhden testin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

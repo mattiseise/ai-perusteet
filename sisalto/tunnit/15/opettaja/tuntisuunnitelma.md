@@ -425,7 +425,7 @@ Tallennettava tuotos on **lähdeperustelu, testimatriisi ja järjestelmäprompti
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija perustelee tietopohjan ja ajaa positiivisen, negatiivisen sekä reunatapauksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

@@ -1,6 +1,6 @@
 # Opettajavetoiset tehtävät — oma botti
 
-## Tehtävä 14.1: Live-esittely — oman botin rakennuspalikat noin 20 minuuttia
+## Tehtävä 14.1: Oman botin rakennuspalikkojen esittely noin 20 minuuttia
 
 ### Tavoite
 
@@ -10,13 +10,13 @@ Tehtävän tavoitteena on osoittaa konkreettisesti, miten oma **botti** rakennet
 
 ### Opettajan ohjeet ja fasilitointi
 
-Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Live-esittely toimii hyvin, koska opiskelijat näkevät, miten botin suunnittelu etenee vaihe vaiheelta.
+Tämä tehtävä tehdään opettajan johdolla koko luokan kanssa. Havainnollistava esittely näyttää, miten botin suunnittelu etenee vaihe vaiheelta.
 
 ### Valmistelu ennen lähiosaa
 
 - Valitse yksi konkreettinen botti, esimerkiksi **Python-tutori**, **helpdesk-botti** tai **asiakaspalvelubotti**. Demoksi sopii yhtä hyvin ei-IT-aiheinen botti — esimerkiksi helpdesk-botin sijaan harrastusneuvoja.
 - Testaa botin neljä rakennuspalikkaa etukäteen: **tarkoitus**, **rooli**, **ohjeet** ja **rajaukset**.
-- Valmista lyhyt esimerkki-interaktio, joka näyttää, miten botti käyttäytyy käytännössä.
+- Valmista lyhyt esimerkkikeskustelu, joka näyttää, miten botti käyttäytyy käytännössä.
 
 ### Tehtävän vaiheet noin 20 minuuttia
 
@@ -124,7 +124,7 @@ Selitä:
 
 Tehtävän tavoitteena on, että opiskelijat kirjoittavat omalle botilleen yksityiskohtaisen **järjestelmäpromptin**. Samalla he harjoittelevat botin identiteetin, tarkoituksen, ohjeiden ja rajausten määrittelyä.
 
-**Opettajan painotus:** Järjestelmäpromptti ei ole tavallinen käyttäjän kysymys. Se on botin toimintaa ohjaava perusohje, joka määrittää, millainen botti on, mitä se tekee, miten se vastaa ja mitä se ei saa tehdä.
+**Opettajan painotus:** Järjestelmäprompti ei ole tavallinen käyttäjän kysymys. Se on botin toimintaa ohjaava perusohje, joka määrittää, millainen botti on, mitä se tekee, miten se vastaa ja mitä se ei saa tehdä.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -132,7 +132,7 @@ Tehtävä tehdään 2–3 opiskelijan pienryhmissä. Opettaja kiertää ryhmien 
 
 ### Valmistelu
 
-- Valmista **mallijärjestelmäpromptti**, esimerkiksi Python-tutori-botille.
+- Valmista **mallijärjestelmäprompti** esimerkiksi Python-tutoribotille.
 - Valmista tyhjä pohja, jota ryhmät voivat käyttää oman botin suunnitteluun.
 - Varmista, että opiskelijat ymmärtävät eron käyttäjän tavallisen pyynnön ja järjestelmäpromptin välillä.
 
@@ -159,7 +159,7 @@ Kysy opiskelijoilta:
 2. Anna jokaiselle ryhmälle järjestelmäpromptin pohja.
 3. Kerro tehtävä opiskelijoille.
 
-> Kirjoittakaa oman botin järjestelmäpromptti. Botti voi olla sama kuin aiemmassa suunnitelmassa tai kokonaan uusi botti.
+> Kirjoittakaa oman botin järjestelmäprompti. Botti voi olla sama kuin aiemmassa suunnitelmassa tai kokonaan uusi.
 
 #### Vaihe 3: Kirjoitusvaihe noin 15 minuuttia
 
@@ -208,15 +208,15 @@ Voit sanoa esimerkiksi:
 - Opiskelijat kirjoittavat omalle botilleen yksityiskohtaisen **järjestelmäpromptin**.
 - Opiskelijat ymmärtävät järjestelmäpromptin keskeiset osat käytännössä.
 - Opiskelijat osaavat tarkentaa botin tarkoitusta, roolia, ohjeita ja rajauksia.
-- Opiskelijat ovat valmiita testaamaan omaa bottiaan esimerkki-interaktioiden avulla.
+- Opiskelijat ovat valmiita testaamaan omaa bottiaan esimerkkikeskustelujen avulla.
 
 ---
 
-## Tehtävä 14.3: Demonstraatio — esimerkki-interaktioiden merkitys noin 15 minuuttia
+## Tehtävä 14.3: Esimerkkikeskustelujen merkitys noin 15 minuuttia
 
 ### Tavoite
 
-Tehtävän tavoitteena on osoittaa, että **esimerkki-interaktiot** ovat tärkeä tapa testata, onko botin ohjeistus riittävä. Opiskelijat näkevät, miten botin ohjeet ja rajaukset näkyvät käytännön tilanteissa.
+Tehtävän tavoitteena on osoittaa, että **esimerkkikeskustelut** ovat tärkeä tapa testata botin ohjeistuksen riittävyyttä. Opiskelijat näkevät, miten botin ohjeet ja rajaukset toimivat käytännön tilanteissa.
 
 **Opettajan painotus:** Korosta, että botin suunnittelu ei pääty järjestelmäpromptin kirjoittamiseen. Botti pitää myös testata tavallisissa, vaikeissa ja epäselvissä tilanteissa.
 
@@ -226,7 +226,7 @@ Tehtävä tehdään opettajan johdolla koko luokan kanssa. Esittely on interakti
 
 ### Valmistelu
 
-- Valmista kolme esimerkki-interaktiota omasta botista.
+- Valmista omasta botista kolme esimerkkikeskustelua.
 - Valitse mukaan:
   - normaali tilanne, jossa käyttäjä kysyy botin tehtävään sopivan kysymyksen,
   - vaikea tilanne, jossa käyttäjä kysyy botin rajausten ulkopuolelta,
@@ -238,7 +238,7 @@ Tehtävä tehdään opettajan johdolla koko luokan kanssa. Esittely on interakti
 
 Kerro opiskelijoille:
 
-> Kun suunnittelet bottia, pelkkä järjestelmäpromptti ei vielä riitä. Sinun pitää myös testata, miten botti toimii käytännössä. Esimerkki-interaktiot ovat kuin harjoituksia, joissa katsotaan, käyttäytyykö botti niin kuin sen pitäisi.
+> Kun suunnittelet bottia, pelkkä järjestelmäprompti ei vielä riitä. Testaa myös, miten botti toimii käytännössä. Esimerkkikeskustelut osoittavat, noudattaako botti ohjeitaan.
 
 Jatka:
 
@@ -291,14 +291,14 @@ Kysy opiskelijoilta:
 
 Kerro opiskelijoille:
 
-> Esimerkki-interaktiot osoittavat, toimiiko botin ohjeistus käytännössä. Jos botti vastaa väärällä sävyllä, ohittaa rajaukset tai ei tue käyttäjää oikein, järjestelmäprompttia pitää muokata.
+> Esimerkkikeskustelut osoittavat, toimiiko botin ohjeistus käytännössä. Jos botti vastaa väärällä sävyllä, ohittaa rajaukset tai ei tue käyttäjää oikein, järjestelmäpromptia pitää muokata.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että esimerkki-interaktiot ovat botin testaamisen väline.
+- Opiskelijat ymmärtävät, että esimerkkikeskustelut ovat botin testaamisen väline.
 - Opiskelijat näkevät, miten ohjeet, rooli ja rajaukset näkyvät käytännön vastauksissa.
 - Opiskelijat osaavat arvioida, toimiiko botti suunnitellulla tavalla.
-- Opiskelijat ovat valmiita kirjoittamaan omia esimerkki-interaktioita oman botin testaamiseksi.
+- Opiskelijat ovat valmiita kirjoittamaan esimerkkikeskusteluja oman bottinsa testaamiseksi.
 
 ---
 
@@ -306,14 +306,14 @@ Kerro opiskelijoille:
 
 | Osio | Aika | Sisältö |
 | --- | --- | --- |
-| **Tehtävä 14.1** | 20 min | Live-esittely botin rakennuspalikoista |
+| **Tehtävä 14.1** | 20 min | Botin rakennuspalikkojen havainnollistava esittely |
 | **Tehtävä 14.2** | 25 min | Pienryhmät kirjoittavat järjestelmäpromptin |
-| **Tehtävä 14.3** | 15 min | Demonstraatio esimerkki-interaktioista |
+| **Tehtävä 14.3** | 15 min | Esimerkkikeskustelujen havainnollistaminen |
 | **Vapaa harjoittelu** | 25 min | Opiskelijat työskentelevät omien bottiensa parissa |
 | **Yhteenveto ja kotitehtävän ohjeistus** | 5 min | Kerrataan botin neljä rakennuspalikkaa ja annetaan kotitehtävä |
 
 ## Kotitehtävä
 
-Opiskelijat täydentävät oman botin suunnitelman, järjestelmäpromptin ja vähintään kolme esimerkki-interaktiota seuraavaa tuntia varten.
+Opiskelijat täydentävät oman botin suunnitelman, järjestelmäpromptin ja vähintään kolme esimerkkikeskustelua seuraavaa tuntia varten.
 
 ---

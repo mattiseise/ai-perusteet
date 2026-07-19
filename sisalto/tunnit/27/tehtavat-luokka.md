@@ -6,12 +6,12 @@
 
 ---
 
-## Vaihe 1: Viimeistele agenttisi ja testaa 🟢 PAKOLLINEN
+## Vaihe 1: Viimeistele agenttisi ja testaa — pakollinen
 
 ### A. Viimeistele agenttisi (~15 min)
 
-1. **Lisää turvakerros.** Avaa ⭐️ Agentti: Turva ja toteuta sen turvasuunnitelma. Tyypillisesti IF-solmu heti triggerin jälkeen (syötteen validointi) ja toinen IF-solmu tekoälysolmun jälkeen (vastauksen tarkistus).
-2. **Lisää human-in-the-loop, jos tarpeen.** Avaa ⭐️ Agentti: Ihminen. Jos agenttisi tekee kriittisiä toimia, lisää hyväksyntäportti.
+1. **Lisää turvakerros.** Avaa Agentti: Turva ja toteuta sen turvasuunnitelma. Tyypillisesti IF-solmu heti triggerin jälkeen (syötteen validointi) ja toinen IF-solmu tekoälysolmun jälkeen (vastauksen tarkistus).
+2. **Lisää ihmisen hyväksyntä tarvittaessa.** Avaa Agentti: Ihminen. Jos agenttisi tekee kriittisiä toimia, lisää hyväksyntäportti.
 3. **Lisää lokitus.** Yksinkertainenkin riittää: solmu, joka tallentaa jokaisen suorituksen tiedot.
 
 ### B. Testaa systemaattisesti (~15 min)
@@ -20,7 +20,7 @@ Tee yhteensä 9 testiä:
 
 - **3 normaalia tapausta**
 - **3 reunatapausta** (esim. tyhjä syöte, liian pitkä syöte, väärä kieli, pelkät emojit, sekava teksti)
-- **3 turvallisuustestiä** (esim. prompt injection, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt)
+- **3 turvallisuustestiä** (esim. promptihyökkäys, piilotetut ohjeet, manipulaatio, henkilötietopyynnöt)
 
 Dokumentoi jokainen:
 
@@ -34,7 +34,7 @@ Tila: LÄPÄISI / EI LÄPÄISSYT
 Huomio: [jos epäonnistui, miksi?]
 ```
 
-### Tekoälyvaihe — sparraa testitapauksia
+### Tekoälyvaihe — tarkista testitapaukset
 
 ```
 Olen rakentanut agentin, joka tekee [kuvaa]. Olen testannut sitä
@@ -45,7 +45,7 @@ tulosta — sen päätän itse.
 
 ---
 
-## Vaihe 2: Dokumentoi agenttisi 🟢 PAKOLLINEN
+## Vaihe 2: Dokumentoi agenttisi — pakollinen
 
 Kirjoita kolme lyhyttä dokumenttia:
 
@@ -60,11 +60,11 @@ Kirjoita kolme lyhyttä dokumenttia:
 
 **SAFETY — turvallisuus (½–1 sivu).**
 
-- 3–5 pahinta riskiä, miten torjuit ne, mitä lokitat, human-in-the-loop -kohdat.
+- 3–5 pahinta riskiä, miten torjuit ne, mitä lokitat, ihmisen hyväksyntää vaativat kohdat.
 
 ---
 
-## Vaihe 3: Vertaisarvio — testaa toisen agentti 🟢 PAKOLLINEN
+## Vaihe 3: Vertaisarvio — testaa toisen agentti — pakollinen
 
 Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoida ihmistä.
 
@@ -72,7 +72,7 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 
 1. Pari (tai toinen tiimi) antaa sinulle pääsyn agenttiinsa.
 2. Käytä agenttia kuin oikea käyttäjä (2–3 normaalia tapausta).
-3. Yritä murtaa se (prompt injection, reunatapaukset).
+3. Yritä murtaa se (promptihyökkäys, reunatapaukset).
 4. Kirjoita palaute: **1 vahvuus, 2 ongelmaa, 2 parannusehdotusta** — konkreettisesti.
 5. Anna palaute parille, keskustele 5 minuuttia.
 
@@ -80,16 +80,16 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 
 ---
 
-## Vaihe 4: Demo ja itsearviointi 🟢 PAKOLLINEN
+## Vaihe 4: Esittely ja itsearviointi — pakollinen
 
-### Demo (3–5 min luokassa)
+### Esittely (3–5 min luokassa)
 
 1. Näytä agentti toiminnassa (2–3 normaalia syötettä).
 2. Selitä arkkitehtuuri (osoita n8n-kankaalta, mainitse 6 komponenttia).
 3. Kerro turvakerroksesta.
 4. Arvioi kriittisesti — mikä onnistui, mikä ei.
 
-> Hyvä demo ei ole täydellinen suoritus — se on rehellinen.
+> Hyvä esittely ei ole täydellinen suoritus — se on rehellinen.
 
 ### Itsearviointi (300–400 sanaa)
 
@@ -101,7 +101,7 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 
 ---
 
-## Valinnainen syvennys: sama tehtävä kahdella agentilla 🟣 SYVENTÄVÄ
+## Valinnainen syvennys: sama tehtävä kahdella agentilla — syventävä
 
 Tämä ei ole lopputyön pakollinen osa eikä vaikuta palautukseen. Koko osion ajan olet katsonut agentin sisään: n8n:ssä näet jokaisen solmun ja jokaisen suorituksen. Valmisagentissa näet vain sen, minkä sen harness päättää näyttää. Tässä tehtävässä vertaat näitä kahta itse — havaintojen pohjalta, et mielikuvien.
 
@@ -109,7 +109,7 @@ Tämä ei ole lopputyön pakollinen osa eikä vaikuta palautukseen. Koko osion a
 
 1. Valitse yksi tehtävä, jonka oma n8n-agenttisi hoitaa hyvin — esimerkiksi sen ydinkäyttötapaus.
 2. Aja tehtävä omalla agentillasi. Ota talteen suoritusloki tai kuvakaappaus suorituksesta ja kirjaa kellosta, kauanko suoritus kesti.
-3. Aja sama tehtävä valmisagentilla (Claude Cowork, ChatGPT Work tai muu käytettävissäsi oleva agenttitila — tuotetilanne on tunnin 19 esimerkkilaatikossa). Jos maksullista pääsyä ei ole, katso opettajan demo tai tee tämä vaihe parin koneella — ja kirjaa havainnot silti itse.
+3. Aja sama tehtävä valmisagentilla (Claude Cowork, ChatGPT Work tai muu käytettävissäsi oleva agenttitila — tuotetilanne on tunnin 19 esimerkkilaatikossa). Jos maksullista pääsyä ei ole, katso opettajan esittely tai tee tämä vaihe parin koneella — ja kirjaa havainnot silti itse.
 4. Ota talteen myös valmisagentin näyttämät vaiheet, sen esittämät lupakysymykset ja suorituksen kesto.
 
 ### Vertailu

@@ -6,7 +6,7 @@
 
 ---
 
-## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi 🟢 PAKOLLINEN
+## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi — pakollinen
 
 **Miksi tämä on tärkeää:** Yksittäisinä pohjapiirrokset ovat irrallisia päätöksiä. Yhdessä ne muodostavat suunnitelman.
 
@@ -18,7 +18,7 @@
 4. Lue ne läpi yhtenä kokonaisuutena. *Onko tämä johdonmukainen agentti?*
 5. Korjaa tarvittaessa.
 
-### Tekoälyvaihe — sparraa kokoamista
+### Tekoälyvaihe — tarkista kokonaisuus
 
 ```
 Olen kirjoittanut viisi pohjapiirrosta agentistani, jonka aion
@@ -27,11 +27,11 @@ paljastavat mahdolliset ristiriidat tai aukot. Älä korjaa
 puolestani — kysy niin että minä huomaan ongelmat itse.
 ```
 
-> 💡 **Vinkki muistiinpanoihin:** Tämä koottu suunnitelma on osa lopputyön palautusta.
+> **Vinkki muistiinpanoihin:** Tämä koottu suunnitelma on osa lopputyön palautusta.
 
 ---
 
-## Vaihe 2: Tutustu n8n:ään 🟢 PAKOLLINEN
+## Vaihe 2: Tutustu n8n:ään — pakollinen
 
 ### Ohjeet
 
@@ -45,28 +45,28 @@ puolestani — kysy niin että minä huomaan ongelmat itse.
 
 ---
 
-## Vaihe 3: Rakenna agenttisi minimiversio 🟢 PAKOLLINEN
+## Vaihe 3: Rakenna agenttisi minimiversio — pakollinen
 
-**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio** — ei valmis agentti. Turvakerros, IF-tarkistukset, human-in-the-loop ja viimeistelyt rakennat tunnilla 27.
+**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio** — ei valmis agentti. Turvakerroksen, IF-tarkistukset, ihmisen hyväksyntää vaativat kohdat ja viimeistelyn rakennat tunnilla 27.
 
 ### Ohjeet — iteratiivinen rakentaminen
 
 1. **Triggeri.** Valitse: Manual Trigger, Schedule Trigger tai Webhook.
-2. **Tekoälysolmu.** Lisää AI-solmu. Kirjoita system prompt pohjapiirrosten 2 ja 3 perusteella.
+2. **Tekoälysolmu.** Lisää tekoälysolmu. Kirjoita järjestelmäprompti pohjapiirrosten 2 ja 3 perusteella.
 3. **Toimintasolmu.** Yksi solmu, joka toteuttaa agentin tehtävän.
 4. **Testaa heti.** Anna esimerkkisyöte, klikkaa "Execute".
 5. **Korjaa, jos ei toimi.** Tarkista yksi solmu kerrallaan.
 
-### Tekoälyvaihe — sparraa system promptia
+### Tekoälyvaihe — tarkista järjestelmäprompti
 
 ```
-Olen kirjoittanut system promptin n8n-agentilleni. Tehtävä on
+Olen kirjoittanut järjestelmäpromptin n8n-agentilleni. Tehtävä on
 [kuvaa]. Tässä prompti: [liitä]. Kommentoi: onko rooli selkeä?
 Onko rajat selkeät? Mitä epäselvyyksiä jää? Älä kirjoita
 uudelleen — kysy minulta kysymyksiä.
 ```
 
-> 💡 **Älä lisää tunnilla 26 vielä näitä:** turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.
+> **Älä lisää tunnilla 26 vielä näitä:** turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.
 
 ---
 

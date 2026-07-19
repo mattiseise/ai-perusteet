@@ -36,7 +36,7 @@ Botin **järjestelmäprompti** on tärkein yksittäinen tekstipätkä, jonka kir
 
 > Olet ystävällinen tekoälyavustaja, joka auttaa käyttäjiä opiskelussa. Vastaa asiantuntevasti ja kohteliaasti.
 
-**Mikä mättää:** Ohje on liian yleinen. Se ei kerro aihetta, työnkulkua eikä rajoja. Botti voi yhtä hyvin auttaa CV:n kirjoittamisessa kuin matematiikan kertaamisessa. Se ei siis erikoistu mihinkään.
+**Mikä tekstissä on ongelmana:** Ohje on liian yleinen. Se ei kerro aihetta, työnkulkua eikä rajoja. Botti voi yhtä hyvin auttaa CV:n kirjoittamisessa kuin matematiikan kertaamisessa. Se ei siis erikoistu mihinkään.
 
 ### Vahva järjestelmäprompti
 
@@ -95,7 +95,7 @@ Jos botti kuulostaa samalta riippumatta siitä, onko aiheena salitreeni vai kerh
 
 **3. Liian innokas botti.**
 
-Jos botti tekee koko homman käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäpromptiin vaihe vaiheelta etenevä toimintatapa ja kielto tehdä koko tehtävä käyttäjän puolesta.
+Jos botti tekee koko tehtävän käyttäjän puolesta heti ensimmäisellä viestillä, työnkulun ohjaus on jäänyt vajaaksi. Lisää järjestelmäpromptiin vaihe vaiheelta etenevä toimintatapa ja kielto tehdä koko tehtävä käyttäjän puolesta.
 
 ::: luokka
 ## Tarkistuslista ennen palautusta

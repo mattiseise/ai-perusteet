@@ -14,7 +14,7 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, milloin agenti
 
 Kerro opiskelijoille:
 
-“Human-in-the-loop tarkoittaa sitä, että ihminen osallistuu agentin päätöksentekoon silloin, kun päätös on riskialtis, epävarma tai poikkeuksellinen. Kaikkea ei tarvitse hyväksyttää ihmisellä, mutta tärkeät ja vaaralliset päätökset pitää.”
+“Ihmisen osallistuminen päätöksentekoon tarkoittaa sitä, että ihminen tarkistaa agentin ratkaisun, kun päätös on riskialtis, epävarma tai poikkeuksellinen. Kaikkea ei tarvitse hyväksyttää ihmisellä, mutta tärkeät ja vaaralliset päätökset pitää hyväksyttää.”
 
 Kirjoita taululle kolme hyväksynnän sääntöä:
 
@@ -133,11 +133,11 @@ Opiskelijat muotoilevat hyväksyntäportin valitsemalleen tilanteelle.
 
 ---
 
-## Aktiviteetti 3: Human-in-the-loop-työnkulku noin 25 minuuttia
+## Aktiviteetti 3: Ihmisen osallistava työnkulku noin 25 minuuttia
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita suunnittelemaan kokonainen **human-in-the-loop-työnkulku**, jossa agentti ja ihminen tekevät yhteistyötä. Opiskelijat ymmärtävät, missä vaiheissa agentti voi toimia itsenäisesti ja missä vaiheissa ihmisen pitää tarkistaa, hyväksyä tai korjata päätös.
+Aktiviteetin tavoitteena on auttaa opiskelijoita suunnittelemaan kokonainen **ihmisen osallistava työnkulku**, jossa agentti ja ihminen tekevät yhteistyötä. Opiskelijat ymmärtävät, missä vaiheissa agentti voi toimia itsenäisesti ja missä vaiheissa ihmisen pitää tarkistaa, hyväksyä tai korjata päätös.
 
 **Vinkki arviointiin:** Hyvä työnkulku ei vain lisää ihmistä loppuun tarkistajaksi. Ihmisen rooli sijoitetaan niihin kohtiin, joissa riski, epävarmuus tai vaikutus on suurin.
 
@@ -147,7 +147,7 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita suunnittelemaan kokonainen **hu
 
 Kerro opiskelijoille:
 
-“Human-in-the-loop ei tarkoita sitä, että ihminen tekee kaiken. Se tarkoittaa, että agentti tekee rutiinityötä ja ihminen osallistuu niissä kohdissa, joissa tarvitaan harkintaa, vastuuta tai hyväksyntää.”
+“Ihmisen osallistuminen päätöksentekoon ei tarkoita sitä, että ihminen tekee kaiken. Se tarkoittaa, että agentti tekee rutiinityötä ja ihminen osallistuu niissä kohdissa, joissa tarvitaan harkintaa, vastuuta tai hyväksyntää.”
 
 ### Esittely: palautuspyynnön käsittely
 
@@ -170,7 +170,7 @@ Keskustelkaa:
 
 ### Ryhmätyö
 
-Opiskelijat suunnittelevat human-in-the-loop-työnkulun yhdelle prosessille.
+Opiskelijat suunnittelevat ihmisen osallistavan työnkulun yhdelle prosessille.
 
 **Mahdollisia prosesseja:**
 
@@ -189,7 +189,7 @@ Opiskelijat suunnittelevat human-in-the-loop-työnkulun yhdelle prosessille.
 4. Merkitkää, mitä tietoa hyväksyjä tarvitsee.
 5. Merkitkää, mitä tapahtuu, jos hyväksyjä hylkää päätöksen.
 
-**Human-in-the-loop-työnkulun malli**
+**Ihmisen osallistavan työnkulun malli**
 
 |  |
 | --- |
@@ -203,7 +203,7 @@ Opiskelijat suunnittelevat human-in-the-loop-työnkulun yhdelle prosessille.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät human-in-the-loop-työnkulun periaatteen.
+- Opiskelijat ymmärtävät ihmisen osallistavan työnkulun periaatteen.
 - Opiskelijat osaavat sijoittaa ihmisen hyväksynnän prosessin riskikohtiin.
 - Opiskelijat osaavat kuvata, miten agentti ja ihminen toimivat yhdessä.
 
@@ -278,7 +278,7 @@ Opiskelijat suunnittelevat, miten agentti oppii hyväksyntäpäätöksistä turv
 
 Opettaja arvioi opiskelijoiden kykyä:
 
-- selittää, mitä **human-in-the-loop** tarkoittaa agenttijärjestelmässä,
+- selittää, mitä **ihmisen osallistuminen päätöksentekoon** tarkoittaa agenttijärjestelmässä,
 - tunnistaa, mitkä päätökset vaativat ihmisen hyväksynnän,
 - soveltaa kolmea sääntöä: **raha tai rakenne**, **epävarmuus** ja **poikkeama**,
 - suunnitella selkeän **hyväksyntäportin**,

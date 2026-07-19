@@ -151,7 +151,7 @@ Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset
 
 **Yrittääkö botti tehdä työn käyttäjän puolesta?**
 
-Jos pyydät sitä tekemään koko hommaa puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
+Jos pyydät sitä tekemään koko tehtävää puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
 
 ## Korjauslista tunnille 18
 

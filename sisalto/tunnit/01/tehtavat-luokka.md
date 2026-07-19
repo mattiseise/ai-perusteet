@@ -1,8 +1,8 @@
 # Opiskelutehtävät — Mikä tekoäly oikeasti on?
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen kuitenkin tehtävää 1.1, joka osuu suoraan tunnin ydintaidon ytimeen. Jos sinulla on aikaa ja kiinnostusta, voit lisäksi tehdä syventävän tehtävän 1.2.
+> **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä yksi. Suosittelen tehtävää 1.1, joka harjoittaa suoraan tunnin ydintaitoa. Jos sinulla on aikaa ja kiinnostusta, voit lisäksi tehdä syventävän tehtävän 1.2.
 
-## Tehtävä 1.1 — AI vai ei AI? 🟢 SUOSITELTU
+## Tehtävä 1.1 — AI vai ei AI? — SUOSITELTU
 
 **Tavoite:** Opit erottamaan tekoälyn tavallisesta ohjelmoinnista konkreettisten esimerkkien avulla. Tämä on koko Teoria-osion peruskivi.
 
@@ -49,11 +49,11 @@ Tekoälykeskustelun jälkeen muokkaa taulukkoasi tarvittaessa ja kirjoita lyhyt 
 - Mikä esimerkeistä oli vaikein luokitella ja miksi?
 - Muuttuiko jokin päätös tekoälykeskustelun aikana? Jos, niin mikä — ja miksi?
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta kannattaa pitää itselle oma muistiinpanodokumentti tämän ja muiden tunnin tehtävien tuloksista. Käytät niitä myöhemmin tukena, kun pohdit miten tekoäly toimii ja missä sen rajat ovat.
+> **Vinkki:** Tehtävää ei palauteta, mutta tämän ja muiden tuntien tehtävien tulokset kannattaa koota omaan muistiinpanodokumenttiin. Käytät niitä myöhemmin tukena, kun pohdit, miten tekoäly toimii ja missä sen rajat ovat.
 
 ---
 
-## Tehtävä 1.2 — Petoksentunnistus: sääntö vs. tekoäly 🟣 SYVENTÄVÄ
+## Tehtävä 1.2 — Petoksentunnistus: sääntö vai tekoäly? — SYVENTÄVÄ
 
 > **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat ymmärtää *miksi* tekoäly on parempi kuin säännöt monimutkaisissa päätöksissä — etkä vain *että* niin on.
 

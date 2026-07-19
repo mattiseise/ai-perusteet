@@ -6,7 +6,7 @@ Aloita ottamalla yhteys opiskelijoiden kokemukseen. Kysy: "Kuinka moni teistä o
 
 Kerro, että tänään he rakentavat oman apuri-botin, joka auttaa jossakin heille tutussa arjen aiheessa — opiskelussa, harrastuksessa, tutussa pienessä palvelussa tai vaikka pelin tai sisällön ideoinnissa. Botti kysyy oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin. Se on kuin henkilökohtainen apuri.
 
-## Tehtävä 1: Live-demo apuri-botin käytöstä (15 min)
+## Tehtävä 1: Apuri-botin käytön havainnollistaminen (15 min)
 
 ### Tavoite
 
@@ -14,26 +14,26 @@ Näyttää käytännössä, miltä toimiva botti näyttää ja mitä se tekee.
 
 ### Vaiheet
 
-1. **Valmistelu**: Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut system promptin apuri-botille. (Kirjoita se etukäteen tai käytä self-study-materiaalista saatua esimerkkiä.)
+1. **Valmistelu:** Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut apuri-botin järjestelmäpromptin. Kirjoita se etukäteen tai käytä teoria-aineiston esimerkkiä.
 
-2. **Live-demo**: Kirjoita opiskelijoilta näkyvillä oleva käyttötilanne. Esimerkiksi:
+2. **Havainnollistaminen:** Kirjoita opiskelijoiden nähtäville käyttötilanne. Esimerkiksi:
    > "Aloitan salitreenin enkä tiedä, miten koota itselleni järkevä viikko-ohjelma. Pääsen salille kolmena päivänä viikossa."
 
-3. **Seurata botin vuorovaikutusta**: Kerro ääneen, mitä botti tekee:
+3. **Seuraa botin vuorovaikutusta:** Kerro ääneen, mitä botti tekee:
    - "Botti kysyi ensin käyttäjän tavoitetta. Hyvä — se alkaa yksinkertaisesta."
    - "Nyt se kysyy lähtötasoa. Se on tärkeä — jos et tiedä, kenelle ohjaat, et ohjaa oikein."
    - "Huomaa, kuinka botti muistaa, mitä sanoimme aiemmin — se ei kysy samaa uudelleen."
 
 4. **Lopputulos**: Kun botti on kerännyt tarpeeksi tietoa, anna sen koota lopputulos. Näytä, miltä valmis lopputulos näyttää.
 
-5. **Reflektio**: Kysymykset opiskelijoille:
+5. **Pohdinta:** Kysy opiskelijoilta:
    - "Olivatko botin kysymykset hyödyllisiä?"
    - "Oliko jotain, jonka botti olisi pitänyt kysyä?"
-   - "Mitä tekee botin system promptista hyvän?"
+   - "Mikä tekee botin järjestelmäpromptista hyvän?"
 
 ### Opettajan huomiot
 
-Näytä, että botti ei ole täydellinen — se on vain työväline, joka auttaa, mutta käyttäjä tekee päätökset. Korosta, että system prompt on kriittinen. Ilman sitä botti olisi vain yleinen ChatGPT, ei ohjaava apuri. Jos jotain menee pieleen (botti unohtaa jotain, kysyy huonon kysymyksen), käytä sitä opetusvälineenä: "Näetkö, miten tämä näyttää, kun system prompt ei ole riittävän selkeä?"
+Näytä, että botti ei ole täydellinen — se on vain työväline, joka auttaa, mutta käyttäjä tekee päätökset. Korosta, että järjestelmäprompti on kriittinen. Ilman sitä botti olisi vain yleinen ChatGPT, ei ohjaava apuri. Jos jotain menee pieleen (botti unohtaa jotain, kysyy huonon kysymyksen), käytä sitä opetusvälineenä: "Näetkö, miten tämä näyttää, kun järjestelmäprompti ei ole riittävän selkeä?"
 
 ---
 
@@ -47,19 +47,19 @@ Saada opiskelijat ajattelemaan, mitä kysymyksiä hyvä apuri-botti pitäisi esi
 
 1. **Jakautuminen**: Jaa opiskelijat 3–4 henkilön ryhmiin.
 
-2. **Annetaan käyttötilanne**: Jokainen ryhmä saa saman käyttötilanteen (tai vaihtelevia):
+2. **Anna käyttötilanne:** Jokainen ryhmä saa saman tai oman käyttötilanteen:
    > "Rakennamme apuri-botin, joka auttaa uutta jäsentä pääsemään alkuun urheiluseuran harrastuksessa."
 
 3. **Tehtävä**: "Te olette apuri-botin suunnittelijat. Mitä 5–7 kysymystä botin pitäisi esittää, jotta se saisi riittävästi tietoa käyttäjän auttamiseksi?"
 
-4. **Ryhmät kirjoittavat**: Anna ryhmille 10 minuuttia kirjoittaa kysymykset. Kehoita heitä ajattelemaan:
+4. **Ryhmät kirjoittavat:** Anna ryhmille 10 minuuttia kysymysten kirjoittamiseen. Ohjaa heitä pohtimaan:
    - Mitä?
    - Kenelle?
    - Miksi?
    - Milloin?
    - Miten?
 
-5. **Esittely**: Jokainen ryhmä esittelee 2–3 parhaita kysymyksiään (3 minuuttia per ryhmä).
+5. **Esittely:** Jokainen ryhmä esittelee 2–3 parasta kysymystään. Varaa ryhmälle kolme minuuttia.
 
 6. **Yhteenveto**: Kerää kaikki kysymykset liitutaululle tai dialle. Mitkä olivat yleisimpiä? Mitkä olivat loistavia, ja mitkä kaikki muut unohtivat?
 
@@ -101,11 +101,11 @@ Hyväksi botiksi lasketaan selkeä, perusteltu, käyttäjäkeskeinen ja rajoilta
 
 ## Sulkeminen (5 min)
 
-Kertaa, mitä tänään opittiin. Apuri-botti kysyy oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin. System prompt on se, joka tekee botista hyödyllisen. Hyvä botti vastaa viiteen peruskysymykseen: kenelle, mitä, miksi, missä järjestyksessä ja mitä se ei tee.
+Kertaa tunnin opit. Apuri-botti kysyy tarkoituksenmukaisia kysymyksiä ja ohjaa käyttäjää eteenpäin. Järjestelmäprompti määrittää botin toiminnan. Hyvä suunnitelma vastaa viiteen peruskysymykseen: kenelle, mitä, miksi, missä järjestyksessä ja millä rajoilla.
 
 Kerro, että seuraavalla kerralla he:
 1. Suunnittelevat oman botin kysymykset (tehtävä 17.1)
-2. Kirjoittavat system promptin (tehtävä 17.2)
+2. Kirjoittavat järjestelmäpromptin (tehtävä 17.2)
 3. Testaavat bottia (tehtävä 17.3)
 4. Iteroivat ja parantavat (tehtävä 17.4)
 

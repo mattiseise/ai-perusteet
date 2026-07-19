@@ -218,7 +218,7 @@ Oppitunti 20 käsittelee sitä, **milloin agentti on oikea ratkaisu**. Tämä op
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **agenttiongelman canvas ja kuuden kohdan soveltuvuus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+Tallennettava tuotos on **agenttiongelman suunnittelupohja ja kuuden kohdan soveltuvuus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
 
 | Aika | Vaihe | Opettajan tehtävä |
 |---|---|---|
@@ -226,7 +226,7 @@ Tallennettava tuotos on **agenttiongelman canvas ja kuuden kohdan soveltuvuus**.
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija täyttää yhdestä ongelmasta agentticavaksen ja arvioi kuuden suunnittelukohdan tarpeen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

@@ -11,7 +11,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **kontekstin** ja **
 - Opiskelija ymmärtää, että **konteksti** on tekoälyviestinnän perusta.
 - Opiskelija tunnistaa kontekstin viisi keskeistä osaa: **rooli**, **taustatieto**, **tavoite**, **rajaukset** ja **esimerkit**.
 - Opiskelija ymmärtää, että **prompti** on kysymys tai tehtävänanto, joka rakentuu kontekstin päälle.
-- Opiskelija tunnistaa hyvän promptin viisi elementtiä: **tavoite**, **rooli**, **rajoitukset**, **outputformaatti** ja **esimerkit**.
+- Opiskelija tunnistaa hyvän promptin viisi osaa: **tavoite**, **rooli**, **rajoitukset**, **vastausmuoto** ja **esimerkit**.
 
 ### Soveltaa ja analysoida
 
@@ -65,7 +65,7 @@ Kun konteksti on rakennettu, sen päälle kirjoitetaan prompti. Promptin tehtäv
 | **Tavoite** | Mitä tekoälyn pitää tehdä? | ”Auta minua selvittämään virheen todennäköisin syy.” |
 | **Rooli** | Mistä näkökulmasta tekoäly vastaa? | ”Vastaa kuin kärsivällinen IT-opettaja.” |
 | **Rajoitukset** | Mitä vastaus ei saa sisältää tai tehdä? | ”Älä anna valmista ratkaisua ennen kuin selität tarkistusvaiheet.” |
-| **Outputformaatti** | Millaisessa muodossa vastaus annetaan? | ”Anna vastaus numeroituna tarkistuslistana.” |
+| **Vastausmuoto** | Millaisessa muodossa vastaus annetaan? | ”Anna vastaus numeroituna tarkistuslistana.” |
 | **Esimerkit** | Millainen vastaus tai syöte toimii mallina? | ”Tässä on virheilmoitus: Permission denied (publickey).” |
 
 **Opettajan huomio:** Hyvä prompti ei korvaa kontekstia. Terävä prompti ilman taustatietoa johtaa helposti yleisiin vastauksiin. Hyvä konteksti ilman selkeää tehtävänantoa voi taas tuottaa vastauksen, joka ei tee sitä, mitä opiskelija tarvitsi.
@@ -156,7 +156,7 @@ Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **itera
 
 | Versio | Esimerkki | Mitä todennäköisesti tapahtuu? |
 | --- | --- | --- |
-| **Heikko kysymys** | ”Miten debuggaan ohjelmaa?” | Vastaus on yleinen eikä välttämättä auta juuri opiskelijan ongelmaan. |
+| **Heikko kysymys** | ”Miten etsin ohjelmasta virheen?” | Vastaus on yleinen eikä välttämättä auta juuri opiskelijan ongelmaan. |
 | **Hyvä konteksti + prompti** | ”Olen aloittelija Pythonissa. Ohjelmani antaa virheen IndexError rivillä 14. Tässä koodi... Auta minua selvittämään virhe vaiheittain ilman valmista ratkaisua.” | Vastaus on tarkempi, käyttökelpoisempi ja paremmin opiskelijan osaamistasoon sopiva. |
 
 **Ohje opiskelijalle:**
@@ -211,7 +211,7 @@ Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **itera
 - Sisältääkö opiskelijan konteksti kaikki viisi osaa?
 - Sisältääkö opiskelijan prompti kaikki viisi elementtiä?
 - Onko mukana konkreettisia esimerkkejä, kuten koodi, virheilmoitus, lokirivi tai komento?
-- Onko outputformaatti selkeästi pyydetty?
+- Onko vastausmuoto pyydetty selkeästi?
 
 ### Kehittämisalueita
 
@@ -261,7 +261,7 @@ Tallennettava tuotos on **ennen/jälkeen-kontekstikartta ja vastausvertailu**. P
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija antaa saman pyynnön kahdella eri kontekstilla ja merkitsee vastauksista muuttuneet kohdat. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

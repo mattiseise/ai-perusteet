@@ -14,7 +14,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten agentti k
 ### Soveltaa ja analysoida
 
 - Opiskelija osaa arvioida, mitä työkaluja agentti tarvitsee tiettyyn tehtävään.
-- Opiskelija osaa suunnitella työkaluille **rajoituksia**, kuten luku- ja kirjoitusoikeuksia tai komentojen whitelistejä.
+- Opiskelija osaa suunnitella työkaluille **rajoituksia**, kuten luku- ja kirjoitusoikeuksia tai sallittujen komentojen luetteloita.
 - Opiskelija osaa tunnistaa tilanteita, joissa verkkohaku, tiedostojen käsittely tai CLI-komennot voivat aiheuttaa vahinkoa.
 
 ### Luoda ja arvioida
@@ -65,7 +65,7 @@ Tiedostojen käsittelyssä tärkeintä on erottaa **lukuoikeus**, **kirjoitusoik
 
 | Riski | Mitä voi tapahtua? | Miten riskiä vähennetään? |
 | --- | --- | --- |
-| **Väärä tieto** | Agentti löytää epäluotettavan blogin, vanhentuneen ohjeen tai virheellisen lähteen. | Käytä lähteiden whitelistiä: viralliset sivustot, dokumentaatio ja luotettavat lähteet. |
+| **Väärä tieto** | Agentti löytää epäluotettavan blogin, vanhentuneen ohjeen tai virheellisen lähteen. | Käytä sallittujen lähteiden luetteloa: viralliset sivustot, dokumentaatio ja luotettavat lähteet. |
 | **Kustannukset** | Agentti tekee liikaa hakuja ja aiheuttaa tarpeettomia kustannuksia. | Rajoita hakujen määrää käyttäjää, tehtävää tai päivää kohden. |
 | **Yksityisyys** | Agentti hakee tai lähettää verkkoon henkilötietoja, tunnisteita tai arkaluontoista tietoa. | Estä henkilötietojen ja salaisten tietojen hakeminen tai välittäminen ulkoisiin palveluihin. |
 
@@ -75,7 +75,7 @@ Tiedostojen käsittelyssä tärkeintä on erottaa **lukuoikeus**, **kirjoitusoik
 
 **CLI** eli komentorivi on usein riskialttein työkalu. Sen avulla agentti voi luoda kansioita, ajaa skriptejä, käynnistää palveluita tai käsitellä tiedostoja. Samalla se voi virheellisesti käytettynä poistaa tiedostoja, sammuttaa palvelimen tai muuttaa käyttöoikeuksia.
 
-CLI-työkalua kannattaa käsitellä opetuksessa erityisen varovaisesti. Hyvä lähtökohta on, että agentti ei saa ajaa mitä tahansa komentoa. Sen sijaan käytetään **whitelist-mallia**.
+CLI-työkalua kannattaa käsitellä opetuksessa erityisen varovaisesti. Hyvä lähtökohta on, että agentti ei saa ajaa mitä tahansa komentoa. Sen sijaan käytetään **sallittujen kohteiden luetteloa**.
 
 | Sallittu tai kielletty | Komento | Perustelu |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ CLI-työkalua kannattaa käsitellä opetuksessa erityisen varovaisesti. Hyvä l�
 
 CLI-työkalun turvallisuutta voi vahvistaa kolmella keinolla:
 
-1. **Whitelist:** agentti saa ajaa vain ennalta sallittuja komentoja.
+1. **Sallittujen kohteiden luettelo:** agentti saa ajaa vain ennalta sallittuja komentoja.
 2. **Hiekkalaatikko:** komennot ajetaan erillisessä ympäristössä, eivät oikeassa tuotantojärjestelmässä.
 3. **Hyväksyntä:** kriittiset komennot vaativat ihmisen hyväksynnän ennen suorittamista.
 
@@ -123,7 +123,7 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 | Turvakerros | Mitä se tarkoittaa työkalujen kohdalla? | Esimerkki |
 | --- | --- | --- |
 | **Validointi** | Tarkista syöte ennen työkalun käyttöä. | Tiedostonimen pitää olla sallittu eikä se saa sisältää polkua `../`. |
-| **Rajoitus** | Anna vain välttämätön pääsy ja käytä whitelistejä. | Agentti saa kirjoittaa vain `/reports/`-kansioon. |
+| **Rajoitus** | Anna vain välttämätön pääsy ja käytä sallittujen kohteiden luetteloita. | Agentti saa kirjoittaa vain `/reports/`-kansioon. |
 | **Seuranta** | Kirjaa jokainen tärkeä työkalukutsu lokiin. | Lokitetaan, mitä komentoa ajettiin ja millä parametreilla. |
 | **Palautuminen** | Suunnittele, miten virhe korjataan tai kumotaan. | Jos raportti kirjoitetaan väärin, vanha versio säilytetään varmuuskopiona. |
 
@@ -131,11 +131,11 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 
 ## Yleisiä väärinkäsityksiä
 
-### Väärinkäsitys 1: ”Isompi whitelist on parempi.”
+### Väärinkäsitys 1: ”Isompi sallittujen kohteiden luettelo on parempi.”
 
-**Korjaava näkökulma:** Whitelist on turvallinen vain silloin, kun se on rajattu. Mitä enemmän komentoja, kansioita tai lähteitä sallitaan, sitä enemmän vahinkoa agentti voi tehdä virhetilanteessa.
+**Korjaava näkökulma:** Sallittujen kohteiden luettelo on turvallinen vain silloin, kun se on rajattu. Mitä enemmän komentoja, kansioita tai lähteitä sallitaan, sitä enemmän vahinkoa agentti voi tehdä virhetilanteessa.
 
-> Hyvä whitelist ei ole pitkä lista. Hyvä whitelist on juuri niin lyhyt kuin tehtävä sallii.
+> Hyvä sallittujen kohteiden luettelo ei ole pitkä lista. Hyvä sallittujen kohteiden luettelo on juuri niin lyhyt kuin tehtävä sallii.
 
 ### Väärinkäsitys 2: ”Verkkohaku on turvallista, koska agentti vain lukee tietoa.”
 
@@ -143,7 +143,7 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 
 ### Väärinkäsitys 3: ”CLI on tehokas, joten sitä kannattaa käyttää paljon.”
 
-**Korjaava näkökulma:** CLI on tehokas juuri siksi, että se on vaarallinen. Sitä kannattaa käyttää vain, kun se on oikeasti tarpeen, ja silloinkin hiekkalaatikossa, whitelistillä ja tarvittaessa ihmisen hyväksynnällä.
+**Korjaava näkökulma:** CLI on tehokas juuri siksi, että se on vaarallinen. Sitä kannattaa käyttää vain, kun se on oikeasti tarpeen, ja silloinkin hiekkalaatikossa, sallittujen kohteiden luettelolla ja tarvittaessa ihmisen hyväksynnällä.
 
 ### Väärinkäsitys 4: ”Orkestrointi ei ole tärkeää.”
 
@@ -153,7 +153,7 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 
 ## Luokkatehtävien ohjeistus
 
-### TT-A: Whitelist eri agenteille
+### TT-A: Sallittujen kohteiden luettelo eri agenteille
 
 **Tavoite:** Opiskelija suunnittelee työkalujen käyttöoikeudet turvallisesti.
 
@@ -198,8 +198,8 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 
 | Tilanne | Mitä voi mennä pieleen? | Mikä suojaa? |
 | --- | --- | --- |
-| Agentti saa ajaa `rm`-komennon. | Se voi poistaa tärkeitä tiedostoja. | Komentojen whitelist ja hiekkalaatikko. |
-| Agentti saa hakea tietoa mistä tahansa verkosta. | Se voi käyttää virheellistä tai manipuloitua lähdettä. | Lähteiden whitelist ja lähteiden tarkistus. |
+| Agentti saa ajaa `rm`-komennon. | Se voi poistaa tärkeitä tiedostoja. | Sallittujen komentojen luettelo ja hiekkalaatikko. |
+| Agentti saa hakea tietoa mistä tahansa verkosta. | Se voi käyttää virheellistä tai manipuloitua lähdettä. | Sallittujen lähteiden luettelo ja lähteiden tarkistus. |
 | Agentti saa kirjoittaa mihin tahansa kansioon. | Se voi ylikirjoittaa tärkeitä tiedostoja. | Kirjoitusoikeus vain rajattuun kansioon. |
 
 **Aika-arvio:** 15–20 minuuttia
@@ -267,7 +267,7 @@ Tämä harjoitus yhdistää oppituntien 19–22 teorian konkreettiseen n8n-käyt
 3. **Verkkohaku:** Miksi verkkohaku voi olla turvallisuusriski?
 4. **CLI:** Miksi komentorivityökalu on erityisen vaarallinen?
 5. **Orkestrointi:** Mitä voi tapahtua, jos agentti käyttää oikeita työkaluja väärässä järjestyksessä?
-6. **MCP:** Miksi yhteinen standardiliitin hyödyttää sekä työkalun tekijää että agentin käyttäjää — ja miksi se ei poista whitelistien tarvetta?
+6. **MCP:** Miksi yhteinen standardiliitin hyödyttää sekä työkalun tekijää että agentin käyttäjää — ja miksi se ei poista sallittujen kohteiden luetteloiden tarvetta?
 
 ---
 
@@ -323,7 +323,7 @@ Tallennettava tuotos on **työkalusopimus: syöte, tulos, virhe ja oikeusraja**.
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija kirjoittaa yhdelle työkalulle syötteen, tuloksen, virheen ja oikeusrajan sisältävän sopimuksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 
@@ -331,4 +331,4 @@ Oppija täyttää annetun sopimuspohjan. Tuki vähentää valintojen määrää,
 
 ### Syventävä reitti
 
-Kun perustuotos on valmis, oppija lisää hallitun vika- ja fallback-polun. Syventävä työ ei kasvata pakollista ydintuotosta.
+Kun perustuotos on valmis, oppija lisää hallitun vika- ja varapolun. Syventävä työ ei kasvata pakollista ydintuotosta.

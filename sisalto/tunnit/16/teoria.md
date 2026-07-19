@@ -17,7 +17,7 @@ Tämä on valinnainen laboratorio. Valitse yksi tekoälytyökalujen alue, jota k
 
 Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivuasioita, vaan olennainen osa tekoälyn käyttöä. Kun tekoäly tuottaa kuvan, musiikkia tai videon, pitää miettiä ainakin kolmea asiaa: mistä tekoäly on oppinut, saako tuotosta käyttää ja onko reilua väittää tekoälyn tekemää työtä kokonaan omaksi.
 
-**📌 Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
+**Huomio:** Tämän materiaalin tiedot on tarkistettu toukokuussa 2026. Tekoälytyökalut muuttuvat nopeasti, joten yksittäiset nimet, hinnat ja ominaisuudet voivat myöhemmin olla erilaisia.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama idea, neljä mediaa — kullakin oma erikoistunut työkalunsa</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
@@ -162,7 +162,7 @@ Kuvatyökaluille kannattaa antaa selkeä ohje. Hyvässä kuvapromptissa on usein
 - mikä on kuvasuhde
 - mitä kuvassa ei saa olla
 
-**❌ Heikko prompti:**
+**Heikko prompti:**
 
 "Tee kuva tekoälystä."
 
@@ -216,7 +216,7 @@ Musiikkipromptissa kannattaa kertoa ainakin seuraavat asiat:
 - millä kielellä sanoitukset ovat
 - mihin kappaletta käytetään
 
-**❌ Heikko prompti:**
+**Heikko prompti:**
 
 "Tee iloinen biisi."
 
@@ -294,7 +294,7 @@ Videopromptissa kannattaa kertoa:
 - onko mukana ääntä tai puhetta
 - mihin video tulee
 
-**❌ Heikko prompti:**
+**Heikko prompti:**
 
 "Tee video koulusta."
 
@@ -384,7 +384,7 @@ Tekoälyn käyttäminen ohjelmoinnissa ei ole automaattisesti huijaamista. Se ri
 - pyydät esimerkin ja muokkaat sitä itse
 - pyydät tekoälyä kyselemään sinulta, jotta opit
 
-**❌ Huono käyttö:**
+**Huono käyttötapa:**
 
 - kopioit vastauksen ymmärtämättä sitä
 - palautat tekoälyn tekemän tehtävän omana työnäsi
@@ -423,7 +423,7 @@ Tähän ei ole yhtä helppoa vastausta. Se riippuu palvelun käyttöehdoista, ma
 
 Jos käytät työkalua vain koulutehtävän ideointiin, riski on yleensä pieni. Jos taas aiot myydä tekoälyllä tehtyä musiikkia, mainoskuvia tai videoita, pitää tarkistaa palvelun käyttöehdot ja mahdolliset tekijänoikeuskysymykset.
 
-**❌ Älä tee näin:**
+**Vältä tätä:**
 
 "Luo kuva Disneyn Mikki Hiirestä uudessa seikkailussa, ja myyn sen t-paitana."
 
@@ -498,7 +498,7 @@ Tekoälytyökalut eivät ole enää vain tekstin kirjoittamista varten. Niillä 
 
 Paras tapa oppia näitä työkaluja on kokeilla niitä itse ja ajatella samalla kriittisesti: mitä työkalu teki hyvin, missä se epäonnistui ja mitä vastuullinen käyttö tässä tilanteessa tarkoittaa?
 
-**📌 Tärkeä huomautus ajantasaisuudesta**
+**Tärkeä huomautus ajantasaisuudesta**
 
 Tämän materiaalin tiedot on tarkistettu 16.5.2026. Tekoälytyökalut muuttuvat poikkeuksellisen nopeasti. Hinnat, mallit, käyttöehdot, saatavuus ja ominaisuudet voivat muuttua jopa muutamassa kuukaudessa.
 

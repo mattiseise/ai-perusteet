@@ -1,12 +1,12 @@
 # Opiskelutehtävät: Mikä agentti on — ja mitä se ei ole?
 
-> Tämä tunti on Agentit-osion lopputyön ensimmäinen askel. Tänään kirjoitat **⭐️ Agentti: Ongelma** -pohjapiirroksen (1/5). Lopputyön kokonaisuus on osion alussa olevassa tehtävänannossa.
+> Tämä tunti on Agentit-osion lopputyön ensimmäinen askel. Tänään kirjoitat **Agentti: Ongelma** -pohjapiirroksen (1/5). Lopputyön kokonaisuus on osion alussa olevassa tehtävänannossa.
 
 *Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet ainakin pohjapiirroksen — se on lopputyön osa.*
 
 ---
 
-## ⭐️ Agentti: Ongelma 🟢 SUOSITELTU
+## Agentti: Ongelma — suositeltu
 
 **Miksi tämä on tärkeää:** Tunneilla 26–27 rakennat oman n8n-agentin. Tämä pohjapiirros on sen lähtökohta — kun sinulla on selkeä ongelma ja käyttäjä, kaikki myöhemmät suunnittelupäätökset (muisti, päättelymalli, turvakerros, ihmisen rooli) liittyvät konkreettiseen projektiin.
 
@@ -20,7 +20,7 @@ Valitse ongelma, jonka haluaisit ratkaista agentilla. Kirjoita lyhyt kuvaus (150
 
 Ongelman ei tarvitse olla monimutkainen, ja sen voi valita arjesta, harrastuksesta, opiskelusta tai työelämästä. Hyvä lähtökohta voi olla esimerkiksi "harrastuksen tapahtumien ja ilmoittautumisten seuranta", "opintojen palautuspäivien kokoaminen ja muistutus" tai "sähköpostiviestien luokittelu ja yhteenveto joka aamu". Tärkeintä on, että ongelman voi toteuttaa 3–5 solmun n8n-työnkulkuna.
 
-### Tekoälyvaihe — sparraa ongelmavalintaa
+### Tekoälyvaihe — arvioi ongelmavalinta
 
 Avaa ChatGPT, Claude tai Copilot ja käytä sitä sparrauskumppanina ongelmavalinnan haastamiseen. Älä pyydä tekoälyä keksimään ongelmaa puolestasi — pyydä sitä haastamaan oma ehdotuksesi.
 
@@ -34,11 +34,11 @@ niin että minä ajattelen.
 
 Vastaa kysymyksiin omassa pohjapiirroksessasi. Tekoäly ei tee päätöksiä — sinä päätät.
 
-> 💡 **Vinkki muistiinpanoihin:** Tee oma muistiinpanodokumentti, johon kerää kaikki viisi ⭐️ Agentti -pohjapiirrosta omiksi alaotsikoikseen. Tunnilla 26 kasaat ne kaikki yhdeksi suunnitelmaksi.
+> **Vinkki muistiinpanoihin:** Tee oma muistiinpanodokumentti, johon kerää kaikki viisi Agentti-pohjapiirrosta omiksi alaotsikoikseen. Tunnilla 26 kasaat ne kaikki yhdeksi suunnitelmaksi.
 
 ---
 
-## Tehtävä 19.1 — Luokittele järjestelmät 🟣 SYVENTÄVÄ
+## Tehtävä 19.1 — Luokittele järjestelmät — syventävä
 
 **Miksi tämä on hyödyllinen:** Tämä tehtävä harjoittaa täsmälleen sitä taitoa, jonka tarvitset pohjapiirroksesi perustelussa: mikä on agentti ja mikä ei.
 
@@ -59,9 +59,9 @@ Täytä jokaisen järjestelmän kohdalle valintasi (chatbot, agentti tai ei kump
 Vastaa järjestelmän D kohdalla lisäksi kahteen kysymykseen:
 
 1. Osoita kuvauksen tekstistä kohdat, joista tunnistat vähintään neljä kuudesta rakennusosasta — mikä lause paljastaa minkä osan? Mitkä osat eivät näy kuvauksessa suoraan, ja miksi ne silti todennäköisesti ovat olemassa?
-2. Vertaa omaan ⭐️ Agentti: Ongelma -pohjapiirrokseesi: valmisagentissa joku muu on rakentanut kielimallia ympäröivän harnessin. Mitkä kuudesta suunnittelukohdasta näkyvät tuotteessa, mitkä eivät ole tarpeellisia ja mitkä toteutat omassa projektissasi itse?
+2. Vertaa omaan Agentti: Ongelma -pohjapiirrokseesi: valmisagentissa joku muu on rakentanut kielimallia ympäröivän harnessin. Mitkä kuudesta suunnittelukohdasta näkyvät tuotteessa, mitkä eivät ole tarpeellisia ja mitkä toteutat omassa projektissasi itse?
 
-> 💡 **Vinkki muistiinpanoihin:** Kirjaa vastauksesi omiin muistiinpanoihisi. Tätä tehtävää ei palauteta, mutta sen havainnot tukevat pohjapiirroksen perustelua.
+> **Vinkki muistiinpanoihin:** Kirjaa vastauksesi omiin muistiinpanoihisi. Tätä tehtävää ei palauteta, mutta sen havainnot tukevat pohjapiirroksen perustelua.
 
 ---
 

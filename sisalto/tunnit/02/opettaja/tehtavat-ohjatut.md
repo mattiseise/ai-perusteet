@@ -233,7 +233,7 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 | **Mikä taito jää ihmiselle tärkeäksi?** |  |
 | **Mahdollisuus ja riski** |  |
 
-**Vinkki arviointiin:** Hyvä vastaus erottaa nykyisen tekoälyn ja tulevaisuuden AGI-spekulaation. Opiskelijan ei tarvitse ennustaa tulevaisuutta varmasti, mutta hänen tulee perustella näkemyksensä ammatin tehtävien ja osaamistarpeiden kautta.
+**Vinkki arviointiin:** Hyvä vastaus erottaa nykyisen tekoälyn ja tulevaisuuden AGI-spekulaation. Opiskelijan ei tarvitse ennustaa tulevaisuutta varmasti, mutta hänen tulee perustella näkemyksensä ammatin tehtävien ja osaamistarpeiden perusteella.
 
 ### Odotettu oppimistulos
 

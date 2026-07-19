@@ -16,7 +16,7 @@ Tekijä, joka määrittää, kuinka vaativa järjestelmä on rakentaa ja ylläpi
 
 Prosessi, jossa järjestelmä tekee tehtäviä ilman ihmisen osallistumista. Se voi olla yksinkertainen (skripti) tai monimutkainen (agentti).
 
-## Ihminen silmukassa (human-in-the-loop)
+## Ihminen silmukassa (ihmisen osallistuminen päätöksentekoon)
 
 Rakenne, jossa agentti tekee päätöksiä, mutta pyytää ihmisen apua vaikeissa tai kriittisissä tilanteissa. Tämä parantaa turvallisuutta ja luotettavuutta.
 

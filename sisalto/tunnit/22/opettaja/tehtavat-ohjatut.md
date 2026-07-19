@@ -1,12 +1,12 @@
 # Opettajavetoiset tehtävät — oppitunti 22
 
-## Aktiviteetti 1: Whitelist-mallit noin 20 minuuttia
+## Aktiviteetti 1: Sallittujen kohteiden luettelot noin 20 minuuttia
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä **whitelist** tarkoittaa agenttien turvallisuudessa ja miksi agentille pitää määritellä tarkasti, mitä se saa tehdä.
+Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä **sallittujen kohteiden luettelo** tarkoittaa agenttien turvallisuudessa ja miksi agentille pitää määritellä tarkasti, mitä se saa tehdä.
 
-**Opettajan painotus:** Korosta, että whitelist on turvallisuuden perusperiaate. Agentille ei anneta oikeuksia varmuuden vuoksi, vaan vain ne oikeudet, joita se tarvitsee tehtävänsä suorittamiseen.
+**Opettajan painotus:** Korosta, että sallittujen kohteiden luettelo on turvallisuuden perusperiaate. Agentille ei anneta oikeuksia varmuuden vuoksi, vaan vain ne oikeudet, joita se tarvitsee tehtävänsä suorittamiseen.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -14,11 +14,11 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä **whitel
 
 Selitä opiskelijoille:
 
-> Whitelist tarkoittaa sallittujen toimintojen listaa. Agentti saa tehdä vain ne asiat, jotka on erikseen sallittu. Kaikki muu on kiellettyä. Tämä on tärkeä turvallisuusperiaate, koska agentille ei pidä antaa enempää oikeuksia kuin se oikeasti tarvitsee.
+> Sallittujen kohteiden luettelo tarkoittaa sallittujen toimintojen listaa. Agentti saa tehdä vain ne asiat, jotka on erikseen sallittu. Kaikki muu on kiellettyä. Tämä on tärkeä turvallisuusperiaate, koska agentille ei pidä antaa enempää oikeuksia kuin se oikeasti tarvitsee.
 
-### Esittely: kolme whitelist-mallia
+### Esittely: kolme sallittujen kohteiden luetteloa
 
-Näytä opiskelijoille kolme erilaista whitelist-esimerkkiä: liian tiukka, kohtuullinen ja liian löysä.
+Näytä opiskelijoille kolme erilaista esimerkkiä sallittujen kohteiden luetteloista: liian tiukka, kohtuullinen ja liian löysä.
 
 ```
 TIUKKA, liian rajoitettu:
@@ -42,8 +42,8 @@ Kysy opiskelijoilta:
 
 - Mikä näistä on turvallisin?
 - Mikä näistä on käytännössä hyödyllisin?
-- Miksi liian tiukka whitelist voi estää agenttia tekemästä työtään?
-- Miksi liian löysä whitelist on vaarallinen?
+- Miksi liian tiukka sallittujen kohteiden luettelo voi estää agenttia tekemästä työtään?
+- Miksi liian löysä sallittujen kohteiden luettelo on vaarallinen?
 
 **Esimerkki opetukseen**
 
@@ -51,7 +51,7 @@ Kysy opiskelijoilta, mitä tapahtuisi, jos analytiikka-agentti saisi lukea dataa
 
 ### Ryhmätyö
 
-Jaa opiskelijat pienryhmiin. Ryhmät suunnittelevat whitelistin yhdelle tai useammalle seuraavista agenttityypeistä:
+Jaa opiskelijat pienryhmiin. Ryhmät suunnittelevat sallittujen kohteiden luettelon yhdelle tai useammalle seuraavista agenttityypeistä:
 
 1. **Asiakastukiagentti:** auttaa asiakkaita yleisissä kysymyksissä ja hakee tietoa ohjedokumenteista.
 2. **Analytiikka-agentti:** lukee dataa, ajaa analyysin ja tuottaa raportin.
@@ -76,19 +76,19 @@ Ryhmän tehtävänä on määritellä:
 
 **Esitys ja keskustelu:**
 
-Ryhmät esittelevät whitelistinsä. Vertailkaa ratkaisuja yhdessä.
+Ryhmät esittelevät sallittujen kohteiden luettelonsa. Vertailkaa ratkaisuja yhdessä.
 
 Keskustelukysymyksiä:
 
 - Miksi eri agenteilla on erilaiset oikeudet?
 - Mikä oikeus on välttämätön agentin tehtävän kannalta?
 - Mikä oikeus olisi liian suuri riski?
-- Miten whitelist suojaa käyttäjää, organisaatiota ja järjestelmää?
+- Miten sallittujen kohteiden luettelo suojaa käyttäjää, organisaatiota ja järjestelmää?
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, että whitelist määrittää agentin sallitut toiminnot.
-- Opiskelijat osaavat erottaa liian tiukan, sopivan ja liian löysän whitelistin.
+- Opiskelijat ymmärtävät, että sallittujen kohteiden luettelo määrittää agentin sallitut toiminnot.
+- Opiskelijat osaavat erottaa liian tiukan, sopivan ja liian löysän sallittujen kohteiden luettelon.
 - Opiskelijat ymmärtävät, että agentille annetaan vain ne oikeudet, joita se oikeasti tarvitsee.
 
 ---
@@ -205,7 +205,7 @@ Jokainen ryhmä valitsee yhden riskiskenaarion ja analysoi sen seuraavan rakente
 
 1. **Miten riski syntyy?** Mitä agentti tekee väärin tai liian vapaasti?
 2. **Mitä haittaa se aiheuttaa?** Kenelle syntyy vahinkoa ja millaista?
-3. **Miten riski olisi voitu estää?** Mitä whitelist, rajoitus, seuranta tai ihmisen hyväksyntä olisi tarvittu?
+3. **Miten riski olisi voitu estää?** Millainen sallittujen kohteiden luettelo tai muu rajoitus, seuranta tai ihmisen hyväksyntä olisi tarvittu?
 
 | Riskiskenaario | Miten riski syntyy? | Mitä haittaa syntyy? | Miten riski estetään? |
 | --- | --- | --- | --- |
@@ -218,7 +218,7 @@ Ryhmät esittelevät riskinsä ja ehkäisykeinonsa.
 **Opettajan tarkentavia kysymyksiä:**
 
 - Mikä olisi pahin mahdollinen seuraus?
-- Olisiko riski estettävissä pelkällä whitelistillä?
+- Olisiko riski estettävissä pelkällä sallittujen kohteiden luettelolla?
 - Tarvitaanko lokitusta tai jäljitettävyyttä?
 - Missä kohdassa ihmisen pitäisi hyväksyä toiminto?
 - Miten käyttäjälle kerrotaan, mitä agentti aikoo tehdä?
@@ -229,7 +229,7 @@ Ryhmät esittelevät riskinsä ja ehkäisykeinonsa.
 
 - Opiskelijat ymmärtävät, että agentin työkalut tuovat sekä hyötyjä että riskejä.
 - Opiskelijat osaavat analysoida riskin syntymisen, haitan ja ehkäisyn.
-- Opiskelijat ymmärtävät whitelistien, rajoitusten, seurannan ja ihmisen hyväksynnän merkityksen.
+- Opiskelijat ymmärtävät sallittujen kohteiden luetteloiden, rajoitusten, seurannan ja ihmisen hyväksynnän merkityksen.
 
 ---
 
@@ -282,8 +282,8 @@ Ryhmän tulee täyttää seuraava taulukko:
 
 ## Herättävät keskustelukysymykset
 
-- **Mitä tapahtuu, jos whitelist on liian tiukka?**
-- **Mitä tapahtuu, jos whitelist on liian löysä?**
+- **Mitä tapahtuu, jos sallittujen kohteiden luettelo on liian tiukka?**
+- **Mitä tapahtuu, jos sallittujen kohteiden luettelo on liian löysä?**
 - **Voiko agentti tehdä vahinkoa pelkällä verkkohakulla?**
 - **Mitä tapahtuu, jos agentti kutsuu työkalut väärässä järjestyksessä?**
 - **Milloin agentin pitää pyytää ihmiseltä lupa ennen työkalun käyttöä?**
@@ -293,7 +293,7 @@ Ryhmän tulee täyttää seuraava taulukko:
 
 Opettaja arvioi opiskelijoiden kykyä:
 
-- selittää, mitä **whitelist** tarkoittaa agentin turvallisuudessa,
+- selittää, mitä **sallittujen kohteiden luettelo** tarkoittaa agentin turvallisuudessa,
 - suunnitella agentille sopivia sallittuja ja kiellettyjä toimintoja,
 - kuvata, miksi työkalujen käyttöjärjestys eli **orkestrointi** on tärkeää,
 - tunnistaa agentin työkaluihin liittyviä riskejä,

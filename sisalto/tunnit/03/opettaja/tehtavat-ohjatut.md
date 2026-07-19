@@ -243,7 +243,7 @@ Pyydä opiskelijoita keskustelemaan pareittain seuraavista kysymyksistä:
 - Miksi korkea luovuus voi olla ongelma esimerkiksi asiakasviestinnässä, tietoturvassa tai lääketieteessä?
 - Miten valitsisit lämpötilan omaan tekoälytehtävääsi?
 
-**Vinkki arviointiin:** Hyvä opiskelijavastaus ei vain sano “matala” tai “korkea” lämpötila, vaan perustelee valinnan tehtävän tavoitteen kautta: tarvitaanko tarkkuutta, luovuutta, vaihtelua vai turvallisuutta?
+**Vinkki arviointiin:** Hyvä opiskelijavastaus ei vain sano ”matala” tai ”korkea” lämpötila, vaan perustelee valinnan tehtävän tavoitteen perusteella: tarvitaanko tarkkuutta, luovuutta, vaihtelua vai turvallisuutta?
 
 ### Odotettu oppimistulos
 

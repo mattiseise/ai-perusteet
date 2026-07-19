@@ -14,9 +14,9 @@ Agentti voi hakea tietoa internetistä. Ajankohtainen tieto, mutta riskit: vää
 
 ## Komentorivityökalu (CLI, command-line interface tool)
 
-Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Whitelist-malli on kriittinen.
+Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Sallittujen kohteiden luettelo on kriittinen.
 
-## Whitelist
+## Sallittujen kohteiden luettelo
 
 Luettelo asioista, joita agentti saa tehdä. Hyväksytyt komennot, hakusivustot, kansiot.
 

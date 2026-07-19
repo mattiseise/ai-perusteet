@@ -1,8 +1,8 @@
 # Opiskelutehtävät — Työkalupaletti käytännössä
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 10.1, joka opettaa tunnin ydintaitoa — oikean työkalun valitsemista tehtävän mukaan. Jos sinulla on aikaa ja haluat rakentaa itsellesi henkilökohtaisen valintakehyksen, tee lisäksi syventävä tehtävä 10.2.
+> **Valitse yksi tehtävä.** Suositeltu tehtävä 10.1 harjoittaa tunnin ydintaitoa: työkalun valitsemista tehtävän mukaan. Tee lisäksi syventävä tehtävä 10.2, jos haluat rakentaa henkilökohtaisen valintakehyksen.
 
-## Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU
+## Tehtävä 10.1 — Sama tehtävä, kolme työkalua (suositeltu)
 
 **Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: vastuullinen käyttäjä ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
 
@@ -57,8 +57,8 @@ OMA ARVIONI: [liitä taulukkosi]
 
 Auta minua huomaamaan asioita, joita en itse pannut merkille. Mitä
 eroja vastauksissa on, jotka ehkä jäivät huomaamatta? Älä kerro
-suoraan mikä on paras — anna minulle 2–3 kysymystä, joiden
-kautta voin terävöittää omaa arviotani.
+suoraan, mikä on paras. Anna minulle 2–3 kysymystä, jotka
+auttavat minua terävöittämään omaa arviotani.
 ```
 
 Tämä on harjoitus siitä, miten tekoälyä käytetään *vertailun apurina* — etenkin kun vertailtava asia on tekoäly itse.
@@ -71,11 +71,11 @@ Vastaa 3–5 lauseella:
 - Mikä yksi asia yllätti sinut vertailussa?
 - Millaisessa tilanteessa valitsisit jonkin muun työkalun samaan tehtävään?
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta pidä havaintosi muistissa. Kun tunnilla 18 rakennat oman bottisi Microsoft Copilotiin, ymmärrät paremmin, miksi *juuri Copilot* on valittu kurssin alustaksi — ja missä sen rajat menevät verrattuna ChatGPT:hen ja Claudeen.
+> **Vinkki:** Säilytä havaintosi, vaikka tehtävää ei palauteta. Tarvitset niitä, kun rakennat oman bottisi Microsoft Copilotilla ja arvioit alustan vahvuuksia ja rajoja suhteessa ChatGPT:hen ja Claudeen.
 
 ---
 
-## Tehtävä 10.2 — Oma valintakehys 🟣 SYVENTÄVÄ
+## Tehtävä 10.2 — Oma valintakehys (syventävä)
 
 > **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat luoda itsellesi pysyvän työkalun: oman henkilökohtaisen valintakehyksen, jonka avulla osaat valita oikean tekoälyn kuhunkin arjen tehtävään.
 
@@ -89,7 +89,7 @@ Mieti, millaisia tehtäviä teet säännöllisesti opiskelussa, harrastuksissa t
 
 - Pitkän tutkimusartikkelin tiivistäminen
 - Sähköpostiviestin muotoilu suomeksi tai englanniksi
-- Koodin debuggaaminen
+- Koodivirheiden selvittäminen
 - Excel-kaavojen rakentaminen
 - Esseen jäsentäminen
 - Tietoturvariskien tunnistaminen kuvauksesta
@@ -129,6 +129,6 @@ miettiä toista työkalua? Älä muuta valintojani puolestani — anna
 
 Päivitä taulukko tekoälyn sparrauksen jälkeen. Lopuksi kirjoita yhden lauseen sääntö, jonka muistat aina: *"Jatkossa valitsen työkalun siten, että…"*
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä taulukko on yksi kurssin arvokkaimmista työkaluista. Tulosta tai pidä se helposti saatavilla — sitä päivität läpi koko opiskeluajan ja työuran.
+> **Vinkki:** Säilytä taulukko helposti saatavilla, jotta voit päivittää sitä opintojen ja työelämän aikana.
 
 **Tunnin 10 jälkeen tiedät, ettei ole "parasta" tekoälyä — on vain "paras tähän tehtävään".**

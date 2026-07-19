@@ -40,7 +40,7 @@ Toinen riski on **kustannukset**. Jotkut hakupalvelut laskuttavat jokaisesta hau
 
 Kolmas riski on **yksityisyys ja turvallisuus**. Agentti voi yrittää hakea liian arkaluontoisia tietoja ilman rajoituksia. Asiakas voi esimerkiksi yrittää saada agentin etsimään henkilötunnuksia, salasanoja tai muuta yksityistä tietoa verkosta. Tämä olisi vakava turvallisuusriski.
 
-Vastuullisena käyttäjänä sinun täytyy asettaa **selkeät rajat hakutyökalulle**. Voit määritellä, miltä sivustoilta agentti saa hakea tietoa. Tätä kutsutaan **whitelist-malliksi**. Lisäksi voit kieltää agenttia hakemasta henkilökohtaisia tai yksityisiä tietoja ja rajoittaa, kuinka monta hakua se saa tehdä yhtä käyttäjän pyyntöä kohden. Nämä rajaukset suojaavat sekä agentin virheiltä että mahdollisilta väärinkäyttöyrityksiltä.
+Vastuullisena käyttäjänä sinun täytyy asettaa **selkeät rajat hakutyökalulle**. Voit määritellä, miltä sivustoilta agentti saa hakea tietoa. Tätä kutsutaan **sallittujen sivustojen luetteloksi**. Lisäksi voit kieltää agenttia hakemasta henkilökohtaisia tai yksityisiä tietoja ja rajoittaa, kuinka monta hakua se saa tehdä yhtä käyttäjän pyyntöä kohden. Nämä rajaukset suojaavat sekä agentin virheiltä että mahdollisilta väärinkäyttöyrityksiltä.
 
 > **Pysähdy hetkeksi:** Kuvittele agentti, jota käytetään asiakaspalvelun tukena. Mitä tietoa sen ei pitäisi hakea verkosta turvallisuussyistä? Entä jos asiakas yrittää saada agentin hakemaan hänen salasanansa?
 
@@ -52,7 +52,7 @@ CLI antaa agentille kyvyn **luoda ja poistaa kansioita, käynnistää ohjelmia j
 
 CLI on kuitenkin myös vaarallinen. Jos agentti voi ajaa mitä tahansa komentoja ilman rajoituksia, se voi vahingossa poistaa kaikki tiedostot komennolla `rm -rf /`. Se voi sammuttaa palvelimen tai muuttaa asetuksia niin pahasti, että järjestelmä hajoaa kokonaan. Yksi virheellinen päätös voi tuhota viikkojen työn. Siksi CLI-pääsy on yksi agenttien riskialttiimmista työkalutyypeistä.
 
-Siksi sinun täytyy asettaa **tiukat rajat**. Yksi strategia on **whitelist** eli luettelo komennoista, joita agentti saa ajaa. Agentti voi esimerkiksi saada luvan ajaa komennot `ls` eli näytä tiedostot, `mkdir` eli luo kansio ja `cp` eli kopioi tiedosto. Sen sijaan se ei saa ajaa komentoja `rm` eli poista, `shutdown` eli sammuta järjestelmä tai `chmod` eli muuta käyttöoikeuksia. Whitelist on tiukka mutta turvallinen ratkaisu.
+Siksi sinun täytyy asettaa **tiukat rajat**. Yksi strategia on **sallittujen komentojen luettelo**. Agentti saa ajaa vain luetteloon merkityt komennot. Agentti voi esimerkiksi saada luvan ajaa komennot `ls` eli näytä tiedostot, `mkdir` eli luo kansio ja `cp` eli kopioi tiedosto. Sen sijaan se ei saa ajaa komentoja `rm` eli poista, `shutdown` eli sammuta järjestelmä tai `chmod` eli muuta käyttöoikeuksia. Sallittujen komentojen luettelo on tiukka mutta turvallinen ratkaisu.
 
 Toinen strategia on **toimintorajoitus**: agentti voi lukea ja luoda, mutta ei poistaa mitään. Kolmas strategia on **hiekkalaatikko** eli eristetty ympäristö, josta agentti ei voi vaikuttaa oikeaan järjestelmään. Neljäs strategia on **hyväksyntä**: agentti voi ehdottaa komentoa, mutta ihmisen täytyy vahvistaa se ennen suorittamista.
 
@@ -172,7 +172,7 @@ Kun rakennat agenttia oppitunneilla 26–27, nämä abstraktit työkalut muuttuv
 | Sähköposti | **Gmail**- tai **SMTP**-solmu | Agentti lähettää vastauksen asiakkaalle. |
 | Tietokantahaku | **MySQL**- tai **PostgreSQL**-solmu | Agentti tarkistaa asiakkaan tilaushistorian. |
 
-Tässä oppitunnissa käsitellyt turvakerrokset, kuten whitelist, toimintorajoitus, hiekkalaatikko ja hyväksynnät, voidaan toteuttaa n8n:ssä esimerkiksi **IF-solmuilla** ehtojen tarkistamiseen, **erillisillä työnkuluilla** turvalliseen eristämiseen ja **hyväksyntäsolmuilla**, joissa ihminen tarkistaa toiminnon ennen suoritusta. Tämä konkretisoituu oppitunneilla 26–27, mutta jo nyt kannattaa kysyä: mikä n8n-solmu toteuttaisi tämän toiminnon?
+Tässä oppitunnissa käsitellyt turvakerrokset, kuten sallittujen kohteiden luettelot, toimintorajoitus, hiekkalaatikko ja hyväksynnät, voidaan toteuttaa n8n:ssä esimerkiksi **IF-solmuilla** ehtojen tarkistamiseen, **erillisillä työnkuluilla** turvalliseen eristämiseen ja **hyväksyntäsolmuilla**, joissa ihminen tarkistaa toiminnon ennen suoritusta. Tämä konkretisoituu oppitunneilla 26–27, mutta jo nyt kannattaa kysyä: mikä n8n-solmu toteuttaisi tämän toiminnon?
 
 ## MCP — yksi liitin kaikille työkaluille
 
@@ -184,7 +184,7 @@ Arkinen vastine löytyy laturilaatikosta. Ennen jokaisella puhelinvalmistajalla 
 
 Sama periaate näkyy kahdessa paikassa, jotka jo tunnet. n8n:ssä on **MCP-solmuja**, joilla voit kytkeä työkaluja omaan agenttiisi tällä standardilla, kun rakennat sitä tunneilla 26–27. Ja kun valmisagentti tarjoaa **konnektorin** eli valmiin liittimen sähköpostiin, kalenteriin tai tiedostoihin, taustalla on sama ajatus: standardoitu tapa tuoda työkalu mallin ulottuville.
 
-Yksi asia ei kuitenkaan muutu. Standardiliitin vastaa kysymykseen ”miten kytketään”, ei kysymykseen ”mitä saa tehdä”. Jokainen MCP:llä kytketty työkalu tarvitsee silti täsmälleen samat rajaukset, jotka tällä tunnilla opit: oikeudet, whitelistit ja lokituksen. Helppo kytkeminen voi jopa houkutella kytkemään enemmän kuin tehtävä vaatii — silloin minimioikeusperiaate on entistäkin tärkeämpi.
+Yksi asia ei kuitenkaan muutu. Standardiliitin vastaa kysymykseen ”miten kytketään”, ei kysymykseen ”mitä saa tehdä”. Jokainen MCP:llä kytketty työkalu tarvitsee silti täsmälleen samat rajaukset, jotka tällä tunnilla opit: oikeudet, sallittujen kohteiden luettelot ja lokituksen. Helppo kytkeminen voi jopa houkutella kytkemään enemmän kuin tehtävä vaatii — silloin minimioikeusperiaate on entistäkin tärkeämpi.
 
 > **Tilanne heinäkuussa 2026 — konnektorit valmisagenteissa.**
 > Claude Coworkissa ja ChatGPT Workissa työkalut näkyvät käyttäjälle konnektoreina eli valmiina liittiminä, jotka perustuvat MCP:n kaltaiseen standardikytkentään. Siksi sama työkalu voidaan tuoda eri agentteihin ilman, että jokaista kytkentää rakennetaan erikseen.
@@ -269,9 +269,9 @@ Kolme työkalua — tiedostot, verkkohaku ja CLI — ovat voimakkaita. Voima tuo
 
 **Tiedostotyökalulle:** anna lukuoikeus vain välttämättömiin tiedostoihin. Anna kirjoitusoikeus vain erikseen määriteltyihin kansioihin. Älä anna poistooikeutta lainkaan, ellei se ole tehtävän kannalta välttämätöntä. Lokita jokainen tiedoston avaus ja muokkaus, jotta näet myöhemmin, mitä agentti teki.
 
-**Verkkohakutyökalulle:** määritä sallittujen lähteiden whitelist. Rajoita, kuinka monta hakua agentti voi tehdä sekunnissa tai päivässä. Estä haku henkilökohtaisista tai arkaluontoisista termeistä. Kirjaa jokainen haku, jotta näet, mitä agentti etsi.
+**Verkkohakutyökalulle:** määritä sallittujen lähteiden luettelo. Rajoita, kuinka monta hakua agentti voi tehdä sekunnissa tai päivässä. Estä haku henkilökohtaisista tai arkaluontoisista termeistä. Kirjaa jokainen haku, jotta näet, mitä agentti etsi.
 
-**CLI-työkalulle:** käytä tiukkaa komentojen whitelistiä tai aja agentin CLI-toiminnot hiekkalaatikossa erillään oikeista palvelimista. Vaadi ihmisen hyväksyntä kriittisille toiminnoille, kuten poistolle tai palvelimen sammuttamiselle. Lokita jokainen suoritettu komento.
+**CLI-työkalulle:** käytä tiukkaa sallittujen komentojen luetteloa tai aja agentin CLI-toiminnot hiekkalaatikossa erillään oikeista palvelimista. Vaadi ihmisen hyväksyntä kriittisille toiminnoille, kuten poistolle tai palvelimen sammuttamiselle. Lokita jokainen suoritettu komento.
 
 Näillä rajoituksilla agentti pysyy hallinnassa. Se voi tehdä työtään, mutta se ei pääse aiheuttamaan katastrofaalista vahinkoa.
 
@@ -283,7 +283,7 @@ Tämän oppitunnin työkaluajattelu auttaa sinua hahmottamaan, mitä konkreettis
 
 Agentti näkee ja muistaa, mutta sen voima syntyy siitä, että se voi **tehdä todellisia asioita**. Kolme perustyökalua — **tiedostot, verkkohaku ja CLI-komennot** — antavat agentille kyvyn toimia maailmassa. Agentti ei ole yksi suuri älykäs ohjelma, vaan **orkestraattori**, joka kutsuu työkaluja järjestyksessä tehtävän ratkaisemiseksi.
 
-Jokainen työkalu tuo kuitenkin mukanaan turvallisuusriskejä, jotka täytyy hallita rajoituksilla. Tiedostojen käytössä hallitaan tiedosto-oikeuksia. Verkkohaussa määritetään sallittujen lähteiden whitelist. CLI-komennoissa käytetään komentojen whitelistiä, hiekkalaatikkoa tai ihmisen hyväksyntää. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, nämä työkalut ovat ensimmäisiä integraatioita, joita kytket agentin rinnalle. Jokaisen kohdalla sinun täytyy miettiä, mitä rajoituksia se tarvitsee.
+Jokainen työkalu tuo kuitenkin mukanaan turvallisuusriskejä, jotka täytyy hallita rajoituksilla. Tiedostojen käytössä hallitaan tiedosto-oikeuksia. Verkkohaussa määritetään sallittujen lähteiden luettelo. CLI-komennoissa käytetään sallittujen komentojen luetteloa, hiekkalaatikkoa tai ihmisen hyväksyntää. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, nämä työkalut ovat ensimmäisiä integraatioita, joita kytket agentin rinnalle. Jokaisen kohdalla sinun täytyy miettiä, mitä rajoituksia se tarvitsee.
 
 ---
 

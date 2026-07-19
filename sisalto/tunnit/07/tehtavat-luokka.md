@@ -1,6 +1,6 @@
 # Todistusaineisto 3 — Vastuullisen käyttäjän verifiointikäytäntö
 
-> 📌 **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
+> **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät sitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
@@ -83,6 +83,6 @@ Tee kuitenkin tiedosto, jossa on:
 - Lyhyt todiste hallusinaatiosta (vaihe 1: kysymys + mallin vastaus + oikea vastaus + lähdelinkki)
 - Tarkistuslistasi (vaihe 4, noin 250–300 sanaa)
 
-> 💡 **Miksi tämä on tärkeää:** Tuomaripöydässä tarkistuslistasi on suorassa käytössä, kun joudut esittämään, mitä organisaation pitäisi tehdä toisin. Yhdessä todistusaineistojen 1 ja 2 kanssa sinulla on vahva perusta koko arvioitavalle tehtävälle — ymmärrät *mekaniikan*, *rajat* ja *ratkaisut*.
+> **Miksi tämä on tärkeää:** Tuomaripöydässä käytät tarkistuslistaasi, kun esität, mitä organisaation pitäisi tehdä toisin. Yhdessä todistusaineistojen 1 ja 2 kanssa se muodostaa vahvan perustan arvioitavalle tehtävälle — ymmärrät *mekanismin*, *rajat* ja *ratkaisut*.
 
 **3 / 3 todistusaineistoa kerätty — valmis tuomaripöytään**

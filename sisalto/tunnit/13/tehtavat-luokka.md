@@ -1,8 +1,8 @@
 # Opiskelutehtävät — AI työparina
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 13.1, jossa harjoittelet koko työparityöskentelyn sykliä: pohja tekoälyltä → oma muokkaus → kriittinen arviointi. Jos sinulla on aikaa ja haluat lisäharjoitusta virheilmoitusten tulkinnassa, tee lisäksi syventävä tehtävä 13.2.
+> **Valitse yksi tehtävä.** Suositeltu tehtävä 13.1 harjoittaa koko työparityöskentelyn sykliä: tekoälyn luonnos → oma muokkaus → kriittinen arviointi. Tee lisäksi syventävä tehtävä 13.2, jos haluat harjoitella virheilmoitusten tulkintaa.
 
-## Tehtävä 13.1 — Kirjoita ohje työparityönä 🟢 SUOSITELTU
+## Tehtävä 13.1 — Kirjoita ohje työparityönä (suositeltu)
 
 **Tavoite:** Opit hyödyntämään tekoälyä koko sykliä: pohjan tekijänä, muokkauksen kohteena ja kriittisenä arvioijana. Ihminen päättää suunnan, tekoäly auttaa nopeuttamaan.
 
@@ -82,11 +82,11 @@ Tee viimeiset korjaukset palautteen perusteella. Lopuksi vastaa mielessäsi 2–
 - Mitä piti muuttaa, koska tekoäly ei tiennyt todellisuutta?
 - Mitä huomasit, kun tekoäly toimi kohderyhmänä — auttoiko se?
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä ohje ja muistiinpano omassa kansiossasi. Tunnilla 18 rakentamasi *oma apuri-botti* tekee periaatteessa samaa: ohjaa käyttäjää vaihe vaiheelta jonkin asian läpi. Ymmärrät paremmin, miksi rajat ja tarkennukset ovat tärkeitä, kun olet itse joutunut tekemään ohjetta.
+> **Vinkki:** Säilytä ohje ja muistiinpano omassa kansiossasi, vaikka tehtävää ei palauteta. Tunnilla 18 rakennat oman apuri-bottisi samojen periaatteiden varaan: se ohjaa käyttäjää vaihe vaiheelta ja tarvitsee selkeät rajat.
 
 ---
 
-## Tehtävä 13.2 — Tulkitse virheilmoitus tekoälyn kanssa 🟣 SYVENTÄVÄ
+## Tehtävä 13.2 — Tulkitse virheilmoitus tekoälyn kanssa (syventävä)
 
 > **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat harjoitella tärkeää digiarjen taitoa: virheilmoitusten tulkintaa.
 
@@ -142,6 +142,6 @@ Kirjoita 5–8 lauseen selvitys, jossa:
 - Mainitset mahdollisen vakavamman taustasyyn, jos sellainen on
 - Kommentoit: kuinka luotettavalta tekoälyn vastaus tuntui, kun tarkistit sen toisaalta?
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämän taidon arvo kasvaa työuran mittaan. Säilytä selvitys omiin muistiinpanoihin — kun samanlainen virheilmoitus tulee vastaan toistamiseen, sinulla on jo valmis ratkaisupohja.
+> **Vinkki:** Säilytä selvitys omissa muistiinpanoissasi. Voit käyttää sitä ratkaisupohjana, jos kohtaat samanlaisen virheilmoituksen myöhemmin.
 
 **Tekoäly ehdottaa, sinä päätät.**

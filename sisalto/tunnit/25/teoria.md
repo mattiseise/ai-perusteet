@@ -1,10 +1,10 @@
-# Ihminen portinvartijana — human-in-the-loop käytännössä
+# Ihminen portinvartijana — ihmisen osallistuminen päätöksentekoon käytännössä
 
 ## Johdanto
 
 Kaikki, mitä olet tähän mennessä oppinut — **muisti**, **konteksti**, **työkalut**, **suunnittelumallit** ja **turvallisuus** — johtaa yhteen tärkeään ajatukseen: **agentti ei voi tehdä kaikkea yksin**. Joissain tilanteissa agentti täytyy pysäyttää odottamaan, kunnes ihminen sanoo: ”kyllä, jatka” tai ”ei, älä tee sitä”.
 
-Tätä kutsutaan nimellä **human-in-the-loop** eli ihmisen osallistuminen automaation silmukkaan. Se ei tarkoita, että ihminen tekee kaiken itse. Se tarkoittaa, että ihminen hyväksyy kriittiset päätökset, tarkistaa riskialttiit toiminnot ja ohjaa agenttia silloin, kun agentti on epävarma.
+Tässä toimintatavassa **ihminen osallistuu päätöksentekoon** automaation rinnalla. Se ei tarkoita, että ihminen tekee kaiken itse. Se tarkoittaa, että ihminen hyväksyy kriittiset päätökset, tarkistaa riskialttiit toiminnot ja ohjaa agenttia silloin, kun agentti on epävarma.
 
 Tässä oppitunnissa opit, **milloin ihminen täytyy ottaa mukaan päätöksentekoon, miten hyväksyntäportit suunnitellaan ja miten rakennetaan työnkulkuja, joissa agentti ja ihminen tekevät yhteistyötä**. Näitä periaatteita käytät suoraan seuraavilla oppitunneilla, kun rakennat omaa agenttia n8n:llä.
 
@@ -121,9 +121,9 @@ Hyväksyntäportteihin liittyy myös **aikaraja**. Mitä tapahtuu, jos ihminen e
 
 - **Oletusarvo:** Jos vastausta ei tule, järjestelmä toimii ennalta sovitulla tavalla. Tämä voi tarkoittaa hyväksyntää tai hylkäystä, mutta sitä pitää käyttää varoen.
 - **Eskalointi:** Pyyntö lähetetään toiselle hyväksyjälle, esimerkiksi esihenkilölle tai varahenkilölle.
-- **Timeout:** Agentti peruuttaa pyynnön ja ilmoittaa asiakkaalle, että prosessi ei voi jatkua juuri nyt.
+- **Aikaraja:** Agentti peruuttaa pyynnön ja ilmoittaa asiakkaalle, että prosessi ei voi jatkua juuri nyt.
 
-Valinta riippuu siitä, kuinka paljon odottaminen maksaa ja kuinka suuri riski väärällä päätöksellä on. Jos asiakas odottaa liian kauan vastausta, hän voi siirtyä kilpailijalle. Silloin eskalointi voi olla hyvä ratkaisu. Jos päätös on hyvin kriittinen, esimerkiksi miljoonan euron sopimus, automaattinen hyväksyntä olisi liian vaarallinen. Silloin timeout tai ihmisen pakollinen hyväksyntä on turvallisempi vaihtoehto.
+Valinta riippuu siitä, kuinka paljon odottaminen maksaa ja kuinka suuri riski väärällä päätöksellä on. Jos asiakas odottaa liian kauan vastausta, hän voi siirtyä kilpailijalle. Silloin eskalointi voi olla hyvä ratkaisu. Jos päätös on hyvin kriittinen, esimerkiksi miljoonan euron sopimus, automaattinen hyväksyntä olisi liian vaarallinen. Silloin aikaraja tai ihmisen pakollinen hyväksyntä on turvallisempi vaihtoehto.
 
 ## Hyväksyntäportit käytännössä: kolme esimerkkiä
 
@@ -160,7 +160,7 @@ Näissä esimerkeissä hyväksyntäportin **laajuus**, **hyväksyjien määrä**
 
 ## Työnkulut, joissa agentti ja ihminen tekevät yhteistyötä
 
-Hyväksyntäportit ovat vain yksi osa human-in-the-loop-työnkulkua. Kokonaisuus on **työnkulku, jossa agentti ja ihminen tekevät yhteistyötä**. Agentti tekee sitä, missä se on hyvä: nopeaa analyysiä, tiedonhakua, toistuvia vaiheita ja yksinkertaisia päätöksiä. Ihminen tekee sitä, missä ihminen on vahva: kriittisiä päätöksiä, empatiaa, tilannearviointia ja poikkeusten käsittelyä.
+Hyväksyntäportit ovat vain yksi osa ihmisen osallistava työnkulkua. Kokonaisuus on **työnkulku, jossa agentti ja ihminen tekevät yhteistyötä**. Agentti tekee sitä, missä se on hyvä: nopeaa analyysiä, tiedonhakua, toistuvia vaiheita ja yksinkertaisia päätöksiä. Ihminen tekee sitä, missä ihminen on vahva: kriittisiä päätöksiä, empatiaa, tilannearviointia ja poikkeusten käsittelyä.
 
 Kuvittele asiakaspalvelun työnkulku:
 
@@ -177,7 +177,7 @@ Koko prosessi on hybridi. Agentti tekee rutiinianalyysin ja toteuttaa toimenpite
 
 ## Agentin oppiminen ihmisen palautteesta
 
-Human-in-the-loop ei tarkoita vain sitä, että ihminen hyväksyy tai hylkää päätöksiä. Se tarkoittaa myös sitä, että **agentti voi oppia ihmisen palautteesta**. Kun ihminen hylkää agentin ehdotuksen, agentti voi tallentaa hylkäyksen syyn. Kun ihminen hyväksyy ehdotuksen, agentti voi tallentaa, millainen ehdotus hyväksyttiin ja miksi.
+Ihmisen osallistuminen päätöksentekoon ei tarkoita vain sitä, että ihminen hyväksyy tai hylkää päätöksiä. Se tarkoittaa myös sitä, että **agentti voi oppia ihmisen palautteesta**. Kun ihminen hylkää agentin ehdotuksen, agentti voi tallentaa hylkäyksen syyn. Kun ihminen hyväksyy ehdotuksen, agentti voi tallentaa, millainen ehdotus hyväksyttiin ja miksi.
 
 Esimerkiksi agentti tekee alennusehdotuksia. Yksi myyntipäällikkö hyväksyy usein 40 % alennuksia, kun taas toinen hyväksyy yleensä vain 15 % alennuksia. Agentti voi oppia palautteesta, että hyväksyjien päätöstyylit eroavat toisistaan. Tämän perusteella se voi myöhemmin tehdä realistisempia ehdotuksia eri hyväksyjille.
 
@@ -196,8 +196,8 @@ Tämä on viimeinen teoriapainotteinen oppitunti ennen rakentamista. Seuraavaksi
 | **Muisti ja konteksti** | Konteksti-ikkuna, pitkäkestoinen muisti ja tila. | Memory-solmu, tietokanta, Google Sheets tai muu tilan tallennus. |
 | **Työkalut** | Tiedostot, verkkohaku ja CLI-komennot. | Read File-, HTTP Request- ja Execute Command -solmut. |
 | **Suunnittelumallit** | ReAct, ketjuajattelu ja moniagenttijärjestelmät. | AI Agent ReAct-malliin, solmuketju ketjuajatteluun ja webhook-kutsut moniagenttirakenteeseen. |
-| **Turvallisuus** | Prompt injection, hallusinaatiot, minimioikeus ja lokitus. | IF-solmut validointiin, rajatut API-avaimet, hyväksyntäportit ja lokisolmut. |
-| **Human-in-the-loop** | Hyväksyntäportit, palaute ja ihmisen rooli kriittisissä päätöksissä. | Hyväksyntäsolmu, Slack- tai Teams-ilmoitus, lomakevastaus ja lokitus. |
+| **Turvallisuus** | Promptihyökkäys, hallusinaatiot, minimioikeus ja lokitus. | IF-solmut validointiin, rajatut API-avaimet, hyväksyntäportit ja lokisolmut. |
+| **Ihmisen osallistuminen päätöksentekoon** | Hyväksyntäportit, palaute ja ihmisen rooli kriittisissä päätöksissä. | Hyväksyntäsolmu, Slack- tai Teams-ilmoitus, lomakevastaus ja lokitus. |
 
 Kaikki, mitä olet oppinut, muuttuu n8n:ssä konkreettisiksi solmuiksi ja yhteyksiksi. Näet visuaalisesti, missä työnkulku käynnistyy, missä agentti hakee tietoa, missä se tekee päätöksen ja missä se pysähtyy odottamaan ihmisen hyväksyntää.
 
@@ -225,7 +225,7 @@ Yhdessä nämä muodostavat suunnitelman, jonka pohjalta rakennat n8n-työnkulun
 
 ## Yhteenveto
 
-**Human-in-the-loop** ei tarkoita, että ihminen tekee kaiken. Se tarkoittaa, että ihminen hyväksyy suuret päätökset ja ohjaa agenttia epäselvissä tai riskialttiissa tilanteissa. Kolme sääntöä auttaa päättämään, milloin hyväksyntä tarvitaan: päätös liittyy **rahaan tai rakenteeseen**, agentti on **epävarma** tai tilanne on **poikkeava**.
+**Ihmisen osallistuminen päätöksentekoon** ei tarkoita, että ihminen tekee kaiken. Se tarkoittaa, että ihminen hyväksyy suuret päätökset ja ohjaa agenttia epäselvissä tai riskialttiissa tilanteissa. Kolme sääntöä auttaa päättämään, milloin hyväksyntä tarvitaan: päätös liittyy **rahaan tai rakenteeseen**, agentti on **epävarma** tai tilanne on **poikkeava**.
 
 **Hyväksyntäportit** tehdään selkeiksi ja nopeiksi, jotta ihminen voi vastata ilman, että koko prosessi pysähtyy tarpeettoman pitkäksi aikaa. Hyvässä hyväksyntäportissa näkyvät päätös, perustelut, riskit, hyväksyjä ja vaihtoehtoinen polku, jos pyyntö hylätään.
 

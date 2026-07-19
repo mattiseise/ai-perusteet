@@ -1,6 +1,6 @@
 # Rakennuspalikka 2 — Botin määrittelydokumentti
 
-**📌 Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *oman apuri-bottisi* Microsoft Copilotiin. Säilytä tämä työ huolellisesti.
+**Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -85,8 +85,8 @@ Tarkista viimeistelyssä erityisesti nämä asiat:
 
 Kirjoita lopuksi 2–3 lauseen pohdinta: *"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"*
 
-> **💡 Miksi tämä on tärkeää:** Oppitunnilla 17 avaat Copilotin ja aloitat botin rakentamisen. Et aloita tyhjästä, vaan palaat tähän dokumenttiin. Tämä määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin botti on valmis ensimmäiseen testiin.
+> **Miksi tämä on tärkeää:** Oppitunnilla 17 aloitat botin rakentamisen Copilotilla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.
 
-> **💡 Tarkista lopuksi:** Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.
+> **Tarkista lopuksi:** Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.
 
 **2 / 3 rakennuspalikkaa kerätty**

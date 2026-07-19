@@ -1,6 +1,6 @@
 # Todistusaineisto 2 — Kun tekoäly unohtaa
 
-> 📌 **Tämä on toinen kolmesta todistusaineistosta**, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
+> **Tämä on toinen kolmesta todistusaineistosta**, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
@@ -90,6 +90,6 @@ Tee kuitenkin tiedosto, jossa on:
 - Mallin vastaus rajauksen "unohtamisen" jälkeen (vaihe 3) ja vastaus rajauksen toiston jälkeen (vaihe 4) — kuvakaappauksina tai kopioina
 - Tapausesimerkkisi (vaihe 6, noin 300 sanaa)
 
-> 💡 **Miksi tämä on tärkeää:** Tuomaripöydässä viittaat tähän todistusaineistoon, kun joudut selittämään, *miksi* tekoäly toimi alussa "oikein" mutta antoi myöhemmin vaarallisen neuvon. Tämä on yksi tekoälyn tyypillisimmistä riskeistä työkäytössä.
+> **Miksi tämä on tärkeää:** Tuomaripöydässä viittaat tähän todistusaineistoon, kun selität, *miksi* tekoäly toimi alussa "oikein" mutta antoi myöhemmin vaarallisen neuvon. Tämä on yksi tekoälyn tyypillisimmistä riskeistä työkäytössä.
 
 **2 / 3 todistusaineistoa kerätty**

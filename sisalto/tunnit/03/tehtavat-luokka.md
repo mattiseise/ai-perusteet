@@ -1,6 +1,6 @@
 # Todistusaineisto 1 — Miten kone oikeasti tuottaa tekstiä
 
-> 📌 **Tämä on ensimmäinen kolmesta todistusaineistosta**, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
+> **Tämä on ensimmäinen kolmesta todistusaineistosta**, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
@@ -77,6 +77,6 @@ Tästä pitäisi saada kuitenkin yksi tiedosto (Word, PDF tai Markdown), jossa o
 - Kuvakaappaukset tai kopiot kokeiluista (vaiheet 1–3)
 - Analyysisi (vaihe 5, noin 300 sanaa)
 
-> 💡 **Miksi tämä on tärkeää:** Tuomaripöydässä viittaat tähän todistusaineistoon suoraan, kun selität, *miksi* skenaariosi tekoäly tuotti väärän vastauksen. Et toista käsitteitä — sovellat niitä.
+> **Miksi tämä on tärkeää:** Tuomaripöydässä viittaat tähän todistusaineistoon suoraan, kun selität, *miksi* skenaariosi tekoäly tuotti väärän vastauksen. Et toista käsitteitä — sovellat niitä.
 
 **1 / 3 todistusaineistoa kerätty**

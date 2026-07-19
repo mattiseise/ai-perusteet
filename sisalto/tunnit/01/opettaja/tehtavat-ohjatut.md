@@ -67,7 +67,7 @@ Kirjoita taululle kaksi kysymystä: “Onko tämä vain sääntö?” ja “Oppi
 ### Väärinkäsitykset, joita kannattaa käsitellä
 
 - **“Tekoäly on sama asia kuin automaatio.”**
-  Ei aivan. Automaatio toistaa ennalta määriteltyjä toimintoja, kun taas tekoäly hyödyntää dataa ja voi oppia malleja tai kuvioita.
+  Ei aivan. Automaatio toistaa ennalta määriteltyjä toimintoja, kun taas tekoäly hyödyntää dataa ja voi oppia siitä säännönmukaisuuksia.
 - **“Tekoäly tarkoittaa, että järjestelmä on monimutkainen.”**
   Ei välttämättä. Monimutkainen ohjelmisto ei automaattisesti ole tekoälyä.
 - **“Tekoälyn tulokset ovat aina oikein.”**

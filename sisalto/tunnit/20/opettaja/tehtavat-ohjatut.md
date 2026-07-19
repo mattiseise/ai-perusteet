@@ -43,7 +43,7 @@ Jos opiskelijat valitsevat agentin liian nopeasti, kysy: “Mitä agentti tekee 
 | **A: Asiakaspalautteiden käsittely** | Yritys saa päivittäin paljon asiakaspalautteita, jotka pitää luokitella kiireellisyyden ja aiheen mukaan. | Sääntöpohjainen automaatio, agentti tai ihminen. |
 | **B: Tentin päivämäärän kysyminen** | Opiskelijat kysyvät usein, milloin seuraava koe on. | FAQ, chatbot tai kalenteriin yhdistetty automaatio. |
 | **C: Asiakaspalvelupyyntöjen reititys** | Yhteydenottoja tulee paljon, ja ne pitää ohjata oikealle asiantuntijalle. | Työnkulku, agentti tai hybridiratkaisu. |
-| **D: Alennuspyyntöjen käsittely** | Asiakkaat pyytävät alennuksia eri perusteilla. Päätös vaikuttaa yrityksen rahaan. | Agentti, hyväksyntäportti ja human-in-the-loop. |
+| **D: Alennuspyyntöjen käsittely** | Asiakkaat pyytävät alennuksia eri perusteilla. Päätös vaikuttaa yrityksen rahaan. | Agentti, hyväksyntäportti ja ihmisen osallistuminen päätöksentekoon. |
 
 ### Ryhmän tehtävä
 
@@ -240,7 +240,7 @@ Kokoa keskustelu yhteen:
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät työkalujen merkityksen agentin kyvykkyydelle.
+- Opiskelijat ymmärtävät työkalujen merkityksen agentin toimintakyvylle.
 - Opiskelijat osaavat arvioida, mitä työkaluja agentti tarvitsee tehtäväänsä varten.
 - Opiskelijat ymmärtävät, että työkalut lisäävät myös riskejä ja vaativat rajoituksia.
 
@@ -255,6 +255,6 @@ Opettaja arvioi opiskelijoiden kykyä:
 - perustella, milloin yksinkertaisempi automaatio riittää,
 - arvioida agentin kustannuksia, hyötyjä, riskejä ja ylläpitoa,
 - suunnitella agentin tavoitteen, rajauksen, työkalut ja turvakerrokset,
-- selittää, miksi agentin työkalut vaikuttavat suoraan sen kyvykkyyteen ja riskeihin.
+- selittää, miksi agentin työkalut vaikuttavat suoraan sen toimintakykyyn ja riskeihin.
 
 ---

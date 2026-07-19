@@ -1,20 +1,20 @@
-# Opiskelutehtävät: Ihminen portinvartijana — human-in-the-loop
+# Opiskelutehtävät: Ihminen portinvartijana — ihmisen osallistuminen päätöksentekoon
 
-> Tämä tunti rakentaa lopputyösi viimeistä osaa. Tuotos: **⭐️ Agentti: Ihminen** (5/5).
+> Tämä tunti rakentaa lopputyösi viimeistä osaa. Tuotos: **Agentti: Ihminen** (5/5).
 
-*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin ⭐️ Agentti: Ihminen -tehtävää.*
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin Agentti: Ihminen -tehtävää.*
 
-> 💡 **Vinkki:** Ihmisen rooli voi olla pieni tai iso. Yksinkertaisessa FAQ-botissa ihmistä ei välttämättä tarvita lainkaan; kriittisiä päätöksiä tekevässä agentissa hyväksyntäportteja on useampi.
+> **Vinkki:** Ihmisen rooli voi olla pieni tai iso. Yksinkertaisessa FAQ-botissa ihmistä ei välttämättä tarvita lainkaan; kriittisiä päätöksiä tekevässä agentissa hyväksyntäportteja on useampi.
 
 ---
 
-## ⭐️ Agentti: Ihminen 🟢 SUOSITELTU
+## Agentti: Ihminen — suositeltu
 
-**Miksi tämä on tärkeää:** Tunnilla 27 lisäät hyväksyntäsolmuja n8n:ssä. Hyvin suunniteltu human-in-the-loop on tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.
+**Miksi tämä on tärkeää:** Tunnilla 27 lisäät hyväksyntäsolmuja n8n:ssä. Ihmisen osallistuminen päätöksentekoon vaatii tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.
 
 ### Tehtävä
 
-Avaa muistiinpanoistasi aiemmat ⭐️ Agentti -pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:
+Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:
 
 **1. Missä kohdissa ihmisen täytyy hyväksyä.**
 
@@ -57,11 +57,11 @@ työpäivää. Pystytkö tekemään päätöksen 30 sekunnissa? Mitä tietoa
 puuttuu? Mikä on epäselvää?
 ```
 
-> 💡 **Vinkki muistiinpanoihin:** Tämä on 5/5 — kaikki pohjat ovat nyt koossa.
+> **Vinkki muistiinpanoihin:** Tämä on 5/5 — kaikki pohjat ovat nyt koossa.
 
 ---
 
-## Tehtävä 25.1 — Milloin ihmistä tarvitaan? 🟣 SYVENTÄVÄ
+## Tehtävä 25.1 — Milloin ihmistä tarvitaan? — syventävä
 
 ### Tehtävä
 
@@ -80,8 +80,8 @@ Kuusi agenttipäätöstä. Päätä jokaiselle, tarvitaanko ihmisen hyväksyntä
 
 Listaa 4–5 yleisintä päätöstä omalle agentillesi. Sama analyysi.
 
-> 💡 **Vinkki muistiinpanoihin:** Jos taulukko muuttaa käsitystäsi, päivitä ⭐️ Agentti: Ihminen.
+> **Vinkki muistiinpanoihin:** Jos taulukko muuttaa käsitystäsi, päivitä Agentti: Ihminen.
 
 ---
 
-**⭐️ Agentti: Ihminen valmis — kaikki 5/5 pohjapiirrosta koossa, seuraavaksi rakentaminen**
+**Agentti: Ihminen valmis — kaikki 5/5 pohjapiirrosta koossa, seuraavaksi rakentaminen**

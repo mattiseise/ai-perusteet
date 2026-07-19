@@ -19,7 +19,7 @@ Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta koht
 ### Luoda ja arvioida
 
 - Opiskelija kirjoittaa selkeää ja asiallista dokumentaatiota.
-- Opiskelija esittelee projektinsa demona ja perustelee tekemänsä ratkaisut.
+- Opiskelija esittelee projektinsa ja perustelee tekemänsä ratkaisut.
 - Opiskelija tunnistaa agentin kuusi komponenttia omassa projektissaan.
 
 **Opettajan painotus:** Tämän oppitunnin tärkein viesti on vastuullisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.
@@ -42,7 +42,7 @@ Korosta opiskelijoille:
 
 ### Iteratiivinen kehitys, ei “kaikki kerralla” -rakentaminen
 
-Moni opiskelija yrittää rakentaa koko projektin kerralla ja korjata virheet vasta lopussa. Tämä johtaa usein vaikeaan debuggaamiseen, turhautumiseen ja motivaation laskuun.
+Moni opiskelija yrittää rakentaa koko projektin kerralla ja korjata virheet vasta lopussa. Tämä vaikeuttaa virheiden selvittämistä, turhauttaa ja heikentää motivaatiota.
 
 **Opettajan huomio:** Ohjaa opiskelijat rakentamaan työnkulku pienissä osissa. Jokainen uusi solmu testataan ennen seuraavan lisäämistä. Näin virheen lähde on helpompi löytää.
 
@@ -62,7 +62,7 @@ Agenttia ei testata vain kysymällä siltä kerran oikea kysymys. Testaamisen pi
 | --- | --- | --- |
 | **Normaali tapaus** | Toimiiko agentti siinä tehtävässä, johon se on suunniteltu? | FAQ-botti vastaa kurssin aikataulua koskevaan kysymykseen. |
 | **Reunatapaus** | Miten agentti toimii epäselvässä tai poikkeavassa tilanteessa? | Käyttäjä lähettää tyhjän viestin tai kaksi ristiriitaista pyyntöä. |
-| **Turvallisuustesti** | Torjuuko agentti väärinkäytön ja hyökkäysyritykset? | Käyttäjä yrittää prompt injection -hyökkäystä: “Unohda aiemmat ohjeet.” |
+| **Turvallisuustesti** | Torjuuko agentti väärinkäytön ja hyökkäysyritykset? | Käyttäjä yrittää promptihyökkäystä: “Unohda aiemmat ohjeet.” |
 
 ### Dokumentaation kolme tasoa
 
@@ -94,7 +94,7 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 
 ### Väärinkäsitys 3: “Turvallisuustestit ovat liioittelua.”
 
-**Korjaava näkökulma:** Turvallisuustestit eivät ole kuvitteellisia ääriesimerkkejä. Esimerkiksi **prompt injection** on todellinen riski agenttijärjestelmissä. Jos agentti voi lähettää viestejä, lukea tietoa tai käyttää työkaluja, sitä pitää testata väärinkäyttöä vastaan.
+**Korjaava näkökulma:** Turvallisuustestit eivät ole kuvitteellisia ääriesimerkkejä. Esimerkiksi **promptihyökkäys** on todellinen riski agenttijärjestelmissä. Jos agentti voi lähettää viestejä, lukea tietoa tai käyttää työkaluja, sitä pitää testata väärinkäyttöä vastaan.
 
 ### Väärinkäsitys 4: “Oma projektini on liian pieni dokumentointiin.”
 
@@ -126,8 +126,8 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 | --- | --- |
 | Opiskelija testaa vain muutaman kerran ja sanoo projektin olevan valmis. | Vaadi vähintään 9 dokumentoitua testiä ja 2 uudelleentestiä. |
 | Testaus on satunnaista eikä sitä kirjata. | Vaadi testausraportti, johon jokainen testi kirjataan. |
-| Turvallisuustestit puuttuvat tai ovat liian pehmeitä. | Näytä konkreettisia hyökkäysyrityksiä, kuten prompt injection ja piilotetut ohjeet. |
-| Opiskelija ei korjaa epäonnistuneita testejä. | Muistuta: epäonnistunut testi kertoo, mitä pitää korjata ennen demoa. |
+| Turvallisuustestit puuttuvat tai ovat liian pehmeitä. | Näytä konkreettisia hyökkäysyrityksiä, kuten promptihyökkäys ja piilotetut ohjeet. |
+| Opiskelija ei korjaa epäonnistuneita testejä. | Muistuta: epäonnistunut testi kertoo, mitä pitää korjata ennen esittelyä. |
 
 **Aika-arvio:** 30–45 minuuttia
 
@@ -161,7 +161,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 | Riski | Mitä voi tapahtua? | Miten riskiä vähennetään? | Miten testattiin? |
 | --- | --- | --- | --- |
-| Prompt injection | Agentti voi yrittää noudattaa käyttäjän haitallista ohjetta. | Syötteen validointi, rajaukset ja turvakerros. | Testattiin hyökkäysviesteillä. |
+| Promptihyökkäys | Agentti voi yrittää noudattaa käyttäjän haitallista ohjetta. | Syötteen validointi, rajaukset ja turvakerros. | Testattiin hyökkäysviesteillä. |
 
 **Yleisiä ongelmia ja opettajan ratkaisuja:**
 
@@ -191,7 +191,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 - Testattiinko vähintään yksi normaali käyttötapaus?
 - Testattiinko vähintään yksi reunatapaus?
-- Testattiinko vähintään yksi prompt injection -yritys?
+- Testattiinko vähintään yksi promptihyökkäysyritys?
 - Tarkistettiinko, paljastaako agentti tietoja, joita sen ei pitäisi paljastaa?
 - Tarkistettiinko, pysähtyykö agentti hyväksyntäporttiin riskitilanteessa?
 - Tarkistettiinko, onko dokumentaatio riittävää?
@@ -200,13 +200,13 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 ---
 
-### TT-D: Demo ja itsekritiikki
+### TT-D: Esittely ja itsekritiikki
 
 **Tavoite:** Opiskelija esittelee projektinsa selkeästi ja arvioi sitä kriittisesti.
 
-**Demon kesto:** 3–5 minuuttia.
+**Esittelyn kesto:** 3–5 minuuttia.
 
-**Demon tulee sisältää:**
+**Esittelyn tulee sisältää:**
 
 1. Mitä agentti tekee?
 2. Mikä on agentin käyttötapaus?
@@ -230,7 +230,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 | **Turvallisuus (turvakerros, lokitus, riskien tunnistaminen)** | 20 p | Onko turvakerros paikallaan, lokitetaanko toiminta ja tunnistaako opiskelija projektin riskit? |
 | **Dokumentaatio** | 20 p | Voidaanko projektia ymmärtää ilman opiskelijan suullista selitystä? Ovatko README, ARCHITECTURE ja SAFETY mukana? |
 | **Testaus** | 20 p | Onko testattu normaaleja tapauksia, reunatapauksia ja turvallisuutta? Onko tulokset dokumentoitu? |
-| **Itsearviointi ja demo** | 15 p | Osaako opiskelija esitellä projektin selkeästi, arvioida omaa työtään ja perustella valintansa? |
+| **Itsearviointi ja esittely** | 15 p | Osaako opiskelija esitellä projektin selkeästi, arvioida omaa työtään ja perustella valintansa? |
 
 ---
 
@@ -239,7 +239,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 1. **Kertaus: iteratiivinen kehitys noin 3 minuuttia**
 
    Muistuta opiskelijoita: “Rakentakaa pienissä askelissa. Testatkaa jokaisen askeleen jälkeen.”
-2. **Rakentamisen demo noin 5 minuuttia**
+2. **Rakentamisen esittely noin 5 minuuttia**
 
    Näytä, miten yksinkertainen prototyyppi kehittyy kohti valmista työnkulkua.
 3. **Testaamisen koulutus noin 7 minuuttia**
@@ -253,7 +253,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
    Kierrä luokassa, anna palautetta ja auta ongelmatilanteissa.
 6. **Yhteenveto ja seuraavat askeleet noin 5 minuuttia**
 
-   Kerro opiskelijoille: “Tunnin lopussa esitätte demot. Valmistautukaa näyttämään, miten agentti toimii, miten testasitte sen ja mitä parantaisitte seuraavaksi.”
+   Kerro opiskelijoille: “Tunnin lopussa esitätte esittelyt. Valmistautukaa näyttämään, miten agentti toimii, miten testasitte sen ja mitä parantaisitte seuraavaksi.”
 
 ---
 
@@ -285,7 +285,7 @@ Pysäytä eteneminen hetkeksi ja pyydä heitä tarkistamaan suunnitelma:
 
 Aseta testaus pakolliseksi välivaiheeksi.
 
-> Ei demoa ilman testiraporttia.
+> Ei esittelyä ilman testiraporttia.
 
 ### Jos dokumentaatio unohtuu
 
@@ -331,10 +331,10 @@ Molemmat polut arvioidaan samoilla kriteereillä. Polku A tukee opiskelijaa, jok
 | 26 | n8n:n aloittaminen | Opiskelija jähmettyy tyhjän työtilan edessä. | Ohjaa Taso 1 -projektiin, esimerkiksi FAQ-bottiin, ja anna valmis aloitusrakenne. |
 | 27 | Dokumentaatio | Opiskelija ei tiedä, mitä kirjoittaa. | Näytä ARCHITECTURE-pohja ja sano: “Täytä tämä solmu kerrallaan.” |
 
-### LLM-resistenssin varmistaminen arviointitehtävässä
+### Opiskelijan oman osaamisen varmistaminen arviointitehtävässä
 
-- n8n-projekti on luonnostaan osittain **LLM-resistentti**, koska opiskelija rakentaa visuaalisen työnkulun, testaa sen ja dokumentoi oman arkkitehtuurinsa.
-- **Vertaisarviointi** eli punainen tiimi ja **suullinen demo** paljastavat, ymmärtääkö opiskelija todella rakentamansa agentin.
+- n8n-projekti on luonnostaan osittain sellainen, ettei sitä voi suorittaa uskottavasti pelkän kielimallin avulla, koska opiskelija rakentaa visuaalisen työnkulun, testaa sen ja dokumentoi oman arkkitehtuurinsa.
+- **Vertaisarviointi** eli punainen tiimi ja **suullinen esittely** paljastavat, ymmärtääkö opiskelija todella rakentamansa agentin.
 - **Itsekritiikki** vaatii henkilökohtaista pohdintaa: mitä opiskelija yritti, mikä epäonnistui, mitä hän oppi ja mitä hän tekisi seuraavaksi.
 
 ---
@@ -352,7 +352,7 @@ Hyvä päätöskysymys tunnin loppuun:
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **agenttipaketti, 9 testiä, 2 uudelleentestiä, dokumentaatio ja demo tai puolustus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+Tallennettava tuotos on **agenttipaketti, 9 testiä, 2 uudelleentestiä, dokumentaatio ja esittely tai puolustus**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
 
 | Aika | Vaihe | Opettajan tehtävä |
 |---|---|---|
@@ -361,7 +361,7 @@ Tallennettava tuotos on **agenttipaketti, 9 testiä, 2 uudelleentestiä, dokumen
 | 25–45 min | Testit | Oppija ajaa 9 testiä: normaalit, reunatapaukset ja turvallisuustestit, kolme kutakin. |
 | 45–60 min | Korjaus ja uudelleentesti | Oppija korjaa vähintään yhden testissä löytyneen puutteen ja ajaa vähintään kaksi siihen liittyvää uudelleentestiä. |
 | 60–75 min | Dokumentointi | Oppija viimeistelee arkkitehtuurin, oikeudet, lokin, testitulokset ja ennen–jälkeen-korjaukset. |
-| 75–85 min | Demo tai puolustus | Oppija näyttää ydintehtävän ja perustelee yhden suunnitteluvalinnan sekä yhden turvallisuusrajan. |
+| 75–85 min | Esittely tai puolustus | Oppija näyttää ydintehtävän ja perustelee yhden suunnitteluvalinnan sekä yhden turvallisuusrajan. |
 | 85–90 min | Paketointi | Oppija nimeää ja tallentaa palautuspaketin sekä tarkistaa, että kaikki vaadittu näyttö avautuu. |
 
 ### Tukireitti

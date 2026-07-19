@@ -20,7 +20,7 @@ Menetelmä, jossa malli valitsee seuraavan sanan sen perusteella, mikä sana tod
 
 Prosessi, jossa tarkistetaan, että AI:n tuottama tieto on oikeaa, yleensä vertaamalla sitä luotettaviin lähteisiin, kuten dokumentaatioon, testaukseen ja koodin suorittamiseen.
 
-## Faktakone vs. sanojen ennustaja
+## Faktakone vai sanojen ennustaja?
 
 Periaatteellinen ero: faktakone vastaa kysymykseen "mitä on totta", mutta kielimalli vastaa siihen, "mitä seuraavia sanoja tyypillisesti esiintyy tämän kontekstin jälkeen".
 

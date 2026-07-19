@@ -14,7 +14,7 @@ Digitaalinen valokuva näytöstä. teknisen alan osaajan tärkeä kontekstiväli
 
 ## Lokit (logs)
 
-Tekstitiedostot, joita ohjelmat tai palvelimet kirjoittavat osoittaakseen, mitä tapahtuu. Virhelokit auttavat debuggaamisessa. Niistä voidaan ottaa kuvakaappaus tai ne voidaan kopioida tekstinä.
+Tekstitiedostot, joihin ohjelmat tai palvelimet kirjaavat tapahtumia. Virhelokit auttavat virheiden selvittämisessä. Niistä voidaan ottaa kuvakaappaus tai ne voidaan kopioida tekstinä.
 
 ## Rakennekuva (structural view)
 

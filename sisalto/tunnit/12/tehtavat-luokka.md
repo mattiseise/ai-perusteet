@@ -1,6 +1,6 @@
 # Rakennuspalikka 1 — Promptauspankki
 
-> 📌 **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat *oman apuri-bottisi* Microsoft Copilotiin. Säilytä tämä huolellisesti.
+> **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -76,6 +76,6 @@ Viimeistele jokainen prompti sparrauksen jälkeen. Kokoa ne yhteen dokumenttiin 
 
 Lopuksi kirjoita lyhyt yhteenveto (3–5 lausetta): *"Mitä huomasin näiden 5–7 promptin kirjoittamisessa? Mikä rakenne toistuu eniten? Mihin näistä palaisin uudelleen?"*
 
-> 💡 **Miksi tämä on tärkeää:** Oppitunneilla 17–18 kirjoitat bottisi **järjestelmäpromptin** — pääohjeen, joka määrittää botin käyttäytymistä. Sinun ei tarvitse keksiä sitä tyhjästä. Otat tästä pankista parhaiten toimivat rakenteet ja yhdistät ne. Mitä parempi pankki, sitä parempi botti.
+> **Miksi tämä on tärkeää:** Oppitunneilla 17–18 kirjoitat bottisi **järjestelmäpromptin**, joka määrittää botin toimintaa. Hyödynnät siinä tämän tehtävän toimiviksi osoittautuneita rakenteita.
 
 **1 / 3 rakennuspalikkaa kerätty**

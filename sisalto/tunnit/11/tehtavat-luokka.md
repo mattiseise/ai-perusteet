@@ -1,6 +1,6 @@
 # Opiskelutehtävät — Tietosuoja ja työkaluvalinta
 
-**📌 Tähän tuntiin on vain yksi tehtävä.** Se on tärkeä, koska tekoälytyökalun valinta ei perustu pelkkään tekniseen laatuun. Tunnilla 10 vertailit työkaluja niiden vahvuuksien perusteella. Nyt tarkastelet valintaa organisaation näkökulmasta: huomioon pitää ottaa myös **hinta**, **tietosuoja**, **palvelimien sijainti**, **GDPR** ja käyttötarve.
+**Tällä tunnilla on yksi tehtävä.** Tekoälytyökalun valinta ei perustu pelkkään tekniseen laatuun. Tunnilla 10 vertailit työkalujen vahvuuksia. Nyt tarkastelet valintaa organisaation näkökulmasta ja otat huomioon myös hinnan, tietosuojan, palvelimien sijainnin, GDPR:n vaatimukset ja käyttötarpeen.
 
 ## Tehtävä 11.1 — Tee perusteltu suositus (SUOSITELTU)
 
@@ -33,12 +33,12 @@ Kirjoita lyhyt kuvaus siitä, miten valitsemasi organisaatio käyttäisi tekoäl
 Täytä alla oleva taulukko **valitsemasi organisaation näkökulmasta**. Arvioi jokaisen työkalun sopivuutta seuraavilla merkeillä:
 
 - **✓ Sopii:** työkalu sopii organisaation tarpeeseen ja riskit ovat hallittavissa.
-- **⚠️ Sopii rajoituksin:** työkalua voi käyttää vain tietyissä tehtävissä tai selkeillä säännöillä.
+- **Sopii rajoituksin:** työkalua voi käyttää vain tietyissä tehtävissä tai selkeillä säännöillä.
 - **✗ Ei sovi:** työkalu aiheuttaa liian suuren riskin tai ei vastaa organisaation tarpeeseen.
 
 Kirjoita perusteluun yksi selkeä lause: miksi työkalu sopii, sopii rajoituksin tai ei sovi.
 
-| Työkalu | Tietosuojan näkökulma | Hinta | Sopivuus ✓ ⚠️ ✗ | Perustelu |
+| Työkalu | Tietosuojan näkökulma | Hinta | Sopii / sopii rajoituksin / ei sovi | Perustelu |
 | --- | --- | --- | --- | --- |
 | **ChatGPT** | USA | Kallis |  |  |
 | **Claude** | USA | Kallis |  |  |
@@ -66,8 +66,8 @@ Kirjoita lopuksi **5–8 lauseen suositus**. Vastaa suosituksessa seuraaviin kys
 - **Rajoitukset:** Mitä sääntöjä työntekijöille pitää antaa? Esimerkiksi: *"Henkilötietoja sisältäviä tehtäviä ei saa antaa työkalulle X."*
 - **Yksi varoitus:** Mikä on suurin riski, joka organisaation pitää ymmärtää ennen käyttöönottoa?
 
-> **💡 Palautus:** Tehtävää ei palauteta, mutta säilytä päätöstaulukkosi ja suosituksesi. Tämän tehtävän opit palaavat myöhemmin, kun kuratoit oman bottisi tietopohjaa. Silloin joudut arvioimaan, mitä materiaalia voit laittaa Copilotiin, sisältääkö aineisto henkilötietoja ja millaisia rajoituksia sinun pitää noudattaa.
+> **Palautus:** Tehtävää ei palauteta. Säilytä kuitenkin päätöstaulukkosi ja suosituksesi. Tarvitset samoja arviointiperusteita myöhemmin, kun kokoat oman bottisi tietopohjaa.
 
-> **💡 Tarkista lopuksi:** Olet valinnut yhden organisaation, kartoittanut sen käyttötarpeen, täyttänyt päätöstaulukon, haastanut perustelujasi tekoälyn avulla ja kirjoittanut 5–8 lauseen suosituksen.
+> **Tarkista lopuksi:** Olet valinnut yhden organisaation, kartoittanut sen käyttötarpeen, täyttänyt päätöstaulukon, haastanut perustelujasi tekoälyn avulla ja kirjoittanut 5–8 lauseen suosituksen.
 
 **Halvin ei ole aina paras. Paras työkalu on se, jonka käyttö ei aiheuta uusia ongelmia.**

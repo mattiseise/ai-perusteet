@@ -1,8 +1,8 @@
-# Opettajamateriaali — oppitunti 25: Human-in-the-loop
+# Opettajamateriaali — oppitunti 25: Ihmisen osallistuminen päätöksentekoon
 
 ## Oppitunnin ydinajatukset
 
-Tämän oppitunnin keskeinen viesti on, että agentti ei ole täysin autonominen järjestelmä. Kriittisissä kohdissa tarvitaan ihminen mukaan päätöksentekoon. **Human-in-the-loop** tarkoittaa hybridiä automaatiota: agentti tekee rutiinityötä ja ihminen osallistuu silloin, kun päätös on riskialtis, epävarma tai poikkeuksellinen.
+Tämän oppitunnin keskeinen viesti on, että agentti ei ole täysin autonominen järjestelmä. Kriittisissä kohdissa tarvitaan ihminen mukaan päätöksentekoon. **Ihmisen osallistuminen päätöksentekoon** yhdistää automaation ja ihmisen harkinnan: agentti tekee rutiinityötä ja ihminen osallistuu silloin, kun päätös on riskialtis, epävarma tai poikkeuksellinen.
 
 Oppitunti rakentaa siltaa kohti **n8n-projektia**, jossa opiskelijat suunnittelevat ja rakentavat oman agenttinsa. Viimeiset viisi oppituntia muodostavat agentin rakentamisen keskeiset rakennuspalikat:
 
@@ -10,7 +10,7 @@ Oppitunti rakentaa siltaa kohti **n8n-projektia**, jossa opiskelijat suunnittele
 2. **Oppitunti 22: Työkalut** — agentti käyttää työkaluja ja tekee toimintoja.
 3. **Oppitunti 23: Suunnittelumallit** — agentti etenee järjestelmällisesti ja valitsee sopivan toimintamallin.
 4. **Oppitunti 24: Turvallisuus** — agentti toimii rajatusti, valvotusti ja turvallisesti.
-5. **Oppitunti 25: Human-in-the-loop** — agentti tekee yhteistyötä ihmisen kanssa.
+5. **Oppitunti 25: Ihmisen osallistuminen päätöksentekoon** — agentti tekee yhteistyötä ihmisen kanssa.
 
 **Opettajan painotus:** Korosta opiskelijoille, että hyvä agentti ei yritä tehdä kaikkea yksin. Asiallisesti suunniteltu agentti osaa tunnistaa tilanteet, joissa päätös pitää siirtää ihmiselle. Tämä ei tee agentista heikkoa, vaan turvallisemman ja luotettavamman.
 
@@ -70,9 +70,9 @@ Näytä opiskelijoille kaksi hyväksyntäporttia: toinen liian suppea ja toinen 
 
 ---
 
-## Human-in-the-loop-työnkulku
+## Ihmisen osallistava työnkulku
 
-**Human-in-the-loop-työnkulku** tarkoittaa koko prosessia, jossa agentti ja ihminen tekevät yhteistyötä. Tavoitteena ei ole siirtää kaikkea ihmiselle, vaan jakaa vastuu järkevästi.
+**Ihmisen osallistava työnkulku** tarkoittaa koko prosessia, jossa agentti ja ihminen tekevät yhteistyötä. Tavoitteena ei ole siirtää kaikkea ihmiselle, vaan jakaa vastuu järkevästi.
 
 | Agentti tekee | Ihminen tekee |
 | --- | --- |
@@ -80,7 +80,7 @@ Näytä opiskelijoille kaksi hyväksyntäporttia: toinen liian suppea ja toinen 
 | Rutiinitehtävät ja toistuvat vaiheet | Epäselvät, tunnepitoiset tai riskialttiit tilanteet |
 | Yksinkertaiset ehdotukset ja päätösten valmistelu | Oppimisen ohjaaminen ja lopullinen vastuu |
 
-**Human-in-the-loop-työnkulun perusmalli**
+**Ihmisen osallistavan työnkulun perusmalli**
 
 |  |
 | --- |
@@ -98,7 +98,7 @@ Hyvä työnkulku sijoittaa ihmisen mukaan niihin kohtiin, joissa päätöksellä
 
 ## Oppiminen palautteesta
 
-Human-in-the-loop ei ole vain päätösten hyväksymistä. Se on myös tapa tuottaa palautetta agentin toiminnan kehittämiseksi. Kun ihminen hyväksyy, hylkää tai muokkaa agentin ehdotusta, järjestelmä voi oppia, millaiset ehdotukset ovat hyviä ja millaiset tarvitsevat korjaamista.
+Ihmisen osallistuminen päätöksentekoon ei ole vain päätösten hyväksymistä. Se on myös tapa tuottaa palautetta agentin toiminnan kehittämiseksi. Kun ihminen hyväksyy, hylkää tai muokkaa agentin ehdotusta, järjestelmä voi oppia, millaiset ehdotukset ovat hyviä ja millaiset tarvitsevat korjaamista.
 
 Palautteesta oppiminen voidaan kuvata nelivaiheisena prosessina:
 
@@ -115,7 +115,7 @@ Väärä oppiminen voi syntyä esimerkiksi silloin, kun yksi hyväksyjä tekee j
 
 ## Harjoitukset
 
-Oppitunnin harjoitusten tarkoituksena on siirtää human-in-the-loop-ajattelu konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.
+Oppitunnin harjoitusten tarkoituksena on siirtää ihmisen osallistumista korostava ajattelu konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.
 
 1. **Kolme sääntöä: päätösten luokittelu**
    Opiskelija arvioi, mitkä päätökset vaativat ihmisen hyväksynnän ja perustelee valinnan rahaan, epävarmuuteen tai poikkeamaan liittyvällä säännöllä.
@@ -132,9 +132,9 @@ Oppitunnin harjoitusten tarkoituksena on siirtää human-in-the-loop-ajattelu ko
 
 ## Yhteys n8n-projektiin
 
-n8n-projektissa tämän oppitunnin ajatukset voidaan toteuttaa konkreettisina työnkulun osina. Opiskelijoiden kannattaa suunnitella human-in-the-loop jo ennen kuin he rakentavat agentin teknisesti.
+n8n-projektissa tämän oppitunnin ajatukset voidaan toteuttaa konkreettisina työnkulun osina. Opiskelijoiden kannattaa suunnitella ihmisen osallistuminen päätöksentekoon jo ennen kuin he rakentavat agentin teknisesti.
 
-| Human-in-the-loop-ajatus | Toteutus n8n:ssä | Mihin sitä käytetään? |
+| Ihmisen osallistuminen | Toteutus n8n:ssä | Mihin sitä käytetään? |
 | --- | --- | --- |
 | **Hyväksyntäportti** | Approval node tai vastaava hyväksyntävaihe | Riskialttiit päätökset pysäytetään ihmiselle. |
 | **Ehdollinen päätös** | Conditional node | Jos varmuus on matala tai päätös koskee rahaa, siirrytään hyväksyntään. |
@@ -160,7 +160,7 @@ Agentti arvioi asiakkaan hyvityspyynnön. Jos hyvitys on alle 20 € ja varmuus 
 
 ## Oppitunnin lopetus
 
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että **human-in-the-loop** ei ole automaation vastakohta. Se on vastuullisen automaation muoto. Agentti voi tehdä paljon, mutta ihmisen pitää osallistua niissä kohdissa, joissa tarvitaan harkintaa, vastuuta ja eettistä päätöksentekoa.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että **ihmisen osallistuminen päätöksentekoon** ei ole automaation vastakohta. Se on vastuullisen automaation muoto. Agentti voi tehdä paljon, mutta ihmisen pitää osallistua niissä kohdissa, joissa tarvitaan harkintaa, vastuuta ja eettistä päätöksentekoa.
 
 Hyvä päätöskysymys tunnin loppuun:
 
@@ -171,15 +171,15 @@ Hyvä päätöskysymys tunnin loppuun:
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **hyväksyntä- ja eskalointimatriisi fallbackeineen**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+Tallennettava tuotos on **hyväksyntä- ja eskalointimatriisi varapolkuineen**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
 
 | Aika | Vaihe | Opettajan tehtävä |
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija sijoittaa kolme toimintoa hyväksyntä- ja eskalointimatriisiin fallbackeineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 25–65 min | Perustuotos | Oppija sijoittaa kolme toimintoa hyväksyntä- ja eskalointimatriisiin varapolkuineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

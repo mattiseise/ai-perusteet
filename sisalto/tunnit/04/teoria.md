@@ -79,17 +79,17 @@ Hyvä konteksti rakentuu viidestä pääosasta.
 
 **4. Rajaukset** — Mitä et halua, mikä ei ole olennaista ja mitkä asiat on jätettävä pois. "Ehdota illallisia, mutta älä mainitse kanaa, koska söimme sitä eilen." Tai "En halua filosofista vastausta, vain käytännön neuvoja."
 
-**5. Esimerkit** — Näytä mallia siitä, mitä haluat. Jos haluat, että tekoäly kirjoittaa tekstin samalla tyylillä kuin sinä, anna näyte aiemmin kirjoittamastasi tekstistä. Jos haluat vastauksen, joka noudattaa tiettyä rakennetta, näytä esimerkki.
+**5. Esimerkit** — Anna mallille esimerkki siitä, mitä haluat. Jos haluat, että tekoäly kirjoittaa tekstin samalla tyylillä kuin sinä, anna näyte aiemmin kirjoittamastasi tekstistä. Jos haluat vastauksen, joka noudattaa tiettyä rakennetta, näytä esimerkki.
 
 > **Pysähdy hetkeksi:** Ajattele tehtävää, jota teet usein — esimerkiksi tekstin kirjoittamista, harjoittelun suunnittelua tai tapahtuman järjestämistä. Mitkä viidestä kontekstin osasta olisivat tärkeimpiä tässä tapauksessa? Miksi?
 
 ## Osa 2: Promptaus — kuinka kysyt
 
-Kun konteksti on valmis, sinun on osattava muotoilla *prompti* — tehtävänanto, joka esitetään kontekstin puitteissa. Suomeksi promptista käytetään myös sanaa *kehote*; tällä kurssilla käytämme termiä prompti. Prompti on kysymys, joka rakentuu kontekstin pohjalle. Konteksti on pohja, jonka päälle prompti rakentuu.
+Kun konteksti on valmis, sinun on osattava muotoilla *prompti* — tehtävänanto, jonka esittämiseen konteksti antaa tarvittavat taustatiedot. Suomeksi promptista käytetään myös sanaa *kehote*; tällä kurssilla käytämme termiä prompti. Prompti on kysymys tai tehtävänanto, joka nojaa kontekstiin.
 
 Monella on tästä väärinkäsitys: he ajattelevat, että "hyvä prompti" on sama asia kuin "hyvä konteksti". Se on kuin sanoisi, että reseptin otsikko ("Pastakeitto") olisi sama kuin koko resepti – ainesosat, valmistusohjeet, käsittelylämpötila ja kypsennysajat. Prompti on *kysymys* tai *tehtävänanto*, jonka esität nyt. Konteksti on *kaikki muu*, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.
 
-Kuvittele, että istut opettajan kanssa hänen työhuoneessaan ja kysyt matematiikan kysymystä. Opettaja on jo nähnyt aiemmat työsi, tietää, mistä olet epävarma, tuntee tavoitteesi (läpäisy vai erinomainen arvosana) ja tietää, mitä olet jo oppinut. Kaikki tämä on *konteksti*. Sitten esität *promptin*: "Kuinka ratkaiset nollakohdan?" Prompti on kysymys, mutta konteksti on kaikki se muu, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.
+Kuvittele, että istut opettajan kanssa hänen työhuoneessaan ja esität matematiikkaa koskevan kysymyksen. Opettaja on jo nähnyt aiemmat työsi, tietää, mistä olet epävarma, tuntee tavoitteesi (läpäisy vai erinomainen arvosana) ja tietää, mitä olet jo oppinut. Kaikki tämä on *konteksti*. Sitten esität *promptin*: ”Miten yhtälön nollakohta ratkaistaan?” Prompti on kysymys, mutta konteksti on kaikki se muu, joka tekee kysymyksestä ymmärrettävän ja vastauksesta hyödyllisen.
 
 ### Hyvän promptin viisi elementtiä
 
@@ -101,7 +101,7 @@ Hyvä prompt rakentuu viidestä osasta. Et tarvitse niitä kaikkia joka promptii
 
 **3. Rajat (constraints)** — Mitä EI tehdä? "Älä käytä vaikeita termejä", "Kirjoita enintään 3 lausetta", "Älä mainitse hintoja". Rajat antavat mallille selkeän toiminta-alueen.
 
-**4. Outputformaatti (format)** — Miten haluat vastauksen? "Vastaa JSON-muodossa", "Kirjoita taulukko", "Anna vaihekohtaiset ohjeet". Formaatti varmistaa, että saat käyttökelpoisen tuloksen.
+**4. Vastausmuoto (format)** — Miten haluat vastauksen? "Vastaa JSON-muodossa", "Kirjoita taulukko", "Anna vaihekohtaiset ohjeet". Formaatti varmistaa, että saat käyttökelpoisen tuloksen.
 
 **5. Esimerkit (examples)** — Näytä yksittäinen esimerkki siitä, mitä haluat. "Esimerkiksi: INPUT: 'terve', OUTPUT: 'Terve! Kuinka voin auttaa?'". Esimerkit tekevät vaatimuksista konkreettisempia.
 
@@ -161,7 +161,7 @@ Kontekstin ja promptin puuttuminen aiheuttaa myös turhauttavia väärinymmärry
 
 ## Osa 5: Iteratiivinen kontekstin ja promptin rakentaminen
 
-Huolellisesti et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta — kokeneet käyttäjät kutsuvat tätä "prompt engineeringiksi".
+Kun työskentelet huolellisesti, et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Tätä kutsutaan promptien suunnitteluksi.
 
 **Kierros 1 — PerusPrompt:**
 "Tee esitelmän runko ilmastonmuutoksesta."
@@ -206,11 +206,11 @@ Nämä ovat silti lyhyitä, mutta ne sisältävät roolin, taustan, tavoitteen j
 
 ## Yhteenveto
 
-Konteksti ja promptaus ovat kaksi puolta samasta kolikosta. Konteksti on pohja — se rakentuu viidestä osasta: roolista, taustasta, tavoitteesta, rajauksista ja esimerkeistä. Promptaus on kysymys, joka esitetään kontekstin puitteissa, ja se rakentuu viidestä elementistä: tavoitteesta, roolista, rajauksista, outputformaatista ja esimerkeistä. Yhdessä ne muodostavat tehokkaan välineen, jolla saat tekoälystä juuri sellaista apua, jota tarvitset.
+Konteksti ja promptaus ovat kaksi puolta samasta kolikosta. Konteksti on pohja — se rakentuu viidestä osasta: roolista, taustasta, tavoitteesta, rajauksista ja esimerkeistä. Prompti on kontekstiin nojaava kysymys tai tehtävänanto, joka rakentuu viidestä osasta: tavoitteesta, roolista, rajauksista, vastausmuodosta ja esimerkeistä. Yhdessä ne muodostavat tehokkaan välineen, jolla saat tekoälystä juuri sellaista apua, jota tarvitset.
 
-Huolellisesti et yritä antaa kaikkea yhdessä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Joka kierros tarkentaa seuraavaa, ja lopputulos on moninkertaisesti parempi kuin yksi kerralla kirjoitettu täydellinen suurprompti.
+Et yritä antaa kaikkea yhdellä kertaa. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Jokainen kierros tarkentaa seuraavaa, ja lopputulos on parempi kuin kerralla kirjoitettu laaja prompti.
 
-Hyvä konteksti ja terävä prompti ovat investointi: ne vaativat hiukan enemmän aikaa ajatteluun ja kirjoittamiseen, mutta tuloksena on vastaus, joka on todella hyödyllinen eikä turha. Tämän kurssin ydinasia on, että konteksti ja prompti eivät ole pikkujuttu — ne ovat kaiken tekoälyviestinnän perusta. Konteksti- ja promptaustaidot ovat tärkeä työelämä- ja opiskelutaito alalla kuin alalla.
+Hyvä konteksti ja terävä prompti ovat investointi: ne vaativat hiukan enemmän aikaa ajatteluun ja kirjoittamiseen, mutta tuloksena on aidosti hyödyllinen vastaus. Konteksti ja prompti ovat kaiken tekoälyviestinnän perusta. Niiden hallinta on tärkeä työelämä- ja opiskelutaito alalla kuin alalla.
 
 Seuraavalla tunnilla syvennämme kontekstin hallintaan: ymmärrät, että tekoälyn muisti on rajallinen, ja opit hallitsemaan sitä.
 

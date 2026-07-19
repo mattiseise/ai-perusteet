@@ -13,7 +13,7 @@ Kielimallin käyttämä tekstin perusyksikkö. Yksi tokeni vastaa suunnilleen yh
 Palvelun ympärille rakentunut kokonaisuus: lisäosat, integraatiot, yhteisö ja kolmansien osapuolien työkalut. Laaja ekosysteemi tarkoittaa, että työkalu on yhteensopiva monien muiden palveluiden kanssa.
 
 ## Räätälöity botti (custom GPT)
-ChatGPT:n erikoisversio, joka on konfiguroitu tiettyyn tarkoitukseen. Räätälöidyllä botilla voi olla oma persoona, ohjeet ja tietopohja. Esimerkiksi markkinointiassistentti tai koulutuskaveri.
+Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Räätälöidyllä botilla voi olla oma rooli, ohjeet ja tietopohja. Esimerkkejä ovat markkinointiassistentti ja opiskelukaveri.
 
 ## Integraatio (integration)
 Kahden tai useamman järjestelmän yhdistäminen niin, että ne voivat vaihtaa tietoa ja toimia yhdessä. Copilotin Office-integraatio tarkoittaa, että tekoäly toimii suoraan Word-, Excel- ja PowerPoint-sovelluksissa.

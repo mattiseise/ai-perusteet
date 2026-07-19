@@ -29,7 +29,7 @@ Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät lausunnossa tunn
 | 8 | Pohdit etiikkaa, vastuuta ja oikeuksia | (perusta vastuukysymykselle) |
 | **9** | **Tuotat asiantuntijalausunnon tekoälyn avulla kolmen todistusaineiston pohjalta** | **Lopputyö valmis** |
 
-> 💡 **Vinkki:** Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme todistusaineistoa omiksi alaotsikoikseen. Tunnilla 9 sinulla on yksi tiedosto auki, ei kolme.
+> **Vinkki:** Tee oma muistiinpanodokumentti esimerkiksi Wordilla, OneNotella tai Google Docsilla ja kokoa kolme todistusaineistoa omien alaotsikoidensa alle. Tunnilla 9 sinulla on auki yksi tiedosto kolmen sijasta.
 
 ## Kolmen todistusaineiston yleiskuvaus
 
@@ -118,7 +118,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 | Lausunnon tuottaminen ja oikoluku (tunti 9) | ~75 min (koko tunti) |
 | **Yhteensä lähiaikaa** | **~2–3 tuntia** |
 
-> 💡 **Vinkki ajankäyttöön:** Jos joku todistusaineisto jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 9 sinulla pitää olla kolme todistusaineistoa valmiina — muuten kirjoittaminen jää käsitteistön opettelemiseksi.
+> **Vinkki ajankäyttöön:** Jos jokin todistusaineisto jää tunnilla kesken, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 9 kaikkien kolmen todistusaineiston pitää olla valmiina — muuten kirjoitusaika kuluu käsitteistön opettelemiseen.
 
 ::: luokka
 ## Palautus

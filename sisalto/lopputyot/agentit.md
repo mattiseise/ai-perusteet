@@ -1,6 +1,6 @@
 # Agentit-osion lopputyö — n8n-agentin rakentaminen
 
-> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun kerää **⭐️ Agentti -pohjapiirroksiasi** ja rakennat lopulta valmista agenttia.
+> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun keräät **Agentti-pohjapiirroksiasi** ja rakennat lopulta valmista agenttia.
 
 **Tärkein viesti heti alkuun:** rakennat **hyvin yksinkertaisen agentin** (3–5 solmua). Emme tavoittele mitään monimutkaista — pieni, toimiva agentti, jonka ymmärrät, on koko tehtävän tavoite.
 
@@ -45,7 +45,7 @@
   <use href="#smp-bulb" x="48" y="386" width="24" height="24" style="color:#C79100"/>
   <text x="86" y="394" font-size="13" font-weight="700" fill="#8A6A00">Muista</text>
   <text x="86" y="415" font-size="12.5" fill="#5A4A1E">Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et</text>
-  <text x="86" y="433" font-size="12.5" fill="#5A4A1E">ymmärrä. Jos aika loppuu, leikkaa scope ja pidä agentti yksinkertaisena.</text>
+  <text x="86" y="433" font-size="12.5" fill="#5A4A1E">ymmärrä. Jos aika loppuu, rajaa työn laajuutta ja pidä agentti yksinkertaisena.</text>
 </svg>
 <figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Tavoitteena on yksinkertainen, toimiva agentti (3–5 solmua) — ei monimutkainen järjestelmä.</figcaption>
 </figure>
@@ -67,38 +67,38 @@ Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman.
 
 ## Polku alusta loppuun
 
-Lopputyö rakentuu yhdeksän tunnin aikana. Joka tunti tuottaa konkreettisen palan, joka päätyy lopulliseen agenttiisi.
+Lopputyö rakentuu yhdeksän tunnin aikana. Kullakin tunnilla syntyy konkreettinen osa lopullista agenttiasi.
 
 | Tunti | Mitä teet | Mitä syntyy |
 |---|---|---|
-| **19** | Valitset ongelman ja perustelet, miksi agentti sopii | ⭐️ Agentti: Ongelma (1/5) |
+| **19** | Valitset ongelman ja perustelet, miksi agentti sopii | Agentti: Ongelma (1/5) |
 | **20** | Tarkistat, että ratkaisu vaatii todella agentin | Päätösharjoittelu |
-| **21** | Suunnittelet muistirakenteen ja identiteetin | ⭐️ Agentti: Muisti (2/5) |
+| **21** | Suunnittelet muistirakenteen ja identiteetin | Agentti: Muisti (2/5) |
 | **22** | Valitset työkalut (n8n-solmut) | Työkalulista |
-| **23** | Valitset päättelymallin (ReAct vai ketjuajattelu) | ⭐️ Agentti: Päättely (3/5) |
-| **24** | Suunnittelet turvakerroksen | ⭐️ Agentti: Turva (4/5) |
-| **25** | Suunnittelet ihmisen roolin (hyväksyntäportit) | ⭐️ Agentti: Ihminen (5/5) |
-| **26** | Kasaa pohjapiirrokset, tutustut n8n:ään, rakennat minimiversion | Toimiva minimiagentti |
+| **23** | Valitset päättelymallin (ReAct vai ketjuajattelu) | Agentti: Päättely (3/5) |
+| **24** | Suunnittelet turvakerroksen | Agentti: Turva (4/5) |
+| **25** | Suunnittelet ihmisen roolin (hyväksyntäportit) | Agentti: Ihminen (5/5) |
+| **26** | Kokoat pohjapiirrokset, tutustut n8n:ään ja rakennat minimiversion | Toimiva minimiagentti |
 | **27** | Viimeistelet, testaat, dokumentoit, esittelet | Valmis lopputyö |
 
-## Viisi ⭐️ Agentti -pohjapiirrosta
+## Viisi Agentti-pohjapiirrosta
 
-Pohjapiirrokset ovat suunnitelmadokumentteja, joita kerätä omaan muistiinpanodokumenttiisi. Yhdessä ne muodostavat **kattavan suunnitelman**, jonka pohjalta rakennat n8n-työnkulun.
+Pohjapiirrokset ovat suunnitelmadokumentteja, joita keräät omaan muistiinpanodokumenttiisi. Yhdessä ne muodostavat **kattavan suunnitelman**, jonka pohjalta rakennat n8n-työnkulun.
 
-**1. ⭐️ Agentti: Ongelma (tunti 19)**
-Mikä ongelma on kyseessä, kenelle se on, miksi juuri agentti sopii ratkaisuksi. 150–200 sanaa.
+**1. Agentti: Ongelma (tunti 19)**
+Kuvaa, mistä ongelmasta on kyse, kenelle se aiheutuu ja miksi juuri agentti sopii ratkaisuksi. Kirjoita 150–200 sanaa.
 
-**2. ⭐️ Agentti: Muisti (tunti 21)**
+**2. Agentti: Muisti (tunti 21)**
 Lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.
 
-**3. ⭐️ Agentti: Päättely (tunti 23)**
-ReAct vai ketjuajattelu — kumpi sopii agenttisi ongelmaan ja miksi. Miten päättelymalli näkyy n8n-rakenteessa. 150–200 sanaa.
+**3. Agentti: Päättely (tunti 23)**
+Valitse ReAct tai ketjuajattelu ja perustele, kumpi sopii agenttisi ongelmaan. Kuvaa myös, miten päättelymalli näkyy n8n-rakenteessa. Kirjoita 150–200 sanaa.
 
-**4. ⭐️ Agentti: Turva (tunti 24)**
+**4. Agentti: Turva (tunti 24)**
 Minimioikeusperiaate, suurimmat riskit, turvakerroksen neljä tasoa (validointi, rajoitus, seuranta, palautuminen), lokitus. 150–200 sanaa.
 
-**5. ⭐️ Agentti: Ihminen (tunti 25)**
-Missä kohdissa ihmisen täytyy hyväksyä, millainen hyväksyntäportti on, mitä tapahtuu jos ihminen ei vastaa. 150–200 sanaa.
+**5. Agentti: Ihminen (tunti 25)**
+Kuvaa, missä kohdissa ihmisen hyväksyntä tarvitaan, millainen hyväksyntäportti on ja mitä tapahtuu, jos ihminen ei vastaa. Kirjoita 150–200 sanaa.
 
 ## Lopputuotoksen vaatimukset
 
@@ -111,15 +111,15 @@ Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
 :::
 
 1. **Linkki n8n-työnkulkuusi** tai vientitiedosto (JSON)
-2. **Koottu suunnitelma** — viisi ⭐️ Agentti -pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi
+2. **Koottu suunnitelma** — viisi Agentti-pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi
 3. **Kolme lyhyttä dokumenttia** (½–1 sivu kukin):
    - **README** — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset
-   - **ARCHITECTURE** — jokainen n8n-solmu järjestyksessä, mitä se tekee, miten ne linkittyvät agentin kuuteen komponenttiin
-   - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, human-in-the-loop -kohdat
+   - **ARCHITECTURE** — jokainen n8n-solmu järjestyksessä, mitä se tekee ja miten solmut liittyvät agentin kuuteen komponenttiin
+   - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, ihmisen hyväksyntää vaativat kohdat
 4. **Testiraportti** — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä
-5. **Demo luokassa** (3–5 min) tai nauhoitettuna videona
+5. **Esittely luokassa** (3–5 min) tai nauhoitettuna videona
 6. **Itsearviointi** (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat
-7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai AI-pohjainen kriittinen arvio jos teet työn yksin)
+7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai tekoälypohjainen kriittinen arvio, jos teet työn yksin)
 
 ::: verkko
 Halutessasi jaa työsi — mitään ei palauteta minnekään.
@@ -144,7 +144,7 @@ Lopputyö arvioidaan viidellä osa-alueella (yhteensä 100 pistettä):
 | Turvallisuus (turvakerros, lokitus, riskien tunnistaminen) | 20 |
 | Dokumentaatio (README, ARCHITECTURE, SAFETY) | 20 |
 | Testaus (testiraportin kattavuus ja syvyys) | 20 |
-| Itsearviointi ja demo | 15 |
+| Itsearviointi ja esittely | 15 |
 :::
 
 ::: verkko
@@ -158,7 +158,7 @@ Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit työsi itse. Käy viis
 | **Turvallisuus** | 20 % | Ovatko turvakerros, lokitus ja riskien tunnistaminen kunnossa? |
 | **Dokumentaatio** | 20 % | Ovatko README, ARCHITECTURE ja SAFETY selkeitä ja kattavia? |
 | **Testaus** | 20 % | Onko testiraporttini riittävän kattava ja perusteellinen? |
-| **Itsearviointi ja demo** | 15 % | Onko itsearviointini rehellinen ja demo selkeä? |
+| **Itsearviointi ja esittely** | 15 % | Onko itsearviointini rehellinen ja esittely selkeä? |
 :::
 
 **Hyvä lopputyö** ei ole täydellinen — se on **rehellinen ja perusteltu**. Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et ymmärrä.
@@ -172,21 +172,21 @@ Tämä aikabudjetti näkyy vain tässä tehtävänannossa, ei yksittäisten tunt
 | Pohjapiirrokset 1–5 (tunnit 19, 21, 23, 24, 25) | ~30 min / tunti | ~30 min / tunti |
 | Välitunnit (20, 22) — sparrausharjoittelua | ~20 min / tunti | ~20 min / tunti |
 | Tunti 26 — kasaus, n8n-tutustuminen, minimiversio | 60–90 min | 45–60 min |
-| Tunti 27 — viimeistely, testaus, dokumentointi, demo | 90–120 min | 60–90 min |
+| Tunti 27 — viimeistely, testaus, dokumentointi, esittely | 90–120 min | 60–90 min |
 | **Yhteensä** | **~5–7 h** | **~4–5 h** |
 
-Jos jossain vaiheessa tuntuu, että et ehdi — **leikkaa scope**. Yksinkertaisempi mutta toimiva agentti on parempi kuin monimutkainen mutta keskeneräinen.
+Jos jossain vaiheessa tuntuu, että et ehdi — **rajaa työn laajuutta**. Yksinkertaisempi mutta toimiva agentti on parempi kuin monimutkainen mutta keskeneräinen.
 
 ## Hyvä alku
 
 1. Lue tämä tehtävänanto kokonaan.
-2. Selaa tuntien 19–27 otsikot ja saa kokonaiskuva polusta.
+2. Selaa tuntien 19–27 otsikot ja muodosta kokonaiskuva polusta.
 3. Aloita rauhassa: tunnilla 19 tärkein päätös on **valita oikea ongelma**. Älä jää jumiin perfektionismiin — voit tarkentaa ongelmaa myöhemmin.
-4. Pidä **muistiinpanodokumenttia** mukana joka tunti. Sinne kerätä pohjapiirroksesi.
+4. Pidä **muistiinpanodokumenttia** mukana joka tunti. Kerää siihen pohjapiirroksesi.
 
 ---
 
-**Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko *rakentaa* sillä jotain mitä joku muu voi käyttää.**
+**Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko *rakentaa* sillä jotakin, mitä joku muu voi käyttää.**
 
 
 ## Arviointitasot
@@ -194,7 +194,7 @@ Jos jossain vaiheessa tuntuu, että et ehdi — **leikkaa scope**. Yksinkertaise
 | Kriteeri | Erinomainen | Hyvä | Tyydyttävä | Välttävä | Ei vielä hyväksyttävä |
 |---|---|---|---|---|---|
 | Toimiva tai todennettu työnkulku (25 p) | 3–5 solmun ydintyönkulku toimii hallitusti, virhepolku näkyy ja suoritusjälki todentaa jokaisen vaiheen. | Ydintyönkulku toimii tai alustariippumaton suoritusjälki todentaa sen. | Pääpolku on ymmärrettävä, mutta yksi vaihe tai virhepolku jää epävarmaksi. | Osia on toteutettu, mutta pääpolkua ei voi todentaa alusta loppuun. | Toteutus, solmukaavio tai suoritusjälki puuttuu. |
-| Turvallisuus (20 p) | Uhkamalli ohjaa minimioikeuksia, hyväksyntöjä, salaisuuksien eristystä, lokia ja palautumista; kontrollien rajat tunnistetaan. | Olennaiset riskit, oikeusrajat, hyväksyntä ja lokitus on toteutettu tai kuvattu. | Turvatoimet kattavat perusriskit, mutta yksi olennainen kerros puuttuu. | Turvallisuus jää yleisiksi ohjeiksi ilman yhteyttä työnkulkuun. | Olennaisia riskejä tai kontrolleja ei ole käsitelty. |
+| Turvallisuus (20 p) | Uhkamalli ohjaa minimioikeuksia, hyväksyntöjä, salaisuuksien eristystä, lokia ja palautumista; suojauskeinojen rajat tunnistetaan. | Olennaiset riskit, oikeusrajat, hyväksyntä ja lokitus on toteutettu tai kuvattu. | Turvatoimet kattavat perusriskit, mutta yksi olennainen kerros puuttuu. | Turvallisuus jää yleisiksi ohjeiksi ilman yhteyttä työnkulkuun. | Olennaisia riskejä tai suojauskeinoja ei ole käsitelty. |
 | Dokumentaatio (20 p) | Toinen henkilö voi dokumentaatiosta toistaa pääpolun, testit, oikeudet ja virhetilanteen. | Rakenne, työkalut, oikeudet ja käyttö kuvataan selkeästi. | Dokumentaatio kuvaa pääidean, mutta yksityiskohtia puuttuu. | Dokumentaatio on hajanaista tai ristiriidassa toteutuksen kanssa. | Dokumentaatio puuttuu. |
 | Testaus (20 p) | 9 testiä ja vähintään 2 uudelleentestiä ovat jäljitettäviä; korjausten vaikutus analysoidaan. | 3 normaalia, 3 reunatapausta, 3 turvallisuustestiä ja 2 uudelleentestiä on dokumentoitu. | Testimäärä täyttyy osittain tai odotusten vertailu on epätasaista. | Testejä on vähän eikä korjauksen vaikutusta todenneta. | Järjestelmällinen testaus puuttuu. |
-| Itsearviointi ja demo (15 p) | Demo tai puolustus osoittaa itsenäisen ymmärryksen, perustellut rajaukset ja rehellisen jatkokehitysarvion. | Demo selittää pääpolun, turvallisuuden ja tehdyt korjaukset. | Demo näyttää työn, mutta perustelut jäävät osittaisiksi. | Esittely on vaikeasti seurattava tai oma osuus jää epäselväksi. | Demo tai puolustus puuttuu. |
+| Itsearviointi ja esittely (15 p) | Esittely tai puolustus osoittaa itsenäisen ymmärryksen, perustellut rajaukset ja rehellisen jatkokehitysarvion. | Esittely selittää pääpolun, turvallisuuden ja tehdyt korjaukset. | Esittely näyttää työn, mutta perustelut jäävät osittaisiksi. | Esittely on vaikeasti seurattava tai oma osuus jää epäselväksi. | Esittely tai puolustus puuttuu. |

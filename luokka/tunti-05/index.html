@@ -74,7 +74,7 @@
 <p>Konteksti-ikkunan täyttyminen noudattaa FIFO-periaatetta (First In, First Out) — ensimmäinen sisään, ensimmäinen ulos. Jos aloitat keskustelun antamalla paljon kontekstia ja sitten kysyt 20 kertaa peräkkäin, kunnes keskustelussa on 120 000 tokenia, alkuperäinen kontekstisi on jo kadonnut. Mallilla on käytössään vain viimeiset muutamat kysymys–vastaus-parit ja hieman muuta kontekstia.</p>
 <p>Tämä voi johtaa häiritseviin tilanteisiin. Olet saattanut sanoa alussa: "Vastaa aina suomeksi, älä englanniksi", mutta 50 viestin jälkeen malli alkaa vastata englanniksi, koska se on unohtanut rajauksesi. Tai olet antanut tarkan tyyliesimerkin keskustelun alussa, mutta myöhemmin malli kirjoittaa eri tyylillä, koska se ei enää näe esimerkkiä.</p>
 <p>Tiedon putoaminen voi myös muuttaa keskustelun sävyä. Jos olet aluksi "opiskelija, joka oppii", mutta 30 viestin jälkeen tämä rooli unohtuu, malli saattaa alkaa pitää sinua asiantuntijana ja antaa hyvin teknisiä vastauksia ilman selityksiä.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele pitkää projektin debuggaamista. Mitä tärkeää tietoa malli voisi unohtaa niin, että se alkaisi antaa vääriä neuvoja?</p>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Ajattele pitkää projektin virheiden selvittämistä. Mitä tärkeää tietoa malli voisi unohtaa niin, että se alkaisi antaa vääriä neuvoja?</p>
 </blockquote>
 <h2>Kuinka kontekstia tiivistetään, pilkotaan ja rakennetaan uudelleen</h2>
 <p>Vastuullisena käyttäjänä sinun täytyy hallita konteksti-ikkunaa. Kuten olemme jo aiemmin oppineet, on kolme päästrategiaa: tiivistys, pilkkominen ja ankkurointi. Nämä ovat perustyökaluja, joita tarvitset jokaisen projektin parissa työskennellessäsi.</p>
@@ -86,7 +86,7 @@
 <p>Tähän asti olemme puhuneet konteksti-ikkunasta teoreettisesti. Nyt katsotaan, mitä tapahtuu käytännössä, kun tärkeä tieto putoaa ikkunasta — ja malli ei kerro sinulle siitä.</p>
 <p>Kuvittele seuraava tilanne. Aloitat keskustelun tekoälyn kanssa ja annat selkeän rajauksen: "Kirjoitamme yhdessä novellia. Päähenkilön nimi on Aino, tarina sijoittuu 1920-luvun Suomeen, ja tyyli on vakava. Älä lisää tarinaan nykyaikaisia laitteita."</p>
 <p>Ensimmäiset 10 vastausta ovat erinomaisia. Malli muistaa rajaukset, pitää tyylin vakavana ja kirjoittaa ajan kuvaukseen sopivasti.</p>
-<p>Mutta 25 viestin jälkeen kysyt: "Miten kohtaus jatkuu?" Malli kirjoittaa Ainon selailemaan puhelinta ja vaihtaa tyylin kepeäksi — koska se on unohtanut alkuperäisen rajauksesi. Se ei kerro, etteikö muista. Se ei sano "huomaa, etten enää muista alkuperäistä kontekstiasi". Se yksinkertaisesti vastaa parhaansa mukaan sillä tiedolla, joka sillä on jäljellä.</p>
+<p>Mutta 25 viestin jälkeen kysyt: ”Miten kohtaus jatkuu?” Malli kirjoittaa kohtauksen, jossa Aino selailee puhelinta, ja vaihtaa tyylin kepeäksi — koska se on unohtanut alkuperäisen rajauksesi. Se ei kerro, ettei enää muista. Se ei sano: ”Huomaa, etten enää muista alkuperäistä kontekstiasi.” Se vain vastaa parhaansa mukaan sillä tiedolla, joka sillä on jäljellä.</p>
 <p>Tämä on konteksti-ikkunan vaarallisin piirre: <strong>malli ei kerro, kun se unohtaa</strong>. Se ei anna virheilmoitusta. Se ei sano "konteksti on kadonnut". Se vain alkaa antaa vastauksia, jotka eivät enää noudata alkuperäisiä rajauksia.</p>
 <p>Käytännön työssä tämä voi johtaa vakaviin virheisiin. Esitelmän sävy lipsahtaa väärään suuntaan. Asiakkaalle lähetetty teksti rikkoo sovittua ohjeistusta. Käännös vaihtaa kieltä kesken kaiken. Ja koska vastaukset ovat yhtä sujuvia kuin aiemmin, saatat huomata virheen vasta liian myöhään.</p>
 <p>Oikea vastuullinen käyttäjä ei luota siihen, että malli muistaa. Hän tarkistaa, huomaa poikkeaman ja korjaa tilanteen — joko toistamalla ankkurin tai aloittamalla uuden keskustelun.</p>
@@ -124,7 +124,7 @@
 <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST: Generative AI Profile, NIST AI 600-1</a></li>
 </ul>
 <p>Tarkistettu 15.7.2026.</p></div><div id="panel-lesson-05-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-05-tehtavat" data-tab="tehtavat" hidden><h1>Todistusaineisto 2 — Kun tekoäly unohtaa</h1>
-<blockquote class="pause"><p>📌 <strong>Tämä on toinen kolmesta todistusaineistosta</strong>, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä <em>"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"</em> (oppitunti 9). Säilytä tämä huolellisesti.</p>
+<blockquote class="pause"><p><strong>Tämä on toinen kolmesta todistusaineistosta</strong>, jotka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä <em>"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"</em> (oppitunti 9). Säilytä tämä huolellisesti.</p>
 </blockquote>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
 <p>Pakotat tekoälyn unohtamaan antamasi ohjeen — ja dokumentoit, miten ja milloin se tapahtuu. Käytät sitten tekoälyä apunasi tapausesimerkin jäsentämiseen ja kirjoitat lyhyen analyysin siitä, <strong>mitä konteksti-ikkunan rajat tarkoittavat käytännön työssä</strong>. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut selittämään, miksi tekoäly toimi alkuun oikein mutta lipsui myöhemmin.</p>
@@ -185,7 +185,7 @@ jäsennysvaihtoehtoja.
 <li>Mallin vastaus rajauksen "unohtamisen" jälkeen (vaihe 3) ja vastaus rajauksen toiston jälkeen (vaihe 4) — kuvakaappauksina tai kopioina</li>
 <li>Tapausesimerkkisi (vaihe 6, noin 300 sanaa)</li>
 </ul>
-<blockquote class="pause"><p>💡 <strong>Miksi tämä on tärkeää:</strong> Tuomaripöydässä viittaat tähän todistusaineistoon, kun joudut selittämään, <em>miksi</em> tekoäly toimi alussa "oikein" mutta antoi myöhemmin vaarallisen neuvon. Tämä on yksi tekoälyn tyypillisimmistä riskeistä työkäytössä.</p>
+<blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Tuomaripöydässä viittaat tähän todistusaineistoon, kun selität, <em>miksi</em> tekoäly toimi alussa "oikein" mutta antoi myöhemmin vaarallisen neuvon. Tämä on yksi tekoälyn tyypillisimmistä riskeistä työkäytössä.</p>
 </blockquote>
 <p><strong>2 / 3 todistusaineistoa kerätty</strong></p></div></div></div><div id="panel-lesson-05-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-05-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Muistin rajat</h1>
 <p>Tällä välilehdellä harjoittelet, miten tekoälyn rajallinen muisti — konteksti-ikkuna — käyttäytyy pitkissä keskusteluissa ja miten pidät olennaisen tallessa. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan muu näe tai arvioi vastauksiasi. Väärä vastaus ei haittaa — jokainen selitys kertoo, miksi vaihtoehto toimii tai ei toimi, joten opit myös kokeilemalla. Tehtävät etenevät käsitteiden kertaamisesta kohti tilannetta, jossa arvioit itse, miten estät mallia unohtamasta tärkeät ohjeet kesken työn.</p>

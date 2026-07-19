@@ -33,7 +33,7 @@ Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella
 | **17** | **Kasaat kolme rakennuspalikkaa botiksi tai kuivaharjoitteluksi** | **Ensimmäinen toimiva toteutus** |
 | **18** | **Testaat, viimeistelet ja esittelet** | **Lopputyö valmis** |
 
-> 💡 **Vinkki:** Tee oma muistiinpanodokumentti (Word, OneNote, Google Docs tai mikä tahansa), johon kerää kolme rakennuspalikkaa omiksi alaotsikoikseen. Tunnilla 17 sinulla on yksi tiedosto auki, ei kolme.
+> **Vinkki:** Tee oma muistiinpanodokumentti, johon kokoat kolme rakennuspalikkaa omiksi alaotsikoikseen. Tunnilla 17 tarvitset silloin vain yhden tiedoston.
 
 ## Kolmen rakennuspalikan yleiskuvaus
 
@@ -65,7 +65,7 @@ Linkki bottiin tai dokumentoitu suoritusjälki, josta näkyvät järjestelmäpro
 Tunnin 14 botin määrittely (rakennuspalikka 2), päivitettynä lopputyösi botin mukaisesti.
 
 **3. Järjestelmäprompti kokonaisuudessaan**
-Kopioituna tiedostoon. Tämä on botin "DNA" ja arvioinnin tärkein lähde.
+Kopioi järjestelmäprompti tiedostoon kokonaisuudessaan. Se on botin toimintaa koskevan arvioinnin tärkein lähde.
 
 **4. Lista tietopohjan dokumenteista**
 3–5 dokumenttia ja perustelu, miksi valitsit juuri nämä.
@@ -78,9 +78,9 @@ Mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? 
 
 ## Lyhyt esittely ja puolustus
 
-Pidä 2–3 minuutin esittely: kerro kenelle botti on rakennettu, näytä yksi ennen–jälkeen-korjaus ja perustele yksi rajaus. Esitys voi olla live, nauhoitettu video tai kuvakaappauskooste. Vastaa lopuksi yhteen jatkokysymykseen omista valinnoistasi.
+Pidä 2–3 minuutin esittely: kerro, kenelle botti on rakennettu, näytä yksi ennen–jälkeen-korjaus ja perustele yksi rajaus. Esitys voi olla suora esitys, tallennettu video tai kuvakaappauskooste. Vastaa lopuksi yhteen jatkokysymykseen omista valinnoistasi.
 
-> 💡 **Vinkki esimerkkikäyttäjästä:** Kun testaat ja esittelet, kuvittele yksi tyypillinen käyttäjä — esimerkiksi luokkakaveri, joka aloittaa harrastuksessa, tai uusi jäsen, joka etsii vastauksia kerhon FAQ:sta. Botin pitää toimia juuri hänelle.
+> **Vinkki esimerkkikäyttäjästä:** Valitse testaamista ja esittelyä varten yksi tyypillinen käyttäjä. Hän voi olla esimerkiksi harrastuksen aloittava luokkakaveri tai kerhon usein kysyttyjä kysymyksiä selvittävä uusi jäsen. Varmista, että botti toimii juuri hänen tarpeessaan.
 
 ## Työkalut ja työskentelytapa
 
@@ -136,7 +136,7 @@ Lopputyö hajautuu yhdeksälle oppitunnille. Tässä karkea aika-arvio, joka aut
 | Testaus, viimeistely ja esittely (tunti 18) | ~75 min (koko tunti) |
 | **Yhteensä lähiaikaa** | **~3–4 tuntia** |
 
-> 💡 **Vinkki ajankäyttöön:** Jos joku rakennuspalikka jää kesken tunnilla, viimeistele se kotona ennen seuraavaa tuntia. Tunnilla 17 sinulla pitää olla kolme rakennuspalikkaa valmiina — muuten kokoaminen ei onnistu.
+> **Vinkki ajankäyttöön:** Jos rakennuspalikka jää tunnilla kesken, viimeistele se ennen seuraavaa tuntia. Tarvitset kaikki kolme rakennuspalikkaa tunnilla 17.
 
 ::: luokka
 ## Palautus

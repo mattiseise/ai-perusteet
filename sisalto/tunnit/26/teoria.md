@@ -84,7 +84,7 @@ n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord,
   <div class="l26-wrap">
     <div class="l26-wire"></div>
     <div class="l26-node n1"><b>▶</b>Trigger<span>uusi viesti</span></div>
-    <div class="l26-node n2"><b>✦</b>AI-solmu<span>päättely</span></div>
+    <div class="l26-node n2"><b>✦</b>tekoälysolmu<span>päättely</span></div>
     <div class="l26-node n3"><b>◇</b>IF-solmu<span>turvatarkistus</span></div>
     <div class="l26-node n4"><b>✉</b>Toiminto<span>lähetä vastaus</span></div>
     <div class="l26-lbl"><span class="l26-s s1">data: ”Mihin aikaan avaatte?”</span><span class="l26-s s2">data: vastausluonnos</span><span class="l26-s s3">data: tarkistettu ✓</span><span class="l26-s s4">data: lähetetty käyttäjälle ✓</span></div>
@@ -126,7 +126,7 @@ Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten se toteutuu n8n:
 
 **Syötekäsittelijä** on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.
 
-**Päättelijä** on tekoälysolmu, esimerkiksi OpenAI-solmu tai vastaava. Siihen kirjoitat **system promptin**, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.
+**Päättelijä** on tekoälysolmu, esimerkiksi OpenAI-solmu tai vastaava. Siihen kirjoitat **järjestelmäpromptin**, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.
 
 **Työkalujen suorittaja** tarkoittaa solmuja, joilla agentti tekee konkreettisia toimintoja. Google Sheets -solmu lukee tai kirjoittaa tietoja. HTTP Request -solmu kutsuu ulkoisia palveluita. Slack-solmu lähettää viestejä. Nämä ovat agentin ”kädet”, joiden avulla se toimii maailmassa.
 
@@ -145,8 +145,8 @@ Käytännössä tunnin 26 tavoite on **toimiva minimiversio**: kolmesta solmusta
 Esimerkki iteratiivisesta rakentamisesta:
 
 1. **Vaihe 1 — Yksinkertainen triggeri ja toiminta:** Manual Trigger → HTTP Request. Testaa, että työnkulku käynnistyy ja data liikkuu.
-2. **Vaihe 2 — Lisää päättely:** Manual Trigger → HTTP Request → AI-solmu. Testaa, että tekoälysolmu saa oikean syötteen ja tuottaa vastauksen.
-3. **Vaihe 3 — Lisää toimintasolmu:** Manual Trigger → HTTP Request → AI-solmu → Discord, sähköposti tai muu toimintasolmu. Testaa, että vastaus lähtee oikeaan paikkaan.
+2. **Vaihe 2 — Lisää päättely:** Manual Trigger → HTTP Request → tekoälysolmu. Testaa, että tekoälysolmu saa oikean syötteen ja tuottaa vastauksen.
+3. **Vaihe 3 — Lisää toimintasolmu:** Manual Trigger → HTTP Request → tekoälysolmu → Discord, sähköposti tai muu toimintasolmu. Testaa, että vastaus lähtee oikeaan paikkaan.
 
 Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.
 
@@ -168,7 +168,7 @@ Jos olet epävarma omasta projektistasi, voit arvioida vaikeustasoa seuraavien e
 
 **Taso 1 — FAQ-botti**
 
-Yhteisö saa samoja kysymyksiä kymmeniä kertoja päivässä. Botti vastaa yleisimpiin kysymyksiin automaattisesti. Triggeri on viesti chat-kanavasta. Työnkulku lähettää viestin AI-solmulle, jolla on system prompt ja FAQ-tietokanta kontekstina. Lopuksi vastaus lähetetään takaisin chattiin.
+Yhteisö saa samoja kysymyksiä kymmeniä kertoja päivässä. Botti vastaa yleisimpiin kysymyksiin automaattisesti. Triggeri on viesti chat-kanavasta. Työnkulku lähettää viestin tekoälysolmulle, jolla on järjestelmäprompti ja FAQ-tietokanta kontekstina. Lopuksi vastaus lähetetään takaisin chattiin.
 
 **Taso 2 — Sähköpostiyhteenvetoagentti**
 
@@ -176,7 +176,7 @@ Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä y
 
 **Taso 3 — Tikettiagentti**
 
-Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki **human-in-the-loop**-rakenteesta.
+Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki ihmisen osallistavasta rakenteesta.
 
 ## Tunnin tavoite ja valmis lopputulos
 

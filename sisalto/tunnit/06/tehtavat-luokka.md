@@ -1,8 +1,8 @@
 # Opiskelutehtävät — Kuvat, ääni ja teksti
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 6.1, joka osuu tunnin ydintaidon ytimeen. Jos tietoturva kiinnostaa sinua, tee lisäksi syventävä tehtävä 6.2 — se on käytännön työelämän osaamista, jota ei missään muualla kurssilla käsitellä yhtä konkreettisesti.
+> **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä yksi. Suosittelen tehtävää 6.1, joka harjoittaa tunnin ydintaitoa. Jos tietoturva kiinnostaa sinua, tee lisäksi syventävä tehtävä 6.2. Siinä harjoittelet käytännön työelämätaitoa, jota ei muualla kurssilla käsitellä yhtä konkreettisesti.
 
-## Tehtävä 6.1 — Näyttö vai kuvaus? 🟢 SUOSITELTU
+## Tehtävä 6.1 — Näyttö vai kuvaus? — SUOSITELTU
 
 **Tavoite:** Näet käytännössä, miten paljon kuvakaappaus muuttaa tekoälyn kykyä auttaa. Kokeilet samaa ongelmaa kahdessa muodossa — pelkällä sanakuvauksella ja multimodaalisesti — ja huomaat itse, milloin "näyttö" kannattaa.
 
@@ -58,11 +58,11 @@ Vastaa 3–5 lauseella:
 - Millaisissa tilanteissa multimodaalinen syöte on välttämätön? Milloin pelkkä teksti riittää?
 - Onko tilanteita, joissa kuvan lähettäminen voisi olla **huono** idea? (Vihjeitä: kuvassa näkyvä tieto, salaisuudet, henkilöt.)
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta säilytä havaintosi. Etenkin viimeinen pohdintakysymys vie ajatukset suoraan seuraavaan tehtävään — ja koko kurssin etiikka- ja vastuukysymyksiin.
+> **Vinkki:** Tehtävää ei palauteta, mutta säilytä havaintosi. Etenkin viimeinen pohdintakysymys johdattaa seuraavaan tehtävään sekä koko kurssin etiikka- ja vastuukysymyksiin.
 
 ---
 
-## Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? 🟣 SYVENTÄVÄ
+## Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? — SYVENTÄVÄ
 
 > **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa vastuullisen käyttäjän aloittelijasta.
 
@@ -149,6 +149,6 @@ Tämä on harjoitus siitä, miten tekoälyä käytetään *tarkistajana*, ei kor
 
 Kirjoita 2–3 lausetta: *"Säännöt, joita seuraan jatkossa ennen kuin jaan minkään materiaalin tekoälylle…"*
 
-> 💡 **Vinkki:** Tehtävää ei palauteta, mutta tämä yhden lauseen sääntö on yksi koko kurssin arvokkaimpia työkaluja työelämään. Säilytä se itsellesi.
+> **Vinkki:** Tehtävää ei palauteta, mutta yhden lauseen sääntö on yksi koko kurssin arvokkaimmista työelämän työkaluista. Säilytä se.
 
 **Tunnin 6 jälkeen tiedät, milloin kuva auttaa — ja milloin se on riski.**

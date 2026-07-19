@@ -20,7 +20,7 @@ Testi, jossa kokeillaan tilanteita, joiden pitäisi toimia — kysymyksiä, joih
 
 Testi, jossa kokeillaan tilanteita, joiden ei pitäisi toimia: botin pitää osata kieltäytyä, rajata vastaustaan tai ohjata käyttäjä oikeaan paikkaan.
 
-## Reunatapaus (edge case)
+## Reunatapaus
 
 Outo tai epätavallinen syöte, kuten tyhjä tai hyvin sekava kysymys. Reunatapaukset paljastavat, kuinka kestävä botti on.
 

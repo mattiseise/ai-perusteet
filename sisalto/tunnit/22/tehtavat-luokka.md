@@ -2,11 +2,11 @@
 
 > Tämä tunti tarkentaa lopputyösi työkaluvalintoja. Tunneilla 19 ja 21 olet määritellyt ongelman ja muistirakenteen. Tänään harjoittelet työkalujen valintaa.
 
-*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet työkalu-tehtävän — se sparraa suoraan lopputyösi rakentamista.*
+*Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet työkalu-tehtävän — se tukee suoraan lopputyösi rakentamista.*
 
 ---
 
-## Tehtävä 22.1 — Oikea työkalu oikeaan tehtävään 🟢 SUOSITELTU
+## Tehtävä 22.1 — Oikea työkalu oikeaan tehtävään — suositeltu
 
 **Miksi tämä on tärkeää:** Agentin teho riippuu siitä, mitä työkaluja se osaa käyttää. Mutta kaikkia työkaluja ei tarvita aina — usein vähemmän on enemmän.
 
@@ -33,7 +33,7 @@ Kirjoita kuhunkin tehtävään lyhyt työkalulista — eli mitä n8n-solmuja age
 
 ### Sovellus omaan agenttiin
 
-Avaa muistiinpanoistasi ⭐️ Agentti: Ongelma. Käy sama analyysi sille:
+Avaa muistiinpanoistasi Agentti: Ongelma. Käy sama analyysi sille:
 
 - Tarvitseeko agenttisi verkkohakua? Tiedostojen käsittelyä? Viestien lähetystä? Tietokantakyselyitä?
 - Listaa lopuksi, mitä n8n-solmuja tarvitset minimissään.
@@ -48,11 +48,11 @@ joiden avulla voin arvioida, onko jokin työkalu ylimääräinen tai
 puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 ```
 
-> 💡 **Vinkki muistiinpanoihin:** Kirjaa muistiinpanoihisi agenttisi minimityökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.
+> **Vinkki muistiinpanoihin:** Kirjaa muistiinpanoihisi agenttisi minimityökalulista. Tämä helpottaa tunnin 26 n8n-rakentamista.
 
 ---
 
-## Tehtävä 22.2 — Tutustu n8n-työnkulkuun 🟣 SYVENTÄVÄ
+## Tehtävä 22.2 — Tutustu n8n-työnkulkuun — syventävä
 
 **Miksi tämä on hyödyllinen:** Tunnilla 26 rakennat oman agenttisi n8n:ssä. Tämä tehtävä antaa ennakkonäkymän käyttöliittymään.
 
@@ -76,7 +76,7 @@ puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 
 **C. Yhdistä teoriaan.** Mikä tunnin 22 työkalu (verkkohaku, tiedostot, viestit, tietokanta) on tässä työnkulussa käytössä? Jos haluaisit lisätä toisen työkalun, minkä lisäisit ja miksi?
 
-> 💡 **Vinkki muistiinpanoihin:** Pidä silmällä esimerkkiä, jotta tunnilla 26 tunnistat solmutyypit nopeammin.
+> **Vinkki muistiinpanoihin:** Pidä silmällä esimerkkiä, jotta tunnilla 26 tunnistat solmutyypit nopeammin.
 
 **Opettajalle:** tämä tehtävä vaatii esimerkki-n8n-työnkulun (esim. `esimerkki-agentti.json`), jonka jaat tunnin yhteydessä.
 

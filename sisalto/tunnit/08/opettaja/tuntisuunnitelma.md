@@ -55,7 +55,7 @@ Tekijänoikeuskysymys ei ole yksinkertainen. Osa toimijoista väittää, että m
 
 | Kysymys | Miksi se on tärkeä? | Vastuullisen käyttäjän näkökulma |
 | --- | --- | --- |
-| **Kenen dataa käytettiin?** | Mallin arvo perustuu osittain ihmisten tuottamaan sisältöön. | Kysy, onko palvelu läpinäkyvä koulutusdatansa suhteen. |
+| **Kenen dataa käytettiin?** | Mallin arvo perustuu osittain ihmisten tuottamaan sisältöön. | Kysy, kertooko palvelu avoimesti käyttämästään koulutusdatasta. |
 | **Oliko lupa olemassa?** | Luvan puute voi olla juridinen ja eettinen ongelma. | Arvioi, käytätkö palvelua, jonka datakäytännöt ovat vastuullisia. |
 | **Maksettiinko tekijöille?** | Luovan työn arvo voi jäädä näkymättömäksi. | Pohdi, miten tekijöitä ja sisällöntuottajia huomioidaan. |
 
@@ -294,7 +294,7 @@ Tallennettava tuotos on **sidosryhmä-, vaikutus- ja vastuukartta**. Pakollinen 
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija laatii yhdestä tapauksesta sidosryhmä-, vaikutus- ja vastuukartan. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

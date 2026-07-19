@@ -2,7 +2,7 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon tavoitteena on, että opiskelija ymmärtää tekoälyn eri tyypit ja osaa arvioida kriittisesti väitteitä tekoälyn kyvykkyydestä. Oppitunnin ydin on erottaa toisistaan nykyiset **kapeat tekoälyjärjestelmät**, **generatiivinen tekoäly** ja vielä tutkimuksellinen tai hypoteettinen **yleinen tekoäly**.
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää tekoälyn eri tyypit ja osaa arvioida kriittisesti väitteitä tekoälyn kyvyistä. Oppitunnin ydin on erottaa toisistaan nykyiset **kapeat tekoälyjärjestelmät**, **generatiivinen tekoäly** ja vielä tutkimuksellinen tai hypoteettinen **yleinen tekoäly**.
 
 ### Muistaa ja ymmärtää
 
@@ -39,7 +39,7 @@ Korosta opiskelijoille:
 - **Kapea tekoäly** on suunniteltu tai koulutettu tietyn tyyppiseen tehtävään.
 - **Generatiivinen tekoäly** tuottaa uutta sisältöä, kuten tekstiä, kuvia, ääntä tai koodia, mutta sekin on rajattua.
 - **AGI** tarkoittaisi yleistä tekoälyä, joka pystyisi oppimaan ja toimimaan monenlaisissa tehtävissä ihmisen kaltaisella joustavuudella.
-- **ASI** tarkoittaisi superälykkyyttä, joka ylittäisi ihmisen kyvykkyyden laajasti. Tämä on vielä spekulatiivinen käsite.
+- **ASI** tarkoittaisi superälykkyyttä, joka ylittäisi ihmisen kyvyt laajasti. Tämä on vielä spekulatiivinen käsite.
 
 ### Tekoälytyyppien vertailu
 
@@ -52,7 +52,7 @@ Korosta opiskelijoille:
 
 ### Kriittinen uutisten lukutaito
 
-Tällä oppitunnilla kannattaa harjoitella tekoälyuutisten lukemista. Uutisissa voidaan sanoa esimerkiksi, että ”tekoäly voitti ihmisen pelissä” tai ”tekoäly kirjoitti romaanin”. Opiskelijan tulisi oppia kysymään: mitä järjestelmä todella teki, missä ympäristössä, millä rajauksilla ja onko kyse yleisestä älykkyydestä vai kapeasta kyvykkyydestä?
+Tällä oppitunnilla kannattaa harjoitella tekoälyuutisten lukemista. Uutisissa voidaan sanoa esimerkiksi, että ”tekoäly voitti ihmisen pelissä” tai ”tekoäly kirjoitti romaanin”. Opiskelijan tulisi oppia kysymään: mitä järjestelmä todella teki, missä ympäristössä ja millaisin rajauksin? Osoittaako tulos yleistä älykkyyttä vai rajattua kykyä?
 
 **Opettajan huomio:** Älä käsittele AGI:a faktana tai väistämättömänä kehityksenä. Puhu siitä tutkimusaiheena ja avoimena kysymyksenä. Tämä auttaa opiskelijoita erottamaan nykyteknologian tulevaisuusspekulaatiosta.
 
@@ -98,7 +98,7 @@ Tällä oppitunnilla kannattaa harjoitella tekoälyuutisten lukemista. Uutisissa
 - **Aloita nykytodellisuudesta.** Käytä esimerkkejä siitä, missä tekoälyä hyödynnetään jo nyt IT-alalla.
 - **Siirry tulevaisuuteen vasta sen jälkeen.** Käsittele AGI:a ja ASI:a spekulaationa, ei varmana kehityspolkuna.
 - **Kysy kriittisiä kysymyksiä.** Kun esität tekoälyuutisen, kysy: mitä järjestelmä todella osaa, missä rajoissa ja onko kyse kapeasta tekoälystä vai yleisälystä?
-- **Vältä hypeä ja pelottelua.** Tavoite on ymmärtää, ei ihastua tai pelästyä kritiikittömästi.
+- **Vältä liioittelua ja pelottelua.** Tavoite on ymmärtää, ei ihastua tai pelästyä kritiikittömästi.
 
 ### Yleisten opiskelijakysymysten vastaukset
 
@@ -237,7 +237,7 @@ Tallennettava tuotos on **kykyjen laajuus × toteutus ja toiminnallisuus -matrii
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija sijoittaa kahdeksan järjestelmäkorttia kykyjen laajuus × toiminnallisuus -matriisiin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

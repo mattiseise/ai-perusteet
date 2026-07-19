@@ -31,7 +31,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **tekoälyn** kattot
 
 ### Ydinviesti: tekoäly on kattotermi, koneoppiminen yksi toteutustapa
 
-Oppitunnilla kannattaa aloittaa opiskelijoille tutuista esimerkeistä. Instagramin suositukset, Netflixin katseluehdotukset, Google Mapsin reittisuositukset ja sähköpostin roskapostisuodatus ovat usein opiskelijoille tuttuja. Näiden kautta voidaan siirtyä käsitteelliseen eroon: onko kyse sääntöjen seuraamisesta vai datasta oppimisesta?
+Oppitunti kannattaa aloittaa opiskelijoille tutuista esimerkeistä. Instagramin suositukset, Netflixin katseluehdotukset, Google Mapsin reittisuositukset ja sähköpostin roskapostisuodatus ovat monelle tuttuja. Esimerkkien avulla voidaan siirtyä käsitteelliseen eroon: onko kyse sääntöjen seuraamisesta vai datasta oppimisesta?
 
 > **Sääntöpohjainen automaatio tekee sen, mitä sille on kirjoitettu. Koneoppimismalli soveltaa koulutusdatasta opittuja parametreja uuteen syötteeseen.**
 
@@ -195,7 +195,7 @@ Tallennettava tuotos on **perusteltu luokittelutaulukko ja huomio siitä, oppiik
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija luokittelee kuusi tapausta tekoälyksi, koneoppimiseksi, säännöksi tai automaatioksi ja perustelee, oppiiko käyttöön otettu malli syötteestä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

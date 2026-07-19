@@ -16,7 +16,7 @@ Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten hyvin suunnit
 - Opiskelija osaa määritellä botille konkreettisen ja rajatun tarkoituksen.
 - Opiskelija osaa kirjoittaa botille roolin, joka tukee sen uskottavuutta ja käyttötarkoitusta.
 - Opiskelija osaa erottaa botin toimintaohjeet ja rajaukset toisistaan.
-- Opiskelija osaa kirjoittaa esimerkki-interaktioita, joilla testataan, toimiiko botin ohjeistus käytännössä.
+- Opiskelija osaa kirjoittaa esimerkkikeskusteluja, joilla testataan, toimiiko botin ohjeistus käytännössä.
 
 ### Luoda ja arvioida
 
@@ -43,7 +43,7 @@ Korosta opiskelijoille:
 - **Rooli** kertoo, millaisena asiantuntijana botti toimii.
 - **Ohjeet** kertovat, miten botti toimii eri tilanteissa.
 - **Rajaukset** kertovat, mitä botti ei saa tehdä.
-- **Esimerkki-interaktiot** näyttävät, toimiiko suunnitelma käytännössä.
+- **Esimerkkikeskustelut** näyttävät, toimiiko suunnitelma käytännössä.
 
 ### Neljä rakennuspalikkaa
 
@@ -127,11 +127,11 @@ Selitä asiat aina aloittelijalle sopivalla kielellä. Aloita lyhyellä käsitte
 
 ---
 
-## Esimerkki-interaktiot testausvälineenä
+## Esimerkkikeskustelut testausvälineenä
 
-### Miksi esimerkki-interaktiot tarvitaan?
+### Miksi esimerkkikeskusteluja tarvitaan?
 
-**Esimerkki-interaktio** on lyhyt mallikeskustelu käyttäjän ja botin välillä. Sen tarkoitus on testata, miten botti toimii erilaisissa tilanteissa. Ilman esimerkki-interaktioita opiskelija ei välttämättä huomaa, että botin ohjeistus on liian epämääräinen tai että botti toimii väärin vaikeassa tilanteessa.
+**Esimerkkikeskustelu** on lyhyt mallikeskustelu käyttäjän ja botin välillä. Sen avulla testataan, miten botti toimii erilaisissa tilanteissa. Ilman esimerkkikeskusteluja opiskelija ei välttämättä huomaa, että botin ohjeistus on liian epämääräinen tai että botti toimii väärin vaikeassa tilanteessa.
 
 Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 
@@ -145,7 +145,7 @@ Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 | **Vaikea** | ”Tee koko palautettava Python-projektini valmiiksi.” | Botti kieltäytyy tekemästä tehtävää valmiiksi ja tarjoaa ohjaavaa apua. |
 | **Epäselvä** | ”Koodi ei toimi.” | Botti pyytää tarkennusta: koodinpätkän, virheilmoituksen ja tavoitteen. |
 
-> **Esimerkki-interaktiot eivät ole näytelmiä. Ne ovat botin laadunvarmistusta.**
+> **Esimerkkikeskustelut ovat botin laadunvarmistusta.**
 
 ---
 
@@ -167,9 +167,9 @@ Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 
 **Korjaava näkökulma:** Rajaukset ovat turvallisuusmekanismi. Ne suojaavat käyttäjää vääriltä neuvoilta ja bottia sopimattomilta tehtäviltä. Hyvä rajaus tekee botista vastuullisen.
 
-### Väärinkäsitys 5: ”Esimerkki-interaktiot ovat turhia.”
+### Väärinkäsitys 5: ”Esimerkkikeskustelut ovat turhia.”
 
-**Korjaava näkökulma:** Esimerkki-interaktiot näyttävät, toimiiko ohjeistus oikeasti. Niiden avulla huomataan, tarvitseeko järjestelmäpromptia korjata ennen kuin bottia käytetään oikeassa tilanteessa.
+**Korjaava näkökulma:** Esimerkkikeskustelut näyttävät, toimiiko ohjeistus käytännössä. Niiden avulla huomataan, tarvitseeko järjestelmäpromptia korjata ennen kuin bottia käytetään oikeassa tilanteessa.
 
 ---
 
@@ -180,7 +180,7 @@ Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 - Valitse yksi konkreettinen bottiesimerkki, kuten **läksyvalmentaja**, **harrastusneuvoja** tai **asiakaspalvelubotti**.
 - Testaa neljän rakennuspalikan malli etukäteen valitulla botilla.
 - Kirjoita malliksi 3–4 kappaleen järjestelmäprompti.
-- Valmistele 2–3 esimerkki-interaktiota: normaali tilanne, vaikea tilanne ja epäselvä tilanne.
+- Valmistele 2–3 esimerkkikeskustelua: normaali, vaikea ja epäselvä tilanne.
 - Valmista esimerkki huonosta järjestelmäpromptista ja paremmasta järjestelmäpromptista, jotta opiskelijat näkevät eron.
 
 ### Lähiosan rakenne, 90 minuuttia
@@ -188,9 +188,9 @@ Opeta opiskelijoita testaamaan vähintään kolme tilannetta:
 | Vaihe | Aika | Tavoite |
 | --- | --- | --- |
 | **Johdanto** | 5 min | Avaa ajatus: oma botti on suunniteltu järjestelmä, ei vain nimetty ChatGPT. |
-| **Tehtävä 14.1: rakennuspalikat** | 20 min | Näytä tarkoitus, rooli, ohjeet ja rajaukset live-esimerkin avulla. |
+| **Tehtävä 14.1: rakennuspalikat** | 20 min | Näytä tarkoitus, rooli, ohjeet ja rajaukset havainnollistavan esimerkin avulla. |
 | **Tehtävä 14.2: järjestelmäprompti** | 25 min | Ryhmät kirjoittavat omille boteilleen ensimmäisen järjestelmäpromptin. |
-| **Tehtävä 14.3: esimerkki-interaktiot** | 15 min | Opiskelijat testaavat, miten botti toimisi eri tilanteissa. |
+| **Tehtävä 14.3: esimerkkikeskustelut** | 15 min | Opiskelijat testaavat, miten botti toimisi eri tilanteissa. |
 | **Vapaa harjoittelu** | 25 min | Opiskelijat jatkavat omien bottien suunnittelua ja saavat ohjausta. |
 
 **Kotitehtävä:** Täydennä oman botin suunnittelu ja järjestelmäprompti seuraavaa tuntia varten.
@@ -245,11 +245,11 @@ Toimi aina näin: [ohjeet]. Käytä kieltä, joka on [sävy ja taso].
 
 ---
 
-### TT-C: Esimerkki-interaktioiden kirjoittaminen
+### TT-C: Esimerkkikeskustelujen kirjoittaminen
 
 **Tavoite:** Opiskelija testaa, miten oma botti käyttäytyisi käytännössä.
 
-**Tehtävä:** Kirjoita kolme esimerkki-interaktiota omalle botillesi: normaali tilanne, vaikea tilanne ja epäselvä tilanne.
+**Tehtävä:** Kirjoita omalle botillesi kolme esimerkkikeskustelua: normaali, vaikea ja epäselvä tilanne.
 
 | Tilanne | Käyttäjän viesti | Miten botin pitäisi vastata? |
 | --- | --- | --- |
@@ -268,7 +268,7 @@ Toimi aina näin: [ohjeet]. Käytä kieltä, joka on [sävy ja taso].
 | Opiskelija kirjoittaa liian epämääräisen tarkoituksen: ”Botti auttaa ihmisiä.” | Kysy: kuka käyttää bottia, missä asiassa ja mistä tiedämme, että botti onnistui? |
 | Opiskelija ei näe roolin arvoa. | Näytä kaksi vastausta: toinen ilman roolia ja toinen roolin kanssa. Kysy, kumpi tuntuu luotettavammalta. |
 | Opiskelija sekoittaa ohjeet ja rajaukset. | Toista ero: ohje kertoo, mitä botti tekee. Rajaus kertoo, mitä botti ei tee. |
-| Opiskelija ei näe esimerkki-interaktioiden arvoa. | Näytä tilanne, jossa botti toimii väärin, koska sitä ei ole testattu vaikealla käyttäjäviestillä. |
+| Opiskelija ei näe esimerkkikeskustelujen arvoa. | Näytä tilanne, jossa botti toimii väärin, koska sitä ei ole testattu vaikealla käyttäjäviestillä. |
 | Opiskelija kokee järjestelmäpromptin liian pitkäksi. | Vertaa sitä arkkitehtuurisuunnitelmaan: hyvin suunniteltu botti toimii paremmin kuin nopeasti kasattu botti. |
 
 ---
@@ -331,11 +331,11 @@ Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä a
 
 **Mitä opettaja etsii:** Opiskelija ymmärtää, että rajaukset suojaavat käyttäjää ja bottia. Esimerkki: harrastusneuvojabotti ei anna sijoitusneuvoja, koska se ei ole talousneuvoja.
 
-### 5. Esimerkki-interaktiot
+### 5. Esimerkkikeskustelut
 
-**Kysymys:** Mitä esimerkki-interaktiot näyttävät?
+**Kysymys:** Mitä esimerkkikeskustelut näyttävät?
 
-**Mitä opettaja etsii:** Opiskelija ymmärtää, että esimerkki-interaktiot testaavat, toimiiko ohjeistus todellisuudessa ja miten botti käyttäytyy eri tilanteissa.
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että esimerkkikeskusteluilla testataan ohjeistuksen toimivuutta ja botin käyttäytymistä eri tilanteissa.
 
 ---
 
@@ -358,7 +358,7 @@ Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä a
 - Ohjeet kertovat selvästi, miten botin pitää toimia.
 - Rajaukset suojaavat käyttäjää ja pitävät botin tehtävän rajattuna.
 - Järjestelmäprompti on selkeä, johdonmukainen ja käytännössä testattava.
-- Esimerkki-interaktiot sisältävät normaalin, vaikean ja epäselvän tilanteen.
+- Esimerkkikeskustelut sisältävät normaalin, vaikean ja epäselvän tilanteen.
 
 ### Heikon suorituksen merkkejä
 
@@ -367,7 +367,7 @@ Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä a
 - Ohjeet ovat epämääräisiä eivätkä ohjaa botin toimintaa.
 - Rajaukset puuttuvat kokonaan.
 - Järjestelmäprompti on niin lyhyt, ettei se ohjaa bottia johdonmukaisesti.
-- Esimerkki-interaktioita ei ole tai ne testaavat vain helppoja tilanteita.
+- Esimerkkikeskusteluja ei ole tai ne testaavat vain helppoja tilanteita.
 
 **Opettajan arviointikysymys:** Voisiko toinen opiskelija rakentaa botin tämän suunnitelman perusteella ja saada siitä samanlaisen lopputuloksen?
 
@@ -418,7 +418,7 @@ Tallennettava tuotos on **botin määrittely ja järjestelmäprompti v1**. Pakol
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija täyttää botin tarkoituksen, roolin, ohjeet ja rajat sekä kirjoittaa järjestelmäpromptin v1. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

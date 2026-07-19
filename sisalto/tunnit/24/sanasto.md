@@ -1,6 +1,6 @@
 # Sanasto – oppitunti 24: Turvallisuus
 
-## Prompt injection
+## Promptihyökkäys
 
 Hyökkäys, jossa hyökkääjä piilottaa ohjeita käyttäjän syötteeseen. Agentti sekoittaa ohjeistuksensa ja hyökkäyskäskyn.
 
@@ -38,7 +38,7 @@ Yksi osa kerroksittaista suojausta. Se voi tarkistaa rakenteen, rajata toimintaa
 
 ## Erittely (separation)
 
-Järjestelmän ohjeiden, käyttäjän syötteen ja ulkoisen sisällön rakenteellinen erottaminen. Ulkoinen sisältö käsitellään epäluotettavana datana, mutta merkintä ei yksin estä prompt injectionia.
+Järjestelmän ohjeiden, käyttäjän syötteen ja ulkoisen sisällön rakenteellinen erottaminen. Ulkoinen sisältö käsitellään epäluotettavana datana, mutta merkintä ei yksin estä promptihyökkäyksiä.
 
 ## Ankkurointi (grounding)
 

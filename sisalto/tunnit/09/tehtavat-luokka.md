@@ -32,7 +32,7 @@ Olet kerännyt kolme todistusaineistoa aiemmilla oppitunneilla. Käytä niitä a
 
 Sinun tulee viitata todistusaineistoihisi, lainata niistä tai käyttää niitä pohjamateriaalina.
 
-> 💡 **Vinkki:** *"Tässä on keräämäni pohja-aineisto, käytä tätä apuna vastausta luodessani… <liitä keräämäsi aineisto>"*
+> **Vinkki:** *"Tässä on keräämäni pohja-aineisto. Käytä sitä apuna, kun laadin vastausta… <liitä keräämäsi aineisto>"*
 
 ## Skenaariot
 
@@ -66,9 +66,9 @@ Jos kirjallinen analyysi ei sovi sinulle, voit tehdä saman työn **visuaalisest
 
 **Valitse sama skenaario ja tuota seuraavat:**
 
-- 🗺️ **Tilannekartta** (A3 tai digitaalinen): Piirrä skenaarion toimijat (yritys, asiakas, tekoäly, data), niiden väliset tietovirrat, riskipisteet (punaisella) ja suojaukset (vihreällä).
-- 🌳 **Päätöspuu:** Rakenna puu, joka näyttää: "Jos tapahtuu X → mitä tehdään?" Vähintään 4 päätöskohtaa, jokaisessa 2–3 vaihtoehtoa perusteluineen.
-- 🎤 **Suullinen esitys** (5–8 min, nauhoite tai live): Esittele tilannekarttasi ja päätöspuusi. Selitä, mitä Teoria-osion käsitteitä käytit ja miksi.
+- **Tilannekartta** (A3 tai digitaalinen): Piirrä skenaarion toimijat (yritys, asiakas, tekoäly, data), niiden väliset tietovirrat, riskipisteet (punaisella) ja suojaukset (vihreällä).
+- **Päätöspuu:** Rakenna puu, joka vastaa kysymykseen: "Jos tapahtuu X, mitä tehdään?" Laadi vähintään neljä päätöskohtaa ja kuhunkin 2–3 perusteltua vaihtoehtoa.
+- **Suullinen esitys** (5–8 min, nauhoite tai suora esitys): Esittele tilannekarttasi ja päätöspuusi. Selitä, mitä Teoria-osion käsitteitä käytit ja miksi.
 
 ## Jos et tiedä mistä aloittaa
 

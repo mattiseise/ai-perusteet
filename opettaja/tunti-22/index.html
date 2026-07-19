@@ -31,7 +31,7 @@
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
 <ul>
 <li>Opiskelija osaa arvioida, mitä työkaluja agentti tarvitsee tiettyyn tehtävään.</li>
-<li>Opiskelija osaa suunnitella työkaluille <strong>rajoituksia</strong>, kuten luku- ja kirjoitusoikeuksia tai komentojen whitelistejä.</li>
+<li>Opiskelija osaa suunnitella työkaluille <strong>rajoituksia</strong>, kuten luku- ja kirjoitusoikeuksia tai sallittujen komentojen luetteloita.</li>
 <li>Opiskelija osaa tunnistaa tilanteita, joissa verkkohaku, tiedostojen käsittely tai CLI-komennot voivat aiheuttaa vahinkoa.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
@@ -100,7 +100,7 @@
 <tr>
 <td><strong>Väärä tieto</strong></td>
 <td>Agentti löytää epäluotettavan blogin, vanhentuneen ohjeen tai virheellisen lähteen.</td>
-<td>Käytä lähteiden whitelistiä: viralliset sivustot, dokumentaatio ja luotettavat lähteet.</td>
+<td>Käytä sallittujen lähteiden luetteloa: viralliset sivustot, dokumentaatio ja luotettavat lähteet.</td>
 </tr>
 <tr>
 <td><strong>Kustannukset</strong></td>
@@ -117,7 +117,7 @@
 <p><strong>Opettajan huomio:</strong> Korosta, että verkkohaku ei tee agentista automaattisesti oikeassa olevaa. Se antaa pääsyn lisätietoon, mutta lähteiden laatu, ajantasaisuus ja turvallisuus täytyy silti arvioida.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>CLI-työkalu — tehokkain ja vaarallisin</h3></div><div class="task-card-body">
 <p><strong>CLI</strong> eli komentorivi on usein riskialttein työkalu. Sen avulla agentti voi luoda kansioita, ajaa skriptejä, käynnistää palveluita tai käsitellä tiedostoja. Samalla se voi virheellisesti käytettynä poistaa tiedostoja, sammuttaa palvelimen tai muuttaa käyttöoikeuksia.</p>
-<p>CLI-työkalua kannattaa käsitellä opetuksessa erityisen varovaisesti. Hyvä lähtökohta on, että agentti ei saa ajaa mitä tahansa komentoa. Sen sijaan käytetään <strong>whitelist-mallia</strong>.</p>
+<p>CLI-työkalua kannattaa käsitellä opetuksessa erityisen varovaisesti. Hyvä lähtökohta on, että agentti ei saa ajaa mitä tahansa komentoa. Sen sijaan käytetään <strong>sallittujen kohteiden luetteloa</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -146,7 +146,7 @@
 </table>
 <p>CLI-työkalun turvallisuutta voi vahvistaa kolmella keinolla:</p>
 <ol>
-<li><strong>Whitelist:</strong> agentti saa ajaa vain ennalta sallittuja komentoja.</li>
+<li><strong>Sallittujen kohteiden luettelo:</strong> agentti saa ajaa vain ennalta sallittuja komentoja.</li>
 <li><strong>Hiekkalaatikko:</strong> komennot ajetaan erillisessä ympäristössä, eivät oikeassa tuotantojärjestelmässä.</li>
 <li><strong>Hyväksyntä:</strong> kriittiset komennot vaativat ihmisen hyväksynnän ennen suorittamista.</li>
 </ol>
@@ -184,7 +184,7 @@
 </tr>
 <tr>
 <td><strong>Rajoitus</strong></td>
-<td>Anna vain välttämätön pääsy ja käytä whitelistejä.</td>
+<td>Anna vain välttämätön pääsy ja käytä sallittujen kohteiden luetteloita.</td>
 <td>Agentti saa kirjoittaa vain <code>/reports/</code>-kansioon.</td>
 </tr>
 <tr>
@@ -199,17 +199,17 @@
 </tr>
 </tbody>
 </table></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Isompi whitelist on parempi.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Whitelist on turvallinen vain silloin, kun se on rajattu. Mitä enemmän komentoja, kansioita tai lähteitä sallitaan, sitä enemmän vahinkoa agentti voi tehdä virhetilanteessa.</p>
-<blockquote class="pause"><p>Hyvä whitelist ei ole pitkä lista. Hyvä whitelist on juuri niin lyhyt kuin tehtävä sallii.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Isompi sallittujen kohteiden luettelo on parempi.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Sallittujen kohteiden luettelo on turvallinen vain silloin, kun se on rajattu. Mitä enemmän komentoja, kansioita tai lähteitä sallitaan, sitä enemmän vahinkoa agentti voi tehdä virhetilanteessa.</p>
+<blockquote class="pause"><p>Hyvä sallittujen kohteiden luettelo ei ole pitkä lista. Hyvä sallittujen kohteiden luettelo on juuri niin lyhyt kuin tehtävä sallii.</p>
 </blockquote>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Verkkohaku on turvallista, koska agentti vain lukee tietoa.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Verkkohaku voi tuoda agentille virheellistä, vanhentunutta tai manipuloitua tietoa. Jos agentti toimii löydetyn tiedon perusteella, väärä tieto voi muuttua vääräksi toiminnaksi.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”CLI on tehokas, joten sitä kannattaa käyttää paljon.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> CLI on tehokas juuri siksi, että se on vaarallinen. Sitä kannattaa käyttää vain, kun se on oikeasti tarpeen, ja silloinkin hiekkalaatikossa, whitelistillä ja tarvittaessa ihmisen hyväksynnällä.</p>
+<p><strong>Korjaava näkökulma:</strong> CLI on tehokas juuri siksi, että se on vaarallinen. Sitä kannattaa käyttää vain, kun se on oikeasti tarpeen, ja silloinkin hiekkalaatikossa, sallittujen kohteiden luettelolla ja tarvittaessa ihmisen hyväksynnällä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Orkestrointi ei ole tärkeää.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Väärä työkalujen järjestys voi tuottaa virheellisen lopputuloksen. Oikea järjestys on osa agentin päättelyä ja arkkitehtuuria.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Whitelist eri agenteille</h3></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Sallittujen kohteiden luettelo eri agenteille</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija suunnittelee työkalujen käyttöoikeudet turvallisesti.</p>
 <p><strong>Tehtävä:</strong> Anna opiskelijoille 2–3 agenttiesimerkkiä. Opiskelijat määrittävät, mitä tiedostoja, verkkolähteitä tai komentoja agentti saa käyttää ja mitä ei.</p>
 <table>
@@ -267,12 +267,12 @@
 <tr>
 <td>Agentti saa ajaa <code>rm</code>-komennon.</td>
 <td>Se voi poistaa tärkeitä tiedostoja.</td>
-<td>Komentojen whitelist ja hiekkalaatikko.</td>
+<td>Sallittujen komentojen luettelo ja hiekkalaatikko.</td>
 </tr>
 <tr>
 <td>Agentti saa hakea tietoa mistä tahansa verkosta.</td>
 <td>Se voi käyttää virheellistä tai manipuloitua lähdettä.</td>
-<td>Lähteiden whitelist ja lähteiden tarkistus.</td>
+<td>Sallittujen lähteiden luettelo ja lähteiden tarkistus.</td>
 </tr>
 <tr>
 <td>Agentti saa kirjoittaa mihin tahansa kansioon.</td>
@@ -373,7 +373,7 @@
 <li><strong>Verkkohaku:</strong> Miksi verkkohaku voi olla turvallisuusriski?</li>
 <li><strong>CLI:</strong> Miksi komentorivityökalu on erityisen vaarallinen?</li>
 <li><strong>Orkestrointi:</strong> Mitä voi tapahtua, jos agentti käyttää oikeita työkaluja väärässä järjestyksessä?</li>
-<li><strong>MCP:</strong> Miksi yhteinen standardiliitin hyödyttää sekä työkalun tekijää että agentin käyttäjää — ja miksi se ei poista whitelistien tarvetta?</li>
+<li><strong>MCP:</strong> Miksi yhteinen standardiliitin hyödyttää sekä työkalun tekijää että agentin käyttäjää — ja miksi se ei poista sallittujen kohteiden luetteloiden tarvetta?</li>
 </ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija haluaa antaa agentille kaikki oikeudet</h3></div><div class="task-card-body">
 <p>Kysy:</p>
@@ -432,7 +432,7 @@
 </tr>
 <tr>
 <td>80–90 min</td>
-<td>Tallennus ja exit ticket</td>
+<td>Tallennus ja lopputehtävä</td>
 <td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
 </tr>
 </tbody>
@@ -440,18 +440,18 @@
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
 <p>Oppija täyttää annetun sopimuspohjan. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
-<p>Kun perustuotos on valmis, oppija lisää hallitun vika- ja fallback-polun. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-22-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-22-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 22</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Whitelist-mallit noin 20 minuuttia</h2></div><div class="task-card-body">
+<p>Kun perustuotos on valmis, oppija lisää hallitun vika- ja varapolun. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-22-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-22-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 22</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Sallittujen kohteiden luettelot noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä <strong>whitelist</strong> tarkoittaa agenttien turvallisuudessa ja miksi agentille pitää määritellä tarkasti, mitä se saa tehdä.</p>
-<p><strong>Opettajan painotus:</strong> Korosta, että whitelist on turvallisuuden perusperiaate. Agentille ei anneta oikeuksia varmuuden vuoksi, vaan vain ne oikeudet, joita se tarvitsee tehtävänsä suorittamiseen.</p>
+<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, mitä <strong>sallittujen kohteiden luettelo</strong> tarkoittaa agenttien turvallisuudessa ja miksi agentille pitää määritellä tarkasti, mitä se saa tehdä.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, että sallittujen kohteiden luettelo on turvallisuuden perusperiaate. Agentille ei anneta oikeuksia varmuuden vuoksi, vaan vain ne oikeudet, joita se tarvitsee tehtävänsä suorittamiseen.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Selitä opiskelijoille:</p>
-<blockquote class="pause"><p>Whitelist tarkoittaa sallittujen toimintojen listaa. Agentti saa tehdä vain ne asiat, jotka on erikseen sallittu. Kaikki muu on kiellettyä. Tämä on tärkeä turvallisuusperiaate, koska agentille ei pidä antaa enempää oikeuksia kuin se oikeasti tarvitsee.</p>
+<blockquote class="pause"><p>Sallittujen kohteiden luettelo tarkoittaa sallittujen toimintojen listaa. Agentti saa tehdä vain ne asiat, jotka on erikseen sallittu. Kaikki muu on kiellettyä. Tämä on tärkeä turvallisuusperiaate, koska agentille ei pidä antaa enempää oikeuksia kuin se oikeasti tarvitsee.</p>
 </blockquote>
-<h3>Esittely: kolme whitelist-mallia</h3>
-<p>Näytä opiskelijoille kolme erilaista whitelist-esimerkkiä: liian tiukka, kohtuullinen ja liian löysä.</p>
+<h3>Esittely: kolme sallittujen kohteiden luetteloa</h3>
+<p>Näytä opiskelijoille kolme erilaista esimerkkiä sallittujen kohteiden luetteloista: liian tiukka, kohtuullinen ja liian löysä.</p>
 <pre><code>TIUKKA, liian rajoitettu:
 - CLI: vain ls
 - Tiedostot: saa vain lukea kansiota /reports/, ei saa kirjoittaa
@@ -472,13 +472,13 @@ LIIAN LÖYSÄ:
 <ul>
 <li>Mikä näistä on turvallisin?</li>
 <li>Mikä näistä on käytännössä hyödyllisin?</li>
-<li>Miksi liian tiukka whitelist voi estää agenttia tekemästä työtään?</li>
-<li>Miksi liian löysä whitelist on vaarallinen?</li>
+<li>Miksi liian tiukka sallittujen kohteiden luettelo voi estää agenttia tekemästä työtään?</li>
+<li>Miksi liian löysä sallittujen kohteiden luettelo on vaarallinen?</li>
 </ul>
 <p><strong>Esimerkki opetukseen</strong></p>
 <p>Kysy opiskelijoilta, mitä tapahtuisi, jos analytiikka-agentti saisi lukea dataa mutta ei kirjoittaa raporttia. Sen jälkeen kysy, mitä tapahtuisi, jos sama agentti saisi poistaa kaikki tiedostot. Näin opiskelijat näkevät eron liian tiukan ja liian löysän oikeusmallin välillä.</p>
 <h3>Ryhmätyö</h3>
-<p>Jaa opiskelijat pienryhmiin. Ryhmät suunnittelevat whitelistin yhdelle tai useammalle seuraavista agenttityypeistä:</p>
+<p>Jaa opiskelijat pienryhmiin. Ryhmät suunnittelevat sallittujen kohteiden luettelon yhdelle tai useammalle seuraavista agenttityypeistä:</p>
 <ol>
 <li><strong>Asiakastukiagentti:</strong> auttaa asiakkaita yleisissä kysymyksissä ja hakee tietoa ohjedokumenteista.</li>
 <li><strong>Analytiikka-agentti:</strong> lukee dataa, ajaa analyysin ja tuottaa raportin.</li>
@@ -536,18 +536,18 @@ LIIAN LÖYSÄ:
 </tbody>
 </table>
 <p><strong>Esitys ja keskustelu:</strong></p>
-<p>Ryhmät esittelevät whitelistinsä. Vertailkaa ratkaisuja yhdessä.</p>
+<p>Ryhmät esittelevät sallittujen kohteiden luettelonsa. Vertailkaa ratkaisuja yhdessä.</p>
 <p>Keskustelukysymyksiä:</p>
 <ul>
 <li>Miksi eri agenteilla on erilaiset oikeudet?</li>
 <li>Mikä oikeus on välttämätön agentin tehtävän kannalta?</li>
 <li>Mikä oikeus olisi liian suuri riski?</li>
-<li>Miten whitelist suojaa käyttäjää, organisaatiota ja järjestelmää?</li>
+<li>Miten sallittujen kohteiden luettelo suojaa käyttäjää, organisaatiota ja järjestelmää?</li>
 </ul>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat ymmärtävät, että whitelist määrittää agentin sallitut toiminnot.</li>
-<li>Opiskelijat osaavat erottaa liian tiukan, sopivan ja liian löysän whitelistin.</li>
+<li>Opiskelijat ymmärtävät, että sallittujen kohteiden luettelo määrittää agentin sallitut toiminnot.</li>
+<li>Opiskelijat osaavat erottaa liian tiukan, sopivan ja liian löysän sallittujen kohteiden luettelon.</li>
 <li>Opiskelijat ymmärtävät, että agentille annetaan vain ne oikeudet, joita se oikeasti tarvitsee.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Orkestrointi — järjestys on kriittinen noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
@@ -661,7 +661,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <ol>
 <li><strong>Miten riski syntyy?</strong> Mitä agentti tekee väärin tai liian vapaasti?</li>
 <li><strong>Mitä haittaa se aiheuttaa?</strong> Kenelle syntyy vahinkoa ja millaista?</li>
-<li><strong>Miten riski olisi voitu estää?</strong> Mitä whitelist, rajoitus, seuranta tai ihmisen hyväksyntä olisi tarvittu?</li>
+<li><strong>Miten riski olisi voitu estää?</strong> Millainen sallittujen kohteiden luettelo tai muu rajoitus, seuranta tai ihmisen hyväksyntä olisi tarvittu?</li>
 </ol>
 <table>
 <thead>
@@ -686,7 +686,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <p><strong>Opettajan tarkentavia kysymyksiä:</strong></p>
 <ul>
 <li>Mikä olisi pahin mahdollinen seuraus?</li>
-<li>Olisiko riski estettävissä pelkällä whitelistillä?</li>
+<li>Olisiko riski estettävissä pelkällä sallittujen kohteiden luettelolla?</li>
 <li>Tarvitaanko lokitusta tai jäljitettävyyttä?</li>
 <li>Missä kohdassa ihmisen pitäisi hyväksyä toiminto?</li>
 <li>Miten käyttäjälle kerrotaan, mitä agentti aikoo tehdä?</li>
@@ -696,7 +696,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <ul>
 <li>Opiskelijat ymmärtävät, että agentin työkalut tuovat sekä hyötyjä että riskejä.</li>
 <li>Opiskelijat osaavat analysoida riskin syntymisen, haitan ja ehkäisyn.</li>
-<li>Opiskelijat ymmärtävät whitelistien, rajoitusten, seurannan ja ihmisen hyväksynnän merkityksen.</li>
+<li>Opiskelijat ymmärtävät sallittujen kohteiden luetteloiden, rajoitusten, seurannan ja ihmisen hyväksynnän merkityksen.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4: Oikea työkalu oikeaan tehtävään noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Aktiviteetin tavoitteena on opettaa opiskelijoille, että agentille ei pidä antaa kaikkia mahdollisia työkaluja, vaan vain tehtävän kannalta tarpeelliset työkalut. Työkalujen valinta perustuu tehtävään, riskeihin ja tarvittavaan tietoon.</p>
@@ -769,8 +769,8 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <li>Opiskelijat osaavat perustella, miksi jokin työkalu sallitaan ja jokin toinen kielletään.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Herättävät keskustelukysymykset</h2></div><div class="task-card-body">
 <ul>
-<li><strong>Mitä tapahtuu, jos whitelist on liian tiukka?</strong></li>
-<li><strong>Mitä tapahtuu, jos whitelist on liian löysä?</strong></li>
+<li><strong>Mitä tapahtuu, jos sallittujen kohteiden luettelo on liian tiukka?</strong></li>
+<li><strong>Mitä tapahtuu, jos sallittujen kohteiden luettelo on liian löysä?</strong></li>
 <li><strong>Voiko agentti tehdä vahinkoa pelkällä verkkohakulla?</strong></li>
 <li><strong>Mitä tapahtuu, jos agentti kutsuu työkalut väärässä järjestyksessä?</strong></li>
 <li><strong>Milloin agentin pitää pyytää ihmiseltä lupa ennen työkalun käyttöä?</strong></li>
@@ -779,7 +779,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 </div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
 <p>Opettaja arvioi opiskelijoiden kykyä:</p>
 <ul>
-<li>selittää, mitä <strong>whitelist</strong> tarkoittaa agentin turvallisuudessa,</li>
+<li>selittää, mitä <strong>sallittujen kohteiden luettelo</strong> tarkoittaa agentin turvallisuudessa,</li>
 <li>suunnitella agentille sopivia sallittuja ja kiellettyjä toimintoja,</li>
 <li>kuvata, miksi työkalujen käyttöjärjestys eli <strong>orkestrointi</strong> on tärkeää,</li>
 <li>tunnistaa agentin työkaluihin liittyviä riskejä,</li>
@@ -964,7 +964,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <text x="652" y="300" font-size="16" fill="#3A4253">salasanoja — vakava riski.</text>
 <rect x="74" y="372" width="812" height="86" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(100,396)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linejoin="round"><path d="M14 2 L25 6 V14 c0 7 -5 11 -11 13 c-6 -2 -11 -6 -11 -13 V6 Z"/><path d="M9 14 l4 4 l7 -8" stroke-linecap="round"/></g>
-<text x="146" y="406" font-size="19" font-weight="700" fill="#247A52">Suojaa whitelist-mallilla</text>
+<text x="146" y="406" font-size="19" font-weight="700" fill="#247A52">Suojaa sallittujen luettelolla</text>
 <text x="146" y="434" font-size="17" fill="#3A4253">Salli vain viralliset lähteet, kiellä yksityiset termit ja rajaa hakujen määrä.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 14</text>
 </svg></div>
@@ -1006,7 +1006,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Neljä tapaa rajata komentorivi</text>
 <rect x="74" y="146" width="406" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="190" font-size="26" font-weight="800" fill="#008799">1</text>
-<text x="132" y="190" font-size="21" font-weight="700" fill="#1B2336">Whitelist</text>
+<text x="132" y="190" font-size="21" font-weight="700" fill="#1B2336">Sallittujen luettelo</text>
 <text x="98" y="226" font-size="16" fill="#5A6478">Vain sallitut komennot:</text>
 <text x="98" y="252" font-size="15" fill="#247A52" font-family="ui-monospace,monospace">ls · mkdir · cp</text>
 <text x="98" y="278" font-size="15" fill="#A53227" font-family="ui-monospace,monospace">EI: rm · shutdown · chmod</text>
@@ -1142,7 +1142,7 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <text x="74" y="412" font-size="17" fill="#5A6478">Avoin standardi: sama liitin joka työkaluun — myös n8n:ssä on MCP-solmut.</text>
 <rect x="74" y="434" width="812" height="56" rx="10" fill="#FFF7E6" stroke="#C79100" stroke-width="2"/>
 <path d="M104 476 L116 454 L128 476 Z" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linejoin="round"/><line x1="116" y1="462" x2="116" y2="469" stroke="#C79100" stroke-width="2.4" stroke-linecap="round"/><circle cx="116" cy="473" r="1.3" fill="#C79100"/>
-<text x="144" y="468" font-size="17" fill="#8A6400">Liitin ei poista rajauksia — oikeudet, whitelistit ja lokitus tarvitaan silti.</text>
+<text x="144" y="468" font-size="17" fill="#8A6400">Liitin ei poista rajauksia — oikeudet, sallitut toiminnot ja lokitus tarvitaan silti.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 14</text>
 </svg></div>
 
@@ -1161,13 +1161,13 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <rect x="349" y="174" width="262" height="180" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(373,196)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M2 13 H24 M13 2 a16 16 0 0 1 0 22 a16 16 0 0 1 0 -22"/></g>
 <text x="373" y="258" font-size="21" font-weight="700" fill="#1B2336">Verkkohaku</text>
-<text x="373" y="294" font-size="16" fill="#5A6478">Whitelist sallituille</text>
+<text x="373" y="294" font-size="16" fill="#5A6478">Sallitut lähteet</text>
 <text x="373" y="318" font-size="16" fill="#5A6478">lähteille, hakurajat,</text>
 <text x="373" y="342" font-size="16" fill="#5A6478">termikiellot.</text>
 <rect x="624" y="174" width="262" height="180" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(648,198)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="26" height="20" rx="3"/><path d="M8 12 L13 16 L8 20 M16 20 H23"/></g>
 <text x="648" y="258" font-size="21" font-weight="700" fill="#1B2336">Komentorivi</text>
-<text x="648" y="294" font-size="16" fill="#5A6478">Whitelist, hiekka-</text>
+<text x="648" y="294" font-size="16" fill="#5A6478">Sallitut komennot, hiekka-</text>
 <text x="648" y="318" font-size="16" fill="#5A6478">laatikko ja ihmisen</text>
 <text x="648" y="342" font-size="16" fill="#5A6478">hyväksyntä.</text>
 <rect x="74" y="376" width="812" height="84" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>

@@ -16,7 +16,7 @@ Selitä opiskelijoille:
 
 > Konteksti-ikkuna on kuin muistilaatikko. Siihen mahtuu vain tietty määrä keskustelua, ohjeita ja tietoa. Kun keskustelu kasvaa liian pitkäksi, vanhinta tietoa voi jäädä pois.
 
-**Demo:**
+**Esittely:**
 
 1. Näytä opiskelijoille pitkä asiakaskeskustelu.
 2. Merkitse taululle tai diaan, mitä agentti näkisi eri kokoisilla konteksti-ikkunoilla:

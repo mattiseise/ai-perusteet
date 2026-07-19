@@ -31,7 +31,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, miten **kielimalli*
 
 ### Ydinviesti: kielimalli ennustaa seuraavaa tokenia
 
-Kielimallin toimintaa kannattaa opettaa ensin käytännön kautta. Pyydä opiskelijoita jatkamaan lauseita, kuten ”Kissa istui...” tai ”Salasana pitää vaihtaa, jos...”. Opiskelijat huomaavat nopeasti, että he ennustavat seuraavia sanoja aiemman kielenkäytön ja tilanteen perusteella. Kielimalli tekee jotakin samankaltaista, mutta matemaattisesti ja valtavan datamäärän pohjalta.
+Kielimallin toimintaa kannattaa havainnollistaa ensin käytännön esimerkillä. Pyydä opiskelijoita jatkamaan lauseita, kuten ”Kissa istui...” tai ”Salasana pitää vaihtaa, jos...”. Opiskelijat huomaavat nopeasti, että he ennustavat seuraavia sanoja aiemman kielenkäytön ja tilanteen perusteella. Kielimalli tekee jotakin samankaltaista, mutta matemaattisesti ja valtavan datamäärän pohjalta.
 
 > **Kielimalli ei hae valmista vastausta. Se muodostaa todennäköisen jatkon.**
 
@@ -139,7 +139,7 @@ Vastaus: Tätä ei voi verrata suoraan. Ihmisen aivot eivät ole kielimallin kal
 
 ### TT-A: Seuraavan tokenin ennustaminen
 
-**Tavoite:** Opiskelija ymmärtää next-token prediction -periaatteen käytännön esimerkin kautta.
+**Tavoite:** Opiskelija ymmärtää seuraavan tokenin ennustamisen periaatteen käytännön esimerkin avulla.
 
 **Tehtävä:** Kirjoita taululle lauseen alkuja ja pyydä opiskelijoita ehdottamaan seuraavaa sanaa. Keskustelkaa, miksi tietyt sanat tuntuvat todennäköisiltä.
 
@@ -261,7 +261,7 @@ Tallennettava tuotos on **syöte–kolme tulosta–mekanismiselitys**. Pakolline
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija ajaa saman promptin kolme kertaa ja selittää tulosten vaihtelua tokenien ennustamisella. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

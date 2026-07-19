@@ -1,6 +1,6 @@
-# Sanasto – oppitunti 25: Human-in-the-loop
+# Sanasto – oppitunti 25: Ihmisen osallistuminen päätöksentekoon
 
-## Human-in-the-loop (ihminen silmukassa)
+## Ihmisen osallistuminen päätöksentekoon (ihminen silmukassa)
 
 Automaatio, jossa ihminen hyväksyy kriittiset päätökset. Ei täysin automatisoitua, ei käsityötä — hybridi.
 
@@ -12,7 +12,7 @@ Piste prosessissa, jossa agentti pysähtyy ja odottaa ihmisen vastausta. Selkeä
 
 Tehtävän siirtäminen toiselle hyväksyjälle, kun ensimmäinen ei voi vastata.
 
-## Timeout
+## Aikaraja
 
 Aika, jossa hyväksyjällä on vastata. Jos vastaus ei tule, mitä tehdään? (oletusarvo, eskalointi, tai odotetaan)
 

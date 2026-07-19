@@ -48,7 +48,7 @@ Alla on saman asian eri versioita yhdestä skenaariosta: **Skenaario 1 — asiak
 
 > Asiakaspalvelijat laittoivat ChatGPT:hen asiakkaiden tietoja, vaikka niin ei olisi pitänyt tehdä. Tekoäly tallentaa kaiken, mitä sille annetaan, ja siksi tiedot vuotivat. Tämä on aika selkeä juttu, eikä siinä ole paljon mietittävää.
 
-**Mikä mättää:** Kieli on puhekielistä. Väite ”tekoäly tallentaa kaiken” on epätarkka, koska se sekoittaa kontekstimuistin ja koulutusdatan. Käsitteitä ei käytetä täsmällisesti. Lopetus heikentää lausunnon asiantuntevuutta.
+**Mikä tekstissä on ongelmana:** Kieli on puhekielistä. Väite ”tekoäly tallentaa kaiken” on epätarkka, koska se sekoittaa kontekstimuistin ja koulutusdatan. Käsitteitä ei käytetä täsmällisesti. Lopetus heikentää lausunnon asiantuntevuutta.
 
 ### Miksi se tapahtui? — Vahva versio
 
@@ -60,7 +60,7 @@ Alla on saman asian eri versioita yhdestä skenaariosta: **Skenaario 1 — asiak
 
 > Pitäisi kieltää ChatGPT:n käyttö ja antaa koulutusta. Sitten asia on hoidettu.
 
-**Mikä mättää:** Teksti jää pinnalliseksi. Siinä ei ole selkeää toimenpidesuunnitelmaa, aikataulua eikä vastuuhenkilöä.
+**Mikä tekstissä on ongelmana:** Teksti jää pinnalliseksi. Siinä ei ole selkeää toimenpidesuunnitelmaa, aikataulua eikä vastuuhenkilöä.
 
 ### Miten tilanne pitäisi hoitaa? — Vahva versio
 

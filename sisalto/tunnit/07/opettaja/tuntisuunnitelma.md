@@ -77,7 +77,7 @@ Hallusinaatioita syntyy erityisesti silloin, kun malli kohtaa aiheita, joissa va
 
 > **Itsevarmuus ei ole todiste oikeellisuudesta.** Malli voi kuulostaa varmalta myös silloin, kun se on väärässä.
 
-### Totuuskone vs. sanojen ennustaja
+### Totuuskone vai sanojen ennustaja?
 
 Oppitunnin tärkein käsitteellinen ero on **totuuskoneen** ja **sanojen ennustajan** ero. Tämä ero auttaa opiskelijaa muuttamaan tapaa, jolla hän käyttää tekoälyä.
 
@@ -265,7 +265,7 @@ Opiskelijat, jotka ovat tehneet kaikki kolme todistusaineistoa, ovat paremmassa 
 | --- | --- | --- |
 | Itseopiskeluosa | 30–40 min | Oppikirja ja muistiinpanot |
 | Harjoitus 1: sama prompti, eri mallit | 15 min | Selaimessa avoinna olevat tekoälymallit |
-| Harjoitus 2: hallusinaatioiden metsästys | 20 min | Opettajan valitsemat case-esimerkit |
+| Harjoitus 2: hallusinaatioiden metsästys | 20 min | Opettajan valitsemat tapausesimerkit |
 | Harjoitus 3: verifiointiprosessi | 25 min | Valkokangas, taulukko tai yhteinen dokumentti |
 | Yhteenveto | 10 min | Yhteinen keskustelu |
 | **Yhteensä** | **Noin 100 min** | — |
@@ -307,7 +307,7 @@ Tallennettava tuotos on **väite–lähde–tulos–korjaus-loki**. Pakollinen y
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija tarkistaa kolme täsmällistä väitettä luotettavista lähteistä ja korjaa virheet. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

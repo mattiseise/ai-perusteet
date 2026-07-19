@@ -123,7 +123,7 @@ Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komp
    Selitä: “Jotain tapahtuu ulkomaailmassa, esimerkiksi viesti saapuu. Syötekäsittelijä vastaanottaa sen ja tarkistaa, että viesti on käsiteltävissä.”
 2. **Päättelijä:** Osoita OpenAI-solmua ja sen ohjeistusta.
 
-   Selitä: “Tässä agentti tekee päättelyä. Se analysoi viestin, hyödyntää system promptia ja muodostaa vastauksen tai päätösehdotuksen.”
+   Selitä: “Tässä agentti tekee päättelyä. Se analysoi viestin, hyödyntää järjestelmäpromptia ja muodostaa vastauksen tai päätösehdotuksen.”
 3. **Työkalujen suorittaja:** Osoita Discord-, sähköposti- tai muuta lähetyssolmua.
 
    Selitä: “Tässä agentti toimii. Se ei vain ajattele, vaan tekee konkreettisen toimenpiteen.”

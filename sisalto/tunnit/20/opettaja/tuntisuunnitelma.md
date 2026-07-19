@@ -80,7 +80,7 @@ Päätöspuu auttaa opiskelijaa tekemään valinnan systemaattisesti. Tärkeää
 
 **Esimerkki opetukseen**
 
-Kysy opiskelijoilta: ”Jos työnkulussa on yksi AI-solmu, joka vastaa viestiin, onko se agentti vai tekoälyä käyttävä työnkulku?”
+Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa viestiin, onko se agentti vai tekoälyä käyttävä työnkulku?”
 
 ### Väärinkäsitys 3: ”Säännöt ovat huonoja, koska agentti on joustavampi.”
 
@@ -190,7 +190,7 @@ Tallennettava tuotos on **perusteltu päätösmuistio**. Pakollinen ydintuotos p
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija rakentaa yhdelle tehtävälle päätöspuun promptin, työnkulun ja agentin välille. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

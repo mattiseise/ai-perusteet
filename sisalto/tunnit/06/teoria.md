@@ -4,7 +4,7 @@
 
 Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain teknisen alan osaajan työssä.
 
-Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan **multimodaalista kontekstia** eli yhdistämään tekstiä, kuvia, lokeja ja koodia debuggauksen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.
+Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan **multimodaalista kontekstia** eli yhdistämään tekstiä, kuvia, lokeja ja koodia virheiden selvittämisen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.
 
 ## Mitä multimodaalisuus on?
 
@@ -214,14 +214,14 @@ Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Vastuulli
 
 | Tilanne | Käytä kuvakaappausta? | Käytä tekstiä? | Käytä lokeja? |
 | --- | --- | --- | --- |
-| Käyttöliittymän bugi | ✅ Kyllä | Ei välttämättä, jos kuvakaappaus kertoo olennaisen | Ei yleensä |
-| Virheilmoitus näytöllä | ✅ Kyllä | Kyllä, lyhyt selitys auttaa | Ehkä, jos ongelman syy ei näy ruudulla |
-| Sovellus kaatuu | ❓ Kyllä, jos virhe näkyy ruudulla | ✅ Kyllä | ✅ Kyllä, usein kriittistä |
-| Koodin virhe | Ei yleensä | ✅ Kyllä, koodi kannattaa antaa tekstinä | Ehkä, jos kyse on ajonaikaisesta virheestä |
-| Verkko-ongelma | ❓ Ehkä | Kyllä, kuvaile mitä yritit tehdä | ✅ Kyllä, verkkolokit ovat usein hyödyllisiä |
-| Hidas sovellus | Kyllä, jos suorituskykytiedot näkyvät ruudulla | Kyllä, kuvaile tilanne ja ajankohta | ✅ Kyllä, suorituskykylokit ovat hyödyllisiä |
-| Lomake ei lähde verkkosivulla | ✅ Kyllä, jos virhe näkyy ruudulla | ✅ Kyllä, kerro mitä yritit tehdä | Ei yleensä |
-| Laite tai sovellus ei käynnisty | ✅ Kyllä, jos näytöllä näkyy viesti | ✅ Kyllä, kuvaile tilanne | Ei yleensä |
+| Käyttöliittymän bugi | Kyllä | Ei välttämättä, jos kuvakaappaus kertoo olennaisen | Ei yleensä |
+| Virheilmoitus näytöllä | Kyllä | Kyllä, lyhyt selitys auttaa | Ehkä, jos ongelman syy ei näy ruudulla |
+| Sovellus kaatuu | Kyllä, jos virhe näkyy ruudulla | Kyllä | Kyllä, usein kriittistä |
+| Koodin virhe | Ei yleensä | Kyllä, koodi kannattaa antaa tekstinä | Ehkä, jos kyse on ajonaikaisesta virheestä |
+| Verkko-ongelma | Ehkä | Kyllä, kuvaile, mitä yritit tehdä | Kyllä, verkkolokit ovat usein hyödyllisiä |
+| Hidas sovellus | Kyllä, jos suorituskykytiedot näkyvät ruudulla | Kyllä, kuvaile tilanne ja ajankohta | Kyllä, suorituskykylokit ovat hyödyllisiä |
+| Lomake ei lähde verkkosivulla | Kyllä, jos virhe näkyy ruudulla | Kyllä, kerro, mitä yritit tehdä | Ei yleensä |
+| Laite tai sovellus ei käynnisty | Kyllä, jos näytöllä näkyy viesti | Kyllä, kuvaile tilanne | Ei yleensä |
 
 ## Multimodaalisten mallien rajoitukset
 

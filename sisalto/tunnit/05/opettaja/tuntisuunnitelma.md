@@ -2,7 +2,7 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
-Tämän lohkon tavoitteena on, että opiskelija ymmärtää **konteksti-ikkunan** teknisen rajoituksen ja osaa hallita sitä pitkillä tekoälykeskusteluilla ja monivaiheisissa IT-projekteissa. Oppitunnin ydin on, että tekoäly ei muista kaikkea rajattomasti. Kun keskustelu, lokit, koodi tai dokumentaatio kasvavat liian pitkiksi, vanha tieto voi pudota pois mallin näkyvistä.
+Tämän lohkon tavoitteena on, että opiskelija ymmärtää **konteksti-ikkunan** teknisen rajoituksen ja osaa hallita sitä pitkissä tekoälykeskusteluissa ja monivaiheisissa IT-projekteissa. Oppitunnin ydin on, että tekoäly ei muista kaikkea rajattomasti. Kun keskustelu, lokit, koodi tai dokumentaatio kasvavat liian pitkiksi, vanha tieto voi pudota pois mallin näkyvistä.
 
 ### Muistaa ja ymmärtää
 
@@ -31,7 +31,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **konteksti-ikkunan*
 
 ### Ydinviesti: tekoälyn muisti on rajallinen työtila
 
-Opiskelijoille kannattaa selittää konteksti-ikkuna rajallisena työtilana. Tekoälyllä on käytössään vain se tieto, joka mahtuu sen hetkiseen konteksti-ikkunaan. Jos keskustelu jatkuu pitkään tai mukaan lisätään paljon koodia, lokeja ja dokumentaatiota, osa vanhemmasta tiedosta voi pudota pois.
+Opiskelijoille kannattaa selittää konteksti-ikkuna rajallisena työtilana. Tekoälyllä on käytössään vain se tieto, joka mahtuu senhetkiseen konteksti-ikkunaan. Jos keskustelu jatkuu pitkään tai mukaan lisätään paljon koodia, lokeja ja dokumentaatiota, osa vanhemmasta tiedosta voi pudota pois.
 
 > **Tekoälyn konteksti-ikkuna on kuin rajallinen muistikirja. Kun sivut täyttyvät, vanhimmat merkinnät eivät enää ole mallin näkyvissä.**
 
@@ -327,7 +327,7 @@ Tallennettava tuotos on **katoamis- ja palautusloki**. Pakollinen ydintuotos pid
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
 | 25–65 min | Perustuotos | Oppija dokumentoi keskustelun tiedon katoamisen ja palauttaa olennaisen tiedon tiivistämällä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti
 

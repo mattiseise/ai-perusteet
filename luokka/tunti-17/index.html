@@ -153,7 +153,7 @@
 <p><strong>Käyttääkö botti tietopohjaa?</strong></p>
 <p>Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset yleiseltä jargonilta?</p>
 <p><strong>Yrittääkö botti tehdä työn käyttäjän puolesta?</strong></p>
-<p>Jos pyydät sitä tekemään koko hommaa puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?</p>
+<p>Jos pyydät sitä tekemään koko tehtävää puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?</p>
 <h2>Korjauslista tunnille 18</h2>
 <p>Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa kaikkea tällä tunnilla, sillä tunti 18 on viimeistelyä varten. Esimerkkejä:</p>
 <ul>
@@ -240,20 +240,20 @@
 <p><strong>Tietopohja</strong> — Kokoelma dokumentteja, joista botti ammentaa oman aiheesi tietoa. Hyvä botti nojaa kuratoituun tietopohjaan, ei pelkkiin yleisiin oletuksiin.</p>
 <p><strong>Iterointi</strong> — Botin parantaminen testaamalla, korjaamalla ja testaamalla uudelleen. Hyvä botti syntyy iteroinnista, ei heti ensimmäisellä yrityksellä.</p>
 <h2>Custom GPT:t ja botit</h2>
-<p><strong>System prompt</strong> (järjestelmäprompti) — Pitkä, yksityiskohtainen ohjeistus, joka kerrotaan kielimallille botin alussa. Se määrittelee, kuka botti on, mitä se tekee ja miten se käyttäytyy. System prompt vaikuttaa kaikkiin botin vastauksiin.</p>
-<p><strong>Custom GPT</strong> — Mukautettu ChatGPT-versio, joka on konfiguroitu tiettyyn tarkoitukseen. Se voi sisältää system promptin, ohjeita, tiedostoja ja integraatioita.</p>
-<p><strong>Persona</strong> — Botin rooli tai persoona. Esimerkiksi: "Olet Python-tutori" tai "Olet asiakaspalvelun edustaja." Persona tekee botista uskottavan ja johdonmukaisen.</p>
-<p><strong>Context</strong> (konteksti) — Taustatieto, jonka botti käyttää ymmärtääkseen ja vastatakseen kysymyksiin. Esimerkiksi edellinen keskustelu tai dokumentit, jotka on syötetty bottiin.</p>
+<p><strong>Järjestelmäprompti</strong> — Botin toimintaa ohjaava teksti, joka määrittää botin roolin, tehtävän, toimintatavan ja rajat. Se vaikuttaa kaikkiin botin vastauksiin.</p>
+<p><strong>Räätälöity GPT (Custom GPT)</strong> — Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Se voi sisältää järjestelmäpromptin, ohjeita, tiedostoja ja integraatioita.</p>
+<p><strong>Persoona</strong> — Botille määritetty viestintätapa ja sävy. Persoona voi olla esimerkiksi ystävällinen ja kärsivällinen tai suora ja asiallinen. Se tukee botin roolia, mutta ei korvaa tehtävää tai asiantuntemusta.</p>
+<p><strong>Konteksti</strong> — Taustatieto, jonka perusteella botti tulkitsee pyyntöä ja muodostaa vastauksen. Konteksti voi sisältää aiemman keskustelun tai botille annetut dokumentit.</p>
 <p><strong>Iteraatio</strong> — Prosessi, jossa testataan, parannetaan, testataan uudelleen ja parannetaan jälleen. Hyödylliset botit syntyvät iteraation kautta, ei heti täydellisesti ensimmäisellä kerralla.</p>
 <h2>Testaus</h2>
 <p><strong>Positiivinen testaus</strong> — Testataan asioita, joiden pitäisi toimia. Nähdään, vastaako botti oikein normaaleissa tilanteissa.</p>
 <p><strong>Negatiivinen testaus</strong> — Testataan asioita, joiden ei pitäisi toimia. Nähdään, kieltäytyykö botti asianmukaisesti ja suojaauko se itseään.</p>
-<p><strong>Reunatapaus</strong> (edge case) — Poikkeava tai odottamaton tilanne. Esimerkiksi: tyhjä syöte, vääränä kielellä kirjoitettu teksti, hyvin pitkä teksti. Reunatapaukset osoittavat, kuinka robust botti on.</p>
-<p><strong>Testidokumentti</strong> — Kirjallinen raportti testistä, joka sisältää: syöte, odotettava tulos, todellinen tulos ja analyysin.</p>
+<p><strong>Reunatapaus</strong> — Poikkeava tai odottamaton tilanne, kuten tyhjä syöte, väärällä kielellä kirjoitettu teksti tai hyvin pitkä teksti. Reunatapausten avulla arvioidaan, kuinka luotettavasti botti toimii poikkeavissa tilanteissa.</p>
+<p><strong>Testidokumentti</strong> — Kirjallinen raportti, joka sisältää syötteen, odotetun tuloksen, todellisen tuloksen ja analyysin.</p>
 <h2>Viestintä ja vuorovaikutus</h2>
 <p><strong>Vuorovaikutuksellinen</strong> — Kaksisuuntainen: käyttäjä kysyy, botti vastaa, käyttäjä kysyy lisää. Se ei ole yhdensuuntaista tiedon jakamista.</p>
-<p><strong>Täsmällisyys</strong> — Vastauksen oikeellisuus ja relevanssi. Botti, joka vastaa epätäsmällisesti, on hyödytön.</p>
-<p><strong>Muistinvaraus</strong> — Botin kyky muistaa aiempia vastauksia samassa keskustelussa. Hyvin suunniteltu botti ei kysy samaa asiaa kahdesti.</p>
+<p><strong>Täsmällisyys</strong> — Vastauksen oikeellisuus ja osuvuus suhteessa käyttäjän pyyntöön.</p>
+<p><strong>Keskustelukonteksti</strong> — Aiemmat viestit, joita botti voi hyödyntää saman keskustelun aikana. Hyvin suunniteltu botti ei kysy uudelleen jo annettua tietoa.</p>
 <p><strong>Validointi</strong> — Tarkistaminen, että tieto on oikein ennen sen käyttämistä. Esimerkiksi: "Ymmärsinkö oikein: treenaat kolmena päivänä viikossa ja tavoitteesi on parantaa kuntoa?"</p>
 <h2>Dokumentointi</h2>
 <p><strong>Dokumentaatio</strong> — Kirjallinen tai visuaalinen kuvaus siitä, miten jotain tehdään tai miten jokin toimii. Hyvä dokumentaatio auttaa muita ymmärtämään ja jatkamaan työtä.</p>
@@ -262,9 +262,9 @@
 <h2>Johtaminen ja rakentaminen</h2>
 <p><strong>Mentori</strong> — Kokenut henkilö, joka ohjaa ja opastaa muita. Apuri-botti toimii mentorina, joka esittää oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin.</p>
 <p><strong>Kalibrointi</strong> — Säätäminen oikealle tasolle. Esimerkiksi: ovatko botin kysymykset liian yksinkertaiset vai liian monimutkaiset? Kalibrointi paranee testaamalla.</p>
-<p><strong>Feedback</strong> — Palaute. Käyttäjän mielipide siitä, kuinka hyvin botti toimi. Feedback auttaa parantamaan bottia.</p>
+<p><strong>Palaute</strong> — Käyttäjän arvio siitä, kuinka hyvin botti toimi. Palautetta käytetään botin kehittämiseen.</p>
 <hr />
-<p>Muista, että nämä käsitteet eivät ole isoloituja — ne linkittyvät toisiinsa. Hyvä system prompt johtaa hyödylliseen bottiin, jota voidaan testata, dokumentoida ja parantaa iteraation kautta.</p>
+<p>Käsitteet liittyvät toisiinsa. Hyvä järjestelmäprompti tukee hyödyllistä bottia, jota testataan, dokumentoidaan ja parannetaan iteratiivisesti.</p>
 <hr /></div><div id="panel-lesson-17-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-17-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Oma apuri-botti syntyy</title>
 <defs><pattern id="l17g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g1)"/>
