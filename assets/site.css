@@ -1209,6 +1209,10 @@ body{
   }
   .ai-demo__stage>*{max-inline-size:100%;margin-inline:auto;flex-shrink:1}
   .ai-demo__cap{font-size:13px}
+  /* JS-skaalausfallback (fitAiDemos): reflowatut interaktiivit ohitetaan JS:ssä,
+     staattisilla skaalaus kattaa 431–680 px -välin; ≤430 px reflow-kortti korvaa sen */
+  .ai-demo__stage>.ai-demo__fit{max-inline-size:none;flex-shrink:0}
+  .ai-demo.is-fitted .ai-demo__stage{overflow:hidden;justify-content:center!important}
   .panel table{display:block;max-width:100%;overflow-x:auto}
 }
 @media (max-width:430px){

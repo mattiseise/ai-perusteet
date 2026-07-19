@@ -141,6 +141,54 @@ function copyShare(btn){var url=btn.getAttribute('data-url');var abs=location.or
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(abs).then(ok,function(){prompt('Kopioi linkki:',abs);});}
   else{prompt('Kopioi linkki:',abs);}}
 
+// ---- Skaalaa animoidut figuurit mahtumaan kapealle näytölle (ei leikkausta/vieritystä) ----
+// Fallback reflow-järjestelmän rinnalla: interaktiivisilla demoilla (data-demo-kind=
+// "interactive") on oma aito mobiilitaitto ja ne ohitetaan; staattisilla skaalaus
+// kattaa 431-680 px -välin, ja <=430 px reflow-kortti (.ai-demo__mobile-model, joka
+// jätetään stagen suoraksi lapseksi) korvaa skaalatun sisällön kokonaan.
+function fitAiDemos(){
+  var stages=document.querySelectorAll('.ai-demo__stage');
+  for(var i=0;i<stages.length;i++){(function(st){
+    var fig=st.closest?st.closest('.ai-demo'):null;
+    if(fig&&fig.getAttribute('data-demo-kind')==='interactive')return;
+    var fit=st.querySelector(':scope > .ai-demo__fit');
+    if(!fit){
+      var cs=st.style;
+      fit=document.createElement('div'); fit.className='ai-demo__fit';
+      fit.style.cssText='display:'+(cs.display||'flex')+';align-items:'+(cs.alignItems||'center')
+        +';justify-content:'+(cs.justifyContent||'center')+';gap:'+(cs.gap||'0')
+        +';padding:'+(cs.padding||'0')+';flex-shrink:0;box-sizing:border-box';
+      var kids=[],c;
+      for(c=st.firstChild;c;c=c.nextSibling){kids.push(c);}
+      for(var j=0;j<kids.length;j++){
+        c=kids[j];
+        if(c.nodeType===1&&c.classList&&c.classList.contains('ai-demo__mobile-model'))continue;
+        fit.appendChild(c);
+      }
+      st.insertBefore(fit,st.firstChild);
+      st.style.padding='0';
+      if(parseFloat(cs.height))st.dataset.h0=parseFloat(cs.height);
+    }
+    if(!(+st.dataset.natw>0)){
+      var fr=fit.getBoundingClientRect();
+      if(fr.width<10)return; // piilossa (<=430 px reflow-tila) — mitataan kun tulee nakyviin
+      st.dataset.natw=Math.round(fr.width); st.dataset.nath=Math.round(fr.height);
+      if(!st.dataset.h0)st.dataset.h0=Math.round(fr.height);
+    }
+    var natW=+st.dataset.natw, natH=+st.dataset.nath, h0=+st.dataset.h0||natH, avail=st.clientWidth;
+    var s=avail>0?Math.min(1, avail/natW):1;
+    if(s<0.999){
+      fit.style.transformOrigin='center center';
+      fit.style.transform='scale('+s+')';
+      st.style.height=Math.ceil(Math.max(natH,h0)*s)+'px';
+    }else{
+      fit.style.transform='none'; st.style.height=h0+'px';
+    }
+    if(fig)fig.classList.add('is-fitted');
+  })(stages[i]);}
+}
+var __fitT; function fitAiDemosDebounced(){clearTimeout(__fitT);__fitT=setTimeout(fitAiDemos,120);}
+
 // ---- Init ----
 function ciInit(){
   initConsent();
@@ -158,5 +206,8 @@ function ciInit(){
     if(window.CI.ptasks)initPractice(window.CI.lid,window.CI.ptasks);
     runMermaid();
   }
+  fitAiDemos();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ciInit);}else{ciInit();}
+window.addEventListener('load',fitAiDemos);
+window.addEventListener('resize',fitAiDemosDebounced);
