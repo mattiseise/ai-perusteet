@@ -8,6 +8,7 @@ lukuaika-apurit rakenneuudistus 2:ta varten.
 import os
 import re
 import json
+from html.parser import HTMLParser
 import markdown as md_lib
 
 MD_EXTENSIONS = ['tables', 'fenced_code', 'nl2br']
@@ -132,10 +133,15 @@ def to_html(text):
         return f'MERMAID_PLACEHOLDER_{idx}'
     text = re.sub(r'```mermaid\s*\n(.*?)```', _stash_mermaid, text, flags=re.DOTALL)
 
-    text = re.sub(r'\*\*Pysähdy hetkeksi:(.*?)\*\*',
-                  r'> **Pysähdy hetkeksi:\1**', text, flags=re.DOTALL)
-    text = re.sub(r'^Pysähdy hetkeksi:(.*?)$',
-                  r'> **Pysähdy hetkeksi:**\1', text, flags=re.MULTILINE)
+    # Muunna vain lainaamattomat, kokonaisella rivillä olevat Pysähdy-kehotukset.
+    # Valmiiksi muodossa ``> **Pysähdy hetkeksi:** ...`` oleva rivi jätetään
+    # koskematta, jotta to_html() on idempotentti eikä synnytä sisäkkäisiä lainauksia.
+    text = re.sub(
+        r'^(?![ \t]*>)[ \t]*\*\*Pysähdy hetkeksi:\*\*[ \t]*(.*?)\s*$',
+        r'> **Pysähdy hetkeksi:** \1', text, flags=re.MULTILINE)
+    text = re.sub(
+        r'^(?![ \t]*>)[ \t]*Pysähdy hetkeksi:[ \t]*(.*?)\s*$',
+        r'> **Pysähdy hetkeksi:** \1', text, flags=re.MULTILINE)
     h = md_lib.markdown(text, extensions=MD_EXTENSIONS)
     h = re.sub(r'<blockquote>\s*<p>', '<blockquote class="pause"><p>', h)
     h = re.sub(r'<p><strong>Jos teet tehtävän yksin',
@@ -246,17 +252,162 @@ def esc_attr(s):
              .replace('"', '&quot;'))
 
 
+# Staattisten konseptikuvioiden puhelinversiot. Jokainen malli säilyttää kyseisen
+# työpöytäkuvion olennaisen suhteen (virta, vertailu, silmukka tai suojakerrokset)
+# luettavana HTML:nä ilman 560 px koordinaatistoa.
+_DEMO_MOBILE_MODELS = {
+    'lesson-01-01': ('compare', ['SÄÄNTÖ: yksi euromääräraja → iso siirto hälyttää, outo pieni siirto pääsee läpi',
+                                 'OPITTU MALLI: useita painotettuja signaaleja → molemmat poikkeamat ylittävät kynnyksen']),
+    'lesson-02-01': ('axes', ['VAAKA: rajattu tehtävä → laaja-alainen väite',
+                              'PYSTY: luokittelu ja generointi → työkaluja käyttävä toiminta',
+                              'Sijoitus kuvaa järjestelmää — ei kehitystasoa']),
+    'lesson-03-01': ('loop', ['Syöte ja tähänastinen teksti', 'Laske seuraavien tokenien todennäköisyydet',
+                              'Valitse tokeni', 'Liitä tekstiin', 'Toista, kunnes vastaus päättyy']),
+    'lesson-04-01': ('compare', ['ILMAN KONTEKSTIA: sama pyyntö → monta mahdollista tulkintaa',
+                                 'ROOLI + TAVOITE + RAJAUS → väärät tulkinnat karsiutuvat → osuvampi vastaus']),
+    'lesson-05-01': ('flow', ['Keskustelu kasvaa', 'Konteksti-ikkuna täyttyy',
+                              'Vanhin tieto putoaa ulos', 'Tiivistä tai anna olennainen tieto uudelleen']),
+    'lesson-06-01': ('flow', ['”Ei toimi” → paljon arvauksia', '+ kuvakaappaus → käyttöliittymä näkyy',
+                              '+ loki ja koodi → virhe rajautuu', 'Vain tarpeellinen, anonymisoitu aineisto']),
+    'lesson-08-01': ('layers', ['Näkyvä AI-vastaus', 'Koulutusdata ja tekijöiden työ',
+                                'Aineiston merkintä- ja ylläpitotyö', 'Energia, vesi ja laitteisto', 'Vastuu käytöstä']),
+    'lesson-10-01': ('compare', ['Pitkä dokumentti → arvioi lähdekäsittely', 'Data-analyysi → arvioi laskenta ja vienti',
+                                 'Organisaation ympäristö → arvioi integraatiot ja tietosuoja', 'Paras työkalu riippuu tehtävästä']),
+    'lesson-11-01': ('compare', ['PILVIPALVELU: syöte lähtee palveluntarjoajalle → tarkista ehdot, sijainti ja aineisto',
+                                 'PAIKALLINEN AJO: syöte pysyy laitteella → vastuu laitteen suojauksesta säilyy']),
+    'lesson-12-01': ('flow', ['Prompti v1', '+ kohderyhmä ja konteksti', '+ lähde ja vaiheet',
+                              '+ haluttu muoto', 'Tallenna testattu kortti promptityönkuluksi']),
+    'lesson-13-01': ('flow', ['AI tekee luonnoksen', 'Ihminen tarkistaa faktat, sopivuuden ja riskit',
+                              'Ihminen muokkaa', 'Valmis tuotos — vastuu ihmisellä']),
+    'lesson-14-01': ('compare', ['SAMA KYSYMYS + yleinen chat → yleinen vastaus',
+                                 'SAMA KYSYMYS + järjestelmäprompti → määritelty rooli, ohjeet ja rajat']),
+    'lesson-15-01': ('loop', ['Positiivinen testi', 'Negatiivinen testi', 'Reunatapaus',
+                              'Havaittu puute → korjaa ohje tai tietopohja', 'Testaa uudelleen → hyväksy vasta kun vaatimukset täyttyvät']),
+    'lesson-16-01': ('flow', ['Valitse yksi media tai työkalukategoria', 'Kirjaa valintaperuste ja syöte',
+                              'Tarkastele tuotosta', 'Tee yksi iterointi', 'Tee vastuullisuustarkistus']),
+    'lesson-17-01': ('flow', ['Promptipankin tyyli', 'Botin tarkoitus ja rajat', 'Hyväksytty tietopohja',
+                              'Yhdistä järjestelmäpromptiksi', 'Aja testi → kirjaa korjaus']),
+    'lesson-19-01': ('compare', ['CHATBOT: kertoo vaiheet tekstinä → työ jää käyttäjälle',
+                                 'AGENTTI = kielimalli + harness → käyttää rajattuja työkaluja → raportoi toiminnan']),
+    'lesson-20-01': ('compare', ['SELKEÄT, PYSYVÄT SÄÄNNÖT → työnkulku toistaa saman polun',
+                                 'MUUTTUVA TILANNE + HARKINTA → agentti valitsee polun, epäselvä eskaloidaan']),
+    'lesson-21-01': ('flow', ['Tehtävän nykyinen tila', 'Hae vain tarvittava pysyvä tieto',
+                              'Tuo se työmuistiin', 'Tee vaihe', 'Säilytä tai poista ennalta sovitusti']),
+    'lesson-22-01': ('flow', ['Käyttäjän tarve', 'Agentti valitsee sallitun työkalun',
+                              'Rakenteinen kutsu ja minimioikeudet', 'Työkalu palauttaa tuloksen tai virheen', 'Agentti vastaa tuloksen perusteella']),
+    'lesson-23-01': ('loop', ['Lyhyt päätösperustelu', 'Rakenteinen työkalukutsu', 'Havainto tai virhe',
+                              'Tieto riittää? kyllä → valmis; ei → uusi rajattu vaihe', 'Lokiin kutsut, tulokset, toiminnot ja virheet']),
+    'lesson-24-02': ('layers', ['Ulkoinen sisältö = epäluotettava data', 'Rakenteinen työkalurajapinta',
+                                'Minimioikeudet ja salaisuuksien eristys', 'Kriittisen toiminnon hyväksyntäportti', 'Tarkistettava loki ja palautuminen']),
+    'lesson-25-01': ('branch', ['Rutiini + pieni vaikutus → sallittu automaatio',
+                                'Kriittinen toiminto → hyväksyntäportti', 'Hyväksy → toteuta ja lokita',
+                                'Hylkää tai aikakatkaisu → peruuta tai käytä turvallista fallbackia']),
+    'lesson-26-01': ('flow', ['Triggeri käynnistää', 'Agenttisolmu arvioi seuraavan rajatun vaiheen',
+                              'Työkalu tekee yhden asian', 'Tulos tai virhe palaa', 'Loki + lopputulos / eskalointi']),
+}
+
+
+def annotate_demos(html, lid):
+    """Lisää kaikille konseptikuvioille yhteinen responsiivinen sopimus.
+
+    Vanhojen kuvioiden kuviokohtainen piirroskoodi säilyy lähteessä, mutta
+    generoitu HTML saa yksilöivän id:n, tyypin ja yhteiset osaluokat.
+    """
+    if 'ai-demo' not in html:
+        return html
+    counter = 0
+
+    def figure(match):
+        nonlocal counter
+        counter += 1
+        demo_id = f'{lid}-{counter:02d}'
+        interactive = (lid == 'lesson-07' or
+                       (lid == 'lesson-20' and counter == 2) or
+                       (lid == 'lesson-24' and counter == 1))
+        kind = 'interactive' if interactive else 'static'
+        return (f'<figure class="ai-demo" data-demo-id="{demo_id}" '
+                f'data-demo-kind="{kind}">')
+
+    html = re.sub(r'<figure class="ai-demo">', figure, html)
+    html = html.replace('class="ai-demo__tag"', 'class="ai-demo__tag ai-demo__title"')
+
+    def stage(match):
+        opening = match.group(0)
+        before = html[:match.start()]
+        figure_start = before.rfind('<figure class="ai-demo"')
+        header = before[figure_start:] if figure_start >= 0 else ''
+        part = ('ai-demo__interaction' if 'data-demo-kind="interactive"' in header
+                else 'ai-demo__viewport')
+        return opening.replace('ai-demo__stage', f'ai-demo__stage {part}', 1)
+
+    html = re.sub(r'<div class="ai-demo__stage"[^>]*>', stage, html)
+
+    def add_mobile_model(match):
+        figure_html = match.group(0)
+        id_match = re.search(r'data-demo-id="([^"]+)"', figure_html)
+        if not id_match or id_match.group(1) not in _DEMO_MOBILE_MODELS:
+            return figure_html
+        demo_id = id_match.group(1)
+        relation, nodes = _DEMO_MOBILE_MODELS[demo_id]
+        rendered_nodes = [f'<li class="ai-demo__mobile-node">{node}</li>' for node in nodes]
+        mobile = (
+            f'<div class="ai-demo__mobile-model ai-demo__mobile-model--{relation}">'
+            '<span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span>'
+            f'<ol class="ai-demo__mobile-steps">{"".join(rendered_nodes)}</ol></div>')
+        return re.sub(r'(<div class="ai-demo__stage ai-demo__viewport"[^>]*>)',
+                      r'\1' + mobile, figure_html, count=1)
+
+    html = re.sub(
+        r'<figure class="ai-demo" data-demo-id="[^"]+" data-demo-kind="static">.*?</figure>',
+        add_mobile_model, html, flags=re.DOTALL)
+    return html
+
+
 # ===== Lukuaika (kurssi-näkymän kesto) =====
 
-def _strip_markdown(text):
-    text = re.sub(r'```.*?```', ' ', text, flags=re.DOTALL)
-    text = re.sub(r'`[^`]*`', ' ', text)
-    text = re.sub(r'[#>*_\-|=\[\]()!]', ' ', text)
-    return text
+class _VisibleTextParser(HTMLParser):
+    """Poimi renderöidystä HTML:stä lukijalle näkyvä teksti.
+
+    Demoissa näkyvä kuvateksti lasketaan, mutta niiden käyttöliittymä, SVG,
+    tyylit ja skriptit eivät kasvata lukuaikaa.
+    """
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self._ignored = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        classes = set(attrs.get('class', '').split())
+        ignore = bool(self._ignored) or tag in {'style', 'script', 'svg'}
+        if 'ai-demo__stage' in classes or 'ai-demo__interaction' in classes:
+            ignore = True
+        self._ignored.append(ignore)
+
+    def handle_startendtag(self, tag, attrs):
+        return
+
+    def handle_endtag(self, tag):
+        if self._ignored:
+            self._ignored.pop()
+
+    def handle_data(self, data):
+        if not any(self._ignored):
+            self.parts.append(data)
+
+
+def visible_text(text):
+    """Renderöi Markdown ja palauta vain näkyvä lukuteksti."""
+    if not text:
+        return ''
+    parser = _VisibleTextParser()
+    parser.feed(to_html(text))
+    return re.sub(r'\s+', ' ', ' '.join(parser.parts)).strip()
 
 
 def word_count(text):
-    return len(_strip_markdown(text).split())
+    return len(visible_text(text).split())
 
 
 # ===== Meta-description-poiminta (SEO: teorian ensimmäinen leipätekstikappale) =====

@@ -1,6 +1,6 @@
 # Opiskelutehtävät — Konteksti ratkaisee
 
-> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän ammattilaisesta. Tee tämä tehtävä huolella.
+> 📌 **Tähän tuntiin on vain yksi tehtävä** — mutta se on yksi koko kurssin tärkeimpiä. Konteksti ja prompti ovat se taito, joka erottaa tekoälyn satunnaiskäyttäjän vastuullisesta käyttäjästä. Tee tämä tehtävä huolella.
 
 ## Tehtävä 4.1 — Huono vs. hyvä prompti rinnakkain 🟢 SUOSITELTU
 
@@ -8,13 +8,14 @@
 
 ### Valitse ongelmasi
 
-Valitse yksi kysymys, joka **oikeasti kiinnostaa sinua tai liittyy opiskeluusi tai harrastukseesi**. Esimerkkejä eri aiheista:
+Valitse yksi kysymys, joka **oikeasti kiinnostaa sinua tai liittyy arkeesi, opiskeluusi, harrastukseesi tai työhön** (voit myös kuvitella työtilanteen). Esimerkkejä eri aiheista:
 
 - "Miten kirjoitan hyvän esitelmän rungon?"
 - "Miten suunnittelen viikon ruokalistan?"
 - "Miten valmistaudun kuljettajantutkintoon?"
 - "Miten teen treeniohjelman juoksun aloittamiseen?"
 - "Miten parannan englannin esseen rakennetta?"
+- "Miten valmistaudun palaveriin tai haastatteluun?"
 
 Mitä konkreettisempi oma tarpeesi, sitä parempi havainto syntyy.
 
@@ -34,7 +35,7 @@ Avaa **uusi keskustelu** (tärkeää, ettei edellinen vastaus vaikuta). Rakenna 
 
 | Osa | Mitä sisältö? |
 |---|---|
-| **Rooli** | Kuka olet? Esim. *"Olen lukiolainen, joka kirjoittaa ensimmäistä esitelmää."* |
+| **Rooli** | Kuka olet? Esim. *"Kirjoitan ensimmäistä esitelmääni, enkä ole tehnyt tällaista aiemmin."* |
 | **Tausta** | Mitä olet jo tehnyt? Esim. *"Olen kerännyt muutaman lähteen, mutta minulla ei ole rakennetta."* |
 | **Tavoite** | Mitä haluat? Esim. *"Haluan oppia jäsentämään aiheen itse, en valmista tekstiä."* |
 | **Rajaukset** | Mitä et halua? Esim. *"En halua vaikeita termejä — selitä yksinkertaisesti."* |
@@ -44,7 +45,7 @@ Kirjoita prompti yhteen kappaleeseen tai listana — kunhan kaikki viisi osaa ov
 
 #### Vaihe 3 — Iteroi: paranna vastausta vielä kerran
 
-Hyväkään ensimmäinen vastaus ei ole vielä loppu. Ammattilaiset eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
+Hyväkään ensimmäinen vastaus ei ole vielä loppu. Kokeneet käyttäjät eivät anna kerralla "kaikkea oikein" -promptia — he **tarkentavat kierros kierrokselta**. Kirjoita vielä yksi viesti, jolla viilataan vastausta. Esimerkkejä:
 
 - "Tarkenna kohta 3 konkreettisella esimerkillä."
 - "Anna myös yksi esimerkki, jossa kohta menee tarkoituksella pieleen, jotta opin tunnistamaan virheen."

@@ -10,7 +10,7 @@ Yksi tietomuoto. Teksti on yksi modaliteetti, kuva toinen, koodi kolmas, lokit n
 
 ## Kuvakaappaus (screenshot)
 
-Digitaalinen valokuva näytöstä. IT-ammattilaisen tärkeä kontekstiväline — näyttää tarkasti, mitä näkyy, ja poistaa tulkinnanvaraisuutta.
+Digitaalinen valokuva näytöstä. teknisen alan osaajan tärkeä kontekstiväline — näyttää tarkasti, mitä näkyy, ja poistaa tulkinnanvaraisuutta.
 
 ## Lokit (logs)
 

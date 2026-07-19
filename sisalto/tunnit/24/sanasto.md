@@ -14,11 +14,11 @@ Anna agentille vain minimaalinen pääsy, jonka se tarvitsee. Rajoitus tekee tur
 
 ## Validointi (validation)
 
-Tarkistus, että syöte on järkevä ennen kuin annetaan agentille. Poistaa selvästi väärät syötteet.
+Rakenteen, tietotyyppien, pituuden ja arvorajojen tarkistus ennen käsittelyä. Validointi voi hylätä väärän muodon, mutta ei luotettavasti tunnista kaikkia haitallisia ohjeita eikä todista sisältöä turvalliseksi.
 
 ## Rajoitus (restriction)
 
-Toiminta, joka estää agentin tekemästä vaarallisia asioita. Esim. whitelist, maksimirahat, hyväksynnät.
+Rakenteiset työkalut, minimioikeudet, sallittujen toimintojen lista, arvorajat, salaisuuksien eristys ja hyväksyntäportit, joilla mahdollinen vahinko rajataan.
 
 ## Seuranta (monitoring)
 
@@ -34,11 +34,11 @@ Kyky kumota virheitä tai palautua kriisistä. Jos menee pieleen, osaa korjata.
 
 ## Turvakerros (security layer)
 
-Komponentti, joka tarkistaa agentin päätöksiä. Varmistaa, että agentti noudattaa sääntöjä.
+Yksi osa kerroksittaista suojausta. Se voi tarkistaa rakenteen, rajata toimintaa, vaatia hyväksynnän, lokittaa tai tukea palautumista. Yksikään turvakerros ei yksin takaa sääntöjen noudattamista.
 
 ## Erittely (separation)
 
-Selvästi erottaa agentin ohjeistus käyttäjän syötteestä. Merkitse [USER INPUT] ja [SYSTEM].
+Järjestelmän ohjeiden, käyttäjän syötteen ja ulkoisen sisällön rakenteellinen erottaminen. Ulkoinen sisältö käsitellään epäluotettavana datana, mutta merkintä ei yksin estä prompt injectionia.
 
 ## Ankkurointi (grounding)
 

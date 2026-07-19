@@ -2,9 +2,11 @@
 
 ## Johdanto
 
+**Tämän tunnin rajaus:** Tarkastelet yhden kielimallivastauksen tiedollista luotettavuutta: hallusinaatioita, satunnaisuutta ja väitteen tarkistamista lähteestä. Tunnilla 24 siirryt agentin aktiivisiin uhkiin, kuten epäluotettavaan syötteeseen, työkalujen oikeuksiin ja hyökkäysten rajaamiseen.
+
 Olet juuri antanut ChatGPT:lle saman kysymyksen kaksi kertaa. Huomaat kuitenkin jotain outoa: vastaukset ovat erilaiset. Ensimmäisellä kerralla sait selkeän ja hyvin jäsennellyn koodinpätkän. Toisella kerralla sama pyyntö tuotti lähes oikean koodin, mutta funktio kutsuikin API:a, jota ei ole olemassa. Mistä tämä johtuu? Eikö tekoälyn pitäisi olla **deterministinen**, kuten perinteinen ohjelma, joka tuottaa aina samalla syötteellä saman tuloksen?
 
-Vastaus on: ei. **Generatiiviset kielimallit** eivät ole samalla tavalla deterministisiä kuin perinteiset ohjelmat. Ne ovat **todennäköisyyspohjaisia järjestelmiä**, jotka toimivat eri tavalla kuin klassinen ohjelmointi. Tämän ymmärtäminen on tärkeää, kun työskentelet tekoälyn kanssa ammatillisesti.
+Vastaus on: ei. **Generatiiviset kielimallit** eivät ole samalla tavalla deterministisiä kuin perinteiset ohjelmat. Ne ovat **todennäköisyyspohjaisia järjestelmiä**, jotka toimivat eri tavalla kuin klassinen ohjelmointi. Tämän ymmärtäminen on tärkeää, kun työskentelet tekoälyn kanssa asiallisesti.
 
 Tämän tunnin jälkeen sinulla on seitsemäs todistusaineisto omaan arviointipöytääsi: tekoäly voi olla yhtä aikaa vahva ja epäluotettava. Se voi tuottaa hyödyllisiä vastauksia, mutta se voi myös väittää itsevarmasti asioita, jotka eivät pidä paikkaansa, koska se ei ymmärrä totuutta samalla tavalla kuin ihminen.
 
@@ -16,7 +18,7 @@ Malli voi esimerkiksi arvioida: ”Mikä on todennäköisyys, että seuraava san
 
 Tähän liittyy usein parametri nimeltä **lämpötila** eli *temperature*. Se vaikuttaa siihen, kuinka ennustettava tai vaihteleva vastaus on. **Matala lämpötila**, esimerkiksi 0,3, ohjaa mallia valitsemaan todennäköisimpiä vaihtoehtoja. Tällöin vastaukset ovat yleensä johdonmukaisempia ja ennustettavampia. **Korkea lämpötila**, esimerkiksi 1,5, sallii epätodennäköisempien vaihtoehtojen valitsemisen. Tällöin vastaukset voivat olla luovempia, mutta myös vaihtelevampia ja epävarmempia.
 
-Tämä ei ole ohjelmointivirhe, vaan mallin rakenteellinen ominaisuus. Korkea lämpötila mahdollistaa luovuuden ja monimuotoisuuden. Matala lämpötila taas lisää johdonmukaisuutta ja ennustettavuutta. Ammattilaiselle tämä tarkoittaa, että esimerkiksi API-dokumentaatiota kirjoittaessa kannattaa suosia johdonmukaisuutta. Ideointivaiheessa, kuten markkinointikampanjan vaihtoehtoja suunniteltaessa, vaihtelevuus voi puolestaan olla hyödyllistä.
+Tämä ei ole ohjelmointivirhe, vaan mallin rakenteellinen ominaisuus. Korkea lämpötila mahdollistaa luovuuden ja monimuotoisuuden. Matala lämpötila taas lisää johdonmukaisuutta ja ennustettavuutta. Vastuulliselle käyttäjälle tämä tarkoittaa, että esimerkiksi API-dokumentaatiota kirjoittaessa kannattaa suosia johdonmukaisuutta. Ideointivaiheessa, kuten markkinointikampanjan vaihtoehtoja suunniteltaessa, vaihtelevuus voi puolestaan olla hyödyllistä.
 
 > **Pysähdy hetkeksi:** Missä oman työsi tilanteissa tarvitsisit matalaa lämpötilaa eli johdonmukaisuutta? Entä missä tilanteissa korkeampi lämpötila eli luovempi ja vaihtelevampi vastaus voisi olla hyödyllinen?
 
@@ -30,7 +32,7 @@ Miksi näin tapahtuu? Koska kielimallit ovat **todennäköisyyspohjaisia ennusta
 
 Ongelma on siinä, että malli ei välttämättä ole tarkistanut vastausta oikeaa dokumentaatiota vasten. Se ennustaa, millainen oikealta näyttävä vastaus sopisi tilanteeseen. Se ei automaattisesti tiedä, ovatko kaikki yksityiskohdat oikein. **Hallusinaatio** syntyy, kun todennäköinen ja uskottavalta kuulostava vastaus onkin virheellinen.
 
-Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla hyvä ”kuulostaa oikealta” -tuntuma, mutta se ei aina riitä. Kriittiset tiedot täytyy aina **verifioida** eli tarkistaa luotettavasta lähteestä ennen käyttöä.
+Tämä on erityisen vaarallista tekniikan parissa. teknisen alan osaajalla voi olla hyvä ”kuulostaa oikealta” -tuntuma, mutta se ei aina riitä. Kriittiset tiedot täytyy aina **verifioida** eli tarkistaa luotettavasta lähteestä ennen käyttöä.
 
 > **Pysähdy hetkeksi:** Missä IT:n käyttötapauksissa hallusinaatiot olisivat vaarallisimpia? Ajattele esimerkiksi tuotantokoodia, tietoturvaa ja asiakastietoja.
 
@@ -100,7 +102,7 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 .l07-st.st-t{color:#06241a;background:#7FD0A8}
 .l07-st.st-f{color:#3A1408;background:#F0A38C}
 .l07-info{position:absolute;left:0;right:0;top:188px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .4s .15s}
-.l07-next{position:absolute;right:0;bottom:0;font-size:11px;letter-spacing:.05em;color:#06212A;background:#46c7cf;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.l07-next{position:absolute;right:0;bottom:0;min-height:44px;display:flex;align-items:center;font-size:11px;letter-spacing:.05em;color:#06212A;background:#46c7cf;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
 .l07-s1:checked~.l07-round.r1{opacity:1;pointer-events:auto}
 .l07-s1:checked~.l07-prog.p1{opacity:1}
 .l07-a1:checked~.r1 .l07-st,.l07-b1:checked~.r1 .l07-st{opacity:1;transform:scale(1)}
@@ -132,6 +134,19 @@ Tämä on erityisen vaarallista tekniikan parissa. IT-ammattilaisella voi olla h
 .l07-a5:checked~.r5 .tru,.l07-b5:checked~.r5 .tru{border-color:#7FD0A8;animation:none}
 .l07-a5:checked~.r5 .fls,.l07-b5:checked~.r5 .fls{border-color:#F0A38C;animation:none}
 @media (prefers-reduced-motion:reduce){.l07-cta,.l07-card{animation:none}.l07-card,.l07-st,.l07-info,.l07-next,.l07-round{transition:none}}
+@media (max-width:680px){
+.ai-demo__interaction:has(.l07-wrap){height:520px!important;padding:12px}
+.l07-wrap{width:100%;height:480px}
+.l07-cta{position:static;display:block;transform:none;white-space:normal;text-align:center;font-size:12px;line-height:1.4;min-height:44px;padding:10px 12px}
+.l07-prog{bottom:0;font-size:12px}
+.l07-round{top:64px}
+.l07-card{left:0!important;right:0!important;width:100%;min-height:108px;padding:12px}
+.l07-card.ca{top:0}.l07-card.cb{top:120px}
+.l07-ans{font-size:13px;line-height:1.45;padding-right:0;padding-bottom:26px}
+.l07-st{left:12px;bottom:10px;font-size:12px}
+.l07-info{top:244px;font-size:13px;line-height:1.45;text-align:left}
+.l07-next{bottom:0;min-height:44px;display:flex;align-items:center;padding:8px 14px;font-size:13px}
+}
 </style>
 
 ## Miksi tekoäly ei ole totuuskone?
@@ -144,7 +159,7 @@ Tämä tarkoittaa kolmea tärkeää asiaa:
 2. **Konteksti antaa mallille kuvion, ei varmaa tietoa.** Jos kysyt: ”Mitä Windowsin tasklist-komento tekee?”, malli hyödyntää koulutusdatassa oppimiaan malleja ja esimerkkejä. Se osaa ennustaa, mitä tällainen vastaus yleensä sisältää, mutta vastaus on silti tarkistettava, jos sitä käytetään kriittisessä työssä.
 3. **Mallilla voi olla ajallinen raja.** Malli on opetettu aineistolla, joka ulottuu vain tiettyyn ajankohtaan asti. Uudet tapahtumat, API-päivitykset, kirjastoversiot ja dokumentaatiomuutokset voivat siksi olla erityisen alttiita virheille.
 
-Ammattilaisena sinun ei pidä koskaan luottaa tekoälyn vastaukseen ilman itsenäistä tarkistusta kriittisissä asioissa. Käytä mallia ideointiin, koodin rungon luomiseen, vaihtoehtojen vertailuun ja dokumentaation luonnosteluun. Sen jälkeen **tarkista, testaa ja validoi**.
+Vastuullisena käyttäjänä sinun ei pidä koskaan luottaa tekoälyn vastaukseen ilman itsenäistä tarkistusta kriittisissä asioissa. Käytä mallia ideointiin, koodin rungon luomiseen, vaihtoehtojen vertailuun ja dokumentaation luonnosteluun. Sen jälkeen **tarkista, testaa ja validoi**.
 
 > **Pysähdy hetkeksi:** Jos annat asiakkaalle raportin, jonka olet luonut tekoälyn avulla, kenen vastuulla datan oikeellisuus on: sinun vai mallin?
 
@@ -163,8 +178,15 @@ Seuraavat merkit voivat kertoa, että tekoälyn vastaus saattaa sisältää hall
 
 **Generatiiviset kielimallit** ovat epädeterministisiä ja todennäköisyyspohjaisia. Tämä mahdollistaa luovuuden ja monipuoliset vastaukset, mutta tarkoittaa myös sitä, että mallit voivat **hallusinoida**: ne voivat tuottaa itsevarmasti väitteitä, jotka eivät pidä paikkaansa.
 
-Malli ei ole totuuskone, vaan tekstin ennustaja. Ammattilaisena sinun vastuullasi on ymmärtää nämä rajat, tarkistaa kriittiset tiedot ja käyttää tekoälyä oikealla tavalla: apuvälineenä, ei erehtymättömänä auktoriteettina.
+Malli ei ole totuuskone, vaan tekstin ennustaja. Vastuullisena käyttäjänä sinun vastuullasi on ymmärtää nämä rajat, tarkistaa kriittiset tiedot ja käyttää tekoälyä oikealla tavalla: apuvälineenä, ei erehtymättömänä auktoriteettina.
 
 Seuraavalla tunnilla siirryt eettisiin kysymyksiin: kenen datalla tekoäly on opetettu, ja mitä se maksaa?
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+
+Tarkistettu 15.7.2026.

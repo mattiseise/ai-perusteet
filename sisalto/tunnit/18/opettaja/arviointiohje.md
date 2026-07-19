@@ -1,96 +1,59 @@
-# Lesson-18: Arviointitehtävä — opettajaversio
+# Oppitunti 18 — summatiivisen arvioinnin ohje
 
-## Johdanto
+Tämä on Tekoälyjen käyttö -osion summatiivinen arviointi. Arvioi prosessista syntyvää näyttöä, älä tiettyä palvelua tai pelkän lopputuloksen viimeisteltyä pintaa. Oppija voi palauttaa toimivan botin linkin tai vastaavan dokumentoidun kuivaharjoittelun.
 
-Tämä on Tekoälyjen käyttö -osion summatiivinen arviointi. Tehtävä syntetisoi kaikki Tekoälyjen käyttö -osion oppitunnit (10–17).
+## Pakollinen näyttö ennen pisteytystä
 
-Tehtävä on **LLM-resistant**, koska se vaatii:
-- todellisia prompteja ja tuloksia (joita ei voi keksiä)
-- todellista verifikaatiota (todisteiden tuottamista)
-- aitojen prosessien dokumentointia
+Työpaketissa pitää näkyä:
 
-## Arviointirubriikki — käytännön soveltaminen
+- botin tarkoitus, käyttäjä, rajaus ja järjestelmäprompti,
+- tietopohjan 3–5 lähdettä tai kuivaharjoittelussa annettu aineisto perusteluineen,
+- normaali testi, kielteinen testi ja reunatapaus,
+- jokaisesta testistä syöte, odotus, todellinen tulos ja johtopäätös,
+- vähintään yksi nimetty korjaus ja sitä koskeva uudelleentesti,
+- reflektio sekä 2–3 minuutin demo tai puolustus.
 
-### Erinomainen (5 p)
+Jos oppija ei voi käyttää bottialustaa, hyväksy tavallisessa kielimallichatissa tuotettu suoritusjälki. Arvioinnin vaatimukset ja enimmäispisteet ovat samat.
 
-- Promptit ja iteraatiot näytetään selkeästi, ja jokaisen iteroinnin perustelu on selvä.
-- Tulosten arviointi on kriittistä: vahvuudet, heikkoudet ja hallusinaatiot on tunnistettu.
-- Verifikaatio on perusteellinen ja dokumentoitu.
-- Tietoturva-analyysi on syvällistä.
-- Dokumentointi on ammattitaitoista.
-- Kokonaisuus näyttää kypsän ammattilaisen työltä.
+## Arviointitasot
 
-### Hyvä (4 p)
+Pisteytä viisi kriteeriä niiden painoarvoilla. Valitse kullekin kriteerille lähin tasokuvaus ja perustele palaute työpaketin näytöllä.
 
-- Iteraatiota näytetään, ja perustelut ovat selvät.
-- Arviointi on kriittistä ja pääosin perusteellista.
-- Verifikaatio on tehty ja dokumentoitu.
-- Tietoturva-analyysi on riittävä.
-- Dokumentointi on hyvää.
-- Ammattitaito näkyy selkeästi.
+| Kriteeri | Erinomainen | Hyvä | Tyydyttävä | Välttävä | Ei vielä hyväksyttävä |
+|---|---|---|---|---|---|
+| **Toimiva botti tai kuivaharjoittelu — 25 p** | Rajattu ydintehtävä toimii johdonmukaisesti; oikeudet, rajat ja epävarmuuden käsittely näkyvät todennettavassa suoritusjäljessä. | Ydintehtävä toimii tai on todennettu, ja keskeiset rajat näkyvät. | Ydintehtävä toimii useimmissa testeissä, mutta yksi olennainen kohta jää epävarmaksi. | Osa työnkulusta näkyy, mutta ydintehtävä ei toimi luotettavasti. | Toteutusta tai todennettavaa suoritusjälkeä ei ole. |
+| **Järjestelmäprompti — 20 p** | Tarkoitus, rooli, ohjeet, rajat ja epävarmuuden käsittely ovat täsmällisiä ja testien perusteella parannettuja. | Prompti määrittää tarkoituksen, ohjeet ja rajat selkeästi. | Prompti ohjaa ydintehtävää, mutta rajat tai poikkeustilanteet ovat osittaisia. | Prompti on yleinen tai ristiriitainen. | Järjestelmäprompti puuttuu tai ei ohjaa tehtävää. |
+| **Tietopohja — 20 p** | Lähteet ovat tarkoituksenmukaisia, jäljitettäviä ja rajattuja; ajantasaisuus ja käyttöoikeus arvioidaan. | Aineisto tukee tehtävää ja lähteet on nimetty sekä perusteltu. | Aineisto on käyttökelpoinen, mutta lähde- tai ajantasaisuustieto on osittainen. | Aineiston sopivuutta ei perustella tai siinä on selviä aukkoja. | Tietopohja tai sitä korvaava annettu aineisto puuttuu. |
+| **Testaus ja iterointi — 20 p** | Normaali, kielteinen ja reunatapaus on dokumentoitu; korjaus ja uudelleentesti osoittavat selkeän syy–seuraussuhteen. | Kaikki kolme testityyppiä, korjaus ja uudelleentesti näkyvät. | Testit kattavat ydintoiminnan, mutta korjausketju jää osittaiseksi. | Testejä on vähän tai tuloksia ei verrata odotukseen. | Testaus ja iterointi puuttuvat. |
+| **Reflektio ja puolustus — 15 p** | Oppija perustelee valinnat, tunnistaa rajat ja vastaa demossa täsmällisesti jatkokysymykseen. | Valinnat ja rajat perustellaan, ja demo osoittaa oman ymmärryksen. | Reflektio kuvaa työtä, mutta perustelut tai demo jäävät yleisiksi. | Reflektio on luettelomainen tai oma ymmärrys jää epäselväksi. | Reflektio ja demo tai puolustus puuttuvat. |
 
-### Tyydyttävä (3 p)
+## Pisteytys
 
-- Iteraatio näytetään, mutta perustelut saattavat olla epäselviä.
-- Arviointi on yksioikoista.
-- Verifikaatio on tehty, mutta se on suppea.
-- Tietoturva-analyysi on pinnallinen.
-- Dokumentointi on perustasoa.
-- Ammattitaito näkyy osittain.
+Muunna taso kriteerin pisteiksi suhteessa painoarvoon:
 
-### Välttävä (2 p)
+- **Erinomainen:** 100 % kriteerin pisteistä
+- **Hyvä:** 80 %
+- **Tyydyttävä:** 60 %
+- **Välttävä:** 40 %
+- **Ei vielä hyväksyttävä:** 0–20 % sen mukaan, onko osittaista näyttöä
 
-- Iteraation näyttäminen on puutteellista.
-- Arviointi on heikkoa.
-- Verifikaatio on puutteellinen.
-- Tietoturva-analyysi on suppea.
-- Dokumentointi on heikkoa.
-- Ammattitaito ei näy riittävästi.
+Pyöristä kokonaispisteet lähimpään kokonaislukuun. Käytä oppilaitoksen omaa hyväksymisrajaa, jos sellainen on päätetty.
 
-### Hylätty (1 p)
+## Prosessinäytön aitous
 
-- Iteraatiota ei näytetä tai se puuttuu.
-- Arviointi puuttuu.
-- Verifikaatiota ei ole.
-- Tietoturva-aspekteja ei käsitellä.
-- Dokumentointi on puutteellista.
+Älä yritä päätellä vilppiä tekstin tyylistä. Tarkista sen sijaan todennettavat yhteydet:
 
-## Arvioinnin käytännöt
+- vastaavatko promptin versiot kuvattua korjausta,
+- onko ennen–jälkeen-tuloksissa korjauksen mukainen muutos,
+- pystyykö oppija selittämään yhden rajauksen ja yhden epäonnistuneen testin omin sanoin,
+- ovatko lähteet olemassa ja liittyvätkö ne botin tehtävään.
 
-1. **Lue ensin kokonaisuus.** Hanki yleiskuva ennen pisteyttämistä.
+Jos yhteys ei selviä, pyydä oppijaa täydentämään suoritusjälkeä tai näyttämään yksi testi. Epäonnistunut testi ei laske arviota, jos oppija tunnistaa syyn, korjaa toteutusta ja testaa uudelleen.
 
-2. **Arvioi neljän kriteerin pohjalta:**
-   - Promptin rakentaminen (25 %)
-   - Tulosten arviointi (25 %)
-   - Tietoturva ja vastuu (25 %)
-   - Kokonaisammattitaito (25 %)
+## Palautteen rakenne
 
-3. **Etsi näyttöä ammatillisuudesta:**
-   - Näytetäänkö todellisia prompteja ja tuloksia?
-   - Onko verifikaatio dokumentoitu?
-   - Näkyykö kriittinen ajattelu?
+Anna palaute viidellä lyhyellä kohdalla, yksi kutakin kriteeriä kohti. Nimeä lopuksi:
 
-4. **Kiinnitä huomiota LLM-resistanssiin:**
-   - Voisiko joku vain pyytää LLM:ää kirjoittamaan tämän? (Jos kyllä, se ei ole LLM-resistant.)
-   - Näytetäänkö todellisia tuloksia ja prosesseja? (Jos ei, se on merkki vilpistä.)
-
-## Mahdollisia punaisia lippuja
-
-- Liian täydellinen prosessi (realistisesti siinä ei ole niin paljon iteraatioita tai epäonnistumisia)
-- Promptit, jotka näyttävät "ideaalisilta" mutta eivät todellisilta
-- Verifikaation puuttuminen tai liian yksinkertainen toteutus
-- Tietoturva-analyysin täydellinen puuttuminen
-- Dokumentaatio, joka näyttää muulla tavoin kuin ihmisen tekemältä
-
-## Ohjaus opiskelijoille
-
-- Kannusta käyttämään todellisia konteksteja.
-- Selitä, että epäonnistumiset ovat arvokkaita.
-- Ohjaa dokumentointiin.
-- Korosta verifikaation tärkeyttä.
-
-## Palaute
-
-Anna palautetta neljän kriteerin pohjalta. Korosta myönteisiä puolia ennen kehitystarpeita.
-
-Esimerkkipalaute: "Promptin iteraatio on erinomaisesti dokumentoitu, ja näytät, miten kehityit. Tulosten arviointi voisi olla vielä syvällisempää — mitkä tarkalleen olivat hallusinaatioita?"
+1. vahvin prosessinäyttö,
+2. yksi täsmällinen seuraava korjaus,
+3. kokonaispisteet ja käytetty hyväksymisraja.

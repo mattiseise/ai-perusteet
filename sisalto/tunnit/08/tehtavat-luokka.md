@@ -14,7 +14,7 @@ Ymmärtää, miksi tekoälyn koulutusdata herättää kysymyksiä tekijänoikeuk
    - Onko reilua, että tekoäly oppii jonkun työstä ilman lupaa?
    - Pitäisikö alkuperäiselle tekijälle kertoa, maksaa tai kysyä lupa?
    - Miltä sinusta tuntuisi, jos tekoäly oppisi sinun töistäsi ilman lupaa?
-   - Mitä ammattilaisena kannattaa pitää mielessä, kun käytät tekoälyä?
+   - Mitä vastuullisena käyttäjänä kannattaa pitää mielessä, kun käytät tekoälyä?
 
 *Halutessasi syvemmälle: tutustu todelliseen oikeustapaukseen (esim. kuvataiteilijat vs. kuvageneraattorit, 2023) ja katso, mitä molemmat puolet perustelevat.*
 
@@ -64,7 +64,7 @@ Ymmärtää, mitä "näkymätöntä työtä" tekoälyn opetukseen liittyy ja mik
    - Kuka on vastuussa heidän hyvinvoinnistaan? (Palveluntarjoaja? Sinä? Molemmat?)
    - Pitäisikö merkitsijöille maksaa enemmän?
    - Pitäisikö heidän saada pääsy malleihin, joita he auttoivat rakentamaan?
-4. **Kirjoita eettinen kannanotto (3–4 lausetta):** millä tavoin ammattilaisena ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
+4. **Kirjoita eettinen kannanotto (3–4 lausetta):** millä tavoin vastuullisena käyttäjänä ottaisit nämä näkökohdat huomioon käyttäessäsi tekoälyä käytännössä?
 
 ---
 
@@ -89,9 +89,9 @@ Ymmärtää tekoälyn ympäristöjalanjälkeä ja harkinnan tarvetta sen käytö
 | Hiilijalanjälki | X tonnia CO2/vuosi | = vertaa autojen tai lentoliikenteen päästöihin |
 
 3. **Pohdi rationaalista käyttöä:**
-   - Jos organisaatiosi käyttäisi tekoälyä jokaiseen tehtävään (esim. jokaiseen sähköpostiin), kuinka paljon se kasvattaisi energiankulutusta?
+   - Jos tekoälyä käytettäisiin jokaiseen tehtävään (esim. jokaiseen sähköpostiin) — vaikka omassa arjessasi tai jossakin organisaatiossa — kuinka paljon se kasvattaisi energiankulutusta?
    - Mitkä tehtävät ovat "arvoisia" tekoälyn käytön energiakustannusten näkökulmasta?
-   - Mitä tarkoittaisi "harkittu" tekoälyn käyttö organisaatiossasi?
+   - Mitä tarkoittaisi "harkittu" tekoälyn käyttö sinun arjessasi tai organisaatiossa?
 
 ---
 
@@ -107,7 +107,7 @@ Kirjoita lyhyt oma kannanotto (noin 5–8 lausetta). Valitse yksi kysymys:
 
 1. Miten huolehtisit tekijänoikeuksista, kun käytät tekoälyä omissa töissäsi?
 2. Miten varmistaisit, ettei käyttämäsi tekoäly tee epäreiluja oletuksia?
-3. Millaisia sääntöjä tekoälyn käytölle pitäisi olla koulussa tai työpaikalla?
+3. Millaisia sääntöjä tekoälyn käytölle pitäisi olla esimerkiksi koulussa, työpaikalla tai harrastusyhteisössä?
 
 Vastaa omin sanoin: mikä on mielipiteesi ja miksi? Voit käyttää tekoälyä apuna jäsentämisessä, mutta kannanoton pitää olla sinun.
 

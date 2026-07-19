@@ -2,6 +2,8 @@
 
 ## Johdanto
 
+**Tämän tunnin rajaus:** Opit erottamaan kontekstin ja promptin sekä parantamaan yhden pyynnön sisältöä. Tunnilla 12 käytät tätä perustaa uudelleen käytettävän promptipankin, lähdeaineiston, pilkkomisen ja testatun iteroinnin rakentamiseen.
+
 Kuvittele, että ystäväsi lähettää sinulle viestin: "Auta, en saa tätä toimimaan." Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta vai koulutehtävästä? Mikä tarkalleen ei toimi? Sama koskee tekoälyä. Jos sanot vain "auta minua", saat yleisen, ehkä hyödyttömän vastauksen. Mutta jos kerrot "olen lukiolainen, valmistelen 5 minuutin esitelmää ilmastonmuutoksesta historian tunnille, ja tarvitsen selkeän rakenteen kolmesta pääkohdasta" — silloin tekoäly ymmärtää, mikä on todellinen tarve, ja voi antaa konkreettista apua. Tämä ero on *konteksti ja promptaus* — ja se on kaiken tekoälyviestinnän ydin.
 
 ## Osa 1: Mitä konteksti on
@@ -103,7 +105,7 @@ Hyvä prompt rakentuu viidestä osasta. Et tarvitse niitä kaikkia joka promptii
 
 **5. Esimerkit (examples)** — Näytä yksittäinen esimerkki siitä, mitä haluat. "Esimerkiksi: INPUT: 'terve', OUTPUT: 'Terve! Kuinka voin auttaa?'". Esimerkit tekevät vaatimuksista konkreettisempia.
 
-Ammattilaisesti nämä viisi elementtiä ovat perustyökalusarjasi. Mitä enemmän tietoja annat, sitä parempia vastauksia saat.
+Huolellisesti nämä viisi elementtiä ovat perustyökalusarjasi. Mitä enemmän tietoja annat, sitä parempia vastauksia saat.
 
 > **Pysähdy hetkeksi:** Ajattele viimeistä kertaa, kun kysyit ChatGPT:ltä jotain. Mitkä viidestä elementistä annoit? Mitä puuttui? Olisiko parempi vastaus ollut mahdollinen, jos olisit antanut puuttuvat elementit?
 
@@ -143,7 +145,7 @@ Miksi se on hyvä?
 - Formaatti: "kolme pääotsikkoa, ranskalaiset viivat" — malli tietää muotoilun.
 - Esimerkit: mallimuoto näyttää, millaista jäsentelyä halutaan.
 
-Ammattilaisesti hyvä konteksti ja prompti säästävät aikaa. Joudut ehkä käyttämään enemmän aikaa kontekstin ja promptin muotoiluun, mutta saat parempia tuloksia ja tarvitset vähemmän kierroksia.
+Huolellisesti hyvä konteksti ja prompti säästävät aikaa. Joudut ehkä käyttämään enemmän aikaa kontekstin ja promptin muotoiluun, mutta saat parempia tuloksia ja tarvitset vähemmän kierroksia.
 
 ## Osa 4: Miksi huono konteksti ja prompti tuottaa huonoa jälkeä
 
@@ -159,7 +161,7 @@ Kontekstin ja promptin puuttuminen aiheuttaa myös turhauttavia väärinymmärry
 
 ## Osa 5: Iteratiivinen kontekstin ja promptin rakentaminen
 
-Ammattilaisesti et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta — ammattilaiset kutsuvat tätä "prompt engineeringiksi".
+Huolellisesti et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta — kokeneet käyttäjät kutsuvat tätä "prompt engineeringiksi".
 
 **Kierros 1 — PerusPrompt:**
 "Tee esitelmän runko ilmastonmuutoksesta."
@@ -179,12 +181,12 @@ Ammattilaisesti et yritä kertoa kaikkea yhdessä suuressa tekstissä. Sen sijaa
 
 Jokainen kierros rakentaa edellisen päälle. Tekoäly "muistaa" kontekstin jokaisessa kierroksessa (riippuen siitä, mitä mallia käytät ja siitä, onko kyse samasta sessiosta vai eri sessioista).
 
-Ammattilaisesti tämä on tehokasta. Et yritä ennustaa kaikkea etukäteen. Teet iteratiivisesti, näet tulokset ja parannat. Tämä on parempi strategia kuin kirjoittaa kerralla yksi täydellinen suurprompti, koska:
+Huolellisesti tämä on tehokasta. Et yritä ennustaa kaikkea etukäteen. Teet iteratiivisesti, näet tulokset ja parannat. Tämä on parempi strategia kuin kirjoittaa kerralla yksi täydellinen suurprompti, koska:
 - Näet tulokset välillä ja voit korjata kurssia.
 - Voit antaa kontekstia vähitellen kun ymmärrät, mitä tarvitset.
 - Tekoäly pysyy paremmin "kartalla" lyhyemmillä kierroksilla.
 
-> **Pysähdy hetkeksi:** Miksi iteratiivinen kontekstin ja promptin rakentaminen olisi parempi kuin "kaiken kerralla" -lähestyminen? Mitä voisi ammattilaisesti mennä pieleen, jos yrität kertoa kaiken kerralla?
+> **Pysähdy hetkeksi:** Miksi iteratiivinen kontekstin ja promptin rakentaminen olisi parempi kuin "kaiken kerralla" -lähestyminen? Mitä voisi huolellisesti mennä pieleen, jos yrität kertoa kaiken kerralla?
 
 ## Osa 6: Kontekstin rakentaminen käytännössä
 
@@ -206,10 +208,17 @@ Nämä ovat silti lyhyitä, mutta ne sisältävät roolin, taustan, tavoitteen j
 
 Konteksti ja promptaus ovat kaksi puolta samasta kolikosta. Konteksti on pohja — se rakentuu viidestä osasta: roolista, taustasta, tavoitteesta, rajauksista ja esimerkeistä. Promptaus on kysymys, joka esitetään kontekstin puitteissa, ja se rakentuu viidestä elementistä: tavoitteesta, roolista, rajauksista, outputformaatista ja esimerkeistä. Yhdessä ne muodostavat tehokkaan välineen, jolla saat tekoälystä juuri sellaista apua, jota tarvitset.
 
-Ammattilaisesti et yritä antaa kaikkea yhdessä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Joka kierros tarkentaa seuraavaa, ja lopputulos on moninkertaisesti parempi kuin yksi kerralla kirjoitettu täydellinen suurprompti.
+Huolellisesti et yritä antaa kaikkea yhdessä. Sen sijaan rakennat kontekstia ja promptia kierros kierrokselta. Joka kierros tarkentaa seuraavaa, ja lopputulos on moninkertaisesti parempi kuin yksi kerralla kirjoitettu täydellinen suurprompti.
 
 Hyvä konteksti ja terävä prompti ovat investointi: ne vaativat hiukan enemmän aikaa ajatteluun ja kirjoittamiseen, mutta tuloksena on vastaus, joka on todella hyödyllinen eikä turha. Tämän kurssin ydinasia on, että konteksti ja prompti eivät ole pikkujuttu — ne ovat kaiken tekoälyviestinnän perusta. Konteksti- ja promptaustaidot ovat tärkeä työelämä- ja opiskelutaito alalla kuin alalla.
 
 Seuraavalla tunnilla syvennämme kontekstin hallintaan: ymmärrät, että tekoälyn muisti on rajallinen, ja opit hallitsemaan sitä.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+
+Tarkistettu 15.7.2026.

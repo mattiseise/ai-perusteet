@@ -8,9 +8,9 @@
 
 ### Vaiheet
 
-#### Vaihe 1 — Valitse aihe omalta alaltasi
+#### Vaihe 1 — Valitse aihe
 
-Valitse itseäsi kiinnostava aihe tai ala. Esimerkkejä eri aloilta:
+Valitse itseäsi kiinnostava aihe — arjesta, harrastuksesta, opiskelusta tai työelämästä. Esimerkkejä eri aloilta:
 
 - **Liiketalous ja kauppa:** Miten asiakas tekee palautuksen verkkokaupassa — vaihe vaiheelta
 - **Sosiaali- ja terveysala:** Miten omainen varaa ajan terveysaseman sähköisestä palvelusta

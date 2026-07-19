@@ -78,7 +78,7 @@ Istuu sivussa ja ole hiljaa. Älä keskeytä esittelyä. Merkitse muistiin, jos 
 
 ### Palautteenannoissa
 
-Jokainen opiskelijapari antaa yhden kommentin, joka sisältää positiivisen huomion ja parannusidean. Jos palaute on liian kriittinen tai epäkonstruktiivinen, suuntaa sitä: "Entä sen sijaan, että sanot 'ei toimi', voisit sanoa 'voisi olla selkeämpää, jos...'?" Jos kukaan ei anna palautetta, sinä anna ensimmäisen: "Minulle oli selvää, mitä botti tekee. Seuraavalla kerralla voisi näyttää dokumentin lopusta — koska se näyttää ammattilaiselta."
+Jokainen opiskelijapari antaa yhden kommentin, joka sisältää positiivisen huomion ja parannusidean. Jos palaute on liian kriittinen tai epäkonstruktiivinen, suuntaa sitä: "Entä sen sijaan, että sanot 'ei toimi', voisit sanoa 'voisi olla selkeämpää, jos...'?" Jos kukaan ei anna palautetta, sinä anna ensimmäisen: "Minulle oli selvää, mitä botti tekee. Seuraavalla kerralla voisi näyttää dokumentin lopusta — koska se näyttää kokeneelta tekijältä."
 
 ### Jälkeen
 
@@ -128,7 +128,7 @@ Kun opiskelija esittelee, kuuntele aktiivisesti. Katso häntä ja bottia, ei puh
 
 ### Rohkaisu
 
-Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista, esittelystä ottamisesta on ansio. Sano: "Näytti ammattilaiselta" tai "Selitit sen hyvin."
+Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista, esittelystä ottamisesta on ansio. Sano: "Näytti kokeneelta tekijältä" tai "Selitit sen hyvin."
 
 ### Palautteen ohjaaminen
 
@@ -140,7 +140,7 @@ Jokainen esittely on voitto. Vaikka se olisi lyhyt tai teknisesti ongelmallista,
 
 Oppitunnin lopussa pidä lyhyt yhteenveto:
 
-"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Nämä ovat taidot, joita tarvitset koko urallasi.
+"Olet nyt viimeistellyt oman apuri-bottisi. Se on oikeasti toimiva ohjelma, joka ratkaisee ongelmaa. Olet testannut sitä, esitellyt sitä ja arvioinut muita. Näitä taitoja tarvitset monenlaisissa tilanteissa jatkossa.
 
 Seuraavassa osiossa (Agentit-osio) botti muuttuu agentiksi. Agentti on parempi, nopeampi ja itsenäisempi. Se voi tehdä asioita, ilman että sinä käsket. Pohja, jonka rakennat nyt, on agenttisi pohja. Sama testaaminen, sama dokumentointi, sama huolellinen ajattelu — vain suuremmassa mittakaavassa.
 

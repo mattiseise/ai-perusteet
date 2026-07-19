@@ -2,6 +2,8 @@
 
 ## Oppimisen tavoitteet tälle lohkolle
 
+**Pedagoginen rajaus suhteessa tuntiin 12:** Tunnilla 4 opetetaan käsitteellinen ero: konteksti kuvaa tilannetta ja prompti antaa tehtävän. Tavoitteena on parantaa yksi pyyntö. Älä vielä arvioi uudelleen käytettävää promptipankkia, lähdeaineistoon perustuvaa työnkulkua tai usean kierroksen projektituotosta — ne kuuluvat tunnille 12.
+
 Tämän lohkon tavoitteena on, että opiskelija ymmärtää **kontekstin** ja **promptin** merkityksen tekoälyn kanssa työskentelyssä. Oppitunnin ydin on, että tekoälyltä saatu vastaus ei riipu vain kysymyksestä, vaan myös siitä, millaisen tilanteen, taustan, tavoitteen ja rajaukset käyttäjä antaa.
 
 ### Muistaa ja ymmärtää
@@ -70,7 +72,7 @@ Kun konteksti on rakennettu, sen päälle kirjoitetaan prompti. Promptin tehtäv
 
 ### Iteratiivinen työskentely
 
-Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **iteratiivisena prosessina**. Ammattilaiset eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He aloittavat olennaisesta, lukevat vastauksen, tarkentavat kontekstia ja muokkaavat promptia seuraavalla kierroksella.
+Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **iteratiivisena prosessina**. Kokeneet käyttäjät eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He aloittavat olennaisesta, lukevat vastauksen, tarkentavat kontekstia ja muokkaavat promptia seuraavalla kierroksella.
 
 1. **Ensimmäinen kierros:** anna peruskonteksti ja päätehtävä.
 2. **Tarkistus:** arvioi, mikä vastauksessa oli hyödyllistä ja mikä jäi puuttumaan.
@@ -126,7 +128,7 @@ Opiskelijoiden kannattaa ymmärtää kontekstin ja promptin rakentaminen **itera
 - **Jatka promptiin:** Kun konteksti on selvitetty, kysy opiskelijoilta, mitä tekoälyltä kannattaisi pyytää. Tämä auttaa näkemään, että prompti rakentuu kontekstin päälle.
 - **Piirrä kaksi mallia näkyviin:** kontekstin viisi osaa ja promptin viisi elementtiä. Palaa niihin harjoitusten aikana.
 - **Käytä opiskelijoiden omia esimerkkejä:** rakenna esimerkit opiskelijoiden omista aiheista ja aloista. Jos ryhmällä on yhteinen projekti tai harrastus, ammenna siitä.
-- **Korosta iterointia:** ammattilaiset eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He tarkentavat kontekstia ja promptia vastausten perusteella.
+- **Korosta iterointia:** kokeneet käyttäjät eivät aina kirjoita täydellistä promptia ensimmäisellä yrityksellä. He tarkentavat kontekstia ja promptia vastausten perusteella.
 
 ### Yleisiä haasteita ja ratkaisuja
 
@@ -247,3 +249,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mitä tekoäly tarvitsee tietää, jotta se voi auttaa sinua omassa IT-ongelmassasi ilman turhia arvauksia?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **ennen/jälkeen-kontekstikartta ja vastausvertailu**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija antaa saman pyynnön kahdella eri kontekstilla ja merkitsee vastauksista muuttuneet kohdat. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija täyttää rooli–tavoite–aineisto–rajaus–muoto-pohjan valmiiseen pyyntöön. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija siirtää saman kontekstirakenteen uuteen arki-, opiskelu- tai työroolitilanteeseen. Syventävä työ ei kasvata pakollista ydintuotosta.

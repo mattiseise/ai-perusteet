@@ -39,8 +39,8 @@ Tarkista vastaus virallisesta lähteestä. Tallenna sekä mallin vastaus että o
 Avaa uusi keskustelu ja anna tekoälylle **roolin sekä havaintosi**. Esimerkkiprompti:
 
 ```
-Toimit minulle sparrauskumppanina. Olen opiskelija ja teen havaintoja
-siitä, miten kielimalli tuottaa tekstiä. Tässä havaintoni:
+Toimit minulle sparrauskumppanina. Teen havaintoja siitä, miten
+kielimalli tuottaa tekstiä. Tässä havaintoni:
 
 [liitä vaiheiden 1–3 tulokset tähän]
 

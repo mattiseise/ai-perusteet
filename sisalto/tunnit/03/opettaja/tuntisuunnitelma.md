@@ -119,7 +119,7 @@ Hallusinaatioita voi vähentää, mutta niitä ei voi poistaa täysin. Keinoja o
 
 - **Aloita käytännöstä.** Anna opiskelijoiden ennustaa seuraava sana ennen teoriaa.
 - **Näytä hallusinaatio konkreettisesti.** Keskustelkaa siitä, miksi virhe näyttää uskottavalta.
-- **Yhdistä ammatilliseen käyttöön.** Kysy: ”Mitä tapahtuu, jos tällainen virhe päätyy asiakasviestiin, koodiin tai tietoturvaohjeeseen?”
+- **Yhdistä asialliseen käyttöön.** Kysy: ”Mitä tapahtuu, jos tällainen virhe päätyy asiakasviestiin, koodiin tai tietoturvaohjeeseen?”
 - **Pidä ero selkeänä:** malli ei tiedä, vaan ennustaa. Tämä ero on tärkeä myöhemmissä tekoälyn turvallisuutta ja agentteja käsittelevissä osioissa.
 
 ### Yleisten opiskelijakysymysten vastaukset
@@ -249,3 +249,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Millaisessa tilanteessa kielimallin vakuuttava mutta väärä vastaus voisi aiheuttaa todellista vahinkoa?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **syöte–kolme tulosta–mekanismiselitys**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija ajaa saman promptin kolme kertaa ja selittää tulosten vaihtelua tokenien ennustamisella. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija analysoi opettajan antamia kolmea tulosta ilman omaa tiliä. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija vertailee vaihtelua kahdella eri syötteellä. Syventävä työ ei kasvata pakollista ydintuotosta.

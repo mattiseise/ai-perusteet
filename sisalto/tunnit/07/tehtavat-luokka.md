@@ -1,10 +1,10 @@
-# Todistusaineisto 3 — Ammattilaisen verifiointikäytäntö
+# Todistusaineisto 3 — Vastuullisen käyttäjän verifiointikäytäntö
 
 > 📌 **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät niitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
 
 ## Mitä teet?
 
-Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä ammattilaisen tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan **konkreettisia toimenpiteitä**, joilla skenaarion ongelma olisi voitu estää.
+Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä vastuullisen käyttäjän tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan **konkreettisia toimenpiteitä**, joilla skenaarion ongelma olisi voitu estää.
 
 ## Vaiheet
 
@@ -14,7 +14,7 @@ Kysy tekoälyltä **kaksi spesifiä kysymystä**, joihin oikea vastaus on tarkis
 
 - Kuvitteellinen elokuva, kirja tai henkilö: *"Kerro elokuvasta 'Sininen Vuori' (1987)."*
 - Keksityt lähdeviitteet: *"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."* — mallit keksivät usein uskottavia mutta olemattomia viitteitä.
-- Sisäpiirikysymys organisaatiosta: *"Kuka on oman oppilaitoksesi rehtori vuonna 2026?"*
+- Sisäpiirikysymys jostakin sinulle tutusta organisaatiosta, jonka oikean vastauksen voit tarkistaa: esimerkiksi jonkin yhdistyksen, seuran, oppilaitoksen tai yrityksen vastuuhenkilö vuonna 2026.
 
 Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.
 
@@ -32,8 +32,8 @@ Kirjoita itsellesi muistiin lyhyesti (ei vielä lopulliseen tuotokseen):
 Avaa uusi keskustelu ja anna tekoälylle **roolin, havaintosi ja edellisten tuntien opit**. Esimerkkiprompti:
 
 ```
-Toimit minulle sparrauskumppanina. Olen IT-alan opiskelija ja
-rakennan ammattilaisen tarkistuslistaa tekoälyn käyttöön.
+Toimit minulle sparrauskumppanina. Rakennan vastuullisen käyttäjän
+tarkistuslistaa tekoälyn käyttöön.
 
 Tässä mitä olen oppinut:
 - Tunti 3: Malli ennustaa todennäköisintä jatkoa, ei totuutta
@@ -53,7 +53,7 @@ Tämä on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjo
 
 ### Vaihe 4 — Kirjoita tarkistuslista (tämä on todistusaineistosi)
 
-Kirjoita ammattilaisen tarkistuslista, jota IT-ammattilainen voisi pitää näytöllä joka kerta käyttäessään tekoälyä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
+Kirjoita vastuullisen käyttäjän tarkistuslista, jonka voisi pitää näytöllä joka kerta tekoälyä käyttäessä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
 
 **A) Merkit, joista tunnistan hallusinaation** (3–5 bulletia)
 

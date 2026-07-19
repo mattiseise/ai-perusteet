@@ -6,7 +6,7 @@
 
 Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, että eri **tekoälytyökalut** voivat antaa eri tuloksia samalle promptille. Opiskelijat oppivat, että työkalun valinta perustuu **kontekstiin**, tehtävän tavoitteeseen ja käytännön rajoituksiin.
 
-**Opettajan painotus:** Korosta, että tarkoitus ei ole valita yhtä “parasta” tekoälytyökalua. Ammattilainen arvioi, mikä työkalu sopii parhaiten juuri kyseiseen tehtävään.
+**Opettajan painotus:** Korosta, että tarkoitus ei ole valita yhtä “parasta” tekoälytyökalua. Vastuullinen käyttäjä arvioi, mikä työkalu sopii parhaiten juuri kyseiseen tehtävään.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -86,7 +86,7 @@ Selitä 5–8 lauseella, kuinka verkkoselain lataa verkkosivun.
 
 Tehtävän tavoitteena on opettaa opiskelijoille, miten samaa tehtävää voidaan testata eri tekoälytyökaluilla ja miten tuloksia dokumentoidaan vertailukelpoisesti.
 
-**Opettajan painotus:** Korosta dokumentointia. Ammattilainen ei vain kokeile työkaluja, vaan kirjaa havainnot ja perustelee valintansa.
+**Opettajan painotus:** Korosta dokumentointia. Vastuullinen käyttäjä ei vain kokeile työkaluja, vaan kirjaa havainnot ja perustelee valintansa.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -142,7 +142,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten samaa tehtävää voidaa
 
    Kysy: **Missä tilanteessa valitsisit juuri tämän työkalun? Miksi?**
 
-   Korosta: ammattilainen ei valitse “parasta” työkalua yleisesti, vaan **sopivimman työkalun omaan tarkoitukseensa**.
+   Korosta: vastuullinen käyttäjä ei valitse “parasta” työkalua yleisesti, vaan **sopivimman työkalun omaan tarkoitukseensa**.
 5. **Raportointi noin 2 minuuttia**
 
    Jokainen ryhmä kertoo yhdellä lauseella, minkä työkalun se valitsisi omaan projektiinsa ja miksi.
@@ -159,7 +159,7 @@ Tehtävän tavoitteena on opettaa opiskelijoille, miten samaa tehtävää voidaa
 
 ### Tavoite
 
-Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miksi ammattilainen ei käytä samaa tekoälytyökalua kaikkeen. Työkalun valinta riippuu tehtävän tyypistä, aineistosta, vaaditusta tarkkuudesta ja käyttötarkoituksesta.
+Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, miksi vastuullinen käyttäjä ei käytä samaa tekoälytyökalua kaikkeen. Työkalun valinta riippuu tehtävän tyypistä, aineistosta, vaaditusta tarkkuudesta ja käyttötarkoituksesta.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -209,7 +209,7 @@ Kirjoita taululle kolme skenaariota:
 
    Kirjoita taululle:
 
-   Ammattilaisena: arvioi, testaa, dokumentoi ja päätä.
+   Vastuullisena käyttäjänä: arvioi, testaa, dokumentoi ja päätä.
 
 ### Odotettu oppimistulos
 
@@ -227,6 +227,6 @@ Opettaja arvioi opiskelijoiden kykyä:
 - tunnistaa työkalujen vahvuuksia ja rajoituksia,
 - perustella työkalun valinta tehtävän, kontekstin ja tavoitteiden perusteella,
 - dokumentoida havainnot selkeästi,
-- ymmärtää, että tekoälytyökalun valinta on ammatillinen päätös eikä tottumuskysymys.
+- ymmärtää, että tekoälytyökalun valinta on asiallinen päätös eikä tottumuskysymys.
 
 ---

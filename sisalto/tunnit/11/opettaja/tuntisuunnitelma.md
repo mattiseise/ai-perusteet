@@ -2,6 +2,8 @@
 
 ## Oppimisen tavoitteet
 
+**Pedagoginen rajaus suhteessa tuntiin 10:** Älä toista yleistä tuotevertailua. Piirrä yhden syötteen datavirta käyttäjältä palveluun ja takaisin, tunnista säilytys- ja käyttöehtokysymykset ja vertaa pilvipalvelua paikalliseen ajoon. Arvioi perustelua, ei tuotenimen muistamista.
+
 Tämän lohkon tavoitteena on, että opiskelija ymmärtää, ettei tekoälytyökalujen maailma rajoitu ChatGPT:hen ja Claudeen. Opiskelija tutustuu muihin malleihin ja palveluihin, kuten **Geminiin**, **DeepSeekiin**, **Llamaan** ja **Mistraliin**, ja oppii arvioimaan niitä tehtävän, hinnan, nopeuden, tietosuojan ja käyttötarkoituksen perusteella.
 
 ### Muistaa ja ymmärtää
@@ -19,11 +21,11 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, ettei tekoälytyök
 
 ### Luoda ja arvioida
 
-- Opiskelija osaa valita mallin tilanteen mukaan ja perustella valintansa ammatillisesti.
+- Opiskelija osaa valita mallin tilanteen mukaan ja perustella valintansa asiallisesti.
 - Opiskelija osaa tehdä lyhyen työkalusuosituksen, jossa huomioidaan **hinta**, **laatu**, **nopeus**, **tietosuoja** ja **käyttötarkoitus**.
-- Opiskelija ymmärtää, että ammattilainen ei valitse mallia pelkän suosion tai hinnan perusteella, vaan testaa ja dokumentoi havaintonsa.
+- Opiskelija ymmärtää, että vastuullinen käyttäjä ei valitse mallia pelkän suosion tai hinnan perusteella, vaan testaa ja dokumentoi havaintonsa.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälymallin valinta on ammatillinen päätös. Oikea valinta riippuu tehtävästä, datasta, budjetista, tietosuojasta ja siitä, missä ympäristössä työtä tehdään. ”ChatGPT on paras” tai ”halvin on paras” eivät ole ammatillisia perusteluja.
+**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että tekoälymallin valinta on asiallinen päätös. Oikea valinta riippuu tehtävästä, datasta, budjetista, tietosuojasta ja siitä, missä ympäristössä työtä tehdään. ”ChatGPT on paras” tai ”halvin on paras” eivät ole asiallisia perusteluja.
 
 ---
 
@@ -31,9 +33,9 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää, ettei tekoälytyök
 
 ### Ydinviesti: malleja on monia, ja jokaisella on oma käyttötarkoituksensa
 
-Oppitunnin alussa kannattaa muistuttaa opiskelijoita edellisestä lohkosta: ChatGPT, Claude ja Copilot ovat tunnettuja työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Nyt tarkastellaan muita malleja ja palveluita sekä sitä, miten ammattilainen tekee valinnan niiden välillä.
+Oppitunnin alussa kannattaa muistuttaa opiskelijoita edellisestä lohkosta: ChatGPT, Claude ja Copilot ovat tunnettuja työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Nyt tarkastellaan muita malleja ja palveluita sekä sitä, miten vastuullinen käyttäjä tekee valinnan niiden välillä.
 
-> **Ammattilainen ei kysy vain, mikä malli on paras. Hän kysyy: mikä malli sopii tähän tehtävään, tällä datalla ja näillä rajoituksilla?**
+> **Vastuullinen käyttäjä ei kysy vain, mikä malli on paras. Hän kysyy: mikä malli sopii tähän tehtävään, tällä datalla ja näillä rajoituksilla?**
 
 Korosta opiskelijoille:
 
@@ -49,7 +51,7 @@ Korosta opiskelijoille:
 | Malli tai palvelu | Mahdollinen vahvuus | Mahdollinen rajoitus | Sopiva opetusesimerkki |
 | --- | --- | --- | --- |
 | **Gemini** | Helppo kokeilla, usein nopea ja käyttökelpoinen yleisiin tehtäviin. | Tulosten laatu ja käyttöehdot pitää arvioida tehtäväkohtaisesti. | Lyhyt tekstin tiivistys, ideointi tai vertailutehtävä. |
-| **DeepSeek** | Voi olla nopea ja edullinen etenkin teknisissä tehtävissä ja koodissa. | Tietosuoja, datan sijainti ja käyttöehdot pitää arvioida erityisen tarkasti ennen ammatillista käyttöä. | Oman ei-arkaluontoisen koodin selittäminen tai luova testitehtävä. |
+| **DeepSeek** | Voi olla nopea ja edullinen etenkin teknisissä tehtävissä ja koodissa. | Tietosuoja, datan sijainti ja käyttöehdot pitää arvioida erityisen tarkasti ennen asiallista käyttöä. | Oman ei-arkaluontoisen koodin selittäminen tai luova testitehtävä. |
 | **Llama** | Voidaan ajaa paikallisesti tai organisaation omassa ympäristössä. | Vaatii asennuksen, laitteistoresursseja ja mallin valintaa. | Paikallisen mallin kokeilu Ollamalla tai LM Studiolla. |
 | **Mistral** | Sopii moniin kevyempiin ja paikallisiin kokeiluihin mallista riippuen. | Laatu, nopeus ja soveltuvuus riippuvat käytetystä malliversiosta ja ajotavasta. | Paikallinen yksityisyyttä korostava testitehtävä. |
 
@@ -61,9 +63,9 @@ Korosta opiskelijoille:
 
 ### Miksi tietosuoja on keskeinen osa mallin valintaa?
 
-Opiskelijoille pitää tehdä selväksi ero henkilökohtaisen kokeilun ja ammatillisen käytön välillä. Yksityishenkilö voi kokeilla erilaisia palveluita omalla, ei-arkaluontoisella aineistollaan. Työelämässä tilanne on toinen: työntekijä voi käsitellä oppilaiden, asiakkaiden, potilaiden, työntekijöiden tai yrityksen sisäisiä tietoja.
+Opiskelijoille pitää tehdä selväksi ero henkilökohtaisen kokeilun ja asiallisen käytön välillä. Yksityishenkilö voi kokeilla erilaisia palveluita omalla, ei-arkaluontoisella aineistollaan. Työelämässä tilanne on toinen: työntekijä voi käsitellä oppilaiden, asiakkaiden, potilaiden, työntekijöiden tai yrityksen sisäisiä tietoja.
 
-> **Henkilökohtaisessa käytössä voi kokeilla. Ammatillisessa käytössä täytyy tietää, mihin data menee.**
+> **Henkilökohtaisessa käytössä voi kokeilla. Asiallisessa käytössä täytyy tietää, mihin data menee.**
 
 Kun tekoälypalvelua käytetään työssä, opiskelijan pitäisi osata kysyä:
 
@@ -76,13 +78,13 @@ Kun tekoälypalvelua käytetään työssä, opiskelijan pitäisi osata kysyä:
 
 ### DeepSeek ja tietosuojakeskustelu
 
-DeepSeek kannattaa käsitellä opetuksessa hyvänä esimerkkinä siitä, että tekninen hyöty ei yksin riitä työkalun valinnan perusteeksi. Malli voi olla nopea, halpa tai teknisesti kiinnostava, mutta jos data siirtyy palveluun, jonka tietosuojakäytännöt eivät sovi organisaation vaatimuksiin, käyttö voi olla ammatillisesti väärä valinta.
+DeepSeek kannattaa käsitellä opetuksessa hyvänä esimerkkinä siitä, että tekninen hyöty ei yksin riitä työkalun valinnan perusteeksi. Malli voi olla nopea, halpa tai teknisesti kiinnostava, mutta jos data siirtyy palveluun, jonka tietosuojakäytännöt eivät sovi organisaation vaatimuksiin, käyttö voi olla asiallisesti väärä valinta.
 
 **Esimerkki opetukseen**
 
 Omaan harjoituskoodiin tai luovaan tekstiin DeepSeek voi olla kokeilukelpoinen. Oppilaiden, potilaiden, asiakkaiden tai yrityksen sisäisten tietojen käsittelyyn sitä ei pidä käyttää ilman organisaation tietosuoja-arviointia ja hyväksyntää.
 
-Tärkeä muotoilu opiskelijoille: älä opeta yksinkertaisesti, että jokin palvelu on ”hyvä” tai ”kielletty”. Opeta, että ammattilainen tarkistaa käyttöehdot, datan sijainnin, organisaation ohjeet ja soveltuvan lainsäädännön ennen käyttöä.
+Tärkeä muotoilu opiskelijoille: älä opeta yksinkertaisesti, että jokin palvelu on ”hyvä” tai ”kielletty”. Opeta, että vastuullinen käyttäjä tarkistaa käyttöehdot, datan sijainnin, organisaation ohjeet ja soveltuvan lainsäädännön ennen käyttöä.
 
 ---
 
@@ -112,7 +114,7 @@ Paikallista mallia ei pidä esittää täydellisenä ratkaisuna kaikkiin tilante
 
 ### Väärinkäsitys 1: ”ChatGPT on paras.”
 
-**Korjaava näkökulma:** ChatGPT on tunnettu ja monipuolinen, mutta se ei tarkoita, että se olisi paras kaikkeen. Eri mallit sopivat eri tehtäviin. Ammattilainen vertailee vaihtoehtoja eikä valitse työkalua pelkän tunnettuuden perusteella.
+**Korjaava näkökulma:** ChatGPT on tunnettu ja monipuolinen, mutta se ei tarkoita, että se olisi paras kaikkeen. Eri mallit sopivat eri tehtäviin. Vastuullinen käyttäjä vertailee vaihtoehtoja eikä valitse työkalua pelkän tunnettuuden perusteella.
 
 ### Väärinkäsitys 2: ”DeepSeek on halpa, joten sitä kannattaa käyttää aina.”
 
@@ -128,7 +130,7 @@ Paikallista mallia ei pidä esittää täydellisenä ratkaisuna kaikkiin tilante
 
 ### Väärinkäsitys 5: ”Tietosuoja koskee vain yrityksiä.”
 
-**Korjaava näkökulma:** Tietosuoja koskee kaikkia, jotka käsittelevät toisten ihmisten tietoja. Opettaja, lääkäri, sosiaalityöntekijä, IT-tukihenkilö ja asiakaspalvelija voivat kaikki käsitellä arkaluontoista dataa. Ammattilaisena opiskelijan täytyy tietää, mitä dataa saa syöttää mihinkin palveluun.
+**Korjaava näkökulma:** Tietosuoja koskee kaikkia, jotka käsittelevät toisten ihmisten tietoja. Opettaja, lääkäri, sosiaalityöntekijä, IT-tukihenkilö ja asiakaspalvelija voivat kaikki käsitellä arkaluontoista dataa. Vastuullisena käyttäjänä opiskelijan täytyy tietää, mitä dataa saa syöttää mihinkin palveluun.
 
 ---
 
@@ -169,7 +171,7 @@ Paikallista mallia ei pidä esittää täydellisenä ratkaisuna kaikkiin tilante
 
 Palauta keskustelu työelämään:
 
-> Seuraavassa työpaikassa voi olla tarkat säännöt siitä, mitä tekoälymalleja saa käyttää ja millä datalla. Jos ymmärrät nämä erot nyt, osaat toimia ammattilaisena etkä vahingossa riko organisaation tietosuojakäytäntöjä.
+> Seuraavassa työpaikassa voi olla tarkat säännöt siitä, mitä tekoälymalleja saa käyttää ja millä datalla. Jos ymmärrät nämä erot nyt, osaat toimia vastuullisena käyttäjänä etkä vahingossa riko organisaation tietosuojakäytäntöjä.
 
 ---
 
@@ -269,7 +271,7 @@ Opiskelija:
 
 - valitsee mallin skenaarion mukaan
 - huomioi hinnan, tietosuojan, laadun, nopeuden ja datan luonteen
-- perustelee valintansa ammatillisesti
+- perustelee valintansa asiallisesti
 
 **Mitä opettaja etsii:** Opiskelija osaa esimerkiksi perustella, miksi potilastietojen käsittely vaatii organisaation hyväksymän tai paikallisen ratkaisun, vaikka jokin muu malli olisi halvempi.
 
@@ -281,7 +283,7 @@ Opiskelija:
 
 **Odotettu vastaus:** Opiskelija osaa antaa tehtäväkohtaisia perusteluja. Esimerkiksi edullisiin ja ei-arkaluontoisiin kokeiluihin voi sopia Gemini tai DeepSeek, tarkkuutta vaativiin tekstianalyyseihin Claude, paikalliseen ja yksityiseen käyttöön Llama tai Mistral paikallisesti.
 
-### Kysymys 2: Miksi DeepSeek voi olla ongelmallinen EU:n ammatillisessa käytössä?
+### Kysymys 2: Miksi DeepSeek voi olla ongelmallinen EU:n asiallisessa käytössä?
 
 **Odotettu vastaus:** Opiskelija ymmärtää, että kyse ei ole vain mallin teknisestä laadusta. Jos data siirtyy EU:n ulkopuolelle tai palvelun tietosuojakäytännöt eivät täytä organisaation vaatimuksia, sitä ei saa käyttää arkaluontoiseen tai henkilötietoja sisältävään aineistoon ilman asianmukaista arviointia ja hyväksyntää.
 
@@ -308,12 +310,12 @@ Opiskelija:
 **Vastaus:** Omaan ei-arkaluontoiseen koodiin, luovaan kirjoittamiseen, yleiseen ideointiin tai harjoitustehtäviin. Älä käytä sitä oppilaiden, potilaiden, asiakkaiden tai yrityksen luottamuksellisten tietojen käsittelyyn ilman organisaation hyväksyntää.
 
 **Kysymys: ”Onko DeepSeek kielletty?”**
-**Vastaus:** Ei välttämättä yksityisessä kokeilussa. Ammatillisessa käytössä ratkaisevaa on, mitä dataa käsitellään, missä dataa käsitellään ja mitä organisaation ohjeet sallivat.
+**Vastaus:** Ei välttämättä yksityisessä kokeilussa. Asiallisessa käytössä ratkaisevaa on, mitä dataa käsitellään, missä dataa käsitellään ja mitä organisaation ohjeet sallivat.
 
 **Kysymys: ”Voinko käyttää DeepSeekia koodiin?”**
 **Vastaus:** Voit käyttää sitä omaan harjoituskoodiin tai ei-arkaluontoiseen koodiin. Älä syötä siihen yrityksen suljettua lähdekoodia, salaisuuksia, API-avaimia, asiakastietoja tai muuta luottamuksellista aineistoa.
 
-**Kysymys: ”Miksi paikallinen malli kiinnostaa ammattilaisia?”**
+**Kysymys: ”Miksi paikallinen malli kiinnostaa kokeneita käyttäjiä?”**
 **Vastaus:** Koska data pysyy paremmin omassa hallinnassa. Paikallinen malli voi olla hyödyllinen silloin, kun yksityisyys ja kontrolli ovat tärkeämpiä kuin paras mahdollinen nopeus tai laatu.
 
 ---
@@ -340,7 +342,7 @@ Opiskelija:
 
 **Mitä opiskelija voi sanoa:** ”Eihän yhdellä promptilla ole väliä.”
 
-**Opettajan vastaus:** Yksi prompti voi sisältää henkilötietoja, potilastietoja tai yrityksen salaisuuksia. Ammattilaisena sinun pitää käsitellä dataa oikein jokaisessa yksittäisessä tilanteessa.
+**Opettajan vastaus:** Yksi prompti voi sisältää henkilötietoja, potilastietoja tai yrityksen salaisuuksia. Vastuullisena käyttäjänä sinun pitää käsitellä dataa oikein jokaisessa yksittäisessä tilanteessa.
 
 **Strategia:** Pyydä opiskelijaa alleviivaamaan esimerkkipromptista kaikki henkilötiedot ja arvioimaan, saisiko ne lähettää ulkoiseen palveluun.
 
@@ -350,7 +352,7 @@ Opiskelija:
 
 Seuraavalla tunnilla opiskelijat harjoittelevat, miten tekoälylle annetaan tarkkoja ohjeita. Tämä lohko luo pohjan promptaukselle: ensin opiskelijan pitää tietää, mitä mallia hän käyttää ja miksi. Sen jälkeen hän voi opetella ohjaamaan mallia tehokkaammin.
 
-**Opettajan muistutus:** Tämän lohkon ydin ei ole mallien nimien muistaminen. Ydin on valintataito: ammattilainen arvioi mallin sopivuuden tehtävän, datan ja riskien perusteella.
+**Opettajan muistutus:** Tämän lohkon ydin ei ole mallien nimien muistaminen. Ydin on valintataito: vastuullinen käyttäjä arvioi mallin sopivuuden tehtävän, datan ja riskien perusteella.
 
 ---
 
@@ -362,6 +364,27 @@ Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Jos sinulla olisi sama tehtävä mutta eri data — ensin oma harjoituskoodi ja sitten potilastiedot — muuttuisiko käyttämäsi tekoälymalli? Miksi?
 
-> **Lopetuslause opettajalle:** Teknisesti toimiva ei aina tarkoita ammatillisesti hyväksyttävää. Oikea tekoälymalli valitaan sekä tehtävän että vastuun perusteella.
+> **Lopetuslause opettajalle:** Teknisesti toimiva ei aina tarkoita asiallisesti hyväksyttävää. Oikea tekoälymalli valitaan sekä tehtävän että vastuun perusteella.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **datavirtakaavio ja käyttöpäätös**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija piirtää yhden skenaarion datavirran ja tekee aineiston luonteeseen perustuvan käyttöpäätöksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmiita data- ja riskikortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää paikallisen tai avoimen vaihtoehdon ja vertailee datavirtaa. Syventävä työ ei kasvata pakollista ydintuotosta.

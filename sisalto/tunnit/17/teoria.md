@@ -168,3 +168,11 @@ Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei vielä toimi täyde
 Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

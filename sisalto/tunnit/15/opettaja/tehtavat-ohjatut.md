@@ -46,7 +46,7 @@ Kysy opiskelijoilta:
 
 - Mistä huomaa, ettei botilla ole tarkkaa tietoa?
 - Arvaileeko botti vai kertooko se, ettei tiedä?
-- Voisiko tällaiseen vastaukseen luottaa ammatillisessa käytössä?
+- Voisiko tällaiseen vastaukseen luottaa asiallisessa käytössä?
 
 #### Vaihe 3: Tietopohjadokumentin lisääminen noin 5 minuuttia
 

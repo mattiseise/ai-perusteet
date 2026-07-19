@@ -131,7 +131,7 @@ Tehtävän tavoitteena on näyttää konkreettisesti, miten **generatiivinen tek
 2. **Testi 1: Johdonmukaisuus noin 5 minuuttia**
 
    1. Anna ChatGPT:lle sama kysymys kaksi kertaa.
-   2. Käytä esimerkiksi promptia: `Kerro minulle viisi vinkkiä web-kehitykseen.`
+   2. Käytä esimerkiksi promptia: `Kerro minulle viisi vinkkiä hyvään esiintymiseen.`
    3. Näytä ensimmäinen vastaus ja pyydä sen jälkeen uusi vastaus samalla promptilla.
    4. Kysy opiskelijoilta: **Muuttuiko vastaus? Miksi näin saattoi tapahtua?**
    5. Selitä lyhyesti: “Kielimalli tuottaa tekstiä valitsemalla sanoja ja ilmauksia todennäköisyyksien perusteella. Siksi sama prompti ei aina tuota täysin samaa vastausta.”
@@ -178,7 +178,7 @@ Tehtävän jälkeen opiskelijat ymmärtävät, että:
 
 ### Tavoite
 
-Tehtävän tavoitteena on saada opiskelijat pohtimaan, miten tekoälyn kehitys voi vaikuttaa heidän tulevaan ammattiinsa ja millaisia taitoja työelämässä tarvitaan myös tekoälyn kehittyessä.
+Tehtävän tavoitteena on saada opiskelijat pohtimaan, miten tekoälyn kehitys voi vaikuttaa eri ammatteihin ja aloihin sekä millaisia taitoja työelämässä tarvitaan myös tekoälyn kehittyessä.
 
 **Opettajan painotus:** Ohjaa keskustelua pois pelkästä “tekoäly vie työt” -ajattelusta. Tärkeämpää on pohtia, miten työn sisältö muuttuu ja mitä taitoja ihmiseltä tarvitaan tekoälyn rinnalla.
 
@@ -199,11 +199,11 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 1. **Ryhmät keskustelevat noin 10 minuuttia.**
 
 
-   Pyydä ryhmiä pohtimaan omaa ammattiaan seuraavien kysymysten avulla:
+   Pyydä ryhmiä pohtimaan ryhmälle annettua ammattia seuraavien kysymysten avulla:
 
    - **Nykyhetki:** Mitä tekoäly tekee tai voisi tehdä tässä ammatissa jo nyt?
    - **Tulevaisuus:** Jos AGI joskus saavutetaan, miten se voisi muuttaa tätä työtä?
-   - **Ammatilliset taidot:** Mitkä taidot jäävät ihmisille tärkeiksi, vaikka tekoäly kehittyisi?
+   - **Käytännön taidot:** Mitkä taidot jäävät ihmisille tärkeiksi, vaikka tekoäly kehittyisi?
    - **Riskit ja mahdollisuudet:** Mitä hyötyä tekoälystä voisi olla tässä työssä? Mitä riskejä siihen voisi liittyä?
 2. **Ryhmät valmistelevat lyhyen esityksen.**
 
@@ -221,7 +221,7 @@ Jaa luokka pienryhmiin. Anna jokaiselle ryhmälle yksi ammatti tai rooli eri alo
 
    - Tekoäly voi automatisoida rutiinitehtäviä ja tukea asiantuntijatyötä.
    - Strateginen ajattelu, ongelmanratkaisu, vastuun kantaminen ja ihmisten kanssa toimiminen säilyvät tärkeinä taitoina.
-   - Ammattilaisen kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.
+   - Vastuullisen käyttäjän kannattaa oppia tekemään yhteistyötä tekoälyn kanssa sen sijaan, että hän yrittäisi kilpailla tekoälyn kanssa kaikissa tehtävissä.
 
 ### Ryhmän vastauspohja
 

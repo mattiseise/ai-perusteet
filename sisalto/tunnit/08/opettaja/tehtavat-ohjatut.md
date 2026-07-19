@@ -54,7 +54,7 @@ Kokoa taululle kaksi listaa:
 - **Tekoäly perusteltu:** monimutkainen, epäselvä, tulkintaa vaativa tai paljon aikaa säästävä tehtävä.
 - **Kevyempi ratkaisu riittää:** yksinkertainen, toistuva, täysin vakiomuotoinen tai helposti haettava tieto.
 
-> **Pääpointti:** Vastuullinen tekoälyn käyttö tarkoittaa myös sitä, että tekoälyä ei käytetä turhaan. Hyvä ammattilainen valitsee tehtävään sopivan työkalun, ei aina raskainta mahdollista ratkaisua.
+> **Pääpointti:** Vastuullinen tekoälyn käyttö tarkoittaa myös sitä, että tekoälyä ei käytetä turhaan. Hyvä vastuullinen käyttäjä valitsee tehtävään sopivan työkalun, ei aina raskainta mahdollista ratkaisua.
 
 ### Odotettu oppimistulos
 
@@ -70,13 +70,13 @@ Kokoa taululle kaksi listaa:
 ### Avainviesti 1: Tekoäly ei ole neutraali väline
 
 - Jokaisen vastauksen taustalla on muiden ihmisten työtä: koulutusdataa, jonka tekijöiltä ei aina ole kysytty lupaa, sekä datan merkitsijöiden näkymätöntä työtä.
-- ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu — ammattilainen tuntee työkalunsa taustat ja tekee perusteltuja valintoja.
+- ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu — vastuullinen käyttäjä tuntee työkalunsa taustat ja tekee perusteltuja valintoja.
 
 ### Avainviesti 2: Vastuullinen käyttö huomioi myös ympäristövaikutukset
 
 - Generatiivisen tekoälyn käyttö kuluttaa laskentatehoa, energiaa ja datakeskusresursseja.
 - Kaikkiin tehtäviin ei tarvita raskasta tekoälyratkaisua.
-- Hyvä ammattilainen valitsee tehtävään sopivan työkalun: joskus se on generatiivinen tekoäly, joskus ohjesivu, hakutoiminto, mallipohja tai sääntöpohjainen automaatio.
+- Hyvä vastuullinen käyttäjä valitsee tehtävään sopivan työkalun: joskus se on generatiivinen tekoäly, joskus ohjesivu, hakutoiminto, mallipohja tai sääntöpohjainen automaatio.
 
 ---
 
@@ -84,11 +84,11 @@ Kokoa taululle kaksi listaa:
 
 ### Jos opiskelijat sanovat: “Ympäristövaikutukset ovat niin pieniä, ettei niillä ole väliä.”
 
-> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen ammattilainen ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
+> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen vastuullinen käyttäjä ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
 
 ### Jos opiskelijat sanovat: “Eihän tämä ole minun ongelmani — palveluntarjoaja teki sen.”
 
-> Kun käytät työkalua työssäsi, osallistut myös sen käyttöön liittyviin valintoihin. Ammattilainen ei voi ulkoistaa eettistä harkintaa kokonaan palveluntarjoajalle.
+> Kun työkalua käytetään, käyttäjä osallistuu myös käyttötilanteen valintoihin. Vastuullinen käyttäjä ei voi ulkoistaa eettistä harkintaa kokonaan palveluntarjoajalle.
 
 ---
 

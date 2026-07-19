@@ -2,20 +2,20 @@
 
 ## Osaamistavoitteet
 
-Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnittelumallit** ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on, että agentti ei vain käytä tekoälyä, vaan sen toiminta täytyy suunnitella: miten se ajattelee, missä järjestyksessä se toimii ja milloin tehtävä kannattaa jakaa usealle erikoistuneelle agentille.
+Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnittelumallit** ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on, että agentin havaittava toiminta täytyy suunnitella: miten työkalut kutsutaan, miten tulos tai virhe käsitellään ja milloin tehtävä kannattaa jakaa usealle erikoistuneelle agentille. Mallin raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.
 
 ### Muistaa ja ymmärtää
 
 - Opiskelija ymmärtää, mitä **ReAct** tarkoittaa: agentti vuorottelee päättelyn ja toiminnan välillä.
-- Opiskelija ymmärtää, mitä **ketjuajattelu** tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.
+- Opiskelija ymmärtää, mitä **eksplisiittinen työnkulku** tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.
 - Opiskelija ymmärtää, mitä **moniagenttijärjestelmä** tarkoittaa: tehtävä jaetaan useille erikoistuneille agenteille.
 - Opiskelija tunnistaa, että eri suunnittelumallit sopivat erilaisiin tehtäviin.
 
 ### Soveltaa ja analysoida
 
-- Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct, ketjuajattelu vai moniagenttirakenne.
-- Opiskelija osaa kuvata agentin päättelyn vaiheina tai lokina.
-- Opiskelija osaa tunnistaa tilanteita, joissa ReAct voi jäädä kiertämään silmukkaa tai ketjuajattelu voi olla liian jäykkä.
+- Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct, eksplisiittinen työnkulku vai moniagenttirakenne.
+- Opiskelija osaa kuvata havaittavan työnkulun ja lokin: lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja toiminto.
+- Opiskelija osaa tunnistaa tilanteita, joissa ReAct voi jäädä kiertämään silmukkaa tai eksplisiittinen työnkulku voi olla liian jäykkä.
 
 ### Luoda ja arvioida
 
@@ -31,44 +31,43 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnit
 
 ### Ydinviesti: suunnittelumallit opettavat agentille, miten toimia
 
-Suunnittelumallit auttavat opiskelijaa ymmärtämään, että agentin “ajattelu” ei ole taikuutta. Se voidaan jäsentää toimintamalleiksi, joita voi suunnitella, testata ja arvioida.
+Suunnittelumallit auttavat opiskelijaa muuttamaan agentin toiminnan näkyväksi ja testattavaksi. Havaittavat työkalukutsut, tulokset, virheet ja toiminnot voidaan jäsentää toimintamalleiksi ilman mallin piilotetun ajatusketjun tallentamista.
 
 Kolme keskeistä mallia ovat:
 
-- **ReAct:** joustava ja iteratiivinen malli, jossa agentti ajattelee, toimii, havainnoi ja ajattelee uudelleen.
-- **Ketjuajattelu:** systemaattinen malli, jossa agentti jakaa tehtävän vaiheisiin ja etenee järjestyksessä.
+- **ReAct:** joustava ja iteratiivinen malli, jossa agentti kutsuu työkalua, havainnoi tuloksen tai virheen ja valitsee seuraavan toiminnon.
+- **Eksplisiittinen työnkulku:** systemaattinen malli, jossa agentti jakaa tehtävän vaiheisiin ja etenee järjestyksessä.
 - **Moniagenttijärjestelmät:** jaetun työn malli, jossa eri agentit erikoistuvat eri osatehtäviin.
 
 > **Hyvä päättelymalli tekee agentin toiminnasta ennakoitavampaa, jäljitettävämpää ja helpommin korjattavaa.**
 
-### ReAct — ajattele, toimi ja tarkista
+### ReAct — kutsu työkalua, tarkista tulos ja jatka
 
-**ReAct** tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee silmukassa: se ajattelee, toimii, havainnoi tuloksen ja päättää seuraavan askeleen.
+**ReAct** tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee rajatussa silmukassa: se valitsee työkalun, saa tuloksen tai virheen ja päättää seuraavan toiminnon. Valinnasta voidaan tallentaa lyhyt päätösperustelu, mutta ei raakaa chain-of-thoughtia.
 
-ReAct-malli vastaa hyvin ihmisen ongelmanratkaisua:
+ReAct-toteutuksen havaittava kierros:
 
-1. **Ajattele:** Mitä tarvitsen tämän tehtävän ratkaisemiseen?
-2. **Toimi:** Käytä työkalua, hae tietoa tai suorita seuraava vaihe.
-3. **Havainnoi:** Mitä tapahtui? Sainko hyödyllisen tuloksen?
-4. **Ajattele uudelleen:** Riittääkö tieto vai tarvitaanko uusi toimenpide?
-5. **Toimi seuraavaksi:** Jatka tai vastaa käyttäjälle.
+1. **Lyhyt päätösperustelu:** Mitä tietoa tai toimintoa tarvitaan seuraavaksi?
+2. **Rakenteinen työkalukutsu:** Työkalun nimi ja vain tarvittavat parametrit.
+3. **Tulos tai virhe:** Mitä työkalu palautti?
+4. **Seuraava toiminto:** Jatka, vastaa, keskeytä tai eskaloi.
 
 **Esimerkki opetukseen**
 
-Anna opiskelijoille tehtävä: ”Asiakas kysyy, onko tuotetta varastossa.” Pyydä heitä kirjoittamaan ReAct-loki: mitä agentti ajattelee, mitä työkalua se käyttää, mitä se havaitsee ja miten se vastaa.
+Anna opiskelijoille tehtävä: ”Asiakas kysyy, onko tuotetta varastossa.” Pyydä heitä kirjoittamaan havaittava loki: lyhyt päätösperustelu, rakenteinen varastohaku, palautettu tulos tai virhe ja lähetetty vastaus. Sano ääneen, ettei tehtävässä kirjoiteta mallin sisäistä ajatusketjua.
 
 ReAct on hyödyllinen silloin, kun agentti ei tiedä etukäteen kaikkia vaiheita. Se voi edetä havaintojen perusteella ja muuttaa suuntaa, jos ensimmäinen toimenpide ei auta.
 
 | ReAct-vaihe | Mitä agentti tekee? | Esimerkki |
 | --- | --- | --- |
-| **Ajattelu** | Päättelee, mitä tietoa tarvitaan. | ”Tarvitsen varastosaldon.” |
-| **Toiminta** | Kutsuu työkalua tai hakee tietoa. | Agentti kutsuu varasto-API:a. |
-| **Havainto** | Arvioi työkalun palauttaman tuloksen. | ”Tuotetta on 5 kappaletta.” |
-| **Seuraava päätös** | Päättää, vastaako käyttäjälle vai jatkaako tutkimista. | ”Tieto riittää. Vastaan asiakkaalle.” |
+| **Päätösperustelu** | Kertoo lyhyesti, miksi kutsu tarvitaan. | ”Ajantasainen saldo vaatii varastohaun.” |
+| **Työkalukutsu** | Kirjaa työkalun ja rakenteiset parametrit. | `hae_varastosaldo({"tuote_id":"123"})` |
+| **Tulos tai virhe** | Tallentaa työkalun palauttaman havainnon. | `{"saldo":5}` |
+| **Toiminto** | Kirjaa, vastataanko, jatketaanko vai eskaloidaanko. | ”Lähetä asiakkaalle saldo 5.” |
 
-### Ketjuajattelu — vaihe vaiheelta etenevä malli
+### Eksplisiittinen työnkulku — vaihe vaiheelta etenevä malli
 
-**Ketjuajattelussa** agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.
+**Eksplisiittinen työnkulkussa** agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.
 
 **1. Ongelma:** Mitä asiakas kysyy?
 
@@ -78,9 +77,9 @@ ReAct on hyödyllinen silloin, kun agentti ei tiedä etukäteen kaikkia vaiheita
 
 **4. Päätös:** Mikä vaihtoehto valitaan ja miksi?
 
-Ketjuajattelu on hyödyllinen esimerkiksi palautuspyynnön käsittelyssä. Agentti tarkistaa ensin palautusajan, sitten palautuskäytännön, sitten asiakkaan oikeuden palautukseen ja vasta lopuksi muodostaa vastauksen.
+Eksplisiittinen työnkulku on hyödyllinen esimerkiksi palautuspyynnön käsittelyssä. Agentti tarkistaa ensin palautusajan, sitten palautuskäytännön, sitten asiakkaan oikeuden palautukseen ja vasta lopuksi muodostaa vastauksen.
 
-> **Tärkeää:** Ketjuajattelussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.
+> **Tärkeää:** Eksplisiittinen työnkulkussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.
 
 ### Moniagenttijärjestelmät — jaettu vastuu
 
@@ -107,9 +106,9 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 > Joustava päättely tarvitsee rajat. Muuten joustavuus muuttuu hallitsemattomaksi silmukaksi.
 
-### Väärinkäsitys 2: ”Ketjuajattelu on huono, koska se on jäykkä.”
+### Väärinkäsitys 2: ”Eksplisiittinen työnkulku on huono, koska se on jäykkä.”
 
-**Korjaava näkökulma:** Ketjuajattelun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.
+**Korjaava näkökulma:** Eksplisiittinen työnkulkun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.
 
 ### Väärinkäsitys 3: ”Moniagenttijärjestelmä on aina parempi kuin yksi agentti.”
 
@@ -123,24 +122,24 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 ## Luokkatehtävien ohjeistus
 
-### TT-A: ReAct-lokin kirjoittaminen
+### TT-A: havaittavan ReAct-lokin kirjoittaminen
 
-**Tavoite:** Opiskelija ymmärtää ReAct-mallin ajattelu–toiminta–havainto-silmukan.
+**Tavoite:** Opiskelija ymmärtää ReAct-toteutuksen työkalukutsu–tulos–toiminto-silmukan.
 
-**Tehtävä:** Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan agentin ReAct-loki. Lokissa pitää näkyä, mitä agentti ajattelee, mitä työkalua se käyttää, mitä se havaitsee ja miten se jatkaa.
+**Tehtävä:** Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan havaittava ReAct-loki. Lokissa näkyvät lyhyt päätösperustelu, työkalun nimi ja rakenteiset parametrit, tulos tai virhe sekä seuraava toiminto. Mallin sisäistä raakaa chain-of-thoughtia ei kirjoiteta.
 
 | Vaihe | Opiskelijan vastaus |
 | --- | --- |
-| **Ajattelu** | Mitä agentti tarvitsee seuraavaksi? |
-| **Toiminta** | Mitä työkalua agentti käyttää? |
-| **Havainto** | Mitä työkalu palauttaa? |
-| **Seuraava päätös** | Riittääkö tieto vai tarvitaanko uusi vaihe? |
+| **Lyhyt päätösperustelu** | Miksi tietoa tai toimintoa tarvitaan? |
+| **Rakenteinen työkalukutsu** | Mitä työkalua käytetään ja millä parametreilla? |
+| **Tulos tai virhe** | Mitä työkalu palauttaa? |
+| **Toiminto** | Vastataanko, jatketaanko, keskeytetäänkö vai eskaloidaanko? |
 
 **Aika-arvio:** 15–20 minuuttia
 
 ---
 
-### TT-B: Ketjuajattelun vaiheistus
+### TT-B: Eksplisiittinen työnkulkun vaiheistus
 
 **Tavoite:** Opiskelija osaa purkaa monimutkaisen tehtävän selkeiksi vaiheiksi.
 
@@ -163,12 +162,12 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 **Tavoite:** Opiskelija osaa valita tehtävään sopivan päättelymallin ja perustella valintansa.
 
-**Tehtävä:** Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin, ketjuajattelun tai moniagenttijärjestelmän ja perustelevat valintansa.
+**Tehtävä:** Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin, eksplisiittinen työnkulkun tai moniagenttijärjestelmän ja perustelevat valintansa.
 
 | Tilanne | Sopiva malli | Perustelu |
 | --- | --- | --- |
 | Agentti tutkii, miksi tilauksia katoaa satunnaisesti matkalla. | ReAct | Agentti tarvitsee havaintoihin perustuvaa etenemistä ja voi vaihtaa suuntaa tulosten mukaan. |
-| Agentti käsittelee palautuspyynnön. | Ketjuajattelu | Prosessi etenee selkeissä vaiheissa: tarkista aika, tarkista ehdot, tee päätös ja vastaa. |
+| Agentti käsittelee palautuspyynnön. | Eksplisiittinen työnkulku | Prosessi etenee selkeissä vaiheissa: tarkista aika, tarkista ehdot, tee päätös ja vastaa. |
 | Agentti tuottaa laajan markkinaraportin, jossa tarvitaan tiedonhakua, analyysiä, kirjoittamista ja tarkistusta. | Moniagenttijärjestelmä | Tehtävä voidaan jakaa erikoistuneille agenteille, kuten tutkijalle, analysoijalle, kirjoittajalle ja tarkistajalle. |
 
 **Aika-arvio:** 20–25 minuuttia
@@ -196,23 +195,23 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 ## CFU-kysymykset
 
 1. **ReAct:** Miksi ReAct-mallissa agentti ei tee kaikkia toimintoja heti kerralla?
-2. **Ketjuajattelu:** Millaisiin tehtäviin vaiheittainen eteneminen sopii parhaiten?
+2. **Eksplisiittinen työnkulku:** Millaisiin tehtäviin vaiheittainen eteneminen sopii parhaiten?
 3. **Moniagentti:** Miksi moniagenttijärjestelmä voi olla tehokas mutta myös vaikeampi hallita?
-4. **Valinta:** Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää ketjuajattelua?
+4. **Valinta:** Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää eksplisiittinen työnkulkua?
 5. **Rajoitukset:** Miksi ReAct-agentille kannattaa asettaa enimmäismäärä iteraatioita?
 
 ---
 
 ## Opettajan vihjeet
 
-### Jos opiskelija sekoittaa ReActin ja ketjuajattelun
+### Jos opiskelija sekoittaa ReActin ja eksplisiittinen työnkulkun
 
 Käytä seuraavaa erottelua:
 
 - **ReAct:** agentti päättää seuraavan askeleen havaintojen perusteella.
-- **Ketjuajattelu:** agentti etenee ennalta määriteltyjen vaiheiden mukaan.
+- **Eksplisiittinen työnkulku:** agentti etenee ennalta määriteltyjen vaiheiden mukaan.
 
-> ReAct sopii tutkimiseen. Ketjuajattelu sopii prosessiin.
+> ReAct sopii tutkimiseen. Eksplisiittinen työnkulku sopii prosessiin.
 
 ### Jos opiskelija haluaa tehdä heti moniagenttijärjestelmän
 
@@ -231,7 +230,7 @@ Pyydä opiskelijaa nimeämään konkreettinen työkalu ja konkreettinen havainto
 - Mitä dataa työkalu palauttaa?
 - Miten tämä muuttaa agentin seuraavaa päätöstä?
 
-### Jos ketjuajattelun vaiheet jäävät liian epämääräisiksi
+### Jos eksplisiittinen työnkulkun vaiheet jäävät liian epämääräisiksi
 
 Pyydä opiskelijaa kirjoittamaan jokainen vaihe verbinä:
 
@@ -245,10 +244,31 @@ Pyydä opiskelijaa kirjoittamaan jokainen vaihe verbinä:
 
 ## Oppitunnin lopetus
 
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tekee agentista joustavan, ketjuajattelu tekee siitä järjestelmällisen ja moniagenttirakenne mahdollistaa erikoistumisen. Mikään malli ei ole aina paras. Malli valitaan tehtävän mukaan.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tekee agentista joustavan, eksplisiittinen työnkulku tekee siitä järjestelmällisen ja moniagenttirakenne mahdollistaa erikoistumisen. Mikään malli ei ole aina paras. Malli valitaan tehtävän mukaan.
 
 Hyvä päätöskysymys tunnin loppuun:
 
 > **Pohdi:** Tarvitseeko oma agenttisi joustavaa tutkimista, vaiheittaista prosessia vai useamman erikoistuneen agentin yhteistyötä?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **työnkulkujälki: kutsut, tulokset, toiminnot, virheet ja lyhyet perustelut**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija rakentaa nelivaiheisen suoritusjäljen työkalukutsuineen, tuloksineen ja lyhyine perusteluineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija järjestää annetut vaihe- ja lokikortit. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää orkestroidun sivupolun ilman raakaa ajatusketjua. Syventävä työ ei kasvata pakollista ydintuotosta.

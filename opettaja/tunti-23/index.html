@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi — Opettajan opas — AI · Perusteet</title>
-<meta name="description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin ajattelemaan ja toimimaan järkevästi…">
+<title>Suunnittelumallit — ReAct, työnkulku ja orkestrointi — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin havaittavan toiminnan järkeväksi…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-23/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin ajattelemaan ja toimimaan järkevästi…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-23/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin ajattelemaan ja toimimaan järkevästi…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", "description": "Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin ajattelemaan ja toimimaan järkevästi…", "url": "https://aiperusteet.fi/opettaja/tunti-23/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "toinen aste", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Suunnittelumallit — ReAct, työnkulku ja orkestrointi — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin havaittavan toiminnan järkeväksi…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-23/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Suunnittelumallit — ReAct, työnkulku ja orkestrointi — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin havaittavan toiminnan järkeväksi…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Suunnittelumallit — ReAct, työnkulku ja orkestrointi", "description": "Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin havaittavan toiminnan järkeväksi…", "url": "https://aiperusteet.fi/opettaja/tunti-23/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 23"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,21 +18,21 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 23</span></div><div class="lesson-title">Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-23/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-23/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-23/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-23/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-23/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 23</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 23</span></div><div class="lesson-title">Suunnittelumallit — ReAct, työnkulku ja orkestrointi</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-23/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-23/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-23/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-23/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-23/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-23-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-23-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-23-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-23-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-23-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-23-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-23-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-23-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 23</h1>
 <div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
-<p>Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten <strong>suunnittelumallit</strong> ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on, että agentti ei vain käytä tekoälyä, vaan sen toiminta täytyy suunnitella: miten se ajattelee, missä järjestyksessä se toimii ja milloin tehtävä kannattaa jakaa usealle erikoistuneelle agentille.</p>
+<p>Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten <strong>suunnittelumallit</strong> ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on, että agentin havaittava toiminta täytyy suunnitella: miten työkalut kutsutaan, miten tulos tai virhe käsitellään ja milloin tehtävä kannattaa jakaa usealle erikoistuneelle agentille. Mallin raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
 <ul>
 <li>Opiskelija ymmärtää, mitä <strong>ReAct</strong> tarkoittaa: agentti vuorottelee päättelyn ja toiminnan välillä.</li>
-<li>Opiskelija ymmärtää, mitä <strong>ketjuajattelu</strong> tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.</li>
+<li>Opiskelija ymmärtää, mitä <strong>eksplisiittinen työnkulku</strong> tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.</li>
 <li>Opiskelija ymmärtää, mitä <strong>moniagenttijärjestelmä</strong> tarkoittaa: tehtävä jaetaan useille erikoistuneille agenteille.</li>
 <li>Opiskelija tunnistaa, että eri suunnittelumallit sopivat erilaisiin tehtäviin.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
 <ul>
-<li>Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct, ketjuajattelu vai moniagenttirakenne.</li>
-<li>Opiskelija osaa kuvata agentin päättelyn vaiheina tai lokina.</li>
-<li>Opiskelija osaa tunnistaa tilanteita, joissa ReAct voi jäädä kiertämään silmukkaa tai ketjuajattelu voi olla liian jäykkä.</li>
+<li>Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct, eksplisiittinen työnkulku vai moniagenttirakenne.</li>
+<li>Opiskelija osaa kuvata havaittavan työnkulun ja lokin: lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja toiminto.</li>
+<li>Opiskelija osaa tunnistaa tilanteita, joissa ReAct voi jäädä kiertämään silmukkaa tai eksplisiittinen työnkulku voi olla liian jäykkä.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
 <ul>
@@ -42,27 +42,26 @@
 </ul>
 <p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että agentin päättelyä täytyy ohjata. Hyvä agentti ei hypi sattumanvaraisesti työkalusta toiseen, vaan noudattaa tehtävään sopivaa päättelymallia.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: suunnittelumallit opettavat agentille, miten toimia</h3></div><div class="task-card-body">
-<p>Suunnittelumallit auttavat opiskelijaa ymmärtämään, että agentin “ajattelu” ei ole taikuutta. Se voidaan jäsentää toimintamalleiksi, joita voi suunnitella, testata ja arvioida.</p>
+<p>Suunnittelumallit auttavat opiskelijaa muuttamaan agentin toiminnan näkyväksi ja testattavaksi. Havaittavat työkalukutsut, tulokset, virheet ja toiminnot voidaan jäsentää toimintamalleiksi ilman mallin piilotetun ajatusketjun tallentamista.</p>
 <p>Kolme keskeistä mallia ovat:</p>
 <ul>
-<li><strong>ReAct:</strong> joustava ja iteratiivinen malli, jossa agentti ajattelee, toimii, havainnoi ja ajattelee uudelleen.</li>
-<li><strong>Ketjuajattelu:</strong> systemaattinen malli, jossa agentti jakaa tehtävän vaiheisiin ja etenee järjestyksessä.</li>
+<li><strong>ReAct:</strong> joustava ja iteratiivinen malli, jossa agentti kutsuu työkalua, havainnoi tuloksen tai virheen ja valitsee seuraavan toiminnon.</li>
+<li><strong>Eksplisiittinen työnkulku:</strong> systemaattinen malli, jossa agentti jakaa tehtävän vaiheisiin ja etenee järjestyksessä.</li>
 <li><strong>Moniagenttijärjestelmät:</strong> jaetun työn malli, jossa eri agentit erikoistuvat eri osatehtäviin.</li>
 </ul>
 <blockquote class="pause"><p><strong>Hyvä päättelymalli tekee agentin toiminnasta ennakoitavampaa, jäljitettävämpää ja helpommin korjattavaa.</strong></p>
 </blockquote>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>ReAct — ajattele, toimi ja tarkista</h3></div><div class="task-card-body">
-<p><strong>ReAct</strong> tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee silmukassa: se ajattelee, toimii, havainnoi tuloksen ja päättää seuraavan askeleen.</p>
-<p>ReAct-malli vastaa hyvin ihmisen ongelmanratkaisua:</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>ReAct — kutsu työkalua, tarkista tulos ja jatka</h3></div><div class="task-card-body">
+<p><strong>ReAct</strong> tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee rajatussa silmukassa: se valitsee työkalun, saa tuloksen tai virheen ja päättää seuraavan toiminnon. Valinnasta voidaan tallentaa lyhyt päätösperustelu, mutta ei raakaa chain-of-thoughtia.</p>
+<p>ReAct-toteutuksen havaittava kierros:</p>
 <ol>
-<li><strong>Ajattele:</strong> Mitä tarvitsen tämän tehtävän ratkaisemiseen?</li>
-<li><strong>Toimi:</strong> Käytä työkalua, hae tietoa tai suorita seuraava vaihe.</li>
-<li><strong>Havainnoi:</strong> Mitä tapahtui? Sainko hyödyllisen tuloksen?</li>
-<li><strong>Ajattele uudelleen:</strong> Riittääkö tieto vai tarvitaanko uusi toimenpide?</li>
-<li><strong>Toimi seuraavaksi:</strong> Jatka tai vastaa käyttäjälle.</li>
+<li><strong>Lyhyt päätösperustelu:</strong> Mitä tietoa tai toimintoa tarvitaan seuraavaksi?</li>
+<li><strong>Rakenteinen työkalukutsu:</strong> Työkalun nimi ja vain tarvittavat parametrit.</li>
+<li><strong>Tulos tai virhe:</strong> Mitä työkalu palautti?</li>
+<li><strong>Seuraava toiminto:</strong> Jatka, vastaa, keskeytä tai eskaloi.</li>
 </ol>
 <p><strong>Esimerkki opetukseen</strong></p>
-<p>Anna opiskelijoille tehtävä: ”Asiakas kysyy, onko tuotetta varastossa.” Pyydä heitä kirjoittamaan ReAct-loki: mitä agentti ajattelee, mitä työkalua se käyttää, mitä se havaitsee ja miten se vastaa.</p>
+<p>Anna opiskelijoille tehtävä: ”Asiakas kysyy, onko tuotetta varastossa.” Pyydä heitä kirjoittamaan havaittava loki: lyhyt päätösperustelu, rakenteinen varastohaku, palautettu tulos tai virhe ja lähetetty vastaus. Sano ääneen, ettei tehtävässä kirjoiteta mallin sisäistä ajatusketjua.</p>
 <p>ReAct on hyödyllinen silloin, kun agentti ei tiedä etukäteen kaikkia vaiheita. Se voi edetä havaintojen perusteella ja muuttaa suuntaa, jos ensimmäinen toimenpide ei auta.</p>
 <table>
 <thead>
@@ -74,35 +73,35 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Ajattelu</strong></td>
-<td>Päättelee, mitä tietoa tarvitaan.</td>
-<td>”Tarvitsen varastosaldon.”</td>
+<td><strong>Päätösperustelu</strong></td>
+<td>Kertoo lyhyesti, miksi kutsu tarvitaan.</td>
+<td>”Ajantasainen saldo vaatii varastohaun.”</td>
 </tr>
 <tr>
-<td><strong>Toiminta</strong></td>
-<td>Kutsuu työkalua tai hakee tietoa.</td>
-<td>Agentti kutsuu varasto-API:a.</td>
+<td><strong>Työkalukutsu</strong></td>
+<td>Kirjaa työkalun ja rakenteiset parametrit.</td>
+<td><code>hae_varastosaldo({"tuote_id":"123"})</code></td>
 </tr>
 <tr>
-<td><strong>Havainto</strong></td>
-<td>Arvioi työkalun palauttaman tuloksen.</td>
-<td>”Tuotetta on 5 kappaletta.”</td>
+<td><strong>Tulos tai virhe</strong></td>
+<td>Tallentaa työkalun palauttaman havainnon.</td>
+<td><code>{"saldo":5}</code></td>
 </tr>
 <tr>
-<td><strong>Seuraava päätös</strong></td>
-<td>Päättää, vastaako käyttäjälle vai jatkaako tutkimista.</td>
-<td>”Tieto riittää. Vastaan asiakkaalle.”</td>
+<td><strong>Toiminto</strong></td>
+<td>Kirjaa, vastataanko, jatketaanko vai eskaloidaanko.</td>
+<td>”Lähetä asiakkaalle saldo 5.”</td>
 </tr>
 </tbody>
 </table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ketjuajattelu — vaihe vaiheelta etenevä malli</h3></div><div class="task-card-body">
-<p><strong>Ketjuajattelussa</strong> agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Eksplisiittinen työnkulku — vaihe vaiheelta etenevä malli</h3></div><div class="task-card-body">
+<p><strong>Eksplisiittinen työnkulkussa</strong> agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.</p>
 <p><strong>1. Ongelma:</strong> Mitä asiakas kysyy?</p>
 <p><strong>2. Rajoitteet:</strong> Mitä sääntöjä tai ehtoja pitää noudattaa?</p>
 <p><strong>3. Valinnat:</strong> Mitä vaihtoehtoja on?</p>
 <p><strong>4. Päätös:</strong> Mikä vaihtoehto valitaan ja miksi?</p>
-<p>Ketjuajattelu on hyödyllinen esimerkiksi palautuspyynnön käsittelyssä. Agentti tarkistaa ensin palautusajan, sitten palautuskäytännön, sitten asiakkaan oikeuden palautukseen ja vasta lopuksi muodostaa vastauksen.</p>
-<blockquote class="pause"><p><strong>Tärkeää:</strong> Ketjuajattelussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.</p>
+<p>Eksplisiittinen työnkulku on hyödyllinen esimerkiksi palautuspyynnön käsittelyssä. Agentti tarkistaa ensin palautusajan, sitten palautuskäytännön, sitten asiakkaan oikeuden palautukseen ja vasta lopuksi muodostaa vastauksen.</p>
+<blockquote class="pause"><p><strong>Tärkeää:</strong> Eksplisiittinen työnkulkussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.</p>
 </blockquote>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Moniagenttijärjestelmät — jaettu vastuu</h3></div><div class="task-card-body">
 <p><strong>Moniagenttijärjestelmässä</strong> tehtävä jaetaan usealle erikoistuneelle agentille. Tämä sopii monimutkaisiin tehtäviin, joissa tarvitaan erilaisia osaamisalueita: analyysiä, tiedonhakua, kirjoittamista, tarkistusta tai päätöksentekoa.</p>
@@ -134,15 +133,15 @@
 <p><strong>Korjaava näkökulma:</strong> ReAct tarvitsee rajat. Jos agentille ei aseteta enimmäismäärää iteraatioille, se voi jäädä toistamaan samoja vaiheita. Aseta esimerkiksi enintään 3–5 työkalukutsua ennen kuin agentti pyytää ihmisen apua tai keskeyttää tehtävän.</p>
 <blockquote class="pause"><p>Joustava päättely tarvitsee rajat. Muuten joustavuus muuttuu hallitsemattomaksi silmukaksi.</p>
 </blockquote>
-</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Ketjuajattelu on huono, koska se on jäykkä.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Ketjuajattelun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Eksplisiittinen työnkulku on huono, koska se on jäykkä.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Eksplisiittinen työnkulkun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Moniagenttijärjestelmä on aina parempi kuin yksi agentti.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Moniagenttijärjestelmä lisää rooleja, viestinvaihtoa, lokitusta ja virhemahdollisuuksia. Aloita yhdellä agentilla ja lisää muita vain, jos tehtävän monimutkaisuus todella vaatii sitä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Suunnittelumalli on vain tekninen toteutustapa.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Suunnittelumalli on myös pedagoginen ja arkkitehtoninen valinta. Se vaikuttaa siihen, miten agenttia testataan, miten sitä selitetään ja miten sen virheitä korjataan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: ReAct-lokin kirjoittaminen</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija ymmärtää ReAct-mallin ajattelu–toiminta–havainto-silmukan.</p>
-<p><strong>Tehtävä:</strong> Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan agentin ReAct-loki. Lokissa pitää näkyä, mitä agentti ajattelee, mitä työkalua se käyttää, mitä se havaitsee ja miten se jatkaa.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: havaittavan ReAct-lokin kirjoittaminen</h3></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Opiskelija ymmärtää ReAct-toteutuksen työkalukutsu–tulos–toiminto-silmukan.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan havaittava ReAct-loki. Lokissa näkyvät lyhyt päätösperustelu, työkalun nimi ja rakenteiset parametrit, tulos tai virhe sekä seuraava toiminto. Mallin sisäistä raakaa chain-of-thoughtia ei kirjoiteta.</p>
 <table>
 <thead>
 <tr>
@@ -152,24 +151,24 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Ajattelu</strong></td>
-<td>Mitä agentti tarvitsee seuraavaksi?</td>
+<td><strong>Lyhyt päätösperustelu</strong></td>
+<td>Miksi tietoa tai toimintoa tarvitaan?</td>
 </tr>
 <tr>
-<td><strong>Toiminta</strong></td>
-<td>Mitä työkalua agentti käyttää?</td>
+<td><strong>Rakenteinen työkalukutsu</strong></td>
+<td>Mitä työkalua käytetään ja millä parametreilla?</td>
 </tr>
 <tr>
-<td><strong>Havainto</strong></td>
+<td><strong>Tulos tai virhe</strong></td>
 <td>Mitä työkalu palauttaa?</td>
 </tr>
 <tr>
-<td><strong>Seuraava päätös</strong></td>
-<td>Riittääkö tieto vai tarvitaanko uusi vaihe?</td>
+<td><strong>Toiminto</strong></td>
+<td>Vastataanko, jatketaanko, keskeytetäänkö vai eskaloidaanko?</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Ketjuajattelun vaiheistus</h3></div><div class="task-card-body">
+<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Eksplisiittinen työnkulkun vaiheistus</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija osaa purkaa monimutkaisen tehtävän selkeiksi vaiheiksi.</p>
 <p><strong>Tehtävä:</strong> Anna opiskelijoille tehtävä, esimerkiksi palautuspyynnön käsittely, laskun tarkistaminen tai tukipyynnön luokittelu. Opiskelijat kirjoittavat tehtävän 4–6 vaiheeksi.</p>
 <p><strong>Ohje opiskelijalle:</strong></p>
@@ -183,7 +182,7 @@
 </ol>
 <p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Suunnittelumallin valinta</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija osaa valita tehtävään sopivan päättelymallin ja perustella valintansa.</p>
-<p><strong>Tehtävä:</strong> Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin, ketjuajattelun tai moniagenttijärjestelmän ja perustelevat valintansa.</p>
+<p><strong>Tehtävä:</strong> Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin, eksplisiittinen työnkulkun tai moniagenttijärjestelmän ja perustelevat valintansa.</p>
 <table>
 <thead>
 <tr>
@@ -200,7 +199,7 @@
 </tr>
 <tr>
 <td>Agentti käsittelee palautuspyynnön.</td>
-<td>Ketjuajattelu</td>
+<td>Eksplisiittinen työnkulku</td>
 <td>Prosessi etenee selkeissä vaiheissa: tarkista aika, tarkista ehdot, tee päätös ja vastaa.</td>
 </tr>
 <tr>
@@ -224,18 +223,18 @@
 <p><strong>Aika-arvio:</strong> 20–25 minuuttia</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>CFU-kysymykset</h2></div><div class="task-card-body">
 <ol>
 <li><strong>ReAct:</strong> Miksi ReAct-mallissa agentti ei tee kaikkia toimintoja heti kerralla?</li>
-<li><strong>Ketjuajattelu:</strong> Millaisiin tehtäviin vaiheittainen eteneminen sopii parhaiten?</li>
+<li><strong>Eksplisiittinen työnkulku:</strong> Millaisiin tehtäviin vaiheittainen eteneminen sopii parhaiten?</li>
 <li><strong>Moniagentti:</strong> Miksi moniagenttijärjestelmä voi olla tehokas mutta myös vaikeampi hallita?</li>
-<li><strong>Valinta:</strong> Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää ketjuajattelua?</li>
+<li><strong>Valinta:</strong> Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää eksplisiittinen työnkulkua?</li>
 <li><strong>Rajoitukset:</strong> Miksi ReAct-agentille kannattaa asettaa enimmäismäärä iteraatioita?</li>
 </ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija sekoittaa ReActin ja ketjuajattelun</h3></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija sekoittaa ReActin ja eksplisiittinen työnkulkun</h3></div><div class="task-card-body">
 <p>Käytä seuraavaa erottelua:</p>
 <ul>
 <li><strong>ReAct:</strong> agentti päättää seuraavan askeleen havaintojen perusteella.</li>
-<li><strong>Ketjuajattelu:</strong> agentti etenee ennalta määriteltyjen vaiheiden mukaan.</li>
+<li><strong>Eksplisiittinen työnkulku:</strong> agentti etenee ennalta määriteltyjen vaiheiden mukaan.</li>
 </ul>
-<blockquote class="pause"><p>ReAct sopii tutkimiseen. Ketjuajattelu sopii prosessiin.</p>
+<blockquote class="pause"><p>ReAct sopii tutkimiseen. Eksplisiittinen työnkulku sopii prosessiin.</p>
 </blockquote>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija haluaa tehdä heti moniagenttijärjestelmän</h3></div><div class="task-card-body">
 <p>Kysy:</p>
@@ -252,7 +251,7 @@
 <li>Mitä dataa työkalu palauttaa?</li>
 <li>Miten tämä muuttaa agentin seuraavaa päätöstä?</li>
 </ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos ketjuajattelun vaiheet jäävät liian epämääräisiksi</h3></div><div class="task-card-body">
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos eksplisiittinen työnkulkun vaiheet jäävät liian epämääräisiksi</h3></div><div class="task-card-body">
 <p>Pyydä opiskelijaa kirjoittamaan jokainen vaihe verbinä:</p>
 <ul>
 <li>Tunnista ongelma.</li>
@@ -261,29 +260,70 @@
 <li>Valitse vaihtoehto.</li>
 <li>Lähetä vastaus.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
-<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tekee agentista joustavan, ketjuajattelu tekee siitä järjestelmällisen ja moniagenttirakenne mahdollistaa erikoistumisen. Mikään malli ei ole aina paras. Malli valitaan tehtävän mukaan.</p>
+<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tekee agentista joustavan, eksplisiittinen työnkulku tekee siitä järjestelmällisen ja moniagenttirakenne mahdollistaa erikoistumisen. Mikään malli ei ole aina paras. Malli valitaan tehtävän mukaan.</p>
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Tarvitseeko oma agenttisi joustavaa tutkimista, vaiheittaista prosessia vai useamman erikoistuneen agentin yhteistyötä?</p>
-</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät — oppitunti 23</h1>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
+<p>Tallennettava tuotos on <strong>työnkulkujälki: kutsut, tulokset, toiminnot, virheet ja lyhyet perustelut</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+<table>
+<thead>
+<tr>
+<th>Aika</th>
+<th>Vaihe</th>
+<th>Opettajan tehtävä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 min</td>
+<td>Virittäytyminen</td>
+<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+</tr>
+<tr>
+<td>10–25 min</td>
+<td>Ydinkäsite</td>
+<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+</tr>
+<tr>
+<td>25–65 min</td>
+<td>Perustuotos</td>
+<td>Oppija rakentaa nelivaiheisen suoritusjäljen työkalukutsuineen, tuloksineen ja lyhyine perusteluineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+</tr>
+<tr>
+<td>65–80 min</td>
+<td>Testaus ja purku</td>
+<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+</tr>
+<tr>
+<td>80–90 min</td>
+<td>Tallennus ja exit ticket</td>
+<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
+<p>Oppija järjestää annetut vaihe- ja lokikortit. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
+<p>Kun perustuotos on valmis, oppija lisää orkestroidun sivupolun ilman raakaa ajatusketjua. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-23-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-23-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 23</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: ReAct-malli noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten <strong>ReAct-malli</strong> toimii agentin päätöksenteossa. ReAct tarkoittaa mallia, jossa agentti vuorottelee <strong>päättelyn</strong> ja <strong>toiminnan</strong> välillä: se arvioi tilanteen, tekee toiminnon, tarkastelee tulosta ja päättää seuraavan askeleen.</p>
-<p><strong>Opettajan painotus:</strong> Korosta, että ReAct ei tarkoita vain “ajattelua ääneen”. Sen ydin on, että agentti käyttää työkalua, havainnoi tuloksen ja muuttaa seuraavaa päätöstään havainnon perusteella.</p>
+<p><strong>Opettajan painotus:</strong> Korosta, ettei ReAct-tehtävässä kirjoiteta mallin piilotettua ajatusketjua. Sen ydin on, että toteutus käyttää työkalua, havainnoi tuloksen tai virheen ja muuttaa seuraavaa toimintoa havainnon perusteella.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Selitä opiskelijoille:</p>
-<blockquote class="pause"><p>ReAct tulee sanoista <strong>Reasoning</strong> ja <strong>Acting</strong>. Suomeksi se tarkoittaa päättelyä ja toimintaa. Agentti ei vastaa heti arvaamalla, vaan se voi ensin päätellä, mitä tietoa tarvitaan, käyttää työkalua, tarkistaa tuloksen ja vasta sen jälkeen vastata käyttäjälle.</p>
+<blockquote class="pause"><p>ReAct tulee sanoista <strong>Reasoning</strong> ja <strong>Acting</strong>. Toteutus ei vastaa heti arvaamalla, vaan kirjaa lyhyen päätösperustelun, tekee rakenteisen työkalukutsun, tarkistaa tuloksen tai virheen ja valitsee seuraavan toiminnon. Raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.</p>
 </blockquote>
 <p>Kirjoita taululle:</p>
-<p>Ajattele → toimi → havainnoi tulos → ajattele uudelleen → toimi uudelleen</p>
+<p>Lyhyt päätösperustelu → rakenteinen työkalukutsu → tulos tai virhe → seuraava toiminto</p>
 <h3>Esittely: tuotteen hinnan tarkistaminen</h3>
 <p>Näytä opiskelijoille yksinkertainen esimerkki. Asiakas kysyy:</p>
 <p><code>Mikä on tuotteen hinta?</code></p>
 <p>Näytä agentin eteneminen lokina:</p>
-<pre><code>[AJATTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.
+<pre><code>[PÄÄTÖSPERUSTELU]: Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea hinta tietokannasta.
 [TOIMINTA]: GET /api/product?id=12345
 [HAVAINTO]: Tietokanta palautti hinnan: 45 €.
-[AJATTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.
+[PÄÄTÖSPERUSTELU]: Nyt tiedän tuotteen hinnan ja voin vastata asiakkaalle.
 [TOIMINTA]: Tuotteen hinta on 45 €.
 </code></pre>
 <p>Kysy opiskelijoilta:</p>
@@ -308,11 +348,10 @@
 <p><strong>Ryhmän tehtävä:</strong></p>
 <ol>
 <li>Kirjoittakaa käyttäjän kysymys tai ongelma.</li>
-<li>Kirjoittakaa ensimmäinen <strong>ajatteluvaihe</strong>: mitä agentin pitää selvittää?</li>
-<li>Kirjoittakaa ensimmäinen <strong>toimintavaihe</strong>: mitä työkalua agentti käyttää?</li>
-<li>Kirjoittakaa <strong>havainto</strong>: mitä työkalu palauttaa tai mitä agentti saa selville?</li>
-<li>Kirjoittakaa uusi <strong>ajatteluvaihe</strong>: mitä havainto tarkoittaa seuraavan päätöksen kannalta?</li>
-<li>Kirjoittakaa lopullinen <strong>toimintavaihe</strong>: mitä agentti vastaa tai tekee?</li>
+<li>Kirjoittakaa lyhyt <strong>päätösperustelu</strong>: miksi jokin tieto tai toiminto tarvitaan?</li>
+<li>Kirjoittakaa rakenteinen <strong>työkalukutsu</strong>: työkalun nimi ja tarvittavat parametrit.</li>
+<li>Kirjoittakaa <strong>tulos tai virhe</strong>: mitä työkalu palauttaa?</li>
+<li>Kirjoittakaa seuraava <strong>toiminto</strong>: jatketaanko, vastataanko, keskeytetäänkö vai eskaloidaanko?</li>
 </ol>
 <table>
 <thead>
@@ -323,19 +362,19 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>[AJATTELU]</strong></td>
+<td><strong>[PÄÄTÖSPERUSTELU]</strong></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>[TOIMINTA]</strong></td>
+<td><strong>[TYÖKALUKUTSU]</strong></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>[HAVAINTO]</strong></td>
+<td><strong>[TULOS TAI VIRHE]</strong></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>[AJATTELU]</strong></td>
+<td><strong>[PÄÄTÖSPERUSTELU]</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -347,24 +386,24 @@
 <p><strong>Esitys:</strong></p>
 <p>Ryhmät esittelevät ReAct-prosessinsa lyhyesti. Keskustelkaa yhdessä:</p>
 <ul>
-<li>Miten jokainen ajatteluvaihe auttoi seuraavaa toimintaa?</li>
+<li>Miten työkalun tulos tai virhe vaikutti seuraavaan toimintoon?</li>
 <li>Missä kohdassa agentti tarvitsi ulkoista tietoa?</li>
 <li>Missä kohdassa agentin olisi pitänyt pyytää ihmiseltä apua?</li>
 </ul>
 <p><strong>Opettajan tarkistuskysymys:</strong> Jos ryhmä kirjoittaa vain lopullisen vastauksen, kysy: “Mistä agentti sai tiedon? Mitä se havaitsi ennen päätöstä?”</p>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat ymmärtävät, että ReAct-mallissa agentti vuorottelee päättelyn, toiminnan ja havainnoinnin välillä.</li>
-<li>Opiskelijat osaavat kuvata yksinkertaisen ReAct-prosessin lokimuodossa.</li>
+<li>Opiskelijat ymmärtävät, että ReAct-toteutus vuorottelee työkalukutsujen, tulosten ja toimintojen välillä.</li>
+<li>Opiskelijat osaavat kuvata havaittavan ReAct-prosessin lokimuodossa ilman raakaa chain-of-thoughtia.</li>
 <li>Opiskelijat ymmärtävät, miksi työkalujen käyttö tekee agentin vastauksesta luotettavamman kuin pelkkä arvaus.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Ketjuajattelu noin 20 minuuttia</h2></div><div class="task-card-body">
+</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Eksplisiittinen työnkulku noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten <strong>ketjuajattelu</strong> tukee järjestelmällistä ongelmanratkaisua. Ketjuajattelussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.</p>
-<p><strong>Opettajan painotus:</strong> Ketjuajattelu sopii erityisesti prosesseihin, joissa vaiheet ovat tiedossa etukäteen. Se vähentää satunnaisuutta ja auttaa varmistamaan, ettei kriittisiä tarkistuksia ohiteta.</p>
+<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten <strong>eksplisiittinen työnkulku</strong> tukee järjestelmällistä ongelmanratkaisua. Eksplisiittinen työnkulkussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.</p>
+<p><strong>Opettajan painotus:</strong> Eksplisiittinen työnkulku sopii erityisesti prosesseihin, joissa vaiheet ovat tiedossa etukäteen. Se vähentää satunnaisuutta ja auttaa varmistamaan, ettei kriittisiä tarkistuksia ohiteta.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Selitä opiskelijoille:</p>
-<blockquote class="pause"><p>Ketjuajattelu tarkoittaa sitä, että ongelma ratkaistaan vaihe vaiheelta. Sen sijaan, että agentti yrittäisi tehdä kaiken kerralla, se käy läpi ennalta määritellyn prosessin yksi kohta kerrallaan.</p>
+<blockquote class="pause"><p>Eksplisiittinen työnkulku tarkoittaa sitä, että ongelma ratkaistaan vaihe vaiheelta. Sen sijaan, että agentti yrittäisi tehdä kaiken kerralla, se käy läpi ennalta määritellyn prosessin yksi kohta kerrallaan.</p>
 </blockquote>
 <p>Kirjoita taululle:</p>
 <p>Vaihe 1 → vaihe 2 → vaihe 3 → päätös → toiminto</p>
@@ -444,16 +483,16 @@
 </ul>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat ymmärtävät, että ketjuajattelu sopii prosesseihin, joissa vaiheet ovat selkeät ja toistuvat.</li>
+<li>Opiskelijat ymmärtävät, että eksplisiittinen työnkulku sopii prosesseihin, joissa vaiheet ovat selkeät ja toistuvat.</li>
 <li>Opiskelijat osaavat pilkkoa prosessin vaiheisiin.</li>
 <li>Opiskelijat ymmärtävät, että puuttuva tai väärässä järjestyksessä tehty vaihe voi johtaa virheisiin.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3: Mallin valinta noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää <strong>ReAct-mallia</strong> ja milloin <strong>ketjuajattelua</strong>. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.</p>
+<p>Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää <strong>ReAct-mallia</strong> ja milloin <strong>eksplisiittinen työnkulkua</strong>. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Selitä opiskelijoille:</p>
-<blockquote class="pause"><p>ReAct on joustava malli tilanteisiin, joissa agentti ei vielä tiedä, mitä tietoa tarvitaan seuraavaksi. Ketjuajattelu taas sopii tilanteisiin, joissa prosessin vaiheet ovat selkeät ja toistuvat samalla tavalla.</p>
+<blockquote class="pause"><p>ReAct on joustava malli tilanteisiin, joissa agentti ei vielä tiedä, mitä tietoa tarvitaan seuraavaksi. Eksplisiittinen työnkulku taas sopii tilanteisiin, joissa prosessin vaiheet ovat selkeät ja toistuvat samalla tavalla.</p>
 </blockquote>
 <table>
 <thead>
@@ -470,14 +509,14 @@
 <td>Teknisen ongelman selvittäminen lokien ja tietokannan avulla.</td>
 </tr>
 <tr>
-<td><strong>Ketjuajattelu</strong></td>
+<td><strong>Eksplisiittinen työnkulku</strong></td>
 <td>Selkeisiin prosesseihin, joissa vaiheet ovat tiedossa etukäteen.</td>
 <td>Palautuspyynnön käsittely palautusehtojen mukaan.</td>
 </tr>
 </tbody>
 </table>
 <h3>Ryhmätyö</h3>
-<p>Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii paremmin: <strong>ReAct</strong> vai <strong>ketjuajattelu</strong>. Heidän pitää myös perustella valintansa.</p>
+<p>Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii paremmin: <strong>ReAct</strong> vai <strong>eksplisiittinen työnkulku</strong>. Heidän pitää myös perustella valintansa.</p>
 <table>
 <thead>
 <tr>
@@ -512,8 +551,8 @@
 <p><strong>Odotetut vastaukset:</strong></p>
 <ul>
 <li><strong>Katoavat tilaukset:</strong> ReAct, koska agentin täytyy tutkia, hakea lisätietoa ja muuttaa etenemistä löydösten perusteella.</li>
-<li><strong>Palautuspyyntö:</strong> ketjuajattelu, koska vaiheistus on selkeä ja perustuu palautusehtoihin.</li>
-<li><strong>Tilauksen tilan tarkistus:</strong> usein ReAct tai yksinkertainen työkalukutsu. Jos prosessi on täysin vakioitu, ketjuajattelu voi riittää.</li>
+<li><strong>Palautuspyyntö:</strong> eksplisiittinen työnkulku, koska vaiheistus on selkeä ja perustuu palautusehtoihin.</li>
+<li><strong>Tilauksen tilan tarkistus:</strong> usein ReAct tai yksinkertainen työkalukutsu. Jos prosessi on täysin vakioitu, eksplisiittinen työnkulku voi riittää.</li>
 <li><strong>Asiakaspalautteen piikki:</strong> ReAct, koska agentin pitää tutkia eri lähteitä ja tehdä päätöksiä havaintojen perusteella.</li>
 </ul>
 <p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat valitsevat aina ReActin, kysy: “Onko tässä oikeasti tarvetta iteroida, vai riittääkö vakioitu vaiheistus?”</p>
@@ -521,11 +560,11 @@
 <ul>
 <li>Voiko sama tehtävä joskus hyötyä molemmista malleista?</li>
 <li>Milloin ReAct on liian monimutkainen?</li>
-<li>Milloin ketjuajattelu on liian jäykkä?</li>
+<li>Milloin eksplisiittinen työnkulku on liian jäykkä?</li>
 </ul>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat osaavat erottaa ReAct-mallin ja ketjuajattelun käyttötarkoitukset.</li>
+<li>Opiskelijat osaavat erottaa ReAct-mallin ja eksplisiittinen työnkulkun käyttötarkoitukset.</li>
 <li>Opiskelijat osaavat valita tehtävään sopivan päättelymallin.</li>
 <li>Opiskelijat ymmärtävät, että mallin valinta vaikuttaa agentin turvallisuuteen, joustavuuteen ja luotettavuuteen.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4: Moniagenttijärjestelmä noin 20 minuuttia</h2></div><div class="task-card-body">
@@ -565,7 +604,7 @@
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>4. Validointiagentti</strong> Tarkistaa, että vastaus on oikea, turvallinen, kohtelias ja organisaation ohjeiden mukainen.</td>
+<td><strong>4. Validointiagentti</strong> Tarkistaa sovitut kentät, lähdeviitteet ja arvorajat sekä merkitsee epävarmat kohdat ihmisen tarkistettaviksi. Se ei yksin todista vastausta turvalliseksi.</td>
 </tr>
 </tbody>
 </table>
@@ -636,7 +675,7 @@
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Herättävät keskustelukysymykset</h2></div><div class="task-card-body">
 <ul>
 <li><strong>Mitä tapahtuu, jos ReAct-prosessi iteroi liian kauan?</strong></li>
-<li><strong>Voiko ketjuajattelu epäonnistua, vaikka kaikki vaiheet olisi kirjoitettu valmiiksi?</strong></li>
+<li><strong>Voiko eksplisiittinen työnkulku epäonnistua, vaikka kaikki vaiheet olisi kirjoitettu valmiiksi?</strong></li>
 <li><strong>Milloin moniagenttijärjestelmä on liian monimutkainen eli overkill?</strong></li>
 <li><strong>Mitä riskejä syntyy, jos useat agentit tekevät päätöksiä ilman yhteistä valvontaa?</strong></li>
 <li><strong>Milloin ihmisen pitää ottaa päätös haltuun?</strong></li>
@@ -645,19 +684,19 @@
 <p>Opettaja arvioi opiskelijoiden kykyä:</p>
 <ul>
 <li>selittää, mitä <strong>ReAct-malli</strong> tarkoittaa ja miten se etenee,</li>
-<li>kuvata yksinkertainen ReAct-prosessi ajattelun, toiminnan ja havainnoinnin vaiheina,</li>
-<li>selittää, mitä <strong>ketjuajattelu</strong> tarkoittaa ja millaisiin prosesseihin se sopii,</li>
+<li>kuvata ReAct-prosessi lyhyen päätösperustelun, työkalukutsun, tuloksen tai virheen ja toiminnon vaiheina ilman raakaa chain-of-thoughtia,</li>
+<li>selittää, mitä <strong>eksplisiittinen työnkulku</strong> tarkoittaa ja millaisiin prosesseihin se sopii,</li>
 <li>valita sopiva päättelymalli erilaisiin tilanteisiin,</li>
 <li>suunnitella yksinkertainen <strong>moniagenttijärjestelmä</strong>,</li>
 <li>perustella, miten agenttien työnjako, tiedonkulku ja ihmisen valvonta toteutuvat.</li>
-</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+</ul></div></div></div><div id="panel-lesson-23-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-23-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Suunnittelumallit</title>
 <defs><pattern id="l23g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 23</text>
 <text x="74" y="238" font-size="48" font-weight="800" fill="#1B2336">Suunnittelumallit</text>
-<text x="74" y="296" font-size="25" fill="#5A6478">ReAct, ketjuajattelu ja orkestrointi</text>
-<text x="74" y="332" font-size="19" fill="#3A4253">Testattuja tapoja saada agentti ajattelemaan ja toimimaan järkevästi.</text>
+<text x="74" y="296" font-size="25" fill="#5A6478">ReAct, eksplisiittinen työnkulku ja orkestrointi</text>
+<text x="74" y="332" font-size="19" fill="#3A4253">Testattuja tapoja tehdä agentin toiminnasta jäljitettävää.</text>
 <g transform="translate(648,196)">
 <circle cx="80" cy="80" r="74" fill="none" stroke="#008799" stroke-width="2.5" stroke-dasharray="9 8"/>
 <circle cx="80" cy="6" r="11" fill="#008799"/>
@@ -668,25 +707,25 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/13: Mitä suunnittelumallit ovat?</title>
 <defs><pattern id="l23g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g2)"/>
 <text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Mitä suunnittelumallit ovat?</text>
 <rect x="74" y="142" width="812" height="78" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
-<text x="100" y="180" font-size="19" fill="#006B7A">Suunnittelumallit ovat testattuja tapoja ohjata agentin päättelyä.</text>
-<text x="100" y="208" font-size="19" fill="#006B7A">Ne pohjautuvat siihen, miten ihminen ratkaisee monimutkaisia ongelmia.</text>
+<text x="100" y="180" font-size="19" fill="#006B7A">Suunnittelumallit järjestävät työkalukutsut, tulokset ja toiminnot.</text>
+<text x="100" y="208" font-size="19" fill="#006B7A">Havaittava työnkulku voidaan testata ilman raakaa ajatusketjua.</text>
 <text x="74" y="266" font-size="19" font-weight="700" fill="#1B2336">Kolme välinettä tällä tunnilla</text>
 <g transform="translate(74,288)">
 <rect x="0" y="0" width="258" height="172" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,28)" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15" stroke-dasharray="5 4"/><path d="M16 4 v6 M28 22 l-4 -3 M4 22 l4 -3"/></g>
 <text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">ReAct</text>
-<text x="24" y="98" font-size="16" fill="#3A4253">Ajattele, toimi ja</text>
-<text x="24" y="120" font-size="16" fill="#3A4253">ajattele uudelleen.</text>
+<text x="24" y="98" font-size="16" fill="#3A4253">Kutsu työkalua, tarkista</text>
+<text x="24" y="120" font-size="16" fill="#3A4253">tulos ja jatka.</text>
 <text x="24" y="156" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">joustavuus</text></g>
 <g transform="translate(351,288)">
 <rect x="0" y="0" width="258" height="172" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="8" r="4"/><path d="M6 12 V24"/><circle cx="6" cy="28" r="4"/><path d="M10 8 H30 M10 28 H30"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">Ketjuajattelu</text>
+<text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">Eksplisiittinen työnkulku</text>
 <text x="24" y="98" font-size="16" fill="#3A4253">Jaa ongelma osiin ja</text>
 <text x="24" y="120" font-size="16" fill="#3A4253">käsittele järjestyksessä.</text>
 <text x="24" y="156" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">vaiheittain</text></g>
@@ -700,17 +739,17 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/13: ReAct: kutsu, havainnoi ja jatka</title>
 <defs><pattern id="l23g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g3)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">ReAct: ajattele ja toimi</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Reasoning + Acting — päättely ja toiminta vuorottelevat, kunnes tehtävä on valmis.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">ReAct: kutsu, havainnoi ja jatka</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Työkalukutsu ja tulos ohjaavat seuraavaa toimintoa — silmukalla on yläraja.</text>
 <g transform="translate(330,300)">
 <circle cx="0" cy="0" r="118" fill="none" stroke="#008799" stroke-width="2.5" stroke-dasharray="10 8"/>
 <text x="0" y="6" text-anchor="middle" font-size="24" font-weight="800" fill="#006B7A">ReAct</text>
 <g transform="translate(-52,-128)">
 <rect x="0" y="0" width="104" height="48" rx="24" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
-<text x="52" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#006B7A">Ajattele</text></g>
+<text x="52" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#006B7A">Perustele</text></g>
 <g transform="translate(78,72)">
 <rect x="0" y="0" width="104" height="48" rx="24" fill="#EAF7F0" stroke="#2F9E69" stroke-width="2.5"/>
 <text x="52" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#247A52">Toimi</text></g>
@@ -725,42 +764,42 @@
 <g transform="translate(560,180)">
 <rect x="0" y="0" width="326" height="248" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="36" font-size="13" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">LOKI — JÄLJITETTÄVÄ</text>
-<rect x="24" y="52" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.5"/><text x="38" y="77" font-size="14" fill="#006B7A" font-family="ui-monospace,monospace">[AJATTELU] Tarvitsen hinnan.</text>
-<rect x="24" y="100" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#2F9E69" stroke-width="1.5"/><text x="38" y="125" font-size="14" fill="#247A52" font-family="ui-monospace,monospace">[TOIMINTA] GET /product/12345</text>
-<rect x="24" y="148" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#C79100" stroke-width="1.5"/><text x="38" y="173" font-size="14" fill="#9A7400" font-family="ui-monospace,monospace">[HAVAINTO] Hinta: 45 €</text>
+<rect x="24" y="52" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.5"/><text x="38" y="77" font-size="14" fill="#006B7A" font-family="ui-monospace,monospace">[PÄÄTÖSPERUSTELU] Tarvitsen hinnan.</text>
+<rect x="24" y="100" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#2F9E69" stroke-width="1.5"/><text x="38" y="125" font-size="14" fill="#247A52" font-family="ui-monospace,monospace">[TYÖKALUKUTSU] tuote_id=12345</text>
+<rect x="24" y="148" width="278" height="40" rx="8" fill="#FFFFFF" stroke="#C79100" stroke-width="1.5"/><text x="38" y="173" font-size="14" fill="#9A7400" font-family="ui-monospace,monospace">[TULOS] Hinta: 45 €</text>
 <rect x="24" y="196" width="278" height="40" rx="8" fill="#EAF7F0" stroke="#2F9E69" stroke-width="1.5"/><text x="38" y="221" font-size="14" fill="#247A52" font-family="ui-monospace,monospace">[VALMIS] "Hinta on 45 €."</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/13: Miksi ReAct toimii?</title>
 <defs><pattern id="l23g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g4)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi ReAct toimii?</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Agentti ei toimi sokkona — se perustelee jokaisen askeleen ennen toimintaa.</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Rakenteiset kutsut ja tulokset tekevät toiminnasta jäljitettävää.</text>
 <g transform="translate(74,164)">
 <rect x="0" y="0" width="395" height="96" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(28,30)" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="16"/><path d="M18 9 v9 l6 4"/></g>
-<text x="84" y="44" font-size="21" font-weight="700" fill="#1B2336">Ymmärrettävä</text>
-<text x="84" y="72" font-size="16.5" fill="#3A4253">Agentti kertoo, miksi se tekee</text>
+<text x="84" y="44" font-size="21" font-weight="700" fill="#1B2336">Jäljitettävä</text>
+<text x="84" y="72" font-size="16.5" fill="#3A4253">Loki näyttää kutsun ja tuloksen</text>
 <text x="84" y="92" font-size="16.5" fill="#3A4253" dy="-12"></text></g>
 <g transform="translate(491,164)">
 <rect x="0" y="0" width="395" height="96" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(28,28)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 l8 8 l16 -18"/></g>
-<text x="84" y="44" font-size="21" font-weight="700" fill="#1B2336">Vähemmän virheitä</text>
-<text x="84" y="80" font-size="16.5" fill="#3A4253">Perustelu vähentää virheriskiä.</text></g>
+<text x="84" y="44" font-size="21" font-weight="700" fill="#1B2336">Helpompi korjata</text>
+<text x="84" y="80" font-size="16.5" fill="#3A4253">Virheen syntykohta voidaan paikantaa.</text></g>
 <rect x="74" y="288" width="812" height="172" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <text x="100" y="326" font-size="20" font-weight="800" fill="#006B7A">Esimerkki: "Onko tuotetta saatavilla?"</text>
-<circle cx="112" cy="360" r="6" fill="#008799"/><text x="132" y="366" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Ajattele:</tspan> "Minun täytyy tarkistaa varastotilanne."</text>
-<circle cx="112" cy="392" r="6" fill="#2F9E69"/><text x="132" y="398" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Toimi:</tspan> kutsuu varasto-API:a → "Tuotetta on 5 kappaletta."</text>
-<circle cx="112" cy="424" r="6" fill="#C79100"/><text x="132" y="430" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Ajattele uudelleen:</tspan> "Tieto riittää — voin vastata asiakkaalle."</text>
+<circle cx="112" cy="360" r="6" fill="#008799"/><text x="132" y="366" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Päätösperustelu:</tspan> ajantasainen saldo vaatii varastohaun.</text>
+<circle cx="112" cy="392" r="6" fill="#2F9E69"/><text x="132" y="398" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Työkalukutsu:</tspan> varasto_api({tuote_id: 123})</text>
+<circle cx="112" cy="424" r="6" fill="#C79100"/><text x="132" y="430" font-size="17.5" fill="#1B2336"><tspan font-weight="700">Tulos → toiminto:</tspan> saldo 5 → vastaa asiakkaalle.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/13: Eksplisiittinen työnkulku: jaa ongelma osiin</title>
 <defs><pattern id="l23g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g5)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ketjuajattelu: jaa ongelma osiin</text>
-<text x="74" y="132" font-size="16.5" fill="#5A6478">Chain-of-thought: agentti pilkkoo ongelman vaiheisiin ja käsittelee ne järjestyksessä.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Eksplisiittinen työnkulku: jaa ongelma osiin</text>
+<text x="74" y="132" font-size="16.5" fill="#5A6478">Näkyvä vaiheistus on testattava työnkulku — ei mallin raakaa chain-of-thoughtia.</text>
 <text x="74" y="170" font-size="17" fill="#3A4253" font-style="italic">Tehtävä: "Käsittele palautuspyyntö."</text>
 <g font-size="16.5">
 <g transform="translate(74,192)"><rect x="0" y="0" width="812" height="48" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="30" cy="24" r="15" fill="#E5F6F7"/><text x="30" y="30" text-anchor="middle" font-size="16" font-weight="800" fill="#008799">1</text><text x="60" y="30" font-weight="700" fill="#1B2336">Mikä on asiakkaan ongelma?</text><text x="430" y="30" fill="#5A6478">Tilauksesta puuttuu kolme tuotetta.</text></g>
@@ -772,14 +811,14 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Yhdellä hypyllä vai vaiheittain?</title>
 <defs><pattern id="l23g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g6)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Yhdellä hypyllä vai vaiheittain?</text>
 <text x="74" y="132" font-size="18" fill="#5A6478">Sama palautuspyyntö kahdella tavalla käsiteltynä.</text>
 <g transform="translate(74,168)">
 <rect x="0" y="0" width="390" height="296" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<text x="28" y="44" font-size="22" font-weight="800" fill="#A35A22">Ilman ketjuajattelua</text>
+<text x="28" y="44" font-size="22" font-weight="800" fill="#A35A22">Ilman eksplisiittinen työnkulkua</text>
 <g transform="translate(28,66)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14 H26 M18 6 l8 8 l-8 8"/></g>
 <text x="74" y="96" font-size="18" fill="#3A4253">Hyppää suoraan vastaukseen:</text>
 <text x="74" y="122" font-size="18" font-weight="700" fill="#1B2336">"Lähetän hyvityksen."</text>
@@ -789,7 +828,7 @@
 <text x="28" y="272" font-size="15" fill="#A35A22" font-family="ui-monospace,monospace">→ riski väärään päätökseen</text></g>
 <g transform="translate(496,168)">
 <rect x="0" y="0" width="390" height="296" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="28" y="44" font-size="22" font-weight="800" fill="#247A52">Ketjuajattelun kanssa</text>
+<text x="28" y="44" font-size="22" font-weight="800" fill="#247A52">Eksplisiittinen työnkulkun kanssa</text>
 <g transform="translate(28,66)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4"/><path d="M6 10 V18"/><circle cx="6" cy="22" r="4"/><path d="M10 6 H24 M10 22 H24"/></g>
 <circle cx="40" cy="116" r="5" fill="#2F9E69"/><text x="58" y="122" font-size="16.5" fill="#1B2336">Tarkista palautusaika</text>
 <circle cx="40" cy="150" r="5" fill="#2F9E69"/><text x="58" y="156" font-size="16.5" fill="#1B2336">Tarkista palautuskäytäntö</text>
@@ -799,7 +838,7 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Moniagentti: kun yksi ei riitä</title>
 <defs><pattern id="l23g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g7)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Moniagentti: kun yksi ei riitä</text>
@@ -822,7 +861,7 @@
 <g transform="translate(28,252)">
 <g fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="12"/><path d="M7 13 l4 4 l8 -9"/></g>
 <text x="44" y="12" font-size="17.5" font-weight="700" fill="#1B2336">Validointiagentti</text>
-<text x="44" y="32" font-size="14.5" fill="#5A6478">"Vastaus on turvallinen."</text></g>
+<text x="44" y="32" font-size="14.5" fill="#5A6478">Tarkistaa sovitut kriteerit.</text></g>
 </g>
 <g transform="translate(496,168)">
 <rect x="0" y="0" width="390" height="292" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -838,7 +877,7 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Hierarkkinen malli: orkestrointi</title>
 <defs><pattern id="l23g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern>
 <marker id="l23a8" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#008799"/></marker></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g8)"/>
@@ -872,7 +911,7 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Yhteistyömalli: ei yhtä johtajaa</title>
 <defs><pattern id="l23g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern>
 <marker id="l23a9" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#008799"/></marker></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g9)"/>
@@ -897,7 +936,7 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Milloin käytät mitä?</title>
 <defs><pattern id="l23g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g10)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Milloin käytät mitä?</text>
@@ -906,12 +945,12 @@
 <rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <rect x="0" y="0" width="8" height="86" rx="4" fill="#008799"/>
 <text x="32" y="40" font-size="22" font-weight="800" fill="#006B7A">ReAct</text>
-<text x="200" y="34" font-size="17.5" fill="#3A4253">Kun agentti tarvitsee joustavuutta ja tutkivaa ajattelua.</text>
+<text x="200" y="34" font-size="17.5" fill="#3A4253">Kun agentti tarvitsee havaintopohjaista etenemistä.</text>
 <text x="200" y="62" font-size="16.5" fill="#5A6478">Ei tiedä tarkkaan, mitä seuraavaksi tapahtuu — etenee havainnoista.</text></g>
 <g transform="translate(74,260)">
 <rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <rect x="0" y="0" width="8" height="86" rx="4" fill="#2F9E69"/>
-<text x="32" y="40" font-size="22" font-weight="800" fill="#247A52">Ketjuajattelu</text>
+<text x="32" y="40" font-size="22" font-weight="800" fill="#247A52">Eksplisiittinen työnkulku</text>
 <text x="200" y="34" font-size="17.5" fill="#3A4253">Kun ongelma voidaan jakaa selkeisiin vaiheisiin.</text>
 <text x="200" y="62" font-size="16.5" fill="#5A6478">Esim. palautuspyyntö: vaiheet ovat usein samat joka kerta.</text></g>
 <g transform="translate(74,358)">
@@ -919,11 +958,11 @@
 <rect x="0" y="0" width="8" height="86" rx="4" fill="#C79100"/>
 <text x="32" y="40" font-size="22" font-weight="800" fill="#9A7400">Moniagentti</text>
 <text x="200" y="34" font-size="17.5" fill="#3A4253">Kun tehtävä vaatii monta eri erikoisalaa kerralla.</text>
-<text x="200" y="62" font-size="16.5" fill="#5A6478">Usein yhdistät malleja: työntekijä ReActia, johtaja ketjuajattelua.</text></g>
+<text x="200" y="62" font-size="16.5" fill="#5A6478">Usein yhdistät malleja: työntekijä ReActia, johtaja eksplisiittinen työnkulkua.</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Esimerkki: tapahtumatiimi</title>
 <defs><pattern id="l23g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern>
 <marker id="l23a11" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#C2CAD9"/></marker></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g11)"/>
@@ -955,7 +994,7 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 12/13: Mallit n8n:ssä</title>
 <defs><pattern id="l23g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern>
 <marker id="l23a12" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#9AA6BD"/></marker></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g12)"/>
@@ -976,7 +1015,7 @@
 </g></g>
 <g transform="translate(74,266)">
 <rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="24" y="34" font-size="20" font-weight="800" fill="#247A52">Ketjuajattelu</text>
+<text x="24" y="34" font-size="20" font-weight="800" fill="#247A52">Eksplisiittinen työnkulku</text>
 <text x="24" y="62" font-size="15.5" fill="#5A6478">Sarja erillisiä solmuja,</text>
 <text x="24" y="80" font-size="15.5" fill="#5A6478">jokainen yksi vaihe.</text>
 <g transform="translate(232,32)" font-size="13">
@@ -1004,22 +1043,22 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 13/13: Yhteenveto</title>
 <defs><pattern id="l23g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l23g13)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
-<text x="74" y="140" font-size="19" fill="#5A6478">Agentti toimii paremmin, kun se ajattelee järjestelmällisesti.</text>
+<text x="74" y="140" font-size="19" fill="#5A6478">Agentti toimii paremmin, kun työnkulku on järjestelmällinen.</text>
 <g transform="translate(74,170)">
 <rect x="0" y="0" width="264" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <rect x="0" y="0" width="8" height="120" rx="4" fill="#008799"/>
 <text x="28" y="40" font-size="21" font-weight="800" fill="#006B7A">ReAct</text>
-<text x="28" y="74" font-size="15.5" fill="#3A4253">Ajattele, toimi ja</text>
-<text x="28" y="96" font-size="15.5" fill="#3A4253">ajattele uudelleen.</text></g>
+<text x="28" y="74" font-size="15.5" fill="#3A4253">Kutsu työkalua, tarkista</text>
+<text x="28" y="96" font-size="15.5" fill="#3A4253">tulos ja jatka.</text></g>
 <g transform="translate(348,170)">
 <rect x="0" y="0" width="264" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <rect x="0" y="0" width="8" height="120" rx="4" fill="#2F9E69"/>
-<text x="28" y="40" font-size="21" font-weight="800" fill="#247A52">Ketjuajattelu</text>
+<text x="28" y="40" font-size="21" font-weight="800" fill="#247A52">Eksplisiittinen työnkulku</text>
 <text x="28" y="74" font-size="15.5" fill="#3A4253">Pura ongelma vaiheisiin</text>
 <text x="28" y="96" font-size="15.5" fill="#3A4253">ja etene järjestyksessä.</text></g>
 <g transform="translate(622,170)">
@@ -1038,9 +1077,9 @@
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-22/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-24/">Seuraava →</a></div></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
-<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>window.CI={"view": "opettaja", "lid": "lesson-23", "num": 23, "title": "Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-23", "num": 23, "title": "Suunnittelumallit — ReAct, työnkulku ja orkestrointi", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

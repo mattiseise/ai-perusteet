@@ -142,9 +142,13 @@ Agentti toimii toisin. Se voi vastaanottaa uuden sähköpostin, analysoida sen s
 <figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Agentin toiminta kokonaisuutena: käynnistys johtaa agenttiin (kielimalli + työkalut), joka toimii vaiheittain ja tuottaa lopputuloksen.</figcaption>
 </figure>
 
-## Agentin kuusi rakennusosaa
+## Agentti = kielimalli + harness
 
-Nyt kun tiedät, mitä agentti tarkoittaa, voidaan tarkastella sen sisäistä rakennetta. Jokainen agentti, olipa se yksinkertainen tai monimutkainen, rakentuu kuudesta peruskomponentista. Kun nämä komponentit toimivat yhdessä, agentti pystyy käsittelemään tietoa, tekemään päätelmiä ja toteuttamaan tehtäviään mielekkäällä tavalla.
+Tällä kurssilla **agentti = kielimalli + harness**. Harness tarkoittaa ympäröivää ohjelmistorakennetta, joka välittää syötteet, tarjoaa työkalut, ylläpitää tehtävän tilaa, rajaa oikeuksia ja tallentaa suoritusjäljen. Pelkkä kielimalli keskustelee; harness tekee hallitusta toiminnasta mahdollista.
+
+## Kurssin kuuden kohdan suunnittelutarkistuslista
+
+Seuraavat kuusi kohtaa ovat tämän kurssin suunnittelutarkistuslista, eivät väite siitä, että jokaisessa agentissa olisi kuusi erillistä teknistä komponenttia. Yksinkertainen agentti voi toimia ilman pitkäkestoista muistia tai automaattista palautteesta oppimista. Tarkistuslista auttaa silti huomaamaan, mitä toteutus tarvitsee ja mitä siitä voidaan tarkoituksella jättää pois.
 
 **Ensimmäinen komponentti: syötekäsittelijä.** Syötekäsittelijä toimii agentin aisteina. Se havaitsee, kun uusi sähköposti saapuu, palvelin lähettää hälytyksen tai käyttäjä painaa painiketta. Sen tehtävänä on vastaanottaa nämä herätteet ja käyttäjän syötteet sekä muuntaa ne muotoon, jota agentti pystyy käsittelemään.
 
@@ -160,9 +164,9 @@ Ilman päättelijää agentti ei tekisi päätöksiä tilanteen perusteella, vaa
 
 Ilman tätä osaa agentti ei pystyisi vaikuttamaan ympäristöönsä. Päättelijä voisi kyllä muodostaa tarkoituksenmukaisen ratkaisun, mutta mitään ei tapahtuisi käytännössä. Tällöin agentti olisi kuin johtaja, jolla ei ole mahdollisuutta toteuttaa tekemiään päätöksiä.
 
-**Neljäs komponentti: muisti ja konteksti.** Agentti tarvitsee myös muistia. **Lyhytkestoinen muisti** tarkoittaa tietoa, jota agentti pitää aktiivisesti mukana tehtävän aikana. Tähän voi kuulua esimerkiksi viimeisimmät työvaiheet, käsiteltävän tapauksen sisältö ja tieto siitä, ketä agentti on juuri auttanut. **Pitkäkestoinen muisti** taas tarkoittaa tietoa, joka on tallennettu pysyvämmin esimerkiksi tietokantaan tai lokiin. Sen avulla agentti voi hyödyntää aiempia kokemuksiaan myöhemmissä tilanteissa.
+**Neljäs kohta: muisti ja konteksti.** Agentti tarvitsee tehtävän nykyisen tilan, mutta ei aina pitkäkestoista muistia. **Lyhytkestoinen muisti** tarkoittaa tietoa, jota agentti pitää mukana yhden suorituksen aikana. **Pitkäkestoinen muisti** tarkoittaa pysyvämmin tallennettua tietoa, jota tarvitaan vain, jos myöhemmän suorituksen pitää hyödyntää aiempaa tietoa.
 
-Muistin ansiosta agentti voi ottaa huomioon, mitä se on tehnyt aiemmin ja millaisiin tuloksiin eri toimintatavat ovat johtaneet. Ilman muistia se käsittelisi jokaisen tilanteen ikään kuin ensimmäistä kertaa. Tällöin se voisi toistaa samoja virheitä yhä uudelleen eikä pystyisi kehittämään toimintaansa.
+Jos tehtävä sitä vaatii, pitkäkestoinen muisti voi tuoda myöhempään suoritukseen aiempia tapauksia tai käyttäjäkohtaisia tietoja. Ilman pitkäkestoista muistia agentti voi silti hoitaa itsenäisen tehtävän nykyisen suorituksen tilan avulla. Toteutusta kehitetään testien ja seurannan perusteella riippumatta siitä, tallentaako agentti aiempia tapauksia.
 
 **Viides komponentti: turvakerros.** Ennen kuin agentti suorittaa mitään toimintoa, sen on tarkistettava, onko toiminta sallittua. Tästä vastaa turvakerros. Sen tehtävänä on estää agenttia tekemästä vaarallisia, virheellisiä tai luvattomia toimenpiteitä. Turvakerros tarkistaa esimerkiksi, saako agentti poistaa tietokannan rivejä, siirtää rahaa tietylle tilille tai käsitellä tietyn käyttäjän tietoja.
 
@@ -174,9 +178,9 @@ Ilman turvakerrosta agentti voisi tehdä vakavia virheitä tai aiheuttaa vahinko
 
 Kerättyä tietoa hyödynnetään **palautesilmukassa**. Sen avulla agentin toimintaa voidaan arvioida ja kehittää. Jos jokin toimintatapa on aiemmin johtanut epäonnistumiseen, järjestelmä voi käyttää tätä tietoa myöhemmissä tilanteissa ja ohjata toimintaa toiseen suuntaan.
 
-Ilman palautesilmukkaa agentti ei pystyisi tunnistamaan omia virheitään eikä parantamaan toimintaansa. Tällöin se voisi toistaa samoja virheitä yhä uudelleen ilman mahdollisuutta oppia niistä.
+Palautesilmukka ei tarkoita, että malli oppisi automaattisesti jokaisesta suorituksesta. Se voi olla ihmisen tekemä katselmointi, mittari tai testitulokseen perustuva korjausprosessi. Kaikki agentit eivät tarvitse automaattista oppimista, mutta jokainen tuotantototeutus hyötyy seurattavasta suoritusjäljestä.
 
-> **Pysähdy hetkeksi:** Mitkä kuudesta komponentista tunnistat omasta toiminnastasi, kun teet päätöksiä? Kuinka moni niistä puuttuu skriptiltä tai yksinkertaiselta työnkululta?
+> **Pysähdy hetkeksi:** Mitkä kuudesta suunnittelukohdasta olisivat valitsemassasi tehtävässä tarpeellisia? Minkä voisit jättää pois ja millä perusteella?
 
 Seuraavilla oppitunneilla avaamme jokaisen näistä komponenteista tarkemmin. Kun kohtaat uuden aiheen, mieti aina: mihin agentin osaan tämä liittyy?
 
@@ -251,13 +255,13 @@ Yritysmaailmassa käytettävät järjestelmät voidaan jakaa kolmeen pääkatego
 
 **Työnkulku** on useasta vaiheesta koostuva prosessi, jossa toiminta etenee ennalta kirjoitettujen sääntöjen mukaan. Esimerkiksi sähköpostien käsittelyssä työnkulku voi toimia näin: jos viesti sisältää sanan ”lasku”, se siirretään kansioon A, jos se sisältää sanan ”raportti”, se siirretään kansioon B, ja muissa tapauksissa se jätetään saapuneisiin. Työnkulku on skriptiä joustavampi, koska siihen sisältyy päätöslogiikkaa. Se perustuu kuitenkin edelleen valmiiksi määriteltyihin sääntöihin, eikä se muuta toimintaansa itsenäisesti.
 
-**Agentti** on tätä kehittyneempi järjestelmä. Se vastaanottaa tietoa, analysoi tilannetta, tekee päätöksiä, toteuttaa toimintoja ja seuraa niiden tuloksia. Jos lopputulos ei vastaa tavoitetta, agentti voi hyödyntää tätä tietoa seuraavissa tilanteissa ja muuttaa toimintaansa. Se voi myös arvioida, mitä tehtäviä tai tavoitteita kannattaa kulloinkin painottaa.
+**Agentissa** kielimalli tulkitsee tilannetta ja valitsee toimintaa, ja harness antaa sille tehtävän tilan, työkalut, oikeudet ja rajat. Tulos voidaan tarkistaa saman suorituksen aikana tai ihmisen tekemässä jälkikatselmoinnissa. Pitkäkestoinen muisti ja automaattinen palautteesta oppiminen ovat mahdollisia lisäosia, eivät agentin tunnusmerkkejä.
 
 Ero näkyy hyvin käytännön esimerkissä. Skripti voi lajitella tiedostot pelkän koon perusteella. Työnkulku voi lajitella ne koon ja tiedostotyypin mukaan ennalta määriteltyjen sääntöjen perusteella. Agentti taas voi tehdä lajittelua sen mukaan, mitä tiedostoja käyttäjä todennäköisesti tarvitsee myöhemmin ja miten ne olisi järkevintä järjestää tulevaa käyttöä varten.
 
-## Miten kaikki toimii yhdessä: agentin suoritusputki
+## Miten yksi esimerkkitoteutus toimii
 
-Nyt tiedät, mistä osista agentti koostuu ja miten se eroaa skriptistä ja työnkulusta. Pelkät osat eivät kuitenkaan vielä riitä, vaan on myös ymmärrettävä, miten ne toimivat yhdessä. Kuusi komponenttia voidaan ajatella järjestelmän osina, mutta **suoritusputki** määrittää, missä järjestyksessä ja millä tavalla ne osallistuvat tehtävän suorittamiseen.
+Nyt tiedät, että agentti muodostuu kielimallista ja harnessista. Kurssin kuutta suunnittelukohtaa voi soveltaa eri tavoin. Seuraava **suoritusputki** kuvaa yhtä neuvonta-agentin toteutusta, jossa kaikki kuusi kohtaa ovat tarpeellisia. Se ei ole kaikkien agenttien pakollinen vaiheistus.
 
 Seuraavaksi tarkastellaan, mitä agentin sisällä tapahtuu silloin, kun se saa tehtävän. Esimerkkinä käytetään neuvonta-agenttia, joka auttaa käyttäjiä ratkaisemaan ongelmia.
 
@@ -265,11 +269,11 @@ Seuraavaksi tarkastellaan, mitä agentin sisällä tapahtuu silloin, kun se saa 
 
 **Päättelijä arvioi tilanteen.** Tässä vaiheessa agentti ei vielä suorita varsinaisia toimenpiteitä, vaan arvioi tilannetta. Päättelijä lukee syötteen ja tekee kaksi keskeistä asiaa. Ensin se arvioi, mitä tehtävä edellyttää. Sen jälkeen se suunnittelee, mitä vaiheita tehtävän ratkaiseminen vaatii. Tätä vaihetta kutsutaan **reititykseksi**: agentti valitsee, mitä toimintapolkua tilanteessa kannattaa seurata. Tulostinongelman kohdalla agentti voi esimerkiksi päätyä siihen, että se hakee ensin ratkaisua tietokannasta, vastaa sitten käyttäjälle ja ohjaa asian ihmiselle, jos ratkaisu ei toimi.
 
-Reitityspäätös ei synny sattumalta. Agentti hyödyntää kielimallia, joka analysoi tilanteen ja arvioi, mikä toimintatapa on tarkoituksenmukaisin. Myös muistilla on tässä vaiheessa merkitystä. Jos agentti on käsitellyt aiemmin useita tulostinongelmia ja havainnut, että ne liittyvät usein verkkoyhteyteen, se voi painottaa tätä vaihtoehtoa uuden tapauksen käsittelyssä.
+Reitityspäätös ei synny sattumalta. Agentti hyödyntää kielimallia, joka analysoi tilanteen ja arvioi, mikä toimintatapa on tarkoituksenmukaisin. Tässä esimerkissä myös pitkäkestoinen muisti on valittu mukaan: aiemmat ratkaisut voivat auttaa ehdotusten järjestämisessä. Toisessa agentissa tietohaku tai nykyisen tehtävän tila voi riittää ilman aiempien suoritusten muistia.
 
-**Muisti tuo kontekstin.** Agentti ei aloita jokaista tehtävää täysin alusta, vaan se hyödyntää muistiaan. Sillä on yleensä kahdenlaista muistia. Lyhytkestoinen muisti sisältää tiedon, jota tarvitaan juuri käsillä olevan tehtävän aikana. Siihen kuuluvat esimerkiksi nykyinen keskustelu, käyttäjän viimeisimmät viestit ja agentin omat edelliset vaiheet. Pitkäkestoinen muisti taas sisältää pysyvämmin tallennettua tietoa, kuten aiempien tehtävien tuloksia, havaittuja toimintamalleja ja tietokantahakujen vastauksia.
+**Tehtävän tila tuo nykyisen kontekstin.** Harness ylläpitää tietoa, jota tarvitaan juuri käsillä olevan tehtävän aikana. Siihen kuuluvat esimerkiksi nykyinen keskustelu, käyttäjän viimeisimmät viestit ja agentin edelliset vaiheet. Tässä esimerkkitoteutuksessa on lisäksi pitkäkestoinen muisti, johon tallennetaan valikoituja aiempien tehtävien tuloksia.
 
-Lyhytkestoinen muisti auttaa agenttia pysymään selvillä siitä, mitä parhaillaan tapahtuu. Pitkäkestoinen muisti puolestaan auttaa sitä hyödyntämään aiempia kokemuksia uusissa tilanteissa. Tämän ansiosta agentti ei joudu käsittelemään jokaista tapausta täysin uutena.
+Tehtävän tila auttaa agenttia pysymään selvillä siitä, mitä parhaillaan tapahtuu. Pitkäkestoinen muisti on perusteltu vain, jos myöhemmän suorituksen pitää käyttää aiempaa tietoa. Muistin lisääminen kasvattaa myös tietosuoja- ja ylläpitovastuuta.
 
 Käytännössä tämä voi tarkoittaa esimerkiksi sitä, että agentti tunnistaa saman käyttäjän aiemman ongelman ja hyödyntää sitä uuden tapauksen käsittelyssä: viimeksi tulostinongelman syynä oli se, että tulostin ei ollut samassa verkossa, joten tämä tarkistetaan ensin.
 
@@ -279,25 +283,25 @@ Käytännössä tämä voi tarkoittaa esimerkiksi sitä, että agentti tunnistaa
 
 Turvakerros toimii siis kolmessa vaiheessa: ennen toimintoa, sen aikana ja sen jälkeen. Sen tehtävänä on valvoa agentin toimintaa jatkuvasti ja estää virheelliset, vaaralliset tai luvattomat toimenpiteet. Jos jokin näyttää poikkeavalta tai epäilyttävältä, turvakerros voi keskeyttää toiminnan missä vaiheessa tahansa.
 
-**Palautesilmukka sulkee kehän.** Kun agentti on suorittanut toiminnon, se ei vain siirry automaattisesti seuraavaan vaiheeseen, vaan arvioi ensin, mitä tapahtui. Onnistuiko viestin lähetys? Ratkesiko ongelma? Saatiinko käyttäjältä vahvistus siitä, että toimenpide auttoi? Tämän arvioinnin perusteella agentti päättää, miten se jatkaa.
+**Tuloksen tarkistus voi sulkea tämän esimerkin kehän.** Harness tarkistaa, onnistuiko viestin lähetys ja saatiinko työkalulta odotettu vastaus. Tämän tarkistuksen perusteella agentti voi jatkaa, yrittää rajatusti uudelleen tai eskaloida ihmiselle.
 
-Jos kaikki on sujunut odotetusti, agentti kirjaa onnistumisen ja voi tallentaa ratkaisun pitkäkestoiseen muistiin. Näin samaa tai samankaltaista tapausta voidaan käsitellä tulevaisuudessa tehokkaammin. Jos taas jokin meni pieleen, agentti voi kokeilla toista toimintatapaa, käyttää eri työkalua tai siirtää asian ihmiselle.
+Jos kaikki on sujunut odotetusti, toteutus kirjaa onnistumisen. Ratkaisu tallennetaan pitkäkestoiseen muistiin vain, jos sille on määritelty tarve, säilytysaika ja käyttöoikeudet. Jos jokin meni pieleen, harness voi sallia toisen toimintatavan, eri työkalun tai eskaloinnin ihmiselle.
 
-Tätä kutsutaan **palautesilmukaksi**. Sen perusajatus on, että agentin toiminnan tulokset vaikuttavat sen seuraaviin päätöksiin ja myöhempään toimintaan.
+Tässä toteutuksessa seurantaa käytetään myös **palautesilmukassa**, jossa ihminen tarkastelee tuloksia ja kehittää asetuksia. Tämä ei tarkoita, että kielimalli oppisi automaattisesti jokaisesta suorituksesta.
 
-**Koko kierto kokonaisuutena.** Kun käyttäjä lähettää tukipyynnön, agentin toiminta etenee vaiheittain. Ensin syötekäsittelijä vastaanottaa viestin ja muuntaa sen käsiteltävään muotoon. Sen jälkeen päättelijä arvioi tilanteen ja suunnittelee sopivan toimintapolun. Muisti tuo mukaan aiempien tapausten tarjoaman kontekstin. Tämän jälkeen päättelijä ohjaa tehtävän oikeille työkaluille, jotka toteuttavat tarvittavat käytännön toimenpiteet. Turvakerros valvoo toimintaa koko prosessin ajan, ja lopuksi palautesilmukka arvioi tuloksen sekä tallentaa hyödylliset havainnot myöhempää käyttöä varten. Kun tämä on tehty, agentti on valmis aloittamaan saman kierron uudelleen seuraavan tehtävän kohdalla.
+**Esimerkin kulku kokonaisuutena.** Kun käyttäjä lähettää tukipyynnön, harness välittää viestin kielimallille. Malli arvioi tilanteen ja valitsee toimintapolun. Tähän esimerkkiin valittu pitkäkestoinen muisti tuo aiempaa kontekstia. Työkalut toteuttavat rajatut toimenpiteet, turvarajat valvovat oikeuksia ja seuranta kirjaa tuloksen. Sama kuuden kohdan tarkistuslista voi tuottaa toisessa tehtävässä yksinkertaisemman toteutuksen.
 
-Juuri tämä jatkuva toimintakierto erottaa agentin muista ratkaisuista. Skripti suorittaa ennalta määrätyn toiminnon ilman tilanteen arviointia. Työnkulku etenee valmiiksi määriteltyä polkua pitkin. Agentti sen sijaan käy läpi toistuvia toimintakierroksia, arvioi niiden tuloksia ja voi muuttaa toimintaansa saamansa palautteen perusteella.
+Agentin erottaa tässä kurssissa muista ratkaisuista kielimallin ja harnessin yhdistelmä: kielimalli tulkitsee tilannetta, ja harness mahdollistaa rajatun työkalujen käytön. Skripti suorittaa ennalta määrätyn toiminnon, ja työnkulku etenee valmiiksi määriteltyä polkua pitkin. Agentti ei tarvitse automaattista oppimista ollakseen agentti.
 
-> **Pysähdy hetkeksi:** Valitse omasta työstäsi tai arjestasi jokin toistuva tehtävä. Kuvittele, että suunnittelet agentin hoitamaan sen. Mitkä agentin kuudesta peruskomponentista olisivat tässä tehtävässä keskeisimmät? Missä suoritusputken vaiheessa ihmisen valvonta olisi tärkeintä?
+> **Pysähdy hetkeksi:** Valitse arjestasi jokin toistuva tehtävä. Kuvittele, että suunnittelet agentin hoitamaan sen. Mitkä kuudesta suunnittelukohdasta tarvitset, minkä jätät pois ja missä ihmisen valvonta olisi tärkeintä?
 
-## Valmiit agentit — samat osat, jonkun muun rakentamina
+## Valmiit agentit — jonkun muun rakentama harness
 
 Tässä osiossa agentti on tähän asti ollut jotain, jonka rakennat itse. Arjessa ja työpaikoilla kohtaat agentin kuitenkin useimmiten **valmisagenttina**: valmiina tuotteena, joka asuu tutun tekoälysovelluksen sisällä. Sovelluksessa on silloin **agenttitila** — toimintatila, jolle annat tehtävän ja joka tekee monivaiheisen työn puolestasi: lukee tiedostoja, käyttää työkaluja ja raportoi lopuksi, mitä sai aikaan.
 
-Valmisagentin sisällä ovat täsmälleen samat kuusi rakennusosaa, jotka juuri opit — joku muu vain suunnitteli ja rakensi ne valmiiksi. Kokeile väitettä arkiesimerkillä. Annat agenttitilalle tehtävän: ”Käy läpi tämän kansion kokousmuistiot ja kokoa taulukko päätöksistä ja vastuuhenkilöistä.” Kun sovellus ottaa tehtäväsi vastaan ja tulkitsee sen, työssä on syötekäsittelijä. Kun se näyttää sinulle vaihesuunnitelman ennen aloittamista, näet päättelijän kädenjäljen. Kun se lukee muistiot ja kirjoittaa taulukon, vuorossa on työkalujen suorittaja. Kun se kysyy ”saanko muokata tätä kansiota?”, vastassa on turvakerros. Kun se jatkaa keskeytynyttä työtä siitä, mihin jäitte, käytössä on muisti ja konteksti. Ja kun se lopuksi raportoi, mitä teki, ja korjaa huomaamansa virheen, kehän sulkevat seuranta ja palautesilmukka.
+Valmisagenttia voi arvioida samalla kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan ja jokin kohta olisi tarkoituksella tarpeeton. Kokeile väitettä arkiesimerkillä. Annat agenttitilalle tehtävän: ”Käy läpi tämän kansion kokousmuistiot ja kokoa taulukko päätöksistä ja vastuuhenkilöistä.” Kun sovellus ottaa tehtäväsi vastaan ja tulkitsee sen, työssä on syötekäsittelijä. Kun se näyttää sinulle vaihesuunnitelman ennen aloittamista, näet päättelijän kädenjäljen. Kun se lukee muistiot ja kirjoittaa taulukon, vuorossa on työkalujen suorittaja. Kun se kysyy ”saanko muokata tätä kansiota?”, vastassa on turvakerros. Kun se jatkaa keskeytynyttä työtä siitä, mihin jäitte, käytössä on muisti ja konteksti. Ja kun se lopuksi raportoi, mitä teki, ja korjaa huomaamansa virheen, kehän sulkevat seuranta ja palautesilmukka.
 
-Tälle kokonaisuudelle on nimi. Kaikkea, mitä kielimallin ympärille on rakennettu — työkaluja, muistia, oikeuksia ja turvarajoja — kutsutaan **harnessiksi**. Siitä saadaan tämän osion tiivein kiteytys: **agentti = kielimalli + harness**. Kuuden rakennusosan kokonaisuudessa kielimalli työskentelee päättelijän ytimessä — kaikki sen ympärillä on harnessia.
+Tälle kokonaisuudelle on nimi. Kaikkea, mitä kielimallin ympärille on rakennettu — esimerkiksi syötteiden välitystä, työkaluja, tehtävän tilaa, oikeuksia ja turvarajoja — kutsutaan **harnessiksi**. Siitä saadaan tämän osion tiivein kiteytys: **agentti = kielimalli + harness**. Kurssin kuusi kohtaa auttavat arvioimaan harnessia, mutta eivät määrää sen sisäistä rakennetta.
 
 Englannin sana harness tarkoittaa valjaita, ja vertauskuva kantaa pitkälle. Kielimalli on kuin vetohevonen: voimaa riittää, mutta ilman valjaita hevonen vain juoksee. Vasta valjaat kytkevät voiman kärryyn niin, että voimasta tulee työtä. Sama pätee malliin: ilman harnessia kielimalli vain puhuu — eli on chatbot. Tästä seuraa arkinen havainto, joka selittää tunnin aiemman väitteen ”chatbot ei ole agentti” uudesta kulmasta: täsmälleen sama kielimalli voi olla sekä chatbotin että agentin sisällä. Ero ei ole mallissa vaan sen ympärille rakennetussa harnessissa.
 
@@ -318,9 +322,17 @@ Agentit-osion aikana rakennat oman **n8n-agenttityönkulun**. Ensimmäinen askel
 
 **Agentti** on automatisoitu järjestelmä, joka toteuttaa useita vaiheita itsenäisesti tavoitteen saavuttamiseksi. Se eroaa chatbotista, skriptistä ja työnkulusta siinä, että se ei vain reagoi, toista samaa toimintoa tai seuraa valmiita sääntöjä, vaan arvioi tilannetta ja ohjaa toimintaansa sen perusteella.
 
-Agentti koostuu kuudesta peruskomponentista: **syötekäsittelijästä**, **päättelijästä**, **työkaluista**, **muistista**, **turvakerroksesta** ja **palautesilmukasta**. Yhdessä nämä muodostavat suoritusputken, jossa jokainen vaihe vaikuttaa seuraavaan. Kun ymmärrät tämän kokonaisuuden, sinun on helpompi nähdä sekä agenttien mahdollisuudet että se, miksi niiden rakentaminen edellyttää tarkkaa suunnittelua, valvontaa ja turvallisuusrajoja.
+Kurssin kuusi suunnittelukohtaa ovat **syötekäsittely**, **päättely**, **työkalut**, **muisti**, **turvakerros** ja **palautesilmukka**. Niiden avulla kysyt, mitä juuri tämä agentti tarvitsee ja mitä voidaan jättää pois. Pitkäkestoinen muisti ja palautteesta oppiminen eivät ole pakollisia.
 
-Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niiden sisällä ovat samat kuusi rakennusosaa — toisin sanottuna kielimalli ja sen ympärille rakennettu **harness**: työkalut, muisti, oikeudet ja turvarajat. Kun tunnet osat, osaat arvioida myös valmista agenttia.
+Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niitä voi tarkastella samalla kuuden kohdan listalla. Tekninen ydin on kielimalli ja sen ympärille rakennettu **harness**: työkalut, muisti, oikeudet ja turvarajat. Kun tunnet osat, osaat arvioida myös valmista agenttia.
 
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
+- [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
+- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
+
+Tarkistettu 15.7.2026.

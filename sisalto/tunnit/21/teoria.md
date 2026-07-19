@@ -16,7 +16,7 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 
 > **Pysähdy hetkeksi:** Kuvittele asiakaspalveluagentti, joka käsittelee pitkää tukiprosessia. Asiakas kuvailee ongelmaa pitkään ja kysyy 30 viestin jälkeen: ”Nyt kun olet kuullut kaiken, mitä ehdotat?” Jos konteksti-ikkuna sisältää vain 20 viestiä, agentti näkee enää viimeiset 20 viestiä. Alkuperäinen ongelma on poissa näkyvistä. Mitä tästä voi seurata?
 
-Ammattilaisena sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
+Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// työmuisti on pieni — agentti hakee vain sen, mitä vaihe vaatii</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
@@ -145,7 +145,7 @@ Käytännössä soul voidaan kirjoittaa **erilliseksi dokumentiksi**, johon agen
 
 Kun agentti muistaa paljon, täytyy puhua myös turvallisuudesta. Pitkäkestoinen muisti voi sisältää arkaluontoisia tietoja, kuten asiakkaiden henkilötietoja, maksutietoja tai liikesalaisuuksia.
 
-Ammattilaisena sinun täytyy asettaa selkeät rajat sille, **mitä agentti saa muistaa ja mitä se ei saa muistaa**. Asiakkaan nimi ja ostohistoria voivat olla perusteltuja tietoja, jos niitä käsitellään turvallisesti ja lain mukaisesti. Luottokortin neljä viimeistä numeroa voidaan joissain tilanteissa tallentaa tunnistamista varten, jos tieto on suojattu asianmukaisesti. Asiakkaan salasanaa ei kuitenkaan pidä koskaan tallentaa agentin muistiin. Myös terveystiedot ja muut erityisen arkaluontoiset tiedot vaativat erityistä varovaisuutta ja lainmukaisen käsittelyperusteen.
+Vastuullisena käyttäjänä sinun täytyy asettaa selkeät rajat sille, **mitä agentti saa muistaa ja mitä se ei saa muistaa**. Asiakkaan nimi ja ostohistoria voivat olla perusteltuja tietoja, jos niitä käsitellään turvallisesti ja lain mukaisesti. Luottokortin neljä viimeistä numeroa voidaan joissain tilanteissa tallentaa tunnistamista varten, jos tieto on suojattu asianmukaisesti. Asiakkaan salasanaa ei kuitenkaan pidä koskaan tallentaa agentin muistiin. Myös terveystiedot ja muut erityisen arkaluontoiset tiedot vaativat erityistä varovaisuutta ja lainmukaisen käsittelyperusteen.
 
 Muistin hallinta vaatii myös **säännöllistä puhdistamista**. Vanhentuneet tiedot kannattaa poistaa. Jos asiakas poistaa tilinsä, myös häneen liittyvä historia pitäisi poistaa pitkäkestoisesta muistista silloin, kun se on sääntöjen ja lainsäädännön mukaan tarpeen. Tämä on sekä turvallisuus- että yksityisyyskysymys.
 
@@ -160,3 +160,11 @@ Agentti hahmottaa nykyhetkeä **konteksti-ikkunan** avulla. Konteksti-ikkuna voi
 Nämä kolme tekijää antavat agentille kyvyn toimia johdonmukaisesti: se näkee nykyisen tilanteen, muistaa aiempia asioita ja ymmärtää prosessin vaiheen. Lisäksi agentilla voi olla **soul** eli pysyvä identiteetti ja arvot, jotka ohjaavat sen toimintaa kaikissa tilanteissa. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, konteksti, pitkäkestoinen muisti, tila ja soul auttavat sinua suunnittelemaan agentista johdonmukaisemman, turvallisemman ja luotettavamman.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
+- [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
+- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
+
+Tarkistettu 15.7.2026.

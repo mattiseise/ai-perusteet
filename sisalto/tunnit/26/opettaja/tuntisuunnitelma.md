@@ -310,3 +310,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mikä oman agenttisi pienin toimiva versio olisi? Mitkä solmut siihen tarvitaan, ja missä kohdassa tarvitset turvakerroksen?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **minimiagentti v1 tai alustariippumaton suoritusjälki**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija rakentaa 3–5 solmun minimiagentin tai alustariippumattoman suoritusjäljen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmista solmurunkoa ja annettuja syötteitä. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää yhden hallitun virhepolun. Syventävä työ ei kasvata pakollista ydintuotosta.

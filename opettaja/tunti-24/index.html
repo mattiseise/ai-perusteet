@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
 <title>Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus — Opettajan opas — AI · Perusteet</title>
-<meta name="description" content="Kokonaisuuden tavoite: Tässä kokonaisuudessa opit ymmärtämään, miksi tekoälyagenttien turvallisuus pitää suunnitella alusta alkaen. Agentti ei vain vastaa…">
+<meta name="description" content="Tämän tunnin rajaus: Tunnilla 7 tarkistit, onko kielimallin väite totta. Nyt suojaat toimivaa agenttia: käsittelet syötteitä epäluotettavina, rajaat työkalujen…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-24/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kokonaisuuden tavoite: Tässä kokonaisuudessa opit ymmärtämään, miksi tekoälyagenttien turvallisuus pitää suunnitella alusta alkaen. Agentti ei vain vastaa…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-24/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kokonaisuuden tavoite: Tässä kokonaisuudessa opit ymmärtämään, miksi tekoälyagenttien turvallisuus pitää suunnitella alusta alkaen. Agentti ei vain vastaa…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", "description": "Kokonaisuuden tavoite: Tässä kokonaisuudessa opit ymmärtämään, miksi tekoälyagenttien turvallisuus pitää suunnitella alusta alkaen. Agentti ei vain vastaa…", "url": "https://aiperusteet.fi/opettaja/tunti-24/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "toinen aste", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Tämän tunnin rajaus: Tunnilla 7 tarkistit, onko kielimallin väite totta. Nyt suojaat toimivaa agenttia: käsittelet syötteitä epäluotettavina, rajaat työkalujen…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-24/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Tämän tunnin rajaus: Tunnilla 7 tarkistit, onko kielimallin väite totta. Nyt suojaat toimivaa agenttia: käsittelet syötteitä epäluotettavina, rajaat työkalujen…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", "description": "Tämän tunnin rajaus: Tunnilla 7 tarkistit, onko kielimallin väite totta. Nyt suojaat toimivaa agenttia: käsittelet syötteitä epäluotettavina, rajaat työkalujen…", "url": "https://aiperusteet.fi/opettaja/tunti-24/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 24"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,7 +18,8 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 24</span></div><div class="lesson-title">Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-24/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-24/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-24/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-24/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-24/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs"><button class="tab-btn active" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button class="tab-btn" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button class="tab-btn" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div class="panel active" data-tab="tuntisuunnitelma"><h1>Opettajamateriaali — oppitunti 24: Turvallisuus ensin</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 24</span></div><div class="lesson-title">Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-24/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-24/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-24/" data-view="opettaja">Opettajan opas</a></div></div><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-24/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-24/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-24-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-24-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-24-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-24-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-24-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-24-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-24-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-24-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajamateriaali — oppitunti 24: Turvallisuus ensin</h1>
+<p><strong>Pedagoginen rajaus suhteessa tuntiin 7:</strong> Aloita yhdellä muistutuksella lähdevarmennuksesta, mutta älä tee tunnista uutta hallusinaatiotuntia. Arvioi, tunnistaako oppija epäluotettavan syötteen, rajaako hän agentin työkaluoikeudet, sijoittaako hyväksyntäportin riskikohtaan ja määrittääkö lokiin todennettavan suoritusjäljen.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin ydinajatukset</h2></div><div class="task-card-body">
 <p>Tämän oppitunnin keskeinen viesti on, että <strong>turvallisuus on agenttien rakentamisen perusta</strong>, ei lopuksi lisättävä lisäominaisuus. Agentti eroaa tavallisesta chatbotista siinä, että se ei vain vastaa käyttäjälle, vaan voi myös <strong>tehdä asioita</strong>: kutsua funktioita, muuttaa tietokantaa, lähettää viestejä, käsitellä tiedostoja ja käyttää ulkoisia työkaluja.</p>
 <p>Siksi agentin virhe tai siihen kohdistuva hyökkäys voi aiheuttaa todellista vahinkoa. Chatbotin väärä vastaus on usein vain harmillinen, mutta agentin väärä päätös voi käynnistää ketjureaktion: väärä hinta lähetetään asiakkaalle, asiakas ostaa tuotteen väärään hintaan, tietokantaan tallentuu virheellinen tieto ja seuraavat prosessit käyttävät sitä.</p>
@@ -29,14 +30,15 @@
 <li><strong>Liian laajat oikeudet:</strong> minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.</li>
 <li><strong>Puutteellinen seuranta:</strong> virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.</li>
 </ul>
-<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Prompt injection — kolme puolustuksen tasoa</h2></div><div class="task-card-body">
+<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Prompt injection — kerroksittainen puolustus</h2></div><div class="task-card-body">
 <p><strong>Prompt injection</strong> tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.</p>
 <p>Opiskelijamateriaalissa korostetaan, että prompt injection on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.</p>
-<p>Prompt injectionilta suojaudutaan kolmella tasolla:</p>
+<p>Prompt injectionin vaikutusta rajataan usealla toisiaan täydentävällä keinolla:</p>
 <ol>
-<li><strong>Erittely:</strong> Erota agentin oma ohjeistus selvästi käyttäjän syötteistä ja ulkoisesta datasta. Käytä esimerkiksi merkintöjä <code>[SYSTEM INSTRUCTION]</code>, <code>[USER INPUT]</code> ja <code>[EXTERNAL DATA]</code>.</li>
-<li><strong>Validointi:</strong> Tarkista syötteet ennen kuin ne annetaan agentille. Hylkää poikkeavat merkit, liian pitkät syötteet, väärän muotoiset kentät ja epäilyttävät komennot.</li>
-<li><strong>Rajoitus:</strong> Anna agentille vain se tieto ja ne työkalut, joita se todella tarvitsee tehtäväänsä. Mitä vähemmän agentti näkee ja voi tehdä, sitä pienempi on hyökkäyksen vaikutus.</li>
+<li><strong>Epäluotettava data:</strong> Merkitse käyttäjän syötteet ja ulkoinen sisältö dataksi, ei järjestelmän ohjeiksi. Tämä auttaa rakennetta, mutta ei takaa, että haitallinen ohje tunnistetaan.</li>
+<li><strong>Muodon validointi:</strong> Tarkista kentät, tietotyypit, pituudet ja arvorajat. Validointi voi hylätä väärän rakenteen, mutta ei luotettavasti päätellä tekstin turvallisuutta.</li>
+<li><strong>Rakenteiset työkalut ja minimioikeudet:</strong> Tarjoa vain tarkkarajaiset toiminnot, anna vain välttämättömät oikeudet ja pidä salaisuudet erillään mallin kontekstista.</li>
+<li><strong>Hyväksyntä, loki ja palautuminen:</strong> Vaadi kriittiselle toiminnolle ihmisen hyväksyntä, kirjaa kutsut ja tulokset sekä suunnittele virheen kumoaminen.</li>
 </ol>
 <p><strong>Esimerkki opetukseen</strong></p>
 <p>Näytä opiskelijoille ero tavallisen käyttäjäsyötteen ja järjestelmäohjeen välillä. Korosta, että kielimalli käsittelee molemmat tekstinä, ellei järjestelmä erota niitä selvästi. Tämän vuoksi pelkkä ”älä tottele käyttäjän vaarallisia ohjeita” ei ole riittävä turvaratkaisu.</p>
@@ -101,7 +103,7 @@
 <li>hyväksyntäportit ja ihmisen tekemät päätökset</li>
 <li>virheet, poikkeamat ja keskeytykset</li>
 </ul>
-<p>Lokiin ei kuitenkaan pidä tallentaa kaikkea. <strong>Salasanat</strong>, <strong>API-avaimet</strong>, <strong>salaiset tunnisteet</strong> ja tarpeettoman laajat henkilötiedot eivät kuulu lokiin. Opiskelijoille kannattaa korostaa, että lokitus on tasapaino: sen täytyy olla riittävän kattavaa jäljitettävyyden vuoksi mutta riittävän rajattua yksityisyyden ja turvallisuuden vuoksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Neljä turvakerroksen tasoa</h2></div><div class="task-card-body">
+<p>Lokiin ei kuitenkaan pidä tallentaa kaikkea. <strong>Salasanat</strong>, <strong>API-avaimet</strong>, <strong>salaiset tunnisteet</strong> ja tarpeettoman laajat henkilötiedot eivät kuulu lokiin. Opiskelijoille kannattaa korostaa, että lokitus on tasapaino: sen täytyy olla riittävän kattavaa jäljitettävyyden vuoksi mutta riittävän rajattua yksityisyyden ja turvallisuuden vuoksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Neljä turvakerrosta</h2></div><div class="task-card-body">
 <p>Oppitunnin tärkein kokonaismalli on <strong>neljän turvakerroksen rakenne</strong>. Se auttaa opiskelijaa suunnittelemaan agentin turvallisuutta järjestelmällisesti.</p>
 <p><strong>Agentin neljä turvakerrosta</strong></p>
 <table>
@@ -112,13 +114,13 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Validointi</strong> Tarkista syöte ennen agentin käyttöä.</td>
+<td><strong>1. Datan käsittely ja validointi</strong> Merkitse ulkoinen sisältö epäluotettavaksi dataksi; tarkista muoto, tyyppi, pituus ja arvorajat.</td>
 </tr>
 <tr>
 <td>↓</td>
 </tr>
 <tr>
-<td><strong>2. Rajoitus</strong> Anna vain tarvittavat oikeudet ja vaadi hyväksynnät.</td>
+<td><strong>2. Rajoitus</strong> Käytä rakenteisia työkaluja, minimioikeuksia ja salaisuuksien eristystä sekä vaadi hyväksynnät.</td>
 </tr>
 <tr>
 <td>↓</td>
@@ -134,7 +136,7 @@
 </tr>
 </tbody>
 </table>
-<p>Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei poista rajoituksen tarvetta, eikä lokitus korvaa palautumissuunnitelmaa. Turvallinen agentti tarvitsee kaikki neljä kerrosta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Epäonnistumisen pedagogiikka — Tehtävä 0: Prompt injection käytännössä</h2></div><div class="task-card-body">
+<p>Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei tunnista luotettavasti kaikkia haitallisia ohjeita eikä poista rajoituksen tarvetta. Lokitus ei korvaa palautumissuunnitelmaa. Kaikki neljä kerrosta pienentävät yhdessä vahingon todennäköisyyttä ja vaikutusta, mutta mikään niistä ei anna täydellistä turvallisuustakuuta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Epäonnistumisen pedagogiikka — Tehtävä 0: Prompt injection käytännössä</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Miksi tämä tehtävä on tärkeä?</h3></div><div class="task-card-body">
 <p>Tehtävät 1–4 käsittelevät turvallisuutta analyyttisesti: opiskelija kuvittelee hyökkäyksen, suunnittelee puolustuksen ja arvioi riskejä. <strong>Tehtävä 0</strong> on erilainen, koska se on <strong>kokemusperäinen</strong>. Opiskelija kokeilee itse prompt injection -hyökkäystä ja näkee, miten helposti ohjeita voidaan yrittää kiertää.</p>
 <p>Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta konkreettinen. Kun opiskelija näkee itse, että pelkkä ohjeistus ei riitä suojaamaan bottia, hän ymmärtää paremmin, miksi tarvitaan erittelyä, validointia, rajoituksia ja lokitusta.</p>
@@ -152,7 +154,7 @@ Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Prompt injection 
 <p><strong>”Oikeat järjestelmät ovat varmasti paremmin suojattuja.”</strong><br />
 Korjaus: Tuotantojärjestelmissä voi olla lisäsuojauksia, mutta perusongelma on sama: kielimalli ei automaattisesti erota luotettavaa ohjeistusta epäluotettavasta syötteestä ilman selkeitä rakenteita ja tarkistuksia.</p>
 <p><strong>”Tämä on hakkeriasia, eikä liity minuun.”</strong><br />
-Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybotteja ja agentteja, on vastuussa niiden turvallisuudesta. Tämä on ammattilaisen perusosaamista, ei vain tietoturva-asiantuntijoiden erikoisalue.</p>
+Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybotteja ja agentteja, on vastuussa niiden turvallisuudesta. Tämä on vastuullisen käyttäjän perusosaamista, ei vain tietoturva-asiantuntijoiden erikoisalue.</p>
 </div></div><div class="task-card task-card--assessment task-card--sm"><div class="task-card-header"><h3>Arviointivinkit tehtävään 0</h3></div><div class="task-card-body">
 <table>
 <thead>
@@ -168,7 +170,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </tr>
 <tr>
 <td><strong>Erinomainen</strong></td>
-<td>Opiskelija analysoi, miksi osa tekniikoista toimi ja osaa yhdistää puolustuskeinot — erittelyn, validoinnin ja rajoituksen — konkreettisiin hyökkäyksiin.</td>
+<td>Opiskelija analysoi, miksi yksittäinen tunnistin ei riitä, ja yhdistää epäluotettavan datan käsittelyn, muodon validoinnin, rakenteiset työkalut, minimioikeudet, hyväksynnän, lokin ja palautumisen konkreettiseen riskiin.</td>
 </tr>
 <tr>
 <td><strong>Pinnallinen</strong></td>
@@ -179,7 +181,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p>Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteistä konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.</p>
 <ol>
 <li><strong>Prompt injection: hyökkäykset ja puolustus</strong><br />
-   Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee niihin suojaukset.</li>
+   Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee suojaukset siltä varalta, ettei käskyä tunnisteta.</li>
 <li><strong>Hallusinaatiot: skenaariot ja ehkäisy</strong><br />
    Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, varmuuskynnyksen tai tarkistusvaiheen.</li>
 <li><strong>Minimioikeusperiaate: pääsyn suunnittelu</strong><br />
@@ -232,7 +234,48 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin turvallisuus rakentuu kerroksittain. Yksittäinen suojaus ei riitä. Tarvitaan <strong>validointia</strong>, <strong>rajoituksia</strong>, <strong>seurantaa</strong> ja <strong>palautumissuunnitelma</strong>.</p>
 <p>Hyvä päätöskysymys tunnin loppuun:</p>
 <blockquote class="pause"><p><strong>Pohdi:</strong> Mikä olisi oman agenttisi pahin realistinen virhe? Miten estät sen, miten huomaat sen ja miten korjaat sen?</p>
-</blockquote></div></div></div><div class="panel" data-tab="ohjatut"><h1>Opettajavetoiset tehtävät — oppitunti 24</h1>
+</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
+<p>Tallennettava tuotos on <strong>uhkamalli ja kerroksittainen kontrollikartta</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+<table>
+<thead>
+<tr>
+<th>Aika</th>
+<th>Vaihe</th>
+<th>Opettajan tehtävä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 min</td>
+<td>Virittäytyminen</td>
+<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+</tr>
+<tr>
+<td>10–25 min</td>
+<td>Ydinkäsite</td>
+<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+</tr>
+<tr>
+<td>25–65 min</td>
+<td>Perustuotos</td>
+<td>Oppija yhdistää uhkan, toimivallan, kontrollin ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+</tr>
+<tr>
+<td>65–80 min</td>
+<td>Testaus ja purku</td>
+<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+</tr>
+<tr>
+<td>80–90 min</td>
+<td>Tallennus ja exit ticket</td>
+<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
+<p>Oppija käyttää valmista uhkaskenaariota ja kontrollikortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
+</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
+<p>Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden kontrollin pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-24-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-24-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 24</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 0: Prompt injection livenä — murretaan botti yhdessä noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Aktiviteetin tavoitteena on näyttää opiskelijoille reaaliaikaisesti, kuinka tekoälyn ohjeistusta voidaan yrittää kiertää <strong>prompt injection</strong> -hyökkäyksellä. Opiskelijat ymmärtävät, miksi pelkkä ohjeistus ei riitä suojaamaan agenttia, vaan tarvitaan myös teknisiä ja prosessiin liittyviä <strong>turvakerroksia</strong>.</p>
@@ -324,9 +367,9 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </ol>
 <p><strong>Mahdollisia puolustuksia:</strong></p>
 <ul>
-<li><strong>Erittely:</strong> erotetaan käyttäjän viesti järjestelmäohjeista ja työkalukomennoista.</li>
-<li><strong>Validointi:</strong> tarkistetaan, onko syöte turvallinen ja sallittu.</li>
-<li><strong>Rajoitus:</strong> agentille annetaan vain rajatut oikeudet ja työkalut.</li>
+<li><strong>Epäluotettava data:</strong> käyttäjän viesti ja ulkoinen sisältö merkitään dataksi, ei järjestelmäohjeeksi.</li>
+<li><strong>Validointi:</strong> tarkistetaan rakenne, tietotyyppi, pituus ja arvorajat — ei väitetä sisältöä turvalliseksi.</li>
+<li><strong>Rakenteiset työkalut ja rajoitus:</strong> agentille annetaan vain tarkkarajaiset toiminnot ja minimioikeudet; salaisuudet pidetään erillään.</li>
 <li><strong>Ihmisen hyväksyntä:</strong> riskialttiit toiminnot vaativat ihmisen luvan.</li>
 <li><strong>Lokitus:</strong> tallennetaan, mitä agentti yritti tehdä ja miksi.</li>
 </ul>
@@ -523,11 +566,11 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4: Neljä puolustuskerrosta noin 20 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
 <p>Aktiviteetin tavoitteena on näyttää opiskelijoille, että agentin turvallisuus ei perustu yhteen suojakeinoon. Tarvitaan useita puolustuskerroksia: <strong>validointi</strong>, <strong>rajoitus</strong>, <strong>seuranta</strong> ja <strong>palautuminen</strong>.</p>
-<p><strong>Opettajan painotus:</strong> Turvallinen agentti ei luota vain hyvään promptiin. Se tarkistaa syötteet, rajaa toimintoja, kirjaa tapahtumat ja mahdollistaa virheistä palautumisen.</p>
+<p><strong>Opettajan painotus:</strong> Turvallinen agentti ei luota vain hyvään promptiin tai validointitunnistimeen. Ulkoinen sisältö on epäluotettavaa dataa. Rakenteiset työkalut, minimioikeudet, salaisuuksien eristys, kriittisten toimintojen hyväksyntä, loki ja palautuminen rajaavat vahinkoa.</p>
 <h3>Opettajan ohjeet ja fasilitointi</h3>
 <p><strong>Selitys:</strong></p>
 <p>Kerro opiskelijoille:</p>
-<blockquote class="pause"><p>Turvallinen agentti ei luota vain siihen, että ohjeet ovat hyvät. Se tarkistaa syötteet, rajoittaa riskialttiita toimintoja, kirjaa tapahtumat ja pystyy palautumaan virheistä.</p>
+<blockquote class="pause"><p>Turvallinen agentti ei luota vain siihen, että ohjeet ovat hyvät tai haitallinen teksti tunnistetaan. Se käsittelee ulkoisen sisällön epäluotettavana datana, tarkistaa rakenteen, rajoittaa työkalut ja oikeudet, eristää salaisuudet, vaatii kriittisille toiminnoille hyväksynnän, kirjaa tapahtumat ja pystyy palautumaan virheistä.</p>
 </blockquote>
 <h3>Neljä kerrosta</h3>
 <table>
@@ -541,13 +584,13 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <tbody>
 <tr>
 <td><strong>Validointi</strong></td>
-<td>Tarkistetaan, näyttääkö syöte järkevältä ja sallitulta.</td>
-<td>Onko tämä pyyntö turvallinen käsitellä?</td>
+<td>Tarkistetaan kentät, tietotyypit, pituudet ja arvorajat.</td>
+<td>Onko syöte sovitun rakenteen mukainen?</td>
 </tr>
 <tr>
 <td><strong>Rajoitus</strong></td>
-<td>Päätetään, saako agentti toimia itse vai tarvitaanko ihmisen hyväksyntä.</td>
-<td>Saako agentti tehdä tämän päätöksen yksin?</td>
+<td>Rajataan työkalut ja oikeudet minimiin, eristetään salaisuudet ja päätetään hyväksyntärajat.</td>
+<td>Saako agentti tehdä tämän toiminnon yksin?</td>
 </tr>
 <tr>
 <td><strong>Seuranta</strong></td>
@@ -636,7 +679,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <li>ehdottaa hallusinaatioiden ehkäisyyn sopivia keinoja,</li>
 <li>soveltaa <strong>minimioikeusperiaatetta</strong> agentin pääsyoikeuksiin,</li>
 <li>suunnitella agentille neljä puolustuskerrosta: <strong>validointi</strong>, <strong>rajoitus</strong>, <strong>seuranta</strong> ja <strong>palautuminen</strong>.</li>
-</ul></div></div></div><div class="panel" data-tab="diat"><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+</ul></div></div></div><div id="panel-lesson-24-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-24-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Turvallisuus ensin</title>
 <defs><pattern id="l24g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
@@ -652,7 +695,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/13: Miksi agentin turvallisuus on tärkeää?</title>
 <defs><pattern id="l24g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g2)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miksi agentin turvallisuus on tärkeää?</text>
@@ -676,7 +719,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/13: Neljä keskeistä uhkaa</title>
 <defs><pattern id="l24g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g3)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Neljä keskeistä uhkaa</text>
@@ -708,7 +751,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/13: Prompt injection</title>
 <defs><pattern id="l24g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g4)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Prompt injection</text>
@@ -735,29 +778,29 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/13: Puolustautuminen — neljä keinoa</title>
 <defs><pattern id="l24g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g5)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Puolustautuminen — neljä keinoa</text>
 <text x="74" y="138" font-size="18" fill="#5A6478">Prompt injectionia ei torjuta toiveella, että agentti noudattaa ohjeita.</text>
 <rect x="74" y="172" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="216" font-size="26" font-weight="800" fill="#008799">1</text>
-<text x="130" y="216" font-size="21" font-weight="700" fill="#1B2336">Erottelu</text>
-<text x="96" y="252" font-size="15.5" fill="#5A6478">Pidä järjestelmän ohjeet,</text>
-<text x="96" y="274" font-size="15.5" fill="#5A6478">käyttäjän syöte ja ulkoinen</text>
-<text x="96" y="296" font-size="15.5" fill="#5A6478">teksti erillään toisistaan.</text>
+<text x="130" y="216" font-size="21" font-weight="700" fill="#1B2336">Epäluotettava data</text>
+<text x="96" y="252" font-size="15.5" fill="#5A6478">Käsittele ulkoinen sisältö</text>
+<text x="96" y="274" font-size="15.5" fill="#5A6478">datana — ei järjestelmän</text>
+<text x="96" y="296" font-size="15.5" fill="#5A6478">ohjeena tai työkalukutsuna.</text>
 <rect x="494" y="172" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="516" y="216" font-size="26" font-weight="800" fill="#008799">2</text>
-<text x="550" y="216" font-size="21" font-weight="700" fill="#1B2336">Validointi</text>
-<text x="516" y="252" font-size="15.5" fill="#5A6478">Tarkista syötteet ja</text>
-<text x="516" y="274" font-size="15.5" fill="#5A6478">dokumentit ennen käyttöä —</text>
-<text x="516" y="296" font-size="15.5" fill="#5A6478">etsi ohjeiden ohitusyrityksiä.</text>
+<text x="550" y="216" font-size="21" font-weight="700" fill="#1B2336">Muodon validointi</text>
+<text x="516" y="252" font-size="15.5" fill="#5A6478">Tarkista kentät, tyypit,</text>
+<text x="516" y="274" font-size="15.5" fill="#5A6478">pituudet ja arvorajat.</text>
+<text x="516" y="296" font-size="15.5" fill="#5A6478">Se ei takaa sisällön turvallisuutta.</text>
 <rect x="74" y="326" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="370" font-size="26" font-weight="800" fill="#008799">3</text>
-<text x="130" y="370" font-size="21" font-weight="700" fill="#1B2336">Rajoitukset</text>
-<text x="96" y="406" font-size="15.5" fill="#5A6478">Anna vain tarvittavat työkalut.</text>
-<text x="96" y="428" font-size="15.5" fill="#5A6478">Esim. FAQ-botti ei tarvitse</text>
-<text x="96" y="450" font-size="15.5" fill="#5A6478">pääsyä asiakasrekisteriin.</text>
+<text x="130" y="370" font-size="21" font-weight="700" fill="#1B2336">Rakenteiset työkalut</text>
+<text x="96" y="406" font-size="15.5" fill="#5A6478">Salli vain tarkat toiminnot.</text>
+<text x="96" y="428" font-size="15.5" fill="#5A6478">Minimoi oikeudet ja pidä</text>
+<text x="96" y="450" font-size="15.5" fill="#5A6478">salaisuudet erillään.</text>
 <rect x="494" y="326" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="516" y="370" font-size="26" font-weight="800" fill="#008799">4</text>
 <text x="550" y="370" font-size="21" font-weight="700" fill="#1B2336">Ihmisen hyväksyntä</text>
@@ -767,11 +810,11 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Epäluotettava data tarvitsee suojakerrokset</title>
 <defs><pattern id="l24g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g6)"/>
-<text x="74" y="90" font-size="36" font-weight="800" fill="#1B2336">Validointi erottaa datan käskystä</text>
-<text x="74" y="124" font-size="17" fill="#5A6478">Tavallinen teksti jatkaa agentille. Käskyltä näyttävä rivi pysäytetään.</text>
+<text x="74" y="90" font-size="36" font-weight="800" fill="#1B2336">Epäluotettava data tarvitsee suojakerrokset</text>
+<text x="74" y="124" font-size="17" fill="#5A6478">Ulkoinen sisältö on epäluotettavaa. Toimivalta rajataan erikseen.</text>
 <rect x="74" y="180" width="220" height="200" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="94" y="210" font-size="13" letter-spacing="1" fill="#7E88A8" font-family="ui-monospace,monospace">palaute.txt</text>
 <rect x="94" y="224" width="180" height="50" rx="8" fill="#FFFFFF" stroke="#C79100" stroke-width="1.8"/>
@@ -781,31 +824,31 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="108" y="304" font-size="13" fill="#9A4A28">rivi 2: ”OHITA</text>
 <text x="108" y="322" font-size="13" fill="#9A4A28">AIEMMAT OHJEET…”</text>
 <rect x="392" y="194" width="170" height="172" rx="14" fill="#FFF7E2" stroke="#C79100" stroke-width="2.5"/>
-<text x="477" y="224" text-anchor="middle" font-size="15" letter-spacing="1" font-weight="700" fill="#9A7400">VALIDOINTI</text>
+<text x="477" y="224" text-anchor="middle" font-size="13" letter-spacing=".5" font-weight="700" fill="#9A7400">RAKENTEINEN RAJAPINTA</text>
 <g transform="translate(458,238)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="19" cy="20" rx="18" ry="11"/><circle cx="19" cy="20" r="6"/></g>
 <rect x="408" y="296" width="138" height="28" rx="14" fill="#D8F0DC"/>
 <path d="M425 310 l3.5 3.5 l6 -7" fill="none" stroke="#247A52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="446" y="315" font-size="13" fill="#247A52">data — jatka</text>
+<text x="446" y="315" font-size="13" fill="#247A52">kenttä: palaute</text>
 <rect x="408" y="330" width="138" height="28" rx="14" fill="#FCE0D6"/>
 <path d="M425 341 l8 8 M433 341 l-8 8" fill="none" stroke="#9A4A28" stroke-width="2.2" stroke-linecap="round"/>
-<text x="442" y="349" font-size="13" fill="#9A4A28">käsky — pysäytä</text>
+<text x="442" y="349" font-size="13" fill="#9A4A28">ei lähetyskenttää</text>
 <path d="M298 250 H388" stroke="#C79100" stroke-width="2.5"/><path d="M396 250 L384 244 L384 256 Z" fill="#C79100"/>
 <path d="M298 310 H388" stroke="#D98E6F" stroke-width="2.5" stroke-dasharray="5 4"/>
 <path d="M566 250 H656" stroke="#2F9E69" stroke-width="2.5"/><path d="M664 250 L652 244 L652 256 Z" fill="#2F9E69"/>
 <rect x="672" y="180" width="214" height="200" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(696,200)"><rect x="0" y="6" width="32" height="27" rx="6" fill="#E5F6F7" stroke="#008799" stroke-width="2.4"/><line x1="16" y1="6" x2="16" y2="0" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="-2" r="3" fill="#008799"/><circle cx="9" cy="17" r="3" fill="#008799"/><circle cx="23" cy="17" r="3" fill="#008799"/><rect x="9" y="26" width="14" height="3" rx="1.5" fill="#008799"/></g>
 <text x="744" y="226" font-size="20" font-weight="800" fill="#006B7A">Agentti</text>
-<text x="696" y="266" font-size="14.5" fill="#1B2336">Saa vain rivin 1.</text>
-<text x="696" y="290" font-size="14.5" fill="#1B2336">Kirjaa palautteen.</text>
+<text x="696" y="266" font-size="14.5" fill="#1B2336">Saa tekstin datana.</text>
+<text x="696" y="290" font-size="14.5" fill="#1B2336">Voi vain kirjata palautteen.</text>
 <rect x="696" y="312" width="166" height="30" rx="15" fill="#D8F0DC"/>
 <path d="M716 327 l3.5 3.5 l6 -7" fill="none" stroke="#247A52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="734" y="332" font-size="13" fill="#247A52">ei lähetä mitään</text>
 <path d="M140 408 l8 8 M148 408 l-8 8" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round"/>
-<text x="160" y="416" font-size="14" fill="#C0392B">käskyltä näyttävää riviä ei välitetä agentille</text>
+<text x="160" y="416" font-size="14" fill="#C0392B">vahinko rajataan, vaikka haitallista riviä ei tunnisteta</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Hallusinaatiot</title>
 <defs><pattern id="l24g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g7)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hallusinaatiot</text>
@@ -825,7 +868,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Miten hallusinaatioita vähennetään?</title>
 <defs><pattern id="l24g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g8)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miten hallusinaatioita vähennetään?</text>
@@ -849,7 +892,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Minimioikeusperiaate</title>
 <defs><pattern id="l24g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g9)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Minimioikeusperiaate</text>
@@ -874,7 +917,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Lokitus ja seuranta</title>
 <defs><pattern id="l24g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g10)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Lokitus ja seuranta</text>
@@ -901,24 +944,24 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Neljä turvakerrosta</title>
 <defs><pattern id="l24g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g11)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Neljä turvakerrosta</text>
-<text x="74" y="138" font-size="18" fill="#5A6478">Yksi suojaus ei riitä. Jos yksi kerros pettää, muut pitävät yhä.</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Yksi suojaus ei riitä. Muut kerrokset rajaavat vahingon vaikutusta.</text>
 <rect x="74" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="174" cy="226" r="30" fill="#E5F6F7"/>
 <g transform="translate(157,209)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="17" cy="17" rx="16" ry="10"/><circle cx="17" cy="17" r="5"/></g>
-<text x="174" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Validointi</text>
-<text x="174" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Syöte tarkistetaan</text>
-<text x="174" y="338" text-anchor="middle" font-size="14" fill="#5A6478">ennen käyttöä.</text>
-<text x="174" y="430" text-anchor="middle" font-size="13" fill="#006B7A">tunnistaa ohitusyrityksen</text>
+<text x="174" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Datan käsittely</text>
+<text x="174" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Ulkoinen sisältö dataksi;</text>
+<text x="174" y="338" text-anchor="middle" font-size="14" fill="#5A6478">muoto ja arvorajat oikein.</text>
+<text x="174" y="430" text-anchor="middle" font-size="13" fill="#006B7A">ei sisältötakuuta</text>
 <rect x="282" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="382" cy="226" r="30" fill="#E5F6F7"/>
 <g transform="translate(367,210)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="24" height="17" rx="3"/><path d="M9 12 V8 a6 6 0 0 1 12 0 V12"/></g>
-<text x="382" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Rajoitus</text>
-<text x="382" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Työkalut rajataan</text>
-<text x="382" y="338" text-anchor="middle" font-size="14" fill="#5A6478">tehtävän mukaan.</text>
+<text x="382" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Toimivallan rajaus</text>
+<text x="382" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Rakenteiset työkalut,</text>
+<text x="382" y="338" text-anchor="middle" font-size="14" fill="#5A6478">minimioikeudet ja hyväksyntä.</text>
 <text x="382" y="430" text-anchor="middle" font-size="13" fill="#006B7A">lukee, ei poista</text>
 <rect x="490" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="590" cy="226" r="30" fill="#FFF4E0"/>
@@ -937,7 +980,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 12/13: Tarkistuslista ennen käyttöönottoa</title>
 <defs><pattern id="l24g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g12)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tarkistuslista ennen käyttöönottoa</text>
@@ -964,7 +1007,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 13/13: Lopuksi</title>
 <defs><pattern id="l24g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g13)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
@@ -985,8 +1028,8 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-23/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-25/">Seuraava →</a></div></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
-<div id="consent-banner" role="dialog" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script>window.CI={"view": "opettaja", "lid": "lesson-24", "num": 24, "title": "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>

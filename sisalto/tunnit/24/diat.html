@@ -104,22 +104,22 @@
 <text x="74" y="138" font-size="18" fill="#5A6478">Prompt injectionia ei torjuta toiveella, että agentti noudattaa ohjeita.</text>
 <rect x="74" y="172" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="216" font-size="26" font-weight="800" fill="#008799">1</text>
-<text x="130" y="216" font-size="21" font-weight="700" fill="#1B2336">Erottelu</text>
-<text x="96" y="252" font-size="15.5" fill="#5A6478">Pidä järjestelmän ohjeet,</text>
-<text x="96" y="274" font-size="15.5" fill="#5A6478">käyttäjän syöte ja ulkoinen</text>
-<text x="96" y="296" font-size="15.5" fill="#5A6478">teksti erillään toisistaan.</text>
+<text x="130" y="216" font-size="21" font-weight="700" fill="#1B2336">Epäluotettava data</text>
+<text x="96" y="252" font-size="15.5" fill="#5A6478">Käsittele ulkoinen sisältö</text>
+<text x="96" y="274" font-size="15.5" fill="#5A6478">datana — ei järjestelmän</text>
+<text x="96" y="296" font-size="15.5" fill="#5A6478">ohjeena tai työkalukutsuna.</text>
 <rect x="494" y="172" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="516" y="216" font-size="26" font-weight="800" fill="#008799">2</text>
-<text x="550" y="216" font-size="21" font-weight="700" fill="#1B2336">Validointi</text>
-<text x="516" y="252" font-size="15.5" fill="#5A6478">Tarkista syötteet ja</text>
-<text x="516" y="274" font-size="15.5" fill="#5A6478">dokumentit ennen käyttöä —</text>
-<text x="516" y="296" font-size="15.5" fill="#5A6478">etsi ohjeiden ohitusyrityksiä.</text>
+<text x="550" y="216" font-size="21" font-weight="700" fill="#1B2336">Muodon validointi</text>
+<text x="516" y="252" font-size="15.5" fill="#5A6478">Tarkista kentät, tyypit,</text>
+<text x="516" y="274" font-size="15.5" fill="#5A6478">pituudet ja arvorajat.</text>
+<text x="516" y="296" font-size="15.5" fill="#5A6478">Se ei takaa sisällön turvallisuutta.</text>
 <rect x="74" y="326" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="96" y="370" font-size="26" font-weight="800" fill="#008799">3</text>
-<text x="130" y="370" font-size="21" font-weight="700" fill="#1B2336">Rajoitukset</text>
-<text x="96" y="406" font-size="15.5" fill="#5A6478">Anna vain tarvittavat työkalut.</text>
-<text x="96" y="428" font-size="15.5" fill="#5A6478">Esim. FAQ-botti ei tarvitse</text>
-<text x="96" y="450" font-size="15.5" fill="#5A6478">pääsyä asiakasrekisteriin.</text>
+<text x="130" y="370" font-size="21" font-weight="700" fill="#1B2336">Rakenteiset työkalut</text>
+<text x="96" y="406" font-size="15.5" fill="#5A6478">Salli vain tarkat toiminnot.</text>
+<text x="96" y="428" font-size="15.5" fill="#5A6478">Minimoi oikeudet ja pidä</text>
+<text x="96" y="450" font-size="15.5" fill="#5A6478">salaisuudet erillään.</text>
 <rect x="494" y="326" width="392" height="138" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="516" y="370" font-size="26" font-weight="800" fill="#008799">4</text>
 <text x="550" y="370" font-size="21" font-weight="700" fill="#1B2336">Ihmisen hyväksyntä</text>
@@ -132,8 +132,8 @@
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l24g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g6)"/>
-<text x="74" y="90" font-size="36" font-weight="800" fill="#1B2336">Validointi erottaa datan käskystä</text>
-<text x="74" y="124" font-size="17" fill="#5A6478">Tavallinen teksti jatkaa agentille. Käskyltä näyttävä rivi pysäytetään.</text>
+<text x="74" y="90" font-size="36" font-weight="800" fill="#1B2336">Epäluotettava data tarvitsee suojakerrokset</text>
+<text x="74" y="124" font-size="17" fill="#5A6478">Ulkoinen sisältö on epäluotettavaa. Toimivalta rajataan erikseen.</text>
 <rect x="74" y="180" width="220" height="200" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="94" y="210" font-size="13" letter-spacing="1" fill="#7E88A8" font-family="ui-monospace,monospace">palaute.txt</text>
 <rect x="94" y="224" width="180" height="50" rx="8" fill="#FFFFFF" stroke="#C79100" stroke-width="1.8"/>
@@ -143,27 +143,27 @@
 <text x="108" y="304" font-size="13" fill="#9A4A28">rivi 2: ”OHITA</text>
 <text x="108" y="322" font-size="13" fill="#9A4A28">AIEMMAT OHJEET…”</text>
 <rect x="392" y="194" width="170" height="172" rx="14" fill="#FFF7E2" stroke="#C79100" stroke-width="2.5"/>
-<text x="477" y="224" text-anchor="middle" font-size="15" letter-spacing="1" font-weight="700" fill="#9A7400">VALIDOINTI</text>
+<text x="477" y="224" text-anchor="middle" font-size="13" letter-spacing=".5" font-weight="700" fill="#9A7400">RAKENTEINEN RAJAPINTA</text>
 <g transform="translate(458,238)" fill="none" stroke="#C79100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="19" cy="20" rx="18" ry="11"/><circle cx="19" cy="20" r="6"/></g>
 <rect x="408" y="296" width="138" height="28" rx="14" fill="#D8F0DC"/>
 <path d="M425 310 l3.5 3.5 l6 -7" fill="none" stroke="#247A52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="446" y="315" font-size="13" fill="#247A52">data — jatka</text>
+<text x="446" y="315" font-size="13" fill="#247A52">kenttä: palaute</text>
 <rect x="408" y="330" width="138" height="28" rx="14" fill="#FCE0D6"/>
 <path d="M425 341 l8 8 M433 341 l-8 8" fill="none" stroke="#9A4A28" stroke-width="2.2" stroke-linecap="round"/>
-<text x="442" y="349" font-size="13" fill="#9A4A28">käsky — pysäytä</text>
+<text x="442" y="349" font-size="13" fill="#9A4A28">ei lähetyskenttää</text>
 <path d="M298 250 H388" stroke="#C79100" stroke-width="2.5"/><path d="M396 250 L384 244 L384 256 Z" fill="#C79100"/>
 <path d="M298 310 H388" stroke="#D98E6F" stroke-width="2.5" stroke-dasharray="5 4"/>
 <path d="M566 250 H656" stroke="#2F9E69" stroke-width="2.5"/><path d="M664 250 L652 244 L652 256 Z" fill="#2F9E69"/>
 <rect x="672" y="180" width="214" height="200" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(696,200)"><rect x="0" y="6" width="32" height="27" rx="6" fill="#E5F6F7" stroke="#008799" stroke-width="2.4"/><line x1="16" y1="6" x2="16" y2="0" stroke="#008799" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="-2" r="3" fill="#008799"/><circle cx="9" cy="17" r="3" fill="#008799"/><circle cx="23" cy="17" r="3" fill="#008799"/><rect x="9" y="26" width="14" height="3" rx="1.5" fill="#008799"/></g>
 <text x="744" y="226" font-size="20" font-weight="800" fill="#006B7A">Agentti</text>
-<text x="696" y="266" font-size="14.5" fill="#1B2336">Saa vain rivin 1.</text>
-<text x="696" y="290" font-size="14.5" fill="#1B2336">Kirjaa palautteen.</text>
+<text x="696" y="266" font-size="14.5" fill="#1B2336">Saa tekstin datana.</text>
+<text x="696" y="290" font-size="14.5" fill="#1B2336">Voi vain kirjata palautteen.</text>
 <rect x="696" y="312" width="166" height="30" rx="15" fill="#D8F0DC"/>
 <path d="M716 327 l3.5 3.5 l6 -7" fill="none" stroke="#247A52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="734" y="332" font-size="13" fill="#247A52">ei lähetä mitään</text>
 <path d="M140 408 l8 8 M148 408 l-8 8" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round"/>
-<text x="160" y="416" font-size="14" fill="#C0392B">käskyltä näyttävää riviä ei välitetä agentille</text>
+<text x="160" y="416" font-size="14" fill="#C0392B">vahinko rajataan, vaikka haitallista riviä ei tunnisteta</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
@@ -267,20 +267,20 @@
 <defs><pattern id="l24g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l24g11)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Neljä turvakerrosta</text>
-<text x="74" y="138" font-size="18" fill="#5A6478">Yksi suojaus ei riitä. Jos yksi kerros pettää, muut pitävät yhä.</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Yksi suojaus ei riitä. Muut kerrokset rajaavat vahingon vaikutusta.</text>
 <rect x="74" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="174" cy="226" r="30" fill="#E5F6F7"/>
 <g transform="translate(157,209)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="17" cy="17" rx="16" ry="10"/><circle cx="17" cy="17" r="5"/></g>
-<text x="174" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Validointi</text>
-<text x="174" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Syöte tarkistetaan</text>
-<text x="174" y="338" text-anchor="middle" font-size="14" fill="#5A6478">ennen käyttöä.</text>
-<text x="174" y="430" text-anchor="middle" font-size="13" fill="#006B7A">tunnistaa ohitusyrityksen</text>
+<text x="174" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Datan käsittely</text>
+<text x="174" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Ulkoinen sisältö dataksi;</text>
+<text x="174" y="338" text-anchor="middle" font-size="14" fill="#5A6478">muoto ja arvorajat oikein.</text>
+<text x="174" y="430" text-anchor="middle" font-size="13" fill="#006B7A">ei sisältötakuuta</text>
 <rect x="282" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="382" cy="226" r="30" fill="#E5F6F7"/>
 <g transform="translate(367,210)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="24" height="17" rx="3"/><path d="M9 12 V8 a6 6 0 0 1 12 0 V12"/></g>
-<text x="382" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Rajoitus</text>
-<text x="382" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Työkalut rajataan</text>
-<text x="382" y="338" text-anchor="middle" font-size="14" fill="#5A6478">tehtävän mukaan.</text>
+<text x="382" y="282" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2336">Toimivallan rajaus</text>
+<text x="382" y="318" text-anchor="middle" font-size="14" fill="#5A6478">Rakenteiset työkalut,</text>
+<text x="382" y="338" text-anchor="middle" font-size="14" fill="#5A6478">minimioikeudet ja hyväksyntä.</text>
 <text x="382" y="430" text-anchor="middle" font-size="13" fill="#006B7A">lukee, ei poista</text>
 <rect x="490" y="178" width="200" height="278" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="590" cy="226" r="30" fill="#FFF4E0"/>

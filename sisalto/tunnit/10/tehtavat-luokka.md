@@ -4,7 +4,7 @@
 
 ## Tehtävä 10.1 — Sama tehtävä, kolme työkalua 🟢 SUOSITELTU
 
-**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: ammattilainen ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
+**Tavoite:** Huomaat omakohtaisesti, miten eri tekoälytyökalut tuottavat erilaisia vastauksia samaan tehtävään. Tämä on tunnin ydintaito: vastuullinen käyttäjä ei valitse työkalua tuttuuden takia, vaan sen mukaan mikä sopii tehtävään.
 
 ### Vaiheet
 
@@ -12,9 +12,9 @@
 
 Valitse yksi konkreettinen tehtävä, joka on tarpeeksi monipuolinen paljastaakseen työkalujen erot. Esimerkkejä:
 
-- Kirjoita 300 sanan käyttöohje aiheesta, jonka osaat hyvin (esim. *"Miten vaihdat salasanan Windowsissa?"*)
-- Selitä yksi tekninen käsite kahdelle eri yleisölle (esim. *"Selitä TCP/IP-protokolla 1) IT-aloittelijalle ja 2) järjestelmäasiantuntijalle"*)
-- Kirjoita lyhyt Python-funktio, joka tekee jotain hyödyllistä (esim. *"Funktio, joka lukee CSV-tiedoston ja palauttaa keskiarvon yhdestä sarakkeesta"*)
+- Kirjoita 300 sanan käyttöohje aiheesta, jonka osaat hyvin (esim. *"Miten vaihdat talvirenkaat?"* tai *"Miten vaihdat salasanan Windowsissa?"*)
+- Selitä yksi käsite kahdelle eri yleisölle (esim. *"Selitä lainan korko 1) lukiolaiselle ja 2) aikuiselle"* tai *"Selitä TCP/IP-protokolla aloittelijalle ja asiantuntijalle"*)
+- Suunnittele monivaiheinen kokonaisuus, esimerkiksi viikon treeniohjelma, tenttiin valmistautumisen aikataulu tai lyhyt Python-funktio, joka lukee CSV-tiedoston ja laskee sarakkeen keskiarvon
 
 Mitä konkreettisempi pyyntö, sitä paremmin erot näkyvät.
 

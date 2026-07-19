@@ -58,9 +58,10 @@ Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman.
 
 - Päivittäinen sähköpostien luokittelija ja yhteenvetäjä
 - Asiakaspalvelun FAQ-botti, joka hakee vastauksia tietokannasta
-- Sosiaalisen median seurantarobotti
 - Palvelinlokien analysaattori, joka ilmoittaa virheistä
-- Asiakkaiden tikettien luokittelija ja jakaja
+- Harrastuksen tai yhdistyksen tapahtumien ja ilmoittautumisten kokoaja
+- Some- tai uutisseurannan kooste itseäsi kiinnostavasta aiheesta
+- Opintojen palautuspäivien kerääjä ja muistuttaja
 
 **Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.** 3–5 solmua riittää. Tärkeintä on, että agentti on **autonominen**: se tekee päätöksiä tilanteen mukaan, käyttää työkalua tai paria ja toimii itsenäisesti. Pieni agentti, jonka ymmärrät ja jonka rajat tunnistat, on tavoite.
 
@@ -115,7 +116,7 @@ Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
    - **README** — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset
    - **ARCHITECTURE** — jokainen n8n-solmu järjestyksessä, mitä se tekee, miten ne linkittyvät agentin kuuteen komponenttiin
    - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, human-in-the-loop -kohdat
-4. **Testiraportti** — 15 testitapausta (5 normaalia, 5 reunatapausta, 5 turvallisuustestiä)
+4. **Testiraportti** — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä
 5. **Demo luokassa** (3–5 min) tai nauhoitettuna videona
 6. **Itsearviointi** (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat
 7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai AI-pohjainen kriittinen arvio jos teet työn yksin)
@@ -186,3 +187,14 @@ Jos jossain vaiheessa tuntuu, että et ehdi — **leikkaa scope**. Yksinkertaise
 ---
 
 **Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko *rakentaa* sillä jotain mitä joku muu voi käyttää.**
+
+
+## Arviointitasot
+
+| Kriteeri | Erinomainen | Hyvä | Tyydyttävä | Välttävä | Ei vielä hyväksyttävä |
+|---|---|---|---|---|---|
+| Toimiva tai todennettu työnkulku (25 p) | 3–5 solmun ydintyönkulku toimii hallitusti, virhepolku näkyy ja suoritusjälki todentaa jokaisen vaiheen. | Ydintyönkulku toimii tai alustariippumaton suoritusjälki todentaa sen. | Pääpolku on ymmärrettävä, mutta yksi vaihe tai virhepolku jää epävarmaksi. | Osia on toteutettu, mutta pääpolkua ei voi todentaa alusta loppuun. | Toteutus, solmukaavio tai suoritusjälki puuttuu. |
+| Turvallisuus (20 p) | Uhkamalli ohjaa minimioikeuksia, hyväksyntöjä, salaisuuksien eristystä, lokia ja palautumista; kontrollien rajat tunnistetaan. | Olennaiset riskit, oikeusrajat, hyväksyntä ja lokitus on toteutettu tai kuvattu. | Turvatoimet kattavat perusriskit, mutta yksi olennainen kerros puuttuu. | Turvallisuus jää yleisiksi ohjeiksi ilman yhteyttä työnkulkuun. | Olennaisia riskejä tai kontrolleja ei ole käsitelty. |
+| Dokumentaatio (20 p) | Toinen henkilö voi dokumentaatiosta toistaa pääpolun, testit, oikeudet ja virhetilanteen. | Rakenne, työkalut, oikeudet ja käyttö kuvataan selkeästi. | Dokumentaatio kuvaa pääidean, mutta yksityiskohtia puuttuu. | Dokumentaatio on hajanaista tai ristiriidassa toteutuksen kanssa. | Dokumentaatio puuttuu. |
+| Testaus (20 p) | 9 testiä ja vähintään 2 uudelleentestiä ovat jäljitettäviä; korjausten vaikutus analysoidaan. | 3 normaalia, 3 reunatapausta, 3 turvallisuustestiä ja 2 uudelleentestiä on dokumentoitu. | Testimäärä täyttyy osittain tai odotusten vertailu on epätasaista. | Testejä on vähän eikä korjauksen vaikutusta todenneta. | Järjestelmällinen testaus puuttuu. |
+| Itsearviointi ja demo (15 p) | Demo tai puolustus osoittaa itsenäisen ymmärryksen, perustellut rajaukset ja rehellisen jatkokehitysarvion. | Demo selittää pääpolun, turvallisuuden ja tehdyt korjaukset. | Demo näyttää työn, mutta perustelut jäävät osittaisiksi. | Esittely on vaikeasti seurattava tai oma osuus jää epäselväksi. | Demo tai puolustus puuttuu. |

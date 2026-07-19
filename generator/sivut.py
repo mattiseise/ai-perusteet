@@ -39,6 +39,11 @@ VIEW_META = {
 }
 
 TOTAL = len(N.ALL_IDS)
+COURSE = N.KURSSI['kurssi']
+AUDIENCE_PROMISE = COURSE['yleisolupaus']
+PREREQUISITES = COURSE['esitiedot']
+SCOPE_DESCRIPTION = COURSE['laajuuskuvaus']
+EDUCATIONAL_LEVEL = COURSE['educational_level']
 
 # Lookup id -> lesson dict (järjestyksessä)
 _BY_ID = {l['id']: l for l in N.ALL_LESSONS}
@@ -59,7 +64,7 @@ def _topbar():
 
 
 CONSENT = (
-    '<div id="consent-banner" role="dialog" aria-live="polite">'
+    '<div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite">'
     '<span>Sivusto käyttää Google Analyticsia kävijätilastointiin. '
     'Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span>'
     '<div class="consent-actions">'
@@ -111,7 +116,7 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
         f'<meta name="twitter:description" content="{desc}">'
     )
     ld_html = _jsonld_html(json_ld)
-    scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>']
+    scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>']
     if include_practice:
         scripts.append('<script src="/assets/practice.js"></script>')
     scripts.append(f'<script>window.CI={ci_json};</script>')
@@ -213,11 +218,19 @@ def build_tunti_page(lesson, view):
     tab_btns, panels = [], []
     for i, b in enumerate(blocks):
         act = ' active' if i == 0 else ''
+        selected = 'true' if i == 0 else 'false'
+        tabindex = '0' if i == 0 else '-1'
+        tab_id = f'tab-{lesson["id"]}-{b["anchor"]}'
+        panel_id = f'panel-{lesson["id"]}-{b["anchor"]}'
         tab_btns.append(
-            f'<button class="tab-btn{act}" data-tab="{b["anchor"]}" '
-            f'onclick="showTab(\'{b["anchor"]}\')">{b["icon"]}<span>{b["label"]}</span></button>')
+            f'<button id="{tab_id}" class="tab-btn{act}" role="tab" '
+            f'aria-selected="{selected}" aria-controls="{panel_id}" tabindex="{tabindex}" '
+            f'data-tab="{b["anchor"]}" onclick="showTab(\'{b["anchor"]}\')">'
+            f'{b["icon"]}<span>{b["label"]}</span></button>')
+        hidden = '' if i == 0 else ' hidden'
         panels.append(
-            f'<div class="panel{act}" data-tab="{b["anchor"]}">{b["html"]}</div>')
+            f'<div id="{panel_id}" class="panel{act}" role="tabpanel" '
+            f'aria-labelledby="{tab_id}" data-tab="{b["anchor"]}"{hidden}>{b["html"]}</div>')
 
     header = (
         '<div id="lesson-header" class="lesson-header">'
@@ -267,7 +280,7 @@ def build_tunti_page(lesson, view):
     body = (
         '<div id="lesson" class="lesson-view active">'
         f'{header}{strip}'
-        f'<div id="lesson-tabs" class="lesson-tabs">{"".join(tab_btns)}</div>'
+        f'<div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö">{"".join(tab_btns)}</div>'
         f'<div id="lesson-panels" class="lesson-panels rv-tech">{"".join(panels)}</div>'
         f'{footer}</div>'
     )
@@ -302,7 +315,7 @@ def _tunti_jsonld(lesson, view, num, canonical, desc):
         'inLanguage': 'fi',
         'license': LICENSE_URL,
         'isAccessibleForFree': True,
-        'educationalLevel': 'toinen aste',
+        'educationalLevel': EDUCATIONAL_LEVEL,
         'learningResourceType': ('Arviointitehtävä' if lesson['tyyppi'] == 'assessment' else 'Oppitunti'),
     }
     crumbs = [{'@type': 'ListItem', 'position': 1, 'name': vm['label'], 'item': DOMAIN + vm['home']}]
@@ -394,11 +407,9 @@ def build_index_page():
         '<p>Kurssin tekijä vastasi kokonaisuuden suunnittelusta, ohjasi agenttiprosessia, '
         'teki tarvittavat muutokset ja hyväksyi jokaisen oppitunnin ennen sen julkaisemista. '
         'Myös tämä verkkosivusto on rakennettu tekoälyn avulla.</p>'
-        '<p>Materiaaliin on kuitenkin jätetty tarkoituksella pieniä virheitä, kielellisiä '
-        'outouksia ja kuvien artefakteja. Niitä ei ole siivottu pois, koska ne havainnollistavat '
-        'yhtä kurssin tärkeimmistä opeista: parhaatkin kielimallit tekevät virheitä, vaikka '
-        'niitä käyttäisi kokenut ammattilainen. Tekoälyn tuottamaa sisältöä pitää aina arvioida '
-        'kriittisesti. Kriittinen lukutaito on yksi tämän kurssin keskeisistä tavoitteista.</p>'
+        '<p>Materiaali tarkistetaan ennen julkaisemista, mutta myös tarkistettuun aineistoon '
+        'kannattaa suhtautua kriittisesti. Ilmoita havaitsemastasi virheestä tekijälle ja varmista '
+        'ajankohtaiset tiedot alkuperäislähteestä. Kriittinen lukutaito on yksi kurssin keskeisistä tavoitteista.</p>'
         '</div>'
     )
     lic_footer = (
@@ -413,8 +424,8 @@ def build_index_page():
         '<section class="page-hero"><div class="page-hero-inner">'
         '<div class="eyebrow">AI · Perusteet</div>'
         '<h1>Ymmärrä tekoäly teoriasta agentteihin.</h1>'
-        '<p>Kurssin jälkeen ymmärrät, miten kielimallit toimivat, käytät tekoälytyökaluja '
-        'sujuvasti ja rakennat oman agentin. 27 oppituntia — valitse, miten haluat opiskella.</p>'
+        f'<p>{AUDIENCE_PROMISE}</p>'
+        f'<p>{SCOPE_DESCRIPTION}</p>'
         '</div></section>'
         '<div class="valinta">'
         '<div class="valinta-lead"><p>Sama kurssi kolmena näkymänä: itsenäinen verkkokurssi, '
@@ -426,8 +437,7 @@ def build_index_page():
     )
     return page_shell(
         'AI · Perusteet — tekoälyn perusteet -verkkokurssi',
-        'Avoin tekoälyn perusteet -verkkokurssi: 27 oppituntia teoriasta käyttöön ja agentteihin. '
-        'Opiskele itsenäisesti, oppitunnilla tai opettajana.',
+        AUDIENCE_PROMISE,
         '/', body, pre_body_script=pre,
         json_ld=_course_jsonld(f'{DOMAIN}/'))
 
@@ -438,13 +448,14 @@ def _course_jsonld(url):
         '@context': 'https://schema.org',
         '@type': 'Course',
         'name': SITE_NAME,
-        'description': ('Avoin tekoälyn perusteet -verkkokurssi: 27 oppituntia teoriasta '
-                        'käyttöön ja agentteihin.'),
+        'description': AUDIENCE_PROMISE,
         'url': url,
         'provider': PROVIDER,
         'inLanguage': 'fi',
         'isAccessibleForFree': True,
         'license': LICENSE_URL,
+        'educationalLevel': EDUCATIONAL_LEVEL,
+        'coursePrerequisites': PREREQUISITES,
         'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online',
                               'courseWorkload': 'PT40H', 'inLanguage': 'fi'},
     }
@@ -468,20 +479,21 @@ def build_kurssi_overview():
             f'<span class="mod-count"><span data-osptxt="{osp["id"]}">0 / {n}</span></span>'
             '</div></a>'
         )
+    intro_path = N.os.path.join(N.SISALTO, 'aloitus.md')
+    intro = S.to_html(S.read_file(intro_path))
     body = (
         '<section class="page-hero"><div class="page-hero-inner">'
         '<div class="eyebrow">Verkkokurssi</div>'
         '<h1>AI · Perusteet</h1>'
-        '<p>Kolme kokonaisuutta, 27 osaa. Etene omaan tahtiin — jokainen osa sisältää teorian, '
-        'itsetarkistuvat harjoitukset ja sanaston.</p>'
+        f'<p>{AUDIENCE_PROMISE}</p>'
         '</div></section>'
         '<div class="page-body">'
+        f'<div class="reading panel active course-start">{intro}</div>'
         f'<div class="mod-grid">{"".join(cards)}</div>'
         '</div>'
     )
     return page_shell('AI · Perusteet — verkkokurssi',
-                      'Tekoälyn perusteet -verkkokurssin yleiskuva: kolme kokonaisuutta ja 27 osaa '
-                      'teoriasta käyttöön ja agentteihin.',
+                      AUDIENCE_PROMISE,
                       '/kurssi/', body,
                       json_ld=_course_jsonld(f'{DOMAIN}/kurssi/'))
 
@@ -745,8 +757,7 @@ def build_opettaja_index():
         '<section class="page-hero"><div class="page-hero-inner">'
         '<div class="eyebrow">Opettajan opas</div>'
         '<h1>Kurssiopas</h1>'
-        '<p>AI · Perusteet on avoin 3 osaamispisteen (OSP) kurssi: 27 × 90 min kolmessa '
-        'kokonaisuudessa (Teoria, Tekoälyjen käyttö, Agentit).</p>'
+        f'<p>{AUDIENCE_PROMISE}</p><p>{SCOPE_DESCRIPTION}</p>'
         '</div></section>'
         '<div class="page-body">'
         '<div class="info-note"><b>Kurssiopas täydentyy.</b> Toteutusmallit, jaksotus, '

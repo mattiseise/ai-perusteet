@@ -18,6 +18,8 @@ Tehtävän tavoitteena on näyttää opiskelijoille konkreettisesti, miten sama 
 4. Tallenna vastaukset kuvakaappauksina tai tekstinä.
 5. Valmistele kalvot, taulukko tai muu vertailupohja, jonka avulla vastauksia voidaan tarkastella luokassa.
 
+> **Opettajan huomautus:** Voit vaihtaa demon persoonan ja aiheen ryhmäsi mukaan — esimerkiksi persoonaksi *"Olen aikuisopiskelija ilman tietotekniikkataustaa"* tai aiheeksi jonkin harrastus- tai työelämäaiheen teknisen esimerkin sijaan.
+
 ### Esimerkkipyynnöt
 
 | Vaihe | Pyyntö | Mitä kontekstia mukana on? |
@@ -37,7 +39,7 @@ Aloita kertomalla opiskelijoille:
 
 Korosta opiskelijoille:
 
-> Ammatillisesti ero on suuri. Voit saada joko yleisesti kiinnostavan tekstin tai juuri omaan tarpeeseesi sopivan vastauksen.
+> Asiallisesti ero on suuri. Voit saada joko yleisesti kiinnostavan tekstin tai juuri omaan tarpeeseesi sopivan vastauksen.
 
 #### Vaihe 2: Ensimmäinen esimerkki — liian yleinen pyyntö noin 6 minuuttia
 
@@ -137,7 +139,7 @@ Sama aihe: verkot
 
 Lopuksi sano opiskelijoille:
 
-> Tämä on ero satunnaisen käytön ja ammatillisen käytön välillä. Ammattilaisena et vain kysy tekoälyltä jotain, vaan **rakennat kontekstin** ennen kuin kysyt.
+> Tämä on ero satunnaisen käytön ja asiallisen käytön välillä. Vastuullisena käyttäjänä et vain kysy tekoälyltä jotain, vaan **rakennat kontekstin** ennen kuin kysyt.
 
 ### Odotettu oppimistulos
 
@@ -257,7 +259,7 @@ Kysy opiskelijoilta:
 - Mikä teki neljännestä pyynnöstä parhaan?
 - Mitä tietoja tekoäly tarvitsee, jotta se voi auttaa paremmin?
 - Milloin liian tarkka pyyntö voisi olla ongelma?
-- Mitä eroa on huonolla pyynnöllä ja ammatillisella pyynnöllä?
+- Mitä eroa on huonolla pyynnöllä ja asiallisella pyynnöllä?
 
 Kokoa keskustelu yhteen:
 
@@ -268,7 +270,7 @@ Kokoa keskustelu yhteen:
 - Opiskelijat osaavat rakentaa tekoälylle annettavaa kontekstia vaiheittain.
 - Opiskelijat ymmärtävät, että hyvä pyyntö sisältää tavoitteen, käyttäjän tilanteen, rajauksen ja halutun muodon.
 - Opiskelijat osaavat vertailla heikkoa ja vahvaa pyyntöä.
-- Opiskelijat näkevät, että pyynnön parantaminen on osa ammatillista tekoälyn käyttöä.
+- Opiskelijat näkevät, että pyynnön parantaminen on osa asiallista tekoälyn käyttöä.
 
 ---
 
@@ -342,7 +344,7 @@ Tee kolme testikysymystä, joihin opiskelijat vastaavat usein väärin. Sisälly
 
 Kokoa tehtävän tärkein ajatus:
 
-> Tämä on ammatillista tekoälyn käyttöä: et aina pyydä kaikkea kerralla, vaan rakennat vastausta kierros kierrokselta. Jokainen jatkokysymys on tarkempi ja perustuu edelliseen vastaukseen. Lopuksi sinulla on juuri sellainen materiaali, jota tarvitset.
+> Tämä on asiallista tekoälyn käyttöä: et aina pyydä kaikkea kerralla, vaan rakennat vastausta kierros kierrokselta. Jokainen jatkokysymys on tarkempi ja perustuu edelliseen vastaukseen. Lopuksi sinulla on juuri sellainen materiaali, jota tarvitset.
 
 ### Odotettu oppimistulos
 

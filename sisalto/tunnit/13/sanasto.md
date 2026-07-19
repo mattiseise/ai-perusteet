@@ -22,7 +22,7 @@ Ihmiset, joille teksti tai ohje on tarkoitettu. Sama asia selitetään eri taval
 
 ## Validointi (validation)
 
-Tarkistaminen, onko tieto tai ratkaisu oikein. Ammattilaisena sinä validoit tekoälyn ehdotukset — et luota sokeasti, vaan tarkistat ja testaat.
+Tarkistaminen, onko tieto tai ratkaisu oikein. Vastuullisena käyttäjänä sinä validoit tekoälyn ehdotukset — et luota sokeasti, vaan tarkistat ja testaat.
 
 ## Konteksti (context)
 

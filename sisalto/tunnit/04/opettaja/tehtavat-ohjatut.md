@@ -123,7 +123,7 @@ Kysy opiskelijoilta:
 
 - Keitä olemme tässä ongelmassa?
 - Mikä on osaamistasomme?
-- Vastaako tekoäly opiskelijalle, aloittelijalle vai ammattilaiselle?
+- Vastaako tekoäly opiskelijalle, aloittelijalle vai vastuulliselle käyttäjälle?
 
 Täyttäkää yhdessä esimerkiksi:
 

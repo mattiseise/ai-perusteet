@@ -20,7 +20,7 @@ Analyysissäsi on neljä osaa:
 >
 > **3. Miten tilanne pitäisi hoitaa?** Ehdota konkreettisia ratkaisuja. Mitä organisaation pitäisi tehdä juuri nyt? Miten vastaava tilanne estetään tulevaisuudessa?
 >
-> **4. Ammatillinen vastuu.** Kuka on vastuussa? Mikä on sinun vastuusi ammattilaisena? Mitä tarkoittaa vastuullinen tekoälyn käyttö tässä tilanteessa?
+> **4. Asiallinen vastuu.** Kuka on vastuussa? Mikä on sinun vastuusi vastuullisena käyttäjänä? Mitä tarkoittaa vastuullinen tekoälyn käyttö tässä tilanteessa?
 
 ## Todistusaineistot
 
@@ -28,7 +28,7 @@ Olet kerännyt kolme todistusaineistoa aiemmilla oppitunneilla. Käytä niitä a
 
 - **Todistusaineisto 1** (oppitunti 3, miten kone tuottaa tekstiä) auttaa selittämään, miksi tekoäly voi tehdä virheitä ja miksi se ei "tiedä" asioita.
 - **Todistusaineisto 2** (oppitunti 5, kontekstin katoaminen) auttaa tunnistamaan käytännön riskit, kun tekoäly unohtaa aiemmin annetut ohjeet.
-- **Todistusaineisto 3** (oppitunti 7, ammattilaisen tarkistuslista) auttaa ehdottamaan konkreettisia toimenpiteitä ongelmien ehkäisemiseksi.
+- **Todistusaineisto 3** (oppitunti 7, vastuullisen käyttäjän tarkistuslista) auttaa ehdottamaan konkreettisia toimenpiteitä ongelmien ehkäisemiseksi.
 
 Sinun tulee viitata todistusaineistoihisi, lainata niistä tai käyttää niitä pohjamateriaalina.
 
@@ -78,6 +78,6 @@ Jos kirjallinen analyysi ei sovi sinulle, voit tehdä saman työn **visuaalisest
 2. Jokaisen kohdalle kirjoita yksi lause: *"Tämä on riski, koska…"*
 3. Sitten mieti jokaiselle riskille yksi ratkaisu: *"Tämän voisi estää siten, että…"*
 4. Nyt sinulla on runko. **Laajenna** kukin kohta muutamalla lauseella ja käytä Teoria-osion käsitteitä.
-5. Lopuksi kirjoita **johtopäätös:** mitä ammatillinen vastuu tarkoittaa tässä tilanteessa.
+5. Lopuksi kirjoita **johtopäätös:** mitä asiallinen vastuu tarkoittaa tässä tilanteessa.
 
 **Tuomaripöydän takana ei istu kone. Siellä istut sinä.**

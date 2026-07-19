@@ -36,7 +36,7 @@ Täytä seuraava taulukko kunkin agentin osalta:
 - **Ulkoinen muisti**: Mitä pitkäaikaista tietoa agentti tarvitsee oppimista varten?
 - **Huomiot**: Jos agentti voi vahingoittaa järjestelmää, mikä on riski? Mitä rajoituksia sille tulisi asettaa?
 
-**Jos teet tehtävän yksin:** Voit olettaa, että jokainen näistä agenteista on todellinen järjestelmä, jota olet ohjannut työssä. Käytä tätä oletusta apuna taulukkoa täyttäessäsi.
+**Jos teet tehtävän yksin:** Voit olettaa, että jokainen näistä agenteista on todellinen järjestelmä, jonka toimintaa pääset seuraamaan läheltä — vaikkapa arjessa, opinnoissa tai työssä. Käytä tätä oletusta apuna taulukkoa täyttäessäsi.
 
 ---
 

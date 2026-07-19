@@ -8,8 +8,8 @@ Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten hyvin suunnit
 
 - Opiskelija ymmärtää, että hyvin suunniteltu botti rakentuu neljästä rakennuspalikasta: **tarkoitus**, **rooli**, **ohjeet** ja **rajaukset**.
 - Opiskelija ymmärtää, että **järjestelmäprompti** ohjaa botin toimintaa ja käyttäytymistä.
-- Opiskelija ymmärtää, että **ammattilaisuus** ja **persoonallisuus** eivät ole sama asia.
-- Opiskelija ymmärtää, että ammattilaisuus tulee botin suunnittelussa ennen persoonallisuutta.
+- Opiskelija ymmärtää, että **vastuullisuus** ja **persoonallisuus** eivät ole sama asia.
+- Opiskelija ymmärtää, että vastuullisuus tulee botin suunnittelussa ennen persoonallisuutta.
 
 ### Soveltaa ja analysoida
 
@@ -25,7 +25,7 @@ Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten hyvin suunnit
 - Opiskelija osaa testata botin toimintaa normaalissa, vaikeassa ja epäselvässä tilanteessa.
 - Opiskelija ymmärtää, että bottia kehitetään **iteraation** avulla: suunnitellaan, testataan, korjataan ja testataan uudelleen.
 
-**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei synny sattumalta. Se suunnitellaan samalla tavalla kuin mikä tahansa ammatillinen työkalu: sillä on tarkoitus, käyttäjäryhmä, toimintatapa, osaamisalue ja selkeät rajat.
+**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei synny sattumalta. Se suunnitellaan samalla tavalla kuin mikä tahansa asiallinen työkalu: sillä on tarkoitus, käyttäjäryhmä, toimintatapa, osaamisalue ja selkeät rajat.
 
 ---
 
@@ -73,14 +73,14 @@ Opiskelijoiden yleisin virhe on kirjoittaa botin tarkoitukseksi jotakin liian la
 
 ### Rooli ja persoonallisuus eivät ole sama asia
 
-Opiskelijat voivat ajatella, että rooli tarkoittaa lähinnä sitä, onko botti hauska, rento tai ystävällinen. Tämä ei riitä. **Rooli** kertoo botin ammatillisesta identiteetistä. **Persoonallisuus** kertoo, millä tavalla botti viestii.
+Opiskelijat voivat ajatella, että rooli tarkoittaa lähinnä sitä, onko botti hauska, rento tai ystävällinen. Tämä ei riitä. **Rooli** kertoo botin asiallisesta identiteetistä. **Persoonallisuus** kertoo, millä tavalla botti viestii.
 
 | Käsite | Mitä se tarkoittaa? | Esimerkki |
 | --- | --- | --- |
-| **Rooli** | Botin osaaminen, näkökulma ja ammatillinen tehtävä. | ”Kokenut Python-tutori aloittelijoille.” |
+| **Rooli** | Botin osaaminen, näkökulma ja asiallinen tehtävä. | ”Kokenut Python-tutori aloittelijoille.” |
 | **Persoonallisuus** | Tapa, jolla botti viestii käyttäjälle. | ”Ystävällinen, rauhallinen ja kannustava.” |
 
-Korosta opiskelijoille, että ammattilaisuus tulee ensin. Botti voi olla ystävällinen, suora, kannustava tai rauhallinen, mutta sen pitää ennen kaikkea olla pätevä, johdonmukainen ja turvallinen.
+Korosta opiskelijoille, että vastuullisuus tulee ensin. Botti voi olla ystävällinen, suora, kannustava tai rauhallinen, mutta sen pitää ennen kaikkea olla pätevä, johdonmukainen ja turvallinen.
 
 ### Ohjeet ja rajaukset
 
@@ -95,7 +95,7 @@ Ohjeet ja rajaukset sekoittuvat helposti. Käytä yksinkertaista eroa:
 | **Kahvilan tilausbotti** | Kysy ensin, mitä asiakas haluaa tilata ja onko erityistoiveita. | Älä ota vastaan maksua äläkä lupaa toimitusaikoja, joita kahvila ei voi pitää. |
 | **Asiakaspalvelubotti** | Vastaa kohteliaasti ja ohjaa asiakas oikeaan palvelukanavaan. | Älä anna lääketieteellisiä, juridisia tai taloudellisia neuvoja. |
 
-**Opettajan muistutus:** Rajaukset eivät tee botista huonompaa. Ne tekevät siitä turvallisemman, luotettavamman ja ammatillisemman.
+**Opettajan muistutus:** Rajaukset eivät tee botista huonompaa. Ne tekevät siitä turvallisemman, luotettavamman ja asiallisemman.
 
 ---
 
@@ -317,7 +317,7 @@ Käytä esimerkkiä turvallisuudesta. Treenineuvojabotti voi ehdottaa kevyitä a
 
 **Kysymys:** Mitä eroa on roolilla ja persoonallisuudella?
 
-**Mitä opettaja etsii:** Opiskelija ymmärtää, että rooli kertoo botin tehtävän ja osaamisen, kun taas persoonallisuus kertoo viestintätyylin. Ammattilaisuus tulee ensin, persoonallisuus vasta sen jälkeen.
+**Mitä opettaja etsii:** Opiskelija ymmärtää, että rooli kertoo botin tehtävän ja osaamisen, kun taas persoonallisuus kertoo viestintätyylin. Vastuullisuus tulee ensin, persoonallisuus vasta sen jälkeen.
 
 ### 3. Järjestelmäpromptin neljä osaa
 
@@ -381,7 +381,7 @@ Oppitunnin lopussa opiskelijoiden pitäisi ymmärtää kolme asiaa:
 
 1. **Hyvä botti alkaa tarkoituksesta.** Jos tarkoitus on epäselvä, koko botti jää epäselväksi.
 2. **Järjestelmäprompti on botin sydän.** Se ohjaa botin käyttäytymistä ja rajoja.
-3. **Ammattilaisuus vaatii yksityiskohtia.** Mitä tarkemmin botti suunnitellaan, sitä luotettavammin se toimii.
+3. **Vastuullisuus vaatii yksityiskohtia.** Mitä tarkemmin botti suunnitellaan, sitä luotettavammin se toimii.
 
 ---
 
@@ -406,3 +406,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Lopetuslause opettajalle:** Hyvä botti ei ole taikuutta. Se on tarkoitus, rooli, ohjeet ja rajat — kirjoitettuna niin selkeästi, että tekoäly osaa toimia niiden mukaan.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **botin määrittely ja järjestelmäprompti v1**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija täyttää botin tarkoituksen, roolin, ohjeet ja rajat sekä kirjoittaa järjestelmäpromptin v1. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää neliosaista korttipohjaa ja valmista rooliskenaariota. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija lisää yhden väärinkäyttötapauksen ja botin turvallisen vastauksen. Syventävä työ ei kasvata pakollista ydintuotosta.

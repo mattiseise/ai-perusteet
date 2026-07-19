@@ -4,7 +4,7 @@
 
 ## Tehtävä 11.1 — Tee perusteltu suositus (SUOSITELTU)
 
-**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on ammattilaisen ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
+**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on vastuullisen käyttäjän ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
 
 ### Tee näin
 
@@ -12,7 +12,7 @@
 
 Valitse yksi seuraavista organisaatioista. Kuvittele, että sinua pyydetään suosittelemaan sille sopivaa tekoälytyökalua.
 
-- **Oma oppilaitoksesi:** opettajat ja opiskelijat hyödyntäisivät tekoälyä, mutta opiskelijoiden tiedot pitää suojata ja GDPR:ää noudattaa.
+- **Oppilaitos** (esimerkiksi lukio, ammattikoulu tai kansalaisopisto): opettajat ja opiskelijat hyödyntäisivät tekoälyä, mutta opiskelijoiden tiedot pitää suojata ja GDPR:ää noudattaa.
 - **Urheiluseura tai harrastuskerho:** jäsenviestintä, aikataulut ja ilmoittautumiset; mukana on jäsenten yhteystietoja, ja budjetti on pieni.
 - **Pieni kahvila tai kioski:** asiakaspalvelua, markkinointia ja somepostauksia, pieni budjetti.
 - **Pieni IT-yritys tai pelistudio:** 10–15 hengen tiimi, koodausta ja sisällöntuotantoa, kansainvälisiä asiakkaita.

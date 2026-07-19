@@ -1,5 +1,7 @@
 # Opettajamateriaali — oppitunti 24: Turvallisuus ensin
 
+**Pedagoginen rajaus suhteessa tuntiin 7:** Aloita yhdellä muistutuksella lähdevarmennuksesta, mutta älä tee tunnista uutta hallusinaatiotuntia. Arvioi, tunnistaako oppija epäluotettavan syötteen, rajaako hän agentin työkaluoikeudet, sijoittaako hyväksyntäportin riskikohtaan ja määrittääkö lokiin todennettavan suoritusjäljen.
+
 ## Oppitunnin ydinajatukset
 
 Tämän oppitunnin keskeinen viesti on, että **turvallisuus on agenttien rakentamisen perusta**, ei lopuksi lisättävä lisäominaisuus. Agentti eroaa tavallisesta chatbotista siinä, että se ei vain vastaa käyttäjälle, vaan voi myös **tehdä asioita**: kutsua funktioita, muuttaa tietokantaa, lähettää viestejä, käsitellä tiedostoja ja käyttää ulkoisia työkaluja.
@@ -17,17 +19,18 @@ Oppitunnissa käsitellään neljä keskeistä uhkaa:
 
 ---
 
-## Prompt injection — kolme puolustuksen tasoa
+## Prompt injection — kerroksittainen puolustus
 
 **Prompt injection** tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.
 
 Opiskelijamateriaalissa korostetaan, että prompt injection on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.
 
-Prompt injectionilta suojaudutaan kolmella tasolla:
+Prompt injectionin vaikutusta rajataan usealla toisiaan täydentävällä keinolla:
 
-1. **Erittely:** Erota agentin oma ohjeistus selvästi käyttäjän syötteistä ja ulkoisesta datasta. Käytä esimerkiksi merkintöjä `[SYSTEM INSTRUCTION]`, `[USER INPUT]` ja `[EXTERNAL DATA]`.
-2. **Validointi:** Tarkista syötteet ennen kuin ne annetaan agentille. Hylkää poikkeavat merkit, liian pitkät syötteet, väärän muotoiset kentät ja epäilyttävät komennot.
-3. **Rajoitus:** Anna agentille vain se tieto ja ne työkalut, joita se todella tarvitsee tehtäväänsä. Mitä vähemmän agentti näkee ja voi tehdä, sitä pienempi on hyökkäyksen vaikutus.
+1. **Epäluotettava data:** Merkitse käyttäjän syötteet ja ulkoinen sisältö dataksi, ei järjestelmän ohjeiksi. Tämä auttaa rakennetta, mutta ei takaa, että haitallinen ohje tunnistetaan.
+2. **Muodon validointi:** Tarkista kentät, tietotyypit, pituudet ja arvorajat. Validointi voi hylätä väärän rakenteen, mutta ei luotettavasti päätellä tekstin turvallisuutta.
+3. **Rakenteiset työkalut ja minimioikeudet:** Tarjoa vain tarkkarajaiset toiminnot, anna vain välttämättömät oikeudet ja pidä salaisuudet erillään mallin kontekstista.
+4. **Hyväksyntä, loki ja palautuminen:** Vaadi kriittiselle toiminnolle ihmisen hyväksyntä, kirjaa kutsut ja tulokset sekä suunnittele virheen kumoaminen.
 
 **Esimerkki opetukseen**
 
@@ -99,7 +102,7 @@ Lokiin ei kuitenkaan pidä tallentaa kaikkea. **Salasanat**, **API-avaimet**, **
 
 ---
 
-## Neljä turvakerroksen tasoa
+## Neljä turvakerrosta
 
 Oppitunnin tärkein kokonaismalli on **neljän turvakerroksen rakenne**. Se auttaa opiskelijaa suunnittelemaan agentin turvallisuutta järjestelmällisesti.
 
@@ -107,15 +110,15 @@ Oppitunnin tärkein kokonaismalli on **neljän turvakerroksen rakenne**. Se autt
 
 |  |
 | --- |
-| **1. Validointi** Tarkista syöte ennen agentin käyttöä. |
+| **1. Datan käsittely ja validointi** Merkitse ulkoinen sisältö epäluotettavaksi dataksi; tarkista muoto, tyyppi, pituus ja arvorajat. |
 | ↓ |
-| **2. Rajoitus** Anna vain tarvittavat oikeudet ja vaadi hyväksynnät. |
+| **2. Rajoitus** Käytä rakenteisia työkaluja, minimioikeuksia ja salaisuuksien eristystä sekä vaadi hyväksynnät. |
 | ↓ |
 | **3. Seuranta** Kirjaa tärkeät päätökset ja toiminnot lokiin. |
 | ↓ |
 | **4. Palautuminen** Suunnittele, miten virhe kumotaan tai korjataan. |
 
-Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei poista rajoituksen tarvetta, eikä lokitus korvaa palautumissuunnitelmaa. Turvallinen agentti tarvitsee kaikki neljä kerrosta.
+Opiskelijoiden on hyvä ymmärtää, että kerrokset eivät korvaa toisiaan. Validointi ei tunnista luotettavasti kaikkia haitallisia ohjeita eikä poista rajoituksen tarvetta. Lokitus ei korvaa palautumissuunnitelmaa. Kaikki neljä kerrosta pienentävät yhdessä vahingon todennäköisyyttä ja vaikutusta, mutta mikään niistä ei anna täydellistä turvallisuustakuuta.
 
 ---
 
@@ -144,14 +147,14 @@ Korjaus: Ohjeet ovat tekstiä, eivät varsinainen turvakerros. Prompt injection 
 Korjaus: Tuotantojärjestelmissä voi olla lisäsuojauksia, mutta perusongelma on sama: kielimalli ei automaattisesti erota luotettavaa ohjeistusta epäluotettavasta syötteestä ilman selkeitä rakenteita ja tarkistuksia.
 
 **”Tämä on hakkeriasia, eikä liity minuun.”**
-Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybotteja ja agentteja, on vastuussa niiden turvallisuudesta. Tämä on ammattilaisen perusosaamista, ei vain tietoturva-asiantuntijoiden erikoisalue.
+Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybotteja ja agentteja, on vastuussa niiden turvallisuudesta. Tämä on vastuullisen käyttäjän perusosaamista, ei vain tietoturva-asiantuntijoiden erikoisalue.
 
 ### Arviointivinkit tehtävään 0
 
 | Taso | Miltä vastaus näyttää? |
 | --- | --- |
 | **Hyvä** | Opiskelija kokeilee useita tekniikoita ja dokumentoi tulokset rehellisesti. |
-| **Erinomainen** | Opiskelija analysoi, miksi osa tekniikoista toimi ja osaa yhdistää puolustuskeinot — erittelyn, validoinnin ja rajoituksen — konkreettisiin hyökkäyksiin. |
+| **Erinomainen** | Opiskelija analysoi, miksi yksittäinen tunnistin ei riitä, ja yhdistää epäluotettavan datan käsittelyn, muodon validoinnin, rakenteiset työkalut, minimioikeudet, hyväksynnän, lokin ja palautumisen konkreettiseen riskiin. |
 | **Pinnallinen** | Opiskelija toteaa esimerkiksi ”kaikki toimi” tai ”mikään ei toiminut”, mutta ei analysoi syitä eikä ehdota suojauksia. |
 
 ---
@@ -161,7 +164,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteistä konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.
 
 1. **Prompt injection: hyökkäykset ja puolustus**
-   Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee niihin suojaukset.
+   Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee suojaukset siltä varalta, ettei käskyä tunnisteta.
 2. **Hallusinaatiot: skenaariot ja ehkäisy**
    Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, varmuuskynnyksen tai tarkistusvaiheen.
 3. **Minimioikeusperiaate: pääsyn suunnittelu**
@@ -207,3 +210,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mikä olisi oman agenttisi pahin realistinen virhe? Miten estät sen, miten huomaat sen ja miten korjaat sen?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **uhkamalli ja kerroksittainen kontrollikartta**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija yhdistää uhkan, toimivallan, kontrollin ja lokitapahtuman kerrokselliseksi kartaksi. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmista uhkaskenaariota ja kontrollikortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija analysoi, mitä tapahtuu yhden kontrollin pettäessä. Syventävä työ ei kasvata pakollista ydintuotosta.

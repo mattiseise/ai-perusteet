@@ -1,8 +1,6 @@
 # Tekoälytyökalut erikoisaloilla
 
-# Oppitunti 16 — Tekoälytyökalut erikoisaloilla
-
-Kuva, musiikki, video ja koodi
+## Valinnainen laboratorio: kuva, musiikki, video tai koodi
 
 ## Johdanto
 
@@ -10,7 +8,7 @@ Olet jo tutustunut **kielimalleihin** eli tekoälyihin, joiden kanssa voi keskus
 
 Tekoäly ei kuitenkaan rajoitu tekstiin. Nykyään tekoälyä käytetään myös kuvien, musiikin, videoiden ja koodin tekemiseen. Nämä työkalut toimivat usein samalla perusidealla: käyttäjä antaa ohjeen eli **promptin**, ja tekoäly tuottaa sen perusteella jotakin uutta.
 
-Tällä oppitunnilla tutustut neljään tekoälytyökalujen alueeseen:
+Tämä on valinnainen laboratorio. Valitse yksi tekoälytyökalujen alue, jota kokeilet tai analysoit annetun esimerkkituloksen avulla. Kaikkia neljää ei tarvitse kokeilla:
 
 - **kuvageneraatioon** eli kuvien luomiseen tekoälyllä
 - **musiikin luomiseen** tekoälyllä
@@ -25,7 +23,7 @@ Samalla käsittelemme **tekijänoikeuksia** ja **etiikkaa**. Ne eivät ole sivua
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l16-wrap">
     <div class="l16-prompt">”Rauhallinen aamu järvellä, sumua veden päällä.”</div>
-    <div class="l16-card c1"><span class="l16-h">KUVA</span><div class="l16-pic"><svg viewBox="0 0 104 62" width="100%" height="62" preserveAspectRatio="none"><defs><linearGradient id="l16sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7C873"/><stop offset=".55" stop-color="#F0A38C"/><stop offset="1" stop-color="#8E6B9E"/></linearGradient><linearGradient id="l16lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98E84"/><stop offset="1" stop-color="#3E4C7A"/></linearGradient></defs><rect width="104" height="34" fill="url(#l16sky)"/><circle class="l16-sun" cx="52" cy="26" r="7" fill="#FFE9B8"/><path d="M0 34 L20 24 L38 34 Z" fill="#5A4670"/><path d="M30 34 L52 20 L78 34 Z" fill="#473A5E"/><path d="M70 34 L88 26 L104 34 Z" fill="#5A4670"/><rect y="34" width="104" height="28" fill="url(#l16lake)"/><ellipse class="l16-mist" cx="52" cy="36" rx="46" ry="5" fill="#EAEEF8" opacity=".4"/><ellipse cx="52" cy="42" rx="20" ry="2.4" fill="#FFE9B8" opacity=".5"/></svg></div><span class="l16-t">kuvageneraattori</span></div>
+    <div class="l16-card c1"><span class="l16-h">KUVA</span><div class="l16-pic"><svg viewBox="0 0 104 62" width="100%" height="62" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="l16sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7C873"/><stop offset=".55" stop-color="#F0A38C"/><stop offset="1" stop-color="#8E6B9E"/></linearGradient><linearGradient id="l16lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98E84"/><stop offset="1" stop-color="#3E4C7A"/></linearGradient></defs><rect width="104" height="34" fill="url(#l16sky)"/><circle class="l16-sun" cx="52" cy="26" r="7" fill="#FFE9B8"/><path d="M0 34 L20 24 L38 34 Z" fill="#5A4670"/><path d="M30 34 L52 20 L78 34 Z" fill="#473A5E"/><path d="M70 34 L88 26 L104 34 Z" fill="#5A4670"/><rect y="34" width="104" height="28" fill="url(#l16lake)"/><ellipse class="l16-mist" cx="52" cy="36" rx="46" ry="5" fill="#EAEEF8" opacity=".4"/><ellipse cx="52" cy="42" rx="20" ry="2.4" fill="#FFE9B8" opacity=".5"/></svg></div><span class="l16-t">kuvageneraattori</span></div>
     <div class="l16-card c2"><span class="l16-h">MUSIIKKI</span><div class="l16-eq"><i></i><i></i><i></i><i></i><i></i></div><span class="l16-t">musiikkigeneraattori</span></div>
     <div class="l16-card c3"><span class="l16-h">VIDEO</span><div class="l16-film"><i></i><i></i><i></i><b>▸</b></div><span class="l16-t">videogeneraattori</span></div>
     <div class="l16-card c4"><span class="l16-h">KOODI</span><div class="l16-code"><span class="cl ln1"><b>def</b> aamu():</span><span class="cl ln2">  piirra(<i>"järvi"</i>,</span><span class="cl ln3">  sumu=<b>True</b>)</span></div><span class="l16-t">koodiavustaja</span></div>
@@ -509,3 +507,11 @@ Kun käytät jotakin työkalua oikeassa projektissa, tarkista aina ajantasaiset 
 Tärkeämpää kuin yksittäiset nimet on ymmärtää työkalutyypit ja niiden rajat.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

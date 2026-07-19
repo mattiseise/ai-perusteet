@@ -22,6 +22,8 @@ Harjoituksen tavoitteena on näyttää käytännössä, miksi **generatiivisen t
 
 Kirjoita lyhyt koodinpätkä, 5–10 riviä, joka lukee tiedoston nimeltä `data.txt`, laskee rivien lukumäärän ja tulostaa tuloksen.
 
+Jos ryhmä ei ole tekniikkapainotteinen, voit valita ei-koodivaihtoehdon, esimerkiksi: `Anna viisi vinkkiä hyvään yöuneen.` Valitse prompti ryhmän mukaan. Tällöin vertailkaa vastausten sisältöä, järjestystä ja sävyä syntaksin sijaan — epädeterministisyys näkyy yhtä lailla.
+
 #### Luokkaharjoitus noin 10 minuuttia
 
 1. Näytä ensin yhden tekoälymallin vastaus opetusnäytöllä.
@@ -82,7 +84,7 @@ Johdattele opiskelijat ymmärtämään, että mallit eivät hae yhtä valmista o
 
 Harjoituksen tavoitteena on oppia tunnistamaan **hallusinaatioita** ja ymmärtää, miksi kielimalli voi tuottaa uskottavalta kuulostavia mutta virheellisiä vastauksia. Opiskelijat harjoittelevat myös tiedon tarkistamista luotettavista lähteistä.
 
-**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Ammattilaisen pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
+**Opettajan painotus:** Hallusinaation tunnistaminen ei tarkoita vain virheen osoittamista. Vastuullisen käyttäjän pitää osata kertoa, **miten** väite tarkistettiin ja **miksi** vastaus oli epäluotettava.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -170,9 +172,9 @@ Tutkikaa oma tapauksenne ja täyttäkää seuraava taulukko:
 
 ### Tavoite
 
-Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää ammatillisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
+Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan käyttää asiallisessa työnkulussa niin, että **hallusinaatiot**, virheellinen koodi tai puutteelliset vastaukset eivät päädy suoraan käyttöön. Opiskelijat suunnittelevat vaiheittaisen **verifiointiprosessin**.
 
-**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa ammatillista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
+**Opettajan painotus:** Verifiointi ei ole tekoälyn käytön hidaste, vaan osa asiallista laatua ja turvallisuutta. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -183,6 +185,8 @@ Harjoituksen tavoitteena on opettaa opiskelijoille, miten tekoälyä voidaan kä
 Esitä opiskelijoille seuraava tilanne:
 
 > Tehtäväsi on kirjoittaa SQL-kysely tietokantaan. Kyselyn pitää hakea kaikki asiakkaat, joiden maksu on erääntynyt yli 30 päivää. Käytät ChatGPT:tä koodin kirjoittamisen tukena.
+
+Ei-teknisen ryhmän kanssa voit käyttää rinnakkaista tilannetta: tehtäväsi on tarkistaa tekoälyn luonnosteleman tiedotteen faktat ennen sen julkaisemista. Samat verifiointivaiheet pätevät — mitä voi mennä pieleen, jos luotat luonnokseen sellaisenaan, ja miten tarkistat sen ennen käyttöä?
 
 Kysy opiskelijoilta:
 
@@ -227,7 +231,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 
 ### Opettajan muistiinpanot
 
-- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan ammatillinen standardi.
+- Korosta, että **verifiointi** ei ole ylimääräinen vaihe vaan asiallinen standardi.
 - Jos opiskelijat kokevat prosessin liian monimutkaiseksi, voit vastata: “Juuri siksi tekoälyn käyttö vaatii ammattitaitoa. Nopea vastaus ei vielä tarkoita oikeaa tai turvallista ratkaisua.”
 - Muistuta, että tekoälyn tuottamaa koodia ei pidä ajaa tuotannossa ilman tarkistusta ja testausta.
 
@@ -236,7 +240,7 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 - Opiskelijat ymmärtävät, miksi tekoälyn tuottamaa teknistä ratkaisua ei pidä käyttää ilman tarkistusta.
 - Opiskelijat osaavat suunnitella vaiheittaisen **verifiointiprosessin**.
 - Opiskelijat osaavat tunnistaa tekoälyn tekemiä oletuksia ja mahdollisia hallusinaatioita.
-- Opiskelijat ymmärtävät, että ammattilainen kantaa vastuun lopullisesta ratkaisusta.
+- Opiskelijat ymmärtävät, että vastuullinen käyttäjä kantaa vastuun lopullisesta ratkaisusta.
 
 ---
 
@@ -251,13 +255,13 @@ Jaa opiskelijat pienryhmiin. Anna jokaiselle ryhmälle yksi tai useampi vaihe po
 ### Avainviesti 2: Uskottava ei tarkoita oikeaa
 
 - **Hallusinaatiot** voivat kuulostaa täysin itsevarmoilta.
-- IT-ammattilaisella voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
+- teknisen alan osaajalla voi olla hyvä “kuulostaa oikealta” -tuntuma, mutta sekään ei aina riitä.
 - **Verifiointia ei voi ohittaa.**
 
 ### Avainviesti 3: Vastuu on käyttäjällä
 
 - Jos annat asiakkaalle tekoälyavusteisen raportin tai koodin, vastaat sen oikeellisuudesta.
-- Malli ei kanna ammatillista vastuuta käyttäjän puolesta.
+- Malli ei kanna asiallista vastuuta käyttäjän puolesta.
 - Tämä ei ole pelottelua, vaan osa asiantuntijatyötä ja ammattimaista tekoälyn käyttöä.
 
 ---
@@ -282,7 +286,7 @@ Opettaja arvioi opiskelijoiden kykyä:
 - vertailla saman promptin tuottamia erilaisia vastauksia eri malleissa,
 - tunnistaa **hallusinaatioita** ja tarkistaa väitteitä luotettavista lähteistä,
 - selittää, miksi itsevarma vastaus ei vielä tarkoita oikeaa vastausta,
-- suunnitella ammatillinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
+- suunnitella asiallinen **verifiointiprosessi** tekoälyn tuottamalle tekniselle ratkaisulle,
 - perustella, miksi käyttäjä kantaa vastuun tekoälyn avulla tuotetun lopputuloksen oikeellisuudesta.
 
 ---

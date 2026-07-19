@@ -2,13 +2,15 @@
 
 ## Johdanto
 
+**Tämän tunnin rajaus:** Vertailet työkaluja saman tehtävän havaittavilla tuloksilla: vastauslaadulla, käytettävyydellä, hinnalla ja saatavuudella. Tietosuoja on tässä valintaa rajaava kysymys. Tunnilla 11 tarkastelet erikseen datan kulkua, palvelinsijaintia, paikallisia malleja ja käyttöehtoja.
+
 Olet nyt saavuttanut kurssin kohdan, jossa teoria muuttuu käytännöksi. Olet oppinut, mitä tekoäly on, miten se toimii ja millaisia rajoituksia sillä on. Nyt on aika tarttua itse työkaluihin.
 
 Huomaa, että **tekoälymallit** ja niihin perustuvat palvelut kehittyvät erittäin nopeasti. Tämän materiaalin tiedot on tarkistettu toukokuussa 2026, mutta yksittäiset mallinimet, hinnat, käyttörajat ja ominaisuudet voivat muuttua nopeasti. Tärkeintä ei ole muistaa yksittäisiä malliversioita, vaan ymmärtää työkalujen väliset erot ja osata valita tilanteeseen sopiva työkalu.
 
 Kolme suurta kielimallipohjaista palvelua ovat **ChatGPT**, **Claude** ja **Microsoft Copilot**. Ne eivät ole sama työkalu eri nimillä, vaan ne on rakennettu eri lähtökohdista, eri tavoitteilla ja eri vahvuuksilla. Yksi painottaa monipuolisuutta ja laajaa ekosysteemiä, toinen pitkien aineistojen käsittelyä ja turvallisuusajattelua, kolmas yrityskäyttöä ja Microsoft 365 -integraatiota.
 
-Tämän opintojakson tarkoitus on yksinkertainen: opit tunnistamaan, mikä työkalu sopii mihinkin tilanteeseen. Ammattilaisena et valitse työkalua siksi, että se on suosituin tai tutuin. Valitset sen, joka sopii parhaiten juuri siihen tehtävään, jota olet tekemässä.
+Tämän opintojakson tarkoitus on yksinkertainen: opit tunnistamaan, mikä työkalu sopii mihinkin tilanteeseen. Vastuullisena käyttäjänä et valitse työkalua siksi, että se on suosituin tai tutuin. Valitset sen, joka sopii parhaiten juuri siihen tehtävään, jota olet tekemässä.
 
 ---
 
@@ -16,7 +18,7 @@ Tämän opintojakson tarkoitus on yksinkertainen: opit tunnistamaan, mikä työk
 
 ChatGPT on OpenAI:n kehittämä palvelu. Sen vahvuus on monipuolisuus: se osaa kirjoittaa, analysoida, koodata, käsitellä tiedostoja, tulkita kuvia, luoda kuvia ja käyttää verkkohakua silloin, kun ominaisuus on käytössä. Kaikki tämä tapahtuu samassa keskusteluikkunassa.
 
-ChatGPT:stä on sekä ilmaisia että maksullisia versioita. Käytettävissä olevat mallit, viestirajat, tiedostojen käsittely, kuvien luonti, verkkohaku ja muut työkalut riippuvat siitä, mitä versiota tai organisaatiotilausta käytetään. Siksi mallin tarkka nimi tai yksittäinen käyttöraja ei ole ammattilaiselle tärkein tieto. Tärkeämpää on ymmärtää, millaiseen työskentelyyn ChatGPT soveltuu.
+ChatGPT:stä on sekä ilmaisia että maksullisia versioita. Käytettävissä olevat mallit, viestirajat, tiedostojen käsittely, kuvien luonti, verkkohaku ja muut työkalut riippuvat siitä, mitä versiota tai organisaatiotilausta käytetään. Siksi mallin tarkka nimi tai yksittäinen käyttöraja ei ole vastuulliselle käyttäjälle tärkein tieto. Tärkeämpää on ymmärtää, millaiseen työskentelyyn ChatGPT soveltuu.
 
 ### Mikä tekee ChatGPT:stä erityisen?
 
@@ -54,7 +56,7 @@ Koodauksessa Claude on vahva erityisesti silloin, kun tehtävä edellyttää laa
 
 Claude ei ole aina paras valinta silloin, kun tarvitaan mahdollisimman laajaa ekosysteemiä, valmiita räätälöityjä botteja tai monipuolisia kuluttajakäyttöön suunnattuja lisätyökaluja. Verkkohaku on Claudessa tuettu tietyissä ympäristöissä, mutta sen saatavuus riippuu käyttöliittymästä, tilauksesta, alueesta ja organisaation asetuksista. Siksi ei kannata olettaa, että jokaisessa Claude-käytössä on automaattisesti reaaliaikainen verkkohaku.
 
-Tietosuojan osalta Claude ei ole yksinkertaisesti ”aina turvallisin” eikä ”aina täysin koulutuksen ulkopuolella”. Kuluttajakäytössä käyttäjän asetukset ja valinnat vaikuttavat siihen, voidaanko keskusteluja käyttää mallien kehittämiseen. Yritys- ja API-käytössä ehdot voivat olla erilaiset. Ammattilaisen pitää siis tarkistaa organisaation oma sopimus ja asetukset ennen luottamuksellisen tiedon syöttämistä.
+Tietosuojan osalta Claude ei ole yksinkertaisesti ”aina turvallisin” eikä ”aina täysin koulutuksen ulkopuolella”. Kuluttajakäytössä käyttäjän asetukset ja valinnat vaikuttavat siihen, voidaanko keskusteluja käyttää mallien kehittämiseen. Yritys- ja API-käytössä ehdot voivat olla erilaiset. Vastuullisen käyttäjän pitää siis tarkistaa organisaation oma sopimus ja asetukset ennen luottamuksellisen tiedon syöttämistä.
 
 > **Pysähdy hetkeksi:** Kuvittele, että sinulla on 80-sivuinen tutkimusraportti, jonka sisällön haluat ymmärtää nopeasti. Kumpi työkalu sopisi paremmin: ChatGPT vai Claude? Miksi?
 
@@ -76,7 +78,7 @@ Yritysmaailmassa Copilotin vahvuuksia ovat hallinta, käyttöoikeudet, tietoturv
 
 ### Missä Copilot ei ole paras?
 
-Copilot ei ole aina paras valinta monimutkaiseen koodaukseen, vapaaseen luovaan ideointiin tai hyvin syvälliseen yksittäisen pitkän dokumentin analyysiin. Sen vahvuus on ennen kaikkea Microsoft 365 -ympäristössä toimiminen. Jos et käytä Microsoftin tuotteita tai organisaatiosi data ei ole Microsoft 365 -ympäristössä, Copilotin hyöty voi jäädä pienemmäksi.
+Copilot ei ole aina paras valinta monimutkaiseen koodaukseen, vapaaseen luovaan ideointiin tai hyvin syvälliseen yksittäisen pitkän dokumentin analyysiin. Sen vahvuus on ennen kaikkea Microsoft 365 -ympäristössä toimiminen. Jos et käytä Microsoftin tuotteita tai käsittelemäsi data ei ole Microsoft 365 -ympäristössä, Copilotin hyöty voi jäädä pienemmäksi.
 
 Microsoft ei ilmoita Microsoft 365 Copilotille yhtä pysyvää julkista tokenmäärää samalla tavalla kuin monet mallien API-dokumentaatiot ilmoittavat. Copilotin käytännön rajat riippuvat sovelluksesta, lisenssistä, valitusta mallista, organisaation asetuksista ja siitä, miten tietoa haetaan Microsoft Graphin kautta. Siksi aiempi väite yhdestä kiinteästä Copilotin konteksti-ikkunasta oli liian yksinkertainen.
 
@@ -143,13 +145,13 @@ Yksinkertaistettuna: **Claude** on usein vahva pitkien aineistojen analyysissä,
 
 ## Hinnoittelu ja tietosuoja
 
-Kaikista kolmesta palvelusta on erilaisia versioita eri käyttäjäryhmille. Hinnat, käyttörajat ja ominaisuudet muuttuvat usein, joten niitä ei kannata opetella pysyvinä faktoina. Ammattilaisen kannattaa tarkistaa ajantasainen hinta aina palvelun omalta hinnastosivulta ennen hankintapäätöstä.
+Kaikista kolmesta palvelusta on erilaisia versioita eri käyttäjäryhmille. Hinnat, käyttörajat ja ominaisuudet muuttuvat usein, joten niitä ei kannata opetella pysyvinä faktoina. Vastuullisen käyttäjän kannattaa tarkistaa ajantasainen hinta aina palvelun omalta hinnastosivulta ennen hankintapäätöstä.
 
 Ilmaisversiot sopivat kokeiluun ja opiskeluun, mutta niissä on yleensä rajoituksia esimerkiksi viestimäärissä, mallien saatavuudessa, tiedostojen käsittelyssä tai lisäominaisuuksissa. Maksulliset kuluttajaversiot tarjoavat tavallisesti paremmat käyttörajat ja enemmän ominaisuuksia. Yritysversioissa korostuvat hallinta, tietoturva, käyttäjähallinta ja sopimusehdot.
 
 ### Tietosuoja — mihin datasi menee?
 
-**Tietosuoja** on ammatillisesti kriittinen kysymys. Kun käytät tekoälypalvelua, sinun pitää tietää ainakin kolme asiaa: tallentuuko syöttämäsi tieto, käytetäänkö sitä mallien kehittämiseen ja kuka voi hallita tai poistaa sen.
+**Tietosuoja** on asiallisesti kriittinen kysymys. Kun käytät tekoälypalvelua, sinun pitää tietää ainakin kolme asiaa: tallentuuko syöttämäsi tieto, käytetäänkö sitä mallien kehittämiseen ja kuka voi hallita tai poistaa sen.
 
 ChatGPT:ssä käyttäjä voi hallita data-asetuksiaan. OpenAI kertoo, että käyttäjä voi valita, käytetäänkö keskusteluja mallien parantamiseen. Tämä tarkoittaa, että henkilökohtaisessa käytössä asetukset pitää tarkistaa itse ennen luottamuksellisen tiedon syöttämistä.
 
@@ -157,15 +159,15 @@ Clauden tietosuojakäytännöt riippuvat käyttäjätyypistä ja asetuksista. An
 
 Microsoft 365 Copilotissa keskeinen ero on, että palvelu toimii organisaation Microsoft 365 -ympäristössä ja noudattaa käyttäjän käyttöoikeuksia. Microsoftin dokumentaation mukaan Microsoft 365 Copilotin promptteja, vastauksia ja Microsoft Graphin kautta käytettyä dataa ei käytetä perusmallien kouluttamiseen.
 
-Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei organisaatiosi ole hyväksynyt työkalua kyseiseen käyttöön.
+Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei työkalua ole erikseen hyväksytty kyseiseen käyttöön — esimerkiksi työpaikan tai oppilaitoksen ohjeissa.
 
-> **Pysähdy hetkeksi:** Jos yrityksesi käsittelee arkaluontoista asiakastietoa, millä perusteella valitsisit työkalun? Mitä tietosuojakysymyksiä ottaisit huomioon?
+> **Pysähdy hetkeksi:** Kuvittele, että käsittelet arkaluontoista asiakastietoa. Millä perusteella valitsisit työkalun? Mitä tietosuojakysymyksiä ottaisit huomioon?
 
 ---
 
 ## Milloin mikäkin — valintaperusteet käytännössä
 
-Ammattilaisena et kysy ”mikä on paras tekoäly?”, vaan ”mikä on paras tekoäly *tähän tehtävään*?”. Valinta riippuu siitä, mitä teet, missä ympäristössä työskentelet, kuka maksaa ja millaisia vaatimuksia organisaatiollasi on.
+Vastuullisena käyttäjänä et kysy ”mikä on paras tekoäly?”, vaan ”mikä on paras tekoäly *tähän tehtävään*?”. Valinta riippuu siitä, mitä teet, missä ympäristössä työskentelet, kuka maksaa ja millaisia vaatimuksia organisaatiollasi on.
 
 **ChatGPT** on vahva valinta silloin, kun tarvitset monipuolisuutta: luovaa kirjoittamista, ideointia, kuvien käsittelyä, nopeita prototyyppejä, koodiapua, tiedostojen analysointia tai verkkotiedon hakemista. Sen ekosysteemi on laaja, ja sitä voi käyttää hyvin monenlaisiin tehtäviin.
 
@@ -211,6 +213,14 @@ Tällä tunnilla vertailit ChatGPT:tä, Claudea ja Copilotia sekä tunnistit nii
 
 Kolmesta suuresta kielimallipohjaisesta palvelusta jokainen on rakennettu hieman erilaiseen tarpeeseen. ChatGPT on monipuolinen yleiskäyttöinen työkalu, jonka vahvuus on laaja työkalupakki. Claude on vahva pitkissä aineistoissa, huolellisessa analyysissä ja koodikokonaisuuksissa. Copilot on Microsoft 365 -ympäristön työkalu, joka tuo tekoälyn suoraan organisaation dokumentteihin, viestintään ja työprosesseihin.
 
-Ammattilaisena sinun ei tarvitse valita vain yhtä työkalua. Tärkeämpää on ymmärtää kaikkien kolmen vahvuudet ja rajoitukset. Kun tiedät, mihin kukin työkalu sopii, osaat valita oikean työkalun oikeaan tilanteeseen. Se on ammattitaitoa.
+Vastuullisena käyttäjänä sinun ei tarvitse valita vain yhtä työkalua. Tärkeämpää on ymmärtää kaikkien kolmen vahvuudet ja rajoitukset. Kun tiedät, mihin kukin työkalu sopii, osaat valita oikean työkalun oikeaan tilanteeseen. Se on vastuullista käyttöä.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

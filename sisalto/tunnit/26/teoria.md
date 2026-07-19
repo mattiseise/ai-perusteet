@@ -138,7 +138,7 @@ Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten se toteutuu n8n:
 
 ## Iteratiivinen kehitys — rakenna pienestä isoon
 
-Tämän tunnin tärkein periaate on: **aloita pienestä**. Rakenna ensin yksinkertaisin mahdollinen versio, joka tekee yhden asian oikein. Testaa se. Lisää vasta sen jälkeen seuraava ominaisuus. Tätä kutsutaan **iteratiiviseksi kehitykseksi**. Ammattilaisetkaan eivät rakenna valmista tuotetta yhdellä kertaa.
+Tämän tunnin tärkein periaate on: **aloita pienestä**. Rakenna ensin yksinkertaisin mahdollinen versio, joka tekee yhden asian oikein. Testaa se. Lisää vasta sen jälkeen seuraava ominaisuus. Tätä kutsutaan **iteratiiviseksi kehitykseksi**. Kokeneet käyttäjätkään eivät rakenna valmista tuotetta yhdellä kertaa.
 
 Käytännössä tunnin 26 tavoite on **toimiva minimiversio**: kolmesta solmusta koostuva agentti, joka tekee ydintehtävänsä. Turvakerros, monimutkaisemmat haarat, hyväksyntäportit ja viimeistely tehdään tunnilla 27. Jos yrität tehdä kaiken kerralla, on suuri riski, että mikään ei toimi kunnolla.
 
@@ -204,3 +204,11 @@ Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi 
 Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: Strengthening AI Agent Hijacking Evaluations](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations)
+- [OWASP: Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+- [OWASP: Excessive Agency](https://owasp.org/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM06_ExcessiveAgency.html)
+
+Tarkistettu 15.7.2026.

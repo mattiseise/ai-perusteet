@@ -241,3 +241,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Pohdi:** Mitä agenttisi täytyy muistaa juuri nyt, mitä sen täytyy muistaa myöhemmin ja mitä sen ei saa koskaan tallentaa?
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **tieto-, tila-, säilytys- ja poistokartta**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija merkitsee prosessin tiedot, nykyisen tilan, säilytysajan ja poistotavan. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmiita tilakortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija suunnittelee saman prosessin ilman pitkäkestoista muistia. Syventävä työ ei kasvata pakollista ydintuotosta.

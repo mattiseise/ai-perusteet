@@ -2,9 +2,11 @@
 
 ## Johdanto: tekoälymaailma on isompi kuin miltä näyttää
 
+**Tämän tunnin rajaus:** Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin paikallinen malli muuttaa riskiä. Tavoite ei ole uusi yleinen paremmuusjärjestys vaan perusteltu käyttöympäristön valinta.
+
 Olet ehkä kokeillut ChatGPT:tä tai Claudea. Ne ovat tunnettuja ja hyviä työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Maailmassa on monia muitakin **tekoälymalleja**, joilla on omat vahvuutensa ja heikkoutensa. Jokaisen taustalla on eri yritys, erilainen hinnoittelu ja omat tietosuojakäytäntönsä.
 
-Miksi tämä kannattaa tietää? Siksi, että eri tilanteet vaativat erilaisia ratkaisuja. Joskus paras valinta on halvin malli, joskus nopein ja joskus se, jossa tieto pysyy mahdollisimman turvallisesti. Ammattilaisena sinun kannattaa tuntea vaihtoehdot, jotta osaat valita oikean tekoälytyökalun oikeaan tehtävään.
+Miksi tämä kannattaa tietää? Siksi, että eri tilanteet vaativat erilaisia ratkaisuja. Joskus paras valinta on halvin malli, joskus nopein ja joskus se, jossa tieto pysyy mahdollisimman turvallisesti. Vastuullisena käyttäjänä sinun kannattaa tuntea vaihtoehdot, jotta osaat valita oikean tekoälytyökalun oikeaan tehtävään.
 
 Tässä materiaalissa opit, mitä muita malleja on olemassa ja miten niitä voi vertailla keskenään.
 
@@ -40,7 +42,7 @@ Googlella voi olla tiukat säännöt siitä, millaisiin pyyntöihin Gemini vasta
 
 ## Osa 2: Kiinalaiset mallit — DeepSeek
 
-Myös Kiinassa on kehitetty omia tekoälymalleja. Yksi tunnetuimmista on **DeepSeek**. Siihen kannattaa tutustua, mutta sen käyttöön liittyy tärkeitä asioita, jotka ammattilaisen pitää ymmärtää.
+Myös Kiinassa on kehitetty omia tekoälymalleja. Yksi tunnetuimmista on **DeepSeek**. Siihen kannattaa tutustua, mutta sen käyttöön liittyy tärkeitä asioita, jotka vastuullisen käyttäjän pitää ymmärtää.
 
 ### DeepSeek: edullinen malli Kiinasta
 
@@ -62,7 +64,7 @@ Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:
 - **Sairaala:** Potilastietojen käsittely DeepSeekillä ei ole hyväksyttävää ilman selkeää laillista perustetta ja organisaation hyväksyntää.
 - **Yritys:** Asiakastietojen tai liikesalaisuuksien syöttäminen palveluun voi olla kiellettyä tai riskialtista.
 
-**Johtopäätös:** DeepSeek voi olla teknisesti hyvä ja edullinen, mutta tietosuoja rajoittaa sen käyttöä monissa ammatillisissa tilanteissa Suomessa ja EU:ssa.
+**Johtopäätös:** DeepSeek voi olla teknisesti hyvä ja edullinen, mutta tietosuoja rajoittaa sen käyttöä monissa asiallisissa tilanteissa Suomessa ja EU:ssa.
 
 > **Pohdi hetkeksi:** Kuvittele, että olet opettaja ja haluat käyttää tekoälyä oppilaiden esseiden arviointiin. DeepSeek olisi edullinen vaihtoehto, mutta oppilaiden nimet ja esseiden sisällöt voisivat päätyä EU:n ulkopuolelle. Olisiko käyttö hyväksyttävää? Miksi tai miksi ei?
 
@@ -188,7 +190,7 @@ Käytännössä tämä tarkoittaa seuraavaa:
 - **Lääkäri:** Älä syötä potilastietoja tekoälypalveluun ilman organisaation hyväksyntää ja laillista perustetta.
 - **Yritys:** Älä käytä asiakastietoja tekoälypalvelussa, jos et tiedä, mihin tiedot tallentuvat ja onko käyttö organisaation ohjeiden mukaista.
 
-Jos käytät DeepSeekiä tai muuta tekoälypalvelua omiin harjoituksiin ilman henkilötietoja tai luottamuksellista sisältöä, riski on pienempi. Ammatillisessa käytössä on kuitenkin aina tarkistettava organisaation ohjeet.
+Jos käytät DeepSeekiä tai muuta tekoälypalvelua omiin harjoituksiin ilman henkilötietoja tai luottamuksellista sisältöä, riski on pienempi. Asiallisessa käytössä on kuitenkin aina tarkistettava organisaation ohjeet.
 
 > **Pohdi hetkeksi:** Ketkä käyttävät tekoälyä sinun ympärilläsi? Opettajat, lääkärit, johtajat vai asiakaspalvelijat? Mitä tietoja tekoälylle saa lähettää? Mitä tietoja sille ei saa koskaan lähettää ilman lupaa?
 
@@ -217,7 +219,7 @@ ChatGPT ja Claude ovat hyviä yleiskäyttöisiä vaihtoehtoja silloin, kun organ
 
 Tällä tunnilla tutustuit laajempaan tekoälykenttään: Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu hieman eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden, helppokäyttöisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitset tietyn alustan omalle botillesi.
 
-Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain ”mikä on paras?”, vaan **”mikä sopii parhaiten tähän käyttötilanteeseen?”**. Se on ammattilaisen ajattelutapa.
+Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain ”mikä on paras?”, vaan **”mikä sopii parhaiten tähän käyttötilanteeseen?”**. Se on vastuullisen käyttäjän ajattelutapa.
 
 ## Osa 7: Yhteenveto
 
@@ -227,8 +229,16 @@ Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain 
 2. **Jokaisella mallilla on omat vahvuutensa.** Gemini liittyy vahvasti Googlen palveluihin. DeepSeek voi olla edullinen, mutta sen käyttöön liittyy tietosuojakysymyksiä EU:ssa. Llama ja Mistral voivat olla yksityisiä ratkaisuja, jos ajat niitä omassa ympäristössä.
 3. **Tietosuoja on tärkeää.** Sinun pitää tietää, minne tiedot menevät ja saako niitä käsitellä kyseisessä palvelussa. Oppilastiedot, potilastiedot, asiakastiedot ja muu arkaluontoinen tieto vaativat erityistä huolellisuutta.
 4. **Valinta riippuu tilanteesta.** Ei ole yhtä parasta mallia. Hinta, nopeus, yksityisyys ja käytettävyys painavat eri tilanteissa eri tavalla.
-5. **Ammattilaisena sinun kannattaa tuntea vaihtoehdot.** Työpaikalla voi olla sääntöjä siitä, mitä tekoälypalveluja saa käyttää. Kun tunnet vaihtoehdot, ymmärrät paremmin myös niiden riskit ja mahdollisuudet.
+5. **Vastuullisena käyttäjänä sinun kannattaa tuntea vaihtoehdot.** Työpaikalla voi olla sääntöjä siitä, mitä tekoälypalveluja saa käyttää. Kun tunnet vaihtoehdot, ymmärrät paremmin myös niiden riskit ja mahdollisuudet.
 
 **Seuraavaksi:** Opit tekemään tekoälylle tarkkoja ja hyödyllisiä ohjeita. Kun tiedät, millaisia malleja on olemassa, seuraava askel on oppia ohjaamaan niitä niin, että saat vastauksen juuri siihen tarpeeseen, johon sitä käytät.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

@@ -1,69 +1,69 @@
-# Suunnittelumallit — ReAct, ketjuajattelu ja orkestrointi
+# Suunnittelumallit — ReAct, eksplisiittinen työnkulku ja orkestrointi
 
 ## Johdanto
 
-Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten saat agentin **ajattelemaan ja toimimaan järkevästi**. Miten varmistat, että se etenee oikeassa järjestyksessä eikä hyppää sattumanvaraisesti vääriin johtopäätöksiin?
+Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin **havaittavan toiminnan järkeväksi ja testattavaksi**. Miten varmistat, että se etenee oikeassa järjestyksessä eikä hyppää sattumanvaraisesti vääriin toimintoihin?
 
-Vastaus on **suunnittelumallit** eli design patterns. Ne ovat testattuja tapoja ohjata sitä, miten agentti päättelee ja toimii. Suunnittelumallit perustuvat siihen, **miten ihmiset ratkaisevat monimutkaisia ongelmia**: he perustelevat päätöksiään, jakavat ongelman osiin ja koordinoivat eri työvaiheita.
+Vastaus on **suunnittelumallit** eli design patterns. Ne ovat testattuja tapoja järjestää työkalukutsut, tulosten tarkistus, päätökset ja toiminnot. Mallin piilotettua raakaa chain-of-thoughtia ei pyydetä eikä tallenneta. Sen sijaan näkyviin tehdään lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe sekä toteutettu toiminto.
 
-Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agenttisi **ReAct-mallia** vai **ketjuajattelua** ja rakennatko sen yksittäiseksi agentiksi vai moniagenttijärjestelmäksi. Nämä päätökset vaikuttavat siihen, onko agentti tehokas, hidas, selkeä vai vaikeasti hallittava.
+Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agenttisi **ReAct-mallia** vai **eksplisiittinen työnkulkua** ja rakennatko sen yksittäiseksi agentiksi vai moniagenttijärjestelmäksi. Nämä päätökset vaikuttavat siihen, onko agentti tehokas, hidas, selkeä vai vaikeasti hallittava.
 
-## ReAct: ajattele, toimi ja ajattele uudelleen
+## ReAct: valitse toiminto, havainnoi tulos ja jatka
 
-**ReAct** tarkoittaa sanoja **Reasoning + Acting** eli päättely ja toiminta. ReAct-mallissa agentti vuorottelee ajattelun ja toiminnan välillä. Se ei hyppää suoraan toimintaan, vaan ajattelee ensin, toimii sen jälkeen ja arvioi sitten toiminnan tuloksen.
+**ReAct** tarkoittaa sanoja **Reasoning + Acting** eli päättely ja toiminta. Toteutuksessa agentti valitsee työkalun, saa havainnon ja valitsee sen perusteella seuraavan toiminnon. Valinnasta voidaan kirjata lyhyt päätösperustelu, mutta mallin piilotettua sisäistä päättelyä ei paljasteta lokiin.
 
-Käytännössä se voi näyttää tältä. Agentti saa tehtävän: ”Asiakas kysyy, onko tuotetta saatavilla.” Agentti ei heti kutsu varasto-API:a, vaan aloittaa **ajattelulla**: ”Asiakkaan kysymys on selkeä. Minun täytyy tarkistaa varastotilanne. Kutsun varasto-API:a.” Tämä ajattelu voidaan kirjata lokiin, jotta nähdään, mitä agentti on päätellyt.
+Käytännössä agentti saa tehtävän: ”Asiakas kysyy, onko tuotetta saatavilla.” Toteutus kirjaa lyhyen päätösperustelun: ”Saatavuus vaatii ajantasaisen varastohaun.” Sen jälkeen agentti kutsuu varastorajapintaa. Lokissa ei tarvita mallin raakaa, piilotettua ajatusketjua.
 
 Seuraavaksi tulee **toiminta**: agentti kutsuu varasto-API:a ja saa vastauksen: ”Tuotetta on 5 kappaletta.”
 
-Sitten agentti **ajattelee uudelleen**: ”Varasto kertoo, että tuotetta on 5 kappaletta. Asiakas voi siis ostaa tuotteen. Minulla on nyt riittävä tieto vastaukseen.” Agentti perustelee, mikä seuraava askel on.
+Sitten toteutus tarkistaa tuloksen ja kirjaa lyhyesti: ”Haku onnistui; vastaus voidaan muodostaa palautetusta määrästä.” Käyttäjä saa tarvittaessa tiiviin perustelun, mutta mallin sisäinen päättely jää piiloon.
 
-Lopuksi agentti tekee **toisen toiminnon** ja kirjoittaa asiakkaalle vastauksen: ”Kyllä, tuotetta on 5 kappaletta varastossa. Voit tehdä tilauksen nyt.” Ajattelu ja toiminta vuorottelevat, kunnes tehtävä on valmis.
+Lopuksi agentti tekee **toisen toiminnon** ja kirjoittaa asiakkaalle vastauksen: ”Kyllä, tuotetta on 5 kappaletta varastossa. Voit tehdä tilauksen nyt.” Työkalukutsu, havainto ja seuraava toiminto vuorottelevat, kunnes tehtävä on valmis tai enimmäisraja täyttyy.
 
-ReAct on tehokas malli, koska agentti perustelee jokaisen askeleensa ennen toimintaa. Se ei toimi sokkona, vaan kertoo ensin, miksi se tekee seuraavan toimenpiteen. Tämä tekee agentin päätöksistä **ymmärrettävämpiä** ja vähentää virheiden todennäköisyyttä.
+ReAct on hyödyllinen, kun seuraava toiminto riippuu työkalun palauttamasta tuloksesta. Jäljitettävyyttä ei rakenneta tallentamalla raakaa ajatusketjua, vaan kirjaamalla rakenteiset kutsut, tulokset, virheet, toiminnot ja lyhyet päätösperustelut.
 
 **ReAct-mallin eteneminen**
 
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
-| **Tehtävä saapuu** | → | **Ajattele** Mitä tiedän? Mitä tarvitsen? | → | **Toimi** Kutsu työkalua tai hae tietoa. |
+| **Tehtävä saapuu** | → | **Päätösperustelu** Mitä tietoa tarvitaan seuraavaksi? | → | **Työkalukutsu** Käytä rakenteista syötettä. |
 | ↓ | | | | |
-| **Vastaa käyttäjälle** | ← | **Riittääkö tieto?** Kyllä: vastaa. Ei: ajattele uudelleen. | ← | **Havainnoi** Mitä sain? Oliko tulos hyödyllinen? |
+| **Vastaa käyttäjälle** | ← | **Seuraava toiminto** Vastaa, jatka tai eskaloi. | ← | **Tulos tai virhe** Mitä työkalu palautti? |
 
-Kun ReAct-mallin toimintaa lokitetaan, agentin ajattelu ja toiminta näkyvät selvästi:
+Kun ReAct-mallin toimintaa lokitetaan, havaittava työnkulku näkyy selvästi:
 
-**[AJATTELU]** Asiakkaan kysymys koskee tuotteen hintaa. Minun täytyy hakea se tietokannasta.
+**[PÄÄTÖSPERUSTELU]** Ajantasainen hinta vaatii tuotehaun.
 
 **[TOIMINTA]** GET /api/product?id=12345 → Hinta: 45 €
 
-**[AJATTELU]** Tietokanta antoi hinnan. Minulla on nyt vastaus.
+**[TULOS]** Tuotehaku onnistui; palautettu hinta on 45 euroa.
 
 **[TOIMINTA]** Lähetä vastaus: ”Tuotteen hinta on 45 €.”
 
-Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin menee pieleen, lokista voi nähdä tarkasti, missä ajattelun tai toiminnan vaiheessa virhe tapahtui.
+Lokista näkyvät työkalukutsut, niille annetut rakenteiset syötteet, tulokset, toiminnot, virheet ja lyhyet päätösperustelut. Se ei tallenna raakaa chain-of-thoughtia eikä tarpeettomia salaisuuksia tai henkilötietoja.
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// ajattele → toimi → havainnoi — silmukka pyörii, kunnes tehtävä on valmis</span>
+<figure class="ai-demo"><span class="ai-demo__tag">// päätösperustelu → työkalukutsu → tulos → seuraava toiminto</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:310px">
   <div class="l23-wrap">
     <div class="l23-ring"><span class="l23-mid">ReAct</span></div>
-    <span class="l23-node n-think">AJATTELE</span>
+    <span class="l23-node n-think">PERUSTELE LYHYESTI</span>
     <span class="l23-node n-act">TOIMI</span>
     <span class="l23-node n-obs">HAVAINNOI</span>
     <span class="l23-exit">✓ VALMIS</span>
     <div class="l23-log"><span class="l23-lh">LOKI — jokainen vaihe jää näkyviin</span>
-      <span class="l23-l t1"><b>[AJATTELU]</b> Tarvitsen ensin säätiedon.</span>
+      <span class="l23-l t1"><b>[PÄÄTÖSPERUSTELU]</b> Tarvitsen ensin säätiedon.</span>
       <span class="l23-l a1"><b>[TOIMINTA]</b> hae_saa("Turku")</span>
       <span class="l23-l o1"><b>[HAVAINTO]</b> +2 °C, sadetta 80 %</span>
-      <span class="l23-l t2"><b>[AJATTELU]</b> Vielä vapaa aika kalenterista.</span>
+      <span class="l23-l t2"><b>[PÄÄTÖSPERUSTELU]</b> Vielä vapaa aika kalenterista.</span>
       <span class="l23-l a2"><b>[TOIMINTA]</b> hae_kalenteri(huomenna)</span>
       <span class="l23-l o2"><b>[HAVAINTO]</b> klo 14 vapaa</span>
       <span class="l23-l done"><b>[VALMIS ✓]</b> Ehdotan: huomenna klo 14 sisällä.</span>
     </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">ReAct-agentti ei toimi sokkona: se perustelee ensin, toimii sitten ja arvioi tuloksen — ja toistaa silmukkaa, kunnes tieto riittää. Loki näyttää jokaisen vaiheen, joten virheen syntykohta on aina jäljitettävissä.</figcaption></figure>
+<figcaption class="ai-demo__cap">ReAct-toteutus etenee havaintojen perusteella. Loki näyttää lyhyen päätösperustelun, rakenteisen työkalukutsun, tuloksen tai virheen ja seuraavan toiminnon — ei mallin piilotettua raakaa ajatusketjua.</figcaption></figure>
 <style>
 .l23-wrap{position:relative;width:560px;height:272px;font-family:var(--font-mono)}
 .l23-ring{position:absolute;left:28px;top:62px;width:128px;height:128px;border:2.5px dashed #44517A;border-radius:50%;animation:l23spin 21s linear infinite}
@@ -107,9 +107,9 @@ Näet jokaisen vaiheen ja voit ymmärtää, mitä agentti päätteli. Jos jokin 
 .l23-l,.l23-exit{opacity:1}}
 </style>
 
-## Ketjuajattelu: jaa ongelma osiin
+## Eksplisiittinen työnkulku: jaa ongelma näkyviin vaiheisiin
 
-**Ketjuajattelussa** eli chain-of-thought-mallissa agentti purkaa monimutkaisen ongelman pienempiin osiin ja käsittelee ne järjestyksessä. Se etenee vaiheittain: ensin tämä, sitten tuo ja lopuksi seuraava askel.
+**Eksplisiittisessä työnkulussa** toteuttaja purkaa ongelman näkyviin, testattaviin vaiheisiin. Tämä on eri asia kuin mallin piilotettu sisäinen päättely. Työnkulku voidaan tarkistaa ja lokittaa ilman, että raakaa ajatusketjua pyydetään tai tallennetaan.
 
 Esimerkiksi agentti saa tehtävän: ”Käsittele palautuspyyntö.” Agentti ei yritä ratkaista kaikkea yhdellä kertaa, vaan purkaa ongelman vaiheisiin:
 
@@ -119,13 +119,13 @@ Esimerkiksi agentti saa tehtävän: ”Käsittele palautuspyyntö.” Agentti ei
 4. **Onko asiakas oikeutettu hyvitykseen vai korvaavaan tuotteeseen?** Yrityksen palautuskäytännön mukaan ensimmäisestä palautuksesta voidaan antaa hyvitys.
 5. **Mitä asiakkaalle lähetetään?** Asiakkaalle lähetetään viesti, jossa selitetään prosessi ja annetaan linkit palautuslomakkeeseen sekä kuljetusohjeisiin.
 
-Ketjuajattelu auttaa agenttia **välttämään virheitä**, koska se pakottaa käsittelemään yhden asian kerrallaan. Agentti ei yritä ratkaista kaikkea yhdellä hypyllä, vaan etenee systemaattisesti. Tämä tekee päätöksenteosta myös **jäljitettävämpää**: ihminen voi nähdä jokaisen vaiheen ja ymmärtää, miksi agentti toimi niin kuin toimi.
+Eksplisiittinen työnkulku auttaa agenttia **välttämään virheitä**, koska se pakottaa käsittelemään yhden asian kerrallaan. Agentti ei yritä ratkaista kaikkea yhdellä hypyllä, vaan etenee systemaattisesti. Tämä tekee päätöksenteosta myös **jäljitettävämpää**: ihminen voi nähdä jokaisen vaiheen ja ymmärtää, miksi agentti toimi niin kuin toimi.
 
 Vertaa seuraavia kahta tapaa toimia:
 
-**Ilman ketjuajattelua:** Agentti näkee palautuspyynnön ja hyppää suoraan vastaukseen: ”Lähetän hyvityksen.” Mutta mitä jos palautusaika on jo kulunut? Entä jos käytäntö sanoo, että asiakkaalle pitää lähettää korvaava tuote hyvityksen sijaan? Agentti voi tehdä väärän päätöksen, koska se ei tarkistanut asiaa vaihe vaiheelta.
+**Ilman eksplisiittinen työnkulkua:** Agentti näkee palautuspyynnön ja hyppää suoraan vastaukseen: ”Lähetän hyvityksen.” Mutta mitä jos palautusaika on jo kulunut? Entä jos käytäntö sanoo, että asiakkaalle pitää lähettää korvaava tuote hyvityksen sijaan? Agentti voi tehdä väärän päätöksen, koska se ei tarkistanut asiaa vaihe vaiheelta.
 
-**Ketjuajattelun kanssa:** Agentti tarkistaa palautusajan, palautuskäytännön ja tuotteet ennen päätöksen tekemistä. Vasta tämän jälkeen se laatii vastauksen. Näin virheiden määrä vähenee.
+**Eksplisiittinen työnkulkun kanssa:** Agentti tarkistaa palautusajan, palautuskäytännön ja tuotteet ennen päätöksen tekemistä. Vasta tämän jälkeen se laatii vastauksen. Näin virheiden määrä vähenee.
 
 ## Moniagenttijärjestelmät: kun yksi agentti ei riitä
 
@@ -138,7 +138,7 @@ Kuvittele asiakaspalvelun moniagenttijärjestelmä:
 - **Analyysiagentti** lukee asiakkaan viestin ja päättelee: ”Asiakas on tyytymätön kuljetuspalveluun.”
 - **Tiedonhakuagentti** hakee asiakkaan historian: ”Tämä asiakas on ostanut meiltä viisi kertaa. Hän on lojaali asiakas ja ollut aiemmin tyytymätön kuljetuspalveluihin.”
 - **Kirjoitusagentti** laatii vastauksen: ”Pahoittelemme kuljetusongelmaa. Tarjoamme sinulle maksuttoman kotiinkuljetuksen seuraavaan tilaukseen.”
-- **Validointiagentti** tarkistaa vastauksen: ”Vastaus on turvallinen. Se ei sisällä salassa pidettäviä tietoja.”
+- **Validointiagentti** tarkistaa vastauksen sovittuja kriteerejä vasten: ”Pakolliset kentät ovat mukana, lähdeviitteet löytyvät ja mahdollinen henkilötieto on merkitty ihmisen tarkistettavaksi.” Tarkistus ei yksin todista vastausta turvalliseksi.
 
 Moniagenttijärjestelmässä on kaksi perusrakennetta.
 
@@ -162,15 +162,15 @@ Moniagenttijärjestelmät ovat voimakkaita, koska niiden avulla monimutkainen ty
 
 ## Suunnittelumallien valinta: milloin käytät mitä?
 
-Sinulla on nyt kolme välinettä: **ReAct**, **ketjuajattelu** ja **moniagenttijärjestelmät**. Seuraavaksi pitää ymmärtää, milloin mitäkin kannattaa käyttää.
+Sinulla on nyt kolme välinettä: **ReAct**, **eksplisiittinen työnkulku** ja **moniagenttijärjestelmät**. Seuraavaksi pitää ymmärtää, milloin mitäkin kannattaa käyttää.
 
-**ReActia käytetään**, kun agentti tarvitsee joustavuutta. Agentti voi ajatella, toimia, nähdä tuloksen ja muuttaa suuntaansa, jos tulos on odottamaton. ReAct sopii hyvin **tutkivaan ajatteluun**: tilanteisiin, joissa agentti ei tiedä tarkasti, mitä seuraavaksi tapahtuu, vaan sen täytyy edetä vaihe kerrallaan havaintojen perusteella.
+**ReActia käytetään**, kun agentti tarvitsee joustavuutta. Toteutus voi kutsua työkalua, nähdä tuloksen tai virheen ja muuttaa seuraavaa toimintoa, jos tulos on odottamaton. ReAct sopii tutkiviin tilanteisiin, joissa vaiheita ei tiedetä tarkasti etukäteen, vaan eteneminen määräytyy havaintojen perusteella.
 
-**Ketjuajattelua käytetään**, kun ongelma voidaan **jakaa selkeisiin vaiheisiin**. Palautuspyynnön käsittely on hyvä esimerkki. Vaiheet ovat usein samat: tarkista palautusaika, tarkista palautuskäytäntö ja laadi vastaus. Ketjuajattelu pakottaa agentin käymään läpi jokaisen vaiheen, mikä vähentää virheitä.
+**Eksplisiittinen työnkulkua käytetään**, kun ongelma voidaan **jakaa selkeisiin vaiheisiin**. Palautuspyynnön käsittely on hyvä esimerkki. Vaiheet ovat usein samat: tarkista palautusaika, tarkista palautuskäytäntö ja laadi vastaus. Eksplisiittinen työnkulku pakottaa agentin käymään läpi jokaisen vaiheen, mikä vähentää virheitä.
 
 **Moniagenttijärjestelmiä käytetään**, kun tehtävä on **niin monimutkainen, että se vaatii eri erikoisaloja**. Asiakaspalvelupyynnön käsittely voi vaatia analyysiä, tiedonhakua, kirjoittamista ja validointia. Tällöin jokainen osatehtävä voidaan antaa siihen erikoistuneelle agentille.
 
-Käytännössä käytät usein **yhdistelmää**. Esimerkiksi moniagenttijärjestelmässä jokainen erikoistunut agentti voi käyttää ReAct-mallia omalla alueellaan, ja johtaja-agentti voi käyttää ketjuajattelua koko prosessin koordinoimiseen. Mallit eivät siis sulje toisiaan pois, vaan ne täydentävät toisiaan.
+Käytännössä käytät usein **yhdistelmää**. Esimerkiksi moniagenttijärjestelmässä jokainen erikoistunut agentti voi käyttää ReAct-mallia omalla alueellaan, ja johtaja-agentti voi käyttää eksplisiittinen työnkulkua koko prosessin koordinoimiseen. Mallit eivät siis sulje toisiaan pois, vaan ne täydentävät toisiaan.
 
 ## Esimerkki käytännössä: tapahtumatiimi moniagenttijärjestelmänä
 
@@ -196,7 +196,7 @@ Tämä on moniagenttijärjestelmä käytännössä. Jokainen osa tekee oman erik
 
 Kun rakennat agenttia n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstraktit mallit muuttuvat konkreettisiksi työnkuluiksi.
 
-**ReAct n8n:ssä:** AI Agent -solmu, jolla on pääsy useisiin työkaluihin. n8n:n AI Agent -solmu toimii usein ReAct-periaatteen mukaisesti: se päättelee, valitsee työkalun, saa tuloksen, päättelee uudelleen ja valitsee tarvittaessa seuraavan työkalun. Sinun ei tarvitse rakentaa koko silmukkaa käsin, koska suuri osa tästä toiminnasta on sisäänrakennettu AI Agent -solmuun.
+**ReAct n8n:ssä:** AI Agent -solmu, jolla on pääsy useisiin työkaluihin. n8n:n AI Agent -solmu voi toimia ReAct-periaatteen mukaisesti: se valitsee työkalun, saa rakenteisen tuloksen tai virheen ja valitsee sen perusteella seuraavan toiminnon. Lokiin tallennetaan havaittavat kutsut, tulokset, virheet, toiminnot ja tarvittaessa lyhyt päätösperustelu — ei mallin raakaa chain-of-thoughtia. Sinun ei tarvitse rakentaa koko silmukkaa käsin, koska suuri osa tästä toiminnasta on sisäänrakennettu AI Agent -solmuun.
 
 **ReAct n8n:ssä**
 
@@ -208,9 +208,9 @@ Kun rakennat agenttia n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstr
 | ↓ | | |
 | **Vastaus käyttäjälle** | | |
 
-**Ketjuajattelu n8n:ssä:** sarja erillisiä solmuja, joista jokainen tekee yhden vaiheen. Edellisen solmun tulos siirtyy seuraavalle solmulle. Tämä on n8n:n luonnollinen rakenne: solmut muodostavat ketjun.
+**Eksplisiittinen työnkulku n8n:ssä:** sarja erillisiä solmuja, joista jokainen tekee yhden vaiheen. Edellisen solmun tulos siirtyy seuraavalle solmulle. Tämä on n8n:n luonnollinen rakenne: solmut muodostavat ketjun.
 
-**Ketjuajattelu n8n:ssä**
+**Eksplisiittinen työnkulku n8n:ssä**
 
 |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -222,12 +222,20 @@ Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinu
 
 ## Kohti omaa projektia
 
-Nyt kun tunnet ReAct-mallin, ketjuajattelun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin päättelymalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida reaaliaikaisesti työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää ketjuajattelua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+Nyt kun tunnet ReAct-mallin, eksplisiittisen työnkulun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin toimintamalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää eksplisiittistä työnkulkua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
 
 ## Yhteenveto
 
-Agentti toimii paremmin, kun se ajattelee **järjestelmällisesti**. **ReAct-malli** auttaa agenttia ajattelemaan, toimimaan ja ajattelemaan uudelleen joustavasti. **Ketjuajattelu** auttaa sitä purkamaan ongelman vaiheisiin ja käsittelemään ne järjestyksessä. **Moniagenttijärjestelmät** antavat mahdollisuuden jakaa työn useille erikoistuneille agenteille.
+Agentti toimii paremmin, kun sen työnkulku on **järjestelmällinen ja havaittava**. **ReAct-malli** etenee rakenteisesta työkalukutsusta tulokseen tai virheeseen ja siitä seuraavaan toimintoon. **Eksplisiittinen työnkulku** purkaa ongelman ennalta nimettyihin vaiheisiin. **Moniagenttijärjestelmät** antavat mahdollisuuden jakaa työn useille erikoistuneille agenteille.
 
-Nämä mallit perustuvat siihen, miten ihmiset ajattelevat ja työskentelevät monimutkaisissa tilanteissa. Kun rakennat agenttia n8n:llä, sinä valitset, mitä mallia agentti noudattaa. Valinta vaikuttaa siihen, onko agentti tehokas vai tehoton, ymmärrettävä vai sekava. Valitse aina malli, joka sopii tehtävän luonteeseen.
+Kun rakennat agenttia n8n:llä, sinä valitset, mitä toimintamallia agentti noudattaa. Valinta vaikuttaa siihen, onko agentti tehokas vai tehoton, ymmärrettävä vai sekava. Tee etenemisestä havaittava rakenteisilla kutsuilla, tuloksilla, virheillä, toiminnoilla ja lyhyillä päätösperusteluilla; älä pyydä tai tallenna mallin raakaa chain-of-thoughtia. Valitse aina malli, joka sopii tehtävän luonteeseen.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
+- [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
+- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
+
+Tarkistettu 15.7.2026.

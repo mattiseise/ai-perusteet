@@ -102,9 +102,9 @@ Jaa opiskelijat pienryhmiin. Jokainen ryhmä valitsee yhden hyökkäystyypin ja 
 
 **Mahdollisia puolustuksia:**
 
-- **Erittely:** erotetaan käyttäjän viesti järjestelmäohjeista ja työkalukomennoista.
-- **Validointi:** tarkistetaan, onko syöte turvallinen ja sallittu.
-- **Rajoitus:** agentille annetaan vain rajatut oikeudet ja työkalut.
+- **Epäluotettava data:** käyttäjän viesti ja ulkoinen sisältö merkitään dataksi, ei järjestelmäohjeeksi.
+- **Validointi:** tarkistetaan rakenne, tietotyyppi, pituus ja arvorajat — ei väitetä sisältöä turvalliseksi.
+- **Rakenteiset työkalut ja rajoitus:** agentille annetaan vain tarkkarajaiset toiminnot ja minimioikeudet; salaisuudet pidetään erillään.
 - **Ihmisen hyväksyntä:** riskialttiit toiminnot vaativat ihmisen luvan.
 - **Lokitus:** tallennetaan, mitä agentti yritti tehdä ja miksi.
 
@@ -261,7 +261,7 @@ Ryhmät esittelevät yhden sallitun ja yhden kielletyn oikeuden sekä perustelun
 
 Aktiviteetin tavoitteena on näyttää opiskelijoille, että agentin turvallisuus ei perustu yhteen suojakeinoon. Tarvitaan useita puolustuskerroksia: **validointi**, **rajoitus**, **seuranta** ja **palautuminen**.
 
-**Opettajan painotus:** Turvallinen agentti ei luota vain hyvään promptiin. Se tarkistaa syötteet, rajaa toimintoja, kirjaa tapahtumat ja mahdollistaa virheistä palautumisen.
+**Opettajan painotus:** Turvallinen agentti ei luota vain hyvään promptiin tai validointitunnistimeen. Ulkoinen sisältö on epäluotettavaa dataa. Rakenteiset työkalut, minimioikeudet, salaisuuksien eristys, kriittisten toimintojen hyväksyntä, loki ja palautuminen rajaavat vahinkoa.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -269,14 +269,14 @@ Aktiviteetin tavoitteena on näyttää opiskelijoille, että agentin turvallisuu
 
 Kerro opiskelijoille:
 
-> Turvallinen agentti ei luota vain siihen, että ohjeet ovat hyvät. Se tarkistaa syötteet, rajoittaa riskialttiita toimintoja, kirjaa tapahtumat ja pystyy palautumaan virheistä.
+> Turvallinen agentti ei luota vain siihen, että ohjeet ovat hyvät tai haitallinen teksti tunnistetaan. Se käsittelee ulkoisen sisällön epäluotettavana datana, tarkistaa rakenteen, rajoittaa työkalut ja oikeudet, eristää salaisuudet, vaatii kriittisille toiminnoille hyväksynnän, kirjaa tapahtumat ja pystyy palautumaan virheistä.
 
 ### Neljä kerrosta
 
 | Puolustuskerros | Mitä se tarkoittaa? | Esimerkkikysymys |
 | --- | --- | --- |
-| **Validointi** | Tarkistetaan, näyttääkö syöte järkevältä ja sallitulta. | Onko tämä pyyntö turvallinen käsitellä? |
-| **Rajoitus** | Päätetään, saako agentti toimia itse vai tarvitaanko ihmisen hyväksyntä. | Saako agentti tehdä tämän päätöksen yksin? |
+| **Validointi** | Tarkistetaan kentät, tietotyypit, pituudet ja arvorajat. | Onko syöte sovitun rakenteen mukainen? |
+| **Rajoitus** | Rajataan työkalut ja oikeudet minimiin, eristetään salaisuudet ja päätetään hyväksyntärajat. | Saako agentti tehdä tämän toiminnon yksin? |
 | **Seuranta** | Kirjataan toiminto lokiin, jotta tapahtumat voidaan tarkistaa myöhemmin. | Mitä tehtiin, milloin ja kenen hyväksynnällä? |
 | **Palautuminen** | Varmistetaan, että virhe voidaan korjata tai toiminto voidaan kumota. | Voidaanko virheellinen toiminto perua? |
 

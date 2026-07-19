@@ -19,7 +19,7 @@ ChatGPT:n erikoisversio, joka on konfiguroitu tiettyyn tarkoitukseen. Räätäl�
 Kahden tai useamman järjestelmän yhdistäminen niin, että ne voivat vaihtaa tietoa ja toimia yhdessä. Copilotin Office-integraatio tarkoittaa, että tekoäly toimii suoraan Word-, Excel- ja PowerPoint-sovelluksissa.
 
 ## Tietosuoja (data privacy)
-Periaatteet ja käytännöt, jotka suojaavat henkilötietoja ja luottamuksellista tietoa. Ammatillisesti tärkeää: mihin datasi menee, kun kirjoitat sen tekoälylle?
+Periaatteet ja käytännöt, jotka suojaavat henkilötietoja ja luottamuksellista tietoa. Asiallisesti tärkeää: mihin datasi menee, kun kirjoitat sen tekoälylle?
 
 ## GDPR (General Data Protection Regulation)
 EU:n tietosuoja-asetus, joka säätelee henkilötietojen käsittelyä. Kaikki suuret tekoälypalvelut noudattavat GDPR:ää, mutta toteutus ja tiukkuus vaihtelevat.

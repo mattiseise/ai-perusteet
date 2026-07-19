@@ -109,7 +109,7 @@ Tärkeä periaate on, että **tekoäly ehdottaa, sinä päätät**. Älä tee mi
 
 ## Dokumentointi — miksi se on tärkeää?
 
-**Dokumentointi** voi kuulostaa tylsältä, mutta se on yksi tärkeimmistä ammatillisista taidoista. Dokumentointi tarkoittaa yksinkertaisesti sitä, että kirjoitat muistiin, miten jokin tehdään tai miten jokin toimii. Kun dokumentoit, autat tulevaa itseäsi ja muita.
+**Dokumentointi** voi kuulostaa tylsältä, mutta se on yksi tärkeimmistä asiallisista taidoista. Dokumentointi tarkoittaa yksinkertaisesti sitä, että kirjoitat muistiin, miten jokin tehdään tai miten jokin toimii. Kun dokumentoit, autat tulevaa itseäsi ja muita.
 
 Kuvittele tilanne: olet ratkaissut monimutkaisen tulostinongelman, ja viikon päästä kollega kohtaa saman ongelman. Jos kirjoitit muistiin, miten ratkaisit asian, voit jakaa ohjeen suoraan. Jos et kirjoittanut ratkaisua ylös, joudut selvittämään kaiken uudelleen.
 
@@ -142,9 +142,9 @@ Tämä taito on arvokas koko työuran ajan. Virheilmoituksia tulee aina, ja kyky
 
 ## Tekoälyn rajat työparina
 
-Tekoäly on erinomainen apulainen, mutta sillä on selkeät rajat. Se ei tunne yrityksesi järjestelmiä eikä tiedä, mitä sinun tietokoneellasi tapahtuu juuri nyt. Se voi antaa yleisiä neuvoja, mutta tarkat organisaatiokohtaiset vastaukset vaativat aina ihmisen tarkistuksen.
+Tekoäly on erinomainen apulainen, mutta sillä on selkeät rajat. Se ei tunne yksittäisen organisaation järjestelmiä eikä tiedä, mitä sinun tietokoneellasi tapahtuu juuri nyt. Se voi antaa yleisiä neuvoja, mutta tarkat organisaatiokohtaiset vastaukset vaativat aina ihmisen tarkistuksen.
 
-Tekoäly voi myös olla väärässä vakuuttavasti. Se saattaa ehdottaa ratkaisua, joka kuulostaa loogiselta mutta ei toimi sinun ympäristössäsi. Se voi myös selittää asian teknisesti oikein mutta käytännössä harhaanjohtavasti. Siksi ammattilaisena sinun täytyy aina **tarkistaa ja testata**.
+Tekoäly voi myös olla väärässä vakuuttavasti. Se saattaa ehdottaa ratkaisua, joka kuulostaa loogiselta mutta ei toimi sinun ympäristössäsi. Se voi myös selittää asian teknisesti oikein mutta käytännössä harhaanjohtavasti. Siksi vastuullisena käyttäjänä sinun täytyy aina **tarkistaa ja testata**.
 
 Hyvä sääntö on: käytä tekoälyä **ensimmäisenä askeleena**, älä viimeisenä. Kysy neuvoa, hanki pohja, muokkaa ja tarkista. Älä luota sokeasti, vaan käytä omaa harkintaasi.
 
@@ -168,3 +168,11 @@ Neljä tärkeintä asiaa tältä tunnilta:
 4. **Dokumentointi:** Kirjoita muistiin, miten ratkaisit ongelman. Tekoäly auttaa muotoilussa, mutta sinä varmistat sisällön.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

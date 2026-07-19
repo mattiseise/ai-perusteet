@@ -18,7 +18,7 @@ Strategia, jossa iso, monimutkainen tehtävä jaetaan pienempiin, hallittaviin o
 
 ## Iteraatio (iteration)
 
-Prosessi, jossa parannat tekoälyn vastauksia kierros kierrokselta. Jokainen kierros rakentuu edellisen päälle. Ammattilaisesti kaikkea ei ratkaista yhdellä promptilla — rakennat ratkaisua vaiheittain.
+Prosessi, jossa parannat tekoälyn vastauksia kierros kierrokselta. Jokainen kierros rakentuu edellisen päälle. Huolellisesti kaikkea ei ratkaista yhdellä promptilla — rakennat ratkaisua vaiheittain.
 
 ## Jatkoprompti (follow-up prompt)
 

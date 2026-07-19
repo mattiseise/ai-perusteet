@@ -126,7 +126,7 @@ Kerro opiskelijoille:
 
 Jatka:
 
-> Ammattilaisena opit lukemaan virheilmoituksia. Tekoäly voi auttaa selittämään, mitä virhe tarkoittaa, mutta lopullinen arviointi ja ratkaisu jäävät käyttäjälle.
+> Vastuullisena käyttäjänä opit lukemaan virheilmoituksia. Tekoäly voi auttaa selittämään, mitä virhe tarkoittaa, mutta lopullinen arviointi ja ratkaisu jäävät käyttäjälle.
 
 #### Vaihe 2: Ryhmille jako noin 2 minuuttia
 
@@ -171,7 +171,7 @@ Ryhmät dokumentoivat vastauksensa seuraavalla rakenteella:
 
 Kerro opiskelijoille:
 
-> Virheilmoitukset eivät ole vain pelottavia teknisiä tekstejä. Ne ovat informaatiota. Tekoäly voi auttaa tulkitsemaan niitä, mutta ammattilainen tarkistaa, ovatko ehdotetut ratkaisut turvallisia ja järkeviä.
+> Virheilmoitukset eivät ole vain pelottavia teknisiä tekstejä. Ne ovat informaatiota. Tekoäly voi auttaa tulkitsemaan niitä, mutta vastuullinen käyttäjä tarkistaa, ovatko ehdotetut ratkaisut turvallisia ja järkeviä.
 
 ### Odotettu oppimistulos
 
@@ -186,9 +186,9 @@ Kerro opiskelijoille:
 
 ### Tavoite
 
-Tehtävän tavoitteena on osoittaa, miten oma työ ja ongelmanratkaisu voidaan dokumentoida selkeästi tekoälyn avulla. Opiskelijat oppivat yksinkertaisen **dokumentointimallin**, jota voi käyttää IT-alalla monissa tilanteissa.
+Tehtävän tavoitteena on osoittaa, miten oma työ ja ongelmanratkaisu voidaan dokumentoida selkeästi tekoälyn avulla. Opiskelijat oppivat yksinkertaisen **dokumentointimallin**, jota voi käyttää monilla eri aloilla.
 
-**Opettajan painotus:** Dokumentointi ei ole vain lopuksi tehtävä muodollisuus. Se on osa ammatillista ongelmanratkaisua, koska sen avulla tieto säilyy, siirtyy muille ja auttaa ratkaisemaan saman ongelman myöhemmin nopeammin.
+**Opettajan painotus:** Dokumentointi ei ole vain lopuksi tehtävä muodollisuus. Se on osa asiallista ongelmanratkaisua, koska sen avulla tieto säilyy, siirtyy muille ja auttaa ratkaisemaan saman ongelman myöhemmin nopeammin.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -206,7 +206,7 @@ Tehtävä tehdään interaktiivisesti koko luokan kanssa. Opettaja ja opiskelija
 
 Kerro opiskelijoille:
 
-> Dokumentointi voi kuulostaa tylsältä, mutta se on yksi tärkeimmistä ammatillisista taidoista. Kun ongelma on ratkaistu, tieto pitää kirjoittaa muistiin niin, että myös joku toinen voi hyötyä siitä myöhemmin.
+> Dokumentointi voi kuulostaa tylsältä, mutta se on yksi tärkeimmistä asiallisista taidoista. Kun ongelma on ratkaistu, tieto pitää kirjoittaa muistiin niin, että myös joku toinen voi hyötyä siitä myöhemmin.
 
 Jatka:
 
@@ -258,11 +258,11 @@ Korosta:
 
 Kokoa pääajatus:
 
-> Neljä osaa riittää usein hyvään dokumentointiin: **ongelma**, **kokeillut ratkaisut**, **toimiva ratkaisu** ja **opittu**. Tämä malli toimii monissa IT-alan tilanteissa.
+> Neljä osaa riittää usein hyvään dokumentointiin: **ongelma**, **kokeillut ratkaisut**, **toimiva ratkaisu** ja **opittu**. Tämä malli toimii monenlaisissa tilanteissa eri aloilla.
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät dokumentoinnin arvon ammatillisessa työssä.
+- Opiskelijat ymmärtävät dokumentoinnin arvon asiallisessa työssä.
 - Opiskelijat osaavat käyttää yksinkertaista dokumentointimallia.
 - Opiskelijat ymmärtävät, että tekoäly voi siistiä ja jäsentää dokumenttia, mutta se ei poista ihmisen vastuuta sisällön oikeellisuudesta.
 - Opiskelijat ovat valmiita dokumentoimaan oman ongelmanratkaisunsa itsenäisessä tehtävässä.

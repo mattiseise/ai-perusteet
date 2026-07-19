@@ -10,13 +10,15 @@ Tämän tunnin jälkeen ymmärrät: *tietävätkö tekoälyt todella, mitä ne t
 
 ## Mitä tekoäly oikeasti on?
 
-**Tekoäly** on ohjelma tai järjestelmä, joka oppii datasta eikä ainoastaan noudata ennalta kirjoitettuja sääntöjä. Se voi tehdä päätöksiä tai ennustaa asioita muuttuvissa tilanteissa ilman, että jokainen mahdollinen tapaus täytyy ohjelmoida käsin.
+**Tekoäly** (artificial intelligence, AI) on kattotermi järjestelmille, jotka tuottavat syötteestä ennusteita, sisältöä, suosituksia tai päätöksiä. **Koneoppiminen** (machine learning, ML) on yksi tapa toteuttaa tekoälyä: siinä malli muodostetaan koulutusdatasta. Tekoälyjärjestelmä voi käyttää myös ihmisen kirjoittamia sääntöjä, hakua tai näiden yhdistelmiä.
+
+Kouluttaminen ja käyttäminen ovat eri vaiheita. Käyttöön otettu malli ei automaattisesti opi jokaisesta promptista tai vastauksesta. Malli muuttuu vasta, jos sen toteuttaja kerää palautetta ja päivittää järjestelmää erillisellä koulutus- tai säätöprosessilla.
 
 Kuvitellaan pankin **petoksentunnistusjärjestelmä**. Perinteinen sääntöpohjainen järjestelmä voisi toimia esimerkiksi näin: ”Jos tapahtuma on yli 10 000 euroa, lähetä hälytys operaattorille.” Tällainen ratkaisu on yksinkertainen ja nopea, mutta samalla melko rajallinen.
 
 Todellinen petos voi liittyä paljon pienempään summaan, ja yksittäinen rahansiirto voi näyttää täysin normaalilta. Tapaus muuttuu usein epäilyttäväksi vasta silloin, kun sitä tarkastellaan osana laajempaa kokonaisuutta, kuten asiakkaan aiempaa käyttäytymistä.
 
-Tekoäly toimii eri tavalla. Se voi oppia miljoonista oikeista transaktioista ja löytää niistä yhteyksiä ja poikkeamia, joita ihminen tai yksinkertainen sääntöjärjestelmä ei välttämättä huomaisi. Tekoäly ei siis perustu vain yksittäisiin sääntöihin, kuten ”jos X, niin Y”, vaan muodostaa datan perusteella arvion siitä, kuinka todennäköisesti tapahtuma on laillinen tai petollinen.
+Koneoppimiseen perustuva petosmalli toimii eri tavalla. Se voidaan kouluttaa miljoonista oikeista tapahtumista löytämään yhteyksiä ja poikkeamia, joita yksinkertainen sääntö ei huomaisi. Käytössä malli soveltaa koulutuksessa oppimiaan painoja uuteen tapahtumaan; se ei kouluta itseään uudelleen jokaisesta tarkistuksesta.
 
 Esimerkiksi tekoäly voi arvioida: ”Tämän tapahtuman todennäköisyys olla laillinen on 97 prosenttia.”
 
@@ -34,9 +36,9 @@ Monissa IT-alan järjestelmissä käytetään **robottista prosessiautomaatiota*
 
 Tämä on nopeaa ja tehokasta, mutta kyse on silti rutiinien suorittamisesta. Robotti ei opi asiakkaista eikä paranna toimintaansa ajan myötä, ellei sitä erikseen muuteta.
 
-**Tekoäly oppii datasta.** Se voi muuttua, parantua ja sopeutua uusiin tilanteisiin. Kun petoksentunnistusjärjestelmä kohtaa uudenlaisen petoskuvion, se voi oppia tunnistamaan sen. Tämä ei välttämättä vaadi uusien yksittäisten sääntöjen kirjoittamista, koska toiminta perustuu datasta opittuihin malleihin.
+**Koneoppimismalli koulutetaan datalla.** Se voi tunnistaa koulutusaineiston kaltaisia uusia tapauksia ilman jokaista yksittäistä sääntöä. Uuden petoskuvion oppiminen vaatii kuitenkin järjestelmältä palautteen keräämistä ja mallin erillistä päivittämistä; pelkkä käyttö ei takaa oppimista.
 
-> **Pysähdy hetkeksi:** Jos järjestelmä tekee samat asiat aina samalla tavalla eikä opi kokemuksista, onko se tekoälyä?
+> **Pysähdy hetkeksi:** Jos järjestelmä vain toistaa yhden ennalta määritetyn työvaiheen, onko kyse tavallisesta automaatiosta? Mitä muuta järjestelmästä pitäisi tietää ennen tekoälyluokitusta?
 
 ## Probabilistinen ja deterministinen ajattelu
 
@@ -48,9 +50,9 @@ Tämä on **koneoppimisen** ydin: päätöksiä tehdään epätäydellisen datan
 
 Kun sähköpostiin tulee viesti, perinteinen roskapostisuodatin voi tarkistaa ennalta määriteltyjä sääntöjä. Se voi esimerkiksi toimia näin: ”Jos otsikossa on paljon isoja kirjaimia ja useita huutomerkkejä, merkitse viesti roskapostiksi.” Tämä on yksinkertainen toimintatapa, mutta samalla rajallinen, koska uudet roskapostit osaavat yhä paremmin näyttää tavallisilta viesteiltä.
 
-Tekoäly toimii toisin. Se on voinut nähdä miljoonia todellisia roskapostiviestejä ja tavallisia viestejä. Sen perusteella se voi arvioida: ”Tämä viesti muistuttaa 92-prosenttisesti aiemmin nähtyjä roskapostiviestejä.”
+Koneoppimismalli toimii toisin. Se on voitu kouluttaa miljoonilla todellisilla roskapostiviesteillä ja tavallisilla viesteillä. Sen perusteella se voi arvioida: ”Tämä viesti muistuttaa 92-prosenttisesti aiemmin nähtyjä roskapostiviestejä.”
 
-Tekoäly ei siis tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntöjen sijaan sillä on **parametreja** eli datasta opittuja numeroarvoja, jotka ohjaavat sen toimintaa.
+Tällainen koneoppimismalli ei tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntöjen sijaan sillä on **parametreja** eli koulutusdatasta opittuja numeroarvoja, jotka ohjaavat sen toimintaa.
 
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
@@ -141,18 +143,25 @@ Sen sijaan **petoksentunnistuksessa** voidaan hyödyntää tekoälyä. Myös lai
 
 Sama ero näkyy esimerkiksi koulun tai kunnan palautejärjestelmissä. Yksinkertainen järjestelmä voi ohjata viestejä kiinteiden sääntöjen perusteella. Esimerkiksi sana ”ruokala” voi ohjata viestin suoraan keittiön henkilökunnalle. Tämä on automaatiota, mutta ei vielä tekoälyä.
 
-Kehittyneempi järjestelmä voi hyödyntää tekoälymalleja, jotka ennustavat esimerkiksi sen, kuinka kiireellinen viesti on tai kenelle se kannattaisi ohjata. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan oppii aiemmista tapauksista ja toimintamalleista.
+Kehittyneempi järjestelmä voi hyödyntää koneoppimismalleja, jotka ennustavat esimerkiksi sen, kuinka kiireellinen viesti on tai kenelle se kannattaisi ohjata. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan malli on koulutettu aiemmilla tapauksilla ja toimintamalleilla.
 
-Netflixin, Spotifyn ja verkkokauppojen **suositukset** ovat hyvä esimerkki tekoälyn käytöstä. Ne eivät toimi pelkkien yksinkertaisten sääntöjen varassa, vaan oppivat miljoonista käyttäjien valinnoista, mieltymyksistä ja käyttäytymismalleista. Tämän perusteella ne pyrkivät ennustamaan, mitä haluat nähdä, kuunnella tai ostaa seuraavaksi.
+Suoratoistopalvelujen ja verkkokauppojen **suositukset** ovat hyvä esimerkki tekoälyn käytöstä. Ne eivät toimi pelkkien yksinkertaisten sääntöjen varassa, vaan niiden malleja koulutetaan käyttäjien valinnoista ja käyttäytymismalleista kerätyllä datalla. Koulutettua mallia käytetään ennustamaan, mitä haluat nähdä, kuunnella tai ostaa seuraavaksi; uuden datan hyödyntäminen vaatii erillisen päivitysprosessin.
 
 ## Yhteenveto
 
-**Tekoäly** ei tarkoita mitä tahansa älykkäältä vaikuttavaa ohjelmistoa, eikä se ole sama asia kuin automaatio. Tekoäly on järjestelmä, joka oppii datasta ja tekee arvioita tai päätöksiä todennäköisyyksien perusteella ilman, että kaikki säännöt on kirjoitettu sille valmiiksi.
+**Tekoäly** ei tarkoita mitä tahansa älykkäältä vaikuttavaa ohjelmistoa, eikä se ole sama asia kuin automaatio. Se on kattotermi erilaisille menetelmille. **Koneoppiminen** on yksi näistä menetelmistä: malli koulutetaan datalla tekemään arvioita tai ennusteita. Käyttöön otettu malli ei silti automaattisesti opi jokaisesta uudesta syötteestä, vaan päivittäminen vaatii erillisen koulutus- tai päivitysprosessin.
 
-**Automaatio** ja **sääntöpohjaiset järjestelmät** ovat usein tarkkoja, nopeita ja ennustettavia. Tekoälyn vahvuus taas on siinä, että se on joustavampi ja pystyy oppimaan monimutkaisista ilmiöistä.
+**Automaatio** ja **sääntöpohjaiset järjestelmät** ovat usein tarkkoja, nopeita ja ennustettavia. Koneoppimisen vahvuus taas on siinä, että koulutusdatasta voidaan muodostaa joustava malli monimutkaisista ilmiöistä.
 
 Kun ymmärrät tämän eron, sinun on helpompi hahmottaa, miksi jotkin ongelmat vaativat tekoälyä ja toiset voidaan ratkaista hyvin tavallisella ohjelmointilogiikalla.
 
 Seuraavalla tunnilla perehdyt siihen, millaisia tekoälyn eri tyyppejä on olemassa — ja miksi ”älykkyyttä” voi olla monessa muodossa.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [OECD: Updated definition of an AI system](https://oecd.ai/en/wonk/definition)
+- [Google for Developers: Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/)
+
+Tarkistettu 15.7.2026.

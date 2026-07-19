@@ -31,7 +31,7 @@ Monien aineistojen tekijät, kuten journalistit, kirjailijat, tutkijat ja blogga
     <span class="l08-note">vastaus ei synny tyhjästä — siksi tekoälyn käyttö on myös eettinen valinta</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Tekoäly ei ole neutraali väline. Jokaisen sujuvan vastauksen takana on kolme kerrosta: muiden ihmisten työstä koottu koulutusdata, näkymätön merkintätyö ja datakeskusten sähkön- ja vedenkulutus. Ammattilainen tuntee koko ketjun.</figcaption></figure>
+<figcaption class="ai-demo__cap">Tekoäly ei ole neutraali väline. Jokaisen sujuvan vastauksen takana on kolme kerrosta: muiden ihmisten työstä koottu koulutusdata, näkymätön merkintätyö ja datakeskusten sähkön- ja vedenkulutus. Vastuullinen käyttäjä tuntee koko ketjun.</figcaption></figure>
 <style>
 .l08-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
 .l08-chat{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:7px}
@@ -62,7 +62,7 @@ Tämä on johtanut oikeustapauksiin ja laajaan keskusteluun. Kirjailijat, kuvata
 
 Juridisesti kysymys on monimutkainen. Esimerkiksi Yhdysvaltain tekijänoikeuslaissa tunnetaan **fair use** eli reilun käytön käsite, joka voi joissakin tilanteissa sallia aineiston käytön ilman lupaa. Suomen ja EU:n tekijänoikeuslainsäädännössä vastaavaa yleistä poikkeusta ei ole, mutta tekstin- ja tiedonlouhinnalle on omat poikkeussäännöksensä. Yksi keskeinen kysymys on, onko tekoälymallin kouluttaminen riittävän **transformatiivista** eli muuttaako se alkuperäistä aineistoa tavalla, joka tekee käytöstä hyväksyttävää. Tästä ei ole kaikissa tilanteissa selvää tai yksiselitteistä vastausta.
 
-Eettisesti kysymys on kuitenkin helpompi ymmärtää: jos tekijöiden työtä käytetään ilman lupaa, näkyvyyttä tai korvausta, kyse ei ole vain teknisestä ratkaisusta vaan myös vallasta, oikeuksista ja vastuusta. Ammattilaisena et voi sivuuttaa tätä sanomalla vain: ”Palveluntarjoaja teki sen.” Kun käytät tekoälyä työssäsi, osallistut myös sen käyttöön liittyviin eettisiin valintoihin.
+Eettisesti kysymys on kuitenkin helpompi ymmärtää: jos tekijöiden työtä käytetään ilman lupaa, näkyvyyttä tai korvausta, kyse ei ole vain teknisestä ratkaisusta vaan myös vallasta, oikeuksista ja vastuusta. Käyttäjä ei voi sivuuttaa tätä sanomalla vain: ”Palveluntarjoaja teki sen.” Tekoälyn käyttäjä osallistuu käyttötilanteen eettisiin valintoihin.
 
 > **Pysähdy hetkeksi:** Kuvittele, että kirjoitit artikkelin blogiisi. Tietämättäsi se päätyi tekoälymallin koulutusdataan. Nyt tekoäly tuottaa tekstiä, joka muistuttaa omaa tekstiäsi. Miltä sinusta tuntuisi? Pitäisikö sinulla olla oikeus tietää tästä ja halutessasi kieltää tekstisi käyttö?
 
@@ -76,9 +76,9 @@ Näin voi syntyä tilanne, jossa tekoäly suosii esimerkiksi tietyn sukupuolen, 
 
 Toinen esimerkki liittyy kasvojentunnistukseen. Jos koulutusdata sisältää enemmän vaaleaihoisia kuin tummaihoisia ihmisiä, järjestelmä voi toimia paremmin vaaleaihoisilla käyttäjillä ja huonommin muilla ryhmillä. Tällöin algoritmi on puolueellinen, koska sen opetusdata ei ole edustavaa.
 
-Ammattilaisena sinun on ymmärrettävä tämä periaate: **jos käytät tekoälyä päätöksiin, jotka vaikuttavat ihmisiin, sinun on arvioitava mallin mahdolliset harhat.** Tämä koskee esimerkiksi palkkausta, luottopäätöksiä, asiakasluokittelua, koulutusta, terveydenhuoltoa ja oikeusjärjestelmää.
+Vastuullisena käyttäjänä sinun on ymmärrettävä tämä periaate: **jos käytät tekoälyä päätöksiin, jotka vaikuttavat ihmisiin, sinun on arvioitava mallin mahdolliset harhat.** Tämä koskee esimerkiksi palkkausta, luottopäätöksiä, asiakasluokittelua, koulutusta, terveydenhuoltoa ja oikeusjärjestelmää.
 
-> **Pysähdy hetkeksi:** Kuvittele, että organisaatiosi käyttää tekoälyä työnhakijoiden seulontaan ja järjestelmä karsii järjestelmällisesti tietyn etnisen ryhmän edustajia. Kuka on vastuussa: järjestelmän kehittäjä, organisaatio vai henkilö, joka päätti ottaa järjestelmän käyttöön?
+> **Pysähdy hetkeksi:** Kuvittele, että jokin organisaatio käyttää tekoälyä työnhakijoiden seulontaan ja järjestelmä karsii järjestelmällisesti tietyn etnisen ryhmän edustajia. Kuka on vastuussa: järjestelmän kehittäjä, organisaatio vai henkilö, joka päätti ottaa järjestelmän käyttöön?
 
 ## Datan merkitsijät: näkymätön globaali työ
 
@@ -94,9 +94,9 @@ Tätä työtä tehdään usein maissa, joissa palkkataso on matala. Työntekijä
 
 Työ voi olla myös henkisesti raskasta. Osa merkintätyöstä liittyy haitallisen sisällön tunnistamiseen ja poistamiseen. Tällöin työntekijät voivat joutua katsomaan väkivaltaista, seksuaalisesti hyväksikäyttävää tai muuten järkyttävää materiaalia. Tämän työn psyykkiset vaikutukset voivat olla vakavia, vaikka palkka ja työehdot olisivat heikot.
 
-Kun käytät tekoälyä, käytät usein järjestelmää, jonka taustalla on myös tällaista näkymätöntä ihmistyötä. Et näe näitä työntekijöitä, eikä organisaatiosi välttämättä maksa heille suoraan. Silti heidän työnsä on osa sitä ketjua, joka mahdollistaa tekoälyn hyödyntämisen.
+Kun käytät tekoälyä, käytät usein järjestelmää, jonka taustalla on myös tällaista näkymätöntä ihmistyötä. Et näe näitä työntekijöitä, eikä tekoälypalvelua käyttävä organisaatio välttämättä maksa heille suoraan. Silti heidän työnsä on osa sitä ketjua, joka mahdollistaa tekoälyn hyödyntämisen.
 
-Ammattilaisena eettinen vastuu on tämä: **tiedosta, mistä mallit tulevat, ketkä ovat osallistuneet niiden rakentamiseen ja millaisissa olosuhteissa työtä on tehty.**
+Vastuullisena käyttäjänä eettinen vastuu on tämä: **tiedosta, mistä mallit tulevat, ketkä ovat osallistuneet niiden rakentamiseen ja millaisissa olosuhteissa työtä on tehty.**
 
 ## Ympäristövaikutukset
 
@@ -133,28 +133,36 @@ Pohjolassa vaikutus voi olla erilainen. Suomessa ja muissa pohjoisissa maissa vi
 | **Irlanti** | Erittäin suuri osuus sähkönkulutuksesta | Datakeskukset käyttivät vuonna 2024 noin 22 % maan mitatusta sähköstä, mikä kertoo paikallisen sähköverkon kuormituksesta. |
 | **Chile** | Datakeskusten kasvu kuivuudesta kärsivällä alueella | Pitkäaikainen kuivuus tekee vedenkäytöstä erityisen herkän kysymyksen, koska sama vesi voi olla pois ihmisiltä, maataloudelta tai ekosysteemeiltä. |
 
-Ammattilaisena tämä tarkoittaa seuraavaa: **tekoälyn käyttö ei ole täysin aineetonta.** Jokaisella käyttökerralla on pieni sähkö- ja mahdollisesti vesijalanjälki. Jos organisaatio käyttää tekoälyä laajasti, nämä vaikutukset kasautuvat.
+Vastuullisena käyttäjänä tämä tarkoittaa seuraavaa: **tekoälyn käyttö ei ole täysin aineetonta.** Jokaisella käyttökerralla on pieni sähkö- ja mahdollisesti vesijalanjälki. Jos organisaatio käyttää tekoälyä laajasti, nämä vaikutukset kasautuvat.
 
 Tämä ei tarkoita, että tekoälyä pitäisi boikotoida kaikissa tilanteissa. Se tarkoittaa, että tekoälyä kannattaa käyttää **harkiten** ja **tarkoituksenmukaisesti**. Esimerkiksi luonnoksen tiivistäminen tekoälyllä voi olla perusteltua, mutta miljoonien turhien automaattisten kyselyiden ajaminen vain siksi, että se on teknisesti mahdollista, ei ole vastuullista.
 
-> **Pysähdy hetkeksi:** Jos organisaatiosi käyttäisi tekoälyä miljooniin kyselyihin päivässä, miten arvioisit sen ympäristövaikutuksia? Milloin käyttö olisi perusteltua, ja milloin kulutus olisi suurempi kuin saavutettu hyöty?
+> **Pysähdy hetkeksi:** Jos jokin organisaatio käyttäisi tekoälyä miljooniin kyselyihin päivässä, miten arvioisit sen ympäristövaikutuksia? Milloin käyttö olisi perusteltua, ja milloin kulutus olisi suurempi kuin saavutettu hyöty?
 
-## Vastuullinen käyttö ja ammatillinen etiikka
+## Vastuullinen käyttö ja asiallinen etiikka
 
-Mitä tämä tarkoittaa ammattilaiselle? Vastuullinen tekoälyn käyttö edellyttää, että ymmärrät sekä hyödyt että riskit.
+Mitä tämä tarkoittaa vastuulliselle käyttäjälle? Vastuullinen tekoälyn käyttö edellyttää, että ymmärrät sekä hyödyt että riskit.
 
 1. **Selvitä, mistä data tulee.** Jos käytät tekoälypalvelua, tutustu sen tietosuojakäytäntöihin, käyttöehtoihin ja mahdollisuuksien mukaan tietoihin opetusdatasta. Läpinäkyvä palvelu on vastuullisempi valinta kuin sellainen, joka ei kerro käytännöistään.
 2. **Arvioi mallin mahdolliset harhat.** Jos käytät tekoälyä päätöksiin, jotka vaikuttavat ihmisiin, testaa järjestelmää vinoumien varalta. Tarvittaessa pyydä mukaan tilastotieteen, etiikan, tietosuojan tai juridiikan asiantuntijoita.
-3. **Dokumentoi käyttö.** Jos organisaatiosi käyttää tekoälyä, dokumentoi miksi sitä käytetään, mihin tarkoitukseen, millä datalla ja mitä riskejä on tunnistettu. Dokumentointi auttaa arvioimaan päätöksiä jälkikäteen.
+3. **Dokumentoi käyttö.** Jos organisaatio, jossa toimit, käyttää tekoälyä, dokumentoi miksi sitä käytetään, mihin tarkoitukseen, millä datalla ja mitä riskejä on tunnistettu. Dokumentointi auttaa arvioimaan päätöksiä jälkikäteen.
 4. **Käytä tekoälyä harkiten.** Älä käytä tekoälyä jokaiseen tehtävään vain siksi, että se on mahdollista. Jotkut tehtävät ovat liian kriittisiä hallusinaatioille, ja jotkut aineistot ovat liian arkaluonteisia ulkoisiin palveluihin vietäviksi.
-5. **Ota vastuu ja puhu ääneen.** Jos organisaatiosi käyttää tekoälyä vastuuttomasti, nosta asia esiin. Ammattilaisen tehtävä ei ole vain käyttää työkaluja tehokkaasti, vaan myös ymmärtää niiden vaikutukset.
+5. **Ota vastuu ja puhu ääneen.** Jos organisaatio, jossa toimit, käyttää tekoälyä vastuuttomasti, nosta asia esiin. Vastuullisen käyttäjän tehtävä ei ole vain käyttää työkaluja tehokkaasti, vaan myös ymmärtää niiden vaikutukset.
 
 ## Yhteenveto
 
 **Tekoäly ei ole neutraali työkalu.** Sen taustalla on koulutusdataa, tekijänoikeuskysymyksiä, ihmisten tekemää näkymätöntä työtä, algoritmisia harhoja ja ympäristövaikutuksia.
 
-Ammattilaisena ei riitä, että osaat käyttää tekoälyä teknisesti hyvin. Sinulla on myös vastuu ymmärtää, millaisia valintoja ja vaikutuksia käytön taustalla on. ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu. Ammatillisuus tarkoittaa sitä, että pysähdyt arvioimaan seurauksia ja teet perusteltuja valintoja.
+Vastuullisena käyttäjänä ei riitä, että osaat käyttää tekoälyä teknisesti hyvin. Sinulla on myös vastuu ymmärtää, millaisia valintoja ja vaikutuksia käytön taustalla on. ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu. Vastuullisuus tarkoittaa sitä, että pysähdyt arvioimaan seurauksia ja teet perusteltuja valintoja.
 
 Seuraavalla tunnilla tuotamme asiantuntijalausunnon tekoälyn avulla. Emme kirjoita sitä itse, vaan käytämme tekoälyä tekemään luettavan tuotoksen.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
+- [European Commission: GDPR principles](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en)
+
+Tarkistettu 15.7.2026.

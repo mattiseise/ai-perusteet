@@ -6,7 +6,7 @@ Kaikkien olosuhteiden ja taustatietojen kokonaisuus, jota tekoäly tarvitsee ymm
 
 ## Rooli (role)
 
-Se, kuka olet kontekstissa — ammattilaisena, opiskelijana, aloittelijana tai asiantuntijana — sekä tausta-asiantuntemuksesi. Rooli auttaa tekoälyä valitsemaan vastaukseen sopivan tason ja sävyn.
+Se, kuka olet kontekstissa — vastuullisena käyttäjänä, opiskelijana, aloittelijana tai asiantuntijana — sekä tausta-asiantuntemuksesi. Rooli auttaa tekoälyä valitsemaan vastaukseen sopivan tason ja sävyn.
 
 ## Taustatieto (background information)
 
@@ -38,7 +38,7 @@ Kun tekoäly tuottaa tekstiä, joka näyttää oikealta mutta on keksittyä tai 
 
 ## Validointi (validation)
 
-Tarkistus siitä, että tekoälyn antama vastaus on oikea, sopiva ja turvallinen käyttää. Hyvä konteksti auttaa, mutta kriittisten vastausten validointi on silti ammattilaisen velvollisuus.
+Tarkistus siitä, että tekoälyn antama vastaus on oikea, sopiva ja turvallinen käyttää. Hyvä konteksti auttaa, mutta kriittisten vastausten validointi on silti vastuullisen käyttäjän velvollisuus.
 
 ## Tiivistys (summarization)
 

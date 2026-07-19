@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain IT-ammattilaisen työssä.
+Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain teknisen alan osaajan työssä.
 
 Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan **multimodaalista kontekstia** eli yhdistämään tekstiä, kuvia, lokeja ja koodia debuggauksen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.
 
@@ -80,13 +80,13 @@ Multimodaaliset mallit ovat tehokkaita työkaluja, koska ne voivat nähdä kuvak
 
 ## Kuvakaappaukset — näytä, älä vain kuvaile
 
-**Kuvakaappaus** eli screenshot on yksi tärkeimmistä kontekstityökaluista IT-ammattilaisen työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.
+**Kuvakaappaus** eli screenshot on yksi tärkeimmistä kontekstityökaluista teknisen alan osaajan työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.
 
 Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”sovellus ei aukea”, tekoäly joutuu arvaamaan useita eri syitä. Kun taas näytät kuvakaappauksen, jossa lukee virheilmoitus ”Ei verkkoyhteyttä”, tekoäly näkee ongelman tarkemmin ja osaa ehdottaa täsmällisempää korjausta.
 
 ### Hyvän kuvakaappauksen tekeminen
 
-Ammattilainen ottaa kuvakaappauksia harkitusti:
+Vastuullinen käyttäjä ottaa kuvakaappauksia harkitusti:
 
 1. **Älä lähetä koko ruutua**, ellei se ole ongelman kannalta olennaista. Rajaa kuva tärkeimpään kohtaan.
 2. **Osoita virheellinen kohta**. Monet kuvakaappaustyökalut mahdollistavat nuolten, kehysten tai korostusten lisäämisen.
@@ -106,7 +106,7 @@ Modernit tekoälyt voivat lukea kuvakaappauksia samaan tapaan kuin ihminen. Ne v
 
 **Lokit** eli logs ovat tietueita siitä, mitä järjestelmässä tapahtuu. Kun ohjelmassa on virhe, lokit kertovat usein, mikä meni pieleen ja milloin.
 
-Opiskelijat sanovat usein: ”Minulla on virhe, mutta en tiedä, mikä se on.” Ammattilainen kysyy ensimmäiseksi: ”Mitä lokit kertovat?” Tämä johtuu siitä, että lokit ovat usein ihmisen luettavissa ja sisältävät tärkeää tietoa ongelman syystä.
+Opiskelijat sanovat usein: ”Minulla on virhe, mutta en tiedä, mikä se on.” Vastuullinen käyttäjä kysyy ensimmäiseksi: ”Mitä lokit kertovat?” Tämä johtuu siitä, että lokit ovat usein ihmisen luettavissa ja sisältävät tärkeää tietoa ongelman syystä.
 
 `2024-03-14 10:23:45 ERROR: Failed to connect to database at localhost:5432
 2024-03-14 10:23:45 ERROR: Connection timeout after 5 seconds
@@ -183,7 +183,7 @@ Jos lokit sisältävät käyttäjä- tai asiakastietoja, poista ne tai anonymiso
 
 ### Miksi turvallisuus on pakollista?
 
-Turvallisuus ei ole valinnainen asia, vaan osa ammattilaisen perustyötä. Se suojaa sekä sinua että muita:
+Turvallisuus ei ole valinnainen asia, vaan osa vastuullisen käyttäjän perustyötä. Se suojaa sekä sinua että muita:
 
 - Se estää salaisuuksien, kuten salasanojen ja API-avainten, vuotamisen ulkopuolisiin palveluihin.
 - Se suojaa muita käyttäjiä, joiden tietoja saattaa näkyä lokeissa.
@@ -193,7 +193,7 @@ Turvallisuus ei ole valinnainen asia, vaan osa ammattilaisen perustyötä. Se su
 
 ## Yhdistäminen — multimodaalinen konteksti käytännössä
 
-Ammattilaisen ongelmanratkaisu yhdistää usein useita tietomuotoja:
+Vastuullisen käyttäjän ongelmanratkaisu yhdistää usein useita tietomuotoja:
 
 **Tekstin, kuvakaappausten, lokien ja koodin yhdistäminen:**
 
@@ -210,7 +210,7 @@ Tämä on huomattavasti parempi lähtökohta kuin pelkkä ilmoitus: ”Minulla o
 
 ### Päätösten tekeminen: milloin käyttää mitäkin?
 
-Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Ammattilainen valitsee kontekstin strategisesti:
+Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Vastuullinen käyttäjä valitsee kontekstin strategisesti:
 
 | Tilanne | Käytä kuvakaappausta? | Käytä tekstiä? | Käytä lokeja? |
 | --- | --- | --- | --- |
@@ -245,7 +245,7 @@ Siksi kuvakaappaus yhdessä lyhyen tekstiselityksen kanssa on usein parempi kuin
 
 Kaikki tekoälymallit eivät ole multimodaalisia. Vanhat mallit, jotkin erikoistuneet mallit ja osa kevyemmistä malleista käsittelevät vain tekstiä. Siksi on tärkeää tietää, mitä mallia käytät.
 
-Ammattilainen tuntee käyttämänsä mallin kyvyt ja valitsee työskentelytavan sen mukaan:
+Vastuullinen käyttäjä tuntee käyttämänsä mallin kyvyt ja valitsee työskentelytavan sen mukaan:
 
 - Jos malli on multimodaalinen, voit hyödyntää kuvakaappauksia.
 - Jos malli käsittelee vain tekstiä, kuvaile ongelma mahdollisimman tarkasti tekstinä.
@@ -253,7 +253,7 @@ Ammattilainen tuntee käyttämänsä mallin kyvyt ja valitsee työskentelytavan 
 
 ## Multimodaalisuus käytännössä
 
-Käytännössä ammattilainen voi noudattaa seuraavaa työnkulkua:
+Käytännössä vastuullinen käyttäjä voi noudattaa seuraavaa työnkulkua:
 
 1. **Ongelma syntyy** → ota kuvakaappaus, jos ongelma näkyy ruudulla.
 2. **Lokit kertovat virheistä** → suodata olennainen osa ja näytä se tekstinä.
@@ -270,9 +270,9 @@ Käytännössä ammattilainen voi noudattaa seuraavaa työnkulkua:
 
 ## Yhteenveto
 
-**Multimodaalisuus** auttaa IT-ammattilaista hallitsemaan kontekstia ja ratkaisemaan ongelmia tehokkaammin. Kun tekoäly voi käsitellä kuvia, lokeja ja koodia, se ymmärtää ongelman paremmin ja voi antaa täsmällisempiä ratkaisuja.
+**Multimodaalisuus** auttaa teknisen alan osaajaa hallitsemaan kontekstia ja ratkaisemaan ongelmia tehokkaammin. Kun tekoäly voi käsitellä kuvia, lokeja ja koodia, se ymmärtää ongelman paremmin ja voi antaa täsmällisempiä ratkaisuja.
 
-Ammattilaisena toimit näin:
+Vastuullisena käyttäjänä toimit näin:
 
 - **Näytät ennen kuin kuvailet:** kuvakaappaukset vähentävät tulkinnanvaraisuutta.
 - **Suodatat lokit:** näytät vain olennaiset rivit.
@@ -284,3 +284,10 @@ Ammattilaisena toimit näin:
 Näin tekoälystä tulee aidosti hyödyllinen työkaveri IT-työssä ja ongelmanratkaisussa.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+
+Tarkistettu 15.7.2026.

@@ -12,7 +12,7 @@ Promptauspankki ei ole pelkkä lista esimerkkejä. Se on **kokoelma promptiraken
 
 ### Vaihe 1 — Tunnista omat työtilanteesi
 
-Mieti, millaisia tehtäviä joudut tekemään säännöllisesti — omassa opiskelussasi, harrastuksissasi tai työssäsi. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Valitse itseäsi kiinnostava aihe tai ala. Esimerkkejä eri aloilta:
+Mieti, millaisia tehtäviä teet säännöllisesti arjessa, opiskelussa, harrastuksessa tai muussa itse valitsemassasi tilanteessa. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Valitse itseäsi kiinnostava aihe. Esimerkkejä eri tilanteista:
 
 - **Liiketalous ja kauppa:** asiakasviestin muotoilu, kampanjan ideointi, myyntiluvun perustelu
 - **Sosiaali- ja terveysala:** ohjeen selkokielistäminen, tapahtuman tiedote, perehdytysmateriaali

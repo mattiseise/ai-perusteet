@@ -1,6 +1,6 @@
 # Opiskelutehtävät — Kuvat, ääni ja teksti
 
-> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 6.1, joka osuu tunnin ydintaidon ytimeen. Jos olet IT-alalla tai kiinnostunut tietoturvasta, tee lisäksi syventävä tehtävä 6.2 — se on käytännön työelämän osaamista, jota ei missään muualla kurssilla käsitellä yhtä konkreettisesti.
+> 📌 **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä 1. Suosittelen tehtävää 6.1, joka osuu tunnin ydintaidon ytimeen. Jos tietoturva kiinnostaa sinua, tee lisäksi syventävä tehtävä 6.2 — se on käytännön työelämän osaamista, jota ei missään muualla kurssilla käsitellä yhtä konkreettisesti.
 
 ## Tehtävä 6.1 — Näyttö vai kuvaus? 🟢 SUOSITELTU
 
@@ -8,13 +8,13 @@
 
 ### Valitse ongelmasi
 
-Valitse IT-aiheinen tilanne, jossa on **jokin visuaalinen elementti**. Esimerkkejä:
+Valitse tilanne, jossa on **jokin visuaalinen elementti** — mikä tahansa näkymä, jonka haluat tekoälyn tulkitsevan. Voit valita reitin arjesta, opiskelusta tai työstä. Esimerkkejä:
 
-- Virheilmoitus ohjelmassa tai verkkosivulla
-- Lokin tulostus, jossa on värejä ja muotoilua
-- Käyttöliittymäbugi (nappi ei toimi, kuvake puuttuu, layout rikki)
-- Kaavio tai diagrammi, jota et täysin ymmärrä
-- Asetussivun ruutu, johon haluat apua
+- Kaavio, taulukko tai diagrammi, jota et täysin ymmärrä (vaikka uutisessa, laskussa tai opiskelumateriaalissa)
+- Laitteen tai sovelluksen näyttö, johon haluat apua (esimerkiksi pesukoneen paneeli, puhelimen asetussivu tai verkkopankki)
+- Virheilmoitus ohjelmassa, sovelluksessa tai verkkosivulla
+- Käsin kirjoitettu resepti, ohje tai muistiinpano, jonka haluat mallin selittävän
+- Valokuva jostakin, jonka haluat mallin tunnistavan tai selittävän (kasvi, kyltti, tuotteen pakkausteksti)
 
 Jos sinulla ei ole valmista esimerkkiä, voit etsiä jonkun. Mitä konkreettisempi, sen parempi.
 
@@ -64,7 +64,7 @@ Vastaa 3–5 lauseella:
 
 ## Tehtävä 6.2 — Mitä et saa lähettää tekoälylle? 🟣 SYVENTÄVÄ
 
-> **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa ammattilaisen aloittelijasta.
+> **Tämä on syventävä tietoturvatehtävä.** Tee tämä, jos haluat oppia tunnistamaan vaaralliset asiat ennen kuin lähetät niitä tekoälylle. Tämä on käytännön työelämän taito, jonka takia moni työpaikka kieltää tekoälyn käytön kokonaan — ja jonka osaaminen erottaa vastuullisen käyttäjän aloittelijasta.
 
 **Tavoite:** Tunnistat herkät tiedot kuvakaappauksessa, lokissa tai konfiguraatiotiedostossa. Opit sensuroimaan ne pois ja päättämään, mitä voi turvallisesti jakaa tekoälylle.
 
@@ -129,9 +129,9 @@ Täytä molemmista skenaarioista taulukko:
 Avaa ChatGPT, Claude tai Copilot ja anna sille **oma sensuroitu versiosi**. Esimerkkiprompti:
 
 ```
-Toimit minulle tietoturvasparrauskumppanina. Olen IT-opiskelija ja
-yritän oppia tunnistamaan herkät tiedot, joita ei saa jakaa
-tekoälylle. Tässä alkuperäinen materiaali ja oma sensuroitu versioni:
+Toimit minulle tietoturvasparrauskumppanina. Opettelen tunnistamaan
+herkät tiedot, joita ei saa jakaa tekoälylle. Tässä alkuperäinen
+materiaali ja oma sensuroitu versioni:
 
 [liitä alkuperäinen]
 

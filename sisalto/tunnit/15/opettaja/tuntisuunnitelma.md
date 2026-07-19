@@ -26,7 +26,7 @@ Tämän tunnin tavoitteena on, että opiskelija ymmärtää, miten omasta botist
 - Opiskelija osaa tehdä testien perusteella parannuksia botin tietopohjaan, rajauksiin tai järjestelmäpromptiin.
 - Opiskelija ymmärtää, että luotettava botti ei synny yhdellä yrityksellä, vaan sitä kehitetään toistuvien testikierrosten avulla.
 
-**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei vain vastaa. Hyvä botti vastaa oikean tietopohjan perusteella, tunnistaa rajansa ja on testattu myös vaikeissa tilanteissa. Testaus ja iteraatio eivät ole merkkejä epäonnistumisesta, vaan ammattilaismaisesta kehittämisestä.
+**Opettajan painotus:** Tämän tunnin tärkein viesti on, että hyvä botti ei vain vastaa. Hyvä botti vastaa oikean tietopohjan perusteella, tunnistaa rajansa ja on testattu myös vaikeissa tilanteissa. Testaus ja iteraatio eivät ole merkkejä epäonnistumisesta, vaan huolellisesta kehittämisestä.
 
 ---
 
@@ -104,7 +104,7 @@ Opeta opiskelijoille ylläpidon peruskysymykset:
 | **Asiakaspalvelubotti** | Älä käsittele yksityisiä asiakastietoja ilman tunnistautumista. | Rajaus suojaa asiakkaan yksityisyyttä. |
 | **Opetusbotti** | Älä tee arvioitavia tehtäviä opiskelijan puolesta. Anna vihjeitä ja ohjaa vaiheittain. | Rajaus tukee oppimista eikä poista opiskelijan omaa työtä. |
 
-**Opettajan muistutus:** Hyvä botti osaa sanoa: ”Tämä ei kuulu tehtävääni.” Se on ammattilaisuutta, ei epäonnistumista.
+**Opettajan muistutus:** Hyvä botti osaa sanoa: ”Tämä ei kuulu tehtävääni.” Se on vastuullisuutta, ei epäonnistumista.
 
 ---
 
@@ -138,7 +138,7 @@ Testaamisesta tulee hyödyllistä vasta, kun tulokset dokumentoidaan. Muuten opi
 
 ### Iteraatio ei ole epäonnistumista
 
-Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on epäonnistunut. Korjaa tämä ajatus heti. Ensimmäinen versio on harvoin valmis. Ammattilainen olettaa, että testaus paljastaa puutteita.
+Opiskelijat voivat ajatella, että jos bottia pitää korjata, suunnittelu on epäonnistunut. Korjaa tämä ajatus heti. Ensimmäinen versio on harvoin valmis. Vastuullinen käyttäjä olettaa, että testaus paljastaa puutteita.
 
 **1. Suunnittele:** määritä tarkoitus, tietopohja, ohjeet ja rajaukset.
 
@@ -413,3 +413,24 @@ Hyvä päätöskysymys tunnin loppuun:
 > **Lopetuslause opettajalle:** Luotettava botti ei synny yhdellä kysymyksellä. Se syntyy tiedosta, rajoista, testeistä ja parannuksista.
 
 ---
+
+
+## 90 minuutin toteutus ja eriyttäminen
+
+Tallennettava tuotos on **lähdeperustelu, testimatriisi ja järjestelmäprompti v2**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+
+| Aika | Vaihe | Opettajan tehtävä |
+|---|---|---|
+| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
+| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
+| 25–65 min | Perustuotos | Oppija perustelee tietopohjan ja ajaa positiivisen, negatiivisen sekä reunatapauksen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 80–90 min | Tallennus ja exit ticket | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+
+### Tukireitti
+
+Oppija käyttää valmiita testisyötteitä ja tulostaulukkoa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+
+### Syventävä reitti
+
+Kun perustuotos on valmis, oppija testaa vanhentuneen tai ristiriitaisen lähteen. Syventävä työ ei kasvata pakollista ydintuotosta.

@@ -59,7 +59,7 @@ Kirjoita taululle kaksi kysymystä: “Onko tämä vain sääntö?” ja “Oppi
 | --- | --- | --- |
 | **Pankkiautomaatti** | Ei yleensä tekoälyä | Se toimii ennalta määriteltyjen sääntöjen mukaan: jos PIN-koodi on oikein, automaatti antaa rahaa. |
 | **Automaattinen tekstinkorjaus** | Riippuu toteutuksesta | Voi käyttää tekoälyä, mutta yksinkertainen versio voi perustua sääntöpohjaiseen sanakirjaan. |
-| **Netflixin suositukset** | Kyllä | Järjestelmä oppii suuresta määrästä käyttäjäprofiileja ja katseluhistoriaa. |
+| **Suoratoistopalvelun suositukset** | Kyllä | Koneoppimismalli koulutetaan käyttäjäprofiileilla ja katseluhistorialla. |
 | **Google Maps ja reaaliaikainen liikennetieto** | Usein kyllä | Järjestelmä hyödyntää reaaliaikaista liikennetietoa ja aiempaa liikennedatahistoriaa reittien arvioinnissa. |
 | **Vanha sääntöpohjainen roskapostisuodatin** | Ei, jos se on vain sääntöpohjainen | Jos suodatin perustuu vain ennalta kirjoitettuihin sääntöihin, se ei varsinaisesti opi datasta. Uudemmat sähköpostisuodattimet voivat kuitenkin käyttää tekoälyä. |
 | **Älykoti** | Riippuu toteutuksesta | Jos järjestelmä toimii vain kellonajan perusteella, kyse on automaatiosta. Jos se oppii käyttäjän käyttäytymisestä, se voi käyttää tekoälyä. |
@@ -122,7 +122,7 @@ Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia säänt
 
    Säännöt: nopeita ja ennustettavia, mutta usein jäykkiä.
 
-   Tekoäly: oppii kuvioita ja toimii usein paremmin monimutkaisissa tilanteissa, mutta vaatii dataa.
+   Koneoppimismalli: koulutetaan datalla tunnistamaan kuvioita, ja se toimii usein kiinteää sääntöä paremmin monimutkaisissa tilanteissa.
 
 ### Mahdollisia vastauksia ja väärinkäsityksiä
 
@@ -158,11 +158,12 @@ Erillistä valmistelua ei tarvita. Pyydä tunnilla 3–4 opiskelijaa nimeämää
 
 **Esimerkkejä:**
 
+- YouTube
 - Instagram
-- Snapchat
-- Fortnite
 - Spotify
-- Discord
+- WhatsApp
+- Fortnite
+- Verkkokaupan tuotesuositukset
 
 ### Keskustelu noin 15 minuuttia
 

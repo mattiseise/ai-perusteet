@@ -149,7 +149,7 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää m
 @keyframes l20qinv{0%,100%{border-color:#2B3552}50%{border-color:oklch(0.66 0.13 208)}}
 .l20q-opt:hover{border-color:oklch(0.72 0.13 208);transform:translateY(-2px)}
 .l20q-fb{position:absolute;left:0;right:0;top:148px;font-size:11.5px;line-height:1.5;color:#B9C2DA;text-align:center;opacity:0;transition:opacity .35s}
-.l20q-next{position:absolute;right:0;bottom:0;font-size:11px;letter-spacing:.05em;color:#0B1A14;background:#7FD0A8;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.l20q-next{position:absolute;right:0;bottom:0;min-height:44px;display:flex;align-items:center;font-size:11px;letter-spacing:.05em;color:#0B1A14;background:#7FD0A8;font-weight:600;border-radius:999px;padding:5px 13px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
 .l20q-s1:checked~.l20q-round.r1{opacity:1;pointer-events:auto}
 .l20q-s1:checked~.l20q-prog.p1{opacity:1}
 :is(.l20q-1a:checked,.l20q-1b:checked,.l20q-1c:checked)~.r1 .l20q-opt.corr{border-color:#7FD0A8;color:#FFFFFF;animation:none}
@@ -181,6 +181,18 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää m
 .l20q-3b:checked~.r3 .l20q-opt.o3b{border-color:#F0A38C;color:#FFD9CD}
 .l20q-3c:checked~.r3 .l20q-fb.f3c{opacity:1}
 @media (prefers-reduced-motion:reduce){.l20q-cta,.l20q-opt{animation:none}.l20q-round,.l20q-opt,.l20q-fb,.l20q-next{transition:none}}
+@media (max-width:680px){
+.ai-demo__interaction:has(.l20q-wrap){height:560px!important;padding:12px}
+.l20q-wrap{width:100%;height:520px}
+.l20q-cta{position:static;display:block;transform:none;white-space:normal;text-align:center;font-size:12px;line-height:1.4;min-height:44px;padding:10px 12px}
+.l20q-prog{top:58px;right:0;font-size:12px}
+.l20q-round{top:84px}
+.l20q-sc{font-size:13px;line-height:1.45}
+.l20q-opts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.l20q-opt{min-height:44px;padding:10px;font-size:13px}
+.l20q-fb{top:252px;text-align:left;font-size:13px;line-height:1.45}
+.l20q-next{bottom:0;min-height:44px;display:flex;align-items:center;padding:8px 14px;font-size:13px}
+}
 </style>
 
 ## Monimutkaisuus on aina kustannus
@@ -226,3 +238,11 @@ Automatisointi on jatkumo, ei joko–tai-valinta. Älä valitse agenttia automaa
 Päätöspuu ohjaa sinut oikean välineen luo. Yksinkertainen työnkulku ratkaisee usein ongelman riittävän hyvin ja paljon pienemmillä kustannuksilla kuin agentti. Valitse aina yksinkertaisin ratkaisu, joka todella toimii.
 
 ---
+
+## Lähteet ja tarkistuspäivä
+
+- [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
+- [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
+- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
+
+Tarkistettu 15.7.2026.

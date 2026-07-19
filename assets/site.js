@@ -57,14 +57,26 @@ function showTab(name,pushHash){
   var panels=document.querySelectorAll('#lesson-panels .panel');
   var tabs=document.querySelectorAll('.lesson-tabs .tab-btn');
   var found=false;
-  panels.forEach(function(p){var on=p.getAttribute('data-tab')===name;p.classList.toggle('active',on);if(on)found=true;});
-  tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-tab')===name);});
+  panels.forEach(function(p){var on=p.getAttribute('data-tab')===name;p.classList.toggle('active',on);p.hidden=!on;if(on)found=true;});
+  tabs.forEach(function(t){var on=t.getAttribute('data-tab')===name;t.classList.toggle('active',on);t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;});
   if(!found){return false;}
   if(pushHash!==false){try{history.replaceState(null,'','#'+name);}catch(e){location.hash=name;}}
   var lp=document.getElementById('lesson-panels');if(lp)lp.scrollTop=0;
   runMermaid();
   return true;
 }
+function initTabs(){var list=document.querySelector('.lesson-tabs[role="tablist"]');if(!list)return;
+  list.addEventListener('keydown',function(e){var tabs=Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));var i=tabs.indexOf(document.activeElement);if(i<0)return;var n=i;
+    if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;
+    e.preventDefault();tabs[n].focus();showTab(tabs[n].getAttribute('data-tab'));
+  });
+}
+function initDemoKeyboard(){document.querySelectorAll('.ai-demo[data-demo-kind="interactive"] label[for]').forEach(function(label){
+  label.tabIndex=0;label.setAttribute('role','button');label.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();label.click();}});
+  var input=document.getElementById(label.htmlFor);if(input){input.addEventListener('focus',function(){label.classList.add('demo-focus');});input.addEventListener('blur',function(){label.classList.remove('demo-focus');});}
+  });
+}
+function initScrollableRegions(){document.querySelectorAll('.panel table').forEach(function(table){table.tabIndex=0;});}
 function tabFromHash(){
   var h=location.hash.replace(/^#/,'');
   if(h&&showTab(h,false))return;
@@ -89,7 +101,7 @@ function deckFull(btn){var w=btn.closest('.deck-wrap');if(!w)return;
   if(!fs){(w.requestFullscreen||w.webkitRequestFullscreen).call(w);}
   else{(document.exitFullscreen||document.webkitExitFullscreen).call(document);}}
 function deckFullSync(){var fs=document.fullscreenElement||document.webkitFullscreenElement;
-  document.querySelectorAll('.deck-full-btn').forEach(function(b){b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö';});}
+  document.querySelectorAll('.deck-full-btn').forEach(function(b){b.textContent=fs?'⤢ Poistu koko näytöstä':'⛶ Koko näyttö';b.setAttribute('aria-label',fs?'Poistu diaesityksen koko näytön tilasta':'Avaa diaesitys koko näytön tilaan');});}
 document.addEventListener('fullscreenchange',deckFullSync);
 document.addEventListener('webkitfullscreenchange',deckFullSync);
 document.addEventListener('keydown',function(e){
@@ -130,10 +142,15 @@ function copyShare(btn){var url=btn.getAttribute('data-url');var abs=location.or
   else{prompt('Kopioi linkki:',abs);}}
 
 // ---- Skaalaa animoidut figuurit mahtumaan kapealle näytölle (ei leikkausta/vieritystä) ----
+// Fallback reflow-järjestelmän rinnalla: interaktiivisilla demoilla (data-demo-kind=
+// "interactive") on oma aito mobiilitaitto ja ne ohitetaan; staattisilla skaalaus
+// kattaa 431-680 px -välin, ja <=430 px reflow-kortti (.ai-demo__mobile-model, joka
+// jätetään stagen suoraksi lapseksi) korvaa skaalatun sisällön kokonaan.
 function fitAiDemos(){
   var stages=document.querySelectorAll('.ai-demo__stage');
   for(var i=0;i<stages.length;i++){(function(st){
     var fig=st.closest?st.closest('.ai-demo'):null;
+    if(fig&&fig.getAttribute('data-demo-kind')==='interactive')return;
     var fit=st.querySelector(':scope > .ai-demo__fit');
     if(!fit){
       var cs=st.style;
@@ -141,14 +158,24 @@ function fitAiDemos(){
       fit.style.cssText='display:'+(cs.display||'flex')+';align-items:'+(cs.alignItems||'center')
         +';justify-content:'+(cs.justifyContent||'center')+';gap:'+(cs.gap||'0')
         +';padding:'+(cs.padding||'0')+';flex-shrink:0;box-sizing:border-box';
-      while(st.firstChild){fit.appendChild(st.firstChild);}
-      st.appendChild(fit);
+      var kids=[],c;
+      for(c=st.firstChild;c;c=c.nextSibling){kids.push(c);}
+      for(var j=0;j<kids.length;j++){
+        c=kids[j];
+        if(c.nodeType===1&&c.classList&&c.classList.contains('ai-demo__mobile-model'))continue;
+        fit.appendChild(c);
+      }
+      st.insertBefore(fit,st.firstChild);
       st.style.padding='0';
-      var fr=fit.getBoundingClientRect();
-      st.dataset.natw=Math.round(fr.width); st.dataset.nath=Math.round(fr.height);
-      st.dataset.h0=parseFloat(cs.height)||Math.round(fr.height);
+      if(parseFloat(cs.height))st.dataset.h0=parseFloat(cs.height);
     }
-    var natW=+st.dataset.natw, natH=+st.dataset.nath, h0=+st.dataset.h0, avail=st.clientWidth;
+    if(!(+st.dataset.natw>0)){
+      var fr=fit.getBoundingClientRect();
+      if(fr.width<10)return; // piilossa (<=430 px reflow-tila) — mitataan kun tulee nakyviin
+      st.dataset.natw=Math.round(fr.width); st.dataset.nath=Math.round(fr.height);
+      if(!st.dataset.h0)st.dataset.h0=Math.round(fr.height);
+    }
+    var natW=+st.dataset.natw, natH=+st.dataset.nath, h0=+st.dataset.h0||natH, avail=st.clientWidth;
     var s=avail>0?Math.min(1, avail/natW):1;
     if(s<0.999){
       fit.style.transformOrigin='center center';
@@ -168,6 +195,9 @@ function ciInit(){
   initMermaid();
   updProg();updCards();
   initViewSwitch();
+  initTabs();
+  initDemoKeyboard();
+  initScrollableRegions();
   if(window.CI&&window.CI.lid){
     window.cid=window.CI.lid; // twReflect (practice.js) lukee bcai-reflect-avaimen tästä
     enhancePanels();
