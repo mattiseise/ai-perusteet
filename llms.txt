@@ -18,7 +18,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 ### Teoria — Tekoälyn teoria ja toimintaperiaatteet
 
 - [Tunti 1: Älykäs vai sääntö? — mitä tekoäly oikeasti tekee](https://aiperusteet.fi/kurssi/tunti-01/)
-- [Tunti 2: Kaksi akselia — kykyjen laajuus ja toteutustapa](https://aiperusteet.fi/kurssi/tunti-02/)
+- [Tunti 2: Millaista tekoälyä on nyt — ja mistä tulevaisuuspuheessa puhutaan?](https://aiperusteet.fi/kurssi/tunti-02/)
 - [Tunti 3: Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka](https://aiperusteet.fi/kurssi/tunti-03/)
 - [Tunti 4: Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen](https://aiperusteet.fi/kurssi/tunti-04/)
 - [Tunti 5: Muistin rajat — kuinka paljon tekoäly oikeasti muistaa](https://aiperusteet.fi/kurssi/tunti-05/)

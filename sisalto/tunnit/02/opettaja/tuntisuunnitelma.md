@@ -1,248 +1,176 @@
 # Opettajan materiaalit
 
-## Oppimisen tavoitteet tälle lohkolle
+## Oppimisen tavoitteet
 
-Tämän lohkon tavoitteena on, että opiskelija ymmärtää tekoälyn eri tyypit ja osaa arvioida kriittisesti väitteitä tekoälyn kyvyistä. Oppitunnin ydin on erottaa toisistaan nykyiset **kapeat tekoälyjärjestelmät**, **generatiivinen tekoäly** ja vielä tutkimuksellinen tai hypoteettinen **yleinen tekoäly**.
+Tunnin tavoitteena on, että opiskelija osaa erottaa nykyiset tekoälyjärjestelmät tulevaisuutta koskevista käsitteistä. Tunnin lopussa opiskelijan pitäisi pystyä vastaamaan omin sanoin kysymykseen: **Miksi generatiivisuus tai sujuva keskustelu ei yksin osoita AGI:a?**
 
 ### Muistaa ja ymmärtää
 
-- Opiskelija osaa nimetä ja erottaa tekoälyn päätyypit: **kapea tekoäly**, **generatiivinen tekoäly**, **AGI** ja **ASI**.
-- Opiskelija ymmärtää, että nykyinen tekoäly on pääosin **kapeaa ja erikoistunutta**.
-- Opiskelija ymmärtää, että generatiivisuus kuvaa toiminnallisuutta eikä seuraavaa askelta kohti yleisälyä.
+- Opiskelija osaa selittää käsitteet **sääntöpohjainen järjestelmä**, **kapea tekoäly**, **generatiivinen tekoäly**, **AGI** ja **ASI**.
+- Opiskelija tietää, että sääntöpohjaiset järjestelmät, kapea tekoäly ja generatiivinen tekoäly ovat nykyisiä järjestelmiä.
+- Opiskelija tietää, että AGI ja ASI ovat tutkimus- ja tulevaisuuskäsitteitä.
+- Opiskelija ymmärtää, etteivät viisi käsitettä muodosta kehitysportaikkoa.
 
 ### Soveltaa ja analysoida
 
-- Opiskelija osaa arvioida tekoälyuutisia kriittisesti ja kysyä, onko kyse kapeasta tekoälystä vai yleisälystä.
-- Opiskelija osaa perustella, miksi esimerkiksi ChatGPT, kuvageneraattori tai pelitekoäly ei ole AGI.
-- Opiskelija osaa erottaa tekoälyn todelliset kyvyt markkinointipuheesta ja liioittelevista väitteistä.
+- Opiskelija osaa tunnistaa esimerkistä, seuraako järjestelmä kirjoitettua sääntöä, tekeekö se rajattua tekoälytehtävää vai tuottaako se sisältöä.
+- Opiskelija osaa erottaa generatiivisuuden kykyjen laajuudesta ja kuvata, miten generatiivinen järjestelmä voi olla tehtävältään rajattu.
+- Opiskelija osaa erottaa havaitun suorituksen AGI- tai ASI-väitteestä.
+- Opiskelija osaa kysyä, mitä järjestelmän on osoitettu tekevän ja mihin näyttö perustuu.
 
-### Luoda ja arvioida
+### Arvioida ja ilmaista omin sanoin
 
-- Opiskelija osaa laatia esimerkkejä eri tekoälytyypeistä.
-- Opiskelija osaa arvioida, mitä tekoälyjärjestelmä todella osaa ja mitä se ei osaa.
-- Opiskelija osaa keskustella AGI:sta ja ASI:sta varovaisesti, avoimina tutkimus- ja tulevaisuuskysymyksinä.
+- Opiskelija osaa arvioida tekoälyä koskevaa uutista tai myyntiväitettä ilman perusteetonta ihastelua tai torjuntaa.
+- Opiskelija osaa kirjoittaa lyhyen, täsmällisen perustelun näkyvän suorituksen rajoista.
 
-**Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että vaikuttava tekoäly ei ole sama asia kuin yleisäly. Nykyiset tekoälyjärjestelmät voivat olla erittäin taitavia omalla alueellaan, mutta ne ovat silti rajattuja, erikoistuneita ja riippuvaisia datasta sekä tehtävän määrittelystä.
+**Tunnin ydinviesti:** Vaikuttava rajattu suoritus ei ole sama asia kuin yleinen älykkyys. Generatiivisuus kertoo sisällön tuottamisesta, ei järjestelmän kykyjen laajuudesta. Generatiivisuus, sujuva keskustelu tai laaja tehtäväkirjo ei yksin osoita AGI:a. AGI ja ASI eivät ole nykyisten järjestelmien varmoja seuraavia vaiheita.
 
----
+## Pedagoginen eteneminen
 
-## Pedagoginen lähestymistapa
+### 1. Aloita nykyisistä järjestelmistä
 
-### Ydinviesti: nykyinen tekoäly on kapeaa, vaikka se voi näyttää yleiseltä
+Kertaa ensin sääntöpohjaisen järjestelmän ja datasta opitun mallin ero tunnilta 1. Käytä yhtä yksinkertaista paria:
 
-Opiskelijoille kannattaa aloittaa tutuista esimerkeistä: ChatGPT kirjoittaa tekstiä, DALL-E tuottaa kuvia, Suno tuottaa musiikkia, Google Maps arvioi reittejä ja pelitekoäly pelaa peliä. Nämä voivat näyttää älykkäiltä, mutta jokainen niistä toimii omalla rajatulla alueellaan.
+- ”Jos summa ylittää 10 000 euroa, lähetä tarkistukseen” on sääntö.
+- Aiempien tapausten perusteella muodostettu poikkeama-arvio on rajattu koneoppimistehtävä.
 
-> **Kapea tekoäly voi olla erittäin taitava yhdessä tehtävässä, mutta se ei tarkoita, että se ymmärtää maailmaa yleisesti.**
+Kertauksen tarkoitus ei ole opettaa koneoppimista uudelleen. Se antaa opiskelijalle tutun lähtökohdan, jonka päälle muut käsitteet rakennetaan.
 
-Korosta opiskelijoille:
+### 2. Tee kapean ja generatiivisen tekoälyn suhde näkyväksi
 
-- **Kapea tekoäly** on suunniteltu tai koulutettu tietyn tyyppiseen tehtävään.
-- **Generatiivinen tekoäly** tuottaa uutta sisältöä, kuten tekstiä, kuvia, ääntä tai koodia, mutta sekin on rajattua.
-- **AGI** tarkoittaisi yleistä tekoälyä, joka pystyisi oppimaan ja toimimaan monenlaisissa tehtävissä ihmisen kaltaisella joustavuudella.
-- **ASI** tarkoittaisi superälykkyyttä, joka ylittäisi ihmisen kyvyt laajasti. Tämä on vielä spekulatiivinen käsite.
+Kapea tekoäly kuvaa tehtävien rajausta. Generatiivinen tekoäly kuvaa sisällön tuottamista. Sama järjestelmä voi siis olla molempia.
 
-### Tekoälytyyppien vertailu
+Käytä esimerkiksi tekstitekoälyä, joka kirjoittaa tuotekuvauksen. Se tuottaa tekstiä, joten se on generatiivista tekoälyä. Tässä esimerkissä osoitettu tehtävä on rajattu tuotekuvauksen kirjoittamiseen, joten samaa järjestelmää voidaan kuvata myös kapeaksi tässä käyttötarkoituksessa.
 
-| Tekoälytyyppi | Mitä se tarkoittaa? | Esimerkki | Keskeinen rajaus |
-| --- | --- | --- | --- |
-| **Kapea tekoäly** | Tekoäly, joka on hyvä rajatussa tehtävässä. | Roskapostisuodatin, kasvojentunnistus, pelibotti tai reittisuositus. | Ei osaa siirtyä vapaasti täysin uusiin tehtäviin. |
-| **Generatiivinen tekoäly** | Tekoäly, joka tuottaa sisältöä koulutusdatasta oppimiensa mallien perusteella. | ChatGPT, kuvageneraattorit, musiikkigeneraattorit ja koodiavustajat. | Tuottaa sisältöä, mutta ei ole yleisäly. |
-| **AGI** | Yleinen tekoäly, joka pystyisi joustavaan oppimiseen ja toimintaan monilla alueilla. | Ei varmistettua nykyistä esimerkkiä. | Tutkimusaihe ja avoin kysymys, ei nykyisen tekoälyn vakiintunut ominaisuus. |
-| **ASI** | Hypoteettinen superäly, joka ylittäisi ihmisen kyvyt laajasti. | Ei nykyistä esimerkkiä. | Spekulatiivinen käsite, jonka toteutumisesta ei ole varmuutta. |
+> **Kapeus kertoo kykyjen rajauksesta, generatiivisuus tuotoksen lajista. Sama järjestelmä voi olla molempia, mutta generatiivisuus ei yksin tee järjestelmästä AGI:a.**
 
-### Kriittinen uutisten lukutaito
+Osa nykyisistä yleiskäyttöisistä malleista hoitaa laajaa tehtäväjoukkoa. Tätä täsmennystä ei tarvitse opettaa kuudentena pääkäsitteenä. Sen tehtävä on estää liian ehdoton päätelmä siitä, että kaikki generatiiviset järjestelmät olisivat samalla tavalla kapeita.
 
-Tällä oppitunnilla kannattaa harjoitella tekoälyuutisten lukemista. Uutisissa voidaan sanoa esimerkiksi, että ”tekoäly voitti ihmisen pelissä” tai ”tekoäly kirjoitti romaanin”. Opiskelijan tulisi oppia kysymään: mitä järjestelmä todella teki, missä ympäristössä ja millaisin rajauksin? Osoittaako tulos yleistä älykkyyttä vai rajattua kykyä?
+### 3. Vedä näkyvä raja nykyisyyden ja tulevaisuuspuheen väliin
 
-**Opettajan huomio:** Älä käsittele AGI:a faktana tai väistämättömänä kehityksenä. Puhu siitä tutkimusaiheena ja avoimena kysymyksenä. Tämä auttaa opiskelijoita erottamaan nykyteknologian tulevaisuusspekulaatiosta.
+Käsittele AGI ja ASI vasta sen jälkeen, kun nykyiset järjestelmät ovat selviä. Opiskelijan pitäisi nähdä, että keskustelu vaihtuu tässä kohdassa olemassa olevista järjestelmistä tutkimukseen, määritelmiin ja oletuksiin.
 
----
+AGI:sta ja ASI:sta ei tarvitse käydä pitkää filosofista keskustelua. Tällä tunnilla riittää, että opiskelija osaa:
 
-## Yleisiä väärinkäsityksiä
+- kuvata käsitteiden perusidean,
+- sanoa, ettei kummastakaan ole yleisesti hyväksyttyä nykyistä esimerkkiä,
+- erottaa ne nykyisen tekoälyn osoitetuista kyvyistä.
 
-### Väärinkäsitys 1: ”ChatGPT on AGI, koska se osaa paljon asioita.”
+### 4. Päätä tunti väitteen arviointiin
 
-**Korjaava näkökulma:** ChatGPT osaa käsitellä kieltä ja tuottaa tekstiä erittäin monipuolisesti, mutta se ei ole yleisäly. Se ei itsenäisesti hallitse autoa, robottia, fyysistä ympäristöä tai kaikkia mahdollisia tehtäviä. Se on erittäin kehittynyt generatiivinen tekoäly, mutta silti rajattu järjestelmä.
+Käsitteet muuttuvat käyttökelpoisiksi vasta, kun opiskelija soveltaa niitä. Anna lopuksi esimerkiksi seuraava väite: ”Tämä tekoäly osaa pian minkä tahansa asiantuntijan työn.” Pyydä opiskelijaa erottamaan toisistaan:
 
-> Monipuolinen tekstiosaaminen ei ole sama asia kuin yleinen älykkyys.
+- mitä järjestelmän kerrotaan tehneen,
+- mitä sen väitetään osaavan,
+- mitä väitteestä ei vielä voida päätellä.
 
-### Väärinkäsitys 2: ”Tekoäly on tulevaisuutta, joten AGI on lähellä.”
+## Viisi käsitettä rinnakkain
 
-**Korjaava näkökulma:** Kapea tekoäly kehittyy nopeasti, mutta AGI on eri asia. Nykyisten tekoälyjärjestelmien kehitys ei automaattisesti tarkoita, että yleisäly olisi varmasti lähellä. Tutkijatkin ovat eri mieltä aikataulusta ja jopa siitä, miten AGI pitäisi määritellä tai rakentaa.
+| Käsite | Opetettava perusajatus | Nykyinen vai tulevaisuuskäsite? | Tavallinen väärinkäsitys |
+|---|---|---|---|
+| **Sääntöpohjainen järjestelmä** | Noudattaa ihmisen kirjoittamia ehtoja | Nykyinen järjestelmä | Kaikki automaatio on tekoälyä |
+| **Kapea tekoäly** | Tekee rajattua tehtävää tai tehtäväjoukkoa | Nykyinen tekoäly | Kapea tarkoittaa heikkoa |
+| **Generatiivinen tekoäly** | Tuottaa sisältöä opittujen rakenteiden perusteella | Nykyinen tekoäly | Generatiivisuus kertoo yleisestä älykkyydestä |
+| **AGI** | Toimisi joustavasti hyvin erilaisissa tehtävissä | Tutkimus- ja tulevaisuuskäsite | Sujuva keskustelu todistaa AGI:n |
+| **ASI** | Ylittäisi ihmisen kyvyt laajasti | Hypoteettinen ja spekulatiivinen käsite | ASI on kehityksen varma päätepiste |
 
-### Väärinkäsitys 3: ”Generatiivinen tekoäly luo jotain täysin uutta.”
+## Yleiset väärinkäsitykset
 
-**Korjaava näkökulma:** Generatiivinen tekoäly oppii koulutusdatasta kuvioita ja yhdistelee niitä uusilla tavoilla. Lopputulos voi näyttää uudelta, mutta sen pohja on opitussa datassa, tyyleissä, rakenteissa ja todennäköisyyksissä.
+### ”Kapea tekoäly on alkeellista tekoälyä.”
 
-### Väärinkäsitys 4: ”ASI olisi kuin ihminen, mutta älykkäämpi.”
+**Täsmennys:** Kapea tarkoittaa rajattua tehtäväaluetta, ei heikkoa suoritusta. Erikoistunut järjestelmä voi ylittää ihmisen omassa tehtävässään ilman yleistä osaamista.
 
-**Korjaava näkökulma:** ASI on hypoteettinen käsite. Jos sellainen joskus syntyisi, se voisi muistuttaa ihmisen ajattelua tai olla täysin erilaista. Emme tiedä, millainen sen toimintatapa olisi.
+### ”Generatiivinen tekoäly tulee kapean tekoälyn jälkeen.”
 
-### Väärinkäsitys 5: ”Jos AGI syntyy, se ratkaisee kaiken.”
+**Täsmennys:** Generatiivisuus kertoo sisällön tuottamisesta ja kapeus kykyjen rajauksesta. Sama järjestelmä voi olla molempia, mutta generatiivisuus ei yksin kerro kykyjen laajuutta.
 
-**Korjaava näkökulma:** Tämä on oletus, ei varma tieto. Vaikka yleisäly olisi mahdollinen, se voisi silti kohdata rajoituksia, tavoitteiden ristiriitoja, resurssiongelmia, turvallisuushaasteita tai virheellisiä lähtötietoja. Älykkyys ei automaattisesti ratkaise kaikkia ongelmia.
+### ”Tekstitekoäly on AGI, koska se osaa puhua monista aiheista.”
 
----
+**Täsmennys:** Aiheiden kirjo osoittaa monipuolista kielen käsittelyä. Se ei yksin osoita yleistä oppimista, luotettavaa toimintaa ja joustavaa osaamisen siirtämistä kaikkiin uusiin tilanteisiin.
 
-## Opettajan fasilitointiohjeet
+### ”AGI tulee varmasti seuraavaksi ja ASI sen jälkeen.”
 
-### Ennen luokkaa
+**Täsmennys:** AGI ja ASI ovat käsitteitä, eivät vahvistettu tiekartta. Niiden määritelmistä, toteutettavuudesta ja mahdollisista aikatauluista ei ole yksimielisyyttä.
 
-- Tutustu generatiivisen tekoälyn nykyisiin käyttötapoihin. Selvitä, mitä esimerkiksi ChatGPT, kuvageneraattorit ja musiikkigeneraattorit osaavat tällä hetkellä ja mitä ne eivät osaa.
-- Valmistele IT-alan esimerkkejä, jotka liittyvät opiskelijoiden tulevaan työhön: asiakastuki, tietoturva, koodiavustajat, palvelunvalvonta, dokumentointi ja automaatio.
-- Valitse 1–2 ajankohtaista tekoälyuutista tai otsikkoa, joita voidaan analysoida kriittisesti. Tavoitteena ei ole selvittää kaikkea uutisen taustaa, vaan harjoitella kysymään oikeita kysymyksiä.
-- Valmistaudu sanomaan ”emme tiedä”. AGI- ja ASI-keskustelussa rehellinen epävarmuus on tärkeä osa opetusta.
+### ”Sääntöpohjainen järjestelmä on aina tekoälyä.”
 
-### Luokan aikana
-
-- **Aloita nykytodellisuudesta.** Käytä esimerkkejä siitä, missä tekoälyä hyödynnetään jo nyt IT-alalla.
-- **Siirry tulevaisuuteen vasta sen jälkeen.** Käsittele AGI:a ja ASI:a spekulaationa, ei varmana kehityspolkuna.
-- **Kysy kriittisiä kysymyksiä.** Kun esität tekoälyuutisen, kysy: mitä järjestelmä todella osaa, missä rajoissa ja onko kyse kapeasta tekoälystä vai yleisälystä?
-- **Vältä liioittelua ja pelottelua.** Tavoite on ymmärtää, ei ihastua tai pelästyä kritiikittömästi.
-
-### Yleisten opiskelijakysymysten vastaukset
-
-**Kysymys: ”Milloin AGI tulee?”**
-Vastaus: Kukaan ei tiedä varmasti. Arviot vaihtelevat paljon. Jotkut uskovat, että AGI voi tulla lähivuosikymmeninä, jotkut uskovat sen olevan paljon kauempana ja jotkut epäilevät, ettei sitä saavuteta lainkaan. Tätä pitää käsitellä avoimena tutkimuskysymyksenä.
-
-**Kysymys: ”Onko AGI vaarallinen?”**
-Vastaus: Se voisi olla vaarallinen, jos se joskus syntyisi eikä sitä pystyttäisi hallitsemaan tai ohjaamaan turvallisesti. Nykyinen kapea tekoäly on kuitenkin eri asia: se on väline, jonka riskit liittyvät esimerkiksi virheelliseen käyttöön, datan vinoumiin, yksityisyyteen, turvallisuuteen ja päätöksenteon vastuuseen.
-
-**Kysymys: ”Miksi ei vain tehdä superälykästä tekoälyä?”**
-Vastaus: Emme tiedä, miten sellainen rakennettaisiin turvallisesti tai edes teknisesti varmasti. Nykyiset järjestelmät optimoidaan tiettyihin tehtäviin. Yleisen, joustavan ja luotettavan älykkyyden rakentaminen on paljon vaikeampi ongelma.
-
----
-
-## Luokkatehtävien ohjeistus
-
-### TT-A: Tekoälytyypin tunnistaminen
-
-**Tavoite:** Opiskelija tunnistaa, onko esimerkki kapea tekoäly, generatiivinen tekoäly, AGI-väite vai ASI-spekulaatio.
-
-**Tehtävä:** Anna opiskelijoille lista esimerkeistä. Opiskelijat luokittelevat jokaisen esimerkin ja kirjoittavat perustelun.
-
-| Esimerkki | Tyyppi | Perustelu |
-| --- | --- | --- |
-| Roskapostisuodatin tunnistaa epäilyttävän sähköpostin. | Kapea tekoäly | Järjestelmä tekee rajattua luokittelutehtävää. |
-| Kuvageneraattori luo kuvan tekstikuvauksen perusteella. | Generatiivinen tekoäly | Järjestelmä tuottaa uutta sisältöä opittujen kuvioiden perusteella. |
-| Uutinen väittää, että tekoäly ratkaisee pian kaikki ihmiskunnan ongelmat. | AGI- tai ASI-spekulaatio | Väite menee nykyisten rajattujen järjestelmien kykyjen ulkopuolelle. |
-
-**Aika-arvio:** 15–20 minuuttia
-
----
-
-### TT-B: Uutisotsikon purkaminen
-
-**Tavoite:** Opiskelija harjoittelee tekoälyuutisten kriittistä arviointia.
-
-**Tehtävä:** Anna opiskelijoille tekoälyä koskeva otsikko, esimerkiksi ”Tekoäly päihitti ihmisen monimutkaisessa pelissä” tai ”Tekoäly kirjoittaa kokonaisia kirjoja”. Opiskelijat vastaavat seuraaviin kysymyksiin:
-
-- Mitä järjestelmä todella teki?
-- Oliko tehtävä rajattu vai yleinen?
-- Onko kyse kapeasta tekoälystä, generatiivisesta tekoälystä, AGI:sta vai ASI-spekulaatiosta?
-- Mitä otsikko mahdollisesti liioittelee?
-- Mitä lisätietoa tarvitsisit ennen kuin uskot väitteen?
-
-**Opettajan huomio:** Tässä tehtävässä ei tarvitse löytää yhtä oikeaa vastausta. Tärkeintä on, että opiskelija osaa kysyä tarkentavia kysymyksiä eikä hyväksy tekoälyväitteitä sellaisenaan.
-
-**Aika-arvio:** 20–25 minuuttia
-
----
-
-### TT-C: ChatGPT ei ole AGI — perusteluharjoitus
-
-**Tavoite:** Opiskelija osaa perustella, miksi generatiivinen tekoäly ei ole sama asia kuin yleisäly.
-
-**Tehtävä:** Opiskelija kirjoittaa lyhyen vastauksen väitteeseen: ”ChatGPT on AGI, koska se osaa vastata monenlaisiin kysymyksiin.”
-
-**Hyvä vastaus sisältää:**
-
-- määritelmän siitä, mitä AGI tarkoittaisi
-- selityksen siitä, mitä ChatGPT osaa hyvin
-- selityksen siitä, mitä se ei osaa itsenäisesti tehdä
-- johtopäätöksen siitä, miksi monipuolinen tekstiosaaminen ei riitä AGI:n määritelmäksi
-
-**Aika-arvio:** 15–20 minuuttia
-
----
-
-## Arviointivinkit
-
-### Perusymmärryksen tarkistaminen
-
-- Kysy: ”Mitä eroa on kapealla tekoälyllä ja generatiivisella tekoälyllä?” Hyvä vastaus: kapea tekoäly tekee rajattua tehtävää, ja generatiivinen tekoäly on yksi kapean tekoälyn muoto, joka tuottaa sisältöä.
-- Kysy: ”Miksi ChatGPT ei ole AGI?” Hyvä vastaus: se käsittelee kieltä erittäin hyvin, mutta se ei ole yleisesti toimiva ja itsenäisesti kaikkia tehtäviä oppiva järjestelmä.
-
-### Kriittinen ajattelu
-
-- Tuo väite: ”Tekoäly voitti ihmisen pelissä.” Kysy: ”Onko tämä kapeaa tekoälyä vai yleisälyä?” Hyvä vastaus: kapeaa tekoälyä, koska se on rajattu tiettyyn peliin tai tehtävään.
-- Tuo väite: ”Generatiivinen tekoäly luo jotain täysin uutta.” Kysy: ”Millä tavalla uutta?” Hyvä vastaus: se tuottaa uuden näköisen lopputuloksen, mutta käyttää koulutusdatasta opittuja kuvioita ja rakenteita.
-
-### Itsearviointi
-
-Voit antaa tunnin lopuksi lyhyen itsearvioinnin:
-
-- Ymmärrän eron kapean tekoälyn ja AGI:n välillä: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.
-- Ymmärrän, miksi generatiivinen tekoäly on merkittävä mutta silti rajattu: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.
-- Osaan arvioida tekoälyuutisia kriittisesti: täysin samaa mieltä / jokseenkin samaa mieltä / tarvitsen vielä harjoitusta.
-
----
-
-## Opettajan vihjeet
-
-### Jos opiskelija pitää ChatGPT:tä yleisälynä
-
-Kysy:
-
-- Voiko se toimia fyysisessä maailmassa ilman erillisiä työkaluja?
-- Voiko se oppia uuden taidon samalla tavalla kuin ihminen ilman uudelleenkoulutusta tai työkalutukea?
-- Ymmärtääkö se tavoitteet ja seuraukset samalla tavalla kuin ihminen?
-- Onko monipuolinen tekstivastaaminen sama asia kuin yleinen toimijuus?
-
-### Jos opiskelija ajattelee AGI:n olevan väistämätön
-
-Korosta epävarmuutta. Kehitys voi jatkua nopeasti, mutta se ei todista, että yleisäly syntyy automaattisesti. Tee näkyväksi ero teknologisen kehityksen ja varman lopputuloksen välillä.
-
-### Jos keskustelu muuttuu liian spekulatiiviseksi
-
-Palauta keskustelu nykyisiin järjestelmiin:
-
-- Mitä järjestelmä osaa nyt?
-- Mitä se ei osaa?
-- Mitä dataa se käyttää?
-- Missä tehtävässä se toimii hyvin?
-
-> Ensin ymmärrämme nykyiset järjestelmät. Vasta sen jälkeen voimme keskustella järkevästi tulevaisuuden mahdollisuuksista.
-
----
-
-## Oppitunnin lopetus
-
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että tekoälyä kuvataan kahdella eri kysymyksellä: kuinka laaja tehtäväjoukko järjestelmällä on ja millä toteutustavalla tai toiminnallisuudella se toimii. Kapea tekoäly, generatiivinen tekoäly, AGI ja ASI eivät muodosta yhtä kehitysasteikkoa. Nykyiset järjestelmät ovat vaikuttavia, mutta ne eivät ole sama asia kuin yleinen älykkyys.
-
-Hyvä päätöskysymys tunnin loppuun:
-
-> **Pohdi:** Kun seuraavan kerran näet tekoälyuutisen, mistä voit päätellä, onko kyse todellisesta yleisälystä vai rajatusta tekoälyjärjestelmästä?
-
----
-
+**Täsmennys:** Yksinkertainen sääntöpohjainen automaatio ei välttämättä ole tekoälyä. Käytännön palvelu voi kuitenkin yhdistää sääntöjä ja tekoälymalleja.
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **kykyjen laajuus × toteutus ja toiminnallisuus -matriisi**. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.
+Tallennettava ydintuotos on **Viisi käsitettä tekoälyn kartalla** -vertailu ja sitä täydentävä 2–3 virkkeen johtopäätös.
 
-| Aika | Vaihe | Opettajan tehtävä |
-|---|---|---|
-| 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
-| 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija sijoittaa kahdeksan järjestelmäkorttia kykyjen laajuus × toiminnallisuus -matriisiin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
-| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
-| 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
+| Aika | Vaihe | Opettajan tehtävä | Opiskelijan toiminta |
+|---|---|---|---|
+| 0–10 min | Virittäytyminen | Esitä kolme esimerkkiä: sääntö, rajattu tunnistus ja tekstin tuottaminen | Kuvaa, miten esimerkit eroavat toisistaan |
+| 10–25 min | Nykyiset järjestelmät | Kertaa sääntöpohjainen, kapea ja generatiivinen | Kirjaa käsitteiden erot ja yhden esimerkin kustakin |
+| 25–35 min | Ratkaiseva yhteys | Mallinna generatiivisuuden ja kykyjen rajauksen ero | Selitä, miten sama järjestelmä voi olla generatiivinen ja tehtävältään rajattu |
+| 35–50 min | Tulevaisuuskäsitteet | Opeta AGI ja ASI varovaisina käsitteinä | Erota nykyinen näyttö tulevaisuusväitteestä |
+| 50–70 min | Ydintuotos | Ohjaa vertailutaulukon täyttämistä | Täyttää viiden käsitteen vertailun |
+| 70–82 min | Väitteen purku | Anna yksi uutis- tai myyntiväite | Erottaa suorituksen, väitteen ja puuttuvan näytön |
+| 82–90 min | Lopputehtävä | Esitä tunnin tarkistuskysymys | Kirjoittaa perustelun siitä, miksi sujuva tekstitekoäly ei ole automaattisesti AGI |
+
+## Itsenäinen suoritus
+
+Itsenäinen reitti ei edellytä käyttäjätiliä, ulkoista tekoälypalvelua tai ajankohtaisen uutisen etsimistä. Oppija etenee näin:
+
+1. Lue teoria ja kirjoita omin sanoin jokaisesta käsitteestä yksi virke, joka erottaa sen muista käsitteistä.
+2. Tee Harjoittele-välilehden neljä tehtävää ja lue myös väärien vaihtoehtojen palaute.
+3. Täytä **Viisi käsitettä tekoälyn kartalla** -taulukko.
+4. Vertaa taulukkoa teorian vertailuun ja korjaa vähintään yksi kohta tarvittaessa.
+5. Vastaa lopuksi ilman materiaalia: ”Miksi generatiivisuus tai sujuva keskustelu ei yksin osoita AGI:a?”
+
+Itsenäinen suoritus on valmis, kun oppija on täyttänyt taulukon, kirjoittanut 2–3 virkkeen johtopäätöksen ja tarkistanut vastauksensa Harjoittele-tehtävien palautteen avulla.
+
+## Eriyttäminen
 
 ### Tukireitti
 
-Oppija käyttää valmiita kortteja ja kolmea mallisijoitusta. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.
+- Anna viiden käsitteen nimet valmiiksi taulukkoon.
+- Anna jokaisesta käsitteestä yksi esimerkki, jonka opiskelija yhdistää oikeaan kohtaan.
+- Käytä lauseenalustuksia: ”Tämä on nykyinen järjestelmä, koska…” ja ”Tästä ei vielä voida päätellä, että…”
+- Salli lopputehtävässä 3–4 virkkeen vastaus.
 
 ### Syventävä reitti
 
-Kun perustuotos on valmis, oppija arvioi mediaväitteen ja osoittaa, sekoittuuko siinä laajuus toteutustapaan. Syventävä työ ei kasvata pakollista ydintuotosta.
+- Pyydä opiskelijaa etsimään järjestelmä, jossa sääntöpohjainen toiminta ja tekoälymalli yhdistyvät.
+- Pyydä erottamaan uutisesta havaittu tulos, kirjoittajan tulkinta ja tulevaisuusennuste.
+- Pyydä muotoilemaan liioitteleva otsikko uudelleen niin, että se vastaa käytettävissä olevaa näyttöä.
+
+Syventäminen ei muuta pakollista ydintuotosta. Kaikki opiskelijat osoittavat saman keskeisen ymmärryksen.
+
+## Arviointi
+
+Hyväksytty suoritus osoittaa, että opiskelija:
+
+- tunnistaa viisi käsitettä ja käyttää niitä pääosin oikein,
+- erottaa nykyiset järjestelmät AGI- ja ASI-käsitteistä,
+- erottaa generatiivisuuden kykyjen laajuudesta ja osaa kuvata yhden rajatun generatiivisen tehtävän,
+- ei esitä käsitteitä väistämättömänä kehitysportaikkona,
+- perustaa väitteen arvioinnin siihen, mitä järjestelmän on osoitettu tekevän.
+
+### Tarkistuskysymykset
+
+1. Mitä eroa on sääntöpohjaisella järjestelmällä ja datasta opitulla mallilla?
+2. Miksi kapea tekoäly voi olla tehtävässään ihmistä parempi olematta AGI?
+3. Miten generatiivinen järjestelmä voi olla tehtävältään rajattu, ja miksi generatiivisuus ei yksin osoita AGI:a?
+4. Mitä AGI tarkoittaisi, ja miksi sujuva keskustelu ei yksin todista sitä?
+5. Miksi ASI:sta pitää puhua spekulatiivisena käsitteenä?
+
+## Opettajan vastaus opiskelijan tavalliseen kysymykseen
+
+**”Milloin AGI tulee?”**
+
+Emme tiedä. Arviot riippuvat siitä, miten AGI määritellään ja mitä kykyjä sen pitäisi osoittaa. Tällä tunnilla olennaista ei ole ennustaa vuotta vaan oppia erottamaan nykyisten järjestelmien osoitetut kyvyt tulevaisuutta koskevista väitteistä.
+
+**”Eikö tekstitekoäly ole jo melkein AGI?”**
+
+Se voi olla erittäin monipuolinen kielen käsittelijä. ”Melkein AGI” ei kuitenkaan ole täsmällinen tekninen luokka. Arvioi aina konkreettinen tehtävä, toiminnan rajat ja käytettävissä oleva näyttö.
+
+## Oppitunnin lopetus
+
+Palaa tunnin alun kolmeen esimerkkiin ja pyydä opiskelijoita nimeämään ne uudelleen. Päätä tunti kysymykseen:
+
+> **Miksi generatiivisuus tai monista aiheista sujuvasti keskusteleminen ei yksin osoita AGI:a?**
+
+Hyvä vastaus mainitsee, että generatiivisuus kuvaa sisällön tuottamista eikä kykyjen laajuutta. Esimerkin järjestelmän osoitettu toiminta voi olla rajattua, vaikka tuotos olisi sujuva. Myöskään laaja tehtäväkirjo ei yksin osoita yleistä oppimista ja joustavaa toimintaa kaikissa uusissa tehtävissä.

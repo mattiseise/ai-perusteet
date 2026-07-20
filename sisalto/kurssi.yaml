@@ -61,7 +61,7 @@ moduulit:
     lopputyo: lopputyot/teoria.md
     tunnit:
       - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching }
-      - { id: lesson-02, kansio: "02", otsikko: "Kaksi akselia — kykyjen laajuus ja toteutustapa", tyyppi: teaching }
+      - { id: lesson-02, kansio: "02", otsikko: "Millaista tekoälyä on nyt — ja mistä tulevaisuuspuheessa puhutaan?", tyyppi: teaching }
       - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*" }
       - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching }
       - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*" }

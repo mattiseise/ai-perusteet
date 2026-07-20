@@ -1,19 +1,38 @@
 # Tehtävät
 
-## Tehtävä 2.1: Kahden akselin matriisi — SUOSITELTU
+## Tehtävä 2.1: Viisi käsitettä tekoälyn kartalla — SUOSITELTU
 
-Valitse kahdeksan opettajan antamaa järjestelmäkorttia. Kirjaa jokaisesta kaksi eri asiaa:
+Täydennä taulukko tunnin teorian avulla. Kirjoita jokaiseen kohtaan lyhyt selitys omin sanoin. Käytä esimerkkinä järjestelmää tai väitettä, josta käy ilmi, mitä käsite tarkoittaa.
 
-| Järjestelmä | Kykyjen laajuus ja rajaus | Toteutus tai toiminnallisuus | Perustelu näkyvän näytön perusteella |
-|---|---|---|---|
-|  |  |  |  |
+| Käsite | Mitä se tarkoittaa? | Nykyinen järjestelmä vai tulevaisuuskäsite? | Esimerkki | Tärkein rajaus |
+|---|---|---|---|---|
+| Sääntöpohjainen järjestelmä |  |  |  |  |
+| Kapea tekoäly |  |  |  |  |
+| Generatiivinen tekoäly |  |  |  |  |
+| AGI |  |  |  |  |
+| ASI |  |  |  |  |
 
-Älä päättele AGI:sta pelkän sujuvan keskustelun perusteella. Merkitse ”ei riittävää näyttöä”, jos väite ylittää aineiston.
+Kirjoita taulukon alle 2–3 virkkeen johtopäätös, jossa vastaat seuraaviin kysymyksiin:
 
-Tallennettava tuotos on kahdeksan rivin matriisi. Tukireitillä saat kolme valmiiksi sijoitettua korttia. Syventävällä reitillä etsi yksi mediaväite ja arvioi, sekoittaako se kykyjen laajuuden ja toiminnallisuuden.
+- Miten generatiivinen järjestelmä voi olla kyvyiltään rajattu, ja miksi generatiivisuus ei yksin osoita AGI:a?
+- Miksi näitä viittä käsitettä ei pidä esittää kehitysportaina?
 
-## Tehtävä 2.2: Sama järjestelmä, kolme kontekstireittiä — SYVENTÄVÄ
+Tallennettava tuotos on täydennetty taulukko ja johtopäätös. Tukireitillä käytä teoriassa olevaa vertailutaulukkoa ja muotoile sen sisältö omin sanoin. Syventävällä reitillä lisää yksi esimerkki järjestelmästä, jossa sääntöjä ja tekoälyä käytetään yhdessä.
 
-Valitse yksi reitti: arki tai harrastus, opiskelu tai opettajan antama työelämän rooliskenaario. Kuvaa yksi tekoälyjärjestelmä kahdella akselilla ja nimeä tieto, jota et pysty käyttöliittymän perusteella päättelemään.
+## Tehtävä 2.2: Mitä väitteestä voidaan päätellä? — SYVENTÄVÄ
 
-Tuotos on yhden sivun kortti, jossa näkyvät järjestelmä, rajattu tehtävä, toiminnallisuus, käytetty lähde ja yksi varovainen johtopäätös.
+Valitse yksi seuraavista väitteistä:
+
+- ”Tekstiä tuottava tekoäly osaa jo lähes kaiken tietotyön, joten se on AGI.”
+- ”Kun järjestelmä voitti ihmisen yhdessä testissä, se osoitti olevansa ihmistä älykkäämpi.”
+- ”ASI syntyy väistämättä heti AGI:n jälkeen.”
+
+Pura valitsemasi väite seuraavien kysymysten avulla:
+
+1. Mitä väitteessä väitetään?
+2. Mitä näyttöä väite itse antaa? Jos näyttöä ei anneta, totea se.
+3. Onko kyse sääntöpohjaisesta järjestelmästä, kapeasta tekoälystä, generatiivisesta tekoälystä, AGI-väitteestä vai ASI-väitteestä?
+4. Mitä väitteestä ei vielä voida päätellä?
+5. Mitä lisätietoa tarvitsisit ennen kuin hyväksyisit väitteen?
+
+Tallennettava tuotos on 120–180 sanan analyysi. Jos väite antaa näyttöä järjestelmän toiminnasta, päätä tekstisi virkkeeseen **”Näytön perusteella järjestelmä…”** Jos näyttöä ei anneta, päätä virkkeeseen **”Väitettä ei voi arvioida ilman tietoa siitä…”**

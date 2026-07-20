@@ -39,7 +39,8 @@ def main():
         text = teoria.read_text(encoding='utf-8')
         if len(re.findall(r'^# ', text, re.M)) != 1:
             fail(f'{teoria.relative_to(ROOT)}: H1-otsikoita pitää olla yksi', errors)
-        if '## Lähteet ja tarkistuspäivä' not in text or 'Tarkistettu 15.7.2026.' not in text:
+        if ('## Lähteet ja tarkistuspäivä' not in text
+                or not re.search(r'Tarkistettu \d{1,2}\.\d{1,2}\.2026\.', text)):
             fail(f'{teoria.relative_to(ROOT)}: lähdeosio puuttuu', errors)
         plan = LESSONS / f'{nn:02d}' / 'opettaja' / 'tuntisuunnitelma.md'
         if '## 90 minuutin toteutus ja eriyttäminen' not in plan.read_text(encoding='utf-8'):
