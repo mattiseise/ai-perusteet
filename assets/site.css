@@ -547,17 +547,30 @@ body{
 /* ============ AJATTELUN SELKÄRANKA ============ */
 .thinking-path{
   --thinking-accent:var(--bc-primary);
+}
+.thinking-path--course,.thinking-path--module{
   background:var(--bg-white);
   border:1px solid var(--border-soft);
   border-radius:var(--r);
   padding:24px 26px;
   box-shadow:0 1px 3px rgba(20,30,60,.04);
+  margin:30px 0;
 }
-.thinking-path--course,.thinking-path--module{margin:30px 0}
 .thinking-path--lesson{
-  width:calc(100% - 80px);
+  width:100%;
+  padding:0 40px;
+  border-bottom:1px solid var(--border-soft);
+  background:#F8FAFC;
+}
+.thinking-path__lesson-inner{
+  display:grid;
+  grid-template-columns:minmax(430px,.9fr) minmax(0,1.1fr);
+  align-items:center;
+  gap:26px;
+  width:100%;
   max-width:1080px;
-  margin:22px auto 8px;
+  min-height:72px;
+  margin:0 auto;
 }
 .thinking-path__eyebrow{
   margin-bottom:7px;
@@ -622,30 +635,99 @@ body{
   box-shadow:inset 0 3px 0 var(--thinking-accent);
 }
 .thinking-step.is-active .thinking-step__name{color:color-mix(in srgb,var(--thinking-accent) 72%,#111827)}
-.thinking-path__question{
-  margin:14px 2px 0;
-  padding:13px 15px;
-  border-left:4px solid var(--thinking-accent);
-  background:color-mix(in srgb,var(--thinking-accent) 6%,#fff);
-  color:var(--text-dark);
-  font-size:14px;
-  line-height:1.55;
+.lesson-thinking-steps{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:5px;
+  min-width:0;
+  margin:0;
+  padding:0;
+  list-style:none;
 }
-.thinking-path__question strong{font-weight:650}
-.thinking-path__return{
-  margin:9px 2px 0;
+.lesson-thinking-step{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  min-width:0;
+  padding:7px 5px;
+  border-radius:999px;
   color:var(--text-muted);
-  font-size:12.5px;
-  line-height:1.55;
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  line-height:1;
+  white-space:nowrap;
+}
+.lesson-thinking-step__index{
+  display:grid;
+  place-items:center;
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  border:1px solid #CBD5E1;
+  border-radius:50%;
+  color:#64748B;
+  background:#fff;
+  font-size:9.5px;
+  font-weight:650;
+}
+.lesson-thinking-step.is-active{
+  color:color-mix(in srgb,var(--thinking-accent) 76%,#111827);
+  background:color-mix(in srgb,var(--thinking-accent) 9%,#fff);
+  font-weight:650;
+}
+.lesson-thinking-step.is-active .lesson-thinking-step__index{
+  border-color:var(--thinking-accent);
+  color:#fff;
+  background:var(--thinking-accent);
+}
+.thinking-path__question{
+  display:grid;
+  gap:3px;
+  margin:0;
+  padding:0 0 0 22px;
+  border-left:1px solid var(--border-soft);
+  color:var(--text-dark);
+  font-size:13.5px;
+  line-height:1.4;
+}
+.thinking-path__question-label{
+  color:var(--thinking-accent);
+  font-family:var(--font-mono);
+  font-size:9.5px;
+  font-weight:650;
+  letter-spacing:.11em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
+@media(max-width:900px){
+  .thinking-path--lesson{padding:0 24px}
+  .thinking-path__lesson-inner{
+    grid-template-columns:1fr;
+    gap:9px;
+    padding:11px 0 12px;
+  }
+  .thinking-path__question{
+    padding:9px 0 0;
+    border-top:1px solid var(--border-soft);
+    border-left:0;
+  }
 }
 
 @media(max-width:768px){
-  .thinking-path{padding:20px 18px}
-  .thinking-path--lesson{width:auto;margin:16px 16px 6px}
-  .thinking-path h2{font-size:22px}
+  .thinking-path--course,.thinking-path--module{padding:20px 18px}
+  .thinking-path--lesson{padding:0 16px}
+  .thinking-path--course h2,.thinking-path--module h2{font-size:22px}
   .thinking-path__scroller{overflow-x:visible}
   .thinking-path__steps{grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}
   .thinking-step:last-child{grid-column:1/-1}
+  .lesson-thinking-step{
+    flex-direction:column;
+    gap:4px;
+    padding:5px 1px;
+    font-size:9.5px;
+  }
 }
 
 /* ============ TABS ============ */

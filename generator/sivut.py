@@ -250,18 +250,27 @@ def _module_thinking_path(osp):
 
 
 def _lesson_thinking_path(lesson):
-    title_id = f'{escape(lesson["id"])}-thinking-title'
     thought = lesson['ajattelu']
+    items = []
+    for index, move in enumerate(N.AJATTELU['liikkeet'], 1):
+        is_active = move['id'] == thought['painotus']
+        active_cls = ' is-active' if is_active else ''
+        current = ' aria-current="step"' if is_active else ''
+        items.append(
+            f'<li class="lesson-thinking-step{active_cls}"{current}>'
+            f'<span class="lesson-thinking-step__index" aria-hidden="true">{index}</span>'
+            f'<span class="lesson-thinking-step__name">{escape(move["nimi"])}</span>'
+            '</li>'
+        )
     return (
-        '<section class="thinking-path thinking-path--lesson">'
-        '<div class="thinking-path__eyebrow">Ajattelun selkäranka</div>'
-        f'<h2 id="{title_id}">Tunnista → selitä → testaa → arvioi → perustele</h2>'
-        f'{_thinking_steps(active=thought["painotus"], labelled_by=title_id)}'
-        '<p class="thinking-path__question"><strong>Tämän tunnin ajattelukysymys:</strong> '
-        f'{escape(thought["kysymys"])}</p>'
-        '<p class="thinking-path__return">Palaa kysymykseen tunnin lopussa. Vastaa omin sanoin ja '
-        'nimeä havainto, testi tai tuotos, johon vastauksesi perustuu.</p>'
-        '</section>'
+        '<aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka">'
+        '<div class="thinking-path__lesson-inner">'
+        '<ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet">'
+        f'{"".join(items)}</ol>'
+        '<p class="thinking-path__question">'
+        '<span class="thinking-path__question-label">Ajattelukysymys</span>'
+        f'<span>{escape(thought["kysymys"])}</span></p>'
+        '</div></aside>'
     )
 
 
