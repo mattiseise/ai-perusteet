@@ -1,90 +1,64 @@
-# Tehtävät
+# Opiskelutehtävät: Automaatio vai autonomia?
 
-## Tehtävä 1: Täytä päätöstaulukko agentin rakenteesta
+> Tällä tunnilla et rakenna vielä mitään. Teet arkkitehtuuripäätöksen: ratkaistaanko tehtävä promptilla, tavallisella työnkululla vai agentilla? Hyvä päätös voi olla myös se, ettei agenttia tarvita.
 
-Alla on taulukko, jossa kuvataan kolme erilaista agenttijärjestelmää. Sinun tehtäväsi on täyttää taulukko kuvaamalla kunkin agentin **suunnittelusilmukkaa**, **työkaluja** ja **muistia**.
+## Tehtävä 20.1 — Valitse yksinkertaisin riittävä ratkaisu — suositeltu
 
-### Kolme agenttijärjestelmää
+**Tavoite:** Osaat erottaa toisistaan kertaluonteisen promptauksen, ennalta määritellyn työnkulun ja agentin, joka valitsee toimintoja tilanteen perusteella.
 
-**Agentti A: Sähköpostivastausten automatisoija**
-- Tehtävä: Vastaa sisään tuleviin asiakassähköposteihin automaattisesti
-- Tavoite: "Tunnista asiakkaan ongelma, etsi samankaltaisia tapauksia ja lähetä ratkaisu"
+### Vaihe 1 — Arvioi kolme tapausta
 
-**Agentti B: Varaston valvonta-agentti**
-- Tehtävä: Valvoo varaston tilaa ja tekee tilauksia
-- Tavoite: "Seuraa tuotteiden määriä, menekkiä ja viimeisiä käyttöpäiviä. Jos jokin tuote on loppumassa, tee uusi tilaus toimittajalle."
+Täytä taulukko. Älä aloita ratkaisusta, vaan tehtävän tarpeesta.
 
-**Agentti C: Tapahtuman aikatauluagentti**
-- Tehtävä: Suunnittelee ja optimoi tapahtuman ohjelman aikataulua
-- Tavoite: "Etsi päällekkäisyydet ja ruuhka-ajat, analysoi ne ja siirrä ohjelmanumeroita niin, että aikataulu toimii sujuvasti."
+| Tapaus | Prompti, työnkulku vai agentti? | Mikä päätös muuttuu tilanteen mukaan? | Mitä harnessin pitäisi hallita? | Miksi yksinkertaisempi ratkaisu ei riitä? |
+| --- | --- | --- | --- | --- |
+| Yhden raportin tiivistäminen kerran |  |  |  |  |
+| Saapuvan lomakkeen tallentaminen aina samaan taulukkoon |  |  |  |  |
+| Tukipyynnön tutkiminen, tarvittavan tiedon hakeminen ja epäselvän tapauksen ohjaaminen ihmiselle |  |  |  |  |
 
-### Täyttötaulukko
+Käytä päätöksessäsi näitä kysymyksiä:
 
-Täytä seuraava taulukko kunkin agentin osalta:
+1. Toistuuko tehtävä?
+2. Onko eteneminen sama joka kerta?
+3. Pitääkö järjestelmän tulkita tilannetta ja valita seuraava toiminto?
+4. Mitä työkaluja ja oikeuksia ratkaisu tarvitsee?
+5. Mitä virhe maksaisi?
+6. Missä ihminen voi valvoa tai hyväksyä toiminnan?
 
-| Agentti | Suunnittelusilmukan vaiheet | Tarvittavat työkalut | Konteksti-ikkuna | Ulkoinen muisti | Huomiot |
-| --- | --- | --- | --- | --- | --- |
-| **A: Sähköpostivastaukset** | 1. Havainnoi: Lue sähköposti 2. Suunnittele: ... 3. Toimi: ... 4. Tarkkaile: ... | Sähköpostin luku-API, tietokannanhaku-API, sähköpostin lähetys-API | Asiakkaan aiemmat sähköpostit (viimeiset 5 viestiä) | Ratkaisutietokanta: tunnetut ongelmat ja ratkaisut | [Täytä] |
-| **B: Varaston valvonta** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
-| **C: Tapahtuman aikataulu** | [Täytä] | [Täytä] | [Täytä] | [Täytä] | [Täytä] |
+### Vaihe 2 — Testaa oma agentti-ideasi
 
-### Ohjeita
+Avaa tunnilla 19 kirjoittamasi **Agentti: Ongelma**. Aja se saman päätöspuun läpi. Kirjoita yhden sivun päätösmuistio:
 
-- **Suunnittelusilmukan vaiheet**: Kuvaile, mitä agentti havaitsee, miten se suunnittelee, mitä se tekee ja miten se tarkkailee tuloksia.
-- **Työkalut**: Listaa konkreettiset API:t tai keinot, joita agentti tarvitsee. (**API** = rajapinta, jonka kautta ohjelmat puhuvat keskenään — esimerkiksi sähköpostin luku- tai lähetysrajapinta.)
-- **Konteksti-ikkuna**: Mitä lyhytaikaista tietoa agentti tarvitsee ymmärtääkseen tilanteen nyt?
-- **Ulkoinen muisti**: Mitä pitkäkestoista tietoa agentti tarvitsee myöhempiä suorituksia varten?
-- **Huomiot**: Jos agentti voi vahingoittaa järjestelmää, mikä on riski? Mitä rajoituksia sille tulisi asettaa?
+- **Tehtävä:** Mitä ollaan ratkaisemassa ja kenelle?
+- **Valinta:** Prompti, työnkulku vai agentti?
+- **Muuttuva päätös:** Minkä seuraavan toiminnon kielimalli saa valita tilanteen perusteella?
+- **Harness:** Miten syöte, työkalut, tila, oikeudet ja loki hallitaan?
+- **Yksinkertaisempi vaihtoehto:** Miksi se ei riitä — tai miksi se sittenkin riittää?
+- **Riski ja valvonta:** Mikä voi mennä pieleen ja missä ihminen tarvitaan?
 
-**Jos teet tehtävän yksin:** Voit olettaa, että jokainen näistä agenteista on todellinen järjestelmä, jonka toimintaa pääset seuraamaan läheltä — vaikkapa arjessa, opinnoissa tai työssä. Käytä tätä oletusta apuna taulukkoa täyttäessäsi.
+Jos huomaat, että tavallinen työnkulku riittää, älä keksi agentille näennäistä tarvetta. Rajaa projektiasi uudelleen niin, että siinä on yksi todellinen, tilanteen mukaan muuttuva päätös. Voit myös vaihtaa aihetta.
 
----
+### Tekoälyvaihe — haasta päätös
 
-## Tehtävä 2: Suunnittele kontrolli agentin rajoittamiseksi
+```text
+Arvioin tehtävää, johon olen valinnut [promptin / työnkulun / agentin].
+Tässä ovat tehtävä, muuttuva päätös, tarvittavat työkalut, riskit ja
+valvonta: [liitä muistiosi]. Haasta valintani kolmella kysymyksellä.
+Älä ehdota agenttia vain siksi, että tehtävässä käytetään kielimallia.
+Etsi ensin yksinkertaisempi ratkaisu, joka voisi riittää.
+```
 
-Agentit ovat tehokkaita, mutta niihin liittyy merkittäviä riskejä. Tämä tehtävä vaatii sinua **suunnittelemaan turvatoimenpiteet** agentin varalle.
+Muokkaa päätösmuistiotasi saamiesi kysymysten perusteella. Merkitse loppuun yksi muutos, jonka teit, ja miksi.
 
-### Tilanne
+## Tehtävä 20.2 — Rajatapauksen puolustus — syventävä
 
-Sinulla on agentti, joka hoitaa asiakastukitikettejä. Agentti voi:
-- Lukea asiakastukitietokantaa
-- Etsiä ratkaisuja knowledge base -tietokannasta
-- Lähettää sähköposteja asiakkaille
-- Merkitä tikettejä "ratkaistuiksi" ja sulkea niitä
+Valitse tehtävä, jonka voisi toteuttaa joko työnkulkuna tai agenttina. Piirrä siitä kaksi ratkaisua:
 
-Tavoite kuulostaa hyvältä — automatisoida tuki. Mutta mitä pahaa voisi tapahtua?
+1. **Työnkulku:** ennalta määrätyt vaiheet ja ehdot.
+2. **Agentti:** kohta, jossa kielimalli valitsee työkalun tai seuraavan toiminnon saadun havainnon perusteella.
 
-### Ohjeet
-
-Kirjoita agenttijärjestelmälle **kontrollisuunnitelma**, joka kuvailee:
-
-1. **Riskit** — Mitä voisi mennä pieleen? Anna 3–4 konkreettista vaaratapausta.
-2. **Kunkin riskin mukainen kontrolli** — Miten voisit estää sen? Vaihtoehdot:
-   - Rajaa agentin työkalut (esim. agentti voi lähettää vain malleja, ei vapaata tekstiä)
-   - Lisää ihminen silmukkaan (esim. tiketit merkitään ratkaistuiksi vasta, kun ihminen hyväksyy ne)
-   - Lisää valvontaa (esim. kirjaa kaikki agentin tekemät sähköpostit)
-   - Testaa agenttia (esim. testaa, että agentti ei lähetä sopimattomia tekstejä)
-3. **Trade-offs** — Mikä on jokaisen kontrollin hinta? Vaikuttaako se automaation nopeuteen? Lisääkö se työtä ihmisille?
-
-### Esimerkki
-
-| Riski | Kontrolli | Hinta |
-| --- | --- | --- |
-| Agentti lähettää väärän ratkaisun asiakkaalle | Agentti voi lähettää vain valmiiksi hyväksyttyjä mallivastauksia, ei vapaata tekstiä | Vähemmän joustavuutta, mutta parempi turvallisuus |
-| Agentti sulkee tiketin liian aikaisin | Tiketti merkitään "ehdotettu ratkaisu" -tilaan, ja ihminen hyväksyy sulkemisen | Lisää ihmisen työtä, mutta estää tärkeiden tikettien sulkemisen |
-| ... | ... | ... |
-
-Kirjoita omat 3–4 riski–kontrolli-parisi.
-
-**Jos teet tehtävän yksin:** Voit valita jonkin muun agentin, jota et pelkää, jos haluat. Tärkeintä on ymmärtää, miten kontrolleja suunnitellaan ja mitä ne maksavat.
+Vertaa ratkaisuja kustannuksen, testattavuuden, ylläpidon ja riskin kannalta. Päätä lopuksi, kumman toteuttaisit ensimmäisenä. Perustele päätös näytöllä, älä ratkaisun uutuudella.
 
 ---
 
-## Hyvän vastauksen tuntomerkit
-
-- **Tehtävä 1 (päätöstaulukko):** taulukko on täytetty oikein, kuvailut ovat tarkkoja ja teknisesti oikeita.
-- **Tehtävä 2 (kontrollisuunnitelma):** riskit ovat realistisia, kontrollit konkreettisia ja kompromissien pohdinta syvällistä.
-
-Molemmat tehtävät opettavat sinulle keskeistä osaamista: agenttien sisäisten mekanismien ymmärtämistä ja kykyä suunnitella turvallisia agenttijärjestelmiä.
-
----
+**Tallennettava tuotos:** perusteltu päätösmuistio ja siihen tehty yksi nimetty korjaus. Tämä muistio toimii porttina agenttiprojektille: vasta hyväksytyn agenttitarpeen jälkeen siirryt muistin, työkalujen ja päättelyn suunnitteluun.

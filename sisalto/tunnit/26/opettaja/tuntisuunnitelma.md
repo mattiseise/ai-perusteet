@@ -13,8 +13,9 @@ Tämän oppitunnin tavoitteena on siirtyä agenttien teoriasta käytännön rake
 
 ### Soveltaa
 
-- Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun, jossa on trigger ja 2–3 muuta solmua.
-- Opiskelija pystyy suunnittelemaan oman n8n-agenttinsa ja tekemään siitä yksityiskohtaisen suunnitelman.
+- Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun ja erottamaan sen agentista.
+- Opiskelija toteuttaa yhden rajatun agenttipäätöksen, jossa kielimalli valitsee seuraavan toiminnon vähintään kahdesta sallitusta vaihtoehdosta.
+- Opiskelija osoittaa kahdella testillä, että valinta muuttuu tilanteen mukana, ja tallentaa näkyvän suoritusjäljen.
 
 **Opettajan painotus:** Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten kielimallin ja harnessin vastuut muuttuvat konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.
 
@@ -325,8 +326,8 @@ Tallennettava tuotos on **minimiagentti v1 tai alustariippumaton suoritusjälki*
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija rakentaa 3–5 solmun minimiagentin tai alustariippumattoman suoritusjäljen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
-| 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
+| 25–65 min | Perustuotos | Oppija rakentaa triggerin, rajatun agenttipäätöksen, vähintään yhden työkalun ja suoritusjäljen tai simuloi saman alustariippumattomasti. |
+| 65–80 min | Testaus ja purku | Testauta kahdella erilaisella syötteellä, muuttuuko valittu toiminto perustellusti. Oppija tekee yhden korjauksen ja testaa sen uudelleen. |
 | 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 
 ### Tukireitti

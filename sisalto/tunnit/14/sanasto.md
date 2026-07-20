@@ -1,43 +1,14 @@
-# Sanasto
+# Sanasto — Oma botti I
 
-## Räätälöity botti (Custom GPT)
-
-Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Räätälöidyllä botilla on oma rooli, ohjeet, rajaukset ja mahdollisesti tietopohja.
-
-## Järjestelmäprompti
-
-Piilossa oleva ohje, joka määrittää botin käyttäytymisen. Järjestelmäprompti kertoo botille, kuka se on, miten se vastaa ja mitä rajoituksia sillä on. Käyttäjä ei näe järjestelmäpromptia.
-
-## Botin tarkoitus (bot purpose)
-
-Selkeä kuvaus siitä, mitä botti tekee ja miksi se on olemassa. Ilman selkeää tarkoitusta botti on vain tavallinen ChatGPT, jolla ei ole mitään erityistä.
-
-## Rooli (role)
-
-Botin "persoona" tai ammatti. Rooli määrittää, millä äänellä ja asiantuntemuksella botti vastaa. Esimerkiksi: "Olet ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea."
-
-## Ohjeet (instructions)
-
-Tarkat säännöt siitä, miten botti toimii. Esimerkiksi: "Kysy ensin, miten voit auttaa" tai "Anna ohjeet vaihe vaiheelta." Hyvät ohjeet tekevät botista johdonmukaisen.
-
-## Rajaukset (constraints)
-
-Selkeät rajat sille, mitä botti ei saa tehdä. Esimerkiksi: "Älä koskaan pyydä käyttäjän maksutietoja" tai "Jos asia ei kuulu sinulle, ohjaa ihmiselle." Rajaukset suojaavat käyttäjää.
-
-## Tietokanta (knowledge base)
-
-Tiedostot tai dokumentit, jotka botti saa käyttöönsä. Tietokannan avulla botti tuntee esimerkiksi yrityksen ohjeet, tuotekuvaukset tai usein kysytyt kysymykset.
-
-## Persoona
-
-Botin "luonne" — miten se puhuu, mitä sävyjä kielessä käyttää ja miten se suhtautuu käyttäjään. Persoona tekee botista inhimillisemmän ja helpommin lähestyttävän.
-
-## Testaus (testing)
-
-Botin kokeilemista erilaisilla kysymyksillä ja tilanteilla. Hyvä testaus paljastaa, missä botti epäonnistuu tai vastaa väärin. Testaus on olennainen osa botin kehittämistä.
-
-## Iteraatio (iteration)
-
-Botin parantamista testauksen perusteella. Jokainen testikierros paljastaa parannuskohteita, ja botti kehittyy kierrokselta kierrokselle. Hyvä botti ei synny kerralla vaan iteroinnin kautta.
-
----
+| Käsite | Selitys |
+| --- | --- |
+| **Apuri-botti** | Rajattuun käyttäjän tehtävään määritelty tekoälyavustin. |
+| **Kohderyhmä** | Käyttäjäryhmä, jonka tilanne, lähtötaso ja tarve ohjaavat suunnittelua. |
+| **Käyttötapaus** | Konkreettinen tilanne, jossa käyttäjä yrittää saada tietyn asian tehdyksi. |
+| **Havaittava onnistuminen** | Tulos tai toiminta, josta voidaan tarkistaa, että botti auttoi tehtävässä. |
+| **Työnkulku** | Vaiheet, joiden kautta botti ohjaa käyttäjää lähtötilanteesta lopputulokseen. |
+| **Rooli** | Botin tehtävään liittyvä näkökulma ja vastuu, ei pelkkä kuvitteellinen persoona. |
+| **Äänensävy** | Tapa, jolla botti viestii kohderyhmälle. Sävy ei korvaa tehtävää, tietopohjaa tai rajoja. |
+| **Raja** | Ehto, jossa botti kieltäytyy, pyytää lisätietoa tai siirtää vastuun ihmiselle. |
+| **Määrittelydokumentti** | Ennen toteutusta laadittu kuvaus käyttäjästä, tehtävästä, onnistumisesta, työnkulusta ja rajoista. |
+| **Järjestelmäprompti** | Toteutusvaiheessa kirjoitettava pysyvä ohje, joka muuntaa määrittelyn botin toimintasäännöiksi. |

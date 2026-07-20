@@ -1,55 +1,13 @@
-# Sanasto – oppitunti 21: Agentin muisti ja konteksti
+# Sanasto
 
-## Konteksti-ikkuna (context window)
-
-Agentin lyhytkestoinen muisti. Agentti näkee vain ikkunan sisällä olevan tiedon (viimeisimmät viestit). Kun uusi viesti tulee, vanhin poistuu.
-
-## Pitkäkestoinen muisti (long-term memory)
-
-Pysyvä tietovarasto (kuukaudet, vuodet). Sisältää asiakkaiden historiat ja aikaisemmat tapaukset.
-
-## Vektoritietokanta (vector database)
-
-Erikoistunut tietokanta, joka ymmärtää merkityksiä, ei vain sanoja. "Maksuvirhe" ja "laskutusongelma" ovat semanttisesti samankaltaisia.
-
-## Semantiikka / merkityksellinen haku (semantic search)
-
-Haku, joka etsii samankaltaisuutta merkitykseltään, ei sanasta sanaan. "Kuinka maksan laskun" löytää myös "maksun suorittaminen".
-
-## Vektori (vector)
-
-Numerojono, joka kuvaa kohteen ominaisuuksia. Tekoälyssä esimerkiksi sanan tai lauseen merkitys esitetään vektorina — pisteenä suuressa lukutilassa.
-
-## Tila (state)
-
-Prosessin nykyinen vaihe. Tilauksen tilat: "luotu", "maksettu", "pakattu", "lähetetty".
-
-## Tilamuuttuja (state variable)
-
-Numero tai arvo, jonka agentti seuraa tietyssä tilassa. Esim. "yritykset: 2/3" tai "summa: 50€".
-
-## Soul
-
-Agentin pysyvä identiteetti: rooli, arvot ja toimintatapa, jotka säilyvät samoina tehtävästä toiseen — toisin kuin lyhytkestoinen konteksti. Määritellään yleensä erillisessä määrittelytiedostossa (esim. `SOUL.md`), jota agentti noudattaa kaikissa tilanteissa.
-
-## Konteksti (context)
-
-Ympäröivät tiedot ja tilanteen tausta. Asiakkaan historia, edellinen keskustelu, nykyinen tehtävä.
-
-## Muisti- ja kontekstijärjestelmä
-
-Harnessin vastuu, joka yhdistää konteksti-ikkunan (nykyisyys), pitkäkestoisen muistin (menneisyys) ja tilan (prosessin vaihe). Harness valitsee mallille annettavan kontekstin, tallentaa sovitut tiedot ja hakee niitä myöhempää käyttöä varten. Kielimalli ei muista keskusteluja itsestään.
-
-## Ankkurointi (grounding)
-
-Yhteys todellisuuteen. Agentti pysyy ankkuroituna, kun se perustaa päätökset konkreettisiin tietoihin.
-
-## Hallusinaatio (hallucination)
-
-Kun kielimalli keksii tosiasioita, joita ei ole. Agentti "muistaa" asiaa, jota ei koskaan tapahtunut.
-
-## Varmuusprosentti (confidence score)
-
-Mitta siitä, kuinka varma agentti on vastauksestaan. 95% = varma, 50% = epävarma.
-
----
+| Käsite | Selitys |
+| --- | --- |
+| **Konteksti-ikkuna** | Rajattu määrä tietoa, jonka malli saa käsiteltäväksi yhden pyynnön tai suorituksen aikana. |
+| **Pitkäkestoinen muisti** | Tieto, joka säilytetään myöhempiä suorituksia varten erillisessä varastossa. Kaikki agentit eivät tarvitse sitä. |
+| **Tila** | Rakenteinen tieto siitä, missä vaiheessa prosessi on ja mitä on jo tapahtunut. |
+| **Tilamuuttuja** | Prosessin aikana seurattava arvo, kuten käsittelyvaihe, yritysten määrä tai hyväksynnän tila. |
+| **Vektori** | Numeerinen esitys, jonka avulla tekstien merkitysten samankaltaisuutta voidaan vertailla. |
+| **Vektoritietokanta** | Tietovarasto, josta voidaan hakea merkitykseltään samankaltaista aineistoa. Samankaltaisuus ei takaa osuvuutta. |
+| **Ankkurointi** | Vastauksen tai päätöksen sitominen tarkistettavaan lähteeseen tai havaintoon. |
+| **Pysyvät toimintaperiaatteet** | Ihmisen suunnittelemat järjestelmäohjeet ja harnessin säännöt, jotka rajaavat agentin toimintaa. Ne eivät ole muistia tai koneen omia arvoja. |
+| **Minimimuisti** | Periaate, jonka mukaan järjestelmä säilyttää vain tehtävän kannalta tarpeellisen ja sallitun tiedon. |

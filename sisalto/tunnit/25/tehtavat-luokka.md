@@ -46,7 +46,7 @@ Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 san
 
 *Sinun vuorosi:* Valitse jokaiselle hyväksyntäportille varasuunnitelma.
 
-> **Sivumaininta: oppiminen palautteesta.** Edistyneissä järjestelmissä agentti voi seurata, mitä ihminen hyväksyy ja oppia ajan myötä. Lopputyösi mittakaavassa tämä on yliampuva ratkaisu.
+> **Sivumaininta: palautteesta kehittäminen.** Edistyneissä järjestelmissä hyväksynnät ja hylkäykset voidaan tallentaa päätöslokiin. Ihminen arvioi aineiston ja päättää, muutetaanko ohjeita, harnessin sääntöjä tai testejä. Lopputyössä riittää, että kuvaat tämän hallitun menettelyn.
 
 ### Tekoälyvaihe — testaa hyväksyntäporttisi
 

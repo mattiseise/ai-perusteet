@@ -17,7 +17,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <figure style="margin:26px 0;text-align:center">
 <svg viewBox="0 0 920 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:840px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
   <title>Esimerkki-työnkulku: sähköpostien luokittelu n8n:ssä</title>
-  <desc>Päivittäin ajettava agentti hakee sähköpostit, luokittelee ne ja tekee yhteenvedon, muotoilee tuloksen ja tallentaa Google Sheetsiin. Työkaluina luokittelusäännöt, kielimalli, Google Sheets ja sähköposti.</desc>
+  <desc>Päivittäin ajettava järjestelmä hakee sähköpostit. Kielimalli arvioi tilanteen ja valitsee rajatuista työkaluista tarvittavan toiminnon. Tulos muotoillaan ja tallennetaan Google Sheetsiin.</desc>
   <defs>
     <g id="cls-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
     <g id="cls-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
@@ -29,7 +29,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   </defs>
   <rect x="0" y="0" width="920" height="410" rx="16" fill="#FAFBFE"/>
   <text x="460" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2336">Esimerkki-työnkulku: sähköpostien luokittelu</text>
-  <text x="460" y="62" text-anchor="middle" font-size="13" fill="#5A6478">Päivittäin ajettava agentti, joka luokittelee viestit ja tekee yhteenvedon.</text>
+  <text x="460" y="62" text-anchor="middle" font-size="13" fill="#5A6478">Kielimalli valitsee sallitun työkalun viestin perusteella.</text>
   <rect x="28" y="92" width="176" height="78" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
   <use href="#cls-clock" x="44" y="108" width="19" height="19" style="color:#2F9E69"/>
   <text x="70" y="121" font-size="12.5" font-weight="700" fill="#247A52">Sähköpostien haku</text>
@@ -68,7 +68,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   <rect x="46" y="320" width="814" height="44" rx="10" fill="#FFFBEC" stroke="#F2D98E" stroke-width="1.3"/>
   <use href="#cls-clock" x="62" y="332" width="20" height="20" style="color:#C79100"/>
   <text x="90" y="340" font-size="11.5" font-weight="700" fill="#8A6A00">Ajastettu ja itsenäinen</text>
-  <text x="90" y="356" font-size="11.5" fill="#5A4A1E">Työnkulku käynnistyy joka aamu itsestään — agentti hoitaa luokittelun ja yhteenvedon ilman, että kukaan painaa nappia.</text>
+  <text x="90" y="356" font-size="11.5" fill="#5A4A1E">Ajastus tekee järjestelmästä automaattisen. Tilannekohtainen työkaluvalinta tekee siitä agenttimaisen.</text>
 </svg>
 <figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Esimerkki yksinkertaisesta agentista: 4 solmua peräkkäin, agentilla muutama työkalu. Tällaisen voit itse rakentaa.</figcaption>
 </figure>
@@ -77,7 +77,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 
 Kun avaat n8n:n ensimmäistä kertaa, näet tyhjän kankaan. Kaikki alkaa **triggeristä** eli solmusta, joka käynnistää työnkulun. Triggeri voi olla esimerkiksi ajastin, kuten ”joka maanantai klo 8”, webhook, kuten ”kun joku lähettää viestin”, tai manuaalinen käynnistys, kuten ”kun painan käynnistä”. Ilman triggeriä työnkulku ei lähde liikkeelle.
 
-Triggerin jälkeen lisäät **toimintasolmuja**. Jokainen solmu saa dataa edelliseltä solmulta ja antaa dataa seuraavalle solmulle. Esimerkiksi työnkulku voi edetä näin: triggeri vastaanottaa Discord-viestin → HTTP Request -solmu lähettää viestin tekoäly-API:lle → seuraava solmu muotoilee vastauksen → viimeinen solmu lähettää vastauksen takaisin Discordiin. Tämä on yksinkertainen agentti: se ottaa vastaan syötteen, käsittelee sen tekoälyn avulla ja toimii tuloksen perusteella.
+Triggerin jälkeen lisäät **toimintasolmuja**. Jokainen solmu saa dataa edelliseltä solmulta ja antaa dataa seuraavalle solmulle. Esimerkiksi työnkulku voi edetä näin: triggeri vastaanottaa Discord-viestin → HTTP Request -solmu lähettää viestin tekoäly-API:lle → seuraava solmu muotoilee vastauksen → viimeinen solmu lähettää vastauksen takaisin Discordiin. Tämä on tekoälyavusteinen työnkulku, mutta ei vielä välttämättä agentti. Agentiksi kokonaisuus muuttuu vasta, kun kielimalli saa valita seuraavan toiminnon tai työkalun tilanteen ja havaintojen perusteella — harnessin asettamissa rajoissa.
 
 n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord, sähköposti, tiedostot, tietokannat, HTTP-kutsut sekä tekoälypalvelut, kuten OpenAI ja Claude. Sinun ei tarvitse tietää kaikkien näiden palveluiden teknisiä yksityiskohtia. n8n hoitaa yhteydet puolestasi. Sinun tehtäväsi on päättää, mitä solmuja käytät ja missä järjestyksessä.
 
@@ -92,7 +92,7 @@ n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord,
     <div class="l26-lbl"><span class="l26-s s1">data: ”Mihin aikaan avaatte?”</span><span class="l26-s s2">data: vastausluonnos</span><span class="l26-s s3">data: tarkistettu ✓</span><span class="l26-s s4">data: lähetetty käyttäjälle ✓</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">n8n-työnkulku on putki: triggeri käynnistää, ja data kulkee solmulta toiselle muuttuen matkalla. Jokainen solmu tekee täsmälleen yhden asian — yhdessä niistä syntyy agentti.</figcaption></figure>
+<figcaption class="ai-demo__cap">n8n-työnkulku on putki: triggeri käynnistää, ja data kulkee solmulta toiselle. Pelkkä putki ei ole agentti. Agenttimaisuus syntyy kohdassa, jossa kielimalli valitsee rajatuista vaihtoehdoista seuraavan toiminnon havaintonsa perusteella.</figcaption></figure>
 <style>
 .l26-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
 .l26-wire{position:absolute;left:30px;right:30px;top:104px;height:3px;background:repeating-linear-gradient(90deg,#46c7cf 0 9px,#232C44 9px 22px);animation:l26flow 1.1s linear infinite}
@@ -142,13 +142,13 @@ Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut void
 
 Tämän tunnin tärkein periaate on: **aloita pienestä**. Rakenna ensin yksinkertaisin mahdollinen versio, joka tekee yhden asian oikein. Testaa se. Lisää vasta sen jälkeen seuraava ominaisuus. Tätä kutsutaan **iteratiiviseksi kehitykseksi**. Kokeneet käyttäjätkään eivät rakenna valmista tuotetta yhdellä kertaa.
 
-Käytännössä tunnin 26 tavoite on **toimiva minimiversio**: kolmesta solmusta koostuva agentti, joka tekee ydintehtävänsä. Turvakerros, monimutkaisemmat haarat, hyväksyntäportit ja viimeistely tehdään tunnilla 27. Jos yrität tehdä kaiken kerralla, on suuri riski, että mikään ei toimi kunnolla.
+Käytännössä tunnin 26 tavoite on **toimiva minimiversio**, jossa näkyy yksi aito agenttipäätös. Kielimalli saa esimerkiksi valita kahdesta rajatusta työkalusta, pyytää lisätietoa tai lopettaa tehtävän. Valinta ja sen tulos tallennetaan näkyvään suoritusjälkeen. Turvakerros, hyväksyntäportit ja viimeistely tehdään tunnilla 27. Jos projektisi etenee aina samaa polkua, kutsu sitä tässä vaiheessa tekoälyavusteiseksi työnkuluksi ja lisää agenttipäätös vain, jos tehtävä todella tarvitsee sellaisen.
 
 Esimerkki iteratiivisesta rakentamisesta:
 
-1. **Vaihe 1 — Yksinkertainen triggeri ja toiminta:** Manual Trigger → HTTP Request. Testaa, että työnkulku käynnistyy ja data liikkuu.
-2. **Vaihe 2 — Lisää päättely:** Manual Trigger → HTTP Request → tekoälysolmu. Testaa, että tekoälysolmu saa oikean syötteen ja tuottaa vastauksen.
-3. **Vaihe 3 — Lisää toimintasolmu:** Manual Trigger → HTTP Request → tekoälysolmu → Discord, sähköposti tai muu toimintasolmu. Testaa, että vastaus lähtee oikeaan paikkaan.
+1. **Vaihe 1 — Varmista datavirta:** Manual Trigger → esimerkkisyöte. Testaa, että työnkulku käynnistyy ja syöte saapuu oikein.
+2. **Vaihe 2 — Lisää rajattu päätös:** anna tekoälysolmulle kaksi sallittua toimintavaihtoehtoa ja rakenteinen tulos, esimerkiksi `hae_tietoa` tai `pyyda_lisatietoa`.
+3. **Vaihe 3 — Toteuta valinta:** ohjaa tulos valittuun työkaluun tai haaraan. Tallenna valinta, työkalun tulos ja seuraava toiminto suoritusjälkeen.
 
 Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.
 
@@ -160,11 +160,11 @@ Tällä tunnilla et aloita tyhjältä pöydältä. Sinulla on viisi pohjapiirros
 
 - mitä ongelmaa agenttisi ratkaisee ja kenelle se on tarkoitettu — **pohjapiirros 1**
 - mitä agentti muistaa ja millainen sen identiteetti on — **pohjapiirros 2**
-- miten agentti päättelee: ReAct-mallilla vai ketjuajattelun avulla — **pohjapiirros 3**
+- miten agentin havaittava toiminta etenee: ReAct-silmukkana vai eksplisiittisenä työnkulkuna — **pohjapiirros 3**
 - mitä riskejä agenttiin liittyy ja miten ne torjutaan — **pohjapiirros 4**
 - missä kohdissa ihminen on mukana — **pohjapiirros 5**
 
-Tunnin alussa kokoat nämä viisi pohjapiirrosta yhdeksi suunnitelmaksi ja tarkistat, että ne sopivat yhteen. Sen jälkeen rakennat minimiversion: **triggeri + tekoälysolmu + yksi toimintasolmu**. Pohjapiirrosten 4 ja 5 sisältämät turvakerros ja ihmisen rooli viimeistellään tunnilla 27, kun testaat ja dokumentoit agentin.
+Tunnin alussa kokoat nämä viisi pohjapiirrosta yhdeksi suunnitelmaksi ja tarkistat, että ne sopivat yhteen. Sen jälkeen rakennat minimiversion: **triggeri + kielimallin tekemä rajattu valinta + vähintään yksi työkalu tai toiminto + näkyvä suoritusjälki**. Pohjapiirrosten 4 ja 5 sisältämät turvakerros ja ihmisen rooli viimeistellään tunnilla 27, kun testaat ja dokumentoit agentin.
 
 Jos olet epävarma omasta projektistasi, voit arvioida vaikeustasoa seuraavien esimerkkien avulla:
 
@@ -187,8 +187,9 @@ Tunnin lopussa sinulla pitäisi olla **toimiva minimiversio** omasta n8n-agentis
 Minimiversiossa tulee olla vähintään:
 
 - **triggeri**, joka käynnistää työnkulun
-- **tekoälysolmu**, joka tekee päättelyn tai tuottaa vastauksen
-- **toimintasolmu**, joka tekee jotakin konkreettista, esimerkiksi lähettää viestin, tallentaa rivin tai kutsuu palvelua
+- **tekoälysolmu**, joka valitsee tilanteen perusteella vähintään kahdesta sallitusta seuraavasta toiminnosta
+- **työkalu tai toimintopolku**, jonka harness antaa kielimallin käyttöön rajatuilla oikeuksilla
+- **suoritusjälki**, josta näkyvät syöte, valittu toiminto, työkalun tulos ja seuraava vaihe
 
 Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
@@ -201,7 +202,7 @@ Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
 ## Yhteenveto
 
-Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat agenttisi minimiversion iteratiivisesti: solmu kerrallaan ja jokaisen lisäyksen jälkeen testaten.
+Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat minimiversion iteratiivisesti: ensin datavirta, sitten yksi tilanteen mukaan muuttuva päätös, sen toteuttava työkalu ja näkyvä suoritusjälki.
 
 Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
 

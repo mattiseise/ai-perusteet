@@ -129,19 +129,19 @@ Agentti yhdistää nämä kolme tekijää: se näkee nykyisen tilanteen kontekst
 
 > **Pysähdy hetkeksi:** Ajattele omaa työtäsi tai opintojasi. Mitä tietoa pidät mielessä lyhytaikaisesti? Mitä tietoa säilytät pidempään? Miten seuraat, missä vaiheessa olet jossakin prosessissa? Agentin muisti ja tila toimivat samankaltaisella tavalla.
 
-## Soul — agentin pysyvä identiteetti ja arvot
+## Pysyvät toimintaperiaatteet eivät ole muistia
 
-Konteksti-ikkuna, pitkäkestoinen muisti ja tila muodostavat agentin **toiminnallisen muistin**. Ne auttavat agenttia tekemään päätöksiä. Lisäksi tarvitaan kuitenkin jotain pysyvämpää: **soul** eli agentin pysyvä identiteetti ja arvot.
+Konteksti-ikkuna, pitkäkestoinen muisti ja tila kertovat, mitä tietoa agentilla on käytettävissään. Niistä pitää erottaa **pysyvät toimintaperiaatteet**: järjestelmäohjeet ja harnessin säännöt, jotka määrittävät, miten agentin pitää toimia tilanteesta toiseen.
 
-Soul on kuin agentin moraalikompassi. Se vastaa kolmeen kysymykseen, jotka agentti pitää mielessään tilanteesta toiseen:
+Toimintaperiaatteet vastaavat kolmeen kysymykseen:
 
-**Ensimmäinen kysymys: Kuka minä pohjimmiltani olen?** Soul määrittää agentin identiteetin. Se ei kerro vain sitä, mitä agentti tekee, vaan myös sen, millainen toimija se on. Esimerkiksi: ”Olen kärsivällinen neuvoja, joka arvostaa asiakkaan aikaa ja yrittää auttaa ensin selkeästi ennen kuin pyytää asiakkaalta lisätietoja.” Tämä identiteetti ei muutu tehtävästä toiseen.
+**Ensimmäinen kysymys: Mikä on agentin tehtävä ja toimintatapa?** Esimerkiksi: ”Toimi kärsivällisenä neuvojana. Anna ensin lyhyt toimintaohje ja pyydä lisätietoa vain, jos se on ratkaisun kannalta tarpeen.” Ohje kuvaa havaittavaa toimintaa, ei koneen sisäistä luonnetta.
 
-**Toinen kysymys: Mitä arvoja minulla on, ja mitä en koskaan tee?** Soul sisältää ehdottomat rajat. Esimerkiksi: ”En koskaan palauta asiakkaan salasanaa, vaan kerron, miten hän voi nollata sen itse.” ”En koskaan jaa yhden asiakkaan tietoja toiselle asiakkaalle.” ”Jos minulla ei ole vastausta, kerron sen suoraan enkä arvaa.” Nämä ovat agentin pysyviä arvoja. Ne ohjaavat toimintaa erityisesti silloin, kun tilanne on epäselvä eikä yksittäinen sääntö riitä.
+**Toinen kysymys: Mitkä rajat ovat voimassa aina?** Esimerkiksi: agentti ei palauta salasanaa, jaa toisen asiakkaan tietoja eikä esitä puuttuvaa tietoa varmana. Osa rajoista kirjoitetaan järjestelmäohjeisiin, mutta kriittiset rajat toteutetaan myös harnessissa oikeuksina, tarkistuksina ja hyväksyntäportteina.
 
-**Kolmas kysymys: Miten päätän epäselvissä tilanteissa?** Soul antaa agentille perustan päätöksentekoon. Esimerkiksi: ”Jos olen epävarma, suosin asiakkaan turvallisuutta.” ”Jos asiakkaan pyyntö on ristiriidassa turvasääntöjen kanssa, turvasäännöt voittavat.” ”Jos minulla ei ole tarpeeksi tietoa, pyydän apua ennen kuin toimin.”
+**Kolmas kysymys: Miten epäselvä tilanne käsitellään?** Esimerkiksi: jos tietoa ei ole tarpeeksi, agentti pyytää tarkennusta; jos toimintaan liittyy korkea riski, harness pysäyttää vaiheen ja pyytää ihmisen hyväksynnän.
 
-Käytännössä soul voidaan kirjoittaa **erilliseksi dokumentiksi**, johon agentti viittaa päätöksissään. Se toimii agentin sisäisenä ohjeena, jonka periaatteet näkyvät kaikissa tilanteissa: asiakkaiden kanssa, kollegoiden kanssa ja myös kriisitilanteissa.
+Käytännössä toimintaperiaatteet voidaan dokumentoida erikseen ja muuntaa järjestelmäohjeiksi, käyttöoikeuksiksi ja valvontasäännöiksi. Ne eivät ole agentin muistoja eivätkä todiste tietoisuudesta tai arvoista. Ne ovat ihmisen suunnittelema osa harnessia.
 
 ## Muistin turvallisuus ja hallinta
 
@@ -153,7 +153,7 @@ Muistin hallinta vaatii myös **säännöllistä puhdistamista**. Vanhentuneet t
 
 ## Kohti omaa projektia
 
-Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi. Mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana? Mitä sen täytyy muistaa keskustelujen välillä? Mitä tiloja prosessillasi on? Nämä päätökset muodostavat **Agentti: Muisti** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+Nyt kun ymmärrät konteksti-ikkunan, pitkäkestoisen muistin ja tilan, mieti omaa agenttiprojektiasi. Mitä tietoa agenttisi tarvitsee yksittäisen suorituksen aikana? Mitä sen täytyy säilyttää suoritusten välillä? Mitä tiloja prosessilla on? Kirjaa toimintaperiaatteet erikseen, jotta muistitieto ja järjestelmää ohjaavat säännöt eivät sekoitu toisiinsa.
 
 > **Lopuksi pohdittavaksi:** Mitä tietoa harness antaa mallille nyt, mitä se säilyttää myöhemmäksi ja mitä sen pitää jättää tallentamatta?
 
@@ -161,7 +161,7 @@ Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttip
 
 Agentti hahmottaa nykyhetkeä **konteksti-ikkunan** avulla. Konteksti-ikkuna voi sisältää esimerkiksi 20–200 viimeistä viestiä sen mukaan, millaista tehtävää agentti hoitaa. Agentilla voi olla myös **pitkäkestoinen muisti**, joka tallentuu esimerkiksi vektoritietokantaan ja auttaa löytämään samankaltaisia merkityksiä, ei vain täsmällisiä sanoja. Lisäksi agentilla on **tila**, joka kertoo, missä vaiheessa prosessi on ja mitä muuttujia siihen liittyy.
 
-Nämä kolme tekijää antavat agentille kyvyn toimia johdonmukaisesti: se näkee nykyisen tilanteen, muistaa aiempia asioita ja ymmärtää prosessin vaiheen. Lisäksi agentilla voi olla **soul** eli pysyvä identiteetti ja arvot, jotka ohjaavat sen toimintaa kaikissa tilanteissa. Kun rakennat agenttia n8n:llä seuraavilla oppitunneilla, konteksti, pitkäkestoinen muisti, tila ja soul auttavat sinua suunnittelemaan agentista johdonmukaisemman, turvallisemman ja luotettavamman.
+Nämä kolme tekijää auttavat agenttia käyttämään oikeaa tietoa oikeassa vaiheessa. Pysyvät toimintaperiaatteet ovat eri asia: ne kirjoitetaan järjestelmäohjeisiin ja toteutetaan tarvittaessa harnessin säännöillä. Kun rakennat agenttia n8n:llä, pidä erillään **mitä agentti tietää**, **missä vaiheessa tehtävä on** ja **mitkä säännöt rajaavat toimintaa**.
 
 ---
 

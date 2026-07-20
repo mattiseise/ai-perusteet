@@ -29,12 +29,12 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 
 ### Tekoälyjen käyttö — Generatiivisten tekoälytyökalujen käyttö
 
-- [Tunti 10: Kilpailuta tekoälyt — mikä työkalu mihinkin?](https://aiperusteet.fi/kurssi/tunti-10/)
+- [Tunti 10: Kilpailuta tekoälyt — vertaa ennen kuin valitset](https://aiperusteet.fi/kurssi/tunti-10/)
 - [Tunti 11: Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja](https://aiperusteet.fi/kurssi/tunti-11/)
-- [Tunti 12: Anna konteksti — rakenna oma promptauspankkisi](https://aiperusteet.fi/kurssi/tunti-12/)
+- [Tunti 12: Rakenna uudelleen käytettävä promptikortti](https://aiperusteet.fi/kurssi/tunti-12/)
 - [Tunti 13: AI työparina — pohja, muokkaus ja tarkistus](https://aiperusteet.fi/kurssi/tunti-13/)
-- [Tunti 14: Oma botti I — suunnittelu, ohjeet ja persoona](https://aiperusteet.fi/kurssi/tunti-14/)
-- [Tunti 15: Oma botti II — tietopohja, rajaukset ja testaus](https://aiperusteet.fi/kurssi/tunti-15/)
+- [Tunti 14: Oma botti I — käyttäjä, tehtävä ja rajat](https://aiperusteet.fi/kurssi/tunti-14/)
+- [Tunti 15: Oma botti II — tietopohja ja testisuunnitelma](https://aiperusteet.fi/kurssi/tunti-15/)
 - [Tunti 16: Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi](https://aiperusteet.fi/kurssi/tunti-16/)
 - [Tunti 17: Projektidokumenttibotti — suunnittele ja aloita rakentaminen](https://aiperusteet.fi/kurssi/tunti-17/)
 - [Tunti 18: Projektidokumenttibotti — viimeistele ja esittele](https://aiperusteet.fi/kurssi/tunti-18/) (arviointitunti)

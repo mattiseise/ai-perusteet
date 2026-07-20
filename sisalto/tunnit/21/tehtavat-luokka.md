@@ -1,6 +1,6 @@
 # Opiskelutehtävät: Agentin muisti ja konteksti
 
-> Tämä tunti rakentaa lopputyösi toista osaa. Tänään suunnittelet, miten agenttisi muistaa asioita ja millainen sen identiteetti on. Tuotos: **Agentti: Muisti** (2/5).
+> Tämä tunti rakentaa lopputyösi toista osaa. Tänään suunnittelet, mitä agentti näkee nyt, mitä se säilyttää myöhemmäksi ja miten tehtävän tila kuvataan. Tuotos: **Agentti: Muisti** (2/5).
 
 *Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet ainakin Agentti: Muisti -tehtävän — se on lopputyösi osa.*
 
@@ -20,7 +20,7 @@ Avaa muistiinpanoistasi Agentti: Ongelma. Kirjoita yhteensä 150–200 sanaa, ja
 
 **3. Tilat ja tilasiirtymät.** Mitä eri tiloja agentillasi voi olla? Mitkä ehdot liikuttavat tilasta toiseen? Jos agenttisi suorittaa tehtävän kerralla ilman tilamuutoksia, riittää maininta tästä.
 
-**4. Identiteetti (soul).** Millainen agenttisi on luonteeltaan? Kuka se on, mitä arvoja se noudattaa aina, miten se päättää epäselvissä tilanteissa? Tämä päätyy lopulta järjestelmäpromptin perustaksi.
+**4. Pysyvät toimintaperiaatteet — erillään muistista.** Kirjoita 2–3 havaittavaa sääntöä siitä, miten agentti toimii epäselvässä tilanteessa. Merkitse jokaisesta, toteutetaanko se järjestelmäohjeena, harnessin tarkistuksena vai ihmisen hyväksyntäporttina. Älä käsittele näitä sääntöjä muistina.
 
 ### Tekoälyvaihe — arvioi muistivalinnat
 

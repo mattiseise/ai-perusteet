@@ -239,7 +239,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 </tbody>
 </table></div><h2 style="font-family:var(--font-serif);font-size:26px;margin:36px 0 8px">02 · KÄYTTÖ · Tekoälyjen käyttö — lopputyö</h2><div class="reading panel active"><h1>Tekoälyjen käyttö -osion lopputyö: Rakenna oma apuri-botti</h1>
 <p>Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Rakennat itse suunnittelemasi <strong>apuri-botin</strong> valitsemallasi saatavilla olevalla alustalla. Jos bottialustaa tai tiliä ei ole käytettävissä, teet vastaavan dokumentoidun kuivaharjoittelun tavallisessa kielimallichatissa. Et tee koko työtä yhdellä istumalla — keräät matkan varrella <strong>kolme rakennuspalikkaa</strong>, joista kasaat botin tunnilla 17 ja viimeistelet sen tunnilla 18.</p>
-<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — promptauspankki (tunti 12), botin määrittely (tunti 14) ja kuratoitu tietopohja (tunti 15). Kun palikat ovat valmiina, tunneilla 17–18 voit keskittyä rakentamiseen, testaamiseen ja viimeistelyyn.</p>
+<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — testattu promptikortti (tunti 12), botin määrittely (tunti 14) sekä kuratoitu tietopohja ja testisuunnitelma (tunti 15). Tunnilla 17 rakennat ensimmäisen toteutuksen ja ajat ennalta suunnitellut testit. Tunnilla 18 korjaat, testaat uudelleen ja arvioit lopputuloksen.</p>
 </blockquote>
 <h2>Mitä rakennat?</h2>
 <p><strong>Apuri-botti tai sen todennettava kuivaharjoittelu</strong>, joka auttaa rajatussa arjen, opiskelun, harrastuksen tai muun itse valitun tilanteen tehtävässä. Botti on <em>ohjaava, ei kirjoittava</em> — se ei tee kaikkea käyttäjän puolesta, vaan auttaa käyttäjää etenemään hallitusti.</p>
@@ -251,7 +251,7 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 <li><strong>Pelit, musiikki tai sisältö</strong> — auttaa ideoimaan pelin, biisin tai videon</li>
 <li><strong>Arjen apuri</strong> — auttaa suunnittelemaan vaikka treenirutiinin tai viikkoaikataulun</li>
 </ul>
-<p>Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi aiheeseen. Tämä erottaa sinun bottisi yleisestä ChatGPT:stä.</p>
+<p>Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi tehtävään.</p>
 <h2>Polku alusta loppuun</h2>
 <p>Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella ja kootaan botiksi tunnilla 17.</p>
 <table>
@@ -270,8 +270,8 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 </tr>
 <tr>
 <td><strong>12</strong></td>
-<td>Rakennat oman promptauspankkisi</td>
-<td><strong>Rakennuspalikka 1: Promptauspankki</strong></td>
+<td>Rakennat ja testaat yhden uudelleen käytettävän promptikortin</td>
+<td><strong>Rakennuspalikka 1: Promptikortti</strong></td>
 </tr>
 <tr>
 <td>13</td>
@@ -285,8 +285,8 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 </tr>
 <tr>
 <td><strong>15</strong></td>
-<td>Kuratoit botin tietopohjan</td>
-<td><strong>Rakennuspalikka 3: Tietopohja</strong></td>
+<td>Kuratoit tietopohjan ja kirjoitat testit ennen toteutusta</td>
+<td><strong>Rakennuspalikka 3: Tietopohja ja testisuunnitelma</strong></td>
 </tr>
 <tr>
 <td>16</td>
@@ -309,12 +309,12 @@ Yrityksesi tuottaa markkinointisisältöä tekoälyllä. Asiakas huomaa, että k
 </blockquote>
 <h2>Kolmen rakennuspalikan yleiskuvaus</h2>
 <p>Yksityiskohtaiset ohjeet kunkin rakennuspalikan tekemiseen saat kyseisellä tunnilla. Tässä lyhyt yleiskuvaus, jotta näet kokonaisuuden.</p>
-<p><strong>Rakennuspalikka 1: Promptauspankki (tunti 12)</strong><br />
-Oma kokoelma toimivia prompteja valitsemaasi arjen tai harrastuksen, opiskelun tai työelämän rooliskenaarioon. Tämä antaa pohjan botin järjestelmäpromptille, joka määrittää botin käytöksen.</p>
+<p><strong>Rakennuspalikka 1: Promptikortti (tunti 12)</strong><br />
+Yksi kahdella versiolla testattu prompti, sen käyttötilanne, laatukriteerit ja tunnettu raja. Kortin toimiva rakenne antaa pohjan botin järjestelmäpromptille.</p>
 <p><strong>Rakennuspalikka 2: Botin määrittely (tunti 14)</strong><br />
 Botin "perustamisasiakirja": kenelle botti on, mitä se osaa, mitä se ei tee, mitkä ovat sen rajat. Ilman tätä botti kasvaa hallitsemattomasti.</p>
-<p><strong>Rakennuspalikka 3: Tietopohja (tunti 15)</strong><br />
-3–5 dokumenttia, joista botti saa valitun kontekstin tiedon. Tämä on botin tietopohja. Kuratointi on tärkeämpää kuin määrä.</p>
+<p><strong>Rakennuspalikka 3: Tietopohja ja testisuunnitelma (tunti 15)</strong><br />
+3–5 perustellusti valittua dokumenttia sekä positiivinen testi, negatiivinen testi ja reunatapaus odotettuine tuloksineen. Kuratointi on tärkeämpää kuin määrä, ja testien odotukset päätetään ennen ensimmäistä ajoa.</p>
 <h2>Lopputuotoksen vaatimukset</h2>
 <p>Tunti 18:n päätteeksi palautat ja esittelet seuraavat:</p>
 <p><strong>1. Toimiva botti tai kuivaharjoittelu</strong><br />
@@ -336,7 +336,7 @@ Mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? 
 <h2>Työkalut ja työskentelytapa</h2>
 <p><strong>Alusta:</strong> valitse saatavilla oleva bottialusta tai tavallinen kielimallichat kuivaharjoitteluun.</p>
 <p>Opettaja kertoo käytettävissä olevat alustat tunnilla 17. Tunnuksen puuttuminen ei estä työn tekemistä.</p>
-<p><strong>Tekoälytyökalu botin rakentamiseen:</strong> Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole keksiä kaikkea itse, vaan ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä. Sinun vastuullasi on, että botti toimii ammattimaisesti ja että ymmärrät sen rakenteen kokonaan.</p>
+<p><strong>Tekoälytyökalu botin rakentamiseen:</strong> Voit käyttää saatavilla olevaa ja aineistollesi hyväksyttyä palvelua. Tarkoitus ei ole keksiä kaikkea itse, vaan käyttää tekoälyä suunnittelun, testauksen ja viimeistelyn tukena. Sinun vastuullasi on, että botti toimii tarkoituksenmukaisesti ja että ymmärrät sen rakenteen kokonaan.</p>
 <p><strong>Yksin tai pareittain:</strong> Lopputyö tehdään yksin, koska bottisi on juuri sinun valitsemasi aiheen näköinen. Voit kuitenkin sparrata luokkakavereiden kanssa rakennuspalikoiden kokoamisessa.</p>
 <h2>Arviointi</h2>
 <p>Lopputyö arvioidaan viiden kriteerin pohjalta. Yhteensä 100 pistettä.</p>
@@ -557,7 +557,7 @@ Mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? 
 </tr>
 <tr>
 <td><strong>21</strong></td>
-<td>Suunnittelet muistirakenteen ja identiteetin</td>
+<td>Suunnittelet muistirakenteen ja toimintaperiaatteet</td>
 <td>Agentti: Muisti (2/5)</td>
 </tr>
 <tr>
@@ -597,7 +597,7 @@ Mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? 
 <p><strong>1. Agentti: Ongelma (tunti 19)</strong><br />
 Kuvaa, mistä ongelmasta on kyse, kenelle se aiheutuu ja miksi juuri agentti sopii ratkaisuksi. Kirjoita 150–200 sanaa.</p>
 <p><strong>2. Agentti: Muisti (tunti 21)</strong><br />
-Lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.</p>
+Kuvaa lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti sekä tilat ja tilasiirtymät. Erota muistista järjestelmäpromptissa määriteltävä tehtävä ja harnessin säännöissä määriteltävät rajat, oikeudet ja eskalointi. 150–200 sanaa.</p>
 <p><strong>3. Agentti: Päättely (tunti 23)</strong><br />
 Valitse ReAct tai ketjuajattelu ja perustele, kumpi sopii agenttisi ongelmaan. Kuvaa myös, miten päättelymalli näkyy n8n-rakenteessa. Kirjoita 150–200 sanaa.</p>
 <p><strong>4. Agentti: Turva (tunti 24)</strong><br />

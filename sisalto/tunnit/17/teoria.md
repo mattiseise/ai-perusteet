@@ -25,7 +25,7 @@ Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:
 
 | Rakennuspalikka | Mihin osaan järjestelmäpromptia? |
 | --- | --- |
-| **1: Promptauspankki** | Tyyli ja kieli. Olet jo nähnyt, millainen muotoilu toimii. Käytä sitä botin pääohjeessa. |
+| **1: Promptikortti** | Testattu rakenne ja kieli. Käytä pääohjeessa ratkaisuja, joiden vaikutuksen osoitit tunnilla 12. |
 | **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
 | **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäpromptia, vaan se ladataan erikseen Copilotiin. Järjestelmäpromptissa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
 
@@ -71,7 +71,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
     </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptipankista tulee tyyli, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
+<figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptikortista tulee testattu rakenne, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
 <style>
 .l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
 .l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}

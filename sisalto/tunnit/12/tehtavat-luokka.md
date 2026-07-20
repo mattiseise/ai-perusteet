@@ -1,81 +1,97 @@
-# Rakennuspalikka 1 — Promptauspankki
+# Rakennuspalikka 1 — Promptipankin ensimmäinen kortti
 
-> **Tämä on ensimmäinen kolmesta rakennuspalikasta**, jotka keräät Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
+> Tämä on ensimmäinen kolmesta rakennuspalikasta. Tunnin tuotoksena syntyy yksi huolellisesti testattu ja uudelleen käytettävä promptikortti — ei pitkä lista kokeilemattomia prompteja.
 
 ## Mitä teet?
 
-Rakennat itsellesi **promptauspankin** — kokoelman 5–7 omaa, hyvin toimivaa promptia, joita voit käyttää uudelleen. Tämä on bottisi tulevan järjestelmäpromptin **raaka-aine**: kun tunnilla 17 kirjoitat botille pääohjetta, otat siihen toimivat rakenteet suoraan tästä pankista.
+Valitset yhden omassa arjessa, opiskelussa tai työssä toistuvan tehtävän. Rakennat sitä varten promptikortin, testaat kaksi versiota samalla aineistolla ja perustelet, mikä muutos paransi tulosta.
 
-Promptauspankki ei ole pelkkä lista esimerkkejä. Se on **kokoelma promptirakenteita, jotka olet itse testannut**. Tiedät, että ne toimivat, koska olet nähnyt niiden tuloksen.
+Kortista tehdään myöhemmin promptipankin ensimmäinen osa. Tunnilla 17 hyödynnät sen toimivaa rakennetta bottisi järjestelmäpromptin kirjoittamisessa.
 
-## Vaiheet
+## Vaihe 1 — Valitse toistuva tehtävä
 
-### Vaihe 1 — Tunnista omat työtilanteesi
+Valitse tehtävä, jonka lopputuloksen osaat itse arvioida. Esimerkiksi:
 
-Mieti, millaisia tehtäviä teet säännöllisesti arjessa, opiskelussa, harrastuksessa tai muussa itse valitsemassasi tilanteessa. Listaa 5–7 erilaista tilannetta, joissa voisit hyötyä tekoälyn avusta. Valitse itseäsi kiinnostava aihe. Esimerkkejä eri tilanteista:
+- asiakasviestin tai tiedotteen luonnostelu
+- vaikean käsitteen selittäminen tietylle yleisölle
+- palautteen jäsentäminen teemoiksi
+- opiskelusuunnitelman laatiminen annetun aineiston perusteella
+- käyttöohjeen muokkaaminen aloittelijalle sopivaksi
 
-- **Liiketalous ja kauppa:** asiakasviestin muotoilu, kampanjan ideointi, myyntiluvun perustelu
-- **Sosiaali- ja terveysala:** ohjeen selkokielistäminen, tapahtuman tiedote, perehdytysmateriaali
-- **Media ja viestintä:** otsikoiden ideointi, käsikirjoituksen tiivistäminen, somepostauksen luonnos
-- **Ravintola- ja catering:** menun kuvaustekstit, tilausvahvistuksen pohja, allergialistan tarkistus
-- **Lukioaineet ja harrastukset:** esseen rakenteen suunnittelu, treeniohjelman jäsentäminen, tapahtuman aikataulu
-- **IT:** käyttöohjeen kirjoittaminen, virheilmoituksen tulkinta, koodin selitys
+Kirjoita yhdellä lauseella: **Mitä teen, kenelle ja mihin lopputulosta käytetään?**
 
-Yhden tilanteen kannattaa liittyä siihen aiheeseen, jolle aiot rakentaa oman apuri-bottisi (tunnit 17–18) — tämä on suora yhteys tunnin 18 lopputuotokseen.
+## Vaihe 2 — Kirjoita kortin versio 1
 
-### Vaihe 2 — Kirjoita ensimmäinen versio jokaisesta promptista
+Täytä promptikortti:
 
-Tunnilla 4 opit, että hyvä prompti rakentuu viidestä osasta. Idea on yksinkertainen: paljas kysymys ("Miten teen X?") jättää tekoälylle liikaa tulkinnanvaraa ja tuottaa yleisluontoisia vastauksia. Kun lisäät kontekstia — kenelle, mihin tilanteeseen, missä muodossa — vastaus muuttuu täsmälliseksi ja heti käyttökelpoiseksi.
+| Osa | Sisältö |
+| --- | --- |
+| Kortin nimi |  |
+| Käyttötilanne |  |
+| Tavoite |  |
+| Käyttäjä tai yleisö |  |
+| Lähdeaineisto |  |
+| Työvaiheet |  |
+| Haluttu muoto |  |
+| Tarkistus tai laatukriteerit |  |
 
-Käytä tätä samaa viiden osan kehystä jokaisessa pankkisi promptissa:
+Kirjoita kortin pohjalta ensimmäinen prompti. Merkitse vaihdettavat kohdat hakasulkeisiin, esimerkiksi `[yleisö]`, `[lähdeaineisto]` ja `[pituus]`. Näin promptia voi käyttää uudelleen ilman, että koko teksti kirjoitetaan alusta.
 
-| Osa | Mitä siihen tulee? |
-|---|---|
-| **Rooli** | Kenenä tekoälyn pitää toimia? Esim. *"Olet kokenut projektisuunnittelun ohjaaja."* |
-| **Tausta** | Mikä on tilanne ja kuka sinä olet? Esim. *"Olen toisen vuoden opiskelija, joka kirjoittaa suunnitelmaa ryhmäprojektiin."* |
-| **Tavoite** | Mitä haluat saada aikaan? Esim. *"Haluan listan riskeistä, jotka projektin alussa pitää tunnistaa."* |
-| **Rajaukset** | Mitä et halua tai mitä tulee välttää? Esim. *"Älä anna yleisiä neuvoja — pysy pienen yrityksen tilanteessa."* |
-| **Formaatti** | Missä muodossa vastaus pitää antaa? Esim. *"Anna 5–7 kohdan lista, jossa jokaisen kohdan alla 1–2 lauseen perustelu."* |
+## Vaihe 3 — Testaa hallitusti
 
-Älä yritä saada täydellistä versiota kerralla. Kirjoita raakaversiot — niitä parannetaan seuraavissa vaiheissa.
+Anna prompti valitsemallesi tekoälypalvelulle. Tallenna:
 
-### Vaihe 3 — Testaa ja iteroi tekoälyn kanssa
+- käytetty prompti
+- syöte tai lähdeaineisto
+- saatu vastaus
+- kaksi havaintoa siitä, mikä toimii
+- yksi nimetty ongelma
 
-Avaa ChatGPT, Claude tai Copilot ja testaa jokainen promptisi. Kirjaa muistiin:
+Arvioi vastausta ennen seuraavaa versiota. Älä muuta samalla kertaa kaikkea.
 
-- Toimiko prompti heti?
-- Mitä jouduit tarkentamaan jälkikäteen?
-- Mikä rakenneosa puuttui tai oli liian löysä?
+## Vaihe 4 — Tee yksi perusteltu muutos
 
-Käytä lopuksi tekoälyä apunasi promptien parantamiseen. Esimerkkiprompti:
+Valitse yksi ongelmaan liittyvä muutos. Voit esimerkiksi:
 
+- tarkentaa yleisöä
+- nimetä lähdeaineiston selvemmin
+- jakaa tehtävän vaiheisiin
+- määrittää vastausrakenteen
+- lisätä laatukriteerin tai tarkistuspyynnön
+
+Kirjoita **versio 2** ja aja se samalla lähtöaineistolla. Jos vaihdat sekä promptin että aineiston, et pysty päättelemään, mistä ero johtui.
+
+## Vaihe 5 — Vertaa näyttöä
+
+Täytä vertailu:
+
+| Arviointikohta | Versio 1 | Versio 2 | Näyttö |
+| --- | --- | --- | --- |
+| Vastaako tehtävään? |  |  |  |
+| Sopiiko yleisölle? |  |  |  |
+| Käyttääkö lähdeaineistoa oikein? |  |  |  |
+| Onko muoto käyttökelpoinen? |  |  |  |
+| Mitä pitää vielä tarkistaa? |  |  |  |
+
+Kirjoita lopuksi johtopäätös:
+
+> Muutin promptissa ____. Muutos vaikutti tulokseen näin: ____. Päätelmä perustuu tähän havaintoon: ____.
+
+## Tekoälyvaihe — haasta arvio
+
+```text
+Tässä ovat saman tehtävän promptiversiot 1 ja 2 sekä niiden vastaukset.
+Oma johtopäätökseni on: [kirjoita]. Esitä kolme kysymystä, joilla
+voin tarkistaa, perustuuko päätelmäni näkyvään eroon vai omaan
+ennakko-oletukseeni. Älä valitse voittajaa puolestani.
 ```
-Toimit minulle promptaussparrauskumppanina. Rakennan itselleni
-promptauspankkia, johon kerään uudelleenkäytettäviä prompteja.
-Tässä yksi prompti ja sen tuottama vastaus:
 
-PROMPTI: [liitä promptisi]
+Tee tarvittaessa yksi korjaus johtopäätökseesi.
 
-VASTAUS: [liitä saatu vastaus]
+---
 
-Mitä prompissa toimii hyvin? Mikä siinä jättää vielä toivomisen
-varaa? Anna 1–2 konkreettista parannusehdotusta — älä kirjoita
-uutta versiota puolestani, vaan kerro mitä kannattaa muuttaa ja
-miksi.
-```
+**Tallennettava tuotos:** yksi promptikortti, versiot 1 ja 2, molemmat vastaukset, vertailutaulukko sekä yhden muutoksen vaikutusta koskeva johtopäätös.
 
-Tee tämä jokaiselle promptille. Tämä on harjoitus siitä, miten tekoälyä käytetään *oman työn parantamiseen*, ei korvikkeena ajattelulle.
-
-### Vaihe 4 — Kirjoita pankin lopulliset versiot (tämä on rakennuspalikkasi)
-
-Viimeistele jokainen prompti sparrauksen jälkeen. Kokoa ne yhteen dokumenttiin selkeästi otsikoituna:
-
-- **Promptin nimi tai käyttötilanne** (esim. "Selkeän käyttöohjeen kirjoittamiseen")
-- **Itse prompti** kokonaisuudessaan
-- **Lyhyt huomio** (1–2 lausetta): mihin tämä toimii parhaiten, mihin se ei sovi
-
-Lopuksi kirjoita lyhyt yhteenveto (3–5 lausetta): *"Mitä huomasin näiden 5–7 promptin kirjoittamisessa? Mikä rakenne toistuu eniten? Mihin näistä palaisin uudelleen?"*
-
-> **Miksi tämä on tärkeää:** Oppitunneilla 17–18 kirjoitat bottisi **järjestelmäpromptin**, joka määrittää botin toimintaa. Hyödynnät siinä tämän tehtävän toimiviksi osoittautuneita rakenteita.
+Kun kortti toimii, voit myöhemmin lisätä pankkiin uusia kortteja samalla rakenteella. Yksi testattu kortti on arvokkaampi kuin seitsemän promptia, joiden toimivuudesta et osaa sanoa mitään.
 
 **1 / 3 rakennuspalikkaa kerätty**

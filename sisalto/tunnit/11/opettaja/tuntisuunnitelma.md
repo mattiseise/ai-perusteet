@@ -179,7 +179,7 @@ Oppimistavoite on datavirran ja käyttöpäätöksen muodostaminen, ei tietyn pa
 
 ## Yhteys seuraavaan tuntiin
 
-Tunnilla 12 opiskelija rakentaa promptauspankkia. Muistuta:
+Tunnilla 12 opiskelija rakentaa yhden testatun ja uudelleenkäytettävän promptikortin. Muistuta:
 
 > Hyvä konteksti parantaa vastausta, mutta kaikkea saatavilla olevaa aineistoa ei pidä liittää promptiin. Ensin päätetään, mitä tietoa saa käyttää ja missä ympäristössä.
 

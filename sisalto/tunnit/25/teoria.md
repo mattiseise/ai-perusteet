@@ -177,15 +177,15 @@ Koko prosessi on hybridi. Agentti tekee rutiinianalyysin ja toteuttaa toimenpite
 
 > **Pysähdy hetkeksi:** Ajattele omaa tulevaa työtäsi. Mikä prosessi voitaisiin automatisoida agentin avulla, mutta vaatisi ihmisen hyväksynnän kriittisissä vaiheissa? Missä kohdissa ihminen täytyy ottaa mukaan?
 
-## Agentin oppiminen ihmisen palautteesta
+## Ihmisen palaute kehitysaineistona
 
-Ihmisen osallistuminen päätöksentekoon ei tarkoita vain sitä, että ihminen hyväksyy tai hylkää päätöksiä. Se tarkoittaa myös sitä, että **agentti voi oppia ihmisen palautteesta**. Kun ihminen hylkää agentin ehdotuksen, agentti voi tallentaa hylkäyksen syyn. Kun ihminen hyväksyy ehdotuksen, agentti voi tallentaa, millainen ehdotus hyväksyttiin ja miksi.
+Ihmisen osallistuminen ei tarkoita vain ehdotuksen hyväksymistä tai hylkäämistä. Päätöksestä voi syntyä **kehitysaineistoa**: mitä ehdotettiin, mitä ihminen päätti ja millä perusteella. Tieto voidaan tallentaa lokiin myöhempää arviointia varten. Tallentaminen ei vielä tarkoita, että kielimalli olisi oppinut tapahtumasta.
 
-Esimerkiksi agentti tekee alennusehdotuksia. Yksi myyntipäällikkö hyväksyy usein 40 % alennuksia, kun taas toinen hyväksyy yleensä vain 15 % alennuksia. Agentti voi oppia palautteesta, että hyväksyjien päätöstyylit eroavat toisistaan. Tämän perusteella se voi myöhemmin tehdä realistisempia ehdotuksia eri hyväksyjille.
+Esimerkiksi agentti tekee alennusehdotuksia. Lokista voidaan havaita, että hyväksyjien päätökset eroavat toisistaan. Tästä ei pidä suoraan päätellä, että agentin kannattaa jäljitellä yhden henkilön päätöstyyliä. Ensin ihmisen pitää arvioida, kertooko ero organisaation säännöstä, tapauskohtaisesta poikkeuksesta vai epäjohdonmukaisesta käytännöstä.
 
-Tämä oppiminen perustuu **lokiin ja palautteeseen**. Jokainen hyväksyntä ja hylkäys tallennetaan. Sen jälkeen agentti tai järjestelmän kehittäjä voi etsiä päätöksistä toistuvia kaavoja. Oppiminen ei kuitenkaan tapahdu turvallisesti itsestään. Sinun täytyy suunnitella, mitä palautteesta opitaan, mitä ei opita ja kuka valvoo oppimisen vaikutuksia.
+Palautteen hyödyntäminen perustuu **lokiin, arviointiin ja hallittuun muutokseen**. Kehittäjä tai vastuuhenkilö voi tunnistaa toistuvan ongelman, muuttaa järjestelmäpromptia, sääntöä, tietopohjaa tai testitapausta ja tarkistaa vaikutuksen uudella testillä. Joissakin järjestelmissä palautetta voidaan käyttää myös mallin tai erillisen päätöskomponentin kouluttamiseen, mutta se on oma valvottu kehitysprosessinsa.
 
-**Vinkki:** Agentin ei kannata oppia kaikesta palautteesta automaattisesti. Jos ihminen teki poikkeuksellisen päätöksen kiireen tai erityistilanteen takia, sitä ei välttämättä pidä muuttaa yleiseksi säännöksi. Palautteen hyödyntäminen vaatii harkintaa ja seurantaa.
+**Vinkki:** Älä rakenna suoraa sääntöä ”hyväksytty päätös → agentin uusi toimintatapa”. Poikkeus, virhe tai vinoutunut päätös voi muuten muuttua järjestelmän yleiseksi käytännöksi. Muutos hyväksytään vasta arvioinnin ja testauksen jälkeen.
 
 ## Kohti n8n-projekteja — kaikki yhdistyy
 
@@ -231,7 +231,7 @@ Yhdessä nämä muodostavat suunnitelman, jonka pohjalta rakennat n8n-työnkulun
 
 **Hyväksyntäportit** tehdään selkeiksi ja nopeiksi, jotta ihminen voi vastata ilman, että koko prosessi pysähtyy tarpeettoman pitkäksi aikaa. Hyvässä hyväksyntäportissa näkyvät päätös, perustelut, riskit, hyväksyjä ja vaihtoehtoinen polku, jos pyyntö hylätään.
 
-Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rutiinivaiheita, kun taas ihminen tekee kriittiset päätökset. Agentti voi myös oppia ihmisen palautteesta, kun hyväksynnät ja hylkäykset tallennetaan lokiin ja niitä käytetään toiminnan kehittämiseen.
+Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rajattuja vaiheita, kun taas ihminen tekee kriittiset päätökset. Hyväksynnät, hylkäykset ja perustelut voidaan tallentaa kehitysaineistoksi. Järjestelmää muutetaan niiden perusteella vasta hallitun arvioinnin ja testauksen kautta.
 
 Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan **älykäs, turvallinen ja hallittu agentti**.
 

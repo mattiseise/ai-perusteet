@@ -73,7 +73,7 @@ Lopputyö rakentuu yhdeksän tunnin aikana. Kullakin tunnilla syntyy konkreettin
 |---|---|---|
 | **19** | Valitset ongelman ja perustelet, miksi agentti sopii | Agentti: Ongelma (1/5) |
 | **20** | Tarkistat, että ratkaisu vaatii todella agentin | Päätösharjoittelu |
-| **21** | Suunnittelet muistirakenteen ja identiteetin | Agentti: Muisti (2/5) |
+| **21** | Suunnittelet muistirakenteen ja toimintaperiaatteet | Agentti: Muisti (2/5) |
 | **22** | Valitset työkalut (n8n-solmut) | Työkalulista |
 | **23** | Valitset päättelymallin (ReAct vai ketjuajattelu) | Agentti: Päättely (3/5) |
 | **24** | Suunnittelet turvakerroksen | Agentti: Turva (4/5) |
@@ -89,7 +89,7 @@ Pohjapiirrokset ovat suunnitelmadokumentteja, joita keräät omaan muistiinpanod
 Kuvaa, mistä ongelmasta on kyse, kenelle se aiheutuu ja miksi juuri agentti sopii ratkaisuksi. Kirjoita 150–200 sanaa.
 
 **2. Agentti: Muisti (tunti 21)**
-Lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti, tilat ja tilasiirtymät, agentin identiteetti (soul). 150–200 sanaa.
+Kuvaa lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti sekä tilat ja tilasiirtymät. Erota muistista järjestelmäpromptissa määriteltävä tehtävä ja harnessin säännöissä määriteltävät rajat, oikeudet ja eskalointi. 150–200 sanaa.
 
 **3. Agentti: Päättely (tunti 23)**
 Valitse ReAct tai ketjuajattelu ja perustele, kumpi sopii agenttisi ongelmaan. Kuvaa myös, miten päättelymalli näkyy n8n-rakenteessa. Kirjoita 150–200 sanaa.

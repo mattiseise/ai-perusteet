@@ -12,18 +12,18 @@ Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa.
 
 Tämän tunnin työ rakentuu neljään vaiheeseen:
 
-1. **Avaa rakennuspalikat.** Tunnilla 12 kirjoitit promptauspankin, tunnilla 14 botin määrittelyn ja tunnilla 15 kuratoit tietopohjan. Kaikki on nyt käytössä.
+1. **Avaa rakennuspalikat.** Tunnilla 12 teit testatun promptikortin, tunnilla 14 botin määrittelyn ja tunnilla 15 kuratoit tietopohjan sekä kirjoitit testisuunnitelman. Kaikki on nyt käytössä.
 2. **Kirjoita järjestelmäprompti.** Yhdistä rakennuspalikoiden ydin yhdeksi botin pääohjeeksi.
 3. **Rakenna botti Copilotissa.** Luo Copilot Agent, syötä järjestelmäprompti ja lataa tietopohjan dokumentit.
-4. **Aja ensimmäinen testikeskustelu.** Tunnistat, mikä toimii heti ja mihin pitää palata tunnilla 18.
+4. **Aja tunnilla 15 suunnittelemasi kolme testiä.** Älä muuta odotuksia tulosten perusteella. Tunnista, mikä toimii ja mitä korjaat tunnilla 18.
 
 ## Rakennuspalikat työvälineinä
 
 Jokainen rakennuspalikka palvelee tiettyä osaa botista. Älä yritä keksiä mitään uudelleen — käytä mitä olet jo tehnyt:
 
-- **Rakennuspalikka 1** (tunti 12, promptauspankki) → *järjestelmäpromptin rakenne ja kieli.* Olet jo kirjoittanut promptirakenteita, jotka toimivat. Käytä niiden tyyliä ja sanavalintoja botin pääohjeessa.
+- **Rakennuspalikka 1** (tunti 12, promptikortti) → *järjestelmäpromptin rakenne ja kieli.* Olet jo testannut yhden rakenteen kahdella versiolla. Käytä toimivaksi osoittamiasi ratkaisuja botin pääohjeessa.
 - **Rakennuspalikka 2** (tunti 14, botin määrittely) → *järjestelmäpromptin sisältö.* Kaikki kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat ohjekirjoitukseksi botille.
-- **Rakennuspalikka 3** (tunti 15, tietopohja) → *botin asiantuntemuksen lähde.* Lataat dokumentit Copilotiin ja botti käyttää niitä vastauksissaan.
+- **Rakennuspalikka 3** (tunti 15, tietopohja ja testisuunnitelma) → *botin asiantuntemuksen lähde ja ensimmäiset hyväksymisehdot.* Lataat dokumentit alustalle ja ajat ennalta kirjoitetut testit.
 
 ## Bottisi vaatimukset tämän tunnin lopussa
 

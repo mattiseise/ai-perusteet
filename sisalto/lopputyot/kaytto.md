@@ -2,7 +2,7 @@
 
 Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Rakennat itse suunnittelemasi **apuri-botin** valitsemallasi saatavilla olevalla alustalla. Jos bottialustaa tai tiliä ei ole käytettävissä, teet vastaavan dokumentoidun kuivaharjoittelun tavallisessa kielimallichatissa. Et tee koko työtä yhdellä istumalla — keräät matkan varrella **kolme rakennuspalikkaa**, joista kasaat botin tunnilla 17 ja viimeistelet sen tunnilla 18.
 
-> **Miksi näin?** Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — promptauspankki (tunti 12), botin määrittely (tunti 14) ja kuratoitu tietopohja (tunti 15). Kun palikat ovat valmiina, tunneilla 17–18 voit keskittyä rakentamiseen, testaamiseen ja viimeistelyyn.
+> **Miksi näin?** Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — testattu promptikortti (tunti 12), botin määrittely (tunti 14) sekä kuratoitu tietopohja ja testisuunnitelma (tunti 15). Tunnilla 17 rakennat ensimmäisen toteutuksen ja ajat ennalta suunnitellut testit. Tunnilla 18 korjaat, testaat uudelleen ja arvioit lopputuloksen.
 
 ## Mitä rakennat?
 
@@ -16,7 +16,7 @@ Valitset itseäsi kiinnostavan, omasta arjestasi tutun aiheen, esimerkiksi:
 - **Pelit, musiikki tai sisältö** — auttaa ideoimaan pelin, biisin tai videon
 - **Arjen apuri** — auttaa suunnittelemaan vaikka treenirutiinin tai viikkoaikataulun
 
-Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi aiheeseen. Tämä erottaa sinun bottisi yleisestä ChatGPT:stä.
+Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi tehtävään.
 
 ## Polku alusta loppuun
 
@@ -25,10 +25,10 @@ Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella
 | Tunti | Mitä teet | Tuotos |
 |---|---|---|
 | 10–11 | Kilpailutat tekoälyt ja opit tietosuojan | (perusta, ei palautusta) |
-| **12** | Rakennat oman promptauspankkisi | **Rakennuspalikka 1: Promptauspankki** |
+| **12** | Rakennat ja testaat yhden uudelleen käytettävän promptikortin | **Rakennuspalikka 1: Promptikortti** |
 | 13 | Harjoittelet AI:tä työparina | (tarkennus, ei palautusta) |
 | **14** | Suunnittelet botin määrittelyn | **Rakennuspalikka 2: Botin määrittely** |
-| **15** | Kuratoit botin tietopohjan | **Rakennuspalikka 3: Tietopohja** |
+| **15** | Kuratoit tietopohjan ja kirjoitat testit ennen toteutusta | **Rakennuspalikka 3: Tietopohja ja testisuunnitelma** |
 | 16 | Tutustut erikoisalojen tekoälytyökaluihin | (tarkennus, ei palautusta) |
 | **17** | **Kasaat kolme rakennuspalikkaa botiksi tai kuivaharjoitteluksi** | **Ensimmäinen toimiva toteutus** |
 | **18** | **Testaat, viimeistelet ja esittelet** | **Lopputyö valmis** |
@@ -39,14 +39,14 @@ Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella
 
 Yksityiskohtaiset ohjeet kunkin rakennuspalikan tekemiseen saat kyseisellä tunnilla. Tässä lyhyt yleiskuvaus, jotta näet kokonaisuuden.
 
-**Rakennuspalikka 1: Promptauspankki (tunti 12)**
-Oma kokoelma toimivia prompteja valitsemaasi arjen tai harrastuksen, opiskelun tai työelämän rooliskenaarioon. Tämä antaa pohjan botin järjestelmäpromptille, joka määrittää botin käytöksen.
+**Rakennuspalikka 1: Promptikortti (tunti 12)**
+Yksi kahdella versiolla testattu prompti, sen käyttötilanne, laatukriteerit ja tunnettu raja. Kortin toimiva rakenne antaa pohjan botin järjestelmäpromptille.
 
 **Rakennuspalikka 2: Botin määrittely (tunti 14)**
 Botin "perustamisasiakirja": kenelle botti on, mitä se osaa, mitä se ei tee, mitkä ovat sen rajat. Ilman tätä botti kasvaa hallitsemattomasti.
 
-**Rakennuspalikka 3: Tietopohja (tunti 15)**
-3–5 dokumenttia, joista botti saa valitun kontekstin tiedon. Tämä on botin tietopohja. Kuratointi on tärkeämpää kuin määrä.
+**Rakennuspalikka 3: Tietopohja ja testisuunnitelma (tunti 15)**
+3–5 perustellusti valittua dokumenttia sekä positiivinen testi, negatiivinen testi ja reunatapaus odotettuine tuloksineen. Kuratointi on tärkeämpää kuin määrä, ja testien odotukset päätetään ennen ensimmäistä ajoa.
 
 ## Lopputuotoksen vaatimukset
 
@@ -93,7 +93,7 @@ Opettaja kertoo käytettävissä olevat alustat tunnilla 17. Tunnuksen puuttumin
 Et tarvitse tietyn palvelun tiliä. Käytä saatavilla olevaa palvelua tai tee dokumentoitu kuivaharjoittelu.
 :::
 
-**Tekoälytyökalu botin rakentamiseen:** Voit valita vapaasti — ChatGPT, Claude, Copilot tai muu. Tarkoitus ei ole keksiä kaikkea itse, vaan ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä. Sinun vastuullasi on, että botti toimii ammattimaisesti ja että ymmärrät sen rakenteen kokonaan.
+**Tekoälytyökalu botin rakentamiseen:** Voit käyttää saatavilla olevaa ja aineistollesi hyväksyttyä palvelua. Tarkoitus ei ole keksiä kaikkea itse, vaan käyttää tekoälyä suunnittelun, testauksen ja viimeistelyn tukena. Sinun vastuullasi on, että botti toimii tarkoituksenmukaisesti ja että ymmärrät sen rakenteen kokonaan.
 
 **Yksin tai pareittain:** Lopputyö tehdään yksin, koska bottisi on juuri sinun valitsemasi aiheen näköinen. Voit kuitenkin sparrata luokkakavereiden kanssa rakennuspalikoiden kokoamisessa.
 

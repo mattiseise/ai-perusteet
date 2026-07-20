@@ -18,590 +18,22 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 18</span></div><div class="lesson-title">Projektidokumenttibotti — viimeistele ja esittele</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-assess">★ Arviointi</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-18/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-18/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-18/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mikä korjaus paransi bottia, ja mikä ennen–jälkeen-näyttö osoittaa sen?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-18/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-18/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-18-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-18-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-18-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-18-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-18-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-18-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-18-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-18-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — Oppitunti 18: oman apuri-botin viimeistely ja esittely</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus ja konteksti</h2></div><div class="task-card-body">
-<p>Oppitunti 18 on <strong>Tekoälyjen käyttö</strong> -osion arvioinnin toinen osa. Oppitunnilla 17 opiskelijat suunnittelivat ja rakensivat oman apuri-bottinsa ensimmäisen version. Tällä oppitunnilla he viimeistelevät botin, testaavat sen perusteellisesti, dokumentoivat korjaukset ja esittelevät työnsä muille.</p>
-<p>Oppitunnin ydin on, että opiskelija osoittaa osaavansa käyttää tekoälyä <strong>vastuullisesti</strong>, <strong>itsenäisesti</strong> ja <strong>dokumentoidusti</strong>. Arvioinnissa ei katsota vain sitä, onko botti olemassa, vaan sitä, miten opiskelija testaa, parantaa, esittelee ja arvioi omaa työtään.</p>
-<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että valmis botti ei ole arvioinnin ainoa kohde. Arvioinnissa näkyvät myös testaus, iterointi, esittely, vertaispalaute ja reflektio. Hyvä opiskelija osaa näyttää, miten botti toimii, mitä hän oppi ja miten botti voisi kehittyä agentiksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoitteet</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 18</span></div><div class="lesson-title">Projektidokumenttibotti — viimeistele ja esittele</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-assess">★ Arviointi</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-18/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-18/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-18/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mikä korjaus paransi bottia, ja mikä ennen–jälkeen-näyttö osoittaa sen?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-18/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-18/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-18-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-18-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-18-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-18-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-18-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-18-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-18-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-18-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 18: viimeistele ja esittele botti</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
+<p>Tunti 18 on Tekoälyjen käyttö -osion arviointitunti. Oppija käyttää tunnilla 15 ennakkoon kirjoitettuja testejä ja tunnilla 17 saatua ensimmäistä testitulosta, tekee vähintään yhden korjauksen ja osoittaa uudelleentestillä, mitä korjaus vaikutti.</p>
+<p>Arvioinnin kohde ei ole vain valmis botti. Arvioitavaa näyttöä ovat määrittely, tietopohja, järjestelmäprompti, testit, korjaus, uudelleentestaus ja perusteltu reflektio.</p>
+</div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
+<p>Oppija:</p>
 <ul>
-<li>Opiskelija ymmärtää, että botti pitää testata <strong>positiivisilla testeillä</strong>, <strong>negatiivisilla testeillä</strong> ja <strong>reunatapauksilla</strong>.</li>
-<li>Opiskelija ymmärtää, että testauksessa löytyvät virheet ovat osa kehitysprosessia.</li>
-<li>Opiskelija ymmärtää, että esittely vaatii valmistelua: botin tarkoitus, käyttötapa ja hyöty pitää pystyä selittämään muille.</li>
-<li>Opiskelija ymmärtää, että reflektio osoittaa omaa oppimista ja ajattelun kehittymistä.</li>
+<li>ajaa positiivisen, negatiivisen ja reunatapaustestin</li>
+<li>vertaa tulosta etukäteen kirjoitettuun odotukseen</li>
+<li>nimeää yhden korjauksen ja sen kohteen</li>
+<li>ajaa korjausta koskevan testin uudelleen</li>
+<li>esittelee botin tarkoituksen, rajat ja näytön parannuksesta</li>
+<li>arvioi, mihin bottia voi ja ei voi käyttää</li>
 </ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
-<ul>
-<li>Opiskelija testaa omaa bottiaan monipuolisesti ja dokumentoi testien tulokset.</li>
-<li>Opiskelija tunnistaa testien perusteella botin vahvuuksia, puutteita ja korjaustarpeita.</li>
-<li>Opiskelija valmistelee botin esittelyn kirjoittamalla selkeän kuvauksen ja käsikirjoittamalla havainnollistuksen.</li>
-<li>Opiskelija antaa ja vastaanottaa rakentavaa vertaispalautetta.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
-<ul>
-<li>Opiskelija viimeistelee botin testitulosten ja palautteen perusteella.</li>
-<li>Opiskelija esittelee botin selkeästi ja vakuuttavasti.</li>
-<li>Opiskelija pohtii omaa oppimistaan ja tunnistaa, mitä tekisi seuraavalla kerralla paremmin.</li>
-<li>Opiskelija osaa selittää, miten botti voisi kehittyä kohti <strong>agenttia</strong>.</li>
-</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikriteerit — oppitunnit 17 ja 18 yhteensä</h2></div><div class="task-card-body">
-<p>Oppitunnit 17 ja 18 muodostavat yhdessä <strong>Tekoälyjen käyttö</strong> -osion arviointikokonaisuuden. Oppitunnilla 18 arviointi painottuu viimeistelyyn, testaukseen, esittelyyn ja reflektioon.</p>
-<p>Kokonaispistemäärä on <strong>20 pistettä</strong>. Jokainen arviointikriteeri on enintään <strong>4 pistettä</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Kriteeri</th>
-<th>Maksimipisteet</th>
-<th>Mitä arvioidaan?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1. Botin suunnittelu ja tarkoitus</strong></td>
-<td>4 p</td>
-<td>Onko botin tarkoitus selkeä, ovatko kysymykset tarkoituksenmukaisia ja sopiiko botti aiottuun käyttötarkoitukseen?</td>
-</tr>
-<tr>
-<td><strong>2. Järjestelmäprompti ja ohjeet</strong></td>
-<td>4 p</td>
-<td>Onko järjestelmäprompti selkeä ja johdonmukainen, ja sisältääkö se roolin, ohjeet ja rajaukset?</td>
-</tr>
-<tr>
-<td><strong>3. Testaus ja iterointi</strong></td>
-<td>4 p</td>
-<td>Onko bottia testattu monipuolisesti, onko virheet dokumentoitu ja onko korjauksia tehty?</td>
-</tr>
-<tr>
-<td><strong>4. Esittely ja viestintä</strong></td>
-<td>4 p</td>
-<td>Selittääkö opiskelija bottinsa selkeästi ja havainnollistaako esittely botin toimintaa ymmärrettävästi?</td>
-</tr>
-<tr>
-<td><strong>5. Reflektio ja oppiminen</strong></td>
-<td>4 p</td>
-<td>Pohtiiko opiskelija omaa oppimistaan ja ymmärtääkö hän, miten botti voisi kehittyä agentiksi?</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikriteerit yksityiskohtaisesti</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>1. Botin suunnittelu ja tarkoitus — 4 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Onko botin tarkoitus selkeä: mitä botti tekee ja kenelle?</li>
-<li>Onko järjestelmäprompti kirjoitettu johdonmukaisesti suhteessa botin tarkoitukseen?</li>
-<li>Ovatko kysymykset tarkoituksenmukaisia, ja rakentavatko ne realistisen kuvan käyttäjän tilanteesta?</li>
-<li>Vastaako botti siihen tehtävään, johon se on suunniteltu?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen, 4 p</strong></td>
-<td>Botin tarkoitus on erittäin selkeä. Kysymykset ovat olennaisia ja hyvin suunniteltuja. Botti vastaa johdonmukaisesti siihen, mihin se on rakennettu.</td>
-</tr>
-<tr>
-<td><strong>Hyvä, 3 p</strong></td>
-<td>Tarkoitus ja perusidea ovat selkeät. Joissakin kysymyksissä tai rakenteessa on pieniä puutteita.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä, 2 p</strong></td>
-<td>Botti toimii perusidealtaan, mutta tarkoitus, kysymykset tai ohjaavan työnkulun logiikka jäävät osittain epäselviksi.</td>
-</tr>
-<tr>
-<td><strong>Välttävä, 1 p</strong></td>
-<td>Botin tarkoitus on epäselvä tai botti ei vastaa realistisesti siihen tehtävään, johon se on tarkoitettu.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>2. Järjestelmäprompti ja ohjeet — 4 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Onko <strong>järjestelmäprompti</strong> kirjoitettu selkeästi?</li>
-<li>Noudattaako botti promptin ohjeita johdonmukaisesti?</li>
-<li>Onko botille annettu selkeä rooli?</li>
-<li>Ovatko rajaukset eksplisiittiset eli kerrotaanko, mitä botti ei tee?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen, 4 p</strong></td>
-<td>Järjestelmäprompti on erittäin selkeä. Botti noudattaa ohjeita johdonmukaisesti. Rooli ja rajaukset ovat hyvin määriteltyjä.</td>
-</tr>
-<tr>
-<td><strong>Hyvä, 3 p</strong></td>
-<td>Prompt on hyvä ja botti noudattaa sitä pääosin. Rooli ja rajaukset ovat mukana, mutta eivät kaikilta osin täsmällisiä.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä, 2 p</strong></td>
-<td>Prompt on olemassa ja toimiva, mutta sitä pitäisi selkeyttää. Botti noudattaa ohjeita vaihtelevasti.</td>
-</tr>
-<tr>
-<td><strong>Välttävä, 1 p</strong></td>
-<td>Prompt on puutteellinen tai epäselvä. Botti ei noudata ohjeita johdonmukaisesti.</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="pause"><p><strong>Arviointivinkki:</strong> Jos botti toimii hyvin sattumalta mutta prompt on epäselvä, pisteytä promptin laatu erikseen. Hyvä lopputulos ei yksin korvaa puutteellista ohjeistusta.</p>
-</blockquote></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>3. Testaus ja iterointi — 4 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Onko botti testattu <strong>positiivisilla testeillä</strong>, <strong>negatiivisilla testeillä</strong> ja <strong>reunatapauksilla</strong>?</li>
-<li>Onko testaus dokumentoitu selkeästi?</li>
-<li>Löysikö opiskelija ongelmia tai kehittämiskohteita?</li>
-<li>Korjasiko opiskelija ongelmia ja testasiko hän bottia uudelleen?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen, 4 p</strong></td>
-<td>Testaus on perusteellista kaikissa kategorioissa. Virheitä on löydetty, dokumentoitu, korjattu ja testattu uudelleen. Uudelleentestaus osoittaa parantumista.</td>
-</tr>
-<tr>
-<td><strong>Hyvä, 3 p</strong></td>
-<td>Testaus on monipuolista ja dokumentoitua. Ongelmia on löydetty ja joitakin korjauksia tehty.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä, 2 p</strong></td>
-<td>Testaus on olemassa, mutta se voisi olla kattavampaa. Dokumentaatio tai iterointi jää osittain vajaaksi.</td>
-</tr>
-<tr>
-<td><strong>Välttävä, 1 p</strong></td>
-<td>Testaus on minimaalista tai dokumentointi puuttuu. Bottia ei ole testattu merkittävästi.</td>
-</tr>
-</tbody>
-</table>
-<h4>Testausdokumentin suositeltu rakenne</h4>
-<table>
-<thead>
-<tr>
-<th>Testityyppi</th>
-<th>Syöte</th>
-<th>Odotettu vastaus</th>
-<th>Saatu vastaus</th>
-<th>Korjaus tai johtopäätös</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Positiivinen testi</strong></td>
-<td>Käyttäjä antaa selkeän kuvauksen tilanteestaan.</td>
-<td>Botti kysyy olennaisia kysymyksiä ja etenee loogisesti.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Negatiivinen testi</strong></td>
-<td>Käyttäjä pyytää bottia tekemään koko tehtävän hänen puolestaan.</td>
-<td>Botti kieltäytyy tekemästä kaikkea valmiiksi ja ohjaa käyttäjää eteenpäin.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Reunatapaus</strong></td>
-<td>Käyttäjä antaa epäselvän viestin, kuten ”auta”.</td>
-<td>Botti pyytää tarkennuksia eikä oleta puuttuvia tietoja.</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>4. Esittely ja viestintä — 4 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Selittääkö opiskelija bottinsa tarkoituksen selkeästi?</li>
-<li>Ymmärtääkö yleisö, mitä botti tekee ja miksi se on hyödyllinen?</li>
-<li>Sujuuko suora tai tallennettu esittely ymmärrettävästi?</li>
-<li>Onko esittely vakuuttava ja valmisteltu?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen, 4 p</strong></td>
-<td>Selitys on erittäin selkeä ja vakuuttava. Havainnollistus sujuu hyvin, ja yleisö ymmärtää heti, mitä botti tekee ja miksi siitä on hyötyä.</td>
-</tr>
-<tr>
-<td><strong>Hyvä, 3 p</strong></td>
-<td>Esittely on selkeä ja demo onnistuu pääosin. Tarkoitus välittyy yleisölle.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä, 2 p</strong></td>
-<td>Esittely onnistuu, mutta siinä on epäselvyyksiä tai demo ei ole täysin valmisteltu.</td>
-</tr>
-<tr>
-<td><strong>Välttävä, 1 p</strong></td>
-<td>Esittely on sekava, demo ei onnistu tai yleisö ei ymmärrä, mitä botti tekee.</td>
-</tr>
-</tbody>
-</table>
-<h4>Esittelykäsikirjoituksen minimirakenne</h4>
-<ol>
-<li><strong>Botin nimi ja tarkoitus:</strong> mitä botti tekee?</li>
-<li><strong>Kohderyhmä:</strong> kenelle botti on tarkoitettu?</li>
-<li><strong>Lyhyt käyttötapaus:</strong> millaisessa tilanteessa bottia käytetään?</li>
-<li><strong>Havainnollistus:</strong> yksi selkeä käyttäjätilanne.</li>
-<li><strong>Lopputulos:</strong> mitä botti tuottaa?</li>
-<li><strong>Yksi kehityskohde:</strong> mitä parantaisit seuraavaksi?</li>
-</ol></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>5. Reflektio ja oppiminen — 4 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Pohtiiko opiskelija omaa oppimisprosessiaan?</li>
-<li>Osaako hän kertoa, mikä onnistui ja mikä oli vaikeaa?</li>
-<li>Ymmärtääkö hän, mitä tekisi seuraavalla kerralla toisin?</li>
-<li>Pohtiiko hän, miten botti voisi kehittyä agentiksi?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erinomainen, 4 p</strong></td>
-<td>Reflektio on syvä ja pohtiva. Opiskelija ymmärtää omaa oppimistaan ja esittää perusteltuja ajatuksia siitä, miten botti voisi kehittyä agentiksi.</td>
-</tr>
-<tr>
-<td><strong>Hyvä, 3 p</strong></td>
-<td>Reflektio on hyvä ja osoittaa selkeää ymmärrystä oppimisesta ja kehittämisestä.</td>
-</tr>
-<tr>
-<td><strong>Tyydyttävä, 2 p</strong></td>
-<td>Reflektio on olemassa, mutta se jää osittain yleiseksi tai pinnalliseksi.</td>
-</tr>
-<tr>
-<td><strong>Välttävä, 1 p</strong></td>
-<td>Reflektio on hyvin lyhyt, pinnallinen tai ei liity tehtävään.</td>
-</tr>
-</tbody>
-</table>
-<h4>Reflektion apukysymykset opiskelijalle</h4>
-<ul>
-<li>Mikä botin rakentamisessa onnistui parhaiten?</li>
-<li>Mikä oli vaikeinta?</li>
-<li>Mitä muutit testauksen perusteella?</li>
-<li>Mitä tekisit toisin, jos aloittaisit alusta?</li>
-<li>Miten botti voisi kehittyä agentiksi, joka ei vain keskustele vaan myös tekee asioita?</li>
-</ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointiprosessi</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Aineistot, jotka opettaja tarkistaa</h3></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Aineisto</th>
-<th>Mihin kriteeriin liittyy?</th>
-<th>Mitä opettaja tarkistaa?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Testausdokumentti, tehtävä 18.1</strong></td>
-<td>Kriteeri 3</td>
-<td>Ovatko testit monipuolisia, dokumentointi selkeää ja korjaukset perusteltuja?</td>
-</tr>
-<tr>
-<td><strong>Esittelykäsikirjoitus, tehtävä 18.2</strong></td>
-<td>Kriteerit 1 ja 4</td>
-<td>Onko botin kuvaus selkeä ja onko demo realistisesti suunniteltu?</td>
-</tr>
-<tr>
-<td><strong>Vertaisarviot, tehtävä 18.3</strong></td>
-<td>Kriteerit 4 ja 5</td>
-<td>Antoiko opiskelija rakentavaa palautetta ja miten muut arvioivat hänen bottiaan?</td>
-</tr>
-<tr>
-<td><strong>Reflektio, tehtävä 18.4</strong></td>
-<td>Kriteeri 5</td>
-<td>Onko reflektio syvä vai pinnallinen, ja näkyykö oma oppiminen?</td>
-</tr>
-</tbody>
-</table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Pisteyttämisen periaate</h3></div><div class="task-card-body">
-<p>Jokainen kriteeri arvioidaan asteikolla 1–4 pistettä. Kokonaispistemäärä on 20 pistettä. Useimmat hyväksytyt suoritukset sijoittuvat todennäköisesti välille <strong>15–18 pistettä</strong>. Erinomainen suoritus, 18–20 pistettä, edellyttää erityisen selkeää suunnittelua, testausta, esittelyä ja reflektiota.</p>
-<p><strong>Opettajan arviointimuistutus:</strong> Arvioi erikseen botin laatu, esittelytaidot ja reflektio. Hyvä botti ei automaattisesti tarkoita erinomaista esittelyä, eikä epävarma esittely tarkoita, että botti olisi huono.</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisimmät arviointidilemmat</h2></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Tilanne</th>
-<th>Ratkaisu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Opiskelija löysi virheitä testauksessa, mutta korjaukset eivät onnistuneet täydellisesti.</td>
-<td>Arvioi iterointiprosessia, ei vain lopputulosta. Virheiden löytäminen ja korjausyritys osoittavat oppimista.</td>
-</tr>
-<tr>
-<td>Esittely oli hidas tai epävarma, mutta botti toimi hyvin.</td>
-<td>Erottele esittelytaito botin laadusta. Kriteeri 4 voi olla matalampi, mutta kriteerit 1–3 voivat olla korkeammat.</td>
-</tr>
-<tr>
-<td>Reflektio on lyhyt, mutta sisältö on olennaista.</td>
-<td>Älä arvioi vain pituutta. Lyhyt mutta tarkka reflektio voi olla hyvä.</td>
-</tr>
-<tr>
-<td>Kaksi opiskelijaa teki samankaltaiset botit.</td>
-<td>Samankaltaisuus ei yksin tarkoita kopiointia. Arvioi järjestelmäprompti, testaus, dokumentaatio ja reflektio erikseen. Jos tekstit ovat identtiset, keskustele opiskelijoiden kanssa.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Fasilitointiohjeet</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Oppitunnin rakenne, 90 minuuttia</h3></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Vaihe</th>
-<th>Aika</th>
-<th>Tavoite</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Johdanto ja tavoitteen kirkastus</strong></td>
-<td>5 min</td>
-<td>Muistuta, että tänään viimeistellään, testataan ja esitellään botti.</td>
-</tr>
-<tr>
-<td><strong>Tehtävä 18.1: testaus ja iterointi</strong></td>
-<td>25 min</td>
-<td>Opiskelijat testaavat botin positiivisilla, negatiivisilla ja reunatapauksilla.</td>
-</tr>
-<tr>
-<td><strong>Tehtävä 18.2: esittelyn valmistelu</strong></td>
-<td>15 min</td>
-<td>Opiskelijat kirjoittavat lyhyen esittelykäsikirjoituksen ja valitsevat demo-skenaarion.</td>
-</tr>
-<tr>
-<td><strong>Tehtävä 18.3: esittelyt ja vertaispalaute</strong></td>
-<td>35 min</td>
-<td>Opiskelijat esittelevät bottinsa ja antavat rakentavaa palautetta toisilleen.</td>
-</tr>
-<tr>
-<td><strong>Tehtävä 18.4: reflektio</strong></td>
-<td>10 min</td>
-<td>Opiskelijat kirjoittavat, mitä oppivat ja miten botti voisi kehittyä agentiksi.</td>
-</tr>
-</tbody>
-</table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Johdantolause opettajalle</h3></div><div class="task-card-body">
-<blockquote class="pause"><p>Viimeksi rakensitte oman apuri-bottinne ensimmäisen version. Tänään katsomme, kestääkö botti testauksen, osaako se toimia vaikeammissakin tilanteissa ja pystyttekö esittelemään sen niin, että muut ymmärtävät sen hyödyn.</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Testaa ja viimeistele botti</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija varmistaa, että botti toimii luotettavasti eri tilanteissa.</p>
-<p><strong>Tee näin:</strong></p>
-<ol>
-<li>Tee yksi positiivinen testi: käyttäjä antaa selkeän kuvauksen tilanteestaan.</li>
-<li>Tee yksi negatiivinen testi: käyttäjä pyytää jotakin, mitä botin ei kuulu tehdä.</li>
-<li>Tee yksi reunatapaustesti: käyttäjä antaa epäselvän, puutteellisen tai ristiriitaisen pyynnön.</li>
-<li>Kirjaa jokaisesta testistä syöte, odotettu vastaus, saatu vastaus ja johtopäätös.</li>
-<li>Korjaa järjestelmäpromptia tai kysymyksiä, jos testit paljastavat ongelmia.</li>
-<li>Testaa korjattu versio uudelleen.</li>
-</ol>
-<p><strong>Aika-arvio:</strong> 25 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Valmistele botin esittely</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija osaa esitellä botin tarkoituksen, hyödyn ja toimintatavan selkeästi.</p>
-<p><strong>Esittelyn pitää vastata seuraaviin kysymyksiin:</strong></p>
-<ul>
-<li>Mikä botin nimi on?</li>
-<li>Mihin ongelmaan botti auttaa?</li>
-<li>Kuka hyötyy botista?</li>
-<li>Miten botti toimii käytännössä?</li>
-<li>Mikä on yksi asia, jota paransit testauksen perusteella?</li>
-</ul>
-<p><strong>Esittelyn mallirunko:</strong></p>
-<ol>
-<li>
-<p>Bottini nimi on...</p>
-</li>
-<li>
-<p>Sen tarkoitus on auttaa käyttäjää...</p>
-</li>
-<li>
-<p>Näytän lyhyen demon tilanteesta, jossa...</p>
-</li>
-<li>
-<p>Testauksessa huomasin, että...</p>
-</li>
-<li>
-<p>Paransin bottia muuttamalla...</p>
-</li>
-</ol>
-<p><strong>Aika-arvio:</strong> 15 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Esittely ja vertaispalaute</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija harjoittelee oman työn esittelyä ja rakentavan palautteen antamista.</p>
-<p><strong>Ohje esittelijälle:</strong></p>
-<ol>
-<li>Esittele botin tarkoitus lyhyesti.</li>
-<li>Näytä yksi suora esittely tai tallennettu varaesittely.</li>
-<li>Kerro yksi testauksessa löytynyt ongelma ja miten korjasit sen.</li>
-<li>Kerro yksi kehitysidea seuraavaa versiota varten.</li>
-</ol>
-<p><strong>Ohje palautteen antajalle:</strong></p>
-<ul>
-<li>Kerro yksi asia, joka oli selkeä tai onnistunut.</li>
-<li>Kerro yksi konkreettinen kehitysehdotus.</li>
-<li>Vältä yleistä palautetta, kuten ”ihan hyvä” tai ”huono”.</li>
-<li>Perustele palautteesi.</li>
-</ul>
-<p><strong>Rakentavan palautteen malli:</strong> ”Ymmärsin hyvin, että botti auttaa treeniviikon kokoamisessa. Seuraavaksi voisit lisätä testin tilanteesta, jossa käyttäjä antaa ristiriitaisia tietoja.”</p>
-<p><strong>Aika-arvio:</strong> 35 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-D: Reflektio</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija pohtii omaa oppimistaan ja yhdistää botin rakentamisen tulevaan Agentit-osioon.</p>
-<p><strong>Kirjoita lyhyt reflektio, jossa vastaat vähintään neljään kysymykseen:</strong></p>
-<ul>
-<li>Mikä botin rakentamisessa onnistui parhaiten?</li>
-<li>Mikä oli vaikeinta?</li>
-<li>Mitä muutit testauksen perusteella?</li>
-<li>Mitä tekisit seuraavalla kerralla toisin?</li>
-<li>Miten botti voisi kehittyä agentiksi?</li>
-</ul>
-<p><strong>Aika-arvio:</strong> 10 minuuttia</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Eriyttäminen</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Opiskelijat, joilla on vaikeuksia</h3></div><div class="task-card-body">
-<ul>
-<li><strong>Testauksen tuki:</strong> anna valmis esimerkkitesti ja tee yhdessä yksi positiivinen ja yksi negatiivinen testi.</li>
-<li><strong>Esittelyn tuki:</strong> anna valmis esittelyrunko ja harjoittele opiskelijan kanssa 1–2 minuutin demo.</li>
-<li><strong>Reflektion tuki:</strong> anna kysymykset valmiina: mikä meni hyvin, mikä oli vaikeaa, mitä tekisit toisin?</li>
-<li><strong>Teknisen ongelman tuki:</strong> salli esittely kuvakaappausten tai käsikirjoituksen avulla, jos botti ei toimi esittelytilanteessa.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Opiskelijat, joilla on vahvat taidot</h3></div><div class="task-card-body">
-<ul>
-<li>Pyydä opiskelijaa testaamaan bottia eri kielellä tai eri käyttäjäroolilla.</li>
-<li>Pyydä lisäämään esittelyyn visuaalinen elementti, kuten dia, prosessikaavio tai ennen–jälkeen-vertailu.</li>
-<li>Pyydä opiskelijaa pohtimaan, mitä työkaluja agentti tarvitsisi, jos apuri-botti kehittyisi agentiksi.</li>
-<li>Pyydä opiskelijaa tunnistamaan agentin turvallisuusriskejä, esimerkiksi liialliset oikeudet, virheelliset toiminnot tai puutteellinen seuranta.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Virheskenaarioiden hallinta</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Botti ei toimi esittelyssä</h3></div><div class="task-card-body">
-<p>Jos botti ei toimi esittelyhetkellä, pyydä opiskelijaa kokeilemaan uudelleen. Jos ongelma jatkuu, anna hänen esitellä botti käsikirjoituksen, kuvakaappausten tai tallennetun esimerkin avulla.</p>
-<p><strong>Opettajan huomio:</strong> Älä vähennä pisteitä pelkästä teknisestä ongelmasta, jos opiskelijan valmistelu, dokumentaatio ja ymmärrys ovat kunnossa. Merkitse arviointiin, että kyseessä oli tekninen ongelma esittelyssä.</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Botti on yksityinen tai ”salattu”</h3></div><div class="task-card-body">
-<p>Yksityinen botti on hyväksyttävä, jos opiskelija pystyy osoittamaan sen toiminnan riittävällä tavalla. Tarvittaessa pyydä kuvakaappauksia, videota tai dokumentoitua testiaineistoa.</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Palaute on liian kriittistä tai loukkaavaa</h3></div><div class="task-card-body">
-<p>Keskeytä tilanne ja ohjaa opiskelijoita rakentavaan palautteeseen. Mallinna parempi muotoilu:</p>
-<blockquote class="pause"><p>”Sen sijaan, että sanomme ’tämä on huono’, sanomme: ’Tässä kohdassa käyttäjä voi jäädä epävarmaksi. Voisit lisätä tarkentavan kysymyksen.’”</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Dokumentaation säilyttäminen</h2></div><div class="task-card-body">
-<p>Kerää ja säilytä seuraavat aineistot arvioinnin tueksi:</p>
-<ul>
-<li><strong>Testausdokumentit:</strong> näyttävät, miten bottia testattiin ja parannettiin.</li>
-<li><strong>Esittelykäsikirjoitukset:</strong> näyttävät, miten opiskelija ymmärtää botin tarkoituksen ja hyödyn.</li>
-<li><strong>Vertaisarvioinnit:</strong> näyttävät palautteen antamisen ja vastaanottamisen taitoa.</li>
-<li><strong>Reflektiot:</strong> näyttävät oppimisen kehittymistä.</li>
-<li><strong>Linkit, kuvakaappaukset tai tallenteet:</strong> auttavat todentamaan botin toimintaa.</li>
-</ul>
-<p>Näitä aineistoja voi hyödyntää myös Tekoälyjen käyttö -osion päätösraportissa, opiskelijoiden portfolioissa ja Agentit-osion johdannossa.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Silta Agentit-osioon</h2></div><div class="task-card-body">
-<p>Oppitunti 18 toimii siltana seuraavaan kokonaisuuteen. Apuri-botti on vielä botti: se keskustelee, kysyy ja kokoaa tietoa. Agentti vie tämän ajatuksen pidemmälle: se voi käyttää työkaluja, hakea tietoa, tehdä toimenpiteitä ja seurata prosessia useassa vaiheessa.</p>
-<p>Arvioinnin aikana opettajan kannattaa kirjata muistiin:</p>
-<ol>
-<li><strong>Vahvat opiskelijat:</strong> ketkä osoittivat erityisen hyvää suunnittelua, testausta tai esittelyä?</li>
-<li><strong>Tukea tarvitsevat opiskelijat:</strong> ketkä tarvitsevat lisää apua agentin arkkitehtuurin ymmärtämiseen?</li>
-<li><strong>Hyvät esimerkkibotit:</strong> mitkä botit voidaan näyttää Agentit-osion alussa esimerkkeinä hyvästä suunnittelusta?</li>
-</ol>
-<p><strong>Opettajan muistutus:</strong> Kun opiskelija ymmärtää, miten botti suunnitellaan, testataan ja esitellään, hänellä on hyvä pohja ymmärtää seuraavaksi agentteja: järjestelmiä, jotka eivät vain vastaa vaan toimivat.</p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointiesimerkit</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Esimerkki 1: erinomainen suoritus</h3></div><div class="task-card-body">
-<p><strong>Opiskelija A: ”Kertauskaveri biologian kokeeseen -botti”</strong></p>
-<table>
-<thead>
-<tr>
-<th>Kriteeri</th>
-<th>Pisteet</th>
-<th>Perustelu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Botin suunnittelu ja tarkoitus</td>
-<td>4/4</td>
-<td>Tarkoitus on selkeä ja kysymykset tukevat käyttäjän ohjaamista hyvin.</td>
-</tr>
-<tr>
-<td>Järjestelmäprompti ja ohjeet</td>
-<td>4/4</td>
-<td>Rooli, toimintatapa ja rajaukset ovat hyvin kirjoitettuja.</td>
-</tr>
-<tr>
-<td>Testaus ja iterointi</td>
-<td>4/4</td>
-<td>Kuusi testiä, selkeä dokumentaatio, promptia korjattu ja uudelleentestaus osoittaa parannusta.</td>
-</tr>
-<tr>
-<td>Esittely ja viestintä</td>
-<td>3/4</td>
-<td>Esittely onnistui hyvin, mutta oli hieman nopea.</td>
-</tr>
-<tr>
-<td>Reflektio ja oppiminen</td>
-<td>4/4</td>
-<td>Syvä reflektio ja hyviä ajatuksia siitä, miten botti voisi kehittyä agentiksi.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Yhteensä:</strong> 19/20</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Esimerkki 2: tyydyttävä suoritus</h3></div><div class="task-card-body">
-<p><strong>Opiskelija B: ”Yksinkertainen harrastusbotti”</strong></p>
-<table>
-<thead>
-<tr>
-<th>Kriteeri</th>
-<th>Pisteet</th>
-<th>Perustelu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Botin suunnittelu ja tarkoitus</td>
-<td>2/4</td>
-<td>Perusidea on olemassa, mutta tarkoitus jää osittain yleiseksi.</td>
-</tr>
-<tr>
-<td>Järjestelmäprompti ja ohjeet</td>
-<td>2/4</td>
-<td>Prompti toimii, mutta rajauksia ei ilmaista riittävän täsmällisesti.</td>
-</tr>
-<tr>
-<td>Testaus ja iterointi</td>
-<td>2/4</td>
-<td>Kolme testiä tehty, mutta korjauksia on vähän ja dokumentointi jää perustasolle.</td>
-</tr>
-<tr>
-<td>Esittely ja viestintä</td>
-<td>3/4</td>
-<td>Esittely onnistui ja botti saatiin näytettyä ymmärrettävästi.</td>
-</tr>
-<tr>
-<td>Reflektio ja oppiminen</td>
-<td>2/4</td>
-<td>Reflektio on olemassa, mutta se jää melko pinnalliseksi.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Yhteensä:</strong> 11/20</p>
-<p><strong>Mahdollinen palaute:</strong> ”Botti toimii perustasolla ja esittely onnistui. Seuraavaksi kannattaa vahvistaa järjestelmäpromptia, lisätä selkeät rajaukset ja testata bottia monipuolisemmin. Reflektiossa voisit kertoa tarkemmin, mitä opit ja miten kehittäisit bottia agentiksi.”</p></div></div><div class="task-card task-card--resource"><div class="task-card-header"><h2>Lisäresurssit opettajalle</h2></div><div class="task-card-body">
-<ul>
-<li><strong>Bloom’n taksonomia:</strong> arviointi kohdistuu erityisesti analysointiin, arviointiin ja luomiseen.</li>
-<li><strong>Metakognitio:</strong> reflektio auttaa opiskelijaa tunnistamaan omaa oppimistaan ja ajattelunsa kehittymistä.</li>
-<li><strong>Vertaisarviointi:</strong> kehittää kriittistä ajattelua, palautteen antamista ja yhteistyötaitoja.</li>
-<li><strong>Agentit-osioon siirtyminen:</strong> hyvät botit voidaan nostaa esiin esimerkkeinä siitä, miten suunniteltu botti voi kehittyä toimivaksi agentiksi.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Viimeinen vinkki opettajalle</h2></div><div class="task-card-body">
-<p>Muista, että kyseessä ovat IT-alan ensimmäisen vuoden opiskelijat. Monille opiskelijoille botin rakentaminen, testaaminen, dokumentointi ja esittely ovat jo merkittävä saavutus. Arvioi tarkasti, mutta kannustavasti.</p>
-<p>Kannusta niitä, jotka onnistuivat hyvin. Tue niitä, joilla prosessi jäi kesken. Tämän osion tärkein tavoite on, että opiskelija ymmärtää tekoälyn vastuullisen, itsenäisen ja dokumentoidun käytön perustan. Agentit-osiossa nämä taidot syvenevät.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
-<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että onnistunut botti ei ole vain valmis tekninen tuotos. Se on suunniteltu, testattu, parannettu, dokumentoitu ja esitelty. Tämän työn kautta opiskelija osoittaa, että hän osaa käyttää tekoälyä tavoitteellisesti ja vastuullisesti.</p>
-<p>Hyvä päätöskysymys tunnin loppuun:</p>
-<blockquote class="pause"><p><strong>Pohdi:</strong> Mitä bottisi osaa nyt, ja mitä sen pitäisi vielä osata, jotta siitä voisi tulla agentti?</p>
-<p><strong>Lopetuslause opettajalle:</strong> Botti vastaa kysymyksiin. Agentti toimii tavoitteellisesti. Tänään viimeistelitte ensimmäisen askeleen kohti sitä ajattelua.</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
-<p>Tallennettava tuotos on <strong>summatiivinen bottipaketti, testit, korjaus ja demo tai puolustus</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
+<p>Tallennettava tuotos on <strong>summatiivinen bottipaketti: määrittely, prompti, tietopohja, testit, yksi korjaus, uudelleentesti ja esittely</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -613,35 +45,105 @@
 <tbody>
 <tr>
 <td>0–10 min</td>
-<td>Virittäytyminen</td>
-<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+<td>Tavoite ja aineistot</td>
+<td>Varmista, että ennakkoon kirjoitetut testit ja tunnin 17 tulokset ovat käytössä.</td>
 </tr>
 <tr>
-<td>10–25 min</td>
-<td>Ydinkäsite</td>
-<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+<td>10–30 min</td>
+<td>Testaus</td>
+<td>Oppija ajaa tai täydentää positiivisen, negatiivisen ja reunatapauksen.</td>
 </tr>
 <tr>
-<td>25–65 min</td>
-<td>Perustuotos</td>
-<td>Oppija kokoaa summatiivisen bottipaketin, korjaa testissä löytyneen puutteen ja esittää lyhyen demon. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+<td>30–45 min</td>
+<td>Korjaus</td>
+<td>Oppija nimeää ongelman, muuttaa yhtä ohjetta, lähdettä tai rajausta ja perustelee valinnan.</td>
 </tr>
 <tr>
-<td>65–80 min</td>
-<td>Testaus ja purku</td>
-<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+<td>45–55 min</td>
+<td>Uudelleentestaus</td>
+<td>Sama testi ajetaan uudelleen muuttamatta odotusta.</td>
 </tr>
 <tr>
-<td>80–90 min</td>
-<td>Tallennus ja lopputehtävä</td>
-<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+<td>55–70 min</td>
+<td>Dokumentointi</td>
+<td>Oppija kokoaa ennen–jälkeen-näytön ja käytön rajat.</td>
+</tr>
+<tr>
+<td>70–85 min</td>
+<td>Esittely tai puolustus</td>
+<td>Oppija esittelee tarkoituksen, yhden testin, korjauksen ja rajoituksen.</td>
+</tr>
+<tr>
+<td>85–90 min</td>
+<td>Palautus</td>
+<td>Tarkista tiedostot, linkit ja saavutettava vaihtoehto toimimattomalle demolle.</td>
 </tr>
 </tbody>
 </table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
-<p>Oppija käyttää testitaulukkoa ja demorunkoa muuttamatta ydinkriteerejä. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
-<p>Kun perustuotos on valmis, oppija lisää yhden perustellun reunatapauksen vasta ydinnäytön jälkeen. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-18-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-18-ohjatut" data-tab="ohjatut" hidden><h1>Opettajan johtaminen — Oppitunti 18: Oma apuri-botti viimeistellään</h1>
+</div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikriteerit — 20 pistettä</h2></div><div class="task-card-body">
+<table>
+<thead>
+<tr>
+<th>Kriteeri</th>
+<th>1 p</th>
+<th>2 p</th>
+<th>3 p</th>
+<th>4 p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Määrittely ja tarkoitus</td>
+<td>epäselvä</td>
+<td>osittain rajattu</td>
+<td>selkeä ja käyttäjälähtöinen</td>
+<td>selkeä, testattava ja johdonmukainen</td>
+</tr>
+<tr>
+<td>Ohjeet ja tietopohja</td>
+<td>puutteiset</td>
+<td>perusosat mukana</td>
+<td>tehtävään sopivat ja perustellut</td>
+<td>rajat, lähteet ja puutteet näkyvät tarkasti</td>
+</tr>
+<tr>
+<td>Testaus ja korjaus</td>
+<td>vähäinen</td>
+<td>testejä ilman selvää korjausta</td>
+<td>kolme testityyppiä ja yksi korjaus</td>
+<td>ennen–jälkeen-näyttö osoittaa korjauksen vaikutuksen</td>
+</tr>
+<tr>
+<td>Esittely ja dokumentointi</td>
+<td>vaikeasti seurattava</td>
+<td>pääkohdat näkyvät</td>
+<td>rakenne ja näyttö ovat selkeitä</td>
+<td>päätökset, rajat ja toistettavuus perustellaan vakuuttavasti</td>
+</tr>
+<tr>
+<td>Reflektio ja vastuu</td>
+<td>yleinen</td>
+<td>tunnistaa joitakin rajoja</td>
+<td>arvioi käyttöä ja omaa vastuuta</td>
+<td>yhdistää näytön, rajat ja jatkokehityksen kriittisesti</td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioinnin periaatteet</h2></div><div class="task-card-body">
+<ul>
+<li>Älä palkitse pelkkää tuotoksen näyttävyyttä.</li>
+<li>Arvioi prosessista jäävää näyttöä ja oppijan päätöksiä.</li>
+<li>Testissä löytynyt virhe on arvokas havainto, jos se dokumentoidaan ja käsitellään.</li>
+<li>Toimimaton live-demo ei yksin kaada suoritusta, jos kuvakaappaukset, suoritusjälki ja analyysi osoittavat osaamisen.</li>
+<li>Tiettyä maksullista alustaa ei saa vaatia hyväksytyn suorituksen ehdoksi.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Eriyttäminen</h2></div><div class="task-card-body">
+<p><strong>Tukireitti:</strong> oppija käyttää dokumentoitua kuivaharjoittelua ja valmista esittelyrunkoa. Samat kolme testityyppiä, korjaus ja perustelu säilyvät.</p>
+<p><strong>Syventävä reitti:</strong> oppija pyytää vertaisarvioijaa toistamaan yhden testin ja vertaa tuloksia. Pakollinen ydintuotos ei kasva.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Siirtymä Agentit-osioon</h2></div><div class="task-card-body">
+<p>Päätä kysymykseen:</p>
+<blockquote class="pause"><p>Botti vastaa käyttäjän viestiin. Mitä uutta tarvitaan, jos järjestelmän pitää seuraavaksi valita työkalu ja toimia käyttäjän puolesta?</p>
+</blockquote></div></div></div><div id="panel-lesson-18-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-18-ohjatut" data-tab="ohjatut" hidden><h1>Opettajan johtaminen — Oppitunti 18: Oma apuri-botti viimeistellään</h1>
 <p>Oppitunti 18 on Tekoälyjen käyttö -osion huipentuma. Opiskelijat viimeistelevät ja testaavat bottiaan, valmistelevat esittelyt ja arvioivat vertaisille. Tämä oppitunti on sekä tekemisen että yhteisöllisyyden oppitunti.</p><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin rakenne (90 min)</h2></div><div class="task-card-body">
 <table>
 <thead>

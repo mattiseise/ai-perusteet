@@ -1,6 +1,6 @@
-# Rakennuspalikka 3 — Tietopohjan kuratointi
+# Rakennuspalikka 3 — Tietopohja ja testisuunnitelma
 
-**Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
+**Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -10,13 +10,14 @@ Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joista botti sa
 
 ## Tavoite
 
-Tehtävän jälkeen sinulla on valmis, perusteltu tietopohja bottiasi varten. Osaat:
+Tehtävän jälkeen sinulla on perusteltu tietopohja ja ennen rakentamista kirjoitettu testisuunnitelma. Osaat:
 
 - tunnistaa, mitä tietoa botti tarvitsee toimiakseen hyödyllisesti,
 - valita lähdedokumentteja tarkoituksenmukaisesti,
 - arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,
 - karsia pois turhat tai päällekkäiset materiaalit,
 - perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan.
+- kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon.
 
 ## Mitä tallennat?
 
@@ -26,7 +27,8 @@ Tallenna lopuksi yksi dokumentti tai kansio, jossa on:
 - 3–5 valittua lähdedokumenttia,
 - taulukko, jossa perustellaan jokaisen dokumentin rooli tietopohjassa,
 - lyhyt arvio siitä, mitä tietopohja kattaa hyvin ja mitä se ei vielä kata,
-- varsinaiset dokumentit tallennettuna samaan kansioon myöhempää Copilot-käyttöä varten.
+- yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen,
+- varsinaiset dokumentit tallennettuna samaan kansioon myöhempää toteutusta varten.
 
 ## Tee näin
 
@@ -84,11 +86,11 @@ Arvioi jokaista dokumenttia seuraavien kysymysten avulla:
 - Tukeeko se bottini työnkulkua?
 - Auttaako se käyttäjää valitsemassasi tehtävässä?
 - Onko dokumentissa konkreettinen rakenne, mallipohja tai tarkistuslista, jota botti voi hyödyntää?
-- Sisältääkö dokumentti henkilötietoja, salassa pidettävää tietoa tai muuta aineistoa, jota ei saa ladata Copilotiin?
+- Sisältääkö dokumentti henkilötietoja, salassa pidettävää tietoa tai muuta aineistoa, jota ei saa ladata valitulle alustalle?
 
-### Vaihe 4 — Testaa tietopohjan kattavuus tekoälyn avulla
+### Vaihe 4 — Arvioi tietopohjan kattavuus tekoälyn avulla
 
-Avaa ChatGPT, Claude tai Copilot ja anna sille bottisi tietotarpeet sekä valitsemasi dokumentit. Tässä vaiheessa et vielä lataa dokumentteja Copilotiin, vaan arvioit, kattaako suunniteltu tietopohja oikeat asiat.
+Avaa käytössäsi oleva hyväksytty tekoälypalvelu ja anna sille bottisi tietotarpeet sekä valitsemiesi dokumenttien turvalliset kuvaukset. Tässä vaiheessa et vielä rakenna tietopohjaa alustalle, vaan arvioit, kattaako suunnitelma oikeat asiat.
 
 Voit käyttää esimerkiksi seuraavaa promptia:
 
@@ -110,12 +112,24 @@ Kokoa lopullinen tietopohja alla olevaan taulukkoon.
 |  |  |  |  |
 |  |  |  |  |
 
-Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 18, kun lataat tietopohjan Copilotiin.
+Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun lataat tietopohjan valitsemallesi alustalle tai teet dokumentoidun kuivaharjoittelun.
 
-Kirjoita lopuksi 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä minun pitää muistaa, kun lataan dokumentit bottiin?"*
+Kirjoita 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä botin pitää tehdä silloin, kun vastausta ei löydy?"*
+
+### Vaihe 6 — Kirjoita testit ennen rakentamista
+
+Kirjoita kolme testiä, jotka ajat ensimmäisen kerran tunnilla 17:
+
+| Testityyppi | Syöte | Odotettu toiminta | Läpäisyehto |
+| --- | --- | --- | --- |
+| Positiivinen testi | Kysymys, johon tietopohja vastaa |  |  |
+| Negatiivinen testi | Pyyntö, josta botin pitää kieltäytyä tai jonka se ohjaa eteenpäin |  |  |
+| Reunatapaus | Tyhjä, sekava tai muuten epätavallinen syöte |  |  |
+
+Älä muuta odotettua toimintaa myöhemmin vain siksi, että botti vastaa eri tavalla. Testin tehtävä on paljastaa korjaustarve, ei todistaa ensimmäistä versiota onnistuneeksi.
 
 > **Miksi tämä on tärkeää:** Tietopohja erottaa aiheeseen rajatun botin yleisestä tekoälypalvelusta. Kuratoitujen dokumenttien avulla botti voi vastata juuri oman aiheesi käytäntöjen perusteella.
 
-> **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, testannut tietopohjan kattavuutta tekoälyn avulla, viimeistellyt tietopohjataulukon ja tallentanut dokumentit myöhempää käyttöä varten.
+> **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.
 
 **3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17**

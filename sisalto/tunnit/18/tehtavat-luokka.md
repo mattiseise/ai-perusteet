@@ -23,7 +23,7 @@ Bottisi auttaa juuri sinun aiheesi parissa toimivaa käyttäjää **pääsemää
 Botin rakentamisessa on neljä vaihetta. Käytä niitä työvaiheina:
 
 1. **Botin määrittely:** Päätä, kenelle botti on, mitä se osaa ja mitä se ei tee. Käytä pohjana tunnin 14 botin määrittelyäsi (rakennuspalikka 2).
-2. **Järjestelmäprompti ja persoona:** Kirjoita botille ohjeet — kuka se on, miten se vastaa, missä järjestyksessä se ohjaa käyttäjää. Käytä pohjana tunnin 12 promptauspankkiasi (rakennuspalikka 1).
+2. **Järjestelmäprompti ja persoona:** Kirjoita botille ohjeet — kuka se on, miten se vastaa, missä järjestyksessä se ohjaa käyttäjää. Käytä pohjana tunnin 12 promptikortissa toimivaksi osoittamaasi rakennetta (rakennuspalikka 1).
 3. **Tietopohja:** Lataa bottiin 3–5 dokumenttia, jotka antavat sille tarvittavan asiantuntemuksen oman aiheesi tiedosta. Käytä pohjana tunnin 15 kuratoituja dokumenttejasi (rakennuspalikka 3).
 4. **Testaus ja viimeistely:** Aja normaali testi, kielteinen testi ja reunatapaus. Kirjaa odotus ja tulos, tee vähintään yksi nimetty korjaus ja aja sitä koskeva testi uudelleen.
 
@@ -31,7 +31,7 @@ Botin rakentamisessa on neljä vaihetta. Käytä niitä työvaiheina:
 
 Olet kerännyt kolme rakennuspalikkaa aiemmilla oppitunneilla. Käytä niitä botin pohjana:
 
-- **Rakennuspalikka 1** (oppitunti 12, promptauspankki) antaa pohjan järjestelmäpromptille. Olet jo kirjoittanut ohjeita, jotka toimivat — käytä niiden rakennetta botin pääohjeessa.
+- **Rakennuspalikka 1** (oppitunti 12, promptikortti) antaa testatun rakenteen järjestelmäpromptille.
 - **Rakennuspalikka 2** (oppitunti 14, botin määrittely) antaa pohjan suunnittelulle. Persoona, kohderyhmä, rajat, tavoitteet — kaikki valmiina.
 - **Rakennuspalikka 3** (oppitunti 15, tietopohjan kuratointi) antaa pohjan tietopohjalle. Tiedät jo, millainen materiaali toimii ja mikä ei.
 
@@ -74,7 +74,7 @@ Esitys voi olla suora esitys ryhmälle, tallennettu video tai kuvakaappauskooste
 Aloita näin:
 
 1. Avaa **rakennuspalikka 2** (tunti 14, botin määrittely). Päivitä se kuvaamaan tätä bottia — kohderyhmä on nyt oman aiheesi käyttäjä.
-2. Kirjoita botin **järjestelmäpromptin ensimmäinen versio**. Pohjana **rakennuspalikka 1** (tunti 12, promptauspankki) — ota sieltä parhaiten toimivat rakenteet.
+2. Kirjoita botin **järjestelmäpromptin ensimmäinen versio**. Pohjana on **rakennuspalikka 1** (tunti 12, promptikortti) — käytä siinä testattua rakennetta.
 3. Lataa **rakennuspalikka 3** (tunti 15, kuratoitu tietopohja) bottiin. Jos tietopohja ei riitä, etsi 1–2 lisädokumenttia juuri oman aiheesi näkökulmasta.
 4. Kirjoita normaalille, kielteiselle ja reunatapaukselle odotettu tulos ja aja testit.
 5. Korjaa yksi havaittu puute, aja kyseinen testi uudelleen ja tallenna ennen–jälkeen-näyttö.

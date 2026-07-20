@@ -57,15 +57,16 @@ puolestani — kysy niin että minä huomaan ongelmat itse.
 
 ## Vaihe 3: Rakenna agenttisi minimiversio — pakollinen
 
-**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio** — ei valmis agentti. Turvakerroksen, IF-tarkistukset, ihmisen hyväksyntää vaativat kohdat ja viimeistelyn rakennat tunnilla 27.
+**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio**, jossa kielimalli tekee yhden tilanteen mukaan muuttuvan valinnan. Pelkkä triggeri → tekoälysolmu → toimintasolmu -putki on tekoälyavusteinen työnkulku. Turvakerroksen, ihmisen hyväksyntää vaativat kohdat ja viimeistelyn rakennat tunnilla 27.
 
 ### Ohjeet — iteratiivinen rakentaminen
 
-1. **Triggeri.** Valitse: Manual Trigger, Schedule Trigger tai Webhook.
-2. **Tekoälysolmu.** Lisää tekoälysolmu. Kirjoita järjestelmäprompti pohjapiirrosten 2 ja 3 perusteella.
-3. **Toimintasolmu.** Yksi solmu, joka toteuttaa agentin tehtävän.
-4. **Testaa heti.** Anna esimerkkisyöte, klikkaa "Execute".
-5. **Korjaa, jos ei toimi.** Tarkista yksi solmu kerrallaan.
+1. **Triggeri ja syöte.** Valitse Manual Trigger, Schedule Trigger tai Webhook. Käytä turvallista esimerkkisyötettä.
+2. **Agenttipäätös.** Lisää tekoälysolmu. Määritä vähintään kaksi sallittua vaihtoehtoa, joista se valitsee tilanteen perusteella, esimerkiksi `hae_tietoa`, `pyyda_lisatietoa` tai `ohjaa_ihmiselle`.
+3. **Työkalu tai toimintopolku.** Kytke vähintään yksi rajattu työkalu tai haara valinnan toteuttamiseksi. Malli ei saa vapaasti keksiä uusia toimintoja.
+4. **Suoritusjälki.** Tallenna testistä syöte, valittu toiminto, työkalun tulos ja seuraava vaihe.
+5. **Testaa kaksi erilaista syötettä.** Valinnan pitää muuttua perustellusti tilanteen mukana. Jos molemmat syötteet kulkevat aina samaa polkua, tarkista, onko kyseessä sittenkin työnkulku.
+6. **Korjaa yksi havaittu ongelma.** Muuta yhtä ohjetta, rajausta tai reititystä ja aja sitä koskeva testi uudelleen.
 
 ### Tekoälyvaihe — tarkista järjestelmäprompti
 
@@ -78,6 +79,8 @@ uudelleen — kysy minulta kysymyksiä.
 
 > **Älä lisää tunnilla 26 vielä näitä:** turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.
 
+Tässä kohdassa **suoritusjälki** voi olla käsin täytetty testitaulukko tai n8n:n suoritusnäkymä. Varsinaisen jatkuvan lokituksen lisäät tunnilla 27.
+
 ---
 
 ## Tunnin lopuksi
@@ -88,7 +91,7 @@ Kirjoita muistiinpanodokumenttiisi 3–4 lausetta:
 - Mihin jäin?
 - Mitä viimeistelen ensimmäisenä tunnilla 27?
 
-Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Se on osa lopputyön palautusta.
+Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Liitä mukaan kahden testin suoritusjäljet ja merkitse kuvaan kohta, jossa kielimalli valitsee seuraavan toiminnon. Ne ovat osa lopputyön palautusta.
 
 Päivitä vielä ARCHITECTURE-luonnoksen 3–5 vaiheriviä vastaamaan sitä, mitä todella rakensit. Merkitse keskeneräiset vastuut tunnin 27 tehtäviksi.
 

@@ -1,86 +1,83 @@
-# Valinnainen laboratorio — kokeile yhtä työkalukategoriaa
+# Opiskelutehtävät — Valinnainen tuotantolaboratorio
 
-> Valitse yksi kategoria: kuva, musiikki, video tai koodi. Voit käyttää saatavilla olevaa työkalua tai analysoida opettajan antamaa tulosta ilman tiliä. Kaikkea ei tarvitse kokeilla.
+> Valitse yksi reitti: kuva, ääni tai musiikki, video tai koodi. Kaikki reitit tuottavat samanlaisen näytön osaamisesta: ensimmäinen versio, kriteereihin perustuva arvio, yksi nimetty muutos ja ennen–jälkeen-vertailu.
 
-## Tehtävä 16.1 — Valitse, kokeile ja arvioi (suositeltu)
+Jos sinulla ei ole sopivaa palvelua, käytä opettajan antamia kahta esimerkkituotosta ja tee arviointi- sekä korjaussuunnitelma ilman tilin luomista.
 
-**Tavoite:** Perustele yhden työkalukategorian valinta, dokumentoi syöte ja tuotos, tee yksi iterointi ja tarkista vastuullisuus.
+## Vaihe 1 — Määritä käyttötarkoitus
 
-**Miksi juuri kuvageneraattori?** Kuvageneraattorit ovat saavutettavin osa erikoistuneita tekoälytyökaluja: ChatGPT:n, Copilotin ja Geminin ilmaisversioilla pääsee alkuun ilman lisätilauksia. Musiikki, video ja koodausavustajat ovat vaikeammin kokeiltavissa ilmaisversioilla, mutta tekijänoikeus- ja etiikkakysymykset ovat samat — oppi siirtyy.
+Kirjoita:
 
-### Vaiheet
+- mitä tuotat
+- kenelle tuotos on tarkoitettu
+- missä sitä käytetään
+- mikä on tärkein onnistumisen ehto
+- mitä tuotoksessa ei saa olla
 
-#### Vaihe 1 — Valitse yksi kategoria ja toteutustapa
+## Vaihe 2 — Valitse reittisi ja kirjoita syöte
 
-Valitse kuva, musiikki, video tai koodi. Käytä saatavilla olevaa palvelua tai opettajan antamaa esimerkkitulosta. Valitse konteksti kolmesta reitistä: arki tai harrastus, opiskelu tai työelämän rooliskenaario.
+### A. Kuva
 
-- **ChatGPT:n kuvagenerointi** (ilmainen versio antaa muutaman kuvan päivässä)
-- **Microsoft Copilot Designer / Image Creator** (saatavilla koulun edu-lisenssillä)
-- **Google Gemini** (ilmainen, sisältää kuvageneraattorin)
-- **Adobe Firefly** (rajoitettu ilmaisversio)
+Määritä käyttötarkoitus, pääkohde, sommittelu, visuaalinen ilme, kuvasuhde ja pois rajattavat asiat.
 
-Älä valitse sellaista, joka vaatii maksullista tiliä, ellei sinulla ole sellaista valmiiksi.
+Arviointikriteereiksi sopivat esimerkiksi käyttötarkoitus, sommittelu, yksityiskohtien oikeellisuus, harhaanjohtamattomuus ja saavutettavuus.
 
-#### Vaihe 2 — Kirjoita selkeä prompti tai syöte
+### B. Ääni tai musiikki
 
-Hyvä kuvaprompti kertoo materiaalin mukaan kuusi asiaa: *mitä kuvassa näkyy, mihin kuvaa käytetään, mikä on tyyli, millainen tunnelma tai valaistus on, mikä on kuvasuhde, mitä kuvassa ei saa olla*.
+Määritä käyttötarkoitus, kesto, rakenne, tempo, äänimaailma, mahdollinen puhe ja pois rajattavat asiat.
 
-Valitse yksi konteksti: arki tai harrastus, opiskelu tai työelämän rooliskenaario:
+Arviointikriteereiksi sopivat esimerkiksi rakenteen toteutuminen, puheen ymmärrettävyys, äänen tasapaino, tekniset häiriöt ja käyttöoikeus.
 
-| Ala | Esimerkkiaihe |
-|---|---|
-| **Liiketalous ja kauppa** | Kampanjan tai tapahtuman mainoskuva |
-| **Sosiaali- ja terveysala** | Kuvituskuva hyvinvointioppaaseen |
-| **Media ja viestintä** | Kansikuva podcastille tai videolle |
-| **Opiskelu** | Kuvituskuva esitelmän tai raportin kanteen |
-| **Ravintola- ja catering** | Houkutteleva tuotekuva menuun |
-| **Harrastukset** | Konseptikuva tapahtuman julisteeseen |
-| **IT** | Hero-kuva oman portfoliosivuston etusivulle |
+### C. Video
 
-Kirjoita prompti, joka sisältää kaikki kuusi osaa. Jätä lopuksi pois ne, joita et halua kuvaan (esim. *"ei tekstiä, ei logoja, ei tunnistettavia henkilöitä"*).
+Kirjoita 2–4 kohtauksen kuvakäsikirjoitus. Määritä kesto, tapahtumat, kamera, liike, ääni tai tekstitys ja lopussa välittyvä ydinasia.
 
-#### Vaihe 3 — Tuota tai analysoi ja iteroi
+Arviointikriteereiksi sopivat esimerkiksi jatkuvuus, liikkeen uskottavuus, viestin selkeys, äänen ja kuvan yhteys sekä saavutettavuus.
 
-Generoi ensimmäinen kuva. Sen jälkeen pyydä vähintään yksi muutos — vaihda tyyliä, värimaailmaa, tunnelmaa tai kuvasuhdetta. Esimerkkejä jatkokomennoista materiaalin mukaan:
+### D. Koodi
 
-- *"Tee tästä rauhallisempi"*
-- *"Muuta tyyli sarjakuvamaiseksi"*
-- *"Tee tästä 16:9-kuva dioihin"*
-- *"Lisää enemmän valoa"*
+Määritä toiminto, syöte, tulos, ympäristö, riippuvuudet, virhetilanteet ja vähintään kolme testiä. Käytä vain turvallista harjoitusympäristöä.
 
-Tallenna alkuperäinen tuotos ja yksi muutettu versio. Tilittömässä reitissä kuvaile, mitä yhtä syötteen osaa muuttaisit ja millaista muutosta odotat.
+Arviointikriteereiksi sopivat esimerkiksi toimivuus, luettavuus, virheiden käsittely, testien läpäisy ja se, ettei koodi tee pyytämättömiä toimintoja.
 
-#### Vaihe 4 — Pohdi eettiset kysymykset tekoälyn kanssa
+## Vaihe 3 — Tuota versio 1 ja arvioi
 
-Avaa ChatGPT, Claude tai Copilot uudessa keskustelussa ja anna sille tehtäväksi haastaa sinua eettisesti. Esimerkkiprompti:
+Tallenna syöte ja tuotos. Valitse 3–5 kriteeriä ja täytä:
 
-```
-Toimit minulle eettisen sparrauksen kumppanina. Tuotin juuri
-kuvageneraattorilla kaksi versiota kuvasta aiheesta [aihe]. Kysy
-minulta 3–4 kysymystä, jotka auttavat minua arvioimaan tekoa
-eettisesti. Älä esitä mielipiteitäsi, vaan kysy asioista, joihin
-minun pitää ottaa itse kantaa. Käsittele esimerkiksi:
+| Kriteeri | Havainto versiosta 1 | Korjaustarve |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
-- Mistä kuvageneraattori on oppinut tuottamaan tällaista tyyliä?
-- Kenen työtä se mahdollisesti jäljittelee?
-- Jos käyttäisin tätä kuvaa julkisesti, mitä minun pitäisi merkitä?
-- Olisiko inhimillinen kuvittaja tehnyt jotain, mihin tekoäly ei pysty?
-- Mikä on minun vastuuni, jos kuva loukkaa jonkun oikeuksia?
-```
+## Vaihe 4 — Muuta yhtä asiaa
 
-Vastaa kysymyksiin omin sanoin. Älä yritä antaa "oikeita" vastauksia — pohdi rehellisesti, mitä mieltä olet.
+Nimeä yksi ongelma ja sitä vastaava muutos syötteeseen tai toteutukseen. Älä vaihda samalla työkalua ja kaikkia asetuksia.
 
-#### Vaihe 5 — Tallenna laboratorion näyttö
+> Muutan ____, koska versiossa 1 havaitsin ____.
 
-Palauta tai tallenna yksi sivu, jossa näkyvät valintaperuste, tarkka prompti tai syöte, tuotos tai annettu esimerkkitulos, yksi iterointi sekä vastuullisuustarkistus.
+Tuota versio 2.
 
-- **Tekninen havainto:** Mitä kuvageneraattori teki hyvin? Missä se epäonnistui tai oli arvattava?
-- **Prompti-havainto:** Mikä promptin osa vaikutti eniten lopputulokseen? Mikä jäi tekoälyltä huomaamatta?
-- **Eettinen havainto:** Mikä yksi eettinen kysymys jäi mielen päälle? Miten suhtaudut siihen?
-- **Käytännön päätös:** Käyttäisitkö tätä kuvaa *julkisesti*? Jos kyllä, millaisen merkinnän liittäisit mukaan (esim. "Kuva on luotu tekoälyllä")? Jos et, miksi?
+## Vaihe 5 — Vertaa ennen ja jälkeen
 
-Materiaali muistuttaa: *jos tekoäly teki merkittävän osan kuvasta, kerro siitä*. Tämä on osa vastuullisen käyttäjän vastuuta.
+| Kriteeri | Versio 1 | Versio 2 | Mitä muutos osoitti? |
+| --- | --- | --- | --- |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
-> **Miksi tämä on tärkeää:** Tunnilla 18 rakentamasi oma apuri-botti ei ole kuvageneraattori, mutta sama eettinen ajattelu koskee myös sitä: mistä tietopohja on peräisin, mikä rajaa botin toimintaa ja mitä käyttäjälle kerrotaan? Rajat kuuluvat botin suunnitteluun alusta lähtien.
+Kirjoita johtopäätös. Paransiko nimetty muutos tuotosta? Mistä se näkyy? Mitä et voi vielä päätellä yhden kokeen perusteella?
 
-**Vastuullinen toiminta edellyttää, että arvioit vaihtoehdot ja perustelet oman päätöksesi.**
+## Vaihe 6 — Vastuullisuustarkistus
+
+Vastaa:
+
+- Oliko syöte ja lähdeaineisto luvallista käyttää?
+- Saako tuotoksen julkaista suunnitellussa käytössä?
+- Mitä pitää vielä tarkistaa ihmisenä?
+- Voiko tuotos johtaa jotakuta harhaan tai aiheuttaa vahinkoa?
+- Miten kerrot tekoälyn osuudesta?
+
+---
+
+**Tallennettava tuotos:** laboratorioloki, joka sisältää käyttötarkoituksen, syötteen, versiot 1 ja 2, kriteeritaulukot, yhden nimetyn muutoksen, johtopäätöksen ja vastuullisuustarkistuksen.

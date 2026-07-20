@@ -18,217 +18,22 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 25</span></div><div class="lesson-title">Ihminen portinvartijana — human-in-the-loop käytännössä</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-25/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-25/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-25/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-25/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-25/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-25-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-25-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-25-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-25-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-25-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-25-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajamateriaali — oppitunti 25: Ihmisen osallistuminen päätöksentekoon</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin ydinajatukset</h2></div><div class="task-card-body">
-<p>Tämän oppitunnin keskeinen viesti on, että agentti ei ole täysin autonominen järjestelmä. Kriittisissä kohdissa tarvitaan ihminen mukaan päätöksentekoon. <strong>Ihmisen osallistuminen päätöksentekoon</strong> yhdistää automaation ja ihmisen harkinnan: agentti tekee rutiinityötä ja ihminen osallistuu silloin, kun päätös on riskialtis, epävarma tai poikkeuksellinen.</p>
-<p>Oppitunti rakentaa siltaa kohti <strong>n8n-projektia</strong>, jossa opiskelijat suunnittelevat ja rakentavat oman agenttinsa. Viimeiset viisi oppituntia muodostavat agentin rakentamisen keskeiset rakennuspalikat:</p>
-<ol>
-<li><strong>Oppitunti 21: Muisti ja konteksti</strong> — agentti muistaa ja hyödyntää aiempaa tietoa.</li>
-<li><strong>Oppitunti 22: Työkalut</strong> — agentti käyttää työkaluja ja tekee toimintoja.</li>
-<li><strong>Oppitunti 23: Suunnittelumallit</strong> — agentti etenee järjestelmällisesti ja valitsee sopivan toimintamallin.</li>
-<li><strong>Oppitunti 24: Turvallisuus</strong> — agentti toimii rajatusti, valvotusti ja turvallisesti.</li>
-<li><strong>Oppitunti 25: Ihmisen osallistuminen päätöksentekoon</strong> — agentti tekee yhteistyötä ihmisen kanssa.</li>
-</ol>
-<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että hyväksyntä ei ole irrallinen viesti ihmiselle vaan harnessin toteuttama tila. Harness pysäyttää suorituksen, säilyttää tarvittavat tiedot ja jatkaa, hylkää tai eskaloi sovitun säännön mukaan. Kielimalli voi valmistella ehdotuksen, mutta se ei saa hyväksyä omaa ehdotustaan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Kolme sääntöä hyväksynnälle</h2></div><div class="task-card-body">
-<p>Ihmisen hyväksyntää ei tarvita jokaiseen päätökseen. Jos kaikki päätökset pysäytetään hyväksyttäväksi, agentti hidastaa työnkulkua. Jos taas hyväksyntää ei vaadita riskikohdissa, agentti voi aiheuttaa todellista vahinkoa.</p>
-<p>Hyvä perusmalli on arvioida hyväksynnän tarvetta kolmen säännön avulla:</p>
-<ol>
-<li><strong>Rahaa tai rakenteita koskeva päätös:</strong> alennukset, hyvitykset, sopimukset, asiakastietojen muutokset ja pysyvät tietokantamuutokset vaativat hyväksynnän.</li>
-<li><strong>Epävarmuus:</strong> jos agentin varmuus on alle sovitun rajan, esimerkiksi alle 70 %, päätös siirretään ihmiselle.</li>
-<li><strong>Poikkeama:</strong> jos tilanne on epätavallinen, tunnepitoinen, riskialtis tai poikkeaa normaalista prosessista, tarvitaan ihmisen arvio.</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Sääntö</th>
-<th>Esimerkki</th>
-<th>Miksi ihminen tarvitaan?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Rahaa tai rakenteita</strong></td>
-<td>Agentti ehdottaa 50 % hyvitystä asiakkaalle.</td>
-<td>Päätös vaikuttaa yrityksen rahaan, asiakassuhteeseen ja mahdollisesti käytäntöihin.</td>
-</tr>
-<tr>
-<td><strong>Epävarmuus</strong></td>
-<td>Agentti on vain 64 % varma, että asiakkaalla on oikeus palautukseen.</td>
-<td>Matala varmuus lisää virheellisen päätöksen riskiä.</td>
-</tr>
-<tr>
-<td><strong>Poikkeama</strong></td>
-<td>Asiakas on vihainen, uhkaa lopettaa sopimuksen ja vaatii poikkeuksellista hyvitystä.</td>
-<td>Tilanne vaatii harkintaa, empatiaa ja mahdollisesti poikkeusmenettelyä.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Opettajan huomio:</strong> Hyväksyntää ei pidä ajatella epäluottamuksena agenttia kohtaan. Se on suunniteltu vastuunjako: agentti valmistelee, ihminen kantaa vastuun kriittisestä päätöksestä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Hyväksyntäportin suunnittelu</h2></div><div class="task-card-body">
-<p><strong>Hyväksyntäportti</strong> on kohta työnkulussa, jossa agentti pysähtyy ja pyytää ihmiseltä päätöstä ennen toiminnon suorittamista. Hyvä hyväksyntäportti on <strong>selkeä</strong>, <strong>nopea</strong> ja <strong>päätöstä tukeva</strong>.</p>
-<p>Hyväksyntäportissa pitää näkyä ainakin seuraavat asiat:</p>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 25</span></div><div class="lesson-title">Ihminen portinvartijana — human-in-the-loop käytännössä</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-25/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-25/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-25/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-25/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-25/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-25-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-25-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-25-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-25-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-25-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-25-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 25: ihminen portinvartijana</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
+<p>Oppija suunnittelee, missä kohdissa agentti saa toimia itse ja missä ihmisen pitää hyväksyä, muokata tai hylätä ehdotus. Samalla erotetaan palautedatan tallentaminen mallin oppimisesta.</p>
+</div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
+<p>Oppija:</p>
 <ul>
-<li><strong>Mitä päätöstä pyydetään?</strong></li>
-<li><strong>Kenestä tai mistä päätös koskee?</strong></li>
-<li><strong>Miksi agentti ehdottaa tätä päätöstä?</strong></li>
-<li><strong>Kuka päätöksen hyväksyy?</strong></li>
-<li><strong>Mitä tapahtuu, jos päätös hylätään?</strong></li>
+<li>tunnistaa päätökset, joihin liittyy raha, sitoumus, korkea epävarmuus tai merkittävä vaikutus</li>
+<li>suunnittelee hyväksyntäportin, joka näyttää päätöksen kannalta tarpeellisen tiedon</li>
+<li>määrittää aikarajan, eskaloinnin ja turvallisen oletustoiminnon</li>
+<li>välttää hyväksyntäväsymystä rajaamalla portit riskikohtiin</li>
+<li>kuvaa, miten palaute tallennetaan ja miten siitä tehdään hallittu järjestelmämuutos</li>
 </ul>
-<p><strong>HYVÄKSYNTÄPYYNTÖ</strong></p>
-<p><strong>Asiakas:</strong> Jane Smith, 3 aiempaa ostoa</p>
-<p><strong>Pyyntö:</strong> 50 % alennus, 100 € → 50 €</p>
-<p><strong>Agentin perustelu:</strong> Asiakas on lojaali ja kertoo kilpailijan tarjonneen halvempaa hintaa.</p>
-<p><strong>Päätöksen tekee:</strong> Myyntipäällikkö</p>
-<p><strong>Vaihtoehto, jos hylätään:</strong> Tarjoa ilmainen toimitus.</p>
-<p><strong>Toiminnot:</strong> [HYVÄKSY] [HYLKÄÄ] [KYSY LISÄÄ]</p>
-<p>Hyväksyntäportin ei pidä olla pelkkä painike. Jos ihminen näkee vain vaihtoehdon “hyväksy” tai “hylkää” ilman taustatietoja, hän ei voi tehdä laadukasta päätöstä. Toisaalta hyväksyntäportti ei saa myöskään olla liian raskas. Jos siinä on liikaa tietoa, hyväksyjä alkaa helposti ohittaa yksityiskohtia.</p>
-<p><strong>Esimerkki opetukseen</strong></p>
-<p>Näytä opiskelijoille kaksi hyväksyntäporttia: toinen liian suppea ja toinen liian pitkä. Pyydä opiskelijoita arvioimaan, kummalla hyväksyjä tekee todennäköisemmin virheen ja miksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ihmisen osallistava työnkulku</h2></div><div class="task-card-body">
-<p><strong>Ihmisen osallistava työnkulku</strong> tarkoittaa koko prosessia, jossa agentti ja ihminen tekevät yhteistyötä. Tavoitteena ei ole siirtää kaikkea ihmiselle, vaan jakaa vastuu järkevästi.</p>
-<table>
-<thead>
-<tr>
-<th>Agentti tekee</th>
-<th>Ihminen tekee</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nopeat analyysit ja alustavat luokittelut</td>
-<td>Kriittiset päätökset ja poikkeukset</td>
-</tr>
-<tr>
-<td>Rutiinitehtävät ja toistuvat vaiheet</td>
-<td>Epäselvät, tunnepitoiset tai riskialttiit tilanteet</td>
-</tr>
-<tr>
-<td>Yksinkertaiset ehdotukset ja päätösten valmistelu</td>
-<td>Oppimisen ohjaaminen ja lopullinen vastuu</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Ihmisen osallistavan työnkulun perusmalli</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1. Agentti lukee syötteen</strong> Asiakasviesti, lomake, tiketti tai tilaus.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>2. Agentti tekee alustavan arvion</strong> Luokittelu, riskitaso ja ehdotus.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>3. Hyväksyntäportti</strong> Ihminen hyväksyy, hylkää tai pyytää lisätietoa.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>4. Agentti suorittaa turvallisen toiminnon</strong> Viesti, päivitys, raportti tai ohje.</td>
-</tr>
-</tbody>
-</table>
-<p>Hyvä työnkulku sijoittaa ihmisen mukaan niihin kohtiin, joissa päätöksellä on suuri vaikutus tai joissa agentin virhe voisi aiheuttaa vahinkoa. Ihmistä ei kannata lisätä työnkulkuun vain varmuuden vuoksi, jos päätös on yksinkertainen ja turvallinen automatisoida.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppiminen palautteesta</h2></div><div class="task-card-body">
-<p>Ihmisen osallistuminen päätöksentekoon ei ole vain päätösten hyväksymistä. Se on myös tapa tuottaa palautetta agentin toiminnan kehittämiseksi. Kun ihminen hyväksyy, hylkää tai muokkaa agentin ehdotusta, järjestelmä voi oppia, millaiset ehdotukset ovat hyviä ja millaiset tarvitsevat korjaamista.</p>
-<p>Palautteesta oppiminen voidaan kuvata nelivaiheisena prosessina:</p>
-<ol>
-<li><strong>Tallennetaan hyväksynnät ja hylkäykset:</strong> jokainen päätös kirjataan riittävillä taustatiedoilla.</li>
-<li><strong>Agentti analysoi kuvioita:</strong> mitkä ehdotukset hyväksytään usein ja mitkä hylätään?</li>
-<li><strong>Agentti mukauttaa ehdotuksiaan:</strong> tulevat ehdotukset muuttuvat aiemman palautteen perusteella.</li>
-<li><strong>Riski arvioidaan:</strong> agentti voi oppia myös väärin, jos palaute on vinoutunutta, epäjohdonmukaista tai puutteellista.</li>
-</ol>
-<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelija sanoo “agentti oppii hyväksyjien päätöksistä”, pyydä häntä tarkentamaan, mitä agentti saa oppia. Oppiiko se organisaation säännön, päätösmallin vai yksittäisen ihmisen henkilökohtaisen tavan toimia?</p>
-<p>Väärä oppiminen voi syntyä esimerkiksi silloin, kun yksi hyväksyjä tekee jatkuvasti poikkeuksellisia päätöksiä, mutta agentti tulkitsee ne yleiseksi säännöksi. Siksi palautedataa pitää arvioida kriittisesti, eikä agentille pidä antaa rajatonta vapautta muuttaa toimintaansa pelkän hyväksyntähistorian perusteella.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Harjoitukset</h2></div><div class="task-card-body">
-<p>Oppitunnin harjoitusten tarkoituksena on siirtää ihmisen osallistumista korostava ajattelu konkreettiseen suunnitteluun. Harjoitukset kannattaa sitoa opiskelijan omaan agenttiprojektiin aina kun mahdollista.</p>
-<ol>
-<li><strong>Kolme sääntöä: päätösten luokittelu</strong><br />
-   Opiskelija arvioi, mitkä päätökset vaativat ihmisen hyväksynnän ja perustelee valinnan rahaan, epävarmuuteen tai poikkeamaan liittyvällä säännöllä.</li>
-<li><strong>Hyväksyntäportti: suunnittelu</strong><br />
-   Opiskelija suunnittelee hyväksyntäpyynnön, jossa näkyvät päätöksen kohde, perustelu, riskit, hyväksyjä ja vaihtoehdot.</li>
-<li><strong>Työnkulku: kaavio</strong><br />
-   Opiskelija kuvaa työnkulun, jossa näkyy, missä vaiheessa agentti toimii ja missä vaiheessa ihminen osallistuu.</li>
-<li><strong>Oppiminen: mekanismi</strong><br />
-   Opiskelija suunnittelee, mitä palautedataa tallennetaan ja miten väärä oppiminen estetään.</li>
-</ol>
-<p><strong>Vinkki arviointiin:</strong> Hyvä vastaus ei vain sano “ihminen hyväksyy päätöksen”, vaan kertoo, millä perusteella päätös pysähtyy hyväksyttäväksi, mitä tietoja hyväksyjä näkee ja mitä tapahtuu hyväksynnän tai hylkäyksen jälkeen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Yhteys n8n-projektiin</h2></div><div class="task-card-body">
-<p>n8n-projektissa tämän oppitunnin ajatukset voidaan toteuttaa konkreettisina työnkulun osina. Opiskelijoiden kannattaa suunnitella ihmisen osallistuminen päätöksentekoon jo ennen kuin he rakentavat agentin teknisesti.</p>
-<table>
-<thead>
-<tr>
-<th>Ihmisen osallistuminen</th>
-<th>Toteutus n8n:ssä</th>
-<th>Mihin sitä käytetään?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Hyväksyntäportti</strong></td>
-<td>Approval node tai vastaava hyväksyntävaihe</td>
-<td>Riskialttiit päätökset pysäytetään ihmiselle.</td>
-</tr>
-<tr>
-<td><strong>Ehdollinen päätös</strong></td>
-<td>Conditional node</td>
-<td>Jos varmuus on matala tai päätös koskee rahaa, siirrytään hyväksyntään.</td>
-</tr>
-<tr>
-<td><strong>Lokitus</strong></td>
-<td>Tietokanta, Google Sheets, lokitiedosto tai muu tallennus</td>
-<td>Päätökset, hyväksyjät ja perustelut tallennetaan jäljitettävästi.</td>
-</tr>
-<tr>
-<td><strong>Ihmisen vastaus</strong></td>
-<td>Webhook tai lomakevastaus</td>
-<td>Ihminen voi hyväksyä, hylätä tai pyytää lisätietoja.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Esimerkki n8n-työnkulusta</strong></p>
-<p>Agentti arvioi asiakkaan hyvityspyynnön. Jos hyvitys on alle 20 € ja varmuus on yli 90 %, agentti voi lähettää vastauksen automaattisesti. Jos hyvitys on yli 20 €, varmuus on alle 70 % tai viestissä on vihainen sävy, työnkulku ohjaa päätöksen hyväksyntäporttiin.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Yhteiset virheet ja opettajan korjaukset</h2></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Yleinen virhe</th>
-<th>Korjaava näkökulma</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>”Ihminen kannattaa lisätä jokaiseen päätökseen.”</td>
-<td>Ei välttämättä. Jos jokainen päätös vaatii ihmisen, agentti menettää tehokkuutensa. Ihminen lisätään riskikohtiin.</td>
-</tr>
-<tr>
-<td>”Jos agentti on varma, ihminen ei koskaan tarvita.”</td>
-<td>Varmuus ei yksin riitä. Päätös voi silti koskea rahaa, henkilötietoja tai poikkeustilannetta.</td>
-</tr>
-<tr>
-<td>”Hyväksyntäportti on vain hyväksy/hylkää-painike.”</td>
-<td>Hyväksyntäportin pitää antaa päätöksen kannalta olennainen tieto: mitä, kenelle, miksi, riski ja vaihtoehdot.</td>
-</tr>
-<tr>
-<td>”Agentti oppii automaattisesti oikein hyväksynnöistä.”</td>
-<td>Ei aina. Palaute voi olla vinoutunutta, epäjohdonmukaista tai yksittäisen henkilön tyyliin perustuvaa. Oppiminen pitää rajata ja tarkistaa.</td>
-</tr>
-<tr>
-<td>”Hyväksyntä on järjestelmän ulkopuolinen viesti ihmiselle.”</td>
-<td>Ei. Harnessin pitää hallita odotustila, päätöstiedot, aikaraja ja varapolku, jotta suoritus jatkuu hallitusti myös silloin, kun ihminen ei vastaa.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
-<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että <strong>ihmisen osallistuminen päätöksentekoon</strong> ei ole automaation vastakohta. Se on vastuullisen automaation muoto. Agentti voi tehdä paljon, mutta ihmisen pitää osallistua niissä kohdissa, joissa tarvitaan harkintaa, vastuuta ja eettistä päätöksentekoa.</p>
-<p>Hyvä päätöskysymys tunnin loppuun:</p>
-<blockquote class="pause"><p><strong>Pohdi:</strong> Missä kohdassa oman agenttisi pitäisi pysähtyä ja pyytää ihmiseltä hyväksyntä? Mitä tietoa ihmisen pitää nähdä, jotta hän voi tehdä hyvän päätöksen?</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
-<p>Tallennettava tuotos on <strong>hyväksyntä- ja eskalointimatriisi varapolkuineen</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ydinviesti</h2></div><div class="task-card-body">
+<p>Ihminen ei kuulu jokaiseen vaiheeseen varmuuden vuoksi. Hän kuuluu kohtaan, jossa päätös tarvitsee vastuuta tai harkintaa. Hyväksyntä tai hylkäys voi tuottaa kehitysaineistoa, mutta kielimalli ei opi siitä automaattisesti.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
+<p>Tallennettava tuotos on <strong>Agentti: Ihminen -pohjapiirros</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -239,357 +44,118 @@
 </thead>
 <tbody>
 <tr>
-<td>0–10 min</td>
-<td>Virittäytyminen</td>
-<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+<td>0–15 min</td>
+<td>Riskikohta</td>
+<td>Vertaa rutiinitoimintoa ja rahaa tai oikeuksia koskevaa päätöstä.</td>
 </tr>
 <tr>
-<td>10–25 min</td>
-<td>Ydinkäsite</td>
-<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+<td>15–30 min</td>
+<td>Hyvä portti</td>
+<td>Mallinna päätös, perustelu, näyttö, vaihtoehdot ja seuraukset.</td>
 </tr>
 <tr>
-<td>25–65 min</td>
-<td>Perustuotos</td>
-<td>Oppija sijoittaa kolme toimintoa hyväksyntä- ja eskalointimatriisiin varapolkuineen. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+<td>30–55 min</td>
+<td>Oma pohjapiirros</td>
+<td>Oppija sijoittaa hyväksyntäportit omaan agenttiinsa.</td>
 </tr>
 <tr>
-<td>65–80 min</td>
-<td>Testaus ja purku</td>
-<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+<td>55–68 min</td>
+<td>Hiljaisuus</td>
+<td>Oppija määrittää aikarajan, eskaloinnin ja oletustoiminnon.</td>
+</tr>
+<tr>
+<td>68–80 min</td>
+<td>Palautedata</td>
+<td>Oppija kuvaa lokin, arvioijan, muutoksen ja uudelleentestauksen.</td>
 </tr>
 <tr>
 <td>80–90 min</td>
-<td>Tallennus ja lopputehtävä</td>
-<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+<td>Haastaminen</td>
+<td>Pari etsii yhden turhan portin ja yhden puuttuvan riskikohdan.</td>
 </tr>
 </tbody>
 </table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
-<p>Oppija käyttää valmiita riskitasokortteja. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
-<p>Kun perustuotos on valmis, oppija lisää aikakatkaisun ja poikkeuksen turvalliset oletukset. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-25-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-25-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 25</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1: Kolme sääntöä hyväksynnän tarpeelle noin 20 minuuttia</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, milloin agentin päätös voidaan automatisoida ja milloin tarvitaan <strong>ihmisen hyväksyntä</strong>. Opiskelijat oppivat käyttämään kolmea sääntöä päätöksenteon riskin arvioimiseen.</p>
-<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että kaikkia päätöksiä ei tarvitse hyväksyttää ihmisellä. Jos hyväksyntää vaaditaan joka vaiheessa, agentti hidastaa työtä. Jos hyväksyntää ei vaadita riskitilanteissa, agentti voi aiheuttaa vahinkoa. Vastuullisen käyttäjän tehtävä on löytää oikea tasapaino.</p>
-<h3>Opettajan ohjeet ja fasilitointi</h3>
-<p><strong>Selitys:</strong></p>
-<p>Kerro opiskelijoille:</p>
-<p>“Ihmisen osallistuminen päätöksentekoon tarkoittaa sitä, että ihminen tarkistaa agentin ratkaisun, kun päätös on riskialtis, epävarma tai poikkeuksellinen. Kaikkea ei tarvitse hyväksyttää ihmisellä, mutta tärkeät ja vaaralliset päätökset pitää hyväksyttää.”</p>
-<p>Kirjoita taululle kolme hyväksynnän sääntöä:</p>
-<ol>
-<li><strong>Rahaa tai rakenteita koskeva päätös:</strong> alennukset, hyvitykset, sopimukset, asiakastiedot tai pysyvät tietokantamuutokset vaativat hyväksynnän.</li>
-<li><strong>Epävarmuus:</strong> jos agentin varmuus on alle sovitun rajan, esimerkiksi alle 70 %, päätös siirretään ihmiselle.</li>
-<li><strong>Poikkeama:</strong> jos tilanne on epätavallinen, tunnepitoinen, riskialtis tai poikkeaa normaalista prosessista, tarvitaan hyväksyntä.</li>
-</ol>
-<p><strong>Esimerkki opetukseen</strong></p>
-<p>Näytä opiskelijoille, että päätöksen tekninen helppous ei tarkoita, että agentti saa tehdä sen itsenäisesti. Esimerkiksi hyvityksen lähettäminen voi olla teknisesti yksinkertaista, mutta taloudellisesti ja asiakassuhteen kannalta merkittävää.</p>
-<h3>Esittely: kolme sääntöä käytännössä</h3>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tyypilliset väärinkäsitykset</h2></div><div class="task-card-body">
+<ul>
+<li>Jokaisen toiminnon hyväksyttäminen voi tehdä järjestelmästä hitaamman ilman olennaista lisäturvaa.</li>
+<li>Pelkkä hyväksy/hylkää-painike ei anna ihmiselle päätöksen taustaa.</li>
+<li>Vastaamattomuus ei saa tarkoittaa kriittisen päätöksen automaattista hyväksyntää.</li>
+<li>Yksi poikkeuspäätös ei ole uusi organisaation sääntö.</li>
+<li>Lokimerkintä ei muuta mallia; muutos vaatii arvioinnin, toteutuksen ja testauksen.</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioitava näyttö</h2></div><div class="task-card-body">
+<p>Hyväksyttävä pohjapiirros kertoo, missä portti on, mitä se näyttää, kuka päättää, kuinka kauan odotetaan, mitä tapahtuu hiljaisuudessa ja miten päätös tallennetaan kehitystä varten.</p></div></div></div><div id="panel-lesson-25-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-25-ohjatut" data-tab="ohjatut" hidden><h1>Ohjatut tehtävät — oppitunti 25</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1 — Missä ihminen tarvitaan? (15 min)</h2></div><div class="task-card-body">
+<p>Luokittele tilanteet:</p>
+<ul>
+<li>tavallisen vastaanottokuittauksen lähettäminen</li>
+<li>hinnanalennuksen hyväksyminen</li>
+<li>tietokannan rivin poistaminen</li>
+<li>lisätiedon pyytäminen epäselvään viestiin</li>
+<li>lääkinnälliseen tai oikeudelliseen päätökseen vaikuttava suositus</li>
+</ul>
+<p>Kysy jokaisesta: mikä on virheen vaikutus, voidaanko toiminto perua ja kuka kantaa vastuun?</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2 — Rakenna päätösnäkymä (15 min)</h2></div><div class="task-card-body">
+<p>Hyväksyntäportissa pitää näkyä:</p>
+<ul>
+<li>mitä päätöstä pyydetään</li>
+<li>mihin aineistoon ehdotus perustuu</li>
+<li>agentin lyhyt havaittava perustelu</li>
+<li>riskitaso ja seuraukset</li>
+<li>hyväksy, muokkaa, hylkää ja eskaloi -vaihtoehdot</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3 — Mitä tapahtuu hiljaisuudessa? (15 min)</h2></div><div class="task-card-body">
+<p>Ryhmät määrittävät yhdelle rahaa koskevalle päätökselle:</p>
+<ul>
+<li>vastausajan</li>
+<li>varahenkilön</li>
+<li>eskalointiketjun</li>
+<li>turvallisen oletustoiminnon</li>
+</ul>
+<p>Kriittistä päätöstä ei hyväksytä automaattisesti pelkän vastaamattomuuden vuoksi.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4 — Palautteesta hallituksi muutokseksi (20 min)</h2></div><div class="task-card-body">
+<p>Täytä ketju:</p>
 <table>
 <thead>
 <tr>
-<th>Sääntö</th>
-<th>Esimerkki</th>
-<th>Miksi hyväksyntä tarvitaan?</th>
+<th>Vaihe</th>
+<th>Kuvaus</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Rahaa tai rakenteita</strong></td>
-<td>Agentti ehdottaa 40 % alennusta asiakkaalle.</td>
-<td>Päätös vaikuttaa yrityksen rahaan ja hinnoitteluun.</td>
-</tr>
-<tr>
-<td><strong>Epävarmuus</strong></td>
-<td>Agentti on vain 62 % varma siitä, että asiakas on oikeutettu hyvitykseen.</td>
-<td>Matala varmuus lisää virheellisen päätöksen riskiä.</td>
-</tr>
-<tr>
-<td><strong>Poikkeama</strong></td>
-<td>Asiakas on erittäin vihainen ja uhkaa lopettaa sopimuksen.</td>
-<td>Tilanne vaatii harkintaa, empatiaa ja mahdollisesti poikkeusmenettelyä.</td>
-</tr>
-</tbody>
-</table>
-<h3>Ryhmätyö</h3>
-<p>Jaa opiskelijat pienryhmiin. Anna ryhmille kahdeksan päätöstä. Ryhmän tehtävänä on päättää, vaatiiko päätös ihmisen hyväksynnän vai voiko agentti tehdä sen itsenäisesti.</p>
-<p><strong>Esimerkkipäätökset:</strong></p>
-<ol>
-<li>Agentti lähettää asiakkaalle linkin käyttöohjeeseen.</li>
-<li>Agentti antaa asiakkaalle 10 % alennuskoodin.</li>
-<li>Agentti ehdottaa 50 % hyvitystä myöhästyneestä toimituksesta.</li>
-<li>Agentti muuttaa asiakkaan toimitusosoitetta.</li>
-<li>Agentti vastaa usein kysyttyyn kysymykseen palautusajasta.</li>
-<li>Agentti poistaa vanhan tukitiketin.</li>
-<li>Agentti lähettää viestin asiakkaalle, jonka viesti on vihainen ja uhkaava.</li>
-<li>Agentti tekee päätöksen, vaikka se on vain 58 % varma oikeasta ratkaisusta.</li>
-</ol>
-<p><strong>Ryhmän tehtävä:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Päätös</th>
-<th>Vaatiiko hyväksynnän?</th>
-<th>Mikä sääntö vaikuttaa?</th>
-<th>Perustelu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[Päätös]</td>
-<td>Kyllä / ei</td>
-<td>Raha / epävarmuus / poikkeama</td>
-<td>[Perustelu]</td>
-</tr>
-</tbody>
-</table>
-<h3>Odotettu oppimistulos</h3>
-<ul>
-<li>Opiskelijat ymmärtävät, ettei jokainen agentin päätös tarvitse ihmisen hyväksyntää.</li>
-<li>Opiskelijat osaavat tunnistaa tilanteet, joissa hyväksyntä on tarpeellinen.</li>
-<li>Opiskelijat osaavat käyttää kolmea sääntöä: raha tai rakenne, epävarmuus ja poikkeama.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2: Hyväksyntäportti käyttöliittymänä noin 20 minuuttia</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on opettaa opiskelijoille, millainen on hyvä <strong>hyväksyntäportti</strong>. Hyvä hyväksyntäportti antaa ihmiselle riittävästi tietoa päätöksen tekemiseen, mutta ei kuormita häntä turhalla tiedolla.</p>
-<p><strong>Opettajan huomio:</strong> Hyväksyntäportin tarkoitus ei ole vain kysyä “hyväksytäänkö?”. Sen pitää näyttää päätöksen kannalta olennaiset tiedot: mitä agentti aikoo tehdä, miksi se ehdottaa sitä, mitä riskejä päätökseen liittyy ja mitä vaihtoehtoja hyväksyjällä on.</p>
-<h3>Opettajan ohjeet ja fasilitointi</h3>
-<p><strong>Selitys:</strong></p>
-<p>Kerro opiskelijoille:</p>
-<p>“Hyväksyntäportin pitää olla <strong>selkeä</strong>, <strong>nopea</strong> ja <strong>päätöstä tukeva</strong>. Ihmisen ei pidä joutua arvaamaan, mitä agentti aikoo tehdä tai mihin tietoihin ehdotus perustuu.”</p>
-<h3>Esittely: hyväksyntäportti alennukselle</h3>
-<p><strong>HYVÄKSYNTÄPYYNTÖ</strong></p>
-<p><strong>Asiakas:</strong> Jane Smith, 3 aiempaa ostoa</p>
-<p><strong>Pyyntö:</strong> 50 % alennus, 100 € → 50 €</p>
-<p><strong>Agentin perustelu:</strong> Asiakas on lojaali ja kertoo kilpailijan tarjonneen halvempaa hintaa.</p>
-<p><strong>Päätöksen tekee:</strong> Myyntipäällikkö</p>
-<p><strong>Vaihtoehto, jos hylätään:</strong> Tarjoa ilmainen toimitus.</p>
-<p><strong>Toiminnot:</strong> [HYVÄKSY] [HYLKÄÄ] [KYSY LISÄÄ]</p>
-<p>Kysy opiskelijoilta:</p>
-<ul>
-<li>Mikä tässä hyväksyntäportissa on selkeää?</li>
-<li>Mitä tietoa päätöksentekijä tarvitsee lisää?</li>
-<li>Onko vaihtoehtoinen ratkaisu hyödyllinen?</li>
-<li>Mitä tapahtuisi, jos hyväksyntäportissa näkyisi vain painike “Hyväksy”?</li>
-</ul>
-<h3>Ryhmätyö</h3>
-<p>Opiskelijat muotoilevat hyväksyntäportin valitsemalleen tilanteelle.</p>
-<p><strong>Mahdollisia tilanteita:</strong></p>
-<ul>
-<li>asiakkaalle myönnettävä hyvitys,</li>
-<li>tilauksen peruminen,</li>
-<li>asiakkaan osoitetiedon muuttaminen,</li>
-<li>tukitiketin siirtäminen kiireelliseksi,</li>
-<li>laskun hyväksyminen,</li>
-<li>käyttäjätunnuksen lukitseminen.</li>
-</ul>
-<p><strong>Hyväksyntäportissa pitää näkyä:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Kohta</th>
-<th>Mitä siihen kirjoitetaan?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Päätöksen kohde</strong></td>
-<td>Mitä ollaan hyväksymässä?</td>
-</tr>
-<tr>
-<td><strong>Taustatiedot</strong></td>
-<td>Mihin tietoihin agentin ehdotus perustuu?</td>
-</tr>
-<tr>
-<td><strong>Agentin perustelu</strong></td>
-<td>Miksi agentti ehdottaa tätä päätöstä?</td>
-</tr>
-<tr>
-<td><strong>Riski</strong></td>
-<td>Mitä voi mennä pieleen?</td>
-</tr>
-<tr>
-<td><strong>Vaihtoehdot</strong></td>
-<td>Hyväksy, hylkää, kysy lisää tai siirrä eteenpäin.</td>
-</tr>
-</tbody>
-</table>
-<h3>Odotettu oppimistulos</h3>
-<ul>
-<li>Opiskelijat ymmärtävät, että hyväksyntäportin pitää tukea ihmisen päätöksentekoa.</li>
-<li>Opiskelijat osaavat suunnitella selkeän hyväksyntäpyynnön.</li>
-<li>Opiskelijat osaavat erottaa olennaisen päätöstiedon turhasta taustatiedosta.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3: Ihmisen osallistava työnkulku noin 25 minuuttia</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on auttaa opiskelijoita suunnittelemaan kokonainen <strong>ihmisen osallistava työnkulku</strong>, jossa agentti ja ihminen tekevät yhteistyötä. Opiskelijat ymmärtävät, missä vaiheissa agentti voi toimia itsenäisesti ja missä vaiheissa ihmisen pitää tarkistaa, hyväksyä tai korjata päätös.</p>
-<p><strong>Vinkki arviointiin:</strong> Hyvä työnkulku ei vain lisää ihmistä loppuun tarkistajaksi. Ihmisen rooli sijoitetaan niihin kohtiin, joissa riski, epävarmuus tai vaikutus on suurin.</p>
-<h3>Opettajan ohjeet ja fasilitointi</h3>
-<p><strong>Selitys:</strong></p>
-<p>Kerro opiskelijoille:</p>
-<p>“Ihmisen osallistuminen päätöksentekoon ei tarkoita sitä, että ihminen tekee kaiken. Se tarkoittaa, että agentti tekee rutiinityötä ja ihminen osallistuu niissä kohdissa, joissa tarvitaan harkintaa, vastuuta tai hyväksyntää.”</p>
-<h3>Esittely: palautuspyynnön käsittely</h3>
-<ol>
-<li>
-<p>Agentti lukee asiakkaan viestin.</p>
-</li>
-<li>
-<p>Hyväksyntäportti 1: Onko palautusaika voimassa?</p>
-</li>
-<li>
-<p>Agentti lähettää palautusohjeet.</p>
-</li>
-<li>
-<p>Hyväksyntäportti 2: Tarjotaanko alennusta seuraavaan ostokseen?</p>
-</li>
-<li>
-<p>Agentti lähettää jatkoviestin asiakkaalle.</p>
-</li>
-</ol>
-<p>Keskustelkaa:</p>
-<ul>
-<li>Mitä agentti voi tehdä itse?</li>
-<li>Missä kohdassa tarvitaan ihmisen hyväksyntä?</li>
-<li>Voisiko jokin hyväksyntäportti olla automaattinen matalan riskin tapauksissa?</li>
-<li>Miten asiakas huomaa, että prosessi toimii luotettavasti?</li>
-</ul>
-<h3>Ryhmätyö</h3>
-<p>Opiskelijat suunnittelevat ihmisen osallistavan työnkulun yhdelle prosessille.</p>
-<p><strong>Mahdollisia prosesseja:</strong></p>
-<ul>
-<li>tilauksen käsittely,</li>
-<li>ajanvaraus,</li>
-<li>asiakaspalvelupyyntö,</li>
-<li>asiakaspalautteen käsittely,</li>
-<li>hyvityksen myöntäminen,</li>
-<li>jäsenyyden uusiminen.</li>
-</ul>
-<p><strong>Ryhmän tehtävä:</strong></p>
-<ol>
-<li>Kirjoittakaa prosessin vaiheet oikeassa järjestyksessä.</li>
-<li>Merkitkää, missä vaiheessa agentti toimii itsenäisesti.</li>
-<li>Merkitkää, missä vaiheessa ihminen hyväksyy tai tarkistaa päätöksen.</li>
-<li>Merkitkää, mitä tietoa hyväksyjä tarvitsee.</li>
-<li>Merkitkää, mitä tapahtuu, jos hyväksyjä hylkää päätöksen.</li>
-</ol>
-<p><strong>Ihmisen osallistavan työnkulun malli</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1. Agentti lukee syötteen</strong> Asiakasviesti, lomake, tiketti tai tilaus.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>2. Agentti tekee alustavan arvion</strong> Luokittelu, riskitaso ja ehdotus.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>3. Hyväksyntäportti</strong> Ihminen hyväksyy, hylkää tai pyytää lisätietoa.</td>
-</tr>
-<tr>
-<td>↓</td>
-</tr>
-<tr>
-<td><strong>4. Agentti suorittaa turvallisen toiminnon</strong> Viesti, päivitys, raportti tai ohje.</td>
-</tr>
-</tbody>
-</table>
-<h3>Odotettu oppimistulos</h3>
-<ul>
-<li>Opiskelijat ymmärtävät ihmisen osallistavan työnkulun periaatteen.</li>
-<li>Opiskelijat osaavat sijoittaa ihmisen hyväksynnän prosessin riskikohtiin.</li>
-<li>Opiskelijat osaavat kuvata, miten agentti ja ihminen toimivat yhdessä.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4: Oppiminen palautteesta noin 15 minuuttia</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Aktiviteetin tavoitteena on näyttää opiskelijoille, miten agentti voi hyödyntää ihmisen palautetta ja hyväksyntäpäätöksiä tulevien ehdotusten parantamiseen. Samalla opiskelijat tunnistavat <strong>väärän oppimisen</strong> riskin.</p>
-<h3>Opettajan ohjeet ja fasilitointi</h3>
-<p><strong>Selitys:</strong></p>
-<p>Kerro opiskelijoille:</p>
-<p>“Kun ihminen hyväksyy, hylkää tai muokkaa agentin ehdotusta, siitä syntyy arvokasta palautedataa. Agentti voi käyttää tätä tietoa myöhemmin parempien ehdotusten tekemiseen. Tämä pitää kuitenkin suunnitella huolellisesti, koska agentti voi myös oppia vääristä tai epäjohdonmukaisista päätöksistä.”</p>
-<h3>Esittely: alennusehdotuksista oppiminen</h3>
-<p>Anna opiskelijoille esimerkki:</p>
-<ul>
-<li>Hyväksyjä A hyväksyy usein suuret alennukset, jos asiakas on pitkäaikainen.</li>
-<li>Hyväksyjä B hyväksyy vain pienet alennukset ja suosii vaihtoehtoisia etuja, kuten ilmaista toimitusta.</li>
-<li>Agentti huomaa eron ja alkaa ehdottaa eri hyväksyjille erilaisia ratkaisuja.</li>
-</ul>
-<p>Kysy opiskelijoilta:</p>
-<ul>
-<li>Onko tämä hyödyllistä vai vaarallista?</li>
-<li>Voiko agentti oppia liikaa yhden henkilön tyylistä?</li>
-<li>Miten varmistetaan, että agentti oppii organisaation säännöistä eikä yksittäisen hyväksyjän mieltymyksistä?</li>
-</ul>
-<p><strong>Opettajan tarkistuskysymys:</strong> Jos opiskelijat sanovat “agentti oppii hyväksyjien päätöksistä”, pyydä heitä tarkentamaan, mitä se saa oppia. Oppiiko se säännön, päätösmallin vai yksittäisen ihmisen tavan toimia? Näissä on suuri ero.</p>
-<h3>Ryhmätyö</h3>
-<p>Opiskelijat suunnittelevat, miten agentti oppii hyväksyntäpäätöksistä turvallisesti.</p>
-<p><strong>Ryhmän tehtävä:</strong></p>
-<ol>
-<li><strong>Mitä dataa tallennetaan?</strong> Esimerkiksi päätös, perustelu, hyväksyjä, riskitaso, lopputulos ja asiakaspalaute.</li>
-<li><strong>Miten agentti oppii?</strong> Esimerkiksi tunnistamalla, millaiset ehdotukset hyväksytään usein ja millaiset hylätään.</li>
-<li><strong>Miten ehdotuksia mukautetaan?</strong> Esimerkiksi agentti ehdottaa jatkossa pienempiä alennuksia, jos suuret alennukset hylätään usein.</li>
-<li><strong>Mitä riskejä syntyy?</strong> Esimerkiksi agentti voi oppia väärän käytännön, vahvistaa epäoikeudenmukaisia päätöksiä tai ylisovittaa yhden hyväksyjän tyyliin.</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Kysymys</th>
-<th>Ryhmän suunnitelma</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mitä dataa tallennetaan?</strong></td>
+<td>Lokitettava päätös</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Miten agentti oppii?</strong></td>
+<td>Ihmisen perustelu</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Miten ehdotuksia mukautetaan?</strong></td>
+<td>Toistuva ongelma, jota etsitään</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Mitä riskejä syntyy?</strong></td>
+<td>Muutos, jota ehdotetaan</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Miten väärä oppiminen estetään?</strong></td>
+<td>Kuka hyväksyy muutoksen?</td>
+<td></td>
+</tr>
+<tr>
+<td>Millä testillä vaikutus tarkistetaan?</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3>Odotettu oppimistulos</h3>
+<p>Korosta, ettei päätöksen tallentaminen vielä muuta kielimallia tai agentin toimintaa.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan tarkistuslista</h2></div><div class="task-card-body">
 <ul>
-<li>Opiskelijat ymmärtävät, että hyväksyntäpäätöksistä voi syntyä hyödyllistä palautedataa.</li>
-<li>Opiskelijat osaavat kuvata, mitä tietoa agentin kannattaa tallentaa oppimista varten.</li>
-<li>Opiskelijat ymmärtävät, että agentti voi oppia myös vääriä malleja, jos palaute on puutteellista tai vinoutunutta.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Herättävät keskustelukysymykset</h2></div><div class="task-card-body">
-<ul>
-<li><strong>Entä jos hyväksyjä ei vastaa 24 tunnissa?</strong></li>
-<li><strong>Voiko agentti oppia vääriä asioita ihmisten päätöksistä?</strong></li>
-<li><strong>Mitä tapahtuu, jos agentti tulkitsee palautteen väärin?</strong></li>
-<li><strong>Kenen vastuulla päätös on, jos ihminen hyväksyy agentin ehdotuksen lukematta sitä kunnolla?</strong></li>
-<li><strong>Milloin automaattinen päätös on parempi kuin ihmisen hyväksyntä?</strong></li>
-</ul>
-</div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointi</h2></div><div class="task-card-body">
-<p>Opettaja arvioi opiskelijoiden kykyä:</p>
-<ul>
-<li>selittää, mitä <strong>ihmisen osallistuminen päätöksentekoon</strong> tarkoittaa agenttijärjestelmässä,</li>
-<li>tunnistaa, mitkä päätökset vaativat ihmisen hyväksynnän,</li>
-<li>soveltaa kolmea sääntöä: <strong>raha tai rakenne</strong>, <strong>epävarmuus</strong> ja <strong>poikkeama</strong>,</li>
-<li>suunnitella selkeän <strong>hyväksyntäportin</strong>,</li>
-<li>piirtää työnkulun, jossa agentin ja ihmisen roolit näkyvät,</li>
-<li>kuvata, miten agentti voi oppia hyväksyntäpäätöksistä turvallisesti,</li>
-<li>tunnistaa väärän oppimisen ja palautteen väärintulkinnan riskit.</li>
+<li>Portit sijaitsevat riskikohdissa, eivät kaikkialla.</li>
+<li>Päätöksentekijä saa tarpeellisen taustatiedon.</li>
+<li>Aikarajan jälkeinen toiminta on määritelty.</li>
+<li>Palaute muuttuu toiminnaksi vain arvioidun kehitysprosessin kautta.</li>
 </ul></div></div></div><div id="panel-lesson-25-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-25-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Ihminen portinvartijana</title>
 <defs><pattern id="l25g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l25g1)"/>
@@ -881,25 +447,25 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Agentti oppii ihmisen palautteesta</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Palaute ohjaa järjestelmän kehittämistä</title>
 <defs><pattern id="l25g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l25g11)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Agentti oppii ihmisen palautteesta</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Jokainen hyväksyntä ja hylkäys tallennetaan lokiin — siitä löytyy kaavoja.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Palaute ohjaa järjestelmän kehittämistä</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Hyväksynnät ja hylkäykset tallennetaan lokiin — ihminen arvioi niistä löytyvät kaavat.</text>
 <g transform="translate(74,168)">
 <rect x="0" y="0" width="392" height="200" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="42" font-size="18" font-weight="700" fill="#1B2336">Hyväksyjät eroavat toisistaan</text>
 <rect x="24" y="64" width="160" height="44" rx="9" fill="#F0F9F4"/><text x="40" y="92" font-size="16" fill="#247A52">Pääll. A: ~40 %</text>
 <rect x="24" y="120" width="160" height="44" rx="9" fill="#FFF6F0"/><text x="40" y="148" font-size="16" fill="#A35A22">Pääll. B: ~15 %</text>
-<text x="208" y="98" font-size="15" fill="#5A6478">Agentti oppii ja</text>
-<text x="208" y="120" font-size="15" fill="#5A6478">tekee realistisempia</text>
-<text x="208" y="142" font-size="15" fill="#5A6478">ehdotuksia kullekin.</text></g>
+<text x="208" y="98" font-size="15" fill="#5A6478">Ihminen tarkistaa</text>
+<text x="208" y="120" font-size="15" fill="#5A6478">eron ja päättää,</text>
+<text x="208" y="142" font-size="15" fill="#5A6478">muutetaanko sääntöä.</text></g>
 <g transform="translate(494,168)">
 <rect x="0" y="0" width="392" height="200" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
 <g transform="translate(24,20)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 a9 9 0 0 1 5.5 16.2 V22 H10.5 V19.2 A9 9 0 0 1 16 3 Z"/><path d="M11.5 26 H20.5 M13 30 H19"/></g>
-<text x="68" y="44" font-size="18" font-weight="700" fill="#A35A22">Vinkki: harkitse, mitä opitaan</text>
-<text x="24" y="92" font-size="16" fill="#3A4253">Älä opi kaikesta palautteesta</text>
-<text x="24" y="116" font-size="16" fill="#3A4253">automaattisesti.</text>
+<text x="68" y="44" font-size="18" font-weight="700" fill="#A35A22">Vinkki: harkitse, mitä muutetaan</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Älä muuta järjestelmää kaiken</text>
+<text x="24" y="116" font-size="16" fill="#3A4253">palautteen perusteella.</text>
 <text x="24" y="152" font-size="16" fill="#3A4253">Kiireessä tehtyä poikkeusta ei</text>
 <text x="24" y="176" font-size="16" fill="#3A4253">pidä muuttaa yleiseksi säännöksi.</text></g>
 <rect x="74" y="392" width="812" height="76" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>

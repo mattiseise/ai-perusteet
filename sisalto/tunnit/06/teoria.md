@@ -1,293 +1,160 @@
-# Kuvat, ääni ja teksti — multimodaalinen ongelmanratkaisu
+# Kuvat, ääni ja teksti — kun sanat eivät riitä
 
-## Johdanto
+## Johdanto: anna mallille se havainto, jota tehtävä vaatii
 
-Olet varmasti joskus ottanut kuvakaappauksen oudosta virheilmoituksesta puhelimessa tai kuvannut rikkinäisen laitteen näytön kysyäksesi apua. Sama idea pätee tekoälyn kanssa: näyttäminen on usein parempi kuin kertominen. Monille kuvakaappaus on vain kuva, ja siksi sitä voi pitää vähemmän hyödyllisenä kuin tekstiä. Tekoälylle **kuvakaappaukset**, **lokit** ja **dokumentit** ovat kuitenkin kaikki tärkeitä kontekstin muotoja — myös arkisissa tilanteissa, ei vain teknisen alan osaajan työssä.
+Jos pyydät tekoälyä selittämään kaaviota mutta kuvailet kaavion vain muistisi varassa, osa tiedosta katoaa jo ennen kuin työ alkaa. Jos taas haluat korjata yhden virkkeen ja lähetät siitä epätarkan kuvakaappauksen, valitset tehtävään hankalamman aineistomuodon kuin tarvitset.
 
-Tämän oppitunnin jälkeen ymmärrät, miksi näyttäminen on usein parempi kuin pelkkä kertominen. Opit rakentamaan **multimodaalista kontekstia** eli yhdistämään tekstiä, kuvia, lokeja ja koodia virheiden selvittämisen ja ongelmanratkaisun tueksi. Lisäksi näet, miten tekoäly voi hyödyntää muutakin kuin tekstiä ja miksi se tekee siitä tehokkaamman työkalun.
+Tämän tunnin ajatus on yksinkertainen: **valitse aineistomuoto sen perusteella, mitä tekoälyn pitää havaita**. Kuva ei ole aina tekstiä parempi. Ääni ei ole aina kuvaa rikkaampi. Useampi aineisto ei automaattisesti paranna vastausta. Hyvä käyttäjä tunnistaa, mikä tieto on tehtävän kannalta olennaista ja missä muodossa se säilyy parhaiten.
 
-## Mitä multimodaalisuus on?
+> **Tunnin ydinkysymys:** Mitä mallin pitää nähdä, kuulla tai lukea, jotta se voi auttaa — ja mitä aineistosta ei pidä lähettää lainkaan?
 
-**Multimodaalisuus** tarkoittaa, että tekoälymallit voivat käsitellä erilaisia tietomuotoja, kuten tekstiä, kuvia, koodia, ääntä ja videota. Ensimmäiset laajasti käyttöön tulleet kielimallit, kuten GPT-3, käsittelivät vain tekstiä. Modernit mallit, kuten nykyiset ChatGPT-, Microsoft Copilot- ja Claude-mallit, voivat puolestaan tulkita myös kuvia. Jotkin mallit voivat lisäksi käsitellä ääntä ja analysoida videoita.
-
-Tämä avaa täysin uuden tavan antaa tekoälylle kontekstia. Aiemmin tilanne saattoi olla tämä: ”Tietokannassa on virhe. Lokit ovat pitkät, enkä pysty hahmottamaan, missä virhe on, koska tekstiä on niin paljon.” Nyt voit toimia toisin: ”Otan kuvakaappauksen virheilmoituksesta ja lähetän sen tekoälylle.” Aiemmin saattoi tuntua mahdottomalta kuvata käyttöliittymän bugia pelkällä tekstillä. Nyt voit ottaa kuvakaappauksen ja näyttää tekoälylle tarkasti, mitä näkyy.
-
-**Modaliteetti** tarkoittaa tietomuotoa. Teksti on yksi modaliteetti ja kuva toinen. Koodi on kolmas, vaikka se on teknisesti tekstiä, koska sillä on oma rakenteensa ja merkityksensä. Lokit ovat neljäs. Kun käytät kahta tai useampaa modaliteettia yhdessä, puhutaan **multimodaalisuudesta**. Käytännössä monet nykyiset chatpohjaiset kielimallit ovat multimodaalisia.
-
-Multimodaaliset mallit ovat tehokkaita työkaluja, koska ne voivat nähdä kuvakaappauksista suoraan, mitä tarkoitat. Jos kirjoitat ”ohjelma on hidas”, tekoäly voi vain arvata, mitä yrität sanoa. Jos taas näytät kuvakaappauksen, jossa näkyy prosessin käyttävän 99 % suorittimesta, tekoäly saa ongelmasta paljon täsmällisemmän kuvan.
-
-> **Pysähdy hetkeksi:** Ajattele projektia, jota työstät nyt. Mitä muita tietomuotoja kuin tekstiä käytät päivittäin? Käytätkö esimerkiksi kuvakaappauksia, lokitietoja, taulukoita tai kaavioita? Kuinka usein jätät ne pois, koska oletat, ettei tekoäly voi käsitellä niitä?
-
-<figure class="ai-demo"><span class="ai-demo__tag">// näytä, älä vain kerro — jokainen syöte tarkentaa diagnoosia</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:290px">
-  <div class="l06-wrap">
-    <span class="l06-q">”Sovellus ei toimi.”</span>
-    <div class="l06-src l06-s1">▣ kuvakaappaus</div>
-    <div class="l06-src l06-s2">≡ loki (20 riviä)</div>
-    <div class="l06-src l06-s3">‹/› koodi</div>
-    <i class="l06-fly l06-f1"></i><i class="l06-fly l06-f2"></i><i class="l06-fly l06-f3"></i>
-    <div class="l06-model">MALLI<div class="l06-meterbox"><div class="l06-meter"></div></div><span class="l06-pct l06-p1">tarkkuus 35 %</span><span class="l06-pct l06-p2">tarkkuus 70 %</span><span class="l06-pct l06-p3">tarkkuus 95 %</span></div>
-    <div class="l06-a l06-a1">Syitä voi olla monia — kokeile käynnistää uudelleen? <span class="l06-tag l06-t1">arvaus</span></div>
-    <div class="l06-a l06-a2">Virheilmoitus viittaa tietokantaan — lokissa ”timeout 5432”. <span class="l06-tag l06-t2">tarkentuu</span></div>
-    <div class="l06-a l06-a3">Tietokantaportti 5432 ei vastaa: korjaa yhteysasetus rivillä 12. <span class="l06-tag l06-t3">✓ täsmällinen</span></div>
+<figure class="ai-demo"><span class="ai-demo__tag">// sama tieto kahdessa muodossa — eri havainnot säilyvät</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:286px">
+  <div style="display:flex;align-items:center;gap:26px;width:700px;font-family:var(--font-mono)">
+    <div style="flex:1;padding:24px;color:#eaf0ff;background:#11182a;border:1.5px solid #44517a;border-radius:14px"><b style="color:#8fa3ff">KAAVIO</b><span style="display:block;margin-top:20px">kehityssuunta näkyy nopeasti</span></div>
+    <strong style="color:#2f46b0">Mitä tehtävä vaatii?</strong>
+    <div style="flex:1;padding:24px;color:#eaf0ff;background:#11182a;border:1.5px solid #44517a;border-radius:14px"><b style="color:#8fa3ff">TAULUKKO</b><span style="display:block;margin-top:20px">tarkat arvot säilyvät</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Pelkkä ”ei toimi” pakottaa mallin arvaamaan. Kun lisäät kuvakaappauksen, lokit ja koodin, diagnoosi tarkentuu vaihe vaiheelta — jokainen modaliteetti tuo tietoa, jota muut eivät sisällä.</figcaption></figure>
-<style>
-.l06-wrap{position:relative;width:560px;height:250px}
-.l06-q{position:absolute;left:0;top:6px;font-family:var(--font-mono);font-size:12.5px;color:#06212A;background:#46c7cf;font-weight:500;border-radius:10px;padding:7px 11px}
-.l06-src{position:absolute;left:0;width:172px;font-family:var(--font-mono);font-size:12px;color:#EAEEF8;background:#1E2740;border:1.5px solid #44517A;border-radius:10px;padding:8px 11px}
-.l06-s1{top:64px;animation:l06s1 12s infinite}
-.l06-s2{top:112px;animation:l06s2 12s infinite}
-.l06-s3{top:160px;animation:l06s3 12s infinite}
-@keyframes l06s1{0%,7%,17%,100%{border-color:#44517A}9%,15%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
-@keyframes l06s2{0%,33%,43%,100%{border-color:#44517A}35%,41%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
-@keyframes l06s3{0%,59%,69%,100%{border-color:#44517A}61%,67%{border-color:oklch(0.72 0.15 264);box-shadow:0 0 12px oklch(0.66 0.15 264 / .5)}}
-.l06-fly{position:absolute;left:176px;width:9px;height:9px;border-radius:50%;background:oklch(0.72 0.15 264);opacity:0}
-.l06-f1{top:78px;animation:l06f1 12s infinite}
-.l06-f2{top:126px;animation:l06f2 12s infinite}
-.l06-f3{top:174px;animation:l06f3 12s infinite}
-@keyframes l06f1{0%,8%{opacity:0;transform:translate(0,0)}10%{opacity:1}15%{opacity:1;transform:translate(64px,42px)}17%,100%{opacity:0;transform:translate(64px,42px)}}
-@keyframes l06f2{0%,34%{opacity:0;transform:translate(0,0)}36%{opacity:1}41%{opacity:1;transform:translate(64px,-6px)}43%,100%{opacity:0;transform:translate(64px,-6px)}}
-@keyframes l06f3{0%,60%{opacity:0;transform:translate(0,0)}62%{opacity:1}67%{opacity:1;transform:translate(64px,-54px)}69%,100%{opacity:0;transform:translate(64px,-54px)}}
-.l06-model{position:absolute;left:248px;top:84px;width:132px;text-align:center;font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.15 264);border-radius:12px;padding:12px 10px 10px}
-.l06-meterbox{margin:9px 6px 5px;height:8px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
-.l06-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#7FD0A8);animation:l06meter 12s infinite}
-@keyframes l06meter{0%,14%{width:35%}18%,40%{width:35%}44%,66%{width:70%}70%,96%{width:95%}100%{width:35%}}
-.l06-pct{position:absolute;left:0;right:0;bottom:-22px;font-size:10.5px;letter-spacing:.05em;color:#B9C2DA;opacity:0}
-.l06-p1{animation:l06p1 12s infinite}.l06-p2{animation:l06p2 12s infinite}.l06-p3{animation:l06p3 12s infinite;color:#7FD0A8}
-@keyframes l06p1{0%,2%{opacity:0}5%,40%{opacity:1}44%,100%{opacity:0}}
-@keyframes l06p2{0%,42%{opacity:0}46%,66%{opacity:1}70%,100%{opacity:0}}
-@keyframes l06p3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
-.l06-a{position:absolute;left:400px;top:72px;width:160px;font-family:var(--font-mono);font-size:11.5px;line-height:1.45;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 11px;opacity:0}
-.l06-a1{animation:l06a1 12s infinite}
-.l06-a2{animation:l06a2 12s infinite}
-.l06-a3{animation:l06a3 12s infinite}
-@keyframes l06a1{0%,3%{opacity:0}7%,38%{opacity:1}42%,100%{opacity:0}}
-@keyframes l06a2{0%,42%{opacity:0}46%,64%{opacity:1}68%,100%{opacity:0}}
-@keyframes l06a3{0%,68%{opacity:0}72%,96%{opacity:1}100%{opacity:0}}
-.l06-a3{border-color:#7FD0A8}
-.l06-tag{display:inline-block;margin-top:5px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
-.l06-t1{color:#3A1408;background:#F0A38C}
-.l06-t2{color:#06212A;background:#46c7cf}
-.l06-t3{color:#06241a;background:#7FD0A8}
-@media (prefers-reduced-motion:reduce){
-.l06-s1,.l06-s2,.l06-s3,.l06-f1,.l06-f2,.l06-f3,.l06-meter,.l06-p1,.l06-p2,.l06-a1,.l06-a2{animation:none}
-.l06-f1,.l06-f2,.l06-f3,.l06-a1,.l06-a2,.l06-p1,.l06-p2{opacity:0;display:none}
-.l06-a3,.l06-p3{animation:none;opacity:1}
-.l06-meter{width:95%}}
-</style>
+<figcaption class="ai-demo__cap">Aineistomuoto ei ole koriste. Kaavio auttaa hahmottamaan suunnan, kun taas alkuperäinen taulukko säilyttää laskennassa tarvittavat arvot. Valinta tehdään tehtävän perusteella.</figcaption></figure>
 
-## Kuvakaappaukset — näytä, älä vain kuvaile
+## Multimodaalisuus tarkoittaa useita tietomuotoja
 
-**Kuvakaappaus** eli screenshot on yksi tärkeimmistä kontekstityökaluista teknisen alan osaajan työssä. Se näyttää tekoälylle täsmälleen sen, mitä itse näet. Jos näet virheen, ota siitä kuvakaappaus. Jos käyttöliittymässä on ongelma, ota kuvakaappaus. Jos käyttöjärjestelmä käyttäytyy oudosti, kuvakaappaus voi kertoa tilanteesta enemmän kuin pitkä tekstikuvaus.
+**Modaliteetti** tarkoittaa tietomuotoa, kuten tekstiä, kuvaa tai ääntä. **Multimodaalinen malli** pystyy käsittelemään useampaa kuin yhtä tietomuotoa. Se voi esimerkiksi lukea käyttäjän kysymyksen ja tarkastella siihen liitettyä valokuvaa.
 
-Kuvakaappaus on tehokas, koska se vähentää arvailua. Kun sanot ”sovellus ei aukea”, tekoäly joutuu arvaamaan useita eri syitä. Kun taas näytät kuvakaappauksen, jossa lukee virheilmoitus ”Ei verkkoyhteyttä”, tekoäly näkee ongelman tarkemmin ja osaa ehdottaa täsmällisempää korjausta.
+Eri muodot säilyttävät eri asioita:
 
-### Hyvän kuvakaappauksen tekeminen
+| Aineistomuoto | Mitä se säilyttää hyvin? | Mitä siitä voi kadota? |
+| --- | --- | --- |
+| Teksti | Tarkka sanamuoto, nimet, luvut ja muokattavuus | Ulkoasu, sijainti ja visuaaliset suhteet |
+| Kuva | Sommittelu, sijainti, muodot, värit ja näkyvä kokonaisuus | Pienen tekstin tarkkuus ja kuvan ulkopuolinen tapahtuma |
+| Taulukko | Rivien, sarakkeiden ja lukujen rakenne | Alkuperäisen tilanteen tai mittauksen tausta |
+| Ääni | Puhe, tauot, ääntämys ja keskustelun ajallinen kulku | Puhujan tarkoitus ei selviä varmasti pelkästä äänensävystä |
+| Dokumentti | Pitkä rakenne, otsikot, kappaleet ja lähdeyhteys | Skannatun tai huonosti jäsennetyn tiedoston sisältö voi tulkkiutua väärin |
 
-Vastuullinen käyttäjä ottaa kuvakaappauksia harkitusti:
+Valinta alkaa kysymyksestä, ei tiedostosta. Jos haluat mallin arvioivan painikkeiden sijoittelua, kuva on olennainen. Jos haluat muokata painikkeen tekstiä, kopioitu teksti on tarkempi. Jos haluat tarkastella myynnin kehitystä, alkuperäinen taulukko on usein parempi kuin kuva pylväsdiagrammista.
 
-1. **Älä lähetä koko ruutua**, ellei se ole ongelman kannalta olennaista. Rajaa kuva tärkeimpään kohtaan.
-2. **Osoita virheellinen kohta**. Monet kuvakaappaustyökalut mahdollistavat nuolten, kehysten tai korostusten lisäämisen.
-3. **Lisää lyhyt selitys:** ”Tässä on virhe. Katso punaisella näkyvää virheilmoitusta.”
-4. **Valitse sopiva rajaus:**
-   - Koko ruudun kuvakaappaus voi olla hyödyllinen, mutta se voi sisältää häiritsevää tai arkaluonteista tietoa.
-   - Pelkkä virheilmoitus on usein parempi, koska se on kohdennetumpi.
-   - Virheilmoitus ja muutama rivi kontekstia on usein paras vaihtoehto, koska se näyttää sekä virheen että sen taustan.
+## Teksti sopii tarkkaan sisältöön ja muokkaamiseen
 
-Modernit tekoälyt voivat lukea kuvakaappauksia samaan tapaan kuin ihminen. Ne voivat tunnistaa tekstiä, värejä, kuvakkeita ja asettelua. Jos virheviesti näkyy punaisella, malli voi päätellä, että kyse on virheestä. Jos näytät lokin virheilmoituksia, malli voi lukea niistä olennaisia tietoja.
+Käytä tekstiä, kun sanamuodon, lukujen tai rakenteen pitää säilyä täsmällisenä. Tekstiä voi lainata, hakea, vertailla ja muokata suoraan.
 
-> **Pysähdy hetkeksi:** Mieti viimeisintä IT-ongelmaa, johon pyysit apua. Olisiko kuvakaappaus ollut parempi konteksti kuin pelkkä tekstikuvaus? Miten tekoäly olisi voinut auttaa paremmin, jos se olisi nähnyt tilanteen?
+Hyviä tekstimuotoisia aineistoja ovat esimerkiksi:
 
-## Lokitiedostot — järjestelmän oma kertomus
+- viesti, jonka sävyä tai rakennetta haluat muuttaa
+- ohje, josta haluat selkokielisen version
+- taulukon yksittäiset arvot, joiden perusteella lasketaan
+- virheilmoituksen tarkka sanamuoto
+- koodi tai muu rakenteinen teksti, jota pitää muokata rivi riviltä
 
-> Seuraavat osiot (lokit, koodi ja konfiguraatiot) ovat teknisempiä tilanteita. Sama periaate — näytä, älä vain kerro — pätee silti myös arkisiin kuviin ja kuvakaappauksiin.
+Pelkkä aineisto ei kuitenkaan kerro tavoitetta. Lisää aina lyhyt tehtävänanto: mitä aineistosta tarkastellaan, kenelle tulos tehdään ja missä muodossa vastaus tarvitaan.
 
-**Lokit** eli logs ovat tietueita siitä, mitä järjestelmässä tapahtuu. Kun ohjelmassa on virhe, lokit kertovat usein, mikä meni pieleen ja milloin.
+## Kuva sopii näkyvien suhteiden tarkasteluun
 
-Opiskelijat sanovat usein: ”Minulla on virhe, mutta en tiedä, mikä se on.” Vastuullinen käyttäjä kysyy ensimmäiseksi: ”Mitä lokit kertovat?” Tämä johtuu siitä, että lokit ovat usein ihmisen luettavissa ja sisältävät tärkeää tietoa ongelman syystä.
+Kuva on hyödyllinen silloin, kun ongelma sijaitsee asioiden välisissä suhteissa: mikä on minkä vieressä, mikä puuttuu, miten kokonaisuus on jäsennelty tai mitä ympäristössä näkyy.
 
-`2024-03-14 10:23:45 ERROR: Failed to connect to database at localhost:5432
-2024-03-14 10:23:45 ERROR: Connection timeout after 5 seconds
-2024-03-14 10:23:46 WARNING: Retrying connection attempt 2 of 3`
+Esimerkkejä:
 
-Kun annat lokit tekoälylle, se voi lukea rivit ja päätellä esimerkiksi: ”Tietokanta ei ole saatavilla, koska portti 5432 ei vastaa.”
+- sovelluksen painikkeet menevät päällekkäin
+- kaavion asteikko tai selite on epäselvä
+- laitteen merkkivaloista pitäisi päätellä käyttötila
+- pakkauksen ohjeessa kuva ja teksti muodostavat kokonaisuuden
+- käsin kirjoitetun muistiinpanon rakenne pitää tulkita
 
-### Lokien tyypit
+Hyvä kuvapyyntö kertoo kolme asiaa:
 
-Lokit voivat tulla useista lähteistä:
+1. **Tilanne:** Mistä kuva on ja miksi se on otettu?
+2. **Kohde:** Mitä kohtaa mallin pitää tarkastella?
+3. **Tehtävä:** Mitä haluat mallin selittävän, vertaavan tai ehdottavan?
 
-- **Sovelluksen lokit:** kertovat, mitä koodi tekee, esimerkiksi funktiokutsut, tietojen käsittelyn ja hakujen tulokset.
-- **Järjestelmän lokit:** kertovat, mitä käyttöjärjestelmässä tapahtuu, esimerkiksi muistin käytöstä, prosesseista ja laitteista.
-- **Verkkolokit:** kertovat, mitä palvelimella tapahtuu, esimerkiksi HTTP-pyynnöistä, yhteyksistä ja kaistan käytöstä.
-- **Virhelokit:** kertovat, mitä ohjelma ilmoittaa virhetilanteessa, esimerkiksi poikkeuksista, kaatumisista ja varoituksista.
+Esimerkiksi: ”Tämä on kuvakaappaus ilmoittautumissivusta puhelimella. Tarkastele vain lomakkeen rakennetta. Mitkä kaksi kohtaa vaikeuttavat käyttäjän etenemistä? Älä päättele kuvasta henkilön ominaisuuksia.”
 
-### Lokien valitseminen kontekstiksi
+## Taulukko on usein kuvaa parempi numeroille
 
-Kun käytät tekoälyä, älä lähetä 5 000 riviä lokia sellaisenaan. Valitse olennaiset kohdat:
+Kaavio näyttää kehityksen nopeasti, mutta alkuperäinen taulukko kertoo arvot tarkemmin. Jos tehtävä vaatii laskemista, poikkeamien etsimistä tai rivien vertailua, anna taulukko mieluiten rakenteisessa muodossa.
 
-1. **Etsi virhe tai varoitus** lokista.
-2. **Merkitse olennaiset rivit**, kuten viimeiset 20 riviä, grep-haun tulokset tai kuvakaappaus kriittisestä kohdasta.
-3. **Lisää konteksti:** ”Ohjelma kaatui kello 10.45. Näetkö näistä lokeista mahdollisen syyn?”
+Voit yhdistää muodot tarkoituksellisesti:
 
-Tekoäly voi tämän jälkeen etsiä virheilmoituksia, tarkastella tapahtumien ajoitusta ja ehdottaa ratkaisuja.
+- kuva kaaviosta näyttää esitystavan
+- taulukko antaa tarkat arvot
+- teksti kertoo, mitä päätöstä varten analyysi tehdään
 
-> **Pysähdy hetkeksi:** Missä sovelluksessa tai järjestelmässä olet nähnyt lokeja? Mitä sellaista lokeista voidaan oppia, mitä et näkisi muuten?
+Tämä ei tarkoita, että mukaan lisätään kaikki mahdollinen aineisto. Jokaisella liitteellä pitää olla nimetty tehtävä.
 
-## Koodi ja konfiguraatiotiedostot — näytä rakenne
+## Ääni säilyttää ajallisen kulun
 
-Usein ongelma löytyy itse koodista. Skripti ei ehkä toimi, konfiguraatiotiedosto voi olla virheellinen tai Python-funktio voi käyttäytyä odottamattomasti.
+Ääntä kannattaa käyttää, kun kiinnostuksen kohde on puheessa tai tapahtumien järjestyksessä. Esimerkiksi ääntämisen harjoittelu, kokouksen puheenvuorojen jäsentäminen tai haastattelun litterointi perustuvat tietoon, jota pelkkä jälkikäteen kirjoitettu yhteenveto ei säilytä.
 
-### Koodin antaminen kontekstiksi
+Ääni ei kuitenkaan ole varma ikkuna ihmisen tunteisiin tai tarkoituksiin. Malli voi tulkita tauon, painotuksen tai puhujan asenteen väärin. Siksi turvallinen tehtävä kohdistuu havaittavaan asiaan:
 
-Kun annat tekoälylle koodia, se voi analysoida sen rakennetta ja toimintaa:
+- ”Kirjoita puhe tekstiksi ja merkitse epäselvät kohdat.”
+- ”Tunnista, missä kohdissa puhuja vaihtaa aihetta.”
+- ”Vertaa ääntämystä tähän annettuun malliin.”
 
-```
-def calculate_discount(price, discount_percent):    return price - (price * discount_percent)
-```
+Vältä perusteettomia päätelmiä puhujan terveydestä, luonteesta, rehellisyydestä tai tunnetilasta.
 
-Voit kysyä esimerkiksi: ”Näetkö tässä ongelmaa? Kun `discount_percent` on 0.1 eli 10 %, tulos on oikea. Mutta kun arvo on 1 eli 100 %, hinta muuttuu nollaksi. Pitäisikö funktioon lisätä tarkistus sallituille arvoille?”
+## Vertailukoe paljastaa, mitä aineisto lisää
 
-Kun annat koodia, muista kolme asiaa:
+Tämän tunnin tehtävässä annat saman ongelman ensin sanallisesti ja sitten kuvan kanssa. Kokeen tarkoitus ei ole todistaa, että kuva voittaa. Tarkoitus on tunnistaa, **mitä uutta havaittavaa tietoa kuva toi**.
 
-1. **Konteksti:** Mikä ohjelma on kyseessä? Mitä ohjelmointikieltä käytetään?
-2. **Vika-alue:** Mitkä rivit ovat todennäköisesti ongelmallisia? Näytä mieluummin muutama kymmenen riviä kuin satoja rivejä.
-3. **Käyttäytyminen:** Mitä ohjelman pitäisi tehdä? Mitä se tekee todellisuudessa?
+Pidä muut asiat mahdollisimman samoina:
 
-### Konfiguraatiotiedostot
+- sama tehtävä
+- sama taustatieto
+- sama tavoiteltu vastausmuoto
+- mahdollisuuksien mukaan sama malli ja keskustelun lähtötilanne
 
-Myös **konfiguraatiotiedostot** voivat aiheuttaa ongelmia:
+Vertaa vastauksia nimetyillä kriteereillä. Löysikö kuvaan perustuva vastaus sellaisen suhteen, jota tekstikuvaus ei sisältänyt? Lukiko malli pienen tekstin väärin? Keskittyikö se epäolennaiseen yksityiskohtaan? Hyvä johtopäätös voi olla myös se, että huolellinen tekstikuvaus riitti paremmin.
 
-```
-{  "database": {    "host": "localhost",    "port": 5432,    "user": "admin",    "password": "admin123"  }}
-```
+## Enemmän aineistoa ei tarkoita parempaa vastausta
 
-Voit kysyä esimerkiksi: ”Tässä on konfiguraatiotiedosto. Näetkö siinä turvallisuusongelman?” Tässä tapauksessa salasana on kovakoodattu tiedostoon.
+Ylimääräinen aineisto voi lisätä kohinaa, kuluttaa konteksti-ikkunaa ja ohjata huomion pois olennaisesta. Valitse pienin aineistokokonaisuus, joka säilyttää tehtävässä tarvittavan tiedon.
 
-Tekoäly voi lukea sekä tekstiä että kuvakaappauksia koodista. Usein koodi kannattaa kuitenkin antaa tekstinä, koska silloin tekoäly voi analysoida ja muokata sitä helpommin.
+Kysy jokaisesta liitteestä:
 
-## Turvallisuus — redaktointi ja yksityisyys
+- Mitä sellaista tämä tuo, mitä muissa aineistoissa ei ole?
+- Tarvitaanko koko tiedosto vai riittääkö rajattu kohta?
+- Voiko tarkka sisältö antaa tekstinä kuvan sijaan?
+- Miten tarkistan mallin tekemän tulkinnan?
 
-**Tärkeä huomio: älä koskaan näytä salasanoja, API-avaimia tai muita salaisuuksia tekoälylle.** Jos kuvakaappaus tai lokit sisältävät arkaluonteisia tietoja, poista tai peitä ne ennen jakamista.
+## Turvallisuus ratkaistaan ennen lähettämistä
 
-### Salaisuuksien redaktointi
+Kuva voi sisältää nimiä, kasvoja, osoitteita, ilmoituksia ja avoimia välilehtiä. Äänite voi sisältää sivullisten puhetta. Dokumentin metatiedoissa tai taulukon piilotetuissa sarakkeissa voi olla tietoa, jota et huomaa ensisilmäyksellä.
 
-- **Salasanakenttä:** näytä `[REDACTED]` tai `***`.
-- **API-avain:** näytä esimerkiksi `sk-***...xyz`, eli vain alun ja lopun merkit.
-- **Tunnus eli token:** näytä esimerkiksi `jti_12345...abcdef`.
-- **Luottokorttinumero:** näytä esimerkiksi `****-****-****-6789`.
-- **Käyttäjätunnus:** näytä vain osa tunnuksesta, esimerkiksi `user_123...`.
+Ennen lähettämistä:
 
-Jos lokit sisältävät käyttäjä- tai asiakastietoja, poista ne tai anonymisoi ne kokonaan ennen jakamista.
+1. varmista, että aineiston käyttö on sallittu
+2. rajaa mukaan vain tehtävässä tarvittava osa
+3. poista henkilötiedot, salaisuudet ja tarpeettomat tunnisteet
+4. tarkista myös kuvan reunat, tiedoston muut välilehdet ja äänen taustapuhe
+5. käytä organisaation hyväksymää palvelua
 
-### Miksi turvallisuus on pakollista?
+Pelkkä peittäminen ei aina riitä, jos alkuperäinen tieto jää tiedostoon palautettavaksi. Tee jaettavaan käyttöön erillinen kopio ja tarkista se ennen lähettämistä.
 
-Turvallisuus ei ole valinnainen asia, vaan osa vastuullisen käyttäjän perustyötä. Se suojaa sekä sinua että muita:
+## Mallin havainto pitää edelleen tarkistaa
 
-- Se estää salaisuuksien, kuten salasanojen ja API-avainten, vuotamisen ulkopuolisiin palveluihin.
-- Se suojaa muita käyttäjiä, joiden tietoja saattaa näkyä lokeissa.
-- Se ylläpitää luottamusta organisaatiossa ja työyhteisössä.
+Multimodaalinen malli voi lukea tekstin väärin, sekoittaa kaavion sarjat, jättää osan kuvasta huomiotta tai litteroida nimen virheellisesti. Siksi vastaus ei ole todiste aineistosta.
 
-> **Pysähdy hetkeksi:** Ajattele IT-järjestelmää, jossa käyttäjät voivat nähdä toistensa tietoja. Mitä turvallisuusriskejä syntyisi, jos jakaisit lokit tekoälylle muokkaamatta niitä?
-
-## Yhdistäminen — multimodaalinen konteksti käytännössä
-
-Vastuullisen käyttäjän ongelmanratkaisu yhdistää usein useita tietomuotoja:
-
-**Tekstin, kuvakaappausten, lokien ja koodin yhdistäminen:**
-
-”Tässä on kuvakaappaus virheilmoituksesta. Tässä ovat lokin viimeiset 20 riviä. Tässä on myös koodin vika-alue eli rivit 45–55. Yritin päivittää käyttäjän profiilia, mutta validointi epäonnistuu. Kunkin kentän pitäisi hyväksyä vain tietynlaista dataa, mutta validointi epäonnistuu myös silloin, kun data on oikeassa muodossa.”
-
-Nyt tekoälyllä on käytössään useita konteksteja:
-
-- **Visuaalinen konteksti:** kuvakaappaus.
-- **Ajoituksen ja ympäristön konteksti:** lokit.
-- **Koodin konteksti:** vika-alue.
-- **Käyttäytymisen konteksti:** mitä pitäisi tapahtua ja mitä tapahtuu todellisuudessa.
-
-Tämä on huomattavasti parempi lähtökohta kuin pelkkä ilmoitus: ”Minulla on validointivirhe.”
-
-### Päätösten tekeminen: milloin käyttää mitäkin?
-
-Kuvakaappaukset ovat tehokkaita, mutta ne kuluttavat paljon tokeneita. Vastuullinen käyttäjä valitsee kontekstin strategisesti:
-
-| Tilanne | Käytä kuvakaappausta? | Käytä tekstiä? | Käytä lokeja? |
-| --- | --- | --- | --- |
-| Käyttöliittymän bugi | Kyllä | Ei välttämättä, jos kuvakaappaus kertoo olennaisen | Ei yleensä |
-| Virheilmoitus näytöllä | Kyllä | Kyllä, lyhyt selitys auttaa | Ehkä, jos ongelman syy ei näy ruudulla |
-| Sovellus kaatuu | Kyllä, jos virhe näkyy ruudulla | Kyllä | Kyllä, usein kriittistä |
-| Koodin virhe | Ei yleensä | Kyllä, koodi kannattaa antaa tekstinä | Ehkä, jos kyse on ajonaikaisesta virheestä |
-| Verkko-ongelma | Ehkä | Kyllä, kuvaile, mitä yritit tehdä | Kyllä, verkkolokit ovat usein hyödyllisiä |
-| Hidas sovellus | Kyllä, jos suorituskykytiedot näkyvät ruudulla | Kyllä, kuvaile tilanne ja ajankohta | Kyllä, suorituskykylokit ovat hyödyllisiä |
-| Lomake ei lähde verkkosivulla | Kyllä, jos virhe näkyy ruudulla | Kyllä, kerro, mitä yritit tehdä | Ei yleensä |
-| Laite tai sovellus ei käynnisty | Kyllä, jos näytöllä näkyy viesti | Kyllä, kuvaile tilanne | Ei yleensä |
-
-## Multimodaalisten mallien rajoitukset
-
-Multimodaaliset mallit ovat tehokkaita, mutta niillä on myös rajoituksia.
-
-### 1. Kuvakaappaukset kuluttavat tokeneita
-
-Yksittäinen kuva voi kuluttaa huomattavasti enemmän tokeneita kuin sama tieto tekstinä. Tämä täyttää konteksti-ikkunaa nopeammin. Siksi kuvakaappauksia kannattaa käyttää harkitusti: kriittisiin kohtiin, ei kaikkeen.
-
-### 2. Tarkkuusrajoitukset
-
-Tekoäly voi lukea kuvakaappauksia, mutta se voi myös tehdä virheitä:
-
-- Pieniä fontteja voi olla vaikea tulkita.
-- Sekavat taustat voivat tehdä tekstistä epäselvää.
-- Monimutkainen käyttöliittymä voi hämmentää mallia.
-
-Siksi kuvakaappaus yhdessä lyhyen tekstiselityksen kanssa on usein parempi kuin kuvakaappaus yksin.
-
-### 3. Mallien kyvyt vaihtelevat
-
-Kaikki tekoälymallit eivät ole multimodaalisia. Vanhat mallit, jotkin erikoistuneet mallit ja osa kevyemmistä malleista käsittelevät vain tekstiä. Siksi on tärkeää tietää, mitä mallia käytät.
-
-Vastuullinen käyttäjä tuntee käyttämänsä mallin kyvyt ja valitsee työskentelytavan sen mukaan:
-
-- Jos malli on multimodaalinen, voit hyödyntää kuvakaappauksia.
-- Jos malli käsittelee vain tekstiä, kuvaile ongelma mahdollisimman tarkasti tekstinä.
-- Vaihda mallia tarpeen mukaan: joskus pieni tekstimalli on nopeampi, joskus suuri multimodaalinen malli on parempi.
-
-## Multimodaalisuus käytännössä
-
-Käytännössä vastuullinen käyttäjä voi noudattaa seuraavaa työnkulkua:
-
-1. **Ongelma syntyy** → ota kuvakaappaus, jos ongelma näkyy ruudulla.
-2. **Lokit kertovat virheistä** → suodata olennainen osa ja näytä se tekstinä.
-3. **Koodia täytyy tarkastella** → anna koodi tekstinä.
-4. **Rakenne täytyy nähdä** → käytä kuvakaappausta, taulukkoa tai muuta selkeää esitystapaa.
-5. **Ennen jakamista** → tarkista, että olet redaktoinut salaisuudet ja henkilötiedot.
-
-### Käytännön työkalut
-
-- **Kuvakaappaustyökalu:** Käytä puhelimen tai tietokoneen omaa kuvakaappaustoimintoa (esim. Windowsin Snipping Tool). Rajaa kuva olennaiseen ja lisää tarvittaessa nuolia tai tekstiä. Tarkempaan työhön on olemassa myös erillisiä sovelluksia (esim. Snagit tai ShareX).
-- **Lokien suodatus:** Älä lähetä tuhansia rivejä lokia. Valitse olennaiset virheet, esimerkiksi viimeiset 20 riviä tai grep-haun tulokset.
-- **Rakenteinen tieto:** Kielimallit hyötyvät rakenteisesta tiedosta, kuten CSV-datasta, JSON-tietueista ja taulukoista.
-- **Koodinäyte:** Näytä vain olennainen osa koodista tekstinä, esimerkiksi muutama kymmenen riviä. Kuvakaappaus koodista on harvoin yhtä hyödyllinen kuin kopioitava tekstimuotoinen koodi.
+Tarkista tärkeä havainto alkuperäisestä materiaalista. Pyydä mallia tarvittaessa osoittamaan, mihin kuvan kohtaan, taulukon riviin tai äänitteen aikaleimaan havainto perustuu. Jos perustetta ei löydy, älä käytä väitettä päätöksen pohjana.
 
 ## Yhteenveto
 
-**Multimodaalisuus** auttaa teknisen alan osaajaa hallitsemaan kontekstia ja ratkaisemaan ongelmia tehokkaammin. Kun tekoäly voi käsitellä kuvia, lokeja ja koodia, se ymmärtää ongelman paremmin ja voi antaa täsmällisempiä ratkaisuja.
+Valitse aineistomuoto tehtävän mukaan:
 
-Vastuullisena käyttäjänä toimit näin:
+- teksti tarkkaan sisältöön ja muokkaamiseen
+- kuva näkyviin suhteisiin ja kokonaisuuteen
+- taulukko lukuihin ja rakenteiseen vertailuun
+- ääni puheen ja ajallisen kulun tarkasteluun
+- dokumentti pidempään lähdeaineistoon
 
-- **Näytät ennen kuin kuvailet:** kuvakaappaukset vähentävät tulkinnanvaraisuutta.
-- **Suodatat lokit:** näytät vain olennaiset rivit.
-- **Annat koodia tekstinä:** silloin tekoäly voi analysoida ja muokata sitä helpommin.
-- **Yhdistät kontekstin strategisesti:** teksti, kuva, lokit ja koodi muodostavat yhdessä vahvan kokonaisuuden.
-- **Tarkistat turvallisuuden:** redaktoit salaisuudet ja henkilötiedot ennen jakamista.
-- **Tunnet mallin kyvyt:** valitset oikean mallin oikeaan tehtävään.
+Yhdistä muotoja vain silloin, kun jokainen tuo tehtävään oman tarpeellisen havaintonsa. Rajaa aineisto, suojaa tiedot ja tarkista mallin tulkinta alkuperäisestä lähteestä.
 
-Näin tekoälystä tulee aidosti hyödyllinen työkaveri IT-työssä ja ongelmanratkaisussa.
+> **Lopuksi pohdittavaksi:** Minkä tiedon menetät, jos muutat aineiston toiseen muotoon — ja onko juuri se tieto tehtäväsi kannalta olennainen?
 
 ---
 
 ## Lähteet ja tarkistuspäivä
 
-- [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-- [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [W3C: Making Audio and Video Media Accessible](https://www.w3.org/WAI/media/av/)
 
-Tarkistettu 15.7.2026.
+Tarkistettu 20.7.2026.

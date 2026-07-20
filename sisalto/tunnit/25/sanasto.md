@@ -38,11 +38,11 @@ Agentti, joka tarkistaa, onko toisen agentin vastaus turvallinen ja oikea.
 
 ## Palautekäytäntö (feedback loop)
 
-Prosessi, jossa agentti oppii hyväksyntä/hylkäys-päätöksistä ja parantaa ehdotuksensa.
+Prosessi, jossa hyväksynnät, hylkäykset ja perustelut tallennetaan, arvioidaan ja muutetaan tarvittaessa hallituksi järjestelmäpäivitykseksi. Tallennus ei itsessään tarkoita mallin oppimista.
 
-## Oppiminen palautteesta (learning from feedback)
+## Palautteesta kehittäminen (feedback-driven improvement)
 
-Agentti analysoi, mitä hyväksyy ja hylkää, ja muuttaa käyttäytymistään.
+Hyväksynnät, hylkäykset ja perustelut arvioidaan, minkä jälkeen ihminen päättää järjestelmän mahdollisista muutoksista. Palautteen tallentaminen ei muuta agentin toimintaa automaattisesti.
 
 ## Monivaiheinen hyväksyntä (multi-step approval)
 
@@ -50,7 +50,7 @@ Prosessi, jossa päätös vaatii useiden hyväksyjien hyväksynnän peräkkäin.
 
 ## Variaatioiden hallinta (variation management)
 
-Eri hyväksyjät, eri tiimit vaativat erilaisia prosesseja. Agentti oppii ja mukauttaa.
+Eri hyväksyjät ja tiimit voivat tarvita erilaisia prosesseja. Erot määritellään harnessin säännöissä ja muutokset tehdään hallitusti.
 
 ## Workflow
 

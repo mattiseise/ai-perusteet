@@ -109,7 +109,7 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa vies
 | --- | --- | --- |
 | Toistuuko tehtävä? |  | Jos ei toistu, automaatio ei yleensä kannata. |
 | Onko tehtävä yksinkertainen vai monimutkainen? |  | Yksinkertainen tehtävä sopii usein työnkuluksi. |
-| Muuttuvatko säännöt? |  | Muuttuvat säännöt voivat perustella agentin. |
+| Pitääkö seuraava toiminto valita tilanteen perusteella? |  | Mallin tekemä tilannekohtainen valinta voi perustella agentin. |
 | Kuka maksaa? |  | Suuret kustannukset vaativat vahvemmat perusteet. |
 | Mitkä ovat epäonnistumisen kustannukset? |  | Korkea riski vaatii valvontaa ja rajoituksia. |
 | Onko ihmisen valvonta mahdollista? |  | Jos valvonta on mahdollista, riskiä voidaan hallita paremmin. |
@@ -131,7 +131,9 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa vies
 - päätöspuun kuusi kysymystä ja vastaukset niihin
 - selkeän valinnan: promptaus, työnkulku vai agentti
 - perustelun, miksi valinta on järkevä
-- mahdollisen tarkennuksen omaan agenttiongelmaan
+- kuvauksen siitä päätöksestä, jonka kielimalli tekee tilanteen perusteella
+- kuvauksen harnessin vastuista
+- yhden palautteen perusteella tehdyn tarkennuksen
 
 **Aika-arvio:** 20–30 minuuttia
 
@@ -193,7 +195,7 @@ Tallennettava tuotos on **perusteltu päätösmuistio**. Pakollinen ydintuotos p
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija rakentaa yhdelle tehtävälle päätöspuun promptin, työnkulun ja agentin välille. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 25–65 min | Perustuotos | Oppija ajaa oman ongelmansa päätöspuun läpi ja kuvaa agenttivalinnassa sekä kielimallin muuttuvan päätöksen että harnessin vastuut. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
 | 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 

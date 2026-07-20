@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Oma botti I — suunnittelu, ohjeet ja persoona — Luokkaversio — AI · Perusteet</title>
-<meta name="description" content="Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppinut rakenteisen vastauksen käyttämisestä, tekoälyn hyödyntämisestä työparina ja…">
+<title>Oma botti I — käyttäjä, tehtävä ja rajat — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin…">
 <link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-14/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Oma botti I — suunnittelu, ohjeet ja persoona — Luokkaversio — AI · Perusteet"><meta property="og:description" content="Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppinut rakenteisen vastauksen käyttämisestä, tekoälyn hyödyntämisestä työparina ja…"><meta property="og:url" content="https://aiperusteet.fi/luokka/tunti-14/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Oma botti I — suunnittelu, ohjeet ja persoona — Luokkaversio — AI · Perusteet"><meta name="twitter:description" content="Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppinut rakenteisen vastauksen käyttämisestä, tekoälyn hyödyntämisestä työparina ja…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Oma botti I — suunnittelu, ohjeet ja persoona", "description": "Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppinut rakenteisen vastauksen käyttämisestä, tekoälyn hyödyntämisestä työparina ja…", "url": "https://aiperusteet.fi/luokka/tunti-14/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Oma botti I — käyttäjä, tehtävä ja rajat — Luokkaversio — AI · Perusteet"><meta property="og:description" content="Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin…"><meta property="og:url" content="https://aiperusteet.fi/luokka/tunti-14/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Oma botti I — käyttäjä, tehtävä ja rajat — Luokkaversio — AI · Perusteet"><meta name="twitter:description" content="Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Oma botti I — käyttäjä, tehtävä ja rajat", "description": "Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin…", "url": "https://aiperusteet.fi/luokka/tunti-14/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Luokkaversio", "item": "https://aiperusteet.fi/luokka/"}, {"@type": "ListItem", "position": 2, "name": "Tekoälyjen käyttö"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 14"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,189 +18,134 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 14</span></div><div class="lesson-title">Oma botti I — suunnittelu, ohjeet ja persoona</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-14/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-14/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Miten käyttäjä, tarkoitus, työnkulku ja rajat muodostavat kokonaisuuden?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-14-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-14-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-14-tehtavat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-tehtavat" tabindex="-1" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button id="tab-lesson-14-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button id="tab-lesson-14-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-14-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-14-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-14-teoria" data-tab="teoria"><h1>Oma botti I — suunnittelu, ohjeet ja persoona</h1>
-<h2>Johdanto: kun ChatGPT ei enää riitä</h2>
-<p>Olet nyt opiskellut, miten valita oikea työkalu oikeaan tehtävään. Olet oppinut rakenteisen vastauksen käyttämisestä, tekoälyn hyödyntämisestä työparina ja dokumentoinnin perusteista. Seuraava luonnollinen askel on tehdä <strong>oma botti</strong>, joka sopii juuri sinun tarpeisiisi.</p>
-<p>Monella on virheellinen käsitys omasta botista. He kuvittelevat, että ”oma ChatGPT” on vain ChatGPT, jolle on annettu nimi ja pari ohjetta. Näin ei ole. Hyvin suunniteltu botti on paljon enemmän. Sillä on selkeä tarkoitus, rajattu osaaminen ja johdonmukainen tapa vastata. Nyt opit, <strong>miten suunnitellaan botti, joka on oikeasti hyödyllinen</strong>.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Millaisen botin haluaisit tehdä? Kenen kanssa se kommunikoi: kokeneiden käyttäjien, asiakkaiden vai opiskelijoiden? Mitä sen pitäisi tehdä paremmin kuin tavallinen ChatGPT?</p>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 14</span></div><div class="lesson-title">Oma botti I — käyttäjä, tehtävä ja rajat</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-14/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-14/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Miten käyttäjä, tehtävä, onnistuminen ja rajat muodostavat testattavan määrittelyn?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-14-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-14-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-14-tehtavat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-tehtavat" tabindex="-1" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button id="tab-lesson-14-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button id="tab-lesson-14-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-14-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-14-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-14-teoria" data-tab="teoria"><h1>Oma botti I — käyttäjä, tehtävä ja rajat</h1>
+<h2>Johdanto: bottia ei aloiteta ohjetekstistä</h2>
+<p>Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin tärkeimmät päätökset jäävät helposti tekemättä. Kenelle botti on tarkoitettu? Mitä käyttäjä yrittää saada aikaan? Missä tilanteessa botti auttaa — ja missä sen pitää lopettaa?</p>
+<p>Tällä tunnilla et rakenna bottia etkä kirjoita valmista järjestelmäpromptia. Laadit <strong>määrittelydokumentin</strong>, jonka perusteella botin voisi myöhemmin rakentaa myös joku toinen. Suunnittelu erotetaan toteutuksesta tarkoituksella: ensin päätetään, millainen työkalu tarvitaan, vasta sitten kirjoitetaan ohjeet ja valitaan alusta.</p>
+<blockquote class="pause"><p><strong>Tunnin ydinkysymys:</strong> Mitä botin pitää auttaa tiettyä käyttäjää tekemään — ja mistä huomaat, että tehtävä onnistui?</p>
 </blockquote>
-<h2>Esimerkki alusta loppuun: kahvilan tilausopas-botti</h2>
-<p>Ennen kuin suunnittelet omaa bottiasi, katsotaan yksi valmis esimerkki kokonaisuudessaan. Tämä näyttää, miltä suunnitteluprosessi näyttää alusta loppuun.</p>
-<p><strong>Tarve:</strong> Pieni kahvila saa päivittäin paljon samoja kysymyksiä: ”Onko teillä gluteenittomia vaihtoehtoja?”, ”Mihin aikaan suljette?” ja ”Voinko varata pöydän?” Henkilökunnan aikaa kuluu rutiinikysymyksiin.</p>
-<p><strong>Tarkoitus:</strong> Botti vastaa kymmeneen yleisimpään asiakaskysymykseen ja ohjaa erikoistapaukset henkilökunnalle.</p>
-<p><strong>Rooli:</strong> Botti on ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea ja tuntee kahvilan tuotteet ja aukioloajat. Sillä on usean vuoden kokemus asiakaspalvelusta.</p>
-<p><strong>Ohjeet:</strong></p>
-<ol>
-<li>Tervehdi asiakasta ystävällisesti ja kysy, miten voit auttaa.</li>
-<li>Vastaa yhteen kysymykseen kerrallaan selkeästi ja lyhyesti.</li>
-<li>Tarjoa lopuksi lisäapua: ”Voinko auttaa vielä jossakin?”</li>
-</ol>
-<p><strong>Rajaukset:</strong></p>
-<ul>
-<li>Botti ei koskaan pyydä asiakkaan maksu- tai korttitietoja.</li>
-<li>Botti ei vahvista pöytävarausta itse, vaan ohjaa varauksen henkilökunnalle.</li>
-<li>Jos kysymys ei kuulu kahvilan aiheisiin, botti ohjaa asian ihmiselle: ”Tämä kannattaa kysyä suoraan henkilökunnalta. Välitän viestisi heille.”</li>
-</ul>
-<p><strong>Esimerkkivuorovaikutus:</strong></p>
-<blockquote class="pause"><p><strong>Asiakas:</strong> Onko teillä gluteenittomia vaihtoehtoja?<br />
-<strong>Botti:</strong> Hei! Kyllä on. Tarjoamme gluteenittomia leivonnaisia ja kaikki kahvijuomamme voi tehdä myös kauramaidolla. Haluatko kuulla tämän päivän gluteenittomista vaihtoehdoista?<br />
-<strong>Asiakas:</strong> Joo, kerro.<br />
-<strong>Botti:</strong> Tänään meillä on gluteeniton porkkanakakku ja gluteeniton suolainen piirakka. Voinko auttaa vielä jossakin?</p>
-</blockquote>
-<p><strong>Testaus esikatselussa:</strong></p>
-<ul>
-<li><strong>Positiivinen testi:</strong> ”Mihin aikaan suljette?” → Botti kertoo aukioloajat selkeästi. ✓</li>
-<li><strong>Negatiivinen testi:</strong> ”Voinko maksaa kortilla tässä chatissä?” → Botti kieltäytyy ja selittää miksi. ✓</li>
-<li><strong>Rajatapaus:</strong> ”Haluan reklamoida eilisestä tilauksesta.” → Botti ohjaa asian henkilökunnalle. ✓</li>
-</ul>
-<p>Tämä esimerkki näyttää koko prosessin: <strong>tarve → tarkoitus → rooli → ohjeet → rajaukset → esimerkkivuorovaikutus → testaus</strong>. Seuraavaksi opit jokaisen vaiheen tarkemmin ja suunnittelet oman bottisi.</p>
-<h2>Kolme rakennuspalikkaa: tarkoitus, rooli ja ohjeet</h2>
-<p>Kun aloitat botin suunnittelun, sinun täytyy vastata kolmeen perustavaan kysymykseen. Nämä kolme asiaa erottavat hyödyllisen botin pelkästä kokeilusta.</p>
-<p><strong>Ensimmäinen rakennuspalikka on tarkoitus.</strong> Botilla täytyy olla selkeä ja konkreettinen tarkoitus, jonka voit mitata ja tarkistaa. ”Olla älykäs” ei ole hyvä tarkoitus, koska se on liian epämääräinen. Hyvä tarkoitus voi olla esimerkiksi: ”Auttaa opiskelijoita ymmärtämään Pythonin silmukoita interaktiivisten esimerkkien avulla”, ”Vastata asiakkaiden yleisimpiin IT-ongelmiin ja ohjata monimutkaiset asiat oikealle tiimille” tai ”Neuvoa nuoria yrittäjiä liiketoimintasuunnitelman rakentamisessa kysymysten avulla”. Jokainen näistä on konkreettinen ja arvioitavissa.</p>
-<p><strong>Toinen rakennuspalikka on rooli.</strong> Botilla täytyy olla uskottava rooli, joka antaa sille persoonan ja asiantuntemuksen. Se voi olla esimerkiksi kokenut kielitutori, jolla on 10 vuoden opetuskokemus ja joka ymmärtää, miten aloittelijat oppivat. Se voi olla ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea ja kuuntelee asiakkaan toiveita ennen kuin ehdottaa ratkaisua. Se voi olla myös mentori, joka opastaa nuorta yrittäjää rahoituksen, markkinoinnin ja tiimin johtamisen kysymyksissä. Rooli kirjoitetaan osaksi <strong>järjestelmäpromptia</strong> eli ohjeistusta, jonka annat botille ennen ensimmäistä keskustelua. Hyvin kirjoitettu rooli tekee botista uskottavan ja johdonmukaisen.</p>
-<p><strong>Kolmas rakennuspalikka on ohjeet.</strong> Ohjeet ovat käytännön säännöt, jotka kertovat botille, <strong>miten</strong> se tekee työtään. Esimerkiksi: ”Aloita aina yksinkertaisilla esimerkeillä ja siirry vasta sitten monimutkaisempiin asioihin”, ”Kun asiakas kuulostaa turhautuneelta, pahoittele ensin ennen kuin annat ohjeita” tai ”Anna jokaisen käsitteen jälkeen vähintään kaksi konkreettista esimerkkiä”. Ohjeet varmistavat, että botti toimii johdonmukaisesti ja käyttäjän tarpeita palvellen.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kirjoita muistiin kolme asiaa, jotka sinun pitäisi määritellä omalle botillesi juuri nyt. Mikä on sen tarkoitus? Mikä on sen rooli? Mitkä ovat sen kolme tärkeintä ohjetta?</p>
-</blockquote>
-<h2>Rajaukset — mitä botti ei saa tehdä?</h2>
-<p>Yhtä tärkeää kuin se, mitä botti tekee, on se, mitä se <strong>ei koskaan tee</strong>. Rajaukset ovat turvallisuus- ja tarkkuusmekanismi. Ne suojaavat käyttäjää virheelliseltä tiedolta ja estävät bottia tekemästä vaarallisia, sopimattomia tai vastuuttomia asioita.</p>
-<p>Hyvät rajaukset ovat selkeitä ja perusteltuja. Botti voi esimerkiksi sanoa: ”En vastaa lääketieteellisiin kysymyksiin, koska en ole lääkäri. Suosittelen ottamaan yhteyttä terveydenhuollon vastuulliseen käyttäjään.” Se voi myös sanoa: ”En kirjoita sinulle valmiita koulutehtäviä, koska sinun pitää oppia tekemällä. Sen sijaan voin tehdä yhteenvedon ja kysyä johdattavia kysymyksiä, jotka auttavat sinua pääsemään ratkaisuun.” Tai: ”En käsittele maksutietoja tai luottokorttinumeroita turvallisuussyistä.”</p>
-<p>Huonot rajaukset ovat epämääräisiä tai puuttuvat kokonaan. Pelkkä ”en tiedä” ei riitä rajaukseksi. Jos botissa ei ole rajauksia, se voi antaa vaarallisia neuvoja, esittää harhaanjohtavia väitteitä tai jatkaa keskustelua tilanteissa, joissa asia pitäisi ohjata ihmiselle. Rajaukset kirjoitetaan osaksi järjestelmäpromptia, ja ne ovat yhtä tärkeitä kuin botin varsinaiset ohjeet.</p>
-<h2>Järjestelmäprompti — botin sydän</h2>
-<p>Kun luot oman GPT:n tai mukautat bottia esimerkiksi ChatGPT:ssä tai Claude-projektissa, määrittelet botille <strong>järjestelmäpromptin</strong>. Se on yksityiskohtainen ohjeistus, joka kertoo kielimallille, <strong>kuka</strong> botti on, <strong>mitä</strong> se tekee ja <strong>miten</strong> sen pitää käyttäytyä.</p>
-<figure class="ai-demo" data-demo-id="lesson-14-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama kysymys — järjestelmäprompti muuttaa botin käytöksen</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:300px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">SAMA KYSYMYS + yleinen chat → yleinen vastaus</li><li class="ai-demo__mobile-node">SAMA KYSYMYS + järjestelmäprompti → määritelty rooli, ohjeet ja rajat</li></ol></div>
-  <div class="l14-wrap">
-    <div class="l14-sys"><span class="l14-head">JÄRJESTELMÄPROMPTI <span class="l14-sw"><i class="l14-off">POIS</i><i class="l14-on">PÄÄLLÄ</i></span></span>
-      <span class="l14-row r1">1 · Identiteetti: opiskeluvalmentaja</span>
-      <span class="l14-row r2">2 · Tarkoitus: ohjaa oppimaan</span>
-      <span class="l14-row r3">3 · Ohjeet: kysy, älä luennoi</span>
-      <span class="l14-row r4">4 · Rajaus: ei valmiita töitä</span>
-    </div>
-    <div class="l14-chat">
-      <div class="l14-msg l14-user">Kirjoita esseeni valmiiksi puolestani.</div>
-      <div class="l14-msg l14-bot l14-b1">Toki! Tässä on valmis essee: … <span class="l14-tag l14-warn">yleisbotti — raja puuttuu</span></div>
-      <div class="l14-msg l14-bot l14-b2">En kirjoita esseetä puolestasi — opit tekemällä. Aloitetaan rungosta: mikä on aiheesi? <span class="l14-tag l14-good">✓ noudattaa rajausta</span></div>
-    </div>
+<figure class="ai-demo" data-demo-id="lesson-14-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// ennen toteutusta: tarve muuttuu arvioitavaksi määrittelyksi</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:286px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">SAMA KYSYMYS + yleinen chat → yleinen vastaus</li><li class="ai-demo__mobile-node">SAMA KYSYMYS + järjestelmäprompti → määritelty rooli, ohjeet ja rajat</li></ol></div>
+  <div style="display:flex;align-items:center;gap:16px;width:740px;font-family:var(--font-mono);font-size:11px">
+    <div style="flex:1;padding:22px 10px;text-align:center;color:#fff;background:#11182a;border:1.5px solid #6f538e;border-radius:13px"><b>KÄYTTÄJÄ</b><span style="display:block;margin-top:14px">kenellä on tarve?</span></div><b style="color:#863fc4">→</b>
+    <div style="flex:1;padding:22px 10px;text-align:center;color:#fff;background:#11182a;border:1.5px solid #6f538e;border-radius:13px"><b>TEHTÄVÄ</b><span style="display:block;margin-top:14px">mitä hän tekee?</span></div><b style="color:#863fc4">→</b>
+    <div style="flex:1;padding:22px 10px;text-align:center;color:#fff;background:#11182a;border:1.5px solid #6f538e;border-radius:13px"><b>ONNISTUMINEN</b><span style="display:block;margin-top:14px">mistä tulos näkyy?</span></div><b style="color:#863fc4">→</b>
+    <div style="flex:1;padding:22px 10px;text-align:center;color:#fff;background:#11182a;border:1.5px solid #6f538e;border-radius:13px"><b>RAJAT</b><span style="display:block;margin-top:14px">milloin pysähdytään?</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Järjestelmäprompti on botin sydän: käyttäjä ei näe sitä, mutta se ohjaa jokaista vastausta. Sama kysymys tuottaa täysin eri käytöksen, kun identiteetti, tarkoitus, ohjeet ja rajaukset ovat voimassa.</figcaption></figure>
-<style>
-.l14-wrap{display:flex;gap:18px;align-items:center;width:560px;font-family:var(--font-mono)}
-.l14-sys{display:flex;flex-direction:column;gap:7px;width:235px;background:#11182A;border:2px solid oklch(0.66 0.15 305);border-radius:12px;padding:12px 13px}
-.l14-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
-.l14-sw{position:relative;width:54px;height:18px}
-.l14-sw i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:9.5px;letter-spacing:.08em;border-radius:999px}
-.l14-off{color:#3A1408;background:#F0A38C;animation:l14off 18s infinite}
-.l14-on{color:#06241a;background:#7FD0A8;opacity:0;animation:l14on 18s infinite}
-@keyframes l14off{0%,42%{opacity:1}48%,100%{opacity:0}}
-@keyframes l14on{0%,42%{opacity:0}48%,97%{opacity:1}100%{opacity:0}}
-.l14-row{font-size:11.5px;line-height:1.35;color:#5D6880;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:6px 9px;animation-duration:18s;animation-iteration-count:infinite}
-.l14-row.r1{animation-name:l14r1}.l14-row.r2{animation-name:l14r2}.l14-row.r3{animation-name:l14r3}.l14-row.r4{animation-name:l14r4}
-@keyframes l14r1{0%,46%{color:#5D6880;border-color:#232C44}50%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
-@keyframes l14r2{0%,49%{color:#5D6880;border-color:#232C44}53%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
-@keyframes l14r3{0%,52%{color:#5D6880;border-color:#232C44}56%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
-@keyframes l14r4{0%,55%{color:#5D6880;border-color:#232C44}59%,97%{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}100%{color:#5D6880}}
-.l14-chat{position:relative;display:flex;flex-direction:column;gap:10px;width:300px;background:#0E1422;border:1.5px solid #232C44;border-radius:12px;padding:13px 14px;min-height:190px}
-.l14-msg{font-size:12px;line-height:1.45;border-radius:10px;padding:8px 11px;max-width:92%}
-.l14-user{align-self:flex-end;color:#06212A;background:#46c7cf;font-weight:500}
-.l14-bot{align-self:flex-start;color:#FFFFFF;background:#1E2740;border:1.5px solid #44517A}
-.l14-b1{animation:l14b1 18s infinite}
-.l14-b2{position:absolute;left:14px;top:74px;opacity:0;animation:l14b2 18s infinite;border-color:#7FD0A8}
-@keyframes l14b1{0%,2%{opacity:0}6%,44%{opacity:1}50%,100%{opacity:0}}
-@keyframes l14b2{0%,58%{opacity:0}64%,97%{opacity:1}100%{opacity:0}}
-.l14-tag{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
-.l14-warn{color:#3A1408;background:#F0A38C}
-.l14-good{color:#06241a;background:#7FD0A8}
-@media (prefers-reduced-motion:reduce){
-.l14-off,.l14-on,.l14-row,.l14-b1,.l14-b2{animation:none}
-.l14-off{opacity:0}.l14-on{opacity:1}
-.l14-row{color:#FFFFFF;border-color:oklch(0.72 0.15 305)}
-.l14-b1{opacity:0;display:none}.l14-b2{opacity:1;position:static}}
-</style>
+<figcaption class="ai-demo__cap">Määrittely ei vielä ole järjestelmäprompti. Se kertoo, kenelle botti rakennetaan, mitä sen pitää saada aikaan ja millä ehdoilla myöhempi toteutus voidaan hyväksyä.</figcaption></figure>
 
-<p>Hyvä järjestelmäprompti sisältää neljä osaa:</p>
-<ol>
-<li><strong>Identiteetti:</strong> Kuka botti on? Esimerkiksi: ”Olet kokenut Python-ohjelmointitutori. Sinulla on 10 vuoden kokemus aloittelijoiden opettamisesta.”</li>
-<li><strong>Tarkoitus:</strong> Mitä botti tekee? Esimerkiksi: ”Tarkoituksesi on auttaa opiskelijoita ymmärtämään Python-ohjelmointia interaktiivisten esimerkkien ja kysymysten avulla.”</li>
-<li><strong>Ohjeet:</strong> Miten botti toimii? Esimerkiksi: ”Aloita aina peruskäsitteistä. Anna konkreettisia, ajettavia esimerkkejä. Kysy opiskelijalta, ymmärsikö hän.”</li>
-<li><strong>Rajaukset:</strong> Mitä botti ei tee? Esimerkiksi: ”Et kirjoita valmiita projekteja opiskelijoille. Et vastaa aiheisiin, jotka eivät liity Pythoniin.”</li>
-</ol>
-<p>Tässä on esimerkki Python-tutoribotin järjestelmäpromptista:</p>
-<blockquote class="pause"><p>Olet kokenut Python-ohjelmointitutori. Sinulla on 10 vuoden kokemus aloittelijoiden opettamisesta.</p>
-<p><strong>Tarkoituksesi:</strong> Autat opiskelijoita ymmärtämään Python-ohjelmointia interaktiivisten esimerkkien ja kysymysten avulla.</p>
-<p><strong>Ohjeet:</strong></p>
-<ol>
-<li>Aloita aina peruskäsitteistä. Älä hyppää heti monimutkaisiin asioihin.</li>
-<li>Anna jokaisesta käsitteestä konkreettisia, ajettavia esimerkkejä.</li>
-<li>Kysy opiskelijalta, ymmärsikö hän. Anna hänelle aikaa vastata.</li>
-<li>Jos opiskelija tekee virheen, auta häntä löytämään virhe itse. Älä vain kerro ratkaisua.</li>
-</ol>
-<p><strong>Rajaukset:</strong></p>
+<h2>Aloita käyttäjän tilanteesta</h2>
+<p>Hyvä botti ratkaisee rajatun ongelman rajatussa tilanteessa. ”Opiskelubotti” on liian laaja lähtökohta. ”Kertauskaveri, joka auttaa ensimmäisen vuoden opiskelijaa tunnistamaan tietoverkkojen keskeiset käsitteet ennen koetta” kertoo jo käyttäjän, tilanteen ja tavoitteen.</p>
+<p>Kuvaa käyttötapaus yhdellä virkkeellä:</p>
+<blockquote class="pause"><p><strong>[Käyttäjä]</strong> tarvitsee apua <strong>[tehtävässä]</strong>, jotta hän voi <strong>[saavutettava lopputulos]</strong>.</p>
+</blockquote>
+<p>Esimerkiksi:</p>
+<blockquote class="pause"><p>Kerhon uusi jäsen tarvitsee apua sääntöjen ja harjoitusaikojen löytämisessä, jotta hän osaa tulla ensimmäisiin harjoituksiinsa valmistautuneena.</p>
+</blockquote>
+<p>Tämä virke toimii koko suunnitelman mittatikkuna. Jos myöhempi ominaisuus ei auta käyttäjää tässä tehtävässä, sitä ei ehkä tarvita.</p>
+<h2>Määritä onnistuminen havaittavasti</h2>
+<p>”Botti auttaa hyvin” ei ole vielä arvioitava tavoite. Onnistuminen pitää kuvata niin, että sen voi myöhemmin testata.</p>
+<p>Havaittava onnistuminen voi tarkoittaa esimerkiksi sitä, että:</p>
 <ul>
-<li>Et kirjoita valmiita projekteja opiskelijoille. He oppivat tekemällä.</li>
-<li>Et vastaa kysymyksiin, jotka eivät liity Pythoniin.</li>
-<li>Jos opiskelija kysyy muista aiheista, kehota häntä ottamaan yhteyttä opettajaan.</li>
+<li>käyttäjä löytää vastauksen nimetystä tietopohjasta</li>
+<li>botti kysyy puuttuvan lähtötiedon ennen ehdotusta</li>
+<li>vastaus etenee ennalta sovitussa rakenteessa</li>
+<li>botti myöntää, ettei tietopohja kata kysymystä</li>
+<li>käyttäjä saa seuraavan konkreettisen askeleen</li>
 </ul>
-</blockquote>
-<p>Näetkö eron? Tämä ei ole vain yksinkertainen ”Python-tutori”. Tämä on <strong>yksityiskohtainen ohjeistus</strong>, joka ohjaa jokaista vastausta.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kirjoita lyhyt järjestelmäprompti omalle botillesi. Mikä se on? Kuka se on? Mitä se tekee? Mitä se ei saa tehdä?</p>
-</blockquote>
-<h2>Esimerkkivuorovaikutukset: näytä, miten botti käyttäytyy</h2>
-<p>Kun suunnittelet bottia, kirjoita sille <strong>esimerkkivuorovaikutuksia</strong>. Ne ovat kuin näytelmäharjoituksia: ne näyttävät, miten botti toimii erilaisissa tilanteissa. Esimerkit auttavat sinua arvioimaan, onko ohjeistus riittävän selkeä. Ne auttavat myös kielimallia seuraamaan haluamaasi toimintatapaa.</p>
-<p>Katso Python-tutoribotin esimerkkivuorovaikutus:</p>
-<blockquote class="pause"><p><strong>Käyttäjä:</strong> Mitä on muuttuja?</p>
-<p><strong>Botti:</strong> Hyvä kysymys! Ajattele muuttujaa kuin laatikkoa. Laatikossa voi olla nauloja, ruuveja tai vasaroita. Laatikko on <strong>säiliö</strong>, joka pitää sisällään jotakin.</p>
-<p>Ohjelmoinnissa muuttuja toimii samalla tavalla. Se on <strong>nimetty paikka</strong>, jossa voit säilyttää tietoa. Esimerkiksi:<br />
-<code>nimi = "Liisa"</code><br />
-Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</code>.</p>
-<p>Ymmärsitkö tämän? Haluatko nähdä lisää esimerkkejä vai siirrytäänkö seuraavaan asiaan?</p>
-</blockquote>
-<p>Katso myös asiakaspalvelubotin esimerkkivuorovaikutus:</p>
-<blockquote class="pause"><p><strong>Käyttäjä:</strong> Laskuni ei ole saapunut. Mikä on vialla?</p>
-<p><strong>Botti:</strong> Pahoittelut siitä, että tästä aiheutuu sinulle vaivaa. Ymmärrän, että laskun puuttuminen on ärsyttävää. Autan sinua selvittämään tilanteen.</p>
-<p>Tarvitsen ensin kaksi tietoa:</p>
+<p>Kun onnistuminen on havaittava, tunnilla 15 voidaan kirjoittaa sitä koskevat testit ja tunneilla 17–18 voidaan tarkistaa, toteutuuko se oikeassa botissa.</p>
+<h2>Kuvaa keskustelun eteneminen</h2>
+<p>Botin <strong>työnkulku</strong> tarkoittaa tässä keskustelun loogista etenemistä, ei vielä teknistä automaatiota. Kirjoita 4–6 vaihetta, jotka kuvaavat käyttäjän matkan alusta hyödylliseen lopputulokseen.</p>
+<p>Kertauskaverin eteneminen voisi olla:</p>
 <ol>
-<li>Saatko laskut yleensä sähköpostiin vai paperisena postissa?</li>
-<li>Tiedätkö laskunumeron tai asiakasnumeron?</li>
+<li>kysy aihe ja tavoite</li>
+<li>selvitä käyttäjän lähtötaso yhdellä kysymyksellä</li>
+<li>selitä yksi käsite kerrallaan</li>
+<li>anna lyhyt harjoituskysymys</li>
+<li>anna palaute käyttäjän vastauksesta</li>
+<li>ehdota seuraavaa harjoiteltavaa asiaa</li>
 </ol>
-<p>Näiden tietojen avulla voin ohjata asian oikeaan paikkaan.</p>
-</blockquote>
-<p>Nämä esimerkit antavat realistisen kuvan siitä, mitä botilta voi odottaa. Ne myös auttavat kielimallia noudattamaan juuri sitä käyttäytymistä, jonka haluat.</p>
-<h2>Persoonallisuus vs. vastuullisuus</h2>
-<p>Monet opiskelijat sekoittavat keskenään botin roolin ja persoonallisuuden. Ne eivät ole sama asia.</p>
-<p><strong>Vastuullisuus</strong> tarkoittaa, että botti tietää, mitä tekee, ja tekee sen hyvin. Se vastaa tarkasti, käyttää oikeaa termistöä ja antaa luotettavaa tietoa. Vastuullisuus ei ole koriste, vaan <strong>pätevyys</strong>.</p>
-<p><strong>Persoonallisuus</strong> tarkoittaa tapaa, jolla botti välittää vastuullisuutensa. Se voi olla ystävällinen ja lämminhenkinen tai suora ja asiallinen. Sopiva tyyli riippuu botin roolista ja käyttäjäryhmästä. Opiskelijabotti voi olla kannustava ja kärsivällinen. Asiakaspalvelubotti voi olla ripeä ja tehokas. Mentoribotti voi olla rohkaiseva ja kuunteleva.</p>
-<p>Hyvä botti on aina huolellinen. Persoonallisuus on tapa tukea vastuullisuutta, ei korvata sitä.</p>
-<h2>Kohti omaa projektia</h2>
-<p>Tällä tunnilla opit, miten botille annetaan selkeä tarkoitus, rooli ja ohjeet sekä miksi järjestelmäprompti on botin sydän. Tehtävissä laadit oman <strong>botin määrittelydokumentin</strong> eli <strong>rakennuspalikka 2:n</strong>. Se on botin perustamisasiakirja, joka kertoo, kenelle botti on tarkoitettu, mitä se tekee ja mitä se ei tee.</p>
-<p>Tämä on iso askel: bottisi alkaa hahmottua paperilla. Seuraavaksi kuratoit tietopohjan valitsemastasi arjen tai harrastuksen, opiskelun tai työelämän rooliskenaariosta.</p>
+<p>Vaiheet eivät vielä ole järjestelmäprompti. Ne ovat vaatimus sille, mitä myöhemmän järjestelmäpromptin ja käyttöliittymän pitää saada aikaan.</p>
+<h2>Rooli ei ole sama asia kuin persoona</h2>
+<p><strong>Rooli</strong> kertoo, mistä näkökulmasta botti auttaa. <strong>Persoona ja äänensävy</strong> kertovat, miltä vuorovaikutus tuntuu.</p>
+<p>”Olet ystävällinen apuri” kuvaa lähinnä sävyä. ”Olet uusien jäsenten perehdyttäjä, joka käyttää vain kerhon hyväksyttyjä sääntöjä ja harjoitusaikoja” kertoo tehtävän, tiedollisen perustan ja vastuun.</p>
+<p>Valitse ensin asiallinen rooli. Lisää sen jälkeen tehtävään sopiva viestintätapa:</p>
+<ul>
+<li>kannustava mutta ei ylikehuva</li>
+<li>selkeä mutta ei alentuva</li>
+<li>rauhallinen riskitilanteissa</li>
+<li>tiivis silloin, kun käyttäjä tarvitsee toimintaohjeen</li>
+</ul>
+<p>Persoona ei korvaa asiantuntemusta, lähteitä tai rajoja. Se auttaa tekemään botin toiminnasta johdonmukaista ja käyttäjälle sopivaa.</p>
+<h2>Rajat tekevät botista käyttökelpoisen</h2>
+<p>Rajaus ei ole luettelo kaikesta pahasta. Hyvä rajaus liittyy käyttötapaukseen ja kertoo myös, mitä botti tekee rajan tullessa vastaan.</p>
+<p>Kirjoita rajat kolmesta suunnasta:</p>
+<ol>
+<li><strong>Aiheen raja:</strong> Mihin kysymyksiin botti ei vastaa?</li>
+<li><strong>Toiminnan raja:</strong> Mitä botti ei tee käyttäjän puolesta?</li>
+<li><strong>Tiedon raja:</strong> Mitä tietoa botti ei pyydä, tallenna tai arvaa?</li>
+</ol>
+<p>Pelkkä ”älä vastaa aiheen ulkopuolelle” jättää käyttäjän tyhjän päälle. Parempi ohje on: ”Jos kysymys ei koske kerhon toimintaa, kerro rajaus yhdellä lauseella ja ohjaa käyttäjä kerhon yhteyshenkilölle.”</p>
+<h2>Tee myös tietotarpeet näkyviksi</h2>
+<p>Määrittely paljastaa, mitä botin pitää tietää. Kerhon perehdytysbotti saattaa tarvita säännöt, harjoitusajat, varusteluettelon ja yhteystiedot. Se ei tarvitse koko kerhon vuosikertomusta vain siksi, että dokumentti liittyy samaan organisaatioon.</p>
+<p>Kirjaa määrittelyyn alustava luettelo tietotarpeista. Tunnilla 15 etsit niihin sopivat lähteet ja arvioit, mitä aineisto kattaa ja mitä ei.</p>
+<h2>Määrittelydokumentti on päätösten ketju</h2>
+<p>Hyvä määrittely vastaa kuuteen kysymykseen:</p>
+<table>
+<thead>
+<tr>
+<th>Päätös</th>
+<th>Kysymys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Käyttäjä</td>
+<td>Kuka tarvitsee apua ja missä tilanteessa?</td>
+</tr>
+<tr>
+<td>Tehtävä</td>
+<td>Mitä käyttäjä yrittää saada aikaan?</td>
+</tr>
+<tr>
+<td>Onnistuminen</td>
+<td>Mitä havaittavaa tapahtuu, kun botti auttaa oikein?</td>
+</tr>
+<tr>
+<td>Eteneminen</td>
+<td>Missä järjestyksessä botti ohjaa käyttäjää?</td>
+</tr>
+<tr>
+<td>Rooli ja sävy</td>
+<td>Millaisena asiantuntijana ja millä tavalla botti viestii?</td>
+</tr>
+<tr>
+<td>Rajat</td>
+<td>Mitä botti ei tee, ja miten se toimii rajan tullessa vastaan?</td>
+</tr>
+</tbody>
+</table>
+<p>Näiden päätösten jälkeen järjestelmäpromptin kirjoittaminen on myöhemmin muuntamista, ei arvailua. Tunnilla 17 kokoat määrittelyn, promptikortin toimivan rakenteen ja tietopohjan yhdeksi toteutukseksi.</p>
 <h2>Yhteenveto</h2>
-<p>Hyvin suunniteltu oma botti ei ole vain nimetty ChatGPT. Se on <strong>tekoälyjärjestelmä</strong>, jonka luot selkeällä tarkoituksella, uskottavalla roolilla ja yksityiskohtaisilla ohjeilla.</p>
-<p><strong>Muista nämä asiat:</strong></p>
-<ol>
-<li><strong>Tarkoitus</strong> kertoo, miksi botti on olemassa.</li>
-<li><strong>Rooli</strong> kertoo, kuka botti on ja millaisella asiantuntemuksella se toimii.</li>
-<li><strong>Ohjeet</strong> kertovat, miten botti toimii käytännössä.</li>
-<li><strong>Rajaukset</strong> kertovat, mitä botti ei saa tehdä.</li>
-<li><strong>Järjestelmäprompti</strong> kokoaa nämä asiat yhteen ja ohjaa botin toimintaa.</li>
-<li><strong>Esimerkkivuorovaikutukset</strong> auttavat testaamaan, onko ohjeistus riittävän selkeä.</li>
-</ol>
-<p>Kun valmistelet omaa bottia, muista: <strong>vastuullisuus ensin, persoonallisuus toiseksi</strong>. Seuraavaksi opit, miten lisäät botille tietopohjan, jotta se voi vastata tarkasti ja ajankohtaisesti.</p>
+<p>Tällä tunnilla suunnittelet ennen rakentamista. Rajaat käyttäjän, tehtävän, havaittavan onnistumisen, keskustelun etenemisen, roolin, äänensävyn ja toiminnan rajat. Et vielä kirjoita valmista järjestelmäpromptia tai testaa omaa bottia.</p>
+<p>Tunnin tuotoksena syntyy <strong>rakennuspalikka 2: botin määrittelydokumentti</strong>. Se kertoo, mitä tunnilla 17 rakennetaan ja millä perusteella toteutusta myöhemmin arvioidaan.</p>
+<blockquote class="pause"><p><strong>Lopuksi pohdittavaksi:</strong> Voisiko toinen ihminen rakentaa määrittelysi perusteella saman botin kuin sinä? Jos ei, mikä päätös on vielä vain omassa päässäsi?</p>
+</blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
-<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST: AI Risk Management Framework</a></li>
-<li><a href="https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence">UNESCO: Recommendation on the Ethics of Artificial Intelligence</a></li>
-<li><a href="https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en">European Commission: GDPR principles</a></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/plan-your-agent">Microsoft: Plan your agent</a></li>
+<li><a href="https://www.nngroup.com/articles/persona/">Nielsen Norman Group: Personas</a></li>
 </ul>
-<p>Tarkistettu 15.7.2026.</p></div><div id="panel-lesson-14-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-tehtavat" data-tab="tehtavat" hidden><h1>Rakennuspalikka 2 — Botin määrittelydokumentti</h1>
-<p><strong>Tämä on toinen kolmesta rakennuspalikasta.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.</p>
+<p>Tarkistettu 20.7.2026.</p></div><div id="panel-lesson-14-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-tehtavat" data-tab="tehtavat" hidden><h1>Rakennuspalikka 2 — Botin määrittelydokumentti</h1>
+<p><strong>Tämä on toinen kolmesta rakennuspalikasta.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
 <p>Suunnittelet bottisi <strong>määrittelydokumentin</strong>. Se on botin perustamisasiakirja, jossa kerrot, kenelle botti on tarkoitettu, mitä se tekee, miten se käyttäytyy ja mitä se ei tee.</p>
 <p>Tämä on ensimmäinen rakennuspalikka, jossa suunnittelet suoraan tulevaa bottiasi. Aiemmin keräsit yleisiä promptirakenteita. Nyt suunnittelet juuri sitä bottia, jonka rakennat oppitunneilla 17–18.</p>
 <p>Et vielä kirjoita <strong>järjestelmäpromptia</strong>, rakenna bottia tai testaa sitä. Tässä tehtävässä suunnittelet botin toiminnan etukäteen. Ajattele tätä pohjapiirroksena: hyvä suunnitelma helpottaa botin rakentamista myöhemmin.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
-<p>Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin Microsoft Copilotiin. Dokumentti auttaa sinua päättämään:</p>
+<p>Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin valitsemallasi alustalla. Dokumentti auttaa sinua päättämään:</p>
 <ul>
 <li>mihin aiheeseen ja kohderyhmälle botti rakennetaan,</li>
 <li>mitä tehtävää botti auttaa käyttäjää tekemään,</li>
@@ -274,7 +219,7 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 </tbody>
 </table>
 <h3>Vaihe 3 — Haasta määrittelysi tekoälyn avulla</h3>
-<p>Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.</p>
+<p>Avaa käytössäsi oleva hyväksytty tekoälypalvelu ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.</p>
 <p>Voit käyttää esimerkiksi seuraavaa promptia:</p>
 <blockquote class="pause"><p>"Toimit minulle sparrauskumppanina. Suunnittelen apuri-bottia, joka auttaa käyttäjää valitsemassani arjen aiheessa. Tässä bottini määrittelydokumentti: [liitä koko taulukkosi tähän] Haasta suunnitelmaani. Pohdi erityisesti: Onko botin tarkoitus tarpeeksi konkreettinen vai jääkö se liian yleiseksi? Onko kohderyhmä riittävän tarkasti rajattu? Puuttuuko työnkulusta jokin tyypillinen vaihe tässä aiheessa? Ovatko botin rajat realistisia vai liian tiukkoja tai liian löysiä? Mikä on yksi sokea piste, jota en ehkä vielä huomaa? Älä kirjoita uutta versiota puolestani. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."</p>
 </blockquote>
@@ -290,380 +235,95 @@ Tässä muuttuja on <code>nimi</code>, ja se sisältää tekstin <code>"Liisa"</
 <li>Äänensävy sopii kohderyhmälle ja tehtävän vakavuuteen.</li>
 </ul>
 <p>Kirjoita lopuksi 2–3 lauseen pohdinta: <em>"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"</em></p>
-<blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Oppitunnilla 17 aloitat botin rakentamisen Copilotilla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.</p>
+<blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Oppitunnilla 17 aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.</p>
 <p><strong>Tarkista lopuksi:</strong> Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.</p>
 </blockquote>
-<p><strong>2 / 3 rakennuspalikkaa kerätty</strong></p></div></div></div><div id="panel-lesson-14-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Oman botin suunnittelu</h1>
-<p>Tällä välilehdellä pääset harjoittelemaan juuri lukemaasi: miten hyvä botti suunnitellaan neljän rakennuspalikan — tarkoituksen, roolin, ohjeiden ja rajausten — varaan. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät sanaston kertaamisesta kohti soveltamista ja päättyvät siihen, että sanallistat oman botti-ideasi ja arvioit sitä asiantuntijan näkökulmaa vasten.</p>
-<h2>Tehtävä 1/5 — sanaston kertaus</h2>
-<p>Aloitetaan botin suunnittelun peruskäsitteistä, ennen kuin siirrytään soveltamiseen.</p>
+<p><strong>2 / 3 rakennuspalikkaa kerätty</strong></p></div></div></div><div id="panel-lesson-14-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Määrittele botti ennen rakentamista</h1>
+<p>Harjoittelet tarvetta, käyttäjää, tehtävää ja rajoja. Et vielä kirjoita valmista järjestelmäpromptia tai testaa toteutusta.</p>
+<h2>Tehtävä 1/5 — määrittelyn osat</h2>
 <div class="task-widget" data-ti="0"></div>
 
-<h2>Tehtävä 2/5 — mikä botista pitää paikkansa?</h2>
-<p>Jokaisen kysymyksen taustalla on yksi yleinen bottien suunnittelua koskeva harhaluulo. Valitse väite, joka pitää paikkansa.</p>
+<h2>Tehtävä 2/5 — rajaa tehtävä</h2>
 <div class="task-widget" data-ti="1"></div>
 
 <h2>Tehtävä 3/5 — suunnittelun järjestys</h2>
-<p>Palauta mieleen, missä järjestyksessä hyvä botti suunnitellaan. Napauta vaiheet oikeaan järjestykseen.</p>
 <div class="task-widget" data-ti="2"></div>
 
-<h2>Tehtävä 4/5 — mikä osa järjestelmäpromptia?</h2>
-<p>Nyt sovellat neljää rakennuspalikkaa käytäntöön. Jokainen katkelma on osa jonkin botin järjestelmäpromptia — tunnista, mihin palikkaan se kuuluu.</p>
+<h2>Tehtävä 4/5 — määrittelyn ydin</h2>
 <div class="task-widget" data-ti="3"></div>
 
-<h2>Tehtävä 5/5 — oma botti-idea omin sanoin</h2>
-<p>Viimeinen tehtävä kokoaa tunnin yhteen. Et saa pisteitä koneelta, vaan kirjoitat oman botti-ideasi omin sanoin ja vertaat sitä asiantuntijan näkökulmaan ja muistilistaan.</p>
-<div class="task-widget" data-ti="4"></div></div><div id="panel-lesson-14-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-sanasto" data-tab="sanasto" hidden><h1>Sanasto</h1>
-<h2>Räätälöity botti (Custom GPT)</h2>
-<p>Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Räätälöidyllä botilla on oma rooli, ohjeet, rajaukset ja mahdollisesti tietopohja.</p>
-<h2>Järjestelmäprompti</h2>
-<p>Piilossa oleva ohje, joka määrittää botin käyttäytymisen. Järjestelmäprompti kertoo botille, kuka se on, miten se vastaa ja mitä rajoituksia sillä on. Käyttäjä ei näe järjestelmäpromptia.</p>
-<h2>Botin tarkoitus (bot purpose)</h2>
-<p>Selkeä kuvaus siitä, mitä botti tekee ja miksi se on olemassa. Ilman selkeää tarkoitusta botti on vain tavallinen ChatGPT, jolla ei ole mitään erityistä.</p>
-<h2>Rooli (role)</h2>
-<p>Botin "persoona" tai ammatti. Rooli määrittää, millä äänellä ja asiantuntemuksella botti vastaa. Esimerkiksi: "Olet ystävällinen kahvilan asiakaspalvelija, joka puhuu selkeää suomea."</p>
-<h2>Ohjeet (instructions)</h2>
-<p>Tarkat säännöt siitä, miten botti toimii. Esimerkiksi: "Kysy ensin, miten voit auttaa" tai "Anna ohjeet vaihe vaiheelta." Hyvät ohjeet tekevät botista johdonmukaisen.</p>
-<h2>Rajaukset (constraints)</h2>
-<p>Selkeät rajat sille, mitä botti ei saa tehdä. Esimerkiksi: "Älä koskaan pyydä käyttäjän maksutietoja" tai "Jos asia ei kuulu sinulle, ohjaa ihmiselle." Rajaukset suojaavat käyttäjää.</p>
-<h2>Tietokanta (knowledge base)</h2>
-<p>Tiedostot tai dokumentit, jotka botti saa käyttöönsä. Tietokannan avulla botti tuntee esimerkiksi yrityksen ohjeet, tuotekuvaukset tai usein kysytyt kysymykset.</p>
-<h2>Persoona</h2>
-<p>Botin "luonne" — miten se puhuu, mitä sävyjä kielessä käyttää ja miten se suhtautuu käyttäjään. Persoona tekee botista inhimillisemmän ja helpommin lähestyttävän.</p>
-<h2>Testaus (testing)</h2>
-<p>Botin kokeilemista erilaisilla kysymyksillä ja tilanteilla. Hyvä testaus paljastaa, missä botti epäonnistuu tai vastaa väärin. Testaus on olennainen osa botin kehittämistä.</p>
-<h2>Iteraatio (iteration)</h2>
-<p>Botin parantamista testauksen perusteella. Jokainen testikierros paljastaa parannuskohteita, ja botti kehittyy kierrokselta kierrokselle. Hyvä botti ei synny kerralla vaan iteroinnin kautta.</p>
-<hr /></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Oma botti I</title>
-<defs><pattern id="l14g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g1)"/>
-<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
-<text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">02 · KÄYTTÖ · OPPITUNTI 14</text>
-<text x="74" y="244" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text>
-<text x="74" y="300" font-size="25" fill="#5A6478">Suunnittelu, rooli, persoona ja järjestelmäprompti</text>
-<g transform="translate(700,196)">
-<rect x="0" y="0" width="140" height="120" rx="22" fill="#F4EFFC" stroke="#863FC4" stroke-width="3"/>
-<line x1="70" y1="0" x2="70" y2="-24" stroke="#863FC4" stroke-width="3" stroke-linecap="round"/><circle cx="70" cy="-30" r="8" fill="#863FC4"/>
-<circle cx="46" cy="48" r="12" fill="#863FC4"/><circle cx="94" cy="48" r="12" fill="#863FC4"/>
-<path d="M44 82 q26 20 52 0" fill="none" stroke="#863FC4" stroke-width="4" stroke-linecap="round"/>
-<text x="70" y="150" text-anchor="middle" font-size="15" font-weight="600" fill="#6A309D">oma botti</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
-</svg></div>
+<h2>Tehtävä 5/5 — tunnista vielä avoin päätös</h2>
+<div class="task-widget" data-ti="4"></div></div><div id="panel-lesson-14-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-sanasto" data-tab="sanasto" hidden><h1>Sanasto — Oma botti I</h1>
+<table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apuri-botti</strong></td>
+<td>Rajattuun käyttäjän tehtävään määritelty tekoälyavustin.</td>
+</tr>
+<tr>
+<td><strong>Kohderyhmä</strong></td>
+<td>Käyttäjäryhmä, jonka tilanne, lähtötaso ja tarve ohjaavat suunnittelua.</td>
+</tr>
+<tr>
+<td><strong>Käyttötapaus</strong></td>
+<td>Konkreettinen tilanne, jossa käyttäjä yrittää saada tietyn asian tehdyksi.</td>
+</tr>
+<tr>
+<td><strong>Havaittava onnistuminen</strong></td>
+<td>Tulos tai toiminta, josta voidaan tarkistaa, että botti auttoi tehtävässä.</td>
+</tr>
+<tr>
+<td><strong>Työnkulku</strong></td>
+<td>Vaiheet, joiden kautta botti ohjaa käyttäjää lähtötilanteesta lopputulokseen.</td>
+</tr>
+<tr>
+<td><strong>Rooli</strong></td>
+<td>Botin tehtävään liittyvä näkökulma ja vastuu, ei pelkkä kuvitteellinen persoona.</td>
+</tr>
+<tr>
+<td><strong>Äänensävy</strong></td>
+<td>Tapa, jolla botti viestii kohderyhmälle. Sävy ei korvaa tehtävää, tietopohjaa tai rajoja.</td>
+</tr>
+<tr>
+<td><strong>Raja</strong></td>
+<td>Ehto, jossa botti kieltäytyy, pyytää lisätietoa tai siirtää vastuun ihmiselle.</td>
+</tr>
+<tr>
+<td><strong>Määrittelydokumentti</strong></td>
+<td>Ennen toteutusta laadittu kuvaus käyttäjästä, tehtävästä, onnistumisesta, työnkulusta ja rajoista.</td>
+</tr>
+<tr>
+<td><strong>Järjestelmäprompti</strong></td>
+<td>Toteutusvaiheessa kirjoitettava pysyvä ohje, joka muuntaa määrittelyn botin toimintasäännöiksi.</td>
+</tr>
+</tbody>
+</table></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Oma botti I</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 14</text><text x="74" y="230" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text><text x="74" y="288" font-size="27" fill="#5A6478">Käyttäjä, tehtävä, onnistuminen ja rajat</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Tällä tunnilla suunnitellaan. Botti rakennetaan vasta tunnilla 17.</text><text x="104" y="407" font-size="17" fill="#3A4253">Määrittely kertoo, mitä myöhemmän toteutuksen pitää saada aikaan.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/13: Oma botti ei ole nimetty ChatGPT</title>
-<defs><pattern id="l14g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g2)"/>
-<text x="74" y="108" font-size="40" font-weight="800" fill="#1B2336">Oma botti ei ole nimetty ChatGPT</text>
-<rect x="74" y="146" width="812" height="80" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<text x="100" y="184" font-size="21" fill="#6A309D">Moni kuvittelee, että oma botti on ChatGPT, jolle on annettu nimi.</text>
-<text x="100" y="212" font-size="21" fill="#6A309D">Hyvin suunniteltu botti on paljon enemmän.</text>
-<text x="74" y="288" font-size="19" fill="#5A6478">Hyvällä botilla on:</text>
-<g transform="translate(74,318)">
-<rect x="0" y="0" width="252" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="40" cy="42" r="17" fill="#F4EFFC"/><path d="M33 42 l5 5 l9 -10" fill="none" stroke="#863FC4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="68" y="48" font-size="20" font-weight="700" fill="#1B2336">Selkeä tarkoitus</text>
-<text x="24" y="92" font-size="16" fill="#5A6478">Tiedät, miksi botti on.</text></g>
-<g transform="translate(354,318)">
-<rect x="0" y="0" width="252" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="40" cy="42" r="17" fill="#F4EFFC"/><path d="M33 42 l5 5 l9 -10" fill="none" stroke="#863FC4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="68" y="48" font-size="20" font-weight="700" fill="#1B2336">Rajattu osaaminen</text>
-<text x="24" y="92" font-size="16" fill="#5A6478">Se hoitaa yhden tehtävän.</text></g>
-<g transform="translate(634,318)">
-<rect x="0" y="0" width="252" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="40" cy="42" r="17" fill="#F4EFFC"/><path d="M33 42 l5 5 l9 -10" fill="none" stroke="#863FC4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="68" y="48" font-size="18" font-weight="700" fill="#1B2336">Johdonmukainen tapa</text>
-<text x="24" y="92" font-size="15" fill="#5A6478">Vastaa aina samaan tyyliin.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/8: Aloita käyttäjän tilanteesta</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Aloita käyttäjän tilanteesta</text><text x="74" y="132" font-size="19" fill="#5A6478">”Kaikille kaikkea” ei ole käyttötapaus.</text><rect x="74" y="174" width="812" height="216" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><text x="104" y="222" font-size="18" font-weight="800" fill="#6A309D">KIRJOITA YHDELLÄ VIRKKEELLÄ</text><text x="104" y="280" font-size="22" fill="#1B2336">[Käyttäjä] tarvitsee apua [tehtävässä],</text><text x="104" y="322" font-size="22" fill="#1B2336">jotta hän voi [saavutettava lopputulos].</text><rect x="74" y="422" width="812" height="60" rx="12" fill="#FFF7E2"/><text x="104" y="459" font-size="18" font-weight="700" fill="#8A6A00">Nimi, persoona tai alusta ei korvaa todellista käyttäjän tarvetta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">2 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/13: Suunnitteluprosessi</title>
-<defs><pattern id="l14g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g3)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Suunnitteluprosessi</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Jokainen botti syntyy saman ketjun kautta — tarpeesta testaukseen.</text>
-<g font-family="ui-monospace,monospace">
-<g transform="translate(74,174)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#6A309D">1 · Tarve</text></g>
-<path d="M270 203 H332" stroke="#C2CAD9" stroke-width="2.5"/><path d="M340 203 L328 197 L328 209 Z" fill="#C2CAD9"/>
-<g transform="translate(344,174)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">2 · Tarkoitus</text></g>
-<path d="M540 203 H602" stroke="#C2CAD9" stroke-width="2.5"/><path d="M610 203 L598 197 L598 209 Z" fill="#C2CAD9"/>
-<g transform="translate(614,174)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">3 · Rooli</text></g>
-<path d="M709 232 V290" stroke="#C2CAD9" stroke-width="2.5"/><path d="M709 298 L703 286 L715 286 Z" fill="#C2CAD9"/>
-<g transform="translate(614,296)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">4 · Ohjeet</text></g>
-<path d="M608 325 H546" stroke="#C2CAD9" stroke-width="2.5"/><path d="M538 325 L550 319 L550 331 Z" fill="#C2CAD9"/>
-<g transform="translate(344,296)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">5 · Rajaukset</text></g>
-<path d="M338 325 H276" stroke="#C2CAD9" stroke-width="2.5"/><path d="M268 325 L280 319 L280 331 Z" fill="#C2CAD9"/>
-<g transform="translate(74,296)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">6 · Esimerkit</text></g>
-<path d="M169 354 V412" stroke="#C2CAD9" stroke-width="2.5"/><path d="M169 420 L163 408 L175 408 Z" fill="#C2CAD9"/>
-<g transform="translate(74,418)"><rect x="0" y="0" width="190" height="58" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/><text x="95" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#247A52">7 · Testaus</text></g>
-</g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/8: Tee onnistumisesta havaittava</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Tee onnistumisesta havaittava</text><rect x="74" y="156" width="380" height="230" rx="18" fill="#FFF0EC" stroke="#D86A4C" stroke-width="2"/><text x="104" y="202" font-size="20" font-weight="800" fill="#A43B25">LIIAN YLEINEN</text><text x="104" y="260" font-size="21" fill="#3A1408">”Botti auttaa käyttäjää.”</text><text x="104" y="326" font-size="17" fill="#5A6478">Mitä käyttäjä sai aikaan?</text><rect x="506" y="156" width="380" height="230" rx="18" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2"/><text x="536" y="202" font-size="20" font-weight="800" fill="#247A52">HAVAITTAVA</text><text x="536" y="252" font-size="19" fill="#173A28">”Käyttäjä löytää oikean</text><text x="536" y="284" font-size="19" fill="#173A28">harjoitusajan ja seuraavan</text><text x="536" y="316" font-size="19" fill="#173A28">liittymisvaiheen.”</text><text x="74" y="446" font-size="18" font-weight="700" fill="#1B2336">Onnistuminen toimii myöhemmin testin vertailukohtana.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">3 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/13: Kahvilan tilausopas-botti</title>
-<defs><pattern id="l14g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g4)"/>
-<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">ESIMERKKI</text>
-<text x="74" y="124" font-size="38" font-weight="800" fill="#1B2336">Kahvilan tilausopas-botti</text>
-<g transform="translate(636,98)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 H30 V26 a8 8 0 0 1 -8 8 H12 a8 8 0 0 1 -8 -8 Z"/><path d="M30 15 H37 a5 5 0 0 1 0 12 H30"/><path d="M10 4 V8 M18 2 V8 M26 4 V8"/></g>
-<rect x="74" y="180" width="398" height="118" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="98" y="212" font-size="18" font-weight="700" fill="#863FC4">Tarve</text>
-<text x="98" y="240" font-size="16" fill="#3A4253">Kahvila saa päivittäin samoja</text>
-<text x="98" y="262" font-size="16" fill="#3A4253">rutiinikysymyksiä, jotka vievät</text>
-<text x="98" y="284" font-size="16" fill="#3A4253">henkilökunnan aikaa.</text>
-<rect x="488" y="180" width="398" height="118" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
-<text x="512" y="212" font-size="18" font-weight="700" fill="#6A309D">Tarkoitus</text>
-<text x="512" y="240" font-size="16" fill="#1B2336">Vastaa kymmeneen yleisimpään</text>
-<text x="512" y="262" font-size="16" fill="#1B2336">kysymykseen ja ohjaa erikois-</text>
-<text x="512" y="284" font-size="16" fill="#1B2336">tapaukset henkilökunnalle.</text>
-<rect x="74" y="316" width="812" height="148" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="98" y="348" font-size="18" font-weight="700" fill="#5A6478">Rooli ja ohjeet</text>
-<circle cx="106" cy="380" r="5" fill="#5A6478"/><text x="124" y="386" font-size="16" fill="#3A4253">Ystävällinen asiakaspalvelija, joka tuntee tuotteet ja aukioloajat.</text>
-<circle cx="106" cy="410" r="5" fill="#5A6478"/><text x="124" y="416" font-size="16" fill="#3A4253">Tervehtii, vastaa selkeästi ja tarjoaa lopuksi lisäapua.</text>
-<circle cx="106" cy="440" r="5" fill="#C79100"/><text x="124" y="446" font-size="16" fill="#3A4253">Rajaus: ei pyydä maksutietoja eikä vahvista pöytävarauksia itse.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/8: Kuvaa käyttäjän eteneminen</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Kuvaa käyttäjän eteneminen</text><text x="74" y="132" font-size="19" fill="#5A6478">Työnkulku kertoo keskustelun logiikan, ei käyttöliittymän painikkeita.</text><g font-size="17" text-anchor="middle"><rect x="74" y="206" width="150" height="70" rx="14" fill="#FFFFFF" stroke="#D8DEEC"/><text x="149" y="248" fill="#1B2336">1 · tavoite</text><path d="M238 241 H276" stroke="#9AA6BD" stroke-width="3"/><path d="M276 241 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="290" y="206" width="150" height="70" rx="14" fill="#FFFFFF" stroke="#D8DEEC"/><text x="365" y="248" fill="#1B2336">2 · lähtötilanne</text><path d="M454 241 H492" stroke="#9AA6BD" stroke-width="3"/><path d="M492 241 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="506" y="206" width="150" height="70" rx="14" fill="#FFFFFF" stroke="#D8DEEC"/><text x="581" y="248" fill="#1B2336">3 · ohjaus</text><path d="M670 241 H708" stroke="#9AA6BD" stroke-width="3"/><path d="M708 241 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="722" y="206" width="164" height="70" rx="14" fill="#F4EFFC" stroke="#863FC4"/><text x="804" y="248" fill="#6A309D">4 · seuraava askel</text></g><rect x="154" y="344" width="652" height="72" rx="12" fill="#FFFFFF" stroke="#D8DEEC"/><text x="480" y="374" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2336">Hyvä työnkulku sallii tarkentavan kysymyksen.</text><text x="480" y="401" text-anchor="middle" font-size="17" fill="#5A6478">Se ei pakota käyttäjää yhteen jäykkään polkuun.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">4 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/13: Kolme rakennuspalikkaa</title>
-<defs><pattern id="l14g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g5)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme rakennuspalikkaa</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Nämä kolme erottavat hyödyllisen botin pelkästä kokeilusta.</text>
-<g transform="translate(74,168)">
-<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,26)" fill="none" stroke="#863FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="14"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="1.6" fill="#863FC4"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">Tarkoitus</text>
-<text x="24" y="96" font-size="16" fill="#3A4253">Selkeä ja konkreettinen</text>
-<text x="24" y="120" font-size="16" fill="#3A4253">ja mitattava päämäärä.</text>
-<text x="24" y="172" font-size="15" font-weight="700" fill="#247A52">"Olla älykäs" ei riitä.</text>
-<text x="24" y="220" font-size="15" fill="#5A6478">Esim. auttaa opiskelijoita</text>
-<text x="24" y="242" font-size="15" fill="#5A6478">ymmärtämään Pythonia.</text></g>
-<g transform="translate(354,168)">
-<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,24)" fill="none" stroke="#0E9AA7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="8"/><path d="M3 33 a13 11 0 0 1 26 0"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">Rooli</text>
-<text x="24" y="96" font-size="16" fill="#3A4253">Uskottava hahmo, joka tuo</text>
-<text x="24" y="120" font-size="16" fill="#3A4253">persoonan ja osaamisen.</text>
-<text x="24" y="172" font-size="15" font-weight="700" fill="#247A52">Kirjoitetaan osaksi</text>
-<text x="24" y="194" font-size="15" font-weight="700" fill="#247A52">järjestelmäpromptia.</text>
-<text x="24" y="242" font-size="15" fill="#5A6478">Esim. kokenut kielitutori,</text>
-<text x="24" y="264" font-size="15" fill="#5A6478">jolla on 10 v kokemus.</text></g>
-<g transform="translate(634,168)">
-<rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 H28 M4 12 H28 M4 20 H22"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#1B2336">Ohjeet</text>
-<text x="24" y="96" font-size="16" fill="#3A4253">Käytännön säännöt siitä,</text>
-<text x="24" y="120" font-size="16" fill="#3A4253">miten botti tekee työtään.</text>
-<text x="24" y="172" font-size="15" font-weight="700" fill="#247A52">Takaavat johdon-</text>
-<text x="24" y="194" font-size="15" font-weight="700" fill="#247A52">mukaisen toiminnan.</text>
-<text x="24" y="242" font-size="15" fill="#5A6478">Esim. "aloita aina</text>
-<text x="24" y="264" font-size="15" fill="#5A6478">helpoilla esimerkeillä".</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/8: Rooli kertoo tehtävän, sävy tavan</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Rooli kertoo tehtävän, sävy tavan</text><rect x="74" y="166" width="380" height="220" rx="18" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/><text x="104" y="210" font-size="22" font-weight="800" fill="#6A309D">ROOLI</text><text x="104" y="260" font-size="19" fill="#1B2336">Millaista tehtävää botti hoitaa?</text><text x="104" y="306" font-size="17" fill="#5A6478">Esimerkiksi perehdyttäjä, joka</text><text x="104" y="334" font-size="17" fill="#5A6478">käyttää vain hyväksyttyjä ohjeita.</text><rect x="506" y="166" width="380" height="220" rx="18" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="2"/><text x="536" y="210" font-size="22" font-weight="800" fill="#1B2336">ÄÄNENSÄVY</text><text x="536" y="260" font-size="19" fill="#1B2336">Miten botti puhuu käyttäjälle?</text><text x="536" y="306" font-size="17" fill="#5A6478">Selkeä, rauhallinen ja</text><text x="536" y="334" font-size="17" fill="#5A6478">kohderyhmälle sopiva.</text><rect x="74" y="422" width="812" height="58" rx="12" fill="#FFF7E2"/><text x="104" y="458" font-size="18" font-weight="700" fill="#8A6A00">Ystävällinen persoona ei korvaa täsmällistä tehtävää ja vastuuta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">5 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Rajaukset — mitä botti ei tee</title>
-<defs><pattern id="l14g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g6)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Rajaukset — mitä botti ei tee</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Yhtä tärkeää kuin se, mitä botti tekee, on se, mitä se ei koskaan tee.</text>
-<g transform="translate(74,166)">
-<rect x="0" y="0" width="398" height="280" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
-<g transform="translate(24,24)"><circle cx="16" cy="16" r="16" fill="#DFF3E8"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#247A52">Hyvä rajaus</text>
-<text x="24" y="100" font-size="16.5" fill="#3A4253">Selkeä ja perusteltu.</text>
-<rect x="24" y="120" width="350" height="64" rx="10" fill="#FFFFFF" stroke="#CDE9D9" stroke-width="1.5"/>
-<text x="40" y="148" font-size="15.5" fill="#247A52" font-style="italic">"En vastaa lääketieteellisiin</text>
-<text x="40" y="170" font-size="15.5" fill="#247A52" font-style="italic">kysymyksiin, koska en ole lääkäri."</text>
-<text x="24" y="218" font-size="15" fill="#3A4253">Suojaa käyttäjää ja ohjaa</text>
-<text x="24" y="240" font-size="15" fill="#3A4253">asian tarvittaessa ihmiselle.</text></g>
-<g transform="translate(488,166)">
-<rect x="0" y="0" width="398" height="280" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<g transform="translate(24,24)"><circle cx="16" cy="16" r="16" fill="#FBE6D8"/><path d="M16 8 V18 M16 23 V24" stroke="#C26B2E" stroke-width="2.6" stroke-linecap="round"/></g>
-<text x="72" y="50" font-size="22" font-weight="800" fill="#A35A22">Huono rajaus</text>
-<text x="24" y="100" font-size="16.5" fill="#3A4253">Epämääräinen tai puuttuu.</text>
-<rect x="24" y="120" width="350" height="64" rx="10" fill="#FFFFFF" stroke="#E7C3A8" stroke-width="1.5"/>
-<text x="40" y="156" font-size="15.5" fill="#A35A22" font-style="italic">Pelkkä "en tiedä" ei riitä.</text>
-<text x="24" y="218" font-size="15" fill="#3A4253">Ilman rajauksia botti voi antaa</text>
-<text x="24" y="240" font-size="15" fill="#3A4253">vaarallisia tai harhaanjohtavia</text>
-<text x="24" y="262" font-size="15" fill="#3A4253">neuvoja.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/8: Raja kertoo myös jatkotoimen</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Raja kertoo myös jatkotoimen</text><text x="74" y="132" font-size="19" fill="#5A6478">”Toimi vastuullisesti” ei vielä ohjaa poikkeustilannetta.</text><rect x="74" y="172" width="812" height="222" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><g font-size="19" fill="#1B2336"><text x="104" y="222">EHTO</text><text x="260" y="222" fill="#5A6478">Vastausta ei löydy hyväksytystä aineistosta.</text><text x="104" y="286">TOIMINTA</text><text x="260" y="286" fill="#5A6478">Botti kertoo puutteen eikä arvaa.</text><text x="104" y="350">VASTUU</text><text x="260" y="350" fill="#5A6478">Botti ohjaa nimetylle ihmiselle tai lähteelle.</text></g><rect x="74" y="426" width="812" height="56" rx="12" fill="#F0F9F4"/><text x="104" y="461" font-size="18" font-weight="700" fill="#247A52">Hyvä raja on toteutettava ja myöhemmin testattava.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">6 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Järjestelmäprompti — botin sydän</title>
-<defs><pattern id="l14g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g7)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Järjestelmäprompti — botin sydän</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Käyttäjä ei näe sitä, mutta se ohjaa jokaista vastausta.</text>
-<g transform="translate(74,168)">
-<rect x="0" y="0" width="392" height="92" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
-<circle cx="46" cy="46" r="22" fill="#FFFFFF"/><g transform="translate(34,30)" fill="none" stroke="#863FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M2 26 a10 9 0 0 1 20 0"/></g>
-<text x="86" y="42" font-size="22" font-weight="800" fill="#6A309D">1 · Identiteetti</text>
-<text x="86" y="72" font-size="16.5" fill="#1B2336">Kuka botti on?</text></g>
-<g transform="translate(494,168)">
-<rect x="0" y="0" width="392" height="92" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
-<circle cx="46" cy="46" r="22" fill="#FFFFFF"/><g transform="translate(33,33)" fill="none" stroke="#863FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="12"/><circle cx="13" cy="13" r="5"/></g>
-<text x="86" y="42" font-size="22" font-weight="800" fill="#6A309D">2 · Tarkoitus</text>
-<text x="86" y="72" font-size="16.5" fill="#1B2336">Mitä botti tekee?</text></g>
-<g transform="translate(74,278)">
-<rect x="0" y="0" width="392" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="46" cy="46" r="22" fill="#F4EFFC"/><g transform="translate(34,34)" fill="none" stroke="#863FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3 H22 M2 12 H22 M2 21 H16"/></g>
-<text x="86" y="42" font-size="22" font-weight="800" fill="#1B2336">3 · Ohjeet</text>
-<text x="86" y="72" font-size="16.5" fill="#3A4253">Miten botti toimii?</text></g>
-<g transform="translate(494,278)">
-<rect x="0" y="0" width="392" height="92" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<circle cx="46" cy="46" r="22" fill="#FBE6D8"/><g transform="translate(33,32)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 L24 7 V15 a11 13 0 0 1 -11 12 a11 13 0 0 1 -11 -12 V7 Z"/></g>
-<text x="86" y="42" font-size="22" font-weight="800" fill="#A35A22">4 · Rajaukset</text>
-<text x="86" y="72" font-size="16.5" fill="#3A4253">Mitä botti ei tee?</text></g>
-<rect x="74" y="392" width="812" height="68" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="100" y="424" font-size="18" fill="#3A4253">Sama kysymys tuottaa täysin eri käytöksen, kun nämä neljä osaa ovat voimassa.</text>
-<text x="100" y="450" font-size="16" fill="#5A6478">Esim. "Olet kokenut Python-tutori, jolla on 10 vuoden opetuskokemus."</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/8: Haasta suunnitelma, älä ulkoista sitä</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Haasta suunnitelma, älä ulkoista sitä</text><text x="74" y="132" font-size="19" fill="#5A6478">Tekoäly voi auttaa löytämään aukon ennen toteutusta.</text><g font-size="18"><rect x="104" y="178" width="752" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="134" y="215" fill="#1B2336">Onko käyttäjä ja hänen tilanteensa tarpeeksi tarkka?</text><rect x="104" y="250" width="752" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="134" y="287" fill="#1B2336">Voiko onnistumisen havaita?</text><rect x="104" y="322" width="752" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="134" y="359" fill="#1B2336">Puuttuuko työnkulusta tyypillinen vaihe?</text><rect x="104" y="394" width="752" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4"/><text x="134" y="431" fill="#6A309D" font-weight="700">Mikä raja on liian löysä, tiukka tai epäselvä?</text></g><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">7 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Sama kysymys, eri käytös</title>
-<defs><pattern id="l14g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g8)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Sama kysymys, eri käytös</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Järjestelmäprompti ratkaisee, miten botti vastaa.</text>
-<rect x="74" y="162" width="812" height="44" rx="10" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="100" y="190" font-size="18" font-weight="600" fill="#5A6478">Käyttäjä: "Kirjoita esseeni valmiiksi puolestani."</text>
-<g transform="translate(74,224)">
-<rect x="0" y="0" width="398" height="222" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<text x="24" y="40" font-size="14" letter-spacing="1.5" fill="#A35A22" font-family="ui-monospace,monospace">YLEISBOTTI — RAJA PUUTTUU</text>
-<rect x="24" y="58" width="350" height="100" rx="10" fill="#FFFFFF" stroke="#E7C3A8" stroke-width="1.5"/>
-<text x="44" y="92" font-size="17" fill="#3A4253">"Toki! Tässä on valmis</text>
-<text x="44" y="116" font-size="17" fill="#3A4253">essee: …"</text>
-<g transform="translate(24,178)"><circle cx="14" cy="14" r="14" fill="#FBE6D8"/><path d="M14 6 V16 M14 21 V22" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round"/></g>
-<text x="54" y="200" font-size="16" font-weight="700" fill="#A35A22">Tekee käyttäjän työn puolesta.</text></g>
-<g transform="translate(488,224)">
-<rect x="0" y="0" width="398" height="222" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
-<text x="24" y="40" font-size="14" letter-spacing="1.5" fill="#247A52" font-family="ui-monospace,monospace">RAJAUS PÄÄLLÄ</text>
-<rect x="24" y="58" width="350" height="100" rx="10" fill="#FFFFFF" stroke="#CDE9D9" stroke-width="1.5"/>
-<text x="44" y="86" font-size="16.5" fill="#3A4253">"En kirjoita esseetä</text>
-<text x="44" y="110" font-size="16.5" fill="#3A4253">puolestasi — opit tekemällä.</text>
-<text x="44" y="134" font-size="16.5" fill="#3A4253">Aloitetaan rungosta?"</text>
-<g transform="translate(24,178)"><circle cx="14" cy="14" r="14" fill="#DFF3E8"/><path d="M8 14 l4 4 l8 -9" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="54" y="200" font-size="16" font-weight="700" fill="#247A52">Noudattaa rajausta, ohjaa oppimaan.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Esimerkki: Python-tutorin prompti</title>
-<defs><pattern id="l14g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g9)"/>
-<text x="74" y="92" font-size="36" font-weight="800" fill="#1B2336">Esimerkki: Python-tutorin prompti</text>
-<text x="74" y="124" font-size="17" fill="#5A6478">Ei vain "Python-tutori" — vaan yksityiskohtainen ohjeistus.</text>
-<rect x="74" y="148" width="812" height="312" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<rect x="74" y="148" width="6" height="312" rx="3" fill="#863FC4"/>
-<text x="104" y="186" font-size="18" fill="#3A4253">Olet kokenut Python-ohjelmointitutori. Sinulla on 10 vuoden</text>
-<text x="104" y="210" font-size="18" fill="#3A4253">kokemus aloittelijoiden opettamisesta.</text>
-<text x="104" y="248" font-size="17" font-weight="700" fill="#0E9AA7">Tarkoituksesi:</text>
-<text x="104" y="272" font-size="17" fill="#3A4253">Autat opiskelijoita ymmärtämään Pythonia esimerkkien avulla.</text>
-<text x="104" y="310" font-size="17" font-weight="700" fill="#863FC4">Ohjeet:</text>
-<text x="120" y="334" font-size="16.5" fill="#3A4253">· Aloita aina peruskäsitteistä. Anna ajettavia esimerkkejä.</text>
-<text x="120" y="358" font-size="16.5" fill="#3A4253">· Kysy, ymmärsikö opiskelija. Auta hänet löytämään virhe itse.</text>
-<text x="104" y="396" font-size="17" font-weight="700" fill="#C79100">Rajaukset:</text>
-<text x="120" y="420" font-size="16.5" fill="#3A4253">· Et kirjoita valmiita projekteja — he oppivat tekemällä.</text>
-<text x="120" y="444" font-size="16.5" fill="#3A4253">· Et vastaa kysymyksiin, jotka eivät liity Pythoniin.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Esimerkkivuorovaikutukset</title>
-<defs><pattern id="l14g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g10)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Esimerkkivuorovaikutukset</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Kuin näytelmäharjoituksia — ne näyttävät, miten botti käyttäytyy.</text>
-<g transform="translate(74,164)">
-<rect x="0" y="0" width="812" height="128" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<rect x="24" y="22" width="430" height="40" rx="20" fill="#F4EFFC"/>
-<text x="44" y="48" font-size="16.5" fill="#6A309D">Käyttäjä: "Mitä on muuttuja?"</text>
-<rect x="358" y="74" width="430" height="36" rx="18" fill="#F0F9F4"/>
-<text x="378" y="98" font-size="16" fill="#247A52">Botti: "Ajattele muuttujaa kuin laatikkoa…"</text></g>
-<g transform="translate(74,312)">
-<rect x="0" y="0" width="812" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<rect x="24" y="22" width="500" height="40" rx="20" fill="#F4EFFC"/>
-<text x="44" y="48" font-size="16.5" fill="#6A309D">Käyttäjä: "Laskuni ei ole saapunut. Mikä on vialla?"</text>
-<rect x="248" y="74" width="540" height="56" rx="16" fill="#F0F9F4"/>
-<text x="268" y="100" font-size="16" fill="#247A52">Botti: "Pahoittelut vaivasta. Tarvitsen ensin kaksi tietoa:</text>
-<text x="268" y="122" font-size="16" fill="#247A52">saatko laskut sähköpostiin ja tiedätkö laskunumeron?"</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Persoonallisuus vai vastuullisuus?</title>
-<defs><pattern id="l14g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g11)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Persoonallisuus vai vastuullisuus?</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Moni sekoittaa nämä — mutta ne eivät ole sama asia.</text>
-<g transform="translate(74,168)">
-<rect x="0" y="0" width="398" height="226" rx="16" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<g transform="translate(28,30)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 L26 7 V15 a12 14 0 0 1 -12 13 a12 14 0 0 1 -12 -13 V7 Z"/><path d="M8 14 l4 4 l8 -9"/></g>
-<text x="80" y="52" font-size="24" font-weight="800" fill="#6A309D">Vastuullisuus</text>
-<text x="28" y="98" font-size="17" fill="#1B2336">Botti tietää, mitä tekee,</text>
-<text x="28" y="122" font-size="17" fill="#1B2336">ja tekee sen hyvin.</text>
-<text x="28" y="166" font-size="16" fill="#5A6478">Tarkat vastaukset, oikea</text>
-<text x="28" y="188" font-size="16" fill="#5A6478">termistö, luotettava tieto.</text>
-<text x="28" y="216" font-size="16" font-weight="700" fill="#6A309D">= pätevyys, ei koriste.</text></g>
-<g transform="translate(488,168)">
-<rect x="0" y="0" width="398" height="226" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(28,28)" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="13"/><path d="M9 13 a2 2 0 0 1 4 0 M16 13 a2 2 0 0 1 4 0 M9 19 q5 5 10 0"/></g>
-<text x="80" y="52" font-size="24" font-weight="800" fill="#0B7A85">Persoonallisuus</text>
-<text x="28" y="98" font-size="17" fill="#3A4253">Tapa, jolla botti välittää</text>
-<text x="28" y="122" font-size="17" fill="#3A4253">vastuullisuutensa.</text>
-<text x="28" y="166" font-size="16" fill="#5A6478">Opiskelijabotti kannustava,</text>
-<text x="28" y="188" font-size="16" fill="#5A6478">asiakaspalvelubotti ripeä.</text>
-<text x="28" y="216" font-size="16" font-weight="700" fill="#0B7A85">= tukee, ei korvaa.</text></g>
-<rect x="74" y="412" width="812" height="48" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="480" y="442" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2336">Vastuullisuus ensin, persoonallisuus toiseksi.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 12/13: Kohti omaa projektia</title>
-<defs><pattern id="l14g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g12)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kohti omaa projektia</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Tehtävissä laadit botin määrittelydokumentin eli rakennuspalikka 2:n.</text>
-<rect x="74" y="166" width="812" height="120" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<g transform="translate(104,196)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 H30 L42 14 V58 H6 Z"/><path d="M30 2 V14 H42"/><path d="M16 30 H34 M16 42 H30"/></g>
-<text x="172" y="220" font-size="24" font-weight="800" fill="#6A309D">Botin määrittelydokumentti</text>
-<text x="172" y="254" font-size="17" fill="#1B2336">Botin perustamisasiakirja: kenelle se on tarkoitettu,</text>
-<text x="172" y="276" font-size="17" fill="#1B2336">mitä se tekee ja mitä se ei tee.</text>
-<text x="74" y="338" font-size="20" font-weight="700" fill="#1B2336">Jatko</text>
-<g transform="translate(74,356)">
-<rect x="0" y="0" width="398" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="24" y="40" font-size="18" font-weight="700" fill="#1B2336">Nyt: määrittely paperille</text>
-<text x="24" y="70" font-size="16" fill="#5A6478">Bottisi alkaa hahmottua.</text></g>
-<g transform="translate(488,356)">
-<rect x="0" y="0" width="398" height="92" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="24" y="40" font-size="18" font-weight="700" fill="#247A52">Seuraavaksi: tietopohja</text>
-<text x="24" y="70" font-size="16" fill="#5A6478">Materiaali, josta botti ammentaa.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 13/13: Yhteenveto</title>
-<defs><pattern id="l14g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l14g13)"/>
-<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
-<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
-<text x="74" y="140" font-size="19" fill="#5A6478">Hyvin suunniteltu botti on tekoälyjärjestelmä — ei nimetty ChatGPT.</text>
-<g font-size="16.5" fill="#3A4253">
-<rect x="74" y="166" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="188" r="6" fill="#863FC4"/><text x="118" y="194">Tarkoitus — miksi botti on olemassa</text>
-<rect x="494" y="166" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="188" r="6" fill="#863FC4"/><text x="538" y="194">Rooli — kuka botti on</text>
-<rect x="74" y="218" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="240" r="6" fill="#0E9AA7"/><text x="118" y="246">Ohjeet — miten botti toimii</text>
-<rect x="494" y="218" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="240" r="6" fill="#C79100"/><text x="538" y="246">Rajaukset — mitä botti ei tee</text>
-<rect x="74" y="270" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="292" r="6" fill="#863FC4"/><text x="118" y="298">Järjestelmäprompti — kokoaa nämä yhteen</text>
-<rect x="494" y="270" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="292" r="6" fill="#2F9E69"/><text x="538" y="298">Esimerkit — testaavat ohjeistuksen</text>
-</g>
-<rect x="74" y="344" width="812" height="116" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<g transform="translate(102,374)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="150" y="384" font-size="22" font-weight="800" fill="#247A52">Vastuullisuus ensin, persoonallisuus toiseksi.</text>
-<text x="150" y="414" font-size="18" fill="#3A4253">Järjestelmäprompti on botin sydän — se ohjaa jokaista vastausta,</text>
-<text x="150" y="438" font-size="18" fill="#3A4253">vaikka käyttäjä ei sitä koskaan näe.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
-</svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/8: Määrittelydokumentti on rakennuspalikka 2</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="98" font-size="38" font-weight="800" fill="#1B2336">Määrittelydokumentti on rakennuspalikka 2</text><g font-size="18"><rect x="74" y="150" width="812" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="183" fill="#1B2336">Käyttäjä ja rajattu tehtävä</text><rect x="74" y="216" width="812" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="249" fill="#1B2336">Havaittava onnistuminen</text><rect x="74" y="282" width="812" height="52" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="315" fill="#1B2336">Työnkulku, rooli ja äänensävy</text><rect x="74" y="348" width="812" height="52" rx="12" fill="#F4EFFC" stroke="#863FC4"/><text x="104" y="381" fill="#6A309D" font-weight="700">Rajat: ehto, toiminta ja vastuun siirtyminen</text></g><text x="74" y="450" font-size="20" font-weight="800" fill="#1B2336">Ei vielä järjestelmäpromptia. Ei vielä botin testiä.</text><text x="74" y="480" font-size="17" fill="#5A6478">Seuraavaksi suunnittelet tietopohjan ja testit.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">8 / 8</text></svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-13/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-15/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-14')">Merkitse suoritetuksi</button></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script src="/assets/practice.js"></script>
-<script>window.CI={"view": "luokka", "lid": "lesson-14", "num": 14, "title": "Oma botti I — suunnittelu, ohjeet ja persoona", "ptasks": [{"type": "match", "title": "Käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Custom GPT", "b": "Tiettyyn käyttöön mukautettu tekoälyavustimen versio, joka toimii kapealla, valitulla osaamisalueella.", "explain": "Kyse ei ole uudelleennimetystä yleisavustimesta, vaan tiettyä käyttöä varten mukautetusta järjestelmästä."}, {"a": "Järjestelmäprompti", "b": "Piilossa oleva pohjateksti, jonka mukaan botti käyttäytyy ja jota käyttäjä ei näe.", "explain": "Se kokoaa botin identiteetin, tehtävän, toimintatavan ja rajat yhteen ja ohjaa jokaista vastausta; sama asia tunnetaan myös nimellä järjestelmäprompti."}, {"a": "Botin tarkoitus", "b": "Konkreettinen kuvaus siitä, ketä botti auttaa ja missä asiassa — ei 'auttaa kaikessa'.", "explain": "Hyvä vastaa kolmeen kysymykseen: kuka botti auttaa, missä asiassa ja mistä onnistumisen huomaa."}, {"a": "Rooli", "b": "Botin asiallinen identiteetti ja osaamisnäkökulma, esimerkiksi kokenut opastaja.", "explain": "Kertoo, millaisena asiantuntijana botti toimii, ja tekee sen vastauksista johdonmukaisia."}, {"a": "Ohjeet", "b": "Käytännön säännöt siitä, miten botti etenee ja vastaa eri tilanteissa.", "explain": "Kertovat, miten botti tekee työnsä — esimerkiksi aloita peruskäsitteestä ja anna esimerkki."}, {"a": "Rajaukset", "b": "Selkeät kohdat sille, mitä botti ei koskaan tee tai mihin aiheeseen se ei vastaa.", "explain": "Turvallisuus- ja tarkkuusmekanismi, joka suojaa käyttäjää ja tekee botista vastuullisen."}, {"a": "Tietokanta (knowledge base)", "b": "Dokumentit ja aineisto, jotka botti saa käyttöönsä vastaamisen tueksi.", "explain": "Erottaa oman botin yleisavustimesta — ilman sitä botti joutuu arvailemaan."}, {"a": "Persoona", "b": "Botin tapa viestiä ja suhtautua käyttäjään — sen sävy ja luonne.", "explain": "Tapa tukea vastuullisuutta, ei korvata pätevyyttä; vastuullisuus tulee ensin."}], "summary": "Hyvä botti rakentuu neljästä palikasta — tarkoitus, rooli, ohjeet ja rajaukset — jotka kootaan järjestelmäpromptiin. Tietokanta antaa sisällön ja persoona sävyn, mutta <strong>vastuullisuus tulee ennen persoonaa.<\/strong>"}, {"type": "quiz", "title": "Mikä botista pitää paikkansa?", "intro": "Jokaisessa kysymyksessä piilee yksi yleinen harhaluulo oman botin rakentamisesta. Valitse vaihtoehto, joka pitää paikkansa, ja lue myös, miksi muut menevät harhaan.", "items": [{"q": "Opiskelija sanoo tehneensä 'oman botin' antamalla yleisavustimelle nimen ja yhden ohjeen. Pitääkö tämä paikkansa?", "options": [{"text": "Hyvin suunniteltu botti on räätälöity järjestelmä, jolla on selkeä tarkoitus, rajattu osaaminen ja johdonmukaiset rajaukset.", "correct": true, "explain": "Nimi ja yksi ohje eivät vielä tee bottia — se rakentuu neljästä palikasta (tarkoitus, rooli, ohjeet, rajaukset), jotka kootaan järjestelmäpromptiin."}, {"text": "Oma botti tarkoittaa juuri tätä: yleisavustin, jolle on annettu nimi ja pari ohjetta.", "correct": false, "explain": "Oma botti on enemmän kuin uudelleennimetty yleisavustin: se on suunniteltu järjestelmä, jolla on rajattu osaamisalue ja turvalliset rajaukset."}, {"text": "Botti on sitä parempi, mitä useampaan eri aiheeseen se osaa vastata.", "correct": false, "explain": "Laaja-alaisuus ei ole hyvyyden merkki — juuri rajattu ja selkeä tarkoitus tekee botista luotettavan omalla alueellaan."}]}, {"q": "Opiskelija haluaa tehdä botistaan ennen kaikkea hauskan ja rennon. Mikä pitää paikkansa?", "options": [{"text": "Rooli kertoo botin osaamisen ja tehtävän, persoonallisuus taas tavan viestiä — vastuullisuus tulee ensin.", "correct": true, "explain": "Rooli ja persoonallisuus eivät ole sama asia: hauskuus voi olla hyvä lisä, mutta se ei korvaa sitä, että botti tietää, mitä tekee."}, {"text": "Roolissa tärkeintä on, että botti on hauska ja rento.", "correct": false, "explain": "Rooli kertoo osaamisen ja tehtävän, ei viestintätyyliä — hauskuus on persoonallisuutta, joka tukee ammattitaitoa mutta ei korvaa sitä."}, {"text": "Persoonallisuus voi korvata asiantuntemuksen, jos botti on tarpeeksi mukava.", "correct": false, "explain": "Persoonallisuus on tapa tukea vastuullisuutta, ei korvata sitä: mukavakin botti on hyödytön, jos se ei tiedä, mitä tekee."}]}, {"q": "Opiskelija haluaa ohittaa järjestelmäpromptin kirjoittamisen, koska se tuntuu pitkältä. Mikä pitää paikkansa?", "options": [{"text": "Järjestelmäprompti on botin suunnitelma; siihen käytetty aika säästää aikaa myöhemmin, koska botti toimii johdonmukaisemmin ja turvallisemmin.", "correct": true, "explain": "Järjestelmäprompti ohjaa jokaista vastausta — sen kirjoittaminen ei ole hukkaan heitettyä aikaa vaan juuri se, mikä tekee botista ennustettavan."}, {"text": "Yksityiskohtainen järjestelmäprompti on turhaa työtä, koska botti toimii ilmankin.", "correct": false, "explain": "Ilman järjestelmäpromptia botti ei toimi johdonmukaisesti: se on botin suunnitelma, ja sen kirjoittamiseen käytetty aika säästää aikaa myöhemmin."}, {"text": "Mitä lyhyempi järjestelmäprompti on, sitä parempi botti.", "correct": false, "explain": "Liian lyhyt järjestelmäprompti ei ohjaa bottia johdonmukaisesti — pituus ei ole tavoite, vaan se, että ohjeistus kattaa tarkoituksen, roolin, ohjeet ja rajaukset."}]}, {"q": "Opiskelija jättää rajaukset kokonaan pois, koska ne tuntuvat kielteisiltä. Mikä pitää paikkansa?", "options": [{"text": "Rajaukset ovat turvallisuusmekanismi: ne suojaavat käyttäjää ja tekevät botista vastuullisen.", "correct": true, "explain": "Rajaukset kertovat, mitä botti ei koskaan tee, ja juuri se estää sitä antamasta vaarallisia tai aiheen ulkopuolisia vastauksia."}, {"text": "Rajaukset vain heikentävät bottia ja tekevät siitä vähemmän hyödyllisen.", "correct": false, "explain": "Rajaukset eivät heikennä bottia vaan tekevät siitä vastuullisen: ne suojaavat käyttäjää vääriltä neuvoilta ja bottia sopimattomilta tehtäviltä."}, {"text": "Paras botti vastaa kaikkeen ilman mitään rajoja.", "correct": false, "explain": "Rajaton botti voi antaa vaarallisia tai aiheen ulkopuolisia vastauksia — hyvä botti tietää myös sen, mitä se ei tee."}]}, {"q": "Opiskelija haluaa ottaa botin käyttöön kirjoittamatta yhtään esimerkkivuorovaikutusta. Mikä pitää paikkansa?", "options": [{"text": "Esimerkkivuorovaikutukset testaavat, toimiiko ohjeistus oikeasti, ja paljastavat korjaustarpeen ennen käyttöä.", "correct": true, "explain": "Esimerkkivuorovaikutukset ovat botin laadunvarmistusta: ne näyttävät, miten botti toimii eri tilanteissa, ja auttavat huomaamaan, tarvitseeko järjestelmäpromptia korjata."}, {"text": "Esimerkkivuorovaikutukset ovat pelkkää näyttelyä, josta ei ole hyötyä.", "correct": false, "explain": "Esimerkkivuorovaikutukset eivät ole näytelmää vaan laadunvarmistusta — ne paljastavat, toimiiko ohjeistus oikeasti, ennen kuin botti otetaan käyttöön."}, {"text": "Esimerkkejä tarvitaan vain, jos botti on tarkoitettu myyntiin.", "correct": false, "explain": "Esimerkkivuorovaikutukset ovat laadunvarmistusta jokaiselle botille, ei vain myytäville — ne varmistavat, että ohjeistus toimii ennen käyttöä."}]}], "summary": "Oma botti on suunniteltu järjestelmä, ei nimetty yleisavustin: rooli ei ole sama kuin persoonallisuus, rajaukset suojaavat, järjestelmäprompti ohjaa ja esimerkkivuorovaikutukset varmistavat, että ohjeistus toimii."}, {"type": "order", "title": "Näin botti suunnitellaan vaihe vaiheelta", "intro": "Hyvän botin suunnittelu etenee tietyssä järjestyksessä, jossa jokainen vaihe nojaa edelliseen. Napauta vaiheet oikeaan järjestykseen.", "steps": ["Tunnista tarve: mikä toistuva kysymys tai ongelma botin pitäisi ratkaista.", "Määritä tarkoitus: kuka bottia käyttää ja mihin konkreettiseen asiaan se auttaa.", "Kirjoita rooli: millaisena asiantuntijana botti toimii.", "Laadi ohjeet: miten botti etenee ja vastaa eri tilanteissa.", "Aseta rajaukset: mitä botti ei koskaan tee.", "Kirjoita esimerkkivuorovaikutukset: näytä, miten botti käyttäytyy normaalissa, vaikeassa ja epäselvässä tilanteessa.", "Testaa ja tarkista, toimiiko ohjeistus, ja korjaa sitä tarvittaessa."], "missHint": "Ei vielä — mieti, mikä pitää määritellä ensin: et voi kirjoittaa botille sääntöjä tai testata sitä, ennen kuin tiedät, kenelle ja mihin se on tarkoitettu.", "summary": "Suunnittelu etenee tarpeesta tarkoitukseen, rooliin, ohjeisiin ja rajauksiin ja vasta sitten esimerkkeihin ja testaukseen. Järjestys ei ole sattumaa: jokainen vaihe nojaa edelliseen."}, {"type": "classify", "title": "Mikä osa järjestelmäpromptia?", "intro": "Jokainen katkelma on osa jonkin botin järjestelmäpromptia. Tunnista, onko kyse tarkoituksesta (ketä botti auttaa ja missä asiassa), roolista (kuka botti on), ohjeesta (miten botti toimii) vai rajauksesta (mitä botti ei tee).", "categories": ["Tarkoitus", "Rooli", "Ohje", "Rajaus"], "items": [{"text": "Autat parturi-kampaamon asiakkaita varaamaan ajan ja löytämään itselleen sopivan palvelun.", "answer": 0, "explain": "Kertoo, ketä botti auttaa (asiakkaat) ja missä asiassa (ajanvaraus ja palvelut) — se on tarkoitus. Se ei kuvaa, kuka botti on, joten kyse ei ole roolista."}, {"text": "Olet kokenut museo-opas, joka tuntee näyttelyiden taustat ja osaa selittää ne selkeästi.", "answer": 1, "explain": "Kuvaa botin asiallisen identiteetin ja osaamisen — se on rooli. Se ei kerro, mitä konkreettista botti auttaa käyttäjää saavuttamaan, joten kyse ei ole tarkoituksesta."}, {"text": "Aloita aina kysymällä, mitä asiakas etsii, ennen kuin ehdotat tuotetta.", "answer": 2, "explain": "Kertoo, miten botin pitää toimia vastaustilanteessa — se on ohje. Kyse on tekemisestä, ei kiellosta, joten se ei ole rajaus."}, {"text": "Älä koskaan pyydä tai tallenna asiakkaan maksukortin tietoja.", "answer": 3, "explain": "Kertoo, mitä botti ei koskaan tee — se on rajaus. Kyse on kiellosta, ei toimintaohjeesta."}, {"text": "Tehtäväsi on auttaa uutta varastotyöntekijää löytämään tavarat oikeilta hyllypaikoilta.", "answer": 0, "explain": "Kertoo tehtävän ja kohderyhmän (uusi varastotyöntekijä) — se on tarkoitus. Se ei kuvaa botin identiteettiä, joten kyse ei ole roolista."}, {"text": "Anna ohjeet aina yksi vaihe kerrallaan ja varmista, että käyttäjä ehtii mukaan.", "answer": 2, "explain": "Kertoo toimintatavan vastaustilanteessa — se on ohje. Kyse on tekemisestä, ei kiellosta, joten se ei ole rajaus."}, {"text": "Olet ystävällinen puutarhamyymälän neuvoja, jolla on vahva kasvien hoidon tuntemus.", "answer": 1, "explain": "Kuvaa botin asiallisen identiteetin ja osaamisen — se on rooli. Sävy ('ystävällinen') on osa persoonaa, mutta ydin on asiantuntijuus, ei tehtävä, joten kyse ei ole tarkoituksesta."}, {"text": "Et anna terveys- tai lääkeneuvoja, vaan ohjaat käyttäjän aina terveydenhuoltoon.", "answer": 3, "explain": "Kertoo, mihin aiheeseen botti ei vastaa — se on rajaus. Vaikka lauseessa on sana 'ohjaat', ydin on kieltäytyä vastaamasta tietystä aiheesta."}], "summary": "Neljä rakennuspalikkaa erottuvat siitä, mihin kysymykseen ne vastaavat: tarkoitus kertoo, ketä ja mihin, rooli kertoo, kuka botti on, ohje kertoo, miten botti toimii, ja rajaus kertoo, mitä botti ei tee. Kaikki neljä kootaan järjestelmäpromptiin."}, {"type": "reflect", "title": "Kuvaile oma botti-ideasi", "intro": "Kirjoita oma botti-ideasi omin sanoin. Kun olet valmis, avaa asiantuntijan näkökulma ja rastita muistilistasta ne kohdat, jotka tekstistäsi löytyvät.", "prompt": "Valitse itsellesi tuttu aihe — arjesta tai harrastuksesta, opiskelusta tai työelämästä — ja kuvaile omin sanoin, millaisen botin tekisit. Kerro erityisesti: mikä olisi bottisi <strong>tarkoitus<\/strong> (kuka sitä käyttää ja mihin konkreettiseen asiaan se auttaa) ja yksi tärkeä <strong>rajaus<\/strong> (mitä botti ei saa tehdä ja miksi).", "min_chars": 120, "expert": "Hyvä tarkoitus vastaa kolmeen kysymykseen: kuka bottia käyttää, mihin konkreettiseen asiaan se auttaa ja mistä huomaa, että se onnistui. 'Auttaa ihmisiä' tai 'olla hyödyllinen' on liian yleinen — se ei ohjaa botin toimintaa. Hyvä botti on ennen kaikkea huolellinen: se tietää tehtävänsä ja tekee sen luotettavasti, ja persoonallisuus eli sävy on tapa tukea tätä, ei korvata sitä. Rajaukset eivät heikennä bottia vaan tekevät siitä vastuullisen: ne kertovat, mitä botti ei tee, ja suojaavat käyttäjää esimerkiksi väärältä tiedolta tai arkaluontoisten tietojen käsittelyltä. Kun tarkoitus on konkreettinen ja rajaukset harkitut, botti on paljon enemmän kuin nimetty yleisavustin.", "checklist": ["Kerroin, kuka bottia käyttää.", "Kerroin, mihin konkreettiseen tehtävään botti auttaa.", "Kuvasin, mistä huomaa, että botti onnistui tehtävässään.", "Nimesin ainakin yhden rajauksen ja perustelin, miksi se suojaa käyttäjää.", "Pidin tarkoituksen konkreettisena enkä kirjoittanut vain 'auttaa kaikessa'."]}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "luokka", "lid": "lesson-14", "num": 14, "title": "Oma botti I — käyttäjä, tehtävä ja rajat", "ptasks": [{"type": "match", "title": "Mitä ollaan päättämässä?", "intro": "Yhdistä määrittelyn osa sitä kuvaavaan kysymykseen.", "pairs": [{"a": "Käyttäjä", "b": "Kuka tarvitsee apua ja mikä on hänen lähtötilanteensa?", "explain": "Kohderyhmä rajataan todelliseen käyttäjään, ei kaikkiin ihmisiin."}, {"a": "Tehtävä", "b": "Mitä käyttäjä yrittää saada aikaan?", "explain": "Botti rakennetaan auttamaan yhdessä tunnistettavassa tehtävässä."}, {"a": "Onnistuminen", "b": "Mistä voidaan havaita, että käyttäjä pääsi hyödylliseen lopputulokseen?", "explain": "Onnistuminen kuvataan näkyvänä tuloksena, ei vain hyvänä tunteena."}, {"a": "Työnkulku", "b": "Missä järjestyksessä käyttäjää ohjataan alusta lopputulokseen?", "explain": "Vaiheet tekevät toiminnasta ennakoitavaa."}, {"a": "Raja", "b": "Milloin botin pitää pysähtyä, kieltäytyä tai ohjata ihminen muualle?", "explain": "Raja kertoo myös, kuka kantaa vastuun poikkeustilanteessa."}], "summary": "Määrittely kuvaa käyttäjän tarpeen ja tulevan toteutuksen vaatimukset."}, {"type": "quiz", "title": "Mikä on riittävän tarkka määrittely?", "intro": "Valitse määrittely, jonka perusteella toteutusta voisi myöhemmin arvioida.", "items": [{"q": "Mikä tarkoitus on parhaiten rajattu?", "options": [{"text": "Botti auttaa kerhon uutta jäsentä löytämään hyväksytyistä ohjeista harjoitusajan ja liittymisen seuraavan vaiheen.", "correct": true, "explain": "Käyttäjä, aineisto, tehtävä ja hyödyllinen lopputulos ovat havaittavissa."}, {"text": "Botti auttaa kaikessa harrastukseen liittyvässä.", "correct": false, "explain": "Tehtävä ja onnistuminen jäävät liian avoimiksi."}, {"text": "Botti on ystävällinen ja moderni.", "correct": false, "explain": "Sävy ei vielä kerro, mitä käyttäjä saa aikaan."}]}, {"q": "Mikä raja on käyttökelpoisin?", "options": [{"text": "Jos vastausta ei löydy hyväksytystä aineistosta, botti kertoo puutteen eikä arvaa sekä ohjaa nimetylle yhteyshenkilölle.", "correct": true, "explain": "Raja kertoo ehdon, toiminnan ja vastuun siirtymisen."}, {"text": "Botti ei koskaan tee virheitä.", "correct": false, "explain": "Tämä ei ole toteutettava toimintasääntö."}, {"text": "Botti toimii vastuullisesti.", "correct": false, "explain": "Yleinen arvo pitää muuttaa havaittavaksi toiminnaksi."}]}], "summary": "Hyvä määrittely tekee myöhemmästä toteutuksesta ja arvioinnista mahdollisen."}, {"type": "order", "title": "Tarpeesta määrittelyksi", "intro": "Järjestä suunnittelun vaiheet ennen toteutusta.", "steps": ["Nimeä käyttäjä ja hänen todellinen tilanteensa.", "Rajaa yksi tehtävä, jossa apua tarvitaan.", "Kuvaa havaittava onnistuminen.", "Kirjoita käyttäjän eteneminen vaiheiksi.", "Määritä rajat ja vastuun siirtyminen.", "Tarkista, että määrittelyn perusteella toinen ihminen ymmärtäisi rakennettavan botin."], "missHint": "Aloita käyttäjän tarpeesta. Toteutuksen ohjeet kirjoitetaan vasta määrittelyn jälkeen.", "summary": "Suunnittelu etenee tarpeesta arvioitavaan määrittelyyn."}, {"type": "reflect", "title": "Mitä olet rakentamassa?", "intro": "Muotoile yhden botin perustelu ennen toteutusta.", "prompt": "Kirjoita neljä virkettä: kenelle botti on, missä tehtävässä se auttaa, mistä onnistuminen näkyy ja missä tilanteessa sen pitää pysähtyä.", "placeholder": "Botti on tarkoitettu…", "tips": ["Nimeä todellinen käyttäjä.", "Valitse yksi tehtävä.", "Kuvaa raja toimintana, ei iskulauseena."], "summary": "Kun tarve ja rajat ovat selvät, järjestelmäpromptin kirjoittaminen on myöhemmin määrittelyn toteuttamista."}, {"type": "reflect", "title": "Mitä et vielä tiedä?", "intro": "Hyvä määrittely näyttää myös ratkaisemattoman kohdan.", "prompt": "Nimeä yksi botin toteutukseen vaikuttava asia, jota et vielä tiedä. Kerro, miten selvität sen ennen rakentamista ja mitä päätös voi muuttaa.", "placeholder": "Avoin kysymys…\nSelvitän sen…\nPäätös vaikuttaa…", "tips": ["Älä peitä epävarmuutta yleisellä lauseella.", "Nimeä tiedon lähde.", "Kerro, mihin määrittelyn kohtaan vastaus vaikuttaa."], "summary": "Avoin päätös on hallittavissa, kun se nimetään ja sille sovitaan selvitystapa."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

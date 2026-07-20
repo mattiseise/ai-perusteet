@@ -1,24 +1,16 @@
-# Oppitunti 16: Sanasto
+# Sanasto
 
-| Termi | Määritelmä |
+| Käsite | Selitys |
 | --- | --- |
-| **Kuvageneraattori** | Tekoälyohjelma, joka tekee kuvia tekstin kuvauksen perusteella. Esimerkiksi DALL-E ja Midjourney. |
-| **Prompt** | Ohje, jonka annat tekoälylle. Hyvä prompt on spesifinen ja selkeä. Esimerkiksi: "Robotti istuu kahvilassa juomassa kahvia, valokuvamainen tyyli." |
-| **Iteraatio** | Prosessi, jossa yrität, näet tuloksen, muutat jotain ja yrität uudelleen. Tekoälyn kanssa iteraatio on tärkeää — harvoin ensimmäinen yritys on paras. |
-| **DALL-E** | OpenAI:n aiempi erillinen kuvageneraattori. Nykyään ChatGPT:n kuvanluonti on sisäänrakennettu suoraan multimodaaliseen malliin. |
-| **Midjourney** | Korkealaatuinen kuvageneraattori, joka tunnetaan kauneista ja taiteellisista kuvista. Discord-pohjainen, maksullinen. |
-| **Stable Diffusion** | Avoin lähdekoodi -kuvageneraattori. Ilmainen tai halpa. Hyvä vaihtoehto, jos haluat kontrollia tai halvempaa ratkaisua. |
-| **Musiikkigeneraattori** | Tekoälyohjelma, joka tekee musiikkia tekstin perusteella. Suno ja Udio ovat päätyökalut. |
-| **Suno** | Palvelu, joka tekee kokonaisia biisejä tekstikuvauksesta. Voit määritellä genren ja tunnelman. Ilmainen rajoitetusti, maksullinen laajemmin. |
-| **Udio** | Sunon kilpailija. Myös tekee musiikkia tekstistä. Kehittyy nopeasti. |
-| **Videogeneraattori** | Tekoälyohjelma, joka tekee lyhyitä videoita tekstin perusteella. Runway ja Pika ovat päätyökalut. Vielä kehitysvaiheessa. |
-| **Runway** | Videotuotanto-alusta, jossa voi tehdä lyhyitä videoita. Mallit päivittyvät tiheään — uusin on Gen-4.5. |
-| **Koodausavustaja** | Tekoälyohjelma, joka auttaa sinua kirjoittamaan koodia. Se voi ehdottaa koodia, täydentää sitä tai kirjoittaa kokonaisia funktioita. |
-| **GitHub Copilot** | Koodausavustaja VS Codeen. Ehdottaa seuraavia koodilinjoja automaattisesti. Hyvä rutiinikoodeille. |
-| **Cursor** | Kehittynyt koodieditori, jossa tekoäly on sisäänrakennettu. Voi muokata isompia koodiosia kerralla. |
-| **Claude Code** | Koodausavustaja komentoriville. Hyödyllinen, kun työskentelet enimmäkseen terminaalissa. |
-| **Tekijänoikeus** | Oikeus omistaa jotain, mitä olet luonut. Generatiivisella tekoälyllä tekijänoikeus on sekavaa — kenen omistama generoitu kuva on? Se riippuu tilanteesta ja laista. |
-| **Made with AI** | Merkintä, jonka pitää lisätä, jos olet käyttänyt tekoälyä jotain luomiseen. Rehellisyys ja vastuullisuus. |
-| **Rehellisyys** | Avoimesti kertominen siitä, miten olet luonut jotain. Jos käytit tekoälyä, sano se. Ihmiset haluavat tietää. |
-
----
+| **Erikoistunut tekoälytyökalu** | Palvelu tai sovellus, joka on suunniteltu tietyn tuotostyypin, kuten kuvan, äänen, videon tai koodin, tuottamiseen tai muokkaamiseen. |
+| **Generointi** | Uuden tuotoksen muodostaminen käyttäjän syötteen, asetusten ja mahdollisen lähdeaineiston perusteella. |
+| **Kuvageneraattori** | Työkalu, joka tuottaa tai muokkaa kuvia tekstin tai kuvalähteen perusteella. |
+| **Äänigeneraattori** | Työkalu, joka tuottaa puhetta, ääniympäristöä tai musiikkia annetun kuvauksen perusteella. |
+| **Videogeneraattori** | Työkalu, joka tuottaa tai muokkaa liikkuvaa kuvaa, usein lyhyinä kohtauksina. |
+| **Koodiavustaja** | Työkalu, joka ehdottaa, selittää, muokkaa tai testaa koodia. Ihminen vastaa muutosten ymmärtämisestä ja hyväksymisestä. |
+| **Kuvakäsikirjoitus** | Kohtauksittainen suunnitelma siitä, mitä videossa näkyy ja tapahtuu. |
+| **Iterointi** | Työskentelytapa, jossa ensimmäistä versiota arvioidaan, yhtä asiaa muutetaan ja vaikutus tarkistetaan uudesta versiosta. |
+| **Laboratorioloki** | Dokumentti, johon tallennetaan käyttötarkoitus, syötteet, tuotokset, havainnot, muutokset ja vastuullisuustarkistus. |
+| **Läpäisyehto** | Havaittava ehto, jonka täyttyminen osoittaa testin onnistuneeksi. |
+| **Harhaanjohtavuus** | Riski siitä, että yleisö ymmärtää synteettisen tai muokatun tuotoksen aidoksi tapahtumaksi, henkilöksi tai todisteeksi. |
+| **Käyttöoikeus** | Lupa käyttää lähdeaineistoa, palvelua tai tuotosta tietyllä tavalla. |

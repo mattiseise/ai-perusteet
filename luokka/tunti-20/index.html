@@ -31,7 +31,7 @@
 <p>Automatisoinnissa on kolme perusvälinettä, ja jokaisella niistä on omat kustannuksensa ja hyötynsä. Kun päätät, mitä rakennat, sinun täytyy ymmärtää, mitä kukin väline käytännössä maksaa ja mitä hyötyä se tuottaa.</p>
 <p>Ensimmäinen väline on <strong>yksinkertainen promptaus</strong>. Käyttäjä kirjoittaa esimerkiksi ChatGPT:lle kysymyksen, ja tekoäly vastaa. Käyttäjä omistaa prosessin alusta loppuun. Kustannus on pieni: lähinnä käyttäjän aika ja mahdollinen ChatGPT-tilaus. Hyötynä on nopeus, helppous ja se, ettei ratkaisua tarvitse ylläpitää. Rajoitus on kuitenkin selvä: käyttäjän täytyy aloittaa prosessi itse. Jos sähköpostiviesteistä tarvitaan yhteenvetoja, jonkun täytyy kopioida viestit manuaalisesti ChatGPT:hen ja odottaa vastausta.</p>
 <p>Toinen väline on <strong>työnkulku</strong> eli workflow. Kun sähköposti saapuu asiakaspalveluun, automaattinen työnkulku tarkistaa, mitä avainsanoja viesti sisältää. Sisältääkö se sanan ”lasku”? Viesti ohjataan henkilölle A. Sisältääkö se sanan ”palautus”? Viesti ohjataan henkilölle B. Eikö se sisällä mitään näistä? Viesti jätetään saapuneisiin. Työnkulku tekee nämä päätökset <strong>joka kerta</strong> ilman ihmisen osallistumista. Kustannus on suurempi kuin promptauksessa: sinun täytyy suunnitella logiikka, testata se ja ylläpitää sitä, kun avainsanat tai säännöt muuttuvat. Hyöty on kuitenkin merkittävä: ihmiset säästävät aikaa päivittäin, ja prosessi toimii johdonmukaisesti. Rajoitus on se, että säännöt ovat jäykkiä. Jos uusi tilanne ei sovi etukäteen kirjoitettuihin sääntöihin, työnkulku voi jumittua.</p>
-<p>Kolmas väline on <strong>agentti</strong>. Asiakaspalvelun agentti voi lukea sähköposteja, analysoida niiden sävyä, etsiä vastaavia aiempia tapauksia tietokannasta ja <strong>päättää</strong>, onko se riittävän varma lähettämään automaattisen vastauksen vai pitäisikö viesti ohjata ihmiselle. Agentti ei siis vain seuraa sääntöjä, vaan tekee tilanteesta oman arvionsa. Jos asiakas on vihainen, agentti voi käyttää tavallista varovaisempaa sävyä. Jos sama asiakastapaus tulee vastaan toisen kerran, agentti voi muistaa aiemman tapauksen ja hyödyntää oppimaansa.</p>
+<p>Kolmas väline on <strong>agentti</strong>. Asiakaspalvelun agentti voi lukea sähköposteja, analysoida niiden sävyä, etsiä vastaavia aiempia tapauksia tietokannasta ja <strong>päättää</strong>, onko se riittävän varma lähettämään automaattisen vastauksen vai pitäisikö viesti ohjata ihmiselle. Agentti ei siis vain seuraa yhtä ennalta määrättyä polkua, vaan arvioi tilanteen sille asetetuissa rajoissa. Jos asiakas on vihainen, agentti voi valita varovaisemman toimintatavan. Jos harness hakee aiemman samankaltaisen tapauksen agentin kontekstiin, kielimalli voi ottaa sen huomioon. Tämä ei tarkoita, että malli olisi oppinut tapauksesta itsestään.</p>
 <p>Agentin kustannus on suuri. Kehittäminen on monimutkaisempaa, koska logiikka on dynaamista. Testaus vie paljon aikaa, koska agentti voi tuottaa odottamattomia tuloksia. Ylläpito on jatkuvaa, koska sinun täytyy valvoa, mitä agentti tekee ja millaisia päätöksiä se tekee. Agentin hyöty on siinä, että se pystyy käsittelemään monimutkaisia ja poikkeavia tapauksia, joita työnkulku ei osaa ratkaista. Rajoitus on korkea hinta: agentista täytyy saada merkittävä hyöty suhteessa siihen, mitä sen rakentaminen ja ylläpito maksavat.</p>
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miksi olisit valmis maksamaan enemmän agentin rakentamisesta? Mitä sellaista etua agentti antaa, jota ei voi saavuttaa pelkällä työnkululla?</p>
 </blockquote>
@@ -39,7 +39,7 @@
 <p>Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä <strong>järjestyksessä</strong>. Ne auttavat sinua valitsemaan oikean välineen.</p>
 <p><strong>Ensimmäinen kysymys: Toistuuko tehtävä?</strong> Jos tehtävä on kertaluontoinen tai sitä tehdään hyvin harvoin, sitä ei yleensä kannata automatisoida. Automatisoinnin rakentamiseen kuluu todennäköisesti enemmän aikaa kuin itse tehtävän tekemiseen. Jos tehtävä taas toistuu joka päivä, joka tunti tai jopa useita kertoja minuutissa, automatisointi alkaa kannattaa. Jopa yksinkertainen työnkulku voi säästää merkittävästi aikaa, kun sitä käytetään tuhansia kertoja vuodessa.</p>
 <p><strong>Toinen kysymys: Onko tehtävä yksinkertainen vai monimutkainen?</strong> Yksinkertaiset tehtävät, joissa on yksi tai kaksi vaihetta ja selkeät säännöt, ratkeavat usein työnkululla. Esimerkiksi ohje ”kun laskua ei ole vastaanotettu, siirrä asia kansioon Odottaa” on niin suoraviivainen, että työnkulku riittää. Monimutkaisissa tehtävissä tilanne on toinen. Jos tehtävä sisältää useita vaiheita, ehdollisia päätöksiä, oppimista ja mukautumista, työnkulun jäykät säännöt eivät välttämättä enää riitä. Tämä on merkki siitä, että <strong>päättely</strong> eli agentin keskeinen ominaisuus voisi tuoda lisäarvoa.</p>
-<p><strong>Kolmas kysymys: Ovatko säännöt staattisia vai muuttuvia?</strong> Jos säännöt ovat staattisia eli sama asia tehdään joka kerta täsmälleen samalla tavalla, työnkulku on yleensä täysin riittävä. Jokainen tapaus käsitellään samalla tavalla, eikä uusia poikkeamia juuri ilmene. Jos säännöt ovat muuttuvia, agentti voi olla parempi valinta. Muuttuvissa tilanteissa jokainen asiakas voi olla erilainen, uusia toimintamalleja syntyy ja tilanteet muuttuvat. Agentti voi hyödyntää aiempia havaintoja ja soveltaa oppimaansa seuraaviin tilanteisiin. Työnkulku ei voi tehdä tätä, vaan se toimii aina ennalta kirjoitettujen sääntöjen mukaan.</p>
+<p><strong>Kolmas kysymys: Onko eteneminen ennalta määrätty vai pitääkö seuraava toiminto valita tilanteen perusteella?</strong> Jos sama asia tehdään joka kerta samalla tavalla, työnkulku on yleensä riittävä. Agentista voi olla hyötyä silloin, kun kielimallin pitää tulkita uusi tilanne, valita käytettävä työkalu, arvioida työkalun tulos ja päättää seuraava toiminto. Myös agentin toimintaa rajaavat säännöt, oikeudet ja hyväksyntäportit. Ero ei siis ole siinä, että työnkululla on sääntöjä ja agentilla ei, vaan siinä, kuka tai mikä valitsee etenemisen rajojen sisällä.</p>
 <p><strong>Neljäs kysymys: Kuka maksaa hinnan?</strong> Jos käyttäjä maksaa pienen summan, kuten tekoälypalvelun tilauksen, kokeileminen on helppoa ja riski on pieni. Jos taas organisaatio maksaa tuhansia tai kymmeniä tuhansia euroja agentin rakentamisesta, päätös on paljon suurempi. Silloin tarvitaan vahvat perusteet ja realistinen arvio siitä, että investointi maksaa itsensä takaisin.</p>
 <p><strong>Viides kysymys: Mitkä ovat epäonnistumisen kustannukset?</strong> Jos agentti tekee virheen eikä mitään vakavaa tapahdu, riski voi olla hyväksyttävä. Esimerkiksi sähköposti voi mennä väärään kansioon, mutta ihminen huomaa sen ja korjaa virheen. Jos epäonnistumisen seuraukset ovat suuret, tilanne muuttuu. Rahaa voidaan menettää, asiakkaita voidaan menettää tai ihminen voi joutua vaaraan. Tällöin agenttia täytyy valvoa hyvin huolellisesti, ja valvonta nostaa ylläpitokustannuksia merkittävästi. Joissain tapauksissa korkeat epäonnistumisen kustannukset tekevät agentin rakentamisesta kannattamatonta.</p>
 <p><strong>Kuudes kysymys: Onko ihmisen valvonta mahdollista?</strong> Jos ihminen voi valvoa agentin päätöksiä ja puuttua toimintaan, kun jokin menee pieleen, riski on hallittavampi. Agentti voi pyytää ihmisen apua vaikeissa tilanteissa, jolloin riskien hallinta on mahdollista. Jos valvonta on mahdotonta, agentin täytyy toimia lähes täydellisesti. Tämä on harvinaisen kallista rakentaa ja ylläpitää.</p>
@@ -189,7 +189,7 @@
 
 <h2>Monimutkaisuus on aina kustannus</h2>
 <p>Tässä on tärkeä ajatus, jonka monet unohtavat: agentti on monimutkainen. Se ei ole vain ”parempi työnkulku”. Se on luonteeltaan erilainen ratkaisu, ei pelkästään suurempi tai tehokkaampi versio työnkulusta.</p>
-<p>Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysaika mitataan usein viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa yleensä tekijä, joka ymmärtää säännöt. Agenttia täytyy testata laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii myös jatkuvaa valvontaa. Jos agentti oppii virheistä, sinun täytyy seurata, mitä se on oppinut ja ovatko opitut asiat oikeanlaisia. Jos agentti alkaa tehdä systemaattisesti virheellisiä johtopäätöksiä, sinun täytyy puuttua sen toimintaan ja muuttaa sen ohjeistusta.</p>
+<p>Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysaika mitataan usein viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa yleensä tekijä, joka ymmärtää säännöt. Agenttia täytyy testata laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii myös jatkuvaa valvontaa. Virheet ja ihmisen palaute tallennetaan, jotta niitä voidaan arvioida. Niiden perusteella ihminen korjaa ohjeita, harnessin sääntöjä tai testejä ja varmistaa muutoksen vaikutuksen uudella testillä. Agentti ei siis opi yksittäisestä virheestä itsestään.</p>
 <p>Kysy siis aina: miksi rakennan agentin? Vastaus perustuu kustannusten ja hyötyjen vertailuun. Jos työnkulku ratkaisee ongelmasi 80 prosentissa tapauksista ja agentti ratkaisee sen 85 prosentissa tapauksista, oletko valmis maksamaan 10 kertaa suuremmat kehitys- ja ylläpitokustannukset viiden prosenttiyksikön parannuksesta? Usein vastaus on ei. Jos työnkulku ratkaisee vain 40 prosenttia tapauksista ja agentti 95 prosenttia tapauksista, hyöty voi olla selvästi kustannuksia suurempi. Silloin agentti voi olla järkevä ratkaisu.</p>
 <h2>Osta vai rakenna — riittääkö valmisagentti?</h2>
 <p>Kun kuusi kysymystä osoittaa, että tehtävä ansaitsee agentin, jäljellä on vielä yksi valinta: rakennatko oman vai käytätkö <strong>valmisagenttia</strong>, jollaisiin tutustuit tunnilla 19? Tämäkin on arkkitehtuuripäätös, ei tuotevalinta — ja se ratkeaa samalla logiikalla kuin muutkin tämän tunnin päätökset.</p>
@@ -205,11 +205,11 @@
 <p><strong>Agentti n8n:ssä:</strong> AI Agent -solmulla on pääsy <strong>työkaluihin</strong>, kuten tietokantaan, verkkohakuun tai tiedostoihin. Agentti päättää itse, mitä työkalua se käyttää. Tämä on monimutkaisempaa mutta joustavampaa.</p>
 <p>Tämän esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja avaat n8n:n, tiedät jo, <strong>mitä olet rakentamassa ja miksi</strong>. Päätös promptauksen, työnkulun ja agentin välillä on <strong>arkkitehtuuripäätös</strong>, ei pelkkä työkalupäätös.</p>
 <h2>Kohti omaa projektia</h2>
-<p>Kun olet valinnut oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko se riittävän monimutkainen ja muuttuvatko säännöt tilanteen mukaan? Jos päätöspuu osoittaa, että yksinkertaisempi ratkaisu riittäisi, harkitse ongelman tarkentamista sellaiseksi, jossa agentin autonomisuus tuottaa aidosti lisäarvoa.</p>
+<p>Kun olet valinnut oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko eteneminen ennalta määrätty vai pitääkö kielimallin valita seuraava toiminto tilanteen perusteella? Jos tavallinen työnkulku riittää, havainto on onnistunut oppimistulos. Rajaa silloin projektiin yksi aito tilannekohtainen päätös tai valitse toinen ongelma.</p>
 <blockquote class="pause"><p><strong>Lopuksi pohdittavaksi:</strong> Mitä kielimallin ympärillä pitää olla, jotta ratkaisua voi perustellusti kutsua agentiksi — ja tarvitaanko sitä tässä ongelmassa?</p>
 </blockquote>
 <h2>Yhteenveto</h2>
-<p>Automatisointi on jatkumo, ei joko–tai-valinta. Älä valitse agenttia automaattisesti. Kysy ensin nämä kuusi kysymystä: <strong>Toistuuko tehtävä?</strong> <strong>Onko tehtävä monimutkainen?</strong> <strong>Muuttuvatko säännöt?</strong> <strong>Kuka maksaa?</strong> <strong>Mitkä ovat epäonnistumisen kustannukset?</strong> <strong>Onko valvonta mahdollista?</strong></p>
+<p>Automatisointi on jatkumo, ei joko–tai-valinta. Älä valitse agenttia automaattisesti. Kysy ensin nämä kuusi kysymystä: <strong>Toistuuko tehtävä?</strong> <strong>Onko tehtävä monimutkainen?</strong> <strong>Pitääkö seuraava toiminto valita tilanteen perusteella?</strong> <strong>Kuka maksaa?</strong> <strong>Mitkä ovat epäonnistumisen kustannukset?</strong> <strong>Onko valvonta mahdollista?</strong></p>
 <p>Päätöspuu ohjaa sinut oikean välineen luo. Yksinkertainen työnkulku ratkaisee usein ongelman riittävän hyvin ja paljon pienemmillä kustannuksilla kuin agentti. Valitse aina yksinkertaisin ratkaisu, joka todella toimii.</p>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
@@ -218,121 +218,84 @@
 <li><a href="https://arxiv.org/abs/2210.03629">Yao ym.: ReAct</a></li>
 <li><a href="https://modelcontextprotocol.io/specification/2025-06-18/server/index">Model Context Protocol: server primitives</a></li>
 </ul>
-<p>Tarkistettu 15.7.2026.</p></div><div id="panel-lesson-20-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-20-tehtavat" data-tab="tehtavat" hidden><h1>Tehtävät</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 1: Täytä päätöstaulukko agentin rakenteesta</h2></div><div class="task-card-body">
-<p>Alla on taulukko, jossa kuvataan kolme erilaista agenttijärjestelmää. Sinun tehtäväsi on täyttää taulukko kuvaamalla kunkin agentin <strong>suunnittelusilmukkaa</strong>, <strong>työkaluja</strong> ja <strong>muistia</strong>.</p>
-<h3>Kolme agenttijärjestelmää</h3>
-<p><strong>Agentti A: Sähköpostivastausten automatisoija</strong><br />
-- Tehtävä: Vastaa sisään tuleviin asiakassähköposteihin automaattisesti<br />
-- Tavoite: "Tunnista asiakkaan ongelma, etsi samankaltaisia tapauksia ja lähetä ratkaisu"</p>
-<p><strong>Agentti B: Varaston valvonta-agentti</strong><br />
-- Tehtävä: Valvoo varaston tilaa ja tekee tilauksia<br />
-- Tavoite: "Seuraa tuotteiden määriä, menekkiä ja viimeisiä käyttöpäiviä. Jos jokin tuote on loppumassa, tee uusi tilaus toimittajalle."</p>
-<p><strong>Agentti C: Tapahtuman aikatauluagentti</strong><br />
-- Tehtävä: Suunnittelee ja optimoi tapahtuman ohjelman aikataulua<br />
-- Tavoite: "Etsi päällekkäisyydet ja ruuhka-ajat, analysoi ne ja siirrä ohjelmanumeroita niin, että aikataulu toimii sujuvasti."</p>
-<h3>Täyttötaulukko</h3>
-<p>Täytä seuraava taulukko kunkin agentin osalta:</p>
+<p>Tarkistettu 15.7.2026.</p></div><div id="panel-lesson-20-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-20-tehtavat" data-tab="tehtavat" hidden><h1>Opiskelutehtävät: Automaatio vai autonomia?</h1>
+<blockquote class="pause"><p>Tällä tunnilla et rakenna vielä mitään. Teet arkkitehtuuripäätöksen: ratkaistaanko tehtävä promptilla, tavallisella työnkululla vai agentilla? Hyvä päätös voi olla myös se, ettei agenttia tarvita.</p>
+</blockquote>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.1 — Valitse yksinkertaisin riittävä ratkaisu — suositeltu</h2></div><div class="task-card-body">
+<p><strong>Tavoite:</strong> Osaat erottaa toisistaan kertaluonteisen promptauksen, ennalta määritellyn työnkulun ja agentin, joka valitsee toimintoja tilanteen perusteella.</p>
+<h3>Vaihe 1 — Arvioi kolme tapausta</h3>
+<p>Täytä taulukko. Älä aloita ratkaisusta, vaan tehtävän tarpeesta.</p>
 <table>
 <thead>
 <tr>
-<th>Agentti</th>
-<th>Suunnittelusilmukan vaiheet</th>
-<th>Tarvittavat työkalut</th>
-<th>Konteksti-ikkuna</th>
-<th>Ulkoinen muisti</th>
-<th>Huomiot</th>
+<th>Tapaus</th>
+<th>Prompti, työnkulku vai agentti?</th>
+<th>Mikä päätös muuttuu tilanteen mukaan?</th>
+<th>Mitä harnessin pitäisi hallita?</th>
+<th>Miksi yksinkertaisempi ratkaisu ei riitä?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>A: Sähköpostivastaukset</strong></td>
-<td>1. Havainnoi: Lue sähköposti 2. Suunnittele: ... 3. Toimi: ... 4. Tarkkaile: ...</td>
-<td>Sähköpostin luku-API, tietokannanhaku-API, sähköpostin lähetys-API</td>
-<td>Asiakkaan aiemmat sähköpostit (viimeiset 5 viestiä)</td>
-<td>Ratkaisutietokanta: tunnetut ongelmat ja ratkaisut</td>
-<td>[Täytä]</td>
+<td>Yhden raportin tiivistäminen kerran</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>B: Varaston valvonta</strong></td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
+<td>Saapuvan lomakkeen tallentaminen aina samaan taulukkoon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>C: Tapahtuman aikataulu</strong></td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
-<td>[Täytä]</td>
+<td>Tukipyynnön tutkiminen, tarvittavan tiedon hakeminen ja epäselvän tapauksen ohjaaminen ihmiselle</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3>Ohjeita</h3>
-<ul>
-<li><strong>Suunnittelusilmukan vaiheet</strong>: Kuvaile, mitä agentti havaitsee, miten se suunnittelee, mitä se tekee ja miten se tarkkailee tuloksia.</li>
-<li><strong>Työkalut</strong>: Listaa konkreettiset API:t tai keinot, joita agentti tarvitsee. (<strong>API</strong> = rajapinta, jonka kautta ohjelmat puhuvat keskenään — esimerkiksi sähköpostin luku- tai lähetysrajapinta.)</li>
-<li><strong>Konteksti-ikkuna</strong>: Mitä lyhytaikaista tietoa agentti tarvitsee ymmärtääkseen tilanteen nyt?</li>
-<li><strong>Ulkoinen muisti</strong>: Mitä pitkäkestoista tietoa agentti tarvitsee myöhempiä suorituksia varten?</li>
-<li><strong>Huomiot</strong>: Jos agentti voi vahingoittaa järjestelmää, mikä on riski? Mitä rajoituksia sille tulisi asettaa?</li>
-</ul>
-<p class="solo-note"><strong>Jos teet tehtävän yksin:</strong> Voit olettaa, että jokainen näistä agenteista on todellinen järjestelmä, jonka toimintaa pääset seuraamaan läheltä — vaikkapa arjessa, opinnoissa tai työssä. Käytä tätä oletusta apuna taulukkoa täyttäessäsi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2: Suunnittele kontrolli agentin rajoittamiseksi</h2></div><div class="task-card-body">
-<p>Agentit ovat tehokkaita, mutta niihin liittyy merkittäviä riskejä. Tämä tehtävä vaatii sinua <strong>suunnittelemaan turvatoimenpiteet</strong> agentin varalle.</p>
-<h3>Tilanne</h3>
-<p>Sinulla on agentti, joka hoitaa asiakastukitikettejä. Agentti voi:<br />
-- Lukea asiakastukitietokantaa<br />
-- Etsiä ratkaisuja knowledge base -tietokannasta<br />
-- Lähettää sähköposteja asiakkaille<br />
-- Merkitä tikettejä "ratkaistuiksi" ja sulkea niitä</p>
-<p>Tavoite kuulostaa hyvältä — automatisoida tuki. Mutta mitä pahaa voisi tapahtua?</p>
-<h3>Ohjeet</h3>
-<p>Kirjoita agenttijärjestelmälle <strong>kontrollisuunnitelma</strong>, joka kuvailee:</p>
+<p>Käytä päätöksessäsi näitä kysymyksiä:</p>
 <ol>
-<li><strong>Riskit</strong> — Mitä voisi mennä pieleen? Anna 3–4 konkreettista vaaratapausta.</li>
-<li><strong>Kunkin riskin mukainen kontrolli</strong> — Miten voisit estää sen? Vaihtoehdot:</li>
-<li>Rajaa agentin työkalut (esim. agentti voi lähettää vain malleja, ei vapaata tekstiä)</li>
-<li>Lisää ihminen silmukkaan (esim. tiketit merkitään ratkaistuiksi vasta, kun ihminen hyväksyy ne)</li>
-<li>Lisää valvontaa (esim. kirjaa kaikki agentin tekemät sähköpostit)</li>
-<li>Testaa agenttia (esim. testaa, että agentti ei lähetä sopimattomia tekstejä)</li>
-<li><strong>Trade-offs</strong> — Mikä on jokaisen kontrollin hinta? Vaikuttaako se automaation nopeuteen? Lisääkö se työtä ihmisille?</li>
+<li>Toistuuko tehtävä?</li>
+<li>Onko eteneminen sama joka kerta?</li>
+<li>Pitääkö järjestelmän tulkita tilannetta ja valita seuraava toiminto?</li>
+<li>Mitä työkaluja ja oikeuksia ratkaisu tarvitsee?</li>
+<li>Mitä virhe maksaisi?</li>
+<li>Missä ihminen voi valvoa tai hyväksyä toiminnan?</li>
 </ol>
-<h3>Esimerkki</h3>
-<table>
-<thead>
-<tr>
-<th>Riski</th>
-<th>Kontrolli</th>
-<th>Hinta</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Agentti lähettää väärän ratkaisun asiakkaalle</td>
-<td>Agentti voi lähettää vain valmiiksi hyväksyttyjä mallivastauksia, ei vapaata tekstiä</td>
-<td>Vähemmän joustavuutta, mutta parempi turvallisuus</td>
-</tr>
-<tr>
-<td>Agentti sulkee tiketin liian aikaisin</td>
-<td>Tiketti merkitään "ehdotettu ratkaisu" -tilaan, ja ihminen hyväksyy sulkemisen</td>
-<td>Lisää ihmisen työtä, mutta estää tärkeiden tikettien sulkemisen</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-<p>Kirjoita omat 3–4 riski–kontrolli-parisi.</p>
-<p class="solo-note"><strong>Jos teet tehtävän yksin:</strong> Voit valita jonkin muun agentin, jota et pelkää, jos haluat. Tärkeintä on ymmärtää, miten kontrolleja suunnitellaan ja mitä ne maksavat.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Hyvän vastauksen tuntomerkit</h2></div><div class="task-card-body">
+<h3>Vaihe 2 — Testaa oma agentti-ideasi</h3>
+<p>Avaa tunnilla 19 kirjoittamasi <strong>Agentti: Ongelma</strong>. Aja se saman päätöspuun läpi. Kirjoita yhden sivun päätösmuistio:</p>
 <ul>
-<li><strong>Tehtävä 1 (päätöstaulukko):</strong> taulukko on täytetty oikein, kuvailut ovat tarkkoja ja teknisesti oikeita.</li>
-<li><strong>Tehtävä 2 (kontrollisuunnitelma):</strong> riskit ovat realistisia, kontrollit konkreettisia ja kompromissien pohdinta syvällistä.</li>
+<li><strong>Tehtävä:</strong> Mitä ollaan ratkaisemassa ja kenelle?</li>
+<li><strong>Valinta:</strong> Prompti, työnkulku vai agentti?</li>
+<li><strong>Muuttuva päätös:</strong> Minkä seuraavan toiminnon kielimalli saa valita tilanteen perusteella?</li>
+<li><strong>Harness:</strong> Miten syöte, työkalut, tila, oikeudet ja loki hallitaan?</li>
+<li><strong>Yksinkertaisempi vaihtoehto:</strong> Miksi se ei riitä — tai miksi se sittenkin riittää?</li>
+<li><strong>Riski ja valvonta:</strong> Mikä voi mennä pieleen ja missä ihminen tarvitaan?</li>
 </ul>
-<p>Molemmat tehtävät opettavat sinulle keskeistä osaamista: agenttien sisäisten mekanismien ymmärtämistä ja kykyä suunnitella turvallisia agenttijärjestelmiä.</p></div></div></div><div id="panel-lesson-20-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-20-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Automaatio vai autonomia?</h1>
+<p>Jos huomaat, että tavallinen työnkulku riittää, älä keksi agentille näennäistä tarvetta. Rajaa projektiasi uudelleen niin, että siinä on yksi todellinen, tilanteen mukaan muuttuva päätös. Voit myös vaihtaa aihetta.</p>
+<h3>Tekoälyvaihe — haasta päätös</h3>
+<pre><code class="language-text">Arvioin tehtävää, johon olen valinnut [promptin / työnkulun / agentin].
+Tässä ovat tehtävä, muuttuva päätös, tarvittavat työkalut, riskit ja
+valvonta: [liitä muistiosi]. Haasta valintani kolmella kysymyksellä.
+Älä ehdota agenttia vain siksi, että tehtävässä käytetään kielimallia.
+Etsi ensin yksinkertaisempi ratkaisu, joka voisi riittää.
+</code></pre>
+<p>Muokkaa päätösmuistiotasi saamiesi kysymysten perusteella. Merkitse loppuun yksi muutos, jonka teit, ja miksi.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 20.2 — Rajatapauksen puolustus — syventävä</h2></div><div class="task-card-body">
+<p>Valitse tehtävä, jonka voisi toteuttaa joko työnkulkuna tai agenttina. Piirrä siitä kaksi ratkaisua:</p>
+<ol>
+<li><strong>Työnkulku:</strong> ennalta määrätyt vaiheet ja ehdot.</li>
+<li><strong>Agentti:</strong> kohta, jossa kielimalli valitsee työkalun tai seuraavan toiminnon saadun havainnon perusteella.</li>
+</ol>
+<p>Vertaa ratkaisuja kustannuksen, testattavuuden, ylläpidon ja riskin kannalta. Päätä lopuksi, kumman toteuttaisit ensimmäisenä. Perustele päätös näytöllä, älä ratkaisun uutuudella.</p>
+<hr />
+<p><strong>Tallennettava tuotos:</strong> perusteltu päätösmuistio ja siihen tehty yksi nimetty korjaus. Tämä muistio toimii porttina agenttiprojektille: vasta hyväksytyn agenttitarpeen jälkeen siirryt muistin, työkalujen ja päättelyn suunnitteluun.</p></div></div></div><div id="panel-lesson-20-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-20-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Automaatio vai autonomia?</h1>
 <p>Tällä välilehdellä pääset harjoittelemaan juuri lukemaasi: milloin tehtävä kannattaa hoitaa promptauksella, milloin työnkululla ja milloin agentti todella kannattaa rakentaa. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät sanaston kertaamisesta kohti soveltamista ja päättyvät tilanteeseen, jossa arvioit itse, mikä ratkaisu on yksinkertaisin riittävä — ja kannattaako valmisagentti vai oma.</p>
 <h2>Tehtävä 1/5 — sanaston kertaus</h2>
 <p>Aloitetaan tunnin käsitteistä, ennen kuin siirrytään soveltamiseen.</p>

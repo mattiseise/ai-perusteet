@@ -5,7 +5,7 @@
 <text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 26</text>
 <text x="74" y="244" font-size="52" font-weight="800" fill="#1B2336">Kädet saveen</text>
 <text x="74" y="302" font-size="25" fill="#5A6478">n8n-agenttipaja alkaa — teoriasta tekemiseen.</text>
-<text x="74" y="338" font-size="18" fill="#9AA6BD" font-family="ui-monospace,monospace">trigger → tekoälysolmu → toiminto</text>
+<text x="74" y="338" font-size="18" fill="#9AA6BD" font-family="ui-monospace,monospace">syöte → agenttipäätös → työkalu → havainto</text>
 <g transform="translate(636,232)">
 <rect x="0" y="0" width="92" height="58" rx="12" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2.5"/>
 <path d="M30 20 a16 16 0 0 1 32 0" fill="none" stroke="#2F9E69" stroke-width="2.5" stroke-linecap="round"/><path d="M46 29 L46 15 L57 22" fill="#2F9E69"/>
@@ -98,7 +98,7 @@
 <defs><pattern id="l26g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g5)"/>
 <text x="74" y="92" font-size="36" font-weight="800" fill="#1B2336">Työnkulku on putki</text>
-<text x="74" y="124" font-size="18" fill="#5A6478">Data virtaa solmusta toiseen ja muuttuu matkalla. Yhdessä syntyy agentti.</text>
+<text x="74" y="124" font-size="18" fill="#5A6478">Data virtaa solmusta toiseen. Pelkkä putki ei vielä ole agentti.</text>
 <line x1="120" y1="248" x2="840" y2="248" stroke="#9AA6BD" stroke-width="2.5" stroke-dasharray="6 6"/>
 <g transform="translate(74,206)">
 <rect x="0" y="0" width="150" height="84" rx="14" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2.5"/>
@@ -269,20 +269,20 @@
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">
 <defs><pattern id="l26g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g10)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme vaikeustasoa</text>
-<text x="74" y="138" font-size="20" fill="#5A6478">Epävarma omasta projektista? Arvioi näiden esimerkkien avulla.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kaksi työnkulkua ja yksi agentti</text>
+<text x="74" y="138" font-size="20" fill="#5A6478">Solmujen määrä ei ratkaise — mallin tekemä tilannekohtainen valinta ratkaisee.</text>
 <rect x="74" y="172" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="116" cy="215" r="22" fill="#F0F9F4"/><text x="116" y="223" text-anchor="middle" font-size="22" font-weight="800" fill="#2F9E69">1</text>
-<text x="160" y="206" font-size="22" font-weight="800" fill="#1B2336">FAQ-botti</text>
+<text x="160" y="206" font-size="22" font-weight="800" fill="#1B2336">AI-avusteinen FAQ-työnkulku</text>
 <text x="160" y="236" font-size="17" fill="#3A4253">Chatviesti → tekoälysolmu (järjestelmäprompti + usein kysytyt kysymykset) → vastaus chattiin.</text>
 <rect x="74" y="272" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="116" cy="315" r="22" fill="#E5F6F7"/><text x="116" y="323" text-anchor="middle" font-size="22" font-weight="800" fill="#008799">2</text>
-<text x="160" y="306" font-size="22" font-weight="800" fill="#1B2336">Sähköpostiyhteenvetoagentti</text>
-<text x="160" y="336" font-size="17" fill="#3A4253">Ajastin klo 8 → hae sähköpostit → kokoa yhteenveto → lähetä Slackiin.</text>
+<text x="160" y="306" font-size="22" font-weight="800" fill="#1B2336">Ajastettu yhteenvetotyönkulku</text>
+<text x="160" y="336" font-size="17" fill="#3A4253">Ajastin → hae viestit → kokoa yhteenveto → lähetä sovittuun kanavaan.</text>
 <rect x="74" y="372" width="812" height="98" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <circle cx="116" cy="421" r="22" fill="#FFFFFF"/><text x="116" y="429" text-anchor="middle" font-size="22" font-weight="800" fill="#C79100">3</text>
-<text x="160" y="408" font-size="22" font-weight="800" fill="#006B7A">Tikettiagentti</text>
-<text x="160" y="436" font-size="17" fill="#1B2336">Luokittele lomakeviesti → luo tiketti → vastaa → ilmoita tiimille.</text>
+<text x="160" y="408" font-size="22" font-weight="800" fill="#006B7A">Rajattu tikettiagentti</text>
+<text x="160" y="436" font-size="17" fill="#1B2336">Malli valitsee: kysy lisätieto, luo tiketti tai eskaloi — harness rajaa työkalut.</text>
 <text x="160" y="460" font-size="15" fill="#5A6478" font-style="italic">Kriittinen viesti ohjataan ihmiselle — human-in-the-loop.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
@@ -292,7 +292,7 @@
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g11)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tunnin tavoite: toimiva minimiversio</text>
-<text x="74" y="138" font-size="18" fill="#5A6478">Kolme solmua, jotka tekevät ydintehtävän. Ei täydellinen — mutta toimii.</text>
+<text x="74" y="138" font-size="18" fill="#5A6478">Yksi rajattu päätös, joka muuttuu tilanteen mukana ja näkyy testissä.</text>
 <g transform="translate(120,210)">
 <rect x="0" y="0" width="196" height="96" rx="16" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2.5"/>
 <g transform="translate(24,24)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="12"/><path d="M13 6 V13 L18 16"/></g>
@@ -303,20 +303,20 @@
 <g transform="translate(356,210)">
 <rect x="0" y="0" width="196" height="96" rx="16" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(24,22)" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="22" height="17" rx="5"/><path d="M14 8 V2"/><circle cx="14" cy="1" r="2" fill="#008799" stroke="none"/><circle cx="10" cy="16" r="2" fill="#008799" stroke="none"/><circle cx="18" cy="16" r="2" fill="#008799" stroke="none"/></g>
-<text x="66" y="40" font-size="20" font-weight="800" fill="#006B7A">Tekoälysolmu</text>
-<text x="24" y="76" font-size="15" fill="#1B2336">esim. luokittele</text>
+<text x="66" y="40" font-size="20" font-weight="800" fill="#006B7A">Agenttipäätös</text>
+<text x="24" y="76" font-size="15" fill="#1B2336">valitse toiminto</text>
 </g>
 <path d="M552 258 L586 258" stroke="#9AA6BD" stroke-width="2.5"/><path d="M592 258 L582 253 L582 263 Z" fill="#9AA6BD"/>
 <g transform="translate(592,210)">
 <rect x="0" y="0" width="196" height="96" rx="16" fill="#FFF7E2" stroke="#C79100" stroke-width="2.5"/>
 <g transform="translate(24,24)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="24" height="17" rx="3"/><path d="M2.5 6 L14 14 L25.5 6"/></g>
-<text x="66" y="40" font-size="18" font-weight="800" fill="#9A7400">Toimintasolmu</text>
-<text x="24" y="76" font-size="15" fill="#3A4253">esim. lähetä Slackiin</text>
+<text x="66" y="40" font-size="18" font-weight="800" fill="#9A7400">Rajattu työkalu</text>
+<text x="24" y="76" font-size="15" fill="#3A4253">toteuta valinta</text>
 </g>
 <rect x="74" y="356" width="812" height="110" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="392" font-size="18" font-weight="700" fill="#5A6478">KIRJAA MYÖS MUISTIIN</text>
 <text x="98" y="424" font-size="17" fill="#3A4253">Mikä on kielimallin vastuulla · mitkä osat muodostavat harnessin</text>
-<text x="98" y="450" font-size="17" fill="#3A4253">Mikä jäi kesken · mitä testaat tai korjaat tunnilla 27</text>
+<text x="98" y="450" font-size="17" fill="#3A4253">Kaksi suoritusjälkeä · yksi havaittu ja korjattu ongelma</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
 
@@ -335,12 +335,12 @@
 <text x="560" y="238" font-size="19" font-weight="700" fill="#1B2336">solmulta toiselle?</text>
 <rect x="74" y="310" width="400" height="118" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="116" cy="352" r="18" fill="#E5F6F7"/><path d="M108 352 l6 6 l11 -12" fill="none" stroke="#008799" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="148" y="346" font-size="19" font-weight="700" fill="#1B2336">Tuottaako tekoäly-</text>
-<text x="148" y="372" font-size="19" font-weight="700" fill="#1B2336">solmu järkevän vastauksen?</text>
+<text x="148" y="346" font-size="19" font-weight="700" fill="#1B2336">Muuttuuko valittu</text>
+<text x="148" y="372" font-size="19" font-weight="700" fill="#1B2336">toiminto tilanteen mukana?</text>
 <rect x="486" y="310" width="400" height="118" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="528" cy="352" r="18" fill="#E5F6F7"/><path d="M520 352 l6 6 l11 -12" fill="none" stroke="#008799" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="560" y="346" font-size="19" font-weight="700" fill="#1B2336">Tekeekö toiminto-</text>
-<text x="560" y="372" font-size="19" font-weight="700" fill="#1B2336">solmu sen, mitä pitää?</text>
+<text x="560" y="346" font-size="19" font-weight="700" fill="#1B2336">Näkyvätkö valinta ja</text>
+<text x="560" y="372" font-size="19" font-weight="700" fill="#1B2336">työkalun tulos jäljessä?</text>
 <rect x="74" y="444" width="812" height="48" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2"/>
 <text x="480" y="474" text-anchor="middle" font-size="18" font-weight="700" fill="#006B7A">Tiedätkö, mitä korjaat tai lisäät seuraavalla tunnilla?</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
@@ -364,7 +364,7 @@
 <line x1="120" y1="316" x2="120" y2="356" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(120,356)">
 <circle cx="0" cy="20" r="18" fill="#F0F9F4"/><text x="0" y="27" text-anchor="middle" font-size="18" font-weight="800" fill="#2F9E69">3</text>
-<text x="36" y="27" font-size="21" fill="#3A4253">Rakensit minimiversion iteratiivisesti — solmu kerrallaan.</text>
+<text x="36" y="27" font-size="21" fill="#3A4253">Rakensit ja testasit yhden aidon agenttipäätöksen.</text>
 </g>
 <rect x="74" y="424" width="812" height="68" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(98,442)"><rect x="0" y="0" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="2"/><circle cx="11" cy="13" r="3.5" fill="#008799"/><circle cx="25" cy="13" r="3.5" fill="#008799"/><rect x="10" y="21" width="16" height="4" rx="2" fill="#008799"/></g>

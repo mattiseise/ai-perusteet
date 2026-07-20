@@ -1,6 +1,6 @@
 # Rakennuspalikka 2 — Botin määrittelydokumentti
 
-**Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Käytät niitä oppitunneilla 17 ja 18, kun rakennat oman apuri-bottisi Microsoft Copilotilla. Säilytä työ huolellisesti.
+**Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -12,7 +12,7 @@ Et vielä kirjoita **järjestelmäpromptia**, rakenna bottia tai testaa sitä. T
 
 ## Tavoite
 
-Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin Microsoft Copilotiin. Dokumentti auttaa sinua päättämään:
+Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin valitsemallasi alustalla. Dokumentti auttaa sinua päättämään:
 
 - mihin aiheeseen ja kohderyhmälle botti rakennetaan,
 - mitä tehtävää botti auttaa käyttäjää tekemään,
@@ -63,7 +63,7 @@ Täytä alla oleva taulukko. Kirjoita jokaiseen kohtaan lyhyt mutta selkeä vast
 
 ### Vaihe 3 — Haasta määrittelysi tekoälyn avulla
 
-Avaa ChatGPT, Claude tai Copilot ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.
+Avaa käytössäsi oleva hyväksytty tekoälypalvelu ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.
 
 Voit käyttää esimerkiksi seuraavaa promptia:
 
@@ -85,7 +85,7 @@ Tarkista viimeistelyssä erityisesti nämä asiat:
 
 Kirjoita lopuksi 2–3 lauseen pohdinta: *"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"*
 
-> **Miksi tämä on tärkeää:** Oppitunnilla 17 aloitat botin rakentamisen Copilotilla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.
+> **Miksi tämä on tärkeää:** Oppitunnilla 17 aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.
 
 > **Tarkista lopuksi:** Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.
 
