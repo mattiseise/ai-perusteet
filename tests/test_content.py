@@ -57,8 +57,8 @@ def main():
 
     source_demos = sum(p.read_text(encoding='utf-8').count('<figure class="ai-demo">')
                        for p in LESSONS.glob('*/teoria.md'))
-    if source_demos != 26:
-        fail(f'Lähteissä {source_demos} ai-demoa, odotettiin 26', errors)
+    if source_demos != 27:
+        fail(f'Lähteissä {source_demos} ai-demoa, odotettiin 27', errors)
 
     for nn in range(1, 28):
         teoria = LESSONS / f'{nn:02d}' / 'teoria.md'
@@ -93,12 +93,12 @@ def main():
     for view in ('kurssi', 'luokka'):
         generated = list((ROOT / view).glob('tunti-*/index.html'))
         demos = sum(p.read_text(encoding='utf-8').count('data-demo-id=') for p in generated)
-        if demos != 26:
-            fail(f'{view}: generoituja demoja {demos}, odotettiin 26', errors)
+        if demos != 27:
+            fail(f'{view}: generoituja demoja {demos}, odotettiin 27', errors)
     course_demos = ''.join(p.read_text(encoding='utf-8') for p in (ROOT / 'kurssi').glob('tunti-*/index.html'))
-    if course_demos.count('data-demo-kind="static"') != 23:
-        fail('Staattisten demojen määrä ei ole 23', errors)
-    if course_demos.count('<div class="ai-demo__mobile-model ') != 23:
+    if course_demos.count('data-demo-kind="static"') != 24:
+        fail('Staattisten demojen määrä ei ole 24', errors)
+    if course_demos.count('<div class="ai-demo__mobile-model ') != 24:
         fail('Jokaiselta staattiselta demolta pitää löytyä yksilöllinen reflow-malli', errors)
     for view in ('kurssi', 'luokka', 'opettaja'):
         generated = list((ROOT / view).glob('tunti-*/index.html'))
@@ -122,7 +122,7 @@ def main():
     if errors:
         print(*errors, sep='\n')
         return 1
-    print('OK: 112 tehtävää, 26 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
+    print('OK: 112 tehtävää, 27 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
     return 0
 
 
