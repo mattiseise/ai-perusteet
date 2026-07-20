@@ -2,6 +2,12 @@
 
 AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
 
+## Kurssin ajattelutapa
+
+Et vain käytä tekoälyä. Opit viemään ilmiön, väitteen tai ratkaisun samojen viiden liikkeen läpi: **tunnista, selitä, testaa, arvioi ja perustele**. Jokaisen tunnin alussa näet, mikä liike painottuu juuri sillä tunnilla ja mihin ajattelukysymykseen etsit vastausta. Palaa kysymykseen tunnin lopussa ja nimeä havainto, testi tai tuotos, johon vastauksesi perustuu.
+
+Liikkeet muodostavat työskentelytavan, eivät jäykkää suoritusjärjestystä. Voit palata aiempaan vaiheeseen, kun testi paljastaa puutteen tai arviointi muuttaa johtopäätöstäsi.
+
 ## Mitä tarvitset?
 
 Tavallinen selain ja mahdollisuus tehdä muistiinpanoja riittävät. Voit opiskella ilman maksullisia palveluja. Osa kokeista onnistuu maksuttomalla chatpalvelulla, mutta palvelun käyttö voi edellyttää tiliä ja sen ehdot voivat muuttua. Jos et halua luoda tiliä, tee sama koe annetulla esimerkkituloksella tai dokumentoimalla kokeen vaiheet ilman palvelua. Arvioinnissa ratkaisee ymmärrys ja näkyvä työprosessi, ei tietty tuote.

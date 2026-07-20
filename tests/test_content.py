@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 import re
 import sys
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / 'sisalto' / 'tunnit'
@@ -16,6 +17,31 @@ def fail(message, errors):
 
 def main():
     errors = []
+    manifest = yaml.safe_load((ROOT / 'sisalto' / 'kurssi.yaml').read_text(encoding='utf-8'))
+    thinking = manifest.get('ajattelu', {})
+    moves = thinking.get('liikkeet', [])
+    move_ids = [move.get('id') for move in moves]
+    expected_moves = ['tunnista', 'selita', 'testaa', 'arvioi', 'perustele']
+    if move_ids != expected_moves or len(set(move_ids)) != 5:
+        fail(f'Ajatteluliikkeet {move_ids}, odotettiin {expected_moves}', errors)
+    if not thinking.get('lupaus', '').strip():
+        fail('Ajattelumallin lupaus puuttuu', errors)
+
+    lesson_thoughts = []
+    for module in manifest.get('moduulit', []):
+        arc = module.get('ajattelukaari', {})
+        if set(arc) != set(expected_moves) or any(not str(arc.get(mid, '')).strip() for mid in expected_moves):
+            fail(f'{module.get("id")}: ajattelukaari on puutteellinen', errors)
+        for lesson in module.get('tunnit', []):
+            thought = lesson.get('ajattelu', {})
+            lesson_thoughts.append((lesson.get('id'), thought))
+            if thought.get('painotus') not in expected_moves:
+                fail(f'{lesson.get("id")}: virheellinen ajattelupainotus {thought.get("painotus")!r}', errors)
+            if not thought.get('kysymys', '').strip():
+                fail(f'{lesson.get("id")}: ajattelukysymys puuttuu', errors)
+    if len(lesson_thoughts) != 27:
+        fail(f'Ajattelukysymyksiä {len(lesson_thoughts)}, odotettiin 27', errors)
+
     task_count = 0
     task_types = set()
     for path in sorted(LESSONS.glob('*/harjoittele.md')):
@@ -74,6 +100,21 @@ def main():
         fail('Staattisten demojen määrä ei ole 23', errors)
     if course_demos.count('<div class="ai-demo__mobile-model ') != 23:
         fail('Jokaiselta staattiselta demolta pitää löytyä yksilöllinen reflow-malli', errors)
+    for view in ('kurssi', 'luokka', 'opettaja'):
+        generated = list((ROOT / view).glob('tunti-*/index.html'))
+        thinking_paths = sum(
+            p.read_text(encoding='utf-8').count('thinking-path thinking-path--lesson')
+            for p in generated
+        )
+        if thinking_paths != 27:
+            fail(f'{view}: tuntien ajattelupolkuja {thinking_paths}, odotettiin 27', errors)
+    overview = (ROOT / 'kurssi' / 'index.html').read_text(encoding='utf-8')
+    if overview.count('thinking-path thinking-path--course') != 1:
+        fail('Verkkokurssin ajattelulupaus puuttuu tai toistuu', errors)
+    for slug in ('teoria', 'kaytto', 'agentit'):
+        module_page = (ROOT / 'kurssi' / slug / 'index.html').read_text(encoding='utf-8')
+        if module_page.count('thinking-path thinking-path--module') != 1:
+            fail(f'{slug}: moduulin ajattelukaari puuttuu tai toistuu', errors)
     css = (ROOT / 'assets' / 'site.css').read_text(encoding='utf-8')
     if re.search(r'\.ai-demo[^\{]*\.ai-demo__stage\s*\{[^}]*display\s*:\s*none', css, re.S):
         fail('ai-demo-stagea ei saa piilottaa mobiilissa', errors)

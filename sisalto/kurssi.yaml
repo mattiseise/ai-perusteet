@@ -11,10 +11,21 @@ kurssi:
   nimi: "AI · Perusteet"
   domain: aiperusteet.fi
   laajuus_osp: 3
-  yleisolupaus: "AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen."
+  yleisolupaus: "AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Kurssi opettaa käyttämään tekoälyä sekä tunnistamaan, selittämään, testaamaan, arvioimaan ja perustelemaan siihen liittyviä väitteitä ja ratkaisuja. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen."
   esitiedot: "Ei esitietovaatimuksia. Tavallinen verkkoselain riittää, ja tililliset kokeet voi korvata dokumentoidulla kuivaharjoittelulla."
   laajuuskuvaus: "Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta."
   educational_level: "Aloittelija / perustaso"
+
+# Kurssin yhteinen ajattelutaitojen selkäranka. Sama viiden liikkeen malli
+# näytetään kurssin yleiskuvassa, moduulisivuilla ja jokaisella tuntisivulla.
+ajattelu:
+  lupaus: "Et vain käytä tekoälyä. Opit tunnistamaan ilmiön, selittämään sen toiminnan, testaamaan väitteen tai ratkaisun, arvioimaan tuloksen ja perustelemaan johtopäätöksesi."
+  liikkeet:
+    - { id: tunnista, nimi: "Tunnista", ohje: "Nimeä ilmiö, tarve tai riski." }
+    - { id: selita, nimi: "Selitä", ohje: "Kuvaa, miten tulos syntyy." }
+    - { id: testaa, nimi: "Testaa", ohje: "Kokeile ja selvitä, missä rajat tulevat vastaan." }
+    - { id: arvioi, nimi: "Arvioi", ohje: "Suhteuta tulos tavoitteeseen, lähteisiin ja riskeihin." }
+    - { id: perustele, nimi: "Perustele", ohje: "Tee johtopäätös ja näytä sen peruste." }
 
 # Tunnin kanoniset lohkot (block contract) — tiedostot sisalto/tunnit/NN/:ssä.
 # Arviointitunneilta (tyyppi: assessment) puuttuu harjoittele.md tarkoituksella.
@@ -59,16 +70,22 @@ moduulit:
     vari: "var(--blue)"
     ikoni: "📐"
     lopputyo: lopputyot/teoria.md
+    ajattelukaari:
+      tunnista: "Tekoälyväite"
+      selita: "Toimintaperiaate"
+      testaa: "Mekanismin rajat"
+      arvioi: "Luotettavuus ja vastuu"
+      perustele: "Asiantuntijalausunto"
     tunnit:
-      - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching }
-      - { id: lesson-02, kansio: "02", otsikko: "Millaista tekoälyä on nyt — ja mistä tulevaisuuspuheessa puhutaan?", tyyppi: teaching }
-      - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching }
-      - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-06, kansio: "06", otsikko: "Kuvat, ääni ja teksti — kun sanat eivät riitä", tyyppi: teaching }
-      - { id: lesson-07, kansio: "07", otsikko: "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-08, kansio: "08", otsikko: "Kenen teksti se on? — etiikka, oikeudet ja vastuu", tyyppi: teaching }
-      - { id: lesson-09, kansio: "09", otsikko: "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä", tyyppi: teaching }
+      - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching, ajattelu: { painotus: tunnista, kysymys: "Mistä voit päätellä, noudattaako järjestelmä sääntöä vai oppiiko se esimerkeistä?" } }
+      - { id: lesson-02, kansio: "02", otsikko: "Millaista tekoälyä on nyt — ja mistä tulevaisuuspuheessa puhutaan?", tyyppi: teaching, ajattelu: { painotus: tunnista, kysymys: "Miten erotat nykyisen rajatun kyvyn AGI- tai ASI-väitteestä?" } }
+      - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: selita, kysymys: "Miten kielimalli tuottaa seuraavan tokenin, ja miksi sujuva teksti voi silti olla väärässä?" } }
+      - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching, ajattelu: { painotus: testaa, kysymys: "Miten sama pyyntö muuttuu, kun vaihdat vain kontekstia?" } }
+      - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: testaa, kysymys: "Missä olennainen ohje katoaa keskustelusta, ja miten osoitat sen kokeella?" } }
+      - { id: lesson-06, kansio: "06", otsikko: "Kuvat, ääni ja teksti — kun sanat eivät riitä", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Milloin kuva, ääni tai muu aineisto auttaa enemmän kuin pelkkä teksti?" } }
+      - { id: lesson-07, kansio: "07", otsikko: "Miksi tekoäly valehtelee? — hallusinaatiot ja satunnaisuus", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: arvioi, kysymys: "Mihin näyttöön perustat arviosi vastauksen luotettavuudesta?" } }
+      - { id: lesson-08, kansio: "08", otsikko: "Kenen teksti se on? — etiikka, oikeudet ja vastuu", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Keneen tuotos vaikuttaa, ja miten vastuu pitäisi jakaa?" } }
+      - { id: lesson-09, kansio: "09", otsikko: "Tuomaripöydän päätös — asiantuntijalausunto tekoälystä", tyyppi: teaching, ajattelu: { painotus: perustele, kysymys: "Miten todistusaineistosi tukee johtopäätöstäsi ja vastuusuositustasi?" } }
   - id: osp2
     slug: kaytto
     otsikko: "Tekoälyjen käyttö"
@@ -76,16 +93,22 @@ moduulit:
     vari: "var(--violet)"
     ikoni: "🛠"
     lopputyo: lopputyot/kaytto.md
+    ajattelukaari:
+      tunnista: "Tarve ja aineisto"
+      selita: "Promptin, botin ja tietopohjan rakenne"
+      testaa: "Vastaukset ja rajat"
+      arvioi: "Laatu ja tietosuoja"
+      perustele: "Rakennusvalinnat ja korjaukset"
     tunnit:
-      - { id: lesson-10, kansio: "10", otsikko: "Kilpailuta tekoälyt — mikä työkalu mihinkin?", tyyppi: teaching }
-      - { id: lesson-11, kansio: "11", otsikko: "Muita tekoälymalleja — kuin ChatGPT ja Claude", tyyppi: teaching }
-      - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-13, kansio: "13", otsikko: "AI työparina — pohja, muokkaus ja tarkistus", tyyppi: teaching }
-      - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-15, kansio: "15", otsikko: "Oma botti II — tietopohja, rajaukset ja testaus", tyyppi: teaching, lopputyon_askel: "*" }
-      - { id: lesson-16, kansio: "16", otsikko: "Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi", tyyppi: teaching }
-      - { id: lesson-17, kansio: "17", otsikko: "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", tyyppi: teaching }
-      - { id: lesson-18, kansio: "18", otsikko: "Projektidokumenttibotti — viimeistele ja esittele", tyyppi: assessment }
+      - { id: lesson-10, kansio: "10", otsikko: "Kilpailuta tekoälyt — mikä työkalu mihinkin?", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Millä vertailulla osoitat työkalun sopivan tehtävään?" } }
+      - { id: lesson-11, kansio: "11", otsikko: "Muita tekoälymalleja — kuin ChatGPT ja Claude", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Mihin aineisto päätyy, ja mitä se merkitsee käyttöpäätöksen kannalta?" } }
+      - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: testaa, kysymys: "Mikä promptin muutos parantaa vastausta, ja miten osoitat vaikutuksen?" } }
+      - { id: lesson-13, kansio: "13", otsikko: "AI työparina — pohja, muokkaus ja tarkistus", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Mikä luonnoksessa vaatii ihmisen korjausta tai hylkäämistä?" } }
+      - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: selita, kysymys: "Miten käyttäjä, tarkoitus, työnkulku ja rajat muodostavat kokonaisuuden?" } }
+      - { id: lesson-15, kansio: "15", otsikko: "Oma botti II — tietopohja, rajaukset ja testaus", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: testaa, kysymys: "Mihin kysymyksiin tietopohja vastaa, ja milloin botin pitää tunnistaa tietopohjan rajat?" } }
+      - { id: lesson-16, kansio: "16", otsikko: "Tekoälytyökalut erikoisaloilla — kuva, musiikki, video ja koodi", tyyppi: teaching, ajattelu: { painotus: perustele, kysymys: "Millä perusteella valitsemasi työkalu sopii tehtävään, ja missä sen rajat näkyvät?" } }
+      - { id: lesson-17, kansio: "17", otsikko: "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", tyyppi: teaching, ajattelu: { painotus: testaa, kysymys: "Mitä ensimmäinen testi paljastaa botin ohjeista, tietopohjasta tai rajoista?" } }
+      - { id: lesson-18, kansio: "18", otsikko: "Projektidokumenttibotti — viimeistele ja esittele", tyyppi: assessment, ajattelu: { painotus: perustele, kysymys: "Mikä korjaus paransi bottia, ja mikä ennen–jälkeen-näyttö osoittaa sen?" } }
   - id: osp3
     slug: agentit
     otsikko: "Agentit"
@@ -93,13 +116,19 @@ moduulit:
     vari: "var(--teal)"
     ikoni: "🤖"
     lopputyo: lopputyot/agentit.md
+    ajattelukaari:
+      tunnista: "Ongelma ja autonomia"
+      selita: "Muisti, työnkulku ja turva"
+      testaa: "Pää-, reuna- ja turvallisuustapaukset"
+      arvioi: "Riskit, lokit ja ihmisen rooli"
+      perustele: "Arkkitehtuuri ja parannukset"
     tunnit:
-      - { id: lesson-19, kansio: "19", otsikko: "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", tyyppi: teaching, lopputyon_askel: "Agentti: Ongelma" }
-      - { id: lesson-20, kansio: "20", otsikko: "Automaatio vai autonomia? — milloin agentti kannattaa", tyyppi: teaching }
-      - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching, lopputyon_askel: "Agentti: Muisti" }
-      - { id: lesson-22, kansio: "22", otsikko: "Agentin työkalut — tiedostot, haku ja komennot", tyyppi: teaching }
-      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, työnkulku ja orkestrointi", tyyppi: teaching, lopputyon_askel: "Agentti: Päättely" }
-      - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching, lopputyon_askel: "Agentti: Turva" }
-      - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching, lopputyon_askel: "Agentti: Ihminen" }
-      - { id: lesson-26, kansio: "26", otsikko: "Kädet saveen — n8n-agenttipaja alkaa", tyyppi: teaching }
-      - { id: lesson-27, kansio: "27", otsikko: "Viimeistele ja esittele — agenttisi on valmis", tyyppi: assessment }
+      - { id: lesson-19, kansio: "19", otsikko: "Boteista agentteihin — mikä muuttuu kun AI toimii itsenäisesti", tyyppi: teaching, lopputyon_askel: "Agentti: Ongelma", ajattelu: { painotus: tunnista, kysymys: "Mikä tekee järjestelmästä agentin eikä chatbotia tai tavallista työnkulkua?" } }
+      - { id: lesson-20, kansio: "20", otsikko: "Automaatio vai autonomia? — milloin agentti kannattaa", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Tarvitaanko ongelmaan agentti, vai riittääkö prompti tai työnkulku — miksi?" } }
+      - { id: lesson-21, kansio: "21", otsikko: "Agentin muisti ja konteksti — miten kone pysyy kartalla", tyyppi: teaching, lopputyon_askel: "Agentti: Muisti", ajattelu: { painotus: selita, kysymys: "Mitä agentin pitää muistaa nyt ja mitä myöhemmin?" } }
+      - { id: lesson-22, kansio: "22", otsikko: "Agentin työkalut — tiedostot, haku ja komennot", tyyppi: teaching, ajattelu: { painotus: perustele, kysymys: "Mitä työkalua agentti tarvitsee, millä oikeuksilla ja miksi?" } }
+      - { id: lesson-23, kansio: "23", otsikko: "Suunnittelumallit — ReAct, työnkulku ja orkestrointi", tyyppi: teaching, lopputyon_askel: "Agentti: Päättely", ajattelu: { painotus: selita, kysymys: "Miten päätös, työkalukutsu, havainto ja seuraava toiminto näkyvät lokissa?" } }
+      - { id: lesson-24, kansio: "24", otsikko: "Turvallisuus ensin — hyökkäykset, suojaukset ja lokitus", tyyppi: teaching, lopputyon_askel: "Agentti: Turva", ajattelu: { painotus: testaa, kysymys: "Millä hyökkäys- tai virhetilanteella testaat turvakerroksen toiminnan?" } }
+      - { id: lesson-25, kansio: "25", otsikko: "Ihminen portinvartijana — human-in-the-loop käytännössä", tyyppi: teaching, lopputyon_askel: "Agentti: Ihminen", ajattelu: { painotus: perustele, kysymys: "Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?" } }
+      - { id: lesson-26, kansio: "26", otsikko: "Kädet saveen — n8n-agenttipaja alkaa", tyyppi: teaching, ajattelu: { painotus: testaa, kysymys: "Käynnistyykö 3–5 solmun ydintyönkulku, kulkeeko data oikein ja mitä ensimmäinen testi paljastaa korjattavaksi?" } }
+      - { id: lesson-27, kansio: "27", otsikko: "Viimeistele ja esittele — agenttisi on valmis", tyyppi: assessment, ajattelu: { painotus: perustele, kysymys: "Mitä testit ja korjaukset osoittavat agentin toimivuudesta, turvallisuudesta ja rajoista?" } }

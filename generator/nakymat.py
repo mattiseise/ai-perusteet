@@ -18,6 +18,7 @@ with open(os.path.join(SISALTO, 'kurssi.yaml'), encoding='utf-8') as _f:
 
 # ---- Moduulit / tunnit ----
 MODUULIT = KURSSI['moduulit']
+AJATTELU = KURSSI['ajattelu']
 
 # Lyhyt mono-tunniste moduulikorteille ("01 · TEORIA"). Slug → näyttönimi.
 _KN_NAME = {'teoria': 'TEORIA', 'kaytto': 'KÄYTTÖ', 'agentit': 'AGENTIT'}
@@ -32,6 +33,7 @@ OSP_BLOCKS = [
         'icon': m['ikoni'],
         'ikoni_kn': f"{i:02d} · {_KN_NAME.get(m['slug'], m['slug'].upper())}",
         'lopputyo': m.get('lopputyo'),
+        'ajattelukaari': m['ajattelukaari'],
         'lessons': [(t['id'], t['otsikko'], t['tyyppi'], t['kansio']) for t in m['tunnit']],
     }
     for i, m in enumerate(MODUULIT, 1)
@@ -40,6 +42,7 @@ OSP_BLOCKS = [
 ALL_LESSONS = [
     {'id': t['id'], 'kansio': t['kansio'], 'otsikko': t['otsikko'], 'tyyppi': t['tyyppi'],
      'lopputyon_askel': t.get('lopputyon_askel'),
+     'ajattelu': t['ajattelu'],
      'osp_id': m['id'], 'slug': m['slug'], 'osp_title': m['otsikko'],
      'osp_color': m['vari'], 'osp_icon': m['ikoni']}
     for m in MODUULIT for t in m['tunnit']

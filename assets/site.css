@@ -544,6 +544,110 @@ body{
   color:#92400E;
 }
 
+/* ============ AJATTELUN SELKÄRANKA ============ */
+.thinking-path{
+  --thinking-accent:var(--bc-primary);
+  background:var(--bg-white);
+  border:1px solid var(--border-soft);
+  border-radius:var(--r);
+  padding:24px 26px;
+  box-shadow:0 1px 3px rgba(20,30,60,.04);
+}
+.thinking-path--course,.thinking-path--module{margin:30px 0}
+.thinking-path--lesson{
+  width:calc(100% - 80px);
+  max-width:1080px;
+  margin:22px auto 8px;
+}
+.thinking-path__eyebrow{
+  margin-bottom:7px;
+  color:var(--thinking-accent);
+  font-family:var(--font-mono);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.thinking-path h2{
+  margin:0 0 8px;
+  color:var(--text-dark);
+  font-family:var(--font-serif);
+  font-size:25px;
+  font-weight:600;
+  line-height:1.2;
+}
+.thinking-path__lead{
+  max-width:76ch;
+  margin:0 0 18px;
+  color:var(--text-muted);
+  font-size:14.5px;
+  line-height:1.65;
+}
+.thinking-path__scroller{max-width:100%;overflow-x:auto;padding:2px 2px 8px}
+.thinking-path__scroller:focus-visible{outline:3px solid var(--thinking-accent);outline-offset:4px;border-radius:8px}
+.thinking-path__steps{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(142px,1fr));
+  gap:8px;
+  min-width:760px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  counter-reset:thinking-step;
+}
+.thinking-step{
+  counter-increment:thinking-step;
+  min-width:0;
+  padding:13px 14px;
+  border:1px solid var(--border-soft);
+  border-radius:10px;
+  background:#F7F8FC;
+}
+.thinking-step__name{
+  display:block;
+  margin-bottom:5px;
+  color:var(--text-dark);
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  font-weight:600;
+}
+.thinking-step__name::before{
+  content:counter(thinking-step) '. ';
+  color:var(--thinking-accent);
+}
+.thinking-step__desc{display:block;color:var(--text-muted);font-size:12.5px;line-height:1.42}
+.thinking-step.is-active{
+  border-color:color-mix(in srgb,var(--thinking-accent) 56%,#fff);
+  background:color-mix(in srgb,var(--thinking-accent) 9%,#fff);
+  box-shadow:inset 0 3px 0 var(--thinking-accent);
+}
+.thinking-step.is-active .thinking-step__name{color:color-mix(in srgb,var(--thinking-accent) 72%,#111827)}
+.thinking-path__question{
+  margin:14px 2px 0;
+  padding:13px 15px;
+  border-left:4px solid var(--thinking-accent);
+  background:color-mix(in srgb,var(--thinking-accent) 6%,#fff);
+  color:var(--text-dark);
+  font-size:14px;
+  line-height:1.55;
+}
+.thinking-path__question strong{font-weight:650}
+.thinking-path__return{
+  margin:9px 2px 0;
+  color:var(--text-muted);
+  font-size:12.5px;
+  line-height:1.55;
+}
+
+@media(max-width:768px){
+  .thinking-path{padding:20px 18px}
+  .thinking-path--lesson{width:auto;margin:16px 16px 6px}
+  .thinking-path h2{font-size:22px}
+  .thinking-path__scroller{overflow-x:visible}
+  .thinking-path__steps{grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}
+  .thinking-step:last-child{grid-column:1/-1}
+}
+
 /* ============ TABS ============ */
 .lesson-tabs{
   display:flex;

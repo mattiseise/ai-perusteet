@@ -4,6 +4,7 @@ serialisoidaan json.dumps:lla, joten f-string-aaltosulkeita ei tarvitse tuplata.
 """
 
 import json
+from html import escape
 from . import nakymat as N
 from . import sisalto as S
 
@@ -201,6 +202,69 @@ def _breadcrumb(view, lesson, num):
     )
 
 
+def _thinking_steps(details=None, active=None, labelled_by=None):
+    """Renderöi kurssin viisi ajatteluliikettä yhteisestä manifestidatasta."""
+    details = details or {}
+    label_attr = f' aria-labelledby="{escape(labelled_by)}"' if labelled_by else ''
+    items = []
+    for move in N.AJATTELU['liikkeet']:
+        mid = move['id']
+        is_active = mid == active
+        active_cls = ' is-active' if is_active else ''
+        current = ' aria-current="step"' if is_active else ''
+        description = details.get(mid, move['ohje'])
+        items.append(
+            f'<li class="thinking-step{active_cls}"{current}>'
+            f'<span class="thinking-step__name">{escape(move["nimi"])}</span>'
+            f'<span class="thinking-step__desc">{escape(description)}</span>'
+            '</li>'
+        )
+    return (
+        f'<div class="thinking-path__scroller" role="region" tabindex="0"{label_attr}>'
+        f'<ol class="thinking-path__steps">{"".join(items)}</ol>'
+        '</div>'
+    )
+
+
+def _course_thinking_path():
+    title_id = 'course-thinking-title'
+    return (
+        '<section class="thinking-path thinking-path--course">'
+        '<div class="thinking-path__eyebrow">Kurssin ajattelutapa</div>'
+        f'<h2 id="{title_id}">Näin opit ajattelemaan</h2>'
+        f'<p class="thinking-path__lead">{escape(N.AJATTELU["lupaus"])}</p>'
+        f'{_thinking_steps(labelled_by=title_id)}'
+        '</section>'
+    )
+
+
+def _module_thinking_path(osp):
+    title_id = f'module-{escape(osp["id"])}-thinking-title'
+    return (
+        '<section class="thinking-path thinking-path--module">'
+        '<div class="thinking-path__eyebrow">Moduulin ajattelukaari</div>'
+        f'<h2 id="{title_id}">Tunnistamisesta perusteltuun lopputuotokseen</h2>'
+        f'{_thinking_steps(details=osp["ajattelukaari"], labelled_by=title_id)}'
+        '</section>'
+    )
+
+
+def _lesson_thinking_path(lesson):
+    title_id = f'{escape(lesson["id"])}-thinking-title'
+    thought = lesson['ajattelu']
+    return (
+        '<section class="thinking-path thinking-path--lesson">'
+        '<div class="thinking-path__eyebrow">Ajattelun selkäranka</div>'
+        f'<h2 id="{title_id}">Tunnista → selitä → testaa → arvioi → perustele</h2>'
+        f'{_thinking_steps(active=thought["painotus"], labelled_by=title_id)}'
+        '<p class="thinking-path__question"><strong>Tämän tunnin ajattelukysymys:</strong> '
+        f'{escape(thought["kysymys"])}</p>'
+        '<p class="thinking-path__return">Palaa kysymykseen tunnin lopussa. Vastaa omin sanoin ja '
+        'nimeä havainto, testi tai tuotos, johon vastauksesi perustuu.</p>'
+        '</section>'
+    )
+
+
 def build_tunti_page(lesson, view):
     num = N.ALL_IDS.index(lesson['id']) + 1
     idx = num - 1
@@ -279,7 +343,7 @@ def build_tunti_page(lesson, view):
 
     body = (
         '<div id="lesson" class="lesson-view active">'
-        f'{header}{strip}'
+        f'{header}{_lesson_thinking_path(lesson)}{strip}'
         f'<div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö">{"".join(tab_btns)}</div>'
         f'<div id="lesson-panels" class="lesson-panels rv-tech">{"".join(panels)}</div>'
         f'{footer}</div>'
@@ -489,6 +553,7 @@ def build_kurssi_overview():
         '</div></section>'
         '<div class="page-body">'
         f'<div class="reading panel active course-start">{intro}</div>'
+        f'{_course_thinking_path()}'
         f'<div class="mod-grid">{"".join(cards)}</div>'
         '</div>'
     )
@@ -526,6 +591,7 @@ def build_kurssi_module(osp):
         f'<p>{osp["subtitle"]}</p>'
         '</div></section>'
         '<div class="page-body">'
+        f'{_module_thinking_path(osp)}'
         f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
         f'{final}'
         '</div>'

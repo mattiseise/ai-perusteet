@@ -18,6 +18,14 @@ Kukin moduuli päättyy omaan arvioitavaan lopputyöhön. Tunnit **18** ja **27*
 
 Kurssin voi toteuttaa kokonaisuutena tai moduuli kerrallaan. Jos oppilaitos myöntää moduuleista osaamispisteitä, laajuus ja hyväksymisehdot vahvistetaan sen omissa käytännöissä.
 
+### Ajattelutaitojen selkäranka
+
+Koko kurssi harjoittaa samaa viittä liikettä: **tunnista, selitä, testaa, arvioi ja perustele**. Ne eivät muodosta uutta tehtäväkerrosta, vaan nimeävät ajattelua, jota nykyiset teoriat, kokeet, harjoitukset ja lopputyöt jo vaativat.
+
+Jokaisen tuntisivun yläosassa näkyvät kaikki viisi liikettä, tunnin painotus ja yksi ajattelukysymys. Käytä kysymystä tunnin alussa työskentelyn suuntaamiseen ja palaa siihen lopussa: pyydä opiskelijaa vastaamaan omin sanoin sekä nimeämään havainto, testi tai tuotos, johon vastaus perustuu. Kaikkien liikkeiden ei tarvitse painottua samalla tunnilla yhtä paljon.
+
+Moduulisivun ajattelukaari näyttää, miten työ etenee tunnistamisesta perusteltuun lopputuotokseen. Voit liittää nykyisen tehtävän lähimpään liikkeeseen, mutta tehtävien nimiä tai rakennetta ei tarvitse muuttaa.
+
 ### Mitä jokainen tunti sisältää
 
 Tuntien materiaali on rakennettu samasta lohkomallista, joten tiedät aina, mitä käsissäsi on. Opetustunti sisältää:

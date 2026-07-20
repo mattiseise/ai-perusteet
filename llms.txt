@@ -1,6 +1,6 @@
 # AI · Perusteet
 
-> AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
+> AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Kurssi opettaa käyttämään tekoälyä sekä tunnistamaan, selittämään, testaamaan, arvioimaan ja perustelemaan siihen liittyviä väitteitä ja ratkaisuja. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
 
 Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta.
 
