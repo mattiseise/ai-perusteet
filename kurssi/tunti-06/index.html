@@ -24,15 +24,73 @@
 <p>Tämän tunnin ajatus on yksinkertainen: <strong>valitse aineistomuoto sen perusteella, mitä tekoälyn pitää havaita</strong>. Kuva ei ole aina tekstiä parempi. Ääni ei ole aina kuvaa rikkaampi. Useampi aineisto ei automaattisesti paranna vastausta. Hyvä käyttäjä tunnistaa, mikä tieto on tehtävän kannalta olennaista ja missä muodossa se säilyy parhaiten.</p>
 <blockquote class="pause"><p><strong>Tunnin ydinkysymys:</strong> Mitä mallin pitää nähdä, kuulla tai lukea, jotta se voi auttaa — ja mitä aineistosta ei pidä lähettää lainkaan?</p>
 </blockquote>
-<figure class="ai-demo" data-demo-id="lesson-06-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama tieto kahdessa muodossa — eri havainnot säilyvät</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:286px"><div class="ai-demo__mobile-model ai-demo__mobile-model--flow"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">”Ei toimi” → paljon arvauksia</li><li class="ai-demo__mobile-node">+ kuvakaappaus → käyttöliittymä näkyy</li><li class="ai-demo__mobile-node">+ loki ja koodi → virhe rajautuu</li><li class="ai-demo__mobile-node">Vain tarpeellinen, anonymisoitu aineisto</li></ol></div>
-  <div style="display:flex;align-items:center;gap:26px;width:700px;font-family:var(--font-mono)">
-    <div style="flex:1;padding:24px;color:#eaf0ff;background:#11182a;border:1.5px solid #44517a;border-radius:14px"><b style="color:#8fa3ff">KAAVIO</b><span style="display:block;margin-top:20px">kehityssuunta näkyy nopeasti</span></div>
-    <strong style="color:#2f46b0">Mitä tehtävä vaatii?</strong>
-    <div style="flex:1;padding:24px;color:#eaf0ff;background:#11182a;border:1.5px solid #44517a;border-radius:14px"><b style="color:#8fa3ff">TAULUKKO</b><span style="display:block;margin-top:20px">tarkat arvot säilyvät</span></div>
+<figure class="ai-demo" data-demo-id="lesson-06-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama tieto kahdessa muodossa — tehtävä ratkaisee kumpi voittaa</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:312px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">TEHTÄVÄ 1 · tarkka muutos: kaaviosta arvio, taulukosta tarkka +44,4 % → piste taulukolle</li><li class="ai-demo__mobile-node">TEHTÄVÄ 2 · harhaanjohtava asteikko: näkyy kaaviosta, ei taulukosta → piste kuvalle</li><li class="ai-demo__mobile-node">Kumpikin muoto voitti kerran — muoto valitaan tehtävän mukaan</li></ol></div>
+  <div class="l06-wrap" role="img" aria-label="Sama myyntidata näytetään kaaviona ja taulukkona. Ensimmäinen tehtävä on laskea tarkka muutos: kaaviosta saa vain arvion, taulukosta tarkan arvon 44,4 prosenttia — piste taulukolle. Toinen tehtävä on huomata, että kaavion asteikko alkaa kymmenestä: sen näkee kaaviosta, ei taulukosta — piste kaaviolle. Kumpikin muoto voittaa toisen tehtävän: muoto valitaan tehtävän mukaan.">
+    <span class="l06-title">MITÄ TEHTÄVÄN PITÄÄ HAVAITA?</span>
+    <span class="l06-task ta">Tehtävä 1 · laske tarkka muutos</span>
+    <span class="l06-task tb">Tehtävä 2 · onko asteikko harhaanjohtava?</span>
+    <div class="l06-p pk"><i class="l06-ph">KUVA · KAAVIO</i>
+      <span class="l06-ax">10┤</span>
+      <i class="l06-bar b1"></i><i class="l06-bar b2"></i>
+      <span class="l06-yr y1">2024</span><span class="l06-yr y2">2025</span>
+      <span class="l06-chip ca1">≈ 40 %?</span>
+      <span class="l06-chip cb1">✓ akseli alkaa 10:stä</span></div>
+    <div class="l06-p pt"><i class="l06-ph pht">TAULUKKO</i>
+      <span class="l06-row r1">2024&nbsp;&nbsp;12,4</span>
+      <span class="l06-row r2">2025&nbsp;&nbsp;17,9</span>
+      <span class="l06-chip ca2">✓ +44,4 %</span>
+      <span class="l06-chip cb2">esitystapa ei näy —</span></div>
+    <span class="l06-log lg1">✓ tarkat luvut → taulukko</span>
+    <span class="l06-log lg2">✓ asteikko ja esitystapa → kuva</span>
+    <span class="l06-syn">Kumpikin voitti kerran — muoto valitaan tehtävän mukaan</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Aineistomuoto ei ole koriste. Kaavio auttaa hahmottamaan suunnan, kun taas alkuperäinen taulukko säilyttää laskennassa tarvittavat arvot. Valinta tehdään tehtävän perusteella.</figcaption></figure>
+<figcaption class="ai-demo__cap">Aineistomuoto ei ole koriste. Kaaviosta hahmottaa suunnan ja esitystavan valinnat, taulukko säilyttää tarkat arvot laskentaan. Sama aineisto — kumpikin muoto voittaa oman tehtävänsä. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<style>
+.l06-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono);animation:l06w 16s infinite}
+.l06-wrap:hover,.l06-wrap:hover *{animation-play-state:paused}
+.l06-title{position:absolute;left:0;top:0;width:560px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.08em;color:#EAEEF8}
+.l06-task{position:absolute;left:130px;top:32px;width:300px;box-sizing:border-box;text-align:center;font-size:12px;line-height:1.2;color:#EAEEF8;background:#0E1524;border:1.5px solid #46C7CF;border-radius:999px;padding:5px 10px;opacity:0}
+.l06-task.ta{animation:l06ta 16s infinite}
+.l06-task.tb{border-color:#C9B7F1;animation:l06tb 16s infinite}
+.l06-p{position:absolute;top:76px;width:252px;height:118px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 10px}
+.l06-p.pk{left:16px}.l06-p.pt{left:292px}
+.l06-ph{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;color:#C9B7F1}
+.l06-ph.pht{color:#46C7CF}
+.l06-ax{position:absolute;left:12px;bottom:34px;font-size:11px;color:#B9C2DA}
+.l06-bar{position:absolute;bottom:36px;width:30px;background:#46C7CF;border-radius:3px 3px 0 0}
+.l06-bar.b1{left:44px;height:26px;opacity:.75}
+.l06-bar.b2{left:92px;height:40px}
+.l06-yr{position:absolute;bottom:22px;font-size:9.5px;color:#8B94B3}
+.l06-yr.y1{left:40px}.l06-yr.y2{left:88px}
+.l06-row{position:absolute;left:16px;font-size:12px;line-height:1.2;color:#EAEEF8}
+.l06-row.r1{top:38px}.l06-row.r2{top:60px}
+.l06-chip{position:absolute;font-size:10.5px;line-height:1.2;font-weight:700;border-radius:7px;padding:3px 7px;opacity:0;white-space:nowrap}
+.l06-chip.ca1{right:10px;top:34px;color:#FFD79A;border:1px solid #FFD79A;background:rgba(255,215,154,.07);animation:l06ca1 16s infinite}
+.l06-chip.cb1{right:10px;bottom:10px;color:#7FD0A8;border:1px solid #7FD0A8;background:rgba(127,208,168,.08);animation:l06cb 16s infinite}
+.l06-chip.ca2{right:10px;top:34px;color:#7FD0A8;border:1px solid #7FD0A8;background:rgba(127,208,168,.08);animation:l06ca2 16s infinite}
+.l06-chip.cb2{right:10px;bottom:10px;color:#FFD79A;border:1px solid #FFD79A;background:rgba(255,215,154,.07);animation:l06cb 16s infinite}
+.l06-log{position:absolute;left:0;width:560px;text-align:center;font-size:11.5px;line-height:1.2;color:#7FD0A8;opacity:0}
+.l06-log.lg1{top:204px;animation:l06lg1 16s infinite}
+.l06-log.lg2{top:226px;animation:l06lg2 16s infinite}
+.l06-syn{position:absolute;left:0;top:256px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l06syn 16s infinite}
+@keyframes l06w{0%{opacity:0}4.4%{opacity:1}96.5%{opacity:1}100%{opacity:0}}
+@keyframes l06ta{0%,4.4%{opacity:0;transform:translateY(6px)}8%{opacity:1;transform:none}45%{opacity:1}49%,100%{opacity:0}}
+@keyframes l06tb{0%,45%{opacity:0;transform:translateY(6px)}49%{opacity:1;transform:none}100%{opacity:1}}
+@keyframes l06ca1{0%,12%{opacity:0}16%{opacity:1;transform:rotate(0)}18%{transform:rotate(-2.5deg)}20%{transform:rotate(2.5deg)}22%{transform:rotate(0)}45%{opacity:1}49%,100%{opacity:.4}}
+@keyframes l06ca2{0%,18%{opacity:0}22%{opacity:1}45%{opacity:1}49%,100%{opacity:.4}}
+@keyframes l06cb{0%,55%{opacity:0}60%,100%{opacity:1}}
+@keyframes l06lg1{0%,38%{opacity:0}42%{opacity:1}88%{transform:scale(1)}90%{transform:scale(1.05)}92%,100%{opacity:1;transform:scale(1)}}
+@keyframes l06lg2{0%,78%{opacity:0}82%{opacity:1}89%{transform:scale(1)}91%{transform:scale(1.05)}93%,100%{opacity:1;transform:scale(1)}}
+@keyframes l06syn{0%,86%{opacity:0}90%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .l06-wrap,.l06-wrap *{animation:none!important}
+  .l06-wrap,.l06-task.tb,.l06-chip.cb1,.l06-chip.cb2,.l06-log,.l06-syn{opacity:1}
+  .l06-task.ta{opacity:0}
+  .l06-chip.ca1,.l06-chip.ca2{opacity:.4}
+}
+</style>
 
 <h2>Multimodaalisuus tarkoittaa useita tietomuotoja</h2>
 <p><strong>Modaliteetti</strong> tarkoittaa tietomuotoa, kuten tekstiä, kuvaa tai ääntä. <strong>Multimodaalinen malli</strong> pystyy käsittelemään useampaa kuin yhtä tietomuotoa. Se voi esimerkiksi lukea käyttäjän kysymyksen ja tarkastella siihen liitettyä valokuvaa.</p>

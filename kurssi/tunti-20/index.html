@@ -45,54 +45,92 @@
 <p><strong>Kuudes kysymys: Onko ihmisen valvonta mahdollista?</strong> Jos ihminen voi valvoa agentin päätöksiä ja puuttua toimintaan, kun jokin menee pieleen, riski on hallittavampi. Agentti voi pyytää ihmisen apua vaikeissa tilanteissa, jolloin riskien hallinta on mahdollista. Jos valvonta on mahdotonta, agentin täytyy toimia lähes täydellisesti. Tämä on harvinaisen kallista rakentaa ja ylläpitää.</p>
 <h2>Käytännön päätöspuu kolmessa tarinassa</h2>
 <p>Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysymystä niissä ohjaavat tekemään.</p>
-<figure class="ai-demo" data-demo-id="lesson-20-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// automaatio toistaa saman polun — agentti valitsee tilanteen mukaan</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:300px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">SELKEÄT, PYSYVÄT SÄÄNNÖT → työnkulku toistaa saman polun</li><li class="ai-demo__mobile-node">MUUTTUVA TILANNE + HARKINTA → agentti valitsee polun, epäselvä eskaloidaan</li></ol></div>
-  <div class="l20-wrap">
-    <div class="l20-lane l20-top"><span class="l20-lh">AUTOMAATIO</span><div class="l20-rail"></div><span class="l20-stn" style="left:96px">A</span><span class="l20-stn" style="left:240px">B</span><span class="l20-stn" style="left:384px">C</span><i class="l20-pk"></i><span class="l20-ll">sama polku joka kerta — tilanteesta riippumatta</span></div>
-    <div class="l20-lane l20-bot"><span class="l20-lh">AGENTTI</span>
-      <div class="l20-case"><span class="l20-c cc1">rutiinikysymys</span><span class="l20-c cc2">epäselvä tapaus</span><span class="l20-c cc3">kriittinen poikkeama!</span></div>
-      <span class="l20-eval">tilannearvio…</span>
-      <div class="l20-br b1"><span>vastaa heti</span></div>
-      <div class="l20-br b2"><span>hae lisätietoa</span></div>
-      <div class="l20-br b3"><span>ohjaa ihmiselle</span></div>
-    </div>
+<figure class="ai-demo" data-demo-id="lesson-20-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// kolme välinettä, sama tehtävävirta — vaihtelu ratkaisee valinnan</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:312px"><div class="ai-demo__mobile-model ai-demo__mobile-model--branch"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">RUTIINI: työnkulku nopein ja halvin — promptaus sitoo sinut, agentin joka ajo maksaa</li><li class="ai-demo__mobile-node">POIKKEUS: työnkulku jumittuu ilman sääntöä — agentti arvioi ja ratkaisee tai ohjaa ihmiselle</li><li class="ai-demo__mobile-node">Väline valitaan tehtävävirran vaihtelun mukaan — monimutkaisempi ei ole automaattisesti parempi</li></ol></div>
+  <div class="l20-wrap" role="img" aria-label="Kolme automatisoinnin välinettä käsittelee samaa tehtävävirtaa. Rutiiniviesteillä kaikki onnistuvat: promptaus vaatii sinut joka kertaan, työnkulku on nopein ja halvin, agentti onnistuu mutta maksaa eniten — rutiiniin työnkulku riittää. Poikkeavassa tapauksessa työnkulku jumittuu ilman sääntöä, promptauksessa selvität itse ja agentti arvioi tilanteen ja ratkaisee tai ohjaa ihmiselle — vaihteluun agentti kannattaa. Monimutkaisempi ei ole automaattisesti parempi.">
+    <span class="l20-hd">KOLME VÄLINETTÄ — SAMA TEHTÄVÄVIRTA</span>
+    <span class="l20-in ia">saapuu: rutiiniviesti ×3</span>
+    <span class="l20-in ib">saapuu: poikkeava tapaus</span>
+    <div class="l20-ln p1"><b class="l20-nm">PROMPTAUS</b><span class="l20-pip">€</span>
+      <i class="l20-tok tp"></i><span class="l20-hand">SINÄ ✋</span>
+      <em class="l20-ds">sinä aloitat ja ohjaat joka kerran</em>
+      <span class="l20-tl"><b class="l20-m pm1">✓</b><b class="l20-m pm2">✓</b><b class="l20-m pm3">✓</b><b class="l20-m pm4">✓</b></span></div>
+    <div class="l20-ln p2"><b class="l20-nm">TYÖNKULKU</b><span class="l20-pip">€€</span>
+      <i class="l20-tok tw"></i><i class="l20-gate"></i>
+      <em class="l20-ds">sama sääntö joka kerta — nopein</em>
+      <span class="l20-wx">ei sääntöä → jumittuu</span>
+      <span class="l20-tl"><b class="l20-m wm1">✓</b><b class="l20-m wm2">✓</b><b class="l20-m wm3">✓</b><b class="l20-m x wm4">✗</b></span></div>
+    <div class="l20-ln p3"><b class="l20-nm">AGENTTI</b><span class="l20-pip pa">€€€</span>
+      <i class="l20-tok ta"></i><span class="l20-th">arvioi…</span>
+      <span class="l20-br">ratkaisee / ohjaa ihmiselle</span>
+      <em class="l20-ds">arvioi tilanteen — kallein ylläpitää</em>
+      <span class="l20-tl"><b class="l20-m am1">✓</b><b class="l20-m am2">✓</b><b class="l20-m am3">✓</b><b class="l20-m am4">✓</b></span></div>
+    <span class="l20-vd va">rutiini → työnkulku riittää</span>
+    <span class="l20-vd vb">vaihtelu → agentti kannattaa</span>
+    <span class="l20-ts">monimutkaisempi ≠ parempi</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Automaatio seuraa aina samaa ennalta määrättyä polkua. Agentti on autonominen: se arvioi tilanteen ensin ja valitsee polun itse — rutiini hoituu heti, epäselvä vaatii lisätietoa ja kriittinen siirtyy ihmiselle.</figcaption></figure>
+<figcaption class="ai-demo__cap">Sama tehtävävirta, kolme välinettä: rutiinissa työnkulku on nopein ja halvin, promptaus sitoo sinut joka kertaan ja agentin jokainen ajo maksaa. Poikkeus kääntää asetelman — sääntö loppuu, agentti arvioi. Väline valitaan tehtävävirran vaihtelun mukaan. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
 <style>
-.l20-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
-.l20-lane{position:absolute;left:0;right:0;background:#11182A;border:1.5px solid #2B3552;border-radius:13px}
-.l20-top{top:0;height:96px}
-.l20-bot{top:108px;height:160px;border-color:oklch(0.66 0.13 208)}
-.l20-lh{position:absolute;left:13px;top:9px;font-size:10.5px;letter-spacing:.12em;color:#B9C2DA}
-.l20-rail{position:absolute;left:84px;right:60px;top:46px;height:3px;background:#3A4560}
-.l20-stn{position:absolute;top:33px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#EAEEF8;background:#1E2740;border:2px solid #44517A;border-radius:50%}
-.l20-pk{position:absolute;left:78px;top:42px;width:11px;height:11px;border-radius:50%;background:#46c7cf;box-shadow:0 0 10px rgba(70,199,207,.8);animation:l20pk 4.66s linear infinite}
-@keyframes l20pk{0%{transform:translateX(0)}12%{transform:translateX(0)}88%{transform:translateX(330px)}100%{transform:translateX(330px)}}
-.l20-ll{position:absolute;left:84px;bottom:8px;font-size:10.5px;color:#8B94B3}
-.l20-case{position:absolute;left:13px;top:34px;width:158px;height:56px}
-.l20-c{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:500;line-height:1.35;color:#06212A;background:#46c7cf;border-radius:10px;padding:4px 8px;opacity:0}
-.l20-c.cc1{animation:l20c1 14s infinite}
-.l20-c.cc2{animation:l20c2 14s infinite}
-.l20-c.cc3{animation:l20c3 14s infinite;background:#F0A38C;color:#3A1408}
-@keyframes l20c1{0%,2%{opacity:0}5%,28%{opacity:1}32%,100%{opacity:0}}
-@keyframes l20c2{0%,35%{opacity:0}38%,61%{opacity:1}65%,100%{opacity:0}}
-@keyframes l20c3{0%,68%{opacity:0}71%,94%{opacity:1}98%,100%{opacity:0}}
-.l20-eval{position:absolute;left:188px;top:56px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:oklch(0.75 0.12 208);animation:l20ev 4.66s ease-in-out infinite}
-@keyframes l20ev{0%,8%{opacity:0}18%,40%{opacity:1}52%,100%{opacity:0}}
-.l20-br{position:absolute;left:300px;width:236px;height:34px;border:1.5px solid #2B3552;border-radius:10px;background:#0E1422}
-.l20-br span{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:11.5px;color:#B9C2DA}
-.l20-br.b1{top:22px;animation:l20b1 14s infinite}
-.l20-br.b2{top:64px;animation:l20b2 14s infinite}
-.l20-br.b3{top:106px;animation:l20b3 14s infinite}
-@keyframes l20b1{0%,9%{border-color:#2B3552;box-shadow:none}13%,28%{border-color:#7FD0A8;box-shadow:0 0 12px rgba(127,208,168,.4)}33%,100%{border-color:#2B3552;box-shadow:none}}
-@keyframes l20b2{0%,42%{border-color:#2B3552;box-shadow:none}46%,61%{border-color:#46c7cf;box-shadow:0 0 12px rgba(70,199,207,.4)}66%,100%{border-color:#2B3552;box-shadow:none}}
-@keyframes l20b3{0%,75%{border-color:#2B3552;box-shadow:none}79%,94%{border-color:#F0A38C;box-shadow:0 0 12px rgba(240,163,140,.45)}99%,100%{border-color:#2B3552;box-shadow:none}}
+.l20-wrap{position:relative;width:560px;height:298px;font-family:var(--font-mono);animation:l20w 14s infinite}
+.l20-wrap:hover,.l20-wrap:hover *{animation-play-state:paused}
+.l20-hd{position:absolute;left:0;top:2px;font-size:11px;font-weight:700;letter-spacing:.07em;color:#EAEEF8}
+.l20-in{position:absolute;right:0;top:0;font-size:10.5px;font-weight:700;border-radius:999px;padding:3px 10px;opacity:0}
+.l20-in.ia{color:#06212A;background:#46C7CF;animation:l20ia 14s infinite}
+.l20-in.ib{color:#0B0F1A;background:#FFD79A;animation:l20ib 14s infinite}
+.l20-ln{position:absolute;left:0;width:560px;height:74px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:7px 10px}
+.l20-ln.p1{top:28px}.l20-ln.p2{top:108px}.l20-ln.p3{top:188px;border-color:#3D6b6e}
+.l20-nm{display:block;font-size:12px;color:#EAEEF8}
+.l20-pip{position:absolute;left:10px;top:26px;font-size:10.5px;letter-spacing:.12em;color:#FFD79A}
+.l20-pip.pa{animation:l20pip 14s infinite}
+.l20-ds{position:absolute;left:10px;bottom:6px;font-style:normal;font-size:10px;color:#8B94B3}
+.l20-tok{position:absolute;left:150px;top:26px;width:13px;height:13px;border-radius:50%;background:#46C7CF;opacity:0}
+.l20-tok.tp{animation:l20tp 14s infinite}
+.l20-tok.tw{animation:l20tw 14s infinite}
+.l20-tok.ta{animation:l20ta 14s infinite}
+.l20-hand{position:absolute;left:216px;top:20px;font-size:10.5px;color:#EAEEF8;border:1px solid #4A5677;border-radius:7px;padding:3px 7px;background:#0E1524;animation:l20hand 14s infinite}
+.l20-gate{position:absolute;left:250px;top:14px;width:0;height:38px;border-left:3px double #7E88A8}
+.l20-th{position:absolute;left:216px;top:22px;font-size:10.5px;color:#C9B7F1;opacity:0;animation:l20th 14s infinite}
+.l20-br{position:absolute;left:284px;top:22px;font-size:10px;color:#7FD0A8;opacity:0;animation:l20br 14s infinite}
+.l20-wx{position:absolute;left:284px;top:22px;font-size:10px;font-weight:700;color:#FFD79A;opacity:0;animation:l20wx 14s infinite}
+.l20-tl{position:absolute;right:10px;top:24px;display:flex;gap:7px}
+.l20-m{width:16px;text-align:center;font-size:13px;font-weight:700;color:#7FD0A8;opacity:0;transform:scale(.5)}
+.l20-m.x{color:#FFD79A}
+.l20-m.pm1{animation:l20s1 14s infinite}.l20-m.pm2{animation:l20s2 14s infinite}.l20-m.pm3{animation:l20s3 14s infinite}.l20-m.pm4{animation:l20p4 14s infinite}
+.l20-m.wm1{animation:l20s1 14s infinite}.l20-m.wm2{animation:l20s2 14s infinite}.l20-m.wm3{animation:l20s3 14s infinite}.l20-m.wm4{animation:l20x4 14s infinite}
+.l20-m.am1{animation:l20s1 14s infinite}.l20-m.am2{animation:l20s2 14s infinite}.l20-m.am3{animation:l20s3 14s infinite}.l20-m.am4{animation:l20a4 14s infinite}
+.l20-vd{position:absolute;top:272px;font-size:10.5px;font-weight:700;border-radius:7px;padding:3px 9px;opacity:0}
+.l20-vd.va{left:0;color:#7FD0A8;border:1.5px solid #7FD0A8;background:rgba(127,208,168,.07);animation:l20va 14s infinite}
+.l20-vd.vb{left:196px;color:#C9B7F1;border:1.5px solid #C9B7F1;background:rgba(201,183,241,.07);animation:l20vb 14s infinite}
+.l20-ts{position:absolute;right:0;top:276px;font-size:11px;font-weight:600;color:#FFD79A}
+@keyframes l20w{0%{opacity:0}3%{opacity:1}97%{opacity:1}100%{opacity:0}}
+@keyframes l20ia{0%,3%{opacity:0}6%{opacity:1}48%{opacity:1}52%,100%{opacity:0}}
+@keyframes l20ib{0%,48%{opacity:0}52%{opacity:1}100%{opacity:1}}
+@keyframes l20tp{0%,7%{opacity:0;transform:translateX(0);background:#46C7CF}9%{opacity:1}12%{transform:translateX(60px)}15%{transform:translateX(60px)}20%{transform:translateX(240px)}22%{opacity:0}
+  55%{opacity:0;transform:translateX(0);background:#FFD79A}57%{opacity:1}61%{transform:translateX(60px)}64%{transform:translateX(60px)}70%{transform:translateX(240px)}72%,100%{opacity:0;transform:translateX(240px);background:#FFD79A}}
+@keyframes l20tw{0%,8%{opacity:0;transform:translateX(0);background:#46C7CF}10%{opacity:1}15%{transform:translateX(240px)}17%{opacity:0}
+  56%{opacity:0;transform:translateX(0);background:#FFD79A}58%{opacity:1}62%{transform:translateX(88px)}63%{transform:translateX(85px)}64%{transform:translateX(91px)}65%{transform:translateX(88px)}73%{opacity:1;transform:translateX(88px)}76%,100%{opacity:0;transform:translateX(88px);background:#FFD79A}}
+@keyframes l20ta{0%,10%{opacity:0;transform:translateX(0);background:#46C7CF}12%{opacity:1}15%{transform:translateX(60px)}19%{transform:translateX(60px)}24%{transform:translateX(240px)}26%{opacity:0}
+  57%{opacity:0;transform:translateX(0);background:#FFD79A}59%{opacity:1}62%{transform:translateX(60px)}67%{transform:translateX(60px)}72%{transform:translateX(240px)}74%,100%{opacity:0;transform:translateX(240px);background:#FFD79A}}
+@keyframes l20hand{0%,12%{transform:scale(1)}13.5%{transform:scale(1.12)}15%{transform:scale(1)}61%{transform:scale(1)}62.5%{transform:scale(1.12)}64%,100%{transform:scale(1)}}
+@keyframes l20th{0%,15%{opacity:0}17%{opacity:1}24%{opacity:1}27%{opacity:0}62%{opacity:0}64%{opacity:1}71%{opacity:1}74%,100%{opacity:0}}
+@keyframes l20br{0%,63%{opacity:0}66%,100%{opacity:1}}
+@keyframes l20wx{0%,65%{opacity:0}68%,100%{opacity:1}}
+@keyframes l20s1{0%,26%{opacity:0;transform:scale(.5)}28%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20s2{0%,30%{opacity:0;transform:scale(.5)}32%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20s3{0%,34%{opacity:0;transform:scale(.5)}36%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20p4{0%,70%{opacity:0;transform:scale(.5)}72%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20x4{0%,65%{opacity:0;transform:scale(.5)}67%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20a4{0%,72%{opacity:0;transform:scale(.5)}74%,100%{opacity:1;transform:scale(1)}}
+@keyframes l20pip{0%,22%{opacity:1}23.5%{opacity:.3}25%{opacity:1}72%{opacity:1}73.5%{opacity:.3}75%,100%{opacity:1}}
+@keyframes l20va{0%,39%{opacity:0;transform:translateY(5px)}43%,100%{opacity:1;transform:none}}
+@keyframes l20vb{0%,80%{opacity:0;transform:translateY(5px)}84%,100%{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
-.l20-pk,.l20-c,.l20-eval,.l20-br{animation:none}
-.l20-pk{transform:translateX(330px)}
-.l20-c.cc3,.l20-eval{opacity:1}
-.l20-br.b3{border-color:#F0A38C}}
+  .l20-wrap,.l20-wrap *{animation:none!important}
+  .l20-wrap,.l20-m,.l20-vd,.l20-in.ib,.l20-wx,.l20-br{opacity:1}
+  .l20-m{transform:scale(1)}
+  .l20-in.ia,.l20-tok,.l20-th{opacity:0}
+}
 </style>
 
 <p><strong>Tilanne 1: Laskujen käsittely.</strong> Yritys käsittelee 100 laskua päivässä. Lasku saapuu, sen summa täytyy vahvistaa ja tiedot pitää kirjata järjestelmään. Säännöt muuttuvat jonkin verran: uusia laskuttajia tulee ja hinnat muuttuvat, mutta perusprosessi pysyy samana. Epäonnistumisen hinta on korkea, koska väärä summa voi aiheuttaa organisaatiolle taloudellista vahinkoa. Ihmisen valvonta on kuitenkin mahdollista: valvoja voi tarkistaa, että laskut on käsitelty oikein.</p>

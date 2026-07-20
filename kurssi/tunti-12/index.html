@@ -30,15 +30,81 @@
 <p>Ajattele korttia työohjeena, jonka toinenkin ihminen voisi ottaa käyttöön. Pysyvä ohje kertoo, mikä työ tehdään ja millä ehdoilla. Vaihtuva aineisto tuo jokaiseen käyttökertaan uuden sisällön. Laatukriteerit puolestaan estävät hyväksymästä vastausta vain siksi, että se kuulostaa sujuvalta. Jos jokin näistä kolmesta puuttuu, korttia on vaikea käyttää johdonmukaisesti tai kehittää havaintojen perusteella.</p>
 <blockquote class="pause"><p><strong>Tunnin ydinkysymys:</strong> Mikä yksi promptimuutos paransi vastausta — ja millä havainnolla osoitat vaikutuksen?</p>
 </blockquote>
-<figure class="ai-demo" data-demo-id="lesson-12-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// yksi muutos kerrallaan — vaikutus jää näkyviin</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:286px"><div class="ai-demo__mobile-model ai-demo__mobile-model--flow"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">Prompti v1</li><li class="ai-demo__mobile-node">+ kohderyhmä ja konteksti</li><li class="ai-demo__mobile-node">+ lähde ja vaiheet</li><li class="ai-demo__mobile-node">+ haluttu muoto</li><li class="ai-demo__mobile-node">Tallenna testattu kortti promptityönkuluksi</li></ol></div>
-  <div style="display:flex;align-items:center;gap:22px;width:720px;font-family:var(--font-mono)">
-    <div style="flex:1;padding:22px;color:#fff;background:#11182a;border:1.5px solid #44517a;border-radius:14px"><b>VERSIO 1</b><span style="display:block;margin-top:15px">sama tehtävä</span><span style="display:block;margin-top:8px">sama syöte</span></div>
-    <div style="padding:16px;text-align:center;color:#6a309d;background:#f4effc;border-radius:12px"><b>+ yksi<br>nimetty muutos</b></div>
-    <div style="flex:1;padding:22px;color:#fff;background:#211832;border:1.5px solid #b887e0;border-radius:14px"><b>VERSIO 2</b><span style="display:block;margin-top:15px">samat kriteerit</span><span style="display:block;margin-top:8px">havaittu vaikutus</span></div>
+<figure class="ai-demo" data-demo-id="lesson-12-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama koe — yksi nimetty muutos kerrallaan</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:312px"><div class="ai-demo__mobile-model ai-demo__mobile-model--flow"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">Kriteerit lukitaan ennen ajoa → V1: kaksi täyttyy, yksi ei (keksityt määräajat)</li><li class="ai-demo__mobile-node">Täsmälleen yksi nimetty muutos korttiin — muut rivit ennallaan</li><li class="ai-demo__mobile-node">V2 samalla aineistolla: juuri se kriteeri kääntyy → ero on muutoksen ansiota</li></ol></div>
+  <div class="l12-wrap" role="img" aria-label="Promptikorttia parannetaan kontrolloidusti. Ensin kriteerit lukitaan ennen ajoa ja versio 1 arvioidaan: kaksi kriteeriä täyttyy, yksi ei — malli keksi määräaikoja. Sitten korttiin tehdään täsmälleen yksi nimetty muutos: älä keksi puuttuvia määräaikoja. Versio 2 ajetaan samalla aineistolla, ja juuri se kriteeri kääntyy hyväksytyksi. Ero voidaan lukea muutoksen ansioksi, koska vain yksi asia muuttui.">
+    <div class="l12-card"><i class="l12-ph">PROMPTIKORTTI</i>
+      <span class="l12-ln"><i class="l12-bar"></i>tehtävä</span>
+      <span class="l12-ln"><i class="l12-bar"></i>vastausmuoto</span>
+      <span class="l12-ln"><i class="l12-bar"></i>pysyvä raja</span>
+      <span class="l12-ch"><b class="l12-old">—</b><b class="l12-new">+ älä keksi puuttuvia määräaikoja</b></span>
+      <em class="l12-same">muut rivit ennallaan</em>
+      <span class="l12-cnt">muutoksia: 1</span></div>
+    <div class="l12-kp"><i class="l12-ph">KRITEERIT · <b class="l12-pre">ennen ajoa</b></i>
+      <span class="l12-hv"><b class="hv1">V1</b><b class="hv2">V2</b></span>
+      <span class="l12-kr">kaikki kohdat mukana<b class="l12-m a1">✓</b><b class="l12-m b1">✓</b></span>
+      <span class="l12-kr">alkaa verbillä<b class="l12-m a2">✓</b><b class="l12-m b2">✓</b></span>
+      <span class="l12-kr">ei keksittyjä määräaikoja<b class="l12-m x a3">✗</b><b class="l12-m b3 ring">✓</b></span>
+      <em class="l12-note">V1: keksi 2 määräaikaa</em></div>
+    <span class="l12-data d1">aineisto</span>
+    <span class="l12-data d2">sama aineisto</span>
+    <span class="l12-res">ero ↔ muutos — tällä aineistolla</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kun tehtävä, syöte ja arviointikriteerit pysyvät samoina, yhden promptimuutoksen vaikutusta voi arvioida. Jos kaikki vaihtuu samalla kertaa, syy jää arvaukseksi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Vaikutuksen voi väittää vain, kun kriteerit lukittiin ennen ajoa ja vain yksi asia muuttui. Silloin V1:n ja V2:n eron voi lukea muutoksen ansioksi — tällä aineistolla, tässä kokeessa. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<style>
+.l12-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono);animation:l12w 21s infinite}
+.l12-wrap:hover,.l12-wrap:hover *{animation-play-state:paused}
+.l12-ph{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8}
+.l12-ph .l12-pre{color:#7FD0A8;animation:l12pre 21s infinite;display:inline-block}
+.l12-card{position:absolute;left:2px;top:8px;width:238px;height:236px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:10px 12px}
+.l12-ln{display:flex;align-items:center;gap:7px;margin-top:12px;font-size:10.5px;color:#B9C2DA}
+.l12-bar{display:inline-block;width:64px;height:10px;border-radius:5px;background:#2E3A5C;flex:none}
+.l12-ch{position:relative;display:block;margin-top:12px;height:30px}
+.l12-ch b{position:absolute;left:0;top:0;width:100%;box-sizing:border-box;font-size:10.5px;line-height:1.25;font-weight:400}
+.l12-old{color:#8B94B3;padding-top:6px;animation:l12old 21s infinite}
+.l12-new{color:#0B0F1A;background:#C9B7F1;border-radius:7px;padding:4px 8px;font-weight:700;opacity:0;animation:l12new 21s infinite}
+.l12-same{position:absolute;left:12px;bottom:30px;font-style:normal;font-size:10px;color:#7FD0A8;opacity:0;animation:l12same 21s infinite}
+.l12-cnt{position:absolute;left:12px;bottom:8px;font-size:10.5px;font-weight:700;color:#C9B7F1;border:1px solid #C9B7F1;border-radius:999px;padding:2px 8px;opacity:0;animation:l12cnt 21s infinite}
+.l12-kp{position:absolute;left:256px;top:8px;width:302px;height:236px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:10px 12px}
+.l12-hv{position:absolute;right:12px;top:9px;width:64px;display:flex;gap:12px}
+.l12-hv b{width:26px;text-align:center;font-size:10.5px;color:#B9C2DA}
+.l12-kr{position:relative;display:block;margin-top:14px;padding-right:76px;font-size:10.5px;line-height:1.3;color:#EAEEF8}
+.l12-kr .l12-m{position:absolute;top:-2px;width:26px;text-align:center;font-size:13px;font-weight:700;color:#7FD0A8;opacity:0;transform:scale(.4)}
+.l12-kr .l12-m.x{color:#FFD79A}
+.l12-kr b:nth-of-type(1){right:50px}
+.l12-kr b:nth-of-type(2){right:12px}
+.l12-m.ring{border:1.5px solid #C9B7F1;border-radius:50%;line-height:1.4;height:22px;top:-4px}
+.l12-m.a1{animation:l12a1 21s infinite}.l12-m.a2{animation:l12a2 21s infinite}.l12-m.a3{animation:l12a3 21s infinite}
+.l12-m.b1{animation:l12b1 21s infinite}.l12-m.b2{animation:l12b2 21s infinite}.l12-m.b3{animation:l12b3 21s infinite}
+.l12-note{position:absolute;left:12px;bottom:8px;font-style:normal;font-size:10px;color:#FFD79A;opacity:0;animation:l12note 21s infinite}
+.l12-data{position:absolute;left:60px;top:254px;font-size:10.5px;color:#06212A;background:#46C7CF;border-radius:999px;padding:3px 10px;opacity:0}
+.l12-data.d1{animation:l12d1 21s infinite}
+.l12-data.d2{animation:l12d2 21s infinite}
+.l12-res{position:absolute;right:20px;top:256px;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l12res 21s infinite}
+@keyframes l12w{0%{opacity:0}3%{opacity:1}97%{opacity:1}100%{opacity:0}}
+@keyframes l12pre{0%,2%{transform:scale(1)}5%{transform:scale(1.12)}8%,100%{transform:scale(1)}}
+@keyframes l12d1{0%,8%{opacity:0;transform:translateX(-40px)}13%{opacity:1;transform:none}30%{opacity:1}34%,100%{opacity:0}}
+@keyframes l12a1{0%,15%{opacity:0;transform:scale(.4)}18%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12a2{0%,20%{opacity:0;transform:scale(.4)}23%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12a3{0%,25%{opacity:0;transform:scale(.4)}28%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12note{0%,28%{opacity:0}31%,100%{opacity:1}}
+@keyframes l12old{0%,38%{opacity:1}42%,100%{opacity:0}}
+@keyframes l12new{0%,40%{opacity:0;transform:translateX(-8px)}45%,100%{opacity:1;transform:none}}
+@keyframes l12same{0%,47%{opacity:0}50%,100%{opacity:1}}
+@keyframes l12cnt{0%,52%{opacity:0;transform:scale(.7)}55%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12d2{0%,62%{opacity:0;transform:translateX(-40px)}66%{opacity:1;transform:none}86%{opacity:1}90%,100%{opacity:0}}
+@keyframes l12b1{0%,70%{opacity:0;transform:scale(.4)}73%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12b2{0%,74%{opacity:0;transform:scale(.4)}77%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12b3{0%,78%{opacity:0;transform:scale(.4)}81%,100%{opacity:1;transform:scale(1)}}
+@keyframes l12res{0%,84%{opacity:0}88%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .l12-wrap,.l12-wrap *{animation:none!important}
+  .l12-wrap,.l12-m,.l12-note,.l12-new,.l12-same,.l12-cnt,.l12-res{opacity:1}
+  .l12-m{transform:scale(1)}
+  .l12-old,.l12-data{opacity:0}
+}
+</style>
 
 <h2>Valitse toistuva tehtävä, jonka osaat arvioida</h2>
 <p>Hyvä promptikortti ratkaisee rajatun tehtävän, joka toistuu samankaltaisena mutta saa joka kerta uuden aineiston. Esimerkiksi:</p>
