@@ -10,73 +10,85 @@ Määrittely on lupaus tulevasta toiminnasta. Se kertoo, ketä autetaan, missä 
 
 > **Tunnin ydinkysymys:** Mitä botin pitää auttaa tiettyä käyttäjää tekemään — ja mistä huomaat, että tehtävä onnistui?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sumeasta ideasta arvioitavaksi määrittelyksi — prompti on viimeinen askel</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:322px">
-  <div class="l14-wrap" role="img" aria-label="Botti-idea tarkentuu määrittelyksi. Sumea idea Opiskelubotti on liian laaja, joten se tiivistetään mittatikkuun: kerhon uusi jäsen tarvitsee apua sääntöjen ja aikojen löytämiseen, jotta on valmiina harjoituksiin. Onnistumiskriteeri auttaa hyvin hylätään, koska se ei ole havaittava, ja tilalle tulee: vastaus löytyy tietopohjasta. Rajakysymys ei törmää seinään vaan ohjataan yhteyshenkilölle. Määrittely valmistuu ennen promptia.">
+<figure class="ai-demo"><span class="ai-demo__tag" id="l14-t"><i aria-hidden="true">// </i>sumeasta ideasta arvioitavaksi määrittelyksi — prompti on viimeinen askel</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:368px">
+  <div class="l14-wrap" data-once role="img" aria-labelledby="l14-t" aria-describedby="l14-d">
+    <span class="sr-only" id="l14-d">Botti-idea tarkentuu kuusikohtaiseksi määrittelyksi: käyttäjä, tehtävä, havaittava onnistuminen, keskustelun eteneminen, rooli ja äänensävy sekä rajat, joilla on ovi. Tietotarpeet kirjataan erilliseen korttiin. Prompti kirjoitetaan vasta, kun kaikki kohdat ovat valmiit.</span>
     <span class="l14-mt"><b class="l14-slot s1"><i class="e">KÄYTTÄJÄ</i><i class="f f1">kerhon uusi jäsen</i></b><span class="l14-mw">tarvitsee apua:</span><b class="l14-slot s2"><i class="e">TEHTÄVÄ</i><i class="f f2">löytää säännöt ja ajat</i></b></span>
     <span class="l14-mt m2"><span class="l14-mw">jotta</span><b class="l14-slot s3"><i class="e">LOPPUTULOS</i><i class="f f3">valmiina harjoituksiin</i></b></span>
     <div class="l14-ws"><i class="l14-ph">TYÖTILA</i>
       <span class="l14-blob">Opiskelubotti?</span>
       <em class="l14-tag t1">liian laaja</em>
       <span class="l14-fz"><b class="l14-fzc">auttaa hyvin?<i class="l14-fzs"></i></b><em class="l14-tag t2">ei havaittava</em></span>
-      <span class="l14-ok">✓ vastaus löytyy tietopohjasta</span>
+      <span class="l14-ok">✓ löytää hyväksytystä lähteestä ajan, varusteet ja seuraavan askeleen</span>
+      <span class="l14-mini mA">eteneminen: kysy tarkennus, jos pyyntö on epäselvä</span>
+      <span class="l14-mini mB">rooli ja sävy: asiallinen ohjaaja</span>
       <i class="l14-line la"></i><i class="l14-line lb"></i>
-      <span class="l14-test">kysymys aiheen ulkopuolelta</span>
+      <span class="l14-test">kysymys ohi aiheen</span>
       <span class="l14-step p1">rajaus yhdellä lauseella</span>
       <span class="l14-step p2">→ ohjaa yhteyshenkilölle</span></div>
     <div class="l14-def"><i class="l14-ph">MÄÄRITTELY</i>
       <span class="l14-dr d1"><b class="bx x1"></b>Käyttäjä</span>
       <span class="l14-dr d2"><b class="bx x2"></b>Tehtävä</span>
-      <span class="l14-dr d3"><b class="bx x3"></b>Onnistuminen</span>
-      <span class="l14-dr d4"><b class="bx x4"></b>Rajat</span>
+      <span class="l14-dr d3"><b class="bx x3"></b>Havaittava onnistuminen</span>
+      <span class="l14-dr d4"><b class="bx x4"></b>Keskustelun eteneminen</span>
+      <span class="l14-dr d5"><b class="bx x5"></b>Rooli ja äänensävy</span>
+      <span class="l14-dr d6"><b class="bx x6"></b>Rajat ja seuraava askel</span>
       <span class="l14-fin"><i>VALMIS — EI VIELÄ PROMPTI</i></span></div>
+    <span class="l14-info"><b>TIETOTARPEET · erillinen kortti:</b> säännöt ja hinnat · aikataulut · yhteyshenkilö — vain hyväksytyt lähteet</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Määrittely on tarkentumista: laaja idea tiivistyy käyttäjäksi, tehtäväksi, havaittavaksi onnistumiskriteeriksi ja rajoiksi, joilla on ovi — ei seinää. Prompti kirjoitetaan vasta, kun määrittely on valmis. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Määrittely on tarkentumista: käyttäjä, tehtävä, havaittava onnistuminen, keskustelun eteneminen, rooli ja äänensävy sekä rajat, joilla on ovi — ei seinää. Tietotarpeet kirjataan erilliseen korttiin. Prompti kirjoitetaan vasta, kun määrittelyn kaikki kohdat ovat valmiit.</figcaption></figure>
 <style>
-.l14-wrap{position:relative;width:560px;height:306px;font-family:var(--font-mono);animation:l14w 21s infinite}
-.l14-wrap:hover,.l14-wrap:hover *{animation-play-state:paused}
-.l14-ph{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8}
+.l14-wrap{position:relative;width:560px;height:352px;font-family:var(--font-mono);animation:l14w 21s 1 forwards}
+.l14-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
 .l14-mt{position:absolute;left:0;top:0;width:560px;display:flex;align-items:center;justify-content:center;gap:8px}
 .l14-mt.m2{top:32px}
-.l14-mw{font-size:10.5px;color:#B9C2DA}
-.l14-slot{position:relative;width:184px;height:26px}
-.l14-slot i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:10.5px;border-radius:8px;box-sizing:border-box}
-.l14-slot .e{color:#7E88A8;border:1.5px dashed #4A5677;letter-spacing:.08em}
+.l14-mw{font-size:12px;color:#B9C2DA}
+.l14-slot{position:relative;width:188px;height:26px}
+.l14-slot i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;border-radius:8px;box-sizing:border-box}
+.l14-slot .e{color:#7E88A8;border:1.5px dashed #4A5677;letter-spacing:.06em}
 .l14-slot .f{color:#0B0F1A;font-weight:700;opacity:0}
-.l14-slot .f1{background:#C9B7F1;animation:l14f1 21s infinite}
-.l14-slot .f2{background:#46C7CF;animation:l14f2 21s infinite}
-.l14-slot .f3{background:#7FD0A8;animation:l14f3 21s infinite}
-.l14-slot.s1 .e{animation:l14e1 21s infinite}
-.l14-slot.s2 .e{animation:l14e2 21s infinite}
-.l14-slot.s3 .e{animation:l14e3 21s infinite}
-.l14-ws{position:absolute;left:2px;top:72px;width:330px;height:234px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 12px}
-.l14-blob{position:absolute;left:30px;top:52px;width:250px;height:44px;display:flex;align-items:center;justify-content:center;font-size:12.5px;color:#B9C2DA;border:2px dashed #4A5677;border-radius:22px;opacity:0;animation:l14blob 21s infinite}
-.l14-tag{position:absolute;font-style:normal;font-size:10px;color:#FFD79A;border:1px solid #FFD79A;border-radius:6px;padding:2px 6px;opacity:0;background:rgba(255,215,154,.07)}
-.l14-tag.t1{left:214px;top:32px;animation:l14t1 21s infinite}
-.l14-fz{position:absolute;left:24px;top:56px;opacity:0;animation:l14fz 21s infinite}
-.l14-fzc{position:relative;display:inline-block;font-size:11.5px;font-weight:400;color:#EAEEF8;border:1px solid #2B3552;border-radius:8px;padding:5px 10px;background:#0E1524}
-.l14-fzs{position:absolute;left:6px;top:50%;width:86%;height:2px;background:#FFD79A;transform:scaleX(0);transform-origin:left;animation:l14fzs 21s infinite}
-.l14-fz .l14-tag{position:static;margin-left:8px;opacity:0;animation:l14t2 21s infinite}
-.l14-ok{position:absolute;left:24px;top:100px;font-size:11px;font-weight:700;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:8px;padding:5px 10px;opacity:0;animation:l14ok 21s infinite}
+.l14-slot .f1{background:#C9B7F1;animation:l14f1 21s 1 forwards}
+.l14-slot .f2{background:#46C7CF;animation:l14f2 21s 1 forwards}
+.l14-slot .f3{background:#7FD0A8;animation:l14f3 21s 1 forwards}
+.l14-slot.s1 .e{animation:l14e1 21s 1 forwards}
+.l14-slot.s2 .e{animation:l14e2 21s 1 forwards}
+.l14-slot.s3 .e{animation:l14e3 21s 1 forwards}
+.l14-ws{position:absolute;left:2px;top:72px;width:320px;height:240px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 12px}
+.l14-blob{position:absolute;left:26px;top:52px;width:250px;height:44px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#B9C2DA;border:2px dashed #4A5677;border-radius:22px;opacity:0;animation:l14blob 21s 1 forwards}
+.l14-tag{position:absolute;font-style:normal;font-size:12px;color:#FFD79A;border:1px solid #FFD79A;border-radius:6px;padding:2px 6px;opacity:0;background:rgba(255,215,154,.07)}
+.l14-tag.t1{left:206px;top:32px;animation:l14t1 21s 1 forwards}
+.l14-fz{position:absolute;left:16px;top:34px;opacity:0;animation:l14fz 21s 1 forwards}
+.l14-fzc{position:relative;display:inline-block;font-size:12px;font-weight:400;color:#EAEEF8;border:1px solid #2B3552;border-radius:8px;padding:5px 10px;background:#0E1524}
+.l14-fzs{position:absolute;left:6px;top:50%;width:86%;height:2px;background:#FFD79A;transform:scaleX(0);transform-origin:left;animation:l14fzs 21s 1 forwards}
+.l14-fz .l14-tag{position:static;margin-left:8px;opacity:0;animation:l14t2 21s 1 forwards}
+.l14-ok{position:absolute;left:16px;top:72px;width:280px;box-sizing:border-box;font-size:12px;line-height:1.3;font-weight:700;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:8px;padding:5px 9px;opacity:0;animation:l14ok 21s 1 forwards}
+.l14-mini{position:absolute;left:16px;width:280px;box-sizing:border-box;font-size:12px;line-height:1.25;color:#B9C2DA;border:1px solid #2B3552;border-left:3px solid #7FD0A8;border-radius:7px;padding:4px 8px;opacity:0}
+.l14-mini.mA{top:126px;animation:l14mA 21s 1 forwards}
+.l14-mini.mB{top:162px;animation:l14mB 21s 1 forwards}
 .l14-line{position:absolute;left:216px;width:0;border-left:2px dashed #7E88A8;transform:scaleY(0)}
-.l14-line.la{top:26px;height:92px;transform-origin:top;animation:l14la 21s infinite}
-.l14-line.lb{top:158px;height:66px;transform-origin:bottom;animation:l14lb 21s infinite}
-.l14-test{position:absolute;left:14px;top:150px;font-size:10.5px;color:#EAEEF8;border:1px solid #4A5677;border-radius:8px;padding:4px 8px;opacity:0;animation:l14test 21s infinite}
-.l14-step{position:absolute;font-size:10px;line-height:1.25;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:7px;padding:3px 7px;opacity:0;background:rgba(127,208,168,.07)}
-.l14-step.p1{left:14px;top:188px;animation:l14p1 21s infinite}
-.l14-step.p2{left:180px;top:188px;width:140px;box-sizing:border-box;animation:l14p2 21s infinite}
-.l14-def{position:absolute;left:344px;top:72px;width:214px;height:234px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 12px}
-.l14-dr{position:relative;display:block;margin-top:13px;padding-left:22px;font-size:11px;line-height:1.3;color:#EAEEF8}
+.l14-line.la{top:70px;height:50px;transform-origin:top;animation:l14la 21s 1 forwards}
+.l14-line.lb{top:170px;height:58px;transform-origin:bottom;animation:l14lb 21s 1 forwards}
+.l14-test{position:absolute;left:14px;top:126px;font-size:12px;color:#EAEEF8;border:1px solid #4A5677;border-radius:8px;padding:4px 8px;opacity:0;animation:l14test 21s 1 forwards}
+.l14-step{position:absolute;font-size:12px;line-height:1.25;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:7px;padding:3px 7px;opacity:0;background:rgba(127,208,168,.07)}
+.l14-step.p1{left:14px;top:196px;animation:l14p1 21s 1 forwards;opacity:0}
+.l14-step.p2{left:222px;top:132px;width:96px;box-sizing:border-box;animation:l14p2 21s 1 forwards}
+.l14-def{position:absolute;left:334px;top:72px;width:224px;height:240px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 12px}
+.l14-dr{position:relative;display:block;margin-top:9px;padding-left:22px;font-size:12px;line-height:1.25;color:#EAEEF8}
 .l14-dr .bx{position:absolute;left:0;top:1px;width:12px;height:12px;border:1.5px solid #4A5677;border-radius:3px}
 .l14-dr .bx::after{content:'✓';position:absolute;left:1px;top:-3px;font-size:11px;font-weight:700;color:#7FD0A8;opacity:0}
-.l14-dr .bx.x1::after{animation:l14x1 21s infinite}
-.l14-dr .bx.x2::after{animation:l14x2 21s infinite}
-.l14-dr .bx.x3::after{animation:l14x3 21s infinite}
-.l14-dr .bx.x4::after{animation:l14x4 21s infinite}
-.l14-fin{position:absolute;left:0;bottom:14px;width:100%;text-align:center;opacity:0;animation:l14fin 21s infinite}
-.l14-fin i{display:inline-block;font-style:normal;font-size:10.5px;font-weight:700;color:#FFD79A;border:1.5px solid #FFD79A;border-radius:7px;padding:4px 8px;transform:rotate(-4deg);background:rgba(255,215,154,.07)}
-@keyframes l14w{0%{opacity:0}3%{opacity:1}97.5%{opacity:1}100%{opacity:0}}
+.l14-dr .bx.x1::after{animation:l14x1 21s 1 forwards}
+.l14-dr .bx.x2::after{animation:l14x2 21s 1 forwards}
+.l14-dr .bx.x3::after{animation:l14x3 21s 1 forwards}
+.l14-dr .bx.x4::after{animation:l14x4 21s 1 forwards}
+.l14-dr .bx.x5::after{animation:l14x5 21s 1 forwards}
+.l14-dr .bx.x6::after{animation:l14x6 21s 1 forwards}
+.l14-fin{position:absolute;left:0;bottom:12px;width:100%;text-align:center;opacity:0;animation:l14fin 21s 1 forwards}
+.l14-fin i{display:inline-block;font-style:normal;font-size:12px;font-weight:700;color:#FFD79A;border:1.5px solid #FFD79A;border-radius:7px;padding:4px 8px;transform:rotate(-4deg);background:rgba(255,215,154,.07)}
+.l14-info{position:absolute;left:0;top:322px;width:560px;box-sizing:border-box;font-size:12px;line-height:1.3;color:#B9C2DA;border:1px dashed #4A5677;border-radius:9px;padding:6px 10px;opacity:0;animation:l14info 21s 1 forwards}
+.l14-info b{color:#46C7CF;font-weight:700}
+@keyframes l14w{0%{opacity:0}3%{opacity:1}100%{opacity:1}}
 @keyframes l14blob{0%,4%{opacity:0;transform:scale(1)}8%{opacity:1}17%{opacity:1;transform:scale(1)}24%{opacity:0;transform:scale(.42) translateY(-60px)}100%{opacity:0}}
 @keyframes l14t1{0%,10%{opacity:0}14%{opacity:1}22%{opacity:1}26%,100%{opacity:0}}
 @keyframes l14e1{0%,24%{opacity:1}27%,100%{opacity:0}}
@@ -85,28 +97,37 @@ Määrittely on lupaus tulevasta toiminnasta. Se kertoo, ketä autetaan, missä 
 @keyframes l14e2{0%,29%{opacity:1}32%,100%{opacity:0}}
 @keyframes l14f2{0%,29%{opacity:0;transform:scale(.8)}32%,100%{opacity:1;transform:scale(1)}}
 @keyframes l14x2{0%,30%{opacity:0}33%,100%{opacity:1}}
-@keyframes l14e3{0%,36%{opacity:1}39%,100%{opacity:0}}
-@keyframes l14f3{0%,36%{opacity:0;transform:scale(.8)}39%,100%{opacity:1;transform:scale(1)}}
-@keyframes l14fz{0%,40%{opacity:0;transform:translateY(6px)}44%,100%{opacity:1;transform:none}}
-@keyframes l14fzs{0%,45%{transform:scaleX(0)}48%,100%{transform:scaleX(1)}}
-@keyframes l14t2{0%,46%{opacity:0}49%,100%{opacity:1}}
-@keyframes l14ok{0%,50%{opacity:0;transform:translateY(6px)}55%,100%{opacity:1;transform:none}}
-@keyframes l14x3{0%,58%{opacity:0}61%,100%{opacity:1}}
-@keyframes l14la{0%,67%{transform:scaleY(0)}69%,100%{transform:scaleY(1)}}
-@keyframes l14lb{0%,67%{transform:scaleY(0)}69%,100%{transform:scaleY(1)}}
-@keyframes l14test{0%,69%{opacity:0;transform:translateX(-30px)}72%{opacity:1;transform:translateX(0)}76%,100%{opacity:1;transform:translateX(120px)}}
-@keyframes l14p1{0%,76%{opacity:0}80%,100%{opacity:1}}
-@keyframes l14p2{0%,80%{opacity:0;transform:translateX(-8px)}84%,100%{opacity:1;transform:none}}
-@keyframes l14x4{0%,86%{opacity:0}89%,100%{opacity:1}}
-@keyframes l14fin{0%,90%{opacity:0;transform:scale(.6)}93%,100%{opacity:1;transform:scale(1)}}
+@keyframes l14e3{0%,35%{opacity:1}38%,100%{opacity:0}}
+@keyframes l14f3{0%,35%{opacity:0;transform:scale(.8)}38%,100%{opacity:1;transform:scale(1)}}
+@keyframes l14fz{0%,39%{opacity:0;transform:translateY(6px)}42%{opacity:1;transform:none}63%{opacity:1}66%,100%{opacity:0}}
+@keyframes l14fzs{0%,43%{transform:scaleX(0)}46%,100%{transform:scaleX(1)}}
+@keyframes l14t2{0%,44%{opacity:0}47%,100%{opacity:1}}
+@keyframes l14ok{0%,47%{opacity:0;transform:translateY(6px)}51%{opacity:1;transform:none}64%{transform:none}68%,100%{opacity:1;transform:translateY(-38px)}}
+@keyframes l14x3{0%,52%{opacity:0}55%,100%{opacity:1}}
+@keyframes l14mA{0%,56%{opacity:0;transform:translateY(6px)}59%{opacity:1;transform:none}63%{opacity:1}66%,100%{opacity:0}}
+@keyframes l14x4{0%,59%{opacity:0}62%,100%{opacity:1}}
+@keyframes l14mB{0%,60%{opacity:0;transform:translateY(6px)}63%{opacity:1;transform:none}64.5%{opacity:1}67%,100%{opacity:0}}
+@keyframes l14x5{0%,63%{opacity:0}66%,100%{opacity:1}}
+@keyframes l14la{0%,68%{transform:scaleY(0)}70%,100%{transform:scaleY(1)}}
+@keyframes l14lb{0%,68%{transform:scaleY(0)}70%,100%{transform:scaleY(1)}}
+@keyframes l14test{0%,70%{opacity:0;transform:translateX(-30px)}73%{opacity:1;transform:translateX(0)}77%,100%{opacity:1;transform:translateX(116px)}}
+@keyframes l14p1{0%,77%{opacity:0}80%,100%{opacity:1}}
+@keyframes l14p2{0%,80%{opacity:0;transform:translateX(-8px)}83%,100%{opacity:1;transform:none}}
+@keyframes l14x6{0%,84%{opacity:0}86%,100%{opacity:1}}
+@keyframes l14info{0%,86%{opacity:0;transform:translateY(5px)}89%,100%{opacity:1;transform:none}}
+@keyframes l14fin{0%,92%{opacity:0;transform:scale(.6)}95%,100%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){
   .l14-wrap,.l14-wrap *{animation:none!important}
-  .l14-wrap,.l14-slot .f,.l14-fz,.l14-ok,.l14-test,.l14-step,.l14-fin,.l14-dr .bx::after{opacity:1}
+  .l14-wrap,.l14-ok,.l14-test,.l14-step,.l14-fin,.l14-info{opacity:1}
+  .l14-fz,.l14-mini{opacity:0}
+  .l14-ok{transform:translateY(-38px)}
+  .l14-slot .f{opacity:1}
+  .l14-dr .bx::after{opacity:1}
   .l14-slot .e,.l14-blob,.l14-tag.t1{opacity:0}
   .l14-fz .l14-tag{opacity:1}
   .l14-fzs{transform:scaleX(1)}
   .l14-line{transform:scaleY(1)}
-  .l14-test{transform:translateX(120px)}
+  .l14-test{transform:translateX(116px)}
 }
 </style>
 

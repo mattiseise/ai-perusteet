@@ -22,50 +22,50 @@
 <h2>Johdanto: valmistele näyttö ennen rakentamista</h2>
 <p>Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt työ jatkuu kahdella toisiinsa liittyvällä päätöksellä. Ensin valitset aineiston, johon botin vastausten pitää perustua. Sen jälkeen päätät, millaisella näytöllä voit myöhemmin osoittaa, että botti toimii tarkoitetulla tavalla.</p>
 <p>Et vielä testaa omaa bottiasi, koska se rakennetaan vasta tunnilla 17. Sen sijaan kuratoit tietopohjan ja kirjoitat <strong>testisuunnitelman</strong> etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.</p>
-<figure class="ai-demo" data-demo-id="lesson-15-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// maaliviiva ei siirry — sama vastaus, kaksi tuomiota</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:306px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">ILMAN ENNAKKO-ODOTUSTA: läpäisyehto siirtyy vastauksen luo → kaikki ”läpäisee”</li><li class="ai-demo__mobile-node">LUKITTU ENNEN: sama vastaus jää vajaaksi → aukko paljastuu</li><li class="ai-demo__mobile-node">Hylkäys on tietoa — vain lukittu odotus paljastaa aukon</li></ol></div>
-  <div class="l15-wrap" role="img" aria-label="Sama botin vastaus arvioidaan kahdella kaistalla. Ylhäällä odotus päätetään vasta vastauksen jälkeen: läpäisyehto siirtyy vastauksen luo ja kaikki näyttää läpäisevän — mittari siirtyi. Alhaalla läpäisyehto lukittiin ennen rakentamista: sama vastaus jää vajaaksi ja väliin paljastuu aukko. Vain ennalta lukittu odotus voi paljastaa aukon.">
-    <div class="l15-lane la"><i class="l15-ph">A · ODOTUS PÄÄTETÄÄN VASTAUKSEN JÄLKEEN</i>
+<figure class="ai-demo" data-demo-id="lesson-15-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l15-t"><i aria-hidden="true">// </i>maaliviiva ei siirry — sama vastaus, kaksi tuomiota</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:306px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">ILMAN ENNAKKOEHTOA: läpäisyehto siirtyy vastauksen luo → kaikki ”läpäisee”</li><li class="ai-demo__mobile-node">LUKITTU ENNEN: sama vastaus jää vajaaksi → aukko paljastuu (esim. puuttuvaa hintaa ei saa arvata)</li><li class="ai-demo__mobile-node">Hylkäys on tietoa — vain lukittu odotus paljastaa aukon</li></ol></div>
+  <div class="l15-wrap" data-once role="img" aria-labelledby="l15-t" aria-describedby="l15-d">
+    <span class="sr-only" id="l15-d">Sama vastaus kahdella kaistalla: jälkikäteen asetettu läpäisyehto siirtyy vastauksen kokoiseksi, ennalta lukittu ehto paljastaa aukon.</span>
+    <div class="l15-lane la"><i class="l15-ph">A · LÄPÄISYEHTO PÄÄTETÄÄN JÄLKIKÄTEEN</i>
       <span class="l15-ans a1">botin vastaus</span>
       <i class="l15-gl g1"></i><i class="l15-gl g2"></i>
       <i class="l15-ln mv"></i>
       <span class="l15-vd vda">”läpäisi” — mittari siirtyi</span></div>
     <span class="l15-conn">sama vastaus</span>
-    <div class="l15-lane lb"><i class="l15-ph">B · ODOTUS LUKITTU ENNEN RAKENTAMISTA</i>
+    <div class="l15-lane lb"><i class="l15-ph">B · LÄPÄISYEHTO LUKITTU ENNEN RAKENTAMISTA</i>
       <span class="l15-ans a2">botin vastaus</span>
-      <i class="l15-gap"></i><em class="l15-gt">aukko</em>
-      <i class="l15-ln fx"></i><span class="l15-lk">🔒</span><em class="l15-lkt">LUKITTU ENNEN</em>
+      <i class="l15-gap"></i><em class="l15-gt">aukko: puuttuvaa hintaa ei saa arvata</em>
+      <i class="l15-ln fx"></i><svg class="l15-lk" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="#7FD0A8" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg><em class="l15-lkt">LUKITTU ENNEN</em>
       <span class="l15-vd vdb">ei läpi — aukko löytyi ✓</span></div>
-    <span class="l15-ft">Sama vastaus — vain lukittu odotus paljastaa aukon</span>
+    <span class="l15-ft">Sama vastaus — vain lukittu läpäisyehto paljastaa aukon</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Läpäisyehto lukitaan ennen botin ensimmäistä vastausta. Jos kriteeri asetetaan vasta vastauksen jälkeen, se liukuu vastauksen kokoiseksi ja kaikki näyttää läpäisevän — vain kiinteä odotus paljastaa aukon. Hylkäys on tietoa, ei epäonnistumista. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Läpäisyehto lukitaan ennen botin ensimmäistä vastausta. Jos läpäisyehto asetetaan vasta vastauksen jälkeen, se liukuu vastauksen kokoiseksi ja kaikki näyttää läpäisevän — vain ennalta lukittu ehto paljastaa aukon, esimerkiksi sen, ettei puuttuvaa hintaa saa arvata. Hylkäys on tietoa, ei epäonnistumista.</figcaption></figure>
 <style>
-.l15-wrap{position:relative;width:560px;height:290px;font-family:var(--font-mono);animation:l15w 21s infinite}
-.l15-wrap:hover,.l15-wrap:hover *{animation-play-state:paused}
-.l15-ph{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
+.l15-wrap{position:relative;width:560px;height:290px;font-family:var(--font-mono);animation:l15w 21s 1 forwards}
+.l15-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
 .l15-lane{position:absolute;left:0;width:560px;height:106px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 12px}
 .l15-lane.la{top:0}
 .l15-lane.lb{top:128px}
-.l15-ans{position:absolute;left:170px;top:44px;width:130px;box-sizing:border-box;text-align:center;font-size:11px;color:#0B0F1A;font-weight:700;background:#B9C2DA;border-radius:8px;padding:6px 0;opacity:0}
-.l15-ans.a1{animation:l15ans 21s infinite}
-.l15-ans.a2{animation:l15ans 21s infinite}
+.l15-ans{position:absolute;left:170px;top:44px;width:130px;box-sizing:border-box;text-align:center;font-size:12px;color:#0B0F1A;font-weight:700;background:#B9C2DA;border-radius:8px;padding:6px 0;opacity:0}
+.l15-ans.a1{animation:l15ans 21s 1 forwards}
+.l15-ans.a2{animation:l15ans 21s 1 forwards}
 .l15-ln{position:absolute;top:30px;height:58px;width:0;border-left:2.5px dashed #C9B7F1}
-.l15-ln.mv{left:418px;opacity:0;animation:l15mv 21s infinite}
-.l15-ln.fx{left:418px;transform:scaleY(0);transform-origin:top;animation:l15fx 21s infinite}
+.l15-ln.mv{left:418px;opacity:0;animation:l15mv 21s 1 forwards}
+.l15-ln.fx{left:418px;transform:scaleY(0);transform-origin:top;animation:l15fx 21s 1 forwards}
 .l15-gl{position:absolute;top:34px;height:50px;width:0;border-left:2px dashed #C9B7F1;opacity:0}
-.l15-gl.g1{left:380px;animation:l15g1 21s infinite}
-.l15-gl.g2{left:418px;animation:l15g2 21s infinite}
-.l15-lk{position:absolute;left:426px;top:26px;font-size:12px;animation:l15lk 21s infinite}
-.l15-lkt{position:absolute;left:444px;top:30px;font-style:normal;font-size:9.5px;font-weight:700;color:#7FD0A8;opacity:0;animation:l15lkt 21s infinite}
-.l15-gap{position:absolute;left:302px;top:44px;width:114px;height:26px;background:repeating-linear-gradient(45deg,rgba(255,215,154,.35) 0 6px,transparent 6px 12px);border-radius:4px;transform:scaleX(0);transform-origin:left;animation:l15gap 21s infinite}
-.l15-gt{position:absolute;left:340px;top:74px;font-style:normal;font-size:10px;color:#FFD79A;opacity:0;animation:l15gt 21s infinite}
-.l15-vd{position:absolute;right:10px;top:8px;font-size:10.5px;font-weight:700;border-radius:7px;padding:3px 8px;opacity:0;white-space:nowrap}
-.l15-vd.vda{color:#FFD79A;border:1.5px solid #FFD79A;background:rgba(255,215,154,.07);animation:l15vda 21s infinite}
-.l15-vd.vdb{color:#46C7CF;border:1.5px solid #46C7CF;background:rgba(70,199,207,.07);animation:l15vdb 21s infinite}
-.l15-conn{position:absolute;left:196px;top:110px;font-size:10px;color:#B9C2DA;border:1px dashed #4A5677;border-radius:6px;padding:1px 8px;opacity:0;animation:l15conn 21s infinite}
-.l15-ft{position:absolute;left:0;top:252px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l15ft 21s infinite}
-@keyframes l15w{0%{opacity:0}3%{opacity:1}97.5%{opacity:1}100%{opacity:0}}
+.l15-gl.g1{left:380px;animation:l15g1 21s 1 forwards}
+.l15-gl.g2{left:418px;animation:l15g2 21s 1 forwards}
+.l15-lk{position:absolute;left:424px;top:38px;animation:l15lk 21s 1 forwards}
+.l15-lkt{position:absolute;left:442px;top:40px;font-style:normal;font-size:12px;font-weight:700;color:#7FD0A8;opacity:0;animation:l15lkt 21s 1 forwards}
+.l15-gap{position:absolute;left:302px;top:44px;width:114px;height:26px;background:repeating-linear-gradient(45deg,rgba(255,215,154,.35) 0 6px,transparent 6px 12px);border-radius:4px;transform:scaleX(0);transform-origin:left;animation:l15gap 21s 1 forwards}
+.l15-gt{position:absolute;left:216px;top:76px;white-space:nowrap;font-style:normal;font-size:12px;color:#FFD79A;opacity:0;animation:l15gt 21s 1 forwards}
+.l15-vd{position:absolute;right:10px;top:8px;font-size:12px;font-weight:700;border-radius:7px;padding:3px 8px;opacity:0;white-space:nowrap}
+.l15-vd.vda{color:#FFD79A;border:1.5px solid #FFD79A;background:rgba(255,215,154,.07);animation:l15vda 21s 1 forwards}
+.l15-vd.vdb{color:#46C7CF;border:1.5px solid #46C7CF;background:rgba(70,199,207,.07);animation:l15vdb 21s 1 forwards}
+.l15-conn{position:absolute;left:196px;top:110px;font-size:12px;color:#B9C2DA;border:1px dashed #4A5677;border-radius:6px;padding:1px 8px;opacity:0;animation:l15conn 21s 1 forwards}
+.l15-ft{position:absolute;left:0;top:252px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l15ft 21s 1 forwards}
+@keyframes l15w{0%{opacity:0}3%{opacity:1}97.5%,100%{opacity:1}}
 @keyframes l15fx{0%,3%{transform:scaleY(0)}8%,100%{transform:scaleY(1)}}
 @keyframes l15lk{0%,7%{transform:scale(1) rotate(0)}9%{transform:scale(1.35)}11%,100%{transform:scale(1)}}
 @keyframes l15lkt{0%,10%{opacity:0}13%,100%{opacity:1}}

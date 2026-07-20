@@ -18,105 +18,103 @@ Tällä tunnilla valitset yhden neljästä reitistä. Kaikkien ei tarvitse tehd�
 
 Tunnin läpi kulkee yksi esimerkki. Kirjasto tarvitsee verkkosivulleen 20 sekunnin äänettömän opastusvideon, joka näyttää kirjan palauttamisen kolmessa vaiheessa. Ennen videon tekemistä sovitaan, että vaiheiden pitää näkyä oikeassa järjestyksessä, tekstitykset pitää ehtiä lukea rauhassa, esineiden ja tilan pitää säilyä johdonmukaisina eikä kuvassa saa olla tunnistettavia asiakkaita. Nämä kriteerit eivät muutu sen mukaan, millainen ensimmäisestä versiosta tulee.
 
-<figure class="ai-demo"><span class="ai-demo__tag">// väline vaihtuu — sykli ei: tavoite → versio → arvio → yksi muutos</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:322px">
-  <div class="l16-wrap" role="img" aria-label="Sama arviointisykli toistuu kolmella eri välineellä. Kuva: kohde hukkui taustaan, joten sommittelu tarkennettiin. Ääni: puhe peittyi musiikkiin, joten voimakkuussuhde muutettiin. Koodi: tyhjä syöte kaatoi ohjelman, joten virhetesti lisättiin. Joka kierroksella tehdään täsmälleen yksi muutos, ja laboratorioloki kerää havainnon ja muutoksen — väline vaihtuu, sykli ei.">
+<figure class="ai-demo"><span class="ai-demo__tag" id="l16-t"><i aria-hidden="true">// </i>väline vaihtuu — sykli ei: tavoite → kriteerit → versio → havainto → yksi muutos → vastuu → julkaisu</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:408px">
+  <div class="l16-wrap" data-once role="img" aria-labelledby="l16-t" aria-describedby="l16-d">
+    <span class="sr-only" id="l16-d">Sama arviointisykli toistuu neljällä välineellä: tavoite, kriteerit, versio 1, havainto, täsmälleen yksi muutos, versio 2, vastuullisuustarkistus ja julkaisu tai hylkäys. Kuva: kohde hukkui taustaan, sommittelu tarkennettiin. Ääni: puhe peittyi musiikkiin, voimakkuussuhde muutettiin. Video: tekstitys vaihtui liian nopeasti, kohtauksen kesto muutettiin seitsemään sekuntiin. Koodi: tyhjä syöte kaatoi ohjelman, virhetesti lisättiin. Laboratorioloki kerää havainnon ja muutoksen joka kierrokselta.</span>
     <span class="l16-md md1">KUVA</span><span class="l16-md md2">ÄÄNI</span><span class="l16-md md3">VIDEO</span><span class="l16-md md4">KOODI</span>
-    <div class="l16-cy"><i class="l16-ph">SYKLI</i>
-      <span class="l16-st s1">TAVOITE</span><i class="l16-ar aa1">→</i><span class="l16-st s2">VERSIO 1</span><i class="l16-ar aa2">→</i><span class="l16-st s3">ARVIO</span><i class="l16-ar aa3">→</i><span class="l16-st s4">1 MUUTOS</span><i class="l16-ar aa4">→</i><span class="l16-st s5">VERSIO 2</span>
+    <div class="l16-cy"><i class="l16-ph">SYKLI</i><span class="l16-dl">Δ muutoksia: 1</span>
+      <span class="l16-st s1">TAVOITE</span><i class="l16-ar aa1">→</i><span class="l16-st s2">KRITEERIT</span><i class="l16-ar aa2">→</i><span class="l16-st s3">VERSIO 1</span><i class="l16-ar aa3">→</i><span class="l16-st s4">HAVAINTO</span>
+      <i class="l16-ar dn">↓</i>
+      <span class="l16-st r2 s8">JULKAISE / HYLKÄÄ</span><i class="l16-ar aa4">←</i><span class="l16-st r2 s7">VASTUU</span><i class="l16-ar aa5">←</i><span class="l16-st r2 s6">VERSIO 2</span><i class="l16-ar aa6">←</i><span class="l16-st r2 s5">1 MUUTOS</span>
       <i class="l16-tok"></i>
-      <span class="l16-sl slh"><b class="v1">kohde hukkui taustaan</b><b class="v2">puhe peittyi musiikkiin</b><b class="v3">tyhjä syöte kaataa ohjelman</b></span>
-      <span class="l16-sl slm"><b class="v1">sommittelu tarkennettu</b><b class="v2">voimakkuussuhde muutettu</b><b class="v3">virhetesti lisätty</b></span>
-      <span class="l16-dl">Δ muutoksia: 1</span></div>
+      <span class="l16-sl"><b class="v1">kohde hukkui taustaan → sommittelu tarkennettu</b><b class="v2">puhe peittyi musiikkiin → voimakkuussuhde muutettu</b><b class="v3">tekstitys vaihtui liian nopeasti → kohtauksen kesto 7 sekuntiin</b><b class="v4">tyhjä syöte kaataa ohjelman → virhetesti lisätty</b></span></div>
     <div class="l16-lg"><i class="l16-ph">LABORATORIOLOKI</i>
       <span class="l16-hr"><b>väline</b><b>havainto</b><b>yksi muutos</b></span>
       <span class="l16-row r1"><b class="tg t1">KUVA</b><b>kohde hukkui taustaan</b><b>sommittelu tarkennettu</b></span>
-      <span class="l16-row r2"><b class="tg t2">ÄÄNI</b><b>puhe peittyi musiikkiin</b><b>voimakkuussuhde muutettu</b></span>
-      <span class="l16-row r3"><b class="tg t3">KOODI</b><b>tyhjä syöte kaataa ohjelman</b><b>virhetesti lisätty</b></span></div>
+      <span class="l16-row rw2"><b class="tg t2">ÄÄNI</b><b>puhe peittyi musiikkiin</b><b>voimakkuussuhde muutettu</b></span>
+      <span class="l16-row rw3"><b class="tg t3">VIDEO</b><b>tekstitys vaihtui liian nopeasti</b><b>kohtauksen kesto 7 sekuntiin</b></span>
+      <span class="l16-row rw4"><b class="tg t4">KOODI</b><b>tyhjä syöte kaataa ohjelman</b><b>virhetesti lisätty</b></span></div>
     <span class="l16-ft">Väline vaihtuu — sykli ei</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Erikoistuneet työkalut eroavat tuotoksissa, mutta työtapa on sama: tavoite, versio, arvio, täsmälleen yksi nimetty muutos ja uusi versio. Tärkein tuotos on loki, johon havainto ja muutos kirjataan joka kierrokselta. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Erikoistuneet työkalut eroavat tuotoksissa, mutta työtapa on sama: tavoite ja kriteerit, versio, havainto, täsmälleen yksi nimetty muutos, uusi versio, vastuullisuustarkistus ja vasta sitten julkaisu tai hylkäys. Tärkein tuotos on loki, johon havainto ja muutos kirjataan joka kierrokselta.</figcaption></figure>
 <style>
-.l16-wrap{position:relative;width:560px;height:306px;font-family:var(--font-mono);animation:l16w 21s infinite}
-.l16-wrap:hover,.l16-wrap:hover *{animation-play-state:paused}
-.l16-ph{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8}
-.l16-md{position:absolute;top:0;width:92px;height:24px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;color:#B9C2DA;border:1px solid #2B3552;border-radius:999px;background:#0E1524;opacity:.45}
-.l16-md.md1{left:78px;animation:l16md1 21s infinite}
-.l16-md.md2{left:180px;animation:l16md2 21s infinite}
-.l16-md.md3{left:282px}
-.l16-md.md4{left:384px;animation:l16md3 21s infinite}
-.l16-cy{position:absolute;left:0;top:36px;width:560px;height:118px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 10px}
-.l16-st{position:absolute;top:32px;width:92px;height:30px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#EAEEF8;border:1px solid #4A5677;border-radius:8px;background:#0E1524}
-.l16-st.s1{left:12px}.l16-st.s2{left:120px}.l16-st.s3{left:228px}.l16-st.s4{left:336px}.l16-st.s5{left:444px}
-.l16-ar{position:absolute;top:38px;font-style:normal;font-size:12px;color:#7E88A8}
-.l16-ar.aa1{left:106px}
-.l16-ar.aa2{left:214px}
-.l16-ar.aa3{left:322px}
-.l16-ar.aa4{left:430px}
-.l16-tok{position:absolute;left:52px;top:16px;width:12px;height:12px;border-radius:50%;background:#46C7CF;opacity:0;animation:l16tok 21s infinite}
-.l16-sl{position:absolute;top:68px;height:30px}
-.l16-sl.slh{left:196px;width:156px}
-.l16-sl.slm{left:326px;width:130px;text-align:right}
-.l16-sl b{position:absolute;left:0;top:0;width:100%;font-size:9.5px;line-height:1.25;font-weight:400;color:#B9C2DA;opacity:0}
-.l16-sl.slh b{color:#FFD79A}
-.l16-sl.slm b{color:#7FD0A8}
-.l16-sl .v1{animation:l16v1 21s infinite}
-.l16-sl .v2{animation:l16v2 21s infinite}
-.l16-sl .v3{animation:l16v3 21s infinite}
-.l16-dl{position:absolute;right:10px;top:8px;font-size:10px;font-weight:700;color:#C9B7F1;border:1px solid #C9B7F1;border-radius:999px;padding:2px 8px;opacity:0;animation:l16dl 21s infinite}
-.l16-lg{position:absolute;left:0;top:166px;width:560px;height:112px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 12px}
-.l16-hr,.l16-row{display:flex;gap:10px;margin-top:6px;font-size:9.5px;line-height:1.3}
+.l16-wrap{position:relative;width:560px;height:392px;font-family:var(--font-mono);animation:l16w 28s 1 forwards}
+.l16-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
+.l16-md{position:absolute;top:0;width:100px;height:26px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#EAEEF8;border:1px solid #2B3552;border-radius:999px;background:#0E1524;opacity:.55}
+.l16-md.md1{left:60px;animation:l16md1 28s 1 forwards}
+.l16-md.md2{left:172px;animation:l16md2 28s 1 forwards}
+.l16-md.md3{left:284px;animation:l16md3 28s 1 forwards}
+.l16-md.md4{left:396px;animation:l16md4 28s 1 forwards}
+.l16-cy{position:absolute;left:0;top:34px;width:560px;height:158px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 10px}
+.l16-st{position:absolute;top:30px;width:118px;height:30px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:700;color:#EAEEF8;border:1px solid #4A5677;border-radius:8px;background:#0E1524}
+.l16-st.s1{left:10px}.l16-st.s2{left:148px}.l16-st.s3{left:286px}.l16-st.s4{left:424px}
+.l16-st.r2{top:76px}
+.l16-st.s5{left:424px}.l16-st.s6{left:286px}.l16-st.s7{left:148px}.l16-st.s8{left:10px;font-size:11.5px}
+.l16-ar{position:absolute;font-style:normal;font-size:13px;color:#7E88A8}
+.l16-ar.aa1{left:131px;top:37px}.l16-ar.aa2{left:269px;top:37px}.l16-ar.aa3{left:407px;top:37px}
+.l16-ar.dn{left:479px;top:59px}
+.l16-ar.aa4{left:131px;top:83px}.l16-ar.aa5{left:269px;top:83px}.l16-ar.aa6{left:407px;top:83px}
+.l16-tok{position:absolute;left:62px;top:18px;width:12px;height:12px;border-radius:50%;background:#46C7CF;opacity:0;animation:l16tok 28s 1 forwards}
+.l16-sl{position:absolute;left:10px;top:116px;width:536px;height:30px}
+.l16-sl b{position:absolute;left:0;top:0;width:100%;text-align:center;font-size:12px;line-height:1.25;font-weight:400;color:#FFD79A;opacity:0}
+.l16-sl .v1{animation:l16v1 28s 1 forwards}
+.l16-sl .v2{animation:l16v2 28s 1 forwards}
+.l16-sl .v3{animation:l16v3 28s 1 forwards}
+.l16-sl .v4{animation:l16v4 28s 1 forwards}
+.l16-dl{position:absolute;right:10px;top:8px;font-size:12px;font-weight:700;color:#C9B7F1;border:1px solid #C9B7F1;border-radius:999px;padding:2px 9px;opacity:0;animation:l16dl 28s 1 forwards}
+.l16-lg{position:absolute;left:0;top:202px;width:560px;height:158px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 12px}
+.l16-hr,.l16-row{display:flex;gap:10px;margin-top:7px;font-size:12px;line-height:1.25}
 .l16-hr b,.l16-row b{font-weight:400}
-.l16-hr b:nth-child(1),.l16-row b:nth-child(1){width:56px;flex:none}
-.l16-hr b:nth-child(2),.l16-row b:nth-child(2){width:230px;flex:none}
-.l16-hr b{color:#7E88A8;letter-spacing:.06em}
+.l16-hr b:nth-child(1),.l16-row b:nth-child(1){width:52px;flex:none}
+.l16-hr b:nth-child(2),.l16-row b:nth-child(2){width:236px;flex:none}
+.l16-hr b{color:#7E88A8;letter-spacing:.05em}
 .l16-row{color:#EAEEF8;opacity:0}
 .l16-row .tg{font-weight:700}
-.l16-row .tg.t1{color:#46C7CF}.l16-row .tg.t2{color:#FFD79A}.l16-row .tg.t3{color:#7FD0A8}
-.l16-row.r1{animation:l16r1 21s infinite}
-.l16-row.r2{animation:l16r2 21s infinite}
-.l16-row.r3{animation:l16r3 21s infinite}
-.l16-ft{position:absolute;left:0;top:288px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A}
-@keyframes l16w{0%{opacity:0}3%{opacity:1}97.5%{opacity:1}100%{opacity:0}}
-@keyframes l16md1{0%{opacity:.45}1.5%{opacity:1}31%{opacity:1}33.3%,100%{opacity:.45}}
-@keyframes l16md2{0%,33.3%{opacity:.45}35%{opacity:1}64.5%{opacity:1}66.7%,100%{opacity:.45}}
-@keyframes l16md3{0%,66.7%{opacity:.45}68.3%{opacity:1}96%{opacity:1}97.5%,100%{opacity:.45}}
+.l16-row .tg.t1{color:#46C7CF}.l16-row .tg.t2{color:#FFD79A}.l16-row .tg.t3{color:#C9B7F1}.l16-row .tg.t4{color:#7FD0A8}
+.l16-row.r1{animation:l16r1 28s 1 forwards}
+.l16-row.rw2{animation:l16r2 28s 1 forwards}
+.l16-row.rw3{animation:l16r3 28s 1 forwards}
+.l16-row.rw4{animation:l16r4 28s 1 forwards}
+.l16-ft{position:absolute;left:0;top:372px;width:560px;text-align:center;font-size:12.5px;font-weight:600;color:#FFD79A}
+@keyframes l16w{0%{opacity:0}2.5%{opacity:1}100%{opacity:1}}
+@keyframes l16md1{0%{opacity:.55}1%{opacity:1}23%{opacity:1}25%,100%{opacity:.55}}
+@keyframes l16md2{0%,25%{opacity:.55}26%{opacity:1}48%{opacity:1}50%,100%{opacity:.55}}
+@keyframes l16md3{0%,50%{opacity:.55}51%{opacity:1}73%{opacity:1}75%,100%{opacity:.55}}
+@keyframes l16md4{0%,75%{opacity:.55}76%,100%{opacity:1}}
 @keyframes l16tok{
-  0%,1%{opacity:0;transform:translateX(0);background:#46C7CF}
-  2.5%{opacity:1}
-  4.5%{transform:translateX(108px)}
-  7%{transform:translateX(216px)}
-  9.5%{transform:translateX(324px)}
-  12%{transform:translateX(432px);background:#46C7CF}
-  14.5%{opacity:1}16%{opacity:0;transform:translateX(432px)}
-  33.3%{opacity:0;transform:translateX(0);background:#FFD79A}
-  34.5%{opacity:1}
-  37.8%{transform:translateX(108px)}
-  40.3%{transform:translateX(216px)}
-  42.8%{transform:translateX(324px)}
-  45.3%{transform:translateX(432px);background:#FFD79A}
-  47.8%{opacity:1}49.3%{opacity:0;transform:translateX(432px)}
-  66.7%{opacity:0;transform:translateX(0);background:#7FD0A8}
-  67.9%{opacity:1}
-  71.2%{transform:translateX(108px)}
-  73.7%{transform:translateX(216px)}
-  76.2%{transform:translateX(324px)}
-  78.7%{transform:translateX(432px);background:#7FD0A8}
-  81.2%{opacity:1}82.7%,100%{opacity:0;transform:translateX(432px)}
+  0%,0.7%{opacity:0;transform:translate(0,0);background:#46C7CF}1.6%{opacity:1}
+  3.4%{transform:translate(138px,0)}5.2%{transform:translate(276px,0)}7%{transform:translate(414px,0)}
+  8.8%{transform:translate(414px,46px)}10.6%{transform:translate(276px,46px)}12.4%{transform:translate(138px,46px)}14.2%{transform:translate(0,46px)}
+  16%{opacity:1;transform:translate(0,46px)}17.5%{opacity:0;transform:translate(0,46px)}
+  25%{opacity:0;transform:translate(0,0);background:#FFD79A}25.9%{opacity:1}
+  28.4%{transform:translate(138px,0)}30.2%{transform:translate(276px,0)}32%{transform:translate(414px,0)}
+  33.8%{transform:translate(414px,46px)}35.6%{transform:translate(276px,46px)}37.4%{transform:translate(138px,46px)}39.2%{transform:translate(0,46px)}
+  41%{opacity:1}42.5%{opacity:0;transform:translate(0,46px)}
+  50%{opacity:0;transform:translate(0,0);background:#C9B7F1}50.9%{opacity:1}
+  53.4%{transform:translate(138px,0)}55.2%{transform:translate(276px,0)}57%{transform:translate(414px,0)}
+  58.8%{transform:translate(414px,46px)}60.6%{transform:translate(276px,46px)}62.4%{transform:translate(138px,46px)}64.2%{transform:translate(0,46px)}
+  66%{opacity:1}67.5%{opacity:0;transform:translate(0,46px)}
+  75%{opacity:0;transform:translate(0,0);background:#7FD0A8}75.9%{opacity:1}
+  78.4%{transform:translate(138px,0)}80.2%{transform:translate(276px,0)}82%{transform:translate(414px,0)}
+  83.8%{transform:translate(414px,46px)}85.6%{transform:translate(276px,46px)}87.4%{transform:translate(138px,46px)}89.2%{transform:translate(0,46px)}
+  91.5%{opacity:1}93%,100%{opacity:0;transform:translate(0,46px)}
 }
-@keyframes l16v1{0%,7%{opacity:0}9.5%{opacity:1}30%{opacity:1}33.3%,100%{opacity:0}}
-@keyframes l16v2{0%,40.3%{opacity:0}42.8%{opacity:1}63.4%{opacity:1}66.7%,100%{opacity:0}}
-@keyframes l16v3{0%,73.7%{opacity:0}76.2%,100%{opacity:1}}
-@keyframes l16dl{0%,12%{opacity:0;transform:scale(.7)}14%,100%{opacity:1;transform:scale(1)}}
-@keyframes l16r1{0%,14%{opacity:0;transform:translateY(6px)}17%,100%{opacity:1;transform:none}}
-@keyframes l16r2{0%,47.3%{opacity:0;transform:translateY(6px)}50.3%,100%{opacity:1;transform:none}}
-@keyframes l16r3{0%,80.7%{opacity:0;transform:translateY(6px)}83.7%,100%{opacity:1;transform:none}}
+@keyframes l16v1{0%,7%{opacity:0}9%{opacity:1}23%{opacity:1}25%,100%{opacity:0}}
+@keyframes l16v2{0%,32%{opacity:0}34%{opacity:1}48%{opacity:1}50%,100%{opacity:0}}
+@keyframes l16v3{0%,57%{opacity:0}59%{opacity:1}73%{opacity:1}75%,100%{opacity:0}}
+@keyframes l16v4{0%,82%{opacity:0}84%,100%{opacity:1}}
+@keyframes l16dl{0%,10%{opacity:0;transform:scale(.7)}12%,100%{opacity:1;transform:scale(1)}}
+@keyframes l16r1{0%,15%{opacity:0;transform:translateY(6px)}17.5%,100%{opacity:1;transform:none}}
+@keyframes l16r2{0%,40%{opacity:0;transform:translateY(6px)}42.5%,100%{opacity:1;transform:none}}
+@keyframes l16r3{0%,65%{opacity:0;transform:translateY(6px)}67.5%,100%{opacity:1;transform:none}}
+@keyframes l16r4{0%,90%{opacity:0;transform:translateY(6px)}92.5%,100%{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
   .l16-wrap,.l16-wrap *{animation:none!important}
   .l16-wrap,.l16-row,.l16-dl{opacity:1}
-  .l16-sl .v3{opacity:1}
-  .l16-md.md4{opacity:1}
+  .l16-sl .v4{opacity:1}
+  .l16-md{opacity:.85}
   .l16-tok{opacity:0}
 }
 </style>

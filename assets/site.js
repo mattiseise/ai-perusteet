@@ -72,9 +72,25 @@ function initTabs(){var list=document.querySelector('.lesson-tabs[role="tablist"
   });
 }
 function initDemoKeyboard(){document.querySelectorAll('.ai-demo[data-demo-kind="interactive"] label[for]').forEach(function(label){
-  label.tabIndex=0;label.setAttribute('role','button');label.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();label.click();}});
   var input=document.getElementById(label.htmlFor);if(input){input.addEventListener('focus',function(){label.classList.add('demo-focus');});input.addEventListener('blur',function(){label.classList.remove('demo-focus');});}
   });
+}
+function initL20Quiz(){
+  var wrap=document.querySelector('.l20q-wrap');if(!wrap)return;
+  var rounds=[1,2,3].map(function(i){return wrap.querySelector('.l20q-round.r'+i);});
+  var live=document.createElement('span');live.className='sr-only';live.setAttribute('role','status');live.setAttribute('aria-live','polite');wrap.appendChild(live);
+  function activeIdx(){var s3=document.getElementById('l20q-s3'),s2=document.getElementById('l20q-s2');
+    if(s3&&s3.checked)return 3;if(s2&&s2.checked)return 2;return 1;}
+  function syncRounds(focusHeading){var a=activeIdx();
+    rounds.forEach(function(r,ix){if(!r)return;if(ix+1===a){r.removeAttribute('hidden');}else{r.setAttribute('hidden','');}});
+    if(focusHeading){var sc=rounds[a-1]&&rounds[a-1].querySelector('.l20q-sc');
+      if(sc){sc.tabIndex=-1;sc.focus();}}}
+  ['l20q-s1','l20q-s2','l20q-s3'].forEach(function(id){var el=document.getElementById(id);
+    if(el)el.addEventListener('change',function(){syncRounds(true);});});
+  var FB={'l20q-1a':'f1a','l20q-1b':'f1b','l20q-1c':'f1c','l20q-2a':'f2a','l20q-2b':'f2b','l20q-2c':'f2c','l20q-3a':'f3a','l20q-3b':'f3b','l20q-3c':'f3c'};
+  Object.keys(FB).forEach(function(id){var el=document.getElementById(id);if(!el)return;
+    el.addEventListener('change',function(){var fb=wrap.querySelector('.l20q-fb.'+FB[id]);if(fb){live.textContent=fb.textContent;}});});
+  syncRounds(false);
 }
 function initScrollableRegions(){document.querySelectorAll('.panel table').forEach(function(table){table.tabIndex=0;});}
 function tabFromHash(){
@@ -189,6 +205,69 @@ function fitAiDemos(){
 }
 var __fitT; function fitAiDemosDebounced(){clearTimeout(__fitT);__fitT=setTimeout(fitAiDemos,120);}
 
+// ---- Demo-ohjaimet: nakyvyyskaynnistys, Pysayta/Jatka, Toista alusta ----
+function adSetPaused(fig,paused){
+  fig.classList.toggle('ad-paused',paused);
+  var b=fig.querySelector('.ad-toggle');
+  if(b&&!b.disabled){b.setAttribute('aria-pressed',paused?'true':'false');b.textContent=paused?'Jatka':'Pysäytä';}
+}
+function adEnd(fig){
+  fig.classList.add('ad-ended');
+  var b=fig.querySelector('.ad-toggle');
+  if(b){b.disabled=true;b.textContent='Valmis';b.removeAttribute('aria-pressed');}
+}
+function adArmEnd(fig){
+  if(!fig.querySelector('[data-once]'))return;
+  clearTimeout(fig.__adT);
+  var wrap=fig.querySelector('[data-once]');
+  var dur=parseFloat(getComputedStyle(wrap).animationDuration)||0;
+  if(dur>0){var left=Math.max(0,dur-(fig.__adEl||0));var t0=Date.now();
+    fig.__adT=setTimeout(function(){fig.__adEl=dur;adEnd(fig);},left*1000+200);
+    fig.__adT0=t0;}
+}
+function adHold(fig){clearTimeout(fig.__adT);
+  if(fig.__adT0){fig.__adEl=(fig.__adEl||0)+(Date.now()-fig.__adT0)/1000;fig.__adT0=null;}}
+function adRestart(fig){
+  var st=fig.querySelector('.ai-demo__stage');
+  fig.classList.remove('ad-ended');fig.__adEl=0;fig.__adUser=false;
+  var b=fig.querySelector('.ad-toggle');
+  if(b){b.disabled=false;}
+  st.classList.add('ad-reset');void st.offsetHeight;st.classList.remove('ad-reset');
+  adSetPaused(fig,false);adArmEnd(fig);
+}
+function initDemoCtrls(){
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var figs=document.querySelectorAll('.ai-demo');
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){var fig=e.target;
+      if(fig.classList.contains('ad-ended')||fig.__adUser)return;
+      if(e.isIntersecting){adSetPaused(fig,false);adArmEnd(fig);}
+      else{adSetPaused(fig,true);adHold(fig);}
+    });
+  },{threshold:0.3}):null;
+  for(var i=0;i<figs.length;i++){(function(fig){
+    var st=fig.querySelector('.ai-demo__stage');if(!st)return;
+    var anim=false,els=st.querySelectorAll('*');
+    for(var j=0;j<els.length&&!anim;j++){if(getComputedStyle(els[j]).animationName!=='none')anim=true;}
+    if(!anim)return;
+    var bar=document.createElement('div');bar.className='ai-demo__ctrl';
+    var tg=document.createElement('button');tg.type='button';tg.className='ad-btn ad-toggle';
+    tg.setAttribute('aria-pressed','true');tg.textContent='Jatka';
+    var rs=document.createElement('button');rs.type='button';rs.className='ad-btn ad-restart';rs.textContent='Toista alusta';
+    bar.appendChild(tg);bar.appendChild(rs);
+    var cap=fig.querySelector('figcaption');
+    fig.insertBefore(bar,cap||null);
+    tg.addEventListener('click',function(){
+      var p=!fig.classList.contains('ad-paused');
+      fig.__adUser=p;adSetPaused(fig,p);
+      if(p)adHold(fig);else adArmEnd(fig);
+    });
+    rs.addEventListener('click',function(){adRestart(fig);});
+    adSetPaused(fig,true);
+    if(io)io.observe(fig);else{adSetPaused(fig,false);adArmEnd(fig);}
+  })(figs[i]);}
+}
+
 // ---- Init ----
 function ciInit(){
   initConsent();
@@ -197,6 +276,7 @@ function ciInit(){
   initViewSwitch();
   initTabs();
   initDemoKeyboard();
+  initL20Quiz();
   initScrollableRegions();
   if(window.CI&&window.CI.lid){
     window.cid=window.CI.lid; // twReflect (practice.js) lukee bcai-reflect-avaimen tästä
@@ -207,6 +287,7 @@ function ciInit(){
     runMermaid();
   }
   fitAiDemos();
+  initDemoCtrls();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ciInit);}else{ciInit();}
 window.addEventListener('load',fitAiDemos);

@@ -38,14 +38,16 @@ Erottelu on tärkeä, koska palvelun nimi ei yksin kerro, mitä aineistolle tapa
 4. **Säilytetäänkö tai käytetäänkö aineistoa myöhemmin?** Tallentuuko historia, voiko ihminen tarkastaa sisältöä tai käytetäänkö sitä palvelun kehittämiseen?
 5. **Mihin muihin järjestelmiin palvelu on yhteydessä?** Voiko aineisto siirtyä esimerkiksi hakupalveluun, tiedostovarastoon tai toiseen rajapintaan?
 
-<figure class="ai-demo"><span class="ai-demo__tag">// sama tiedosto — kolme reittiä, ja mitä kustakin jää jäljelle</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:312px">
-  <div class="l11-wrap" role="img" aria-label="Sama tiedosto kulkee kolme reittiä. Pilvipalveluun lähetetty kopio ylittää verkon rajan, ja vastauksen palattua palveluun voi jäädä kopio — tarkista ehdot. Organisaation palveluun lähetetty kopio ylittää myös rajan, mutta sopimus määrittää käsittelyn. Paikallinen ajo ei ylitä verkon rajaa, mutta silti on tarkistettava yhteydet ja päivitykset. Päätös luetaan reitistä, ei työkalun nimestä.">
+<figure class="ai-demo"><span class="ai-demo__tag" id="l11-t"><i aria-hidden="true">// </i>sama tiedosto — kolme reittiä, ja mitä kustakin jää jäljelle</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:364px">
+  <div class="l11-wrap" data-once role="img" aria-labelledby="l11-t" aria-describedby="l11-d">
+    <span class="sr-only" id="l11-d">Ensin tunnistetaan aineiston luonne — esimerkkitiedosto sisältää henkilötietoa. Pilveen lähetetty kopio ylittää verkon rajan ja kopio voi säilyä; organisaation palvelussa sopimus määrittää käsittelyn; paikallisessa ajossa aineisto voi pysyä laitteella, jos työkalu ei lähetä sitä ulos — tarkista yhteydet, telemetria ja päivitykset. Käyttöpäätös on aineiston luonne, datan reitti ja palvelun ehdot yhdessä.</span>
+    <span class="l11-nat"><i>aineiston luonne:</i><b class="n1">julkinen</b><b class="n2">sisäinen</b><b class="n3 hot">henkilötieto</b><b class="n4">erityissuoja</b></span>
     <div class="l11-dev"><i class="l11-ph">SINUN LAITTEESI</i>
-      <span class="l11-file">palaute.txt</span>
+      <span class="l11-file">palaute.txt · henkilötietoa</span>
       <div class="l11-loc"><i class="l11-ph phl">PAIKALLINEN AJO</i>
-        <span class="l11-ll">ei ylitä verkon rajaa</span>
-        <span class="l11-lw">silti: yhteydet, päivitykset?</span></div></div>
+        <span class="l11-ll">voi pysyä laitteella, jos työkalu ei lähetä sitä ulos</span>
+        <span class="l11-lw">tarkista: yhteydet, telemetria, päivitykset</span></div></div>
     <i class="l11-bnd"></i><i class="l11-bfl f1"></i><i class="l11-bfl f2"></i>
     <span class="l11-bl">verkon raja</span>
     <div class="l11-tp t1"><i class="l11-ph phc">YLEINEN PILVIPALVELU</i>
@@ -59,59 +61,66 @@ Erottelu on tärkeä, koska palvelun nimi ei yksin kerro, mitä aineistolle tapa
     <span class="l11-mv m1">palaute.txt</span>
     <span class="l11-mv m2">palaute.txt</span>
     <span class="l11-mv m3">palaute.txt</span>
+    <span class="l11-syn">käyttöpäätös = aineiston luonne + datan reitti + palvelun ehdot</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Käyttöpäätös luetaan aineiston reitistä: ylittääkö tiedosto verkon rajan ja mitä siitä jää käsittely-ympäristöön. Pilvessä kopio voi säilyä vastauksen jälkeenkin, organisaation palvelussa sopimus määrittää — eikä paikallinenkaan ajo ole automaattisesti turvallinen. Vie hiiri kuvan päälle pysäyttääksesi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Käyttöpäätös luetaan kolmesta asiasta yhdessä: aineiston luonteesta, datan reitistä ja palvelun ehdoista. Pilvessä kopio voi säilyä vastauksen jälkeenkin, organisaation palvelussa sopimus määrittää — ja paikallisessakin ajossa aineisto pysyy laitteella vain, jos työkalu ei lähetä sitä ulos.</figcaption></figure>
 <style>
-.l11-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono);animation:l11w 21s infinite}
-.l11-wrap:hover,.l11-wrap:hover *{animation-play-state:paused}
-.l11-ph{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8}
+.l11-wrap{position:relative;width:560px;height:348px;font-family:var(--font-mono);animation:l11w 21s 1 forwards}
+.l11-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.04em;color:#EAEEF8}
 .l11-ph.phl{color:#7FD0A8}.l11-ph.phc{color:#FFD79A}.l11-ph.pho{color:#C9B7F1}
-.l11-dev{position:absolute;left:2px;top:8px;width:206px;height:280px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 11px}
-.l11-file{display:inline-block;margin-top:8px;font-size:11px;color:#06212A;background:#46C7CF;border-radius:7px;padding:4px 9px;animation:l11file 21s infinite}
-.l11-loc{position:absolute;left:10px;bottom:10px;width:184px;height:118px;box-sizing:border-box;border:1.5px solid #7FD0A8;border-radius:10px;padding:8px 9px;background:#0E1524}
-.l11-ll{display:block;margin-top:9px;font-size:10.5px;line-height:1.3;color:#7FD0A8;opacity:0;animation:l11ll 21s infinite}
-.l11-lw{display:block;margin-top:7px;font-size:10.5px;line-height:1.3;color:#FFD79A;opacity:0;animation:l11lw 21s infinite}
-.l11-bnd{position:absolute;left:236px;top:8px;height:280px;width:0;border-left:2px dashed #7E88A8}
-.l11-bfl{position:absolute;left:230px;top:8px;height:280px;width:12px;background:radial-gradient(50% 50% at 50% 50%,rgba(255,215,154,.5),transparent);opacity:0}
-.l11-bfl.f1{animation:l11f1 21s infinite}
-.l11-bfl.f2{animation:l11f2 21s infinite}
-.l11-bl{position:absolute;left:180px;top:290px;width:112px;text-align:center;font-size:10px;color:#B9C2DA}
+.l11-nat{position:absolute;left:0;top:0;width:560px;display:flex;align-items:center;gap:6px}
+.l11-nat i{font-style:normal;font-size:12px;color:#B9C2DA}
+.l11-nat b{font-size:12px;font-weight:400;color:#B9C2DA;border:1px solid #2B3552;border-radius:999px;padding:2px 9px}
+.l11-nat b.hot{font-weight:700;color:#06212A;background:#46C7CF;border-color:#46C7CF;animation:l11hot 21s 1 forwards}
+.l11-dev{position:absolute;left:2px;top:34px;width:206px;height:276px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 11px}
+.l11-file{display:inline-block;margin-top:8px;font-size:12px;line-height:1.25;color:#06212A;background:#46C7CF;border-radius:7px;padding:4px 8px;animation:l11file 21s 1 forwards}
+.l11-loc{position:absolute;left:10px;bottom:10px;width:184px;height:136px;box-sizing:border-box;border:1.5px solid #7FD0A8;border-radius:10px;padding:8px 9px;background:#0E1524}
+.l11-ll{display:block;margin-top:8px;font-size:12px;line-height:1.3;color:#7FD0A8;opacity:0;animation:l11ll 21s 1 forwards}
+.l11-lw{display:block;margin-top:7px;font-size:12px;line-height:1.3;color:#FFD79A;opacity:0;animation:l11lw 21s 1 forwards}
+.l11-bnd{position:absolute;left:236px;top:34px;height:276px;width:0;border-left:2px dashed #7E88A8}
+.l11-bfl{position:absolute;left:230px;top:34px;height:276px;width:12px;background:radial-gradient(50% 50% at 50% 50%,rgba(255,215,154,.5),transparent);opacity:0}
+.l11-bfl.f1{animation:l11f1 21s 1 forwards}
+.l11-bfl.f2{animation:l11f2 21s 1 forwards}
+.l11-bl{position:absolute;left:180px;top:312px;width:112px;text-align:center;font-size:12px;color:#B9C2DA}
 .l11-tp{position:absolute;left:262px;width:296px;height:132px;box-sizing:border-box;background:#11182A;border-radius:12px;padding:9px 11px}
-.l11-tp.t1{top:8px;border:1.5px solid rgba(255,215,154,.55)}
-.l11-tp.t2{top:156px;border:1.5px solid rgba(201,183,241,.55)}
-.l11-gh{display:inline-block;margin-top:7px;font-size:11px;color:#46C7CF;border:1.5px dashed #46C7CF;border-radius:7px;padding:3px 8px;opacity:0}
-.l11-gh.g1{animation:l11g1 21s infinite}
-.l11-gh.g2{animation:l11g2 21s infinite}
-.l11-tl{display:block;margin-top:7px;font-size:10.5px;line-height:1.25;opacity:0}
-.l11-tl.w1{color:#FFD79A;animation:l11w1 21s infinite}
-.l11-tl.w2{color:#C9B7F1;animation:l11w2 21s infinite}
-.l11-tb{display:block;margin-top:5px;font-style:normal;font-size:10.5px;line-height:1.25;color:#B9C2DA;opacity:0}
-.l11-tb.b1{animation:l11b1 21s infinite}
-.l11-tb.b2{animation:l11b2 21s infinite}
-.l11-mv{position:absolute;left:24px;top:36px;font-size:11px;color:#06212A;background:#46C7CF;border-radius:7px;padding:4px 9px;opacity:0;white-space:nowrap}
-.l11-mv.m1{animation:l11m1 21s infinite}
-.l11-mv.m2{animation:l11m2 21s infinite}
-.l11-mv.m3{animation:l11m3 21s infinite}
-@keyframes l11w{0%{opacity:0}3%{opacity:1}97%{opacity:1}100%{opacity:0}}
-@keyframes l11file{0%,2%{transform:scale(1)}4%{transform:scale(1.12)}6%,100%{transform:scale(1)}}
-@keyframes l11m1{0%,6%{opacity:0;transform:translate(0,0)}8%{opacity:1}19%{opacity:1;transform:translate(258px,10px)}24%,100%{opacity:0;transform:translate(258px,10px)}}
-@keyframes l11g1{0%,21%{opacity:0}26%,100%{opacity:.5}}
-@keyframes l11w1{0%,26%{opacity:0}30%,100%{opacity:1}}
-@keyframes l11b1{0%,30%{opacity:0}34%,100%{opacity:1}}
-@keyframes l11f1{0%,10%{opacity:0}13%{opacity:1}18%,100%{opacity:0}}
-@keyframes l11m2{0%,38%{opacity:0;transform:translate(0,0)}40%{opacity:1}51%{opacity:1;transform:translate(258px,158px)}56%,100%{opacity:0;transform:translate(258px,158px)}}
-@keyframes l11g2{0%,53%{opacity:0}58%,100%{opacity:.5}}
-@keyframes l11w2{0%,58%{opacity:0}62%,100%{opacity:1}}
-@keyframes l11b2{0%,62%{opacity:0}66%,100%{opacity:1}}
-@keyframes l11f2{0%,42%{opacity:0}45%{opacity:1}50%,100%{opacity:0}}
-@keyframes l11m3{0%,70%{opacity:0;transform:translate(0,0)}72%{opacity:1}80%{opacity:1;transform:translate(4px,120px)}84%,100%{opacity:0;transform:translate(4px,120px)}}
+.l11-tp.t1{top:34px;border:1.5px solid rgba(255,215,154,.55)}
+.l11-tp.t2{top:178px;border:1.5px solid rgba(201,183,241,.55)}
+.l11-gh{display:inline-block;margin-top:7px;font-size:12px;color:#46C7CF;border:1.5px dashed #46C7CF;border-radius:7px;padding:3px 8px;opacity:0}
+.l11-gh.g1{animation:l11g1 21s 1 forwards}
+.l11-gh.g2{animation:l11g2 21s 1 forwards}
+.l11-tl{display:block;margin-top:7px;font-size:12px;line-height:1.25;opacity:0}
+.l11-tl.w1{color:#FFD79A;animation:l11w1 21s 1 forwards}
+.l11-tl.w2{color:#C9B7F1;animation:l11w2 21s 1 forwards}
+.l11-tb{display:block;margin-top:5px;font-style:normal;font-size:12px;line-height:1.25;color:#B9C2DA;opacity:0}
+.l11-tb.b1{animation:l11b1 21s 1 forwards}
+.l11-tb.b2{animation:l11b2 21s 1 forwards}
+.l11-mv{position:absolute;left:24px;top:64px;font-size:12px;color:#06212A;background:#46C7CF;border-radius:7px;padding:4px 9px;opacity:0;white-space:nowrap}
+.l11-mv.m1{animation:l11m1 21s 1 forwards}
+.l11-mv.m2{animation:l11m2 21s 1 forwards}
+.l11-mv.m3{animation:l11m3 21s 1 forwards}
+.l11-syn{position:absolute;left:0;top:330px;width:560px;text-align:center;font-size:12.5px;font-weight:600;color:#FFD79A;opacity:0;animation:l11syn 21s 1 forwards}
+@keyframes l11w{0%{opacity:0}3%{opacity:1}100%{opacity:1}}
+@keyframes l11hot{0%,3%{transform:scale(1)}5%{transform:scale(1.12)}7%,100%{transform:scale(1)}}
+@keyframes l11file{0%,6%{transform:scale(1)}8%{transform:scale(1.1)}10%,100%{transform:scale(1)}}
+@keyframes l11m1{0%,9%{opacity:0;transform:translate(0,0)}11%{opacity:1}21%{opacity:1;transform:translate(255px,4px)}26%,100%{opacity:0;transform:translate(255px,4px)}}
+@keyframes l11g1{0%,23%{opacity:0}28%,100%{opacity:.55}}
+@keyframes l11w1{0%,28%{opacity:0}32%,100%{opacity:1}}
+@keyframes l11b1{0%,32%{opacity:0}36%,100%{opacity:1}}
+@keyframes l11f1{0%,12%{opacity:0}15%{opacity:1}20%,100%{opacity:0}}
+@keyframes l11m2{0%,39%{opacity:0;transform:translate(0,0)}41%{opacity:1}52%{opacity:1;transform:translate(255px,148px)}57%,100%{opacity:0;transform:translate(255px,148px)}}
+@keyframes l11g2{0%,54%{opacity:0}59%,100%{opacity:.55}}
+@keyframes l11w2{0%,59%{opacity:0}63%,100%{opacity:1}}
+@keyframes l11b2{0%,63%{opacity:0}67%,100%{opacity:1}}
+@keyframes l11f2{0%,43%{opacity:0}46%{opacity:1}51%,100%{opacity:0}}
+@keyframes l11m3{0%,70%{opacity:0;transform:translate(0,0)}72%{opacity:1}80%{opacity:1;transform:translate(2px,116px)}84%,100%{opacity:0;transform:translate(2px,116px)}}
 @keyframes l11ll{0%,80%{opacity:0}84%,100%{opacity:1}}
-@keyframes l11lw{0%,86%{opacity:0}90%,100%{opacity:1}}
+@keyframes l11lw{0%,85%{opacity:0}89%,100%{opacity:1}}
+@keyframes l11syn{0%,90%{opacity:0}94%,100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){
   .l11-wrap,.l11-wrap *{animation:none!important}
-  .l11-wrap,.l11-tl,.l11-tb,.l11-ll,.l11-lw{opacity:1}
-  .l11-gh{opacity:.5}
+  .l11-wrap,.l11-tl,.l11-tb,.l11-ll,.l11-lw,.l11-syn{opacity:1}
+  .l11-gh{opacity:.55}
   .l11-mv{opacity:0}
 }
 </style>
