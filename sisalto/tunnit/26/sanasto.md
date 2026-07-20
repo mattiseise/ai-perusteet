@@ -2,6 +2,7 @@
 
 | Termi | Selitys |
 | --- | --- |
+| **Harness** | Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen. n8n on yksi ympäristö, jossa harness voidaan toteuttaa näkyvänä työnkulkuna. |
 | **n8n** (n-eight-n) | Avoimeen lähdekoodiin perustuva automaatioalusta, jossa rakennetaan visuaalisesti työnkulkuja vetämällä ja pudottamalla solmuja kankaalle. |
 | **Solmu** (node) | Yksittäinen komponentti n8n-työnkulussa, joka tekee yhden konkreettisen tehtävän (esim. vastaanottaa viestin, kutsuu tekoälyä, lähettää sähköpostia). |
 | **Työnkulku** (workflow) | Sarja solmuja, jotka on kytketty yhteen viivalla. Data virtaa solmusta toiseen automaattisesti työnkulun logiikan mukaisesti. |
@@ -13,7 +14,7 @@
 | **OpenAI-solmu** | Erityinen solmu, joka kommunikoi OpenAI:n palvelun kanssa (ChatGPT, tekoäly-päättely). Sisältää järjestelmäpromptin ja pyytää tekoälyä päättelemään. |
 | **Google Sheets -solmu** | Solmu, joka lukee tai kirjoittaa tietoja Google Sheets -taulukkoihin. Usein käytetään muistin ja tietokannan toteuttamiseen. |
 | **Discord-solmu** (tai Slack-solmu) | Solmu, joka lähettää viestejä Discord- tai Slack-kanavalle. Yhteydenpito käyttäjien kanssa. |
-| **Arkkitehtuuri** (architecture) | Työnkulun rakenne ja layout: mistä se alkaa (trigger), mitä solmuja se sisältää, miten ne liittyvät yhteen ja missä järjestyksessä data kulkee. |
+| **Arkkitehtuuri** (architecture) | Kuvaus järjestelmän vastuista ja suhteista: mitä kielimalli tekee, mistä harness vastaa, miten data kulkee ja millä ehdoilla toimintoja suoritetaan. |
 | **Järjestelmäprompti** | Teksti, joka määrittää tekoälyn käyttäytymisen. Esimerkiksi FAQ-botissa järjestelmäprompti on: "Olet FAQ-botti, vastaa lyhyesti ja selkeästi." |
 | **Konteksti** (context) | Taustatieto, jota agentti käyttää päätöksenteossa. Esimerkiksi FAQ-tietokanta on konteksti OpenAI-solmulle. |
 | **Muisti** (memory) | Mekanismi, jolla agentti tallentaa ja muistaa aikaisempia tapahtumia. n8n:ssä se voi olla Google Sheets -taulukko tai Memory-solmu. |

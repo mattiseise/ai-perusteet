@@ -25,17 +25,18 @@
 <ul>
 <li>Opiskelija ymmärtää, mitä <strong>n8n</strong> on ja miten se eroaa perinteisestä ohjelmoinnista.</li>
 <li>Opiskelija tunnistaa n8n:n keskeiset käsitteet: <strong>solmu</strong>, <strong>trigger</strong>, <strong>webhook</strong> ja <strong>yhteys</strong> eli viiva solmujen välillä.</li>
-<li>Opiskelija näkee, miten n8n:n solmut vastaavat agentin kuutta komponenttia: <strong>syötekäsittelijä</strong>, <strong>päättelijä</strong>, <strong>työkalut</strong>, <strong>muisti</strong>, <strong>turvakerros</strong> ja <strong>palaute</strong>.</li>
+<li>Opiskelija ymmärtää, että n8n on yksi ympäristö harnessin toteuttamiseen: tekoälysolmu kutsuu kielimallia, ja ympäröivät solmut, säännöt sekä palvelut huolehtivat muista vastuista.</li>
+<li>Opiskelija käyttää agentin kuutta rakennusosaa kattavuuden tarkistuslistana. Yksi solmu tai sääntö voi kattaa useita kohtia, eikä jokaiselle tarvita omaa solmua.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa</h3></div><div class="task-card-body">
 <ul>
 <li>Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun, jossa on trigger ja 2–3 muuta solmua.</li>
 <li>Opiskelija pystyy suunnittelemaan oman n8n-agenttinsa ja tekemään siitä yksityiskohtaisen suunnitelman.</li>
 </ul>
-<p><strong>Opettajan painotus:</strong> Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten agentin teoria muuttuu konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
+<p><strong>Opettajan painotus:</strong> Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten kielimallin ja harnessin vastuut muuttuvat konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Avaus: koodaamisen demokratisointi</h3></div><div class="task-card-body">
 <p>Aloita oppitunti sanomalla opiskelijoille:</p>
-<blockquote class="pause"><p>Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sitä käytännössä. Tämä ei vaadi ohjelmointiosaamista samalla tavalla kuin perinteinen koodaus. n8n näyttää, miten agentin kuusi komponenttia muuttuvat konkreettisiksi solmuiksi kankaalla.</p>
+<blockquote class="pause"><p>Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sitä käytännössä. n8n näyttää kielimallin ja harnessin vastuut konkreettisina solmuina, sääntöinä ja yhteyksinä. Kuusi rakennusosaa auttaa tarkistamaan kattavuuden, mutta ne eivät määrää solmujen määrää.</p>
 </blockquote>
 <p>Tämä auttaa erityisesti niitä opiskelijoita, joille ohjelmointi tuntuu vaikealta tai pelottavalta. Samalla on tärkeää korostaa, että visuaalinen työkalu ei poista suunnittelun ja loogisen ajattelun tarvetta.</p>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Keskeinen käsite: visuaalinen ohjelmointi</h3></div><div class="task-card-body">
@@ -130,7 +131,9 @@
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: “Turvakerros on valinnainen.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Turvakerros on pakollinen osa agentin rakentamista. Jos agentti voi lähettää viestejä, muuttaa tietoja tai kutsua ulkoisia palveluita, sen toimintaa pitää rajoittaa ja valvoa.</p>
 <p><strong>Esimerkki opetukseen</strong></p>
-<p>Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa lähettää arkaluonteisia tietoja väärälle vastaanottajalle. Turvakerros voi estää tämän esimerkiksi tarkistamalla vastaanottajan, sisällön ja riskitason ennen lähetystä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+<p>Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa lähettää arkaluonteisia tietoja väärälle vastaanottajalle. Turvakerros voi estää tämän esimerkiksi tarkistamalla vastaanottajan, sisällön ja riskitason ennen lähetystä.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: ”Kuusi rakennusosaa tarkoittaa kuutta erillistä solmua.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Kuusi rakennusosaa toimii suunnittelun tarkistuslistana, ei pakollisena teknisenä topologiana. Yksi solmu, sääntö tai ulkoinen palvelu voi hoitaa useita vastuita, ja jokin vastuu voi jakautua useaan vaiheeseen. Opiskelijan tehtävä on perustella vastuunjako.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Kokeile ja dokumentoi</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija rakentaa yksinkertaisen työnkulun ja ymmärtää, miten data virtaa solmujen läpi.</p>
 <p><strong>Ohje opiskelijalle:</strong></p>
@@ -220,19 +223,19 @@
 <li>Miten virhe huomataan ja korjataan?</li>
 </ul>
 <p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-D: Keskustele ja perustele</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija yhdistää n8n-solmut agentin kuuteen komponenttiin ja ymmärtää, miten ne toimivat yhdessä.</p>
+<p><strong>Tavoite:</strong> Opiskelija erottaa kielimallin ja harnessin vastuut ja käyttää kuutta rakennusosaa työnkulun kattavuuden tarkistamiseen.</p>
 <p><strong>Ohje opiskelijalle:</strong></p>
 <ol>
-<li>Valitse suunnitelmastasi tai esimerkkityönkulusta vähintään kuusi solmua tai vaihetta.</li>
-<li>Yhdistä jokainen vaihe agentin komponenttiin.</li>
-<li>Perustele, miksi valitsit juuri tämän komponentin.</li>
+<li>Kuvaa, mikä vastuu kuuluu kielimallille ja mikä harnessille.</li>
+<li>Tarkista kuuden rakennusosan avulla, että olennaiset vastuut näkyvät suunnitelmassa.</li>
+<li>Perustele, jos yksi solmu, sääntö tai palvelu kattaa useita kohtia tai jokin kohta jätetään pois.</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th>Agentin komponentti</th>
+<th>Tarkistuslistan kohta</th>
 <th>Mahdollinen n8n-vastine</th>
-<th>Miksi?</th>
+<th>Miten vastuu toteutuu?</th>
 </tr>
 </thead>
 <tbody>
@@ -282,7 +285,7 @@
 <p><strong>Arkkitehtuurin selitys noin 10 minuuttia</strong></p>
 </li>
 <li>
-<p>Näytä, miten solmut vastaavat agentin kuutta komponenttia.</p>
+<p>Näytä, miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat kokonaisuutena katetuiksi.</p>
 </li>
 <li>Piirrä taululle työnkulku: <code>Trigger → Validointi → Päättely → Turva → Toiminta → Palaute</code></li>
 <li>
@@ -307,7 +310,7 @@
 <li>n8n-instanssi, joko paikallinen tai pilvipalvelu</li>
 <li>valmis esittelyprojekti n8n:ssä, esimerkiksi yksinkertainen FAQ-botti</li>
 <li>projektimallit tasoille 1, 2 ja 3 tekstinä tai näytöllä</li>
-<li>taulukko, jossa n8n-solmut yhdistetään agentin kuuteen komponenttiin</li>
+<li>taulukko, jossa kuvataan kielimallin ja harnessin vastuut sekä kuuden rakennusosan kattavuus ilman yksi yhteen -solmupakkoa</li>
 <li>punaisen tiimin palautelomake printattuna tai digitaalisesti jaettuna</li>
 <li>varasuunnitelma teknisten ongelmien varalle, esimerkiksi kuvakaappaukset työnkulusta</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan vihjeet</h2></div><div class="task-card-body">
@@ -458,19 +461,19 @@
 <li>Opiskelijat näkevät, miten data muuttuu työnkulun aikana.</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2: Agentin arkkitehtuurin tunnistaminen noin 15 minuuttia</h2></div><div class="task-card-body">
 <h3>Tavoite</h3>
-<p>Tehtävän tavoitteena on yhdistää aiemmilla oppitunneilla opittu <strong>agentin arkkitehtuuri</strong> n8n:n konkreettisiin solmuihin. Opiskelijat tunnistavat, miten n8n-työnkulku voi vastata agentin kuutta komponenttia.</p>
+<p>Tehtävän tavoitteena on yhdistää aiemmilla oppitunneilla opittu <strong>agentin arkkitehtuuri</strong> n8n:n konkreettiseen toteutukseen. Opiskelijat erottavat kielimallin ja harnessin vastuut ja tarkistavat kuuden rakennusosan avulla, ettei suunnitelmasta puutu olennaista.</p>
 <h3>Valmistelu</h3>
 <p>Näytä n8n:ssä yksinkertainen työnkulku, jossa on vähintään 4–5 solmua. Voit käyttää esimerkiksi seuraavaa rakennetta:</p>
 <p>Webhook → Validointi IF-solmulla → OpenAI → Tarkistus IF-solmulla → Discord</p>
 <p>Vaihtoehtoisesti voit käyttää oppitunnin 26 aineistossa olevaa projektimallia.</p>
 <h3>Opettajan ohjeet</h3>
-<p>Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komponenttia.</p>
+<p>Käy ensin läpi, mikä esimerkissä on kielimallin vastuulla ja mikä harnessin vastuulla. Käytä sen jälkeen kuutta rakennusosaa kattavuuden tarkistamiseen. Korosta, että taulukon n8n-vastineet ovat esimerkkejä: yksi solmu, sääntö tai palvelu voi kattaa useita vastuita, ja yksi vastuu voi jakautua useaan vaiheeseen.</p>
 <table>
 <thead>
 <tr>
-<th>Agentin komponentti</th>
-<th>n8n-vastine</th>
-<th>Mitä se tekee?</th>
+<th>Tarkistuslistan kohta</th>
+<th>Mahdollinen n8n-vastine</th>
+<th>Miten vastuu voi toteutua?</th>
 </tr>
 </thead>
 <tbody>
@@ -506,7 +509,7 @@
 </tr>
 </tbody>
 </table>
-<h3>Käsittely vaihe vaiheelta</h3>
+<h3>Käsittely vastuu kerrallaan</h3>
 <ol>
 <li><strong>Syötekäsittelijä:</strong> Osoita Webhook-solmua ja ensimmäistä IF-ehtoa.</li>
 </ol>
@@ -521,17 +524,18 @@
 <p>Selitä: “Ennen kuin agentti toimii, sen pitää tarkistaa, onko vastaus turvallinen. Sisältääkö se arkaluonteisia tietoja? Tarvitaanko ihmisen hyväksyntä?”<br />
 6. <strong>Palautesilmukka:</strong> Näytä lokitusvaihe.</p>
 <p>Selitä: “Jokainen tärkeä toimenpide kannattaa kirjata. Näin voidaan myöhemmin arvioida, mitä agentti teki ja miksi.”</p>
-<p><strong>Opettajan huomio:</strong> Älä anna opiskelijoiden ajatella, että kaikki n8n-työnkulut ovat automaattisesti agentteja. Agenttimaisuus syntyy siitä, että työnkulku vastaanottaa syötteen, tulkitsee sen, tekee päätöksiä, käyttää työkaluja, huomioi muistia ja toimii rajatusti.</p>
+<p><strong>Opettajan huomio:</strong> Älä anna opiskelijoiden ajatella, että kaikki n8n-työnkulut ovat automaattisesti agentteja tai että jokainen rakennusosa vaatii oman solmun. Agentti syntyy kielimallin ja harnessin kokonaisuudesta. Harness vastaanottaa ja rajaa syötteen, tarjoaa työkalut, ylläpitää tarvittavaa tilaa ja toimeenpanee turvarajat; kielimalli tekee sille annetun tehtävän sisällä tarvittavan arvion.</p>
 <h3>Keskustelu</h3>
 <ul>
-<li>Miten nämä kuusi osaa toimivat yhdessä?</li>
+<li>Mitä kielimalli tekee ja mistä harness vastaa?</li>
+<li>Miten kaikki kuusi rakennusosaa toteutuvat kokonaisuutena, vaikka solmuja olisi vähemmän tai enemmän kuin kuusi?</li>
 <li>Mitä tapahtuisi, jos <strong>turvakerros</strong> puuttuisi?</li>
 <li>Miten agentti eroaa tavallisesta n8n-skriptistä?</li>
 <li>Missä vaiheessa ihminen pitäisi ottaa mukaan?</li>
 </ul>
 <h3>Odotettu oppimistulos</h3>
 <ul>
-<li>Opiskelijat osaavat yhdistää n8n-solmuja agentin kuuteen komponenttiin.</li>
+<li>Opiskelijat osaavat erottaa kielimallin ja harnessin vastuut ja käyttää kuutta rakennusosaa kattavuuden tarkistuslistana.</li>
 <li>Opiskelijat ymmärtävät, että agentti ei ole vain solmujen ketju, vaan päätöksiä tekevä ja rajatusti toimiva järjestelmä.</li>
 <li>Opiskelijat osaavat selittää, miksi turvakerros ja palautesilmukka ovat tärkeitä.</li>
 </ul></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Tehtävä 3: Suunnittelutyöpaja — projekti-ideoiden arviointi noin 20 minuuttia</h2></div><div class="task-card-body">
@@ -632,7 +636,7 @@
 </tr>
 <tr>
 <td><strong>Arkkitehtuurin pohdinta</strong></td>
-<td>Yhdistävätkö opiskelijat solmut agentin kuuteen komponenttiin?</td>
+<td>Erottavatko opiskelijat kielimallin ja harnessin vastuut ja perustelevatko he kuuden rakennusosan kattavuuden?</td>
 </tr>
 <tr>
 <td><strong>Suunnittelun laatu</strong></td>
@@ -784,11 +788,11 @@
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Agentin kuusi komponenttia n8n:ssä</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Kuusi rakennusosaa tarkistuslistana</title>
 <defs><pattern id="l26g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g6)"/>
-<text x="74" y="92" font-size="34" font-weight="800" fill="#1B2336">Agentin kuusi komponenttia n8n:ssä</text>
-<text x="74" y="122" font-size="17" fill="#5A6478">Tunnin 19 arkkitehtuuri toteutuu konkreettisina solmuina.</text>
+<text x="74" y="92" font-size="34" font-weight="800" fill="#1B2336">Kuusi rakennusosaa tarkistuslistana</text>
+<text x="74" y="122" font-size="17" fill="#5A6478">Vastuut voivat toteutua solmuina, sääntöinä tai ulkoisina palveluina.</text>
 <rect x="74" y="150" width="392" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="186" font-size="20" font-weight="700" fill="#008799">Syötekäsittelijä</text>
 <text x="98" y="214" font-size="16" fill="#5A6478">triggerisolmu + validointi (IF)</text>
@@ -807,7 +811,7 @@
 <rect x="494" y="358" width="392" height="92" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <text x="518" y="394" font-size="20" font-weight="800" fill="#006B7A">Palautesilmukka</text>
 <text x="518" y="422" font-size="16" fill="#3A4253">lokitus + palautteen keräys</text>
-<text x="74" y="486" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">Tunnilla 27 yhdistät jokaisen solmun johonkin näistä kuudesta.</text>
+<text x="74" y="486" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">Yksi toteutusosa voi kattaa useita vastuita — perustele ratkaisusi.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
@@ -962,7 +966,7 @@
 </g>
 <rect x="74" y="356" width="812" height="110" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="392" font-size="18" font-weight="700" fill="#5A6478">KIRJAA MYÖS MUISTIIN</text>
-<text x="98" y="424" font-size="17" fill="#3A4253">Mitkä solmut vastaavat kuutta komponenttia · mikä osa toimii jo</text>
+<text x="98" y="424" font-size="17" fill="#3A4253">Mikä on kielimallin vastuulla · mitkä osat muodostavat harnessin</text>
 <text x="98" y="450" font-size="17" fill="#3A4253">Mikä jäi kesken · mitä testaat tai korjaat tunnilla 27</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
@@ -1015,7 +1019,7 @@
 </g>
 <rect x="74" y="424" width="812" height="68" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(98,442)"><rect x="0" y="0" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="2"/><circle cx="11" cy="13" r="3.5" fill="#008799"/><circle cx="25" cy="13" r="3.5" fill="#008799"/><rect x="10" y="21" width="16" height="4" rx="2" fill="#008799"/></g>
-<text x="156" y="466" font-size="19" font-weight="700" fill="#006B7A">Tunnilla 27: turvakerros, hyväksyntäportit, testaus ja dokumentaatio.</text>
+<text x="156" y="466" font-size="18" font-weight="700" fill="#006B7A">n8n on yksi harness-toteutus — kuusi rakennusosaa toimii tarkistuslistana.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-25/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-27/">Seuraava →</a></div></div></div>

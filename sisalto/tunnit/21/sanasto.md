@@ -38,7 +38,7 @@ Ympäröivät tiedot ja tilanteen tausta. Asiakkaan historia, edellinen keskuste
 
 ## Muisti- ja kontekstijärjestelmä
 
-Kolmen osan yhdistelmä: konteksti-ikkuna (nykyisyys), pitkäkestoinen muisti (menneisyys), tila (prosessin vaihe).
+Harnessin vastuu, joka yhdistää konteksti-ikkunan (nykyisyys), pitkäkestoisen muistin (menneisyys) ja tilan (prosessin vaihe). Harness valitsee mallille annettavan kontekstin, tallentaa sovitut tiedot ja hakee niitä myöhempää käyttöä varten. Kielimalli ei muista keskusteluja itsestään.
 
 ## Ankkurointi (grounding)
 

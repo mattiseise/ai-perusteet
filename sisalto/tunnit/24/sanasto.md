@@ -1,5 +1,9 @@
 # Sanasto – oppitunti 24: Turvallisuus
 
+## Harness
+
+Kielimallia ympäröivä järjestelmä, joka toimeenpanee turvarajat. Harness tarkistaa syötteitä, rajaa oikeuksia, vaatii tarvittaessa hyväksynnän, lokittaa toiminnan ja huolehtii virheistä palautumisesta.
+
 ## Promptihyökkäys
 
 Hyökkäys, jossa hyökkääjä piilottaa ohjeita käyttäjän syötteeseen. Agentti sekoittaa ohjeistuksensa ja hyökkäyskäskyn.
@@ -10,7 +14,7 @@ Kun kielimalli keksii tosiasioita, joita ei ole. Agentti "muistaa" asiaa, jota e
 
 ## Minimioikeusperiaate (least privilege)
 
-Anna agentille vain minimaalinen pääsy, jonka se tarvitsee. Rajoitus tekee turvallisemmaksi.
+Harness antaa agentille vain tehtävän kannalta välttämättömät oikeudet. Näin mahdollisen virheen tai hyökkäyksen seuraukset jäävät pienemmiksi.
 
 ## Validointi (validation)
 

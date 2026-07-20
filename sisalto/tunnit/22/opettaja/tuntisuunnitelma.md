@@ -10,6 +10,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten agentti k
 - Opiskelija tunnistaa kolme perustyökalua: **tiedostot**, **verkkohaku** ja **CLI-komennot**.
 - Opiskelija ymmärtää, että jokainen työkalu tuo mukanaan turvallisuusriskejä.
 - Opiskelija ymmärtää **orkestroinnin** merkityksen: agentin pitää käyttää työkaluja oikeassa järjestyksessä.
+- Opiskelija osaa erottaa kielimallin työkalupyynnön harnessin vastuusta: harness tarkistaa oikeudet, suorittaa kutsun ja palauttaa tuloksen tai virheen.
 
 ### Soveltaa ja analysoida
 
@@ -148,6 +149,10 @@ Työkalujen käyttöön kannattaa liittää sama neljän kerroksen turvallisuusm
 ### Väärinkäsitys 4: ”Orkestrointi ei ole tärkeää.”
 
 **Korjaava näkökulma:** Väärä työkalujen järjestys voi tuottaa virheellisen lopputuloksen. Oikea järjestys on osa agentin päättelyä ja arkkitehtuuria.
+
+### Väärinkäsitys 5: ”Kielimalli käyttää työkalua suoraan.”
+
+**Korjaava näkökulma:** Kielimalli ehdottaa rakenteista työkalukutsua. Harness tarkistaa työkalusopimuksen ja oikeudet, suorittaa kutsun hallitussa ympäristössä, palauttaa tuloksen tai virheen ja kirjaa tapahtuman. Tämä raja tekee työkalujen käytöstä testattavaa ja rajattavaa.
 
 ---
 

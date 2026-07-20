@@ -23,7 +23,8 @@
 <p>Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella <strong>viisi pohjapiirrosta</strong> tunneilta 19, 21, 23, 24 ja 25. Ne muodostavat suunnitelman omasta agentistasi. Tällä tunnilla kokoat pohjapiirrokset yhteen, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.</p>
 <p><strong>n8n</strong> lausutaan ”n-eight-n”. Se on avoimen lähdekoodin automaatioalusta, jossa rakennat työnkulkuja visuaalisesti vetämällä ja pudottamalla <strong>solmuja</strong> eli nodeja kankaalle. Jokainen solmu tekee yhden asian: vastaanottaa viestin, kutsuu tekoälyä, lukee tiedoston tai lähettää sähköpostin. Solmujen välille vedetään yhteys, ja data virtaa automaattisesti solmusta toiseen. Voit ajatella sitä putkirakennelmana, jossa jokainen mutka tekee jotakin hyödyllistä.</p>
 <p>Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — <strong>syötekäsittely</strong>, <strong>päättely</strong>, <strong>työkalut</strong>, <strong>muisti</strong>, <strong>turvakerrokset</strong> ja <strong>palautesilmukka</strong> — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Mieti jotakin toistuvaa tehtävää arjessasi tai koulussa. Voisiko kone hoitaa sen puolestasi, jos sillä olisi pääsy oikeisiin työkaluihin?<br />
+<blockquote class="pause"><p><strong>Harnessin näkökulma:</strong> n8n ei ole automaattisesti agentti tai harness. Se on ympäristö, jossa voit rakentaa harnessin näkyväksi työnkuluksi: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Kuuden rakennusosan kokonaisuus toimii kattavuuden tarkistuslistana — osia ei tarvitse toteuttaa kuutena erillisenä solmuna.</p>
+<p><strong>Pysähdy hetkeksi:</strong> Mieti jotakin toistuvaa tehtävää arjessasi tai koulussa. Voisiko kone hoitaa sen puolestasi, jos sillä olisi pääsy oikeisiin työkaluihin?<br />
 Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen yksinkertaisen agentin voit rakentaa:</p>
 </blockquote>
 <figure style="margin:26px 0;text-align:center">
@@ -128,10 +129,10 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 .l26-s.s4{opacity:1}}
 </style>
 
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miten n8n:n solmut vastaavat agentin kuutta komponenttia, jotka opit tunnilla 19? Mieti, mikä solmu olisi syötekäsittelijä, mikä päättelijä ja mikä työkalujen suorittaja.</p>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miten agentin kaikki kuusi rakennusosaa toteutuvat suunnitelmassasi? Mieti vastuita ennen solmuja: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</p>
 </blockquote>
-<h2>Agentin kuusi komponenttia n8n:ssä</h2>
-<p>Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten se toteutuu n8n:ssä konkreettisesti. Tämä on tärkeää, koska tunnilla 27 dokumentoit agenttisi ja yhdistät jokaisen solmun johonkin agentin kuudesta komponentista.</p>
+<h2>Agentin kuusi rakennusosaa n8n:ssä</h2>
+<p>Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä konkreettisesti. Tunnilla 27 dokumentoit ensin kielimallin ja harnessin rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista solmua yhteen lokeroon.</p>
 <p><strong>Syötekäsittelijä</strong> on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.</p>
 <p><strong>Päättelijä</strong> on tekoälysolmu, esimerkiksi OpenAI-solmu tai vastaava. Siihen kirjoitat <strong>järjestelmäpromptin</strong>, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.</p>
 <p><strong>Työkalujen suorittaja</strong> tarkoittaa solmuja, joilla agentti tekee konkreettisia toimintoja. Google Sheets -solmu lukee tai kirjoittaa tietoja. HTTP Request -solmu kutsuu ulkoisia palveluita. Slack-solmu lähettää viestejä. Nämä ovat agentin ”kädet”, joiden avulla se toimii maailmassa.</p>
@@ -148,7 +149,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <li><strong>Vaihe 3 — Lisää toimintasolmu:</strong> Manual Trigger → HTTP Request → tekoälysolmu → Discord, sähköposti tai muu toimintasolmu. Testaa, että vastaus lähtee oikeaan paikkaan.</li>
 </ol>
 <p>Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kun lisäät uuden solmun työnkulkuusi, mieti aina: mikä agentin komponentti tämä on? Onko kyse syötekäsittelystä, päättelystä, työkalusta, muistista, turvakerroksesta vai palautesilmukasta?</p>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelyä, päättelyä, työkaluja, muistia, turvakerrosta tai palautetta — ja jääkö jokin olennainen vastuu vielä puuttumaan?</p>
 </blockquote>
 <h2>Pohjapiirroksesta toteutukseen</h2>
 <p>Tällä tunnilla et aloita tyhjältä pöydältä. Sinulla on viisi pohjapiirrosta, jotka olet kerännyt edellisillä tunneilla. Niiden pohjalta tiedät jo:</p>
@@ -177,7 +178,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 </ul>
 <p>Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:</p>
 <ul>
-<li>mitkä solmut vastaavat agentin kuutta komponenttia</li>
+<li>miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi</li>
 <li>mikä osa toimii jo</li>
 <li>mikä osa jäi kesken</li>
 <li>mitä pitää testata tai korjata tunnilla 27</li>
@@ -186,6 +187,8 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <h2>Yhteenveto</h2>
 <p>Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat agenttisi minimiversion iteratiivisesti: solmu kerrallaan ja jokaisen lisäyksen jälkeen testaten.</p>
 <p>Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.</p>
+<blockquote class="pause"><p><strong>Erota nämä:</strong> Mikä työnkulkusi solmu kutsuu kielimallia — ja mitkä solmut, säännöt tai palvelut muodostavat sitä ympäröivän harnessin?</p>
+</blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
@@ -200,7 +203,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <div class="task-widget" data-ti="0"></div>
 
 <h2>Tehtävä 2/3 — valmiina pajaan?</h2>
-<p>Kerrataan pajan ydinperiaatteet ennen rakentamista. Valitse kussakin kysymyksessä osuvin vaihtoehto.</p>
+<p>Kerrataan pajan ydinperiaatteet ennen rakentamista. Minimiversio on kielimalli ja pienin toimiva harness, ei pelkkä tekoälysolmu. Muista myös, että yksi solmu, sääntö tai palvelu voi kattaa useita kuuden rakennusosan vastuita. Valitse kussakin kysymyksessä osuvin vaihtoehto.</p>
 <div class="task-widget" data-ti="1"></div>
 
 <h2>Tehtävä 3/3 — mikä solmutyyppi tämä on?</h2>
@@ -214,6 +217,10 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>Harness</strong></td>
+<td>Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen. n8n on yksi ympäristö, jossa harness voidaan toteuttaa näkyvänä työnkulkuna.</td>
+</tr>
 <tr>
 <td><strong>n8n</strong> (n-eight-n)</td>
 <td>Avoimeen lähdekoodiin perustuva automaatioalusta, jossa rakennetaan visuaalisesti työnkulkuja vetämällä ja pudottamalla solmuja kankaalle.</td>
@@ -260,7 +267,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 </tr>
 <tr>
 <td><strong>Arkkitehtuuri</strong> (architecture)</td>
-<td>Työnkulun rakenne ja layout: mistä se alkaa (trigger), mitä solmuja se sisältää, miten ne liittyvät yhteen ja missä järjestyksessä data kulkee.</td>
+<td>Kuvaus järjestelmän vastuista ja suhteista: mitä kielimalli tekee, mistä harness vastaa, miten data kulkee ja millä ehdoilla toimintoja suoritetaan.</td>
 </tr>
 <tr>
 <td><strong>Järjestelmäprompti</strong></td>
@@ -439,11 +446,11 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Agentin kuusi komponenttia n8n:ssä</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Kuusi rakennusosaa tarkistuslistana</title>
 <defs><pattern id="l26g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g6)"/>
-<text x="74" y="92" font-size="34" font-weight="800" fill="#1B2336">Agentin kuusi komponenttia n8n:ssä</text>
-<text x="74" y="122" font-size="17" fill="#5A6478">Tunnin 19 arkkitehtuuri toteutuu konkreettisina solmuina.</text>
+<text x="74" y="92" font-size="34" font-weight="800" fill="#1B2336">Kuusi rakennusosaa tarkistuslistana</text>
+<text x="74" y="122" font-size="17" fill="#5A6478">Vastuut voivat toteutua solmuina, sääntöinä tai ulkoisina palveluina.</text>
 <rect x="74" y="150" width="392" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="186" font-size="20" font-weight="700" fill="#008799">Syötekäsittelijä</text>
 <text x="98" y="214" font-size="16" fill="#5A6478">triggerisolmu + validointi (IF)</text>
@@ -462,7 +469,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <rect x="494" y="358" width="392" height="92" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <text x="518" y="394" font-size="20" font-weight="800" fill="#006B7A">Palautesilmukka</text>
 <text x="518" y="422" font-size="16" fill="#3A4253">lokitus + palautteen keräys</text>
-<text x="74" y="486" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">Tunnilla 27 yhdistät jokaisen solmun johonkin näistä kuudesta.</text>
+<text x="74" y="486" font-size="15" fill="#7E88A8" font-family="ui-monospace,monospace">Yksi toteutusosa voi kattaa useita vastuita — perustele ratkaisusi.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
@@ -617,7 +624,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 </g>
 <rect x="74" y="356" width="812" height="110" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="392" font-size="18" font-weight="700" fill="#5A6478">KIRJAA MYÖS MUISTIIN</text>
-<text x="98" y="424" font-size="17" fill="#3A4253">Mitkä solmut vastaavat kuutta komponenttia · mikä osa toimii jo</text>
+<text x="98" y="424" font-size="17" fill="#3A4253">Mikä on kielimallin vastuulla · mitkä osat muodostavat harnessin</text>
 <text x="98" y="450" font-size="17" fill="#3A4253">Mikä jäi kesken · mitä testaat tai korjaat tunnilla 27</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
@@ -670,7 +677,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 </g>
 <rect x="74" y="424" width="812" height="68" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(98,442)"><rect x="0" y="0" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="2"/><circle cx="11" cy="13" r="3.5" fill="#008799"/><circle cx="25" cy="13" r="3.5" fill="#008799"/><rect x="10" y="21" width="16" height="4" rx="2" fill="#008799"/></g>
-<text x="156" y="466" font-size="19" font-weight="700" fill="#006B7A">Tunnilla 27: turvakerros, hyväksyntäportit, testaus ja dokumentaatio.</text>
+<text x="156" y="466" font-size="18" font-weight="700" fill="#006B7A">n8n on yksi harness-toteutus — kuusi rakennusosaa toimii tarkistuslistana.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-25/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-27/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-26')">Merkitse suoritetuksi</button></div></div>

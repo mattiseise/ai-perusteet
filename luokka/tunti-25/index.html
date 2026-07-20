@@ -23,6 +23,8 @@
 <p>Kaikki, mitä olet tähän mennessä oppinut — <strong>muisti</strong>, <strong>konteksti</strong>, <strong>työkalut</strong>, <strong>suunnittelumallit</strong> ja <strong>turvallisuus</strong> — johtaa yhteen tärkeään ajatukseen: <strong>agentti ei voi tehdä kaikkea yksin</strong>. Joissain tilanteissa agentti täytyy pysäyttää odottamaan, kunnes ihminen sanoo: ”kyllä, jatka” tai ”ei, älä tee sitä”.</p>
 <p>Tässä toimintatavassa <strong>ihminen osallistuu päätöksentekoon</strong> automaation rinnalla. Se ei tarkoita, että ihminen tekee kaiken itse. Se tarkoittaa, että ihminen hyväksyy kriittiset päätökset, tarkistaa riskialttiit toiminnot ja ohjaa agenttia silloin, kun agentti on epävarma.</p>
 <p>Tässä oppitunnissa opit, <strong>milloin ihminen täytyy ottaa mukaan päätöksentekoon, miten hyväksyntäportit suunnitellaan ja miten rakennetaan työnkulkuja, joissa agentti ja ihminen tekevät yhteistyötä</strong>. Näitä periaatteita käytät suoraan seuraavilla oppitunneilla, kun rakennat omaa agenttia n8n:llä.</p>
+<blockquote class="pause"><p><strong>Harnessin näkökulma:</strong> Hyväksyntäportti kuuluu harnessiin. Kielimalli voi valmistella ehdotuksen ja perustelun, mutta harness pysäyttää suorituksen, näyttää ihmiselle tarvittavat tiedot ja jatkaa vasta hyväksynnän jälkeen. Malli ei voi hyväksyä omaa ehdotustaan.</p>
+</blockquote>
 <h2>Milloin ihminen tarvitaan mukaan päätökseen?</h2>
 <p>Kaikki agentin päätökset eivät tarvitse ihmisen hyväksyntää. Jos jokainen pieni päätös pysäytetään ihmiselle, seurauksena on hidas ja kuormittava järjestelmä. Ihminen väsyy jatkuviin hyväksyntäpyyntöihin eikä ehdi keskittyä tärkeimpiin päätöksiin. Siksi sinun täytyy <strong>valita strategisesti</strong>, mitkä päätökset ovat niin kriittisiä, että ne vaativat ihmisen hyväksynnän.</p>
 <p>Kolme sääntöä auttaa päättämään, milloin ihminen tarvitaan mukaan.</p>
@@ -181,8 +183,8 @@
 <tbody>
 <tr>
 <td><strong>Agentin rakenne</strong></td>
-<td>Agentin kuusi komponenttia.</td>
-<td>Jokainen komponentti toteutuu yhtenä tai useampana n8n-solmuna.</td>
+<td>Agentin kuusi rakennusosaa.</td>
+<td>Rakennusosat toimivat kattavuuden tarkistuslistana. Yksi solmu, sääntö tai palvelu voi kattaa useita vastuita.</td>
 </tr>
 <tr>
 <td><strong>Automaatio vs. autonomia</strong></td>
@@ -241,6 +243,8 @@
 <p><strong>Hyväksyntäportit</strong> tehdään selkeiksi ja nopeiksi, jotta ihminen voi vastata ilman, että koko prosessi pysähtyy tarpeettoman pitkäksi aikaa. Hyvässä hyväksyntäportissa näkyvät päätös, perustelut, riskit, hyväksyjä ja vaihtoehtoinen polku, jos pyyntö hylätään.</p>
 <p>Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rutiinivaiheita, kun taas ihminen tekee kriittiset päätökset. Agentti voi myös oppia ihmisen palautteesta, kun hyväksynnät ja hylkäykset tallennetaan lokiin ja niitä käytetään toiminnan kehittämiseen.</p>
 <p>Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan <strong>älykäs, turvallinen ja hallittu agentti</strong>.</p>
+<blockquote class="pause"><p><strong>Erota nämä:</strong> Minkä ehdotuksen kielimalli valmistelee — ja missä kohdassa harness siirtää päätösvallan ihmiselle? Mitä tapahtuu, jos ihminen ei vastaa ajoissa?</p>
+</blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
@@ -344,16 +348,18 @@ puuttuu? Mikä on epäselvää?
 <div class="task-widget" data-ti="1"></div>
 
 <h2>Tehtävä 3/4 — milloin agentti pysähtyy?</h2>
-<p>Tässä tehtävässä johdat pientä pitopalvelua ja suunnittelet agentin hyväksyntäportteja. Etene tilanteesta toiseen ja lue jokaisesta valinnasta annettu palaute.</p>
+<p>Tässä tehtävässä johdat pientä pitopalvelua ja suunnittelet agentin harnessiin hyväksyntäportit. Etene tilanteesta toiseen ja tarkkaile erityisesti portin tilaa: milloin suoritus pysähtyy, mitä ihmiselle näytetään ja mitä harness tekee aikarajan täyttyessä.</p>
 <div class="task-widget" data-ti="2"></div>
 
 <h2>Tehtävä 4/4 — omin sanoin</h2>
 <p>Viimeinen tehtävä kokoaa tunnin yhteen. Et saa pisteitä koneelta, vaan kirjoitat lyhyen selityksen omin sanoin ja vertaat sitä asiantuntijan näkökulmaan ja muistilistaan.</p>
 <div class="task-widget" data-ti="3"></div></div><div id="panel-lesson-25-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-25-sanasto" data-tab="sanasto" hidden><h1>Sanasto – oppitunti 25: Ihmisen osallistuminen päätöksentekoon</h1>
+<h2>Harness</h2>
+<p>Kielimallia ympäröivä järjestelmä, joka toteuttaa hyväksyntäportin käytännössä. Se pysäyttää suorituksen, säilyttää tilan, näyttää päätöstiedot ihmiselle ja jatkaa, hylkää tai eskaloi ennalta sovitun säännön mukaan.</p>
 <h2>Ihmisen osallistuminen päätöksentekoon (ihminen silmukassa)</h2>
 <p>Automaatio, jossa ihminen hyväksyy kriittiset päätökset. Ei täysin automatisoitua, ei käsityötä — hybridi.</p>
 <h2>Hyväksyntäportti (approval gate)</h2>
-<p>Piste prosessissa, jossa agentti pysähtyy ja odottaa ihmisen vastausta. Selkeä kysymys ja ehdotus.</p>
+<p>Harnessin toteuttama kohta, jossa suoritus pysähtyy odottamaan ihmisen vastausta. Hyvä portti näyttää selkeän kysymyksen, ehdotuksen, perustelun ja riskin.</p>
 <h2>Eskalointi (escalation)</h2>
 <p>Tehtävän siirtäminen toiselle hyväksyjälle, kun ensimmäinen ei voi vastata.</p>
 <h2>Aikaraja</h2>
@@ -689,8 +695,8 @@ puuttuu? Mikä on epäselvää?
 <text x="24" y="152" font-size="16" fill="#3A4253">Kiireessä tehtyä poikkeusta ei</text>
 <text x="24" y="176" font-size="16" fill="#3A4253">pidä muuttaa yleiseksi säännöksi.</text></g>
 <rect x="74" y="392" width="812" height="76" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
-<text x="100" y="424" font-size="18" fill="#006B7A">Oppiminen ei tapahdu turvallisesti itsestään. Suunnittele, mitä palautteesta</text>
-<text x="100" y="450" font-size="18" fill="#006B7A">opitaan, mitä ei opita ja kuka valvoo vaikutuksia.</text>
+<text x="100" y="424" font-size="18" fill="#006B7A">Harness pysäyttää, säilyttää tilan ja näyttää päätöstiedot ihmiselle.</text>
+<text x="100" y="450" font-size="18" fill="#006B7A">Aikarajan jälkeen se jatkaa, hylkää tai eskaloi sovitun säännön mukaan.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
 

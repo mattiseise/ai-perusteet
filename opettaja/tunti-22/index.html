@@ -27,6 +27,7 @@
 <li>Opiskelija tunnistaa kolme perustyökalua: <strong>tiedostot</strong>, <strong>verkkohaku</strong> ja <strong>CLI-komennot</strong>.</li>
 <li>Opiskelija ymmärtää, että jokainen työkalu tuo mukanaan turvallisuusriskejä.</li>
 <li>Opiskelija ymmärtää <strong>orkestroinnin</strong> merkityksen: agentin pitää käyttää työkaluja oikeassa järjestyksessä.</li>
+<li>Opiskelija osaa erottaa kielimallin työkalupyynnön harnessin vastuusta: harness tarkistaa oikeudet, suorittaa kutsun ja palauttaa tuloksen tai virheen.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
 <ul>
@@ -208,7 +209,9 @@
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”CLI on tehokas, joten sitä kannattaa käyttää paljon.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> CLI on tehokas juuri siksi, että se on vaarallinen. Sitä kannattaa käyttää vain, kun se on oikeasti tarpeen, ja silloinkin hiekkalaatikossa, sallittujen kohteiden luettelolla ja tarvittaessa ihmisen hyväksynnällä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Orkestrointi ei ole tärkeää.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Väärä työkalujen järjestys voi tuottaa virheellisen lopputuloksen. Oikea järjestys on osa agentin päättelyä ja arkkitehtuuria.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Väärä työkalujen järjestys voi tuottaa virheellisen lopputuloksen. Oikea järjestys on osa agentin päättelyä ja arkkitehtuuria.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: ”Kielimalli käyttää työkalua suoraan.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Kielimalli ehdottaa rakenteista työkalukutsua. Harness tarkistaa työkalusopimuksen ja oikeudet, suorittaa kutsun hallitussa ympäristössä, palauttaa tuloksen tai virheen ja kirjaa tapahtuman. Tämä raja tekee työkalujen käytöstä testattavaa ja rajattavaa.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Sallittujen kohteiden luettelo eri agenteille</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija suunnittelee työkalujen käyttöoikeudet turvallisesti.</p>
 <p><strong>Tehtävä:</strong> Anna opiskelijoille 2–3 agenttiesimerkkiä. Opiskelijat määrittävät, mitä tiedostoja, verkkolähteitä tai komentoja agentti saa käyttää ja mitä ei.</p>
@@ -1172,8 +1175,8 @@ Agentti ajaa vaarallisen komennon, kuten rm -rf /, ja voi poistaa koko järjeste
 <text x="648" y="342" font-size="16" fill="#5A6478">hyväksyntä.</text>
 <rect x="74" y="376" width="812" height="84" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(100,400)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="22" height="17" rx="4"/><path d="M14 6 V1"/><circle cx="14" cy="-1" r="2" fill="#2F9E69" stroke="none"/><circle cx="10" cy="13" r="2" fill="#2F9E69" stroke="none"/><circle cx="18" cy="13" r="2" fill="#2F9E69" stroke="none"/><path d="M10 18 H18"/></g>
-<text x="146" y="410" font-size="19" font-weight="700" fill="#247A52">Agentti on orkestraattori</text>
-<text x="146" y="438" font-size="16" fill="#3A4253">Ei yksi älykäs ohjelma, vaan koordinaattori, joka kutsuu työkaluja vuorollaan.</text>
+<text x="146" y="410" font-size="19" font-weight="700" fill="#247A52">Harness orkestroi työkalut</text>
+<text x="146" y="438" font-size="16" fill="#3A4253">Kielimalli pyytää; harness rajaa, suorittaa ja palauttaa tuloksen.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">14 / 14</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-21/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-23/">Seuraava →</a></div></div></div>

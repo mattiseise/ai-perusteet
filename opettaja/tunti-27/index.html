@@ -37,7 +37,7 @@
 <ul>
 <li>Opiskelija kirjoittaa selkeää ja asiallista dokumentaatiota.</li>
 <li>Opiskelija esittelee projektinsa ja perustelee tekemänsä ratkaisut.</li>
-<li>Opiskelija tunnistaa agentin kuusi komponenttia omassa projektissaan.</li>
+<li>Opiskelija erottaa kielimallin ja harnessin vastuut omassa projektissaan ja käyttää agentin kuutta rakennusosaa kattavuuden tarkistuslistana.</li>
 </ul>
 <p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on vastuullisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pedagoginen lähestymistapa</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Ydinviesti: vastuullinen käyttäjä rakentaa, testaa ja dokumentoi</h3></div><div class="task-card-body">
@@ -108,7 +108,7 @@
 <tr>
 <td><strong>ARCHITECTURE</strong></td>
 <td>Tekijöille, ylläpitäjille ja arvioijille</td>
-<td>Solmut, työnkulku, inputit, outputit ja agentin kuusi komponenttia.</td>
+<td>Kielimallin ja harnessin vastuunjako, työnkulku, työkalut, tila, oikeudet, hyväksynnät, lokitus ja virhepolut.</td>
 </tr>
 <tr>
 <td><strong>SAFETY</strong></td>
@@ -128,7 +128,9 @@
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: “Turvallisuustestit ovat liioittelua.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Turvallisuustestit eivät ole kuvitteellisia ääriesimerkkejä. Esimerkiksi <strong>promptihyökkäys</strong> on todellinen riski agenttijärjestelmissä. Jos agentti voi lähettää viestejä, lukea tietoa tai käyttää työkaluja, sitä pitää testata väärinkäyttöä vastaan.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: “Oma projektini on liian pieni dokumentointiin.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Myös pieni projekti tarvitsee dokumentaation. Dokumentaatio auttaa opiskelijaa itseään muistamaan myöhemmin, mitä hän teki ja miksi.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Myös pieni projekti tarvitsee dokumentaation. Dokumentaatio auttaa opiskelijaa itseään muistamaan myöhemmin, mitä hän teki ja miksi.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: “Arkkitehtuuri on solmuluettelo, jossa jokaiselle rakennusosalle on oma solmu.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Arkkitehtuuri kuvaa vastuut ja niiden suhteet. Ensin erotetaan kielimallin ja harnessin tehtävät. Sen jälkeen kuutta rakennusosaa käytetään kattavuuden tarkistuslistana: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Testaaminen</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija testaa agenttia systemaattisesti ja dokumentoi tulokset.</p>
 <p><strong>Tehtävä:</strong> Opiskelijan tulee tehdä vähintään 9 testiä:</p>
@@ -203,7 +205,7 @@
 <p>Opiskelijan tulee tuottaa kolme dokumentaation osaa:</p>
 <ol>
 <li><strong>README:</strong> mitä agentti tekee ja miten sitä käytetään.</li>
-<li><strong>ARCHITECTURE:</strong> miten agentti on rakennettu ja mitä kukin solmu tekee.</li>
+<li><strong>ARCHITECTURE:</strong> mitä kielimalli tekee, mistä harness vastaa ja miten kokonaisuus on toteutettu.</li>
 <li><strong>SAFETY:</strong> mitä riskejä agentissa on ja miten ne on huomioitu.</li>
 </ol>
 <h4>README — käyttäjälle</h4>
@@ -215,26 +217,26 @@
 <li>Anna 1–2 esimerkkikäyttötilannetta.</li>
 </ul>
 <h4>ARCHITECTURE — ylläpitäjälle</h4>
+<p>Opiskelija avaa tunnilla 26 tekemänsä luonnoksen ja päivittää sitä toteutuksen ja testien perusteella. Ydindokumentissa on yksi kappale kielimallin ja harnessin rajasta sekä 3–5 vaiheriviä:</p>
 <table>
 <thead>
 <tr>
-<th>Solmu</th>
+<th>Vaihe</th>
 <th>Tehtävä</th>
-<th>Input</th>
-<th>Output</th>
-<th>Agentin komponentti</th>
+<th>Syöte → tulos</th>
+<th>Vastuu: kielimalli vai harness</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>[Solmun nimi]</td>
-<td>[Mitä solmu tekee?]</td>
-<td>[Mitä dataa solmu saa?]</td>
-<td>[Mitä dataa solmu palauttaa?]</td>
-<td>[Syötekäsittelijä / päättelijä / työkalu / muisti / turvakerros / palaute]</td>
+<td>[Nimi]</td>
+<td>[Mitä tämä tekee?]</td>
+<td>[Mitä saa ja mitä tuottaa?]</td>
+<td>[Kumpi vastaa?]</td>
 </tr>
 </tbody>
 </table>
+<p>Oikeus, lokitus tai virhepolku lisätään sille vaiheriville, jossa asia vaikuttaa. Lopuksi opiskelija päivittää tiiviin kuuden rakennusosan kattavuustarkistuksen: <strong>mukana</strong>, <strong>ei tarvita</strong> tai <strong>jäi jatkokehitykseen</strong>. Yksi toteutusosa voi kattaa useita vastuita. Laajempi työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa.</p>
 <h4>SAFETY — riskien arviointiin</h4>
 <table>
 <thead>
@@ -257,11 +259,11 @@
 <p><strong>Yleisiä ongelmia ja opettajan ratkaisuja:</strong></p>
 <ul>
 <li><strong>README on liian tekninen:</strong> muistuta, että README on myös ei-tekniselle lukijalle. Pyydä yksinkertaistamaan kieltä.</li>
-<li><strong>ARCHITECTURE puuttuu tai on liian suppea:</strong> vaadi taulukko, jossa jokaiselle solmulle on tehtävä, input, output ja agentin komponentti.</li>
+<li><strong>ARCHITECTURE puuttuu tai on liian suppea:</strong> palaa tunnin 26 luonnokseen. Vaadi yksi vastuunjakokappale, 3–5 vaiheriviä ja kuuden rakennusosan kattavuustarkistus.</li>
 <li><strong>SAFETY on pelkkä lista:</strong> pyydä lisäämään “Mitä tapahtuu, jos…” -analyysi ja jokaiselle riskille ehkäisykeino.</li>
-<li><strong>Kuuden komponentin linkitys puuttuu:</strong> vaadi, että opiskelija nimeää, mikä solmu toimii syötekäsittelijänä, päättelijänä, työkaluna, muistina, turvakerroksena ja palautteena.</li>
+<li><strong>Kuuden kohdan tarkistus puuttuu:</strong> pyydä opiskelijaa osoittamaan, missä syötekäsittely, päättely, työkalut, muisti, turvakerros ja palaute toteutuvat. Älä vaadi niille yksi yhteen omia solmuja.</li>
 </ul>
-<p><strong>Aika-arvio:</strong> 45–60 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Punainen tiimi</h3></div><div class="task-card-body">
+<p><strong>Aika-arvio tunnilla 27:</strong> 15 minuuttia, koska luonnos on tehty tunnilla 26. Laajempi dokumentointi on syventävä tehtävä.</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Punainen tiimi</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija testaa ja arvioi toisen projektia kriittisesti mutta rakentavasti.</p>
 <p><strong>Opettajan painotus:</strong> Punainen tiimi ei arvostele ihmistä, vaan etsii järjestelmän heikkoja kohtia. Palautteen tarkoitus on tehdä projektista parempi ja turvallisempi.</p>
 <p><strong>Punaisen tiimin tehtävä:</strong></p>
@@ -288,7 +290,7 @@
 <li>Mitä agentti tekee?</li>
 <li>Mikä on agentin käyttötapaus?</li>
 <li>Miten työnkulku etenee n8n:ssä?</li>
-<li>Missä näkyvät agentin kuusi komponenttia?</li>
+<li>Miten kielimallin ja harnessin vastuut eroavat, ja mikä kuudesta rakennusosasta jäi heikoimmaksi?</li>
 <li>Miten agenttia testattiin?</li>
 <li>Mikä ei vielä toimi täydellisesti?</li>
 <li>Mitä opiskelija tekisi seuraavaksi, jos projekti jatkuisi?</li>
@@ -429,7 +431,7 @@
 <td>27</td>
 <td>Dokumentaatio</td>
 <td>Opiskelija ei tiedä, mitä kirjoittaa.</td>
-<td>Näytä ARCHITECTURE-pohja ja sano: “Täytä tämä solmu kerrallaan.”</td>
+<td>Avaa tunnilla 26 tehty ARCHITECTURE-luonnos. Päivitä ensin yksi vastuunjakokappale ja 3–5 vaiheriviä, sitten kattavuustarkistus.</td>
 </tr>
 </tbody>
 </table>
@@ -595,12 +597,11 @@ Mitä se EI tee.
 <p><strong>2. ARCHITECTURE.md — rakenne</strong></p>
 <p>"Tämä dokumentti on tekijöille. Se selittää, miten agentti on rakennettu."</p>
 <p>Näytä:<br />
-- Solmujen lista: mitä kukin solmu tekee<br />
-- Kaavio tai tekstimuotoinen kuvaus: mistä alkaa, missä järjestyksessä, mihin päättyy<br />
-- <strong>Kuuden komponentin linkitys:</strong><br />
-  - Mikä solmu on syötekäsittelijä?<br />
-  - Mikä on päättelijä?<br />
-  - Jne.</p>
+- Kielimallin ja harnessin raja: mitä malli tekee ja mistä ympäröivä järjestelmä vastaa<br />
+- Solmujen tai vaiheiden tehtävät sekä niiden syötteet ja tulokset<br />
+- Kaavio tai tekstimuotoinen kuvaus: mistä suoritus alkaa, miten data kulkee ja mihin se päättyy<br />
+- Orkestrointi, työkalut ja oikeudet, tila ja muisti, hyväksynnät, lokitus, virhepolut ja palautuminen<br />
+- Kuusi rakennusosaa kattavuuden tarkistuslistana. Yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</p>
 <p><strong>3. SAFETY.md — turvallisuus</strong></p>
 <p>"Tässä listataan riskit ja selitetään, miten ne on torjuttu tai lievennetty."</p>
 <p>Näytä taulukko:<br />
@@ -881,11 +882,11 @@ Mitä se EI tee.
 <g transform="translate(24,26)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="11" height="11" rx="2.5"/><rect x="2" y="20" width="11" height="11" rx="2.5"/><rect x="22" y="11" width="11" height="11" rx="2.5"/><path d="M13 8 H18 V16 H22 M13 25 H18 V17"/></g>
 <text x="24" y="92" font-size="20" font-weight="800" fill="#006B7A">ARCHITECTURE</text>
 <text x="24" y="118" font-size="16" font-weight="700" fill="#5A6478">rakennekuvaus</text>
-<text x="24" y="158" font-size="15.5" fill="#1B2336">Jokainen solmu, mitä</text>
-<text x="24" y="182" font-size="15.5" fill="#1B2336">tekee ja miten data</text>
-<text x="24" y="206" font-size="15.5" fill="#1B2336">kulkee. Tärkein osa:</text>
-<text x="24" y="230" font-size="15.5" font-weight="700" fill="#006B7A">linkitä kuuteen</text>
-<text x="24" y="254" font-size="15.5" font-weight="700" fill="#006B7A">komponenttiin.</text>
+<text x="24" y="158" font-size="15.5" fill="#1B2336">Kielimallin ja harnessin</text>
+<text x="24" y="182" font-size="15.5" fill="#1B2336">vastuut, datan kulku,</text>
+<text x="24" y="206" font-size="15.5" fill="#1B2336">työkalut, oikeudet, tila,</text>
+<text x="24" y="230" font-size="15.5" font-weight="700" fill="#006B7A">hyväksynnät, lokit</text>
+<text x="24" y="254" font-size="15.5" font-weight="700" fill="#006B7A">ja virhepolut.</text>
 </g>
 <g transform="translate(628,168)">
 <rect x="0" y="0" width="258" height="288" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -901,11 +902,11 @@ Mitä se EI tee.
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Linkitä solmut kuuteen komponenttiin</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Kuusi rakennusosaa tarkistuslistana</title>
 <defs><pattern id="l27g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l27g8)"/>
-<text x="74" y="100" font-size="36" font-weight="800" fill="#1B2336">Linkitä solmut kuuteen komponenttiin</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Tämä osoittaa, että ymmärrät rakentamasi — et vain kopioinut solmuja.</text>
+<text x="74" y="100" font-size="36" font-weight="800" fill="#1B2336">Kuusi rakennusosaa tarkistuslistana</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</text>
 <g font-size="16" fill="#3A4253">
 <g transform="translate(74,160)">
 <rect x="0" y="0" width="392" height="86" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -944,7 +945,7 @@ Mitä se EI tee.
 <text x="62" y="62" fill="#5A6478">lokitus ja seuranta</text>
 </g>
 </g>
-<text x="74" y="476" font-size="15" fill="#5A6478" font-style="italic">Esim. Webhook → Validointi (IF) → AI-solmu → Vastauksen tarkistus (IF) → Discord-vastaus.</text>
+<text x="74" y="476" font-size="15" fill="#5A6478" font-style="italic">Kuvaa vastuut: mitä kielimalli tekee — ja mistä harness vastaa?</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
 </svg></div>
 
@@ -1124,8 +1125,8 @@ Mitä se EI tee.
 <rect x="74" y="312" width="812" height="148" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(102,342)"><circle cx="18" cy="18" r="18" fill="#EAF7F0"/><path d="M10 18 l6 6 l10 -12" fill="none" stroke="#2F9E69" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
 <text x="156" y="356" font-size="23" font-weight="800" fill="#247A52">Yksinkertainen, testattu agentti voittaa</text>
-<text x="156" y="392" font-size="18" fill="#3A4253">Hyvin dokumentoitu ja testattu agentti on parempi kuin monimutkainen,</text>
-<text x="156" y="418" font-size="18" fill="#3A4253">puolivalmis työ. Tunnistat kuusi komponenttia — ymmärrät mitä rakensit.</text>
+<text x="156" y="392" font-size="18" fill="#3A4253">Dokumentoi myös harness: työnkulku, työkalut, tila, oikeudet,</text>
+<text x="156" y="418" font-size="18" fill="#3A4253">hyväksynnät, lokit ja virhepolut — sekä niiden suhde kielimalliin.</text>
 <text x="156" y="446" font-size="16" fill="#5A6478" font-style="italic">Mittakaava voi olla eri, mutta ajattelu on sama.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>

@@ -60,6 +60,8 @@
 </tbody>
 </table>
 <p>Lisätestit ja laajemmat integraatiot ovat syventäviä, eivät 90 minuutin ydinsuorituksen ehtoja.</p>
+<blockquote class="pause"><p><strong>Harnessin näkökulma:</strong> Viimeistelyssä et testaa vain kielimallin vastauksia. Testaat myös harnessin: kulkeeko tila oikein, pysyvätkö työkalut ja oikeudet rajoissa, toimivatko hyväksyntäportit, syntyykö loki ja palautuuko järjestelmä virheestä hallitusti?</p>
+</blockquote>
 <p>Viimeistely tarkoittaa kolmea asiaa: lisäät <strong>turvakerroksen</strong> pohjapiirros 4:n mukaisesti, lisäät ihmisen hyväksyntää vaativat kohdat pohjapiirros 5:n mukaisesti ja rakennat <strong>lokituksen</strong>. Nämä erottavat harjoitustyön oikeasta agentista.</p>
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Avaa ennen rakentamista pohjapiirrokset 4 ja 5. Tarkista, mitä turvatoimia ja hyväksyntäportteja suunnittelit. Tällä tunnilla muutat ne konkreettisiksi n8n-solmuiksi.</p>
 </blockquote>
@@ -111,8 +113,8 @@
 <p><strong>README.md — käyttöohje</strong></p>
 <p>Kerro, mitä agentti tekee, kenelle se on tarkoitettu ja miten sitä käytetään. Ajattele tätä käyttöohjeena henkilölle, joka ei ole nähnyt projektiasi aiemmin. Aloita yhdellä kappaleella, joka selittää koko idean. Kerro sen jälkeen, miten agentti käynnistetään, mitä se tarvitsee toimiakseen ja mitä rajoituksia sillä on.</p>
 <p><strong>ARCHITECTURE.md — rakennekuvaus</strong></p>
-<p>Kuvaa agentin rakenne. Listaa jokainen n8n-solmu, mitä se tekee ja miten data kulkee solmujen välillä. Voit kirjoittaa rakenteen esimerkiksi näin: Webhook → Validointi (IF) → tekoälysolmu → Vastauksen tarkistus (IF) → Discord-vastaus. Selitä myös, miksi valitsit tämän rakenteen.</p>
-<p>ARCHITECTURE.md-dokumentin tärkein osa on se, että <strong>linkität solmut agentin kuuteen komponenttiin</strong>. Kerro, mikä solmu toimii syötekäsittelijänä, mikä päättelijänä, mikä työkalujen suorittajana, missä muisti sijaitsee, missä turvakerros on ja miten seuranta tai palautesilmukka toimii. Tämä osoittaa, että ymmärrät rakentamasi järjestelmän etkä vain kopioinut solmuja kankaalle.</p>
+<p>Päivitä tunnilla 26 tekemäsi luonnos. Säilytä yksi lyhyt kappale kielimallin ja harnessin rajasta: mitä mallilta pyydetään ja mistä ympäröivä järjestelmä vastaa. Päivitä sen jälkeen 3–5 tärkeimmän vaiheen tehtävät, syötteet ja tulokset vastaamaan toteutusta. Voit kuvata rakenteen esimerkiksi näin: Webhook → Validointi (IF) → tekoälysolmu → Vastauksen tarkistus (IF) → Discord-vastaus.</p>
+<p>Lisää vaiheriville tarvittava oikeus, lokitus tai virhepolku silloin, kun se vaikuttaa kyseiseen vaiheeseen. Päivitä lopuksi kuuden rakennusosan kattavuustarkistus: <strong>mukana</strong>, <strong>ei tarvita</strong> tai <strong>jäi jatkokehitykseen</strong>. Yksi solmu, sääntö tai ulkoinen palvelu voi kattaa useita kohtia. Laajempi orkestroinnin, työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa. Näin ydindokumentti pysyy lyhyenä mutta osoittaa, että ymmärrät rakentamasi järjestelmän.</p>
 <p><strong>SAFETY.md — turvallisuussuunnitelma</strong></p>
 <p>Tunnista riskit ja selitä, miten olet ratkaissut ne. Mitkä ovat pahimmat skenaariot? Mitä tapahtuu, jos tekoäly vastaa väärin? Entä jos joku yrittää manipuloida agenttia? Miten olet suojannut agentin? Mitä lokitetaan ja miksi?</p>
 <h2>Esittely</h2>
@@ -163,14 +165,14 @@
 </tr>
 </tbody>
 </table>
-<p>Arvioinnissa kiinnitetään erityistä huomiota siihen, osaatko tunnistaa agentin <strong>kuusi komponenttia</strong> omassa projektissasi. Se osoittaa, ymmärrätkö, mitä olet rakentanut.</p>
+<p>Arvioinnissa kiinnitetään erityistä huomiota siihen, osaatko erottaa kielimallin ja harnessin vastuut sekä käyttää agentin <strong>kuutta rakennusosaa</strong> kattavuuden tarkistuslistana. Se osoittaa, ymmärrätkö, mitä olet rakentanut.</p>
 <p><strong>Vinkki:</strong> Älä yritä tehdä liian suurta projektia. Yksinkertainen, hyvin dokumentoitu ja testattu agentti on parempi kuin monimutkainen mutta puolivalmis työ.</p>
 <h2>Palautus</h2>
 <p>Palauta tunnin lopussa tai opettajan ohjeistaman aikataulun mukaan seuraavat tuotokset:</p>
 <ul>
 <li><strong>n8n-työnkulku:</strong> linkki työnkulkuun tai vientitiedosto</li>
 <li><strong>README.md:</strong> käyttöohje</li>
-<li><strong>ARCHITECTURE.md:</strong> rakennekuvaus ja solmujen yhteys agentin kuuteen komponenttiin</li>
+<li><strong>ARCHITECTURE.md:</strong> kielimallin ja harnessin vastuunjako sekä kuuden rakennusosan kattavuustarkistus</li>
 <li><strong>SAFETY.md:</strong> riskit, suojaukset, lokitus ja palautumissuunnitelma</li>
 <li><strong>Testiraportti:</strong> vähintään normaalit tapaukset, reunatapaukset ja turvallisuustestit</li>
 <li><strong>Itsearviointi:</strong> mitä onnistui, mitä opit ja mitä tekisit toisin</li>
@@ -179,6 +181,8 @@
 <h2>Yhteenveto</h2>
 <p>Olet nyt rakentanut oman agentin alusta loppuun. Olet kerännyt viisi pohjapiirrosta, koonnut ne suunnitelmaksi, toteuttanut työnkulun n8n:ssä, lisännyt turvakerroksia, testannut agenttia ja dokumentoinut työn.</p>
 <p>Tämä on sama perusprosessi, jota kokeneet käyttäjät käyttävät. Mittakaava voi olla eri, mutta ajattelu on sama: suunnittele, rakenna pienestä isoon, testaa systemaattisesti, dokumentoi ja arvioi kriittisesti. Kun osaat tehdä tämän, ymmärrät agentin arkkitehtuurin ja osaat soveltaa sitä käytännössä.</p>
+<blockquote class="pause"><p><strong>Erota nämä:</strong> Mitä kielimalli tekee agentissasi — ja mistä harness vastaa ennen mallikutsua, sen aikana ja sen jälkeen?</p>
+</blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
@@ -225,9 +229,12 @@ tulosta — sen päätän itse.
 </ul>
 <p><strong>ARCHITECTURE — rakenne (½–1 sivu).</strong></p>
 <ul>
-<li>Listaa jokainen n8n-solmu järjestyksessä. Mitä se tekee, syöte, palautus.</li>
-<li><strong>Linkitä solmut agentin kuuteen komponenttiin.</strong> Tämä on tärkein osa.</li>
+<li>Avaa tunnilla 26 tekemäsi ARCHITECTURE-luonnos. Päivitä se vastaamaan toteutusta ja testien jälkeen tehtyjä korjauksia.</li>
+<li>Säilytä yksi lyhyt kappale kielimallin ja harnessin vastuunjaosta sekä 3–5 tärkeimmän vaiheen taulukko.</li>
+<li>Lisää vaiheriveille tarvittavat oikeudet, lokitus tai virhepolku silloin, kun ne vaikuttavat kyseiseen vaiheeseen.</li>
+<li>Päivitä kuuden rakennusosan kattavuustarkistus: <strong>mukana</strong>, <strong>ei tarvita</strong> tai <strong>jäi jatkokehitykseen</strong>. Yksi toteutusosa voi kattaa useita vastuita. Perustele poisjätöt yhdellä lauseella.</li>
 </ul>
+<p>Laajempi työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa. Tee se vain, jos ydindokumentaatio, testit ja korjaukset ovat valmiit.</p>
 <p><strong>SAFETY — turvallisuus (½–1 sivu).</strong></p>
 <ul>
 <li>3–5 pahinta riskiä, miten torjuit ne, mitä lokitat, ihmisen hyväksyntää vaativat kohdat.</li>
@@ -245,7 +252,7 @@ tulosta — sen päätän itse.
 <h3>Esittely (3–5 min luokassa)</h3>
 <ol>
 <li>Näytä agentti toiminnassa (2–3 normaalia syötettä).</li>
-<li>Selitä arkkitehtuuri (osoita n8n-kankaalta, mainitse 6 komponenttia).</li>
+<li>Selitä arkkitehtuuri: osoita n8n-kankaalta kielimallin ja harnessin vastuunjako sekä yksi tärkeä rajaus.</li>
 <li>Kerro turvakerroksesta.</li>
 <li>Arvioi kriittisesti — mikä onnistui, mikä ei.</li>
 </ol>
@@ -257,7 +264,7 @@ tulosta — sen päätän itse.
 <li><strong>Epäonnistumiset:</strong> Mikä ei toiminut? Miksi?</li>
 <li><strong>Opitut asiat:</strong> Mitä uutta opin?</li>
 <li><strong>Parannusideat:</strong> Mitä tekisin toisin?</li>
-<li><strong>Kuusi komponenttia:</strong> Mikä oli vahvin, mikä heikoin?</li>
+<li><strong>Kuusi rakennusosaa:</strong> Mikä vastuu toteutui vahvimmin, mikä jäi heikoimmaksi ja miksi?</li>
 </ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Valinnainen syvennys: sama tehtävä kahdella agentilla — syventävä</h2></div><div class="task-card-body">
 <p>Tämä ei ole lopputyön pakollinen osa eikä vaikuta palautukseen. Koko osion ajan olet katsonut agentin sisään: n8n:ssä näet jokaisen solmun ja jokaisen suorituksen. Valmisagentissa näet vain sen, minkä sen harness päättää näyttää. Tässä tehtävässä vertaat näitä kahta itse — havaintojen pohjalta, et mielikuvien.</p>
 <h3>Ohjeet</h3>
@@ -323,6 +330,10 @@ tulosta — sen päätän itse.
 </thead>
 <tbody>
 <tr>
+<td><strong>Harness</strong></td>
+<td>Kielimallia ympäröivä järjestelmä, joka ohjaa työnkulkua, rajaa työkalut ja oikeudet, hallitsee tilaa, toteuttaa hyväksynnät sekä huolehtii lokituksesta ja virhepoluista.</td>
+</tr>
+<tr>
 <td><strong>Testaaminen</strong> (testing)</td>
 <td>Prosessi, jossa agenttia käytetään systemaattisesti ja dokumentoidaan, toimiiko se odotetusti. Se ei ole sattumanvaraista — se on suunniteltu ja dokumentoitu.</td>
 </tr>
@@ -344,7 +355,7 @@ tulosta — sen päätän itse.
 </tr>
 <tr>
 <td><strong>Dokumentaatio</strong> (documentation)</td>
-<td>Kirjallinen selvitys siitä, mitä agentti tekee, miten se toimii ja mitkä ovat sen riskit. Dokumentaatio tekee agentin asialliseksi ja ylläpidettävään.</td>
+<td>Kirjallinen selvitys siitä, mitä agentti tekee, miten se toimii ja mitkä ovat sen riskit. Dokumentaatio tekee agentin asialliseksi ja ylläpidettäväksi.</td>
 </tr>
 <tr>
 <td><strong>README.md</strong></td>
@@ -352,7 +363,7 @@ tulosta — sen päätän itse.
 </tr>
 <tr>
 <td><strong>ARCHITECTURE.md</strong></td>
-<td>Tekninen dokumentaatio, joka kuvaa agentin rakenteen: solmut, yhteydet ja kuinka ne työskentelevät yhdessä.</td>
+<td>Tekninen kuvaus, joka erottaa kielimallin ja harnessin vastuut sekä dokumentoi työnkulun, työkalut, tilan, oikeudet, hyväksynnät, lokituksen ja virhepolut. Kuusi rakennusosaa toimii kattavuuden tarkistuslistana, ei pakollisena solmujaotteluna.</td>
 </tr>
 <tr>
 <td><strong>SAFETY.md</strong></td>
@@ -384,7 +395,7 @@ tulosta — sen päätän itse.
 </tr>
 <tr>
 <td><strong>Arkkitehtuuri</strong> (architecture)</td>
-<td>Agentin rakenne: mitä solmuja se sisältää, missä järjestyksessä ne tulevat ja miten data virtaa niiden läpi.</td>
+<td>Agentin vastuiden ja rakenteen kuvaus: mitä kielimalli tekee, mistä harness vastaa ja miten data, päätökset sekä valvonta kulkevat järjestelmän läpi.</td>
 </tr>
 <tr>
 <td><strong>Datavirta</strong> (data flow)</td>
@@ -636,11 +647,11 @@ tulosta — sen päätän itse.
 <g transform="translate(24,26)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="11" height="11" rx="2.5"/><rect x="2" y="20" width="11" height="11" rx="2.5"/><rect x="22" y="11" width="11" height="11" rx="2.5"/><path d="M13 8 H18 V16 H22 M13 25 H18 V17"/></g>
 <text x="24" y="92" font-size="20" font-weight="800" fill="#006B7A">ARCHITECTURE</text>
 <text x="24" y="118" font-size="16" font-weight="700" fill="#5A6478">rakennekuvaus</text>
-<text x="24" y="158" font-size="15.5" fill="#1B2336">Jokainen solmu, mitä</text>
-<text x="24" y="182" font-size="15.5" fill="#1B2336">tekee ja miten data</text>
-<text x="24" y="206" font-size="15.5" fill="#1B2336">kulkee. Tärkein osa:</text>
-<text x="24" y="230" font-size="15.5" font-weight="700" fill="#006B7A">linkitä kuuteen</text>
-<text x="24" y="254" font-size="15.5" font-weight="700" fill="#006B7A">komponenttiin.</text>
+<text x="24" y="158" font-size="15.5" fill="#1B2336">Kielimallin ja harnessin</text>
+<text x="24" y="182" font-size="15.5" fill="#1B2336">vastuut, datan kulku,</text>
+<text x="24" y="206" font-size="15.5" fill="#1B2336">työkalut, oikeudet, tila,</text>
+<text x="24" y="230" font-size="15.5" font-weight="700" fill="#006B7A">hyväksynnät, lokit</text>
+<text x="24" y="254" font-size="15.5" font-weight="700" fill="#006B7A">ja virhepolut.</text>
 </g>
 <g transform="translate(628,168)">
 <rect x="0" y="0" width="258" height="288" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -656,11 +667,11 @@ tulosta — sen päätän itse.
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Linkitä solmut kuuteen komponenttiin</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Kuusi rakennusosaa tarkistuslistana</title>
 <defs><pattern id="l27g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l27g8)"/>
-<text x="74" y="100" font-size="36" font-weight="800" fill="#1B2336">Linkitä solmut kuuteen komponenttiin</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Tämä osoittaa, että ymmärrät rakentamasi — et vain kopioinut solmuja.</text>
+<text x="74" y="100" font-size="36" font-weight="800" fill="#1B2336">Kuusi rakennusosaa tarkistuslistana</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</text>
 <g font-size="16" fill="#3A4253">
 <g transform="translate(74,160)">
 <rect x="0" y="0" width="392" height="86" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -699,7 +710,7 @@ tulosta — sen päätän itse.
 <text x="62" y="62" fill="#5A6478">lokitus ja seuranta</text>
 </g>
 </g>
-<text x="74" y="476" font-size="15" fill="#5A6478" font-style="italic">Esim. Webhook → Validointi (IF) → AI-solmu → Vastauksen tarkistus (IF) → Discord-vastaus.</text>
+<text x="74" y="476" font-size="15" fill="#5A6478" font-style="italic">Kuvaa vastuut: mitä kielimalli tekee — ja mistä harness vastaa?</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
 </svg></div>
 
@@ -879,8 +890,8 @@ tulosta — sen päätän itse.
 <rect x="74" y="312" width="812" height="148" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(102,342)"><circle cx="18" cy="18" r="18" fill="#EAF7F0"/><path d="M10 18 l6 6 l10 -12" fill="none" stroke="#2F9E69" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
 <text x="156" y="356" font-size="23" font-weight="800" fill="#247A52">Yksinkertainen, testattu agentti voittaa</text>
-<text x="156" y="392" font-size="18" fill="#3A4253">Hyvin dokumentoitu ja testattu agentti on parempi kuin monimutkainen,</text>
-<text x="156" y="418" font-size="18" fill="#3A4253">puolivalmis työ. Tunnistat kuusi komponenttia — ymmärrät mitä rakensit.</text>
+<text x="156" y="392" font-size="18" fill="#3A4253">Dokumentoi myös harness: työnkulku, työkalut, tila, oikeudet,</text>
+<text x="156" y="418" font-size="18" fill="#3A4253">hyväksynnät, lokit ja virhepolut — sekä niiden suhde kielimalliin.</text>
 <text x="156" y="446" font-size="16" fill="#5A6478" font-style="italic">Mittakaava voi olla eri, mutta ajattelu on sama.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>

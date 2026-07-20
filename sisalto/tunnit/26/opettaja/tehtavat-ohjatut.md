@@ -93,7 +93,7 @@ Kokoa tehtävän lopuksi kolme keskeistä käsitettä:
 
 ### Tavoite
 
-Tehtävän tavoitteena on yhdistää aiemmilla oppitunneilla opittu **agentin arkkitehtuuri** n8n:n konkreettisiin solmuihin. Opiskelijat tunnistavat, miten n8n-työnkulku voi vastata agentin kuutta komponenttia.
+Tehtävän tavoitteena on yhdistää aiemmilla oppitunneilla opittu **agentin arkkitehtuuri** n8n:n konkreettiseen toteutukseen. Opiskelijat erottavat kielimallin ja harnessin vastuut ja tarkistavat kuuden rakennusosan avulla, ettei suunnitelmasta puutu olennaista.
 
 ### Valmistelu
 
@@ -105,9 +105,9 @@ Vaihtoehtoisesti voit käyttää oppitunnin 26 aineistossa olevaa projektimallia
 
 ### Opettajan ohjeet
 
-Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komponenttia.
+Käy ensin läpi, mikä esimerkissä on kielimallin vastuulla ja mikä harnessin vastuulla. Käytä sen jälkeen kuutta rakennusosaa kattavuuden tarkistamiseen. Korosta, että taulukon n8n-vastineet ovat esimerkkejä: yksi solmu, sääntö tai palvelu voi kattaa useita vastuita, ja yksi vastuu voi jakautua useaan vaiheeseen.
 
-| Agentin komponentti | n8n-vastine | Mitä se tekee? |
+| Tarkistuslistan kohta | Mahdollinen n8n-vastine | Miten vastuu voi toteutua? |
 | --- | --- | --- |
 | **Syötekäsittelijä** | Webhook ja Validointi-IF | Vastaanottaa viestin ulkomaailmasta ja tarkistaa, että syöte on järkevä. |
 | **Päättelijä** | OpenAI-solmu | Analysoi viestin, hyödyntää ohjeistusta ja tuottaa päätöksen tai vastauksen. |
@@ -116,7 +116,7 @@ Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komp
 | **Turvakerros** | IF-solmu päättelyn jälkeen | Tarkistaa ennen toimintaa, onko vastaus turvallinen ja sallittu. |
 | **Palautesilmukka** | Lokitus Google Sheetsiin tai muuhun tallennuspaikkaan | Kirjaa tapahtumat, jotta toimintaa voidaan arvioida ja parantaa myöhemmin. |
 
-### Käsittely vaihe vaiheelta
+### Käsittely vastuu kerrallaan
 
 1. **Syötekäsittelijä:** Osoita Webhook-solmua ja ensimmäistä IF-ehtoa.
 
@@ -137,18 +137,19 @@ Käy opiskelijoiden kanssa läpi, miten n8n-solmut vastaavat agentin kuutta komp
 
    Selitä: “Jokainen tärkeä toimenpide kannattaa kirjata. Näin voidaan myöhemmin arvioida, mitä agentti teki ja miksi.”
 
-**Opettajan huomio:** Älä anna opiskelijoiden ajatella, että kaikki n8n-työnkulut ovat automaattisesti agentteja. Agenttimaisuus syntyy siitä, että työnkulku vastaanottaa syötteen, tulkitsee sen, tekee päätöksiä, käyttää työkaluja, huomioi muistia ja toimii rajatusti.
+**Opettajan huomio:** Älä anna opiskelijoiden ajatella, että kaikki n8n-työnkulut ovat automaattisesti agentteja tai että jokainen rakennusosa vaatii oman solmun. Agentti syntyy kielimallin ja harnessin kokonaisuudesta. Harness vastaanottaa ja rajaa syötteen, tarjoaa työkalut, ylläpitää tarvittavaa tilaa ja toimeenpanee turvarajat; kielimalli tekee sille annetun tehtävän sisällä tarvittavan arvion.
 
 ### Keskustelu
 
-- Miten nämä kuusi osaa toimivat yhdessä?
+- Mitä kielimalli tekee ja mistä harness vastaa?
+- Miten kaikki kuusi rakennusosaa toteutuvat kokonaisuutena, vaikka solmuja olisi vähemmän tai enemmän kuin kuusi?
 - Mitä tapahtuisi, jos **turvakerros** puuttuisi?
 - Miten agentti eroaa tavallisesta n8n-skriptistä?
 - Missä vaiheessa ihminen pitäisi ottaa mukaan?
 
 ### Odotettu oppimistulos
 
-- Opiskelijat osaavat yhdistää n8n-solmuja agentin kuuteen komponenttiin.
+- Opiskelijat osaavat erottaa kielimallin ja harnessin vastuut ja käyttää kuutta rakennusosaa kattavuuden tarkistuslistana.
 - Opiskelijat ymmärtävät, että agentti ei ole vain solmujen ketju, vaan päätöksiä tekevä ja rajatusti toimiva järjestelmä.
 - Opiskelijat osaavat selittää, miksi turvakerros ja palautesilmukka ovat tärkeitä.
 
@@ -234,7 +235,7 @@ Opettaja arvioi opiskelijoiden työskentelyä seuraavien kriteerien perusteella:
 | Arviointikohde | Mitä arvioidaan? |
 | --- | --- |
 | **Solmujen ymmärtäminen** | Osaavatko opiskelijat selittää, mitä kukin solmu tekee? |
-| **Arkkitehtuurin pohdinta** | Yhdistävätkö opiskelijat solmut agentin kuuteen komponenttiin? |
+| **Arkkitehtuurin pohdinta** | Erottavatko opiskelijat kielimallin ja harnessin vastuut ja perustelevatko he kuuden rakennusosan kattavuuden? |
 | **Suunnittelun laatu** | Onko suunnitelma selkeä, rajattu ja realistinen? |
 | **Kriittinen ajattelu** | Tunnistavatko opiskelijat riskejä, turvakerroksia ja hyväksyntäportteja? |
 

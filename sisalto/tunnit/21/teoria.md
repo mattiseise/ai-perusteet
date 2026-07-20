@@ -2,9 +2,11 @@
 
 ## Johdanto
 
-Kun rakennat omaa agenttia n8n:llä, yksi suurimmista eroista aiempiin oppitunteihin verrattuna on tämä: agentti ei unohda kaikkea heti. Se voi muistaa, mitä tapahtui viime viikolla. Se tietää, missä vaiheessa prosessi on. Se näkee asiakkaan historian ja osaa käyttää sitä uuden ongelman ratkaisemisessa. Tämä **muisti** ja **konteksti** ovat agentin toiminnan kannalta keskeisiä. Ilman niitä agentti olisi helposti toistava, epäjohdonmukainen ja lähes käyttökelvoton.
+Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä tapahtui viime viikolla. Agentin harness voi tallentaa tapahtumia, ylläpitää prosessin vaihetta ja hakea asiakkaan historian mallin käyttöön silloin, kun sitä tarvitaan. Tämä **muisti** ja **konteksti** ovat agentin toiminnan kannalta keskeisiä. Ilman niitä agentti olisi helposti toistava, epäjohdonmukainen ja lähes käyttökelvoton.
 
 Yksinkertaisissa boteissa muisti päättyy usein siihen, kun keskustelu loppuu. Agentissa muisti voi kuitenkin jatkua keskustelujen välillä. Tässä oppitunnissa opit, **miten agentti näkee nykyisen tilanteen konteksti-ikkunan avulla, miten se muistaa menneisyyttä pitkäkestoisen muistin avulla ja miten se seuraa prosessin vaiheita tilan avulla**. Nämä kolme tekijää tekevät agentista näennäisesti älykkään. Kun rakennat agenttia n8n:llä, ne ovat myös niitä rakennuspalikoita, joista agentin logiikka syntyy.
+
+> **Harness-kytkentä:** Kielimalli ei kanna muistia mukanaan itsestään. Harness valitsee, mitä mallille annetaan juuri nyt, tallentaa sovitut tiedot ja prosessin tilan sekä hakee pitkäkestoisesta muistista tehtävän kannalta olennaisen tiedon. Samalla sen pitää rajata, mitä ei saa tallentaa.
 
 ## Konteksti-ikkuna: mitä agentti näkee juuri nyt?
 
@@ -152,6 +154,8 @@ Muistin hallinta vaatii myös **säännöllistä puhdistamista**. Vanhentuneet t
 ## Kohti omaa projektia
 
 Nyt kun ymmärrät muistin kolme tasoa ja soulin käsitteen, mieti omaa agenttiprojektiasi. Mitä tietoa agenttisi tarvitsee yksittäisen keskustelun aikana? Mitä sen täytyy muistaa keskustelujen välillä? Mitä tiloja prosessillasi on? Nämä päätökset muodostavat **Agentti: Muisti** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+
+> **Lopuksi pohdittavaksi:** Mitä tietoa harness antaa mallille nyt, mitä se säilyttää myöhemmäksi ja mitä sen pitää jättää tallentamatta?
 
 ## Yhteenveto
 

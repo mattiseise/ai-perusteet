@@ -4,6 +4,8 @@
 
 **Kokonaisuuden tavoite:** Tässä kokonaisuudessa opit ymmärtämään, miksi tekoälyagenttien turvallisuus pitää suunnitella alusta alkaen. Agentti ei vain vastaa kysymyksiin, vaan se voi käyttää työkaluja, hakea tietoa, muokata tiedostoja ja käynnistää toimintoja. Siksi hyökkäykset, virheet ja puutteellinen valvonta voivat aiheuttaa agentin käytössä enemmän vahinkoa kuin tavallisessa chatbot-keskustelussa.
 
+> **Harnessin näkökulma:** Turvallisuutta ei voi jättää kielimallin oman harkinnan varaan. Harness toteuttaa mallin ulkopuoliset suojaukset: syötteiden tarkistukset, minimioikeudet, hyväksyntäportit, lokituksen, aikarajat ja palautumisen.
+
 ---
 
 ## Miksi agenttien turvallisuus on tärkeää?
@@ -294,6 +296,8 @@ Agenttien turvallisuus perustuu siihen, että riskejä ei jätetä sattuman vara
 Kun agentti suunnitellaan hyvin, sen toiminta on rajattua, perusteltua ja valvottua. Käyttäjä tietää, mihin agenttia voi käyttää, ja järjestelmän ylläpitäjä pystyy selvittämään, mitä agentti teki ja miksi. Tämä tekee agentista luotettavamman sekä käyttäjälle että organisaatiolle.
 
 > **Muista:** Mitä enemmän agentti voi tehdä, sitä tärkeämpää on suunnitella, mitä se ei saa tehdä.
+
+> **Erota nämä:** Mitä kielimalli voi arvioida — ja mikä suojaus on toteutettava harnessissa niin, ettei malli voi ohittaa sitä?
 
 ## Lähteet ja tarkistuspäivä
 

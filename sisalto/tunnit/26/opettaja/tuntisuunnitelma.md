@@ -8,14 +8,15 @@ Tämän oppitunnin tavoitteena on siirtyä agenttien teoriasta käytännön rake
 
 - Opiskelija ymmärtää, mitä **n8n** on ja miten se eroaa perinteisestä ohjelmoinnista.
 - Opiskelija tunnistaa n8n:n keskeiset käsitteet: **solmu**, **trigger**, **webhook** ja **yhteys** eli viiva solmujen välillä.
-- Opiskelija näkee, miten n8n:n solmut vastaavat agentin kuutta komponenttia: **syötekäsittelijä**, **päättelijä**, **työkalut**, **muisti**, **turvakerros** ja **palaute**.
+- Opiskelija ymmärtää, että n8n on yksi ympäristö harnessin toteuttamiseen: tekoälysolmu kutsuu kielimallia, ja ympäröivät solmut, säännöt sekä palvelut huolehtivat muista vastuista.
+- Opiskelija käyttää agentin kuutta rakennusosaa kattavuuden tarkistuslistana. Yksi solmu tai sääntö voi kattaa useita kohtia, eikä jokaiselle tarvita omaa solmua.
 
 ### Soveltaa
 
 - Opiskelija pystyy rakentamaan yksinkertaisen n8n-työnkulun, jossa on trigger ja 2–3 muuta solmua.
 - Opiskelija pystyy suunnittelemaan oman n8n-agenttinsa ja tekemään siitä yksityiskohtaisen suunnitelman.
 
-**Opettajan painotus:** Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten agentin teoria muuttuu konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.
+**Opettajan painotus:** Korosta, että tämän oppitunnin tärkein tavoite ei ole rakentaa mahdollisimman monimutkaista työnkulkua, vaan ymmärtää, miten kielimallin ja harnessin vastuut muuttuvat konkreettisiksi solmuiksi, ehdoiksi ja tiedonkuluksi.
 
 ---
 
@@ -25,7 +26,7 @@ Tämän oppitunnin tavoitteena on siirtyä agenttien teoriasta käytännön rake
 
 Aloita oppitunti sanomalla opiskelijoille:
 
-> Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sitä käytännössä. Tämä ei vaadi ohjelmointiosaamista samalla tavalla kuin perinteinen koodaus. n8n näyttää, miten agentin kuusi komponenttia muuttuvat konkreettisiksi solmuiksi kankaalla.
+> Tähän mennessä olemme puhuneet agentin arkkitehtuurista teoriassa. Nyt rakennamme sitä käytännössä. n8n näyttää kielimallin ja harnessin vastuut konkreettisina solmuina, sääntöinä ja yhteyksinä. Kuusi rakennusosaa auttaa tarkistamaan kattavuuden, mutta ne eivät määrää solmujen määrää.
 
 Tämä auttaa erityisesti niitä opiskelijoita, joille ohjelmointi tuntuu vaikealta tai pelottavalta. Samalla on tärkeää korostaa, että visuaalinen työkalu ei poista suunnittelun ja loogisen ajattelun tarvetta.
 
@@ -117,6 +118,10 @@ Voit sanoa:
 
 Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa lähettää arkaluonteisia tietoja väärälle vastaanottajalle. Turvakerros voi estää tämän esimerkiksi tarkistamalla vastaanottajan, sisällön ja riskitason ennen lähetystä.
 
+### Väärinkäsitys 5: ”Kuusi rakennusosaa tarkoittaa kuutta erillistä solmua.”
+
+**Korjaava näkökulma:** Kuusi rakennusosaa toimii suunnittelun tarkistuslistana, ei pakollisena teknisenä topologiana. Yksi solmu, sääntö tai ulkoinen palvelu voi hoitaa useita vastuita, ja jokin vastuu voi jakautua useaan vaiheeseen. Opiskelijan tehtävä on perustella vastuunjako.
+
 ---
 
 ## Luokkatehtävien ohjeistus
@@ -201,15 +206,15 @@ Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa l
 
 ### TT-D: Keskustele ja perustele
 
-**Tavoite:** Opiskelija yhdistää n8n-solmut agentin kuuteen komponenttiin ja ymmärtää, miten ne toimivat yhdessä.
+**Tavoite:** Opiskelija erottaa kielimallin ja harnessin vastuut ja käyttää kuutta rakennusosaa työnkulun kattavuuden tarkistamiseen.
 
 **Ohje opiskelijalle:**
 
-1. Valitse suunnitelmastasi tai esimerkkityönkulusta vähintään kuusi solmua tai vaihetta.
-2. Yhdistä jokainen vaihe agentin komponenttiin.
-3. Perustele, miksi valitsit juuri tämän komponentin.
+1. Kuvaa, mikä vastuu kuuluu kielimallille ja mikä harnessille.
+2. Tarkista kuuden rakennusosan avulla, että olennaiset vastuut näkyvät suunnitelmassa.
+3. Perustele, jos yksi solmu, sääntö tai palvelu kattaa useita kohtia tai jokin kohta jätetään pois.
 
-| Agentin komponentti | Mahdollinen n8n-vastine | Miksi? |
+| Tarkistuslistan kohta | Mahdollinen n8n-vastine | Miten vastuu toteutuu? |
 | --- | --- | --- |
 | **Syötekäsittelijä** | Webhook tai lomakesolmu | Vastaanottaa käyttäjän viestin tai datan. |
 | **Päättelijä** | OpenAI-solmu tai IF-solmu | Tulkitsee tilanteen tai tekee päätöksen. |
@@ -234,7 +239,7 @@ Jos agentti voi lähettää sähköpostia ilman tarkistusta, se voi vahingossa l
    - Korosta: “Jokainen solmu tekee yhden asian. Data virtaa solmujen läpi.”
 3. **Arkkitehtuurin selitys noin 10 minuuttia**
 
-   - Näytä, miten solmut vastaavat agentin kuutta komponenttia.
+   - Näytä, miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat kokonaisuutena katetuiksi.
    - Piirrä taululle työnkulku: `Trigger → Validointi → Päättely → Turva → Toiminta → Palaute`
 4. **Opiskelijoiden työskentely noin 15 minuuttia**
 
@@ -264,7 +269,7 @@ Oppitunti 27 on rakentamisen, testaamisen ja dokumentoinnin tunti. Varmista, ett
 - n8n-instanssi, joko paikallinen tai pilvipalvelu
 - valmis esittelyprojekti n8n:ssä, esimerkiksi yksinkertainen FAQ-botti
 - projektimallit tasoille 1, 2 ja 3 tekstinä tai näytöllä
-- taulukko, jossa n8n-solmut yhdistetään agentin kuuteen komponenttiin
+- taulukko, jossa kuvataan kielimallin ja harnessin vastuut sekä kuuden rakennusosan kattavuus ilman yksi yhteen -solmupakkoa
 - punaisen tiimin palautelomake printattuna tai digitaalisesti jaettuna
 - varasuunnitelma teknisten ongelmien varalle, esimerkiksi kuvakaappaukset työnkulusta
 

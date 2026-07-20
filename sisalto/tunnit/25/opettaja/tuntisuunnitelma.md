@@ -12,7 +12,7 @@ Oppitunti rakentaa siltaa kohti **n8n-projektia**, jossa opiskelijat suunnittele
 4. **Oppitunti 24: Turvallisuus** — agentti toimii rajatusti, valvotusti ja turvallisesti.
 5. **Oppitunti 25: Ihmisen osallistuminen päätöksentekoon** — agentti tekee yhteistyötä ihmisen kanssa.
 
-**Opettajan painotus:** Korosta opiskelijoille, että hyvä agentti ei yritä tehdä kaikkea yksin. Asiallisesti suunniteltu agentti osaa tunnistaa tilanteet, joissa päätös pitää siirtää ihmiselle. Tämä ei tee agentista heikkoa, vaan turvallisemman ja luotettavamman.
+**Opettajan painotus:** Korosta opiskelijoille, että hyväksyntä ei ole irrallinen viesti ihmiselle vaan harnessin toteuttama tila. Harness pysäyttää suorituksen, säilyttää tarvittavat tiedot ja jatkaa, hylkää tai eskaloi sovitun säännön mukaan. Kielimalli voi valmistella ehdotuksen, mutta se ei saa hyväksyä omaa ehdotustaan.
 
 ---
 
@@ -155,6 +155,7 @@ Agentti arvioi asiakkaan hyvityspyynnön. Jos hyvitys on alle 20 € ja varmuus 
 | ”Jos agentti on varma, ihminen ei koskaan tarvita.” | Varmuus ei yksin riitä. Päätös voi silti koskea rahaa, henkilötietoja tai poikkeustilannetta. |
 | ”Hyväksyntäportti on vain hyväksy/hylkää-painike.” | Hyväksyntäportin pitää antaa päätöksen kannalta olennainen tieto: mitä, kenelle, miksi, riski ja vaihtoehdot. |
 | ”Agentti oppii automaattisesti oikein hyväksynnöistä.” | Ei aina. Palaute voi olla vinoutunutta, epäjohdonmukaista tai yksittäisen henkilön tyyliin perustuvaa. Oppiminen pitää rajata ja tarkistaa. |
+| ”Hyväksyntä on järjestelmän ulkopuolinen viesti ihmiselle.” | Ei. Harnessin pitää hallita odotustila, päätöstiedot, aikaraja ja varapolku, jotta suoritus jatkuu hallitusti myös silloin, kun ihminen ei vastaa. |
 
 ---
 

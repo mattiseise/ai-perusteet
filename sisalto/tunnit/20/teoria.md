@@ -12,6 +12,8 @@ Tässä oppitunnissa opit käyttämään **päätöspuuta** eli ajattelumallia, 
 
 > **Pysähdy hetkeksi:** Ajattele omaa tulevaa työtäsi. Mitä toistuvia ja monivaiheisia tehtäviä siinä voi olla? Mitkä niistä voisivat toimia työnkulkuina, ja mitkä vaatisivat agentin?
 
+> **Harness-kytkentä:** Agentti ei ole pelkkä kyvykäs kielimalli, vaan kielimallin ja sitä ympäröivän harnessin muodostama järjestelmä. Harness antaa tavoitteelle rakenteen, hallitsee tilaa ja työkaluja, rajaa oikeudet sekä huolehtii seurannasta. Jos tehtävä ei tarvitse näitä vastuita, promptaus tai tavallinen työnkulku on yleensä agenttia järkevämpi.
+
 ## Kolmen tason kustannukset ja hyödyt
 
 Automatisoinnissa on kolme perusvälinettä, ja jokaisella niistä on omat kustannuksensa ja hyötynsä. Kun päätät, mitä rakennat, sinun täytyy ymmärtää, mitä kukin väline käytännössä maksaa ja mitä hyötyä se tuottaa.
@@ -230,6 +232,8 @@ Tämän esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja av
 ## Kohti omaa projektia
 
 Kun olet valinnut oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko se riittävän monimutkainen ja muuttuvatko säännöt tilanteen mukaan? Jos päätöspuu osoittaa, että yksinkertaisempi ratkaisu riittäisi, harkitse ongelman tarkentamista sellaiseksi, jossa agentin autonomisuus tuottaa aidosti lisäarvoa.
+
+> **Lopuksi pohdittavaksi:** Mitä kielimallin ympärillä pitää olla, jotta ratkaisua voi perustellusti kutsua agentiksi — ja tarvitaanko sitä tässä ongelmassa?
 
 ## Yhteenveto
 

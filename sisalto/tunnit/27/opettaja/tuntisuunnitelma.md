@@ -20,7 +20,7 @@ Tämän oppitunnin tavoitteena on viedä n8n-agenttiprojekti suunnitelmasta koht
 
 - Opiskelija kirjoittaa selkeää ja asiallista dokumentaatiota.
 - Opiskelija esittelee projektinsa ja perustelee tekemänsä ratkaisut.
-- Opiskelija tunnistaa agentin kuusi komponenttia omassa projektissaan.
+- Opiskelija erottaa kielimallin ja harnessin vastuut omassa projektissaan ja käyttää agentin kuutta rakennusosaa kattavuuden tarkistuslistana.
 
 **Opettajan painotus:** Tämän oppitunnin tärkein viesti on vastuullisuus. Projekti ei ole valmis, kun se toimii kerran. Projekti on valmis vasta, kun se on rakennettu, testattu, dokumentoitu ja arvioitu kriittisesti.
 
@@ -71,7 +71,7 @@ Dokumentaatio palvelee eri lukijoita. Siksi yksi dokumentti ei riitä kaikkeen.
 | Dokumentti | Kenelle se on? | Mitä se sisältää? |
 | --- | --- | --- |
 | **README** | Käyttäjille ja ei-teknisille lukijoille | Mitä agentti tekee, miten sitä käytetään ja esimerkit käytöstä. |
-| **ARCHITECTURE** | Tekijöille, ylläpitäjille ja arvioijille | Solmut, työnkulku, inputit, outputit ja agentin kuusi komponenttia. |
+| **ARCHITECTURE** | Tekijöille, ylläpitäjille ja arvioijille | Kielimallin ja harnessin vastuunjako, työnkulku, työkalut, tila, oikeudet, hyväksynnät, lokitus ja virhepolut. |
 | **SAFETY** | Riskien arvioijille ja vastuuhenkilöille | Riskit, ehkäisykeinot, turvakerrokset ja testitulokset. |
 
 ---
@@ -99,6 +99,10 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 ### Väärinkäsitys 4: “Oma projektini on liian pieni dokumentointiin.”
 
 **Korjaava näkökulma:** Myös pieni projekti tarvitsee dokumentaation. Dokumentaatio auttaa opiskelijaa itseään muistamaan myöhemmin, mitä hän teki ja miksi.
+
+### Väärinkäsitys 5: “Arkkitehtuuri on solmuluettelo, jossa jokaiselle rakennusosalle on oma solmu.”
+
+**Korjaava näkökulma:** Arkkitehtuuri kuvaa vastuut ja niiden suhteet. Ensin erotetaan kielimallin ja harnessin tehtävät. Sen jälkeen kuutta rakennusosaa käytetään kattavuuden tarkistuslistana: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.
 
 ---
 
@@ -140,7 +144,7 @@ Kysy opiskelijoilta: “Kuka voisi ylläpitää projektiasi, jos olet itse poiss
 Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 1. **README:** mitä agentti tekee ja miten sitä käytetään.
-2. **ARCHITECTURE:** miten agentti on rakennettu ja mitä kukin solmu tekee.
+2. **ARCHITECTURE:** mitä kielimalli tekee, mistä harness vastaa ja miten kokonaisuus on toteutettu.
 3. **SAFETY:** mitä riskejä agentissa on ja miten ne on huomioitu.
 
 #### README — käyttäjälle
@@ -153,9 +157,13 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 
 #### ARCHITECTURE — ylläpitäjälle
 
-| Solmu | Tehtävä | Input | Output | Agentin komponentti |
-| --- | --- | --- | --- | --- |
-| [Solmun nimi] | [Mitä solmu tekee?] | [Mitä dataa solmu saa?] | [Mitä dataa solmu palauttaa?] | [Syötekäsittelijä / päättelijä / työkalu / muisti / turvakerros / palaute] |
+Opiskelija avaa tunnilla 26 tekemänsä luonnoksen ja päivittää sitä toteutuksen ja testien perusteella. Ydindokumentissa on yksi kappale kielimallin ja harnessin rajasta sekä 3–5 vaiheriviä:
+
+| Vaihe | Tehtävä | Syöte → tulos | Vastuu: kielimalli vai harness |
+| --- | --- | --- | --- |
+| [Nimi] | [Mitä tämä tekee?] | [Mitä saa ja mitä tuottaa?] | [Kumpi vastaa?] |
+
+Oikeus, lokitus tai virhepolku lisätään sille vaiheriville, jossa asia vaikuttaa. Lopuksi opiskelija päivittää tiiviin kuuden rakennusosan kattavuustarkistuksen: **mukana**, **ei tarvita** tai **jäi jatkokehitykseen**. Yksi toteutusosa voi kattaa useita vastuita. Laajempi työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa.
 
 #### SAFETY — riskien arviointiin
 
@@ -166,11 +174,11 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 **Yleisiä ongelmia ja opettajan ratkaisuja:**
 
 - **README on liian tekninen:** muistuta, että README on myös ei-tekniselle lukijalle. Pyydä yksinkertaistamaan kieltä.
-- **ARCHITECTURE puuttuu tai on liian suppea:** vaadi taulukko, jossa jokaiselle solmulle on tehtävä, input, output ja agentin komponentti.
+- **ARCHITECTURE puuttuu tai on liian suppea:** palaa tunnin 26 luonnokseen. Vaadi yksi vastuunjakokappale, 3–5 vaiheriviä ja kuuden rakennusosan kattavuustarkistus.
 - **SAFETY on pelkkä lista:** pyydä lisäämään “Mitä tapahtuu, jos…” -analyysi ja jokaiselle riskille ehkäisykeino.
-- **Kuuden komponentin linkitys puuttuu:** vaadi, että opiskelija nimeää, mikä solmu toimii syötekäsittelijänä, päättelijänä, työkaluna, muistina, turvakerroksena ja palautteena.
+- **Kuuden kohdan tarkistus puuttuu:** pyydä opiskelijaa osoittamaan, missä syötekäsittely, päättely, työkalut, muisti, turvakerros ja palaute toteutuvat. Älä vaadi niille yksi yhteen omia solmuja.
 
-**Aika-arvio:** 45–60 minuuttia
+**Aika-arvio tunnilla 27:** 15 minuuttia, koska luonnos on tehty tunnilla 26. Laajempi dokumentointi on syventävä tehtävä.
 
 ---
 
@@ -211,7 +219,7 @@ Opiskelijan tulee tuottaa kolme dokumentaation osaa:
 1. Mitä agentti tekee?
 2. Mikä on agentin käyttötapaus?
 3. Miten työnkulku etenee n8n:ssä?
-4. Missä näkyvät agentin kuusi komponenttia?
+4. Miten kielimallin ja harnessin vastuut eroavat, ja mikä kuudesta rakennusosasta jäi heikoimmaksi?
 5. Miten agenttia testattiin?
 6. Mikä ei vielä toimi täydellisesti?
 7. Mitä opiskelija tekisi seuraavaksi, jos projekti jatkuisi?
@@ -329,7 +337,7 @@ Molemmat polut arvioidaan samoilla kriteereillä. Polku A tukee opiskelijaa, jok
 | 21 | Vektoritietokanta | Opiskelija ei ymmärrä, miksi se on tärkeä. | Käytä vertausta: “Se on kuin haku, joka ymmärtää mitä tarkoitat, ei vain mitä kirjoitat.” |
 | 23 | ReAct ja suunnittelumallit | Opiskelija kadottaa punaisen langan. | Piirrä yksinkertainen kaavio: “Ajattele → Tee → Tarkista → Toista.” |
 | 26 | n8n:n aloittaminen | Opiskelija jähmettyy tyhjän työtilan edessä. | Ohjaa Taso 1 -projektiin, esimerkiksi FAQ-bottiin, ja anna valmis aloitusrakenne. |
-| 27 | Dokumentaatio | Opiskelija ei tiedä, mitä kirjoittaa. | Näytä ARCHITECTURE-pohja ja sano: “Täytä tämä solmu kerrallaan.” |
+| 27 | Dokumentaatio | Opiskelija ei tiedä, mitä kirjoittaa. | Avaa tunnilla 26 tehty ARCHITECTURE-luonnos. Päivitä ensin yksi vastuunjakokappale ja 3–5 vaiheriviä, sitten kattavuustarkistus. |
 
 ### Opiskelijan oman osaamisen varmistaminen arviointitehtävässä
 

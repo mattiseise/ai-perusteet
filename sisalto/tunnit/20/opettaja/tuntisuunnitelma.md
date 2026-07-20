@@ -9,6 +9,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, milloin **agent
 - Opiskelija ymmärtää, että agentti ei ole aina parempi ratkaisu kuin yksinkertainen työnkulku.
 - Opiskelija tunnistaa automatisoinnin kolme tasoa: **promptaus**, **työnkulku** ja **agentti**.
 - Opiskelija ymmärtää, että monimutkaisuus, kustannukset ja riskit kasvavat, kun siirrytään työnkulusta agenttiin.
+- Opiskelija osaa erottaa kielimallin kyvykkyyden harnessin tarpeesta: agentti on perusteltu vasta, kun tehtävä tarvitsee molempia.
 
 ### Soveltaa ja analysoida
 
@@ -89,6 +90,10 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa vies
 ### Väärinkäsitys 4: ”Agentin rakentamisen kustannus on vain sen tekemiseen käytetty aika.”
 
 **Korjaava näkökulma:** Agentin kustannuksiin kuuluvat myös testaus, valvonta, virheiden korjaus, ylläpito, käyttökustannukset, tietoturva ja dokumentointi. Nämä voivat olla suurempi osa kokonaiskustannusta kuin alkuperäinen rakentaminen.
+
+### Väärinkäsitys 5: ”Kyvykäs kielimalli on jo agentti.”
+
+**Korjaava näkökulma:** Kielimalli tuottaa vastauksia ja toimintaehdotuksia. Agentiksi järjestelmä muuttuu vasta, kun harness antaa sille tavoitteen, tilan ja työkalut sekä rajaa oikeudet, valvoo toimintaa ja käsittelee virheet. Jos näitä vastuita ei tarvita, promptaus tai työnkulku on rehellisempi kuvaus.
 
 ---
 

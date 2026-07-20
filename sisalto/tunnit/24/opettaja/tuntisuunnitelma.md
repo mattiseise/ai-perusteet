@@ -15,7 +15,7 @@ Oppitunnissa käsitellään neljä keskeistä uhkaa:
 - **Liian laajat oikeudet:** minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.
 - **Puutteellinen seuranta:** virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.
 
-**Opettajan painotus:** Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.
+**Opettajan painotus:** Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on harnessin suunnittelua. Kielimalli voi arvioida riskiä, mutta oikeudet, validointi, hyväksyntä, lokitus ja palautuminen on toteutettava mallin ulkopuolella niin, ettei malli voi ohittaa niitä.
 
 ---
 
@@ -185,6 +185,7 @@ Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteis
 | ”Hallusinaatio on harvinaista.” | Hallusinaatio on todellinen riski erityisesti silloin, kun agentti ei löydä tietoa mutta yrittää silti vastata. Siksi tarvitaan tietopohjaan ankkurointi ja tarkistusvaiheet. |
 | ”Lokit ovat vain vianselvitystä varten.” | Lokit ovat myös turvallisuuden ja vastuullisuuden väline. Ne auttavat havaitsemaan poikkeamat, todentamaan tapahtumat ja analysoimaan hyökkäyksiä. |
 | ”Jos agentti on hyödyllinen, sille kannattaa antaa laajat oikeudet.” | Ei. Hyödyllisyys ei tarkoita rajatonta pääsyä. Agentille annetaan vain se, mitä se tarvitsee tehtäväänsä, ja kriittiset toiminnot vaativat ihmisen hyväksynnän. |
+| ”Vahva järjestelmäprompti riittää turvakerrokseksi.” | Ei. Järjestelmäprompti ohjaa mallia, mutta harness toimeenpanee oikeudet, rajat, hyväksynnät ja lokituksen mallin ulkopuolella. |
 
 ---
 

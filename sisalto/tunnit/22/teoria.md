@@ -8,6 +8,8 @@ Chatbot voi vastata kysymykseen ”Mikä on tuotteemme hinta?” ja sanoa: ”Se
 
 Tässä oppitunnissa opit kolme perustyökalua, joita agentti voi käyttää. Ne muodostavat perustan, jonka päälle monet muut työkalut rakentuvat. Kun rakennat agenttia n8n:llä, nämä kolme ovat usein ensimmäisiä integraatioita, joita alat suunnitella.
 
+> **Harness-kytkentä:** Kielimalli voi ehdottaa rakenteista työkalukutsua, mutta harness tarkistaa työkalun sopimuksen ja käyttöoikeudet, suorittaa kutsun, palauttaa tuloksen tai virheen mallille ja kirjaa tapahtuman lokiin. Malli ei siis käytä työkalua suoraan.
+
 ## Työkalu 1: Tiedostot — lukeminen ja kirjoittaminen
 
 Agentti voi lukea ja kirjoittaa tiedostoja. Tämä on yksinkertainen mutta tehokas työkalu, koska se antaa agentille pääsyn pysyvään dataan.
@@ -278,6 +280,8 @@ Näillä rajoituksilla agentti pysyy hallinnassa. Se voi tehdä työtään, mutt
 ## Kohti omaa projektia
 
 Tämän oppitunnin työkaluajattelu auttaa sinua hahmottamaan, mitä konkreettisia toimintoja oma agenttisi tarvitsee. Mieti omaa projektiasi: tarvitseeko agenttisi lukea tiedostoja, hakea tietoa verkosta vai suorittaa komentoja? Miten rajaat työkalut niin, että agentti pääsee käsiksi vain siihen, mitä se todella tarvitsee? Taulukko, jossa yhdistät abstraktit työkalut konkreettisiin n8n-solmuihin, on hyvä lähtökohta rakentamiselle.
+
+> **Lopuksi pohdittavaksi:** Miten harness estää mallia käyttämästä väärää työkalua, väärillä oikeuksilla tai väärässä järjestyksessä?
 
 ## Yhteenveto
 

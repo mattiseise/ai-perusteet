@@ -27,6 +27,7 @@
 <li>Opiskelija ymmärtää, mitä <strong>eksplisiittinen työnkulku</strong> tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.</li>
 <li>Opiskelija ymmärtää, mitä <strong>moniagenttijärjestelmä</strong> tarkoittaa: tehtävä jaetaan useille erikoistuneille agenteille.</li>
 <li>Opiskelija tunnistaa, että eri suunnittelumallit sopivat erilaisiin tehtäviin.</li>
+<li>Opiskelija ymmärtää, että ReAct-kierros ja eksplisiittinen työnkulku ovat harnessin ohjaamia rakenteita, eivät vain mallin sisäistä toimintaa.</li>
 </ul>
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
 <ul>
@@ -138,7 +139,9 @@
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Moniagenttijärjestelmä on aina parempi kuin yksi agentti.”</h3></div><div class="task-card-body">
 <p><strong>Korjaava näkökulma:</strong> Moniagenttijärjestelmä lisää rooleja, viestinvaihtoa, lokitusta ja virhemahdollisuuksia. Aloita yhdellä agentilla ja lisää muita vain, jos tehtävän monimutkaisuus todella vaatii sitä.</p>
 </div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Suunnittelumalli on vain tekninen toteutustapa.”</h3></div><div class="task-card-body">
-<p><strong>Korjaava näkökulma:</strong> Suunnittelumalli on myös pedagoginen ja arkkitehtoninen valinta. Se vaikuttaa siihen, miten agenttia testataan, miten sitä selitetään ja miten sen virheitä korjataan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Suunnittelumalli on myös pedagoginen ja arkkitehtoninen valinta. Se vaikuttaa siihen, miten agenttia testataan, miten sitä selitetään ja miten sen virheitä korjataan.</p>
+</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 5: ”ReAct tapahtuu pelkästään promptissa tai kielimallissa.”</h3></div><div class="task-card-body">
+<p><strong>Korjaava näkökulma:</strong> Malli voi valita seuraavan toiminnon, mutta harness ylläpitää kierrosta, välittää ja tarkistaa työkalukutsut, palauttaa havainnot, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Ilman tätä ohjausta ReAct ei ole hallittu työnkulku.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
 </div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: havaittavan ReAct-lokin kirjoittaminen</h3></div><div class="task-card-body">
 <p><strong>Tavoite:</strong> Opiskelija ymmärtää ReAct-toteutuksen työkalukutsu–tulos–toiminto-silmukan.</p>
 <p><strong>Tehtävä:</strong> Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan havaittava ReAct-loki. Lokissa näkyvät lyhyt päätösperustelu, työkalun nimi ja rakenteiset parametrit, tulos tai virhe sekä seuraava toiminto. Mallin sisäistä raakaa chain-of-thoughtia ei kirjoiteta.</p>
@@ -1072,7 +1075,7 @@
 <text x="150" y="360" font-size="22" font-weight="800" fill="#247A52">Valitse aina malli, joka sopii tehtävän luonteeseen.</text>
 <text x="150" y="392" font-size="18" fill="#3A4253">Mallit eivät sulje toisiaan pois — usein käytät niiden yhdistelmää.</text>
 <text x="150" y="424" font-size="18" fill="#3A4253">Valinta ratkaisee, onko agentti tehokas vai tehoton, selkeä vai sekava.</text>
-<text x="150" y="452" font-size="16" fill="#5A6478" font-style="italic">n8n:ssä sinä valitset, mitä mallia agentti noudattaa.</text>
+<text x="150" y="452" font-size="16" fill="#5A6478">Harness ohjaa kierrosta: päätös → kutsu → havainto → seuraava toiminto.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-22/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-24/">Seuraava →</a></div></div></div>

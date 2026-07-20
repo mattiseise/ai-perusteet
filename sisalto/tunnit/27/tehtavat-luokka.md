@@ -55,8 +55,12 @@ Kirjoita kolme lyhyttä dokumenttia:
 
 **ARCHITECTURE — rakenne (½–1 sivu).**
 
-- Listaa jokainen n8n-solmu järjestyksessä. Mitä se tekee, syöte, palautus.
-- **Linkitä solmut agentin kuuteen komponenttiin.** Tämä on tärkein osa.
+- Avaa tunnilla 26 tekemäsi ARCHITECTURE-luonnos. Päivitä se vastaamaan toteutusta ja testien jälkeen tehtyjä korjauksia.
+- Säilytä yksi lyhyt kappale kielimallin ja harnessin vastuunjaosta sekä 3–5 tärkeimmän vaiheen taulukko.
+- Lisää vaiheriveille tarvittavat oikeudet, lokitus tai virhepolku silloin, kun ne vaikuttavat kyseiseen vaiheeseen.
+- Päivitä kuuden rakennusosan kattavuustarkistus: **mukana**, **ei tarvita** tai **jäi jatkokehitykseen**. Yksi toteutusosa voi kattaa useita vastuita. Perustele poisjätöt yhdellä lauseella.
+
+Laajempi työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa. Tee se vain, jos ydindokumentaatio, testit ja korjaukset ovat valmiit.
 
 **SAFETY — turvallisuus (½–1 sivu).**
 
@@ -85,7 +89,7 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 ### Esittely (3–5 min luokassa)
 
 1. Näytä agentti toiminnassa (2–3 normaalia syötettä).
-2. Selitä arkkitehtuuri (osoita n8n-kankaalta, mainitse 6 komponenttia).
+2. Selitä arkkitehtuuri: osoita n8n-kankaalta kielimallin ja harnessin vastuunjako sekä yksi tärkeä rajaus.
 3. Kerro turvakerroksesta.
 4. Arvioi kriittisesti — mikä onnistui, mikä ei.
 
@@ -97,7 +101,7 @@ Vertaisarvio on punaisen tiimin työtä: tavoite löytää ongelmia, ei kritisoi
 - **Epäonnistumiset:** Mikä ei toiminut? Miksi?
 - **Opitut asiat:** Mitä uutta opin?
 - **Parannusideat:** Mitä tekisin toisin?
-- **Kuusi komponenttia:** Mikä oli vahvin, mikä heikoin?
+- **Kuusi rakennusosaa:** Mikä vastuu toteutui vahvimmin, mikä jäi heikoimmaksi ja miksi?
 
 ---
 

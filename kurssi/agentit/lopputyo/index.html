@@ -20,11 +20,11 @@
 <section class="page-hero"><div class="page-hero-inner"><div class="eyebrow"><a class="bc-link" href="/kurssi/" style="color:var(--blue)">Verkkokurssi</a> · Agentit</div><h1>★ Osion lopputyö</h1><p>Agentit — Tekoälyagentit ja automaatio.</p></div></section><div class="page-body"><div class="reading panel active"><h1>Agentit-osion lopputyö — n8n-agentin rakentaminen</h1>
 <blockquote class="pause"><p>Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun keräät <strong>Agentti-pohjapiirroksiasi</strong> ja rakennat lopulta valmista agenttia.</p>
 </blockquote>
-<p><strong>Tärkein viesti heti alkuun:</strong> rakennat <strong>hyvin yksinkertaisen agentin</strong> (3–5 solmua). Emme tavoittele mitään monimutkaista — pieni, toimiva agentti, jonka ymmärrät, on koko tehtävän tavoite.</p>
+<p><strong>Tärkein viesti heti alkuun:</strong> agentti = kielimalli + harness. Kielimalli tuottaa arvion tai ehdotuksen. Harness ohjaa työnkulkua, rajaa työkalut ja oikeudet, ylläpitää tilaa sekä huolehtii turvasta, hyväksynnöistä ja lokituksesta. Tässä työssä rakennat tästä kokonaisuudesta <strong>hyvin yksinkertaisen version</strong> (3–5 solmua). Pieni, toimiva agentti, jonka vastuut ymmärrät, on koko tehtävän tavoite.</p>
 <figure style="margin:24px 0;text-align:center">
 <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
-  <title>Mitä rakennat: yksinkertainen agentti</title>
-  <desc>Tavoite on pieni, toimiva agentti, jossa on 3–5 solmua: käynnistys, agentti yhdellä kielimallilla ja 1–2 työkalulla, sekä lopputulos. Ei monimutkaista järjestelmää.</desc>
+  <title>Mitä rakennat: yksinkertainen agentti eli kielimalli ja harness</title>
+  <desc>Tavoite on pieni, toimiva agentti, jossa harness ohjaa työnkulkua, kutsuu kielimallia, rajaa työkalut ja tuottaa hallitun lopputuloksen. Kokonaisuudessa on 3–5 solmua.</desc>
   <defs>
     <g id="smp-bolt" fill="none" stroke="currentColor"><path d="M13 2 L5 13.5 H11 L10.5 22 L19 9.5 H12.5 Z" fill="currentColor"/></g>
     <g id="smp-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
@@ -42,8 +42,8 @@
   <line x1="252" y1="128" x2="276" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M280 128 L270 122.5 L270 133.5 Z" fill="#9AA6BD"/>
   <rect x="300" y="88" width="280" height="80" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
   <use href="#smp-robot" x="316" y="102" width="22" height="22" style="color:#3B5BDB"/>
-  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Agentti</text>
-  <text x="316" y="150" font-size="11.5" fill="#3A4253">1 kielimalli + 1–2 työkalua</text>
+  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Kielimalli + harness</text>
+  <text x="316" y="150" font-size="11.5" fill="#3A4253">malli + ohjaus, rajat ja työkalut</text>
   <line x1="580" y1="128" x2="604" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M608 128 L598 122.5 L598 133.5 Z" fill="#9AA6BD"/>
   <rect x="628" y="88" width="224" height="80" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
   <use href="#smp-check" x="644" y="104" width="20" height="20" style="color:#0E9AA7"/>
@@ -68,7 +68,7 @@
 </figure>
 
 <h2>Mitä rakennat?</h2>
-<p>Rakennat <strong>n8n-pohjaisen agentin</strong>, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu <strong>3–5 solmusta</strong>, jotka yhdessä muodostavat toimivan, ohjatun ja turvallisen työnkulun.</p>
+<p>Rakennat <strong>n8n-pohjaisen agentin</strong>, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu kielimallista ja sitä ympäröivästä harnessista. Toteutuksen <strong>3–5 solmua</strong> muodostavat toimivan, ohjatun ja turvallisen työnkulun, jossa työkalut ovat harnessin rajaamia kyvykkyyksiä.</p>
 <p><strong>Esimerkkejä mahdollisista agentteista:</strong></p>
 <ul>
 <li>Päivittäinen sähköpostien luokittelija ja yhteenvetäjä</li>
@@ -78,7 +78,7 @@
 <li>Some- tai uutisseurannan kooste itseäsi kiinnostavasta aiheesta</li>
 <li>Opintojen palautuspäivien kerääjä ja muistuttaja</li>
 </ul>
-<p><strong>Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.</strong> 3–5 solmua riittää. Tärkeintä on, että agentti on <strong>autonominen</strong>: se tekee päätöksiä tilanteen mukaan, käyttää työkalua tai paria ja toimii itsenäisesti. Pieni agentti, jonka ymmärrät ja jonka rajat tunnistat, on tavoite.</p>
+<p><strong>Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.</strong> 3–5 solmua riittää. Tärkeintä on, että kielimalli voi tehdä tehtävän kannalta tarpeellisen tilannearvion ja harness pitää toiminnan hallittuna: se tarjoaa vain tarvittavat työkalut, rajaa oikeudet ja pysäyttää suorituksen tarvittaessa. Pieni agentti, jonka vastuut ja rajat ymmärrät, on tavoite.</p>
 <h2>Polku alusta loppuun</h2>
 <p>Lopputyö rakentuu yhdeksän tunnin aikana. Kullakin tunnilla syntyy konkreettinen osa lopullista agenttiasi.</p>
 <table>
@@ -156,7 +156,7 @@ Kuvaa, missä kohdissa ihmisen hyväksyntä tarvitaan, millainen hyväksyntäpor
 <li><strong>Koottu suunnitelma</strong> — viisi Agentti-pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi</li>
 <li><strong>Kolme lyhyttä dokumenttia</strong> (½–1 sivu kukin):</li>
 <li><strong>README</strong> — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset</li>
-<li><strong>ARCHITECTURE</strong> — jokainen n8n-solmu järjestyksessä, mitä se tekee ja miten solmut liittyvät agentin kuuteen komponenttiin</li>
+<li><strong>ARCHITECTURE</strong> — tunnilla 26 aloitettu ja tunnilla 27 päivitetty luonnos: yksi kappale kielimallin ja harnessin vastuunjaosta, 3–5 tärkeimmän vaiheen tehtävät, syötteet ja tulokset sekä tiivis kuuden rakennusosan kattavuustarkistus. Lisää oikeus, lokitus tai virhepolku sille vaiheriville, jossa se vaikuttaa.</li>
 <li><strong>SAFETY</strong> — pahimmat riskit, miten ne torjuttiin, lokitus, ihmisen hyväksyntää vaativat kohdat</li>
 <li><strong>Testiraportti</strong> — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä</li>
 <li><strong>Esittely luokassa</strong> (3–5 min) tai nauhoitettuna videona</li>

@@ -26,7 +26,7 @@ Anna agentille vain minimaalinen pääsy, jonka se tarvitsee. Rajoitus tekee jä
 
 ## Orkestraattori (orchestrator)
 
-Koordinaattori, joka kutsuu työkaluja järjestyksessä. Agentti ei ole yksi iso neuroverkko, vaan orkesterin kapellimestari.
+Harnessin osa, joka koordinoi työkalujen käyttöä. Kielimalli ehdottaa rakenteista kutsua, mutta orkestraattori tarkistaa työkalun ja oikeudet, suorittaa kutsun sekä palauttaa tuloksen tai virheen mallille.
 
 ## API (Application Programming Interface)
 

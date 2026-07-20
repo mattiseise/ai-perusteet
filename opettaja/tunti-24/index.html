@@ -30,7 +30,7 @@
 <li><strong>Liian laajat oikeudet:</strong> minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.</li>
 <li><strong>Puutteellinen seuranta:</strong> virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.</li>
 </ul>
-<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on suunnittelutapa. Jokainen agentin työkalu, oikeus, muistiratkaisu ja automaattinen päätös täytyy suunnitella niin, että virhetilanteet ja väärinkäyttö on huomioitu etukäteen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Promptihyökkäys — kerroksittainen puolustus</h2></div><div class="task-card-body">
+<p><strong>Opettajan painotus:</strong> Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on harnessin suunnittelua. Kielimalli voi arvioida riskiä, mutta oikeudet, validointi, hyväksyntä, lokitus ja palautuminen on toteutettava mallin ulkopuolella niin, ettei malli voi ohittaa niitä.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Promptihyökkäys — kerroksittainen puolustus</h2></div><div class="task-card-body">
 <p><strong>Promptihyökkäys</strong> tarkoittaa hyökkäystä, jossa käyttäjä tai ulkoinen lähde yrittää antaa agentille piilotetun tai haitallisen ohjeen. Tavoitteena on saada agentti toimimaan vastoin alkuperäistä ohjeistustaan.</p>
 <p>Opiskelijamateriaalissa korostetaan, että promptihyökkäys on agentin kontekstissa vaarallisempi kuin tavallisessa chatissa, koska agentti voi tehdä toimintoja. Se voi esimerkiksi lähettää viestejä, käyttää API:a, kirjoittaa tietokantaan tai käsitellä tiedostoja.</p>
 <p>Promptihyökkäyksen vaikutusta rajataan usealla toisiaan täydentävällä keinolla:</p>
@@ -217,6 +217,10 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <tr>
 <td>”Jos agentti on hyödyllinen, sille kannattaa antaa laajat oikeudet.”</td>
 <td>Ei. Hyödyllisyys ei tarkoita rajatonta pääsyä. Agentille annetaan vain se, mitä se tarvitsee tehtäväänsä, ja kriittiset toiminnot vaativat ihmisen hyväksynnän.</td>
+</tr>
+<tr>
+<td>”Vahva järjestelmäprompti riittää turvakerrokseksi.”</td>
+<td>Ei. Järjestelmäprompti ohjaa mallia, mutta harness toimeenpanee oikeudet, rajat, hyväksynnät ja lokituksen mallin ulkopuolella.</td>
 </tr>
 </tbody>
 </table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Yhteys opiskelijan omaan projektiin</h2></div><div class="task-card-body">
@@ -1017,7 +1021,7 @@ Korjaus: Jokainen, joka suunnittelee, rakentaa tai ottaa käyttöön tekoälybot
 <text x="104" y="252" font-size="19" fill="#3A4253">Se ei saa liikaa oikeuksia. Se ei luota sokeasti</text>
 <text x="104" y="280" font-size="19" fill="#3A4253">syötteeseen. Se ei esitä arvausta varmana tietona.</text>
 <text x="104" y="308" font-size="19" fill="#3A4253">Se jättää toiminnastaan tarkistettavan jäljen.</text>
-<text x="104" y="356" font-size="17" fill="#5A6478">Toiminta on rajattua, perusteltua ja valvottua.</text>
+<text x="104" y="356" font-size="17" fill="#5A6478">Harness toimeenpanee oikeudet, validoinnin, lokin ja palautumisen.</text>
 <g transform="translate(724,176)">
 <path d="M76 0 L140 24 V70 c0 44 -28 66 -64 84 c-36 -18 -64 -40 -64 -84 V24 Z" fill="#EAF7F0" stroke="#2F9E69" stroke-width="3" stroke-linejoin="round"/>
 <path d="M48 76 l20 22 l40 -44" fill="none" stroke="#2F9E69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>

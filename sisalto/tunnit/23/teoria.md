@@ -8,6 +8,8 @@ Vastaus on **suunnittelumallit** eli design patterns. Ne ovat testattuja tapoja 
 
 Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agenttisi **ReAct-mallia** vai **eksplisiittinen työnkulkua** ja rakennatko sen yksittäiseksi agentiksi vai moniagenttijärjestelmäksi. Nämä päätökset vaikuttavat siihen, onko agentti tehokas, hidas, selkeä vai vaikeasti hallittava.
 
+> **Harness-kytkentä:** ReAct ja eksplisiittinen työnkulku ovat tapoja, joilla harness ohjaa agentin havaittavaa toimintaa. Harness hallitsee kierrosta, välittää työkalukutsut ja tulokset, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Kielimalli valitsee seuraavaa sisältöä tai toimintoa näiden rajojen sisällä.
+
 ## ReAct: valitse toiminto, havainnoi tulos ja jatka
 
 **ReAct** tarkoittaa sanoja **Reasoning + Acting** eli päättely ja toiminta. Toteutuksessa agentti valitsee työkalun, saa havainnon ja valitsee sen perusteella seuraavan toiminnon. Valinnasta voidaan kirjata lyhyt päätösperustelu, mutta mallin piilotettua sisäistä päättelyä ei paljasteta lokiin.
@@ -223,6 +225,8 @@ Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinu
 ## Kohti omaa projektia
 
 Nyt kun tunnet ReAct-mallin, eksplisiittisen työnkulun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin toimintamalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää eksplisiittistä työnkulkua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+
+> **Lopuksi pohdittavaksi:** Mikä osa päättelymallista on kielimallin valintaa ja mikä harnessin ohjaamaa rakennetta?
 
 ## Yhteenveto
 

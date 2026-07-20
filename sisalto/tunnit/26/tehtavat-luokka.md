@@ -18,6 +18,16 @@
 4. Lue ne läpi yhtenä kokonaisuutena. *Onko tämä johdonmukainen agentti?*
 5. Korjaa tarvittaessa.
 
+### Tee ARCHITECTURE-luonnos
+
+Tee samaan tiedostoon luonnos, jota päivität tunnilla 27. Kirjoita ensin yksi lyhyt kappale: **mitä kielimalli tekee ja mistä harness vastaa**. Kuvaa sen jälkeen 3–5 tärkeintä vaihetta:
+
+| Vaihe | Tehtävä | Syöte → tulos | Vastuu: kielimalli vai harness |
+| --- | --- | --- | --- |
+| [Nimi] | [Mitä tapahtuu?] | [Mitä vaihe saa ja tuottaa?] | [Kumpi vastaa?] |
+
+Tarkista lopuksi kuusi rakennusosaa: syötekäsittely, päättely, työkalut, muisti, turvakerros ja palaute. Merkitse jokaisesta **mukana**, **lisätään tunnilla 27** tai **ei tarvita tässä työssä**. Yksi vaihe, sääntö tai palvelu voi kattaa useita kohtia. Perustele lyhyesti mahdollinen poisjättö.
+
 ### Tekoälyvaihe — tarkista kokonaisuus
 
 ```
@@ -27,7 +37,7 @@ paljastavat mahdolliset ristiriidat tai aukot. Älä korjaa
 puolestani — kysy niin että minä huomaan ongelmat itse.
 ```
 
-> **Vinkki muistiinpanoihin:** Tämä koottu suunnitelma on osa lopputyön palautusta.
+> **Vinkki muistiinpanoihin:** Koottu suunnitelma ja ARCHITECTURE-luonnos ovat osa lopputyön palautusta. Tunnilla 27 et aloita dokumentointia tyhjästä, vaan päivität luonnoksen toteutuksen ja testien perusteella.
 
 ---
 
@@ -79,6 +89,8 @@ Kirjoita muistiinpanodokumenttiisi 3–4 lausetta:
 - Mitä viimeistelen ensimmäisenä tunnilla 27?
 
 Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Se on osa lopputyön palautusta.
+
+Päivitä vielä ARCHITECTURE-luonnoksen 3–5 vaiheriviä vastaamaan sitä, mitä todella rakensit. Merkitse keskeneräiset vastuut tunnin 27 tehtäviksi.
 
 ---
 

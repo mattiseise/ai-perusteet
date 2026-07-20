@@ -16,6 +16,8 @@ Tunnilla 26 kokositte suunnitelman ja rakensitte agentin minimiversion: vähint�
 
 Lisätestit ja laajemmat integraatiot ovat syventäviä, eivät 90 minuutin ydinsuorituksen ehtoja.
 
+> **Harnessin näkökulma:** Viimeistelyssä et testaa vain kielimallin vastauksia. Testaat myös harnessin: kulkeeko tila oikein, pysyvätkö työkalut ja oikeudet rajoissa, toimivatko hyväksyntäportit, syntyykö loki ja palautuuko järjestelmä virheestä hallitusti?
+
 Viimeistely tarkoittaa kolmea asiaa: lisäät **turvakerroksen** pohjapiirros 4:n mukaisesti, lisäät ihmisen hyväksyntää vaativat kohdat pohjapiirros 5:n mukaisesti ja rakennat **lokituksen**. Nämä erottavat harjoitustyön oikeasta agentista.
 
 **Pysähdy hetkeksi:** Avaa ennen rakentamista pohjapiirrokset 4 ja 5. Tarkista, mitä turvatoimia ja hyväksyntäportteja suunnittelit. Tällä tunnilla muutat ne konkreettisiksi n8n-solmuiksi.
@@ -100,9 +102,9 @@ Kerro, mitä agentti tekee, kenelle se on tarkoitettu ja miten sitä käytetää
 
 **ARCHITECTURE.md — rakennekuvaus**
 
-Kuvaa agentin rakenne. Listaa jokainen n8n-solmu, mitä se tekee ja miten data kulkee solmujen välillä. Voit kirjoittaa rakenteen esimerkiksi näin: Webhook → Validointi (IF) → tekoälysolmu → Vastauksen tarkistus (IF) → Discord-vastaus. Selitä myös, miksi valitsit tämän rakenteen.
+Päivitä tunnilla 26 tekemäsi luonnos. Säilytä yksi lyhyt kappale kielimallin ja harnessin rajasta: mitä mallilta pyydetään ja mistä ympäröivä järjestelmä vastaa. Päivitä sen jälkeen 3–5 tärkeimmän vaiheen tehtävät, syötteet ja tulokset vastaamaan toteutusta. Voit kuvata rakenteen esimerkiksi näin: Webhook → Validointi (IF) → tekoälysolmu → Vastauksen tarkistus (IF) → Discord-vastaus.
 
-ARCHITECTURE.md-dokumentin tärkein osa on se, että **linkität solmut agentin kuuteen komponenttiin**. Kerro, mikä solmu toimii syötekäsittelijänä, mikä päättelijänä, mikä työkalujen suorittajana, missä muisti sijaitsee, missä turvakerros on ja miten seuranta tai palautesilmukka toimii. Tämä osoittaa, että ymmärrät rakentamasi järjestelmän etkä vain kopioinut solmuja kankaalle.
+Lisää vaiheriville tarvittava oikeus, lokitus tai virhepolku silloin, kun se vaikuttaa kyseiseen vaiheeseen. Päivitä lopuksi kuuden rakennusosan kattavuustarkistus: **mukana**, **ei tarvita** tai **jäi jatkokehitykseen**. Yksi solmu, sääntö tai ulkoinen palvelu voi kattaa useita kohtia. Laajempi orkestroinnin, työkalusopimusten, tilanhallinnan ja palautumisen analyysi on syventävä osa. Näin ydindokumentti pysyy lyhyenä mutta osoittaa, että ymmärrät rakentamasi järjestelmän.
 
 **SAFETY.md — turvallisuussuunnitelma**
 
@@ -149,7 +151,7 @@ Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit työsi itse. Käy viis
 | **Itsearviointi ja esittely** | 15 % | Onko esittely selkeä ja rehellinen? Osoittaako itsearviointini kriittistä ajattelua? |
 :::
 
-Arvioinnissa kiinnitetään erityistä huomiota siihen, osaatko tunnistaa agentin **kuusi komponenttia** omassa projektissasi. Se osoittaa, ymmärrätkö, mitä olet rakentanut.
+Arvioinnissa kiinnitetään erityistä huomiota siihen, osaatko erottaa kielimallin ja harnessin vastuut sekä käyttää agentin **kuutta rakennusosaa** kattavuuden tarkistuslistana. Se osoittaa, ymmärrätkö, mitä olet rakentanut.
 
 **Vinkki:** Älä yritä tehdä liian suurta projektia. Yksinkertainen, hyvin dokumentoitu ja testattu agentti on parempi kuin monimutkainen mutta puolivalmis työ.
 
@@ -160,7 +162,7 @@ Palauta tunnin lopussa tai opettajan ohjeistaman aikataulun mukaan seuraavat tuo
 
 - **n8n-työnkulku:** linkki työnkulkuun tai vientitiedosto
 - **README.md:** käyttöohje
-- **ARCHITECTURE.md:** rakennekuvaus ja solmujen yhteys agentin kuuteen komponenttiin
+- **ARCHITECTURE.md:** kielimallin ja harnessin vastuunjako sekä kuuden rakennusosan kattavuustarkistus
 - **SAFETY.md:** riskit, suojaukset, lokitus ja palautumissuunnitelma
 - **Testiraportti:** vähintään normaalit tapaukset, reunatapaukset ja turvallisuustestit
 - **Itsearviointi:** mitä onnistui, mitä opit ja mitä tekisit toisin
@@ -173,7 +175,7 @@ Viimeistele työsi ja kokoa nämä tuotokset itsellesi portfolioksi. Käy ne lä
 
 - **n8n-työnkulku:** linkki työnkulkuun tai vientitiedosto
 - **README.md:** käyttöohje
-- **ARCHITECTURE.md:** rakennekuvaus ja solmujen yhteys agentin kuuteen komponenttiin
+- **ARCHITECTURE.md:** kielimallin ja harnessin vastuunjako sekä kuuden rakennusosan kattavuustarkistus
 - **SAFETY.md:** riskit, suojaukset, lokitus ja palautumissuunnitelma
 - **Testiraportti:** vähintään normaalit tapaukset, reunatapaukset ja turvallisuustestit
 - **Itsearviointi:** mitä onnistui, mitä opit ja mitä tekisit toisin
@@ -188,6 +190,8 @@ Halutessasi jaa työsi — mitään ei palauteta minnekään.
 Olet nyt rakentanut oman agentin alusta loppuun. Olet kerännyt viisi pohjapiirrosta, koonnut ne suunnitelmaksi, toteuttanut työnkulun n8n:ssä, lisännyt turvakerroksia, testannut agenttia ja dokumentoinut työn.
 
 Tämä on sama perusprosessi, jota kokeneet käyttäjät käyttävät. Mittakaava voi olla eri, mutta ajattelu on sama: suunnittele, rakenna pienestä isoon, testaa systemaattisesti, dokumentoi ja arvioi kriittisesti. Kun osaat tehdä tämän, ymmärrät agentin arkkitehtuurin ja osaat soveltaa sitä käytännössä.
+
+> **Erota nämä:** Mitä kielimalli tekee agentissasi — ja mistä harness vastaa ennen mallikutsua, sen aikana ja sen jälkeen?
 
 
 ---

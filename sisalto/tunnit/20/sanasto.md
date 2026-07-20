@@ -4,6 +4,10 @@
 
 Menetelmä, jolla tehdään järkevä valinta esittämällä sarja kysymyksiä. Se auttaa päättämään, mikä automatisointi­ratkaisu on oikea: promptaus, työnkulku vai agentti.
 
+## Harness
+
+Kielimallia ympäröivä ohjelmallinen kehys, joka antaa agentille tavoitteen, työkalut, tilan, oikeudet, rajat, hyväksynnät, lokituksen ja palautumisen. Agentti = kielimalli + harness.
+
 ## Skaalautuvuus (scalability)
 
 Järjestelmän kyky käsitellä yhä suurempaa määrää tehtäviä ilman, että sen rakenne tai toiminta muuttuu merkittävästi. Agentti on paremmin skaalautuva kuin työnkulku muuttuvissa tilanteissa.

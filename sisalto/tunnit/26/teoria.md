@@ -8,6 +8,8 @@ Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataa
 
 Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — **syötekäsittely**, **päättely**, **työkalut**, **muisti**, **turvakerrokset** ja **palautesilmukka** — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.
 
+> **Harnessin näkökulma:** n8n ei ole automaattisesti agentti tai harness. Se on ympäristö, jossa voit rakentaa harnessin näkyväksi työnkuluksi: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Kuuden rakennusosan kokonaisuus toimii kattavuuden tarkistuslistana — osia ei tarvitse toteuttaa kuutena erillisenä solmuna.
+
 **Pysähdy hetkeksi:** Mieti jotakin toistuvaa tehtävää arjessasi tai koulussa. Voisiko kone hoitaa sen puolestasi, jos sillä olisi pääsy oikeisiin työkaluihin?
 
 Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen yksinkertaisen agentin voit rakentaa:
@@ -118,11 +120,11 @@ n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord,
 .l26-s.s4{opacity:1}}
 </style>
 
-**Pysähdy hetkeksi:** Miten n8n:n solmut vastaavat agentin kuutta komponenttia, jotka opit tunnilla 19? Mieti, mikä solmu olisi syötekäsittelijä, mikä päättelijä ja mikä työkalujen suorittaja.
+**Pysähdy hetkeksi:** Miten agentin kaikki kuusi rakennusosaa toteutuvat suunnitelmassasi? Mieti vastuita ennen solmuja: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.
 
-## Agentin kuusi komponenttia n8n:ssä
+## Agentin kuusi rakennusosaa n8n:ssä
 
-Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten se toteutuu n8n:ssä konkreettisesti. Tämä on tärkeää, koska tunnilla 27 dokumentoit agenttisi ja yhdistät jokaisen solmun johonkin agentin kuudesta komponentista.
+Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä konkreettisesti. Tunnilla 27 dokumentoit ensin kielimallin ja harnessin rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista solmua yhteen lokeroon.
 
 **Syötekäsittelijä** on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.
 
@@ -150,7 +152,7 @@ Esimerkki iteratiivisesta rakentamisesta:
 
 Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.
 
-**Pysähdy hetkeksi:** Kun lisäät uuden solmun työnkulkuusi, mieti aina: mikä agentin komponentti tämä on? Onko kyse syötekäsittelystä, päättelystä, työkalusta, muistista, turvakerroksesta vai palautesilmukasta?
+**Pysähdy hetkeksi:** Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelyä, päättelyä, työkaluja, muistia, turvakerrosta tai palautetta — ja jääkö jokin olennainen vastuu vielä puuttumaan?
 
 ## Pohjapiirroksesta toteutukseen
 
@@ -190,7 +192,7 @@ Minimiversiossa tulee olla vähintään:
 
 Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
-- mitkä solmut vastaavat agentin kuutta komponenttia
+- miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi
 - mikä osa toimii jo
 - mikä osa jäi kesken
 - mitä pitää testata tai korjata tunnilla 27
@@ -202,6 +204,8 @@ Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat agenttisi minimiversion iteratiivisesti: solmu kerrallaan ja jokaisen lisäyksen jälkeen testaten.
 
 Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
+
+> **Erota nämä:** Mikä työnkulkusi solmu kutsuu kielimallia — ja mitkä solmut, säännöt tai palvelut muodostavat sitä ympäröivän harnessin?
 
 ---
 

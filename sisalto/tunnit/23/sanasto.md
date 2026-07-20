@@ -34,7 +34,7 @@ Moniagenttijärjestelmän rakenne, jossa agentit keskustelevat keskenään ilman
 
 ## Orkestraatio (orchestration)
 
-Koordinointi — kuinka agentit kutsutaan järjestyksessä ja kuinka tieto kulkee niiden välillä.
+Harnessin toteuttama koordinointi: miten työkalut tai agentit kutsutaan, miten tulokset ja virheet välitetään, milloin kierros päättyy ja mitä tapahtumia lokitetaan.
 
 ## Eskalointi (escalation)
 

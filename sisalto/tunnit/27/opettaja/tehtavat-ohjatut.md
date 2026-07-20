@@ -150,12 +150,11 @@ Mitä se EI tee.
 "Tämä dokumentti on tekijöille. Se selittää, miten agentti on rakennettu."
 
 Näytä:
-- Solmujen lista: mitä kukin solmu tekee
-- Kaavio tai tekstimuotoinen kuvaus: mistä alkaa, missä järjestyksessä, mihin päättyy
-- **Kuuden komponentin linkitys:**
-  - Mikä solmu on syötekäsittelijä?
-  - Mikä on päättelijä?
-  - Jne.
+- Kielimallin ja harnessin raja: mitä malli tekee ja mistä ympäröivä järjestelmä vastaa
+- Solmujen tai vaiheiden tehtävät sekä niiden syötteet ja tulokset
+- Kaavio tai tekstimuotoinen kuvaus: mistä suoritus alkaa, miten data kulkee ja mihin se päättyy
+- Orkestrointi, työkalut ja oikeudet, tila ja muisti, hyväksynnät, lokitus, virhepolut ja palautuminen
+- Kuusi rakennusosaa kattavuuden tarkistuslistana. Yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.
 
 **3. SAFETY.md — turvallisuus**
 

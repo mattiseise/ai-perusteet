@@ -2,12 +2,12 @@
 
 > Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun keräät **Agentti-pohjapiirroksiasi** ja rakennat lopulta valmista agenttia.
 
-**Tärkein viesti heti alkuun:** rakennat **hyvin yksinkertaisen agentin** (3–5 solmua). Emme tavoittele mitään monimutkaista — pieni, toimiva agentti, jonka ymmärrät, on koko tehtävän tavoite.
+**Tärkein viesti heti alkuun:** agentti = kielimalli + harness. Kielimalli tuottaa arvion tai ehdotuksen. Harness ohjaa työnkulkua, rajaa työkalut ja oikeudet, ylläpitää tilaa sekä huolehtii turvasta, hyväksynnöistä ja lokituksesta. Tässä työssä rakennat tästä kokonaisuudesta **hyvin yksinkertaisen version** (3–5 solmua). Pieni, toimiva agentti, jonka vastuut ymmärrät, on koko tehtävän tavoite.
 
 <figure style="margin:24px 0;text-align:center">
 <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
-  <title>Mitä rakennat: yksinkertainen agentti</title>
-  <desc>Tavoite on pieni, toimiva agentti, jossa on 3–5 solmua: käynnistys, agentti yhdellä kielimallilla ja 1–2 työkalulla, sekä lopputulos. Ei monimutkaista järjestelmää.</desc>
+  <title>Mitä rakennat: yksinkertainen agentti eli kielimalli ja harness</title>
+  <desc>Tavoite on pieni, toimiva agentti, jossa harness ohjaa työnkulkua, kutsuu kielimallia, rajaa työkalut ja tuottaa hallitun lopputuloksen. Kokonaisuudessa on 3–5 solmua.</desc>
   <defs>
     <g id="smp-bolt" fill="none" stroke="currentColor"><path d="M13 2 L5 13.5 H11 L10.5 22 L19 9.5 H12.5 Z" fill="currentColor"/></g>
     <g id="smp-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
@@ -25,8 +25,8 @@
   <line x1="252" y1="128" x2="276" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M280 128 L270 122.5 L270 133.5 Z" fill="#9AA6BD"/>
   <rect x="300" y="88" width="280" height="80" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
   <use href="#smp-robot" x="316" y="102" width="22" height="22" style="color:#3B5BDB"/>
-  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Agentti</text>
-  <text x="316" y="150" font-size="11.5" fill="#3A4253">1 kielimalli + 1–2 työkalua</text>
+  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Kielimalli + harness</text>
+  <text x="316" y="150" font-size="11.5" fill="#3A4253">malli + ohjaus, rajat ja työkalut</text>
   <line x1="580" y1="128" x2="604" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M608 128 L598 122.5 L598 133.5 Z" fill="#9AA6BD"/>
   <rect x="628" y="88" width="224" height="80" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
   <use href="#smp-check" x="644" y="104" width="20" height="20" style="color:#0E9AA7"/>
@@ -52,7 +52,7 @@
 
 ## Mitä rakennat?
 
-Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu **3–5 solmusta**, jotka yhdessä muodostavat toimivan, ohjatun ja turvallisen työnkulun.
+Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu kielimallista ja sitä ympäröivästä harnessista. Toteutuksen **3–5 solmua** muodostavat toimivan, ohjatun ja turvallisen työnkulun, jossa työkalut ovat harnessin rajaamia kyvykkyyksiä.
 
 **Esimerkkejä mahdollisista agentteista:**
 
@@ -63,7 +63,7 @@ Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman.
 - Some- tai uutisseurannan kooste itseäsi kiinnostavasta aiheesta
 - Opintojen palautuspäivien kerääjä ja muistuttaja
 
-**Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.** 3–5 solmua riittää. Tärkeintä on, että agentti on **autonominen**: se tekee päätöksiä tilanteen mukaan, käyttää työkalua tai paria ja toimii itsenäisesti. Pieni agentti, jonka ymmärrät ja jonka rajat tunnistat, on tavoite.
+**Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.** 3–5 solmua riittää. Tärkeintä on, että kielimalli voi tehdä tehtävän kannalta tarpeellisen tilannearvion ja harness pitää toiminnan hallittuna: se tarjoaa vain tarvittavat työkalut, rajaa oikeudet ja pysäyttää suorituksen tarvittaessa. Pieni agentti, jonka vastuut ja rajat ymmärrät, on tavoite.
 
 ## Polku alusta loppuun
 
@@ -114,7 +114,7 @@ Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
 2. **Koottu suunnitelma** — viisi Agentti-pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi
 3. **Kolme lyhyttä dokumenttia** (½–1 sivu kukin):
    - **README** — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset
-   - **ARCHITECTURE** — jokainen n8n-solmu järjestyksessä, mitä se tekee ja miten solmut liittyvät agentin kuuteen komponenttiin
+   - **ARCHITECTURE** — tunnilla 26 aloitettu ja tunnilla 27 päivitetty luonnos: yksi kappale kielimallin ja harnessin vastuunjaosta, 3–5 tärkeimmän vaiheen tehtävät, syötteet ja tulokset sekä tiivis kuuden rakennusosan kattavuustarkistus. Lisää oikeus, lokitus tai virhepolku sille vaiheriville, jossa se vaikuttaa.
    - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, ihmisen hyväksyntää vaativat kohdat
 4. **Testiraportti** — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä
 5. **Esittely luokassa** (3–5 min) tai nauhoitettuna videona

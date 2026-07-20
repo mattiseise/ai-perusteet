@@ -8,6 +8,8 @@ Tässä toimintatavassa **ihminen osallistuu päätöksentekoon** automaation ri
 
 Tässä oppitunnissa opit, **milloin ihminen täytyy ottaa mukaan päätöksentekoon, miten hyväksyntäportit suunnitellaan ja miten rakennetaan työnkulkuja, joissa agentti ja ihminen tekevät yhteistyötä**. Näitä periaatteita käytät suoraan seuraavilla oppitunneilla, kun rakennat omaa agenttia n8n:llä.
 
+> **Harnessin näkökulma:** Hyväksyntäportti kuuluu harnessiin. Kielimalli voi valmistella ehdotuksen ja perustelun, mutta harness pysäyttää suorituksen, näyttää ihmiselle tarvittavat tiedot ja jatkaa vasta hyväksynnän jälkeen. Malli ei voi hyväksyä omaa ehdotustaan.
+
 ## Milloin ihminen tarvitaan mukaan päätökseen?
 
 Kaikki agentin päätökset eivät tarvitse ihmisen hyväksyntää. Jos jokainen pieni päätös pysäytetään ihmiselle, seurauksena on hidas ja kuormittava järjestelmä. Ihminen väsyy jatkuviin hyväksyntäpyyntöihin eikä ehdi keskittyä tärkeimpiin päätöksiin. Siksi sinun täytyy **valita strategisesti**, mitkä päätökset ovat niin kriittisiä, että ne vaativat ihmisen hyväksynnän.
@@ -191,7 +193,7 @@ Tämä on viimeinen teoriapainotteinen oppitunti ennen rakentamista. Seuraavaksi
 
 | Aihe | Mitä opit? | Miten se näkyy n8n:ssä? |
 | --- | --- | --- |
-| **Agentin rakenne** | Agentin kuusi komponenttia. | Jokainen komponentti toteutuu yhtenä tai useampana n8n-solmuna. |
+| **Agentin rakenne** | Agentin kuusi rakennusosaa. | Rakennusosat toimivat kattavuuden tarkistuslistana. Yksi solmu, sääntö tai palvelu voi kattaa useita vastuita. |
 | **Automaatio vs. autonomia** | Päätöspuu: promptaus, työnkulku vai agentti. | Valitset, riittääkö yksi AI Agent -solmu vai tarvitaanko monivaiheinen työnkulku. |
 | **Muisti ja konteksti** | Konteksti-ikkuna, pitkäkestoinen muisti ja tila. | Memory-solmu, tietokanta, Google Sheets tai muu tilan tallennus. |
 | **Työkalut** | Tiedostot, verkkohaku ja CLI-komennot. | Read File-, HTTP Request- ja Execute Command -solmut. |
@@ -232,6 +234,8 @@ Yhdessä nämä muodostavat suunnitelman, jonka pohjalta rakennat n8n-työnkulun
 Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rutiinivaiheita, kun taas ihminen tekee kriittiset päätökset. Agentti voi myös oppia ihmisen palautteesta, kun hyväksynnät ja hylkäykset tallennetaan lokiin ja niitä käytetään toiminnan kehittämiseen.
 
 Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan **älykäs, turvallinen ja hallittu agentti**.
+
+> **Erota nämä:** Minkä ehdotuksen kielimalli valmistelee — ja missä kohdassa harness siirtää päätösvallan ihmiselle? Mitä tapahtuu, jos ihminen ei vastaa ajoissa?
 
 
 ---

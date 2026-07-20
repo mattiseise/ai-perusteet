@@ -1,12 +1,16 @@
 # Sanasto – oppitunti 25: Ihmisen osallistuminen päätöksentekoon
 
+## Harness
+
+Kielimallia ympäröivä järjestelmä, joka toteuttaa hyväksyntäportin käytännössä. Se pysäyttää suorituksen, säilyttää tilan, näyttää päätöstiedot ihmiselle ja jatkaa, hylkää tai eskaloi ennalta sovitun säännön mukaan.
+
 ## Ihmisen osallistuminen päätöksentekoon (ihminen silmukassa)
 
 Automaatio, jossa ihminen hyväksyy kriittiset päätökset. Ei täysin automatisoitua, ei käsityötä — hybridi.
 
 ## Hyväksyntäportti (approval gate)
 
-Piste prosessissa, jossa agentti pysähtyy ja odottaa ihmisen vastausta. Selkeä kysymys ja ehdotus.
+Harnessin toteuttama kohta, jossa suoritus pysähtyy odottamaan ihmisen vastausta. Hyvä portti näyttää selkeän kysymyksen, ehdotuksen, perustelun ja riskin.
 
 ## Eskalointi (escalation)
 

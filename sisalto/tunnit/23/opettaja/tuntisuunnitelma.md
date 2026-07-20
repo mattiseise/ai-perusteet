@@ -10,6 +10,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnit
 - Opiskelija ymmärtää, mitä **eksplisiittinen työnkulku** tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.
 - Opiskelija ymmärtää, mitä **moniagenttijärjestelmä** tarkoittaa: tehtävä jaetaan useille erikoistuneille agenteille.
 - Opiskelija tunnistaa, että eri suunnittelumallit sopivat erilaisiin tehtäviin.
+- Opiskelija ymmärtää, että ReAct-kierros ja eksplisiittinen työnkulku ovat harnessin ohjaamia rakenteita, eivät vain mallin sisäistä toimintaa.
 
 ### Soveltaa ja analysoida
 
@@ -117,6 +118,10 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 ### Väärinkäsitys 4: ”Suunnittelumalli on vain tekninen toteutustapa.”
 
 **Korjaava näkökulma:** Suunnittelumalli on myös pedagoginen ja arkkitehtoninen valinta. Se vaikuttaa siihen, miten agenttia testataan, miten sitä selitetään ja miten sen virheitä korjataan.
+
+### Väärinkäsitys 5: ”ReAct tapahtuu pelkästään promptissa tai kielimallissa.”
+
+**Korjaava näkökulma:** Malli voi valita seuraavan toiminnon, mutta harness ylläpitää kierrosta, välittää ja tarkistaa työkalukutsut, palauttaa havainnot, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Ilman tätä ohjausta ReAct ei ole hallittu työnkulku.
 
 ---
 

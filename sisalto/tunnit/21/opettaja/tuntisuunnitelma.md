@@ -11,6 +11,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **muisti*
 - Opiskelija tunnistaa **vektoritietokannan** merkitysperusteisen haun välineenä.
 - Opiskelija ymmärtää, mitä **tila** ja **muuttujat** tarkoittavat agentin prosessissa.
 - Opiskelija ymmärtää, mitä **soul** tarkoittaa agentin pysyvänä identiteettinä ja arvoina.
+- Opiskelija ymmärtää, että muisti sijaitsee kielimallin ympärillä olevassa harnessissa: järjestelmä valitsee kontekstin, tallentaa tilan ja hakee pitkäkestoista muistia.
 
 ### Soveltaa ja analysoida
 
@@ -119,6 +120,10 @@ Ilman selkeää soulia agentti voi toimia epäjohdonmukaisesti tai vaarallisesti
 ### Väärinkäsitys 4: ”Soul on liian abstrakti, joten sitä ei tarvitse suunnitella.”
 
 **Korjaava näkökulma:** Soul on hyödyllinen vain, jos se kirjoitetaan konkreettisiksi periaatteiksi. Sen pitää kertoa, mitä agentti tekee epäselvissä tilanteissa, mitä se ei koskaan tee ja milloin se pyytää ihmisen apua.
+
+### Väärinkäsitys 5: ”Kielimalli muistaa keskustelut itsestään.”
+
+**Korjaava näkökulma:** Kielimalli käsittelee vain sille annetun kontekstin. Harness valitsee nykyisen kontekstin, tallentaa sovitut tiedot, hakee pitkäkestoista muistia ja päivittää prosessin tilan. Opetuksessa kannattaa aina kysyä, mikä järjestelmän osa tiedon säilytti ja millä perusteella se palautettiin.
 
 ---
 
