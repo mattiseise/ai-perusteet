@@ -2,7 +2,7 @@
 
 ## Oppitunnin tarkoitus
 
-Oppija rakentaa neutraalin ja toistettavan työkalukokeen. Tavoite ei ole nimetä pysyvää voittajaa, vaan osoittaa yhden työkalun sopivuus yhteen tehtävään havaittavan näytön perusteella.
+Oppija rakentaa neutraalin ja toistettavan työkalukokeen. Tavoite ei ole nimetä pysyvää voittajaa, vaan osoittaa yhden työkalun sopivuus yhteen tehtävään havaittavan näytön perusteella. Tunti onnistuu, kun oppija osaa sanoa sekä ”tämä havainto tukee valintaani” että ”tätä en voi tämän kokeen perusteella päätellä”.
 
 ## Osaamistavoitteet
 
@@ -13,7 +13,7 @@ Oppija:
 - käyttää samaa promptia, aineistoa ja vastausmuotoa
 - kirjaa palvelun, mallin tai käyttöympäristön näkyvät erot
 - arvioi vastaukset ennalta päätetyillä kriteereillä
-- tekee rajatun johtopäätöksen ja nimeää kokeen rajoitukset
+- tekee rajatun johtopäätöksen ja nimeää kokeen rajoitukset.
 
 ## Ydinviesti
 
@@ -21,7 +21,9 @@ Palvelun nimi ei ole valintaperuste. Vertailu on pieni koe: olosuhteet pidetää
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **neutraali vertailukoe ja tehtäväkohtainen valintaperuste**.
+Tunnilta jää talteen **neutraali vertailukoe ja tehtäväkohtainen valintaperuste**.
+
+Aloita kahdesta vastauksesta, jotka herättävät erilaisia ensivaikutelmia. Anna ryhmän huomata, ettei mieltymys vielä ole arviointiperuste. Kun kriteerit rakennetaan ennen työkalujen paljastamista, loppuoppitunti muodostaa yhden johdonmukaisen kokeen eikä sarjaa irrallisia kokeiluja.
 
 | Aika | Vaihe | Opettajan tehtävä |
 | --- | --- | --- |
@@ -35,6 +37,8 @@ Tallennettava tuotos on **neutraali vertailukoe ja tehtäväkohtainen valintaper
 
 ## Tyypilliset väärinkäsitykset
 
+Käsittele väärinkäsitykset kysymällä ensin, mihin oppijan väite perustuu. Jos hän esimerkiksi pitää sujuvinta vastausta parhaana, kysy, oliko sujuvuus yksi ennalta päätetyistä kriteereistä ja säilyikö lähteen sisältö samalla oikein.
+
 | Väärinkäsitys | Korjaava näkökulma |
 | --- | --- |
 | ”Sama prompti tekee kokeesta täysin reilun.” | Tilit, mallit, asetukset ja satunnaisuus voivat silti erota. Erot kirjataan. |
@@ -44,21 +48,21 @@ Tallennettava tuotos on **neutraali vertailukoe ja tehtäväkohtainen valintaper
 
 ## Eriyttäminen
 
-**Tukireitti:** anna valmiit anonyymit vastaukset ja kolme kriteeriä. Oppija tekee silti oman havaintotaulukon ja johtopäätöksen.
+**Tukireitti:** anna valmiit anonyymit vastaukset ja kolme kriteeriä. Tämä vähentää palvelujen käyttöön liittyviä vaiheita, mutta oppija tekee silti oman havaintotaulukon ja johtopäätöksen.
 
-**Syventävä reitti:** oppija toistaa kokeen toisella aineistolla ja arvioi, säilyykö valinta. Syventävä työ ei kasvata pakollista ydintuotosta.
+**Syventävä reitti:** oppija toistaa kokeen toisella aineistolla ja arvioi, säilyykö valinta. Tarkoitus ei ole kasvattaa pakollista ydintuotosta, vaan kokeilla, kuinka hyvin ensimmäinen johtopäätös kestää aineiston vaihtumisen.
 
 ## Arvioitava näyttö
 
 Hyväksyttävä työ sisältää:
 
 - saman tehtävän ja aineiston molemmille työkaluille
-- porttiehtojen tarkistuksen
+- porttiehtojen tarkistuksen ennen koetta
 - 3–5 etukäteen päätettyä laatukriteeriä
-- havaintoja, ei pelkkiä numeroita
+- havaintoihin perustuvat arviot pelkkien numeroiden sijaan
 - tehtäväkohtaisen valinnan
 - vähintään yhden kokeen rajoituksen
-- yhden palautteen perusteella tehdyn tarkennuksen
+- yhden palautteen perusteella tehdyn tarkennuksen.
 
 ## Siirtymä tuntiin 11
 

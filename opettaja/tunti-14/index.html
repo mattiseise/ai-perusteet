@@ -22,6 +22,7 @@
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
 <p>Oppija laatii botista määrittelydokumentin ennen järjestelmäpromptin kirjoittamista tai rakentamista. Tunnin ydin on erottaa toisistaan <strong>tarve</strong>, <strong>määrittely</strong> ja <strong>toteutus</strong>.</p>
 <p>Tällä tunnilla ei rakenneta bottia, kirjoiteta valmista järjestelmäpromptia eikä ajeta botin testejä. Tämä rajaus on tärkeä: oppijan pitää ensin osata perustella, mitä ollaan rakentamassa.</p>
+<p>Oppijalle suunnittelun arvo voi jäädä abstraktiksi, jos tunti näyttäytyy vain lomakkeen täyttämisenä. Mallinna siksi määrittely päätösketjuna: käyttäjän tilanteesta seuraa tehtävä, tehtävästä havaittava onnistuminen ja onnistumisesta tarvittava eteneminen. Rajat kertovat, missä kohdassa botti ei enää pysty jatkamaan turvallisesti ja kenelle vastuu silloin siirtyy.</p>
 </div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
 <p>Oppija:</p>
 <ul>
@@ -34,6 +35,7 @@
 </ul>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ydinviesti</h2></div><div class="task-card-body">
 <p>Hyvä botti ei ala alustasta tai järjestelmäpromptista. Se alkaa käyttäjän tehtävästä. Määrittely kertoo, mitä myöhemmän toteutuksen pitää tehdä ja millä näytöllä onnistuminen voidaan osoittaa.</p>
+<p>Käytä yhtenä esimerkkinä kerhon uutta jäsentä, joka tarvitsee oikean harjoitusajan, varustetiedon ja seuraavan askeleen. Kun idea rajataan tähän tilanteeseen, myös tarpeettomat ominaisuudet tulevat näkyviksi. Botti ei tarvitse yleistä harrastusneuvontaa, vaan ajantasaiset lähteet ja turvallisen tavan ohjata käyttäjä ihmiselle, jos tieto puuttuu.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tyypilliset väärinkäsitykset</h2></div><div class="task-card-body">
 <table>
 <thead>
@@ -61,8 +63,10 @@
 </tr>
 </tbody>
 </table>
+<p>Taulukon kysymyksiä ei käytetä tietovisailuna. Niillä avataan oppijan omaa määrittelyä. Kun vastaus jää yleiseksi, jatka kysymällä, mitä käyttäjä konkreettisesti tekee seuraavaksi ja mistä toinen ihminen voisi nähdä onnistumisen.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
 <p>Tallennettava tuotos on <strong>rakennuspalikka 2: viimeistelty botin määrittelydokumentti ja yksi palautteen perusteella tehty muutos</strong>.</p>
+<p>Pidä koko tunnin ajan näkyvissä ero suunnitelman ja toteutuksen välillä. Jos oppija alkaa kirjoittaa järjestelmäpromptia, kysy ensin, mihin määrittelyn päätökseen kyseinen ohje perustuu. Jos vastausta ei löydy, ohje on ennenaikainen tai määrittelystä puuttuu olennainen päätös.</p>
 <table>
 <thead>
 <tr>
@@ -104,7 +108,9 @@
 </tr>
 </tbody>
 </table>
+<p>Aikataulun siirtymät ovat pedagogisesti tärkeitä. Mallinnuksen jälkeen oppija siirtyy omaan tapaukseensa, haastamisen jälkeen takaisin omaan päätösvaltaansa ja tunnin lopuksi kohti tietopohjaa. Tee nämä yhteydet ääneen, jotta määrittely ei jää erilliseksi harjoituslomakkeeksi.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioitava näyttö</h2></div><div class="task-card-body">
+<p>Arvioi kokonaisuuden johdonmukaisuutta, älä yksittäisten kenttien pituutta. Lyhyt määrittely voi olla vahva, jos käyttäjä, tehtävä, eteneminen ja rajat tukevat toisiaan. Pitkä teksti voi puolestaan peittää sen, ettei onnistumista ole määritelty havaittavasti.</p>
 <p>Hyväksyttävä tuotos:</p>
 <ul>
 <li>nimeää yhden käyttäjän tai käyttäjäryhmän</li>
@@ -115,13 +121,16 @@
 <li>kertoo, miten botti toimii rajan tullessa vastaan</li>
 <li>nimeää yhden palautteen perusteella tehdyn muutoksen</li>
 </ul>
+<p>Hyvästä tuotoksesta voi seurata käyttäjän polkua alusta loppuun ja osoittaa kohdan, jossa botti pysähtyy tai vastuu siirtyy. Palautteen perusteella tehty muutos osoittaa, että oppija osasi arvioida määrittelyään eikä vain täyttää pohjaa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Eriyttäminen</h2></div><div class="task-card-body">
 <p><strong>Tukireitti:</strong> anna valmis käyttötapaus ja lauseenalut. Tuki vähentää valintoja, mutta säilyttää saman ydintuotoksen.</p>
 <p><strong>Syventävä reitti:</strong> oppija lisää kaksi keskenään ristiriitaista käyttäjätarvetta ja perustelee, kumpi asetetaan etusijalle. Syventävä työ ei kasvata pakollista ydintuotosta.</p>
+<p>Tukireitillä valmis tapaus vapauttaa työmuistia päätösten yhteyksien hahmottamiseen. Syventävällä reitillä ristiriita pakottaa tekemään priorisoinnin näkyväksi. Kummassakin reitissä arvioidaan samaa ydintaitoa: osaako oppija perustella, mitä botti auttaa tekemään ja mitä se rajaa pois.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Siirtymä seuraavaan tuntiin</h2></div><div class="task-card-body">
 <p>Päätä tunti kysymykseen:</p>
 <blockquote class="pause"><p>Mitä tietoa bottisi tarvitsee voidakseen toteuttaa juuri tämän määrittelyn — ja miten myöhemmin testaat, ettei se arvaa puuttuvaa tietoa?</p>
-</blockquote></div></div></div><div id="panel-lesson-14-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-ohjatut" data-tab="ohjatut" hidden><h1>Ohjatut tehtävät — oppitunti 14</h1>
+</blockquote>
+<p>Kysymys toimii siltana tuntiin 15. Sen avulla oppija huomaa, että tietopohjaa ei kerätä aiheen ympäriltä yleisesti, vaan määrittelyssä luvattua käyttäjän tehtävää varten.</p></div></div></div><div id="panel-lesson-14-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-ohjatut" data-tab="ohjatut" hidden><h1>Ohjatut tehtävät — oppitunti 14</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1 — Rajaa liian suuri idea (15 min)</h2></div><div class="task-card-body">
 <p>Kirjoita näkyviin: <strong>”Botti auttaa opiskelussa.”</strong> Pyydä ryhmiä tarkentamaan lause kolmeen osaan:</p>
 <ul>
@@ -133,6 +142,7 @@
 <blockquote class="pause"><p>[Käyttäjä] tarvitsee apua [tehtävässä], jotta hän voi [lopputulos].</p>
 </blockquote>
 <p>Purussa kysy, mitä alkuperäisestä ideasta jouduttiin jättämään pois. Rajaus on suunnittelupäätös, ei puute.</p>
+<p>Muotoilkaa esimerkiksi: ”Ensimmäisen vuoden opiskelija tarvitsee apua tietoverkkojen keskeisten käsitteiden kertaamisessa, jotta hän tunnistaa ne harjoituskysymyksissä ennen koetta.” Verratkaa virkettä alkuperäiseen. Nyt voidaan päätellä, kuka käyttää bottia, mitä keskustelussa tapahtuu ja millainen tulos voidaan myöhemmin testata.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2 — Rooli vai persoona? (10 min)</h2></div><div class="task-card-body">
 <p>Luokittele yhdessä:</p>
 <table>
@@ -162,6 +172,7 @@
 </tbody>
 </table>
 <p>Korosta, että viestintätyyli ei korvaa tehtävää, lähteitä tai vastuuta.</p>
+<p>Pyydä ryhmää poistamaan kuvauksesta vuorotellen rooli ja persoona. Ilman persoonaa perehdytysbotti voi yhä hoitaa tehtävänsä, vaikka viestintä olisi karumpaa. Ilman roolia jäljelle jää miellyttävä puhetapa, joka ei kerro, mihin tietoon tai vastuuseen vastaus perustuu.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3 — Rajasta toimintatavaksi (15 min)</h2></div><div class="task-card-body">
 <p>Anna ryhmille heikko raja: <strong>”Älä vastaa aiheen ulkopuolelle.”</strong> Pyydä täydentämään:</p>
 <ol>
@@ -170,6 +181,7 @@
 <li>Mihin se ohjaa käyttäjän seuraavaksi?</li>
 </ol>
 <p>Hyvä rajaus sisältää kiellon lisäksi turvallisen jatkon.</p>
+<p>Mallintakaa yksi kokonainen vastaus. Jos kerhon botilta kysytään vamman hoitamisesta, se voi sanoa: ”En anna terveysneuvontaa. Keskeytä harjoittelu tarvittaessa ja ota yhteyttä terveyspalveluun; kerhon harjoitusaikoihin ja sääntöihin voin auttaa.” Vastauksessa näkyvät raja, perustelu ja seuraava askel ilman, että botti yrittää ratkaista asiaa oman tehtävänsä ulkopuolella.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4 — Määrittelyn vertaiskatselmointi (20 min)</h2></div><div class="task-card-body">
 <p>Parit lukevat toistensa määrittelyt ja esittävät kolme kysymystä:</p>
 <ol>
@@ -180,14 +192,17 @@
 <p>Kirjoittaja tekee yhden muutoksen ja kirjaa sen muodossa:</p>
 <blockquote class="pause"><p>Muutin kohtaa <strong><em>_, koska </em></strong>_.</p>
 </blockquote>
+<p>Ohjeista palautteen antajaa pysymään kysymyksissä. Hänen tehtävänsä ei ole kirjoittaa parin bottia uudelleen, vaan löytää kohta, jossa käyttäjän polku, onnistuminen tai raja jää epäselväksi. Kirjoittaja päättää, miten havainto vaikuttaa määrittelyyn.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan tarkistuslista</h2></div><div class="task-card-body">
+<p>Käytä tarkistuslistaa vasta, kun olet lukenut määrittelyn kokonaisuutena. Lista varmistaa vähimmäisosat, mutta se ei yksin kerro, muodostavatko ne johdonmukaisen käyttäjän polun.</p>
 <ul>
 <li>Oppija ei ole vielä kirjoittanut valmista järjestelmäpromptia.</li>
 <li>Määrittely kuvaa yhtä käyttötapausta, ei yleisavustinta.</li>
 <li>Onnistuminen on havaittava myöhemmässä testissä.</li>
 <li>Rajat liittyvät juuri valittuun tehtävään.</li>
 <li>Palautteen vaikutus näkyy lopullisessa dokumentissa.</li>
-</ul></div></div></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Oma botti I</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 14</text><text x="74" y="230" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text><text x="74" y="288" font-size="27" fill="#5A6478">Käyttäjä, tehtävä, onnistuminen ja rajat</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Tällä tunnilla suunnitellaan. Botti rakennetaan vasta tunnilla 17.</text><text x="104" y="407" font-size="17" fill="#3A4253">Määrittely kertoo, mitä myöhemmän toteutuksen pitää saada aikaan.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
+</ul>
+<p>Jos kaikki kohdat täyttyvät mutta kokonaisuus tuntuu hajanaiselta, pyydä oppijaa kertomaan bottinsa käyttäjän matka omin sanoin alusta siihen hetkeen, jolloin tehtävä onnistuu tai vastuu siirtyy ihmiselle. Puhe paljastaa nopeasti, mikä yhteys on vielä kirjoittamatta näkyviin.</p></div></div></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Oma botti I</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 14</text><text x="74" y="230" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text><text x="74" y="288" font-size="27" fill="#5A6478">Käyttäjä, tehtävä, onnistuminen ja rajat</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Tällä tunnilla suunnitellaan. Botti rakennetaan vasta tunnilla 17.</text><text x="104" y="407" font-size="17" fill="#3A4253">Määrittely kertoo, mitä myöhemmän toteutuksen pitää saada aikaan.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/8: Aloita käyttäjän tilanteesta</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Aloita käyttäjän tilanteesta</text><text x="74" y="132" font-size="19" fill="#5A6478">”Kaikille kaikkea” ei ole käyttötapaus.</text><rect x="74" y="174" width="812" height="216" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><text x="104" y="222" font-size="18" font-weight="800" fill="#6A309D">KIRJOITA YHDELLÄ VIRKKEELLÄ</text><text x="104" y="280" font-size="22" fill="#1B2336">[Käyttäjä] tarvitsee apua [tehtävässä],</text><text x="104" y="322" font-size="22" fill="#1B2336">jotta hän voi [saavutettava lopputulos].</text><rect x="74" y="422" width="812" height="60" rx="12" fill="#FFF7E2"/><text x="104" y="459" font-size="18" font-weight="700" fill="#8A6A00">Nimi, persoona tai alusta ei korvaa todellista käyttäjän tarvetta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">2 / 8</text></svg></div>
 

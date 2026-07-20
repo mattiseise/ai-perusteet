@@ -2,27 +2,25 @@
 
 ## Tehtävä 6.1 — Sama tilanne kahdessa muodossa
 
-**Tavoite:** Selvität kokeella, mitä yksi aineistomuoto tuo tehtävään ja mitä siitä voi kadota. Tarkoitus ei ole osoittaa kuvaa, tekstiä tai ääntä yleisesti parhaaksi.
+Tässä kokeessa selvität, mitä yksi aineistomuoto tuo tehtävään ja mitä siitä voi kadota. Tarkoitus ei ole osoittaa kuvaa, tekstiä tai ääntä yleisesti parhaaksi, vaan löytää valitsemaasi tilanteeseen sopiva muoto.
 
 ### 1. Valitse turvallinen tilanne
 
-Valitse aineisto, jonka saat jakaa ja jossa ei ole henkilötietoja tai luottamuksellista sisältöä. Voit käyttää esimerkiksi:
+Valitse aineisto, jonka saat jakaa ja jossa ei ole henkilötietoja tai luottamuksellista sisältöä. Voit verrata esimerkiksi:
 
-- julkista kaaviota ja sen taustalla olevaa taulukkoa
-- käyttöliittymänäkymää ja siitä kirjoittamaasi kuvausta
-- lyhyttä, itse tekemääsi äänitettä ja sen litteraatiota
-- selkeää dokumentin sivua ja siitä irrotettua tekstikatkelmaa.
+- julkista kaaviota sen taustalla olevaan taulukkoon
+- käyttöliittymänäkymää siitä kirjoittamaasi kuvaukseen
+- lyhyttä itse tekemääsi äänitettä sen litteraatioon
+- selkeää dokumentin sivua siitä irrotettuun tekstikatkelmaan.
 
-Kirjoita ensin, mitä haluat tekoälyn aineistosta selvittävän. Nimeä myös kaksi arviointikriteeriä, kuten havaintojen täsmällisyys, lähteeseen palautettavuus tai vastauksen käyttökelpoisuus.
+Valitse pari, jossa aineistomuodon vaihtaminen voi aidosti vaikuttaa havaintoon. Kirjoita sitten, mitä haluat tekoälyn selvittävän, ja nimeä kaksi arviointikriteeriä. Voit tarkastella esimerkiksi havaintojen täsmällisyyttä, niiden jäljitettävyyttä alkuperäiseen lähteeseen tai vastauksen käyttökelpoisuutta.
 
 ### 2. Tee hallittu vertailu
 
-Anna sama tehtävä kahdessa uudessa keskustelussa. Muuta vain aineistomuotoa.
+Anna sama tehtävä kahdessa uudessa keskustelussa ja muuta vain aineistomuotoa. Jos valitsit kaavion, vertailupari voi olla:
 
-Esimerkiksi:
-
-- versio A: kuva kaaviosta
-- versio B: kaavion alkuperäinen taulukko ja lyhyt kuvaus.
+- **versio A:** kaavio kuvana
+- **versio B:** alkuperäinen taulukko ja sama lyhyt taustakuvaus.
 
 Pidä prompti, tavoite ja haluttu vastausmuoto samoina. Pyydä mallia kertomaan, mihin aineiston kohtaan sen keskeiset havainnot perustuvat.
 
@@ -37,7 +35,7 @@ Pidä prompti, tavoite ja haluttu vastausmuoto samoina. Pyydä mallia kertomaan,
 
 ### 4. Tee rajattu johtopäätös
 
-Kirjoita 4–6 virkettä:
+Kirjoita 4–6 virkkeen johtopäätös, jossa vastaat seuraaviin kysymyksiin:
 
 - Kumpi aineistomuoto sopi juuri tähän tehtävään paremmin ja miksi?
 - Mitä tietoa muodon vaihtaminen säilytti tai hävitti?

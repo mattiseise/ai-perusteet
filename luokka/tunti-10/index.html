@@ -35,17 +35,18 @@
 <figcaption class="ai-demo__cap">Arvioi ensin vastaukset A ja B samoilla ennalta päätetyillä kriteereillä. Paljasta työkalut vasta arvioinnin jälkeen, jotta tuttu tuotemerkki ei ohjaa havaintoja.</figcaption></figure>
 
 <h2>Määritä ensin päätös</h2>
-<p>Ennen testiä kirjoita, mitä olet valitsemassa ja mihin käyttöön. ”Vertailen tekoälyjä” on liian väljä tavoite. Parempi muoto on:</p>
+<p>Ennen testiä kirjoita, mitä olet valitsemassa ja mihin käyttöön. ”Vertailen tekoälyjä” on liian väljä tavoite, sillä sen perusteella et vielä tiedä, millaista vastausta olet arvioimassa. Parempi muoto on:</p>
 <blockquote class="pause"><p>Valitsen työkalun, jolla muokataan 500 sanan ohje aloittelijalle sopivaksi. Tärkeintä ovat sisällön säilyminen, selkeys ja tarkistettavuus.</p>
 </blockquote>
-<p>Päätöksen pitää sisältää:</p>
+<p>Hyvä päätös sisältää:</p>
 <ul>
-<li>todellinen tehtävä</li>
-<li>käyttäjä tai yleisö</li>
-<li>käytettävä aineisto</li>
-<li>hyväksyttävä lopputulos</li>
-<li>ehdot, joiden täytyy täyttyä ennen laadun vertailua</li>
+<li>todellisen tehtävän</li>
+<li>käyttäjän tai yleisön</li>
+<li>käytettävän aineiston</li>
+<li>hyväksyttävän lopputuloksen</li>
+<li>ehdot, joiden pitää täyttyä ennen laadun vertailua.</li>
 </ul>
+<p>Kun nämä asiat on kirjoitettu näkyviin, työkalun ominaisuudet eivät pääse huomaamatta muuttamaan itse tehtävää.</p>
 <h2>Erota porttiehdot ja laatukriteerit</h2>
 <p>Kaikkia työkaluja ei pidä edes ottaa mukaan laadulliseen vertailuun. <strong>Porttiehto</strong> ratkaisee, saako työkalua käyttää tehtävään.</p>
 <p>Porttiehtoja voivat olla:</p>
@@ -57,15 +58,7 @@
 <li>palvelun käyttö täyttää saavutettavuuden tai muun pakollisen vaatimuksen</li>
 </ul>
 <p>Jos porttiehto ei täyty, työkalu hylätään ennen vastausten pisteytystä. Kaunis vastaus ei korjaa sitä, ettei palveluun saanut syöttää aineistoa.</p>
-<p><strong>Laatukriteeri</strong> kertoo, kuinka hyvin hyväksytty työkalu hoitaa tehtävän. Esimerkiksi:</p>
-<ul>
-<li>faktat säilyvät oikein</li>
-<li>vastaus noudattaa annettua rakennetta</li>
-<li>kieli sopii kohderyhmälle</li>
-<li>lähteen ja päätelmän ero näkyy</li>
-<li>tulos tarvitsee vähän jälkikorjausta</li>
-</ul>
-<p>Valitse kokeeseen 3–5 kriteeriä. Liian pitkä lista hajottaa huomion.</p>
+<p><strong>Laatukriteeri</strong> kertoo, kuinka hyvin hyväksytty työkalu hoitaa tehtävän. Ohjeen muokkaamisessa voit esimerkiksi tarkastella, säilyvätkö faktat, noudattaako vastaus annettua rakennetta ja sopiiko kieli kohderyhmälle. Tärkeää voi olla myös se, erottuvatko lähteestä saadut tiedot mallin omista päätelmistä ja kuinka paljon jälkikorjausta vastaus vaatii. Valitse kokeeseen 3–5 kriteeriä. Liian pitkä lista hajottaa huomion ja tekee valinnasta helposti mekaanisen pistekilpailun.</p>
 <h2>Kirjoita kriteereille havaittavat kuvaukset</h2>
 <p>Pelkkä numero 1–5 ei kerro, mitä arvioija näki. Kuvaa etukäteen, mitä asteikon päät tarkoittavat.</p>
 <table>
@@ -101,15 +94,16 @@
 </table>
 <p>Näin arvio perustuu näyttöön eikä siihen, mikä vastaus ”tuntuu parhaalta”.</p>
 <h2>Hallitse vertailun muuttujat</h2>
-<p>Reilu vertailu pitää olennaiset olosuhteet samoina:</p>
+<p>Reilussa vertailussa pidät olennaiset olosuhteet samoina:</p>
 <ul>
 <li>sama prompti</li>
 <li>sama lähdeaineisto</li>
 <li>sama tavoiteltu vastausmuoto</li>
 <li>uusi keskustelu jokaiselle testille</li>
-<li>tiedossa oleva palvelu-, malli- tai käyttöympäristö</li>
-<li>sama arviointitaulukko</li>
+<li>kirjattu palvelu, malli tai käyttöympäristö siltä osin kuin tieto on saatavilla</li>
+<li>sama arviointitaulukko.</li>
 </ul>
+<p>Näin et vahingossa anna toiselle työkalulle helpompaa tehtävää.</p>
 <p>Täydellistä laboratoriokoetta ei tavallisessa käytössä synny. Ilmais- ja maksulliset versiot voivat erota, palvelut voivat käyttää eri oletusasetuksia ja mallit voivat muuttua testien välillä. Nämä erot pitää kirjata rajoituksiksi, ei unohtaa.</p>
 <p>Jos vertailet vain yhden kerran, satunnaisuus voi vaikuttaa tulokseen. Tärkeässä valinnassa aja sama koe useammalla edustavalla aineistolla. Tämän tunnin pieni koe opettaa menetelmän; se ei todista työkalun yleistä paremmuutta.</p>
 <h2>Arvioi vastaukset sokkona, jos mahdollista</h2>
@@ -122,14 +116,15 @@
 </blockquote>
 <p>Tämä kysymys ohjaa arvioimaan omaa näyttöä sen sijaan, että malli valitsisi työkalun puolestasi.</p>
 <h2>Kirjaa myös käytännön työ</h2>
-<p>Paras tekstivastaus ei aina tarkoita parasta työkalua. Valintaan vaikuttavat myös:</p>
+<p>Paras tekstivastaus ei aina tarkoita parasta työkalua. Kuvittele, että toinen palvelu tuottaa hieman paremman luonnoksen mutta vaatii aineiston hankalaa kopiointia, erillisiä käyttöoikeuksia ja paljon käsin tehtävää jälkityötä. Silloin pieni laatuero ei ehkä ratkaise valintaa.</p>
+<p>Kirjaa siksi myös käytännön työ:</p>
 <ul>
 <li>kuinka helposti aineisto saadaan palveluun ja tulos takaisin</li>
 <li>voiko työn tehdä ilman tarpeetonta kopiointia</li>
 <li>miten käyttöoikeudet ja tiedot hallitaan</li>
 <li>paljonko tuloksen tarkistamiseen ja korjaamiseen kuluu aikaa</li>
 <li>mitä käyttö maksaa todellisella työmäärällä</li>
-<li>miten tulokset voidaan dokumentoida ja toistaa</li>
+<li>pystyykö toinen ihminen dokumentoinnin perusteella toistamaan kokeen.</li>
 </ul>
 <p>Nämä eivät ole pysyviä tuotekohtaisia totuuksia. Ne tarkistetaan siinä käyttöympäristössä ja sillä käyttäjätilillä, jota päätös koskee.</p>
 <h2>Tee rajattu johtopäätös</h2>
@@ -139,10 +134,10 @@
 <p>Johtopäätös kertoo:</p>
 <ul>
 <li>mihin tehtävään valinta koskee</li>
-<li>mikä näyttö ratkaisi valinnan</li>
+<li>mikä havainto ratkaisi valinnan</li>
 <li>mitkä porttiehdot täyttyivät</li>
 <li>mitä kokeesta ei voi päätellä</li>
-<li>milloin testi pitää uusia</li>
+<li>milloin nopeasti muuttuvassa käyttöympäristössä testi on syytä uusia.</li>
 </ul>
 <h2>Yhteenveto</h2>
 <p>Työkalun valinta on pieni tutkimusprosessi:</p>
@@ -169,14 +164,14 @@
 </blockquote>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 10.1 — Sama tehtävä, samat ehdot — suositeltu</h2></div><div class="task-card-body">
 <h3>1. Määritä tehtävä</h3>
-<p>Valitse tehtävä, jonka laatua osaat arvioida. Käytä vain julkista, itse tehtyä tai harjoitusta varten annettua aineistoa.</p>
-<p>Kirjoita:</p>
+<p>Valitse tehtävä, jonka laatua osaat arvioida. Käytä vain julkista, itse tehtyä tai harjoitusta varten annettua aineistoa. Kirjoita näkyviin:</p>
 <ul>
-<li>tehtävä ja käyttötarkoitus</li>
+<li>tehtävä ja sen käyttötarkoitus</li>
 <li>käyttäjä tai kohderyhmä</li>
-<li>aineisto</li>
-<li>hyväksyttävä lopputulos</li>
+<li>käytettävä aineisto</li>
+<li>hyväksyttävä lopputulos.</li>
 </ul>
+<p>Tämä rajaus toimii koko kokeen mittapuuna.</p>
 <h3>2. Tarkista porttiehdot</h3>
 <table>
 <thead>
@@ -211,7 +206,7 @@
 </table>
 <p>Jos jokin pakollinen ehto ei täyty, älä syötä aineistoa palveluun. Kirjaa hylkäyksen syy.</p>
 <h3>3. Päätä arviointikriteerit etukäteen</h3>
-<p>Valitse 3–5 kriteeriä. Kuvaa, mistä hyvä tulos tunnistetaan.</p>
+<p>Valitse 3–5 kriteeriä ennen kuin näet vastaukset. Kuvaa jokaisesta, mistä hyvä tulos tunnistetaan. Näin et vaihda arviointiperustetta sen mukaan, kumman työkalun vastaus näyttää ensisilmäyksellä miellyttävämmältä.</p>
 <table>
 <thead>
 <tr>
@@ -240,11 +235,13 @@
 <li>samaa promptia</li>
 <li>samaa aineistoa</li>
 <li>uutta keskustelua</li>
-<li>samaa tavoiteltua vastausmuotoa</li>
+<li>samaa tavoiteltua vastausmuotoa.</li>
 </ul>
+<p>Pienikin muutos lähtötilanteessa voi vaikuttaa tulokseen, joten muuta vain sitä työkalua tai asetusta, jota olet vertaamassa.</p>
 <p>Kirjaa palvelun tai käyttöympäristön nimi sekä näkyvissä oleva malli tai asetus. Tallenna vastaukset kokonaisina.</p>
 <h3>5. Arvioi näyttö</h3>
 <p>Jos mahdollista, nimeä vastaukset ensin A:ksi ja B:ksi niin, ettei arvioija tiedä, mistä palvelusta ne tulivat.</p>
+<p>Lue vastaukset yksi kriteeri kerrallaan. Etsi tekstistä havainto, joka perustelee arviosi, ja kirjoita se taulukkoon. Pelkkä pistemäärä ei vielä kerro, mikä vastauksessa onnistui tai jäi puuttumaan.</p>
 <table>
 <thead>
 <tr>
@@ -277,13 +274,13 @@
 </table>
 <p>Kirjaa lisäksi, paljonko kumpikin vaati jälkikorjausta ja mikä käytännön vaihe oli hankalin.</p>
 <h3>6. Tee rajattu valinta</h3>
-<p>Kirjoita 5–7 virkkeen päätös:</p>
+<p>Kirjoita 5–7 virkkeen päätös, jossa kerrot:</p>
 <ul>
 <li>minkä työkalun valitset tähän tehtävään</li>
-<li>mitkä kaksi havaintoa ratkaisevat valinnan</li>
+<li>mitkä kaksi havaintoa ratkaisivat valinnan</li>
 <li>mitkä porttiehdot täyttyivät</li>
 <li>mikä vertailussa jäi epävarmaksi</li>
-<li>milloin koe pitäisi uusia</li>
+<li>milloin koe pitäisi uusia.</li>
 </ul>
 <p>Älä kirjoita, että valittu työkalu on yleisesti paras. Päätelmä koskee vain testaamaasi tehtävää ja käyttöympäristöä.</p>
 <h3>Tekoälyvaihe — etsi perustelun aukko</h3>
@@ -294,7 +291,7 @@ johtopäätös ei seuraa havainnoista. Älä valitse työkalua puolestani
 </code></pre>
 <p>Tee kysymysten perusteella yksi nimetty korjaus päätökseesi tai kerro, miksi päätös ei muuttunut.</p>
 <hr />
-<p><strong>Tallennettava tuotos:</strong> testisuunnitelma, porttiehdot, molemmat vastaukset, havaintotaulukko, tehtäväkohtainen valinta ja yksi palautteen perusteella tehty tarkennus.</p></div></div></div><div id="panel-lesson-10-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-10-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Reilu työkalukoe</h1>
+<p>Tallenna lopuksi testisuunnitelma, porttiehdot, molemmat vastaukset, havaintotaulukko ja tehtäväkohtainen valinta. Liitä mukaan myös yksi tarkennus, jonka teit saamasi palautteen perusteella.</p></div></div></div><div id="panel-lesson-10-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-10-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Reilu työkalukoe</h1>
 <p>Harjoitukset valmistavat sinua vertailuun, jossa päätös perustuu ennalta sovittuihin ehtoihin ja näkyviin havaintoihin.</p>
 <h2>Tehtävä 1/5 — kokeen käsitteet</h2>
 <div class="task-widget" data-ti="0"></div>

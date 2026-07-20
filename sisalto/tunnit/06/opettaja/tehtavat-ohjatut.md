@@ -6,12 +6,7 @@ Ryhmä tekee hallitun kokeen ja erottaa toisistaan aineiston määrän, aineisto
 
 ## Valmistelu
 
-Tee pieni, turvallinen aineistopari:
-
-- viiden rivin taulukko, jossa on kuukausi ja määrä
-- samasta taulukosta tehty viivakaavio.
-
-Lisää kaavioon yksi visuaalisesti helposti havaittava muutoskohta. Säilytä taulukossa tarkat arvot.
+Tee pieni ja turvallinen aineistopari: viiden rivin taulukko, jossa on kuukausi ja määrä, sekä samasta taulukosta tehty viivakaavio. Lisää kaavioon yksi visuaalisesti helposti havaittava muutoskohta ja säilytä taulukossa tarkat arvot. Näin kumpikin aineistomuoto tarjoaa jotakin hyödyllistä, eikä harjoituksen vastaus ole ennalta selvä.
 
 ## Toteutus, noin 25 minuuttia
 
@@ -29,11 +24,13 @@ Anna mallille vain kaavio. Pyydä oppijoita kirjaamaan:
 
 - mitä se havaitsi oikein
 - minkä väitteen tarkistaminen on kuvasta vaikeaa
-- näkyykö vastauksessa perusteeton varmuus.
+- näkyykö vastauksessa perusteetonta varmuutta.
+
+Älä vielä korjaa havaintoja heidän puolestaan, vaan pyydä osoittamaan vastauksesta kohta, joka herättää epäilyn.
 
 ### 3. Aja versio B
 
-Avaa uusi keskustelu ja anna sama prompti sekä alkuperäinen taulukko. Pidä muut ehdot samoina. Kirjatkaa samat havainnot.
+Avaa uusi keskustelu ja anna sama prompti sekä alkuperäinen taulukko. Pidä muut ehdot samoina ja kirjatkaa samat havainnot. Jos vastaus muuttuu, kysy ryhmältä, mitä sellaista taulukko tarjosi, mitä kaaviosta ei voinut lukea yhtä varmasti.
 
 ### 4. Verratkaa
 
@@ -49,11 +46,13 @@ Kysy lopuksi: olisiko paras ratkaisu jompikumpi muoto vai tarkoituksellinen yhdi
 
 Näytä aineistosta toinen versio, jossa on nimi, sähköpostiosoite tai tarpeeton välilehti. Älkää lähettäkö sitä. Pyydä ryhmää kertomaan, miten aineisto rajataan turvalliseksi ja milloin sitä ei pidä käyttää lainkaan.
 
+Tässä vaiheessa on tärkeää tehdä järjestys näkyväksi: turvallisuudesta päätetään ennen lähettämistä, ei vasta hyvän vastauksen jälkeen. Jos ryhmä ehdottaa tietojen peittämistä, kysy myös, voiko alkuperäiset tiedot vielä palauttaa tiedostosta.
+
 ## Onnistumisen tunnusmerkit
 
-Oppija:
+Harjoitus on onnistunut, kun oppija:
 
-- erottaa aineistomuodon ja aineiston sisällön
+- erottaa aineistomuodon aineiston sisällöstä
 - nimeää ainakin yhden säilyneen ja yhden kadonneen tiedon
 - tarkistaa mallin väitteen alkuperäisestä aineistosta
-- tunnistaa ennen lähettämistä tehtävän turvallisuuspäätöksen.
+- tunnistaa, että aineiston turvallisuudesta päätetään ennen lähettämistä.

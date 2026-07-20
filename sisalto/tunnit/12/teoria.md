@@ -8,7 +8,9 @@ Promptikortti yhdistää kolme asiaa:
 
 1. pysyvän ohjeen, jota käytät uudelleen
 2. vaihtuvan aineiston, jonka lisäät joka käyttökerralla
-3. laatukriteerit, joilla tarkistat vastauksen.
+3. laatukriteerit, joilla tarkistat vastauksen
+
+Ajattele korttia työohjeena, jonka toinenkin ihminen voisi ottaa käyttöön. Pysyvä ohje kertoo, mikä työ tehdään ja millä ehdoilla. Vaihtuva aineisto tuo jokaiseen käyttökertaan uuden sisällön. Laatukriteerit puolestaan estävät hyväksymästä vastausta vain siksi, että se kuulostaa sujuvalta. Jos jokin näistä kolmesta puuttuu, korttia on vaikea käyttää johdonmukaisesti tai kehittää havaintojen perusteella.
 
 > **Tunnin ydinkysymys:** Mikä yksi promptimuutos paransi vastausta — ja millä havainnolla osoitat vaikutuksen?
 
@@ -30,6 +32,8 @@ Hyvä promptikortti ratkaisee rajatun tehtävän, joka toistuu samankaltaisena m
 - muistiinpanojen muuttaminen kertauskysymyksiksi
 - tekstiluonnoksen muokkaaminen tietylle yleisölle
 - palautteiden jäsentäminen ennalta sovittuihin teemoihin.
+
+Viikoittaisten kokousmuistiinpanojen muuttaminen toimintakohdiksi on hyvä esimerkki. Aineisto vaihtuu joka viikko, mutta haluttu työ pysyy samana: tehtävä, vastuuhenkilö ja määräaika poimitaan näkyviin. Sen sijaan ”auta minua työssäni” ei vielä kuvaa toistettavaa tehtävää eikä anna perustaa vastauksen arvioinnille.
 
 Vältä tehtävää, jonka hyvyyttä et pysty itse arvioimaan. Jos et tunne aihetta tai oikeaa lopputulosta, et myöskään tiedä, paransiko promptin muutos vastausta.
 
@@ -61,6 +65,8 @@ LÄHDEAINEISTO:
 
 Kortti ei ole vain pitkä prompti. Sen pitää kertoa myös, milloin rakennetta käytetään ja milloin ei.
 
+Esimerkin hakasulkeet tekevät vastuunjaon näkyväksi. Kortti ei arvaa yleisöä, tarkoitusta tai lähdeaineistoa, vaan käyttäjä täyttää ne joka käyttökerralla. Samalla pysyvät vaatimukset — kuten lähteen nimien ja määräaikojen säilyttäminen — pysyvät samoina. Juuri tämä erottaa uudelleen käytettävän rakenteen keskusteluun kerran kirjoitetusta pyynnöstä.
+
 ## Päätä laatukriteerit ennen ensimmäistä ajoa
 
 Ilman ennalta päätettyjä kriteereitä arvio helposti mukautuu siihen, millaisen vastauksen malli tuotti. Valitse 2–4 havaittavaa ominaisuutta.
@@ -73,6 +79,8 @@ Ilman ennalta päätettyjä kriteereitä arvio helposti mukautuu siihen, millais
 | ”Muoto on käyttökelpoinen.” | Vastauksen voi siirtää tehtävälistaan ilman rakenteen korjaamista. |
 
 Kriteeri on käyttökelpoinen, kun toinenkin ihminen voisi tarkistaa sen samasta vastauksesta.
+
+Kriteeri toimii siis pienenä sopimuksena ennen testiä. Kun päätät etukäteen, ettei mallin pidä keksiä puuttuvia määräaikoja, voit tarkistaa vastauksesta yksiselitteisesti, tapahtuiko näin. Jos arviointiperuste syntyy vasta vastauksen jälkeen, sitä on helppo muuttaa huomaamatta mallin tuotoksen eduksi.
 
 ## Tee kaksi vertailukelpoista versiota
 
@@ -87,6 +95,8 @@ Muuta seuraavaksi vain yhtä asiaa. Voit esimerkiksi:
 
 Avaa uusi keskustelu ja aja versio 2 samalla aineistolla. Jos jatkat samassa keskustelussa, aiempi vastaus voi vaikuttaa tulokseen. Jos vaihdat aineiston, et enää testaa vain promptin muutosta.
 
+Tämä on eri asia kuin tavallinen keskustelullinen hiominen, jossa käyttäjä muuttaa useita asioita kerralla ja tyytyy lopulta mieluisaan vastaukseen. Hallitussa kokeessa säilytät lähtötilanteen, jotta pystyt myöhemmin sanomaan, mikä muutos todennäköisesti vaikutti tulokseen.
+
 ## Kirjaa vaikutus havaintona
 
 Hyvä johtopäätös nimeää muutoksen, tuloksen ja näytön:
@@ -94,6 +104,8 @@ Hyvä johtopäätös nimeää muutoksen, tuloksen ja näytön:
 > Lisäsin ohjeen ”älä lisää puuttuvia määräaikoja”. Versio 1 keksi kahdelle tehtävälle määräajan, mutta versio 2 merkitsi ne puuttuviksi. Muutos paransi lähdeuskollisuutta tällä aineistolla.
 
 Huomaa rajaus: yksi testi ei osoita, että kortti toimii kaikilla aineistoilla. Se osoittaa, miten kortti toimi tässä kokeessa. Seuraava hyödyllinen testi käyttää erilaista mutta samaan tehtävään kuuluvaa syötettä.
+
+Näin kortin kehittäminen jatkuu perustellusti. Ensimmäinen koe osoittaa yhden vaikutuksen, seuraava koe koettelee rakennetta uudella aineistolla ja versiohistoria säilyttää tiedon siitä, miksi korttia muutettiin. Kortti ei ole koskaan ”valmis totuus”, vaan dokumentoitu työväline, jonka käyttöalue tunnetaan.
 
 ## Korttiin kuuluu myös tunnettu raja
 

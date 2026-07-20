@@ -38,27 +38,13 @@ Valinta alkaa kysymyksestä, ei tiedostosta. Jos haluat mallin arvioivan painikk
 
 Käytä tekstiä, kun sanamuodon, lukujen tai rakenteen pitää säilyä täsmällisenä. Tekstiä voi lainata, hakea, vertailla ja muokata suoraan.
 
-Hyviä tekstimuotoisia aineistoja ovat esimerkiksi:
-
-- viesti, jonka sävyä tai rakennetta haluat muuttaa
-- ohje, josta haluat selkokielisen version
-- taulukon yksittäiset arvot, joiden perusteella lasketaan
-- virheilmoituksen tarkka sanamuoto
-- koodi tai muu rakenteinen teksti, jota pitää muokata rivi riviltä
+Ajattele vaikka viestiä, jonka sävyä haluat muuttaa, tai ohjetta, josta tarvitset selkokielisen version. Kun annat alkuperäisen tekstin mallille tekstinä, jokainen sana säilyy tarkasteltavana. Sama koskee laskennassa tarvittavia taulukkoarvoja, virheilmoituksen täsmällistä sanamuotoa sekä koodia, jota pitää muokata rivi riviltä. Kuvakaappaus voi näyttää nämä asiat, mutta se lisää turhaan yhden tulkintavaiheen: mallin pitää ensin lukea kuvassa oleva teksti oikein.
 
 Pelkkä aineisto ei kuitenkaan kerro tavoitetta. Lisää aina lyhyt tehtävänanto: mitä aineistosta tarkastellaan, kenelle tulos tehdään ja missä muodossa vastaus tarvitaan.
 
 ## Kuva sopii näkyvien suhteiden tarkasteluun
 
-Kuva on hyödyllinen silloin, kun ongelma sijaitsee asioiden välisissä suhteissa: mikä on minkä vieressä, mikä puuttuu, miten kokonaisuus on jäsennelty tai mitä ympäristössä näkyy.
-
-Esimerkkejä:
-
-- sovelluksen painikkeet menevät päällekkäin
-- kaavion asteikko tai selite on epäselvä
-- laitteen merkkivaloista pitäisi päätellä käyttötila
-- pakkauksen ohjeessa kuva ja teksti muodostavat kokonaisuuden
-- käsin kirjoitetun muistiinpanon rakenne pitää tulkita
+Kuva on hyödyllinen silloin, kun ongelma sijaitsee asioiden välisissä suhteissa: mikä on minkä vieressä, mikä puuttuu, miten kokonaisuus on jäsennelty tai mitä ympäristössä näkyy. Sovelluksen päällekkäiset painikkeet tai kaavion epäselvä selite on helpompi havaita kuvasta kuin pitkästä kuvauksesta. Samoin laitteen merkkivalot, pakkauksen kuvan ja tekstin yhteys tai käsin kirjoitetun muistiinpanon rakenne voivat olla juuri sitä tietoa, joka katoaisi pelkäksi tekstiksi muutettuna.
 
 Hyvä kuvapyyntö kertoo kolme asiaa:
 
@@ -72,48 +58,40 @@ Esimerkiksi: ”Tämä on kuvakaappaus ilmoittautumissivusta puhelimella. Tarkas
 
 Kaavio näyttää kehityksen nopeasti, mutta alkuperäinen taulukko kertoo arvot tarkemmin. Jos tehtävä vaatii laskemista, poikkeamien etsimistä tai rivien vertailua, anna taulukko mieluiten rakenteisessa muodossa.
 
-Voit yhdistää muodot tarkoituksellisesti:
-
-- kuva kaaviosta näyttää esitystavan
-- taulukko antaa tarkat arvot
-- teksti kertoo, mitä päätöstä varten analyysi tehdään
-
-Tämä ei tarkoita, että mukaan lisätään kaikki mahdollinen aineisto. Jokaisella liitteellä pitää olla nimetty tehtävä.
+Jos tehtävässä tarvitaan sekä yleiskuvaa että täsmällisiä lukuja, muodot voi yhdistää tarkoituksellisesti. Kaavion kuva näyttää esitystavan ja kehityssuunnan, alkuperäinen taulukko antaa tarkat arvot ja lyhyt teksti kertoo, mitä päätöstä varten analyysi tehdään. Tämä ei tarkoita, että mukaan lisätään kaikki mahdollinen aineisto. Jokaisella liitteellä pitää olla nimetty tehtävä.
 
 ## Ääni säilyttää ajallisen kulun
 
 Ääntä kannattaa käyttää, kun kiinnostuksen kohde on puheessa tai tapahtumien järjestyksessä. Esimerkiksi ääntämisen harjoittelu, kokouksen puheenvuorojen jäsentäminen tai haastattelun litterointi perustuvat tietoon, jota pelkkä jälkikäteen kirjoitettu yhteenveto ei säilytä.
 
-Ääni ei kuitenkaan ole varma ikkuna ihmisen tunteisiin tai tarkoituksiin. Malli voi tulkita tauon, painotuksen tai puhujan asenteen väärin. Siksi turvallinen tehtävä kohdistuu havaittavaan asiaan:
-
-- ”Kirjoita puhe tekstiksi ja merkitse epäselvät kohdat.”
-- ”Tunnista, missä kohdissa puhuja vaihtaa aihetta.”
-- ”Vertaa ääntämystä tähän annettuun malliin.”
+Ääni ei kuitenkaan ole varma ikkuna ihmisen tunteisiin tai tarkoituksiin. Malli voi tulkita tauon, painotuksen tai puhujan asenteen väärin. Siksi turvallinen tehtävä kohdistuu havaittavaan asiaan. Voit pyytää mallia kirjoittamaan puheen tekstiksi ja merkitsemään epäselvät kohdat, tunnistamaan aiheen vaihtumisen tai vertaamaan ääntämystä annettuun malliin.
 
 Vältä perusteettomia päätelmiä puhujan terveydestä, luonteesta, rehellisyydestä tai tunnetilasta.
 
 ## Vertailukoe paljastaa, mitä aineisto lisää
 
-Tämän tunnin tehtävässä annat saman ongelman ensin sanallisesti ja sitten kuvan kanssa. Kokeen tarkoitus ei ole todistaa, että kuva voittaa. Tarkoitus on tunnistaa, **mitä uutta havaittavaa tietoa kuva toi**.
+Tämän tunnin tehtävässä annat saman ongelman kahdessa eri aineistomuodossa. Kokeen tarkoitus ei ole todistaa, että toinen muoto voittaa. Tarkoitus on tunnistaa, **mitä uutta havaittavaa tietoa aineistomuodon vaihtaminen toi**.
 
-Pidä muut asiat mahdollisimman samoina:
+Jotta vertailu kertoisi aineistomuodon vaikutuksesta, pidä mahdollisimman samoina:
 
-- sama tehtävä
-- sama taustatieto
-- sama tavoiteltu vastausmuoto
-- mahdollisuuksien mukaan sama malli ja keskustelun lähtötilanne
+- tehtävä
+- taustatieto
+- tavoiteltu vastausmuoto
+- malli ja keskustelun lähtötilanne.
 
-Vertaa vastauksia nimetyillä kriteereillä. Löysikö kuvaan perustuva vastaus sellaisen suhteen, jota tekstikuvaus ei sisältänyt? Lukiko malli pienen tekstin väärin? Keskittyikö se epäolennaiseen yksityiskohtaan? Hyvä johtopäätös voi olla myös se, että huolellinen tekstikuvaus riitti paremmin.
+Muuten et tiedä, johtuiko ero aineistosta vai jostakin muusta muutoksesta.
+
+Vertaa vastauksia nimetyillä kriteereillä. Löysikö toinen muoto sellaisen suhteen, jota toinen ei sisältänyt? Lukiko malli pienen tekstin väärin tai hävisikö litteroinnissa jotakin olennaista? Keskittyikö se epäolennaiseen yksityiskohtaan? Hyvä johtopäätös voi olla myös se, että yksinkertaisempi aineistomuoto riitti paremmin.
 
 ## Enemmän aineistoa ei tarkoita parempaa vastausta
 
-Ylimääräinen aineisto voi lisätä kohinaa, kuluttaa konteksti-ikkunaa ja ohjata huomion pois olennaisesta. Valitse pienin aineistokokonaisuus, joka säilyttää tehtävässä tarvittavan tiedon.
+Ylimääräinen aineisto voi lisätä kohinaa, kuluttaa konteksti-ikkunaa ja ohjata huomion pois olennaisesta. Valitse siksi pienin aineistokokonaisuus, joka säilyttää tehtävässä tarvittavan tiedon.
 
 Kysy jokaisesta liitteestä:
 
-- Mitä sellaista tämä tuo, mitä muissa aineistoissa ei ole?
-- Tarvitaanko koko tiedosto vai riittääkö rajattu kohta?
-- Voiko tarkka sisältö antaa tekstinä kuvan sijaan?
+- Mitä uutta tämä tuo?
+- Riittääkö tiedostosta rajattu kohta?
+- Voiko tarkan sisällön antaa turvallisemmin tekstinä?
 - Miten tarkistan mallin tekemän tulkinnan?
 
 ## Turvallisuus ratkaistaan ennen lähettämistä
@@ -138,15 +116,15 @@ Tarkista tärkeä havainto alkuperäisestä materiaalista. Pyydä mallia tarvitt
 
 ## Yhteenveto
 
-Valitse aineistomuoto tehtävän mukaan:
+Valitse aineistomuoto sen mukaan, mitä tehtävässä pitää havaita:
 
-- teksti tarkkaan sisältöön ja muokkaamiseen
-- kuva näkyviin suhteisiin ja kokonaisuuteen
-- taulukko lukuihin ja rakenteiseen vertailuun
-- ääni puheen ja ajallisen kulun tarkasteluun
-- dokumentti pidempään lähdeaineistoon
+- teksti säilyttää tarkan sisällön ja helpottaa muokkaamista
+- kuva näyttää näkyvät suhteet ja kokonaisuuden
+- taulukko pitää luvut rakenteisina
+- ääni säilyttää puheen ajallisen kulun
+- dokumentti pitää pidemmän lähdeaineiston rakenteen ja asiayhteyden koossa.
 
-Yhdistä muotoja vain silloin, kun jokainen tuo tehtävään oman tarpeellisen havaintonsa. Rajaa aineisto, suojaa tiedot ja tarkista mallin tulkinta alkuperäisestä lähteestä.
+Yhdistä muotoja vain silloin, kun jokainen tuo tehtävään oman tarpeellisen havaintonsa. Rajaa aineisto, suojaa tiedot ja tarkista mallin tulkinta alkuperäisestä lähteestä. Näin multimodaalisuus ei tarkoita mahdollisimman monen liitteen lähettämistä, vaan harkittua tapaa antaa mallille juuri se tieto, jota työ vaatii.
 
 > **Lopuksi pohdittavaksi:** Minkä tiedon menetät, jos muutat aineiston toiseen muotoon — ja onko juuri se tieto tehtäväsi kannalta olennainen?
 

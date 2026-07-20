@@ -37,6 +37,12 @@
 </div>
 <figcaption class="ai-demo__cap">Työparisykli ei siirrä päätösvaltaa mallille. Ihminen määrittää suunnan ennen luonnosta ja hyväksyy, muokkaa tai hylkää ehdotukset myös palautekierroksen jälkeen.</figcaption></figure>
 
+<h2>Läpi kulkeva esimerkki: palautusohje luonnoksesta päätökseksi</h2>
+<p>Kuvittele, että kirjoitat verkkokaupan uudelle asiakkaalle lyhyen palautusohjeen. Hyväksytty lähde kertoo kolme asiaa: palautuksesta ilmoitetaan 14 päivän kuluessa, tuotteen pitää olla käyttämätön ja palautus aloitetaan tilausvahvistuksessa olevasta linkistä. Asiakaspalvelun yhteystieto on varareitti, jos linkki ei toimi.</p>
+<p>Pyydät tekoälyltä enintään kuuden vaiheen luonnoksen. Luonnos alkaa selkeästi, mutta siinä lukee: ”Kirjaudu asiakastilillesi ja valitse Peruuta tilaus.” Lähteessä ei mainita asiakastiliä tai tämännimistä painiketta. Luonnoksesta puuttuu myös ehto, jonka mukaan tuotteen pitää olla käyttämätön. Teksti kuulostaa sujuvalta, mutta sitä ei voi julkaista sellaisenaan.</p>
+<p>Luet luonnoksen lähteen rinnalla. Säilytät ymmärrettävän aloituksen, korvaat keksityn vaiheen ohjeella avata tilausvahvistuksen palautuslinkki ja lisäät käyttämättömyyttä koskevan ehdon. Kirjaat päätöslokiin, että ensimmäinen muutos perustuu todelliseen asiointipolkuun ja toinen palautusehtoihin. Näin oma työsi näkyy muuna kuin kieliasun silottamisena.</p>
+<p>Seuraavaksi annat korjatun version tekoälylle testilukijan roolissa. Se huomauttaa, ettei aloittelija ehkä tiedä, mistä tilausvahvistus löytyy, ja ehdottaa samalla koko 14 päivän määräajan poistamista tekstin keventämiseksi. Hyväksyt ensimmäisen havainnon ja lisäät, että vahvistus löytyy sähköpostista. Hylkäät toisen ehdotuksen, koska määräaika on käyttäjän toiminnan kannalta olennainen lähdetieto.</p>
+<p>Lopullinen ohje syntyy siis neljän erilaisen päätöksen kautta: tekoäly tuotti käyttökelpoisen pohjan, ihminen korjasi faktat, tekoäly auttoi löytämään yhden epäselvän kohdan ja ihminen arvioi myös palautteen. Työparuus ei näy siinä, kuinka monta virkettä tekoäly kirjoitti, vaan siinä, että jokaisen muutoksen peruste voidaan osoittaa.</p>
 <h2>1. Pyydä pohja, älä lopullista totuutta</h2>
 <p>Ensimmäinen versio voi olla rakenne, luonnos tai vaihtoehtojen lista. Kerro tekoälylle:</p>
 <ul>
@@ -47,6 +53,7 @@
 <li>mitä asioita ei saa keksiä</li>
 </ul>
 <p>Esimerkiksi käyttöohjeen ensimmäinen pohja voi sisältää otsikot ja työvaiheet. Se ei vielä ole julkaistava ohje. Sen tehtävä on antaa jotakin, jota voit arvioida ja muokata.</p>
+<p>Palautusohjeen esimerkissä hyödyllinen pohja säästi rakenteen aloittamisen vaivan. Samalla keksitty painike osoitti, miksi luonnosta pitää käsitellä väitteenä, joka tarkistetaan, eikä valmiina tietona.</p>
 <h2>2. Lue kuin toimittaja</h2>
 <p>Älä aloita tekstin silottamisesta. Tarkista ensin sisältö:</p>
 <ol>
@@ -76,6 +83,7 @@
 </tbody>
 </table>
 <p>Tämä tekee ihmisen panoksen näkyväksi. Pelkkä lopullinen teksti ei kerro, ymmärsitkö, mitä piti korjata.</p>
+<p>Päätösloki ei ole vain arviointia varten. Se auttaa myös myöhempää muokkaajaa näkemään, mikä kohta perustuu lähteeseen, mikä kohderyhmän tarpeeseen ja mikä on tietoinen rajaus. Ilman perustelua oikeakin muutos voi näyttää satunnaiselta tyylivalinnalta.</p>
 <h2>3. Tee itse olennaiset päätökset</h2>
 <p>Tekoäly voi ehdottaa, mutta se ei tunne tavoitettasi yhtä hyvin kuin sinä. Päätä itse ainakin:</p>
 <ul>
@@ -86,6 +94,7 @@
 <li>milloin luonnos hylätään kokonaan</li>
 </ul>
 <p>Kaikkea ei tarvitse pelastaa. Jos luonnos perustuu väärään oletukseen, uusi rajattu prompti voi olla järkevämpi kuin pitkän tekstin paikkaaminen.</p>
+<p>Ihmisen päätösvalta näkyy myös säilyttämisessä. Palautusohjeen selkeä aloitus kannatti pitää, vaikka seuraava vaihe oli väärä. Kriittinen lukeminen ei tarkoita kaiken tekoälyn tuottaman hylkäämistä, vaan jokaisen kohdan arvioimista tehtävän ja lähteen perusteella.</p>
 <h2>4. Käytä tekoälyä testilukijana</h2>
 <p>Kun olet tehnyt oman version, anna tekoälylle rajattu tarkistusrooli. Älä pyydä ”parantamaan kaikkea”, vaan etsi nimettyä ongelmaa:</p>
 <ul>
@@ -95,6 +104,7 @@
 <li>tarkista, etenevätkö vaiheet oikeassa järjestyksessä</li>
 </ul>
 <p>Pyydä havainto ja kysymys, älä valmista uudelleenkirjoitusta. Näin sinä säilytät päätösvallan.</p>
+<p>Testilukija ei tunne käyttäjää eikä todellista käyttötilannetta automaattisesti. Siksi sille annetaan kohderyhmä ja yksi tarkastelukulma. Palautusohjeessa kysymys ”Missä aloittelija voi jäädä jumiin?” toi esiin tilausvahvistuksen löytämisen, mutta ei antanut mallille oikeutta poistaa tärkeää määräaikaa.</p>
 <h2>5. Tarkista tarkistajan ehdotus</h2>
 <p>Tekoälyn palaute voi olla väärä, epäolennainen tai tyyliltään huono. Jokaisesta ehdotuksesta päätetään:</p>
 <ul>
@@ -103,6 +113,7 @@
 <li>hylkään</li>
 </ul>
 <p>Kirjaa ainakin yksi hylätty ehdotus ja sen peruste. Kriittinen työparuus näkyy myös siinä, mitä et ota mukaan.</p>
+<p>Hyväksyminen, muokkaaminen ja hylkääminen eivät ole mielipideäänestyksiä. Ratkaisu sidotaan ennalta määriteltyyn tavoitteeseen, lähteeseen tai käyttäjän tarpeeseen. Silloin myös hylätty ehdotus osoittaa osaamista: tunnistit, miksi sujuvalta kuulostava muutos olisi heikentänyt lopputulosta.</p>
 <h2>Sama sykli toimii eri tehtävissä</h2>
 <p>Mallia voi käyttää kirjoittamisessa, opiskelussa, suunnittelussa ja ongelmanratkaisussa. Tehtävä vaihtuu, mutta vastuunjako säilyy:</p>
 <table>

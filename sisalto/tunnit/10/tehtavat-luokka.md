@@ -6,14 +6,14 @@
 
 ### 1. Määritä tehtävä
 
-Valitse tehtävä, jonka laatua osaat arvioida. Käytä vain julkista, itse tehtyä tai harjoitusta varten annettua aineistoa.
+Valitse tehtävä, jonka laatua osaat arvioida. Käytä vain julkista, itse tehtyä tai harjoitusta varten annettua aineistoa. Kirjoita näkyviin:
 
-Kirjoita:
-
-- tehtävä ja käyttötarkoitus
+- tehtävä ja sen käyttötarkoitus
 - käyttäjä tai kohderyhmä
-- aineisto
-- hyväksyttävä lopputulos
+- käytettävä aineisto
+- hyväksyttävä lopputulos.
+
+Tämä rajaus toimii koko kokeen mittapuuna.
 
 ### 2. Tarkista porttiehdot
 
@@ -28,7 +28,7 @@ Jos jokin pakollinen ehto ei täyty, älä syötä aineistoa palveluun. Kirjaa h
 
 ### 3. Päätä arviointikriteerit etukäteen
 
-Valitse 3–5 kriteeriä. Kuvaa, mistä hyvä tulos tunnistetaan.
+Valitse 3–5 kriteeriä ennen kuin näet vastaukset. Kuvaa jokaisesta, mistä hyvä tulos tunnistetaan. Näin et vaihda arviointiperustetta sen mukaan, kumman työkalun vastaus näyttää ensisilmäyksellä miellyttävämmältä.
 
 | Kriteeri | Hyvän tuloksen tuntomerkki |
 | --- | --- |
@@ -43,13 +43,17 @@ Käytä molemmissa palveluissa:
 - samaa promptia
 - samaa aineistoa
 - uutta keskustelua
-- samaa tavoiteltua vastausmuotoa
+- samaa tavoiteltua vastausmuotoa.
+
+Pienikin muutos lähtötilanteessa voi vaikuttaa tulokseen, joten muuta vain sitä työkalua tai asetusta, jota olet vertaamassa.
 
 Kirjaa palvelun tai käyttöympäristön nimi sekä näkyvissä oleva malli tai asetus. Tallenna vastaukset kokonaisina.
 
 ### 5. Arvioi näyttö
 
 Jos mahdollista, nimeä vastaukset ensin A:ksi ja B:ksi niin, ettei arvioija tiedä, mistä palvelusta ne tulivat.
+
+Lue vastaukset yksi kriteeri kerrallaan. Etsi tekstistä havainto, joka perustelee arviosi, ja kirjoita se taulukkoon. Pelkkä pistemäärä ei vielä kerro, mikä vastauksessa onnistui tai jäi puuttumaan.
 
 | Kriteeri | Vastaus A: havainto | Vastaus B: havainto | Kumpi täytti kriteerin paremmin? |
 | --- | --- | --- | --- |
@@ -61,13 +65,13 @@ Kirjaa lisäksi, paljonko kumpikin vaati jälkikorjausta ja mikä käytännön v
 
 ### 6. Tee rajattu valinta
 
-Kirjoita 5–7 virkkeen päätös:
+Kirjoita 5–7 virkkeen päätös, jossa kerrot:
 
 - minkä työkalun valitset tähän tehtävään
-- mitkä kaksi havaintoa ratkaisevat valinnan
+- mitkä kaksi havaintoa ratkaisivat valinnan
 - mitkä porttiehdot täyttyivät
 - mikä vertailussa jäi epävarmaksi
-- milloin koe pitäisi uusia
+- milloin koe pitäisi uusia.
 
 Älä kirjoita, että valittu työkalu on yleisesti paras. Päätelmä koskee vain testaamaasi tehtävää ja käyttöympäristöä.
 
@@ -84,4 +88,4 @@ Tee kysymysten perusteella yksi nimetty korjaus päätökseesi tai kerro, miksi 
 
 ---
 
-**Tallennettava tuotos:** testisuunnitelma, porttiehdot, molemmat vastaukset, havaintotaulukko, tehtäväkohtainen valinta ja yksi palautteen perusteella tehty tarkennus.
+Tallenna lopuksi testisuunnitelma, porttiehdot, molemmat vastaukset, havaintotaulukko ja tehtäväkohtainen valinta. Liitä mukaan myös yksi tarkennus, jonka teit saamasi palautteen perusteella.

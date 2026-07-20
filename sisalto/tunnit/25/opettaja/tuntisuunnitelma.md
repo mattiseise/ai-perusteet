@@ -4,6 +4,8 @@
 
 Oppija suunnittelee, missä kohdissa agentti saa toimia itse ja missä ihmisen pitää hyväksyä, muokata tai hylätä ehdotus. Samalla erotetaan palautedatan tallentaminen mallin oppimisesta.
 
+Opetuksen punaisena lankana toimii päätöksen riski. Kun oppija tarkastelee virheen vaikutusta, peruttavuutta ja vastuunkantajaa, hyväksyntäportin paikka ei jää mielipiteeksi. Sama tarkastelu auttaa myös poistamaan turhia portteja: vähäriskinen ja helposti peruttava rutiini voidaan usein automatisoida ilman ihmisen hyväksyntää.
+
 ## Osaamistavoitteet
 
 Oppija:
@@ -18,6 +20,8 @@ Oppija:
 
 Ihminen ei kuulu jokaiseen vaiheeseen varmuuden vuoksi. Hän kuuluu kohtaan, jossa päätös tarvitsee vastuuta tai harkintaa. Hyväksyntä tai hylkäys voi tuottaa kehitysaineistoa, mutta kielimalli ei opi siitä automaattisesti.
 
+Tee ero näkyväksi yhdellä esimerkillä. Asiakkaalle lähetettävä vastaanottokuittaus voi olla automaattinen, mutta hinnanalennus muuttaa taloudellista sitoumusta ja tarvitsee nimetyn päätöksentekijän. Jos päätöksentekijä hylkää ehdotuksen, tieto tallennetaan lokiin. Järjestelmän sääntö muuttuu vasta, kun ihminen on arvioinut havaintoa ja hyväksynyt testatun muutoksen.
+
 ## 90 minuutin toteutus ja eriyttäminen
 
 Tallennettava tuotos on **Agentti: Ihminen -pohjapiirros**.
@@ -31,6 +35,8 @@ Tallennettava tuotos on **Agentti: Ihminen -pohjapiirros**.
 | 68–80 min | Palautedata | Oppija kuvaa lokin, arvioijan, muutoksen ja uudelleentestauksen. |
 | 80–90 min | Haastaminen | Pari etsii yhden turhan portin ja yhden puuttuvan riskikohdan. |
 
+Oman pohjapiirroksen aikana pyydä oppijaa kuvaamaan yhden portin koko elinkaari. Pelkkä sijainti prosessissa ei riitä: näkyviin tarvitaan päätösaineisto, päätöksentekijä, vastausaika ja toiminta hiljaisuudessa. Parityöskentelyn tehtävä ei ole lisätä portteja vaan löytää tasapaino sujuvuuden ja vastuun välille.
+
 ## Tyypilliset väärinkäsitykset
 
 - Jokaisen toiminnon hyväksyttäminen voi tehdä järjestelmästä hitaamman ilman olennaista lisäturvaa.
@@ -38,6 +44,8 @@ Tallennettava tuotos on **Agentti: Ihminen -pohjapiirros**.
 - Vastaamattomuus ei saa tarkoittaa kriittisen päätöksen automaattista hyväksyntää.
 - Yksi poikkeuspäätös ei ole uusi organisaation sääntö.
 - Lokimerkintä ei muuta mallia; muutos vaatii arvioinnin, toteutuksen ja testauksen.
+
+Kun väärinkäsitys tulee esiin, palaa seuraukseen. Kysy esimerkiksi, mitä tapahtuu, jos hyväksyjä ei vastaa ennen määräaikaa tai jos kiireessä tehty poikkeuspäätös muuttuu vahingossa kaikkia tapauksia koskevaksi säännöksi. Tällainen tapaus tekee abstraktista varoituksesta konkreettisen suunnittelupäätöksen.
 
 ## Arvioitava näyttö
 

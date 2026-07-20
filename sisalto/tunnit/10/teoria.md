@@ -20,17 +20,19 @@ Vertailun lähtökohta on aina tehtävä. Sama palvelu voi onnistua hyvin yhdess
 
 ## Määritä ensin päätös
 
-Ennen testiä kirjoita, mitä olet valitsemassa ja mihin käyttöön. ”Vertailen tekoälyjä” on liian väljä tavoite. Parempi muoto on:
+Ennen testiä kirjoita, mitä olet valitsemassa ja mihin käyttöön. ”Vertailen tekoälyjä” on liian väljä tavoite, sillä sen perusteella et vielä tiedä, millaista vastausta olet arvioimassa. Parempi muoto on:
 
 > Valitsen työkalun, jolla muokataan 500 sanan ohje aloittelijalle sopivaksi. Tärkeintä ovat sisällön säilyminen, selkeys ja tarkistettavuus.
 
-Päätöksen pitää sisältää:
+Hyvä päätös sisältää:
 
-- todellinen tehtävä
-- käyttäjä tai yleisö
-- käytettävä aineisto
-- hyväksyttävä lopputulos
-- ehdot, joiden täytyy täyttyä ennen laadun vertailua
+- todellisen tehtävän
+- käyttäjän tai yleisön
+- käytettävän aineiston
+- hyväksyttävän lopputuloksen
+- ehdot, joiden pitää täyttyä ennen laadun vertailua.
+
+Kun nämä asiat on kirjoitettu näkyviin, työkalun ominaisuudet eivät pääse huomaamatta muuttamaan itse tehtävää.
 
 ## Erota porttiehdot ja laatukriteerit
 
@@ -46,15 +48,7 @@ Porttiehtoja voivat olla:
 
 Jos porttiehto ei täyty, työkalu hylätään ennen vastausten pisteytystä. Kaunis vastaus ei korjaa sitä, ettei palveluun saanut syöttää aineistoa.
 
-**Laatukriteeri** kertoo, kuinka hyvin hyväksytty työkalu hoitaa tehtävän. Esimerkiksi:
-
-- faktat säilyvät oikein
-- vastaus noudattaa annettua rakennetta
-- kieli sopii kohderyhmälle
-- lähteen ja päätelmän ero näkyy
-- tulos tarvitsee vähän jälkikorjausta
-
-Valitse kokeeseen 3–5 kriteeriä. Liian pitkä lista hajottaa huomion.
+**Laatukriteeri** kertoo, kuinka hyvin hyväksytty työkalu hoitaa tehtävän. Ohjeen muokkaamisessa voit esimerkiksi tarkastella, säilyvätkö faktat, noudattaako vastaus annettua rakennetta ja sopiiko kieli kohderyhmälle. Tärkeää voi olla myös se, erottuvatko lähteestä saadut tiedot mallin omista päätelmistä ja kuinka paljon jälkikorjausta vastaus vaatii. Valitse kokeeseen 3–5 kriteeriä. Liian pitkä lista hajottaa huomion ja tekee valinnasta helposti mekaanisen pistekilpailun.
 
 ## Kirjoita kriteereille havaittavat kuvaukset
 
@@ -71,14 +65,16 @@ Näin arvio perustuu näyttöön eikä siihen, mikä vastaus ”tuntuu parhaalta
 
 ## Hallitse vertailun muuttujat
 
-Reilu vertailu pitää olennaiset olosuhteet samoina:
+Reilussa vertailussa pidät olennaiset olosuhteet samoina:
 
 - sama prompti
 - sama lähdeaineisto
 - sama tavoiteltu vastausmuoto
 - uusi keskustelu jokaiselle testille
-- tiedossa oleva palvelu-, malli- tai käyttöympäristö
-- sama arviointitaulukko
+- kirjattu palvelu, malli tai käyttöympäristö siltä osin kuin tieto on saatavilla
+- sama arviointitaulukko.
+
+Näin et vahingossa anna toiselle työkalulle helpompaa tehtävää.
 
 Täydellistä laboratoriokoetta ei tavallisessa käytössä synny. Ilmais- ja maksulliset versiot voivat erota, palvelut voivat käyttää eri oletusasetuksia ja mallit voivat muuttua testien välillä. Nämä erot pitää kirjata rajoituksiksi, ei unohtaa.
 
@@ -102,14 +98,16 @@ Tämä kysymys ohjaa arvioimaan omaa näyttöä sen sijaan, että malli valitsis
 
 ## Kirjaa myös käytännön työ
 
-Paras tekstivastaus ei aina tarkoita parasta työkalua. Valintaan vaikuttavat myös:
+Paras tekstivastaus ei aina tarkoita parasta työkalua. Kuvittele, että toinen palvelu tuottaa hieman paremman luonnoksen mutta vaatii aineiston hankalaa kopiointia, erillisiä käyttöoikeuksia ja paljon käsin tehtävää jälkityötä. Silloin pieni laatuero ei ehkä ratkaise valintaa.
+
+Kirjaa siksi myös käytännön työ:
 
 - kuinka helposti aineisto saadaan palveluun ja tulos takaisin
 - voiko työn tehdä ilman tarpeetonta kopiointia
 - miten käyttöoikeudet ja tiedot hallitaan
 - paljonko tuloksen tarkistamiseen ja korjaamiseen kuluu aikaa
 - mitä käyttö maksaa todellisella työmäärällä
-- miten tulokset voidaan dokumentoida ja toistaa
+- pystyykö toinen ihminen dokumentoinnin perusteella toistamaan kokeen.
 
 Nämä eivät ole pysyviä tuotekohtaisia totuuksia. Ne tarkistetaan siinä käyttöympäristössä ja sillä käyttäjätilillä, jota päätös koskee.
 
@@ -122,10 +120,10 @@ Hyvä johtopäätös ei kuulu: ”Työkalu A on paras tekoäly.” Se kuuluu:
 Johtopäätös kertoo:
 
 - mihin tehtävään valinta koskee
-- mikä näyttö ratkaisi valinnan
+- mikä havainto ratkaisi valinnan
 - mitkä porttiehdot täyttyivät
 - mitä kokeesta ei voi päätellä
-- milloin testi pitää uusia
+- milloin nopeasti muuttuvassa käyttöympäristössä testi on syytä uusia.
 
 ## Yhteenveto
 

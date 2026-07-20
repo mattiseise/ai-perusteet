@@ -8,6 +8,8 @@ Valitset yhden omassa arjessa, opiskelussa tai työssä toistuvan tehtävän. Ra
 
 Kortista tehdään myöhemmin promptipankin ensimmäinen osa. Tunnilla 17 hyödynnät sen toimivaa rakennetta bottisi järjestelmäpromptin kirjoittamisessa.
 
+Työ etenee tarkoituksella yhdestä päätöksestä seuraavaan. Ensin rajaat tehtävän, sitten kirjoitat arvioitavan kortin ja vasta sen jälkeen kokeilet muutosta. Näin lopputulos ei ole vain hyvältä vaikuttava prompti, vaan dokumentoitu ratkaisu, jonka toimintaa osaat selittää.
+
 ## Vaihe 1 — Valitse toistuva tehtävä
 
 Valitse tehtävä, jonka lopputuloksen osaat itse arvioida. Esimerkiksi:
@@ -20,9 +22,13 @@ Valitse tehtävä, jonka lopputuloksen osaat itse arvioida. Esimerkiksi:
 
 Kirjoita yhdellä lauseella: **Mitä teen, kenelle ja mihin lopputulosta käytetään?**
 
+Esimerkiksi kokousmuistiinpanojen muuttaminen toimintakohdiksi on riittävän rajattu tehtävä, jos osaat tarkistaa lähteestä tehtävät, vastuuhenkilöt ja määräajat. Pelkkä ”tiivistä tekstejä” jää liian väljäksi, koska eri teksteissä onnistuminen tarkoittaa eri asioita.
+
 ## Vaihe 2 — Kirjoita kortin versio 1
 
 Täytä promptikortti:
+
+Älä täytä rivejä toisistaan irrallisina. Käyttötilanne kertoo, miksi korttia tarvitaan, tavoite kertoo halutun muutoksen ja laatukriteerit kertovat, mistä onnistuminen myöhemmin nähdään. Jos nämä eivät sovi yhteen, tarkenna tehtävää ennen ensimmäistä ajoa.
 
 | Osa | Sisältö |
 | --- | --- |
@@ -49,6 +55,8 @@ Anna prompti valitsemallesi tekoälypalvelulle. Tallenna:
 
 Arvioi vastausta ennen seuraavaa versiota. Älä muuta samalla kertaa kaikkea.
 
+Kirjoita ongelma havaintona. ”Vastaus on huono” ei vielä kerro, mitä pitäisi korjata. ”Vastaus lisäsi määräajan, jota lähteessä ei ollut” nimeää sekä virheen että kohdan, johon seuraavan version muutos voidaan kohdistaa.
+
 ## Vaihe 4 — Tee yksi perusteltu muutos
 
 Valitse yksi ongelmaan liittyvä muutos. Voit esimerkiksi:
@@ -58,6 +66,8 @@ Valitse yksi ongelmaan liittyvä muutos. Voit esimerkiksi:
 - jakaa tehtävän vaiheisiin
 - määrittää vastausrakenteen
 - lisätä laatukriteerin tai tarkistuspyynnön
+
+Valitse muutos siksi, että se vastaa nimeämääsi ongelmaan. Jos lähteen tietoja puuttui, ulkoasun vaihtaminen ei ratkaise asiaa. Jos taas sisältö säilyi mutta rakenne oli hankala käyttää, täsmällinen vastausmuoto voi olla oikea muutos.
 
 Kirjoita **versio 2** ja aja se samalla lähtöaineistolla. Jos vaihdat sekä promptin että aineiston, et pysty päättelemään, mistä ero johtui.
 
@@ -77,6 +87,8 @@ Kirjoita lopuksi johtopäätös:
 
 > Muutin promptissa ____. Muutos vaikutti tulokseen näin: ____. Päätelmä perustuu tähän havaintoon: ____.
 
+Hyvä johtopäätös ei lupaa, että kortti toimii kaikissa tilanteissa. Se kertoo täsmällisesti, mitä tällä aineistolla tapahtui ja mikä kannattaa testata seuraavaksi. Tämä rajaus tekee kortista luotettavamman, ei heikomman.
+
 ## Tekoälyvaihe — haasta arvio
 
 ```text
@@ -93,5 +105,7 @@ Tee tarvittaessa yksi korjaus johtopäätökseesi.
 **Tallennettava tuotos:** yksi promptikortti, versiot 1 ja 2, molemmat vastaukset, vertailutaulukko sekä yhden muutoksen vaikutusta koskeva johtopäätös.
 
 Kun kortti toimii, voit myöhemmin lisätä pankkiin uusia kortteja samalla rakenteella. Yksi testattu kortti on arvokkaampi kuin seitsemän promptia, joiden toimivuudesta et osaa sanoa mitään.
+
+Tallenna kortti niin, että palaat myöhemmin myös sen perusteluihin. Pelkkä lopullinen prompti kertoo, mitä kirjoitit. Versiot ja havaintosi kertovat, miksi päädyit juuri siihen muotoon.
 
 **1 / 3 rakennuspalikkaa kerätty**

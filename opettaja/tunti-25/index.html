@@ -21,6 +21,7 @@
 <div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 25</span></div><div class="lesson-title">Ihminen portinvartijana — human-in-the-loop käytännössä</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-25/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-25/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-25/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-25/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-25/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-25-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-25-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-25-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-25-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-25-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-25-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 25: ihminen portinvartijana</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
 <p>Oppija suunnittelee, missä kohdissa agentti saa toimia itse ja missä ihmisen pitää hyväksyä, muokata tai hylätä ehdotus. Samalla erotetaan palautedatan tallentaminen mallin oppimisesta.</p>
+<p>Opetuksen punaisena lankana toimii päätöksen riski. Kun oppija tarkastelee virheen vaikutusta, peruttavuutta ja vastuunkantajaa, hyväksyntäportin paikka ei jää mielipiteeksi. Sama tarkastelu auttaa myös poistamaan turhia portteja: vähäriskinen ja helposti peruttava rutiini voidaan usein automatisoida ilman ihmisen hyväksyntää.</p>
 </div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
 <p>Oppija:</p>
 <ul>
@@ -32,6 +33,7 @@
 </ul>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ydinviesti</h2></div><div class="task-card-body">
 <p>Ihminen ei kuulu jokaiseen vaiheeseen varmuuden vuoksi. Hän kuuluu kohtaan, jossa päätös tarvitsee vastuuta tai harkintaa. Hyväksyntä tai hylkäys voi tuottaa kehitysaineistoa, mutta kielimalli ei opi siitä automaattisesti.</p>
+<p>Tee ero näkyväksi yhdellä esimerkillä. Asiakkaalle lähetettävä vastaanottokuittaus voi olla automaattinen, mutta hinnanalennus muuttaa taloudellista sitoumusta ja tarvitsee nimetyn päätöksentekijän. Jos päätöksentekijä hylkää ehdotuksen, tieto tallennetaan lokiin. Järjestelmän sääntö muuttuu vasta, kun ihminen on arvioinut havaintoa ja hyväksynyt testatun muutoksen.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
 <p>Tallennettava tuotos on <strong>Agentti: Ihminen -pohjapiirros</strong>.</p>
 <table>
@@ -75,6 +77,7 @@
 </tr>
 </tbody>
 </table>
+<p>Oman pohjapiirroksen aikana pyydä oppijaa kuvaamaan yhden portin koko elinkaari. Pelkkä sijainti prosessissa ei riitä: näkyviin tarvitaan päätösaineisto, päätöksentekijä, vastausaika ja toiminta hiljaisuudessa. Parityöskentelyn tehtävä ei ole lisätä portteja vaan löytää tasapaino sujuvuuden ja vastuun välille.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tyypilliset väärinkäsitykset</h2></div><div class="task-card-body">
 <ul>
 <li>Jokaisen toiminnon hyväksyttäminen voi tehdä järjestelmästä hitaamman ilman olennaista lisäturvaa.</li>
@@ -83,8 +86,10 @@
 <li>Yksi poikkeuspäätös ei ole uusi organisaation sääntö.</li>
 <li>Lokimerkintä ei muuta mallia; muutos vaatii arvioinnin, toteutuksen ja testauksen.</li>
 </ul>
+<p>Kun väärinkäsitys tulee esiin, palaa seuraukseen. Kysy esimerkiksi, mitä tapahtuu, jos hyväksyjä ei vastaa ennen määräaikaa tai jos kiireessä tehty poikkeuspäätös muuttuu vahingossa kaikkia tapauksia koskevaksi säännöksi. Tällainen tapaus tekee abstraktista varoituksesta konkreettisen suunnittelupäätöksen.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioitava näyttö</h2></div><div class="task-card-body">
 <p>Hyväksyttävä pohjapiirros kertoo, missä portti on, mitä se näyttää, kuka päättää, kuinka kauan odotetaan, mitä tapahtuu hiljaisuudessa ja miten päätös tallennetaan kehitystä varten.</p></div></div></div><div id="panel-lesson-25-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-25-ohjatut" data-tab="ohjatut" hidden><h1>Ohjatut tehtävät — oppitunti 25</h1>
+<p>Tunnin tehtävissä ihminen sijoitetaan kohtiin, joissa päätös todella tarvitsee harkintaa ja vastuuta. Oppijoiden ensimmäinen ratkaisu on usein hyväksyttää kaikki tai jättää ihminen kokonaan prosessin ulkopuolelle. Kuljeta keskustelua näiden ääripäiden väliin kysymällä aina, kuinka vakava virhe olisi, voiko toiminnon perua ja kuka joutuu perustelemaan päätöksen jälkikäteen.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1 — Missä ihminen tarvitaan? (15 min)</h2></div><div class="task-card-body">
 <p>Luokittele tilanteet:</p>
 <ul>
@@ -95,6 +100,7 @@
 <li>lääkinnälliseen tai oikeudelliseen päätökseen vaikuttava suositus</li>
 </ul>
 <p>Kysy jokaisesta: mikä on virheen vaikutus, voidaanko toiminto perua ja kuka kantaa vastuun?</p>
+<p>Älä hae yhtä kaikille tilanteille sopivaa luokitusta. Vastaanottokuittaus voi yleensä lähteä automaattisesti, kun taas peruuttamaton poisto tai merkittävä rahallinen sitoumus tarvitsee portin. Tärkeintä on, että ryhmä yhdistää ihmisen osallistumisen tunnistettavaan riskiin eikä epämääräiseen varovaisuuteen.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2 — Rakenna päätösnäkymä (15 min)</h2></div><div class="task-card-body">
 <p>Hyväksyntäportissa pitää näkyä:</p>
 <ul>
@@ -104,6 +110,7 @@
 <li>riskitaso ja seuraukset</li>
 <li>hyväksy, muokkaa, hylkää ja eskaloi -vaihtoehdot</li>
 </ul>
+<p>Anna ryhmille tarkoituksella puutteellinen hyväksyntäviesti ja pyydä heitä tekemään päätös sen perusteella. Kun päätös ei onnistu, puuttuva tieto muuttuu näkyväksi. Purussa hyvä portti voidaan kuvata pienenä päätösnäkymänä: ihminen ymmärtää yhdellä silmäyksellä, mitä häneltä pyydetään, mihin ehdotus perustuu ja mitä eri valinnoista seuraa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3 — Mitä tapahtuu hiljaisuudessa? (15 min)</h2></div><div class="task-card-body">
 <p>Ryhmät määrittävät yhdelle rahaa koskevalle päätökselle:</p>
 <ul>
@@ -113,6 +120,7 @@
 <li>turvallisen oletustoiminnon</li>
 </ul>
 <p>Kriittistä päätöstä ei hyväksytä automaattisesti pelkän vastaamattomuuden vuoksi.</p>
+<p>Pyydä ryhmiä perustelemaan erityisesti turvallinen oletustoiminto. Rahaa, oikeuksia tai ulkoista sitoumusta koskevassa tilanteessa odottaminen, hylkääminen tai eskalointi on yleensä perustellumpaa kuin automaattinen hyväksyntä. Samalla huomataan, että aikaraja ei ole pelkkä käyttöliittymän yksityiskohta vaan osa harnessin toimintalogiikkaa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4 — Palautteesta hallituksi muutokseksi (20 min)</h2></div><div class="task-card-body">
 <p>Täytä ketju:</p>
 <table>
@@ -150,6 +158,7 @@
 </tbody>
 </table>
 <p>Korosta, ettei päätöksen tallentaminen vielä muuta kielimallia tai agentin toimintaa.</p>
+<p>Käy yksi esimerkki koko ketjun läpi. Jos hyväksyjä hylkää samanlaisen ehdotuksen toistuvasti, loki paljastaa ilmiön, mutta sääntöä ei silti muuteta suoraan. Ensin ihminen arvioi, onko kyse aidosta toimintatavasta vai tilapäisestä poikkeuksesta. Vasta tämän jälkeen muutos tehdään ohjeeseen, harnessiin tai testiin ja sen vaikutus tarkistetaan uudella testiajolla.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan tarkistuslista</h2></div><div class="task-card-body">
 <ul>
 <li>Portit sijaitsevat riskikohdissa, eivät kaikkialla.</li>

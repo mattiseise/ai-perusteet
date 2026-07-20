@@ -2,9 +2,11 @@
 
 ## Oppitunnin tarkoitus
 
-Tunti 18 on Tekoälyjen käyttö -osion arviointitunti. Oppija käyttää tunnilla 15 ennakkoon kirjoitettuja testejä ja tunnilla 17 saatua ensimmäistä testitulosta, tekee vähintään yhden korjauksen ja osoittaa uudelleentestillä, mitä korjaus vaikutti.
+Tunti 18 on Tekoälyjen käyttö -osion arviointitunti. Oppija käyttää tunnilla 15 ennakkoon kirjoitettuja testejä ja tunnilla 17 saatua ensimmäistä testitulosta, tekee vähintään yhden korjauksen ja osoittaa uudelleentestillä, miten korjaus vaikutti.
 
 Arvioinnin kohde ei ole vain valmis botti. Arvioitavaa näyttöä ovat määrittely, tietopohja, järjestelmäprompti, testit, korjaus, uudelleentestaus ja perusteltu reflektio.
+
+Tunnin keskeinen kertomus on ennen–jälkeen-muutos. Oppijan ei tarvitse väittää bottiaan valmiiksi tai virheettömäksi. Hänen pitää pystyä osoittamaan, mitä testi paljasti, minkä rajatun muutoksen hän teki ja muuttuiko tulos odotetulla tavalla. Näin arviointi kohdistuu ajatteluun ja kehittämiseen, ei pelkkään esittelytilanteessa näkyvään pintaan.
 
 ## Osaamistavoitteet
 
@@ -31,6 +33,8 @@ Tallennettava tuotos on **summatiivinen bottipaketti: määrittely, prompti, tie
 | 70–85 min | Esittely tai puolustus | Oppija esittelee tarkoituksen, yhden testin, korjauksen ja rajoituksen. |
 | 85–90 min | Palautus | Tarkista tiedostot, linkit ja saavutettava vaihtoehto toimimattomalle demolle. |
 
+Pidä testin odotus muuttumattomana korjauksen aikana. Muuten oppija voi tiedostamattaan siirtää tavoitetta sen mukaan, millaisen vastauksen botti sattui tuottamaan. Jos korjaus ei auta, tulos ei ole epäonnistuminen: myös vaikutuksettomaksi osoittautunut muutos on käyttökelpoista näyttöä, kun se on dokumentoitu rehellisesti.
+
 ## Arviointikriteerit — 20 pistettä
 
 | Kriteeri | 1 p | 2 p | 3 p | 4 p |
@@ -48,6 +52,8 @@ Tallennettava tuotos on **summatiivinen bottipaketti: määrittely, prompti, tie
 - Testissä löytynyt virhe on arvokas havainto, jos se dokumentoidaan ja käsitellään.
 - Toimimaton live-demo ei yksin kaada suoritusta, jos kuvakaappaukset, suoritusjälki ja analyysi osoittavat osaamisen.
 - Tiettyä maksullista alustaa ei saa vaatia hyväksytyn suorituksen ehdoksi.
+
+Arviointikeskustelussa kannattaa kysyä ensin, millä näytöllä oppija perustelee väitteensä. Jos hän sanoo botin olevan turvallinen, pyydä näyttämään negatiivinen testi. Jos hän kertoo vastauksen parantuneen, pyydä ennen–jälkeen-pari. Tämä ohjaa pois yleisistä laatulauseista kohti havaittavaa osaamista.
 
 ## Eriyttäminen
 

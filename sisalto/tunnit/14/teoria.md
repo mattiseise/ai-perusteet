@@ -6,6 +6,8 @@ Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoit
 
 Tällä tunnilla et rakenna bottia etkä kirjoita valmista järjestelmäpromptia. Laadit **määrittelydokumentin**, jonka perusteella botin voisi myöhemmin rakentaa myös joku toinen. Suunnittelu erotetaan toteutuksesta tarkoituksella: ensin päätetään, millainen työkalu tarvitaan, vasta sitten kirjoitetaan ohjeet ja valitaan alusta.
 
+Määrittely on lupaus tulevasta toiminnasta. Se kertoo, ketä autetaan, missä tehtävässä ja millä rajoilla. Kun nämä päätökset ovat näkyvissä, myöhempää bottia voidaan arvioida muullakin kuin kysymyksellä ”vaikuttaako tämä hyvältä?”. Ilman määrittelyä jokainen sujuva vastaus voi näyttää onnistumiselta, vaikka botti ratkaisisi väärää ongelmaa.
+
 > **Tunnin ydinkysymys:** Mitä botin pitää auttaa tiettyä käyttäjää tekemään — ja mistä huomaat, että tehtävä onnistui?
 
 <figure class="ai-demo"><span class="ai-demo__tag">// ennen toteutusta: tarve muuttuu arvioitavaksi määrittelyksi</span>
@@ -33,6 +35,8 @@ Esimerkiksi:
 
 Tämä virke toimii koko suunnitelman mittatikkuna. Jos myöhempi ominaisuus ei auta käyttäjää tässä tehtävässä, sitä ei ehkä tarvita.
 
+Kerhon perehdytysbotissa tämä rajaus sulkee pois esimerkiksi yleisen harjoitusohjelman laatimisen ja henkilökohtaisen terveysneuvonnan. Ne voivat liittyä harrastukseen, mutta eivät uuden jäsenen tehtävään löytää säännöt, harjoitusaika ja ensimmäisen kerran valmistautumisohjeet. Rajaus pitää botin tietopohjan, keskustelun ja vastuun hallittavina.
+
 ## Määritä onnistuminen havaittavasti
 
 ”Botti auttaa hyvin” ei ole vielä arvioitava tavoite. Onnistuminen pitää kuvata niin, että sen voi myöhemmin testata.
@@ -46,6 +50,8 @@ Havaittava onnistuminen voi tarkoittaa esimerkiksi sitä, että:
 - käyttäjä saa seuraavan konkreettisen askeleen
 
 Kun onnistuminen on havaittava, tunnilla 15 voidaan kirjoittaa sitä koskevat testit ja tunneilla 17–18 voidaan tarkistaa, toteutuuko se oikeassa botissa.
+
+Havaittava tavoite muuttaa myös keskustelun suunnittelua. Jos onnistuminen tarkoittaa, että uusi jäsen löytää oikean harjoitusajan ja seuraavan askeleen, botin pitää joko antaa nämä tiedot hyväksytystä lähteestä tai kertoa avoimesti, ettei lähde kata kysymystä. Pelkkä ystävällinen keskustelu ei silloin vielä riitä onnistumiseksi.
 
 ## Kuvaa keskustelun eteneminen
 
@@ -62,6 +68,8 @@ Kertauskaverin eteneminen voisi olla:
 
 Vaiheet eivät vielä ole järjestelmäprompti. Ne ovat vaatimus sille, mitä myöhemmän järjestelmäpromptin ja käyttöliittymän pitää saada aikaan.
 
+Järjestys kertoo myös, milloin botti ei vielä voi vastata. Kertauskaveri ei esimerkiksi voi valita sopivaa harjoituskysymystä ennen kuin aihe ja lähtötaso ovat selvillä. Työnkulun tehtävä ei siis ole vain järjestää tekstiä siistiksi, vaan tehdä tarvittavat päätökset näkyviksi ennen toteutusta.
+
 ## Rooli ei ole sama asia kuin persoona
 
 **Rooli** kertoo, mistä näkökulmasta botti auttaa. **Persoona ja äänensävy** kertovat, miltä vuorovaikutus tuntuu.
@@ -77,6 +85,8 @@ Valitse ensin asiallinen rooli. Lisää sen jälkeen tehtävään sopiva viestin
 
 Persoona ei korvaa asiantuntemusta, lähteitä tai rajoja. Se auttaa tekemään botin toiminnasta johdonmukaista ja käyttäjälle sopivaa.
 
+Kerhon botin rooli voi olla ”uuden jäsenen perehdyttäjä, joka käyttää hyväksyttyjä sääntöjä ja aikatauluja”. Sen sävy voi olla rauhallinen, lämmin ja tiivis. Jos sävy poistetaan, tehtävä säilyy. Jos rooli ja lähdepohja poistetaan, jäljelle jää vain miellyttävästi kirjoittava yleisbotti.
+
 ## Rajat tekevät botista käyttökelpoisen
 
 Rajaus ei ole luettelo kaikesta pahasta. Hyvä rajaus liittyy käyttötapaukseen ja kertoo myös, mitä botti tekee rajan tullessa vastaan.
@@ -89,11 +99,15 @@ Kirjoita rajat kolmesta suunnasta:
 
 Pelkkä ”älä vastaa aiheen ulkopuolelle” jättää käyttäjän tyhjän päälle. Parempi ohje on: ”Jos kysymys ei koske kerhon toimintaa, kerro rajaus yhdellä lauseella ja ohjaa käyttäjä kerhon yhteyshenkilölle.”
 
+Käyttäjän näkökulmasta raja on osa palvelua. Jos hän kysyy vamman hoitamisesta, botti ei vain vaikene tai toista kieltoa. Se kertoo, ettei anna terveysneuvontaa, ja ohjaa käyttäjän asianmukaiseen apuun. Hyvä raja siis yhdistää kolme asiaa: ehdon, botin toiminnan ja turvallisen seuraavan askeleen.
+
 ## Tee myös tietotarpeet näkyviksi
 
 Määrittely paljastaa, mitä botin pitää tietää. Kerhon perehdytysbotti saattaa tarvita säännöt, harjoitusajat, varusteluettelon ja yhteystiedot. Se ei tarvitse koko kerhon vuosikertomusta vain siksi, että dokumentti liittyy samaan organisaatioon.
 
 Kirjaa määrittelyyn alustava luettelo tietotarpeista. Tunnilla 15 etsit niihin sopivat lähteet ja arvioit, mitä aineisto kattaa ja mitä ei.
+
+Tietotarpeet seuraavat suoraan käyttäjän etenemisestä. Jos botin pitää kertoa harjoitusaika, varusteet ja yhteyshenkilö, jokaiselle tiedolle tarvitaan myöhemmin nimetty ja ajantasainen lähde. Jos määrittelyssä luvataan jotakin, jolle ei löydy luotettavaa tietopohjaa, lupausta pitää rajata ennen rakentamista.
 
 ## Määrittelydokumentti on päätösten ketju
 
@@ -109,6 +123,8 @@ Hyvä määrittely vastaa kuuteen kysymykseen:
 | Rajat | Mitä botti ei tee, ja miten se toimii rajan tullessa vastaan? |
 
 Näiden päätösten jälkeen järjestelmäpromptin kirjoittaminen on myöhemmin muuntamista, ei arvailua. Tunnilla 17 kokoat määrittelyn, promptikortin toimivan rakenteen ja tietopohjan yhdeksi toteutukseksi.
+
+Lue taulukkoa päätösketjuna, ei kuutena irrallisena kenttänä. Käyttäjän tilanne määrittää tehtävän, tehtävä määrittää onnistumisen, onnistuminen ohjaa keskustelun etenemistä ja rajat kertovat, milloin vastuu siirtyy botilta ihmiselle. Rooli ja sävy tukevat tätä kokonaisuutta, mutta eivät muuta sen tarkoitusta.
 
 ## Yhteenveto
 

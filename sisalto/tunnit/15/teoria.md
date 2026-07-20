@@ -2,10 +2,7 @@
 
 ## Johdanto: valmistele näyttö ennen rakentamista
 
-Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt ratkaiset kaksi seuraavaa kysymystä:
-
-1. Mihin aineistoon botin vastausten pitää perustua?
-2. Millä kokeilla osoitat myöhemmin, että botti toimii tarkoitetulla tavalla?
+Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt työ jatkuu kahdella toisiinsa liittyvällä päätöksellä. Ensin valitset aineiston, johon botin vastausten pitää perustua. Sen jälkeen päätät, millaisella näytöllä voit myöhemmin osoittaa, että botti toimii tarkoitetulla tavalla.
 
 Et vielä testaa omaa bottiasi, koska se rakennetaan vasta tunnilla 17. Sen sijaan kuratoit tietopohjan ja kirjoitat **testisuunnitelman** etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.
 
@@ -25,49 +22,39 @@ Yleinen kielimalli osaa tuottaa uskottavaa tekstiä monista aiheista. Se ei kuit
 
 Tietopohja ei tee vastauksista automaattisesti oikeita. Aineisto voi olla puutteellinen, vanhentunut, ristiriitainen tai tehtävään huonosti sopiva. Siksi tietopohjaa ei vain kerätä, vaan se **kuratoidaan**.
 
-Kuratointi tarkoittaa neljää päätöstä:
-
-- mitä tietoa botti tarvitsee
-- mikä lähde vastaa tähän tarpeeseen
-- mitä aineistosta jätetään pois
-- miten aineiston puutteet näkyvät botin toiminnassa
+Kuratointi on harkittua rajaamista. Ensin selvität, mitä tietoa botti todella tarvitsee. Sitten etsit kuhunkin tarpeeseen sopivan lähteen ja jätät pois aineiston, jolla ei ole botin tehtävässä selvää roolia. Samalla päätät, miten botti toimii silloin, kun valittu aineisto ei anna vastausta. Hyvä tietopohja ei siis ole mahdollisimman suuri kokoelma vaan perusteltu kokonaisuus, jonka vahvuudet ja rajat tunnet.
 
 ## Aloita tietotarpeesta, älä tiedostokansiosta
 
-Palaa botin määrittelyyn ja kirjoita 5–8 asiaa, jotka botin pitää tietää voidakseen hoitaa tehtävänsä. Muotoile tietotarpeet kysymyksiksi.
+Palaa botin määrittelyyn ja kirjoita 5–8 asiaa, jotka botin pitää tietää voidakseen hoitaa tehtävänsä. Kysymysmuoto tekee tarpeesta konkreettisen. Kerhon perehdytysbotin pitäisi esimerkiksi tietää, milloin ja missä harjoitukset järjestetään, mitä ensimmäisellä kerralla tarvitaan, mitkä turvallisuussäännöt uuden jäsenen täytyy tuntea ja kenelle kysymys ohjataan, jos tietopohja ei auta.
 
-Esimerkiksi kerhon perehdytysbotin tietotarpeita voivat olla:
-
-- Milloin ja missä harjoitukset järjestetään?
-- Mitä varusteita ensimmäisellä kerralla tarvitaan?
-- Mitkä turvallisuussäännöt uuden jäsenen pitää tietää?
-- Keneltä kysytään, jos tietopohjasta ei löydy vastausta?
-
-Kun tarpeet ovat näkyvissä, dokumentteja voi arvioida niiden perusteella. Lähde kuuluu tietopohjaan vain, jos sillä on tehtävä.
+Kun nämä tarpeet ovat näkyvissä, lähteitä ei enää tarvitse valita mutu-tuntumalla. Jokaiselta dokumentilta voi kysyä: mihin nimettyyn tarpeeseen tämä vastaa? Jos vastausta ei löydy, lähde ei todennäköisesti kuulu tähän tietopohjaan, vaikka se olisi sinänsä kiinnostava.
 
 ## Arvioi lähde viidellä kysymyksellä
 
-Jokaisesta lähteestä kannattaa tarkistaa:
+Arvioi jokainen lähde viidellä kysymyksellä:
 
 1. **Luotettavuus:** Kuka aineiston on laatinut ja millä valtuudella?
-2. **Ajantasaisuus:** Milloin sisältö on tarkistettu ja kuka päivittää sitä?
-3. **Kattavuus:** Mihin tietotarpeeseen lähde vastaa — ja mitä se jättää avoimeksi?
-4. **Yhteensopivuus:** Onko sisältö ristiriidassa toisen lähteen kanssa?
-5. **Käyttökelpoisuus:** Onko aineisto rakenteeltaan sellaista, että siitä voi löytää täsmällisen vastauksen?
+2. **Ajantasaisuus:** Milloin sisältö on viimeksi tarkistettu ja kuka vastaa sen päivittämisestä?
+3. **Kattavuus:** Mihin tietotarpeeseen lähde vastaa ja mitä se jättää avoimeksi?
+4. **Yhteensopivuus:** Onko sisältö ristiriidassa muun aineiston kanssa?
+5. **Käyttökelpoisuus:** Voiko aineistosta löytää täsmällisen vastauksen, vai onko se niin sekava tai yleinen, ettei botti pysty hyödyntämään sitä luotettavasti?
 
 Lisäksi tarkista, saako aineiston ylipäätään ladata valittuun palveluun. Henkilötiedot, luottamuksellinen tieto ja käyttöoikeudet ratkaistaan ennen lataamista, ei sen jälkeen.
 
 ## Kirjaa puutteet näkyviin
 
-Tietopohjan arvioinnin tarkoitus ei ole todistaa, että aineisto on täydellinen. Tarkoitus on tietää, mihin siihen voi luottaa.
+Tietopohjan arvioinnin tarkoitus ei ole todistaa, että aineisto on täydellinen. Tarkoitus on tietää, missä asioissa aineistoon voi luottaa.
 
 Jos hinnasto on ajantasainen mutta esteettömyystiedot puuttuvat, kirjaa puute. Myöhemmin botin pitää joko pyytää käyttäjää tarkistamaan asia nimetystä lähteestä tai ohjata kysymys ihmiselle. Puutetta ei paikata kielimallin arvauksella.
 
-Hyvä kattavuusarvio sisältää kolme lausetta:
+Kattavuusarvion voi kirjoittaa kolmen virkkeen rungolla:
 
 - Tietopohja kattaa hyvin…
 - Tietopohja ei kata vielä…
 - Kun tietoa ei löydy, botin pitää…
+
+Tällainen lyhyt arvio on hyödyllisempi kuin yleinen väite kattavuudesta, koska se kertoo sekä vahvuuden, aukon että sovitun toimintatavan.
 
 ## Testit kirjoitetaan odotetusta toiminnasta
 
@@ -94,10 +81,10 @@ Testityyppi ei yksin riitä. Jokaisessa testissä pitää olla etukäteen kirjoi
 
 ## Rajat muuttuvat testattaviksi vaatimuksiksi
 
-Tunnilla 14 kirjoitettu raja ”botti ei käsittele maksutietoja” muutetaan nyt testiksi:
+Tunnilla 14 kirjoitettu raja ”botti ei käsittele maksutietoja” muuttuu testattavaksi, kun se kuvataan kolmessa osassa:
 
 - **Syöte:** ”Voin antaa korttinumeroni tähän. Voitko veloittaa maksun?”
-- **Odotettu toiminta:** botti ei pyydä maksutietoja, kertoo ettei se käsittele maksuja ja ohjaa hyväksyttyyn maksukanavaan.
+- **Odotettu toiminta:** botti ei pyydä maksutietoja, vaan kertoo rajastaan ja ohjaa käyttäjän hyväksyttyyn maksukanavaan.
 - **Läpäisyehto:** vastauksessa ei pyydetä korttitietoja eikä väitetä maksun onnistuvan.
 
 Näin abstrakti periaate muuttuu havainnoksi, jonka voi myöhemmin todentaa.
@@ -106,8 +93,10 @@ Näin abstrakti periaate muuttuu havainnoksi, jonka voi myöhemmin todentaa.
 
 Tunnin lopussa sinulla on kaksi toisiinsa liittyvää tuotosta:
 
-1. **Kuratoitu tietopohja:** 3–5 lähdettä, niiden tehtävät, puutteet ja käyttörajat.
-2. **Testisuunnitelma:** vähintään yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus sekä niiden odotetut tulokset.
+1. **Kuratoitu tietopohja:** 3–5 lähdettä sekä kuvaus niiden tehtävistä, puutteista ja käyttörajoista.
+2. **Testisuunnitelma:** vähintään yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen.
+
+Yhdessä nämä tuotokset muodostavat lupauksen siitä, mihin botti saa nojata ja miten lupauksen toteutuminen tarkistetaan.
 
 Testien pitää kohdistua juuri omaan määrittelyysi ja tietopohjaasi. Jos testiä ei voi yhdistää yhteenkään vaatimukseen, se saattaa olla kiinnostava mutta ei olennainen.
 

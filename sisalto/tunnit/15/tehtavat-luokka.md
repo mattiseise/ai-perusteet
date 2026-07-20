@@ -4,9 +4,9 @@
 
 ## Mitä teet?
 
-Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joista botti saa oman aiheesi asiantuntemusta. Tietopohja erottaa oman bottisi yleisestä tekoälystä: yleinen tekoäly tietää monesta asiasta vähän, mutta sinun bottisi keskittyy juuri sinun valitsemaasi aiheeseen.
+Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joihin sen vastaukset voivat nojata. Tietopohjan tehtävä ei ole tehdä botista kaikkitietävää, vaan auttaa sitä toimimaan luotettavasti juuri valitsemassasi aiheessa.
 
-**Kuratointi** ei tarkoita sitä, että keräät mahdollisimman paljon tiedostoja. Se tarkoittaa aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Hyvä tietopohja vastaa kysymykseen: *"Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?"*
+**Kuratointi** ei tarkoita mahdollisimman suuren tiedostomäärän keräämistä. Se on aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Kun jokaisella lähteellä on selvä tehtävä, sinun on myöhemmin helpompi havaita myös se, mitä tietopohja ei vielä kata. Pidä työn ajan mielessä kysymys: *”Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?”*
 
 ## Tavoite
 
@@ -16,7 +16,7 @@ Tehtävän jälkeen sinulla on perusteltu tietopohja ja ennen rakentamista kirjo
 - valita lähdedokumentteja tarkoituksenmukaisesti,
 - arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,
 - karsia pois turhat tai päällekkäiset materiaalit,
-- perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan.
+- perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan,
 - kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon.
 
 ## Mitä tallennat?
@@ -34,20 +34,22 @@ Tallenna lopuksi yksi dokumentti tai kansio, jossa on:
 
 ### Vaihe 1 — Palauta mieleen bottisi tarkoitus
 
-Avaa **rakennuspalikka 2** eli botin määrittelydokumentti. Katso siitä erityisesti seuraavat kohdat:
+Avaa **rakennuspalikka 2** eli botin määrittelydokumentti. Lue siitä uudelleen:
 
-- **Kohderyhmä:** kenelle botti on tarkoitettu?
-- **Tarkoitus:** mitä botti auttaa käyttäjää tekemään?
-- **Työnkulku:** missä järjestyksessä botti ohjaa käyttäjää?
-- **Rajat:** mitä botti ei saa tehdä?
+- **kohderyhmä:** kenelle botti on tarkoitettu
+- **tarkoitus:** mitä se auttaa käyttäjää tekemään
+- **työnkulku:** missä järjestyksessä se ohjaa tehtävää
+- **rajat:** mitä se ei saa tehdä.
 
-Tämä vaihe on tärkeä, koska tietopohjan pitää tukea juuri tämän botin tarkoitusta. Älä kerää sattumanvaraisia dokumentteja vain siksi, että ne liittyvät aiheeseen yleisesti. Valitse materiaalia, joka auttaa bottia auttamaan käyttäjää **valitsemassasi tehtävässä**.
+Nämä neljä asiaa antavat tietopohjalle suunnan.
+
+Älä siis kerää dokumentteja vain siksi, että ne liittyvät aiheeseen yleisesti. Valitse aineistoa, joka auttaa juuri sinun käyttäjääsi juuri siinä tehtävässä, jonka olet botille määritellyt. Jos lähteen yhteys tähän tehtävään jää epäselväksi, jätä se ainakin toistaiseksi pois.
 
 ### Vaihe 2 — Listaa, mitä botin pitää tietää
 
 Kirjoita 5–8 konkreettista **tietotarvetta**. Tietotarve tarkoittaa asiaa, joka botin pitää ymmärtää, jotta se osaa auttaa käyttäjää valitsemassasi tehtävässä.
 
-Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää käymään läpi keskeiset käsitteet, harjoituskysymykset ja palautteen, sen tietopohjasta pitäisi löytyä materiaalia juuri näihin aiheisiin.
+Käytä apuna bottisi työnkulkua. Kulje se mielessäsi vaihe vaiheelta ja kysy jokaisessa kohdassa, mitä botin täytyy tietää jatkaakseen. Jos botti esimerkiksi auttaa opiskelijaa kertaamaan käsitteet, harjoittelemaan ja tulkitsemaan palautetta, tietopohjasta pitää löytyä aineistoa kaikkiin näihin vaiheisiin.
 
 | Aihe | Esimerkkejä tietotarpeista |
 | --- | --- |
@@ -57,29 +59,15 @@ Käytä apuna bottisi työnkulkua. Jos botti esimerkiksi ohjaa käyttäjää kä
 | **Pelit, musiikki tai sisältö** | Lajityypin tunnusmerkit, ideointitekniikat, rakenteen mallit, esimerkit ja palautteen periaatteet. |
 | **Arjen apuri** | Suunnittelun rakenne, hyvät käytännöt, yleiset sudenkuopat, esimerkkipohjat ja seurannan tavat. |
 
-**Mallipohja omalle listalle:**
-
-1. Botin pitää tietää, mitkä ovat aiheen keskeiset käsitteet.
-2. Botin pitää tietää, miten käyttäjän tehtävä jäsennetään selkeiksi vaiheiksi.
-3. Botin pitää tietää, millaisia kysymyksiä tästä aiheesta tyypillisesti esitetään.
-4. Botin pitää tietää, millaisia yleisiä virheitä tai sudenkuoppia aiheeseen liittyy.
-5. Botin pitää tietää, millainen hyvä lopputulos tai vastaus näyttää.
+Voit aloittaa jokaisen tarpeen samalla rungolla: ”Botin pitää tietää…”. Kirjoita sen jälkeen mahdollisimman täsmällisesti esimerkiksi aiheen keskeinen käsite, tehtävän yksi vaihe, tyypillinen kysymys, tavallinen sudenkuoppa tai hyvän lopputuloksen tunnusmerkki. Mitä tarkemmin nimeät tarpeen, sitä helpompi lähteen sopivuutta on arvioida.
 
 ### Vaihe 3 — Etsi ja valitse 3–5 dokumenttia
 
-Etsi materiaalia, joka kattaa vaiheessa 2 listaamasi tietotarpeet. Valitse lopuksi **3–5 dokumenttia**. Laatu on tärkeämpää kuin määrä.
-
-Hyviä lähteitä voivat olla:
-
-- kurssimateriaalit, kuten oppikirjat, luentodiat tai aiemmat tehtäväpohjat,
-- aiheesi yleiset standardit ja ohjeistukset,
-- mallipohjat tai esimerkkidokumentit aiheesi todellisista tilanteista,
-- luotettavat alan blogit, dokumentaatiot tai viralliset ohjeet,
-- Wikipedia-artikkelit vain yleisen rakenteen hahmottamiseen, ei tarkkojen yksityiskohtien päälähteeksi.
+Etsi materiaalia, joka kattaa vaiheessa 2 nimeämäsi tietotarpeet, ja valitse lopuksi **3–5 dokumenttia**. Laatu on tärkeämpää kuin määrä. Käyttökelpoinen lähde voi olla kurssimateriaali, virallinen ohje, alan standardi, luotettava dokumentaatio tai todelliseen tilanteeseen tehty mallipohja. Yleislähteestä voi olla apua aiheen hahmottamisessa, mutta tarkkojen käytäntöjen päälähteeksi tarvitset aineiston, jonka alkuperä ja ajantasaisuus voidaan osoittaa.
 
 **Tärkeää:** Älä lataa kaikkea, mitä löydät. Liian suuri tai sekava tietopohja voi tehdä botin vastauksista epäselviä. Kolme hyvin valittua dokumenttia voi olla parempi kuin kaksikymmentä keskinkertaista.
 
-Arvioi jokaista dokumenttia seuraavien kysymysten avulla:
+Käy jokainen ehdokas läpi seuraavien kysymysten avulla. Kysymykset ovat tässä vaiheessa tarpeellinen tarkistuslista, sillä yhdenkin kohdan unohtaminen voi heikentää koko tietopohjaa:
 
 - Onko lähde luotettava?
 - Onko dokumentti ajantasainen?
@@ -96,11 +84,11 @@ Voit käyttää esimerkiksi seuraavaa promptia:
 
 > "Toimit minulle sparrauskumppanina. Rakennan apuri-bottia, joka auttaa käyttäjää valitsemassani aiheessa. BOTTINI TARKOITUS: [kuvaa bottisi tarkoitus lyhyesti] TIETOTARPEET: [liitä vaiheessa 2 tekemäsi lista] VALITUT DOKUMENTIT: 1. [dokumentin nimi + lyhyt kuvaus] 2. [dokumentin nimi + lyhyt kuvaus] 3. [dokumentin nimi + lyhyt kuvaus] Auta minua arvioimaan tietopohjan kattavuus: Mitä tietotarpeita dokumentit eivät kata? Onko jokin dokumentti turha tai päällekkäinen toisen kanssa? Onko aiheessa jokin tyypillinen tieto, jota en ole vielä ottanut huomioon? Onko jokin dokumentti liian yleinen tai liian vaikea kohderyhmälleni? Näetkö tietosuoja- tai luottamuksellisuusriskin siinä, että jokin dokumentti ladattaisiin bottiin? Älä ehdota uusia dokumentteja suoraan minulle. Auta tunnistamaan aukot, jotta voin etsiä lisämateriaalia itse."
 
-Tämä on harjoitus siitä, miten tekoälyä käytetään *kattavuuden tarkistajana*. Tekoäly ei kerää tietopohjaa puolestasi, mutta se voi auttaa huomaamaan sokeita pisteitä.
+Tämä on harjoitus siitä, miten tekoälyä käytetään *kattavuuden tarkistajana*. Se voi nostaa esiin aukon tai ristiriidan, mutta se ei tunne lähteiden todellista laatua eikä päätä, mitä saat ladata palveluun. Sinä teet lopulliset valinnat ja pystyt perustelemaan ne.
 
 ### Vaihe 5 — Viimeistele tietopohja
 
-Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Voit esimerkiksi lisätä puuttuvan dokumentin, poistaa päällekkäisen dokumentin tai vaihtaa liian yleisen lähteen parempaan.
+Tee palautteen pohjalta vain sellaiset korjaukset, jotka pystyt itse perustelemaan. Saatat lisätä puuttuvan dokumentin, poistaa päällekkäisen aineiston tai vaihtaa liian yleisen lähteen täsmällisempään. Jos palautteen ehdotus ei sovi määrittelemääsi tehtävään, sitä ei tarvitse noudattaa.
 
 Kokoa lopullinen tietopohja alla olevaan taulukkoon.
 
@@ -126,9 +114,9 @@ Kirjoita kolme testiä, jotka ajat ensimmäisen kerran tunnilla 17:
 | Negatiivinen testi | Pyyntö, josta botin pitää kieltäytyä tai jonka se ohjaa eteenpäin |  |  |
 | Reunatapaus | Tyhjä, sekava tai muuten epätavallinen syöte |  |  |
 
-Älä muuta odotettua toimintaa myöhemmin vain siksi, että botti vastaa eri tavalla. Testin tehtävä on paljastaa korjaustarve, ei todistaa ensimmäistä versiota onnistuneeksi.
+Kirjoita odotus niin täsmällisesti, että toinen ihminen voisi ratkaista sen perusteella, läpäisikö botti testin. Älä myöhemmin muuta odotettua toimintaa vain siksi, että botti vastaa eri tavalla. Testin tehtävä on paljastaa korjaustarve, ei todistaa ensimmäistä versiota onnistuneeksi.
 
-> **Miksi tämä on tärkeää:** Tietopohja erottaa aiheeseen rajatun botin yleisestä tekoälypalvelusta. Kuratoitujen dokumenttien avulla botti voi vastata juuri oman aiheesi käytäntöjen perusteella.
+> **Miksi tämä on tärkeää:** Tietopohja antaa aiheeseen rajatulle botille perustan, jota yleisellä kielimallilla ei ole. Kun lähteet on valittu tehtävän mukaan ja niiden aukot tunnetaan, botti voi nojata oman aiheesi käytäntöihin arvaamisen sijaan.
 
 > **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.
 

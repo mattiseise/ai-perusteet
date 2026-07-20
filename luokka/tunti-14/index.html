@@ -22,6 +22,7 @@
 <h2>Johdanto: bottia ei aloiteta ohjetekstistä</h2>
 <p>Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin tärkeimmät päätökset jäävät helposti tekemättä. Kenelle botti on tarkoitettu? Mitä käyttäjä yrittää saada aikaan? Missä tilanteessa botti auttaa — ja missä sen pitää lopettaa?</p>
 <p>Tällä tunnilla et rakenna bottia etkä kirjoita valmista järjestelmäpromptia. Laadit <strong>määrittelydokumentin</strong>, jonka perusteella botin voisi myöhemmin rakentaa myös joku toinen. Suunnittelu erotetaan toteutuksesta tarkoituksella: ensin päätetään, millainen työkalu tarvitaan, vasta sitten kirjoitetaan ohjeet ja valitaan alusta.</p>
+<p>Määrittely on lupaus tulevasta toiminnasta. Se kertoo, ketä autetaan, missä tehtävässä ja millä rajoilla. Kun nämä päätökset ovat näkyvissä, myöhempää bottia voidaan arvioida muullakin kuin kysymyksellä ”vaikuttaako tämä hyvältä?”. Ilman määrittelyä jokainen sujuva vastaus voi näyttää onnistumiselta, vaikka botti ratkaisisi väärää ongelmaa.</p>
 <blockquote class="pause"><p><strong>Tunnin ydinkysymys:</strong> Mitä botin pitää auttaa tiettyä käyttäjää tekemään — ja mistä huomaat, että tehtävä onnistui?</p>
 </blockquote>
 <figure class="ai-demo" data-demo-id="lesson-14-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// ennen toteutusta: tarve muuttuu arvioitavaksi määrittelyksi</span>
@@ -44,6 +45,7 @@
 <blockquote class="pause"><p>Kerhon uusi jäsen tarvitsee apua sääntöjen ja harjoitusaikojen löytämisessä, jotta hän osaa tulla ensimmäisiin harjoituksiinsa valmistautuneena.</p>
 </blockquote>
 <p>Tämä virke toimii koko suunnitelman mittatikkuna. Jos myöhempi ominaisuus ei auta käyttäjää tässä tehtävässä, sitä ei ehkä tarvita.</p>
+<p>Kerhon perehdytysbotissa tämä rajaus sulkee pois esimerkiksi yleisen harjoitusohjelman laatimisen ja henkilökohtaisen terveysneuvonnan. Ne voivat liittyä harrastukseen, mutta eivät uuden jäsenen tehtävään löytää säännöt, harjoitusaika ja ensimmäisen kerran valmistautumisohjeet. Rajaus pitää botin tietopohjan, keskustelun ja vastuun hallittavina.</p>
 <h2>Määritä onnistuminen havaittavasti</h2>
 <p>”Botti auttaa hyvin” ei ole vielä arvioitava tavoite. Onnistuminen pitää kuvata niin, että sen voi myöhemmin testata.</p>
 <p>Havaittava onnistuminen voi tarkoittaa esimerkiksi sitä, että:</p>
@@ -55,6 +57,7 @@
 <li>käyttäjä saa seuraavan konkreettisen askeleen</li>
 </ul>
 <p>Kun onnistuminen on havaittava, tunnilla 15 voidaan kirjoittaa sitä koskevat testit ja tunneilla 17–18 voidaan tarkistaa, toteutuuko se oikeassa botissa.</p>
+<p>Havaittava tavoite muuttaa myös keskustelun suunnittelua. Jos onnistuminen tarkoittaa, että uusi jäsen löytää oikean harjoitusajan ja seuraavan askeleen, botin pitää joko antaa nämä tiedot hyväksytystä lähteestä tai kertoa avoimesti, ettei lähde kata kysymystä. Pelkkä ystävällinen keskustelu ei silloin vielä riitä onnistumiseksi.</p>
 <h2>Kuvaa keskustelun eteneminen</h2>
 <p>Botin <strong>työnkulku</strong> tarkoittaa tässä keskustelun loogista etenemistä, ei vielä teknistä automaatiota. Kirjoita 4–6 vaihetta, jotka kuvaavat käyttäjän matkan alusta hyödylliseen lopputulokseen.</p>
 <p>Kertauskaverin eteneminen voisi olla:</p>
@@ -67,6 +70,7 @@
 <li>ehdota seuraavaa harjoiteltavaa asiaa</li>
 </ol>
 <p>Vaiheet eivät vielä ole järjestelmäprompti. Ne ovat vaatimus sille, mitä myöhemmän järjestelmäpromptin ja käyttöliittymän pitää saada aikaan.</p>
+<p>Järjestys kertoo myös, milloin botti ei vielä voi vastata. Kertauskaveri ei esimerkiksi voi valita sopivaa harjoituskysymystä ennen kuin aihe ja lähtötaso ovat selvillä. Työnkulun tehtävä ei siis ole vain järjestää tekstiä siistiksi, vaan tehdä tarvittavat päätökset näkyviksi ennen toteutusta.</p>
 <h2>Rooli ei ole sama asia kuin persoona</h2>
 <p><strong>Rooli</strong> kertoo, mistä näkökulmasta botti auttaa. <strong>Persoona ja äänensävy</strong> kertovat, miltä vuorovaikutus tuntuu.</p>
 <p>”Olet ystävällinen apuri” kuvaa lähinnä sävyä. ”Olet uusien jäsenten perehdyttäjä, joka käyttää vain kerhon hyväksyttyjä sääntöjä ja harjoitusaikoja” kertoo tehtävän, tiedollisen perustan ja vastuun.</p>
@@ -78,6 +82,7 @@
 <li>tiivis silloin, kun käyttäjä tarvitsee toimintaohjeen</li>
 </ul>
 <p>Persoona ei korvaa asiantuntemusta, lähteitä tai rajoja. Se auttaa tekemään botin toiminnasta johdonmukaista ja käyttäjälle sopivaa.</p>
+<p>Kerhon botin rooli voi olla ”uuden jäsenen perehdyttäjä, joka käyttää hyväksyttyjä sääntöjä ja aikatauluja”. Sen sävy voi olla rauhallinen, lämmin ja tiivis. Jos sävy poistetaan, tehtävä säilyy. Jos rooli ja lähdepohja poistetaan, jäljelle jää vain miellyttävästi kirjoittava yleisbotti.</p>
 <h2>Rajat tekevät botista käyttökelpoisen</h2>
 <p>Rajaus ei ole luettelo kaikesta pahasta. Hyvä rajaus liittyy käyttötapaukseen ja kertoo myös, mitä botti tekee rajan tullessa vastaan.</p>
 <p>Kirjoita rajat kolmesta suunnasta:</p>
@@ -87,9 +92,11 @@
 <li><strong>Tiedon raja:</strong> Mitä tietoa botti ei pyydä, tallenna tai arvaa?</li>
 </ol>
 <p>Pelkkä ”älä vastaa aiheen ulkopuolelle” jättää käyttäjän tyhjän päälle. Parempi ohje on: ”Jos kysymys ei koske kerhon toimintaa, kerro rajaus yhdellä lauseella ja ohjaa käyttäjä kerhon yhteyshenkilölle.”</p>
+<p>Käyttäjän näkökulmasta raja on osa palvelua. Jos hän kysyy vamman hoitamisesta, botti ei vain vaikene tai toista kieltoa. Se kertoo, ettei anna terveysneuvontaa, ja ohjaa käyttäjän asianmukaiseen apuun. Hyvä raja siis yhdistää kolme asiaa: ehdon, botin toiminnan ja turvallisen seuraavan askeleen.</p>
 <h2>Tee myös tietotarpeet näkyviksi</h2>
 <p>Määrittely paljastaa, mitä botin pitää tietää. Kerhon perehdytysbotti saattaa tarvita säännöt, harjoitusajat, varusteluettelon ja yhteystiedot. Se ei tarvitse koko kerhon vuosikertomusta vain siksi, että dokumentti liittyy samaan organisaatioon.</p>
 <p>Kirjaa määrittelyyn alustava luettelo tietotarpeista. Tunnilla 15 etsit niihin sopivat lähteet ja arvioit, mitä aineisto kattaa ja mitä ei.</p>
+<p>Tietotarpeet seuraavat suoraan käyttäjän etenemisestä. Jos botin pitää kertoa harjoitusaika, varusteet ja yhteyshenkilö, jokaiselle tiedolle tarvitaan myöhemmin nimetty ja ajantasainen lähde. Jos määrittelyssä luvataan jotakin, jolle ei löydy luotettavaa tietopohjaa, lupausta pitää rajata ennen rakentamista.</p>
 <h2>Määrittelydokumentti on päätösten ketju</h2>
 <p>Hyvä määrittely vastaa kuuteen kysymykseen:</p>
 <table>
@@ -127,6 +134,7 @@
 </tbody>
 </table>
 <p>Näiden päätösten jälkeen järjestelmäpromptin kirjoittaminen on myöhemmin muuntamista, ei arvailua. Tunnilla 17 kokoat määrittelyn, promptikortin toimivan rakenteen ja tietopohjan yhdeksi toteutukseksi.</p>
+<p>Lue taulukkoa päätösketjuna, ei kuutena irrallisena kenttänä. Käyttäjän tilanne määrittää tehtävän, tehtävä määrittää onnistumisen, onnistuminen ohjaa keskustelun etenemistä ja rajat kertovat, milloin vastuu siirtyy botilta ihmiselle. Rooli ja sävy tukevat tätä kokonaisuutta, mutta eivät muuta sen tarkoitusta.</p>
 <h2>Yhteenveto</h2>
 <p>Tällä tunnilla suunnittelet ennen rakentamista. Rajaat käyttäjän, tehtävän, havaittavan onnistumisen, keskustelun etenemisen, roolin, äänensävyn ja toiminnan rajat. Et vielä kirjoita valmista järjestelmäpromptia tai testaa omaa bottia.</p>
 <p>Tunnin tuotoksena syntyy <strong>rakennuspalikka 2: botin määrittelydokumentti</strong>. Se kertoo, mitä tunnilla 17 rakennetaan ja millä perusteella toteutusta myöhemmin arvioidaan.</p>
@@ -144,6 +152,7 @@
 <p>Suunnittelet bottisi <strong>määrittelydokumentin</strong>. Se on botin perustamisasiakirja, jossa kerrot, kenelle botti on tarkoitettu, mitä se tekee, miten se käyttäytyy ja mitä se ei tee.</p>
 <p>Tämä on ensimmäinen rakennuspalikka, jossa suunnittelet suoraan tulevaa bottiasi. Aiemmin keräsit yleisiä promptirakenteita. Nyt suunnittelet juuri sitä bottia, jonka rakennat oppitunneilla 17–18.</p>
 <p>Et vielä kirjoita <strong>järjestelmäpromptia</strong>, rakenna bottia tai testaa sitä. Tässä tehtävässä suunnittelet botin toiminnan etukäteen. Ajattele tätä pohjapiirroksena: hyvä suunnitelma helpottaa botin rakentamista myöhemmin.</p>
+<p>Määrittelyn osat liittyvät toisiinsa. Käyttäjä ja hänen tilanteensa ratkaisevat tehtävän. Tehtävästä seuraa havaittava onnistuminen, ja onnistuminen määrää, millainen keskustelun eteneminen tarvitaan. Rajat puolestaan kertovat, milloin botti ei voi viedä käyttäjää turvallisesti eteenpäin omin voimin.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
 <p>Tehtävän jälkeen sinulla on selkeä määrittelydokumentti, jonka avulla osaat myöhemmin rakentaa botin valitsemallasi alustalla. Dokumentti auttaa sinua päättämään:</p>
 <ul>
@@ -153,6 +162,7 @@
 <li>missä järjestyksessä botti ohjaa käyttäjää,</li>
 <li>mitä botin ei pidä tehdä.</li>
 </ul>
+<p>Tavoitteena ei ole täyttää mahdollisimman monta kenttää, vaan muodostaa yksi johdonmukainen kuva tulevasta botista. Jos työnkulku lupaa jotakin, jota tarkoitus ei vaadi, tai rajat estävät ydintehtävän kokonaan, palaa aiempaan päätökseen ja korjaa ristiriita.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat?</h2></div><div class="task-card-body">
 <p>Tallenna lopuksi yksi dokumentti, jossa on:</p>
 <ul>
@@ -162,6 +172,7 @@
 <li>viimeistelty versio määrittelystä,</li>
 <li>2–3 lauseen pohdinta siitä, mikä muuttui sparrauksen jälkeen ja mikä on bottisi ydin.</li>
 </ul>
+<p>Säilytä myös ensimmäinen versio tai merkitse muutokset näkyviin. Lopullinen määrittely kertoo, mitä aiot rakentaa. Muutosjälki kertoo, mitä palautteen avulla havaitsit ja minkä päätöksen teit itse.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tee näin</h2></div><div class="task-card-body">
 <h3>Vaihe 1 — Valitse apuri-bottisi tarkoitus ja aihe</h3>
 <p>Botti, jonka rakennat myöhemmin, on sinun itse valitsemasi <strong>apuri-botti</strong>: se auttaa sinua tai kavereitasi jossakin sinulle tutussa arjen aiheessa. Valitse ensin, mihin aiheeseen ja mitä tehtävää varten botti rakennetaan.</p>
@@ -173,10 +184,12 @@
 <li><strong>Pelit, musiikki tai sisältö</strong> (esim. auttaa ideoimaan pelin, biisin tai videon)</li>
 <li><strong>Arjen apuri</strong> (esim. auttaa suunnittelemaan treenirutiinin tai viikkoaikataulun)</li>
 </ul>
+<p>Rajaa aihe heti käyttäjän tilanteeksi. ”Opiskelubotti” voi muuttua esimerkiksi kertauskaveriksi, joka auttaa ensimmäisen vuoden opiskelijaa tunnistamaan yhden kurssin keskeiset käsitteet ennen koetta. Jälkimmäisestä voidaan jo päätellä, mitä botin pitää kysyä, millaista aineistoa se tarvitsee ja mistä onnistuminen näkyy.</p>
 <p><strong>Tallenna:</strong> Kirjoita valitsemasi aihe muistiin. Lisää myös yksi lause siitä, missä tilanteessa ja kenelle tällainen apuri-botti olisi hyödyllinen.</p>
 <h3>Vaihe 2 — Täytä botin määrittelydokumentti</h3>
 <p>Täytä alla oleva taulukko. Kirjoita jokaiseen kohtaan lyhyt mutta selkeä vastaus. Tämä taulukko on bottisi suunnittelun perusta: sen myöhempi käyttäytyminen rakentuu näiden valintojen varaan.</p>
 <p><strong>Vinkki:</strong> Kirjoita mieluummin konkreettisesti kuin yleisesti. Esimerkiksi <em>"auttaa kerhon uutta jäsentä löytämään vastaukset yleisimpiin kysymyksiin"</em> on parempi kuin <em>"auttaa harrastuksessa"</em>.</p>
+<p>Täytä taulukko ylhäältä alas ja lue se sen jälkeen kokonaisena kertomuksena käyttäjän matkasta. Kohderyhmä perustelee tarkoituksen, tarkoitus ohjaa työnkulkua ja työnkulku tekee rajat näkyviksi. Jos yhteys katkeaa, älä paikkaa sitä uusilla ominaisuuksilla, vaan tarkenna aiempaa päätöstä.</p>
 <table>
 <thead>
 <tr>
@@ -218,14 +231,17 @@
 </tr>
 </tbody>
 </table>
+<p>Esimerkiksi kerhon perehdytysbotin kokonaisuus voi edetä näin: uusi jäsen kysyy ensimmäisestä harjoituksesta, botti tarkistaa aiheen ja tarvittavan lähtötiedon, hakee harjoitusajan hyväksytystä aineistosta ja kertoo varusteet sekä seuraavan askeleen. Jos ajantasainen aika puuttuu, botti kertoo puutteen ja ohjaa nimetylle yhteyshenkilölle. Tässä tarkoitus, työnkulku, tietotarve ja raja tukevat samaa käyttäjän tehtävää.</p>
 <h3>Vaihe 3 — Haasta määrittelysi tekoälyn avulla</h3>
 <p>Avaa käytössäsi oleva hyväksytty tekoälypalvelu ja anna sille koko määrittelydokumenttisi. Pyydä tekoälyä haastamaan suunnitelmaasi. Tarkoitus ei ole, että tekoäly suunnittelee botin puolestasi, vaan että se auttaa huomaamaan puutteita ja epäselvyyksiä.</p>
 <p>Voit käyttää esimerkiksi seuraavaa promptia:</p>
 <blockquote class="pause"><p>"Toimit minulle sparrauskumppanina. Suunnittelen apuri-bottia, joka auttaa käyttäjää valitsemassani arjen aiheessa. Tässä bottini määrittelydokumentti: [liitä koko taulukkosi tähän] Haasta suunnitelmaani. Pohdi erityisesti: Onko botin tarkoitus tarpeeksi konkreettinen vai jääkö se liian yleiseksi? Onko kohderyhmä riittävän tarkasti rajattu? Puuttuuko työnkulusta jokin tyypillinen vaihe tässä aiheessa? Ovatko botin rajat realistisia vai liian tiukkoja tai liian löysiä? Mikä on yksi sokea piste, jota en ehkä vielä huomaa? Älä kirjoita uutta versiota puolestani. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."</p>
 </blockquote>
 <p>Tämä on harjoitus siitä, miten tekoälyä käytetään <em>suunnittelukumppanina</em>. Et anna sen päättää puolestasi, mutta annat sen kyseenalaistaa suunnitelmasi.</p>
+<p>Lue palaute kysymyksinä omalle suunnitelmallesi, älä korjauslistana. Tekoäly ei tunne yhteisösi käytäntöjä eikä käyttäjän todellista tilannetta. Hyvä muutos syntyy vasta, kun pystyt yhdistämään ehdotuksen määrittelyn ristiriitaan, puuttuvaan tietoon tai epäselvään rajaan.</p>
 <h3>Vaihe 4 — Viimeistele määrittelydokumentti</h3>
 <p>Tee tekoälyn palautteen pohjalta tarvittavat korjaukset. Viimeistele määrittelydokumentti niin, että sen perusteella voisi rakentaa botin myös toinen henkilö, ei vain sinä itse.</p>
+<p>Merkitse vähintään yksi muutos ja sen peruste. Jos et muuta mitään, kirjoita, minkä palautteen tarkistit ja miksi alkuperäinen ratkaisu säilyi. Myös ennallaan pitäminen on päätös, kun se perustuu määrittelyn tavoitteeseen eikä siihen, että palaute jätettiin lukematta.</p>
 <p>Tarkista viimeistelyssä erityisesti nämä asiat:</p>
 <ul>
 <li>Botin tarkoitus on konkreettinen ja helposti ymmärrettävä.</li>
@@ -235,6 +251,7 @@
 <li>Äänensävy sopii kohderyhmälle ja tehtävän vakavuuteen.</li>
 </ul>
 <p>Kirjoita lopuksi 2–3 lauseen pohdinta: <em>"Mikä määrittelyssä muuttui sparrauksen jälkeen? Mikä on bottini ydin yhdellä lauseella?"</em></p>
+<p>Ydinlauseessa ei tarvitse luetella kaikkia ominaisuuksia. Sen pitää kertoa käyttäjä, tehtävä ja hyödyllinen lopputulos niin selvästi, että voit käyttää lausetta seuraavilla tunneilla jokaisen lähteen, testin ja toteutusvalinnan mittatikkuna.</p>
 <blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Oppitunnilla 17 aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.</p>
 <p><strong>Tarkista lopuksi:</strong> Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.</p>
 </blockquote>

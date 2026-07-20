@@ -4,6 +4,8 @@
 
 Oppija erottaa toisistaan yhden suorituksen kontekstin, suoritusten välillä säilytettävän muistin, prosessin tilan ja toimintaa rajaavat pysyvät periaatteet.
 
+Tunti kannattaa rakentaa yhden tutun tapauksen ympärille. Kun sama asiakaspalvelutilanne kulkee opetuksen läpi, oppija näkee, miksi juuri saapunut viesti kuuluu kontekstiin, aiempi ratkaisu voi kuulua pitkäkestoiseen muistiin ja odottava hyväksyntä kuuluu tilaan. Ilman yhteistä tapausta käsitteet jäävät helposti neljäksi irralliseksi määritelmäksi.
+
 ## Osaamistavoitteet
 
 Oppija:
@@ -19,6 +21,8 @@ Oppija:
 
 Muisti vastaa kysymykseen **mitä tietoa järjestelmällä on**. Tila vastaa kysymykseen **missä vaiheessa tehtävä on**. Toimintaperiaatteet vastaavat kysymykseen **mitkä säännöt rajaavat toimintaa**. Näitä ei pidä sekoittaa.
 
+Korosta myös sitä, että muistaminen ei ole itseisarvo. Jokainen säilytettävä tieto lisää kustannusta, tietosuojavastuuta ja mahdollisuutta käyttää vanhentunutta tietoa väärässä tilanteessa. Hyvä suunnitelma voi siksi päätyä siihen, ettei pitkäkestoista muistia tarvita lainkaan.
+
 ## 90 minuutin toteutus ja eriyttäminen
 
 Tallennettava tuotos on **Agentti: Muisti -pohjapiirros**.
@@ -32,6 +36,8 @@ Tallennettava tuotos on **Agentti: Muisti -pohjapiirros**.
 | 70–82 min | Säännöt erilleen | Oppija kirjaa 2–3 toimintaperiaatetta ja merkitsee niiden toteutustavan. |
 | 82–90 min | Tarkistus | Pari haastaa yhden muistivalinnan ja yhden tilasiirtymän. |
 
+Aikataulun keskiosa on tarkoituksella pisin, sillä käsitteet muuttuvat osaamiseksi vasta omassa pohjapiirroksessa. Kiertäessäsi pysähdy erityisesti perusteluihin. Jos oppija on merkinnyt tiedon muistiin, hänen pitää osata kertoa, missä myöhemmässä vaiheessa sitä käytetään. Jos hän on kuvannut tilasiirtymän, tapahtuman tai ehdon pitää olla havaittava.
+
 ## Tyypilliset väärinkäsitykset
 
 - Suurempi konteksti ei ole automaattisesti parempi.
@@ -39,6 +45,8 @@ Tallennettava tuotos on **Agentti: Muisti -pohjapiirros**.
 - Pitkäkestoinen muisti ei kuulu jokaiseen agenttiin.
 - Prosessin tila ei ole sama asia kuin keskusteluhistoria.
 - Turvaraja ei saa jäädä pelkäksi muistettavaksi tekstiksi, jos harness voi toimeenpanna sen.
+
+Väärinkäsityksiä ei tarvitse korjata luennoimalla uudelleen. Usein tehokkain kysymys on: ”Mitä tapahtuu, jos tämä tieto on väärä, vanhentunut tai joutuu väärälle käyttäjälle?” Kysymys siirtää huomion muistamisen määrästä sen tarkoitukseen ja seurauksiin.
 
 ## Arvioitava näyttö
 

@@ -20,6 +20,8 @@ Tunnin jälkeen oppija osaa:
 
 ## 90 minuutin toteutus ja eriyttäminen
 
+Aloita havainnosta, jonka ryhmä voi tehdä itse: sama tieto näyttää erilaiselta kaaviossa ja taulukossa. Kun oppijat nimeävät ensin omat havaintonsa, käsitteet eivät jää irrallisiksi määritelmiksi. Yhteinen koe vie tämän ajatuksen käytäntöön, ja vasta sen jälkeen oppijat tekevät oman vertailunsa.
+
 | Aika | Vaihe | Opettajan tehtävä | Oppijan toiminta |
 | --- | --- | --- | --- |
 | 0–10 min | Aloitus | Näytä sama tieto kahdessa muodossa, esimerkiksi kaaviona ja taulukkona. | Nimeää, mitä kummastakin on helppo ja vaikea havaita. |
@@ -41,15 +43,19 @@ Pidä samana:
 - vastausmuoto
 - käytettävä malli ja asetukset.
 
-Muuta vain aineistomuotoa. Mallin mahdollinen virhe on opetuksen kannalta hyödyllinen, kun se tarkistetaan avoimesti alkuperäisestä aineistosta.
+Muuta vain aineistomuotoa, jotta vastauksissa näkyvä ero voidaan yhdistää juuri siihen. Mallin mahdollinen virhe on opetuksen kannalta hyödyllinen, kun se tarkistetaan avoimesti alkuperäisestä aineistosta. Näin virheestä ei tule epäonnistumista vaan esimerkki siitä, miksi havainto pitää palauttaa lähteeseen.
 
 ## Keskustelukysymykset
 
+Johda keskustelua takaisin tehtävän tarpeeseen:
+
 - Mitä mallin piti nähdä, kuulla tai lukea?
 - Mikä havainto oli mahdollinen vain toisessa muodossa?
-- Toiko lisäaineisto uutta tietoa vai vain kohinaa?
+- Toiko lisäaineisto uutta tietoa vai pelkkää kohinaa?
 - Mihin lähteen kohtaan mallin väite perustui?
 - Olisiko aineiston lähettäminen ollut sallittua oikeassa tilanteessa?
+
+Kysymysten järjestys vie tehtävän tarpeesta aineistomuodon vertailuun, lähteen tarkistamiseen ja lopulta turvallisuuspäätökseen.
 
 ## Arviointinäyttö
 
@@ -57,8 +63,6 @@ Hyvässä suorituksessa oppija ei vain nimeä parempaa vastausta. Hän osoittaa 
 
 ## Tuki ja eriyttäminen
 
-- Anna tarvittaessa valmis turvallinen aineistopari.
-- Salli vertailu ilman verkkopalvelua kahdella valmiiksi tuotetulla vastauksella.
-- Haastavampi jatko: oppija ehdottaa kolmatta aineistomuotoa ja perustelee, mitä uutta se toisi.
+Jos aineiston valinta vie huomion itse ajattelulta, anna valmis turvallinen aineistopari. Vertailun voi tehdä myös ilman verkkopalvelua kahdella valmiiksi tuotetulla vastauksella, sillä oppimistavoite on havaintojen arviointi eikä tietyn palvelun käyttäminen. Nopeasti etenevä oppija voi ehdottaa kolmatta aineistomuotoa ja perustella, mitä sellaista se toisi, mitä kahdessa ensimmäisessä ei ollut.
 
 > **Opettajan muistutus:** Älä pyydä oppijoita käyttämään aitoa henkilötietoa tai luottamuksellista työaineistoa edes harjoituksen vuoksi.

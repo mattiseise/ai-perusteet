@@ -25,8 +25,9 @@
 <ol>
 <li>pysyvän ohjeen, jota käytät uudelleen</li>
 <li>vaihtuvan aineiston, jonka lisäät joka käyttökerralla</li>
-<li>laatukriteerit, joilla tarkistat vastauksen.</li>
+<li>laatukriteerit, joilla tarkistat vastauksen</li>
 </ol>
+<p>Ajattele korttia työohjeena, jonka toinenkin ihminen voisi ottaa käyttöön. Pysyvä ohje kertoo, mikä työ tehdään ja millä ehdoilla. Vaihtuva aineisto tuo jokaiseen käyttökertaan uuden sisällön. Laatukriteerit puolestaan estävät hyväksymästä vastausta vain siksi, että se kuulostaa sujuvalta. Jos jokin näistä kolmesta puuttuu, korttia on vaikea käyttää johdonmukaisesti tai kehittää havaintojen perusteella.</p>
 <blockquote class="pause"><p><strong>Tunnin ydinkysymys:</strong> Mikä yksi promptimuutos paransi vastausta — ja millä havainnolla osoitat vaikutuksen?</p>
 </blockquote>
 <figure class="ai-demo" data-demo-id="lesson-12-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// yksi muutos kerrallaan — vaikutus jää näkyviin</span>
@@ -47,6 +48,7 @@
 <li>tekstiluonnoksen muokkaaminen tietylle yleisölle</li>
 <li>palautteiden jäsentäminen ennalta sovittuihin teemoihin.</li>
 </ul>
+<p>Viikoittaisten kokousmuistiinpanojen muuttaminen toimintakohdiksi on hyvä esimerkki. Aineisto vaihtuu joka viikko, mutta haluttu työ pysyy samana: tehtävä, vastuuhenkilö ja määräaika poimitaan näkyviin. Sen sijaan ”auta minua työssäni” ei vielä kuvaa toistettavaa tehtävää eikä anna perustaa vastauksen arvioinnille.</p>
 <p>Vältä tehtävää, jonka hyvyyttä et pysty itse arvioimaan. Jos et tunne aihetta tai oikeaa lopputulosta, et myöskään tiedä, paransiko promptin muutos vastausta.</p>
 <p>Kirjoita tehtävä yhdellä lauseella:</p>
 <blockquote class="pause"><p>Muunnan <strong>[vaihtuvan aineiston]</strong> muotoon <strong>[haluttu tuotos]</strong>, jotta <strong>[käyttäjä]</strong> voi <strong>[käyttötarkoitus]</strong>.</p>
@@ -70,6 +72,7 @@ LÄHDEAINEISTO:
 [LIITÄ VAIHTUVA AINEISTO TÄHÄN]
 </code></pre>
 <p>Kortti ei ole vain pitkä prompti. Sen pitää kertoa myös, milloin rakennetta käytetään ja milloin ei.</p>
+<p>Esimerkin hakasulkeet tekevät vastuunjaon näkyväksi. Kortti ei arvaa yleisöä, tarkoitusta tai lähdeaineistoa, vaan käyttäjä täyttää ne joka käyttökerralla. Samalla pysyvät vaatimukset — kuten lähteen nimien ja määräaikojen säilyttäminen — pysyvät samoina. Juuri tämä erottaa uudelleen käytettävän rakenteen keskusteluun kerran kirjoitetusta pyynnöstä.</p>
 <h2>Päätä laatukriteerit ennen ensimmäistä ajoa</h2>
 <p>Ilman ennalta päätettyjä kriteereitä arvio helposti mukautuu siihen, millaisen vastauksen malli tuotti. Valitse 2–4 havaittavaa ominaisuutta.</p>
 <table>
@@ -99,6 +102,7 @@ LÄHDEAINEISTO:
 </tbody>
 </table>
 <p>Kriteeri on käyttökelpoinen, kun toinenkin ihminen voisi tarkistaa sen samasta vastauksesta.</p>
+<p>Kriteeri toimii siis pienenä sopimuksena ennen testiä. Kun päätät etukäteen, ettei mallin pidä keksiä puuttuvia määräaikoja, voit tarkistaa vastauksesta yksiselitteisesti, tapahtuiko näin. Jos arviointiperuste syntyy vasta vastauksen jälkeen, sitä on helppo muuttaa huomaamatta mallin tuotoksen eduksi.</p>
 <h2>Tee kaksi vertailukelpoista versiota</h2>
 <p>Aja ensin versio 1 turvallisella aineistolla ja säilytä sekä prompti että vastaus. Arvioi vastausta valituilla kriteereillä. Nimeä yksi puute, jonka haluat korjata.</p>
 <p>Muuta seuraavaksi vain yhtä asiaa. Voit esimerkiksi:</p>
@@ -109,11 +113,13 @@ LÄHDEAINEISTO:
 <li>määrittää puuttuvan tiedon käsittelyn.</li>
 </ul>
 <p>Avaa uusi keskustelu ja aja versio 2 samalla aineistolla. Jos jatkat samassa keskustelussa, aiempi vastaus voi vaikuttaa tulokseen. Jos vaihdat aineiston, et enää testaa vain promptin muutosta.</p>
+<p>Tämä on eri asia kuin tavallinen keskustelullinen hiominen, jossa käyttäjä muuttaa useita asioita kerralla ja tyytyy lopulta mieluisaan vastaukseen. Hallitussa kokeessa säilytät lähtötilanteen, jotta pystyt myöhemmin sanomaan, mikä muutos todennäköisesti vaikutti tulokseen.</p>
 <h2>Kirjaa vaikutus havaintona</h2>
 <p>Hyvä johtopäätös nimeää muutoksen, tuloksen ja näytön:</p>
 <blockquote class="pause"><p>Lisäsin ohjeen ”älä lisää puuttuvia määräaikoja”. Versio 1 keksi kahdelle tehtävälle määräajan, mutta versio 2 merkitsi ne puuttuviksi. Muutos paransi lähdeuskollisuutta tällä aineistolla.</p>
 </blockquote>
 <p>Huomaa rajaus: yksi testi ei osoita, että kortti toimii kaikilla aineistoilla. Se osoittaa, miten kortti toimi tässä kokeessa. Seuraava hyödyllinen testi käyttää erilaista mutta samaan tehtävään kuuluvaa syötettä.</p>
+<p>Näin kortin kehittäminen jatkuu perustellusti. Ensimmäinen koe osoittaa yhden vaikutuksen, seuraava koe koettelee rakennetta uudella aineistolla ja versiohistoria säilyttää tiedon siitä, miksi korttia muutettiin. Kortti ei ole koskaan ”valmis totuus”, vaan dokumentoitu työväline, jonka käyttöalue tunnetaan.</p>
 <h2>Korttiin kuuluu myös tunnettu raja</h2>
 <p>Kirjaa vähintään yksi tilanne, jossa korttia ei pidä käyttää sellaisenaan. Raja voi liittyä esimerkiksi:</p>
 <ul>
@@ -197,6 +203,7 @@ LÄHDEAINEISTO:
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
 <p>Valitset yhden omassa arjessa, opiskelussa tai työssä toistuvan tehtävän. Rakennat sitä varten promptikortin, testaat kaksi versiota samalla aineistolla ja perustelet, mikä muutos paransi tulosta.</p>
 <p>Kortista tehdään myöhemmin promptipankin ensimmäinen osa. Tunnilla 17 hyödynnät sen toimivaa rakennetta bottisi järjestelmäpromptin kirjoittamisessa.</p>
+<p>Työ etenee tarkoituksella yhdestä päätöksestä seuraavaan. Ensin rajaat tehtävän, sitten kirjoitat arvioitavan kortin ja vasta sen jälkeen kokeilet muutosta. Näin lopputulos ei ole vain hyvältä vaikuttava prompti, vaan dokumentoitu ratkaisu, jonka toimintaa osaat selittää.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 1 — Valitse toistuva tehtävä</h2></div><div class="task-card-body">
 <p>Valitse tehtävä, jonka lopputuloksen osaat itse arvioida. Esimerkiksi:</p>
 <ul>
@@ -207,8 +214,10 @@ LÄHDEAINEISTO:
 <li>käyttöohjeen muokkaaminen aloittelijalle sopivaksi</li>
 </ul>
 <p>Kirjoita yhdellä lauseella: <strong>Mitä teen, kenelle ja mihin lopputulosta käytetään?</strong></p>
+<p>Esimerkiksi kokousmuistiinpanojen muuttaminen toimintakohdiksi on riittävän rajattu tehtävä, jos osaat tarkistaa lähteestä tehtävät, vastuuhenkilöt ja määräajat. Pelkkä ”tiivistä tekstejä” jää liian väljäksi, koska eri teksteissä onnistuminen tarkoittaa eri asioita.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 2 — Kirjoita kortin versio 1</h2></div><div class="task-card-body">
 <p>Täytä promptikortti:</p>
+<p>Älä täytä rivejä toisistaan irrallisina. Käyttötilanne kertoo, miksi korttia tarvitaan, tavoite kertoo halutun muutoksen ja laatukriteerit kertovat, mistä onnistuminen myöhemmin nähdään. Jos nämä eivät sovi yhteen, tarkenna tehtävää ennen ensimmäistä ajoa.</p>
 <table>
 <thead>
 <tr>
@@ -262,6 +271,7 @@ LÄHDEAINEISTO:
 <li>yksi nimetty ongelma</li>
 </ul>
 <p>Arvioi vastausta ennen seuraavaa versiota. Älä muuta samalla kertaa kaikkea.</p>
+<p>Kirjoita ongelma havaintona. ”Vastaus on huono” ei vielä kerro, mitä pitäisi korjata. ”Vastaus lisäsi määräajan, jota lähteessä ei ollut” nimeää sekä virheen että kohdan, johon seuraavan version muutos voidaan kohdistaa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 4 — Tee yksi perusteltu muutos</h2></div><div class="task-card-body">
 <p>Valitse yksi ongelmaan liittyvä muutos. Voit esimerkiksi:</p>
 <ul>
@@ -271,6 +281,7 @@ LÄHDEAINEISTO:
 <li>määrittää vastausrakenteen</li>
 <li>lisätä laatukriteerin tai tarkistuspyynnön</li>
 </ul>
+<p>Valitse muutos siksi, että se vastaa nimeämääsi ongelmaan. Jos lähteen tietoja puuttui, ulkoasun vaihtaminen ei ratkaise asiaa. Jos taas sisältö säilyi mutta rakenne oli hankala käyttää, täsmällinen vastausmuoto voi olla oikea muutos.</p>
 <p>Kirjoita <strong>versio 2</strong> ja aja se samalla lähtöaineistolla. Jos vaihdat sekä promptin että aineiston, et pysty päättelemään, mistä ero johtui.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 5 — Vertaa näyttöä</h2></div><div class="task-card-body">
 <p>Täytä vertailu:</p>
@@ -319,6 +330,7 @@ LÄHDEAINEISTO:
 <p>Kirjoita lopuksi johtopäätös:</p>
 <blockquote class="pause"><p>Muutin promptissa <strong><em>_. Muutos vaikutti tulokseen näin: </em></strong>_. Päätelmä perustuu tähän havaintoon: ____.</p>
 </blockquote>
+<p>Hyvä johtopäätös ei lupaa, että kortti toimii kaikissa tilanteissa. Se kertoo täsmällisesti, mitä tällä aineistolla tapahtui ja mikä kannattaa testata seuraavaksi. Tämä rajaus tekee kortista luotettavamman, ei heikomman.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tekoälyvaihe — haasta arvio</h2></div><div class="task-card-body">
 <pre><code class="language-text">Tässä ovat saman tehtävän promptiversiot 1 ja 2 sekä niiden vastaukset.
 Oma johtopäätökseni on: [kirjoita]. Esitä kolme kysymystä, joilla
@@ -329,6 +341,7 @@ ennakko-oletukseeni. Älä valitse voittajaa puolestani.
 <hr />
 <p><strong>Tallennettava tuotos:</strong> yksi promptikortti, versiot 1 ja 2, molemmat vastaukset, vertailutaulukko sekä yhden muutoksen vaikutusta koskeva johtopäätös.</p>
 <p>Kun kortti toimii, voit myöhemmin lisätä pankkiin uusia kortteja samalla rakenteella. Yksi testattu kortti on arvokkaampi kuin seitsemän promptia, joiden toimivuudesta et osaa sanoa mitään.</p>
+<p>Tallenna kortti niin, että palaat myöhemmin myös sen perusteluihin. Pelkkä lopullinen prompti kertoo, mitä kirjoitit. Versiot ja havaintosi kertovat, miksi päädyit juuri siihen muotoon.</p>
 <p><strong>1 / 3 rakennuspalikkaa kerätty</strong></p></div></div></div><div id="panel-lesson-12-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Rakenna promptikortti</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 12</text><text x="74" y="230" font-size="49" font-weight="800" fill="#1B2336">Rakenna promptikortti</text><text x="74" y="288" font-size="27" fill="#5A6478">Yksi toistuva tehtävä · kaksi versiota · yksi muutos</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Hyvä prompti ei vain kuulosta hyvältä — sen vaikutus osoitetaan.</text><text x="104" y="407" font-size="17" fill="#3A4253">Tallenna myös käyttötilanne, kriteerit ja tunnettu raja.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/8: Valitse tehtävä, jonka osaat arvioida</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Valitse tehtävä, jonka osaat arvioida</text><text x="74" y="132" font-size="19" fill="#5A6478">Kortti on tarkoitettu toistuvaan tehtävään, ei kaikkiin tilanteisiin.</text><rect x="74" y="178" width="812" height="190" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><text x="104" y="224" font-size="18" font-weight="800" fill="#6A309D">TÄYDENNÄ YHDELLÄ LAUSEELLA</text><text x="104" y="278" font-size="21" fill="#1B2336">Muunnan [vaihtuvan aineiston] muotoon [haluttu tuotos],</text><text x="104" y="316" font-size="21" fill="#1B2336">jotta [käyttäjä] voi [käyttötarkoitus].</text><rect x="74" y="402" width="812" height="60" rx="12" fill="#FFF7E2"/><text x="104" y="439" font-size="18" font-weight="700" fill="#8A6A00">Jos et tunnista hyvää lopputulosta, et voi osoittaa parannusta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">2 / 8</text></svg></div>

@@ -4,6 +4,8 @@
 
 Oppija soveltaa tunnilla 4 opittua promptauksen perustaa yhteen toistuvaan tehtävään. Tällä tunnilla ei opeteta kontekstin määritelmää uudelleen eikä kerätä suurta joukkoa kokeilemattomia prompteja. Ydintuotos on yksi testattu promptikortti kahdella versiolla.
 
+Tunnin pedagoginen painopiste on perustelussa. Oppija ei vain muotoile promptia uudelleen, vaan pitää muun koetilanteen samana ja osoittaa havainnolla, miten yksi muutos vaikutti. Tämä muuttaa promptauksen kokeilemisesta pieneksi tutkimusprosessiksi: tavoite nimetään, arviointiperuste päätetään etukäteen ja johtopäätös rajataan saatuun näyttöön.
+
 ## Osaamistavoitteet
 
 Oppija:
@@ -19,9 +21,13 @@ Oppija:
 
 Promptipankki ei ole lista hyviä lauseita. Se on kokoelma testattuja rakenteita, joiden käyttötarkoitus, muuttuvat kentät ja rajat tunnetaan. Pankki aloitetaan yhdestä huolellisesti dokumentoidusta kortista.
 
+Mallinna ajatus esimerkiksi kokousmuistiinpanoilla. Ensimmäinen versio muuttaa muistiinpanot toimintakohdiksi mutta keksii kahdelle tehtävälle määräajan. Toiseen versioon lisätään yksi lähdeuskollisuutta koskeva ohje. Kun syöte ja muut ehdot pysyvät samoina, ryhmä voi arvioida, poistuiko juuri tämä ongelma. Esimerkin tarkoitus ei ole antaa valmista korttia, vaan näyttää, miltä perusteltu muutos näyttää.
+
 ## 90 minuutin toteutus ja eriyttäminen
 
 Tallennettava tuotos on **promptipankin ensimmäinen kortti, versiot 1 ja 2, vastaukset sekä perusteltu ennen–jälkeen-vertailu**.
+
+Pidä aikataulussa näkyvä ero kirjoittamisen ja arvioinnin välillä. Jos oppija alkaa muokata promptia heti ensimmäisen vastauksen aikana, pysäytä työ hetkeksi ja pyydä kirjaamaan havainto ensin. Muutos saa merkityksen vasta, kun sitä edeltävä ongelma on nimetty.
 
 | Aika | Vaihe | Opettajan tehtävä |
 | --- | --- | --- |
@@ -35,10 +41,14 @@ Tallennettava tuotos on **promptipankin ensimmäinen kortti, versiot 1 ja 2, vas
 
 ## Tyypilliset väärinkäsitykset
 
+Väärinkäsitykset liittyvät yleensä siihen, että määrä sekoitetaan laatuun tai mieltymys näyttöön. Käsittele ne kysymällä aina, mitä aineistossa tai vastauksessa voidaan osoittaa toiselle ihmiselle.
+
 - Useampi prompti ei tarkoita enemmän osaamista, jos niitä ei ole testattu.
 - Jos aineisto vaihtuu versioiden välillä, promptin muutoksen vaikutusta ei voi erottaa.
 - ”Parempi vastaus” pitää avata havaittaviksi kriteereiksi.
 - Uudelleen käytettävyys vaatii vaihtuvien kenttien ja käyttörajan nimeämistä.
+
+Jos oppija sanoo vain version 2 olevan parempi, pyydä häntä näyttämään yksi kohta molemmista vastauksista. Sen jälkeen kysy, liittyykö ero juuri tehtyyn muutokseen vai voiko se johtua jostakin muusta. Näin huomio palautuu vaikutelman sijasta näyttöön.
 
 ## Eriyttäminen
 
@@ -46,6 +56,10 @@ Tallennettava tuotos on **promptipankin ensimmäinen kortti, versiot 1 ja 2, vas
 
 **Syventävä reitti:** oppija kokeilee valmista korttia toisella samanlaisella aineistolla ja arvioi, säilyykö rakenne käyttökelpoisena. Pakollinen ydintuotos ei kasva.
 
+Eriyttäminen muuttaa valintojen määrää, ei osaamistavoitetta. Myös tukireitillä oppijan pitää itse nimetä havaittu ongelma ja perustella muutos. Syventävällä reitillä huomio siirtyy yhden onnistuneen kokeen rajasta siihen, kestääkö kortti uuden syötteen.
+
 ## Arvioitava näyttö
 
 Hyväksyttävä kortti sisältää käyttötarkoituksen, muuttuvat kentät, lähdeaineiston, kaksi promptiversiota, molemmat vastaukset, yhden nimetyn muutoksen ja näyttöön perustuvan johtopäätöksen.
+
+Arvioinnissa tärkein kysymys on: pystyykö oppija yhdistämään muutoksen havaittuun vaikutukseen ilman, että hän väittää enempää kuin koe osoittaa?
