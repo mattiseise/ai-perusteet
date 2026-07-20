@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Muita tekoälymalleja — kuin ChatGPT ja Claude — Verkkokurssi — AI · Perusteet</title>
-<meta name="description" content="Tämän tunnin rajaus: Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin…">
+<title>Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja — Verkkokurssi — AI · Perusteet</title>
+<meta name="description" content="Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää…">
 <link rel="canonical" href="https://aiperusteet.fi/kurssi/tunti-11/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Muita tekoälymalleja — kuin ChatGPT ja Claude — Verkkokurssi — AI · Perusteet"><meta property="og:description" content="Tämän tunnin rajaus: Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin…"><meta property="og:url" content="https://aiperusteet.fi/kurssi/tunti-11/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Muita tekoälymalleja — kuin ChatGPT ja Claude — Verkkokurssi — AI · Perusteet"><meta name="twitter:description" content="Tämän tunnin rajaus: Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Muita tekoälymalleja — kuin ChatGPT ja Claude", "description": "Tämän tunnin rajaus: Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin…", "url": "https://aiperusteet.fi/kurssi/tunti-11/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja — Verkkokurssi — AI · Perusteet"><meta property="og:description" content="Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää…"><meta property="og:url" content="https://aiperusteet.fi/kurssi/tunti-11/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja — Verkkokurssi — AI · Perusteet"><meta name="twitter:description" content="Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja", "description": "Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää…", "url": "https://aiperusteet.fi/kurssi/tunti-11/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Verkkokurssi", "item": "https://aiperusteet.fi/kurssi/"}, {"@type": "ListItem", "position": 2, "name": "Tekoälyjen käyttö", "item": "https://aiperusteet.fi/kurssi/kaytto/"}, {"@type": "ListItem", "position": 3, "name": "Osa 11/27"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,681 +18,518 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 11/27</span></div><div class="lesson-title">Muita tekoälymalleja — kuin ChatGPT ja Claude</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 10 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-11/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-11/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mihin aineisto päätyy, ja mitä se merkitsee käyttöpäätöksen kannalta?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-11-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-11-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-11-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button id="tab-lesson-11-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-11-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-11-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-11-teoria" data-tab="teoria"><h1>Muita tekoälymalleja — muutakin kuin ChatGPT ja Claude. Paikalliset mallit lisäävät tietosuojaa</h1>
-<h2>Johdanto: tekoälymaailma on isompi kuin miltä näyttää</h2>
-<p><strong>Tämän tunnin rajaus:</strong> Tunnilla 10 vertailit työkalujen sopivuutta tehtävään. Nyt seuraat, missä data käsitellään, millä ehdoilla palvelua käytetään ja milloin paikallinen malli muuttaa riskiä. Tavoite ei ole uusi yleinen paremmuusjärjestys vaan perusteltu käyttöympäristön valinta.</p>
-<p>Olet ehkä kokeillut ChatGPT:tä tai Claudea. Ne ovat tunnettuja ja hyviä työkaluja, mutta ne eivät ole ainoita vaihtoehtoja. Maailmassa on monia muitakin <strong>tekoälymalleja</strong>, joilla on omat vahvuutensa ja heikkoutensa. Jokaisen taustalla on eri yritys, erilainen hinnoittelu ja omat tietosuojakäytäntönsä.</p>
-<p>Miksi tämä kannattaa tietää? Siksi, että eri tilanteet vaativat erilaisia ratkaisuja. Joskus paras valinta on halvin malli, joskus nopein ja joskus se, jossa tieto pysyy mahdollisimman turvallisesti. Vastuullisena käyttäjänä sinun kannattaa tuntea vaihtoehdot, jotta osaat valita oikean tekoälytyökalun oikeaan tehtävään.</p>
-<p>Tässä materiaalissa opit, mitä muita malleja on olemassa ja miten niitä voi vertailla keskenään.</p>
-<h2>Osa 1: Googlen Gemini — Googlen tekoälymalli</h2>
-<p>Google on kehittänyt oman tekoälymallinsa, jota kutsutaan <strong>Geminiksi</strong>. Se kilpailee ChatGPT:n ja Clauden kanssa. Monelle käyttäjälle Gemini on hyvä vaihtoehto, koska sillä on ominaisuuksia, joissa se voi olla erityisen hyödyllinen.</p>
-<h3>Geministä on erilaisia versioita</h3>
-<p>Google tekee Geministä eri versioita samaan tapaan kuin autotehtaat tekevät eri automalleja eri tarpeisiin.</p>
-<p>Geministä on saatavilla esimerkiksi <strong>Gemini Flash</strong>, joka on nopea versio ja sopii hyvin kevyisiin ja nopeisiin tehtäviin. Lisäksi on <strong>Gemini Pro</strong>, joka pyrkii tasapainottamaan nopeuden ja suorituskyvyn.</p>
-<p>Kumpi on parempi? Se riippuu siitä, mitä haluat tehdä. Jos tarvitset nopeutta, valinta voi olla eri kuin silloin, kun tarvitset mahdollisimman tarkkaa ja perusteellista vastausta.</p>
-<h3>Miten Geminiä voi käyttää?</h3>
-<p>Google tarjoaa <strong>Google AI Studion</strong>, joka on verkkoselaimessa toimiva työkalu. Avaat selaimen, kirjaudut Google-tililläsi ja voit alkaa kirjoittaa tekoälylle. Palvelussa voi yleensä kokeilla tekoälyä maksutta tiettyihin käyttörajoihin asti. Laajempi käyttö voi olla maksullista.</p>
-<h3>Miten Gemini eroaa ChatGPT:stä?</h3>
-<p><strong>Vahvuudet:</strong></p>
-<p>Gemini osaa käsitellä kuvia ja tekstiä. Jos otat kuvan tai näyttökuvan, voit näyttää sen Geminille ja kysyä esimerkiksi: ”Mitä tässä kuvassa näkyy?” Myös Claude ja ChatGPT osaavat tulkita kuvia, mutta Gemini on vahva erityisesti Googlen ekosysteemissä. Lisäksi Gemini on kytketty Googlen palveluihin. Jos käytät esimerkiksi Gmailia tai Google Drivea, Gemini voi olla saatavilla osana näitä palveluita.</p>
-<p>Gemini voi olla myös hinnaltaan kilpailukykyinen vaihtoehto, erityisesti silloin, kun käyttöä on paljon tai kun työskennellään Googlen omassa ympäristössä.</p>
-<p><strong>Heikkoudet:</strong></p>
-<p>Googlella voi olla tiukat säännöt siitä, millaisiin pyyntöihin Gemini vastaa. Joskus Gemini saattaa vastata ”en voi auttaa tässä” tilanteissa, joissa jokin toinen työkalu antaa vastauksen. Lisäksi eri mallit suoriutuvat ohjelmoinnista eri tavoin, joten koodaustehtävissä kannattaa vertailla tuloksia käytännössä.</p>
-<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Mihin sinä käyttäisit tekoälyä? Jos sinulla olisi kuvia, joista haluat tietoa, olisiko Gemini hyvä vaihtoehto? Entä jos tarvitset apua ohjelmointiin, kannattaisiko sinun kokeilla myös muita työkaluja?</p>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 11/27</span></div><div class="lesson-title">Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 5 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-11/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-11/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mihin aineisto kulkee, millä ehdoilla sitä käsitellään ja saako ratkaisua käyttää?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-11-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-11-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-11-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span></button><button id="tab-lesson-11-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-11-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-11-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-11-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-11-teoria" data-tab="teoria"><h1>Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja</h1>
+<h2>Johdanto: toimiva työkalu ei vielä ole sallittu työkalu</h2>
+<p>Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää myös tietää, <strong>mitä aineistolle tapahtuu käytön aikana</strong>.</p>
+<p>Kun kirjoitat promptin, liität asiakirjan tai annat työkalulle kuvan, aineisto voi poistua laitteeltasi. Se voidaan käsitellä palveluntarjoajan ympäristössä, säilyttää jonkin aikaa tai käyttää palvelun kehittämiseen. Käytäntö riippuu palvelusta, käyttöehdoista, asetuksista ja mahdollisesta organisaation sopimuksesta.</p>
+<blockquote class="pause"><p><strong>Tämän tunnin tavoite:</strong> Opit seuraamaan aineiston datavirtaa, tunnistamaan käsiteltävän tiedon luonteen ja tekemään perustellun käyttöpäätöksen.</p>
 </blockquote>
-<h2>Osa 2: Kiinalaiset mallit — DeepSeek</h2>
-<p>Myös Kiinassa on kehitetty omia tekoälymalleja. Yksi tunnetuimmista on <strong>DeepSeek</strong>. Siihen kannattaa tutustua, mutta sen käyttöön liittyy tärkeitä asioita, jotka vastuullisen käyttäjän pitää ymmärtää.</p>
-<h3>DeepSeek: edullinen malli Kiinasta</h3>
-<p>DeepSeek on kiinalainen yritys, joka kehittää tekoälymalleja. Palvelu on usein edullinen tai rajoitetusti maksuton käyttää. Joissakin testeissä DeepSeek on pärjännyt hyvin verrattuna tunnettuihin tekoälypalveluihin.</p>
-<p><strong>Hyvät puolet:</strong></p>
-<p>DeepSeek voi olla erittäin edullinen vaihtoehto. Se voi olla myös nopea ja vahva erityisesti ohjelmointiin liittyvissä tehtävissä. Jos budjetti on tiukka ja tekoälyä käytetään paljon, DeepSeek voi vaikuttaa houkuttelevalta vaihtoehdolta.</p>
-<p><strong>Tärkeä ongelma: tietosuoja</strong></p>
-<p>DeepSeekin käytössä on kuitenkin merkittävä tietosuojakysymys. DeepSeek on kiinalainen palvelu, ja kun lähetät tekstiä palveluun, tieto voi siirtyä Kiinan palvelimille tai kiinalaisen lainsäädännön piiriin. Tämä voi olla ongelma erityisesti silloin, kun käsitellään henkilötietoja, asiakastietoja, potilastietoja, oppilastietoja tai muuta luottamuksellista aineistoa.</p>
-<p>Henkilötietojen siirtäminen EU:n ulkopuolelle voi vaatia erityisiä suojatoimia ja organisaation hyväksynnän. Tietosuojalainsäädäntöä (GDPR) käsitellään tarkemmin osassa 5.</p>
-<p>Käytännössä tämä tarkoittaa esimerkiksi seuraavaa:</p>
-<ul>
-<li><strong>Opettaja:</strong> Jos käytät DeepSeekiä oppilaiden esseiden analysointiin, se voi rikkoa tietosuojasääntöjä, jos tekstit sisältävät henkilötietoja.</li>
-<li><strong>Sairaala:</strong> Potilastietojen käsittely DeepSeekillä ei ole hyväksyttävää ilman selkeää laillista perustetta ja organisaation hyväksyntää.</li>
-<li><strong>Yritys:</strong> Asiakastietojen tai liikesalaisuuksien syöttäminen palveluun voi olla kiellettyä tai riskialtista.</li>
-</ul>
-<p><strong>Johtopäätös:</strong> DeepSeek voi olla teknisesti hyvä ja edullinen, mutta tietosuoja rajoittaa sen käyttöä monissa asiallisissa tilanteissa Suomessa ja EU:ssa.</p>
-<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Kuvittele, että olet opettaja ja haluat käyttää tekoälyä oppilaiden esseiden arviointiin. DeepSeek olisi edullinen vaihtoehto, mutta oppilaiden nimet ja esseiden sisällöt voisivat päätyä EU:n ulkopuolelle. Olisiko käyttö hyväksyttävää? Miksi tai miksi ei?</p>
-</blockquote>
-<h2>Osa 3: Avoimet mallit — omalla tietokoneella ajettavat mallit</h2>
-<p>Toinen vaihtoehto on käyttää <strong>avoimia malleja</strong>. Tämä ei tarkoita pelkästään sitä, että malli olisi ilmainen. Se tarkoittaa yleensä sitä, että mallin voi ladata ja ajaa itse omalla tietokoneella tai omassa palvelinympäristössä.</p>
-<h3>Meta Llama — tunnettu avoin malli</h3>
-<p>Meta, joka tunnettiin aiemmin Facebookina, on julkaissut <strong>Llama</strong>-malliperheen. Llama-malleja voi ladata ja ajaa omassa ympäristössä lisenssiehtojen mukaisesti. Ne ovat monissa käyttötapauksissa kilpailukykyisiä kaupallisten pilvipalveluiden kanssa.</p>
-<p><strong>Hyvät puolet:</strong></p>
-<p>Kun ajat Llama-mallia omalla tietokoneella, tiedot pysyvät omassa laitteessasi tai omassa ympäristössäsi. Mitään ei tarvitse lähettää ulkopuoliseen pilvipalveluun, jos toteutus on tehty paikallisesti. Tämä parantaa yksityisyyttä. Lisäksi mallin käyttö voi olla edullista sen jälkeen, kun laitteisto ja asennus ovat kunnossa.</p>
-<p><strong>Huonot puolet:</strong></p>
-<p>Omalla tietokoneella ajettava malli vaatii riittävän tehokkaan laitteen. Jos käytössä on vanha kannettava tietokone, malli voi toimia hitaasti tai se ei mahdu laitteen muistiin. Vastaukset voivat myös olla hitaampia kuin pilvipalveluissa, koska pilvipalveluilla on käytössään suuria laskentaresursseja.</p>
-<h3>Mistral — eurooppalainen vaihtoehto</h3>
-<p>Ranskalainen <strong>Mistral</strong> kehittää tekoälymalleja, joista osa soveltuu paikalliseen käyttöön. Mistral voi olla kiinnostava vaihtoehto erityisesti silloin, kun halutaan tarkastella eurooppalaisia tekoälyratkaisuja tai ajaa malleja omassa ympäristössä.</p>
-<h3>Millä ohjelmilla malleja voi ladata ja ajaa omalla tietokoneella?</h3>
-<p>Paikallisten mallien käyttöön on ohjelmia, jotka tekevät asentamisesta ja käyttämisestä helpompaa.</p>
-<p><strong>Ollama</strong> on ohjelma, jonka avulla malleja voi asentaa ja käyttää melko suoraviivaisesti. Asennat ohjelman, valitset haluamasi mallin, esimerkiksi Llaman, ja voit käyttää mallia omalla koneellasi.</p>
-<p><strong>LM Studio</strong> on ohjelma, jossa on ChatGPT:tä muistuttava keskusteluikkuna. Se voi olla helpompi vaihtoehto, jos et ole tottunut komentorivin käyttämiseen.</p>
-<h3>Miksi joku valitsisi paikallisen mallin?</h3>
-<p>Paikallisen mallin valintaan on kolme pääsyytä:</p>
-<ul>
-<li><strong>Yksityisyys:</strong> Tiedot pysyvät omalla laitteella tai omassa ympäristössä.</li>
-<li><strong>Kustannukset:</strong> Kun malli on asennettu ja laitteisto on käytössä, jokaisesta kysymyksestä ei tarvitse maksaa erikseen.</li>
-<li><strong>Kontrolli:</strong> Käyttäjä voi hallita paremmin, missä malli toimii ja miten sitä käytetään.</li>
-</ul>
-<p>Haittapuolia ovat hitaampi nopeus ja laitteistovaatimukset. Tarvitset riittävän tehokkaan tietokoneen, jotta malli toimii sujuvasti. Joillekin käyttäjille yksityisyys ja hallittavuus ovat kuitenkin niin tärkeitä, että paikallinen malli on paras vaihtoehto.</p>
-<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Mikä on sinulle tärkeintä: nopeus, hinta, yksityisyys vai helppokäyttöisyys? Eri mallit sopivat eri tarpeisiin.</p>
-</blockquote>
-<h2>Osa 4: Mallien vertailu — miten valita?</h2>
-<p>Nyt tiedät, että malleja on monia. Miten sopiva malli sitten valitaan?</p>
-<p>Valinnassa ei kannata kysyä vain, mikä malli on paras. Parempi kysymys on: <strong>mikä malli sopii tähän tilanteeseen?</strong> Valintaan vaikuttavat ainakin seuraavat asiat:</p>
+<p>Tunnin lopussa et siis nimeä ”parasta mallia”. Osaat sanoa: <strong>käytä</strong>, <strong>käytä näillä rajoituksilla</strong> tai <strong>älä käytä tähän aineistoon</strong> — ja perustella päätöksesi.</p>
+<h2>1. Erota malli, palvelu ja käyttöympäristö</h2>
+<p>Tekoälystä puhuttaessa kolme eri asiaa sekoittuu helposti.</p>
+<h3>Kielimalli</h3>
+<p><strong>Kielimalli</strong> tuottaa tekstiä, koodia tai muuta sisältöä saamansa syötteen perusteella. Malli on järjestelmän laskennallinen osa, ei koko käyttäjälle näkyvä palvelu.</p>
+<h3>Tekoälypalvelu</h3>
+<p><strong>Tekoälypalvelu</strong> on käyttöliittymä tai ohjelmointirajapinta, jonka kautta mallia käytetään. Palvelu määrittää esimerkiksi kirjautumisen, tiedostojen käsittelyn, keskusteluhistorian, käyttöehdot ja tietosuoja-asetukset.</p>
+<h3>Käyttöympäristö</h3>
+<p><strong>Käyttöympäristö</strong> kertoo, missä palvelu tai malli toimii. Se voi olla palveluntarjoajan pilvi, organisaation hallitsema ympäristö tai käyttäjän oma laite.</p>
+<p>Erottelu on tärkeä, koska palvelun nimi ei yksin kerro, mitä aineistolle tapahtuu. Sama malliperhe voidaan tarjota eri palveluissa ja eri ehdoilla. Palvelu voi myös vaihtaa taustalla käyttämäänsä mallia. Siksi käyttöpäätös tehdään koko toteutuksesta, ei pelkän mallin nimen perusteella.</p>
+<h2>2. Seuraa aineiston datavirtaa</h2>
+<p><strong>Datavirta</strong> kuvaa, mistä aineisto lähtee, minkä järjestelmien kautta se kulkee ja mitä sille tapahtuu matkalla. Tekoälypalvelun datavirtaa voi selvittää viidellä kysymyksellä:</p>
 <ol>
-<li><strong>Mitä haluat tehdä?</strong> Tarvitsetko apua koodin kirjoittamiseen, tekstin parantamiseen, kuvan analysointiin vai johonkin muuhun tehtävään? Eri mallit ovat vahvoja eri asioissa.</li>
-<li><strong>Kuinka paljon rahaa on käytettävissä?</strong> Osa työkaluista on maksuttomia, osa maksullisia ja osa ilmaisia vain pienessä käytössä.</li>
-<li><strong>Miten tärkeää tietosuoja on?</strong> Pitääkö tietojen pysyä omalla tietokoneella, Euroopan alueella tai organisaation hyväksymässä palvelussa?</li>
-<li><strong>Kuinka tärkeää nopeus ja helppous ovat?</strong> Tarvitsetko vastauksen nopeasti vai voitko käyttää enemmän aikaa asennukseen ja säätämiseen?</li>
+<li><strong>Mitä lähetän?</strong> Promptin, tiedoston, kuvan, äänitteen vai tietokannan tietoja?</li>
+<li><strong>Poistuuko aineisto laitteeltani?</strong> Lähetetäänkö se verkon kautta ulkopuoliseen palveluun?</li>
+<li><strong>Kuka käsittelee aineistoa?</strong> Palveluntarjoaja, sen alihankkija vai oma organisaatio?</li>
+<li><strong>Säilytetäänkö tai käytetäänkö aineistoa myöhemmin?</strong> Tallentuuko historia, voiko ihminen tarkastaa sisältöä tai käytetäänkö sitä palvelun kehittämiseen?</li>
+<li><strong>Mihin muihin järjestelmiin palvelu on yhteydessä?</strong> Voiko aineisto siirtyä esimerkiksi hakupalveluun, tiedostovarastoon tai toiseen rajapintaan?</li>
 </ol>
-<h2>Osa 5: Tietosuoja — minne tiedot menevät?</h2>
-<p>Tämä on yksi tärkeimmistä asioista. Kun käytät tekoälypalvelua internetissä, kirjoittamasi tekstit lähetetään palvelun palvelimille. Palvelimet voivat sijaita eri puolilla maailmaa, ja niihin sovelletaan erilaisia lakeja ja käyttöehtoja.</p>
-<figure class="ai-demo" data-demo-id="lesson-11-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama viesti, kolme määränpäätä — palvelimen sijainti ratkaisee säännöt</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:300px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">PILVIPALVELU: syöte lähtee palveluntarjoajalle → tarkista ehdot, sijainti ja aineisto</li><li class="ai-demo__mobile-node">PAIKALLINEN AJO: syöte pysyy laitteella → vastuu laitteen suojauksesta säilyy</li></ol></div>
-  <div class="l11-wrap">
-    <div class="l11-me">SINÄ<span class="l11-doc">”oppilaan essee.txt”</span></div>
-    <i class="l11-pkt l11-k1"></i><i class="l11-pkt l11-k2"></i><i class="l11-pkt l11-k3"></i>
-    <div class="l11-dst l11-d1"><b>Pilvipalvelin · USA</b><span class="l11-sub">käyttöehdot ja asetukset ratkaisevat</span><span class="l11-vd l11-v1">tarkista ennen käyttöä</span></div>
-    <div class="l11-dst l11-d2"><b>Pilvipalvelin · Kiina</b><span class="l11-sub">eri lainsäädäntö, siirto EU:n ulkopuolelle</span><span class="l11-vd l11-v2">GDPR-riski</span></div>
-    <div class="l11-dst l11-d3"><b>Oma kone · paikallinen malli</b><span class="l11-sub">data ei poistu laitteeltasi</span><span class="l11-vd l11-v3">✓ pysyy hallussasi</span></div>
+<figure class="ai-demo" data-demo-id="lesson-11-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// yksi aineisto — kolme mahdollista käsittely-ympäristöä</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:286px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">PILVIPALVELU: syöte lähtee palveluntarjoajalle → tarkista ehdot, sijainti ja aineisto</li><li class="ai-demo__mobile-node">PAIKALLINEN AJO: syöte pysyy laitteella → vastuu laitteen suojauksesta säilyy</li></ol></div>
+  <div class="l11-flow">
+    <div class="l11-source"><b>SINÄ</b><span>”asiakaspalaute.txt”</span></div>
+    <div class="l11-arrow l11-a1">→</div><div class="l11-arrow l11-a2">→</div><div class="l11-arrow l11-a3">→</div>
+    <div class="l11-target l11-t1"><b>Yleinen pilvipalvelu</b><span>Aineisto poistuu laitteelta. Tarkista ehdot ja asetukset.</span></div>
+    <div class="l11-target l11-t2"><b>Organisaation hallittu palvelu</b><span>Käyttö perustuu sopimukseen, asetuksiin ja organisaation ohjeisiin.</span></div>
+    <div class="l11-target l11-t3"><b>Paikallinen ajo</b><span>Aineisto voi pysyä laitteella, jos toteutus ei käytä ulkoisia yhteyksiä.</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kun painat enteriä, tekstisi matkustaa palveluntarjoajan palvelimelle — ja sen sijainti määrää, mitä lakeja ja ehtoja dataasi sovelletaan. Paikallisesti ajettava malli on poikkeus: viesti ei koskaan poistu omalta koneeltasi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Ratkaisevaa ei ole työkalun nimi vaan koko reitti: mitä aineistoa lähetetään, missä se käsitellään ja millä ehdoilla.</figcaption></figure>
 <style>
-.l11-wrap{position:relative;width:560px;height:268px;font-family:var(--font-mono)}
-.l11-me{position:absolute;left:0;top:96px;width:150px;text-align:center;font-size:12.5px;letter-spacing:.12em;color:#EAEEF8;background:#11182A;border:2px solid #44517A;border-radius:12px;padding:11px 10px}
-.l11-doc{display:block;margin-top:7px;font-size:11px;letter-spacing:0;color:#06212A;background:#46c7cf;border-radius:8px;padding:4px 6px;font-weight:500}
-.l11-pkt{position:absolute;left:152px;top:140px;width:10px;height:10px;border-radius:3px;background:#46c7cf;opacity:0}
-.l11-k1{animation:l11k1 13.5s infinite}
-.l11-k2{animation:l11k2 13.5s infinite}
-.l11-k3{animation:l11k3 13.5s infinite}
-@keyframes l11k1{0%,2%{opacity:0;transform:translate(0,0)}4%{opacity:1}16%{opacity:1;transform:translate(212px,-100px)}19%,100%{opacity:0;transform:translate(212px,-100px)}}
-@keyframes l11k2{0%,35%{opacity:0;transform:translate(0,0)}37%{opacity:1}49%{opacity:1;transform:translate(212px,-12px)}52%,100%{opacity:0;transform:translate(212px,-12px)}}
-@keyframes l11k3{0%,68%{opacity:0;transform:translate(0,0)}70%{opacity:1}75%{opacity:1;transform:translate(106px,38px)}81%{opacity:1;transform:translate(212px,76px)}96%{opacity:1;transform:translate(212px,76px)}100%{opacity:0}}
-.l11-dst{position:absolute;left:368px;width:192px;font-size:11.5px;color:#EAEEF8;background:#141B2D;border:1.5px solid #2B3552;border-radius:12px;padding:9px 12px}
-.l11-dst b{font-size:12px;color:#FFFFFF}
-.l11-d1{top:0;animation:l11d1 13.5s infinite}
-.l11-d2{top:88px;animation:l11d2 13.5s infinite}
-.l11-d3{top:176px;animation:l11d3 13.5s infinite}
-@keyframes l11d1{0%,12%,26%,100%{border-color:#2B3552;box-shadow:none}15%,22%{border-color:oklch(0.72 0.15 305);box-shadow:0 0 14px oklch(0.66 0.15 305/.45)}}
-@keyframes l11d2{0%,45%,60%,100%{border-color:#2B3552;box-shadow:none}48%,56%{border-color:#F0A38C;box-shadow:0 0 14px rgba(240,163,140,.4)}}
-@keyframes l11d3{0%,78%,97%,100%{border-color:#2B3552;box-shadow:none}82%,94%{border-color:#7FD0A8;box-shadow:0 0 14px rgba(127,208,168,.4)}}
-.l11-sub{display:block;margin-top:3px;font-size:10.5px;line-height:1.4;color:#B9C2DA}
-.l11-vd{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:1px 8px;opacity:0}
-.l11-v1{color:#1d2433;background:#c9b7f1;animation:l11v1 13.5s infinite}
-.l11-v2{color:#3A1408;background:#F0A38C;animation:l11v2 13.5s infinite}
-.l11-v3{color:#06241a;background:#7FD0A8;animation:l11v3 13.5s infinite}
-@keyframes l11v1{0%,15%{opacity:0}18%,30%{opacity:1}34%,100%{opacity:0}}
-@keyframes l11v2{0%,48%{opacity:0}51%,63%{opacity:1}67%,100%{opacity:0}}
-@keyframes l11v3{0%,81%{opacity:0}84%,97%{opacity:1}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){
-.l11-k1,.l11-k2,.l11-k3,.l11-d1,.l11-d2,.l11-d3{animation:none}
-.l11-k1,.l11-k2,.l11-k3{opacity:0}
-.l11-v1,.l11-v2,.l11-v3{animation:none;opacity:1}}
+.l11-flow{position:relative;width:760px;height:246px;font-family:var(--font-mono)}
+.l11-source{position:absolute;left:0;top:86px;width:176px;padding:18px 14px;text-align:center;color:#EAEEF8;background:#11182A;border:2px solid #44517A;border-radius:14px}
+.l11-source b{display:block;font-size:13px;letter-spacing:.14em}
+.l11-source span{display:block;margin-top:9px;padding:5px 7px;color:#06212A;background:#46C7CF;border-radius:8px;font-size:11px}
+.l11-arrow{position:absolute;left:192px;color:#0E9AA7;font-size:26px;font-weight:700}
+.l11-a1{top:30px;transform:rotate(-18deg)}.l11-a2{top:108px}.l11-a3{top:184px;transform:rotate(18deg)}
+.l11-target{position:absolute;left:248px;width:500px;padding:13px 16px;color:#EAEEF8;background:#141B2D;border:1.5px solid #2B3552;border-radius:12px}
+.l11-target b{display:block;font-size:12.5px;color:#FFFFFF}.l11-target span{display:block;margin-top:4px;color:#B9C2DA;font-size:11px;line-height:1.4}
+.l11-t1{top:0;border-color:#D2A43B}.l11-t2{top:84px;border-color:#6E86E8}.l11-t3{top:168px;border-color:#54B983}
+@media(max-width:700px){.l11-flow{width:620px;transform:scale(.82);transform-origin:center}.ai-demo__stage{overflow:hidden}}
 </style>
 
-<h3>Missä palvelimet sijaitsevat?</h3>
+<p>Jos jokin datavirran kohta on epäselvä, sitä ei pidä arvata. Merkitse se <strong>selvitettäväksi asiaksi</strong> ja tarkista palvelun ehdot, tietosuoja-asetukset sekä organisaation ohjeet.</p>
+<h2>3. Tunnista aineiston luonne</h2>
+<p>Sama palvelu voi sopia yhteen tehtävään mutta olla väärä valinta toiseen. Ratkaiseva ero on usein aineistossa.</p>
 <table>
 <thead>
 <tr>
-<th>Malli</th>
-<th>Yritys</th>
-<th>Palvelimet</th>
-<th>Mitä pitää tietää?</th>
+<th>Aineiston luonne</th>
+<th>Esimerkki</th>
+<th>Ensimmäinen toimintatapa</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT</td>
-<td>OpenAI</td>
-<td>Useita sijainteja, usein myös USA</td>
-<td>Tarkista organisaation ohjeet ja palvelun tietosuoja-asetukset ennen luottamuksellisen tiedon syöttämistä.</td>
+<td><strong>Julkinen tai kuvitteellinen</strong></td>
+<td>Julkaistu verkkoteksti tai itse keksitty harjoitustapaus</td>
+<td>Pilvipalvelu voi sopia, kun ehdot ja käyttötarkoitus ovat kunnossa.</td>
 </tr>
 <tr>
-<td>Claude</td>
-<td>Anthropic</td>
-<td>Useita sijainteja, usein myös USA</td>
-<td>Tarkista käyttöehdot, tietosuoja-asetukset ja organisaation ohjeet ennen luottamuksellisen tiedon käsittelyä.</td>
+<td><strong>Organisaation sisäinen</strong></td>
+<td>Keskeneräinen suunnitelma, sisäinen muistio tai julkaisematon tuoteidea</td>
+<td>Tarkista organisaation ohje ja käytä vain tehtävään hyväksyttyä palvelua.</td>
 </tr>
 <tr>
-<td>Gemini</td>
-<td>Google</td>
-<td>Useita sijainteja, myös Eurooppa mahdollinen</td>
-<td>Google tarjoaa yritys- ja pilvipalveluissa alueellisia vaihtoehtoja. Tarkista asetukset ennen käyttöä.</td>
+<td><strong>Henkilötieto</strong></td>
+<td>Nimi, sähköpostiosoite, asiakasnumero tai tunnistettava palaute</td>
+<td>Selvitä käsittelyperuste ja hyväksytty ympäristö. Poista tarpeettomat tunnistetiedot.</td>
 </tr>
 <tr>
-<td>DeepSeek</td>
-<td>DeepSeek</td>
-<td>Kiina tai kiinalaisen toimijan hallinnoima ympäristö</td>
-<td>Henkilötietojen tai luottamuksellisten tietojen käsittely voi olla ongelmallista EU:ssa.</td>
-</tr>
-<tr>
-<td>Llama paikallisesti</td>
-<td>Meta / käyttäjän oma ympäristö</td>
-<td>Oma tietokone tai oma palvelin</td>
-<td>Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin.</td>
-</tr>
-<tr>
-<td>Mistral paikallisesti</td>
-<td>Mistral / käyttäjän oma ympäristö</td>
-<td>Oma tietokone tai oma palvelin</td>
-<td>Tieto pysyy omassa ympäristössä, jos malli ajetaan aidosti paikallisesti eikä sitä yhdistetä ulkoisiin palveluihin.</td>
+<td><strong>Salassa pidettävä tai erityistä suojaa vaativa tieto</strong></td>
+<td>Potilastieto, oppilashuollon tieto, salasana tai liikesalaisuus</td>
+<td>Älä syötä yleiseen tekoälypalveluun. Noudata organisaation päätöksiä ja lakisääteisiä velvoitteita.</td>
 </tr>
 </tbody>
 </table>
-<h3>GDPR — Euroopan tietosuojalaki</h3>
-<p>Euroopan unionissa henkilötietojen käsittelyä säätelee <strong>GDPR</strong> eli yleinen tietosuoja-asetus. Henkilötietoja ovat esimerkiksi nimi, sähköpostiosoite, henkilötunnus, oppilastiedot, potilastiedot ja muut henkilöön yhdistettävät tiedot.</p>
-<p>GDPR ei tarkoita, että kaikki henkilötiedot on aina säilytettävä vain EU:n alueella. Se tarkoittaa, että henkilötietoja saa käsitellä ja siirtää vain lainmukaisesti, turvallisesti ja asianmukaisin suojatoimin. EU:n ulkopuolisiin palveluihin liittyy usein lisävaatimuksia.</p>
-<p>Käytännössä tämä tarkoittaa seuraavaa:</p>
-<ul>
-<li><strong>Opettaja:</strong> Älä käytä DeepSeekiä oppilaiden esseiden analysointiin, jos tekstit sisältävät oppilaiden henkilötietoja eikä organisaatio ole hyväksynyt palvelua tähän käyttöön.</li>
-<li><strong>Lääkäri:</strong> Älä syötä potilastietoja tekoälypalveluun ilman organisaation hyväksyntää ja laillista perustetta.</li>
-<li><strong>Yritys:</strong> Älä käytä asiakastietoja tekoälypalvelussa, jos et tiedä, mihin tiedot tallentuvat ja onko käyttö organisaation ohjeiden mukaista.</li>
-</ul>
-<p>Jos käytät DeepSeekiä tai muuta tekoälypalvelua omiin harjoituksiin ilman henkilötietoja tai luottamuksellista sisältöä, riski on pienempi. Asiallisessa käytössä on kuitenkin aina tarkistettava organisaation ohjeet.</p>
-<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Ketkä käyttävät tekoälyä sinun ympärilläsi? Opettajat, lääkärit, johtajat vai asiakaspalvelijat? Mitä tietoja tekoälylle saa lähettää? Mitä tietoja sille ei saa koskaan lähettää ilman lupaa?</p>
-</blockquote>
-<h2>Osa 6: Hinta ja käyttö — mitä maksaa?</h2>
-<p>Alla oleva taulukko auttaa vertailemaan eri vaihtoehtoja. Hinnat ja käyttörajat muuttuvat usein, joten taulukko on suuntaa antava. Tarkista ajantasaiset tiedot aina palvelun omilta sivuilta ennen päätöksen tekemistä.</p>
+<p>Tietosuojan perusajatus on <strong>tietojen minimointi</strong>: käytä vain sitä aineistoa, joka on tehtävän kannalta välttämätöntä. Nimen poistaminen ei aina riitä, jos henkilö voidaan tunnistaa muista yksityiskohdista.</p>
+<h2>4. Kolme käyttöympäristöä</h2>
+<h3>Yleinen pilvipalvelu</h3>
+<p>Yleinen pilvipalvelu on helppo ottaa käyttöön. Aineisto kuitenkin siirtyy palveluntarjoajan järjestelmään. Ennen käyttöä pitää tarkistaa ainakin säilytys, palvelun kehittämiseen liittyvä käyttö, mahdollinen ihmisen tekemä tarkastus ja organisaation lupa.</p>
+<h3>Organisaation hallittu palvelu</h3>
+<p>Organisaation hallittu palvelu voi näyttää käyttäjälle samalta kuin yleinen verkkopalvelu, mutta sen käyttö perustuu organisaation sopimukseen, määrittämiin asetuksiin ja käyttöoikeuksiin. Tämä ei tee kaikesta käytöstä automaattisesti sallittua, mutta vastuut ja rajat on mahdollista määritellä.</p>
+<h3>Paikallinen ajo</h3>
+<p>Paikallisessa ajossa malli toimii omalla laitteella tai organisaation omassa ympäristössä. Aineisto voi pysyä hallitussa ympäristössä, mutta käyttäjä tai organisaatio vastaa tällöin laitteesta, käyttöoikeuksista, päivityksistä, mallin lisenssistä ja toteutuksen ulkoisista yhteyksistä.</p>
 <table>
 <thead>
 <tr>
-<th>Malli</th>
-<th>Yritys</th>
-<th>Onko ilmainen?</th>
-<th>Hinta</th>
-<th>Tietosuoja</th>
-<th>Nopeus</th>
+<th>Kysymys</th>
+<th>Yleinen pilvipalvelu</th>
+<th>Organisaation hallittu palvelu</th>
+<th>Paikallinen ajo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ChatGPT</td>
-<td>OpenAI</td>
-<td>Kyllä, rajoitetusti</td>
-<td>Maksullisia versioita saatavilla</td>
-<td>Tarkista asetukset ja organisaation ohjeet</td>
-<td>Yleensä nopea</td>
+<td>Poistuuko aineisto laitteelta?</td>
+<td>Tavallisesti kyllä</td>
+<td>Tavallisesti kyllä, mutta hallittuun ympäristöön</td>
+<td>Ei välttämättä</td>
 </tr>
 <tr>
-<td>Claude</td>
-<td>Anthropic</td>
-<td>Kyllä, rajoitetusti</td>
-<td>Maksullisia versioita saatavilla</td>
-<td>Tarkista asetukset ja organisaation ohjeet</td>
-<td>Yleensä nopea</td>
+<td>Kuka määrittää ehdot?</td>
+<td>Palveluntarjoaja</td>
+<td>Palveluntarjoaja ja organisaatio</td>
+<td>Käyttäjä tai organisaatio</td>
 </tr>
 <tr>
-<td>Gemini</td>
-<td>Google</td>
-<td>Kyllä, rajoitetusti</td>
-<td>Maksullisia versioita ja API-käyttöä saatavilla</td>
-<td>Alueelliset ja organisaatiokohtaiset asetukset mahdollisia</td>
-<td>Yleensä nopea</td>
+<td>Keskeinen etu</td>
+<td>Helppous ja käytettävyys</td>
+<td>Hallitut oikeudet ja sopimukset</td>
+<td>Kontrolli aineiston reitistä</td>
 </tr>
 <tr>
-<td>DeepSeek</td>
-<td>DeepSeek</td>
-<td>Kyllä, rajoitetusti</td>
-<td>Usein edullinen</td>
-<td>Voi olla ongelmallinen henkilötietojen ja luottamuksellisen tiedon kanssa</td>
-<td>Yleensä nopea</td>
-</tr>
-<tr>
-<td>Llama paikallisesti</td>
-<td>Meta / käyttäjän oma ympäristö</td>
-<td>Kyllä, lisenssiehtojen mukaisesti</td>
-<td>Ei välttämättä käyttömaksua, mutta vaatii laitteiston</td>
-<td>Hyvä, jos malli ajetaan aidosti paikallisesti</td>
-<td>Riippuu laitteistosta</td>
-</tr>
-<tr>
-<td>Mistral paikallisesti</td>
-<td>Mistral / käyttäjän oma ympäristö</td>
-<td>Kyllä, mallista ja lisenssistä riippuen</td>
-<td>Ei välttämättä käyttömaksua, mutta vaatii laitteiston</td>
-<td>Hyvä, jos malli ajetaan aidosti paikallisesti</td>
-<td>Riippuu laitteistosta</td>
+<td>Mitä pitää tarkistaa?</td>
+<td>Ehdot, asetukset ja aineiston sopivuus</td>
+<td>Hyväksytty käyttötarkoitus ja käyttöoikeudet</td>
+<td>Tietoturva, lisenssi ja ulkoiset yhteydet</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Mitä tämä tarkoittaa?</strong></p>
-<p>Jos budjetti on pieni eikä käsiteltävä tieto ole arkaluontoista, edulliset pilvipalvelut voivat olla hyvä vaihtoehto. Jos yksityisyys on tärkeää ja käytössä on riittävän tehokas tietokone, paikallisesti ajettava Llama tai Mistral voi olla hyvä ratkaisu.</p>
-<p>ChatGPT ja Claude ovat hyviä yleiskäyttöisiä vaihtoehtoja silloin, kun organisaatiolla on budjetti ja palveluiden käyttö on organisaation ohjeiden mukaista.</p>
-<blockquote class="pause"><p><strong>Pohdi hetkeksi:</strong> Sinulla on 500 euron vuosibudjetti. Minkä työkalun valitsisit? Entä jos yksityisyys olisi tärkein valintaperuste?</p>
-</blockquote>
-<h2>Kohti omaa projektia</h2>
-<p>Tällä tunnilla tutustuit laajempaan tekoälykenttään: Geminiin, DeepSeekiin, Llamaan ja Mistraliin. Jokainen malli on rakennettu hieman eri tarpeeseen, ja jokaisella on omat vahvuutensa hinnan, yksityisyyden, helppokäyttöisyyden ja integraatioiden suhteen. Tämä ymmärrys auttaa sinua perustelemaan, miksi valitset tietyn alustan omalle botillesi.</p>
-<p>Kun rakennat bottia myöhemmillä tunneilla, muista tämä: valinta ei ole vain ”mikä on paras?”, vaan <strong>”mikä sopii parhaiten tähän käyttötilanteeseen?”</strong>. Se on vastuullisen käyttäjän ajattelutapa.</p>
-<h2>Osa 7: Yhteenveto</h2>
-<p><strong>Mitä olemme oppineet?</strong></p>
+<h2>5. Käyttöpäätöksen neljä kysymystä</h2>
+<p>Ennen kuin lähetät aineiston tekoälylle, pysähdy neljän kysymyksen äärelle:</p>
 <ol>
-<li><strong>Malleja on monia, ja ne ovat erilaisia.</strong> ChatGPT ja Claude eivät ole ainoita vaihtoehtoja. Gemini, DeepSeek, Llama, Mistral ja monet muut mallit tarjoavat erilaisia mahdollisuuksia.</li>
-<li><strong>Jokaisella mallilla on omat vahvuutensa.</strong> Gemini liittyy vahvasti Googlen palveluihin. DeepSeek voi olla edullinen, mutta sen käyttöön liittyy tietosuojakysymyksiä EU:ssa. Llama ja Mistral voivat olla yksityisiä ratkaisuja, jos ajat niitä omassa ympäristössä.</li>
-<li><strong>Tietosuoja on tärkeää.</strong> Sinun pitää tietää, minne tiedot menevät ja saako niitä käsitellä kyseisessä palvelussa. Oppilastiedot, potilastiedot, asiakastiedot ja muu arkaluontoinen tieto vaativat erityistä huolellisuutta.</li>
-<li><strong>Valinta riippuu tilanteesta.</strong> Ei ole yhtä parasta mallia. Hinta, nopeus, yksityisyys ja käytettävyys painavat eri tilanteissa eri tavalla.</li>
-<li><strong>Vastuullisena käyttäjänä sinun kannattaa tuntea vaihtoehdot.</strong> Työpaikalla voi olla sääntöjä siitä, mitä tekoälypalveluja saa käyttää. Kun tunnet vaihtoehdot, ymmärrät paremmin myös niiden riskit ja mahdollisuudet.</li>
+<li><strong>Mitä tietoa aineisto sisältää?</strong></li>
+<li><strong>Mihin aineisto kulkee ja mitä sille tapahtuu?</strong></li>
+<li><strong>Millä ehdoilla ja oikeuksilla sitä käsitellään?</strong></li>
+<li><strong>Onko ratkaisu hyväksytty juuri tähän käyttötarkoitukseen?</strong></li>
 </ol>
-<p><strong>Seuraavaksi:</strong> Opit tekemään tekoälylle tarkkoja ja hyödyllisiä ohjeita. Kun tiedät, millaisia malleja on olemassa, seuraava askel on oppia ohjaamaan niitä niin, että saat vastauksen juuri siihen tarpeeseen, johon sitä käytät.</p>
+<p>Vastauksen perusteella tee yksi kolmesta päätöksestä:</p>
+<ul>
+<li><strong>Käytä:</strong> Aineisto ja käyttötarkoitus sopivat ympäristöön.</li>
+<li><strong>Käytä rajatusti:</strong> Poista tarpeettomat tiedot, rajaa ominaisuuksia tai vaihda organisaation hyväksymään ympäristöön.</li>
+<li><strong>Älä käytä tähän aineistoon:</strong> Datavirta, käsittelyehdot tai hyväksyntä eivät riitä.</li>
+</ul>
+<p>Hyvä päätös sisältää myös epävarmuuden. Jos et tiedä, tallentuuko aineisto tai siirtyykö se toiseen palveluun, oikea johtopäätös ei ole ”luultavasti turvallinen” vaan ”selvitä ennen käyttöä”.</p>
+<h2>6. Paikallinen ei tarkoita automaattisesti turvallista</h2>
+<p>Paikallinen ajo vähentää yhtä riskiä: aineistoa ei tarvitse lähettää yleiseen pilvipalveluun. Se ei poista muita vastuita.</p>
+<p>Tarkista myös:</p>
+<ul>
+<li>onko laite suojattu ja ajan tasalla</li>
+<li>kenellä on pääsy laitteeseen ja tallennettuihin keskusteluihin</li>
+<li>käyttääkö sovellus verkkohakua, telemetriaa tai ulkoisia rajapintoja</li>
+<li>millä lisenssillä mallia saa käyttää</li>
+<li>kuka vastaa mallin päivittämisestä ja virhetilanteista</li>
+<li>sopiiko mallin laatu ja nopeus tehtävään</li>
+</ul>
+<p>Paikallinen ajo on siis <strong>käyttöympäristöä koskeva valinta</strong>, ei yleinen turvallisuusleima.</p>
+<h2>7. Esimerkki: asiakaspalautteiden tiivistäminen</h2>
+<p>Pienellä yrityksellä on sata asiakaspalautetta. Palautteissa on nimiä, sähköpostiosoitteita ja kuvauksia yksittäisistä palvelutilanteista.</p>
+<p>Huono ratkaisu olisi kopioida aineisto suoraan ensimmäiseen helposti saatavaan verkkopalveluun. Parempi eteneminen on:</p>
+<ol>
+<li>tunnista henkilötiedot ja yrityksen sisäiset tiedot</li>
+<li>poista tehtävän kannalta tarpeettomat tunnistetiedot</li>
+<li>tarkista, mikä ympäristö on organisaation hyväksymä</li>
+<li>piirrä aineiston reitti ja merkitse epäselvät kohdat</li>
+<li>tee käyttöpäätös vasta näiden tietojen perusteella</li>
+</ol>
+<p>Jos palautteet voidaan anonymisoida luotettavasti, tiivistäminen voi onnistua hyväksytyssä pilvipalvelussa. Jos tunnistettavuus on tehtävän kannalta välttämätöntä, tarvitaan organisaation hyväksymä ja tähän käsittelyyn soveltuva ratkaisu.</p>
+<h2>Kohti omaa projektia</h2>
+<p>Kun rakennat myöhemmin oman botin, mallin laatu on vain yksi suunnittelukysymys. Sinun pitää pystyä kuvaamaan myös, mitä aineistoa botti vastaanottaa, missä sitä käsitellään, mitä tallennetaan ja millä oikeuksilla järjestelmä toimii.</p>
+<p>Tämän tunnin datavirtakaavio toimii myöhemmin botin tietosuoja- ja käyttörajojen perustana.</p>
+<h2>Yhteenveto</h2>
+<ol>
+<li><strong>Malli, palvelu ja käyttöympäristö ovat eri asioita.</strong></li>
+<li><strong>Palvelun nimi ei vielä kerro aineiston koko reittiä.</strong></li>
+<li><strong>Käyttöpäätös alkaa aineiston luonteen tunnistamisesta.</strong></li>
+<li><strong>Pilvipalvelu, hallittu palvelu ja paikallinen ajo jakavat vastuut eri tavoin.</strong></li>
+<li><strong>Epäselvä datavirta pitää selvittää ennen käyttöä.</strong></li>
+</ol>
+<blockquote class="pause"><p><strong>Tunnin ajattelukysymys:</strong> Mihin aineisto kulkee, millä ehdoilla sitä käsitellään ja saako ratkaisua käyttää?</p>
+</blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
-<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST: AI Risk Management Framework</a></li>
-<li><a href="https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence">UNESCO: Recommendation on the Ethics of Artificial Intelligence</a></li>
-<li><a href="https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_en">European Commission: GDPR principles</a></li>
+<li><a href="https://www.edpb.europa.eu/topics/international-transfers-and-international-cooperation_en">European Data Protection Board: International transfers and international cooperation</a></li>
+<li><a href="https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_fi">Euroopan komissio: Mitä henkilötietoja voidaan käsitellä ja millä edellytyksillä?</a></li>
+<li><a href="https://opensource.org/ai/open-source-ai-definition">Open Source Initiative: The Open Source AI Definition 1.0</a></li>
 </ul>
-<p>Tarkistettu 15.7.2026.</p></div><div id="panel-lesson-11-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-11-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Muut mallit ja tietosuoja</h1>
-<p>Tällä välilehdellä pääset harjoittelemaan juuri lukemaasi: mitä muita tekoälymalleja on olemassa ja miten datan sijainti vaikuttaa siihen, mitä työkalua kannattaa käyttää. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Tehtävät etenevät mallien ja käsitteiden kertaamisesta kohti tilanteita, joissa arvioit itse, milloin edullinen pilvimalli riittää ja milloin henkilötiedot vaativat paikallisen tai hyväksytyn työkalun.</p>
-<h2>Tehtävä 1/4 — mallit ja käsitteet</h2>
-<p>Aloitetaan tunnin malleista ja käsitteistä, ennen kuin siirrytään datan sijaintiin ja päätöksiin.</p>
+<p>Tarkistettu 20.7.2026.</p></div><div id="panel-lesson-11-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-11-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Aineiston reitti ja käyttöpäätös</h1>
+<p>Näissä tehtävissä harjoittelet tunnin ydintaitoa: tunnistat, mitä aineistoa käsitellään, seuraat sen reittiä ja teet perustellun käyttöpäätöksen.</p>
+<h2>Tehtävä 1/4 — mikä järjestelmän osa?</h2>
 <div class="task-widget" data-ti="0"></div>
 
-<h2>Tehtävä 2/4 — myytinmurtaja</h2>
-<p>Jokaisen kysymyksen taustalla on yksi yleinen harhaluulo malleista, hinnasta tai tietosuojasta. Pohdi, mikä väite oikeasti pitää paikkansa.</p>
+<h2>Tehtävä 2/4 — päätös oikeassa järjestyksessä</h2>
 <div class="task-widget" data-ti="1"></div>
 
-<h2>Tehtävä 3/4 — minne tiedot menevät?</h2>
-<p>Nyt sovellat oppimaasi: sama teksti voi päätyä kolmeen eri määränpäähän. Ratkaisevaa on, siirtyykö data EU:n ulkopuolelle ja onko mukana henkilötietoja.</p>
+<h2>Tehtävä 3/4 — mitä aineisto sisältää?</h2>
 <div class="task-widget" data-ti="2"></div>
 
-<h2>Tehtävä 4/4 — halpa, nopea vai turvallinen?</h2>
-<p>Viimeinen tehtävä kokoaa opitun yhteen: työskentelet autokorjaamon tiskillä ja päätät itse, milloin edullinen pilvimalli riittää ja milloin data vaatii paikallisen tai hyväksytyn työkalun.</p>
+<h2>Tehtävä 4/4 — käytä, rajaa vai pysähdy?</h2>
 <div class="task-widget" data-ti="3"></div></div><div id="panel-lesson-11-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-11-sanasto" data-tab="sanasto" hidden><h1>Sanasto</h1>
-<h2>Tekoälymalli</h2>
-<p>Tietokoneen ohjelma, joka osaa kirjoittaa, selittää ja vastata kysymyksiin. Kuten ihmisiä on erilaisia (nopea, hidas, tarkka), malleja on erilaisia.</p>
-<h2>Avoin malli</h2>
-<p>Tekoälymalli, jonka voit ladata ja ajaa omalla tietokoneella. Voit nähdä koodin ja muuttaa sitä. Esimerkiksi Llama ja Mistral.</p>
-<h2>Suljettu malli</h2>
-<p>Tekoälymalli, jota käytät internetissä toimivan palvelun välityksellä. Et käsittele mallin koodia, vaan annat sille pyyntöjä käyttöliittymässä. Esimerkkejä ovat ChatGPT, Claude ja Gemini.</p>
+<h2>Kielimalli</h2>
+<p>Järjestelmän laskennallinen osa, joka tuottaa tekstiä, koodia tai muuta sisältöä saamansa syötteen perusteella. Kielimalli ei ole sama asia kuin käyttäjälle näkyvä palvelu.</p>
+<h2>Tekoälypalvelu</h2>
+<p>Käyttöliittymä tai ohjelmointirajapinta, jonka kautta tekoälymallia käytetään. Palvelu määrittää esimerkiksi kirjautumisen, historian, tiedostojen käsittelyn ja käyttöehdot.</p>
+<h2>Käyttöympäristö</h2>
+<p>Tekninen ympäristö, jossa palvelu tai malli toimii. Se voi olla palveluntarjoajan pilvi, organisaation hallitsema ympäristö tai käyttäjän oma laite.</p>
 <h2>Pilvipalvelu</h2>
-<p>Palvelu, joka toimii internetissä yrityksen palvelimilla — ei omalla koneellasi. Kun käytät ChatGPT:tä, käytät pilvipalvelua.</p>
+<p>Verkon kautta käytettävä palvelu, jossa aineisto käsitellään palveluntarjoajan tai sen kumppanin järjestelmässä.</p>
+<h2>Organisaation hallittu palvelu</h2>
+<p>Palvelu, jonka käytöstä, asetuksista, käyttöoikeuksista ja sallituista käyttötarkoituksista organisaatio on tehnyt päätöksen.</p>
 <h2>Paikallinen ajo</h2>
-<p>Tekoälymallin ajaminen omalla tietokoneella, ei internetissä. Tiedot pysyvät sinulla, ne eivät lähde minnekään.</p>
-<h2>Tietosuoja</h2>
-<p>Säännöt siitä, mihin henkilötiedot voivat mennä ja kuka niitä voi nähdä. GDPR on tietosuojalaki.</p>
+<p>Mallin käyttäminen omalla laitteella tai organisaation omassa ympäristössä. Aineisto voi pysyä siellä, jos sovellus ei lähetä sitä ulkoisiin palveluihin.</p>
+<h2>Datavirta</h2>
+<p>Aineiston reitti käyttäjältä eri järjestelmien kautta käsittelyyn, mahdolliseen säilytykseen ja takaisin käyttäjälle.</p>
+<h2>Henkilötieto</h2>
+<p>Tieto, joka liittyy tunnistettuun tai tunnistettavissa olevaan ihmiseen. Esimerkiksi nimi, sähköpostiosoite ja asiakasnumero voivat olla henkilötietoja.</p>
+<h2>Erityiset henkilötietoryhmät</h2>
+<p>Erityistä suojaa vaativia henkilötietoja, kuten terveyttä, uskontoa tai poliittisia mielipiteitä koskevat tiedot.</p>
+<h2>Tietojen minimointi</h2>
+<p>Periaate, jonka mukaan tehtävässä käsitellään vain tarkoituksen kannalta tarpeellisia henkilötietoja.</p>
+<h2>Anonymisointi</h2>
+<p>Tietojen muokkaaminen niin, ettei ihmistä voida enää tunnistaa suoraan eikä epäsuorasti. Pelkkä nimen poistaminen ei aina anonymisoi aineistoa.</p>
 <h2>GDPR</h2>
-<p>Euroopan tietosuojalaki. Se vaatii, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Siirto EU:n ulkopuolelle on mahdollista vain erityisin suojatoimin.</p>
-<h2>API (ohjelmointirajapinta)</h2>
-<p>Tapa, jolla oma ohjelma voi pyytää tekoälyä tekemään jotakin ilman selainta. Selaimessa käytät valmista käyttöliittymää; API:n kautta ohjelmasi keskustelee mallin kanssa suoraan.</p>
-<h2>Hinta per kysymys</h2>
-<p>Jotkut mallit maksavat jokaisesta kysymyksestä. ChatGPT voi maksaa. Llama omalla koneella ei maksa.</p>
-<h2>Nopeus</h2>
-<p>Kuinka nopeasti malli vastaa. Pilvipalvelut ovat nopeampia, oma tietokone voi olla hitaampi.</p>
-<h2>Parametri</h2>
-<p>Numero, joka kuvailee mallin kokoa. Suurempi numero = isompi ja yleensä parempi malli. Mutta hitaampi ja kalliimpi.</p>
-<hr /></div><div id="panel-lesson-11-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-11-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Muitakin malleja kuin</title>
-<defs><pattern id="l11g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g1)"/>
-<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
+<p>EU:n yleinen tietosuoja-asetus. Se säätelee henkilötietojen lainmukaista, turvallista ja läpinäkyvää käsittelyä.</p>
+<hr /></div><div id="panel-lesson-11-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-11-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/10: Minne aineistosi menee?</title>
+<defs><pattern id="l11n1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n1)"/><rect width="12" height="540" fill="#863FC4"/>
 <text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">02 · KÄYTTÖ · OPPITUNTI 11</text>
-<text x="74" y="242" font-size="50" font-weight="800" fill="#1B2336">Muitakin malleja kuin</text>
-<text x="74" y="300" font-size="50" font-weight="800" fill="#1B2336">ChatGPT ja Claude</text>
-<text x="74" y="352" font-size="24" fill="#5A6478">Gemini, DeepSeek, avoimet ja paikalliset mallit</text>
-<g transform="translate(648,196)">
-<rect x="0" y="0" width="116" height="100" rx="20" fill="#F4EFFC" stroke="#863FC4" stroke-width="3"/>
-<circle cx="58" cy="44" r="20" fill="none" stroke="#863FC4" stroke-width="3"/><path d="M58 30 V44 L70 52" stroke="#863FC4" stroke-width="3" fill="none" stroke-linecap="round"/>
-<text x="58" y="128" text-anchor="middle" font-size="14" font-weight="600" fill="#6A309D">pilvi</text></g>
-<g transform="translate(800,196)">
-<rect x="0" y="0" width="116" height="100" rx="22" fill="#F0F9F4" stroke="#2F9E69" stroke-width="3"/>
-<rect x="34" y="30" width="48" height="34" rx="4" fill="none" stroke="#2F9E69" stroke-width="3"/><rect x="46" y="64" width="24" height="6" fill="#2F9E69"/><path d="M40 76 H76" stroke="#2F9E69" stroke-width="3" stroke-linecap="round"/>
-<text x="58" y="128" text-anchor="middle" font-size="14" font-weight="600" fill="#247A52">oma kone</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 13</text>
+<text x="74" y="226" font-size="50" font-weight="800" fill="#1B2336">Minne aineistosi menee?</text>
+<text x="74" y="280" font-size="27" fill="#5A6478">Pilvipalvelu, paikallinen ajo ja tietosuoja</text>
+<g transform="translate(74,340)">
+<rect width="812" height="92" rx="18" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
+<text x="30" y="40" font-size="19" font-weight="700" fill="#6A309D">Tunnin kysymys</text>
+<text x="30" y="69" font-size="20" fill="#1B2336">Mihin aineisto kulkee, millä ehdoilla — ja saako ratkaisua käyttää?</text>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">1 / 10</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/13: Tekoälykenttä on laajempi</title>
-<defs><pattern id="l11g2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g2)"/>
-<text x="74" y="104" font-size="40" font-weight="800" fill="#1B2336">Tekoälykenttä on laajempi</text>
-<rect x="74" y="146" width="812" height="78" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<text x="100" y="184" font-size="21" fill="#6A309D">ChatGPT ja Claude ovat tunnettuja — mutta eivät ainoita.</text>
-<text x="100" y="212" font-size="21" fill="#6A309D">Jokaisella mallilla on oma yritys, hinta ja tietosuojakäytäntö.</text>
-<text x="74" y="282" font-size="20" font-weight="700" fill="#1B2336">Eri tilanteet vaativat eri mallin</text>
-<g transform="translate(74,308)">
-<rect x="0" y="0" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,26)" fill="none" stroke="#0E9AA7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14 L17 2 L31 14 M7 11 V28 H27 V11"/></g>
-<text x="68" y="46" font-size="20" font-weight="700" fill="#1B2336">Halvin</text>
-<text x="24" y="92" font-size="16" fill="#3A4253">Kun budjetti on tiukka</text>
-<text x="24" y="118" font-size="16" fill="#3A4253">ja käyttöä on paljon.</text></g>
-<g transform="translate(351,308)">
-<rect x="0" y="0" width="258" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,24)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18 L13 10 L13 22 L21 14"/><path d="M2 28 H30"/></g>
-<text x="68" y="46" font-size="20" font-weight="700" fill="#1B2336">Nopein</text>
-<text x="24" y="92" font-size="16" fill="#3A4253">Kun vastaus tarvitaan</text>
-<text x="24" y="118" font-size="16" fill="#3A4253">heti.</text></g>
-<g transform="translate(628,308)">
-<rect x="0" y="0" width="258" height="148" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<g transform="translate(24,22)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2 L29 8 V18 C29 26 23 31 16 33 C9 31 3 26 3 18 V8 Z"/><path d="M11 17 l4 4 l7 -8"/></g>
-<text x="68" y="46" font-size="20" font-weight="700" fill="#247A52">Turvallisin</text>
-<text x="24" y="92" font-size="16" fill="#3A4253">Esim. oppilaiden esseet</text>
-<text x="24" y="118" font-size="16" fill="#3A4253">pysyvät omassa hallussa.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/10: Kolme eri asiaa</title>
+<defs><pattern id="l11n2" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n2)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Kolme eri asiaa</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Käyttöpäätös menee pieleen, jos nämä sekoitetaan keskenään.</text>
+<g transform="translate(74,176)">
+<rect width="244" height="230" rx="18" fill="#F4EFFC" stroke="#D7C5F0" stroke-width="2"/>
+<circle cx="42" cy="44" r="22" fill="#863FC4"/><text x="42" y="51" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">1</text>
+<text x="76" y="52" font-size="23" font-weight="800" fill="#6A309D">Kielimalli</text>
+<text x="24" y="102" font-size="17" fill="#3A4253">Tuottaa sisältöä</text>
+<text x="24" y="130" font-size="17" fill="#3A4253">saamansa syötteen</text>
+<text x="24" y="158" font-size="17" fill="#3A4253">perusteella.</text>
+<text x="24" y="202" font-size="15" fill="#6A309D" font-weight="700">Ei ole koko palvelu.</text>
+</g>
+<g transform="translate(358,176)">
+<rect width="244" height="230" rx="18" fill="#EFF7FF" stroke="#C9DDF3" stroke-width="2"/>
+<circle cx="42" cy="44" r="22" fill="#3D76C9"/><text x="42" y="51" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">2</text>
+<text x="76" y="52" font-size="23" font-weight="800" fill="#285EAA">Palvelu</text>
+<text x="24" y="102" font-size="17" fill="#3A4253">Käyttöliittymä,</text>
+<text x="24" y="130" font-size="17" fill="#3A4253">historia, tiedostot</text>
+<text x="24" y="158" font-size="17" fill="#3A4253">ja käyttöehdot.</text>
+<text x="24" y="202" font-size="15" fill="#285EAA" font-weight="700">Määrittää käyttötavan.</text>
+</g>
+<g transform="translate(642,176)">
+<rect width="244" height="230" rx="18" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="42" cy="44" r="22" fill="#2F9E69"/><text x="42" y="51" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">3</text>
+<text x="76" y="52" font-size="23" font-weight="800" fill="#247A52">Ympäristö</text>
+<text x="24" y="102" font-size="17" fill="#3A4253">Missä käsittely</text>
+<text x="24" y="130" font-size="17" fill="#3A4253">tapahtuu ja kuka</text>
+<text x="24" y="158" font-size="17" fill="#3A4253">sitä hallitsee?</text>
+<text x="24" y="202" font-size="15" fill="#247A52" font-weight="700">Määrittää datan reitin.</text>
+</g>
+<rect x="188" y="438" width="584" height="46" rx="23" fill="#1B2336"/>
+<text x="480" y="467" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Päätös tehdään koko toteutuksesta — ei pelkän mallin nimestä.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 10</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/13: Googlen Gemini</title>
-<defs><pattern id="l11g3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g3)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Googlen Gemini</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Googlen oma malli — kytketty tiiviisti Googlen palveluihin.</text>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/10: Seuraa aineiston datavirtaa</title>
+<defs><pattern id="l11n3" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n3)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Seuraa aineiston datavirtaa</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Datavirta näyttää, mitä aineistolle tapahtuu lähettämisen jälkeen.</text>
+<g transform="translate(54,204)">
+<g><circle cx="72" cy="58" r="34" fill="#863FC4"/><text x="72" y="66" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">1</text><text x="72" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Aineisto</text><text x="72" y="142" text-anchor="middle" font-size="14" fill="#5A6478">Mitä lähetät?</text></g>
+<path d="M116 58 H184" stroke="#C7CDDA" stroke-width="3"/><path d="M184 58 l-12 -7 v14 z" fill="#C7CDDA"/>
+<g transform="translate(184)"><circle cx="72" cy="58" r="34" fill="#3D76C9"/><text x="72" y="66" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">2</text><text x="72" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Siirto</text><text x="72" y="142" text-anchor="middle" font-size="14" fill="#5A6478">Poistuuko laitteelta?</text></g>
+<path d="M300 58 H368" stroke="#C7CDDA" stroke-width="3"/><path d="M368 58 l-12 -7 v14 z" fill="#C7CDDA"/>
+<g transform="translate(368)"><circle cx="72" cy="58" r="34" fill="#0E9AA7"/><text x="72" y="66" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">3</text><text x="72" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Käsittely</text><text x="72" y="142" text-anchor="middle" font-size="14" fill="#5A6478">Kuka ja missä?</text></g>
+<path d="M484 58 H552" stroke="#C7CDDA" stroke-width="3"/><path d="M552 58 l-12 -7 v14 z" fill="#C7CDDA"/>
+<g transform="translate(552)"><circle cx="72" cy="58" r="34" fill="#C79100"/><text x="72" y="66" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">4</text><text x="72" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Säilytys</text><text x="72" y="142" text-anchor="middle" font-size="14" fill="#5A6478">Kauanko, mihin?</text></g>
+<path d="M668 58 H736" stroke="#C7CDDA" stroke-width="3"/><path d="M736 58 l-12 -7 v14 z" fill="#C7CDDA"/>
+<g transform="translate(736)"><circle cx="72" cy="58" r="34" fill="#2F9E69"/><text x="72" y="66" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">5</text><text x="72" y="118" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2336">Jatkokäyttö</text><text x="72" y="142" text-anchor="middle" font-size="14" fill="#5A6478">Mihin muuhun?</text></g>
+</g>
+<rect x="74" y="388" width="812" height="80" rx="14" fill="#FFF7E4" stroke="#E7CC81" stroke-width="2"/>
+<text x="102" y="421" font-size="18" font-weight="800" fill="#8B6700">Jos jokin kohta puuttuu, älä arvaa.</text>
+<text x="102" y="450" font-size="17" fill="#3A4253">Merkitse se selvitettäväksi ja rajaa käyttöä siihen asti.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/10: Mitä aineisto sisältää?</title>
+<defs><pattern id="l11n4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n4)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Mitä aineisto sisältää?</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Sama työkalu voi sopia yhteen tehtävään ja olla väärä toiseen.</text>
 <g transform="translate(74,164)">
-<rect x="0" y="0" width="392" height="130" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="26" y="44" font-size="21" font-weight="700" fill="#1B2336">Eri versioita</text>
-<circle cx="36" cy="78" r="6" fill="#863FC4"/><text x="56" y="84" font-size="17" fill="#3A4253">Gemini Flash — nopea, kevyet tehtävät</text>
-<circle cx="36" cy="108" r="6" fill="#863FC4"/><text x="56" y="114" font-size="17" fill="#3A4253">Gemini Pro — nopeus ja kyky</text></g>
+<rect width="392" height="138" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="34" cy="36" r="17" fill="#2F9E69"/><text x="34" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">1</text>
+<text x="64" y="43" font-size="21" font-weight="800" fill="#247A52">Julkinen tai kuvitteellinen</text>
+<text x="24" y="82" font-size="16" fill="#3A4253">Julkaistu teksti tai itse keksitty tapaus.</text>
+<text x="24" y="112" font-size="15" fill="#247A52" font-weight="700">Pilvipalvelu voi sopia.</text>
+</g>
 <g transform="translate(494,164)">
-<rect x="0" y="0" width="392" height="130" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="26" y="44" font-size="21" font-weight="700" fill="#1B2336">Miten käytät?</text>
-<text x="26" y="80" font-size="17" fill="#3A4253">Google AI Studio toimii selaimessa.</text>
-<text x="26" y="108" font-size="17" fill="#3A4253">Kirjaudut Google-tilillä ja kokeilet.</text></g>
-<g transform="translate(74,318)">
-<rect x="0" y="0" width="392" height="150" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<circle cx="34" cy="40" r="17" fill="#DFF3E8"/><path d="M27 40 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="64" y="46" font-size="20" font-weight="700" fill="#247A52">Vahvuudet</text>
-<text x="24" y="86" font-size="16" fill="#3A4253">Näytä kuva, kysy "mitä tässä näkyy?"</text>
-<text x="24" y="112" font-size="16" fill="#3A4253">Kytketty Gmailiin ja Driveen</text>
-<text x="24" y="138" font-size="16" fill="#3A4253">Hinnaltaan kilpailukykyinen</text></g>
-<g transform="translate(494,318)">
-<rect x="0" y="0" width="392" height="150" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<circle cx="34" cy="40" r="17" fill="#FBE6D8"/><path d="M27 47 l7 -14 l7 14 M34 39 v1" stroke="#C26B2E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="64" y="46" font-size="20" font-weight="700" fill="#A35A22">Heikkoudet</text>
-<text x="24" y="86" font-size="16" fill="#3A4253">Voi kieltäytyä tiukkojen sääntöjen takia</text>
-<text x="24" y="112" font-size="16" fill="#3A4253">"En voi auttaa tässä" -vastaukset</text>
-<text x="24" y="138" font-size="16" fill="#3A4253">Koodaustehtävät kannattaa vertailla</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/13: DeepSeek — edullinen Kiinasta</title>
-<defs><pattern id="l11g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g4)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">DeepSeek — edullinen Kiinasta</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Teknisesti vahva, mutta tietosuoja rajoittaa käyttöä EU:ssa.</text>
-<g transform="translate(74,164)">
-<rect x="0" y="0" width="392" height="146" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<circle cx="34" cy="40" r="17" fill="#DFF3E8"/><path d="M27 40 l5 5 l9 -10" stroke="#2F9E69" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="64" y="46" font-size="20" font-weight="700" fill="#247A52">Hyvät puolet</text>
-<text x="24" y="86" font-size="16" fill="#3A4253">Erittäin edullinen</text>
-<text x="24" y="112" font-size="16" fill="#3A4253">Nopea ja vahva ohjelmoinnissa</text>
-<text x="24" y="136" font-size="16" fill="#3A4253">Pärjännyt testeissä hyvin</text></g>
-<g transform="translate(494,164)">
-<rect x="0" y="0" width="392" height="146" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<circle cx="34" cy="40" r="17" fill="#FBE6D8"/><path d="M27 47 l7 -14 l7 14 M34 39 v1" stroke="#C26B2E" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="64" y="46" font-size="20" font-weight="700" fill="#A35A22">Iso ongelma: tietosuoja</text>
-<text x="24" y="86" font-size="16" fill="#3A4253">Tieto voi siirtyä Kiinan palvelimille</text>
-<text x="24" y="112" font-size="16" fill="#3A4253">Kiinalaisen lainsäädännön piiriin</text>
-<text x="24" y="136" font-size="16" fill="#3A4253">Riski henkilö- ja asiakastiedoissa</text></g>
-<rect x="74" y="334" width="812" height="134" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="100" y="368" font-size="18" font-weight="700" fill="#5A6478">Käytännössä</text>
-<circle cx="110" cy="398" r="5" fill="#C79100"/><text x="128" y="404" font-size="16" fill="#3A4253">Opettaja: oppilaiden esseet voivat rikkoa tietosuojasääntöjä</text>
-<circle cx="110" cy="426" r="5" fill="#C79100"/><text x="128" y="432" font-size="16" fill="#3A4253">Sairaala: potilastietoja ei saa käsitellä ilman laillista perustetta</text>
-<circle cx="110" cy="454" r="5" fill="#C79100"/><text x="128" y="460" font-size="16" fill="#3A4253">Yritys: asiakastiedot ja liikesalaisuudet riskialttiita</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/13: Avoimet mallit</title>
-<defs><pattern id="l11g5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g5)"/>
-<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Avoimet mallit</text>
-<rect x="74" y="142" width="812" height="74" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<text x="100" y="178" font-size="20" fill="#6A309D">Avoin malli ei tarkoita vain ilmaista — sen voi ladata ja ajaa itse</text>
-<text x="100" y="204" font-size="20" fill="#6A309D">omalla tietokoneella tai omassa palvelinympäristössä.</text>
-<g transform="translate(74,248)">
-<rect x="0" y="0" width="392" height="220" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(26,26)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14 L17 2 L31 14 M7 11 V28 H27 V11"/></g>
-<text x="74" y="48" font-size="23" font-weight="800" fill="#1B2336">Meta Llama</text>
-<text x="26" y="92" font-size="16" fill="#3A4253">Metan (ent. Facebook) malliperhe.</text>
-<text x="26" y="118" font-size="16" fill="#3A4253">Ladattavissa ja ajettavissa omassa</text>
-<text x="26" y="144" font-size="16" fill="#3A4253">ympäristössä lisenssiehtojen mukaan.</text>
-<text x="26" y="184" font-size="15" font-weight="700" fill="#247A52">Kilpailukykyinen pilvipalveluiden kanssa.</text></g>
-<g transform="translate(494,248)">
-<rect x="0" y="0" width="392" height="220" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(26,24)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="14"/><path d="M16 2 V30 M2 16 H30 M6 7 Q16 14 26 7 M6 25 Q16 18 26 25"/></g>
-<text x="74" y="48" font-size="23" font-weight="800" fill="#1B2336">Mistral</text>
-<text x="26" y="92" font-size="16" fill="#3A4253">Ranskalainen, eurooppalainen</text>
-<text x="26" y="118" font-size="16" fill="#3A4253">vaihtoehto.</text>
-<text x="26" y="144" font-size="16" fill="#3A4253">Osa malleista soveltuu</text>
-<text x="26" y="170" font-size="16" fill="#3A4253">paikalliseen käyttöön.</text>
-<text x="26" y="204" font-size="15" font-weight="700" fill="#247A52">Kiinnostava EU-ratkaisuna.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Näin ajat mallin omalla koneella</title>
-<defs><pattern id="l11g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g6)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Näin ajat mallin omalla koneella</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Kaksi ohjelmaa helpottaa asennusta ja käyttöä.</text>
-<g transform="translate(74,166)">
-<rect x="0" y="0" width="392" height="148" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,26)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="32" height="26" rx="4"/><path d="M9 11 l5 4 l-5 4 M18 19 H26"/></g>
-<text x="74" y="40" font-size="22" font-weight="800" fill="#1B2336">Ollama</text>
-<text x="74" y="68" font-size="16" fill="#5A6478">Suoraviivainen, komentorivipohjainen</text>
-<text x="24" y="106" font-size="16" fill="#3A4253">Asennat ohjelman, valitset mallin</text>
-<text x="24" y="132" font-size="16" fill="#3A4253">(esim. Llaman) ja ajat sen koneella.</text></g>
-<g transform="translate(494,166)">
-<rect x="0" y="0" width="392" height="148" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(24,26)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="32" height="28" rx="6"/><path d="M9 11 H27 M9 18 H22 M9 25 H18"/></g>
-<text x="74" y="40" font-size="22" font-weight="800" fill="#1B2336">LM Studio</text>
-<text x="74" y="68" font-size="16" fill="#5A6478">ChatGPT:tä muistuttava ikkuna</text>
-<text x="24" y="106" font-size="16" fill="#3A4253">Helpompi, jos et ole tottunut</text>
-<text x="24" y="132" font-size="16" fill="#3A4253">komentorivin käyttöön.</text></g>
-<text x="74" y="362" font-size="20" font-weight="700" fill="#1B2336">Kolme syytä valita paikallinen malli</text>
-<g transform="translate(74,382)">
-<rect x="0" y="0" width="258" height="86" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="20" y="38" font-size="19" font-weight="700" fill="#247A52">Yksityisyys</text>
-<text x="20" y="66" font-size="15" fill="#3A4253">Tieto pysyy laitteella</text></g>
-<g transform="translate(351,382)">
-<rect x="0" y="0" width="258" height="86" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="20" y="38" font-size="19" font-weight="700" fill="#247A52">Kustannukset</text>
-<text x="20" y="66" font-size="15" fill="#3A4253">Ei maksua per kysymys</text></g>
-<g transform="translate(628,382)">
-<rect x="0" y="0" width="258" height="86" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="20" y="38" font-size="19" font-weight="700" fill="#247A52">Kontrolli</text>
-<text x="20" y="66" font-size="15" fill="#3A4253">Hallitset missä malli toimii</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Paikallisen mallin kääntöpuoli</title>
-<defs><pattern id="l11g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g7)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Paikallisen mallin kääntöpuoli</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Yksityisyydestä maksetaan nopeudella ja laitevaatimuksilla.</text>
-<g transform="translate(74,168)">
-<rect x="0" y="0" width="392" height="300" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<g transform="translate(26,28)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="34" height="22" rx="3"/><path d="M9 12 H29 M9 18 H22"/><path d="M14 28 V33 M24 28 V33 M9 33 H29"/></g>
-<text x="80" y="46" font-size="22" font-weight="800" fill="#A35A22">Laitteisto</text>
-<text x="26" y="92" font-size="16" fill="#3A4253">Vaatii riittävän tehokkaan koneen.</text>
-<text x="26" y="124" font-size="16" fill="#3A4253">Vanha kannettava voi olla liian</text>
-<text x="26" y="150" font-size="16" fill="#3A4253">hidas tai malli ei mahdu muistiin.</text>
-<text x="26" y="200" font-size="16" fill="#5A6478">Asennus ja säätö vievät aikaa.</text></g>
-<g transform="translate(494,168)">
-<rect x="0" y="0" width="392" height="300" rx="16" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<g transform="translate(26,26)" fill="none" stroke="#C26B2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="18" r="15"/><path d="M17 9 V18 L23 24"/></g>
-<text x="80" y="46" font-size="22" font-weight="800" fill="#A35A22">Nopeus</text>
-<text x="26" y="92" font-size="16" fill="#3A4253">Vastaukset voivat olla hitaampia</text>
-<text x="26" y="118" font-size="16" fill="#3A4253">kuin pilvipalveluissa.</text>
-<text x="26" y="160" font-size="16" fill="#3A4253">Pilvipalveluilla on käytössään</text>
-<text x="26" y="186" font-size="16" fill="#3A4253">suuria laskentaresursseja.</text>
-<text x="26" y="244" font-size="16" fill="#5A6478" font-style="italic">Monelle yksityisyys silti tärkein.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/13: Miten valita malli?</title>
-<defs><pattern id="l11g8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g8)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Miten valita malli?</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Älä kysy "mikä on paras" — kysy "mikä sopii tähän tilanteeseen".</text>
-<g transform="translate(74,162)">
-<rect x="0" y="0" width="812" height="70" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="44" cy="35" r="20" fill="#F4EFFC"/><text x="44" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#863FC4">1</text>
-<text x="86" y="32" font-size="20" font-weight="700" fill="#1B2336">Mitä haluat tehdä?</text>
-<text x="86" y="56" font-size="16" fill="#5A6478">Koodi, teksti, kuva? Eri mallit ovat vahvoja eri asioissa.</text></g>
-<g transform="translate(74,242)">
-<rect x="0" y="0" width="812" height="70" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="44" cy="35" r="20" fill="#F4EFFC"/><text x="44" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#863FC4">2</text>
-<text x="86" y="32" font-size="20" font-weight="700" fill="#1B2336">Kuinka paljon rahaa on?</text>
-<text x="86" y="56" font-size="16" fill="#5A6478">Esim. 500 €/vuosi: osa maksuton, osa maksullinen, osa rajattu.</text></g>
+<rect width="392" height="138" rx="16" fill="#EFF7FF" stroke="#C9DDF3" stroke-width="2"/>
+<circle cx="34" cy="36" r="17" fill="#3D76C9"/><text x="34" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">2</text>
+<text x="64" y="43" font-size="21" font-weight="800" fill="#285EAA">Organisaation sisäinen</text>
+<text x="24" y="82" font-size="16" fill="#3A4253">Muistio, suunnitelma tai tuoteidea.</text>
+<text x="24" y="112" font-size="15" fill="#285EAA" font-weight="700">Tarkista ohje ja hyväksytty palvelu.</text>
+</g>
 <g transform="translate(74,322)">
-<rect x="0" y="0" width="812" height="70" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="44" cy="35" r="20" fill="#FFF3D6"/><text x="44" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#C79100">3</text>
-<text x="86" y="32" font-size="20" font-weight="700" fill="#1B2336">Miten tärkeää tietosuoja on?</text>
-<text x="86" y="56" font-size="16" fill="#5A6478">Oma kone, EU-alue vai organisaation hyväksymä palvelu?</text></g>
-<g transform="translate(74,402)">
-<rect x="0" y="0" width="812" height="70" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<circle cx="44" cy="35" r="20" fill="#FFF3D6"/><text x="44" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#C79100">4</text>
-<text x="86" y="32" font-size="20" font-weight="700" fill="#1B2336">Kuinka tärkeää nopeus ja helppous ovat?</text>
-<text x="86" y="56" font-size="16" fill="#5A6478">Heti vai voitko käyttää aikaa asennukseen ja säätämiseen?</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Minne tiedot menevät?</title>
-<defs><pattern id="l11g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g9)"/>
-<text x="74" y="84" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">TIETOSUOJA</text>
-<text x="74" y="124" font-size="36" font-weight="800" fill="#1B2336">Minne tiedot menevät?</text>
-<text x="74" y="156" font-size="18" fill="#5A6478">Sama viesti, kolme määränpäätä — palvelimen sijainti ratkaisee säännöt.</text>
-<g transform="translate(74,196)">
-<rect x="0" y="60" width="150" height="92" rx="14" fill="#11182A"/>
-<text x="75" y="92" text-anchor="middle" font-size="15" letter-spacing="2" fill="#EAEEF8" font-family="ui-monospace,monospace">SINÄ</text>
-<rect x="22" y="106" width="106" height="32" rx="8" fill="#0E9AA7"/><text x="75" y="127" text-anchor="middle" font-size="13" fill="#06212A">oppilaan essee.txt</text></g>
-<path d="M232 250 L356 226" stroke="#C2CAD9" stroke-width="2"/><path d="M363 224 L350 222 L353 232 Z" fill="#C2CAD9"/>
-<path d="M232 272 L356 310" stroke="#C2CAD9" stroke-width="2"/>
-<path d="M232 294 L356 392" stroke="#C2CAD9" stroke-width="2"/>
-<g transform="translate(366,196)">
-<rect x="0" y="0" width="520" height="62" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<g transform="translate(22,18)" fill="none" stroke="#9AA6BD" stroke-width="2.2" stroke-linecap="round"><path d="M3 14 L17 2 L31 14 M7 11 V26 H27 V11"/></g>
-<text x="76" y="28" font-size="18" font-weight="700" fill="#1B2336">Pilvipalvelin · USA</text>
-<text x="76" y="50" font-size="15" fill="#5A6478">Käyttöehdot ratkaisevat — tarkista ennen käyttöä</text></g>
-<g transform="translate(366,278)">
-<rect x="0" y="0" width="520" height="62" rx="12" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<g transform="translate(22,18)" fill="none" stroke="#C26B2E" stroke-width="2.2" stroke-linecap="round"><path d="M3 14 L17 2 L31 14 M7 11 V26 H27 V11"/></g>
-<text x="76" y="28" font-size="18" font-weight="700" fill="#A35A22">Pilvipalvelin · Kiina — GDPR-riski</text>
-<text x="76" y="50" font-size="15" fill="#5A6478">Eri lainsäädäntö, siirto EU:n ulkopuolelle</text></g>
-<g transform="translate(366,360)">
-<rect x="0" y="0" width="520" height="62" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2.5"/>
-<g transform="translate(22,16)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="26" height="20" rx="3"/><path d="M11 26 H23 M17 22 V26"/></g>
-<text x="76" y="28" font-size="18" font-weight="700" fill="#247A52">Oma kone · paikallinen malli</text>
-<text x="76" y="50" font-size="15" fill="#5A6478">Data ei poistu laitteeltasi</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Missä palvelimet sijaitsevat?</title>
-<defs><pattern id="l11g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g10)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Missä palvelimet sijaitsevat?</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Sijainti määrää, mitä lakeja ja ehtoja dataasi sovelletaan.</text>
-<g font-size="17">
-<rect x="74" y="158" width="812" height="40" rx="8" fill="#1B2336"/>
-<text x="92" y="184" font-size="15" letter-spacing="1" fill="#FFFFFF" font-family="ui-monospace,monospace">MALLI</text>
-<text x="320" y="184" font-size="15" letter-spacing="1" fill="#FFFFFF" font-family="ui-monospace,monospace">PALVELIMET</text>
-<text x="600" y="184" font-size="15" letter-spacing="1" fill="#FFFFFF" font-family="ui-monospace,monospace">HUOMIO</text>
-<rect x="74" y="200" width="812" height="42" fill="#FAFBFE" stroke="#EDF0F7" stroke-width="1"/>
-<text x="92" y="227" font-weight="700" fill="#1B2336">ChatGPT · Claude</text><text x="320" y="227" fill="#5A6478">Useita, usein USA</text><text x="600" y="227" fill="#3A4253">Tarkista asetukset ja ohjeet</text>
-<rect x="74" y="244" width="812" height="42" fill="#FFFFFF" stroke="#EDF0F7" stroke-width="1"/>
-<text x="92" y="271" font-weight="700" fill="#1B2336">Gemini</text><text x="320" y="271" fill="#5A6478">Useita, myös Eurooppa</text><text x="600" y="271" fill="#3A4253">Alueellisia vaihtoehtoja</text>
-<rect x="74" y="288" width="812" height="42" fill="#FFF6F0" stroke="#EDF0F7" stroke-width="1"/>
-<text x="92" y="315" font-weight="700" fill="#A35A22">DeepSeek</text><text x="320" y="315" fill="#A35A22">Kiina</text><text x="600" y="315" fill="#3A4253">Henkilötiedot ongelma EU:ssa</text>
-<rect x="74" y="332" width="812" height="42" fill="#F0F9F4" stroke="#EDF0F7" stroke-width="1"/>
-<text x="92" y="359" font-weight="700" fill="#247A52">Llama (paikallinen)</text><text x="320" y="359" fill="#247A52">Oma kone tai palvelin</text><text x="600" y="359" fill="#3A4253">Tieto pysyy omassa ympäristössä</text>
-<rect x="74" y="376" width="812" height="42" fill="#F0F9F4" stroke="#EDF0F7" stroke-width="1"/>
-<text x="92" y="403" font-weight="700" fill="#247A52">Mistral (paikallinen)</text><text x="320" y="403" fill="#247A52">Oma kone tai palvelin</text><text x="600" y="403" fill="#3A4253">Tieto pysyy omassa ympäristössä</text>
+<rect width="392" height="138" rx="16" fill="#FFF7E4" stroke="#E7CC81" stroke-width="2"/>
+<circle cx="34" cy="36" r="17" fill="#C79100"/><text x="34" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">3</text>
+<text x="64" y="43" font-size="21" font-weight="800" fill="#8B6700">Henkilötieto</text>
+<text x="24" y="82" font-size="16" fill="#3A4253">Nimi, sähköposti tai tunnistettava palaute.</text>
+<text x="24" y="112" font-size="15" fill="#8B6700" font-weight="700">Minimoi ja selvitä käsittelyperuste.</text>
 </g>
-<text x="74" y="450" font-size="15" fill="#7E88A8" font-style="italic">Paikallinen pysyy hallussa vain, jos malli ajetaan aidosti paikallisesti ilman ulkoisia yhteyksiä.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: GDPR — Euroopan tietosuojalaki</title>
-<defs><pattern id="l11g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g11)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">GDPR — Euroopan tietosuojalaki</text>
-<rect x="74" y="138" width="812" height="100" rx="14" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<g transform="translate(102,164)" fill="none" stroke="#863FC4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 L42 11 V24 C42 38 33 46 22 50 C11 46 2 38 2 24 V11 Z"/><path d="M14 25 l6 6 l11 -13"/></g>
-<text x="170" y="180" font-size="19" fill="#6A309D">GDPR ei vaadi, että kaikki henkilötiedot pysyvät vain EU:ssa.</text>
-<text x="170" y="208" font-size="19" fill="#6A309D">Se vaatii, että niitä käsitellään lainmukaisesti, turvallisesti</text>
-<text x="170" y="230" font-size="19" fill="#6A309D">ja asianmukaisin suojatoimin. EU:n ulkopuolelle lisävaatimuksia.</text>
-<text x="74" y="284" font-size="19" fill="#5A6478">Henkilötietoja: nimi, sähköposti, henkilötunnus, oppilas- ja potilastiedot.</text>
-<g transform="translate(74,308)">
-<rect x="0" y="0" width="258" height="160" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<text x="24" y="42" font-size="20" font-weight="700" fill="#A35A22">Opettaja</text>
-<text x="24" y="80" font-size="15.5" fill="#3A4253">Älä analysoi oppilaiden</text>
-<text x="24" y="102" font-size="15.5" fill="#3A4253">esseitä DeepSeekillä, jos</text>
-<text x="24" y="124" font-size="15.5" fill="#3A4253">ne sisältävät henkilötietoja</text>
-<text x="24" y="146" font-size="15.5" fill="#3A4253">eikä palvelu ole hyväksytty.</text></g>
-<g transform="translate(351,308)">
-<rect x="0" y="0" width="258" height="160" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<text x="24" y="42" font-size="20" font-weight="700" fill="#A35A22">Lääkäri</text>
-<text x="24" y="80" font-size="15.5" fill="#3A4253">Älä syötä potilastietoja</text>
-<text x="24" y="102" font-size="15.5" fill="#3A4253">tekoälypalveluun ilman</text>
-<text x="24" y="124" font-size="15.5" fill="#3A4253">organisaation hyväksyntää</text>
-<text x="24" y="146" font-size="15.5" fill="#3A4253">ja laillista perustetta.</text></g>
-<g transform="translate(628,308)">
-<rect x="0" y="0" width="258" height="160" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
-<text x="24" y="42" font-size="20" font-weight="700" fill="#A35A22">Yritys</text>
-<text x="24" y="80" font-size="15.5" fill="#3A4253">Älä käytä asiakastietoja,</text>
-<text x="24" y="102" font-size="15.5" fill="#3A4253">jos et tiedä, mihin tiedot</text>
-<text x="24" y="124" font-size="15.5" fill="#3A4253">tallentuvat ja onko käyttö</text>
-<text x="24" y="146" font-size="15.5" fill="#3A4253">ohjeiden mukaista.</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 12/13: Hinta ja käyttö — mitä maksaa?</title>
-<defs><pattern id="l11g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g12)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Hinta ja käyttö — mitä maksaa?</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Hinnat ja rajat muuttuvat usein — tarkista ajantasaiset tiedot itse.</text>
-<g transform="translate(74,162)">
-<rect x="0" y="0" width="392" height="148" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="26" y="42" font-size="21" font-weight="700" fill="#1B2336">Pilvipalvelut</text>
-<text x="26" y="78" font-size="16" fill="#3A4253">ChatGPT, Claude, Gemini, DeepSeek</text>
-<text x="26" y="104" font-size="16" fill="#3A4253">Ilmaisia rajoitetusti, maksullisia</text>
-<text x="26" y="130" font-size="16" fill="#3A4253">versioita. Yleensä nopeita.</text></g>
-<g transform="translate(494,162)">
-<rect x="0" y="0" width="392" height="148" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="26" y="42" font-size="21" font-weight="700" fill="#247A52">Paikalliset mallit</text>
-<text x="26" y="78" font-size="16" fill="#3A4253">Llama, Mistral omassa ympäristössä</text>
-<text x="26" y="104" font-size="16" fill="#3A4253">Ei käyttömaksua, mutta vaatii</text>
-<text x="26" y="130" font-size="16" fill="#3A4253">laitteiston. Nopeus riippuu siitä.</text></g>
-<text x="74" y="356" font-size="20" font-weight="700" fill="#1B2336">Mitä tämä tarkoittaa?</text>
-<g transform="translate(74,376)">
-<rect x="0" y="0" width="392" height="92" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
-<text x="24" y="38" font-size="17" font-weight="700" fill="#6A309D">Pieni budjetti, ei arkaluontoista</text>
-<text x="24" y="68" font-size="16" fill="#1B2336">→ edulliset pilvipalvelut</text></g>
-<g transform="translate(494,376)">
-<rect x="0" y="0" width="392" height="92" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="24" y="38" font-size="17" font-weight="700" fill="#247A52">Yksityisyys tärkeää, tehokas kone</text>
-<text x="24" y="68" font-size="16" fill="#1B2336">→ paikallinen Llama tai Mistral</text></g>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">12 / 13</text>
-</svg></div>
-
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 13/13: Yhteenveto</title>
-<defs><pattern id="l11g13" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
-<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11g13)"/>
-<rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
-<text x="74" y="104" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
-<text x="74" y="140" font-size="19" fill="#5A6478">Ei ole yhtä parasta mallia — valinta riippuu aina tilanteesta.</text>
-<g font-size="16.5" fill="#3A4253">
-<rect x="74" y="166" width="392" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="197" r="6" fill="#863FC4"/><text x="118" y="192" font-weight="700" fill="#1B2336">Malleja on monia</text><text x="118" y="214">Gemini, DeepSeek, Llama, Mistral…</text>
-<rect x="494" y="166" width="392" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="197" r="6" fill="#863FC4"/><text x="538" y="192" font-weight="700" fill="#1B2336">Jokaisella omat vahvuudet</text><text x="538" y="214">Hinta, yksityisyys, integraatiot</text>
-<rect x="74" y="236" width="392" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="267" r="6" fill="#C79100"/><text x="118" y="262" font-weight="700" fill="#1B2336">Tietosuoja on tärkeää</text><text x="118" y="284">Tiedä, minne tiedot menevät</text>
-<rect x="494" y="236" width="392" height="62" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="267" r="6" fill="#C79100"/><text x="538" y="262" font-weight="700" fill="#1B2336">Tunne vaihtoehdot</text><text x="538" y="284">Työpaikalla voi olla omat säännöt</text>
+<g transform="translate(494,322)">
+<rect width="392" height="138" rx="16" fill="#FFF1EE" stroke="#EAB8AC" stroke-width="2"/>
+<circle cx="34" cy="36" r="17" fill="#C65F47"/><text x="34" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">4</text>
+<text x="64" y="43" font-size="21" font-weight="800" fill="#A84431">Erityistä suojaa vaativa</text>
+<text x="24" y="82" font-size="16" fill="#3A4253">Terveystieto, salasana tai liikesalaisuus.</text>
+<text x="24" y="112" font-size="15" fill="#A84431" font-weight="700">Älä syötä yleiseen palveluun.</text>
 </g>
-<rect x="74" y="320" width="812" height="148" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<g transform="translate(102,350)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="150" y="362" font-size="23" font-weight="800" fill="#247A52">Älä kysy "mikä on paras?"</text>
-<text x="150" y="396" font-size="21" fill="#1B2336">Kysy: "Mikä sopii parhaiten tähän käyttötilanteeseen?"</text>
-<text x="150" y="430" font-size="18" fill="#3A4253">Se on vastuullisen käyttäjän ajattelutapa — ja auttaa perustelemaan oman valinnan.</text>
-<text x="150" y="456" font-size="17" fill="#5A6478">Seuraavaksi opit tekemään tekoälylle tarkkoja ja hyödyllisiä ohjeita.</text>
-<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/10: Kolme käyttöympäristöä</title>
+<defs><pattern id="l11n5" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n5)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Kolme käyttöympäristöä</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Ympäristö muuttaa datavirtaa ja vastuiden jakautumista.</text>
+<g transform="translate(54,174)">
+<rect width="264" height="260" rx="18" fill="#FFF7E4" stroke="#E7CC81" stroke-width="2"/>
+<text x="24" y="48" font-size="22" font-weight="800" fill="#8B6700">Yleinen pilvipalvelu</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Helppo ottaa käyttöön.</text>
+<text x="24" y="124" font-size="16" fill="#3A4253">Aineisto siirtyy</text>
+<text x="24" y="150" font-size="16" fill="#3A4253">palveluntarjoajalle.</text>
+<rect x="24" y="188" width="216" height="48" rx="10" fill="#FFFFFF"/>
+<text x="36" y="209" font-size="13" font-weight="700" fill="#8B6700">TARKISTA</text>
+<text x="36" y="228" font-size="13" fill="#3A4253">ehdot, asetukset, aineisto</text>
+</g>
+<g transform="translate(348,174)">
+<rect width="264" height="260" rx="18" fill="#EFF7FF" stroke="#C9DDF3" stroke-width="2"/>
+<text x="24" y="48" font-size="22" font-weight="800" fill="#285EAA">Hallittu palvelu</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Sopimus, asetukset</text>
+<text x="24" y="124" font-size="16" fill="#3A4253">ja käyttöoikeudet</text>
+<text x="24" y="150" font-size="16" fill="#3A4253">on määritelty.</text>
+<rect x="24" y="188" width="216" height="48" rx="10" fill="#FFFFFF"/>
+<text x="36" y="209" font-size="13" font-weight="700" fill="#285EAA">TARKISTA</text>
+<text x="36" y="228" font-size="13" fill="#3A4253">hyväksytty käyttötarkoitus</text>
+</g>
+<g transform="translate(642,174)">
+<rect width="264" height="260" rx="18" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="24" y="48" font-size="22" font-weight="800" fill="#247A52">Paikallinen ajo</text>
+<text x="24" y="92" font-size="16" fill="#3A4253">Aineisto voi pysyä</text>
+<text x="24" y="124" font-size="16" fill="#3A4253">omalla laitteella tai</text>
+<text x="24" y="150" font-size="16" fill="#3A4253">hallinnassa.</text>
+<rect x="24" y="188" width="216" height="48" rx="10" fill="#FFFFFF"/>
+<text x="36" y="209" font-size="13" font-weight="700" fill="#247A52">TARKISTA</text>
+<text x="36" y="228" font-size="13" fill="#3A4253">tietoturva, yhteydet, lisenssi</text>
+</g>
+<text x="480" y="474" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2336">Mikään ympäristö ei ole turvallinen ilman rajattua käyttötarkoitusta.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/10: Kysy neljä kysymystä</title>
+<defs><pattern id="l11n6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n6)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Kysy neljä kysymystä</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Päätös alkaa aineistosta — ei työkalun nimestä.</text>
+<g transform="translate(74,166)">
+<rect width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="21" fill="#863FC4"/><text x="42" y="42" text-anchor="middle" font-size="21" font-weight="800" fill="#FFFFFF">1</text>
+<text x="82" y="42" font-size="21" font-weight="700" fill="#1B2336">Mitä tietoa aineisto sisältää?</text>
+</g>
+<g transform="translate(74,246)">
+<rect width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="21" fill="#3D76C9"/><text x="42" y="42" text-anchor="middle" font-size="21" font-weight="800" fill="#FFFFFF">2</text>
+<text x="82" y="42" font-size="21" font-weight="700" fill="#1B2336">Mihin aineisto kulkee ja mitä sille tapahtuu?</text>
+</g>
+<g transform="translate(74,326)">
+<rect width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<circle cx="42" cy="34" r="21" fill="#C79100"/><text x="42" y="42" text-anchor="middle" font-size="21" font-weight="800" fill="#FFFFFF">3</text>
+<text x="82" y="42" font-size="21" font-weight="700" fill="#1B2336">Millä ehdoilla ja oikeuksilla sitä käsitellään?</text>
+</g>
+<g transform="translate(74,406)">
+<rect width="812" height="68" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<circle cx="42" cy="34" r="21" fill="#2F9E69"/><text x="42" y="42" text-anchor="middle" font-size="21" font-weight="800" fill="#FFFFFF">4</text>
+<text x="82" y="42" font-size="21" font-weight="700" fill="#247A52">Onko ratkaisu hyväksytty juuri tähän käyttöön?</text>
+</g>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/10: Paikallinen ei ole turvallisuusleima</title>
+<defs><pattern id="l11n7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n7)"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Paikallinen ei ole turvallisuusleima</text>
+<text x="74" y="130" font-size="18" fill="#5A6478">Paikallinen ajo muuttaa yhtä osaa datavirrasta — ei poista kaikkia vastuita.</text>
+<g transform="translate(74,172)">
+<rect width="372" height="264" rx="18" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="26" y="48" font-size="22" font-weight="800" fill="#247A52">Mitä se voi ratkaista?</text>
+<circle cx="34" cy="92" r="6" fill="#2F9E69"/><text x="54" y="98" font-size="17" fill="#3A4253">Aineisto ei lähde yleiseen pilveen</text>
+<circle cx="34" cy="132" r="6" fill="#2F9E69"/><text x="54" y="138" font-size="17" fill="#3A4253">Käyttöympäristö on hallittavissa</text>
+<circle cx="34" cy="172" r="6" fill="#2F9E69"/><text x="54" y="178" font-size="17" fill="#3A4253">Malliversio voidaan lukita</text>
+<circle cx="34" cy="212" r="6" fill="#2F9E69"/><text x="54" y="218" font-size="17" fill="#3A4253">Voi toimia ilman palvelutiliä</text>
+</g>
+<g transform="translate(474,172)">
+<rect width="412" height="264" rx="18" fill="#FFF7E4" stroke="#E7CC81" stroke-width="2"/>
+<text x="26" y="48" font-size="22" font-weight="800" fill="#8B6700">Mitä pitää silti tarkistaa?</text>
+<circle cx="34" cy="92" r="6" fill="#C79100"/><text x="54" y="98" font-size="17" fill="#3A4253">Laitteen suojaus ja käyttöoikeudet</text>
+<circle cx="34" cy="132" r="6" fill="#C79100"/><text x="54" y="138" font-size="17" fill="#3A4253">Verkkohaku, telemetria ja rajapinnat</text>
+<circle cx="34" cy="172" r="6" fill="#C79100"/><text x="54" y="178" font-size="17" fill="#3A4253">Mallin lisenssi ja päivitykset</text>
+<circle cx="34" cy="212" r="6" fill="#C79100"/><text x="54" y="218" font-size="17" fill="#3A4253">Laatu, nopeus ja virhetilanteet</text>
+</g>
+<rect x="170" y="458" width="620" height="38" rx="19" fill="#1B2336"/>
+<text x="480" y="483" text-anchor="middle" font-size="16.5" font-weight="700" fill="#FFFFFF">Tarkista koko sovellus — älä vain sitä, missä malli pyörii.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">7 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/10: Sata asiakaspalautetta</title>
+<defs><pattern id="l11n8" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n8)"/>
+<text x="74" y="92" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">OHJATTU ESIMERKKI</text>
+<text x="74" y="134" font-size="36" font-weight="800" fill="#1B2336">Sata asiakaspalautetta</text>
+<rect x="74" y="166" width="812" height="76" rx="14" fill="#FFF1EE" stroke="#EAB8AC" stroke-width="2"/>
+<text x="100" y="198" font-size="18" font-weight="700" fill="#A84431">Aineisto sisältää nimiä, sähköposteja ja kuvauksia palvelutilanteista.</text>
+<text x="100" y="226" font-size="17" fill="#3A4253">Tavoite on tiivistää palautteiden toistuvat aiheet.</text>
+<g transform="translate(74,278)">
+<rect width="188" height="144" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="20" y="38" font-size="18" font-weight="800" fill="#1B2336">1. Tunnista</text>
+<text x="20" y="74" font-size="15.5" fill="#3A4253">Mitä tietoa on?</text>
+<text x="20" y="102" font-size="15.5" fill="#3A4253">Mitä tarvitaan?</text>
+</g>
+<path d="M270 350 H298" stroke="#C7CDDA" stroke-width="3"/><path d="M298 350 l-10 -6 v12 z" fill="#C7CDDA"/>
+<g transform="translate(306,278)">
+<rect width="188" height="144" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="20" y="38" font-size="18" font-weight="800" fill="#1B2336">2. Minimoi</text>
+<text x="20" y="74" font-size="15.5" fill="#3A4253">Poista tarpeettomat</text>
+<text x="20" y="102" font-size="15.5" fill="#3A4253">tunnistetiedot.</text>
+</g>
+<path d="M502 350 H530" stroke="#C7CDDA" stroke-width="3"/><path d="M530 350 l-10 -6 v12 z" fill="#C7CDDA"/>
+<g transform="translate(538,278)">
+<rect width="188" height="144" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="20" y="38" font-size="18" font-weight="800" fill="#1B2336">3. Selvitä</text>
+<text x="20" y="74" font-size="15.5" fill="#3A4253">Ympäristö, ehdot</text>
+<text x="20" y="102" font-size="15.5" fill="#3A4253">ja hyväksyntä.</text>
+</g>
+<path d="M734 350 H762" stroke="#C7CDDA" stroke-width="3"/><path d="M762 350 l-10 -6 v12 z" fill="#C7CDDA"/>
+<g transform="translate(770,278)">
+<rect width="116" height="144" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
+<text x="16" y="38" font-size="18" font-weight="800" fill="#247A52">4. Päätä</text>
+<text x="16" y="74" font-size="14.5" fill="#3A4253">Käytä,</text>
+<text x="16" y="98" font-size="14.5" fill="#3A4253">rajaa tai</text>
+<text x="16" y="122" font-size="14.5" fill="#3A4253">pysähdy.</text>
+</g>
+<text x="74" y="464" font-size="18" font-weight="700" fill="#6A309D">Mistä tiedät? Mikä kohta on vielä oletus?</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/10: Piirrä datavirta ja tee päätös</title>
+<defs><pattern id="l11n9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n9)"/>
+<text x="74" y="92" font-size="16" letter-spacing="2" fill="#7E88A8" font-family="ui-monospace,monospace">YDINTUOTOS</text>
+<text x="74" y="134" font-size="36" font-weight="800" fill="#1B2336">Piirrä datavirta ja tee päätös</text>
+<g transform="translate(74,174)">
+<rect width="500" height="286" rx="18" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
+<text x="26" y="44" font-size="21" font-weight="800" fill="#1B2336">Yhden sivun datavirtakaavio</text>
+<g font-size="16" fill="#3A4253">
+<circle cx="34" cy="84" r="5" fill="#863FC4"/><text x="52" y="90">aineisto ja sen luonne</text>
+<circle cx="34" cy="122" r="5" fill="#863FC4"/><text x="52" y="128">käyttöliittymä ja käsittely-ympäristö</text>
+<circle cx="34" cy="160" r="5" fill="#863FC4"/><text x="52" y="166">mahdollinen säilytys ja jatkokäyttö</text>
+<circle cx="34" cy="198" r="5" fill="#863FC4"/><text x="52" y="204">käsittelijät ja ulkoiset yhteydet</text>
+<circle cx="34" cy="236" r="5" fill="#C79100"/><text x="52" y="242">epäselvät kohdat merkillä ?</text>
+</g>
+</g>
+<g transform="translate(604,174)">
+<rect width="282" height="286" rx="18" fill="#F4EFFC" stroke="#D7C5F0" stroke-width="2"/>
+<text x="24" y="44" font-size="21" font-weight="800" fill="#6A309D">Käyttöpäätös</text>
+<rect x="24" y="72" width="234" height="46" rx="23" fill="#2F9E69"/><text x="141" y="101" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">KÄYTÄ</text>
+<rect x="24" y="132" width="234" height="46" rx="23" fill="#C79100"/><text x="141" y="161" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">KÄYTÄ RAJATUSTI</text>
+<rect x="24" y="192" width="234" height="46" rx="23" fill="#C65F47"/><text x="141" y="221" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">ÄLÄ KÄYTÄ TÄHÄN</text>
+<text x="24" y="270" font-size="14.5" fill="#5A6478">Perustele aineistolla ja datavirralla.</text>
+</g>
+<text x="74" y="490" font-size="17" font-weight="700" fill="#1B2336">Testaa parin kanssa: mikä muuttuu, jos lisäät yhden henkilötiedon tai ulkoisen yhteyden?</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 10</text>
+</svg></div>
+
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/10: Yhteenveto</title>
+<defs><pattern id="l11n10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
+<rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l11n10)"/><rect width="12" height="540" fill="#863FC4"/>
+<text x="74" y="96" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
+<g transform="translate(74,140)" font-size="17">
+<rect width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><circle cx="32" cy="29" r="16" fill="#863FC4"/><text x="32" y="35" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">1</text><text x="62" y="35" font-weight="700" fill="#1B2336">Erota malli, palvelu ja käyttöympäristö.</text>
+<rect y="70" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><circle cx="32" cy="99" r="16" fill="#3D76C9"/><text x="32" y="105" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">2</text><text x="62" y="105" font-weight="700" fill="#1B2336">Tunnista aineisto ennen työkalun valintaa.</text>
+<rect y="140" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><circle cx="32" cy="169" r="16" fill="#0E9AA7"/><text x="32" y="175" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">3</text><text x="62" y="175" font-weight="700" fill="#1B2336">Seuraa koko datavirtaa — myös säilytys ja ulkoiset yhteydet.</text>
+<rect y="210" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><circle cx="32" cy="239" r="16" fill="#C79100"/><text x="32" y="245" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">4</text><text x="62" y="245" font-weight="700" fill="#1B2336">Merkitse epävarma kohta selvitettäväksi — älä arvaa.</text>
+</g>
+<rect x="74" y="438" width="812" height="50" rx="25" fill="#1B2336"/>
+<text x="480" y="469" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">Toimiva työkalu ei vielä ole sallittu työkalu.</text>
+<text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 10</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/kurssi/tunti-10/">← Edellinen</a><a class="btn btn-primary" href="/kurssi/tunti-12/">Seuraava →</a></div><button class="done-btn" onclick="toggleDone('lesson-11')">Merkitse suoritetuksi</button></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script src="/assets/practice.js"></script>
-<script>window.CI={"view": "kurssi", "lid": "lesson-11", "num": 11, "title": "Muita tekoälymalleja — kuin ChatGPT ja Claude", "ptasks": [{"type": "match", "title": "Mallit ja käsitteet paikoilleen", "intro": "Yhdistä malli tai käsite ja sitä kuvaava selitys. Valitse ensin vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "Gemini", "b": "Googlen kehittämä malli, jonka voi kytkeä yhtiön omiin palveluihin ja jota kokeillaan selaimessa toimivassa Google AI Studiossa.", "explain": "Siitä on nopea ja tasapainoinen versio, ja se on vahvimmillaan Googlen ympäristössä."}, {"a": "DeepSeek", "b": "Kiinalainen, usein edullinen ja ohjelmoinnissa vahva malli, jonka datan sijainti tuo tietosuojahuolen EU:ssa.", "explain": "Teksti voi siirtyä kiinalaisen lainsäädännön piiriin, joten teknisesti hyvä ei yksin riitä asialliseen käyttöön henkilötiedoilla."}, {"a": "Llama", "b": "Metan julkaisema avoin malliperhe, jonka voi ladata ja ajaa omalla koneella.", "explain": "Paikallisesti ajettuna data pysyy laitteella, mutta se vaatii riittävän tehokkaan koneen."}, {"a": "Mistral", "b": "Ranskalaisen kehittäjän malli, jonka osa versioista soveltuu paikalliseen, eurooppalaiseen käyttöön.", "explain": "Eurooppalainen vaihtoehto, jonka laatu ja nopeus riippuvat valitusta versiosta."}, {"a": "Ollama", "b": "Ohjelma, jolla mallin saa asennettua ja käyttöön omalle koneelle melko suoraviivaisesti.", "explain": "Valitset mallin ja ajat sen omalla koneellasi."}, {"a": "LM Studio", "b": "Graafinen, keskusteluikkunan sisältävä ohjelma paikallisten mallien käyttöön ilman komentoriviä.", "explain": "Helpompi vaihtoehto silloin, kun komentorivi ei ole tuttu."}, {"a": "Parametri", "b": "Luku, joka kuvaa mallin kokoa; suurempi tarkoittaa yleensä parempaa mutta myös hitaampaa ja kalliimpaa.", "explain": "Koko ei ole ilmaista: isompi malli vie enemmän resursseja."}, {"a": "GDPR", "b": "EU:n asetus, joka vaatii käsittelemään henkilötietoja turvallisesti ja lainmukaisesti.", "explain": "Se ei kiellä kaikkea EU:n ulkopuolista käsittelyä, mutta siihen liittyy usein lisävaatimuksia."}], "summary": "Mallit eroavat toisistaan kehittäjän, hinnan, avoimuuden ja datan sijainnin mukaan. Nimien ja käsitteiden tunteminen on pohja sille, että osaat valita oikean mallin oikeaan tehtävään."}, {"type": "quiz", "title": "Myytinmurtaja: malli, hinta ja tietosuoja", "intro": "Jokaisessa kysymyksessä piilee yleinen harhaluulo malleista, hinnasta tai tietosuojasta. Valitse vaihtoehto, joka pitää paikkansa — ja lue myös, miksi muut menevät harhaan.", "items": [{"q": "Varaston opiskelija haluaa käyttää DeepSeekiä kaikkeen, myös asiakaslistojen käsittelyyn, koska se on halvin. Mikä pitää paikkansa?", "options": [{"text": "Hinta on vain yksi kriteeri; henkilötietoja käsiteltäessä tietosuoja ja EU:n ulkopuolelle siirto ratkaisevat, joten halvin voi olla väärä valinta.", "correct": true, "explain": "Asiakaslistat sisältävät henkilötietoja, joiden siirto kiinalaisen lainsäädännön piiriin vaatii arvioinnin ja organisaation hyväksynnän — silloin edullisuus ei riitä perusteeksi."}, {"text": "Halvin on aina paras, kunhan se toimii.", "correct": false, "explain": "Tämä jättää huomiotta datan luonteen: henkilötiedoilla tietosuojariski voi olla hintaa tärkeämpi, joten pelkkä hinta ei ratkaise."}, {"text": "DeepSeek on kokonaan kielletty kaikkeen käyttöön.", "correct": false, "explain": "Näin jyrkkä väite ei pidä paikkaansa: ei-arkaluontoiseen omaan kokeiluun DeepSeek käy, ja rajoitus koskee nimenomaan henkilö- ja luottamuksellista tietoa."}]}, {"q": "'Paikallista mallia ei kannata edes harkita — se on liian vaikea ja aina huono.' Mikä on osuvin vastaus?", "options": [{"text": "Ollama ja LM Studio helpottavat kokeilua, ja paikallinen malli voi olla oikea valinta silloin, kun yksityisyys ja kontrolli ovat tärkeimmät — vaikka se on hitaampi.", "correct": true, "explain": "Paikallinen malli ei ole liian vaikea eikä aina huono: se on kompromissi, jossa nopeus kärsii mutta data pysyy omalla koneella."}, {"text": "Paikallinen malli on itse asiassa aina paras vaihtoehto.", "correct": false, "explain": "Ei ole: kun tarvitaan nopeutta tai huippulaatua, pilvimalli voi olla parempi. Paikallinen loistaa erityisesti yksityisyyttä vaativissa tehtävissä."}, {"text": "Paikallisen mallin saa pyörimään millä tahansa vanhalla koneella yhtä nopeasti kuin pilvessä.", "correct": false, "explain": "Paikallinen ajo vaatii riittävän tehokkaan laitteen, ja vastaukset voivat olla hitaampia kuin pilvipalvelussa."}]}, {"q": "'Tietosuoja koskee vain isoja yrityksiä, eikä yhdellä promptilla ole väliä.' Mikä pitää paikkansa?", "options": [{"text": "Tietosuoja koskee kaikkia, jotka käsittelevät toisten henkilötietoja, ja yksikin prompt voi sisältää henkilötietoja.", "correct": true, "explain": "Esimerkiksi asiakaspalvelija tai IT-tuki käsittelee henkilötietoja päivittäin, ja yksittäinenkin viesti voi viedä ne väärään paikkaan."}, {"text": "Tietosuojalla on väliä vain, jos käsittelen salaista lähdekoodia.", "correct": false, "explain": "Myös nimet, osoitteet ja asiakastiedot ovat henkilötietoja, joten tietosuoja koskee paljon muutakin kuin salaista koodia."}, {"text": "Yksi kysymys ei voi koskaan rikkoa mitään tietosuojasääntöä.", "correct": false, "explain": "Yksi kysymys voi hyvin sisältää henkilötietoja ja viedä ne palveluun, jota ei ole hyväksytty niiden käsittelyyn."}]}, {"q": "Kun ajat Llamaa Ollamalla omalla koneellasi ilman ulkoista yhteyttä, minne syötteesi menee?", "options": [{"text": "Se pysyy omalla laitteellasi eikä lähde ulkoiseen pilvipalveluun, kun malli ajetaan aidosti paikallisesti.", "correct": true, "explain": "Paikallisessa ajossa mitään ei tarvitse lähettää palveluntarjoajan palvelimelle, joten tiedot pysyvät sinun hallussasi."}, {"text": "Metan palvelimille Yhdysvaltoihin.", "correct": false, "explain": "Vaikka Meta on julkaissut Llaman, paikallisesti ajettuna dataa ei lähetetä kehittäjälle — malli toimii sinun koneellasi."}, {"text": "Automaattisesti EU:n palvelimille.", "correct": false, "explain": "Paikallisessa ajossa dataa ei siirretä minnekään palvelimelle, ei EU:hun eikä muualle; se pysyy laitteellasi."}]}, {"q": "'GDPR tarkoittaa, ettei henkilötietoja saa koskaan käsitellä EU:n ulkopuolella.' Pitääkö tämä paikkansa?", "options": [{"text": "Ei pidä: GDPR ei kiellä kaikkea EU:n ulkopuolista käsittelyä, vaan vaatii lainmukaisuutta, turvallisuutta ja asianmukaisia suojatoimia, ja EU:n ulkopuoliseen liittyy usein lisävaatimuksia.", "correct": true, "explain": "Ratkaisevaa ovat suojatoimet ja organisaation hyväksyntä, eivät ehdoton maantieteellinen kielto."}, {"text": "Kyllä, kaikki henkilötiedot on pakko pitää vain EU:n alueella.", "correct": false, "explain": "Tämä on liioittelua: siirto EU:n ulkopuolelle on mahdollista asianmukaisin suojatoimin, joten ehdotonta kieltoa ei ole."}, {"text": "GDPR koskee vain sähköpostiosoitteita.", "correct": false, "explain": "GDPR koskee kaikkia henkilötietoja, kuten nimeä, henkilötunnusta sekä oppilas- ja potilastietoja, ei vain sähköpostiosoitteita."}]}], "summary": "Hinta, nopeus ja tuttuus eivät yksin ratkaise. Datan luonne ja sijainti ovat asiallisen mallivalinnan ydin: henkilötiedot vaativat aina tietosuojan arvioinnin."}, {"type": "classify", "title": "Minne tiedot menevät?", "intro": "Sama teksti voi päätyä kolmeen eri määränpäähän riippuen siitä, mitä palvelua käytät. Erota kaksi kysymystä toisistaan: ensin MINNE data menee — pysyykö se omalla koneella, meneekö se pilveen ja onko palvelin EU:n ulkopuolella — ja vasta sitten MITÄ syötät eli sisältääkö teksti henkilötietoja. Näiden yhdistelmä ratkaisee: paikallinen ajo pitää datan koneella, tavallinen pilvikäyttö vaatii asetusten tarkistuksen, ja henkilötietojen lähtö EU:n ulkopuoliseen palveluun nostaa GDPR-riskin. Sijoita tilanne sen mukaan, minne data menee ja mitä se sisältää.", "categories": ["Pilvipalvelu — tarkista asetukset ja ehdot", "EU:n ulkopuolinen palvelu — korostunut GDPR-riski henkilötiedoilla", "Paikallinen malli — data ei poistu koneelta"], "items": [{"text": "Käytät ChatGPT:tä selaimessa luonnostellaksesi kuvitteellisen kampanjatekstin, jossa ei ole henkilötietoja.", "answer": 0, "explain": "Selaimessa käytettävä ChatGPT on pilvipalvelu, joten teksti menee palveluntarjoajan palvelimelle. Sisältö on kuvitteellista eikä sisällä henkilötietoja, joten käyttö on matalan riskin — asetukset kannattaa silti tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Asennat Llaman Ollamalla ja ajat sen omalla koneellasi ilman nettiyhteyttä.", "answer": 2, "explain": "Kun malli ajetaan aidosti omalla koneella ilman ulkoista yhteyttä, data ei poistu laitteelta — tämä on paikallinen ajo. Mitään ei lähetetä pilveen, joten kyse ei ole pilvipalvelusta eikä EU:n ulkopuolisesta siirrosta."}, {"text": "Liität varaston asiakaslistan, jossa on asiakkaiden nimet ja osoitteet, kiinalaiseen DeepSeekiin, koska se on ilmainen.", "answer": 1, "explain": "Asiakaslista sisältää henkilötietoja, ja DeepSeek on kiinalainen palvelu, jonne data voi siirtyä EU:n ulkopuolelle — tässä korostuu GDPR-riski. Edullisuus ei poista sitä, että henkilötietojen siirto vaatii arvioinnin ja organisaation hyväksynnän. Kyse ei ole tavallisesta matalan riskin pilvikäytöstä eikä paikallisesta ajosta."}, {"text": "Kokeilet Geminiä Google AI Studiossa yleisellä harjoituskysymyksellä ilman henkilötietoja.", "answer": 0, "explain": "Google AI Studiossa käytettävä Gemini on pilvipalvelu, ja yleinen harjoituskysymys ei sisällä henkilötietoja, joten riski on matala — alueelliset asetukset kannattaa tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Ajat Mistralia LM Studiolla omalla koneellasi analysoidaksesi omia muistiinpanojasi.", "answer": 2, "explain": "Mistralin ajaminen LM Studiolla omalla koneella on paikallista ajoa: omat muistiinpanosi pysyvät laitteella eivätkä lähde palvelimelle. Kyse ei ole pilvipalvelusta eikä EU:n ulkopuolisesta siirrosta."}, {"text": "Syötät Claudelle selaimessa julkisen tuotteen esittelytekstin parannettavaksi.", "answer": 0, "explain": "Selaimessa käytettävä Claude on pilvipalvelu, joten julkinenkin teksti menee palveluntarjoajan palvelimelle. Koska sisältö ei ole arkaluontoista, riski on matala, mutta asetukset kannattaa tarkistaa. Kyse ei ole EU:n ulkopuolisesta erityisriskistä eikä paikallisesta ajosta."}, {"text": "Syötät kiinalaiseen DeepSeekiin autokorjaamon asiakasrekisterin, jossa on asiakkaiden nimet ja autojen rekisterinumerot, käännettäväksi.", "answer": 1, "explain": "Asiakasrekisteri sisältää henkilötietoja, ja DeepSeek voi siirtää ne kiinalaisen lainsäädännön piiriin EU:n ulkopuolelle — tässä on korostunut GDPR-riski. Käännöstarve ei muuta sitä, että henkilötietojen siirto vaatii suojatoimet ja hyväksynnän. Kyse ei ole tavallisesta pilvikäytöstä eikä paikallisesta ajosta."}], "summary": "Palvelimen sijainti ja datan luonne ratkaisevat, mitkä säännöt pätevät. Ei-arkaluontoinen pilvikäyttö on matalan riskin, henkilötiedot EU:n ulkopuolelle on korostunut riski, ja paikallinen ajo pitää datan omalla koneella."}, {"type": "scenario", "title": "Halpa, nopea vai turvallinen?", "intro": "Työskentelet autokorjaamon tiskillä. Budjetti on pieni, ja mietitte, miten tekoälyä voisi käyttää järkevästi. Jokaisessa kohdassa valitset työkalun datan herkkyyden mukaan — ja huomaat, ettei varovaisin vaihtoehto ole aina paras.", "start": "start", "max": 3, "nodes": {"start": {"text": "Ensimmäinen tehtävä: haluatte luonnostella somepostauksen kesärenkaiden tarjouksesta. Sisältö on julkista markkinointia eikä sisällä henkilötietoja. Miten valitsette työkalun?", "choices": [{"label": "Edullinen pilvimalli, esimerkiksi Gemini tai DeepSeek, käy tähän, koska sisältö ei ole arkaluontoista.", "next": "dp2", "feedback": "Hyvä valinta. Kun sisältö on julkista eikä sisällä henkilötietoja, hinta ja nopeus saavat ratkaista, ja edullinen pilvimalli riittää.", "tone": "ok"}, {"label": "Vaatikaa heti paikallinen malli, vaikka sisältö on julkista mainontaa.", "next": "dp2", "feedback": "Paikallinen malli on hyvä työkalu, mutta tähän se on ylivarovaisuutta: julkiseen, ei-arkaluontoiseen sisältöön se tuo turhaa vaivaa. Säästä paikallinen malli arkaluontoiselle datalle — pääset silti eteenpäin.", "tone": "mid"}]}, "dp2": {"text": "Seuraavaksi haluatte tiivistää asiakaspalautteita, joissa on asiakkaiden nimiä ja yhteystietoja. Kollega ehdottaa DeepSeekiä, koska se on ilmainen. Mitä teet?", "choices": [{"label": "Poista henkilötiedot ensin tai käytä organisaation hyväksymää tai paikallista mallia.", "next": "dp3", "feedback": "Juuri näin. Nimet ja yhteystiedot ovat henkilötietoja, joita ei syötetä hyväksymättömään EU:n ulkopuoliseen palveluun; ne poistetaan ensin tai käytetään hyväksyttyä työkalua.", "tone": "ok"}, {"label": "Syötä palautteet nimineen suoraan DeepSeekiin, koska se on ilmainen.", "next": "end_bad", "feedback": "Ilmaisuus houkuttaa, mutta asiakkaiden henkilötiedot eivät kuulu tällaiseen palveluun.", "tone": "no"}]}, "dp3": {"text": "Harkitsette paikallista mallia, esimerkiksi Llamaa Ollamalla, arkaluontoisten tekstien käsittelyyn. Korjaamon kone on kohtalainen, joten vastaus tulisi hitaammin kuin pilvipalvelusta. Mitä teet?", "choices": [{"label": "Hyväksy hitaampi vastaus — data pysyy omalla koneella, ja se on tässä tärkeintä.", "next": "dp4", "feedback": "Hyvä punninta. Kun yksityisyys on tärkein, hitaampi paikallinen malli on oikea valinta: data ei poistu koneelta.", "tone": "ok"}, {"label": "Hylkää paikallinen malli heti, koska se on hitaampi.", "next": "dp4", "feedback": "Nopeus on yksi tekijä, mutta juuri arkaluontoisessa tekstissä paikallinen malli voi olla oikea valinta, vaikka se on hitaampi. Hitaus yksin ei ole riittävä syy hylätä sitä tässä.", "tone": "mid"}]}, "dp4": {"text": "Mietit, ottaisitteko tavaksi valita työkalun aina datan mukaan.", "choices": [{"label": "Kyllä: ei-arkaluontoiseen edullinen pilvimalli, henkilötietoihin paikallinen tai hyväksytty malli.", "next": "end_good", "feedback": "Juuri tästä on kyse: datan herkkyys ratkaisee. Julkiseen sisältöön halpa pilvi, henkilötietoihin paikallinen tai organisaation hyväksymä työkalu.", "tone": "ok"}, {"label": "Käytetään budjetin takia vain yhtä samaa mallia kaikkeen.", "next": "end_mid", "feedback": "Hinta on yksi kriteeri, mutta yksi malli kaikkeen ohittaa datan herkkyyden: sama työkalu ei sovi sekä julkiseen mainontaan että asiakkaiden henkilötietoihin.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 3, "text": "Mietitte tekoälyn käytön läpi järkevästi: julkiseen markkinointiin edullinen pilvimalli, asiakkaiden henkilötietoihin paikallinen tai hyväksytty malli.", "feedback": "Sovitit työkalun datan herkkyyteen joka kohdassa: halpa pilvi ei-arkaluontoiseen sisältöön ja paikallinen tai hyväksytty malli henkilötietoihin. Näin budjetti ja tietosuoja pysyvät molemmat hallinnassa."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Suurin osa ratkaisuistanne oli hyviä, mutta joko hylkäsit paikallisen mallin liian nopeasti tai päädyit käyttämään yhtä samaa mallia kaikkeen.", "feedback": "Tärkein onnistui: asiakkaiden henkilötiedot eivät päätyneet hyväksymättömään palveluun. Silti kannattaa muistaa, että paikallinen malli on oikea valinta juuri yksityisyyttä vaativaan työhön, eikä yksi malli sovi kaikkeen dataan."}, "end_bad": {"end": true, "verdict": "no", "score": 0, "text": "Asiakkaiden nimet ja yhteystiedot päätyivät ilmaiseen, EU:n ulkopuoliseen palveluun. Jälkeenpäin herää kysymys, mihin tiedot siirtyivät ja kenen lainsäädännön piiriin.", "feedback": "Henkilötietojen siirto EU:n ulkopuolelle vaatii asianmukaiset suojatoimet ja organisaation hyväksynnän. Edullisuus ei ole peruste ohittaa tietosuojaa — henkilötiedot poistetaan ensin tai käytetään hyväksyttyä tai paikallista mallia."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "kurssi", "lid": "lesson-11", "num": 11, "title": "Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja", "ptasks": [{"type": "match", "title": "Malli, palvelu vai ympäristö?", "intro": "Yhdistä käsite sitä parhaiten kuvaavaan selitykseen. Käyttöpäätös helpottuu, kun et sekoita mallia, palvelua ja käyttöympäristöä keskenään.", "pairs": [{"a": "Kielimalli", "b": "Järjestelmän laskennallinen osa, joka tuottaa sisältöä syötteen perusteella."}, {"a": "Tekoälypalvelu", "b": "Käyttöliittymä tai rajapinta, joka määrittää esimerkiksi kirjautumisen, historian ja käyttöehdot."}, {"a": "Käyttöympäristö", "b": "Paikka ja tekninen kokonaisuus, jossa palvelu tai malli toimii."}, {"a": "Datavirta", "b": "Reitti, jonka kautta aineisto kulkee ja jossa sitä käsitellään."}, {"a": "Tietojen minimointi", "b": "Tehtävässä käytetään vain välttämätöntä aineistoa."}], "summary": "Mallin nimi ei vielä kerro, missä aineisto käsitellään. Käyttöpäätös tehdään mallin, palvelun, ympäristön ja aineiston muodostamasta kokonaisuudesta."}, {"type": "order", "title": "Ennen kuin lähetät aineiston", "intro": "Aseta käyttöpäätöksen vaiheet perusteltuun järjestykseen.", "items": ["Määritä tehtävä ja siinä todella tarvittava aineisto.", "Tunnista, sisältääkö aineisto sisäistä tietoa, henkilötietoja tai salassa pidettävää tietoa.", "Selvitä, mihin aineisto kulkee, kuka sitä käsittelee ja säilytetäänkö sitä.", "Tarkista palvelun ehdot, asetukset ja organisaation hyväksyntä juuri tähän käyttötarkoitukseen.", "Päätä: käytä, käytä rajatusti tai älä käytä tähän aineistoon."], "summary": "Päätös ei ala työkalun nimestä. Se alkaa tehtävästä ja aineistosta, jatkuu datavirran ja ehtojen selvittämiseen ja päättyy perusteltuun käyttöpäätökseen."}, {"type": "classify", "title": "Tunnista aineiston luonne", "intro": "Luokittele jokainen esimerkki sen mukaan, mikä siinä vaatii eniten huomiota. Luokittelu on ensimmäinen askel, ei vielä lopullinen käyttöpäätös.", "categories": ["Julkinen tai kuvitteellinen aineisto", "Organisaation sisäinen aineisto", "Henkilötieto", "Salassa pidettävä tai erityistä suojaa vaativa tieto"], "items": [{"text": "Itse keksitty tuoteteksti kuvitteelliselle kahvilalle.", "answer": 0, "explain": "Aineisto on kuvitteellista eikä sisällä oikeita henkilöitä tai organisaation sisäisiä tietoja."}, {"text": "Ensi kuun julkaisematon markkinointisuunnitelma.", "answer": 1, "explain": "Suunnitelma kuuluu organisaation sisäiseen työhön, vaikka siinä ei olisi henkilötietoja."}, {"text": "Osallistujalista, jossa ovat nimet ja sähköpostiosoitteet.", "answer": 2, "explain": "Nimi ja sähköpostiosoite ovat henkilöön yhdistettäviä tietoja."}, {"text": "Potilaskertomuksen ote.", "answer": 3, "explain": "Terveystieto kuuluu erityisiin henkilötietoryhmiin ja vaatii erityistä suojaa."}, {"text": "Yrityksen julkisella verkkosivulla julkaistu palvelukuvaus.", "answer": 0, "explain": "Teksti on jo julkinen. Palvelun ehdot ja käyttötarkoitus pitää silti arvioida."}, {"text": "Keskeneräinen tarjous, joka sisältää yrityksen hinnoittelustrategian.", "answer": 1, "explain": "Tarjous sisältää organisaation sisäistä ja mahdollisesti luottamuksellista liiketoimintatietoa."}, {"text": "Oppilashuollon tapausmuistiinpano.", "answer": 3, "explain": "Muistiinpano voi sisältää sekä henkilötietoja että erityistä suojaa vaativia tietoja."}, {"text": "Asiakaspalaute, jossa asiakas kertoo nimensä ja tilausnumeronsa.", "answer": 2, "explain": "Palaute sisältää suoraan tunnistettavia henkilötietoja."}], "summary": "Sama tehtävä voi muuttua matalan riskin harjoituksesta suojattavaa aineistoa käsitteleväksi työksi. Siksi aineiston luonne tunnistetaan ennen työkalun valintaa."}, {"type": "scenario", "title": "Koulutusyrityksen käyttöpäätös", "intro": "Työskentelet pienessä koulutusyrityksessä. Päätä aineiston ja datavirran perusteella, miten tekoälyä voi käyttää.", "start": "start", "max": 4, "nodes": {"start": {"text": "Haluat luonnostella julkisen kurssikuvauksen itse keksimiesi lähtötietojen pohjalta. Palvelun yleiset ehdot ovat tiedossa. Mitä teet?", "choices": [{"label": "Käytän palvelua, koska aineisto on kuvitteellista eikä sisällä sisäisiä tai henkilötietoja.", "next": "feedback", "feedback": "Perusteltu päätös. Tässä käyttötarkoitus ja aineisto sopivat yleiseen palveluun.", "tone": "ok"}, {"label": "Syötän samalla mukaan vanhan osallistujalistan, jotta tekstistä tulee aidompi.", "next": "end_bad", "feedback": "Osallistujalista ei ole tarpeen kurssikuvauksen luonnosteluun. Tietojen minimointi jäi toteutumatta.", "tone": "no"}]}, "feedback": {"text": "Seuraavaksi haluat tiivistää palautteita. Mukana on osallistujien nimiä, sähköpostiosoitteita ja kuvauksia henkilökohtaisista oppimistarpeista. Mikä on ensimmäinen askel?", "choices": [{"label": "Tunnistan tiedot, poistan tarpeettomat tunnisteet ja tarkistan organisaation hyväksymän ympäristön.", "next": "local", "feedback": "Hyvä. Ensin rajataan aineisto ja selvitetään hyväksytty käsittely-ympäristö.", "tone": "ok"}, {"label": "Lähetän aineiston yleiseen palveluun, koska tarvitsen vain yhteenvedon.", "next": "end_bad", "feedback": "Tehtävän hyödyllisyys ei poista henkilötietojen ja oppimista koskevien tietojen suojaamisen tarvetta.", "tone": "no"}]}, "local": {"text": "Kollega ehdottaa paikallista mallia. Sovelluksessa on kuitenkin verkkohaku päällä. Voitko päätellä pelkän sanan ”paikallinen” perusteella, että aineisto pysyy laitteella?", "choices": [{"label": "En. Selvitän, mitä verkkohaku ja muut ulkoiset yhteydet lähettävät laitteen ulkopuolelle.", "next": "unknown", "feedback": "Aivan. Paikallinen malli voi käyttää ulkoisia palveluja, joten koko datavirta pitää tarkistaa.", "tone": "ok"}, {"label": "Kyllä. Paikallinen tarkoittaa aina, ettei mitään tietoa voi lähteä laitteelta.", "next": "unknown", "feedback": "Paikallinen malli ei takaa, että koko sovellus toimii ilman ulkoisia yhteyksiä. Tarkista esimerkiksi verkkohaku, telemetria ja rajapinnat.", "tone": "mid"}]}, "unknown": {"text": "Palvelun säilytysajasta ei löydy varmaa tietoa. Miten merkitset tämän käyttöpäätökseen?", "choices": [{"label": "Kirjaan säilytysajan selvitettäväksi ja pidättäydyn lähettämästä suojattavaa aineistoa ennen vastausta.", "next": "end_good", "feedback": "Hyvä päätös. Epävarmuus tehdään näkyväksi eikä sitä täytetä oletuksella.", "tone": "ok"}, {"label": "Oletan säilytysajan lyhyeksi, koska palvelu vaikuttaa luotettavalta.", "next": "end_mid", "feedback": "Luotettava vaikutelma ei ole näyttö käsittelyehdoista. Epäselvä kohta pitää selvittää ennen käyttöä.", "tone": "mid"}]}, "end_good": {"end": true, "verdict": "ok", "score": 4, "text": "Teit käyttöpäätökset aineiston ja todellisen datavirran perusteella.", "feedback": "Tunnistit aineiston luonteen, minimoit tiedot, tarkistit paikallisen ratkaisun ulkoiset yhteydet ja jätit epävarman kohdan selvitettäväksi."}, "end_mid": {"end": true, "verdict": "mid", "score": 2, "text": "Päätöksen suunta oli oikea, mutta yksi epävarma kohta jäi oletuksen varaan.", "feedback": "Kun käsittelyehto ei ole tiedossa, merkitse se selvitettäväksi ja rajaa käyttöä siihen asti."}, "end_bad": {"end": true, "verdict": "no", "score": 0, "text": "Tehtävään päätyi tarpeettomia henkilötietoja tai suojattavaa aineistoa ilman riittävää arviota.", "feedback": "Palaa alkuun: määritä tehtävän kannalta välttämätön aineisto, tunnista sen luonne ja selvitä datavirta ennen lähettämistä."}}}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

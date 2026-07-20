@@ -101,7 +101,7 @@ moduulit:
       perustele: "Rakennusvalinnat ja korjaukset"
     tunnit:
       - { id: lesson-10, kansio: "10", otsikko: "Kilpailuta tekoälyt — mikä työkalu mihinkin?", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Millä vertailulla osoitat työkalun sopivan tehtävään?" } }
-      - { id: lesson-11, kansio: "11", otsikko: "Muita tekoälymalleja — kuin ChatGPT ja Claude", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Mihin aineisto päätyy, ja mitä se merkitsee käyttöpäätöksen kannalta?" } }
+      - { id: lesson-11, kansio: "11", otsikko: "Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Mihin aineisto kulkee, millä ehdoilla sitä käsitellään ja saako ratkaisua käyttää?" } }
       - { id: lesson-12, kansio: "12", otsikko: "Anna konteksti — rakenna oma promptauspankkisi", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: testaa, kysymys: "Mikä promptin muutos parantaa vastausta, ja miten osoitat vaikutuksen?" } }
       - { id: lesson-13, kansio: "13", otsikko: "AI työparina — pohja, muokkaus ja tarkistus", tyyppi: teaching, ajattelu: { painotus: arvioi, kysymys: "Mikä luonnoksessa vaatii ihmisen korjausta tai hylkäämistä?" } }
       - { id: lesson-14, kansio: "14", otsikko: "Oma botti I — suunnittelu, ohjeet ja persoona", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: selita, kysymys: "Miten käyttäjä, tarkoitus, työnkulku ja rajat muodostavat kokonaisuuden?" } }

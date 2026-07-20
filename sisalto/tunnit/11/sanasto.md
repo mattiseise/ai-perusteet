@@ -1,47 +1,51 @@
 # Sanasto
 
-## Tekoälymalli
+## Kielimalli
 
-Tietokoneen ohjelma, joka osaa kirjoittaa, selittää ja vastata kysymyksiin. Kuten ihmisiä on erilaisia (nopea, hidas, tarkka), malleja on erilaisia.
+Järjestelmän laskennallinen osa, joka tuottaa tekstiä, koodia tai muuta sisältöä saamansa syötteen perusteella. Kielimalli ei ole sama asia kuin käyttäjälle näkyvä palvelu.
 
-## Avoin malli
+## Tekoälypalvelu
 
-Tekoälymalli, jonka voit ladata ja ajaa omalla tietokoneella. Voit nähdä koodin ja muuttaa sitä. Esimerkiksi Llama ja Mistral.
+Käyttöliittymä tai ohjelmointirajapinta, jonka kautta tekoälymallia käytetään. Palvelu määrittää esimerkiksi kirjautumisen, historian, tiedostojen käsittelyn ja käyttöehdot.
 
-## Suljettu malli
+## Käyttöympäristö
 
-Tekoälymalli, jota käytät internetissä toimivan palvelun välityksellä. Et käsittele mallin koodia, vaan annat sille pyyntöjä käyttöliittymässä. Esimerkkejä ovat ChatGPT, Claude ja Gemini.
+Tekninen ympäristö, jossa palvelu tai malli toimii. Se voi olla palveluntarjoajan pilvi, organisaation hallitsema ympäristö tai käyttäjän oma laite.
 
 ## Pilvipalvelu
 
-Palvelu, joka toimii internetissä yrityksen palvelimilla — ei omalla koneellasi. Kun käytät ChatGPT:tä, käytät pilvipalvelua.
+Verkon kautta käytettävä palvelu, jossa aineisto käsitellään palveluntarjoajan tai sen kumppanin järjestelmässä.
+
+## Organisaation hallittu palvelu
+
+Palvelu, jonka käytöstä, asetuksista, käyttöoikeuksista ja sallituista käyttötarkoituksista organisaatio on tehnyt päätöksen.
 
 ## Paikallinen ajo
 
-Tekoälymallin ajaminen omalla tietokoneella, ei internetissä. Tiedot pysyvät sinulla, ne eivät lähde minnekään.
+Mallin käyttäminen omalla laitteella tai organisaation omassa ympäristössä. Aineisto voi pysyä siellä, jos sovellus ei lähetä sitä ulkoisiin palveluihin.
 
-## Tietosuoja
+## Datavirta
 
-Säännöt siitä, mihin henkilötiedot voivat mennä ja kuka niitä voi nähdä. GDPR on tietosuojalaki.
+Aineiston reitti käyttäjältä eri järjestelmien kautta käsittelyyn, mahdolliseen säilytykseen ja takaisin käyttäjälle.
+
+## Henkilötieto
+
+Tieto, joka liittyy tunnistettuun tai tunnistettavissa olevaan ihmiseen. Esimerkiksi nimi, sähköpostiosoite ja asiakasnumero voivat olla henkilötietoja.
+
+## Erityiset henkilötietoryhmät
+
+Erityistä suojaa vaativia henkilötietoja, kuten terveyttä, uskontoa tai poliittisia mielipiteitä koskevat tiedot.
+
+## Tietojen minimointi
+
+Periaate, jonka mukaan tehtävässä käsitellään vain tarkoituksen kannalta tarpeellisia henkilötietoja.
+
+## Anonymisointi
+
+Tietojen muokkaaminen niin, ettei ihmistä voida enää tunnistaa suoraan eikä epäsuorasti. Pelkkä nimen poistaminen ei aina anonymisoi aineistoa.
 
 ## GDPR
 
-Euroopan tietosuojalaki. Se vaatii, että henkilötietoja käsitellään turvallisesti ja lainmukaisesti. Siirto EU:n ulkopuolelle on mahdollista vain erityisin suojatoimin.
-
-## API (ohjelmointirajapinta)
-
-Tapa, jolla oma ohjelma voi pyytää tekoälyä tekemään jotakin ilman selainta. Selaimessa käytät valmista käyttöliittymää; API:n kautta ohjelmasi keskustelee mallin kanssa suoraan.
-
-## Hinta per kysymys
-
-Jotkut mallit maksavat jokaisesta kysymyksestä. ChatGPT voi maksaa. Llama omalla koneella ei maksa.
-
-## Nopeus
-
-Kuinka nopeasti malli vastaa. Pilvipalvelut ovat nopeampia, oma tietokone voi olla hitaampi.
-
-## Parametri
-
-Numero, joka kuvailee mallin kokoa. Suurempi numero = isompi ja yleensä parempi malli. Mutta hitaampi ja kalliimpi.
+EU:n yleinen tietosuoja-asetus. Se säätelee henkilötietojen lainmukaista, turvallista ja läpinäkyvää käsittelyä.
 
 ---

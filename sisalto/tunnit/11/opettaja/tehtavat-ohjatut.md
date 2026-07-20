@@ -1,247 +1,128 @@
-# Opettajavetoiset tehtävät: tekoälymallien vertailu ja tietosuoja
+# Opettajavetoiset tehtävät — datavirta näkyväksi
 
-## Tehtävä 1: Mallivertailu näyttämällä
+## Tehtävä 1 — Sama aineisto, kolme ympäristöä
 
-### Tavoite
+**Kesto:** 15 minuuttia
 
-Tehtävän tavoitteena on näyttää opiskelijoille, että eri **tekoälymallit** voivat tuottaa erilaisia vastauksia samaan tehtävään. Opiskelijat huomaavat, ettei ole yhtä kaikissa tilanteissa parasta mallia, vaan mallin valinta riippuu **käyttötarkoituksesta**, **tietosuojasta**, **hinnasta**, **laadusta** ja käsiteltävästä aineistosta.
+**Käyttö:** Tunnin yhteinen ohjattu esimerkki
+**Tavoite:** Opiskelija huomaa, että käyttöpäätös riippuu sekä aineistosta että koko käsittely-ympäristöstä.
 
-**Opettajan painotus:** Korosta, että mallivertailussa ei etsitä yhtä pysyvää voittajaa. Vastuullinen käyttäjä arvioi, mikä malli sopii parhaiten juuri kyseiseen tilanteeseen ja mitä riskejä käyttöön liittyy.
+### Valmistelu
 
-### Opettajan ohjeet ja fasilitointi
+Kirjoita taululle kuvitteellinen aineisto:
 
-**Kesto:** noin 25 minuuttia
+> **Tiedosto:** `palautteet.txt`
+>
+> **Sisältö:** osallistujien nimet, sähköpostiosoitteet ja vapaamuotoiset palautteet
 
-#### Ennen lähiosaa
+Valmistele kolme ympäristökorttia:
 
-1. Valitse 2–3 tekoälymallia, joita haluat vertailla. Esimerkkejä ovat **ChatGPT**, **Claude**, **Gemini** ja **DeepSeek**.
-2. Anna kaikille malleille sama tehtävä.
-3. Valitse tehtävä, joka on opiskelijoille helppo ymmärtää. Voit käyttää esimerkiksi jotakin seuraavista:
-   - `Kirjoita lyhyt tarina robotista.`
-   - `Selitä lyhyesti, mikä internet on.`
-   - `Kirjoita aloittelijalle sopiva Python-esimerkki.`
-4. Kopioi mallien vastaukset talteen, jotta voit näyttää ne opiskelijoille lähiosassa rinnakkain tai peräkkäin.
+1. **Yleinen pilvipalvelu**
+   Keskusteluhistoria tallentuu. Organisaation hyväksynnästä ei ole tietoa.
+2. **Organisaation hallittu palvelu**
+   Palvelusta on sopimus. Käyttö on hyväksytty anonymisoitujen palautteiden tiivistämiseen.
+3. **Paikallinen ajo**
+   Malli toimii työasemalla. Sovelluksen verkkohaku on oletuksena päällä.
 
-#### Lähiosassa
+### Toteutus
 
-**Johdanto noin 5 minuuttia:**
+#### 1. Tunnista aineisto — 3 minuuttia
 
-Kerro opiskelijoille:
+Kysy:
 
-> Olemme puhuneet esimerkiksi ChatGPT:stä ja Claudesta, mutta tekoälymalleja on paljon erilaisia. Tänään katsomme, miten sama tehtävä voi tuottaa erilaisia vastauksia eri malleissa.
+- Mitä henkilötietoja tiedostossa on?
+- Tarvitaanko niitä palautteiden tiivistämiseen?
+- Mitä muuta tunnistettavaa palautteissa voi olla?
 
-**Näytä vastaukset noin 15 minuuttia:**
+Kirjaa vastaukset näkyviin. Älä siirry työkalun valintaan ennen aineiston tunnistamista.
 
-1. Näytä projektorilla tai näytöllä 2–3 eri mallin vastaukset samaan tehtävään.
-2. Pyydä opiskelijoita vertailemaan vastauksia.
-3. Kysy opiskelijoilta:
-   - Mitä eroja huomaatte vastauksissa?
-   - Mikä vastaus on selkein?
-   - Mikä vastaus on hyödyllisin?
-   - Missä tilanteessa valitsisitte juuri tämän mallin?
-   - Onko jossakin vastauksessa virheitä, epäselvyyksiä tai puutteita?
+#### 2. Piirrä kolme datavirtaa — 7 minuuttia
 
-**Opettajan täsmennys:**
+Piirrä jokaisesta ympäristöstä oma reitti:
 
-Selitä opiskelijoille, että eri malleilla voi olla erilaisia vahvuuksia, rajoituksia, hintoja ja tietosuojakäytäntöjä. Yksi malli voi olla vahva ohjelmointitehtävissä, toinen voi tuottaa selkeää tekstiä ja kolmas voi olla edullinen, mutta tietosuojan tai käyttöehtojen kannalta ongelmallisempi.
+> laite → käyttöliittymä → käsittely → säilytys tai jatkokäyttö → vastaus
 
-#### Johtopäätös
+Pyydä opiskelijoita täydentämään:
 
-> Ei ole yhtä parasta tekoälymallia kaikkiin tilanteisiin. Vastuullisen käyttäjän pitää valita malli sen mukaan, mitä ollaan tekemässä, millaista tietoa käsitellään ja millaisia riskejä käyttöön liittyy.
+- mikä tieto poistuu laitteelta
+- kuka käsittelee sitä
+- mikä kohta on varmistettu
+- mikä kohta tarvitsee lisätietoa
 
-**Opettajan tarkistuskysymys:** Jos opiskelijat valitsevat mallin vain siksi, että vastaus “näyttää hyvältä”, kysy: “Mistä tiedämme, että vastaus on oikea, turvallinen ja käyttökelpoinen juuri tähän tehtävään?”
+Paikallisen ajon kohdalla kysy erikseen, mitä verkkohaku muuttaa.
 
-### Odotettu oppimistulos
+#### 3. Tee päätös — 5 minuuttia
 
-- Opiskelijat ymmärtävät, että eri tekoälymallit voivat tuottaa erilaisia vastauksia samaan tehtävään.
-- Opiskelijat osaavat vertailla mallien vastauksia **selkeyden**, **hyödyllisyyden**, **tarkkuuden** ja **käyttötarkoituksen** näkökulmasta.
-- Opiskelijat ymmärtävät, että mallin valinta on asiallinen päätös, ei pelkkä makuasia.
+Äänestäkää jokaisesta ympäristöstä:
 
----
+- käytä
+- käytä rajatusti
+- älä käytä tähän aineistoon
 
-## Tehtävä 2: Tietosuojadilemma pienryhmissä
+Hyvä yhteinen johtopäätös voi olla:
 
-### Tavoite
+- yleistä pilvipalvelua ei käytetä tällä aineistolla ilman lisätietoa ja hyväksyntää
+- hallittua palvelua käytetään vasta tarpeettomien tunnistetietojen poistamisen jälkeen
+- paikallisen ajon verkkohaku poistetaan käytöstä ja datavirta tarkistetaan ennen päätöstä
 
-Tehtävän tavoitteena on auttaa opiskelijoita ymmärtämään, että tekoälyn käyttöön liittyy aina myös **tietosuoja**. Opiskelijat harjoittelevat arvioimaan, millaista tietoa tekoälylle voidaan antaa, mitä pitää anonymisoida ja milloin tekoälypalvelua ei voi käyttää sellaisenaan.
+Korosta, ettei ympäristön nimi yksin ratkaissut mitään. Päätös syntyi aineistosta, asetuksista ja käyttöehdoista yhdessä.
 
-**Opettajan painotus:** Tietosuoja ei ole erillinen lisä tekoälyn käyttöön, vaan osa ammattimaista työskentelyä. Ennen työkalun valintaa pitää tunnistaa, mitä tietoa käsitellään ja minne tieto päätyy.
+### Tarkistuskysymys
 
-### Opettajan ohjeet ja fasilitointi
+> Mikä yksittäinen muutos voisi muuttaa päätöksen?
 
-**Kesto:** noin 40 minuuttia
-
-#### Ennen lähiosaa
-
-1. Valmistele 3–4 skenaariota. Voit käyttää alla olevia esimerkkejä.
-2. Päätä, jaatko skenaariot ryhmille kirjallisesti vai luetko ne ääneen.
-3. Valmistele taululle tai diaan kysymykset, joiden avulla ryhmät tekevät päätöksensä.
-
-#### Lähiosassa
-
-**Johdanto noin 5 minuuttia:**
-
-> Tekoälymallin valinta ei riipu vain hinnasta tai nopeudesta. Vastuullisen käyttäjän pitää tietää, millaista tietoa hän käsittelee ja minne tieto lähetetään. Erityisesti henkilötietojen, potilastietojen, oppilastietojen ja asiakastietojen kanssa pitää olla varovainen.
-
-#### Ryhmätyö noin 20 minuuttia
-
-Jaa opiskelijat neljään ryhmään. Anna jokaiselle ryhmälle yksi skenaario.
-
-#### Skenaario A: Opettaja ja opiskelijoiden esseet
-
-**Tilanne:** Opettaja haluaa käyttää tekoälyä opiskelijoiden esseiden arvioinnin tukena. Halvin saatavilla oleva tekoälypalvelu vaikuttaa houkuttelevalta.
-
-**Ryhmän tehtävä:** Pohtikaa:
-
-- Sisältävätkö esseet opiskelijoiden henkilötietoja tai muuta tunnistettavaa tietoa?
-- Voiko tekstejä lähettää ulkopuoliseen tekoälypalveluun?
-- Mitä tietoja pitäisi poistaa tai anonymisoida ennen käyttöä?
-- Millainen palvelu olisi tietosuojan kannalta turvallisempi?
-
-#### Skenaario B: Sairaala ja potilastiedot
-
-**Tilanne:** Sairaala haluaa käyttää tekoälyä potilastietojen analysointiin.
-
-**Ryhmän tehtävä:** Pohtikaa:
-
-- Miksi potilastiedot ovat erityisen arkaluonteisia?
-- Millaisia lakeja, sääntöjä ja organisaation ohjeita tilanteessa pitää noudattaa?
-- Voiko potilastietoja lähettää yleiseen tekoälypalveluun?
-- Mitä vaatimuksia turvallisella ratkaisulla pitäisi olla?
-
-#### Skenaario C: Yritys ja asiakastiedot
-
-**Tilanne:** Pieni yritys haluaa käyttää tekoälyä asiakaspalautteiden analysointiin. Palautteissa voi olla nimiä, sähköpostiosoitteita ja kuvauksia asiakaskokemuksista.
-
-**Ryhmän tehtävä:** Pohtikaa:
-
-- Mitä riskejä asiakaspalautteiden lähettämiseen liittyy?
-- Mitä tietoja palautteista pitäisi poistaa ennen tekoälyn käyttöä?
-- Milloin halpa palvelu voi tulla kalliiksi?
-- Miten yritys voisi käyttää tekoälyä vastuullisesti tässä tilanteessa?
-
-#### Skenaario D: Kunta ja kuntalaisten palautteet
-
-**Tilanne:** Kunta haluaa käyttää tekoälyä kuntalaisten reklamaatioiden ja palautteiden käsittelyyn.
-
-**Ryhmän tehtävä:** Pohtikaa:
-
-- Sisältävätkö palautteet henkilötietoja tai arkaluonteista tietoa?
-- Voidaanko kuntalaisten palautteita lähettää ulkopuoliseen palveluun?
-- Mitä vastuuta julkisella toimijalla on tietojen käsittelyssä?
-- Millainen ratkaisu olisi turvallinen ja läpinäkyvä?
-
-#### Ryhmän vastauspohja
-
-| Kysymys | Ryhmän vastaus |
-| --- | --- |
-| **Mitä tietoa käsitellään?** |  |
-| **Onko mukana henkilötietoja tai arkaluonteista tietoa?** |  |
-| **Voiko tiedot lähettää yleiseen tekoälypalveluun?** |  |
-| **Mitä pitää poistaa, rajata tai anonymisoida?** |  |
-| **Millainen ratkaisu olisi turvallisempi?** |  |
-
-#### Esitykset noin 15 minuuttia
-
-1. Jokainen ryhmä esittelee ratkaisunsa 2–3 minuutissa.
-2. Ryhmän tulee kertoa:
-   - mitä tietoa skenaariossa käsitellään,
-   - mitkä ovat suurimmat tietosuojariskit,
-   - voiko tekoälyä käyttää tilanteessa sellaisenaan,
-   - mitä muutoksia tai varotoimia tarvitaan.
-
-#### Opettajan johtopäätös
-
-> Tekoälypalvelu voi olla teknisesti hyvä, nopea ja edullinen, mutta se ei vielä tarkoita, että sitä voi käyttää kaikissa tilanteissa. Vastuullisen käyttäjän pitää tietää, mitä tietoja käsitellään, minne tiedot menevät, millaiset käyttöehdot palvelulla on ja mitä organisaation ohjeet sallivat.
-
-**Yhteenveto opiskelijoille:**
-
-Vastuullisena käyttäjänä sinun pitää ensin tunnistaa käsiteltävä tieto ja vasta sen jälkeen valita sopiva tekoälytyökalu.
-
-### Odotettu oppimistulos
-
-- Opiskelijat ymmärtävät, että tekoälymallin valintaan vaikuttavat **hinta**, **laatu**, **tietosuoja** ja **käyttötarkoitus**.
-- Opiskelijat osaavat tunnistaa tilanteita, joissa tekoälylle ei saa lähettää henkilötietoja tai arkaluonteista tietoa ilman asianmukaista käsittelyä.
-- Opiskelijat ymmärtävät, että tietosuoja on osa asiallista tekoälyn käyttöä.
+Hyviä vastauksia ovat esimerkiksi aineiston anonymisointi, organisaation hyväksyntä, säilytysajan selviäminen tai ulkoisen yhteyden poistaminen.
 
 ---
 
-## Tehtävä 3: Mallia testataan itse
+## Tehtävä 2 — Epäselvä kohta on pysähtymismerkki
 
-### Tavoite
+**Kesto:** 12–15 minuuttia
 
-Tehtävän tavoitteena on antaa opiskelijoille käytännön kokemus tekoälymallin käyttämisestä ja tekoälyn vastausten vertailemisesta. Opiskelijat huomaavat, että sama tehtävä voi tuottaa hieman erilaisia vastauksia eri käyttäjille tai eri malleissa.
+**Käyttö:** Varatehtävä tai syventävä purku
+**Tavoite:** Opiskelija oppii erottamaan tiedon, päätelmän ja oletuksen.
 
-**Opettajan painotus:** Muistuta, että tehtävässä ei saa syöttää tekoälylle henkilötietoja, salasanoja, asiakastietoja, oppilastietoja tai muuta arkaluonteista materiaalia.
+### Tilanne
 
-### Opettajan ohjeet ja fasilitointi
+Anna ryhmille seuraava palvelukuvaus:
 
-**Kesto:** noin 35 minuuttia
+> Palvelu osaa tiivistää asiakirjoja. Sen esittelysivulla luvataan ”turvallista käyttöä”. Sivulla ei kerrota säilytysaikaa, mahdollista ihmisen tekemää tarkastusta eikä sitä, käytetäänkö sisältöä palvelun kehittämiseen. Organisaatio ei ole vielä julkaissut palvelusta käyttöohjetta.
 
-#### Ennen lähiosaa
+### Ryhmän tehtävä
 
-- Varmista, että opiskelijoilla on pääsy johonkin tekoälymalliin tai tekoälypalveluun.
-- Testaa itse etukäteen, että valittu palvelu toimii oppitunnilla.
-- Valmistele yksinkertainen tehtävä, jonka kaikki opiskelijat antavat mallille.
-- Varmista, ettei tehtävä vaadi henkilötietojen, kirjautumistietojen tai muun arkaluonteisen tiedon syöttämistä tekoälylle.
+Täyttäkää kolme saraketta:
 
-#### Lähiosassa
+| Tiedämme | Päättelemme | Meidän pitää selvittää |
+| --- | --- | --- |
+| Palvelu käsittelee asiakirjoja. | ”Turvallinen” voi viitata tekniseen suojaukseen. | Säilytysaika, jatkokäyttö, käsittelijät ja organisaation hyväksyntä. |
 
-**Vaihe 1: Mallin avaaminen noin 5 minuuttia**
+Lisätkää lopuksi käyttöpäätös kahdelle aineistolle:
 
-1. Näytä opiskelijoille, miten valittu tekoälypalvelu avataan.
-2. Auta niitä opiskelijoita, jotka tarvitsevat tukea kirjautumisessa tai työkalun löytämisessä.
-3. Muistuta opiskelijoita, ettei tekoälylle saa syöttää henkilötietoja, salasanoja, asiakastietoja tai muuta arkaluonteista materiaalia.
+1. kuvitteellinen harjoitusteksti
+2. henkilötietoja sisältävä asiakirja
 
-**Vaihe 2: Sama tehtävä kaikille noin 10 minuuttia**
+### Purku
 
-Anna kaikille sama tehtävä. Esimerkiksi:
+Kysy:
 
-Kirjoita lyhyt teksti siitä, miksi tekoäly voi olla hyödyllinen opiskelussa ja työelämässä. Mainitse myös yksi riski.
+- Miksi sama epäselvä palvelukuvaus johti eri päätökseen eri aineistoilla?
+- Mikä väite oli houkutteleva mutta liian epätarkka?
+- Keneltä puuttuva tieto pitäisi tarkistaa?
 
-1. Opiskelijat kirjoittavat tehtävän valitsemaansa malliin.
-2. Opiskelijat lukevat vastauksen.
-3. Opiskelijat kopioivat tai tallentavat vastauksen vertailua varten.
+### Mallijohtopäätös
 
-**Vaihe 3: Vertailu parin kanssa noin 10 minuuttia**
-
-Opiskelijat vertaavat vastauksia pareittain.
-
-Anna heille seuraavat kysymykset:
-
-- Mitä eroja vastauksissa on?
-- Kumpi vastaus on selkeämpi?
-- Kumpi vastaus on hyödyllisempi?
-- Onko vastauksissa virheitä, liioittelua tai epäselvyyksiä?
-- Miksi vastaukset voivat olla erilaisia, vaikka tehtävä oli sama?
-
-**Vaihe 4: Yhteinen keskustelu noin 10 minuuttia**
-
-1. Pyydä pareja kertomaan yksi havainto vertailustaan.
-2. Kirjoita havaintoja taululle.
-3. Vahvista keskustelun lopuksi kolme pääajatusta:
-   - Eri tekoälymallit voivat tuottaa erilaisia vastauksia samaan tehtävään.
-   - Mallin valinta riippuu käyttötarkoituksesta, laadusta, hinnasta ja tietosuojasta.
-   - Vastuullinen käyttäjä arvioi tekoälyn vastauksen eikä käytä sitä suoraan ilman tarkistusta.
-
-### Odotettu oppimistulos
-
-- Opiskelijat saavat käytännön kokemuksen tekoälymallin käyttämisestä.
-- Opiskelijat ymmärtävät, että tekoälyn vastauksia pitää vertailla ja arvioida kriittisesti.
-- Opiskelijat osaavat selittää, miksi sama tehtävä voi tuottaa erilaisia vastauksia eri käyttäjille tai eri malleissa.
-- Opiskelijat tunnistavat tietosuojan merkityksen tekoälyä käyttäessään.
+Kuvitteellisella harjoitustekstillä palvelua voi olla mahdollista kokeilla. Henkilötietoja sisältävää asiakirjaa ei lähetetä ennen kuin käsittelyehdot ja organisaation hyväksyntä on selvitetty.
 
 ---
 
-## Arviointi
+## Arviointihavainnot
 
-Opettaja arvioi opiskelijoiden kykyä:
+Seuraa, pystyykö opiskelija:
 
-- vertailla eri **tekoälymallien** vastauksia samaan tehtävään,
-- tunnistaa vastausten eroja selkeyden, hyödyllisyyden, tarkkuuden ja riskien näkökulmasta,
-- perustella, miksi jokin malli sopii tiettyyn käyttötarkoitukseen,
-- tunnistaa, milloin tekoälylle ei saa antaa henkilötietoja tai arkaluonteista tietoa,
-- selittää, miksi **tietosuoja** on osa asiallista tekoälyn käyttöä,
-- arvioida tekoälyn tuottamaa vastausta kriittisesti ennen sen hyödyntämistä.
+- nimeämään aineiston ennen työkalua
+- erottamaan mallin, palvelun ja ympäristön
+- kuvaamaan aineiston reitin myös syötteen lähettämisen jälkeen
+- merkitsemään puuttuvan tiedon oletuksen sijasta
+- muuttamaan päätöstä, kun aineisto tai datavirta muuttuu
 
----
+Väärästä ensivastauksesta ei moitita. Pyydä opiskelijaa näyttämään, mihin oletukseen vastaus perustui, ja auta korjaamaan juuri se kohta.

@@ -1,73 +1,89 @@
-# Opiskelutehtävät — Tietosuoja ja työkaluvalinta
+# Opiskelutehtävät — Piirrä datavirta ja tee käyttöpäätös
 
-**Tällä tunnilla on yksi tehtävä.** Tekoälytyökalun valinta ei perustu pelkkään tekniseen laatuun. Tunnilla 10 vertailit työkalujen vahvuuksia. Nyt tarkastelet valintaa organisaation näkökulmasta ja otat huomioon myös hinnan, tietosuojan, palvelimien sijainnin, GDPR:n vaatimukset ja käyttötarpeen.
+**Tällä tunnilla on yksi ydintehtävä.** Tuotoksesi on yhden sivun datavirtakaavio ja siihen perustuva käyttöpäätös. Et etsi yleisesti parasta tekoälytyökalua, vaan arvioit, saako tiettyä ratkaisua käyttää tietyllä aineistolla.
 
-## Tehtävä 11.1 — Tee perusteltu suositus (SUOSITELTU)
+## Tehtävä 11.1 — Aineiston reitti näkyväksi (SUOSITELTU)
 
-**Tavoite:** Opit perustelemaan tekoälytyökalun valinnan organisaation näkökulmasta. Harjoittelet arvioimaan, mikä työkalu sopii tilanteeseen, kun huomioon otetaan **käyttötarve**, **hinta**, **tietosuoja** ja **riskit**. Tämä on vastuullisen käyttäjän ajattelutapa: paras työkalu ei ole aina teknisesti vahvin tai halvin, vaan se, jonka käyttö on tarkoituksenmukaista ja turvallista.
+**Tavoite:** Osaat erottaa mallin, palvelun ja käyttöympäristön, kuvata aineiston reitin sekä perustella päätöksen aineiston, käsittelyehtojen ja organisaation ohjeiden perusteella.
 
-### Tee näin
+### Vaihe 1 — Valitse tapaus
 
-#### Vaihe 1 — Valitse organisaatio
+Valitse yksi tapauksista:
 
-Valitse yksi seuraavista organisaatioista. Kuvittele, että sinua pyydetään suosittelemaan sille sopivaa tekoälytyökalua.
+1. **Oppilaitos:** Opettaja haluaa tiivistää opiskelijapalautteita. Palautteissa on nimiä ja kuvauksia oppimisen vaikeuksista.
+2. **Urheiluseura:** Seura haluaa laatia jäsenviestin osallistujalistasta, jossa ovat nimet, sähköpostiosoitteet ja alaikäisten huoltajien yhteystiedot.
+3. **Pieni yritys:** Yritys haluaa analysoida asiakaspalautteita. Mukana on tilausnumeroita, nimiä ja julkaisemattomia tietoja tulevasta tuotteesta.
+4. **Oma tapaus:** Valitse omasta työstäsi tai opiskelustasi tilanne. Älä liitä tehtävään oikeita henkilötietoja tai salassa pidettävää aineistoa.
 
-- **Oppilaitos** (esimerkiksi lukio, ammattikoulu tai kansalaisopisto): opettajat ja opiskelijat hyödyntäisivät tekoälyä, mutta opiskelijoiden tiedot pitää suojata ja GDPR:ää noudattaa.
-- **Urheiluseura tai harrastuskerho:** jäsenviestintä, aikataulut ja ilmoittautumiset; mukana on jäsenten yhteystietoja, ja budjetti on pieni.
-- **Pieni kahvila tai kioski:** asiakaspalvelua, markkinointia ja somepostauksia, pieni budjetti.
-- **Pieni IT-yritys tai pelistudio:** 10–15 hengen tiimi, koodausta ja sisällöntuotantoa, kansainvälisiä asiakkaita.
+Kirjoita tapauksesi alkuun yhdellä lauseella: **Kuka tekee, mitä tekee ja millä aineistolla?**
 
-**Tallenna:** Kirjoita valitsemasi organisaatio muistiin yhdellä lauseella.
+### Vaihe 2 — Tunnista aineisto
 
-#### Vaihe 2 — Kartoita käyttötarve
+Täytä taulukko ennen työkalun valintaa.
 
-Kirjoita lyhyt kuvaus siitä, miten valitsemasi organisaatio käyttäisi tekoälyä. Vastaa ainakin seuraaviin kohtiin:
+| Kysymys | Vastauksesi |
+| --- | --- |
+| Mitä tietoa tehtävässä todella tarvitaan? |  |
+| Onko aineisto julkista, sisäistä, henkilötietoa tai erityistä suojaa vaativaa? |  |
+| Mitä tietoja voi poistaa tai korvata? |  |
+| Mitä tietoa ei pidä lähettää yleiseen palveluun? |  |
 
-- **Käyttäjät:** Ketkä organisaatiossa käyttäisivät tekoälyä? Esimerkiksi opettajat, lääkärit, koodarit, asiakaspalvelijat tai hallinnon työntekijät.
-- **Tehtävät:** Kirjoita 3–4 tyypillistä tehtävää, joissa tekoäly voisi auttaa.
-- **Käsiteltävä tieto:** Sisältääkö tehtäviin liittyvä tieto henkilötietoja, potilastietoja, opiskelijatietoja, liikesalaisuuksia tai muuta arkaluonteista tietoa?
-- **Budjetti:** Arvioi, onko budjetti suuri, kohtuullinen vai pieni.
+### Vaihe 3 — Piirrä datavirta
 
-#### Vaihe 3 — Vertaa vaihtoehtoja päätöstaulukolla
+Piirrä aineiston reitti nuolilla. Voit käyttää tätä pohjaa:
 
-Täytä alla oleva taulukko **valitsemasi organisaation näkökulmasta**. Arvioi jokaisen työkalun sopivuutta seuraavilla merkeillä:
+> **Käyttäjän laite → käyttöliittymä → käsittely-ympäristö → mahdollinen säilytys tai jatkokäyttö → vastaus käyttäjälle**
 
-- **✓ Sopii:** työkalu sopii organisaation tarpeeseen ja riskit ovat hallittavissa.
-- **Sopii rajoituksin:** työkalua voi käyttää vain tietyissä tehtävissä tai selkeillä säännöillä.
-- **✗ Ei sovi:** työkalu aiheuttaa liian suuren riskin tai ei vastaa organisaation tarpeeseen.
+Kirjoita jokaisen nuolen tai vaiheen yhteyteen:
 
-Kirjoita perusteluun yksi selkeä lause: miksi työkalu sopii, sopii rajoituksin tai ei sovi.
+- mitä tietoa siirtyy
+- kuka käsittelee tietoa
+- poistuuko tieto organisaation hallinnasta
+- tallentuuko tieto tai voiko sitä käyttää myöhemmin
+- onko vaihe varmistettu vai vielä epäselvä
 
-| Työkalu | Tietosuojan näkökulma | Hinta | Sopii / sopii rajoituksin / ei sovi | Perustelu |
-| --- | --- | --- | --- | --- |
-| **ChatGPT** | USA | Kallis |  |  |
-| **Claude** | USA | Kallis |  |  |
-| **Gemini** | USA / EU | Halpa |  |  |
-| **Copilot (M365)** | EU mahdollinen | Keskihinta |  |  |
-| **DeepSeek** | Kiina | Erittäin halpa |  |  |
-| **Llama tai Mistral paikallisesti** | Oma kone tai oma palvelin | Ilmainen + laitteistokulut |  |  |
+Merkitse epäselvä kohta tunnuksella **?**. Älä täytä puuttuvaa tietoa arvauksella.
 
-#### Vaihe 4 — Haasta valintasi tekoälyn avulla
+### Vaihe 4 — Vertaa kolmea ympäristöä
 
-Avaa ChatGPT, Claude tai Copilot ja anna sille valitsemasi organisaation kuvaus, käyttötarve ja päätöstaulukko. Tavoitteena ei ole antaa tekoälyn tehdä päätöstä puolestasi, vaan saada se haastamaan perustelujasi.
+Tarkastele tapaustasi kolmessa vaihtoehdossa:
 
-Voit käyttää esimerkiksi seuraavaa promptia:
+| Vaihtoehto | Mitä datavirralle tapahtuu? | Keskeinen etu | Keskeinen rajoitus tai avoin kysymys |
+| --- | --- | --- | --- |
+| Yleinen pilvipalvelu |  |  |  |
+| Organisaation hallittu palvelu |  |  |  |
+| Paikallinen ajo |  |  |  |
 
-> "Toimit minulle tietoturvasparrauskumppanina. Olen suosittelemassa tekoälytyökalua organisaatiolle ja perustelen valintani. ORGANISAATIO: [kuvaa valitsemasi organisaatio lyhyesti] KÄYTTÖTARVE: [käyttäjät, tehtävät, käsiteltävä tieto ja budjetti] PÄÄTÖSTAULUKKONI: [liitä päätöstaulukkosi] Haasta päätelmiäni. Pohdi erityisesti: Olenko tunnistanut organisaation keskeiset tietosuojariskit? Onko jokin työkalu, jonka hylkäsin liian nopeasti? Olenko liian optimistinen tai liian varovainen jossakin kohdassa? Mitä GDPR-näkökulmaa en ehkä ole vielä huomannut? Mitä rajoituksia työntekijöille pitäisi antaa? Älä tee valintaa puolestani. Anna 2–3 huomiota, joiden pohjalta voin parantaa perustelujani."
+Kaikkien vaihtoehtojen ei tarvitse sopia tapaukseesi. Tavoitteena on osoittaa, miten vastuut ja aineiston reitti muuttuvat.
 
-Muista arvioida tekoälyn vastaus kriittisesti. Tekoäly voi antaa hyödyllisiä näkökulmia, mutta se ei vastaa organisaation tietosuojapäätöksistä.
+### Vaihe 5 — Tee käyttöpäätös
 
-#### Vaihe 5 — Kirjoita perusteltu suositus
+Valitse yksi:
 
-Kirjoita lopuksi **5–8 lauseen suositus**. Vastaa suosituksessa seuraaviin kysymyksiin:
+- **Käytä**
+- **Käytä rajatusti**
+- **Älä käytä tähän aineistoon**
 
-- **Suositus:** Mitä 1–2 työkalua organisaation kannattaa ottaa käyttöön?
-- **Perustelu:** Miksi nämä työkalut sopivat juuri tämän organisaation käyttötarpeeseen?
-- **Rajoitukset:** Mitä sääntöjä työntekijöille pitää antaa? Esimerkiksi: *"Henkilötietoja sisältäviä tehtäviä ei saa antaa työkalulle X."*
-- **Yksi varoitus:** Mikä on suurin riski, joka organisaation pitää ymmärtää ennen käyttöönottoa?
+Kirjoita 6–8 lauseen perustelu, jossa vastaat seuraaviin kysymyksiin:
 
-> **Palautus:** Tehtävää ei palauteta. Säilytä kuitenkin päätöstaulukkosi ja suosituksesi. Tarvitset samoja arviointiperusteita myöhemmin, kun kokoat oman bottisi tietopohjaa.
+1. Mitä ympäristöä suosittelet?
+2. Mitä aineistoa siinä saa käsitellä?
+3. Mitä pitää poistaa, rajata tai anonymisoida?
+4. Mitkä käyttöehdot, asetukset tai organisaation ohjeet pitää tarkistaa?
+5. Mikä jäi vielä epävarmaksi?
+6. Mikä saisi sinut muuttamaan päätöstäsi?
 
-> **Tarkista lopuksi:** Olet valinnut yhden organisaation, kartoittanut sen käyttötarpeen, täyttänyt päätöstaulukon, haastanut perustelujasi tekoälyn avulla ja kirjoittanut 5–8 lauseen suosituksen.
+### Vaihe 6 — Testaa päätös parin kanssa
 
-**Halvin ei ole aina paras. Paras työkalu on se, jonka käyttö ei aiheuta uusia ongelmia.**
+Anna datavirtakaavio ja päätös parille. Pari esittää kaksi haastetta:
+
+- **Mistä tiedät tämän?**
+- **Mitä tapahtuu, jos aineistoon lisätään yksi henkilötieto tai ulkoinen yhteys?**
+
+Korjaa kaaviota tai perustelua, jos haaste paljastaa oletuksen, puuttuvan vaiheen tai liian laajan aineiston.
+
+> **Palautus:** Tallenna yhden sivun datavirtakaavio ja käyttöpäätös. Tiedostonimeksi sopii esimerkiksi `tunti-11-datavirta-oma-nimi.pdf`.
+
+> **Tarkista lopuksi:** Kaaviossa näkyvät aineisto, käsittelijät, ympäristö, mahdollinen säilytys ja epävarmat kohdat. Päätös perustuu näihin havaintoihin eikä työkalun maineeseen.
+
+**Toimiva työkalu ei vielä ole sallittu työkalu. Käyttöpäätös tehdään aineiston ja koko datavirran perusteella.**

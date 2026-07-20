@@ -30,7 +30,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 ### Tekoälyjen käyttö — Generatiivisten tekoälytyökalujen käyttö
 
 - [Tunti 10: Kilpailuta tekoälyt — mikä työkalu mihinkin?](https://aiperusteet.fi/kurssi/tunti-10/)
-- [Tunti 11: Muita tekoälymalleja — kuin ChatGPT ja Claude](https://aiperusteet.fi/kurssi/tunti-11/)
+- [Tunti 11: Minne aineistosi menee? — pilvipalvelu, paikallinen ajo ja tietosuoja](https://aiperusteet.fi/kurssi/tunti-11/)
 - [Tunti 12: Anna konteksti — rakenna oma promptauspankkisi](https://aiperusteet.fi/kurssi/tunti-12/)
 - [Tunti 13: AI työparina — pohja, muokkaus ja tarkistus](https://aiperusteet.fi/kurssi/tunti-13/)
 - [Tunti 14: Oma botti I — suunnittelu, ohjeet ja persoona](https://aiperusteet.fi/kurssi/tunti-14/)
