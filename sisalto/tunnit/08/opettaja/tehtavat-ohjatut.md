@@ -84,7 +84,7 @@ Kokoa taululle kaksi listaa:
 
 ### Jos opiskelijat sanovat: “Ympäristövaikutukset ovat niin pieniä, ettei niillä ole väliä.”
 
-> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen vastuullinen käyttäjä ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
+> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen käyttäjä ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
 
 ### Jos opiskelijat sanovat: “Eihän tämä ole minun ongelmani — palveluntarjoaja teki sen.”
 

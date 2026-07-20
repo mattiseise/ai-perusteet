@@ -10,7 +10,7 @@
 .tw-intro{margin:0 0 14px;color:#5A6478;font-size:14.5px;line-height:1.55}
 .tw-prev{display:inline-block;font-size:12.5px;color:#247A52;background:#F0F9F4;border:1px solid #CDE9D9;border-radius:8px;padding:4px 10px;margin-bottom:12px}
 .tw-prog{font-family:var(--font-mono,ui-monospace,monospace);font-size:12px;color:#7E88A8;margin-bottom:10px}
-.tw-card{background:#F7F8FC;border:1px solid #E3E7F0;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.6;color:#1B2336;margin-bottom:14px}
+.tw-card{display:block;background:#F7F8FC;border:1px solid #E3E7F0;border-radius:10px;padding:14px 16px;font-size:15.5px;line-height:1.6;color:#1B2336;margin-bottom:14px}
 .tw-opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .tw-opts.tw-vert{flex-direction:column;align-items:stretch}
 .tw-opt{background:#fff;border:1.5px solid #C2CAD9;border-radius:10px;padding:10px 14px;font:inherit;font-size:14.5px;color:#1B2336;cursor:pointer;text-align:left;transition:border-color .12s,background .12s}
