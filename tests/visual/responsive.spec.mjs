@@ -26,7 +26,7 @@ async function expectNoHorizontalOverflow(page, context) {
   expect(overflow.body, `${context}: body overflow`).toBeLessThanOrEqual(1);
 }
 
-test('kaikki 26 demoa säilyvät näkyvinä molemmissa näkymissä', async ({ page }) => {
+test(`kaikki ${inventory.expectedDemoCount} demoa säilyvät näkyvinä molemmissa näkymissä`, async ({ page }) => {
   for (const view of views) {
     for (const width of widths) {
       await page.setViewportSize({ width, height: 900 });
@@ -75,16 +75,7 @@ async function useLabel(page, target) {
 }
 
 async function runInteractiveStates(page, id) {
-  if (id === 'lesson-07-01') {
-    await expect(page.locator('#l07-s1')).toBeChecked();
-    await useLabel(page, 'l07-b1'); // väärä
-    await expect(page.locator('.r1 .l07-info')).toBeVisible();
-    await useLabel(page, 'l07-a1'); // oikea
-    for (const target of ['l07-s2', 'l07-b2', 'l07-s3', 'l07-a3', 'l07-s4', 'l07-b4', 'l07-s5', 'l07-b5', 'l07-s1']) {
-      await useLabel(page, target);
-    }
-    await expect(page.locator('#l07-s1')).toBeChecked();
-  } else if (id === 'lesson-20-02') {
+  if (id === 'lesson-20-02') {
     await expect(page.locator('.l20q-round.r1')).toBeVisible();
     await expect(page.locator('.l20q-round.r2')).toBeHidden();
     await useLabel(page, 'l20q-1c'); // väärä

@@ -18,9 +18,9 @@ Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 san
 
 **2. Perustelu.** Miksi tämä malli sopii juuri sinun käyttötapaukseesi?
 
-**3. Malli n8n-rakenteena ja lokina.** Miten malli näkyy konkreettisesti työnkulussa? Kirjaa esimerkki, jossa näkyvät lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja seuraava toiminto. Älä pyydä tai tallenna mallin raakaa chain-of-thoughtia. ReActissa tarvitset usein rajatun silmukan tekoälysolmun ja työkalujen välillä. Eksplisiittisessä työnkulussa rakenne on lineaarisempi.
+**3. Malli n8n-rakenteena ja lokina.** Miten malli näkyy konkreettisesti työnkulussa? Kirjaa esimerkki, jossa näkyvät lyhyt päätösperustelu, työkalun käyttö, tulos tai virhe ja seuraava toiminto. Älä pyydä tai tallenna mallin sisäistä päättelyä. ReActissa tarvitset rajatun havainto–toiminto-kierroksen. Eksplisiittisessä työnkulussa vaiheet määritellään etukäteen, mutta vähintään yhdessä nimetyssä vaiheessa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta. Kirjaa lokiin syöte, sallitut vaihtoehdot, mallin valinta ja valintaa seuraava ennalta määritelty haara.
 
-> **Sivumaininta: moniagenttijärjestelmät.** Monimutkaisissa, oikean elämän projekteissa agentit voivat tehdä yhteistyötä — yksi erikoistuu tiedonhakuun, toinen kirjoittaa, kolmas tarkistaa lopputuloksen. Tätä kutsutaan moniagenttijärjestelmäksi. Lopputyösi mittakaavassa (3–5 solmua) tämä on yliampuva ratkaisu. Yksi hyvin suunniteltu agentti riittää.
+> **Valinnainen syvennys:** Monimutkaisissa projekteissa useat agentit voivat tehdä yhteistyötä. Moniagenttijärjestelmää ei tarvita tämän kurssin lopputyössä. Yksi hyvin suunniteltu agentti riittää.
 
 ### Tekoälyvaihe — arvioi päättelyvalinta
 

@@ -1,8 +1,8 @@
-# Opettajan materiaalit — oppitunti 16: valinnainen tuotantolaboratorio
+# Opettajan materiaalit — oppitunti 16: toteutustavan valinta ja erikoistyökalujen laboratorio
 
 ## Oppitunnin tarkoitus
 
-Oppija valitsee yhden neljästä reitistä — kuva, ääni tai musiikki, video tai koodi — ja käyttää samaa arviointisykliä. Käyttötarkoituksesta johdetaan kriteerit ennen ensimmäistä versiota. Arvioinnissa nimetään yksi puute, jota korjataan yhdellä muutoksella. Toista versiota verrataan ensimmäiseen, minkä jälkeen oppija tekee vastuullisuustarkistukseen perustuvan julkaisu- tai hylkäyspäätöksen.
+Oppija tutkii neljää reittiä — kuvaa, ääntä tai musiikkia, videota ja koodia — ja kokeilee niistä yhtä samalla arviointisyklillä. Kokeilu ei jää irralliseksi tuotantolaboratorioksi, vaan johtaa oman apuri-botin toteutustapojen vertailuun sekä toteutus-, riski- ja käyttöönottopäätökseen.
 
 Reitit ovat pedagogisesti samanarvoisia. Oppijaa ei ohjata kuvaan vain siksi, että se on opettajalle tai käytettävissä olevien palvelujen kannalta helpoin vaihtoehto. Arvioinnin kohteena on harkittu prosessi ja siitä syntyvä näyttö, ei tuotostyypin näyttävyys.
 
@@ -16,10 +16,12 @@ Oppija:
 - tuottaa tai analysoi kaksi versiota
 - muuttaa yhtä asiaa ja arvioi sen vaikutusta
 - tarkistaa oikeudet, turvallisuuden, harhaanjohtavuuden ja merkintätavan
+- vertaa teknistä toteutuspolkua ja dokumentoitua suunnittelupolkua niiden omilla näytöillä
+- nimeää suunnittelupolussa simuloiduiksi jäävät tekniset ominaisuudet
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava tuotos on **yhden reitin laboratorioloki: valinta, syöte, tuotos, arvio, iterointi ja vastuullisuustarkistus**. Tunnin alussa on tärkeää erottaa kriteeri mieltymyksestä. ”Pidän tästä” voi aloittaa keskustelun, mutta arvioitavaksi näytöksi tarvitaan havainto, joka liittyy käyttötarkoitukseen.
+Tallennettava tuotos on **yksi bottiprojektin valintakortti**. Sen sisällä näkyvät neljän työkalureitin tiivis vertailu, yhden reitin käytännön kokeilu, kahden botin toteutustavan vertailu sekä toteutus-, riski- ja käyttöönottopäätös. Erillistä laboratoriolokia ei vaadita. Tunnin alussa on tärkeää erottaa kriteeri mieltymyksestä.
 
 | Aika | Vaihe | Opettajan tehtävä |
 | --- | --- | --- |
@@ -28,8 +30,8 @@ Tallennettava tuotos on **yhden reitin laboratorioloki: valinta, syöte, tuotos,
 | 20–40 min | Versio 1 | Oppija tuottaa ensimmäisen version tai arvioi opettajan esimerkin. |
 | 40–55 min | Arviointi | Oppija nimeää havaittavan ongelman ja sitä vastaavan muutoksen. |
 | 55–70 min | Versio 2 | Oppija muuttaa yhden asian ja tuottaa uuden version. |
-| 70–82 min | Vertailu | Oppija perustelee, miten muutos vaikutti ja mitä koe ei osoita. |
-| 82–90 min | Vastuu ja tallennus | Tarkista käyttöoikeus, turvallisuus, julkaiseminen ja tekoälyn osuuden merkitseminen. |
+| 70–80 min | Toteutustapojen vertailu | Oppija vertaa teknistä toteutusta ja dokumentoitua suunnittelua niiden omilla näytöillä. |
+| 80–90 min | Päätös ja tallennus | Oppija kirjaa toteutus-, riski- ja käyttöönottopäätöksen. |
 
 ## Reittikohtainen vähimmäisohjaus
 
@@ -58,10 +60,10 @@ Yksi onnistunut versio kertoo vain tästä kokeesta. Se ei osoita työkalun ylei
 
 ## Eriyttäminen
 
-**Tukireitillä** anna reittikohtainen syötepohja ja kaksi valmista versiota. Oppija tekee arvioinnin, nimeää muutoksen ja suorittaa vastuullisuustarkistuksen. Valmiit tuotokset vähentävät teknistä kuormaa, mutta niillä osoitetaan sama arviointitaito kuin itse tuotetuilla versioilla.
+**Tuetussa työskentelyssä** anna reittikohtainen syötepohja ja kaksi valmista versiota. Oppija tekee arvioinnin, nimeää muutoksen ja suorittaa vastuullisuustarkistuksen. Valmiit tuotokset vähentävät teknistä kuormaa, mutta niillä osoitetaan sama arviointitaito kuin itse tuotetuilla versioilla.
 
 **Syventävällä reitillä** toinen arvioija käyttää samoja kriteerejä tietämättä ensin tekijän omaa johtopäätöstä. Oppija vertaa havaintojen eroja ja pohtii, ovatko kriteerit riittävän yksiselitteisiä. Syventävä työ ei kasvata pakollista ydintuotosta.
 
 ## Arvioitava näyttö
 
-Hyväksyttävä loki sisältää molemmat versiot, ennalta nimetyt kriteerit, yhden muutoksen vaikutuksen ja vastuullisuustarkistuksen. Lokista pitää käydä ilmi myös julkaisu-, hylkäys- tai jatkokorjauspäätös perusteluineen. Tuotoksen esteettinen näyttävyys tai tekninen laajuus ei yksin ratkaise arviointia.
+Hyväksyttävä valintakortti sisältää molemmat kokeiluversiot, ennalta nimetyt kriteerit, yhden muutoksen vaikutuksen ja vastuullisuustarkistuksen. Lisäksi siinä näkyvät kaksi toteutustapaa ja perusteltu valinta. Teknisen polun näyttö voi koskea todellista alustaa, tietopohjan kytkentää ja jakamista. Suunnittelupolun näyttö koskee arkkitehtuuria, simuloitua suoritusjälkeä, testitapauksia ja rajoituksia. Älä hyväksy kuivaharjoittelua todisteeksi toimivasta integraatiosta tai käyttöoikeudesta.

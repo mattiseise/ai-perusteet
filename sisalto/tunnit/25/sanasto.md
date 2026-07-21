@@ -1,59 +1,35 @@
 # Sanasto – oppitunti 25: Ihmisen osallistuminen päätöksentekoon
 
-## Harness
+## Agentin ohjauskehys
 
 Kielimallia ympäröivä järjestelmä, joka toteuttaa hyväksyntäportin käytännössä. Se pysäyttää suorituksen, säilyttää tilan, näyttää päätöstiedot ihmiselle ja jatkaa, hylkää tai eskaloi ennalta sovitun säännön mukaan.
 
-## Ihmisen osallistuminen päätöksentekoon (ihminen silmukassa)
+## Ihmisen osallistuminen päätöksentekoon
 
-Automaatio, jossa ihminen hyväksyy kriittiset päätökset. Ei täysin automatisoitua, ei käsityötä — hybridi.
+Toimintatapa, jossa automaatio hoitaa rajatut vaiheet ja ihminen hyväksyy kriittiset päätökset.
 
-## Hyväksyntäportti (approval gate)
+## Hyväksyntäportti
 
-Harnessin toteuttama kohta, jossa suoritus pysähtyy odottamaan ihmisen vastausta. Hyvä portti näyttää selkeän kysymyksen, ehdotuksen, perustelun ja riskin.
+Agentin ohjauskehyksen toteuttama kohta, jossa suoritus pysähtyy odottamaan ihmisen vastausta. Hyvä portti näyttää selkeän kysymyksen, ehdotuksen, perustelun ja riskin.
 
-## Eskalointi (escalation)
+## Eskalointi
 
-Tehtävän siirtäminen toiselle hyväksyjälle, kun ensimmäinen ei voi vastata.
+Tehtävän siirtäminen ihmiselle tai toiselle hyväksyjälle ennalta määritellyn ehdon perusteella.
 
 ## Aikaraja
 
-Aika, jossa hyväksyjällä on vastata. Jos vastaus ei tule, mitä tehdään? (oletusarvo, eskalointi, tai odotetaan)
+Aika, jossa hyväksyjällä on vastata. Jos vastausta ei tule, toiminta keskeytetään, asia eskaloidaan tai palautetaan myöhemmin käsiteltäväksi. Kriittistä toimintoa ei hyväksytä hiljaisuuden perusteella.
 
-## Rahaa/rakenne -sääntö
+## Havaittava eskalointiehto
 
-Päätös, joka koskee rahaa (alennukset, hyvitykset) tai rakennetta (asiakkaantiedot, tilat) vaatii hyväksynnän.
+Ihmisen vahvistus vaaditaan, jos lähdettä ei löydy, lähteet ovat ristiriidassa, pakollinen tieto puuttuu, validointi epäonnistuu, työkalu palauttaa virheen tai toiminto kuuluu määriteltyyn riskiluokkaan.
 
-## Epävarmuus-sääntö
-
-Jos agentti on epävarma (varmuus < 70%), vaadi ihmisen vahvistus.
-
-## Poikkeama-sääntö
-
-Jos tilanne on poikkeuksellinen (ei rutiinitapaus), vaadi hyväksyntä.
-
-## Validointi-agentti
-
-Agentti, joka tarkistaa, onko toisen agentin vastaus turvallinen ja oikea.
-
-## Palautekäytäntö (feedback loop)
+## Palautekäytäntö
 
 Prosessi, jossa hyväksynnät, hylkäykset ja perustelut tallennetaan, arvioidaan ja muutetaan tarvittaessa hallituksi järjestelmäpäivitykseksi. Tallennus ei itsessään tarkoita mallin oppimista.
 
-## Palautteesta kehittäminen (feedback-driven improvement)
-
-Hyväksynnät, hylkäykset ja perustelut arvioidaan, minkä jälkeen ihminen päättää järjestelmän mahdollisista muutoksista. Palautteen tallentaminen ei muuta agentin toimintaa automaattisesti.
-
-## Monivaiheinen hyväksyntä (multi-step approval)
+## Monivaiheinen hyväksyntä
 
 Prosessi, jossa päätös vaatii useiden hyväksyjien hyväksynnän peräkkäin.
-
-## Variaatioiden hallinta (variation management)
-
-Eri hyväksyjät ja tiimit voivat tarvita erilaisia prosesseja. Erot määritellään harnessin säännöissä ja muutokset tehdään hallitusti.
-
-## Workflow
-
-Sarja vaiheita, joissa agentti ja ihminen tekevät yhteistyötä. Vaihe vaiheelta selkeitä rooleja.
 
 ---

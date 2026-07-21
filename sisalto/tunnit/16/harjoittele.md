@@ -1,6 +1,6 @@
-# Harjoittele — Sama työskentelysykli, eri tuotokset
+# Harjoittele — Työkalusta perustelluksi bottivalinnaksi
 
-Kuva, ääni, video ja koodi ovat tällä tunnilla samanarvoisia reittejä. Kaikissa niissä tavoite, arviointi ja vastuu kuuluvat ihmiselle.
+Kuva, ääni, video ja koodi ovat tällä tunnilla näkyviä, samanarvoisia reittejä. Kaikissa niissä tavoite, arviointi ja vastuu kuuluvat ihmiselle. Lopuksi ratkaiset, tarvitseeko oma apuri-bottisi valittua työkalua lainkaan.
 
 ## Tehtävä 1/5 — reittien erityispiirteet
 
@@ -26,8 +26,8 @@ Kuva, ääni, video ja koodi ovat tällä tunnilla samanarvoisia reittejä. Kaik
 {"type":"quiz","title":"Milloin tuotos on valmis?","intro":"Valitse perustelluin toimintatapa.","items":[{"q":"Toinen versio täyttää laatukriteerit. Mitä tarkistat vielä ennen käyttöä?","options":[{"text":"Käyttöoikeudet, mahdollisen harhaanjohtavuuden, yksityisyyden, saavutettavuuden ja sen, miten tekoälyn käyttö kerrotaan.","correct":true,"explain":"Tekninen tai esteettinen onnistuminen ei yksin ratkaise vastuullista käyttöä."},{"text":"En mitään, koska kriteerien täyttyminen tekee tuotoksesta automaattisesti turvallisen.","correct":false,"explain":"Laatu ja vastuullisuus ovat eri tarkistuksia."},{"text":"Vain sen, pitääkö itse tuotoksesta.","correct":false,"explain":"Henkilökohtainen mieltymys ei kata tuotoksen vaikutuksia ja käyttöehtoja."}]},{"q":"Koodireitin ohjelma toimii yhdellä esimerkillä. Mikä on oikea johtopäätös?","options":[{"text":"Se läpäisi yhden testin; tarvitaan myös tavallinen toinen syöte ja virhetilanne ennen laajempaa johtopäätöstä.","correct":true,"explain":"Yksi onnistunut ajo ei osoita toimintaa eri tilanteissa."},{"text":"Ohjelma on valmis kaikkeen käyttöön.","correct":false,"explain":"Väite ylittää testin näytön."},{"text":"Koodia ei tarvitse ymmärtää, jos tulos näyttää oikealta.","correct":false,"explain":"Käyttäjän pitää pystyä selittämään ja tarkistamaan käyttämänsä koodi."}]}],"summary":"Valmis tuotos täyttää nimetyt laatukriteerit ja läpäisee käyttötilanteen vastuullisuustarkistuksen."}
 ```
 
-## Tehtävä 5/5 — nimeä muutos
+## Tehtävä 5/5 — tee bottiprojektin valinta
 
 ```task
-{"type":"reflect","title":"Mikä muuttuu versioon 2?","intro":"Rajattu muutos tekee vertailusta ymmärrettävän.","prompt":"Valitse yksi reitti ja kuvaa yksi havaittu puute versiossa 1. Nimeä vain yksi muutos versioon 2 ja kerro, millä kriteerillä arvioit sen vaikutuksen.","placeholder":"Reitti…\nHavaittu puute…\nYksi muutos…\nArviointikriteeri…","tips":["Älä muuta kaikkea samalla kertaa.","Kirjoita kriteeri ennen uutta versiota.","Säilytä molemmat tuotokset."],"summary":"Yksi nimetty muutos yhdistää version 2 havaittuun vaikutukseen."}
+{"type":"reflect","title":"Mitä bottisi oikeasti tarvitsee?","intro":"Hyvä toteutuspäätös voi tarkoittaa myös lisätyökalun rajaamista pois.","prompt":"Valitse omaan apuri-bottiisi toteutustapa. Kerro, tarvitsetko kuva-, ääni-, video- tai koodityökalua, mikä on tärkein riski ja millä ehdolla ratkaisu voidaan ottaa käyttöön. Jos valitset suunnittelupolun, nimeä myös se, mikä jää simuloiduksi.","placeholder":"Toteutustapa…\nErikoistyökalu tai perusteltu poisrajaus…\nTärkein riski…\nKäyttöönottoehto…\nSimuloiduksi jää…","tips":["Valitse yksinkertaisin riittävä ratkaisu.","Älä väitä simuloitua integraatiota toimivaksi.","Kytke päätös tunnin 15 testeihin."],"summary":"Toteutustapa, riskirajaus ja käyttöönottokriteeri valmistavat bottisi rakentamista."}
 ```

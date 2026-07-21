@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Ihminen portinvartijana — human-in-the-loop käytännössä — Opettajan opas — AI · Perusteet</title>
+<title>Ihminen portinvartijana — ihmisen osallistuminen käytännössä — Opettajan opas — AI · Perusteet</title>
 <meta name="description" content="Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-25/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Ihminen portinvartijana — human-in-the-loop käytännössä — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-25/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Ihminen portinvartijana — human-in-the-loop käytännössä — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Ihminen portinvartijana — human-in-the-loop käytännössä", "description": "Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…", "url": "https://aiperusteet.fi/opettaja/tunti-25/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Ihminen portinvartijana — ihmisen osallistuminen käytännössä — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-25/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Ihminen portinvartijana — ihmisen osallistuminen käytännössä — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Ihminen portinvartijana — ihmisen osallistuminen käytännössä", "description": "Kaikki, mitä olet tähän mennessä oppinut — muisti, konteksti, työkalut, suunnittelumallit ja turvallisuus — johtaa yhteen tärkeään ajatukseen: agentti ei voi…", "url": "https://aiperusteet.fi/opettaja/tunti-25/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 25"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,14 +18,14 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 25</span></div><div class="lesson-title">Ihminen portinvartijana — human-in-the-loop käytännössä</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-25/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-25/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-25/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-25/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-25/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-25-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-25-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-25-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-25-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-25-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-25-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 25: ihminen portinvartijana</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 25</span></div><div class="lesson-title">Ihminen portinvartijana — ihmisen osallistuminen käytännössä</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-25/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-25/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-25/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Missä ihmisen hyväksyntää tarvitaan — jos missään — ja mitä tapahtuu, jos hyväksyntäpyyntöön ei vastata?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-25/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-25/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-25-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-25-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-25-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-25-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-25-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-25-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-25-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 25: ihminen portinvartijana</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
 <p>Oppija suunnittelee, missä kohdissa agentti saa toimia itse ja missä ihmisen pitää hyväksyä, muokata tai hylätä ehdotus. Samalla erotetaan palautedatan tallentaminen mallin oppimisesta.</p>
 <p>Opetuksen punaisena lankana toimii päätöksen riski. Kun oppija tarkastelee virheen vaikutusta, peruttavuutta ja vastuunkantajaa, hyväksyntäportin paikka ei jää mielipiteeksi. Sama tarkastelu auttaa myös poistamaan turhia portteja: vähäriskinen ja helposti peruttava rutiini voidaan usein automatisoida ilman ihmisen hyväksyntää.</p>
 </div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
 <p>Oppija:</p>
 <ul>
-<li>tunnistaa päätökset, joihin liittyy raha, sitoumus, korkea epävarmuus tai merkittävä vaikutus</li>
+<li>tunnistaa päätökset, joihin liittyy raha, sitoumus, puuttuva tieto, työkalun virhe tai merkittävä vaikutus</li>
 <li>suunnittelee hyväksyntäportin, joka näyttää päätöksen kannalta tarpeellisen tiedon</li>
 <li>määrittää aikarajan, eskaloinnin ja turvallisen oletustoiminnon</li>
 <li>välttää hyväksyntäväsymystä rajaamalla portit riskikohtiin</li>
@@ -96,7 +96,7 @@
 <li>tavallisen vastaanottokuittauksen lähettäminen</li>
 <li>hinnanalennuksen hyväksyminen</li>
 <li>tietokannan rivin poistaminen</li>
-<li>lisätiedon pyytäminen epäselvään viestiin</li>
+<li>lisätiedon pyytäminen viestiin, josta puuttuu pakollinen tieto</li>
 <li>lääkinnälliseen tai oikeudelliseen päätökseen vaikuttava suositus</li>
 </ul>
 <p>Kysy jokaisesta: mikä on virheen vaikutus, voidaanko toiminto perua ja kuka kantaa vastuun?</p>
@@ -120,7 +120,7 @@
 <li>turvallisen oletustoiminnon</li>
 </ul>
 <p>Kriittistä päätöstä ei hyväksytä automaattisesti pelkän vastaamattomuuden vuoksi.</p>
-<p>Pyydä ryhmiä perustelemaan erityisesti turvallinen oletustoiminto. Rahaa, oikeuksia tai ulkoista sitoumusta koskevassa tilanteessa odottaminen, hylkääminen tai eskalointi on yleensä perustellumpaa kuin automaattinen hyväksyntä. Samalla huomataan, että aikaraja ei ole pelkkä käyttöliittymän yksityiskohta vaan osa harnessin toimintalogiikkaa.</p>
+<p>Pyydä ryhmiä perustelemaan erityisesti turvallinen oletustoiminto. Rahaa, oikeuksia tai ulkoista sitoumusta koskevassa tilanteessa odottaminen, hylkääminen tai eskalointi on yleensä perustellumpaa kuin automaattinen hyväksyntä. Samalla huomataan, että aikaraja ei ole pelkkä käyttöliittymän yksityiskohta vaan osa agentin ohjauskehyksen toimintalogiikkaa.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 4 — Palautteesta hallituksi muutokseksi (20 min)</h2></div><div class="task-card-body">
 <p>Täytä ketju:</p>
 <table>
@@ -158,7 +158,7 @@
 </tbody>
 </table>
 <p>Korosta, ettei päätöksen tallentaminen vielä muuta kielimallia tai agentin toimintaa.</p>
-<p>Käy yksi esimerkki koko ketjun läpi. Jos hyväksyjä hylkää samanlaisen ehdotuksen toistuvasti, loki paljastaa ilmiön, mutta sääntöä ei silti muuteta suoraan. Ensin ihminen arvioi, onko kyse aidosta toimintatavasta vai tilapäisestä poikkeuksesta. Vasta tämän jälkeen muutos tehdään ohjeeseen, harnessiin tai testiin ja sen vaikutus tarkistetaan uudella testiajolla.</p>
+<p>Käy yksi esimerkki koko ketjun läpi. Jos hyväksyjä hylkää samanlaisen ehdotuksen toistuvasti, loki paljastaa ilmiön, mutta sääntöä ei silti muuteta suoraan. Ensin ihminen arvioi, onko kyse aidosta toimintatavasta vai tilapäisestä poikkeuksesta. Vasta tämän jälkeen muutos tehdään ohjeeseen, agentin ohjauskehykseen tai testiin ja sen vaikutus tarkistetaan uudella testiajolla.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan tarkistuslista</h2></div><div class="task-card-body">
 <ul>
 <li>Portit sijaitsevat riskikohdissa, eivät kaikkialla.</li>
@@ -171,7 +171,7 @@
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 25</text>
 <text x="74" y="244" font-size="45" font-weight="800" fill="#1B2336">Ihminen portinvartijana</text>
-<text x="74" y="302" font-size="25" fill="#5A6478">Human-in-the-loop käytännössä</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Ihmisen osallistuminen käytännössä</text>
 <g transform="translate(636,206)">
 <rect x="0" y="0" width="116" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3"/>
 <line x1="58" y1="0" x2="58" y2="-22" stroke="#008799" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="-28" r="7" fill="#008799"/>
@@ -192,7 +192,7 @@
 <rect x="74" y="152" width="812" height="80" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <text x="100" y="190" font-size="21" fill="#006B7A">Joissain tilanteissa agentti pysäytetään odottamaan, kunnes ihminen</text>
 <text x="100" y="218" font-size="21" fill="#006B7A">sanoo: ”kyllä, jatka” tai ”ei, älä tee sitä”.</text>
-<text x="74" y="296" font-size="19" font-weight="700" fill="#5A6478">Human-in-the-loop tarkoittaa, että ihminen…</text>
+<text x="74" y="296" font-size="19" font-weight="700" fill="#5A6478">Ihmisen osallistuminen tarkoittaa, että ihminen…</text>
 <g transform="translate(74,318)">
 <rect x="0" y="0" width="264" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="40" r="17" fill="#E5F6F7"/><path d="M32 40 l5 5 l9 -10" fill="none" stroke="#008799" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -204,7 +204,7 @@
 <g transform="translate(622,318)">
 <rect x="0" y="0" width="264" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,22)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 a12 12 0 1 1 -11 7"/><path d="M3 9 V3 H9"/></g>
-<text x="24" y="84" font-size="17" fill="#3A4253">ohjaa agenttia,</text><text x="24" y="106" font-size="17" fill="#3A4253">kun se on epävarma</text></g>
+<text x="24" y="84" font-size="17" fill="#3A4253">ohjaa agenttia,</text><text x="24" y="106" font-size="17" fill="#3A4253">kun havaittava ehto täyttyy</text></g>
 <rect x="74" y="458" width="812" height="44" rx="10" fill="#E5F6F7"/>
 <text x="100" y="486" font-size="16" fill="#006B7A">Esim. agentti haluaa antaa asiakkaalle 50 % alennuksen → ihminen vahvistaa ensin.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">2 / 13</text>
@@ -254,18 +254,18 @@
 <rect x="0" y="0" width="264" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="44" cy="48" r="24" fill="#EAF7F0"/><text x="44" y="57" text-anchor="middle" font-size="26" font-weight="800" fill="#2F9E69">2</text>
 <g transform="translate(180,28)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="18"/><path d="M14 16 a6 6 0 0 1 12 1 c0 5 -6 5 -6 9"/><circle cx="20" cy="31" r="1.4" fill="#2F9E69" stroke="none"/></g>
-<text x="28" y="120" font-size="23" font-weight="800" fill="#1B2336">Epävarmuus</text>
-<text x="28" y="164" font-size="16" fill="#3A4253">Agentti ei ole riittävän</text>
-<text x="28" y="192" font-size="16" fill="#3A4253">varma päätöksestään.</text>
-<text x="28" y="234" font-size="15" fill="#5A6478">Vain 65 % varma? Ihminen</text><text x="28" y="256" font-size="15" fill="#5A6478">näkee sävyt ja kontekstin.</text></g>
+<text x="28" y="120" font-size="23" font-weight="800" fill="#1B2336">Puuttuva tieto tai virhe</text>
+<text x="28" y="164" font-size="16" fill="#3A4253">Lähde puuttuu tai lähteet</text>
+<text x="28" y="192" font-size="16" fill="#3A4253">ovat ristiriidassa.</text>
+<text x="28" y="234" font-size="15" fill="#5A6478">Pakollinen tieto puuttuu,</text><text x="28" y="256" font-size="15" fill="#5A6478">validointi tai työkalu pettää.</text></g>
 <g transform="translate(622,164)">
 <rect x="0" y="0" width="264" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="44" cy="48" r="24" fill="#FFF3D6"/><text x="44" y="57" text-anchor="middle" font-size="26" font-weight="800" fill="#C79100">3</text>
 <g transform="translate(178,26)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 3 L37 33 H3 Z"/><path d="M20 15 V23 M20 28 V29"/></g>
-<text x="28" y="120" font-size="23" font-weight="800" fill="#1B2336">Poikkeamat</text>
-<text x="28" y="164" font-size="16" fill="#3A4253">Tilanne ei ole rutiinia</text>
-<text x="28" y="192" font-size="16" fill="#3A4253">vaan poikkeaa tavasta.</text>
-<text x="28" y="234" font-size="15" fill="#5A6478">Negatiivinen hinta, iso</text><text x="28" y="256" font-size="15" fill="#5A6478">summa, uusi maksutapa.</text></g>
+<text x="28" y="120" font-size="23" font-weight="800" fill="#1B2336">Riskiluokka</text>
+<text x="28" y="164" font-size="16" fill="#3A4253">Toiminto kuuluu ennalta</text>
+<text x="28" y="192" font-size="16" fill="#3A4253">määriteltyyn riskiluokkaan.</text>
+<text x="28" y="234" font-size="15" fill="#5A6478">Iso hyvitys, tietojen poisto</text><text x="28" y="256" font-size="15" fill="#5A6478">tai sopimusmuutos.</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">4 / 13</text>
 </svg></div>
 
@@ -290,7 +290,7 @@
 <rect x="0" y="0" width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="34" r="17" fill="#FFF7E2"/><path d="M34 30 a6 6 0 0 1 12 1 c0 5 -6 5 -6 9" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round"/>
 <text x="76" y="32" font-size="20" font-weight="700" fill="#1B2336">Ehdolliset päätökset</text>
-<text x="430" y="32" font-size="18" fill="#3A4253">Hyväksyntä vain, jos agentti epäröi.</text></g>
+<text x="430" y="32" font-size="18" fill="#3A4253">Havaittava ehto vaatii hyväksynnän.</text></g>
 <g transform="translate(74,406)">
 <rect x="0" y="0" width="812" height="68" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(28,18)" fill="none" stroke="#7E88A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="24" height="32" rx="3"/><path d="M6 9 H18 M6 16 H18 M6 23 H14"/></g>
@@ -478,7 +478,7 @@
 <text x="24" y="152" font-size="16" fill="#3A4253">Kiireessä tehtyä poikkeusta ei</text>
 <text x="24" y="176" font-size="16" fill="#3A4253">pidä muuttaa yleiseksi säännöksi.</text></g>
 <rect x="74" y="392" width="812" height="76" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
-<text x="100" y="424" font-size="18" fill="#006B7A">Harness pysäyttää, säilyttää tilan ja näyttää päätöstiedot ihmiselle.</text>
+<text x="100" y="424" font-size="18" fill="#006B7A">Agentin ohjauskehys pysäyttää, säilyttää tilan ja näyttää päätöstiedot ihmiselle.</text>
 <text x="100" y="450" font-size="18" fill="#006B7A">Aikarajan jälkeen se jatkaa, hylkää tai eskaloi sovitun säännön mukaan.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
@@ -495,7 +495,7 @@
 <g transform="translate(74,230)">
 <rect x="0" y="0" width="812" height="56" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="35" font-size="18" font-weight="700" fill="#1B2336">Ilmoitus ihmiselle</text>
-<text x="420" y="35" font-size="17" fill="#5A6478">Slack- tai Teams-viesti ja lomakevastaus</text></g>
+<text x="420" y="35" font-size="17" fill="#5A6478">tiimikanavan viesti ja lomakevastaus</text></g>
 <g transform="translate(74,296)">
 <rect x="0" y="0" width="812" height="56" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="35" font-size="18" font-weight="700" fill="#1B2336">Palautteen tallennus</text>
@@ -514,12 +514,12 @@
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l25g13)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Yhteenveto</text>
-<text x="74" y="136" font-size="18" fill="#5A6478">Human-in-the-loop ei tarkoita, että ihminen tekee kaiken — vaan ohjaa oikein.</text>
+<text x="74" y="136" font-size="18" fill="#5A6478">Ihmisen osallistuminen ei tarkoita, että ihminen tekee kaiken — vaan ohjaa oikein.</text>
 <text x="74" y="182" font-size="20" font-weight="700" fill="#1B2336">Kolme sääntöä: milloin hyväksyntä tarvitaan</text>
 <g font-size="16.5" fill="#3A4253">
 <rect x="74" y="198" width="264" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="220" r="6" fill="#008799"/><text x="118" y="226">Raha tai rakenne</text>
-<rect x="348" y="198" width="264" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="374" cy="220" r="6" fill="#2F9E69"/><text x="392" y="226">Epävarmuus</text>
-<rect x="622" y="198" width="264" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="648" cy="220" r="6" fill="#C79100"/><text x="666" y="226">Poikkeamat</text>
+<rect x="348" y="198" width="264" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="374" cy="220" r="6" fill="#2F9E69"/><text x="392" y="226">Puuttuva tieto tai virhe</text>
+<rect x="622" y="198" width="264" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="648" cy="220" r="6" fill="#C79100"/><text x="666" y="226">Määritelty riskiluokka</text>
 </g>
 <rect x="74" y="262" width="812" height="62" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="100" y="290" font-size="17" fill="#3A4253">Hyvä portti näyttää päätöksen, perustelut, hyväksyjän ja vaihtoehdon hylkäykselle —</text>
@@ -534,7 +534,7 @@
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
-<script>window.CI={"view": "opettaja", "lid": "lesson-25", "num": 25, "title": "Ihminen portinvartijana — human-in-the-loop käytännössä", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-25", "num": 25, "title": "Ihminen portinvartijana — ihmisen osallistuminen käytännössä", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

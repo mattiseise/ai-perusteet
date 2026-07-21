@@ -49,16 +49,16 @@ def main():
             task = json.loads(raw)
             task_count += 1
             task_types.add(task['type'])
-    if task_count != 112:
-        fail(f'Harjoittele-tehtäviä {task_count}, odotettiin 112', errors)
+    if task_count != 115:
+        fail(f'Harjoittele-tehtäviä {task_count}, odotettiin 115', errors)
     expected_types = {'match', 'order', 'classify', 'quiz', 'scenario', 'spot', 'reflect'}
     if task_types != expected_types:
         fail(f'Tehtävätyypit {sorted(task_types)}', errors)
 
     source_demos = sum(p.read_text(encoding='utf-8').count('<figure class="ai-demo">')
                        for p in LESSONS.glob('*/teoria.md'))
-    if source_demos != 28:
-        fail(f'Lähteissä {source_demos} ai-demoa, odotettiin 28', errors)
+    if source_demos != 27:
+        fail(f'Lähteissä {source_demos} ai-demoa, odotettiin 27', errors)
 
     for nn in range(1, 28):
         teoria = LESSONS / f'{nn:02d}' / 'teoria.md'
@@ -93,8 +93,8 @@ def main():
     for view in ('kurssi', 'luokka'):
         generated = list((ROOT / view).glob('tunti-*/index.html'))
         demos = sum(p.read_text(encoding='utf-8').count('data-demo-id=') for p in generated)
-        if demos != 28:
-            fail(f'{view}: generoituja demoja {demos}, odotettiin 28', errors)
+        if demos != 27:
+            fail(f'{view}: generoituja demoja {demos}, odotettiin 27', errors)
     course_demos = ''.join(p.read_text(encoding='utf-8') for p in (ROOT / 'kurssi').glob('tunti-*/index.html'))
     if course_demos.count('data-demo-kind="static"') != 25:
         fail('Staattisten demojen määrä ei ole 25', errors)
@@ -133,7 +133,7 @@ def main():
     if errors:
         print(*errors, sep='\n')
         return 1
-    print('OK: 112 tehtävää, 28 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
+    print('OK: 115 tehtävää, 27 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
     return 0
 
 

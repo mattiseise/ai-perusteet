@@ -1,14 +1,14 @@
-# Kädet saveen — n8n-agenttipaja alkaa
+# Kädet saveen — tee agentista testattava minimiversio
 
 ## Johdanto: teoriasta tekemiseen
 
-Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella **viisi pohjapiirrosta** tunneilta 19, 21, 23, 24 ja 25. Ne muodostavat suunnitelman omasta agentistasi. Tällä tunnilla kokoat pohjapiirrokset yhteen, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.
+Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella **viisi pohjapiirrosta** tunneilta 19, 21, 23, 24 ja 25. Tällä tunnilla kokoat ne yhteen ja teet ensimmäisen testattavan version. Voit rakentaa sen teknisenä n8n-toteutuksena tai dokumentoituna suunnitelmana. Molemmissa kielimallin on tehtävä vähintään yksi todellinen, tilanteen mukaan muuttuva valinta.
 
-**n8n** lausutaan ”n-eight-n”. Se on avoimen lähdekoodin automaatioalusta, jossa rakennat työnkulkuja visuaalisesti vetämällä ja pudottamalla **solmuja** eli nodeja kankaalle. Jokainen solmu tekee yhden asian: vastaanottaa viestin, kutsuu tekoälyä, lukee tiedoston tai lähettää sähköpostin. Solmujen välille vedetään yhteys, ja data virtaa automaattisesti solmusta toiseen. Voit ajatella sitä putkirakennelmana, jossa jokainen mutka tekee jotakin hyödyllistä.
+**n8n** lausutaan ”n-eight-n”. Se on visuaalinen automaatioympäristö, jota voi käyttää pilvipalveluna tai ylläpitää itse sen lisenssiehtojen mukaisesti. Työnkulku rakennetaan **solmuista** eli nodeista kankaalle. Jokainen solmu tekee yhden asian: vastaanottaa viestin, kutsuu kielimallia, lukee rajattua tietoa tai valmistelee toiminnon. Solmujen välille vedetään yhteys, ja tieto kulkee vaiheesta toiseen.
 
-Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — **syötekäsittely**, **päättely**, **työkalut**, **muisti**, **turvakerrokset** ja **palautesilmukka** — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.
+Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka** — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.
 
-> **Harnessin näkökulma:** n8n ei ole automaattisesti agentti tai harness. Se on ympäristö, jossa voit rakentaa harnessin näkyväksi työnkuluksi: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Kuuden rakennusosan kokonaisuus toimii kattavuuden tarkistuslistana — osia ei tarvitse toteuttaa kuutena erillisenä solmuna.
+> **Agentin ohjauskehyksen näkökulma:** n8n ei ole automaattisesti agentti. Se on ympäristö, jossa ohjauskehyksen vastuut voidaan toteuttaa näkyvänä työnkulkuna: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Dokumentoidussa suunnittelupolussa samat vastuut kuvataan kaaviona, sopimuksina ja suoritusjälkinä. Kuusi rakennusosaa toimii kummassakin polussa kattavuuden tarkistuslistana.
 
 **Pysähdy hetkeksi:** Mieti jotakin toistuvaa tehtävää arjessasi tai koulussa. Voisiko kone hoitaa sen puolestasi, jos sillä olisi pääsy oikeisiin työkaluihin?
 
@@ -17,7 +17,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <figure style="margin:26px 0;text-align:center">
 <svg viewBox="0 0 920 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:840px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
   <title>Esimerkki-työnkulku: sähköpostien luokittelu n8n:ssä</title>
-  <desc>Päivittäin ajettava järjestelmä hakee sähköpostit. Kielimalli arvioi tilanteen ja valitsee rajatuista työkaluista tarvittavan toiminnon. Tulos muotoillaan ja tallennetaan Google Sheetsiin.</desc>
+  <desc>Päivittäin ajettava järjestelmä hakee sähköpostit. Kielimalli arvioi tilanteen ja valitsee rajatuista työkaluista tarvittavan toiminnon. Tulos muotoillaan ja tallennetaan rajattuun taulukkoon.</desc>
   <defs>
     <g id="cls-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
     <g id="cls-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
@@ -48,7 +48,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   <rect x="700" y="92" width="192" height="78" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
   <use href="#cls-sheet" x="716" y="108" width="19" height="19" style="color:#0E9AA7"/>
   <text x="742" y="121" font-size="12.5" font-weight="700" fill="#0B7E89">Tallennus</text>
-  <text x="716" y="150" font-size="11" fill="#3A4253">Google Sheetsiin</text>
+  <text x="716" y="150" font-size="11" fill="#3A4253">rajattuun taulukkoon</text>
   <g stroke="#B7C0D6" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
     <path d="M344 170 V196 H126 V232"/><path d="M344 170 V196 H344 V232"/><path d="M344 170 V196 H560 V232"/><path d="M344 170 V196 H770 V232"/>
   </g>
@@ -60,7 +60,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   <use href="#cls-ai" x="278" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="302" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Kielimalli (LLM)</text>
   <text x="278" y="280" font-size="10.3" fill="#5A6478">tekee yhteenvedon</text>
   <rect x="482" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
-  <use href="#cls-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Google Sheets</text>
+  <use href="#cls-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">taulukko</text>
   <text x="496" y="280" font-size="10.3" fill="#5A6478">tallentaa viestit</text>
   <rect x="700" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
   <use href="#cls-mail" x="714" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="738" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Sähköposti</text>
@@ -77,9 +77,9 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 
 Kun avaat n8n:n ensimmäistä kertaa, näet tyhjän kankaan. Kaikki alkaa **triggeristä** eli solmusta, joka käynnistää työnkulun. Triggeri voi olla esimerkiksi ajastin, kuten ”joka maanantai klo 8”, webhook, kuten ”kun joku lähettää viestin”, tai manuaalinen käynnistys, kuten ”kun painan käynnistä”. Ilman triggeriä työnkulku ei lähde liikkeelle.
 
-Triggerin jälkeen lisäät **toimintasolmuja**. Jokainen solmu saa dataa edelliseltä solmulta ja antaa dataa seuraavalle solmulle. Esimerkiksi työnkulku voi edetä näin: triggeri vastaanottaa Discord-viestin → HTTP Request -solmu lähettää viestin tekoäly-API:lle → seuraava solmu muotoilee vastauksen → viimeinen solmu lähettää vastauksen takaisin Discordiin. Tämä on tekoälyavusteinen työnkulku, mutta ei vielä välttämättä agentti. Agentiksi kokonaisuus muuttuu vasta, kun kielimalli saa valita seuraavan toiminnon tai työkalun tilanteen ja havaintojen perusteella — harnessin asettamissa rajoissa.
+Triggerin jälkeen lisäät **toimintasolmuja**. Jokainen solmu saa tietoa edelliseltä solmulta ja antaa sitä seuraavalle. Työnkulku voi esimerkiksi vastaanottaa viestin, pyytää kielimallia luokittelemaan sen ja ohjata tuloksen oikeaan käsittelyyn. Tämä on tekoälyavusteinen työnkulku, mutta ei vielä välttämättä agentti. Tällä kurssilla agentilta vaaditaan, että kielimalli valitsee seuraavan toiminnon tai työkalun tilanteen ja havaintojen perusteella — ohjauskehyksen asettamissa rajoissa.
 
-n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord, sähköposti, tiedostot, tietokannat, HTTP-kutsut sekä tekoälypalvelut, kuten OpenAI ja Claude. Sinun ei tarvitse tietää kaikkien näiden palveluiden teknisiä yksityiskohtia. n8n hoitaa yhteydet puolestasi. Sinun tehtäväsi on päättää, mitä solmuja käytät ja missä järjestyksessä.
+n8n:ssä on valmiita solmuja esimerkiksi taulukoille, viesteille, tiedostoille, tietokannoille ja kielimalleille. Sinun ei tarvitse ohjelmoida yhteyksiä käsin. Sinun tehtäväsi on päättää, mitä tietoa saa käyttää, minkä valinnan kielimalli tekee ja mitä järjestelmä saa valinnan jälkeen tehdä.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// data virtaa solmusta toiseen — jokainen solmu tekee yhden asian</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
@@ -124,19 +124,19 @@ n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord,
 
 ## Agentin kuusi rakennusosaa n8n:ssä
 
-Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä konkreettisesti. Tunnilla 27 dokumentoit ensin kielimallin ja harnessin rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista solmua yhteen lokeroon.
+Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä tai kuvata dokumentoidussa suunnittelupolussa. Tunnilla 27 dokumentoit ensin kielimallin ja agentin ohjauskehyksen rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista vastuuta yhteen lokeroon.
 
 **Syötekäsittelijä** on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.
 
-**Päättelijä** on tekoälysolmu, esimerkiksi OpenAI-solmu tai vastaava. Siihen kirjoitat **järjestelmäpromptin**, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.
+**Päättelijä** on tekoälysolmu, esimerkiksi kielimallisolmu. Siihen kirjoitat **järjestelmäpromptin**, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.
 
-**Työkalujen suorittaja** tarkoittaa solmuja, joilla agentti tekee konkreettisia toimintoja. Google Sheets -solmu lukee tai kirjoittaa tietoja. HTTP Request -solmu kutsuu ulkoisia palveluita. Slack-solmu lähettää viestejä. Nämä ovat agentin ”kädet”, joiden avulla se toimii maailmassa.
+**Työkalujen suorittaja** tarkoittaa solmuja tai kuvattuja toimintoja, joilla agentti lukee rajattua tietoa tai vaikuttaa ympäristöönsä. Työkalu voi hakea hyväksytystä tietolähteestä, kirjoittaa taulukkoon tai valmistella viestin. Sopimus määrää, mitä se saa tehdä ja miten virhe käsitellään.
 
-**Muisti ja konteksti** voidaan toteuttaa usealla tavalla. Yksinkertaisimmillaan voit tallentaa keskusteluhistorian Google Sheetsiin ja hakea sen jokaisen uuden viestin yhteydessä. n8n:ssä voi olla myös muistisolmuja tai muita tapoja säilyttää keskustelun kontekstia ja prosessin tilaa.
+**Muisti ja konteksti** voidaan toteuttaa usealla tavalla. Yksinkertaisimmillaan voit tallentaa keskusteluhistorian rajattuun taulukkoon ja hakea sen jokaisen uuden viestin yhteydessä. n8n:ssä voi olla myös muistisolmuja tai muita tapoja säilyttää keskustelun kontekstia ja prosessin tilaa.
 
 **Turvakerros** toteutuu IF-solmuilla, ehdoilla, validoinneilla ja hyväksyntäkohdilla. Voit esimerkiksi lisätä ehdon: ”Jos vastaus sisältää henkilötietoja, älä lähetä sitä eteenpäin.” Tai: ”Jos käyttäjä pyytää jotakin, mikä ei kuulu agentin tehtävään, vastaa kohteliaasti kieltäytymällä.” n8n:ssä nämä ovat konkreettisia haarautumia työnkulussa.
 
-**Seuranta ja palautesilmukka** tarkoittavat lokitusta ja palautteen keräämistä. Lisää työnkulkuun solmu, joka tallentaa jokaisen tärkeän toiminnon esimerkiksi Google Sheetsiin tai tiedostoon: mitä käyttäjä kysyi, mitä agentti vastasi, mitä työkaluja käytettiin ja kauanko suoritus kesti. Näin näet jälkikäteen, miten agentti toimii, ja voit parantaa sitä.
+**Seuranta ja palautesilmukka** tarkoittavat lokitusta ja palautteen keräämistä. Lisää työnkulkuun solmu, joka tallentaa jokaisen tärkeän toiminnon esimerkiksi rajattuun taulukkoon tai tiedostoon: mitä käyttäjä kysyi, mitä agentti vastasi, mitä työkaluja käytettiin ja kauanko suoritus kesti. Näin näet jälkikäteen, miten agentti toimii, ja voit parantaa sitä.
 
 ## Iteratiivinen kehitys — rakenna pienestä isoon
 
@@ -152,7 +152,7 @@ Esimerkki iteratiivisesta rakentamisesta:
 
 Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.
 
-**Pysähdy hetkeksi:** Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelyä, päättelyä, työkaluja, muistia, turvakerrosta tai palautetta — ja jääkö jokin olennainen vastuu vielä puuttumaan?
+**Pysähdy hetkeksi:** Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelijän, päättelijän ja suunnittelijan, työkalujen suorittajan, muistin ja kontekstin, turvakerroksen tai seurannan ja palautesilmukan vastuuta — ja jääkö jokin olennainen vastuu vielä puuttumaan?
 
 ## Pohjapiirroksesta toteutukseen
 
@@ -174,26 +174,26 @@ Yhteisö saa samoja kysymyksiä kymmeniä kertoja päivässä. Botti vastaa ylei
 
 **Taso 2 — Sähköpostiyhteenvetoagentti**
 
-Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä yhteenvedon tekoälyllä ja lähettää yhteenvedon Slackiin tai Teamsiin. Triggeri on ajastin. Työnkulku etenee näin: hae sähköpostit → kokoa yhteenveto → lähetä yhteenveto.
+Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä yhteenvedon tekoälyllä ja lähettää yhteenvedon tiimikanavalle. Triggeri on ajastin. Työnkulku etenee näin: hae sähköpostit → kokoa yhteenveto → lähetä yhteenveto.
 
 **Taso 3 — Tikettiagentti**
 
-Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki ihmisen osallistavasta rakenteesta.
+Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin rajattuun taulukkoon, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki ihmisen osallistavasta rakenteesta.
 
-## Tunnin tavoite ja valmis lopputulos
+## Kaksi tasavertaista toteutuspolkua
 
-Tunnin lopussa sinulla pitäisi olla **toimiva minimiversio** omasta n8n-agentistasi. Sen ei tarvitse vielä olla täydellinen, mutta sen pitää näyttää, että perusidea toimii.
+Tunnin lopussa sinulla pitäisi olla **testattava minimiversio** agentistasi. Tekninen polku osoittaa n8n:n suoritusnäkymällä, että yhteydet ja reititys toimivat käytetyssä ympäristössä. Dokumentoitu suunnittelupolku osoittaa kaavion, työkalusopimusten ja simuloitujen suoritusjälkien avulla, että suunnitelma on johdonmukainen. Jälkimmäinen ei kuitenkaan todista testaamattomien liitäntöjen tai käyttöoikeuksien toimivuutta.
 
 Minimiversiossa tulee olla vähintään:
 
 - **triggeri**, joka käynnistää työnkulun
 - **tekoälysolmu**, joka valitsee tilanteen perusteella vähintään kahdesta sallitusta seuraavasta toiminnosta
-- **työkalu tai toimintopolku**, jonka harness antaa kielimallin käyttöön rajatuilla oikeuksilla
+- **työkalu tai toimintopolku**, jonka ohjauskehys antaa kielimallin käyttöön rajatuilla oikeuksilla
 - **suoritusjälki**, josta näkyvät syöte, valittu toiminto, työkalun tulos ja seuraava vaihe
 
 Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
-- miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi
+- miten kielimallin ja ohjauskehyksen vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi
 - mikä osa toimii jo
 - mikä osa jäi kesken
 - mitä pitää testata tai korjata tunnilla 27
@@ -202,11 +202,11 @@ Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
 ## Yhteenveto
 
-Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat minimiversion iteratiivisesti: ensin datavirta, sitten yksi tilanteen mukaan muuttuva päätös, sen toteuttava työkalu ja näkyvä suoritusjälki.
+Tämä tunti vie sinut suunnitelmasta testattavaan minimiversioon. Kokoat viisi pohjapiirrostasi yhteen, teet yhden tilanteen mukaan muuttuvan kielimallivalinnan ja näytät sen seuraukset suoritusjäljessä. Tekninen polku rakentaa tämän n8n:ssä. Dokumentoitu polku kuvaa rakenteen ja simuloi sen, mutta käyttää samassa kohdassa todellista kielimallipäätöstä.
 
 Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
 
-> **Erota nämä:** Mikä työnkulkusi solmu kutsuu kielimallia — ja mitkä solmut, säännöt tai palvelut muodostavat sitä ympäröivän harnessin?
+> **Erota nämä:** Mitä kielimalli valitsee — ja mitkä solmut, säännöt, sopimukset tai palvelut muodostavat sitä ympäröivän agentin ohjauskehyksen?
 
 ---
 

@@ -1,14 +1,14 @@
-# Suunnittelumallit — ReAct, eksplisiittinen työnkulku ja orkestrointi
+# Suunnittelumallit — ReAct ja eksplisiittinen työnkulku
 
 ## Johdanto
 
 Nyt tiedät, mistä agentti koostuu: muistista, työkaluista ja identiteetistä. Seuraava kysymys on, miten suunnittelet agentin **havaittavan toiminnan järkeväksi ja testattavaksi**. Miten varmistat, että se etenee oikeassa järjestyksessä eikä hyppää sattumanvaraisesti vääriin toimintoihin?
 
-Vastaus on **suunnittelumallit** eli design patterns. Ne ovat testattuja tapoja järjestää työkalukutsut, tulosten tarkistus, päätökset ja toiminnot. Mallin piilotettua raakaa chain-of-thoughtia ei pyydetä eikä tallenneta. Sen sijaan näkyviin tehdään lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe sekä toteutettu toiminto.
+Vastaus on **suunnittelumallit**. Ne ovat testattuja tapoja järjestää työkalujen käyttö, tulosten tarkistus, päätökset ja toiminnot. Mallin sisäistä päättelyä ei pyydetä eikä tallenneta. Sen sijaan näkyviin tehdään lyhyt päätösperustelu, työkalun käyttö, tulos tai virhe sekä toteutettu toiminto.
 
-Seuraavassa projektissa käytät näitä malleja. Sinä päätät, käyttääkö agenttisi **ReAct-mallia** vai **eksplisiittinen työnkulkua** ja rakennatko sen yksittäiseksi agentiksi vai moniagenttijärjestelmäksi. Nämä päätökset vaikuttavat siihen, onko agentti tehokas, hidas, selkeä vai vaikeasti hallittava.
+Projektissasi valitset kahdesta perusmallista: käyttääkö agenttisi **ReAct-mallia** vai **eksplisiittistä työnkulkua**. Moniagenttijärjestelmät käsitellään myöhemmin valinnaisena syvennyksenä, eikä niitä tarvita lopputyössä.
 
-> **Harness-kytkentä:** ReAct ja eksplisiittinen työnkulku ovat tapoja, joilla harness ohjaa agentin havaittavaa toimintaa. Harness hallitsee kierrosta, välittää työkalukutsut ja tulokset, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Kielimalli valitsee seuraavaa sisältöä tai toimintoa näiden rajojen sisällä.
+> **Kytkentä agentin ohjauskehykseen:** ReAct ja eksplisiittinen työnkulku ovat tapoja, joilla agentin ohjauskehys ohjaa agentin havaittavaa toimintaa. Agentin ohjauskehys hallitsee kierrosta, välittää työkalukutsut ja tulokset, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Kielimalli valitsee seuraavaa sisältöä tai toimintoa näiden rajojen sisällä.
 
 ## ReAct: valitse toiminto, havainnoi tulos ja jatka
 
@@ -42,7 +42,7 @@ Kun ReAct-mallin toimintaa lokitetaan, havaittava työnkulku näkyy selvästi:
 
 **[TOIMINTA]** Lähetä vastaus: ”Tuotteen hinta on 45 €.”
 
-Lokista näkyvät työkalukutsut, niille annetut rakenteiset syötteet, tulokset, toiminnot, virheet ja lyhyet päätösperustelut. Se ei tallenna raakaa chain-of-thoughtia eikä tarpeettomia salaisuuksia tai henkilötietoja.
+Lokista näkyvät työkalujen käytöt, niille annetut syötteet, tulokset, toiminnot, virheet ja lyhyet päätösperustelut. Se ei tallenna mallin sisäistä päättelyä eikä tarpeettomia salaisuuksia tai henkilötietoja.
 
 > **Pysähdy hetkeksi:** Ajattele omaa ratkaisuprosessiasi. Kun ratkaiset ongelmaa, ajatteletko ensin, toimitko sen jälkeen ja arvioitko sitten tuloksen perusteella? Vai hyppäätkö suoraan toimintaan? Miten ReAct-malli voisi auttaa sinua tekemään parempia päätöksiä?
 
@@ -111,7 +111,7 @@ Lokista näkyvät työkalukutsut, niille annetut rakenteiset syötteet, tulokset
 
 ## Eksplisiittinen työnkulku: jaa ongelma näkyviin vaiheisiin
 
-**Eksplisiittisessä työnkulussa** toteuttaja purkaa ongelman näkyviin, testattaviin vaiheisiin. Tämä on eri asia kuin mallin piilotettu sisäinen päättely. Työnkulku voidaan tarkistaa ja lokittaa ilman, että raakaa ajatusketjua pyydetään tai tallennetaan.
+**Eksplisiittisessä työnkulussa** toteuttaja purkaa ongelman näkyviin, testattaviin vaiheisiin. Tämä on eri asia kuin mallin piilotettu sisäinen päättely. Työnkulku voidaan tarkistaa ja lokittaa ilman, että raakaa ajatusketjua pyydetään tai tallennetaan. Kurssin agenttiprojektissa myös eksplisiittiseen työnkulkuun kuuluu vähintään yksi nimetty vaihe, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta ohjauskehyksen sallimasta vaihtoehdosta. Vaiheet ja sallitut haarat ovat ennalta määriteltyjä, mutta mallin valitsema haara riippuu syötteestä.
 
 Esimerkiksi agentti saa tehtävän: ”Käsittele palautuspyyntö.” Agentti ei yritä ratkaista kaikkea yhdellä kertaa, vaan purkaa ongelman vaiheisiin:
 
@@ -125,80 +125,27 @@ Eksplisiittinen työnkulku auttaa agenttia **välttämään virheitä**, koska s
 
 Vertaa seuraavia kahta tapaa toimia:
 
-**Ilman eksplisiittinen työnkulkua:** Agentti näkee palautuspyynnön ja hyppää suoraan vastaukseen: ”Lähetän hyvityksen.” Mutta mitä jos palautusaika on jo kulunut? Entä jos käytäntö sanoo, että asiakkaalle pitää lähettää korvaava tuote hyvityksen sijaan? Agentti voi tehdä väärän päätöksen, koska se ei tarkistanut asiaa vaihe vaiheelta.
+**Ilman eksplisiittistä työnkulkua:** Agentti näkee palautuspyynnön ja hyppää suoraan vastaukseen: ”Lähetän hyvityksen.” Mutta mitä jos palautusaika on jo kulunut? Entä jos käytäntö sanoo, että asiakkaalle pitää lähettää korvaava tuote hyvityksen sijaan? Agentti voi tehdä väärän päätöksen, koska se ei tarkistanut asiaa vaihe vaiheelta.
 
-**Eksplisiittinen työnkulkun kanssa:** Agentti tarkistaa palautusajan, palautuskäytännön ja tuotteet ennen päätöksen tekemistä. Vasta tämän jälkeen se laatii vastauksen. Näin virheiden määrä vähenee.
+**Eksplisiittisen työnkulun kanssa:** Agentti tarkistaa palautusajan, palautuskäytännön ja tuotteet ennen päätöksen tekemistä. Vasta tämän jälkeen se laatii vastauksen. Näin virheiden määrä vähenee.
 
-## Moniagenttijärjestelmät: kun yksi agentti ei riitä
-
-Tähän asti olemme puhuneet yksittäisestä agentista. Monimutkaisissa tehtävissä yksi agentti ei kuitenkaan aina riitä. Silloin voidaan rakentaa **moniagenttijärjestelmä**, jossa useat erikoistuneet agentit tekevät yhteistyötä.
-
-Ajattele yritystä. Yksi ihminen ei yleensä hoida kaikkea. On myyjä, joka ymmärtää asiakkaat, kirjanpitäjä, joka hallitsee rahaa, varastotyöntekijä, joka hoitaa logistiikkaa, ja johtaja, joka koordinoi kokonaisuutta. Jokainen on erikoistunut omaan alueeseensa. Moniagenttijärjestelmä toimii samalla periaatteella: jokaisella agentilla on oma erikoisalansa.
-
-Kuvittele asiakaspalvelun moniagenttijärjestelmä:
-
-- **Analyysiagentti** lukee asiakkaan viestin ja päättelee: ”Asiakas on tyytymätön kuljetuspalveluun.”
-- **Tiedonhakuagentti** hakee asiakkaan historian: ”Tämä asiakas on ostanut meiltä viisi kertaa. Hän on lojaali asiakas ja ollut aiemmin tyytymätön kuljetuspalveluihin.”
-- **Kirjoitusagentti** laatii vastauksen: ”Pahoittelemme kuljetusongelmaa. Tarjoamme sinulle maksuttoman kotiinkuljetuksen seuraavaan tilaukseen.”
-- **Validointiagentti** tarkistaa vastauksen sovittuja kriteerejä vasten: ”Pakolliset kentät ovat mukana, lähdeviitteet löytyvät ja mahdollinen henkilötieto on merkitty ihmisen tarkistettavaksi.” Tarkistus ei yksin todista vastausta turvalliseksi.
-
-Moniagenttijärjestelmässä on kaksi perusrakennetta.
-
-**Hierarkkinen malli:** Yksi agentti toimii johtajana ja jakaa tehtäviä muille. Johtaja-agentti näkee kokonaistehtävän ja päättää: ”Tämä tehtävä vaatii tietokantahaun, joten lähetän sen hakuagentille. Kun hakuagentti on valmis, lähetän tuloksen kirjoittaja-agentille.” Johtaja toimii kuin orkesterin kapellimestari: se koordinoi kokonaisuutta, ja muut agentit tekevät erikoistuneet osatehtävänsä. Tätä johtaja-agentin roolia — tehtävien jakamista muille ja tulosten kokoamista yhteen — kutsutaan **orkestroinniksi** (orchestration). Yksinkertaisesti sanottuna: yksi agentti johtaa ja jakaa tehtävät muille.
-
-**Hierarkkinen moniagenttijärjestelmä**
-
-|  |  |  |
-| --- | --- | --- |
-| **Orkestroija** jakaa tehtävät ja kokoaa tulokset | | |
-| ↓ | | |
-| **Tutkija-agentti** hakee tietoa | **Kirjoittaja-agentti** tuottaa tekstin | **Tarkistaja-agentti** validioi tulokset |
-| ↓ | | |
-| **Tulokset palaavat orkestroijalle** | | |
-
-**Yhteistyömalli:** Agentit keskustelevat keskenään ilman yhtä johtajaa. Ensimmäinen agentti aloittaa, toinen vastaanottaa tiedon ja tekee seuraavan vaiheen, kolmas tarkistaa ja neljäs antaa palautetta. Agentit vaihtavat tietoa keskenään ja tekevät päätöksiä yhdessä.
-
-Moniagenttijärjestelmät ovat voimakkaita, koska niiden avulla monimutkainen työ voidaan jakaa osiin. Jokainen agentti tekee sitä, mitä se osaa parhaiten. Ne ovat kuitenkin myös monimutkaisia. Mitä enemmän agentteja on, sitä vaikeampaa on ymmärtää, mitä järjestelmässä tapahtuu. Agentti A kertoo jotain agentille B, agentti B tekee päätöksen ja lähettää tiedon agentille C, ja agentin C toiminta voi vaikuttaa agentti A:n seuraaviin päätöksiin. Siksi **lokitus ja seuranta** ovat erityisen tärkeitä, kun agentteja on useita.
-
-> **Pysähdy hetkeksi:** Ajattele todellista, monimutkaista tehtävää, kuten asiakkaan uuden tilauksen käsittelyä. Siihen voi kuulua validointi, maksu, varasto, kuljetus ja asiakaspalvelu. Miten jakaisit tehtävän useamman erikoistuneen agentin kesken? Mikä agentti olisi johtaja? Mitä tietoa agentit vaihtaisivat keskenään?
+> **Valinnainen syvennys — moniagenttijärjestelmä:** Monimutkainen tehtävä voidaan joskus jakaa usealle erikoistuneelle agentille. Tällöin tarvitaan selkeä työnjako, tiedonkulku, lokitus ja vastuu kokonaisuuden kokoamisesta. Rakenne lisää kuitenkin monimutkaisuutta, joten tällä kurssilla aloitat yhdestä agentista. Moniagenttijärjestelmää ei tarvitse suunnitella eikä toteuttaa lopputyössä.
 
 ## Suunnittelumallien valinta: milloin käytät mitä?
 
-Sinulla on nyt kolme välinettä: **ReAct**, **eksplisiittinen työnkulku** ja **moniagenttijärjestelmät**. Seuraavaksi pitää ymmärtää, milloin mitäkin kannattaa käyttää.
+Projektiasi varten vertaat kahta perusmallia: **ReActia** ja **eksplisiittistä työnkulkua**. Valinta tehdään tehtävän luonteen perusteella.
 
 **ReActia käytetään**, kun agentti tarvitsee joustavuutta. Toteutus voi kutsua työkalua, nähdä tuloksen tai virheen ja muuttaa seuraavaa toimintoa, jos tulos on odottamaton. ReAct sopii tutkiviin tilanteisiin, joissa vaiheita ei tiedetä tarkasti etukäteen, vaan eteneminen määräytyy havaintojen perusteella.
 
-**Eksplisiittinen työnkulkua käytetään**, kun ongelma voidaan **jakaa selkeisiin vaiheisiin**. Palautuspyynnön käsittely on hyvä esimerkki. Vaiheet ovat usein samat: tarkista palautusaika, tarkista palautuskäytäntö ja laadi vastaus. Eksplisiittinen työnkulku pakottaa agentin käymään läpi jokaisen vaiheen, mikä vähentää virheitä.
+**Eksplisiittistä työnkulkua käytetään**, kun ongelma voidaan **jakaa selkeisiin vaiheisiin**. Palautuspyynnön käsittely on hyvä esimerkki. Vaiheet ovat usein samat: tarkista palautusaika, tarkista palautuskäytäntö ja laadi vastaus. Eksplisiittinen työnkulku pakottaa agentin käymään läpi jokaisen vaiheen, mikä vähentää virheitä.
 
-**Moniagenttijärjestelmiä käytetään**, kun tehtävä on **niin monimutkainen, että se vaatii eri erikoisaloja**. Asiakaspalvelupyynnön käsittely voi vaatia analyysiä, tiedonhakua, kirjoittamista ja validointia. Tällöin jokainen osatehtävä voidaan antaa siihen erikoistuneelle agentille.
-
-Käytännössä käytät usein **yhdistelmää**. Esimerkiksi moniagenttijärjestelmässä jokainen erikoistunut agentti voi käyttää ReAct-mallia omalla alueellaan, ja johtaja-agentti voi käyttää eksplisiittinen työnkulkua koko prosessin koordinoimiseen. Mallit eivät siis sulje toisiaan pois, vaan ne täydentävät toisiaan.
-
-## Esimerkki käytännössä: tapahtumatiimi moniagenttijärjestelmänä
-
-Kuvittele tapahtuman suunnittelutiimin työtä ja sitä, miten se muistuttaa moniagenttijärjestelmää.
-
-**Tiimin jäsen 1 eli suunnittelija** lukee vaatimukset: ”Tilaisuuteen tarvitaan ohjelma, tarjoilu ja tila 80 hengelle.”
-
-**Tiimin jäsen 2 eli toteuttaja** tekee ehdotuksen: ”Varaan salin, tilaan pitopalvelun ja kokoan kahden tunnin ohjelman.”
-
-**Tiimin jäsen 3 eli tarkistaja** käy ehdotuksen läpi: ”Kävin läpi 10 yksityiskohtaa, ja 9 on kunnossa — tarjoilun erityisruokavaliot puuttuvat.”
-
-**Tiimin jäsen 4 eli vastuuhenkilö** näkee tilanteen: ”Tarkistus löysi puutteen. Lähetän tehtävän takaisin toteuttajalle.”
-
-**Toteuttaja** täydentää suunnitelman.
-
-**Tarkistaja** käy sen läpi uudelleen: ”Nyt kaikki 10 yksityiskohtaa ovat kunnossa.”
-
-**Vastuuhenkilö** tekee päätöksen: ”Valmis. Julkaistaan kutsu.”
-
-Tämä on moniagenttijärjestelmä käytännössä. Jokainen osa tekee oman erikoistuneen tehtävänsä, vastuuhenkilö koordinoi kokonaisuutta ja lopputulos on parempi kuin yhden toimijan yksin tekemänä.
+Lopputyössä valitset yhden näistä kahdesta päämallista, jotta toteutus pysyy ymmärrettävänä ja testattavana. Valintaan kuuluu myös aito rajattu mallivalinta: vähintään yhdessä kohdassa kielimalli valitsee syötteen perusteella vähintään kahdesta ohjauskehyksen sallimasta vaihtoehdosta.
 
 ## Suunnittelumallit n8n:ssä — miltä ne näyttävät käytännössä?
 
 Kun rakennat agenttia n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstraktit mallit muuttuvat konkreettisiksi työnkuluiksi.
 
-**ReAct n8n:ssä:** AI Agent -solmu, jolla on pääsy useisiin työkaluihin. n8n:n AI Agent -solmu voi toimia ReAct-periaatteen mukaisesti: se valitsee työkalun, saa rakenteisen tuloksen tai virheen ja valitsee sen perusteella seuraavan toiminnon. Lokiin tallennetaan havaittavat kutsut, tulokset, virheet, toiminnot ja tarvittaessa lyhyt päätösperustelu — ei mallin raakaa chain-of-thoughtia. Sinun ei tarvitse rakentaa koko silmukkaa käsin, koska suuri osa tästä toiminnasta on sisäänrakennettu AI Agent -solmuun.
+**ReAct n8n:ssä:** AI Agent -solmu voi valita sille annetun työkalun, saada tuloksen tai virheen ja valita sen perusteella seuraavan toiminnon. Lokiin tallennetaan havaittavat kutsut, tulokset, virheet, toiminnot ja tarvittaessa lyhyt päätösperustelu — ei mallin sisäistä päättelyä. Sinun ei tarvitse ohjelmoida silmukkaa itse.
 
 **ReAct n8n:ssä**
 
@@ -218,21 +165,19 @@ Kun rakennat agenttia n8n:ssä, on hyödyllistä ymmärtää, miten nämä abstr
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Pyyntö** | → | **Vaihe 1** Analysoi pyyntö | → | **Vaihe 2** Tarkista käytäntö | → | **Vaihe 3** Laadi vastaus | → | **Lähetä** |
 
-**Moniagentti n8n:ssä:** useita erillisiä työnkulkuja, jotka kutsuvat toisiaan. Johtaja-työnkulku voi lähettää webhookin tutkija-työnkululle, saada tuloksen takaisin ja lähettää sen edelleen kirjoittaja-työnkululle. Tämä on monimutkaisin rakenne, mutta se voi olla tehokas monimutkaisissa tehtävissä.
-
 Kun avaat n8n:n ensimmäistä kertaa, palaa tähän kappaleeseen. Se auttaa sinua valitsemaan projektiisi sopivan rakenteen.
 
 ## Kohti omaa projektia
 
-Nyt kun tunnet ReAct-mallin, eksplisiittisen työnkulun ja moniagenttijärjestelmät, valitse omalle agentillesi sopivin toimintamalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää eksplisiittistä työnkulkua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
+Nyt kun tunnet ReAct-mallin ja eksplisiittisen työnkulun, valitse omalle agentillesi sopivin toimintamalli. Mieti ongelmasi luonnetta: tarvitseeko agenttisi reagoida työkalujen palautteeseen eli käyttää ReAct-mallia, vai voiko ongelman jakaa selkeisiin vaiheisiin eli käyttää eksplisiittistä työnkulkua? Tämä valinta muodostaa **Agentti: Päättely** -pohjapiirroksen, jonka kirjoitat opiskelutehtävissä.
 
-> **Lopuksi pohdittavaksi:** Mikä osa päättelymallista on kielimallin valintaa ja mikä harnessin ohjaamaa rakennetta?
+> **Lopuksi pohdittavaksi:** Mikä osa päättelymallista on kielimallin valintaa ja mikä agentin ohjauskehyksen ohjaamaa rakennetta?
 
 ## Yhteenveto
 
-Agentti toimii paremmin, kun sen työnkulku on **järjestelmällinen ja havaittava**. **ReAct-malli** etenee rakenteisesta työkalukutsusta tulokseen tai virheeseen ja siitä seuraavaan toimintoon. **Eksplisiittinen työnkulku** purkaa ongelman ennalta nimettyihin vaiheisiin. **Moniagenttijärjestelmät** antavat mahdollisuuden jakaa työn useille erikoistuneille agenteille.
+Agentti toimii paremmin, kun sen työnkulku on **järjestelmällinen ja havaittava**. **ReAct-malli** etenee rakenteisesta työkalukutsusta tulokseen tai virheeseen ja siitä seuraavaan toimintoon. **Eksplisiittinen työnkulku** purkaa ongelman ennalta nimettyihin vaiheisiin. Kummassakin mallissa etenemisen pitää sisältää aito rajattu mallivalinta eikä pelkkää kiinteää automaatiota.
 
-Kun rakennat agenttia n8n:llä, sinä valitset, mitä toimintamallia agentti noudattaa. Valinta vaikuttaa siihen, onko agentti tehokas vai tehoton, ymmärrettävä vai sekava. Tee etenemisestä havaittava rakenteisilla kutsuilla, tuloksilla, virheillä, toiminnoilla ja lyhyillä päätösperusteluilla; älä pyydä tai tallenna mallin raakaa chain-of-thoughtia. Valitse aina malli, joka sopii tehtävän luonteeseen.
+Kun rakennat agenttia n8n:llä, valitset ReActin tai eksplisiittisen työnkulun tehtävän luonteen perusteella. Tee etenemisestä havaittava kirjaamalla työkalun käyttö, tulos tai virhe, seuraava toiminto ja lyhyt päätösperustelu. Mallin sisäistä päättelyä ei pyydetä eikä tallenneta.
 
 ---
 
@@ -240,6 +185,5 @@ Kun rakennat agenttia n8n:llä, sinä valitset, mitä toimintamallia agentti nou
 
 - [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
 - [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
-- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
 
 Tarkistettu 15.7.2026.

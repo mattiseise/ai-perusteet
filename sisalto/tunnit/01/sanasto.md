@@ -1,5 +1,25 @@
 # Sanasto
 
+## Ohjattu oppiminen (supervised learning)
+
+Koneoppimisen tapa, jossa harjoitusesimerkkien oikea vastaus tunnetaan. Malli voi esimerkiksi oppia aiemmista petokseksi tai lailliseksi merkityistä maksutapahtumista.
+
+## Ohjaamaton oppiminen (unsupervised learning)
+
+Koneoppimisen tapa, jossa aineistossa ei ole valmiita oikeita vastauksia. Malli etsii esimerkiksi ryhmiä, rakenteita tai poikkeamia, joiden merkitys pitää vielä tulkita.
+
+## Piirre (feature)
+
+Havaintoa kuvaava tieto, jota malli voi käyttää. Maksutapahtuman piirteitä voivat olla summa, kellonaika ja käytetty laite.
+
+## Tavoitemuuttuja (target variable)
+
+Asia, jota ohjatussa oppimisessa yritetään ennustaa. Petoksentunnistuksessa tavoitemuuttuja voi kertoa, onko tapahtuma petos vai laillinen.
+
+## Luokka (class)
+
+Yksi luokittelutehtävän mahdollinen vastaus, kuten petos tai laillinen.
+
 ## Tekoäly (Artificial Intelligence, AI)
 
 Kattotermi menetelmille, joilla järjestelmä tekee älykkäinä pidettyjä tehtäviä, kuten tunnistamista, ennustamista, suunnittelua tai sisällön tuottamista. Koneoppiminen on yksi toteutustapa, ei koko tekoälyn määritelmä. Käyttöön otettu malli ei automaattisesti muutu jokaisesta uudesta syötteestä.

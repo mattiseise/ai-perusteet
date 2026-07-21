@@ -1,10 +1,12 @@
-# Boteista agentteihin — mikä muuttuu, kun tekoäly toimii itsenäisesti?
+# Boteista agentteihin — kielimalli ja ohjauskehys yhdessä
 
 ## Johdanto
 
-Kun puhutaan tekoälystä ja automatisoinnista, sanaa **agentti** käytetään nykyään hyvin usein. Sitä esiintyy teknologiauutisissa, yritysviestinnässä ja opetuksessa, mutta käsitteen merkitys jää usein epäselväksi. Agentti ei kuitenkaan ole sama asia kuin chatbot. Se ei myöskään tarkoita mitä tahansa automaattista lajittelijaa tai yksinkertaista ohjelmaa.
+Kun tällä kurssilla puhutaan rakennettavasta **tekoälyagentista**, tarkoitetaan kielimallin ja sitä ohjaavan **agentin ohjauskehyksen (harness)** muodostamaa järjestelmää. Ohjauskehys välittää syötteet, työkalut, tehtävän tilan, oikeudet ja turvarajat. Tämä on kurssin rajaus, ei yleispätevä agentin määritelmä.
 
-Tämä oppitunti on ensimmäinen askel kohti omaa agenttiasi, jonka rakennat n8n:llä tämän osion lopussa. Oppitunneilla 26–27 toteutat tässä oppimaasi käytännössä. Kun ymmärrät nyt agentin toimintalogiikan, myöhempi rakentaminen on paljon helpompaa.
+Sanaa agentti käytetään teknologiauutisissa, yritysviestinnässä ja opetuksessa monella tavalla. Siksi tällä tunnilla ei päätellä pelkän tuotenimen perusteella, onko jokin järjestelmä agentti. Sen sijaan tarkastelet, miten kielimalli ja sitä ympäröivä ohjauskehys yhdessä käsittelevät tehtävää, tekevät rajattuja valintoja ja käyttävät työkaluja.
+
+Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Tunnilla 20 arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.
 
 Tarkastellaan esimerkkiä. Tehtävänä on avata sähköpostisovellus, etsiä kaikki viestit, joissa esiintyy sana ”lasku”, siirtää ne kansioon ”Laskut” ja lähettää lähettäjälle automaattinen vastaus, jossa ilmoitetaan laskun vastaanottamisesta. Yksittäisenä suorituksena tehtävä on melko yksinkertainen. Jos sama toiminto täytyy kuitenkin tehdä toistuvasti, esimerkiksi joka päivä tai jatkuvasti pitkän ajan kuluessa, siitä tulee työläs ja aikaa vievä.
 
@@ -14,13 +16,13 @@ Ennen kuin tarkastelemme asiaa tarkemmin, on hyödyllistä pohtia omaa arkea.
 
 > **Pysähdy hetkeksi:** Millaisia toistuvia tehtäviä teet säännöllisesti? Mitkä niistä ovat yksinkertaisia, mutta vievät silti aikaa ja kuormittavat turhaan?
 
-## Agentti on järjestelmä, joka tekee päätöksiä
+## Kurssin agentissa kielimalli ja ohjauskehys toimivat yhdessä
 
-Ensimmäinen ja keskeisin asia on tämä: **agentti** on automatisoitu järjestelmä, joka **suorittaa useita vaiheita itsenäisesti** jonkin tavoitteen saavuttamiseksi. Se ei siis vain toteuta yhtä yksittäistä käskyä. Se ei myöskään seuraa ohjeita täysin mekaanisesti tilanteesta riippumatta, vaan tekee päätelmiä tilanteen perusteella.
+Tällä kurssilla agentin toiminta syntyy kielimallin ja agentin ohjauskehyksen yhteistyöstä. Kielimalli tulkitsee sille välitettyä tilannetta ja tekee rajattuja valintoja. Ohjauskehys puolestaan hallitsee tehtävän tilaa, tarkistaa työkalukutsut ja oikeudet, välittää tulokset takaisin mallille sekä toteuttaa turvarajat. Järjestelmä voi näin edetä tavoitetta kohti usean havaittavan vaiheen kautta, mutta sen toimivalta määräytyy aina ennalta asetettujen rajojen mukaan.
 
 Jos sähköpostisovellus käy joka aamu läpi uudet viestit ja siirtää laskut automaattisesti tiettyyn kansioon, kyse ei vielä välttämättä ole agentista. Usein kyse on **skriptistä** eli yksinkertaisesta ohjelmasta, joka tekee aina saman toiminnon samalla tavalla. Tällainen ratkaisu toimii hyvin niin kauan kuin tilanne vastaa ennalta määriteltyä mallia. Jos viestin muoto poikkeaa odotetusta, skripti voi epäonnistua.
 
-Agentti toimii toisin. Se voi vastaanottaa uuden sähköpostin, analysoida sen sisältöä ja arvioida, onko kyseessä lasku. Sen jälkeen se voi päätellä, mihin kansioon viesti kannattaa siirtää. Se voi myös tarkistaa lähettäjään liittyviä tietoja muista järjestelmistä, hyödyntää aiempia havaintoja ja päättää, voidaanko lähettäjälle lähettää automaattinen vastaus. Lopuksi se voi kirjata tekemänsä toimenpiteet. Jos jokin vaihe epäonnistuu, esimerkiksi vastaanottajan osoite on virheellinen, agentti voi tunnistaa ongelman, ilmoittaa siitä ja pyytää jatko-ohjeita.
+Kurssin esimerkkijärjestelmä toimii toisin. Se voi vastaanottaa uuden sähköpostin, analysoida sen sisältöä ja arvioida, onko kyseessä lasku. Sen jälkeen kielimalli voi valita sallitun käsittelyreitin, ja ohjauskehys tarkistaa oikeudet ennen viestin siirtämistä tai vastausluonnoksen muodostamista. Ohjauskehys kirjaa toimenpiteet ja käsittelee virheet. Jos esimerkiksi vastaanottajan osoite on virheellinen, järjestelmä voi keskeyttää toiminnon ja pyytää ihmiseltä jatko-ohjeita.
 
 > **Pysähdy hetkeksi:** Mitä eroa on siinä, että ohjelma tekee aina samaa, ja siinä, että se arvioi tilannetta ja muuttaa toimintaansa sen perusteella?
 
@@ -142,9 +144,9 @@ Agentti toimii toisin. Se voi vastaanottaa uuden sähköpostin, analysoida sen s
 <figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Agentin toiminta kokonaisuutena: käynnistys johtaa agenttiin (kielimalli + työkalut), joka toimii vaiheittain ja tuottaa lopputuloksen.</figcaption>
 </figure>
 
-## Agentti = kielimalli + harness
+## Kurssin rajaus: kielimalli ja agentin ohjauskehys
 
-Tällä kurssilla **agentti = kielimalli + harness**. Harness tarkoittaa ympäröivää ohjelmistorakennetta, joka välittää syötteet, tarjoaa työkalut, ylläpitää tehtävän tilaa, rajaa oikeuksia ja tallentaa suoritusjäljen. Pelkkä kielimalli keskustelee; harness tekee hallitusta toiminnasta mahdollista.
+Sanaa agentti käytetään eri yhteyksissä eri tavoin. **Tällä kurssilla rakennettavalla tekoälyagentilla tarkoitetaan kielimallin ja sitä ohjaavan agentin ohjauskehyksen (harness) muodostamaa järjestelmää.** Ohjauskehys on ympäröivä ohjelmistorakenne, joka välittää syötteet, tarjoaa rajatut työkalut, ylläpitää tehtävän tilaa, toimeenpanee käyttöoikeudet ja tallentaa suoritusjäljen. Kielimalli tekee rajatun tilannearvion; ohjauskehys muuttaa arvion hallituksi toiminnaksi.
 
 ## Kurssin kuuden kohdan suunnittelutarkistuslista
 
@@ -186,11 +188,11 @@ Seuraavilla oppitunneilla avaamme jokaisen näistä komponenteista tarkemmin. Ku
 
 ## Chatbot ei ole agentti
 
-**Chatbot** on ohjelma, joka vastaa käyttäjän kirjoittamiin viesteihin. Se voi vaikuttaa hyvinkin älykkäältä, ja erityisesti nykyaikaiset chatbotit, kuten ChatGPT, osaavat käydä sujuvaa keskustelua. Chatbotin toiminta on kuitenkin pääosin reaktiivista: se odottaa käyttäjän viestiä, vastaa siihen ja jää sitten odottamaan seuraavaa viestiä.
+**Chatbot** on ohjelma, joka vastaa käyttäjän kirjoittamiin viesteihin. Se voi vaikuttaa hyvinkin älykkäältä, ja erityisesti nykyaikaiset kielimallisovellusten chatbotit osaavat käydä sujuvaa keskustelua. Chatbotin toiminta on kuitenkin pääosin reaktiivista: se odottaa käyttäjän viestiä, vastaa siihen ja jää sitten odottamaan seuraavaa viestiä.
 
 Agentti toimii eri tavalla. Se ei ainoastaan reagoi käyttäjän pyyntöihin, vaan voi myös tarkkailla tilannetta taustalla ja käynnistää toimintoja itsenäisesti ilman erillistä käskyä.
 
-Ero näkyy hyvin esimerkin avulla. Jos kirjoitat ChatGPT:lle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
+Ero näkyy hyvin esimerkin avulla. Jos kirjoitat kielimallisovellukselle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä — botti kertoo ohjeet, agentti tekee työn</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:330px">
@@ -255,23 +257,23 @@ Yritysmaailmassa käytettävät järjestelmät voidaan jakaa kolmeen pääkatego
 
 **Työnkulku** on useasta vaiheesta koostuva prosessi, jossa toiminta etenee ennalta kirjoitettujen sääntöjen mukaan. Esimerkiksi sähköpostien käsittelyssä työnkulku voi toimia näin: jos viesti sisältää sanan ”lasku”, se siirretään kansioon A, jos se sisältää sanan ”raportti”, se siirretään kansioon B, ja muissa tapauksissa se jätetään saapuneisiin. Työnkulku on skriptiä joustavampi, koska siihen sisältyy päätöslogiikkaa. Se perustuu kuitenkin edelleen valmiiksi määriteltyihin sääntöihin, eikä se muuta toimintaansa itsenäisesti.
 
-**Agentissa** kielimalli tulkitsee tilannetta ja valitsee toimintaa, ja harness antaa sille tehtävän tilan, työkalut, oikeudet ja rajat. Tulos voidaan tarkistaa saman suorituksen aikana tai ihmisen tekemässä jälkikatselmoinnissa. Pitkäkestoinen muisti ja automaattinen palautteesta oppiminen ovat mahdollisia lisäosia, eivät agentin tunnusmerkkejä.
+**Agentissa** kielimalli tulkitsee tilannetta ja valitsee toimintaa, ja agentin ohjauskehys antaa sille tehtävän tilan, työkalut, oikeudet ja rajat. Tulos voidaan tarkistaa saman suorituksen aikana tai ihmisen tekemässä jälkikatselmoinnissa. Pitkäkestoinen muisti ja automaattinen palautteesta oppiminen ovat mahdollisia lisäosia, eivät agentin tunnusmerkkejä.
 
 Ero näkyy hyvin käytännön esimerkissä. Skripti voi lajitella tiedostot pelkän koon perusteella. Työnkulku voi lajitella ne koon ja tiedostotyypin mukaan ennalta määriteltyjen sääntöjen perusteella. Agentti taas voi tehdä lajittelua sen mukaan, mitä tiedostoja käyttäjä todennäköisesti tarvitsee myöhemmin ja miten ne olisi järkevintä järjestää tulevaa käyttöä varten.
 
 ## Miten yksi esimerkkitoteutus toimii
 
-Nyt tiedät, että agentti muodostuu kielimallista ja harnessista. Kurssin kuutta suunnittelukohtaa voi soveltaa eri tavoin. Seuraava **suoritusputki** kuvaa yhtä neuvonta-agentin toteutusta, jossa kaikki kuusi kohtaa ovat tarpeellisia. Se ei ole kaikkien agenttien pakollinen vaiheistus.
+Nyt tunnet kurssin rajauksen: rakennettava tekoälyagentti muodostuu kielimallista ja agentin ohjauskehyksestä. Kurssin kuutta suunnittelukohtaa voi soveltaa eri tavoin. Seuraava **suoritusputki** kuvaa yhtä neuvonta-agentin toteutusta, jossa kaikki kuusi kohtaa ovat tarpeellisia. Se ei ole kaikkien agenttien pakollinen vaiheistus.
 
 Seuraavaksi tarkastellaan, mitä agentin sisällä tapahtuu silloin, kun se saa tehtävän. Esimerkkinä käytetään neuvonta-agenttia, joka auttaa käyttäjiä ratkaisemaan ongelmia.
 
-**Käynnistyminen** eli **initialization**: Prosessi alkaa aina siitä, että jokin tapahtuma käynnistää agentin toiminnan. Käyttäjä voi esimerkiksi lähettää tukipyynnön viestillä: ”Tulostimeni ei toimi.” Syötekäsittelijä vastaanottaa viestin ja muuntaa sen sellaiseen muotoon, jota agentti pystyy käsittelemään. Käytännössä tämä voi tarkoittaa esimerkiksi jäsenneltyä tietuetta, johon tallennetaan viestin sisältö, lähettäjän tiedot ja aikaleima.
+**Käynnistyminen**: Prosessi alkaa aina siitä, että jokin tapahtuma käynnistää agentin toiminnan. Käyttäjä voi esimerkiksi lähettää tukipyynnön viestillä: ”Tulostimeni ei toimi.” Syötekäsittelijä vastaanottaa viestin ja muuntaa sen sellaiseen muotoon, jota agentti pystyy käsittelemään. Käytännössä tämä voi tarkoittaa esimerkiksi jäsenneltyä tietuetta, johon tallennetaan viestin sisältö, lähettäjän tiedot ja aikaleima.
 
 **Päättelijä arvioi tilanteen.** Tässä vaiheessa agentti ei vielä suorita varsinaisia toimenpiteitä, vaan arvioi tilannetta. Päättelijä lukee syötteen ja tekee kaksi keskeistä asiaa. Ensin se arvioi, mitä tehtävä edellyttää. Sen jälkeen se suunnittelee, mitä vaiheita tehtävän ratkaiseminen vaatii. Tätä vaihetta kutsutaan **reititykseksi**: agentti valitsee, mitä toimintapolkua tilanteessa kannattaa seurata. Tulostinongelman kohdalla agentti voi esimerkiksi päätyä siihen, että se hakee ensin ratkaisua tietokannasta, vastaa sitten käyttäjälle ja ohjaa asian ihmiselle, jos ratkaisu ei toimi.
 
 Reitityspäätös ei synny sattumalta. Agentti hyödyntää kielimallia, joka analysoi tilanteen ja arvioi, mikä toimintatapa on tarkoituksenmukaisin. Tässä esimerkissä myös pitkäkestoinen muisti on valittu mukaan: aiemmat ratkaisut voivat auttaa ehdotusten järjestämisessä. Toisessa agentissa tietohaku tai nykyisen tehtävän tila voi riittää ilman aiempien suoritusten muistia.
 
-**Tehtävän tila tuo nykyisen kontekstin.** Harness ylläpitää tietoa, jota tarvitaan juuri käsillä olevan tehtävän aikana. Siihen kuuluvat esimerkiksi nykyinen keskustelu, käyttäjän viimeisimmät viestit ja agentin edelliset vaiheet. Tässä esimerkkitoteutuksessa on lisäksi pitkäkestoinen muisti, johon tallennetaan valikoituja aiempien tehtävien tuloksia.
+**Tehtävän tila tuo nykyisen kontekstin.** Agentin ohjauskehys ylläpitää tietoa, jota tarvitaan juuri käsillä olevan tehtävän aikana. Siihen kuuluvat esimerkiksi nykyinen keskustelu, käyttäjän viimeisimmät viestit ja agentin edelliset vaiheet. Tässä esimerkkitoteutuksessa on lisäksi pitkäkestoinen muisti, johon tallennetaan valikoituja aiempien tehtävien tuloksia.
 
 Tehtävän tila auttaa agenttia pysymään selvillä siitä, mitä parhaillaan tapahtuu. Pitkäkestoinen muisti on perusteltu vain, jos myöhemmän suorituksen pitää käyttää aiempaa tietoa. Muistin lisääminen kasvattaa myös tietosuoja- ja ylläpitovastuuta.
 
@@ -283,48 +285,48 @@ Käytännössä tämä voi tarkoittaa esimerkiksi sitä, että agentti tunnistaa
 
 Turvakerros toimii siis kolmessa vaiheessa: ennen toimintoa, sen aikana ja sen jälkeen. Sen tehtävänä on valvoa agentin toimintaa jatkuvasti ja estää virheelliset, vaaralliset tai luvattomat toimenpiteet. Jos jokin näyttää poikkeavalta tai epäilyttävältä, turvakerros voi keskeyttää toiminnan missä vaiheessa tahansa.
 
-**Tuloksen tarkistus voi sulkea tämän esimerkin kehän.** Harness tarkistaa, onnistuiko viestin lähetys ja saatiinko työkalulta odotettu vastaus. Tämän tarkistuksen perusteella agentti voi jatkaa, yrittää rajatusti uudelleen tai eskaloida ihmiselle.
+**Tuloksen tarkistus voi sulkea tämän esimerkin kehän.** Agentin ohjauskehys tarkistaa, onnistuiko viestin lähetys ja saatiinko työkalulta odotettu vastaus. Tämän tarkistuksen perusteella agentti voi jatkaa, yrittää rajatusti uudelleen tai eskaloida ihmiselle.
 
-Jos kaikki on sujunut odotetusti, toteutus kirjaa onnistumisen. Ratkaisu tallennetaan pitkäkestoiseen muistiin vain, jos sille on määritelty tarve, säilytysaika ja käyttöoikeudet. Jos jokin meni pieleen, harness voi sallia toisen toimintatavan, eri työkalun tai eskaloinnin ihmiselle.
+Jos kaikki on sujunut odotetusti, toteutus kirjaa onnistumisen. Ratkaisu tallennetaan pitkäkestoiseen muistiin vain, jos sille on määritelty tarve, säilytysaika ja käyttöoikeudet. Jos jokin meni pieleen, agentin ohjauskehys voi sallia toisen toimintatavan, eri työkalun tai eskaloinnin ihmiselle.
 
 Tässä toteutuksessa seurantaa käytetään myös **palautesilmukassa**, jossa ihminen tarkastelee tuloksia ja kehittää asetuksia. Tämä ei tarkoita, että kielimalli oppisi automaattisesti jokaisesta suorituksesta.
 
-**Esimerkin kulku kokonaisuutena.** Kun käyttäjä lähettää tukipyynnön, harness välittää viestin kielimallille. Malli arvioi tilanteen ja valitsee toimintapolun. Tähän esimerkkiin valittu pitkäkestoinen muisti tuo aiempaa kontekstia. Työkalut toteuttavat rajatut toimenpiteet, turvarajat valvovat oikeuksia ja seuranta kirjaa tuloksen. Sama kuuden kohdan tarkistuslista voi tuottaa toisessa tehtävässä yksinkertaisemman toteutuksen.
+**Esimerkin kulku kokonaisuutena.** Kun käyttäjä lähettää tukipyynnön, agentin ohjauskehys välittää viestin kielimallille. Malli arvioi tilanteen ja valitsee toimintapolun. Tähän esimerkkiin valittu pitkäkestoinen muisti tuo aiempaa kontekstia. Työkalut toteuttavat rajatut toimenpiteet, turvarajat valvovat oikeuksia ja seuranta kirjaa tuloksen. Sama kuuden kohdan tarkistuslista voi tuottaa toisessa tehtävässä yksinkertaisemman toteutuksen.
 
-Agentin erottaa tässä kurssissa muista ratkaisuista kielimallin ja harnessin yhdistelmä: kielimalli tulkitsee tilannetta, ja harness mahdollistaa rajatun työkalujen käytön. Skripti suorittaa ennalta määrätyn toiminnon, ja työnkulku etenee valmiiksi määriteltyä polkua pitkin. Agentti ei tarvitse automaattista oppimista ollakseen agentti.
+Agentin erottaa tässä kurssissa muista ratkaisuista kielimallin ja agentin ohjauskehyksen yhdistelmä: kielimalli tulkitsee tilannetta, ja ohjauskehys mahdollistaa rajatun työkalujen käytön. Skripti suorittaa ennalta määrätyn toiminnon, ja työnkulku etenee valmiiksi määriteltyä polkua pitkin. Agentti ei tarvitse automaattista oppimista ollakseen agentti.
 
 > **Pysähdy hetkeksi:** Valitse arjestasi jokin toistuva tehtävä. Kuvittele, että suunnittelet agentin hoitamaan sen. Mitkä kuudesta suunnittelukohdasta tarvitset, minkä jätät pois ja missä ihmisen valvonta olisi tärkeintä?
 
-## Valmiit agentit — jonkun muun rakentama harness
+## Valmiit agentit — jonkun muun rakentama ohjauskehys
 
 Tässä osiossa agentti on tähän asti ollut jotain, jonka rakennat itse. Arjessa ja työpaikoilla kohtaat agentin kuitenkin useimmiten **valmisagenttina**: valmiina tuotteena, joka asuu tutun tekoälysovelluksen sisällä. Sovelluksessa on silloin **agenttitila** — toimintatila, jolle annat tehtävän ja joka tekee monivaiheisen työn puolestasi: lukee tiedostoja, käyttää työkaluja ja raportoi lopuksi, mitä sai aikaan.
 
-Valmisagenttia voi arvioida samalla kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan ja jokin kohta olisi tarkoituksella tarpeeton. Kokeile väitettä arkiesimerkillä. Annat agenttitilalle tehtävän: ”Käy läpi tämän kansion kokousmuistiot ja kokoa taulukko päätöksistä ja vastuuhenkilöistä.” Kun sovellus ottaa tehtäväsi vastaan ja tulkitsee sen, työssä on syötekäsittelijä. Kun se näyttää sinulle vaihesuunnitelman ennen aloittamista, näet päättelijän kädenjäljen. Kun se lukee muistiot ja kirjoittaa taulukon, vuorossa on työkalujen suorittaja. Kun se kysyy ”saanko muokata tätä kansiota?”, vastassa on turvakerros. Kun se jatkaa keskeytynyttä työtä siitä, mihin jäitte, käytössä on muisti ja konteksti. Ja kun se lopuksi raportoi, mitä teki, ja korjaa huomaamansa virheen, kehän sulkevat seuranta ja palautesilmukka.
+Valmisagenttia voi arvioida samalla kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan ja jokin kohta olisi tarkoituksella tarpeeton. Kokeile väitettä arkiesimerkillä. Annat agenttitilalle tehtävän: ”Käy läpi tämän kansion kokousmuistiot ja kokoa taulukko päätöksistä ja vastuuhenkilöistä.” Kun sovellus ottaa tehtäväsi vastaan ja tulkitsee sen, työssä on syötekäsittelijä. Kun se näyttää sinulle vaihesuunnitelman ennen aloittamista, näet päättelijän ja suunnittelijan kädenjäljen. Kun se lukee muistiot ja kirjoittaa taulukon, vuorossa on työkalujen suorittaja. Kun se kysyy ”saanko muokata tätä kansiota?”, vastassa on turvakerros. Kun se jatkaa keskeytynyttä työtä siitä, mihin jäitte, käytössä on muisti ja konteksti. Ja kun se lopuksi raportoi, mitä teki, ja korjaa huomaamansa virheen, kehän sulkevat seuranta ja palautesilmukka.
 
-Tälle kokonaisuudelle on nimi. Kaikkea, mitä kielimallin ympärille on rakennettu — esimerkiksi syötteiden välitystä, työkaluja, tehtävän tilaa, oikeuksia ja turvarajoja — kutsutaan **harnessiksi**. Siitä saadaan tämän osion tiivein kiteytys: **agentti = kielimalli + harness**. Kurssin kuusi kohtaa auttavat arvioimaan harnessia, mutta eivät määrää sen sisäistä rakennetta.
+Tälle kokonaisuudelle on nimi. Kaikkea, mitä kielimallin ympärille on rakennettu — esimerkiksi syötteiden välitystä, työkaluja, tehtävän tilaa, oikeuksia ja turvarajoja — kutsutaan **agentin ohjauskehykseksi**. Kurssin kuusi kohtaa auttavat arvioimaan ohjauskehystä, mutta eivät määrää sen sisäistä rakennetta.
 
-Englannin sana harness tarkoittaa valjaita, ja vertauskuva kantaa pitkälle. Kielimalli on kuin vetohevonen: voimaa riittää, mutta ilman valjaita hevonen vain juoksee. Vasta valjaat kytkevät voiman kärryyn niin, että voimasta tulee työtä. Sama pätee malliin: ilman harnessia kielimalli vain puhuu — eli on chatbot. Tästä seuraa arkinen havainto, joka selittää tunnin aiemman väitteen ”chatbot ei ole agentti” uudesta kulmasta: täsmälleen sama kielimalli voi olla sekä chatbotin että agentin sisällä. Ero ei ole mallissa vaan sen ympärille rakennetussa harnessissa.
+Englannin sana harness tarkoittaa valjaita. Vertaus auttaa muistamaan, että sama kielimalli voi olla sekä keskustelevan sovelluksen että toimintoja tekevän agentin sisällä. Ratkaisevaa ei ole käyttöliittymän nimi vaan se, saako malli ohjauskehykseltä rajatun oikeuden valita seuraavan toiminnon havaintojen perusteella. Chatbotin, työnkulun ja agentin rajat eivät siksi ole kaikissa tuotteissa jyrkkiä.
 
 > **Tilanne heinäkuussa 2026 — esimerkkejä valmisagenteista.**
-> Claude Cowork on Anthropicin agenttitila Claude Desktopissa: se toimii käyttäjän tiedostokansioissa, ja yli 90 prosenttia sen käytöstä on muuta kuin ohjelmointia. Cowork julkaistiin kokeiluversiona tammikuussa 2026 ja varsinaisesti huhtikuussa 2026, ja heinäkuussa 2026 se laajeni myös webiin ja mobiiliin. ChatGPT Work on OpenAI:n agenttituote, joka julkaistiin 9. heinäkuuta 2026 GPT-5.6-mallien yhteydessä: se yhdistää Codexin ja ChatGPT:n ja tekee pitkäkestoisia tehtäviä sovelluksissa ja tiedostoissa.
+> Claude Cowork on Anthropicin ei-tekniseen tietotyöhön suunnattu agentti, joka työskentelee työpöydällä käyttäjän sallimissa tiedostoissa ja sovelluksissa. ChatGPT Work on OpenAI:n agenttituote, joka julkaistiin 9. heinäkuuta 2026 GPT-5.6-mallien yhteydessä: se yhdistää Codexin ja ChatGPT:n ja tekee pitkäkestoisia tehtäviä sovelluksissa ja tiedostoissa.
 >
 > *Tuotenimet, päivämäärät ja ominaisuudet vanhenevat nopeasti — tämä laatikko päivitetään kurssin ylläpidossa erikseen. Leipätekstin käsitteet eivät vanhene.*
 
-Miksi siis rakennat tunneilla 26–27 oman agentin, jos valmiitakin on tarjolla? Siksi, että n8n-työnkulussasi rakennat itse pienen harnessin: valitset työkalut, määrität oikeudet ja asetat turvarajat. Sen jälkeen osaat arvioida myös valmista agenttia, koska tiedät, mitä konepellin alla on ja mitä kysymyksiä siitä kannattaa esittää. Valmisagentti ei korvaa omaa rakentamista — se on saman asian toinen muoto.
+Miksi siis rakennat tai simuloit tunneilla 26–27 oman agentin, jos valmiitakin on tarjolla? Siksi, että n8n-harjoituksessa teet ohjauskehyksen ratkaisut näkyviksi: valitset työkalut, määrität oikeudet ja asetat turvarajat. Sen jälkeen osaat arvioida myös valmista agenttia, koska tiedät, mitä kysymyksiä sen toiminnasta kannattaa esittää.
 
-> **Pysähdy hetkeksi:** Kun seuraavan kerran käytät tekoälysovellusta, mieti: juttelenko pelkän mallin kanssa vai onko mallilla harness — työkalut, oikeudet ja turvarajat? Mistä eron huomaa käyttöliittymässä?
+> **Pysähdy hetkeksi:** Kun seuraavan kerran käytät tekoälysovellusta, mieti: juttelenko pelkän mallin kanssa vai onko mallilla agentin ohjauskehys — työkalut, oikeudet ja turvarajat? Mistä eron huomaa käyttöliittymässä?
 
 ## Kohti omaa projektia
 
-Agentit-osion aikana rakennat oman **n8n-agenttityönkulun**. Ensimmäinen askel on valita ongelma, jonka haluat ratkaista. Kun mietit aihetta, palaa tämän oppitunnin käsitteisiin: tarvitseeko ongelmasi autonomista päätöksentekoa vai riittäisikö yksinkertaisempi ratkaisu? Mitkä kuudesta komponentista ovat ongelmassasi kriittisimpiä? Hyvä agenttiongelma on sellainen, jossa pelkkä chatbot tai skripti ei riitä, vaan tarvitaan järjestelmä, joka arvioi tilannetta, tekee päätöksiä ja käyttää työkaluja tavoitteen saavuttamiseksi.
+Agentit-osion aikana suunnittelet n8n-ympäristöön agentin ja osoitat sen toiminnan teknisellä toteutuksella tai dokumentoidulla simulaatiolla. Kirjaa nyt kaksi tai kolme mahdollista ongelmaa, mutta älä valitse vielä lopullista. Tunnilla 20 vertaat agenttia yksinkertaisempiin ratkaisuihin ja valitset projektin vasta perustellun arvioinnin jälkeen.
 
 ## Yhteenveto
 
-**Agentti** on automatisoitu järjestelmä, joka toteuttaa useita vaiheita itsenäisesti tavoitteen saavuttamiseksi. Se eroaa chatbotista, skriptistä ja työnkulusta siinä, että se ei vain reagoi, toista samaa toimintoa tai seuraa valmiita sääntöjä, vaan arvioi tilannetta ja ohjaa toimintaansa sen perusteella.
+Tämän kurssin **tekoälyagentti** on kielimallin ja agentin ohjauskehyksen muodostama järjestelmä. Siinä kielimallille annetaan rajattu oikeus valita seuraava toiminto havaintojen perusteella. Tavallinen työnkulku voi myös haarautua, käyttää tietokantaa ja säilyttää tilaa, mutta sen etenemisen ratkaisee ennalta kirjoitettu logiikka.
 
-Kurssin kuusi suunnittelukohtaa ovat **syötekäsittely**, **päättely**, **työkalut**, **muisti**, **turvakerros** ja **palautesilmukka**. Niiden avulla kysyt, mitä juuri tämä agentti tarvitsee ja mitä voidaan jättää pois. Pitkäkestoinen muisti ja palautteesta oppiminen eivät ole pakollisia.
+Kurssin kuusi suunnittelukohtaa ovat **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka**. Myöhemmillä tunneilla niihin voidaan viitata lyhyemmin syötteenä, päättelynä, työkaluina, muistina, turvana ja palautteena. Niiden avulla kysyt, mitä juuri tämä agentti tarvitsee ja mitä voidaan jättää pois. Pitkäkestoinen muisti ja palautteesta oppiminen eivät ole pakollisia.
 
-Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niitä voi tarkastella samalla kuuden kohdan listalla. Tekninen ydin on kielimalli ja sen ympärille rakennettu **harness**: työkalut, muisti, oikeudet ja turvarajat. Kun tunnet osat, osaat arvioida myös valmista agenttia.
+Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niitä voi tarkastella samalla kuuden kohdan listalla. Kurssin rajauksessa ydin on kielimalli ja sen ympärille rakennettu **agentin ohjauskehys**: työkalut, tila, oikeudet ja turvarajat. Kun tunnet osat, osaat arvioida myös valmista agenttia.
 
 
 ---
@@ -332,7 +334,8 @@ Agentteja kohtaat myös valmiina tuotteina, sovellusten agenttitiloina. Niitä v
 ## Lähteet ja tarkistuspäivä
 
 - [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
+- [Anthropic: Claude Cowork](https://www.anthropic.com/product/claude-cowork)
+- [OpenAI: Introducing ChatGPT Work](https://openai.com/index/chatgpt-for-your-most-ambitious-work/)
 - [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
-- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
 
 Tarkistettu 15.7.2026.

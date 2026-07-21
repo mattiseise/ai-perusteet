@@ -9,6 +9,7 @@ Tämän lohkon tavoitteena on, että opiskelija ymmärtää **tekoälyn** kattot
 - Opiskelija osaa erottaa **tekoälyn** muista älykkäiltä vaikuttavista järjestelmistä, kuten automaatiosta ja sääntöpohjaisista järjestelmistä.
 - Oppija ymmärtää tekoälyn kattoterminä ja koneoppimisen yhtenä toteutustapana.
 - Oppija erottaa mallin kouluttamisen sen käyttämisestä: käytössä oleva malli ei automaattisesti opi jokaisesta syötteestä.
+- Oppija erottaa ohjatun ja ohjaamattoman oppimisen sekä osaa nimetä petosesimerkistä piirteet, tavoitemuuttujan ja luokat.
 - Opiskelija tunnistaa, että tekoäly ei ajattele kuten ihminen, vaan tunnistaa kuvioita ja tekee todennäköisyyksiin perustuvia päätelmiä.
 
 ### Soveltaa ja analysoida
@@ -193,7 +194,8 @@ Tallennettava tuotos on **perusteltu luokittelutaulukko ja huomio siitä, oppiik
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija luokittelee kuusi tapausta tekoälyksi, koneoppimiseksi, säännöksi tai automaatioksi ja perustelee, oppiiko käyttöön otettu malli syötteestä. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä. |
+| 25–40 min | Oppimistehtävä | Nimeä petostaulukosta piirteet, tavoitemuuttuja ja luokat. Vertaa ohjattua ja ohjaamatonta oppimista. |
+| 40–65 min | Perustuotos | Oppija luokittelee seitsemän tapausta luokkiin AI, Ei AI tai Epäselvä ja perustelee, mitä toteutustavasta pitäisi tietää. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
 | 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 

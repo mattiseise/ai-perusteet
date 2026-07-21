@@ -146,59 +146,49 @@ Kuvaa tilanne, jossa olennainen tieto unohtui. Selitä, miksi näin kävi, mitä
 
 [Kirjoita tähän.]
 
-## Todistusaineisto 3: Vastuullisen käyttäjän tarkistuslista
+## Todistusaineisto 3: Luotettavuusarvio ja tarkistuskäytäntö
 
-Tee kaksi hallusinaatiokoetta tunnilla 7. Tarkista kummankin vastaus luotettavasta lähteestä.
+Arvioi tunnilla 7 sekä kielimallin väite että petoksia tunnistavan luokittelumallin tulokset. Näin osoitat, että eri tekoälyjärjestelmien luotettavuutta tarkistetaan eri näytöllä.
 
-### Hallusinaatiokoe 1
+### Kielimallin väitteen tarkistus
 
-**Kysymys ja mallin vastaus**
-
-[Kirjoita tähän.]
-
-**Tarkistuslähde ja oikea vastaus**
+**Kirjaa tarkistettava väite ja mallin vastaus.**
 
 [Kirjoita tähän.]
 
-**Mistä hallusinaation saattoi tunnistaa?**
+**Nimeä riippumaton lähde ja kirjaa, mitä se osoittaa.**
 
 [Kirjoita tähän.]
 
-### Hallusinaatiokoe 2
-
-**Kysymys ja mallin vastaus**
+**Tee johtopäätös: vahvistuiko väite, kumoutuiko se vai jäikö se epävarmaksi?**
 
 [Kirjoita tähän.]
 
-**Tarkistuslähde ja oikea vastaus**
+### Luokittelumallin arvio
+
+Petosmalli arvioi 1 000 maksua. Todellisia petoksia oli 10. Malli löysi niistä 8 ja pysäytti lisäksi 42 tavallista maksua.
+
+**Kirjaa väärät positiiviset ja väärät negatiiviset sekä selitä niiden käytännön seuraukset.**
 
 [Kirjoita tähän.]
 
-**Mistä hallusinaation saattoi tunnistaa?**
+**Laske tai tulkitse kokonaistarkkuus, osumatarkkuus ja kattavuus. Mitä kukin mittari kertoo — ja mitä se ei kerro?**
 
 [Kirjoita tähän.]
 
-### Oma tarkistuslista, noin 250–300 sanaa
+### Oma tarkistuskäytäntö
 
-**Kirjaa 3–5 hallusinaation tuntomerkkiä.**
-
-[Kirjoita tähän.]
-
-**Selitä 2–3 lauseella, miksi kielimalli voi hallusinoida.**
-
-[Kirjoita tähän.]
-
-**Kirjoita 5–7 vaihetta, jotka käyt läpi ennen kuin luotat vastaukseen.**
+**Kirjoita 6–8 vaihetta, joilla tarkistat tekoälytuloksen. Aloita jokainen vaihe toimintaverbillä.**
 
 [Kirjoita tähän.]
 
 ## Teoria-osion lopputyö
 
-Valitse kirjallinen tai visuaalis-suullinen suoritustapa. Käytä vähintään kahta todistusaineistoa; kaikkien kolmen käyttäminen on suositeltavaa.
+Valitse kirjallinen tai visuaalis-suullinen suoritustapa. Käytä kaikkia kolmea todistusaineistoa.
 
 **Valitse suoritustapa.**
 
-- [ ] Kirjallinen asiantuntijalausunto, 750–1000 sanaa
+- [ ] Kirjallinen asiantuntijalausunto, 500–700 sanaa
 - [ ] Tilannekartta ja päätöspuu sekä 5–8 minuutin suullinen esitys
 
 **Valitse skenaario.**
@@ -207,11 +197,13 @@ Valitse kirjallinen tai visuaalis-suullinen suoritustapa. Käytä vähintään k
 - [ ] Rekrytointialgoritmi ja syrjintä
 - [ ] Markkinointisisältö ja tekijänoikeudet
 
+Käytä tunnilla 8 arvioimiasi lähteitä. Jos jokin työn keskeinen väite ei selviä niistä, tee tunnilla 9 enintään yksi uusi lähdetarkistus.
+
 **Kirjaa keskeiset riskit ja käsitteet.**
 
 [Kirjoita tähän.]
 
-**Nimeä käyttämäsi todistusaineistot ja lähteet.**
+**Nimeä käyttämäsi todistusaineistot ja tunnilla 8 arvioidut lähteet. Kirjaa, mitä väitettä kukin lähde tukee.**
 
 [Kirjoita tähän.]
 
@@ -235,7 +227,7 @@ Jäsennä valitsemasi suoritustapa näiden neljän kysymyksen avulla.
 
 [Kirjoita tähän.]
 
-**4. Mikä on asiallinen vastuu? Kerro, kuka vastaa mistä ja miksi.**
+**4. Miten ammatillinen ja käytännön vastuu jakautuvat? Kerro, kuka vastaa mistä ja miksi.**
 
 [Kirjoita tähän.]
 
@@ -247,11 +239,13 @@ Jäsennä valitsemasi suoritustapa näiden neljän kysymyksen avulla.
 
 ### Visuaalis-suullinen suoritustapa
 
-**Tallenna tilannekartta.**
+Tee yhden sivun tilannekartta, jossa on neljä kenttää: mitä tapahtui, miksi se tapahtui, miten tilanne hoidetaan ja miten vastuu jakautuu. Avainsanat ja lyhyet lauseet riittävät, koska avaat perustelut puheessa. Tee lisäksi kevyt päätöspuu, jossa on kolme päätöskohtaa, kaksi haaraa kussakin sekä päätepisteissä toiminta ja vastuurooli.
+
+**Tallenna yhden sivun tilannekartta.**
 
 [Lisää linkki tai liite.]
 
-**Tallenna päätöspuu.**
+**Tallenna kevyt päätöspuu.**
 
 [Lisää linkki tai liite.]
 
@@ -259,22 +253,21 @@ Jäsennä valitsemasi suoritustapa näiden neljän kysymyksen avulla.
 
 [Kirjoita tähän tai lisää linkki tai liite.]
 
-### Korjausloki — vähintään kolme korjausta
+### Korjausloki — kaksi korjausta
 
 | Ennen | Jälkeen | Miksi korjasin? | Lähde tai käsite |
 |---|---|---|---|
 |  |  |  |  |
 |  |  |  |  |
-|  |  |  |  |
 
-**Kirjoita kirjallisen suoritustavan 2–3 minuutin puolustuksen muistiinpanot.**
+**Kirjoita kirjallisen suoritustavan 1–2 minuutin puolustuksen muistiinpanot.**
 
 [Kirjoita tähän.]
 
 ### Lopputarkistus
 
 - [ ] Käytän käsitteitä täsmällisesti ja sovellan niitä tilanteeseen.
-- [ ] Hyödynnän vähintään kahta todistusaineistoa.
+- [ ] Hyödynnän kaikkia kolmea todistusaineistoa.
 - [ ] Ehdotan konkreettisia toimenpiteitä: kuka tekee, mitä tekee ja milloin.
 - [ ] Tuotos on selkeä ja asiallinen, ja sen väitteet ovat perusteltuja.
 - [ ] Käsittelen vastuukysymyksen omana osanaan.
@@ -283,127 +276,39 @@ Jäsennä valitsemasi suoritustapa näiden neljän kysymyksen avulla.
 
 # Osa 2 · Tekoälyjen käyttö
 
-## Rakennuspalikka 1: Promptauspankki
+## Rakennuspalikka 1: Testattu promptikortti
 
-Laadi tunnilla 12 yhteensä 5–7 promptikorttia. Tässä pohjassa on tilaa viidelle kortille. Kopioi korttipohja, jos tarvitset lisää.
+Laadi tunnilla 12 yksi uudelleen käytettävä promptikortti. Testaa kaksi versiota samalla aineistolla ja muuta niiden välissä vain yhtä nimettyä asiaa.
 
-### Promptikortti 1
-
-**Nimeä prompti tai käyttötilanne.**
+**Kortin nimi ja käyttötilanne**
 
 [Kirjoita tähän.]
 
-**Kirjoita ensimmäinen versio kokonaisuudessaan.**
+**Tavoite, käyttäjä tai yleisö sekä vaihtuvan syötteen paikka**
 
 [Kirjoita tähän.]
 
-**Mikä vastauksessa toimi? Mitä piti täsmentää?**
+**Laatukriteerit, jotka päätit ennen ensimmäistä ajoa**
 
 [Kirjoita tähän.]
 
-**Kirjoita viimeistelty prompti kokonaisuudessaan.**
+**Promptin versio 1, käytetty aineisto ja saatu vastaus**
 
 [Kirjoita tähän.]
 
-**Mihin prompti sopii ja mihin se ei sovi?**
+**Nimeä yksi havaittu puute ja sitä vastaava promptimuutos.**
 
 [Kirjoita tähän.]
 
-### Promptikortti 2
-
-**Nimeä prompti tai käyttötilanne.**
+**Promptin versio 2 ja samalla aineistolla saatu vastaus**
 
 [Kirjoita tähän.]
 
-**Kirjoita ensimmäinen versio kokonaisuudessaan.**
+**Vertaa vastauksia laatukriteereillä. Mitä muutos osoitti tässä testissä?**
 
 [Kirjoita tähän.]
 
-**Mikä vastauksessa toimi? Mitä piti täsmentää?**
-
-[Kirjoita tähän.]
-
-**Kirjoita viimeistelty prompti kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mihin prompti sopii ja mihin se ei sovi?**
-
-[Kirjoita tähän.]
-
-### Promptikortti 3
-
-**Nimeä prompti tai käyttötilanne.**
-
-[Kirjoita tähän.]
-
-**Kirjoita ensimmäinen versio kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mikä vastauksessa toimi? Mitä piti täsmentää?**
-
-[Kirjoita tähän.]
-
-**Kirjoita viimeistelty prompti kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mihin prompti sopii ja mihin se ei sovi?**
-
-[Kirjoita tähän.]
-
-### Promptikortti 4
-
-**Nimeä prompti tai käyttötilanne.**
-
-[Kirjoita tähän.]
-
-**Kirjoita ensimmäinen versio kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mikä vastauksessa toimi? Mitä piti täsmentää?**
-
-[Kirjoita tähän.]
-
-**Kirjoita viimeistelty prompti kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mihin prompti sopii ja mihin se ei sovi?**
-
-[Kirjoita tähän.]
-
-### Promptikortti 5
-
-**Nimeä prompti tai käyttötilanne.**
-
-[Kirjoita tähän.]
-
-**Kirjoita ensimmäinen versio kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mikä vastauksessa toimi? Mitä piti täsmentää?**
-
-[Kirjoita tähän.]
-
-**Kirjoita viimeistelty prompti kokonaisuudessaan.**
-
-[Kirjoita tähän.]
-
-**Mihin prompti sopii ja mihin se ei sovi?**
-
-[Kirjoita tähän.]
-
-### Promptauspankin yhteenveto
-
-Kuvaa 3–5 lauseella rakenteet, jotka toimivat toistuvasti eri prompteissa.
-
-[Kirjoita tähän.]
-
-**Mikä promptikortti liittyy tulevan botin aiheeseen? Miten käytät sitä järjestelmäpromptin raaka-aineena?**
+**Kirjaa kortin tunnettu raja ja kerro, miten hyödynnät toimivaa rakennetta botin järjestelmäpromptissa.**
 
 [Kirjoita tähän.]
 
@@ -449,7 +354,7 @@ Kuvaa 3–5 lauseella rakenteet, jotka toimivat toistuvasti eri prompteissa.
 
 [Kirjoita tähän.]
 
-## Rakennuspalikka 3: Tietopohja
+## Rakennuspalikka 3: Tietopohja ja testisuunnitelma
 
 **Kirjaa 5–8 tietotarvetta, joihin botin pitää osata vastata.**
 
@@ -457,7 +362,6 @@ Kuvaa 3–5 lauseella rakenteet, jotka toimivat toistuvasti eri prompteissa.
 
 | Dokumentti | Lähde tai linkki | Miksi mukana? | Mitä tietotarvetta se tukee? | Luotettavuus ja ajantasaisuus | Tietosuoja tai käyttöoikeus |
 |---|---|---|---|---|---|
-|  |  |  |  |  |  |
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
@@ -473,20 +377,69 @@ Kirjaa näkyviin myös puuttuva tieto: milloin botin pitää sanoa, ettei tietop
 
 [Kirjoita tähän.]
 
-- [ ] Tietopohjan 3–5 varsinaista lähdedokumenttia on tallennettu samaan kansioon, ja niiden nimet vastaavat taulukkoa.
+- [ ] Tietopohjan 2–4 varsinaista lähdedokumenttia on tallennettu samaan kansioon, ja niiden nimet vastaavat taulukkoa.
+
+## Tunti 16: Bottiprojektin valintakortti
+
+Kokeile käytännössä yhtä työkalureittiä. Jos sopivaa palvelua ei ole käytettävissä, arvioi opettajan antamia esimerkkituotoksia. Muut reitit vertailet lyhyesti ilman erillisiä tuotoksia.
+
+**Valitse kokeiltu reitti.**
+
+- [ ] Kuva
+- [ ] Ääni tai musiikki
+- [ ] Video
+- [ ] Koodi
+
+### Yhden välinekokeilun dokumentointi
+
+**Käyttötarkoitus, käyttäjä ja tärkein onnistumisen ehto**
+
+[Kirjoita tähän.]
+
+**Käytetty väline, syöte ja mahdollinen lähdeaineisto**
+
+[Kirjoita tähän.]
+
+**Ennalta päätetyt arviointikriteerit ja version 1 havainnot**
+
+[Kirjoita tähän.]
+
+**Yksi nimetty muutos, version 2 tulos ja rajattu johtopäätös**
+
+[Kirjoita tähän.]
+
+### Valintakortti
+
+| Työkalureitti | Sopisiko se bottisi käyttäjätarpeeseen? Miksi tai miksi ei? |
+|---|---|
+| Kuva |  |
+| Ääni tai musiikki |  |
+| Video |  |
+| Koodi |  |
+
+| Kysymys | Toteutustapa A | Toteutustapa B |
+|---|---|---|
+| Miten järjestelmäprompti ja tietopohja toteutetaan? |  |  |
+| Tarvitaanko erikoistyökalua? Miksi? |  |  |
+| Millä näytöllä osoitat toiminnan tai suunnittelun? |  |  |
+| Mikä on suurin riski tai rajoitus? |  |  |
+
+**Kirjoita toteutuspäätös, tärkein riskirajaus ja havaittava käyttöönottokriteeri. Nimeä suunnittelupolulla teknisesti todentamattomat ominaisuudet.**
+
+[Kirjoita tähän.]
 
 ## Apuri-botin lopputyö
 
-Voit käyttää valitsemaasi alustaa tai tehdä dokumentoidun kuivaharjoittelun.
+Valitse toimiva tekninen toteutus tai dokumentoitu suunnittelusuoritus. Polut ovat samanarvoisia, mutta niissä osoitetaan osaaminen eri tavalla.
 
 **Valitse toteutustapa.**
 
-- [ ] Toimiva botti
-- [ ] Dokumentoitu kuivaharjoittelu
+- [ ] Toimiva tekninen toteutus
+- [ ] Dokumentoitu suunnittelusuoritus
 
-**Lisää linkki toteutukseen tai kuivaharjoittelun suoritusjälki.**
+**Lisää polkusi mukainen ydintuotos.**
 
-Kuivaharjoittelun suoritusjäljessä pitää näkyä järjestelmäprompti, käyttäjän syötteet, vastaukset ja odotetut työkaluvaiheet.
+Teknisellä polulla lisää linkki bottiin ja tallennettu suoritusjälki. Suunnittelupolulla lisää arkkitehtuuri ja selvästi simuloiduksi merkitty suoritusjälki, jossa näkyvät järjestelmäprompti, käyttäjän syötteet, vastaukset ja suunnitellut työkaluvaiheet. Simulaatio osoittaa suunnitelman johdonmukaisuuden, mutta ei todista integraatioiden, käyttöoikeuksien, tilan säilymisen tai lokituksen toimivuutta.
 
 [Kirjoita tähän.]
 
@@ -498,11 +451,11 @@ Kuivaharjoittelun suoritusjäljessä pitää näkyä järjestelmäprompti, käyt
 
 [Kirjoita tähän.]
 
-**Nimeä tietopohjan 3–5 dokumenttia ja perustele valinnat.**
+**Nimeä tietopohjan 2–4 dokumenttia ja perustele valinnat.**
 
 [Kirjoita tähän.]
 
-> **Tarkista ennen testausta.** Varmista, että järjestelmäprompti, botin määrittely ja tietopohja ovat keskenään johdonmukaisia. Korjaa ristiriidat ennen testien ajamista.
+> **Tuntien aikajana:** Aja tai simuloi kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran tunnilla 17 ja kirjaa korjauslista. Tee tunnilla 18 yksi nimetty korjaus ja toista juuri sitä koskeva testi samalla odotuksella.
 
 ### Testimatriisi
 
@@ -518,13 +471,13 @@ Kuivaharjoittelun suoritusjäljessä pitää näkyä järjestelmäprompti, käyt
 
 [Kirjoita tähän.]
 
-**Vertaa tulosta ennen korjausta ja sen jälkeen. Mitä päätät vertailun perusteella?**
+**Vertaa tulosta ennen korjausta ja sen jälkeen. Mitä vertailu kertoo korjauksen vaikutuksesta tässä testissä, ja mitä se ei vielä osoita?**
 
 [Kirjoita tähän.]
 
 ### Reflektio, 200–300 sanaa
 
-Kerro, mitä opit, mikä toimi heti, mikä vaati useita yrityksiä ja mitä tekisit seuraavalla kerralla toisin.
+Kerro, mitä opit, mikä havainto johti korjaukseen ja mitä tekisit seuraavaksi. Saavutettavana vaihtoehtona voit tehdä 2–3 minuutin äänitteen tai selostetun 3–5 dian kuvakoosteen, joka vastaa samoihin kysymyksiin.
 
 [Kirjoita tähän.]
 
@@ -532,13 +485,15 @@ Kerro, mitä opit, mikä toimi heti, mikä vaati useita yrityksiä ja mitä teki
 
 Kirjaa muistiin käyttäjä ja ongelma, yksi ennen–jälkeen-korjaus, yksi perusteltu rajaus sekä vastauksesi mahdolliseen jatkokysymykseen.
 
+Esittely tehdään pienryhmässä, tallenteena tai opettajan valitsemana otoksena, ei koko luokan peräkkäisenä kierroksena.
+
 [Kirjoita tähän.]
 
 ### Lopputarkistus
 
-- [ ] Botti toimii rajatussa tehtävässä tai kuivaharjoittelu todentaa työnkulun.
+- [ ] Tekninen botti toimii rajatussa tehtävässä tai suunnittelusuoritus kuvaa toteuttamiskelpoisen rakenteen ja rajaa teknisesti todentamattomat ominaisuudet.
 - [ ] Järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.
-- [ ] Tietopohjassa on 3–5 perusteltua dokumenttia.
+- [ ] Tietopohjassa on 2–4 perusteltua dokumenttia.
 - [ ] Normaali, kielteinen ja reunatapaus sekä korjaus ja uudelleentesti on dokumentoitu.
 - [ ] Reflektio ja esittely osoittavat, että ymmärrän tekemäni valinnat.
 
@@ -546,7 +501,7 @@ Kirjaa muistiin käyttäjä ja ongelma, yksi ennen–jälkeen-korjaus, yksi peru
 
 # Osa 3 · Agentit
 
-Tällä kurssilla agentti = kielimalli + harness. Suunnittelun tarkistuslistaan kuuluu kuusi rakennusosaa: syötekäsittelijä, päättelijä ja suunnittelija, työkalujen suorittaja, muisti ja konteksti, turvakerros sekä seuranta ja palautesilmukka. Kaikkia niistä ei tarvitse toteuttaa jokaisessa agentissa erillisinä teknisinä osina.
+Tällä kurssilla rakennettavalla tekoälyagentilla tarkoitetaan kielimallin ja sitä ohjaavan agentin ohjauskehyksen (harness) muodostamaa järjestelmää. Suunnittelun tarkistuslistaan kuuluu kuusi rakennusosaa: syötekäsittelijä, päättelijä ja suunnittelija, työkalujen suorittaja, muisti ja konteksti, turvakerros sekä seuranta ja palautesilmukka. Kaikkia niistä ei tarvitse toteuttaa jokaisessa agentissa erillisinä teknisinä osina.
 
 **Työskentelytapa**
 
@@ -565,13 +520,19 @@ Kirjoita 150–200 sanaa. Kuvaa ongelma ja käyttäjä, perustele, miksi ratkais
 
 ## Pohjapiirros 2: Muisti
 
-Kirjoita 150–200 sanaa. Kuvaa lyhytaikainen muisti, mahdollinen pitkäkestoinen muisti, tilat ja tilasiirtymät sekä agentin identiteetti.
+Kirjoita 150–200 sanaa. Kuvaa yhden suorituksen konteksti, mahdollinen pitkäkestoinen muisti sekä prosessin tilat ja tilasiirtymät. Perustele, mitä tallennetaan, kuinka pitkäksi aikaa ja miksi. Älä sijoita agentin roolia tai toimintaohjeita muistiin.
+
+[Kirjoita tähän.]
+
+### Järjestelmäohjeet — erillään muistista
+
+Kirjaa agentin tehtävä, rooli, sallitut toimintatavat ja rajat järjestelmäohjeisiin. Järjestelmäohjeet ohjaavat toimintaa, mutta eivät ole keskusteluhistoriaa, prosessin tilaa tai pitkäkestoista muistia.
 
 [Kirjoita tähän.]
 
 ## Pohjapiirros 3: Päättely
 
-Kirjoita 150–200 sanaa. Valitse ReAct tai eksplisiittinen työnkulku ja perustele valintasi. Kuvaa, miten päättely näkyy työnkulun rakenteessa ja lokissa. Anna yksi lokiesimerkki, jossa näkyvät lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja seuraava toiminto. Älä tallenna kielimallin raakaa päättelyketjua.
+Kirjoita 150–200 sanaa. Valitse ReAct tai eksplisiittinen työnkulku ja perustele valintasi. Kuvaa, miten päättely näkyy työnkulun rakenteessa ja lokissa. Määritä kummassakin mallissa vähintään yksi aito rajattu kielimallivalinta vähintään kahdesta sallitusta vaihtoehdosta. Anna lokiesimerkki, jossa näkyvät syöte, sallitut vaihtoehdot, mallin valinta, tulos tai virhe ja seuraava toiminto. Älä tallenna kielimallin raakaa päättelyketjua.
 
 [Kirjoita tähän.]
 
@@ -609,15 +570,17 @@ Tarkista viisi pohjapiirrosta yhtenä kokonaisuutena ennen rakentamista.
 
 [Kirjoita tähän.]
 
-## Toteutus ja dokumentaatio
+## Toteutuspolun näyttö
 
 **Lisää työnkulun linkki, JSON-vientitiedosto tai alustariippumaton suoritusjälki.**
 
 [Kirjoita tähän.]
 
-**Piirrä 3–5 solmun työnkulku.**
+**Piirrä rajattu työnkulku.**
 
 [Lisää kaavio tähän.]
+
+Käytä niin monta vaihetta kuin tehtävän, työkalujen, turvallisuuden, hyväksynnän, lokituksen ja virhepolun näkyvä kuvaaminen vaatii. Solmujen määrä ei ratkaise, onko järjestelmä agentti. Merkitse teknisessä polussa suoritusnäkymä ja dokumentoidussa polussa todellinen mallikutsu sekä simuloidut vaiheet.
 
 | Solmu | Tehtävä | Syöte | Tulos | Yhteys kuuteen rakennusosaan |
 |---|---|---|---|---|
@@ -627,73 +590,51 @@ Tarkista viisi pohjapiirrosta yhtenä kokonaisuutena ennen rakentamista.
 |  |  |  |  |  |
 |  |  |  |  |  |
 
-### README, ½–1 sivu
+## Kuuden rakennusosan tarkistus
 
-Kuvaa, mitä agentti tekee, kenelle se on tarkoitettu, miten sitä käytetään, 2–3 esimerkkiä sekä olennaiset rajoitukset.
-
-[Kirjoita tähän.]
-
-### ARCHITECTURE, ½–1 sivu
-
-Kuvaa solmut järjestyksessä. Kerro jokaisen tehtävä, syöte ja tulos sekä yhteys agentin kuuteen rakennusosaan.
+Merkitse, missä **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka** näkyvät tai miksi niitä ei tarvita.
 
 [Kirjoita tähän.]
 
-### SAFETY, ½–1 sivu
+## Aito rajattu mallivalinta
 
-Kuvaa 3–5 riskiä sekä niiden hallintakeinot ja lokitus. Nimeä lisäksi kohdat, joissa tarvitaan ihmisen hyväksyntä.
+| Syöte | Sallitut vaihtoehdot | Mallin todellinen valinta | Seuraava vaihe |
+|---|---|---|---|
+|  |  |  |  |
 
-[Kirjoita tähän.]
+## Kolme testiä
 
-Kytke jokainen riski konkreettiseen hallintakeinoon. Nimeä myös tilanne, jossa agentti pysähtyy ja eskaloi asian ihmiselle.
+| Kategoria | Syöte | Odotettu tulos | Todellinen tulos | Johtopäätös |
+|---|---|---|---|---|
+| Normaali |  |  |  |  |
+| Reunatapaus |  |  |  |  |
+| Turvallisuus |  |  |  |  |
 
-## Testiraportti
+## Yksi korjaus ja uudelleentesti
 
-Dokumentoi yhdeksän testiä: kolme normaalia tapausta, kolme reunatapausta ja kolme turvallisuustestiä.
-
-| Nro ja nimi | Kategoria | Syöte | Odotettu tulos | Todellinen tulos | Tila ja huomiot |
-|---|---|---|---|---|---|
-| 1 | Normaali |  |  |  |  |
-| 2 | Normaali |  |  |  |  |
-| 3 | Normaali |  |  |  |  |
-| 4 | Reunatapaus |  |  |  |  |
-| 5 | Reunatapaus |  |  |  |  |
-| 6 | Reunatapaus |  |  |  |  |
-| 7 | Turvallisuus |  |  |  |  |
-| 8 | Turvallisuus |  |  |  |  |
-| 9 | Turvallisuus |  |  |  |  |
-
-### Vähintään kaksi uudelleentestiä
-
-**Kirjaa havaittu puute, tehty korjaus, aiempi tulos, uusi tulos ja johtopäätös.**
+**Kirjaa alkuperäinen tulos, tehty korjaus, saman testin uusi tulos ja johtopäätös.**
 
 [Kirjoita tähän.]
 
-## Vertaisarviointi
+## Turvallisuusraja ja rehellinen rajoitus
 
-Kirjaa yksi vahvuus, kaksi kehittämiskohdetta ja kaksi konkreettista parannusehdotusta. Kerro lopuksi, mitä muutit palautteen perusteella. Jos teet työn yksin, voit pyytää tekoälyltä kriittisen arvion.
-
-[Kirjoita tähän.]
-
-## Itsearviointi, 300–400 sanaa
-
-Kuvaa onnistumiset, epäonnistumiset, opitut asiat ja parannusideat. Arvioi lisäksi, mikä kuudesta rakennusosasta toteutuu vahvimmin ja mikä kaipaa eniten kehittämistä.
+**Mikä oikeus, hyväksyntä tai havaittava eskalointiehto rajaa toimintaa? Mitä työsi ei vielä todista?**
 
 [Kirjoita tähän.]
 
-## Esittely, 3–5 minuuttia
+## Puolustus, 2–3 minuuttia
 
-Kirjaa muistiin, miten näytät agentin toiminnassa 2–3 normaalilla syötteellä ja esittelet arkkitehtuurin, kuuden rakennusosan toteutumisen, turvakerroksen sekä vähintään yhden korjauksen vaikutuksen. Päätä esittely kriittiseen arvioon: mikä onnistui ja mikä ei.
+Kirjaa muistiin ongelma ja toteutuspolku, aito rajattu mallivalinta, testissä havaittu puute, korjaus ja uudelleentestin tulos sekä tärkein turvallisuusraja ja rajoitus. Puolustus tehdään tunnilla pienryhmässä, tallenteena tai opettajan valitsemana otoksena.
 
 [Kirjoita tähän.]
 
 ### Lopputarkistus
 
-- [ ] 3–5 solmun työnkulku toimii tai suoritusjälki todentaa sen.
-- [ ] Turvakerros, lokitus ja riskit on kuvattu.
-- [ ] README, ARCHITECTURE ja SAFETY ovat selkeitä.
-- [ ] Testiraportissa on yhdeksän testiä ja vähintään kaksi uudelleentestiä.
-- [ ] Itsearviointi ja esittely osoittavat, että ymmärrän kokonaisuuden.
+- [ ] Työnkulussa on vähintään yksi aito, rajattu kielimallin tekemä valinta, ja valitun polun näyttö vastaa sitä, mitä todella toteutin tai simuloin.
+- [ ] Kuusi rakennusosaa on käsitelty kanonisilla nimillä.
+- [ ] Normaali, reuna- ja turvallisuustesti on dokumentoitu.
+- [ ] Yksi korjaus ja sama uudelleentesti näkyvät ennen–jälkeen-vertailuna.
+- [ ] Turvallisuusraja, rajoitus ja 2–3 minuutin puolustus osoittavat, että ymmärrän kokonaisuuden.
 
 ---
 

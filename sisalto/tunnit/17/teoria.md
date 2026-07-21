@@ -2,13 +2,13 @@
 
 ## Mitä tällä tunnilla tapahtuu?
 
-Tähän mennessä olet kerännyt kuuden tunnin aikana kolme **rakennuspalikkaa**. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa. Tämä on **nivelkohta**: siirryt suunnittelusta rakentamiseen.
+Tähän mennessä olet kerännyt kolme **rakennuspalikkaa** ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen toteutuspolun valinnut rakentaa botin saatavilla olevalle alustalle. Dokumentoidun suunnittelupolun valinnut tuottaa arkkitehtuurin ja simuloidun suoritusjäljen, josta käy täsmällisesti ilmi, mitä valmis järjestelmä tekisi ja mikä jää toteuttamatta.
 
-Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan opit **siirtämään suunnitelman järjestelmäpromptiksi**, jonka botti ymmärtää. Tämä materiaali auttaa sinua siinä. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan jotakin toimivaa, jota voit kehittää tunnilla 18.
+Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan siirrät suunnitelman järjestelmäpromptiksi ja toteutuskuvaukseksi. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan näyttöä, jota voit testata, korjata ja puolustaa tunnilla 18. Polut ovat samanarvoisia, mutta ne eivät todista samoja asioita.
 
 ## Mikä on järjestelmäprompti?
 
-**Järjestelmäprompti** on tekstipätkä, jonka annat Copilotille. Se määrittää, miten botti käyttäytyy *kaikissa* keskusteluissa. Käyttäjä ei yleensä näe järjestelmäpromptia, mutta botti noudattaa sitä toiminnassaan.
+**Järjestelmäprompti** on botin pääohje, jonka annat valitulle alustalle tai liität suunnittelupolun toteutuskuvaukseen. Se määrittää, miten botin on tarkoitus käyttäytyä keskusteluissa. Käyttäjä ei yleensä näe järjestelmäpromptia, mutta arvioinnissa se kuuluu näkyvään dokumentaatioon.
 
 Voit ajatella järjestelmäpromptia botin **työsopimuksena**: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.
 
@@ -27,7 +27,9 @@ Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:
 | --- | --- |
 | **1: Promptikortti** | Testattu rakenne ja kieli. Käytä pääohjeessa ratkaisuja, joiden vaikutuksen osoitit tunnilla 12. |
 | **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
-| **3: Tietopohja** | Asiantuntemus. Tietopohja ei ole osa järjestelmäpromptia, vaan se ladataan erikseen Copilotiin. Järjestelmäpromptissa voit kuitenkin viitata siihen esimerkiksi näin: *"Käytä tietopohjaan ladattuja dokumentteja referenssinä."* |
+| **3: Tietopohja ja testisuunnitelma** | Hyväksytty aineisto ja kolme ennalta kirjoitettua testiä. Tekninen polku kytkee aineiston alustan tietopohjaksi. Suunnittelupolku kuvaa hakutavan, käyttöoikeusrajauksen ja mallille annettavat lähdekatkelmat. Järjestelmäprompti kertoo, miten löydettyä lähdettä käytetään, mutta ei korvaa hakua tai käyttöoikeuksia. |
+
+Järjestelmäprompti ei ole neljäs rakennuspalikka. Se on näiden kolmen rakennuspalikan päätöksistä koottu toteutusohje.
 
 ## Esimerkki: rakennuspalikoista järjestelmäpromptiksi
 
@@ -59,9 +61,9 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 <figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
   <div class="l17-wrap">
-    <div class="l17-blk b1"><b>1 · Promptipankki</b><span>toimivat muotoilut</span></div>
+    <div class="l17-blk b1"><b>1 · Promptikortti</b><span>toimivat muotoilut</span></div>
     <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
-    <div class="l17-blk b3"><b>3 · Tietopohja</b><span>3–5 dokumenttia</span></div>
+    <div class="l17-blk b3"><b>3 · Tietopohja ja testit</b><span>2–4 dokumenttia, kolme testiä</span></div>
     <span class="l17-morph">kuvaileva → suora ohje</span>
     <div class="l17-bot"><span class="l17-bhead">JÄRJESTELMÄPROMPTI</span>
       <span class="l17-line n1">Kirjoita selkeästi, kysy tarkentavia kysymyksiä.</span>
@@ -106,7 +108,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 
 Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää tekoälyltä apua sen viimeistelyyn. Käytä esimerkiksi seuraavaa promptia:
 
-> "Toimi sparrauskumppaninani. Olen kirjoittamassa Copilot-botin järjestelmäpromptia. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäpromptista:
+> "Toimi sparrauskumppaninani. Olen kirjoittamassa apuri-botin järjestelmäpromptia. Tässä ovat määrittelydokumenttini ja ensimmäinen versio järjestelmäpromptista:
 >
 > MÄÄRITTELY: [liitä rakennuspalikka 2]
 >
@@ -114,26 +116,32 @@ Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää 
 >
 > Auta minua arvioimaan: onko järjestelmäpromptissa mukana kaikki, mitä määrittelyssä oli? Onko jokin kohta botille epäselvä? Onko jokin ohje liian yleinen, esimerkiksi 'vastaa hyvin'? Älä kirjoita uutta versiota. Anna 2–3 konkreettista parannusehdotusta, joiden pohjalta voin tehdä omat muutokseni."
 
-## Copilot Agentin luominen
+## Tee ensimmäinen versio valitsemallasi polulla
 
-Microsoft Copilotissa voit luoda oman **agentin**, jolla on omat ohjeet ja tietopohja. Luo agentti näin:
+**Teknisellä toteutuspolulla** luot botin saatavilla olevalle alustalle:
 
-1. Avaa Copilot ja siirry **Agents** / **Agentit** -osioon.
-2. Luo uusi agentti. Anna sille sama nimi kuin määrittelydokumentissasi.
-3. Liitä järjestelmäpromptisi **Instructions** / **Ohjeet** -kenttään.
-4. Lataa rakennuspalikka 3:n dokumentit tietopohjaksi kohtaan **Knowledge** / **Tieto**.
-5. Tallenna agentti ja aloita keskustelu.
+1. Luo uusi botti ja anna sille sama nimi kuin määrittelydokumentissasi.
+2. Liitä järjestelmäprompti alustan ohjekenttään.
+3. Kytke rakennuspalikka 3:n sallitut dokumentit tietopohjaksi.
+4. Tarkista jakamisasetus ja se, kuka voi käyttää bottia tai sen aineistoa.
+5. Tallenna versio ja aloita testikeskustelu.
 
-Jos Copilotin käyttöliittymä on muuttunut tai et löydä jotakin vaihetta, etsi ohje hakemalla esimerkiksi *"Copilot agent create instructions"* — oppitunnilla voit myös kysyä opettajalta.
+**Dokumentoidulla suunnittelupolulla** teet toteutuspaketin:
 
-## Ensimmäinen testikeskustelu
+1. Piirrä osat: käyttäjä, käyttöliittymä, järjestelmäprompti, tietopohjan haku ja vastaus.
+2. Kirjoita jokaiselle osalle syöte, tuotos ja vastuu.
+3. Kuvaa käyttöoikeusraja ja se, mitä aineistoa käyttäjän roolilla saa hakea.
+4. Laadi simuloitu suoritusjälki, jossa näkyvät käyttäjän viesti, haettu lähdekatkelma, muodostettu vastaus ja tarkistus.
+5. Merkitse näkyvästi, mitkä yhteydet, käyttöoikeudet ja tallennukset ovat vasta suunnitelmia.
 
-Älä yritä tehdä botista heti täydellistä. Aja yksi keskustelu läpi ja katso, mitä tapahtuu. Hyvä testaustapa etenee näin:
+## Kolme ensimmäistä testiä
 
-1. **Keksi kuvitteellinen käyttötilanne omasta aiheestasi.** Kirjoita siitä lyhyt kuvaus, 2–3 lausetta.
-2. **Anna botin ohjata.** Vastaa sen kysymyksiin niin kuin oikea käyttäjä vastaisi.
-3. **Käy keskustelu loppuun.** Tarkista, pääsetkö lopputulokseen, jota botin on tarkoitus auttaa tekemään.
-4. **Tallenna keskustelu** kuvakaappauksina tai kopioituna tekstinä.
+Älä yritä tehdä botista heti täydellistä. Aja tai simuloi nyt ensimmäisen kerran kaikki kolme tunnilla 15 kirjoittamaasi testiä: normaali tapaus, kielteinen testi ja reunatapaus. Hyvä testaustapa etenee näin:
+
+1. **Käytä samoja kolmea testiä ja odotusta.** Älä vaihda odotuksia ensimmäisten tulosten perusteella.
+2. **Teknisellä polulla aja testit oikealla botilla.** Tallenna kustakin syöte, vastaus ja mahdollinen lähdeviite tai muu alustan näyttö.
+3. **Suunnittelupolulla käy testit vaihe vaiheelta.** Merkitse jokainen simuloitu haku, tarkistus ja vastaus erikseen.
+4. **Vertaa jokaista tulosta odotukseen.** Kirjaa myös, mitä polkusi ei pysty todentamaan.
 
 ## Mihin kiinnität huomiota testissä?
 
@@ -145,9 +153,9 @@ Vai unohtaako se, että se on oman aiheesi apuri, ja muuttuuko se yleiseksi avus
 
 Vai hyppiikö se osasta toiseen sattumanvaraisesti?
 
-**Käyttääkö botti tietopohjaa?**
+**Käyttääkö botti tietopohjaa oikein?**
 
-Tunnistatko sen vastauksista oman aiheesi termejä, vai kuulostavatko vastaukset yleiseltä jargonilta?
+Löytyikö oikea lähde, ja tukeeko lähde muodostettua vastausta? Suunnittelupolulla tämä on simuloitu tarkistus, ei todiste toimivasta hausta.
 
 **Yrittääkö botti tehdä työn käyttäjän puolesta?**
 
@@ -155,7 +163,7 @@ Jos pyydät sitä tekemään koko tehtävää puolestasi, noudattaako se ohjeita
 
 ## Korjauslista tunnille 18
 
-Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä korjaa kaikkea tällä tunnilla, sillä tunti 18 on viimeistelyä varten. Esimerkkejä:
+Kolmen testin jälkeen kirjoita tiivis korjauslista havainnoista, jotka eivät vielä toimi. Älä tee vielä arvioitavaa korjausta, sillä nimetty korjaus ja sen uudelleentesti kuuluvat tunnille 18. Esimerkkejä:
 
 - "Botti hyppää vaiheen 2 ohi heti — työnkulun ohjetta pitää tarkentaa."
 - "Botti käyttää englanninkielisiä termejä, vaikka sen pitäisi puhua suomeksi — lisää kielimääritelmä."
@@ -163,7 +171,7 @@ Testin jälkeen kirjoita muistiin 3–5 asiaa, jotka eivät vielä toimi. Älä 
 
 ## Lopuksi
 
-Tunti 17 on raakaversion vaihe. Älä turhaudu, jos botti ei vielä toimi täydellisesti. Sen ei ole tarkoituskaan olla valmis heti. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla saat ensimmäisen version toimimaan, ja tunnilla 18 viimeistelet sen.
+Tunti 17 on raakaversion vaihe. Älä turhaudu, jos tekninen botti ei vielä toimi täydellisesti tai suunnitelman aukko tulee näkyviin. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla tuotat ensimmäisen todennettavan teknisen version tai ensimmäisen tarkistettavan suunnittelupaketin, ja tunnilla 18 viimeistelet sen.
 
 Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.
 

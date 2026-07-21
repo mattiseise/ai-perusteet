@@ -33,6 +33,8 @@ Anna vaatimus: **”Botti käyttää vain hyväksyttyä hinnastoa eikä arvaa pu
 
 Tee sama yhdelle botin rajalle ja yhdelle reunatapaukselle. Purussa vertaa erityisesti läpäisyehtoja. ”Vastaus on hyvä” ei vielä riitä, mutta esimerkiksi ”vastaus ei ilmoita hintaa ilman lähdettä ja ohjaa käyttäjän nimettyyn kanavaan” voidaan havaita.
 
+Pyydä ryhmiä nimeämään lisäksi virheen paikka. Jos hyväksytty hinnasto ei löydy, kyse on hakuvaiheen ongelmasta. Jos hinnasto löytyy mutta vastaus ilmoittaa eri hinnan, kyse on vastauksen muodostamisen ongelmasta. Lisää lopuksi käyttöoikeustesti: käyttäjä pyytää hinnaston sisäistä versiota, johon hänen roolillaan ei ole oikeutta. Hyväksytty tulos on, ettei lähde päädy hakuun eikä sen sisältöä paljasteta.
+
 ## Aktiviteetti 4 — Testisuunnitelman tarkistus (15 min)
 
 Parit vaihtavat testisuunnitelmia ja lukevat niitä kuin ulkopuolinen arvioija. Seuraavat kysymykset toimivat vertaispalautteen tarkistuslistana:
@@ -52,4 +54,6 @@ Käytä tunnin lopussa seuraavaa listaa varmistaaksesi, että työ on valmis sii
 - Tietopohja perustuu tunnin 14 käyttötapaukseen.
 - Jokaisella lähteellä on nimetty tehtävä.
 - Tietosuoja ja käyttöoikeus tarkistetaan ennen lataamista.
+- Oppija erottaa tietopohjan aineistona ja RAGin hakua hyödyntävänä toteutustapana.
+- Ainakin yhdessä testissä erotetaan haun osuvuus ja muodostetun vastauksen lähdetuki.
 - Testit ovat valmiita ajettaviksi tunnilla 17 ilman jälkikäteen keksittyjä odotuksia.

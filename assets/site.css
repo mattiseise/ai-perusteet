@@ -531,6 +531,12 @@ body{
   letter-spacing:0.1em;
   white-space:nowrap;
 }
+.lesson-badges .badge{
+  box-sizing:border-box;
+  max-width:100%;
+  white-space:normal;
+  line-height:1.45;
+}
 .badge-osp{
   background:color-mix(in srgb, var(--bc-primary) 12%, transparent);
   color:var(--bc-primary);

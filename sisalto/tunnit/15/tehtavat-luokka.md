@@ -4,7 +4,7 @@
 
 ## Mitä teet?
 
-Kuratoit bottisi **tietopohjan** eli valitset 3–5 dokumenttia, joihin sen vastaukset voivat nojata. Tietopohjan tehtävä ei ole tehdä botista kaikkitietävää, vaan auttaa sitä toimimaan luotettavasti juuri valitsemassasi aiheessa.
+Kuratoit bottisi **tietopohjan** eli valitset 2–4 huolella valittua dokumenttia, joihin sen vastaukset voivat nojata. Tietopohjan tehtävä ei ole tehdä botista kaikkitietävää, vaan auttaa sitä toimimaan luotettavasti juuri valitsemassasi aiheessa.
 
 **Kuratointi** ei tarkoita mahdollisimman suuren tiedostomäärän keräämistä. Se on aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Kun jokaisella lähteellä on selvä tehtävä, sinun on myöhemmin helpompi havaita myös se, mitä tietopohja ei vielä kata. Pidä työn ajan mielessä kysymys: *”Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?”*
 
@@ -17,14 +17,16 @@ Tehtävän jälkeen sinulla on perusteltu tietopohja ja ennen rakentamista kirjo
 - arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,
 - karsia pois turhat tai päällekkäiset materiaalit,
 - perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan,
-- kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon.
+- kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon,
+- erottaa haun onnistumisen siitä, muodostiko kielimalli lähteen tukeman vastauksen,
+- rajata, mitä aineistoa eri käyttäjät saavat hakea.
 
 ## Mitä tallennat?
 
 Tallenna lopuksi yksi dokumentti tai kansio, jossa on:
 
 - lista bottisi tärkeimmistä tietotarpeista,
-- 3–5 valittua lähdedokumenttia,
+- 2–4 valittua lähdedokumenttia,
 - taulukko, jossa perustellaan jokaisen dokumentin rooli tietopohjassa,
 - lyhyt arvio siitä, mitä tietopohja kattaa hyvin ja mitä se ei vielä kata,
 - yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen,
@@ -61,9 +63,9 @@ Käytä apuna bottisi työnkulkua. Kulje se mielessäsi vaihe vaiheelta ja kysy 
 
 Voit aloittaa jokaisen tarpeen samalla rungolla: ”Botin pitää tietää…”. Kirjoita sen jälkeen mahdollisimman täsmällisesti esimerkiksi aiheen keskeinen käsite, tehtävän yksi vaihe, tyypillinen kysymys, tavallinen sudenkuoppa tai hyvän lopputuloksen tunnusmerkki. Mitä tarkemmin nimeät tarpeen, sitä helpompi lähteen sopivuutta on arvioida.
 
-### Vaihe 3 — Etsi ja valitse 3–5 dokumenttia
+### Vaihe 3 — Etsi ja valitse 2–4 dokumenttia
 
-Etsi materiaalia, joka kattaa vaiheessa 2 nimeämäsi tietotarpeet, ja valitse lopuksi **3–5 dokumenttia**. Laatu on tärkeämpää kuin määrä. Käyttökelpoinen lähde voi olla kurssimateriaali, virallinen ohje, alan standardi, luotettava dokumentaatio tai todelliseen tilanteeseen tehty mallipohja. Yleislähteestä voi olla apua aiheen hahmottamisessa, mutta tarkkojen käytäntöjen päälähteeksi tarvitset aineiston, jonka alkuperä ja ajantasaisuus voidaan osoittaa.
+Etsi materiaalia, joka kattaa vaiheessa 2 nimeämäsi tietotarpeet, ja valitse lopuksi **2–4 dokumenttia**. Laatu on tärkeämpää kuin määrä. Käyttökelpoinen lähde voi olla kurssimateriaali, virallinen ohje, alan standardi, luotettava dokumentaatio tai todelliseen tilanteeseen tehty mallipohja. Yleislähteestä voi olla apua aiheen hahmottamisessa, mutta tarkkojen käytäntöjen päälähteeksi tarvitset aineiston, jonka alkuperä ja ajantasaisuus voidaan osoittaa.
 
 **Tärkeää:** Älä lataa kaikkea, mitä löydät. Liian suuri tai sekava tietopohja voi tehdä botin vastauksista epäselviä. Kolme hyvin valittua dokumenttia voi olla parempi kuin kaksikymmentä keskinkertaista.
 
@@ -100,7 +102,9 @@ Kokoa lopullinen tietopohja alla olevaan taulukkoon.
 |  |  |  |  |
 |  |  |  |  |
 
-Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun lataat tietopohjan valitsemallesi alustalle tai teet dokumentoidun kuivaharjoittelun.
+Tallenna varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun kytket tietopohjan valitsemallesi alustalle tai kuvaat dokumentoidulla suunnittelupolulla haun, lähdekatkelmat ja käyttöoikeusrajauksen.
+
+Kirjaa samalla, miten aineisto tulee botin käyttöön. Jos alusta hakee kysymykseen sopivia katkelmia ennen vastausta, kyse on RAG-toteutuksesta. Merkitse jokaiselle lähteelle myös, kuka saa käyttää sitä. Jos lähde on tarkoitettu vain tietylle ryhmälle, teknisen toteutuksen pitää rajata se pois muiden käyttäjien hausta. Dokumentoidussa suunnittelupolussa kuvaat tämän rajauksen suunnitelmana etkä väitä testanneesi todellisia käyttöoikeuksia.
 
 Kirjoita 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä botin pitää tehdä silloin, kun vastausta ei löydy?"*
 
@@ -108,16 +112,16 @@ Kirjoita 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vie
 
 Kirjoita kolme testiä, jotka ajat ensimmäisen kerran tunnilla 17:
 
-| Testityyppi | Syöte | Odotettu toiminta | Läpäisyehto |
-| --- | --- | --- | --- |
-| Positiivinen testi | Kysymys, johon tietopohja vastaa |  |  |
-| Negatiivinen testi | Pyyntö, josta botin pitää kieltäytyä tai jonka se ohjaa eteenpäin |  |  |
-| Reunatapaus | Tyhjä, sekava tai muuten epätavallinen syöte |  |  |
+| Testityyppi | Syöte | Odotettu toiminta | Mitä tarkistat hausta? | Läpäisyehto vastaukselle |
+| --- | --- | --- | --- | --- |
+| Positiivinen testi | Kysymys, johon tietopohja vastaa |  | Löytyykö oikea lähde? |  |
+| Negatiivinen testi | Pyyntö, josta botin pitää kieltäytyä tai jonka se ohjaa eteenpäin |  | Pääseekö haku vain käyttäjälle sallittuihin lähteisiin? |  |
+| Reunatapaus | Tyhjä, sekava tai muuten epätavallinen syöte |  | Käynnistyykö haku vain tarvittaessa? |  |
 
 Kirjoita odotus niin täsmällisesti, että toinen ihminen voisi ratkaista sen perusteella, läpäisikö botti testin. Älä myöhemmin muuta odotettua toimintaa vain siksi, että botti vastaa eri tavalla. Testin tehtävä on paljastaa korjaustarve, ei todistaa ensimmäistä versiota onnistuneeksi.
 
 > **Miksi tämä on tärkeää:** Tietopohja antaa aiheeseen rajatulle botille perustan, jota yleisellä kielimallilla ei ole. Kun lähteet on valittu tehtävän mukaan ja niiden aukot tunnetaan, botti voi nojata oman aiheesi käytäntöihin arvaamisen sijaan.
 
-> **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.
+> **Tarkista lopuksi:** Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 2–4 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.
 
 **3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17**

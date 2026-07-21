@@ -2,11 +2,11 @@
 
 ## Agentti (agent)
 
-Tällä kurssilla agentti tarkoittaa kielimallin ja harnessin muodostamaa järjestelmää. Kielimalli tulkitsee tilannetta, ja harness välittää syötteet, työkalut, tehtävän tilan, oikeudet ja turvarajat. Kurssin kuusi kohtaa ovat suunnittelutarkistuslista, eivät jokaisen agentin pakolliset tekniset osat.
+Tällä kurssilla rakennettava tekoälyagentti rajataan kielimallin ja agentin ohjauskehyksen muodostamaksi järjestelmäksi. Kielimalli tulkitsee tilannetta, ja ohjauskehys välittää syötteet, työkalut, tehtävän tilan, oikeudet ja turvarajat. Tämä on kurssin rajaus, ei yleispätevä agentin määritelmä. Kurssin kuusi kohtaa ovat suunnittelutarkistuslista, eivät jokaisen agentin pakolliset tekniset osat.
 
 ## Chatbot
 
-Ohjelma, joka vastaa käyttäjän kirjoittamiin viesteihin. Chatbot on passiivinen — se odottaa sinua — eikä tee päätöksiä itsenäisesti. Chatbot poikkeaa agentista siinä, että se ei toimi autonomisesti ilman käyttäjän käskyä.
+Keskustelukäyttöliittymä, jossa järjestelmä vastaa käyttäjän viesteihin. Chatbot voi olla pelkkä kysymys–vastaus-palvelu tai se voidaan liittää työkaluihin ja työnkulkuihin. Pelkkä chat-näkymä ei siksi vielä kerro, onko taustalla tämän kurssin rajauksen mukainen tekoälyagentti.
 
 ## Skripti (script)
 
@@ -34,11 +34,11 @@ Agentin kädet. Se kutsuu rajapintoja (API:ita) ja suorittaa konkreettisia toimi
 
 ## Muisti ja konteksti (memory and context)
 
-Tehtävän nykyinen tila voi olla keskustelun konteksti-ikkunassa tai harnessin muussa tilanhallinnassa. Pitkäkestoinen muisti tarkoittaa esimerkiksi tietokantaan tai lokiin tallennettua aiempaa tietoa, ja se lisätään vain silloin, kun myöhempi suoritus todella tarvitsee sitä. Muisti ei tarkoita, että malli oppisi automaattisesti.
+Tehtävän nykyinen tila voi olla keskustelun konteksti-ikkunassa tai agentin ohjauskehyksen muussa tilanhallinnassa. Pitkäkestoinen muisti tarkoittaa esimerkiksi tietokantaan tai lokiin tallennettua aiempaa tietoa, ja se lisätään vain silloin, kun myöhempi suoritus todella tarvitsee sitä. Muisti ei tarkoita, että malli oppisi automaattisesti.
 
 ## Konteksti-ikkuna (context window)
 
-Agentin lyhytkestoinen muisti, joka sisältää nykyisen keskustelun ja viimeaikaiset tapahtumat. Se auttaa agenttia muistamaan, mitä on tapahtunut juuri nyt, mutta se ei ole pysyvä — vanhemmat tiedot häviävät, kun uutta tietoa tulee.
+Rajallinen määrä sisältöä, joka välitetään kielimallille yhdellä käsittelykerralla. Siihen voidaan koota esimerkiksi nykyinen viesti, valittuja aiempia viestejä, työkalujen tuloksia ja haettua tietoa. Konteksti-ikkuna ei itsessään ole muistijärjestelmä eikä pysyvä tallennuspaikka, vaan agentin ohjauskehys päättää, mitä siihen tuodaan kullakin kierroksella.
 
 ## Turvakerros (safety layer)
 
@@ -62,14 +62,14 @@ Agentin prosessi oikean työkalun valitsemiseksi kuhunkin tilanteeseen. Jos agen
 
 ## Valmisagentti (ready-made agent)
 
-Valmiiksi rakennettu agenttituote, jossa joku muu on toteuttanut kielimallia ympäröivän harnessin. Tuotetta voi arvioida kurssin kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan.
+Valmiiksi rakennettu agenttituote, jossa joku muu on toteuttanut kielimallia ympäröivän agentin ohjauskehyksen. Tuotetta voi arvioida kurssin kuuden kohdan tarkistuslistalla, vaikka toteutus ei jakautuisi kuuteen erilliseen osaan.
 
 ## Agenttitila (agent mode)
 
 Sovelluksen toimintatila, jossa tekoäly ei vain vastaa viesteihin, vaan suorittaa monivaiheisia tehtäviä työkaluilla käyttäjän puolesta.
 
-## Harness
+## Agentin ohjauskehys (harness)
 
-Kielimallin ympärille rakennettu kokonaisuus: työkalut, muisti, oikeudet ja turvarajat. Agentti = kielimalli + harness. Englannin sana harness tarkoittaa valjaita.
+Kielimallin ympärille rakennettu kokonaisuus: esimerkiksi syötteiden käsittely, työkalut, tehtävän tila, oikeudet ja turvarajat. Englannin sana harness tarkoittaa valjaita.
 
 ---

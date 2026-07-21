@@ -248,7 +248,7 @@ Tunnin tuotoksena syntyy **rakennuspalikka 2: botin määrittelydokumentti**. Se
 
 ## Lähteet ja tarkistuspäivä
 
-- [Microsoft: Plan your agent](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/plan-your-agent)
+- [Microsoft: Plan your Copilot Studio projects](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/plan-overview)
 - [Nielsen Norman Group: Personas](https://www.nngroup.com/articles/persona/)
 
 Tarkistettu 20.7.2026.

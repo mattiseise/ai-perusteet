@@ -1,200 +1,120 @@
-# Agentit-osion lopputyö — n8n-agentin rakentaminen
+# Agentit-osion lopputyö — rajatun agentin näyttö
 
-> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Tutustu tähän tehtävänantoon osion alussa. Palaat siihen joka tunti, kun keräät **Agentti-pohjapiirroksiasi** ja rakennat lopulta valmista agenttia.
+> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Rakennat sitä osissa oppituntien aikana. Tunnilla 27 kokoat valmiin näytön yhden 90 minuutin oppitunnin aikana.
 
-**Tärkein viesti heti alkuun:** agentti = kielimalli + harness. Kielimalli tuottaa arvion tai ehdotuksen. Harness ohjaa työnkulkua, rajaa työkalut ja oikeudet, ylläpitää tilaa sekä huolehtii turvasta, hyväksynnöistä ja lokituksesta. Tässä työssä rakennat tästä kokonaisuudesta **hyvin yksinkertaisen version** (3–5 solmua). Pieni, toimiva agentti, jonka vastuut ymmärrät, on koko tehtävän tavoite.
+Tällä kurssilla rakennettavalla tekoälyagentilla tarkoitetaan kielimallin ja agentin ohjauskehyksen muodostamaa järjestelmää. Kielimalli tekee vähintään yhden aidon rajatun valinnan. Agentin ohjauskehys rajaa sallitut vaihtoehdot, työkalut, oikeudet, tilan, turvan, hyväksynnät ja lokituksen.
 
-<figure style="margin:24px 0;text-align:center">
-<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
-  <title>Mitä rakennat: yksinkertainen agentti eli kielimalli ja harness</title>
-  <desc>Tavoite on pieni, toimiva agentti, jossa harness ohjaa työnkulkua, kutsuu kielimallia, rajaa työkalut ja tuottaa hallitun lopputuloksen. Kokonaisuudessa on 3–5 solmua.</desc>
-  <defs>
-    <g id="smp-bolt" fill="none" stroke="currentColor"><path d="M13 2 L5 13.5 H11 L10.5 22 L19 9.5 H12.5 Z" fill="currentColor"/></g>
-    <g id="smp-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
-    <g id="smp-check" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.2 l2.8 2.8 l5.6-6.2"/></g>
-    <g id="smp-x" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8.7 8.7 L15.3 15.3 M15.3 8.7 L8.7 15.3"/></g>
-    <g id="smp-bulb" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18 H14.5 M10.5 21 H13.5"/><path d="M12 3 a6 6 0 0 1 4 10.3 c-0.8 0.8 -1 1.7 -1 2.7 H9 c0 -1 -0.2 -1.9 -1 -2.7 A6 6 0 0 1 12 3 Z"/></g>
-  </defs>
-  <rect x="0" y="0" width="880" height="470" rx="16" fill="#FAFBFE"/>
-  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2336">Mitä rakennat: yksinkertainen agentti</text>
-  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#5A6478">Tavoite on pieni, toimiva agentti — ei monimutkainen järjestelmä.</text>
-  <rect x="28" y="88" width="224" height="80" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="1.5"/>
-  <use href="#smp-bolt" x="44" y="104" width="20" height="20" style="color:#2F9E69"/>
-  <text x="72" y="118" font-size="13.5" font-weight="700" fill="#247A52">Käynnistys</text>
-  <text x="44" y="150" font-size="11.5" fill="#3A4253">esim. sähköposti saapuu</text>
-  <line x1="252" y1="128" x2="276" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M280 128 L270 122.5 L270 133.5 Z" fill="#9AA6BD"/>
-  <rect x="300" y="88" width="280" height="80" rx="12" fill="#EEF1FE" stroke="#3B5BDB" stroke-width="2"/>
-  <use href="#smp-robot" x="316" y="102" width="22" height="22" style="color:#3B5BDB"/>
-  <text x="346" y="118" font-size="13.5" font-weight="700" fill="#2F46B0">Kielimalli + harness</text>
-  <text x="316" y="150" font-size="11.5" fill="#3A4253">malli + ohjaus, rajat ja työkalut</text>
-  <line x1="580" y1="128" x2="604" y2="128" stroke="#9AA6BD" stroke-width="2.4"/><path d="M608 128 L598 122.5 L598 133.5 Z" fill="#9AA6BD"/>
-  <rect x="628" y="88" width="224" height="80" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
-  <use href="#smp-check" x="644" y="104" width="20" height="20" style="color:#0E9AA7"/>
-  <text x="672" y="118" font-size="13.5" font-weight="700" fill="#0B7E89">Lopputulos</text>
-  <text x="644" y="150" font-size="11.5" fill="#3A4253">esim. tallennettu vastaus</text>
-  <text x="440" y="196" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1B2336">Yhteensä 3–5 solmua.</text>
-  <rect x="28" y="216" width="824" height="58" rx="11" fill="#F0F9F4" stroke="#BFE6CF" stroke-width="1.4"/>
-  <use href="#smp-check" x="48" y="232" width="22" height="22" style="color:#2F9E69"/>
-  <text x="82" y="242" font-size="12.5" font-weight="700" fill="#247A52">Tähän pyritään</text>
-  <text x="82" y="262" font-size="12.5" fill="#3A4253">Yksinkertainen, toimiva agentti (3–5 solmua), jonka ymmärrät ja jonka rajat tunnistat.</text>
-  <rect x="28" y="286" width="824" height="58" rx="11" fill="#FBEEEE" stroke="#F0C9C9" stroke-width="1.4"/>
-  <use href="#smp-x" x="48" y="302" width="22" height="22" style="color:#C0453E"/>
-  <text x="82" y="312" font-size="12.5" font-weight="700" fill="#B5403A">Tätä ei tavoitella</text>
-  <text x="82" y="332" font-size="12.5" fill="#3A4253">Monimutkainen järjestelmä, kymmeniä solmuja tai moniagenttiverkko — ei tarvita tässä.</text>
-  <rect x="28" y="362" width="824" height="82" rx="12" fill="#FFFBEC" stroke="#F2D98E" stroke-width="1.5"/>
-  <use href="#smp-bulb" x="48" y="386" width="24" height="24" style="color:#C79100"/>
-  <text x="86" y="394" font-size="13" font-weight="700" fill="#8A6A00">Muista</text>
-  <text x="86" y="415" font-size="12.5" fill="#5A4A1E">Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et</text>
-  <text x="86" y="433" font-size="12.5" fill="#5A4A1E">ymmärrä. Jos aika loppuu, rajaa työn laajuutta ja pidä agentti yksinkertaisena.</text>
-</svg>
-<figcaption style="font-size:13px;color:#5A6478;margin-top:10px">Tavoitteena on yksinkertainen, toimiva agentti (3–5 solmua) — ei monimutkainen järjestelmä.</figcaption>
-</figure>
+Voit tehdä lopputyön teknisenä n8n-toteutuksena tai dokumentoituna suunnittelusuorituksena. Polut ovat samanarvoisia. Niissä käytetään erilaista todistusaineistoa, mutta arvioidaan samaa ymmärrystä.
 
-## Mitä rakennat?
+## Kaksi toteutuspolkua
 
-Rakennat **n8n-pohjaisen agentin**, joka ratkaisee yhden konkreettisen ongelman. Agenttisi koostuu kielimallista ja sitä ympäröivästä harnessista. Toteutuksen **3–5 solmua** muodostavat toimivan, ohjatun ja turvallisen työnkulun, jossa työkalut ovat harnessin rajaamia kyvykkyyksiä.
+**Tekninen polku:** rakennat rajatun n8n-työnkulun. Näytät suoritusnäkymästä syötteen, vähintään kaksi sallittua vaihtoehtoa, kielimallin todellisen valinnan, seuraavan haaran tai toiminnon sekä tuloksen. Rajaat oikeudet ja näytät vähintään yhden turvallisen virhe- tai eskalointipolun.
 
-**Esimerkkejä mahdollisista agentteista:**
+**Dokumentoitu polku:** kuvaat n8n-rakenteen kaaviona, määrität työkalusopimukset ja seuraat suorituksen vaihe vaiheelta. Teet vähintään yhden todellisen kielimallikutsun, jossa malli valitsee vähintään kahdesta sallitusta vaihtoehdosta. Merkitset toteutetun mallikutsun, simuloidut vaiheet ja teknisesti todentamattomat liitännät erikseen.
 
-- Päivittäinen sähköpostien luokittelija ja yhteenvetäjä
-- Asiakaspalvelun FAQ-botti, joka hakee vastauksia tietokannasta
-- Palvelinlokien analysaattori, joka ilmoittaa virheistä
-- Harrastuksen tai yhdistyksen tapahtumien ja ilmoittautumisten kokoaja
-- Some- tai uutisseurannan kooste itseäsi kiinnostavasta aiheesta
-- Opintojen palautuspäivien kerääjä ja muistuttaja
+Solmujen määrä ei ratkaise laatua. Molemmissa poluissa ratkaisevaa on näkyvä, aito ja rajattu mallivalinta sekä sitä hallitseva agentin ohjauskehys.
 
-**Agentin pitää olla yksinkertainen — emme tavoittele mitään monimutkaista.** 3–5 solmua riittää. Tärkeintä on, että kielimalli voi tehdä tehtävän kannalta tarpeellisen tilannearvion ja harness pitää toiminnan hallittuna: se tarjoaa vain tarvittavat työkalut, rajaa oikeudet ja pysäyttää suorituksen tarvittaessa. Pieni agentti, jonka vastuut ja rajat ymmärrät, on tavoite.
+## Projektipolku tunneilla 19–27
 
-## Polku alusta loppuun
-
-Lopputyö rakentuu yhdeksän tunnin aikana. Kullakin tunnilla syntyy konkreettinen osa lopullista agenttiasi.
-
-| Tunti | Mitä teet | Mitä syntyy |
+| Tunti | Työvaihe | Tuotos |
 |---|---|---|
-| **19** | Valitset ongelman ja perustelet, miksi agentti sopii | Agentti: Ongelma (1/5) |
-| **20** | Tarkistat, että ratkaisu vaatii todella agentin | Päätösharjoittelu |
-| **21** | Suunnittelet muistirakenteen ja toimintaperiaatteet | Agentti: Muisti (2/5) |
-| **22** | Valitset työkalut (n8n-solmut) | Työkalulista |
-| **23** | Valitset päättelymallin (ReAct vai ketjuajattelu) | Agentti: Päättely (3/5) |
-| **24** | Suunnittelet turvakerroksen | Agentti: Turva (4/5) |
-| **25** | Suunnittelet ihmisen roolin (hyväksyntäportit) | Agentti: Ihminen (5/5) |
-| **26** | Kokoat pohjapiirrokset, tutustut n8n:ään ja rakennat minimiversion | Toimiva minimiagentti |
-| **27** | Viimeistelet, testaat, dokumentoit, esittelet | Valmis lopputyö |
+| **19** | Kirjaat kaksi tai kolme mahdollista ongelmaa | Projektiehdokkaat |
+| **20** | Vertaat promptausta, työnkulkua ja agenttia ja valitset lopullisen ongelman | Agentti: Ongelma 1/5 |
+| **21** | Suunnittelet kontekstin, tilan ja mahdollisen pitkäkestoisen muistin | Agentti: Muisti 2/5 |
+| **22** | Valitset rajatut työkalut ja oikeudet | Työkalulista |
+| **23** | Valitset ReActin tai eksplisiittisen työnkulun ja määrität aidon rajatun mallivalinnan | Agentti: Päättely 3/5 |
+| **24** | Suunnittelet turvakerroksen ja havaittavat eskalointiehdot | Agentti: Turva 4/5 |
+| **25** | Suunnittelet ihmisen hyväksynnän ja aikarajat | Agentti: Ihminen 5/5 |
+| **26** | Kokoat teknisen minimiversion tai dokumentoidun suunnitelman | Ensimmäinen toteutuspolun näyttö |
+| **27** | Viimeistelet, testaat, korjaat ja puolustat 90 minuutissa | Arvioitava näyttöpaketti |
 
-## Viisi Agentti-pohjapiirrosta
+## Viisi pohjapiirrosta
 
-Pohjapiirrokset ovat suunnitelmadokumentteja, joita keräät omaan muistiinpanodokumenttiisi. Yhdessä ne muodostavat **kattavan suunnitelman**, jonka pohjalta rakennat n8n-työnkulun.
+**1. Agentti: Ongelma.** Kuvaa käyttäjä, ongelma ja se yksi tilanteen mukaan muuttuva päätös, jonka kielimalli tekee. Perustele, miksi ennalta määritelty työnkulku ei yksin riitä.
 
-**1. Agentti: Ongelma (tunti 19)**
-Kuvaa, mistä ongelmasta on kyse, kenelle se aiheutuu ja miksi juuri agentti sopii ratkaisuksi. Kirjoita 150–200 sanaa.
+**2. Agentti: Muisti.** Kuvaa yhden suorituksen konteksti, prosessin tila ja mahdollinen pitkäkestoinen muisti. Perustele tallennusaika ja tietosuoja. Pidä järjestelmäohjeet erillään muistista: agentin tehtävä, rooli ja rajat kuuluvat järjestelmäpromptiin tai agentin ohjauskehyksen sääntöihin.
 
-**2. Agentti: Muisti (tunti 21)**
-Kuvaa lyhytaikainen muisti (konteksti-ikkuna), pitkäkestoinen muisti sekä tilat ja tilasiirtymät. Erota muistista järjestelmäpromptissa määriteltävä tehtävä ja harnessin säännöissä määriteltävät rajat, oikeudet ja eskalointi. 150–200 sanaa.
+**3. Agentti: Päättely.** Valitse ReAct tai eksplisiittinen työnkulku. Määritä vähintään yksi vaihe, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta. Kuvaa, miten syöte, vaihtoehdot, valinta ja seuraava vaihe näkyvät lokissa.
 
-**3. Agentti: Päättely (tunti 23)**
-Valitse ReAct tai ketjuajattelu ja perustele, kumpi sopii agenttisi ongelmaan. Kuvaa myös, miten päättelymalli näkyy n8n-rakenteessa. Kirjoita 150–200 sanaa.
+**4. Agentti: Turva.** Kuvaa oikeudet, keskeiset riskit, validointi, rajoitukset, seuranta ja palautuminen. Määritä havaittavat eskalointiehdot. Mallin itse ilmoittama varmuusprosentti ei ole hyväksyntäraja.
 
-**4. Agentti: Turva (tunti 24)**
-Minimioikeusperiaate, suurimmat riskit, turvakerroksen neljä tasoa (validointi, rajoitus, seuranta, palautuminen), lokitus. 150–200 sanaa.
+**5. Agentti: Ihminen.** Nimeä toiminnot, jotka vaativat ihmisen hyväksynnän. Kuvaa hyväksyjälle näytettävät tiedot, aikaraja ja turvallinen varapolku. Kriittistä toimintoa ei hyväksytä hiljaisuuden perusteella.
 
-**5. Agentti: Ihminen (tunti 25)**
-Kuvaa, missä kohdissa ihmisen hyväksyntä tarvitaan, millainen hyväksyntäportti on ja mitä tapahtuu, jos ihminen ei vastaa. Kirjoita 150–200 sanaa.
+## Kuuden rakennusosan tarkistus
 
-## Lopputuotoksen vaatimukset
+Käytä kokonaisuuden tarkistamiseen näitä kanonisia nimiä:
 
-::: luokka
-Palauta oppimisympäristöön (esimerkiksi Moodle, Itslearning tai Google Classroom) yhtenä pakettina:
-:::
+1. **syötekäsittelijä**
+2. **päättelijä ja suunnittelija**
+3. **työkalujen suorittaja**
+4. **muisti ja konteksti**
+5. **turvakerros**
+6. **seuranta ja palautesilmukka**
 
-::: verkko
-Kokoa nämä tuotokset itsellesi yhdeksi paketiksi portfolioosi:
-:::
+Merkitse jokaisesta, missä vastuu näkyy tai miksi sitä ei tarvita. Yksi solmu, sääntö tai palvelu voi kattaa useita vastuita.
 
-1. **Linkki n8n-työnkulkuusi** tai vientitiedosto (JSON)
-2. **Koottu suunnitelma** — viisi Agentti-pohjapiirrosta yhdessä tiedostossa, tarkistettuna johdonmukaiseksi kokonaisuudeksi
-3. **Kolme lyhyttä dokumenttia** (½–1 sivu kukin):
-   - **README** — mitä agentti tekee, kenelle, miten käytetään, esimerkit ja rajoitukset
-   - **ARCHITECTURE** — tunnilla 26 aloitettu ja tunnilla 27 päivitetty luonnos: yksi kappale kielimallin ja harnessin vastuunjaosta, 3–5 tärkeimmän vaiheen tehtävät, syötteet ja tulokset sekä tiivis kuuden rakennusosan kattavuustarkistus. Lisää oikeus, lokitus tai virhepolku sille vaiheriville, jossa se vaikuttaa.
-   - **SAFETY** — pahimmat riskit, miten ne torjuttiin, lokitus, ihmisen hyväksyntää vaativat kohdat
-4. **Testiraportti** — 9 testitapausta (3 normaalia, 3 reunatapausta, 3 turvallisuustestiä) ja vähintään 2 uudelleentestiä
-5. **Esittely luokassa** (3–5 min) tai nauhoitettuna videona
-6. **Itsearviointi** (300–400 sanaa) — onnistumiset, epäonnistumiset, opitut asiat, parannusideat
-7. **Vertaisarviomuistio** — toiselta opiskelijalta saatu palaute (tai tekoälypohjainen kriittinen arvio, jos teet työn yksin)
+## Tunnin 27 pakollinen 90 minuutin suoritus
 
-::: verkko
-Halutessasi jaa työsi — mitään ei palauteta minnekään.
-:::
+| Aika | Vaihe |
+|---|---|
+| 0–8 min | Rajaa pääpolku ja avaa aineisto |
+| 8–30 min | Viimeistele toteutus tai dokumentoitu suunnitelma |
+| 30–48 min | Aja normaali, reuna- ja turvallisuustesti |
+| 48–63 min | Tee yksi korjaus ja aja sama testi uudelleen |
+| 63–75 min | Kokoa tiivis näyttöpaketti |
+| 75–88 min | Pidä 2–3 minuutin puolustus pienryhmässä, tallenteena tai otoksessa |
+| 88–90 min | Palauta tai tallenna työ |
 
-## Työkalut ja työskentelytapa
+Pakollista työtä ei jätetä kotiin. Jos jokin tekninen osa ei valmistu, rajaa näyttöä ja merkitse asia rajoitukseksi. Lisätestit ja laajemmat integraatiot ovat vapaaehtoista syventämistä.
 
-**Alusta:** n8n.
+## Näyttöpaketti
 
-**Tekoälyapu:** Voit käyttää vapaasti ChatGPT:tä, Claudea tai Copilotia sparrauskumppanina ja suunnittelun tarkistamiseen. Älä anna tekoälyn päättää puolestasi — käytä sitä kyseenalaistamiseen ja näkökulmien laajentamiseen.
+Kokoa yhdelle sivulle, dialle tai vastaavaan tiiviiseen näkymään:
 
-**Työskentelytapa:** Voit tehdä lopputyön **yksin tai parin kanssa**. Jos teet parin kanssa, jakakaa työ niin, että molemmat ymmärtävät koko agentin. Vertaisarvio tehdään aina toisen tiimin tai parin kanssa.
+- ongelma ja valittu toteutuspolku
+- työnkulku tai kaavio sekä kuuden rakennusosan kattavuus
+- syöte, vähintään kaksi sallittua vaihtoehtoa, kielimallin todellinen valinta ja seuraava vaihe
+- yksi normaali, yksi reuna- ja yksi turvallisuustesti
+- yksi korjaus ja sama uudelleentesti
+- tärkein turvallisuusraja ja yksi rehellinen tekninen rajoitus.
 
-::: luokka
+Tekninen polku liittää mukaan suoritusnäytön. Dokumentoitu polku liittää mukaan todellisen mallikutsun ja simuloidun suoritusjäljen. Kolmea erillistä pitkää dokumenttia, laajaa itsearviointia tai pakollista vertaisarviomuistiota ei vaadita.
+
+## Puolustus 2–3 minuuttia
+
+Puolustuksessa kerrot ongelman ja toteutuspolun, näytät aidon rajatun mallivalinnan, vertaat testiä ja uudelleentestiä sekä nimeät turvallisuusrajan ja asian, jota työsi ei vielä todista. Puolustus voidaan toteuttaa pienryhmässä, tallenteena tai opettajan valitsemana otoksena.
+
 ## Arviointi
 
-Lopputyö arvioidaan viidellä osa-alueella (yhteensä 100 pistettä):
+| Kriteeri | Paino | Mitä arvioidaan? |
+|---|---:|---|
+| **Rakenne ja toteutuspolun näyttö** | 20 % | Työnkulku tai kaavio on seurattava ja kuusi rakennusosaa on käsitelty perustellusti. |
+| **Aito rajattu mallivalinta** | 25 % | Syöte, vähintään kaksi sallittua vaihtoehtoa, mallin valinta ja seuraava vaihe näkyvät. |
+| **Testi, korjaus ja uudelleentesti** | 25 % | Kolme testitulosta ja yhden puutteen ennen–jälkeen-näyttö ovat jäljitettävissä. |
+| **Turvallisuus ja rajat** | 20 % | Oikeudet, havaittava eskalointiehto ja rajoitus on kuvattu tai toteutettu. |
+| **Puolustus** | 10 % | Opiskelija perustelee ratkaisunsa ja erottaa toteutetun simuloidusta. |
 
-| Osa-alue | Pisteet |
-|---|---|
-| Toimiva n8n-työnkulku | 25 |
-| Turvallisuus (turvakerros, lokitus, riskien tunnistaminen) | 20 |
-| Dokumentaatio (README, ARCHITECTURE, SAFETY) | 20 |
-| Testaus (testiraportin kattavuus ja syvyys) | 20 |
-| Itsearviointi ja esittely | 15 |
-:::
-
-::: verkko
-## Itsearviointi
-
-Opiskelet omaan tahtiin ilman oppilaitosta, joten arvioit työsi itse. Käy viisi osa-aluetta läpi ennen kuin toteat työn valmiiksi. Painoarvo kertoo, mihin kannattaa panostaa eniten — painotus on sama, jolla työtä muutenkin arvioitaisiin.
-
-| Osa-alue | Painoarvo | Kysy itseltäsi |
-|---|---|---|
-| **Toimiva n8n-työnkulku** | 25 % | Toimiiko työnkulkuni? Ratkaiseeko se valitsemani ongelman? |
-| **Turvallisuus** | 20 % | Ovatko turvakerros, lokitus ja riskien tunnistaminen kunnossa? |
-| **Dokumentaatio** | 20 % | Ovatko README, ARCHITECTURE ja SAFETY selkeitä ja kattavia? |
-| **Testaus** | 20 % | Onko testiraporttini riittävän kattava ja perusteellinen? |
-| **Itsearviointi ja esittely** | 15 % | Onko itsearviointini rehellinen ja esittely selkeä? |
-:::
-
-**Hyvä lopputyö** ei ole täydellinen — se on **rehellinen ja perusteltu**. Pieni agentti, joka toimii ja jonka rajat tunnistat, on parempi kuin iso agentti, jota et ymmärrä.
-
-## Aikabudjetti — näin paljon työtä kannattaa varata
-
-Tämä aikabudjetti näkyy vain tässä tehtävänannossa, ei yksittäisten tuntien tehtävissä. Tämä on tietoinen pedagoginen valinta — sinun ei tarvitse stressata yksittäisten tehtävien kestosta, vaan kokonaisuudesta.
-
-| Vaihe | Aika (yksin) | Aika (parin kanssa) |
-|---|---|---|
-| Pohjapiirrokset 1–5 (tunnit 19, 21, 23, 24, 25) | ~30 min / tunti | ~30 min / tunti |
-| Välitunnit (20, 22) — sparrausharjoittelua | ~20 min / tunti | ~20 min / tunti |
-| Tunti 26 — kasaus, n8n-tutustuminen, minimiversio | 60–90 min | 45–60 min |
-| Tunti 27 — viimeistely, testaus, dokumentointi, esittely | 90–120 min | 60–90 min |
-| **Yhteensä** | **~5–7 h** | **~4–5 h** |
-
-Jos jossain vaiheessa tuntuu, että et ehdi — **rajaa työn laajuutta**. Yksinkertaisempi mutta toimiva agentti on parempi kuin monimutkainen mutta keskeneräinen.
-
-## Hyvä alku
-
-1. Lue tämä tehtävänanto kokonaan.
-2. Selaa tuntien 19–27 otsikot ja muodosta kokonaiskuva polusta.
-3. Aloita rauhassa: tunnilla 19 tärkein päätös on **valita oikea ongelma**. Älä jää jumiin perfektionismiin — voit tarkentaa ongelmaa myöhemmin.
-4. Pidä **muistiinpanodokumenttia** mukana joka tunti. Kerää siihen pohjapiirroksesi.
-
----
-
-**Tämä lopputyö ei testaa, osaatko käyttää tekoälyä. Se testaa, osaatko *rakentaa* sillä jotakin, mitä joku muu voi käyttää.**
-
+Arviointi ei suosi teknistä polkua. Tekninen suoritusnäkymä ja dokumentoidun polun todellinen mallikutsu sekä simuloitu suoritusjälki ovat erilaisia mutta samanarvoisia tapoja osoittaa osaamista.
 
 ## Arviointitasot
 
 | Kriteeri | Erinomainen | Hyvä | Tyydyttävä | Välttävä | Ei vielä hyväksyttävä |
 |---|---|---|---|---|---|
-| Toimiva tai todennettu työnkulku (25 p) | 3–5 solmun ydintyönkulku toimii hallitusti, virhepolku näkyy ja suoritusjälki todentaa jokaisen vaiheen. | Ydintyönkulku toimii tai alustariippumaton suoritusjälki todentaa sen. | Pääpolku on ymmärrettävä, mutta yksi vaihe tai virhepolku jää epävarmaksi. | Osia on toteutettu, mutta pääpolkua ei voi todentaa alusta loppuun. | Toteutus, solmukaavio tai suoritusjälki puuttuu. |
-| Turvallisuus (20 p) | Uhkamalli ohjaa minimioikeuksia, hyväksyntöjä, salaisuuksien eristystä, lokia ja palautumista; suojauskeinojen rajat tunnistetaan. | Olennaiset riskit, oikeusrajat, hyväksyntä ja lokitus on toteutettu tai kuvattu. | Turvatoimet kattavat perusriskit, mutta yksi olennainen kerros puuttuu. | Turvallisuus jää yleisiksi ohjeiksi ilman yhteyttä työnkulkuun. | Olennaisia riskejä tai suojauskeinoja ei ole käsitelty. |
-| Dokumentaatio (20 p) | Toinen henkilö voi dokumentaatiosta toistaa pääpolun, testit, oikeudet ja virhetilanteen. | Rakenne, työkalut, oikeudet ja käyttö kuvataan selkeästi. | Dokumentaatio kuvaa pääidean, mutta yksityiskohtia puuttuu. | Dokumentaatio on hajanaista tai ristiriidassa toteutuksen kanssa. | Dokumentaatio puuttuu. |
-| Testaus (20 p) | 9 testiä ja vähintään 2 uudelleentestiä ovat jäljitettäviä; korjausten vaikutus analysoidaan. | 3 normaalia, 3 reunatapausta, 3 turvallisuustestiä ja 2 uudelleentestiä on dokumentoitu. | Testimäärä täyttyy osittain tai odotusten vertailu on epätasaista. | Testejä on vähän eikä korjauksen vaikutusta todenneta. | Järjestelmällinen testaus puuttuu. |
-| Itsearviointi ja esittely (15 p) | Esittely tai puolustus osoittaa itsenäisen ymmärryksen, perustellut rajaukset ja rehellisen jatkokehitysarvion. | Esittely selittää pääpolun, turvallisuuden ja tehdyt korjaukset. | Esittely näyttää työn, mutta perustelut jäävät osittaisiksi. | Esittely on vaikeasti seurattava tai oma osuus jää epäselväksi. | Esittely tai puolustus puuttuu. |
+| Rakenne ja toteutuspolun näyttö (20 p) | Työnkulku on johdonmukainen, kaikki kuusi rakennusosaa on käsitelty perustellusti ja polkukohtainen näyttö on selvästi rajattu. | Rakenne on seurattava, rakennusosat on käsitelty ja toteutettu sekä simuloitu on erotettu. | Ydinrakenne näkyy, mutta yksi rakennusosan vastuu tai näytön raja jää epäselväksi. | Rakenne on osittainen tai toteutuspolun näyttöä on vaikea seurata. | Työnkulku tai toteutuspolun olennainen näyttö puuttuu. |
+| Aito rajattu mallivalinta (25 p) | Syöte, sallitut vaihtoehdot, kielimallin todellinen valinta ja seuraava vaihe ovat täysin jäljitettävissä ja valinnan tarve on vakuuttavasti perusteltu. | Vähintään kahden vaihtoehdon aito mallivalinta ja sitä seuraava vaihe näkyvät. | Mallivalinta on aito ja rajattu, mutta loki tai perustelu on osittainen. | Kielimallia käytetään, mutta valinnan vaihtoehdot tai vaikutus jäävät epäselviksi. | Aitoa rajattua kielimallivalintaa ei ole. |
+| Testi, korjaus ja uudelleentesti (25 p) | Normaali, reuna- ja turvallisuustesti ovat jäljitettäviä; yksi korjaus ja sama uudelleentesti osoittavat rajatusti, mitä parani ja mitä ei voida päätellä. | Kolme testiä, yksi korjaus ja sama uudelleentesti on dokumentoitu odotuksineen. | Testit kattavat ydintoiminnan, mutta korjauksen ennen–jälkeen-näyttö on osittainen. | Testejä on liian vähän tai tuloksia ei verrata ennalta kirjattuun odotukseen. | Testaus tai korjausketju puuttuu. |
+| Turvallisuus ja rajat (20 p) | Oikeudet, havaittavat eskalointiehdot, turvallinen varapolku ja ratkaisun rajat muodostavat johdonmukaisen kokonaisuuden. | Keskeiset oikeudet, eskalointiehto ja rajoitus on kuvattu tai toteutettu. | Turvallisuuden ydinratkaisu näkyy, mutta jokin oikeus, ehto tai varapolku jää yleiseksi. | Turvallisuus perustuu lähinnä promptiin tai epämääräiseen ihmisen valvontaan. | Olennaiset turvallisuusrajat puuttuvat. |
+| Puolustus (10 p) | Opiskelija perustelee valintansa täsmällisesti, tulkitsee testin oikein ja erottaa toteutetun, simuloidun sekä todentamattoman. | Opiskelija perustelee ratkaisun, testin ja keskeisen rajoituksen omin sanoin. | Oma ymmärrys näkyy, mutta yksi keskeinen perustelu tai rajoitus jää yleiseksi. | Puolustus kuvaa lähinnä työvaiheita ilman riittävää perustelua. | Puolustus puuttuu tai ei osoita omaa ymmärrystä. |
+
+## Valmiin työn tarkistus
+
+- [ ] Työ ratkaisee yhden rajatun ongelman.
+- [ ] Kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta.
+- [ ] Kuusi rakennusosaa on käsitelty kanonisilla nimillä.
+- [ ] Kolme testitulosta on dokumentoitu.
+- [ ] Yksi korjaus ja sama uudelleentesti näkyvät.
+- [ ] Tärkein turvallisuusraja ja havaittava eskalointiehto on kuvattu.
+- [ ] Toteutettu, simuloitu ja todentamaton on erotettu rehellisesti.
+- [ ] 2–3 minuutin puolustus on valmis.
+
+Kun nämä kohdat täyttyvät, työ on valmis. Laajempi toteutus voi olla kiinnostava jatkoprojekti, mutta se ei kuulu tämän oppitunnin pakolliseen suoritukseen.

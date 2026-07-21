@@ -6,11 +6,11 @@ Pieni pala tekstiä, joihin sana tai sanaryhmä jaetaan. Esimerkiksi sana "teko�
 
 ## Kielimalli (Language Model)
 
-Tekoälymalli, joka on oppinut tekstin kuvioita ja osaa ennustaa seuraavaa tokenia. ChatGPT, Claude ja Gemini ovat kielimalleja. Ne on opetettu miljardeilla tekstin tokeneilla.
+Tekoälymalli, joka on oppinut tekstin kuvioita ja osaa ennustaa seuraavaa tokenia. Kielimalli koulutetaan suurella tekstiaineistolla.
 
 ## Parametri
 
-Numero kielimallin "aivoissa", jonka se oppii koulutuksessa. GPT-3:ssa oli noin 175 miljardia parametria. Ne määrittävät, kuinka malli prosessoi ja ennustaa tekstiä.
+Koulutuksessa opittu numeerinen arvo, joka vaikuttaa siihen, miten malli käsittelee syötettä ja muodostaa ennusteita. Suuressa kielimallissa parametreja voi olla hyvin paljon.
 
 ## Next-Token Prediction
 
@@ -18,7 +18,7 @@ Kielimallin perusmekanismi: seuraavan tokenin arvaaminen aikaisempien tokenien j
 
 ## Koulutusdata (Training Data)
 
-Tekstiaineisto, jolla kielimalli opetetaan. Suurimmat mallit on arvioiden mukaan opetettu yli kymmenellä biljoonalla tokenilla, mutta tarkkoja lukuja ei yleensä julkaista. Mitä enemmän ja mitä parempaa data on, sitä parempi malli.
+Tekstiaineisto, jonka esimerkeistä kielimalli oppii koulutuksessa. Aineiston määrän lisäksi sen laatu, kattavuus ja käsittely vaikuttavat mallin toimintaan.
 
 ## Hallusinaatio (Hallucination)
 
@@ -30,7 +30,7 @@ Parametri, joka kontrolloi, kuinka satunnaisia mallin valinnat ovat. Matala läm
 
 ## Neuroverkko (Neural Network)
 
-Matemaattinen rakenne, joka jäljittelee ihmisen aivojen verkostoa. Kielimallissa on neuroverkkoja, joissa miljardit parametrit yhdistyvät eri tavoin.
+Matemaattinen kerrosrakenne, jossa opitut parametrit muokkaavat tiedon kulkua. Historiallinen inspiraatio liittyy löyhästi biologisiin neuroneihin, mutta neuroverkko ei jäljittele ihmisaivojen toimintaa.
 
 ## Embedding
 

@@ -2,7 +2,7 @@
 
 ## Työkalu (tool)
 
-Funktio tai ohjelma, jonka agentti kutsuu tehtävänsä suorittamiseksi. Kolme perustyökalua: tiedostot, verkkohaku, komentorivi.
+Rajattu kyvykkyys, jonka avulla agentti saa tietoa tai tekee nimetyn toiminnon. Työkalulla on syöte, tulos, oikeudet ja virhetilanne.
 
 ## Tiedostotyökalu (file tool)
 
@@ -12,13 +12,13 @@ Agentti voi lukea ja kirjoittaa tiedostoja. Lukuoikeus antaa pääsyn tietoihin,
 
 Agentti voi hakea tietoa internetistä. Ajankohtainen tieto, mutta riskit: väärä tieto, kustannukset, yksityisyys.
 
-## Komentorivityökalu (CLI, command-line interface tool)
+## Rajattu toimintotyökalu
 
-Agentti voi ajaa järjestelmäkomentoja (komentorivikomentoja). Voimakkain työkalu, myös vaarallisin. Sallittujen kohteiden luettelo on kriittinen.
+Työkalu, jolla agentti tekee nimetyn toiminnon, kuten lisää luonnoksen taulukkoon tai valmistelee viestin. Oikeus rajataan kohteeseen ja toimintoon.
 
 ## Sallittujen kohteiden luettelo
 
-Luettelo asioista, joita agentti saa tehdä. Hyväksytyt komennot, hakusivustot, kansiot.
+Luettelo asioista, joita agentti saa tehdä. Siinä nimetään esimerkiksi hyväksytyt lähteet, tiedostot, vastaanottajat ja toimintotyypit.
 
 ## Minimioikeusperiaate (principle of least privilege)
 
@@ -26,15 +26,15 @@ Anna agentille vain minimaalinen pääsy, jonka se tarvitsee. Rajoitus tekee jä
 
 ## Orkestraattori (orchestrator)
 
-Harnessin osa, joka koordinoi työkalujen käyttöä. Kielimalli ehdottaa rakenteista kutsua, mutta orkestraattori tarkistaa työkalun ja oikeudet, suorittaa kutsun sekä palauttaa tuloksen tai virheen mallille.
+Agentin ohjauskehyksen osa, joka koordinoi työkalujen käyttöä. Kielimalli ehdottaa toimintoa, mutta ohjauskehys tarkistaa työkalun ja oikeudet, suorittaa kutsun sekä palauttaa tuloksen tai virheen mallille.
 
-## API (Application Programming Interface)
+## Liitin
 
-Rajapinta, jonka kautta agentti kommunikoi muiden ohjelmien kanssa. Esim. varastojärjestelmä, pankkijärjestelmä.
+Valmis yhteys, jonka kautta n8n voi käyttää toista palvelua. Aloittelijan ei tarvitse ohjelmoida yhteyttä itse.
 
 ## Loggaus (logging)
 
-Kirjaus siitä, mitä agentti tekee. Jokainen funktiokutsu, API-kutsu ja päätös tallennetaan.
+Kirjaus siitä, mitä agentti tekee. Tehtävän kannalta olennaiset valinnat, työkalujen käytöt, tulokset ja virheet tallennetaan ilman tarpeettomia henkilötietoja tai salaisuuksia.
 
 ## Riskinhallinta (risk management)
 
@@ -44,24 +44,16 @@ Suunnittelu siihen, mitä tapahtuu, jos agentti tekee virheen. Neljä kerrosta: 
 
 Eristetty ympäristö, jossa agentti ei voi vaikuttaa oikeaan järjestelmään. Turvallinen testaus.
 
-## API-avain (API key)
+## Tunnistetieto
 
-Tunnus, jolla agentti todistaa oikeutensa käyttää palvelua. Salassa pidettävä, ei lokeihin.
+Salainen tieto, jolla palvelu tunnistaa käyttäjän tai järjestelmän. Sitä ei kirjoiteta promptiin eikä lokiin.
 
 ## CSV (Comma-Separated Values)
 
 Tekstitiedostomuoto, jossa tiedot ovat rivillä pilkuilla erotettuja. Helppo lukea ja käsitellä.
 
-## JSON (JavaScript Object Notation)
+## Työkalusopimus
 
-Tekstitiedostomuoto, jossa tiedot ovat rakenteiset. Agentti käyttää sitä konfiguraatioissa.
-
-## MCP (Model Context Protocol)
-
-Avoin standardi, joka määrittelee yhteisen tavan kytkeä työkalu agenttiin: sama työkalu toimii eri agenteissa. Julkaistu vuonna 2024, ja vuonna 2026 se on alan yleinen käytäntö.
-
-## Konnektori (connector)
-
-Valmisagentin liitin ulkoiseen palveluun tai tietolähteeseen, kuten sähköpostiin, kalenteriin tai tiedostoihin. Perustuu MCP:n kaltaiseen standardikytkentään.
+Proosana tai rakenteisesti kuvattu sopimus siitä, mitä tietoa työkalu saa, mitä se palauttaa, mitä se ei saa tehdä ja miten virhe käsitellään.
 
 ---

@@ -2,9 +2,9 @@
 
 ## Mitä tällä tunnilla tapahtuu?
 
-Tähän mennessä olet kerännyt kahdeksan oppitunnin aikana sanastoa, käsitteitä ja näkemyksiä. Nyt asetut tuomaripöydän taakse ja teet niistä jotain konkreettista: **asiantuntijalausunnon**, jossa analysoit todellista tekoälyyn liittyvää ongelmaa ja esität siihen perustellun ratkaisun.
+Tähän mennessä olet kerännyt kahdeksan oppitunnin aikana sanastoa, käsitteitä ja näkemyksiä. Nyt asetut tuomaripöydän taakse ja teet niistä jotain konkreettista: **asiantuntija-analyysin**, jossa tarkastelet todellista tekoälyyn liittyvää ongelmaa ja esität siihen perustellun ratkaisun. Voit tehdä analyysin kirjallisena lausuntona tai yhden sivun tilannekartan, kevyen päätöspuun ja 5–8 minuutin suullisen esityksen yhdistelmänä.
 
-Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Et kirjoita lausuntoa itse, vaan ohjaat tekoälyä tuottamaan sen — tämä materiaali auttaa sinua tekemään siitä sellaisen, joka kestää sekä teknisen että asiallisen tarkastelun.
+Tällä tunnilla et enää opiskele uusia teoreettisia käsitteitä. Sen sijaan opit **käyttämään** sitä, mitä jo osaat. Sinä rakennat analyysin ja vastaat sen johtopäätöksistä. Kielimalli saa auttaa jäsentelyssä ja luonnostella tekstiä, mutta tarkistat, korjaat ja hyväksyt lopullisen lausunnon itse.
 
 ## Mikä on asiantuntijalausunto?
 
@@ -26,7 +26,7 @@ Tehtävänannossa on neljä osaa. Käytä niitä otsikoina tai vähintään laus
 
 **3. Miten tilanne pitäisi hoitaa?** Esitä konkreettisia toimenpiteitä: mitä organisaation pitäisi tehdä heti, mitä viikon sisällä ja mitä pysyvästi. Anna toimenpiteitä, älä pelkkiä toiveita.
 
-**4. Asiallinen vastuu.** Kuka kantaa vastuun? Mikä on sinun roolisi vastuullisena käyttäjänä? Tässä kohdassa lausunto nousee teknisestä raportista aidoksi asiantuntijatekstiksi.
+**4. Ammatillinen ja käytännön vastuu.** Kuka päätti käyttöönotosta, kuka ohjeisti, kuka valvoo ja kuka korjaa haitan? Mikä on oma vastuusi siinä roolissa, jossa toimit? Tässä kohdassa lausunto nousee teknisestä raportista aidoksi asiantuntijatekstiksi.
 
 ## Lausunnon kieli
 
@@ -48,11 +48,11 @@ Alla on saman asian eri versioita yhdestä skenaariosta: **Skenaario 1 — asiak
 
 > Asiakaspalvelijat laittoivat ChatGPT:hen asiakkaiden tietoja, vaikka niin ei olisi pitänyt tehdä. Tekoäly tallentaa kaiken, mitä sille annetaan, ja siksi tiedot vuotivat. Tämä on aika selkeä juttu, eikä siinä ole paljon mietittävää.
 
-**Mikä tekstissä on ongelmana:** Kieli on puhekielistä. Väite ”tekoäly tallentaa kaiken” on epätarkka, koska se sekoittaa kontekstimuistin ja koulutusdatan. Käsitteitä ei käytetä täsmällisesti. Lopetus heikentää lausunnon asiantuntevuutta.
+**Mikä tekstissä on ongelmana:** Kieli on puhekielistä. Väite ”tekoäly tallentaa kaiken” on perusteeton yleistys. Palvelun tietosuoja, lokitus, säilytys ja mallien kehittämiseen liittyvä tietojen käyttö tarkistetaan palvelun ehdoista, asetuksista ja sopimuksista. Konteksti-ikkuna taas kuvaa sitä, kuinka paljon aineistoa malli voi käsitellä vastatessaan; se ei kerro, miten palveluntarjoaja säilyttää syötteitä.
 
 ### Miksi se tapahtui? — Vahva versio
 
-> Tilanteessa toteutui kolme samanaikaista riskiä. Ensinnäkin asiakaspalvelijat syöttivät henkilötietoja kolmannen osapuolen palveluun ilman tietojenkäsittelysopimusta. Tämä on jo sellaisenaan tietosuojariski. Toiseksi, kuten oppitunti 5 osoitti, kielimallin konteksti-ikkuna ei toimi luotettavana muistina. Vaikka käyttäjä luulisi keskustelun olevan yksityinen, syötteet saattavat tallentua palveluntarjoajan järjestelmiin esimerkiksi lokitusta tai mallin kehittämistä varten. Kolmanneksi oppitunnin 3 mekaniikka selittää, miksi mallin vastauksiin ei voi luottaa sokeasti: malli ennustaa todennäköisimmän jatkon, ei välttämättä oikeaa vastausta. Asiakaspalvelija on saattanut välittää asiakkaalle tietoa, joka kuulosti oikealta mutta oli keksittyä.
+> Tilanteessa toteutui kolme samanaikaista riskiä. Ensinnäkin asiakaspalvelijat syöttivät henkilötietoja kolmannen osapuolen palveluun ilman hyväksyttyä käyttötarkoitusta ja tietojenkäsittelysopimusta. Toiseksi organisaatio ei ollut tarkistanut palvelun asetuksista ja sopimuksista, miten syötteitä käsitellään, säilytetään tai käytetään. Nämä ovat palvelun tietosuojaa koskevia kysymyksiä, eivät konteksti-ikkunan ominaisuuksia. Kolmanneksi oppitunnin 3 mekaniikka selittää, miksi mallin vastauksiin ei voi luottaa sokeasti: malli tuottaa todennäköisen jatkon, ei tarkistettua vastausta. Asiakaspalvelija on saattanut välittää asiakkaalle tietoa, joka kuulosti oikealta mutta oli keksittyä.
 
 **Mikä toimii:** Käsitteitä käytetään täsmällisesti ja niitä sovelletaan juuri tähän tilanteeseen. Todistusaineistoihin viitataan, mutta niitä ei pelkästään toisteta. Kolme erillistä riskiä eritellään selkeästi.
 
@@ -76,11 +76,11 @@ Tämän tehtävän tarkoitus ei ole, että kirjoitat tekstin yksin tyhjästä. T
 
 *Heikko prompt:* ”Kirjoita asiantuntijalausunto tietovuodosta.”
 
-*Vahva prompt:* ”Olen IT-vastaava verkkokauppayrityksessä. Tehtäväni on kirjoittaa asiantuntijalausunto, jossa analysoin seuraavan tilanteen: [kuvaa skenaario]. Lausunnon tulee perustua näihin käsitteisiin: hallusinaatio, kontekstimuisti, tekijänoikeudet ja vastuullisen käyttäjän tarkistuslista. Auta minua jäsentämään analyysi. Älä kirjoita lopullista tekstiä, vaan anna ehdotuksia rakenteesta ja näkökulmista.”
+*Vahva prompt:* ”Olen IT-vastaava verkkokauppayrityksessä. Laadin asiantuntijalausuntoa seuraavasta tilanteesta: [kuvaa skenaario]. Tässä ovat kolme omaa todistusaineistoani: generatiivisen mekaniikan havainto, kontekstin rajaa koskeva koe sekä luotettavuusarvio ja tarkistuskäytäntö. Ehdota aineistoni pohjalta rakennetta ja luonnosta. Merkitse kohdat, jotka vaativat lähteen. Minä teen johtopäätökset, tarkistan väitteet ja muokkaan lopullisen tekstin.”
 
 **2. Liitä mukaan oma todistusaineistosi.**
 
-Liitä prompttiin omat muistiinpanosi tunneilta 3, 5 ja 7. Pyydä tekoälyä käyttämään niitä argumentaation pohjana, ei keksimään uutta. Näin lausuntosi perustuu siihen, mitä *sinä* olet oppinut, eikä siihen, mitä malli sattuu tuottamaan.
+Liitä promptiin omat muistiinpanosi tunneilta 3, 5 ja 7. Pyydä tekoälyä käyttämään niitä argumentaation pohjana, ei keksimään uutta. Näin lausuntosi perustuu siihen, mitä *sinä* olet oppinut, eikä siihen, mitä malli sattuu tuottamaan.
 
 **3. Pyydä useita versioita ja valitse niistä paras.**
 
@@ -89,6 +89,8 @@ Voit esimerkiksi pyytää: ”Anna kolme erilaista tapaa aloittaa lausunto: yksi
 **4. Tarkista, älä luota sokeasti.**
 
 Tekoäly voi hallusinoida. Erityisesti se voi keksiä lakipykäliä, sääntelyn yksityiskohtia ja vuosilukuja. Jos lausuntosi väittää esimerkiksi, että ”GDPR:n artikla 17 kieltää tämän”, tarkista artiklan sisältö itse. Asiantuntija ei lähetä tekstiä, jota hän ei ole tarkistanut.
+
+Pidä lähdetyö rajattuna. Valitse lähteet tunnilla 8 arvioimastasi aineistosta. Jos jokin lausunnon keskeinen väite ei selviä niistä, tee enintään yksi uusi lähdetarkistus. Näin käytät ajan lähteiden soveltamiseen, et uuden aineiston laajaan etsimiseen.
 
 ::: luokka
 ## Tarkistuslista ennen palautusta
@@ -102,20 +104,23 @@ Käy nämä kohdat läpi ennen kuin palautat tehtävän:
 Käy nämä kohdat läpi ennen kuin toteat työsi valmiiksi:
 :::
 
-- ☐ Lausunto on 750–1000 sanaa.
+- ☐ Valitsin yhden reitin: 500–700 sanan lausunnon tai yhden sivun tilannekartan, kevyen päätöspuun ja 5–8 minuutin esityksen.
 - ☐ Kaikki neljä osaa on käsitelty: mitä tapahtui, miksi se tapahtui, miten tilanne pitäisi hoitaa ja kuka kantaa vastuun.
-- ☐ Käytin vähintään kahta omaa todistusaineistoani tunneilta 3, 5 ja 7 ja viittasin niihin selkeästi.
+- ☐ Käytin kaikkia kolmea omaa todistusaineistoani tunneilta 3, 5 ja 7 ja yhdistin ne johtopäätöksiin.
 - ☐ Käytin teoriaosion käsitteitä täsmällisesti, en suurpiirteisesti.
 - ☐ Toimenpide-ehdotuksissa on konkretiaa: kuka tekee, mitä tekee, milloin tekee ja miten tekee.
-- ☐ Vastuukysymys on käsitelty omana osanaan, ei vain mainittu sivulauseessa.
+- ☐ Ammatillinen ja käytännön vastuu on käsitelty omana osanaan, ei vain mainittu sivulauseessa.
 - ☐ Tarkistin tekstistä mahdolliset hallusinaatiot, kuten lait, vuosiluvut ja lähteet.
 - ☐ Kieli on neutraalia ja asiantuntevaa: ei puhekieltä eikä tunteenpurkauksia.
-- ☐ Teksti on minun näköiseni, ei tekoälyn muokkaamaton raakatuotos.
-- ☐ Lopussa on selkeä johtopäätös, ei vain äkillinen tekstin päättyminen.
+- ☐ Tuotos on minun näköiseni, ei tekoälyn muokkaamaton raakatuotos.
+- ☐ Lopussa on selkeä johtopäätös.
+- ☐ Valitsin lähteet tunnilla 8 arvioimastani aineistosta ja tein enintään yhden uuden lähdetarkistuksen.
+- ☐ Liitin lähteet, käyttämäni promptin tai keskustelulokin, mallin luonnoksen tai katkelman sekä kaksi ennen–jälkeen-korjausta perusteluineen.
+- ☐ Tein kirjallisen reitin 1–2 minuutin puolustuksen tai visuaalis-suullisen reitin 5–8 minuutin esityksen.
 
 ## Lopuksi
 
-Asiantuntijalausunto on **näyttö osaamisestasi**: sekä kurssin sisällöstä että siitä taidosta, jota osio 2 lähtee syventämään eli tekoälyn ohjaamisesta. Et osoita osaamistasi sillä, että kirjoitat kaiken yksin. Osoitat sen sillä, että otat tekoälyn työpariksi, ohjaat sitä taitavasti ja tunnistat itse, mikä sen tuotoksessa on oikein ja mikä ei.
+Asiantuntija-analyysi on **näyttö osaamisestasi**. Malli saa luonnostella, mutta oma osaamisesi näkyy siinä, että valitset johtopäätökset, käytät todistusaineistoa, tarkistat lähteet, dokumentoit korjaukset ja osaat puolustaa lopullista tuotosta omin sanoin.
 
 Tuomaripöydän takana ei istu kone. Siellä istut sinä.
 

@@ -6,79 +6,15 @@ Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemä
 
 Et vielä testaa omaa bottiasi, koska se rakennetaan vasta tunnilla 17. Sen sijaan kuratoit tietopohjan ja kirjoitat **testisuunnitelman** etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.
 
-<figure class="ai-demo"><span class="ai-demo__tag" id="l15-t"><i aria-hidden="true">// </i>maaliviiva ei siirry — sama vastaus, kaksi tuomiota</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:306px">
-  <div class="l15-wrap" data-once role="img" aria-labelledby="l15-t" aria-describedby="l15-d">
-    <span class="sr-only" id="l15-d">Sama vastaus kahdella kaistalla: jälkikäteen asetettu läpäisyehto siirtyy vastauksen kokoiseksi, ennalta lukittu ehto paljastaa aukon.</span>
-    <div class="l15-lane la"><i class="l15-ph">A · LÄPÄISYEHTO PÄÄTETÄÄN JÄLKIKÄTEEN</i>
-      <span class="l15-ans a1">botin vastaus</span>
-      <i class="l15-gl g1"></i><i class="l15-gl g2"></i>
-      <i class="l15-ln mv"></i>
-      <span class="l15-vd vda">”läpäisi” — mittari siirtyi</span></div>
-    <span class="l15-conn">sama vastaus</span>
-    <div class="l15-lane lb"><i class="l15-ph">B · LÄPÄISYEHTO LUKITTU ENNEN RAKENTAMISTA</i>
-      <span class="l15-ans a2">botin vastaus</span>
-      <i class="l15-gap"></i><em class="l15-gt">aukko: puuttuvaa hintaa ei saa arvata</em>
-      <i class="l15-ln fx"></i><svg class="l15-lk" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="#7FD0A8" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg><em class="l15-lkt">LUKITTU ENNEN</em>
-      <span class="l15-vd vdb">ei läpi — aukko löytyi ✓</span></div>
-    <span class="l15-ft">Sama vastaus — vain lukittu läpäisyehto paljastaa aukon</span>
-  </div>
-</div>
-<figcaption class="ai-demo__cap">Läpäisyehto lukitaan ennen botin ensimmäistä vastausta. Jos läpäisyehto asetetaan vasta vastauksen jälkeen, se liukuu vastauksen kokoiseksi ja kaikki näyttää läpäisevän — vain ennalta lukittu ehto paljastaa aukon, esimerkiksi sen, ettei puuttuvaa hintaa saa arvata. Hylkäys on tietoa, ei epäonnistumista.</figcaption></figure>
-<style>
-.l15-wrap{position:relative;width:560px;height:290px;font-family:var(--font-mono);animation:l15w 21s 1 forwards}
-.l15-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
-.l15-lane{position:absolute;left:0;width:560px;height:106px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 12px}
-.l15-lane.la{top:0}
-.l15-lane.lb{top:128px}
-.l15-ans{position:absolute;left:170px;top:44px;width:130px;box-sizing:border-box;text-align:center;font-size:12px;color:#0B0F1A;font-weight:700;background:#B9C2DA;border-radius:8px;padding:6px 0;opacity:0}
-.l15-ans.a1{animation:l15ans 21s 1 forwards}
-.l15-ans.a2{animation:l15ans 21s 1 forwards}
-.l15-ln{position:absolute;top:30px;height:58px;width:0;border-left:2.5px dashed #C9B7F1}
-.l15-ln.mv{left:418px;opacity:0;animation:l15mv 21s 1 forwards}
-.l15-ln.fx{left:418px;transform:scaleY(0);transform-origin:top;animation:l15fx 21s 1 forwards}
-.l15-gl{position:absolute;top:34px;height:50px;width:0;border-left:2px dashed #C9B7F1;opacity:0}
-.l15-gl.g1{left:380px;animation:l15g1 21s 1 forwards}
-.l15-gl.g2{left:418px;animation:l15g2 21s 1 forwards}
-.l15-lk{position:absolute;left:424px;top:38px;animation:l15lk 21s 1 forwards}
-.l15-lkt{position:absolute;left:442px;top:40px;font-style:normal;font-size:12px;font-weight:700;color:#7FD0A8;opacity:0;animation:l15lkt 21s 1 forwards}
-.l15-gap{position:absolute;left:302px;top:44px;width:114px;height:26px;background:repeating-linear-gradient(45deg,rgba(255,215,154,.35) 0 6px,transparent 6px 12px);border-radius:4px;transform:scaleX(0);transform-origin:left;animation:l15gap 21s 1 forwards}
-.l15-gt{position:absolute;left:216px;top:76px;white-space:nowrap;font-style:normal;font-size:12px;color:#FFD79A;opacity:0;animation:l15gt 21s 1 forwards}
-.l15-vd{position:absolute;right:10px;top:8px;font-size:12px;font-weight:700;border-radius:7px;padding:3px 8px;opacity:0;white-space:nowrap}
-.l15-vd.vda{color:#FFD79A;border:1.5px solid #FFD79A;background:rgba(255,215,154,.07);animation:l15vda 21s 1 forwards}
-.l15-vd.vdb{color:#46C7CF;border:1.5px solid #46C7CF;background:rgba(70,199,207,.07);animation:l15vdb 21s 1 forwards}
-.l15-conn{position:absolute;left:196px;top:110px;font-size:12px;color:#B9C2DA;border:1px dashed #4A5677;border-radius:6px;padding:1px 8px;opacity:0;animation:l15conn 21s 1 forwards}
-.l15-ft{position:absolute;left:0;top:252px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l15ft 21s 1 forwards}
-@keyframes l15w{0%{opacity:0}3%{opacity:1}97.5%,100%{opacity:1}}
-@keyframes l15fx{0%,3%{transform:scaleY(0)}8%,100%{transform:scaleY(1)}}
-@keyframes l15lk{0%,7%{transform:scale(1) rotate(0)}9%{transform:scale(1.35)}11%,100%{transform:scale(1)}}
-@keyframes l15lkt{0%,10%{opacity:0}13%,100%{opacity:1}}
-@keyframes l15ans{0%,36%{opacity:0;transform:translateX(-150px)}39%{opacity:1}44%,100%{opacity:1;transform:none}}
-@keyframes l15conn{0%,46%{opacity:0}50%,100%{opacity:1}}
-@keyframes l15mv{0%,68%{opacity:0;transform:none}71%{opacity:.9;transform:none}73%{opacity:.9;transform:none}80%,100%{opacity:.9;transform:translateX(-116px)}}
-@keyframes l15g1{0%,76%{opacity:0}79%,100%{opacity:.28}}
-@keyframes l15g2{0%,73%{opacity:0}76%,100%{opacity:.18}}
-@keyframes l15vda{0%,80%{opacity:0}83%,100%{opacity:1}}
-@keyframes l15gap{0%,78%{transform:scaleX(0)}84%,100%{transform:scaleX(1)}}
-@keyframes l15gt{0%,82%{opacity:0}85%,100%{opacity:1}}
-@keyframes l15vdb{0%,84%{opacity:0}87%,100%{opacity:1}}
-@keyframes l15ft{0%,88%{opacity:0}92%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){
-  .l15-wrap,.l15-wrap *{animation:none!important}
-  .l15-wrap,.l15-ans,.l15-vd,.l15-conn,.l15-ft,.l15-lkt,.l15-gt{opacity:1}
-  .l15-ln.fx{transform:scaleY(1)}
-  .l15-ln.mv{opacity:.9;transform:translateX(-116px)}
-  .l15-gl.g1{opacity:.28}
-  .l15-gl.g2{opacity:.18}
-  .l15-gap{transform:scaleX(1)}
-}
-</style>
-
 ## Tietopohja rajaa sen, mitä botti voi tietää
 
 Yleinen kielimalli osaa tuottaa uskottavaa tekstiä monista aiheista. Se ei kuitenkaan tunne automaattisesti oman kerhosi aikatauluja, oppilaitoksen paikallisia ohjeita tai yrityksen sisäistä prosessia. Näihin tarvitaan **tietopohja**: valittu aineisto, joka annetaan botin käytettäväksi vastaamisen tueksi.
 
 Tietopohja ei tee vastauksista automaattisesti oikeita. Aineisto voi olla puutteellinen, vanhentunut, ristiriitainen tai tehtävään huonosti sopiva. Siksi tietopohjaa ei vain kerätä, vaan se **kuratoidaan**.
+
+Tietopohja ja RAG eivät tarkoita aivan samaa asiaa. **Tietopohja** on valittu ja hallittu aineisto. **RAG** (retrieval-augmented generation, hakua hyödyntävä vastausten muodostaminen) on toteutustapa, jossa järjestelmä hakee tästä aineistosta kysymykseen sopivia katkelmia ja antaa ne kielimallille vastauksen tueksi. Kaikki bottialustat eivät näytä käyttäjälle, miten haku tehdään, mutta perusajatus on sama: ensin haetaan, sitten muodostetaan vastaus haetun aineiston avulla.
+
+Virhe voi syntyä kummassakin vaiheessa. **Hakuvaiheen virheessä** oikea lähde tai katkelma ei päädy mallin käyttöön, vaikka se olisi tietopohjassa. **Vastauksen muodostamisen virheessä** haku löytää käyttökelpoisen lähteen, mutta malli tulkitsee sitä väärin, yhdistää asioita perusteettomasti tai lisää väitteen, jota lähde ei tue. Siksi pelkkä oikea vastaus ei riitä testinä: tarkista myös, löytyikö oikea lähde ja vastaako väite todella lähteen sisältöä.
 
 Kuratointi on harkittua rajaamista. Ensin selvität, mitä tietoa botti todella tarvitsee. Sitten etsit kuhunkin tarpeeseen sopivan lähteen ja jätät pois aineiston, jolla ei ole botin tehtävässä selvää roolia. Samalla päätät, miten botti toimii silloin, kun valittu aineisto ei anna vastausta. Hyvä tietopohja ei siis ole mahdollisimman suuri kokoelma vaan perusteltu kokonaisuus, jonka vahvuudet ja rajat tunnet.
 
@@ -163,6 +99,8 @@ Arvioi jokainen lähde viidellä kysymyksellä:
 
 Lisäksi tarkista, saako aineiston ylipäätään ladata valittuun palveluun. Henkilötiedot, luottamuksellinen tieto ja käyttöoikeudet ratkaistaan ennen lataamista, ei sen jälkeen.
 
+Käyttöoikeus on rajattava myös haussa. Käyttäjä saa saada vastaukseensa vain sellaisia lähteitä, jotka hänellä on oikeus nähdä. Jos sama tietopohja sisältää eri ryhmille tarkoitettua aineistoa, toteutuksen pitää rajata haku käyttäjän, roolin tai organisaation perusteella ennen kuin katkelma annetaan kielimallille. Prompti ei korvaa tätä teknistä käyttöoikeusrajaa.
+
 ## Kirjaa puutteet näkyviin
 
 Tietopohjan arvioinnin tarkoitus ei ole todistaa, että aineisto on täydellinen. Tarkoitus on tietää, missä asioissa aineistoon voi luottaa.
@@ -183,9 +121,10 @@ Testi ei ole vain käyttäjän kysymys. Siinä pitää näkyä myös **odotettu 
 
 | Testi | Syöte | Odotettu toiminta | Näyttö, jonka perusteella testi läpäisee |
 | --- | --- | --- | --- |
-| Normaali tapaus | Kysymys, johon tietopohja vastaa | Botti vastaa lähteen mukaisesti | Vastaus vastaa nimettyä lähdekohtaa |
+| Normaali tapaus | Kysymys, johon tietopohja vastaa | Botti löytää oikean lähteen ja vastaa sen mukaisesti | Haettu lähde on osuva ja vastaus vastaa nimettyä lähdekohtaa |
 | Rajan testi | Kysymys aiheen ulkopuolelta | Botti kertoo rajansa ja ohjaa eteenpäin | Se ei keksi vastausta eikä jää umpikujaan |
 | Puuttuvan tiedon testi | Kysymys, jota aineisto ei kata | Botti myöntää puutteen | Se ei esitä arvausta faktana |
+| Käyttöoikeustesti | Kysymys aineistosta, jota käyttäjä ei saa nähdä | Järjestelmä ei hae eikä paljasta rajattua sisältöä | Vastauksessa ei näy suojattua lähdettä tai sen tietoja |
 | Reunatapaus | Tyhjä, sekava tai moniosainen pyyntö | Botti pyytää tarkennusta tai pilkkoo tehtävän | Se ei vastaa sattumanvaraisesti |
 
 Tällä tunnilla kirjoitat testit paperille tai taulukkoon. Tunnilla 17 ajat ensimmäiset testit rakennetulla botilla. Tunnilla 18 dokumentoit tulokset, korjaat yhden puutteen ja ajat korjausta koskevan testin uudelleen.
@@ -214,7 +153,7 @@ Näin abstrakti periaate muuttuu havainnoksi, jonka voi myöhemmin todentaa.
 
 Tunnin lopussa sinulla on kaksi toisiinsa liittyvää tuotosta:
 
-1. **Kuratoitu tietopohja:** 3–5 lähdettä sekä kuvaus niiden tehtävistä, puutteista ja käyttörajoista.
+1. **Kuratoitu tietopohja:** 2–4 huolella valittua lähdettä sekä kuvaus niiden tehtävistä, puutteista, käyttörajoista ja mahdollisesta hakutavasta.
 2. **Testisuunnitelma:** vähintään yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen.
 
 Yhdessä nämä tuotokset muodostavat lupauksen siitä, mihin botti saa nojata ja miten lupauksen toteutuminen tarkistetaan.
@@ -233,7 +172,8 @@ Testisuunnitelma kirjoitetaan ennen rakentamista. Jokainen testi sisältää sy�
 
 ## Lähteet ja tarkistuspäivä
 
-- [Microsoft: Knowledge sources overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio)
+- [Microsoft: Retrieval-augmented generation in Azure AI Search](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
+- [Microsoft: Security filter pattern in Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 
 Tarkistettu 20.7.2026.

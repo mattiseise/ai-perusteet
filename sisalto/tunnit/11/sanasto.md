@@ -48,4 +48,16 @@ Tietojen muokkaaminen niin, ettei ihmistä voida enää tunnistaa suoraan eikä 
 
 EU:n yleinen tietosuoja-asetus. Se säätelee henkilötietojen lainmukaista, turvallista ja läpinäkyvää käsittelyä.
 
+## Tekoälyasetus
+
+EU:n riskiperusteinen säädös tekoälyjärjestelmistä. Velvoitteet riippuvat käyttötarkoituksesta ja organisaation roolista. Tietosuoja ja tekoälyasetuksen velvoitteet tarkistetaan erikseen.
+
+## Käyttöönottaja
+
+Organisaatio, joka käyttää tekoälyjärjestelmää omassa toiminnassaan ammatillisessa tarkoituksessa. Käyttöönottajan velvollisuudet eivät ole samoja kuin järjestelmän tarjoajan velvollisuudet.
+
+## Tekoälylukutaito
+
+Riittävä osaaminen käyttää tekoälyjärjestelmää tietoisesti, ymmärtää sen mahdollisuuksia ja rajoja sekä tunnistaa käyttöön liittyviä riskejä.
+
 ---

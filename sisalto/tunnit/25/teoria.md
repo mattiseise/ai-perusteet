@@ -4,11 +4,11 @@
 
 Kaikki, mitä olet tähän mennessä oppinut — **muisti**, **konteksti**, **työkalut**, **suunnittelumallit** ja **turvallisuus** — johtaa yhteen tärkeään ajatukseen: **agentti ei voi tehdä kaikkea yksin**. Joissain tilanteissa agentti täytyy pysäyttää odottamaan, kunnes ihminen sanoo: ”kyllä, jatka” tai ”ei, älä tee sitä”.
 
-Tässä toimintatavassa **ihminen osallistuu päätöksentekoon** automaation rinnalla. Se ei tarkoita, että ihminen tekee kaiken itse. Se tarkoittaa, että ihminen hyväksyy kriittiset päätökset, tarkistaa riskialttiit toiminnot ja ohjaa agenttia silloin, kun agentti on epävarma.
+Tässä toimintatavassa **ihminen osallistuu päätöksentekoon** automaation rinnalla. Se ei tarkoita, että ihminen tekee kaiken itse. Se tarkoittaa, että ihminen hyväksyy kriittiset päätökset, tarkistaa riskialttiit toiminnot ja ohjaa agenttia silloin, kun hyväksytty lähde puuttuu tai lähteet ovat ristiriidassa, pakollinen tieto puuttuu, validointi tai työkalu epäonnistuu taikka toiminto kuuluu määriteltyyn riskiluokkaan.
 
 Tässä oppitunnissa opit, **milloin ihminen täytyy ottaa mukaan päätöksentekoon, miten hyväksyntäportit suunnitellaan ja miten rakennetaan työnkulkuja, joissa agentti ja ihminen tekevät yhteistyötä**. Näitä periaatteita käytät suoraan seuraavilla oppitunneilla, kun rakennat omaa agenttia n8n:llä.
 
-> **Harnessin näkökulma:** Hyväksyntäportti kuuluu harnessiin. Kielimalli voi valmistella ehdotuksen ja perustelun, mutta harness pysäyttää suorituksen, näyttää ihmiselle tarvittavat tiedot ja jatkaa vasta hyväksynnän jälkeen. Malli ei voi hyväksyä omaa ehdotustaan.
+> **Ohjauskehyksen näkökulma:** Hyväksyntäportti kuuluu agentin ohjauskehykseen. Kielimalli voi valmistella ehdotuksen ja perustelun, mutta ohjauskehys pysäyttää suorituksen, näyttää ihmiselle tarvittavat tiedot ja jatkaa vasta hyväksynnän jälkeen. Malli ei voi hyväksyä omaa ehdotustaan.
 
 ## Milloin ihminen tarvitaan mukaan päätökseen?
 
@@ -18,13 +18,13 @@ Kolme sääntöä auttaa päättämään, milloin ihminen tarvitaan mukaan.
 
 **Sääntö 1: Raha tai rakenne.** Jos päätös liittyy rahaan, se vaatii usein hyväksynnän. Tällaisia päätöksiä ovat esimerkiksi alennus, hyvitys, palkkio tai maksun muuttaminen. Pienen 10 % alennuksen agentti voi ehkä antaa itse, jos se on etukäteen sallittu. Sen sijaan 50 % alennus vaatii yleensä esihenkilön hyväksynnän, koska sillä on suuri taloudellinen vaikutus. Sama koskee rakenteellisia muutoksia: jos päätös muuttaa asiakkaan tietoja, sopimusta, tilausta tai tulevaa asiakassuhdetta, hyväksyntä on usein tarpeen.
 
-**Sääntö 2: Epävarmuus.** Jos agentti ei ole riittävän varma päätöksestään, se tarvitsee ihmisen vahvistuksen. Esimerkiksi jos agentti arvioi olevansa vain 65 % varma siitä, että viesti koskee laskua, ihmisen kannattaa tarkistaa tapaus. Ihminen voi nähdä sävyjä, poikkeuksia ja kontekstia, joita agentti ei välttämättä huomaa.
+**Sääntö 2: Havaittava puute tai virhe.** Ihmistä tarvitaan, jos hyväksyttyä lähdettä ei löydy, lähteet ovat ristiriidassa, pakollinen tieto puuttuu, rakenteinen validointi epäonnistuu tai työkalu palauttaa virheen. Mallin itse ilmoittama varmuusprosentti ei ole luotettava hyväksyntäraja. Erikseen arvioidun ja kalibroidun luokittelukomponentin todennäköisyys voidaan käyttää vain sille määritellyssä tehtävässä.
 
 **Sääntö 3: Poikkeamat.** Jos tilanne ei ole rutiinitapaus, vaan siinä on jotain tavallisesta poikkeavaa, päätös kannattaa ohjata ihmiselle. Tavallisen tilauksen agentti voi käsitellä yksin. Jos tilauksessa on negatiivinen hinta, poikkeuksellisen suuri summa, uusi maksutapa tai muu epätavallinen piirre, agentin täytyy pysäyttää prosessi ja pyytää hyväksyntä.
 
-Näiden sääntöjen avulla voit jakaa päätökset eri ryhmiin. Rutiinipäätökset agentti voi tehdä itsenäisesti. Kriittiset päätökset vaativat ihmisen hyväksynnän ennen toimintaa. Osa päätöksistä voi vaatia hyväksynnän vain silloin, kun agentti on epävarma, ja osa voidaan tarkistaa jälkikäteen lokien perusteella.
+Näiden sääntöjen avulla voit jakaa päätökset eri ryhmiin. Rutiinipäätökset agentti voi tehdä itsenäisesti. Kriittiset päätökset vaativat ihmisen hyväksynnän ennen toimintaa. Osa päätöksistä vaatii hyväksynnän vain silloin, kun ennalta määritelty havaittava ehto täyttyy, ja osa voidaan tarkistaa jälkikäteen lokien perusteella.
 
-> **Pysähdy hetkeksi:** Ajattele omaa työtäsi tai opintojasi. Mitä päätöksiä tekisit itse, ja mitkä veisit opettajalle, esihenkilölle tai toiselle asiantuntijalle? Mitkä päätökset liittyvät rahaan, rakenteeseen, epävarmuuteen tai poikkeamiin?
+> **Pysähdy hetkeksi:** Ajattele omaa työtäsi tai opintojasi. Mitä päätöksiä tekisit itse, ja mitkä veisit opettajalle, esihenkilölle tai toiselle asiantuntijalle? Missä tilanteissa lähde tai pakollinen tieto puuttuu, lähteet ovat ristiriidassa, validointi tai työkalu epäonnistuu tai toiminto kuuluu määriteltyyn riskiluokkaan?
 
 ## Hyväksyntäporttien rakentaminen
 
@@ -121,7 +121,7 @@ Hyväksyntäportin jälkeinen toiminta on tärkeä suunnitella etukäteen. Jos i
 
 Hyväksyntäportteihin liittyy myös **aikaraja**. Mitä tapahtuu, jos ihminen ei vastaa 24 tunnin kuluessa? Vaihtoehtoja on useita:
 
-- **Oletusarvo:** Jos vastausta ei tule, järjestelmä toimii ennalta sovitulla tavalla. Tämä voi tarkoittaa hyväksyntää tai hylkäystä, mutta sitä pitää käyttää varoen.
+- **Turvallinen oletustoiminto:** Jos vastausta ei tule, kriittistä toimintoa ei hyväksytä. Pyyntö keskeytetään, hylätään turvallisesti tai siirretään toiselle hyväksyjälle.
 - **Eskalointi:** Pyyntö lähetetään toiselle hyväksyjälle, esimerkiksi esihenkilölle tai varahenkilölle.
 - **Aikaraja:** Agentti peruuttaa pyynnön ja ilmoittaa asiakkaalle, että prosessi ei voi jatkua juuri nyt.
 
@@ -138,7 +138,7 @@ Agentti huomaa, että asiakas haluaa vaihtaa tuotteen värin. Uusi väri on vara
 - **Portti näyttää:** ”Vaihdetaanko keltainen tuote punaiseen?”
 - **Hyväksyjä:** asiakaspalvelupäällikkö.
 - **Vastausaika:** päätös voidaan tehdä nopeasti työpäivän aikana.
-- **Oletusarvo:** jos vastausta ei tule tunnissa, vaihto voidaan hyväksyä automaattisesti, jos riski on pieni ja asiakaskokemus kärsisi odottamisesta.
+- **Oletusarvo:** jos vastausta ei tule tunnissa, pyyntö keskeytetään tai ohjataan toiselle vastuuhenkilölle. Jos vaihto on ennalta sallittu rutiinisääntö, sitä ei tarvitse lähettää hyväksyntäportille alun perinkään.
 
 **Esimerkki 2: Suuri päätös — perusteellinen hyväksyntä**
 
@@ -195,11 +195,11 @@ Tämä on viimeinen teoriapainotteinen oppitunti ennen rakentamista. Seuraavaksi
 | --- | --- | --- |
 | **Agentin rakenne** | Agentin kuusi rakennusosaa. | Rakennusosat toimivat kattavuuden tarkistuslistana. Yksi solmu, sääntö tai palvelu voi kattaa useita vastuita. |
 | **Automaatio vs. autonomia** | Päätöspuu: promptaus, työnkulku vai agentti. | Valitset, riittääkö yksi AI Agent -solmu vai tarvitaanko monivaiheinen työnkulku. |
-| **Muisti ja konteksti** | Konteksti-ikkuna, pitkäkestoinen muisti ja tila. | Memory-solmu, tietokanta, Google Sheets tai muu tilan tallennus. |
-| **Työkalut** | Tiedostot, verkkohaku ja CLI-komennot. | Read File-, HTTP Request- ja Execute Command -solmut. |
-| **Suunnittelumallit** | ReAct, ketjuajattelu ja moniagenttijärjestelmät. | AI Agent ReAct-malliin, solmuketju ketjuajatteluun ja webhook-kutsut moniagenttirakenteeseen. |
+| **Muisti ja konteksti** | Konteksti-ikkuna, pitkäkestoinen muisti ja tila. | muistisolmu, tietokanta, taulukko tai muu tilan tallennus. |
+| **Työkalut** | Rajatut tiedonhaku- ja toimintotyökalut. | Valmiit n8n-solmut, joille määritellään kohde, oikeudet ja virhepolku. |
+| **Suunnittelumallit** | ReAct ja eksplisiittinen työnkulku. | AI Agent -solmun rajattu havainto–toiminto-kierros tai ennalta määritelty solmuketju. |
 | **Turvallisuus** | Promptihyökkäys, hallusinaatiot, minimioikeus ja lokitus. | IF-solmut validointiin, rajatut API-avaimet, hyväksyntäportit ja lokisolmut. |
-| **Ihmisen osallistuminen päätöksentekoon** | Hyväksyntäportit, palaute ja ihmisen rooli kriittisissä päätöksissä. | Hyväksyntäsolmu, Slack- tai Teams-ilmoitus, lomakevastaus ja lokitus. |
+| **Ihmisen osallistuminen päätöksentekoon** | Hyväksyntäportit, palaute ja ihmisen rooli kriittisissä päätöksissä. | Hyväksyntäsolmu, tiimikanavan ilmoitus, lomakevastaus ja lokitus. |
 
 Kaikki, mitä olet oppinut, muuttuu n8n:ssä konkreettisiksi solmuiksi ja yhteyksiksi. Näet visuaalisesti, missä työnkulku käynnistyy, missä agentti hakee tietoa, missä se tekee päätöksen ja missä se pysähtyy odottamaan ihmisen hyväksyntää.
 
@@ -227,7 +227,7 @@ Yhdessä nämä muodostavat suunnitelman, jonka pohjalta rakennat n8n-työnkulun
 
 ## Yhteenveto
 
-**Ihmisen osallistuminen päätöksentekoon** ei tarkoita, että ihminen tekee kaiken. Se tarkoittaa, että ihminen hyväksyy suuret päätökset ja ohjaa agenttia epäselvissä tai riskialttiissa tilanteissa. Kolme sääntöä auttaa päättämään, milloin hyväksyntä tarvitaan: päätös liittyy **rahaan tai rakenteeseen**, agentti on **epävarma** tai tilanne on **poikkeava**.
+**Ihmisen osallistuminen päätöksentekoon** ei tarkoita, että ihminen tekee kaiken. Se tarkoittaa, että ihminen hyväksyy suuret päätökset ja ohjaa agenttia ennalta määriteltyjen ehtojen perusteella. Hyväksyntä tarvitaan, kun hyväksytty lähde puuttuu tai lähteet ovat ristiriidassa, pakollinen tieto puuttuu, validointi tai työkalu epäonnistuu taikka toiminto kuuluu määriteltyyn riskiluokkaan. Raha-, sopimus- ja tietomuutokset ovat tavallisia esimerkkejä tällaisista riskiluokista.
 
 **Hyväksyntäportit** tehdään selkeiksi ja nopeiksi, jotta ihminen voi vastata ilman, että koko prosessi pysähtyy tarpeettoman pitkäksi aikaa. Hyvässä hyväksyntäportissa näkyvät päätös, perustelut, riskit, hyväksyjä ja vaihtoehtoinen polku, jos pyyntö hylätään.
 
@@ -235,7 +235,7 @@ Koko prosessi on hybridi: agentti analysoi, hakee tietoa ja toteuttaa rajattuja 
 
 Seuraavilla oppitunneilla rakennat nämä työnkulut konkreettisesti n8n:ssä. Vedät solmuja työtilaan, kytket hyväksyntäportteja ja näet, miten automaatio ja inhimillinen ohjaus toimivat yhdessä. Tavoitteena ei ole pelkästään nopea automaatio, vaan **älykäs, turvallinen ja hallittu agentti**.
 
-> **Erota nämä:** Minkä ehdotuksen kielimalli valmistelee — ja missä kohdassa harness siirtää päätösvallan ihmiselle? Mitä tapahtuu, jos ihminen ei vastaa ajoissa?
+> **Erota nämä:** Minkä ehdotuksen kielimalli valmistelee — ja missä kohdassa agentin ohjauskehys siirtää päätösvallan ihmiselle? Mitä tapahtuu, jos ihminen ei vastaa ajoissa?
 
 
 ---

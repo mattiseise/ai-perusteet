@@ -1,4 +1,4 @@
-# Opiskelutehtävät: Agentin työkalut — tiedostot, haku ja komennot
+# Opiskelutehtävät: Agentin työkalut — tieto, haku ja rajatut toiminnot
 
 > Tämä tunti tarkentaa lopputyösi työkaluvalintoja. Tunneilla 19 ja 21 olet määritellyt ongelman ja muistirakenteen. Tänään harjoittelet työkalujen valintaa.
 
@@ -52,33 +52,22 @@ puuttuuko jokin. Älä ehdota itse — kysy niin että ajattelen.
 
 ---
 
-## Tehtävä 22.2 — Tutustu n8n-työnkulkuun — syventävä
+## Tehtävä 22.2 — Kirjoita työkalusopimus — syventävä
 
-**Miksi tämä on hyödyllinen:** Tunnilla 26 rakennat oman agenttisi n8n:ssä. Tämä tehtävä antaa ennakkonäkymän käyttöliittymään.
+**Miksi tämä on hyödyllinen:** Työkalusopimus tekee näkyväksi, mitä työkalu saa nähdä ja tehdä. Sama kuvaus auttaa sekä teknisessä toteutuksessa että dokumentoidussa suunnittelusuorituksessa.
 
 ### Tehtävä
 
-1. Avaa n8n.
-2. Tuo esimerkkityönkulku ("Import from File", opettajan jakama tiedosto).
-3. Tutki työnkulkua ja vastaa kysymyksiin.
+Valitse yksi oman agenttisi työkalu ja kirjoita siitä lyhyt proosamuotoinen työkalusopimus. Kerro:
 
-**A. Tunnista agentin osat.** Käy solmut läpi vasemmalta oikealle. Mahdolliset komponentit: **syötekäsittelijä, päättelijä, työkalu, turvakerros, tulosteen muotoilija**.
+1. mitä tarkoitusta varten työkalua käytetään
+2. mitä tietoa se saa ja mistä tieto tulee
+3. mitä se palauttaa agentille
+4. mitä se ei saa tehdä
+5. milloin toiminto vaatii ihmisen hyväksynnän
+6. mitä tapahtuu, jos työkalu palauttaa virheen.
 
-| Solmu (vasemmalta oikealle) | Mikä agentin osa tämä on? | Mitä se tekee? |
-|---|---|---|
-| Ensimmäinen | | |
-| Toinen | | |
-| Kolmas | | |
-| Neljäs | | |
-| Viimeinen | | |
-
-**B. Jäljitä tiedon kulku.** Kirjoita omin sanoin 3–4 lausetta: mistä data tulee sisään, mitä sille tapahtuu matkalla ja mitä tulee ulos.
-
-**C. Yhdistä teoriaan.** Mikä tunnin 22 työkalu (verkkohaku, tiedostot, viestit, tietokanta) on tässä työnkulussa käytössä? Jos haluaisit lisätä toisen työkalun, minkä lisäisit ja miksi?
-
-> **Vinkki muistiinpanoihin:** Pidä silmällä esimerkkiä, jotta tunnilla 26 tunnistat solmutyypit nopeammin.
-
-**Opettajalle:** tämä tehtävä vaatii esimerkki-n8n-työnkulun (esim. `esimerkki-agentti.json`), jonka jaat tunnin yhteydessä.
+Nimeä lopuksi n8n-solmu tai solmutyyppi, jolla toteuttaisit toiminnon. Ohjelmointikoodia ei tarvita.
 
 ---
 

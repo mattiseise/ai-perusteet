@@ -14,3 +14,8 @@
 | **Läpäisyehto** | Havaittava ehto, jonka täyttyminen osoittaa testin onnistuneeksi. |
 | **Harhaanjohtavuus** | Riski siitä, että yleisö ymmärtää synteettisen tai muokatun tuotoksen aidoksi tapahtumaksi, henkilöksi tai todisteeksi. |
 | **Käyttöoikeus** | Lupa käyttää lähdeaineistoa, palvelua tai tuotosta tietyllä tavalla. |
+| **Toteutustapa** | Perusteltu valinta siitä, millä ympäristöllä ja rakenteella botin tehtävä toteutetaan. |
+| **Tekninen toteutuspolku** | Suorituspolku, jossa botti rakennetaan käytettävälle alustalle ja sen todellinen toiminta testataan. |
+| **Dokumentoitu suunnittelupolku** | Suorituspolku, jossa arkkitehtuuri, suoritusjälki, testit ja rajoitukset kuvataan ilman väitettä toimivista integraatioista. |
+| **Käyttöönottopäätös** | Perusteltu päätös siitä, kuka ratkaisua saa käyttää, millä ehdoilla ja milloin käyttö keskeytetään. |
+| **Simuloitu suoritusjälki** | Vaiheittainen kuvaus suunnitellusta toiminnasta. Se osoittaa suunnittelun, mutta ei todista teknisten yhteyksien toimivuutta. |

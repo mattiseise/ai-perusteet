@@ -4,7 +4,7 @@
 
 ### Tavoite
 
-Tehtävän tavoitteena on, että opiskelijat oppivat erottamaan **chatbotin**, **agentin** ja muun automaattisen järjestelmän toisistaan konkreettisten esimerkkien avulla. Kurssin määritelmä on **agentti = kielimalli + harness**. Kuusi kohtaa — syötekäsittely, päättely, työkalut, muisti, turvakerros ja palautesilmukka — ovat suunnittelun tarkistuslista, eivät jokaisen agentin pakolliset osat.
+Tehtävän tavoitteena on, että opiskelijat oppivat erottamaan **chatbotin**, **agentin** ja muun automaattisen järjestelmän toisistaan konkreettisten esimerkkien avulla. Kurssilla rakennettava tekoälyagentti rajataan kielimallin ja agentin ohjauskehyksen muodostamaksi järjestelmäksi. Tämä ei ole yleispätevä agentin määritelmä. Kuusi kohtaa — **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka** — ovat suunnittelun tarkistuslista, eivät jokaisen agentin pakolliset osat.
 
 **Opettajan painotus:** Korosta, että kaikki automaattiset järjestelmät eivät ole agentteja. Agenttimaisuus syntyy siitä, että järjestelmä tulkitsee tilannetta, tekee päätöksiä, käyttää työkaluja ja toimii rajatusti itsenäisesti.
 
@@ -45,9 +45,9 @@ Järjestelmä lähettää myös vastuuhenkilölle ilmoituksen ja auttaa selvitt�
    - **Palautesilmukka:** Miten tuloksia seurataan ja kehitetäänkö toteutusta ihmisen vai automaation avulla?
 4. Kirjoittakaa vastauksenne paperille tai yhteiseen dokumenttiin:
    - valintanne: **chatbot**, **agentti** vai **muu automaattinen järjestelmä**,
-   - 3–4 lauseen perustelu, jossa käytetään määritelmää kielimalli + harness ja perustellaan ainakin yhden tarkistuskohdan tarpeellisuus tai pois jättäminen.
+   - 3–4 lauseen perustelu, jossa käytetään määritelmää kielimalli + agentin ohjauskehys ja perustellaan ainakin yhden tarkistuskohdan tarpeellisuus tai pois jättäminen.
 
-**Opettajan tarkistuskysymys:** Jos ryhmä sanoo “tämä on agentti, koska se toimii automaattisesti”, kysy: “Missä kielimalli tulkitsee tilannetta ja mitä työkaluja, oikeuksia tai turvarajoja harness antaa sille?”
+**Opettajan tarkistuskysymys:** Jos ryhmä sanoo “tämä on agentti, koska se toimii automaattisesti”, kysy: “Missä kielimalli tulkitsee tilannetta ja mitä työkaluja, oikeuksia tai turvarajoja agentin ohjauskehys antaa sille?”
 
 ### Käsittely noin 10 minuuttia
 
@@ -57,9 +57,9 @@ Kunkin ryhmän edustaja esittelee ryhmän valinnan ja perustelut. Opettaja tarke
 
 | Skenaario | Luokittelu | Perustelu |
 | --- | --- | --- |
-| **A: Laskun käsittelyagentti** | **Agentti, jos kuvauksen analyysi tehdään kielimallilla** | Harness välittää laskun mallille, tarjoaa työkalun kirjanpitojärjestelmään ja rajaa korkean riskin päätökset ihmisen hyväksyttäviksi. Aiempien laskuttajatietojen muisti on tämän toteutuksen valinta, ei agenttiuden ehto. |
+| **A: Laskun käsittelyagentti** | **Agentti, jos kuvauksen analyysi tehdään kielimallilla** | Agentin ohjauskehys välittää laskun mallille, tarjoaa työkalun kirjanpitojärjestelmään ja rajaa korkean riskin päätökset ihmisen hyväksyttäviksi. Aiempien laskuttajatietojen muisti on tämän toteutuksen valinta, ei agenttiuden ehto. |
 | **B: Muistutus-chatbot** | **Chatbot** | Järjestelmä vastaa kysymykseen kalenteritiedolla mutta ei kuvauksen perusteella käytä kielimallia työkalutoimintojen valintaan. Muistin tai palautesilmukan puuttuminen ei yksin ratkaise luokitusta. |
-| **C: Kasvihuoneen automaattinen ilmastonsäätö** | **Työnkulku tai agentti — kuvaus ei vielä ratkaise** | Kiinteät raja-arvot ovat työnkulku. Jos kielimalli tulkitsee poikkeustilannetta ja harness antaa sille rajatut anturi- ja ohjaustyökalut, kokonaisuus voi olla agentti. Opiskelijan pitää nimetä tämä puuttuva tieto. |
+| **C: Kasvihuoneen automaattinen ilmastonsäätö** | **Työnkulku tai agentti — kuvaus ei vielä ratkaise** | Kiinteät raja-arvot ovat työnkulku. Jos kielimalli tulkitsee poikkeustilannetta ja agentin ohjauskehys antaa sille rajatut anturi- ja ohjaustyökalut, kokonaisuus voi olla agentti. Opiskelijan pitää nimetä tämä puuttuva tieto. |
 
 ### Odotettu oppimistulos
 
@@ -92,7 +92,7 @@ Organisaation asiakaspalvelupyyntöjä hallitaan järjestelmällä, joka:
 
 ### Opettajan ohjeet
 
-Piirrä taululle esimerkin tiedonkulku tai näytä se diaesityksessä. Merkitse erikseen pakollinen ydin, **kielimalli + harness**, ja valinnaiset toteutuspäätökset.
+Piirrä taululle esimerkin tiedonkulku tai näytä se diaesityksessä. Merkitse erikseen pakollinen ydin, **kielimalli + agentin ohjauskehys**, ja valinnaiset toteutuspäätökset.
 
 **Yksi mahdollinen toteutus asiakaspalvelupyyntöjen reitityksessä**
 
@@ -112,7 +112,7 @@ Piirrä taululle esimerkin tiedonkulku tai näytä se diaesityksessä. Merkitse 
 
 Korosta opiskelijoille, että taulukko kuvaa yhtä mahdollista toteutusta. Sama tarkistuslista voi johtaa toiseen järjestykseen tai siihen, että pitkäkestoinen muisti ja automaattinen palautekierros jätetään pois.
 
-> Agentti = kielimalli + harness. Kuusi kohtaa auttavat perustelemaan harnessin suunnittelun, mutta eivät ole pakollinen kuuden vaiheen suoritusputki.
+> Kurssin rajauksessa rakennettava tekoälyagentti muodostuu kielimallista ja agentin ohjauskehyksestä. Kuusi kohtaa auttavat perustelemaan ohjauskehyksen suunnittelun, mutta eivät ole pakollinen kuuden vaiheen suoritusputki.
 
 ### Kysymyksiä ryhmälle
 
@@ -124,7 +124,7 @@ Korosta opiskelijoille, että taulukko kuvaa yhtä mahdollista toteutusta. Sama 
 
 ### Odotettu oppimistulos
 
-- Opiskelijat ymmärtävät, miten kielimalli ja harness muodostavat toimivan agentin.
+- Opiskelijat ymmärtävät, miten kielimalli ja agentin ohjauskehys muodostavat toimivan agentin.
 - Opiskelijat osaavat kuvata, miten syöte muuttuu päätökseksi ja toiminnaksi.
 - Opiskelijat osaavat perustella muistin ja palautekierroksen tarpeen tai pois jättämisen sekä tunnistavat turvarajojen merkityksen.
 
@@ -191,7 +191,7 @@ Agentti voi olla hyödyllinen, mutta sen täytyy tietää, milloin se saa toimia
 Opettaja arvioi opiskelijoiden kykyä:
 
 - erottaa **agentti** ja **chatbot** toisistaan konkreettisilla perusteluilla,
-- käyttää määritelmää **agentti = kielimalli + harness**,
+- osaa selittää kurssin rajauksen eli kielimallin ja agentin ohjauskehyksen muodostaman järjestelmän,
 - käyttää kuutta kohtaa suunnittelutarkistuslistana,
 - perustella, mitä toteutus tarvitsee ja mitä siitä voi jättää pois,
 - tunnistaa, mitä voi tapahtua, kun mukaan valittu osa epäonnistuu,

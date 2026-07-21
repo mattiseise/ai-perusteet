@@ -1,8 +1,10 @@
-# Erikoistuneet tekoälytyökalut — kuva, ääni, video ja koodi
+# Oma botti III — toteutustapa, erikoistyökalut ja käyttöönotto
 
-## Johdanto: eri tuotokset, sama työskentelytaito
+## Johdanto: valitse toteutus, jonka pystyt perustelemaan
 
-Tekstiä tuottava chat on vain yksi tapa käyttää generatiivista tekoälyä. Erikoistunut työkalu voi tuottaa kuvan, ääntä, videota tai koodia. Välineet ja tuotokset eroavat, mutta vastuullinen työskentely etenee samalla tavalla:
+Tunneilla 14 ja 15 määrittelit apuri-bottisi tehtävän, rajat, tietopohjan ja testit. Ennen rakentamista tarvitset vielä toteutuspäätöksen. Toteutustapa ei ole vain alustan nimi, vaan perusteltu kuvaus siitä, mitä ominaisuuksia tarvitset, mitä aineistoa ratkaisu käsittelee, kuka pääsee siihen ja millaisella näytöllä voit osoittaa sen toiminnan.
+
+Tekstiä tuottava chat on vain yksi mahdollisuus. Botti voi hyödyntää kuvaa, ääntä tai musiikkia, videota tai rajattua kooditoimintoa, jos se palvelee käyttäjän tehtävää. Nämä erikoistyökalut säilyvät tunnin näkyvänä laboratoriona, mutta niiden tarkoitus on auttaa tekemään omaa bottiprojektia koskeva valinta. Välineet ja tuotokset eroavat, mutta vastuullinen työskentely etenee samalla tavalla:
 
 1. määritä todellinen käyttötarve
 2. päätä onnistumisen kriteerit
@@ -14,7 +16,7 @@ Tekstiä tuottava chat on vain yksi tapa käyttää generatiivista tekoälyä. E
 
 Järjestys on olennainen: kriteerit päätetään ennen ensimmäistä versiota, jotta niitä ei madalleta jälkikäteen sopimaan syntyneeseen tuotokseen.
 
-Tällä tunnilla valitset yhden neljästä reitistä. Kaikkien ei tarvitse tehdä kuvaa, eikä yhden kategorian työkalu ole toista kehittyneempi. Ydintaito on osata ohjata, arvioida ja dokumentoida valitsemasi tuotantoprosessi.
+Tällä tunnilla tutkit neljää näkyvää reittiä ja kokeilet niistä yhtä: kuvaa, ääntä tai musiikkia, videota tai koodia. Kaikkien ei tarvitse lisätä erikoistyökalua omaan bottiinsa. Ydintaito on osata päättää, tuoko työkalu käyttäjälle todellista hyötyä vai kasvattaako se vain toteutuksen riskiä ja työmäärää.
 
 Tunnin läpi kulkee yksi esimerkki. Kirjasto tarvitsee verkkosivulleen 20 sekunnin äänettömän opastusvideon, joka näyttää kirjan palauttamisen kolmessa vaiheessa. Ennen videon tekemistä sovitaan, että vaiheiden pitää näkyä oikeassa järjestyksessä, tekstitykset pitää ehtiä lukea rauhassa, esineiden ja tilan pitää säilyä johdonmukaisina eikä kuvassa saa olla tunnistettavia asiakkaita. Nämä kriteerit eivät muutu sen mukaan, millainen ensimmäisestä versiosta tulee.
 
@@ -217,11 +219,23 @@ Palvelun käyttöehdot, lisenssit ja ominaisuudet voivat muuttua. Tarkista ne ai
 
 Kirjaston videon lähdeaineisto on kirjaston omaa, kuvassa ei ole tunnistettavia henkilöitä, tekstitys toimii ilman ääntä ja ihminen on tarkistanut vaiheiden oikeellisuuden. Koska myös version 2 luettavuus täyttää ennalta sovitun kriteerin, video voidaan julkaista. Jos tekstitys olisi yhä liian nopea tai jokin käyttöoikeus jäisi epäselväksi, oikea päätös olisi hylätä versio ja jatkaa korjaamista — ei madaltaa kriteeriä jälkikäteen.
 
+## Vertaa bottisi toteutustapoja
+
+Palaa nyt omaan apuri-bottiisi. Vertaa vähintään kahta toteutustapaa samoilla kysymyksillä. Ensimmäinen voi olla varsinainen bottialusta, jossa ohjeet ja tietopohja määritetään pysyvästi. Toinen voi olla dokumentoitu suunnittelupolku, jossa arkkitehtuuri ja suoritusjälki kuvataan ilman väitettä toimivasta integraatiosta. Jos harkitset kuva-, ääni-, video- tai koodityökalua, käsittele sitä yhtenä toteutuksen osana, ei koko projektin tarkoituksena.
+
+Vertailussa tarkistat käytettävyyden lisäksi aineiston soveltuvuuden, käyttöoikeudet, kustannukset, saavutettavuuden, ylläpidon ja sen, millaista näyttöä ratkaisu voi tuottaa. Tekninen toteutus voi osoittaa alustan todellisen toiminnan, tietopohjan kytkennän ja jakamisen rajat. Dokumentoitu suunnittelupolku voi osoittaa arkkitehtuurin, simuloidun suoritusjäljen, testit ja tunnistetut rajoitukset, mutta se ei todista integraation, käyttöoikeuksien tai tallennuksen toimivan käytännössä.
+
+## Tee kolme päätöstä ennen rakentamista
+
+Kirjaa tunnin lopuksi kolme toisiinsa liittyvää päätöstä. **Toteutuspäätös** kertoo, minkä polun ja ympäristön valitset sekä miksi ne riittävät rajattuun tehtävään. **Riskipäätös** nimeää tärkeimmän aineisto-, käyttöoikeus-, harhaanjohtavuus- tai teknisen riskin ja keinon, jolla rajaat sitä. **Käyttöönottopäätös** kertoo, kuka saa käyttää bottia, kuka tarkistaa sen vastaukset, millä testillä käyttöönotto hyväksytään ja milloin käyttö keskeytetään.
+
+Yksinkertaisin riittävä ratkaisu on usein paras. Jos tavallinen tekstibotti ratkaisee tehtävän, erillistä kuva-, ääni-, video- tai koodityökalua ei tarvita. Jos lisätyökalu on perusteltu, sen oma syöte, tuotos, oikeudet ja virhetilanne lisätään testisuunnitelmaan.
+
 ## Yhteenveto
 
-Kuva, ääni, video ja koodi tarvitsevat erilaiset syötteet ja laatukriteerit. Niitä yhdistää sama työskentelytapa: käyttötarve johtaa ennalta päätettyihin kriteereihin, ensimmäisen version puute johtaa yhteen perusteltuun muutokseen ja versioiden vertailu johtaa julkaisu- tai hylkäyspäätökseen.
+Kuva, ääni, video ja koodi tarvitsevat erilaiset syötteet ja laatukriteerit. Niitä yhdistää sama työskentelytapa: käyttötarve johtaa ennalta päätettyihin kriteereihin, ensimmäisen version puute johtaa yhteen perusteltuun muutokseen ja versioiden vertailu johtaa julkaisu- tai hylkäyspäätökseen. Oman bottisi kannalta tärkein kysymys on, kuuluuko erikoistyökalu perustellusti toteutukseen vai rajataanko se pois.
 
-Tunnin tärkein tuotos ei ole näyttävin kuva, pisin kappale, sulavin video tai suurin koodimäärä. Se on **laboratorioloki**, josta toinen ihminen näkee, miten tuotosta ohjattiin, arvioitiin ja korjattiin.
+Tunnin ainoa tallennettava tuotos on **bottiprojektin valintakortti**. Siinä vertailet kaikkia neljää työkalureittiä tiiviisti, dokumentoit yhden käytännön kokeilun ja teet toteutus-, riski- ja käyttöönottopäätöksen. Muista reiteistä ei tehdä erillisiä tuotoksia.
 
 > **Lopuksi pohdittavaksi:** Mikä valitsemassasi tuotoksessa näyttää onnistumiselta ensi silmäyksellä mutta voi tarkemmassa tarkistuksessa osoittautua virheeksi?
 

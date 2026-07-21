@@ -12,17 +12,17 @@ Tässä oppitunnissa opit käyttämään **päätöspuuta** eli ajattelumallia, 
 
 > **Pysähdy hetkeksi:** Ajattele omaa tulevaa työtäsi. Mitä toistuvia ja monivaiheisia tehtäviä siinä voi olla? Mitkä niistä voisivat toimia työnkulkuina, ja mitkä vaatisivat agentin?
 
-> **Harness-kytkentä:** Agentti ei ole pelkkä kyvykäs kielimalli, vaan kielimallin ja sitä ympäröivän harnessin muodostama järjestelmä. Harness antaa tavoitteelle rakenteen, hallitsee tilaa ja työkaluja, rajaa oikeudet sekä huolehtii seurannasta. Jos tehtävä ei tarvitse näitä vastuita, promptaus tai tavallinen työnkulku on yleensä agenttia järkevämpi.
+> **Ohjauskehys-kytkentä:** Kurssin rajauksen mukainen agentti ei ole pelkkä kyvykäs kielimalli, vaan kielimallin ja agentin ohjauskehyksen muodostama järjestelmä. Ohjauskehys antaa tavoitteelle rakenteen, hallitsee tilaa ja työkaluja, rajaa oikeudet sekä huolehtii seurannasta. Jos tehtävä ei tarvitse mallin tekemää tilannekohtaista valintaa, promptaus tai tavallinen työnkulku on yleensä agenttia järkevämpi.
 
 ## Kolmen tason kustannukset ja hyödyt
 
 Automatisoinnissa on kolme perusvälinettä, ja jokaisella niistä on omat kustannuksensa ja hyötynsä. Kun päätät, mitä rakennat, sinun täytyy ymmärtää, mitä kukin väline käytännössä maksaa ja mitä hyötyä se tuottaa.
 
-Ensimmäinen väline on **yksinkertainen promptaus**. Käyttäjä kirjoittaa esimerkiksi ChatGPT:lle kysymyksen, ja tekoäly vastaa. Käyttäjä omistaa prosessin alusta loppuun. Kustannus on pieni: lähinnä käyttäjän aika ja mahdollinen ChatGPT-tilaus. Hyötynä on nopeus, helppous ja se, ettei ratkaisua tarvitse ylläpitää. Rajoitus on kuitenkin selvä: käyttäjän täytyy aloittaa prosessi itse. Jos sähköpostiviesteistä tarvitaan yhteenvetoja, jonkun täytyy kopioida viestit manuaalisesti ChatGPT:hen ja odottaa vastausta.
+Ensimmäinen väline on **yksinkertainen promptaus**. Käyttäjä kirjoittaa esimerkiksi kielimallisovellukselle kysymyksen, ja tekoäly vastaa. Käyttäjä omistaa prosessin alusta loppuun. Kustannus on pieni: lähinnä käyttäjän aika ja mahdollinen kielimallisovelluksen tilaus. Hyötynä on nopeus, helppous ja se, ettei ratkaisua tarvitse ylläpitää. Rajoitus on kuitenkin selvä: käyttäjän täytyy aloittaa prosessi itse. Jos sähköpostiviesteistä tarvitaan yhteenvetoja, jonkun täytyy kopioida viestit manuaalisesti kielimallisovellukseen ja odottaa vastausta.
 
-Toinen väline on **työnkulku** eli workflow. Kun sähköposti saapuu asiakaspalveluun, automaattinen työnkulku tarkistaa, mitä avainsanoja viesti sisältää. Sisältääkö se sanan ”lasku”? Viesti ohjataan henkilölle A. Sisältääkö se sanan ”palautus”? Viesti ohjataan henkilölle B. Eikö se sisällä mitään näistä? Viesti jätetään saapuneisiin. Työnkulku tekee nämä päätökset **joka kerta** ilman ihmisen osallistumista. Kustannus on suurempi kuin promptauksessa: sinun täytyy suunnitella logiikka, testata se ja ylläpitää sitä, kun avainsanat tai säännöt muuttuvat. Hyöty on kuitenkin merkittävä: ihmiset säästävät aikaa päivittäin, ja prosessi toimii johdonmukaisesti. Rajoitus on se, että säännöt ovat jäykkiä. Jos uusi tilanne ei sovi etukäteen kirjoitettuihin sääntöihin, työnkulku voi jumittua.
+Toinen väline on **työnkulku**. Työnkulku voi haarautua ehtojen perusteella, käyttää tietokantaa, säilyttää prosessin tilaa ja ohjata syötteen ennalta määriteltyyn työkaluun. Sen ei siis tarvitse olla yksinkertainen tai tilaton. Ratkaisevaa on, että etenemisen valitsee etukäteen kirjoitettu logiikka: ennalta määritelty työnkulku voi säilyttää tilaa, mutta eteneminen ei perustu kielimallin dynaamiseen suunnitteluun. Tulos voi silti muuttua, jos ulkoinen tieto tai prosessin tila muuttuu. Työnkulun etuna on ennakoitavuus: säännöt voidaan tarkistaa ja testata. Jos uusi tilanne ei sovi sääntöihin, se tarvitsee uuden säännön tai turvallisen poikkeuspolun.
 
-Kolmas väline on **agentti**. Asiakaspalvelun agentti voi lukea sähköposteja, analysoida niiden sävyä, etsiä vastaavia aiempia tapauksia tietokannasta ja **päättää**, onko se riittävän varma lähettämään automaattisen vastauksen vai pitäisikö viesti ohjata ihmiselle. Agentti ei siis vain seuraa yhtä ennalta määrättyä polkua, vaan arvioi tilanteen sille asetetuissa rajoissa. Jos asiakas on vihainen, agentti voi valita varovaisemman toimintatavan. Jos harness hakee aiemman samankaltaisen tapauksen agentin kontekstiin, kielimalli voi ottaa sen huomioon. Tämä ei tarkoita, että malli olisi oppinut tapauksesta itsestään.
+Kolmas väline on **agentti**. Asiakaspalvelun agentissa kielimalli voi tulkita viestin ja valita ohjauskehyksen sallimista vaihtoehdoista seuraavan toiminnon: hakeeko se hyväksytystä tietopohjasta, pyytääkö lisätietoa vai eskaloiko tapauksen ihmiselle. Valinta ei perustu mallin itse ilmoittamaan varmuusprosenttiin vaan havaittaviin ehtoihin, kuten puuttuvaan tietoon, ristiriitaisiin lähteisiin tai työkalun virheeseen. Ohjauskehys rajaa työkalut, oikeudet ja vaihtoehdot sekä kirjaa valinnan.
 
 Agentin kustannus on suuri. Kehittäminen on monimutkaisempaa, koska logiikka on dynaamista. Testaus vie paljon aikaa, koska agentti voi tuottaa odottamattomia tuloksia. Ylläpito on jatkuvaa, koska sinun täytyy valvoa, mitä agentti tekee ja millaisia päätöksiä se tekee. Agentin hyöty on siinä, että se pystyy käsittelemään monimutkaisia ja poikkeavia tapauksia, joita työnkulku ei osaa ratkaista. Rajoitus on korkea hinta: agentista täytyy saada merkittävä hyöty suhteessa siihen, mitä sen rakentaminen ja ylläpito maksavat.
 
@@ -34,7 +34,7 @@ Kun tarkastelet automatisoitavaa tehtävää, kysy seuraavat kuusi kysymystä **
 
 **Ensimmäinen kysymys: Toistuuko tehtävä?** Jos tehtävä on kertaluontoinen tai sitä tehdään hyvin harvoin, sitä ei yleensä kannata automatisoida. Automatisoinnin rakentamiseen kuluu todennäköisesti enemmän aikaa kuin itse tehtävän tekemiseen. Jos tehtävä taas toistuu joka päivä, joka tunti tai jopa useita kertoja minuutissa, automatisointi alkaa kannattaa. Jopa yksinkertainen työnkulku voi säästää merkittävästi aikaa, kun sitä käytetään tuhansia kertoja vuodessa.
 
-**Toinen kysymys: Onko tehtävä yksinkertainen vai monimutkainen?** Yksinkertaiset tehtävät, joissa on yksi tai kaksi vaihetta ja selkeät säännöt, ratkeavat usein työnkululla. Esimerkiksi ohje ”kun laskua ei ole vastaanotettu, siirrä asia kansioon Odottaa” on niin suoraviivainen, että työnkulku riittää. Monimutkaisissa tehtävissä tilanne on toinen. Jos tehtävä sisältää useita vaiheita, ehdollisia päätöksiä, oppimista ja mukautumista, työnkulun jäykät säännöt eivät välttämättä enää riitä. Tämä on merkki siitä, että **päättely** eli agentin keskeinen ominaisuus voisi tuoda lisäarvoa.
+**Toinen kysymys: Onko tehtävä yksinkertainen vai monimutkainen?** Yksinkertaiset tehtävät, joissa on selkeät säännöt, ratkeavat usein työnkululla. Vaiheiden suuri määrä ei yksin tee ratkaisusta agenttia: monimutkainenkin työnkulku voi käyttää ehtoja, tilamuuttujia ja tietokantaa. Agenttia kannattaa harkita vasta, kun kielimallin rajattu tilannearvio tuo tehtävään hyötyä, jota ennalta kirjoitettu reititys ei kohtuudella tuota.
 
 **Kolmas kysymys: Onko eteneminen ennalta määrätty vai pitääkö seuraava toiminto valita tilanteen perusteella?** Jos sama asia tehdään joka kerta samalla tavalla, työnkulku on yleensä riittävä. Agentista voi olla hyötyä silloin, kun kielimallin pitää tulkita uusi tilanne, valita käytettävä työkalu, arvioida työkalun tulos ja päättää seuraava toiminto. Myös agentin toimintaa rajaavat säännöt, oikeudet ja hyväksyntäportit. Ero ei siis ole siinä, että työnkululla on sääntöjä ja agentilla ei, vaan siinä, kuka tai mikä valitsee etenemisen rajojen sisällä.
 
@@ -51,7 +51,7 @@ Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysym
 <figure class="ai-demo"><span class="ai-demo__tag" id="l20-t"><i aria-hidden="true">// </i>kolme toteutustapaa, sama tehtävävirta — vaihtelu ratkaisee valinnan</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:398px">
   <div class="l20-wrap" data-once role="img" aria-labelledby="l20-t" aria-describedby="l20-d">
-    <span class="sr-only" id="l20-d">Kolme toteutustapaa samalle tehtävävirralle: rutiinissa työnkulku riittää; agenttia eli kielimallia harnessin kanssa kannattaa harkita, kun toistuva vaihtelu vaatii tilannepäättelyä, rajattuja työkaluja ja ihmisen valvontaa. Monimutkaisempi ei ole automaattisesti parempi.</span>
+    <span class="sr-only" id="l20-d">Kolme toteutustapaa samalle tehtävävirralle: rutiinissa työnkulku riittää; agenttia eli kielimallia agentin ohjauskehyksen kanssa kannattaa harkita, kun toistuva vaihtelu vaatii tilannepäättelyä, rajattuja työkaluja ja ihmisen valvontaa. Monimutkaisempi ei ole automaattisesti parempi.</span>
     <span class="l20-hd">KOLME TOTEUTUSTAPAA — SAMA TEHTÄVÄVIRTA</span>
     <span class="l20-in ia">saapuu: rutiiniviesti ×3</span>
     <span class="l20-in ib">saapuu: poikkeava tapaus</span>
@@ -66,7 +66,7 @@ Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysym
       <em class="l20-ds">sama sääntö joka kerta — nopein</em>
       <span class="l20-wx">ei sääntöä → jumittuu</span>
       <span class="l20-tl"><b class="l20-m wm1">✓</b><b class="l20-m wm2">✓</b><b class="l20-m wm3">✓</b><b class="l20-m x wm4">✗</b></span></div>
-    <div class="l20-ln p3"><b class="l20-nm">AGENTTI <i class="l20-df">= kielimalli + harness</i></b>
+    <div class="l20-ln p3"><b class="l20-nm">AGENTTI <i class="l20-df">kurssilla: kielimalli + ohjauskehys</i></b>
       <span class="l20-cost c1">rakennus + ylläpito ●●●<i class="sr-only"> (suuri)</i></span><span class="l20-cost c2">valvonta ●●○<i class="sr-only"> (keskitaso)</i></span>
       <i class="l20-tok ta"></i><span class="l20-th">arvioi…</span>
       <span class="l20-br">ratkaisee / ohjaa ihmiselle</span>
@@ -78,7 +78,7 @@ Katsotaan seuraavaksi kolmea käytännön tilannetta ja sitä, mitä kuusi kysym
 
   </div>
 </div>
-<figcaption class="ai-demo__cap">Sama tehtävävirta, kolme toteutustapaa. Kustannuksilla on kaksi ulottuvuutta: rakentaminen ja ylläpito sekä ihmistyö tapausta kohti. Rutiinissa työnkulku riittää; agenttia (kielimalli + harness) kannattaa harkita, kun toistuva vaihtelu vaatii tilannekohtaista päättelyä, rajattua työkalujen käyttöä ja ihmisen valvomaa toimintaa. Monimutkaisempi ei ole automaattisesti parempi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Sama tehtävävirta, kolme toteutustapaa. Kustannuksilla on kaksi ulottuvuutta: rakentaminen ja ylläpito sekä ihmistyö tapausta kohti. Kurssilla rajattua agenttia kannattaa harkita, kun toistuva vaihtelu vaatii kielimallin tilannearviota, rajattua työkalujen käyttöä ja ihmisen valvomaa toimintaa. Monimutkaisempi ei ole automaattisesti parempi.</figcaption></figure>
 <style>
 .l20-wrap{position:relative;width:560px;height:384px;font-family:var(--font-mono);animation:l20w 14s 1 forwards}
 .l20-hd{position:absolute;left:0;top:2px;font-size:12px;font-weight:700;letter-spacing:.07em;color:#EAEEF8}
@@ -190,21 +190,21 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää m
       <button type="button" class="l20q-next" disabled>Seuraava tilanne</button>
     </div>
     <div class="l20q-round r3" hidden>
-      <fieldset class="l20q-fs"><legend class="l20q-sc" tabindex="-1">Jatkuva tukivirta: tapauksen tila pitää säilyttää vaiheesta toiseen, työkalu valitaan rajatusta joukosta tilanteen mukaan ja harness valvoo — kriittiset ohjataan ihmiselle.</legend>
+      <fieldset class="l20q-fs"><legend class="l20q-sc" tabindex="-1">Jatkuva tukivirta: tapauksen tila pitää säilyttää vaiheesta toiseen, työkalu valitaan rajatusta joukosta tilanteen mukaan ja agentin ohjauskehys valvoo — kriittiset ohjataan ihmiselle.</legend>
         <div class="l20q-opts">
           <input type="radio" name="l20q3" id="l20q-3a" class="l20q-in"><label for="l20q-3a" class="l20q-opt">PROMPTAUS</label>
           <input type="radio" name="l20q3" id="l20q-3b" class="l20q-in"><label for="l20q-3b" class="l20q-opt">TYÖNKULKU</label>
           <input type="radio" name="l20q3" id="l20q-3c" class="l20q-in"><label for="l20q-3c" class="l20q-opt corr">AGENTTI</label>
           <span class="l20q-fb f3a">✗ Promptaus ei skaalaudu jatkuvaan virtaan — ihminen istuisi koneella koko ajan.</span>
           <span class="l20q-fb f3b">✗ Pelkkä työnkulku ei säilytä tapauksen tilaa eikä valitse työkaluja tilanteen mukaan.</span>
-          <span class="l20q-fb f3c">✓ Säilyvä tila, rajattujen työkalujen valinta ja harnessin valvonta — tämä on agentin (kielimalli + harness) tehtävä. Valitse silti aina yksinkertaisin riittävä toteutustapa.</span>
+          <span class="l20q-fb f3c">✓ Säilyvä tila, rajattujen työkalujen valinta ja agentin ohjauskehyksen valvonta — tämä sopii kurssilla rajatulle agentille. Valitse silti aina yksinkertaisin riittävä toteutustapa.</span>
         </div>
       </fieldset>
       <button type="button" class="l20q-next l20q-restart" disabled>Aloita alusta</button>
     </div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Päätös käytännössä: kertaluonteiseen riittää promptaus, toistuvaan selkeäsääntöiseen työnkulku — agenttia kannattaa harkita vasta, kun tarvitaan säilyvää tilaa, rajattujen työkalujen valintaa tilanteen mukaan ja harnessin valvomaa monivaiheista toimintaa.</figcaption></figure>
+<figcaption class="ai-demo__cap">Päätös käytännössä: kertaluonteiseen riittää promptaus, toistuvaan selkeäsääntöiseen työnkulku — agenttia kannattaa harkita vasta, kun tarvitaan säilyvää tilaa, rajattujen työkalujen valintaa tilanteen mukaan ja agentin ohjauskehyksen valvomaa monivaiheista toimintaa.</figcaption></figure>
 <style>
 .l20q-wrap{position:relative;width:560px;font-family:var(--font-mono)}
 .l20q-cta{display:block;text-align:left;padding-right:110px;font-size:12px;font-weight:600;letter-spacing:.05em;color:#B9C2DA}
@@ -236,7 +236,7 @@ Kuuden kysymyksen perusteella tehtävä toistuu, on monimutkainen, sisältää m
 
 Tässä on tärkeä ajatus, jonka monet unohtavat: agentti on monimutkainen. Se ei ole vain ”parempi työnkulku”. Se on luonteeltaan erilainen ratkaisu, ei pelkästään suurempi tai tehokkaampi versio työnkulusta.
 
-Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysaika mitataan usein viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa yleensä tekijä, joka ymmärtää säännöt. Agenttia täytyy testata laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii myös jatkuvaa valvontaa. Virheet ja ihmisen palaute tallennetaan, jotta niitä voidaan arvioida. Niiden perusteella ihminen korjaa ohjeita, harnessin sääntöjä tai testejä ja varmistaa muutoksen vaikutuksen uudella testillä. Agentti ei siis opi yksittäisestä virheestä itsestään.
+Työnkulun kehitysaika mitataan usein tunneissa tai päivissä. Agentin kehitysaika mitataan usein viikoissa tai kuukausissa, koska dynaaminen logiikka vaatii paljon enemmän suunnittelua. Työnkulkua testaa yleensä tekijä, joka ymmärtää säännöt. Agenttia täytyy testata laajemmin, koska sen dynaamisuus voi tuottaa odottamattomia tuloksia. Agentti vaatii myös jatkuvaa valvontaa. Virheet ja ihmisen palaute tallennetaan, jotta niitä voidaan arvioida. Niiden perusteella ihminen korjaa ohjeita, agentin ohjauskehyksen sääntöjä tai testejä ja varmistaa muutoksen vaikutuksen uudella testillä. Agentti ei siis opi yksittäisestä virheestä itsestään.
 
 Kysy siis aina: miksi rakennan agentin? Vastaus perustuu kustannusten ja hyötyjen vertailuun. Jos työnkulku ratkaisee ongelmasi 80 prosentissa tapauksista ja agentti ratkaisee sen 85 prosentissa tapauksista, oletko valmis maksamaan 10 kertaa suuremmat kehitys- ja ylläpitokustannukset viiden prosenttiyksikön parannuksesta? Usein vastaus on ei. Jos työnkulku ratkaisee vain 40 prosenttia tapauksista ja agentti 95 prosenttia tapauksista, hyöty voi olla selvästi kustannuksia suurempi. Silloin agentti voi olla järkevä ratkaisu.
 
@@ -258,15 +258,15 @@ Kun rakennat ratkaisua n8n:ssä, tässä oppitunnissa käsitellyt päätökset m
 
 **Yksinkertainen promptaus n8n:ssä:** yksi AI Agent -solmu saa viestin ja vastaa siihen. Muita solmuja ei tarvita. Tämä riittää, kun tehtävä on yksinkertainen.
 
-**Työnkulku n8n:ssä:** sarja solmuja seuraa toisiaan. Esimerkiksi: Email Trigger → IF-solmu, joka tarkistaa avainsanan → Slack-solmu, joka lähettää viestin oikealle kanavalle. Logiikka on kiinteä: sama syöte tuottaa aina saman tuloksen.
+**Työnkulku n8n:ssä:** ennalta kirjoitettu logiikka määrää etenemisen. Työnkulku voi haarautua, lukea ulkoista tilaa ja tuottaa samasta syötteestä eri tuloksen, jos esimerkiksi tietokannan sisältö muuttuu. Se ei silti ole tämän kurssin rajauksen mukainen agentti, ellei kielimalli valitse rajatuista vaihtoehdoista seuraavaa toimintoa havaintojen perusteella.
 
 **Agentti n8n:ssä:** AI Agent -solmulla on pääsy **työkaluihin**, kuten tietokantaan, verkkohakuun tai tiedostoihin. Agentti päättää itse, mitä työkalua se käyttää. Tämä on monimutkaisempaa mutta joustavampaa.
 
 Tämän esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja avaat n8n:n, tiedät jo, **mitä olet rakentamassa ja miksi**. Päätös promptauksen, työnkulun ja agentin välillä on **arkkitehtuuripäätös**, ei pelkkä työkalupäätös.
 
-## Kohti omaa projektia
+## Valitse lopullinen projektisi
 
-Kun olet valinnut oppitunnilla 19 oman agenttiongelmasi, tämän oppitunnin kuusi kysymystä auttavat sinua tarkistamaan, onko agentti todella oikea ratkaisu. Palaa päätöspuuhun ja käy ongelmasi läpi: toistuuko tehtävä, onko eteneminen ennalta määrätty vai pitääkö kielimallin valita seuraava toiminto tilanteen perusteella? Jos tavallinen työnkulku riittää, havainto on onnistunut oppimistulos. Rajaa silloin projektiin yksi aito tilannekohtainen päätös tai valitse toinen ongelma.
+Palaa tunnilla 19 kirjaamiisi ongelmaehdokkaisiin ja käy ne läpi päätöspuun avulla. Valitse vasta nyt lopullinen projekti. Jos tavallinen työnkulku riittää, havainto on onnistunut oppimistulos: valitse toinen ehdokas tai rajaa projektiin yksi aidosti tarpeellinen tilannekohtainen mallipäätös. Kirjaa päätösmuistioon myös hylätty vaihtoehto ja syy, miksi et valinnut sitä.
 
 > **Lopuksi pohdittavaksi:** Mitä kielimallin ympärillä pitää olla, jotta ratkaisua voi perustellusti kutsua agentiksi — ja tarvitaanko sitä tässä ongelmassa?
 
@@ -282,6 +282,5 @@ Päätöspuu ohjaa sinut oikean välineen luo. Yksinkertainen työnkulku ratkais
 
 - [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
 - [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
-- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
 
 Tarkistettu 15.7.2026.

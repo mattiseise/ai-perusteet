@@ -2,7 +2,7 @@
 
 ## ReAct (Reasoning + Acting)
 
-Suunnittelumalli, jossa agentti valitsee työkalun, saa tuloksen tai virheen ja valitsee seuraavan toiminnon havainnon perusteella. Lokiin tallennetaan rakenteiset kutsut, tulokset, toiminnot ja lyhyet päätösperustelut — ei raakaa chain-of-thoughtia.
+Suunnittelumalli, jossa agentti valitsee työkalun, saa tuloksen tai virheen ja valitsee seuraavan toiminnon havainnon perusteella. Lokiin tallennetaan työkalujen käytöt, tulokset, toiminnot ja lyhyet päätösperustelut — ei mallin sisäistä päättelyä.
 
 ## Eksplisiittinen työnkulku (explicit workflow)
 
@@ -20,21 +20,13 @@ Vaihe, jossa agentti tekee konkreettisen toiminnon — kutsuu funktiota, hakee t
 
 Samaa havaittavaa toimintakierrosta toistetaan useita kertoja. ReAct-toteutus iteroi: työkalukutsu → tulos tai virhe → seuraava toiminto.
 
-## Moniagenttijärjestelmä (multi-agent system)
+## Valinnainen syvennys: moniagenttijärjestelmä (multi-agent system)
 
-Useita erikoistuneet agentteja, jotka tekevät yhteistyötä. Jokainen agentti on erikoistunut omaan alueeseen.
-
-## Hierarkkinen malli (hierarchical model)
-
-Moniagenttijärjestelmän rakenne, jossa yksi agentti on johtaja ja jakaa tehtäviä muille.
-
-## Yhteistyömalli (collaborative model)
-
-Moniagenttijärjestelmän rakenne, jossa agentit keskustelevat keskenään ilman johtajaa.
+Usean erikoistuneen agentin muodostama järjestelmä, jossa tehtävä jaetaan eri toimijoille. Rakenne lisää työnjaon, tiedonkulun, lokituksen ja valvonnan tarvetta. Moniagenttijärjestelmää ei tarvita tämän kurssin lopputyössä.
 
 ## Orkestraatio (orchestration)
 
-Harnessin toteuttama koordinointi: miten työkalut tai agentit kutsutaan, miten tulokset ja virheet välitetään, milloin kierros päättyy ja mitä tapahtumia lokitetaan.
+Agentin ohjauskehyksen toteuttama koordinointi: miten työkalut tai agentit kutsutaan, miten tulokset ja virheet välitetään, milloin kierros päättyy ja mitä tapahtumia lokitetaan.
 
 ## Eskalointi (escalation)
 

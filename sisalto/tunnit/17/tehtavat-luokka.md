@@ -4,7 +4,7 @@
 
 > **HUOM:** Tätä varten sinulla tulee olla kerättynä rakennuspalikat 1–3 (tunnit 12, 14 ja 15).
 
-Aloitat oman **apuri-bottisi** rakentamisen Microsoft Copilotissa. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa, jotka olet kerännyt aiemmilla tunneilla. Tunnin lopussa sinulla on bottisi **ensimmäinen toimiva versio**, jota viimeistelet ja testaat tunnilla 18.
+Aloitat oman **apuri-bottisi** teknisen toteutuksen tai dokumentoidun suunnittelun. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa ja tunnin 16 valintakortin. Tunnin lopussa sinulla on joko ensimmäinen toimiva versio tai ensimmäinen tarkistettava suunnittelupaketti, jota viimeistelet tunnilla 18.
 
 Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan järjestelmäpromptin muotoilussa** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että rakennuspalikoiden ydin näkyy lopullisessa botissa.
 
@@ -14,7 +14,7 @@ Tämän tunnin työ rakentuu neljään vaiheeseen:
 
 1. **Avaa rakennuspalikat.** Tunnilla 12 teit testatun promptikortin, tunnilla 14 botin määrittelyn ja tunnilla 15 kuratoit tietopohjan sekä kirjoitit testisuunnitelman. Kaikki on nyt käytössä.
 2. **Kirjoita järjestelmäprompti.** Yhdistä rakennuspalikoiden ydin yhdeksi botin pääohjeeksi.
-3. **Rakenna botti Copilotissa.** Luo Copilot Agent, syötä järjestelmäprompti ja lataa tietopohjan dokumentit.
+3. **Toteuta valitsemasi polku.** Rakenna botti saatavilla olevalle alustalle tai tee arkkitehtuuri ja simuloitu suoritusjälki.
 4. **Aja tunnilla 15 suunnittelemasi kolme testiä.** Älä muuta odotuksia tulosten perusteella. Tunnista, mikä toimii ja mitä korjaat tunnilla 18.
 
 ## Rakennuspalikat työvälineinä
@@ -23,23 +23,23 @@ Jokainen rakennuspalikka palvelee tiettyä osaa botista. Älä yritä keksiä mi
 
 - **Rakennuspalikka 1** (tunti 12, promptikortti) → *järjestelmäpromptin rakenne ja kieli.* Olet jo testannut yhden rakenteen kahdella versiolla. Käytä toimivaksi osoittamiasi ratkaisuja botin pääohjeessa.
 - **Rakennuspalikka 2** (tunti 14, botin määrittely) → *järjestelmäpromptin sisältö.* Kaikki kuusi osaa (nimi, kohderyhmä, tarkoitus, persoona, työnkulku, rajat) muuttuvat ohjekirjoitukseksi botille.
-- **Rakennuspalikka 3** (tunti 15, tietopohja ja testisuunnitelma) → *botin asiantuntemuksen lähde ja ensimmäiset hyväksymisehdot.* Lataat dokumentit alustalle ja ajat ennalta kirjoitetut testit.
+- **Rakennuspalikka 3** (tunti 15, tietopohja ja testisuunnitelma) → *botin asiantuntemuksen lähde ja kolme ennalta kirjoitettua hyväksymistestiä.* Lataat dokumentit alustalle ja ajat tai simuloit testit ensimmäisen kerran.
 
 ## Bottisi vaatimukset tämän tunnin lopussa
 
-1. **Toimiva Copilot Agent** on luotu ja siihen pääsee.
+1. **Polun ydintuotos** on valmis: teknisellä polulla botti on avattavissa, suunnittelupolulla arkkitehtuuri ja simuloitu suoritusjälki ovat tarkistettavissa.
 2. **Järjestelmäprompti** sisältää selkeästi: roolin, työnkulun, persoonan ja vähintään 3 rajaa.
-3. **Tietopohjan dokumentit** on ladattu bottiin (3–5 kpl).
-4. **Yksi testikeskustelu** on käyty läpi alusta loppuun: olet keksinyt kuvitteellisen käyttötilanteen omasta aiheestasi ja antanut botin ohjata sinut tehtävän vaiheiden läpi.
-5. **Lista 3–5 havainnosta**, joita pitää korjata tunnilla 18.
+3. **Tietopohjan toteutus** näkyy: teknisellä polulla sallitut dokumentit on kytketty, suunnittelupolulla haku, lähdekatkelma ja käyttöoikeusraja on kuvattu.
+4. **Kaikki kolme ennalta kirjoitettua testiä** on ajettu tai simuloitu alusta loppuun. Suunnittelupolun jäljet merkitään simuloiduiksi.
+5. **Korjauslista** kertoo, mikä havainto kannattaa korjata tunnilla 18.
 
 ## Tämän tunnin lopputulos
 
 Tunnin 17 lopussa sinulla on:
 
-- Botin ensimmäinen toimiva versio Copilotissa
+- Botin ensimmäinen tekninen versio tai dokumentoitu suunnittelupaketti
 - Järjestelmäpromptin ensimmäinen versio kopioituna myös tekstinä muistiin (tarvitset sen tunnilla 18, kun iteroit)
-- Yksi testikeskustelu kuvakaappauksina tai kopioituna
+- Kolmen testin syötteet, odotukset ja ensimmäiset tulokset tallennettuina
 - Korjauslista tunnille 18: *"Tämä ei toimi vielä, korjaa…"*
 
 Tämä on lähtötaso. Lopullinen botti syntyy tunnilla 18, kun iteroit, testaat tarkemmin ja viimeistelet.
@@ -51,8 +51,8 @@ Aloita näin:
 1. Avaa **rakennuspalikka 2** ja kopioi sen kuusi osaa rinnakkain avoimena toiseen ikkunaan. Tämä on järjestelmäpromptisi raaka-aine.
 2. Avaa **rakennuspalikka 1** ja katso, mikä promptirakenne on osunut sinulla parhaiten kohdalleen. Käytä sen tyyliä järjestelmäpromptin kirjoittamisessa.
 3. Kirjoita järjestelmäpromptin ensimmäinen versio omin sanoin — älä yritä saada sitä täydelliseksi.
-4. Avaa Copilot ja luo uusi Agent. Syötä järjestelmäprompti ja lataa **rakennuspalikka 3** -tietopohjan dokumentit.
-5. Keksi kuvitteellinen käyttötilanne omasta aiheestasi ja aja botin kanssa keskustelu läpi.
-6. Kirjoita muistiin 3–5 kohtaa, joita pitää korjata. Älä korjaa niitä vielä — se tehdään tunnilla 18.
+4. Toteuta valintakorttisi mukainen tekninen botti tai piirrä suunnittelupolun arkkitehtuuri ja suoritusjälki.
+5. Aja tai simuloi kaikki kolme tunnilla 15 kirjoitettua testiä ja merkitse näytön luonne rehellisesti.
+6. Kirjoita tulosten perusteella korjauslista. Varsinainen nimetty korjaus ja sitä koskeva uudelleentesti tehdään tunnilla 18.
 
 *Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.*

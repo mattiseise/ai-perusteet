@@ -9,7 +9,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, milloin **agent
 - Opiskelija ymmärtää, että agentti ei ole aina parempi ratkaisu kuin yksinkertainen työnkulku.
 - Opiskelija tunnistaa automatisoinnin kolme tasoa: **promptaus**, **työnkulku** ja **agentti**.
 - Opiskelija ymmärtää, että monimutkaisuus, kustannukset ja riskit kasvavat, kun siirrytään työnkulusta agenttiin.
-- Opiskelija osaa erottaa kielimallin kyvykkyyden harnessin tarpeesta: agentti on perusteltu vasta, kun tehtävä tarvitsee molempia.
+- Opiskelija osaa erottaa kielimallin kyvykkyyden agentin ohjauskehyksen tarpeesta: agentti on perusteltu vasta, kun tehtävä tarvitsee molempia.
 
 ### Soveltaa ja analysoida
 
@@ -93,7 +93,7 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa vies
 
 ### Väärinkäsitys 5: ”Kyvykäs kielimalli on jo agentti.”
 
-**Korjaava näkökulma:** Kielimalli tuottaa vastauksia ja toimintaehdotuksia. Agentiksi järjestelmä muuttuu vasta, kun harness antaa sille tavoitteen, tilan ja työkalut sekä rajaa oikeudet, valvoo toimintaa ja käsittelee virheet. Jos näitä vastuita ei tarvita, promptaus tai työnkulku on rehellisempi kuvaus.
+**Korjaava näkökulma:** Kielimalli tuottaa vastauksia ja toimintaehdotuksia. Agentiksi järjestelmä muuttuu vasta, kun agentin ohjauskehys antaa sille tavoitteen, tilan ja työkalut sekä rajaa oikeudet, valvoo toimintaa ja käsittelee virheet. Jos näitä vastuita ei tarvita, promptaus tai työnkulku on rehellisempi kuvaus.
 
 ---
 
@@ -132,14 +132,14 @@ Kysy opiskelijoilta: ”Jos työnkulussa on yksi tekoälysolmu, joka vastaa vies
 - selkeän valinnan: promptaus, työnkulku vai agentti
 - perustelun, miksi valinta on järkevä
 - kuvauksen siitä päätöksestä, jonka kielimalli tekee tilanteen perusteella
-- kuvauksen harnessin vastuista
+- kuvauksen agentin ohjauskehyksen vastuista
 - yhden palautteen perusteella tehdyn tarkennuksen
 
 **Aika-arvio:** 20–30 minuuttia
 
 ---
 
-## CFU-kysymykset
+## Oppimisen tarkistuskysymykset
 
 1. **Automaatio vs. autonomia:** Miksi agentti ei ole automaattisesti parempi kuin työnkulku?
 2. **Kustannukset:** Mitä kustannuksia agenttiin liittyy rakentamisen lisäksi?
@@ -195,7 +195,7 @@ Tallennettava tuotos on **perusteltu päätösmuistio**. Pakollinen ydintuotos p
 |---|---|---|
 | 0–10 min | Virittäytyminen | Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso. |
 | 10–25 min | Ydinkäsite | Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä. |
-| 25–65 min | Perustuotos | Oppija ajaa oman ongelmansa päätöspuun läpi ja kuvaa agenttivalinnassa sekä kielimallin muuttuvan päätöksen että harnessin vastuut. |
+| 25–65 min | Perustuotos | Oppija ajaa oman ongelmansa päätöspuun läpi ja kuvaa agenttivalinnassa sekä kielimallin muuttuvan päätöksen että agentin ohjauskehyksen vastuut. |
 | 65–80 min | Testaus ja purku | Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus. |
 | 80–90 min | Tallennus ja lopputehtävä | Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös. |
 

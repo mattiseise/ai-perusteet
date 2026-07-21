@@ -169,12 +169,33 @@ def _view_switch(view, kansio):
 def _duration_badge(lesson, view):
     is_a = lesson['tyyppi'] == 'assessment'
     if is_a:
-        return '<span class="badge badge-assess">★ Arviointi</span>'
+        if view == 'kurssi':
+            return ('<span class="badge badge-assess">★ Arviointi · ohjeet n. 10 min '
+                    '· työskentely n. 80 min · yhteensä n. 90 min</span>')
+        return '<span class="badge badge-assess">★ Arviointi · 90 min oppitunti</span>'
     if view == 'kurssi':
-        ldir_teoria = S.read_file(N.os.path.join(N.lesson_dir(lesson['kansio']), 'teoria.md'))
-        ldir_sanasto = S.read_file(N.os.path.join(N.lesson_dir(lesson['kansio']), 'sanasto.md'))
-        mins = S.reading_time_min(ldir_teoria, ldir_sanasto)
-        return f'<span class="badge badge-type">Lukuaika n. {mins} min</span>'
+        ldir = N.lesson_dir(lesson['kansio'])
+        teoria = S.read_file(N.os.path.join(ldir, 'teoria.md'))
+        sanasto = S.read_file(N.os.path.join(ldir, 'sanasto.md'))
+        harjoittele = S.read_file(N.os.path.join(ldir, 'harjoittele.md'))
+
+        # Itsenäisen opiskelun lukuaika on tarkoituksella rauhallisempi kuin
+        # pelkkä tekstin silmäily. Harjoittelun arvio perustuu tehtävämäärään,
+        # ja lopputyön askel näytetään omana työvaiheenaan. Näin pitkä tunti
+        # ei enää näytä harhaanjohtavasti 5–10 minuutin kokonaisuudelta.
+        reading_mins = S.reading_time_min(teoria, sanasto, wpm=160)
+        task_count = len(S.TASK_BLOCK_RE.findall(harjoittele))
+        practice_mins = max(15, task_count * 4) if task_count else 0
+        output_mins = 25 if lesson.get('lopputyon_askel') else 0
+        total_mins = reading_mins + practice_mins + output_mins
+
+        parts = [f'Teoria n. {reading_mins} min']
+        if practice_mins:
+            parts.append(f'harjoittelu n. {practice_mins} min')
+        if output_mins:
+            parts.append(f'lopputyön askel n. {output_mins} min')
+        parts.append(f'yhteensä n. {total_mins} min')
+        return f'<span class="badge badge-type">{" · ".join(parts)}</span>'
     return '<span class="badge badge-type">90 min oppitunti</span>'
 
 

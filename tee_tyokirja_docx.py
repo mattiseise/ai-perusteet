@@ -379,18 +379,20 @@ def add_choice_box(doc, title, items, *, color=BLUE, fill=PAPER):
     add_checklist(doc, items, color=color, fill=fill)
 
 
-def add_prompt_card(doc, number, *, color=VIOLET):
-    add_kicker(doc, f"PROMPTIKORTTI {number}", color)
-    add_h1(doc, f"Promptikortti {number}", color)
-    intro = "Tallenna sekä ensimmäinen että viimeistelty versio. Näin oma ajattelusi ja tekemäsi parannus jäävät näkyviin."
-    if number == 1:
-        intro += " Laadi yhteensä 5–7 korttia; kopioi tyhjä korttisivu, jos tarvitset kuudennen tai seitsemännen kortin."
-    add_body(doc, intro)
-    add_field(doc, "Nimeä prompti tai käyttötilanne.", height=12, color=color)
-    add_field(doc, "Kirjoita ensimmäinen versio kokonaisuudessaan.", height=34, color=color)
-    add_field(doc, "Mikä vastauksessa toimi? Mitä piti täsmentää?", height=25, color=color)
-    add_field(doc, "Kirjoita viimeistelty prompti kokonaisuudessaan.", height=34, color=color)
-    add_field(doc, "Mihin prompti sopii ja mihin se ei sovi?", height=20, color=color)
+def add_prompt_card(doc, *, color=VIOLET):
+    add_kicker(doc, "RAKENNUSPALIKKA 1", color)
+    add_h1(doc, "Testattu promptikortti", color)
+    add_body(doc, "Laadi yksi uudelleen käytettävä promptikortti. Testaa kaksi versiota samalla aineistolla ja muuta niiden välissä vain yhtä nimettyä asiaa.")
+    add_field(doc, "Kortin nimi ja käyttötilanne", height=12, color=color)
+    add_field(doc, "Tavoite, käyttäjä tai yleisö sekä vaihtuvan syötteen paikka", height=20, color=color)
+    add_field(doc, "Laatukriteerit, jotka päätit ennen ensimmäistä ajoa", height=20, color=color)
+    add_field(doc, "Promptin versio 1, käytetty aineisto ja saatu vastaus", height=34, color=color)
+
+    page_break(doc)
+    add_page_heading(doc, "use", "Promptikortin vertailu", "Dokumentoi yksi perusteltu muutos ja rajaa johtopäätös tehtyyn kokeeseen.", sublabel="RAKENNUSPALIKKA 1 · JATKUU")
+    add_field(doc, "Nimeä yksi havaittu puute ja sitä vastaava promptimuutos.", height=18, color=color)
+    add_field(doc, "Promptin versio 2 ja samalla aineistolla saatu vastaus", height=34, color=color)
+    add_field(doc, "Mitä muutos osoitti tässä testissä? Kirjaa myös kortin tunnettu raja ja yhteys botin järjestelmäpromptiin.", height=26, color=color)
 
 
 def add_label_detail_table(doc, rows, *, color=BLUE, fill="FBFCFE", label_width=2350, row_height=10):
@@ -574,67 +576,60 @@ def build_document():
     add_field(doc, "Kirjoita tapausesimerkki.", height=55, color=BLUE)
 
     page_break(doc)
-    add_page_heading(doc, "theory", "Todistusaineisto 3", "Tee kaksi hallusinaatiokoetta tunnilla 7 ja tarkista kumpikin vastaus luotettavasta lähteestä.", sublabel="OSA 1 · TEORIA · TUNTI 7")
-    for n in (1, 2):
-        if n == 2:
-            page_break(doc)
-            add_page_heading(doc, "theory", "Hallusinaatiokoe 2", "Tee toinen koe eri kysymyksellä ja tarkista vastaus luotettavasta lähteestä.", sublabel="TODISTUSAINEISTO 3 · JATKUU")
-        add_h2(doc, f"Hallusinaatiokoe {n}", BLUE, before=7)
-        add_field(doc, "Kysymys ja mallin vastaus", height=30, color=BLUE)
-        add_field(doc, "Tarkistuslähde ja oikea vastaus", height=25, color=BLUE)
-        add_field(doc, "Mistä hallusinaation saattoi tunnistaa?", height=22, color=BLUE)
+    add_page_heading(doc, "theory", "Todistusaineisto 3", "Arvioi tunnilla 7 sekä kielimallin väite että petoksia tunnistavan luokittelumallin tulokset.", sublabel="OSA 1 · TEORIA · TUNTI 7")
+    add_h2(doc, "Kielimallin väitteen tarkistus", BLUE, before=7)
+    add_field(doc, "Kirjaa tarkistettava väite ja mallin vastaus.", height=34, color=BLUE)
+    add_field(doc, "Nimeä riippumaton lähde ja kirjaa, mitä se osoittaa.", height=30, color=BLUE)
+    add_field(doc, "Tee johtopäätös: vahvistuiko väite, kumoutuiko se vai jäikö se epävarmaksi?", height=30, color=BLUE)
 
     page_break(doc)
-    add_page_heading(doc, "theory", "Vastuullisen käyttäjän tarkistuslista", "Kirjoita noin 250–300 sanaa. Muotoile kokeiden pohjalta toimintatapa, jota voit käyttää myös kurssin jälkeen.", sublabel="TODISTUSAINEISTO 3 · JATKUU")
-    add_field(doc, "Kirjaa 3–5 hallusinaation tuntomerkkiä.", height=38, color=BLUE)
-    add_field(doc, "Selitä 2–3 lauseella, miksi kielimalli voi hallusinoida.", height=32, color=BLUE)
-    add_field(doc, "Kirjoita 5–7 vaihetta, jotka käyt läpi ennen kuin luotat vastaukseen.", height=58, color=BLUE)
-    add_info_box(doc, "Pidä tarkistuslista käytännöllisenä", "Kirjoita jokainen vaihe toimintaverbillä. Esimerkiksi: tunnista väite, etsi alkuperäinen lähde, vertaa tietoja, merkitse epävarmuus ja korjaa vastaus.", color=BLUE, fill=BLUE_TINT)
+    add_page_heading(doc, "theory", "Luokittelumallin arvio", "Petosmalli arvioi 1 000 maksua. Todellisia petoksia oli 10. Malli löysi niistä 8 ja pysäytti lisäksi 42 tavallista maksua.", sublabel="TODISTUSAINEISTO 3 · JATKUU")
+    add_field(doc, "Kirjaa väärät positiiviset ja väärät negatiiviset sekä selitä niiden käytännön seuraukset.", height=44, color=BLUE)
+    add_field(doc, "Laske tai tulkitse kokonaistarkkuus, osumatarkkuus ja kattavuus. Mitä kukin mittari kertoo — ja mitä se ei kerro?", height=64, color=BLUE)
 
     page_break(doc)
-    add_page_heading(doc, "theory", "Teoria-osion lopputyö", "Valitse kirjallinen tai visuaalis-suullinen suoritustapa. Käytä vähintään kahta todistusaineistoa; kaikkien kolmen käyttäminen on suositeltavaa.", sublabel="OSA 1 · TEORIA · LOPPUTYÖ")
-    add_choice_box(doc, "Valitse suoritustapa", ["Kirjallinen asiantuntijalausunto, 750–1000 sanaa", "Tilannekartta ja päätöspuu sekä 5–8 minuutin suullinen esitys"], color=BLUE, fill=BLUE_TINT)
+    add_page_heading(doc, "theory", "Oma tarkistuskäytäntö", "Kirjoita 6–8 vaihetta, joilla tarkistat tekoälytuloksen. Aloita jokainen vaihe toimintaverbillä.", sublabel="TODISTUSAINEISTO 3 · JATKUU")
+    add_field(doc, "Kirjoita 6–8 vaihetta.", height=115, color=BLUE)
+    add_info_box(doc, "Pidä tarkistuskäytäntö käytännöllisenä", "Esimerkiksi: tunnista tehtävä ja virhetyyppi, lukitse odotus, etsi alkuperäinen lähde, vertaa tietoja ja mittareita, arvioi seuraus, merkitse epävarmuus ja kirjaa ihmisen tarkistus.", color=BLUE, fill=BLUE_TINT)
+
+    page_break(doc)
+    add_page_heading(doc, "theory", "Teoria-osion lopputyö", "Valitse kirjallinen tai visuaalis-suullinen suoritustapa. Käytä kaikkia kolmea todistusaineistoa.", sublabel="OSA 1 · TEORIA · LOPPUTYÖ")
+    add_choice_box(doc, "Valitse suoritustapa", ["Kirjallinen asiantuntijalausunto, 500–700 sanaa", "Tilannekartta ja päätöspuu sekä 5–8 minuutin suullinen esitys"], color=BLUE, fill=BLUE_TINT)
     add_choice_box(doc, "Valitse skenaario", ["Asiakaspalvelu ja tietovuoto", "Rekrytointialgoritmi ja syrjintä", "Markkinointisisältö ja tekijänoikeudet"], color=BLUE, fill=BLUE_TINT)
+    add_info_box(doc, "Rajaa lähdetyö", "Käytä tunnilla 8 arvioimiasi lähteitä. Jos jokin työn keskeinen väite ei selviä niistä, tee tunnilla 9 enintään yksi uusi lähdetarkistus.", color=BLUE, fill=BLUE_TINT)
     add_field(doc, "Kirjaa keskeiset riskit ja käsitteet.", height=32, color=BLUE)
-    add_field(doc, "Nimeä käyttämäsi todistusaineistot ja lähteet.", height=26, color=BLUE)
+    add_field(doc, "Nimeä käyttämäsi todistusaineistot ja tunnilla 8 arvioidut lähteet. Kirjaa, mitä väitettä kukin lähde tukee.", height=30, color=BLUE)
     add_field(doc, "Liitä tarkka prompti tai keskusteluloki.", height=24, color=BLUE, placeholder="Kirjoita tähän tai lisää linkki tai liite.")
 
     add_page_heading(doc, "theory", "Työn neljä osaa", "Jäsennä valitsemasi suoritustapa näiden neljän kysymyksen avulla.", sublabel="TEORIA-OSION LOPPUTYÖ · JATKUU", page_break_before=True)
     add_field(doc, "1. Mitä tapahtui? Kuvaa tilanne neutraalisti.", height=24, color=BLUE)
     add_field(doc, "2. Miksi se tapahtui? Selitä syyt kurssin käsitteillä.", height=28, color=BLUE)
     add_field(doc, "3. Miten tilanne pitäisi hoitaa? Ehdota konkreettiset toimenpiteet.", height=30, color=BLUE)
-    add_field(doc, "4. Mikä on asiallinen vastuu? Kerro, kuka vastaa mistä ja miksi.", height=28, color=BLUE)
+    add_field(doc, "4. Miten ammatillinen ja käytännön vastuu jakautuvat? Kerro, kuka vastaa mistä ja miksi.", height=28, color=BLUE)
 
     page_break(doc)
     add_page_heading(doc, "theory", "Palautettava työ", "Täytä valitsemaasi suoritustapaan kuuluvat kohdat ja säilytä myös työprosessisi näyttö.", sublabel="TEORIA-OSION LOPPUTYÖ · TUOTOS")
     add_h2(doc, "Kirjallinen suoritustapa", BLUE)
     add_field(doc, "Lisää luonnos ja valmis asiantuntijalausunto linkkeinä tai liitteinä.", height=22, color=BLUE, placeholder="Lisää linkit tai liitteet.")
     add_h2(doc, "Visuaalis-suullinen suoritustapa", BLUE)
-    add_field(doc, "Tallenna tilannekartta.", height=18, color=BLUE, placeholder="Lisää linkki tai liite.")
-    add_field(doc, "Tallenna päätöspuu.", height=18, color=BLUE, placeholder="Lisää linkki tai liite.")
+    add_info_box(doc, "Kevyt tukirunko", "Jaa yhden sivun tilannekartta neljään kenttään: mitä tapahtui, miksi se tapahtui, miten tilanne hoidetaan ja miten vastuu jakautuu. Tee päätöspuuhun kolme päätöskohtaa, kaksi haaraa kuhunkin sekä päätepisteisiin toiminta ja vastuurooli. Avainsanat riittävät, koska avaat perustelut puheessa.", color=BLUE, fill=BLUE_TINT)
+    add_field(doc, "Tallenna yhden sivun tilannekartta.", height=18, color=BLUE, placeholder="Lisää linkki tai liite.")
+    add_field(doc, "Tallenna kevyt päätöspuu.", height=18, color=BLUE, placeholder="Lisää linkki tai liite.")
     add_field(doc, "Tallenna 5–8 minuutin esityksen muistiinpanot tai nauhoite.", height=24, color=BLUE, placeholder="Kirjoita tähän tai lisää linkki tai liite.")
     add_info_box(doc, "Muista prosessinäyttö", "Säilytä lähteet, luonnos ja tekemäsi korjaukset. Valmis työ ei yksin osoita, miten tarkistit väitteet ja päädyit lopputulokseen.", color=BLUE, fill=BLUE_TINT)
 
     page_break(doc)
-    add_page_heading(doc, "theory", "Korjausloki ja puolustus", "Dokumentoi vähintään kolme ennen–jälkeen-korjausta. Perustele jokainen korjaus lähteellä tai kurssin käsitteellä.", sublabel="TEORIA-OSION LOPPUTYÖ · VIIMEISTELY")
-    for n in range(1, 4):
+    add_page_heading(doc, "theory", "Korjausloki ja puolustus", "Dokumentoi kaksi ennen–jälkeen-korjausta. Perustele kumpikin korjaus lähteellä tai kurssin käsitteellä.", sublabel="TEORIA-OSION LOPPUTYÖ · VIIMEISTELY")
+    for n in range(1, 3):
         add_h3(doc, f"Korjaus {n}", BLUE)
         add_label_detail_table(doc, [("Ennen", "Kirjoita tähän."), ("Jälkeen", "Kirjoita tähän."), ("Perustelu", "Miksi korjasit? Nimeä lähde tai käsite.")], color=BLUE, row_height=7)
-    add_field(doc, "Kirjoita kirjallisen suoritustavan 2–3 minuutin puolustuksen muistiinpanot.", height=26, color=BLUE)
+    add_field(doc, "Kirjoita kirjallisen suoritustavan 1–2 minuutin puolustuksen muistiinpanot.", height=26, color=BLUE)
     add_page_heading(doc, "theory", "Lopputarkistus", "Varmista ennen palautusta, että työ osoittaa sekä ymmärryksesi että työprosessisi.", sublabel="TEORIA-OSION LOPPUTYÖ · VIIMEISTELY", page_break_before=True)
-    add_checklist(doc, ["Käytän käsitteitä täsmällisesti ja sovellan niitä tilanteeseen.", "Hyödynnän vähintään kahta todistusaineistoa.", "Ehdotan konkreettisia toimenpiteitä: kuka tekee, mitä tekee ja milloin.", "Tuotos on selkeä ja asiallinen, ja sen väitteet ovat perusteltuja.", "Käsittelen vastuukysymyksen omana osanaan."], color=BLUE, fill=BLUE_TINT)
+    add_checklist(doc, ["Käytän käsitteitä täsmällisesti ja sovellan niitä tilanteeseen.", "Hyödynnän kaikkia kolmea todistusaineistoa.", "Ehdotan konkreettisia toimenpiteitä: kuka tekee, mitä tekee ja milloin.", "Tuotos on selkeä ja asiallinen, ja sen väitteet ovat perusteltuja.", "Käsittelen vastuukysymyksen omana osanaan."], color=BLUE, fill=BLUE_TINT)
 
     # OSA 2 · TEKOÄLYJEN KÄYTTÖ
     new_module_section(doc, "use")
-    add_prompt_card(doc, 1)
-    for number in range(2, 6):
-        page_break(doc)
-        add_prompt_card(doc, number)
-
-    page_break(doc)
-    add_page_heading(doc, "use", "Promptauspankin yhteenveto", "Tunnista toimivat rakenteet ja kytke vähintään yksi promptikortti tulevan botin aiheeseen.", sublabel="RAKENNUSPALIKKA 1 · YHTEENVETO")
-    add_field(doc, "Kuvaa 3–5 lauseella rakenteet, jotka toimivat toistuvasti eri prompteissa.", height=36, color=VIOLET)
-    add_field(doc, "Mikä promptikortti liittyy botin aiheeseen? Miten käytät sitä järjestelmäpromptin raaka-aineena?", height=36, color=VIOLET)
+    add_prompt_card(doc)
 
     page_break(doc)
     add_page_heading(doc, "use", "Botin määrittely", "Rakenna botin perustamisasiakirja tunnilla 14. Kirjoita selkeästi, kenelle botti on, mitä se tekee ja missä sen rajat kulkevat.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · TUNTI 14")
@@ -653,66 +648,83 @@ def build_document():
     add_field(doc, "Tiivistä botin ydin yhteen lauseeseen.", height=16, color=VIOLET)
 
     page_break(doc)
-    add_page_heading(doc, "use", "Tietopohja", "Valitse tunnilla 15 yhteensä 3–5 dokumenttia. Perustele niiden hyöty, luotettavuus, ajantasaisuus ja käyttöoikeus.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · TUNTI 15")
+    add_page_heading(doc, "use", "Tietopohja", "Valitse tunnilla 15 yhteensä 2–4 dokumenttia. Perustele niiden hyöty, luotettavuus, ajantasaisuus ja käyttöoikeus.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · TUNTI 15")
     add_field(doc, "Kirjaa 5–8 tietotarvetta, joihin botin pitää osata vastata.", height=38, color=VIOLET)
     for n in range(1, 3):
         add_source_card(doc, n)
 
     page_break(doc)
     add_page_heading(doc, "use", "Tietopohjan dokumentit", "Täydennä loput dokumentit ja arvioi tietopohjan kattavuus.", sublabel="RAKENNUSPALIKKA 3 · JATKUU")
-    for n in range(3, 6):
+    for n in range(3, 5):
         add_source_card(doc, n)
     add_page_heading(doc, "use", "Tietopohjan kattavuus", "Arvioi kokonaisuutta yksittäisten dokumenttien laadun lisäksi.", sublabel="RAKENNUSPALIKKA 3 · YHTEENVETO", page_break_before=True)
     add_field(doc, "Mitä tietopohja kattaa hyvin? Mitä se ei vielä kata?", height=28, color=VIOLET)
     add_info_box(doc, "Tunnista myös puuttuva tieto", "Hyvä tietopohja ei yritä näyttää kattavammalta kuin se on. Kirjaa näkyviin, milloin botin pitää sanoa, ettei tieto riitä vastaukseen.", color=VIOLET, fill=VIOLET_TINT)
     add_field(doc, "Tietopohjan kansio tai tallennuspaikka", height=18, color=VIOLET)
-    add_checklist(doc, ["Tietopohjan 3–5 varsinaista lähdedokumenttia on tallennettu samaan kansioon, ja niiden nimet vastaavat taulukkoa."], color=VIOLET, fill=VIOLET_TINT)
+    add_checklist(doc, ["Tietopohjan 2–4 varsinaista lähdedokumenttia on tallennettu samaan kansioon, ja niiden nimet vastaavat taulukkoa."], color=VIOLET, fill=VIOLET_TINT)
 
     page_break(doc)
-    add_page_heading(doc, "use", "Apuri-botin lopputyö", "Voit käyttää valitsemaasi alustaa tai tehdä dokumentoidun kuivaharjoittelun. Molemmissa vaihtoehdoissa sinun pitää pystyä tekemään työnkulku ja valintasi näkyviksi.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · LOPPUTYÖ")
-    add_choice_box(doc, "Valitse toteutustapa", ["Toimiva botti", "Dokumentoitu kuivaharjoittelu"], color=VIOLET, fill=VIOLET_TINT)
-    add_field(doc, "Lisää linkki toteutukseen tai kuivaharjoittelun suoritusjälki: järjestelmäprompti, käyttäjän syötteet, vastaukset ja odotetut työkaluvaiheet.", height=24, color=VIOLET)
+    add_page_heading(doc, "use", "Yhden välineen kokeilu", "Kokeile tunnilla 16 yhtä työkalureittiä käytännössä. Jos sopivaa palvelua ei ole, arvioi opettajan antamia esimerkkituotoksia.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · TUNTI 16")
+    add_choice_box(doc, "Valitse kokeiltu reitti", ["Kuva", "Ääni tai musiikki", "Video", "Koodi"], color=VIOLET, fill=VIOLET_TINT)
+    add_field(doc, "Käyttötarkoitus, käyttäjä ja tärkein onnistumisen ehto", height=20, color=VIOLET)
+    add_field(doc, "Käytetty väline, syöte ja mahdollinen lähdeaineisto", height=28, color=VIOLET)
+    add_field(doc, "Ennalta päätetyt arviointikriteerit ja version 1 havainnot", height=28, color=VIOLET)
+    add_field(doc, "Yksi nimetty muutos, version 2 tulos ja rajattu johtopäätös", height=28, color=VIOLET)
+
+    page_break(doc)
+    add_page_heading(doc, "use", "Bottiprojektin valintakortti", "Vertaa työkalureittejä ja kahta toteutustapaa. Tee lopuksi toteutus-, riski- ja käyttöönottopäätös.", sublabel="TUNTI 16 · TALLENNETTAVA TUOTOS")
+    add_label_detail_table(doc, [("Kuva", "Sopiiko käyttäjätarpeeseen? Miksi tai miksi ei?"), ("Ääni tai musiikki", "Sopiiko käyttäjätarpeeseen? Miksi tai miksi ei?"), ("Video", "Sopiiko käyttäjätarpeeseen? Miksi tai miksi ei?"), ("Koodi", "Sopiiko käyttäjätarpeeseen? Miksi tai miksi ei?")], color=VIOLET, row_height=9)
+    add_field(doc, "Vertaa toteutustapoja A ja B: järjestelmäprompti, tietopohja, mahdollinen erikoistyökalu, näyttö sekä suurin riski.", height=38, color=VIOLET)
+    add_field(doc, "Kirjoita toteutuspäätös, tärkein riskirajaus ja havaittava käyttöönottokriteeri. Nimeä suunnittelupolulla teknisesti todentamattomat ominaisuudet.", height=34, color=VIOLET)
+
+    page_break(doc)
+    add_page_heading(doc, "use", "Apuri-botin lopputyö", "Valitse toimiva tekninen toteutus tai dokumentoitu suunnittelusuoritus. Polut ovat samanarvoisia, mutta niissä osoitetaan osaaminen eri tavalla.", sublabel="OSA 2 · TEKOÄLYJEN KÄYTTÖ · LOPPUTYÖ")
+    add_choice_box(doc, "Valitse toteutustapa", ["Toimiva tekninen toteutus", "Dokumentoitu suunnittelusuoritus"], color=VIOLET, fill=VIOLET_TINT)
+    add_field(doc, "Lisää teknisen botin linkki ja suoritusjälki tai suunnittelusuorituksen arkkitehtuuri ja simuloitu suoritusjälki. Merkitse simuloidut vaiheet sekä teknisesti todentamattomat ominaisuudet.", height=24, color=VIOLET)
     add_field(doc, "Liitä päivitetty botin määrittely.", height=24, color=VIOLET, placeholder="Kirjoita tähän tai lisää linkki tai liite.")
     add_field(doc, "Kirjoita järjestelmäprompti kokonaisuudessaan.", height=70, color=VIOLET)
 
     page_break(doc)
     add_page_heading(doc, "use", "Tietopohjan perustelut", "Nimeä lopulliseen toteutukseen valitsemasi dokumentit ja perustele, miksi juuri ne kuuluvat mukaan.", sublabel="APURI-BOTIN LOPPUTYÖ · JATKUU")
-    add_field(doc, "Nimeä tietopohjan 3–5 dokumenttia ja perustele valinnat.", height=70, color=VIOLET)
+    add_field(doc, "Nimeä tietopohjan 2–4 dokumenttia ja perustele valinnat.", height=70, color=VIOLET)
     add_info_box(doc, "Tarkista ennen testausta", "Varmista, että järjestelmäprompti, botin määrittely ja tietopohja ovat keskenään johdonmukaisia. Korjaa ristiriidat ennen testien ajamista.", color=VIOLET, fill=VIOLET_TINT)
 
     page_break(doc)
-    add_page_heading(doc, "use", "Testaus, korjaus ja reflektio", "Aja normaali tapaus, kielteinen testi ja reunatapaus. Tee vähintään yksi nimetty korjaus ja aja sitä koskeva testi uudelleen.", sublabel="APURI-BOTIN LOPPUTYÖ · VIIMEISTELY")
+    add_page_heading(doc, "use", "Testaus, korjaus ja reflektio", "Aja normaali tapaus, kielteinen testi ja reunatapaus. Tee yksi nimetty korjaus ja aja juuri sitä koskeva testi uudelleen samalla odotuksella.", sublabel="APURI-BOTIN LOPPUTYÖ · VIIMEISTELY")
     for n, category in enumerate(("Normaali tapaus", "Kielteinen testi", "Reunatapaus"), 1):
         add_test_card(doc, n, category, color=VIOLET)
     add_h2(doc, "Nimetty korjaus ja uudelleentesti", VIOLET)
     add_label_detail_table(doc, [("Havaittu puute", "Kirjoita tähän."), ("Tehty muutos", "Kirjoita tähän."), ("Ennen ja jälkeen", "Vertaa tuloksia ja kirjoita johtopäätös.")], color=VIOLET, row_height=11)
-    add_field(doc, "Reflektio, 200–300 sanaa", hint="Mitä opit, mikä toimi heti, mikä vaati useita yrityksiä ja mitä tekisit toisin?", height=45, color=VIOLET)
+    add_field(doc, "Reflektio, 200–300 sanaa tai saavutettava äänite/selostettu kuvakooste", hint="Mitä opit, mikä havainto johti korjaukseen ja mitä tekisit seuraavaksi?", height=45, color=VIOLET)
     add_field(doc, "Esittelyn muistiinpanot, 2–3 minuuttia", hint="Käyttäjä ja ongelma, yksi ennen–jälkeen-korjaus, yksi perusteltu rajaus sekä vastauksesi mahdolliseen jatkokysymykseen.", height=28, color=VIOLET)
     add_h2(doc, "Lopputarkistus", VIOLET)
-    add_checklist(doc, ["Botti toimii rajatussa tehtävässä tai kuivaharjoittelu todentaa työnkulun.", "Järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.", "Tietopohjassa on 3–5 perusteltua dokumenttia.", "Normaali, kielteinen ja reunatapaus sekä korjaus ja uudelleentesti on dokumentoitu.", "Reflektio ja esittely osoittavat, että ymmärrän tekemäni valinnat."], color=VIOLET, fill=VIOLET_TINT)
+    add_checklist(doc, ["Tekninen botti toimii rajatussa tehtävässä tai suunnittelusuoritus kuvaa toteuttamiskelpoisen rakenteen ja rajaa teknisesti todentamattomat ominaisuudet.", "Järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.", "Tietopohjassa on 2–4 perusteltua dokumenttia.", "Normaali, kielteinen ja reunatapaus sekä yksi korjaus ja sen uudelleentesti on dokumentoitu.", "Reflektio ja esittely osoittavat, että ymmärrän tekemäni valinnat."], color=VIOLET, fill=VIOLET_TINT)
 
     # OSA 3 · AGENTIT
     new_module_section(doc, "agents")
-    add_page_heading(doc, "agents", "Agentin pohjapiirrokset", "Tällä kurssilla agentti = kielimalli + harness. Suunnittelun tarkistuslistaan kuuluu kuusi rakennusosaa. Kaikkia niistä ei tarvitse toteuttaa jokaisessa agentissa erillisinä teknisinä osina.", sublabel="OSA 3 · AGENTIT · TUNNIT 19–25")
+    add_page_heading(doc, "agents", "Agentin pohjapiirrokset", "Tällä kurssilla rakennettavalla tekoälyagentilla tarkoitetaan kielimallin ja sitä ohjaavan agentin ohjauskehyksen (harness) muodostamaa järjestelmää. Suunnittelun tarkistuslistaan kuuluu kuusi rakennusosaa.", sublabel="OSA 3 · AGENTIT · TUNNIT 19–25")
     add_info_box(doc, "Kuusi rakennusosaa", "Syötekäsittelijä · päättelijä ja suunnittelija · työkalujen suorittaja · muisti ja konteksti · turvakerros · seuranta ja palautesilmukka", color=TEAL, fill=TEAL_TINT)
     add_h2(doc, "Pohjapiirros 1: Ongelma", TEAL)
     add_body(doc, "Kirjoita 150–200 sanaa. Kuvaa ongelma ja käyttäjä, perustele, miksi ratkaisu tarvitsee agentin eikä tavallista automaatiota tai chatbotia, ja arvioi kuuden rakennusosan tarvetta. Perustele myös, jos jätät jonkin niistä pois.")
     add_field(doc, "Kirjoita pohjapiirros.", height=52, color=TEAL)
     add_h2(doc, "Pohjapiirros 2: Muisti", TEAL)
-    add_body(doc, "Kirjoita 150–200 sanaa. Kuvaa lyhytaikainen muisti, mahdollinen pitkäkestoinen muisti, tilat ja tilasiirtymät sekä agentin identiteetti.")
+    add_body(doc, "Kirjoita 150–200 sanaa. Kuvaa yhden suorituksen konteksti, mahdollinen pitkäkestoinen muisti sekä prosessin tilat ja tilasiirtymät. Perustele, mitä tallennetaan, kuinka pitkäksi aikaa ja miksi. Älä sijoita agentin roolia tai toimintaohjeita muistiin.")
     add_field(doc, "Kirjoita pohjapiirros.", height=52, color=TEAL)
+    add_h2(doc, "Järjestelmäohjeet — erillään muistista", TEAL)
+    add_body(doc, "Kirjaa agentin tehtävä, rooli, sallitut toimintatavat ja rajat järjestelmäohjeisiin. Järjestelmäohjeet ohjaavat toimintaa, mutta eivät ole keskusteluhistoriaa, prosessin tilaa tai pitkäkestoista muistia.")
+    add_field(doc, "Kirjoita järjestelmäohjeiden ydin.", height=34, color=TEAL)
 
     page_break(doc)
     add_page_heading(doc, "agents", "Päättely ja turva", "Kuvaa valintasi niin, että toinen ihminen pystyy ymmärtämään ja tarkistamaan työnkulun.", sublabel="AGENTIN POHJAPIIRROKSET · JATKUU")
     add_h2(doc, "Pohjapiirros 3: Päättely", TEAL)
-    add_body(doc, "Kirjoita 150–200 sanaa. Valitse ReAct tai eksplisiittinen työnkulku ja perustele valintasi. Kuvaa, miten päättely näkyy työnkulun rakenteessa ja lokissa. Anna yksi lokiesimerkki, jossa näkyvät lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja seuraava toiminto. Älä tallenna kielimallin raakaa päättelyketjua.")
+    add_body(doc, "Kirjoita 150–200 sanaa. Valitse ReAct tai eksplisiittinen työnkulku ja perustele valintasi. Kuvaa, miten päättely näkyy työnkulun rakenteessa ja lokissa. Määritä kummassakin mallissa vähintään yksi aito rajattu kielimallivalinta vähintään kahdesta sallitusta vaihtoehdosta. Anna lokiesimerkki, jossa näkyvät syöte, sallitut vaihtoehdot, mallin valinta, tulos tai virhe ja seuraava toiminto. Älä tallenna kielimallin raakaa päättelyketjua.")
     add_field(doc, "Kirjoita pohjapiirros.", height=52, color=TEAL)
     add_h2(doc, "Pohjapiirros 4: Turva", TEAL)
     add_body(doc, "Kirjoita 150–200 sanaa. Määritä, mitä agentti saa ja ei saa tehdä. Tunnista 2–3 riskiä. Kuvaa, miten validoit ja rajaat toimintaa, seuraat tapahtumia, palaudut virheistä ja määrität lokiin tallennettavat tiedot.")
     add_field(doc, "Kirjoita pohjapiirros.", height=52, color=TEAL)
 
     page_break(doc)
-    add_page_heading(doc, "agents", "Ihminen ja toteutus", "Arvioi hyväksynnän tarve ennen kuin rakennat työnkulun. Pidä agentti yksinkertaisena: 3–5 solmua riittää.", sublabel="AGENTIN POHJAPIIRROKSET · JATKUU")
+    add_page_heading(doc, "agents", "Ihminen ja toteutus", "Arvioi hyväksynnän tarve ennen kuin rakennat työnkulun. Pidä agentti rajattuna ja käytä vain vastuiden kuvaamiseen tarvittavat vaiheet.", sublabel="AGENTIN POHJAPIIRROKSET · JATKUU")
     add_choice_box(doc, "Työskentelytapa", ["Teen työn yksin", "Teen työn parin kanssa"], color=TEAL, fill=TEAL_TINT)
     add_field(doc, "Parin nimi ja työnjako", height=20, color=TEAL, placeholder="Täytä, jos teet työn parin kanssa.")
     add_h2(doc, "Pohjapiirros 5: Ihminen", TEAL)
@@ -729,59 +741,33 @@ def build_document():
     page_break(doc)
     add_page_heading(doc, "agents", "Toteutus", "Pidä agentti yksinkertaisena. Piirrä pääpolku ensin ja kuvaa vasta sitten yksittäiset solmut.", sublabel="OSA 3 · AGENTIT · RAKENTAMINEN")
     add_field(doc, "Lisää työnkulun linkki, JSON-vientitiedosto tai alustariippumaton suoritusjälki.", height=18, color=TEAL)
-    add_field(doc, "Piirrä 3–5 solmun työnkulku.", height=78, color=TEAL, placeholder="Lisää kaavio tähän.")
+    add_field(doc, "Piirrä rajattu työnkulku. Näytä mallin valinta, työkalut, turva, hyväksyntä, lokitus ja virhepolku siellä, missä ne vaikuttavat.", height=78, color=TEAL, placeholder="Lisää kaavio tähän.")
     add_page_heading(doc, "agents", "Solmuluettelo", "Kuvaa jokainen solmu niin, että työnkulku on ymmärrettävissä myös ilman toteutusalustaa.", sublabel="OSA 3 · AGENTIT · RAKENTAMINEN", page_break_before=True)
     add_node_table(doc)
 
     page_break(doc)
-    add_page_heading(doc, "agents", "Dokumentaatio", "Kirjoita kolme lyhyttä dokumenttia niin, että toinen henkilö ymmärtää niiden avulla työnkulun, käyttöoikeudet, testauksen ja toiminnan virhetilanteissa.", sublabel="OSA 3 · AGENTIT · LOPPUTYÖ")
-    add_h2(doc, "README, ½–1 sivu", TEAL)
-    add_body(doc, "Kuvaa, mitä agentti tekee, kenelle se on tarkoitettu, miten sitä käytetään, 2–3 esimerkkiä sekä olennaiset rajoitukset.")
-    add_field(doc, "Kirjoita README tai lisää linkki.", height=46, color=TEAL)
-    add_h2(doc, "ARCHITECTURE, ½–1 sivu", TEAL)
-    add_body(doc, "Kuvaa solmut järjestyksessä. Kerro jokaisen tehtävä, syöte ja tulos sekä yhteys agentin kuuteen rakennusosaan.")
-    add_field(doc, "Kirjoita ARCHITECTURE tai lisää linkki.", height=46, color=TEAL)
-    add_page_heading(doc, "agents", "SAFETY", "Kuvaa turvaratkaisut näkyvästi ja perustele tekemäsi valinnat. Kirjoita ½–1 sivua.", sublabel="OSA 3 · AGENTIT · DOKUMENTAATIO", page_break_before=True)
-    add_body(doc, "Kuvaa 3–5 riskiä sekä niiden hallintakeinot ja lokitus. Nimeä lisäksi kohdat, joissa tarvitaan ihmisen hyväksyntä.")
-    add_field(doc, "Kirjoita SAFETY tai lisää linkki.", height=58, color=TEAL)
-    add_info_box(doc, "Turva kuuluu työnkulkuun", "Kytke jokainen riski konkreettiseen hallintakeinoon. Nimeä myös tilanne, jossa agentti pysähtyy ja eskaloi asian ihmiselle.", color=TEAL, fill=TEAL_TINT)
+    add_page_heading(doc, "agents", "Näyttöpaketti", "Kokoa yhden 90 minuutin oppitunnin aikana tiivis näyttö. Tekninen ja dokumentoitu polku ovat samanarvoisia.", sublabel="OSA 3 · AGENTIT · LOPPUTYÖ")
+    add_h2(doc, "Kuuden rakennusosan tarkistus", TEAL)
+    add_body(doc, "Merkitse, missä syötekäsittelijä, päättelijä ja suunnittelija, työkalujen suorittaja, muisti ja konteksti, turvakerros sekä seuranta ja palautesilmukka näkyvät tai miksi niitä ei tarvita.")
+    add_field(doc, "Kirjaa rakennusosien kattavuus.", height=48, color=TEAL)
+    add_h2(doc, "Aito rajattu mallivalinta", TEAL)
+    add_label_detail_table(doc, [("Syöte", "Kirjoita tähän."), ("Vähintään kaksi sallittua vaihtoehtoa", "Kirjoita tähän."), ("Mallin todellinen valinta", "Kirjoita tähän."), ("Seuraava vaihe", "Kirjoita tähän.")], color=TEAL, row_height=8)
+    add_info_box(doc, "Polkujen näyttö", "Tekninen polku käyttää suoritusnäkymää. Dokumentoitu polku näyttää todellisen mallikutsun ja merkitsee sitä seuraavat simuloidut vaiheet.", color=TEAL, fill=TEAL_TINT)
+
+    add_page_heading(doc, "agents", "Kolme testiä", "Aja yksi normaali, yksi reuna- ja yksi turvallisuustesti. Kirjaa syöte, odotettu tulos, todellinen tulos ja johtopäätös.", sublabel="OSA 3 · AGENTIT · TESTAUS", page_break_before=True)
+    for number, category in enumerate(("Normaali", "Reunatapaus", "Turvallisuus"), 1):
+        add_test_card(doc, number, category, color=TEAL)
 
     page_break(doc)
-    add_page_heading(doc, "agents", "Testiraportti 1/3", "Dokumentoi yhteensä yhdeksän testiä: kolme normaalia tapausta, kolme reunatapausta ja kolme turvallisuustestiä.", sublabel="OSA 3 · AGENTIT · TESTAUS")
-    categories = ["Normaali", "Normaali", "Normaali", "Reunatapaus", "Reunatapaus", "Reunatapaus", "Turvallisuus", "Turvallisuus", "Turvallisuus"]
-    for number in range(1, 4):
-        add_test_card(doc, number, categories[number - 1], color=TEAL)
-
-    add_page_heading(doc, "agents", "Testiraportti 2/3", "Dokumentoi kolme reunatapausta samalla rakenteella kuin normaalit tapaukset.", sublabel="OSA 3 · AGENTIT · TESTAUS", page_break_before=True)
-    for number in range(4, 7):
-        add_test_card(doc, number, categories[number - 1], color=TEAL)
-
-    page_break(doc)
-    add_page_heading(doc, "agents", "Testiraportti 3/3", "Dokumentoi kolme turvallisuustestiä. Tarkista erityisesti oikeudet, rajat ja ihmisen hyväksyntä.", sublabel="OSA 3 · AGENTIT · TESTAUS")
-    for number in range(7, 10):
-        add_test_card(doc, number, categories[number - 1], color=TEAL)
-
-    page_break(doc)
-    add_page_heading(doc, "agents", "Uudelleentestit", "Dokumentoi vähintään kaksi korjauksen jälkeistä uudelleentestiä.", sublabel="OSA 3 · AGENTIT · TESTAUS")
-    for number in (1, 2):
-        add_h3(doc, f"Uudelleentesti {number}", TEAL)
-        add_label_detail_table(doc, [("Havaittu puute", "Kirjoita tähän."), ("Tehty korjaus", "Kirjoita tähän."), ("Aiempi tulos", "Kirjoita tähän."), ("Uusi tulos", "Kirjoita tähän."), ("Johtopäätös", "Kirjoita tähän.")], color=TEAL, row_height=8)
-
-    page_break(doc)
-    add_page_heading(doc, "agents", "Arviointi ja esittely", "Kokoa palautteesta, omasta arvioinnista ja esittelystä rehellinen kuva siitä, mitä agentti tekee hyvin ja mitä pitäisi vielä parantaa.", sublabel="OSA 3 · AGENTIT · VIIMEISTELY")
-    add_h2(doc, "Vertaisarviointi", TEAL)
-    add_field(doc, "Kirjaa yksi vahvuus, kaksi kehittämiskohdetta ja kaksi konkreettista parannusehdotusta.", height=42, color=TEAL)
-    add_body(doc, "Jos teet työn yksin, voit pyytää tekoälyltä kriittisen arvion.", after=3)
-    add_field(doc, "Mitä muutit palautteen perusteella?", height=26, color=TEAL)
-    add_h2(doc, "Itsearviointi, 300–400 sanaa", TEAL)
-    add_body(doc, "Kuvaa onnistumiset, epäonnistumiset, opitut asiat ja parannusideat. Arvioi lisäksi, mikä kuudesta rakennusosasta toteutuu vahvimmin ja mikä kaipaa eniten kehittämistä.")
-    add_field(doc, "Kirjoita itsearviointi.", height=60, color=TEAL)
-
-    add_page_heading(doc, "agents", "Esittely ja lopputarkistus", "Suunnittele 3–5 minuutin esittely, jossa näytät työnkulun ja perustelet tärkeimmät valintasi.", sublabel="OSA 3 · AGENTIT · VIIMEISTELY", page_break_before=True)
-    add_h2(doc, "Esittely, 3–5 minuuttia", TEAL)
-    add_field(doc, "Kirjaa muistiin, miten näytät agentin toiminnassa 2–3 normaalilla syötteellä ja esittelet arkkitehtuurin, kuuden rakennusosan toteutumisen, turvakerroksen sekä vähintään yhden korjauksen vaikutuksen. Päätä esittely kriittiseen arvioon: mikä onnistui ja mikä ei.", height=44, color=TEAL)
+    add_page_heading(doc, "agents", "Korjaus ja puolustus", "Tee yksi rajattu korjaus, aja sama testi uudelleen ja valmistele 2–3 minuutin puolustus.", sublabel="OSA 3 · AGENTIT · VIIMEISTELY")
+    add_h2(doc, "Yksi korjaus ja uudelleentesti", TEAL)
+    add_label_detail_table(doc, [("Alkuperäinen tulos", "Kirjoita tähän."), ("Tehty korjaus", "Kirjoita tähän."), ("Saman testin uusi tulos", "Kirjoita tähän."), ("Johtopäätös", "Kirjoita tähän.")], color=TEAL, row_height=9)
+    add_h2(doc, "Turvallisuusraja ja rehellinen rajoitus", TEAL)
+    add_field(doc, "Mikä oikeus, hyväksyntä tai havaittava eskalointiehto rajaa toimintaa? Mitä työsi ei vielä todista?", height=34, color=TEAL)
+    add_h2(doc, "Puolustus, 2–3 minuuttia", TEAL)
+    add_field(doc, "Ongelma ja polku · aito rajattu mallivalinta · testi ja korjaus · turvallisuusraja ja rajoitus", height=38, color=TEAL)
     add_h2(doc, "Lopputarkistus", TEAL)
-    add_checklist(doc, ["3–5 solmun työnkulku toimii tai suoritusjälki todentaa sen.", "Turvakerros, lokitus ja riskit on kuvattu.", "README, ARCHITECTURE ja SAFETY ovat selkeitä.", "Testiraportissa on yhdeksän testiä ja vähintään kaksi uudelleentestiä.", "Itsearviointi ja esittely osoittavat, että ymmärrän kokonaisuuden."], color=TEAL, fill=TEAL_TINT)
+    add_checklist(doc, ["Työnkulussa on vähintään yksi aito rajattu kielimallin tekemä valinta.", "Kuusi rakennusosaa on käsitelty kanonisilla nimillä.", "Normaali, reuna- ja turvallisuustesti on dokumentoitu.", "Yksi korjaus ja sama uudelleentesti näkyvät ennen–jälkeen-vertailuna.", "Turvallisuusraja, rajoitus ja puolustus osoittavat, että ymmärrän kokonaisuuden."], color=TEAL, fill=TEAL_TINT)
 
     section = doc.add_section(WD_SECTION.NEW_PAGE)
     configure_section(section, "KOKO KURSSI")

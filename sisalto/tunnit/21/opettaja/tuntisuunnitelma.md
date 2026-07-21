@@ -4,7 +4,7 @@
 
 Oppija erottaa toisistaan yhden suorituksen kontekstin, suoritusten välillä säilytettävän muistin, prosessin tilan ja toimintaa rajaavat pysyvät periaatteet.
 
-Tunti kannattaa rakentaa yhden tutun tapauksen ympärille. Kun sama asiakaspalvelutilanne kulkee opetuksen läpi, oppija näkee, miksi juuri saapunut viesti kuuluu kontekstiin, aiempi ratkaisu voi kuulua pitkäkestoiseen muistiin ja odottava hyväksyntä kuuluu tilaan. Ilman yhteistä tapausta käsitteet jäävät helposti neljäksi irralliseksi määritelmäksi.
+Tunti kannattaa rakentaa yhden tutun tapauksen ympärille. Kun sama asiakaspalvelutilanne kulkee opetuksen läpi, oppija näkee, miksi juuri saapunut viesti kuuluu kontekstiin, sopimusnumero rakenteiseen järjestelmään, hyväksytty ohje tietopohjaan ja odottava hyväksyntä prosessin tilaan. RAG hakee tietopohjasta sopivia tekstikatkelmia, kun taas täsmällinen asiakas- tai sopimustieto haetaan rakenteisesta järjestelmästä käyttöoikeuden perusteella. Ilman yhteistä tapausta käsitteet jäävät helposti irrallisiksi määritelmiksi.
 
 ## Osaamistavoitteet
 
@@ -15,7 +15,7 @@ Oppija:
 - kuvaa prosessin tilat ja siirtymäehdot
 - arvioi haetun muistiedon osuvuuden
 - noudattaa minimimuistin periaatetta
-- erottaa järjestelmäohjeet ja harnessin säännöt muistista
+- erottaa järjestelmäohjeet ja agentin ohjauskehyksen säännöt muistista
 
 ## Ydinviesti
 
@@ -44,7 +44,7 @@ Aikataulun keskiosa on tarkoituksella pisin, sillä käsitteet muuttuvat osaamis
 - Merkitykseltään samankaltainen hakutulos ei ole automaattisesti oikea.
 - Pitkäkestoinen muisti ei kuulu jokaiseen agenttiin.
 - Prosessin tila ei ole sama asia kuin keskusteluhistoria.
-- Turvaraja ei saa jäädä pelkäksi muistettavaksi tekstiksi, jos harness voi toimeenpanna sen.
+- Turvaraja ei saa jäädä pelkäksi muistettavaksi tekstiksi, jos agentin ohjauskehys voi toimeenpanna sen.
 
 Väärinkäsityksiä ei tarvitse korjata luennoimalla uudelleen. Usein tehokkain kysymys on: ”Mitä tapahtuu, jos tämä tieto on väärä, vanhentunut tai joutuu väärälle käyttäjälle?” Kysymys siirtää huomion muistamisen määrästä sen tarkoitukseen ja seurauksiin.
 

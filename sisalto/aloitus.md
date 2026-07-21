@@ -26,9 +26,11 @@ Arvioinnissa tärkeintä ovat ymmärryksesi ja näkyvä työprosessisi, eivät k
 
 ## Kurssin laajuus
 
-Kurssi koostuu 27 osasta. Luokkakäytössä ne vastaavat noin 27:ää 90 minuutin oppituntia. Itsenäisessä opiskelussa ajankäyttö riippuu siitä, kuinka paljon teet kokeiluja ja syventäviä tehtäviä.
+Kurssi koostuu 27 osasta. Luokkakäytössä ne vastaavat noin 27:ää 90 minuutin oppituntia eli yhteensä noin 40,5 tuntia ohjattua työskentelyä. Itsenäisessä opiskelussa koko kurssiin on hyvä varata noin 35–50 tuntia. Arvio sisältää teorian, Harjoittele-tehtävät, lopputöiden osatuotokset sekä kolmen lopputyön viimeistelyn. Oma aikasi riippuu lukutahdista, kokeilujen määrästä ja siitä, valitsetko syventäviä tehtäviä.
 
-Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Mahdollisten osaamispisteiden myöntämisestä päättää oppilaitos. Sivusto ei itsessään myönnä opintosuoritusta.
+Avoin verkkokurssi on sisällöltään mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispiste ei kuitenkaan ole tuntimitta, vaan se kuvaa osaamisen kattavuutta, vaikeutta ja merkittävyyttä. Siksi todellinen opiskeluaika vaihtelee aiemman osaamisen ja henkilökohtaisen opiskelupolun mukaan. Mahdollisten osaamispisteiden myöntämisestä päättää oppilaitos. Sivusto ei itsessään myönnä opintosuoritusta.
+
+Lähde: [Opetushallitus — Tutkintojen perusteet](https://www.oph.fi/fi/koulutus-ja-tutkinnot/tutkintojen-perusteet).
 
 ## Suojaa omat ja muiden tiedot
 

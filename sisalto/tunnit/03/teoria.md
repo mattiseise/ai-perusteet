@@ -120,47 +120,33 @@ Tärkeää on kuitenkin ymmärtää, ettei malli ymmärrä asioita samalla taval
 
 Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai esiintyy siinä vain vähän, malli ei pysty hallitsemaan sitä hyvin.
 
-## Hallusinaatio — kun malli tuottaa väärän mutta uskottavan vastauksen
+## Ennustamisesta seuraa myös rajoja
 
-**Hallusinaatiolla** tarkoitetaan tilannetta, jossa kielimalli tuottaa vastauksen, joka vaikuttaa uskottavalta mutta on todellisuudessa väärä.
+Seuraavan tokenin ennustaminen selittää, miksi kielimalli voi tuottaa sekä sujuvaa että virheellistä tekstiä. Uskottava jatko ei ole sama asia kuin tarkistettu fakta. Tällaista vakuuttavalta kuulostavaa mutta virheellistä tuotosta kutsutaan hallusinaatioksi.
 
-Esimerkiksi mallilta voidaan kysyä: ”Kuka kirjoitti romaanin Suuri Mahtava?” Malli saattaa vastata: ”Jane Austen kirjoitti teoksen Suuri Mahtava vuonna 1847.” Vastaus kuulostaa uskottavalta, mutta se on virheellinen. Jane Austen ei ole kirjoittanut tämännimistä teosta. Vastaus näyttää oikealta siksi, että malli on oppinut, että kirjailijan nimi, teoksen nimi ja vuosiluku esiintyvät usein samankaltaisissa yhteyksissä.
-
-Tätä kutsutaan hallusinaatioksi. Malli ei valehtele tietoisesti, koska se ei ymmärrä totuutta tai valhetta ihmisen tavoin. Se ennustaa, mikä ilmaus vaikuttaa todennäköiseltä seuraavaksi. Joskus tämä ennuste osuu väärin, vaikka lopputulos kuulostaisi hyvin vakuuttavalta.
-
-> **Pysähdy hetkeksi:** Miksi hallusinaatio voi olla erityisen vaarallinen silloin, kun vastaus on kirjoitettu itsevarmalla ja asiantuntevalla tyylillä?
-
-## Lämpötila — kontrolli satunnaisuudelle
-
-Kielimalli ei aina valitse kaikkein *todennäköisintä* seuraavaa tokenia. Joskus se voi valita myös hieman epätodennäköisemmän vaihtoehdon, jotta vastaus olisi monipuolisempi tai luovempi.
-
-Tähän vaikuttaa asetus, jota kutsutaan **lämpötilaksi**.
-
-- **Matala lämpötila:** malli valitsee yleensä kaikkein todennäköisimmän jatkon. Vastaukset ovat usein tasaisempia, ennustettavampia ja johdonmukaisempia.
-- **Korkea lämpötila:** malli sallii enemmän vaihtelua ja voi valita myös epätodennäköisempiä jatkoja. Vastaukset voivat olla luovempia, mutta myös satunnaisempia ja virhealttiimpia.
-
-Käyttäjä ei tavallisesti säädä lämpötilaa itse tavallisessa chat-käyttöliittymässä, mutta asetus vaikuttaa silti mallin toimintaan. Siksi samaan kysymykseen voi joskus saada hieman erilaisen vastauksen eri kerroilla.
+Mallin tuotokseen voi liittyä myös vaihtelua: järjestelmä voi valita useista mahdollisista jatkoista eri vaihtoehdon eri kerroilla. Joissakin ympäristöissä vaihteluun vaikuttavia asetuksia voidaan säätää, mutta samaa vastausta ei silti pidä luvata pelkän yhden asetuksen perusteella. Hallusinaatioiden, vaihtelun ja tulosten tarkistamisen käsittelet perusteellisesti tunnilla 7.
 
 ## Kuva-, musiikki- ja videomallit
 
-Kielimallien taustalla oleva ajatus eli seuraavan yksikön ennustaminen ei rajoitu vain tekstiin. Samaa perusajatusta voidaan soveltaa myös kuviin, musiikkiin ja videoihin.
+Kaikki generatiiviset mallit eivät toimi kielimallin tavoin seuraavaa yksikköä ennustamalla. Menetelmä riippuu aineistosta ja mallin rakenteesta.
 
-- **Kuvamallit** ennustavat, millaisia visuaalisia piirteitä kuvaan kannattaa muodostaa seuraavaksi.
-- **Musiikkimallit** ennustavat, millainen ääni, sävel tai rytminen elementti sopii jatkoksi.
-- **Videomallit** ennustavat, millaisia kuvia, liikettä ja joskus myös ääntä seuraavaksi pitäisi syntyä.
+- **Autoregressiivinen malli** tuottaa seuraavan osan aiempien osien perusteella. Tätä tapaa käytetään tekstissä ja myös joissakin musiikki-, kuva- ja videomalleissa, kun aineisto esitetään peräkkäisinä yksikköinä.
+- **Diffuusiomalli** aloittaa kohinaisesta lähtötilasta ja poistaa kohinaa useassa vaiheessa, kunnes kuva tai video vastaa annettua kuvausta.
+- **Äänimalli** voi käsitellä esimerkiksi äänen aaltomuotoa, spektrogrammia tai äänitokeneita. Tuottaminen voi perustua seuraavan yksikön ennustamiseen, diffuusioon tai niiden yhdistelmään.
 
-Periaate pysyy samankaltaisena, vaikka sisältö muuttuu. Malli tuottaa lopputulosta vaiheittain aiemmin muodostuneen sisällön perusteella. Erona on vain se, käsitelläänkö tekstin sijaan kuvaa, ääntä vai liikkuvaa kuvaa.
+Yhteistä on se, että malli oppii koulutusdatasta rakenteita ja tuottaa niiden pohjalta uuden tuotoksen. Tarkka mekanismi ei kuitenkaan ole kaikissa aineistomuodoissa sama. Siksi kielimallin next-token-periaatetta ei pidä käyttää kaikkien generatiivisten mallien yleispätevänä selityksenä.
 
 ## Yhteenveto
 
-Generatiivinen tekoäly ei ajattele tai ymmärrä ihmisen tavoin. Se toimii yksinkertaistettuna näin:
+Kielimalli ei ajattele tai ymmärrä ihmisen tavoin. Se toimii yksinkertaistettuna näin:
 
 - Se pilkkoo tekstin tokeneiksi.
 - Se käyttää koulutuksessa opittuja parametreja.
 - Se ennustaa seuraavan tokenin todennäköisyyksien perusteella.
 - Se jatkaa tätä, kunnes vastaus on valmis.
+- Uskottava jatko ei vielä ole tarkistettu fakta.
 
-Siksi lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Vastuulliselle käyttäjälle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä tekoälyn hyödyt että sen rajoitukset.
+Siksi kielimallin lopputulos voi näyttää älykkäältä, vaikka taustalla on ennen kaikkea matemaattinen ennustaminen. Mallin vahvuus tulee siitä, että se on oppinut valtavasta määrästä ihmisten tuottamaa aineistoa. Vastuulliselle käyttäjälle tämän ymmärtäminen on tärkeää, koska juuri silloin hahmottaa sekä kielimallin hyödyt että sen rajoitukset.
 
 Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä, mitä ja miten kysyt: **konteksti ratkaisee kaiken**.
 
@@ -169,6 +155,7 @@ Seuraavalla tunnilla opit ymmärtämään, että vastaus riippuu suuresti siitä
 ## Lähteet ja tarkistuspäivä
 
 - [Vaswani ym.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Ho ym.: Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
 - [NIST: Generative AI Profile, NIST AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)
 
 Tarkistettu 15.7.2026.

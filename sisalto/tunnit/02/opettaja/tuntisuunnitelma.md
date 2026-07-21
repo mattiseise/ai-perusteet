@@ -2,10 +2,13 @@
 
 ## Oppimisen tavoitteet
 
-Tunnin tavoitteena on, että opiskelija osaa erottaa nykyiset tekoälyjärjestelmät tulevaisuutta koskevista käsitteistä. Tunnin lopussa opiskelijan pitäisi pystyä vastaamaan omin sanoin kysymykseen: **Miksi generatiivisuus tai sujuva keskustelu ei yksin osoita AGI:a?**
+Tunnin tavoitteena on, että opiskelija ymmärtää mallin elinkaaren ja osaa erottaa nykyiset tekoälyjärjestelmät tulevaisuutta koskevista käsitteistä. Tunnin lopussa opiskelijan pitäisi pystyä vastaamaan kahteen kysymykseen: **Miksi hyvä testitulos ei yksin takaa toimivuutta käytössä?** ja **Miksi generatiivisuus tai sujuva keskustelu ei yksin osoita AGI:a?**
 
 ### Muistaa ja ymmärtää
 
+- Opiskelija erottaa koulutus-, validointi- ja testiaineiston tehtävät.
+- Opiskelija osaa selittää yleistymisen, ylioppimisen, datadriftin ja mallidriftin arkisella esimerkillä.
+- Opiskelija erottaa mallin rakentamisen, käyttöönoton, seurannan ja päivittämisen.
 - Opiskelija osaa selittää käsitteet **sääntöpohjainen järjestelmä**, **kapea tekoäly**, **generatiivinen tekoäly**, **AGI** ja **ASI**.
 - Opiskelija tietää, että sääntöpohjaiset järjestelmät, kapea tekoäly ja generatiivinen tekoäly ovat nykyisiä järjestelmiä.
 - Opiskelija tietää, että AGI ja ASI ovat tutkimus- ja tulevaisuuskäsitteitä.
@@ -23,11 +26,21 @@ Tunnin tavoitteena on, että opiskelija osaa erottaa nykyiset tekoälyjärjestel
 - Opiskelija osaa arvioida tekoälyä koskevaa uutista tai myyntiväitettä ilman perusteetonta ihastelua tai torjuntaa.
 - Opiskelija osaa kirjoittaa lyhyen, täsmällisen perustelun näkyvän suorituksen rajoista.
 
-**Tunnin ydinviesti:** Vaikuttava rajattu suoritus ei ole sama asia kuin yleinen älykkyys. Generatiivisuus kertoo sisällön tuottamisesta, ei järjestelmän kykyjen laajuudesta. Generatiivisuus, sujuva keskustelu tai laaja tehtäväkirjo ei yksin osoita AGI:a. AGI ja ASI eivät ole nykyisten järjestelmien varmoja seuraavia vaiheita.
+**Tunnin ydinviesti:** Malli osoittaa osaamisensa vasta uudessa aineistossa ja todellisessa käytössä. Siksi rakentaminen, käyttöönotto, seuranta ja päivittäminen ovat eri vaiheita. Vaikuttava rajattu suoritus ei myöskään ole sama asia kuin yleinen älykkyys: AGI ja ASI ovat edelleen tulevaisuuskäsitteitä.
 
 ## Pedagoginen eteneminen
 
-### 1. Aloita nykyisistä järjestelmistä
+### 1. Aloita mallin aineistojaosta
+
+Piirrä taululle kolme erillistä laatikkoa: koulutus, validointi ja testi. Käytä opiskelun vertausta, mutta täsmennä, että mallin arviointi vaatii erillisen aineiston. Näytä sen jälkeen, miksi testiaineiston toistuva käyttö valintojen säätämiseen heikentää testin riippumattomuutta.
+
+Kytke aineistojako yleistymiseen ja ylioppimiseen. Tavoitteena ei ole matemaattinen käsittely, vaan kyky sanoa omin sanoin: ”malli ei saa vain muistaa harjoituksia, vaan sen pitää toimia myös uusissa tapauksissa”.
+
+### 2. Tee elinkaari näkyväksi
+
+Jatka neljään vaiheeseen: rakentaminen, käyttöönotto, seuranta ja päivittäminen. Datadriftissä muuttuu käyttöön tuleva data. Mallidriftissä aiemmin opittu yhteys ei enää toimi samalla tavalla. Kummankaan havaitseminen ei vielä kerro korjausta, vaan syy pitää tutkia.
+
+### 3. Kertaa nykyiset järjestelmät
 
 Kertaa ensin sääntöpohjaisen järjestelmän ja datasta opitun mallin ero tunnilta 1. Käytä yhtä yksinkertaista paria:
 
@@ -36,7 +49,7 @@ Kertaa ensin sääntöpohjaisen järjestelmän ja datasta opitun mallin ero tunn
 
 Kertauksen tarkoitus ei ole opettaa koneoppimista uudelleen. Se antaa opiskelijalle tutun lähtökohdan, jonka päälle muut käsitteet rakennetaan.
 
-### 2. Tee kapean ja generatiivisen tekoälyn suhde näkyväksi
+### 4. Tee kapean ja generatiivisen tekoälyn suhde näkyväksi
 
 Kapea tekoäly kuvaa tehtävien rajausta. Generatiivinen tekoäly kuvaa sisällön tuottamista. Sama järjestelmä voi siis olla molempia.
 
@@ -46,7 +59,7 @@ Käytä esimerkiksi tekstitekoälyä, joka kirjoittaa tuotekuvauksen. Se tuottaa
 
 Osa nykyisistä yleiskäyttöisistä malleista hoitaa laajaa tehtäväjoukkoa. Tätä täsmennystä ei tarvitse opettaa kuudentena pääkäsitteenä. Sen tehtävä on estää liian ehdoton päätelmä siitä, että kaikki generatiiviset järjestelmät olisivat samalla tavalla kapeita.
 
-### 3. Vedä näkyvä raja nykyisyyden ja tulevaisuuspuheen väliin
+### 5. Vedä näkyvä raja nykyisyyden ja tulevaisuuspuheen väliin
 
 Käsittele AGI ja ASI vasta sen jälkeen, kun nykyiset järjestelmät ovat selviä. Opiskelijan pitäisi nähdä, että keskustelu vaihtuu tässä kohdassa olemassa olevista järjestelmistä tutkimukseen, määritelmiin ja oletuksiin.
 
@@ -56,7 +69,7 @@ AGI:sta ja ASI:sta ei tarvitse käydä pitkää filosofista keskustelua. Tällä
 - sanoa, ettei kummastakaan ole yleisesti hyväksyttyä nykyistä esimerkkiä,
 - erottaa ne nykyisen tekoälyn osoitetuista kyvyistä.
 
-### 4. Päätä tunti väitteen arviointiin
+### 6. Päätä tunti väitteen arviointiin
 
 Käsitteet muuttuvat käyttökelpoisiksi vasta, kun opiskelija soveltaa niitä. Anna lopuksi esimerkiksi seuraava väite: ”Tämä tekoäly osaa pian minkä tahansa asiantuntijan työn.” Pyydä opiskelijaa erottamaan toisistaan:
 
@@ -98,44 +111,41 @@ Käsitteet muuttuvat käyttökelpoisiksi vasta, kun opiskelija soveltaa niitä. 
 
 ## 90 minuutin toteutus ja eriyttäminen
 
-Tallennettava ydintuotos on **Viisi käsitettä tekoälyn kartalla** -vertailu ja sitä täydentävä 2–3 virkkeen johtopäätös.
+Tallennettava ydintuotos on **yhden sivun kuvaus mallin kuusivaiheisesta elinkaaresta** sekä kahden virkkeen rajaus siitä, miksi AGI ja ASI eivät ole elinkaaren seuraavia vaiheita.
 
 | Aika | Vaihe | Opettajan tehtävä | Opiskelijan toiminta |
 |---|---|---|---|
-| 0–10 min | Virittäytyminen | Esitä kolme esimerkkiä: sääntö, rajattu tunnistus ja tekstin tuottaminen | Kuvaa, miten esimerkit eroavat toisistaan |
-| 10–25 min | Nykyiset järjestelmät | Kertaa sääntöpohjainen, kapea ja generatiivinen | Kirjaa käsitteiden erot ja yhden esimerkin kustakin |
-| 25–35 min | Ratkaiseva yhteys | Mallinna generatiivisuuden ja kykyjen rajauksen ero | Selitä, miten sama järjestelmä voi olla generatiivinen ja tehtävältään rajattu |
-| 35–50 min | Tulevaisuuskäsitteet | Opeta AGI ja ASI varovaisina käsitteinä | Erota nykyinen näyttö tulevaisuusväitteestä |
-| 50–70 min | Ydintuotos | Ohjaa vertailutaulukon täyttämistä | Täyttää viiden käsitteen vertailun |
-| 70–82 min | Väitteen purku | Anna yksi uutis- tai myyntiväite | Erottaa suorituksen, väitteen ja puuttuvan näytön |
-| 82–90 min | Lopputehtävä | Esitä tunnin tarkistuskysymys | Kirjoittaa perustelun siitä, miksi sujuva tekstitekoäly ei ole automaattisesti AGI |
+| 0–10 min | Virittäytyminen | Kysy, miksi sama testitulos ei ehkä päde vuoden kuluttua | Muotoilee alustavan vastauksen |
+| 10–25 min | Aineistojako ja yleistyminen | Mallinna koulutus-, validointi- ja testiaineisto sekä ylioppiminen | Selittää kunkin aineiston tehtävän omin sanoin |
+| 25–40 min | Elinkaari ja driftit | Kuvaa rakentaminen, käyttöönotto, seuranta ja päivittäminen | Erottaa datadriftin ja mallidriftin |
+| 40–70 min | Ydintuotos | Ohjaa kuusivaiheisen elinkaarikuvauksen tekemistä | Laatii yhden sivun elinkaarikuvauksen |
+| 70–82 min | Nykyjärjestelmät, AGI ja ASI | Rajaa käsitteet tiiviisti ilman kehitysportaita | Kirjoittaa kahden virkkeen rajauksen ydintuotokseen |
+| 82–90 min | Tarkistus ja tallennus | Tarkista yksi elinkaaren kohta ja AGI–ASI-rajaus | Korjaa, nimeää ja tallentaa tuotoksen |
 
 ## Itsenäinen suoritus
 
 Itsenäinen reitti ei edellytä käyttäjätiliä, ulkoista tekoälypalvelua tai ajankohtaisen uutisen etsimistä. Oppija etenee näin:
 
-1. Lue teoria ja kirjoita omin sanoin jokaisesta käsitteestä yksi virke, joka erottaa sen muista käsitteistä.
-2. Tee Harjoittele-välilehden neljä tehtävää ja lue myös väärien vaihtoehtojen palaute.
-3. Täytä **Viisi käsitettä tekoälyn kartalla** -taulukko.
-4. Vertaa taulukkoa teorian vertailuun ja korjaa vähintään yksi kohta tarvittaessa.
-5. Vastaa lopuksi ilman materiaalia: ”Miksi generatiivisuus tai sujuva keskustelu ei yksin osoita AGI:a?”
+1. Lue teoriasta aineistojakoa, yleistymistä, elinkaarta ja driftejä käsittelevät osat.
+2. Tee Harjoittele-välilehden kaikki viisi tehtävää ja lue myös väärien vaihtoehtojen palaute.
+3. Tee tehtävän 2.1 yhden sivun elinkaarikuvaus kuuden valmiin otsikon avulla.
+4. Tarkista kuvauksesta, että koulutus, validointi ja testi eivät sekoitu keskenään ja että seuranta jatkuu käyttöönoton jälkeen.
+5. Lue teorian AGI- ja ASI-osat. Lisää tuotokseen kahden virkkeen rajaus siitä, miksi toimiva rajattu malli ei vielä osoita AGI:a tai ASI:a.
 
-Itsenäinen suoritus on valmis, kun oppija on täyttänyt taulukon, kirjoittanut 2–3 virkkeen johtopäätöksen ja tarkistanut vastauksensa Harjoittele-tehtävien palautteen avulla.
+Itsenäinen suoritus on valmis, kun oppija on tehnyt yhden sivun elinkaarikuvauksen, lisännyt AGI–ASI-rajauksen ja tarkistanut vastauksensa viiden Harjoittele-tehtävän palautteen avulla.
 
 ## Eriyttäminen
 
 ### Tukireitti
 
-- Anna viiden käsitteen nimet valmiiksi taulukkoon.
-- Anna jokaisesta käsitteestä yksi esimerkki, jonka opiskelija yhdistää oikeaan kohtaan.
-- Käytä lauseenalustuksia: ”Tämä on nykyinen järjestelmä, koska…” ja ”Tästä ei vielä voida päätellä, että…”
-- Salli lopputehtävässä 3–4 virkkeen vastaus.
+- Anna elinkaaren kuusi vaihetta valmiina otsikoina ja yksi esimerkkilause kustakin.
+- Anna datadriftistä ja mallidriftistä kaksi kuvausta, jotka opiskelija yhdistää oikeaan käsitteeseen.
+- Käytä AGI–ASI-rajauksessa lauseenalustusta: ”Toimiva petosmalli ei vielä ole AGI, koska…”
 
 ### Syventävä reitti
 
-- Pyydä opiskelijaa etsimään järjestelmä, jossa sääntöpohjainen toiminta ja tekoälymalli yhdistyvät.
-- Pyydä erottamaan uutisesta havaittu tulos, kirjoittajan tulkinta ja tulevaisuusennuste.
-- Pyydä muotoilemaan liioitteleva otsikko uudelleen niin, että se vastaa käytettävissä olevaa näyttöä.
+- Pyydä opiskelijaa nimeämään jokaiseen elinkaaren vaiheeseen vastuuhenkilö ja seurattava näyttö.
+- Pyydä erottamaan uutisesta havaittu tulos, kirjoittajan tulkinta ja AGI- tai ASI-ennuste.
 
 Syventäminen ei muuta pakollista ydintuotosta. Kaikki opiskelijat osoittavat saman keskeisen ymmärryksen.
 

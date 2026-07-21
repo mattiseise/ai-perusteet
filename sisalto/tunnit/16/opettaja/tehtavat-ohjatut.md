@@ -49,6 +49,12 @@ Kaikki reitit vastaavat ennen julkaisu- tai käyttöpäätöstä samoihin neljä
 
 Vastausten jälkeen jokainen tekee näkyvän päätöksen: tuotos julkaistaan, hylätään tai palautetaan vielä korjattavaksi. Kirjaston esimerkkivideo voidaan julkaista vain, jos version 2 tekstitys on luettavissa, lähdeaineisto on luvallista, videossa ei ole tunnistettavia henkilöitä ja ihminen on tarkistanut palautusohjeen oikeellisuuden. Avoin käyttöoikeus- tai turvallisuuskysymys tarkoittaa, ettei tuotosta julkaista vielä.
 
+## Aktiviteetti 6 — Bottiprojektin valintakortti (15 min)
+
+Oppijat vertaavat kahta toteutustapaa omalle apuri-botilleen. Pyydä heitä nimeämään erikseen se, mitä teknisellä polulla voidaan todella testata, ja se, mitä suunnittelupolulla voidaan vain kuvata tai simuloida. Kysy jokaiselta: **Mikä valitsemasi erikoistyökalu ratkaisee käyttäjälle, ja mitä tapahtuu, jos jätät sen pois?** Jos vastausta ei löydy, poisrajaus on perusteltu ratkaisu.
+
+Valintakortin lopussa pitää näkyä toteutuspäätös, tärkein riskirajaus ja yksi havaittava käyttöönottokriteeri. Varmista, ettei simuloitua käyttöoikeutta, integraatiota tai tallennusta nimetä toimivaksi ominaisuudeksi.
+
 ## Opettajan tarkistuslista
 
 Tarkistuslista auttaa varmistamaan eri reittien yhdenvertaisuuden ja turvallisen työskentelyn. Käytä sitä tunnin rakenteen tukena, ei uutena oppijoille opeteltavana sisältöluettelona:

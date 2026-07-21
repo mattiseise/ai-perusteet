@@ -6,7 +6,7 @@ Tieto, jonka varassa botti vastaa — esimerkiksi tuotelista, ohjeet ja usein ky
 
 ## RAG (retrieval-augmented generation)
 
-Haulla täydennetty tekstintuotto: tapa, jolla botti käyttää tietopohjaa. Ensin **hakuvaihe** etsii tietopohjasta kysymykseen osuvimmat tekstikatkelmat, sitten kielimalli muodostaa vastauksen niiden pohjalta. Botti ei siis lue koko tietopohjaa joka kysymyksellä, vaan vastaa löydettyjen katkelmien varassa.
+Hakua hyödyntävä vastausten muodostaminen. Ensin hakuvaihe etsii tietopohjasta kysymykseen sopivia tekstikatkelmia, sitten kielimalli muodostaa vastauksen niiden pohjalta. Tietopohja on aineisto; RAG on tapa hakea ja käyttää sitä.
 
 ## Hakuvaihe
 
@@ -16,13 +16,25 @@ RAG:n ensimmäinen vaihe: järjestelmä etsii tietopohjasta ne kohdat, jotka mui
 
 Tietopohjan aineistosta pilkottu pieni pala, tyypillisesti muutaman kappaleen mittainen, jota haku voi käsitellä yksitellen. Hakuvaihe poimii kysymykseen osuvimmat katkelmat ja liittää ne mallin kontekstiin vastausta varten.
 
+## Hakuvaiheen virhe
+
+Tilanne, jossa järjestelmä ei löydä oikeaa lähdettä tai tuo mallille väärän katkelman. Virhe syntyy ennen vastauksen muodostamista.
+
+## Vastauksen muodostamisen virhe
+
+Tilanne, jossa lähde löytyy, mutta kielimalli tulkitsee sitä väärin tai lisää vastaukseen väitteen, jota lähde ei tue.
+
+## Käyttöoikeusrajaus
+
+Tekninen sääntö, joka varmistaa, että käyttäjä voi hakea ja nähdä vain hänelle sallittua aineistoa. Pelkkä promptiin kirjoitettu kielto ei riitä käyttöoikeusrajaksi.
+
 ## Rajaus
 
 Botin "en osaa" tai "en saa tehdä tätä" -kohdat: mihin aiheisiin botti vastaa ja mitä se ei saa tehdä. Rajaukset asetetaan ohjeistuksella ja suojaavat sekä käyttäjää että bottia.
 
-## Varmuuskynnys
+## Eskalointiehto
 
-Jos botti ei ole riittävän varma vastauksestaan, sen pitää sanoa, ettei se tiedä, eikä yrittää arvata.
+Havaittava tilanne, jossa botti ei jatka itsenäisesti. Tällainen ehto voi olla hyväksytyn lähteen puuttuminen, lähteiden ristiriita tai pakollisen tiedon puute.
 
 ## Positiivinen testi
 

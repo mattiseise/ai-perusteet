@@ -14,11 +14,11 @@
 
 **Iterointi** — Botin parantaminen testaamalla, korjaamalla ja testaamalla uudelleen. Hyvä botti syntyy iteroinnista, ei heti ensimmäisellä yrityksellä.
 
-## Custom GPT:t ja botit
+## Mukautetut botit
 
 **Järjestelmäprompti** — Botin toimintaa ohjaava teksti, joka määrittää botin roolin, tehtävän, toimintatavan ja rajat. Se vaikuttaa kaikkiin botin vastauksiin.
 
-**Räätälöity GPT (Custom GPT)** — Tiettyyn tarkoitukseen määritetty ChatGPT-versio. Se voi sisältää järjestelmäpromptin, ohjeita, tiedostoja ja integraatioita.
+**Mukautettu botti** — Tiettyyn tarkoitukseen määritetty botti. Se voi sisältää järjestelmäpromptin, ohjeita, tiedostoja ja integraatioita.
 
 **Persoona** — Botille määritetty viestintätapa ja sävy. Persoona voi olla esimerkiksi ystävällinen ja kärsivällinen tai suora ja asiallinen. Se tukee botin roolia, mutta ei korvaa tehtävää tai asiantuntemusta.
 
@@ -30,11 +30,17 @@
 
 **Positiivinen testaus** — Testataan asioita, joiden pitäisi toimia. Nähdään, vastaako botti oikein normaaleissa tilanteissa.
 
-**Negatiivinen testaus** — Testataan asioita, joiden ei pitäisi toimia. Nähdään, kieltäytyykö botti asianmukaisesti ja suojaauko se itseään.
+**Negatiivinen testaus** — Testataan asioita, joiden ei pitäisi toimia. Nähdään, kieltäytyykö botti asianmukaisesti ja suojaako se itseään.
 
 **Reunatapaus** — Poikkeava tai odottamaton tilanne, kuten tyhjä syöte, väärällä kielellä kirjoitettu teksti tai hyvin pitkä teksti. Reunatapausten avulla arvioidaan, kuinka luotettavasti botti toimii poikkeavissa tilanteissa.
 
 **Testidokumentti** — Kirjallinen raportti, joka sisältää syötteen, odotetun tuloksen, todellisen tuloksen ja analyysin.
+
+**Tekninen toteutuspolku** — Suorituspolku, jossa botti rakennetaan käytettävälle alustalle ja sen todellinen toiminta testataan.
+
+**Dokumentoitu suunnittelupolku** — Suorituspolku, jossa botin arkkitehtuuri, simuloitu suoritusjälki, testit ja rajoitukset kuvataan ilman väitettä toimivista integraatioista.
+
+**Simuloitu suoritusjälki** — Vaiheittainen kuvaus siitä, miten suunniteltu botti käsittelisi syötteen. Se ei todista teknisen yhteyden, käyttöoikeuden tai tallennuksen toimivan.
 
 ## Viestintä ja vuorovaikutus
 

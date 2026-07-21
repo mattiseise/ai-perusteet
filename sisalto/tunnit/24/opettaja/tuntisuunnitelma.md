@@ -15,7 +15,7 @@ Oppitunnissa käsitellään neljä keskeistä uhkaa:
 - **Liian laajat oikeudet:** minimioikeusperiaate unohtuu, ja agentti saa enemmän pääsyä kuin se tarvitsee.
 - **Puutteellinen seuranta:** virheet, poikkeamat ja hyökkäykset jäävät huomaamatta, koska toimintaa ei lokiteta tai valvota riittävästi.
 
-**Opettajan painotus:** Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on harnessin suunnittelua. Kielimalli voi arvioida riskiä, mutta oikeudet, validointi, hyväksyntä, lokitus ja palautuminen on toteutettava mallin ulkopuolella niin, ettei malli voi ohittaa niitä.
+**Opettajan painotus:** Korosta opiskelijoille, että turvallisuus ei ole vain tekninen lisäkerros. Se on agentin ohjauskehyksen suunnittelua. Kielimalli voi arvioida riskiä, mutta oikeudet, validointi, hyväksyntä, lokitus ja palautuminen on toteutettava mallin ulkopuolella niin, ettei malli voi ohittaa niitä.
 
 ---
 
@@ -53,7 +53,7 @@ Opiskelijamateriaalin esimerkissä asiakaspalveluagentti keksii palautuskäytän
 Hallusinaatioita voidaan ehkäistä kolmella keinolla:
 
 1. **Ankkurointi tietopohjaan:** Agentti saa vastata vain tietopohjasta löytyvän tiedon perusteella. Jos tietoa ei löydy, agentti ei arvaa vaan ohjaa asian ihmiselle.
-2. **Varmuuskynnys:** Jos agentin varmuus on matala, esimerkiksi alle 70 %, se ei tee päätöstä itsenäisesti vaan pyytää ihmisen apua.
+2. **Havaittava eskalointiehto:** Agentti pyytää ihmisen apua, jos hyväksyttyä lähdettä ei löydy, lähteet ovat ristiriidassa, pakollinen tieto puuttuu, rakenteinen validointi epäonnistuu tai työkalu palauttaa virheen. Mallin itse ilmoittamaa varmuusprosenttia ei käytetä päätösrajana. Erikseen arvioidun ja kalibroidun luokittelukomponentin todennäköisyys on eri asia.
 3. **Tarkistusaskeleet:** Erillinen tarkistusvaihe vertaa agentin vastausta tietopohjaan ennen kuin vastaus lähetetään tai toiminto suoritetaan.
 
 **Opettajan huomio:** Hallusinaatioista puhuttaessa kannattaa korostaa, että ongelma ei ole vain ”tekoäly voi olla väärässä”. Agenttien kohdalla ongelma on se, että väärä tieto voi muuttua toiminnaksi: sähköpostiksi, tietokantamuutokseksi, laskuksi, hyväksynnäksi tai asiakkaalle annetuksi ohjeeksi.
@@ -132,7 +132,7 @@ Tavoitteena ei ole opettaa hyökkäämistä, vaan tehdä turvallisuusongelmasta 
 
 ### Fasilitointiohje
 
-- **Rajaa harjoitus selvästi:** opiskelijat testaavat vain omia bottejaan, harjoitusympäristöjä tai yleistä ChatGPT:tä. Oikeisiin järjestelmiin, toisten tileihin tai tuotantoympäristöihin ei kohdisteta testejä.
+- **Rajaa harjoitus selvästi:** opiskelijat testaavat vain omia bottejaan, harjoitusympäristöjä tai yleistä kielimallisovellusta. Oikeisiin järjestelmiin, toisten tileihin tai tuotantoympäristöihin ei kohdisteta testejä.
 - **Nimeä oppimistavoite:** tarkoitus on ymmärtää haavoittuvuus ja suunnitella puolustus, ei kilpailla siitä, kuka keksii pahimman hyökkäyksen.
 - **Hyödynnä hämmennys:** jos opiskelija yllättyy siitä, että ohitusyritys toimii, käytä hetki oppimiseen. Kysy: ”Miksi tämä onnistui?” ja ”Mikä turvakerros olisi voinut estää tämän?”
 - **Ohjaa keskustelu aina puolustukseen:** jokaisen hyökkäysesimerkin jälkeen opiskelijan pitää nimetä vähintään yksi mahdollinen suojaus.
@@ -166,7 +166,7 @@ Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteis
 1. **Promptihyökkäys: hyökkäykset ja puolustus**
    Opiskelija tunnistaa, millaisia piilotettuja käskyjä agentin syötteisiin voisi tulla, ja suunnittelee suojaukset siltä varalta, ettei käskyä tunnisteta.
 2. **Hallusinaatiot: skenaariot ja ehkäisy**
-   Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, varmuuskynnyksen tai tarkistusvaiheen.
+   Opiskelija kuvaa tilanteen, jossa agentin keksimä tieto voisi aiheuttaa vahinkoa, ja suunnittelee ankkuroinnin, havaittavan eskalointiehdon tai tarkistusvaiheen.
 3. **Minimioikeusperiaate: pääsyn suunnittelu**
    Opiskelija listaa, mitä agentti saa lukea, kirjoittaa ja suorittaa, sekä mitä se ei saa tehdä.
 4. **Neljä kerrosta: turvallisuus yhdessä tehtävässä**
@@ -185,7 +185,7 @@ Oppitunnin harjoitusten tarkoitus on siirtää opiskelija turvallisuuskäsitteis
 | ”Hallusinaatio on harvinaista.” | Hallusinaatio on todellinen riski erityisesti silloin, kun agentti ei löydä tietoa mutta yrittää silti vastata. Siksi tarvitaan tietopohjaan ankkurointi ja tarkistusvaiheet. |
 | ”Lokit ovat vain vianselvitystä varten.” | Lokit ovat myös turvallisuuden ja vastuullisuuden väline. Ne auttavat havaitsemaan poikkeamat, todentamaan tapahtumat ja analysoimaan hyökkäyksiä. |
 | ”Jos agentti on hyödyllinen, sille kannattaa antaa laajat oikeudet.” | Ei. Hyödyllisyys ei tarkoita rajatonta pääsyä. Agentille annetaan vain se, mitä se tarvitsee tehtäväänsä, ja kriittiset toiminnot vaativat ihmisen hyväksynnän. |
-| ”Vahva järjestelmäprompti riittää turvakerrokseksi.” | Ei. Järjestelmäprompti ohjaa mallia, mutta harness toimeenpanee oikeudet, rajat, hyväksynnät ja lokituksen mallin ulkopuolella. |
+| ”Vahva järjestelmäprompti riittää turvakerrokseksi.” | Ei. Järjestelmäprompti ohjaa mallia, mutta agentin ohjauskehys toimeenpanee oikeudet, rajat, hyväksynnät ja lokituksen mallin ulkopuolella. |
 
 ---
 

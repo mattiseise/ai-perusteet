@@ -1,88 +1,49 @@
-# Todistusaineisto 3 — Vastuullisen käyttäjän verifiointikäytäntö
+# Todistusaineisto 3 — Luotettavuusarvio ja tarkistuskäytäntö
 
-> **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät sitä arvioitavassa tehtävässä *"Tuomaripöydän päätös — asiantuntijalausunto tekoälystä"* (oppitunti 9). Säilytä tämä huolellisesti.
+> **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät sitä arvioitavassa tehtävässä *Tuomaripöydän päätös — asiantuntijalausunto tekoälystä* oppitunnilla 9.
 
 ## Mitä teet?
 
-Bongaat hallusinaation tositoimissa, käytät tekoälyä apunasi havaintojesi jäsentämiseen — ja koostat siitä vastuullisen käyttäjän tarkistuslistan, joka kelpaa todelliseen työkäyttöön. Tämä todistusaineisto on pohja sille, kun tuomaripöydässä joudut ehdottamaan **konkreettisia toimenpiteitä**, joilla skenaarion ongelma olisi voitu estää.
+Arvioit sekä kielimallin väitettä että petoksia tunnistavan luokittelumallin tuloksia. Lopuksi kirjoitat lyhyen tarkistuskäytännön, jota voisi käyttää todellisessa työssä.
 
-## Vaiheet
+## Vaihe 1 — Tarkista kielimallin väite
 
-### Vaihe 1 — Lavasta hallusinaatio
+Pyydä kielimallilta vastaus yhteen kysymykseen, jonka pystyt tarkistamaan virallisesta tai muusta ensisijaisesta lähteestä. Valitse esimerkiksi laitteen ominaisuus, voimassa oleva ohje tai jonkin tutun käyttötilanteen täsmällinen sääntö.
 
-Kysy tekoälyltä **kaksi spesifiä kysymystä**, joihin oikea vastaus on tarkistettavissa. Tavoitteenasi on saada malli kompastumaan. Hyviä koukkuja:
+Kirjaa väite, käyttämäsi tarkistuslähde ja tulos. Jos vastaus oli oikein, arvioi silti, mikä olisi voinut johtaa harhaan. Tavoite ei ole pakottaa mallia virheeseen, vaan harjoitella verifiointia.
 
-- Kuvitteellinen elokuva, kirja tai henkilö: *"Kerro elokuvasta 'Sininen Vuori' (1987)."*
-- Keksityt lähdeviitteet: *"Anna kolme tieteellistä lähdettä (kirjoittaja, vuosi, julkaisu) aiheesta X."* — mallit keksivät usein uskottavia mutta olemattomia viitteitä.
-- Sisäpiirikysymys jostakin sinulle tutusta organisaatiosta, jonka oikean vastauksen voit tarkistaa: esimerkiksi jonkin yhdistyksen, seuran, oppilaitoksen tai yrityksen vastuuhenkilö vuonna 2026.
+## Vaihe 2 — Tulkitse petosmallia
 
-Tarkista vastaukset virallisesta lähteestä. Tunnista, missä malli hallusinoi ja mistä sen huomasi.
+Pankin malli arvioi tuhat maksua. Kymmenen on petoksia. Malli löytää kahdeksan petosta ja pysäyttää lisäksi 42 tavallista maksua.
 
-### Vaihe 2 — Diagnoosi
+Vastaa omin sanoin:
 
-Kirjoita itsellesi muistiin lyhyesti (ei vielä lopulliseen tuotokseen):
+1. Kuinka monta väärää positiivista ja väärää negatiivista järjestelmä tekee?
+2. Mikä on osumatarkkuus: kuinka suuri osa 50 hälytyksestä on oikeita petoksia?
+3. Mikä on kattavuus: kuinka suuri osa kymmenestä petoksesta löytyy?
+4. Miksi korkea kokonaistarkkuus ei yksin osoita, että järjestelmä on hyvä?
+5. Kumpi virhe on tässä vakavampi ja miksi? Perustele seurauksilla.
 
-- Mitä tunnistettavia merkkejä hallusinaatiosta oli?
-- Oliko vastaus *liian* sujuva?
-- Käyttikö malli varauksia ("on mahdollista että…") vai vastasiko se täydellä varmuudella?
-- Esiintyikö "keksittyä yksityiskohtaa" — nimiä, lukuja, päivämääriä, jotka kuulostivat täsmällisiltä?
+## Vaihe 3 — Kirjoita tarkistuskäytäntö
 
-### Vaihe 3 — Käytä tekoälyä apuna tarkistuslistan jäsentämisessä
+Kirjoita 6–8 kohdan käytäntö, joka vastaa näihin kysymyksiin:
 
-Avaa uusi keskustelu ja anna tekoälylle **roolin, havaintosi ja edellisten tuntien opit**. Esimerkkiprompti:
-
-```
-Toimit minulle sparrauskumppanina. Rakennan vastuullisen käyttäjän
-tarkistuslistaa tekoälyn käyttöön.
-
-Tässä mitä olen oppinut:
-- Tunti 3: Malli ennustaa todennäköisintä jatkoa, ei totuutta
-  (next-token prediction, epädeterminismi)
-- Tunti 5: Konteksti-ikkuna on rajallinen, vanhat ohjeet putoavat pois
-- Tunti 7 (juuri lavastamani hallusinaatio): [liitä havaintosi tähän]
-
-Auta minua jäsentämään tarkistuslista, joka kattaa: (A) mistä merkeistä
-tunnistan hallusinaation, (B) miksi malli tekee näin, (C) mitä teen
-ennen kuin luotan vastaukseen. Älä kirjoita listaa puolestani — esitä
-kysymyksiä ja anna jäsennysehdotuksia, joiden pohjalta voin tehdä oman
-listan. Pidä jäsennys konkreettisena ja toimittavissa olevana, ei
-akateemisena.
-```
-
-Tämä on harjoitus siitä, miten tekoälyä käytetään *työparina*, ei kirjoituspalveluna — ja samalla mahdollisuus huomata, jos tekoäly itse yrittää hallusinoida tarkistuslistallesi keksittyjä "parhaita käytäntöjä".
-
-### Vaihe 4 — Kirjoita tarkistuslista (tämä on todistusaineistosi)
-
-Kirjoita vastuullisen käyttäjän tarkistuslista, jonka voisi pitää näytöllä joka kerta tekoälyä käyttäessä. Listan tulee olla **konkreettinen, lyhyt ja toimittavissa oleva** — ei akateeminen essee.
-
-**A) Merkit, joista tunnistan hallusinaation** (3–5 bulletia)
-
-*Esim. "Vastaus on epäilyttävän sujuva ilman varauksia", "Lähdeviittaukset näyttävät keksityiltä", "Yksityiskohdat ovat liian täsmällisiä ollakseen tosia"*
-
-**B) Miksi malli tekee näin** (2–3 lausetta omin sanoin)
-
-*Käytä tunnin 3 käsitteitä: next-token prediction, epädeterminismi. Selitä, miksi vakuuttavuus ei ole sama kuin oikeellisuus. Sivua myös tunnin 5 muistirajat — joskus virhe johtuu siitä, että rajaus on unohtunut.*
-
-**C) Mitä teen ennen kuin luotan vastaukseen** (5–7 konkreettista askelta)
-
-*Esim. "1. Tarkistan faktat virallisesta dokumentaatiosta. 2. Ajan koodin testissä ennen tuotantoa. 3. Pyydän mallia perustelemaan vastauksen ja kysyn lähteitä — ja tarkistan että lähteet ovat oikeasti olemassa."*
+- Mitä tietoa tarkistetaan lähteestä?
+- Mitä virhetyyppejä ja mittareita tarkastellaan?
+- Milloin ihmisen pitää tarkistaa tulos?
+- Mitä tehdään, jos tulos on epävarma tai seuraukset voivat olla vakavia?
+- Kuka vastaa päätöksestä ja miten virhe kirjataan?
 
 ::: luokka
 ## Mitä palautat?
 
-**Et vieläkään mitään.**
+Et vielä mitään. Säilytä työ oppitunnin 9 asiantuntijalausuntoa varten.
 :::
+
 ::: verkko
 ## Mitä tallennat itsellesi?
 
-**Et palauta tätä minnekään — tallenna se silti huolellisesti lopputyötä varten (osa 3 kolmesta todistusaineistosta).**
+Tallenna tarkistettu väite, petosmallin tulkinta ja oma tarkistuskäytäntö. Tarvitset niitä oppitunnin 9 arvioitavassa tehtävässä.
 :::
 
-Tee kuitenkin tiedosto, jossa on:
-
-- Lyhyt todiste hallusinaatiosta (vaihe 1: kysymys + mallin vastaus + oikea vastaus + lähdelinkki)
-- Tarkistuslistasi (vaihe 4, noin 250–300 sanaa)
-
-> **Miksi tämä on tärkeää:** Tuomaripöydässä käytät tarkistuslistaasi, kun esität, mitä organisaation pitäisi tehdä toisin. Yhdessä todistusaineistojen 1 ja 2 kanssa se muodostaa vahvan perustan arvioitavalle tehtävälle — ymmärrät *mekanismin*, *rajat* ja *ratkaisut*.
-
-**3 / 3 todistusaineistoa kerätty — valmis tuomaripöytään**
+**3 / 3 todistusaineistoa kerätty**

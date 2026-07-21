@@ -1,28 +1,18 @@
-# Sanasto – oppitunti 26: n8n-projektipaja, osa 1
+# Sanasto – oppitunti 26: Projektipaja, osa 1
 
 | Termi | Selitys |
 | --- | --- |
-| **Harness** | Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen. n8n on yksi ympäristö, jossa harness voidaan toteuttaa näkyvänä työnkulkuna. |
-| **n8n** (n-eight-n) | Avoimeen lähdekoodiin perustuva automaatioalusta, jossa rakennetaan visuaalisesti työnkulkuja vetämällä ja pudottamalla solmuja kankaalle. |
-| **Solmu** (node) | Yksittäinen komponentti n8n-työnkulussa, joka tekee yhden konkreettisen tehtävän (esim. vastaanottaa viestin, kutsuu tekoälyä, lähettää sähköpostia). |
-| **Työnkulku** (workflow) | Sarja solmuja, jotka on kytketty yhteen viivalla. Data virtaa solmusta toiseen automaattisesti työnkulun logiikan mukaisesti. |
-| **Triggeri** (trigger) | Solmu, joka aloittaa työnkulun. Se voi olla ajastin (Schedule Trigger), webhook, käyttäjän painallama nappi (Manual Trigger) tai muu tapahtuma. |
-| **Webhook** | URL-osoite, jonka kautta ulkoinen järjestelmä voi lähettää tietoja n8n-työnkululle. Esimerkiksi Discord-viesti tai Slack-ilmoitus käynnistää työnkulun webhoakin kautta. |
-| **Validointi** (validation) | Prosessi, jossa n8n tarkistaa, että saapuva data on oikean muotoista ja turvallista käsitellä. Toteutetaan usein IF-solmuilla. |
-| **IF-solmu** | Päätössolmu, joka tarkistaa ehtoa (esim. "onko viesti alle 500 merkkiä?") ja ohjaa datan eri haaraan (true/false). |
-| **HTTP Request** | Solmu, joka lähettää pyynnön ulkoiselle API:lle (esim. tekoäly-palvelulle tai tietokannan rajapinnalle). Se saa vastauksen ja välittää sen eteenpäin. |
-| **OpenAI-solmu** | Erityinen solmu, joka kommunikoi OpenAI:n palvelun kanssa (ChatGPT, tekoäly-päättely). Sisältää järjestelmäpromptin ja pyytää tekoälyä päättelemään. |
-| **Google Sheets -solmu** | Solmu, joka lukee tai kirjoittaa tietoja Google Sheets -taulukkoihin. Usein käytetään muistin ja tietokannan toteuttamiseen. |
-| **Discord-solmu** (tai Slack-solmu) | Solmu, joka lähettää viestejä Discord- tai Slack-kanavalle. Yhteydenpito käyttäjien kanssa. |
-| **Arkkitehtuuri** (architecture) | Kuvaus järjestelmän vastuista ja suhteista: mitä kielimalli tekee, mistä harness vastaa, miten data kulkee ja millä ehdoilla toimintoja suoritetaan. |
-| **Järjestelmäprompti** | Teksti, joka määrittää tekoälyn käyttäytymisen. Esimerkiksi FAQ-botissa järjestelmäprompti on: "Olet FAQ-botti, vastaa lyhyesti ja selkeästi." |
-| **Konteksti** (context) | Taustatieto, jota agentti käyttää päätöksenteossa. Esimerkiksi FAQ-tietokanta on konteksti OpenAI-solmulle. |
-| **Muisti** (memory) | Mekanismi, jolla agentti tallentaa ja muistaa aikaisempia tapahtumia. n8n:ssä se voi olla Google Sheets -taulukko tai Memory-solmu. |
-| **Turvakerros** (safety layer) | Joukko validointi- ja IF-solmuja, jotka tarkistavat agentin vastaukset ennen lähettämistä. Suojaa käyttäjiä ja tietoja. |
-| **Ihmisen osallistuminen päätöksentekoon** | Rakenne, jossa kriittisissä tilanteissa ihminen hyväksyy agentin päätöksen ennen kuin se toteutetaan. |
-| **Hyväksyntäportti** (approval gate) | Kohta työnkulussa, jossa ihminen ilmoitetaan ja häneltä pyydetään päätös ennen jatkamista. |
-| **Integraatio** (integration) | Yhteys ulkoiseen palveluun (Discord, Slack, sähköposti, tekoäly-API). n8n:ssä on satoja valmiita integraatioita. |
-| **Iteratiivinen kehitys** (iterative development) | Rakentamisen tapa, jossa rakennetaan ensin yksinkertainen versio, testataan, ja lisätään sitten uusia ominaisuuksia vaihe vaiheelta. |
-| **Reunatapaukset** (edge cases) | Poikkeukselliset tilanteet, joita ei odoteta normaalisti mutta jotka voivat silti tapahtua (esim. tyhjä syöte, erittäin pitkä teksti, väärä kieli). |
+| **Agentin ohjauskehys** | Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen. |
+| **n8n** | Visuaalinen automaatioalusta, jossa teknisen polun työnkulku rakennetaan solmuista ja yhteyksistä. |
+| **Solmu** | Yksittäinen vaihe n8n-työnkulussa. Solmujen määrä ei määritä, onko järjestelmä agentti. |
+| **Triggeri** | Tapahtuma, joka käynnistää työnkulun. |
+| **Kielimallivalinta** | Tilanteen mukaan muuttuva valinta vähintään kahdesta agentin ohjauskehyksen sallimasta vaihtoehdosta. |
+| **Työkalusopimus** | Kuvaus työkalun tarkoituksesta, syötteestä, tuloksesta, oikeuksista, kielloista ja virhepolusta. |
+| **Suoritusjälki** | Tallennettu ketju, jossa näkyvät syöte, kielimallin valinta, työkalun tulos tai virhe ja seuraava vaihe. |
+| **Tekninen n8n-polku** | Toteutuspolku, jossa työnkulun yhteydet, reititys ja oikeudet näytetään toimivassa n8n-toteutuksessa. |
+| **Dokumentoitu suunnittelupolku** | Toteutuspolku, jossa rakenne kuvataan kaaviona ja työkalusopimuksina sekä testataan todellisella kielimallivalinnalla ja simuloidulla suoritusjäljellä. |
+| **Simulaatio** | Kuvaus siitä, miten järjestelmä etenisi annettujen sääntöjen mukaan. Se ei yksin todista liitäntöjen tai käyttöoikeuksien teknistä toimivuutta. |
+| **Arkkitehtuuri** | Kuvaus siitä, mitä kielimalli tekee, mistä agentin ohjauskehys vastaa ja miten tieto, päätökset sekä valvonta kulkevat järjestelmän läpi. |
+| **Iteratiivinen kehitys** | Tapa tehdä pieni versio, testata se, korjata havaittu ongelma ja testata uudelleen. |
 
 ---

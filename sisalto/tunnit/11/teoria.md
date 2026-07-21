@@ -219,6 +219,8 @@ Jos palautteet voidaan anonymisoida luotettavasti, tiivistäminen voi onnistua h
 
 Kun rakennat myöhemmin oman botin, mallin laatu on vain yksi suunnittelukysymys. Sinun pitää pystyä kuvaamaan myös, mitä aineistoa botti vastaanottaa, missä sitä käsitellään, mitä tallennetaan ja millä oikeuksilla järjestelmä toimii.
 
+Sama kuvaus auttaa tunnistamaan myös EU:n tekoälyasetukseen liittyvät vastuut. Asetus on riskiperusteinen: velvoitteet riippuvat järjestelmän käyttötarkoituksesta ja siitä, toimiiko organisaatio esimerkiksi järjestelmän tarjoajana vai käyttöönottajana. Henkilöihin vaikuttavissa käyttötavoissa, kuten rekrytoinnissa, koulutuksessa tai henkilöstöpäätöksissä, pelkkä tietosuojatarkistus ei riitä. Organisaation pitää selvittää järjestelmän riskiluokka, järjestää riittävä ihmisen valvonta ja huolehtia siitä, että käyttäjillä on tehtäväänsä sopiva tekoälylukutaito. Tämä oppitunti ei anna oikeudellista neuvontaa, vaan auttaa kokoamaan kysymykset, jotka vastuuhenkilön on tarkistettava ennen käyttöönottoa.
+
 Tämän tunnin datavirtakaavio toimii myöhemmin botin tietosuoja- ja käyttörajojen perustana.
 
 ## Yhteenveto
@@ -238,5 +240,7 @@ Tämän tunnin datavirtakaavio toimii myöhemmin botin tietosuoja- ja käyttöra
 - [European Data Protection Board: International transfers and international cooperation](https://www.edpb.europa.eu/topics/international-transfers-and-international-cooperation_en)
 - [Euroopan komissio: Mitä henkilötietoja voidaan käsitellä ja millä edellytyksillä?](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/overview-principles/what-data-can-we-process-and-under-which-conditions_fi)
 - [Open Source Initiative: The Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
+- [EUR-Lex: Regulation (EU) 2024/1689, Artificial Intelligence Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+- [European Commission: AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 
 Tarkistettu 20.7.2026.

@@ -1,35 +1,35 @@
-# Sanasto: Etiikka, tekijänoikeudet ja ympäristövaikutukset
+# Sanasto: Etiikka, oikeudet ja vastuu
 
-## Tekijänoikeus (copyright)
+## Edustavuus
 
-Laillinen oikeus, joka antaa luojalle oikeuden hallita ja hyötyä omasta luomuksestaan. Tekijänoikeus on johtanut oikeustapauksiin, koska AI-malleja on opetettu tekijöiden teoksilla ilman lupaa tai korvausta.
+Se, kuinka hyvin aineisto kuvaa niitä ihmisiä, tilanteita ja olosuhteita, joissa tekoälyjärjestelmää käytetään.
 
-## Koulutusdata (training data)
+## Algoritminen harha
 
-Tiedot, joilla koneoppimismalli opetetaan. Mallin laatu ja käyttäytyminen riippuvat suuresti koulutusdatan laadusta, lähteistä ja puolueellisuuksista.
+Järjestelmällinen vinouma, jonka vuoksi tekoälyjärjestelmän tulokset kohtelevat ryhmiä eri tavoin tai epäoikeudenmukaisesti.
 
-## Algoritminen harha (algorithmic bias)
+## Suuririskinen tekoälyjärjestelmä
 
-Tilanne, jossa AI:n päätökset tai tulokset systemaattisesti syrjivät tai suosivat tiettyä ryhmää. Harha voi johtua koulutusdatasta, joka heijastaa historiallista syrjintää tai epätasapainoista jakautumista.
+EU:n tekoälysäädöksen mukainen järjestelmä, jonka käyttötarkoitukseen liittyy merkittäviä terveyteen, turvallisuuteen tai perusoikeuksiin kohdistuvia riskejä ja siksi tavallista tiukempia velvollisuuksia.
 
-## Reilu käyttö (fair use)
+## Tarjoaja
 
-Yhdysvaltain tekijänoikeuslaissa oleva käsite, joka sallii alkuperäisen tekijänoikeuden haltijan suostumuksetta käytön tietyissä olosuhteissa (esim. kritiikki, parodia, opetus). Se, voidaanko AI-mallin koulutus laskea "reiluksi käytöksi", on oikeusjärjestelmissä kiistanalaista.
+Toimija, joka kehittää tekoälyjärjestelmän tai teettää sen ja saattaa sen markkinoille tai käyttöön omalla nimellään tai tavaramerkillään.
 
-## Datan merkitsijä (data labeler)
+## Käyttöönottaja
 
-Ihminen, joka merkitsee tai "taggaa" tietoja AI:n opetusta varten. Monet merkitsijät työskentelevät matalapalkkaisissa töissä globaalissa etelässä.
+Toimija, joka käyttää tekoälyjärjestelmää omassa toiminnassaan. Yksityishenkilön henkilökohtainen käyttö ei yleensä kuulu tähän rooliin.
 
-## Vastuullinen AI (responsible AI)
+## Tekoälylukutaito
 
-Lähestymistapa AI:n kehittämiseen ja käyttöön, joka ottaa huomioon eettiset näkökohdat, harhat, turvallisuuden ja ympäristövaikutukset.
+Taidot ja ymmärrys, joiden avulla tekoälyä voidaan käyttää tietoisesti sekä tunnistaa sen mahdollisuuksia, rajoja ja riskejä. EU:n tekoälysäädöksen velvoite kohdistuu tarjoajiin ja käyttöönottajiin, joiden pitää parhaansa mukaan huolehtia henkilöstönsä ja puolestaan toimivien henkilöiden riittävästä osaamisesta.
 
-## Ympäristöjalanjälki (environmental footprint)
+## Ihmisen valvonta
 
-AI:n käytöstä aiheutuva vaikutus ympäristöön, kuten sähkön ja veden kulutus datakeskuksissa.
+Järjestely, jossa osaava ihminen pystyy ymmärtämään järjestelmän rajoja, seuraamaan toimintaa, poikkeamaan ehdotuksesta ja tarvittaessa keskeyttämään käytön.
 
-## Transformatiivinen käyttö (transformative use)
+## Perusoikeusvaikutusten arviointi
 
-Erityisesti Yhdysvaltain tekijänoikeuskäytännössä käytetty käsite, joka tarkoittaa alkuperäisen materiaalin käyttöä tavalla, joka lisää sille uutta merkitystä tai viestintää. Esimerkiksi kritiikki tai parodia voivat olla transformatiivisia.
+Ennen käyttöä tehtävä arvio siitä, miten suuririskinen tekoälyjärjestelmä voi vaikuttaa ihmisten perusoikeuksiin ja millä suojatoimilla haittoja ehkäistään. EU:n tekoälysäädös velvoittaa siihen tietyissä käyttötilanteissa.
 
 ---

@@ -2,7 +2,7 @@
 
 > Tällä tunnilla et rakenna vielä mitään. Teet arkkitehtuuripäätöksen: ratkaistaanko tehtävä promptilla, tavallisella työnkululla vai agentilla? Hyvä päätös voi olla myös se, ettei agenttia tarvita.
 
-## Tehtävä 20.1 — Valitse yksinkertaisin riittävä ratkaisu — suositeltu
+## Agentti: Ongelma — valitse lopullinen projektisi — suositeltu
 
 **Tavoite:** Osaat erottaa toisistaan kertaluonteisen promptauksen, ennalta määritellyn työnkulun ja agentin, joka valitsee toimintoja tilanteen perusteella.
 
@@ -10,7 +10,7 @@
 
 Täytä taulukko. Älä aloita ratkaisusta, vaan tehtävän tarpeesta.
 
-| Tapaus | Prompti, työnkulku vai agentti? | Mikä päätös muuttuu tilanteen mukaan? | Mitä harnessin pitäisi hallita? | Miksi yksinkertaisempi ratkaisu ei riitä? |
+| Tapaus | Prompti, työnkulku vai agentti? | Mikä päätös muuttuu tilanteen mukaan? | Mitä agentin ohjauskehyksen pitäisi hallita? | Miksi yksinkertaisempi ratkaisu ei riitä? |
 | --- | --- | --- | --- | --- |
 | Yhden raportin tiivistäminen kerran |  |  |  |  |
 | Saapuvan lomakkeen tallentaminen aina samaan taulukkoon |  |  |  |  |
@@ -25,14 +25,14 @@ Käytä päätöksessäsi näitä kysymyksiä:
 5. Mitä virhe maksaisi?
 6. Missä ihminen voi valvoa tai hyväksyä toiminnan?
 
-### Vaihe 2 — Testaa oma agentti-ideasi
+### Vaihe 2 — Valitse lopullinen agenttiprojektisi
 
-Avaa tunnilla 19 kirjoittamasi **Agentti: Ongelma**. Aja se saman päätöspuun läpi. Kirjoita yhden sivun päätösmuistio:
+Avaa tunnilla 19 kirjoittamasi ongelmaehdokkaat. Aja vähintään kaksi ehdokasta saman päätöspuun läpi. Valitse vasta vertailun jälkeen lopullinen agenttiprojektisi ja kirjoita yhden sivun päätösmuistio:
 
 - **Tehtävä:** Mitä ollaan ratkaisemassa ja kenelle?
 - **Valinta:** Prompti, työnkulku vai agentti?
 - **Muuttuva päätös:** Minkä seuraavan toiminnon kielimalli saa valita tilanteen perusteella?
-- **Harness:** Miten syöte, työkalut, tila, oikeudet ja loki hallitaan?
+- **Agentin ohjauskehys:** Miten syöte, työkalut, tila, oikeudet ja loki hallitaan?
 - **Yksinkertaisempi vaihtoehto:** Miksi se ei riitä — tai miksi se sittenkin riittää?
 - **Riski ja valvonta:** Mikä voi mennä pieleen ja missä ihminen tarvitaan?
 
@@ -61,4 +61,4 @@ Vertaa ratkaisuja kustannuksen, testattavuuden, ylläpidon ja riskin kannalta. P
 
 ---
 
-**Tallennettava tuotos:** perusteltu päätösmuistio ja siihen tehty yksi nimetty korjaus. Tämä muistio toimii porttina agenttiprojektille: vasta hyväksytyn agenttitarpeen jälkeen siirryt muistin, työkalujen ja päättelyn suunnitteluun.
+**Tallennettava tuotos:** **Agentti: Ongelma** -pohjapiirros (1/5), perusteltu päätösmuistio ja siihen tehty yksi nimetty korjaus. Tämä muistio toimii porttina agenttiprojektille: vasta hyväksytyn agenttitarpeen jälkeen siirryt muistin, työkalujen ja päättelyn suunnitteluun.

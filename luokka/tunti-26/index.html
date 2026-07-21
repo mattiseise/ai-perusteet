@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Kädet saveen — n8n-agenttipaja alkaa — Luokkaversio — AI · Perusteet</title>
-<meta name="description" content="Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella…">
+<title>Kädet saveen — tee agentista testattava minimiversio — Luokkaversio — AI · Perusteet</title>
+<meta name="description" content="Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella…">
 <link rel="canonical" href="https://aiperusteet.fi/luokka/tunti-26/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Kädet saveen — n8n-agenttipaja alkaa — Luokkaversio — AI · Perusteet"><meta property="og:description" content="Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella…"><meta property="og:url" content="https://aiperusteet.fi/luokka/tunti-26/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Kädet saveen — n8n-agenttipaja alkaa — Luokkaversio — AI · Perusteet"><meta name="twitter:description" content="Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Kädet saveen — n8n-agenttipaja alkaa", "description": "Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella…", "url": "https://aiperusteet.fi/luokka/tunti-26/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Kädet saveen — tee agentista testattava minimiversio — Luokkaversio — AI · Perusteet"><meta property="og:description" content="Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella…"><meta property="og:url" content="https://aiperusteet.fi/luokka/tunti-26/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Kädet saveen — tee agentista testattava minimiversio — Luokkaversio — AI · Perusteet"><meta name="twitter:description" content="Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Kädet saveen — tee agentista testattava minimiversio", "description": "Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella…", "url": "https://aiperusteet.fi/luokka/tunti-26/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Luokkaversio", "item": "https://aiperusteet.fi/luokka/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 26"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,19 +18,19 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 26</span></div><div class="lesson-title">Kädet saveen — n8n-agenttipaja alkaa</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-26/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-26/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Muuttuuko agentin valitsema toiminto tilanteen mukana, ja näkyvätkö päätös sekä työkalun tulos suoritusjäljessä?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-26-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-26-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-26-tehtavat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-tehtavat" tabindex="-1" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button id="tab-lesson-26-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-26-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-26-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-26-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-26-teoria" data-tab="teoria"><h1>Kädet saveen — n8n-agenttipaja alkaa</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/luokka/">Luokkaversio</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 26</span></div><div class="lesson-title">Kädet saveen — tee agentista testattava minimiversio</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-26/" data-view="kurssi">Verkkokurssi</a><a class="vw on" href="/luokka/tunti-26/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Muuttuuko agentin valitsema toiminto tilanteen mukana, ja mitä toteutuspolkusi näyttö osoittaa?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-26-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-26-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-26-tehtavat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-tehtavat" tabindex="-1" data-tab="tehtavat" onclick="showTab('tehtavat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6.5 4H14M6.5 8H14M6.5 12H14M2 4l.9.9L4.6 3M2 8l.9.9L4.6 7M2 12l.9.9L4.6 11"/></svg><span>Tehtävät</span></button><button id="tab-lesson-26-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-26-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-26-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-26-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-26-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-26-teoria" data-tab="teoria"><h1>Kädet saveen — tee agentista testattava minimiversio</h1>
 <h2>Johdanto: teoriasta tekemiseen</h2>
-<p>Olet oppinut, mitä agentit ovat, miten ne päättelevät, miten niitä turvataan ja miten ne eroavat tavallisista ohjelmista. Olet myös kerännyt matkan varrella <strong>viisi pohjapiirrosta</strong> tunneilta 19, 21, 23, 24 ja 25. Ne muodostavat suunnitelman omasta agentistasi. Tällä tunnilla kokoat pohjapiirrokset yhteen, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.</p>
-<p><strong>n8n</strong> lausutaan ”n-eight-n”. Se on avoimen lähdekoodin automaatioalusta, jossa rakennat työnkulkuja visuaalisesti vetämällä ja pudottamalla <strong>solmuja</strong> eli nodeja kankaalle. Jokainen solmu tekee yhden asian: vastaanottaa viestin, kutsuu tekoälyä, lukee tiedoston tai lähettää sähköpostin. Solmujen välille vedetään yhteys, ja data virtaa automaattisesti solmusta toiseen. Voit ajatella sitä putkirakennelmana, jossa jokainen mutka tekee jotakin hyödyllistä.</p>
-<p>Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — <strong>syötekäsittely</strong>, <strong>päättely</strong>, <strong>työkalut</strong>, <strong>muisti</strong>, <strong>turvakerrokset</strong> ja <strong>palautesilmukka</strong> — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.</p>
-<blockquote class="pause"><p><strong>Harnessin näkökulma:</strong> n8n ei ole automaattisesti agentti tai harness. Se on ympäristö, jossa voit rakentaa harnessin näkyväksi työnkuluksi: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Kuuden rakennusosan kokonaisuus toimii kattavuuden tarkistuslistana — osia ei tarvitse toteuttaa kuutena erillisenä solmuna.</p>
+<p>Olet oppinut, miten tällä kurssilla rajattu agentti toimii, miten sitä turvataan ja miten se eroaa tavallisesta työnkulusta. Olet myös kerännyt matkan varrella <strong>viisi pohjapiirrosta</strong> tunneilta 19, 21, 23, 24 ja 25. Tällä tunnilla kokoat ne yhteen ja teet ensimmäisen testattavan version. Voit rakentaa sen teknisenä n8n-toteutuksena tai dokumentoituna suunnitelmana. Molemmissa kielimallin on tehtävä vähintään yksi todellinen, tilanteen mukaan muuttuva valinta.</p>
+<p><strong>n8n</strong> lausutaan ”n-eight-n”. Se on visuaalinen automaatioympäristö, jota voi käyttää pilvipalveluna tai ylläpitää itse sen lisenssiehtojen mukaisesti. Työnkulku rakennetaan <strong>solmuista</strong> eli nodeista kankaalle. Jokainen solmu tekee yhden asian: vastaanottaa viestin, kutsuu kielimallia, lukee rajattua tietoa tai valmistelee toiminnon. Solmujen välille vedetään yhteys, ja tieto kulkee vaiheesta toiseen.</p>
+<p>Miksi juuri n8n? Koska se poistaa yhden suurimmista esteistä agentin rakentamisessa: sinun ei tarvitse osata ohjelmoida kaikkea käsin. Kaikki, mitä olet oppinut agentin rakenteesta — <strong>syötekäsittelijä</strong>, <strong>päättelijä ja suunnittelija</strong>, <strong>työkalujen suorittaja</strong>, <strong>muisti ja konteksti</strong>, <strong>turvakerros</strong> sekä <strong>seuranta ja palautesilmukka</strong> — voidaan toteuttaa n8n:ssä visuaalisesti. Näet agentin arkkitehtuurin konkreettisesti solmuina ja yhteyksinä.</p>
+<blockquote class="pause"><p><strong>Agentin ohjauskehyksen näkökulma:</strong> n8n ei ole automaattisesti agentti. Se on ympäristö, jossa ohjauskehyksen vastuut voidaan toteuttaa näkyvänä työnkulkuna: yksi solmu kutsuu kielimallia, muut huolehtivat syötteistä, työkaluista, tilasta, turvarajoista ja toiminnan jatkumisesta. Dokumentoidussa suunnittelupolussa samat vastuut kuvataan kaaviona, sopimuksina ja suoritusjälkinä. Kuusi rakennusosaa toimii kummassakin polussa kattavuuden tarkistuslistana.</p>
 <p><strong>Pysähdy hetkeksi:</strong> Mieti jotakin toistuvaa tehtävää arjessasi tai koulussa. Voisiko kone hoitaa sen puolestasi, jos sillä olisi pääsy oikeisiin työkaluihin?<br />
 Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen yksinkertaisen agentin voit rakentaa:</p>
 </blockquote>
 <figure style="margin:26px 0;text-align:center">
 <svg viewBox="0 0 920 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:840px;height:auto" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
   <title>Esimerkki-työnkulku: sähköpostien luokittelu n8n:ssä</title>
-  <desc>Päivittäin ajettava järjestelmä hakee sähköpostit. Kielimalli arvioi tilanteen ja valitsee rajatuista työkaluista tarvittavan toiminnon. Tulos muotoillaan ja tallennetaan Google Sheetsiin.</desc>
+  <desc>Päivittäin ajettava järjestelmä hakee sähköpostit. Kielimalli arvioi tilanteen ja valitsee rajatuista työkaluista tarvittavan toiminnon. Tulos muotoillaan ja tallennetaan rajattuun taulukkoon.</desc>
   <defs>
     <g id="cls-mail" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3.5 7.5 L12 13 L20.5 7.5"/></g>
     <g id="cls-robot" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="8" width="15" height="11.5" rx="3"/><path d="M12 8 V4.5"/><circle cx="12" cy="3.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.3" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.7" cy="13.5" r="1.3" fill="currentColor" stroke="none"/><path d="M9.5 16.6 H14.5"/></g>
@@ -61,7 +61,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   <rect x="700" y="92" width="192" height="78" rx="12" fill="#E9F6F7" stroke="#BFE6E9" stroke-width="1.5"/>
   <use href="#cls-sheet" x="716" y="108" width="19" height="19" style="color:#0E9AA7"/>
   <text x="742" y="121" font-size="12.5" font-weight="700" fill="#0B7E89">Tallennus</text>
-  <text x="716" y="150" font-size="11" fill="#3A4253">Google Sheetsiin</text>
+  <text x="716" y="150" font-size="11" fill="#3A4253">rajattuun taulukkoon</text>
   <g stroke="#B7C0D6" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
     <path d="M344 170 V196 H126 V232"/><path d="M344 170 V196 H344 V232"/><path d="M344 170 V196 H560 V232"/><path d="M344 170 V196 H770 V232"/>
   </g>
@@ -73,7 +73,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
   <use href="#cls-ai" x="278" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="302" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Kielimalli (LLM)</text>
   <text x="278" y="280" font-size="10.3" fill="#5A6478">tekee yhteenvedon</text>
   <rect x="482" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
-  <use href="#cls-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Google Sheets</text>
+  <use href="#cls-sheet" x="496" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="520" y="261" font-size="11.5" font-weight="600" fill="#1B2336">taulukko</text>
   <text x="496" y="280" font-size="10.3" fill="#5A6478">tallentaa viestit</text>
   <rect x="700" y="232" width="160" height="56" rx="10" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="1.3"/>
   <use href="#cls-mail" x="714" y="248" width="18" height="18" style="color:#3B5BDB"/><text x="738" y="261" font-size="11.5" font-weight="600" fill="#1B2336">Sähköposti</text>
@@ -88,8 +88,8 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 
 <h2>n8n:n perusteet — solmut, yhteydet ja triggerit</h2>
 <p>Kun avaat n8n:n ensimmäistä kertaa, näet tyhjän kankaan. Kaikki alkaa <strong>triggeristä</strong> eli solmusta, joka käynnistää työnkulun. Triggeri voi olla esimerkiksi ajastin, kuten ”joka maanantai klo 8”, webhook, kuten ”kun joku lähettää viestin”, tai manuaalinen käynnistys, kuten ”kun painan käynnistä”. Ilman triggeriä työnkulku ei lähde liikkeelle.</p>
-<p>Triggerin jälkeen lisäät <strong>toimintasolmuja</strong>. Jokainen solmu saa dataa edelliseltä solmulta ja antaa dataa seuraavalle solmulle. Esimerkiksi työnkulku voi edetä näin: triggeri vastaanottaa Discord-viestin → HTTP Request -solmu lähettää viestin tekoäly-API:lle → seuraava solmu muotoilee vastauksen → viimeinen solmu lähettää vastauksen takaisin Discordiin. Tämä on tekoälyavusteinen työnkulku, mutta ei vielä välttämättä agentti. Agentiksi kokonaisuus muuttuu vasta, kun kielimalli saa valita seuraavan toiminnon tai työkalun tilanteen ja havaintojen perusteella — harnessin asettamissa rajoissa.</p>
-<p>n8n:ssä on satoja valmiita integraatioita, kuten Google Sheets, Slack, Discord, sähköposti, tiedostot, tietokannat, HTTP-kutsut sekä tekoälypalvelut, kuten OpenAI ja Claude. Sinun ei tarvitse tietää kaikkien näiden palveluiden teknisiä yksityiskohtia. n8n hoitaa yhteydet puolestasi. Sinun tehtäväsi on päättää, mitä solmuja käytät ja missä järjestyksessä.</p>
+<p>Triggerin jälkeen lisäät <strong>toimintasolmuja</strong>. Jokainen solmu saa tietoa edelliseltä solmulta ja antaa sitä seuraavalle. Työnkulku voi esimerkiksi vastaanottaa viestin, pyytää kielimallia luokittelemaan sen ja ohjata tuloksen oikeaan käsittelyyn. Tämä on tekoälyavusteinen työnkulku, mutta ei vielä välttämättä agentti. Tällä kurssilla agentilta vaaditaan, että kielimalli valitsee seuraavan toiminnon tai työkalun tilanteen ja havaintojen perusteella — ohjauskehyksen asettamissa rajoissa.</p>
+<p>n8n:ssä on valmiita solmuja esimerkiksi taulukoille, viesteille, tiedostoille, tietokannoille ja kielimalleille. Sinun ei tarvitse ohjelmoida yhteyksiä käsin. Sinun tehtäväsi on päättää, mitä tietoa saa käyttää, minkä valinnan kielimalli tekee ja mitä järjestelmä saa valinnan jälkeen tehdä.</p>
 <figure class="ai-demo" data-demo-id="lesson-26-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// data virtaa solmusta toiseen — jokainen solmu tekee yhden asian</span>
 <div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:280px"><div class="ai-demo__mobile-model ai-demo__mobile-model--flow"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">Triggeri käynnistää</li><li class="ai-demo__mobile-node">Agenttisolmu arvioi seuraavan rajatun vaiheen</li><li class="ai-demo__mobile-node">Työkalu tekee yhden asian</li><li class="ai-demo__mobile-node">Tulos tai virhe palaa</li><li class="ai-demo__mobile-node">Loki + lopputulos / eskalointi</li></ol></div>
   <div class="l26-wrap">
@@ -132,13 +132,13 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Miten agentin kaikki kuusi rakennusosaa toteutuvat suunnitelmassasi? Mieti vastuita ennen solmuja: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.</p>
 </blockquote>
 <h2>Agentin kuusi rakennusosaa n8n:ssä</h2>
-<p>Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä konkreettisesti. Tunnilla 27 dokumentoit ensin kielimallin ja harnessin rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista solmua yhteen lokeroon.</p>
+<p>Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä tai kuvata dokumentoidussa suunnittelupolussa. Tunnilla 27 dokumentoit ensin kielimallin ja agentin ohjauskehyksen rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista vastuuta yhteen lokeroon.</p>
 <p><strong>Syötekäsittelijä</strong> on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.</p>
-<p><strong>Päättelijä</strong> on tekoälysolmu, esimerkiksi OpenAI-solmu tai vastaava. Siihen kirjoitat <strong>järjestelmäpromptin</strong>, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.</p>
-<p><strong>Työkalujen suorittaja</strong> tarkoittaa solmuja, joilla agentti tekee konkreettisia toimintoja. Google Sheets -solmu lukee tai kirjoittaa tietoja. HTTP Request -solmu kutsuu ulkoisia palveluita. Slack-solmu lähettää viestejä. Nämä ovat agentin ”kädet”, joiden avulla se toimii maailmassa.</p>
-<p><strong>Muisti ja konteksti</strong> voidaan toteuttaa usealla tavalla. Yksinkertaisimmillaan voit tallentaa keskusteluhistorian Google Sheetsiin ja hakea sen jokaisen uuden viestin yhteydessä. n8n:ssä voi olla myös muistisolmuja tai muita tapoja säilyttää keskustelun kontekstia ja prosessin tilaa.</p>
+<p><strong>Päättelijä</strong> on tekoälysolmu, esimerkiksi kielimallisolmu. Siihen kirjoitat <strong>järjestelmäpromptin</strong>, joka ohjaa agentin toimintaa. Tässä solmussa agentti ”ajattelee”: se saa käyttäjän viestin, mahdollisesti kontekstitietoa edellisistä solmuista sekä ohjeet siitä, miten sen pitää vastata tai toimia.</p>
+<p><strong>Työkalujen suorittaja</strong> tarkoittaa solmuja tai kuvattuja toimintoja, joilla agentti lukee rajattua tietoa tai vaikuttaa ympäristöönsä. Työkalu voi hakea hyväksytystä tietolähteestä, kirjoittaa taulukkoon tai valmistella viestin. Sopimus määrää, mitä se saa tehdä ja miten virhe käsitellään.</p>
+<p><strong>Muisti ja konteksti</strong> voidaan toteuttaa usealla tavalla. Yksinkertaisimmillaan voit tallentaa keskusteluhistorian rajattuun taulukkoon ja hakea sen jokaisen uuden viestin yhteydessä. n8n:ssä voi olla myös muistisolmuja tai muita tapoja säilyttää keskustelun kontekstia ja prosessin tilaa.</p>
 <p><strong>Turvakerros</strong> toteutuu IF-solmuilla, ehdoilla, validoinneilla ja hyväksyntäkohdilla. Voit esimerkiksi lisätä ehdon: ”Jos vastaus sisältää henkilötietoja, älä lähetä sitä eteenpäin.” Tai: ”Jos käyttäjä pyytää jotakin, mikä ei kuulu agentin tehtävään, vastaa kohteliaasti kieltäytymällä.” n8n:ssä nämä ovat konkreettisia haarautumia työnkulussa.</p>
-<p><strong>Seuranta ja palautesilmukka</strong> tarkoittavat lokitusta ja palautteen keräämistä. Lisää työnkulkuun solmu, joka tallentaa jokaisen tärkeän toiminnon esimerkiksi Google Sheetsiin tai tiedostoon: mitä käyttäjä kysyi, mitä agentti vastasi, mitä työkaluja käytettiin ja kauanko suoritus kesti. Näin näet jälkikäteen, miten agentti toimii, ja voit parantaa sitä.</p>
+<p><strong>Seuranta ja palautesilmukka</strong> tarkoittavat lokitusta ja palautteen keräämistä. Lisää työnkulkuun solmu, joka tallentaa jokaisen tärkeän toiminnon esimerkiksi rajattuun taulukkoon tai tiedostoon: mitä käyttäjä kysyi, mitä agentti vastasi, mitä työkaluja käytettiin ja kauanko suoritus kesti. Näin näet jälkikäteen, miten agentti toimii, ja voit parantaa sitä.</p>
 <h2>Iteratiivinen kehitys — rakenna pienestä isoon</h2>
 <p>Tämän tunnin tärkein periaate on: <strong>aloita pienestä</strong>. Rakenna ensin yksinkertaisin mahdollinen versio, joka tekee yhden asian oikein. Testaa se. Lisää vasta sen jälkeen seuraava ominaisuus. Tätä kutsutaan <strong>iteratiiviseksi kehitykseksi</strong>. Kokeneet käyttäjätkään eivät rakenna valmista tuotetta yhdellä kertaa.</p>
 <p>Käytännössä tunnin 26 tavoite on <strong>toimiva minimiversio</strong>, jossa näkyy yksi aito agenttipäätös. Kielimalli saa esimerkiksi valita kahdesta rajatusta työkalusta, pyytää lisätietoa tai lopettaa tehtävän. Valinta ja sen tulos tallennetaan näkyvään suoritusjälkeen. Turvakerros, hyväksyntäportit ja viimeistely tehdään tunnilla 27. Jos projektisi etenee aina samaa polkua, kutsu sitä tässä vaiheessa tekoälyavusteiseksi työnkuluksi ja lisää agenttipäätös vain, jos tehtävä todella tarvitsee sellaisen.</p>
@@ -149,7 +149,7 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <li><strong>Vaihe 3 — Toteuta valinta:</strong> ohjaa tulos valittuun työkaluun tai haaraan. Tallenna valinta, työkalun tulos ja seuraava toiminto suoritusjälkeen.</li>
 </ol>
 <p>Testaa jokaisen lisäyksen jälkeen, että kaikki toimii. Jos jokin menee rikki, tiedät tarkalleen, mikä muutos aiheutti ongelman. Tämä on paljon helpompaa kuin rakentaa koko työnkulku kerralla ja etsiä sen jälkeen vikaa kymmenestä eri solmusta.</p>
-<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelyä, päättelyä, työkaluja, muistia, turvakerrosta tai palautetta — ja jääkö jokin olennainen vastuu vielä puuttumaan?</p>
+<blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kun lisäät uuden solmun, säännön tai palvelun työnkulkuusi, mieti aina: mistä vastuusta se huolehtii? Voiko sama toteutusosa kattaa syötekäsittelijän, päättelijän ja suunnittelijan, työkalujen suorittajan, muistin ja kontekstin, turvakerroksen tai seurannan ja palautesilmukan vastuuta — ja jääkö jokin olennainen vastuu vielä puuttumaan?</p>
 </blockquote>
 <h2>Pohjapiirroksesta toteutukseen</h2>
 <p>Tällä tunnilla et aloita tyhjältä pöydältä. Sinulla on viisi pohjapiirrosta, jotka olet kerännyt edellisillä tunneilla. Niiden pohjalta tiedät jo:</p>
@@ -165,30 +165,30 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <p><strong>Taso 1 — FAQ-botti</strong></p>
 <p>Yhteisö saa samoja kysymyksiä kymmeniä kertoja päivässä. Botti vastaa yleisimpiin kysymyksiin automaattisesti. Triggeri on viesti chat-kanavasta. Työnkulku lähettää viestin tekoälysolmulle, jolla on järjestelmäprompti ja FAQ-tietokanta kontekstina. Lopuksi vastaus lähetetään takaisin chattiin.</p>
 <p><strong>Taso 2 — Sähköpostiyhteenvetoagentti</strong></p>
-<p>Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä yhteenvedon tekoälyllä ja lähettää yhteenvedon Slackiin tai Teamsiin. Triggeri on ajastin. Työnkulku etenee näin: hae sähköpostit → kokoa yhteenveto → lähetä yhteenveto.</p>
+<p>Agentti lukee joka aamu klo 8 viimeisen 24 tunnin sähköpostit, tekee niistä yhteenvedon tekoälyllä ja lähettää yhteenvedon tiimikanavalle. Triggeri on ajastin. Työnkulku etenee näin: hae sähköpostit → kokoa yhteenveto → lähetä yhteenveto.</p>
 <p><strong>Taso 3 — Tikettiagentti</strong></p>
-<p>Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin Google Sheetsiin, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki ihmisen osallistavasta rakenteesta.</p>
-<h2>Tunnin tavoite ja valmis lopputulos</h2>
-<p>Tunnin lopussa sinulla pitäisi olla <strong>toimiva minimiversio</strong> omasta n8n-agentistasi. Sen ei tarvitse vielä olla täydellinen, mutta sen pitää näyttää, että perusidea toimii.</p>
+<p>Asiakas lähettää viestin lomakkeella. Agentti luokittelee viestin, esimerkiksi tilaus, laskutus tai palaute. Sen jälkeen agentti luo tiketin rajattuun taulukkoon, vastaa asiakkaalle automaattisesti ja ilmoittaa oikealle tiimille. Jos viesti on kriittinen, se ohjataan ihmiselle hyväksyttäväksi. Tämä on esimerkki ihmisen osallistavasta rakenteesta.</p>
+<h2>Kaksi tasavertaista toteutuspolkua</h2>
+<p>Tunnin lopussa sinulla pitäisi olla <strong>testattava minimiversio</strong> agentistasi. Tekninen polku osoittaa n8n:n suoritusnäkymällä, että yhteydet ja reititys toimivat käytetyssä ympäristössä. Dokumentoitu suunnittelupolku osoittaa kaavion, työkalusopimusten ja simuloitujen suoritusjälkien avulla, että suunnitelma on johdonmukainen. Jälkimmäinen ei kuitenkaan todista testaamattomien liitäntöjen tai käyttöoikeuksien toimivuutta.</p>
 <p>Minimiversiossa tulee olla vähintään:</p>
 <ul>
 <li><strong>triggeri</strong>, joka käynnistää työnkulun</li>
 <li><strong>tekoälysolmu</strong>, joka valitsee tilanteen perusteella vähintään kahdesta sallitusta seuraavasta toiminnosta</li>
-<li><strong>työkalu tai toimintopolku</strong>, jonka harness antaa kielimallin käyttöön rajatuilla oikeuksilla</li>
+<li><strong>työkalu tai toimintopolku</strong>, jonka ohjauskehys antaa kielimallin käyttöön rajatuilla oikeuksilla</li>
 <li><strong>suoritusjälki</strong>, josta näkyvät syöte, valittu toiminto, työkalun tulos ja seuraava vaihe</li>
 </ul>
 <p>Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:</p>
 <ul>
-<li>miten kielimallin ja harnessin vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi</li>
+<li>miten kielimallin ja ohjauskehyksen vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi</li>
 <li>mikä osa toimii jo</li>
 <li>mikä osa jäi kesken</li>
 <li>mitä pitää testata tai korjata tunnilla 27</li>
 </ul>
 <p><strong>Tarkista lopuksi:</strong> Käynnistyykö työnkulku? Kulkeeko data solmulta toiselle? Tuottaako tekoälysolmu järkevän vastauksen? Tekeekö toimintasolmu sen, mitä sen pitää tehdä? Tiedätkö, mitä korjaat tai lisäät seuraavalla tunnilla?</p>
 <h2>Yhteenveto</h2>
-<p>Tämä tunti vie sinut suunnittelusta rakentamiseen. Tunnin alussa kokoat viisi pohjapiirrostasi yhdeksi suunnitelmaksi. Sen jälkeen tutustut n8n:ään ja rakennat minimiversion iteratiivisesti: ensin datavirta, sitten yksi tilanteen mukaan muuttuva päätös, sen toteuttava työkalu ja näkyvä suoritusjälki.</p>
+<p>Tämä tunti vie sinut suunnitelmasta testattavaan minimiversioon. Kokoat viisi pohjapiirrostasi yhteen, teet yhden tilanteen mukaan muuttuvan kielimallivalinnan ja näytät sen seuraukset suoritusjäljessä. Tekninen polku rakentaa tämän n8n:ssä. Dokumentoitu polku kuvaa rakenteen ja simuloi sen, mutta käyttää samassa kohdassa todellista kielimallipäätöstä.</p>
 <p>Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.</p>
-<blockquote class="pause"><p><strong>Erota nämä:</strong> Mikä työnkulkusi solmu kutsuu kielimallia — ja mitkä solmut, säännöt tai palvelut muodostavat sitä ympäröivän harnessin?</p>
+<blockquote class="pause"><p><strong>Erota nämä:</strong> Mitä kielimalli valitsee — ja mitkä solmut, säännöt, sopimukset tai palvelut muodostavat sitä ympäröivän agentin ohjauskehyksen?</p>
 </blockquote>
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
@@ -197,99 +197,43 @@ Tältä valmis n8n-työnkulku näyttää. Tämä on esimerkki siitä, millaisen 
 <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">OWASP: Prompt Injection Prevention Cheat Sheet</a></li>
 <li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM06_ExcessiveAgency.html">OWASP: Excessive Agency</a></li>
 </ul>
-<p>Tarkistettu 15.7.2026.</p><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Tehtävät</b><span>Tunnin tehtävät ja tuotokset</span></div><button type="button" class="btn btn-primary" onclick="showTab('tehtavat')">Siirry tehtäviin →</button></div></div><div id="panel-lesson-26-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-tehtavat" data-tab="tehtavat" hidden><h1>Opiskelutehtävät: Kasaa suunnitelma ja rakenna minimiversio</h1>
-<blockquote class="pause"><p>Tämä on Agentit-osion lopputyön rakennustunti. Tänään kasaat viisi pohjapiirrostasi yhdeksi suunnitelmaksi, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.</p>
+<p>Tarkistettu 15.7.2026.</p><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Tehtävät</b><span>Tunnin tehtävät ja tuotokset</span></div><button type="button" class="btn btn-primary" onclick="showTab('tehtavat')">Siirry tehtäviin →</button></div></div><div id="panel-lesson-26-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-tehtavat" data-tab="tehtavat" hidden><h1>Opiskelutehtävät: Kasaa suunnitelma ja tee toimiva minimiversio</h1>
+<blockquote class="pause"><p>Tämä on Agentit-osion ensimmäinen rakennustunti. Tänään kokoat viisi pohjapiirrostasi yhtenäiseksi suunnitelmaksi ja teet agentistasi ensimmäisen testattavan version. Voit edetä teknistä n8n-polkua tai dokumentoitua suunnittelupolkua. Molemmissa kielimallin on tehtävä vähintään yksi todellinen, tilanteen mukaan muuttuva valinta.</p>
 </blockquote>
-<p><em>Tunnilla on kolme vaihetta. Kaikki kuuluvat lopputyöhön — tämä ei ole "valitse 1" -tunti.</em></p><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi — pakollinen</h2></div><div class="task-card-body">
-<p><strong>Miksi tämä on tärkeää:</strong> Yksittäisinä pohjapiirrokset ovat irrallisia päätöksiä. Yhdessä ne muodostavat suunnitelman.</p>
-<h3>Ohjeet</h3>
-<ol>
-<li>Avaa muistiinpanodokumenttisi (johon olet kerännyt pohjapiirroksesi).</li>
-<li>Luo uusi tiedosto otsikolla "Agenttisuunnitelma — [agenttisi nimi]".</li>
-<li>Kopioi viisi pohjapiirrostasi tiedostoon järjestyksessä 1–5.</li>
-<li>Lue ne läpi yhtenä kokonaisuutena. <em>Onko tämä johdonmukainen agentti?</em></li>
-<li>Korjaa tarvittaessa.</li>
-</ol>
-<h3>Tee ARCHITECTURE-luonnos</h3>
-<p>Tee samaan tiedostoon luonnos, jota päivität tunnilla 27. Kirjoita ensin yksi lyhyt kappale: <strong>mitä kielimalli tekee ja mistä harness vastaa</strong>. Kuvaa sen jälkeen 3–5 tärkeintä vaihetta:</p>
-<table>
-<thead>
-<tr>
-<th>Vaihe</th>
-<th>Tehtävä</th>
-<th>Syöte → tulos</th>
-<th>Vastuu: kielimalli vai harness</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[Nimi]</td>
-<td>[Mitä tapahtuu?]</td>
-<td>[Mitä vaihe saa ja tuottaa?]</td>
-<td>[Kumpi vastaa?]</td>
-</tr>
-</tbody>
-</table>
-<p>Tarkista lopuksi kuusi rakennusosaa: syötekäsittely, päättely, työkalut, muisti, turvakerros ja palaute. Merkitse jokaisesta <strong>mukana</strong>, <strong>lisätään tunnilla 27</strong> tai <strong>ei tarvita tässä työssä</strong>. Yksi vaihe, sääntö tai palvelu voi kattaa useita kohtia. Perustele lyhyesti mahdollinen poisjättö.</p>
-<h3>Tekoälyvaihe — tarkista kokonaisuus</h3>
-<pre><code>Olen kirjoittanut viisi pohjapiirrosta agentistani, jonka aion
-rakentaa n8n:ssä. Lue ne ja kysy minulta 3–5 kysymystä, jotka
-paljastavat mahdolliset ristiriidat tai aukot. Älä korjaa
-puolestani — kysy niin että minä huomaan ongelmat itse.
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi</h2></div><div class="task-card-body">
+<p>Lue viisi pohjapiirrostasi yhtenä kokonaisuutena. Korjaa ristiriidat ja varmista, että ratkaisu vastaa tunnilla 20 valitsemaasi ongelmaan. Kirjoita sen jälkeen lyhyt arkkitehtuuriluonnos. Kuvaa ensin, mitä kielimalli tekee ja mistä agentin ohjauskehys vastaa. Esitä sitten ratkaisun tärkeimmät vaiheet, niiden syötteet ja tulokset. Vaiheiden määrää ei ole määrätty: mukana ovat vain tehtävän kannalta tarpeelliset vastuut.</p>
+<p>Tarkista luonnoksesta kuusi rakennusosaa: <strong>syötekäsittelijä</strong>, <strong>päättelijä ja suunnittelija</strong>, <strong>työkalujen suorittaja</strong>, <strong>muisti ja konteksti</strong>, <strong>turvakerros</strong> sekä <strong>seuranta ja palautesilmukka</strong>. Merkitse jokaisesta, onko se mukana, lisätäänkö se tunnilla 27 vai eikö sitä tarvita tässä työssä. Perustele poisjättö lyhyesti.</p>
+<p>Voit pyytää tekoälyä esittämään suunnitelmastasi kysymyksiä:</p>
+<pre><code class="language-text">Olen koonnut viisi pohjapiirrosta agentistani. Lue ne ja kysy
+minulta kysymyksiä, jotka paljastavat mahdolliset ristiriidat tai
+aukot. Älä korjaa puolestani, vaan auta minua huomaamaan ongelmat.
 </code></pre>
-<blockquote class="pause"><p><strong>Vinkki muistiinpanoihin:</strong> Koottu suunnitelma ja ARCHITECTURE-luonnos ovat osa lopputyön palautusta. Tunnilla 27 et aloita dokumentointia tyhjästä, vaan päivität luonnoksen toteutuksen ja testien perusteella.</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 2: Tutustu n8n:ään — pakollinen</h2></div><div class="task-card-body">
-<h3>Ohjeet</h3>
-<ol>
-<li>Avaa n8n.</li>
-<li>Luo uusi työnkulku.</li>
-<li>Lisää <strong>Manual Trigger</strong> -solmu.</li>
-<li>Lisää <strong>HTTP Request</strong> -solmu. Menetelmä <code>GET</code>, osoite <code>https://api.github.com/zen</code>.</li>
-<li>Yhdistä solmut viivalla.</li>
-<li>Klikkaa "Execute workflow" ja katso, mitä HTTP Request palauttaa.</li>
-<li>Lisää kolmas solmu (IF, Set tai Edit Fields). Kokeile.</li>
-</ol></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 3: Rakenna agenttisi minimiversio — pakollinen</h2></div><div class="task-card-body">
-<p><strong>Tärkeä rajaus:</strong> Tunnin tavoite on <strong>toimiva minimiversio</strong>, jossa kielimalli tekee yhden tilanteen mukaan muuttuvan valinnan. Pelkkä triggeri → tekoälysolmu → toimintasolmu -putki on tekoälyavusteinen työnkulku. Turvakerroksen, ihmisen hyväksyntää vaativat kohdat ja viimeistelyn rakennat tunnilla 27.</p>
-<h3>Ohjeet — iteratiivinen rakentaminen</h3>
-<ol>
-<li><strong>Triggeri ja syöte.</strong> Valitse Manual Trigger, Schedule Trigger tai Webhook. Käytä turvallista esimerkkisyötettä.</li>
-<li><strong>Agenttipäätös.</strong> Lisää tekoälysolmu. Määritä vähintään kaksi sallittua vaihtoehtoa, joista se valitsee tilanteen perusteella, esimerkiksi <code>hae_tietoa</code>, <code>pyyda_lisatietoa</code> tai <code>ohjaa_ihmiselle</code>.</li>
-<li><strong>Työkalu tai toimintopolku.</strong> Kytke vähintään yksi rajattu työkalu tai haara valinnan toteuttamiseksi. Malli ei saa vapaasti keksiä uusia toimintoja.</li>
-<li><strong>Suoritusjälki.</strong> Tallenna testistä syöte, valittu toiminto, työkalun tulos ja seuraava vaihe.</li>
-<li><strong>Testaa kaksi erilaista syötettä.</strong> Valinnan pitää muuttua perustellusti tilanteen mukana. Jos molemmat syötteet kulkevat aina samaa polkua, tarkista, onko kyseessä sittenkin työnkulku.</li>
-<li><strong>Korjaa yksi havaittu ongelma.</strong> Muuta yhtä ohjetta, rajausta tai reititystä ja aja sitä koskeva testi uudelleen.</li>
-</ol>
-<h3>Tekoälyvaihe — tarkista järjestelmäprompti</h3>
-<pre><code>Olen kirjoittanut järjestelmäpromptin n8n-agentilleni. Tehtävä on
-[kuvaa]. Tässä prompti: [liitä]. Kommentoi: onko rooli selkeä?
-Onko rajat selkeät? Mitä epäselvyyksiä jää? Älä kirjoita
-uudelleen — kysy minulta kysymyksiä.
-</code></pre>
-<blockquote class="pause"><p><strong>Älä lisää tunnilla 26 vielä näitä:</strong> turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.</p>
-</blockquote>
-<p>Tässä kohdassa <strong>suoritusjälki</strong> voi olla käsin täytetty testitaulukko tai n8n:n suoritusnäkymä. Varsinaisen jatkuvan lokituksen lisäät tunnilla 27.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tunnin lopuksi</h2></div><div class="task-card-body">
-<p>Kirjoita muistiinpanodokumenttiisi 3–4 lausetta:</p>
-<ul>
-<li>Mihin pääsin tunnilla?</li>
-<li>Mihin jäin?</li>
-<li>Mitä viimeistelen ensimmäisenä tunnilla 27?</li>
-</ul>
-<p>Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Liitä mukaan kahden testin suoritusjäljet ja merkitse kuvaan kohta, jossa kielimalli valitsee seuraavan toiminnon. Ne ovat osa lopputyön palautusta.</p>
-<p>Päivitä vielä ARCHITECTURE-luonnoksen 3–5 vaiheriviä vastaamaan sitä, mitä todella rakensit. Merkitse keskeneräiset vastuut tunnin 27 tehtäviksi.</p>
-<hr />
-<p><strong>Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet ja esittelet</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>3 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-26-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — n8n-paja alkaa</h1>
-<p>Tällä välilehdellä valmistaudut käytännön pajaan: kertaat n8n:n peruskäsitteet, varmistat pajan ydinperiaatteet ja harjoittelet lukemaan työnkulkua solmutyypeittäin. Tehtävät tarkistuvat itsestään — saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei haittaa, sillä jokainen selitys kertoo, miksi juuri se vaihtoehto meni pieleen, joten opit myös virheistä. Paketti on tarkoituksella kevyt ja pajaan valmistava — varsinaisen agenttisi minimiversion rakennat itse pajassa.</p>
-<h2>Tehtävä 1/3 — n8n:n käsitteet paikoilleen</h2>
-<p>Aloitetaan n8n:n peruskäsitteistä ennen pajaa.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 2: Valitse toteutuspolkusi</h2></div><div class="task-card-body">
+<p>Valitse polku, jolla pystyt osoittamaan ymmärryksesi luotettavimmin.</p>
+<p><strong>Tekninen n8n-polku.</strong> Rakenna n8n:ssä toimiva minimiversio. Tallenna suoritusnäkymästä syöte, kielimallin valinta, mahdollisen työkalun tulos ja seuraava vaihe. Tekninen näyttö osoittaa, että yhteydet, reititys ja rajaukset toimivat käytetyssä ympäristössä.</p>
+<p><strong>Dokumentoitu suunnittelupolku.</strong> Kuvaa sama kokonaisuus n8n-kaaviona tai selkeänä vaihekuvauksena. Tee työkalusopimukset, oikeusrajat ja kaksi käsin seurattavaa suoritusjälkeä. Tämä polku osoittaa suunnittelun johdonmukaisuuden, mutta ei väitä testaamattomien liitäntöjen tai käyttöoikeuksien toimivan.</p>
+<p>Kumpikaan polku ei ole helpotettu versio. Näyttö on erilainen, mutta molemmissa tarvitaan oikea kielimallikutsu. Malli valitsee tilanteen perusteella vähintään kahdesta sallitusta vaihtoehdosta, esimerkiksi <code>hae hyväksytystä lähteestä</code>, <code>pyydä lisätietoa</code> tai <code>ohjaa ihmiselle</code>.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Vaihe 3: Tee ja testaa minimiversio</h2></div><div class="task-card-body">
+<p>Anna järjestelmälle turvallinen esimerkkisyöte. Määritä kielimallille tehtävä ja vähintään kaksi sallittua vaihtoehtoa. Rajaa, milloin kukin vaihtoehto on käytettävissä, ja päätä, miten valinta näkyy suoritusjäljessä. Lisää ainakin yksi työkalu tai toimintopolku, jonka käyttöä agentin ohjauskehys rajaa.</p>
+<p>Testaa kahdella erilaisella syötteellä. Valinnan pitää muuttua perustellusti tilanteen mukana. Kirjaa kummastakin testistä syöte, valittu vaihtoehto, perusteluna käytetty havaittava ehto, työkalun tai toimintopolun tulos ja seuraava vaihe. Jos järjestelmä kulkee aina samaa ennalta määrättyä reittiä, tarkista, onko kyse agentin sijasta työnkulusta.</p>
+<p>Korjaa yksi testeissä löytynyt ongelma ja aja sitä koskeva testi uudelleen. Teknisen polun opiskelija tekee korjauksen työnkulkuun. Dokumentoidun polun opiskelija päivittää kaavion, sopimuksen tai rajauksen ja tuottaa uuden suoritusjäljen.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tunnin lopuksi</h2></div><div class="task-card-body">
+<p>Kirjoita lyhyt tilannekuva: mihin pääsit, mikä jäi kesken ja mitä viimeistelet ensimmäisenä tunnilla 27. Liitä mukaan toteutuspolkusi näyttö: teknisessä polussa kuva työnkulusta ja suoritusnäkymästä, dokumentoidussa polussa kaavio ja kaksi jäljitettävää suoritusjälkeä. Merkitse selvästi kohta, jossa kielimalli tekee tilanteen mukaan muuttuvan valinnan.</p>
+<p><strong>Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet, testaat ja esittelet</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>5 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-26-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Minimiversio ja toteutuspolun näyttö</h1>
+<h2>1. Käsitteet paikoilleen</h2>
 <div class="task-widget" data-ti="0"></div>
 
-<h2>Tehtävä 2/3 — valmiina pajaan?</h2>
-<p>Kerrataan pajan ydinperiaatteet ennen rakentamista. Minimiversio on kielimalli ja pienin toimiva harness, ei pelkkä tekoälysolmu. Muista myös, että yksi solmu, sääntö tai palvelu voi kattaa useita kuuden rakennusosan vastuita. Valitse kussakin kysymyksessä osuvin vaihtoehto.</p>
+<h2>2. Agentti vai työnkulku</h2>
 <div class="task-widget" data-ti="1"></div>
 
-<h2>Tehtävä 3/3 — mikä solmutyyppi tämä on?</h2>
-<p>Kahdeksan solmua odottaa luokittelua. Lue työnkulkua kuin karttaa ja tunnista, mitä roolia kukin solmu näyttelee.</p>
-<div class="task-widget" data-ti="2"></div><div class="practice-complete" data-flow-gate="practice" hidden><b>Kaikki tehtävät tehty ✓</b><span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-26')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/luokka/tunti-27/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-26-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-sanasto" data-tab="sanasto" hidden><h1>Sanasto – oppitunti 26: n8n-projektipaja, osa 1</h1>
+<h2>3. Mikä näyttö kuuluu polulle</h2>
+<div class="task-widget" data-ti="2"></div>
+
+<h2>4. Minimiversion työjärjestys</h2>
+<div class="task-widget" data-ti="3"></div>
+
+<h2>5. Perustele toteutuspolkusi</h2>
+<div class="task-widget" data-ti="4"></div><div class="practice-complete" data-flow-gate="practice" hidden><b>Kaikki tehtävät tehty ✓</b><span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-26')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/luokka/tunti-27/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-26-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-26-sanasto" data-tab="sanasto" hidden><h1>Sanasto – oppitunti 26: Projektipaja, osa 1</h1>
 <table>
 <thead>
 <tr>
@@ -299,92 +243,52 @@ uudelleen — kysy minulta kysymyksiä.
 </thead>
 <tbody>
 <tr>
-<td><strong>Harness</strong></td>
-<td>Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen. n8n on yksi ympäristö, jossa harness voidaan toteuttaa näkyvänä työnkulkuna.</td>
+<td><strong>Agentin ohjauskehys</strong></td>
+<td>Kielimallia ympäröivä järjestelmä, joka hoitaa työnkulun, työkalut, tilan, oikeudet, turvarajat, lokituksen ja palautumisen.</td>
 </tr>
 <tr>
-<td><strong>n8n</strong> (n-eight-n)</td>
-<td>Avoimeen lähdekoodiin perustuva automaatioalusta, jossa rakennetaan visuaalisesti työnkulkuja vetämällä ja pudottamalla solmuja kankaalle.</td>
+<td><strong>n8n</strong></td>
+<td>Visuaalinen automaatioalusta, jossa teknisen polun työnkulku rakennetaan solmuista ja yhteyksistä.</td>
 </tr>
 <tr>
-<td><strong>Solmu</strong> (node)</td>
-<td>Yksittäinen komponentti n8n-työnkulussa, joka tekee yhden konkreettisen tehtävän (esim. vastaanottaa viestin, kutsuu tekoälyä, lähettää sähköpostia).</td>
+<td><strong>Solmu</strong></td>
+<td>Yksittäinen vaihe n8n-työnkulussa. Solmujen määrä ei määritä, onko järjestelmä agentti.</td>
 </tr>
 <tr>
-<td><strong>Työnkulku</strong> (workflow)</td>
-<td>Sarja solmuja, jotka on kytketty yhteen viivalla. Data virtaa solmusta toiseen automaattisesti työnkulun logiikan mukaisesti.</td>
+<td><strong>Triggeri</strong></td>
+<td>Tapahtuma, joka käynnistää työnkulun.</td>
 </tr>
 <tr>
-<td><strong>Triggeri</strong> (trigger)</td>
-<td>Solmu, joka aloittaa työnkulun. Se voi olla ajastin (Schedule Trigger), webhook, käyttäjän painallama nappi (Manual Trigger) tai muu tapahtuma.</td>
+<td><strong>Kielimallivalinta</strong></td>
+<td>Tilanteen mukaan muuttuva valinta vähintään kahdesta agentin ohjauskehyksen sallimasta vaihtoehdosta.</td>
 </tr>
 <tr>
-<td><strong>Webhook</strong></td>
-<td>URL-osoite, jonka kautta ulkoinen järjestelmä voi lähettää tietoja n8n-työnkululle. Esimerkiksi Discord-viesti tai Slack-ilmoitus käynnistää työnkulun webhoakin kautta.</td>
+<td><strong>Työkalusopimus</strong></td>
+<td>Kuvaus työkalun tarkoituksesta, syötteestä, tuloksesta, oikeuksista, kielloista ja virhepolusta.</td>
 </tr>
 <tr>
-<td><strong>Validointi</strong> (validation)</td>
-<td>Prosessi, jossa n8n tarkistaa, että saapuva data on oikean muotoista ja turvallista käsitellä. Toteutetaan usein IF-solmuilla.</td>
+<td><strong>Suoritusjälki</strong></td>
+<td>Tallennettu ketju, jossa näkyvät syöte, kielimallin valinta, työkalun tulos tai virhe ja seuraava vaihe.</td>
 </tr>
 <tr>
-<td><strong>IF-solmu</strong></td>
-<td>Päätössolmu, joka tarkistaa ehtoa (esim. "onko viesti alle 500 merkkiä?") ja ohjaa datan eri haaraan (true/false).</td>
+<td><strong>Tekninen n8n-polku</strong></td>
+<td>Toteutuspolku, jossa työnkulun yhteydet, reititys ja oikeudet näytetään toimivassa n8n-toteutuksessa.</td>
 </tr>
 <tr>
-<td><strong>HTTP Request</strong></td>
-<td>Solmu, joka lähettää pyynnön ulkoiselle API:lle (esim. tekoäly-palvelulle tai tietokannan rajapinnalle). Se saa vastauksen ja välittää sen eteenpäin.</td>
+<td><strong>Dokumentoitu suunnittelupolku</strong></td>
+<td>Toteutuspolku, jossa rakenne kuvataan kaaviona ja työkalusopimuksina sekä testataan todellisella kielimallivalinnalla ja simuloidulla suoritusjäljellä.</td>
 </tr>
 <tr>
-<td><strong>OpenAI-solmu</strong></td>
-<td>Erityinen solmu, joka kommunikoi OpenAI:n palvelun kanssa (ChatGPT, tekoäly-päättely). Sisältää järjestelmäpromptin ja pyytää tekoälyä päättelemään.</td>
+<td><strong>Simulaatio</strong></td>
+<td>Kuvaus siitä, miten järjestelmä etenisi annettujen sääntöjen mukaan. Se ei yksin todista liitäntöjen tai käyttöoikeuksien teknistä toimivuutta.</td>
 </tr>
 <tr>
-<td><strong>Google Sheets -solmu</strong></td>
-<td>Solmu, joka lukee tai kirjoittaa tietoja Google Sheets -taulukkoihin. Usein käytetään muistin ja tietokannan toteuttamiseen.</td>
+<td><strong>Arkkitehtuuri</strong></td>
+<td>Kuvaus siitä, mitä kielimalli tekee, mistä agentin ohjauskehys vastaa ja miten tieto, päätökset sekä valvonta kulkevat järjestelmän läpi.</td>
 </tr>
 <tr>
-<td><strong>Discord-solmu</strong> (tai Slack-solmu)</td>
-<td>Solmu, joka lähettää viestejä Discord- tai Slack-kanavalle. Yhteydenpito käyttäjien kanssa.</td>
-</tr>
-<tr>
-<td><strong>Arkkitehtuuri</strong> (architecture)</td>
-<td>Kuvaus järjestelmän vastuista ja suhteista: mitä kielimalli tekee, mistä harness vastaa, miten data kulkee ja millä ehdoilla toimintoja suoritetaan.</td>
-</tr>
-<tr>
-<td><strong>Järjestelmäprompti</strong></td>
-<td>Teksti, joka määrittää tekoälyn käyttäytymisen. Esimerkiksi FAQ-botissa järjestelmäprompti on: "Olet FAQ-botti, vastaa lyhyesti ja selkeästi."</td>
-</tr>
-<tr>
-<td><strong>Konteksti</strong> (context)</td>
-<td>Taustatieto, jota agentti käyttää päätöksenteossa. Esimerkiksi FAQ-tietokanta on konteksti OpenAI-solmulle.</td>
-</tr>
-<tr>
-<td><strong>Muisti</strong> (memory)</td>
-<td>Mekanismi, jolla agentti tallentaa ja muistaa aikaisempia tapahtumia. n8n:ssä se voi olla Google Sheets -taulukko tai Memory-solmu.</td>
-</tr>
-<tr>
-<td><strong>Turvakerros</strong> (safety layer)</td>
-<td>Joukko validointi- ja IF-solmuja, jotka tarkistavat agentin vastaukset ennen lähettämistä. Suojaa käyttäjiä ja tietoja.</td>
-</tr>
-<tr>
-<td><strong>Ihmisen osallistuminen päätöksentekoon</strong></td>
-<td>Rakenne, jossa kriittisissä tilanteissa ihminen hyväksyy agentin päätöksen ennen kuin se toteutetaan.</td>
-</tr>
-<tr>
-<td><strong>Hyväksyntäportti</strong> (approval gate)</td>
-<td>Kohta työnkulussa, jossa ihminen ilmoitetaan ja häneltä pyydetään päätös ennen jatkamista.</td>
-</tr>
-<tr>
-<td><strong>Integraatio</strong> (integration)</td>
-<td>Yhteys ulkoiseen palveluun (Discord, Slack, sähköposti, tekoäly-API). n8n:ssä on satoja valmiita integraatioita.</td>
-</tr>
-<tr>
-<td><strong>Iteratiivinen kehitys</strong> (iterative development)</td>
-<td>Rakentamisen tapa, jossa rakennetaan ensin yksinkertainen versio, testataan, ja lisätään sitten uusia ominaisuuksia vaihe vaiheelta.</td>
-</tr>
-<tr>
-<td><strong>Reunatapaukset</strong> (edge cases)</td>
-<td>Poikkeukselliset tilanteet, joita ei odoteta normaalisti mutta jotka voivat silti tapahtua (esim. tyhjä syöte, erittäin pitkä teksti, väärä kieli).</td>
+<td><strong>Iteratiivinen kehitys</strong></td>
+<td>Tapa tehdä pieni versio, testata se, korjata havaittu ongelma ja testata uudelleen.</td>
 </tr>
 </tbody>
 </table>
@@ -394,7 +298,7 @@ uudelleen — kysy minulta kysymyksiä.
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8" font-family="ui-monospace,monospace">03 · AGENTIT · OPPITUNTI 26</text>
 <text x="74" y="244" font-size="52" font-weight="800" fill="#1B2336">Kädet saveen</text>
-<text x="74" y="302" font-size="25" fill="#5A6478">n8n-agenttipaja alkaa — teoriasta tekemiseen.</text>
+<text x="74" y="302" font-size="25" fill="#5A6478">Projektipaja alkaa — suunnitelmasta testattavaan versioon.</text>
 <text x="74" y="338" font-size="18" fill="#9AA6BD" font-family="ui-monospace,monospace">syöte → agenttipäätös → työkalu → havainto</text>
 <g transform="translate(636,232)">
 <rect x="0" y="0" width="92" height="58" rx="12" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2.5"/>
@@ -429,7 +333,7 @@ uudelleen — kysy minulta kysymyksiä.
 <text x="630" y="220" font-size="20" font-weight="800" fill="#006B7A">Tällä tunnilla</text>
 <text x="630" y="256" font-size="18" fill="#1B2336">Kokoat piirrokset yhteen</text>
 <text x="630" y="288" font-size="18" fill="#1B2336">suunnitelmaksi,</text>
-<text x="630" y="328" font-size="18" fill="#1B2336">tutustut n8n:ään ja</text>
+<text x="630" y="328" font-size="18" fill="#1B2336">valitset toteutuspolun ja</text>
 <text x="630" y="368" font-size="18" fill="#1B2336">rakennat agenttisi</text>
 <text x="630" y="396" font-size="18" font-weight="700" fill="#006B7A">ensimmäisen version.</text>
 <g transform="translate(744,420)"><rect x="0" y="0" width="36" height="30" rx="8" fill="#E5F6F7" stroke="#008799" stroke-width="2"/><circle cx="11" cy="13" r="3.5" fill="#008799"/><circle cx="25" cy="13" r="3.5" fill="#008799"/><rect x="10" y="21" width="16" height="4" rx="2" fill="#008799"/></g>
@@ -441,7 +345,7 @@ uudelleen — kysy minulta kysymyksiä.
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g3)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Mikä on n8n?</text>
 <rect x="74" y="138" width="540" height="74" rx="12" fill="#E5F6F7"/>
-<text x="98" y="172" font-size="20" fill="#006B7A">Avoimen lähdekoodin alusta, jossa rakennat</text>
+<text x="98" y="172" font-size="20" fill="#006B7A">Visuaalinen automaatioympäristö, jossa rakennat</text>
 <text x="98" y="198" font-size="20" fill="#006B7A">työnkulut vetämällä ja pudottamalla.</text>
 <text x="640" y="186" font-size="34" font-weight="800" fill="#9AA6BD" font-family="ui-monospace,monospace">"n-eight-n"</text>
 <circle cx="92" cy="270" r="17" fill="#E5F6F7"/>
@@ -452,7 +356,7 @@ uudelleen — kysy minulta kysymyksiä.
 <text x="124" y="342" font-size="20" fill="#1B2336">Solmut yhdistetään: data virtaa solmusta toiseen.</text>
 <circle cx="92" cy="398" r="17" fill="#E5F6F7"/>
 <g transform="translate(83,389)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 L7 14 L16 4"/></g>
-<text x="124" y="406" font-size="20" fill="#1B2336">Satoja valmiita integraatioita: Sheets, Slack, tekoäly.</text>
+<text x="124" y="406" font-size="20" fill="#1B2336">Satoja valmiita integraatioita: taulukot, viestit ja kielimallit.</text>
 <rect x="74" y="436" width="812" height="56" rx="12" fill="#FFFBEC" stroke="#F2D98E" stroke-width="1.5"/>
 <text x="98" y="470" font-size="18" fill="#5A4A1E">Ajattele putkirakennelmaa: jokainen mutka tekee jotakin hyödyllistä.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
@@ -523,7 +427,7 @@ uudelleen — kysy minulta kysymyksiä.
 <text x="509" y="332">tarkistettu</text><text x="509" y="350" fill="#2F9E69">&#10003;</text>
 <text x="689" y="332">lähetetty</text><text x="689" y="350" fill="#2F9E69">&#10003;</text>
 </g>
-<text x="74" y="430" font-size="18" fill="#3A4253">Jokainen solmu tekee yhden asian — yhdessä ne muodostavat agentin.</text>
+<text x="74" y="430" font-size="18" fill="#3A4253">Solmut muodostavat työnkulun — rajattu kielimallivalinta tekee agenttierottelun näkyväksi.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
@@ -540,10 +444,10 @@ uudelleen — kysy minulta kysymyksiä.
 <text x="518" y="214" font-size="16" fill="#5A6478">tekoälysolmu + järjestelmäprompti</text>
 <rect x="74" y="254" width="392" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="290" font-size="20" font-weight="700" fill="#008799">Työkalut</text>
-<text x="98" y="318" font-size="16" fill="#5A6478">Sheets, HTTP Request, Slack</text>
+<text x="98" y="318" font-size="16" fill="#5A6478">haku, taulukko, viestiluonnos</text>
 <rect x="494" y="254" width="392" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="518" y="290" font-size="20" font-weight="700" fill="#008799">Muisti ja konteksti</text>
-<text x="518" y="318" font-size="16" fill="#5A6478">esim. historia Google Sheetsiin</text>
+<text x="518" y="318" font-size="16" fill="#5A6478">esim. historia rajattuun taulukkoon</text>
 <rect x="74" y="358" width="392" height="92" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <text x="98" y="394" font-size="20" font-weight="800" fill="#006B7A">Turvakerros</text>
 <text x="98" y="422" font-size="16" fill="#3A4253">IF-solmu: jos viesti tyhjä, pysäytä</text>
@@ -597,14 +501,14 @@ uudelleen — kysy minulta kysymyksiä.
 <g transform="translate(74,196)">
 <rect x="0" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="75" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Manual Trigger</text>
 <path d="M150 27 L178 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M184 27 L174 22 L174 32 Z" fill="#9AA6BD"/>
-<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">HTTP Request</text>
+<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Esimerkkisyöte</text>
 <text x="358" y="33" font-size="15" fill="#247A52" font-style="italic">liikkuuko data?</text>
 </g>
 <text x="74" y="290" font-size="16" font-weight="800" fill="#008799" font-family="ui-monospace,monospace">VAIHE 2</text>
 <g transform="translate(74,306)">
 <rect x="0" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="75" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Manual Trigger</text>
 <path d="M150 27 L178 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M184 27 L174 22 L174 32 Z" fill="#9AA6BD"/>
-<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">HTTP Request</text>
+<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Esimerkkisyöte</text>
 <path d="M334 27 L362 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M368 27 L358 22 L358 32 Z" fill="#9AA6BD"/>
 <rect x="368" y="0" width="150" height="54" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/><text x="443" y="33" text-anchor="middle" font-size="15" font-weight="800" fill="#006B7A">AI-solmu</text>
 <text x="542" y="33" font-size="15" fill="#247A52" font-style="italic">vastaako?</text>
@@ -613,7 +517,7 @@ uudelleen — kysy minulta kysymyksiä.
 <g transform="translate(74,416)">
 <rect x="0" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="75" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Manual Trigger</text>
 <path d="M150 27 L178 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M184 27 L174 22 L174 32 Z" fill="#9AA6BD"/>
-<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">HTTP Request</text>
+<rect x="184" y="0" width="150" height="54" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="259" y="33" text-anchor="middle" font-size="15" font-weight="700" fill="#5A6478">Esimerkkisyöte</text>
 <path d="M334 27 L362 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M368 27 L358 22 L358 32 Z" fill="#9AA6BD"/>
 <rect x="368" y="0" width="150" height="54" rx="12" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/><text x="443" y="33" text-anchor="middle" font-size="15" font-weight="800" fill="#006B7A">AI-solmu</text>
 <path d="M518 27 L546 27" stroke="#9AA6BD" stroke-width="2.2"/><path d="M552 27 L542 22 L542 32 Z" fill="#9AA6BD"/>
@@ -672,16 +576,16 @@ uudelleen — kysy minulta kysymyksiä.
 <rect x="74" y="372" width="812" height="98" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <circle cx="116" cy="421" r="22" fill="#FFFFFF"/><text x="116" y="429" text-anchor="middle" font-size="22" font-weight="800" fill="#C79100">3</text>
 <text x="160" y="408" font-size="22" font-weight="800" fill="#006B7A">Rajattu tikettiagentti</text>
-<text x="160" y="436" font-size="17" fill="#1B2336">Malli valitsee: kysy lisätieto, luo tiketti tai eskaloi — harness rajaa työkalut.</text>
-<text x="160" y="460" font-size="15" fill="#5A6478" font-style="italic">Kriittinen viesti ohjataan ihmiselle — human-in-the-loop.</text>
+<text x="160" y="436" font-size="17" fill="#1B2336">Malli valitsee: kysy lisätieto, luo tiketti tai eskaloi — agentin ohjauskehys rajaa työkalut.</text>
+<text x="160" y="460" font-size="15" fill="#5A6478" font-style="italic">Kriittinen viesti ohjataan ihmiselle — ihminen säilyttää päätösvallan.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Tunnin tavoite: toimiva minimiversio</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 11/13: Tunnin tavoite: testattava minimiversio</title>
 <defs><pattern id="l26g11" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g11)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tunnin tavoite: toimiva minimiversio</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Tunnin tavoite: testattava minimiversio</text>
 <text x="74" y="138" font-size="18" fill="#5A6478">Yksi rajattu päätös, joka muuttuu tilanteen mukana ja näkyy testissä.</text>
 <g transform="translate(120,210)">
 <rect x="0" y="0" width="196" height="96" rx="16" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2.5"/>
@@ -705,7 +609,7 @@ uudelleen — kysy minulta kysymyksiä.
 </g>
 <rect x="74" y="356" width="812" height="110" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="98" y="392" font-size="18" font-weight="700" fill="#5A6478">KIRJAA MYÖS MUISTIIN</text>
-<text x="98" y="424" font-size="17" fill="#3A4253">Mikä on kielimallin vastuulla · mitkä osat muodostavat harnessin</text>
+<text x="98" y="424" font-size="17" fill="#3A4253">Mikä on kielimallin vastuulla · mitkä osat muodostavat agentin ohjauskehyksen</text>
 <text x="98" y="450" font-size="17" fill="#3A4253">Kaksi suoritusjälkeä · yksi havaittu ja korjattu ongelma</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">11 / 13</text>
 </svg></div>
@@ -741,7 +645,7 @@ uudelleen — kysy minulta kysymyksiä.
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l26g13)"/>
 <rect x="0" y="0" width="12" height="540" fill="#008799"/>
 <text x="74" y="100" font-size="40" font-weight="800" fill="#1B2336">Yhteenveto</text>
-<text x="74" y="138" font-size="20" fill="#5A6478">Tämä tunti vei sinut suunnittelusta rakentamiseen.</text>
+<text x="74" y="138" font-size="20" fill="#5A6478">Tämä tunti vei sinut suunnitelmasta testattavaan minimiversioon.</text>
 <g transform="translate(120,200)">
 <circle cx="0" cy="20" r="18" fill="#F0F9F4"/><text x="0" y="27" text-anchor="middle" font-size="18" font-weight="800" fill="#2F9E69">1</text>
 <text x="36" y="27" font-size="21" fill="#3A4253">Kokosit viisi pohjapiirrosta yhdeksi suunnitelmaksi.</text>
@@ -749,7 +653,7 @@ uudelleen — kysy minulta kysymyksiä.
 <line x1="120" y1="238" x2="120" y2="278" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(120,278)">
 <circle cx="0" cy="20" r="18" fill="#F0F9F4"/><text x="0" y="27" text-anchor="middle" font-size="18" font-weight="800" fill="#2F9E69">2</text>
-<text x="36" y="27" font-size="21" fill="#3A4253">Tutustuit n8n:ään: solmut, yhteydet ja triggerit.</text>
+<text x="36" y="27" font-size="21" fill="#3A4253">Valitsit teknisen n8n-polun tai dokumentoidun suunnittelupolun.</text>
 </g>
 <line x1="120" y1="316" x2="120" y2="356" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(120,356)">
@@ -758,7 +662,7 @@ uudelleen — kysy minulta kysymyksiä.
 </g>
 <rect x="74" y="424" width="812" height="68" rx="14" fill="#E5F6F7" stroke="#008799" stroke-width="2.5"/>
 <g transform="translate(98,442)"><rect x="0" y="0" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="2"/><circle cx="11" cy="13" r="3.5" fill="#008799"/><circle cx="25" cy="13" r="3.5" fill="#008799"/><rect x="10" y="21" width="16" height="4" rx="2" fill="#008799"/></g>
-<text x="156" y="466" font-size="18" font-weight="700" fill="#006B7A">n8n on yksi harness-toteutus — kuusi rakennusosaa toimii tarkistuslistana.</text>
+<text x="156" y="466" font-size="18" font-weight="700" fill="#006B7A">Molemmissa poluissa todellinen mallivalinta — kuusi rakennusosaa tarkistuslistana.</text>
 <text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-25/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-27/">Seuraava →</a></div><button type="button" class="practice-chip" data-practice-chip hidden onclick="showTab('harjoittele')">Harjoittele · <span data-practice-chip-count></span></button><button class="done-btn" onclick="toggleDone('lesson-26')">Merkitse suoritetuksi</button></div></div>
@@ -766,7 +670,7 @@ uudelleen — kysy minulta kysymyksiä.
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script src="/assets/practice.js"></script>
-<script>window.CI={"view": "luokka", "lid": "lesson-26", "num": 26, "title": "Kädet saveen — n8n-agenttipaja alkaa", "ptasks": [{"type": "match", "title": "n8n:n käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys. Valitse ensin käsite vasemmalta, sitten sopiva selitys oikealta.", "pairs": [{"a": "n8n", "b": "Avoimen lähdekoodin automaatioalusta, jolla työnkulkuja rakennetaan visuaalisesti vetämällä ja pudottamalla palasia kankaalle.", "explain": "Alustalla voi rakentaa sekä tavallisia työnkulkuja että agentin harnessin."}, {"a": "Solmu", "b": "Yksittäinen palanen, joka tekee työnkulussa yhden rajatun tehtävän.", "explain": "Yksi palanen voi vastaanottaa viestin, kutsua tekoälyä, lukea tiedoston tai lähettää viestin."}, {"a": "Triggeri", "b": "Aloituskohta, joka käynnistää työnkulun, esimerkiksi ajastin tai saapuva viesti.", "explain": "Automaattinen käynnistys ei yksin tee työnkulusta agenttia."}, {"a": "Agenttipäätös", "b": "Kohta, jossa kielimalli valitsee sallitun työkalun tai seuraavan toiminnon tilanteen perusteella.", "explain": "Tässä agentti eroaa ennalta määrätystä putkesta: seuraava askel ei ole aina sama."}, {"a": "Työkalu", "b": "Harnessin rajaama toiminto, jolla agentti hakee tietoa tai vaikuttaa ympäristöön.", "explain": "Työkalulla pitää olla vain tehtävässä tarvittavat oikeudet."}, {"a": "Suoritusjälki", "b": "Näkyvä tieto syötteestä, valitusta toiminnosta, työkalun tuloksesta ja seuraavasta vaiheesta.", "explain": "Suoritusjälki tekee agentin toiminnasta testattavaa ilman mallin raakaa chain-of-thoughtia."}, {"a": "Iteratiivinen kehitys", "b": "Tapa rakentaa vähän kerrallaan: tee yksinkertainen versio, testaa se ja lisää sitten seuraava osa.", "explain": "Kun testaat jokaisen lisäyksen jälkeen, tiedät mikä muutos aiheutti ongelman."}], "summary": "n8n tekee harnessin näkyväksi. Agentin tunnusmerkki ei ole solmujen määrä vaan se, että kielimalli valitsee rajatuista vaihtoehdoista seuraavan toiminnon ja valinta voidaan todentaa suoritusjäljestä."}, {"type": "quiz", "title": "Valmiina pajaan?", "intro": "Jokainen kysymys koskee pajan ydinperiaatetta. Valitse osuvin vaihtoehto — ja lue myös, miksi muut menevät harhaan.", "items": [{"q": "Mikä erottaa minimiagentin tavallisesta tekoälyavusteisesta työnkulusta?", "options": [{"text": "Kielimalli valitsee tilanteen perusteella vähintään kahdesta sallitusta seuraavasta toiminnosta, ja valinta näkyy suoritusjäljessä.", "correct": true, "explain": "Juuri agenttipäätös erottaa kokonaisuuden ennalta määrätystä putkesta. Harness rajaa vaihtoehdot ja tallentaa tapahtumat."}, {"text": "Työnkulussa on triggeri, tekoälysolmu ja toimintasolmu tässä järjestyksessä.", "correct": false, "explain": "Tämä voi olla täysin kiinteä tekoälyavusteinen työnkulku. Solmujen nimet tai määrä eivät vielä tee agenttia."}, {"text": "Työnkulku käynnistyy automaattisesti joka aamu.", "correct": false, "explain": "Ajastus tekee työnkulusta automaattisen, ei autonomisesti seuraavaa toimintoa valitsevaa agenttia."}]}, {"q": "Miksi kannattaa rakentaa ja testata yksi muutos kerrallaan?", "options": [{"text": "Jos jokin menee rikki, tiedät todennäköisemmin, mikä muutos aiheutti ongelman.", "correct": true, "explain": "Pieni askel kerrallaan tekee virheen paikantamisesta ja korjauksen vaikutuksen todentamisesta helpompaa."}, {"text": "Koska yhdellä kertaa koottu suuri työnkulku toimii aina paremmin.", "correct": false, "explain": "Usean samanaikaisen muutoksen jälkeen vian syytä on vaikeampi paikantaa."}, {"text": "Koska n8n sallii vain yhden solmun lisäämisen kerrallaan.", "correct": false, "explain": "Kyse on työtavasta, ei alustan rajoituksesta."}]}, {"q": "Mitä kahdella erilaisella testisyötteellä pitää voida osoittaa?", "options": [{"text": "Agentin valitsema toiminto muuttuu perustellusti tilanteen mukana.", "correct": true, "explain": "Jos kaikki tapaukset kulkevat aina samaa polkua, agenttipäätöksen tarve pitää arvioida uudelleen."}, {"text": "Malli kirjoittaa molemmilla kerroilla mahdollisimman pitkän vastauksen.", "correct": false, "explain": "Vastauksen pituus ei osoita agentin toimintalogiikkaa."}, {"text": "Työnkulun ulkoasu pysyy täsmälleen samana.", "correct": false, "explain": "Kankaan ulkoasu ei kerro, tekikö kielimalli tilanteeseen perustuvan valinnan."}]}, {"q": "Mikä seuraavista kuuluu vasta tunnille 27?", "options": [{"text": "Jatkuva lokitus, täydentävä turvakerros ja tarvittavat hyväksyntäportit.", "correct": true, "explain": "Tunnilla 26 riittää näkyvä testien suoritusjälki. Tuotantokelpoisempi valvonta ja turva lisätään seuraavalla tunnilla."}, {"text": "Yhden rajatun agenttipäätöksen toteuttaminen.", "correct": false, "explain": "Se on tunnin 26 ydintuotos."}, {"text": "Kahden erilaisen syötteen testaaminen.", "correct": false, "explain": "Testit tarvitaan jo nyt, jotta agenttipäätös voidaan osoittaa."}]}], "summary": "Minimiagentissa kielimalli tekee yhden rajatun, tilanteen mukaan muuttuvan valinnan. Harness tarjoaa sallitut työkalut ja testin suoritusjälki osoittaa, mitä tapahtui. Turva ja jatkuva lokitus viimeistellään tunnilla 27."}, {"type": "classify", "title": "Mikä solmutyyppi tämä on?", "intro": "n8n-työnkulkua luetaan kuin karttaa: jokainen solmu joko käynnistää työnkulun (triggeri), tarkistaa ehdon ja haarauttaa datan (päätössolmu) tai tekee jotain konkreettista (toimintasolmu). Kysy jokaisesta: aloittaako se työnkulun, tarkistaako se ehdon, vai tekeekö se toiminnon?", "categories": ["Triggeri", "Päätössolmu", "Toimintasolmu"], "items": [{"text": "Solmu, jonka nappia painamalla panet työnkulun itse liikkeelle.", "answer": 0, "explain": "Käynnistää työnkulun manuaalisesti — ilman triggeriä mikään ei lähde liikkeelle. Kyse ei ole toiminnosta vaan aloituksesta."}, {"text": "Solmu, joka tarkistaa, onko viesti alle 500 merkkiä, ja ohjaa datan tuloksen mukaan eri haaraan.", "answer": 1, "explain": "Tarkistaa ehdon ja ohjaa datan true- tai false-haaraan — tämä on päätössolmu, ei konkreettinen toiminto."}, {"text": "HTTP Request -solmu, joka kutsuu ulkoista rajapintaa.", "answer": 2, "explain": "Tekee konkreettisen toiminnon: lähettää pyynnön palveluun ja saa vastauksen. Se ei käynnistä työnkulkua eikä haaroita sitä."}, {"text": "Solmu, joka panee työnkulun liikkeelle automaattisesti joka aamu kello kahdeksan.", "answer": 0, "explain": "Ajastin on triggeri: se päättää, milloin työnkulku alkaa. Toiminnon se jättää muille solmuille."}, {"text": "Google Sheets -solmu, joka tallentaa rivin taulukkoon.", "answer": 2, "explain": "Kirjoittaa dataa taulukkoon — konkreettinen toiminto, ei haaroitus eikä käynnistys."}, {"text": "Solmu, joka tarkistaa ennen lähetystä, sisältääkö vastaus henkilötietoja, ja ohjaa datan tuloksen mukaan eri haaraan.", "answer": 1, "explain": "Ehdon tarkistus, joka haarauttaa työnkulun — myös turvatarkistus toteutetaan päätössolmulla."}, {"text": "Webhook, joka käynnistyy, kun asiakas lähettää lomakkeen.", "answer": 0, "explain": "Ulkoinen tapahtuma käynnistää työnkulun — webhook on yksi triggerin muoto."}, {"text": "Slack-solmu, joka lähettää yhteenvedon tiimin kanavalle.", "answer": 2, "explain": "Lähettää viestin ulkomaailmaan — konkreettinen toiminto, usein työnkulun lopussa."}], "summary": "n8n-työnkulun jokainen solmu on jotakin kolmesta: triggeri käynnistää, päätössolmu tarkistaa ehdon ja haarauttaa, ja toimintasolmu tekee konkreettisen työn. Kun osaat lukea nämä roolit, näet yhdellä silmäyksellä, mitä työnkulku tekee ja missä järjestyksessä."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "luokka", "lid": "lesson-26", "num": 26, "title": "Kädet saveen — tee agentista testattava minimiversio", "ptasks": [{"type": "match", "title": "Käsitteet paikoilleen", "intro": "Yhdistä käsite ja sitä kuvaava selitys.", "pairs": [{"a": "Kielimallivalinta", "b": "Tilanteen mukaan muuttuva valinta vähintään kahdesta sallitusta vaihtoehdosta.", "explain": "Valinta erottaa kurssin agentin ennalta määrätystä työnkulusta."}, {"a": "Suoritusjälki", "b": "Näyttö syötteestä, valinnasta, työkalun tuloksesta ja seuraavasta vaiheesta.", "explain": "Jälki tekee toiminnan arvioitavaksi ilman mallin sisäisen päättelyn tallentamista."}, {"a": "Tekninen n8n-polku", "b": "Toimiva työnkulku, jonka yhteydet ja reititys todennetaan käytetyssä ympäristössä.", "explain": "Näyttö kertoo teknisestä toiminnasta kyseisessä toteutuksessa."}, {"a": "Dokumentoitu suunnittelupolku", "b": "Kaavio, työkalusopimukset, todellinen mallivalinta ja simuloitu suoritusjälki.", "explain": "Näyttö kertoo suunnitelman johdonmukaisuudesta, ei testaamattomien liitäntöjen toimivuudesta."}], "summary": "Molemmat polut tarvitsevat todellisen rajatun kielimallivalinnan. Niiden tuottama muu näyttö on erilaista."}, {"type": "quiz", "title": "Agentti vai työnkulku", "intro": "Tunnista, missä tilanteessa kurssin agenttirajaus täyttyy.", "items": [{"q": "Järjestelmä lähettää jokaisen hyväksytyn lomakkeen samaan osoitteeseen. Onko rajattu kielimallivalinta tarpeen?", "options": [{"text": "Ei. Kiinteä sääntö kuuluu työnkululle.", "correct": true, "explain": "Tilannearviota ei tarvita, koska seuraava vaihe on aina sama."}, {"text": "Kyllä, koska mukana on monta vaihetta.", "correct": false, "explain": "Vaiheiden määrä ei tee järjestelmästä agenttia."}]}, {"q": "Kielimalli tulkitsee vaihtelevan tukiviestin ja valitsee vaihtoehdoista pyydä lisätietoa, hae hyväksytystä tietopohjasta tai ohjaa ihmiselle. Mitä tämä osoittaa?", "options": [{"text": "Tilanteen mukaan muuttuvan rajatun mallivalinnan.", "correct": true, "explain": "Valinta on kurssin agenttirajauksen kannalta olennainen näyttö."}, {"text": "Rajoittamattoman autonomian.", "correct": false, "explain": "Vaihtoehdot ja oikeudet ovat tarkoituksella rajatut."}]}], "summary": "Agentin tunnusmerkki ei ole solmujen tai vaiheiden määrä vaan kielimallin tekemä tilanteen mukaan muuttuva valinta ohjauskehyksen rajoissa."}, {"type": "classify", "title": "Mikä näyttö kuuluu polulle", "intro": "Luokittele näyttö ensisijaisen toteutuspolun mukaan.", "categories": ["Tekninen n8n-polku", "Dokumentoitu suunnittelupolku", "Molemmat"], "items": [{"text": "n8n:n suoritusnäkymä, jossa valittu haara näkyy.", "answer": 0, "explain": "Tämä todentaa teknisen reitityksen käytetyssä ympäristössä."}, {"text": "Kaavio, jossa simuloidut vaiheet on merkitty erilleen toteutetusta kielimallikutsusta.", "answer": 1, "explain": "Merkintä tekee suunnitelman näytön ja rajoituksen näkyväksi."}, {"text": "Kaksi erilaista syötettä ja niiden todelliset kielimallivalinnat.", "answer": 2, "explain": "Todellinen rajattu mallivalinta vaaditaan molemmissa poluissa."}, {"text": "Työkalusopimus, jossa näkyvät oikeudet ja virhepolku.", "answer": 2, "explain": "Työkalujen rajat pitää ymmärtää kummassakin polussa."}, {"text": "Maininta siitä, ettei kaavio todista liitännän toimivuutta.", "answer": 1, "explain": "Dokumentoidun polun pitää nimetä teknisen todennuksen puute."}], "summary": "Toteutuspolut osoittavat samaa ymmärrystä eri näytöllä. Näyttöä ei pidä kuvata laajemmaksi kuin se on."}, {"type": "order", "title": "Minimiversion työjärjestys", "intro": "Järjestä työvaiheet niin, että virhe löytyy ajoissa.", "steps": ["Rajaa ongelma ja kielimallin sallitut vaihtoehdot.", "Tee pienin testattava rakenne valitulla toteutuspolulla.", "Aja kaksi erilaista syötettä ja tallenna suoritusjäljet.", "Vertaa tuloksia odotettuun toimintaan.", "Korjaa yksi havaittu ongelma ja tee testi uudelleen."], "missHint": "Aloita rajauksesta ja päätä uudelleentestiin.", "summary": "Iteratiivinen kehitys tekee yhden pienen, arvioitavan muutoksen kerrallaan."}, {"type": "reflect", "title": "Perustele toteutuspolkusi", "prompt": "Kerro, valitsetko teknisen n8n-polun vai dokumentoidun suunnittelupolun. Perustele, millä näytöllä osoitat todellisen kielimallivalinnan, agentin ohjauskehyksen rajat ja yhden korjatun ongelman. Nimeä myös yksi asia, jota näyttösi ei todista.", "minWords": 70, "summary": "Hyvä perustelu kertoo sekä valitun näytön vahvuuden että sen rajoituksen."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

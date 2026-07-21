@@ -59,6 +59,8 @@ Tekoälykeskustelun jälkeen muokkaa taulukkoasi tarvittaessa ja kirjoita lyhyt 
 
 **Tavoite:** Huomaat omakohtaisesti, miksi kiinteät säännöt eivät riitä tilanteissa, joissa on monta muuttujaa ja poikkeuksia.
 
+Samalla nimeät koneoppimisen perusosat. Taulukon summa, kellonaika, paikka ja tavallinen käyttö ovat **piirteitä**. Ennustettava **tavoitemuuttuja** on tapahtuman tila, ja sen kaksi **luokkaa** ovat petos ja laillinen. Koska oikea luokka on harjoitusesimerkeissä valmiiksi merkitty, kyse on ohjatun oppimisen aineistosta.
+
 ### Tilanne
 
 Olet pankin tietoturvatiimissä. Tehtäväsi on suojata asiakkaiden tilit petoksilta. Alla on 10 transaktiota, joissa **oikea vastaus on jo paljastettu** ("Petos" tai "Laillinen"). Sinun haasteesi: kehittää sääntöjoukko, joka tunnistaa nämä oikein.
@@ -92,7 +94,18 @@ Käy 10 transaktiota läpi sääntöjesi mukaan ja merkitse:
 - **Vääriä hälytyksiä** (laillinen → "petos"): ___ / 6
 - **Missatut petokset** ("laillinen", oikeasti petos): ___ / 4
 
-#### Vaihe 3 — Käytä tekoälyä apuna analysointiin
+#### Vaihe 3 — Nimeä oppimistehtävä
+
+Kirjoita taulukon alle omin sanoin:
+
+- mitkä neljä tietoa toimivat piirteinä
+- mikä on tavoitemuuttuja
+- mitkä ovat sen kaksi luokkaa
+- miksi esimerkki on ohjattua eikä ohjaamatonta oppimista.
+
+Pohdi lopuksi, mitä ohjaamaton oppiminen voisi samasta aineistosta etsiä ilman valmiita petosmerkintöjä. Se voisi esimerkiksi nostaa tarkistettavaksi harvinaisia tapahtumaryhmiä, mutta poikkeavuutta ei saisi nimetä automaattisesti petokseksi.
+
+#### Vaihe 4 — Käytä tekoälyä apuna analysointiin
 
 Avaa tekoäly ja anna sille sääntöjoukkosi sekä testituloksesi:
 

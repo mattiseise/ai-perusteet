@@ -1,6 +1,25 @@
 # Tehtävät
 
-## Tehtävä 2.1: Viisi käsitettä tekoälyn kartalla — SUOSITELTU
+## Tehtävä 2.1: Mallin matka aineistosta seurantaan — SUOSITELTU
+
+Kuvaa petoksentunnistusmallin elinkaari kuutena peräkkäisenä vaiheena. Kirjoita jokaisesta vaiheesta 1–2 virkettä:
+
+1. aineiston kokoaminen ja jakaminen koulutus-, validointi- ja testiaineistoon
+2. mallin kouluttaminen
+3. malliversion valinta validointiaineiston avulla
+4. viimeinen arvio erillisellä testiaineistolla
+5. käyttöönotto ja ihmisen vastuun määrittely
+6. seuranta sekä tarvittaessa hallittu päivittäminen.
+
+Lisää kuvaukseesi yksi ylioppimisen riski, yksi datadriftin esimerkki ja yksi mallidriftin esimerkki. Päätä työsi vastaukseen: miksi hyvä testitulos ennen käyttöönottoa ei riitä mallin koko elinkaaren laadun takeeksi?
+
+Lisää loppuun kaksi virkettä: AGI ja ASI eivät ole tämän elinkaaren seuraavia vaiheita, vaan tulevaisuutta koskevia käsitteitä. Kerro omin sanoin, miksi toimiva rajattu malli ei vielä osoita AGI:a tai ASI:a.
+
+Tallennettava ydintuotos on yhden sivun elinkaarikuvaus ja kahden virkkeen AGI–ASI-rajaus. Tukireitillä käytä yllä olevaa kuuden vaiheen listaa otsikkoina. Syventävällä reitillä lisää joka vaiheeseen yksi vastuuhenkilö tai rooli.
+
+## Tehtävä 2.2: Viisi käsitettä tekoälyn kartalla — VAIHTOEHTOINEN TAI LISÄTEHTÄVÄ
+
+Tee tämä tehtävä vain, jos opettaja valitsee sen tehtävän 2.1 tilalle tai jos ydintuotos on jo valmis ja aikaa jää. Tunnin pakollinen ydintuotos on yksi työ: joko tehtävän 2.1 elinkaarikuvaus tai tämä käsitetaulukko.
 
 Täydennä taulukko tunnin teorian avulla. Kirjoita jokaiseen kohtaan lyhyt selitys omin sanoin. Käytä esimerkkinä järjestelmää tai väitettä, josta käy ilmi, mitä käsite tarkoittaa.
 
@@ -19,7 +38,7 @@ Kirjoita taulukon alle 2–3 virkkeen johtopäätös, jossa vastaat seuraaviin k
 
 Tallennettava tuotos on täydennetty taulukko ja johtopäätös. Tukireitillä käytä teoriassa olevaa vertailutaulukkoa ja muotoile sen sisältö omin sanoin. Syventävällä reitillä lisää yksi esimerkki järjestelmästä, jossa sääntöjä ja tekoälyä käytetään yhdessä.
 
-## Tehtävä 2.2: Mitä väitteestä voidaan päätellä? — SYVENTÄVÄ
+## Tehtävä 2.3: Mitä väitteestä voidaan päätellä? — SYVENTÄVÄ
 
 Valitse yksi seuraavista väitteistä:
 

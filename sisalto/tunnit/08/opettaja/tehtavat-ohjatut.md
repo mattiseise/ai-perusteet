@@ -1,103 +1,35 @@
-# Opettajavetoiset harjoitukset: etiikka, oikeudet ja vastuu
+# Ohjatut tehtävät: Vastuullinen käyttöönotto
 
-Tunnin syventävät yksilö- ja paritehtävät (tekijänoikeustapaukset, algoritminen harha, datan merkitsijät, ympäristölaskelmat) ovat opiskelutehtävissä. Tässä on opettajavetoinen ydinharjoitus, joka käsittelee vastuullista ja harkittua käyttöä ympäristönäkökulmasta.
+## Tehtävä 8.1: Aineiston tyhjä tuoli
 
-## Harjoitus 1: Ympäristövaikutusten arviointi — milloin tekoälyn käyttö on perusteltua?
+Ryhmä valitsee yhden ihmisiin vaikuttavan käyttötavan. Jokainen opiskelija kirjoittaa yhden henkilön tai tilanteen, joka voi puuttua aineistosta. Laput asetetaan tyhjän tuolin ympärille. Ryhmä valitsee kaksi puutetta ja suunnittelee testin, jolla niiden vaikutusta selvitetään.
 
-### Tavoite
+Purussa kysy, perustuuko ehdotus havaittavaan aineiston puutteeseen vai ryhmää koskevaan oletukseen. Tavoite on vahvistaa lähdekriittistä ja kunnioittavaa puhetapaa.
 
-Harjoituksen tavoitteena on auttaa opiskelijoita ymmärtämään, että generatiivisen tekoälyn käyttöön liittyy myös **ympäristövaikutuksia**. Opiskelijat harjoittelevat arvioimaan, milloin tekoälyn käyttö tuottaa riittävästi hyötyä suhteessa sen kuluttamiin resursseihin, kuten **energiaan**, **vesijäähdytykseen** ja **laskentatehoon**.
+## Tehtävä 8.2: Roolikortit
 
-**Opettajan painotus:** Korosta, että tarkoitus ei ole kieltää tekoälyn käyttöä. Tavoitteena on oppia käyttämään tekoälyä harkitusti: silloin, kun siitä on todellista hyötyä, ja kevyemmillä ratkaisuilla silloin, kun tekoälyä ei tarvita.
+Anna ryhmälle kortit: järjestelmän kehittävä yritys, järjestelmän ostava oppilaitos, tulosta tarkistava opettaja ja päätöksen kohteena oleva hakija. Opiskelijat kuvaavat jokaiselle yhden tiedon tarpeen, yhden oikeuden ja yhden vastuun.
 
-### Opettajan ohjeet ja fasilitointi
+Lisäkysymys: mitä muuttuu, jos oppilaitos muokkaa järjestelmää olennaisesti tai antaa sille oman nimensä? Opiskelijoiden ei tarvitse ratkaista oikeudellista roolia varmasti, mutta heidän pitää tunnistaa, että asia on tarkistettava.
 
-**Kesto:** noin 20 minuuttia
+## Tehtävä 8.3: Valvonta vai kumileimasin?
 
-#### Skenaario noin 5 minuuttia
+Lue kolme tilannetta:
 
-Esitä opiskelijoille seuraava tilanne:
+1. Työntekijä hyväksyy sadat suositukset päivässä eikä näe perusteluja.
+2. Työntekijä näkee järjestelmän rajat, saa koulutuksen ja voi palauttaa tapauksen käsittelyyn.
+3. Työntekijä voi poiketa suosituksesta, mutta häntä arvioidaan sen perusteella, kuinka harvoin hän tekee niin.
 
-> Yritys haluaa ottaa käyttöön generatiivisen tekoälyn asiakaspalvelussa. Tekoälyä käytettäisiin vastaamaan usein kysyttyihin kysymyksiin, laatimaan sähköposteja, tiivistämään tikettejä ja tuottamaan raportteja. Yrityksen johto kysyy: “Missä tilanteissa tekoälyn käyttö on aidosti perusteltua, ja missä tilanteissa kevyempi ratkaisu riittäisi?”
+Ryhmä sijoittaa tilanteet jatkumolle muodollisesta valvonnasta todelliseen valvontaan ja perustelee järjestyksen. Kolmas tilanne auttaa huomaamaan, että organisaation kannusteet voivat tehdä nimellisestä oikeudesta hyödyttömän.
 
-Kysy opiskelijoilta:
+## Tehtävä 8.4: Lähdepöytä tuntia 9 varten
 
-- Missä näistä tehtävistä tekoälystä voisi olla selvästi hyötyä?
-- Missä tehtävissä tavallinen haku, valmis ohjeteksti tai sääntöpohjainen automaatio voisi riittää?
-- Miksi jokaisella tekoälykyselyllä on myös resurssikustannus?
+Kokoa ennen tuntia kolme pientä lähdepakettia: tietovuoto ja henkilötietojen käsittely, rekrytointi ja AI Act sekä markkinointisisältö ja tekijänoikeudet. Käytä ensisijaisesti virallisia säädös- ja viranomaislähteitä. Voit lisätä jokaiseen pakettiin yhden tutkimuksen tai asiantuntijaorganisaation aineiston, jos se auttaa arvioimaan käytännön vaikutuksia.
 
-#### Ryhmätyö noin 10 minuuttia
+Opiskelija valitsee skenaarion ja kaksi lähdettä. Ohjaa lähteen arviointia viidellä kysymyksellä: kuka julkaisi, milloin tieto tarkistettiin, mitä väitettä lähde tukee, miksi lähde sopii juuri tähän väitteeseen ja mitä se ei ratkaise. Jos kaksi lähdettä tukevat vain samaa yleisväitettä, pyydä vaihtamaan toinen lähde.
 
-Jaa opiskelijat pienryhmiin. Jokainen ryhmä arvioi alla olevia käyttötapauksia ja päättää, onko generatiivisen tekoälyn käyttö perusteltua.
+Tehtävä kuuluu tuntisuunnitelman 20 minuutin lähdevaiheeseen. Sen tuloksena syntyy tallennettu lähdekortti, ei laaja tiedonhakuraportti. Tunnilla 9 opiskelija käyttää kortin lähteitä ja tekee enintään yhden uuden lähdetarkistuksen.
 
-| Käyttötapaus | Tarvitaanko generatiivista tekoälyä? | Perustelu | Kevyempi vaihtoehto |
-| --- | --- | --- | --- |
-| **Usein kysytty kysymys:** “Mihin aikaan asiakaspalvelu on auki?” |  |  |  |
-| **Pitkä tukitiketti:** asiakkaan ongelma pitää tiivistää asiantuntijalle. |  |  |  |
-| **Tekninen ongelma:** asiakas kuvaa epäselvästi monivaiheista virhetilannetta. |  |  |  |
-| **Vakioviesti:** “Kiitos yhteydenotosta, palaamme asiaan mahdollisimman pian.” |  |  |  |
-| **Raportti:** asiakaspalautteista pitää löytää toistuvat teemat ja kehityskohteet. |  |  |  |
+## Arvioinnin tuki
 
-Ryhmän tehtävänä on arvioida jokainen käyttötapaus seuraavien kysymysten avulla:
-
-- **Hyöty:** parantaako tekoäly työn laatua, nopeutta tai saavutettavuutta?
-- **Tarve:** vaatiiko tehtävä tulkintaa, tiivistämistä, luovaa muotoilua tai monimutkaista päättelyä?
-- **Resurssikustannus:** onko tehtävä niin yksinkertainen, että tekoälyn käyttö olisi ylimitoitettua?
-- **Vaihtoehto:** voisiko tehtävän ratkaista ohjesivulla, hakutoiminnolla, mallipohjalla tai sääntöpohjaisella automaatiolla?
-
-#### Yhteinen purku noin 5 minuuttia
-
-Pyydä ryhmiä valitsemaan yksi käyttötapaus, jossa generatiivisen tekoälyn käyttö on heidän mielestään perusteltua, ja yksi käyttötapaus, jossa se ei ole perusteltua.
-
-Kokoa taululle kaksi listaa:
-
-- **Tekoäly perusteltu:** monimutkainen, epäselvä, tulkintaa vaativa tai paljon aikaa säästävä tehtävä.
-- **Kevyempi ratkaisu riittää:** yksinkertainen, toistuva, täysin vakiomuotoinen tai helposti haettava tieto.
-
-> **Pääpointti:** Vastuullinen tekoälyn käyttö tarkoittaa myös sitä, että tekoälyä ei käytetä turhaan. Hyvä vastuullinen käyttäjä valitsee tehtävään sopivan työkalun, ei aina raskainta mahdollista ratkaisua.
-
-### Odotettu oppimistulos
-
-- Opiskelijat ymmärtävät, että generatiivisen tekoälyn käyttö kuluttaa laskentatehoa ja energiaa.
-- Opiskelijat osaavat arvioida, milloin tekoälyn hyöty on riittävä suhteessa sen resurssikustannuksiin.
-- Opiskelijat ymmärtävät, että vastuullinen tekoälyn käyttö voi tarkoittaa myös kevyemmän ratkaisun valitsemista.
-- Opiskelijat osaavat erottaa tehtävät, joissa tarvitaan generatiivista tekoälyä, tehtävistä, joissa riittää yksinkertaisempi automaatio tai ohjeistus.
-
----
-
-## Opettajan tärkeät huomiot
-
-### Avainviesti 1: Tekoäly ei ole neutraali väline
-
-- Jokaisen vastauksen taustalla on muiden ihmisten työtä: koulutusdataa, jonka tekijöiltä ei aina ole kysytty lupaa, sekä datan merkitsijöiden näkymätöntä työtä.
-- ”Kaikki muutkin käyttävät sitä” ei ole eettinen perustelu — vastuullinen käyttäjä tuntee työkalunsa taustat ja tekee perusteltuja valintoja.
-
-### Avainviesti 2: Vastuullinen käyttö huomioi myös ympäristövaikutukset
-
-- Generatiivisen tekoälyn käyttö kuluttaa laskentatehoa, energiaa ja datakeskusresursseja.
-- Kaikkiin tehtäviin ei tarvita raskasta tekoälyratkaisua.
-- Hyvä vastuullinen käyttäjä valitsee tehtävään sopivan työkalun: joskus se on generatiivinen tekoäly, joskus ohjesivu, hakutoiminto, mallipohja tai sääntöpohjainen automaatio.
-
----
-
-## Sisäänrakennetut keskustelun herättäjät
-
-### Jos opiskelijat sanovat: “Ympäristövaikutukset ovat niin pieniä, ettei niillä ole väliä.”
-
-> Yksittäinen käyttö voi tuntua pieneltä, mutta vaikutus kasvaa mittakaavassa. Vastuullinen käyttäjä ei käytä raskainta työkalua silloin, kun kevyt ratkaisu riittää.
-
-### Jos opiskelijat sanovat: “Eihän tämä ole minun ongelmani — palveluntarjoaja teki sen.”
-
-> Kun työkalua käytetään, käyttäjä osallistuu myös käyttötilanteen valintoihin. Vastuullinen käyttäjä ei voi ulkoistaa eettistä harkintaa kokonaan palveluntarjoajalle.
-
----
-
-## Arviointi
-
-Opettaja arvioi opiskelijoiden kykyä:
-
-- arvioida, milloin generatiivisen tekoälyn käyttö on perusteltua suhteessa sen hyötyihin, kustannuksiin ja ympäristövaikutuksiin,
-- valita tehtävään sopiva ratkaisu: generatiivinen tekoäly, sääntöpohjainen automaatio, hakutoiminto, mallipohja tai ihmisen tekemä työ,
-- tunnistaa tekoälyn käytön eettiset ulottuvuudet (tekijänoikeudet, algoritminen harha, näkymätön työ, ympäristö) opiskelutehtävien pohjalta.
-
----
+Hyvä opiskelijavastaus yhdistää teknisen arvioinnin ihmisvaikutuksiin ja nimeää toimijat. Se ei oleta, että yksi tarkistus tai yleinen vastuulause ratkaisee riskit. Korjattava vastaus puhuu ”tekoälyn vastuusta” nimeämättä ihmistä tai organisaatiota, joka voi tehdä päätöksen ja muuttaa toimintaa.

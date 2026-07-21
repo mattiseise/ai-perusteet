@@ -4,9 +4,9 @@
 
 Menetelmä, jolla tehdään järkevä valinta esittämällä sarja kysymyksiä. Se auttaa päättämään, mikä automatisointi­ratkaisu on oikea: promptaus, työnkulku vai agentti.
 
-## Harness
+## Agentin ohjauskehys
 
-Kielimallia ympäröivä ohjelmallinen kehys, joka antaa agentille tavoitteen, työkalut, tilan, oikeudet, rajat, hyväksynnät, lokituksen ja palautumisen. Agentti = kielimalli + harness.
+Kielimallia ympäröivä ohjelmallinen kehys, joka antaa agentille tavoitteen, työkalut, tilan, oikeudet, rajat, hyväksynnät, lokituksen ja palautumisen.
 
 ## Skaalautuvuus (scalability)
 

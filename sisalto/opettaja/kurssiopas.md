@@ -60,6 +60,8 @@ Jokaisella opettajan tuntisivulla on **"Jaa opiskelijoille" -painike**, joka ant
 
 ## Toteutusmallit
 
+Kurssin 27 oppituntia tarkoittavat luokkakäytössä noin 40,5 tuntia ohjattua työskentelyä. Itsenäisen verkkokurssin realistinen kokonaisaika on noin 35–50 tuntia, kun mukaan lasketaan teoria, harjoitukset, osatuotokset ja kolme lopputyötä. Osaamispisteet eivät kuvaa suoraan opiskeluun tarvittavaa aikaa tai opetuksen määrää, vaan osaamisen kattavuutta, vaikeutta ja merkittävyyttä. Oppilaitos sovittaa toteutuksen opiskelijan aiempaan osaamiseen ja henkilökohtaiseen opiskelupolkuun. [Opetushallitus: Tutkintojen perusteet](https://www.oph.fi/fi/koulutus-ja-tutkinnot/tutkintojen-perusteet)
+
 Kurssin voi jaksottaa monella tavalla. Muutama lähtökohta:
 
 - **Yksi tunti viikossa koko lukuvuoden.** 27 tuntia täyttää lukuvuoden luontevasti, ja opiskelijoilla on aikaa lopputöiden osatuotoksille tuntien välissä.
@@ -87,7 +89,7 @@ Varsinaisen tekoälytyökalun voi valita vapaasti. Palvelun puuttuminen ei estä
 
 Kurssilla arvioidaan **kolme lopputyötä**, yksi kustakin moduulista. Jokaisesta voi saada 100 pistettä, ja pisteet jakautuvat viiteen kriteeriin painotuksella 25/20/20/20/15. Alla tiivistelmä; **täydet arviointikriteerit, arviointimatriisit ja opettajan arviointiohjeet löydät koostettuna sivulta `/opettaja/arviointi/`.**
 
-**Teoria-osion lopputyö — asiantuntijalausunto (tunti 9).** Opiskelija ohjaa tekoälyä tuottamaan 750–1000 sanan asiantuntijalausunnon todellisesta tekoälyongelmasta kolmen keräämänsä todistusaineiston pohjalta.
+**Teoria-osion lopputyö — asiantuntijalausunto (tunti 9).** Opiskelija ohjaa tekoälyä tuottamaan 500–700 sanan asiantuntijalausunnon todellisesta tekoälyongelmasta kolmen keräämänsä todistusaineiston pohjalta. Hän käyttää tunnilla 8 arvioimiaan lähteitä, dokumentoi kaksi ennen–jälkeen-korjausta ja tekee tai nauhoittaa 1–2 minuutin puolustuksen.
 
 | Kriteeri | Pisteet |
 |---|---|
@@ -107,7 +109,7 @@ Kurssilla arvioidaan **kolme lopputyötä**, yksi kustakin moduulista. Jokaisest
 | Testaaminen ja iterointi | 20 |
 | Reflektio | 15 |
 
-**Agentit-osion lopputyö — minimiagentti (tunnit 19–27).** Oppija rakentaa n8n:llä tai dokumentoituna alustariippumattomana työnkulkuna yksinkertaisen, 3–5 solmun agentin, joka ratkaisee yhden konkreettisen ongelman.
+**Agentit-osion lopputyö — minimiagentti (tunnit 19–27).** Oppija rakentaa n8n:llä tai dokumentoituna suunnittelusuorituksena rajatun agentin, joka ratkaisee yhden konkreettisen ongelman. Työnkulun laajuus määräytyy tarvittavien vastuiden, ei solmujen lukumäärän perusteella.
 
 | Kriteeri | Pisteet |
 |---|---|

@@ -1,100 +1,41 @@
-# Opiskelutehtävät: Kasaa suunnitelma ja rakenna minimiversio
+# Opiskelutehtävät: Kasaa suunnitelma ja tee toimiva minimiversio
 
-> Tämä on Agentit-osion lopputyön rakennustunti. Tänään kasaat viisi pohjapiirrostasi yhdeksi suunnitelmaksi, tutustut n8n:ään ja rakennat agenttisi ensimmäisen toimivan version.
+> Tämä on Agentit-osion ensimmäinen rakennustunti. Tänään kokoat viisi pohjapiirrostasi yhtenäiseksi suunnitelmaksi ja teet agentistasi ensimmäisen testattavan version. Voit edetä teknistä n8n-polkua tai dokumentoitua suunnittelupolkua. Molemmissa kielimallin on tehtävä vähintään yksi todellinen, tilanteen mukaan muuttuva valinta.
 
-*Tunnilla on kolme vaihetta. Kaikki kuuluvat lopputyöhön — tämä ei ole "valitse 1" -tunti.*
+## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi
 
----
+Lue viisi pohjapiirrostasi yhtenä kokonaisuutena. Korjaa ristiriidat ja varmista, että ratkaisu vastaa tunnilla 20 valitsemaasi ongelmaan. Kirjoita sen jälkeen lyhyt arkkitehtuuriluonnos. Kuvaa ensin, mitä kielimalli tekee ja mistä agentin ohjauskehys vastaa. Esitä sitten ratkaisun tärkeimmät vaiheet, niiden syötteet ja tulokset. Vaiheiden määrää ei ole määrätty: mukana ovat vain tehtävän kannalta tarpeelliset vastuut.
 
-## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi — pakollinen
+Tarkista luonnoksesta kuusi rakennusosaa: **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka**. Merkitse jokaisesta, onko se mukana, lisätäänkö se tunnilla 27 vai eikö sitä tarvita tässä työssä. Perustele poisjättö lyhyesti.
 
-**Miksi tämä on tärkeää:** Yksittäisinä pohjapiirrokset ovat irrallisia päätöksiä. Yhdessä ne muodostavat suunnitelman.
+Voit pyytää tekoälyä esittämään suunnitelmastasi kysymyksiä:
 
-### Ohjeet
-
-1. Avaa muistiinpanodokumenttisi (johon olet kerännyt pohjapiirroksesi).
-2. Luo uusi tiedosto otsikolla "Agenttisuunnitelma — [agenttisi nimi]".
-3. Kopioi viisi pohjapiirrostasi tiedostoon järjestyksessä 1–5.
-4. Lue ne läpi yhtenä kokonaisuutena. *Onko tämä johdonmukainen agentti?*
-5. Korjaa tarvittaessa.
-
-### Tee ARCHITECTURE-luonnos
-
-Tee samaan tiedostoon luonnos, jota päivität tunnilla 27. Kirjoita ensin yksi lyhyt kappale: **mitä kielimalli tekee ja mistä harness vastaa**. Kuvaa sen jälkeen 3–5 tärkeintä vaihetta:
-
-| Vaihe | Tehtävä | Syöte → tulos | Vastuu: kielimalli vai harness |
-| --- | --- | --- | --- |
-| [Nimi] | [Mitä tapahtuu?] | [Mitä vaihe saa ja tuottaa?] | [Kumpi vastaa?] |
-
-Tarkista lopuksi kuusi rakennusosaa: syötekäsittely, päättely, työkalut, muisti, turvakerros ja palaute. Merkitse jokaisesta **mukana**, **lisätään tunnilla 27** tai **ei tarvita tässä työssä**. Yksi vaihe, sääntö tai palvelu voi kattaa useita kohtia. Perustele lyhyesti mahdollinen poisjättö.
-
-### Tekoälyvaihe — tarkista kokonaisuus
-
-```
-Olen kirjoittanut viisi pohjapiirrosta agentistani, jonka aion
-rakentaa n8n:ssä. Lue ne ja kysy minulta 3–5 kysymystä, jotka
-paljastavat mahdolliset ristiriidat tai aukot. Älä korjaa
-puolestani — kysy niin että minä huomaan ongelmat itse.
+```text
+Olen koonnut viisi pohjapiirrosta agentistani. Lue ne ja kysy
+minulta kysymyksiä, jotka paljastavat mahdolliset ristiriidat tai
+aukot. Älä korjaa puolestani, vaan auta minua huomaamaan ongelmat.
 ```
 
-> **Vinkki muistiinpanoihin:** Koottu suunnitelma ja ARCHITECTURE-luonnos ovat osa lopputyön palautusta. Tunnilla 27 et aloita dokumentointia tyhjästä, vaan päivität luonnoksen toteutuksen ja testien perusteella.
+## Vaihe 2: Valitse toteutuspolkusi
 
----
+Valitse polku, jolla pystyt osoittamaan ymmärryksesi luotettavimmin.
 
-## Vaihe 2: Tutustu n8n:ään — pakollinen
+**Tekninen n8n-polku.** Rakenna n8n:ssä toimiva minimiversio. Tallenna suoritusnäkymästä syöte, kielimallin valinta, mahdollisen työkalun tulos ja seuraava vaihe. Tekninen näyttö osoittaa, että yhteydet, reititys ja rajaukset toimivat käytetyssä ympäristössä.
 
-### Ohjeet
+**Dokumentoitu suunnittelupolku.** Kuvaa sama kokonaisuus n8n-kaaviona tai selkeänä vaihekuvauksena. Tee työkalusopimukset, oikeusrajat ja kaksi käsin seurattavaa suoritusjälkeä. Tämä polku osoittaa suunnittelun johdonmukaisuuden, mutta ei väitä testaamattomien liitäntöjen tai käyttöoikeuksien toimivan.
 
-1. Avaa n8n.
-2. Luo uusi työnkulku.
-3. Lisää **Manual Trigger** -solmu.
-4. Lisää **HTTP Request** -solmu. Menetelmä `GET`, osoite `https://api.github.com/zen`.
-5. Yhdistä solmut viivalla.
-6. Klikkaa "Execute workflow" ja katso, mitä HTTP Request palauttaa.
-7. Lisää kolmas solmu (IF, Set tai Edit Fields). Kokeile.
+Kumpikaan polku ei ole helpotettu versio. Näyttö on erilainen, mutta molemmissa tarvitaan oikea kielimallikutsu. Malli valitsee tilanteen perusteella vähintään kahdesta sallitusta vaihtoehdosta, esimerkiksi `hae hyväksytystä lähteestä`, `pyydä lisätietoa` tai `ohjaa ihmiselle`.
 
----
+## Vaihe 3: Tee ja testaa minimiversio
 
-## Vaihe 3: Rakenna agenttisi minimiversio — pakollinen
+Anna järjestelmälle turvallinen esimerkkisyöte. Määritä kielimallille tehtävä ja vähintään kaksi sallittua vaihtoehtoa. Rajaa, milloin kukin vaihtoehto on käytettävissä, ja päätä, miten valinta näkyy suoritusjäljessä. Lisää ainakin yksi työkalu tai toimintopolku, jonka käyttöä agentin ohjauskehys rajaa.
 
-**Tärkeä rajaus:** Tunnin tavoite on **toimiva minimiversio**, jossa kielimalli tekee yhden tilanteen mukaan muuttuvan valinnan. Pelkkä triggeri → tekoälysolmu → toimintasolmu -putki on tekoälyavusteinen työnkulku. Turvakerroksen, ihmisen hyväksyntää vaativat kohdat ja viimeistelyn rakennat tunnilla 27.
+Testaa kahdella erilaisella syötteellä. Valinnan pitää muuttua perustellusti tilanteen mukana. Kirjaa kummastakin testistä syöte, valittu vaihtoehto, perusteluna käytetty havaittava ehto, työkalun tai toimintopolun tulos ja seuraava vaihe. Jos järjestelmä kulkee aina samaa ennalta määrättyä reittiä, tarkista, onko kyse agentin sijasta työnkulusta.
 
-### Ohjeet — iteratiivinen rakentaminen
-
-1. **Triggeri ja syöte.** Valitse Manual Trigger, Schedule Trigger tai Webhook. Käytä turvallista esimerkkisyötettä.
-2. **Agenttipäätös.** Lisää tekoälysolmu. Määritä vähintään kaksi sallittua vaihtoehtoa, joista se valitsee tilanteen perusteella, esimerkiksi `hae_tietoa`, `pyyda_lisatietoa` tai `ohjaa_ihmiselle`.
-3. **Työkalu tai toimintopolku.** Kytke vähintään yksi rajattu työkalu tai haara valinnan toteuttamiseksi. Malli ei saa vapaasti keksiä uusia toimintoja.
-4. **Suoritusjälki.** Tallenna testistä syöte, valittu toiminto, työkalun tulos ja seuraava vaihe.
-5. **Testaa kaksi erilaista syötettä.** Valinnan pitää muuttua perustellusti tilanteen mukana. Jos molemmat syötteet kulkevat aina samaa polkua, tarkista, onko kyseessä sittenkin työnkulku.
-6. **Korjaa yksi havaittu ongelma.** Muuta yhtä ohjetta, rajausta tai reititystä ja aja sitä koskeva testi uudelleen.
-
-### Tekoälyvaihe — tarkista järjestelmäprompti
-
-```
-Olen kirjoittanut järjestelmäpromptin n8n-agentilleni. Tehtävä on
-[kuvaa]. Tässä prompti: [liitä]. Kommentoi: onko rooli selkeä?
-Onko rajat selkeät? Mitä epäselvyyksiä jää? Älä kirjoita
-uudelleen — kysy minulta kysymyksiä.
-```
-
-> **Älä lisää tunnilla 26 vielä näitä:** turvakerros-IF-solmut, monimutkaiset haarat, muistiratkaisut, lokitus, useat hyväksyntäportit. Ne kuuluvat tunnille 27.
-
-Tässä kohdassa **suoritusjälki** voi olla käsin täytetty testitaulukko tai n8n:n suoritusnäkymä. Varsinaisen jatkuvan lokituksen lisäät tunnilla 27.
-
----
+Korjaa yksi testeissä löytynyt ongelma ja aja sitä koskeva testi uudelleen. Teknisen polun opiskelija tekee korjauksen työnkulkuun. Dokumentoidun polun opiskelija päivittää kaavion, sopimuksen tai rajauksen ja tuottaa uuden suoritusjäljen.
 
 ## Tunnin lopuksi
 
-Kirjoita muistiinpanodokumenttiisi 3–4 lausetta:
+Kirjoita lyhyt tilannekuva: mihin pääsit, mikä jäi kesken ja mitä viimeistelet ensimmäisenä tunnilla 27. Liitä mukaan toteutuspolkusi näyttö: teknisessä polussa kuva työnkulusta ja suoritusnäkymästä, dokumentoidussa polussa kaavio ja kaksi jäljitettävää suoritusjälkeä. Merkitse selvästi kohta, jossa kielimalli tekee tilanteen mukaan muuttuvan valinnan.
 
-- Mihin pääsin tunnilla?
-- Mihin jäin?
-- Mitä viimeistelen ensimmäisenä tunnilla 27?
-
-Ota kuvakaappaus n8n-työnkulustasi nykyisessä tilassaan. Liitä mukaan kahden testin suoritusjäljet ja merkitse kuvaan kohta, jossa kielimalli valitsee seuraavan toiminnon. Ne ovat osa lopputyön palautusta.
-
-Päivitä vielä ARCHITECTURE-luonnoksen 3–5 vaiheriviä vastaamaan sitä, mitä todella rakensit. Merkitse keskeneräiset vastuut tunnin 27 tehtäviksi.
-
----
-
-**Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet ja esittelet**
+**Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet, testaat ja esittelet**

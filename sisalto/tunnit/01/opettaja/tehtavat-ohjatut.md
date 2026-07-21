@@ -12,14 +12,15 @@ Tehtävän tavoitteena on haastaa opiskelijoiden ajattelua siitä, että kaikki 
 
 **Valmistelu ennen tuntia noin 5 minuuttia:**
 
-Kirjoita taululle tai projisoi näkyviin seuraavat kuusi järjestelmää:
+Kirjoita taululle tai projisoi näkyviin samat seitsemän järjestelmää kuin opiskelijatehtävässä:
 
-1. Älypuhelimen automaattinen tekstinkorjaus
-2. Netflixin suositukset
-3. Pankkiautomaatti
-4. Sähköpostin roskapostisuodatin, vanha sääntöpohjainen versio
+1. Sähköpostin roskapostisuodatin
+2. Netflix-suositukset
+3. Pankin lainahakemuksen automaattinen käsittely
+4. Puhelinluettelo
 5. Google Mapsin reititys reaaliaikaisen liikennetiedon perusteella
-6. Älykoti, joka säätää lämmitystä kellonajan perusteella
+6. Pankkiautomaatti
+7. Automaattinen tekstinkorjaus
 
 ### Luokkakeskustelu noin 20 minuuttia
 
@@ -28,12 +29,12 @@ Kirjoita taululle tai projisoi näkyviin seuraavat kuusi järjestelmää:
 
    Kerro opiskelijoille:
 
-   > Näytän teille kuusi järjestelmää. Pohtikaa jokaisen kohdalla, käyttääkö järjestelmä tekoälyä vai ei. Pelkän äänestyksen sijaan keskitymme perusteluihin.
-2. **Käy järjestelmät läpi yksi kerrallaan noin 3 minuuttia järjestelmää kohti.**
+   > Näytän teille seitsemän järjestelmää. Luokitelkaa jokainen vaihtoehdoksi AI, Ei AI tai Epäselvä. Pelkän äänestyksen sijaan keskitymme perusteluihin.
+2. **Käy järjestelmät läpi yksi kerrallaan noin 2 minuuttia järjestelmää kohti.**
 
    Kysy jokaisen esimerkin kohdalla:
 
-   - Mitä mieltä olette: onko tämä tekoälyä vai ei?
+   - Mitä mieltä olette: AI, Ei AI vai Epäselvä?
    - Miksi ajattelette näin?
    - Jos opiskelija perustelee vastaustaan sanomalla, että järjestelmä “oppii”, kysy: **Mistä se oppii? Miltä oppiminen tässä tilanteessa näyttäisi?**
    - Jos opiskelija perustelee vastaustaan sanomalla, että järjestelmä on “älykäs”, kysy: **Mitä älykäs tässä tarkoittaa? Onko se sama asia kuin tekoäly?**
@@ -57,12 +58,13 @@ Kirjoita taululle kaksi kysymystä: “Onko tämä vain sääntö?” ja “Oppi
 
 | Järjestelmä | Tekoälyä vai ei? | Perustelu |
 | --- | --- | --- |
-| **Pankkiautomaatti** | Ei yleensä tekoälyä | Se toimii ennalta määriteltyjen sääntöjen mukaan: jos PIN-koodi on oikein, automaatti antaa rahaa. |
-| **Automaattinen tekstinkorjaus** | Riippuu toteutuksesta | Voi käyttää tekoälyä, mutta yksinkertainen versio voi perustua sääntöpohjaiseen sanakirjaan. |
-| **Suoratoistopalvelun suositukset** | Kyllä | Koneoppimismalli koulutetaan käyttäjäprofiileilla ja katseluhistorialla. |
-| **Google Maps ja reaaliaikainen liikennetieto** | Usein kyllä | Järjestelmä hyödyntää reaaliaikaista liikennetietoa ja aiempaa liikennedatahistoriaa reittien arvioinnissa. |
-| **Vanha sääntöpohjainen roskapostisuodatin** | Ei, jos se on vain sääntöpohjainen | Jos suodatin perustuu vain ennalta kirjoitettuihin sääntöihin, se ei varsinaisesti opi datasta. Uudemmat sähköpostisuodattimet voivat kuitenkin käyttää tekoälyä. |
-| **Älykoti** | Riippuu toteutuksesta | Jos järjestelmä toimii vain kellonajan perusteella, kyse on automaatiosta. Jos se oppii käyttäjän käyttäytymisestä, se voi käyttää tekoälyä. |
+| **Sähköpostin roskapostisuodatin** | Epäselvä | Sanojen perusteella lajittelu voi olla kiinteä sääntö tai datasta opittu luokittelumalli. Kuvaus ei kerro toteutustapaa. |
+| **Netflix-suositukset** | AI | Suositukset perustuvat tavallisesti käyttäjä- ja sisältödatasta koulutettuihin malleihin. |
+| **Pankin lainahakemuksen automaattinen käsittely** | Epäselvä | Päätös voi perustua sääntöihin, koneoppimismalliin tai niiden yhdistelmään. Automaattisuus ei ratkaise luokitusta. |
+| **Puhelinluettelo** | Ei AI | Aakkosjärjestys syntyy tavallisella lajittelulla. |
+| **Google Maps ja reaaliaikainen liikennetieto** | Epäselvä | Reititys voi yhdistää optimointia, sääntöjä ja koneoppimista. Pelkkä palvelun nimi ei kerro, mitä osaa arvioidaan. |
+| **Pankkiautomaatti** | Ei AI | Rahan nostaminen perustuu ennalta määriteltyyn tunnistukseen ja sääntöihin. |
+| **Automaattinen tekstinkorjaus** | Epäselvä | Se voi käyttää sääntöpohjaista sanakirjaa tai datasta opittua kielimallia. |
 
 ### Väärinkäsitykset, joita kannattaa käsitellä
 
@@ -116,6 +118,10 @@ Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia säänt
    - Mitä dataa tekoäly tarvitsisi petosten tunnistamiseen?
    - Mitä kuvioita, yhteyksiä tai poikkeamia tekoäly voisi oppia datasta?
    - Milloin sääntöpohjainen ratkaisu voisi silti olla parempi?
+   - Mitkä taulukon sarakkeet ovat mallin piirteitä?
+   - Mikä on tavoitemuuttuja ja mitkä ovat sen luokat?
+   - Miksi valmiit petosmerkinnät tekevät esimerkistä ohjattua oppimista?
+   - Mitä ohjaamaton oppiminen voisi löytää samasta aineistosta ilman valmiita merkintöjä?
 8. **Johtopäätös noin 5 minuuttia:**
 
    Kirjoita taululle seuraava yhteenveto:
@@ -130,6 +136,8 @@ Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia säänt
   **Täsmennys:** Säännöt voivat olla nopeita ja selkeitä, mutta ne eivät aina tunnista monimutkaisia tai uusia petoskuvioita.
 - **Väärinkäsitys:** “Tekoäly tietää, mikä on petos.”
   **Täsmennys:** Tekoäly ei “tiedä” samalla tavalla kuin ihminen. Se havaitsee datasta kuvioita ja poikkeamia, joiden perusteella se tekee todennäköisyysarvioita.
+- **Väärinkäsitys:** “Poikkeava tapahtuma on varmasti petos.”
+  **Täsmennys:** Ohjaamaton oppiminen voi nostaa poikkeaman tarkistettavaksi, mutta poikkeama voi olla myös harvinainen laillinen tapahtuma.
 
 **Opettajan tarkistuskysymys:** Jos opiskelijat ehdottavat yksittäistä sääntöä, kysy: “Toimiiko tämä myös silloin, kun petos näyttää tavalliselta ostokselta tai tavallinen ostos näyttää epäilyttävältä?”
 

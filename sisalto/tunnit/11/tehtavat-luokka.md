@@ -1,6 +1,6 @@
-# Opiskelutehtävät — Piirrä datavirta ja tee käyttöpäätös
+# Opiskelutehtävät — Tee yksi tietosuojapäätös
 
-**Tällä tunnilla on yksi ydintehtävä.** Tuotoksesi on yhden sivun datavirtakaavio ja siihen perustuva käyttöpäätös. Et etsi yleisesti parasta tekoälytyökalua, vaan arvioit, saako tiettyä ratkaisua käyttää tietyllä aineistolla.
+**Tällä tunnilla on yksi ydintehtävä ja yksi tallennettava tuotos.** Teet yhden sivun tietosuojapäätöksen, jonka sisällä näkyvät aineiston reitti, epävarmat kohdat ja päätös. Datavirtapiirros ei ole erillinen palautus. Et etsi yleisesti parasta tekoälytyökalua, vaan arvioit, saako tiettyä ratkaisua käyttää tietyllä aineistolla.
 
 ## Tehtävä 11.1 — Aineiston reitti näkyväksi (SUOSITELTU)
 
@@ -73,6 +73,8 @@ Kirjoita 6–8 lauseen perustelu, jossa vastaat seuraaviin kysymyksiin:
 5. Mikä jäi vielä epävarmaksi?
 6. Mikä saisi sinut muuttamaan päätöstäsi?
 
+Jos tapaus vaikuttaa ihmisen koulutukseen, työhön, rekrytointiin tai muuhun merkittävään päätökseen, lisää perusteluun yksi tarkistus: **kuka selvittää tekoälyasetuksen mukaisen riskiluokan ja organisaation vastuut ennen käyttöä?** Älä päättele lainmukaisuutta pelkän työkalun nimen tai tietosuojalupauksen perusteella.
+
 ### Vaihe 6 — Testaa päätös parin kanssa
 
 Anna datavirtakaavio ja päätös parille. Pari esittää kaksi haastetta:
@@ -82,7 +84,7 @@ Anna datavirtakaavio ja päätös parille. Pari esittää kaksi haastetta:
 
 Korjaa kaaviota tai perustelua, jos haaste paljastaa oletuksen, puuttuvan vaiheen tai liian laajan aineiston.
 
-> **Palautus:** Tallenna yhden sivun datavirtakaavio ja käyttöpäätös. Tiedostonimeksi sopii esimerkiksi `tunti-11-datavirta-oma-nimi.pdf`.
+> **Palautus:** Tallenna yksi yhden sivun tietosuojapäätös, johon datavirta sisältyy perusteluna. Tiedostonimeksi sopii esimerkiksi `tunti-11-tietosuojapaatos-oma-nimi.pdf`.
 
 > **Tarkista lopuksi:** Kaaviossa näkyvät aineisto, käsittelijät, ympäristö, mahdollinen säilytys ja epävarmat kohdat. Päätös perustuu näihin havaintoihin eikä työkalun maineeseen.
 

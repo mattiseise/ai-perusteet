@@ -14,7 +14,7 @@ Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **ReAct-
 
 Selitä opiskelijoille:
 
-> ReAct tulee sanoista **Reasoning** ja **Acting**. Toteutus ei vastaa heti arvaamalla, vaan kirjaa lyhyen päätösperustelun, tekee rakenteisen työkalukutsun, tarkistaa tuloksen tai virheen ja valitsee seuraavan toiminnon. Raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.
+> ReAct tulee sanoista **Reasoning** ja **Acting**. Toteutus ei vastaa heti arvaamalla, vaan kirjaa lyhyen päätösperustelun, käyttää rajattua työkalua, tarkistaa tuloksen tai virheen ja valitsee seuraavan toiminnon. Mallin sisäistä päättelyä ei pyydetä eikä tallenneta.
 
 Kirjoita taululle:
 
@@ -88,7 +88,7 @@ Ryhmät esittelevät ReAct-prosessinsa lyhyesti. Keskustelkaa yhdessä:
 ### Odotettu oppimistulos
 
 - Opiskelijat ymmärtävät, että ReAct-toteutus vuorottelee työkalukutsujen, tulosten ja toimintojen välillä.
-- Opiskelijat osaavat kuvata havaittavan ReAct-prosessin lokimuodossa ilman raakaa chain-of-thoughtia.
+- Opiskelijat osaavat kuvata havaittavan ReAct-prosessin lokimuodossa ilman mallin sisäistä päättelyä.
 - Opiskelijat ymmärtävät, miksi työkalujen käyttö tekee agentin vastauksesta luotettavamman kuin pelkkä arvaus.
 
 ---
@@ -97,7 +97,7 @@ Ryhmät esittelevät ReAct-prosessinsa lyhyesti. Keskustelkaa yhdessä:
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **eksplisiittinen työnkulku** tukee järjestelmällistä ongelmanratkaisua. Eksplisiittinen työnkulkussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.
+Aktiviteetin tavoitteena on auttaa opiskelijoita ymmärtämään, miten **eksplisiittinen työnkulku** tukee järjestelmällistä ongelmanratkaisua. Eksplisiittisessä työnkulussa tehtävä jaetaan selkeisiin vaiheisiin, jotka suoritetaan oikeassa järjestyksessä.
 
 **Opettajan painotus:** Eksplisiittinen työnkulku sopii erityisesti prosesseihin, joissa vaiheet ovat tiedossa etukäteen. Se vähentää satunnaisuutta ja auttaa varmistamaan, ettei kriittisiä tarkistuksia ohiteta.
 
@@ -147,7 +147,8 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 2. Kirjoittakaa kaikki vaiheet oikeassa järjestyksessä.
 3. Merkitkää, missä vaiheessa tarvitaan tietoa järjestelmästä, käyttäjältä tai ihmisasiantuntijalta.
 4. Merkitkää, mikä vaihe on turvallisuuden tai oikeellisuuden kannalta kriittisin.
-5. Pohtikaa, mitä tapahtuu, jos jokin vaihe puuttuu.
+5. Valitkaa yksi vaihe, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta. Kirjatkaa syöte, sallitut vaihtoehdot, mallin valinta ja sitä seuraava ennalta määritelty haara.
+6. Pohtikaa, mitä tapahtuu, jos jokin vaihe puuttuu.
 
 | Vaihe | Mitä tarkistetaan? | Mistä tieto saadaan? | Mikä voi mennä pieleen? |
 | --- | --- | --- | --- |
@@ -171,6 +172,7 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 
 - Opiskelijat ymmärtävät, että eksplisiittinen työnkulku sopii prosesseihin, joissa vaiheet ovat selkeät ja toistuvat.
 - Opiskelijat osaavat pilkkoa prosessin vaiheisiin.
+- Opiskelijat osaavat sijoittaa työnkulkuun näkyvän, aidon ja rajatun kielimallivalinnan muuttamatta koko prosessia dynaamiseksi suunnitteluksi.
 - Opiskelijat ymmärtävät, että puuttuva tai väärässä järjestyksessä tehty vaihe voi johtaa virheisiin.
 
 ---
@@ -179,7 +181,7 @@ Opiskelijat valitsevat yhden prosessin ja kirjoittavat sen vaiheet oikeassa jär
 
 ### Tavoite
 
-Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää **ReAct-mallia** ja milloin **eksplisiittinen työnkulkua**. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.
+Aktiviteetin tavoitteena on auttaa opiskelijoita valitsemaan, milloin kannattaa käyttää **ReAct-mallia** ja milloin **eksplisiittistä työnkulkua**. Opiskelijat ymmärtävät, että eri ongelmat tarvitsevat erilaisia päättelymalleja.
 
 ### Opettajan ohjeet ja fasilitointi
 
@@ -222,13 +224,13 @@ Anna opiskelijoille neljä tilannetta. Ryhmät päättävät, kumpi malli sopii 
 
 ### Odotettu oppimistulos
 
-- Opiskelijat osaavat erottaa ReAct-mallin ja eksplisiittinen työnkulkun käyttötarkoitukset.
+- Opiskelijat osaavat erottaa ReAct-mallin ja eksplisiittisen työnkulun käyttötarkoitukset.
 - Opiskelijat osaavat valita tehtävään sopivan päättelymallin.
 - Opiskelijat ymmärtävät, että mallin valinta vaikuttaa agentin turvallisuuteen, joustavuuteen ja luotettavuuteen.
 
 ---
 
-## Aktiviteetti 4: Moniagenttijärjestelmä noin 20 minuuttia
+## Valinnainen aktiviteetti 4: Moniagenttijärjestelmä noin 20 minuuttia
 
 ### Tavoite
 
@@ -314,8 +316,7 @@ Kaaviossa tulee näkyä:
 
 - **Mitä tapahtuu, jos ReAct-prosessi iteroi liian kauan?**
 - **Voiko eksplisiittinen työnkulku epäonnistua, vaikka kaikki vaiheet olisi kirjoitettu valmiiksi?**
-- **Milloin moniagenttijärjestelmä on liian monimutkainen eli overkill?**
-- **Mitä riskejä syntyy, jos useat agentit tekevät päätöksiä ilman yhteistä valvontaa?**
+- **Missä kohdassa eksplisiittistä työnkulkua kielimalli tekee aidon rajatun valinnan?**
 - **Milloin ihmisen pitää ottaa päätös haltuun?**
 
 ## Arviointi
@@ -323,10 +324,10 @@ Kaaviossa tulee näkyä:
 Opettaja arvioi opiskelijoiden kykyä:
 
 - selittää, mitä **ReAct-malli** tarkoittaa ja miten se etenee,
-- kuvata ReAct-prosessi lyhyen päätösperustelun, työkalukutsun, tuloksen tai virheen ja toiminnon vaiheina ilman raakaa chain-of-thoughtia,
+- kuvata ReAct-prosessi lyhyen päätösperustelun, työkalun käytön, tuloksen tai virheen ja toiminnon vaiheina ilman mallin sisäistä päättelyä,
 - selittää, mitä **eksplisiittinen työnkulku** tarkoittaa ja millaisiin prosesseihin se sopii,
 - valita sopiva päättelymalli erilaisiin tilanteisiin,
-- suunnitella yksinkertainen **moniagenttijärjestelmä**,
-- perustella, miten agenttien työnjako, tiedonkulku ja ihmisen valvonta toteutuvat.
+- nimetä eksplisiittisestä työnkulusta vaihe, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta,
+- perustella, miten valittu malli näkyy havaittavana ja testattavana työnkulkuna.
 
 ---

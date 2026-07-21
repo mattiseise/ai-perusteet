@@ -14,13 +14,13 @@
 
 Avaa muistiinpanoistasi Agentti: Ongelma. Kirjoita yhteensä 150–200 sanaa, jaettuna neljään lyhyeen osaan (~40–50 sanaa kukin):
 
-**1. Lyhytaikainen muisti (konteksti-ikkuna).** Mitä agentin täytyy muistaa yksittäisen keskustelun tai suorituksen aikana?
+**1. Konteksti ja keskusteluhistoria.** Mitä tietoa malli tarvitsee juuri tässä suorituksessa? Mitä historiasta valitaan tai tiivistetään kontekstiin?
 
-**2. Pitkäkestoinen muisti.** Mitä agentin täytyy muistaa keskustelujen tai suoritusten välillä? Tarvitseeko agenttisi tämän ollenkaan? Jos tarvitsee, missä tämä muisti on (esim. Google Sheets, tietokanta, vektoritietokanta)?
+**2. Pitkäkestoinen tieto ja tietopohja.** Mitä täsmällistä tietoa säilytetään rakenteisesti? Tarvitaanko erillistä tietopohjaa ja RAG-hakua? Perustele, miksi tieto kuuluu juuri tähän paikkaan.
 
 **3. Tilat ja tilasiirtymät.** Mitä eri tiloja agentillasi voi olla? Mitkä ehdot liikuttavat tilasta toiseen? Jos agenttisi suorittaa tehtävän kerralla ilman tilamuutoksia, riittää maininta tästä.
 
-**4. Pysyvät toimintaperiaatteet — erillään muistista.** Kirjoita 2–3 havaittavaa sääntöä siitä, miten agentti toimii epäselvässä tilanteessa. Merkitse jokaisesta, toteutetaanko se järjestelmäohjeena, harnessin tarkistuksena vai ihmisen hyväksyntäporttina. Älä käsittele näitä sääntöjä muistina.
+**4. Käyttöoikeudet ja toimintaperiaatteet.** Kerro, kenen tietoja saa hakea, miten käyttäjä- tai organisaatiorajaus varmistetaan ja miten lähde tarkistetaan. Merkitse erikseen ohjauskehyksen säännöt — ne eivät ole muistia.
 
 ### Tekoälyvaihe — arvioi muistivalinnat
 
@@ -37,23 +37,21 @@ niin että ajattelen.
 
 ---
 
-## Tehtävä 21.1 — Konteksti-ikkunan suunnittelu — syventävä
+## Tehtävä 21.1 — Tieto oikeaan paikkaan — syventävä
 
-**Miksi tämä on hyödyllinen:** Konteksti-ikkunan koko on yksi konkreettisimmista muistipäätöksistä, joita teet. Liian pieni → agentti unohtaa. Liian suuri → agentti hidastuu ja maksaa enemmän.
+**Miksi tämä on hyödyllinen:** Luotettava agentti ei käsittele kaikkea tietoa yhtenä muistina. Täsmällinen tilaustieto, keskusteluhistoria ja ohjekatkelma tarvitsevat eri käsittelyn.
 
 ### Tehtävä
 
-Rakennat asiakaspalveluagentin. Päätä konteksti-ikkunan koko kolmessa eri skenaariossa:
+Rakennat asiakaspalveluagentin. Luokittele seuraavat tiedot: nykyinen konteksti, keskusteluhistoria, prosessin tila, rakenteinen pitkäkestoinen tieto tai tietopohjasta RAGilla haettava katkelma.
 
-- **Skenaario A:** Yksinkertainen kysymys-vastaus ("Mikä on hinta?")
-- **Skenaario B:** Monivaiheinen tekninen ongelmanratkaisu (10+ viestiä dialogissa)
-- **Skenaario C:** Neuvotteluprosessi, jossa vaatimukset muuttuvat (20+ viestiä)
+- asiakkaan uusin kysymys
+- tilausnumero ja toimituksen tila
+- tiivistelmä aiemmista kokeiluista
+- hyväksytty palautusehto
+- tieto siitä, odottaako tapaus ihmisen hyväksyntää
 
-Jokaiselle skenaariolle:
-
-1. Ehdota konteksti-ikkunan koko (viestien lukumäärä tai sanamäärä)
-2. Perustele 1–2 lauseella
-3. Kuvaa lyhyesti, mitä tapahtuu jos ikkuna on liian pieni tai liian suuri
+Perustele jokaisesta, mistä tieto haetaan, kuka saa nähdä sen ja miten sen ajantasaisuus tai lähde tarkistetaan.
 
 > **Vinkki muistiinpanoihin:** Tätä tehtävää ei palauteta, mutta jos havaitsemasi periaatteet vaikuttavat omaan Agentti: Muisti -valintaasi, päivitä se.
 

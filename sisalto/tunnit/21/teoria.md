@@ -2,23 +2,23 @@
 
 ## Johdanto
 
-Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä tapahtui viime viikolla. Agentin harness voi tallentaa tapahtumia, ylläpitää prosessin vaihetta ja hakea asiakkaan historian mallin käyttöön silloin, kun sitä tarvitaan. Tämä **muisti** ja **konteksti** ovat agentin toiminnan kannalta keskeisiä. Ilman niitä agentti olisi helposti toistava, epäjohdonmukainen ja lähes käyttökelvoton.
+Kun rakennat omaa agenttia n8n:llä, suunnittelet samalla, mitä tietoa kielimallille annetaan juuri nyt ja mitä tietoa järjestelmä säilyttää myöhempää käyttöä varten. Kielimalli ei itsessään kanna asiakashistoriaa suorituksesta toiseen. Agentin ohjauskehys voi valita kontekstiin keskusteluhistoriaa, hakea rakenteista tietoa, ylläpitää prosessin tilaa tai tuoda mukaan tietopohjasta löytyviä tekstikatkelmia.
 
-Yksinkertaisissa boteissa muisti päättyy usein siihen, kun keskustelu loppuu. Agentissa muisti voi kuitenkin jatkua keskustelujen välillä. Tässä oppitunnissa opit, **miten agentti näkee nykyisen tilanteen konteksti-ikkunan avulla, miten se muistaa menneisyyttä pitkäkestoisen muistin avulla ja miten se seuraa prosessin vaiheita tilan avulla**. Nämä kolme tekijää tekevät agentista näennäisesti älykkään. Kun rakennat agenttia n8n:llä, ne ovat myös niitä rakennuspalikoita, joista agentin logiikka syntyy.
+Tässä oppitunnissa erotat toisistaan **konteksti-ikkunan, keskusteluhistorian, prosessin tilan, rakenteisen pitkäkestoisen tiedon, semanttisen vektorihaun sekä tietopohjan ja RAGin**. Niillä on eri tehtävät, eikä niitä pidä niputtaa yhdeksi muistiksi.
 
-> **Harness-kytkentä:** Kielimalli ei kanna muistia mukanaan itsestään. Harness valitsee, mitä mallille annetaan juuri nyt, tallentaa sovitut tiedot ja prosessin tilan sekä hakee pitkäkestoisesta muistista tehtävän kannalta olennaisen tiedon. Samalla sen pitää rajata, mitä ei saa tallentaa.
+> **Ohjauskehys-kytkentä:** Agentin ohjauskehys valitsee, mitä mallille annetaan juuri nyt, tallentaa sovitut tiedot ja prosessin tilan sekä hakee tehtävän kannalta olennaisen tiedon. Samalla se toimeenpanee käyttöoikeudet ja rajaa, mitä ei saa tallentaa tai näyttää mallille.
 
 ## Konteksti-ikkuna: mitä agentti näkee juuri nyt?
 
-Kuvittele asiakaspalveluagenttia, joka vastaa asiakkaalle neljänkymmenen aiemman viestin jälkeen kysymykseen: ”Entä mitä ehdotat nyt?” Agentti lukee 40 viestiä ja yrittää muistaa, mistä ongelma alun perin alkoi. Se muistuttaa tilannetta, jossa lukisit 40 sivua kirjaa yhdellä kertaa ja sinulta kysyttäisiin sen jälkeen jotain ensimmäiseltä sivulta. Ihmisen keskittyminen kuormittuu. Samalla tavalla myös agentin käsittelykyky on rajallinen.
+Kuvittele asiakaspalveluagenttia, joka vastaa pitkän keskustelun jälkeen kysymykseen: ”Entä mitä ehdotat nyt?” Järjestelmän täytyy valita mukaan ongelman kuvaus, olennaiset aiemmat kokeilut ja uusimmat viestit. Kaiken keskusteluhistorian siirtäminen mallille ei ole aina tarpeellista eikä turvallista.
 
-**Konteksti-ikkuna** tarkoittaa sitä osaa keskustelusta tai datasta, jonka agentti näkee kerralla. Voit ajatella sitä muistilaatikkona, johon mahtuu vain rajattu määrä viimeisimpiä viestejä. Jos ikkuna sisältää 50 viestiä ja keskusteluun tulee 51. viesti, vanhin viesti voi poistua agentin näkyvistä. Tämä rajaaminen on **tarkoituksellista suunnittelua**, ei pelkkä puute. Kaikilla järjestelmillä on rajat prosessointikyvyssä, nopeudessa ja kustannuksissa.
+**Konteksti-ikkuna** tarkoittaa rajattua määrää tokeneita eli tekstin osia ja muuta aineistoa, jonka malli voi käsitellä yhdessä suorituksessa. Se ei ole sama asia kuin keskusteluhistoria. Sovellus voi valita historiasta osan, tiivistää aiempia tapahtumia tai jättää tarpeettoman sisällön pois ennen kuin konteksti annetaan mallille.
 
-Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on, sitä enemmän agentti näkee aiempaa keskustelua ja sitä paremmin se voi ymmärtää tilanteen. Suurempi ikkuna tarkoittaa kuitenkin myös **enemmän käsiteltävää dataa**, mikä tekee agentista hitaamman ja kalliimman. Jokainen sana, jonka agentti käsittelee, voi maksaa rahaa, jos käytössä on kaupallinen kielimallipalvelu, kuten OpenAI:n API.
+Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on, sitä enemmän agentti näkee aiempaa keskustelua ja sitä paremmin se voi ymmärtää tilanteen. Suurempi ikkuna tarkoittaa kuitenkin myös **enemmän käsiteltävää dataa**, mikä tekee agentista hitaamman ja kalliimman. Jokainen sana, jonka agentti käsittelee, voi maksaa rahaa, jos käytössä on kaupallinen kielimallipalvelu.
 
-> **Pysähdy hetkeksi:** Kuvittele asiakaspalveluagentti, joka käsittelee pitkää tukiprosessia. Asiakas kuvailee ongelmaa pitkään ja kysyy 30 viestin jälkeen: ”Nyt kun olet kuullut kaiken, mitä ehdotat?” Jos konteksti-ikkuna sisältää vain 20 viestiä, agentti näkee enää viimeiset 20 viestiä. Alkuperäinen ongelma on poissa näkyvistä. Mitä tästä voi seurata?
+> **Pysähdy hetkeksi:** Mitkä kolme asiaa pitkästä tukikeskustelusta mallin täytyy nähdä seuraavaa päätöstä varten? Mitkä tiedot voidaan tiivistää, ja mitkä pitää jättää kokonaan pois?
 
-Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
+Vastuullinen suunnittelija ei valitse kontekstia viestimäärän perusteella vaan kysyy, mikä tieto on tehtävän ratkaisemiseksi tarpeellista, ajantasaista ja sallittua. Kontekstissa olevan tiedon lähde ja ajankohta pitää voida tarkistaa.
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l21-t"><i aria-hidden="true">// </i>konteksti, pitkäkestoinen muisti ja tila — eri tehtävät, yksi asiakaspyyntö</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:480px">
@@ -151,25 +151,25 @@ Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkity
 </style>
 
 
-## Pitkäkestoinen muisti: vektoritietokanta merkityksen etsijänä
+## Pitkäkestoinen tieto, tietopohja ja semanttinen haku
 
 Konteksti-ikkuna kertoo agentille, mitä tapahtuu **nyt**. Mutta entä jos asiakkaan kanssa on työskennelty kuusi kuukautta? Entä jos hän palaa uuden ongelman kanssa ja haluat, että agentti muistaa, mitä viimeksi opittiin?
 
-Tätä varten agentilla voi olla **pitkäkestoinen muisti**, joka tallennetaan esimerkiksi **vektoritietokantaan**. Vektoritietokanta on erikoistunut tietokanta, joka etsii samankaltaisuuksia merkityksen, ei vain täsmällisten sanojen perusteella. Tämä ero on tärkeä. Yksinkertaisesti sanottuna: vektoritietokanta toimii kuin hakukone, joka ymmärtää mitä tarkoitat — se löytää saman asian, vaikka sanoisit sen eri sanoin.
+**Rakenteinen pitkäkestoinen tieto** tallennetaan tavallisesti järjestelmään, jossa sillä on määritellyt kentät. Asiakkaan tunniste, sopimuksen tila, tilausnumero ja hyväksynnän ajankohta kuuluvat esimerkiksi asiakas- tai tilaustietokantaan. Täsmällistä tietoa ei pidä päätellä samankaltaisuuden perusteella.
 
-Tavallisessa tietokannassa haetaan usein täsmällisillä termeillä. Sana ”muistikortti” löytyy varmasti, jos hakusanana on ”muistikortti”. Vektoritietokannassa tieto tallennetaan kuitenkin merkityksen perusteella. Kun asiakas sanoo: ”Minulla oli ongelma muistilaitteen kanssa viime kuussa”, lause voidaan muuntaa **matemaattiseksi esitykseksi** eli vektoriksi. Tämä vektori kuvaa lauseen merkitystä: kyse on muistista, laitteesta, ongelmasta ja menneestä ajankohdasta.
+**Tietopohja** on hyväksytty aineistokokoelma, kuten käyttöohjeet, menettelyohjeet tai kurssimateriaali. Se ei ole käyttäjästä kerättävää muistia. Tunnilla 15 opittu **RAG** tarkoittaa, että järjestelmä hakee tietopohjasta tehtävään liittyviä katkelmia ja antaa ne mallille vastauksen tueksi.
 
-Myöhemmin sama asiakas voi sanoa: ”Se muistiin liittyvä juttu oli vaikea.” Vaikka sanat ovat eri, lauseen merkitys voi olla samankaltainen kuin aiemmassa tapauksessa. Vektoritietokanta voi löytää tämän samankaltaisuuden ja auttaa agenttia päättelemään, että kyse voi olla samasta tai samantyyppisestä ongelmasta.
+**Semanttinen vektorihaku** auttaa löytämään merkitykseltään samankaltaisia tekstikatkelmia, vaikka niissä käytetään eri sanoja. Se sopii esimerkiksi ohjeen etsimiseen tietopohjasta. Samankaltaisuus ei kuitenkaan todista, että katkelma koskee oikeaa tuotetta, versiota, käyttäjää tai ajankohtaa. Haun osuvuus ja lähde pitää tarkistaa ennen käyttöä.
 
 Tämä merkitysperusteinen haku on vektoritietokannan vahvuus. Se ei vaadi täsmällistä sanavastaavuutta, vaan se auttaa löytämään olennaista tietoa myös silloin, kun asiakas muotoilee asian eri tavalla kuin aiemmin.
 
-Käytännössä tämä tarkoittaa, että kun agentti näkee asiakkaan nimen tai tunnisteen, se voi hakea vektoritietokannasta asiakkaaseen liittyvää aiempaa tietoa. Agentti ei välttämättä tarvitse kaikkia yksityiskohtia, vaan usein tiivistelmä riittää: ”Tämä asiakas on ostanut meiltä viisi kertaa. Hänellä on ollut aiemmin ongelmia toimituksissa. Viime kuussa ostettu tuote oli samaa sarjaa kuin nyt kysytty tuote.” Nämä tiedot auttavat agenttia ymmärtämään asiakkaan tilanteen ja tekemään parempia päätöksiä.
+Asiakaskohtaista tietoa saa hakea vain käyttäjä- tai organisaatiorajauksen ja käyttöoikeuksien perusteella. Asiakkaan tunnisteella tehtävä tarkka haku kuuluu rakenteiseen järjestelmään, ei semanttiseen vektorihakuun. Ohjauskehyksen pitää estää toisen käyttäjän tai organisaation tietojen päätyminen kontekstiin.
 
 Vektoritietokanta toimii näin:
 
 Voit ajatella vektoritietokantaa kirjaston hakujärjestelmänä. Kun haet kirjastosta aihetta ”koiran koulutus”, hyvä hakujärjestelmä ei etsi vain kirjoja, joissa lukee täsmälleen ”koiran koulutus”. Se voi löytää myös kirjoja, joiden nimi on esimerkiksi ”Pentujen kasvatus” tai ”Lemmikkien kouluttaminen”, koska ne käsittelevät samaa aihetta eri sanoin. Vektoritietokanta toimii samalla periaatteella: se etsii **merkityksiä**, ei pelkkiä sanoja.
 
-> **Pysähdy hetkeksi:** Ajattele yrityssopimusta, jonka asiakas allekirjoitti kolme kuukautta sitten. Sopimuksessa oli erityisiä ehtoja ja myöhempi maksu. Kun asiakas ottaa nyt yhteyttä, agentti hakee sopimuksen vektoritietokannasta ja huomaa: ”Tämän asiakkaan sopimuksessa on erityisehtoja.” Mitä agentti voi tehdä toisin kuin tavallisten asiakkaiden kohdalla?
+> **Pysähdy hetkeksi:** Asiakas kysyy sopimuksensa erityisehdosta. Mitkä tiedot haet rakenteisesta sopimusjärjestelmästä ja mitkä yleiset tulkintaohjeet tietopohjasta? Miten varmistat, että molemmat kuuluvat juuri tälle käyttäjälle ja ovat voimassa?
 
 ## Tila: prosessin vaihe ja muuttujat
 
@@ -192,29 +192,29 @@ Kun rakennat agenttia n8n:llä, **tilan hallinta on kriittistä**. Sinun täytyy
 
 Laitetaan nyt nämä kolme komponenttia yhteen. Kuvittele asiakaspalveluagentti, joka käsittelee asiakkaita reaaliajassa.
 
-**Konteksti-ikkuna** näyttää viimeisimmät kymmenen viestiä, jotka asiakkaan kanssa on vaihdettu. Asiakas on voinut kuvailla ongelmaa pitkään, mutta agentti näkee vain viimeisimmät 10 viestiä. Niiden perusteella agentti ymmärtää esimerkiksi tämän: ”Asiakas kokeili ratkaisua A. Se ei auttanut. Nyt hän kysyy, mitä tehdä seuraavaksi.”
+**Konteksti-ikkuna** sisältää tähän päätökseen valitut uusimmat viestit, tiivistelmän aiemmista kokeiluista ja vain tarpeelliset tunnistetiedot.
 
-**Pitkäkestoinen muisti** paljastaa, että tämä asiakas on ollut asiakkaana kolme vuotta, hänellä on samankaltainen ongelma noin kolmen kuukauden välein ja edellisellä kerralla ratkaisu B auttoi. Vektoritietokanta löytää tämän yhteyden, koska se tunnistaa samankaltaisuuden nykyisen ja aiemman ongelman välillä.
+**Rakenteinen historia** kertoo käyttöoikeuden sallimissa rajoissa, mitä laitetta tapaus koskee ja mitä toimenpiteitä juuri tässä asiakkuudessa on jo tehty. **Tietopohjan semanttinen haku** löytää hyväksytystä ohjeesta mahdollisen ratkaisun B. Järjestelmä tarkistaa tuotteen, version ja lähteen ennen kuin katkelma annetaan mallille.
 
 **Tila** kertoo, että kyseessä on toinen ratkaisuyritys kolmesta, asiakas on aktiivinen eikä ihmisen tekemää eskalointia ole vielä pyydetty. Nämä muuttujat ohjaavat agentin seuraavaa päätöstä.
 
-Agentti yhdistää nämä kolme tekijää: se näkee nykyisen tilanteen konteksti-ikkunan kautta, tietää pitkäkestoisen muistin avulla, mikä on aiemmin auttanut, ja ymmärtää tilan perusteella, missä vaiheessa prosessi on. Näiden perusteella se voi päätellä: ”Kokeillaan ratkaisua B, koska se auttoi aiemmin. Jos se ei auta, siirrän asian ihmiselle.” Tällainen päätös on mahdollinen vain siksi, että agentilla on käytössään konteksti, pitkäkestoinen muisti ja tila.
+Tässä esimerkkitoteutuksessa agentin ohjauskehys kokoaa päätöstä varten nykyisen tilanteen, tähän asiakkuuteen rajatun historian ja prosessin tilan. Näiden perusteella kielimalli voi valita sallitun etenemisen: ”Kokeillaan ratkaisua B, koska se auttoi aiemmin. Jos se ei auta, siirrän asian ihmiselle.” Ratkaisu B voidaan valita tässä tapauksessa, koska ohjauskehys välittää mallille juuri tähän päätökseen tarvittavat tiedot. Toisenlaisessa tehtävässä pitkäkestoista muistia ei välttämättä tarvita lainkaan.
 
 > **Pysähdy hetkeksi:** Ajattele omaa työtäsi tai opintojasi. Mitä tietoa pidät mielessä lyhytaikaisesti? Mitä tietoa säilytät pidempään? Miten seuraat, missä vaiheessa olet jossakin prosessissa? Agentin muisti ja tila toimivat samankaltaisella tavalla.
 
 ## Pysyvät toimintaperiaatteet eivät ole muistia
 
-Konteksti-ikkuna, pitkäkestoinen muisti ja tila kertovat, mitä tietoa agentilla on käytettävissään. Niistä pitää erottaa **pysyvät toimintaperiaatteet**: järjestelmäohjeet ja harnessin säännöt, jotka määrittävät, miten agentin pitää toimia tilanteesta toiseen.
+Konteksti-ikkuna, pitkäkestoinen muisti ja tila kertovat, mitä tietoa agentilla on käytettävissään. Niistä pitää erottaa **pysyvät toimintaperiaatteet**: järjestelmäohjeet ja agentin ohjauskehyksen säännöt, jotka määrittävät, miten agentin pitää toimia tilanteesta toiseen.
 
 Toimintaperiaatteet vastaavat kolmeen kysymykseen:
 
 **Ensimmäinen kysymys: Mikä on agentin tehtävä ja toimintatapa?** Esimerkiksi: ”Toimi kärsivällisenä neuvojana. Anna ensin lyhyt toimintaohje ja pyydä lisätietoa vain, jos se on ratkaisun kannalta tarpeen.” Ohje kuvaa havaittavaa toimintaa, ei koneen sisäistä luonnetta.
 
-**Toinen kysymys: Mitkä rajat ovat voimassa aina?** Esimerkiksi: agentti ei palauta salasanaa, jaa toisen asiakkaan tietoja eikä esitä puuttuvaa tietoa varmana. Osa rajoista kirjoitetaan järjestelmäohjeisiin, mutta kriittiset rajat toteutetaan myös harnessissa oikeuksina, tarkistuksina ja hyväksyntäportteina.
+**Toinen kysymys: Mitkä rajat ovat voimassa aina?** Esimerkiksi: agentti ei palauta salasanaa, jaa toisen asiakkaan tietoja eikä esitä puuttuvaa tietoa varmana. Osa rajoista kirjoitetaan järjestelmäohjeisiin, mutta kriittiset rajat toteutetaan myös agentin ohjauskehyksessä oikeuksina, tarkistuksina ja hyväksyntäportteina.
 
-**Kolmas kysymys: Miten epäselvä tilanne käsitellään?** Esimerkiksi: jos tietoa ei ole tarpeeksi, agentti pyytää tarkennusta; jos toimintaan liittyy korkea riski, harness pysäyttää vaiheen ja pyytää ihmisen hyväksynnän.
+**Kolmas kysymys: Miten epäselvä tilanne käsitellään?** Esimerkiksi: jos tietoa ei ole tarpeeksi, agentti pyytää tarkennusta; jos toimintaan liittyy korkea riski, agentin ohjauskehys pysäyttää vaiheen ja pyytää ihmisen hyväksynnän.
 
-Käytännössä toimintaperiaatteet voidaan dokumentoida erikseen ja muuntaa järjestelmäohjeiksi, käyttöoikeuksiksi ja valvontasäännöiksi. Ne eivät ole agentin muistoja eivätkä todiste tietoisuudesta tai arvoista. Ne ovat ihmisen suunnittelema osa harnessia.
+Käytännössä toimintaperiaatteet voidaan dokumentoida erikseen ja muuntaa järjestelmäohjeiksi, käyttöoikeuksiksi ja valvontasäännöiksi. Ne eivät ole agentin muistoja eivätkä todiste tietoisuudesta tai arvoista. Ne ovat ihmisen suunnittelema osa agentin ohjauskehystä.
 
 ## Muistin turvallisuus ja hallinta
 
@@ -228,13 +228,13 @@ Muistin hallinta vaatii myös **säännöllistä puhdistamista**. Vanhentuneet t
 
 Nyt kun ymmärrät konteksti-ikkunan, pitkäkestoisen muistin ja tilan, mieti omaa agenttiprojektiasi. Mitä tietoa agenttisi tarvitsee yksittäisen suorituksen aikana? Mitä sen täytyy säilyttää suoritusten välillä? Mitä tiloja prosessilla on? Kirjaa toimintaperiaatteet erikseen, jotta muistitieto ja järjestelmää ohjaavat säännöt eivät sekoitu toisiinsa.
 
-> **Lopuksi pohdittavaksi:** Mitä tietoa harness antaa mallille nyt, mitä se säilyttää myöhemmäksi ja mitä sen pitää jättää tallentamatta?
+> **Lopuksi pohdittavaksi:** Mitä tietoa agentin ohjauskehys antaa mallille nyt, mitä se säilyttää myöhemmäksi ja mitä sen pitää jättää tallentamatta?
 
 ## Yhteenveto
 
-Agentti hahmottaa nykyhetkeä **konteksti-ikkunan** avulla. Konteksti-ikkuna voi sisältää esimerkiksi 20–200 viimeistä viestiä sen mukaan, millaista tehtävää agentti hoitaa. Agentilla voi olla myös **pitkäkestoinen muisti**, joka tallentuu esimerkiksi vektoritietokantaan ja auttaa löytämään samankaltaisia merkityksiä, ei vain täsmällisiä sanoja. Lisäksi agentilla on **tila**, joka kertoo, missä vaiheessa prosessi on ja mitä muuttujia siihen liittyy.
+Agentin ohjauskehys kokoaa mallille **konteksti-ikkunan**. Keskusteluhistoria on yksi mahdollinen lähde, mutta sitä voidaan valita ja tiivistää. Täsmälliset pitkäkestoiset tiedot kuuluvat rakenteiseen järjestelmään. **Semanttinen vektorihaku** etsii tietopohjasta merkitykseltään samankaltaisia tekstikatkelmia, ja RAG tuo tarkistetut katkelmat vastauksen tueksi. **Prosessin tila** kertoo, missä vaiheessa tehtävä on.
 
-Nämä kolme tekijää auttavat agenttia käyttämään oikeaa tietoa oikeassa vaiheessa. Pysyvät toimintaperiaatteet ovat eri asia: ne kirjoitetaan järjestelmäohjeisiin ja toteutetaan tarvittaessa harnessin säännöillä. Kun rakennat agenttia n8n:llä, pidä erillään **mitä agentti tietää**, **missä vaiheessa tehtävä on** ja **mitkä säännöt rajaavat toimintaa**.
+Pidä erillään **mitä malli näkee nyt**, **mitä järjestelmä säilyttää rakenteisesti**, **mitä tietopohjasta haetaan**, **missä vaiheessa prosessi on** ja **mitkä säännöt rajaavat toimintaa**. RAG voi epäonnistua joko hakuvaiheessa, jos väärä tai puutteellinen katkelma valitaan, tai vastauksen muodostamisessa, jos malli käyttää oikeaakin lähdettä väärin. Siksi lähde, käyttäjärajaus ja lopputulos tarkistetaan.
 
 ---
 
@@ -242,6 +242,5 @@ Nämä kolme tekijää auttavat agenttia käyttämään oikeaa tietoa oikeassa v
 
 - [Anthropic: Building Effective AI Agents](https://resources.anthropic.com/building-effective-ai-agents)
 - [Yao ym.: ReAct](https://arxiv.org/abs/2210.03629)
-- [Model Context Protocol: server primitives](https://modelcontextprotocol.io/specification/2025-06-18/server/index)
 
 Tarkistettu 15.7.2026.

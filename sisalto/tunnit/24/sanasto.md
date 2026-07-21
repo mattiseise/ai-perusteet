@@ -1,8 +1,8 @@
 # Sanasto – oppitunti 24: Turvallisuus
 
-## Harness
+## Agentin ohjauskehys
 
-Kielimallia ympäröivä järjestelmä, joka toimeenpanee turvarajat. Harness tarkistaa syötteitä, rajaa oikeuksia, vaatii tarvittaessa hyväksynnän, lokittaa toiminnan ja huolehtii virheistä palautumisesta.
+Kielimallia ympäröivä järjestelmä, joka toimeenpanee turvarajat. Agentin ohjauskehys tarkistaa syötteitä, rajaa oikeuksia, vaatii tarvittaessa hyväksynnän, lokittaa toiminnan ja huolehtii virheistä palautumisesta.
 
 ## Promptihyökkäys
 
@@ -14,7 +14,7 @@ Kun kielimalli keksii tosiasioita, joita ei ole. Agentti "muistaa" asiaa, jota e
 
 ## Minimioikeusperiaate (least privilege)
 
-Harness antaa agentille vain tehtävän kannalta välttämättömät oikeudet. Näin mahdollisen virheen tai hyökkäyksen seuraukset jäävät pienemmiksi.
+Agentin ohjauskehys antaa agentille vain tehtävän kannalta välttämättömät oikeudet. Näin mahdollisen virheen tai hyökkäyksen seuraukset jäävät pienemmiksi.
 
 ## Validointi (validation)
 
@@ -48,9 +48,9 @@ Järjestelmän ohjeiden, käyttäjän syötteen ja ulkoisen sisällön rakenteel
 
 Yhteys todellisuuteen. Agentti perustaa päätöksensä konkreettisiin tietoihin, ei hallusinaatioihin.
 
-## Varmuuskynnys (confidence threshold)
+## Havaittava eskalointiehto
 
-Jos agentti on alle 70% varma, se ei toimi vaan pyytää ihmisen apua.
+Ennalta määritelty ja järjestelmästä havaittava syy pysäyttää toiminta tai pyytää ihmisen apua. Tällaisia syitä ovat puuttuva hyväksytty lähde, ristiriitaiset lähteet, puuttuva pakollinen tieto, validointivirhe ja työkalun virhe. Mallin itse ilmoittamaa varmuusprosenttia ei käytetä päätösrajana.
 
 ## Tarkistusaskeleet (verification steps)
 

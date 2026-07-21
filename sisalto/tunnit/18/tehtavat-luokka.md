@@ -4,9 +4,9 @@
 
 > **HUOM:** Tätä varten sinulla tulee olla kerättynä rakennuspalikat 1–3 (tunnit 12, 14 ja 15).
 
-Rakennat saatavilla olevalla alustalla oman bottisi tai teet vastaavan dokumentoidun kuivaharjoittelun tavallisessa kielimallichatissa. Molemmissa vaihtoehdoissa suunnittelet työkalun, joka auttaa rajatussa itse valitsemassasi tehtävässä.
+Viimeistelet oman apuri-bottisi valitsemallasi suorituspolulla. **Teknisellä toteutuspolulla** rakennat ja testaat botin saatavilla olevalla alustalla. **Dokumentoidulla suunnittelupolulla** viimeistelet arkkitehtuurin, simuloidun suoritusjäljen, tietolähteiden kuvaukset, testit ja tunnistetut rajoitukset. Polut ovat samanarvoisia, mutta suunnittelupolku ei todista teknisten yhteyksien toimivuutta.
 
-Käytä tekoälyä apuna botin rakentamisessa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että botti toimii hyvin, tuottaa oikeasti hyödyllisiä vastauksia ja että ymmärrät sen rakenteen kokonaan.
+Käytä tekoälyä apuna botin rakentamisessa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan sinua suunnittelussa, testauksessa ja viimeistelyssä** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että tekninen botti toimii tarkoituksenmukaisesti tai suunnittelupaketti kuvaa toiminnan toteutuskelpoisesti ja että ymmärrät ratkaisun rakenteen kokonaan.
 
 Valitse itseäsi kiinnostava, omasta arjestasi tuttu **aihe**. Tässä on esimerkkejä — käytä jotakin näistä tai keksi omasi:
 
@@ -20,12 +20,12 @@ Bottisi auttaa juuri sinun aiheesi parissa toimivaa käyttäjää **pääsemää
 
 ## Miten teet sen?
 
-Botin rakentamisessa on neljä vaihetta. Käytä niitä työvaiheina:
+Tämän tunnin työssä on neljä vaihetta:
 
-1. **Botin määrittely:** Päätä, kenelle botti on, mitä se osaa ja mitä se ei tee. Käytä pohjana tunnin 14 botin määrittelyäsi (rakennuspalikka 2).
-2. **Järjestelmäprompti ja persoona:** Kirjoita botille ohjeet — kuka se on, miten se vastaa, missä järjestyksessä se ohjaa käyttäjää. Käytä pohjana tunnin 12 promptikortissa toimivaksi osoittamaasi rakennetta (rakennuspalikka 1).
-3. **Tietopohja:** Lataa bottiin 3–5 dokumenttia, jotka antavat sille tarvittavan asiantuntemuksen oman aiheesi tiedosta. Käytä pohjana tunnin 15 kuratoituja dokumenttejasi (rakennuspalikka 3).
-4. **Testaus ja viimeistely:** Aja normaali testi, kielteinen testi ja reunatapaus. Kirjaa odotus ja tulos, tee vähintään yksi nimetty korjaus ja aja sitä koskeva testi uudelleen.
+1. **Valitse yksi korjaus:** Palaa tunnin 17 kolmeen ensitulokseen ja valitse korjauslistalta yksi olennainen puute.
+2. **Korjaa:** Tee yksi nimetty muutos järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.
+3. **Testaa uudelleen:** Toista juuri korjaukseen liittyvä testi samalla odotuksella ja tallenna ennen–jälkeen-vertailu.
+4. **Viimeistele:** Kokoa aiemmat rakennuspalikat, kolme ensitestiä, korjausketju, reflektio ja polkukohtainen näyttö yhdeksi palautukseksi.
 
 ## Rakennuspalikat
 
@@ -33,7 +33,7 @@ Olet kerännyt kolme rakennuspalikkaa aiemmilla oppitunneilla. Käytä niitä bo
 
 - **Rakennuspalikka 1** (oppitunti 12, promptikortti) antaa testatun rakenteen järjestelmäpromptille.
 - **Rakennuspalikka 2** (oppitunti 14, botin määrittely) antaa pohjan suunnittelulle. Persoona, kohderyhmä, rajat, tavoitteet — kaikki valmiina.
-- **Rakennuspalikka 3** (oppitunti 15, tietopohjan kuratointi) antaa pohjan tietopohjalle. Tiedät jo, millainen materiaali toimii ja mikä ei.
+- **Rakennuspalikka 3** (oppitunti 15, tietopohja ja testisuunnitelma) sisältää 2–4 huolella valittua lähdettä ja kolme ennalta kirjoitettua testiä.
 
 > **Vinkki:** *"Tässä ovat keräämäni rakennuspalikat. Käytä niitä bottini ohjeen ja rakenteen pohjana: <liitä rakennuspalikkasi>"*
 
@@ -45,7 +45,7 @@ Lopullisen botin tulee täyttää seuraavat kriteerit:
 2. **Strukturoitu työnkulku.** Botti ohjaa käyttäjää tehtävän vaiheiden läpi järjestelmällisesti (lähtötilanne → tavoite → vaihtoehdot → valinnat → lopputulos).
 3. **Aiheesi termit ja näkökulmat.** Botti puhuu oman aiheesi kieltä — salitreenin botille eri termit kuin kerhon FAQ-botille. Tämä erottaa sinun bottisi yleisestä avustajasta.
 4. **Selkeät rajat.** Botti tietää mitä se EI tee — esimerkiksi se ei tee koko tehtävää käyttäjän puolesta, ei anna terveys- tai oikeudellisia neuvoja, ei toimi muissa aiheissa. Rajat ovat osa huolellisuutta.
-5. **Testattu kolmella testityypillä.** Normaali, kielteinen ja reunatapaus sekä korjaus ja uudelleentesti on dokumentoitu.
+5. **Testattu sovitulla aikajanalla.** Tunnin 17 normaali, kielteinen ja reunatapaus sekä tunnin 18 yksi korjaus ja sitä koskeva uudelleentesti on dokumentoitu.
 
 ## Mitä palautat?
 
@@ -55,9 +55,9 @@ Palauta yksi tiedosto, joka sisältää:
 2. **Bottisi järjestelmäprompti** kokonaisuudessaan kopioituna
 3. **Lista tietopohjan dokumenteista** ja perustelu, miksi valitsit juuri nämä
 4. **Testimatriisi ja korjausketju:** kolmesta testistä syöte, odotus, tulos ja johtopäätös sekä yhdestä korjauksesta ennen–jälkeen-näyttö
-5. **Reflektio** (200–300 sanaa): mitä opit botin rakentamisesta? Mikä toimi heti, mikä vaati monta yritystä? Mitä tekisit toisin, jos rakentaisit tämän uudelleen?
+5. **Reflektio** (200–300 sanaa): mitä opit botin rakentamisesta, mikä havainto johti korjaukseen ja mitä tekisit seuraavaksi? Saavutettavana vaihtoehtona voit palauttaa 2–3 minuutin äänitteen tai selostetun 3–5 dian kuvakoosteen, joka vastaa samoihin kysymyksiin.
 
-Lisäksi **linkki bottiin tai kuivaharjoittelun suoritusjälki**, jotta arvioija voi todentaa toteutuksen.
+Lisäksi polkukohtainen näyttö. Teknisellä polulla annat linkin tai muun pääsyn bottiin sekä tallennetut testitulokset. Suunnittelupolulla annat arkkitehtuurin, simuloidun suoritusjäljen ja luettelon toteuttamatta jääneistä teknisistä ominaisuuksista.
 
 ## Lyhyt esittely ja puolustus
 
@@ -67,16 +67,16 @@ Pidä 2–3 minuutin esittely. Esittelyssä:
 - Näytä yksi ennen–jälkeen-korjaus
 - Perustele yksi rajaus ja vastaa yhteen jatkokysymykseen
 
-Esitys voi olla suora esitys ryhmälle, tallennettu video tai kuvakaappauskooste. Valitse itsellesi sopiva muoto.
+Esittely tehdään 2–3 hengen pienryhmässä, tallenteena tai opettajan valitsemana otoksena. Koko luokan peräkkäistä esittelykierrosta ei tehdä. Esittely ja reflektio valmistuvat tämän oppitunnin aikana.
 
 ## Jos et tiedä mistä aloittaa
 
 Aloita näin:
 
-1. Avaa **rakennuspalikka 2** (tunti 14, botin määrittely). Päivitä se kuvaamaan tätä bottia — kohderyhmä on nyt oman aiheesi käyttäjä.
-2. Kirjoita botin **järjestelmäpromptin ensimmäinen versio**. Pohjana on **rakennuspalikka 1** (tunti 12, promptikortti) — käytä siinä testattua rakennetta.
-3. Lataa **rakennuspalikka 3** (tunti 15, kuratoitu tietopohja) bottiin. Jos tietopohja ei riitä, etsi 1–2 lisädokumenttia juuri oman aiheesi näkökulmasta.
-4. Kirjoita normaalille, kielteiselle ja reunatapaukselle odotettu tulos ja aja testit.
-5. Korjaa yksi havaittu puute, aja kyseinen testi uudelleen ja tallenna ennen–jälkeen-näyttö.
+1. Avaa tunnilla 17 tallentamasi kolme ensitulosta ja korjauslista.
+2. Valitse yksi puute, joka liittyy suoraan ennalta kirjoitettuun odotukseen.
+3. Tee yksi nimetty korjaus järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.
+4. Toista juuri sitä koskeva testi samalla odotuksella ja tallenna ennen–jälkeen-näyttö.
+5. Tee reflektio ja 2–3 minuutin esittely tämän tunnin aikana.
 
 *Et opettele käyttämään tekoälyä. Opit rakentamaan sillä.*

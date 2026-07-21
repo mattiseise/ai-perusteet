@@ -1,168 +1,53 @@
-# Opettajavetoiset harjoitukset: turvallinen käyttö ja arviointi
+# Ohjatut tehtävät: Asiantuntijalausunnon viimeistely
 
-## Harjoitus 1: Arviointitehtävän avaus ja ohjaus
+Nämä ovat tuntisuunnitelman vaiheisiin upotettavia tukitoimia, eivät erillinen tehtäväsarja. Valitse vain se ohjaus, jota ryhmä tarvitsee, jotta kirjallinen tai visuaalis-suullinen analyysi, kaksi korjausta ja valitun reitin puolustus valmistuvat 90 minuutissa.
 
-### Tavoite
-Varmistaa, että opiskelijat ymmärtävät Teoria-osion arviointitehtävän vaatimukset ja osaavat aloittaa työn itsenäisesti.
+## Tehtävä 9.1: Havainto, lähde vai johtopäätös?
 
-### Ohjeet ja vaiheet
+**Kesto: 5 minuuttia**
 
-**Kesto: 20 minuuttia**
+Anna ryhmille kuusi lausetta valitusta skenaariosta. Osa on skenaariossa annettuja havaintoja, osa lähteestä tarkistettavia väitteitä ja osa opiskelijan johtopäätöksiä. Ryhmä luokittelee lauseet ja kirjoittaa jokaisen johtopäätöksen viereen näytön, joka sen oikeuttaisi.
 
-1. **Konteksti (5 min):**
-   Kerro opiskelijoille:
-   - "Oppituntien 1–9 aikana olemme oppineet tekoälyn teoriaa: mitä se on, miten se toimii, miksi se on epädeterministinen ja hallusinoiva, mitä eettisiä ongelmia siihen liittyy ja miten sitä käytetään turvallisesti."
-   - "Teoria-osio on osakokonaisuus 1. Arviointi testaa ymmärrystä näistä käsitteistä."
-   - "Arviointitehtävä on skenaarion analyysi — valitset yhden, analysoit sitä Teoria-osion käsitteillä ja kirjoitat raportin."
+Purussa korosta, ettei mallin sujuva muotoilu muuta johtopäätöstä lähteeksi.
 
-2. **Tehtävän vaatimukset (10 min):**
-   Käy läpi arviointitehtävä pala palalta:
+## Tehtävä 9.2: Kolme todistusaineistoa samaan ketjuun
 
-   **Kolme skenaariota:**
-   - Skenaario 1: Asiakaspalvelu ja data hygiene
-   - Skenaario 2: Algoritminen harha ja palkkaus
-   - Skenaario 3: Tekijänoikeudet ja vastuullisuus
+**Kesto: 8 minuuttia**
 
-   Jokaisen kohdalla sano:
-   - "Tämä on realistinen ongelma, jonka kohtaat vastuullisena käyttäjänä."
-   - "Tehtävä on: analysoi se Teoria-osion käsitteillä ja kirjoita raportti."
-   - "Et etsi oikeaa vastausta — vaan esität asiallisesti vastuullisen näkemyksen."
+Opiskelija täyttää taulukon:
 
-   **Arviointikohteet (näytä taululla):**
-   - Ongelman ymmärrys (20 pistettä)
-   - Tekninen analyysi (25 pistettä)
-   - Eettinen analyysi (20 pistettä)
-   - Ratkaisut ja suositukset (25 pistettä)
-   - Kirjoituksen laatu (10 pistettä)
+| Todistusaineisto | Havainto tai käsite | Mihin skenaarion kohtaan se liittyy? | Mitä johtopäätöstä se tukee? |
+|---|---|---|---|
+| Tunti 3 |  |  |  |
+| Tunti 5 |  |  |  |
+| Tunti 7 |  |  |  |
 
-3. **Esimerkki (5 min):**
-   Ota skenaario 1 ja analysoi sitä yhdessä opiskelijoiden kanssa:
+Tunnin 7 aineistossa hyväksy yhteys kielimallin väitteen verifiointiin tai luokittelumallin virhetyyppeihin ja mittareihin. Opiskelijan ei tarvitse pakottaa kaikkia mittareita skenaarioon, jossa ei ole luokittelumallia, mutta hänen pitää osoittaa, miten tarkistuskäytäntö ja nimetty vastuu vaikuttavat ratkaisuun.
 
-   ```
-   Skenaario: Asiakaspalvelijat antavat ChatGPT:lle asiakkaiden tietoja.
+## Tehtävä 9.3: Kaksi näkyvää korjausta
 
-   Kysymykset:
-   - Mikä on turvallisuusriski? (Tietovuoto, GDPR-rikkomus)
-   - Mikä Teoria-osion käsite liittyy? (Data hygiene, prompt injection -riski, tietoturva)
-   - Mitä ratkaisua ehdottaisit? (Politiikka, joka kieltää henkilötietojen antamisen; koulutus)
-   ```
+**Kesto: 10 minuuttia**
 
-4. **Aikataulut ja deadline:**
-   - Arviointitehtävä tehdään yksin (ei pari- tai ryhmätyönä).
-   - Pituus: 750–1000 sanaa.
-   - Deadline: [ilmoita oppilaitoksen aikataulun mukaan].
+Opiskelija valitsee mallin luonnoksesta kaksi kohtaa ja täydentää taulukon:
 
----
+| Ennen | Jälkeen | Miksi muutin? | Lähde tai todistusaineisto |
+|---|---|---|---|
+|  |  |  |  |
 
-## Harjoitus 2: Skenaarioiden deep dive ja riskien analyysi
+Hyviä korjauksia ovat esimerkiksi keksityn lähteen poistaminen, liian varman johtopäätöksen rajaaminen, mittarin tulkinnan korjaaminen tai vastuun nimeäminen. Pelkkä pilkun tai sanajärjestyksen muutos ei osoita analyyttistä korjausta.
 
-### Tavoite
-Auttaa opiskelijoita harjoittelemaan arviointiprosessia pienemmissä osissa ennen varsinaista kirjoittamista.
+## Tehtävä 9.4: Vastuu rooleiksi
 
-### Ohjeet ja vaiheet
+**Kesto: 5 minuuttia**
 
-**Kesto: 25 minuuttia (voidaan tehdä osissa)**
+Kirjoita taululle neljä kysymystä: kuka päätti, kuka ohjeisti, kuka valvoi ja kuka korjaa haitan? Opiskelija vastaa niihin oman skenaarionsa perusteella. Lisää lopuksi oma ammatillinen vastuu: mitä juuri oman roolin henkilön pitää tietää ja tehdä?
 
-1. **Ryhmän jakaminen (2 min):**
-   Jaa opiskelijat kolmeen ryhmään (yksi per skenaario).
+## Tehtävä 9.5: Puolustuksen harjoitus
 
-2. **Analyysiharjoitukset (15 min):**
-   Jokainen ryhmä saa tehtävän:
+**Kesto: 7 minuuttia**
 
-   **Skenaario 1 -ryhmälle:**
-   - Listaa kaikki turvallisuus- ja yksityisyysriskit.
-   - Mitä GDPR:n käsitteitä tähän liittyy?
-   - Kuinka kirjoittaisit käytäntöohjeet asiakaspalvelijoille?
-   - Mitä Teoria-osion käsitteitä sinulla on käytettävissä?
+Kirjallisella reitillä opiskelija tekee valmiista lausunnostaan lyhyen rungon ja pitää parille 1–2 minuutin puolustuksen tai nauhoittaa sen. Visuaalis-suullisella reitillä opiskelija harjoittelee 5–8 minuutin esityksen alun ja yhden päätöspuun haaran selityksen. Pari kysyy yhden kysymyksen: ”Mihin näyttöön tämä johtopäätös perustuu?” Opiskelija täydentää runkoa, jos perustelu jäi epäselväksi, ja tallentaa valitun reitin puolustuksen opettajan ohjeen mukaan.
 
-   **Skenaario 2 -ryhmälle:**
-   - Miksi algoritmi on puolueellinen? (Selitä algoritmisen harhan mekanismi.)
-   - Miten testaisit harhaa?
-   - Kuka on vastuussa?
-   - Miten selittäisit asian osakkaille (johtajat, hakijat)?
+## Arvioinnin tuki
 
-   **Skenaario 3 -ryhmälle:**
-   - Vastaa neljään kysymykseen: omistus, etiikka, vastuullisuus, tekijänoikeudet.
-   - Miten informoit asiakasta tekijänoikeusriskeistä?
-   - Mitä muutoksia tekisit prosesseihin?
-
-3. **Raportointi (8 min):**
-   - Jokainen ryhmä esittää löydöksensä 2–3 minuutissa.
-   - Opettaja korostaa, mitä käsitteitä ja analyysiyhdistelmiä käytetään.
-
-**Opettajan muistio:** Tämä harjoitus ei ole "oikean vastauksen" etsintää — se on harjoitus. Opiskelijat näkevät, miten ajatella ja jäsentää analyysi.
-
----
-
-## Harjoitus 3: Arviointiohjeet ja odotukset
-
-### Tavoite
-Selventää, mitä opiskelijoilta odotetaan, ja vastata kysymyksiin ennen arviointikeskustelua.
-
-### Ohjeet
-
-**Kesto: 15 minuuttia**
-
-1. **Odotettu rakenne (5 min):**
-   Näytä esimerkkirakenne raportille:
-
-   ```
-   1. Johdanto (1–2 kappaletta): "Valitsin skenaarion X, koska..."
-   2. Ongelman analyysi (2–3 kappaletta): Mikä on ongelma?
-      Mihin Teoria-osion käsitteisiin se liittyy?
-   3. Tekninen analyysi (2–3 kappaletta): Mitkä tekniset/algoritmiset
-      näkökohdat ovat merkityksellisiä?
-   4. Eettinen analyysi (2–3 kappaletta): Mitkä ovat eettiset
-      vastuukysymykset?
-   5. Ratkaisut ja suositukset (2–3 kappaletta): Mitä ehdottaisit?
-   6. Johtopäätös (1 kappale): Yhteenveto ja asiallinen vastuu.
-   ```
-
-2. **Yleisimmät virheet, joita tulee välttää:**
-   - "Ei analysoi — vain kuvaa skenaariota."
-   - "Ei käytä Teoria-osion käsitteitä."
-   - "Antaa selkeitä vastauksia sen sijaan että osoittaa asiallista ajattelua."
-   - "Perustelut ovat liian lyhyitä tai pinnallisia."
-
-3. **Kysymykset ja vastaukset (10 min):**
-   Avaa keskustelu: "Mitä kysymyksiä teillä on?"
-   - "Voiko käyttää ulkoisia lähteitä?" Kyllä, dokumentoi ne.
-   - "Kuinka monta lähdettä?" Vähintään 3–5, riippuen skenaarion vaativuudesta.
-   - "Voiko käyttää tekoälyä raportin kirjoittamiseen?" Varokaa: tekoäly voi hallusinoida. Parempi on kirjoittaa itse ja käyttää tekoälyä ideoiden saamiseen.
-   - "Mikä pisteytys?" 5-tasoisella asteikolla (Erinomainen–Hylätty). Katso pisteytyskriteerit.
-
----
-
-## Opettajan muistettavaa arviointitilanteen aikana
-
-**Arviointitehtävä on summatiivinen** — se testaa, kuinka hyvin opiskelijat ymmärtävät Teoria-osion käsitteitä ja osaavat soveltaa niitä.
-
-**Arvioitavana ei ole "oikea vastaus"** — vaan asiallisesti järkevä, lähdepohjainen ja syvällinen analyysi.
-
-**Opiskelijat voivat kysyä neuvoa ennen arviointia** — mutta et voi antaa heille "vastauksia". Voit auttaa heitä ymmärtämään kysymyksiä ja rakennetta.
-
-**Oppimista tukevia neuvoja:**
-- "Mitkä Teoria-osion käsitteet liittyvät tähän?" (Auta heitä tunnistamaan relevantit käsitteet.)
-- "Mitkä riskit näet?" (Auta heitä ajattelemaan kriittisesti.)
-- "Miten argumentoisit tämän asiallisesti?" (Auta heitä rakentamaan perusteluja.)
-
-**Älä anna suoria vastauksia:**
-- "Sinun pitäisi sanoa X" (Liian ohjaavaa.)
-- "Tämä on väärä" (Liian tuomitsevaa — he opettelevat.)
-
----
-
-## Jälkiarviointia (arvioinnin jälkeen)
-
-Kun oppilaat ovat toimittaneet raportit:
-
-1. **Lue huolellisesti** — ymmärrä, mitä he analysoivat ja miten.
-2. **Käytä pisteytyskriteerejä** — ole johdonmukainen 5-tasoisella asteikolla.
-3. **Kirjoita rakentava palaute:**
-   - Missä he onnistuivat?
-   - Missä he voivat parantaa?
-   - Mitä käsitteitä he ymmärsivät hyvin?
-   - Mitä käsitteitä heidän olisi voinut käsitellä syvemmin?
-4. **Anna palautetta vertaisarvioinnista, jos haluat** — opiskelijat voivat oppia toisiltaan.
-
-**Opettajan muistio:** Tämä arviointi testaa käsitysten syvyyttä, ei "oikean vastauksen" muistamista. Ole palkitseva hyvästä analyysista ja asiallisesta ajattelusta, vaikka jonkin käsitteen käsittely olisi pinnallista.
+Hyvä puolustus ei kertaa koko tuotosta. Se nimeää tärkeimmän johtopäätöksen, käyttää ainakin yhtä todistusaineistoa näkyvästi ja kertoo yhden korjauksen, jolla opiskelija muutti mallin luonnosta. Opiskelijan pitää pystyä selittämään väite omin sanoin.

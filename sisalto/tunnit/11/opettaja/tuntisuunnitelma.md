@@ -28,11 +28,7 @@ Tavoitteena ei ole palvelujen nimien, hintojen tai oletettujen palvelinsijaintie
 
 ## Ydintuotos
 
-Jokainen opiskelija tuottaa:
-
-- yhden sivun datavirtakaavion
-- 6–8 lauseen käyttöpäätöksen
-- vähintään yhden näkyväksi merkityn epävarman kohdan tai tarkistettavan asian
+Jokainen opiskelija tuottaa yhden sivun **tietosuojapäätöksen**. Siihen sisältyvät tiivis datavirta, 6–8 lauseen päätös sekä vähintään yksi näkyväksi merkitty epävarma tai tarkistettava kohta. Datavirtakaaviota ei palauteta erillisenä toisena tuotoksena.
 
 Kaikkien reittien ydintuotos on sama. Eriyttäminen muuttaa tuen määrää, ei tavoitetta.
 
@@ -55,7 +51,7 @@ Valmistele:
 | **0–10 min** | Virittäytyminen | Näytä sama kuvitteellinen tiedosto ja kolme mahdollista käsittely-ympäristöä. Kysy, muuttuuko käyttöpäätös ympäristön vai aineiston vai molempien mukana. | Tekee alustavan päätöksen ja kertoo yhden perusteen. |
 | **10–25 min** | Ydinkäsitteet | Erota malli, palvelu ja käyttöympäristö. Mallinna datavirran viisi kohtaa. | Täydentää käsitteet ja merkitsee yhden epäselvän kohdan. |
 | **25–40 min** | Ohjattu esimerkki | Toteuta opettajavetoisten tehtävien tehtävä 1. Älä anna valmista vastausta ennen perusteluja. | Rakentaa datavirran yhdessä ryhmän kanssa. |
-| **40–70 min** | Ydintuotos | Ohjaa opiskelutehtävän vaiheita 1–5. Kysy erityisesti: ”Mistä tiedät tämän?” | Piirtää datavirran ja kirjoittaa käyttöpäätöksen. |
+| **40–70 min** | Ydintuotos | Ohjaa opiskelutehtävän vaiheita 1–5. Kysy erityisesti: ”Mistä tiedät tämän?” | Kokoaa yhden sivun tietosuojapäätöksen, jonka sisällä datavirta perustelee valinnan. |
 | **70–82 min** | Paritestaus | Anna pareille kaksi haastetta: yksi uusi henkilötieto ja yksi uusi ulkoinen yhteys. | Testaa parin päätöksen ja korjaa omaa tuotostaan. |
 | **82–90 min** | Purku ja tallennus | Kokoa yksi onnistunut perustelu ja yksi yleinen korjaus. Varmista tallennus. | Viimeistelee johtopäätöksen ja tallentaa tuotoksen. |
 
@@ -178,6 +174,8 @@ Tunti ei edellytä live-palvelua. Käytä kuvitteellista palvelukuvausta, jossa 
 Oppimistavoite on datavirran ja käyttöpäätöksen muodostaminen, ei tietyn palvelun kokeileminen.
 
 ## Yhteys seuraavaan tuntiin
+
+Kytke datavirta lyhyesti EU:n tekoälyasetukseen. Korosta, että tietosuoja vastaa vain osaan käyttöpäätöksen kysymyksistä. Erityisesti rekrytoinnin, koulutuksen ja henkilöstöpäätösten kaltaisissa käyttötavoissa organisaation on selvitettävä myös tekoälyasetuksen mukainen riskiluokka, oma roolinsa, ihmisen valvonta ja käyttäjien tekoälylukutaito. Älä tee opiskelijoista oikeudellisia arvioijia: heidän tehtävänsä on tunnistaa, milloin suunnitelma pitää viedä organisaation vastuuhenkilölle tarkistettavaksi.
 
 Tunnilla 12 opiskelija rakentaa yhden testatun ja uudelleenkäytettävän promptikortin. Muistuta:
 

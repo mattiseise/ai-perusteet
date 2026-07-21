@@ -22,81 +22,15 @@
 <h2>Johdanto: valmistele näyttö ennen rakentamista</h2>
 <p>Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt työ jatkuu kahdella toisiinsa liittyvällä päätöksellä. Ensin valitset aineiston, johon botin vastausten pitää perustua. Sen jälkeen päätät, millaisella näytöllä voit myöhemmin osoittaa, että botti toimii tarkoitetulla tavalla.</p>
 <p>Et vielä testaa omaa bottiasi, koska se rakennetaan vasta tunnilla 17. Sen sijaan kuratoit tietopohjan ja kirjoitat <strong>testisuunnitelman</strong> etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.</p>
-<figure class="ai-demo" data-demo-id="lesson-15-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l15-t"><i aria-hidden="true">// </i>maaliviiva ei siirry — sama vastaus, kaksi tuomiota</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:306px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ul class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">ILMAN ENNAKKOEHTOA: läpäisyehto siirtyy vastauksen luo → kaikki ”läpäisee”</li><li class="ai-demo__mobile-node">ENNALTA LUKITTU LÄPÄISYEHTO: sama vastaus jää vajaaksi → aukko paljastuu (esim. puuttuvaa hintaa ei saa arvata)</li><li class="ai-demo__mobile-node">Hylkäys on tietoa — vain lukittu odotus paljastaa aukon</li></ul></div>
-  <div class="l15-wrap" data-once role="img" aria-labelledby="l15-t" aria-describedby="l15-d">
-    <span class="sr-only" id="l15-d">Sama vastaus kahdella kaistalla: jälkikäteen asetettu läpäisyehto siirtyy vastauksen kokoiseksi, ennalta lukittu ehto paljastaa aukon.</span>
-    <div class="l15-lane la"><i class="l15-ph">A · LÄPÄISYEHTO PÄÄTETÄÄN JÄLKIKÄTEEN</i>
-      <span class="l15-ans a1">botin vastaus</span>
-      <i class="l15-gl g1"></i><i class="l15-gl g2"></i>
-      <i class="l15-ln mv"></i>
-      <span class="l15-vd vda">”läpäisi” — mittari siirtyi</span></div>
-    <span class="l15-conn">sama vastaus</span>
-    <div class="l15-lane lb"><i class="l15-ph">B · LÄPÄISYEHTO LUKITTU ENNEN RAKENTAMISTA</i>
-      <span class="l15-ans a2">botin vastaus</span>
-      <i class="l15-gap"></i><em class="l15-gt">aukko: puuttuvaa hintaa ei saa arvata</em>
-      <i class="l15-ln fx"></i><svg class="l15-lk" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="#7FD0A8" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg><em class="l15-lkt">LUKITTU ENNEN</em>
-      <span class="l15-vd vdb">ei läpi — aukko löytyi ✓</span></div>
-    <span class="l15-ft">Sama vastaus — vain lukittu läpäisyehto paljastaa aukon</span>
-  </div>
-</div>
-<figcaption class="ai-demo__cap">Läpäisyehto lukitaan ennen botin ensimmäistä vastausta. Jos läpäisyehto asetetaan vasta vastauksen jälkeen, se liukuu vastauksen kokoiseksi ja kaikki näyttää läpäisevän — vain ennalta lukittu ehto paljastaa aukon, esimerkiksi sen, ettei puuttuvaa hintaa saa arvata. Hylkäys on tietoa, ei epäonnistumista.</figcaption></figure>
-<style>
-.l15-wrap{position:relative;width:560px;height:290px;font-family:var(--font-mono);animation:l15w 21s 1 forwards}
-.l15-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:#EAEEF8}
-.l15-lane{position:absolute;left:0;width:560px;height:106px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:8px 12px}
-.l15-lane.la{top:0}
-.l15-lane.lb{top:128px}
-.l15-ans{position:absolute;left:170px;top:44px;width:130px;box-sizing:border-box;text-align:center;font-size:12px;color:#0B0F1A;font-weight:700;background:#B9C2DA;border-radius:8px;padding:6px 0;opacity:0}
-.l15-ans.a1{animation:l15ans 21s 1 forwards}
-.l15-ans.a2{animation:l15ans 21s 1 forwards}
-.l15-ln{position:absolute;top:30px;height:58px;width:0;border-left:2.5px dashed #C9B7F1}
-.l15-ln.mv{left:418px;opacity:0;animation:l15mv 21s 1 forwards}
-.l15-ln.fx{left:418px;transform:scaleY(0);transform-origin:top;animation:l15fx 21s 1 forwards}
-.l15-gl{position:absolute;top:34px;height:50px;width:0;border-left:2px dashed #C9B7F1;opacity:0}
-.l15-gl.g1{left:380px;animation:l15g1 21s 1 forwards}
-.l15-gl.g2{left:418px;animation:l15g2 21s 1 forwards}
-.l15-lk{position:absolute;left:424px;top:38px;animation:l15lk 21s 1 forwards}
-.l15-lkt{position:absolute;left:442px;top:40px;font-style:normal;font-size:12px;font-weight:700;color:#7FD0A8;opacity:0;animation:l15lkt 21s 1 forwards}
-.l15-gap{position:absolute;left:302px;top:44px;width:114px;height:26px;background:repeating-linear-gradient(45deg,rgba(255,215,154,.35) 0 6px,transparent 6px 12px);border-radius:4px;transform:scaleX(0);transform-origin:left;animation:l15gap 21s 1 forwards}
-.l15-gt{position:absolute;left:216px;top:76px;white-space:nowrap;font-style:normal;font-size:12px;color:#FFD79A;opacity:0;animation:l15gt 21s 1 forwards}
-.l15-vd{position:absolute;right:10px;top:8px;font-size:12px;font-weight:700;border-radius:7px;padding:3px 8px;opacity:0;white-space:nowrap}
-.l15-vd.vda{color:#FFD79A;border:1.5px solid #FFD79A;background:rgba(255,215,154,.07);animation:l15vda 21s 1 forwards}
-.l15-vd.vdb{color:#46C7CF;border:1.5px solid #46C7CF;background:rgba(70,199,207,.07);animation:l15vdb 21s 1 forwards}
-.l15-conn{position:absolute;left:196px;top:110px;font-size:12px;color:#B9C2DA;border:1px dashed #4A5677;border-radius:6px;padding:1px 8px;opacity:0;animation:l15conn 21s 1 forwards}
-.l15-ft{position:absolute;left:0;top:252px;width:560px;text-align:center;font-size:12px;font-weight:600;color:#FFD79A;opacity:0;animation:l15ft 21s 1 forwards}
-@keyframes l15w{0%{opacity:0}3%{opacity:1}97.5%,100%{opacity:1}}
-@keyframes l15fx{0%,3%{transform:scaleY(0)}8%,100%{transform:scaleY(1)}}
-@keyframes l15lk{0%,7%{transform:scale(1) rotate(0)}9%{transform:scale(1.35)}11%,100%{transform:scale(1)}}
-@keyframes l15lkt{0%,10%{opacity:0}13%,100%{opacity:1}}
-@keyframes l15ans{0%,36%{opacity:0;transform:translateX(-150px)}39%{opacity:1}44%,100%{opacity:1;transform:none}}
-@keyframes l15conn{0%,46%{opacity:0}50%,100%{opacity:1}}
-@keyframes l15mv{0%,68%{opacity:0;transform:none}71%{opacity:.9;transform:none}73%{opacity:.9;transform:none}80%,100%{opacity:.9;transform:translateX(-116px)}}
-@keyframes l15g1{0%,76%{opacity:0}79%,100%{opacity:.28}}
-@keyframes l15g2{0%,73%{opacity:0}76%,100%{opacity:.18}}
-@keyframes l15vda{0%,80%{opacity:0}83%,100%{opacity:1}}
-@keyframes l15gap{0%,78%{transform:scaleX(0)}84%,100%{transform:scaleX(1)}}
-@keyframes l15gt{0%,82%{opacity:0}85%,100%{opacity:1}}
-@keyframes l15vdb{0%,84%{opacity:0}87%,100%{opacity:1}}
-@keyframes l15ft{0%,88%{opacity:0}92%,100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){
-  .l15-wrap,.l15-wrap *{animation:none!important}
-  .l15-wrap,.l15-ans,.l15-vd,.l15-conn,.l15-ft,.l15-lkt,.l15-gt{opacity:1}
-  .l15-ln.fx{transform:scaleY(1)}
-  .l15-ln.mv{opacity:.9;transform:translateX(-116px)}
-  .l15-gl.g1{opacity:.28}
-  .l15-gl.g2{opacity:.18}
-  .l15-gap{transform:scaleX(1)}
-}
-</style>
-
 <h2>Tietopohja rajaa sen, mitä botti voi tietää</h2>
 <p>Yleinen kielimalli osaa tuottaa uskottavaa tekstiä monista aiheista. Se ei kuitenkaan tunne automaattisesti oman kerhosi aikatauluja, oppilaitoksen paikallisia ohjeita tai yrityksen sisäistä prosessia. Näihin tarvitaan <strong>tietopohja</strong>: valittu aineisto, joka annetaan botin käytettäväksi vastaamisen tueksi.</p>
 <p>Tietopohja ei tee vastauksista automaattisesti oikeita. Aineisto voi olla puutteellinen, vanhentunut, ristiriitainen tai tehtävään huonosti sopiva. Siksi tietopohjaa ei vain kerätä, vaan se <strong>kuratoidaan</strong>.</p>
+<p>Tietopohja ja RAG eivät tarkoita aivan samaa asiaa. <strong>Tietopohja</strong> on valittu ja hallittu aineisto. <strong>RAG</strong> (retrieval-augmented generation, hakua hyödyntävä vastausten muodostaminen) on toteutustapa, jossa järjestelmä hakee tästä aineistosta kysymykseen sopivia katkelmia ja antaa ne kielimallille vastauksen tueksi. Kaikki bottialustat eivät näytä käyttäjälle, miten haku tehdään, mutta perusajatus on sama: ensin haetaan, sitten muodostetaan vastaus haetun aineiston avulla.</p>
+<p>Virhe voi syntyä kummassakin vaiheessa. <strong>Hakuvaiheen virheessä</strong> oikea lähde tai katkelma ei päädy mallin käyttöön, vaikka se olisi tietopohjassa. <strong>Vastauksen muodostamisen virheessä</strong> haku löytää käyttökelpoisen lähteen, mutta malli tulkitsee sitä väärin, yhdistää asioita perusteettomasti tai lisää väitteen, jota lähde ei tue. Siksi pelkkä oikea vastaus ei riitä testinä: tarkista myös, löytyikö oikea lähde ja vastaako väite todella lähteen sisältöä.</p>
 <p>Kuratointi on harkittua rajaamista. Ensin selvität, mitä tietoa botti todella tarvitsee. Sitten etsit kuhunkin tarpeeseen sopivan lähteen ja jätät pois aineiston, jolla ei ole botin tehtävässä selvää roolia. Samalla päätät, miten botti toimii silloin, kun valittu aineisto ei anna vastausta. Hyvä tietopohja ei siis ole mahdollisimman suuri kokoelma vaan perusteltu kokonaisuus, jonka vahvuudet ja rajat tunnet.</p>
 <h2>Miten botti käyttää tietopohjaa?</h2>
 <p>Botti ei lue koko tietopohjaa joka kysymyksellä. Yleisin tapa liittää oma aineisto kielimalliin on <strong>RAG</strong> (retrieval-augmented generation eli haulla täydennetty tekstintuotto). Nimi kertoo järjestyksen: ensin haetaan, sitten tuotetaan vastaus. Näin botti vastaa nimenomaan sinun aineistosi pohjalta eikä pelkän yleistiedon varassa.</p>
-<figure class="ai-demo" data-demo-id="lesson-15-02" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l15b-t"><i aria-hidden="true">// </i>näin botti käyttää tietopohjaa: ensin haku, sitten vastaus</span>
+<figure class="ai-demo" data-demo-id="lesson-15-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l15b-t"><i aria-hidden="true">// </i>näin botti käyttää tietopohjaa: ensin haku, sitten vastaus</span>
 <div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:384px"><div class="ai-demo__mobile-model ai-demo__mobile-model--flow"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">KYSYMYS: käyttäjä kysyy jotain botilta</li><li class="ai-demo__mobile-node">HAKUVAIHE (RAG): järjestelmä etsii tietopohjasta kysymykseen osuvimmat tekstikatkelmat</li><li class="ai-demo__mobile-node">TEKSTIKATKELMAT: aineisto on pilkottu paloiksi — haku poimii osuvimmat, ei koko dokumenttia</li><li class="ai-demo__mobile-node">KONTEKSTI: löydetyt katkelmat + kysymys annetaan kielimallille</li><li class="ai-demo__mobile-node">VASTAUS: syntyy katkelmien pohjalta — jos osuvaa katkelmaa ei löydy, botti ei arvaa vaan kertoo, ettei tietoa löytynyt</li></ol></div>
   <div class="l15b-wrap" data-once role="img" aria-labelledby="l15b-t" aria-describedby="l15b-d">
     <span class="sr-only" id="l15b-d">Botti käyttää tietopohjaa RAG-menetelmällä viidessä vaiheessa. Käyttäjän kysymyksestä käynnistyy hakuvaihe, joka etsii tietopohjan tekstikatkelmista kysymykseen osuvimmat. Löydetyt katkelmat liitetään kysymyksen kanssa mallin kontekstiin, ja vastaus muodostetaan näiden katkelmien pohjalta, ei koko tietopohjan. Jos osuvaa katkelmaa ei löydy, botti ei arvaa vaan kertoo, ettei tietoa löytynyt.</span>
@@ -164,6 +98,7 @@
 <li><strong>Käyttökelpoisuus:</strong> Voiko aineistosta löytää täsmällisen vastauksen, vai onko se niin sekava tai yleinen, ettei botti pysty hyödyntämään sitä luotettavasti?</li>
 </ol>
 <p>Lisäksi tarkista, saako aineiston ylipäätään ladata valittuun palveluun. Henkilötiedot, luottamuksellinen tieto ja käyttöoikeudet ratkaistaan ennen lataamista, ei sen jälkeen.</p>
+<p>Käyttöoikeus on rajattava myös haussa. Käyttäjä saa saada vastaukseensa vain sellaisia lähteitä, jotka hänellä on oikeus nähdä. Jos sama tietopohja sisältää eri ryhmille tarkoitettua aineistoa, toteutuksen pitää rajata haku käyttäjän, roolin tai organisaation perusteella ennen kuin katkelma annetaan kielimallille. Prompti ei korvaa tätä teknistä käyttöoikeusrajaa.</p>
 <h2>Kirjaa puutteet näkyviin</h2>
 <p>Tietopohjan arvioinnin tarkoitus ei ole todistaa, että aineisto on täydellinen. Tarkoitus on tietää, missä asioissa aineistoon voi luottaa.</p>
 <p>Jos hinnasto on ajantasainen mutta esteettömyystiedot puuttuvat, kirjaa puute. Myöhemmin botin pitää joko pyytää käyttäjää tarkistamaan asia nimetystä lähteestä tai ohjata kysymys ihmiselle. Puutetta ei paikata kielimallin arvauksella.</p>
@@ -189,8 +124,8 @@
 <tr>
 <td>Normaali tapaus</td>
 <td>Kysymys, johon tietopohja vastaa</td>
-<td>Botti vastaa lähteen mukaisesti</td>
-<td>Vastaus vastaa nimettyä lähdekohtaa</td>
+<td>Botti löytää oikean lähteen ja vastaa sen mukaisesti</td>
+<td>Haettu lähde on osuva ja vastaus vastaa nimettyä lähdekohtaa</td>
 </tr>
 <tr>
 <td>Rajan testi</td>
@@ -203,6 +138,12 @@
 <td>Kysymys, jota aineisto ei kata</td>
 <td>Botti myöntää puutteen</td>
 <td>Se ei esitä arvausta faktana</td>
+</tr>
+<tr>
+<td>Käyttöoikeustesti</td>
+<td>Kysymys aineistosta, jota käyttäjä ei saa nähdä</td>
+<td>Järjestelmä ei hae eikä paljasta rajattua sisältöä</td>
+<td>Vastauksessa ei näy suojattua lähdettä tai sen tietoja</td>
 </tr>
 <tr>
 <td>Reunatapaus</td>
@@ -229,7 +170,7 @@
 <h2>Yksi suunnitelma yhdistää aineiston ja testit</h2>
 <p>Tunnin lopussa sinulla on kaksi toisiinsa liittyvää tuotosta:</p>
 <ol>
-<li><strong>Kuratoitu tietopohja:</strong> 3–5 lähdettä sekä kuvaus niiden tehtävistä, puutteista ja käyttörajoista.</li>
+<li><strong>Kuratoitu tietopohja:</strong> 2–4 huolella valittua lähdettä sekä kuvaus niiden tehtävistä, puutteista, käyttörajoista ja mahdollisesta hakutavasta.</li>
 <li><strong>Testisuunnitelma:</strong> vähintään yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen.</li>
 </ol>
 <p>Yhdessä nämä tuotokset muodostavat lupauksen siitä, mihin botti saa nojata ja miten lupauksen toteutuminen tarkistetaan.</p>
@@ -242,13 +183,14 @@
 <hr />
 <h2>Lähteet ja tarkistuspäivä</h2>
 <ul>
-<li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio">Microsoft: Knowledge sources overview</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview">Microsoft: Retrieval-augmented generation in Azure AI Search</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search">Microsoft: Security filter pattern in Azure AI Search</a></li>
 <li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a></li>
 </ul>
 <p>Tarkistettu 20.7.2026.</p><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Tehtävät</b><span>Tunnin tehtävät — sisältää lopputyön askeleen</span></div><button type="button" class="btn btn-primary" onclick="showTab('tehtavat')">Siirry tehtäviin →</button></div></div><div id="panel-lesson-15-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-15-tehtavat" data-tab="tehtavat" hidden><h1>Rakennuspalikka 3 — Tietopohja ja testisuunnitelma</h1>
 <p><strong>Tämä on kolmas ja viimeinen rakennuspalikka.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
-<p>Kuratoit bottisi <strong>tietopohjan</strong> eli valitset 3–5 dokumenttia, joihin sen vastaukset voivat nojata. Tietopohjan tehtävä ei ole tehdä botista kaikkitietävää, vaan auttaa sitä toimimaan luotettavasti juuri valitsemassasi aiheessa.</p>
+<p>Kuratoit bottisi <strong>tietopohjan</strong> eli valitset 2–4 huolella valittua dokumenttia, joihin sen vastaukset voivat nojata. Tietopohjan tehtävä ei ole tehdä botista kaikkitietävää, vaan auttaa sitä toimimaan luotettavasti juuri valitsemassasi aiheessa.</p>
 <p><strong>Kuratointi</strong> ei tarkoita mahdollisimman suuren tiedostomäärän keräämistä. Se on aktiivista valintaa: mitä otat mukaan, mitä jätät pois ja miksi. Kun jokaisella lähteellä on selvä tehtävä, sinun on myöhemmin helpompi havaita myös se, mitä tietopohja ei vielä kata. Pidä työn ajan mielessä kysymys: <em>”Mitä botin pitää tietää, jotta se osaa auttaa käyttäjää juuri minun valitsemassani aiheessa?”</em></p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tavoite</h2></div><div class="task-card-body">
 <p>Tehtävän jälkeen sinulla on perusteltu tietopohja ja ennen rakentamista kirjoitettu testisuunnitelma. Osaat:</p>
@@ -258,13 +200,15 @@
 <li>arvioida dokumenttien luotettavuutta, ajantasaisuutta ja hyödyllisyyttä,</li>
 <li>karsia pois turhat tai päällekkäiset materiaalit,</li>
 <li>perustella, miksi kukin dokumentti kuuluu bottisi tietopohjaan,</li>
-<li>kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon.</li>
+<li>kirjoittaa testille syötteen, odotetun toiminnan ja läpäisyehdon,</li>
+<li>erottaa haun onnistumisen siitä, muodostiko kielimalli lähteen tukeman vastauksen,</li>
+<li>rajata, mitä aineistoa eri käyttäjät saavat hakea.</li>
 </ul>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä tallennat?</h2></div><div class="task-card-body">
 <p>Tallenna lopuksi yksi dokumentti tai kansio, jossa on:</p>
 <ul>
 <li>lista bottisi tärkeimmistä tietotarpeista,</li>
-<li>3–5 valittua lähdedokumenttia,</li>
+<li>2–4 valittua lähdedokumenttia,</li>
 <li>taulukko, jossa perustellaan jokaisen dokumentin rooli tietopohjassa,</li>
 <li>lyhyt arvio siitä, mitä tietopohja kattaa hyvin ja mitä se ei vielä kata,</li>
 <li>yksi positiivinen testi, yksi negatiivinen testi ja yksi reunatapaus odotettuine tuloksineen,</li>
@@ -315,8 +259,8 @@
 </tbody>
 </table>
 <p>Voit aloittaa jokaisen tarpeen samalla rungolla: ”Botin pitää tietää…”. Kirjoita sen jälkeen mahdollisimman täsmällisesti esimerkiksi aiheen keskeinen käsite, tehtävän yksi vaihe, tyypillinen kysymys, tavallinen sudenkuoppa tai hyvän lopputuloksen tunnusmerkki. Mitä tarkemmin nimeät tarpeen, sitä helpompi lähteen sopivuutta on arvioida.</p>
-<h3>Vaihe 3 — Etsi ja valitse 3–5 dokumenttia</h3>
-<p>Etsi materiaalia, joka kattaa vaiheessa 2 nimeämäsi tietotarpeet, ja valitse lopuksi <strong>3–5 dokumenttia</strong>. Laatu on tärkeämpää kuin määrä. Käyttökelpoinen lähde voi olla kurssimateriaali, virallinen ohje, alan standardi, luotettava dokumentaatio tai todelliseen tilanteeseen tehty mallipohja. Yleislähteestä voi olla apua aiheen hahmottamisessa, mutta tarkkojen käytäntöjen päälähteeksi tarvitset aineiston, jonka alkuperä ja ajantasaisuus voidaan osoittaa.</p>
+<h3>Vaihe 3 — Etsi ja valitse 2–4 dokumenttia</h3>
+<p>Etsi materiaalia, joka kattaa vaiheessa 2 nimeämäsi tietotarpeet, ja valitse lopuksi <strong>2–4 dokumenttia</strong>. Laatu on tärkeämpää kuin määrä. Käyttökelpoinen lähde voi olla kurssimateriaali, virallinen ohje, alan standardi, luotettava dokumentaatio tai todelliseen tilanteeseen tehty mallipohja. Yleislähteestä voi olla apua aiheen hahmottamisessa, mutta tarkkojen käytäntöjen päälähteeksi tarvitset aineiston, jonka alkuperä ja ajantasaisuus voidaan osoittaa.</p>
 <p><strong>Tärkeää:</strong> Älä lataa kaikkea, mitä löydät. Liian suuri tai sekava tietopohja voi tehdä botin vastauksista epäselviä. Kolme hyvin valittua dokumenttia voi olla parempi kuin kaksikymmentä keskinkertaista.</p>
 <p>Käy jokainen ehdokas läpi seuraavien kysymysten avulla. Kysymykset ovat tässä vaiheessa tarpeellinen tarkistuslista, sillä yhdenkin kohdan unohtaminen voi heikentää koko tietopohjaa:</p>
 <ul>
@@ -378,7 +322,8 @@
 </tr>
 </tbody>
 </table>
-<p>Tallenna tai lataa varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun lataat tietopohjan valitsemallesi alustalle tai teet dokumentoidun kuivaharjoittelun.</p>
+<p>Tallenna varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun kytket tietopohjan valitsemallesi alustalle tai kuvaat dokumentoidulla suunnittelupolulla haun, lähdekatkelmat ja käyttöoikeusrajauksen.</p>
+<p>Kirjaa samalla, miten aineisto tulee botin käyttöön. Jos alusta hakee kysymykseen sopivia katkelmia ennen vastausta, kyse on RAG-toteutuksesta. Merkitse jokaiselle lähteelle myös, kuka saa käyttää sitä. Jos lähde on tarkoitettu vain tietylle ryhmälle, teknisen toteutuksen pitää rajata se pois muiden käyttäjien hausta. Dokumentoidussa suunnittelupolussa kuvaat tämän rajauksen suunnitelmana etkä väitä testanneesi todellisia käyttöoikeuksia.</p>
 <p>Kirjoita 2–3 lauseen arvio: <em>"Mitä tietopohjani kattaa hyvin? Mitä se ei vielä kata täydellisesti? Mitä botin pitää tehdä silloin, kun vastausta ei löydy?"</em></p>
 <h3>Vaihe 6 — Kirjoita testit ennen rakentamista</h3>
 <p>Kirjoita kolme testiä, jotka ajat ensimmäisen kerran tunnilla 17:</p>
@@ -388,7 +333,8 @@
 <th>Testityyppi</th>
 <th>Syöte</th>
 <th>Odotettu toiminta</th>
-<th>Läpäisyehto</th>
+<th>Mitä tarkistat hausta?</th>
+<th>Läpäisyehto vastaukselle</th>
 </tr>
 </thead>
 <tbody>
@@ -396,54 +342,66 @@
 <td>Positiivinen testi</td>
 <td>Kysymys, johon tietopohja vastaa</td>
 <td></td>
+<td>Löytyykö oikea lähde?</td>
 <td></td>
 </tr>
 <tr>
 <td>Negatiivinen testi</td>
 <td>Pyyntö, josta botin pitää kieltäytyä tai jonka se ohjaa eteenpäin</td>
 <td></td>
+<td>Pääseekö haku vain käyttäjälle sallittuihin lähteisiin?</td>
 <td></td>
 </tr>
 <tr>
 <td>Reunatapaus</td>
 <td>Tyhjä, sekava tai muuten epätavallinen syöte</td>
 <td></td>
+<td>Käynnistyykö haku vain tarvittaessa?</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p>Kirjoita odotus niin täsmällisesti, että toinen ihminen voisi ratkaista sen perusteella, läpäisikö botti testin. Älä myöhemmin muuta odotettua toimintaa vain siksi, että botti vastaa eri tavalla. Testin tehtävä on paljastaa korjaustarve, ei todistaa ensimmäistä versiota onnistuneeksi.</p>
 <blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Tietopohja antaa aiheeseen rajatulle botille perustan, jota yleisellä kielimallilla ei ole. Kun lähteet on valittu tehtävän mukaan ja niiden aukot tunnetaan, botti voi nojata oman aiheesi käytäntöihin arvaamisen sijaan.</p>
-<p><strong>Tarkista lopuksi:</strong> Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 3–5 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.</p>
+<p><strong>Tarkista lopuksi:</strong> Olet palauttanut mieleen bottisi tarkoituksen, listannut 5–8 tietotarvetta, valinnut 2–4 dokumenttia, arvioinut kattavuuden, kirjannut aukot, laatinut kolme testiä odotuksineen ja tallentanut dokumentit myöhempää käyttöä varten.</p>
 </blockquote>
-<p><strong>3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>5 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-15-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-15-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Tietopohja ja testisuunnitelma</h1>
+<p><strong>3 / 3 rakennuspalikkaa kerätty — valmis tuntiin 17</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>6 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-15-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-15-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Tietopohja ja testisuunnitelma</h1>
 <p>Päätät, mitä tulevan botin pitää tietää ja miten sen toimintaa myöhemmin koetellaan. Testit kirjoitetaan ennen rakentamista.</p>
-<h2>Tehtävä 1/5 — tietopohjan laatu</h2>
+<h2>Tehtävä 1/6 — tietopohjan laatu</h2>
 <div class="task-widget" data-ti="0"></div>
 
-<h2>Tehtävä 2/5 — kolme erilaista testiä</h2>
+<h2>Tehtävä 2/6 — kolme erilaista testiä</h2>
 <div class="task-widget" data-ti="1"></div>
 
-<h2>Tehtävä 3/5 — läpäisyehto</h2>
+<h2>Tehtävä 3/6 — läpäisyehto</h2>
 <div class="task-widget" data-ti="2"></div>
 
-<h2>Tehtävä 4/5 — suunnittele ennen toteutusta</h2>
+<h2>Tehtävä 4/6 — suunnittele ennen toteutusta</h2>
 <div class="task-widget" data-ti="3"></div>
 
-<h2>Tehtävä 5/5 — tietopohjan aukko</h2>
-<div class="task-widget" data-ti="4"></div><div class="practice-complete" data-flow-gate="practice" hidden><b>Kaikki tehtävät tehty ✓</b><span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-15')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/luokka/tunti-16/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-15-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-15-sanasto" data-tab="sanasto" hidden><h1>Sanasto</h1>
+<h2>Tehtävä 5/6 — tietopohjan aukko</h2>
+<div class="task-widget" data-ti="4"></div>
+
+<h2>Tehtävä 6/6 — missä virhe syntyi?</h2>
+<div class="task-widget" data-ti="5"></div><div class="practice-complete" data-flow-gate="practice" hidden><b>Kaikki tehtävät tehty ✓</b><span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-15')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/luokka/tunti-16/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-15-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-15-sanasto" data-tab="sanasto" hidden><h1>Sanasto</h1>
 <h2>Tietopohja (knowledge base)</h2>
 <p>Tieto, jonka varassa botti vastaa — esimerkiksi tuotelista, ohjeet ja usein kysytyt kysymykset. Ilman ajantasaista tietopohjaa botti arvailee ja voi antaa virheellisiä vastauksia.</p>
 <h2>RAG (retrieval-augmented generation)</h2>
-<p>Haulla täydennetty tekstintuotto: tapa, jolla botti käyttää tietopohjaa. Ensin <strong>hakuvaihe</strong> etsii tietopohjasta kysymykseen osuvimmat tekstikatkelmat, sitten kielimalli muodostaa vastauksen niiden pohjalta. Botti ei siis lue koko tietopohjaa joka kysymyksellä, vaan vastaa löydettyjen katkelmien varassa.</p>
+<p>Hakua hyödyntävä vastausten muodostaminen. Ensin hakuvaihe etsii tietopohjasta kysymykseen sopivia tekstikatkelmia, sitten kielimalli muodostaa vastauksen niiden pohjalta. Tietopohja on aineisto; RAG on tapa hakea ja käyttää sitä.</p>
 <h2>Hakuvaihe</h2>
 <p>RAG:n ensimmäinen vaihe: järjestelmä etsii tietopohjasta ne kohdat, jotka muistuttavat eniten käyttäjän kysymystä, ja poimii niistä osuvimmat. Jos haku ei osu, tieto voi silti olla aineistossa — erota siksi tilanne "tietoa ei ole aineistossa" tilanteesta "järjestelmä ei löytänyt aineistossa olevaa tietoa".</p>
 <h2>Tekstikatkelma</h2>
 <p>Tietopohjan aineistosta pilkottu pieni pala, tyypillisesti muutaman kappaleen mittainen, jota haku voi käsitellä yksitellen. Hakuvaihe poimii kysymykseen osuvimmat katkelmat ja liittää ne mallin kontekstiin vastausta varten.</p>
+<h2>Hakuvaiheen virhe</h2>
+<p>Tilanne, jossa järjestelmä ei löydä oikeaa lähdettä tai tuo mallille väärän katkelman. Virhe syntyy ennen vastauksen muodostamista.</p>
+<h2>Vastauksen muodostamisen virhe</h2>
+<p>Tilanne, jossa lähde löytyy, mutta kielimalli tulkitsee sitä väärin tai lisää vastaukseen väitteen, jota lähde ei tue.</p>
+<h2>Käyttöoikeusrajaus</h2>
+<p>Tekninen sääntö, joka varmistaa, että käyttäjä voi hakea ja nähdä vain hänelle sallittua aineistoa. Pelkkä promptiin kirjoitettu kielto ei riitä käyttöoikeusrajaksi.</p>
 <h2>Rajaus</h2>
 <p>Botin "en osaa" tai "en saa tehdä tätä" -kohdat: mihin aiheisiin botti vastaa ja mitä se ei saa tehdä. Rajaukset asetetaan ohjeistuksella ja suojaavat sekä käyttäjää että bottia.</p>
-<h2>Varmuuskynnys</h2>
-<p>Jos botti ei ole riittävän varma vastauksestaan, sen pitää sanoa, ettei se tiedä, eikä yrittää arvata.</p>
+<h2>Eskalointiehto</h2>
+<p>Havaittava tilanne, jossa botti ei jatka itsenäisesti. Tällainen ehto voi olla hyväksytyn lähteen puuttuminen, lähteiden ristiriita tai pakollisen tiedon puute.</p>
 <h2>Positiivinen testi</h2>
 <p>Testi, jossa kokeillaan tilanteita, joiden pitäisi toimia — kysymyksiä, joihin botti on suunniteltu vastaamaan.</p>
 <h2>Negatiivinen testi</h2>
@@ -462,7 +420,7 @@
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 3/8: Arvioi jokainen lähde</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Arvioi jokainen lähde</text><g font-size="18"><rect x="74" y="158" width="386" height="110" rx="15" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="198" font-size="20" font-weight="800" fill="#6A309D">LUOTETTAVUUS</text><text x="104" y="235" fill="#3A4253">Kuka tiedon tuotti?</text><rect x="500" y="158" width="386" height="110" rx="15" fill="#FAFBFE" stroke="#D8DEEC"/><text x="530" y="198" font-size="20" font-weight="800" fill="#6A309D">AJANTASAISUUS</text><text x="530" y="235" fill="#3A4253">Onko tieto edelleen voimassa?</text><rect x="74" y="298" width="386" height="110" rx="15" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="338" font-size="20" font-weight="800" fill="#6A309D">KATTAVUUS</text><text x="104" y="375" fill="#3A4253">Mihin tietotarpeeseen se vastaa?</text><rect x="500" y="298" width="386" height="110" rx="15" fill="#F4EFFC" stroke="#863FC4"/><text x="530" y="338" font-size="20" font-weight="800" fill="#6A309D">JÄLJITETTÄVYYS</text><text x="530" y="375" fill="#3A4253">Voiko väitteen palauttaa lähteeseen?</text></g><text x="74" y="458" font-size="18" font-weight="700" fill="#1B2336">Tarkista myös lupa, henkilötiedot ja luottamuksellisuus.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">3 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/8: Kirjaa aukko näkyviin</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Kirjaa aukko näkyviin</text><text x="74" y="132" font-size="19" fill="#5A6478">Tietopohjan puute muutetaan toimintasäännöksi ja testiksi.</text><rect x="74" y="174" width="812" height="218" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><g font-size="19"><text x="104" y="222" font-weight="800" fill="#A43B25">AUKKO</text><text x="260" y="222" fill="#3A4253">Harjoituspaikka puuttuu hyväksytyistä ohjeista.</text><text x="104" y="286" font-weight="800" fill="#8A6A00">TOIMINTA</text><text x="260" y="286" fill="#3A4253">Botti kertoo tiedon puuttuvan eikä arvaa.</text><text x="104" y="350" font-weight="800" fill="#247A52">TESTI</text><text x="260" y="350" fill="#3A4253">Kysy paikkaa ja tarkista, ettei vastaus keksi osoitetta.</text></g><rect x="74" y="424" width="812" height="58" rx="12" fill="#F4EFFC"/><text x="104" y="460" font-size="18" font-weight="700" fill="#6A309D">Tunnettu aukko on hallittava. Piilotettu aukko on riski.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">4 / 8</text></svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 4/8: Tietopohja ja RAG ovat eri asioita</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Tietopohja ja RAG ovat eri asioita</text><text x="74" y="132" font-size="19" fill="#5A6478">Tietopohja on aineisto. RAG hakee siitä katkelmia vastauksen tueksi.</text><rect x="74" y="174" width="812" height="218" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><g font-size="19"><text x="104" y="222" font-weight="800" fill="#A43B25">HAKU</text><text x="260" y="222" fill="#3A4253">Löytyikö oikea lähde ja sallittu katkelma?</text><text x="104" y="286" font-weight="800" fill="#8A6A00">VASTAUS</text><text x="260" y="286" fill="#3A4253">Tukeeko lähde muodostettua väitettä?</text><text x="104" y="350" font-weight="800" fill="#247A52">OIKEUS</text><text x="260" y="350" fill="#3A4253">Saako tämä käyttäjä nähdä lähteen?</text></g><rect x="74" y="424" width="812" height="58" rx="12" fill="#F4EFFC"/><text x="104" y="460" font-size="18" font-weight="700" fill="#6A309D">Testaa haku, vastaus ja käyttöoikeus erikseen.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">4 / 8</text></svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 5/8: Kolme testityyppiä</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Kolme testityyppiä</text><g text-anchor="middle"><rect x="74" y="174" width="250" height="190" rx="18" fill="#F0F9F4" stroke="#2F9E69" stroke-width="2"/><text x="199" y="222" font-size="22" font-weight="800" fill="#247A52">POSITIIVINEN</text><text x="199" y="272" font-size="17" fill="#3A4253">tietopohjassa oleva</text><text x="199" y="302" font-size="17" fill="#3A4253">tavallinen kysymys</text><rect x="355" y="174" width="250" height="190" rx="18" fill="#FFF7E2" stroke="#C79100" stroke-width="2"/><text x="480" y="222" font-size="22" font-weight="800" fill="#8A6A00">NEGATIIVINEN</text><text x="480" y="272" font-size="17" fill="#3A4253">pyyntö, josta pitää</text><text x="480" y="302" font-size="17" fill="#3A4253">kieltäytyä tai ohjata</text><rect x="636" y="174" width="250" height="190" rx="18" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/><text x="761" y="222" font-size="22" font-weight="800" fill="#6A309D">REUNATAPAUS</text><text x="761" y="272" font-size="17" fill="#3A4253">tyhjä, sekava tai</text><text x="761" y="302" font-size="17" fill="#3A4253">poikkeava syöte</text></g><text x="74" y="432" font-size="18" font-weight="700" fill="#1B2336">Testaa ydintoiminnan lisäksi rajat ja poikkeukset.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">5 / 8</text></svg></div>
 
@@ -470,13 +428,13 @@
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/8: Älä siirrä maaliviivaa</title><rect width="960" height="540" fill="#FFFFFF"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Älä siirrä maaliviivaa</text><text x="74" y="132" font-size="19" fill="#5A6478">Testin odotus säilytetään ensimmäiseen ajoon asti.</text><g font-size="17" text-anchor="middle"><rect x="74" y="204" width="160" height="72" rx="14" fill="#F4EFFC" stroke="#863FC4"/><text x="154" y="247" fill="#6A309D" font-weight="700">KIRJOITA TESTI</text><path d="M248 240 H300" stroke="#9AA6BD" stroke-width="3"/><path d="M300 240 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="314" y="204" width="140" height="72" rx="14" fill="#FAFBFE" stroke="#D8DEEC"/><text x="384" y="247" fill="#1B2336">RAKENNA</text><path d="M468 240 H520" stroke="#9AA6BD" stroke-width="3"/><path d="M520 240 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="534" y="204" width="140" height="72" rx="14" fill="#FAFBFE" stroke="#D8DEEC"/><text x="604" y="247" fill="#1B2336">AJA TESTI</text><path d="M688 240 H740" stroke="#9AA6BD" stroke-width="3"/><path d="M740 240 l-10 -6 v12 z" fill="#9AA6BD"/><rect x="754" y="204" width="132" height="72" rx="14" fill="#F0F9F4" stroke="#2F9E69"/><text x="820" y="247" fill="#247A52" font-weight="700">KORJAA</text></g><rect x="100" y="338" width="760" height="94" rx="14" fill="#FFF0EC" stroke="#D86A4C"/><text x="130" y="374" font-size="18" font-weight="800" fill="#A43B25">Jos tulos poikkeaa odotuksesta, älä muuta odotusta automaattisesti.</text><text x="130" y="406" font-size="17" fill="#3A4253">Tutki, onko korjattava toteutusta, aineistoa vai itse testin perustelua.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">7 / 8</text></svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/8: Rakennuspalikka 3</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="98" font-size="38" font-weight="800" fill="#1B2336">Rakennuspalikka 3</text><g font-size="18"><rect x="74" y="152" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="189" fill="#1B2336">3–5 perusteltua lähdettä ja niiden tietotarpeet</text><rect x="74" y="224" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="261" fill="#1B2336">Arvio luotettavuudesta, ajantasaisuudesta ja kattavuudesta</text><rect x="74" y="296" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="333" fill="#1B2336">Tunnetut aukot ja toiminta tiedon puuttuessa</text><rect x="74" y="368" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4"/><text x="104" y="405" fill="#6A309D" font-weight="700">Positiivinen, negatiivinen ja reunatapaus odotuksineen</text></g><text x="74" y="470" font-size="18" font-weight="700" fill="#1B2336">Tunnilla 17 rakennat ja ajat testit ensimmäisen kerran.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">8 / 8</text></svg></div>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 8/8: Rakennuspalikka 3</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="98" font-size="38" font-weight="800" fill="#1B2336">Rakennuspalikka 3</text><g font-size="18"><rect x="74" y="152" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="189" fill="#1B2336">2–4 huolella valittua lähdettä ja niiden tietotarpeet</text><rect x="74" y="224" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="261" fill="#1B2336">Arvio luotettavuudesta, ajantasaisuudesta ja kattavuudesta</text><rect x="74" y="296" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC"/><text x="104" y="333" fill="#1B2336">Tunnetut aukot ja toiminta tiedon puuttuessa</text><rect x="74" y="368" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4"/><text x="104" y="405" fill="#6A309D" font-weight="700">Positiivinen, negatiivinen ja reunatapaus odotuksineen</text></g><text x="74" y="470" font-size="18" font-weight="700" fill="#1B2336">Tunnilla 17 rakennat ja ajat testit ensimmäisen kerran.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">8 / 8</text></svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/luokka/tunti-14/">← Edellinen</a><a class="btn btn-primary" href="/luokka/tunti-16/">Seuraava →</a></div><button type="button" class="practice-chip" data-practice-chip hidden onclick="showTab('harjoittele')">Harjoittele · <span data-practice-chip-count></span></button><button class="done-btn" onclick="toggleDone('lesson-15')">Merkitse suoritetuksi</button></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <script src="/assets/practice.js"></script>
-<script>window.CI={"view": "luokka", "lid": "lesson-15", "num": 15, "title": "Oma botti II — tietopohja ja testisuunnitelma", "ptasks": [{"type": "match", "title": "Kuratoidun tietopohjan osat", "intro": "Yhdistä arviointikysymys siihen, mitä sillä tarkistetaan.", "pairs": [{"a": "Luotettavuus", "b": "Kuka aineiston on tuottanut ja millä perusteella siihen voi nojata?", "explain": "Lähteen alkuperä vaikuttaa siihen, mihin sitä voi käyttää."}, {"a": "Ajantasaisuus", "b": "Onko tieto edelleen voimassa ja näkyykö päivitysajankohta?", "explain": "Vanhentunut ohje voi tuottaa johdonmukaisesti väärän vastauksen."}, {"a": "Kattavuus", "b": "Sisältääkö aineisto tehtävän keskeiset tilanteet ja käsitteet?", "explain": "Aukot pitää tunnistaa ennen käyttöönottoa."}, {"a": "Rajaus", "b": "Onko mukana vain tehtävään kuuluvaa, sallittua aineistoa?", "explain": "Tarpeeton aineisto lisää kohinaa ja riskejä."}, {"a": "Jäljitettävyys", "b": "Voidaanko vastaus palauttaa nimettyyn lähteeseen ja sen kohtaan?", "explain": "Tärkeä väite pitää voida tarkistaa."}], "summary": "Tietopohja on perusteltu valinta, ei tiedostojen varasto."}, {"type": "classify", "title": "Mitä testi koettelee?", "intro": "Luokittele testisyötteet.", "categories": ["Positiivinen testi", "Negatiivinen testi", "Reunatapaus"], "items": [{"text": "Käyttäjä kysyy asian, johon hyväksytyssä tietopohjassa on selkeä vastaus.", "answer": 0, "explain": "Positiivinen testi tarkistaa tarkoitetun ydintoiminnan."}, {"text": "Käyttäjä pyytää neuvoa aiheesta, joka on nimenomaisesti rajattu botin ulkopuolelle.", "answer": 1, "explain": "Negatiivinen testi tarkistaa, noudattaako botti rajojaan."}, {"text": "Käyttäjä lähettää tyhjän viestin tai kesken jääneen kysymyksen.", "answer": 2, "explain": "Reunatapaus koettelee epätavallista mutta mahdollista syötettä."}], "summary": "Testit kattavat onnistumisen lisäksi rajat ja poikkeavan syötteen."}, {"type": "quiz", "title": "Voiko testin oikeasti tarkistaa?", "intro": "Valitse täsmällisin läpäisyehto.", "items": [{"q": "Positiivinen testi koskee kerhon harjoitusaikaa. Mikä läpäisyehto on paras?", "options": [{"text": "Vastaus antaa hyväksytystä ohjeesta oikean päivän ja kellonajan sekä nimeää lähteen; se ei keksi puuttuvaa paikkaa.", "correct": true, "explain": "Ehto sisältää havaittavat vaatimukset ja rajaa keksityn tiedon pois."}, {"text": "Vastaus on hyvä ja ystävällinen.", "correct": false, "explain": "Hyvyyttä ei voi tarkistaa ilman havaittavia ehtoja."}, {"text": "Vastaus näyttää suunnilleen oikealta.", "correct": false, "explain": "Testi tarvitsee täsmällisen vertailukohdan."}]}, {"q": "Botti vastaa testissä eri tavalla kuin odotit. Mitä teet testisuunnitelmalle?", "options": [{"text": "Säilytän etukäteen perustellun odotuksen ja tutkin, vaatiiko toteutus, aineisto vai testi korjausta.", "correct": true, "explain": "Testin tehtävä on paljastaa ero, ei mukautua automaattisesti toteutukseen."}, {"text": "Muutan odotuksen heti vastaamaan botin toimintaa.", "correct": false, "explain": "Silloin testi ei enää arvioi tavoiteltua toimintaa."}, {"text": "Poistan testin, koska se epäonnistui.", "correct": false, "explain": "Epäonnistuminen on hyödyllistä tietoa korjaustarpeesta."}]}], "summary": "Hyvä testi sisältää syötteen, odotetun toiminnan ja havaittavan läpäisyehdon."}, {"type": "reflect", "title": "Yksi valmis testitapaus", "intro": "Kirjoita testi botille, jota ei ole vielä rakennettu.", "prompt": "Kirjoita testin tyyppi, käyttäjän syöte, odotettu toiminta ja täsmällinen läpäisyehto. Lisää lähde, josta tulos myöhemmin tarkistetaan.", "placeholder": "Testityyppi…\nSyöte…\nOdotettu toiminta…\nLäpäisyehto…\nTarkistuslähde…", "tips": ["Älä käytä ehtoa 'vastaa hyvin'.", "Kerro, mitä vastauksessa pitää näkyä.", "Pidä odotus tallessa ensimmäiseen ajoon asti."], "summary": "Ennalta kirjoitettu testi tekee ensimmäisestä toteutuksesta arvioitavan."}, {"type": "reflect", "title": "Mitä aineisto ei kata?", "intro": "Tietopohjan raja kuuluu testisuunnitelmaan.", "prompt": "Nimeä yksi käyttäjän mahdollinen kysymys, johon tietopohja ei vastaa. Kirjoita, miten botin pitäisi toimia ja millä testillä osoitat tämän toiminnan.", "placeholder": "Tietopohjasta puuttuu…\nBotin pitäisi…\nTestaan sen näin…", "tips": ["Älä täytä aukkoa arvauksella.", "Määritä vastuun siirtyminen.", "Kirjoita havaittava läpäisyehto."], "summary": "Tunnettu aukko muutetaan rajaksi ja testiksi."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "luokka", "lid": "lesson-15", "num": 15, "title": "Oma botti II — tietopohja ja testisuunnitelma", "ptasks": [{"type": "match", "title": "Kuratoidun tietopohjan osat", "intro": "Yhdistä arviointikysymys siihen, mitä sillä tarkistetaan.", "pairs": [{"a": "Luotettavuus", "b": "Kuka aineiston on tuottanut ja millä perusteella siihen voi nojata?", "explain": "Lähteen alkuperä vaikuttaa siihen, mihin sitä voi käyttää."}, {"a": "Ajantasaisuus", "b": "Onko tieto edelleen voimassa ja näkyykö päivitysajankohta?", "explain": "Vanhentunut ohje voi tuottaa johdonmukaisesti väärän vastauksen."}, {"a": "Kattavuus", "b": "Sisältääkö aineisto tehtävän keskeiset tilanteet ja käsitteet?", "explain": "Aukot pitää tunnistaa ennen käyttöönottoa."}, {"a": "Rajaus", "b": "Onko mukana vain tehtävään kuuluvaa, sallittua aineistoa?", "explain": "Tarpeeton aineisto lisää kohinaa ja riskejä."}, {"a": "Jäljitettävyys", "b": "Voidaanko vastaus palauttaa nimettyyn lähteeseen ja sen kohtaan?", "explain": "Tärkeä väite pitää voida tarkistaa."}], "summary": "Tietopohja on perusteltu valinta, ei tiedostojen varasto."}, {"type": "classify", "title": "Mitä testi koettelee?", "intro": "Luokittele testisyötteet.", "categories": ["Positiivinen testi", "Negatiivinen testi", "Reunatapaus"], "items": [{"text": "Käyttäjä kysyy asian, johon hyväksytyssä tietopohjassa on selkeä vastaus.", "answer": 0, "explain": "Positiivinen testi tarkistaa tarkoitetun ydintoiminnan."}, {"text": "Käyttäjä pyytää neuvoa aiheesta, joka on nimenomaisesti rajattu botin ulkopuolelle.", "answer": 1, "explain": "Negatiivinen testi tarkistaa, noudattaako botti rajojaan."}, {"text": "Käyttäjä lähettää tyhjän viestin tai kesken jääneen kysymyksen.", "answer": 2, "explain": "Reunatapaus koettelee epätavallista mutta mahdollista syötettä."}], "summary": "Testit kattavat onnistumisen lisäksi rajat ja poikkeavan syötteen."}, {"type": "quiz", "title": "Voiko testin oikeasti tarkistaa?", "intro": "Valitse täsmällisin läpäisyehto.", "items": [{"q": "Positiivinen testi koskee kerhon harjoitusaikaa. Mikä läpäisyehto on paras?", "options": [{"text": "Vastaus antaa hyväksytystä ohjeesta oikean päivän ja kellonajan sekä nimeää lähteen; se ei keksi puuttuvaa paikkaa.", "correct": true, "explain": "Ehto sisältää havaittavat vaatimukset ja rajaa keksityn tiedon pois."}, {"text": "Vastaus on hyvä ja ystävällinen.", "correct": false, "explain": "Hyvyyttä ei voi tarkistaa ilman havaittavia ehtoja."}, {"text": "Vastaus näyttää suunnilleen oikealta.", "correct": false, "explain": "Testi tarvitsee täsmällisen vertailukohdan."}]}, {"q": "Botti vastaa testissä eri tavalla kuin odotit. Mitä teet testisuunnitelmalle?", "options": [{"text": "Säilytän etukäteen perustellun odotuksen ja tutkin, vaatiiko toteutus, aineisto vai testi korjausta.", "correct": true, "explain": "Testin tehtävä on paljastaa ero, ei mukautua automaattisesti toteutukseen."}, {"text": "Muutan odotuksen heti vastaamaan botin toimintaa.", "correct": false, "explain": "Silloin testi ei enää arvioi tavoiteltua toimintaa."}, {"text": "Poistan testin, koska se epäonnistui.", "correct": false, "explain": "Epäonnistuminen on hyödyllistä tietoa korjaustarpeesta."}]}], "summary": "Hyvä testi sisältää syötteen, odotetun toiminnan ja havaittavan läpäisyehdon."}, {"type": "reflect", "title": "Yksi valmis testitapaus", "intro": "Kirjoita testi botille, jota ei ole vielä rakennettu.", "prompt": "Kirjoita testin tyyppi, käyttäjän syöte, odotettu toiminta ja täsmällinen läpäisyehto. Lisää lähde, josta tulos myöhemmin tarkistetaan.", "placeholder": "Testityyppi…\nSyöte…\nOdotettu toiminta…\nLäpäisyehto…\nTarkistuslähde…", "tips": ["Älä käytä ehtoa 'vastaa hyvin'.", "Kerro, mitä vastauksessa pitää näkyä.", "Pidä odotus tallessa ensimmäiseen ajoon asti."], "summary": "Ennalta kirjoitettu testi tekee ensimmäisestä toteutuksesta arvioitavan."}, {"type": "reflect", "title": "Mitä aineisto ei kata?", "intro": "Tietopohjan raja kuuluu testisuunnitelmaan.", "prompt": "Nimeä yksi käyttäjän mahdollinen kysymys, johon tietopohja ei vastaa. Kirjoita, miten botin pitäisi toimia ja millä testillä osoitat tämän toiminnan.", "placeholder": "Tietopohjasta puuttuu…\nBotin pitäisi…\nTestaan sen näin…", "tips": ["Älä täytä aukkoa arvauksella.", "Määritä vastuun siirtyminen.", "Kirjoita havaittava läpäisyehto."], "summary": "Tunnettu aukko muutetaan rajaksi ja testiksi."}, {"type": "classify", "title": "Haku, vastaus vai käyttöoikeus?", "intro": "Luokittele jokainen RAG-järjestelmän ongelma sen syntypaikan mukaan.", "categories": ["Hakuvaiheen virhe", "Vastauksen muodostamisen virhe", "Käyttöoikeusvirhe"], "items": [{"text": "Ajantasainen hinnasto on tietopohjassa, mutta haku tuo vanhan markkinointiesitteen.", "answer": 0, "explain": "Oikea lähde ei pääty mallin käyttöön."}, {"text": "Haku löytää oikean hinnan 45 euroa, mutta vastaus ilmoittaa hinnaksi 40 euroa.", "answer": 1, "explain": "Lähde löytyi, mutta malli muodosti sen vastaisen vastauksen."}, {"text": "Opiskelija saa vastaukseen vain henkilöstölle tarkoitetun sisäisen ohjeen.", "answer": 2, "explain": "Rajattu lähde päätyi väärän käyttäjän hakuun tai vastaukseen."}, {"text": "Kysymykseen ei löydy mitään, vaikka hyväksytyssä FAQ:ssa on täsmällinen vastaus.", "answer": 0, "explain": "Hakuvaihe ei löytänyt olemassa olevaa tietoa."}], "summary": "Tietopohjan laatu ei yksin takaa onnistumista: testaa erikseen haku, muodostettu vastaus ja käyttöoikeusraja."}], "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

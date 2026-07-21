@@ -2,31 +2,27 @@
 
 ## Mitä tällä tunnilla tapahtuu?
 
-Tähän mennessä olet kerännyt kahdeksan tunnin aikana taidot ja kolme **rakennusainetta**. Nyt rakennat niistä toimivan apuri-botin valitsemallasi saatavilla olevalla alustalla. Jos käytössäsi ei ole bottialustaa tai tiliä, teet saman näytön dokumentoituna kuivaharjoitteluna: ajat järjestelmäpromptin tavallisessa kielimallichatissa, kirjaat odotetut työkaluvaiheet ja näytät tulokset.
+Tähän mennessä olet kerännyt kolme **rakennuspalikkaa**, tehnyt toteutuspäätöksen ja tuottanut ensimmäisen version. Nyt viimeistelet apuri-botin teknisen toteutuksen tai dokumentoidun suunnittelupaketin. Polut ovat samanarvoisia, mutta niitä arvioidaan osittain eri näytöillä: tekninen polku osoittaa todellista toimintaa, kun taas suunnittelupolku osoittaa arkkitehtuuria, simuloitua suoritusjälkeä, testejä ja tunnistettuja rajoituksia.
 
-Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä botin rakentamisesta. Sen sijaan opit **yhdistämään** sen, mitä jo osaat. Tämä materiaali auttaa sinua siinä. Se ei kerro lisää tekoälyn teoriasta, vaan ohjaa rakentamaan botin, joka toimii oikeasti ja näyttää huolellisen tekijän kädenjäljen.
+Suunnittelupolku ei ole vähemmän vaativa teknisen polun luonnos. Sen pitää olla niin täsmällinen, että toinen ihminen ymmärtää, miten ratkaisu voitaisiin toteuttaa ja testata. Samalla siinä sanotaan rehellisesti, mitä ei ole toteutettu. Simuloitu suoritusjälki ei todista integraation, käyttöoikeuden, tilan säilymisen tai lokituksen toimivan oikeassa järjestelmässä.
+
+Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä botin rakentamisesta. Sen sijaan opit **yhdistämään** sen, mitä jo osaat. Tämä materiaali auttaa sinua siinä. Se ei kerro lisää tekoälyn teoriasta, vaan ohjaa viimeistelemään teknisen botin tai toteutuskelpoisen suunnittelupaketin, jossa näkyy huolellisen tekijän kädenjälki.
 
 ## Mikä on hyvä apuri-botti?
 
 Hyvä botti on **ohjaava, ei tekevä**. Se ei tee asiaa käyttäjän puolesta, vaan auttaa käyttäjää onnistumaan paremmin kuin yksin. Käyttäjän osaaminen ja vastuu kasvavat, eivät katoa.
 
-Hyvä botti eroaa yleisestä ChatGPT:stä kolmella tavalla:
+Hyvä apuri-botti eroaa yleisestä keskustelupalvelusta kolmella tavalla:
 
 1. **Se tietää kontekstin.** Käyttäjän ei tarvitse joka kerta selittää, mistä aiheesta on kyse — esimerkiksi mistä lajista, kerhosta tai oppiaineesta. Botti tietää sen automaattisesti.
 2. **Se ohjaa työnkulkua.** Botti tietää, missä järjestyksessä tehtävän vaiheet kannattaa käydä läpi. Käyttäjän ei tarvitse muistaa rakennetta itse.
 3. **Sillä on rajat.** Botti tietää, milloin sen pitää sanoa: ”Tämä ei kuulu minulle, kysy oikealta ihmiseltä.” Tämä on huolellisuutta, ei heikkoutta.
 
-## Botin rakenne
+## Kolme rakennuspalikkaa ja toteutusohje
 
-Bottisi rakentuu neljästä komponentista. Käytä niitä työvaiheina:
+Bottiprojekti perustuu kolmeen aiemmin tehtyyn rakennuspalikkaan: **Promptikorttiin**, **botin määrittelyyn** sekä **tietopohjaan ja testisuunnitelmaan**. Järjestelmäprompti ei ole neljäs rakennuspalikka, vaan näistä päätöksistä koottu toteutusohje botille.
 
-**1. Botin määrittely eli rakennusaine 2.** Päätä, kenelle botti on tarkoitettu, mitä se osaa ja mitä se ei tee. Tämä on botin **perustamisasiakirja**. Ilman sitä botti kasvaa helposti hallitsemattomaksi.
-
-**2. Järjestelmäprompti eli pääohje, rakennusaine 1.** Tämä on tekstipätkä, jonka annat valitsemallesi kielimallille ja joka määrittää, miten botti käyttäytyy.
-
-**3. Tietopohja eli rakennusaine 3.** Valitse 3–5 dokumenttia arjen tai harrastuksen, opiskelun tai työelämän rooliskenaariosta. Tämä on botin tietopohja.
-
-**4. Testaus.** Et tunne bottiasi ennen kuin olet käyttänyt sitä oikealla projekti-idealla. Ensimmäisen testikierroksen jälkeen botti paljastaa yleensä, mitä siinä pitää vielä korjata.
+Promptikortti antaa aiemmin testatun tavan muotoilla ohje. Botin määrittely kertoo käyttäjän, tehtävän, onnistumisen ehdot ja rajat. Tietopohja ja testisuunnitelma sisältävät 2–4 huolella valittua lähdettä sekä kolme testiä, joiden odotukset kirjoitettiin ennen ensimmäistä ajoa.
 
 ## Järjestelmäpromptin kieli
 
@@ -58,7 +54,7 @@ Kun valitset tietopohjaa, pohdi seuraavia kysymyksiä:
 
 - **Mitä botin pitää tietää?** Esimerkiksi miltä hyvä lopputulos näyttää, mitä yleisiä virheitä aiheessa tehdään ja mitä termejä käytetään.
 - **Mistä saat luotettavaa materiaalia?** Hyviä lähteitä ovat esimerkiksi oppikirjat, kurssin omat materiaalit, harrastuksen viralliset säännöt ja oman koulun tai seuran omat ohjeet. Älä perusta tietopohjaa satunnaisiin blogikirjoituksiin.
-- **Mikä on liikaa?** 3–5 hyvää dokumenttia on parempi kuin 20 keskinkertaista. Liian suuri määrä materiaalia voi tehdä botin vastauksista sekavia.
+- **Mikä on liikaa?** 2–4 huolella valittua dokumenttia on parempi kuin 20 keskinkertaista. Liian suuri määrä materiaalia voi tehdä botin vastauksista sekavia.
 
 **Hyvä tietopohja oman aiheesi botille voi sisältää esimerkiksi:**
 
@@ -69,7 +65,7 @@ Kun valitset tietopohjaa, pohdi seuraavia kysymyksiä:
 
 ## Testaus: kolme testityyppiä, korjaus ja uudelleentesti
 
-Et tunne bottiasi ennen kuin olet ajanut sen läpi oikealla käyttötilanteella. **Testivaihe** paljastaa puutteet, joita et huomannut suunnittelussa.
+Tunnilla 17 ajoit tai simuloit kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran. Tällä tunnilla valitset korjauslistalta yhden puutteen, teet siihen yhden nimetyn korjauksen ja toistat juuri sitä koskevan testin. Teknisen botin toiminta näkyy oikean toteutuksen ajossa. Suunnittelupolulla sama ketju kuvataan simuloituna suoritusjälkenä, mutta simulaatio ei todista teknisen yhteyden toimivuutta.
 
 Arvioitava testimatriisi sisältää vähintään kolme tapausta ja odotetun tuloksen jokaiselle:
 
@@ -79,9 +75,9 @@ Arvioitava testimatriisi sisältää vähintään kolme tapausta ja odotetun tul
 
 **3. Reunatapaus.** Anna epäselvä, puutteellinen tai ristiriitainen syöte. Tarkista, kysyykö botti tarpeellisen tarkennuksen eikä arvaa.
 
-Dokumentoi jokaisesta testistä syöte, odotus, todellinen tulos ja johtopäätös. Valitse vähintään yksi epäonnistunut tai puutteellinen kohta, tee siihen nimetty korjaus ja aja kyseinen testi uudelleen. Arviointi perustuu tähän ennen–jälkeen-jälkeen, ei vain valmiin botin esittelyyn.
+Säilytä tunnin 17 kolmesta testistä syöte, odotus, toteutunut tai simuloitu tulos ja johtopäätös. Dokumentoi tunnilla 18 yhden valitun puutteen korjaus ja sitä koskeva uudelleentesti. Ennen–jälkeen-vertailu **antaa näyttöä korjauksen vaikutuksesta tässä testissä**. Se ei osoita ratkaisun toimivan kaikissa tilanteissa.
 
-Jos jokin näistä epäonnistuu, botti ei ole vielä valmis. Korjaa järjestelmäpromptia, lisää tietopohjaa tai tarkenna rajauksia. Testaa sen jälkeen uudelleen.
+Valitse tämän tunnin korjaukseksi vain yksi olennainen puute. Toista juuri siihen liittyvä testi samalla odotuksella. Kirjaa muut epäonnistumiset tunnistetuiksi jatkokehityskohteiksi, mutta älä yritä korjata niitä kaikkia tämän tunnin aikana.
 
 ## Yleisimmät sudenkuopat
 
@@ -104,12 +100,12 @@ Käy nämä kohdat läpi ennen kuin palautat työn:
 
 - ☐ Botin järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.
 - ☐ Botti puhuu oman aiheesi kieltä eikä käytä vain yleisiä fraaseja.
-- ☐ Tietopohjassa on 3–5 hyvää ja perusteltua dokumenttia.
-- ☐ Olen ajanut normaalin, kielteisen ja reunatapauksen sekä kirjannut odotukset ja tulokset.
-- ☐ Botti tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
-- ☐ Olen iteroinut järjestelmäpromptin vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.
+- ☐ Tietopohjassa on 2–4 hyvää ja perusteltua dokumenttia.
+- ☐ Olen ajanut tai simuloinut normaalin, kielteisen ja reunatapauksen sekä kirjannut odotukset ja tulokset.
+- ☐ Ratkaisu tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
+- ☐ Olen tehnyt yhden nimetyn korjauksen ja toistanut sitä koskevan testin.
 - ☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.
-- ☐ Bottiin pääsee linkillä tai kuivaharjoittelun suoritusjälki on mukana.
+- ☐ Teknisen botin linkki tai dokumentoidun suunnittelupolun arkkitehtuuri ja simuloitu suoritusjälki ovat mukana.
 - ☐ Olen ylpeä tästä botista. Se on minun käsialaani.
 :::
 
@@ -120,18 +116,18 @@ Käy nämä kohdat läpi ennen kuin toteat työsi valmiiksi:
 
 - ☐ Botin järjestelmäpromptissa on selkeä rooli, työnkulku ja rajat.
 - ☐ Botti puhuu oman aiheesi kieltä eikä käytä vain yleisiä fraaseja.
-- ☐ Tietopohjassa on 3–5 hyvää ja perusteltua dokumenttia.
-- ☐ Olen ajanut normaalin, kielteisen ja reunatapauksen sekä kirjannut odotukset ja tulokset.
-- ☐ Botti tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
-- ☐ Olen iteroinut järjestelmäpromptin vähintään kahdesti. Ensimmäinen versio ei ole vielä lopullinen.
+- ☐ Tietopohjassa on 2–4 hyvää ja perusteltua dokumenttia.
+- ☐ Olen ajanut tai simuloinut normaalin, kielteisen ja reunatapauksen sekä kirjannut odotukset ja tulokset.
+- ☐ Ratkaisu tunnistaa rajansa eikä mene oman alueensa ulkopuolelle.
+- ☐ Olen tehnyt yhden nimetyn korjauksen ja toistanut sitä koskevan testin.
 - ☐ Reflektioni kuvaa, mitä opin, ei vain sitä, mitä tein.
-- ☐ Bottiin pääsee linkillä tai kuivaharjoittelun suoritusjälki on mukana.
+- ☐ Valitsemani polun näyttö on mukana, ja simuloidut ominaisuudet on merkitty.
 - ☐ Olen ylpeä tästä botista. Se on minun käsialaani.
 :::
 
 ## Lopuksi
 
-Apuri-botti on **näyttö osaamisestasi**: sekä kurssin sisällöstä että siitä taidosta, jota osio 3 syventää eli tekoälyn rakentamisesta toimimaan itsenäisesti. Et osoita osaamistasi pelkästään sillä, että käytät tekoälyä. Osoitat sen sillä, että **rakennat tekoälyllä** jotain, mitä joku toinen voi käyttää.
+Apuri-botti on **näyttö osaamisestasi**: osaat rajata tehtävän, suunnitella aineiston käytön, testata ennen–jälkeen-muutoksen ja perustella toteutuksen rajat. Tekninen polku tuottaa käytettävän botin. Dokumentoitu suunnittelupolku tuottaa toteuttamiskelpoisen ja rehellisesti rajatun suunnitelman. Kumpikaan ei ole valmis ilman testejä, uudelleentestausta ja oman ratkaisun puolustamista.
 
 Tämä on iso askel käyttäjästä rakentajaksi. Pidä siitä kiinni.
 

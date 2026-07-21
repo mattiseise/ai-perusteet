@@ -1,35 +1,35 @@
-# Sanasto: Gen AI:n luonne
+# Sanasto: Tekoälytuloksen luotettavuus
 
-## Epädeterminismi (non-determinism)
+## Hallusinaatio
 
-Ilmiö, jossa sama syöte voi tuottaa erilaisia tuloksia. Generatiiviset kielimallit ovat epädeterministisiä, koska ne tekevät todennäköisyyspohjaisia valintoja.
+Kielimallin uskottavasti esittämä väite, joka voi olla virheellinen, keksitty tai ilman luotettavaa perustaa. Sujuva ilmaisu ei todista väitettä oikeaksi.
 
-## Lämpötila (temperature)
+## Epädeterminismi
 
-Parametri, joka ohjaa, kuinka seikkailunhaluinen tai rohkea kielimalli on vastauksia tuottaessaan. Matala lämpötila tuottaa johdonmukaisia vastauksia, kun taas korkea lämpötila tuottaa monipuolisempia ja luovempia vastauksia.
+Järjestelmän ominaisuus, jonka vuoksi sama prompti voi tuottaa eri kerroilla erilaisen vastauksen.
 
-## Hallusinaatio (hallucination)
+## Verifiointi
 
-Tilanne, jossa AI tuottaa itsevarmasti faktoja, jotka eivät pidä paikkaansa. Hallusinaatio syntyy, koska malli ennustaa "mikä kuulostaa oikealta" sen sijaan, että se toistaisi faktoja.
+Väitteen tarkistaminen riippumattomasta ja tehtävään sopivasta luotettavasta lähteestä.
 
-## Todennäköisyyspohjainen ennustus (probabilistic prediction)
+## Väärä positiivinen
 
-Menetelmä, jossa malli valitsee seuraavan sanan sen perusteella, mikä sana todennäköisesti seuraa edellistä. Kielimallit valitsevat sanoja yksi kerrallaan matemaattisesti todennäköisten valintojen perusteella.
+Luokitteluvirhe, jossa tavallinen tapaus merkitään virheellisesti etsityksi tapaukseksi. Petosten tunnistuksessa tavallinen maksu saa siis petoshälytyksen.
 
-## Verifiointi (verification)
+## Väärä negatiivinen
 
-Prosessi, jossa tarkistetaan, että AI:n tuottama tieto on oikeaa, yleensä vertaamalla sitä luotettaviin lähteisiin, kuten dokumentaatioon, testaukseen ja koodin suorittamiseen.
+Luokitteluvirhe, jossa etsitty tapaus jää tunnistamatta. Petosten tunnistuksessa petos pääsee läpi tavallisena maksuna.
 
-## Faktakone vai sanojen ennustaja?
+## Kokonaistarkkuus (accuracy)
 
-Periaatteellinen ero: faktakone vastaa kysymykseen "mitä on totta", mutta kielimalli vastaa siihen, "mitä seuraavia sanoja tyypillisesti esiintyy tämän kontekstin jälkeen".
+Oikein luokiteltujen tapausten osuus kaikista tapauksista. Harvinaisen ilmiön tunnistamisessa korkea kokonaistarkkuus voi peittää sen, ettei malli löydä etsittyjä tapauksia.
 
-## Iteratiivinen validointi (iterative validation)
+## Osumatarkkuus (precision)
 
-Käytäntö, jossa AI:n vastaukset testataan ja tarkistetaan vaiheittain, erityisesti tekniikassa. Esimerkiksi: aja koodi, katso tulokset, korjaa ongelmat.
+Todellisten positiivisten osuus kaikista mallin positiivisiksi merkitsemistä tapauksista. Petosesimerkissä se kertoo, kuinka suuri osa hälytyksistä oli oikeita petoksia.
 
-## Epäluotettavuuden merkit (hallucination indicators)
+## Kattavuus (recall)
 
-Vihjeet, jotka voivat viitata hallusinaatioon: liian näyttävä esitys, epätodennäköinen tieto, logiikan ristiriidat tai vastaus, joka tuntuu varomattomalta.
+Löydettyjen positiivisten osuus kaikista todellisista positiivisista tapauksista. Petosesimerkissä se kertoo, kuinka suuri osa kaikista petoksista löydettiin.
 
 ---

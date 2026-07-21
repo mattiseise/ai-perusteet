@@ -1,10 +1,42 @@
-# Millaista tekoälyä on nyt — ja mistä tulevaisuuspuheessa puhutaan?
+# Miten tekoälymalli oppii — ja mitä nykyjärjestelmät osaavat?
 
 ## Johdanto
 
 Roskapostisuodatin tunnistaa epäilyttävän viestin. Tekstitekoäly luonnostelee vastauksen asiakkaalle. Elokuvassa kone taas oppii hetkessä lähes minkä tahansa taidon. Kaikkia voidaan kutsua tekoälyksi, mutta ne eivät kuvaa samanlaista järjestelmää — eivätkä välttämättä edes nykyistä todellisuutta.
 
-Tällä tunnilla opit viisi käsitettä, joiden avulla erotat nykyiset järjestelmät tulevaisuutta koskevista oletuksista. Tunnin jälkeen osaat selittää, miksi generatiivisuus tai sujuva keskustelu ei yksin osoita yleistä tekoälyä ja miten generatiivinen järjestelmä voi silti olla kyvyiltään rajattu.
+Tällä tunnilla seuraat mallin matkaa harjoitusaineistosta käyttöön. Opit erottamaan koulutus-, validointi- ja testiaineiston, yleistymisen ja ylioppimisen sekä rakentamisen, käyttöönoton, seurannan ja päivittämisen. Samalla opit viisi käsitettä, joiden avulla erotat nykyiset järjestelmät AGI:a ja ASI:a koskevasta tulevaisuuspuheesta.
+
+## Kolme aineistoa, kolme eri tehtävää
+
+Kun ohjatun oppimisen mallia rakennetaan, aineisto jaetaan tavallisesti eri osiin. **Koulutusaineistosta** malli oppii yhteyksiä piirteiden ja oikeiden vastausten välillä. **Validointiaineiston** avulla vertaillaan malliversioita ja säädetään valintoja rakentamisen aikana. **Testiaineisto** pidetään erillään viimeistä tarkistusta varten.
+
+Ajattele opiskelua. Harjoitustehtävät vastaavat koulutusaineistoa: niiden avulla opitaan. Harjoituskoe auttaa huomaamaan, mitä pitää vielä säätää, kuten validointiaineisto. Jos lopullisen kokeen vastauksia katsotaan jo harjoittelun aikana, koe ei enää kerro luotettavasti uuden tilanteen osaamisesta. Samasta syystä testiaineistoa ei pidä käyttää mallin hienosäätöön.
+
+Jako ei yksin takaa hyvää mallia. Kaikkien osien pitää kuvata sitä todellisuutta, jossa mallia aiotaan käyttää. Jos petosmallin aineistossa on vain yhden maan, yhden vuoden tai yhden asiakasryhmän tapahtumia, hyvä testitulos voi antaa liian turvallisen kuvan todellisesta käytöstä.
+
+## Yleistyminen ja ylioppiminen
+
+Mallin tavoite ei ole muistaa harjoitusesimerkkejä, vaan toimia hyvin myös uusissa samankaltaisissa tilanteissa. Tätä kutsutaan **yleistymiseksi**. Hyvin yleistävä petosmalli tunnistaa olennaisia kuvioita myös tapahtumista, joita se ei nähnyt koulutuksessa.
+
+**Ylioppiminen** tarkoittaa, että malli mukautuu harjoitusaineistoon liian tarkasti. Se voi oppia myös sattumia ja aineiston pieniä erikoisuuksia. Silloin tulos näyttää koulutusaineistossa erinomaiselta mutta heikkenee uusissa tapauksissa. Opiskelija, joka opettelee harjoituskokeen vastausrivin ulkoa ymmärtämättä asiaa, kohtaa saman ongelman uudenlaisessa kysymyksessä.
+
+Yleistymistä arvioidaan erillisellä aineistolla ja tehtävää kuvaavilla mittareilla. Yksi hyvä testitulos ei kuitenkaan todista, että malli toimii kaikissa ryhmissä, olosuhteissa ja tulevaisuuden tilanteissa.
+
+## Malli ei ole valmis käyttöönottoon päästyään
+
+**Mallin rakentamisessa** valitaan aineisto, piirteet, menetelmä ja arviointitapa. **Käyttöönotossa** koulutettu malli liitetään oikeaan palveluun, työnkulkuun ja päätöksentekoon. Samalla sovitaan, kuka vastaa tuloksista ja milloin ihminen tarkistaa mallin ehdotuksen.
+
+**Seurannassa** tarkastellaan, toimivatko malli ja koko järjestelmä edelleen odotetusti. Seuranta voi paljastaa esimerkiksi sen, että virheet lisääntyvät tietyssä ryhmässä tai uusi petostapa jää huomaamatta. **Päivittäminen** on erillinen työvaihe: aineistoa korjataan tai täydennetään, malli koulutetaan uudelleen, testataan ja otetaan hallitusti käyttöön. Käytössä oleva malli ei siis korjaa itseään vain siksi, että se näkee uusia tapauksia.
+
+## Kun maailma tai yhteydet muuttuvat
+
+**Datadrifti** tarkoittaa, että käyttöön tuleva data muuttuu siitä, millaista koulutusdata oli. Asiakkaat voivat alkaa maksaa uusilla tavoilla, palvelu voi laajentua uuteen maahan tai laitekanta voi vaihtua.
+
+**Mallidriftillä** tarkoitetaan tässä kurssissa sitä, että piirteiden ja ennustettavan asian välinen yhteys muuttuu ja mallin toiminta heikkenee. Petollinen toiminta voi esimerkiksi muuttaa muotoaan niin, etteivät aiemmin hyödylliset vihjeet enää erottele petosta laillisesta tapahtumasta.
+
+Käsitteet liittyvät toisiinsa, mutta eivät ole sama asia. Data voi muuttua ilman, että tulos heti heikkenee, ja mallin tulos voi heikentyä myös muun järjestelmämuutoksen vuoksi. Siksi seurannassa katsotaan sekä syöttedataa että todellisia tuloksia. Korjaus ei ole automaattisesti ”kouluta heti uudelleen”, vaan ensin selvitetään muutoksen syy ja arvioidaan uuden aineiston laatu.
+
+> **Pysähdy hetkeksi:** Miksi viime vuoden onnistunut testitulos ei yksin riitä osoittamaan, että malli toimii hyvin tänään?
 
 ## Viisi käsitettä, ei viisi tasoa
 
@@ -222,6 +254,8 @@ Jos järjestelmä tuottaa hyvän tekstin, havainto koskee tekstin tuottamista. S
 
 ## Yhteenveto
 
+Mallin rakentaminen alkaa aineistosta, mutta ei pääty koulutukseen. Koulutus-, validointi- ja testiaineistoilla on eri tehtävät. Hyvä malli yleistää uusiin tapauksiin sen sijaan, että se oppisi harjoitusaineiston yksityiskohdat ulkoa. Käyttöönoton jälkeen mallia seurataan, koska data ja piirteiden yhteys todelliseen tulokseen voivat muuttua. Päivittäminen on erillinen, testattava työvaihe.
+
 Sääntöpohjainen järjestelmä seuraa ihmisen kirjoittamia ehtoja. Kapea tekoäly tekee rajattua tehtävää. Generatiivinen tekoäly tuottaa sisältöä, mutta generatiivisuus ei yksin kerro järjestelmän kykyjen laajuutta. Nämä ovat nykyisiä järjestelmiä.
 
 AGI ja ASI ovat tulevaisuutta koskevia käsitteitä, eivät käytössä olevan tekoälyn varmoja seuraavia vaiheita. Kun luet tekoälyväitteen, tarkista ensin, mitä järjestelmä todella teki ja kuinka pitkälle näyttö kantaa.
@@ -231,5 +265,8 @@ AGI ja ASI ovat tulevaisuutta koskevia käsitteitä, eivät käytössä olevan t
 - [OECD: Explanatory memorandum on the updated definition of an AI system](https://oecd.ai/en/ai-publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system)
 - [OECD: Framework for the Classification of AI Systems](https://oecd.ai/en/ai-publications/framework-classification)
 - [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026)
+- [Google for Developers: Datasets, generalization, and overfitting](https://developers.google.com/machine-learning/crash-course/overfitting)
+- [Google for Developers: Production ML systems](https://developers.google.com/machine-learning/crash-course/production-ml-systems)
+- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 
 Tarkistettu 20.7.2026.

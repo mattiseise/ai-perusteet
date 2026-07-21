@@ -10,7 +10,7 @@ Opetuksen punaisena lankana toimii päätöksen riski. Kun oppija tarkastelee vi
 
 Oppija:
 
-- tunnistaa päätökset, joihin liittyy raha, sitoumus, korkea epävarmuus tai merkittävä vaikutus
+- tunnistaa päätökset, joihin liittyy raha, sitoumus, puuttuva tieto, työkalun virhe tai merkittävä vaikutus
 - suunnittelee hyväksyntäportin, joka näyttää päätöksen kannalta tarpeellisen tiedon
 - määrittää aikarajan, eskaloinnin ja turvallisen oletustoiminnon
 - välttää hyväksyntäväsymystä rajaamalla portit riskikohtiin

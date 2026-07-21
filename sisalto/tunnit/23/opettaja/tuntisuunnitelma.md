@@ -2,19 +2,18 @@
 
 ## Osaamistavoitteet
 
-Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnittelumallit** ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on, että agentin havaittava toiminta täytyy suunnitella: miten työkalut kutsutaan, miten tulos tai virhe käsitellään ja milloin tehtävä kannattaa jakaa usealle erikoistuneelle agentille. Mallin raakaa chain-of-thoughtia ei pyydetä eikä tallenneta.
+Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnittelumallit** ohjaavat agentin päättelyä ja toimintaa. Oppitunnin ydin on ReActin ja eksplisiittisen työnkulun ero. Moniagenttijärjestelmät ovat valinnainen syvennys. Mallin sisäistä päättelyä ei pyydetä eikä tallenneta.
 
 ### Muistaa ja ymmärtää
 
 - Opiskelija ymmärtää, mitä **ReAct** tarkoittaa: agentti vuorottelee päättelyn ja toiminnan välillä.
 - Opiskelija ymmärtää, mitä **eksplisiittinen työnkulku** tarkoittaa: agentti etenee vaihe vaiheelta järjestyksessä.
-- Opiskelija ymmärtää, mitä **moniagenttijärjestelmä** tarkoittaa: tehtävä jaetaan useille erikoistuneille agenteille.
-- Opiskelija tunnistaa, että eri suunnittelumallit sopivat erilaisiin tehtäviin.
-- Opiskelija ymmärtää, että ReAct-kierros ja eksplisiittinen työnkulku ovat harnessin ohjaamia rakenteita, eivät vain mallin sisäistä toimintaa.
+- Opiskelija tunnistaa, että ReAct ja eksplisiittinen työnkulku sopivat erilaisiin tehtäviin.
+- Opiskelija ymmärtää, että ReAct-kierros ja eksplisiittinen työnkulku ovat agentin ohjauskehyksen ohjaamia rakenteita, eivät vain mallin sisäistä toimintaa.
 
 ### Soveltaa ja analysoida
 
-- Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct, eksplisiittinen työnkulku vai moniagenttirakenne.
+- Opiskelija osaa valita, sopiiko tiettyyn tehtävään paremmin ReAct vai eksplisiittinen työnkulku.
 - Opiskelija osaa kuvata havaittavan työnkulun ja lokin: lyhyt päätösperustelu, rakenteinen työkalukutsu, tulos tai virhe ja toiminto.
 - Opiskelija osaa tunnistaa tilanteita, joissa ReAct voi jäädä kiertämään silmukkaa tai eksplisiittinen työnkulku voi olla liian jäykkä.
 
@@ -22,7 +21,7 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnit
 
 - Opiskelija osaa suunnitella oman agenttinsa **päättelymallin**.
 - Opiskelija osaa perustella, miksi valittu malli sopii omaan agenttiongelmaan.
-- Opiskelija osaa arvioida, milloin yhden agentin sijaan kannattaisi käyttää useampaa erikoistunutta agenttia.
+- Opiskelija osaa nimetä eksplisiittisestä työnkulusta vaiheen, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta.
 
 **Opettajan painotus:** Tämän oppitunnin tärkein viesti on, että agentin päättelyä täytyy ohjata. Hyvä agentti ei hypi sattumanvaraisesti työkalusta toiseen, vaan noudattaa tehtävään sopivaa päättelymallia.
 
@@ -34,17 +33,16 @@ Tämän oppitunnin tavoitteena on, että opiskelija ymmärtää, miten **suunnit
 
 Suunnittelumallit auttavat opiskelijaa muuttamaan agentin toiminnan näkyväksi ja testattavaksi. Havaittavat työkalukutsut, tulokset, virheet ja toiminnot voidaan jäsentää toimintamalleiksi ilman mallin piilotetun ajatusketjun tallentamista.
 
-Kolme keskeistä mallia ovat:
+Tunnin kaksi keskeistä mallia ovat:
 
 - **ReAct:** joustava ja iteratiivinen malli, jossa agentti kutsuu työkalua, havainnoi tuloksen tai virheen ja valitsee seuraavan toiminnon.
 - **Eksplisiittinen työnkulku:** systemaattinen malli, jossa agentti jakaa tehtävän vaiheisiin ja etenee järjestyksessä.
-- **Moniagenttijärjestelmät:** jaetun työn malli, jossa eri agentit erikoistuvat eri osatehtäviin.
 
 > **Hyvä päättelymalli tekee agentin toiminnasta ennakoitavampaa, jäljitettävämpää ja helpommin korjattavaa.**
 
 ### ReAct — kutsu työkalua, tarkista tulos ja jatka
 
-**ReAct** tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee rajatussa silmukassa: se valitsee työkalun, saa tuloksen tai virheen ja päättää seuraavan toiminnon. Valinnasta voidaan tallentaa lyhyt päätösperustelu, mutta ei raakaa chain-of-thoughtia.
+**ReAct** tarkoittaa päättelyn ja toiminnan vuorottelua. Agentti ei tee kaikkea yhdellä kertaa, vaan etenee rajatussa silmukassa: se valitsee työkalun, saa tuloksen tai virheen ja päättää seuraavan toiminnon. Valinnasta voidaan tallentaa lyhyt päätösperustelu, mutta ei mallin sisäistä päättelyä.
 
 ReAct-toteutuksen havaittava kierros:
 
@@ -68,7 +66,7 @@ ReAct on hyödyllinen silloin, kun agentti ei tiedä etukäteen kaikkia vaiheita
 
 ### Eksplisiittinen työnkulku — vaihe vaiheelta etenevä malli
 
-**Eksplisiittinen työnkulkussa** agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.
+**Eksplisiittisessä työnkulussa** agentti jakaa ongelman selkeisiin vaiheisiin ja käsittelee ne järjestyksessä. Tämä sopii tilanteisiin, joissa prosessi on melko ennakoitava ja jokainen vaihe riippuu edellisestä.
 
 **1. Ongelma:** Mitä asiakas kysyy?
 
@@ -80,9 +78,9 @@ ReAct on hyödyllinen silloin, kun agentti ei tiedä etukäteen kaikkia vaiheita
 
 Eksplisiittinen työnkulku on hyödyllinen esimerkiksi palautuspyynnön käsittelyssä. Agentti tarkistaa ensin palautusajan, sitten palautuskäytännön, sitten asiakkaan oikeuden palautukseen ja vasta lopuksi muodostaa vastauksen.
 
-> **Tärkeää:** Eksplisiittinen työnkulkussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.
+> **Tärkeää:** Eksplisiittisessä työnkulussa ei hypitä vaiheiden yli. Jokainen vaihe rakentuu edellisen päälle.
 
-### Moniagenttijärjestelmät — jaettu vastuu
+### Valinnainen syvennys: moniagenttijärjestelmät — jaettu vastuu
 
 **Moniagenttijärjestelmässä** tehtävä jaetaan usealle erikoistuneelle agentille. Tämä sopii monimutkaisiin tehtäviin, joissa tarvitaan erilaisia osaamisalueita: analyysiä, tiedonhakua, kirjoittamista, tarkistusta tai päätöksentekoa.
 
@@ -109,19 +107,15 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 ### Väärinkäsitys 2: ”Eksplisiittinen työnkulku on huono, koska se on jäykkä.”
 
-**Korjaava näkökulma:** Eksplisiittinen työnkulkun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.
+**Korjaava näkökulma:** Eksplisiittisen työnkulun jäykkyys on sen vahvuus silloin, kun prosessin pitää olla ennakoitava. Esimerkiksi palautuksen, laskun tarkistuksen tai hyväksyntäprosessin pitää usein edetä tietyssä järjestyksessä.
 
-### Väärinkäsitys 3: ”Moniagenttijärjestelmä on aina parempi kuin yksi agentti.”
-
-**Korjaava näkökulma:** Moniagenttijärjestelmä lisää rooleja, viestinvaihtoa, lokitusta ja virhemahdollisuuksia. Aloita yhdellä agentilla ja lisää muita vain, jos tehtävän monimutkaisuus todella vaatii sitä.
-
-### Väärinkäsitys 4: ”Suunnittelumalli on vain tekninen toteutustapa.”
+### Väärinkäsitys 3: ”Suunnittelumalli on vain tekninen toteutustapa.”
 
 **Korjaava näkökulma:** Suunnittelumalli on myös pedagoginen ja arkkitehtoninen valinta. Se vaikuttaa siihen, miten agenttia testataan, miten sitä selitetään ja miten sen virheitä korjataan.
 
-### Väärinkäsitys 5: ”ReAct tapahtuu pelkästään promptissa tai kielimallissa.”
+### Väärinkäsitys 4: ”ReAct tapahtuu pelkästään promptissa tai kielimallissa.”
 
-**Korjaava näkökulma:** Malli voi valita seuraavan toiminnon, mutta harness ylläpitää kierrosta, välittää ja tarkistaa työkalukutsut, palauttaa havainnot, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Ilman tätä ohjausta ReAct ei ole hallittu työnkulku.
+**Korjaava näkökulma:** Malli voi valita seuraavan toiminnon, mutta agentin ohjauskehys ylläpitää kierrosta, välittää ja tarkistaa työkalukutsut, palauttaa havainnot, asettaa iteraatiorajan, käsittelee virheet ja lokittaa tapahtumat. Ilman tätä ohjausta ReAct ei ole hallittu työnkulku.
 
 ---
 
@@ -131,7 +125,7 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 **Tavoite:** Opiskelija ymmärtää ReAct-toteutuksen työkalukutsu–tulos–toiminto-silmukan.
 
-**Tehtävä:** Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan havaittava ReAct-loki. Lokissa näkyvät lyhyt päätösperustelu, työkalun nimi ja rakenteiset parametrit, tulos tai virhe sekä seuraava toiminto. Mallin sisäistä raakaa chain-of-thoughtia ei kirjoiteta.
+**Tehtävä:** Anna opiskelijoille lyhyt asiakastilanne ja pyydä heitä kirjoittamaan havaittava ReAct-loki. Lokissa näkyvät lyhyt päätösperustelu, työkalun nimi ja tarvittava tieto, tulos tai virhe sekä seuraava toiminto. Mallin sisäistä päättelyä ei kirjoiteta.
 
 | Vaihe | Opiskelijan vastaus |
 | --- | --- |
@@ -144,7 +138,7 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 ---
 
-### TT-B: Eksplisiittinen työnkulkun vaiheistus
+### TT-B: Eksplisiittisen työnkulun vaiheistus
 
 **Tavoite:** Opiskelija osaa purkaa monimutkaisen tehtävän selkeiksi vaiheiksi.
 
@@ -159,6 +153,8 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 5. Mikä päätös tehdään?
 6. Mitä agentti tekee päätöksen jälkeen?
 
+Lisäksi opiskelija nimeää yhden vaiheen, jossa kielimalli tekee aidon rajatun valinnan vähintään kahdesta sallitusta vaihtoehdosta. Lokinäytössä pitää näkyä syöte, sallitut vaihtoehdot, mallin valinta ja sitä seuraava ennalta määritelty haara. Pelkkä kiinteä jos–niin-ehto ei täytä tätä kohtaa.
+
 **Aika-arvio:** 15–20 minuuttia
 
 ---
@@ -167,19 +163,18 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 **Tavoite:** Opiskelija osaa valita tehtävään sopivan päättelymallin ja perustella valintansa.
 
-**Tehtävä:** Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin, eksplisiittinen työnkulkun tai moniagenttijärjestelmän ja perustelevat valintansa.
+**Tehtävä:** Anna opiskelijoille 3–4 eri tilannetta. He valitsevat jokaiseen ReActin tai eksplisiittisen työnkulun ja perustelevat valintansa.
 
 | Tilanne | Sopiva malli | Perustelu |
 | --- | --- | --- |
 | Agentti tutkii, miksi tilauksia katoaa satunnaisesti matkalla. | ReAct | Agentti tarvitsee havaintoihin perustuvaa etenemistä ja voi vaihtaa suuntaa tulosten mukaan. |
 | Agentti käsittelee palautuspyynnön. | Eksplisiittinen työnkulku | Prosessi etenee selkeissä vaiheissa: tarkista aika, tarkista ehdot, tee päätös ja vastaa. |
-| Agentti tuottaa laajan markkinaraportin, jossa tarvitaan tiedonhakua, analyysiä, kirjoittamista ja tarkistusta. | Moniagenttijärjestelmä | Tehtävä voidaan jakaa erikoistuneille agenteille, kuten tutkijalle, analysoijalle, kirjoittajalle ja tarkistajalle. |
 
 **Aika-arvio:** 20–25 minuuttia
 
 ---
 
-### TT-D: Moniagenttikaavion piirtäminen
+### Valinnainen TT-D: Moniagenttikaavion piirtäminen
 
 **Tavoite:** Opiskelija ymmärtää, miten vastuu voidaan jakaa usealle agentille.
 
@@ -197,19 +192,19 @@ Moniagenttijärjestelmät ovat tehokkaita, mutta ne lisäävät monimutkaisuutta
 
 ---
 
-## CFU-kysymykset
+## Oppimisen tarkistuskysymykset
 
 1. **ReAct:** Miksi ReAct-mallissa agentti ei tee kaikkia toimintoja heti kerralla?
 2. **Eksplisiittinen työnkulku:** Millaisiin tehtäviin vaiheittainen eteneminen sopii parhaiten?
-3. **Moniagentti:** Miksi moniagenttijärjestelmä voi olla tehokas mutta myös vaikeampi hallita?
-4. **Valinta:** Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää eksplisiittinen työnkulkua?
+3. **Valinta:** Mistä tiedät, että tehtävä tarvitsee ReActin eikä pelkkää eksplisiittistä työnkulkua?
+4. **Rajattu mallivalinta:** Missä eksplisiittisen työnkulun vaiheessa kielimalli valitsee vähintään kahdesta sallitusta vaihtoehdosta?
 5. **Rajoitukset:** Miksi ReAct-agentille kannattaa asettaa enimmäismäärä iteraatioita?
 
 ---
 
 ## Opettajan vihjeet
 
-### Jos opiskelija sekoittaa ReActin ja eksplisiittinen työnkulkun
+### Jos opiskelija sekoittaa ReActin ja eksplisiittisen työnkulun
 
 Käytä seuraavaa erottelua:
 
@@ -218,7 +213,7 @@ Käytä seuraavaa erottelua:
 
 > ReAct sopii tutkimiseen. Eksplisiittinen työnkulku sopii prosessiin.
 
-### Jos opiskelija haluaa tehdä heti moniagenttijärjestelmän
+### Valinnaisen syvennyksen tuki: jos opiskelija haluaa tehdä heti moniagenttijärjestelmän
 
 Kysy:
 
@@ -235,7 +230,7 @@ Pyydä opiskelijaa nimeämään konkreettinen työkalu ja konkreettinen havainto
 - Mitä dataa työkalu palauttaa?
 - Miten tämä muuttaa agentin seuraavaa päätöstä?
 
-### Jos eksplisiittinen työnkulkun vaiheet jäävät liian epämääräisiksi
+### Jos eksplisiittisen työnkulun vaiheet jäävät liian epämääräisiksi
 
 Pyydä opiskelijaa kirjoittamaan jokainen vaihe verbinä:
 
@@ -249,11 +244,11 @@ Pyydä opiskelijaa kirjoittamaan jokainen vaihe verbinä:
 
 ## Oppitunnin lopetus
 
-Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tekee agentista joustavan, eksplisiittinen työnkulku tekee siitä järjestelmällisen ja moniagenttirakenne mahdollistaa erikoistumisen. Mikään malli ei ole aina paras. Malli valitaan tehtävän mukaan.
+Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että agentin päättelymalli on arkkitehtuuripäätös. ReAct tukee havaintojen perusteella muuttuvaa etenemistä, kun taas eksplisiittinen työnkulku tekee ennalta tunnetusta prosessista järjestelmällisen. Kumpikaan ei ole aina paras, vaan malli valitaan tehtävän mukaan.
 
 Hyvä päätöskysymys tunnin loppuun:
 
-> **Pohdi:** Tarvitseeko oma agenttisi joustavaa tutkimista, vaiheittaista prosessia vai useamman erikoistuneen agentin yhteistyötä?
+> **Pohdi:** Tarvitseeko oma agenttisi joustavaa tutkimista vai ennalta rajattua vaiheittaista prosessia?
 
 ---
 
@@ -276,4 +271,4 @@ Oppija järjestää annetut vaihe- ja lokikortit. Tuki vähentää valintojen m�
 
 ### Syventävä reitti
 
-Kun perustuotos on valmis, oppija lisää orkestroidun sivupolun ilman raakaa ajatusketjua. Syventävä työ ei kasvata pakollista ydintuotosta.
+Kun perustuotos on valmis ja aikaa jää, oppija voi tarkastella moniagenttirakennetta erillisenä valinnaisena sivupolkuna. Syventävää työtä ei arvioida osana pakollista ydintuotosta.

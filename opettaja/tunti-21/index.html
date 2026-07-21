@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
 <title>Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet</title>
-<meta name="description" content="Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä…">
+<meta name="description" content="Kun rakennat omaa agenttia n8n:llä, suunnittelet samalla, mitä tietoa kielimallille annetaan juuri nyt ja mitä tietoa järjestelmä säilyttää myöhempää käyttöä…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-21/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-21/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Agentin muisti ja konteksti — miten kone pysyy kartalla", "description": "Kun rakennat omaa agenttia n8n:llä, voit rakentaa sille järjestelmän, joka säilyttää tehtävän kannalta olennaista tietoa. Kielimalli ei itsessään muista, mitä…", "url": "https://aiperusteet.fi/opettaja/tunti-21/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Kun rakennat omaa agenttia n8n:llä, suunnittelet samalla, mitä tietoa kielimallille annetaan juuri nyt ja mitä tietoa järjestelmä säilyttää myöhempää käyttöä…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-21/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Agentin muisti ja konteksti — miten kone pysyy kartalla — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Kun rakennat omaa agenttia n8n:llä, suunnittelet samalla, mitä tietoa kielimallille annetaan juuri nyt ja mitä tietoa järjestelmä säilyttää myöhempää käyttöä…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Agentin muisti ja konteksti — miten kone pysyy kartalla", "description": "Kun rakennat omaa agenttia n8n:llä, suunnittelet samalla, mitä tietoa kielimallille annetaan juuri nyt ja mitä tietoa järjestelmä säilyttää myöhempää käyttöä…", "url": "https://aiperusteet.fi/opettaja/tunti-21/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Agentit"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 21"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
 <div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Agentit</span><span>›</span><span>Oppitunti 21</span></div><div class="lesson-title">Agentin muisti ja konteksti — miten kone pysyy kartalla</div><div class="lesson-badges"><span class="badge badge-osp">Agentit</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-21/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-21/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-21/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mitä agentin pitää muistaa nyt ja mitä myöhemmin?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-21/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-21/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-21-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-21-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-21-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-21-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-21-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-21-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-21-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-21-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 21: muisti, konteksti ja tila</h1>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus</h2></div><div class="task-card-body">
 <p>Oppija erottaa toisistaan yhden suorituksen kontekstin, suoritusten välillä säilytettävän muistin, prosessin tilan ja toimintaa rajaavat pysyvät periaatteet.</p>
-<p>Tunti kannattaa rakentaa yhden tutun tapauksen ympärille. Kun sama asiakaspalvelutilanne kulkee opetuksen läpi, oppija näkee, miksi juuri saapunut viesti kuuluu kontekstiin, aiempi ratkaisu voi kuulua pitkäkestoiseen muistiin ja odottava hyväksyntä kuuluu tilaan. Ilman yhteistä tapausta käsitteet jäävät helposti neljäksi irralliseksi määritelmäksi.</p>
+<p>Tunti kannattaa rakentaa yhden tutun tapauksen ympärille. Kun sama asiakaspalvelutilanne kulkee opetuksen läpi, oppija näkee, miksi juuri saapunut viesti kuuluu kontekstiin, sopimusnumero rakenteiseen järjestelmään, hyväksytty ohje tietopohjaan ja odottava hyväksyntä prosessin tilaan. RAG hakee tietopohjasta sopivia tekstikatkelmia, kun taas täsmällinen asiakas- tai sopimustieto haetaan rakenteisesta järjestelmästä käyttöoikeuden perusteella. Ilman yhteistä tapausta käsitteet jäävät helposti irrallisiksi määritelmiksi.</p>
 </div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
 <p>Oppija:</p>
 <ul>
@@ -30,7 +30,7 @@
 <li>kuvaa prosessin tilat ja siirtymäehdot</li>
 <li>arvioi haetun muistiedon osuvuuden</li>
 <li>noudattaa minimimuistin periaatetta</li>
-<li>erottaa järjestelmäohjeet ja harnessin säännöt muistista</li>
+<li>erottaa järjestelmäohjeet ja agentin ohjauskehyksen säännöt muistista</li>
 </ul>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ydinviesti</h2></div><div class="task-card-body">
 <p>Muisti vastaa kysymykseen <strong>mitä tietoa järjestelmällä on</strong>. Tila vastaa kysymykseen <strong>missä vaiheessa tehtävä on</strong>. Toimintaperiaatteet vastaavat kysymykseen <strong>mitkä säännöt rajaavat toimintaa</strong>. Näitä ei pidä sekoittaa.</p>
@@ -85,24 +85,26 @@
 <li>Merkitykseltään samankaltainen hakutulos ei ole automaattisesti oikea.</li>
 <li>Pitkäkestoinen muisti ei kuulu jokaiseen agenttiin.</li>
 <li>Prosessin tila ei ole sama asia kuin keskusteluhistoria.</li>
-<li>Turvaraja ei saa jäädä pelkäksi muistettavaksi tekstiksi, jos harness voi toimeenpanna sen.</li>
+<li>Turvaraja ei saa jäädä pelkäksi muistettavaksi tekstiksi, jos agentin ohjauskehys voi toimeenpanna sen.</li>
 </ul>
 <p>Väärinkäsityksiä ei tarvitse korjata luennoimalla uudelleen. Usein tehokkain kysymys on: ”Mitä tapahtuu, jos tämä tieto on väärä, vanhentunut tai joutuu väärälle käyttäjälle?” Kysymys siirtää huomion muistamisen määrästä sen tarkoitukseen ja seurauksiin.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioitava näyttö</h2></div><div class="task-card-body">
 <p>Hyväksyttävä pohjapiirros erottaa nykyhetken kontekstin, mahdollisen pitkäkestoisen muistin, tilat ja toimintaperiaatteet. Jokaiselle tallennettavalle tiedolle pitää olla tehtävä ja perusteltu säilytystarve.</p></div></div></div><div id="panel-lesson-21-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-21-ohjatut" data-tab="ohjatut" hidden><h1>Ohjatut tehtävät — oppitunti 21</h1>
 <p>Näissä tehtävissä samaa asiakaspalvelutapausta tarkastellaan neljästä suunnasta. Tarkoitus ei ole kerätä agentille mahdollisimman paljon tietoa, vaan oppia erottamaan toisistaan hetkellinen konteksti, myöhemmin tarvittava muisti, prosessin tila ja toimintaa rajaavat säännöt. Pyydä oppijoita perustelemaan jokainen tallennuspäätös: mitä tehtävää tieto palvelee ja kuinka kauan sitä todella tarvitaan?</p>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1 — Nykyhetki, historia vai tila? (15 min)</h2></div><div class="task-card-body">
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 1 — Nykyhetki, rakenne, tietopohja vai tila? (15 min)</h2></div><div class="task-card-body">
 <p>Luokittele asiakaspalvelutapauksen tiedot:</p>
 <ul>
 <li>käyttäjän juuri lähettämä viesti → konteksti</li>
-<li>viime vuonna ratkaistu samankaltainen tapaus → pitkäkestoinen muisti</li>
+<li>asiakkaan sopimusnumero → rakenteinen pitkäkestoinen tieto, jos tehtävä ja käyttöoikeus sitä vaativat</li>
+<li>ohjeartikkeli → hyväksytty tietopohja, josta RAG voi hakea tekstikatkelman</li>
+<li>viime vuonna ratkaistu samankaltainen tapaus → semanttisen haun ehdokas, ei automaattisesti oikea ratkaisu</li>
 <li>hyvityspyyntö odottaa hyväksyntää → tila</li>
 <li>asiakkaan salasana → ei tallenneta</li>
 </ul>
-<p>Käykää vastaukset läpi yksi kerrallaan. Jos ryhmä haluaa tallentaa tiedon ”varmuuden vuoksi”, kysy, missä tulevassa päätöksessä tietoa käytetään. Salasana toimii tarkoituksellisena rajatapauksena: kaikkea tehtävässä vastaan tulevaa tietoa ei saa muuttaa muistiksi.</p>
+<p>Käykää vastaukset läpi yksi kerrallaan. Jos ryhmä haluaa tallentaa tiedon ”varmuuden vuoksi”, kysy, missä tulevassa päätöksessä tietoa käytetään. Erota samalla täsmällinen tunniste semanttisesta hausta: sopimusnumero haetaan rakenteisesta järjestelmästä, kun taas RAG hakee tietopohjasta merkitykseltään sopivia tekstikatkelmia. Salasana toimii tarkoituksellisena rajatapauksena: kaikkea tehtävässä vastaan tulevaa tietoa ei saa muuttaa muistiksi.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 2 — Väärä samankaltaisuus (15 min)</h2></div><div class="task-card-body">
 <p>Anna kaksi aiempaa tapausta, joista toinen käyttää samoja sanoja mutta koskee eri ongelmaa. Ryhmä päättää, millä näytöllä hakutuloksen osuvuus tarkistetaan ennen käyttöä.</p>
-<p>Tehtävän ydin on huomata, ettei samankaltaisuus vielä tarkoita soveltuvuutta. Pyydä ryhmää nimeämään vähintään yksi tieto, jonka täytyy täsmätä, ja yksi ristiriita, jonka vuoksi aiempi tapaus pitää hylätä. Purussa kannattaa erottaa toisistaan hyvä hakutulos ja oikea päätös: hakujärjestelmä voi löytää ehdokkaan, mutta harnessin tai ihmisen on vielä tarkistettava sen käyttökelpoisuus.</p>
+<p>Tehtävän ydin on huomata, ettei samankaltaisuus vielä tarkoita soveltuvuutta. Pyydä ryhmää nimeämään vähintään yksi tieto, jonka täytyy täsmätä, ja yksi ristiriita, jonka vuoksi aiempi tapaus pitää hylätä. Purussa kannattaa erottaa toisistaan hyvä hakutulos ja oikea päätös: hakujärjestelmä voi löytää ehdokkaan, mutta agentin ohjauskehyksen tai ihmisen on vielä tarkistettava sen käyttökelpoisuus.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aktiviteetti 3 — Tilakone paperilla (20 min)</h2></div><div class="task-card-body">
 <p>Oppija kuvaa kolme tilaa ja siirtymäehdot:</p>
 <table>
@@ -127,10 +129,10 @@
 <p>Anna periaate: ”Älä jaa yhden asiakkaan tietoja toiselle.” Oppijat päättävät:</p>
 <ul>
 <li>mitä kirjoitetaan järjestelmäohjeeseen</li>
-<li>mitä käyttöoikeutta harness rajoittaa</li>
+<li>mitä käyttöoikeutta agentin ohjauskehys rajoittaa</li>
 <li>missä tarvitaan tarkistus tai ihmisen hyväksyntä</li>
 </ul>
-<p>Päätä tehtävä vertaamalla ryhmien ratkaisuja. Järjestelmäprompti voi ilmaista tavoitteen, mutta arkaluonteisen tiedon käyttöoikeutta ei pidä jättää pelkän tekstiohjeen varaan. Hyvä vastaus kertoo, miten harness rajoittaa pääsyä tietoihin ja mitä tapahtuu, jos sääntöä ei voida varmistaa teknisesti.</p>
+<p>Päätä tehtävä vertaamalla ryhmien ratkaisuja. Järjestelmäprompti voi ilmaista tavoitteen, mutta arkaluonteisen tiedon käyttöoikeutta ei pidä jättää pelkän tekstiohjeen varaan. Hyvä vastaus kertoo, miten agentin ohjauskehys rajoittaa pääsyä tietoihin ja mitä tapahtuu, jos sääntöä ei voida varmistaa teknisesti.</p>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Opettajan tarkistuslista</h2></div><div class="task-card-body">
 <ul>
 <li>Muistiin ei kerätä tietoa varmuuden vuoksi.</li>
@@ -186,8 +188,8 @@
 <text x="68" y="50" font-size="20" font-weight="800" fill="#1B2336">Konteksti-ikkuna</text>
 <text x="24" y="94" font-size="16" fill="#3A4253">Mitä agentti näkee</text>
 <text x="24" y="118" font-size="16" fill="#3A4253">juuri nyt.</text>
-<text x="24" y="170" font-size="15" font-weight="700" fill="#006B7A">viimeisimmät viestit</text>
-<text x="24" y="208" font-size="14" fill="#5A6478">esim. viimeiset 10 viestiä</text>
+<text x="24" y="170" font-size="15" font-weight="700" fill="#006B7A">valittu aineisto nyt</text>
+<text x="24" y="208" font-size="14" fill="#5A6478">historiaa voidaan tiivistää</text>
 <text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">aika: NYT</text></g>
 <g transform="translate(354,168)">
 <rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -195,7 +197,7 @@
 <text x="68" y="50" font-size="17" font-weight="800" fill="#1B2336">Pitkäkestoinen muisti</text>
 <text x="24" y="94" font-size="16" fill="#3A4253">Mitä on tapahtunut</text>
 <text x="24" y="118" font-size="16" fill="#3A4253">aiemmin.</text>
-<text x="24" y="170" font-size="15" font-weight="700" fill="#247A52">vektoritietokanta</text>
+<text x="24" y="170" font-size="15" font-weight="700" fill="#247A52">rakenteinen tietovarasto</text>
 <text x="24" y="208" font-size="14" fill="#5A6478">esim. "ostanut 5 kertaa"</text>
 <text x="24" y="282" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">aika: ENNEN</text></g>
 <g transform="translate(634,168)">
@@ -214,7 +216,7 @@
 <defs><pattern id="l21g4" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g4)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Konteksti-ikkuna</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Se osa keskustelusta, jonka agentti näkee kerralla — kuin rajattu muistilaatikko.</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Tokeneina rajattu aineisto, jonka malli saa yhden suorituksen aikana.</text>
 <text x="74" y="184" font-size="18" font-weight="700" fill="#5A6478">Keskustelu kasvaa →</text>
 <g font-family="ui-monospace,monospace">
 <rect x="74" y="202" width="120" height="40" rx="8" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/><text x="134" y="227" text-anchor="middle" font-size="13" fill="#9AA6BD">viesti 1</text>
@@ -228,7 +230,7 @@
 <rect x="566" y="240" width="142" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.8"/><text x="637" y="265" text-anchor="middle" font-size="13" fill="#006B7A">viesti 50</text>
 <rect x="722" y="240" width="142" height="40" rx="8" fill="#FFFFFF" stroke="#008799" stroke-width="1.8"/><text x="793" y="265" text-anchor="middle" font-size="13" fill="#006B7A">viesti 51</text>
 </g>
-<text x="410" y="322" font-size="17" fill="#1B2336">Tulee 51. viesti → vanhin viesti poistuu näkyvistä.</text>
+<text x="410" y="322" font-size="17" fill="#1B2336">Järjestelmä valitsee, tiivistää tai jättää sisältöä pois.</text>
 <text x="410" y="348" font-size="16" fill="#5A6478">Rajaaminen on tarkoituksellinen valinta, ei vain puute.</text>
 <rect x="74" y="404" width="812" height="64" rx="12" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="100" y="442" font-size="17" fill="#3A4253">Kaikilla järjestelmillä on rajat prosessointikyvyssä, nopeudessa ja kustannuksissa.</text>
@@ -254,26 +256,26 @@
 <g transform="translate(74,386)">
 <rect x="0" y="0" width="390" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="34" font-size="18" font-weight="700" fill="#1B2336">Neuvonta-agentti</text>
-<text x="24" y="62" font-size="16" fill="#5A6478">pitkät ketjut → 100–200 viestiä</text></g>
+<text x="24" y="62" font-size="16" fill="#5A6478">pitkä tehtävä → valitse olennainen</text></g>
 <g transform="translate(496,386)">
 <rect x="0" y="0" width="390" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <text x="24" y="34" font-size="18" font-weight="700" fill="#1B2336">Transaktioagentti</text>
-<text x="24" y="62" font-size="16" fill="#5A6478">nopeat kysymykset → 20–30 viestiä</text></g>
+<text x="24" y="62" font-size="16" fill="#5A6478">lyhyt tehtävä → vain tarvittava</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Pitkäkestoinen muisti</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 6/13: Pitkäkestoinen tieto</title>
 <defs><pattern id="l21g6" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g6)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Pitkäkestoinen muisti</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Kuukausien yhteistyön jälkeen agentti tarvitsee pysyvämmän muistin.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Pitkäkestoinen tieto</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Täsmällinen tieto ja tekstihaku tarvitsevat eri säilytyspaikat.</text>
 <g transform="translate(420,200)">
 <rect x="0" y="0" width="120" height="100" rx="22" fill="#E5F6F7" stroke="#008799" stroke-width="3"/>
 <line x1="60" y1="0" x2="60" y2="-22" stroke="#008799" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="-28" r="7" fill="#008799"/>
 <circle cx="36" cy="40" r="10" fill="#008799"/><circle cx="84" cy="40" r="10" fill="#008799"/><rect x="34" y="66" width="52" height="8" rx="4" fill="#008799"/></g>
 <text x="480" y="334" text-anchor="middle" font-size="14" font-weight="600" fill="#006B7A">agentti</text>
 <g transform="translate(120,220)" fill="none" stroke="#2F9E69" stroke-width="2.4" stroke-linecap="round"><path d="M3 6 a13 4 0 0 0 40 0 a13 4 0 0 0 -40 0 V52 a13 4 0 0 0 40 0 V6 M3 21 a13 4 0 0 0 40 0 M3 37 a13 4 0 0 0 40 0"/></g>
-<text x="143" y="312" text-anchor="middle" font-size="14" font-weight="600" fill="#247A52">vektoritietokanta</text>
+<text x="143" y="312" text-anchor="middle" font-size="14" font-weight="600" fill="#247A52">rakenteinen tietokanta</text>
 <path d="M180 250 H410" stroke="#2F9E69" stroke-width="2.5"/><path d="M418 250 L406 244 L406 256 Z" fill="#2F9E69"/>
 <text x="295" y="240" text-anchor="middle" font-size="13" fill="#247A52" font-family="ui-monospace,monospace">hae historia</text>
 <rect x="556" y="200" width="330" height="180" rx="14" fill="#F4F5F8" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -286,10 +288,10 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">6 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Vektoritietokanta etsii merkitystä</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 7/13: Semanttinen haku etsii merkitystä</title>
 <defs><pattern id="l21g7" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g7)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Vektoritietokanta etsii merkitystä</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Semanttinen haku etsii merkitystä</text>
 <text x="74" y="132" font-size="18" fill="#5A6478">Se löytää saman asian, vaikka sanoisit sen eri sanoin — ei vain täsmällisiä osumia.</text>
 <g transform="translate(74,168)">
 <rect x="0" y="0" width="390" height="150" rx="14" fill="#FFF6F0" stroke="#E7C3A8" stroke-width="2"/>
@@ -298,7 +300,7 @@
 <text x="28" y="116" font-size="16" fill="#A35A22" font-family="ui-monospace,monospace">"muistikortti" = "muistikortti"</text></g>
 <g transform="translate(496,168)">
 <rect x="0" y="0" width="390" height="150" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
-<text x="28" y="46" font-size="22" font-weight="800" fill="#247A52">Vektoritietokanta</text>
+<text x="28" y="46" font-size="22" font-weight="800" fill="#247A52">Semanttinen vektorihaku</text>
 <text x="28" y="86" font-size="17" fill="#3A4253">Hakee merkityksen perusteella.</text>
 <text x="28" y="116" font-size="16" fill="#247A52" font-family="ui-monospace,monospace">"muistilaite" ≈ "muistiin liittyvä"</text></g>
 <rect x="74" y="346" width="812" height="122" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -346,13 +348,13 @@
 <rect x="0" y="0" width="260" height="180" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,24)" fill="none" stroke="#008799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="2" width="30" height="24" rx="5"/><path d="M0 10 H30 M6 18 H24"/></g>
 <text x="64" y="42" font-size="19" font-weight="800" fill="#006B7A">Konteksti</text>
-<text x="24" y="86" font-size="16" fill="#3A4253">Viimeiset 10 viestiä:</text>
+<text x="24" y="86" font-size="16" fill="#3A4253">Valitut viestit ja tiivistelmä:</text>
 <text x="24" y="116" font-size="16" fill="#1B2336">"Kokeili ratkaisua A.</text>
 <text x="24" y="140" font-size="16" fill="#1B2336">Se ei auttanut."</text></g>
 <g transform="translate(350,164)">
 <rect x="0" y="0" width="260" height="180" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,22)" fill="none" stroke="#2F9E69" stroke-width="2" stroke-linecap="round"><path d="M3 5 a9 3 0 0 0 26 0 a9 3 0 0 0 -26 0 V25 a9 3 0 0 0 26 0 V5 M3 15 a9 3 0 0 0 26 0"/></g>
-<text x="64" y="42" font-size="17" font-weight="800" fill="#247A52">Pitkäkestoinen muisti</text>
+<text x="64" y="42" font-size="17" font-weight="800" fill="#247A52">Rakenteinen historia + tietopohja</text>
 <text x="24" y="86" font-size="16" fill="#3A4253">Asiakas 3 vuotta.</text>
 <text x="24" y="116" font-size="16" fill="#1B2336">Edellisellä kerralla</text>
 <text x="24" y="140" font-size="16" fill="#1B2336">ratkaisu B auttoi.</text></g>
@@ -373,7 +375,7 @@
 <defs><pattern id="l21g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l21g10)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Pysyvät toimintaperiaatteet</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Nämä ovat ohjeita ja harnessin sääntöjä — eivät muistia tai agentin omia arvoja.</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Nämä ovat ohjeita ja ohjauskehyksen sääntöjä — eivät muistia tai agentin omia arvoja.</text>
 <g transform="translate(74,168)">
 <rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="46" cy="46" r="24" fill="#E5F6F7"/><g transform="translate(34,34)" fill="none" stroke="#008799" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 24 a9 8 0 0 1 18 0"/></g>
@@ -383,7 +385,7 @@
 <rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="46" cy="46" r="24" fill="#EAF7F0"/><g transform="translate(35,33)" fill="none" stroke="#2F9E69" stroke-width="2.2" stroke-linejoin="round"><path d="M12 2 L22 6 V13 c0 7 -5 10 -10 12 c-5 -2 -10 -5 -10 -12 V6 Z"/></g>
 <text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Mitkä toiminnot on teknisesti estetty?</text>
-<text x="92" y="70" font-size="17" fill="#5A6478">Harnessin raja: salasanaa ei palauteta eikä tietoa luovuteta sivulliselle.</text></g>
+<text x="92" y="70" font-size="17" fill="#5A6478">Agentin ohjauskehyksen raja: salasanaa ei palauteta eikä tietoa luovuteta sivulliselle.</text></g>
 <g transform="translate(74,380)">
 <rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="46" cy="46" r="24" fill="#FFF7E2"/><g transform="translate(34,34)" fill="none" stroke="#C79100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 a8 8 0 1 1 3 6"/><path d="M5 9 V16 H12"/></g>
@@ -428,7 +430,7 @@
 <text x="28" y="82" font-size="17" fill="#3A4253">Mitä tietoa agenttisi tarvitsee</text><text x="28" y="106" font-size="17" fill="#3A4253">yksittäisen keskustelun aikana?</text></g>
 <g transform="translate(496,170)">
 <rect x="0" y="0" width="390" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
-<text x="28" y="46" font-size="20" font-weight="800" fill="#247A52">Pitkäkestoinen muisti</text>
+<text x="28" y="46" font-size="20" font-weight="800" fill="#247A52">Pitkäkestoinen tieto</text>
 <text x="28" y="82" font-size="17" fill="#3A4253">Mitä sen täytyy muistaa</text><text x="28" y="106" font-size="17" fill="#3A4253">keskustelujen välillä?</text></g>
 <g transform="translate(74,306)">
 <rect x="0" y="0" width="390" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
@@ -452,12 +454,12 @@
 <rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="36" cy="40" r="14" fill="#E5F6F7"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#006B7A">1</text>
 <text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Konteksti-ikkuna</text>
-<text x="64" y="62" font-size="15" fill="#5A6478">20–200 viestiä: mitä on nyt.</text></g>
+<text x="64" y="62" font-size="15" fill="#5A6478">Tokeneina rajattu: mitä malli näkee nyt.</text></g>
 <g transform="translate(494,168)">
 <rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="36" cy="40" r="14" fill="#EAF7F0"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#247A52">2</text>
-<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Pitkäkestoinen muisti</text>
-<text x="64" y="62" font-size="15" fill="#5A6478">Vektoritietokanta: mitä oli ennen.</text></g>
+<text x="64" y="36" font-size="19" font-weight="700" fill="#1B2336">Historia ja tietopohja</text>
+<text x="64" y="62" font-size="15" fill="#5A6478">Rakenteinen tieto ja tarkistettu semanttinen haku.</text></g>
 <g transform="translate(74,256)">
 <rect x="0" y="0" width="392" height="80" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="36" cy="40" r="14" fill="#FFF7E2"/><text x="36" y="46" text-anchor="middle" font-size="18" font-weight="800" fill="#9A7400">3</text>
@@ -471,7 +473,7 @@
 <rect x="74" y="368" width="812" height="100" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(102,400)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
 <text x="150" y="406" font-size="21" font-weight="800" fill="#247A52">Kielimalli ei kanna muistia yksin.</text>
-<text x="150" y="438" font-size="18" fill="#3A4253">Harness valitsee, tallentaa ja hakee kontekstin.</text>
+<text x="150" y="438" font-size="18" fill="#3A4253">Agentin ohjauskehys valitsee, tallentaa ja hakee kontekstin.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-20/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-22/">Seuraava →</a></div></div></div>

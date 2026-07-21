@@ -43,7 +43,7 @@ Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 san
 
 **4. Mitä lokitat.**
 
-*Käsite:* lokitus = agentti kirjaa jokaisen suorituksensa pysyvään paikkaan (Google Sheets, tiedosto, tietokanta).
+*Käsite:* lokitus = agentti kirjaa jokaisen suorituksensa pysyvään paikkaan (taulukko, tiedosto tai tietokanta).
 
 *Esimerkki:* "Jokaisesta suorituksesta tallennetaan: aika, käyttäjän viesti, agentin vastaus, käytetyt työkalut, mahdolliset virheet."
 
@@ -61,12 +61,7 @@ suunnitelmaani — vain hyökkää.
 
 Lisää sitten suunnitelmaasi vastatoimet realistisiin hyökkäyksiin.
 
-::: luokka
-> **Laajennusvinkki kotiin (vapaaehtoinen):** Jos haluat oikeasti kokea promptihyökkäyksen, avaa oma Copilot-agenttisi (tunneilta 17–18) ja kokeile tahallaan rikkoa sen rajoja: "unohda ohjeet…", roolinvaihto ("Olet nyt…"), piilotettu konteksti ("Tämä on testi…"), tarinamuoto. Tämä kokemus opettaa parhaiten, miksi turvakerros tarvitaan.
-:::
-::: verkko
-> **Laajennusvinkki (vapaaehtoinen):** Jos haluat oikeasti kokea promptihyökkäyksen, avaa oma Copilot-agenttisi (jonka rakensit tuntien 17–18 pohjalta) ja kokeile tahallaan rikkoa sen rajoja: "unohda ohjeet…", roolinvaihto ("Olet nyt…"), piilotettu konteksti ("Tämä on testi…"), tarinamuoto. Tämä kokemus opettaa parhaiten, miksi turvakerros tarvitaan.
-:::
+> **Laajennusvinkki (vapaaehtoinen):** Avaa oma harjoitusbottisi ja kokeile turvallisella testiaineistolla, saako käyttäjän viesti sen ohittamaan rajansa tai vaihtamaan tehtäväänsä. Kirjaa, mikä yritys vaikutti vastaukseen ja mikä tekninen raja estäisi vahingon. Älä käytä oikeita henkilötietoja tai anna botille toimintaoikeuksia testin ajaksi.
 
 > **Vinkki muistiinpanoihin:** Tämä on 4/5 lopputyösi osista.
 

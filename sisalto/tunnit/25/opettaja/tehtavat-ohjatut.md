@@ -9,7 +9,7 @@ Luokittele tilanteet:
 - tavallisen vastaanottokuittauksen lähettäminen
 - hinnanalennuksen hyväksyminen
 - tietokannan rivin poistaminen
-- lisätiedon pyytäminen epäselvään viestiin
+- lisätiedon pyytäminen viestiin, josta puuttuu pakollinen tieto
 - lääkinnälliseen tai oikeudelliseen päätökseen vaikuttava suositus
 
 Kysy jokaisesta: mikä on virheen vaikutus, voidaanko toiminto perua ja kuka kantaa vastuun?
@@ -39,7 +39,7 @@ Ryhmät määrittävät yhdelle rahaa koskevalle päätökselle:
 
 Kriittistä päätöstä ei hyväksytä automaattisesti pelkän vastaamattomuuden vuoksi.
 
-Pyydä ryhmiä perustelemaan erityisesti turvallinen oletustoiminto. Rahaa, oikeuksia tai ulkoista sitoumusta koskevassa tilanteessa odottaminen, hylkääminen tai eskalointi on yleensä perustellumpaa kuin automaattinen hyväksyntä. Samalla huomataan, että aikaraja ei ole pelkkä käyttöliittymän yksityiskohta vaan osa harnessin toimintalogiikkaa.
+Pyydä ryhmiä perustelemaan erityisesti turvallinen oletustoiminto. Rahaa, oikeuksia tai ulkoista sitoumusta koskevassa tilanteessa odottaminen, hylkääminen tai eskalointi on yleensä perustellumpaa kuin automaattinen hyväksyntä. Samalla huomataan, että aikaraja ei ole pelkkä käyttöliittymän yksityiskohta vaan osa agentin ohjauskehyksen toimintalogiikkaa.
 
 ## Aktiviteetti 4 — Palautteesta hallituksi muutokseksi (20 min)
 
@@ -56,7 +56,7 @@ Täytä ketju:
 
 Korosta, ettei päätöksen tallentaminen vielä muuta kielimallia tai agentin toimintaa.
 
-Käy yksi esimerkki koko ketjun läpi. Jos hyväksyjä hylkää samanlaisen ehdotuksen toistuvasti, loki paljastaa ilmiön, mutta sääntöä ei silti muuteta suoraan. Ensin ihminen arvioi, onko kyse aidosta toimintatavasta vai tilapäisestä poikkeuksesta. Vasta tämän jälkeen muutos tehdään ohjeeseen, harnessiin tai testiin ja sen vaikutus tarkistetaan uudella testiajolla.
+Käy yksi esimerkki koko ketjun läpi. Jos hyväksyjä hylkää samanlaisen ehdotuksen toistuvasti, loki paljastaa ilmiön, mutta sääntöä ei silti muuteta suoraan. Ensin ihminen arvioi, onko kyse aidosta toimintatavasta vai tilapäisestä poikkeuksesta. Vasta tämän jälkeen muutos tehdään ohjeeseen, agentin ohjauskehykseen tai testiin ja sen vaikutus tarkistetaan uudella testiajolla.
 
 ## Opettajan tarkistuslista
 

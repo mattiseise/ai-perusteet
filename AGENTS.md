@@ -32,7 +32,7 @@ Tekoälyn perusteet -verkkokurssi (aiperusteet.fi). 27 oppituntia kolmessa moduu
 ## Termilukot (koko kurssi)
 
 - **prompti** (ei "kehote" — paitsi kertamaininta tunnin 4 teoriassa ja sanastossa: "suomeksi myös kehote"). Yhdyssanat: järjestelmäprompti.
-- **pitkäkestoinen muisti** (ei pitkäaikainen), **eskalointi** (ei eskalaatio/eskalatio), **agentti = kielimalli + harness**, kuusi rakennusosaa tunnin 19 nimillä.
+- **pitkäkestoinen muisti** (ei pitkäaikainen), **eskalointi** (ei eskalaatio/eskalatio). Tällä kurssilla rakennettava tekoälyagentti rajataan kielimallin ja sitä ohjaavan **agentin ohjauskehyksen (harness)** muodostamaksi järjestelmäksi; kyse ei ole yleispätevästä agentin määritelmästä. Kuusi rakennusosaa säilytetään tunnin 19 nimillä.
 - Tuotenimet ja päivämäärät vain "Tilanne heinäkuussa 2026" -laatikoissa (tunnit 19 ja 22) — ne ovat tietoisia huoltokohtia.
 - Em-viiva (—) on talotyyli.
 

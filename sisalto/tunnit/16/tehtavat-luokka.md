@@ -1,6 +1,10 @@
-# Opiskelutehtävät — Valinnainen tuotantolaboratorio
+# Oma botti III — toteutustavan valinta ja erikoistyökalujen laboratorio
 
-> Valitse yksi reitti: kuva, ääni tai musiikki, video tai koodi. Reitistä riippumatta osoitat saman taidon: johdat käyttötarpeesta kriteerit, arvioit ensimmäistä versiota niiden avulla, muutat yhtä asiaa ja vertaat muutoksen vaikutusta ennen julkaisu- tai hylkäyspäätöstä.
+> Tutki kaikkia neljää reittiä ja kokeile yhtä: kuvaa, ääntä tai musiikkia, videota tai koodia. Kytke kokeilu omaan apuri-bottiisi vain, jos se ratkaisee aidon käyttäjätarpeen. Tunnin lopuksi teet bottiprojektillesi toteutus-, riski- ja käyttöönottopäätöksen.
+
+## Vaihe 0 — Palaa bottisi tehtävään
+
+Avaa tunnin 14 määrittely ja tunnin 15 tietopohja sekä testisuunnitelma. Kirjoita yhdellä virkkeellä, mitä käyttäjän pitää saada botin avulla tehtyä. Nimeä sen jälkeen yksi ominaisuus, joka on välttämätön, ja yksi kiinnostava lisä, jonka voit rajata pois.
 
 Jos sinulla ei ole sopivaa palvelua, käytä opettajan antamia kahta esimerkkituotosta ja tee arviointi- sekä korjaussuunnitelma ilman tilin luomista.
 
@@ -86,6 +90,29 @@ Käy ennen julkaisemista tai käyttöönottoa läpi seuraavat kysymykset:
 
 Tee tarkistuksen perusteella selvä päätös: **julkaise, hylkää tai palauta korjattavaksi**. Kirjaston esimerkkivideo voidaan julkaista, kun version 2 tekstitys on osoitettu luettavaksi, lähdeaineiston käyttö on luvallista, kuvassa ei ole tunnistettavia henkilöitä ja ihminen on tarkistanut ohjeen oikeellisuuden. Jos yksikin porttiehto jää avoimeksi, versiota ei julkaista vielä.
 
+## Vaihe 7 — Tee bottiprojektin valintakortti
+
+Kokoa tunnin ainoa tallennettava tuotos: bottiprojektin valintakortti. Merkitse ensin kaikkien neljän työkalureitin sopivuus yhdellä rivillä. Vain yksi reitti kokeillaan käytännössä; muut näkyvät vertailussa, eikä niistä tehdä erillisiä tuotoksia.
+
+| Työkalureitti | Sopisiko se bottisi käyttäjätarpeeseen? Miksi tai miksi ei? |
+| --- | --- |
+| Kuva |  |
+| Ääni tai musiikki |  |
+| Video |  |
+| Koodi |  |
+
+Vertaa sen jälkeen kahta mahdollista botin toteutustapaa. Vähintään toisen pitää olla mahdollinen omilla käytettävissäsi olevilla välineillä.
+
+| Kysymys | Toteutustapa A | Toteutustapa B |
+| --- | --- | --- |
+| Miten järjestelmäprompti ja tietopohja toteutetaan? |  |  |
+| Tarvitaanko kuva-, ääni-, video- tai koodityökalua? Miksi? |  |  |
+| Mitä aineistoa käsitellään ja millä käyttöoikeuksilla? |  |  |
+| Millä näytöllä osoitat toiminnan tai suunnittelun? |  |  |
+| Mikä on suurin riski tai rajoitus? |  |  |
+
+Kirjoita vertailun jälkeen kolme päätöstä proosana. Kerro, minkä toteutustavan valitset, mitä riskiä rajaat ja millä ehdolla botti voidaan ottaa käyttöön. Jos valitset dokumentoidun suunnittelupolun, sano suoraan, mitkä integraatiot, käyttöoikeudet tai tekniset toiminnot jäävät simuloiduiksi.
+
 ---
 
-**Tallennettava tuotos:** laboratorioloki, joka sisältää käyttötarkoituksen, syötteen, versiot 1 ja 2, kriteeritaulukot, yhden nimetyn muutoksen, johtopäätöksen ja vastuullisuustarkistuksen.
+**Tallennettava tuotos:** yksi bottiprojektin valintakortti. Sen sisällä näkyvät neljän työkalureitin tiivis vertailu, yhden reitin käytännön kokeilu, kahden botin toteutustavan vertailu sekä toteutus-, riski- ja käyttöönottopäätös. Erillistä laboratoriolokia ei palauteta.

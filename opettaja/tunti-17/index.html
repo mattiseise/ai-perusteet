@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="40PEbUdB2o-sX8ibIU6TqrFwksYDFy5XrP465BNnVDw">
-<title>Projektidokumenttibotti — suunnittele ja aloita rakentaminen — Opettajan opas — AI · Perusteet</title>
-<meta name="description" content="Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa…">
+<title>Oma apuri-botti — toteuta ensimmäinen versio — Opettajan opas — AI · Perusteet</title>
+<meta name="description" content="Tähän mennessä olet kerännyt kolme rakennuspalikkaa ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen…">
 <link rel="canonical" href="https://aiperusteet.fi/opettaja/tunti-17/">
-<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Projektidokumenttibotti — suunnittele ja aloita rakentaminen — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-17/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Projektidokumenttibotti — suunnittele ja aloita rakentaminen — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", "description": "Tähän mennessä olet kerännyt kuuden tunnin aikana kolme rakennuspalikkaa. Tällä tunnilla yhdistät ne ensimmäiseksi toimivaksi botiksi Microsoft Copilotissa…", "url": "https://aiperusteet.fi/opettaja/tunti-17/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
+<meta property="og:type" content="article"><meta property="og:site_name" content="AI · Perusteet"><meta property="og:locale" content="fi_FI"><meta property="og:title" content="Oma apuri-botti — toteuta ensimmäinen versio — Opettajan opas — AI · Perusteet"><meta property="og:description" content="Tähän mennessä olet kerännyt kolme rakennuspalikkaa ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen…"><meta property="og:url" content="https://aiperusteet.fi/opettaja/tunti-17/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Oma apuri-botti — toteuta ensimmäinen versio — Opettajan opas — AI · Perusteet"><meta name="twitter:description" content="Tähän mennessä olet kerännyt kolme rakennuspalikkaa ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Oma apuri-botti — toteuta ensimmäinen versio", "description": "Tähän mennessä olet kerännyt kolme rakennuspalikkaa ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen…", "url": "https://aiperusteet.fi/opettaja/tunti-17/", "isPartOf": {"@type": "Course", "name": "AI · Perusteet", "url": "https://aiperusteet.fi/kurssi/"}, "inLanguage": "fi", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "isAccessibleForFree": true, "educationalLevel": "Aloittelija / perustaso", "learningResourceType": "Oppitunti"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Opettajan opas", "item": "https://aiperusteet.fi/opettaja/"}, {"@type": "ListItem", "position": 2, "name": "Tekoälyjen käyttö"}, {"@type": "ListItem", "position": 3, "name": "Oppitunti 17"}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20transform%3D%22translate%281.8%2C1.8%29%20scale%280.85%29%22%3E%3Cpath%20d%3D%22M12%2012%20V4.6%20M12%2012%20L5.6%2017.6%20M12%2012%20L18.4%2017.6%22%20stroke%3D%22%230B0F1A%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.7%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,654 +18,98 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 17</span></div><div class="lesson-title">Projektidokumenttibotti — suunnittele ja aloita rakentaminen</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-17/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-17/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-17/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mitä ensimmäinen testi paljastaa botin ohjeista, tietopohjasta tai rajoista?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-17/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-17/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-17-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-17-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-17-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-17-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-17-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-17-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-17-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-17-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 17: oman apuri-botin suunnittelu ja rakentamisen aloitus</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin tarkoitus ja konteksti</h2></div><div class="task-card-body">
-<p>Tämä oppitunti on <strong>Tekoälyjen käyttö</strong> -osion arvioinnin ensimmäinen osa. Oppitunti 17 keskittyy <strong>suunnitteluun</strong> ja <strong>rakentamisen aloittamiseen</strong>. Oppitunnilla 18 opiskelijat viimeistelevät, parantavat ja esittelevät työnsä.</p>
-<p>Oppitunnin tavoitteena on, että opiskelijat suunnittelevat ja rakentavat <strong>Microsoft Copilotilla</strong> uuden botin: oman <strong>apuri-botin</strong> itse valitsemaansa arjen aiheeseen — opiskeluun, harrastukseen, tuttuun pieneen palveluun tai vaikka pelin tai sisällön ideointiin. Botin tehtävänä on kysyä käyttäjältä oikeita kysymyksiä, ohjata häntä järjestelmällisesti eteenpäin ja toimia ohjaavan apurin tavoin.</p>
-<p>Opiskelijat osoittavat osaamistaan suunnittelemalla botille tarkoituksen, roolin, ohjeet, rajaukset ja kysymyspatteriston. He kirjoittavat <strong>järjestelmäpromptin</strong>, testaavat bottia käytännön tilanteissa, parantavat sitä iteratiivisesti ja dokumentoivat prosessin selkeästi.</p>
-<p><strong>Opettajan painotus:</strong> Tämän oppitunnin tärkein viesti on, että arvioinnissa ei mitata vain lopullista bottia. Arvioinnissa mitataan erityisesti suunnittelua, testausta, iteraatiota ja dokumentoitua ajattelua. Hyvä työ näyttää, miten botti syntyi ja miksi sitä muutettiin.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppimisen tavoitteet</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Muistaa ja ymmärtää</h3></div><div class="task-card-body">
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/opettaja/">Opettajan opas</a><span>›</span><span>Tekoälyjen käyttö</span><span>›</span><span>Oppitunti 17</span></div><div class="lesson-title">Oma apuri-botti — toteuta ensimmäinen versio</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">90 min oppitunti</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw" href="/kurssi/tunti-17/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-17/" data-view="luokka">Luokkaversio</a><a class="vw on" href="/opettaja/tunti-17/" data-view="opettaja">Opettajan opas</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mitä kolme ensimmäistä testiä paljastavat botin ohjeista, tietopohjasta tai rajoista?</span></p></div></aside><div class="lesson-strip"><div class="share-box"><div class="sb-txt"><b>Jaa tämä tunti opiskelijoille</b><span>Opiskelijat näkevät luokkaversion: teoria, tehtävät, harjoittele, sanasto ja diat.</span></div><a class="sb-go" href="/luokka/tunti-17/" data-view="luokka">Avaa luokkaversio →</a><button type="button" onclick="copyShare(this)" data-url="/luokka/tunti-17/">Kopioi linkki</button></div></div><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-17-tuntisuunnitelma" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-17-tuntisuunnitelma" tabindex="0" data-tab="tuntisuunnitelma" onclick="showTab('tuntisuunnitelma')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="3" width="10" height="11" rx="1.5"/><path d="M6 3.2V2.2h4v1M6 7h4M6 10h2.5" stroke-linecap="round"/></svg><span>Tuntisuunnitelma</span></button><button id="tab-lesson-17-ohjatut" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-17-ohjatut" tabindex="-1" data-tab="ohjatut" onclick="showTab('ohjatut')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="5.8" cy="5" r="2.1"/><path d="M2.5 13c0-2 1.5-3.2 3.3-3.2S9.1 11 9.1 13" stroke-linecap="round"/><path d="M10.6 3.5A2 2 0 0113 5.4a2 2 0 01-1.3 1.9M11 9.9c1.5.3 2.5 1.5 2.5 3.1" stroke-linecap="round"/></svg><span>Opettajavetoiset tehtävät</span></button><button id="tab-lesson-17-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-17-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-17-tuntisuunnitelma" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-17-tuntisuunnitelma" data-tab="tuntisuunnitelma"><h1>Opettajan materiaalit — oppitunti 17: ensimmäinen versio ja ensitestit</h1>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Tunnin tarkoitus</h2></div><div class="task-card-body">
+<p>Oppija kokoaa aiempien tuntien kolme rakennuspalikkaa ensimmäiseksi arvioitavaksi versioksi. Rakennuspalikat ovat <strong>Promptikortti</strong>, <strong>botin määrittely</strong> sekä <strong>tietopohja ja testisuunnitelma</strong>. Järjestelmäprompti ei ole neljäs rakennuspalikka, vaan näistä päätöksistä koottu toteutusohje botille.</p>
+<p>Teknisellä toteutuspolulla oppija rakentaa botin saatavilla olevalle alustalle. Dokumentoidulla suunnittelupolulla hän laatii arkkitehtuurin ja simuloidut suoritusjäljet. Polut ovat samanarvoisia, mutta simulaatio ei todista integraation, käyttöoikeuksien, tilan säilymisen tai lokituksen toimivan teknisessä järjestelmässä.</p>
+</div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Osaamistavoitteet</h2></div><div class="task-card-body">
+<p>Tunnin jälkeen oppija:</p>
 <ul>
-<li>Opiskelija ymmärtää, mikä <strong>apuri-botti</strong> on ja mihin sitä käytetään.</li>
-<li>Opiskelija ymmärtää, että hyvä botti tarvitsee selkeän <strong>tarkoituksen</strong>, <strong>roolin</strong>, <strong>ohjeet</strong> ja <strong>rajaukset</strong>.</li>
-<li>Opiskelija ymmärtää, että <strong>järjestelmäprompti</strong> ohjaa botin käyttäytymistä ja kysymysten järjestystä.</li>
-<li>Opiskelija ymmärtää, että testaus ja korjaaminen kuuluvat botin rakentamiseen.</li>
+<li>kokoaa kolme rakennuspalikkaa johdonmukaiseksi järjestelmäpromptiksi ja toteutukseksi</li>
+<li>tuottaa teknisen minimiversion tai tarkistettavan suunnittelupaketin</li>
+<li>ajaa tai simuloi ensimmäisen kerran kaikki kolme ennalta kirjoitettua testiä: normaalin tapauksen, kielteisen testin ja reunatapauksen</li>
+<li>vertaa jokaista tulosta etukäteen kirjoitettuun odotukseen</li>
+<li>laatii havaintojen perusteella korjauslistan tunnille 18 muuttamatta testien odotuksia jälkikäteen.</li>
 </ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Soveltaa ja analysoida</h3></div><div class="task-card-body">
-<ul>
-<li>Opiskelija osaa suunnitella järjestelmällisen <strong>kysymysketjun</strong> käyttäjän ohjaamista varten.</li>
-<li>Opiskelija osaa kirjoittaa järjestelmäpromptin, jossa näkyvät botin identiteetti, tarkoitus, toimintatapa ja rajaukset.</li>
-<li>Opiskelija osaa testata bottia vähintään kahdella erilaisella käyttöskenaariolla.</li>
-<li>Opiskelija osaa analysoida testituloksia: mikä toimi, mikä ei toiminut ja miksi.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Luoda ja arvioida</h3></div><div class="task-card-body">
-<ul>
-<li>Opiskelija osaa rakentaa ensimmäisen toimivan version apuri-botista.</li>
-<li>Opiskelija osaa parantaa bottia testitulosten perusteella.</li>
-<li>Opiskelija osaa dokumentoida tehtävät 17.1–17.4 niin, että toinen henkilö ymmärtää rakentamisen vaiheet.</li>
-<li>Opiskelija osaa arvioida omaa botin kehitysprosessiaan kriittisesti.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioinnin kokonaisuus</h2></div><div class="task-card-body">
-<p>Oppitunnit 17 ja 18 muodostavat yhdessä <strong>Tekoälyjen käyttö</strong> -osion arvioinnin. Oppitunnilla 17 arvioidaan erityisesti suunnittelua, järjestelmäpromptia, testausta, iteraatiota ja dokumentaatiota. Oppitunnilla 18 arviointi jatkuu viimeistelyllä, esittelyllä ja lopullisen tuotoksen laadulla.</p>
-<p>Oppitunnin 17 osuus on noin <strong>kaksi kolmasosaa</strong> kokonaisuudesta (40 pistettä 60 pisteen kokonaisuudesta).</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Pisteytys</h3></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Arvosana</th>
-<th>Pistemäärä</th>
-<th>Yleiskuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>5 — Erinomainen</strong></td>
-<td>36–40 p</td>
-<td>Suunnittelu, testaus, iteraatio ja dokumentaatio ovat selkeitä, perusteltuja ja asiallisia.</td>
-</tr>
-<tr>
-<td><strong>4 — Hyvä</strong></td>
-<td>32–35 p</td>
-<td>Kokonaisuus toimii hyvin, mutta joissakin kohdissa analyysi tai dokumentointi voisi olla tarkempaa.</td>
-</tr>
-<tr>
-<td><strong>3 — Tyydyttävä</strong></td>
-<td>28–31 p</td>
-<td>Perusasiat ovat mukana, mutta suunnittelu, testaus tai parantaminen jää osittain pinnalliseksi.</td>
-</tr>
-<tr>
-<td><strong>2 — Välttävä</strong></td>
-<td>20–27 p</td>
-<td>Työssä on selviä puutteita, mutta joitakin arvioitavia osia on tehty.</td>
-</tr>
-<tr>
-<td><strong>1 — Hylätty</strong></td>
-<td>0–19 p</td>
-<td>Työ ei vielä osoita riittävää osaamista botin suunnittelusta, testaamisesta ja dokumentoinnista.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointikohteet yksityiskohtaisesti</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>1. Botin suunnittelu ja rooli — 8 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Onko botin tarkoitus selkeä: auttaa käyttäjää jossakin tutussa arjen tehtävässä?</li>
-<li>Onko botin rooli uskottava, esimerkiksi kertauskaveri, harrastuksen opastaja tai FAQ-apuri?</li>
-<li>Ovatko ohjeet selkeät: miten botti kysyy, kuuntelee, tarkentaa ja ohjaa eteenpäin?</li>
-<li>Ovatko rajaukset sopivat?</li>
-<li>Onko tehtävässä 17.1 laadittu <strong>kysymyspatteristo</strong> järjestelmällinen ja riittävän kattava?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erittäin hyvä, 8 p</strong></td>
-<td>Tarkoitus on konkreettinen, rooli on uskottava, ohjeet ovat selkeitä, rajaukset ovat vastuullisia ja kysymyspatteristo sisältää noin 15–20 hyvin järjestettyä kysymystä esimerkiksi viidessä ryhmässä.</td>
-</tr>
-<tr>
-<td><strong>Heikko, 1–2 p</strong></td>
-<td>Tarkoitus on epämääräinen, rooli puuttuu tai on yleinen, ohjeet ovat tasolla ”kysy oikeita kysymyksiä”, rajaukset puuttuvat ja kysymyspatteristo on lyhyt tai satunnainen.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Esimerkki hyvästä tarkoituksesta:</strong></p>
-<p>”Botti auttaa opiskelijaa kertaamaan kokeeseen järjestelmällisten kysymysten avulla.”</p>
-<p><strong>Esimerkki hyvästä roolista:</strong></p>
-<p>”Olet kärsivällinen kertauskaveri, jolla on kokemusta aiheen selittämisestä, oikeiden kysymysten esittämisestä ja käyttäjän ohjaamisesta vaihe vaiheelta.”</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>2. Järjestelmäpromptin kirjoittaminen — 8 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Sisältääkö järjestelmäprompti <strong>identiteetin</strong>, <strong>tarkoituksen</strong>, <strong>ohjeet</strong> ja <strong>rajaukset</strong>?</li>
-<li>Ovatko ohjeet selkeitä kielimallille?</li>
-<li>Näkyykö promptista, miten botin pitää käyttäytyä käytännössä?</li>
-<li>Onko prompti riittävän laaja, esimerkiksi noin 300–500 sanaa?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erittäin hyvä, 8 p</strong></td>
-<td>Prompt sisältää kaikki neljä osaa selkeästi. Ohjeet ovat konkreettisia, johdonmukaisia ja toiminnallisia. Promptista näkee, missä järjestyksessä botti kysyy ja miten se ohjaa käyttäjää kohti lopputulosta.</td>
-</tr>
-<tr>
-<td><strong>Heikko, 1–2 p</strong></td>
-<td>Prompt on vain muutama lause. Rajaukset puuttuvat, ohjeet ovat yleisiä, ja teksti näyttää tekoälyn tuottamalta ilman opiskelijan omaa muokkausta.</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="pause"><p><strong>Järjestelmäprompti on botin toimintasuunnitelma.</strong> Jos se on epämääräinen, botti joutuu arvaamaan. Jos se on täsmällinen, botti toimii johdonmukaisemmin.</p>
-</blockquote>
-<h4>Järjestelmäpromptin suositeltu rakenne</h4>
-<p><strong>1. Identiteetti:</strong> Kuka botti on?</p>
-<p><strong>2. Tarkoitus:</strong> Mitä botti auttaa käyttäjää tekemään?</p>
-<p><strong>3. Toimintatapa:</strong> Missä järjestyksessä botti kysyy ja miten se reagoi vastauksiin?</p>
-<p><strong>4. Rajaukset:</strong> Mitä botti ei saa tehdä?</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>3. Testaus ja validointi — 8 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Kuinka monta testiskenaariota opiskelija on dokumentoinut?</li>
-<li>Ovatko testit erilaisia ja järkeviä?</li>
-<li>Onko mukana sekä onnistumisia että kehittämiskohteita?</li>
-<li>Onko testidokumentaatiossa näkyvissä <strong>syöte</strong>, <strong>odotettu toiminta</strong> ja <strong>todellinen tulos</strong>?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erittäin hyvä, 8 p</strong></td>
-<td>Opiskelija dokumentoi kaksi erilaista testiskenaariota, esimerkiksi yksinkertaisen ja monimutkaisen käyttötilanteen. Testeissä näkyvät botin vastaukset, analyysi onnistumisista ja kehittämiskohteista.</td>
-</tr>
-<tr>
-<td><strong>Heikko, 1–2 p</strong></td>
-<td>Testejä on vain yksi tai ne ovat lähes samanlaisia. Testidokumentaatio on epäselvä tai analyysi puuttuu.</td>
-</tr>
-</tbody>
-</table>
-<h4>Testauspohja opiskelijoille</h4>
-<table>
-<thead>
-<tr>
-<th>Testi</th>
-<th>Käyttäjän syöte</th>
-<th>Odotettu toiminta</th>
-<th>Botin todellinen vastaus</th>
-<th>Johtopäätös</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Testi 1</strong></td>
-<td>Yksinkertainen käyttötilanne</td>
-<td>Botti kysyy peruskysymykset ja ohjaa käyttäjän alustavaan lopputulokseen.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Testi 2</strong></td>
-<td>Monimutkainen tai epäselvä käyttötilanne</td>
-<td>Botti pyytää tarkennuksia eikä tee liian nopeita oletuksia.</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>4. Iteraatio ja parantaminen — 8 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Löysikö opiskelija testien perusteella ongelmia?</li>
-<li>Muuttiko opiskelija järjestelmäpromptia tai kysymyspatteristoa ongelmien perusteella?</li>
-<li>Onko muutokset dokumentoitu?</li>
-<li>Näkyykö työssä <strong>kriittinen ajattelu</strong>?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erittäin hyvä, 8 p</strong></td>
-<td>Opiskelija löytää konkreettisen ongelman, muuttaa promptia tai kysymyksiä, testaa uudelleen ja dokumentoi, paraniko botin toiminta.</td>
-</tr>
-<tr>
-<td><strong>Heikko, 1–2 p</strong></td>
-<td>Opiskelija ei havaitse ongelmia, vaikka testaus paljastaisi niitä, tai havaitsee ongelmia mutta ei tee muutoksia.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Opettajan muistutus:</strong> Testissä ilmennyt virhe on hyödyllinen havainto. Olennaista on, että opiskelija huomaa, dokumentoi ja korjaa sen.</p>
-<h4>Iteraation dokumentointipohja</h4>
-<table>
-<thead>
-<tr>
-<th>Havaittu ongelma</th>
-<th>Mitä muutin?</th>
-<th>Miksi muutin?</th>
-<th>Miten testasin uudelleen?</th>
-<th>Paraniko toiminta?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>5. Dokumentaatio ja prosessin selkeys — 8 pistettä</h3></div><div class="task-card-body">
-<p><strong>Mitä arvioidaan?</strong></p>
-<ul>
-<li>Onko tehtävät 17.1–17.4 dokumentoitu kokonaisuutena?</li>
-<li>Näkyykö prosessi alusta loppuun?</li>
-<li>Onko mukana kuvakaappauksia tai linkki bottiin?</li>
-<li>Näkyykö dokumentaatiossa opiskelijan oma ymmärrys ja ajattelu?</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Taso</th>
-<th>Kuvaus</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Erittäin hyvä, 8 p</strong></td>
-<td>Dokumentaatio on noin 3–4 A4-sivua. Tehtävät 17.1–17.4 ovat selkeästi mukana. Kuvakaappaukset, testit, muutokset ja opittu asia näkyvät. Teksti on opiskelijan omaa, ei pelkkä tekoälyltä kopioitu tuotos.</td>
-</tr>
-<tr>
-<td><strong>Heikko, 1–2 p</strong></td>
-<td>Dokumentaatio on alle yhden sivun, tehtävät puuttuvat tai ovat epäselviä, kuvakaappauksia ei ole eikä prosessin ajattelu näy.</td>
-</tr>
-</tbody>
-</table>
-<blockquote class="pause"><p><strong>Dokumentaatio näyttää ajattelun.</strong> Ilman dokumentaatiota opettaja näkee vain lopputuloksen, ei osaamista, testejä eikä parannuksia.</p>
-</blockquote></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä väärinkäsityksiä ja korjausvinkkejä</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 1: ”Järjestelmäprompti ei ole niin tärkeä.”</h3></div><div class="task-card-body">
-<p><strong>Opiskelija ajattelee:</strong> ”Voin vain kirjoittaa botille, että kysy käyttäjältä, ja se tekee oikein.”</p>
-<p><strong>Korjaava näkökulma:</strong> Kielimalli ei tunne kontekstia ilman ohjeita. Se tarvitsee tiedon siitä, kuka se on, mitä sen pitää tehdä, missä järjestyksessä sen pitää edetä ja mitä se ei saa tehdä. Ilman näitä botti arvaa.</p>
-<p><strong>Opettajan toiminta:</strong> Havainnollista asia kahdella eri promptilla: toinen on epämääräinen ja toinen täsmällinen. Pyydä opiskelijoita vertaamaan tuloksia.</p></div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 2: ”Yksi testi riittää.”</h3></div><div class="task-card-body">
-<p><strong>Opiskelija ajattelee:</strong> ”Testasin botin yhdellä käyttötilanteella ja se toimi. Valmista.”</p>
-<p><strong>Korjaava näkökulma:</strong> Yksi testi näyttää vain, että botti toimi yhdessä tilanteessa. Arvioinnissa tarvitaan vähintään kaksi erilaista testiä, jotta nähdään, toimiiko botti myös erilaisella käyttäjällä tai monimutkaisemmassa tilanteessa.</p>
-<p><strong>Opettajan toiminta:</strong> Ohjaa opiskelija tekemään kaksi selvästi erilaista testiskenaariota: yksi yksinkertainen käyttötilanne ja yksi monimutkainen, epäselvä tai puutteellisesti kuvattu tilanne.</p></div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 3: ”Jos botti epäonnistuu, työ on huono.”</h3></div><div class="task-card-body">
-<p><strong>Opiskelija ajattelee:</strong> ”Botti unohti käyttäjän vastauksen. Olen epäonnistunut.”</p>
-<p><strong>Korjaava näkökulma:</strong> Testissä löytynyt ongelma on hyödyllinen havainto. Se kertoo, mitä pitää parantaa. Hyvässä työssä ongelma dokumentoidaan, promptia korjataan ja bottia testataan uudelleen.</p>
-<p><strong>Opettajan toiminta:</strong> Sanoita selkeästi, että testauksessa löytynyt virhe voi parantaa arvosanaa, jos opiskelija osoittaa sen avulla kriittistä ajattelua ja iteraatiota.</p></div></div><div class="task-card task-card--info task-card--sm"><div class="task-card-header"><h3>Väärinkäsitys 4: ”Dokumentaatio on turhaa.”</h3></div><div class="task-card-body">
-<p><strong>Opiskelija ajattelee:</strong> ”Botti toimii, miksi pitäisi kirjoittaa raporttia?”</p>
-<p><strong>Korjaava näkökulma:</strong> Dokumentaatio osoittaa, mitä opiskelija suunnitteli, testasi, huomasi ja muutti. Arvioinnissa prosessi on yhtä tärkeä kuin valmis botti.</p>
-<p><strong>Opettajan toiminta:</strong> Näytä opiskelijoille dokumentaation minimirakenne: tehtävä 17.1, järjestelmäprompti, testit, iteraatiot, kuvakaappaukset ja yhteenveto opitusta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Fasilitointiohjeet</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Oppitunnin rakenne</h3></div><div class="task-card-body">
-<table>
-<thead>
-<tr>
-<th>Vaihe</th>
-<th>Aika</th>
-<th>Tavoite</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Johdanto</strong></td>
-<td>5 min</td>
-<td>Kytke aihe opiskelijoiden omaan kokemukseen: mitä tapahtuu, jos uutta asiaa yrittää opetella ilman ohjausta?</td>
-</tr>
-<tr>
-<td><strong>Havainnollistava esimerkki</strong></td>
-<td>15 min</td>
-<td>Näytä toimiva apuri-botti ja konkretisoi, mihin opiskelijat pyrkivät.</td>
-</tr>
-<tr>
-<td><strong>Ryhmätyö: kysymykset</strong></td>
-<td>20 min</td>
-<td>Ryhmät ideoivat botin ohjaavia kysymyksiä ja huomaavat, ettei ole vain yhtä oikeaa kysymyspatteristoa.</td>
-</tr>
-<tr>
-<td><strong>Yhteinen analyysi</strong></td>
-<td>10 min</td>
-<td>Käydään arviointikriteerit läpi ja varmistetaan, että opiskelijat ymmärtävät, mitä heiltä odotetaan.</td>
-</tr>
-<tr>
-<td><strong>Itsenäinen työskentely</strong></td>
-<td>40+ min</td>
-<td>Opiskelijat aloittavat tehtävät 17.1–17.4. Opettaja kiertää ja ohjaa.</td>
-</tr>
-</tbody>
-</table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Johdantolause opettajalle</h3></div><div class="task-card-body">
-<blockquote class="pause"><p>Kun uutta asiaa yrittää opetella ilman ohjausta, eteneminen on usein hidasta: ei tiedä mistä aloittaa, mitä kysyä tai missä järjestyksessä edetä. Tänään rakennamme botin, jonka tehtävä on auttaa käyttäjää pääsemään eteenpäin oikeiden kysymysten avulla.</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Luokkatehtävien ohjeistus</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-A: Kysymyspatteriston suunnittelu</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija osaa suunnitella järjestelmällisen kysymysketjun, jonka avulla botti kerää tarvittavat tiedot käyttäjän auttamiseksi.</p>
-<p><strong>Tee näin:</strong></p>
-<ol>
-<li>Kirjoita, missä tehtävässä botti auttaa käyttäjää.</li>
-<li>Jaa kysymykset 4–6 aihealueeseen, esimerkiksi tavoite, lähtötilanne, käyttäjä, vaihtoehdot, rajat ja lopputulos.</li>
-<li>Kirjoita jokaiseen aihealueeseen 2–4 kysymystä.</li>
-<li>Valitse lopuksi 15–20 tärkeintä kysymystä.</li>
-<li>Tarkista, että kysymykset etenevät loogisessa järjestyksessä.</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Aihealue</th>
-<th>Kysymykset</th>
-<th>Miksi nämä kysymykset ovat tärkeitä?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Tavoite</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Käyttäjä ja lähtötilanne</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Vaihtoehdot ja valinnat</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Rajat ja rajaukset</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Lopputulos ja seuranta</strong></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Aika-arvio:</strong> 20 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-B: Järjestelmäpromptin kirjoittaminen</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija osaa kirjoittaa apuri-botille järjestelmäpromptin, joka ohjaa botin toimintaa käytännössä.</p>
-<p><strong>Tee näin:</strong></p>
-<ol>
-<li>Kirjoita botin identiteetti: kuka botti on?</li>
-<li>Kirjoita botin tarkoitus: mitä botti auttaa käyttäjää tekemään?</li>
-<li>Kirjoita botin toimintatapa: mitä se kysyy ensin, miten se etenee ja miten se ohjaa käyttäjää eteenpäin?</li>
-<li>Kirjoita botin rajaukset: mitä botti ei saa tehdä?</li>
-<li>Tarkista, että prompti on riittävän tarkka ja käytännössä testattava.</li>
-</ol>
-<p><strong>Prompttipohja:</strong></p>
-<p>Olet [rooli]. Tarkoituksesi on auttaa käyttäjää [tehtävä] kysymällä järjestelmällisiä kysymyksiä.</p>
-<p>Aloita kysymällä lyhyt kuvaus käyttäjän lähtötilanteesta. Sen jälkeen kysy tavoite, lähtötaso, vaihtoehdot, rajat ja lopputulos. Kysy yksi aihealue kerrallaan ja tarvittaessa tarkentavia kysymyksiä.</p>
-<p>Älä tee tehtävää käyttäjän puolesta. Älä oleta puuttuvia tietoja, vaan kysy tarkennuksia. Ohjaa lopuksi käyttäjä selkeään lopputulokseen.</p>
-<p><strong>Aika-arvio:</strong> 25 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-C: Botin testaus</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija testaa bottia käytännössä ja huomaa, toimiiko järjestelmäprompti eri tilanteissa.</p>
-<p><strong>Tee näin:</strong></p>
-<ol>
-<li>Kirjoita ensimmäinen testiskenaario: yksinkertainen käyttötilanne.</li>
-<li>Kirjoita toinen testiskenaario: monimutkainen, epäselvä tai laajempi käyttötilanne.</li>
-<li>Anna molemmat botille ja tallenna vastaukset.</li>
-<li>Kirjaa, mitä botti kysyi ja oliko kysymysten järjestys järkevä.</li>
-<li>Kirjaa, mitä botti teki hyvin ja mitä pitää parantaa.</li>
-</ol>
-<p><strong>Aika-arvio:</strong> 20–30 minuuttia</p></div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>TT-D: Iteraatio ja korjaus</h3></div><div class="task-card-body">
-<p><strong>Tavoite:</strong> Opiskelija parantaa bottia testitulosten perusteella.</p>
-<p><strong>Tee näin:</strong></p>
-<ol>
-<li>Valitse testissä havaittu ongelma.</li>
-<li>Kirjoita, miksi ongelma haittaa botin toimintaa.</li>
-<li>Muuta järjestelmäpromptia tai kysymyspatteristoa.</li>
-<li>Testaa botti uudelleen samalla tai samantyyppisellä skenaariolla.</li>
-<li>Kirjoita, paraniko toiminta.</li>
-</ol>
-<p><strong>Aika-arvio:</strong> 15–20 minuuttia</p></div></div><div class="task-card task-card--info"><div class="task-card-header"><h2>Yleisiä apukysymyksiä opiskelijoille</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija ei osaa kirjoittaa järjestelmäpromptia</h3></div><div class="task-card-body">
-<ul>
-<li>Mitä haluat botin tekevän?</li>
-<li>Mikä botin rooli on: mentori, asiantuntija, assistentti vai jokin muu?</li>
-<li>Mitä botin pitää kysyä ensin?</li>
-<li>Mitä botin ei saa tehdä?</li>
-<li>Miten botti kokoaa lopputuloksen?</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija kokee testauksen vaikeaksi</h3></div><div class="task-card-body">
-<ul>
-<li>Kuvittele kaksi erilaista käyttäjää.</li>
-<li>Ensimmäinen käyttäjä kuvaa hyvin yksinkertaisen tilanteen.</li>
-<li>Toinen käyttäjä kuvaa epäselvän tai monimutkaisen tilanteen.</li>
-<li>Kirjoita ylös, mitä botti kysyy ja tuntuuko se järkevältä.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelija sanoo, että botti ei toiminut</h3></div><div class="task-card-body">
-<ul>
-<li>Löysit testissä kehittämiskohteen.</li>
-<li>Mikä tarkalleen meni pieleen?</li>
-<li>Mitä järjestelmäpromptista puuttui?</li>
-<li>Miten voisit kirjoittaa ohjeen niin, että botti toimii seuraavalla kerralla paremmin?</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Jos opiskelijalla on liikaa kysymyksiä</h3></div><div class="task-card-body">
-<ul>
-<li>Kaikkia kysymyksiä ei tarvitse kysyä heti.</li>
-<li>Valitse 15–20 tärkeintä kysymystä.</li>
-<li>Jaa kysymykset aihealueisiin.</li>
-<li>Anna botille ohje kysyä tarkentavia kysymyksiä vain tarvittaessa.</li>
-</ul></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Eriyttäminen</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Haastavampi versio opiskelijoille, jotka etenevät nopeasti</h3></div><div class="task-card-body">
-<ul>
-<li>Lisää kysymyksiä aiheen sudenkuopista, eri käyttäjäryhmistä, poikkeustilanteista ja tarkennuksista.</li>
-<li>Suunnittele bottiin eri syvyystasot: nopea ohjaus, tarkempi ohjaus ja erittäin yksityiskohtainen ohjaus.</li>
-<li>Lisää botille monikielinen tuki, esimerkiksi suomi ja englanti.</li>
-<li>Lisää testiskenaario, jossa käyttäjä antaa ristiriitaisia tietoja ja botin pitää pyytää tarkennusta.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Yksinkertaistettu versio opiskelijoille, jotka tarvitsevat tukea</h3></div><div class="task-card-body">
-<ul>
-<li>Anna valmis 15 kysymyksen lista ja pyydä opiskelijaa valitsemaan niistä tärkeimmät.</li>
-<li>Anna puolivalmis järjestelmäprompti, jonka opiskelija täydentää.</li>
-<li>Anna valmiit testiskenaariot, jotka opiskelija ajaa botilla.</li>
-<li>Vähennä vaatimusta niin, että opiskelija tekee tehtävät 17.1–17.3 ja dokumentoi ne selkeästi.</li>
-</ul>
-<p><strong>Opettajan huomio:</strong> Yksinkertaistettu versio ei tarkoita, että opiskelija vapautetaan ajattelusta. Se tarkoittaa, että hän saa enemmän rakennetta, jotta hän voi osoittaa ydintaidon: botin tarkoituksen, kysymysten, promptin ja testauksen ymmärtämisen.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Aika ja aikataulutus</h2></div><div class="task-card-body">
-<p>Oppitunnilla 17 painopiste on johdannossa, demossa ja työn aloittamisessa. Suurin osa viimeistelystä voi tapahtua oppitunnin jälkeen ja jatkua oppitunnilla 18.</p>
-<table>
-<thead>
-<tr>
-<th>Osuus</th>
-<th>Aika</th>
-<th>Huomio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Johdanto ja demo</td>
-<td>20 min</td>
-<td>Näytä tavoitetaso konkreettisesti.</td>
-</tr>
-<tr>
-<td>Ryhmätyö ja analyysi</td>
-<td>30 min</td>
-<td>Opiskelijat suunnittelevat kysymyksiä ja ymmärtävät arviointikriteerit.</td>
-</tr>
-<tr>
-<td>Itsenäinen työ</td>
-<td>40+ min</td>
-<td>Tehtävät 17.1–17.4 aloitetaan tunnilla ja viimeistellään tarvittaessa kotona.</td>
-</tr>
-</tbody>
-</table></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Yhteys muihin oppitunteihin</h2></div><div class="task-card-body">
-<ul>
-<li><strong>Oppitunnit 14–15:</strong> opiskelijat oppivat botin suunnittelusta, tietopohjasta, rajauksista ja testaamisesta.</li>
-<li><strong>Oppitunti 17:</strong> opiskelijat soveltavat näitä taitoja arvioitavassa apuri-botissa.</li>
-<li><strong>Oppitunti 18:</strong> opiskelijat viimeistelevät, parantavat ja esittelevät botin.</li>
-<li><strong>Oppitunnit 19–27:</strong> Agentit-osio rakentuu tämän ajattelun päälle. Apuri-botti toimii pohjana ymmärrykselle siitä, miten agenttimaisempi järjestelmä suunnitellaan.</li>
-</ul>
-<p><strong>Opettajan muistutus:</strong> Tämä oppitunti on silta botin suunnittelusta agenttiajatteluun. Kun opiskelija osaa suunnitella botin tarkoituksen, ohjeet, testit ja iteraation, hänellä on pohja ymmärtää myöhemmin myös agentteja.</p></div></div><div class="task-card task-card--assessment"><div class="task-card-header"><h2>Arviointivinkit opettajalle</h2></div><div class="task-card-body">
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Mitä hyvässä työssä näkyy?</h3></div><div class="task-card-body">
-<ul>
-<li>Botin tarkoitus on selkeä ja rajattu.</li>
-<li>Rooli tukee käyttäjän ohjaamista eikä ole pelkkä persoonallisuus.</li>
-<li>Kysymyspatteristo etenee loogisesti.</li>
-<li>Järjestelmäprompti on konkreettinen ja käytännössä testattava.</li>
-<li>Testejä on vähintään kaksi ja ne ovat erilaisia.</li>
-<li>Testien perusteella on tehty muutoksia.</li>
-<li>Dokumentaatio näyttää prosessin, ei vain lopputulosta.</li>
-</ul>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Heikon työn merkkejä</h3></div><div class="task-card-body">
-<ul>
-<li>Botti on määritelty liian yleisesti: ”auttaa kaikessa”.</li>
-<li>Järjestelmäprompti on hyvin lyhyt tai epämääräinen.</li>
-<li>Kysymykset ovat satunnaisia eivätkä muodosta selkeää ohjaavaa polkua.</li>
-<li>Testaus on tehty vain yhdellä esimerkillä.</li>
-<li>Iteraatiota ei ole tehty.</li>
-<li>Dokumentaatio on liian lyhyt tai siinä ei näy opiskelijan oma ajattelu.</li>
-</ul>
-<p><strong>Opettajan arviointikysymys:</strong> Näkyykö työssä suunnittelijan ajattelu vai vain nopeasti tehty botti? Arvioinnissa painota sitä, miten opiskelija perustelee, testaa ja parantaa ratkaisuaan.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Oppitunnin lopetus</h2></div><div class="task-card-body">
-<p>Oppitunnin lopussa opiskelijoiden tulisi ymmärtää, että apuri-botti ei ole vain kysymyslista. Se on suunniteltu työkalu, joka ohjaa käyttäjää kohti parempaa lopputulosta. Hyvä botti kysyy oikeassa järjestyksessä, pyytää tarkennuksia, ohjaa käyttäjää selkeästi ja tunnistaa omat rajansa.</p>
-<p>Hyvä päätöskysymys tunnin loppuun:</p>
-<blockquote class="pause"><p><strong>Pohdi:</strong> Mistä tiedät, että bottisi todella auttaa käyttäjää pääsemään tavoitteeseensa paremmin eikä vain kysy satunnaisia kysymyksiä?</p>
-<p><strong>Lopetuslause opettajalle:</strong> Hyvä apuri-botti ei vain keskustele. Se ohjaa käyttäjän ajattelemaan tehtävänsä läpi vaihe vaiheelta.</p>
-</blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
-<p>Tallennettava tuotos on <strong>botin minimiversio tai kuivaharjoittelujälki sekä korjauslista</strong>. Pakollinen ydintuotos pidetään samana kaikilla reiteillä.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>90 minuutin toteutus ja eriyttäminen</h2></div><div class="task-card-body">
 <table>
 <thead>
 <tr>
 <th>Aika</th>
 <th>Vaihe</th>
+<th>Oppijan työ</th>
 <th>Opettajan tehtävä</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0–10 min</td>
-<td>Virittäytyminen</td>
-<td>Kytke ydinkysymys tuttuun tilanteeseen ja tarkista lähtötaso.</td>
+<td>Lähtöaineisto</td>
+<td>Avaa kolme rakennuspalikkaa ja tunnin 16 valintakortin.</td>
+<td>Varmista, että rakennuspalikkojen nimet ja tehtävät ovat selvät.</td>
 </tr>
 <tr>
 <td>10–25 min</td>
-<td>Ydinkäsite</td>
-<td>Mallinna tunnin keskeinen ero yhdellä vastaesimerkillä.</td>
+<td>Järjestelmäprompti</td>
+<td>Muuttaa määrittelyn, promptikortin ratkaisut sekä tietopohjan käyttöohjeet yhdeksi pääohjeeksi.</td>
+<td>Rajaa pääohje rooliin, työnkulkuun, aineiston käyttöön ja rajoihin.</td>
 </tr>
 <tr>
-<td>25–65 min</td>
-<td>Perustuotos</td>
-<td>Oppija kokoaa botin minimiversion tai kuivaharjoittelujäljen ja ajaa yhden testin. Tämä 40 minuutin jakso on itsenäistä tai parin kanssa tehtävää työskentelyä.</td>
+<td>25–55 min</td>
+<td>Ensimmäinen versio</td>
+<td>Rakentaa teknisen minimiversion tai dokumentoi arkkitehtuurin ja suoritusjäljen rungon.</td>
+<td>Auta vain ydintoiminnon saamisessa testattavaan muotoon.</td>
 </tr>
 <tr>
-<td>65–80 min</td>
-<td>Testaus ja purku</td>
-<td>Testauta tuotos annetulla tapauksella ja pura yksi onnistuminen sekä yksi korjaus.</td>
+<td>55–78 min</td>
+<td>Kolme ensitestiä</td>
+<td>Ajaa tai simuloi normaalin, kielteisen ja reunatapauksen. Tallentaa syötteen, odotuksen, tuloksen ja johtopäätöksen.</td>
+<td>Kysy, onko näyttö teknistä vai simuloitua ja pysyikö odotus muuttumattomana.</td>
 </tr>
 <tr>
-<td>80–90 min</td>
-<td>Tallennus ja lopputehtävä</td>
-<td>Varmista tiedoston nimi, tallennuspaikka ja yhden lauseen johtopäätös.</td>
+<td>78–87 min</td>
+<td>Korjauslista</td>
+<td>Nimeää havainnot ja valitsee ehdokkaan tunnin 18 korjaukseksi.</td>
+<td>Estä arvioitavan korjausketjun kiirehtiminen tämän tunnin loppuun.</td>
+</tr>
+<tr>
+<td>87–90 min</td>
+<td>Tallennus</td>
+<td>Tallentaa version, kolme testitulosta ja korjauslistan.</td>
+<td>Tarkista, että työ on löydettävissä seuraavalla tunnilla.</td>
 </tr>
 </tbody>
 </table>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Tukireitti</h3></div><div class="task-card-body">
-<p>Oppija käyttää alustariippumatonta järjestelmäprompti–syöte–tulos-runkoa. Tuki vähentää valintojen määrää, mutta säilyttää saman ydintuotoksen ja perustelun.</p>
-</div></div><div class="task-card task-card--task task-card--sm"><div class="task-card-header"><h3>Syventävä reitti</h3></div><div class="task-card-body">
-<p>Kun perustuotos on valmis, oppija antaa version toiselle testikäyttäjälle tai vaihtaa testikontekstia. Syventävä työ ei kasvata pakollista ydintuotosta.</p></div></div></div><div id="panel-lesson-17-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-17-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — Oppitunti 17</h1>
-<div class="task-card task-card--task"><div class="task-card-header"><h2>Johdanto oppituntiin (5 min)</h2></div><div class="task-card-body">
-<p>Aloita ottamalla yhteys opiskelijoiden kokemukseen. Kysy: "Kuinka moni teistä on koskaan yrittänyt opetella jotain uutta ilman, että kukaan ohjasi tai kysyi oikeita kysymyksiä? Mitä tapahtui?" Anna muutaman opiskelijan kertoa. Korosta, että hyvä ohjaava kysyminen vie eteenpäin paljon nopeammin kuin yksin pähkäily.</p>
-<p>Kerro, että tänään he rakentavat oman apuri-botin, joka auttaa jossakin heille tutussa arjen aiheessa — opiskelussa, harrastuksessa, tutussa pienessä palvelussa tai vaikka pelin tai sisällön ideoinnissa. Botti kysyy oikeita kysymyksiä ja ohjaa käyttäjää eteenpäin. Se on kuin henkilökohtainen apuri.</p>
-</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 1: Apuri-botin käytön havainnollistaminen (15 min)</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Näyttää käytännössä, miltä toimiva botti näyttää ja mitä se tekee.</p>
-<h3>Vaiheet</h3>
-<ol>
-<li>
-<p><strong>Valmistelu:</strong> Avaa ChatGPT, Claude tai Copilot, johon olet jo kirjoittanut apuri-botin järjestelmäpromptin. Kirjoita se etukäteen tai käytä teoria-aineiston esimerkkiä.</p>
-</li>
-<li>
-<p><strong>Havainnollistaminen:</strong> Kirjoita opiskelijoiden nähtäville käyttötilanne. Esimerkiksi:</p>
-<blockquote class="pause"><p>"Aloitan salitreenin enkä tiedä, miten koota itselleni järkevä viikko-ohjelma. Pääsen salille kolmena päivänä viikossa."</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Arvioitava näyttö</h2></div><div class="task-card-body">
+<p>Tunnin 17 hyväksyttävä tuotos sisältää järjestelmäpromptin ensimmäisen version, polkukohtaisen ydintuotoksen, kaikki kolme ensimmäistä testitulosta ja korjauslistan. Testissä löytynyt puute on käyttökelpoinen havainto, ei epäonnistuminen.</p>
+<p>Teknisen polun näyttö voi osoittaa alustan todellisen vastauksen, tietopohjan kytkennän ja toteutukseen kuuluvat pääsyasetukset. Suunnittelupolun näyttö voi osoittaa arkkitehtuurin, simuloidun haun ja vastauksen sekä tunnistetut rajat. Älä hyväksy simuloitua jälkeä todisteeksi teknisen yhteyden toiminnasta.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tuen järjestäminen</h2></div><div class="task-card-body">
+<p>Anna tarvittaessa valmis järjestelmäpromptin otsikkorunko ja testimatriisi. Oppija tekee silti itse botin tehtävää, rajoja ja tuloksia koskevat päätelmät. Jos tekninen alusta ei ole käytettävissä, oppija voi siirtyä dokumentoituun suunnittelupolkuun tasavertaisena vaihtoehtona ilman teknisen toteutuksen väitettä.</p>
+<p>Nopeasti etenevä oppija voi pyytää toista käyttäjää ajamaan yhden samoista testeistä. Tämä ei lisää pakollisten testien määrää eikä siirrä tunnin 18 korjausta tunnille 17.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Siirtymä tunnille 18</h2></div><div class="task-card-body">
+<p>Tunnin lopussa sano:</p>
+<blockquote class="pause"><p>Tänään sait ensimmäisen version ja kolme ensitulosta näkyviin. Ensi tunnilla valitset korjauslistalta yhden puutteen, teet siihen nimetyn korjauksen ja toistat juuri sitä koskevan testin. Vertailu antaa näyttöä korjauksen vaikutuksesta tässä testissä.</p>
+</blockquote></div></div></div><div id="panel-lesson-17-ohjatut" class="panel" role="tabpanel" aria-labelledby="tab-lesson-17-ohjatut" data-tab="ohjatut" hidden><h1>Opettajavetoiset tehtävät — oppitunti 17</h1>
+<p>Tämän aineiston tehtävät tukevat yhtä 90 minuutin runkoa. Niitä ei tehdä erillisenä vanhana tehtäväsarjana ydintyön lisäksi.</p>
+<div class="task-card task-card--task"><div class="task-card-header"><h2>Mallinna rakennuspalikoiden kokoaminen — 10 minuuttia</h2></div><div class="task-card-body">
+<p>Näytä rinnakkain Promptikortti, botin määrittely sekä tietopohja ja testisuunnitelma. Pyydä ryhmää nimeämään, mitä kustakin siirtyy järjestelmäpromptiin tai toteutukseen.</p>
+<p>Korosta, että järjestelmäprompti on näistä koottu toteutusohje. Se ei ole neljäs rakennuspalikka, eikä prompti yksin toteuta tietopohjan hakua tai käyttöoikeusrajaa.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Pysäytyskysymykset rakentamisen aikana</h2></div><div class="task-card-body">
+<p>Käytä vain tarpeen mukaan:</p>
+<ul>
+<li>Missä kohdassa näkyy botin rajattu tehtävä?</li>
+<li>Miten botti käyttää löydettyä lähdettä, ja mikä osa tästä on teknisesti toteutettu?</li>
+<li>Miten käyttäjä huomaa, ettei tietopohja kata kysymystä?</li>
+<li>Mikä toiminto on suunnittelupolussa simuloitu eikä teknisesti todennettu?</li>
+</ul>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Kolmen testin tarkistuspiste — 5 minuuttia</h2></div><div class="task-card-body">
+<p>Ennen testien aloittamista pyydä jokaista osoittamaan tunnilla 15 kirjoitetut kolme riviä: normaali tapaus, kielteinen testi ja reunatapaus. Jokaisessa pitää näkyä syöte, odotettu toiminta ja läpäisyehto.</p>
+<p>Oppija ajaa tai simuloi kaikki kolme ensimmäisen kerran. Opettaja ei ehdota uutta odotusta tuloksen nähtyään. Jos odotus oli aidosti epäselvä, epäselvyys kirjataan havaintona ja täsmennetään vasta korjausketjun yhteydessä.</p>
+</div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Korjauslistan purku — 7 minuuttia</h2></div><div class="task-card-body">
+<p>Parit kertovat toisilleen yhden onnistuneen testin ja yhden puutteen. Pari kysyy:</p>
+<blockquote class="pause"><p>Mihin ennalta kirjoitettuun odotukseen havainto perustuu?</p>
 </blockquote>
-</li>
-<li>
-<p><strong>Seuraa botin vuorovaikutusta:</strong> Kerro ääneen, mitä botti tekee:</p>
-</li>
-<li>"Botti kysyi ensin käyttäjän tavoitetta. Hyvä — se alkaa yksinkertaisesta."</li>
-<li>"Nyt se kysyy lähtötasoa. Se on tärkeä — jos et tiedä, kenelle ohjaat, et ohjaa oikein."</li>
-<li>
-<p>"Huomaa, kuinka botti muistaa, mitä sanoimme aiemmin — se ei kysy samaa uudelleen."</p>
-</li>
-<li>
-<p><strong>Lopputulos</strong>: Kun botti on kerännyt tarpeeksi tietoa, anna sen koota lopputulos. Näytä, miltä valmis lopputulos näyttää.</p>
-</li>
-<li>
-<p><strong>Pohdinta:</strong> Kysy opiskelijoilta:</p>
-</li>
-<li>"Olivatko botin kysymykset hyödyllisiä?"</li>
-<li>"Oliko jotain, jonka botti olisi pitänyt kysyä?"</li>
-<li>"Mikä tekee botin järjestelmäpromptista hyvän?"</li>
-</ol>
-<h3>Opettajan huomiot</h3>
-<p>Näytä, että botti ei ole täydellinen — se on vain työväline, joka auttaa, mutta käyttäjä tekee päätökset. Korosta, että järjestelmäprompti on kriittinen. Ilman sitä botti olisi vain yleinen ChatGPT, ei ohjaava apuri. Jos jotain menee pieleen (botti unohtaa jotain, kysyy huonon kysymyksen), käytä sitä opetusvälineenä: "Näetkö, miten tämä näyttää, kun järjestelmäprompti ei ole riittävän selkeä?"</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 2: Ryhmätyö — Ideoikaa botin kysymyksiä (20 min)</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Saada opiskelijat ajattelemaan, mitä kysymyksiä hyvä apuri-botti pitäisi esittää.</p>
-<h3>Vaiheet</h3>
-<ol>
-<li>
-<p><strong>Jakautuminen</strong>: Jaa opiskelijat 3–4 henkilön ryhmiin.</p>
-</li>
-<li>
-<p><strong>Anna käyttötilanne:</strong> Jokainen ryhmä saa saman tai oman käyttötilanteen:</p>
-<blockquote class="pause"><p>"Rakennamme apuri-botin, joka auttaa uutta jäsentä pääsemään alkuun urheiluseuran harrastuksessa."</p>
-</blockquote>
-</li>
-<li>
-<p><strong>Tehtävä</strong>: "Te olette apuri-botin suunnittelijat. Mitä 5–7 kysymystä botin pitäisi esittää, jotta se saisi riittävästi tietoa käyttäjän auttamiseksi?"</p>
-</li>
-<li>
-<p><strong>Ryhmät kirjoittavat:</strong> Anna ryhmille 10 minuuttia kysymysten kirjoittamiseen. Ohjaa heitä pohtimaan:</p>
-</li>
-<li>Mitä?</li>
-<li>Kenelle?</li>
-<li>Miksi?</li>
-<li>Milloin?</li>
-<li>
-<p>Miten?</p>
-</li>
-<li>
-<p><strong>Esittely:</strong> Jokainen ryhmä esittelee 2–3 parasta kysymystään. Varaa ryhmälle kolme minuuttia.</p>
-</li>
-<li>
-<p><strong>Yhteenveto</strong>: Kerää kaikki kysymykset liitutaululle tai dialle. Mitkä olivat yleisimpiä? Mitkä olivat loistavia, ja mitkä kaikki muut unohtivat?</p>
-</li>
-</ol>
-<h3>Opettajan huomiot</h3>
-<p>Hyviä kysymyksiä ovat: "Kuka käyttää bottia?", "Mitä käyttäjä haluaa saada selville?", "Mikä käyttäjälle on uutta tai vaikeaa?" Heikot kysymykset ovat: "Mikä on lempivärisi?", "Montako vuotta olet ollut mukana?" (eivät vaikuta lopputulokseen). Käytä tätä opettaaksesi: "Kysymykset, jotka auttavat tekemään parempia päätöksiä, ovat hyviä. Kysymykset, jotka ovat yksityiskohtaisia mutta eivät vaikuta lopputulokseen, ovat huonoja."</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 3: Koko luokka — Arvioikaa, mitä tekee hyvän apuri-botin (10 min)</h2></div><div class="task-card-body">
-<h3>Tavoite</h3>
-<p>Rakentaa yhteinen ymmärrys siitä, mitä hyväksi apuri-botiksi katsotaan.</p>
-<h3>Vaiheet</h3>
-<ol>
-<li>
-<p><strong>Kysymys</strong>: "Olette nyt nähneet, mitä botti tekee ja mitä kysymyksiä se pitäisi esittää. Mitä vaatimuksia hyvällä apuri-botilla on?"</p>
-</li>
-<li>
-<p><strong>Opiskelijoiden ajatukset</strong>: Kuuntele heidän ehdotuksia. Kirjoita ylös:</p>
-</li>
-<li>Selkeä kuvaus, missä botti auttaa</li>
-<li>Tieto, kenelle se on</li>
-<li>Ymmärrys, miksi siitä on hyötyä</li>
-<li>Looginen kysymysten järjestys</li>
-<li>
-<p>Selkeät rajat: mitä botti ei tee</p>
-</li>
-<li>
-<p><strong>Kalibrointi</strong>: Kysy seuraavia:</p>
-</li>
-<li>"Oliko demobotti riittävän hyödyllinen?"</li>
-<li>"Oliko jokin kysymys liian yksityiskohtainen?"</li>
-<li>
-<p>"Oliko jokin kohta liian pinnallinen?"</p>
-</li>
-<li>
-<p><strong>Säännöt</strong>: Kerro, että seuraavassa harjoituksessa (tehtävät 17.1–17.4) he käyttävät näitä oivalluksia rakentaakseen oman botin.</p>
-</li>
-</ol>
-<h3>Opettajan huomiot</h3>
-<p>Hyväksi botiksi lasketaan selkeä, perusteltu, käyttäjäkeskeinen ja rajoiltaan harkittu botti. Huonoksi botiksi lasketaan epäselvä, liian yleinen tai rajoja huomioimaton botti. Kerro, että arviointi seuraavalla kerralla perustuu näihin kriteereihin.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Sulkeminen (5 min)</h2></div><div class="task-card-body">
-<p>Kertaa tunnin opit. Apuri-botti kysyy tarkoituksenmukaisia kysymyksiä ja ohjaa käyttäjää eteenpäin. Järjestelmäprompti määrittää botin toiminnan. Hyvä suunnitelma vastaa viiteen peruskysymykseen: kenelle, mitä, miksi, missä järjestyksessä ja millä rajoilla.</p>
-<p>Kerro, että seuraavalla kerralla he:<br />
-1. Suunnittelevat oman botin kysymykset (tehtävä 17.1)<br />
-2. Kirjoittavat järjestelmäpromptin (tehtävä 17.2)<br />
-3. Testaavat bottia (tehtävä 17.3)<br />
-4. Iteroivat ja parantavat (tehtävä 17.4)</p>
-<p>Huomenna oppitunnilla 18 he viimeistelevät ja esittelevät. Tämä on Tekoälyjen käyttö -osion arvioinnin ensimmäinen osa kahdesta.</p></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Ajatuksia ongelmien varalta</h2></div><div class="task-card-body">
-<p><strong>Ongelma:</strong> Opiskelija sanoo: "Entä jos botilla ei ole selkeää käyttäjää?"</p>
-<p><strong>Vastaus:</strong> "Hyvä kysymys! Joskus käyttäjä on opiskelija itse tai kaveri. Botti palvelee silti jotakuta: kenelle tämä on? Miksi botti on hyödyllinen hänelle? Jos et voi vastata, botin tarkoitus ei ole riittävän selkeä."</p>
-<p><strong>Ongelma:</strong> Ryhmä tuottaa liian yksityiskohtaisia kysymyksiä ("Mikä on lempivärisi?")</p>
-<p><strong>Vastaus:</strong> "Nämä ovat hyviä yksityiskohtia joskus, mutta ensin meidän pitää ymmärtää, MITÄ käyttäjä haluaa saavuttaa ja MITEN botti auttaa siinä. Pikkuasiat tulevat myöhemmin, kun tiedämme mitä botti tekee."</p>
-<p><strong>Ongelma:</strong> Opiskelija on epävarma, onko heidän botinsa "hyvä"</p>
-<p><strong>Vastaus:</strong> "Hyvyys mitataan, toimiiko se. Testaa sitä. Jos botti kysyy oikeita kysymyksiä ja kokoaa vastaukset järkeviksi, se on hyvä. Ei tarvitse olla täydellinen."</p></div></div></div><div id="panel-lesson-17-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-17-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Oma apuri-botti syntyy</title>
+<p>Oppija lisää korjauslistalle vain havainnon ja mahdollisen korjausidean. Varsinainen nimetty korjaus ja sitä koskeva uudelleentesti tehdään tunnilla 18.</p></div></div></div><div id="panel-lesson-17-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-17-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/13: Oma apuri-botti syntyy</title>
 <defs><pattern id="l17g1" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g1)"/>
 <rect x="0" y="0" width="12" height="540" fill="#863FC4"/>
@@ -723,7 +167,7 @@
 <text x="24" y="120" font-size="22" font-weight="800" fill="#1B2336">Promptikortti</text>
 <text x="24" y="160" font-size="16" fill="#3A4253">Toimivat muotoilut, jotka</text>
 <text x="24" y="184" font-size="16" fill="#3A4253">olet jo nähnyt aiemmin.</text>
-<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa botille tyylin</text></g>
+<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa testatun rakenteen</text></g>
 <g transform="translate(354,168)">
 <rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,24)" fill="none" stroke="#863FC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="28" height="32" rx="3"/><path d="M8 2 V-2 H24 V2"/><path d="M8 12 H24 M8 19 H24 M8 26 H18"/></g>
@@ -737,10 +181,10 @@
 <rect x="0" y="0" width="252" height="300" rx="16" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(24,24)" fill="none" stroke="#0E9AA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 a12 4 0 0 0 24 0 a12 4 0 0 0 -24 0 V26 a12 4 0 0 0 24 0 V6"/><path d="M4 16 a12 4 0 0 0 24 0"/></g>
 <text x="24" y="92" font-size="14" fill="#7E88A8" font-family="ui-monospace,monospace">PALIKKA 3</text>
-<text x="24" y="120" font-size="22" font-weight="800" fill="#1B2336">Tietopohja</text>
-<text x="24" y="160" font-size="16" fill="#3A4253">3–5 dokumenttia, jotka</text>
-<text x="24" y="184" font-size="16" fill="#3A4253">ladataan erikseen.</text>
-<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa asiantuntemuksen</text></g>
+<text x="24" y="120" font-size="16" font-weight="800" fill="#1B2336">Tietopohja ja testisuunnitelma</text>
+<text x="24" y="160" font-size="16" fill="#3A4253">2–4 dokumenttia, jotka</text>
+<text x="24" y="184" font-size="16" fill="#3A4253">kytketään tai kuvataan.</text>
+<text x="24" y="266" font-size="15" font-weight="700" fill="#247A52">→ antaa aineiston ja testit</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">3 / 13</text>
 </svg></div>
 
@@ -801,9 +245,9 @@
 <g transform="translate(74,376)">
 <rect x="0" y="0" width="812" height="92" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="46" cy="46" r="24" fill="#E5F6F7"/><text x="46" y="55" text-anchor="middle" font-size="26" font-weight="800" fill="#0E9AA7">3</text>
-<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Tietopohja → ladataan erikseen</text>
-<text x="92" y="70" font-size="17" fill="#5A6478">Ei kuulu promptiin — viittaa siihen: "Käytä ladattuja dokumentteja".</text>
-<text x="780" y="56" text-anchor="end" font-size="15" fill="#0B7A85" font-family="ui-monospace,monospace">erilliseen kenttään</text></g>
+<text x="92" y="42" font-size="22" font-weight="700" fill="#1B2336">Tietopohja ja testit → kytke, kuvaa ja aja</text>
+<text x="92" y="70" font-size="17" fill="#5A6478">Tekninen polku kytkee aineiston, suunnittelupolku kuvaa kulun.</text>
+<text x="780" y="56" text-anchor="end" font-size="15" fill="#0B7A85" font-family="ui-monospace,monospace">polun mukaan</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">5 / 13</text>
 </svg></div>
 
@@ -876,64 +320,64 @@
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">8 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Agentin luominen Copilotissa</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 9/13: Ensimmäinen versio kahdella polulla</title>
 <defs><pattern id="l17g9" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g9)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Agentin luominen Copilotissa</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Viisi vaihetta valmiiseen, testattavaan bottiin.</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ensimmäinen versio kahdella polulla</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Yhteinen suunnitelma, polkukohtainen näyttö.</text>
 <g transform="translate(74,160)">
 <rect x="0" y="0" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="29" r="17" fill="#F4EFFC"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">1</text>
-<text x="74" y="36" font-size="19" fill="#3A4253">Avaa Copilot ja siirry <tspan font-weight="700" fill="#1B2336">Agents</tspan> / Agentit -osioon.</text></g>
+<text x="74" y="36" font-size="19" fill="#3A4253">Tekninen polku rakentaa. Suunnittelupolku kuvaa ja simuloi.</text></g>
 <g transform="translate(74,228)">
 <rect x="0" y="0" width="812" height="58" rx="12" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="29" r="17" fill="#F4EFFC"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">2</text>
-<text x="74" y="36" font-size="19" fill="#3A4253">Luo uusi agentti ja anna sille määrittelyn mukainen nimi.</text></g>
+<text x="74" y="36" font-size="19" fill="#3A4253">Kokoa järjestelmäprompti ja tietopohjan rooli.</text></g>
 <g transform="translate(74,296)">
 <rect x="0" y="0" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
 <circle cx="40" cy="29" r="17" fill="#FFFFFF"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">3</text>
-<text x="74" y="36" font-size="19" fill="#1B2336">Liitä järjestelmäpromptisi <tspan font-weight="700">Instructions</tspan> / Ohjeet -kenttään.</text></g>
+<text x="74" y="36" font-size="19" fill="#1B2336">Tekninen polku: rakenna ja kytke sallittu aineisto.</text></g>
 <g transform="translate(74,364)">
 <rect x="0" y="0" width="812" height="58" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2"/>
 <circle cx="40" cy="29" r="17" fill="#FFFFFF"/><text x="40" y="36" text-anchor="middle" font-size="19" font-weight="800" fill="#863FC4">4</text>
-<text x="74" y="36" font-size="19" fill="#1B2336">Lataa tietopohjan dokumentit <tspan font-weight="700">Knowledge</tspan> / Tieto -kohtaan.</text></g>
+<text x="74" y="36" font-size="19" fill="#1B2336">Suunnittelupolku: kuvaa haku, oikeudet ja suoritusjälki.</text></g>
 <g transform="translate(74,432)">
 <rect x="0" y="0" width="812" height="58" rx="12" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <circle cx="40" cy="29" r="17" fill="#FFFFFF"/><path d="M33 29 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="74" y="36" font-size="19" font-weight="700" fill="#247A52">Tallenna agentti ja aloita keskustelu.</text></g>
+<text x="74" y="36" font-size="19" font-weight="700" fill="#247A52">Aja tai simuloi kolme testiä — merkitse näytön luonne.</text></g>
 <text x="893" y="524" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">9 / 13</text>
 </svg></div>
 
-<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Ensimmäinen testikeskustelu</title>
+<div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 10/13: Kolme ensimmäistä testiä</title>
 <defs><pattern id="l17g10" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g10)"/>
-<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Ensimmäinen testikeskustelu</text>
+<text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Kolme ensimmäistä testiä</text>
 <rect x="74" y="138" width="812" height="62" rx="12" fill="#F4EFFC" stroke="#863FC4" stroke-width="2.5"/>
-<text x="100" y="176" font-size="19" fill="#6A309D">Älä tavoittele täydellisyyttä — aja yksi keskustelu läpi ja katso.</text>
+<text x="100" y="176" font-size="19" fill="#6A309D">Käytä tunnilla 15 kirjoitettuja odotuksia muuttamatta niitä.</text>
 <g transform="translate(74,224)">
 <rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">1</text>
-<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Keksi käyttötilanne</text>
-<text x="74" y="68" font-size="16" fill="#5A6478">omasta aiheestasi — lyhyt</text>
-<text x="74" y="90" font-size="16" fill="#5A6478">kuvaus, 2–3 lausetta.</text></g>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Normaali tapaus</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">botin tavallinen ydintehtävä</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">ja tietopohjassa oleva tieto.</text></g>
 <g transform="translate(489,224)">
 <rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">2</text>
-<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Anna botin ohjata</text>
-<text x="74" y="68" font-size="16" fill="#5A6478">Vastaa sen kysymyksiin</text>
-<text x="74" y="90" font-size="16" fill="#5A6478">kuin oikea käyttäjä.</text></g>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Kielteinen testi</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">Pyyntö, jota botti ei saa</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">toteuttaa tai jonka se eskaloi.</text></g>
 <g transform="translate(74,356)">
 <rect x="0" y="0" width="397" height="120" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <circle cx="40" cy="40" r="20" fill="#F4EFFC"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#863FC4">3</text>
-<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Käy keskustelu loppuun</text>
-<text x="74" y="68" font-size="16" fill="#5A6478">Pääsetkö lopputulokseen,</text>
-<text x="74" y="90" font-size="16" fill="#5A6478">johon botti tähtää?</text></g>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#1B2336">Reunatapaus</text>
+<text x="74" y="68" font-size="16" fill="#5A6478">Puutteellinen tai ristiriitainen</text>
+<text x="74" y="90" font-size="16" fill="#5A6478">syöte, joka vaatii tarkennuksen.</text></g>
 <g transform="translate(489,356)">
 <rect x="0" y="0" width="397" height="120" rx="14" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <circle cx="40" cy="40" r="20" fill="#FFFFFF"/><text x="40" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#2F9E69">4</text>
-<text x="74" y="40" font-size="19" font-weight="700" fill="#247A52">Tallenna keskustelu</text>
-<text x="74" y="68" font-size="16" fill="#3A4253">kuvakaappauksina tai</text>
-<text x="74" y="90" font-size="16" fill="#3A4253">kopioituna tekstinä.</text></g>
+<text x="74" y="40" font-size="19" font-weight="700" fill="#247A52">Tallenna kaikki kolme</text>
+<text x="74" y="68" font-size="16" fill="#3A4253">syöte, odotus, tulos ja</text>
+<text x="74" y="90" font-size="16" fill="#3A4253">johtopäätös testimatriisiin.</text></g>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">10 / 13</text>
 </svg></div>
 
@@ -973,7 +417,7 @@
 <defs><pattern id="l17g12" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#EDF0F7" stroke-width="1"/></pattern></defs>
 <rect width="960" height="540" fill="#FFFFFF"/><rect width="960" height="540" fill="url(#l17g12)"/>
 <text x="74" y="100" font-size="38" font-weight="800" fill="#1B2336">Korjauslista tunnille 18</text>
-<text x="74" y="132" font-size="18" fill="#5A6478">Kirjoita muistiin 3–5 asiaa — älä korjaa kaikkea tällä tunnilla.</text>
+<text x="74" y="132" font-size="18" fill="#5A6478">Kirjaa kolmen ensitestin havainnot — korjaus tehdään tunnilla 18.</text>
 <g transform="translate(74,162)">
 <rect x="0" y="0" width="812" height="86" rx="14" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/>
 <g transform="translate(30,30)" fill="none" stroke="#C79100" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14 L11 5 L26 20 M2 14 V26 H14 M11 5 L23 17"/></g>
@@ -1002,22 +446,22 @@
 <g font-size="16.5" fill="#3A4253">
 <rect x="74" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="222" r="6" fill="#863FC4"/><text x="118" y="228">Kokosit kolme palikkaa yhteen</text>
 <rect x="494" y="200" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="222" r="6" fill="#863FC4"/><text x="538" y="228">Muunsit määrittelyn suoraksi ohjeeksi</text>
-<rect x="74" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="274" r="6" fill="#0E9AA7"/><text x="118" y="280">Loit agentin Copilotiin</text>
-<rect x="494" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="274" r="6" fill="#0E9AA7"/><text x="538" y="280">Ajoit ensimmäisen testikeskustelun</text>
+<rect x="74" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="274" r="6" fill="#0E9AA7"/><text x="118" y="280">Rakensit tai kuvasit ensimmäisen version</text>
+<rect x="494" y="252" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="274" r="6" fill="#0E9AA7"/><text x="538" y="280">Ajoit tai simuloit kaikki kolme ensitestiä</text>
 <rect x="74" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="100" cy="326" r="6" fill="#C79100"/><text x="118" y="332">Tarkkailit neljää huomiokohtaa</text>
 <rect x="494" y="304" width="392" height="44" rx="10" fill="#FAFBFE" stroke="#D8DEEC" stroke-width="1.5"/><circle cx="520" cy="326" r="6" fill="#C79100"/><text x="538" y="332">Kirjasit korjauslistan tunnille 18</text>
 </g>
 <rect x="74" y="378" width="812" height="92" rx="16" fill="#F0F9F4" stroke="#CDE9D9" stroke-width="2"/>
 <g transform="translate(102,408)"><circle cx="16" cy="16" r="16" fill="#EAF7F0"/><path d="M9 16 l5 5 l9 -10" fill="none" stroke="#2F9E69" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="150" y="418" font-size="22" font-weight="800" fill="#247A52">Hyvä botti syntyy iteroinnista.</text>
-<text x="150" y="448" font-size="18" fill="#3A4253">Saat ensimmäisen version toimimaan nyt — tunnilla 18 viimeistelet sen.</text>
+<text x="150" y="418" font-size="22" font-weight="800" fill="#247A52">Hyvä ratkaisu syntyy iteroinnista.</text>
+<text x="150" y="448" font-size="18" fill="#3A4253">Tunnilla 18 viimeistelet polkusi näytön ja nimeät sen rajat.</text>
 <text x="893" y="512" text-anchor="end" font-size="14" fill="#9AA6BD" font-family="ui-monospace,monospace">13 / 13</text>
 </svg></div>
 </div></div></div></div><div id="lesson-footer" class="lesson-footer"><div class="nav-buttons"><a class="btn" href="/opettaja/tunti-16/">← Edellinen</a><a class="btn btn-primary" href="/opettaja/tunti-18/">Seuraava →</a></div></div></div>
 <footer class="site-footer">© Matti Seise · Avoin kurssi — saa käyttää ja muokata · Tekoälykoulutukset organisaatioille: <a href="https://seise.org/?utm_source=ai-perusteet&utm_medium=referral&utm_campaign=kurssi" target="_blank" rel="noopener">seise.org</a></footer>
 <div id="consent-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite"><span>Sivusto käyttää Google Analyticsia kävijätilastointiin. Analytiikkaevästeet otetaan käyttöön vain hyväksynnälläsi.</span><div class="consent-actions"><button class="consent-accept" onclick="consentChoice('granted')">Hyväksy</button><button class="consent-decline" onclick="consentChoice('denied')">Vain välttämättömät</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
-<script>window.CI={"view": "opettaja", "lid": "lesson-17", "num": 17, "title": "Projektidokumenttibotti — suunnittele ja aloita rakentaminen", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
+<script>window.CI={"view": "opettaja", "lid": "lesson-17", "num": 17, "title": "Oma apuri-botti — toteuta ensimmäinen versio", "allIds": ["lesson-01", "lesson-02", "lesson-03", "lesson-04", "lesson-05", "lesson-06", "lesson-07", "lesson-08", "lesson-09", "lesson-10", "lesson-11", "lesson-12", "lesson-13", "lesson-14", "lesson-15", "lesson-16", "lesson-17", "lesson-18", "lesson-19", "lesson-20", "lesson-21", "lesson-22", "lesson-23", "lesson-24", "lesson-25", "lesson-26", "lesson-27"]};</script>
 <script src="/assets/site.js"></script>
 </body>
 </html>

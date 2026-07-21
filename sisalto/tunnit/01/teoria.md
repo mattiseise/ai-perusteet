@@ -56,6 +56,24 @@ Tällainen koneoppimismalli ei tarvitse jokaista sääntöä erikseen kirjoitett
 
 > **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
 
+## Kaksi tapaa oppia datasta
+
+Koneoppiminen ei tarkoita vain yhtä opetustapaa. **Ohjatussa oppimisessa** harjoitusesimerkkien yhteydessä tunnetaan oikea vastaus. Petoksentunnistuksen aineistossa jokainen aiempi maksutapahtuma on esimerkiksi merkitty joko petokseksi tai lailliseksi tapahtumaksi. Malli etsii näistä esimerkeistä yhteyksiä, joiden avulla se arvioi uuden tapahtuman.
+
+**Ohjaamattomassa oppimisessa** valmiita oikeita vastauksia ei anneta. Malli etsii aineistosta ryhmiä, rakenteita tai poikkeamia. Pankki voisi esimerkiksi tutkia, millaisia maksukäyttäytymisen ryhmiä aineistosta muodostuu tai mitkä tapahtumat poikkeavat selvästi muista. Poikkeama ei silti automaattisesti ole petos. Ihmisen tai muun tarkistuksen pitää selvittää, mitä havainto tarkoittaa.
+
+Näitä tapoja ei aseteta paremmuusjärjestykseen. Ohjattu oppiminen sopii tilanteeseen, jossa on riittävästi luotettavasti merkittyjä esimerkkejä. Ohjaamaton oppiminen auttaa tutkimaan aineistoa silloin, kun valmiita luokkia ei ole tai kun halutaan löytää jotakin ennalta nimeämätöntä.
+
+## Piirre, luokka ja tavoitemuuttuja
+
+Koneoppimisen perussanat tulevat tutuiksi saman petosesimerkin avulla. **Piirre** on havaintoa kuvaava tieto, jota malli voi käyttää. Maksutapahtuman piirteitä voivat olla summa, kellonaika, maa, laite ja se, kuinka tavallinen tapahtuma on kyseiselle asiakkaalle.
+
+**Tavoitemuuttuja** on asia, jota ohjatussa oppimisessa yritetään ennustaa. Petosmallissa tavoitemuuttuja voi olla kysymys: onko tapahtuma petos vai laillinen? **Luokka** on yksi tavoitemuuttujan mahdollinen arvo, tässä ”petos” tai ”laillinen”. Kun mallin tehtävä on valita luokka, puhutaan **luokittelusta**.
+
+Sanat kuulostavat teknisiltä, mutta ajatus on arkinen: piirteet ovat vihjeitä, tavoitemuuttuja on ratkaistava kysymys ja luokat ovat mahdolliset vastaukset. Malli ei kuitenkaan tiedä, miksi jokin yhteys esiintyy datassa. Siksi piirteiden sopivuutta, aineiston laatua ja tuloksen seurauksia arvioi ihminen.
+
+> **Pysähdy hetkeksi:** Jos haluaisit ennustaa, tarvitseeko opiskelija lisäohjausta, mitkä tiedot voisivat olla piirteitä? Mikä olisi tavoitemuuttuja, ja mitä luokkia siinä voisi olla?
+
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää — yksi raja vai painotetut signaalit</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:332px">
   <div class="l01-wrap">
@@ -66,13 +84,13 @@ Tällainen koneoppimismalli ei tarvitse jokaista sääntöä erikseen kirjoitett
       <div class="l01-row"><span class="l01-rn">kellonaika</span><div class="l01-rb"><i class="b2"></i></div><b class="l01-rv vA">+0,08</b><b class="l01-rv vB">+0,31</b></div>
       <div class="l01-row"><span class="l01-rn">laite</span><div class="l01-rb"><i class="b3"></i></div><b class="l01-rv vA">+0,05</b><b class="l01-rv vB">+0,27</b></div>
       <div class="l01-row"><span class="l01-rn">toisto</span><div class="l01-rb"><i class="b4"></i></div><b class="l01-rv vA">+0,18</b><b class="l01-rv vB">+0,29</b></div>
-      <div class="l01-sum"><span class="l01-eqbox"><i class="l01-eq eA">0,62 + 0,08 + 0,05 + 0,18 = <b>0,93</b></i><i class="l01-eq eB">0,04 + 0,31 + 0,27 + 0,29 = <b>0,91</b></i></span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">93 %</b><b class="l01-pct pB">91 %</b></div>
-      <span class="l01-verd l01-v2a">✓ hälytys — kynnys 80 % ylittyi</span><span class="l01-verd l01-v2b">✓ hälytys — kynnys 80 % ylittyi</span>
+      <div class="l01-sum"><span class="l01-eqbox"><i class="l01-eq eA">0,62 + 0,08 + 0,05 + 0,18 = <b>0,93 pistettä</b></i><i class="l01-eq eB">0,04 + 0,31 + 0,27 + 0,29 = <b>0,91 pistettä</b></i></span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">0,93 p</b><b class="l01-pct pB">0,91 p</b></div>
+      <span class="l01-verd l01-v2a">✓ hälytys — 0,80 pisteen kynnys ylittyi</span><span class="l01-verd l01-v2b">✓ hälytys — 0,80 pisteen kynnys ylittyi</span>
     </div>
     <span class="l01-miss">petos pääsi läpi</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kiinteä sääntö katsoo yhtä rajaa: ison summan se nappaa, mutta oudon pienen tapauksen se päästää läpi. Opittu malli antaa jokaiselle signaalille painon ja laskee painot yhteen todennäköisyydeksi (palkkien pituudet = painot) — kun kynnys ylittyy, se hälyttää, vaikka mikään yksittäinen raja ei ylittyisi.</figcaption></figure>
+<figcaption class="ai-demo__cap">Kuvitteellinen pisteytysmalli havainnollistaa eroa. Kiinteä sääntö katsoo yhtä rajaa, kun taas malli yhdistää useita painotettuja signaaleja pistemääräksi. Tässä esimerkissä 0,91 on pistemäärä, ei suoraan petoksen todennäköisyys. Todellinen malli ja sen hälytyskynnys pitää arvioida erillisellä testidatalla.</figcaption></figure>
 <style>
 .l01-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono)}
 .l01-case{position:absolute;left:50%;transform:translateX(-50%);top:0;width:440px;height:34px}
@@ -149,7 +167,7 @@ Suoratoistopalvelujen ja verkkokauppojen **suositukset** ovat hyvä esimerkki te
 
 ## Yhteenveto
 
-**Tekoäly** ei tarkoita mitä tahansa älykkäältä vaikuttavaa ohjelmistoa, eikä se ole sama asia kuin automaatio. Se on kattotermi erilaisille menetelmille. **Koneoppiminen** on yksi näistä menetelmistä: malli koulutetaan datalla tekemään arvioita tai ennusteita. Käyttöön otettu malli ei silti automaattisesti opi jokaisesta uudesta syötteestä, vaan päivittäminen vaatii erillisen koulutus- tai päivitysprosessin.
+**Tekoäly** ei tarkoita mitä tahansa älykkäältä vaikuttavaa ohjelmistoa, eikä se ole sama asia kuin automaatio. Se on kattotermi erilaisille menetelmille. **Koneoppiminen** on yksi näistä menetelmistä: ohjatussa oppimisessa malli oppii esimerkeistä, joissa oikea vastaus tunnetaan, ja ohjaamattomassa oppimisessa se etsii aineistosta rakennetta ilman valmiita vastauksia. Käyttöön otettu malli ei silti automaattisesti opi jokaisesta uudesta syötteestä, vaan päivittäminen vaatii erillisen koulutus- tai päivitysprosessin.
 
 **Automaatio** ja **sääntöpohjaiset järjestelmät** ovat usein tarkkoja, nopeita ja ennustettavia. Koneoppimisen vahvuus taas on siinä, että koulutusdatasta voidaan muodostaa joustava malli monimutkaisista ilmiöistä.
 
@@ -163,5 +181,7 @@ Seuraavalla tunnilla perehdyt siihen, millaisia tekoälyn eri tyyppejä on olema
 
 - [OECD: Updated definition of an AI system](https://oecd.ai/en/wonk/definition)
 - [Google for Developers: Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/)
+- [Google for Developers: Classification](https://developers.google.com/machine-learning/crash-course/classification)
+- [IBM: What is unsupervised learning?](https://www.ibm.com/think/topics/unsupervised-learning)
 
 Tarkistettu 15.7.2026.
