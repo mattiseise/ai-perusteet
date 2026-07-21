@@ -1,31 +1,64 @@
 # Näin aloitat
 
-AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen.
+AI · Perusteet on avoin suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Et tarvitse aiempaa teknistä osaamista, tiettyä koulutusta tai työkokemusta. Luokka- ja opettajanäkymät mahdollistavat kurssin käytön myös oppilaitoksissa.
 
-## Kurssin ajattelutapa
+## Näin työskentelet kurssilla
 
-Et vain käytä tekoälyä. Opit viemään ilmiön, väitteen tai ratkaisun samojen viiden liikkeen läpi: **tunnista, selitä, testaa, arvioi ja perustele**. Jokaisen tunnin alussa näet, mikä liike painottuu juuri sillä tunnilla ja mihin ajattelukysymykseen etsit vastausta. Palaa kysymykseen tunnin lopussa ja nimeä havainto, testi tai tuotos, johon vastauksesi perustuu.
+Kurssilla et vain käytä tekoälyä, vaan opit tutkimaan ilmiöitä, väitteitä ja ratkaisuja järjestelmällisesti. Työskentelyssä on viisi vaihetta:
 
-Liikkeet muodostavat työskentelytavan, eivät jäykkää suoritusjärjestystä. Voit palata aiempaan vaiheeseen, kun testi paljastaa puutteen tai arviointi muuttaa johtopäätöstäsi.
+1. tunnista
+2. selitä
+3. testaa
+4. arvioi
+5. perustele
+
+Jokaisen osan alussa kerrotaan, mikä työvaihe siinä painottuu ja mihin kysymykseen etsit vastausta. Palaa kysymykseen osan lopussa ja kerro, mihin havaintoon, testiin tai tuotokseen vastauksesi perustuu.
+
+Vaiheet eivät muodosta jäykkää suoritusjärjestystä. Voit palata aiempaan vaiheeseen, jos testi paljastaa puutteen tai uusi arvio muuttaa johtopäätöstäsi.
 
 ## Mitä tarvitset?
 
-Tavallinen selain ja mahdollisuus tehdä muistiinpanoja riittävät. Voit opiskella ilman maksullisia palveluja. Osa kokeista onnistuu maksuttomalla chatpalvelulla, mutta palvelun käyttö voi edellyttää tiliä ja sen ehdot voivat muuttua. Jos et halua luoda tiliä, tee sama koe annetulla esimerkkituloksella tai dokumentoimalla kokeen vaiheet ilman palvelua. Arvioinnissa ratkaisee ymmärrys ja näkyvä työprosessi, ei tietty tuote.
+Opiskeluun riittävät tavallinen verkkoselain ja mahdollisuus tehdä muistiinpanoja. Et tarvitse maksullisia tekoälypalveluja tai tilauksia, kuten ChatGPTin, Clauden tai Microsoft Copilotin maksullisia versioita.
 
-Kurssin 27 osaa vastaavat luokkakäytössä noin 27:ää 90 minuutin oppituntia. Itsenäisessä opiskelussa ajankäyttö riippuu siitä, kuinka monta kokeilua ja syventävää tehtävää teet. Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta.
+Osa kokeista voidaan tehdä maksuttomalla chatpalvelulla. Palvelun käyttö saattaa kuitenkin edellyttää käyttäjätiliä, ja palvelun ehdot voivat muuttua. Jos et halua luoda tiliä, voit tehdä kokeen annetun esimerkkituloksen avulla tai dokumentoida sen vaiheet käyttämättä palvelua.
+
+Arvioinnissa tärkeintä ovat ymmärryksesi ja näkyvä työprosessisi, eivät käyttämäsi tuotteet tai palvelut.
+
+## Kurssin laajuus
+
+Kurssi koostuu 27 osasta. Luokkakäytössä ne vastaavat noin 27:ää 90 minuutin oppituntia. Itsenäisessä opiskelussa ajankäyttö riippuu siitä, kuinka paljon teet kokeiluja ja syventäviä tehtäviä.
+
+Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Mahdollisten osaamispisteiden myöntämisestä päättää oppilaitos. Sivusto ei itsessään myönnä opintosuoritusta.
 
 ## Suojaa omat ja muiden tiedot
 
-Älä syötä harjoituksissa henkilötietoja, salaisuuksia, julkaisemattomia asiakirjoja tai organisaation luottamuksellista tietoa ulkoiseen palveluun. Käytä kuvitteellista tai anonymisoitua aineistoa ja tarkista käyttämäsi palvelun ehdot. Jos osallistut oppilaitoksen toteutukseen, noudata myös opettajan ja oppilaitoksen ohjeita.
+Älä syötä ulkoisiin palveluihin henkilötietoja, salaisuuksia, julkaisemattomia asiakirjoja tai organisaation luottamuksellisia tietoja. Käytä harjoituksissa kuvitteellista tai anonymisoitua aineistoa ja tutustu käyttämäsi palvelun ehtoihin.
 
-## Tallenna oma työsi
+Jos suoritat kurssia oppilaitoksessa, noudata myös opettajan ja oppilaitoksen antamia ohjeita.
 
-Sivusto tallentaa etenemisen ja Harjoittele-tulokset vain käyttämäsi selaimen paikalliseen tallennustilaan. Selaimen tietojen tyhjentäminen poistaa ne. Tallenna siksi omat promptit, kokeiden tulokset, lähteet ja korjaukset erilliseen tiedostoon.
+## Tallenna työsi
 
-Lataa työkirja itsellesi sopivassa muodossa: [Markdown](/downloads/ai-perusteet-tyokirja.md) tekstieditoriin tai [Word](/downloads/ai-perusteet-tyokirja.docx) tekstinkäsittelyohjelmaan. Kummankin voi tulostaa selaimesta tai tekstinkäsittelyohjelmasta PDF-tiedostoksi.
+Sivusto tallentaa etenemisesi ja Harjoittele-tehtävien tulokset vain käyttämäsi selaimen paikalliseen tallennustilaan. Jos tyhjennät selaimen tiedot, myös tallennetut tiedot poistuvat.
 
-## Valitse tehtävään sopiva reitti
+Tallenna siksi omat promptisi, kokeiden tulokset, käyttämäsi lähteet ja tekemäsi korjaukset erilliseen tiedostoon.
 
-Kun tehtävä pyytää omaa kontekstia, voit valita yhden kolmesta reitistä: arki tai harrastus, opiskelu tai työelämä. Työelämäesimerkit ovat rooliskenaarioita — sinulla ei oleteta olevan työpaikkaa tai tiettyä ammattia.
+Voit ladata työkirjan kahdessa muodossa:
 
-Copilot- tai n8n-ohjeen rinnalla voit käyttää mitä tahansa saatavilla olevaa chatia tai piirtää alustariippumattoman solmukaavion. Dokumentoi silloin järjestelmäprompti, testit, tulokset, virheet ja tehdyt korjaukset samalla tarkkuudella kuin toimivassa toteutuksessa.
+- [Markdown-tiedostona](/downloads/ai-perusteet-tyokirja.md) tekstieditoriin
+- [Word-tiedostona](/downloads/ai-perusteet-tyokirja.docx) tekstinkäsittelyohjelmaan
+
+Kummankin tiedoston voi myös tallentaa PDF-muotoon selaimen tai tekstinkäsittelyohjelman tulostustoiminnolla.
+
+## Valitse tehtävään sopiva näkökulma
+
+Kun tehtävässä tarvitaan omaa kontekstia, voit valita jonkin kolmesta näkökulmasta:
+
+- arki tai harrastukset
+- opiskelu
+- työelämä
+
+Työelämäesimerkit ovat kuvitteellisia rooliskenaarioita. Sinulla ei tarvitse olla työpaikkaa tai tiettyä ammattia.
+
+Jos tehtävässä annetaan Copilot- tai n8n-ohje, voit käyttää myös mitä tahansa muuta saatavillasi olevaa chatpalvelua. Vaihtoehtoisesti voit piirtää alustariippumattoman solmukaavion.
+
+Dokumentoi valitsemastasi toteutustavasta järjestelmäprompti, testit, tulokset, virheet ja tekemäsi korjaukset yhtä tarkasti kuin toimivasta teknisestä toteutuksesta.
