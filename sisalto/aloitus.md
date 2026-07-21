@@ -24,6 +24,8 @@ Osa kokeista voidaan tehdä maksuttomalla chatpalvelulla. Palvelun käyttö saat
 
 Arvioinnissa tärkeintä ovat ymmärryksesi ja näkyvä työprosessisi, eivät käyttämäsi tuotteet tai palvelut.
 
+> **Huomio Agentit-osiosta:** Agentit-osio on kurssin syventävä ja vaativin osa, koska siinä yhdistät aiemmin oppimasi asiat. Et tarvitse aiempaa ohjelmointiosaamista: etenet vaihe kerrallaan ja voit valita teknisen toteutuksen tai samanarvoisen dokumentoidun suunnittelusuorituksen. Tavoitteena on ymmärtää tämän kurssin rajauksen mukaisen agentin rakenne ja rakentaa rajattu, testattava ja turvallinen kokonaisuus — ei hallita kaikkia agenttitekniikoita.
+
 ## Kurssin laajuus
 
 Kurssi koostuu 27 osasta. Luokkakäytössä ne vastaavat noin 27:ää 90 minuutin oppituntia eli yhteensä noin 40,5 tuntia ohjattua työskentelyä. Itsenäisessä opiskelussa koko kurssiin on hyvä varata noin 35–50 tuntia. Arvio sisältää teorian, Harjoittele-tehtävät, lopputöiden osatuotokset sekä kolmen lopputyön viimeistelyn. Oma aikasi riippuu lukutahdista, kokeilujen määrästä ja siitä, valitsetko syventäviä tehtäviä.

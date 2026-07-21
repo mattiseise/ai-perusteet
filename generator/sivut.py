@@ -270,6 +270,18 @@ def _module_thinking_path(osp):
     )
 
 
+def _module_notice(osp):
+    notice = osp.get('huomio')
+    if not notice:
+        return ''
+    return (
+        '<aside class="module-notice" aria-labelledby="module-notice-title">'
+        '<div class="module-notice__label" id="module-notice-title">Huomio ennen osiota</div>'
+        f'<p>{escape(notice)}</p>'
+        '</aside>'
+    )
+
+
 def _lesson_thinking_path(lesson):
     thought = lesson['ajattelu']
     items = []
@@ -705,6 +717,7 @@ def build_kurssi_module(osp):
         f'<p>{osp["subtitle"]}</p>'
         '</div></section>'
         '<div class="page-body">'
+        f'{_module_notice(osp)}'
         f'{_module_thinking_path(osp)}'
         f'<div class="lesson-list" style="--osp-color:{osp["color"]}">{"".join(rows)}</div>'
         f'{final}'

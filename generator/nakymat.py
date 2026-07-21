@@ -29,6 +29,7 @@ OSP_BLOCKS = [
         'slug': m['slug'],
         'title': m['otsikko'],
         'subtitle': m['alaotsikko'],
+        'huomio': m.get('huomio'),
         'color': m['vari'],
         'icon': m['ikoni'],
         'ikoni_kn': f"{i:02d} · {_KN_NAME.get(m['slug'], m['slug'].upper())}",

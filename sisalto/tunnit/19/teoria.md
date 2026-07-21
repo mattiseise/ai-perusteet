@@ -8,6 +8,8 @@ Sanaa agentti käytetään teknologiauutisissa, yritysviestinnässä ja opetukse
 
 Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Tunnilla 20 arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.
 
+> **Huomio ennen kuin aloitat:** Agentit-osio on kurssin syventävä ja vaativin osa, koska siinä yhdistät aiemmin oppimasi asiat. Et tarvitse aiempaa ohjelmointiosaamista: etenet vaihe kerrallaan ja voit valita teknisen toteutuksen tai samanarvoisen dokumentoidun suunnittelusuorituksen. Tavoitteena on ymmärtää tämän kurssin rajauksen mukaisen agentin rakenne ja rakentaa rajattu, testattava ja turvallinen kokonaisuus — ei hallita kaikkia agenttitekniikoita.
+
 Tarkastellaan esimerkkiä. Tehtävänä on avata sähköpostisovellus, etsiä kaikki viestit, joissa esiintyy sana ”lasku”, siirtää ne kansioon ”Laskut” ja lähettää lähettäjälle automaattinen vastaus, jossa ilmoitetaan laskun vastaanottamisesta. Yksittäisenä suorituksena tehtävä on melko yksinkertainen. Jos sama toiminto täytyy kuitenkin tehdä toistuvasti, esimerkiksi joka päivä tai jatkuvasti pitkän ajan kuluessa, siitä tulee työläs ja aikaa vievä.
 
 Tällaisessa tilanteessa agentti voisi hoitaa tehtävän itsenäisesti käyttäjän puolesta. Tämä herättää kuitenkin tärkeän kysymyksen: miten agentti eroaa tavallisesta automaatiosta, ja mikä tekee järjestelmästä juuri agentin?

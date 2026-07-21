@@ -14,6 +14,8 @@ Tavoitteena on ymmärtää kurssin rajaus: rakennettava tekoälyagentti muodostu
 
 **Opettajan painotus:** Korosta opiskelijoille, että agentti ei ole vain “älykkäämpi chatbot”. Agentti on järjestelmä, jolla on rakenne, toimintalogiikka, rajat ja kyky käyttää työkaluja tietyn tavoitteen saavuttamiseksi.
 
+> **Opettajan huomio:** Kerro heti osion alussa, että Agentit-osio on kurssin syventävä ja vaativin osa, koska siinä yhdistetään aiemmin opittuja asioita. Kuvaa vaativuus oppimisen etenemisenä, ei pääsyvaatimuksena: aiempaa ohjelmointiosaamista ei tarvita, työ etenee vaihe kerrallaan, ja tekninen toteutus sekä dokumentoitu suunnittelusuoritus ovat samanarvoisia reittejä. Tavoitteena on rajattu, testattava ja turvallinen agentti — ei kaikkien agenttitekniikoiden hallinta.
+
 ---
 
 ## Pedagoginen lähestymistapa

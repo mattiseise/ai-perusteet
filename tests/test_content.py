@@ -115,6 +115,12 @@ def main():
         module_page = (ROOT / 'kurssi' / slug / 'index.html').read_text(encoding='utf-8')
         if module_page.count('thinking-path thinking-path--module') != 1:
             fail(f'{slug}: moduulin ajattelukaari puuttuu tai toistuu', errors)
+    agent_module = (ROOT / 'kurssi' / 'agentit' / 'index.html').read_text(encoding='utf-8')
+    if agent_module.count('class="module-notice"') != 1:
+        fail('Agentit-moduulin syventävän osion huomio puuttuu tai toistuu', errors)
+    for page in (ROOT / 'kurssi' / 'index.html', ROOT / 'kurssi' / 'tunti-19' / 'index.html'):
+        if 'Et tarvitse aiempaa ohjelmointiosaamista' not in page.read_text(encoding='utf-8'):
+            fail(f'{page.relative_to(ROOT)}: Agentit-osion rauhoittava huomio puuttuu', errors)
     # ARIA-viitteet: aria-labelledby/-describedby -kohteiden pitää löytyä samasta figuresta
     for page in (ROOT / 'kurssi').glob('tunti-*/index.html'):
         body = page.read_text(encoding='utf-8')

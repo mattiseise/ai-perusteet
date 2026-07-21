@@ -554,6 +554,31 @@ body{
 .thinking-path{
   --thinking-accent:var(--bc-primary);
 }
+.module-notice{
+  margin:30px 0;
+  padding:20px 22px;
+  border:1px solid color-mix(in srgb,var(--teal) 34%,var(--border-soft));
+  border-left:5px solid var(--teal);
+  border-radius:var(--r);
+  background:color-mix(in srgb,var(--teal) 6%,#fff);
+  box-shadow:0 1px 3px rgba(20,30,60,.04);
+}
+.module-notice__label{
+  margin-bottom:7px;
+  color:#006B7A;
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.module-notice p{
+  max-width:78ch;
+  margin:0;
+  color:var(--text-dark);
+  font-size:15px;
+  line-height:1.65;
+}
 .thinking-path--course,.thinking-path--module{
   background:var(--bg-white);
   border:1px solid var(--border-soft);
@@ -722,6 +747,7 @@ body{
 }
 
 @media(max-width:768px){
+  .module-notice{padding:18px}
   .thinking-path--course,.thinking-path--module{padding:20px 18px}
   .thinking-path--lesson{padding:0 16px}
   .thinking-path--course h2,.thinking-path--module h2{font-size:22px}
