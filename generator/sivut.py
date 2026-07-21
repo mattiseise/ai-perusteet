@@ -494,7 +494,8 @@ def build_index_page():
         '</footer>'
     )
     body = (
-        '<section class="page-hero"><div class="page-hero-inner">'
+        # --intro: kahden palstan hero (ks. site.css) — vain etusivulla
+        '<section class="page-hero page-hero--intro"><div class="page-hero-inner">'
         '<div class="eyebrow">AI · Perusteet</div>'
         '<h1>Ymmärrä tekoäly teoriasta agentteihin.</h1>'
         f'<p>{AUDIENCE_PROMISE}</p>'

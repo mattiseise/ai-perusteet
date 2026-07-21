@@ -1498,7 +1498,7 @@ body{
 
 /* Valintasivu — kolme ovea */
 .valinta{max-width:1080px;margin:0 auto;padding:56px 40px 40px}
-.valinta-lead{max-width:60ch;margin:0 0 40px}
+.valinta-lead{max-width:76ch;margin:0 0 40px}
 .valinta-lead p{font-size:17px;color:var(--text-muted);line-height:1.7;margin-bottom:14px}
 .doors{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .door{display:flex;flex-direction:column;gap:10px;background:var(--bg-white);border:1px solid var(--border-soft);
@@ -1519,12 +1519,17 @@ body{
   border-radius:var(--r);padding:20px 26px}
 .made-note-kn{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--text-muted);margin-bottom:8px}
-.made-note p{font-size:14px;color:var(--text-muted);line-height:1.65;max-width:70ch;margin:0 0 8px}
+/* Kaksi tekstipalstaa: laatikon koko leveys käyttöön ilman että rivistä tulee
+   liian pitkä lukea (~58 merkkiä/palsta) — samalla lohkon korkeus puolittuu */
+.made-note{column-count:2;column-gap:48px}
+.made-note-kn{column-span:all}
+.made-note p{font-size:14px;color:var(--text-muted);line-height:1.65;margin:0 0 10px;
+  break-inside:avoid;-webkit-column-break-inside:avoid}
 .made-note p:last-child{margin-bottom:0}
 
 /* Lisenssifooteri (valintasivun alalaita) */
 .license-footer{max-width:1080px;margin:0 auto;padding:8px 40px 48px}
-.license-footer p{font-size:13px;color:var(--text-muted);line-height:1.65;max-width:70ch;margin:0}
+.license-footer p{font-size:13px;color:var(--text-muted);line-height:1.65;max-width:100ch;margin:0}
 .license-footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border-soft);
   transition:color .2s,border-color .2s}
 .license-footer a:hover{color:var(--text-dark);border-color:currentColor}
@@ -1573,7 +1578,12 @@ body{
 .page-hero-inner{max-width:1080px;margin:0 auto}
 .page-hero .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
 .page-hero h1{font-family:var(--font-serif);font-size:44px;font-weight:500;line-height:1.06;letter-spacing:-0.02em;margin-bottom:14px}
-.page-hero p{font-size:16.5px;color:#9aa3bd;max-width:52ch;line-height:1.6}
+.page-hero p{font-size:16.5px;color:#9aa3bd;max-width:76ch;line-height:1.6}
+/* Etusivun hero: kaksi kappaletta rinnakkain työpöydällä — rivinpituus pysyy
+   luettavana (~55 merkkiä), mutta 1080 px:n leveys hyödynnetään ja korkeus puolittuu */
+.page-hero--intro .page-hero-inner{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;row-gap:2px}
+.page-hero--intro .eyebrow,.page-hero--intro h1{grid-column:1/-1}
+.page-hero--intro p{max-width:none}
 .page-body{max-width:1080px;margin:0 auto;padding:44px 40px 72px}
 .page-body .reading{max-width:760px}
 .info-note{background:#EEF1FA;border:1px dashed #B9C2DD;border-radius:var(--r);padding:20px 24px;
@@ -1597,6 +1607,12 @@ body{
 .share-box a,.share-box button{font-family:var(--font-mono);font-size:12px;font-weight:500;border-radius:999px;
   padding:9px 16px;cursor:pointer;text-decoration:none;border:1px solid var(--bc-primary);background:#fff;color:var(--bc-primary)}
 .share-box .sb-go{background:var(--bc-primary);color:#fff}
+
+/* Kapealla näytöllä palstoitus puretaan — yksi palsta on ainoa luettava vaihtoehto */
+@media(max-width:880px){
+  .page-hero--intro .page-hero-inner{display:block}
+  .made-note{column-count:1}
+}
 
 @media(max-width:768px){
   .valinta,.page-body{padding-left:16px;padding-right:16px}
