@@ -18,6 +18,12 @@ Tiettyyn tarkoitukseen määritetty tekoälyavustin. Räätälöidyllä botilla 
 ## Integraatio (integration)
 Kahden tai useamman järjestelmän yhdistäminen niin, että ne voivat vaihtaa tietoa ja toimia yhdessä. Integraatio voi tuoda tekoälyn suoraan organisaation käyttämiin työvälineisiin.
 
+## Porttiehto (gate condition)
+Ehto, jonka on täytyttävä ennen kuin työkalu voi ylipäätään tulla kysymykseen — esimerkiksi lupa käyttää palvelua kyseiselle aineistolle. Porttiehtoa ei pisteytetä: se joko täyttyy tai pudottaa työkalun vertailusta.
+
+## Laatukriteeri (quality criterion)
+Mitattava ominaisuus, jolla verrataan porttiehdot läpäisseitä työkaluja keskenään — esimerkiksi säilyvätkö faktat tai noudattaako vastaus pyydettyä rakennetta. Laatukriteerit pisteytetään.
+
 ## Tietosuoja (data privacy)
 Periaatteet ja käytännöt, jotka suojaavat henkilötietoja ja luottamuksellista tietoa. Asiallisesti tärkeää: mihin datasi menee, kun kirjoitat sen tekoälylle?
 

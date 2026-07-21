@@ -30,13 +30,11 @@ Erottelu on tärkeä, koska palvelun nimi ei yksin kerro, mitä aineistolle tapa
 
 ## 2. Seuraa aineiston datavirtaa
 
-**Datavirta** kuvaa, mistä aineisto lähtee, minkä järjestelmien kautta se kulkee ja mitä sille tapahtuu matkalla. Tekoälypalvelun datavirtaa voi selvittää viidellä kysymyksellä:
+**Datavirta** kuvaa, mistä aineisto lähtee, minkä järjestelmien kautta se kulkee ja mitä sille tapahtuu matkalla. Sen selvittäminen tarkoittaa käytännössä sitä, että seuraat aineiston reittiä alusta loppuun kuin paketin kulkua.
 
-1. **Mitä lähetän?** Promptin, tiedoston, kuvan, äänitteen vai tietokannan tietoja?
-2. **Poistuuko aineisto laitteeltani?** Lähetetäänkö se verkon kautta ulkopuoliseen palveluun?
-3. **Kuka käsittelee aineistoa?** Palveluntarjoaja, sen alihankkija vai oma organisaatio?
-4. **Säilytetäänkö tai käytetäänkö aineistoa myöhemmin?** Tallentuuko historia, voiko ihminen tarkastaa sisältöä tai käytetäänkö sitä palvelun kehittämiseen?
-5. **Mihin muihin järjestelmiin palvelu on yhteydessä?** Voiko aineisto siirtyä esimerkiksi hakupalveluun, tiedostovarastoon tai toiseen rajapintaan?
+Reitti alkaa siitä, mitä olet lähettämässä. Lyhyt prompti on eri asia kuin kokonainen tiedosto, kuva, äänite tai tietokannasta poimittu aineisto — mitä enemmän lähetät, sitä tarkemmin pitää tietää mihin se päätyy. Seuraava kysymys on, poistuuko aineisto laitteeltasi lainkaan. Jos se lähtee verkon yli ulkopuoliseen palveluun, mukaan tulee vähintään yksi uusi osapuoli, ja usein useampi: palveluntarjoajan lisäksi sen alihankkijat.
+
+Reitin loppupää ratkaisee eniten. Säilyykö aineisto palvelussa vai katoaako se istunnon mukana? Voiko joku ihminen katsoa sisältöä jälkikäteen? Käytetäänkö sitä palvelun kehittämiseen? Ja kulkeeko se vielä eteenpäin — moni palvelu on yhteydessä hakupalveluun, tiedostovarastoon tai muuhun rajapintaan, jolloin aineisto voi liikkua pidemmälle kuin arvasit.
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l11-t"><i aria-hidden="true">// </i>sama tiedosto — kolme reittiä, ja mitä kustakin jää jäljelle</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:404px">
@@ -171,14 +169,9 @@ Paikallisessa ajossa malli toimii omalla laitteella tai organisaation omassa ymp
 
 ## 5. Käyttöpäätöksen neljä kysymystä
 
-Ennen kuin lähetät aineiston tekoälylle, pysähdy neljän kysymyksen äärelle:
+Kun tiedät, mitä aineisto sisältää ja mihin se kulkee, päätös syntyy näiden tietojen yhdistelmästä. Aineiston luonne kertoo, kuinka paljon suojaa tarvitaan; datavirta kertoo, kuka aineistoon pääsee käsiksi; käsittelyehdot kertovat, mitä palveluntarjoaja saa sillä tehdä. Neljäs ja usein ratkaisevin kysymys on hallinnollinen: onko juuri tämä ratkaisu hyväksytty juuri tähän käyttötarkoitukseen. Tekninen turvallisuus ei korvaa puuttuvaa lupaa.
 
-1. **Mitä tietoa aineisto sisältää?**
-2. **Mihin aineisto kulkee ja mitä sille tapahtuu?**
-3. **Millä ehdoilla ja oikeuksilla sitä käsitellään?**
-4. **Onko ratkaisu hyväksytty juuri tähän käyttötarkoitukseen?**
-
-Vastauksen perusteella tee yksi kolmesta päätöksestä:
+Vastausten perusteella päädyt yhteen kolmesta lopputuloksesta:
 
 - **Käytä:** Aineisto ja käyttötarkoitus sopivat ympäristöön.
 - **Käytä rajatusti:** Poista tarpeettomat tiedot, rajaa ominaisuuksia tai vaihda organisaation hyväksymään ympäristöön.
@@ -190,28 +183,17 @@ Hyvä päätös sisältää myös epävarmuuden. Jos et tiedä, tallentuuko aine
 
 Paikallinen ajo vähentää yhtä riskiä: aineistoa ei tarvitse lähettää yleiseen pilvipalveluun. Se ei poista muita vastuita.
 
-Tarkista myös:
+Vastuu ei katoa, se vaihtaa paikkaa. Kun malli pyörii omalla koneella, sinä vastaat siitä, että laite on suojattu ja päivitetty ja että tiedät kenellä siihen on pääsy — myös tallennettuihin keskusteluihin, jotka jäävät levylle siinä missä pilvipalvelussakin. Sovellus voi lisäksi käyttää verkkohakua, lähettää käyttötietoja tai kutsua ulkoisia rajapintoja, jolloin aineisto liikkuu ulos siitä huolimatta, että malli itse on paikallinen.
 
-- onko laite suojattu ja ajan tasalla
-- kenellä on pääsy laitteeseen ja tallennettuihin keskusteluihin
-- käyttääkö sovellus verkkohakua, telemetriaa tai ulkoisia rajapintoja
-- millä lisenssillä mallia saa käyttää
-- kuka vastaa mallin päivittämisestä ja virhetilanteista
-- sopiiko mallin laatu ja nopeus tehtävään
-
-Paikallinen ajo on siis **käyttöympäristöä koskeva valinta**, ei yleinen turvallisuusleima.
+Loput vastuut ovat käytännöllisiä. Mallin lisenssi määrää, mihin sitä saa käyttää; joku on vastuussa päivityksistä ja virhetilanteista; ja paikallisesti ajettava malli on usein pienempi ja hitaampi kuin pilvipalvelun malli, mikä voi näkyä laadussa. Paikallinen ajo on siis **käyttöympäristöä koskeva valinta**, ei yleinen turvallisuusleima.
 
 ## 7. Esimerkki: asiakaspalautteiden tiivistäminen
 
 Pienellä yrityksellä on sata asiakaspalautetta. Palautteissa on nimiä, sähköpostiosoitteita ja kuvauksia yksittäisistä palvelutilanteista.
 
-Huono ratkaisu olisi kopioida aineisto suoraan ensimmäiseen helposti saatavaan verkkopalveluun. Parempi eteneminen on:
+Huono ratkaisu olisi kopioida aineisto suoraan ensimmäiseen helposti saatavaan verkkopalveluun. Parempi tapa alkaa aineistosta itsestään: käy palautteet läpi ja merkitse, mikä niissä on henkilötietoa ja mikä yrityksen sisäistä tietoa. Sen jälkeen kysy jokaisesta tunnistetiedosta, tarvitaanko sitä tehtävässä lainkaan — tiivistelmä asiakaspalautteiden teemoista ei yleensä tarvitse nimiä eikä sähköpostiosoitteita, joten ne voi poistaa ennen kuin aineisto menee mihinkään.
 
-1. tunnista henkilötiedot ja yrityksen sisäiset tiedot
-2. poista tehtävän kannalta tarpeettomat tunnistetiedot
-3. tarkista, mikä ympäristö on organisaation hyväksymä
-4. piirrä aineiston reitti ja merkitse epäselvät kohdat
-5. tee käyttöpäätös vasta näiden tietojen perusteella
+Vasta kun tiedät mitä aineistossa on, kannattaa katsoa ympäristöä: mikä palvelu on organisaatiossa hyväksytty tällaiselle aineistolle. Piirrä aineiston reitti näkyviin ja merkitse epäselvät kohdat selvitettäviksi. Käyttöpäätös tehdään vasta tämän jälkeen, ei ennen sitä.
 
 Jos palautteet voidaan anonymisoida luotettavasti, tiivistäminen voi onnistua hyväksytyssä pilvipalvelussa. Jos tunnistettavuus on tehtävän kannalta välttämätöntä, tarvitaan organisaation hyväksymä ja tähän käsittelyyn soveltuva ratkaisu.
 
@@ -225,11 +207,11 @@ Tämän tunnin datavirtakaavio toimii myöhemmin botin tietosuoja- ja käyttöra
 
 ## Yhteenveto
 
-1. **Malli, palvelu ja käyttöympäristö ovat eri asioita.**
-2. **Palvelun nimi ei vielä kerro aineiston koko reittiä.**
-3. **Käyttöpäätös alkaa aineiston luonteen tunnistamisesta.**
-4. **Pilvipalvelu, hallittu palvelu ja paikallinen ajo jakavat vastuut eri tavoin.**
-5. **Epäselvä datavirta pitää selvittää ennen käyttöä.**
+Tämän tunnin tärkein oivallus on, että malli, palvelu ja käyttöympäristö ovat kolme eri asiaa. Sama malli voi olla käytettävissä usean eri palvelun kautta, ja sama palvelu voi toimia hyvin erilaisilla ehdoilla riippuen siitä, käytetäänkö sitä henkilökohtaisella tilillä vai organisaation hallitsemassa ympäristössä. Palvelun nimi ei siis vielä kerro, mihin aineisto kulkee.
+
+Siksi käyttöpäätös ei ala työkalusta vaan aineistosta. Kun tiedät, mitä aineisto sisältää, voit seurata sen reittiä ja arvioida, riittävätkö käsittelyehdot ja onko ratkaisu hyväksytty tähän tarkoitukseen. Pilvipalvelu, organisaation hallitsema palvelu ja paikallinen ajo jakavat vastuut eri tavoin — mikään niistä ei poista vastuuta, ne vain siirtävät sitä.
+
+Jos datavirran jokin kohta jää epäselväksi, se on selvitettävä ennen käyttöä. "Luultavasti turvallinen" ei ole päätös.
 
 > **Tunnin ajattelukysymys:** Mihin aineisto kulkee, millä ehdoilla sitä käsitellään ja saako ratkaisua käyttää?
 

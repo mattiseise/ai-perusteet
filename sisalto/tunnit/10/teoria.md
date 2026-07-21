@@ -1,12 +1,90 @@
 # Kilpailuta tekoälyt — vertaa ennen kuin valitset
 
-## Johdanto: vertailu on koe, ei mielipidekysymys
+## Johdanto
 
-Tekoälypalvelut muuttuvat nopeasti. Yksittäinen malli, ominaisuus tai hinta voi vaihtua, mutta hyvän vertailun periaate säilyy. Siksi tällä tunnilla ei opetella ulkoa, mikä tuote on ”paras”. Opit rakentamaan pienen vertailukokeen, jonka perusteella voit valita tehtävään sopivan työkalun.
+Tähän asti olet opetellut, mitä tekoäly on, miten se toimii ja missä sen rajat kulkevat. Nyt teoria muuttuu käytännöksi: on aika tarttua itse työkaluihin.
 
-Vertailun lähtökohta on aina tehtävä. Sama palvelu voi onnistua hyvin yhdessä työssä ja heikosti toisessa. Työkalun maine, tuttuus tai sujuva vastaustyyli eivät vielä osoita, että se täyttää käyttötarkoituksen.
+Kolme suurta kielimallipohjaista palvelua ovat ChatGPT, Claude ja Microsoft Copilot. Ne eivät ole sama työkalu eri nimillä. Ne on rakennettu eri lähtökohdista ja eri tavoitteilla, ja se näkyy siinä, mihin kukin niistä taipuu. Yksi painottaa monipuolisuutta ja laajaa ekosysteemiä, toinen pitkien aineistojen käsittelyä, kolmas yrityskäyttöä ja Microsoft 365 -integraatiota.
+
+Palvelut kehittyvät nopeasti. Mallien nimet, hinnat ja käyttörajat voivat muuttua kuukausissa, joten niitä ei kannata opetella ulkoa. Sen sijaan kannattaa opetella kaksi asiaa, jotka eivät vanhene: mistä työkalujen erot syntyvät, ja miten oman valinnan voi perustella näytöllä eikä mielikuvalla.
+
+Hyvä valinta ei perustu siihen, mikä työkalu on suosituin tai tutuin, vaan siihen, mikä sopii käsillä olevaan tehtävään.
 
 > **Tunnin ydinkysymys:** Millä samalla aineistolla, samoilla ehdoilla ja ennalta päätetyillä kriteereillä osoitat työkalun sopivuuden?
+
+> **Tilanne heinäkuussa 2026.** Tämän luvun tuotetiedot on tarkistettu heinäkuussa 2026. Yksittäiset mallinimet, käyttörajat ja hinnat vanhenevat nopeasti — tarkista ajankohtainen tilanne palvelun omilta sivuilta ennen hankintapäätöstä. Tunnin menetelmä ei vanhene, vaikka tuotetiedot vanhenevat.
+
+---
+
+## ChatGPT — monipuolinen yleistyökalu
+
+ChatGPT on OpenAI:n palvelu, ja sen selkein vahvuus on käyttöalueen laajuus. Samassa keskusteluikkunassa voi kirjoittaa, ideoida, analysoida tiedostoja, tulkita ja luoda kuvia, kirjoittaa koodia ja hakea tietoa verkosta silloin, kun kyseinen ominaisuus on käytössä. Kun työ koostuu monenlaisista pienistä tehtävistä, tämä monipuolisuus säästää aikaa: työkalua ei tarvitse vaihtaa kesken tehtävän.
+
+Yksi ChatGPT:n tunnetuimmista ominaisuuksista on räätälöity botti, jolle annetaan oma rooli, omat ohjeet ja oma tietopohja. Yritys voi rakentaa markkinointiassistentin, joka tuntee brändin äänen, ja opettaja voi tehdä kertausbotin, joka kysyy opiskelijalta kysymyksiä tietystä aiheesta. Rakennat itse tällaisen myöhemmin tällä kurssilla.
+
+ChatGPT ei kuitenkaan ole automaattisesti paras valinta kaikkeen. Hyvin pitkien dokumenttien käsittelyssä kannattaa tarkistaa, mikä konteksti-ikkuna valitulla mallilla ja tilauksella on tosiasiassa käytettävissä — käyttöliittymän rajat voivat poiketa siitä, mitä rajapinnan dokumentaatio lupaa suurimmille malleille. Tietosuojassa ratkaisevat oman tilauksen asetukset: keskusteluja voidaan käyttää palvelun kehittämiseen, ellei käyttäjä ole muuttanut asetusta, ja organisaatiokäytössä hallinta on tavallisesti tiukempi kuin henkilökohtaisessa käytössä.
+
+> **Pysähdy hetkeksi:** Oletko käyttänyt ChatGPT:tä aiemmin? Mihin tehtävään käytit sitä, ja mietitkö silloin, olisiko jokin toinen työkalu voinut sopia siihen paremmin?
+
+---
+
+## Claude — pitkät aineistot ja huolellinen analyysi
+
+Claude on Anthropicin kielimalli, ja sen vahvuudet näkyvät selvimmin silloin, kun aineistoa on paljon. Pitkä konteksti-ikkuna tarkoittaa käytännössä sitä, että malli voi pitää laajan raportin, transkription tai koodikokonaisuuden mielessään yhtenä kokonaisuutena sen sijaan, että aineisto pitäisi pilkkoa palasiksi. Kokonaiskuva säilyy, ja analyysi pysyy johdonmukaisena myös pitkässä tekstissä.
+
+Claude näyttää tuotoksen usein erillisessä paneelissa keskustelun rinnalla. Kun malli kirjoittaa esimerkiksi verkkosivun tai pitkän tekstiluonnoksen, sitä voi tarkastella omana tuotoksenaan sen sijaan, että se olisi haudattuna keskusteluhistoriaan. Koodityössä tämä helpottaa laajojen kokonaisuuksien hahmottamista.
+
+Claude ei ole paras valinta silloin, kun tarvitaan mahdollisimman laaja ekosysteemi tai runsaasti kuluttajakäyttöön suunnattuja lisätyökaluja. Verkkohaun saatavuus riippuu käyttöliittymästä, tilauksesta ja organisaation asetuksista, joten sitä ei kannata olettaa automaattiseksi. Tietosuojassa Claude ei ole yksinkertaisesti "aina turvallisin": kuluttajakäytössä käyttäjän omat valinnat vaikuttavat siihen, voidaanko keskusteluja käyttää mallien kehittämiseen, ja yritys- sekä rajapintakäytössä ehdot ovat eri.
+
+> **Pysähdy hetkeksi:** Sinulla on 80-sivuinen tutkimusraportti, jonka sisällön haluat ymmärtää nopeasti. Kumpi sopisi tehtävään paremmin, ChatGPT vai Claude? Perustele valintasi.
+
+---
+
+## Microsoft Copilot — Microsoft 365 -ympäristön työkalu
+
+Copilot edustaa kolmatta lähestymistapaa. Se ei ole ensisijaisesti yksi chat-ikkuna vaan tekoäly, joka on kytketty Microsoftin tuotteisiin. Sen arvo syntyy siitä, että se on läsnä siellä, missä työ jo tehdään: Wordissa dokumenttia kirjoittaessa, Excelissä taulukkoa tulkitessa, Outlookissa viestiä tiivistäessä ja Teamsissa kokousta purkaessa.
+
+Olennaisin ero muihin on se, mistä Copilot saa tietonsa. Se hakee organisaation omia tietoja käyttäjän käyttöoikeuksien rajoissa, eli se ei näe automaattisesti kaikkea organisaation dataa vaan sen, mihin kyseisellä käyttäjällä on muutenkin pääsy. Yrityskäytössä tämä on merkittävä ero yleiseen verkkopohjaiseen tekoälytyökaluun verrattuna, ja siihen liittyy myös Microsoftin linjaus siitä, ettei Copilotin käsittelemää organisaatiodataa käytetä perusmallien kouluttamiseen.
+
+Copilot ei ole vahvimmillaan monimutkaisessa koodaustyössä, vapaassa luovassa ideoinnissa tai hyvin syvällisessä yksittäisen pitkän dokumentin analyysissä. Jos käsiteltävä aineisto ei ole Microsoft 365 -ympäristössä, suurin osa Copilotin eduista jää saamatta.
+
+> **Pysähdy hetkeksi:** Millä tavalla Copilot voisi auttaa tavallisessa toimistopäivässä? Entä missä tilanteessa se ei riittäisi?
+
+---
+
+## Sama tehtävä, kolme vastausta
+
+Erot on helpointa ymmärtää antamalla työkaluille sama tehtävä. Kuvittele, että käsissäsi on 40-sivuinen tutkimusraportti PDF-muodossa ja haluat ymmärtää sen nopeasti.
+
+ChatGPT sopii tilanteeseen, jossa haluat yhdistää dokumentin lukemisen muuhun työhön: hakea siihen liittyvää taustatietoa verkosta, käsitellä raportin taulukoita ja tehdä niistä nopean visualisoinnin — kaiken samassa keskustelussa.
+
+Claude sopii tilanteeseen, jossa raportti pitää käsitellä kokonaisuutena ja analyysin pitää pysyä johdonmukaisena alusta loppuun. Kun aineistoa on paljon, kokonaiskuvan säilyminen on tärkeämpää kuin lisätoiminnot.
+
+Copilot sopii tilanteeseen, jossa raportti on jo organisaation Microsoft 365 -ympäristössä ja haluat suhteuttaa sen muihin dokumentteihin, sähköposteihin ja kokousmuistiinpanoihin omien käyttöoikeuksiesi rajoissa.
+
+Tiivistettynä: Claude on usein vahva pitkissä aineistoissa, ChatGPT on monipuolinen yleistyökalu ja Copilot on vahva Microsoft 365 -ympäristössä. Oikea vastaus riippuu silti aina tehtävästä — ja juuri siksi seuraavaksi opetellaan, miten sen selvittää itse.
+
+| Kriteeri | ChatGPT | Claude | Copilot |
+| --- | --- | --- | --- |
+| **Vahvin alue** | Monipuoliset tehtävät samassa keskustelussa | Pitkien aineistojen analyysi | Työ Microsoft 365 -sovellusten sisällä |
+| **Konteksti-ikkuna** | Riippuu mallista ja tilauksesta | Riippuu mallista; osalla erittäin suuri | Ei yhtä julkista lukua; riippuu sovelluksesta ja lisenssistä |
+| **Organisaation tiedot** | Syötetään käsin | Syötetään käsin | Haetaan automaattisesti käyttöoikeuksien rajoissa |
+| **Verkkohaku** | Kyllä, kun ominaisuus on käytössä | Ympäristöstä riippuen | Kyllä |
+| **Office-integraatio** | Rajallinen | Rajallinen | Erittäin vahva |
+
+---
+
+## Ennen laatuvertailua: saako työkalua ylipäätään käyttää?
+
+Kaikkia työkaluja ei kannata ottaa mukaan laatuvertailuun. Osa ehdoista on sellaisia, että ne joko täyttyvät tai eivät — ja jos ne eivät täyty, työkalu jää pois riippumatta siitä, kuinka hyvän vastauksen se tuottaisi. Näitä kutsutaan **porttiehdoiksi**, koska ne toimivat porttina: niistä pitää päästä läpi ennen kuin laatua kannattaa edes mitata.
+
+Tavallisin porttiehto on lupa. Jos palvelua ei ole hyväksytty sille aineistolle, jota olet käsittelemässä — oppilaitoksessa, työpaikalla tai vaikka harrastusseurassa — työkalu ei ole vaihtoehto. Sama koskee tilannetta, jossa tarvittava tiedostomuoto ei aukea palvelussa tai käyttöoikeutta ei yksinkertaisesti ole. Kaunis vastaus ei korjaa sitä, ettei aineistoa olisi saanut syöttää palveluun lainkaan.
+
+Porttiehto eroaa **laatukriteeristä** juuri tässä. Laatukriteeri kertoo, kuinka hyvin hyväksytty työkalu tehtävän hoitaa: säilyvätkö faktat, noudattaako vastaus pyydettyä rakennetta, sopiiko kieli kohderyhmälle ja kuinka paljon jälkikorjausta tulos vaatii. Laatukriteerit pisteytetään, porttiehdot eivät — ne joko täyttyvät tai kaatavat työkalun.
+
+---
+
+## Näin teet reilun vertailun
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l10-t"><i aria-hidden="true">// </i>sokkovertailu: portti → lukitse → pisteytä → paljasta vasta lopuksi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:346px">
@@ -117,126 +195,43 @@ Vertailun lähtökohta on aina tehtävä. Sama palvelu voi onnistua hyvin yhdess
 }
 </style>
 
-## Määritä ensin päätös
+Vertailu on koe, ei mielipidekysymys. Se tarkoittaa, että olosuhteet pidetään samoina: sama prompti, sama lähdeaineisto, sama tavoiteltu vastausmuoto ja uusi keskustelu jokaiselle testattavalle työkalulle. Jos toiselle antaa vahingossa helpomman tehtävän tai tarkemman ohjeen, vertailu mittaa ohjeen laatua eikä työkalun.
 
-Ennen testiä kirjoita, mitä olet valitsemassa ja mihin käyttöön. ”Vertailen tekoälyjä” on liian väljä tavoite, sillä sen perusteella et vielä tiedä, millaista vastausta olet arvioimassa. Parempi muoto on:
+Kriteerit kannattaa päättää ennen kuin vastauksia näkee. Muuten on liian helppoa keksiä perustelu sille vaihtoehdolle, joka jostain syystä tuntuu miellyttävämmältä. Valitse kokeeseen kolmesta viiteen kriteeriä ja kirjoita jokaisesta näkyviin, mitä heikko ja mitä hyvä tulos tarkoittaa. "Sisältö säilyy" on epämääräinen; "keskeiset asiat säilyvät eikä uusia väitteitä ilmesty" on havaittava.
 
-> Valitsen työkalun, jolla muokataan 500 sanan ohje aloittelijalle sopivaksi. Tärkeintä ovat sisällön säilyminen, selkeys ja tarkistettavuus.
+Arvioi vastaukset mieluiten sokkona. Kopioi ne dokumenttiin nimillä A ja B, pisteytä sisältö ja paljasta vasta lopuksi, kumpi oli kumpi. Tuotemerkki synnyttää odotuksia, jotka värittävät arviota huomaamatta. Sokkoutus ei poista kaikkia vinoumia, mutta se vähentää tutun brändin painoarvoa — ja vielä parempi on pyytää toista ihmistä pisteyttämään samat vastaukset samoilla kriteereillä.
 
-Hyvä päätös sisältää:
+Älä anna yhden kilpailijan toimia tuomarina. Tekoälyä voi hyvin käyttää kysymysten muotoiluun tai arviointitaulukon puutteiden etsimiseen, mutta sille ei kannata antaa päätösvaltaa siitä, mikä vastaus voitti: mallin arvio voi suosia tiettyä kirjoitustapaa ja muuttua promptin mukana. Ihminen tekee päätöksen ja vastaa siitä. Tekoälylle voi sen sijaan esittää hyödyllisen vastakysymyksen: "Mikä havainto taulukostani ei vielä tue johtopäätöstäni?"
 
-- todellisen tehtävän
-- käyttäjän tai yleisön
-- käytettävän aineiston
-- hyväksyttävän lopputuloksen
-- ehdot, joiden pitää täyttyä ennen laadun vertailua.
+Muista lopuksi, ettei paras tekstivastaus aina tarkoita parasta työkalua. Jos toinen palvelu tuottaa hieman paremman luonnoksen mutta vaatii aineiston kopioimista käsin, erillisiä käyttöoikeuksia ja runsaasti jälkityötä, pieni laatuero ei todennäköisesti ratkaise valintaa. Kirjaa siis myös se, kuinka sujuvasti aineisto liikkuu palveluun ja takaisin ja paljonko tuloksen tarkistamiseen kuluu aikaa.
 
-Kun nämä asiat on kirjoitettu näkyviin, työkalun ominaisuudet eivät pääse huomaamatta muuttamaan itse tehtävää.
 
-## Erota porttiehdot ja laatukriteerit
+## Tietosuoja — mihin datasi menee?
 
-Kaikkia työkaluja ei pidä edes ottaa mukaan laadulliseen vertailuun. **Porttiehto** ratkaisee, saako työkalua käyttää tehtävään.
+Tietosuoja on kriittinen kysymys, ja siihen liittyy kolme asiaa, jotka pitää tietää ennen kuin syötät palveluun mitään: tallentuuko syöttämäsi tieto, käytetäänkö sitä mallien kehittämiseen ja kuka voi hallita tai poistaa sen.
 
-Porttiehtoja voivat olla:
+Vastaus ei ole sama kaikissa palveluissa eikä edes saman palvelun eri versioissa. Kuluttajakäytössä käyttäjän omat asetukset ratkaisevat usein sen, voidaanko keskusteluja käyttää mallien kehittämiseen. Organisaatio- ja rajapintakäytössä ehdot ovat tavallisesti tiukemmat ja hallinta on keskitetty. Copilotin kohdalla olennaista on se, että palvelu toimii organisaation oman ympäristön sisällä ja noudattaa käyttäjän käyttöoikeuksia.
 
-- organisaatio on hyväksynyt palvelun kyseiselle aineistolle
-- aineisto mahtuu palvelun käsiteltäväksi
-- tarvittava tiedostomuoto tai toiminto on käytettävissä
-- käyttäjällä on tarvittava lisenssi ja käyttöoikeus
-- palvelun käyttö täyttää saavutettavuuden tai muun pakollisen vaatimuksen
+Yleinen sääntö on yksinkertainen: älä syötä tekoälypalveluun asiakastietoja, henkilötietoja, salasanoja, liikesalaisuuksia tai muuta luottamuksellista tietoa, ellei kyseistä työkalua ole hyväksytty juuri siihen käyttöön. Tämä on porttiehto, ei laatukriteeri.
 
-Jos porttiehto ei täyty, työkalu hylätään ennen vastausten pisteytystä. Kaunis vastaus ei korjaa sitä, ettei palveluun saanut syöttää aineistoa.
+> **Pysähdy hetkeksi:** Jos työsi käsittelee arkaluontoista asiakastietoa, millä perusteella valitsisit työkalun? Mikä olisi ensimmäinen asia, jonka tarkistaisit?
 
-**Laatukriteeri** kertoo, kuinka hyvin hyväksytty työkalu hoitaa tehtävän. Ohjeen muokkaamisessa voit esimerkiksi tarkastella, säilyvätkö faktat, noudattaako vastaus annettua rakennetta ja sopiiko kieli kohderyhmälle. Tärkeää voi olla myös se, erottuvatko lähteestä saadut tiedot mallin omista päätelmistä ja kuinka paljon jälkikorjausta vastaus vaatii. Valitse kokeeseen 3–5 kriteeriä. Liian pitkä lista hajottaa huomion ja tekee valinnasta helposti mekaanisen pistekilpailun.
-
-## Kirjoita kriteereille havaittavat kuvaukset
-
-Pelkkä numero 1–5 ei kerro, mitä arvioija näki. Kuvaa etukäteen, mitä asteikon päät tarkoittavat.
-
-| Kriteeri | Heikko tulos | Hyvä tulos |
-| --- | --- | --- |
-| Sisällön säilyminen | Olennaisia asioita puuttuu tai uusia väitteitä ilmestyy | Keskeinen sisältö säilyy eikä uusia faktoja keksitä |
-| Kohderyhmälle sopivuus | Sanasto ja oletukset ovat liian vaikeita | Aloittelija ymmärtää tekstin ilman selittämätöntä erikoissanastoa |
-| Rakenteen noudattaminen | Pyydetty muoto puuttuu | Vastaus noudattaa sovittua rakennetta |
-| Jälkikorjauksen määrä | Tuotos vaatii olennaisen uudelleenkirjoituksen | Tarvitaan vain pieniä tyylikorjauksia |
-
-Näin arvio perustuu näyttöön eikä siihen, mikä vastaus ”tuntuu parhaalta”.
-
-## Hallitse vertailun muuttujat
-
-Reilussa vertailussa pidät olennaiset olosuhteet samoina:
-
-- sama prompti
-- sama lähdeaineisto
-- sama tavoiteltu vastausmuoto
-- uusi keskustelu jokaiselle testille
-- kirjattu palvelu, malli tai käyttöympäristö siltä osin kuin tieto on saatavilla
-- sama arviointitaulukko.
-
-Näin et vahingossa anna toiselle työkalulle helpompaa tehtävää.
-
-Täydellistä laboratoriokoetta ei tavallisessa käytössä synny. Ilmais- ja maksulliset versiot voivat erota, palvelut voivat käyttää eri oletusasetuksia ja mallit voivat muuttua testien välillä. Nämä erot pitää kirjata rajoituksiksi, ei unohtaa.
-
-Jos vertailet vain yhden kerran, satunnaisuus voi vaikuttaa tulokseen. Tärkeässä valinnassa aja sama koe useammalla edustavalla aineistolla. Tämän tunnin pieni koe opettaa menetelmän; se ei todista työkalun yleistä paremmuutta.
-
-## Arvioi vastaukset sokkona, jos mahdollista
-
-Tuotemerkki synnyttää ennakko-odotuksia. Jos mahdollista, kopioi vastaukset dokumenttiin nimillä **A** ja **B** ennen pisteytystä. Arvioi ensin sisältö ja paljasta palvelut vasta sen jälkeen.
-
-Sokkoutus ei poista kaikkia vinoumia, mutta se vähentää tutun brändin ja käyttöliittymän vaikutusta. Vielä parempi on pyytää toista ihmistä arvioimaan samat vastaukset samoilla kriteereillä ja vertailla havaintoja.
-
-## Älä pyydä yhtä kilpailijaa tuomariksi
-
-Tekoälyä voi käyttää kysymysten esittämiseen tai arviointitaulukon puutteiden etsimiseen. Sille ei kuitenkaan kannata antaa yksin päätösvaltaa siitä, mikä vastaus voitti. Mallin arvio voi suosia tiettyä kirjoitustapaa, olla epäjohdonmukainen tai muuttua promptin mukana.
-
-Ihminen tekee lopullisen päätöksen ja vastaa siitä. Tekoäly voi auttaa haastamaan perustelun:
-
-> ”Mikä havainto taulukostani ei vielä tue johtopäätöstäni?”
-
-Tämä kysymys ohjaa arvioimaan omaa näyttöä sen sijaan, että malli valitsisi työkalun puolestasi.
-
-## Kirjaa myös käytännön työ
-
-Paras tekstivastaus ei aina tarkoita parasta työkalua. Kuvittele, että toinen palvelu tuottaa hieman paremman luonnoksen mutta vaatii aineiston hankalaa kopiointia, erillisiä käyttöoikeuksia ja paljon käsin tehtävää jälkityötä. Silloin pieni laatuero ei ehkä ratkaise valintaa.
-
-Kirjaa siksi myös käytännön työ:
-
-- kuinka helposti aineisto saadaan palveluun ja tulos takaisin
-- voiko työn tehdä ilman tarpeetonta kopiointia
-- miten käyttöoikeudet ja tiedot hallitaan
-- paljonko tuloksen tarkistamiseen ja korjaamiseen kuluu aikaa
-- mitä käyttö maksaa todellisella työmäärällä
-- pystyykö toinen ihminen dokumentoinnin perusteella toistamaan kokeen.
-
-Nämä eivät ole pysyviä tuotekohtaisia totuuksia. Ne tarkistetaan siinä käyttöympäristössä ja sillä käyttäjätilillä, jota päätös koskee.
-
-## Tee rajattu johtopäätös
-
-Hyvä johtopäätös ei kuulu: ”Työkalu A on paras tekoäly.” Se kuuluu:
-
-> Tässä kokeessa työkalu A sopi paremmin aloittelijan ohjeen muokkaamiseen, koska se säilytti kaikki viisi sisältökohtaa ja noudatti rakennetta. Työkalu B vaati kahden puuttuneen kohdan palauttamisen. Koe ei osoita, kumpi on parempi muissa tehtävissä.
-
-Johtopäätös kertoo:
-
-- mihin tehtävään valinta koskee
-- mikä havainto ratkaisi valinnan
-- mitkä porttiehdot täyttyivät
-- mitä kokeesta ei voi päätellä
-- milloin nopeasti muuttuvassa käyttöympäristössä testi on syytä uusia.
+---
 
 ## Yhteenveto
 
-Työkalun valinta on pieni tutkimusprosessi:
+Työkalujen erot ovat todellisia, mutta ne ovat tehtäväkohtaisia. ChatGPT on monipuolinen, Claude vahva pitkissä aineistoissa ja Copilot vahva Microsoft 365 -ympäristössä — mutta yksikään näistä lauseista ei kerro, mikä sopii juuri sinun työhösi. Sen selvittää vain kokeilemalla, ja kokeilu kannattaa tehdä järjestyksessä:
 
-1. määritä tehtävä ja päätös
-2. tarkista porttiehdot
-3. päätä laatukriteerit ennen vastausten näkemistä
-4. käytä samaa promptia ja aineistoa
-5. arvioi havaittava näyttö, mielellään sokkona
-6. kirjaa käytännön työ ja rajoitukset
-7. tee tehtäväkohtainen, rajattu johtopäätös
+1. Kirjoita näkyviin, mitä olet valitsemassa ja mihin käyttöön.
+2. Tarkista porttiehdot: saako työkalua käyttää tähän aineistoon?
+3. Päätä laatukriteerit ennen kuin näet vastauksia.
+4. Aja sama prompti ja sama aineisto jokaisella työkalulla.
+5. Pisteytä havainnot, mieluiten sokkona.
+6. Tee rajattu johtopäätös: mihin tehtävään valinta pätee ja mitä kokeesta ei voi päätellä.
 
-Tällä menetelmällä vertailu kestää paremmin myös sen, että palvelut ja mallit muuttuvat.
+Hyvä johtopäätös ei kuulu "Työkalu A on paras tekoäly". Se kuuluu näin: "Tässä kokeessa työkalu A sopi paremmin aloittelijan ohjeen muokkaamiseen, koska se säilytti kaikki viisi sisältökohtaa ja noudatti pyydettyä rakennetta. Koe ei kerro, kumpi on parempi muissa tehtävissä."
+
+Tällä tavalla tehty vertailu kestää myös sen, että palvelut ja mallit muuttuvat — ja ne muuttuvat.
 
 > **Lopuksi pohdittavaksi:** Mikä omassa vertailussasi voisi näyttää työkalujen erolta, vaikka se johtuisi todellisuudessa erilaisesta tilistä, asetuksesta tai satunnaisuudesta?
 
@@ -247,4 +242,4 @@ Tällä menetelmällä vertailu kestää paremmin myös sen, että palvelut ja m
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [NIST: Towards a Standard for Identifying and Managing Bias in Artificial Intelligence](https://www.nist.gov/publications/towards-standard-identifying-and-managing-bias-artificial-intelligence)
 
-Tarkistettu 20.7.2026.
+Tarkistettu 22.7.2026.

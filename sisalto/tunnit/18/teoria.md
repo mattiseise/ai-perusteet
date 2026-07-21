@@ -50,11 +50,11 @@ Botin **järjestelmäprompti** on tärkein yksittäinen tekstipätkä, jonka kir
 
 **Tietopohja** on kokoelma dokumentteja, jotka botti lukee ja joista se ammentaa tietoa. Tietopohjan kuratointi on käytännössä päättelyä: mitä botin pitää tietää, jotta se voi auttaa käyttäjää hyvin?
 
-Kun valitset tietopohjaa, pohdi seuraavia kysymyksiä:
+Aloita siitä, mitä botin pitää tietää voidakseen auttaa. Useimmiten se tarkoittaa kolmea asiaa: miltä hyvä lopputulos aiheessasi näyttää, mitä virheitä siinä tyypillisesti tehdään ja mitä termejä alalla käytetään. Näillä botti pystyy sekä ohjaamaan oikeaan suuntaan että tunnistamaan, milloin käyttäjä on menossa metsään.
 
-- **Mitä botin pitää tietää?** Esimerkiksi miltä hyvä lopputulos näyttää, mitä yleisiä virheitä aiheessa tehdään ja mitä termejä käytetään.
-- **Mistä saat luotettavaa materiaalia?** Hyviä lähteitä ovat esimerkiksi oppikirjat, kurssin omat materiaalit, harrastuksen viralliset säännöt ja oman koulun tai seuran omat ohjeet. Älä perusta tietopohjaa satunnaisiin blogikirjoituksiin.
-- **Mikä on liikaa?** 2–4 huolella valittua dokumenttia on parempi kuin 20 keskinkertaista. Liian suuri määrä materiaalia voi tehdä botin vastauksista sekavia.
+Materiaalin luotettavuus ratkaisee lopputuloksen laadun. Oppikirjat, kurssin omat materiaalit, lajin viralliset säännöt ja oman oppilaitoksen tai seuran ohjeet ovat hyviä lähteitä, koska joku on vastuussa niiden sisällöstä. Satunnaiselle blogikirjoitukselle ei ole tällaista vastuuta, eikä botti osaa erottaa hyvää blogia huonosta.
+
+Määrä kannattaa pitää kurissa. Kahdesta neljään huolella valittua dokumenttia on parempi kuin kaksikymmentä keskinkertaista: mitä enemmän aineistoa on, sitä todennäköisemmin botti löytää sieltä osumia, jotka eivät liity kysymykseen — ja sitä sekavampia vastauksista tulee.
 
 **Hyvä tietopohja oman aiheesi botille voi sisältää esimerkiksi:**
 

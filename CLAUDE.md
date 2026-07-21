@@ -33,13 +33,15 @@ Tekoälyn perusteet -verkkokurssi (aiperusteet.fi). 27 oppituntia kolmessa moduu
 
 - **prompti** (ei "kehote" — paitsi kertamaininta tunnin 4 teoriassa ja sanastossa: "suomeksi myös kehote"). Yhdyssanat: järjestelmäprompti.
 - **pitkäkestoinen muisti** (ei pitkäaikainen), **eskalointi** (ei eskalaatio/eskalatio), **agentti = kielimalli + harness**, kuusi rakennusosaa tunnin 19 nimillä.
-- Tuotenimet ja päivämäärät vain "Tilanne heinäkuussa 2026" -laatikoissa (tunnit 19 ja 22) — ne ovat tietoisia huoltokohtia.
+- Tuotenimet ja päivämäärät vain "Tilanne heinäkuussa 2026" -laatikoissa (tunnit 10, 19 ja 22) — ne ovat tietoisia huoltokohtia. Tunti 10 on tuotevertailu (ChatGPT/Claude/Copilot) ja siksi väistämättä tuotesidonnainen: pidä väitteet kestävissä eroissa (vahvuusalue, ekosysteemi, mistä data tulee) äläkä kirjaa versionumeroita, hintoja tai käyttörajoja leipätekstiin.
+- **Kohderyhmä:** kurssi on kaikille avoin, ei vain työelämässä oleville. Älä oleta lukijalla työpaikkaa tai organisaatiota ("Ammattilaisena…", "organisaatiosi…"). `tests/test_yleiso.py` vahtii tätä; perustellut poikkeukset `tests/allowlists/yleiso.yaml`.
 - Em-viiva (—) on talotyyli.
 
 ## Sisältötyön tapa
 
 - Uusi tai muuttuva opetussisältö ajetaan portitetulla ketjulla: suunnittelu → rakentaminen → pedagoginen tarkistus (hyväksytty/korjattava) → suomen kielenhuolto (no_semantic_drift). Toteuta subagenteilla; raskas työ Opus-tasolla, orkestrointi ja lopputarkistus kevyemmin.
 - Sävy: lämmin sinutteleva asiasuomi, väärästä vastauksesta ei moitita, ei emojeja opetussisällössä.
+- **Proosa on oletus, lista poikkeus.** Aloittelijalle suunnattu teoria selitetään kappaleina. Lista on perusteltu vain kun se on aidosti listamainen: tarkistuslista, menettelyn askeleet, vertailutaulukko tai lähdeluettelo. Jos osiossa on 4+ listariviä ja alle ~90 proosasanaa, se on todennäköisesti kirjoitettava auki. Yhteenveto ei saa olla pelkkiä lihavoituja fragmentteja.
 - Diat: käsin ladottua SVG:tä (960×540, `deck-slide`-divit, sivunumerot "N / M") — muutokset renderöidään ja tarkistetaan kuvana (cairosvg).
 
 ## Käynnissä: rakenneuudistus 2

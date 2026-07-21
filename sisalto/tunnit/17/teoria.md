@@ -12,12 +12,9 @@ Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan 
 
 Voit ajatella järjestelmäpromptia botin **työsopimuksena**: kuka botti on, mikä sen tehtävä on ja missä sen rajat kulkevat.
 
-Hyvä järjestelmäprompti vastaa neljään kysymykseen:
+Työsopimuksen tavoin hyvä järjestelmäprompti vastaa neljään kysymykseen. Ensin se kertoo, kuka botti on: mikä rooli sillä on ja millaisena se esittäytyy käyttäjälle. Toiseksi se kertoo, mitä botti tekee — mikä on sen varsinainen tehtävä ja missä järjestyksessä se etenee, kun käyttäjä ottaa yhteyttä. Kolmanneksi se määrittää, miten botti puhuu: teitittelee vai sinuttelee, vastaa lyhyesti vai perusteellisesti, käyttää ammattitermejä vai selittää ne auki.
 
-1. **Kuka olet?** Rooli ja persoona.
-2. **Mitä teet?** Tehtävä ja työnkulku.
-3. **Miten puhut?** Äänensävy ja tyyli.
-4. **Mitä et tee?** Rajat ja kiellot.
+Neljäs kysymys on se, joka useimmin unohtuu ja joka useimmin ratkaisee botin laadun: mitä botti **ei** tee. Rajat ja kiellot kertovat, mihin kysymyksiin botin ei pidä vastata, milloin sen pitää ohjata käyttäjä ihmisen puheille ja mitä sen ei pidä väittää tietävänsä. Ilman tätä osaa botti vastaa mielellään kaikkeen, myös siihen mistä se ei tiedä mitään.
 
 ## Rakennuspalikat järjestelmäpromptiksi
 
@@ -118,6 +115,8 @@ Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää 
 
 ## Tee ensimmäinen versio valitsemallasi polulla
 
+Tästä eteenpäin polut eroavat. Jos sinulla on käytössä alusta, jolle botin voi rakentaa, teet toimivan version. Jos ei ole, teet dokumentoidun suunnitelman, joka arvioidaan samoilla kriteereillä — kumpikaan polku ei ole toista arvokkaampi, ja molemmissa ratkaisee sama asia: miten hyvin määrittelysi kestää testin.
+
 **Teknisellä toteutuspolulla** luot botin saatavilla olevalle alustalle:
 
 1. Luo uusi botti ja anna sille sama nimi kuin määrittelydokumentissasi.
@@ -136,12 +135,11 @@ Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää 
 
 ## Kolme ensimmäistä testiä
 
-Älä yritä tehdä botista heti täydellistä. Aja tai simuloi nyt ensimmäisen kerran kaikki kolme tunnilla 15 kirjoittamaasi testiä: normaali tapaus, kielteinen testi ja reunatapaus. Hyvä testaustapa etenee näin:
+Älä yritä tehdä botista heti täydellistä. Aja tai simuloi nyt ensimmäisen kerran kaikki kolme tunnilla 15 kirjoittamaasi testiä: normaali tapaus, kielteinen testi ja reunatapaus.
 
-1. **Käytä samoja kolmea testiä ja odotusta.** Älä vaihda odotuksia ensimmäisten tulosten perusteella.
-2. **Teknisellä polulla aja testit oikealla botilla.** Tallenna kustakin syöte, vastaus ja mahdollinen lähdeviite tai muu alustan näyttö.
-3. **Suunnittelupolulla käy testit vaihe vaiheelta.** Merkitse jokainen simuloitu haku, tarkistus ja vastaus erikseen.
-4. **Vertaa jokaista tulosta odotukseen.** Kirjaa myös, mitä polkusi ei pysty todentamaan.
+Tärkein sääntö on, että käytät samoja testejä ja samoja odotuksia kuin kirjoitit tunnilla 15. Houkutus muuttaa odotusta ensimmäisen tuloksen jälkeen on suuri — jos botti vastaa toisin kuin odotit, on helppo ajatella että odotus olikin väärä. Silloin testi lakkaa mittaamasta mitään.
+
+Teknisellä polulla ajat testit oikealla botilla ja tallennat jokaisesta syötteen, vastauksen ja mahdollisen lähdeviitteen. Suunnittelupolulla käyt testit läpi vaihe vaiheelta ja merkitset jokaisen simuloidun haun, tarkistuksen ja vastauksen erikseen. Kummallakin polulla vertaat tulosta siihen, mitä odotit — ja kirjaat myös sen, mitä oma polkusi ei pysty todentamaan. Rehellinen maininta puuttuvasta todisteesta on arvioinnissa parempi kuin vaikutelma, että kaikki toimi.
 
 ## Mihin kiinnität huomiota testissä?
 
