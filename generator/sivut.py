@@ -482,7 +482,8 @@ def build_index_page():
         'Myös tämä verkkosivusto on rakennettu tekoälyn avulla.</p>'
         '<p>Materiaali tarkistetaan ennen julkaisemista, mutta myös tarkistettuun aineistoon '
         'kannattaa suhtautua kriittisesti. Ilmoita havaitsemastasi virheestä tekijälle ja varmista '
-        'ajankohtaiset tiedot alkuperäislähteestä. Kriittinen lukutaito on yksi kurssin keskeisistä tavoitteista.</p>'
+        'ajankohtaiset tiedot alkuperäislähteestä. <strong><em>Kriittinen tekoälyn lukutaito on yksi '
+        'kurssin keskeisistä tavoitteista.</em></strong></p>'
         '</div>'
     )
     lic_footer = (
