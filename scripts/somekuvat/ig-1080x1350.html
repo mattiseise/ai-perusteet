@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#000}
+  .card{
+    position:relative;width:1080px;height:1350px;overflow:hidden;
+    background:linear-gradient(160deg,#0B0F1A 0%,#11182a 100%);
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    padding:88px 78px 80px;display:flex;flex-direction:column;
+  }
+  /* Ylälaidan gradienttiviiva — sama kuin OG-kuvissa */
+  .bar{position:absolute;inset:0 0 auto 0;height:9px;
+    background:linear-gradient(90deg,oklch(0.66 0.15 264),oklch(0.66 0.15 305) 55%,oklch(0.66 0.13 208))}
+
+  .head{display:flex;align-items:center;gap:18px;position:relative;z-index:2}
+  .mark{width:46px;height:46px;color:#fff;flex:none}
+  .mark svg{width:100%;height:100%;display:block}
+  .wordmark{font-size:31px;font-weight:400;color:#fff;letter-spacing:.005em}
+  .wordmark b{font-weight:700}
+
+  .body{flex:1;display:flex;flex-direction:column;justify-content:center;
+    position:relative;z-index:2;padding-bottom:40px}
+  h1{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:104px;line-height:1.045;
+    color:#fff;letter-spacing:-.012em;max-width:14ch}
+
+  .facts{margin-top:52px;display:flex;flex-wrap:wrap;gap:14px;max-width:660px}
+  .chip{font-size:26px;font-weight:500;color:#dfe4f2;
+    border:1.5px solid rgba(255,255,255,.19);border-radius:999px;padding:12px 24px;
+    background:rgba(255,255,255,.035)}
+  .chip--hi{color:#0B0F1A;background:oklch(0.72 0.14 264);border-color:transparent;font-weight:600}
+
+  .foot{position:relative;z-index:2;display:flex;align-items:center;gap:16px;
+    font-size:27px;color:#9AA1B4;font-weight:500}
+  .foot .dot{opacity:.5}
+  .foot .site{color:#fff;font-weight:600}
+
+  /* Solmugrafiikka oikeaan alanurkkaan, osittain leikkautuen */
+  .node{position:absolute;right:-130px;bottom:-120px;width:640px;height:640px;z-index:1;opacity:.92}
+  .glow{position:absolute;right:-60px;bottom:-50px;width:500px;height:500px;z-index:0;
+    background:radial-gradient(circle,oklch(0.66 0.15 264 / .30) 0%,transparent 68%)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="bar"></div>
+  <div class="glow"></div>
+
+  <svg class="node" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10.4" stroke="rgba(255,255,255,.20)" stroke-width=".12" stroke-dasharray=".28 .5"/>
+    <circle cx="12" cy="12" r="7.5" fill="rgba(91,127,224,.13)"/>
+    <path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="#fff" stroke-width=".62" stroke-linecap="round"/>
+    <circle cx="12" cy="12" r="2.7" fill="oklch(0.66 0.15 264)"/>
+    <circle cx="12" cy="4.6" r="2.05" fill="#fff"/>
+    <circle cx="5.6" cy="17.6" r="2.05" fill="#fff"/>
+    <circle cx="18.4" cy="17.6" r="2.05" fill="#fff"/>
+  </svg>
+
+  <div class="head">
+    <span class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="2.7" fill="currentColor"/>
+        <circle cx="12" cy="4.6" r="2.05" fill="currentColor"/>
+        <circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/>
+        <circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="wordmark">Tekoälyn <b>perusteet</b></span>
+  </div>
+
+  <div class="body">
+    <h1>Ymmärrä tekoäly teoriasta agentteihin.</h1>
+    <div class="facts">
+      <span class="chip chip--hi">27 oppituntia</span>
+      <span class="chip">Teoria</span>
+      <span class="chip">Käyttö</span>
+      <span class="chip">Agentit</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="site">aiperusteet.fi</span>
+    <span class="dot">•</span>
+    <span>Ilmainen</span>
+    <span class="dot">•</span>
+    <span>CC BY-SA 4.0</span>
+  </div>
+</div>
+</body>
+</html>
