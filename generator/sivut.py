@@ -28,11 +28,18 @@ FAVICON = ("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F200
            "%230B0F1A%22%2F%3E%3Ccircle%20cx%3D%2218.4%22%20cy%3D%2217.6%22%20r%3D%222.05"
            "%22%20fill%3D%22%230B0F1A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
 
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;'
-         '0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&'
-         'family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">')
+FONTS_URL = ('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;'
+             '0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&'
+             'family=JetBrains+Mono:wght@400;500&display=swap')
+
+# Kirjasimet ladataan render-blocking-tilan ohi: preload + media="print"-kikka vapauttaa
+# ensimmäisen maalauksen odottamasta Google Fontsin vastausta (LCP-parannus). URL:ssä on jo
+# display=swap, joten teksti näkyy heti fallback-fontilla ja vaihtuu ilman layout-hyppyä.
+FONTS = (f'<link rel="preconnect" href="https://fonts.googleapis.com">'
+         f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+         f'<link rel="preload" as="style" href="{FONTS_URL}">'
+         f'<link rel="stylesheet" href="{FONTS_URL}" media="print" onload="this.media=\'all\'">'
+         f'<noscript><link rel="stylesheet" href="{FONTS_URL}"></noscript>')
 
 LOGO_SVG = ('<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">'
             '<path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/>'
@@ -88,7 +95,21 @@ FOOTER = ('<footer class="site-footer">© Matti Seise · Avoin kurssi — saa k�
 
 SITE_NAME = 'AI · Perusteet'
 LICENSE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/'
-PROVIDER = {'@type': 'Organization', 'name': SITE_NAME, 'url': DOMAIN}
+
+# Tekijäentiteetti (GEO/SEO): sitoo kurssin tunnistettavaan henkilöön ja hänen muihin
+# profiileihinsa. sameAs on se signaali, jolla hakukoneet ja kielimallit yhdistävät
+# kurssin, seise.orgin ja LinkedIn-profiilin samaksi toimijaksi.
+AUTHOR = {
+    '@type': 'Person',
+    'name': 'Matti Seise',
+    'url': 'https://seise.org/',
+    'sameAs': [
+        'https://seise.org/',
+        'https://www.linkedin.com/in/mattiseise',
+    ],
+}
+PROVIDER = {'@type': 'Organization', 'name': SITE_NAME, 'url': DOMAIN,
+            'founder': AUTHOR, 'sameAs': ['https://seise.org/']}
 
 
 def _jsonld_html(json_ld):
@@ -103,12 +124,19 @@ def _jsonld_html(json_ld):
 
 
 def page_shell(title, description, canonical_path, body, ci=None, include_practice=False,
-               extra_head='', pre_body_script='', og_type='website', json_ld=None, og_image=None):
-    """Rakentaa täyden HTML-dokumentin. ci = dict → window.CI inline-config."""
+               extra_head='', pre_body_script='', og_type='website', json_ld=None, og_image=None,
+               canonical_override=None, lang='fi', alternates=None):
+    """Rakentaa täyden HTML-dokumentin. ci = dict → window.CI inline-config.
+
+    canonical_override: kanoninen polku, jos sivu on tietoinen duplikaatti toisesta
+        näkymästä (luokka/tunti-NN → kurssi/tunti-NN). Vaikuttaa sekä rel=canonicaliin,
+        og:url:iin että sitemapin koostamiseen (generate_site.py lukee canonicalin HTML:stä).
+    alternates: [(hreflang, polku)] → rel=alternate-linkit kieliversioille.
+    """
     ci = ci or {}
     ci.setdefault('allIds', N.ALL_IDS)
     ci_json = json.dumps(ci, ensure_ascii=False).replace('</', '<\\/')
-    canonical = DOMAIN + canonical_path
+    canonical = DOMAIN + (canonical_override or canonical_path)
     desc = S.esc_attr(description)
     title_a = S.esc_attr(title)
     og_img = DOMAIN + (og_image or OG_IMAGE_DEFAULT)
@@ -129,14 +157,20 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
         f'<meta name="twitter:image" content="{og_img}">',
     ))
     ld_html = _jsonld_html(json_ld)
-    scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>']
+    alt_html = '\n'.join(
+        f'<link rel="alternate" hreflang="{hl}" href="{DOMAIN}{p}">' for hl, p in (alternates or []))
+    scripts = []
+    # Mermaid ladataan vain jos sivulla on oikeasti kaavio. Kirjasto on ~1 MB CDN:stä, ja
+    # se haettiin aiemmin joka sivulle vaikka yhdelläkään ei ole mermaid-lohkoa.
+    if 'class="mermaid"' in body:
+        scripts.append('<script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>')
     if include_practice:
         scripts.append('<script src="/assets/practice.js"></script>')
     scripts.append(f'<script>window.CI={ci_json};</script>')
     scripts.append('<script src="/assets/site.js"></script>')
     scripts_html = '\n'.join(scripts)
     return f'''<!DOCTYPE html>
-<html lang="fi">
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -144,6 +178,7 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
 <title>{title_a}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
+{alt_html}
 {social}
 {ld_html}
 <link rel="icon" type="image/svg+xml" href="{FAVICON}">
@@ -496,9 +531,15 @@ def build_tunti_page(lesson, view):
     desc = S.excerpt(teoria_txt, 160) or (
         f'{lesson["otsikko"]}. {vm["label"]}, AI · Perusteet -verkkokurssi tekoälyn perusteista.')
     canonical = f'/{view}/tunti-{kansio}/'
-    json_ld = _tunti_jsonld(lesson, view, num, canonical, desc)
+    # Luokkaversion tuntisivu on 89-99 % samaa tekstiä kuin kurssiversion: teoria on jaettu,
+    # erona vain luokkatehtävät ja diat. Kaksi lähes identtistä URLia kilpailisi samoista
+    # hauista, joten luokkasivu kanonisoidaan kurssiversioon. Luokkaversioon tullaan
+    # opettajan linkistä eikä haussa, joten orgaanista näkyvyyttä ei menetetä.
+    canon_override = f'/kurssi/tunti-{kansio}/' if view == 'luokka' else None
+    json_ld = _tunti_jsonld(lesson, view, num, canon_override or canonical, desc)
     return page_shell(title, desc, canonical, body, ci=ci, include_practice=(ptasks is not None),
-                      og_type='article', json_ld=json_ld, og_image=OG_IMAGE_BY_VIEW.get(view))
+                      og_type='article', json_ld=json_ld, og_image=OG_IMAGE_BY_VIEW.get(view),
+                      canonical_override=canon_override)
 
 
 def _tunti_jsonld(lesson, view, num, canonical, desc):
@@ -511,6 +552,7 @@ def _tunti_jsonld(lesson, view, num, canonical, desc):
         'description': desc,
         'url': DOMAIN + canonical,
         'isPartOf': {'@type': 'Course', 'name': SITE_NAME, 'url': f'{DOMAIN}/kurssi/'},
+        'author': AUTHOR,
         'inLanguage': 'fi',
         'license': LICENSE_URL,
         'isAccessibleForFree': True,
@@ -641,6 +683,7 @@ def build_index_page():
         'AI · Perusteet — tekoälyn perusteet -verkkokurssi',
         AUDIENCE_PROMISE,
         '/', body, pre_body_script=pre,
+        alternates=ALTERNATES,
         json_ld=_course_jsonld(f'{DOMAIN}/'))
 
 
@@ -653,6 +696,8 @@ def _course_jsonld(url):
         'description': AUDIENCE_PROMISE,
         'url': url,
         'provider': PROVIDER,
+        'author': AUTHOR,
+        'creator': AUTHOR,
         'inLanguage': 'fi',
         'isAccessibleForFree': True,
         'license': LICENSE_URL,
@@ -798,10 +843,125 @@ def build_lopputyo_page(osp, view):
         f'{html}'
         '</div></div>'
     )
+    # Sama duplikaattilogiikka kuin tuntisivuilla: luokkaversion lopputyösivu on 98-99 %
+    # samaa tekstiä kuin kurssiversion, joten se kanonisoidaan kurssiversioon.
+    canon_override = f'/kurssi/{osp["slug"]}/lopputyo/' if view == 'luokka' else None
     return page_shell(f'Lopputyö — {osp["title"]} — {vm["label"]}',
                       f'{osp["title"]}-osion lopputyön tehtävänanto. {vm["label"]}.',
                       f'/{view}/{osp["slug"]}/lopputyo/', body,
-                      og_image=OG_IMAGE_BY_VIEW.get(view))
+                      og_image=OG_IMAGE_BY_VIEW.get(view),
+                      canonical_override=canon_override)
+
+
+# ==================== ENGLANNINKIELINEN TIIVISTELMÄ ====================
+
+# Kieliversiot ristiinlinkitetään hreflangilla. x-default osoittaa suomenkieliseen
+# etusivuun, koska kurssi on suomenkielinen — /en/ on vain tiivistelmä, ei käännös.
+ALTERNATES = [('fi', '/'), ('en', '/en/'), ('x-default', '/')]
+
+EN_DESCRIPTION = (
+    'AI · Perusteet is a free, openly licensed introductory course on artificial '
+    'intelligence, taught in Finnish. 27 lessons across three modules cover how AI '
+    'systems work, how to use generative AI tools, and how AI agents operate. '
+    'No prior technical background required. Licensed CC BY-SA 4.0.')
+
+EN_MODULES = [
+    ('Theory', 'How AI systems actually work',
+     'What machine intelligence is and is not, how models are trained, how generative '
+     'models produce text, why context changes the answer, the limits of memory, '
+     'multimodality, hallucinations and error types, ethics and responsibility.'),
+    ('Using AI tools', 'Working with generative AI in practice',
+     'Comparing and choosing tools, data protection and local versus cloud execution, '
+     'building reusable prompt patterns, using AI as a working partner, and designing, '
+     'building and shipping your own assistant bot.'),
+    ('Agents', 'AI agents and automation',
+     'What separates an agent from a chatbot, ready-made agents, the harness that lets '
+     'an agent act, tool use and the Model Context Protocol, and the limits and risks '
+     'of delegating work to autonomous systems.'),
+]
+
+
+def build_en_page():
+    """/en/ — englanninkielinen tiivistelmä kansainvälistä löydettävyyttä varten.
+
+    Kurssia ei käännetä: suomenkielisyys on sen erottautumistekijä ja käännös
+    kaksinkertaistaisi ylläpidon. Tämä sivu kertoo englanniksi mitä kurssi on, kenelle
+    se on ja millä lisenssillä sitä saa käyttää — sen verran, että kansainvälinen
+    lukija ja kielimalli osaavat sijoittaa sen oikeaan kontekstiin.
+    """
+    mods = ''.join(
+        f'<div class="mod-card" style="--osp-color:{osp["color"]}">'
+        f'<div class="mod-title">{escape(title)}</div>'
+        f'<div class="mod-sub">{escape(sub)}</div>'
+        f'<p style="margin:.75rem 0 0;color:var(--text-muted);font-size:.95rem">{escape(desc)}</p>'
+        f'<p style="margin:.6rem 0 0;font-size:.9rem"><a href="/kurssi/{osp["slug"]}/">'
+        f'{len(osp["lessons"])} lessons (in Finnish) →</a></p>'
+        '</div>'
+        for (title, sub, desc), osp in zip(EN_MODULES, N.OSP_BLOCKS)
+    )
+    body = (
+        '<section class="page-hero"><div class="page-hero-inner">'
+        '<div class="eyebrow">In English</div>'
+        '<h1>Foundations of AI — an open course in Finnish</h1>'
+        f'<p>{escape(EN_DESCRIPTION)}</p>'
+        '</div></section>'
+        '<div class="page-body">'
+        '<div class="reading panel active">'
+        '<div class="info-note"><p><strong>Note:</strong> the course itself is written in '
+        'Finnish. This page is an English summary, not a translation. If you read Finnish, '
+        'start at <a href="/">aiperusteet.fi</a>.</p></div>'
+        '<h2>What it is</h2>'
+        '<p>A complete, classroom-ready introduction to artificial intelligence for learners '
+        'with no technical background. The course teaches both how to use AI tools and how to '
+        'recognise, explain, test, evaluate and justify claims made about them — critical AI '
+        'literacy is an explicit goal, not a footnote.</p>'
+        '<p>The scope is designed as three competence points (osaamispiste) in the Finnish '
+        'vocational education system, roughly 40 hours of work. The site does not award '
+        'credit; that decision belongs to the educational institution.</p>'
+        '<h2>Three modules, 27 lessons</h2>'
+        f'<div class="mod-grid">{mods}</div>'
+        '<h2>Three ways to use it</h2>'
+        '<ul>'
+        '<li><strong><a href="/kurssi/">Self-study</a></strong> — work through it at your own '
+        'pace: theory, self-checking exercises and a glossary. Progress is stored in your browser.</li>'
+        '<li><strong><a href="/luokka/">Classroom</a></strong> — the student-facing version for '
+        'taught lessons, with classroom tasks and slides.</li>'
+        '<li><strong><a href="/opettaja/">Teacher materials</a></strong> — lesson plans, '
+        'teacher-led activities, slides and assessment guidance.</li>'
+        '</ul>'
+        '<h2>Licence and reuse</h2>'
+        '<p>All content is licensed under '
+        '<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" '
+        'target="_blank">Creative Commons Attribution-ShareAlike 4.0</a>. You may use, share, '
+        'adapt and translate the material — including commercially — as long as you credit the '
+        'author and license derivatives under the same terms. Educational institutions are '
+        'welcome to copy it into their own environments.</p>'
+        '<h2>Who made it</h2>'
+        '<p>The course was created by <a href="https://seise.org/?utm_source=ai-perusteet&'
+        'utm_medium=referral&utm_campaign=en" target="_blank" rel="noopener">Matti Seise</a>, '
+        'who designed the whole, directed the agent pipeline that drafted and reviewed each '
+        'lesson, made the edits and approved every lesson before publication. The production '
+        'process itself used AI extensively — which is described openly on the Finnish front page.</p>'
+        '</div></div>'
+    )
+    json_ld = {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        'name': 'AI · Perusteet — Foundations of AI',
+        'description': EN_DESCRIPTION,
+        'url': f'{DOMAIN}/en/',
+        'provider': PROVIDER,
+        'author': AUTHOR,
+        'inLanguage': 'fi',
+        'isAccessibleForFree': True,
+        'license': LICENSE_URL,
+        'educationalLevel': 'Beginner',
+        'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online',
+                              'courseWorkload': 'PT40H', 'inLanguage': 'fi'},
+    }
+    return page_shell('Foundations of AI — free open course in Finnish | AI · Perusteet',
+                      EN_DESCRIPTION, '/en/', body, lang='en',
+                      alternates=ALTERNATES, json_ld=json_ld)
 
 
 # ==================== SANASTO ====================
