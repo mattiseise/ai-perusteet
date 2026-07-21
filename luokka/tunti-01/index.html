@@ -54,29 +54,68 @@
 <p>Koneoppimismallin kouluttamisessa järjestelmä muodostaa näistä esimerkeistä yhteyksiä. Se voi huomata, että perjantaisin myynti on usein vilkkaampaa, sateella asiakkaita käy vähemmän tai toritapahtuma lisää kysyntää. Ihmisen ei tarvitse kirjoittaa jokaista mahdollista yhdistelmää erilliseksi säännöksi.</p>
 <p>Kun koulutettu malli saa uuden tapauksen, se antaa siitä arvion. Jos huomenna on perjantai, sää on lämmin ja torilla järjestetään tapahtuma, malli voi arvioida, että kauppa tarvitsee tavallista enemmän sämpylöitä.</p>
 <p>Arvio ei ole varma tieto tulevaisuudesta. Huominen voi poiketa aiemmista päivistä. Siksi mallin ehdotusta pitää verrata tilanteeseen ja päätöksen seurauksiin.</p>
-<figure class="ai-demo" data-demo-id="lesson-01-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l01a-t"><i aria-hidden="true">// </i>kolme tapaa ohjata toimintaa</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:250px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ul class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">VALMIS SÄÄNTÖ: maanantai → 100 sämpylää</li><li class="ai-demo__mobile-node">KOULUTETTU MALLI: aiemmat päivät → menekkiarvio</li><li class="ai-demo__mobile-node">YHDISTELMÄ: mallin arvio → sääntö tarkistaa</li></ul></div>
+<figure class="ai-demo" data-demo-id="lesson-01-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l01a-t"><i aria-hidden="true">// </i>kolme tapaa päättää sämpylätilaus</span>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:320px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ul class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">VALMIS SÄÄNTÖ: maanantai → aina 100 sämpylää — myös hiihtolomaviikolla, jolloin meni 40</li><li class="ai-demo__mobile-node">KOULUTETTU MALLI: aiemmat maanantait 96, 92 ja 40 (loma) → arvio 96 sämpylää</li><li class="ai-demo__mobile-node">YHDISTELMÄ: mallin arvio 96 → sääntö tarkistaa rajat (30–120) → tilaus 96</li></ul></div>
   <div class="l01a-wrap" data-once role="img" aria-labelledby="l01a-t" aria-describedby="l01a-d">
-    <span class="sr-only" id="l01a-d">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa aiempien esimerkkien perusteella arvion. Yhdistelmä käyttää mallin arviota ja tarkistaa sen säännöllä.</span>
-    <div class="l01a-c c1"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">VALMIS SÄÄNTÖ</strong><span>Maanantai →<br>100 sämpylää</span></div>
-    <div class="l01a-c c2"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Aiemmat päivät →<br>menekkiarvio</span></div>
-    <div class="l01a-c c3"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">YHDISTELMÄ</strong><span>Mallin arvio →<br>sääntö tarkistaa</span></div>
+    <span class="sr-only" id="l01a-d">Leipomo päättää sämpylöiden määrän kolmella tavalla. Valmis sääntö antaa maanantaille aina 100 sämpylää riippumatta siitä, että hiihtolomaviikolla meni vain 40. Koulutettu malli laskee aiemmista maanantaista (92, 78 ja 85 kappaletta) arvion 96 sämpylää. Yhdistelmässä mallin arvio 96 kulkee säännön tarkistuksen läpi: tilaus ei saa ylittää 120:tä, joten tilaus on 96.</span>
+    <div class="l01a-c c1"><strong class="l01a-h" style="color:#7FD0A8">VALMIS SÄÄNTÖ</strong>
+      <span class="l01a-rule">jos maanantai → 100 kpl</span>
+      <span class="l01a-row r1">ma 6.4. <b>100</b> <i class="ok">meni 96</i></span>
+      <span class="l01a-row r2">ma 13.4. <b>100</b> <i class="ok">meni 92</i></span>
+      <span class="l01a-row r3">ma 20.4. <b>100</b> <i class="bad">meni 40 · hiihtoloma</i></span>
+      <em class="l01a-note n1">Sääntö ei tiedä lomaviikosta.</em></div>
+    <div class="l01a-c c2"><strong class="l01a-h" style="color:#C9B7F1">KOULUTETTU MALLI</strong>
+      <span class="l01a-rule">aiemmat maanantait → arvio</span>
+      <span class="l01a-row r4">ma 6.4. <b>96</b></span>
+      <span class="l01a-row r5">ma 13.4. <b>92</b></span>
+      <span class="l01a-row r6">ma 20.4. <b>40</b> <i class="dim">loma</i></span>
+      <em class="l01a-note n2">→ ensi maanantai: <b>96 kpl</b></em></div>
+    <div class="l01a-c c3"><strong class="l01a-h" style="color:#7FD0A8">YHDISTELMÄ</strong>
+      <span class="l01a-rule">mallin arvio + säännön tarkistus</span>
+      <span class="l01a-row r7">malli ehdottaa <b>96</b></span>
+      <span class="l01a-row r8">sääntö: ei yli <b>120</b></span>
+      <span class="l01a-row r9">sääntö: ei alle <b>30</b></span>
+      <em class="l01a-note n3">→ tilaus <b>96 kpl</b> <i class="ok">hyväksytty</i></em></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa arvion aiempien esimerkkien perusteella. Samassa järjestelmässä voidaan käyttää molempia.</figcaption></figure>
+<figcaption class="ai-demo__cap">Valmis sääntö antaa saman vastauksen tilanteesta riippumatta. Koulutettu malli painottaa aiempia havaintoja. Yhdistelmässä mallin arvio kulkee säännön tarkistuksen läpi — samassa järjestelmässä voidaan käyttää molempia.</figcaption></figure>
 <style>
-.l01a-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:680px;animation:l01aw 11s 1 forwards}
+.l01a-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:700px;font-family:var(--font-mono);animation:l01aw 15s 1 forwards}
 @keyframes l01aw{0%,100%{opacity:1}}
-.l01a-c{padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8;opacity:0;transform:translateY(10px)}
-.l01a-c.c1{animation:l01a1 11s 1 forwards}
-.l01a-c.c2{animation:l01a2 11s 1 forwards}
-.l01a-c.c3{border-color:#2F9E69;animation:l01a3 11s 1 forwards}
-@keyframes l01a1{0%,4%{opacity:0;transform:translateY(10px)}16%,100%{opacity:1;transform:none}}
-@keyframes l01a2{0%,26%{opacity:0;transform:translateY(10px)}38%,100%{opacity:1;transform:none}}
-@keyframes l01a3{0%,48%{opacity:0;transform:translateY(10px)}
-  60%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}
-  72%{opacity:1;transform:none;box-shadow:0 0 0 6px rgba(47,158,105,.22)}
-  84%,100%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}}
+.l01a-c{position:relative;padding:16px 16px 14px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8;opacity:0;transform:translateY(10px)}
+.l01a-c.c1{animation:l01a1 15s 1 forwards}
+.l01a-c.c2{animation:l01a2 15s 1 forwards}
+.l01a-c.c3{border-color:#2F9E69;animation:l01a3 15s 1 forwards}
+@keyframes l01a1{0%,2%{opacity:0;transform:translateY(10px)}10%,100%{opacity:1;transform:none}}
+@keyframes l01a2{0%,30%{opacity:0;transform:translateY(10px)}38%,100%{opacity:1;transform:none}}
+@keyframes l01a3{0%,58%{opacity:0;transform:translateY(10px)}
+  66%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}
+  80%{opacity:1;transform:none;box-shadow:0 0 0 6px rgba(47,158,105,.22)}
+  90%,100%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}}
+.l01a-h{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:8px}
+.l01a-rule{display:block;font-size:11.5px;line-height:1.35;color:#B9C2DA;border-bottom:1px dashed #34415F;padding-bottom:8px;margin-bottom:8px}
+.l01a-row{display:flex;align-items:baseline;gap:6px;font-size:12px;line-height:1.9;color:#EAEEF8;opacity:0}
+.l01a-row b{font-weight:700}
+.l01a-row i{font-style:normal;font-size:11px}
+.l01a-row i.ok{color:#7FD0A8}
+.l01a-row i.bad{color:#FFB4A2}
+.l01a-row i.dim{color:#9AA6BD}
+.l01a-note{display:block;margin-top:10px;font-style:normal;font-size:11.5px;line-height:1.4;color:#C9B7F1;opacity:0}
+.l01a-note i.ok{font-style:normal;color:#7FD0A8}
+/* Rivit ilmestyvät yksi kerrallaan, jotta lukija ehtii verrata lukuja. */
+.l01a-row.r1{animation:l01ar 15s 1 forwards;animation-delay:1.8s}
+.l01a-row.r2{animation:l01ar 15s 1 forwards;animation-delay:2.4s}
+.l01a-row.r3{animation:l01ar 15s 1 forwards;animation-delay:3.0s}
+.l01a-note.n1{animation:l01ar 15s 1 forwards;animation-delay:3.8s}
+.l01a-row.r4{animation:l01ar 15s 1 forwards;animation-delay:6.4s}
+.l01a-row.r5{animation:l01ar 15s 1 forwards;animation-delay:6.9s}
+.l01a-row.r6{animation:l01ar 15s 1 forwards;animation-delay:7.4s}
+.l01a-note.n2{animation:l01ar 15s 1 forwards;animation-delay:8.2s}
+.l01a-row.r7{animation:l01ar 15s 1 forwards;animation-delay:10.4s}
+.l01a-row.r8{animation:l01ar 15s 1 forwards;animation-delay:10.9s}
+.l01a-row.r9{animation:l01ar 15s 1 forwards;animation-delay:11.4s}
+.l01a-note.n3{animation:l01ar 15s 1 forwards;animation-delay:12.2s}
+@keyframes l01ar{0%{opacity:0}4%,100%{opacity:1}}
 @media (max-width:680px){.l01a-wrap{width:100%;grid-template-columns:1fr}}
 </style>
 

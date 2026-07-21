@@ -159,7 +159,7 @@ Havaittava onnistuminen voi tarkoittaa esimerkiksi sitä, että:
 - botti myöntää, ettei tietopohja kata kysymystä
 - käyttäjä saa seuraavan konkreettisen askeleen
 
-Kun onnistuminen on havaittava, tunnilla 15 voidaan kirjoittaa sitä koskevat testit ja tunneilla 17–18 voidaan tarkistaa, toteutuuko se oikeassa botissa.
+Kun onnistuminen on havaittava, Oma botti II -tunnilla voidaan kirjoittaa sitä koskevat testit ja tunneilla 17–18 voidaan tarkistaa, toteutuuko se oikeassa botissa.
 
 Havaittava tavoite muuttaa myös keskustelun suunnittelua. Jos onnistuminen tarkoittaa, että uusi jäsen löytää oikean harjoitusajan ja seuraavan askeleen, botin pitää joko antaa nämä tiedot hyväksytystä lähteestä tai kertoa avoimesti, ettei lähde kata kysymystä. Pelkkä ystävällinen keskustelu ei silloin vielä riitä onnistumiseksi.
 
@@ -215,7 +215,7 @@ Käyttäjän näkökulmasta raja on osa palvelua. Jos hän kysyy vamman hoitamis
 
 Määrittely paljastaa, mitä botin pitää tietää. Kerhon perehdytysbotti saattaa tarvita säännöt, harjoitusajat, varusteluettelon ja yhteystiedot. Se ei tarvitse koko kerhon vuosikertomusta vain siksi, että dokumentti liittyy samaan organisaatioon.
 
-Kirjaa määrittelyyn alustava luettelo tietotarpeista. Tunnilla 15 etsit niihin sopivat lähteet ja arvioit, mitä aineisto kattaa ja mitä ei.
+Kirjaa määrittelyyn alustava luettelo tietotarpeista. Oma botti II -tunnilla etsit niihin sopivat lähteet ja arvioit, mitä aineisto kattaa ja mitä ei.
 
 Tietotarpeet seuraavat suoraan käyttäjän etenemisestä. Jos botin pitää kertoa harjoitusaika, varusteet ja yhteyshenkilö, jokaiselle tiedolle tarvitaan myöhemmin nimetty ja ajantasainen lähde. Jos määrittelyssä luvataan jotakin, jolle ei löydy luotettavaa tietopohjaa, lupausta pitää rajata ennen rakentamista.
 
@@ -232,7 +232,7 @@ Hyvä määrittely vastaa kuuteen kysymykseen:
 | Rooli ja sävy | Millaisena asiantuntijana ja millä tavalla botti viestii? |
 | Rajat | Mitä botti ei tee, ja miten se toimii rajan tullessa vastaan? |
 
-Näiden päätösten jälkeen järjestelmäpromptin kirjoittaminen on myöhemmin muuntamista, ei arvailua. Tunnilla 17 kokoat määrittelyn, promptikortin toimivan rakenteen ja tietopohjan yhdeksi toteutukseksi.
+Näiden päätösten jälkeen järjestelmäpromptin kirjoittaminen on myöhemmin muuntamista, ei arvailua. Apuri-botin rakennustunnilla kokoat määrittelyn, promptikortin toimivan rakenteen ja tietopohjan yhdeksi toteutukseksi.
 
 Lue taulukkoa päätösketjuna, ei kuutena irrallisena kenttänä. Käyttäjän tilanne määrittää tehtävän, tehtävä määrittää onnistumisen, onnistuminen ohjaa keskustelun etenemistä ja rajat kertovat, milloin vastuu siirtyy botilta ihmiselle. Rooli ja sävy tukevat tätä kokonaisuutta, mutta eivät muuta sen tarkoitusta.
 
@@ -240,7 +240,7 @@ Lue taulukkoa päätösketjuna, ei kuutena irrallisena kenttänä. Käyttäjän 
 
 Tällä tunnilla suunnittelet ennen rakentamista. Rajaat käyttäjän, tehtävän, havaittavan onnistumisen, keskustelun etenemisen, roolin, äänensävyn ja toiminnan rajat. Et vielä kirjoita valmista järjestelmäpromptia tai testaa omaa bottia.
 
-Tunnin tuotoksena syntyy **rakennuspalikka 2: botin määrittelydokumentti**. Se kertoo, mitä tunnilla 17 rakennetaan ja millä perusteella toteutusta myöhemmin arvioidaan.
+Tunnin tuotoksena syntyy **rakennuspalikka 2: botin määrittelydokumentti**. Se kertoo, mitä Apuri-botin rakennustunnilla rakennetaan ja millä perusteella toteutusta myöhemmin arvioidaan.
 
 > **Lopuksi pohdittavaksi:** Voisiko toinen ihminen rakentaa määrittelysi perusteella saman botin kuin sinä? Jos ei, mikä päätös on vielä vain omassa päässäsi?
 

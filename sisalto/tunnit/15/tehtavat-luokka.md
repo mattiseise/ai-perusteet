@@ -1,6 +1,6 @@
 # Rakennuspalikka 3 — Tietopohja ja testisuunnitelma
 
-**Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
+**Tämä on kolmas ja viimeinen rakennuspalikka.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Apuri-botin rakennustunnilla rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja Apuri-botin viimeistelytunnilla korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -102,7 +102,7 @@ Kokoa lopullinen tietopohja alla olevaan taulukkoon.
 |  |  |  |  |
 |  |  |  |  |
 
-Tallenna varsinaiset dokumentit yhteen kansioon. Käytät niitä oppitunnilla 17, kun kytket tietopohjan valitsemallesi alustalle tai kuvaat dokumentoidulla suunnittelupolulla haun, lähdekatkelmat ja käyttöoikeusrajauksen.
+Tallenna varsinaiset dokumentit yhteen kansioon. Käytät niitä Apuri-botin rakennustunnilla, kun kytket tietopohjan valitsemallesi alustalle tai kuvaat dokumentoidulla suunnittelupolulla haun, lähdekatkelmat ja käyttöoikeusrajauksen.
 
 Kirjaa samalla, miten aineisto tulee botin käyttöön. Jos alusta hakee kysymykseen sopivia katkelmia ennen vastausta, kyse on RAG-toteutuksesta. Merkitse jokaiselle lähteelle myös, kuka saa käyttää sitä. Jos lähde on tarkoitettu vain tietylle ryhmälle, teknisen toteutuksen pitää rajata se pois muiden käyttäjien hausta. Dokumentoidussa suunnittelupolussa kuvaat tämän rajauksen suunnitelmana etkä väitä testanneesi todellisia käyttöoikeuksia.
 
@@ -110,7 +110,7 @@ Kirjoita 2–3 lauseen arvio: *"Mitä tietopohjani kattaa hyvin? Mitä se ei vie
 
 ### Vaihe 6 — Kirjoita testit ennen rakentamista
 
-Kirjoita kolme testiä, jotka ajat ensimmäisen kerran tunnilla 17:
+Kirjoita kolme testiä, jotka ajat ensimmäisen kerran Apuri-botin rakennustunnilla:
 
 | Testityyppi | Syöte | Odotettu toiminta | Mitä tarkistat hausta? | Läpäisyehto vastaukselle |
 | --- | --- | --- | --- | --- |

@@ -36,7 +36,7 @@
 <h2>Johdanto</h2>
 <p>Kun tällä kurssilla puhutaan rakennettavasta <strong>tekoälyagentista</strong>, tarkoitetaan kielimallin ja sitä ohjaavan <strong>agentin ohjauskehyksen (harness)</strong> muodostamaa järjestelmää. Ohjauskehys välittää syötteet, työkalut, tehtävän tilan, oikeudet ja turvarajat. Tämä on kurssin rajaus, ei yleispätevä agentin määritelmä.</p>
 <p>Sanaa agentti käytetään teknologiauutisissa, yritysviestinnässä ja opetuksessa monella tavalla. Siksi tällä tunnilla ei päätellä pelkän tuotenimen perusteella, onko jokin järjestelmä agentti. Sen sijaan tarkastelet, miten kielimalli ja sitä ympäröivä ohjauskehys yhdessä käsittelevät tehtävää, tekevät rajattuja valintoja ja käyttävät työkaluja.</p>
-<p>Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Tunnilla 20 arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.</p>
+<p>Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Automaatio vai autonomia -tunnilla arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.</p>
 <blockquote class="pause"><p><strong>Huomio ennen kuin aloitat:</strong> Agentit-osio on kurssin syventävä ja vaativin osa, koska siinä yhdistät aiemmin oppimasi asiat. Et tarvitse aiempaa ohjelmointiosaamista: etenet vaihe kerrallaan ja voit valita teknisen toteutuksen tai samanarvoisen dokumentoidun suunnittelusuorituksen. Tavoitteena on ymmärtää tämän kurssin rajauksen mukaisen agentin rakenne ja rakentaa rajattu, testattava ja turvallinen kokonaisuus — ei hallita kaikkia agenttitekniikoita.</p>
 </blockquote>
 <p>Tarkastellaan esimerkkiä. Tehtävänä on avata sähköpostisovellus, etsiä kaikki viestit, joissa esiintyy sana ”lasku”, siirtää ne kansioon ”Laskut” ja lähettää lähettäjälle automaattinen vastaus, jossa ilmoitetaan laskun vastaanottamisesta. Yksittäisenä suorituksena tehtävä on melko yksinkertainen. Jos sama toiminto täytyy kuitenkin tehdä toistuvasti, esimerkiksi joka päivä tai jatkuvasti pitkän ajan kuluessa, siitä tulee työläs ja aikaa vievä.</p>
@@ -196,7 +196,7 @@
 <p>Ero näkyy hyvin esimerkin avulla. Jos kirjoitat kielimallisovellukselle: ”Anna minulle ohje pizzan tekemiseen”, saat vastauksen. Tällöin kyse on chatbotista. Jos taas järjestelmä huomaa, että tietyt jääkaapissa olevat ruoka-aineet ovat vanhenemassa, ja lähettää sinulle oma-aloitteisesti reseptejä niiden hyödyntämiseksi, kyse on agentista.</p>
 <figure class="ai-demo" data-demo-id="lesson-19-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// sama tehtävä — botti kertoo ohjeet, agentti tekee työn</span>
 <div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:330px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ul class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">CHATBOT: kertoo vaiheet tekstinä → työ jää käyttäjälle</li><li class="ai-demo__mobile-node">KURSSIN AGENTTI: kielimalli valitsee rajatun toiminnon → agentin ohjauskehys käyttää työkalua ja raportoi toiminnan</li></ul></div>
-  <div class="l19-wrap">
+  <div class="l19-wrap" data-once>
     <div class="l19-task">Tehtävä: ”Siirrä laskut Laskut-kansioon ja kuittaa lähettäjille.”</div>
     <div class="l19-pane l19-bot"><span class="l19-ph">CHATBOT</span>
       <span class="l19-reply">”Näin teet sen itse: 1) avaa sähköposti, 2) etsi laskut, 3) siirrä ne kansioon, 4) vastaa lähettäjille.”</span>
@@ -214,7 +214,7 @@
 </div>
 <figcaption class="ai-demo__cap">Ratkaiseva ero: chatbot vastaa tekstillä ja työ jää sinulle — agentti suorittaa vaiheet itse työkaluillaan ja raportoi tuloksen. Juuri siksi agentti tarvitsee oikeudet, turvarajat ja valvonnan, joita pelkkä chatbot ei tarvitse.</figcaption></figure>
 <style>
-.l19-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
+.l19-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono);animation:l19wrapw 19s 1 forwards}
 .l19-task{position:absolute;left:50%;transform:translateX(-50%);top:0;white-space:nowrap;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:7px 12px}
 .l19-pane{position:absolute;top:48px;width:268px;min-height:240px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px 36px}
 .l19-bot{left:0}
@@ -246,6 +246,7 @@
 .l19-reply,.l19-step,.l19-step i,.l19-rep,.l19-tg{animation:none}
 .l19-reply,.l19-step i,.l19-rep,.l19-tg{opacity:1}
 .l19-step{color:#B9C2DA}}
+@keyframes l19wrapw{0%,100%{opacity:1}}
 </style>
 
 <h2>Skripti, työnkulku ja agentti — kolme eri tasoa</h2>
@@ -286,7 +287,7 @@ Claude Cowork on Anthropicin ei-tekniseen tietotyöhön suunnattu agentti, joka 
 <blockquote class="pause"><p><strong>Pysähdy hetkeksi:</strong> Kun seuraavan kerran käytät tekoälysovellusta, mieti: juttelenko pelkän mallin kanssa vai onko mallilla agentin ohjauskehys — työkalut, oikeudet ja turvarajat? Mistä eron huomaa käyttöliittymässä?</p>
 </blockquote>
 <h2>Kohti omaa projektia</h2>
-<p>Agentit-osion aikana suunnittelet n8n-ympäristöön agentin ja osoitat sen toiminnan teknisellä toteutuksella tai dokumentoidulla simulaatiolla. Kirjaa nyt kaksi tai kolme mahdollista ongelmaa, mutta älä valitse vielä lopullista. Tunnilla 20 vertaat agenttia yksinkertaisempiin ratkaisuihin ja valitset projektin vasta perustellun arvioinnin jälkeen.</p>
+<p>Agentit-osion aikana suunnittelet n8n-ympäristöön agentin ja osoitat sen toiminnan teknisellä toteutuksella tai dokumentoidulla simulaatiolla. Kirjaa nyt kaksi tai kolme mahdollista ongelmaa, mutta älä valitse vielä lopullista. Automaatio vai autonomia -tunnilla vertaat agenttia yksinkertaisempiin ratkaisuihin ja valitset projektin vasta perustellun arvioinnin jälkeen.</p>
 <h2>Yhteenveto</h2>
 <p>Tämän kurssin <strong>tekoälyagentti</strong> on kielimallin ja agentin ohjauskehyksen muodostama järjestelmä. Siinä kielimallille annetaan rajattu oikeus valita seuraava toiminto havaintojen perusteella. Tavallinen työnkulku voi myös haarautua, käyttää tietokantaa ja säilyttää tilaa, mutta sen etenemisen ratkaisee ennalta kirjoitettu logiikka.</p>
 <p>Kurssin kuusi suunnittelukohtaa ovat <strong>syötekäsittelijä</strong>, <strong>päättelijä ja suunnittelija</strong>, <strong>työkalujen suorittaja</strong>, <strong>muisti ja konteksti</strong>, <strong>turvakerros</strong> sekä <strong>seuranta ja palautesilmukka</strong>. Myöhemmillä tunneilla niihin voidaan viitata lyhyemmin syötteenä, päättelynä, työkaluina, muistina, turvana ja palautteena. Niiden avulla kysyt, mitä juuri tämä agentti tarvitsee ja mitä voidaan jättää pois. Pitkäkestoinen muisti ja palautteesta oppiminen eivät ole pakollisia.</p>
@@ -300,10 +301,10 @@ Claude Cowork on Anthropicin ei-tekniseen tietotyöhön suunnattu agentti, joka 
 <li><a href="https://arxiv.org/abs/2210.03629">Yao ym.: ReAct</a></li>
 </ul>
 <p>Tarkistettu 15.7.2026.</p><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Tehtävät</b><span>Tunnin tehtävät ja tuotokset</span></div><button type="button" class="btn btn-primary" onclick="showTab('tehtavat')">Siirry tehtäviin →</button></div></div><div id="panel-lesson-19-tehtavat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-19-tehtavat" data-tab="tehtavat" hidden><h1>Opiskelutehtävät: Mikä agentti on — ja mitä se ei ole?</h1>
-<blockquote class="pause"><p>Tämä tunti valmistelee Agentit-osion lopputyötä. Tänään kirjoitat alustavia ongelmaehdokkaita. Valitset lopullisen projektin vasta tunnin 20 lopussa, kun olet arvioinut, tarvitseeko ongelma todella agenttia.</p>
+<blockquote class="pause"><p>Tämä tunti valmistelee Agentit-osion lopputyötä. Tänään kirjoitat alustavia ongelmaehdokkaita. Valitset lopullisen projektin vasta Automaatio vai autonomia -tunnin lopussa, kun olet arvioinut, tarvitseeko ongelma todella agenttia.</p>
 </blockquote>
 <p><em>Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet ainakin pohjapiirroksen — se on lopputyön osa.</em></p><div class="task-card task-card--task"><div class="task-card-header"><h2>Ongelmaehdokkaat — suositeltu</h2></div><div class="task-card-body">
-<p><strong>Miksi tämä on tärkeää:</strong> Hyvä projekti alkaa ongelmasta, ei työkalusta. Tässä vaiheessa vaihtoehtoja saa olla useita. Tunnilla 20 testaat ne päätöspuulla ja valitset vasta sitten projektin, jota jatkat tunneilla 21–27.</p>
+<p><strong>Miksi tämä on tärkeää:</strong> Hyvä projekti alkaa ongelmasta, ei työkalusta. Tässä vaiheessa vaihtoehtoja saa olla useita. Automaatio vai autonomia -tunnilla testaat ne päätöspuulla ja valitset vasta sitten projektin, jota jatkat tunneilla 21–27.</p>
 <h3>Tehtävä</h3>
 <p>Kirjaa kaksi tai kolme ongelmaa, joita voisi ehkä ratkaista agentilla. Valitse niistä yksi alustava ehdokas ja kirjoita lyhyt kuvaus (100–150 sanaa), jossa vastaat kolmeen kysymykseen:</p>
 <ol>
@@ -321,7 +322,7 @@ riittäisikö yksinkertaisempi ratkaisu. Älä vastaa puolestani — kysy
 niin että minä ajattelen.
 </code></pre>
 <p>Vastaa kysymyksiin omassa pohjapiirroksessasi. Tekoäly ei tee päätöksiä — sinä päätät.</p>
-<blockquote class="pause"><p><strong>Vinkki muistiinpanoihin:</strong> Tee oma muistiinpanodokumentti, johon kerää kaikki viisi Agentti-pohjapiirrosta omiksi alaotsikoikseen. Tunnilla 26 kasaat ne kaikki yhdeksi suunnitelmaksi.</p>
+<blockquote class="pause"><p><strong>Vinkki muistiinpanoihin:</strong> Tee oma muistiinpanodokumentti, johon kerää kaikki viisi Agentti-pohjapiirrosta omiksi alaotsikoikseen. Agentin minimiversion rakennustunnilla kasaat ne kaikki yhdeksi suunnitelmaksi.</p>
 </blockquote></div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Tehtävä 19.1 — Luokittele järjestelmät — syventävä</h2></div><div class="task-card-body">
 <p><strong>Miksi tämä on hyödyllinen:</strong> Tämä tehtävä harjoittaa täsmälleen sitä taitoa, jonka tarvitset pohjapiirroksesi perustelussa: mikä on agentti ja mikä ei.</p>
 <h3>Tehtävä</h3>
@@ -339,7 +340,7 @@ niin että minä ajattelen.
 <blockquote class="pause"><p><strong>Vinkki muistiinpanoihin:</strong> Kirjaa vastauksesi omiin muistiinpanoihisi. Tätä tehtävää ei palauteta, mutta sen havainnot tukevat pohjapiirroksen perustelua.</p>
 </blockquote>
 <hr />
-<p><strong>Ongelmaehdokkaat valmiina — lopullinen projektivalinta tehdään tunnilla 20</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>4 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-19-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-19-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Boteista agentteihin</h1>
+<p><strong>Ongelmaehdokkaat valmiina — lopullinen projektivalinta tehdään Automaatio vai autonomia -tunnilla</strong></p></div></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: Harjoittele</b><span data-flow-count>4 tehtävää</span></div><button type="button" class="btn btn-primary" onclick="showTab('harjoittele')">Siirry harjoituksiin →</button></div></div><div id="panel-lesson-19-harjoittele" class="panel" role="tabpanel" aria-labelledby="tab-lesson-19-harjoittele" data-tab="harjoittele" hidden><h1>Harjoittele — Boteista agentteihin</h1>
 <p>Tällä välilehdellä harjoittelet juuri lukemaasi käytännössä. Tehtävät tarkistuvat itsestään: saat palautteen heti jokaisen vastauksen jälkeen, eikä kukaan arvioi tai näe vastauksiasi. Väärä vastaus ei ole ongelma — jokainen selitys kertoo, miksi juuri se vaihtoehto ei toiminut, joten opit myös virheistä. Tehtävät etenevät sanaston kertaamisesta kohti monimutkaisempaa päättelyä ja päättyvät tilanteeseen, jossa arvioit itse, milloin agentin kannattaa antaa toimia itsenäisesti ja milloin sinun pitää astua väliin.</p>
 <h2>Tehtävä 1/4 — sanaston kertaus</h2>
 <p>Aloitetaan tutuilla käsitteillä, ennen kuin siirrytään monimutkaisempaan päättelyyn.</p>

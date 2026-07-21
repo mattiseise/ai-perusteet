@@ -76,4 +76,4 @@ Vastaa 4–6 lauseella:
 
 > **Vinkki:** Tehtävää ei palauteta, mutta säilytä muistiinpanodokumenttisi. Vaiheessa 5 kirjoittamasi *"Jatkossa annan tekoälylle aina…"* -sääntö on yksi tärkeimmistä asioista, jotka viet koko kurssilta mukanasi.
 
-**Tunnin 4 jälkeen osaat antaa tekoälylle kontekstin, joka tuottaa käyttökelpoisia vastauksia.**
+**Konteksti ratkaisee -tunnin jälkeen osaat antaa tekoälylle kontekstin, joka tuottaa käyttökelpoisia vastauksia.**

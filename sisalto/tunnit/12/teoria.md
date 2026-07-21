@@ -2,7 +2,7 @@
 
 ## Johdanto: hyvä prompti osoitetaan kokeella
 
-Tunnilla 4 opit, että konteksti muuttaa vastausta. Nyt viet taidon käytäntöön yhdessä toistuvassa tehtävässä. Tavoitteena ei ole kerätä mahdollisimman monta näyttävää promptia, vaan rakentaa **yksi promptikortti**, jonka käyttötilanteen, toimivuuden ja rajat osaat perustella.
+Konteksti ratkaisee -tunnilla opit, että konteksti muuttaa vastausta. Nyt viet taidon käytäntöön yhdessä toistuvassa tehtävässä. Tavoitteena ei ole kerätä mahdollisimman monta näyttävää promptia, vaan rakentaa **yksi promptikortti**, jonka käyttötilanteen, toimivuuden ja rajat osaat perustella.
 
 Promptikortti yhdistää kolme asiaa:
 
@@ -193,7 +193,7 @@ Tunnettu raja ei heikennä korttia. Se estää käyttämästä toimivaa rakennet
 
 Yksi testattu promptikortti on hyödyllisempi kuin suuri lista prompteja, joiden toimivuudesta ei ole näyttöä. Rajaa toistuva tehtävä, erota pysyvä ohje vaihtuvasta aineistosta, päätä laatukriteerit etukäteen ja muuta vain yhtä asiaa kerrallaan.
 
-Tallenna korttiin versiot, vastaukset, havaittu vaikutus ja tunnettu raja. Tunnilla 17 hyödynnät toimivaksi osoitettua rakennetta botin järjestelmäpromptissa.
+Tallenna korttiin versiot, vastaukset, havaittu vaikutus ja tunnettu raja. Apuri-botin rakennustunnilla hyödynnät toimivaksi osoitettua rakennetta botin järjestelmäpromptissa.
 
 > **Lopuksi pohdittavaksi:** Mikä promptisi osa on aidosti uudelleen käytettävä — ja mikä pitää päättää uudelleen jokaisessa käyttötilanteessa?
 

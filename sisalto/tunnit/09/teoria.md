@@ -52,7 +52,7 @@ Alla on saman asian eri versioita yhdestä skenaariosta: **Skenaario 1 — asiak
 
 ### Miksi se tapahtui? — Vahva versio
 
-> Tilanteessa toteutui kolme samanaikaista riskiä. Ensinnäkin asiakaspalvelijat syöttivät henkilötietoja kolmannen osapuolen palveluun ilman hyväksyttyä käyttötarkoitusta ja tietojenkäsittelysopimusta. Toiseksi organisaatio ei ollut tarkistanut palvelun asetuksista ja sopimuksista, miten syötteitä käsitellään, säilytetään tai käytetään. Nämä ovat palvelun tietosuojaa koskevia kysymyksiä, eivät konteksti-ikkunan ominaisuuksia. Kolmanneksi oppitunnin 3 mekaniikka selittää, miksi mallin vastauksiin ei voi luottaa sokeasti: malli tuottaa todennäköisen jatkon, ei tarkistettua vastausta. Asiakaspalvelija on saattanut välittää asiakkaalle tietoa, joka kuulosti oikealta mutta oli keksittyä.
+> Tilanteessa toteutui kolme samanaikaista riskiä. Ensinnäkin asiakaspalvelijat syöttivät henkilötietoja kolmannen osapuolen palveluun ilman hyväksyttyä käyttötarkoitusta ja tietojenkäsittelysopimusta. Toiseksi organisaatio ei ollut tarkistanut palvelun asetuksista ja sopimuksista, miten syötteitä käsitellään, säilytetään tai käytetään. Nämä ovat palvelun tietosuojaa koskevia kysymyksiä, eivät konteksti-ikkunan ominaisuuksia. Kolmanneksi Generatiivisen mekaniikka -tunnin mekaniikka selittää, miksi mallin vastauksiin ei voi luottaa sokeasti: malli tuottaa todennäköisen jatkon, ei tarkistettua vastausta. Asiakaspalvelija on saattanut välittää asiakkaalle tietoa, joka kuulosti oikealta mutta oli keksittyä.
 
 **Mikä toimii:** Käsitteitä käytetään täsmällisesti ja niitä sovelletaan juuri tähän tilanteeseen. Todistusaineistoihin viitataan, mutta niitä ei pelkästään toisteta. Kolme erillistä riskiä eritellään selkeästi.
 
@@ -90,7 +90,7 @@ Voit esimerkiksi pyytää: ”Anna kolme erilaista tapaa aloittaa lausunto: yksi
 
 Tekoäly voi hallusinoida. Erityisesti se voi keksiä lakipykäliä, sääntelyn yksityiskohtia ja vuosilukuja. Jos lausuntosi väittää esimerkiksi, että ”GDPR:n artikla 17 kieltää tämän”, tarkista artiklan sisältö itse. Asiantuntija ei lähetä tekstiä, jota hän ei ole tarkistanut.
 
-Pidä lähdetyö rajattuna. Valitse lähteet tunnilla 8 arvioimastasi aineistosta. Jos jokin lausunnon keskeinen väite ei selviä niistä, tee enintään yksi uusi lähdetarkistus. Näin käytät ajan lähteiden soveltamiseen, et uuden aineiston laajaan etsimiseen.
+Pidä lähdetyö rajattuna. Valitse lähteet Etiikka ja vastuu -tunnilla arvioimastasi aineistosta. Jos jokin lausunnon keskeinen väite ei selviä niistä, tee enintään yksi uusi lähdetarkistus. Näin käytät ajan lähteiden soveltamiseen, et uuden aineiston laajaan etsimiseen.
 
 ::: luokka
 ## Tarkistuslista ennen palautusta
@@ -114,7 +114,7 @@ Käy nämä kohdat läpi ennen kuin toteat työsi valmiiksi:
 - ☐ Kieli on neutraalia ja asiantuntevaa: ei puhekieltä eikä tunteenpurkauksia.
 - ☐ Tuotos on minun näköiseni, ei tekoälyn muokkaamaton raakatuotos.
 - ☐ Lopussa on selkeä johtopäätös.
-- ☐ Valitsin lähteet tunnilla 8 arvioimastani aineistosta ja tein enintään yhden uuden lähdetarkistuksen.
+- ☐ Valitsin lähteet Etiikka ja vastuu -tunnilla arvioimastani aineistosta ja tein enintään yhden uuden lähdetarkistuksen.
 - ☐ Liitin lähteet, käyttämäni promptin tai keskustelulokin, mallin luonnoksen tai katkelman sekä kaksi ennen–jälkeen-korjausta perusteluineen.
 - ☐ Tein kirjallisen reitin 1–2 minuutin puolustuksen tai visuaalis-suullisen reitin 5–8 minuutin esityksen.
 

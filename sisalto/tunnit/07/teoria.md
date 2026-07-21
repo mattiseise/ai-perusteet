@@ -6,7 +6,7 @@ Pankin järjestelmä arvioi tuhat maksutapahtumaa. Niistä kymmenen on petoksia.
 
 Yhteen lukuun ei voi vastata. Ensin on kysyttävä, millaisia virheitä järjestelmä tekee ja mitä niistä seuraa. Sama periaate koskee myös generatiivista tekoälyä: sujuva vastaus ei vielä osoita, että sisältö on oikein.
 
-**Tämän tunnin rajaus:** Tarkastelet kahta erilaista luotettavuusongelmaa. Kielimalli voi tuottaa hallusinaation, ja luokittelumalli voi merkitä tapauksen väärään luokkaan. Tunnilla 24 siirryt agenttien aktiivisiin uhkiin, kuten epäluotettavaan syötteeseen ja liian laajoihin työkalujen oikeuksiin.
+**Tämän tunnin rajaus:** Tarkastelet kahta erilaista luotettavuusongelmaa. Kielimalli voi tuottaa hallusinaation, ja luokittelumalli voi merkitä tapauksen väärään luokkaan. Turvallisuus-tunnilla siirryt agenttien aktiivisiin uhkiin, kuten epäluotettavaan syötteeseen ja liian laajoihin työkalujen oikeuksiin.
 
 Tämän tunnin jälkeen sinulla on kolmas ja viimeinen todistusaineisto omaan arviointipöytääsi. Osaat perustella, miksi yhtä tekoälytulosta pitää tarkastella tehtävän, virhetyypin ja seurauksen kautta.
 
@@ -46,7 +46,7 @@ Mikään näistä mittareista ei yksin ratkaise, onko malli riittävän hyvä. V
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sujuva väite kulkee tarkistuksen läpi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
-  <div class="l07-check" role="img" aria-label="Animaatio näyttää tekoälyn esittämän täsmällisen väitteen, sen tarkistamisen riippumattomasta lähteestä ja lopputuloksen, jossa väite hylätään keksittynä.">
+  <div class="l07-check" data-once role="img" aria-label="Animaatio näyttää tekoälyn esittämän täsmällisen väitteen, sen tarkistamisen riippumattomasta lähteestä ja lopputuloksen, jossa väite hylätään keksittynä.">
     <div class="l07-step s1"><b>1 · VÄITE</b><span>”Laitteen huoltoväli on täsmälleen 1 200 tuntia.”</span></div>
     <div class="l07-arrow">→</div>
     <div class="l07-step s2"><b>2 · LÄHDE</b><span>Valmistajan virallinen huolto-ohje</span></div>
@@ -56,13 +56,14 @@ Mikään näistä mittareista ei yksin ratkaise, onko malli riittävän hyvä. V
 </div>
 <figcaption class="ai-demo__cap">Hallusinaatiota ei tunnista tekstin varmuudesta. Kuvitteellisessa esimerkissä täsmällinen huoltoväite näyttää uskottavalta, mutta riippumaton lähde ei tue sitä. Tarkistus voi myös vahvistaa väitteen — ratkaisevaa on lähteen näyttö, ei mallin sävy.</figcaption></figure>
 <style>
-.l07-check{display:flex;align-items:stretch;gap:10px;width:560px;font-family:var(--font-mono)}
+.l07-check{display:flex;align-items:stretch;gap:10px;width:560px;font-family:var(--font-mono);animation:l07checkw 9s 1 forwards}
 .l07-step{flex:1;min-height:150px;border:2px solid #2B3552;border-radius:13px;background:#11182A;padding:16px;opacity:.35;transform:translateY(8px);animation:l07flow 9s infinite}
 .l07-step b{display:block;font-size:10.5px;letter-spacing:.09em;color:#8B94B3;margin-bottom:14px}.l07-step span{display:block;font-size:12px;line-height:1.55;color:#EAEEF8}
 .l07-step.s2{animation-delay:3s;border-color:#46c7cf}.l07-step.s3{animation-delay:6s;border-color:#F0A38C}.l07-arrow{align-self:center;color:#8B94B3;font-size:22px}
 @keyframes l07flow{0%,28%{opacity:.35;transform:translateY(8px)}8%,22%{opacity:1;transform:translateY(0)}33%,100%{opacity:.35;transform:translateY(8px)}}
 @media (prefers-reduced-motion:reduce){.l07-step{animation:none;opacity:1;transform:none}}
 @media (max-width:680px){.l07-check{width:100%;flex-direction:column}.l07-step{min-height:auto}.l07-arrow{transform:rotate(90deg)}.ai-demo__stage:has(.l07-check){height:520px!important}}
+@keyframes l07checkw{0%,100%{opacity:1}}
 </style>
 
 ## Luotettavuus on näyttöön perustuva arvio

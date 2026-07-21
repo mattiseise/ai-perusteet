@@ -242,7 +242,7 @@ Kysy siis aina: miksi rakennan agentin? Vastaus perustuu kustannusten ja hyötyj
 
 ## Osta vai rakenna — riittääkö valmisagentti?
 
-Kun kuusi kysymystä osoittaa, että tehtävä ansaitsee agentin, jäljellä on vielä yksi valinta: rakennatko oman vai käytätkö **valmisagenttia**, jollaisiin tutustuit tunnilla 19? Tämäkin on arkkitehtuuripäätös, ei tuotevalinta — ja se ratkeaa samalla logiikalla kuin muutkin tämän tunnin päätökset.
+Kun kuusi kysymystä osoittaa, että tehtävä ansaitsee agentin, jäljellä on vielä yksi valinta: rakennatko oman vai käytätkö **valmisagenttia**, jollaisiin tutustuit Boteista agentteihin -tunnilla? Tämäkin on arkkitehtuuripäätös, ei tuotevalinta — ja se ratkeaa samalla logiikalla kuin muutkin tämän tunnin päätökset.
 
 Nyrkkisääntö kuuluu näin. Toistuva ja tarkkaan määritelty prosessi puoltaa omaa työnkulkua tai omaa n8n-agenttia, koska silloin saat täsmälleen omat sääntösi, omat integraatiosi ja omat lokisi. Vaihteleva, kertaluonteinen tietotyö puoltaa valmisagenttia, koska rakentamisen ja ylläpidon kustannus jää silloin kokonaan pois. Huomaa samalla ero käyttämisen ja rakentamisen välillä: valmisagentin voi ottaa käyttöön myös silloin, kun oman rakentaminen ei kannata — rakentamiskustannus on nolla, joten päätöspuun ensimmäinen kysymys ei estä valmisagentin käyttöä.
 
@@ -262,11 +262,11 @@ Kun rakennat ratkaisua n8n:ssä, tässä oppitunnissa käsitellyt päätökset m
 
 **Agentti n8n:ssä:** AI Agent -solmulla on pääsy **työkaluihin**, kuten tietokantaan, verkkohakuun tai tiedostoihin. Agentti päättää itse, mitä työkalua se käyttää. Tämä on monimutkaisempaa mutta joustavampaa.
 
-Tämän esikatselun tarkoitus on yksinkertainen: kun tulet oppitunnille 26 ja avaat n8n:n, tiedät jo, **mitä olet rakentamassa ja miksi**. Päätös promptauksen, työnkulun ja agentin välillä on **arkkitehtuuripäätös**, ei pelkkä työkalupäätös.
+Tämän esikatselun tarkoitus on yksinkertainen: kun tulet Agentin minimiversion rakennustunnille ja avaat n8n:n, tiedät jo, **mitä olet rakentamassa ja miksi**. Päätös promptauksen, työnkulun ja agentin välillä on **arkkitehtuuripäätös**, ei pelkkä työkalupäätös.
 
 ## Valitse lopullinen projektisi
 
-Palaa tunnilla 19 kirjaamiisi ongelmaehdokkaisiin ja käy ne läpi päätöspuun avulla. Valitse vasta nyt lopullinen projekti. Jos tavallinen työnkulku riittää, havainto on onnistunut oppimistulos: valitse toinen ehdokas tai rajaa projektiin yksi aidosti tarpeellinen tilannekohtainen mallipäätös. Kirjaa päätösmuistioon myös hylätty vaihtoehto ja syy, miksi et valinnut sitä.
+Palaa Boteista agentteihin -tunnilla kirjaamiisi ongelmaehdokkaisiin ja käy ne läpi päätöspuun avulla. Valitse vasta nyt lopullinen projekti. Jos tavallinen työnkulku riittää, havainto on onnistunut oppimistulos: valitse toinen ehdokas tai rajaa projektiin yksi aidosti tarpeellinen tilannekohtainen mallipäätös. Kirjaa päätösmuistioon myös hylätty vaihtoehto ja syy, miksi et valinnut sitä.
 
 > **Lopuksi pohdittavaksi:** Mitä kielimallin ympärillä pitää olla, jotta ratkaisua voi perustellusti kutsua agentiksi — ja tarvitaanko sitä tässä ongelmassa?
 

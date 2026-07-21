@@ -1,6 +1,6 @@
 # Todistusaineisto 3 — Luotettavuusarvio ja tarkistuskäytäntö
 
-> **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät sitä arvioitavassa tehtävässä *Tuomaripöydän päätös — asiantuntijalausunto tekoälystä* oppitunnilla 9.
+> **Tämä on kolmas ja viimeinen todistusaineisto**, jonka keräät Teoria-osion aikana. Käytät sitä arvioitavassa tehtävässä *Tuomaripöydän päätös — asiantuntijalausunto tekoälystä* Asiantuntijalausunto-tunnilla.
 
 ## Mitä teet?
 
@@ -37,13 +37,13 @@ Kirjoita 6–8 kohdan käytäntö, joka vastaa näihin kysymyksiin:
 ::: luokka
 ## Mitä palautat?
 
-Et vielä mitään. Säilytä työ oppitunnin 9 asiantuntijalausuntoa varten.
+Et vielä mitään. Säilytä työ Asiantuntijalausunto-tunnin asiantuntijalausuntoa varten.
 :::
 
 ::: verkko
 ## Mitä tallennat itsellesi?
 
-Tallenna tarkistettu väite, petosmallin tulkinta ja oma tarkistuskäytäntö. Tarvitset niitä oppitunnin 9 arvioitavassa tehtävässä.
+Tallenna tarkistettu väite, petosmallin tulkinta ja oma tarkistuskäytäntö. Tarvitset niitä Asiantuntijalausunto-tunnin arvioitavassa tehtävässä.
 :::
 
 **3 / 3 todistusaineistoa kerätty**

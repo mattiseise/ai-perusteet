@@ -74,12 +74,12 @@
 <li>termistön ja sanaston, jotta botti käyttää oikeaa kieltä</li>
 </ul>
 <h2>Testaus: kolme testityyppiä, korjaus ja uudelleentesti</h2>
-<p>Tunnilla 17 ajoit tai simuloit kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran. Tällä tunnilla valitset korjauslistalta yhden puutteen, teet siihen yhden nimetyn korjauksen ja toistat juuri sitä koskevan testin. Teknisen botin toiminta näkyy oikean toteutuksen ajossa. Suunnittelupolulla sama ketju kuvataan simuloituna suoritusjälkenä, mutta simulaatio ei todista teknisen yhteyden toimivuutta.</p>
+<p>Apuri-botin rakennustunnilla ajoit tai simuloit kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran. Tällä tunnilla valitset korjauslistalta yhden puutteen, teet siihen yhden nimetyn korjauksen ja toistat juuri sitä koskevan testin. Teknisen botin toiminta näkyy oikean toteutuksen ajossa. Suunnittelupolulla sama ketju kuvataan simuloituna suoritusjälkenä, mutta simulaatio ei todista teknisen yhteyden toimivuutta.</p>
 <p>Arvioitava testimatriisi sisältää vähintään kolme tapausta ja odotetun tuloksen jokaiselle:</p>
 <p><strong>1. Normaali käyttötapaus.</strong> Anna botille aiheelle tyypillinen tilanne. Käy keskustelu loppuun ja vertaa tulosta etukäteen kirjoittamaasi odotukseen.</p>
 <p><strong>2. Kielteinen testi.</strong> Pyydä jotakin, mitä botti ei saa tehdä, kuten alueen ulkopuolinen tai liian riskialtis tehtävä. Tarkista, noudattaako se rajausta ja eskaloiko oikein.</p>
 <p><strong>3. Reunatapaus.</strong> Anna epäselvä, puutteellinen tai ristiriitainen syöte. Tarkista, kysyykö botti tarpeellisen tarkennuksen eikä arvaa.</p>
-<p>Säilytä tunnin 17 kolmesta testistä syöte, odotus, toteutunut tai simuloitu tulos ja johtopäätös. Dokumentoi tunnilla 18 yhden valitun puutteen korjaus ja sitä koskeva uudelleentesti. Ennen–jälkeen-vertailu <strong>antaa näyttöä korjauksen vaikutuksesta tässä testissä</strong>. Se ei osoita ratkaisun toimivan kaikissa tilanteissa.</p>
+<p>Säilytä Apuri-botin rakennustunnin kolmesta testistä syöte, odotus, toteutunut tai simuloitu tulos ja johtopäätös. Dokumentoi Apuri-botin viimeistelytunnilla yhden valitun puutteen korjaus ja sitä koskeva uudelleentesti. Ennen–jälkeen-vertailu <strong>antaa näyttöä korjauksen vaikutuksesta tässä testissä</strong>. Se ei osoita ratkaisun toimivan kaikissa tilanteissa.</p>
 <p>Valitse tämän tunnin korjaukseksi vain yksi olennainen puute. Toista juuri siihen liittyvä testi samalla odotuksella. Kirjaa muut epäonnistumiset tunnistetuiksi jatkokehityskohteiksi, mutta älä yritä korjata niitä kaikkia tämän tunnin aikana.</p>
 <h2>Yleisimmät sudenkuopat</h2>
 <p><strong>1. Liian kiltti botti.</strong></p>
@@ -130,7 +130,7 @@
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Miten teet sen?</h2></div><div class="task-card-body">
 <p>Tämän tunnin työssä on neljä vaihetta:</p>
 <ol>
-<li><strong>Valitse yksi korjaus:</strong> Palaa tunnin 17 kolmeen ensitulokseen ja valitse korjauslistalta yksi olennainen puute.</li>
+<li><strong>Valitse yksi korjaus:</strong> Palaa Apuri-botin rakennustunnin kolmeen ensitulokseen ja valitse korjauslistalta yksi olennainen puute.</li>
 <li><strong>Korjaa:</strong> Tee yksi nimetty muutos järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.</li>
 <li><strong>Testaa uudelleen:</strong> Toista juuri korjaukseen liittyvä testi samalla odotuksella ja tallenna ennen–jälkeen-vertailu.</li>
 <li><strong>Viimeistele:</strong> Kokoa aiemmat rakennuspalikat, kolme ensitestiä, korjausketju, reflektio ja polkukohtainen näyttö yhdeksi palautukseksi.</li>
@@ -151,7 +151,7 @@
 <li><strong>Strukturoitu työnkulku.</strong> Botti ohjaa käyttäjää tehtävän vaiheiden läpi järjestelmällisesti (lähtötilanne → tavoite → vaihtoehdot → valinnat → lopputulos).</li>
 <li><strong>Aiheesi termit ja näkökulmat.</strong> Botti puhuu oman aiheesi kieltä — salitreenin botille eri termit kuin kerhon FAQ-botille. Tämä erottaa sinun bottisi yleisestä avustajasta.</li>
 <li><strong>Selkeät rajat.</strong> Botti tietää mitä se EI tee — esimerkiksi se ei tee koko tehtävää käyttäjän puolesta, ei anna terveys- tai oikeudellisia neuvoja, ei toimi muissa aiheissa. Rajat ovat osa huolellisuutta.</li>
-<li><strong>Testattu sovitulla aikajanalla.</strong> Tunnin 17 normaali, kielteinen ja reunatapaus sekä tunnin 18 yksi korjaus ja sitä koskeva uudelleentesti on dokumentoitu.</li>
+<li><strong>Testattu sovitulla aikajanalla.</strong> Apuri-botin rakennustunnin normaali, kielteinen ja reunatapaus sekä Apuri-botin viimeistelytunnin yksi korjaus ja sitä koskeva uudelleentesti on dokumentoitu.</li>
 </ol>
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä palautat?</h2></div><div class="task-card-body">
 <p>Palauta yksi tiedosto, joka sisältää:</p>
@@ -174,7 +174,7 @@
 </div></div><div class="task-card task-card--task"><div class="task-card-header"><h2>Jos et tiedä mistä aloittaa</h2></div><div class="task-card-body">
 <p>Aloita näin:</p>
 <ol>
-<li>Avaa tunnilla 17 tallentamasi kolme ensitulosta ja korjauslista.</li>
+<li>Avaa Apuri-botin rakennustunnilla tallentamasi kolme ensitulosta ja korjauslista.</li>
 <li>Valitse yksi puute, joka liittyy suoraan ennalta kirjoitettuun odotukseen.</li>
 <li>Tee yksi nimetty korjaus järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.</li>
 <li>Toista juuri sitä koskeva testi samalla odotuksella ja tallenna ennen–jälkeen-näyttö.</li>

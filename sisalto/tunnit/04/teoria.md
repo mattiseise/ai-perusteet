@@ -2,7 +2,7 @@
 
 ## Johdanto
 
-**Tämän tunnin rajaus:** Opit erottamaan kontekstin ja promptin sekä parantamaan yhden pyynnön sisältöä. Tunnilla 12 käytät tätä perustaa uudelleen käytettävän promptipankin, lähdeaineiston, pilkkomisen ja testatun iteroinnin rakentamiseen.
+**Tämän tunnin rajaus:** Opit erottamaan kontekstin ja promptin sekä parantamaan yhden pyynnön sisältöä. Promptikortti-tunnilla käytät tätä perustaa uudelleen käytettävän promptipankin, lähdeaineiston, pilkkomisen ja testatun iteroinnin rakentamiseen.
 
 Kuvittele, että ystäväsi lähettää sinulle viestin: "Auta, en saa tätä toimimaan." Se on maininta, mutta mitä se tarkoittaa? Onko kyse pelistä, ruoanlaitosta vai koulutehtävästä? Mikä tarkalleen ei toimi? Sama koskee tekoälyä. Jos sanot vain "auta minua", saat yleisen, ehkä hyödyttömän vastauksen. Mutta jos kerrot "olen lukiolainen, valmistelen 5 minuutin esitelmää ilmastonmuutoksesta historian tunnille, ja tarvitsen selkeän rakenteen kolmesta pääkohdasta" — silloin tekoäly ymmärtää, mikä on todellinen tarve, ja voi antaa konkreettista apua. Tämä ero on *konteksti ja promptaus* — ja se on kaiken tekoälyviestinnän ydin.
 
@@ -16,7 +16,7 @@ Kun opettaja neuvoo sinua matematiikan ongelmassa, hän ei vain kuule kysymystä
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama pyyntö — konteksti karsii väärät tulkinnat</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;height:280px">
-  <div class="l04-left">
+  <div class="l04-left" data-once>
     <div class="l04-prompt">Tee minulle treeniohjelma.</div>
     <div class="l04-chips">
       <span class="l04-chip l04-c1">+ rooli: vasta-alkaja</span>
@@ -35,7 +35,7 @@ Kun opettaja neuvoo sinua matematiikan ongelmassa, hän ei vain kuule kysymystä
 </div>
 <figcaption class="ai-demo__cap">Ilman kontekstia malli joutuu arvaamaan, mitä tarkoitat. Jokainen kontekstin pala — rooli, tavoite, rajaus — karsii vääriä tulkintoja, kunnes jäljelle jää juuri sinun tarpeeseesi osuva vastaus.</figcaption></figure>
 <style>
-.l04-left{display:flex;flex-direction:column;gap:10px;width:225px}
+.l04-left{display:flex;flex-direction:column;gap:10px;width:225px;animation:l04leftw 10s 1 forwards}
 .l04-prompt{font-family:var(--font-mono);font-size:13px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:11px;padding:10px 12px}
 .l04-chips{display:flex;flex-direction:column;gap:6px}
 .l04-chip{font-family:var(--font-mono);font-size:11.5px;color:#EAEEF8;background:#1E2740;border:1.5px solid oklch(0.66 0.15 264);border-radius:999px;padding:4px 10px;align-self:flex-start;opacity:0}
@@ -65,6 +65,7 @@ Kun opettaja neuvoo sinua matematiikan ongelmassa, hän ei vain kuule kysymystä
 .l04-c1,.l04-c2,.l04-c3,.l04-n2,.l04-g2,.l04-ok{animation:none;opacity:1}
 .l04-g2{color:#FFFFFF;background:#15301F;border:1.5px solid #7FD0A8}
 .l04-g1,.l04-g3,.l04-n1{animation:none;opacity:0;display:none}}
+@keyframes l04leftw{0%,100%{opacity:1}}
 </style>
 
 ### Kontekstin viisi komponenttia

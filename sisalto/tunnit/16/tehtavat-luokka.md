@@ -4,7 +4,7 @@
 
 ## Vaihe 0 — Palaa bottisi tehtävään
 
-Avaa tunnin 14 määrittely ja tunnin 15 tietopohja sekä testisuunnitelma. Kirjoita yhdellä virkkeellä, mitä käyttäjän pitää saada botin avulla tehtyä. Nimeä sen jälkeen yksi ominaisuus, joka on välttämätön, ja yksi kiinnostava lisä, jonka voit rajata pois.
+Avaa Oma botti I -tunnin määrittely ja Oma botti II -tunnin tietopohja sekä testisuunnitelma. Kirjoita yhdellä virkkeellä, mitä käyttäjän pitää saada botin avulla tehtyä. Nimeä sen jälkeen yksi ominaisuus, joka on välttämätön, ja yksi kiinnostava lisä, jonka voit rajata pois.
 
 Jos sinulla ei ole sopivaa palvelua, käytä opettajan antamia kahta esimerkkituotosta ja tee arviointi- sekä korjaussuunnitelma ilman tilin luomista.
 

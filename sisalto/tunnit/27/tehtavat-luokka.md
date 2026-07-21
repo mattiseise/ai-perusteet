@@ -1,6 +1,6 @@
 # Opiskelutehtävät: Viimeistele ja puolusta 90 minuutissa
 
-> Jatka tunnilla 26 valitsemaasi teknistä n8n-polkua tai dokumentoitua suunnittelupolkua. Molemmat ovat samanarvoisia. Tee koko pakollinen suoritus tällä oppitunnilla.
+> Jatka Agentin minimiversion rakennustunnilla valitsemaasi teknistä n8n-polkua tai dokumentoitua suunnittelupolkua. Molemmat ovat samanarvoisia. Tee koko pakollinen suoritus tällä oppitunnilla.
 
 ## 0–8 min: Rajaa näyttö
 

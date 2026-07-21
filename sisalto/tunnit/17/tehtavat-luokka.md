@@ -4,7 +4,7 @@
 
 > **HUOM:** Tätä varten sinulla tulee olla kerättynä rakennuspalikat 1–3 (tunnit 12, 14 ja 15).
 
-Aloitat oman **apuri-bottisi** teknisen toteutuksen tai dokumentoidun suunnittelun. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa ja tunnin 16 valintakortin. Tunnin lopussa sinulla on joko ensimmäinen toimiva versio tai ensimmäinen tarkistettava suunnittelupaketti, jota viimeistelet tunnilla 18.
+Aloitat oman **apuri-bottisi** teknisen toteutuksen tai dokumentoidun suunnittelun. Et tee tätä tyhjästä — yhdistät kolme rakennuspalikkaa ja Oma botti III -tunnin valintakortin. Tunnin lopussa sinulla on joko ensimmäinen toimiva versio tai ensimmäinen tarkistettava suunnittelupaketti, jota viimeistelet Apuri-botin viimeistelytunnilla.
 
 Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa. Tarkoitus ei ole, että keksit kaiken itse — vaan että **osaat ohjata tekoälyä auttamaan järjestelmäpromptin muotoilussa** ja teet lopulliset päätökset itse. Sinun vastuullasi on, että rakennuspalikoiden ydin näkyy lopullisessa botissa.
 
@@ -12,10 +12,10 @@ Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa ja iteroinnissa.
 
 Tämän tunnin työ rakentuu neljään vaiheeseen:
 
-1. **Avaa rakennuspalikat.** Tunnilla 12 teit testatun promptikortin, tunnilla 14 botin määrittelyn ja tunnilla 15 kuratoit tietopohjan sekä kirjoitit testisuunnitelman. Kaikki on nyt käytössä.
+1. **Avaa rakennuspalikat.** Promptikortti-tunnilla teit testatun promptikortin, Oma botti I -tunnilla botin määrittelyn ja Oma botti II -tunnilla kuratoit tietopohjan sekä kirjoitit testisuunnitelman. Kaikki on nyt käytössä.
 2. **Kirjoita järjestelmäprompti.** Yhdistä rakennuspalikoiden ydin yhdeksi botin pääohjeeksi.
 3. **Toteuta valitsemasi polku.** Rakenna botti saatavilla olevalle alustalle tai tee arkkitehtuuri ja simuloitu suoritusjälki.
-4. **Aja tunnilla 15 suunnittelemasi kolme testiä.** Älä muuta odotuksia tulosten perusteella. Tunnista, mikä toimii ja mitä korjaat tunnilla 18.
+4. **Aja Oma botti II -tunnilla suunnittelemasi kolme testiä.** Älä muuta odotuksia tulosten perusteella. Tunnista, mikä toimii ja mitä korjaat Apuri-botin viimeistelytunnilla.
 
 ## Rakennuspalikat työvälineinä
 
@@ -31,18 +31,18 @@ Jokainen rakennuspalikka palvelee tiettyä osaa botista. Älä yritä keksiä mi
 2. **Järjestelmäprompti** sisältää selkeästi: roolin, työnkulun, persoonan ja vähintään 3 rajaa.
 3. **Tietopohjan toteutus** näkyy: teknisellä polulla sallitut dokumentit on kytketty, suunnittelupolulla haku, lähdekatkelma ja käyttöoikeusraja on kuvattu.
 4. **Kaikki kolme ennalta kirjoitettua testiä** on ajettu tai simuloitu alusta loppuun. Suunnittelupolun jäljet merkitään simuloiduiksi.
-5. **Korjauslista** kertoo, mikä havainto kannattaa korjata tunnilla 18.
+5. **Korjauslista** kertoo, mikä havainto kannattaa korjata Apuri-botin viimeistelytunnilla.
 
 ## Tämän tunnin lopputulos
 
-Tunnin 17 lopussa sinulla on:
+Apuri-botin rakennustunnin lopussa sinulla on:
 
 - Botin ensimmäinen tekninen versio tai dokumentoitu suunnittelupaketti
-- Järjestelmäpromptin ensimmäinen versio kopioituna myös tekstinä muistiin (tarvitset sen tunnilla 18, kun iteroit)
+- Järjestelmäpromptin ensimmäinen versio kopioituna myös tekstinä muistiin (tarvitset sen Apuri-botin viimeistelytunnilla, kun iteroit)
 - Kolmen testin syötteet, odotukset ja ensimmäiset tulokset tallennettuina
-- Korjauslista tunnille 18: *"Tämä ei toimi vielä, korjaa…"*
+- Korjauslista Apuri-botin viimeistelytunnille: *"Tämä ei toimi vielä, korjaa…"*
 
-Tämä on lähtötaso. Lopullinen botti syntyy tunnilla 18, kun iteroit, testaat tarkemmin ja viimeistelet.
+Tämä on lähtötaso. Lopullinen botti syntyy Apuri-botin viimeistelytunnilla, kun iteroit, testaat tarkemmin ja viimeistelet.
 
 ## Jos et tiedä mistä aloittaa
 
@@ -52,7 +52,7 @@ Aloita näin:
 2. Avaa **rakennuspalikka 1** ja katso, mikä promptirakenne on osunut sinulla parhaiten kohdalleen. Käytä sen tyyliä järjestelmäpromptin kirjoittamisessa.
 3. Kirjoita järjestelmäpromptin ensimmäinen versio omin sanoin — älä yritä saada sitä täydelliseksi.
 4. Toteuta valintakorttisi mukainen tekninen botti tai piirrä suunnittelupolun arkkitehtuuri ja suoritusjälki.
-5. Aja tai simuloi kaikki kolme tunnilla 15 kirjoitettua testiä ja merkitse näytön luonne rehellisesti.
-6. Kirjoita tulosten perusteella korjauslista. Varsinainen nimetty korjaus ja sitä koskeva uudelleentesti tehdään tunnilla 18.
+5. Aja tai simuloi kaikki kolme Oma botti II -tunnilla kirjoitettua testiä ja merkitse näytön luonne rehellisesti.
+6. Kirjoita tulosten perusteella korjauslista. Varsinainen nimetty korjaus ja sitä koskeva uudelleentesti tehdään Apuri-botin viimeistelytunnilla.
 
 *Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.*

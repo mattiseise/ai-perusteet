@@ -1,6 +1,6 @@
 # Agentit-osion lopputyö — rajatun agentin näyttö
 
-> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Rakennat sitä osissa oppituntien aikana. Tunnilla 27 kokoat valmiin näytön yhden 90 minuutin oppitunnin aikana.
+> Tämä on Agentit-osion (tunnit 19–27) lopputyö. Rakennat sitä osissa oppituntien aikana. Agentin viimeistelytunnilla kokoat valmiin näytön yhden 90 minuutin oppitunnin aikana.
 
 Tällä kurssilla rakennettavalla tekoälyagentilla tarkoitetaan kielimallin ja agentin ohjauskehyksen muodostamaa järjestelmää. Kielimalli tekee vähintään yhden aidon rajatun valinnan. Agentin ohjauskehys rajaa sallitut vaihtoehdot, työkalut, oikeudet, tilan, turvan, hyväksynnät ja lokituksen.
 
@@ -53,7 +53,7 @@ Käytä kokonaisuuden tarkistamiseen näitä kanonisia nimiä:
 
 Merkitse jokaisesta, missä vastuu näkyy tai miksi sitä ei tarvita. Yksi solmu, sääntö tai palvelu voi kattaa useita vastuita.
 
-## Tunnin 27 pakollinen 90 minuutin suoritus
+## Agentin viimeistelytunnin pakollinen 90 minuutin suoritus
 
 | Aika | Vaihe |
 |---|---|

@@ -1,8 +1,8 @@
 # Teoria-osion lopputyö: Tuomaripöydän asiantuntijalausunto
 
-Tämä on Teoria-osion arvioitava lopputyö. Tuotat kirjallisen tai visuaalis-suullisen asiantuntija-analyysin yhdestä todellisesta tekoälyongelmasta ja osoitat oman työprosessisi. Kielimalli saa jäsentää aineistoa ja tuottaa luonnoksen, mutta sinä omistat analyysin: valitset johtopäätökset, tarkistat väitteet ja teet perustellut korjaukset. Käytä tunnilla 8 arvioimiasi lähteitä ja tee tunnilla 9 enintään yksi uusi lähdetarkistus.
+Tämä on Teoria-osion arvioitava lopputyö. Tuotat kirjallisen tai visuaalis-suullisen asiantuntija-analyysin yhdestä todellisesta tekoälyongelmasta ja osoitat oman työprosessisi. Kielimalli saa jäsentää aineistoa ja tuottaa luonnoksen, mutta sinä omistat analyysin: valitset johtopäätökset, tarkistat väitteet ja teet perustellut korjaukset. Käytä Etiikka ja vastuu -tunnilla arvioimiasi lähteitä ja tee Asiantuntijalausunto-tunnilla enintään yksi uusi lähdetarkistus.
 
-> **Miksi näin?** Hyvää asiantuntija-analyysia ei tehdä yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — Generatiivinen mekaniikka (tunti 3), Kontekstin katoaminen (tunti 5) sekä Luotettavuusarvio ja tarkistuskäytäntö (tunti 7). Kun olet kerännyt nämä todistusaineistot, tunnilla 9 voit keskittyä tekoälyn ohjaamiseen ja tuotoksen tarkistamiseen — et joudu opettelemaan käsitteitä samalla.
+> **Miksi näin?** Hyvää asiantuntija-analyysia ei tehdä yhdellä tunnilla. Sen pohjana ovat käsitteet, jotka rakentuvat koko osion aikana — Generatiivinen mekaniikka (tunti 3), Kontekstin katoaminen (tunti 5) sekä Luotettavuusarvio ja tarkistuskäytäntö (tunti 7). Kun olet kerännyt nämä todistusaineistot, Asiantuntijalausunto-tunnilla voit keskittyä tekoälyn ohjaamiseen ja tuotoksen tarkistamiseen — et joudu opettelemaan käsitteitä samalla.
 
 ## Mitä rakennat?
 
@@ -16,7 +16,7 @@ Lausunto eroaa esseestä kolmella tavalla:
 
 ## Polku alusta loppuun
 
-Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät analyysissä tunnilla 9. Muut tunnit syventävät käsitteistöä, jota sovellat analyysissäsi.
+Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät analyysissä Asiantuntijalausunto-tunnilla. Muut tunnit syventävät käsitteistöä, jota sovellat analyysissäsi.
 
 | Tunti | Mitä teet | Tuotos |
 |---|---|---|
@@ -26,10 +26,10 @@ Lopputyö rakentuu kolmesta todistusaineistosta, joita käytät analyysissä tun
 | **5** | Selität, miksi kontekstimuisti voi pettää | **Todistusaineisto 2: Kontekstin katoaminen** |
 | 6 | Tutustut kuva-, ääni- ja monimodaalisuuteen | (tarkennus, ei palautusta) |
 | **7** | Arvioit kielimallin väitettä ja luokittelumallin virheitä | **Todistusaineisto 3: Luotettavuusarvio ja tarkistuskäytäntö** |
-| 8 | Pohdit etiikkaa, vastuuta ja oikeuksia sekä arvioit lopputyöhön sopivat lähteet | **Valitut lähteet tunnille 9** |
+| 8 | Pohdit etiikkaa, vastuuta ja oikeuksia sekä arvioit lopputyöhön sopivat lähteet | **Valitut lähteet Asiantuntijalausunto-tunnille** |
 | **9** | **Tuotat asiantuntija-analyysin tekoälyn avulla kolmen todistusaineiston pohjalta** | **Lopputyö valmis** |
 
-> **Vinkki:** Tee oma muistiinpanodokumentti esimerkiksi Wordilla, OneNotella tai Google Docsilla ja kokoa kolme todistusaineistoa omien alaotsikoidensa alle. Tunnilla 9 sinulla on auki yksi tiedosto kolmen sijasta.
+> **Vinkki:** Tee oma muistiinpanodokumentti esimerkiksi Wordilla, OneNotella tai Google Docsilla ja kokoa kolme todistusaineistoa omien alaotsikoidensa alle. Asiantuntijalausunto-tunnilla sinulla on auki yksi tiedosto kolmen sijasta.
 
 ## Kolmen todistusaineiston yleiskuvaus
 
@@ -61,13 +61,13 @@ Kirjallinen reitti on 500–700 sanan lausunto. Visuaalis-suullinen reitti sisä
 Sinun pitää käyttää lausunnossa kaikkia kolmea todistusaineistoa. Hyvä viittaus soveltaa aineiston havaintoa tai käsitettä valittuun tilanteeseen eikä vain mainitse aineiston nimeä.
 
 **3. Lähde- ja prosessiliitteet**
-Liitä mukaan lähdeluettelo, käyttämäsi prompti tai olennainen keskusteluloki, mallin luonnos tai siitä valittu katkelma sekä kaksi ennen–jälkeen-korjausta perusteluineen. Valitse lähteet tunnilla 8 arvioimastasi aineistosta. Jos jokin lausunnon keskeinen väite tarvitsee vielä tarkistuksen, saat etsiä enintään yhden uuden lähteen. Liitteet osoittavat, miten tarkistit ja muokkasit luonnosta.
+Liitä mukaan lähdeluettelo, käyttämäsi prompti tai olennainen keskusteluloki, mallin luonnos tai siitä valittu katkelma sekä kaksi ennen–jälkeen-korjausta perusteluineen. Valitse lähteet Etiikka ja vastuu -tunnilla arvioimastasi aineistosta. Jos jokin lausunnon keskeinen väite tarvitsee vielä tarkistuksen, saat etsiä enintään yhden uuden lähteen. Liitteet osoittavat, miten tarkistit ja muokkasit luonnosta.
 
 **4. Oma puolustus**
-Laadi tunnin 9 lopussa 1–2 minuutin puolustus, jossa kerrot tärkeimmän johtopäätöksesi, yhden todistusaineistoon perustuvan ratkaisun ja yhden merkittävän korjauksen mallin luonnokseen. Voit nauhoittaa puolustuksen tai esittää sen opettajan ohjeen mukaan. Näin koko ryhmän ei tarvitse pitää esitystä vuorotellen saman oppitunnin aikana.
+Laadi Asiantuntijalausunto-tunnin lopussa 1–2 minuutin puolustus, jossa kerrot tärkeimmän johtopäätöksesi, yhden todistusaineistoon perustuvan ratkaisun ja yhden merkittävän korjauksen mallin luonnokseen. Voit nauhoittaa puolustuksen tai esittää sen opettajan ohjeen mukaan. Näin koko ryhmän ei tarvitse pitää esitystä vuorotellen saman oppitunnin aikana.
 
 **Visuaalis-suullisen reitin kevyt runko**
-Jaa yhden sivun tilannekartta neljään kenttään analyysin kysymysten mukaan. Avainsanat, lyhyet lauseet ja nuolet riittävät, koska perustelut avataan puheessa. Tee lisäksi kolme päätöskohtaa sisältävä puu, jossa jokaisessa kohdassa on kaksi haaraa ja jokaisen päätepisteen yhteydessä toiminta sekä vastuurooli. Myös tällä reitillä käytetään kaikkia kolmea todistusaineistoa, tunnilla 8 arvioituja lähteitä, tekoälyn käytön prosessinäyttöä ja kahta perusteltua korjausta. Visuaalista viimeistelyä ei arvioida. Erillistä 1–2 minuutin puolustusta ei tarvita, koska 5–8 minuutin esitys toimii puolustuksena.
+Jaa yhden sivun tilannekartta neljään kenttään analyysin kysymysten mukaan. Avainsanat, lyhyet lauseet ja nuolet riittävät, koska perustelut avataan puheessa. Tee lisäksi kolme päätöskohtaa sisältävä puu, jossa jokaisessa kohdassa on kaksi haaraa ja jokaisen päätepisteen yhteydessä toiminta sekä vastuurooli. Myös tällä reitillä käytetään kaikkia kolmea todistusaineistoa, Etiikka ja vastuu -tunnilla arvioituja lähteitä, tekoälyn käytön prosessinäyttöä ja kahta perusteltua korjausta. Visuaalista viimeistelyä ei arvioida. Erillistä 1–2 minuutin puolustusta ei tarvita, koska 5–8 minuutin esitys toimii puolustuksena.
 
 ## Skenaariot — valitse yksi
 
@@ -121,22 +121,22 @@ Lopputyö rakentuu teoriaosion aikana. Varsinainen työaika sisältyy tunteihin 
 | Vaihe | Aika-arvio |
 |---|---|
 | Kolme todistusaineistoa osana tunteja 3, 5 ja 7 | ~20–25 min / todistusaineisto |
-| Kirjallinen tai visuaalis-suullinen analyysi, lähteet, korjaukset, palautuspaketti ja puolustus tunnilla 9 | ~90 min |
+| Kirjallinen tai visuaalis-suullinen analyysi, lähteet, korjaukset, palautuspaketti ja puolustus Asiantuntijalausunto-tunnilla | ~90 min |
 | **Yhteensä työaikaa kurssin oppitunneilla** | **~2,5–2,75 tuntia** |
 
-> **Vinkki ajankäyttöön:** Tuo tunnille 9 tunneilla 3, 5 ja 7 tehdyt kolme todistusaineistoa sekä tunnilla 8 arvioimasi lähteet. Skenaarion ja reitin valinta, luonnos, kaksi korjausta, palautuspaketti ja valitun reitin puolustus tehdään tunnin 9 aikana. Tee enintään yksi uusi lähdetarkistus, jos jokin keskeinen väite ei selviä jo valituista lähteistä. Erillistä ennakkotyötä ei vaadita.
+> **Vinkki ajankäyttöön:** Tuo Asiantuntijalausunto-tunnille tunneilla 3, 5 ja 7 tehdyt kolme todistusaineistoa sekä Etiikka ja vastuu -tunnilla arvioimasi lähteet. Skenaarion ja reitin valinta, luonnos, kaksi korjausta, palautuspaketti ja valitun reitin puolustus tehdään Asiantuntijalausunto-tunnin aikana. Tee enintään yksi uusi lähdetarkistus, jos jokin keskeinen väite ei selviä jo valituista lähteistä. Erillistä ennakkotyötä ei vaadita.
 
 ::: luokka
 ## Palautus
 
-Palautat tunnilla 9 seuraavat:
+Palautat Asiantuntijalausunto-tunnilla seuraavat:
 
 - Asiantuntijalausunto (500–700 sanaa) tai yhden sivun tilannekartta, kevyt päätöspuu ja 5–8 minuutin esitys
 - Kaikki kolme todistusaineistoa joko liitteinä tai selkeästi tuotokseen sisällytettyinä
 - Lähdeluettelo
 - Prompti tai keskustelulokin olennainen osa ja mallin luonnos tai katkelma
 - Kaksi ennen–jälkeen-korjausta perusteluineen
-- Kirjallisella reitillä tunnin 9 lopussa tehty 1–2 minuutin puolustus tai sen äänite opettajan ohjeen mukaan
+- Kirjallisella reitillä Asiantuntijalausunto-tunnin lopussa tehty 1–2 minuutin puolustus tai sen äänite opettajan ohjeen mukaan
 
 Visuaalis-suullisella reitillä 5–8 minuutin esitys korvaa erillisen 1–2 minuutin puolustuksen. Muut yllä luetellut aineistot palautetaan samoina.
 :::
@@ -151,7 +151,7 @@ Kokoa tuotoksesi itsellesi portfolioksi. Näin sinulla on yksi paketti, johon vo
 - Lähdeluettelo
 - Prompti tai keskustelulokin olennainen osa ja mallin luonnos tai katkelma
 - Kaksi ennen–jälkeen-korjausta perusteluineen
-- Kirjallisella reitillä tunnin 9 lopussa tehty 1–2 minuutin puolustus tai sen äänite
+- Kirjallisella reitillä Asiantuntijalausunto-tunnin lopussa tehty 1–2 minuutin puolustus tai sen äänite
 
 Visuaalis-suullisella reitillä 5–8 minuutin esitys korvaa erillisen 1–2 minuutin puolustuksen. Muut yllä luetellut aineistot kootaan samoina.
 

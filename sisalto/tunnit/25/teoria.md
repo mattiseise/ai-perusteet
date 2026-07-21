@@ -32,7 +32,7 @@ Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel 
 
 <figure class="ai-demo"><span class="ai-demo__tag">// rutiini kulkee läpi — kriittinen pysähtyy: ihminen hyväksyy tai hylkää</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:320px">
-  <div class="l25-wrap">
+  <div class="l25-wrap" data-once>
     <div class="l25-human">IHMINEN<span class="l25-btns"><i class="l25-ok">HYVÄKSY</i><i class="l25-no">HYLKÄÄ</i></span></div>
     <i class="l25-beam l25-bm1"></i><i class="l25-beam l25-bm2"></i>
     <div class="l25-pipe"></div>
@@ -49,7 +49,7 @@ Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel 
 </div>
 <figcaption class="ai-demo__cap">Agentti hoitaa rutiinit itse, mutta kriittinen päätös pysähtyy hyväksyntäportille. Ihminen näkee ehdotuksen ja perustelut: hyväksyntä avaa portin, hylkäys ohjaa agentin vaihtoehtoiselle polulle — se ei jää jumiin eikä riko sääntöä.</figcaption></figure>
 <style>
-.l25-wrap{position:relative;width:560px;height:282px;font-family:var(--font-mono)}
+.l25-wrap{position:relative;width:560px;height:282px;font-family:var(--font-mono);animation:l25wrapw 21s 1 forwards}
 .l25-pipe{position:absolute;left:0;right:0;top:158px;height:3px;background:#2B3552}
 .l25-node{position:absolute;top:138px;width:110px;text-align:center;font-size:11.5px;letter-spacing:.1em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:11px;padding:13px 6px}
 .l25-gatebox{position:absolute;left:248px;top:120px;width:64px;height:80px}
@@ -93,6 +93,7 @@ Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel 
 .l25-glbl.g-open{opacity:0}.l25-glbl.g-stop{opacity:1}
 .l25-pkt.k3{opacity:1;transform:translate(128px,72px)}
 .l25-human,.l25-alt{opacity:1}}
+@keyframes l25wrapw{0%,100%{opacity:1}}
 </style>
 
 Käytännössä hyväksyntäportti näyttää ihmiselle **selkeän kysymyksen ja ehdotuksen**, johon voi vastata esimerkiksi ”hyväksy”, ”hylkää” tai ”kysy lisää”.

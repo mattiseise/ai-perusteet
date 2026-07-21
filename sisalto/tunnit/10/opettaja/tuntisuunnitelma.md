@@ -4,6 +4,18 @@
 
 Oppija rakentaa neutraalin ja toistettavan työkalukokeen. Tavoite ei ole nimetä pysyvää voittajaa, vaan osoittaa yhden työkalun sopivuus yhteen tehtävään havaittavan näytön perusteella. Tunti onnistuu, kun oppija osaa sanoa sekä ”tämä havainto tukee valintaani” että ”tätä en voi tämän kokeen perusteella päätellä”.
 
+> **Huom. teoriaosuudesta.** Tunnin teoriateksti sisältää tuntisuunnitelman lisäksi
+> tuotevertailun: ChatGPT, Claude ja Microsoft Copilot omina osioinaan sekä
+> "Sama tehtävä, kolme vastausta" -esimerkin ja vertailutaulukon. Diat ja tämän
+> tunnin harjoitus keskittyvät menetelmään, joten tuotteet jäävät opiskelijan
+> luettavaksi. Jos haluat käsitellä ne yhdessä, ne sopivat virittäytymiseen
+> (0–10 min): pyydä oppijoita nimeämään, mitä työkaluja he ovat käyttäneet ja
+> mihin — ja palaa kysymykseen tunnin lopussa kokeen tulosten valossa.
+>
+> Tuotetiedot on tarkistettu heinäkuussa 2026 ja ne vanhenevat nopeasti. Ne on
+> kirjoitettu kestäviin eroihin (vahvuusalue, mistä data tulee, integraatio)
+> eivätkä sisällä versionumeroita tai hintoja.
+
 ## Osaamistavoitteet
 
 Oppija:

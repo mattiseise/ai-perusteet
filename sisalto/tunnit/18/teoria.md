@@ -65,7 +65,7 @@ Määrä kannattaa pitää kurissa. Kahdesta neljään huolella valittua dokumen
 
 ## Testaus: kolme testityyppiä, korjaus ja uudelleentesti
 
-Tunnilla 17 ajoit tai simuloit kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran. Tällä tunnilla valitset korjauslistalta yhden puutteen, teet siihen yhden nimetyn korjauksen ja toistat juuri sitä koskevan testin. Teknisen botin toiminta näkyy oikean toteutuksen ajossa. Suunnittelupolulla sama ketju kuvataan simuloituna suoritusjälkenä, mutta simulaatio ei todista teknisen yhteyden toimivuutta.
+Apuri-botin rakennustunnilla ajoit tai simuloit kaikki kolme ennalta kirjoitettua testiä ensimmäisen kerran. Tällä tunnilla valitset korjauslistalta yhden puutteen, teet siihen yhden nimetyn korjauksen ja toistat juuri sitä koskevan testin. Teknisen botin toiminta näkyy oikean toteutuksen ajossa. Suunnittelupolulla sama ketju kuvataan simuloituna suoritusjälkenä, mutta simulaatio ei todista teknisen yhteyden toimivuutta.
 
 Arvioitava testimatriisi sisältää vähintään kolme tapausta ja odotetun tuloksen jokaiselle:
 
@@ -75,7 +75,7 @@ Arvioitava testimatriisi sisältää vähintään kolme tapausta ja odotetun tul
 
 **3. Reunatapaus.** Anna epäselvä, puutteellinen tai ristiriitainen syöte. Tarkista, kysyykö botti tarpeellisen tarkennuksen eikä arvaa.
 
-Säilytä tunnin 17 kolmesta testistä syöte, odotus, toteutunut tai simuloitu tulos ja johtopäätös. Dokumentoi tunnilla 18 yhden valitun puutteen korjaus ja sitä koskeva uudelleentesti. Ennen–jälkeen-vertailu **antaa näyttöä korjauksen vaikutuksesta tässä testissä**. Se ei osoita ratkaisun toimivan kaikissa tilanteissa.
+Säilytä Apuri-botin rakennustunnin kolmesta testistä syöte, odotus, toteutunut tai simuloitu tulos ja johtopäätös. Dokumentoi Apuri-botin viimeistelytunnilla yhden valitun puutteen korjaus ja sitä koskeva uudelleentesti. Ennen–jälkeen-vertailu **antaa näyttöä korjauksen vaikutuksesta tässä testissä**. Se ei osoita ratkaisun toimivan kaikissa tilanteissa.
 
 Valitse tämän tunnin korjaukseksi vain yksi olennainen puute. Toista juuri siihen liittyvä testi samalla odotuksella. Kirjaa muut epäonnistumiset tunnistetuiksi jatkokehityskohteiksi, mutta älä yritä korjata niitä kaikkia tämän tunnin aikana.
 

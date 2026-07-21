@@ -48,7 +48,7 @@ Lokista näkyvät työkalujen käytöt, niille annetut syötteet, tulokset, toim
 
 <figure class="ai-demo"><span class="ai-demo__tag">// päätösperustelu → työkalukutsu → tulos → seuraava toiminto</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:310px">
-  <div class="l23-wrap">
+  <div class="l23-wrap" data-once>
     <div class="l23-ring"><span class="l23-mid">ReAct</span></div>
     <span class="l23-node n-think">PERUSTELE LYHYESTI</span>
     <span class="l23-node n-act">TOIMI</span>
@@ -67,7 +67,7 @@ Lokista näkyvät työkalujen käytöt, niille annetut syötteet, tulokset, toim
 </div>
 <figcaption class="ai-demo__cap">ReAct-toteutus etenee havaintojen perusteella. Loki näyttää lyhyen päätösperustelun, rakenteisen työkalukutsun, tuloksen tai virheen ja seuraavan toiminnon — ei mallin piilotettua raakaa ajatusketjua.</figcaption></figure>
 <style>
-.l23-wrap{position:relative;width:560px;height:272px;font-family:var(--font-mono)}
+.l23-wrap{position:relative;width:560px;height:272px;font-family:var(--font-mono);animation:l23wrapw 21s 1 forwards}
 .l23-ring{position:absolute;left:28px;top:62px;width:128px;height:128px;border:2.5px dashed #44517A;border-radius:50%;animation:l23spin 21s linear infinite}
 @keyframes l23spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 .l23-mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:12.5px;font-weight:700;letter-spacing:.08em;color:#EAEEF8;animation:l23unspin 21s linear infinite}
@@ -107,6 +107,7 @@ Lokista näkyvät työkalujen käytöt, niille annetut syötteet, tulokset, toim
 @media (prefers-reduced-motion:reduce){
 .l23-ring,.l23-mid,.l23-node,.l23-exit,.l23-l{animation:none}
 .l23-l,.l23-exit{opacity:1}}
+@keyframes l23wrapw{0%,100%{opacity:1}}
 </style>
 
 ## Eksplisiittinen työnkulku: jaa ongelma näkyviin vaiheisiin

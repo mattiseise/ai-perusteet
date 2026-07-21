@@ -8,7 +8,7 @@
 
 ## Agentti: Muisti — suositeltu
 
-**Miksi tämä on tärkeää:** Tunnilla 26 rakennat n8n-työnkulun, jossa muisti on konkreettinen suunnittelupäätös. Ilman muististrategiaa agentti käsittelee jokaisen pyynnön kuin se olisi ensimmäinen.
+**Miksi tämä on tärkeää:** Agentin minimiversion rakennustunnilla rakennat n8n-työnkulun, jossa muisti on konkreettinen suunnittelupäätös. Ilman muististrategiaa agentti käsittelee jokaisen pyynnön kuin se olisi ensimmäinen.
 
 ### Tehtävä
 

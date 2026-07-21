@@ -27,7 +27,7 @@ Käytä päätöksessäsi näitä kysymyksiä:
 
 ### Vaihe 2 — Valitse lopullinen agenttiprojektisi
 
-Avaa tunnilla 19 kirjoittamasi ongelmaehdokkaat. Aja vähintään kaksi ehdokasta saman päätöspuun läpi. Valitse vasta vertailun jälkeen lopullinen agenttiprojektisi ja kirjoita yhden sivun päätösmuistio:
+Avaa Boteista agentteihin -tunnilla kirjoittamasi ongelmaehdokkaat. Aja vähintään kaksi ehdokasta saman päätöspuun läpi. Valitse vasta vertailun jälkeen lopullinen agenttiprojektisi ja kirjoita yhden sivun päätösmuistio:
 
 - **Tehtävä:** Mitä ollaan ratkaisemassa ja kenelle?
 - **Valinta:** Prompti, työnkulku vai agentti?

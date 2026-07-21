@@ -32,8 +32,8 @@
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
 <section class="page-hero"><div class="page-hero-inner"><div class="eyebrow"><a class="bc-link" href="/luokka/" style="color:var(--blue)">Luokkaversio</a> · Tekoälyjen käyttö</div><h1>★ Osion lopputyö</h1><p>Tekoälyjen käyttö — Generatiivisten tekoälytyökalujen käyttö.</p></div></section><div class="page-body"><div class="reading panel active"><h1>Tekoälyjen käyttö -osion lopputyö: Rakenna oma apuri-botti</h1>
-<p>Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Suunnittelet rajatun <strong>apuri-botin</strong> ja valitset sille jommankumman kahdesta samanarvoisesta suorituspolusta. Teknisellä toteutuspolulla rakennat botin saatavilla olevalle alustalle ja testaat sen todellista toimintaa. Dokumentoidulla suunnittelupolulla tuotat toteuttamiskelpoisen arkkitehtuurin, simuloidun suoritusjäljen, tietolähteiden kuvaukset, testit ja tunnistetut rajoitukset. Et tee koko työtä yhdellä istumalla — keräät matkan varrella kolme rakennuspalikkaa, teet toteutuspäätöksen tunnilla 16 ja viimeistelet työn tunnilla 18.</p>
-<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — testattu promptikortti (tunti 12), botin määrittely (tunti 14) sekä kuratoitu tietopohja ja testisuunnitelma (tunti 15). Tunnilla 17 rakennat teknisen version tai dokumentoidun suunnittelupaketin ja ajat tai simuloit ennalta suunnitellut testit. Tunnilla 18 korjaat, testaat uudelleen ja arvioit lopputuloksen.</p>
+<p>Tämä on Tekoälyjen käyttö -osion arvioitava lopputyö. Suunnittelet rajatun <strong>apuri-botin</strong> ja valitset sille jommankumman kahdesta samanarvoisesta suorituspolusta. Teknisellä toteutuspolulla rakennat botin saatavilla olevalle alustalle ja testaat sen todellista toimintaa. Dokumentoidulla suunnittelupolulla tuotat toteuttamiskelpoisen arkkitehtuurin, simuloidun suoritusjäljen, tietolähteiden kuvaukset, testit ja tunnistetut rajoitukset. Et tee koko työtä yhdellä istumalla — keräät matkan varrella kolme rakennuspalikkaa, teet toteutuspäätöksen Oma botti III -tunnilla ja viimeistelet työn Apuri-botin viimeistelytunnilla.</p>
+<blockquote class="pause"><p><strong>Miksi näin?</strong> Hyvää bottia ei rakenneta yhdellä tunnilla. Sen pohjana ovat kolme rakennuspalikkaa, jotka kerätään koko osion aikana — testattu promptikortti (tunti 12), botin määrittely (tunti 14) sekä kuratoitu tietopohja ja testisuunnitelma (tunti 15). Apuri-botin rakennustunnilla rakennat teknisen version tai dokumentoidun suunnittelupaketin ja ajat tai simuloit ennalta suunnitellut testit. Apuri-botin viimeistelytunnilla korjaat, testaat uudelleen ja arvioit lopputuloksen.</p>
 </blockquote>
 <h2>Mitä rakennat?</h2>
 <p><strong>Apuri-botin tekninen toteutus tai dokumentoitu suunnitelma</strong>, joka auttaa rajatussa arjen, opiskelun, harrastuksen tai muun itse valitun tilanteen tehtävässä. Botti on <em>ohjaava, ei käyttäjän puolesta tekevä</em> — se auttaa käyttäjää etenemään hallitusti.</p>
@@ -48,7 +48,7 @@
 </ul>
 <p>Valitse aihe, jonka tunnet hyvin omasta arjestasi. Bottisi tuntee juuri sinun aiheesi termit ja tilanteet — se ei ole yleinen avustaja, vaan erikoistunut juuri sinun valitsemaasi tehtävään.</p>
 <h2>Polku alusta loppuun</h2>
-<p>Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella ja kootaan botiksi tunnilla 17.</p>
+<p>Lopputyö rakentuu kolmesta rakennuspalikasta, jotka kerätään matkan varrella ja kootaan botiksi Apuri-botin rakennustunnilla.</p>
 <table>
 <thead>
 <tr>
@@ -100,7 +100,7 @@
 </tr>
 </tbody>
 </table>
-<blockquote class="pause"><p><strong>Vinkki:</strong> Tee oma muistiinpanodokumentti, johon kokoat kolme rakennuspalikkaa omiksi alaotsikoikseen. Tunnilla 17 tarvitset silloin vain yhden tiedoston.</p>
+<blockquote class="pause"><p><strong>Vinkki:</strong> Tee oma muistiinpanodokumentti, johon kokoat kolme rakennuspalikkaa omiksi alaotsikoikseen. Apuri-botin rakennustunnilla tarvitset silloin vain yhden tiedoston.</p>
 </blockquote>
 <h2>Kolmen rakennuspalikan yleiskuvaus</h2>
 <p>Yksityiskohtaiset ohjeet kunkin rakennuspalikan tekemiseen saat kyseisellä tunnilla. Tässä lyhyt yleiskuvaus, jotta näet kokonaisuuden.</p>
@@ -116,13 +116,13 @@ Botin "perustamisasiakirja": kenelle botti on, mitä se osaa, mitä se ei tee, m
 <p>Teknisellä toteutuspolulla annat linkin tai muun pääsyn bottiin sekä tallennetun suoritusjäljen, josta näkyvät todelliset syötteet, vastaukset, tietopohjan käyttö ja toteutukseen kuuluvat jakamis- tai käyttöoikeusasetukset.</p>
 <p>Dokumentoidulla suunnittelupolulla annat arkkitehtuurin, simuloidun suoritusjäljen, tietolähteiden tai mahdollisten työkalujen kuvaukset ja luettelon teknisistä ominaisuuksista, joita ei ole toteutettu. Merkitse simuloidut vaiheet näkyvästi.</p>
 <p><strong>2. Botin määrittely</strong><br />
-Tunnin 14 botin määrittely (rakennuspalikka 2), päivitettynä lopputyösi botin mukaisesti.</p>
+Oma botti I -tunnin botin määrittely (rakennuspalikka 2), päivitettynä lopputyösi botin mukaisesti.</p>
 <p><strong>3. Järjestelmäprompti kokonaisuudessaan</strong><br />
 Kopioi järjestelmäprompti tiedostoon kokonaisuudessaan. Se on kolmesta rakennuspalikasta koottu toteutusohje, ei neljäs rakennuspalikka.</p>
 <p><strong>4. Lista tietopohjan dokumenteista</strong><br />
 2–4 dokumenttia ja perustelu, miksi valitsit juuri nämä.</p>
 <p><strong>5. Testimatriisi ja korjausketju</strong><br />
-Tunnilla 17 ajetut tai simuloidut normaali tapaus, kielteinen testi ja reunatapaus. Kirjaa jokaisesta syöte, odotus, tulos ja johtopäätös. Tunnilla 18 tee yksi nimetty korjaus ja aja tai simuloi juuri sitä koskeva testi uudelleen samalla odotuksella.</p>
+Apuri-botin rakennustunnilla ajetut tai simuloidut normaali tapaus, kielteinen testi ja reunatapaus. Kirjaa jokaisesta syöte, odotus, tulos ja johtopäätös. Apuri-botin viimeistelytunnilla tee yksi nimetty korjaus ja aja tai simuloi juuri sitä koskeva testi uudelleen samalla odotuksella.</p>
 <p><strong>6. Reflektio (200–300 sanaa)</strong><br />
 Mitä opit botin rakentamisesta, mikä havainto johti korjaukseen ja mitä tekisit seuraavaksi? Saavutettavana vaihtoehtona voit palauttaa 2–3 minuutin äänitteen tai selostetun 3–5 dian kuvakoosteen, joka vastaa samoihin kysymyksiin.</p>
 <h2>Lyhyt esittely ja puolustus</h2>
@@ -131,7 +131,7 @@ Mitä opit botin rakentamisesta, mikä havainto johti korjaukseen ja mitä tekis
 </blockquote>
 <h2>Työkalut ja työskentelytapa</h2>
 <p><strong>Alusta tai suunnitteluväline:</strong> valitse tekniselle polulle saatavilla oleva bottialusta. Suunnittelupolulla voit käyttää tavallista tekstinkäsittely-, kaavio- tai esitysvälinettä sekä kielimallia suunnitelman kriittiseen arviointiin.</p>
-<p>Opettaja kertoo käytettävissä olevat alustat tunnilla 17. Tunnuksen puuttuminen ei estä työn tekemistä.</p>
+<p>Opettaja kertoo käytettävissä olevat alustat Apuri-botin rakennustunnilla. Tunnuksen puuttuminen ei estä työn tekemistä.</p>
 <p><strong>Tekoälytyökalu botin rakentamiseen:</strong> Voit käyttää saatavilla olevaa ja aineistollesi hyväksyttyä palvelua. Tarkoitus ei ole keksiä kaikkea itse, vaan käyttää tekoälyä suunnittelun, testauksen ja viimeistelyn tukena. Sinun vastuullasi on, että tekninen botti toimii tarkoituksenmukaisesti tai suunnittelupaketti on toteutuskelpoinen ja että ymmärrät ratkaisun rakenteen kokonaan.</p>
 <p><strong>Yksin tai pareittain:</strong> Lopputyö tehdään yksin, koska bottisi on juuri sinun valitsemasi aiheen näköinen. Voit kuitenkin sparrata luokkakavereiden kanssa rakennuspalikoiden kokoamisessa.</p>
 <h2>Arviointi</h2>
@@ -168,7 +168,7 @@ Mitä opit botin rakentamisesta, mikä havainto johti korjaukseen ja mitä tekis
 <tr>
 <td><strong>Testaaminen ja korjaus</strong></td>
 <td>20 p</td>
-<td>Kattavatko tunnin 17 ensitestit normaalin, kielteisen ja reunatapauksen? Näkyvätkö tunnin 18 yksi korjaus ja uudelleentesti?</td>
+<td>Kattavatko Apuri-botin rakennustunnin ensitestit normaalin, kielteisen ja reunatapauksen? Näkyvätkö Apuri-botin viimeistelytunnin yksi korjaus ja uudelleentesti?</td>
 </tr>
 <tr>
 <td><strong>Reflektio ja puolustus</strong></td>
@@ -209,10 +209,10 @@ Mitä opit botin rakentamisesta, mikä havainto johti korjaukseen ja mitä tekis
 </tr>
 </tbody>
 </table>
-<blockquote class="pause"><p><strong>Vinkki ajankäyttöön:</strong> Rakennuspalikat tehdään niille varatuilla oppitunneilla. Tunnin 18 reflektiota tai esittelyä ei siirretä pakolliseksi kotityöksi.</p>
+<blockquote class="pause"><p><strong>Vinkki ajankäyttöön:</strong> Rakennuspalikat tehdään niille varatuilla oppitunneilla. Apuri-botin viimeistelytunnin reflektiota tai esittelyä ei siirretä pakolliseksi kotityöksi.</p>
 </blockquote>
 <h2>Palautus</h2>
-<p>Palautat tunnilla 18 yhden tiedoston (esim. PDF tai Word), joka sisältää:</p>
+<p>Palautat Apuri-botin viimeistelytunnilla yhden tiedoston (esim. PDF tai Word), joka sisältää:</p>
 <ul>
 <li>Botin määrittely (päivitettynä)</li>
 <li>Järjestelmäprompti kokonaisuudessaan</li>

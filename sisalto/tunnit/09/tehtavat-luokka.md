@@ -32,7 +32,7 @@ Olet kerännyt kolme todistusaineistoa aiemmilla oppitunneilla. Käytä niitä a
 
 Sinun tulee käyttää kaikkia kolmea todistusaineistoa, liittää ne mukaan tai sisällyttää ne selkeästi tuotokseen ja yhdistää niiden havainnot johtopäätöksiisi.
 
-Valitse lähteet tunnilla 8 arvioimastasi aineistosta. Jos jokin keskeinen väite tarvitsee vielä tarkistuksen, saat etsiä enintään yhden uuden lähteen. Merkitse lähde tai sen olennainen kohta niin, että tarkistus voidaan toistaa.
+Valitse lähteet Etiikka ja vastuu -tunnilla arvioimastasi aineistosta. Jos jokin keskeinen väite tarvitsee vielä tarkistuksen, saat etsiä enintään yhden uuden lähteen. Merkitse lähde tai sen olennainen kohta niin, että tarkistus voidaan toistaa.
 
 > **Vinkki:** *"Tässä on keräämäni pohja-aineisto. Käytä sitä apuna, kun laadin vastausta… <liitä keräämäsi aineisto>"*
 

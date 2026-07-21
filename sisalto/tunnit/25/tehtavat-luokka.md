@@ -10,7 +10,7 @@
 
 ## Agentti: Ihminen — suositeltu
 
-**Miksi tämä on tärkeää:** Tunnilla 27 lisäät hyväksyntäsolmuja n8n:ssä. Ihmisen osallistuminen päätöksentekoon vaatii tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.
+**Miksi tämä on tärkeää:** Agentin viimeistelytunnilla lisäät hyväksyntäsolmuja n8n:ssä. Ihmisen osallistuminen päätöksentekoon vaatii tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.
 
 ### Tehtävä
 
@@ -28,7 +28,7 @@ Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 san
 
 *Esimerkki:* "Ihmisen täytyy hyväksyä, kun agentti aikoo antaa yli 10 % alennuksen tai kun hyväksyttyä palautusehtoa ei löydy tietopohjasta."
 
-*Sinun vuorosi:* Tunnista 1–3 kohtaa agenttisi työnkulussa. Voit kirjoittaa myös "ihmistä ei tarvita" — perustele silloin miksi.
+*Sinun vuorosi:* Sääntö vai tekoäly -tunnista–3 kohtaa agenttisi työnkulussa. Voit kirjoittaa myös "ihmistä ei tarvita" — perustele silloin miksi.
 
 **2. Millainen hyväksyntäportti on.**
 

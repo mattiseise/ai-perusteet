@@ -83,7 +83,7 @@ n8n:ssä on valmiita solmuja esimerkiksi taulukoille, viesteille, tiedostoille, 
 
 <figure class="ai-demo"><span class="ai-demo__tag">// data virtaa solmusta toiseen — jokainen solmu tekee yhden asian</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
-  <div class="l26-wrap">
+  <div class="l26-wrap" data-once>
     <div class="l26-wire"></div>
     <div class="l26-node n1"><b>▶</b>Trigger<span>uusi viesti</span></div>
     <div class="l26-node n2"><b>✦</b>tekoälysolmu<span>päättely</span></div>
@@ -94,7 +94,7 @@ n8n:ssä on valmiita solmuja esimerkiksi taulukoille, viesteille, tiedostoille, 
 </div>
 <figcaption class="ai-demo__cap">n8n-työnkulku on putki: triggeri käynnistää, ja data kulkee solmulta toiselle. Pelkkä putki ei ole agentti. Agenttimaisuus syntyy kohdassa, jossa kielimalli valitsee rajatuista vaihtoehdoista seuraavan toiminnon havaintonsa perusteella.</figcaption></figure>
 <style>
-.l26-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l26-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono);animation:l26wrapw 8s 1 forwards}
 .l26-wire{position:absolute;left:30px;right:30px;top:104px;height:3px;background:repeating-linear-gradient(90deg,#46c7cf 0 9px,#232C44 9px 22px);animation:l26flow 1.1s linear infinite}
 @keyframes l26flow{to{background-position:22px 0}}
 .l26-node{position:absolute;top:62px;z-index:2;width:112px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;font-size:11.5px;color:#FFFFFF;background:#11182A;border:2px solid #2B3552;border-radius:12px;padding:9px 6px}
@@ -118,13 +118,14 @@ n8n:ssä on valmiita solmuja esimerkiksi taulukoille, viesteille, tiedostoille, 
 @media (prefers-reduced-motion:reduce){
 .l26-node,.l26-s,.l26-wire{animation:none}
 .l26-s.s4{opacity:1}}
+@keyframes l26wrapw{0%,100%{opacity:1}}
 </style>
 
 **Pysähdy hetkeksi:** Miten agentin kaikki kuusi rakennusosaa toteutuvat suunnitelmassasi? Mieti vastuita ennen solmuja: yksi solmu, sääntö tai palvelu voi kattaa useita kohtia.
 
 ## Agentin kuusi rakennusosaa n8n:ssä
 
-Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä tai kuvata dokumentoidussa suunnittelupolussa. Tunnilla 27 dokumentoit ensin kielimallin ja agentin ohjauskehyksen rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista vastuuta yhteen lokeroon.
+Palataan hetkeksi Boteista agentteihin -tunnin arkkitehtuuriin ja katsotaan, miten sen vastuut voidaan toteuttaa n8n:ssä tai kuvata dokumentoidussa suunnittelupolussa. Agentin viimeistelytunnilla dokumentoit ensin kielimallin ja agentin ohjauskehyksen rajan ja käytät kuutta rakennusosaa kattavuuden tarkistuslistana. Tarkoitus ei ole pakottaa jokaista vastuuta yhteen lokeroon.
 
 **Syötekäsittelijä** on triggerisolmu ja mahdolliset validointisolmut sen jälkeen. Jos rakennat chatbotin, triggeri voi olla webhook, joka vastaanottaa käyttäjän viestin. Heti sen jälkeen voit lisätä IF-solmun, joka tarkistaa esimerkiksi, onko viesti liian pitkä tai tyhjä. Tämä on samaa syötevalidointia, josta puhuttiin teoriassa. n8n:ssä se näkyy konkreettisena solmuna kankaalla.
 
@@ -142,7 +143,7 @@ Palataan hetkeksi tunnin 19 arkkitehtuuriin ja katsotaan, miten sen vastuut void
 
 Tämän tunnin tärkein periaate on: **aloita pienestä**. Rakenna ensin yksinkertaisin mahdollinen versio, joka tekee yhden asian oikein. Testaa se. Lisää vasta sen jälkeen seuraava ominaisuus. Tätä kutsutaan **iteratiiviseksi kehitykseksi**. Kokeneet käyttäjätkään eivät rakenna valmista tuotetta yhdellä kertaa.
 
-Käytännössä tunnin 26 tavoite on **toimiva minimiversio**, jossa näkyy yksi aito agenttipäätös. Kielimalli saa esimerkiksi valita kahdesta rajatusta työkalusta, pyytää lisätietoa tai lopettaa tehtävän. Valinta ja sen tulos tallennetaan näkyvään suoritusjälkeen. Turvakerros, hyväksyntäportit ja viimeistely tehdään tunnilla 27. Jos projektisi etenee aina samaa polkua, kutsu sitä tässä vaiheessa tekoälyavusteiseksi työnkuluksi ja lisää agenttipäätös vain, jos tehtävä todella tarvitsee sellaisen.
+Käytännössä Agentin minimiversion rakennustunnin tavoite on **toimiva minimiversio**, jossa näkyy yksi aito agenttipäätös. Kielimalli saa esimerkiksi valita kahdesta rajatusta työkalusta, pyytää lisätietoa tai lopettaa tehtävän. Valinta ja sen tulos tallennetaan näkyvään suoritusjälkeen. Turvakerros, hyväksyntäportit ja viimeistely tehdään Agentin viimeistelytunnilla. Jos projektisi etenee aina samaa polkua, kutsu sitä tässä vaiheessa tekoälyavusteiseksi työnkuluksi ja lisää agenttipäätös vain, jos tehtävä todella tarvitsee sellaisen.
 
 Esimerkki iteratiivisesta rakentamisesta:
 
@@ -164,7 +165,7 @@ Tällä tunnilla et aloita tyhjältä pöydältä. Sinulla on viisi pohjapiirros
 - mitä riskejä agenttiin liittyy ja miten ne torjutaan — **pohjapiirros 4**
 - missä kohdissa ihminen on mukana — **pohjapiirros 5**
 
-Tunnin alussa kokoat nämä viisi pohjapiirrosta yhdeksi suunnitelmaksi ja tarkistat, että ne sopivat yhteen. Sen jälkeen rakennat minimiversion: **triggeri + kielimallin tekemä rajattu valinta + vähintään yksi työkalu tai toiminto + näkyvä suoritusjälki**. Pohjapiirrosten 4 ja 5 sisältämät turvakerros ja ihmisen rooli viimeistellään tunnilla 27, kun testaat ja dokumentoit agentin.
+Tunnin alussa kokoat nämä viisi pohjapiirrosta yhdeksi suunnitelmaksi ja tarkistat, että ne sopivat yhteen. Sen jälkeen rakennat minimiversion: **triggeri + kielimallin tekemä rajattu valinta + vähintään yksi työkalu tai toiminto + näkyvä suoritusjälki**. Pohjapiirrosten 4 ja 5 sisältämät turvakerros ja ihmisen rooli viimeistellään Agentin viimeistelytunnilla, kun testaat ja dokumentoit agentin.
 
 Jos olet epävarma omasta projektistasi, voit arvioida vaikeustasoa seuraavien esimerkkien avulla:
 
@@ -196,7 +197,7 @@ Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 - miten kielimallin ja ohjauskehyksen vastuut jakautuvat ja miten kaikki kuusi rakennusosaa tulevat katetuiksi
 - mikä osa toimii jo
 - mikä osa jäi kesken
-- mitä pitää testata tai korjata tunnilla 27
+- mitä pitää testata tai korjata Agentin viimeistelytunnilla
 
 **Tarkista lopuksi:** Käynnistyykö työnkulku? Kulkeeko data solmulta toiselle? Tuottaako tekoälysolmu järkevän vastauksen? Tekeekö toimintasolmu sen, mitä sen pitää tehdä? Tiedätkö, mitä korjaat tai lisäät seuraavalla tunnilla?
 
@@ -204,7 +205,7 @@ Lisäksi sinun kannattaa tunnin aikana kirjata muistiin:
 
 Tämä tunti vie sinut suunnitelmasta testattavaan minimiversioon. Kokoat viisi pohjapiirrostasi yhteen, teet yhden tilanteen mukaan muuttuvan kielimallivalinnan ja näytät sen seuraukset suoritusjäljessä. Tekninen polku rakentaa tämän n8n:ssä. Dokumentoitu polku kuvaa rakenteen ja simuloi sen, mutta käyttää samassa kohdassa todellista kielimallipäätöstä.
 
-Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation tunnilla 27. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
+Tunnin lopussa sinulla on toimiva perusversio, jonka päälle lisäät turvakerroksen, hyväksyntäportit, testauksen ja dokumentaation Agentin viimeistelytunnilla. Tärkeintä ei ole rakentaa kaikkea valmiiksi yhdellä kertaa. Tärkeintä on saada ensimmäinen versio toimimaan, ymmärtää sen rakenne ja tietää, miten jatkat siitä eteenpäin.
 
 > **Erota nämä:** Mitä kielimalli valitsee — ja mitkä solmut, säännöt, sopimukset tai palvelut muodostavat sitä ympäröivän agentin ohjauskehyksen?
 

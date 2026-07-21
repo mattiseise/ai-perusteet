@@ -66,7 +66,7 @@ Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. T
 
 <figure class="ai-demo"><span class="ai-demo__tag">// viisi kysymystä, viisi työkalua — agentti valitsee, kysyy ja saa vastauksen</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
-  <div class="l22-wrap">
+  <div class="l22-wrap" data-once>
     <div class="l22-q">
       <span class="l22-qq q1">Sataako huomenna Turussa?</span>
       <span class="l22-qq q2">Olenko vapaa pe klo 10?</span>
@@ -98,7 +98,7 @@ Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. T
 </div>
 <figcaption class="ai-demo__cap">Agentti ei tiedä säätä, kalenteria eikä kursseja itse. Jokainen kysymys ohjautuu eri työkalulle: agentti tunnistaa tarpeen, kutsuu oikeaa työkalua ja muotoilee vastauksen vasta työkalun palauttamasta tuloksesta.</figcaption></figure>
 <style>
-.l22-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l22-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono);animation:l22wrapw 32s 1 forwards}
 .l22-q{position:absolute;left:0;top:0;width:204px;height:52px}
 .l22-qq{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;font-weight:500;line-height:1.4;color:#06212A;background:#46c7cf;border-radius:11px;padding:6px 11px;opacity:0;height:fit-content;min-height:38px}
 .l22-qq.q1{animation:l22q1 32s infinite}
@@ -152,6 +152,7 @@ Tähän asti olemme puhuneet työkaluista ikään kuin ne olisivat erillisiä. T
 .l22-qq,.l22-t,.l22-res,.l22-aa{animation:none}
 .l22-qq.q1,.l22-res.e1,.l22-aa.a1{opacity:1}
 .l22-t.t1{color:#FFFFFF;border-color:oklch(0.72 0.13 208)}}
+@keyframes l22wrapw{0%,100%{opacity:1}}
 </style>
 
 

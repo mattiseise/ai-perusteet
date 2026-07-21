@@ -30,7 +30,7 @@ Valitse skenaariota varten kaksi lähdettä tunnin teoria-aineistosta tai opetta
 4. miksi lähde on tähän väitteeseen riittävän luotettava ja ajantasainen
 5. mitä kysymystä tai rajaa lähde ei ratkaise.
 
-Kirjaa lopuksi yksi keskeinen väite, joka tarvitsee mahdollisesti vielä tarkistuksen. Tallenna lähdekortti muiden lopputyöaineistojen yhteyteen. Käytä näitä lähteitä tunnilla 9; silloin saat tehdä enintään yhden uuden lähdetarkistuksen.
+Kirjaa lopuksi yksi keskeinen väite, joka tarvitsee mahdollisesti vielä tarkistuksen. Tallenna lähdekortti muiden lopputyöaineistojen yhteyteen. Käytä näitä lähteitä Asiantuntijalausunto-tunnilla; silloin saat tehdä enintään yhden uuden lähdetarkistuksen.
 
 ## Ohje lähteisiin
 

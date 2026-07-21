@@ -1,6 +1,6 @@
 # Rakennuspalikka 2 — Botin määrittelydokumentti
 
-**Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
+**Tämä on toinen kolmesta rakennuspalikasta.** Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Apuri-botin rakennustunnilla rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja Apuri-botin viimeistelytunnilla korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.
 
 ## Mitä teet?
 
@@ -103,7 +103,7 @@ Kirjoita lopuksi 2–3 lauseen pohdinta: *"Mikä määrittelyssä muuttui sparra
 
 Ydinlauseessa ei tarvitse luetella kaikkia ominaisuuksia. Sen pitää kertoa käyttäjä, tehtävä ja hyödyllinen lopputulos niin selvästi, että voit käyttää lausetta seuraavilla tunneilla jokaisen lähteen, testin ja toteutusvalinnan mittatikkuna.
 
-> **Miksi tämä on tärkeää:** Oppitunnilla 17 aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.
+> **Miksi tämä on tärkeää:** Apuri-botin rakennustunnilla aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.
 
 > **Tarkista lopuksi:** Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.
 

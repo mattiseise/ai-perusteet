@@ -6,7 +6,7 @@ Kun tällä kurssilla puhutaan rakennettavasta **tekoälyagentista**, tarkoiteta
 
 Sanaa agentti käytetään teknologiauutisissa, yritysviestinnässä ja opetuksessa monella tavalla. Siksi tällä tunnilla ei päätellä pelkän tuotenimen perusteella, onko jokin järjestelmä agentti. Sen sijaan tarkastelet, miten kielimalli ja sitä ympäröivä ohjauskehys yhdessä käsittelevät tehtävää, tekevät rajattuja valintoja ja käyttävät työkaluja.
 
-Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Tunnilla 20 arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.
+Tämä oppitunti on ensimmäinen askel kohti agenttien ymmärtämistä. Et vielä lukitse lopputyösi ongelmaa, vaan keräät alustavia ehdokkaita. Automaatio vai autonomia -tunnilla arvioit, tarvitseeko ongelma todella agenttia, ja teet vasta sen jälkeen lopullisen projektivalinnan. Oppitunneilla 26–27 toteutat tai simuloit suunnitelmasi n8n-ympäristössä.
 
 > **Huomio ennen kuin aloitat:** Agentit-osio on kurssin syventävä ja vaativin osa, koska siinä yhdistät aiemmin oppimasi asiat. Et tarvitse aiempaa ohjelmointiosaamista: etenet vaihe kerrallaan ja voit valita teknisen toteutuksen tai samanarvoisen dokumentoidun suunnittelusuorituksen. Tavoitteena on ymmärtää tämän kurssin rajauksen mukaisen agentin rakenne ja rakentaa rajattu, testattava ja turvallinen kokonaisuus — ei hallita kaikkia agenttitekniikoita.
 
@@ -198,7 +198,7 @@ Ero näkyy hyvin esimerkin avulla. Jos kirjoitat kielimallisovellukselle: ”Ann
 
 <figure class="ai-demo"><span class="ai-demo__tag">// sama tehtävä — botti kertoo ohjeet, agentti tekee työn</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:330px">
-  <div class="l19-wrap">
+  <div class="l19-wrap" data-once>
     <div class="l19-task">Tehtävä: ”Siirrä laskut Laskut-kansioon ja kuittaa lähettäjille.”</div>
     <div class="l19-pane l19-bot"><span class="l19-ph">CHATBOT</span>
       <span class="l19-reply">”Näin teet sen itse: 1) avaa sähköposti, 2) etsi laskut, 3) siirrä ne kansioon, 4) vastaa lähettäjille.”</span>
@@ -216,7 +216,7 @@ Ero näkyy hyvin esimerkin avulla. Jos kirjoitat kielimallisovellukselle: ”Ann
 </div>
 <figcaption class="ai-demo__cap">Ratkaiseva ero: chatbot vastaa tekstillä ja työ jää sinulle — agentti suorittaa vaiheet itse työkaluillaan ja raportoi tuloksen. Juuri siksi agentti tarvitsee oikeudet, turvarajat ja valvonnan, joita pelkkä chatbot ei tarvitse.</figcaption></figure>
 <style>
-.l19-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono)}
+.l19-wrap{position:relative;width:560px;height:292px;font-family:var(--font-mono);animation:l19wrapw 19s 1 forwards}
 .l19-task{position:absolute;left:50%;transform:translateX(-50%);top:0;white-space:nowrap;font-size:11.5px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:7px 12px}
 .l19-pane{position:absolute;top:48px;width:268px;min-height:240px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px 36px}
 .l19-bot{left:0}
@@ -248,6 +248,7 @@ Ero näkyy hyvin esimerkin avulla. Jos kirjoitat kielimallisovellukselle: ”Ann
 .l19-reply,.l19-step,.l19-step i,.l19-rep,.l19-tg{animation:none}
 .l19-reply,.l19-step i,.l19-rep,.l19-tg{opacity:1}
 .l19-step{color:#B9C2DA}}
+@keyframes l19wrapw{0%,100%{opacity:1}}
 </style>
 
 
@@ -320,7 +321,7 @@ Miksi siis rakennat tai simuloit tunneilla 26–27 oman agentin, jos valmiitakin
 
 ## Kohti omaa projektia
 
-Agentit-osion aikana suunnittelet n8n-ympäristöön agentin ja osoitat sen toiminnan teknisellä toteutuksella tai dokumentoidulla simulaatiolla. Kirjaa nyt kaksi tai kolme mahdollista ongelmaa, mutta älä valitse vielä lopullista. Tunnilla 20 vertaat agenttia yksinkertaisempiin ratkaisuihin ja valitset projektin vasta perustellun arvioinnin jälkeen.
+Agentit-osion aikana suunnittelet n8n-ympäristöön agentin ja osoitat sen toiminnan teknisellä toteutuksella tai dokumentoidulla simulaatiolla. Kirjaa nyt kaksi tai kolme mahdollista ongelmaa, mutta älä valitse vielä lopullista. Automaatio vai autonomia -tunnilla vertaat agenttia yksinkertaisempiin ratkaisuihin ja valitset projektin vasta perustellun arvioinnin jälkeen.
 
 ## Yhteenveto
 

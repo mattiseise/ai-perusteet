@@ -65,7 +65,7 @@
 </blockquote>
 <figure class="ai-demo" data-demo-id="lesson-03-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// ennusta → valitse → liitä → toista — viisi askelta peräkkäin</span>
 <div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:290px"><div class="ai-demo__mobile-model ai-demo__mobile-model--loop"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">Syöte ja tähänastinen teksti</li><li class="ai-demo__mobile-node">Laske seuraavien tokenien todennäköisyydet</li><li class="ai-demo__mobile-node">Valitse tokeni</li><li class="ai-demo__mobile-node">Liitä tekstiin</li><li class="ai-demo__mobile-node">Toista, kunnes vastaus päättyy</li></ol></div>
-  <div class="l03-wrap">
+  <div class="l03-wrap" data-once>
     <div class="l03-sent"><span class="l03-fixed">Suomen pääkaupunki</span><span class="l03-tok t1"> on</span><span class="l03-tok t2"> Helsinki</span><span class="l03-tok t3">.</span><span class="l03-tok t4"> Se</span><span class="l03-tok t5"> sijaitsee</span><span class="l03-tok t6">…</span><i class="l03-caret"></i></div>
     <span class="l03-ph">malli laskee todennäköisyyden jokaiselle jatkolle:</span>
     <div class="l03-cands l03-r1"><div class="l03-c top"><span>on</span><div class="l03-cb"><i style="width:90%"></i></div><b>91 %</b></div><div class="l03-c"><span>sijaitsee</span><div class="l03-cb"><i style="width:6%"></i></div><b>4 %</b></div><div class="l03-c"><span>oli</span><div class="l03-cb"><i style="width:4%"></i></div><b>2 %</b></div></div>
@@ -78,7 +78,7 @@
 </div>
 <figcaption class="ai-demo__cap">Malli ei hae valmista vastausta. Se laskee todennäköisyyden jokaiselle mahdolliselle seuraavalle tokenille, valitsee todennäköisimmän, liittää sen tekstiin — ja laskee kaiken uudelleen. Huomaa, miten varmuus vaihtelee: faktan jatko on lähes varma (94 %), tyylivalinta epävarmempi (64 %).</figcaption></figure>
 <style>
-.l03-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono)}
+.l03-wrap{position:relative;width:560px;height:250px;font-family:var(--font-mono);animation:l03wrapw 19s 1 forwards}
 .l03-sent{position:absolute;left:0;right:0;top:0;font-size:14.5px;font-weight:500;color:#FFFFFF;background:#0E1422;border:1.5px solid #44517A;border-radius:12px;padding:13px 15px;white-space:nowrap}
 .l03-tok{color:#7FD0A8;opacity:0}
 .l03-tok.t1{animation:l03t1 19s infinite}
@@ -122,6 +122,7 @@
 .l03-tok,.l03-cands,.l03-caret,.l03-loop{animation:none}
 .l03-tok{opacity:1}
 .l03-r5,.l03-loop{opacity:1}}
+@keyframes l03wrapw{0%,100%{opacity:1}}
 </style>
 
 <h2>Koulutusdata — se, mistä malli oppii</h2>
@@ -131,7 +132,7 @@
 <p>Tästä seuraa myös rajoituksia. Jos koulutusdata sisältää virheitä tai vinoumia, malli voi oppia niitäkin. Jos taas jokin aihe puuttuu datasta kokonaan tai esiintyy siinä vain vähän, malli ei pysty hallitsemaan sitä hyvin.</p>
 <h2>Ennustamisesta seuraa myös rajoja</h2>
 <p>Seuraavan tokenin ennustaminen selittää, miksi kielimalli voi tuottaa sekä sujuvaa että virheellistä tekstiä. Uskottava jatko ei ole sama asia kuin tarkistettu fakta. Tällaista vakuuttavalta kuulostavaa mutta virheellistä tuotosta kutsutaan hallusinaatioksi.</p>
-<p>Mallin tuotokseen voi liittyä myös vaihtelua: järjestelmä voi valita useista mahdollisista jatkoista eri vaihtoehdon eri kerroilla. Joissakin ympäristöissä vaihteluun vaikuttavia asetuksia voidaan säätää, mutta samaa vastausta ei silti pidä luvata pelkän yhden asetuksen perusteella. Hallusinaatioiden, vaihtelun ja tulosten tarkistamisen käsittelet perusteellisesti tunnilla 7.</p>
+<p>Mallin tuotokseen voi liittyä myös vaihtelua: järjestelmä voi valita useista mahdollisista jatkoista eri vaihtoehdon eri kerroilla. Joissakin ympäristöissä vaihteluun vaikuttavia asetuksia voidaan säätää, mutta samaa vastausta ei silti pidä luvata pelkän yhden asetuksen perusteella. Hallusinaatioiden, vaihtelun ja tulosten tarkistamisen käsittelet perusteellisesti Luotettavuus ja virhetyypit -tunnilla.</p>
 <h2>Kuva-, musiikki- ja videomallit</h2>
 <p>Kaikki generatiiviset mallit eivät toimi kielimallin tavoin seuraavaa yksikköä ennustamalla. Menetelmä riippuu aineistosta ja mallin rakenteesta.</p>
 <ul>

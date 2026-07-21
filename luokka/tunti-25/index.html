@@ -52,7 +52,7 @@
 <p>Kun tiedät, mitkä päätökset vaativat ihmisen hyväksynnän, seuraava askel on <strong>hyväksyntäporttien</strong> suunnittelu. Hyväksyntäportti on työnkulun kohta, jossa agentti pysähtyy ja odottaa ihmisen vastausta ennen kuin se jatkaa.</p>
 <figure class="ai-demo" data-demo-id="lesson-25-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title">// rutiini kulkee läpi — kriittinen pysähtyy: ihminen hyväksyy tai hylkää</span>
 <div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:320px"><div class="ai-demo__mobile-model ai-demo__mobile-model--branch"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">Rutiini + pieni vaikutus → sallittu automaatio</li><li class="ai-demo__mobile-node">Kriittinen toiminto → hyväksyntäportti</li><li class="ai-demo__mobile-node">Hyväksy → toteuta ja lokita</li><li class="ai-demo__mobile-node">Hylkää tai aikakatkaisu → peruuta tai käytä turvallista fallbackia</li></ol></div>
-  <div class="l25-wrap">
+  <div class="l25-wrap" data-once>
     <div class="l25-human">IHMINEN<span class="l25-btns"><i class="l25-ok">HYVÄKSY</i><i class="l25-no">HYLKÄÄ</i></span></div>
     <i class="l25-beam l25-bm1"></i><i class="l25-beam l25-bm2"></i>
     <div class="l25-pipe"></div>
@@ -69,7 +69,7 @@
 </div>
 <figcaption class="ai-demo__cap">Agentti hoitaa rutiinit itse, mutta kriittinen päätös pysähtyy hyväksyntäportille. Ihminen näkee ehdotuksen ja perustelut: hyväksyntä avaa portin, hylkäys ohjaa agentin vaihtoehtoiselle polulle — se ei jää jumiin eikä riko sääntöä.</figcaption></figure>
 <style>
-.l25-wrap{position:relative;width:560px;height:282px;font-family:var(--font-mono)}
+.l25-wrap{position:relative;width:560px;height:282px;font-family:var(--font-mono);animation:l25wrapw 21s 1 forwards}
 .l25-pipe{position:absolute;left:0;right:0;top:158px;height:3px;background:#2B3552}
 .l25-node{position:absolute;top:138px;width:110px;text-align:center;font-size:11.5px;letter-spacing:.1em;color:#EAEEF8;background:#11182A;border:2px solid oklch(0.66 0.13 208);border-radius:11px;padding:13px 6px}
 .l25-gatebox{position:absolute;left:248px;top:120px;width:64px;height:80px}
@@ -113,6 +113,7 @@
 .l25-glbl.g-open{opacity:0}.l25-glbl.g-stop{opacity:1}
 .l25-pkt.k3{opacity:1;transform:translate(128px,72px)}
 .l25-human,.l25-alt{opacity:1}}
+@keyframes l25wrapw{0%,100%{opacity:1}}
 </style>
 
 <p>Käytännössä hyväksyntäportti näyttää ihmiselle <strong>selkeän kysymyksen ja ehdotuksen</strong>, johon voi vastata esimerkiksi ”hyväksy”, ”hylkää” tai ”kysy lisää”.</p>
@@ -272,7 +273,7 @@
 <p><em>Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin Agentti: Ihminen -tehtävää.</em></p>
 <blockquote class="pause"><p><strong>Vinkki:</strong> Ihmisen rooli voi olla pieni tai iso. Yksinkertaisessa FAQ-botissa ihmistä ei välttämättä tarvita lainkaan; kriittisiä päätöksiä tekevässä agentissa hyväksyntäportteja on useampi.</p>
 </blockquote><div class="task-card task-card--task"><div class="task-card-header"><h2>Agentti: Ihminen — suositeltu</h2></div><div class="task-card-body">
-<p><strong>Miksi tämä on tärkeää:</strong> Tunnilla 27 lisäät hyväksyntäsolmuja n8n:ssä. Ihmisen osallistuminen päätöksentekoon vaatii tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.</p>
+<p><strong>Miksi tämä on tärkeää:</strong> Agentin viimeistelytunnilla lisäät hyväksyntäsolmuja n8n:ssä. Ihmisen osallistuminen päätöksentekoon vaatii tasapainoa: liian monta hyväksyntäporttia tekee agentista hitaan, liian vähän tekee siitä riskialttiin.</p>
 <h3>Tehtävä</h3>
 <p>Avaa muistiinpanoistasi aiemmat Agentti-pohjapiirroksesi. Kirjoita 150–200 sanaa, jaettuna kolmeen osaan:</p>
 <p><strong>1. Missä kohdissa ihmisen täytyy hyväksyä.</strong></p>
@@ -284,7 +285,7 @@
 <li><strong>Poikkeama:</strong> tapahtuu jotain epätavallista</li>
 </ul>
 <p><em>Esimerkki:</em> "Ihmisen täytyy hyväksyä, kun agentti aikoo antaa yli 10 % alennuksen tai kun hyväksyttyä palautusehtoa ei löydy tietopohjasta."</p>
-<p><em>Sinun vuorosi:</em> Tunnista 1–3 kohtaa agenttisi työnkulussa. Voit kirjoittaa myös "ihmistä ei tarvita" — perustele silloin miksi.</p>
+<p><em>Sinun vuorosi:</em> Sääntö vai tekoäly -tunnista–3 kohtaa agenttisi työnkulussa. Voit kirjoittaa myös "ihmistä ei tarvita" — perustele silloin miksi.</p>
 <p><strong>2. Millainen hyväksyntäportti on.</strong></p>
 <p><em>Käsite:</em> hyvä hyväksyntäportti antaa ihmiselle kaiken tarvittavan tiedon kerralla. Päätös pitää voida tehdä 30 sekunnissa.</p>
 <p><em>Esimerkki:</em> "Asiakas X (10 v. asiakkuus) pyytää 25 % alennusta. Agentti ehdottaa hyväksyntää. Hyväksy / Hylkää."</p>

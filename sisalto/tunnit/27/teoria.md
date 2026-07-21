@@ -2,7 +2,7 @@
 
 ## Johdanto: yksi rajattu näyttö, yksi oppitunti
 
-Tunnilla 26 teit teknisen n8n-minimiversion tai dokumentoidun suunnitelman. Tällä tunnilla viet valitsemasi polun loppuun, testaat sen, korjaat yhden havaitun puutteen, ajat saman testin uudelleen ja puolustat ratkaisuasi lyhyesti. Koko pakollinen suoritus tehdään yhden 90 minuutin oppitunnin aikana.
+Agentin minimiversion rakennustunnilla teit teknisen n8n-minimiversion tai dokumentoidun suunnitelman. Tällä tunnilla viet valitsemasi polun loppuun, testaat sen, korjaat yhden havaitun puutteen, ajat saman testin uudelleen ja puolustat ratkaisuasi lyhyesti. Koko pakollinen suoritus tehdään yhden 90 minuutin oppitunnin aikana.
 
 | Aika | Mitä teet? |
 |---|---|

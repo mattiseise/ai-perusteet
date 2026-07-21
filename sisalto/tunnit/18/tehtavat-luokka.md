@@ -22,7 +22,7 @@ Bottisi auttaa juuri sinun aiheesi parissa toimivaa käyttäjää **pääsemää
 
 Tämän tunnin työssä on neljä vaihetta:
 
-1. **Valitse yksi korjaus:** Palaa tunnin 17 kolmeen ensitulokseen ja valitse korjauslistalta yksi olennainen puute.
+1. **Valitse yksi korjaus:** Palaa Apuri-botin rakennustunnin kolmeen ensitulokseen ja valitse korjauslistalta yksi olennainen puute.
 2. **Korjaa:** Tee yksi nimetty muutos järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.
 3. **Testaa uudelleen:** Toista juuri korjaukseen liittyvä testi samalla odotuksella ja tallenna ennen–jälkeen-vertailu.
 4. **Viimeistele:** Kokoa aiemmat rakennuspalikat, kolme ensitestiä, korjausketju, reflektio ja polkukohtainen näyttö yhdeksi palautukseksi.
@@ -45,7 +45,7 @@ Lopullisen botin tulee täyttää seuraavat kriteerit:
 2. **Strukturoitu työnkulku.** Botti ohjaa käyttäjää tehtävän vaiheiden läpi järjestelmällisesti (lähtötilanne → tavoite → vaihtoehdot → valinnat → lopputulos).
 3. **Aiheesi termit ja näkökulmat.** Botti puhuu oman aiheesi kieltä — salitreenin botille eri termit kuin kerhon FAQ-botille. Tämä erottaa sinun bottisi yleisestä avustajasta.
 4. **Selkeät rajat.** Botti tietää mitä se EI tee — esimerkiksi se ei tee koko tehtävää käyttäjän puolesta, ei anna terveys- tai oikeudellisia neuvoja, ei toimi muissa aiheissa. Rajat ovat osa huolellisuutta.
-5. **Testattu sovitulla aikajanalla.** Tunnin 17 normaali, kielteinen ja reunatapaus sekä tunnin 18 yksi korjaus ja sitä koskeva uudelleentesti on dokumentoitu.
+5. **Testattu sovitulla aikajanalla.** Apuri-botin rakennustunnin normaali, kielteinen ja reunatapaus sekä Apuri-botin viimeistelytunnin yksi korjaus ja sitä koskeva uudelleentesti on dokumentoitu.
 
 ## Mitä palautat?
 
@@ -73,7 +73,7 @@ Esittely tehdään 2–3 hengen pienryhmässä, tallenteena tai opettajan valits
 
 Aloita näin:
 
-1. Avaa tunnilla 17 tallentamasi kolme ensitulosta ja korjauslista.
+1. Avaa Apuri-botin rakennustunnilla tallentamasi kolme ensitulosta ja korjauslista.
 2. Valitse yksi puute, joka liittyy suoraan ennalta kirjoitettuun odotukseen.
 3. Tee yksi nimetty korjaus järjestelmäpromptiin, tietopohjaan tai suunnittelupaketin kuvaukseen.
 4. Toista juuri sitä koskeva testi samalla odotuksella ja tallenna ennen–jälkeen-näyttö.

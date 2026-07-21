@@ -26,7 +26,7 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 
 <figure class="ai-demo"><span class="ai-demo__tag">// ikkuna liukuu keskustelun yli — vain sisällä oleva on muistissa</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:280px">
-  <div class="l05-wrap">
+  <div class="l05-wrap" data-once>
     <span class="l05-hdr">vanhin putoaa ←</span><span class="l05-hdr2">→ uusin saapuu</span>
     <div class="l05-rail"><div class="l05-strip">
       <span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span><span class="l05-m l05-ohje">OHJE: vastaa aina suomeksi</span><span class="l05-m">Suunnitellaan kampanja.</span><span class="l05-m">Tavoite: vähemmän muovia.</span><span class="l05-m">Kohderyhmä: koko koulu.</span><span class="l05-m">Ehdota kolme julistetta.</span><span class="l05-m">Lisää aikataulu.</span><span class="l05-m">Entä budjetti?</span><span class="l05-m">Tee yhteenveto tähän asti.</span>
@@ -39,7 +39,7 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 </div>
 <figcaption class="ai-demo__cap">Konteksti-ikkuna on kiinteän kokoinen: keskustelun kasvaessa se liukuu eteenpäin, ja vanhimmat viestit — myös alussa antamasi pysyväisohjeet — putoavat ulos. Ikkunan ulkopuolella olevaa malli ei muista lainkaan.</figcaption></figure>
 <style>
-.l05-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono)}
+.l05-wrap{position:relative;width:560px;height:240px;font-family:var(--font-mono);animation:l05wrapw 30s 1 forwards}
 .l05-hdr{position:absolute;left:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#F0A38C}
 .l05-hdr2{position:absolute;right:6px;top:24px;font-size:10.5px;letter-spacing:.05em;color:#7FD0A8}
 .l05-rail{position:absolute;left:0;right:0;top:62px;height:64px;overflow:hidden}
@@ -60,6 +60,7 @@ Kun malli käsittelee syötettä, se menettää keskustelun vanhimman osan ja s�
 .l05-strip,.l05-x,.l05-warn{animation:none}
 .l05-strip{transform:translateX(-25%)}
 .l05-x{opacity:1}}
+@keyframes l05wrapw{0%,100%{opacity:1}}
 </style>
 
 ## Miten tieto putoaa ulos ikkunasta

@@ -2,7 +2,7 @@
 
 ## Johdanto: toimiva työkalu ei vielä ole sallittu työkalu
 
-Tunnilla 10 vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää myös tietää, **mitä aineistolle tapahtuu käytön aikana**.
+Työkalujen vertailu -tunnilla vertailit, miten eri tekoälytyökalut suoriutuvat tehtävästä. Nyt kysymys vaihtuu. Enää ei riitä, että työkalu tuottaa hyvän vastauksen. Sinun pitää myös tietää, **mitä aineistolle tapahtuu käytön aikana**.
 
 Kun kirjoitat promptin, liität asiakirjan tai annat työkalulle kuvan, aineisto voi poistua laitteeltasi. Se voidaan käsitellä palveluntarjoajan ympäristössä, säilyttää jonkin aikaa tai käyttää palvelun kehittämiseen. Käytäntö riippuu palvelusta, käyttöehdoista, asetuksista ja mahdollisesta organisaation sopimuksesta.
 

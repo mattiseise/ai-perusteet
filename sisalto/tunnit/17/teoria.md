@@ -4,7 +4,7 @@
 
 Tähän mennessä olet kerännyt kolme **rakennuspalikkaa** ja tehnyt toteutuspäätöksen. Tällä tunnilla yhdistät ne ensimmäiseksi arvioitavaksi versioksi. Teknisen toteutuspolun valinnut rakentaa botin saatavilla olevalle alustalle. Dokumentoidun suunnittelupolun valinnut tuottaa arkkitehtuurin ja simuloidun suoritusjäljen, josta käy täsmällisesti ilmi, mitä valmis järjestelmä tekisi ja mikä jää toteuttamatta.
 
-Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan siirrät suunnitelman järjestelmäpromptiksi ja toteutuskuvaukseksi. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan näyttöä, jota voit testata, korjata ja puolustaa tunnilla 18. Polut ovat samanarvoisia, mutta ne eivät todista samoja asioita.
+Tällä tunnilla et opiskele enää uusia teoreettisia käsitteitä. Sen sijaan siirrät suunnitelman järjestelmäpromptiksi ja toteutuskuvaukseksi. Ensimmäisen version ei tarvitse olla täydellinen. Tärkeintä on saada aikaan näyttöä, jota voit testata, korjata ja puolustaa Apuri-botin viimeistelytunnilla. Polut ovat samanarvoisia, mutta ne eivät todista samoja asioita.
 
 ## Mikä on järjestelmäprompti?
 
@@ -22,7 +22,7 @@ Kolme rakennuspalikkaasi muuttuvat järjestelmäpromptiksi seuraavasti:
 
 | Rakennuspalikka | Mihin osaan järjestelmäpromptia? |
 | --- | --- |
-| **1: Promptikortti** | Testattu rakenne ja kieli. Käytä pääohjeessa ratkaisuja, joiden vaikutuksen osoitit tunnilla 12. |
+| **1: Promptikortti** | Testattu rakenne ja kieli. Käytä pääohjeessa ratkaisuja, joiden vaikutuksen osoitit Promptikortti-tunnilla. |
 | **2: Botin määrittely** | Sisältö. Kuusi osaa eli nimi, kohderyhmä, tarkoitus, persoona, työnkulku ja rajat muuttuvat suoraan järjestelmäpromptin kappaleiksi. |
 | **3: Tietopohja ja testisuunnitelma** | Hyväksytty aineisto ja kolme ennalta kirjoitettua testiä. Tekninen polku kytkee aineiston alustan tietopohjaksi. Suunnittelupolku kuvaa hakutavan, käyttöoikeusrajauksen ja mallille annettavat lähdekatkelmat. Järjestelmäprompti kertoo, miten löydettyä lähdettä käytetään, mutta ei korvaa hakua tai käyttöoikeuksia. |
 
@@ -57,7 +57,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 
 <figure class="ai-demo"><span class="ai-demo__tag">// kolme rakennuspalikkaa kasaan — kuvailevasta määrittelystä suoraksi ohjeeksi</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:300px">
-  <div class="l17-wrap">
+  <div class="l17-wrap" data-once>
     <div class="l17-blk b1"><b>1 · Promptikortti</b><span>toimivat muotoilut</span></div>
     <div class="l17-blk b2"><b>2 · Botin määrittely</b><span>”Botin nimi: Treenikaveri”</span></div>
     <div class="l17-blk b3"><b>3 · Tietopohja ja testit</b><span>2–4 dokumenttia, kolme testiä</span></div>
@@ -72,7 +72,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 </div>
 <figcaption class="ai-demo__cap">Palikat eivät kelpaa botille sellaisenaan: promptikortista tulee testattu rakenne, määrittelystä sisältö ja tietopohjasta asiantuntemus. Ratkaiseva muunnos on puhutella bottia suoraan — ”Botin nimi: Treenikaveri” muuttuu muotoon ”Olet Treenikaveri”.</figcaption></figure>
 <style>
-.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono)}
+.l17-wrap{position:relative;width:560px;height:262px;font-family:var(--font-mono);animation:l17wrapw 18s 1 forwards}
 .l17-blk{position:absolute;left:0;width:190px;display:flex;flex-direction:column;gap:2px;background:#1E2740;border:1.5px solid #44517A;border-radius:11px;padding:9px 12px}
 .l17-blk b{font-size:12px;color:#FFFFFF}
 .l17-blk span{font-size:10.5px;color:#B9C2DA}
@@ -99,6 +99,7 @@ Huomaa, että botin määrittelyssä sisältö on kuvailevassa muodossa, kun taa
 @media (prefers-reduced-motion:reduce){
 .l17-blk,.l17-morph,.l17-line,.l17-ready{animation:none}
 .l17-line,.l17-ready,.l17-morph{opacity:1}}
+@keyframes l17wrapw{0%,100%{opacity:1}}
 </style>
 
 ## Käytä tekoälyä apuna järjestelmäpromptin kirjoittamisessa
@@ -135,9 +136,9 @@ Tästä eteenpäin polut eroavat. Jos sinulla on käytössä alusta, jolle botin
 
 ## Kolme ensimmäistä testiä
 
-Älä yritä tehdä botista heti täydellistä. Aja tai simuloi nyt ensimmäisen kerran kaikki kolme tunnilla 15 kirjoittamaasi testiä: normaali tapaus, kielteinen testi ja reunatapaus.
+Älä yritä tehdä botista heti täydellistä. Aja tai simuloi nyt ensimmäisen kerran kaikki kolme Oma botti II -tunnilla kirjoittamaasi testiä: normaali tapaus, kielteinen testi ja reunatapaus.
 
-Tärkein sääntö on, että käytät samoja testejä ja samoja odotuksia kuin kirjoitit tunnilla 15. Houkutus muuttaa odotusta ensimmäisen tuloksen jälkeen on suuri — jos botti vastaa toisin kuin odotit, on helppo ajatella että odotus olikin väärä. Silloin testi lakkaa mittaamasta mitään.
+Tärkein sääntö on, että käytät samoja testejä ja samoja odotuksia kuin kirjoitit Oma botti II -tunnilla. Houkutus muuttaa odotusta ensimmäisen tuloksen jälkeen on suuri — jos botti vastaa toisin kuin odotit, on helppo ajatella että odotus olikin väärä. Silloin testi lakkaa mittaamasta mitään.
 
 Teknisellä polulla ajat testit oikealla botilla ja tallennat jokaisesta syötteen, vastauksen ja mahdollisen lähdeviitteen. Suunnittelupolulla käyt testit läpi vaihe vaiheelta ja merkitset jokaisen simuloidun haun, tarkistuksen ja vastauksen erikseen. Kummallakin polulla vertaat tulosta siihen, mitä odotit — ja kirjaat myös sen, mitä oma polkusi ei pysty todentamaan. Rehellinen maininta puuttuvasta todisteesta on arvioinnissa parempi kuin vaikutelma, että kaikki toimi.
 
@@ -159,9 +160,9 @@ Löytyikö oikea lähde, ja tukeeko lähde muodostettua vastausta? Suunnittelupo
 
 Jos pyydät sitä tekemään koko tehtävää puolestasi, noudattaako se ohjeitaan vai murtuuko rajaus?
 
-## Korjauslista tunnille 18
+## Korjauslista Apuri-botin viimeistelytunnille
 
-Kolmen testin jälkeen kirjoita tiivis korjauslista havainnoista, jotka eivät vielä toimi. Älä tee vielä arvioitavaa korjausta, sillä nimetty korjaus ja sen uudelleentesti kuuluvat tunnille 18. Esimerkkejä:
+Kolmen testin jälkeen kirjoita tiivis korjauslista havainnoista, jotka eivät vielä toimi. Älä tee vielä arvioitavaa korjausta, sillä nimetty korjaus ja sen uudelleentesti kuuluvat Apuri-botin viimeistelytunnille. Esimerkkejä:
 
 - "Botti hyppää vaiheen 2 ohi heti — työnkulun ohjetta pitää tarkentaa."
 - "Botti käyttää englanninkielisiä termejä, vaikka sen pitäisi puhua suomeksi — lisää kielimääritelmä."
@@ -169,7 +170,7 @@ Kolmen testin jälkeen kirjoita tiivis korjauslista havainnoista, jotka eivät v
 
 ## Lopuksi
 
-Tunti 17 on raakaversion vaihe. Älä turhaudu, jos tekninen botti ei vielä toimi täydellisesti tai suunnitelman aukko tulee näkyviin. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla tuotat ensimmäisen todennettavan teknisen version tai ensimmäisen tarkistettavan suunnittelupaketin, ja tunnilla 18 viimeistelet sen.
+Tunti 17 on raakaversion vaihe. Älä turhaudu, jos tekninen botti ei vielä toimi täydellisesti tai suunnitelman aukko tulee näkyviin. **Hyvä botti syntyy iteroinnista**. Tällä tunnilla tuotat ensimmäisen todennettavan teknisen version tai ensimmäisen tarkistettavan suunnittelupaketin, ja Apuri-botin viimeistelytunnilla viimeistelet sen.
 
 Ensimmäinen versio on aina raaka. Hyvä botti syntyy iteroinnista.
 

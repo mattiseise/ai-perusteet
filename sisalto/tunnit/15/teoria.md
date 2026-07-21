@@ -2,9 +2,9 @@
 
 ## Johdanto: valmistele näyttö ennen rakentamista
 
-Tunnilla 14 määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt työ jatkuu kahdella toisiinsa liittyvällä päätöksellä. Ensin valitset aineiston, johon botin vastausten pitää perustua. Sen jälkeen päätät, millaisella näytöllä voit myöhemmin osoittaa, että botti toimii tarkoitetulla tavalla.
+Oma botti I -tunnilla määrittelit, kenelle botti on tarkoitettu, mitä se auttaa tekemään ja missä sen rajat kulkevat. Nyt työ jatkuu kahdella toisiinsa liittyvällä päätöksellä. Ensin valitset aineiston, johon botin vastausten pitää perustua. Sen jälkeen päätät, millaisella näytöllä voit myöhemmin osoittaa, että botti toimii tarkoitetulla tavalla.
 
-Et vielä testaa omaa bottiasi, koska se rakennetaan vasta tunnilla 17. Sen sijaan kuratoit tietopohjan ja kirjoitat **testisuunnitelman** etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.
+Et vielä testaa omaa bottiasi, koska se rakennetaan vasta Apuri-botin rakennustunnilla. Sen sijaan kuratoit tietopohjan ja kirjoitat **testisuunnitelman** etukäteen. Näin et joudu muuttamaan onnistumisen ehtoja sen mukaan, millaisen botin satut saamaan aikaan.
 
 ## Tietopohja rajaa sen, mitä botti voi tietää
 
@@ -127,7 +127,7 @@ Testi ei ole vain käyttäjän kysymys. Siinä pitää näkyä myös **odotettu 
 | Käyttöoikeustesti | Kysymys aineistosta, jota käyttäjä ei saa nähdä | Järjestelmä ei hae eikä paljasta rajattua sisältöä | Vastauksessa ei näy suojattua lähdettä tai sen tietoja |
 | Reunatapaus | Tyhjä, sekava tai moniosainen pyyntö | Botti pyytää tarkennusta tai pilkkoo tehtävän | Se ei vastaa sattumanvaraisesti |
 
-Tällä tunnilla kirjoitat testit paperille tai taulukkoon. Tunnilla 17 ajat ensimmäiset testit rakennetulla botilla. Tunnilla 18 dokumentoit tulokset, korjaat yhden puutteen ja ajat korjausta koskevan testin uudelleen.
+Tällä tunnilla kirjoitat testit paperille tai taulukkoon. Apuri-botin rakennustunnilla ajat ensimmäiset testit rakennetulla botilla. Apuri-botin viimeistelytunnilla dokumentoit tulokset, korjaat yhden puutteen ja ajat korjausta koskevan testin uudelleen.
 
 ## Kolme testityyppiä
 
@@ -141,7 +141,7 @@ Testityyppi ei yksin riitä. Jokaisessa testissä pitää olla etukäteen kirjoi
 
 ## Rajat muuttuvat testattaviksi vaatimuksiksi
 
-Tunnilla 14 kirjoitettu raja ”botti ei käsittele maksutietoja” muuttuu testattavaksi, kun se kuvataan kolmessa osassa:
+Oma botti I -tunnilla kirjoitettu raja ”botti ei käsittele maksutietoja” muuttuu testattavaksi, kun se kuvataan kolmessa osassa:
 
 - **Syöte:** ”Voin antaa korttinumeroni tähän. Voitko veloittaa maksun?”
 - **Odotettu toiminta:** botti ei pyydä maksutietoja, vaan kertoo rajastaan ja ohjaa käyttäjän hyväksyttyyn maksukanavaan.
@@ -164,7 +164,7 @@ Testien pitää kohdistua juuri omaan määrittelyysi ja tietopohjaasi. Jos test
 
 Tietopohjan laatu perustuu valintaan, ei tiedostojen määrään. Aloita tietotarpeista, arvioi lähteet, kirjaa puutteet ja päätä, miten botin pitää toimia silloin, kun tietoa ei ole.
 
-Testisuunnitelma kirjoitetaan ennen rakentamista. Jokainen testi sisältää syötteen, odotetun toiminnan ja läpäisyehdon. Varsinainen testaus alkaa vasta, kun botti on rakennettu tunnilla 17.
+Testisuunnitelma kirjoitetaan ennen rakentamista. Jokainen testi sisältää syötteen, odotetun toiminnan ja läpäisyehdon. Varsinainen testaus alkaa vasta, kun botti on rakennettu Apuri-botin rakennustunnilla.
 
 > **Lopuksi pohdittavaksi:** Mikä on tietopohjasi vaarallisin aukko — ja mikä testisi paljastaa sen?
 

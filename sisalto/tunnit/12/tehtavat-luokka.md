@@ -6,7 +6,7 @@
 
 Valitset yhden omassa arjessa, opiskelussa tai työssä toistuvan tehtävän. Rakennat sitä varten promptikortin, testaat kaksi versiota samalla aineistolla ja perustelet, mikä muutos paransi tulosta.
 
-Kortista tehdään myöhemmin promptipankin ensimmäinen osa. Tunnilla 17 hyödynnät sen toimivaa rakennetta bottisi järjestelmäpromptin kirjoittamisessa.
+Kortista tehdään myöhemmin promptipankin ensimmäinen osa. Apuri-botin rakennustunnilla hyödynnät sen toimivaa rakennetta bottisi järjestelmäpromptin kirjoittamisessa.
 
 Työ etenee tarkoituksella yhdestä päätöksestä seuraavaan. Ensin rajaat tehtävän, sitten kirjoitat arvioitavan kortin ja vasta sen jälkeen kokeilet muutosta. Näin lopputulos ei ole vain hyvältä vaikuttava prompti, vaan dokumentoitu ratkaisu, jonka toimintaa osaat selittää.
 

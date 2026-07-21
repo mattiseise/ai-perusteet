@@ -1,6 +1,6 @@
 # Opiskelutehtävät: Mikä agentti on — ja mitä se ei ole?
 
-> Tämä tunti valmistelee Agentit-osion lopputyötä. Tänään kirjoitat alustavia ongelmaehdokkaita. Valitset lopullisen projektin vasta tunnin 20 lopussa, kun olet arvioinut, tarvitseeko ongelma todella agenttia.
+> Tämä tunti valmistelee Agentit-osion lopputyötä. Tänään kirjoitat alustavia ongelmaehdokkaita. Valitset lopullisen projektin vasta Automaatio vai autonomia -tunnin lopussa, kun olet arvioinut, tarvitseeko ongelma todella agenttia.
 
 *Kaikkia ei tarvitse tehdä. Valitse tehtävistä 1. Suosittelen kuitenkin, että teet ainakin pohjapiirroksen — se on lopputyön osa.*
 
@@ -8,7 +8,7 @@
 
 ## Ongelmaehdokkaat — suositeltu
 
-**Miksi tämä on tärkeää:** Hyvä projekti alkaa ongelmasta, ei työkalusta. Tässä vaiheessa vaihtoehtoja saa olla useita. Tunnilla 20 testaat ne päätöspuulla ja valitset vasta sitten projektin, jota jatkat tunneilla 21–27.
+**Miksi tämä on tärkeää:** Hyvä projekti alkaa ongelmasta, ei työkalusta. Tässä vaiheessa vaihtoehtoja saa olla useita. Automaatio vai autonomia -tunnilla testaat ne päätöspuulla ja valitset vasta sitten projektin, jota jatkat tunneilla 21–27.
 
 ### Tehtävä
 
@@ -34,7 +34,7 @@ niin että minä ajattelen.
 
 Vastaa kysymyksiin omassa pohjapiirroksessasi. Tekoäly ei tee päätöksiä — sinä päätät.
 
-> **Vinkki muistiinpanoihin:** Tee oma muistiinpanodokumentti, johon kerää kaikki viisi Agentti-pohjapiirrosta omiksi alaotsikoikseen. Tunnilla 26 kasaat ne kaikki yhdeksi suunnitelmaksi.
+> **Vinkki muistiinpanoihin:** Tee oma muistiinpanodokumentti, johon kerää kaikki viisi Agentti-pohjapiirrosta omiksi alaotsikoikseen. Agentin minimiversion rakennustunnilla kasaat ne kaikki yhdeksi suunnitelmaksi.
 
 ---
 
@@ -65,4 +65,4 @@ Vastaa järjestelmän D kohdalla lisäksi kahteen kysymykseen:
 
 ---
 
-**Ongelmaehdokkaat valmiina — lopullinen projektivalinta tehdään tunnilla 20**
+**Ongelmaehdokkaat valmiina — lopullinen projektivalinta tehdään Automaatio vai autonomia -tunnilla**

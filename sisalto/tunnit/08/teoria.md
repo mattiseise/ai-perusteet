@@ -25,7 +25,7 @@ Edustavuutta arvioitaessa kannattaa kysyä:
 
 <figure class="ai-demo"><span class="ai-demo__tag">// yksi tekoälytulos — monta vaikutuskerrosta</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:320px">
-  <div class="l08-layers" role="img" aria-label="Animaatio näyttää tekoälyjärjestelmän viisi tarkasteltavaa vaikutuskerrosta: data ja oikeudet, ihmisten työ, energia ja vesi, järjestelmän tulos sekä ihmiseen kohdistuva päätös.">
+  <div class="l08-layers" data-once role="img" aria-label="Animaatio näyttää tekoälyjärjestelmän viisi tarkasteltavaa vaikutuskerrosta: data ja oikeudet, ihmisten työ, energia ja vesi, järjestelmän tulos sekä ihmiseen kohdistuva päätös.">
     <div class="l08-core">TEKOÄLYN<br/>TULOS</div>
     <div class="l08-layer a"><b>DATA JA OIKEUDET</b><span>Ketkä näkyvät aineistossa?</span></div>
     <div class="l08-layer b"><b>IHMISTEN TYÖ</b><span>Millaisissa oloissa työ tehtiin?</span></div>
@@ -35,7 +35,7 @@ Edustavuutta arvioitaessa kannattaa kysyä:
 </div>
 <figcaption class="ai-demo__cap">Tekoälytuloksen vaikutukset eivät rajoitu käyttöliittymään. Kaikissa järjestelmissä jokainen kerros ei ole yhtä merkittävä, mutta vastuullinen arvio tarkistaa datan ja oikeudet, työn, luonnonvarojen käytön sekä päätöksen vaikutukset ennen käyttöönottoa.</figcaption></figure>
 <style>
-.l08-layers{position:relative;width:560px;height:270px;font-family:var(--font-mono)}
+.l08-layers{position:relative;width:560px;height:270px;font-family:var(--font-mono);animation:l08layersw 12s 1 forwards}
 .l08-core{position:absolute;left:218px;top:94px;width:124px;height:82px;border-radius:18px;background:#46c7cf;color:#06212A;font-size:12px;font-weight:800;line-height:1.45;display:flex;align-items:center;justify-content:center;text-align:center;z-index:2}
 .l08-layer{position:absolute;width:210px;min-height:72px;border:2px solid #2B3552;border-radius:12px;background:#11182A;padding:11px 13px;opacity:.35;animation:l08pulse 12s infinite}
 .l08-layer b{display:block;font-size:10px;letter-spacing:.08em;color:#EAEEF8;margin-bottom:6px}.l08-layer span{display:block;font-size:11px;line-height:1.4;color:#B9C2DA}
@@ -43,6 +43,7 @@ Edustavuutta arvioitaessa kannattaa kysyä:
 @keyframes l08pulse{0%,24%{opacity:.35;border-color:#2B3552;transform:scale(.98)}6%,18%{opacity:1;border-color:#46c7cf;transform:scale(1)}25%,100%{opacity:.35;border-color:#2B3552;transform:scale(.98)}}
 @media (prefers-reduced-motion:reduce){.l08-layer{animation:none;opacity:1;transform:none}}
 @media (max-width:680px){.l08-layers{width:100%;height:470px}.l08-core{left:calc(50% - 62px);top:194px}.l08-layer{left:0!important;right:0!important;width:100%}.l08-layer.a{top:0}.l08-layer.b{top:94px}.l08-layer.c{top:288px;bottom:auto}.l08-layer.d{top:382px;bottom:auto}.ai-demo__stage:has(.l08-layers){height:520px!important}}
+@keyframes l08layersw{0%,100%{opacity:1}}
 </style>
 
 ## Tekijänoikeudet ja ihmisten työ
@@ -89,7 +90,7 @@ Tunnin lopussa valitset jo yhden seuraavan tunnin skenaarioista: asiakaspalvelun
 
 Kirjaa kummastakin lähteestä, kuka sen on julkaissut, mitä väitettä se tukee, miksi se on tähän tehtävään riittävän luotettava ja ajantasainen sekä mitä se ei ratkaise. Virallinen säädös tai viranomaislähde sopii oikeudellisen väitteen tarkistamiseen. Tutkimus tai asiantuntijaorganisaation aineisto voi täydentää sitä vaikutusten ja käytännön toimintatapojen arvioinnissa.
 
-Tallenna lähdepari lähdekortiksi. Käytät sitä tunnilla 9. Jos jokin työn keskeinen väite jää näiden lähteiden jälkeen ilman tukea, saat tehdä tunnilla 9 enintään yhden uuden lähdetarkistuksen. Tarkoitus ei ole kerätä mahdollisimman paljon linkkejä, vaan valita rajattu aineisto, jonka sisältöä osaat käyttää ja jonka rajat tunnistat.
+Tallenna lähdepari lähdekortiksi. Käytät sitä Asiantuntijalausunto-tunnilla. Jos jokin työn keskeinen väite jää näiden lähteiden jälkeen ilman tukea, saat tehdä Asiantuntijalausunto-tunnilla enintään yhden uuden lähdetarkistuksen. Tarkoitus ei ole kerätä mahdollisimman paljon linkkejä, vaan valita rajattu aineisto, jonka sisältöä osaat käyttää ja jonka rajat tunnistat.
 
 ## Yhteenveto
 

@@ -157,7 +157,7 @@ Konteksti-ikkuna kertoo agentille, mitä tapahtuu **nyt**. Mutta entä jos asiak
 
 **Rakenteinen pitkäkestoinen tieto** tallennetaan tavallisesti järjestelmään, jossa sillä on määritellyt kentät. Asiakkaan tunniste, sopimuksen tila, tilausnumero ja hyväksynnän ajankohta kuuluvat esimerkiksi asiakas- tai tilaustietokantaan. Täsmällistä tietoa ei pidä päätellä samankaltaisuuden perusteella.
 
-**Tietopohja** on hyväksytty aineistokokoelma, kuten käyttöohjeet, menettelyohjeet tai kurssimateriaali. Se ei ole käyttäjästä kerättävää muistia. Tunnilla 15 opittu **RAG** tarkoittaa, että järjestelmä hakee tietopohjasta tehtävään liittyviä katkelmia ja antaa ne mallille vastauksen tueksi.
+**Tietopohja** on hyväksytty aineistokokoelma, kuten käyttöohjeet, menettelyohjeet tai kurssimateriaali. Se ei ole käyttäjästä kerättävää muistia. Oma botti II -tunnilla opittu **RAG** tarkoittaa, että järjestelmä hakee tietopohjasta tehtävään liittyviä katkelmia ja antaa ne mallille vastauksen tueksi.
 
 **Semanttinen vektorihaku** auttaa löytämään merkitykseltään samankaltaisia tekstikatkelmia, vaikka niissä käytetään eri sanoja. Se sopii esimerkiksi ohjeen etsimiseen tietopohjasta. Samankaltaisuus ei kuitenkaan todista, että katkelma koskee oikeaa tuotetta, versiota, käyttäjää tai ajankohtaa. Haun osuvuus ja lähde pitää tarkistaa ennen käyttöä.
 

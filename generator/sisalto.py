@@ -256,14 +256,14 @@ def esc_attr(s):
 # työpöytäkuvion olennaisen suhteen (virta, vertailu, silmukka tai suojakerrokset)
 # luettavana HTML:nä ilman 560 px koordinaatistoa.
 _DEMO_MOBILE_MODELS = {
-    'lesson-01-01': ('compare', ['VALMIS SÄÄNTÖ: maanantai → 100 sämpylää',
-                                 'KOULUTETTU MALLI: aiemmat päivät → menekkiarvio',
-                                 'YHDISTELMÄ: mallin arvio → sääntö tarkistaa']),
-    'lesson-02-01': ('compare', ['SÄÄNTÖ: estolistalla oleva lähettäjä → viesti roskapostiin',
-                                 'KOULUTETTU MALLI: merkityt viestit → arvio uudesta viestistä',
-                                 'Todellinen järjestelmä voi käyttää molempia']),
-    'lesson-02-02': ('compare', ['KÄYTÖSSÄ NYT: sääntöpohjainen · kapea · generatiivinen — kapea ja generatiivinen voivat olla sama järjestelmä',
-                                 'TULEVAISUUSPUHE: yleisesti hyväksyttyä nykyistä AGI-esimerkkiä ei ole · ASI on hypoteettinen',
+    'lesson-01-01': ('compare', ['VALMIS SÄÄNTÖ: maanantai → aina 100 sämpylää — myös hiihtolomaviikolla, jolloin meni 40',
+                                 'KOULUTETTU MALLI: aiemmat maanantait 96, 92 ja 40 (loma) → arvio 96 sämpylää',
+                                 'YHDISTELMÄ: mallin arvio 96 → sääntö tarkistaa rajat (30–120) → tilaus 96']),
+    'lesson-02-01': ('compare', ['SÄÄNTÖ: vain estolistalla oleva lähettäjä siirtyy roskapostiin — arvonta@uusi-osoite.fi pääsee saapuneisiin',
+                                 'KOULUTETTU MALLI: 5 000 merkittyä viestiä → sama arvontaviesti saa arvon 0,93 eli roskaposti',
+                                 'Sääntö osaa vain sen, mitä ehdossa lukee; malli tunnistaa piirteet']),
+    'lesson-02-02': ('compare', ['KÄYTÖSSÄ NYT: kapea tekoäly (roskapostisuodatin, kuvantunnistus) ja generatiivinen (kielimalli, kuvageneraattori) — sama järjestelmä voi olla molempia',
+                                 'TULEVAISUUSKÄSITTEET: AGI — yleisesti hyväksyttyä nykyesimerkkiä ei ole · ASI — hypoteettinen',
                                  'Sujuva teksti ei ylitä nykyisyyden rajaa — käsitteet eivät ole kehitysaskelmia']),
     'lesson-03-01': ('loop', ['Syöte ja tähänastinen teksti', 'Laske seuraavien tokenien todennäköisyydet',
                               'Valitse tokeni', 'Liitä tekstiin', 'Toista, kunnes vastaus päättyy']),

@@ -4,9 +4,9 @@
 
 ## Vaihe 1: Kasaa pohjapiirrokset suunnitelmaksi
 
-Lue viisi pohjapiirrostasi yhtenä kokonaisuutena. Korjaa ristiriidat ja varmista, että ratkaisu vastaa tunnilla 20 valitsemaasi ongelmaan. Kirjoita sen jälkeen lyhyt arkkitehtuuriluonnos. Kuvaa ensin, mitä kielimalli tekee ja mistä agentin ohjauskehys vastaa. Esitä sitten ratkaisun tärkeimmät vaiheet, niiden syötteet ja tulokset. Vaiheiden määrää ei ole määrätty: mukana ovat vain tehtävän kannalta tarpeelliset vastuut.
+Lue viisi pohjapiirrostasi yhtenä kokonaisuutena. Korjaa ristiriidat ja varmista, että ratkaisu vastaa Automaatio vai autonomia -tunnilla valitsemaasi ongelmaan. Kirjoita sen jälkeen lyhyt arkkitehtuuriluonnos. Kuvaa ensin, mitä kielimalli tekee ja mistä agentin ohjauskehys vastaa. Esitä sitten ratkaisun tärkeimmät vaiheet, niiden syötteet ja tulokset. Vaiheiden määrää ei ole määrätty: mukana ovat vain tehtävän kannalta tarpeelliset vastuut.
 
-Tarkista luonnoksesta kuusi rakennusosaa: **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka**. Merkitse jokaisesta, onko se mukana, lisätäänkö se tunnilla 27 vai eikö sitä tarvita tässä työssä. Perustele poisjättö lyhyesti.
+Tarkista luonnoksesta kuusi rakennusosaa: **syötekäsittelijä**, **päättelijä ja suunnittelija**, **työkalujen suorittaja**, **muisti ja konteksti**, **turvakerros** sekä **seuranta ja palautesilmukka**. Merkitse jokaisesta, onko se mukana, lisätäänkö se Agentin viimeistelytunnilla vai eikö sitä tarvita tässä työssä. Perustele poisjättö lyhyesti.
 
 Voit pyytää tekoälyä esittämään suunnitelmastasi kysymyksiä:
 
@@ -36,6 +36,6 @@ Korjaa yksi testeissä löytynyt ongelma ja aja sitä koskeva testi uudelleen. T
 
 ## Tunnin lopuksi
 
-Kirjoita lyhyt tilannekuva: mihin pääsit, mikä jäi kesken ja mitä viimeistelet ensimmäisenä tunnilla 27. Liitä mukaan toteutuspolkusi näyttö: teknisessä polussa kuva työnkulusta ja suoritusnäkymästä, dokumentoidussa polussa kaavio ja kaksi jäljitettävää suoritusjälkeä. Merkitse selvästi kohta, jossa kielimalli tekee tilanteen mukaan muuttuvan valinnan.
+Kirjoita lyhyt tilannekuva: mihin pääsit, mikä jäi kesken ja mitä viimeistelet ensimmäisenä Agentin viimeistelytunnilla. Liitä mukaan toteutuspolkusi näyttö: teknisessä polussa kuva työnkulusta ja suoritusnäkymästä, dokumentoidussa polussa kaavio ja kaksi jäljitettävää suoritusjälkeä. Merkitse selvästi kohta, jossa kielimalli tekee tilanteen mukaan muuttuvan valinnan.
 
-**Lopputyön rakentaminen 1/2 — tunnilla 27 viimeistelet, testaat ja esittelet**
+**Lopputyön rakentaminen 1/2 — Agentin viimeistelytunnilla viimeistelet, testaat ja esittelet**
