@@ -287,39 +287,78 @@ def build_tunti_page(lesson, view):
         if b['block'] == 'harjoittele' and b['tasks']:
             ptasks = b['tasks']
 
-    # Harjoittele-ohjaus (kurssi/luokka): silta teorian loppuun, valmistumis-
-    # kortti harjoittelun loppuun ja footer-chip. Pehmeä ohjaus — mitään ei
-    # estetä, mutta luonnollinen polku teoria → harjoittele → merkintä →
-    # seuraava on visuaalisesti ensisijainen. Laskurit ja tilat päivittää
-    # updatePracticeGuide() (practice.js) bcai-practice-datasta.
-    guide = ptasks is not None and view in ('kurssi', 'luokka')
+    # --- Oppimispolun ohjaus (kurssi/luokka) -------------------------------
+    # Ketju johdetaan näkymän OMASTA lohkojärjestyksestä (kurssi.yaml), koska
+    # järjestys ja lohkot eroavat näkymittäin: kurssissa työlohkot ovat
+    # harjoittele + lopputyon-askel, luokassa tehtavat-luokka + harjoittele
+    # (luokan Tehtävät-välilehti sisältää saman osatuotoksen, jonka kurssi-
+    # näkymä nostaa omaksi ★-välilehdekseen). Arviointitunneilla 18/27 luokka-
+    # näkymän ainoa työlohko on Tehtävät — juuri ne ovat lopputyön palautus-
+    # tunnit, joten ne tarvitsevat ohjauksen kaikkein eniten.
+    # Pehmeä ohjaus: mitään ei estetä, vain visuaalinen hierarkia elää.
+    WORK_BLOCKS = ('tehtavat-luokka', 'harjoittele', 'lopputyon-askel')
+    work = ([b for b in blocks if b['block'] in WORK_BLOCKS]
+            if view in ('kurssi', 'luokka') else [])
+    guide = bool(work)
     next_url = ''
     if idx < TOTAL - 1:
         next_url = f'/{view}/tunti-{N.ALL_LESSONS[idx + 1]["kansio"]}/'
-    bridge_html = ''
-    complete_html = ''
-    if guide:
-        n_tasks = len(ptasks)
-        bridge_html = (
-            '<div class="practice-bridge" data-practice-bridge>'
-            '<div class="pb-txt"><b>Seuraavaksi: Harjoittele</b>'
-            f'<span data-practice-bridge-txt>{n_tasks} tehtävää</span></div>'
-            '<button type="button" class="btn btn-primary" '
-            'onclick="showTab(\'harjoittele\')">Siirry tehtäviin →</button>'
-            '</div>'
-        )
+
+    def _next_card(target, gated):
+        """Kortti, joka ohjaa ketjun seuraavaan työlohkoon."""
+        blk = target['block']
+        if blk == 'harjoittele':
+            desc = f'<span data-flow-count>{len(ptasks or [])} tehtävää</span>'
+            cta = 'Siirry harjoituksiin →'
+        elif blk == 'lopputyon-askel':
+            desc = '<span>Osatuotos, joka kerryttää lopputyötäsi</span>'
+            cta = 'Avaa lopputyön askel →'
+        else:
+            desc = ('<span>Tunnin tehtävät — sisältää lopputyön askeleen</span>'
+                    if lesson.get('lopputyon_askel')
+                    else '<span>Tunnin tehtävät ja tuotokset</span>')
+            cta = 'Siirry tehtäviin →'
+        attrs = ' data-flow-gate="practice" hidden' if gated else ''
+        return (f'<div class="practice-bridge"{attrs}>'
+                f'<div class="pb-txt"><b>Seuraavaksi: {target["label"]}</b>{desc}</div>'
+                '<button type="button" class="btn btn-primary" '
+                f'onclick="showTab(\'{target["anchor"]}\')">{cta}</button></div>')
+
+    def _complete_card(last_block, gated):
+        """Ketjun päätekortti: merkintä + seuraava tunti."""
+        if last_block == 'lopputyon-askel':
+            head, txt = ('Tunnin lopputyöosuus valmis?',
+                         'Tallenna osatuotos työkirjaasi — se on osa lopputyötäsi. '
+                         'Merkitse tunti sitten suoritetuksi.')
+        elif last_block == 'tehtavat-luokka':
+            head, txt = ('Tunnin tehtävät tehty?',
+                         'Tallenna tuotoksesi työkirjaasi ja merkitse tunti suoritetuksi.')
+        else:
+            head, txt = ('Kaikki tehtävät tehty ✓',
+                         'Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse '
+                         'tunti sitten suoritetuksi.')
         next_a = (f'<a class="btn btn-primary" href="{next_url}">Seuraava tunti →</a>'
                   if next_url else '')
-        complete_html = (
-            '<div class="practice-complete" data-practice-complete hidden>'
-            '<b>Kaikki tehtävät tehty ✓</b>'
-            '<span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse '
-            'tunti sitten suoritetuksi.</span>'
-            '<div class="pc-actions">'
-            f'<button type="button" class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
-            'Merkitse suoritetuksi</button>'
-            f'{next_a}</div></div>'
-        )
+        attrs = ' data-flow-gate="practice" hidden' if gated else ''
+        return (f'<div class="practice-complete"{attrs}>'
+                f'<b>{head}</b><span>{txt}</span><div class="pc-actions">'
+                f'<button type="button" class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
+                f'Merkitse suoritetuksi</button>{next_a}</div></div>')
+
+    # Kortti kunkin lohkon loppuun: teoria → 1. työlohko → … → päätekortti.
+    # Navigointikortit ovat AINA näkyvissä — lopputyön askel on kurssin
+    # suorittamisen kannalta liian tärkeä piilotettavaksi harjoitusten taakse.
+    # Portitus koskee vain päätekorttia harjoittelun jälkeen, koska sen väite
+    # ("Kaikki tehtävät tehty ✓") on tosi vasta silloin.
+    extras = {}
+    if guide:
+        extras['teoria'] = _next_card(work[0], gated=False)
+        for i, b in enumerate(work):
+            last = i + 1 >= len(work)
+            extras[b['block']] = (_next_card(work[i + 1], gated=False)
+                                  if not last
+                                  else _complete_card(b['block'],
+                                                      gated=b['block'] == 'harjoittele'))
 
     # Tabit + panelit
     tab_btns, panels = [], []
@@ -337,11 +376,7 @@ def build_tunti_page(lesson, view):
             f'data-tab="{b["anchor"]}" onclick="showTab(\'{b["anchor"]}\')">'
             f'{b["icon"]}<span>{b["label"]}</span>{count}</button>')
         hidden = '' if i == 0 else ' hidden'
-        extra = ''
-        if guide and b['block'] == 'teoria':
-            extra = bridge_html
-        elif guide and b['block'] == 'harjoittele':
-            extra = complete_html
+        extra = extras.get(b['block'], '')
         panels.append(
             f'<div id="{panel_id}" class="panel{act}" role="tabpanel" '
             f'aria-labelledby="{tab_id}" data-tab="{b["anchor"]}"{hidden}>{b["html"]}{extra}</div>')
@@ -385,7 +420,7 @@ def build_tunti_page(lesson, view):
         done_html = (f'<button class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
                      'Merkitse suoritetuksi</button>')
     chip_html = ''
-    if guide:
+    if guide and ptasks:  # chip näyttää mitattavan Harjoittele-tilan
         chip_html = ('<button type="button" class="practice-chip" data-practice-chip hidden '
                      'onclick="showTab(\'harjoittele\')">Harjoittele · '
                      '<span data-practice-chip-count></span></button>')

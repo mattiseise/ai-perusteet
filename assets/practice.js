@@ -15,33 +15,31 @@ function initPractice(lid,tasks){
   });
   updatePracticeGuide();
 }
-// ---- Harjoittele-ohjaus: silta teoriassa, footer-chip, tab-laskuri ja
-// valmistumiskortti elävät bcai-practice-tilan mukaan. Pehmeä ohjaus:
-// mitään ei disabloida, vain visuaalinen hierarkia vaihtuu. ----
-function practiceGuideState(){
-  var ci=window.CI||{};var t=ci.ptasks;
-  if(!t||!t.length||!ci.lid)return null;
-  var st=prGet(),n=t.length,d=0;
-  for(var i=0;i<n;i++){if(st[prKey(ci.lid,i)])d++;}
-  return{n:n,done:d,all:d>=n};
-}
+// ---- Oppimispolun ohjaus: ketjukortit (teoria → työlohkot → merkintä),
+// footer-chip ja tab-laskuri. Kortit generoidaan lohkojärjestyksestä; JS
+// päivittää vain mitattavan osan eli Harjoittele-tilan (bcai-practice).
+// Portitetut kortit (data-flow-gate="practice") näkyvät vasta kun kaikki
+// harjoitukset on tehty; muut ketjukortit ovat aina näkyvissä, koska
+// lopputyön askeleen tai luokkatehtävien valmistumista ei voi mitata.
+// Pehmeä ohjaus: mitään ei disabloida, vain visuaalinen hierarkia vaihtuu. ----
 function updatePracticeGuide(){
-  var s=practiceGuideState();if(!s)return;
-  var txt=document.querySelector('[data-practice-bridge-txt]');
-  if(txt)txt.textContent=s.all?('Kaikki '+s.n+' tehtävää tehty ✓')
-    :(s.done>0?(s.done+' / '+s.n+' tehtävää tehty'):(s.n+' tehtävää'));
-  var br=document.querySelector('[data-practice-bridge]');
-  if(br)br.classList.toggle('all-done',s.all);
+  var ci=window.CI||{},t=(ci.ptasks||[]),n=t.length,d=0;
+  if(n&&ci.lid){var st=prGet();for(var i=0;i<n;i++){if(st[prKey(ci.lid,i)])d++;}}
+  var all=n>0&&d>=n;
+  document.querySelectorAll('[data-flow-count]').forEach(function(e){
+    e.textContent=all?('Kaikki '+n+' tehtävää tehty ✓')
+      :(d>0?(d+' / '+n+' tehtävää tehty'):(n+' tehtävää'));
+    var br=e.closest?e.closest('.practice-bridge'):null;
+    if(br)br.classList.toggle('all-done',all);});
+  document.querySelectorAll('[data-flow-gate="practice"]').forEach(function(e){e.hidden=!all;});
   var chip=document.querySelector('[data-practice-chip]');
-  if(chip){chip.hidden=s.all;
+  if(chip){chip.hidden=!n||all;
     var c=chip.querySelector('[data-practice-chip-count]');
-    if(c)c.textContent=s.done+' / '+s.n;}
+    if(c)c.textContent=d+' / '+n;}
   var ft=document.getElementById('lesson-footer');
-  if(ft)ft.classList.toggle('guide-practice',!s.all);
+  if(ft)ft.classList.toggle('guide-practice',n>0&&!all);
   var tc=document.querySelector('[data-practice-tabcount]');
-  if(tc){tc.hidden=false;tc.textContent=s.done+' / '+s.n;}
-  var pc=document.querySelector('[data-practice-complete]');
-  if(pc)pc.hidden=!s.all;
+  if(tc&&n){tc.hidden=false;tc.textContent=d+' / '+n;}
 }
 function renderTask(w,task,lid,ti){
   w.innerHTML='';

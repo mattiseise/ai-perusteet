@@ -318,6 +318,9 @@ function ciInit(){
     tabFromHash();
     trackEvent('lesson_open',{lesson_id:window.CI.lid,lesson_num:window.CI.num,lesson_title:window.CI.title||window.CI.lid});
     if(window.CI.ptasks)initPractice(window.CI.lid,window.CI.ptasks);
+    // Myös ilman Harjoittele-lohkoa (esim. luokan arviointitunnit 18/27) sivulla
+    // voi olla ketjukortteja, joten ohjaustila päivitetään aina.
+    else if(window.updatePracticeGuide)updatePracticeGuide();
     runMermaid();
   }
   fitAiDemos();
