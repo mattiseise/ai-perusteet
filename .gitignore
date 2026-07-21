@@ -11,3 +11,7 @@ playwright-report/
 # HUOM: downloads/ EI kuulu tähän — se sisältää julkaistavat työkirjatiedostot
 # (md+docx), joihin /kurssi/-etusivu linkittää. Oli hetken ignoressa → Netlify-
 # linkkitesti kaatui, koska tiedostot puuttuivat reposta (2026-07-19).
+
+# Pythonin bytecode-välimuisti
+__pycache__/
+*.pyc

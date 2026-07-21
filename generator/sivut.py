@@ -55,6 +55,11 @@ VIEW_META = {
 TOTAL = len(N.ALL_IDS)
 COURSE = N.KURSSI['kurssi']
 AUDIENCE_PROMISE = COURSE['yleisolupaus']
+# Meta-kuvaus on tarkoituksella eri teksti kuin yleisolupaus: jälkimmäinen on sivulla
+# luettavaa leipätekstiä (414 merkkiä), joka meta-kuvauksena katkeaisi hakutuloksissa
+# (~155) ja somekorteissa (~125). Fallback pitää generaattorin toimivana, jos kenttä
+# puuttuu vanhemmasta kurssi.yaml-versiosta.
+META_DESCRIPTION = COURSE.get('meta_kuvaus') or AUDIENCE_PROMISE
 PREREQUISITES = COURSE['esitiedot']
 SCOPE_DESCRIPTION = COURSE['laajuuskuvaus']
 EDUCATIONAL_LEVEL = COURSE['educational_level']
@@ -681,7 +686,7 @@ def build_index_page():
     )
     return page_shell(
         'AI · Perusteet — tekoälyn perusteet -verkkokurssi',
-        AUDIENCE_PROMISE,
+        META_DESCRIPTION,
         '/', body, pre_body_script=pre,
         alternates=ALTERNATES,
         json_ld=_course_jsonld(f'{DOMAIN}/'))
@@ -741,7 +746,7 @@ def build_kurssi_overview():
         '</div>'
     )
     return page_shell('AI · Perusteet — verkkokurssi',
-                      AUDIENCE_PROMISE,
+                      META_DESCRIPTION,
                       '/kurssi/', body,
                       json_ld=_course_jsonld(f'{DOMAIN}/kurssi/'),
                       og_image=OG_IMAGE_BY_VIEW['kurssi'])
@@ -865,6 +870,11 @@ EN_DESCRIPTION = (
     'systems work, how to use generative AI tools, and how AI agents operate. '
     'No prior technical background required. Licensed CC BY-SA 4.0.')
 
+# Lyhennetty versio meta-kuvaukseen; EN_DESCRIPTION jää sivun leipätekstiksi.
+EN_META_DESCRIPTION = (
+    'A free, open introduction to AI — 27 lessons on theory, generative AI tools '
+    'and agents. Taught in Finnish, licensed CC BY-SA 4.0.')
+
 EN_MODULES = [
     ('Theory', 'How AI systems actually work',
      'What machine intelligence is and is not, how models are trained, how generative '
@@ -960,7 +970,7 @@ def build_en_page():
                               'courseWorkload': 'PT40H', 'inLanguage': 'fi'},
     }
     return page_shell('Foundations of AI — free open course in Finnish | AI · Perusteet',
-                      EN_DESCRIPTION, '/en/', body, lang='en',
+                      EN_META_DESCRIPTION, '/en/', body, lang='en',
                       alternates=ALTERNATES, json_ld=json_ld)
 
 

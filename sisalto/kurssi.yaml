@@ -12,6 +12,11 @@ kurssi:
   domain: aiperusteet.fi
   laajuus_osp: 3
   yleisolupaus: "AI · Perusteet on avoin, suomenkielinen alkeiskurssi kaikille tekoälyn perusteista kiinnostuneille. Kurssi opettaa käyttämään tekoälyä sekä tunnistamaan, selittämään, testaamaan, arvioimaan ja perustelemaan siihen liittyviä väitteitä ja ratkaisuja. Aiempi tekninen osaaminen, tietty opiskeluala tai työkokemus ei ole edellytys. Luokka- ja opettajanäkymät tarjoavat lisäksi oppilaitoskäyttöön sovitetun toteutuksen."
+  # Lyhyt kuvaus hakukoneille ja somelinkkiesikatseluihin. Erillinen
+  # yleisolupauksesta, koska se on sivulla luettavaa leipätekstiä (414 merkkiä) —
+  # meta-kuvauksena se katkeaisi: Google näyttää ~155 merkkiä, some ~125.
+  # Pidä alle 160 merkin ja kerro olennaisin heti alussa.
+  meta_kuvaus: "Avoin ja maksuton verkkokurssi tekoälyn perusteista suomeksi. 27 oppituntia: teoria, tekoälytyökalut ja agentit. Ei esitietovaatimuksia."
   esitiedot: "Ei esitietovaatimuksia. Tavallinen verkkoselain riittää, ja tililliset kokeet voi korvata dokumentoidulla suunnittelusuorituksella."
   laajuuskuvaus: "Avoin verkkokurssi on mitoitettu kolmen osaamispisteen laajuiseksi. Osaamispisteiden myöntämisestä päättää oppilaitos, eikä sivusto itsessään myönnä opintosuoritusta."
   educational_level: "Aloittelija / perustaso"
