@@ -12,6 +12,7 @@ Kurssin sisältö on vapaasti käytettävissä Creative Commons Nimeä-JaaSamoin
 - [Luokkaversio](https://aiperusteet.fi/luokka/) (`/luokka/`) — oppituntien opiskelijamateriaali: teoria, luokkatehtävät, harjoittele, sanasto ja diat.
 - [Opettajan opas](https://aiperusteet.fi/opettaja/) (`/opettaja/`) — kurssiopas, tuntisuunnitelmat, opettajavetoiset tehtävät ja arviointi.
 - [Sanasto](https://aiperusteet.fi/sanasto/) (`/sanasto/`) — koko kurssin käsitteet aakkosjärjestyksessä.
+- [In English](https://aiperusteet.fi/en/) (`/en/`) — englanninkielinen tiivistelmä kurssista (kurssin sisältö on suomeksi; tämä sivu ei ole käännös).
 
 ## Moduulit ja oppitunnit
 
