@@ -287,6 +287,40 @@ def build_tunti_page(lesson, view):
         if b['block'] == 'harjoittele' and b['tasks']:
             ptasks = b['tasks']
 
+    # Harjoittele-ohjaus (kurssi/luokka): silta teorian loppuun, valmistumis-
+    # kortti harjoittelun loppuun ja footer-chip. Pehmeä ohjaus — mitään ei
+    # estetä, mutta luonnollinen polku teoria → harjoittele → merkintä →
+    # seuraava on visuaalisesti ensisijainen. Laskurit ja tilat päivittää
+    # updatePracticeGuide() (practice.js) bcai-practice-datasta.
+    guide = ptasks is not None and view in ('kurssi', 'luokka')
+    next_url = ''
+    if idx < TOTAL - 1:
+        next_url = f'/{view}/tunti-{N.ALL_LESSONS[idx + 1]["kansio"]}/'
+    bridge_html = ''
+    complete_html = ''
+    if guide:
+        n_tasks = len(ptasks)
+        bridge_html = (
+            '<div class="practice-bridge" data-practice-bridge>'
+            '<div class="pb-txt"><b>Seuraavaksi: Harjoittele</b>'
+            f'<span data-practice-bridge-txt>{n_tasks} tehtävää</span></div>'
+            '<button type="button" class="btn btn-primary" '
+            'onclick="showTab(\'harjoittele\')">Siirry tehtäviin →</button>'
+            '</div>'
+        )
+        next_a = (f'<a class="btn btn-primary" href="{next_url}">Seuraava tunti →</a>'
+                  if next_url else '')
+        complete_html = (
+            '<div class="practice-complete" data-practice-complete hidden>'
+            '<b>Kaikki tehtävät tehty ✓</b>'
+            '<span>Hieno työ. Palaa vielä tunnin ajattelukysymykseen ja merkitse '
+            'tunti sitten suoritetuksi.</span>'
+            '<div class="pc-actions">'
+            f'<button type="button" class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
+            'Merkitse suoritetuksi</button>'
+            f'{next_a}</div></div>'
+        )
+
     # Tabit + panelit
     tab_btns, panels = [], []
     for i, b in enumerate(blocks):
@@ -295,15 +329,22 @@ def build_tunti_page(lesson, view):
         tabindex = '0' if i == 0 else '-1'
         tab_id = f'tab-{lesson["id"]}-{b["anchor"]}'
         panel_id = f'panel-{lesson["id"]}-{b["anchor"]}'
+        count = (' <span class="tab-count" data-practice-tabcount hidden></span>'
+                 if guide and b['block'] == 'harjoittele' else '')
         tab_btns.append(
             f'<button id="{tab_id}" class="tab-btn{act}" role="tab" '
             f'aria-selected="{selected}" aria-controls="{panel_id}" tabindex="{tabindex}" '
             f'data-tab="{b["anchor"]}" onclick="showTab(\'{b["anchor"]}\')">'
-            f'{b["icon"]}<span>{b["label"]}</span></button>')
+            f'{b["icon"]}<span>{b["label"]}</span>{count}</button>')
         hidden = '' if i == 0 else ' hidden'
+        extra = ''
+        if guide and b['block'] == 'teoria':
+            extra = bridge_html
+        elif guide and b['block'] == 'harjoittele':
+            extra = complete_html
         panels.append(
             f'<div id="{panel_id}" class="panel{act}" role="tabpanel" '
-            f'aria-labelledby="{tab_id}" data-tab="{b["anchor"]}"{hidden}>{b["html"]}</div>')
+            f'aria-labelledby="{tab_id}" data-tab="{b["anchor"]}"{hidden}>{b["html"]}{extra}</div>')
 
     header = (
         '<div id="lesson-header" class="lesson-header">'
@@ -343,10 +384,15 @@ def build_tunti_page(lesson, view):
     if view in ('kurssi', 'luokka'):
         done_html = (f'<button class="done-btn" onclick="toggleDone(\'{lesson["id"]}\')">'
                      'Merkitse suoritetuksi</button>')
+    chip_html = ''
+    if guide:
+        chip_html = ('<button type="button" class="practice-chip" data-practice-chip hidden '
+                     'onclick="showTab(\'harjoittele\')">Harjoittele · '
+                     '<span data-practice-chip-count></span></button>')
     footer = (
         '<div id="lesson-footer" class="lesson-footer">'
         f'<div class="nav-buttons">{prev_html}{next_html}</div>'
-        f'{done_html}'
+        f'{chip_html}{done_html}'
         '</div>'
     )
 

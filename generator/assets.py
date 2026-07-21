@@ -25,6 +25,35 @@ function initPractice(lid,tasks){
     if(!task||w.dataset.init)return;w.dataset.init='1';
     renderTask(w,task,lid,ti);
   });
+  updatePracticeGuide();
+}
+// ---- Harjoittele-ohjaus: silta teoriassa, footer-chip, tab-laskuri ja
+// valmistumiskortti elävät bcai-practice-tilan mukaan. Pehmeä ohjaus:
+// mitään ei disabloida, vain visuaalinen hierarkia vaihtuu. ----
+function practiceGuideState(){
+  var ci=window.CI||{};var t=ci.ptasks;
+  if(!t||!t.length||!ci.lid)return null;
+  var st=prGet(),n=t.length,d=0;
+  for(var i=0;i<n;i++){if(st[prKey(ci.lid,i)])d++;}
+  return{n:n,done:d,all:d>=n};
+}
+function updatePracticeGuide(){
+  var s=practiceGuideState();if(!s)return;
+  var txt=document.querySelector('[data-practice-bridge-txt]');
+  if(txt)txt.textContent=s.all?('Kaikki '+s.n+' tehtävää tehty ✓')
+    :(s.done>0?(s.done+' / '+s.n+' tehtävää tehty'):(s.n+' tehtävää'));
+  var br=document.querySelector('[data-practice-bridge]');
+  if(br)br.classList.toggle('all-done',s.all);
+  var chip=document.querySelector('[data-practice-chip]');
+  if(chip){chip.hidden=s.all;
+    var c=chip.querySelector('[data-practice-chip-count]');
+    if(c)c.textContent=s.done+' / '+s.n;}
+  var ft=document.getElementById('lesson-footer');
+  if(ft)ft.classList.toggle('guide-practice',!s.all);
+  var tc=document.querySelector('[data-practice-tabcount]');
+  if(tc){tc.hidden=false;tc.textContent=s.done+' / '+s.n;}
+  var pc=document.querySelector('[data-practice-complete]');
+  if(pc)pc.hidden=!s.all;
 }
 function renderTask(w,task,lid,ti){
   w.innerHTML='';
@@ -43,6 +72,7 @@ function renderTask(w,task,lid,ti){
     done:function(s,m){
       const o=prGet();o[prKey(lid,ti)]={s:s,m:m,t:Date.now()};prSet(o);
       trackEvent('task_complete',{lesson_id:lid,task_id:prKey(lid,ti),task_type:task.type,score:s,max:m});
+      updatePracticeGuide();
       const f=twEl('div','tw-foot');
       f.appendChild(twEl('span','tw-score',m!=null?('Tulos: '+s+' / '+m):'Valmis'));
       const rb=twEl('button','tw-redo','Tee uudelleen');
@@ -301,8 +331,9 @@ function isDone(id){return getDone().indexOf(id)>=0}
 function toggleDone(id){var a=getDone(),i=a.indexOf(id);
   if(i>=0){a.splice(i,1);}else{a.push(id);var ai=(window.CI&&window.CI.allIds)?window.CI.allIds.indexOf(id):-1;trackEvent('lesson_complete',ai>=0?{lesson_id:id,lesson_num:ai+1}:{lesson_id:id});}
   setDone(a);updProg();updCards();updDoneBtn(id);}
-function updDoneBtn(id){var btn=document.querySelector('.done-btn');if(!btn)return;var d=isDone(id);
-  btn.classList.toggle('marked',d);btn.textContent=d?'✓ Suoritettu':'Merkitse suoritetuksi';}
+function updDoneBtn(id){var d=isDone(id);
+  document.querySelectorAll('.done-btn').forEach(function(btn){
+    btn.classList.toggle('marked',d);btn.textContent=d?'✓ Suoritettu':'Merkitse suoritetuksi';});}
 
 function allIds(){
   if(window.CI&&window.CI.allIds)return window.CI.allIds;

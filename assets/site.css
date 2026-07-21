@@ -1625,3 +1625,42 @@ body{
 .lesson-strip{background:var(--bg-white);border-bottom:1px solid var(--border-soft);padding:16px 40px}
 .lesson-strip .share-box{margin:0}
 @media(max-width:768px){.lesson-strip{padding:14px 16px}}
+
+/* ---- Harjoittele-ohjaus: silta teorian lopussa, footer-chip, tab-laskuri
+   ja valmistumiskortti. Pehmeä ohjaus — nappeja ei disabloida, vain
+   visuaalinen hierarkia elää bcai-practice-tilan mukaan (practice.js). ---- */
+.practice-bridge{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  background:#EEF1FA;border:1px solid #D7DEF2;border-radius:var(--r);padding:18px 22px;margin:36px 0 4px}
+.practice-bridge .pb-txt b{display:block;font-size:15px;color:var(--text-dark);margin-bottom:2px}
+.practice-bridge .pb-txt span{font-size:13.5px;color:var(--text-muted)}
+.practice-bridge.all-done{background:#E9F7F0;border-color:#C4E6D4}
+.practice-bridge.all-done .pb-txt span{color:#175C44}
+/* Pikkupainikkeiden 12px teksti vaatii 4.5:1 — bc-primary jaa 4.4:iin,
+   siksi uudet elementit kayttavat bc-darkia (~6.6:1) */
+.practice-bridge .btn-primary,.pc-actions .btn-primary{background:var(--bc-dark);border-color:var(--bc-dark)}
+.practice-chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--bc-primary);
+  background:var(--bg-white);color:var(--bc-dark);border-radius:999px;padding:10px 18px;cursor:pointer;
+  font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.02em;white-space:nowrap}
+.practice-chip:hover{background:var(--bc-dark);border-color:var(--bc-dark);color:#fff}
+.practice-chip[hidden]{display:none}
+/* Kun tehtäviä on tekemättä, Seuraava putoaa toissijaiseksi (ääriviivatyyli) —
+   linkki toimii silti normaalisti, mitään ei estetä */
+/* transition:none — luokka lisataan JS:lla latauksen jalkeen, ja ilman tata
+   axe mittaisi varit kesken .btn:n transition:all -siirtyman */
+.lesson-footer.guide-practice .nav-buttons .btn-primary{transition:none;background:transparent;color:var(--bc-dark)}
+.lesson-footer.guide-practice .nav-buttons .btn-primary:hover:not(:disabled){background:var(--bc-primary);color:#fff}
+.practice-complete{background:#E9F7F0;border:1px solid #C4E6D4;border-radius:var(--r);padding:20px 24px;margin:28px 0 4px}
+.practice-complete>b{display:block;font-size:16px;color:#175C44;margin-bottom:4px}
+.practice-complete>span{display:block;font-size:14px;line-height:1.6;color:#2C6E52}
+.pc-actions{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+/* .panel a -värisääntö yliajaisi btn-primaryn — palautetaan painikeväri */
+.panel .pc-actions a.btn-primary{color:#fff;text-decoration:none}
+.tab-count{font-family:var(--font-mono);font-size:10.5px;color:var(--text-muted)}
+.tab-btn.active .tab-count{color:inherit}
+@media(max-width:640px){
+  .practice-bridge{flex-direction:column;align-items:stretch}
+  .practice-bridge .btn{text-align:center}
+  .practice-chip{width:100%;justify-content:center;box-sizing:border-box}
+  .pc-actions{flex-direction:column;align-items:stretch}
+  .pc-actions .btn,.pc-actions .done-btn{width:100%;box-sizing:border-box;text-align:center}
+}

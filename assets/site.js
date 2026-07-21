@@ -20,8 +20,9 @@ function isDone(id){return getDone().indexOf(id)>=0}
 function toggleDone(id){var a=getDone(),i=a.indexOf(id);
   if(i>=0){a.splice(i,1);}else{a.push(id);var ai=(window.CI&&window.CI.allIds)?window.CI.allIds.indexOf(id):-1;trackEvent('lesson_complete',ai>=0?{lesson_id:id,lesson_num:ai+1}:{lesson_id:id});}
   setDone(a);updProg();updCards();updDoneBtn(id);}
-function updDoneBtn(id){var btn=document.querySelector('.done-btn');if(!btn)return;var d=isDone(id);
-  btn.classList.toggle('marked',d);btn.textContent=d?'✓ Suoritettu':'Merkitse suoritetuksi';}
+function updDoneBtn(id){var d=isDone(id);
+  document.querySelectorAll('.done-btn').forEach(function(btn){
+    btn.classList.toggle('marked',d);btn.textContent=d?'✓ Suoritettu':'Merkitse suoritetuksi';});}
 
 function allIds(){
   if(window.CI&&window.CI.allIds)return window.CI.allIds;
