@@ -301,12 +301,70 @@ def _thinking_steps(details=None, active=None, labelled_by=None):
 
 def _course_thinking_path():
     title_id = 'course-thinking-title'
+    demo_title_id = 'course-thinking-demo-title'
+    demo_desc_id = 'course-thinking-demo-desc'
+    nodes = []
+    mobile_nodes = []
+    for index, move in enumerate(N.AJATTELU['liikkeet'], start=1):
+        delay = 0.5 + (index - 1) * 2.2
+        color = ('#46C7CF', '#7FD0A8', '#FFD79A', '#F0A38C', '#C9B7F1')[index - 1]
+        nodes.append(
+            f'<div class="course-thinking-node course-thinking-node--{index}" '
+            f'style="--ctg-delay:{delay:.1f}s;--ctg-accent:{color}">'
+            f'<span class="course-thinking-node__index">{index:02d}</span>'
+            f'<strong>{escape(move["nimi"])}</strong>'
+            f'<span>{escape(move["ohje"])}</span>'
+            '</div>'
+        )
+        mobile_nodes.append(
+            f'<li class="ai-demo__mobile-node"><strong>{escape(move["nimi"])}</strong> — '
+            f'{escape(move["ohje"])}</li>'
+        )
+    flow = []
+    for index, node in enumerate(nodes):
+        flow.append(node)
+        if index < len(nodes) - 1:
+            edge_delay = 1.8 + index * 2.2
+            flow.append(
+                f'<span class="course-thinking-edge" style="--ctg-delay:{edge_delay:.1f}s" '
+                'aria-hidden="true"></span>'
+            )
     return (
         '<section class="thinking-path thinking-path--course">'
         '<div class="thinking-path__eyebrow">Kurssin ajattelutapa</div>'
         f'<h2 id="{title_id}">Näin opit ajattelemaan</h2>'
         f'<p class="thinking-path__lead">{escape(N.AJATTELU["lupaus"])}</p>'
-        f'{_thinking_steps(labelled_by=title_id)}'
+        '<figure class="ai-demo course-thinking-demo" data-demo-id="course-thinking-01" '
+        'data-demo-kind="static">'
+        f'<span class="ai-demo__tag ai-demo__title" id="{demo_title_id}">'
+        '// havainto kulkee viiden työvaiheen läpi — ja palaa tarvittaessa</span>'
+        '<div class="ai-demo__stage ai-demo__viewport" '
+        'style="display:flex;align-items:center;justify-content:center;height:300px">'
+        f'<div class="course-thinking-graph" data-once role="img" '
+        f'aria-labelledby="{demo_title_id}" aria-describedby="{demo_desc_id}">'
+        f'<span class="sr-only" id="{demo_desc_id}">Ajattelupolku etenee '
+        f'{escape(N.AJATTELU["liikkeet"][0]["nimi"])}-vaiheesta '
+        f'{escape(N.AJATTELU["liikkeet"][-1]["nimi"])}-vaiheeseen. Uusi havainto voi '
+        'palauttaa sinut aiempaan vaiheeseen.</span>'
+        f'<div class="course-thinking-flow" aria-hidden="true">{"".join(flow)}</div>'
+        '<svg class="course-thinking-return" viewBox="0 0 900 94" aria-hidden="true">'
+        '<defs><marker id="course-thinking-arrow" markerWidth="8" markerHeight="8" refX="7" '
+        'refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#46C7CF"></path>'
+        '</marker></defs>'
+        '<path class="course-thinking-return__path" pathLength="1" '
+        'd="M 824 9 C 805 78, 605 86, 454 24" '
+        'marker-end="url(#course-thinking-arrow)"></path></svg>'
+        '<span class="course-thinking-return__label" aria-hidden="true">'
+        'uusi havainto → palaa tarvittaessa aiempaan vaiheeseen</span>'
+        '</div>'
+        '<div class="ai-demo__mobile-model ai-demo__mobile-model--loop course-thinking-mobile">'
+        '<span class="ai-demo__mobile-kicker">AJATTELUPOLKU</span>'
+        f'<ol class="ai-demo__mobile-steps">{"".join(mobile_nodes)}</ol></div>'
+        '</div>'
+        '<figcaption class="ai-demo__cap">Ajattelu etenee tunnistamisesta perusteluun, mutta '
+        'polku ei ole yksisuuntainen. Jos testi tai arviointi paljastaa puutteen, palaa siihen '
+        'vaiheeseen, jossa voit tarkentaa havaintoa tai ratkaisua.</figcaption>'
+        '</figure>'
         '</section>'
     )
 
@@ -740,8 +798,8 @@ def build_kurssi_overview():
         f'<p>{AUDIENCE_PROMISE}</p>'
         '</div></section>'
         '<div class="page-body">'
-        f'<div class="reading panel active course-start">{intro}</div>'
         f'{_course_thinking_path()}'
+        f'<div class="reading panel active course-start">{intro}</div>'
         f'<div class="mod-grid">{"".join(cards)}</div>'
         '</div>'
     )

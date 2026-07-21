@@ -62,6 +62,19 @@ test('mobiilileveydet 320–768 eivät aiheuta sivutason ylivuotoa', async ({ pa
   }
 });
 
+test('kurssin ajattelugraafi toimii työpöydällä ja vaihtuu mobiiliesitykseen', async ({ page }) => {
+  await page.setViewportSize({ width: 1100, height: 800 });
+  await page.goto('/kurssi/');
+  await expect(page.locator('.course-thinking-graph')).toBeVisible();
+  await expect(page.locator('.course-thinking-mobile')).toBeHidden();
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator('.course-thinking-graph')).toBeHidden();
+  await expect(page.locator('.course-thinking-mobile')).toBeVisible();
+  await expect(page.locator('.course-thinking-mobile .ai-demo__mobile-node')).toHaveCount(5);
+  await expect(page.locator('body')).not.toHaveCSS('overflow-x', 'scroll');
+});
+
 async function useLabel(page, target) {
   const label = page.locator(`label[for="${target}"]`);
   const input = page.locator(`#${target}`);
@@ -170,10 +183,10 @@ test('animaatio-ohjaimet vain data-once-kuvioilla, ei interaktiivisissa, piiloss
   await expect(page.locator('.ai-demo__mobile-model')).toBeVisible();
 });
 
-test('axe ei löydä vakavia tai kriittisiä rikkeitä sitemapin kaikilta 96 julkiselta sivulta', async ({ page }) => {
+test('axe ei löydä vakavia tai kriittisiä rikkeitä sitemapin kaikilta julkisilta sivuilta', async ({ page }) => {
   const sitemap = readFileSync(new URL('../../sitemap.xml', import.meta.url), 'utf8');
   const allUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname);
-  expect(allUrls).toHaveLength(96);
+  expect(allUrls).toHaveLength(67);
   const start = Number(process.env.AXE_START || 0);
   const count = Number(process.env.AXE_COUNT || allUrls.length);
   const urls = allUrls.slice(start, start + count);

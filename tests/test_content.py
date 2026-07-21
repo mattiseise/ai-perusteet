@@ -112,6 +112,19 @@ def main():
     overview = (ROOT / 'kurssi' / 'index.html').read_text(encoding='utf-8')
     if overview.count('thinking-path thinking-path--course') != 1:
         fail('Verkkokurssin ajattelulupaus puuttuu tai toistuu', errors)
+    if overview.count('data-demo-id="course-thinking-01"') != 1:
+        fail('Verkkokurssin animoitu ajattelugraafi puuttuu tai toistuu', errors)
+    if 'class="course-thinking-graph" data-once' not in overview:
+        fail('Verkkokurssin ajattelugraafin kertatoisto puuttuu', errors)
+    if 'course-thinking-mobile' not in overview:
+        fail('Verkkokurssin ajattelugraafin mobiiliesitys puuttuu', errors)
+    thinking_pos = overview.find('thinking-path thinking-path--course')
+    intro_pos = overview.find('reading panel active course-start')
+    if thinking_pos < 0 or intro_pos < 0 or thinking_pos > intro_pos:
+        fail('Verkkokurssin ajattelulupauksen pitää edeltää aloitustekstiä', errors)
+    intro_html = overview[intro_pos:overview.find('<div class="mod-grid">', intro_pos)]
+    if 'Näin työskentelet kurssilla' in intro_html or '<li>tunnista</li>' in intro_html:
+        fail('Kurssin ajattelutapa toistuu aloitustekstissä', errors)
     for slug in ('teoria', 'kaytto', 'agentit'):
         module_page = (ROOT / 'kurssi' / slug / 'index.html').read_text(encoding='utf-8')
         if module_page.count('thinking-path thinking-path--module') != 1:

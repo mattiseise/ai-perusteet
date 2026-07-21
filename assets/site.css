@@ -666,6 +666,126 @@ body{
   box-shadow:inset 0 3px 0 var(--thinking-accent);
 }
 .thinking-step.is-active .thinking-step__name{color:color-mix(in srgb,var(--thinking-accent) 72%,#111827)}
+.course-thinking-demo{margin:20px 0 2px}
+.course-thinking-graph{
+  position:relative;
+  width:900px;
+  height:282px;
+  font-family:var(--font-mono);
+  animation:courseThinkingTimeline 13.5s 1 forwards;
+}
+.course-thinking-flow{
+  position:absolute;
+  top:42px;
+  left:0;
+  display:grid;
+  grid-template-columns:repeat(4,150px 37.5px) 150px;
+  align-items:center;
+  width:900px;
+}
+.course-thinking-node{
+  position:relative;
+  z-index:1;
+  box-sizing:border-box;
+  min-height:132px;
+  padding:16px 14px 14px;
+  border:1px solid #34415F;
+  border-radius:13px;
+  color:#EAEEF8;
+  background:#172038;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  opacity:1;
+  transform:none;
+  animation:courseThinkingNode 1.65s cubic-bezier(.2,.8,.2,1) var(--ctg-delay) 1 both;
+}
+.course-thinking-node::after{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border:1px solid var(--ctg-accent);
+  border-radius:13px;
+  opacity:0;
+  animation:courseThinkingGlow 1.65s ease-out var(--ctg-delay) 1 both;
+}
+.course-thinking-node__index{
+  display:block;
+  margin-bottom:12px;
+  color:var(--ctg-accent);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+.course-thinking-node strong{
+  display:block;
+  margin-bottom:7px;
+  color:#fff;
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.2;
+}
+.course-thinking-node>span:last-child{display:block;color:#B9C2DA;font-size:11px;line-height:1.45}
+.course-thinking-edge{
+  position:relative;
+  z-index:0;
+  display:block;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,#34415F,#46C7CF);
+  transform:scaleX(0);
+  transform-origin:left center;
+  animation:courseThinkingEdge .75s ease-out var(--ctg-delay) 1 both;
+}
+.course-thinking-edge::after{
+  content:'';
+  position:absolute;
+  top:-4px;
+  right:-1px;
+  width:0;
+  height:0;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  border-left:7px solid #46C7CF;
+}
+.course-thinking-return{
+  position:absolute;
+  left:0;
+  top:164px;
+  width:900px;
+  height:94px;
+  overflow:visible;
+  opacity:0;
+  animation:courseThinkingReturnVisible 2.5s ease-out 10.2s 1 forwards;
+}
+.course-thinking-return__path{
+  fill:none;
+  stroke:#46C7CF;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-dasharray:1;
+  stroke-dashoffset:1;
+  animation:courseThinkingReturnDraw 2.25s ease-in-out 10.2s 1 forwards;
+}
+.course-thinking-return__label{
+  position:absolute;
+  left:474px;
+  top:239px;
+  color:#7FD0A8;
+  font-size:11px;
+  letter-spacing:.02em;
+  opacity:0;
+  animation:courseThinkingLabel .8s ease-out 12s 1 forwards;
+}
+@keyframes courseThinkingTimeline{0%,100%{opacity:1}}
+@keyframes courseThinkingNode{
+  0%{opacity:1;transform:none;border-color:#34415F}
+  52%{opacity:1;transform:translateY(-3px) scale(1.025)}
+  100%{opacity:1;transform:none;border-color:var(--ctg-accent)}
+}
+@keyframes courseThinkingGlow{0%{opacity:0;box-shadow:0 0 0 rgba(70,199,207,0)}55%{opacity:.8;box-shadow:0 0 24px color-mix(in srgb,var(--ctg-accent) 44%,transparent)}100%{opacity:.16;box-shadow:none}}
+@keyframes courseThinkingEdge{0%{opacity:0;transform:scaleX(0)}100%{opacity:1;transform:scaleX(1)}}
+@keyframes courseThinkingReturnVisible{0%{opacity:0}12%,100%{opacity:1}}
+@keyframes courseThinkingReturnDraw{0%{stroke-dashoffset:1}100%{stroke-dashoffset:0}}
+@keyframes courseThinkingLabel{0%{opacity:0;transform:translateY(5px)}100%{opacity:1;transform:none}}
 .lesson-thinking-steps{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
@@ -760,6 +880,31 @@ body{
     padding:5px 1px;
     font-size:9.5px;
   }
+}
+
+@media(max-width:680px){
+  .course-thinking-demo .ai-demo__mobile-node{
+    display:block;
+    padding:10px 12px;
+    border:1px solid #34415f;
+    border-radius:9px;
+    background:#172038;
+    color:#fff;
+    font:500 13px/1.45 var(--font-sans);
+    position:relative;
+  }
+  .course-thinking-demo .ai-demo__mobile-node strong{color:#fff}
+  .course-thinking-mobile.ai-demo__mobile-model--loop .ai-demo__mobile-node:last-child::after{
+    content:'↻ uusi havainto voi palauttaa aiempaan vaiheeseen';
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .course-thinking-graph,.course-thinking-graph *{animation-delay:0s!important}
+  .course-thinking-node{opacity:1;transform:none}
+  .course-thinking-edge{opacity:1;transform:scaleX(1)}
+  .course-thinking-return,.course-thinking-return__label{opacity:1}
+  .course-thinking-return__path{stroke-dashoffset:0}
 }
 
 /* ============ TABS ============ */
