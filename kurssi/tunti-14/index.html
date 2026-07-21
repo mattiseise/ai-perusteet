@@ -18,7 +18,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 14/27</span></div><div class="lesson-title">Oma botti I — käyttäjä, tehtävä ja rajat</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 5 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-14/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-14/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Miten käyttäjä, tehtävä, onnistuminen ja rajat muodostavat testattavan määrittelyn?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-14-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-14-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-14-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-14-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-14-lopputyon-askel" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-lopputyon-askel" tabindex="-1" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button id="tab-lesson-14-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-14-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-14-teoria" data-tab="teoria"><h1>Oma botti I — käyttäjä, tehtävä ja rajat</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 14/27</span></div><div class="lesson-title">Oma botti I — käyttäjä, tehtävä ja rajat</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 5 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-14/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-14/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Miten käyttäjä, tehtävä, onnistuminen ja rajat muodostavat testattavan määrittelyn?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-14-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-14-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-14-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-14-lopputyon-askel" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-lopputyon-askel" tabindex="-1" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button id="tab-lesson-14-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-14-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-14-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-14-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-14-teoria" data-tab="teoria"><h1>Oma botti I — käyttäjä, tehtävä ja rajat</h1>
 <h2>Johdanto: bottia ei aloiteta ohjetekstistä</h2>
 <p>Oman botin rakentaminen houkuttelee aloittamaan järjestelmäpromptista: kirjoitetaan botille rooli, muutama sääntö ja kokeillaan, mitä tapahtuu. Silloin tärkeimmät päätökset jäävät helposti tekemättä. Kenelle botti on tarkoitettu? Mitä käyttäjä yrittää saada aikaan? Missä tilanteessa botti auttaa — ja missä sen pitää lopettaa?</p>
 <p>Tällä tunnilla et rakenna bottia etkä kirjoita valmista järjestelmäpromptia. Laadit <strong>määrittelydokumentin</strong>, jonka perusteella botin voisi myöhemmin rakentaa myös joku toinen. Suunnittelu erotetaan toteutuksesta tarkoituksella: ensin päätetään, millainen työkalu tarvitaan, vasta sitten kirjoitetaan ohjeet ja valitaan alusta.</p>
@@ -271,57 +271,7 @@
 <div class="task-widget" data-ti="3"></div>
 
 <h2>Tehtävä 5/5 — tunnista vielä avoin päätös</h2>
-<div class="task-widget" data-ti="4"></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: ★ Lopputyön askel</b><span>Osatuotos, joka kerryttää lopputyötäsi</span></div><button type="button" class="btn btn-primary" onclick="showTab('lopputyon-askel')">Avaa lopputyön askel →</button></div></div><div id="panel-lesson-14-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-sanasto" data-tab="sanasto" hidden><h1>Sanasto — Oma botti I</h1>
-<table>
-<thead>
-<tr>
-<th>Käsite</th>
-<th>Selitys</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Apuri-botti</strong></td>
-<td>Rajattuun käyttäjän tehtävään määritelty tekoälyavustin.</td>
-</tr>
-<tr>
-<td><strong>Kohderyhmä</strong></td>
-<td>Käyttäjäryhmä, jonka tilanne, lähtötaso ja tarve ohjaavat suunnittelua.</td>
-</tr>
-<tr>
-<td><strong>Käyttötapaus</strong></td>
-<td>Konkreettinen tilanne, jossa käyttäjä yrittää saada tietyn asian tehdyksi.</td>
-</tr>
-<tr>
-<td><strong>Havaittava onnistuminen</strong></td>
-<td>Tulos tai toiminta, josta voidaan tarkistaa, että botti auttoi tehtävässä.</td>
-</tr>
-<tr>
-<td><strong>Työnkulku</strong></td>
-<td>Vaiheet, joiden kautta botti ohjaa käyttäjää lähtötilanteesta lopputulokseen.</td>
-</tr>
-<tr>
-<td><strong>Rooli</strong></td>
-<td>Botin tehtävään liittyvä näkökulma ja vastuu, ei pelkkä kuvitteellinen persoona.</td>
-</tr>
-<tr>
-<td><strong>Äänensävy</strong></td>
-<td>Tapa, jolla botti viestii kohderyhmälle. Sävy ei korvaa tehtävää, tietopohjaa tai rajoja.</td>
-</tr>
-<tr>
-<td><strong>Raja</strong></td>
-<td>Ehto, jossa botti kieltäytyy, pyytää lisätietoa tai siirtää vastuun ihmiselle.</td>
-</tr>
-<tr>
-<td><strong>Määrittelydokumentti</strong></td>
-<td>Ennen toteutusta laadittu kuvaus käyttäjästä, tehtävästä, onnistumisesta, työnkulusta ja rajoista.</td>
-</tr>
-<tr>
-<td><strong>Järjestelmäprompti</strong></td>
-<td>Toteutusvaiheessa kirjoitettava pysyvä ohje, joka muuntaa määrittelyn botin toimintasäännöiksi.</td>
-</tr>
-</tbody>
-</table></div><div id="panel-lesson-14-lopputyon-askel" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-lopputyon-askel" data-tab="lopputyon-askel" hidden><h1>Rakennuspalikka 2 — Botin määrittelydokumentti</h1>
+<div class="task-widget" data-ti="4"></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: ★ Lopputyön askel</b><span>Osatuotos, joka kerryttää lopputyötäsi</span></div><button type="button" class="btn btn-primary" onclick="showTab('lopputyon-askel')">Avaa lopputyön askel →</button></div></div><div id="panel-lesson-14-lopputyon-askel" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-lopputyon-askel" data-tab="lopputyon-askel" hidden><h1>Rakennuspalikka 2 — Botin määrittelydokumentti</h1>
 <p><strong>Tämä on toinen kolmesta rakennuspalikasta.</strong> Keräät rakennuspalikat Tekoälyjen käyttö -osion aikana. Tunnilla 17 rakennat niiden avulla apuri-botin valitsemallasi alustalla, ja tunnilla 18 korjaat sekä arvioit toteutuksen. Säilytä työ huolellisesti.</p>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
 <p>Suunnittelet bottisi <strong>määrittelydokumentin</strong>. Se on botin perustamisasiakirja, jossa kerrot, kenelle botti on tarkoitettu, mitä se tekee, miten se käyttäytyy ja mitä se ei tee.</p>
@@ -430,7 +380,57 @@
 <blockquote class="pause"><p><strong>Miksi tämä on tärkeää:</strong> Oppitunnilla 17 aloitat botin rakentamisen valitsemallasi alustalla. Määrittely kertoo, mitä järjestelmäpromptiin pitää kirjoittaa, millaista tietopohjaa botti tarvitsee ja milloin se on valmis ensimmäiseen testiin.</p>
 <p><strong>Tarkista lopuksi:</strong> Olet valinnut apuri-bottisi aiheen, täyttänyt botin määrittelydokumentin, haastanut suunnitelmasi tekoälyn avulla, viimeistellyt dokumentin ja kirjoittanut 2–3 lauseen pohdinnan bottisi ytimestä.</p>
 </blockquote>
-<p><strong>2 / 3 rakennuspalikkaa kerätty</strong></p></div></div><div class="practice-complete"><b>Tunnin lopputyöosuus valmis?</b><span>Tallenna osatuotos työkirjaasi — se on osa lopputyötäsi. Merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-14')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/kurssi/tunti-15/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Oma botti I</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 14</text><text x="74" y="230" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text><text x="74" y="288" font-size="27" fill="#5A6478">Käyttäjä, tehtävä, onnistuminen ja rajat</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Tällä tunnilla suunnitellaan. Botti rakennetaan vasta tunnilla 17.</text><text x="104" y="407" font-size="17" fill="#3A4253">Määrittely kertoo, mitä myöhemmän toteutuksen pitää saada aikaan.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
+<p><strong>2 / 3 rakennuspalikkaa kerätty</strong></p></div></div><div class="practice-complete"><b>Tunnin lopputyöosuus valmis?</b><span>Tallenna osatuotos työkirjaasi — se on osa lopputyötäsi. Merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-14')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/kurssi/tunti-15/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-14-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-sanasto" data-tab="sanasto" hidden><h1>Sanasto — Oma botti I</h1>
+<table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apuri-botti</strong></td>
+<td>Rajattuun käyttäjän tehtävään määritelty tekoälyavustin.</td>
+</tr>
+<tr>
+<td><strong>Kohderyhmä</strong></td>
+<td>Käyttäjäryhmä, jonka tilanne, lähtötaso ja tarve ohjaavat suunnittelua.</td>
+</tr>
+<tr>
+<td><strong>Käyttötapaus</strong></td>
+<td>Konkreettinen tilanne, jossa käyttäjä yrittää saada tietyn asian tehdyksi.</td>
+</tr>
+<tr>
+<td><strong>Havaittava onnistuminen</strong></td>
+<td>Tulos tai toiminta, josta voidaan tarkistaa, että botti auttoi tehtävässä.</td>
+</tr>
+<tr>
+<td><strong>Työnkulku</strong></td>
+<td>Vaiheet, joiden kautta botti ohjaa käyttäjää lähtötilanteesta lopputulokseen.</td>
+</tr>
+<tr>
+<td><strong>Rooli</strong></td>
+<td>Botin tehtävään liittyvä näkökulma ja vastuu, ei pelkkä kuvitteellinen persoona.</td>
+</tr>
+<tr>
+<td><strong>Äänensävy</strong></td>
+<td>Tapa, jolla botti viestii kohderyhmälle. Sävy ei korvaa tehtävää, tietopohjaa tai rajoja.</td>
+</tr>
+<tr>
+<td><strong>Raja</strong></td>
+<td>Ehto, jossa botti kieltäytyy, pyytää lisätietoa tai siirtää vastuun ihmiselle.</td>
+</tr>
+<tr>
+<td><strong>Määrittelydokumentti</strong></td>
+<td>Ennen toteutusta laadittu kuvaus käyttäjästä, tehtävästä, onnistumisesta, työnkulusta ja rajoista.</td>
+</tr>
+<tr>
+<td><strong>Järjestelmäprompti</strong></td>
+<td>Toteutusvaiheessa kirjoitettava pysyvä ohje, joka muuntaa määrittelyn botin toimintasäännöiksi.</td>
+</tr>
+</tbody>
+</table></div><div id="panel-lesson-14-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-14-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Oma botti I</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 14</text><text x="74" y="230" font-size="50" font-weight="800" fill="#1B2336">Oma botti I</text><text x="74" y="288" font-size="27" fill="#5A6478">Käyttäjä, tehtävä, onnistuminen ja rajat</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Tällä tunnilla suunnitellaan. Botti rakennetaan vasta tunnilla 17.</text><text x="104" y="407" font-size="17" fill="#3A4253">Määrittely kertoo, mitä myöhemmän toteutuksen pitää saada aikaan.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/8: Aloita käyttäjän tilanteesta</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Aloita käyttäjän tilanteesta</text><text x="74" y="132" font-size="19" fill="#5A6478">”Kaikille kaikkea” ei ole käyttötapaus.</text><rect x="74" y="174" width="812" height="216" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><text x="104" y="222" font-size="18" font-weight="800" fill="#6A309D">KIRJOITA YHDELLÄ VIRKKEELLÄ</text><text x="104" y="280" font-size="22" fill="#1B2336">[Käyttäjä] tarvitsee apua [tehtävässä],</text><text x="104" y="322" font-size="22" fill="#1B2336">jotta hän voi [saavutettava lopputulos].</text><rect x="74" y="422" width="812" height="60" rx="12" fill="#FFF7E2"/><text x="104" y="459" font-size="18" font-weight="700" fill="#8A6A00">Nimi, persoona tai alusta ei korvaa todellista käyttäjän tarvetta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">2 / 8</text></svg></div>
 

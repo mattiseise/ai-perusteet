@@ -46,7 +46,10 @@ lohkot:
 nakymat:
   kurssi:
     polku: /kurssi/
-    lohkot: [teoria, harjoittele, sanasto, lopputyon-askel, diat]
+    # Lopputyön askel heti harjoittelun perään: se on kurssin suorittamisen
+    # kannalta työvaihe, ei hakuteos kuten sanasto. Järjestys ohjaa myös
+    # oppimispolun ketjukortteja (ks. generator/sivut.py, WORK_BLOCKS).
+    lohkot: [teoria, harjoittele, lopputyon-askel, sanasto, diat]
     kesto: lukuaika          # generaattori laskee sanamäärästä
     lopputyo_variantti: verkko
   luokka:

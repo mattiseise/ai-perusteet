@@ -18,7 +18,7 @@
 <body>
 
 <nav class="topbar"><a class="logo-group" href="/" style="text-decoration:none"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12 V4.6 M12 12 L5.6 17.6 M12 12 L18.4 17.6" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.7" fill="currentColor"/><circle cx="12" cy="4.6" r="2.05" fill="currentColor"/><circle cx="5.6" cy="17.6" r="2.05" fill="currentColor"/><circle cx="18.4" cy="17.6" r="2.05" fill="currentColor"/></svg></span><div class="logo-text"><span class="logo-main">Tekoälyn <b>perusteet</b></span></div></a><div class="topbar-right"><div class="progress-bar"><div class="progress-fill" id="pb"></div></div><div class="progress-text" id="pt">0/27</div></div></nav>
-<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 12/27</span></div><div class="lesson-title">Rakenna uudelleen käytettävä promptikortti</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 5 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-12/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-12/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mikä yksi muutos vaikutti vastaukseen, ja millä näytöllä osoitat sen?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-12-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-12-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-12-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-12-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-12-lopputyon-askel" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-lopputyon-askel" tabindex="-1" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button id="tab-lesson-12-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-12-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-12-teoria" data-tab="teoria"><h1>Rakenna uudelleen käytettävä promptikortti</h1>
+<div id="lesson" class="lesson-view active"><div id="lesson-header" class="lesson-header"><div class="breadcrumb"><a class="bc-link" href="/kurssi/">Verkkokurssi</a><span>›</span><a class="bc-link" href="/kurssi/kaytto/">Tekoälyjen käyttö</a><span>›</span><span>Osa 12/27</span></div><div class="lesson-title">Rakenna uudelleen käytettävä promptikortti</div><div class="lesson-badges"><span class="badge badge-osp">Tekoälyjen käyttö</span><span class="badge badge-type">Lukuaika n. 5 min</span></div><div class="view-switch"><span class="vs-lab">Näkymä</span><a class="vw on" href="/kurssi/tunti-12/" data-view="kurssi">Verkkokurssi</a><a class="vw" href="/luokka/tunti-12/" data-view="luokka">Luokkaversio</a></div></div><aside class="thinking-path thinking-path--lesson" aria-label="Ajattelun selkäranka"><div class="thinking-path__lesson-inner"><ol class="lesson-thinking-steps" aria-label="Ajattelun vaiheet"><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">1</span><span class="lesson-thinking-step__name">Tunnista</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">2</span><span class="lesson-thinking-step__name">Selitä</span></li><li class="lesson-thinking-step is-active" aria-current="step"><span class="lesson-thinking-step__index" aria-hidden="true">3</span><span class="lesson-thinking-step__name">Testaa</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">4</span><span class="lesson-thinking-step__name">Arvioi</span></li><li class="lesson-thinking-step"><span class="lesson-thinking-step__index" aria-hidden="true">5</span><span class="lesson-thinking-step__name">Perustele</span></li></ol><p class="thinking-path__question"><span class="thinking-path__question-label">Ajattelukysymys</span><span>Mikä yksi muutos vaikutti vastaukseen, ja millä näytöllä osoitat sen?</span></p></div></aside><div id="lesson-tabs" class="lesson-tabs" role="tablist" aria-label="Oppitunnin sisältö"><button id="tab-lesson-12-teoria" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-lesson-12-teoria" tabindex="0" data-tab="teoria" onclick="showTab('teoria')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 4.2C8 3.3 6.8 2.5 4.8 2.5 3.2 2.5 2 3 2 3v9s1.2-.5 2.8-.5S8 12.2 8 13M8 4.2C8 3.3 9.2 2.5 11.2 2.5 12.8 2.5 14 3 14 3v9s-1.2-.5-2.8-.5S8 12.2 8 13M8 4.2V13"/></svg><span>Teoria</span></button><button id="tab-lesson-12-harjoittele" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-harjoittele" tabindex="-1" data-tab="harjoittele" onclick="showTab('harjoittele')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".9" fill="currentColor" stroke="none"/></svg><span>Harjoittele</span> <span class="tab-count" data-practice-tabcount hidden></span></button><button id="tab-lesson-12-lopputyon-askel" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-lopputyon-askel" tabindex="-1" data-tab="lopputyon-askel" onclick="showTab('lopputyon-askel')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 1.8l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.5 4.27 13.5l.72-4.23-3.07-3 4.25-.62z"/></svg><span>★ Lopputyön askel</span></button><button id="tab-lesson-12-sanasto" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-sanasto" tabindex="-1" data-tab="sanasto" onclick="showTab('sanasto')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3.5A1.5 1.5 0 014.5 2H13v9.5H4.5A1.5 1.5 0 003 13V3.5z"/><path d="M3 13a1.5 1.5 0 011.5-1.5H13V14H4.5A1.5 1.5 0 013 12.5"/></svg><span>Sanasto</span></button><button id="tab-lesson-12-diat" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-lesson-12-diat" tabindex="-1" data-tab="diat" onclick="showTab('diat')"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M8 11.5V14M5.5 14h5" stroke-linecap="round"/></svg><span>Diat</span></button></div><div id="lesson-panels" class="lesson-panels rv-tech"><div id="panel-lesson-12-teoria" class="panel active" role="tabpanel" aria-labelledby="tab-lesson-12-teoria" data-tab="teoria"><h1>Rakenna uudelleen käytettävä promptikortti</h1>
 <h2>Johdanto: hyvä prompti osoitetaan kokeella</h2>
 <p>Tunnilla 4 opit, että konteksti muuttaa vastausta. Nyt viet taidon käytäntöön yhdessä toistuvassa tehtävässä. Tavoitteena ei ole kerätä mahdollisimman monta näyttävää promptia, vaan rakentaa <strong>yksi promptikortti</strong>, jonka käyttötilanteen, toimivuuden ja rajat osaat perustella.</p>
 <p>Promptikortti yhdistää kolme asiaa:</p>
@@ -226,49 +226,7 @@ LÄHDEAINEISTO:
 <div class="task-widget" data-ti="3"></div>
 
 <h2>Tehtävä 5/5 — seuraava testi</h2>
-<div class="task-widget" data-ti="4"></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: ★ Lopputyön askel</b><span>Osatuotos, joka kerryttää lopputyötäsi</span></div><button type="button" class="btn btn-primary" onclick="showTab('lopputyon-askel')">Avaa lopputyön askel →</button></div></div><div id="panel-lesson-12-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-sanasto" data-tab="sanasto" hidden><h1>Sanasto — Promptikortti</h1>
-<table>
-<thead>
-<tr>
-<th>Käsite</th>
-<th>Selitys</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Promptikortti</strong></td>
-<td>Uudelleen käytettävä prompti sekä sen käyttötilanne, syötteen paikka, laatukriteerit, testihavainnot ja tunnetut rajat.</td>
-</tr>
-<tr>
-<td><strong>Pysyvä ohje</strong></td>
-<td>Promptin osa, joka säilyy käyttökerrasta toiseen.</td>
-</tr>
-<tr>
-<td><strong>Vaihtuva syöte</strong></td>
-<td>Aineisto tai tieto, joka vaihdetaan uutta käyttökertaa varten.</td>
-</tr>
-<tr>
-<td><strong>Laatukriteeri</strong></td>
-<td>Ennen ajoa päätetty havaittava ominaisuus, jolla vastausta arvioidaan.</td>
-</tr>
-<tr>
-<td><strong>Hallittu muutos</strong></td>
-<td>Menettely, jossa versioon 2 muutetaan vain yksi olennainen asia ja muut ehdot pidetään samoina.</td>
-</tr>
-<tr>
-<td><strong>Versiohistoria</strong></td>
-<td>Kirjaus promptin versioista, muutoksista ja niiden havaituista vaikutuksista.</td>
-</tr>
-<tr>
-<td><strong>Tunnettu raja</strong></td>
-<td>Tilanne tai aineisto, jossa promptikorttia ei ole syytä käyttää sellaisenaan.</td>
-</tr>
-<tr>
-<td><strong>Siirrettävyys</strong></td>
-<td>Se, kuinka hyvin kortti toimii erilaisilla mutta samaan tehtävään kuuluvilla syötteillä.</td>
-</tr>
-</tbody>
-</table></div><div id="panel-lesson-12-lopputyon-askel" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-lopputyon-askel" data-tab="lopputyon-askel" hidden><h1>Rakennuspalikka 1 — Promptipankin ensimmäinen kortti</h1>
+<div class="task-widget" data-ti="4"></div><div class="practice-bridge"><div class="pb-txt"><b>Seuraavaksi: ★ Lopputyön askel</b><span>Osatuotos, joka kerryttää lopputyötäsi</span></div><button type="button" class="btn btn-primary" onclick="showTab('lopputyon-askel')">Avaa lopputyön askel →</button></div></div><div id="panel-lesson-12-lopputyon-askel" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-lopputyon-askel" data-tab="lopputyon-askel" hidden><h1>Rakennuspalikka 1 — Promptipankin ensimmäinen kortti</h1>
 <blockquote class="pause"><p>Tämä on ensimmäinen kolmesta rakennuspalikasta. Tunnin tuotoksena syntyy yksi huolellisesti testattu ja uudelleen käytettävä promptikortti — ei pitkä lista kokeilemattomia prompteja.</p>
 </blockquote>
 <div class="task-card task-card--task"><div class="task-card-header"><h2>Mitä teet?</h2></div><div class="task-card-body">
@@ -413,7 +371,49 @@ ennakko-oletukseeni. Älä valitse voittajaa puolestani.
 <p><strong>Tallennettava tuotos:</strong> yksi promptikortti, versiot 1 ja 2, molemmat vastaukset, vertailutaulukko sekä yhden muutoksen vaikutusta koskeva johtopäätös.</p>
 <p>Kun kortti toimii, voit myöhemmin lisätä pankkiin uusia kortteja samalla rakenteella. Yksi testattu kortti on arvokkaampi kuin seitsemän promptia, joiden toimivuudesta et osaa sanoa mitään.</p>
 <p>Tallenna kortti niin, että palaat myöhemmin myös sen perusteluihin. Pelkkä lopullinen prompti kertoo, mitä kirjoitit. Versiot ja havaintosi kertovat, miksi päädyit juuri siihen muotoon.</p>
-<p><strong>1 / 3 rakennuspalikkaa kerätty</strong></p></div></div><div class="practice-complete"><b>Tunnin lopputyöosuus valmis?</b><span>Tallenna osatuotos työkirjaasi — se on osa lopputyötäsi. Merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-12')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/kurssi/tunti-13/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-12-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Rakenna promptikortti</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 12</text><text x="74" y="230" font-size="49" font-weight="800" fill="#1B2336">Rakenna promptikortti</text><text x="74" y="288" font-size="27" fill="#5A6478">Yksi toistuva tehtävä · kaksi versiota · yksi muutos</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Hyvä prompti ei vain kuulosta hyvältä — sen vaikutus osoitetaan.</text><text x="104" y="407" font-size="17" fill="#3A4253">Tallenna myös käyttötilanne, kriteerit ja tunnettu raja.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
+<p><strong>1 / 3 rakennuspalikkaa kerätty</strong></p></div></div><div class="practice-complete"><b>Tunnin lopputyöosuus valmis?</b><span>Tallenna osatuotos työkirjaasi — se on osa lopputyötäsi. Merkitse tunti sitten suoritetuksi.</span><div class="pc-actions"><button type="button" class="done-btn" onclick="toggleDone('lesson-12')">Merkitse suoritetuksi</button><a class="btn btn-primary" href="/kurssi/tunti-13/">Seuraava tunti →</a></div></div></div><div id="panel-lesson-12-sanasto" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-sanasto" data-tab="sanasto" hidden><h1>Sanasto — Promptikortti</h1>
+<table>
+<thead>
+<tr>
+<th>Käsite</th>
+<th>Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Promptikortti</strong></td>
+<td>Uudelleen käytettävä prompti sekä sen käyttötilanne, syötteen paikka, laatukriteerit, testihavainnot ja tunnetut rajat.</td>
+</tr>
+<tr>
+<td><strong>Pysyvä ohje</strong></td>
+<td>Promptin osa, joka säilyy käyttökerrasta toiseen.</td>
+</tr>
+<tr>
+<td><strong>Vaihtuva syöte</strong></td>
+<td>Aineisto tai tieto, joka vaihdetaan uutta käyttökertaa varten.</td>
+</tr>
+<tr>
+<td><strong>Laatukriteeri</strong></td>
+<td>Ennen ajoa päätetty havaittava ominaisuus, jolla vastausta arvioidaan.</td>
+</tr>
+<tr>
+<td><strong>Hallittu muutos</strong></td>
+<td>Menettely, jossa versioon 2 muutetaan vain yksi olennainen asia ja muut ehdot pidetään samoina.</td>
+</tr>
+<tr>
+<td><strong>Versiohistoria</strong></td>
+<td>Kirjaus promptin versioista, muutoksista ja niiden havaituista vaikutuksista.</td>
+</tr>
+<tr>
+<td><strong>Tunnettu raja</strong></td>
+<td>Tilanne tai aineisto, jossa promptikorttia ei ole syytä käyttää sellaisenaan.</td>
+</tr>
+<tr>
+<td><strong>Siirrettävyys</strong></td>
+<td>Se, kuinka hyvin kortti toimii erilaisilla mutta samaan tehtävään kuuluvilla syötteillä.</td>
+</tr>
+</tbody>
+</table></div><div id="panel-lesson-12-diat" class="panel" role="tabpanel" aria-labelledby="tab-lesson-12-diat" data-tab="diat" hidden><div class="deck-wrap"><div class="deck-bar"><span class="deck-hint">Diaesitys — vieritä tai pyyhkäise sivuttain →</span><button class="deck-full-btn" type="button" aria-label="Avaa diaesitys koko näytön tilaan" onclick="deckFull(this)">⛶ Koko näyttö</button></div><div class="deck"><div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 1/8: Rakenna promptikortti</title><rect width="960" height="540" fill="#FFFFFF"/><rect width="12" height="540" fill="#863FC4"/><text x="74" y="92" font-size="15" letter-spacing="3" fill="#7E88A8">02 · TEKOÄLYJEN KÄYTTÖ · OPPITUNTI 12</text><text x="74" y="230" font-size="49" font-weight="800" fill="#1B2336">Rakenna promptikortti</text><text x="74" y="288" font-size="27" fill="#5A6478">Yksi toistuva tehtävä · kaksi versiota · yksi muutos</text><rect x="74" y="350" width="812" height="74" rx="15" fill="#F4EFFC" stroke="#D9C3EC" stroke-width="2"/><text x="104" y="380" font-size="18" font-weight="700" fill="#6A309D">Hyvä prompti ei vain kuulosta hyvältä — sen vaikutus osoitetaan.</text><text x="104" y="407" font-size="17" fill="#3A4253">Tallenna myös käyttötilanne, kriteerit ja tunnettu raja.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">1 / 8</text></svg></div>
 
 <div class="deck-slide"><svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" role="img"><title>Dia 2/8: Valitse tehtävä, jonka osaat arvioida</title><rect width="960" height="540" fill="#FAFBFE"/><text x="74" y="92" font-size="38" font-weight="800" fill="#1B2336">Valitse tehtävä, jonka osaat arvioida</text><text x="74" y="132" font-size="19" fill="#5A6478">Kortti on tarkoitettu toistuvaan tehtävään, ei kaikkiin tilanteisiin.</text><rect x="74" y="178" width="812" height="190" rx="18" fill="#FFFFFF" stroke="#D8DEEC" stroke-width="2"/><text x="104" y="224" font-size="18" font-weight="800" fill="#6A309D">TÄYDENNÄ YHDELLÄ LAUSEELLA</text><text x="104" y="278" font-size="21" fill="#1B2336">Muunnan [vaihtuvan aineiston] muotoon [haluttu tuotos],</text><text x="104" y="316" font-size="21" fill="#1B2336">jotta [käyttäjä] voi [käyttötarkoitus].</text><rect x="74" y="402" width="812" height="60" rx="12" fill="#FFF7E2"/><text x="104" y="439" font-size="18" font-weight="700" fill="#8A6A00">Jos et tunnista hyvää lopputulosta, et voi osoittaa parannusta.</text><text x="893" y="514" text-anchor="end" font-size="14" fill="#9AA6BD">2 / 8</text></svg></div>
 
