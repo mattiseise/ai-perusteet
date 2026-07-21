@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import inventory from './demo-inventory.json' with { type: 'json' };
 
 const views = inventory.views;
-const widths = inventory.widths;
+const widths = process.env.WIDTH_FILTER ? inventory.widths.filter(w => String(w) === process.env.WIDTH_FILTER) : inventory.widths;
 const staticIds = inventory.static;
 const interactiveIds = Object.keys(inventory.interactive);
 
@@ -37,7 +37,7 @@ test('kaikki 26 demoa säilyvät näkyvinä molemmissa näkymissä', async ({ pa
         await expect(demo.locator('.ai-demo__stage')).toBeVisible();
         if (staticIds.includes(id)) {
           const mobile = demo.locator('.ai-demo__mobile-model');
-          if (width <= 430) {
+          if (width <= 680) {
             await expect(mobile).toBeVisible();
             expect(await mobile.locator('.ai-demo__mobile-node').count()).toBeGreaterThanOrEqual(2);
           } else {
@@ -85,13 +85,24 @@ async function runInteractiveStates(page, id) {
     }
     await expect(page.locator('#l07-s1')).toBeChecked();
   } else if (id === 'lesson-20-02') {
-    await expect(page.locator('#l20q-s1')).toBeChecked();
+    await expect(page.locator('.l20q-round.r1')).toBeVisible();
+    await expect(page.locator('.l20q-round.r2')).toBeHidden();
     await useLabel(page, 'l20q-1c'); // väärä
     await expect(page.locator('.r1 .l20q-fb.f1c')).toBeVisible();
-    for (const target of ['l20q-1a', 'l20q-s2', 'l20q-2b', 'l20q-s3', 'l20q-3c', 'l20q-s1']) {
-      await useLabel(page, target);
-    }
-    await expect(page.locator('#l20q-s1')).toBeChecked();
+    expect(await page.locator('.r1 .l20q-fb:visible').count()).toBe(1);
+    await useLabel(page, 'l20q-1a'); // oikea
+    await page.locator('.r1 .l20q-next').click();
+    await expect(page.locator('.l20q-round.r1')).toBeHidden();
+    await expect(page.locator('.l20q-round.r2')).toBeVisible();
+    await expect(page.locator('.r2 .l20q-sc')).toBeFocused();
+    await useLabel(page, 'l20q-2b');
+    await page.locator('.r2 .l20q-next').click();
+    await expect(page.locator('.l20q-round.r3')).toBeVisible();
+    await useLabel(page, 'l20q-3c');
+    await page.locator('.r3 .l20q-restart').click();
+    await expect(page.locator('.l20q-round.r1')).toBeVisible();
+    await expect(page.locator('.l20q-round.r3')).toBeHidden();
+    expect(await page.locator('.l20q-in:checked').count()).toBe(0);
   } else {
     await useLabel(page, 'l24q-1'); // väärä
     await expect(page.locator('.l24q-fb.fbw')).toBeVisible();
@@ -134,10 +145,47 @@ test('200 prosentin zoom ja reduced motion säilyttävät sisällön', async ({ 
   }
 });
 
+test('T20-testin tab-järjestyksessä ei ole piilotettuja radioita ja vain valittu palaute on esillä', async ({ page }) => {
+  await page.setViewportSize({ width: 1000, height: 900 });
+  await openLesson(page, 'kurssi', '20');
+  const hiddenFocusable = await page.evaluate(() => {
+    const wrap = document.querySelector('.l20q-wrap');
+    return [...wrap.querySelectorAll('input,button')].filter(el => el.closest('[hidden]') && el.tabIndex >= 0 && !el.disabled)
+      .filter(el => el.offsetParent !== null).length;
+  });
+  expect(hiddenFocusable, 'piilotetut fokusoitavat').toBe(0);
+  const reachable = await page.evaluate(() => {
+    const wrap = document.querySelector('.l20q-wrap');
+    return [...wrap.querySelectorAll('input')].filter(el => el.closest('[hidden]') === null).map(el => el.name);
+  });
+  expect(new Set(reachable).size, 'vain aktiivisen kierroksen radiot').toBe(1);
+  expect(await page.locator('.l20q-fb:visible').count()).toBe(0);
+  await page.locator('label[for="l20q-1b"]').click();
+  expect(await page.locator('.l20q-fb:visible').count()).toBe(1);
+});
+
+test('animaatio-ohjaimet vain data-once-kuvioilla, ei interaktiivisissa, piilossa mobiilikortin alla', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.setViewportSize({ width: 1000, height: 900 });
+  await openLesson(page, 'kurssi', '20');
+  await expect(page.locator('.ai-demo[data-demo-kind="static"] .ai-demo__ctrl .ad-restart')).toHaveCount(1);
+  await expect(page.locator('.ai-demo[data-demo-kind="interactive"] .ai-demo__ctrl')).toHaveCount(0);
+  await openLesson(page, 'kurssi', '05'); // vanha silmukkakuvio ilman data-oncea
+  await expect(page.locator('.ai-demo__ctrl')).toHaveCount(0);
+  await openLesson(page, 'kurssi', '13');
+  await expect(page.locator('.ai-demo__ctrl')).toHaveCount(1);
+  await page.setViewportSize({ width: 480, height: 900 });
+  await expect(page.locator('.ai-demo[data-demo-kind="static"] .ai-demo__ctrl')).toBeHidden();
+  await expect(page.locator('.ai-demo__mobile-model')).toBeVisible();
+});
+
 test('axe ei löydä vakavia tai kriittisiä rikkeitä sitemapin kaikilta 96 julkiselta sivulta', async ({ page }) => {
   const sitemap = readFileSync(new URL('../../sitemap.xml', import.meta.url), 'utf8');
-  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname);
-  expect(urls).toHaveLength(96);
+  const allUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname);
+  expect(allUrls).toHaveLength(96);
+  const start = Number(process.env.AXE_START || 0);
+  const count = Number(process.env.AXE_COUNT || allUrls.length);
+  const urls = allUrls.slice(start, start + count);
   for (const url of urls) {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(url);

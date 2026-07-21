@@ -298,7 +298,7 @@ _DEMO_MOBILE_MODELS = {
                               'Lisäksi: keskustelun eteneminen · rooli ja äänensävy · rajat, joilla on ovi — tietotarpeet erilliseen korttiin',
                               'Kaikki kuusi kohtaa valmiina → vasta sitten prompti']),
     'lesson-15-01': ('compare', ['ILMAN ENNAKKOEHTOA: läpäisyehto siirtyy vastauksen luo → kaikki ”läpäisee”',
-                              'LUKITTU ENNEN: sama vastaus jää vajaaksi → aukko paljastuu (esim. puuttuvaa hintaa ei saa arvata)',
+                              'ENNALTA LUKITTU LÄPÄISYEHTO: sama vastaus jää vajaaksi → aukko paljastuu (esim. puuttuvaa hintaa ei saa arvata)',
                               'Hylkäys on tietoa — vain lukittu odotus paljastaa aukon']),
     'lesson-16-01': ('loop', ['Sama sykli joka välineellä: tavoite → kriteerit → V1 → havainto → 1 muutos → V2 → vastuullisuustarkistus → julkaise tai hylkää',
                               'KUVA: kohde hukkui taustaan → sommittelu tarkennettu · ÄÄNI: puhe peittyi → voimakkuussuhde muutettu',
@@ -314,8 +314,8 @@ _DEMO_MOBILE_MODELS = {
                                 'Kustannuksen kaksi ulottuvuutta: rakentaminen ja ylläpito + ihmistyö tapausta kohti — monimutkaisempi ei ole automaattisesti parempi']),
     'lesson-21-01': ('layers', ['KONTEKSTI rajaa sen, mitä malli näkee nyt — vanhin viesti putoaa ikkunasta pois',
                                 'PITKÄKESTOINEN MUISTI tuo aiempaa tietoa kontekstiin — osuvuus tarkistetaan: eri laitteen tulos hylätään',
-                                'TILA kertoo, missä vaiheessa prosessi on — ikkuna unohtaa, tila muistaa',
-                                'Eri tehtävät, ei kolme samanlaista muistia — pysyvät periaatteet ovat sääntöjä, eivät muistia']),
+                                'TILA kertoo, missä vaiheessa prosessi on — konteksti rajaa nykyhetken, tila kertoo prosessin vaiheen',
+                                'Eri tehtävät, ei kolme samanlaista muistia — minimimuisti: vain tarpeellinen, säilytysaika ja poistoehto kirjataan; periaatteet ovat sääntöjä, eivät muistia']),
     'lesson-22-01': ('flow', ['Käyttäjän tarve', 'Agentti valitsee sallitun työkalun',
                               'Rakenteinen kutsu ja minimioikeudet', 'Työkalu palauttaa tuloksen tai virheen', 'Agentti vastaa tuloksen perusteella']),
     'lesson-23-01': ('loop', ['Lyhyt päätösperustelu', 'Rakenteinen työkalukutsu', 'Havainto tai virhe',
@@ -373,10 +373,11 @@ def annotate_demos(html, lid):
         demo_id = id_match.group(1)
         relation, nodes = _DEMO_MOBILE_MODELS[demo_id]
         rendered_nodes = [f'<li class="ai-demo__mobile-node">{node}</li>' for node in nodes]
+        list_tag = 'ul' if relation in ('compare', 'layers', 'axes') else 'ol'
         mobile = (
             f'<div class="ai-demo__mobile-model ai-demo__mobile-model--{relation}">'
             '<span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span>'
-            f'<ol class="ai-demo__mobile-steps">{"".join(rendered_nodes)}</ol></div>')
+            f'<{list_tag} class="ai-demo__mobile-steps">{"".join(rendered_nodes)}</{list_tag}></div>')
         return re.sub(r'(<div class="ai-demo__stage ai-demo__viewport"[^>]*>)',
                       r'\1' + mobile, figure_html, count=1)
 

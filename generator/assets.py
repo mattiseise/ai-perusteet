@@ -359,19 +359,37 @@ function initDemoKeyboard(){document.querySelectorAll('.ai-demo[data-demo-kind="
 function initL20Quiz(){
   var wrap=document.querySelector('.l20q-wrap');if(!wrap)return;
   var rounds=[1,2,3].map(function(i){return wrap.querySelector('.l20q-round.r'+i);});
+  var prog=wrap.querySelector('.l20q-prog');
   var live=document.createElement('span');live.className='sr-only';live.setAttribute('role','status');live.setAttribute('aria-live','polite');wrap.appendChild(live);
-  function activeIdx(){var s3=document.getElementById('l20q-s3'),s2=document.getElementById('l20q-s2');
-    if(s3&&s3.checked)return 3;if(s2&&s2.checked)return 2;return 1;}
-  function syncRounds(focusHeading){var a=activeIdx();
-    rounds.forEach(function(r,ix){if(!r)return;if(ix+1===a){r.removeAttribute('hidden');}else{r.setAttribute('hidden','');}});
-    if(focusHeading){var sc=rounds[a-1]&&rounds[a-1].querySelector('.l20q-sc');
-      if(sc){sc.tabIndex=-1;sc.focus();}}}
-  ['l20q-s1','l20q-s2','l20q-s3'].forEach(function(id){var el=document.getElementById(id);
-    if(el)el.addEventListener('change',function(){syncRounds(true);});});
-  var FB={'l20q-1a':'f1a','l20q-1b':'f1b','l20q-1c':'f1c','l20q-2a':'f2a','l20q-2b':'f2b','l20q-2c':'f2c','l20q-3a':'f3a','l20q-3b':'f3b','l20q-3c':'f3c'};
-  Object.keys(FB).forEach(function(id){var el=document.getElementById(id);if(!el)return;
-    el.addEventListener('change',function(){var fb=wrap.querySelector('.l20q-fb.'+FB[id]);if(fb){live.textContent=fb.textContent;}});});
-  syncRounds(false);
+  function show(i,focus){
+    rounds.forEach(function(r,ix){if(!r)return;if(ix+1===i){r.removeAttribute('hidden');}else{r.setAttribute('hidden','');}});
+    if(prog)prog.textContent='tilanne '+i+'/3';
+    live.textContent='';
+    if(focus){var sc=rounds[i-1]&&rounds[i-1].querySelector('.l20q-sc');if(sc)sc.focus();}
+  }
+  rounds.forEach(function(r,ix){
+    if(!r)return;
+    var btn=r.querySelector('.l20q-next');
+    r.querySelectorAll('.l20q-in').forEach(function(inp){
+      inp.addEventListener('change',function(){
+        if(btn)btn.disabled=false;
+        var lab=r.querySelector('label[for="'+inp.id+'"]');
+        var cls=inp.id.replace('l20q-','f');
+        var fb=r.querySelector('.l20q-fb.'+cls);
+        live.textContent=fb?fb.textContent:'';
+      });
+    });
+    if(btn)btn.addEventListener('click',function(){
+      if(btn.classList.contains('l20q-restart')){
+        wrap.querySelectorAll('.l20q-in').forEach(function(inp){inp.checked=false;});
+        rounds.forEach(function(rr){var b=rr&&rr.querySelector('.l20q-next');if(b)b.disabled=true;});
+        show(1,true);
+      }else{
+        show(ix+2,true);
+      }
+    });
+  });
+  show(1,false);
 }
 function initScrollableRegions(){document.querySelectorAll('.panel table').forEach(function(table){table.tabIndex=0;});}
 function tabFromHash(){
@@ -490,12 +508,12 @@ var __fitT; function fitAiDemosDebounced(){clearTimeout(__fitT);__fitT=setTimeou
 function adSetPaused(fig,paused){
   fig.classList.toggle('ad-paused',paused);
   var b=fig.querySelector('.ad-toggle');
-  if(b&&!b.disabled){b.setAttribute('aria-pressed',paused?'true':'false');b.textContent=paused?'Jatka':'Pysäytä';}
+  if(b&&!b.disabled){b.textContent=paused?'Jatka':'Pysäytä';}
 }
 function adEnd(fig){
   fig.classList.add('ad-ended');
   var b=fig.querySelector('.ad-toggle');
-  if(b){b.disabled=true;b.textContent='Valmis';b.removeAttribute('aria-pressed');}
+  if(b){b.disabled=true;b.textContent='Valmis';}
 }
 function adArmEnd(fig){
   if(!fig.querySelector('[data-once]'))return;
@@ -528,12 +546,11 @@ function initDemoCtrls(){
   },{threshold:0.3}):null;
   for(var i=0;i<figs.length;i++){(function(fig){
     var st=fig.querySelector('.ai-demo__stage');if(!st)return;
-    var anim=false,els=st.querySelectorAll('*');
-    for(var j=0;j<els.length&&!anim;j++){if(getComputedStyle(els[j]).animationName!=='none')anim=true;}
-    if(!anim)return;
+    if(!fig.querySelector('[data-once]'))return;
+    if(fig.getAttribute('data-demo-kind')==='interactive')return;
     var bar=document.createElement('div');bar.className='ai-demo__ctrl';
     var tg=document.createElement('button');tg.type='button';tg.className='ad-btn ad-toggle';
-    tg.setAttribute('aria-pressed','true');tg.textContent='Jatka';
+    tg.textContent='Jatka';
     var rs=document.createElement('button');rs.type='button';rs.className='ad-btn ad-restart';rs.textContent='Toista alusta';
     bar.appendChild(tg);bar.appendChild(rs);
     var cap=fig.querySelector('figcaption');

@@ -1,18 +1,70 @@
 {
-  "expectedDemoCount": 26,
-  "views": ["kurssi", "luokka"],
-  "widths": [320, 375, 390, 430, 768],
-  "landscape": { "width": 844, "height": 390 },
+  "expectedDemoCount": 27,
+  "views": [
+    "kurssi",
+    "luokka"
+  ],
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    431,
+    480,
+    600,
+    680,
+    768
+  ],
+  "landscape": {
+    "width": 844,
+    "height": 390
+  },
   "static": [
-    "lesson-01-01", "lesson-02-01", "lesson-03-01", "lesson-04-01", "lesson-05-01",
-    "lesson-06-01", "lesson-08-01", "lesson-10-01", "lesson-11-01", "lesson-12-01",
-    "lesson-13-01", "lesson-14-01", "lesson-15-01", "lesson-16-01", "lesson-17-01",
-    "lesson-19-01", "lesson-20-01", "lesson-21-01", "lesson-22-01", "lesson-23-01",
-    "lesson-24-02", "lesson-25-01", "lesson-26-01"
+    "lesson-01-01",
+    "lesson-02-01",
+    "lesson-02-02",
+    "lesson-03-01",
+    "lesson-04-01",
+    "lesson-05-01",
+    "lesson-06-01",
+    "lesson-08-01",
+    "lesson-10-01",
+    "lesson-11-01",
+    "lesson-12-01",
+    "lesson-13-01",
+    "lesson-14-01",
+    "lesson-15-01",
+    "lesson-16-01",
+    "lesson-17-01",
+    "lesson-19-01",
+    "lesson-20-01",
+    "lesson-21-01",
+    "lesson-22-01",
+    "lesson-23-01",
+    "lesson-24-02",
+    "lesson-25-01",
+    "lesson-26-01"
   ],
   "interactive": {
-    "lesson-07-01": ["initial", "correct", "incorrect", "next", "restart"],
-    "lesson-20-02": ["initial", "correct", "incorrect", "next", "restart"],
-    "lesson-24-01": ["initial", "correct", "incorrect", "feedback"]
+    "lesson-07-01": [
+      "initial",
+      "correct",
+      "incorrect",
+      "next",
+      "restart"
+    ],
+    "lesson-20-02": [
+      "initial",
+      "correct",
+      "incorrect",
+      "next",
+      "restart"
+    ],
+    "lesson-24-01": [
+      "initial",
+      "correct",
+      "incorrect",
+      "feedback"
+    ]
   }
 }

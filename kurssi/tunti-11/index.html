@@ -44,7 +44,7 @@
 <li><strong>Mihin muihin järjestelmiin palvelu on yhteydessä?</strong> Voiko aineisto siirtyä esimerkiksi hakupalveluun, tiedostovarastoon tai toiseen rajapintaan?</li>
 </ol>
 <figure class="ai-demo" data-demo-id="lesson-11-01" data-demo-kind="static"><span class="ai-demo__tag ai-demo__title" id="l11-t"><i aria-hidden="true">// </i>sama tiedosto — kolme reittiä, ja mitä kustakin jää jäljelle</span>
-<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:364px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ol class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">AINEISTON LUONNE ensin: julkinen · sisäinen · henkilötieto · erityissuoja</li><li class="ai-demo__mobile-node">PILVIPALVELU: ylittää verkon rajan — kopio voi säilyä, tarkista ehdot</li><li class="ai-demo__mobile-node">ORGANISAATION PALVELU: ylittää rajan — sopimus ja ohjeet määrittävät</li><li class="ai-demo__mobile-node">PAIKALLINEN AJO: voi pysyä laitteella, jos työkalu ei lähetä sitä ulos — tarkista yhteydet, telemetria, päivitykset</li><li class="ai-demo__mobile-node">Käyttöpäätös = aineiston luonne + datan reitti + palvelun ehdot</li></ol></div>
+<div class="ai-demo__stage ai-demo__viewport" style="display:flex;align-items:center;justify-content:center;height:404px"><div class="ai-demo__mobile-model ai-demo__mobile-model--compare"><span class="ai-demo__mobile-kicker">KUVION MOBIILIESITYS</span><ul class="ai-demo__mobile-steps"><li class="ai-demo__mobile-node">AINEISTON LUONNE ensin: julkinen · sisäinen · henkilötieto · erityissuoja</li><li class="ai-demo__mobile-node">PILVIPALVELU: ylittää verkon rajan — kopio voi säilyä, tarkista ehdot</li><li class="ai-demo__mobile-node">ORGANISAATION PALVELU: ylittää rajan — sopimus ja ohjeet määrittävät</li><li class="ai-demo__mobile-node">PAIKALLINEN AJO: voi pysyä laitteella, jos työkalu ei lähetä sitä ulos — tarkista yhteydet, telemetria, päivitykset</li><li class="ai-demo__mobile-node">Käyttöpäätös = aineiston luonne + datan reitti + palvelun ehdot</li></ul></div>
   <div class="l11-wrap" data-once role="img" aria-labelledby="l11-t" aria-describedby="l11-d">
     <span class="sr-only" id="l11-d">Ensin tunnistetaan aineiston luonne — esimerkkitiedosto sisältää henkilötietoa. Pilveen lähetetty kopio ylittää verkon rajan ja kopio voi säilyä; organisaation palvelussa sopimus määrittää käsittelyn; paikallisessa ajossa aineisto voi pysyä laitteella, jos työkalu ei lähetä sitä ulos — tarkista yhteydet, telemetria ja päivitykset. Käyttöpäätös on aineiston luonne, datan reitti ja palvelun ehdot yhdessä.</span>
     <span class="l11-nat"><i>aineiston luonne:</i><b class="n1">julkinen</b><b class="n2">sisäinen</b><b class="n3 hot">henkilötieto</b><b class="n4">erityissuoja</b></span>
@@ -52,45 +52,48 @@
       <span class="l11-file">palaute.txt · henkilötietoa</span>
       <div class="l11-loc"><i class="l11-ph phl">PAIKALLINEN AJO</i>
         <span class="l11-ll">voi pysyä laitteella, jos työkalu ei lähetä sitä ulos</span>
-        <span class="l11-lw">tarkista: yhteydet, telemetria, päivitykset</span></div></div>
+        <span class="l11-lw">tarkista: yhteydet, telemetria, päivitykset</span>
+        <b class="l11-dc dc3">päätös: käytä tarkistusten jälkeen</b></div></div>
     <i class="l11-bnd"></i><i class="l11-bfl f1"></i><i class="l11-bfl f2"></i>
     <span class="l11-bl">verkon raja</span>
     <div class="l11-tp t1"><i class="l11-ph phc">YLEINEN PILVIPALVELU</i>
       <span class="l11-gh g1">palaute.txt</span>
       <span class="l11-tl w1">kopio voi säilyä?</span>
-      <em class="l11-tb b1">» tarkista ehdot ja asetukset</em></div>
+      <em class="l11-tb b1">» tarkista ehdot ja asetukset</em>
+      <b class="l11-dc dc1">päätös: älä käytä ilman ehtojen tarkistusta</b></div>
     <div class="l11-tp t2"><i class="l11-ph pho">ORGANISAATION PALVELU</i>
       <span class="l11-gh g2">palaute.txt</span>
       <span class="l11-tl w2">hallittu ympäristö</span>
-      <em class="l11-tb b2">» sopimus ja ohjeet määrittävät</em></div>
+      <em class="l11-tb b2">» sopimus ja ohjeet määrittävät</em>
+      <b class="l11-dc dc2">päätös: käytä rajatusti sopimuksen mukaan</b></div>
     <span class="l11-mv m1">palaute.txt</span>
     <span class="l11-mv m2">palaute.txt</span>
     <span class="l11-mv m3">palaute.txt</span>
     <span class="l11-syn">käyttöpäätös = aineiston luonne + datan reitti + palvelun ehdot</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Käyttöpäätös luetaan kolmesta asiasta yhdessä: aineiston luonteesta, datan reitistä ja palvelun ehdoista. Pilvessä kopio voi säilyä vastauksen jälkeenkin, organisaation palvelussa sopimus määrittää — ja paikallisessakin ajossa aineisto pysyy laitteella vain, jos työkalu ei lähetä sitä ulos.</figcaption></figure>
+<figcaption class="ai-demo__cap">Käyttöpäätös luetaan kolmesta asiasta yhdessä: aineiston luonteesta, datan reitistä ja palvelun ehdoista — ja lopputulos on päätös: käytä, käytä rajatusti tai älä käytä. Pilvessä kopio voi säilyä vastauksen jälkeenkin, organisaation palvelussa sopimus määrittää — ja paikallisessakin ajossa aineisto pysyy laitteella vain, jos työkalu ei lähetä sitä ulos.</figcaption></figure>
 <style>
-.l11-wrap{position:relative;width:560px;height:348px;font-family:var(--font-mono);animation:l11w 21s 1 forwards}
+.l11-wrap{position:relative;width:560px;height:388px;font-family:var(--font-mono);animation:l11w 21s 1 forwards}
 .l11-ph{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.04em;color:#EAEEF8}
 .l11-ph.phl{color:#7FD0A8}.l11-ph.phc{color:#FFD79A}.l11-ph.pho{color:#C9B7F1}
 .l11-nat{position:absolute;left:0;top:0;width:560px;display:flex;align-items:center;gap:6px}
 .l11-nat i{font-style:normal;font-size:12px;color:#B9C2DA}
 .l11-nat b{font-size:12px;font-weight:400;color:#B9C2DA;border:1px solid #2B3552;border-radius:999px;padding:2px 9px}
 .l11-nat b.hot{font-weight:700;color:#06212A;background:#46C7CF;border-color:#46C7CF;animation:l11hot 21s 1 forwards}
-.l11-dev{position:absolute;left:2px;top:34px;width:206px;height:276px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 11px}
+.l11-dev{position:absolute;left:2px;top:34px;width:206px;height:312px;box-sizing:border-box;background:#11182A;border:1px solid #2B3552;border-radius:12px;padding:9px 11px}
 .l11-file{display:inline-block;margin-top:8px;font-size:12px;line-height:1.25;color:#06212A;background:#46C7CF;border-radius:7px;padding:4px 8px;animation:l11file 21s 1 forwards}
-.l11-loc{position:absolute;left:10px;bottom:10px;width:184px;height:136px;box-sizing:border-box;border:1.5px solid #7FD0A8;border-radius:10px;padding:8px 9px;background:#0E1524}
+.l11-loc{position:absolute;left:10px;bottom:10px;width:184px;height:170px;box-sizing:border-box;border:1.5px solid #7FD0A8;border-radius:10px;padding:8px 9px;background:#0E1524}
 .l11-ll{display:block;margin-top:8px;font-size:12px;line-height:1.3;color:#7FD0A8;opacity:0;animation:l11ll 21s 1 forwards}
 .l11-lw{display:block;margin-top:7px;font-size:12px;line-height:1.3;color:#FFD79A;opacity:0;animation:l11lw 21s 1 forwards}
-.l11-bnd{position:absolute;left:236px;top:34px;height:276px;width:0;border-left:2px dashed #7E88A8}
-.l11-bfl{position:absolute;left:230px;top:34px;height:276px;width:12px;background:radial-gradient(50% 50% at 50% 50%,rgba(255,215,154,.5),transparent);opacity:0}
+.l11-bnd{position:absolute;left:236px;top:34px;height:312px;width:0;border-left:2px dashed #7E88A8}
+.l11-bfl{position:absolute;left:230px;top:34px;height:312px;width:12px;background:radial-gradient(50% 50% at 50% 50%,rgba(255,215,154,.5),transparent);opacity:0}
 .l11-bfl.f1{animation:l11f1 21s 1 forwards}
 .l11-bfl.f2{animation:l11f2 21s 1 forwards}
-.l11-bl{position:absolute;left:180px;top:312px;width:112px;text-align:center;font-size:12px;color:#B9C2DA}
-.l11-tp{position:absolute;left:262px;width:296px;height:132px;box-sizing:border-box;background:#11182A;border-radius:12px;padding:9px 11px}
+.l11-bl{position:absolute;left:180px;top:350px;width:112px;text-align:center;font-size:12px;color:#B9C2DA}
+.l11-tp{position:absolute;left:262px;width:296px;height:152px;box-sizing:border-box;background:#11182A;border-radius:12px;padding:9px 11px}
 .l11-tp.t1{top:34px;border:1.5px solid rgba(255,215,154,.55)}
-.l11-tp.t2{top:178px;border:1.5px solid rgba(201,183,241,.55)}
+.l11-tp.t2{top:192px;border:1.5px solid rgba(201,183,241,.55)}
 .l11-gh{display:inline-block;margin-top:7px;font-size:12px;color:#46C7CF;border:1.5px dashed #46C7CF;border-radius:7px;padding:3px 8px;opacity:0}
 .l11-gh.g1{animation:l11g1 21s 1 forwards}
 .l11-gh.g2{animation:l11g2 21s 1 forwards}
@@ -104,7 +107,11 @@
 .l11-mv.m1{animation:l11m1 21s 1 forwards}
 .l11-mv.m2{animation:l11m2 21s 1 forwards}
 .l11-mv.m3{animation:l11m3 21s 1 forwards}
-.l11-syn{position:absolute;left:0;top:330px;width:560px;text-align:center;font-size:12.5px;font-weight:600;color:#FFD79A;opacity:0;animation:l11syn 21s 1 forwards}
+.l11-dc{display:block;margin-top:6px;font-size:12px;line-height:1.25;font-weight:700;opacity:0}
+.l11-dc.dc1{color:#FFD79A;animation:l11dc 21s 1 forwards}
+.l11-dc.dc2{color:#C9B7F1;animation:l11dc 21s 1 forwards}
+.l11-dc.dc3{color:#7FD0A8;animation:l11dc 21s 1 forwards}
+.l11-syn{position:absolute;left:0;top:368px;width:560px;text-align:center;font-size:12.5px;font-weight:600;color:#FFD79A;opacity:0;animation:l11syn 21s 1 forwards}
 @keyframes l11w{0%{opacity:0}3%{opacity:1}100%{opacity:1}}
 @keyframes l11hot{0%,3%{transform:scale(1)}5%{transform:scale(1.12)}7%,100%{transform:scale(1)}}
 @keyframes l11file{0%,6%{transform:scale(1)}8%{transform:scale(1.1)}10%,100%{transform:scale(1)}}
@@ -122,9 +129,10 @@
 @keyframes l11ll{0%,80%{opacity:0}84%,100%{opacity:1}}
 @keyframes l11lw{0%,85%{opacity:0}89%,100%{opacity:1}}
 @keyframes l11syn{0%,90%{opacity:0}94%,100%{opacity:1}}
+@keyframes l11dc{0%,90%{opacity:0}94%,100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){
   .l11-wrap,.l11-wrap *{animation:none!important}
-  .l11-wrap,.l11-tl,.l11-tb,.l11-ll,.l11-lw,.l11-syn{opacity:1}
+  .l11-wrap,.l11-tl,.l11-tb,.l11-ll,.l11-lw,.l11-syn,.l11-dc{opacity:1}
   .l11-gh{opacity:.55}
   .l11-mv{opacity:0}
 }

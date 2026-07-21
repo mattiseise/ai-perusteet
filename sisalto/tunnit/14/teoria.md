@@ -35,7 +35,7 @@ Määrittely on lupaus tulevasta toiminnasta. Se kertoo, ketä autetaan, missä 
       <span class="l14-dr d5"><b class="bx x5"></b>Rooli ja äänensävy</span>
       <span class="l14-dr d6"><b class="bx x6"></b>Rajat ja seuraava askel</span>
       <span class="l14-fin"><i>VALMIS — EI VIELÄ PROMPTI</i></span></div>
-    <span class="l14-info"><b>TIETOTARPEET · erillinen kortti:</b> säännöt ja hinnat · aikataulut · yhteyshenkilö — vain hyväksytyt lähteet</span>
+    <span class="l14-info"><b>TIETOTARPEET · erillinen kortti:</b> säännöt ja varusteet · aikataulut · yhteyshenkilö — vain hyväksytyt lähteet</span>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Määrittely on tarkentumista: käyttäjä, tehtävä, havaittava onnistuminen, keskustelun eteneminen, rooli ja äänensävy sekä rajat, joilla on ovi — ei seinää. Tietotarpeet kirjataan erilliseen korttiin. Prompti kirjoitetaan vasta, kun määrittelyn kaikki kohdat ovat valmiit.</figcaption></figure>

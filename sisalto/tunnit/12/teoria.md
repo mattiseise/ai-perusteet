@@ -17,7 +17,7 @@ Ajattele korttia työohjeena, jonka toinenkin ihminen voisi ottaa käyttöön. P
 <figure class="ai-demo"><span class="ai-demo__tag" id="l12-t"><i aria-hidden="true">// </i>sama koe — yksi nimetty muutos kerrallaan</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:332px">
   <div class="l12-wrap" data-once role="img" aria-labelledby="l12-t" aria-describedby="l12-d">
-    <span class="sr-only" id="l12-d">Kriteerit lukitaan ennen ajoa, korttiin tehdään yksi nimetty muutos ja sama aineisto ajetaan uudelleen — juuri se kriteeri kääntyy.</span>
+    <span class="sr-only" id="l12-d">Kriteerit lukitaan ennen ajoa, korttiin tehdään yksi nimetty muutos ja sama aineisto ajetaan uudelleen. Juuri se kriteeri kääntyy hyväksytyksi — muutos on tässä ajossa eron todennäköinen selitys, mutta yksi vertailupari ei todista syytä, joten koe toistetaan toisella vastaavalla aineistolla.</span>
     <div class="l12-card"><i class="l12-ph">PROMPTIKORTTI</i>
       <span class="l12-ln"><i class="l12-bar"></i>tehtävä</span>
       <span class="l12-ln"><i class="l12-bar"></i>vastausmuoto</span>

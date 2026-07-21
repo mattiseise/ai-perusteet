@@ -21,9 +21,9 @@ Käytännössä konteksti-ikkunan koko on kompromissi. Mitä suurempi ikkuna on,
 Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkitys omissa agenteissasi. Neuvonta-agentissa, joka käsittelee pitkiä keskusteluketjuja, saatat tarvita 100–200 viestin ikkunan, jotta riittävä historia säilyy mukana. Transaktioagentissa, joka ratkaisee nopeita kysymyksiä, kuten ”Mikä on hinta?”, 20–30 viestiä voi riittää. Järkevä valinta riippuu siitä, **mitä agentin täytyy muistaa tehtävän ratkaisemiseksi**.
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l21-t"><i aria-hidden="true">// </i>konteksti, pitkäkestoinen muisti ja tila — eri tehtävät, yksi asiakaspyyntö</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:416px">
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:480px">
   <div class="l21-wrap" data-once role="img" aria-labelledby="l21-t" aria-describedby="l21-d">
-    <span class="sr-only" id="l21-d">Konteksti rajaa sen, mitä malli näkee nyt: vanhin viesti putoaa ikkunasta pois. Pitkäkestoinen muisti tuo aiempaa tietoa nykyiseen kontekstiin — haku osuu merkityksen perusteella, ja osuvuus tarkistetaan: samankaltainen mutta eri laitetta koskeva tulos hylätään. Tila kertoo, missä vaiheessa prosessi on: se säilyy, vaikka ikkuna unohtaa. Pysyvät periaatteet ovat sääntöjä, eivät muistia.</span>
+    <span class="sr-only" id="l21-d">Konteksti rajaa sen, mitä malli näkee nyt: vanhin viesti putoaa ikkunasta pois. Pitkäkestoinen muisti tuo aiempaa tietoa nykyiseen kontekstiin — haku osuu merkityksen perusteella, ja osuvuus tarkistetaan: samankaltainen mutta eri laitetta koskeva tulos hylätään. Tila kertoo, missä vaiheessa prosessi on: konteksti rajaa nykyhetken, tila kertoo vaiheen. Muistiin talletetaan vain tarpeellinen, ja säilytysaika ja poistoehto kirjataan. Pysyvät periaatteet ovat sääntöjä, eivät muistia.</span>
     <span class="l21-hd">ASIAKASPALVELUAGENTTI · YKSI PYYNTÖ</span>
     <span class="l21-fz f1">vaihe 1/3 · asiakas kertoo</span>
     <span class="l21-fz f2">vaihe 2/3 · haku muistista</span>
@@ -48,17 +48,18 @@ Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkity
       <em class="l21-pt">missä vaiheessa prosessi on</em>
       <span class="l21-r">vaihe: <u class="l21-vv"><b class="l21-va">kartoitus</b><b class="l21-vb">ratkaisu käynnissä</b></u></span>
       <span class="l21-r">yritys: <u class="l21-vv"><b class="l21-ya">1/3</b><b class="l21-yb">2/3</b></u></span>
-      <span class="l21-r">eskalointi: <b>ei</b></span>
-      <span class="l21-ct">ikkuna unohtaa — tila muistaa</span></div>
+      <span class="l21-r">eskalointi: <b>ei</b></span></div>
     <span class="l21-q">se muistijuttu taas?</span>
+    <span class="l21-ct">konteksti rajaa nykyhetken — tila kertoo prosessin vaiheen</span>
+    <span class="l21-min">minimimuisti: talleta vain tarpeellinen · peruste ja säilytysaika kirjataan · poisto pyynnöstä tai vanhentuessa</span>
     <i class="l21-cv v1"></i><i class="l21-cv v2"></i><i class="l21-cv v3"></i>
     <span class="l21-dec">ehdota ratkaisua B<em>jos ei auta → ihmiselle</em></span>
     <span class="l21-pr">PYSYVÄT PERIAATTEET — sääntöjä, eivät muistia · esim. ”ei salasanoja muistiin”</span>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Konteksti rajaa sen, mitä malli näkee nyt. Pitkäkestoinen muisti tuo aiempaa tietoa nykyiseen kontekstiin — ja haun osuvuus tarkistetaan ennen käyttöä: samankaltainen mutta eri laitetta koskeva tulos hylätään. Tila kertoo, missä vaiheessa prosessi on. Nämä ovat eri tehtäviä, eivät kolme samanlaista muistia — ja pysyvät periaatteet ovat sääntöjä, eivät muistia.</figcaption></figure>
+<figcaption class="ai-demo__cap">Konteksti rajaa sen, mitä malli näkee nyt. Pitkäkestoinen muisti tuo aiempaa tietoa nykyiseen kontekstiin — ja haun osuvuus tarkistetaan ennen käyttöä: samankaltainen mutta eri laitetta koskeva tulos hylätään. Tila kertoo, missä vaiheessa prosessi on. Nämä ovat eri tehtäviä, eivät kolme samanlaista muistia. Muistiin talletetaan vain tarpeellinen perustein, säilytysajoin ja poistoehdoin — ja pysyvät periaatteet ovat sääntöjä, eivät muistia.</figcaption></figure>
 <style>
-.l21-wrap{position:relative;width:560px;height:400px;font-family:var(--font-mono);animation:l21w 21s 1 forwards}
+.l21-wrap{position:relative;width:560px;height:464px;font-family:var(--font-mono);animation:l21w 21s 1 forwards}
 .l21-hd{position:absolute;left:0;top:4px;font-size:12px;font-weight:700;letter-spacing:.04em;color:#EAEEF8}
 .l21-fz{position:absolute;right:0;top:0;font-size:12px;font-weight:700;color:#06212A;background:#46C7CF;border-radius:999px;padding:4px 10px;opacity:0}
 .l21-fz.f1{animation:l21f1 21s 1 forwards}
@@ -82,13 +83,13 @@ Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkity
 .l21-c.c6{top:152px;animation:l21c6 21s 1 forwards}
 .l21-ov{position:absolute;left:9px;bottom:24px;font-size:12px;font-weight:700;color:#FFD79A;opacity:0;animation:l21o1 21s 1 forwards}
 .l21-k{position:absolute;left:9px;width:160px;box-sizing:border-box;font-size:12px;line-height:1.25;color:#EAEEF8;background:#0E1524;border:1px solid #2B3552;border-radius:8px;padding:6px 8px}
-.l21-k.k1{top:56px;animation:l21k1 21s 1 forwards}
-.l21-k.k2{top:102px;animation:l21k2 21s 1 forwards}
-.l21-gate{position:absolute;left:9px;top:148px;width:160px;box-sizing:border-box;font-size:12px;line-height:1.25;color:#B9C2DA;border:1px dashed #4A5677;border-radius:8px;padding:5px 5px;opacity:0;animation:l21gt 21s 1 forwards}
+.l21-k.k1{top:54px;animation:l21k1 21s 1 forwards}
+.l21-k.k2{top:130px;animation:l21k2 21s 1 forwards}
+.l21-gate{position:absolute;left:9px;top:172px;width:160px;box-sizing:border-box;font-size:12px;line-height:1.25;color:#B9C2DA;border:1px dashed #4A5677;border-radius:8px;padding:5px 5px;opacity:0;animation:l21gt 21s 1 forwards}
 .l21-gate b{display:block;font-weight:700;opacity:0}
 .l21-gate .gk1{color:#7FD0A8;animation:l21gk1 21s 1 forwards}
 .l21-gate .gk2{color:#FFD79A;animation:l21gk2 21s 1 forwards}
-.l21-sem{position:absolute;left:9px;bottom:8px;font-size:12px;font-weight:700;color:#C9B7F1;opacity:0;animation:l21sem 21s 1 forwards}
+.l21-sem{position:absolute;left:9px;top:100px;width:160px;line-height:1.2;font-size:12px;font-weight:700;color:#C9B7F1;opacity:0;animation:l21sem 21s 1 forwards}
 .l21-r{display:block;margin-top:11px;font-size:12px;color:#B9C2DA}
 .l21-vv{position:relative;display:inline-block;min-width:118px;text-decoration:none}
 .l21-r b{position:relative;font-weight:700;color:#FFD79A}
@@ -96,15 +97,16 @@ Vastuullisena käyttäjänä sinun täytyy ymmärtää konteksti-ikkunan merkity
 .l21-r .l21-vb{position:absolute;left:0;top:0;white-space:nowrap;opacity:0;animation:l21vb 21s 1 forwards}
 .l21-r .l21-ya{animation:l21ya 21s 1 forwards;display:inline-block}
 .l21-r .l21-yb{position:absolute;left:0;top:0;opacity:0;animation:l21yb 21s 1 forwards;display:inline-block}
-.l21-ct{position:absolute;left:9px;bottom:10px;width:160px;font-size:12px;line-height:1.25;font-weight:700;color:#FFD79A;opacity:0;animation:l21ct 21s 1 forwards}
+.l21-ct{position:absolute;left:0;top:290px;width:560px;text-align:center;font-size:12.5px;font-weight:700;color:#FFD79A;opacity:0;animation:l21ct 21s 1 forwards}
+.l21-min{position:absolute;left:0;top:310px;width:560px;text-align:center;font-size:12px;color:#8B94B3}
 .l21-q{position:absolute;left:120px;top:126px;font-size:12px;color:#0B0F1A;background:#46C7CF;border-radius:999px;padding:4px 9px;opacity:0;animation:l21q 21s 1 forwards;white-space:nowrap}
-.l21-cv{position:absolute;top:284px;width:0;height:14px;border-left:2px solid #7E88A8;transform:scaleY(0);transform-origin:top}
+.l21-cv{position:absolute;top:348px;width:0;height:14px;border-left:2px solid #7E88A8;transform:scaleY(0);transform-origin:top}
 .l21-cv.v1{left:88px;animation:l21v1 21s 1 forwards}
 .l21-cv.v2{left:278px;animation:l21v2 21s 1 forwards}
 .l21-cv.v3{left:468px;animation:l21v3 21s 1 forwards}
-.l21-dec{position:absolute;left:160px;top:302px;width:240px;box-sizing:border-box;text-align:center;font-size:12.5px;font-weight:700;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:9px;padding:6px 8px 7px;background:rgba(127,208,168,.07);opacity:0;animation:l21dec 21s 1 forwards}
+.l21-dec{position:absolute;left:160px;top:366px;width:240px;box-sizing:border-box;text-align:center;font-size:12.5px;font-weight:700;color:#7FD0A8;border:1.5px solid #7FD0A8;border-radius:9px;padding:6px 8px 7px;background:rgba(127,208,168,.07);opacity:0;animation:l21dec 21s 1 forwards}
 .l21-dec em{display:block;font-style:normal;font-size:12px;font-weight:400;color:#B9C2DA;margin-top:2px}
-.l21-pr{position:absolute;left:0;top:362px;width:560px;box-sizing:border-box;text-align:center;font-size:12px;line-height:1.3;color:#8B94B3;border:1.5px dashed #4A5677;border-radius:9px;padding:8px 8px}
+.l21-pr{position:absolute;left:0;top:426px;width:560px;box-sizing:border-box;text-align:center;font-size:12px;line-height:1.3;color:#8B94B3;border:1.5px dashed #4A5677;border-radius:9px;padding:8px 8px}
 @keyframes l21w{0%{opacity:0}3%{opacity:1}100%{opacity:1}}
 @keyframes l21f1{0%,2%{opacity:0}4%{opacity:1}31%{opacity:1}33%,100%{opacity:0}}
 @keyframes l21f2{0%,33%{opacity:0}35%{opacity:1}64%{opacity:1}66%,100%{opacity:0}}

@@ -73,8 +73,9 @@ Tämän tunnin ajatus on yksinkertainen: **valitse aineistomuoto sen perusteella
 @keyframes l06chk{0%,90%{opacity:0}94%,100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){
   .l06-wrap,.l06-wrap *{animation:none!important}
-  .l06-wrap,.l06-task.tb,.l06-chip.cb1,.l06-chip.cb2,.l06-log,.l06-syn,.l06-chk{opacity:1}
-  .l06-task.ta{opacity:0}
+  .l06-wrap,.l06-task.ta,.l06-task.tb,.l06-chip.cb1,.l06-chip.cb2,.l06-log,.l06-syn,.l06-chk{opacity:1}
+  .l06-task.ta{left:6px;width:268px;transform:none}
+  .l06-task.tb{left:286px;width:268px;transform:none}
   .l06-chip.ca1,.l06-chip.ca2{opacity:.7}
 }
 </style>

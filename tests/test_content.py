@@ -115,6 +115,17 @@ def main():
         module_page = (ROOT / 'kurssi' / slug / 'index.html').read_text(encoding='utf-8')
         if module_page.count('thinking-path thinking-path--module') != 1:
             fail(f'{slug}: moduulin ajattelukaari puuttuu tai toistuu', errors)
+    # ARIA-viitteet: aria-labelledby/-describedby -kohteiden pitää löytyä samasta figuresta
+    for page in (ROOT / 'kurssi').glob('tunti-*/index.html'):
+        body = page.read_text(encoding='utf-8')
+        for fig_html in re.findall(r'<figure class="ai-demo"[^>]*>.*?</figure>', body, re.S):
+            ids = set(re.findall(r'id="([^"]+)"', fig_html))
+            for attr in ('aria-labelledby', 'aria-describedby'):
+                for ref in re.findall(rf'{attr}="([^"]+)"', fig_html):
+                    for token in ref.split():
+                        if token not in ids:
+                            fail(f'{page.relative_to(ROOT)}: {attr}="{token}" ei löydy samasta figuurista', errors)
+
     css = (ROOT / 'assets' / 'site.css').read_text(encoding='utf-8')
     if re.search(r'\.ai-demo[^\{]*\.ai-demo__stage\s*\{[^}]*display\s*:\s*none', css, re.S):
         fail('ai-demo-stagea ei saa piilottaa mobiilissa', errors)
