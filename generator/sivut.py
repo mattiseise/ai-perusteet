@@ -9,6 +9,12 @@ from . import nakymat as N
 from . import sisalto as S
 
 DOMAIN = 'https://aiperusteet.fi'
+OG_IMAGE_DEFAULT = '/assets/og/aiperusteet-og.png'
+OG_IMAGE_BY_VIEW = {
+    'kurssi': '/assets/og/aiperusteet-og-kurssi.png',
+    'luokka': '/assets/og/aiperusteet-og-luokka.png',
+    'opettaja': '/assets/og/aiperusteet-og-opettaja.png',
+}
 
 FAVICON = ("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22"
            "%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22"
@@ -97,7 +103,7 @@ def _jsonld_html(json_ld):
 
 
 def page_shell(title, description, canonical_path, body, ci=None, include_practice=False,
-               extra_head='', pre_body_script='', og_type='website', json_ld=None):
+               extra_head='', pre_body_script='', og_type='website', json_ld=None, og_image=None):
     """Rakentaa täyden HTML-dokumentin. ci = dict → window.CI inline-config."""
     ci = ci or {}
     ci.setdefault('allIds', N.ALL_IDS)
@@ -105,17 +111,23 @@ def page_shell(title, description, canonical_path, body, ci=None, include_practi
     canonical = DOMAIN + canonical_path
     desc = S.esc_attr(description)
     title_a = S.esc_attr(title)
-    social = (
-        f'<meta property="og:type" content="{og_type}">'
-        f'<meta property="og:site_name" content="{S.esc_attr(SITE_NAME)}">'
-        '<meta property="og:locale" content="fi_FI">'
-        f'<meta property="og:title" content="{title_a}">'
-        f'<meta property="og:description" content="{desc}">'
-        f'<meta property="og:url" content="{canonical}">'
-        '<meta name="twitter:card" content="summary">'
-        f'<meta name="twitter:title" content="{title_a}">'
-        f'<meta name="twitter:description" content="{desc}">'
-    )
+    og_img = DOMAIN + (og_image or OG_IMAGE_DEFAULT)
+    social = '\n'.join((
+        f'<meta property="og:type" content="{og_type}">',
+        f'<meta property="og:site_name" content="{S.esc_attr(SITE_NAME)}">',
+        '<meta property="og:locale" content="fi_FI">',
+        f'<meta property="og:title" content="{title_a}">',
+        f'<meta property="og:description" content="{desc}">',
+        f'<meta property="og:url" content="{canonical}">',
+        f'<meta property="og:image" content="{og_img}">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        f'<meta property="og:image:alt" content="{S.esc_attr(SITE_NAME)} — tekoälyn perusteet -verkkokurssi">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{title_a}">',
+        f'<meta name="twitter:description" content="{desc}">',
+        f'<meta name="twitter:image" content="{og_img}">',
+    ))
     ld_html = _jsonld_html(json_ld)
     scripts = ['<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>']
     if include_practice:
@@ -486,7 +498,7 @@ def build_tunti_page(lesson, view):
     canonical = f'/{view}/tunti-{kansio}/'
     json_ld = _tunti_jsonld(lesson, view, num, canonical, desc)
     return page_shell(title, desc, canonical, body, ci=ci, include_practice=(ptasks is not None),
-                      og_type='article', json_ld=json_ld)
+                      og_type='article', json_ld=json_ld, og_image=OG_IMAGE_BY_VIEW.get(view))
 
 
 def _tunti_jsonld(lesson, view, num, canonical, desc):
@@ -686,7 +698,8 @@ def build_kurssi_overview():
     return page_shell('AI · Perusteet — verkkokurssi',
                       AUDIENCE_PROMISE,
                       '/kurssi/', body,
-                      json_ld=_course_jsonld(f'{DOMAIN}/kurssi/'))
+                      json_ld=_course_jsonld(f'{DOMAIN}/kurssi/'),
+                      og_image=OG_IMAGE_BY_VIEW['kurssi'])
 
 
 def build_kurssi_module(osp):
@@ -725,7 +738,8 @@ def build_kurssi_module(osp):
     )
     return page_shell(f'{osp["title"]} — AI · Perusteet',
                       f'{osp["title"]}: {osp["subtitle"]}. Tekoälyn perusteet -verkkokurssin osa.',
-                      f'/kurssi/{osp["slug"]}/', body)
+                      f'/kurssi/{osp["slug"]}/', body,
+                      og_image=OG_IMAGE_BY_VIEW['kurssi'])
 
 
 # ==================== LUOKKA: INDEKSI ====================
@@ -765,7 +779,7 @@ def build_luokka_index():
     )
     return page_shell('AI · Perusteet — luokkaversio',
                       'Tekoälyn perusteet -kurssin luokkaversio: 27 oppitunnin opiskelijamateriaalit.',
-                      '/luokka/', body)
+                      '/luokka/', body, og_image=OG_IMAGE_BY_VIEW['luokka'])
 
 
 # ==================== LOPPUTYÖSIVUT ====================
@@ -786,7 +800,8 @@ def build_lopputyo_page(osp, view):
     )
     return page_shell(f'Lopputyö — {osp["title"]} — {vm["label"]}',
                       f'{osp["title"]}-osion lopputyön tehtävänanto. {vm["label"]}.',
-                      f'/{view}/{osp["slug"]}/lopputyo/', body)
+                      f'/{view}/{osp["slug"]}/lopputyo/', body,
+                      og_image=OG_IMAGE_BY_VIEW.get(view))
 
 
 # ==================== SANASTO ====================
@@ -928,7 +943,7 @@ def build_opettaja_index():
         )
         return page_shell('Opettajan opas — AI · Perusteet',
                           'Tekoälyn perusteet -kurssin opettajan kurssiopas: toteutus, arviointi ja materiaalit.',
-                          '/opettaja/', body)
+                          '/opettaja/', body, og_image=OG_IMAGE_BY_VIEW['opettaja'])
 
     # Siisti runko (vaihe 4 tuo varsinaisen sisällön)
     mod_lists = []
@@ -966,7 +981,7 @@ def build_opettaja_index():
     return page_shell('Opettajan opas — AI · Perusteet',
                       'Tekoälyn perusteet -kurssin opettajan opas: kurssirakenne, tuntikohtaiset '
                       'materiaalit ja lopputöiden arviointiohjeet.',
-                      '/opettaja/', body)
+                      '/opettaja/', body, og_image=OG_IMAGE_BY_VIEW['opettaja'])
 
 
 def build_opettaja_arviointi():
@@ -999,4 +1014,4 @@ def build_opettaja_arviointi():
     )
     return page_shell('Lopputöiden arviointi — Opettajan opas — AI · Perusteet',
                       'Tekoälyn perusteet -kurssin lopputöiden arviointiohjeet opettajalle.',
-                      '/opettaja/arviointi/', body)
+                      '/opettaja/arviointi/', body, og_image=OG_IMAGE_BY_VIEW['opettaja'])

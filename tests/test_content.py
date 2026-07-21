@@ -4,6 +4,7 @@
 from pathlib import Path
 import json
 import re
+import struct
 import sys
 import yaml
 
@@ -121,6 +122,49 @@ def main():
     for page in (ROOT / 'kurssi' / 'index.html', ROOT / 'kurssi' / 'tunti-19' / 'index.html'):
         if 'Et tarvitse aiempaa ohjelmointiosaamista' not in page.read_text(encoding='utf-8'):
             fail(f'{page.relative_to(ROOT)}: Agentit-osion rauhoittava huomio puuttuu', errors)
+
+    og_images = {
+        'default': 'aiperusteet-og.png',
+        'kurssi': 'aiperusteet-og-kurssi.png',
+        'luokka': 'aiperusteet-og-luokka.png',
+        'opettaja': 'aiperusteet-og-opettaja.png',
+    }
+    for filename in og_images.values():
+        image_path = ROOT / 'assets' / 'og' / filename
+        if not image_path.exists():
+            fail(f'OG-kuva puuttuu: {image_path.relative_to(ROOT)}', errors)
+            continue
+        data = image_path.read_bytes()
+        if not data.startswith(b'\x89PNG\r\n\x1a\n') or len(data) < 24:
+            fail(f'{image_path.relative_to(ROOT)} ei ole kelvollinen PNG', errors)
+            continue
+        width, height = struct.unpack('>II', data[16:24])
+        if (width, height) != (1200, 630):
+            fail(f'{image_path.relative_to(ROOT)}: koko {width}×{height}, odotettiin 1200×630', errors)
+        if len(data) >= 300_000:
+            fail(f'{image_path.relative_to(ROOT)}: tiedostokoko {len(data)} tavua ylittää 300 kB', errors)
+
+    public_pages = [ROOT / 'index.html', ROOT / 'sanasto' / 'index.html']
+    for view in ('kurssi', 'luokka', 'opettaja'):
+        public_pages.extend((ROOT / view).rglob('index.html'))
+    for page in public_pages:
+        rel = page.relative_to(ROOT)
+        view = rel.parts[0] if rel.parts[0] in ('kurssi', 'luokka', 'opettaja') else 'default'
+        image_url = f'https://aiperusteet.fi/assets/og/{og_images[view]}'
+        body = page.read_text(encoding='utf-8')
+        if f'<meta property="og:image" content="{image_url}">' not in body:
+            fail(f'{rel}: väärä tai puuttuva og:image', errors)
+        if f'<meta name="twitter:image" content="{image_url}">' not in body:
+            fail(f'{rel}: väärä tai puuttuva twitter:image', errors)
+        for tag in (
+                '<meta property="og:image:width" content="1200">',
+                '<meta property="og:image:height" content="630">',
+                '<meta property="og:image:alt"',
+                '<meta name="twitter:card" content="summary_large_image">'):
+            if tag not in body:
+                fail(f'{rel}: sosiaalisen kortin metatieto puuttuu: {tag}', errors)
+        if '<meta name="twitter:card" content="summary">' in body:
+            fail(f'{rel}: vanha pieni Twitter-kortti on yhä käytössä', errors)
     # ARIA-viitteet: aria-labelledby/-describedby -kohteiden pitää löytyä samasta figuresta
     for page in (ROOT / 'kurssi').glob('tunti-*/index.html'):
         body = page.read_text(encoding='utf-8')
