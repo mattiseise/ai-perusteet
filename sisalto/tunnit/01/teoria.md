@@ -42,14 +42,29 @@ Arvio ei ole varma tieto tulevaisuudesta. Huominen voi poiketa aiemmista päivis
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l01a-t"><i aria-hidden="true">// </i>kolme tapaa ohjata toimintaa</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:250px">
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:680px" data-once role="img" aria-labelledby="l01a-t" aria-describedby="l01a-d">
+  <div class="l01a-wrap" data-once role="img" aria-labelledby="l01a-t" aria-describedby="l01a-d">
     <span class="sr-only" id="l01a-d">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa aiempien esimerkkien perusteella arvion. Yhdistelmä käyttää mallin arviota ja tarkistaa sen säännöllä.</span>
-    <div style="padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">VALMIS SÄÄNTÖ</strong><span>Maanantai →<br>100 sämpylää</span></div>
-    <div style="padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Aiemmat päivät →<br>menekkiarvio</span></div>
-    <div style="padding:22px;border:1px solid #2F9E69;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">YHDISTELMÄ</strong><span>Mallin arvio →<br>sääntö tarkistaa</span></div>
+    <div class="l01a-c c1"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">VALMIS SÄÄNTÖ</strong><span>Maanantai →<br>100 sämpylää</span></div>
+    <div class="l01a-c c2"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Aiemmat päivät →<br>menekkiarvio</span></div>
+    <div class="l01a-c c3"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">YHDISTELMÄ</strong><span>Mallin arvio →<br>sääntö tarkistaa</span></div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa arvion aiempien esimerkkien perusteella. Samassa järjestelmässä voidaan käyttää molempia.</figcaption></figure>
+<style>
+.l01a-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:680px;animation:l01aw 11s 1 forwards}
+@keyframes l01aw{0%,100%{opacity:1}}
+.l01a-c{padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8;opacity:0;transform:translateY(10px)}
+.l01a-c.c1{animation:l01a1 11s 1 forwards}
+.l01a-c.c2{animation:l01a2 11s 1 forwards}
+.l01a-c.c3{border-color:#2F9E69;animation:l01a3 11s 1 forwards}
+@keyframes l01a1{0%,4%{opacity:0;transform:translateY(10px)}16%,100%{opacity:1;transform:none}}
+@keyframes l01a2{0%,26%{opacity:0;transform:translateY(10px)}38%,100%{opacity:1;transform:none}}
+@keyframes l01a3{0%,48%{opacity:0;transform:translateY(10px)}
+  60%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}
+  72%{opacity:1;transform:none;box-shadow:0 0 0 6px rgba(47,158,105,.22)}
+  84%,100%{opacity:1;transform:none;box-shadow:0 0 0 0 rgba(47,158,105,0)}}
+@media (max-width:680px){.l01a-wrap{width:100%;grid-template-columns:1fr}}
+</style>
 
 ## Kouluttaminen ja käyttäminen ovat eri vaiheita
 

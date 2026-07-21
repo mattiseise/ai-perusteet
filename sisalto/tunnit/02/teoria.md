@@ -20,13 +20,26 @@ Tässä esimerkissä malli ei opi samalla hetkellä, kun se arvioi sinun viesti�
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l02a-t"><i aria-hidden="true">// </i>sääntö ja esimerkeistä oppiva malli</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:230px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;width:560px" data-once role="img" aria-labelledby="l02a-t" aria-describedby="l02a-d">
+  <div class="l02a-wrap" data-once role="img" aria-labelledby="l02a-t" aria-describedby="l02a-d">
     <span class="sr-only" id="l02a-d">Sääntöpohjainen suodatin seuraa ihmisen kirjoittamaa ehtoa. Koulutettu malli muodostaa esimerkeistä oppimansa perusteella arvion uudesta viestistä.</span>
-    <div style="padding:24px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">SÄÄNTÖ</strong><span>Ihminen kirjoittaa ehdon:<br>estolistalla → roskapostiin</span></div>
-    <div style="padding:24px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Merkityt esimerkit → arvio uudesta viestistä</span></div>
+    <div class="l02a-c c1"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">SÄÄNTÖ</strong><span>Ihminen kirjoittaa ehdon:<br>estolistalla → roskapostiin</span></div>
+    <div class="l02a-c c2"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Merkityt esimerkit → arvio uudesta viestistä</span></div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Sääntö noudattaa ihmisen kirjoittamaa ehtoa. Koulutettu malli muodostaa esimerkeistä oppimansa perusteella arvion uudesta viestistä.</figcaption></figure>
+<style>
+.l02a-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:560px;animation:l02aw 10s 1 forwards}
+@keyframes l02aw{0%,100%{opacity:1}}
+.l02a-c{padding:24px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8;opacity:0;transform:translateY(10px)}
+.l02a-c.c1{animation:l02a1 10s 1 forwards}
+.l02a-c.c2{animation:l02a2 10s 1 forwards}
+@keyframes l02a1{0%,5%{opacity:0;transform:translateY(10px)}18%,100%{opacity:1;transform:none}}
+@keyframes l02a2{0%,34%{opacity:0;transform:translateY(10px)}
+  48%{opacity:1;transform:none;border-color:#34415F}
+  62%{opacity:1;transform:none;border-color:#C9B7F1}
+  78%,100%{opacity:1;transform:none;border-color:#34415F}}
+@media (max-width:680px){.l02a-wrap{width:100%;grid-template-columns:1fr}}
+</style>
 
 ## Kolme aineistoa, kolme tehtävää
 
@@ -103,13 +116,27 @@ Taulukko ei ole kehitysportaikko. Kapea ja generatiivinen kuvaavat eri asioita j
 
 <figure class="ai-demo"><span class="ai-demo__tag" id="l02b-t"><i aria-hidden="true">// </i>nykyiset järjestelmät ja tulevaisuuskäsitteet</span>
 <div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:250px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;width:560px" data-once role="img" aria-labelledby="l02b-t" aria-describedby="l02b-d">
+  <div class="l02b-wrap" data-once role="img" aria-labelledby="l02b-t" aria-describedby="l02b-d">
     <span class="sr-only" id="l02b-d">Kapea ja generatiivinen tekoäly ovat käytössä nyt ja voivat kuvata samaa järjestelmää. AGI ja ASI ovat tulevaisuutta koskevia käsitteitä.</span>
-    <div style="padding:22px;border:1px solid #2F9E69;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">KÄYTÖSSÄ NYT</strong><span>Kapea tekoäly<br>Generatiivinen tekoäly<br><small>Sama järjestelmä voi olla molempia.</small></span></div>
-    <div style="padding:22px;border:1px dashed #9AA6BD;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">TULEVAISUUSKÄSITTEET</strong><span>AGI — yleisesti hyväksyttyä nykyistä AGI-esimerkkiä ei ole<br>ASI — hypoteettinen</span></div>
+    <div class="l02b-c c1"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">KÄYTÖSSÄ NYT</strong><span>Kapea tekoäly<br>Generatiivinen tekoäly<br><small>Sama järjestelmä voi olla molempia.</small></span></div>
+    <div class="l02b-c c2"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">TULEVAISUUSKÄSITTEET</strong><span>AGI — yleisesti hyväksyttyä nykyistä AGI-esimerkkiä ei ole<br>ASI — hypoteettinen</span></div>
   </div>
 </div>
 <figcaption class="ai-demo__cap">Nykyiset järjestelmät erotetaan AGI:sta ja ASI:sta. Kapea ja generatiivinen eivät ole kehitysportaita tai toisiaan poissulkevia luokkia.</figcaption></figure>
+<style>
+.l02b-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:560px;animation:l02bw 10s 1 forwards}
+@keyframes l02bw{0%,100%{opacity:1}}
+.l02b-c{padding:22px;border-radius:14px;background:#172038;color:#EAEEF8;opacity:0;transform:translateY(10px)}
+.l02b-c.c1{border:1px solid #2F9E69;animation:l02b1 10s 1 forwards}
+.l02b-c.c2{border:1px dashed #9AA6BD;animation:l02b2 10s 1 forwards}
+@keyframes l02b1{0%,5%{opacity:0;transform:translateY(10px)}18%,100%{opacity:1;transform:none}}
+/* Tulevaisuuskäsitteet tulevat myöhemmin ja häivähtäen: katkoviiva ja hidas
+   ilmestyminen koodaavat sen, ettei näistä ole nykyistä esimerkkiä. */
+@keyframes l02b2{0%,36%{opacity:0;transform:translateY(10px)}
+  56%{opacity:.55;transform:none}
+  74%,100%{opacity:1;transform:none}}
+@media (max-width:680px){.l02b-wrap{width:100%;grid-template-columns:1fr}}
+</style>
 
 ## Kun kohtaat suuren tekoälyväitteen
 
