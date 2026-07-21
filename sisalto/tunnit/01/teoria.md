@@ -1,179 +1,104 @@
-# Älykäs vai sääntöpohjainen? Mitä tekoäly oikeasti tekee?
+# Tekoäly vai tavallinen sääntö? — mistä eron tunnistaa
 
 ## Johdanto
 
-Olet varmasti käyttänyt sovellusta, joka suosittelee sinulle musiikkia, elokuvia tai tuotteita. Ehkä olet joskus ajatellut: ”Miten tämä tietää, mistä minä pidän?” Tai olet nähnyt uutisen tekoälystä, joka voitti maailman parhaan pelaajan shakissa.
+Et tarvitse tältä tunnilta aiempaa kokemusta tekoälystä tai tietokoneista. Aloitamme tutusta tilanteesta.
 
-Monet ajattelevat, että kaikki ”älykkäältä” vaikuttavat ohjelmistot ovat tekoälyä. Todellisuus on kuitenkin monimutkaisempi — ja paljon kiinnostavampi. **Tekoäly** (artificial intelligence, AI) ei ole yksi yksittäinen asia vaan kattotermi usealle erilaiselle teknologialle. Siksi on tärkeää ymmärtää, mitä tekoälyllä tarkoitetaan. Mikä erottaa tekoälyn tavallisesta automaatiosta? Miten tekoäly tekee päätöksiä, ja miksi se soveltuu joihinkin ongelmiin paremmin kuin toisiin?
+Kuvittele pieni ruokakauppa, joka paistaa joka aamu sämpylöitä. Kauppiaan pitää päättää, kuinka monta sämpylää seuraavaksi päiväksi varataan. Jos niitä on liian vähän, hylly tyhjenee kesken päivän. Jos niitä on liikaa, osa jää myymättä.
 
-Tämän tunnin jälkeen ymmärrät: *tietävätkö tekoälyt todella, mitä ne tekevät, vai ovatko ne vain edistyneitä sääntökoneita?*
+Päätöksen voi tehdä usealla tavalla. Tietokoneelle voidaan kirjoittaa valmis sääntö, kuten: ”Jos huomenna on maanantai, varaa 100 sämpylää.” Päätöksen tueksi voidaan myös käyttää aiemmista myyntipäivistä koulutettua koneoppimismallia. Se voi arvioida tarvetta esimerkiksi viikonpäivän, sään ja aiemman menekin perusteella.
 
-## Mitä tekoäly oikeasti on?
+Tämän tunnin tärkein kysymys on yksinkertainen: **seuraako järjestelmä valmista sääntöä, käyttääkö se esimerkeistä koulutettua mallia vai yhdistääkö se molemmat?**
 
-**Tekoäly** (artificial intelligence, AI) on kattotermi järjestelmille, jotka tuottavat syötteestä ennusteita, sisältöä, suosituksia tai päätöksiä. **Koneoppiminen** (machine learning, ML) on yksi tapa toteuttaa tekoälyä: siinä malli muodostetaan koulutusdatasta. Tekoälyjärjestelmä voi käyttää myös ihmisen kirjoittamia sääntöjä, hakua tai näiden yhdistelmiä.
+## Tietokone voi seurata valmista sääntöä
 
-Kouluttaminen ja käyttäminen ovat eri vaiheita. Käyttöön otettu malli ei automaattisesti opi jokaisesta promptista tai vastauksesta. Malli muuttuu vasta, jos sen toteuttaja kerää palautetta ja päivittää järjestelmää erillisellä koulutus- tai säätöprosessilla.
+Tietokoneohjelma on joukko ohjeita, joiden mukaan tietokone toimii. Yksi tavallinen ohje on **jos–niin-sääntö**.
 
-Kuvitellaan pankin **petoksentunnistusjärjestelmä**. Perinteinen sääntöpohjainen järjestelmä voisi toimia esimerkiksi näin: ”Jos tapahtuma on yli 10 000 euroa, lähetä hälytys operaattorille.” Tällainen ratkaisu on yksinkertainen ja nopea, mutta samalla melko rajallinen.
+Kaupan sääntö voisi olla tällainen:
 
-Todellinen petos voi liittyä paljon pienempään summaan, ja yksittäinen rahansiirto voi näyttää täysin normaalilta. Tapaus muuttuu usein epäilyttäväksi vasta silloin, kun sitä tarkastellaan osana laajempaa kokonaisuutta, kuten asiakkaan aiempaa käyttäytymistä.
+> Jos huomenna on maanantai, varaa 100 sämpylää. Muina päivinä varaa 140.
 
-Koneoppimiseen perustuva petosmalli toimii eri tavalla. Se voidaan kouluttaa miljoonista oikeista tapahtumista löytämään yhteyksiä ja poikkeamia, joita yksinkertainen sääntö ei huomaisi. Käytössä malli soveltaa koulutuksessa oppimiaan painoja uuteen tapahtumaan; se ei kouluta itseään uudelleen jokaisesta tarkistuksesta.
+Kun päivä on tiedossa, ohjelma valitsee säännöstä oikean määrän. Se ei arvioi, onko huomenna juhlapäivä, sataako ulkona tai onko lähistöllä tapahtuma. Se tekee juuri sen, mitä sääntöön on kirjoitettu.
 
-Esimerkiksi tekoäly voi arvioida: ”Tämän tapahtuman todennäköisyys olla laillinen on 97 prosenttia.”
+Valmis sääntö on usein hyvä ratkaisu, kun tilanne on selkeä ja toiminnan pitää olla ennustettavaa. Esimerkiksi kulkukortilla toimiva ovi voi käyttää sääntöä: jos kortin tunniste on sallittujen listalla, ovi aukeaa. Tällaiseen päätökseen ei tarvita koneoppimismallia.
 
-> **Pysähdy hetkeksi:** Kuinka moni päivittäin käyttämäsi sovellus hyödyntää tekoälyä päätösten tekemisessä? Miten ne eroavat sovelluksista, joissa käytetään vain kiinteitä sääntöjä?
+## Automaattinen toiminta ei yksin tarkoita tekoälyä
 
-## Ero automaatioon ja tavalliseen ohjelmointiin
+**Automaatio** tarkoittaa, että tietokone hoitaa työvaiheen ilman, että ihmisen tarvitsee tehdä jokaista kohtaa käsin.
 
-Monet sekoittavat tekoälyn **automaatioon**. Ajatus voi olla esimerkiksi tällainen: ”Tämä ohjelmisto teki työn automaattisesti, joten sen täytyy olla tekoälyä.” Näin ei kuitenkaan välttämättä ole.
+Kaupan ohjelma voi tarkistaa päivän, valita säännöstä tilausmäärän ja lähettää tilauksen automaattisesti. Toiminta voi olla nopeaa ja hyödyllistä, vaikka siinä ei olisi koneoppimista lainkaan.
 
-**Automaatio** tarkoittaa sitä, että tietokone tekee työn ilman, että käyttäjän tarvitsee suorittaa jokaista vaihetta itse. Automaatio ei kuitenkaan välttämättä opi mitään.
+Siksi lause ”ohjelma teki sen itse” ei vielä kerro, että kyse on tekoälystä. Ensin pitää kysyä, mihin toiminta perustuu. Se voi perustua valmiiseen sääntöön, koulutettuun malliin tai niiden yhdistelmään.
 
-Esimerkiksi sähköpostisovelluksessa voi olla sääntöjä, jotka lajittelevat viestit automaattisesti kansioihin. Jos sähköposti sisältää sanat ”lasku” ja ”lomauttaminen”, se voidaan siirtää kansioon ”Juridinen”. Nämä ovat **kiinteitä sääntöjä**: ne eivät opi eivätkä muutu itsestään. Kyse on automaatiosta, ei tekoälystä.
+## Koneoppimismalli koulutetaan esimerkeillä
 
-Monissa IT-alan järjestelmissä käytetään **robottista prosessiautomaatiota** (RPA, Robotic Process Automation). RPA-robotti voi esimerkiksi avata asiakaspalvelujärjestelmän, lukea tiketin, täyttää lomakkeen ja lähettää vastauksen automaattisesti ympäri vuorokauden.
+Kauppiaalla voi olla tallessa tietoa aiemmista myyntipäivistä. Jokaisesta päivästä voidaan tietää esimerkiksi viikonpäivä, sää, mahdollinen juhlapäivä ja myytyjen sämpylöiden määrä. Näitä aiempia tapauksia kutsutaan tässä **esimerkeiksi** tai **dataksi**.
 
-Tämä on nopeaa ja tehokasta, mutta kyse on silti rutiinien suorittamisesta. Robotti ei opi asiakkaista eikä paranna toimintaansa ajan myötä, ellei sitä erikseen muuteta.
+Koneoppimismallin kouluttamisessa järjestelmä muodostaa näistä esimerkeistä yhteyksiä. Se voi huomata, että perjantaisin myynti on usein vilkkaampaa, sateella asiakkaita käy vähemmän tai toritapahtuma lisää kysyntää. Ihmisen ei tarvitse kirjoittaa jokaista mahdollista yhdistelmää erilliseksi säännöksi.
 
-**Koneoppimismalli koulutetaan datalla.** Se voi tunnistaa koulutusaineiston kaltaisia uusia tapauksia ilman jokaista yksittäistä sääntöä. Uuden petoskuvion oppiminen vaatii kuitenkin järjestelmältä palautteen keräämistä ja mallin erillistä päivittämistä; pelkkä käyttö ei takaa oppimista.
+Kun koulutettu malli saa uuden tapauksen, se antaa siitä arvion. Jos huomenna on perjantai, sää on lämmin ja torilla järjestetään tapahtuma, malli voi arvioida, että kauppa tarvitsee tavallista enemmän sämpylöitä.
 
-> **Pysähdy hetkeksi:** Jos järjestelmä vain toistaa yhden ennalta määritetyn työvaiheen, onko kyse tavallisesta automaatiosta? Mitä muuta järjestelmästä pitäisi tietää ennen tekoälyluokitusta?
+Arvio ei ole varma tieto tulevaisuudesta. Huominen voi poiketa aiemmista päivistä. Siksi mallin ehdotusta pitää verrata tilanteeseen ja päätöksen seurauksiin.
 
-## Probabilistinen ja deterministinen ajattelu
-
-Yksi tärkeä ero tekoälyn ja perinteisen ohjelmoinnin välillä liittyy **epävarmuuteen**.
-
-Tavallinen ohjelma toimii usein **deterministisesti**. Se noudattaa ennalta kirjoitettuja sääntöjä ja tuottaa samanlaisessa tilanteessa ennustettavan tuloksen. Tekoäly puolestaan toimii usein **todennäköisyyksien** varassa. Se ei välttämättä anna täysin varmaa vastausta, vaan arvion siitä, mikä lopputulos on datan perusteella todennäköisin.
-
-Tämä on **koneoppimisen** ydin: päätöksiä tehdään epätäydellisen datan pohjalta epävarmassa maailmassa.
-
-Kun sähköpostiin tulee viesti, perinteinen roskapostisuodatin voi tarkistaa ennalta määriteltyjä sääntöjä. Se voi esimerkiksi toimia näin: ”Jos otsikossa on paljon isoja kirjaimia ja useita huutomerkkejä, merkitse viesti roskapostiksi.” Tämä on yksinkertainen toimintatapa, mutta samalla rajallinen, koska uudet roskapostit osaavat yhä paremmin näyttää tavallisilta viesteiltä.
-
-Koneoppimismalli toimii toisin. Se on voitu kouluttaa miljoonilla todellisilla roskapostiviesteillä ja tavallisilla viesteillä. Sen perusteella se voi arvioida: ”Tämä viesti muistuttaa 92-prosenttisesti aiemmin nähtyjä roskapostiviestejä.”
-
-Tällainen koneoppimismalli ei tarvitse jokaista sääntöä erikseen kirjoitettuna. Sääntöjen sijaan sillä on **parametreja** eli koulutusdatasta opittuja numeroarvoja, jotka ohjaavat sen toimintaa.
-
-> **Pysähdy hetkeksi:** Miksi epävarmuuden käsittely on tekoälylle hyödyllistä, mutta tavalliselle ohjelmalle usein ongelmallista?
-
-## Kaksi tapaa oppia datasta
-
-Koneoppiminen ei tarkoita vain yhtä opetustapaa. **Ohjatussa oppimisessa** harjoitusesimerkkien yhteydessä tunnetaan oikea vastaus. Petoksentunnistuksen aineistossa jokainen aiempi maksutapahtuma on esimerkiksi merkitty joko petokseksi tai lailliseksi tapahtumaksi. Malli etsii näistä esimerkeistä yhteyksiä, joiden avulla se arvioi uuden tapahtuman.
-
-**Ohjaamattomassa oppimisessa** valmiita oikeita vastauksia ei anneta. Malli etsii aineistosta ryhmiä, rakenteita tai poikkeamia. Pankki voisi esimerkiksi tutkia, millaisia maksukäyttäytymisen ryhmiä aineistosta muodostuu tai mitkä tapahtumat poikkeavat selvästi muista. Poikkeama ei silti automaattisesti ole petos. Ihmisen tai muun tarkistuksen pitää selvittää, mitä havainto tarkoittaa.
-
-Näitä tapoja ei aseteta paremmuusjärjestykseen. Ohjattu oppiminen sopii tilanteeseen, jossa on riittävästi luotettavasti merkittyjä esimerkkejä. Ohjaamaton oppiminen auttaa tutkimaan aineistoa silloin, kun valmiita luokkia ei ole tai kun halutaan löytää jotakin ennalta nimeämätöntä.
-
-## Piirre, luokka ja tavoitemuuttuja
-
-Koneoppimisen perussanat tulevat tutuiksi saman petosesimerkin avulla. **Piirre** on havaintoa kuvaava tieto, jota malli voi käyttää. Maksutapahtuman piirteitä voivat olla summa, kellonaika, maa, laite ja se, kuinka tavallinen tapahtuma on kyseiselle asiakkaalle.
-
-**Tavoitemuuttuja** on asia, jota ohjatussa oppimisessa yritetään ennustaa. Petosmallissa tavoitemuuttuja voi olla kysymys: onko tapahtuma petos vai laillinen? **Luokka** on yksi tavoitemuuttujan mahdollinen arvo, tässä ”petos” tai ”laillinen”. Kun mallin tehtävä on valita luokka, puhutaan **luokittelusta**.
-
-Sanat kuulostavat teknisiltä, mutta ajatus on arkinen: piirteet ovat vihjeitä, tavoitemuuttuja on ratkaistava kysymys ja luokat ovat mahdolliset vastaukset. Malli ei kuitenkaan tiedä, miksi jokin yhteys esiintyy datassa. Siksi piirteiden sopivuutta, aineiston laatua ja tuloksen seurauksia arvioi ihminen.
-
-> **Pysähdy hetkeksi:** Jos haluaisit ennustaa, tarvitseeko opiskelija lisäohjausta, mitkä tiedot voisivat olla piirteitä? Mikä olisi tavoitemuuttuja, ja mitä luokkia siinä voisi olla?
-
-<figure class="ai-demo"><span class="ai-demo__tag">// sama tapaus, kaksi tapaa päättää — yksi raja vai painotetut signaalit</span>
-<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:332px">
-  <div class="l01-wrap">
-    <div class="l01-case"><span class="l01-cs c1">Siirto 12 500 € · klo 14 · tuttu laite</span><span class="l01-cs c2">Siirto 90 € · klo 03 · uusi laite · 5. kerta tänään</span></div>
-    <div class="l01-judge l01-rule"><span class="l01-jh">SÄÄNTÖ</span><span class="l01-jr">jos summa &gt; 10 000 € → hälytä</span><span class="l01-jr2">muita signaaleja ei katsota</span><span class="l01-verd l01-v1a">✓ hälytys — raja ylittyi</span><span class="l01-verd l01-v1b">läpi — ei osu sääntöön</span></div>
-    <div class="l01-judge l01-ai"><span class="l01-jh">TEKOÄLY — painottaa joka signaalin</span>
-      <div class="l01-row"><span class="l01-rn">summa</span><div class="l01-rb"><i class="b1"></i></div><b class="l01-rv vA">+0,62</b><b class="l01-rv vB">+0,04</b></div>
-      <div class="l01-row"><span class="l01-rn">kellonaika</span><div class="l01-rb"><i class="b2"></i></div><b class="l01-rv vA">+0,08</b><b class="l01-rv vB">+0,31</b></div>
-      <div class="l01-row"><span class="l01-rn">laite</span><div class="l01-rb"><i class="b3"></i></div><b class="l01-rv vA">+0,05</b><b class="l01-rv vB">+0,27</b></div>
-      <div class="l01-row"><span class="l01-rn">toisto</span><div class="l01-rb"><i class="b4"></i></div><b class="l01-rv vA">+0,18</b><b class="l01-rv vB">+0,29</b></div>
-      <div class="l01-sum"><span class="l01-eqbox"><i class="l01-eq eA">0,62 + 0,08 + 0,05 + 0,18 = <b>0,93 pistettä</b></i><i class="l01-eq eB">0,04 + 0,31 + 0,27 + 0,29 = <b>0,91 pistettä</b></i></span><div class="l01-mb"><div class="l01-meter"></div></div><b class="l01-pct pA">0,93 p</b><b class="l01-pct pB">0,91 p</b></div>
-      <span class="l01-verd l01-v2a">✓ hälytys — 0,80 pisteen kynnys ylittyi</span><span class="l01-verd l01-v2b">✓ hälytys — 0,80 pisteen kynnys ylittyi</span>
-    </div>
-    <span class="l01-miss">petos pääsi läpi</span>
+<figure class="ai-demo"><span class="ai-demo__tag" id="l01a-t"><i aria-hidden="true">// </i>kolme tapaa ohjata toimintaa</span>
+<div class="ai-demo__stage" style="display:flex;align-items:center;justify-content:center;height:250px">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:680px" data-once role="img" aria-labelledby="l01a-t" aria-describedby="l01a-d">
+    <span class="sr-only" id="l01a-d">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa aiempien esimerkkien perusteella arvion. Yhdistelmä käyttää mallin arviota ja tarkistaa sen säännöllä.</span>
+    <div style="padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">VALMIS SÄÄNTÖ</strong><span>Maanantai →<br>100 sämpylää</span></div>
+    <div style="padding:22px;border:1px solid #34415F;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#C9B7F1">KOULUTETTU MALLI</strong><span>Aiemmat päivät →<br>menekkiarvio</span></div>
+    <div style="padding:22px;border:1px solid #2F9E69;border-radius:14px;background:#172038;color:#EAEEF8"><strong style="display:block;margin-bottom:12px;color:#7FD0A8">YHDISTELMÄ</strong><span>Mallin arvio →<br>sääntö tarkistaa</span></div>
   </div>
 </div>
-<figcaption class="ai-demo__cap">Kuvitteellinen pisteytysmalli havainnollistaa eroa. Kiinteä sääntö katsoo yhtä rajaa, kun taas malli yhdistää useita painotettuja signaaleja pistemääräksi. Tässä esimerkissä 0,91 on pistemäärä, ei suoraan petoksen todennäköisyys. Todellinen malli ja sen hälytyskynnys pitää arvioida erillisellä testidatalla.</figcaption></figure>
-<style>
-.l01-wrap{position:relative;width:560px;height:296px;font-family:var(--font-mono)}
-.l01-case{position:absolute;left:50%;transform:translateX(-50%);top:0;width:440px;height:34px}
-.l01-cs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:500;color:#06212A;background:#46c7cf;border-radius:10px;padding:2px 10px;opacity:0}
-.l01-cs.c1{animation:l01c1 14s infinite}
-.l01-cs.c2{animation:l01c2 14s infinite}
-@keyframes l01c1{0%,2%{opacity:0}5%,44%{opacity:1}48%,100%{opacity:0}}
-@keyframes l01c2{0%,50%{opacity:0}53%,96%{opacity:1}100%{opacity:0}}
-.l01-judge{position:absolute;top:50px;min-height:220px;background:#11182A;border:2px solid #2B3552;border-radius:13px;padding:11px 13px}
-.l01-rule{left:0;width:225px}
-.l01-ai{right:0;width:318px;border-color:oklch(0.66 0.15 264)}
-.l01-jh{display:block;font-size:10.5px;letter-spacing:.1em;color:#B9C2DA;margin-bottom:9px}
-.l01-jr{display:block;font-size:11.5px;line-height:1.4;color:#EAEEF8;background:#0E1422;border:1px solid #232C44;border-radius:8px;padding:7px 9px}
-.l01-jr2{display:block;margin-top:7px;font-size:10.5px;color:#5D6880}
-.l01-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;position:relative}
-.l01-rn{width:78px;font-size:11px;color:#EAEEF8}
-.l01-rb{flex:1;height:8px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
-.l01-rb i{display:block;height:100%;border-radius:99px;background:oklch(0.68 0.15 264)}
-.l01-rb i.b1{animation:l01b1 14s infinite}
-.l01-rb i.b2{animation:l01b2 14s infinite}
-.l01-rb i.b3{animation:l01b3 14s infinite}
-.l01-rb i.b4{animation:l01b4 14s infinite}
-@keyframes l01b1{0%,8%{width:0}14%,46%{width:62%}56%,96%{width:4%}100%{width:0}}
-@keyframes l01b2{0%,9%{width:0}15%,46%{width:8%}57%,96%{width:31%}100%{width:0}}
-@keyframes l01b3{0%,10%{width:0}16%,46%{width:5%}58%,96%{width:27%}100%{width:0}}
-@keyframes l01b4{0%,11%{width:0}17%,46%{width:18%}59%,96%{width:29%}100%{width:0}}
-.l01-rv{position:absolute;right:0;width:44px;text-align:right;font-size:10.5px;font-weight:600;color:#B9C2DA;opacity:0}
-.l01-row .l01-rv.vA{animation:l01vA 14s infinite}
-.l01-row .l01-rv.vB{animation:l01vB 14s infinite}
-@keyframes l01vA{0%,12%{opacity:0}16%,46%{opacity:1}50%,100%{opacity:0}}
-@keyframes l01vB{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
-.l01-row{padding-right:48px}
-.l01-sum{position:relative;margin-top:9px;padding-right:48px}
-.l01-sum .l01-eqbox{display:block;position:relative;height:15px;margin-bottom:4px}
-.l01-eq{position:absolute;left:0;font-style:normal;font-size:10.5px;letter-spacing:.04em;color:#8B94B3;opacity:0}
-.l01-eq b{color:#EAEEF8;font-weight:700}
-.l01-eq.eA{animation:l01vA 14s infinite}
-.l01-eq.eB{animation:l01vB 14s infinite}
-.l01-mb{height:9px;border-radius:99px;background:#0B0F1A;border:1px solid #232C44;overflow:hidden}
-.l01-meter{height:100%;border-radius:99px;background:linear-gradient(90deg,oklch(0.66 0.15 264),#F0A38C);animation:l01meter 14s infinite}
-@keyframes l01meter{0%,12%{width:6%}20%,46%{width:93%}56%,62%{width:6%}70%,96%{width:91%}100%{width:6%}}
-.l01-pct{position:absolute;right:0;bottom:0;font-size:11.5px;font-weight:700;color:#F0A38C;opacity:0}
-.l01-pct.pA{animation:l01vA 14s infinite}
-.l01-pct.pB{animation:l01vB 14s infinite}
-.l01-verd{position:absolute;left:13px;right:13px;bottom:11px;font-size:11px;letter-spacing:.03em;border-radius:8px;padding:6px 9px;opacity:0}
-.l01-v1a{color:#06241a;background:#7FD0A8;animation:l01v1a 14s infinite}
-.l01-v1b{color:#3A1408;background:#F0A38C;animation:l01v1b 14s infinite}
-.l01-v2a{color:#06241a;background:#7FD0A8;animation:l01v2a 14s infinite}
-.l01-v2b{color:#06241a;background:#7FD0A8;animation:l01v2b 14s infinite}
-@keyframes l01v1a{0%,14%{opacity:0}18%,44%{opacity:1}48%,100%{opacity:0}}
-@keyframes l01v1b{0%,60%{opacity:0}64%,93%{opacity:1}97%,100%{opacity:0}}
-@keyframes l01v2a{0%,22%{opacity:0}26%,44%{opacity:1}48%,100%{opacity:0}}
-@keyframes l01v2b{0%,72%{opacity:0}76%,93%{opacity:1}97%,100%{opacity:0}}
-.l01-miss{position:absolute;left:36px;top:276px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#F0A38C;opacity:0;animation:l01miss 14s infinite}
-@keyframes l01miss{0%,68%{opacity:0}72%,93%{opacity:1}97%,100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){
-.l01-cs,.l01-rb i,.l01-rv,.l01-meter,.l01-pct,.l01-verd,.l01-miss,.l01-eq{animation:none}
-.l01-cs.c2,.l01-v1b,.l01-v2b,.l01-miss,.l01-rv.vB,.l01-pct.pB,.l01-eq.eB{opacity:1}
-.l01-rb i.b1{width:6%}.l01-rb i.b2{width:42%}.l01-rb i.b3{width:37%}.l01-rb i.b4{width:40%}
-.l01-meter{width:91%}}
-</style>
+<figcaption class="ai-demo__cap">Valmis sääntö määrää toiminnan etukäteen. Koulutettu malli antaa arvion aiempien esimerkkien perusteella. Samassa järjestelmässä voidaan käyttää molempia.</figcaption></figure>
 
-## Konkreettisia esimerkkejä arjesta
+## Kouluttaminen ja käyttäminen ovat eri vaiheita
 
-Pankkisektorilla tekoälyä käytetään laajasti, mutta ei kaikessa. Esimerkiksi verkkopankissa näkyvät toiminnot, kuten ”Maksa lasku” ja ”Siirry tilille”, perustuvat tavalliseen ohjelmointiin ja ennalta määriteltyihin sääntöihin.
+Mallin **kouluttaminen** tarkoittaa, että se muodostetaan aiempien esimerkkien avulla. Mallin **käyttäminen** tarkoittaa, että valmista mallia sovelletaan uuteen tapaukseen.
 
-Sen sijaan **petoksentunnistuksessa** voidaan hyödyntää tekoälyä. Myös lainahakemuksen automaattinen hyväksyminen tai hylkääminen voi perustua **koneoppimismalliin**, joka on oppinut historiallisista hakemuksista ja niiden lopputuloksista.
+Kaupan malli ei tavallisesti muutu jokaisesta uudesta menekkiennusteesta. Jos kauppias haluaa hyödyntää uusia myyntipäiviä, järjestelmän toteuttajan pitää kerätä uusi data ja päivittää malli erillisessä prosessissa.
 
-Sama ero näkyy esimerkiksi koulun tai kunnan palautejärjestelmissä. Yksinkertainen järjestelmä voi ohjata viestejä kiinteiden sääntöjen perusteella. Esimerkiksi sana ”ruokala” voi ohjata viestin suoraan keittiön henkilökunnalle. Tämä on automaatiota, mutta ei vielä tekoälyä.
+Tämä ero on tärkeä. Koulutettu malli voi antaa uusia arvioita, vaikka se ei samalla opi jokaisesta käyttökerrasta.
 
-Kehittyneempi järjestelmä voi hyödyntää koneoppimismalleja, jotka ennustavat esimerkiksi sen, kuinka kiireellinen viesti on tai kenelle se kannattaisi ohjata. Tällöin järjestelmä ei perustu vain yksittäisiin sääntöihin, vaan malli on koulutettu aiemmilla tapauksilla ja toimintamalleilla.
+## Oikea järjestelmä voi yhdistää sääntöjä ja mallin
 
-Suoratoistopalvelujen ja verkkokauppojen **suositukset** ovat hyvä esimerkki tekoälyn käytöstä. Ne eivät toimi pelkkien yksinkertaisten sääntöjen varassa, vaan niiden malleja koulutetaan käyttäjien valinnoista ja käyttäytymismalleista kerätyllä datalla. Koulutettua mallia käytetään ennustamaan, mitä haluat nähdä, kuunnella tai ostaa seuraavaksi; uuden datan hyödyntäminen vaatii erillisen päivitysprosessin.
+Kaupan tilaustoiminto voi käyttää koneoppimismallia menekin arvioimiseen ja valmiita sääntöjä toiminnan rajaamiseen.
+
+Malli voi esimerkiksi ehdottaa 220 sämpylän tilausta. Kaupan sääntö voi kuitenkin sanoa, että yli 200 sämpylän tilaus pitää näyttää ihmiselle ennen lähettämistä. Järjestelmässä on silloin kolme osaa:
+
+1. koulutettu malli antaa menekkiarvion
+2. valmis sääntö tarkistaa tilauksen koon
+3. ihminen hyväksyy tavallista suuremman tilauksen.
+
+Tällainen yhdistelmä on tavallinen. Malli auttaa tilanteessa, jossa huomioon otettavia asioita on paljon. Sääntö pitää toiminnan sovituissa rajoissa.
+
+## Mistä toteutustavan voi päätellä?
+
+Pelkkä järjestelmän nimi tai ulkonäkö ei kerro, miten se toimii. Sama tehtävä voidaan toteuttaa eri tavoin.
+
+Kun arvioit järjestelmää, kysy:
+
+- Onko toiminta kirjoitettu valmiiksi jos–niin-sääntöinä?
+- Onko järjestelmässä malli, joka on koulutettu aiemmilla esimerkeillä?
+- Käyttääkö järjestelmä molempia?
+- Kertooko kuvaus toteutustavasta riittävästi, vai tarvitaanko lisää tietoa?
+
+Jos kuvaus sanoo vain, että ohjelma ”valitsee sopivan määrän”, toteutustapaa ei vielä tiedetä. Jos kuvaus kertoo, että määrä valitaan aina samasta taulukosta, kyse on valmiista säännöstä. Jos kuvaus kertoo, että malli on koulutettu aiempien päivien tiedoilla, mukana on koneoppimista.
+
+## Milloin sääntö ja milloin malli?
+
+Valmis sääntö sopii tilanteeseen, jossa ehdot ovat selvät, muuttuvat vähän ja tuloksen pitää olla ennustettava. Kulkukorttioven avaaminen tai kellonaikaan perustuva muistutus ovat hyviä esimerkkejä.
+
+Koneoppimismallista voi olla hyötyä, kun aiempia esimerkkejä on paljon, tilanteeseen vaikuttaa monta asiaa eikä kaikkea voi kuvata yhdellä selkeällä säännöllä. Menekin arviointi on tällainen tehtävä.
+
+Malli ei silti ole automaattisesti sääntöä parempi. Jos tehtävä ratkeaa yhdellä varmalla ehdolla, koulutettu malli voi tehdä ratkaisusta turhaan monimutkaisen. Jos mallin arvio johtaa kalliiseen, vaaralliseen tai vaikeasti peruttavaan toimintaan, ihmisen tarkistus voi olla tarpeen.
 
 ## Yhteenveto
 
-**Tekoäly** ei tarkoita mitä tahansa älykkäältä vaikuttavaa ohjelmistoa, eikä se ole sama asia kuin automaatio. Se on kattotermi erilaisille menetelmille. **Koneoppiminen** on yksi näistä menetelmistä: ohjatussa oppimisessa malli oppii esimerkeistä, joissa oikea vastaus tunnetaan, ja ohjaamattomassa oppimisessa se etsii aineistosta rakennetta ilman valmiita vastauksia. Käyttöön otettu malli ei silti automaattisesti opi jokaisesta uudesta syötteestä, vaan päivittäminen vaatii erillisen koulutus- tai päivitysprosessin.
+Tietokone voi seurata valmista sääntöä. Kun sääntö suoritetaan automaattisesti, kyse on automaatiosta, mutta automaattisuus ei yksin tarkoita tekoälyä.
 
-**Automaatio** ja **sääntöpohjaiset järjestelmät** ovat usein tarkkoja, nopeita ja ennustettavia. Koneoppimisen vahvuus taas on siinä, että koulutusdatasta voidaan muodostaa joustava malli monimutkaisista ilmiöistä.
+Koneoppimismalli muodostetaan aiemmista esimerkeistä. Kun mallia käytetään, se antaa uudesta tapauksesta arvion. Käyttö ei tavallisesti kouluta mallia uudelleen.
 
-Kun ymmärrät tämän eron, sinun on helpompi hahmottaa, miksi jotkin ongelmat vaativat tekoälyä ja toiset voidaan ratkaista hyvin tavallisella ohjelmointilogiikalla.
-
-Seuraavalla tunnilla perehdyt siihen, millaisia tekoälyn eri tyyppejä on olemassa — ja miksi ”älykkyyttä” voi olla monessa muodossa.
+Oikea järjestelmä voi yhdistää mallin, valmiit säännöt ja ihmisen tarkistuksen. Siksi järjestelmän toimintaa arvioidaan sen toteutustavan, ei pelkän nimen tai älykkään vaikutelman perusteella.
 
 ---
 
@@ -181,7 +106,5 @@ Seuraavalla tunnilla perehdyt siihen, millaisia tekoälyn eri tyyppejä on olema
 
 - [OECD: Updated definition of an AI system](https://oecd.ai/en/wonk/definition)
 - [Google for Developers: Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/)
-- [Google for Developers: Classification](https://developers.google.com/machine-learning/crash-course/classification)
-- [IBM: What is unsupervised learning?](https://www.ibm.com/think/topics/unsupervised-learning)
 
-Tarkistettu 15.7.2026.
+Tarkistettu 21.7.2026.

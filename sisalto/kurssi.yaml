@@ -85,8 +85,8 @@ moduulit:
       arvioi: "Luotettavuus ja vastuu"
       perustele: "Asiantuntijalausunto"
     tunnit:
-      - { id: lesson-01, kansio: "01", otsikko: "Älykäs vai sääntö? — mitä tekoäly oikeasti tekee", tyyppi: teaching, ajattelu: { painotus: tunnista, kysymys: "Mistä voit päätellä, noudattaako järjestelmä sääntöä vai oppiiko se esimerkeistä?" } }
-      - { id: lesson-02, kansio: "02", otsikko: "Miten tekoälymalli oppii — ja mitä nykyjärjestelmät osaavat?", tyyppi: teaching, ajattelu: { painotus: selita, kysymys: "Miten aineiston jako, yleistyminen ja käytön aikainen seuranta vaikuttavat mallin luotettavuuteen?" } }
+      - { id: lesson-01, kansio: "01", otsikko: "Tekoäly vai tavallinen sääntö? — mistä eron tunnistaa", tyyppi: teaching, ajattelu: { painotus: tunnista, kysymys: "Perustuuko toiminta valmiiseen sääntöön, esimerkeistä koulutettuun malliin vai niiden yhdistelmään?" } }
+      - { id: lesson-02, kansio: "02", otsikko: "Mitä nykytekoäly osaa — ja mitä AGI ja ASI tarkoittavat?", tyyppi: teaching, ajattelu: { painotus: selita, kysymys: "Mitä nykyinen tekoäly osaa, ja miksi sujuva vastaus ei vielä tarkoita AGI:a tai ASI:a?" } }
       - { id: lesson-03, kansio: "03", otsikko: "Miten kone kirjoittaa? — generatiivisen AI:n mekaniikka", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: selita, kysymys: "Miten kielimalli tuottaa seuraavan tokenin, ja miksi sujuva teksti voi silti olla väärässä?" } }
       - { id: lesson-04, kansio: "04", otsikko: "Konteksti ratkaisee — miksi sama kysymys antaa eri vastauksen", tyyppi: teaching, ajattelu: { painotus: testaa, kysymys: "Miten sama pyyntö muuttuu, kun vaihdat vain kontekstia?" } }
       - { id: lesson-05, kansio: "05", otsikko: "Muistin rajat — kuinka paljon tekoäly oikeasti muistaa", tyyppi: teaching, lopputyon_askel: "*", ajattelu: { painotus: testaa, kysymys: "Missä olennainen ohje katoaa keskustelusta, ja miten osoitat sen kokeella?" } }

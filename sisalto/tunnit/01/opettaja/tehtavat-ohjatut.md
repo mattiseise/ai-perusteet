@@ -1,222 +1,153 @@
-# Opettajavetoiset tehtävät
+# Opettajavetoiset tehtävät — oppitunti 01
 
-## Tehtävä 1.1: Luokitteluharjoitus — tekoälyä vai ei? — luokkakeskustelu
-
-### Tavoite
-
-Tehtävän tavoitteena on haastaa opiskelijoiden ajattelua siitä, että kaikki älykkäältä vaikuttava olisi automaattisesti **tekoälyä**. Samalla vahvistetaan tekoälyn määritelmää käytännön esimerkkien avulla.
-
-**Opettajan painotus:** Korosta opiskelijoille, että **automaatio**, **älykäs vaikutelma** ja **tekoäly** eivät tarkoita samaa asiaa. Keskeistä on pohtia, käyttääkö järjestelmä dataa, oppiiko se malleja ja mukautuuko se tilanteisiin.
-
-### Opettajan ohjeet ja fasilitointi
-
-**Valmistelu ennen tuntia noin 5 minuuttia:**
-
-Kirjoita taululle tai projisoi näkyviin samat seitsemän järjestelmää kuin opiskelijatehtävässä:
-
-1. Sähköpostin roskapostisuodatin
-2. Netflix-suositukset
-3. Pankin lainahakemuksen automaattinen käsittely
-4. Puhelinluettelo
-5. Google Mapsin reititys reaaliaikaisen liikennetiedon perusteella
-6. Pankkiautomaatti
-7. Automaattinen tekstinkorjaus
-
-### Luokkakeskustelu noin 20 minuuttia
-
-1. **Avaus noin 2 minuuttia:**
-
-
-   Kerro opiskelijoille:
-
-   > Näytän teille seitsemän järjestelmää. Luokitelkaa jokainen vaihtoehdoksi AI, Ei AI tai Epäselvä. Pelkän äänestyksen sijaan keskitymme perusteluihin.
-2. **Käy järjestelmät läpi yksi kerrallaan noin 2 minuuttia järjestelmää kohti.**
-
-   Kysy jokaisen esimerkin kohdalla:
-
-   - Mitä mieltä olette: AI, Ei AI vai Epäselvä?
-   - Miksi ajattelette näin?
-   - Jos opiskelija perustelee vastaustaan sanomalla, että järjestelmä “oppii”, kysy: **Mistä se oppii? Miltä oppiminen tässä tilanteessa näyttäisi?**
-   - Jos opiskelija perustelee vastaustaan sanomalla, että järjestelmä on “älykäs”, kysy: **Mitä älykäs tässä tarkoittaa? Onko se sama asia kuin tekoäly?**
-3. **Käänteinen esimerkki noin 5 minuuttia:**
-
-   Näytä opiskelijoille seuraava sääntö:
-
-   Jos käyttäjä ei ole kovin aktiivinen, älä näytä hänelle kalliita mainoksia.
-
-   Kysy opiskelijoilta:
-
-   > Voiko tämän toteuttaa tekoälyllä, vai voiko sen tehdä tavallisella ohjelmalla?
-
-   **Keskeinen havainto:** Tämän voi toteuttaa molemmilla tavoilla. Esimerkki on tarkoituksella epämääräinen, joten se ei yksin riitä todistamaan, että kyseessä olisi tekoäly.
-
-**Esimerkki opetukseen**
-
-Kirjoita taululle kaksi kysymystä: “Onko tämä vain sääntö?” ja “Oppiiko järjestelmä datasta?” Näihin palaaminen auttaa opiskelijoita perustelemaan vastauksensa täsmällisemmin.
-
-### Vastaukset ja perustelut, joita opettaja voi tavoitella
-
-| Järjestelmä | Tekoälyä vai ei? | Perustelu |
-| --- | --- | --- |
-| **Sähköpostin roskapostisuodatin** | Epäselvä | Sanojen perusteella lajittelu voi olla kiinteä sääntö tai datasta opittu luokittelumalli. Kuvaus ei kerro toteutustapaa. |
-| **Netflix-suositukset** | AI | Suositukset perustuvat tavallisesti käyttäjä- ja sisältödatasta koulutettuihin malleihin. |
-| **Pankin lainahakemuksen automaattinen käsittely** | Epäselvä | Päätös voi perustua sääntöihin, koneoppimismalliin tai niiden yhdistelmään. Automaattisuus ei ratkaise luokitusta. |
-| **Puhelinluettelo** | Ei AI | Aakkosjärjestys syntyy tavallisella lajittelulla. |
-| **Google Maps ja reaaliaikainen liikennetieto** | Epäselvä | Reititys voi yhdistää optimointia, sääntöjä ja koneoppimista. Pelkkä palvelun nimi ei kerro, mitä osaa arvioidaan. |
-| **Pankkiautomaatti** | Ei AI | Rahan nostaminen perustuu ennalta määriteltyyn tunnistukseen ja sääntöihin. |
-| **Automaattinen tekstinkorjaus** | Epäselvä | Se voi käyttää sääntöpohjaista sanakirjaa tai datasta opittua kielimallia. |
-
-### Väärinkäsitykset, joita kannattaa käsitellä
-
-- **“Tekoäly on sama asia kuin automaatio.”**
-  Ei aivan. Automaatio toistaa ennalta määriteltyjä toimintoja, kun taas tekoäly hyödyntää dataa ja voi oppia siitä säännönmukaisuuksia.
-- **“Tekoäly tarkoittaa, että järjestelmä on monimutkainen.”**
-  Ei välttämättä. Monimutkainen ohjelmisto ei automaattisesti ole tekoälyä.
-- **“Tekoälyn tulokset ovat aina oikein.”**
-  Ei. Tekoäly tekee päätelmiä todennäköisyyksien perusteella ja voi tehdä virheitä.
-
-### Odotettu oppimistulos
-
-Tehtävän jälkeen opiskelijat ymmärtävät, että:
-
-- **tekoäly** vaatii yleensä **dataa** ja jonkinlaista **oppimista**, ei pelkkää automaatiota,
-- sama tehtävä voidaan joskus toteuttaa sekä tekoälyllä että sääntöpohjaisella ohjelmalla, mutta toteutustapa on erilainen,
-- **älykäs järjestelmä** ja **tekoäly** eivät tarkoita automaattisesti samaa asiaa.
-
----
-
-## Tehtävä 1.2: Tapaustutkimus — sääntö vai tekoäly petoksentunnistuksessa? — ryhmäharjoitus
+## Aktiviteetti 1 — Huomisen sämpylät
 
 ### Tavoite
 
-Tehtävän tavoitteena on havainnollistaa, miksi **tekoäly** voi toimia sääntöjä paremmin monimutkaisissa päätöksentekotilanteissa, joissa muuttujia on paljon.
+Oppija huomaa, että sama päätös voidaan tehdä valmiilla säännöllä tai aiemmista esimerkeistä koulutetulla mallilla.
 
-**Opettajan painotus:** Tavoitteena ei ole todistaa, että tekoäly on aina sääntöjä parempi. Tavoitteena on näyttää, että monimutkaisissa tilanteissa pelkät käsin kirjoitetut säännöt voivat olla liian jäykkiä.
+### Aloitus
 
-### Opettajan ohjeet ja fasilitointi
+Kerro ryhmälle seuraava tilanne:
 
-**Valmistelu noin 10 minuuttia:**
+> Pieni ruokakauppa paistaa joka aamu sämpylöitä. Kauppiaan pitää päättää huomisen määrä. Liian pieni määrä loppuu kesken. Liian suuri määrä jää myymättä.
 
-1. Jaa luokka kolmeen ryhmään.
-2. Anna jokaiselle ryhmälle sama kymmenen transaktion taulukko opiskelijatehtävästä.
-3. Kerro ryhmille heidän tehtävänsä:
+Kysy ensin ilman ammattisanastoa: ”Millä tiedoilla sinä päättäisit huomisen määrän?” Kirjaa näkyviin esimerkiksi viikonpäivä, sää, lähialueen tapahtuma ja aiempien päivien myynti. Kaikkia ehdotuksia ei tarvitse arvioida vielä oikeiksi tai vääriksi.
 
-- **Ryhmä A:** Kehittäkää viisi sääntöä petoksentunnistukseen.
-- **Ryhmä B:** Kehittäkää viisi erilaista sääntöä samaan ongelmaan.
-- **Ryhmä C:** Pohtikaa, mitä tekoäly voisi tehdä sellaisessa tilanteessa, johon ryhmien A ja B säännöt eivät välttämättä riitä.
+Näytä tämän jälkeen kaksi tapaa tehdä päätös.
 
-### Toteutus noin 30 minuuttia
+**Tapa A — valmis sääntö**
 
-1. Ryhmät työskentelevät itsenäisesti noin 15 minuuttia.
-2. Ryhmät A ja B esittelevät sääntönsä. Varaa esittelyyn noin 3 minuuttia ryhmää kohti.
-3. Kirjoita ryhmien säännöt taululle, jotta niitä voidaan vertailla.
-4. Kysy luokalta: **Kuinka monta petosta näillä säännöillä huomattaisiin oikein?**
-5. Testaa sääntöjä käytännössä valituilla transaktioilla. Esimerkiksi: “Transaktio 7 on 10 000 euroa ja tehty tuntemattomassa maassa. Luokitteleeko ryhmä A sen petokseksi? Entä ryhmä B?”
-6. Ryhmä C esittelee ajatuksensa siitä, miten tekoäly voisi lähestyä ongelmaa. Varaa esittelyyn noin 3 minuuttia.
-7. Kysy luokalta:
+> Jos huomenna on maanantai, varaa 100 sämpylää. Muina päivinä varaa 140.
 
-   - Mitä dataa tekoäly tarvitsisi petosten tunnistamiseen?
-   - Mitä kuvioita, yhteyksiä tai poikkeamia tekoäly voisi oppia datasta?
-   - Milloin sääntöpohjainen ratkaisu voisi silti olla parempi?
-   - Mitkä taulukon sarakkeet ovat mallin piirteitä?
-   - Mikä on tavoitemuuttuja ja mitkä ovat sen luokat?
-   - Miksi valmiit petosmerkinnät tekevät esimerkistä ohjattua oppimista?
-   - Mitä ohjaamaton oppiminen voisi löytää samasta aineistosta ilman valmiita merkintöjä?
-8. **Johtopäätös noin 5 minuuttia:**
+**Tapa B — koulutettu malli**
 
-   Kirjoita taululle seuraava yhteenveto:
+> Malli on muodostettu aiemmista myyntipäivistä. Se saa tiedon huomisen viikonpäivästä, säästä ja tapahtumista ja antaa menekkiarvion.
 
-   Säännöt: nopeita ja ennustettavia, mutta usein jäykkiä.
+Pyydä pareja kertomaan yksi ero tapojen välillä. Tavoiteltu havainto on, että säännön toiminta on kirjoitettu valmiiksi, kun taas malli käyttää aiemmista esimerkeistä muodostettua rakennetta uuden tapauksen arviointiin.
 
-   Koneoppimismalli: koulutetaan datalla tunnistamaan kuvioita, ja se toimii usein kiinteää sääntöä paremmin monimutkaisissa tilanteissa.
+### Opettajan täsmennys
 
-### Mahdollisia vastauksia ja väärinkäsityksiä
+Älä sano, että malli tietää huomisen myynnin. Se antaa arvion. Älä myöskään sano, että malli oppii aina uuden asian jokaisesta arviosta. Uuden myyntidatan hyödyntäminen edellyttää erillistä päivitystä.
 
-- **Väärinkäsitys:** “Säännöt ovat aina parempia, koska ne ovat nopeampia.”
-  **Täsmennys:** Säännöt voivat olla nopeita ja selkeitä, mutta ne eivät aina tunnista monimutkaisia tai uusia petoskuvioita.
-- **Väärinkäsitys:** “Tekoäly tietää, mikä on petos.”
-  **Täsmennys:** Tekoäly ei “tiedä” samalla tavalla kuin ihminen. Se havaitsee datasta kuvioita ja poikkeamia, joiden perusteella se tekee todennäköisyysarvioita.
-- **Väärinkäsitys:** “Poikkeava tapahtuma on varmasti petos.”
-  **Täsmennys:** Ohjaamaton oppiminen voi nostaa poikkeaman tarkistettavaksi, mutta poikkeama voi olla myös harvinainen laillinen tapahtuma.
-
-**Opettajan tarkistuskysymys:** Jos opiskelijat ehdottavat yksittäistä sääntöä, kysy: “Toimiiko tämä myös silloin, kun petos näyttää tavalliselta ostokselta tai tavallinen ostos näyttää epäilyttävältä?”
-
-### Odotettu oppimistulos
-
-Tehtävän jälkeen opiskelijat ymmärtävät, että:
-
-- **sääntöjen** laatiminen on vaikeaa, kun päätökseen vaikuttavia muuttujia on paljon,
-- **tekoäly** voi havaita datasta kuvioita, joita ihmisen laatimat säännöt eivät välttämättä huomaa,
-- sääntöpohjaisella ratkaisulla ja tekoälyllä on molemmilla vahvuuksia ja rajoituksia,
-- paras ratkaisu riippuu tilanteesta, tavoitteesta ja käytettävissä olevasta datasta.
+Aktiviteettiin sopii noin 15 minuuttia.
 
 ---
 
-## Tehtävä 1.3: Omat sovellukset — tekoäly opiskelijoiden arjessa — luokkakeskustelu
+## Aktiviteetti 2 — Kolme koria
 
 ### Tavoite
 
-Tehtävän tavoitteena on yhdistää tekoälyyn liittyvä teoria opiskelijoiden omaan digitaaliseen arkeen ja tehdä **tekoälystä** konkreettista.
+Oppija luokittelee läpinäkyvän kuvauksen sen toteutustavan perusteella eikä järjestelmän nimen tai älykkään vaikutelman perusteella.
 
-### Opettajan ohjeet ja fasilitointi
+Kirjoita taululle tai aseta pöydälle kolme otsikkoa:
 
-**Valmistelu:**
+- **Valmis sääntö**
+- **Koulutettu malli**
+- **Yhdistelmä**
 
-Erillistä valmistelua ei tarvita. Pyydä tunnilla 3–4 opiskelijaa nimeämään yksi sovellus, peli tai digitaalinen palvelu, jota he käyttävät usein.
+Lue yksi kortti kerrallaan. Oppijat näyttävät valintansa, siirtyvät valitsemansa otsikon luo tai nostavat sovitun numerokortin. Tämän voi tehdä ilman tietokonetta.
 
-**Esimerkkejä:**
+### Kortti 1
 
-- YouTube
-- Instagram
-- Spotify
-- WhatsApp
-- Fortnite
-- Verkkokaupan tuotesuositukset
+Kaupan kassa antaa aina 10 prosentin alennuksen, jos asiakas näyttää voimassa olevan opiskelijakortin.
 
-### Keskustelu noin 15 minuuttia
+**Tavoiteltu vastaus:** valmis sääntö. Ehto ja toiminta on kirjoitettu etukäteen.
 
-Käykää jokainen opiskelijoiden mainitsema sovellus läpi samojen kysymysten avulla:
+### Kortti 2
 
-1. **Missä kohtaa tässä sovelluksessa voisi olla tekoälyä?**
-   Esimerkiksi suosituksissa, sisällön suodatuksessa, haussa, mainonnassa tai käyttäjien yhdistämisessä.
-2. **Miten sovellus voisi päätellä, mitä käyttäjä haluaa nähdä, kuunnella tai tehdä seuraavaksi?**
-3. **Millaista dataa sovellus voi kerätä käyttäjän toiminnasta?**
-   Korosta, että keskustelun tarkoitus ei ole syyllistää käyttäjiä vaan ymmärtää, että **data** on tekoälyn keskeinen raaka-aine.
+Menekkimalli on koulutettu kolmen vuoden myyntipäivillä. Se arvioi huomisen sämpylätarpeen viikonpäivän, sään ja tapahtumien perusteella.
 
-### Esimerkkejä keskustelun tueksi
+**Tavoiteltu vastaus:** koulutettu malli. Uuden päivän arvio perustuu aiempiin esimerkkeihin.
 
-| Sovellus tai palvelu | Missä tekoäly voi näkyä? | Millaista dataa se voi hyödyntää? |
-| --- | --- | --- |
-| **Instagram** | Suosituksissa, mainonnassa, sisällön järjestämisessä ja sisällön moderoinnissa. | Mitä käyttäjä katsoo, mistä hän tykkää, mitä hän kommentoi ja kuinka pitkään hän pysyy tietyn julkaisun kohdalla. |
-| **Spotify** | Suosituksissa, soittolistoissa ja samankaltaisen musiikin ehdottamisessa. | Kuunteluhistoria, ohitetut kappaleet, suosikit, kuunteluajat ja muiden käyttäjien samankaltaiset valinnat. |
-| **Fortnite** | Pelaajien yhdistämisessä otteluihin, tasapainottamisessa tai pelidatan analysoinnissa. | Pelaajan taitotaso, otteluhistoria, pelityyli ja suoriutuminen eri tilanteissa. |
+### Kortti 3
 
-### Johtopäätös noin 3 minuuttia
+Menekkimalli ehdottaa tilausmäärän, mutta yli 200 sämpylän tilaus siirretään valmiin säännön perusteella ihmisen tarkistettavaksi.
 
-- Tekoäly ei ole vain tulevaisuuden teknologiaa, vaan se näkyy jo monissa opiskelijoiden käyttämissä palveluissa.
-- Tekoäly toimii usein taustalla, eikä käyttäjä aina huomaa sitä suoraan.
-- Tekoälyn käyttöön liittyy sekä hyötyjä että riskejä, kuten turvallisuus, yksityisyys ja se, miten käyttäjän dataa hyödynnetään.
+**Tavoiteltu vastaus:** yhdistelmä. Malli antaa arvion, valmis sääntö rajaa toimintaa ja ihminen tarkistaa tavallista suuremman tilauksen.
 
-**Vinkki arviointiin:** Hyvä opiskelijavastaus ei vain nimeä sovellusta, vaan kertoo, mitä dataa sovellus voisi käyttää ja millainen päätös tai suositus datan perusteella tehdään.
+### Kortti 4
 
-### Odotettu oppimistulos
+Varaston valo syttyy joka päivä kello kuusi ja sammuu kello kahdeksan.
 
-Tehtävän jälkeen opiskelijat ymmärtävät, että:
+**Tavoiteltu vastaus:** valmis sääntö. Automaattinen toiminta ei yksin tee ratkaisusta tekoälyä.
 
-- **tekoäly** on osa monia arjessa käytettäviä sovelluksia ja palveluita,
-- sovellukset voivat käyttää sekä sääntöpohjaisia ratkaisuja että tekoälyä,
-- **data** on tekoälyn keskeinen raaka-aine, ja käyttäjät tuottavat sitä päivittäin omalla toiminnallaan.
+### Kortti 5
+
+Ruokala käyttää aiempien päivien kävijämääriä, säätä ja ruokalistaa arvioidakseen seuraavan päivän annosmäärän.
+
+**Tavoiteltu vastaus:** koulutettu malli. Kuvaus kertoo suoraan, että arvio perustuu aiempiin esimerkkeihin.
+
+Pyydä jokaisen valinnan jälkeen yksi perustelu. Jos oppija sanoo vain ”tekoäly” tai ”ei tekoäly”, kysy: ”Mikä kuvauksessa kertoo, miten tulos syntyy?”
+
+Aktiviteettiin sopii noin 20 minuuttia.
 
 ---
+
+## Aktiviteetti 3 — Kouluttaminen ei ole sama kuin käyttäminen
+
+### Tavoite
+
+Oppija erottaa mallin muodostamisen uuden tapauksen arvioimisesta.
+
+Piirrä näkyviin kaksi laatikkoa.
+
+Ensimmäisen laatikon otsikko on **Kouluttaminen**. Kirjoita sen alle: ”Aiemmat myyntipäivät: viikonpäivä, sää, tapahtumat ja toteutunut myynti.”
+
+Toisen laatikon otsikko on **Käyttäminen**. Kirjoita sen alle: ”Huominen: perjantai, lämmin sää ja toritapahtuma → menekkiarvio.”
+
+Kysy ryhmältä:
+
+1. Kummassa vaiheessa aiempia esimerkkejä käytetään mallin muodostamiseen?
+2. Kummassa vaiheessa valmis malli saa uuden tapauksen?
+3. Muuttuuko malli automaattisesti jokaisesta arviosta?
+
+Tavoiteltu vastaus kolmanteen kysymykseen on ei. Malli voidaan päivittää uudella datalla, mutta päivitys on erillinen prosessi.
+
+Aktiviteettiin sopii noin 10 minuuttia.
+
+---
+
+## Aktiviteetti 4 — Arvio, sääntö ja ihminen
+
+### Tavoite
+
+Oppija tunnistaa, että koulutetun mallin arvio voi tarvita säännön tai ihmisen tarkistuksen.
+
+Kerro, että menekkimalli ehdottaa tavallista suurempaa sämpylätilausta. Jos arvio on väärä, paljon ruokaa jää myymättä.
+
+Kysy: ”Mitä järjestelmään voisi lisätä, jotta suuri tilaus ei lähde suoraan?”
+
+Kokoa vastauksista seuraava rakenne:
+
+1. malli antaa menekkiarvion
+2. valmis sääntö tunnistaa tavallista suuret tilaukset
+3. ihminen tarkistaa tilauksen ennen lähettämistä.
+
+Korosta, ettei ihmisen tarkistus tee mallista huonoa. Se on tapa sovittaa toiminta päätöksen seurauksiin.
+
+Aktiviteettiin sopii noin 10 minuuttia.
+
+---
+
+## Keskustelukysymykset
+
+Käytä kysymyksiä tunnin aikana tarpeen mukaan:
+
+- Voiko ohjelma toimia automaattisesti ilman tekoälyä?
+- Mistä tunnistat valmiin säännön?
+- Mitä aiempia esimerkkejä kaupan menekkimalli tarvitsee?
+- Miksi menekkimallin tulos on arvio eikä varma tieto?
+- Missä tilanteessa sääntö ja malli kannattaa yhdistää?
+- Mitä pitäisi tietää lisää, jos kuvaus kertoo vain, että järjestelmä valitsee sopivan määrän?
 
 ## Arviointi
 
-Opettaja arvioi opiskelijoiden kykyä:
+Opettaja arvioi ennen kaikkea perustelua. Oppijan ei tarvitse käyttää teknistä ammattisanastoa täydellisesti. Hyvä vastaus kertoo, onko toiminta kirjoitettu valmiiksi, perustuuko arvio aiempiin esimerkkeihin vai käytetäänkö molempia.
 
-- erottaa **tekoäly**, **automaatio** ja sääntöpohjainen ohjelmisto toisistaan,
-- perustella, miksi jokin järjestelmä käyttää tai ei käytä tekoälyä,
-- selittää, miksi tekoäly tarvitsee dataa ja oppimista,
-- tunnistaa sääntöpohjaisen ratkaisun ja tekoälyn vahvuuksia sekä rajoituksia,
-- yhdistää tekoälyn käsitteet opiskelijoiden omiin digitaalisiin arjen sovelluksiin.
+Oppimistavoite täyttyy, kun oppija pystyy selittämään omin sanoin:
 
----
+- automaattinen toiminta voi olla pelkkää sääntöpohjaista automaatiota
+- koneoppimismalli muodostetaan esimerkeistä ja antaa uudesta tapauksesta arvion
+- kouluttaminen ja käyttäminen ovat eri vaiheita
+- oikea järjestelmä voi yhdistää mallin, valmiin säännön ja ihmisen tarkistuksen.

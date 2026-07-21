@@ -1,57 +1,41 @@
 # Tehtävät
 
-## Tehtävä 2.1: Mallin matka aineistosta seurantaan — SUOSITELTU
+## Tehtävä 2.1: Roskapostimallin matka ja rajat — YDINTEHTÄVÄ
 
-Kuvaa petoksentunnistusmallin elinkaari kuutena peräkkäisenä vaiheena. Kirjoita jokaisesta vaiheesta 1–2 virkettä:
+Tee yhden sivun kuvaus roskapostimallista. Käytä alla olevia otsikoita ja kirjoita jokaisen alle 1–2 virkettä. Voit kirjoittaa tekstin, tehdä taulukon tai piirtää laatikot ja nuolet.
 
-1. aineiston kokoaminen ja jakaminen koulutus-, validointi- ja testiaineistoon
-2. mallin kouluttaminen
-3. malliversion valinta validointiaineiston avulla
-4. viimeinen arvio erillisellä testiaineistolla
-5. käyttöönotto ja ihmisen vastuun määrittely
-6. seuranta sekä tarvittaessa hallittu päivittäminen.
+### A. Miten malli oppii ja tarkistetaan?
 
-Lisää kuvaukseesi yksi ylioppimisen riski, yksi datadriftin esimerkki ja yksi mallidriftin esimerkki. Päätä työsi vastaukseen: miksi hyvä testitulos ennen käyttöönottoa ei riitä mallin koko elinkaaren laadun takeeksi?
+1. **Koulutusaineisto:** Millaisia valmiiksi merkittyjä viestejä malli tarvitsee oppimiseen?
+2. **Validointiaineisto:** Mihin erillisiä validointiviestejä käytetään rakentamisen aikana?
+3. **Testiaineisto:** Miksi viimeiset testiviestit pitää pitää erillään koulutuksesta ja malliversion valinnasta?
+4. **Yleistyminen:** Mistä huomaat, että malli toimii myös uusissa viesteissä eikä vain muista harjoituksia?
 
-Lisää loppuun kaksi virkettä: AGI ja ASI eivät ole tämän elinkaaren seuraavia vaiheita, vaan tulevaisuutta koskevia käsitteitä. Kerro omin sanoin, miksi toimiva rajattu malli ei vielä osoita AGI:a tai ASI:a.
+### B. Miksi mallia seurataan?
 
-Tallennettava ydintuotos on yhden sivun elinkaarikuvaus ja kahden virkkeen AGI–ASI-rajaus. Tukireitillä käytä yllä olevaa kuuden vaiheen listaa otsikkoina. Syventävällä reitillä lisää joka vaiheeseen yksi vastuuhenkilö tai rooli.
+5. **Käyttöönotto ja seuranta:** Nimeä yksi virhe, jota seuraisit käytössä. Kerro myös, mitä tehdään ennen kuin korjattu malliversio otetaan käyttöön.
 
-## Tehtävä 2.2: Viisi käsitettä tekoälyn kartalla — VAIHTOEHTOINEN TAI LISÄTEHTÄVÄ
+### C. Mitä onnistumisesta voidaan päätellä?
 
-Tee tämä tehtävä vain, jos opettaja valitsee sen tehtävän 2.1 tilalle tai jos ydintuotos on jo valmis ja aikaa jää. Tunnin pakollinen ydintuotos on yksi työ: joko tehtävän 2.1 elinkaarikuvaus tai tämä käsitetaulukko.
+Täydennä seuraavat virkkeet omin sanoin:
 
-Täydennä taulukko tunnin teorian avulla. Kirjoita jokaiseen kohtaan lyhyt selitys omin sanoin. Käytä esimerkkinä järjestelmää tai väitettä, josta käy ilmi, mitä käsite tarkoittaa.
+- Roskapostimalli on kapea, koska…
+- Varoitusviestin luonnostelu on generatiivista, koska… Sama järjestelmä voi silti olla myös kapea, koska…
+- Hyvä roskapostin tunnistus ei vielä osoita AGI:a tai ASI:a, koska…
 
-| Käsite | Mitä se tarkoittaa? | Nykyinen järjestelmä vai tulevaisuuskäsite? | Esimerkki | Tärkein rajaus |
-|---|---|---|---|---|
-| Sääntöpohjainen järjestelmä |  |  |  |  |
-| Kapea tekoäly |  |  |  |  |
-| Generatiivinen tekoäly |  |  |  |  |
-| AGI |  |  |  |  |
-| ASI |  |  |  |  |
+Tallennettava ydintuotos on yksi sivu, jossa näkyvät kaikki kolme osaa. Tukireitillä käytä otsikoita sellaisinaan ja seuraavia lauseenalkuja: **”Koulutusaineistolla malli…”**, **”Validointiaineistolla rakentaja…”**, **”Testiaineisto pidetään erillään, koska…”**, **”Käytössä seurataan…”** ja **”Tämä ei vielä osoita AGI:a tai ASI:a, koska…”** Syventävällä reitillä lisää seurantaosaan tieto siitä, kuka tarkistaa virheet ja milloin mallin käyttö keskeytetään.
 
-Kirjoita taulukon alle 2–3 virkkeen johtopäätös, jossa vastaat seuraaviin kysymyksiin:
+## Tehtävä 2.2: Mitä väitteestä todella tiedetään? — VALINNAINEN SYVENNYS
 
-- Miten generatiivinen järjestelmä voi olla kyvyiltään rajattu, ja miksi generatiivisuus ei yksin osoita AGI:a?
-- Miksi näitä viittä käsitettä ei pidä esittää kehitysportaina?
+Lue väite:
 
-Tallennettava tuotos on täydennetty taulukko ja johtopäätös. Tukireitillä käytä teoriassa olevaa vertailutaulukkoa ja muotoile sen sisältö omin sanoin. Syventävällä reitillä lisää yksi esimerkki järjestelmästä, jossa sääntöjä ja tekoälyä käytetään yhdessä.
+> ”Uusi tekoäly tunnisti kaikki testin roskapostiviestit oikein. Se oppii pian minkä tahansa työn ja ylittää ihmisen kaikessa.”
 
-## Tehtävä 2.3: Mitä väitteestä voidaan päätellä? — SYVENTÄVÄ
+Kirjoita 100–150 sanan arvio. Vastaa seuraaviin kysymyksiin:
 
-Valitse yksi seuraavista väitteistä:
+1. Mitä järjestelmän kerrotaan osoitetusti tehneen?
+2. Mitä testistä pitäisi tietää ennen vahvaa johtopäätöstä?
+3. Missä kohdassa väite siirtyy rajatusta suorituksesta AGI- tai ASI-väitteeksi?
+4. Miten muotoilisit väitteen niin, että se vastaa annettua näyttöä?
 
-- ”Tekstiä tuottava tekoäly osaa jo lähes kaiken tietotyön, joten se on AGI.”
-- ”Kun järjestelmä voitti ihmisen yhdessä testissä, se osoitti olevansa ihmistä älykkäämpi.”
-- ”ASI syntyy väistämättä heti AGI:n jälkeen.”
-
-Pura valitsemasi väite seuraavien kysymysten avulla:
-
-1. Mitä väitteessä väitetään?
-2. Mitä näyttöä väite itse antaa? Jos näyttöä ei anneta, totea se.
-3. Onko kyse sääntöpohjaisesta järjestelmästä, kapeasta tekoälystä, generatiivisesta tekoälystä, AGI-väitteestä vai ASI-väitteestä?
-4. Mitä väitteestä ei vielä voida päätellä?
-5. Mitä lisätietoa tarvitsisit ennen kuin hyväksyisit väitteen?
-
-Tallennettava tuotos on 120–180 sanan analyysi. Jos väite antaa näyttöä järjestelmän toiminnasta, päätä tekstisi virkkeeseen **”Näytön perusteella järjestelmä…”** Jos näyttöä ei anneta, päätä virkkeeseen **”Väitettä ei voi arvioida ilman tietoa siitä…”**
+Päätä tekstisi virkkeeseen **”Näytön perusteella järjestelmä…”**

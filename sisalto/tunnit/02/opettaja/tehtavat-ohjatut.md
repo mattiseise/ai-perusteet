@@ -1,182 +1,122 @@
 # Opettajavetoiset tehtävät
 
-## Tehtävien valinta 90 minuutin tunnille
+## Näin käytät tehtäviä
 
-Seuraavat tehtävät ovat vaihtoehtoja, eivät yksi peräkkäinen kokonaisuus. Tuntisuunnitelman perusreitillä käytetään ohjattua tehtävää A aineistojaon ja driftien käsittelyyn, minkä jälkeen opiskelija tekee opiskelijatehtävän 2.1 mukaisen elinkaarikuvauksen omana ydintuotoksenaan. AGI ja ASI käsitellään tunnin lopussa tiiviinä rajauksena. Jos käytät ohjattua tehtävää C tai D kokonaisena, korvaa sillä osa ydintuotoksen ohjausajasta tai siirrä se toiselle tapaamiskerralle.
+Tehtävät tukevat saman roskapostiesimerkin käsittelyä. Ne eivät ole yksi pitkä tehtävälista. Perusreitillä käytä tehtävää A aineistojaon yhteydessä ja tehtävää C ennen ydintuotoksen C-osaa. Tehtävä B sopii lyhyeksi välitarkistukseksi. Opiskelijan varsinainen tallennettava työ on tehtävä 2.1.
 
-- **Perusreitti:** ohjattu tehtävä A, opiskelijan elinkaarikuvaus ja 10–12 minuutin AGI–ASI-rajaus.
-- **Soveltava reitti:** sama ydintuotos, mutta yksi elinkaaren vaihe puretaan ohjatun tehtävän D näyttökysymyksillä.
-- **Itsenäinen reitti:** viisi Harjoittele-tehtävää ja tehtävän 2.1 elinkaarikuvaus; opettajavetoisia tehtäviä ei tarvita.
-
-## Ohjattu tehtävä A: Kolme aineistoa ja yksi muuttuva maailma
+## Ohjattu tehtävä A: Harjoitus, harjoituskoe ja lopullinen koe
 
 ### Tavoite
 
-Opiskelija erottaa koulutus-, validointi- ja testiaineiston sekä ymmärtää, miksi käyttöönotettu malli tarvitsee seurantaa.
+Opiskelija erottaa koulutus-, validointi- ja testiaineiston tehtävät.
 
-### Toteutus, noin 15 minuuttia
+### Toteutus, noin 12 minuuttia
 
-Anna ryhmille 30 kuvitteellista petostapausta paperilappuina. Pyydä ryhmää jakamaan ne kolmeen pinoon ja nimeämään kunkin pinon tehtävä. Kysy sitten, mitä tapahtuu, jos testipino avataan aina, kun mallia halutaan parantaa. Oikea havainto on, että testi alkaa ohjata rakentamista eikä enää toimi riippumattomana tarkistuksena.
+Kirjoita näkyviin kolme otsikkoa:
 
-Anna lopuksi uusi tilanne: maksaminen siirtyy nopeasti uudelle laitteelle ja petollinen toiminta muuttaa muotoaan. Ryhmä nimeää, kumpi esimerkki kuvaa datadriftiä ja kumpi mallidriftiä, sekä kertoo, mitä seurannassa pitäisi havaita ennen päivityspäätöstä.
+- harjoitustehtävät
+- harjoituskoe
+- lopullinen koe.
+
+Pyydä pareja yhdistämään niihin sanat **koulutusaineisto**, **validointiaineisto** ja **testiaineisto**. Anna sen jälkeen kolme lyhyttä kuvausta:
+
+1. Näiden viestien avulla roskapostimalli oppii.
+2. Näiden viestien avulla kahta malliversiota verrataan.
+3. Näillä sivussa pidetyillä viesteillä valittu malli arvioidaan viimeisen kerran ennen käyttöönottoa.
+
+Pari sijoittaa kuvaukset oikeiden otsikoiden alle ja perustelee yhden valinnan.
 
 ### Purku
 
-Korosta, ettei driftin havaitseminen automaattisesti tarkoita mallin uudelleenkoulutusta. Ensin selvitetään muutoksen syy, tarkistetaan aineiston laatu ja päätetään, millä erillisellä testillä korjaus osoitetaan.
+Kysy: ”Mitä tapahtuu, jos lopullisen kokeen vastauksia käytetään harjoitteluun?” Kokoa vastaus omin sanoin: testi alkaa ohjata rakentamista eikä enää ole riippumaton tarkistus.
+
+Älä jää kiinni täydelliseen koevertaukseen. Sen tehtävä on auttaa muistamaan aineistojen eri roolit.
 
 ---
 
-## Ohjattu tehtävä B: Viisi käsitettä — korttilajittelu
+## Ohjattu tehtävä B: Uusi viesti paljastaa eron
 
 ### Tavoite
 
-Opiskelija erottaa tunnin viisi käsitettä ja tunnistaa, mitkä niistä kuvaavat nykyisiä järjestelmiä ja mitkä tulevaisuuspuhetta.
+Opiskelija erottaa yleistymisen ja ylioppimisen.
 
-### Valmistelu
+### Toteutus, noin 8 minuuttia
 
-Tee viisi otsikkokorttia:
+Kuvaa kaksi roskapostimallia:
 
-- sääntöpohjainen järjestelmä
-- kapea tekoäly
-- generatiivinen tekoäly
-- AGI
-- ASI
+- Malli A tunnistaa koulutusaineiston viestit lähes täydellisesti mutta erehtyy usein uusissa viesteissä.
+- Malli B tekee koulutusaineistossa muutaman virheen mutta tunnistaa hyvin myös uudet samankaltaiset viestit.
 
-Tee lisäksi seuraavat esimerkkikortit:
+Pyydä opiskelijoita valitsemaan, kumpi malli todennäköisemmin yleistää ja kummassa näkyy ylioppimisen riski. Pari täydentää kaksi lausetta:
 
-1. Lasku siirtyy tarkistukseen, jos summa ylittää ennalta päätetyn rajan.
-2. Malli tunnistaa kuvasta, onko tuote vahingoittunut.
-3. Järjestelmä kirjoittaa tuotekuvauksen promptin perusteella.
-4. Suositusmalli arvioi, mikä kappale kiinnostaisi käyttäjää.
-5. Kuvageneraattori tekee tapahtumajulisteen tekstikuvauksesta.
-6. Väite järjestelmästä, joka oppisi joustavasti minkä tahansa ammatin.
-7. Oletus tekoälystä, joka ylittäisi ihmisen kyvyt kaikilla tieteenaloilla.
-8. Käyttäjätunnus lukitaan viiden virheellisen salasanan jälkeen.
+- ”Yleistyminen näkyy siinä, että…”
+- ”Ylioppiminen näkyy siinä, että…”
 
-### Toteutus, noin 25 minuuttia
+### Purku
 
-1. Jaa opiskelijat 2–4 hengen ryhmiin.
-2. Anna ryhmälle otsikko- ja esimerkkikortit.
-3. Pyydä ryhmää sijoittamaan jokainen esimerkki tarkimman käsitteen alle.
-4. Pyydä ryhmää merkitsemään jokainen otsikko joko **nykyiseksi järjestelmäksi** tai **tulevaisuuskäsitteeksi**.
-5. Pura ratkaisut yhdessä. Kysy jokaisesta kortista: ”Mitä järjestelmä tekee tai mitä väitteessä oletetaan?”
-
-### Malliratkaisu
-
-| Esimerkki | Tarkin käsite | Perustelu |
-|---|---|---|
-| Laskun raja | Sääntöpohjainen järjestelmä | Toiminta perustuu ihmisen kirjoittamaan ehtoon |
-| Vaurion tunnistus | Kapea tekoäly | Malli tekee rajattua tunnistustehtävää |
-| Tuotekuvauksen kirjoittaminen | Generatiivinen tekoäly | Järjestelmä tuottaa uutta tekstiä |
-| Kappalesuositus | Kapea tekoäly | Järjestelmä tekee rajattua ennustetta |
-| Julisteen tekeminen | Generatiivinen tekoäly | Järjestelmä tuottaa uuden kuvan |
-| Minkä tahansa ammatin oppiminen | AGI-väite | Väite koskee laaja-alaista ja joustavaa oppimista |
-| Ihmisen laaja ylittäminen | ASI-väite | Väite koskee ihmistä laajasti kyvykkäämpää tekoälyä |
-| Tunnuksen lukitus | Sääntöpohjainen järjestelmä | Toiminta seuraa ennalta päätettyä rajaa |
-
-### Tärkeä purku
-
-Generatiivisissa esimerkeissä osoitettu tehtävä on rajattu tekstin tai kuvan tuottamiseen. Tässä lajittelussa ne sijoitetaan generatiivisen tekoälyn alle, koska se on näkyvän toiminnan tarkin kuvaus. Merkitse samalla, että esimerkin käyttötarkoitus on rajattu. Älä päättele generatiivisuuden perusteella, että järjestelmän kyvyt olisivat yleisesti laajat.
-
-### Odotettu oppimistulos
-
-Opiskelija ymmärtää, että käsitteet eivät ole saman asteikon peräkkäisiä tasoja. Hän erottaa generatiivisuuden kykyjen rajauksesta ja tunnistaa, että sama järjestelmä voi olla molempia. Lisäksi hän erottaa AGI- ja ASI-väitteet nykyisistä järjestelmistä.
+Korosta, ettei harjoittelun paras tulos yksin ratkaise mallin käyttökelpoisuutta. Uudet tapaukset ovat olennainen tarkistus.
 
 ---
 
-## Ohjattu tehtävä C: Sama suoritus, liian suuri johtopäätös
+## Ohjattu tehtävä C: Sama palvelu, kaksi kuvausta
 
 ### Tavoite
 
-Opiskelija erottaa järjestelmän osoitetun suorituksen sitä laajemmasta tulkinnasta.
+Opiskelija ymmärtää, etteivät kapea ja generatiivinen tekoäly sulje toisiaan pois, ja erottaa ne AGI- ja ASI-väitteistä.
 
-### Valmistelu
+### Toteutus, noin 12 minuuttia
 
-Kirjoita näkyviin seuraava tilanne:
+Kirjoita taululle yksi kuvitteellinen sähköpostipalvelu:
 
-> Tekstitekoäly kirjoittaa selkeän hakemuksen, tiivistää pitkän tekstin ja vastaa jatkokysymyksiin. Käyttäjä päättelee: ”Se osaa jo lähes kaiken tietotyön, joten se on AGI.”
+> Palvelu tunnistaa roskapostin ja luonnostelee käyttäjälle varoitusviestin.
 
-### Toteutus, noin 20 minuuttia
+Kysy ryhmältä kaksi kysymystä:
 
-1. Pyydä opiskelijoita alleviivaamaan, mitä järjestelmä **osoitetusti teki**.
-2. Pyydä ympyröimään, mitä käyttäjä **päättelee**.
-3. Kootkaa taululle kaksi saraketta: **näyttö** ja **johtopäätös**.
-4. Pyydä opiskelijoita kirjoittamaan väite uudelleen niin, että se vastaa näyttöä.
+1. Mikä toiminto on rajattu tunnistustehtävä?
+2. Mikä toiminto tuottaa uutta sisältöä?
+
+Merkitse tunnistamisen viereen **kapea tekoäly** ja luonnoksen viereen **generatiivinen tekoäly**. Piirrä niiden ympärille yksi yhteinen kehys. Sama palvelu voi sisältää molemmat toiminnot.
+
+Lisää sen jälkeen kaksi väitettä:
+
+- ”Palvelu oppii itsenäisesti minkä tahansa uuden työn ihmisen tavoin.”
+- ”Palvelu ylittää ihmisen kyvyt laajasti kaikilla aloilla.”
+
+Opiskelijat nimeävät ensimmäisen AGI-väitteeksi ja toisen ASI-väitteeksi. Pyydä heitä kertomaan, miksi alkuperäinen roskapostiesimerkki ei vielä tue kumpaakaan väitettä.
 
 ### Mallipurku
 
-**Näyttö:** Järjestelmä tuotti ja muokkasi tekstiä sekä vastasi tekstimuotoisiin jatkokysymyksiin.
-
-**Liian suuri johtopäätös:** Se osaa lähes kaiken tietotyön ja on AGI.
-
-**Täsmällinen muotoilu:** Järjestelmä osoitti monipuolista tekstin tuottamisen ja käsittelyn kykyä. Tämä ei yksin osoita, että se oppisi itsenäisesti minkä tahansa työn tai toimisi joustavasti kaikissa uusissa tilanteissa.
-
-### Jatkokysymykset
-
-- Mitä muuta näyttöä AGI-väite vaatisi?
-- Millainen tehtävä olisi aidosti erilainen kuin tekstin käsittely?
-- Mitä järjestelmän luotettavuudesta, oppimisesta tai itsenäisestä toiminnasta ei vielä tiedetä?
-
-### Odotettu oppimistulos
-
-Opiskelija ei torju näkyvää suoritusta, mutta ei myöskään tee siitä näyttöä laajempaa päätelmää.
+Roskapostin tunnistaminen osoittaa rajattua luokittelukykyä. Varoitusviestin luonnosteleminen osoittaa tekstin tuottamisen kykyä. Kumpikaan ei yksin osoita joustavaa oppimista hyvin erilaisissa tehtävissä eikä ihmisen kykyjen laajaa ylittämistä.
 
 ---
 
-## Ohjattu tehtävä D: Tekoälyväitteen purkaminen
+## Ohjattu tehtävä D: Miksi seurantaa tarvitaan? — valinnainen
 
 ### Tavoite
 
-Opiskelija käyttää tunnin käsitteitä uutisotsikon, mainoslauseen tai muun väitteen kriittiseen arviointiin.
+Opiskelija tunnistaa käytönaikaisen seurannan tarpeen ilman uusia erikoistermejä.
 
-### Valmistelu
+### Toteutus, noin 10 minuuttia
 
-Valitse yksi ajankohtainen tekoälyä koskeva otsikko tai käytä seuraavaa esimerkkiväitettä:
+Anna tilanne:
 
-> ”Uusi tekoäly korvaa pian asiantuntijat — se suoriutui testissä ihmistä paremmin.”
+> Roskapostimalli testattiin tammikuussa. Syksyllä huijausviestit on kirjoitettu uudella tavalla, ja niitä jää aiempaa enemmän saapuneisiin.
 
-### Toteutus, noin 25 minuuttia
+Pyydä pareja vastaamaan:
 
-Pyydä pareja vastaamaan viiteen kysymykseen:
+1. Mitä virhettä seurannassa pitäisi laskea tai tarkastella?
+2. Miksi tammikuun hyvä testitulos ei riitä syksyllä?
+3. Mitä pitää tehdä ennen korjatun mallin käyttöönottoa?
 
-1. Mitä väitteessä sanotaan tapahtuneen?
-2. Mikä oli mahdollisesti rajattu testi tai tehtävä?
-3. Mihin tunnin käsitteeseen osoitettu suoritus sopii?
-4. Sisältääkö otsikko AGI- tai ASI-oletuksen?
-5. Miten otsikko pitäisi kirjoittaa, jotta se vastaisi näyttöä?
+Hyvä vastaus mainitsee muuttuneet viestit, virheiden havaitsemisen sekä uuden version kouluttamisen ja erillisen testaamisen. Malli ei korjaa itseään automaattisesti pelkästään näkemällä uusia viestejä.
 
-### Purkumalli
+## Tunnin lopun yhteinen tarkistus
 
-Ohjaa opiskelijoita välttämään kahta ääripäätä:
+Pyydä jokaista opiskelijaa valitsemaan yksi väite ja jatkamaan sitä ääneen tai kirjallisesti:
 
-- ”Tekoäly osaa kaiken, koska se voitti ihmisen testissä.”
-- ”Tuloksella ei ole mitään merkitystä, koska järjestelmä ei ole AGI.”
+- ”Testiaineisto pidetään erillään, koska…”
+- ”Mallia seurataan käytössä, koska…”
+- ”Kapea ja generatiivinen voivat kuvata samaa järjestelmää, koska…”
+- ”Hyvä roskapostin tunnistus ei osoita AGI:a tai ASI:a, koska…”
 
-Täsmällinen tulkinta tunnustaa rajatun suorituksen ja rajaa johtopäätöksen samaan tehtävään. Esimerkiksi:
-
-> Järjestelmä suoriutui määritellyssä testissä vertailuryhmää paremmin. Tulos ei vielä osoita, että järjestelmä hallitsisi asiantuntijatyön muut tehtävät tai toimisi niissä luotettavasti.
-
-### Odotettu oppimistulos
-
-Opiskelija osaa kuvata, mitä järjestelmä teki, nimetä väitteen käsitteellisen tason ja sanoa, mitä lisätietoa tarvitaan.
-
----
-
-## Arviointi
-
-Arvioi opiskelijan kykyä:
-
-- käyttää viittä käsitettä johdonmukaisesti,
-- erottaa sääntöpohjainen toiminta rajatusta tekoälytehtävästä,
-- erottaa generatiivisuuden kykyjen rajauksesta,
-- erottaa AGI- ja ASI-väitteet nykyisistä järjestelmistä,
-- rajata johtopäätös käytettävissä olevaan näyttöön.
-
-## Tunnin lopun itsearviointi
-
-Pyydä opiskelijaa valitsemaan jokaisesta väitteestä yksi vaihtoehto: **osaan**, **tarvitsen vielä yhden esimerkin** tai **tarvitsen ohjausta**.
-
-- Osaan selittää viiden käsitteen erot.
-- Osaan selittää, miten generatiivinen järjestelmä voi olla tehtävältään rajattu ja miksi generatiivisuus ei yksin osoita AGI:a.
-- Osaan erottaa nykyisen järjestelmän AGI- tai ASI-väitteestä.
-- Osaan sanoa, mitä tekoälyväitteestä ei vielä voida päätellä.
+Jos vastaus jää kesken, tarjoa yksi konkreettinen esimerkki ja anna opiskelijan yrittää uudelleen. Tavoite on käsitteen ymmärtäminen, ei nopea vastaaminen.

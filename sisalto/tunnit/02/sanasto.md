@@ -2,47 +2,39 @@
 
 ## Koulutusaineisto (training data)
 
-Aineisto, jonka avulla mallin parametrit opitaan.
+Esimerkit, joiden avulla malli oppii. Roskapostimallin koulutusaineistossa viestit on merkitty esimerkiksi roskapostiksi tai tavalliseksi viestiksi.
 
 ## Validointiaineisto (validation data)
 
-Erillinen aineisto, jonka avulla vertaillaan malliversioita ja säädetään rakentamisen valintoja.
+Koulutuksesta erillinen aineisto, jonka avulla malliversioita verrataan ja rakentamisen valintoja säädetään.
 
 ## Testiaineisto (test data)
 
-Rakentamisesta erillään pidetty aineisto, jolla arvioidaan valmiin mallin toimintaa uusissa tapauksissa.
+Rakentamisesta erillään pidetty aineisto, jolla valitun mallin toimintaa arvioidaan uusissa tapauksissa.
 
 ## Yleistyminen (generalization)
 
-Mallin kyky toimia hyvin uusissa, koulutusaineiston kaltaisissa mutta ennen näkemättömissä tapauksissa.
+Mallin kyky toimia myös uusissa, koulutusesimerkkejä muistuttavissa tapauksissa.
 
 ## Ylioppiminen (overfitting)
 
-Tilanne, jossa malli mukautuu harjoitusaineiston yksityiskohtiin niin tarkasti, että sen toiminta heikkenee uusissa tapauksissa.
+Tilanne, jossa malli mukautuu koulutusaineiston yksityiskohtiin liian tarkasti ja toimii siksi heikommin uusissa tapauksissa.
 
-## Datadrifti (data drift)
+## Seuranta (monitoring)
 
-Käyttöön tulevan datan muuttuminen siitä, millaista mallin koulutusdata oli.
-
-## Mallidrifti (model drift)
-
-Tilanne, jossa piirteiden ja ennustettavan asian välinen yhteys muuttuu ja mallin toiminta heikkenee.
-
-## Sääntöpohjainen järjestelmä (rule-based system)
-
-Järjestelmä, joka noudattaa ihmisen ennalta kirjoittamia ehtoja. Se ei välttämättä ole tekoälyä eikä opi sääntöjä itse.
+Mallin ja sen tulosten tarkkailu käyttöönoton jälkeen. Seuranta auttaa huomaamaan virheet ja toiminnan heikkenemisen.
 
 ## Kapea tekoäly (narrow AI)
 
-Tiettyyn tehtävään tai rajattuun tehtäväjoukkoon rakennettu tekoäly. Se voi olla tehtävässään erittäin taitava, mutta ei siirrä osaamistaan vapaasti mihin tahansa uuteen tehtävään.
+Tiettyyn tehtävään tai rajattuun tehtäväjoukkoon rakennettu tekoäly. Kapea voi olla omassa tehtävässään erittäin taitava.
 
 ## Generatiivinen tekoäly (generative AI)
 
-Tekoäly, joka tuottaa uutta tekstiä, kuvaa, ääntä, videota tai koodia. Generatiivisuus ei yksin kerro järjestelmän kykyjen laajuutta tai osoita, että se olisi AGI.
+Tekoäly, joka tuottaa esimerkiksi tekstiä, kuvaa, ääntä tai videota. Sama järjestelmä voi olla sekä generatiivinen että kyvyiltään rajattu.
 
 ## Yleinen tekoäly (artificial general intelligence, AGI)
 
-Tutkimus- ja tulevaisuuskäsite tekoälystä, joka pystyisi oppimaan, soveltamaan osaamistaan ja toimimaan joustavasti hyvin erilaisissa tehtävissä. Käsitteellä ei ole yhtä yleisesti hyväksyttyä määritelmää tai testiä.
+Tutkimus- ja tulevaisuuskäsite tekoälystä, joka pystyisi oppimaan, soveltamaan osaamistaan ja toimimaan joustavasti hyvin erilaisissa tehtävissä. Yleisesti hyväksyttyä nykyistä AGI-esimerkkiä ei ole.
 
 ## Yliäly (artificial superintelligence, ASI)
 

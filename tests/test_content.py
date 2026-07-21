@@ -50,8 +50,8 @@ def main():
             task = json.loads(raw)
             task_count += 1
             task_types.add(task['type'])
-    if task_count != 115:
-        fail(f'Harjoittele-tehtäviä {task_count}, odotettiin 115', errors)
+    if task_count != 113:
+        fail(f'Harjoittele-tehtäviä {task_count}, odotettiin 113', errors)
     expected_types = {'match', 'order', 'classify', 'quiz', 'scenario', 'spot', 'reflect'}
     if task_types != expected_types:
         fail(f'Tehtävätyypit {sorted(task_types)}', errors)
@@ -196,7 +196,7 @@ def main():
     if errors:
         print(*errors, sep='\n')
         return 1
-    print('OK: 115 tehtävää, 27 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
+    print('OK: 113 tehtävää, 27 demoa, 27 lähdeosiota, arvioinnit ja sisältösopimukset')
     return 0
 
 

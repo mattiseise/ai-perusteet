@@ -1,138 +1,79 @@
-# Opiskelutehtävät — Mikä tekoäly oikeasti on?
+# Opiskelutehtävät — Sääntö, malli vai yhdistelmä?
 
-> **Kaikkia ei tarvitse tehdä.** Valitse tehtävistä yksi. Suosittelen tehtävää 1.1, joka harjoittaa suoraan tunnin ydintaitoa. Jos sinulla on aikaa ja kiinnostusta, voit lisäksi tehdä syventävän tehtävän 1.2.
+## Tehtävä 1.1 — Kaupan huominen tilaus — suositeltu
 
-## Tehtävä 1.1 — AI vai ei AI? — SUOSITELTU
+Tässä tehtävässä et tarvitse käyttäjätiliä, tekoälypalvelua tai aiempaa kokemusta tietokoneista. Voit tehdä tehtävän paperille, muistiinpanoihin tai opettajan jakamaan tiedostoon.
 
-**Tavoite:** Opit erottamaan tekoälyn tavallisesta ohjelmoinnista konkreettisten esimerkkien avulla. Tämä on koko Teoria-osion peruskivi.
+### Tavoite
 
-### Vaiheet
-
-#### Vaihe 1 — Luokittele itse ensin
-
-Käy alla oleva taulukko läpi **omin päin**. Merkitse jokaiselle: AI / Ei AI / Epäselvä — ja kirjoita yhden lauseen perustelu. Älä vielä käytä tekoälyä apuna; tarkoitus on, että muodostat ensin oman käsityksen.
-
-| Järjestelmä | Kuvaus | AI / Ei AI / Epäselvä | Perustelu |
-|---|---|---|---|
-| Sähköpostin roskapostisuodatin | Lajittelee viestit roskapostiin sanojen perusteella | | |
-| Netflix-suositukset | Näyttää elokuvia ja sarjoja, joista todennäköisesti pidät | | |
-| Pankin lainahakemus | Tekee hyväksyntä-/hylkäyspäätöksen automaattisesti | | |
-| Puhelinluettelo | Järjestää yhteystiedot aakkosjärjestykseen | | |
-| Google Maps | Ohjaa reitille reaaliaikaisen liikennetiedon perusteella | | |
-| Pankkiautomaatti | Antaa rahaa, kun syötät PIN-koodin | | |
-| Auto-correct | Korvaa väärän kirjoitusasun oikealla sanalla | | |
-
-#### Vaihe 2 — Haasta itsesi tekoälyn kanssa
-
-Avaa ChatGPT tai Claude ja anna tekoälylle **oma luokittelusi**. Pyydä sitä haastamaan päätelmäsi. Esimerkkiprompti:
-
-```
-Toimit minulle sparrauskumppanina. Opiskelen tekoälyn perusteita ja
-yritän oppia erottamaan, milloin järjestelmä on tekoälyä ja milloin
-'pelkkä ohjelma'. Tässä oma luokitteluni perusteluineen:
-
-[liitä taulukkosi tähän]
-
-Haasta päätelmäni. Missä kohdissa voisin olla väärässä? Onko jokin
-'Ei AI' itse asiassa AI:n rajatapaus, tai päinvastoin? Älä paljasta
-suoraan oikeita vastauksia — esitä vastakysymyksiä ja pyydä minua
-perustelemaan vielä tarkemmin.
-```
-
-Tämä on harjoitus siitä, miten tekoälyä käytetään *ajattelun terävöittäjänä*, ei vastauspalveluna. Huomaat samalla, että tekoälyn vastauksiakaan ei kannata niellä sellaisenaan.
-
-#### Vaihe 3 — Kirjoita yhteenveto
-
-Tekoälykeskustelun jälkeen muokkaa taulukkoasi tarvittaessa ja kirjoita lyhyt yhteenveto (3–5 lausetta):
-
-- Mikä on tärkein ero tekoälyn ja tavallisen ohjelman välillä?
-- Mikä esimerkeistä oli vaikein luokitella ja miksi?
-- Muuttuiko jokin päätös tekoälykeskustelun aikana? Jos, niin mikä — ja miksi?
-
-> **Vinkki:** Tehtävää ei palauteta, mutta tämän ja muiden tuntien tehtävien tulokset kannattaa koota omaan muistiinpanodokumenttiin. Käytät niitä myöhemmin tukena, kun pohdit, miten tekoäly toimii ja missä sen rajat ovat.
-
----
-
-## Tehtävä 1.2 — Petoksentunnistus: sääntö vai tekoäly? — SYVENTÄVÄ
-
-> **Tämä on syventävä lisätehtävä.** Tee tämä, jos haluat ymmärtää *miksi* tekoäly on parempi kuin säännöt monimutkaisissa päätöksissä — etkä vain *että* niin on.
-
-**Tavoite:** Huomaat omakohtaisesti, miksi kiinteät säännöt eivät riitä tilanteissa, joissa on monta muuttujaa ja poikkeuksia.
-
-Samalla nimeät koneoppimisen perusosat. Taulukon summa, kellonaika, paikka ja tavallinen käyttö ovat **piirteitä**. Ennustettava **tavoitemuuttuja** on tapahtuman tila, ja sen kaksi **luokkaa** ovat petos ja laillinen. Koska oikea luokka on harjoitusesimerkeissä valmiiksi merkitty, kyse on ohjatun oppimisen aineistosta.
+Tehtävän jälkeen osaat erottaa valmiin säännön esimerkeistä koulutetusta koneoppimismallista. Osaat myös tunnistaa järjestelmän, jossa käytetään molempia.
 
 ### Tilanne
 
-Olet pankin tietoturvatiimissä. Tehtäväsi on suojata asiakkaiden tilit petoksilta. Alla on 10 transaktiota, joissa **oikea vastaus on jo paljastettu** ("Petos" tai "Laillinen"). Sinun haasteesi: kehittää sääntöjoukko, joka tunnistaa nämä oikein.
+Pieni ruokakauppa paistaa joka aamu sämpylöitä. Kauppiaan pitää päättää, kuinka monta sämpylää seuraavana päivänä tarvitaan. Päätös voidaan tehdä valmiilla säännöllä, aiempien myyntipäivien avulla koulutetulla mallilla tai niiden yhdistelmällä.
 
-| # | Summa (€) | Kello | Paikka | Tavallinen käyttö | Lopputulos |
-|---|---|---|---|---|---|
-| 1 | 5 500 | 14:30 | Koulu | Yleensä < 1 000 | Laillinen |
-| 2 | 2 000 | 03:15 | Tuntematon maa | Harvoin yöllä | **Petos** |
-| 3 | 150 | 10:00 | Ruokakauppa | Päivittäinen | Laillinen |
-| 4 | 8 000 | 19:45 | Koti | Kerran kuussa | Laillinen |
-| 5 | 300 | 02:30 | Verkkokauppa | Ei koskaan yöllä | **Petos** |
-| 6 | 50 | 12:00 | Kahvila | Päivittäinen | Laillinen |
-| 7 | 10 000 | 15:00 | Tuntematon maa | Ensimmäinen kerta | **Petos** |
-| 8 | 3 000 | 20:00 | Koti | Kuukausittain | Laillinen |
-| 9 | 600 | 23:45 | Tuntematon kauppa | Ei koskaan | **Petos** |
-| 10 | 75 | 11:00 | Ruokakauppa | Päivittäinen | Laillinen |
+### Vaihe 1 — Luokittele läpinäkyvät tapaukset
 
-### Vaiheet
+Merkitse jokaiseen tapaukseen **valmis sääntö**, **koulutettu malli** tai **yhdistelmä**. Kirjoita lisäksi yksi lyhyt perustelu.
 
-#### Vaihe 1 — Kirjoita oma sääntöjoukkosi
+| Tapaus | Luokittelu | Perustelu |
+|---|---|---|
+| Kauppa tilaa maanantaiksi aina 100 sämpylää ja muiksi päiviksi 140. |  |  |
+| Menekkimalli on koulutettu kolmen vuoden myyntipäivillä. Se arvioi huomisen tarpeen viikonpäivän, sään ja tapahtumien perusteella. |  |  |
+| Menekkimalli ehdottaa tilausmäärän, mutta yli 200 sämpylän tilaus siirretään valmiin säännön perusteella ihmiselle. |  |  |
+| Varaston ovi aukeaa, jos kulkukortti löytyy sallittujen korttien listalta. |  |  |
 
-Kirjoita 3–5 sääntöä muodossa: *"Jos [ehto], merkitse petokseksi."*
+Voit aloittaa perustelun näin:
 
-Esimerkki: `"Jos summa > 1 000 € JA kello on välillä 00:00–06:00 → petos."`
+- ”Tämä on valmis sääntö, koska…”
+- ”Tässä käytetään koulutettua mallia, koska…”
+- ”Tämä on yhdistelmä, koska…”
 
-#### Vaihe 2 — Testaa sääntöjäsi
+### Vaihe 2 — Testaa perustelu parin kanssa
 
-Käy 10 transaktiota läpi sääntöjesi mukaan ja merkitse:
+Vaihda vastaukset parin kanssa tai käytä opettajan antamaa tarkistuskorttia. Älkää tarkistako vain luokittelusanaa. Kysykää jokaisesta tapauksesta:
 
-- **Oikein tunnistetut petokset:** ___ / 4
-- **Vääriä hälytyksiä** (laillinen → "petos"): ___ / 6
-- **Missatut petokset** ("laillinen", oikeasti petos): ___ / 4
+1. Onko toiminta kirjoitettu valmiiksi?
+2. Onko järjestelmä koulutettu aiemmilla esimerkeillä?
+3. Käytetäänkö molempia?
 
-#### Vaihe 3 — Nimeä oppimistehtävä
+Jos perustelu ei vielä kerro toteutustapaa, tarkenna sitä yhdellä lauseella. Tavoitteena ei ole arvata vaan näyttää, mihin havaintoon päätös perustuu.
 
-Kirjoita taulukon alle omin sanoin:
+### Vaihe 3 — Kouluttaminen ja käyttäminen
 
-- mitkä neljä tietoa toimivat piirteinä
-- mikä on tavoitemuuttuja
-- mitkä ovat sen kaksi luokkaa
-- miksi esimerkki on ohjattua eikä ohjaamatonta oppimista.
+Täydennä virkkeet omin sanoin:
 
-Pohdi lopuksi, mitä ohjaamaton oppiminen voisi samasta aineistosta etsiä ilman valmiita petosmerkintöjä. Se voisi esimerkiksi nostaa tarkistettavaksi harvinaisia tapahtumaryhmiä, mutta poikkeavuutta ei saisi nimetä automaattisesti petokseksi.
+> Mallin kouluttaminen tarkoittaa, että…
 
-#### Vaihe 4 — Käytä tekoälyä apuna analysointiin
+> Koulutetun mallin käyttäminen tarkoittaa, että…
 
-Avaa tekoäly ja anna sille sääntöjoukkosi sekä testituloksesi:
+> Malli ei automaattisesti opi jokaisesta käyttökerrasta, koska…
 
-```
-Toimit minulle sparrauskumppanina. Yritän ymmärtää, miksi kiinteät
-säännöt eivät riitä petoksentunnistukseen.
+### Vaihe 4 — Tee oma arkiesimerkki
 
-Tässä sääntöni ja niiden tulokset:
+Kirjoita yksi oma esimerkki valmiista säännöstä tai koulutetusta mallista. Jos et keksi omaa, voit käyttää jompaakumpaa näistä:
 
-Säännöt:
-[liitä sääntösi]
+- valo syttyy aina tiettyyn kellonaikaan
+- ruokala arvioi huomisen annosmäärän aiempien päivien perusteella.
 
-Tulokset: [missatut, väärät hälytykset, oikeat osumat]
+Kerro lopuksi, miksi valitsit juuri säännön tai mallin.
 
-Auta minua ymmärtämään, mitkä piirteet petostransaktioissa ovat
-sellaisia, että niitä on vaikea pukea yhdeksi säännöksi. Miksi
-oikea petos voi näyttää joskus 'normaalilta'? Älä kerro minulle
-suoraan, miten tekoäly ratkaisisi tämän — auta minua löytämään
-se itse.
-```
+### Lopputarkistus
 
-Huomaa, että tekoäly itse on tällaisten ongelmien ratkaisija — käytät sitä siis omakohtaisesti samalla, kun opettelet ymmärtämään, miksi se on tarpeen.
+- [ ] Tunnistin valmiin säännön.
+- [ ] Tunnistin esimerkeistä koulutetun mallin.
+- [ ] Löysin tapauksen, jossa sääntö ja malli toimivat yhdessä.
+- [ ] Selitin, ettei automaattinen toiminta yksin tarkoita tekoälyä.
+- [ ] Kirjoitin, ettei käytössä oleva malli automaattisesti opi jokaisesta uudesta tapauksesta.
 
-#### Vaihe 4 — Vastaa pääkysymykseen
+## Tukireitti
 
-Kirjoita 3–5 lausetta:
+Jos tehtävän aloittaminen tuntuu vaikealta, tee ensin vain kaupan maanantaisääntö ja menekkimalli. Opettaja tai pari voi lukea kuvaukset ääneen. Valitse luokittelu valmiista vaihtoehdoista ja täydennä yksi perustelulause.
 
-*"Miksi tekoäly olisi parempi tähän tehtävään kuin kiinteät säännöt?"*
+## Valinnainen syvennys
 
-**Tunnin 1 jälkeen osaat erottaa tekoälyn tavallisesta ohjelmasta.**
+Kun ydintehtävä on valmis, pohdi kuvausta: ”Järjestelmä valitsee huomiselle sopivan tilausmäärän.” Voiko kuvauksesta päätellä, käytetäänkö sääntöä vai koulutettua mallia? Kirjoita, mitä lisätietoa tarvitsisit ennen luokittelua.
+
+---
+
+**Tunnin jälkeen osaat kysyä, perustuuko toiminta valmiiseen sääntöön, esimerkeistä koulutettuun malliin vai niiden yhdistelmään.**

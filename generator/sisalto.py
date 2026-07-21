@@ -256,13 +256,14 @@ def esc_attr(s):
 # työpöytäkuvion olennaisen suhteen (virta, vertailu, silmukka tai suojakerrokset)
 # luettavana HTML:nä ilman 560 px koordinaatistoa.
 _DEMO_MOBILE_MODELS = {
-    'lesson-01-01': ('compare', ['SÄÄNTÖ: yksi euromääräraja → iso siirto hälyttää, outo pieni siirto pääsee läpi',
-                                 'OPITTU MALLI: useita painotettuja signaaleja → molemmat poikkeamat ylittävät kynnyksen']),
-    'lesson-02-01': ('compare', ['SÄÄNTÖ: ihminen kirjoittaa ehdon — jos summa ylittää rajan → tarkistus',
-                                 'OPITTU MALLI: esimerkkidata → malli → arvio uudesta tapauksesta',
-                                 'Sääntöpohjainen järjestelmä ei välttämättä ole tekoälyä']),
+    'lesson-01-01': ('compare', ['VALMIS SÄÄNTÖ: maanantai → 100 sämpylää',
+                                 'KOULUTETTU MALLI: aiemmat päivät → menekkiarvio',
+                                 'YHDISTELMÄ: mallin arvio → sääntö tarkistaa']),
+    'lesson-02-01': ('compare', ['SÄÄNTÖ: estolistalla oleva lähettäjä → viesti roskapostiin',
+                                 'KOULUTETTU MALLI: merkityt viestit → arvio uudesta viestistä',
+                                 'Todellinen järjestelmä voi käyttää molempia']),
     'lesson-02-02': ('compare', ['KÄYTÖSSÄ NYT: sääntöpohjainen · kapea · generatiivinen — kapea ja generatiivinen voivat olla sama järjestelmä',
-                                 'TULEVAISUUSPUHE: AGI (ei hyväksyttyä nykyesimerkkiä) · ASI (hypoteettinen)',
+                                 'TULEVAISUUSPUHE: yleisesti hyväksyttyä nykyistä AGI-esimerkkiä ei ole · ASI on hypoteettinen',
                                  'Sujuva teksti ei ylitä nykyisyyden rajaa — käsitteet eivät ole kehitysaskelmia']),
     'lesson-03-01': ('loop', ['Syöte ja tähänastinen teksti', 'Laske seuraavien tokenien todennäköisyydet',
                               'Valitse tokeni', 'Liitä tekstiin', 'Toista, kunnes vastaus päättyy']),
