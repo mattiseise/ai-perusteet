@@ -61,10 +61,26 @@ function showTab(name,pushHash){
   panels.forEach(function(p){var on=p.getAttribute('data-tab')===name;p.classList.toggle('active',on);p.hidden=!on;if(on)found=true;});
   tabs.forEach(function(t){var on=t.getAttribute('data-tab')===name;t.classList.toggle('active',on);t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;});
   if(!found){return false;}
-  if(pushHash!==false){try{history.replaceState(null,'','#'+name);}catch(e){location.hash=name;}}
+  if(pushHash!==false){try{history.replaceState(null,'','#'+name);}catch(e){location.hash=name;}
+    scrollToTabs();}
   var lp=document.getElementById('lesson-panels');if(lp)lp.scrollTop=0;
   runMermaid();
   return true;
+}
+// Välilehden vaihto vierittää uuden sisällön alkuun. Sivu vierittyy dokumentti-
+// tasolla (lesson-panels ei ole vieritysalue), joten pelkkä scrollTop=0 ei riitä:
+// alalaidasta (esim. teorian lopun Harjoittele-sillasta) vaihtava jäi katsomaan
+// uuden paneelin loppua. Vieritetään VAIN ylöspäin, ettei sivun yläosassa oleva
+// käyttäjä hyppää alaspäin tabia vaihtaessaan. Sticky-yläpalkin korkeus vähennetään.
+function scrollToTabs(){
+  var tabs=document.getElementById('lesson-tabs');if(!tabs||!window.scrollTo)return;
+  var bar=document.querySelector('.topbar');
+  var off=(bar&&getComputedStyle(bar).position==='sticky')?bar.getBoundingClientRect().height:0;
+  var y=window.scrollY+tabs.getBoundingClientRect().top-off;
+  if(y<0)y=0;
+  if(y>=window.scrollY)return;
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try{window.scrollTo({top:y,behavior:rm?'auto':'smooth'});}catch(e){window.scrollTo(0,y);}
 }
 function initTabs(){var list=document.querySelector('.lesson-tabs[role="tablist"]');if(!list)return;
   list.addEventListener('keydown',function(e){var tabs=Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));var i=tabs.indexOf(document.activeElement);if(i<0)return;var n=i;
