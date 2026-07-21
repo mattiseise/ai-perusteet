@@ -1,5 +1,5 @@
 {
-  "expectedDemoCount": 27,
+  "expectedDemoCount": 28,
   "views": [
     "kurssi",
     "luokka"
@@ -34,6 +34,7 @@
     "lesson-13-01",
     "lesson-14-01",
     "lesson-15-01",
+    "lesson-15-02",
     "lesson-16-01",
     "lesson-17-01",
     "lesson-19-01",

@@ -4,6 +4,18 @@
 
 Tieto, jonka varassa botti vastaa — esimerkiksi tuotelista, ohjeet ja usein kysytyt kysymykset. Ilman ajantasaista tietopohjaa botti arvailee ja voi antaa virheellisiä vastauksia.
 
+## RAG (retrieval-augmented generation)
+
+Haulla täydennetty tekstintuotto: tapa, jolla botti käyttää tietopohjaa. Ensin **hakuvaihe** etsii tietopohjasta kysymykseen osuvimmat tekstikatkelmat, sitten kielimalli muodostaa vastauksen niiden pohjalta. Botti ei siis lue koko tietopohjaa joka kysymyksellä, vaan vastaa löydettyjen katkelmien varassa.
+
+## Hakuvaihe
+
+RAG:n ensimmäinen vaihe: järjestelmä etsii tietopohjasta ne kohdat, jotka muistuttavat eniten käyttäjän kysymystä, ja poimii niistä osuvimmat. Jos haku ei osu, tieto voi silti olla aineistossa — erota siksi tilanne "tietoa ei ole aineistossa" tilanteesta "järjestelmä ei löytänyt aineistossa olevaa tietoa".
+
+## Tekstikatkelma
+
+Tietopohjan aineistosta pilkottu pieni pala, tyypillisesti muutaman kappaleen mittainen, jota haku voi käsitellä yksitellen. Hakuvaihe poimii kysymykseen osuvimmat katkelmat ja liittää ne mallin kontekstiin vastausta varten.
+
 ## Rajaus
 
 Botin "en osaa" tai "en saa tehdä tätä" -kohdat: mihin aiheisiin botti vastaa ja mitä se ei saa tehdä. Rajaukset asetetaan ohjeistuksella ja suojaavat sekä käyttäjää että bottia.
