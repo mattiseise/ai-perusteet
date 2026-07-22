@@ -33,7 +33,8 @@ Tekoälyn perusteet -verkkokurssi (aiperusteet.fi). 27 oppituntia kolmessa moduu
 
 - **prompti** (ei "kehote" — paitsi kertamaininta tunnin 4 teoriassa ja sanastossa: "suomeksi myös kehote"). Yhdyssanat: järjestelmäprompti.
 - **pitkäkestoinen muisti** (ei pitkäaikainen), **eskalointi** (ei eskalaatio/eskalatio), **agentti = kielimalli + harness**, kuusi rakennusosaa tunnin 19 nimillä.
-- Tuotenimet ja päivämäärät vain "Tilanne heinäkuussa 2026" -laatikoissa (tunnit 10, 19 ja 22) — ne ovat tietoisia huoltokohtia. Tunti 10 on tuotevertailu (ChatGPT/Claude/Copilot) ja siksi väistämättä tuotesidonnainen: pidä väitteet kestävissä eroissa (vahvuusalue, ekosysteemi, mistä data tulee) äläkä kirjaa versionumeroita, hintoja tai käyttörajoja leipätekstiin.
+- **Tuotenimet: sallittuja esimerkkeinä, kiellettyjä faktoina.** Aloittelija tarvitsee konkreettisen ankkurin, joten nimeä tuotteita vapaasti havainnollistamaan (ChatGPT, Claude, Microsoft Copilot, Google Gemini, Microsoft Azure, Amazon Web Services, DeepSeek, KIMI, Mistral, Midjourney). **Älä koskaan kirjoita versionumeroita, hintoja, käyttörajoja tai konteksti-ikkunan kokoja leipätekstiin** — ne vanhenevat kuukausissa. Pidä väitteet kestävissä eroissa: vahvuusalue, ekosysteemi, mistä data tulee, kuka määrittää ehdot.
+- Nopeasti muuttuvat tuotetiedot kuuluvat "Tilanne heinäkuussa 2026" -laatikoihin (tunnit 10, 19 ja 22) — ne ovat tietoisia huoltokohtia.
 - **Kohderyhmä:** kurssi on kaikille avoin, ei vain työelämässä oleville. Älä oleta lukijalla työpaikkaa tai organisaatiota ("Ammattilaisena…", "organisaatiosi…"). `tests/test_yleiso.py` vahtii tätä; perustellut poikkeukset `tests/allowlists/yleiso.yaml`.
 - Em-viiva (—) on talotyyli.
 

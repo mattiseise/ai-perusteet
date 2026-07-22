@@ -84,6 +84,8 @@ Tämän tunnin ajatus on yksinkertainen: **valitse aineistomuoto sen perusteella
 
 **Modaliteetti** tarkoittaa tietomuotoa, kuten tekstiä, kuvaa tai ääntä. **Multimodaalinen malli** pystyy käsittelemään useampaa kuin yhtä tietomuotoa. Se voi esimerkiksi lukea käyttäjän kysymyksen ja tarkastella siihen liitettyä valokuvaa.
 
+Käytännössä useimmat tunnetut keskustelupalvelut ovat nykyään multimodaalisia: ChatGPT, Claude, Microsoft Copilot ja Google Gemini pystyvät kaikki käsittelemään sekä tekstiä että kuvaa, ja osa myös ääntä. Se ei tarkoita, että ne olisivat yhtä hyviä kaikissa muodoissa — ja juuri sitä tämän tunnin vertailukoe selvittää.
+
 Eri muodot säilyttävät eri asioita:
 
 | Aineistomuoto | Mitä se säilyttää hyvin? | Mitä siitä voi kadota? |

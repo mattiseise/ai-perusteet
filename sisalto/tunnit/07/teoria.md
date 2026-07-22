@@ -12,6 +12,8 @@ Tämän tunnin jälkeen sinulla on kolmas ja viimeinen todistusaineisto omaan ar
 
 ## Kielimallin vastaus voi vaihdella
 
+Tämä koskee kaikkia keskustelevia tekoälypalveluita — ChatGPT:tä, Claudea, Microsoft Copilotia ja Google Geminiä yhtä lailla. Kyse ei ole yhden palvelun viasta vaan siitä, miten kielimallit toimivat. Siksi tarkistamisen tapa on tärkeämpi opetella kuin se, mikä palvelu on juuri nyt tarkin.
+
 Generatiivinen kielimalli rakentaa vastauksen token kerrallaan. Se arvioi jokaisessa vaiheessa, millainen jatko sopii aiempaan tekstiin. Valintaan voi sisältyä vaihtelua, joten sama prompti ei aina tuota täsmälleen samaa vastausta. Tätä kutsutaan **epädeterminismiksi**.
 
 Joissakin järjestelmissä vaihteluun vaikuttaa **lämpötila**. Matala lämpötila suosii todennäköisimpiä jatkoja, korkea sallii enemmän vaihtelua. Asetus ei kuitenkaan tee vastauksesta totta. Johdonmukainen vastaus voi olla väärä, ja vaihteleva vastaus voi olla käyttökelpoinen.

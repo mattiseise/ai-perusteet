@@ -2,6 +2,8 @@
 
 ## Johdanto: työparuus ei tarkoita työn luovuttamista
 
+Tämän tunnin sykli toimii millä tahansa keskustelevalla tekoälypalvelulla — ChatGPT:llä, Claudella, Microsoft Copilotilla tai Google Geminillä. Kannattaa kokeilla sitä, joka on sinulle käytettävissä; menetelmä ei ole työkalusidonnainen.
+
 Tekoälystä on hyötyä, kun sille annetaan rajattu rooli työprosessissa. Se voi tehdä ensimmäisen luonnoksen, ehdottaa vaihtoehtoja tai toimia kriittisenä lukijana. Ihminen päättää tavoitteen, tunnistaa virheet, tekee olennaiset valinnat ja hyväksyy lopputuloksen.
 
 Tämän tunnin työskentelymalli on:

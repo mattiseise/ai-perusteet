@@ -99,11 +99,15 @@ Jos toiminta heikkenee, syy selvitetään. Aineistoa voidaan täydentää, malli
 
 Mallin onnistumista kannattaa kuvata sen mukaan, mitä sen on osoitettu tekevän. Roskapostimalli tekee rajattua tunnistustehtävää. Tekstiä tuottava järjestelmä voi puolestaan kirjoittaa luonnoksen varoitusviestistä. Näitä toimintoja kuvaavat käsitteet **kapea tekoäly** ja **generatiivinen tekoäly**.
 
+Generatiivisista järjestelmistä tunnetuimpia ovat ChatGPT, Claude, Microsoft Copilot ja Google Gemini. Niiden rinnalla on avoimia malleja, jotka kuka tahansa voi ladata omalle koneelleen — esimerkiksi kiinalaiset DeepSeek ja KIMI. Nimet vaihtuvat ja uusia tulee jatkuvasti, joten niitä ei kannata opetella ulkoa. Olennaista on tunnistaa, mihin ryhmään järjestelmä kuuluu ja mitä siitä seuraa.
+
 ### Kapea tekoäly — rajattu tehtävä
 
 Kapea tekoäly on rakennettu tiettyä tehtävää tai rajattua tehtäväjoukkoa varten. Roskapostimalli voi olla omassa tehtävässään erittäin hyvä, mutta se ei siksi osaa suunnitella matkaa, opettaa matematiikkaa tai hoitaa mitä tahansa muuta tehtävää.
 
 Kapea ei siis tarkoita huonoa. Se tarkoittaa, että osaamisella on rajat.
+
+Kapeaa tekoälyä on ympärilläsi enemmän kuin huomaat: roskapostisuodatin sähköpostissa, kasvojentunnistus puhelimen kuvagalleriassa, pankin korttimaksujen poikkeamavalvonta ja suoratoistopalvelun suositukset. Yksikään niistä ei keskustele kanssasi, ja juuri siksi niitä ei yleensä kutsuta arjessa tekoälyksi.
 
 ### Generatiivinen tekoäly — tuottaa sisältöä
 

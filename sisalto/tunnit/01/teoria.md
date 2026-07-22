@@ -32,6 +32,8 @@ Siksi lause ”ohjelma teki sen itse” ei vielä kerro, että kyse on tekoälys
 
 ## Koneoppimismalli koulutetaan esimerkeillä
 
+Tällä tavalla on rakennettu suuri osa arjen tekoälystä: puhelimen kuvahaku, joka löytää kuvat hakusanalla "koira", sähköpostin roskapostisuodatin ja keskustelupalvelut kuten ChatGPT ja Claude. Yksikään niistä ei seuraa ihmisen kirjoittamaa sääntölistaa.
+
 Kauppiaalla voi olla tallessa tietoa aiemmista myyntipäivistä. Jokaisesta päivästä voidaan tietää esimerkiksi viikonpäivä, sää, mahdollinen juhlapäivä ja myytyjen sämpylöiden määrä. Näitä aiempia tapauksia kutsutaan tässä **esimerkeiksi** tai **dataksi**.
 
 Koneoppimismallin kouluttamisessa järjestelmä muodostaa näistä esimerkeistä yhteyksiä. Se voi huomata, että perjantaisin myynti on usein vilkkaampaa, sateella asiakkaita käy vähemmän tai toritapahtuma lisää kysyntää. Ihmisen ei tarvitse kirjoittaa jokaista mahdollista yhdistelmää erilliseksi säännöksi.

@@ -118,6 +118,8 @@ Kun olet kirjoittanut järjestelmäpromptin ensimmäisen version, voit pyytää 
 
 Tästä eteenpäin polut eroavat. Jos sinulla on käytössä alusta, jolle botin voi rakentaa, teet toimivan version. Jos ei ole, teet dokumentoidun suunnitelman, joka arvioidaan samoilla kriteereillä — kumpikaan polku ei ole toista arvokkaampi, ja molemmissa ratkaisee sama asia: miten hyvin määrittelysi kestää testin.
 
+Tällaisia alustoja ovat esimerkiksi ChatGPT:n räätälöidyt botit, Microsoft Copilot Studio ja Clauden projektit. Oppilaitoksissa käytettävissä oleva alusta riippuu lisensseistä ja ikärajoista, joten opettaja kertoo, mikä on teillä käytössä. Jos mikään ei ole käytettävissä, dokumentoitu suunnittelupolku on täysi vaihtoehto — sitä käytetään myös työelämässä ennen kuin mitään rakennetaan.
+
 **Teknisellä toteutuspolulla** luot botin saatavilla olevalle alustalle:
 
 1. Luo uusi botti ja anna sille sama nimi kuin määrittelydokumentissasi.

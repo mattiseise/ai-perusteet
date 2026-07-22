@@ -153,6 +153,8 @@ Ilman lokia jäljelle jää vain lopputulos, eikä toinen ihminen voi tietää, 
 
 ## Reitti A — kuva
 
+Kuvia tuottavia palveluita on useita, ja monet keskustelupalvelut (ChatGPT, Google Gemini, Microsoft Copilot) sisältävät kuvanluonnin suoraan. Erikoistuneita kuvatyökaluja ovat esimerkiksi Midjourney ja Adobe Firefly. Alla oleva ohje pätee niistä riippumatta.
+
 Kuvatyökalulle kirjoitettava syöte alkaa kuvan tehtävästä. Kerro sen jälkeen pääkohde ja toiminta, sommittelu tai kuvakulma, tavoiteltu visuaalinen ilme ja tarvittava kuvasuhde. Rajaa samalla pois sellaiset elementit, jotka tekisivät kuvasta väärän tai harhaanjohtavan. Kaikkea mahdollista ei tarvitse kuvailla; valitse yksityiskohdat sen mukaan, mitä käyttötarkoitus vaatii.
 
 Kuvan laatua ei ratkaise pelkkä näyttävyys. Katso, ohjaako sommittelu huomion olennaiseen ja ovatko tärkeät kohteet, tekstit, symbolit ja mittasuhteet uskottavia. Mieti myös, voisiko katsoja päätellä kuvasta jotakin sellaista, mikä ei pidä paikkaansa. Jos kuva julkaistaan verkossa, sille tarvitaan yleensä vaihtoehtoinen teksti, joka välittää saman olennaisen tiedon kuvan näkemättä.

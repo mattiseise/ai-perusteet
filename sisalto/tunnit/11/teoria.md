@@ -28,6 +28,8 @@ Tekoälystä puhuttaessa kolme eri asiaa sekoittuu helposti.
 
 Erottelu on tärkeä, koska palvelun nimi ei yksin kerro, mitä aineistolle tapahtuu. Sama malliperhe voidaan tarjota eri palveluissa ja eri ehdoilla. Palvelu voi myös vaihtaa taustalla käyttämäänsä mallia. Siksi käyttöpäätös tehdään koko toteutuksesta, ei pelkän mallin nimen perusteella.
 
+Ero konkretisoituu esimerkissä. Sama avoin malli — vaikkapa DeepSeek tai KIMI — voi toimia kahdella täysin eri tavalla. Kun lataat sen omalle koneellesi, aineisto ei poistu laitteelta lainkaan. Kun käytät samaa mallia sen kehittäjän omassa pilvipalvelussa, aineisto lähtee ulkomaiselle palvelimelle kyseisen yhtiön ehdoilla. Malli on sama, mutta aineiston reitti ja sitä koskevat ehdot ovat täysin eri. Sama pätee toisin päin: monet suuret mallit ovat käytettävissä sekä kehittäjänsä omassa palvelussa (ChatGPT, Claude) että pilvialustan kautta (Microsoft Azure, Amazon Web Services), jolloin sopimuskumppani ja tietojen käsittelypaikka vaihtuvat.
+
 ## 2. Seuraa aineiston datavirtaa
 
 **Datavirta** kuvaa, mistä aineisto lähtee, minkä järjestelmien kautta se kulkee ja mitä sille tapahtuu matkalla. Sen selvittäminen tarkoittaa käytännössä sitä, että seuraat aineiston reittiä alusta loppuun kuin paketin kulkua.
@@ -150,15 +152,15 @@ Tietosuojan perusajatus on **tietojen minimointi**: käytä vain sitä aineistoa
 
 ### Yleinen pilvipalvelu
 
-Yleinen pilvipalvelu on helppo ottaa käyttöön. Aineisto kuitenkin siirtyy palveluntarjoajan järjestelmään. Ennen käyttöä pitää tarkistaa ainakin säilytys, palvelun kehittämiseen liittyvä käyttö, mahdollinen ihmisen tekemä tarkastus ja organisaation lupa.
+Yleinen pilvipalvelu on helppo ottaa käyttöön. Tähän ryhmään kuuluu tavallinen henkilökohtainen tili esimerkiksi ChatGPT:ssä, Claudessa tai Google Geminissä. Aineisto kuitenkin siirtyy palveluntarjoajan järjestelmään. Ennen käyttöä pitää tarkistaa ainakin säilytys, palvelun kehittämiseen liittyvä käyttö, mahdollinen ihmisen tekemä tarkastus ja organisaation lupa.
 
 ### Organisaation hallittu palvelu
 
-Organisaation hallittu palvelu voi näyttää käyttäjälle samalta kuin yleinen verkkopalvelu, mutta sen käyttö perustuu organisaation sopimukseen, määrittämiin asetuksiin ja käyttöoikeuksiin. Tämä ei tee kaikesta käytöstä automaattisesti sallittua, mutta vastuut ja rajat on mahdollista määritellä.
+Organisaation hallittu palvelu voi näyttää käyttäjälle samalta kuin yleinen verkkopalvelu, mutta sen käyttö perustuu organisaation sopimukseen, määrittämiin asetuksiin ja käyttöoikeuksiin. Tämä ei tee kaikesta käytöstä automaattisesti sallittua, mutta vastuut ja rajat on mahdollista määritellä. Tähän ryhmään kuuluvat esimerkiksi Microsoft 365 Copilot organisaation omalla sopimuksella sekä kielimallit, joita käytetään pilvialustan kautta — Microsoft Azuren tai Amazon Web Servicesin (AWS) rajapinnoilla.
 
 ### Paikallinen ajo
 
-Paikallisessa ajossa malli toimii omalla laitteella tai organisaation omassa ympäristössä. Aineisto voi pysyä hallitussa ympäristössä, mutta käyttäjä tai organisaatio vastaa tällöin laitteesta, käyttöoikeuksista, päivityksistä, mallin lisenssistä ja toteutuksen ulkoisista yhteyksistä.
+Paikallisessa ajossa malli toimii omalla laitteella tai organisaation omassa ympäristössä. Tämä on mahdollista avoimilla malleilla, joiden painot saa ladata — esimerkiksi kiinalaiset DeepSeek ja KIMI tai eurooppalaisen Mistralin mallit. Huomaa, että avoin malli ei tarkoita automaattisesti vapaata käyttöä: lisenssi voi rajata kaupallista hyödyntämistä. Aineisto voi pysyä hallitussa ympäristössä, mutta käyttäjä tai organisaatio vastaa tällöin laitteesta, käyttöoikeuksista, päivityksistä, mallin lisenssistä ja toteutuksen ulkoisista yhteyksistä.
 
 | Kysymys | Yleinen pilvipalvelu | Organisaation hallittu palvelu | Paikallinen ajo |
 | --- | --- | --- | --- |
